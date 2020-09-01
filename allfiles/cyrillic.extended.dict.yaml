@@ -1,0 +1,17 @@
+# Rime dictionary
+# encoding: utf-8
+# 《西里爾詞庫》
+# 『洋蔥』
+---
+name: cyrillic.extended
+version: "201903"
+sort: by_weight
+use_preset_vocabulary: false
+#max_phrase_length: 7
+#min_phrase_weight: 100
+import_tables:
+  - cyrillic
+  - phrases.cyr_all
+...
+##### 以下一個為空格轉寫，使掛載語言能空格後繼續輸入！！！ #####
+ 	|

@@ -1,0 +1,22 @@
+# Rime table
+# coding: utf-8
+#@/db_name  bopomo_onion_phrase.txt
+#@/db_type	tabledb
+#
+# 用於【朙月拼音】系列輸入方案
+# 【小狼毫】0.9.21 以上
+#
+# 請將該文件以UTF-8編碼保存爲
+# Rime用戶文件夾/bopomo_onion_phrase.txt
+#
+# 碼表各字段以製表符（Tab）分隔
+# 順序爲：文字、編碼、權重（決定重碼的次序、可選）
+#
+# 雖然文本碼表編輯較爲方便，但不適合導入大量條目
+#中州韻輸入法引擎	rime	3
+#中文標點符號新增與移前起始
+# no comment
+https://www.youtube.com/	youtube
+✿《洋蔥純注音版－標記》✿	11
+
+

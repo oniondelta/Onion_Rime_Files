@@ -1,0 +1,20 @@
+# Rime dictionary
+# encoding: utf-8
+# 《中文-注音詞庫》
+# 『洋蔥』
+---
+name: bopomo_onionplus.extended
+version: "201910"
+sort: by_weight
+use_preset_vocabulary: true
+import_tables:
+  - terra_pinyin_onion
+  - terra_pinyin_onion_add
+  - phrases.chtp
+  - phrases.cht
+...
+##### 測試字（測試是否少掉台灣以外的用字） #####
+# 裏面	li3 mian4
+# 高峯	gao1 feng1
+##### 測試調用 #####
+ 	|

@@ -1,0 +1,15 @@
+# Rime dictionary
+# encoding: utf-8
+# 《中文-注音詞庫》
+#『洋蔥』
+---
+name: bopomo_onion_double.extended
+version: "202007"
+sort: by_weight
+use_preset_vocabulary: true
+#max_phrase_length: 7
+#min_phrase_weight: 100
+import_tables:
+  - terra_pinyin_onion
+  - terra_pinyin_onion_add
+...

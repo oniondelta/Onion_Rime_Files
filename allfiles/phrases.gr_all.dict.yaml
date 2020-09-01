@@ -1,0 +1,19 @@
+# Rime dictionary
+# encoding: utf-8
+# 《詞庫》
+#『洋蔥』
+---
+name: phrases.gr_all
+version: "201903"
+sort: original
+use_preset_vocabulary: false
+columns:
+  - text
+  - weight
+...
+##### 希臘詞庫 #####
+Παρακαλώ
+Καλημέρα
+Γεία
+σας
+##### 結束 #####

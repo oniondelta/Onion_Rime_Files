@@ -1,0 +1,65 @@
+﻿# Rime schema
+# vim: set sw=2 sts=2 et:
+# encoding: utf-8
+
+schema:
+  schema_id: easy_en_b
+  name: Easy English（B）
+  version: "202003"
+  author:
+    - Patrick <ipatrickmac@gmail.com>
+    - 洋蔥
+  description:
+    Easy English
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ On, Off ]
+
+engine:
+  processors:
+    - ascii_composer
+    - key_binder
+    - speller
+    - recognizer
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - matcher
+    - ascii_segmentor
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - table_translator
+    - punct_translator
+  filters:
+    - uniquifier
+
+speller:
+  alphabet: "zyxwvutsrqponmlkjihgfedcba;/'"
+  delimiter: " "
+  algebra:
+#    - derive|^//([a-z]+)$|$1|
+    - derive|\/|'| #特別的方案使用「'」
+
+translator:
+  dictionary: easy_en_b
+  enable_sentence: false
+  enable_encoder: false
+  encode_commit_history: false
+  enable_completion: true
+  enable_user_dict: true
+#  spelling_hints: 9
+
+key_binder:
+  import_preset: default
+
+punctuator:
+  import_preset: default
+
+recognizer:
+  import_preset: default

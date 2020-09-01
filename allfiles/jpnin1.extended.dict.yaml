@@ -1,0 +1,21 @@
+# Rime dictionary
+# encoding: utf-8
+# 《日語詞庫》
+# 『洋蔥』
+---
+name: jpnin1.extended
+version: "202001"
+sort: by_weight
+use_preset_vocabulary: false
+#max_phrase_length: 7
+#min_phrase_weight: 100
+import_tables:
+  - jpnin1
+  - phrases.jp_hk
+#  - phrases.jp_hkup_w
+  - phrases.jp_hkkseg
+#  - phrases.jp_hkk
+...
+##### 以下一個為空格轉寫，使掛載語言能空格後繼續輸入！！！ #####
+ 	|
+

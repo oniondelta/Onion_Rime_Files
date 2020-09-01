@@ -1,0 +1,31 @@
+# Rime dictionary
+# encoding: utf-8
+# 《詞庫匯入設定頁》
+# 《（中文-注音）（韓語）（日語）（拉丁+音標）詞庫》
+# 『洋蔥』
+---
+name: terra_pinyin_onion.extended
+version: "202004"
+sort: by_weight
+use_preset_vocabulary: true
+import_tables:
+  - ocm_mixin_jp
+  - ocm_mixin_kr
+  - ocm_mixin_la
+  - terra_pinyin_onion
+  - terra_pinyin_onion_add
+  - phrases.cht_en_w
+  - phrases.chtp
+  - phrases.cht
+  - phrases.jp_hk
+  - phrases.jp_hkkreduce
+  - phrases.kr
+  - phrases.en_o_w
+  - phrases.la_py_w
+  - phrases.en_l_w
+  - phrases.en_u_w
+...
+##### 測試字（測試是否少掉台灣以外的用字） #####
+#裏面	li3 mian4
+#高峯	gao1 feng1
+##### 以下可自行添加詞句 #####

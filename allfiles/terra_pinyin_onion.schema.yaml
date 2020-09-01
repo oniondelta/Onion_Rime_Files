@@ -1,0 +1,248 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: terra_pinyin_onion
+  name: "★地球拼音(洋蔥mix-in版)★"
+  version: "201909"
+  author:
+    - 佛振 <chen.sst@gmail.com>
+  description: |
+    「漢語拼音」，以符號按鍵 , . / ; ' 輸入聲調
+    拼音碼表根據 CC-CEDICT 改編
+  dependencies:
+    - cangjie5
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 中文, 西文 ]
+  - name: full_shape
+    states: [ 半角, 全角 ]
+  - name: ascii_punct
+    reset: 0
+    states: [ 。，, ．， ]
+  - name: simplification
+    states: [ 漢字, 汉字 ]
+  - name: back_mark
+    reset: 1
+    states: [ 無, 註 ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - table_translator@custom_phrase
+    - reverse_lookup_translator
+    - script_translator
+  filters:
+    - simplifier
+    - simplifier@back_mark
+    - uniquifier
+    - reverse_lookup_filter@top_reverse_lookup
+
+menu:
+  page_size: 9
+
+back_mark:
+  opencc_config: back_mark_ocm.json
+  option_name: back_mark
+  show_in_comment: true
+  tags: [ abc ]
+  tips: char
+  comment_format:
+    - xform/^/  /
+    - xform/@/ /
+
+speller:
+  alphabet: "zyxwvutsrqponmlkjihgfedcba-;,./'"
+  initials: "zyxwvutsrqponmlkjihgfedcba-"
+  delimiter: " "
+  algebra:
+    - "xlit|/',.-!;|ABCDEFG|"
+    - xform/^([a-z]+)[B][B]$/$1G/ #拉丁-大寫
+    - xform/^([G])([G])([a-z]+)([B])$/$3BB/ #拉丁-組合變音標記
+    - xform/^([a-z]+)AF$/$1A/ #韓語-單音
+    - xform/^([a-z]+)AAF$/$1AA/ #韓語-單音
+    - derive/^([nl])ve([1-5])$/$1ue$2/
+    - derive/^([jqxy])u([a-z]*)([1-5])$/$1v$2$3/
+    - derive/^([a-z]+)un([1-5])$/$1uen$2/
+    - derive/^([a-z]+)ui([1-5])$/$1uei$2/
+    - derive/^([a-z]+)iu([1-5])$/$1iou$2/
+    - derive/^([a-z]+)ao([1-5])$/$1oa$2/
+    - derive/^([a-z]+)([aeiou])ng([1-5])$/$1$2gn$3/
+    - derive/^([a-z]+)([iu])a(o|ng?)([1-5])$/$1a$2$3$4/
+    - derive/^([dtngkhrzcs])o(u|ng)([1-5])$/$1o$3/
+    - derive/^([a-z]+)ong([1-5])$/$1on$2/
+    - abbrev/^([a-z])([a-z]+)([1-5])$/$1/
+    - abbrev/^([zcs]h)([a-z]+)([1-5])$/$1/
+    - abbrev/^([a-zE]+)([1-5ABCDG])$/$1/
+    - "xlit|12345ABCDEFG|;,./'/',.-!;|"
+
+translator:
+  dictionary: terra_pinyin_onion.extended
+  prism: terra_pinyin_onion
+  preedit_format:
+    - "xlit|;,./'|¹²³⁴⁵|"
+    - xform|¹|⁽¹˸⁾|
+    - xform|²|⁽²’⁾|
+    - xform|³|⁽³ꞏ⁾|
+    - xform|⁴|⁽⁴ˊ⁾|
+    - xform|⁵|⁽⁵'⁾|
+  comment_format:
+    - xform ([aeiou])(ng?|r)([1234]) $1$3$2
+    - xform ([aeo])([iuo])([1234]) $1$3$2
+    - xform a1 ā
+    - xform a2 á
+    - xform a3 ǎ
+    - xform a4 à
+    - xform e1 ē
+    - xform e2 é
+    - xform e3 ě
+    - xform e4 è
+    - xform o1 ō
+    - xform o2 ó
+    - xform o3 ǒ
+    - xform o4 ò
+    - xform i1 ī
+    - xform i2 í
+    - xform i3 ǐ
+    - xform i4 ì
+    - xform u1 ū
+    - xform u2 ú
+    - xform u3 ǔ
+    - xform u4 ù
+    - xform v1 ǖ
+    - xform v2 ǘ
+    - xform v3 ǚ
+    - xform v4 ǜ
+    - xform/eh1/ê̄/
+    - xform/eh4/ề/
+    - xform/eh5/ê/
+#    - xform/eh[0-5]/ê/
+    - xform/([a-z]+)[0-5]/$1/
+
+top_reverse_lookup:
+  tags: [ abc ]
+  overwrite_comment: false
+  dictionary: terra_pinyin_onion.extended
+  comment_format:
+    - "xlit|';/!,.|ABCDEF|"
+    - xform/^/  /
+    - xform/BB([a-z]+)A/   $1BB/
+    - xform/^(.+)CCD/    $1ZZ`韓-HJ@/
+    - xform/CD/Z`韓-單@/
+    - xform/C/C`韓@/
+    - xform/Z/C/
+    - xform/`韓-單音@ / /
+    - xform/`韓@ / /
+    - xform/BB/X`拉-組@/
+    - xform/AA/Y`拉-大@/
+    - xform/A/A`拉-小@/
+    - xform/Y/B/
+    - xform/X/AA/
+    - xform/`拉-組@   / /
+    - xform/`拉-大@ / /
+    - xform/`拉-小@ / /
+    - xform/E/E`日-平@/
+    - xform/F/F`日-片@/
+    - xform/`日-平@ / /
+    - xform/`日-片@ / /
+    - xform/([svc])([F])`日-片@/$1$2/
+    - xform/([avse])([v])([F])/$1$2$3`日-符@/
+    - xform/evF`日-符@ v/evF v/
+    - "xlit|ABCDEF`@|';/!,.〖〗|"
+    - xform ([aeiou])(ng?|r)([1234]) $1$3$2
+    - xform ([aeo])([iuo])([1234]) $1$3$2
+    - xform a1 ā
+    - xform a2 á
+    - xform a3 ǎ
+    - xform a4 à
+    - xform e1 ē
+    - xform e2 é
+    - xform e3 ě
+    - xform e4 è
+    - xform o1 ō
+    - xform o2 ó
+    - xform o3 ǒ
+    - xform o4 ò
+    - xform i1 ī
+    - xform i2 í
+    - xform i3 ǐ
+    - xform i4 ì
+    - xform u1 ū
+    - xform u2 ú
+    - xform u3 ǔ
+    - xform u4 ù
+    - xform v1 ǖ
+    - xform v2 ǘ
+    - xform v3 ǚ
+    - xform v4 ǜ
+    - xform/eh1/ê̄/
+    - xform/eh4/ề/
+    - xform/eh5/ê/
+#    - xform/eh[0-5]/ê/
+    - xform/([a-z]+)[0-5]/$1/
+
+custom_phrase:
+  dictionary: ""
+  user_dict: custom_phrase
+  db_class: stabledb
+  enable_completion: false
+  enable_sentence: false
+  initial_quality: 1
+
+reverse_lookup:
+  dictionary: cangjie5
+  enable_completion: false
+  enable_sentence: false
+  enable_user_dict: true
+  prefix: "`"
+  suffix: "'"
+  tips: 〔倉頡反查〕
+  preedit_format:
+    - "xlit|abcdefghijklmnopqrstuvwxyz|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符|"
+    - 'xform/\\/ /'
+
+punctuator:
+  import_preset: default
+
+key_binder:
+  import_preset: default
+  bindings:
+    - {accept: comma, send: comma, when: has_menu}
+    - {accept: period, send: period, when: has_menu}
+    - {accept: minus, send: minus, when: has_menu}
+    - {accept: equal, send: equal, when: has_menu}
+    - {accept: Left, send: Page_Up, when: paging} #直式選單用
+    - {accept: Right, send: Page_Down, when: paging} #直式選單用
+    - {accept: Tab, send: Shift+Left, when: paging} #於選單列選字時，回復到輸入列（避免有時回復不了，故增加）。
+    - {accept: Shift+space, send: Page_Down, when: has_menu} #選字時可用「Shift」+「空白鍵」翻頁。
+    - {accept: Shift+Tab, send: Page_Up, when: paging} #選字時可用「Shift」+「tab」翻頁。
+    - {accept: Control+Shift+6, toggle: back_mark, when: always}
+
+editor:
+  bindings:
+    Return: confirm
+    Shift+Return: commit_raw_input
+    Control+Return: commit_script_text
+#    Shift+Return: commit_script_text
+
+recognizer:
+  import_preset: default
+  patterns:
+    reverse_lookup: "`[a-z]*'?$"

@@ -1,0 +1,77 @@
+#錯誤查看%TEMP%\rime.weasel
+# Rime schema settings
+# encoding: utf-8
+# 《希臘設定頁》
+schema:
+  schema_id: greek
+  name: ❃希臘字母❃
+  version: "202003"
+  author:
+    - 『洋蔥』
+  description: |
+    用戶字典
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 中文, 英文 ] 
+  - name: full_shape
+    states: [ 半形, 全形 ]
+
+engine: 
+  processors: 
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - script_translator
+
+menu:
+  alternative_select_keys: "1234567890"
+
+speller:
+  alphabet: "abcdefghijklmnopqrstuvwxyz/;'["
+  delimiter: "\""
+  algebra:
+    - "xlit|[/|AB|"
+    - xform/^([a-z]+)A$/$1;/ #大寫增加尾綴「;」 ＃[;]
+    - xform/^([a-z]+)$/$1B/ #小寫尾綴「/」
+    - derive/^([a-z]+)([;B])$/$1/ #精簡尾綴「;」「/」
+    - "xlit|AB|[/|"
+
+translator:
+  dictionary: greek.extended
+  enable_user_dict: true
+  enable_sentence: false
+  enable_completion: false
+  preedit_format:
+    - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
+  comment_format:
+    - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
+
+key_binder:
+  import_preset: default
+  bindings:
+    - {accept: comma, send: comma, when: has_menu}
+    - {accept: period, send: period, when: has_menu}
+    - {accept: minus, send: minus, when: has_menu}
+    - {accept: equal, send: equal, when: has_menu}
+    - {accept: Return, send: space, when: has_menu}
+
+punctuator:
+  import_preset: default
+
+recognizer:
+  import_preset: default

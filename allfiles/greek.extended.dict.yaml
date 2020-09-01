@@ -1,0 +1,15 @@
+# Rime dictionary
+# encoding: utf-8
+# 《希臘詞庫》
+# 『洋蔥』
+---
+name: greek.extended
+version: "201903"
+sort: by_weight
+use_preset_vocabulary: false
+import_tables:
+  - greek
+  - phrases.gr_all
+...
+##### 以下一個為空格轉寫，使掛載語言能空格後繼續輸入！！！ #####
+ 	|

@@ -1,0 +1,3000 @@
+# Rime dictionary
+# encoding: utf-8
+# 《拉丁+音標字母碼表》
+#『洋蔥』
+---
+name: bo_mixin_la
+version: "202001"
+sort: by_weight
+use_preset_vocabulary: false
+columns:
+  - text
+  - code
+  - weight
+...
+##### 英文標點符號 #####
+### mix-in版標點特別增加分號 ###
+#.	@.;	1100
+#,	@,;
+/	@/;
+#?	@,.;
+#!	@/.;
+#;	@.,;
+#:	@..;
+#-	@-;	71100
+#~	@,,;
+#'	@,/;
+#"	@,,/;
+# 	@./;	71100
+#…	@...;
+### 英文常用標點符號 ###
+.	@.	1100
+.	@daw
+,	@,
+,	@ddw
+#/	@/
+/	@pw
+/	@xw
+?	@,.
+?	@jfkda
+?	@jfda
+?	@jfyda
+!	@/.
+!	@ik
+!	@ifk
+!	@ida
+;	@.,
+;	@awdw
+;	@awdd
+:	@..
+:	@awaw
+:	@bwq
+:	@awda
+-	@-	71100
+-	@ew
+#-	@iq
+~	@,,
+~	@sw
+'	@,/
+'	@pw
+"	@,,/
+"	@pwpw
+ 	@./	242100
+ 	@jj	742100
+ 	@jj"	742100
+…	@...
+…	@awawaw
+…	@dawdawdaw
+…	@dawawaw
+#’	@'	0
+##### 基礎英文字母 #####
+### 小寫 ###
+a	@a	71000
+b	@b	71000
+c	@c	71000
+d	@d	71000
+e	@e	71000
+f	@f	71000
+g	@g	71000
+h	@h	71000
+i	@i	71000
+j	@j	71000
+k	@k	71000
+l	@l	71000
+m	@m	71000
+n	@n	71000
+o	@o	71000
+p	@p	71000
+q	@q	71000
+r	@r	71000
+s	@s	71000
+t	@t	71000
+u	@u	71000
+v	@v	71000
+w	@w	71000
+x	@x	71000
+y	@y	71000
+z	@z	71000
+### 大寫 ###
+A	@a"	60000
+B	@b"	60000
+C	@c"	60000
+D	@d"	60000
+E	@e"	60000
+F	@f"	60000
+G	@g"	60000
+H	@h"	60000
+I	@i"	60000
+J	@j"	60000
+K	@k"	60000
+L	@l"	60000
+M	@m"	60000
+N	@n"	60000
+O	@o"	60000
+P	@p"	60000
+Q	@q"	60000
+R	@r"	60000
+S	@s"	60000
+T	@t"	60000
+U	@u"	60000
+V	@v"	60000
+W	@w"	60000
+X	@x"	60000
+Y	@y"	60000
+Z	@z"	60000
+### 基礎拉丁字母其他 ###
+$	@si	0
+##
+$	@sy	0
+%	@owpwow	0
+##
+%	@owxwow	0
+##
+%	@opwo	0
+##
+%	@oxwo	0
+##
+%	@oxo	0
+##
+%	@opo	0
+&	@af	0
+##
+#&	@bfk	0
+##
+#&	@and	0
+##
+#&	@et	0
+`	@nw	0
+^	@lw	0
+##### 非拉丁字母增補 #####
+## 下方為希臘文，但KK音標中有，故收錄
+θ	@qi
+## 下方為希臘文，但IPA音標中有，故收錄
+β	@bi
+χ	@xi
+## 下方為希臘文，但在非標準IPA音標中有，故收錄
+σ	@si
+λ	@li
+ρ	@pi
+ω	@wi
+## 下方為西里爾文，但在非標準IPA音標中有，故收錄
+я	@rk
+## 下方為其他，但在ex-ipa音標中有，故收錄
+↑	@lw
+↓	@lwk
+## 下方為其他，但在非標準IPA音標中有，故收錄
+′	@pw
+*	@jw
+’	@dw
+##
+’	@pw
+⸋	@ow
+·	@aw
+#∅	@ox
+##
+∅	@owxw
+##
+∅	@owx
+## 下方IPA音標中有，故收錄
+‼	@ifkifk
+‼	@ififk
+‼	@iidb
+‼	@ikik
+‿	@duw
+‖	@iwiw
+|	@iw
+↗	@lwq
+↘	@lwq
+ꜛ	@lw
+ꜜ	@lwk
+##### 校正排序 #####
+### 校正排序小寫 ###
+#đĐ##u0110
+#ðÐ##u00d0
+#ɖƉ##u0189
+đ	@dt	500
+ð	@dt	500
+##
+ð	@dfx	500
+##
+ð	@dx	500
+## 下面 ɖ ʒ 為ipa的
+ɖ	@dt	500
+##
+ɖ	@dc	500
+ʒ	@zf	900
+##
+#ʒ	@zfg	900
+##
+#ʒ	@zg	900
+### 校正排序大寫 ###
+Đ	@dt"	500
+Ð	@dt"	500
+##
+Ð	@dx"	500
+Ð	@dfx"	500
+Ɖ	@dt"	500
+##
+Ɖ	@dc"	500
+Ʒ	@zf"	900
+##
+#Ʒ	@zfg"	900
+##
+#Ʒ	@zg"	900
+## 以下一個為大寫
+## 以下一個字母為ipa的
+ʀ	@ihr"	500
+##
+ʀ	@ri"	500
+Ʀ	@ihr"	500
+##
+Ʀ	@ri"	500
+##############################
+##### Latin-1 Supplement #####
+### 避重碼例外編碼 ###
+ī	@iy	750
+Ī	@iy"	500
+### Latin-1 Supplement小寫 ###
+## 以下ß為小寫字母
+ß	@bi	900
+##
+ß	@shs	900
+à	@an	800
+á	@ap	800
+â	@al	800
+ã	@as	800
+ä	@ab	800
+å	@ao	800
+æ	@ahe	900
+##
+#æ	ae
+ç	@cj	800
+è	@en	800
+é	@ep	800
+ê	@el	800
+ë	@eb	800
+ì	@in	800
+í	@ip	800
+î	@il	800
+ï	@ib	800
+#ð	@dfx
+##
+#ð	@dx
+ñ	@ns	800
+ò	@on	800
+ó	@op	800
+ô	@ol	800
+õ	@os	800
+ö	@ob	800
+ø	@ox	800
+ù	@un	800
+ú	@up	800
+û	@ul	800
+ü	@ub	800
+ý	@yp
+þ	@lf
+##
+þ	@lho
+##
+þ	@iho
+##
+þ	@bhp
+ÿ	@yb
+µ	@mi
+### Latin-1 Supplement大寫 ###
+ẞ	@bi"	800
+##
+ẞ	@shs"	800
+À	@an"	800
+Á	@ap"	800
+Â	@al"	800
+Ã	@as"	800
+Ä	@ab"	800
+Å	@ao"	800
+Æ	@ahe"	900
+##
+#Æ	ae
+Ç	@cj"	800
+È	@en"	800
+É	@ep"	800
+Ê	@el"	800
+Ë	@eb"	800
+Ì	@in"	800
+Í	@ip"	800
+Î	@il"	800
+Ï	@ib"	800
+#Ð	@dt"
+Ñ	@ns"	800
+Ò	@on"	800
+Ó	@op"	800
+Ô	@ol"	800
+Õ	@os"	800
+Ö	@ob"	800
+Ø	@ox"	800
+Ù	@un"	800
+Ú	@up"	800
+Û	@ul"	800
+Ü	@ub"	800
+Ý	@yp"
+Þ	@lf"
+##
+Þ	@lho"
+##
+Þ	@iho"
+##
+Þ	@bhp"
+### Latin-1 Supplement其他 ###
+÷	@awewaw
+##
+÷	@aea
+×	@xw
+¯	@ew
+´	@pw
+°	@ow
+## 以下一個為容錯碼
+#°	@oh
+¨	@bw
+¸	@jw
+##
+¸	@djw
+¶	@qf
+º	@oh
+##
+#º	@ow
+ª	@ah
+¿	@cfa
+##
+¿	@cyka
+##
+¿	@cfyka
+¡	@if
+##
+¡	@ia
+¢	@cy
+##
+¢	@ci
+##
+¢	@cx
+##
+£	@lft
+¥	@ytt
+##
+¤	@of
+##
+¤	@owx
+##
+¤	@owxw
+§	@shs
+##
+§	@ss
+©	@co
+®	@ro
+¦	@iwiw
+##
+#¦	@lwlw
+##
+#¦	@iwhiw
+##
+#¦	@lwhlw
+¬	@gwk
+##
+#¬	@lq
+##### Latin Extended-A #####
+### Latin Extended-A小寫 ###
+ā	@ae	750
+ă	@au	750
+ą	@ac	750
+ć	@cp
+ĉ	@cl
+ċ	@ca
+č	@cv
+ď	@dd
+#đ	@dt
+ē	@ee	750
+ĕ	@eu	750
+ė	@ea	750
+ę	@ec	750
+ě	@ev	750
+ĝ	@gl
+ğ	@gu
+ġ	@ga
+ģ	@gw
+ĥ	@hl
+ħ	@ht
+ĩ	@is	750
+ī	@ie	750
+ĭ	@iu	750
+į	@ic	750
+ı	@ii
+ĳ	@ihj
+ĵ	@jl
+ķ	@kdd
+##
+ķ	@kj
+## 以下ĸ為小寫字母
+ĸ	@ki
+ĺ	@lp
+ļ	@ldd
+##
+ļ	@lj
+ľ	@ld
+ŀ	@lma
+ł	@lx
+ń	@np
+ņ	@ndd
+##
+ņ	@nj
+ň	@nv
+ŉ	@nd
+ŋ	@nj
+ō	@oe	750
+ŏ	@ou	750
+ő	@opp	750
+œ	@ohe	900
+ŕ	@rp
+ŗ	@rdd
+##
+ŗ	@rj
+ř	@rv
+ś	@sp
+ŝ	@sl
+ş	@sj
+š	@sv
+ţ	@tj
+ť	@td
+ŧ	@tt
+ũ	@us	750
+ū	@ue	750
+ŭ	@uu	750
+ů	@uo	750
+ű	@upp	750
+ų	@uc	750
+ŵ	@wl
+ŷ	@yl
+ź	@zp
+ż	@za
+ž	@zv
+ſ	@ff
+##
+ſ	@jq
+ſ	@jqh
+### Latin Extended-A大寫 ###
+Ā	@ae"	750
+Ă	@au"	750
+Ą	@ac"	750
+Ć	@cp"
+Ĉ	@cl"
+Ċ	@ca"
+Č	@cv"
+Ď	@dv"
+#Đ	@dt"
+Ē	@ee"	750
+Ĕ	@eu"	750
+Ė	@ea"	750
+Ę	@ec"	750
+Ě	@ev"	750
+Ĝ	@gl"
+Ğ	@gu"
+Ġ	@ga"
+Ģ	@gdd"
+##
+Ģ	@gj"
+Ĥ	@hl"
+Ħ	@ht"
+Ĩ	@is"	750
+Ī	@ie"	750
+Ĭ	@iu"	750
+Į	@ic"	750
+İ	@ia"	750
+Ĳ	@ihj"
+Ĵ	@jl"
+Ķ	@kdd"
+##
+Ķ	@kj"
+Ĺ	@lp"
+Ļ	@ldd"
+##
+Ļ	@lj"
+Ľ	@ld"
+Ŀ	@lma"
+Ł	@lx"
+Ń	@np"
+Ņ	@ndd"
+##
+Ņ	@nj"
+Ň	@nv"
+Ŋ	@nj"
+##
+Ŋ	@lg"
+Ō	@oe"	750
+Ŏ	@ou"	750
+Ő	@opp"	750
+Œ	@ohe"	900
+Ŕ	@rp"
+Ŗ	@rdd"
+##
+Ŗ	@rj"
+Ř	@rv"
+Ś	@sp"
+Ŝ	@sl"
+Ş	@sj"
+Š	@sv"
+Ţ	@tj"
+Ť	@tv"
+Ŧ	@tt"
+Ũ	@us"	750
+Ū	@ue"	750
+Ŭ	@uu"	750
+Ů	@uo"	750
+Ű	@upp"	750
+Ų	@uc"	750
+Ŵ	@wl"
+Ŷ	@yl"
+Ÿ	@yb"
+Ź	@zp"
+Ż	@za"
+Ž	@zv"
+##### Latin Extended-B #####
+### Latin Extended-B小寫 ###
+ƀ	@bt
+ƃ	@si
+ƅ	@bi
+##
+ƅ	@br
+ƈ	@cr
+ƌ	@sk
+ƒ	@fj
+##
+ƒ	@fi
+ƕ	@hu
+##
+ƕ	@hhu
+Ɩ	@ic
+##
+Ɩ	@ii
+ƙ	@kr
+ƚ	@lt
+## 以下ƞ為小寫
+ƞ	@ny
+##
+ƞ	@hi
+ơ	@od
+ƣ	@olf
+##
+ƣ	@ohl
+##
+ƣ	@ohi
+ƥ	@pr
+##
+ƥ	@jqho
+ƨ	@sk
+ƫ	@tj
+ƭ	@tr
+##
+ƭ	@fc
+ư	@ud
+ƴ	@yr
+ƶ	@zt
+#ƹ	@zgk
+##
+#ƹ	@zfgk
+##
+ƹ	@zfk
+ƽ	@ff
+ƿ	@pf
+ǎ	@av
+ǐ	@iv
+ǒ	@ov
+ǔ	@uv
+ǖ	@ueb
+ǘ	@upb
+ǚ	@uvb
+ǜ	@unb
+ǝ	@eq	901
+ǟ	@aeb
+ǡ	@aea
+ǣ	@ahee
+##
+ǣ	@aee
+#ǣ	@aee
+ǥ	@gt
+ǧ	@gv
+ǩ	@kv
+ǫ	@oc
+ǭ	@oce
+#ǯ	@zgv
+##
+#ǯ	@zfgv
+##
+ǯ	@zfv
+## 以下ǰ為小寫
+ǰ	@jv
+ǵ	@gp
+ǹ	@nn
+ǻ	@apo
+ǽ	@ahep
+##
+ǽ	@aep
+#ǽ	aep
+ǿ	@oxp
+ȁ	@ann
+ȃ	@am
+ȅ	@enn
+ȇ	@em
+ȉ	@inn
+ȋ	@im
+ȍ	@onn
+ȏ	@om
+ȑ	@rnn
+ȓ	@rm
+ȕ	@unn
+ȗ	@um
+ș	@sdd
+##
+ș	@sj
+ț	@tdd
+##
+ț	@tj
+ȝ	@zi
+##
+#ȝ	@zfg
+##
+ȝ	@zf
+ȟ	@hv
+ȣ	@uho
+ȥ	@zy
+##
+ȥ	@zj
+ȧ	@aa	700
+ȩ	@ej	700
+ȫ	@oeb
+ȭ	@oes
+ȯ	@oa
+ȱ	@oea
+ȳ	@ye
+## 以下ȷ為小寫
+ȷ	@ji
+ȼ	@cx
+## 以下ȿ為小寫
+ȿ	@sc
+## 以下ɀ為小寫
+ɀ	@vfc
+##
+#ɀ	@zfc
+##
+#ɀ	@zc
+ɂ	@jy
+##
+ɂ	@jfy
+##
+ɂ	@jfk
+##
+#ɂ	@cfq
+##
+#ɂ	@cfyk
+##
+#ɂ	@cyk
+ɇ	@ex
+ɉ	@jt
+ɋ	@ac
+##
+ɋ	@qc
+ɍ	@rt
+ɏ	@yt
+### Latin Extended-B大寫 ###
+Ə	@eq"	700
+Ɓ	@br"
+Ƃ	@si"
+Ƅ	@bi"
+##
+Ƅ	@br"
+Ƈ	@cr"
+## 以下Ɔ為大寫
+Ɔ	@ck"
+##
+Ɔ	@jf"
+#Ɖ	@dt"
+Ɗ	@dr"
+Ƌ	@sk"
+Ǝ	@ek"
+##
+Ǝ	@eq"
+## 以下Ɛ為大寫
+Ɛ	@ei"
+Ƒ	@fj"
+Ɠ	@gr"
+## 以下Ɣ為大寫
+Ɣ	@vo"
+##
+Ɣ	@go"
+##
+Ɣ	@no"
+Ɨ	@it"
+##
+Ɨ	@tf"
+Ƙ	@kr"
+## 以下Ɯ為大寫
+Ɯ	@mq"
+##
+#Ɯ	@mk"
+Ɲ	@nj"
+## 以下Ɵ為大寫
+Ɵ	@qi"
+Ơ	@od"
+Ƣ	@olf"
+##
+Ƣ	@ohl"
+##
+Ƣ	@ohi"
+Ƥ	@pr"
+## 以下Ʀ為大寫
+#Ʀ	@ihr"
+Ƨ	@sk"
+## 以下Ʃ為大寫
+Ʃ	@si"
+Ƭ	@ti"
+##
+Ƭ	@tr"
+Ʈ	@tc"
+##
+Ʈ	@ti"
+Ư	@ud"
+## 以下Ʊ為大寫
+Ʊ	@wk"
+## 以下Ʋ為大寫
+Ʋ	@vf"
+##
+Ʋ	@yi"
+Ƴ	@yr"
+Ƶ	@zt"
+## 以下Ʒ為大寫
+#Ʒ	@zg"
+##
+#Ʒ	@zfg"
+##
+#Ʒ	@zf"
+#Ƹ	@zgk"
+##
+#Ƹ	@zfgk"
+##
+Ƹ	@zfk"
+Ƽ	@ff"
+Ǎ	@av"
+Ǐ	@iv"
+Ǒ	@ov"
+Ǔ	@uv"
+Ǖ	@ueb"
+Ǘ	@upb"
+Ǚ	@uvb"
+Ǜ	@unb"
+Ǟ	@aeb"
+Ǡ	@aea"
+Ǣ	@ahee"
+##
+Ǣ	@aee"
+#Ǣ	@aee"
+Ǥ	@gt"
+Ǧ	@gv"
+Ǩ	@kv"
+Ǫ	@oc"
+Ǭ	@oce"
+#Ǯ	@zgv"
+##
+#Ǯ	@zfgv"
+##
+Ǯ	@zfv"
+Ǵ	@gp"
+Ƕ	@hu"
+##
+Ƕ	@hhu"
+Ƿ	@pf"
+Ǹ	@nn"
+Ǻ	@apo"
+Ǽ	@ahep"
+##
+Ǽ	@aep"
+#Ǽ	aep"
+Ǿ	@oxp"
+Ȁ	@ann"
+Ȃ	@am"
+Ȅ	@enn"
+Ȇ	@em"
+Ȉ	@inn"
+Ȋ	@im"
+Ȍ	@onn"
+Ȏ	@om"
+Ȑ	@rnn"
+Ȓ	@rm"
+Ȕ	@unn"
+Ȗ	@um"
+Ș	@sdd"
+##
+Ș	@sj"
+Ț	@tdd"
+##
+Ț	@tj"
+Ȝ	@zi"
+##
+#Ȝ	@zfg"
+##
+Ȝ	@zf"
+Ȟ	@hv"
+## 以下Ƞ為大寫
+Ƞ	@ny"
+##
+Ƞ	@hi"
+Ȣ	@uho"
+Ȥ	@zy"
+##
+Ȥ	@zj"
+Ȧ	@aa"	700
+Ȩ	@ej"	700
+Ȫ	@oeb"
+Ȭ	@oes"
+Ȯ	@oa"
+Ȱ	@oea"
+Ȳ	@ye"
+Ⱥ	@ax"
+Ȼ	@cx"
+Ƚ	@lt"
+Ⱦ	@tx"
+Ɂ	@jfy"
+##
+Ɂ	@jy"
+##
+Ɂ	@jfk"
+##
+#Ɂ	@cfq"
+##
+#Ɂ	@cfyk"
+##
+#Ɂ	@cyk"
+Ƀ	@bt"
+Ʉ	@ut"
+## 以下Ʌ為大寫
+Ʌ	@li"
+##
+Ʌ	@vk"
+Ɇ	@ex"
+Ɉ	@jt"
+Ɋ	@ac"
+##
+Ɋ	@qc"
+Ɍ	@rt"
+##
+Ɍ	@ri"
+Ɏ	@yt"
+### Latin Extended-B其他_連音音標（沒有大小寫的分別）20191004修改四個為大寫 ###
+ƍ	@dq
+##
+#ƍ	@dfk
+ƛ	@lx
+ƪ	@if
+##
+ƪ	@sfko
+##
+ƪ	@ico
+##
+ƪ	@ioc
+#ƺ	@zs
+##
+ƺ	@vfs
+##
+#ƺ	@zfs
+##
+ƺ	@zfc
+ƻ	@rft
+ƾ	@jfykt
+##
+ƾ	@jykt
+##
+ƾ	@jft
+##
+#ƾ	@cfkt
+##
+ƾ	@tfg
+##
+#ƾ	@cfyqt
+##
+#ƾ	@cyqt
+ǀ	@iw
+##
+#ǀ	@li
+ǁ	@iwiw
+##
+#ǁ	@lwlw
+ǂ	@itt
+##
+ǂ	@ltt
+##
+ǂ	@nfq
+##
+ǂ	@iwtt
+##
+ǂ	@tft
+ǃ	@ifk
+## 以下一個為大寫
+Ǆ	@dzv"
+##
+Ǆ	@dhzv"
+ǅ	@dzv
+##
+ǅ	@dhzv
+ǆ	@dzv
+##
+ǆ	@dhzv
+## 以下一個為大寫
+Ǉ	@lhj"
+ǈ	@lhj
+ǉ	@lhj
+## 以下一個為大寫
+Ǌ	@nhj"
+ǋ	@nhj
+ǌ	@nhj
+## 以下一個為大寫
+Ǳ	@dhz"
+ǲ	@dhz
+ǳ	@dhz
+ȡ	@dg
+ȴ	@lg
+ȵ	@ng
+##
+ȵ	@hg
+ȶ	@tg
+ȸ	@dhb
+ȹ	@qhp
+##### Latin Extended Additional #####
+### Latin Extended Additional小寫 ###
+ḁ	@ado
+ḃ	@ba
+ḅ	@bda
+ḇ	@bde
+ḉ	@cjp
+ḋ	@da
+ḍ	@dda
+ḏ	@dde
+ḑ	@ddd
+##
+ḑ	@dj
+ḓ	@ddl
+ḕ	@ene
+ḗ	@epe
+ḙ	@edl
+ḛ	@eds
+ḝ	@eju
+ḟ	@fa
+ḡ	@ge
+ḣ	@ha
+ḥ	@hda
+ḧ	@hb
+ḩ	@hj
+ḫ	@hdu
+ḭ	@ids
+ḯ	@ipb
+ḱ	@kp
+ḳ	@kda
+ḵ	@kde
+ḷ	@lda
+ḹ	@leda
+ḻ	@lde
+ḽ	@ldl
+ḿ	@mp
+ṁ	@ma
+ṃ	@mda
+ṅ	@na
+ṇ	@nda
+ṉ	@nde
+ṋ	@ndl
+ṍ	@ops
+ṏ	@obs
+ṑ	@one
+ṓ	@ope
+ṕ	@pp
+ṗ	@pa
+ṙ	@ra
+ṛ	@rda
+ṝ	@reda
+ṟ	@rde
+ṡ	@sa
+ṣ	@sda
+ṥ	@sap
+ṧ	@sav
+ṩ	@sada
+ṫ	@ta
+ṭ	@tda
+ṯ	@tde
+ṱ	@tdl
+ṳ	@udb
+ṵ	@uds
+ṷ	@udl
+ṹ	@ups
+ṻ	@ube
+ṽ	@vs
+ṿ	@vda
+ẁ	@wn
+ẃ	@wp
+ẅ	@wb
+ẇ	@wa
+ẉ	@wda
+ẋ	@xa
+ẍ	@xb
+ẏ	@ya
+ẑ	@zl
+ẓ	@zda
+ẕ	@zde
+ẖ	@hde
+ẗ	@tb
+ẘ	@wo
+ẙ	@yo
+ẚ	@aj
+##
+ẚ	@ad
+ẛ	@ffa
+ẜ	@ffx
+ẝ	@fft
+ẟ	@di
+ạ	@ada
+ả	@aj
+ấ	@apl
+##
+ấ	@alp
+ầ	@anl
+ẩ	@alj
+##
+ẩ	@ajl
+ẫ	@asl
+ậ	@alda
+ắ	@apu
+ằ	@anu
+ẳ	@aju
+ẵ	@asu
+ặ	@auda
+ẹ	@eda
+ẻ	@ej
+ẽ	@es
+ế	@epl
+##
+ế	@elp
+ề	@enl
+ể	@elj
+##
+ể	@ejl
+ễ	@esl
+ệ	@elda
+ỉ	@ij
+ị	@ida
+ọ	@oda
+ỏ	@oj
+ố	@opl
+##
+ố	@olp
+ồ	@onl
+ổ	@olj
+##
+ổ	@ojl
+ỗ	@osl
+ộ	@olda
+ớ	@opd
+ờ	@ond
+ở	@ojd
+ỡ	@osd
+ợ	@odda
+ụ	@uda
+ủ	@uj
+ứ	@upd
+ừ	@und
+ử	@ujd
+ữ	@usd
+ự	@udda
+ỳ	@yn
+ỵ	@yda
+ỷ	@yj
+ỹ	@ys
+ỽ	@qf
+ỿ	@yo
+##
+ỿ	@yg
+### Latin Extended Additional大寫 ###
+Ḁ	@ado"
+Ḃ	@ba"
+Ḅ	@bda"
+Ḇ	@bde"
+Ḉ	@cjp"
+Ḋ	@da"
+Ḍ	@dda"
+Ḏ	@dde"
+Ḑ	@ddd"
+## 以下容錯碼不確定
+Ḑ	@dj"
+Ḓ	@ddl"
+Ḕ	@ene"
+Ḗ	@epe"
+Ḙ	@edl"
+Ḛ	@eds"
+Ḝ	@eju"
+Ḟ	@fa"
+Ḡ	@ge"
+Ḣ	@ha"
+Ḥ	@hda"
+Ḧ	@hb"
+Ḩ	@hj"
+Ḫ	@hdu"
+Ḭ	@ids"
+Ḯ	@ipb"
+Ḱ	@kp"
+Ḳ	@kda"
+Ḵ	@kde"
+Ḷ	@lda"
+Ḹ	@leda"
+Ḻ	@lde"
+Ḽ	@ldl"
+Ḿ	@mp"
+Ṁ	@ma"
+Ṃ	@mda"
+Ṅ	@na"
+Ṇ	@nda"
+Ṉ	@nde"
+Ṋ	@ndl"
+Ṍ	@ops"
+Ṏ	@obs"
+Ṑ	@one"
+Ṓ	@ope"
+Ṕ	@pp"
+Ṗ	@pa"
+Ṙ	@ra"
+Ṛ	@rda"
+Ṝ	@reda"
+Ṟ	@rde"
+Ṡ	@sa"
+Ṣ	@sda"
+Ṥ	@sap"
+Ṧ	@sav"
+Ṩ	@sada"
+Ṫ	@ta"
+Ṭ	@tda"
+Ṯ	@tde"
+Ṱ	@tdl"
+Ṳ	@udb"
+Ṵ	@uds"
+Ṷ	@udl"
+Ṹ	@ups"
+Ṻ	@ube"
+Ṽ	@vs"
+Ṿ	@vda"
+Ẁ	@wn"
+Ẃ	@wp"
+Ẅ	@wb"
+Ẇ	@wa"
+Ẉ	@wda"
+Ẋ	@xa"
+Ẍ	@xb"
+Ẏ	@ya"
+Ẑ	@zl"
+Ẓ	@zda"
+Ẕ	@zde"
+Ạ	@ada"
+Ả	@aj"
+Ấ	@apl"
+##
+Ấ	@alp"
+Ầ	@anl"
+Ẩ	@alj"
+##
+Ẩ	@ajl"
+Ẫ	@asl"
+Ậ	@alda"
+Ắ	@apu"
+Ằ	@anu"
+Ẳ	@aju"
+Ẵ	@asu"
+Ặ	@auda"
+Ẹ	@eda"
+Ẻ	@ej"
+Ẽ	@es"
+Ế	@epl"
+##
+Ế	@elp"
+Ề	@enl"
+Ể	@elj"
+##
+Ể	@ejl"
+Ễ	@esl"
+Ệ	@elda"
+Ỉ	@ij"
+Ị	@ida"
+Ọ	@oda"
+Ỏ	@oj"
+Ố	@opl"
+##
+Ố	@olp"
+Ồ	@onl"
+Ổ	@olj"
+##
+Ổ	@ojl"
+Ỗ	@osl"
+Ộ	@olda"
+Ớ	@opd"
+Ờ	@ond"
+Ở	@ojd"
+Ỡ	@osd"
+Ợ	@odda"
+Ụ	@uda"
+Ủ	@uj"
+Ứ	@upd"
+Ừ	@und"
+Ử	@ujd"
+Ữ	@usd"
+Ự	@udda"
+Ỳ	@yn"
+Ỵ	@yda"
+Ỷ	@yj"
+Ỹ	@ys"
+Ỽ	@qf"
+Ỿ	@yo"
+##
+Ỿ	@yg"
+### Latin Extended Additional其他 ###
+#Ỻ	@il	0
+##
+Ỻ	@ihl	0
+ỻ	@ilt	0
+##
+# ỻ	@ihlt	0
+##
+ỻ	@llt	0
+##
+# ỻ	@lhlt	0
+##
+ỻ	@iit	0
+##
+# ỻ	@ihit	0
+##
+ỻ	@tftf	0
+##
+ỻ	@iwiwt	0
+##### Latin Extended-C #####
+### Latin Extended-C小寫 ###
+ⱡ	@ltt	0
+##
+ⱡ	@nfq	0
+ⱥ	@ax	0
+ⱦ	@tx	0
+ⱨ	@hy	0
+ⱪ	@ky	0
+ⱬ	@zy	0
+ⱳ	@wr	0
+ⱶ	@ih	0
+ⱷ	@eq	0
+##
+#ⱷ	fi
+ⱸ	@ec	0
+ⱹ	@rqr	0
+##
+ⱹ	@rcq	0
+### Latin Extended-C大寫 ###
+Ⱡ	@ltt"	0
+Ɫ	@lz"	0
+Ᵽ	@pt"	0
+Ɽ	@rc"	0
+Ⱨ	@hy"	0
+Ⱪ	@ky"	0
+Ⱬ	@zy"	0
+Ɑ	@ai"	0
+Ɱ	@mj"	0
+Ɐ	@ak"	0
+Ɒ	@aq"	0
+##
+Ɒ	@ak"	0
+Ⱳ	@wr"	0
+Ⱶ	@ih"	0
+Ȿ	@sc"	0
+Ɀ	@vfc"	0
+##
+#Ɀ	@zfc"	0
+##
+#Ɀ	@zc"	0
+### Latin Extended-C其他 ###
+ⱱ	@vr	0
+ⱴ	@vg	0
+ⱺ	@omo	0
+##
+ⱺ	@oo	0
+## 以下一個為大寫
+ⱻ	@ek"	0
+##
+ⱻ	@eq"	0
+ⱼ	@djh	0
+## 以下一個為大寫
+ⱽ	@vh"	0
+##### Latin Extended-D #####
+### Latin Extended-D小寫 ###
+ꜣ	@jfjf	0
+##
+ꜣ	@jfhjf	0
+ꜥ	@cf	0
+##
+ꜥ	@cfh	0
+#ꜥ	@ci	0
+#ꜥ	@ch	0
+ꜧ	@hj	0
+ꜫ	@ei	0
+ꜭ	@dfj	0
+ꜯ	@dfjdd	0
+ꜳ	@aha	0
+##
+#ꜳ	@aa	0
+ꜵ	@aho	0
+ꜷ	@au	0
+##
+ꜷ	@ahu	0
+ꜹ	@ahv	0
+ꜻ	@ahvt	0
+##
+ꜻ	@avt	0
+ꜽ	@ahy	0
+ꜿ	@jfma	0
+##
+ꜿ	@ckma	0
+ꝁ	@kt	0
+ꝃ	@kx	0
+ꝅ	@ktx	0
+ꝇ	@li	0
+ꝉ	@lt	0
+##
+ꝉ	@tf	0
+##
+ꝉ	@iwt	0
+ꝋ	@ot	0
+ꝍ	@or	0
+##
+ꝍ	@oo	0
+ꝏ	@oho	0
+ꝑ	@pt	0
+ꝓ	@pk	0
+ꝕ	@pk	0
+ꝗ	@qt	0
+ꝙ	@qx	0
+ꝛ	@rf	0
+ꝝ	@rfx	0
+ꝟ	@vx	0
+ꝡ	@wj	0
+##
+ꝡ	@why	0
+#ꝣ	@zgr	0
+##
+#ꝣ	@zfgr	0
+##
+ꝣ	@zfr	0
+##
+#ꝣ	@czg	0
+##
+#ꝣ	@czfg	0
+##
+ꝣ	@czf	0
+##
+#ꝣ	@chzg	0
+##
+#ꝣ	@chzfg	0
+##
+ꝣ	@chzf	0
+ꝥ	@lft	0
+##
+ꝥ	@bhpt	0
+##
+ꝥ	@bpt	0
+##
+ꝥ	@ihot	0
+##
+ꝥ	@iot	0
+##
+ꝥ	@lhot	0
+##
+ꝥ	@lot	0
+ꝧ	@lft	0
+##
+ꝧ	@bhpt	0
+##
+ꝧ	@bpt	0
+##
+ꝧ	@ihot	0
+##
+ꝧ	@iot	0
+##
+ꝧ	@lhot	0
+##
+ꝧ	@lot	0
+ꝩ	@yf	0
+ꝫ	@zi	0
+ꝭ	@kf	0
+##
+ꝭ	@sfg	0
+ꝯ	@gf	0
+ꝱ	@dhlx	0
+ꝲ	@lx	0
+ꝳ	@mhlx	0
+ꝴ	@nhlx	0
+ꝵ	@rrx	0
+##
+ꝵ	@rx	0
+ꝶ	@rx	0
+ꝷ	@tx	0
+ꝸ	@bf	0
+Ꝺ	@or	0
+##
+Ꝺ	@sk	0
+ꝺ	@or	0
+##
+ꝺ	@df	0
+ꝼ	@rh	0
+ꝿ	@dfq	0
+##
+#ꝿ	@dq
+##
+ꝿ	@zfoq	0
+##
+ꝿ	@zfqo	0
+ꞁ	@lq	0
+##
+ꞁ	@lk	0
+ꞃ	@hf	0
+##
+ꞃ	@nyc	0
+ꞅ	@ri	0
+ꞇ	@tf	0
+##
+#ꞇ	ti
+ꞎ	@lck	0
+##
+ꞎ	@lkc	0
+##
+ꞎ	@ick	0
+##
+ꞎ	@ikc	0
+ꞑ	@ny	0
+ꞓ	@ct	0
+ꞕ	@hj	0
+ꞗ	@bk	0
+ꞛ	@bk	0
+ꞝ	@bfk	0
+ꞟ	@rfq
+ꞡ	@gx
+ꞣ	@kx
+ꞥ	@nx
+ꞧ	@rx
+ꞩ	@sx
+ꞵ	@by
+##
+ꞵ	@bi
+##
+ꞵ	@ihb
+ꞷ	@wi
+##
+ꞷ	@chck
+##
+ꞷ	@cck
+##
+ꞷ	@chjf
+##
+ꞷ	@cjf
+ꟼ	@qi
+ꟽ	@mk
+## 以下全為後來新增小寫
+ꞙ	@ft
+ꜩ	@tzf
+##
+ꜩ	@thzf
+##
+#ꜩ	@tzg
+##
+#ꜩ	@tzfg
+##
+#ꜩ	@thzg
+##
+#ꜩ	@thzfg
+### Latin Extended-D大寫 ###
+Ᵹ	@df"	0
+##
+#Ᵹ	@dk"	0
+##
+Ᵹ	@zfo"	0
+##
+Ᵹ	@zfho"	0
+Ꭓ	@xi"
+ꜰ	@fi"
+ꜱ	@si"
+Ꜣ	@jfjf"
+##
+Ꜣ	@jfhjf"
+Ꜥ	@cf"
+##
+Ꜥ	@cfh"
+#Ꜥ	@ci"
+#Ꜥ	@ch"
+Ꜧ	@hj"
+Ꜫ	@ef"
+Ꜭ	@dfj"
+Ꜯ	@dfjdd"
+Ꜳ	@aha"
+##
+#Ꜳ	@aa"
+Ꜵ	@aho"
+Ꜷ	@au"
+##
+Ꜷ	@ahu"
+Ꜹ	@ahv"
+Ꜻ	@ahvt"
+##
+Ꜻ	@avt"
+Ꜽ	@ahy"
+Ꜿ	@jfma"
+##
+Ꜿ	@ckma"
+Ꝁ	@kt"
+Ꝃ	@kx"
+Ꝅ	@ktx"
+Ꝇ	@li"
+Ꝉ	@lt"
+Ꝋ	@ot"
+Ꝍ	@or"
+##
+Ꝍ	@oo"
+Ꝏ	@oho"
+Ꝑ	@pt"
+Ꝓ	@pk"
+Ꝕ	@pk"
+Ꝗ	@qx"
+Ꝙ	@qx"
+Ꝛ	@rf"
+Ꝝ	@rfx"
+Ꝟ	@vx"
+Ꝡ	@wj"
+##
+Ꝡ	@why"
+#Ꝣ	@zgr"
+##
+#Ꝣ	@zfgr"
+##
+Ꝣ	@zfr"
+##
+#Ꝣ	@czg"
+##
+#Ꝣ	@czfg"
+##
+Ꝣ	@czf"
+##
+#Ꝣ	@chzg"
+##
+#Ꝣ	@chzfg"
+##
+Ꝣ	@chzf"
+Ꝥ	@lft"
+##
+Ꝥ	@bhpt"
+##
+Ꝥ	@bpt"
+##
+Ꝥ	@ihot"
+##
+Ꝥ	@iot"
+##
+Ꝥ	@lhot"
+##
+Ꝥ	@lot"
+Ꝧ	@lft"
+##
+Ꝧ	@bhpt"
+##
+Ꝧ	@bpt"
+##
+Ꝧ	@ihot"
+##
+Ꝧ	@iot"
+##
+Ꝧ	@lhot"
+##
+Ꝧ	@lot"
+Ꝩ	@yf"
+Ꝫ	@zi"
+Ꝭ	@kf"
+##
+Ꝭ	@sfg"
+Ꝯ	@gf"
+Ꝼ	@rh"
+Ꝿ	@dfq"
+##
+#Ꝿ	@dq"
+##
+Ꝿ	@zfoq"
+##
+Ꝿ	@zfqo"
+Ꞁ	@lq"
+##
+Ꞁ	@gk"
+Ꞃ	@hf"
+##
+Ꞃ	@nyc"
+Ꞅ	@ri"
+Ꞇ	@tf"
+##
+#Ꞇ	@ti"
+Ꞑ	@ny"
+Ꞓ	@ct"
+Ꞗ	@bk"
+Ꞛ	@bk"
+Ꞝ	@bfk"
+Ꞟ	@rfq"
+Ꞡ	@gx"
+Ꞣ	@kx"
+Ꞥ	@nx"
+Ꞧ	@rx"
+Ꞩ	@sx"
+Ɦ	@hr"
+Ɬ	@lk"
+Ꞵ	@by"
+##
+Ꞵ	@bi"
+##
+Ꞵ	@ihb"
+Ꞷ	@wi"
+##
+Ꞷ	@chck"
+##
+Ꞷ	@cck"
+##
+Ꞷ	@chjf"
+##
+Ꞷ	@cjf"
+## 以下全為後來新增大寫
+Ɥ	@ui"
+##
+Ɥ	@hq"
+Ꞙ	@gjt"
+##
+Ꞙ	@gtj"
+Ɜ	@zi"
+Ɡ	@gi"
+Ʞ	@kq"
+##
+Ʞ	@kk"
+Ʇ	@tk"
+Ʝ	@jg"
+##
+Ʝ	@ig"
+ꟷ	@iq"
+ꟸ	@hth"
+ꟺ	@wi"
+ꟻ	@fk"
+ꟾ	@ii"
+Ꜩ	@tzf"
+##
+Ꜩ	@thzf"
+##
+#Ꜩ	@tzg"
+##
+#Ꜩ	@tzfg"
+##
+#Ꜩ	@thzg"
+##
+#Ꜩ	@thzfg"
+### Latin Extended-D其他 ###
+꜠	@fq
+##
+꜠	@fqh
+꜡	@fq
+##
+꜡	@dfqh
+ꝰ	@gfh
+ꞈ	@dlw
+꞉	@awaw
+##
+#꞉	@awhaw
+##
+꞉	@bwq
+꞊	@ewew
+#
+#꞊	@ewhew
+## 以下不明暫時分為符號類
+Ꞌ	@pw
+##
+#Ꞌ	@ih
+## 以下不明暫時分為符號類
+ꞌ	@pw
+##
+#ꞌ	ih
+ꞏ	@aw
+ꞔ	@cj
+ꟹ	@oheh
+##
+ꟹ	@oeh
+ꟿ	@wf
+##
+#ꟿ	@xf
+##
+ꟿ	@mhv
+##
+ꟿ	@lhw
+##
+#ꟿ	@lhlhv
+##
+ꟿ	@nhn
+##### Latin Extended-E #####
+## (暫時不分大小寫)20191004分出兩個大寫
+ꬰ	@at
+ꬱ	@ahek
+##
+ꬱ	@aek
+ꬲ	@ef
+ꬳ	@et
+ꬴ	@ek
+ꬵ	@fi
+ꬶ	@gg
+ꬷ	@lz
+ꬸ	@lzz
+ꬹ	@lma
+##
+ꬹ	@lmo
+ꬺ	@mg
+ꬻ	@ng
+ꬼ	@ng
+ꬽ	@of
+ꬾ	@ofx
+ꬿ	@jfx
+##
+ꬿ	@ckx
+ꭀ	@ohek
+##
+ꭀ	@oek
+ꭁ	@eqhox
+##
+ꭁ	@eqox
+ꭂ	@eqhq
+##
+ꭂ	@eqq
+ꭃ	@cho
+##
+#ꭃ	@co
+ꭄ	@chox
+##
+ꭄ	@cox
+ꭅ	@nf
+##
+ꭅ	@yk
+## 以下一個為大寫
+ꭆ	@rc"
+ꭇ	@ri
+ꭈ	@rr
+ꭉ	@rg
+ꭊ	@rrg
+##
+ꭊ	@rgr
+ꭋ	@mf
+##
+ꭋ	@my
+ꭌ	@mfo
+##
+ꭌ	@myo
+##
+ꭌ	@mfhb
+ꭍ	@sf
+ꭎ	@uf
+ꭏ	@uft
+ꭐ	@mfqa
+##
+ꭐ	@mfqma
+##
+ꭐ	@mfdaq
+##
+ꭐ	@mfmaq
+ꭑ	@mfda
+##
+ꭑ	@mfma
+ꭒ	@ui
+##
+ꭒ	@ur
+ꭓ	@xi
+ꭔ	@xo
+ꭕ	@xi
+ꭖ	@xo
+ꭗ	@xi
+ꭘ	@xo
+ꭙ	@xi
+ꭚ	@yf
+##
+ꭚ	@ufj
+꭛	@ufmf
+##
+꭛	@uwmw
+ꭜ	@lgh
+##
+ꭜ	@hjh
+ꭝ	@lzh
+ꭞ	@lzh
+ꭟ	@uh
+##
+ꭟ	@urh
+#ꭠ	@ib
+##
+ꭠ	@rhb
+##
+ꭠ	@ihb
+ꭡ	@ihe
+ꭢ	@jfhe
+##
+ꭢ	@jfe
+##
+ꭢ	@ckhe
+##
+ꭢ	@cke
+ꭣ	@uho
+##
+ꭣ	@yfho
+##
+ꭣ	@yfo
+ꭤ	@ai
+## 以下一個為大寫
+ꭥ	@wi"
+##### 拉丁字母結束 #####
+##### 前面單元結束，後面201707新增 #####
+##### 發音字母啟始 #####
+##### IPA Extensions #####
+ɐ	@aq
+ɑ	@ai	700
+ɒ	@aq
+ɓ	@br
+##
+ɓ	@gq
+ɔ	@jf	700
+##
+ɔ	@ck	700
+ɕ	@cg
+##
+ɕ	@gfq
+#ɖ	@dc #移前
+ɗ	@dr
+ɘ	@ek
+ə	@eq	700
+ɚ	@eqk	700
+ɛ	@ei	700
+ɜ	@zi
+ɝ	@zk	700
+## 下面一個是容錯碼
+ɝ	@zr	700
+ɞ	@bf
+ɟ	@jt
+ɠ	@gr
+ɡ	@gi
+## 以下一個為大寫
+ɢ	@gi"
+ɣ	@vo
+##
+ɣ	@no
+##
+ɣ	@go
+ɤ	@vo
+##
+ɤ	@oy
+##
+ɤ	@yo
+##
+ɤ	@ywo
+ɥ	@hq
+##
+ɥ	@ui
+ɦ	@hr
+ɧ	@hrj
+##
+ɧ	@hjr
+##
+ɧ	@jqg
+##
+ɧ	@hrc
+##
+ɧ	@hcr
+ɨ	@it
+ɩ	@ii
+## 以下一個為大寫
+ɪ	@ii"	700
+ɫ	@iz
+##
+ɫ	@lz
+ɬ	@lk
+##
+ɬ	@ik
+ɭ	@lc
+#ɮ	@izfg
+##
+#ɮ	@izf
+##
+#ɮ	@lzfg
+##
+ɮ	@lzf
+##
+#ɮ	@izg
+##
+#ɮ	@lzg
+##
+#ɮ	@ihzfg
+##
+#ɮ	@ihzf
+##
+#ɮ	@lhzfg
+##
+ɮ	@lhzf
+ɯ	@mq
+ɰ	@xf
+##
+#ɰ	@wf
+##
+ɰ	@mqy
+##
+ɰ	@mrq
+##
+ɰ	@wy
+##
+ɰ	@whi
+##
+ɰ	@uhu
+ɱ	@mj
+ɲ	@nj
+ɳ	@nc
+## 以下一個為大寫
+ɴ	@ni"
+ɵ	@qi
+## 以下一個為大寫
+ɶ	@ohe"
+ɷ	@bfq
+ɸ	@fi
+ɹ	@rq
+ɺ	@rq
+ɻ	@rrq
+##
+ɻ	@rqc
+ɼ	@ri
+ɽ	@rc
+ɾ	@jq
+##
+ɾ	@lfk
+ɿ	@jk
+##
+ɿ	@lf
+#ʀ	@ri #移前
+## 以下一個為大寫
+ʁ	@rk"
+ʂ	@sc
+ʃ	@sf	700
+ʄ	@sft
+##
+ʄ	@sftt
+ʅ	@sfk
+ʆ	@sfg
+##
+ʆ	@ifq
+ʇ	@tq
+ʈ	@ti
+##
+ʈ	@tc
+ʉ	@ut
+ʊ	@wk	700
+ʋ	@vf
+##
+ʋ	@yi
+ʌ	@li	700
+##
+ʌ	@vk	700
+ʍ	@wk
+ʎ	@yq
+## 以下一個為大寫
+ʏ	@yi"
+ʐ	@zc
+ʑ	@zg
+#ʒ	@zfg	700 #移前
+##
+#ʒ	@zf	700 #移前
+##
+#ʒ	@zg	700 #移前
+#ʓ	@zfgg
+##
+ʓ	@zfg
+##
+#ʓ	@zgg
+ʔ	@jfy
+##
+ʔ	@jy
+##
+ʔ	@jfk
+##
+#ʔ	@cfq
+##
+#ʔ	@cfyk
+##
+#ʔ	@cyk
+ʕ	@cfy
+##
+ʕ	@cy
+##
+ʕ	@cfk
+ʖ	@jfyk
+##
+ʖ	@jyk
+##
+ʖ	@jf
+##
+#ʖ	@cfk
+##
+#ʖ	@cfyq
+##
+#ʖ	@cyq
+ʗ	@ci
+ʘ	@oma
+## 以下一個為大寫
+ʙ	@bi"
+ʚ	@bfk
+## 以下一個為大寫
+ʛ	@gr"
+## 以下一個為大寫
+ʜ	@hi"
+ʝ	@jg
+##
+ʝ	@ig
+ʞ	@kq
+##
+ʞ	@kk
+## 以下一個為大寫
+ʟ	@li"
+ʠ	@qr
+ʡ	@jfyt
+##
+ʡ	@jyt
+##
+ʡ	@jfkt
+##
+ʡ	@jftf
+##
+#ʡ	@cfqt
+##
+#ʡ	@cfykt
+##
+#ʡ	@cykt
+ʢ	@cfyt
+##
+ʢ	@cyt
+##
+ʢ	@cfkt
+##
+ʢ	@cftf
+ʣ	@dhz
+#ʤ	@dzfg	700
+##
+ʤ	@dzf	700
+##
+#ʤ	@dzg	700
+##
+#ʤ	@dhzfg	700
+##
+ʤ	@dhzf	700
+##
+#ʤ	@dhzg	700
+ʥ	@dzg
+##
+ʥ	@dhzg
+ʦ	@ths
+ʧ	@tsf	700
+##
+ʧ	@thsf	700
+ʨ	@tcg
+##
+ʨ	@tgq
+##
+ʨ	@thcg
+##
+ʨ	@thgq
+ʩ	@fnj
+##
+ʩ	@fhnj
+ʪ	@lhs
+ʫ	@lhz
+ʬ	@whw
+##
+#ʬ	@ww
+ʭ	@rhr
+##
+ʭ	@rwrw
+##
+#ʭ	@rr
+ʮ	@ur
+##
+ʮ	@ury
+##
+ʮ	@uyr
+##
+ʮ	@hqr
+##
+ʮ	@hcq
+ʯ	@urc
+##
+ʯ	@hqrc
+##
+ʯ	@hrcq
+##### Phonetic Extensions #####
+## 以下一個為大寫
+ᴀ	@ai"
+## 以下一個為大寫
+ᴁ	@ahe"
+ᴂ	@eqhe
+##
+ᴂ	@eqe
+## 以下一個為大寫
+ᴃ	@bt"
+## 以下一個為大寫
+ᴄ	@ci"
+## 以下一個為大寫
+ᴅ	@di"
+## 以下一個為大寫
+ᴆ	@dt"
+## 以下一個為大寫
+ᴇ	@ei"
+ᴈ	@zi
+ᴉ	@ik
+##
+ᴉ	@iq
+## 以下一個為大寫
+ᴊ	@ji"
+## 以下一個為大寫
+ᴋ	@ki"
+## 以下一個為大寫
+ᴌ	@lx"
+## 以下一個為大寫
+ᴍ	@mi"
+## 以下一個為大寫
+ᴎ	@ni"
+##
+ᴎ	@nk"
+## 以下一個為大寫
+ᴏ	@oi"
+## 以下一個為大寫
+ᴐ	@jf"
+##
+ᴐ	@ck"
+ᴑ	@oq
+ᴒ	@cq
+ᴓ	@oxq
+##
+ᴓ	@oqx
+ᴔ	@eqho
+##
+ᴔ	@eqo
+## 以下一個為大寫
+ᴕ	@uho"
+ᴖ	@mf
+##
+ᴖ	@mw
+ᴗ	@uf
+##
+ᴗ	@uw
+##
+ᴗ	@duw
+##
+ᴗ	@dufh
+## 以下一個為大寫
+ᴘ	@pi"
+## 以下一個為大寫
+ᴙ	@rk"
+## 以下一個為大寫
+ᴚ	@rq"
+## 以下一個為大寫
+ᴛ	@ti"
+## 以下一個為大寫
+ᴜ	@ui"
+ᴝ	@uq
+ᴞ	@ubq
+ᴟ	@mq
+## 以下一個為大寫
+ᴠ	@vi"
+## 以下一個為大寫
+ᴡ	@wi"
+## 以下一個為大寫
+ᴢ	@zi"
+## 以下一個為大寫
+#ᴣ	@zfg"
+##
+ᴣ	@zf"
+##
+#ᴣ	@zg"
+ᴤ	@sk
+##
+ᴤ	@jfcf
+##
+ᴤ	@jfcfk
+##
+ᴤ	@ckcf
+##
+ᴤ	@ckcfk
+##
+ᴤ	@jfc
+##
+ᴤ	@ckc
+ᴥ	@af
+## 以下一個為大寫
+ᴦ	@gi"
+## 以下一個為大寫
+ᴧ	@li"
+##
+ᴧ	@vk"
+## 以下一個為大寫
+ᴨ	@ri"
+## 以下一個為大寫
+ᴩ	@pi"
+## 以下一個為大寫
+ᴪ	@ui"
+## 以下一個為大寫
+ᴫ	@li"
+##
+ᴫ	@jhi"
+## 以下一個為大寫
+ᴬ	@ah"
+## 以下一個為大寫
+ᴭ	@aheh"
+##
+ᴭ	@aeh"
+## 以下一個為大寫
+ᴮ	@bh"
+## 以下一個為大寫
+ᴯ	@bth"
+## 以下一個為大寫
+ᴰ	@dh"
+## 以下一個為大寫
+ᴱ	@eh"
+## 以下一個為大寫
+ᴲ	@ekh"
+##
+ᴲ	@eqh"
+## 以下一個為大寫
+ᴳ	@gh"
+## 以下一個為大寫
+ᴴ	@hh"
+## 以下一個為大寫
+ᴵ	@ih"
+## 以下一個為大寫
+ᴶ	@jh"
+## 以下一個為大寫
+ᴷ	@kh"
+## 以下一個為大寫
+ᴸ	@lh"
+## 以下一個為大寫
+ᴹ	@mh"
+## 以下一個為大寫
+ᴺ	@nh"
+## 以下一個為大寫
+ᴻ	@nh"
+##
+ᴻ	@nkh"
+## 以下一個為大寫
+ᴼ	@oh"
+## 以下一個為大寫
+ᴽ	@uhoh"
+##
+ᴽ	@uoh"
+## 以下一個為大寫
+ᴾ	@ph"
+## 以下一個為大寫
+ᴿ	@rh"
+## 以下一個為大寫
+ᵀ	@th"
+## 以下一個為大寫
+ᵁ	@uh"
+## 以下一個為大寫
+ᵂ	@wh"
+ᵃ	@ah
+ᵄ	@aqh
+ᵅ	@ah
+ᵆ	@aheqh
+##
+ᵆ	@eqhaqh
+##
+ᵆ	@aeqh
+##
+ᵆ	@eqaqh
+##
+ᵆ	@eqheh
+##
+ᵆ	@eqeh
+##
+ᵆ	@aheh
+##
+ᵆ	@aeh
+ᵇ	@bh
+ᵈ	@dh
+ᵉ	@eh
+ᵊ	@eqh
+ᵋ	@eh
+ᵌ	@zh
+ᵍ	@gh
+ᵎ	@ikh
+ᵏ	@kh
+ᵐ	@mh
+ᵑ	@njh
+ᵒ	@oh
+ᵓ	@jfh
+##
+ᵓ	@ckh
+ᵔ	@mfh
+##
+ᵔ	@mw
+ᵕ	@ufh
+##
+ᵕ	@uw
+ᵖ	@ph
+ᵗ	@th
+ᵘ	@uh
+ᵙ	@uqh
+ᵚ	@mqh
+ᵛ	@vh
+ᵜ	@afh
+ᵝ	@bh
+ᵞ	@gh
+ᵟ	@dh
+ᵠ	@fh
+ᵡ	@xh
+ᵢ	@dih
+ᵣ	@drh
+ᵤ	@duh
+ᵥ	@dvh
+ᵦ	@dbh
+ᵧ	@dgh
+ᵨ	@dph
+## 以下兩個為容錯碼
+ᵨ	@deh
+ᵨ	@dpfh
+ᵩ	@dfh
+ᵪ	@dxh
+ᵫ	@uhe
+ᵬ	@bz
+ᵭ	@dz
+ᵮ	@fz
+ᵯ	@mz
+ᵰ	@nz
+ᵱ	@pz
+ᵲ	@rz
+ᵳ	@jqz
+ᵴ	@sz
+ᵵ	@tz
+ᵶ	@zz
+ᵷ	@gq
+ᵸ	@hh
+ᵹ	@df
+##
+#ᵹ	@dk
+##
+ᵹ	@zfo
+##
+ᵹ	@zfho
+ᵺ	@thx
+## 以下一個為大寫
+ᵻ	@it"
+##
+ᵻ	@tf"
+ᵼ	@it
+ᵽ	@pt
+## 以下一個為大寫
+ᵾ	@ut"
+ᵿ	@wkt
+##### Phonetic Extensions Supplement #####
+ᶀ	@bj
+ᶁ	@dj
+ᶂ	@fj
+ᶃ	@gk
+ᶄ	@kj
+ᶅ	@lj
+ᶆ	@mj
+ᶇ	@nj
+ᶈ	@pj
+##
+ᶈ	@pk
+ᶉ	@rj
+ᶊ	@sj
+ᶋ	@sfk
+ᶌ	@vj
+ᶍ	@xj
+ᶎ	@zj
+ᶏ	@ac
+ᶐ	@ac
+ᶑ	@drc
+##
+ᶑ	@dcr
+ᶒ	@ec
+ᶓ	@ec
+ᶔ	@zc
+ᶕ	@eqk	700
+ᶖ	@ic
+ᶗ	@jfc
+##
+ᶗ	@ckc
+ᶘ	@sfc
+ᶙ	@uc
+#ᶚ	@zfgc
+##
+ᶚ	@zfc
+##
+#ᶚ	@zgc
+ᶛ	@aqh
+ᶜ	@ch
+ᶝ	@cgh
+##
+ᶝ	@gfqh
+ᶞ	@dfxh
+##
+ᶞ	@dxh
+ᶟ	@zh
+ᶠ	@fh
+ᶡ	@jth
+ᶢ	@gh
+ᶣ	@hqh
+##
+ᶣ	@uh
+ᶤ	@ith
+ᶥ	@ih
+## 以下一個為大寫
+ᶦ	@ih"
+## 以下一個為大寫
+ᶧ	@ith"
+##
+ᶧ	@tfh"
+ᶨ	@jgh
+##
+ᶨ	@igh
+ᶩ	@lch
+ᶪ	@ljh
+## 以下一個為大寫
+ᶫ	@lh"
+ᶬ	@mjh
+ᶭ	@xfh
+##
+#ᶭ	@wfh
+##
+#ᶭ	@mqh
+##
+ᶭ	@mqyh
+##
+ᶭ	@mrqh
+##
+ᶭ	@wyh
+##
+ᶭ	@wih
+##
+ᶭ	@uuh
+ᶮ	@njh
+ᶯ	@nch
+## 以下一個為大寫
+ᶰ	@nh"
+ᶱ	@qh
+ᶲ	@fh
+ᶳ	@sch
+ᶴ	@sfh
+ᶵ	@tjh
+ᶶ	@uth
+ᶷ	@wkh
+## 以下一個為大寫
+ᶸ	@uh"
+ᶹ	@vfh
+##
+ᶹ	@yh
+#ᶹ	@vh
+ᶺ	@lh
+##
+ᶺ	@vkh
+ᶻ	@zh
+ᶼ	@zch
+ᶽ	@zgh
+#ᶾ	@zfgh
+##
+ᶾ	@zfh
+##
+#ᶾ	@zgh
+ᶿ	@qh
+##### 發音字母結束 #####
+##### 201711新增 #####
+##### Spacing Modifier Letters 開始 #####
+### 02b0~02bf ###
+ʰ	@hh
+ʱ	@hrh
+ʲ	@jh
+ʳ	@rh
+ʴ	@rqh
+ʵ	@rrqh
+##
+ʵ	@rqch
+## 以下一個為大寫
+ʶ	@rkh"
+ʷ	@wh
+ʸ	@yh
+ʹ	@pw
+ʺ	@pwpw
+ʻ	@ww
+ʼ	@dw
+ʽ	@qw
+ʾ	@jw
+ʿ	@cw
+##
+#ʿ	@ch
+### 02c0~02cf ###
+ˀ	@jyh
+##
+#ˀ	@cfqh
+ˀ	@jfyh
+##
+ˀ	@jfkh
+ˁ	@cfyh
+##
+ˁ	@cfkh
+##
+ˁ	@cyh
+˂	@vwq
+˃	@vwq
+##
+˄	@lw
+##
+#˄	@lh
+˅	@vw
+##
+#˅	@vh
+ˆ	@lw
+##
+#ˆ	@lh
+ˇ	@vw
+##
+#ˇ	@vh
+ˈ	@pw
+##
+#ˈ	@ih
+ˉ	@ew
+ˊ	@pw
+ˋ	@nw
+ˌ	@dpw
+##
+ˌ	@yw
+##
+ˌ	@dyw
+##
+#ˌ	@di
+#ˌ	@ih
+ˍ	@dew
+ˎ	@dpw
+##
+ˎ	@dnw
+ˏ	@dnw
+##
+ˏ	@dpw
+### 02d0~02df ###
+## 下面為新字根
+ː	@dfkdf
+##
+ː	@dkd
+##
+ː	@dfdf
+##
+ː	@dfhdf
+## 下面為新字根
+ˑ	@dfk
+##
+ˑ	@dk
+##
+ˑ	@df
+˒	@jw
+##
+˒	@djw
+˓	@cw
+##
+#˓	@ch
+##
+˓	@dcw
+˔	@dtwk
+##
+˔	@twk
+##
+#˔	@tk
+˕	@dtw
+##
+˕	@tw
+##
+#˕	@th
+˖	@dtfh
+##
+#˖	@dt
+##
+˖	@tw
+##
+˖	@dtw
+˗	@ew
+##
+˗	@dew
+##
+#˗	@iq
+˘	@ufh
+##
+˘	@uw
+##
+#˘	@uh
+˙	@aw
+˚	@ow
+##
+#˚	@oh
+˛	@cw
+##
+˛	@dcw
+##
+#˛	@ch
+˜	@sw
+˝	@pwpw
+˞	@kw
+˟	@xw
+##
+#˟	@xh
+##
+#˟	@xf
+### 02e0~02ef ###
+ˠ	@voh
+##
+ˠ	@goh
+##
+ˠ	@noh
+ˡ	@lh
+ˢ	@sh
+ˣ	@xh
+##
+#ˣ	@xf
+##
+#ˣ	@xw
+ˤ	@cfyh
+##
+ˤ	@cfkh
+ˤ	@cyh
+˥	@gwk
+##
+#˥	@lq
+˦	@twq
+˧	@twq
+˨	@twq
+˩	@gwq
+##
+#˩	@lk
+˪	@gwk
+##
+#˪	@lf
+˫	@twq
+ˬ	@dvw
+##
+#ˬ	@vw
+##
+#ˬ	@vh
+˭	@ewew
+ˮ	@dwdw
+˯	@dvw
+##
+#˯	@vh
+##
+#˯	@vw
+### 02f0~02ff ###
+˰	@dlw
+##
+#˰	@lw
+##
+#˰	@lh
+˱	@dvwq
+##
+#˱	@vwq
+˲	@dvwq
+##
+#˲	@vwq
+˳	@dow
+##
+#˳	@oh
+##
+#˳	@ow
+˴	@nw
+˵	@nwnw
+˶	@pwpw
+˷	@dsw
+##
+#˷	@sw
+˸	@awaw
+##
+˸	@bwq
+##
+#˸	@awhaw
+˹	@gw
+##
+#˹	@lk
+˺	@gwk
+##
+#˺	@lq
+˻	@gwk
+##
+˻	@dgwk
+##
+#˻	@lf
+˼	@gwq
+##
+˼	@dgwq
+##
+#˼	@lk
+˽	@rwk
+##
+˽	@drwk
+˾	@gwk
+##
+˾	@dgwk
+##
+#˾	@lf
+˿	@lwq
+##
+˿	@dlwq
+##### Spacing Modifier Letters結束 #####
+##### Combining Diacritical #####
+### 0300~030f ###
+̀	@;;n
+́	@;;p
+̂	@;;l
+̃	@;;s
+̄	@;;e
+̆	@;;u
+## 以下一個容錯碼
+̆	@;;ufh
+̇	@;;a
+̈	@;;b
+̉	@;;j
+̊	@;;o
+## 以下一個容錯碼
+# ̊	@;;oh
+̋	@;;pp
+̌	@;;v
+## 以下一個容錯碼
+# ̌	@;;vh
+̍	@;;p
+## 以下兩個容錯碼
+# ̍	@;;i
+# ̍	@;;ih
+̎	@;;pp
+## 以下一個容錯碼
+# ̎	@;;ii
+̏	@;;nn
+### 0310~031f ###
+̐	@;;au
+̑	@;;m
+̒	@;;w
+̓	@;;d
+̔	@;;q
+̕	@;;d
+̖	@;;dn
+̗	@;;dp
+̘	@;;dtq
+̙	@;;dtq
+̚	@;;gk
+##
+# ̚	@;;lq
+̛	@;;d
+̜	@;;dc
+## 下一個為容錯碼
+# ̜	@;;ch
+̝	@;;dtk
+̞	@;;dt
+## 下一個為容錯碼
+# ̞	@;;th
+̟	@;;dt
+##
+̟	@;;dtfh
+### 0320~032f ###
+̠	@;;de
+## 以下一個容錯碼
+# ̠	@;;diq
+̡	@;;j
+## 以下二個容錯碼
+̡	@;;g
+̢	@;;c
+̣	@;;da
+̤	@;;db
+̥	@;;do
+## 以下一個為容錯碼
+# ̥	@;;oh
+̦	@;;dd
+̧	@;;j
+## 以下一個為容錯碼
+# ̧	@;;dj
+̨	@;;c
+̩	@;;y
+## 以下三個容錯碼
+# ̩	@;;di
+̩	@;;dp
+# ̩	@;;ih
+̪	@;;dr
+## 以下一個容錯碼
+# ̪	@;;rh
+̫	@;;duu
+## 以下三個容錯碼
+̫	@;;dwh
+̫	@;;dyk
+# ̫	@;;dw
+̬	@;;dv
+## 以下一個容錯碼
+# ̬	@;;vh
+̭	@;;dl
+̮	@;;du
+## 以下一個容錯碼
+̮	@;;dufh
+̯	@;;dm
+### 0330~033f ###
+̰	@;;ds
+̱	@;;de
+̲	@;;de
+̳	@;;dee
+̴	@;;z
+##
+# ̴	@;;s
+̵	@;;t
+̶	@;;t
+̷	@;;x
+̸	@;;x
+̹	@;;dj
+̺	@;;drk
+## 下面為新字根
+̻	@;;do
+## 下面為新字根
+̼	@;;dy
+## 以下三個容錯碼
+# ̼	@;;dm
+# ̼	@;;dmm
+# ̼	@;;mh
+# ̽	@;;xh
+## 以下一個容錯碼
+̽	@;;x
+̾	@;;sh
+## 以下二個容錯碼
+̾	@;;sf
+# ̾	@;;si
+̿	@;;ee
+### 0340~034f(034f沒有符號) ###
+̀	@;;n
+́	@;;p
+͂	@;;s
+̓	@;;d
+̈́	@;;pb
+ͅ	@;;c
+͆	@;;r
+## 以下一個容錯碼
+# ͆	@;;rh
+͇	@;;dee
+͈	@;;yy
+## 以下三個容錯碼
+# ͈	@;;dii
+͈	@;;dpp
+͈	@;;dpdp
+͉	@;;dgk
+##
+# ͉	@;;dlk
+͊	@;;sx
+͋	@;;asa
+͌	@;;ss
+## 下面為新字根
+͍	@;;dh
+## 下面為新字根
+͎	@;;dl
+### 0350~035f ###
+͐	@;;vq
+͑	@;;c
+## 以下四個容錯碼
+# ͑	@;;jk
+# ͑	@;;uq
+# ͑	@;;mq
+# ͑	@;;ch
+͒	@;;ma
+͓	@;;dx
+## 以下一個容錯碼
+# ͓	@;;xh
+͔	@;;dvq
+͕	@;;dvq
+͖	@;;dvql
+## 以下一個容錯碼
+͖	@;;dvqvk
+͗	@;;j
+͘	@;;a
+## 下面為新字根
+͙	@;;dj
+͚	@;;doo
+͛	@;;kfh
+##
+͛	@;;k
+͜	@;;du
+## 以下一個容錯碼
+͜	@;;dufh
+͝	@;;u
+## 以下一個容錯碼
+͝	@;;ufh
+͞	@;;e
+͟	@;;de
+### 0360~036f ###
+͠	@;;s
+͡	@;;m
+## 下面為新字根，前面已經有過的新字根
+͢	@;;dlq
+ͣ	@;;ah
+ͤ	@;;eh
+ͥ	@;;ih
+# ͦ	@;;o
+## 以下一個為容錯碼
+ͦ	@;;oh
+ͧ	@;;uh
+# ͨ	@;;c
+## 以下一個為容錯碼
+ͨ	@;;ch
+ͩ	@;;dh
+ͪ	@;;hh
+ͫ	@;;mh
+ͬ	@;;rh
+ͭ	@;;th
+# ͮ	@;;v
+## 以下一個為容錯碼
+ͮ	@;;vh
+# ͯ	@;;x
+## 以下一個為容錯碼
+ͯ	@;;xh
+##### Combining Diacritical結束 #####
+##### Superscripts and Subscripts開始 #####
+ⁱ	@ih
+⁺	@tw
+##
+⁺	@tfh
+⁻	@ew
+##
+#⁻	@iq
+⁼	@ewew
+⁽	@cw
+⁾	@jw
+ⁿ	@nh
+₊	@dtfh
+##
+₊	@dtw
+##
+#₊	@dt
+₋	@dew
+##
+#₋	@iq
+₌	@dewew
+##
+₌	@dewdew
+₍	@dcw
+₎	@djw
+ₐ	@dah
+ₑ	@deh
+ₒ	@doh
+ₓ	@dxh
+ₔ	@deqh
+ₕ	@dhh
+ₖ	@dkh
+ₗ	@dlh
+ₘ	@dmh
+ₙ	@dnh
+ₚ	@dph
+ₛ	@dsh
+ₜ	@dth
+#數字
+⁰	@ofh
+⁴	@dfh
+⁵	@ffh
+⁶	@sfh
+⁷	@vfh
+⁸	@bfh
+⁹	@gfh
+₀	@dofh
+₁	@dlfh
+₂	@drfh
+₃	@dzfh
+₄	@ddfh
+₅	@dffh
+₆	@dsfh
+₇	@dvfh
+₈	@dbfh
+₉	@dgfh
+#數字補充（C1 Controls and Latin-1 Supplement）
+¹	@lfh
+²	@rfh
+³	@zfh
+##### Superscripts and Subscripts結束 #####

@@ -1,0 +1,12 @@
+# Rime dictionary
+# encoding: utf-8
+# 《全形詞庫》
+---
+name: fsonly.extended
+version: "201910"
+sort: by_weight
+use_preset_vocabulary: false
+import_tables:
+  - fsword
+  - phrases.fs_all
+...

@@ -1,0 +1,156 @@
+# Rime schema settings
+# encoding: utf-8
+# 《韓語(洋蔥鍵位)設定頁》
+schema:
+  schema_id: hangeul # 注意此ID與文件名裏 .schema.yaml 之前的部分相同
+  name: ❃韓語形碼❃
+  version: "202003"
+  author:
+    - 『洋蔥』
+  description: |
+    韓文形碼
+  dependencies:
+    - cangjie5
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ "韓文", "英文" ] 
+  - name: full_shape
+    states: [ "半形", "全形" ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+#    - fluency_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - table_translator@hangeul_phrase
+    - reverse_lookup_translator
+    - script_translator
+
+menu:
+  alternative_select_keys: "0123456789"
+  page_size: 10
+
+speller:
+  alphabet: "abcdefghijklmnopqrstuvwxyz;/"
+  delimiter: "'"
+
+translator:
+  dictionary: hangeul.extended
+  enable_user_dict: true
+  enable_sentence: false
+  enable_completion: false
+  preedit_format:
+    - "xlit|abcdefghijklmnopqrstuvwxyz;'|ABCDEFGHIJKLMNOPQRSTUVWXYZ㉆ |"
+  comment_format:
+    - "xlit|abcdefghijklmnopqrstuvwxyz;'|ABCDEFGHIJKLMNOPQRSTUVWXYZ㉆ |"
+  disable_user_dict_for_patterns:
+    - ^[a-z]{1}$
+    - ^[a-z]{2}$
+    - ^[a-z]{3}$
+
+hangeul_phrase:
+  dictionary: ""
+  user_dict: hangeul_phrase
+  db_class: tabledb #stabledb
+  enable_completion: false
+  enable_sentence: false
+  initial_quality: "0"
+
+reverse_lookup:
+  dictionary: cangjie5
+  enable_completion: false
+  prefix: "="
+  suffix: "'"
+  tips: 〔漢字反查〕
+  preedit_format:
+    - "xlit|abcdefghijklmnopqrstuvwxyz|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符|"
+
+punctuator:
+#  import_preset: default
+  full_shape:
+    " " : { commit: "　" }
+    "<" : { commit: "，" }
+    ">" : { commit: "。" }
+    "?" : [ ？, ／, ÷ ]
+    ":" : [ ：, ； ]
+    "'" : { pair: [ "‘", "’" ] }
+    "\"" : { pair: [ "“", "”" ] }
+    "\\" : [ 、, ＼ ]
+    "|" : [ ·, ｜, "§", "¦" ]
+    "`" : ｀
+    "~" : ～
+    "!" : { commit: ！ }
+    "@" : [ ＠, ☯ ]
+    "#" : [ ＃, ⌘ ]
+    "%" : [ ％, "°", "℃" ]
+    "$" : [ ￥, "$", "€", "£", "¥", "¢", "¤" ]
+    "^" : { commit: …… }
+    "&" : ＆
+    "*" : [ ＊, ·, ・, ×, ※, ❂ ]
+    "(" : （
+    ")" : ）
+    "_" : [ ——, － ]
+    "+" : ＋
+    "=" : ＝
+    "[" : [ 「, 【, 《, 〔, ［ ]
+    "]" : [ 」, 】, 》, 〕, ］ ]
+    "{" : [ 『, 〖, 〈, ｛ ]
+    "}" : [ 』, 〗, 〉, ｝ ]
+  half_shape:
+    "`" : { commit: "₩" }
+    "|" : { commit: " " }
+    "$" : [ "$", "₩", "＄", "¥", "￥", "€", "£", "￡", "₤", "¢", "￠", "₵", "₡", "¤", "৳", "฿", "₠", "₢", "₣", "₥", "₦", "₧", "₪", "₫", "₭", "₮", "₯", "₰", "₱", "₲", "₳", "₴", "₶", "₷", "₸", "₹", "₺", "₨", "﷼" ]
+    "%" : [ "%", "％", "‰", "‱", "°", "℃", "℉", "Å", "㏃", "㏆", "㎈", "㏄", "㏅", "㎝", "㎠", "㎤", "㏈", "㎗", "㎙", "㎓", "㎬", "㏉", "㏊", "㏋", "㎐", "㏌", "㎄", "㎅", "㎉", "㎏", "㎑", "㏍", "㎘", "㎞", "㏎", "㎢", "㎦", "㎪", "㏏", "㎸", "㎾", "㏀", "㏐", "㏓", "㎧", "㎨", "㎡", "㎥", "㎃", "㏔", "㎆", "㎎", "㎒", "㏕", "㎖", "㎜", "㎟", "㎣", "㏖", "㎫", "㎳", "㎷", "㎹", "㎽", "㎿", "㏁", "㎁", "㎋", "㎚", "㎱", "㎵", "㎻", "㏘", "㎩", "㎀", "㎊", "㏗", "㏙", "㏚", "㎰", "㎴", "㎺", "㎭", "㎮", "㎯", "㏛", "㏜", "㎔", "㏝", "㎂", "㎌", "㎍", "㎕", "㎛", "㎲", "㎶", "㎼" ]
+    "&" : [ "&", "＆", "＃", "＠", ⅟, ½, ↉, ⅓, ⅔, ¼, ⅕, ⅖, ⅗, ⅘, ⅙, ⅚, ⅐, ⅛, ⅜, ⅝, ⅞, ⅑, ⅒ ]
+    "*" : [ "*", ＊, "﹡", ※, ❂, ★, ☆, ✡, ❋, ❊, ❉, ❈, ❇, ❆, ❅, ❄, ❃, ❁, ❀, ✿, ✾, ✽, ✼, ✻, ✺, ✹, ✸, ✷, ✶, ✵, ✴, ✳, ✲, ✱, ✰, ✯, ✮, ✭, ✬, ✫, ✪, ✩, ✧, ✦, ✥, ✤, ✣, ✢, ⛤, ⛥, ⛦, ⛧ ]
+    "^" : [ "^", "+", "-", "×", "÷", "±", "=", "≠", "＝", "＋", "－", "＜", "＞", "∈", "∏", "∑", "≮", "≯", "∕", "√", "∝", "∞", ∟, ∠, ∥, ∧, ∨, ∩, ∪, ∫, ∮, ∴, ∵, ∷, ∽, ≈, ≌, ≒, ≡, ≤, ≥, ≦, ≧, ⊕, ⊙, ⊥, ⊿, ㏑, ㏒ ]
+#    "=" : { commit: "=" }
+    "-" : { commit: "-" }
+    "," : { commit: "," }
+    "." : { commit: "." }
+    ";" : [ ";", "…", "·", "`", "'", "\"" ]
+    "'" : { pair: [ "‘", "’" ] }
+    "\"" : { pair: [ "“", "”" ] }
+
+key_binder:
+  import_preset: default
+  bindings:
+    - {accept: comma, send: comma, when: has_menu}
+    - {accept: period, send: period, when: has_menu}
+    - {accept: minus, send: minus, when: has_menu}
+    - {accept: equal, send: equal, when: has_menu}
+    - {accept: Left, send: Page_Up, when: paging}
+    - {accept: Right, send: Page_Down, when: paging}
+    - {accept: Tab, send: Shift+Left, when: paging}
+    - {accept: Shift+space, send: Page_Down, when: has_menu}
+    - {accept: Shift+Tab, send: Page_Up, when: paging}
+    - {accept: Return, send: space, when: paging}
+    - {accept: Return, send: space, when: has_menu}
+    - {accept: space, send: bar, when: has_menu}
+    - {accept: space, send: space, when: paging}
+
+editor:
+  bindings:
+    Shift+Return: commit_raw_input
+
+recognizer:
+  patterns:
+    email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
+    url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"
+    reverse_lookup: "^=[a-z]*'?$"
