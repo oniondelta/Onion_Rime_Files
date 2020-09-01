@@ -15,7 +15,7 @@
 
 
 
-# 各方案說明請見下方連接：
+# 各方案說明：
 
 - [電腦-RIME 設定檔『 洋蔥 純注音 版』](https://deltazone.pixnet.net/blog/post/264319309)
 
