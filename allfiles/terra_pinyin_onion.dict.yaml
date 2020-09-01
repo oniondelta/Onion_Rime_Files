@@ -67,7 +67,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "2020.08.25"
+version: "2020.09.01"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -3534,6 +3534,10 @@ min_phrase_weight: 100
 请	qing2	0%
 与	yu2	0%
 与	yu4	0%
+瞓	fen4
+瞓	shui4	0%
+核	gai1	0%
+核	hu2	0%
 #####@ 201912 比對教育部相關字詞典檔所新增 #####
 丁	zheng1	0%
 丂	kao3	0%
@@ -24613,7 +24617,7 @@ min_phrase_weight: 100
 瞐	mo4
 瞑	ming2
 瞒	man2
-瞓	xun4
+#瞓	xun4
 瞔	ze2
 瞕	zhang4
 瞖	yi4
