@@ -1,0 +1,19 @@
+{
+  "name": "後方標註_蝦米",
+  "segmentation": {
+    "type": "mmseg",
+    "dict": {
+      "type": "text",
+      "file": "back_mark_ocm.txt"
+    }
+  },
+  "conversion_chain": [{
+    "dict": {
+      "type": "group",
+      "dicts": [{
+        "type": "text",
+        "file": "back_mark_ocm.txt"
+      }]
+    }
+  }]
+}

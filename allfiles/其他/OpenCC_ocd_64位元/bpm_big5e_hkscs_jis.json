@@ -1,0 +1,19 @@
+{
+  "name": "泰瑞拼音遮屏除 大五碼Big5E 香港增補字集HKSCS 日本JIS 外的中文",
+  "segmentation": {
+    "type": "mmseg",
+    "dict": {
+      "type": "ocd",
+      "file": "bpm_big5e_hkscs_jis.ocd"
+    }
+  },
+  "conversion_chain": [{
+    "dict": {
+      "type": "group",
+      "dicts": [{
+        "type": "ocd",
+        "file": "bpm_big5e_hkscs_jis.ocd"
+      }]
+    }
+  }]
+}

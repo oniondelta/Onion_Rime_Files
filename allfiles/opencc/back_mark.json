@@ -1,0 +1,19 @@
+{
+  "name": "後方標註",
+  "segmentation": {
+    "type": "mmseg",
+    "dict": {
+      "type": "text",
+      "file": "back_mark.txt"
+    }
+  },
+  "conversion_chain": [{
+    "dict": {
+      "type": "group",
+      "dicts": [{
+        "type": "text",
+        "file": "back_mark.txt"
+      }]
+    }
+  }]
+}

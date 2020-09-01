@@ -1,0 +1,196 @@
+# 位置：~/Library/Rime/squirrel.custom.yaml
+# 用法：想要哪項生效，就刪去該行行首的「#」字符，但注意保留用於縮進的空格
+
+patch:
+  style/color_scheme: lost_temple #apathy #psionics #mac_white #mac_white2
+  # style/horizontal: true      # 候選橫排
+  style/inline_preedit: false #true
+  style/corner_radius: 4 #10
+  style/line_spacing: 4 #6 #1
+  style/spacing: 4 #10 #5
+  style/candidate_format: '%c. %@'
+  style/font_face: 'Times-Roman,PingFangTC-Light,AppleColorEmoji' #,HanaMinA,HanaMinB
+  style/font_point: 20 #21
+  style/label_font_face: 'Andale Mono'
+  style/label_font_point: 14 #12 #18
+
+###################################################
+  preset_color_schemes/Louis:
+    name: 名牌LV
+    author: onion
+    back_color: 0x313843
+    text_color: 0x7BDEF4 #0x6DCBF2
+    hilited_text_color: 0xDBE2EB #0x6DCBF2 #0x7BDEF4
+    hilited_back_color: 0x313843
+    hilited_candidate_text_color: 0x6DCBF2
+    hilited_candidate_back_color: 0x487492
+    hilited_candidate_label_color: 0x6DCBF2
+    hilited_comment_text_color: 0x7BDEF4
+    candidate_text_color: 0x6DCBF2
+    label_color: 0x6DCBF2
+    comment_text_color: 0x7BDEF4
+
+  preset_color_schemes/mac_white:
+    name: 蘋果白／Mac White
+    author: onion
+    candidate_format: ' %c %@ '
+    # alpha: 1
+    # horizontal: true
+    # label_font_face: 'PingFang SC Light'
+    label_color: 0x96a8a7
+    text_color: 0x000000
+    back_color: 0xffffff
+    # border_color: 0xBDBDBD
+    hilited_text_color: 0x96a8a7 #0xE3F0FD
+    hilited_candidate_text_color: 0x000000
+    hilited_candidate_label_color: 0x96a8a7
+    hilited_candidate_back_color: 0xFFE4CE #0xFEF0E4 
+    comment_text_color: 0x96a8a7
+    hilited_comment_text_color: 0x96a8a7
+
+  preset_color_schemes/mac_white2:
+    name: 蘋果白2／Mac White2
+    author: onion
+    candidate_format: ' %c %@ '
+    # alpha: 1
+    # horizontal: true
+    # label_font_face: 'PingFang SC Light'
+    label_color: 0x96a8a7
+    text_color: 0x000000
+    back_color: 0xffffff
+    # border_color: 0xBDBDBD
+    hilited_text_color: 0x828282 #0x000000 #0xE3F0FD
+    hilited_candidate_text_color: 0xffffff #0x000000
+    hilited_candidate_label_color: 0xD5D6BF #0x96a8a7
+    hilited_candidate_back_color: 0xff9d2e #0xFFE4CE #0xFEF0E4
+    comment_text_color: 0x96a8a7
+    hilited_comment_text_color: 0xD5D6BF #0x96a8a7
+
+  preset_color_schemes/system_blue:
+    name: "系統藍／System Blue"
+    author: "scomper <scomper@gmail.com>"    # 作者信息
+    back_color: 0xFFFFFF                     # 候选条背景色，24位色值，16进制，BGR顺序
+    border_color: 0xE0B693                   # 边框色
+    candidate_text_color: 0x000000           # 预选项文字颜色
+    comment_text_color: 0x999999             # 拼音等提示文字颜色
+    hilited_back_color: 0xfff0e3             # 第一候选项背景背景色
+    hilited_candidate_text_color: 0x000000   # 第一候选项文字颜色
+    hilited_candidate_label_color: 0x999999  # 第一候选项编号颜色
+    hilited_comment_text_color: 0x999999     # 注解文字高亮
+    hilited_text_color: 0x999999             # 高亮拼音 (需要开启内嵌编码)
+    text_color: 0x424242                     # 拼音行文字颜色
+    label_color: 0x999999                    # 预选栏编号颜色
+
+  preset_color_schemes/metroblue:
+    name: "現代藍／Metro Blue"
+    author: "Prcuvu <prcuvu@gmail.com>"
+    text_color: 0x000000
+    back_color: 0xffffff
+    border_color: 0xd77800
+    label_color: 0x838383
+    hilited_text_color: 0x000000
+    hilited_back_color: 0xffffff
+    candidate_text_color: 0x000000
+    comment_text_color: 0x000000
+    hilited_candidate_text_color: 0xffffff
+    hilited_comment_text_color: 0xffffff
+    hilited_candidate_back_color: 0xd77800
+    hilited_label_color: 0xffffff
+
+  preset_color_schemes/purity_of_form:
+    name: 純粹的形式／Purity of Form
+    author: 雨過之後、佛振
+    text_color: 0xc2c2c2
+    back_color: 0x444444
+    candidate_text_color: 0xeeeeee
+    hilited_text_color: 0xeeeeee
+    hilited_back_color: 0x444444
+    hilited_candidate_text_color: 0x000000
+    hilited_candidate_back_color: 0xfafafa
+    comment_text_color: 0x808080
+
+  preset_color_schemes/purity_of_essence:
+    name: 純粹的本質／Purity of Essence
+    author: 佛振
+    text_color: 0xB0B0B0 #0x2c2ccc
+    back_color: 0xfafafa
+    candidate_text_color: 0x000000
+    hilited_text_color: 0x000000
+    hilited_back_color: 0xfafafa
+    hilited_candidate_text_color: 0xeeeeee
+    hilited_candidate_back_color: 0x7A5F47 #0x444444
+    comment_text_color: 0x808080
+    hilited_comment_text_color: 0xD6D5D5 #C9C8C5 #C9C9BF #注解文字高亮
+
+  preset_color_schemes/apathy:
+    name: 冷漠／Apathy
+    author: LIANG Hai
+    # horizontal: true  # 水平排列
+    # inline_preedit: true #单行显示，false双行显示
+    candidate_format: "%c\u2005%@\u2005"  # 编号 %c 和候选词 %@ 前后的空间
+    corner_radius: 5  #候选条圆角
+    border_height: 0
+    border_width: 0
+    back_color: 0xFFFFFF  #候选条背景色
+    # font_face: "PingFangSC-Regular,HanaMinB"  #候选词字体
+    # font_point: 16  #候选字词大小
+    text_color: 0x424242  #高亮选中词颜色
+    # label_font_face: "STHeitiSC-Light"   #候选词编号字体
+    # label_font_point: 12   #候选编号大小
+    hilited_candidate_text_color: 0xEE6E00  #候选文字颜色
+    hilited_candidate_back_color: 0xFFF0E4  #候选文字背景色
+    comment_text_color: 0x999999 #拼音等提示文字颜色
+
+  preset_color_schemes/dust:
+    name: 浮尘／Dust
+    author: Superoutman <asticosmo@gmail.com>
+    horizontal: true                                # 水平排列
+    inline_preedit: true                            # 单行显示，false双行显示
+    candidate_format: "%c\u2005%@\u2005"            # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间。
+    corner_radius: 2                                # 候选条圆角
+    border_height: 3                                # 窗口边界高度，大于圆角半径才生效
+    border_width: 8                                 # 窗口边界宽度，大于圆角半径才生效
+    back_color: 0xeeffffff                          # 候选条背景色
+    border_color: 0xE0B693                          # 边框色
+    font_face: "HYQiHei-55S Book,HanaMinA Regular"  # 候选词字体
+    font_point: 14                                  # 候选字词大小
+    text_color: 0x424242                            # 高亮选中词颜色
+    label_font_face: "SimHei"                       # 候选词编号字体
+    label_font_point: 10                            # 候选编号大小
+    label_color: 0xcbcbcb                           # 预选栏编号颜色
+    candidate_text_color: 0x555555                  # 预选项文字颜色
+    text_color: 0x9e9e9e                            # 拼音行文字颜色，24位色值，16进制，BGR顺序
+    comment_text_color: 0x999999                    # 拼音等提示文字颜色
+    hilited_text_color: 0x9e9e9e                    # 高亮拼音 (需要开启内嵌编码)
+    hilited_candidate_text_color: 0x000000          # 第一候选项文字颜色
+    hilited_candidate_back_color: 0xfff0e4          # 第一候选项背景背景色
+    hilited_candidate_label_color: 0x555555         # 第一候选项编号颜色
+    hilited_comment_text_color: 0x9e9e9e            # 注解文字高亮
+
+  preset_color_schemes/mritd_dark:
+    name: 漠然／mritd dark
+    author: mritd <mritd1234@gmail.com>
+    # horizontal: true                              # 水平排列
+    # inline_preedit: true                          # 单行显示，false双行显示
+    candidate_format: "%c\u2005%@"                  # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间。
+    corner_radius: 5                                # 候选条圆角
+    hilited_corner_radius: 3                        # 高亮圆角
+    border_height: 6                                # 窗口边界高度，大于圆角半径才生效
+    border_width: 6                                 # 窗口边界宽度，大于圆角半径才生效
+    border_color_width: 0
+    #font_face: "PingFangSC"                        # 候选词字体
+    # font_point: 16                                # 候选字词大小
+    # label_font_point: 14                          # 候选编号大小
+    text_color: 0x888785 #0xdedddd                  # 拼音行文字颜色，24位色值，16进制，BGR顺序
+    back_color: 0x4b4b4b                            # 候选条背景色
+    label_color: 0x888785                           # 预选栏编号颜色
+    border_color: 0x4b4b4b                          # 边框色
+    candidate_text_color: 0xffffff                  # 预选项文字颜色
+    hilited_text_color: 0xffffff #0xdedddd          # 高亮拼音 (需要开启内嵌编码)
+    # hilited_back_color: 0x252320                  # 高亮拼音 (需要开启内嵌编码)
+    hilited_candidate_text_color: 0xFFE696          # 第一候选项文字颜色
+    hilited_candidate_back_color: 0x4b4b4b          # 第一候选项背景背景色
+    hilited_candidate_label_color: 0xFFE696 #0xffffff   # 第一候选项编号颜色
+    comment_text_color: 0xdedddd
+
+###################################################
