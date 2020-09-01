@@ -5,4 +5,4 @@
 
 sort_rime_file.py 使用方法：
 >- 於本倉庫 my_rime_files 中按右上綠色 [↓Code]  ⇨ Download ZIP ⇨ 解壓縮 ZIP ⇨ 解壓縮後確認 allfiles 資料夾 和 sort_rime_file.py 是在同一層 ⇨ 執行 sort_rime_file.py 
->- 執行後的資料夾名稱後面附註的日期為執行 sort_rime_file.py 當天日期！
+>- 執行後產生的檔案，其資料夾名稱後所附註的日期為執行 sort_rime_file.py 當天日期！非版本號碼！
