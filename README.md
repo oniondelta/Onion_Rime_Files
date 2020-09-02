@@ -1,4 +1,4 @@
-# Onion_Rime_Files（洋蔥 電腦 Rime 方案）
+# Onion_Rime_Files（洋蔥 電腦 Rime 注音&拼音 方案）
 
 ### 內容說明：
 - allfiles 中包含五個主方案（四個注音主方案、一個拼音主方案、一眾掛接方案）
