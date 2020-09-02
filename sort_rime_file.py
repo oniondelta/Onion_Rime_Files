@@ -217,13 +217,3 @@ os.rename('./sort_rime/洋蔥plus版注音/', './sort_rime/洋蔥plus版注音_'
 
 os.rename('./sort_rime/', './電腦RIME方案_'+localtime)
 
-
-# #日期
-# print(time.strftime("%Y%m%d", time.localtime()))
-
-
-# #列印顯示該路徑下的所有檔案
-# def batch_showname(path):
-#     for fname in os.listdir(path):
-#         print(os.path.join(path, fname))
-# batch_showname('./sort_rime/')
