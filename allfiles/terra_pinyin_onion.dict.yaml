@@ -35,6 +35,7 @@
 #    修改為後者：「僞(偽)」「嬀(媯)」「潙(溈)」「蔿(蒍)」「竈(灶)」「衆(眾)」[潨(潀)]「着(著)」
 #              「爲(為)」「裏(裡)」「麪(麵)」「牀(床)」「啓(啟)」「羣(群)」「峯(峰)」
 #              「嫺(嫻)」「睾(睪)」「幺(么)」「繮(韁)」。
+#    PS：「啓(啟)」有一個於古籍存有前者，故保留。
 #
 #    選擇性修改：「臺(台)」「擡(抬)」「檯(枱)」「薹(苔)」「癡(痴)」←《日常常見，互相增補相關詞彙》（“痴”改設權重比高）
 #              「唸(念)」「棱(稜)」「泄(洩)」「涌(湧)」←《 字典中存有兩者之詞彙，待攷 》（“湧”改設權重比高）
@@ -67,7 +68,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "2020.09.01"
+version: "2020.09.02"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -59326,7 +59327,7 @@ min_phrase_weight: 100
 加勒比國家聯盟	jia1 le4 bi3 guo2 jia1 lian2 meng2
 加勒比海	jia1 le4 bi3 hai3
 加勒比海共同體	jia1 le4 bi3 hai3 gong4 tong2 ti3
-#加哩	jia1 li3
+加哩	jia1 li3
 加塞兒	jia1 sai1 er5
 加大力度	jia1 da4 li4 du4
 加工效率	jia1 gong1 xiao4 lv4
@@ -62705,11 +62706,11 @@ min_phrase_weight: 100
 吃不到葡萄說葡萄酸	chi1 bu2 dao4 pu2 tao2 shuo1 pu2 tao2 suan1
 # 喫不到葡萄說葡萄酸	chi1 bu2 dao4 pu2 tao5 shuo1 pu2 tao5 suan1
 吃甜頭	chi1 tian2 tou5
-# 喫甜頭	chi1 tian2 tou5
+喫甜頭	chi1 tian2 tou5
 吃著不盡	chi1 zhuo2 bu2 jin4
-# 喫著不盡	chi1 zhuo2 bu2 jin4
+喫著不盡	chi1 zhuo2 bu2 jin4
 吃蝨子留後腿	chi1 shi1 zi5 liu2 hou4 tui3
-# 喫蝨子留後腿	chi1 shi1 zi5 liu2 hou4 tui3
+喫蝨子留後腿	chi1 shi1 zi5 liu2 hou4 tui3
 喬做胡為	qiao2 zuo4 hu2 wei2
 喬冠華	qiao2 guan1 hua4
 喬志	jiao1 zhi4
@@ -70549,8 +70550,10 @@ min_phrase_weight: 100
 怪著	guai4 zhe5
 怪腔怪調	guai4 qiang1 guai4 diao4
 怪處	guai4 chu4
-怫然不悅	fu2 ran2 bu2 yue4
-怫然變色	fu2 ran2 bian4 se4
+#怫然不悅	fu2 ran2 bu2 yue4
+怫然不悅	fei4 ran2 bu4 yue4
+#怫然變色	fu2 ran2 bian4 se4
+怫然變色	fei4 ran2 bian4 se4
 怫異	bei4 yi4
 怫鬱	fu2 yu4
 怯上	que4 shang4
@@ -76180,6 +76183,7 @@ min_phrase_weight: 100
 易取得	yi4 qu3 de2
 易地	yi4 di4
 易學啟蒙	yi4 xue2 qi3 meng2
+易學啓蒙	yi4 xue2 qi3 meng2
 易學象數論	yi4 xue2 xiang4 shu4 lun4
 易守難攻	yi4 shou3 nan2 gong1
 易數鉤隱圖	yi4 shu4 gou1 yin3 tu2
@@ -77478,6 +77482,7 @@ min_phrase_weight: 100
 本事	ben3 shi4
 本事	ben3 shi5
 本事不濟	ben3 shi5 bu2 ji4
+本事不濟	ben3 shi5 bu4 ji4
 本事高強	ben3 shi5 gao1 qiang2
 本傑明‧富蘭克林	ben3 jie2 ming2 eng3 fu4 lan2 ke4 lin2
 本分	ben3 fen4
@@ -92484,6 +92489,7 @@ min_phrase_weight: 100
 落下	luo4 xia4
 落下	luo4 xia5
 落不是	lao4 bu2 shi5
+落不是	lao4 bu4 shi5
 落不的	lao4 bu4 de5
 落了	la4 le5
 落了	lao4 le5
