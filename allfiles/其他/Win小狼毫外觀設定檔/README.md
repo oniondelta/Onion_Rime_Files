@@ -6,6 +6,7 @@
 
 - 字型為 Google 和 Adobe 共同開發，且免費開源的「思源體」。
 
+- 「思源體」網址：https://github.com/googlefonts/noto-cjk
+
 - Mono 之英文字型才是等寬。
 
-- 「思源體」字型有新版更新，請自行 Google！
