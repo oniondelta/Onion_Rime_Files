@@ -6,7 +6,7 @@
 （可能需要：「打開鍵盤偏好」 ⇨ 「+」「簡體中文」 ⇨ 選取 鼠鬚管 加入！）
 
 
-### 安裝後建議修改以下：
+### 安裝後建議修改：
 
 - 修改 App 中 essay.txt（八股文）檔案，符合台灣用字用詞：
     - 於 /Library/Input Methods/Squirrel.app/Contents/SharedSupport/ 置換 essay.txt（八股文）
