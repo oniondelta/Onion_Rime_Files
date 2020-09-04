@@ -425,7 +425,7 @@ key_binder:
 #    - {accept: Tab, send: Shift+Left, when: paging} #於選單列選字時，回復到輸入列（避免有時回復不了，故增加）。
 #    - {accept: Shift+space, send: Page_Down, when: has_menu} #選字時「Shift」+「空白鍵」翻頁。 #send: Right #send: Down
 ### 空白鍵 ###
-    - {accept: space, send: Return, when: paging} #方向鍵選字時，space直接上屏（避免被一聲空格影響）
+#    - {accept: space, send: Return, when: paging} #方向鍵選字時，space直接上屏（避免被一聲空格影響）
 #    - {accept: space, send: Page_Down, when: paging} #方向鍵選字時，space翻頁（上條遮屏需開啟，否則「=」+「符號」會誤按）
 ##    - {accept: space, send: Down, when: has_menu}
 ##    - {accept: space, send: Down, when: paging}
