@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onion_double
   name: "☆注音(洋蔥雙拼版)☆"
-  version: "202008"
+  version: "202009"
   author:
     - 『洋蔥』
   description: |
@@ -191,7 +191,7 @@ translator:
     - "xlit|bpmfdtnlgkhjqxrzcsiuywvao|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄖㄗㄘㄙㄧㄨㄩㄓㄔㄕ◌|"
     - "xlit|;/.,'|ˉˊˇˋ˙|"
 #######
-    - "xlit|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ，．／；＇|abcdefghijklmnopqrstuvwxyz,./;'|"
+    - "xlit|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ，．／；＇|ABCDEFGHIJKLMNOPQRSTUVWXYZ,./;'|"
 ################################ 以下為使用ooo反查注音 #############################
 reverse2_lookup:
   tag: reverse2_lookup
@@ -397,26 +397,49 @@ punctuator:
 key_binder:
   import_preset: default
   bindings:
+### 避大千注音鍵位和 RIME 原設定鍵位衝突 ###
     - {accept: comma, send: comma, when: has_menu}
     - {accept: period, send: period, when: has_menu}
     - {accept: minus, send: minus, when: has_menu}
     - {accept: equal, send: equal, when: has_menu}
+### 切分移位 ###
+    - {accept: Left, send: KP_Left, when: composing}
+#    - {accept: Right, send: Shift+Right, when: composing} #右移一整個字
+#    - {accept: Shift+Right, send: Right, when: composing} #左移一個注音
+#    - {accept: Shift+Left, send: KP_Left, when: composing} #右移一個注音
+#    - {accept: Shift+space, send: KP_Left, when: composing} #左移一個注音
+##    - {accept: Shift+Tab, send: Right, when: composing} #左移一個注音
+##    - {accept: Tab, send: KP_Left, when: composing} #右移一個注音
+### 選字翻頁 ###
     - {accept: Left, send: Page_Up, when: paging} #直式選單用
     - {accept: Right, send: Page_Down, when: paging} #直式選單用
 #    - {accept: Up, send: Page_Up, when: paging} #橫式選單用
 #    - {accept: Down, send: Page_Down, when: paging} #橫式選單用
-#    - {accept: Left, send: Left, when: has_menu} #橫式選單用
-#    - {accept: Right, send: Right, when: has_menu} #橫式選單用
-    - {accept: Left, send: KP_Left, when: composing}
-#    - {accept: Right, send: Shift+Right, when: composing}
-#    - {accept: Shift+Right, send: Right, when: composing}
-#    - {accept: Shift+Left, send: KP_Left, when: composing}
-    - {accept: space, send: Return, when: paging}
+#    - {accept: Left, send: Left, when: has_menu} #橫式選單用 #send: Shift+Up
+#    - {accept: Right, send: Right, when: has_menu} #橫式選單用 #send: Shift+Down
+    - {accept: Tab, send: Page_Down, when: has_menu} #「tab」翻頁。
+    - {accept: Shift+Tab, send: Page_Up, when: paging} #選字時「Shift」+「tab」翻頁。
+    - {accept: Shift+Down, send: Page_Down, when: has_menu} #選字時「Shift」+「下」翻頁。
+    - {accept: Shift+Up, send: Page_Up, when: paging} #選字時「Shift」+「上」翻頁。
+    - {accept: Shift+space, send: Shift+Left, when: paging} #於選單列選字時，回復到輸入列（避免有時回復不了，故增加）。
+#    - {accept: Tab, send: Shift+Left, when: paging} #於選單列選字時，回復到輸入列（避免有時回復不了，故增加）。
+#    - {accept: Shift+space, send: Page_Down, when: has_menu} #選字時「Shift」+「空白鍵」翻頁。 #send: Right #send: Down
+### 空白鍵 ###
+    - {accept: space, send: Return, when: paging} #方向鍵選字時，space直接上屏（避免被一聲空格影響）
+#    - {accept: space, send: Page_Down, when: paging} #方向鍵選字時，space翻頁（上條遮屏需開啟，否則「=」+「符號」會誤按）
+##    - {accept: space, send: Down, when: has_menu}
+##    - {accept: space, send: Down, when: paging}
+##    - {accept: space, send: space, when: composing}
+##    - {accept: space, send: space, when: has_menu} #非空碼時，空白還是空白
+##    - {accept: space, send: Escape, when: composing} #空碼時，按空格清除
+### 刪除鍵 ###
 #    - {accept: BackSpace, send: Control+BackSpace, when: has_menu} #〔關〕刪除前一個拼音字符〔開〕：刪除整組拼音字符（一個字）
 #    - {accept: Shift+BackSpace, send: BackSpace, when: has_menu}
-    - {accept: Tab, send: Shift+Left, when: paging} #於選單列選字時，回復到輸入列（避免有時回復不了，故增加）。
-    - {accept: Shift+space, send: Page_Down, when: has_menu} #選字可用「 Shift 」+「 空白鍵 」翻頁。
-    - {accept: Shift+Tab, send: Page_Up, when: paging} #選字時可用「Shift」+「tab」翻頁。
+#    - {accept: backslash, send: BackSpace, when: has_menu} #「\」鍵位刪除一個拼音字符。
+    - {accept: backslash, send: Shift+BackSpace, when: has_menu} #「\」鍵位刪除整組拼音字符（一個字）。
+#    - {accept: backslash, send: Shift+Return, when: has_menu} #「\」鍵位上屏英文。
+### 功能快捷鍵 ###
+#    - {accept: Control+apostrophe, toggle: zh_tw, when: always} #accept: Control+semicolon
 
 editor:
   bindings:

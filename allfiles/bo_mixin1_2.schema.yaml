@@ -4,7 +4,7 @@
 schema:
   schema_id: bo_mixin1_2
   name: "☆注音(洋蔥mix-in版 1-2)☆〔拉日 ˇ  ˋ 韓〕🅢❶"
-  version: "202008"
+  version: "202009"
   author:
     - 『洋蔥』 # 以佛振注音支持聲韻亂序方案改編
   description: |
@@ -103,7 +103,7 @@ simplifier:
   tips: all
 
 zh_tw:
-  opencc_config: bpm_big5e_hkscs_jis.json  #s2tw.json #t2tw.json
+  opencc_config: bpm_big5e_hkscs_jis.json #s2tw.json #t2tw.json
   option_name: zh_tw
 
 emoji_switch:
@@ -563,311 +563,7 @@ emoji_series:
   tips: "【emoji集】▶"
   closing_tips: "◀【emoji集】"
   preedit_format:
-##### 以下四字 #####
-    - xform/m2sm/【運動ㄋㄩ(女)】/
-    - xform/m2s0/【運動ㄋㄢ(男)】/
-    - xform/resm/【精怪ㄋㄩ(女)】/
-    - xform/res0/【精怪ㄋㄢ(男)】/
-    - xform/eemg/【公共運輸／公交】(公共交通)/
-    - xform/bgxx/【日式料理／日本料理／日本菜】/
-    - xform/b1xx/【日本料理／日式料理／日本菜】/
-    - xform/b1vf/【日本星期】/
-    - xform/xgnea/【六十四卦名／易經卦名】/
-    - xform/xagy2/【羅馬數字大】/
-    - xform/xgne/【六十四卦／易經】/
-    - xform/urea/【易經卦名／六十四卦名】/
-    - xform/g-gv/【十二生肖／生肖圖】(生肖)/
-    - xform/yacf/【字母黑圈／字母圈黑】(字母帶圓圈)/
-    - xform/yafc/【字母圈黑／字母黑圈】(字母帶圓圈)/
-    - xform/yacz/【字母黑方／字母方黑／字母框黑／字母黑框】(字母帶圓角方框)/
-    - xform/yazc/【字母方黑／字母黑方／字母框黑／字母黑框】(字母帶圓角方框)/
-    - xform/yadc/【字母框黑／字母黑框／字母黑方／字母方黑】(字母帶圓角方框)/
-    - xform/yacd/【字母黑框／字母框黑／字母黑方／字母方黑】(字母帶圓角方框)/
-    - xform/rwer/【交通工具／交通圖】(交通)/
-    - xform/cy1f/【猴子表情／猴子頭】/
-    - xform/gyfc/【數字圈黑／數字黑圈】/
-    - xform/gycf/【數字黑圈／數字圈黑】/
-    - xform/yaf2/【字母圈大】/
-    - xform/yae2/【字母括大】/
-    - xform/xagy/【羅馬數字】/
-##### 以下三字 #####
-    - xform/bmq/【日用品】/
-    - xform/ndv/【色塊心】/
-    - xform/ndm/【色塊圓】/
-    - xform/ndz/【色塊方】/
-    - xform/2fw/【電器圖】(電器)/
-    - xform/erw/【工具圖】(工具)/
-    - xform/urw/【眼鏡圖】(眼鏡)/
-    - xform/b1s/【日本年】/
-    - xform/8x1/【阿拉伯】/
-    - xform/c5b/【黃種人／亞裔】/
-    - xform/xau/【拉美裔／棕色人】/
-    - xform/ynb/【棕色人／拉美裔】/
-    - xform/15b/【白種人／白人】/
-    - xform/ym2/【做運動】/
-    - xform/2jx/【動物臉／獸面】/
-    - xform/gjr/【食物捲】/
-    - xform/b1h/【日本菜／日本料理／日式料理】/
-    - xform/2yb/【大自然】/
-    - xform/uxm/【遊樂園】/
-    - xform/zvf/【飛行器】/
-    - xform/vyw/【鞋子圖】(鞋子)/
-    - xform/rew/【精怪圖】(精怪)/
-    - xform/mvw/【月相圖】(月相)/
-    - xform/wgw/【甜食圖／甜點】(甜食)/
-    - xform/rfw/【家禽圖／禽類】(家禽)/
-    - xform/hrw/【餐具圖】(餐具)/
-    - xform/mxw/【魚類圖／魚圖】(魚類)/
-    - xform/wnd/【填色塊／填色】/
-    - xform/2vd/【單線框】/
-    - xform/gvd/【雙線框】/
-    - xform/rvc/【警消護】/
-    - xform/1eg/【辦公室】/
-    - xform/rww/【交通圖／交通工具】(交通)/
-    - xform/gyr/【十字架】/ #(宗教)
-    - xform/xa2/【羅馬大】/
-    - xform/2jw/【動物圖】(動物)/
-    - xform/gvw/【生肖圖／十二生肖】(生肖)/
-    - xform/gbz/【輸入法】/
-    - xform/rcw/【幾何圖】(幾何2)/
-    - xform/cyd/【漢字框】/
-    - xform/xyv/【咧嘴笑】/
-    - xform/cyw/【猴子頭／猴子表情】/
-    - xform/gy1/【數字標】/ #(數字)
-    - xform/yaz/【字母方／字母框】(字母帶方框)/
-    - xform/yad/【字母框／字母方】(字母帶方框)/
-    - xform/vuf/【西洋棋／象棋】/
-    - xform/qdq/【撲克牌／撲克】/
-    - xform/wvr/【太玄經】/
-    - xform/vya/【星座名】/
-    - xform/g-e/【十二宮】/
-    - xform/gyf/【數字圈】/
-    - xform/gye/【數字括】/
-    - xform/gy2/【數字點】/
-    - xform/yaf/【字母圈】/
-    - xform/yae/【字母括】/
-    - xform/n5a/【蘇州碼】/
-    - xform/vx2/【希臘大】/
-    - xform/km2/【俄語大】/
-    - xform/125/【標點直】/
-    - xform/cyf/【漢字圈】/
-    - xform/cye/【漢字括】/
-    - xform/iro/【 IRO 】(いろは順)/
-    - xform/kra/【 k 假名】/
-    - xform/gra/【 g 假名】/
-    - xform/sra/【 s 假名】/
-    - xform/zra/【 z 假名】/
-    - xform/tra/【 t 假名】/
-    - xform/dra/【 d 假名】/
-    - xform/nra/【 n 假名】/
-    - xform/hra/【 h 假名】/
-    - xform/bra/【 b 假名】/
-    - xform/pra/【 p 假名】/
-    - xform/mra/【 m 假名】/
-    - xform/yra/【 y 假名】/
-    - xform/rra/【 r 假名】/
-    - xform/wra/【 w 假名】/
-    - xform/ara/【 a 假名】/
-    - xform/ira/【 i 假名】/
-    - xform/ura/【 u 假名】/
-    - xform/era/【 e 假名】/
-    - xform/ora/【 o 假名】/
-    - xform/raf/【假名圈】/
-    - xform/ra1/【假名半(形)】/
-    - xform/qra/【片假名】/
-    - xform/cjf/【韓文圈】/
-    - xform/cje/【韓文括】/
-    - xform/ra/【(平)假名】/
-##### 以下二字 #####
-    - xform/wn/【填色／填色塊】/
-    - xform/cg/【回收】/
-    - xform/dy/【褲子】/
-    - xform/zn/【膚色】/
-    - xform/nd/【色塊】/
-    - xform/2y/【電子】/
-    - xform/jf/【武器】/
-    - xform/wz/【頭髮】/
-    - xform/ay/【帽子】/
-    - xform/5c/【中華】/
-    - xform/aw/【貓頭】/
-    - xform/5h/【中餐】(中華料理)/
-    - xform/5z/【正飯】(正餐)/
-    - xform/vh/【西餐】/
-    - xform/tj/【串物】/
-    - xform/mf/【樂器】/
-    - xform/uu/【亞裔／黃種人】/
-    - xform/1b/【白人／白種人】/
-    - xform/cb/【黑人】/
-    - xform/jh/【午餐】/
-    - xform/yh/【早餐／早點】/
-    - xform/y2/【早點／早餐】/
-    - xform/rj/【捲物】/
-    - xform/uy/【葉子】/
-    - xform/ag/【名勝／景點】/
-    - xform/r2/【景點／名勝】/
-    - xform/er/【公交／公共運輸】(公共交通)/
-    - xform/te/【城軌／捷運】/
-    - xform/rm/【捷運／城軌】/
-    - xform/ct/【火車】/
-    - xform/tq/【鈔票／紙鈔／紙幣】/
-    - xform/5t/【紙鈔／紙幣／鈔票】/
-    - xform/51/【紙幣／紙鈔／鈔票】/
-    - xform/ud/【夜空】/
-    - xform/rv/【獎項／獎牌】/
-    - xform/rq/【獎牌／獎項】/
-    - xform/dh/【快餐／速食】/
-    - xform/ng/【速食／快餐】/
-    - xform/ej/【怪物】/
-    - xform/uc/【有害】/
-    - xform/ft/【汽車／車輛】/
-    - xform/tx/【車輛／汽車】/
-    - xform/bu/【熱飲】/
-    - xform/gt/【牲畜／畜牲】/
-    - xform/tg/【畜牲／牲畜】/
-    - xform/fr/【球具】/
-    - xform/w2/【甜點／甜食圖】(甜食)/
-    - xform/fx/【禽類／家禽圖】(家禽)/
-    - xform/hx/【粗糧】/
-    - xform/bx/【肉類／肉品】/
-    - xform/bq/【肉品／肉類】/
-    - xform/dv/【科學】/
-    - xform/t5/【船隻】/
-    - xform/cc/【花卉】/
-    - xform/gh/【蔬菜】/
-    - xform/rr/【酒精／酒類】/
-    - xform/rx/【酒類／酒精】/
-    - xform/vv/【下雪】/
-    - xform/xg/【零食】/
-    - xform/a1/【麵包】/
-    - xform/zr/【飛機】/
-    - xform/az/【米飯】/
-    - xform/sx/【鳥類／鳥圖】/
-    - xform/mw/【魚圖／魚類圖】(魚類)/
-    - xform/sw/【鳥圖／鳥類】/
-    - xform/cj/【韓文】/
-    - xform/1f/【表情】( 符號表)/
-    - xform/yb/【自然】( 符號表)/
-    - xform/ug/【飲食】( 符號表)/
-    - xform/c2/【活動】( 符號表)/
-    - xform/xu/【旅遊】( 符號表)/
-    - xform/jq/【物品】( 符號表)/
-    - xform/ef/【國旗】( 符號表)/
-    - xform/zc/【符號】( 符號表)/
-    - xform/rn/【景色】/
-    - xform/2f/【地球】/
-    - xform/ww/【天體】/
-    - xform/5j/【植物】/
-    - xform/ge/【水果】/
-    - xform/gj/【食物】/
-    - xform/ux/【飲料】/
-    - xform/rb/【節日】/
-    - xform/mx/【娛樂】/
-    - xform/uv/【遊戲】/
-    - xform/m2/【運動】/
-    - xform/r5/【建築】/
-    - xform/ga/【獸面／動物臉】/
-    - xform/je/【五官】/
-    - xform/gg/【手勢】/
-    - xform/uj/【衣物】/
-    - xform/uz/【衣服】/
-    - xform/11/【包包】/
-    - xform/2w/【大頭】(頭像)/
-    - xform/bj/【人物】/
-    - xform/c5/【化妝】/
-    - xform/9f/【愛情】/
-    - xform/9v/【愛心】/
-    - xform/ve/【效果】/
-    - xform/wv/【通訊】/
-    - xform/fh/【錢財】(金錢)/
-    - xform/wg/【圖示】(符號)/
-    - xform/w1/【圖標】(介面)/
-    - xform/r1/【箭標／指示】/ #(箭頭)
-    - xform/5g/【指示／箭標】/ #(箭頭)
-    - xform/yr/【宗教】/
-    - xform/g5/【時鐘】/
-    - xform/b1/【日本】/
-    - xform/ae/【美國】/
-    - xform/ze/【法國】/
-    - xform/jv/【微笑】/
-    - xform/2v/【大笑】/
-    - xform/wu/【討厭】(厭惡)/
-    - xform/js/【無奈】(嘆氣)/
-    - xform/df/【哭泣】/
-    - xform/x2/【冷淡】/
-    - xform/v9/【喜愛】(喜歡)/
-    - xform/ru/【驚訝】/
-    - xform/gf/【生氣】/
-    - xform/cu/【懷疑／冒汗】/
-    - xform/ac/【冒汗／懷疑】/
-    - xform/15/【標誌】(公共標誌 號誌)/
-    - xform/cy/【合字】(日語)/
-    - xform/za/【符碼】(單純符號)/
-    - xform/2s/【電腦】/
-    - xform/vf/【象棋／西洋棋】/
-    - xform/ar/【麻將】/
-    - xform/gy/【骰子】/
-    - xform/wy/【骰子】/
-    - xform/qd/【撲克／撲克牌】/
-    - xform/wf/【天氣】/
-    - xform/um/【音樂】/
-    - xform/xv/【兩性】/
-    - xform/1e/【八卦】/
-    - xform/ea/【卦名】/
-    - xform/vc/【星號】/
-    - xform/zd/【方塊】/
-    - xform/rc/【幾何】/
-    - xform/rw/【箭頭】/
-    - xform/gv/【數學】/
-    - xform/5v/【占星】/ #(天體)
-    - xform/vy/【星座】/
-    - xform/zg/【分數】/
-    - xform/xa/【羅馬】/
-    - xform/g1/【上標】/
-    - xform/v1/【下標】/
-    - xform/vx/【希臘】/
-    - xform/mz/【月份】/
-    - xform/bf/【日期】/
-    - xform/ub/【曜日】/
-    - xform/gr/【時間】/
-    - xform/we/【天干】/
-    - xform/25/【地支】/
-    - xform/e5/【干支】/
-    - xform/rf/【節氣】/
-    - xform/2j/【單位】/
-    - xform/c1/【貨幣】(符號)/
-    - xform/re/【結構／倉頡】/
-    - xform/hr/【倉頡／結構】/
-    - xform/qq/【偏旁】/
-    - xform/1g/【部首】(康熙)/
-    - xform/1c/【筆畫】/
-    - xform/12/【標點】/
-    - xform/km/【俄語】/
-    - xform/qu/【拼音】/
-    - xform/5u/【注音】/
-    - xform/g2/【聲調】/
-    - xform/ur/【易經／六十四卦】/
-    - xform/jc/【文化】/
-    - xform/v2/【線段】/
-    - xform/mv/【圓形】/
-    - xform/nr/【三角】/
-    - xform/2e/【打勾】/
-    - xform/`1/〘開心〙顏文字/
-    - xform/`2/〘喜歡〙顏文字/
-    - xform/`3/〘傷心〙顏文字/
-    - xform/`4/〘生氣〙顏文字/
-    - xform/`5/〘驚訝〙顏文字/
-    - xform/`6/〘無奈〙顏文字/
-    - xform/`7/〘喜〙顏文字/
-    - xform/`8/〘樂〙顏文字/
-    - xform/`9/〘怒〙顏文字/
-    - xform/`0/〘指示和圖示〙顏文字/
-    - xform/`-/〘回話〙顏文字/
-    - xform/10/【10】/
-    - xform/^([0-9])$/【$1】/
-    - xform/^ab$/【 AB 】/
-    - xform/^([a-z])$/【 \U$1\E 】/
-    - xform/^`([a-z])$/〘 \U$1\E 變化〙/
-    - xform//Mac/
+    __include: element_bopomo:/emoji_series
 ################################### 符號處理 ######################################
 punctuator:
   import_preset: punct_bopomo
@@ -875,57 +571,16 @@ punctuator:
 key_binder:
   import_preset: default
   bindings:
-### 避大千注音鍵位和 RIME 原設定鍵位衝突 ###
-    - {accept: comma, send: comma, when: has_menu}
-    - {accept: period, send: period, when: has_menu}
-    - {accept: minus, send: minus, when: has_menu}
-    - {accept: equal, send: equal, when: has_menu}
-### 方向鍵 ###
-    - {accept: Left, send: Page_Up, when: paging} #直式選單用
-    - {accept: Right, send: Page_Down, when: paging} #直式選單用
-#    - {accept: Up, send: Page_Up, when: paging} #橫式選單用
-#    - {accept: Down, send: Page_Down, when: paging} #橫式選單用
-#    - {accept: Left, send: Left, when: has_menu} #橫式選單用 #send: Shift+Up
-#    - {accept: Right, send: Right, when: has_menu} #橫式選單用 #send: Shift+Down
-    - {accept: Right, send: Shift+Right, when: composing}
-    - {accept: Shift+Right, send: Right, when: composing}
-    - {accept: Shift+Left, send: KP_Left, when: composing}
-### 空白鍵 ###
-    - {accept: space, send: Return, when: paging} #方向鍵選字時，space直接上屏（避免被一聲空格影響）
-### 刪除鍵 ###
-    - {accept: BackSpace, send: Control+BackSpace, when: has_menu} #〔關〕刪除前一個拼音字符〔開〕：刪除整組拼音字符（一個字）
-    - {accept: Shift+BackSpace, send: BackSpace, when: has_menu}
-    - {accept: backslash, send: BackSpace, when: has_menu} #「\」鍵位刪除一個拼音字符。
-#    - {accept: backslash, send: Shift+BackSpace, when: has_menu} #「\」鍵位刪除整組拼音字符（一個字）。
-### 功能快捷鍵 ###
-#    - {accept: Control+apostrophe, toggle: zh_tw, when: always} #誤按沒警示，避免誤按，關閉！（開關台灣習慣用字）
-#    - {accept: Control+Shift+6, toggle: zh_tw, when: always} #誤按沒警示，避免誤按，關閉！（開關台灣習慣用字）
-#    - {accept: Control+Shift+7, toggle: emoji_segestion, when: always} #誤按沒警示，避免誤按，關閉！（開關跟隨的emoji）
-#    - {accept: Control+Shift+8, toggle: back_mark, when: always} #誤按沒警示，避免誤按，關閉！（開關附註）
-    - {accept: Tab, send: Shift+Left, when: paging} #於選單列選字時，回復到輸入列（避免有時回復不了，故增加）。
-    - {accept: Shift+space, send: Page_Down, when: has_menu} #選字時可用「Shift」+「空白鍵」翻頁。
-    - {accept: Shift+Tab, send: Page_Up, when: paging} #選字時可用「Shift」+「tab」翻頁。
-### 避聲調重複按 ###
-#    - {accept: 3, send: Escape, when: composing}
-#    - {accept: 3, send: 3, when: has_menu}
-#    - {accept: 4, send: Escape, when: composing}
-#    - {accept: 4, send: 4, when: has_menu}
-#    - {accept: 6, send: Escape, when: composing}
-#    - {accept: 6, send: 6, when: has_menu}
-#    - {accept: 7, send: Escape, when: composing}
-#    - {accept: 7, send: 7, when: has_menu}
-### shift 和 ctrl調換 ###
-#    - {accept: "Control+comma", send: "less", when: always} #「Contol」+「逗號」
-#    - {accept: "Control+period", send: "greater", when: always} #「Contol」+「句號」
-#    - {accept: "Control+slash", send: "question", when: always} #「Contol」+「問號」
-#    - {accept: "Control+apostrophe", send: "quotedbl", when: always} #「Contol」+「頓號」
+    __include: element_bopomo:/key_binder
 
 editor:
   bindings:
-#    space: commit_composition #使用 fluency_editor 時開啟
-    Return: confirm #使用 express_editor 時開啟
+    Return: confirm #使用 express_editor 時開啟 #commit_composition
     Shift+Return: commit_raw_input # 上屏原始輸入
     Control+Return: commit_script_text # 上屏變換後輸入
+#    space: commit_composition #使用 fluency_editor 時開啟
+#    space: toggle_selection
+#    space: noop
 ########################## 正則調出各種功能 ##############################
 recognizer:
   patterns:
