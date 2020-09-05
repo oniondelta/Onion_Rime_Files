@@ -31,4 +31,9 @@
 - [電腦 RIME 輸入法〖 地球拼音 洋蔥 mix‧in 多國語言-擴充版 〗](https://deltazone.pixnet.net/blog/post/353697089)
 
 ### Demo：
-![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/Onion_bpm_demo.gif)
+- 洋蔥 mix-in 注音版
+#### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/demo_mixin.gif)
+- 洋蔥 plus 注音版
+#### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/demo_plus.gif)
+- 洋蔥 純注音版
+#### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/demo_pure.gif)
