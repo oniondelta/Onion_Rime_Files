@@ -16,8 +16,6 @@
 
 - 如果缺少檔案，會立即出錯無法執行！
 
-  測試
-
 ### 各方案說明：
 
 - [電腦 RIME 輸入法『 洋蔥 純注音 版』](https://deltazone.pixnet.net/blog/post/264319309)
@@ -32,8 +30,8 @@
 
 ### Demo：
 - 洋蔥 mix-in 注音版
->#### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/demo_mixin.gif)
+  #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/demo_mixin.gif)
 - 洋蔥 plus 注音版
->#### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/demo_plus.gif)
+  #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/demo_plus.gif)
 - 洋蔥 純注音版
->#### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/demo_pure.gif)
+  #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/demo_pure.gif)
