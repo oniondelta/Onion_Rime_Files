@@ -4,15 +4,17 @@
 # 『洋蔥』
 ---
 name: jpnin1.extended
-version: "202001"
+version: "202009"
 sort: by_weight
 use_preset_vocabulary: false
 #max_phrase_length: 7
 #min_phrase_weight: 100
 import_tables:
   - jpnin1
-  - phrases.jp_hk
-#  - phrases.jp_hkup_w
+#  - phrases.jp_hk
+#  - phrases.jp_hkup_w #for phrases.jp_hk 漢字和假名混打時可打開
+  - phrases.jp_hk_more
+#  - phrases.jp_hkmoreup_w #for phrases.jp_hk_more 漢字和假名混打時可打開
   - phrases.jp_hkkseg
 #  - phrases.jp_hkk
 ...
