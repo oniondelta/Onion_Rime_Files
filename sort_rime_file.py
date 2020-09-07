@@ -146,9 +146,11 @@ shutil.copyfile("./allfiles/phrases.en_u_w.dict.yaml", "./sort_rime/洋蔥plus�
 shutil.copyfile("./allfiles/phrases.fs_all.dict.yaml", "./sort_rime/洋蔥plus版注音/phrases.fs_all.dict.yaml")
 shutil.copyfile("./allfiles/phrases.gr_all.dict.yaml", "./sort_rime/洋蔥plus版注音/phrases.gr_all.dict.yaml")
 shutil.copyfile("./allfiles/phrases.jp_hk.dict.yaml", "./sort_rime/洋蔥plus版注音/phrases.jp_hk.dict.yaml")
+shutil.copyfile("./allfiles/phrases.jp_hk_more.dict.yaml", "./sort_rime/洋蔥plus版注音/phrases.jp_hk_more.dict.yaml")
 shutil.copyfile("./allfiles/phrases.jp_hkk.dict.yaml", "./sort_rime/洋蔥plus版注音/phrases.jp_hkk.dict.yaml")
 shutil.copyfile("./allfiles/phrases.jp_hkkseg.dict.yaml", "./sort_rime/洋蔥plus版注音/phrases.jp_hkkseg.dict.yaml")
 shutil.copyfile("./allfiles/phrases.jp_hkup_w.dict.yaml", "./sort_rime/洋蔥plus版注音/phrases.jp_hkup_w.dict.yaml")
+shutil.copyfile("./allfiles/phrases.jp_hkmoreup_w.dict.yaml", "./sort_rime/洋蔥plus版注音/phrases.jp_hkmoreup_w.dict.yaml")
 shutil.copyfile("./allfiles/phrases.kr_more.dict.yaml", "./sort_rime/洋蔥plus版注音/phrases.kr_more.dict.yaml")
 shutil.copyfile("./allfiles/phrases.la_py_w.dict.yaml", "./sort_rime/洋蔥plus版注音/phrases.la_py_w.dict.yaml")
 
