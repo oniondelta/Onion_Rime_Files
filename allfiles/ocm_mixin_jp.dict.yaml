@@ -14,19 +14,19 @@ use_preset_vocabulary: false
 #。	.,
 #、	,,
 #〜	,,,
-ー	-,
-–	-,
-——	--,
-゠	--,
+# ー	-, #用正則轉寫
+# –	-, #用正則轉寫
+# ——	--, #用正則轉寫
+# ゠	--, #用正則轉寫
 ##
 #・	..
 #。	..
 #、	,.
 #〜	,,.
-ー	-.
-–	-.
-——	--.
-゠	--.
+# ー	-. #用正則轉寫
+# –	-. #用正則轉寫
+# ——	--. #用正則轉寫
+# ゠	--. #用正則轉寫
 ### 『符號』使用字母編碼 ###
 ## 平假名尾綴
 ・	av,
@@ -39,141 +39,141 @@ use_preset_vocabulary: false
 ——	eev,
 ゠	eev,
 ## 片假名尾綴
-・	av.
-。	ov.
-、	vv.
-〜	sv.
-ー	ev.
+# ・	av. #用正則轉寫
+# 。	ov. #用正則轉寫
+# 、	vv. #用正則轉寫
+# 〜	sv. #用正則轉寫
+# ー	ev. #用正則轉寫
 #ー	vv.
-–	ev.
-——	eev.
-゠	eev.
+# –	ev. #用正則轉寫
+# ——	eev. #用正則轉寫
+# ゠	eev. #用正則轉寫
 ### 特殊『符號』 ###
-〆	shime,
-〆	shime.
-〆	sime,
-〆	sime.
+# 〆	shime, #用正則轉寫
+# 〆	shime. #用正則轉寫
+# 〆	sime, #用正則轉寫
+# 〆	sime. #用正則轉寫
 〆	xx,
-〆	xx.
+# 〆	xx. #用正則轉寫
 #〆	kigou.
 #々	naa.
 #々	na.
 々	noma.
-々	dou.
-々	onaji.
-々	onazi.
-々	odoriji.
-々	odorizi.
+# 々	dou. #用正則轉寫
+# 々	onaji. #用正則轉寫
+# 々	onazi. #用正則轉寫
+# 々	odoriji. #用正則轉寫
+# 々	odorizi. #用正則轉寫
 #々	kigou.
 #々	kurikaesi.
 #々	kurikaeshi.
 #ゝ	naa.
 ゝ	dou.
-ゝ	onaji.
-ゝ	onazi.
-ゝ	odoriji.
-ゝ	odorizi.
+# ゝ	onaji. #用正則轉寫
+# ゝ	onazi. #用正則轉寫
+# ゝ	odoriji. #用正則轉寫
+# ゝ	odorizi. #用正則轉寫
 #ゝ	kigou.
 #ゝ	kurikaesi.
 #ゝ	kurikaeshi.
 #ゞ	naa.
 ゞ	dou.
-ゞ	onaji.
-ゞ	onazi.
-ゞ	odoriji.
-ゞ	odorizi.
+# ゞ	onaji. #用正則轉寫
+# ゞ	onazi. #用正則轉寫
+# ゞ	odoriji. #用正則轉寫
+# ゞ	odorizi. #用正則轉寫
 #ゞ	kigou.
 #ゞ	kurikaesi.
 #ゞ	kurikaeshi.
 #ヽ	naa.
 ヽ	dou.
-ヽ	onaji.
-ヽ	onazi.
-ヽ	odoriji.
-ヽ	odorizi.
+# ヽ	onaji. #用正則轉寫
+# ヽ	onazi. #用正則轉寫
+# ヽ	odoriji. #用正則轉寫
+# ヽ	odorizi. #用正則轉寫
 #ヽ	kigou.
 #ヽ	kurikaesi.
 #ヽ	kurikaeshi.
 #ヾ	naa.
 ヾ	dou.
-ヾ	onaji.
-ヾ	onazi.
-ヾ	odoriji.
-ヾ	odorizi.
+# ヾ	onaji. #用正則轉寫
+# ヾ	onazi. #用正則轉寫
+# ヾ	odoriji. #用正則轉寫
+# ヾ	odorizi. #用正則轉寫
 #ヾ	kigou.
 #ヾ	kurikaesi.
 #ヾ	kurikaeshi.
 #〃	naa.
 〃	dou.
-〃	onaji.
-〃	onazi.
-〃	odoriji.
-〃	odorizi.
+# 〃	onaji. #用正則轉寫
+# 〃	onazi. #用正則轉寫
+# 〃	odoriji. #用正則轉寫
+# 〃	odorizi. #用正則轉寫
 #〃	kigou.
 #〃	kurikaesi.
 #〃	kurikaeshi.
 ##
 #〻	naa.
 〻	dou.
-〻	onaji.
-〻	onazi.
-〻	odoriji.
-〻	odorizi.
+# 〻	onaji. #用正則轉寫
+# 〻	onazi. #用正則轉寫
+# 〻	odoriji. #用正則轉寫
+# 〻	odorizi. #用正則轉寫
 #〻	kigou.
 #〻	kurikaesi.
 #〻	kurikaeshi.
 #〳	naa.
 〳	dou.
-〳	onaji.
-〳	onazi.
-〳	odoriji.
-〳	odorizi.
+# 〳	onaji. #用正則轉寫
+# 〳	onazi. #用正則轉寫
+# 〳	odoriji. #用正則轉寫
+# 〳	odorizi. #用正則轉寫
 #〳	kigou.
 #〳	kurikaesi.
 #〳	kurikaeshi.
 #〴	naa.
 〴	dou.
-〴	onaji.
-〴	onazi.
-〴	odoriji.
-〴	odorizi.
+# 〴	onaji. #用正則轉寫
+# 〴	onazi. #用正則轉寫
+# 〴	odoriji. #用正則轉寫
+# 〴	odorizi. #用正則轉寫
 #〴	kigou.
 #〴	kurikaesi.
 #〴	kurikaeshi.
 #〵	naa.
 〵	dou.
-〵	onaji.
-〵	onazi.
-〵	odoriji.
-〵	odorizi.
+# 〵	onaji. #用正則轉寫
+# 〵	onazi. #用正則轉寫
+# 〵	odoriji. #用正則轉寫
+# 〵	odorizi. #用正則轉寫
 #〵	kigou.
 #〵	kurikaesi.
 #〵	kurikaeshi.
 ## 20180628補充
 #〱	naa.
 〱	dou.
-〱	onaji.
-〱	onazi.
-〱	odoriji.
-〱	odorizi.
+# 〱	onaji. #用正則轉寫
+# 〱	onazi. #用正則轉寫
+# 〱	odoriji. #用正則轉寫
+# 〱	odorizi. #用正則轉寫
 #〱	kigou.
 #〱	kurikaesi.
 #〱	kurikaeshi.
 #〲	naa.
 〲	dou.
-〲	onaji.
-〲	onazi.
-〲	odoriji.
-〲	odorizi.
+# 〲	onaji. #用正則轉寫
+# 〲	onazi. #用正則轉寫
+# 〲	odoriji. #用正則轉寫
+# 〲	odorizi. #用正則轉寫
 #〲	kigou.
 #〲	kurikaesi.
 #〲	kurikaeshi.
 #仝	naa.
 仝	dou.
-仝	onaji.
-仝	onazi.
-仝	odoriji.
-仝	odorizi.
+# 仝	onaji. #用正則轉寫
+# 仝	onazi. #用正則轉寫
+# 仝	odoriji. #用正則轉寫
+# 仝	odorizi. #用正則轉寫
 #仝	kigou.
 #仝	kurikaesi.
 #仝	kurikaeshi.
@@ -276,7 +276,7 @@ use_preset_vocabulary: false
 #ぃ	i #MAC日語輸入法沒有，精簡！
 #い	yi #MAC日語輸入法沒有，精簡！
 う	u,
-う	wu,
+# う	wu, #用正則轉寫
 #ぅ	u #MAC日語輸入法沒有，精簡！
 #ぅ	wu #MAC日語輸入法沒有，精簡！
 え	e,
@@ -290,16 +290,16 @@ use_preset_vocabulary: false
 こ	ko,
 さ	sa,
 し	shi,
-し	si,
+# し	si, #用正則轉寫
 #し	ci #MAC日語輸入法沒有，精簡！
 す	su,
 せ	se,
 そ	so,
 た	ta,
 ち	chi,
-ち	ti,
+# ち	ti, #用正則轉寫
 つ	tsu,
-つ	tu,
+# つ	tu, #用正則轉寫
 #っ	tsu #MAC日語輸入法沒有，精簡！
 #っ	tu #MAC日語輸入法沒有，精簡！
 #っ	tt #太多選項精簡,
@@ -316,7 +316,7 @@ use_preset_vocabulary: false
 は	ha,
 #は	wa #MAC日語輸入法沒有，精簡！
 ひ	hi,
-ふ	hu,
+# ふ	hu, #用正則轉寫
 ふ	fu,
 へ	he,
 #へ	e #MAC日語輸入法沒有，精簡！
@@ -347,7 +347,7 @@ use_preset_vocabulary: false
 を	wo,
 #を	o #MAC日語輸入法沒有，精簡！
 ん	n,
-#ん	nn #用正則取代,
+#ん	nn #省略!!
 #ん	mn #MAC日語輸入法沒有，精簡！
 #ん	m #MAC日語輸入法沒有，精簡！
 #ん	ng #MAC日語輸入法沒有，精簡！
@@ -358,7 +358,7 @@ use_preset_vocabulary: false
 ご	go,
 ざ	za,
 じ	ji,
-じ	zi,
+# じ	zi, #用正則轉寫
 ず	zu,
 ぜ	ze,
 ぞ	zo,
@@ -396,28 +396,28 @@ use_preset_vocabulary: false
 ぅ	xu,
 ぇ	xe,
 ぉ	xo,
-ぁ	la,
-ぃ	li,
-ぅ	lu,
-ぇ	le,
-ぉ	lo,
+# ぁ	la, #用正則轉寫
+# ぃ	li, #用正則轉寫
+# ぅ	lu, #用正則轉寫
+# ぇ	le, #用正則轉寫
+# ぉ	lo, #用正則轉寫
 ゃ	xya,
 ゅ	xyu,
 ょ	xyo,
 ゎ	xwa,
-ゃ	lya,
-ゅ	lyu,
-ょ	lyo,
-ゎ	lwa,
+# ゃ	lya, #用正則轉寫
+# ゅ	lyu, #用正則轉寫
+# ょ	lyo, #用正則轉寫
+# ゎ	lwa, #用正則轉寫
 ゕ	xka,
 ゖ	xke,
-ゕ	lka,
-ゖ	lke,
+# ゕ	lka, #用正則轉寫
+# ゖ	lke, #用正則轉寫
 ### 日文促音單記號 ###
 っ	xtu,
-っ	ltu,
-っ	xtsu,
-っ	ltsu,
+# っ	ltu, #用正則轉寫
+# っ	xtsu, #用正則轉寫
+# っ	ltsu, #用正則轉寫
 ### 日文特殊雙碼 ###
 ゟ	yo, ri,
 ##### 『基本平假名』結束 #####
@@ -428,7 +428,7 @@ use_preset_vocabulary: false
 #ィ	i #MAC日語輸入法沒有，精簡！
 #イ	yi #MAC日語輸入法沒有，精簡！
 ウ	u.
-ウ	wu.
+# ウ	wu. #用正則轉寫
 #ゥ	wu #MAC日語輸入法沒有，精簡！
 #ゥ	u #MAC日語輸入法沒有，精簡！
 エ	e.
@@ -443,17 +443,17 @@ use_preset_vocabulary: false
 コ	ko.
 サ	sa.
 シ	shi.
-シ	si.
+# シ	si. #用正則轉寫
 #シ	ci #MAC日語輸入法沒有，精簡！
 ス	su.
 セ	se.
 ソ	so.
 タ	ta.
 チ	chi.
-チ	ti.
+# チ	ti. #用正則轉寫
 ツ	tsu.
 #ッ	tsu #MAC日語輸入法沒有，精簡！
-ツ	tu.
+# ツ	tu. #用正則轉寫
 #ッ	tu #MAC日語輸入法沒有，精簡！
 #ッ	tt#太多選項精簡.
 #ッ	ss#太多選項精簡.
@@ -470,7 +470,7 @@ use_preset_vocabulary: false
 #ハ	wa #MAC日語輸入法沒有，精簡！
 ヒ	hi.
 フ	fu.
-フ	hu.
+# フ	hu. #用正則轉寫
 ヘ	he.
 #ヘ	e #MAC日語輸入法沒有，精簡！
 ホ	ho.
@@ -512,7 +512,7 @@ use_preset_vocabulary: false
 #ヶ	ge #MAC日語輸入法沒有，精簡！
 ゴ	go.
 ザ	za.
-ジ	zi.
+# ジ	zi. #用正則轉寫
 ジ	ji.
 ズ	zu.
 ゼ	ze.
@@ -553,35 +553,35 @@ use_preset_vocabulary: false
 ゥ	xu.
 ェ	xe.
 ォ	xo.
-ァ	la.
-ィ	li.
-ゥ	lu.
-ェ	le.
-ォ	lo.
+# ァ	la. #用正則轉寫
+# ィ	li. #用正則轉寫
+# ゥ	lu. #用正則轉寫
+# ェ	le. #用正則轉寫
+# ォ	lo. #用正則轉寫
 ャ	xya.
 ュ	xyu.
 ョ	xyo.
 ヮ	xwa.
-ャ	lya.
-ュ	lyu.
-ョ	lyo.
-ヮ	lwa.
+# ャ	lya. #用正則轉寫
+# ュ	lyu. #用正則轉寫
+# ョ	lyo. #用正則轉寫
+# ヮ	lwa. #用正則轉寫
 #ィ	lyi #MAC日語輸入法沒有，精簡！
 #ェ	lye #MAC日語輸入法沒有，精簡！
 #ィ	xyi #MAC日語輸入法沒有，精簡！
 #ェ	xye #MAC日語輸入法沒有，精簡！
 ##
-ヶ	ke.
-ヶ	lke.
+# ヶ	ke. #用正則轉寫
+# ヶ	lke. #用正則轉寫
 ヶ	xke.
-ヵ	ka.
-ヵ	lka.
+# ヵ	ka. #用正則轉寫
+# ヵ	lka. #用正則轉寫
 ヵ	xka.
 ### 日文促音單記號 ###
 ッ	xtu.
-ッ	ltu.
-ッ	xtsu.
-ッ	ltsu.
+# ッ	ltu. #用正則轉寫
+# ッ	xtsu. #用正則轉寫
+# ッ	ltsu. #用正則轉寫
 ### 日文特殊雙碼 ###
 ヿ	ko. to.
 ##### 『基本片假名』結束 #####
@@ -590,16 +590,16 @@ use_preset_vocabulary: false
 きゃ	kya,
 ぎゃ	gya,
 しゃ	sha,
-しゃ	sya,
+# しゃ	sya, #用正則轉寫
 ちゃ	cha,
-ちゃ	cya,
-ちゃ	tya,
+# ちゃ	cya, #用正則轉寫
+# ちゃ	tya, #用正則轉寫
 じゃ	ja,
-じゃ	jya,
-じゃ	zya,
+# じゃ	jya, #用正則轉寫
+# じゃ	zya, #用正則轉寫
 ぢゃ	dya,
-ぢゃ	zya,
-ぢゃ	ja,
+# ぢゃ	zya, #用正則轉寫
+# ぢゃ	ja, #用正則轉寫
 にゃ	nya,
 ひゃ	hya,
 びゃ	bya,
@@ -610,16 +610,16 @@ use_preset_vocabulary: false
 きゅ	kyu,
 ぎゅ	gyu,
 しゅ	shu,
-しゅ	syu,
+# しゅ	syu, #用正則轉寫
 ちゅ	chu,
-ちゅ	cyu,
-ちゅ	tyu,
+# ちゅ	cyu, #用正則轉寫
+# ちゅ	tyu, #用正則轉寫
 じゅ	ju,
-じゅ	jyu,
-じゅ	zyu,
+# じゅ	jyu, #用正則轉寫
+# じゅ	zyu, #用正則轉寫
 ぢゅ	dyu,
-ぢゅ	ju,
-ぢゅ	zyu,
+# ぢゅ	ju, #用正則轉寫
+# ぢゅ	zyu, #用正則轉寫
 にゅ	nyu,
 ひゅ	hyu,
 びゅ	byu,
@@ -630,16 +630,16 @@ use_preset_vocabulary: false
 きょ	kyo,
 ぎょ	gyo,
 しょ	sho,
-しょ	syo,
+# しょ	syo, #用正則轉寫
 ちょ	cho,
-ちょ	cyo,
-ちょ	tyo,
+# ちょ	cyo, #用正則轉寫
+# ちょ	tyo, #用正則轉寫
 じょ	jo,
-じょ	jyo,
-じょ	zyo,
+# じょ	jyo, #用正則轉寫
+# じょ	zyo, #用正則轉寫
 ぢょ	dyo,
-ぢょ	jo,
-ぢょ	zyo,
+# ぢょ	jo, #用正則轉寫
+# ぢょ	zyo, #用正則轉寫
 にょ	nyo,
 ひょ	hyo,
 びょ	byo,
@@ -748,19 +748,19 @@ use_preset_vocabulary: false
 っひ	hhi,
 っに	nni,
 っち	cchi,
-っち	tti,
+# っち	tti, #用正則轉寫
 っし	sshi,
-っし	ssi,
+# っし	ssi, #用正則轉寫
 っき	kki,
 #っい	ii,
 っる	rru,
 っゆ	yyu,
 っむ	mmu,
 っふ	ffu,
-っふ	hhu,
+# っふ	hhu, #用正則轉寫
 っぬ	nnu,
 っつ	ttsu,
-っつ	ttu,
+# っつ	ttu, #用正則轉寫
 っす	ssu,
 っく	kku,
 #っう	uu,
@@ -790,7 +790,7 @@ use_preset_vocabulary: false
 っぱ	ppa,
 っぎ	ggi,
 っじ	jji,
-っじ	zzi,
+# っじ	zzi, #用正則轉寫
 っぢ	ddi,
 #っぢ	zzi #MAC日語輸入法沒有，精簡！
 #っぢ	jji #MAC日語輸入法沒有，精簡！
@@ -815,10 +815,10 @@ use_preset_vocabulary: false
 ### 促音加拗音 ###
 っきゃ	kkya,
 っしゃ	ssha,
-っしゃ	ssya,
+# っしゃ	ssya, #用正則轉寫
 っちゃ	ccha,
-っちゃ	ccya,
-っちゃ	ttya,
+# っちゃ	ccya, #用正則轉寫
+# っちゃ	ttya, #用正則轉寫
 っにゃ	nnya,
 っひゃ	hhya,
 っみゃ	mmya,
@@ -826,19 +826,20 @@ use_preset_vocabulary: false
 #っりゃ	llya #MAC日語輸入法沒有，精簡！
 っぎゃ	ggya,
 っぢゃ	ddya,
-っぢゃ	zzya,
-っぢゃ	jja,
+# っぢゃ	zzya, #用正則轉寫
+# っぢゃ	jja, #用正則轉寫
 っじゃ	jja,
-っじゃ	zzya,
+# っじゃ	zzya, #用正則轉寫
+# っじゃ	jjya, #用正則轉寫
 っびゃ	bbya,
 っぴゃ	ppya,
 ##
 っきゅ	kkyu,
 っしゅ	sshu,
-っしゅ	ssyu,
+# っしゅ	ssyu, #用正則轉寫
 っちゅ	cchu,
-っちゅ	ccyu,
-っちゅ	ttyu,
+# っちゅ	ccyu, #用正則轉寫
+# っちゅ	ttyu, #用正則轉寫
 っにゅ	nnyu,
 っひゅ	hhyu,
 っみゅ	mmyu,
@@ -846,19 +847,20 @@ use_preset_vocabulary: false
 #っりゅ	llyu #MAC日語輸入法沒有，精簡！
 っぎゅ	ggyu,
 っぢゅ	ddyu,
-っぢゅ	jju,
-っぢゅ	zzyu,
+# っぢゅ	jju, #用正則轉寫
+# っぢゅ	zzyu, #用正則轉寫
 っじゅ	jju,
-っじゅ	zzyu,
+# っじゅ	zzyu, #用正則轉寫
+# っじゅ	jjyu, #用正則轉寫
 っびゅ	bbyu,
 っぴゅ	ppyu,
 ##
 っきょ	kkyo,
 っしょ	ssho,
-っしょ	ssyo,
+# っしょ	ssyo, #用正則轉寫
 っちょ	ccho,
-っちょ	ccyo,
-っちょ	ttyu,
+# っちょ	ccyo, #用正則轉寫
+# っちょ	ttyu, #用正則轉寫
 っにょ	nnyo,
 っひょ	hhyo,
 っみょ	mmyo,
@@ -866,10 +868,11 @@ use_preset_vocabulary: false
 #っりょ	llyo #MAC日語輸入法沒有，精簡！
 っぎょ	ggyo,
 っぢょ	ddyo,
-っぢょ	jjo,
-っぢょ	zzyo,
+# っぢょ	jjo, #用正則轉寫
+# っぢょ	zzyo, #用正則轉寫
 っじょ	jjo,
-っじょ	zzyo,
+# っじょ	zzyo, #用正則轉寫
+# っじょ	jjyo, #用正則轉寫
 っびょ	bbyo,
 っぴょ	ppyo,
 ### 日文鼻濁音加另外拼法 ###
@@ -951,10 +954,10 @@ use_preset_vocabulary: false
 ### 日文拗音片假名 ###
 キャ	kya.
 シャ	sha.
-シャ	sya.
+# シャ	sya. #用正則轉寫
 チャ	cha.
-チャ	cya.
-チャ	tya.
+# チャ	cya. #用正則轉寫
+# チャ	tya. #用正則轉寫
 ニャ	nya.
 ヒャ	hya.
 ミャ	mya.
@@ -962,19 +965,19 @@ use_preset_vocabulary: false
 #リャ	lya #MAC日語輸入法沒有，精簡！
 ギャ	gya.
 ジャ	ja.
-ジャ	jya.
-ジャ	zya.
+# ジャ	jya. #用正則轉寫
+# ジャ	zya. #用正則轉寫
 ヂャ	dya.
-ヂャ	zya.
-ヂャ	ja.
+# ヂャ	zya. #用正則轉寫
+# ヂャ	ja. #用正則轉寫
 ビャ	bya.
 ピャ	pya.
 キュ	kyu.
 シュ	shu.
-シュ	syu.
+# シュ	syu. #用正則轉寫
 チュ	chu.
-チュ	cyu.
-チュ	tyu.
+# チュ	cyu. #用正則轉寫
+# チュ	tyu. #用正則轉寫
 ニュ	nyu.
 ヒュ	hyu.
 ミュ	myu.
@@ -982,19 +985,19 @@ use_preset_vocabulary: false
 #リュ	lyu #MAC日語輸入法沒有，精簡！
 ギュ	gyu.
 ジュ	ju.
-ジュ	jyu.
-ジュ	zyu.
+# ジュ	jyu. #用正則轉寫
+# ジュ	zyu. #用正則轉寫
 ヂュ	dyu.
-ヂュ	zyu.
-ヂュ	ju.
+# ヂュ	zyu. #用正則轉寫
+# ヂュ	ju. #用正則轉寫
 ビュ	byu.
 ピュ	pyu.
 キョ	kyo.
 ショ	sho.
-ショ	syo.
+# ショ	syo. #用正則轉寫
 チョ	cho.
-チョ	cyo.
-チョ	tyo.
+# チョ	cyo. #用正則轉寫
+# チョ	tyo. #用正則轉寫
 ニョ	nyo.
 ヒョ	hyo.
 ミョ	myo.
@@ -1002,11 +1005,11 @@ use_preset_vocabulary: false
 #リョ	lyo #MAC日語輸入法沒有，精簡！
 ギョ	gyo.
 ジョ	jo.
-ジョ	jyo.
-ジョ	zyo.
+# ジョ	jyo. #用正則轉寫
+# ジョ	zyo. #用正則轉寫
 ヂョ	dyo.
-ヂョ	zyo.
-ヂョ	jo.
+# ヂョ	zyo. #用正則轉寫
+# ヂョ	jo. #用正則轉寫
 ビョ	byo.
 ピョ	pyo.
 ### 日文撥音片假名(撥音省略) ###
@@ -1110,19 +1113,19 @@ use_preset_vocabulary: false
 ッヒ	hhi.
 ッニ	nni.
 ッチ	cchi.
-ッチ	tti.
+# ッチ	tti. #用正則轉寫
 ッシ	sshi.
-ッシ	ssi.
+# ッシ	ssi. #用正則轉寫
 ッキ	kki.
 #ッイ	ii.
 ッル	rru.
 ッユ	yyu.
 ッム	mmu.
 ッフ	ffu.
-ッフ	hhu.
+# ッフ	hhu. #用正則轉寫
 ッヌ	nnu.
 ッツ	ttsu.
-ッツ	ttu.
+# ッツ	ttu. #用正則轉寫
 ッス	ssu.
 ック	kku.
 #ッウ	uu.
@@ -1157,7 +1160,7 @@ use_preset_vocabulary: false
 ッビ	bbi.
 ッピ	ppi.
 ッジ	jji.
-ッジ	zzi.
+# ッジ	zzi. #用正則轉寫
 ッグ	ggu.
 ッズ	zzu.
 ッヅ	ddu.
@@ -1177,10 +1180,10 @@ use_preset_vocabulary: false
 ### 促音加拗音 ###
 ッキャ	kkya.
 ッシャ	ssha.
-ッシャ	ssya.
+# ッシャ	ssya. #用正則轉寫
 ッチャ	ccha.
-ッチャ	ccya.
-ッチャ	ttya.
+# ッチャ	ccya. #用正則轉寫
+# ッチャ	ttya. #用正則轉寫
 ッニャ	nnya.
 ッヒャ	hhya.
 ッミャ	mmya.
@@ -1188,19 +1191,20 @@ use_preset_vocabulary: false
 #ッリャ	llya #MAC日語輸入法沒有，精簡！
 ッギャ	ggya.
 ッヂャ	ddya.
-ッヂャ	jja.
-ッヂャ	zzya.
+# ッヂャ	jja. #用正則轉寫
+# ッヂャ	zzya. #用正則轉寫
 ッジャ	jja.
-ッジャ	zzya.
+# ッジャ	zzya. #用正則轉寫
+# ッジャ	jjya. #用正則轉寫
 ッビャ	bbya.
 ッピャ	ppya.
 ##
 ッキュ	kkyu.
 ッシュ	sshu.
-ッシュ	ssyu.
+# ッシュ	ssyu. #用正則轉寫
 ッチュ	cchu.
-ッチュ	ccyu.
-ッチュ	ttyu.
+# ッチュ	ccyu. #用正則轉寫
+# ッチュ	ttyu. #用正則轉寫
 ッニュ	nnyu.
 ッヒュ	hhyu.
 ッミュ	mmyu.
@@ -1208,19 +1212,20 @@ use_preset_vocabulary: false
 #ッリュ	llyu #MAC日語輸入法沒有，精簡！
 ッギュ	ggyu.
 ッヂュ	ddyu.
-ッヂュ	zzyu.
-ッヂュ	jju.
+# ッヂュ	zzyu. #用正則轉寫
+# ッヂュ	jju. #用正則轉寫
 ッジュ	jju.
-ッジュ	zzyu.
+# ッジュ	zzyu. #用正則轉寫
+# ッジュ	jjyu. #用正則轉寫
 ッビュ	bbyu.
 ッピュ	ppyu.
 ##
 ッキョ	kkyo.
 ッショ	ssho.
-ッショ	ssyo.
+# ッショ	ssyo. #用正則轉寫
 ッチョ	ccho.
-ッチョ	ccyo.
-ッチョ	ttyu.
+# ッチョ	ccyo. #用正則轉寫
+# ッチョ	ttyu. #用正則轉寫
 ッニョ	nnyo.
 ッヒョ	hhyo.
 ッミョ	mmyo.
@@ -1228,10 +1233,11 @@ use_preset_vocabulary: false
 #ッリョ	llyo #MAC日語輸入法沒有，精簡！
 ッギョ	ggyo.
 ッヂョ	ddyo.
-ッヂョ	zzyo.
-ッヂョ	jjo.
+# ッヂョ	zzyo. #用正則轉寫
+# ッヂョ	jjo. #用正則轉寫
 ッジョ	jjo.
-ッジョ	zzyo.
+# ッジョ	zzyo. #用正則轉寫
+# ッジョ	jjyo. #用正則轉寫
 ッビョ	bbyo.
 ッピョ	ppyo.
 ### 日文鼻濁音加另外拼法 ###
@@ -1280,7 +1286,8 @@ use_preset_vocabulary: false
 テュ	tyu.
 ## 下一個20160930新加
 テュ	tu.
-デュ	dyu.
+デュ	dvyu.
+# デュ	dyu. #用正則轉寫
 フュ	fyu.
 ## 下一個20160930新加
 フュ	fu.
