@@ -245,11 +245,11 @@ key_binder:
     - {accept: equal, send: equal, when: has_menu}
 ### 切分移位 ###
     - {accept: Right, send: Shift+Right, when: composing} #右移一整個字
-    - {accept: Shift+Right, send: Right, when: composing} #左移一個注音
-    - {accept: Shift+Left, send: KP_Left, when: composing} #右移一個注音
+    - {accept: Shift+Right, send: Right, when: composing} #右移一個注音
+    - {accept: Shift+Left, send: KP_Left, when: composing} #左移一個注音
     - {accept: Shift+space, send: KP_Left, when: composing} #左移一個注音
-#    - {accept: Shift+Tab, send: Right, when: composing} #左移一個注音
-#    - {accept: Tab, send: KP_Left, when: composing} #右移一個注音
+#    - {accept: Shift+Tab, send: Right, when: composing} #右移一個注音
+#    - {accept: Tab, send: KP_Left, when: composing} #左移一個注音
 ### 選字翻頁 ###
     - {accept: Left, send: Page_Up, when: paging} #直式選單用 #has_menu
     - {accept: Right, send: Page_Down, when: paging} #直式選單用 #has_menu
