@@ -244,10 +244,16 @@ key_binder:
     - {accept: minus, send: minus, when: has_menu}
     - {accept: equal, send: equal, when: has_menu}
 ### 切分移位 ###
+    - {accept: Up, send: KP_Left, when: composing} #左移一個注音
+    - {accept: Up, send: Up, when: paging} #修正上條目出現的bug
+##
     - {accept: Right, send: Shift+Right, when: composing} #右移一整個字
     - {accept: Shift+Right, send: Right, when: composing} #右移一個注音
     - {accept: Shift+Left, send: KP_Left, when: composing} #左移一個注音
-    - {accept: Shift+space, send: KP_Left, when: composing} #左移一個注音
+    - {accept: Shift+space, send: Shift+Right, when: composing} #首節
+#    - {accept: Shift+space, send: KP_Left, when: composing} #左移一個注音
+#    - {accept: Left, send: KP_Left, when: composing} #左移一個注音
+##
 #    - {accept: Shift+Tab, send: Right, when: composing} #右移一個注音
 #    - {accept: Tab, send: KP_Left, when: composing} #左移一個注音
 ### 選字翻頁 ###

@@ -329,13 +329,18 @@ key_binder:
 #    - {accept: minus, send: minus, when: has_menu}  # tone 1
 #    - {accept: minus, send: Page_Up,  when: paging}
 ### 切分移位 ###
-#    - {accept: Left, send: KP_Left, when: composing}
+    - {accept: Up, send: KP_Left, when: composing} #左移一個注音
+    - {accept: Up, send: Up, when: paging} #修正上條目出現的bug
+##
 #    - {accept: Right, send: Shift+Right, when: composing} #右移一整個字
-#    - {accept: Shift+Right, send: Right, when: composing} #左移一個注音
-#    - {accept: Shift+Left, send: KP_Left, when: composing} #右移一個注音
+#    - {accept: Shift+Right, send: Right, when: composing} #右移一個注音
+    - {accept: Shift+Left, send: KP_Left, when: composing} #左移一個注音
+    - {accept: Shift+space, send: Shift+Right, when: composing} #首節
 #    - {accept: Shift+space, send: KP_Left, when: composing} #左移一個注音
-##    - {accept: Shift+Tab, send: Right, when: composing} #左移一個注音
-##    - {accept: Tab, send: KP_Left, when: composing} #右移一個注音
+#    - {accept: Left, send: KP_Left, when: composing} #左移一個注音
+##
+#    - {accept: Shift+Tab, send: Right, when: composing} #右移一個注音
+#    - {accept: Tab, send: KP_Left, when: composing} #左移一個注音
 ### 選字翻頁 ###
     - {accept: Left, send: Page_Up, when: paging} #直式選單用
     - {accept: Right, send: Page_Down, when: paging} #直式選單用
@@ -358,6 +363,12 @@ key_binder:
 ##    - {accept: space, send: space, when: composing}
 ##    - {accept: space, send: space, when: has_menu} #非空碼時，空白還是空白
 ##    - {accept: space, send: Escape, when: composing} #空碼時，按空格清除
+### 刪除鍵 ###
+#    - {accept: BackSpace, send: Control+BackSpace, when: has_menu} #〔關〕刪除前一個拼音字符〔開〕：刪除整組拼音字符（一個字）
+#    - {accept: Shift+BackSpace, send: BackSpace, when: has_menu}
+#    - {accept: backslash, send: BackSpace, when: has_menu} #「\」鍵位刪除一個拼音字符。
+#    - {accept: backslash, send: Shift+BackSpace, when: has_menu} #「\」鍵位刪除整組拼音字符（一個字）。
+#    - {accept: backslash, send: Shift+Return, when: has_menu} #「\」鍵位上屏英文。
 ### 功能快捷鍵 ###
     - {accept: Control+Shift+6, toggle: back_mark, when: always}
 #    - {accept: Control+apostrophe, toggle: zh_tw, when: always}
