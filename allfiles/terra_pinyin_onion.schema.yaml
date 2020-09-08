@@ -4,9 +4,10 @@
 schema:
   schema_id: terra_pinyin_onion
   name: "★地球拼音(洋蔥mix-in版)★"
-  version: "201909"
+  version: "202009"
   author:
     - 佛振 <chen.sst@gmail.com>
+    - 洋蔥
   description: |
     「漢語拼音」，以符號按鍵 , . / ; ' 輸入聲調
     拼音碼表根據 CC-CEDICT 改編
