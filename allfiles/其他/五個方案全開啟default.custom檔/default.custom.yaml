@@ -11,7 +11,7 @@ patch:
     - schema: bopomo_onionplus_2
     - schema: bo_mixin1_1
     - schema: bo_mixin1_2
-    - schema: bo_mixin2_2
+    - schema: bo_mixin2_1
     - schema: bo_mixin3_1
     - schema: bo_mixin3_2
     - schema: bopomo_onion
