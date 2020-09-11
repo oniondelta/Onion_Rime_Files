@@ -1,7 +1,6 @@
-#錯誤查看%TEMP%\rime.weasel
 # Rime schema settings
 # encoding: utf-8
-# 《希臘設定頁》
+# 《希臘(洋蔥形碼鍵位)設定頁》
 schema:
   schema_id: greek
   name: ❃希臘字母❃
@@ -9,7 +8,7 @@ schema:
   author:
     - 『洋蔥』
   description: |
-    用戶字典
+    希臘字母
 
 switches:
   - name: ascii_mode
