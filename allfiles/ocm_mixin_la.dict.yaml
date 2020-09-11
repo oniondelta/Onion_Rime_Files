@@ -1,5 +1,7 @@
-# Rime schema 中州輸入法的字碼檔
+# Rime dictionary
 # encoding: utf-8
+# 《洋蔥蝦米 拉丁+音標字母（洋蔥形碼鍵位） 碼表》
+# author:『洋蔥』
 ---
 name: ocm_mixin_la
 version: "202001"
