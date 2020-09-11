@@ -1,8 +1,9 @@
 # Rime dictionary
 # encoding: utf-8
-# 《詞庫匯入設定頁》
-# 《（中文-注音）（韓語）（日語）（拉丁+音標）詞庫》
-# 『洋蔥』
+# 《洋蔥 mixin 注音 字詞庫匯入頁》
+# author:『洋蔥』
+# 中文字詞標註使用拼音
+# 包含中文、韓語、日語、拉丁+音標
 ---
 name: bo_mixin.extended
 version: "202002"
@@ -26,6 +27,6 @@ import_tables:
   - phrases.en_u_w
 ...
 ##### 測試字（測試是否少掉台灣以外的用字） #####
-# 裏面	li3 mian4
-# 高峯	gao1 feng1
-##################
+#裏面	li3 mian4
+#高峯	gao1 feng1
+##### 以下可自行添加詞句 #####
