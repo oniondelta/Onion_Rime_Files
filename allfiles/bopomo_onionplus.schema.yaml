@@ -1,12 +1,12 @@
-# Rime schema
+# Rime schema settings
 # encoding: utf-8
-##########《 注音(洋蔥plus版)設定主頁》############
+# 《注音 洋蔥plus版 設定頁》
 schema:
   schema_id: bopomo_onionplus
   name: "☆注音(洋蔥plus版)☆"
   version: "202009"
   author:
-    - 『洋蔥』 # 以佛振注音支持聲韻亂序方案改編
+    - 『洋蔥』
   description: |
     注音符號輸入，採用「大千式」鍵盤排列。
 
