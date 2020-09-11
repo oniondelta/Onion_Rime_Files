@@ -1,8 +1,8 @@
-# Rime schema 中州輸入法的字碼檔
+# Rime dict
 # encoding: utf-8
-# 《完全注音碼表_增補》
-# 『洋蔥』
-# 「空格」當編碼，要用轉寫的?
+# 《完全注音 碼表》
+# author:『洋蔥』
+# 「空格」當編碼，要用轉寫
 ---
 name: allbpm
 version: "202001"
