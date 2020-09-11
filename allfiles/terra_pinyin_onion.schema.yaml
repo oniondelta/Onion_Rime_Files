@@ -74,7 +74,7 @@ speller:
   initials: "zyxwvutsrqponmlkjihgfedcba-"
   delimiter: " "
   algebra:
-### 日語 ###
+##### 日語 #####
 ## 符號
     - derive|^([eaovs][v])[,]$|$1\.|
     - derive|^([e][e][v])[,]$|$1\.|
@@ -129,7 +129,7 @@ speller:
     - derive/^u([,.])$/wu$1/
 ## 特殊
     - xform/^dvyu([.])$/dyu$1/ # デュ #特殊片假名被其他正則不轉寫。
-### 其他 ###
+##### 其他 #####
     - "xlit|/',.-!;|ABCDEFG|"
     - xform/^([a-z]+)[B][B]$/$1G/ #拉丁-大寫
     - xform/^([G])([G])([a-z]+)([B])$/$3BB/ #拉丁-組合變音標記
@@ -198,7 +198,7 @@ top_reverse_lookup:
   overwrite_comment: false
   dictionary: terra_pinyin_onion.extended
   comment_format:
-### 日語 ###
+##### 日語 #####
 ## 符號
     - xform/(^|[ ])([eaovs][v])([,])/$1$2$3 $2\./
     - xform/(^|[ ])([e][e][v])([,])/$1$2$3 $2\./
@@ -238,7 +238,7 @@ top_reverse_lookup:
     - xform/(^|[ ])(u)([,.])/$1$2$3 wu$3/
 ## 特殊
     - xform/(^|[ ])(dvyu)([.])/$1dyu$3/
-### 其他 ###
+##### 其他 #####
     - "xlit|';/!,.|ABCDEF|"
     - xform/^/  /
     - xform/BB([a-z]+)A/   $1BB/
@@ -375,6 +375,7 @@ key_binder:
 #    - {accept: Control+apostrophe, toggle: zh_tw, when: always}
 #    - {accept: Control+Shift+6, toggle: zh_tw, when: always}
 #    - {accept: Control+Shift+7, toggle: emoji_segestion, when: always}
+#    - {accept: Return, send: space, when: has_menu} #return,enter直出
 
 editor:
   bindings:
