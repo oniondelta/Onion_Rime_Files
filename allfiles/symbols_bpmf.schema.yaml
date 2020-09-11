@@ -4,7 +4,7 @@
 schema:
   schema_id: symbols_bpmf
   name: 系列符號(注音)
-  version: "202007"
+  version: "202009"
   description: |
     由Unicode中「Emoticons」部份和「Miscellaneous Symbols and Pictographs」部份合成。
     可在Mac中輸入iOS設備通用的Emoji表情，其他系統可能需安装專門字體。
