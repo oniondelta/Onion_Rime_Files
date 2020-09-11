@@ -1,6 +1,6 @@
 # Rime schema
 # encoding: utf-8
-##########《 洋蔥雙拼注音 設定主頁》############
+# 《洋蔥 雙拼注音 設定頁》
 schema:
   schema_id: bopomo_onion_double
   name: "☆注音(洋蔥雙拼版)☆"
@@ -8,7 +8,7 @@ schema:
   author:
     - 『洋蔥』
   description: |
-    《洋蔥雙拼注音》
+    使用洋蔥雙拼注音鍵位
 
   dependencies:
     - cangjie5
