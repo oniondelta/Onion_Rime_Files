@@ -68,7 +68,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "2020.09.02"
+version: "2020.09.12"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
