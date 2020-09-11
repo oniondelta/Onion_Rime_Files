@@ -1,7 +1,6 @@
-#錯誤查看%TEMP%\rime.weasel
 # Rime schema settings
 # encoding: utf-8
-# 《西里爾設定頁》
+# 《西里爾(洋蔥形碼鍵位)設定頁》
 schema:
   schema_id: cyrillic
   name: ❃西里爾字母❃
@@ -9,7 +8,7 @@ schema:
   author:
     - 『洋蔥』
   description: |
-    用戶字典
+    西里爾字母
 
 switches:
   - name: ascii_mode
