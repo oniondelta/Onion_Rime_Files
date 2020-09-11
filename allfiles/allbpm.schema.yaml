@@ -8,7 +8,7 @@ schema:
   author:
     - 『洋蔥』
   description: |
-    用戶字典
+    包含一般和特殊注音符號
 
 switches:
   - name: ascii_mode
