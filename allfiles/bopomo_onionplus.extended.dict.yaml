@@ -1,7 +1,8 @@
 # Rime dictionary
 # encoding: utf-8
-# 《中文-注音詞庫》
-# 『洋蔥』
+# 《洋蔥 plus 注音 字詞庫匯入頁》
+# author:『洋蔥』
+# 中文字詞標註使用拼音
 ---
 name: bopomo_onionplus.extended
 version: "201910"
@@ -14,7 +15,8 @@ import_tables:
   - phrases.cht
 ...
 ##### 測試字（測試是否少掉台灣以外的用字） #####
-# 裏面	li3 mian4
-# 高峯	gao1 feng1
+#裏面	li3 mian4
+#高峯	gao1 feng1
 ##### 測試調用 #####
  	|
+##### 以下可自行添加詞句 #####
