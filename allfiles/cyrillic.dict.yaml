@@ -1,7 +1,7 @@
-# Rime schema 中州輸入法的字碼檔
+# Rime dictionary
 # encoding: utf-8
 # 《西里爾字母碼表_增補》
-# 『洋蔥』
+# author:『洋蔥』
 ---
 name: cyrillic
 version: "202001"
