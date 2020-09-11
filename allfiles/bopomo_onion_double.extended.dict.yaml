@@ -1,7 +1,8 @@
 # Rime dictionary
 # encoding: utf-8
-# 《中文-注音詞庫》
-#『洋蔥』
+# 《洋蔥 雙拼 注音 字詞庫匯入頁》
+# author:『洋蔥』
+# 中文字詞標註使用拼音
 ---
 name: bopomo_onion_double.extended
 version: "202007"
@@ -13,3 +14,4 @@ import_tables:
   - terra_pinyin_onion
   - terra_pinyin_onion_add
 ...
+##### 以下可自行添加詞句 #####
