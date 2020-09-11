@@ -1,12 +1,12 @@
-# Rime schema
+# Rime schema settings
 # encoding: utf-8
-##########《 注音(洋蔥mix-in 2 版)設定主頁》############
+# 《注音 洋蔥 mix-in 3_2 版 設定頁》
 schema:
   schema_id: bo_mixin3_2
   name: "☆注音(洋蔥mix-in版 3-2)☆〔  '  [  ]  〕→〔拉日韓〕🅢❶"
   version: "202009"
   author:
-    - 『洋蔥』 # 以佛振注音支持聲韻亂序方案改編
+    - 『洋蔥』
   description: |
     注音符號輸入，採用「大千式」鍵盤排列。
     聲調尾綴語言補碼只出拉丁小寫和平假名！
