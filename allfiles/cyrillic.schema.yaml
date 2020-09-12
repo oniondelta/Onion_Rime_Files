@@ -1,6 +1,6 @@
 # Rime schema settings
 # encoding: utf-8
-# 《西里爾（洋蔥形碼鍵位）設定頁》
+# 《西里爾字母（洋蔥形碼鍵位）設定頁》
 schema:
   schema_id: cyrillic
   name: ❃西里爾字母❃
