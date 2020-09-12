@@ -1,7 +1,7 @@
 # Rime dictionary
 # encoding: utf-8
-# 《拉丁+音標 字詞庫匯入頁》
-# author:『洋蔥』
+# 《拉丁+音標字母（洋蔥形碼鍵位）字詞庫匯入頁》
+# 『洋蔥』製作
 ---
 name: latinin1.extended
 version: "202001"
