@@ -1,7 +1,7 @@
 # Rime dictionary
 # encoding: utf-8
-# 《西里爾 字詞庫匯入頁》
-# author:『洋蔥』
+# 《西里爾字母（洋蔥形碼鍵位）字詞庫匯入頁》
+# 『洋蔥』製作
 ---
 name: cyrillic.extended
 version: "201903"
