@@ -1,5 +1,6 @@
 # Rime key bindings
 # encoding: utf-8
+# 『洋蔥』製作
 
 key_binder:
 ### 避大千注音鍵位和 RIME 原設定鍵位衝突 ###
