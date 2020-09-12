@@ -1,7 +1,7 @@
 # Rime dictionary
 # encoding: utf-8
-# 《韓語 字詞庫匯入頁》
-# author:『洋蔥』
+# 《韓語（洋蔥形碼鍵位）字詞庫匯入頁》
+# 『洋蔥』製作
 ---
 name: hangeul.extended
 version: "202003"
