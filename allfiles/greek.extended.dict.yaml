@@ -1,7 +1,7 @@
 # Rime dictionary
 # encoding: utf-8
-# 《希臘 字詞庫匯入頁》
-# author:『洋蔥』
+# 《希臘字母（洋蔥形碼鍵位）字詞庫匯入頁》
+# 『洋蔥』製作
 ---
 name: greek.extended
 version: "201903"
