@@ -1,7 +1,7 @@
 # Rime dictionary
 # encoding: utf-8
 # 《日語（平假名+片假名）字母碼表》
-# author:『洋蔥』
+# 『洋蔥』製作
 ---
 name: bo_mixin_jp
 version: "202007"
