@@ -1,7 +1,7 @@
 # Rime's punctuation and symbols
 # encoding: utf-8
 # 《標點符號-注音》
-# 『洋蔥』
+# 『洋蔥』製作
 config_version: "0.9"
 punctuator:
   full_shape:
