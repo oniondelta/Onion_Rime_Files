@@ -5,16 +5,16 @@
 # 本詞庫為日語詞庫附加拼音和分段
 #
 #===================================
-# 「っ」「ッ」編碼訂為「q」
-# 「ー」編碼訂為「-」
+# 「っ」「ッ」編碼訂為「q」，其他變化編碼用正則轉寫。
+# 「ー」編碼訂為「-」，其他變化編碼用正則轉寫。
 # 「ぁ」「ぇ」「ぃ」「ぉ」「ぅ」編碼訂為「xa」「xe」「xi」「xo」「xu」，其他變化編碼用正則轉寫。
 # 「ヶ」編碼訂為「xke.」，其他變化編碼用正則轉寫。
 #
 # 詞彙中含「っ」(q;  っ在漢字拼音中)，其變化需補齊於下(s等開頭不需補，c開頭需要)。
 #     例：橘中	kiq; chuu;    橘中	kic; chuu;    橘中	kit; tyuu;
 #
-# 詞彙中含促音「っ」(q  っ為假名形式)，其變化需補齊「q,」，和「 s sa;」或「 ssa,」等。
-#     例：真っ先	ma; s saki;    真っ先	ma; q, saki;
+# 詞彙中含促音「っ」「ッ」(q,或q.  っ或ッ為假名形式)，其變化需補齊「q,或q.」，和「 s,sa;或 s.sa;」或「 ssa,」等。
+#     例：真っ先	ma; s,saki;    真っ先	ma; q, saki;
 #     例：引っかけ	hi; q, ka, ke,    引っかけ	hi; kka, ke,
 #
 # 詞彙中含拗音「ゃ」「ょ」「ゅ」，其變化需補齊「xy」於下，「ly」用正則轉寫。
@@ -23,7 +23,7 @@
 #===================================
 ---
 name: phrases.jp_hkkseg
-version: "202002"
+version: "202009"
 sort: original
 use_preset_vocabulary: false
 columns:
@@ -93,7 +93,7 @@ columns:
 経由	kei; yu;
 無愛想	bu; ai; sou;
 真っ直ぐ	ma; q, su; gu,
-真っ直ぐ	ma; s su; gu,
+真っ直ぐ	ma; s,su; gu,
 呆気な	aq; ke; na,
 呆気な	ak; ke; na,
 組み込	ku; mi, ko;
@@ -320,7 +320,7 @@ columns:
 化粧	ke; shou;
 お許し	o, yuru; shi,
 蹴っ飛ば	ke; q, to; ba,
-蹴っ飛ば	ke; t to; ba,
+蹴っ飛ば	ke; t,to; ba,
 外連	ke; ren;
 藤沢	fuji; sawa;
 返し	gae; shi,
@@ -481,7 +481,7 @@ columns:
 運賃	un; chin;
 取扱	tori; atsukai;
 真っ黒	ma; q, kuro;
-真っ黒	ma; k kuro;
+真っ黒	ma; k,kuro;
 広義	kou; gi;
 河内	kawa; uchi;
 慣例	kan; rei;
@@ -915,7 +915,7 @@ columns:
 篠崎	shino; zaki;
 風邪	ka; ze;
 名高	na; daka;
-引っ込	hi; k ko;
+引っ込	hi; k,ko;
 引っ込	hi; q, ko;
 暴走	bou; sou;
 満員	man; in;
@@ -949,7 +949,7 @@ columns:
 用法	you; hou;
 父親	chichi; oya;
 引っ掛け	hi; q, ka; ke,
-引っ掛け	hi; k ka; ke,
+引っ掛け	hi; k,ka; ke,
 微細	bi; sai;
 専務	sen; mu;
 希望	ki; bou;
@@ -1109,7 +1109,7 @@ columns:
 検索	ken; saku;
 書店	sho; ten;
 っ子	q, ko;
-っ子	k ko;
+っ子	k,ko;
 天明	ten; mei;
 種子	shu; shi;
 司会者	shi; kai; sha;
@@ -1364,7 +1364,7 @@ columns:
 折り紙	o; ri, gami;
 仮名	ka; mei;
 取っ手	to; q, te;
-取っ手	to; t te;
+取っ手	to; t,te;
 仲裁	chuu; sai;
 尚も	nao; mo,
 集め	atsu; me,
@@ -2173,7 +2173,7 @@ columns:
 四暗刻	su-; an; ko;
 真に	shin; ni,
 始ま	haji; ma,
-ぶっ飛ば	bu, t to; ba,
+ぶっ飛ば	bu, t,to; ba,
 ぶっ飛ば	bu, q, to; ba,
 産地	san; chi;
 都知事	to; chi; ji;
@@ -2982,7 +2982,7 @@ columns:
 間抜け	ma; nu; ke,
 惨敗	zan; pai;
 遷都	sen; to;
-開けっ放し	a; ke, p pana; shi,
+開けっ放し	a; ke, p,pana; shi,
 開けっ放し	a; ke, q, pana; shi,
 通用	tsuu; you;
 週刊	shuu; kan;
@@ -3224,7 +3224,7 @@ columns:
 季刊	ki; kan;
 再開	sai; kai;
 発動	hatsu; dou;
-すっ飛	su, t to;
+すっ飛	su, t,to;
 すっ飛	su, q, to;
 川口	kawa; guchi;
 含め	fuku; me,
@@ -3797,7 +3797,7 @@ columns:
 難波	nan; ba;
 執事	shitsu; ji;
 切り返し	ki; ri, kae; shi,
-下っ端	shita; p pa;
+下っ端	shita; p,pa;
 下っ端	shita; q, pa;
 読みかけ	yo; mi, ka, ke,
 題名	dai; mei;
@@ -5031,7 +5031,7 @@ columns:
 天王星	ten; ou; sei;
 天王星	ten; nou; sei;
 本題	hon; dai;
-一人っ子	hito; ri; k ko;
+一人っ子	hito; ri; k,ko;
 一人っ子	hito; ri; q, ko;
 世界	se; kai;
 用語	you; go;
@@ -5192,7 +5192,7 @@ columns:
 魅力	mi; ryoku;
 点て	ta; te,
 入門	nyuu; mon;
-引っ付	hi; t tsu;
+引っ付	hi; t,tsu;
 引っ付	hi; q, tsu;
 神輿	shin; yo;
 集結	shuu; ketsu;
@@ -5909,7 +5909,7 @@ columns:
 最長	sai; chou;
 自主	ji; shu;
 連ね	tsura; ne,
-引っ張	hi; p pa;
+引っ張	hi; p,pa;
 引っ張	hi; q, pa;
 感嘆	kan; tan;
 逆らえ	saka; ra, e,
@@ -6038,7 +6038,7 @@ columns:
 活用	katsu; you;
 瀬川	se; gawa;
 映え	ha; e,
-突っ走	tsu; p pashi;
+突っ走	tsu; p,pashi;
 突っ走	tsu; q, pashi;
 聊爾	ryou; ji;
 聖母	sei; bo;
@@ -6325,7 +6325,7 @@ columns:
 反乱	han; ran;
 教科	kyou; ka;
 行け	i; ke,
-引っ掛か	hi; k ka; ka,
+引っ掛か	hi; k,ka; ka,
 引っ掛か	hi; q, ka; ka,
 吐息	to; iki;
 死亡	shi; bou;
@@ -6744,7 +6744,7 @@ columns:
 公営	kou; ei;
 動き出	ugo; ki, da;
 抜け	nu; ke,
-真っ先	ma; s saki;
+真っ先	ma; s,saki;
 真っ先	ma; q, saki;
 州立	shuu; ritsu;
 獨協	dok; kyou;
@@ -7166,7 +7166,7 @@ columns:
 偽名	gi; mei;
 来週	rai; shuu;
 小言	ko; goto;
-意地っ張り	i; ji; p pa; ri,
+意地っ張り	i; ji; p,pa; ri,
 意地っ張り	i; ji; q, pa; ri,
 何ら	nan; ra,
 装備	sou; bi;
@@ -7236,7 +7236,7 @@ columns:
 鹿野	shika; no;
 逸らせ	so; ra, se,
 乗り換え	no; ri, ka; e,
-手っ取り早	te; t to; ri, baya;
+手っ取り早	te; t,to; ri, baya;
 手っ取り早	te; q, to; ri, baya;
 執念深	shuu; nen; buka;
 駅前通り	eki; mae; doo; ri,
@@ -7250,7 +7250,7 @@ columns:
 普及	fu; kyuu;
 特捜	toku; sou;
 愛妻	ai; sai;
-初っ端	sho; p pana;
+初っ端	sho; p,pana;
 初っ端	sho; q, pana;
 横須賀線	yoko; su; ka; sen;
 今更	ima; sara;
@@ -7357,7 +7357,7 @@ columns:
 硬度	kou; do;
 一見	ik; ken;
 一見	iq; ken;
-引っ込め	hi; k ko; me,
+引っ込め	hi; k,ko; me,
 引っ込め	hi; q, ko; me,
 舞踏	bu; tou;
 辛くも	kara; ku, mo,
@@ -7451,7 +7451,7 @@ columns:
 怪我	ke; ga;
 下が	sa; ga,
 羽鳥	ha; tori;
-引っ越し	hi; k ko; shi,
+引っ越し	hi; k,ko; shi,
 引っ越し	hi; q, ko; shi,
 順子	shun; tsu;
 直下	chok; ka;
@@ -7567,7 +7567,7 @@ columns:
 締結	tei; ketsu;
 飯島	ii; jima;
 刑罰	kei; batsu;
-しかめっ面	shi, ka, me, t tsura;
+しかめっ面	shi, ka, me, t,tsura;
 しかめっ面	shi, ka, me, q, tsura;
 公団	kou; dan;
 国技	koku; gi;
@@ -8664,7 +8664,7 @@ columns:
 門脇	kado; waki;
 励ま	hage; ma,
 供用	kyou; you;
-真っ白	ma; s shi; ro;
+真っ白	ma; s,shi; ro;
 真っ白	ma; q, shi; ro;
 堀口	hori; guchi;
 観光	kan; kou;
@@ -9084,7 +9084,7 @@ columns:
 装着	sou; chaku;
 母国	bo; koku;
 頻出	hin; shutsu;
-突っ込	tsu; k ko;
+突っ込	tsu; k,ko;
 突っ込	tsu; q, ko;
 恋人	koi; bito;
 側面	soku; men;
@@ -9183,7 +9183,7 @@ columns:
 公安	kou; an;
 湘南	shou; nan;
 読み取	yo; mi, to;
-酔っ払	yo; p para;
+酔っ払	yo; p,para;
 酔っ払	yo; q, para;
 出願	shutsu; gan;
 複素	fuku; so;
@@ -9566,7 +9566,7 @@ columns:
 続々	zoku; zoku;
 上が	a; ga,
 玄関	gen; kan;
-突っ込み	tsu; k ko; mi,
+突っ込み	tsu; k,ko; mi,
 突っ込み	tsu; q, ko; mi,
 赤色	aka; iro;
 駆けだ	ka; ke, da,
@@ -9801,7 +9801,7 @@ columns:
 実施	jis; shi;
 実施	jiq; shi;
 差出人	sashi; dashi; nin;
-吹っ飛	fu; t to;
+吹っ飛	fu; t,to;
 吹っ飛	fu; q, to;
 沈没	chin; botsu;
 絶妙	zetsu; myou;
@@ -9832,7 +9832,7 @@ columns:
 古事記	ko; ji; ki;
 数カ月	suu; ka. getsu;
 言うまでもな	i; u, ma, de, mo, na,
-突っ伏	tsu; p pu;
+突っ伏	tsu; p,pu;
 突っ伏	tsu; q, pu;
 子会社	ko; gai; sha;
 提供	tei; kyou;
@@ -10097,7 +10097,7 @@ columns:
 飲み物	no; mi, mono;
 納め	osa; me,
 市販	shi; han;
-素っ頓狂	su; t ton; kyou;
+素っ頓狂	su; t,ton; kyou;
 素っ頓狂	su; q, ton; kyou;
 振幅	shin; puku;
 一般的	ip; pan; teki;
@@ -10107,7 +10107,7 @@ columns:
 空港	kuu; kou;
 向ける	mu; ke, re,
 思い切	omo; i, ki;
-真っ暗	ma; k ku; ra;
+真っ暗	ma; k,ku; ra;
 真っ暗	ma; q, ku; ra;
 車掌	sha; shou;
 車輪	sha; rin;
@@ -10368,7 +10368,7 @@ columns:
 沢田	sawa; da;
 沢田	sawa; ta;
 和菓子	wa; ga; shi;
-吹っ切れ	fu; k ki; re,
+吹っ切れ	fu; k,ki; re,
 吹っ切れ	fu; q, ki; re,
 妊婦	nin; pu;
 起点	ki; ten;
@@ -10474,7 +10474,7 @@ columns:
 何者	nani; mono;
 全力	zen; ryoku;
 諸語	sho; go;
-真っ最中	ma; s sai; chuu;
+真っ最中	ma; s,sai; chuu;
 真っ最中	ma; q, sai; chuu;
 実技	jitsu; gi;
 税金	zei; kin;
@@ -10501,7 +10501,7 @@ columns:
 寝ぼけ	ne; bo, ke,
 昼寝	hiru; ne;
 釈放	shaku; hou;
-駄々っ子	da; da; k ko;
+駄々っ子	da; da; k,ko;
 駄々っ子	da; da; q, ko;
 翻案	hon; an;
 初回	sho; kai;
@@ -10638,7 +10638,7 @@ columns:
 こみ上げ	ko, mi, a; ge,
 度胸	do; kyou;
 短期	tan; ki;
-素っ気	so; k ke;
+素っ気	so; k,ke;
 素っ気	so; q, ke;
 赤旗	aka; hata;
 統制	tou; sei;
@@ -11633,7 +11633,7 @@ columns:
 合理	gou; ri;
 欠伸	aku; bi;
 要素	you; so;
-引っ越	hi; k ko;
+引っ越	hi; k,ko;
 引っ越	hi; q, ko;
 話し相手	hana; shi, ai; te;
 やり方	ya, ri, kata;
@@ -11720,7 +11720,7 @@ columns:
 世話人	se; wa; nin;
 数多	kazu; oo;
 数多	ama; ta;
-片っ端	kata; p pashi;
+片っ端	kata; p,pashi;
 片っ端	kata; q, pashi;
 大学	dai; gaku;
 進化	shin; ka;
@@ -11912,7 +11912,7 @@ columns:
 引き起こ	hi; ki, o; ko,
 続出	zoku; shutsu;
 書記	sho; ki;
-真っ青	ma; s sao;
+真っ青	ma; s,sao;
 真っ青	ma; q, sao;
 満足	man; zoku;
 細谷	hoso; ya;
@@ -11942,7 +11942,7 @@ columns:
 江藤	e; tou;
 目移り	me; utsu; ri,
 感情	kan; jou;
-だだっ広	da, da, p piro;
+だだっ広	da, da, p,piro;
 だだっ広	da, da, q, piro;
 元老	gen; rou;
 年譜	nen; pu;
@@ -12458,7 +12458,7 @@ columns:
 三塁	san; rui;
 焼き肉	ya; ki, niku;
 銭形	zeni; gata;
-真っ赤	ma; k ka;
+真っ赤	ma; k,ka;
 真っ赤	ma; q, ka;
 波及	ha; kyuu;
 痛め	ita; me,
@@ -16386,7 +16386,7 @@ columns:
 張め	chou; me,
 朝ら	chou; ra,
 ッ亭	q. tei;
-ッ亭	t tei;
+ッ亭	t.tei;
 津家	tsu; ge;
 津子	tsu; ko;
 津署	tsu; sho;
@@ -27232,8 +27232,8 @@ columns:
 治和	chi; wa;
 痴話	chi; wa;
 知和	chi; wa;
-っ子	q; ko;
-っ子	k; ko;
+っ子	q, ko;
+っ子	k,ko;
 付い	tsu; i,
 告い	tsu; i,
 嗣い	tsu; i,

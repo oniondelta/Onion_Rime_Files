@@ -4,7 +4,7 @@
 schema:
   schema_id: jpnin1 # 注意此ID與文件名裏 .schema.yaml 之前的部分相同
   name: ❃日語 in 1❃
-  version: "202003"
+  version: "202009"
   author:
     - 『洋蔥』
   description: |
@@ -166,8 +166,11 @@ speller:
     - derive/n([,.;])/nn$1/ #ん
     - xform/^dvyu/dyu/
 ##### 簡化後綴 #####
+    - xform/^([kspt])([,.])(.+)$/$1$3/
     - derive/^([a-z-]+)([,.])$/$1/
-#    - derive/^([a-z-]+)([;])$/$1/
+#關#    - derive/^([a-z-]+)([;])$/$1/
+    - abbrev/^([kstnhmyrwgzdbpxjl])([aiueo])([.,])$/$1/
+    - abbrev/^([c])([h])([aiueo])([.,])$/$1/
 
 translator:
   dictionary: jpnin1.extended
