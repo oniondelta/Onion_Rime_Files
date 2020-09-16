@@ -14,7 +14,7 @@
 # 「ヶ」編碼訂為「xke.」，其他變化編碼用正則轉寫。
 #
 # 詞彙中含「っ」(q;  っ在漢字拼音中)，其變化需補齊於下(s等開頭不需補，c開頭需要)。
-#     例：橘中	kiq; chuu;    橘中	kic; chuu;    橘中	kit; tyuu;
+#     例：橘中	kiq; chuu;    橘中	kic;chuu;    橘中	kit;tyuu;
 #
 # 詞彙中含促音「っ」「ッ」(q,或q.  っ或ッ為假名形式)，其變化需補齊「q,或q.」，和「 s,sa;或 s.sa;」或「 ssa,」等。
 #     例：真っ先	ma; s,saki;    真っ先	ma; q, saki;
@@ -3600,7 +3600,7 @@ columns:
 三	san;
 三	mi;
 三つ	mi; tsu,
-三つ	mit; tsu,
+三つ	mit;tsu,
 三つ	miq; tsu,
 山	san;
 山	yama;
@@ -3677,7 +3677,7 @@ columns:
 四	shi;
 四	yo;
 四つ	yo; tsu,
-四つ	yot; tsu,
+四つ	yot;tsu,
 四つ	yoq; tsu,
 四	yon;
 市	shi;
@@ -6321,7 +6321,7 @@ columns:
 八	hachi;
 八	ya;
 八つ	ya; tsu,
-八つ	yat; tsu,
+八つ	yat;tsu,
 八つ	yaq; tsu,
 八	you;
 鉢	hachi;
@@ -7345,7 +7345,7 @@ columns:
 浴	a;
 欲	yoku;
 欲する	ho; su, ru,
-欲する	hos; su, ru,
+欲する	hos;su, ru,
 欲する	hoq; su, ru,
 欲しい	ho; shi, i,
 欲	ho;
@@ -7662,7 +7662,7 @@ columns:
 六	mu;
 六つ	mu; tsu,
 六	mui;
-六つ	mut; tsu,
+六つ	mut;tsu,
 六つ	muq; tsu,
 録	roku;
 錄	roku;

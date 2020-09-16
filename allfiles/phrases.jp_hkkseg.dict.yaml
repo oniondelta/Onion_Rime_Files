@@ -11,7 +11,7 @@
 # 「ヶ」編碼訂為「xke.」，其他變化編碼用正則轉寫。
 #
 # 詞彙中含「っ」(q;  っ在漢字拼音中)，其變化需補齊於下(s等開頭不需補，c開頭需要)。
-#     例：橘中	kiq; chuu;    橘中	kic; chuu;    橘中	kit; tyuu;
+#     例：橘中	kiq; chuu;    橘中	kic;chuu;    橘中	kit;tyuu;
 #
 # 詞彙中含促音「っ」「ッ」(q,或q.  っ或ッ為假名形式)，其變化需補齊「q,或q.」，和「 s,sa;或 s.sa;」或「 ssa,」等。
 #     例：真っ先	ma; s,saki;    真っ先	ma; q, saki;
@@ -66,7 +66,7 @@ columns:
 化学	ka; gaku;
 小学生	shou; gaku; sei;
 小学校	shou; gaq; kou;
-小学校	shou; gak; kou;
+小学校	shou; gak;kou;
 学生	gaku; sei;
 卒業	sotsu; gyou;
 卒業証書	sotsu; gyou; shou; sho;
@@ -78,7 +78,7 @@ columns:
 横着	ou; chaku;
 高圧的	kou; atsu; teki;
 楽観的	raq; kan; teki;
-楽観的	rak; kan; teki;
+楽観的	rak;kan; teki;
 我慢	ga; man;
 辛抱強	shin; bou; duyo;
 人間	nin; gen;
@@ -95,7 +95,7 @@ columns:
 真っ直ぐ	ma; q, su; gu,
 真っ直ぐ	ma; s,su; gu,
 呆気な	aq; ke; na,
-呆気な	ak; ke; na,
+呆気な	ak;ke; na,
 組み込	ku; mi, ko;
 協賛	kyou; san;
 有線	yuu; sen;
@@ -127,7 +127,7 @@ columns:
 顔合わせ	kao; a; wa, se,
 明示	mei; ji;
 活気	kaq; ki;
-活気	kak; ki;
+活気	kak;ki;
 秘密	hi; mitsu;
 偽造	gi; zou;
 果樹	ka; ju;
@@ -146,9 +146,9 @@ columns:
 推薦	sui; sen;
 待ち伏せ	ma; chi, bu; se,
 一途	iq; to;
-一途	it; to;
+一途	it;to;
 直交	choq; kou;
-直交	chok; kou;
+直交	chok;kou;
 流れ	naga; re,
 中等	chuu; tou;
 往来	ou; rai;
@@ -172,14 +172,14 @@ columns:
 前期	zen; ki;
 生い立ち	o; i, ta; chi,
 結婚	keq; kon;
-結婚	kek; kon;
+結婚	kek;kon;
 強度	kyou; do;
 付属	fu; zoku;
 キリスト教徒	ki. ri. su. to. kyou; to;
 丁度	chou; do;
 繰り返	ku; ri, kae;
 劣化	req; ka;
-劣化	rek; ka;
+劣化	rek;ka;
 揚げ物	a; ge, mono;
 断り	kotowa; ri,
 印刷	in; satsu;
@@ -200,7 +200,7 @@ columns:
 炭鉱	tan; kou;
 場所	ba; sho;
 発射	haq; sha;
-発射	has; sha;
+発射	has;sha;
 堂々	dou; dou;
 転移	ten; i;
 糾弾	kyuu; dan;
@@ -255,7 +255,7 @@ columns:
 元禄	gen; roku;
 打ち出	u; chi, da;
 日食	niq; shoku;
-日食	nis; shoku;
+日食	nis;shoku;
 抱え	kaka; e,
 単調	tan; chou;
 整備	sei; bi;
@@ -275,7 +275,7 @@ columns:
 新装	shin; sou;
 辛辣	shin; ratsu;
 錯覚	saq; kaku;
-錯覚	sak; kaku;
+錯覚	sak;kaku;
 昭和	shou; wa;
 田辺	ta; nabe;
 地雷	ji; rai;
@@ -295,12 +295,12 @@ columns:
 坊主	bou; zu;
 川本	kawa; moto;
 出品	shuq; pin;
-出品	shup; pin;
+出品	shup;pin;
 終電	shuu; den;
 認可	nin; ka;
 周波数	shuu; ha; suu;
 実況	jiq; kyou;
-実況	jik; kyou;
+実況	jik;kyou;
 岩下	iwa; shita;
 突き	tsu; ki,
 増子	masu; ko;
@@ -310,11 +310,11 @@ columns:
 奥村	oku; mura;
 関して	kan; shi, te,
 結集	keq; shuu;
-結集	kes; shuu;
+結集	kes;shuu;
 万年筆	man; nen; hitsu;
 遮断	sha; dan;
 一心	iq; shin;
-一心	is; shin;
+一心	is;shin;
 特異	toku; i;
 師事	shi; ji;
 化粧	ke; shou;
@@ -337,7 +337,7 @@ columns:
 寝付け	ne; tsu; ke,
 中身	naka; mi;
 説教	seq; kyou;
-説教	sek; kyou;
+説教	sek;kyou;
 学生証	gaku; sei; shou;
 異例	i; rei;
 冬至	tou; ji;
@@ -359,14 +359,14 @@ columns:
 戯れ	tawamu; re,
 断然	dan; zen;
 実習	jiq; shuu;
-実習	jis; shuu;
+実習	jis;shuu;
 市町村	shi; chou; son;
 装飾	sou; shoku;
 真新し	ma; atara; shi,
 回れ	mawa; re,
 発電	hatsu; den;
 圧倒的	aq; tou; teki;
-圧倒的	at; tou; teki;
+圧倒的	at;tou; teki;
 怒涛	do; tou;
 至って	ita; q, te,
 至って	ita; tte,
@@ -396,7 +396,7 @@ columns:
 制度	sei; do;
 過去	ka; ko;
 必死	hiq; shi;
-必死	his; shi;
+必死	his;shi;
 端正	tan; sei;
 市外	shi; gai;
 意見	i; ken;
@@ -437,7 +437,7 @@ columns:
 遺族	i; zoku;
 急ぎ	iso; gi,
 準決勝	jun; keq; shou;
-準決勝	jun; kes; shou;
+準決勝	jun; kes;shou;
 父兄	fu; kei;
 琉球	ryuu; kyuu;
 下駄	ge; ta;
@@ -451,7 +451,7 @@ columns:
 怯え	obi; e,
 将校	shou; kou;
 三角形	san; kaq; kei;
-三角形	san; kak; kei;
+三角形	san; kak;kei;
 三角形	san; kaku; kei;
 合わさ	a; wa, sa,
 休戦	kyuu; sen;
@@ -459,7 +459,7 @@ columns:
 哲学	tetsu; gaku;
 食肉	shoku; niku;
 一種	iq; shu;
-一種	is; shu;
+一種	is;shu;
 職人	shoku; nin;
 満ち	mi; chi,
 他校	ta; kou;
@@ -491,7 +491,7 @@ columns:
 何と	nan; to,
 同様	dou; you;
 一方	iq; pou;
-一方	ip; pou;
+一方	ip;pou;
 対々和	toi; toi; ho-;
 異議	i; gi;
 継承	kei; shou;
@@ -529,7 +529,7 @@ columns:
 純資産	jun; shi; san;
 逡巡	shun; jun;
 日記	niq; ki;
-日記	nik; ki;
+日記	nik;ki;
 輪郭	rin; kaku;
 改組	kai; so;
 家計簿	ka; kei; bo;
@@ -538,7 +538,7 @@ columns:
 卑劣	hi; retsu;
 工芸	kou; gei;
 達成	taq; sei;
-達成	tas; sei;
+達成	tas;sei;
 取り組み	to; ri, ku; mi,
 前島	mae; jima;
 恒星	kou; sei;
@@ -572,9 +572,9 @@ columns:
 革命	kaku; mei;
 博士号	haka; se; gou;
 密接	miq; setsu;
-密接	mis; setsu;
+密接	mis;setsu;
 立秋	riq; shuu;
-立秋	ris; shuu;
+立秋	ris;shuu;
 補佐	ho; sa;
 思わせぶり	omo; wa, se, bu, ri,
 全然	zen; zen;
@@ -594,7 +594,7 @@ columns:
 取り戻	to; ri, modo;
 慰め	nagusa; me,
 悪化	aq; ka;
-悪化	ak; ka;
+悪化	ak;ka;
 公道	kou; dou;
 所要	sho; you;
 軍艦	gun; kan;
@@ -619,7 +619,7 @@ columns:
 図々し	zuu; zuu; shi,
 無理矢理	mu; ri; ya; ri;
 滑走	kaq; sou;
-滑走	kas; sou;
+滑走	kas;sou;
 紛失	fun; shitsu;
 分厚	bu; atsu;
 相川	ai; kawa;
@@ -657,8 +657,8 @@ columns:
 講義	kou; gi;
 中指	naka; yubi;
 決着	keq; chaku;
-決着	kec; chaku;
-決着	ket; tyaku;
+決着	kec;chaku;
+決着	ket;tyaku;
 小田原	o; da; wara;
 走れ	hashi; re,
 迷い	mayo; i,
@@ -747,9 +747,9 @@ columns:
 助動詞	jo; dou; shi;
 不具合	fu; gu; ai;
 逆光	gyaq; kou;
-逆光	gyak; kou;
+逆光	gyak;kou;
 可及的	ka; kyuu; teki;
-出店	shut; ten;
+出店	shut;ten;
 出店	shuq; ten;
 石炭	seki; tan;
 文房具	bun; bou; gu;
@@ -757,7 +757,7 @@ columns:
 焦が	ko; ga,
 掠め	kasu; me,
 清々し	suga; suga; shi,
-学研	gak; ken;
+学研	gak;ken;
 学研	gaq; ken;
 電圧	den; atsu;
 お母様	o, kaa; sama;
@@ -771,7 +771,7 @@ columns:
 快感	kai; kan;
 生得的	sei; toku; teki;
 発想	haq; sou;
-発想	has; sou;
+発想	has;sou;
 浅岡	asa; oka;
 牽引	ken; in;
 転校	ten; kou;
@@ -780,14 +780,14 @@ columns:
 歯痒	ha; gayu;
 皇紀	kou; ki;
 宅急便	taq; kyuu; bin;
-宅急便	tak; kyuu; bin;
+宅急便	tak;kyuu; bin;
 東国	tou; goku;
 絶好調	zeq; kou; chou;
-絶好調	zek; kou; chou;
+絶好調	zek;kou; chou;
 登頂	tou; chou;
 似合	ni; a;
 結構	keq; kou;
-結構	kek; kou;
+結構	kek;kou;
 から口	ka, ra, kuchi;
 是正	ze; sei;
 抽出	chuu; shutsu;
@@ -809,7 +809,7 @@ columns:
 付け	tsu; ke,
 付け	du; ke,
 一軒家	iq; ken; ya;
-一軒家	ik; ken; ya;
+一軒家	ik;ken; ya;
 新大久保	shin; oo; ku; bo;
 計上	kei; jou;
 転載	ten; sai;
@@ -845,7 +845,7 @@ columns:
 離散	ri; san;
 小玉	ko; dama;
 一生懸命	iq; shou; ken; mei;
-一生懸命	is; shou; ken; mei;
+一生懸命	is;shou; ken; mei;
 半端	han; pa;
 安心	an; shin;
 重視	juu; shi;
@@ -882,7 +882,7 @@ columns:
 思い入れ	omo; i, i; re,
 絡ま	kara; ma,
 借金	shaq; kin;
-借金	shak; kin;
+借金	shak;kin;
 歌謡	ka; you;
 念頭	nen; tou;
 駆け出	ka; ke, da;
@@ -931,7 +931,7 @@ columns:
 欠片	kake; ra;
 竜王	ryuu; ou;
 史上	shi; jou;
-頭痛	zut; suu;
+頭痛	zut;suu;
 彗星	sui; sei;
 お鍋	o, nabe;
 議長	gi; chou;
@@ -968,7 +968,7 @@ columns:
 劇画	geki; ga;
 山脈	san; myaku;
 熱狂	neq; kyou;
-熱狂	nek; kyou;
+熱狂	nek;kyou;
 本庁	hon; chou;
 片岡	kata; oka;
 未完	mi; kan;
@@ -978,7 +978,7 @@ columns:
 掲げ	kaka; ge,
 圏内	ken; nai;
 葛藤	kaq; tou;
-葛藤	kat; tou;
+葛藤	kat;tou;
 屋外	oku; gai;
 礼儀	rei; gi;
 推奨	sui; shou;
@@ -989,9 +989,9 @@ columns:
 顔負け	kao; ma; ke,
 織田	o; da;
 一色	iq; shoku;
-一色	is; shoku;
+一色	is;shoku;
 鬱屈	uq; kutsu;
-鬱屈	uk; kutsu;
+鬱屈	uk;kutsu;
 村上	mura; kami;
 杉野	sugi; no;
 口惜し	ku; ya; shi,
@@ -1012,7 +1012,7 @@ columns:
 動き回	ugo; ki, mawa;
 今夜	kon; ya;
 実感	jiq; kan;
-実感	jik; kan;
+実感	jik;kan;
 貨物	ka; motsu;
 助け舟	tasu; ke, bune;
 神経質	shin; kei; shitsu;
@@ -1023,7 +1023,7 @@ columns:
 従順	juu; jun;
 寿命	ju; myou;
 抜粋	baq; sui;
-抜粋	bas; sui;
+抜粋	bas;sui;
 思索	shi; saku;
 本土	hon; do;
 上半期	kami; han; ki;
@@ -1056,20 +1056,20 @@ columns:
 工夫	ku; fuu;
 竹下	take; shita;
 恰好	kaq; kou;
-恰好	kak; kou;
+恰好	kak;kou;
 助長	jo; chou;
 人権	jin; ken;
 発泡	haq; pou;
-発泡	hap; pou;
+発泡	hap;pou;
 引越し	hiq; ko; shi,
-引越し	hik; ko; shi,
+引越し	hik;ko; shi,
 成田	nari; ta;
 到達	tou; tatsu;
 夫婦	fuu; fu;
 元金	moto; kin;
 司令	shi; rei;
 一向に	iq; kou; ni,
-一向に	ik; kou; ni,
+一向に	ik;kou; ni,
 口癖	kuchi; guse;
 お婆さん	o, baa; sa, n,
 部位	bu; i;
@@ -1077,11 +1077,11 @@ columns:
 船舶	sen; paku;
 開口	kai; kou;
 発生	haq; sei;
-発生	has; sei;
+発生	has;sei;
 定時	tei; ji;
 押さえ込	o; sa, e, ko;
 一周	iq; shuu;
-一周	is; shuu;
+一周	is;shuu;
 傾げる	kata; ge, ru,
 連れ込	tsu; re, ko;
 形容詞	kei; you; shi;
@@ -1101,7 +1101,7 @@ columns:
 経済	kei; zai;
 同局	dou; kyoku;
 欠点	keq; ten;
-欠点	ket; ten;
+欠点	ket;ten;
 留守番	ru; su; ban;
 先述	sen; jutsu;
 専制	sen; sei;
@@ -1166,7 +1166,7 @@ columns:
 宇野	u; no;
 吸い込	su; i, ko;
 鬱陶し	uq; tou; shi,
-鬱陶し	ut; tou; shi,
+鬱陶し	ut;tou; shi,
 仮称	ka; shou;
 相対	sou; tai;
 圧力	atsu; ryoku;
@@ -1255,20 +1255,20 @@ columns:
 白色	haku; shoku;
 数え	kazo; e,
 一定	iq; tei;
-一定	it; tei;
+一定	it;tei;
 相応	sou; ou;
 小杉	ko; sugi;
 院長	in; chou;
 王冠	ou; kan;
 疾風	shiq; puu;
-疾風	ship; puu;
+疾風	ship;puu;
 没収	boq; shuu;
-没収	bos; shuu;
+没収	bos;shuu;
 切り札	ki; ri, fuda;
 篠田	shino; da;
 歩き	aru; ki,
 環境設定	kan; kyou; seq; tei;
-環境設定	kan; kyou; set; tei;
+環境設定	kan; kyou; set;tei;
 富豪	fu; gou;
 電化	den; ka;
 松橋	matsu; hashi;
@@ -1314,7 +1314,7 @@ columns:
 弱っち	yowa; q, chi,
 弱っち	yowa; cchi,
 一生	iq; shou;
-一生	is; shou;
+一生	is;shou;
 横尾	yoko; o;
 共立	kyou; ritsu;
 呼び声	yo; bi, goe;
@@ -1331,7 +1331,7 @@ columns:
 言い張	i; i, ha;
 万物	ban; butsu;
 国旗	koq; ki;
-国旗	kok; ki;
+国旗	kok;ki;
 茶碗	cha; wan;
 土田	tsuchi; da;
 暇人	hima; jin;
@@ -1350,7 +1350,7 @@ columns:
 薄ら寒	usu; ra, samu;
 複合	fuku; gou;
 河童	kaq; pa;
-河童	kap; pa;
+河童	kap;pa;
 出演	shutsu; en;
 戴冠	tai; kan;
 死傷	shi; shou;
@@ -1381,7 +1381,7 @@ columns:
 遠隔	en; kaku;
 教養	kyou; you;
 格好	kaq; kou;
-格好	kak; kou;
+格好	kak;kou;
 通り過ぎる	too; ri, su; gi, ru,
 宇田川	u; da; gawa;
 宇田川	u; ta; gawa;
@@ -1393,7 +1393,7 @@ columns:
 食欲	shoku; yoku;
 元旦	gan; tan;
 払拭	fuq; shoku;
-払拭	fus; shoku;
+払拭	fus;shoku;
 付き	tsu; ki,
 刑務所	kei; mu; sho;
 胸板	muna; ita;
@@ -1408,7 +1408,7 @@ columns:
 食後	shoku; go;
 植民	shoku; min;
 立派	riq; pa;
-立派	rip; pa;
+立派	rip;pa;
 大根	dai; kon;
 退団	tai; dan;
 進入	shin; nyuu;
@@ -1435,7 +1435,7 @@ columns:
 寝台	shin; dai;
 仁義	jin; gi;
 突破	toq; pa;
-突破	top; pa;
+突破	top;pa;
 新車	shin; sha;
 検証	ken; shou;
 手繰	ta; gu;
@@ -1468,11 +1468,11 @@ columns:
 片付	kata; du;
 立ちあが	ta; chi, a, ga,
 真正面	maq; shou; men;
-真正面	mas; shou; men;
+真正面	mas;shou; men;
 猪股	ino; mata;
 先月	sen; getsu;
 接客	seq; kyaku;
-接客	sek; kyaku;
+接客	sek;kyaku;
 買い得	ka; i, doku;
 地盤	ji; ban;
 探検	tan; ken;
@@ -1519,7 +1519,7 @@ columns:
 富沢	tomi; sawa;
 真夜中	ma; yo; naka;
 特許	toq; kyo;
-特許	tok; kyo;
+特許	tok;kyo;
 元帥	gen; sui;
 お先に	o, saki; ni,
 雷神	rai; jin;
@@ -1557,7 +1557,7 @@ columns:
 短距離	tan; kyo; ri;
 撃墜	geki; tsui;
 欠陥	keq; kan;
-欠陥	kek; kan;
+欠陥	kek;kan;
 届け	todo; ke,
 修正	shuu; sei;
 いつの間に	i, tsu, no, ma; ni,
@@ -1570,19 +1570,19 @@ columns:
 手数料	te; suu; ryou;
 短波	tan; pa;
 奪取	daq; shu;
-奪取	das; shu;
+奪取	das;shu;
 お礼	o, rei;
 生まれながら	u; ma, re, na, ga, ra,
 湯本	yu; moto;
 蒸し暑	mu; shi, atsu;
 決して	keq; shi, te,
-決して	kes; shi, te,
+決して	kes;shi, te,
 東照宮	tou; shou; guu;
 声優	sei; yuu;
 産まれ	u; ma, re,
 合致	gaq; chi;
-合致	gac; chi;
-合致	gat; ti;
+合致	gac;chi;
+合致	gat;ti;
 滋賀医科	shi; ga; i; ka;
 対談	tai; dan;
 歩み	ayu; mi,
@@ -1590,7 +1590,7 @@ columns:
 旋律	sen; ritsu;
 三沢	mi; sawa;
 雑誌	zaq; shi;
-雑誌	zas; shi;
+雑誌	zas;shi;
 小沼	ko; numa;
 小沼	o; numa;
 山頂	san; chou;
@@ -1598,11 +1598,11 @@ columns:
 平塚	hira; tsuka;
 脈々と	myaku; myaku; to,
 小刻み	ko; kiza; mi,
-納得	nat; toku;
+納得	nat;toku;
 納得	naq; toku;
 同中	dou; chuu;
 月期	gaq; ki;
-月期	gak; ki;
+月期	gak;ki;
 月期	gatsu; ki;
 閏年	uruu; doshi;
 川崎	kawa; saki;
@@ -1678,9 +1678,9 @@ columns:
 設け	mou; ke,
 流し込	naga; shi, ko;
 執行	shiq; kou;
-執行	shik; kou;
+執行	shik;kou;
 執筆	shiq; pitsu;
-執筆	ship; pitsu;
+執筆	ship;pitsu;
 不変	fu; hen;
 審議	shin; gi;
 悪びれ	waru; bi, re,
@@ -1702,7 +1702,7 @@ columns:
 出来る	de; ki; ru,
 交点	kou; ten;
 多角形	ta; kaq; kei;
-多角形	ta; kak; kei;
+多角形	ta; kak;kei;
 長調	chou; chou;
 差し伸べ	sa; shi, no; be,
 車線	sha; sen;
@@ -1719,7 +1719,7 @@ columns:
 無駄金	mu; da; gane;
 西南西	sei; nan; sei;
 復旧	fuq; kyuu;
-復旧	fuk; kyuu;
+復旧	fuk;kyuu;
 高山	taka; yama;
 思い	omo; i,
 浄土	jou; do;
@@ -1802,14 +1802,14 @@ columns:
 人口	jin; kou;
 池上	ike; gami;
 傑作	keq; saku;
-傑作	kes; saku;
+傑作	kes;saku;
 動向	dou; kou;
 伝記	den; ki;
 度し難	do; shi, gata;
 大事	dai; ji;
 大事	oo; goto;
 出産	shuq; san;
-出産	shus; san;
+出産	shus;san;
 捕物	tori; mono;
 楽勝	raku; shou;
 有益	yuu; eki;
@@ -1833,7 +1833,7 @@ columns:
 岩崎	iwa; saki;
 擦れ	su; re,
 実家	jiq; ka;
-実家	jik; ka;
+実家	jik;ka;
 媚び	ko; bi,
 小宮	ko; miya;
 留守	ru; su;
@@ -1862,7 +1862,7 @@ columns:
 潜水	sen; sui;
 逃亡	tou; bou;
 失脚	shiq; kyaku;
-失脚	shik; kyaku;
+失脚	shik;kyaku;
 生理	sei; ri;
 星薬科	hoshi; yaku; ka;
 元年	gan; nen;
@@ -1882,14 +1882,14 @@ columns:
 少牌	shou; hai;
 預言	yo; gen;
 活性	kaq; sei;
-活性	kas; sei;
+活性	kas;sei;
 頭上	zu; jou;
 諮問	shi; mon;
 市長	shi; chou;
 牧師	boku; shi;
 空軍	kuu; gun;
 日暮里	niq; po; ri;
-日暮里	nip; po; ri;
+日暮里	nip;po; ri;
 居残	i; noko;
 管轄	kan; katsu;
 創作	sou; saku;
@@ -1904,7 +1904,7 @@ columns:
 文書	bun; sho;
 総裁	sou; sai;
 第一声	dai; iq; sei;
-第一声	dai; is; sei;
+第一声	dai; is;sei;
 乱立	ran; ritsu;
 腹部	fuku; bu;
 立ち	ta; chi,
@@ -1938,7 +1938,7 @@ columns:
 間柄	aida; gara;
 著者	cho; sha;
 一神教	iq; shin; kyou;
-一神教	is; shin; kyou;
+一神教	is;shin; kyou;
 日本女子	ni; hon; jo; shi;
 正教	sei; kyou;
 長島	naga; shima;
@@ -1976,7 +1976,7 @@ columns:
 並び	nara; bi,
 太政官	da; jou; kan;
 接頭	seq; tou;
-接頭	set; tou;
+接頭	set;tou;
 手すり	te; su, ri,
 通り	too; ri,
 通り	doo; ri,
@@ -2071,8 +2071,8 @@ columns:
 陰口	kage; guchi;
 駆け落ち	ka; ke, o; chi,
 抹茶	maq; cha;
-抹茶	mac; cha;
-抹茶	mat; tya;
+抹茶	mac;cha;
+抹茶	mat;tya;
 警官	kei; kan;
 見失	mi; ushina;
 塗り替え	nu; ri, ka; e,
@@ -2106,7 +2106,7 @@ columns:
 名称	mei; shou;
 無言	mu; gon;
 堀越	hori; koshi;
-出荷	shuk; ka;
+出荷	shuk;ka;
 出荷	shuq; ka;
 秋葉原	aki; ha; bara;
 優雅	yuu; ga;
@@ -2136,11 +2136,11 @@ columns:
 魔界	ma; kai;
 絶え	ta; e,
 性格	sei; kaku;
-立体	rit; tai;
+立体	rit;tai;
 立体	riq; tai;
 廊下	rou; ka;
 在校生	zai; kou; sei;
-新田	nit; ta;
+新田	nit;ta;
 新田	niq; ta;
 禁固	kin; ko;
 天気	ten; ki;
@@ -2205,7 +2205,7 @@ columns:
 委員会	i; in; kai;
 域内	iki; nai;
 窒素	chiq; so;
-窒素	chis; so;
+窒素	chis;so;
 途端	to; tan;
 方向	hou; kou;
 取り囲	to; ri, kako;
@@ -2232,7 +2232,7 @@ columns:
 旧制	kyuu; sei;
 水平	sui; hei;
 解凍	kai; tou;
-一気に	ik; kin; i,
+一気に	ik;kin; i,
 一気に	iq; kin; i,
 産出	san; shutsu;
 民謡	min; you;
@@ -2261,7 +2261,7 @@ columns:
 毎年	mai; toshi;
 回収	kai; shuu;
 押し込め	o; shi, ko; me,
-摂取	ses; shu;
+摂取	ses;shu;
 摂取	seq; shu;
 芙蓉	fu; you;
 ほろ苦	ho, ro, niga;
@@ -2271,7 +2271,7 @@ columns:
 庭先	niwa; saki;
 杉村	sugi; mura;
 哀し	kana; shi,
-勝手	kat; te;
+勝手	kat;te;
 勝手	kaq; te;
 越し	go; shi,
 何かと	nani; ka, to,
@@ -2305,7 +2305,7 @@ columns:
 担当	tan; tou;
 会合	kai; gou;
 予知	yo; chi;
-結婚式	kek; kon; shiki;
+結婚式	kek;kon; shiki;
 結婚式	keq; kon; shiki;
 日曜日	nichi; you; bi;
 黒沢	kuro; sawa;
@@ -2316,7 +2316,7 @@ columns:
 語族	go; zoku;
 相まって	ai; ma, tte,
 相まって	ai; ma, q, te,
-自分勝手	ji; bun; gat; te;
+自分勝手	ji; bun; gat;te;
 自分勝手	ji; bun; gaq; te;
 猛々し	take; dake; shi,
 気動車	ki; dou; sha;
@@ -2347,8 +2347,8 @@ columns:
 満載	man; sai;
 電荷	den; ka;
 句読点	ku; tou; ten;
-発注	hac; chuu;
-発注	hat; tyuu;
+発注	hac;chuu;
+発注	hat;tyuu;
 発注	haq; chuu;
 架空	ka; kuu;
 奥様	oku; sama;
@@ -2376,7 +2376,7 @@ columns:
 電磁波	den; ji; ha;
 引き締ま	hi; ki, shi; ma,
 倦怠期	ken; tai; ki;
-出資	shus; shi;
+出資	shus;shi;
 出資	shuq; shi;
 未満	mi; man;
 構文	kou; bun;
@@ -2389,7 +2389,7 @@ columns:
 危な	abu; na,
 叔母	o; ba;
 宮本	miya; moto;
-発送	has; sou;
+発送	has;sou;
 発送	haq; sou;
 持ち上が	mo; chi, a; ga,
 鬼畜	ki; chiku;
@@ -2408,7 +2408,7 @@ columns:
 威張	i; ba;
 趣味	shu; mi;
 一向聴	i-; shan; ten;
-絶叫	zek; kyou;
+絶叫	zek;kyou;
 絶叫	zeq; kyou;
 連想	ren; sou;
 中川	naka; gawa;
@@ -2418,7 +2418,7 @@ columns:
 提訴	tei; so;
 無敵	mu; teki;
 東京慈恵会医科	tou; kyou; ji; kei; kai; i; ka;
-撤退	tet; tai;
+撤退	tet;tai;
 撤退	teq; tai;
 閲覧	etsu; ran;
 塚原	tsuka; hara;
@@ -2482,7 +2482,7 @@ columns:
 固ま	kata; ma,
 搬送	han; sou;
 出会え	de; a; e,
-年月日	nen; gap; pi;
+年月日	nen; gap;pi;
 年月日	nen; gaq; pi;
 演劇	en; geki;
 火照	ho; te;
@@ -2492,18 +2492,18 @@ columns:
 治療	chi; ryou;
 皆さん	mina; sa, n,
 青銅	sei; dou;
-実行	jik; kou;
+実行	jik;kou;
 実行	jiq; kou;
 灰皿	hai; zara;
 東西	tou; zai;
 昨夜	saku; ya;
-一蹴	is; shuu;
+一蹴	is;shuu;
 一蹴	iq; shuu;
 無く	na; ku,
 田畑	ta; bata;
 炭素	tan; so;
 日本人	ni; hon; jin;
-日本人	nip; pon; jin;
+日本人	nip;pon; jin;
 日本人	niq; pon; jin;
 貨幣	ka; hei;
 平安	hei; an;
@@ -2526,7 +2526,7 @@ columns:
 毎週	mai; shuu;
 下部	ka; bu;
 蒸発	jou; hatsu;
-物色	bus; shoku;
+物色	bus;shoku;
 物色	buq; shoku;
 沿岸	en; gan;
 磯崎	iso; zaki;
@@ -2567,17 +2567,17 @@ columns:
 亡くな	na; ku, na,
 人的	jin; teki;
 浅田	asa; da;
-決闘	ket; tou;
+決闘	ket;tou;
 決闘	keq; tou;
 甘んじ	ama; n, ji,
 特技	toku; gi;
 税制	zei; sei;
-接触	ses; shoku;
+接触	ses;shoku;
 接触	seq; shoku;
 官職	kan; shoku;
 睡魔	sui; ma;
 抗争	kou; sou;
-必至	his; shi;
+必至	his;shi;
 必至	hiq; shi;
 義理	gi; ri;
 素人	shirou; to;
@@ -2602,12 +2602,12 @@ columns:
 抽選	chuu; sen;
 瀬田	se; ta;
 薔薇	ba; ra;
-発足	hos; soku;
+発足	hos;soku;
 発足	hoq; soku;
 内海	utsu; mi;
 実務	jitsu; mu;
 年寄り	toshi; yo; ri,
-脱走	das; sou;
+脱走	das;sou;
 脱走	daq; sou;
 原宿	hara; juku;
 課金	ka; kin;
@@ -2642,7 +2642,7 @@ columns:
 水島	mizu; shima;
 口うるさ	kuchi; u, ru, sa,
 飢饉	ki; kin;
-厄介	yak; kai;
+厄介	yak;kai;
 厄介	yaq; kai;
 手いっぱい	te; i, ppa, i,
 手いっぱい	te; i, q, pa, i,
@@ -2703,7 +2703,7 @@ columns:
 北斗	hoku; to;
 律令	ritsu; ryou;
 久保田	ku; bo; ta;
-復興	fuk; kou;
+復興	fuk;kou;
 復興	fuq; kou;
 水晶	sui; shou;
 新選	shin; sen;
@@ -2760,7 +2760,7 @@ columns:
 悔し	kuya; shi,
 同情	dou; jou;
 後尾	kou; bi;
-一括	ik; katsu;
+一括	ik;katsu;
 一括	iq; katsu;
 育て	soda; te,
 菱形	hishi; gata;
@@ -2781,7 +2781,7 @@ columns:
 凝縮	gyou; shuku;
 許可	kyo; ka;
 紳士	shin; shi;
-小切手	ko; git; te;
+小切手	ko; git;te;
 小切手	ko; giq; te;
 先駆け	saki; ga; ke,
 長々	naga; naga;
@@ -2796,7 +2796,7 @@ columns:
 恩賜	on; shi;
 放り出	hou; ri, da;
 稲蔭	ina; kage;
-一刻	ik; koku;
+一刻	ik;koku;
 一刻	iq; koku;
 監査	kan; sa;
 大気圏	tai; ki; ken;
@@ -2832,7 +2832,7 @@ columns:
 浮かべ	u; ka, be,
 森川	mori; kawa;
 中枢	chuu; suu;
-一旦	it; tan;
+一旦	it;tan;
 一旦	iq; tan;
 投票	tou; hyou;
 溜息	tame; iki;
@@ -2844,13 +2844,13 @@ columns:
 今日	kyo; u;
 清め	kiyo; me,
 志村	shi; mura;
-一体	it; tai;
+一体	it;tai;
 一体	iq; tai;
-設計	sek; kei;
+設計	sek;kei;
 設計	seq; kei;
 破産	ha; san;
 外来	gai; rai;
-続行	zok; kou;
+続行	zok;kou;
 続行	zoq; kou;
 年鑑	nen; kan;
 手がけ	te; ga, ke,
@@ -2890,7 +2890,7 @@ columns:
 購読	kou; doku;
 手続	te; tsuduki;
 限定	gen; tei;
-抜擢	bat; teki;
+抜擢	bat;teki;
 抜擢	baq; teki;
 逆転	gyaku; ten;
 この間	ko, no, kan;
@@ -2931,14 +2931,14 @@ columns:
 透明	tou; mei;
 生え	ha; e,
 石崎	ishi; zaki;
-勃発	bop; patsu;
+勃発	bop;patsu;
 勃発	boq; patsu;
 柔軟	juu; nan;
 破壊	ha; kai;
-直径	chok; kei;
+直径	chok;kei;
 直径	choq; kei;
 回り道	mawa; ri, michi;
-西日暮里	nishi; nip; po; ri;
+西日暮里	nishi; nip;po; ri;
 西日暮里	nishi; niq; po; ri;
 思惑	omo; waku;
 石塚	ishi; zuka;
@@ -2959,7 +2959,7 @@ columns:
 科学	ka; gaku;
 対子	toi; tsu;
 探査	tan; sa;
-湿布	ship; pu;
+湿布	ship;pu;
 湿布	shiq; pu;
 襟元	eri; moto;
 鶏肉	kei; niku;
@@ -3001,7 +3001,7 @@ columns:
 差異	sa; i;
 拠点	kyo; ten;
 思い立	omo; i, ta;
-突拍子	top; pyou; shi;
+突拍子	top;pyou; shi;
 突拍子	toq; pyou; shi;
 嬉し	ure; shi,
 裏道	ura; michi;
@@ -3009,7 +3009,7 @@ columns:
 安価	an; ka;
 順位	jun; i;
 朝飯	asa; meshi;
-実効	jik; kou;
+実効	jik;kou;
 実効	jiq; kou;
 呼び止め	yo; bi, to; me,
 斬新	zan; shin;
@@ -3018,7 +3018,7 @@ columns:
 先生	sen; sei;
 向かい側	mu; ka, i, gawa;
 寄り掛か	yo; ri, ka; ka,
-学級	gak; kyuu;
+学級	gak;kyuu;
 学級	gaq; kyuu;
 本拠地	hon; kyo; chi;
 超え	ko; e,
@@ -3097,7 +3097,7 @@ columns:
 就役	shuu; eki;
 喜多	ki; ta;
 遷移	sen; i;
-早速	sas; soku;
+早速	sas;soku;
 早速	saq; soku;
 了解	ryou; kai;
 追いや	o; i, ya,
@@ -3119,7 +3119,7 @@ columns:
 川田	kawa; ta;
 西山	nishi; yama;
 行き来	i; ki, ki;
-実際	jis; sai;
+実際	jis;sai;
 実際	jiq; sai;
 超新星	chou; shin; sei;
 万が一	man; ga, ichi;
@@ -3161,7 +3161,7 @@ columns:
 形質	kei; shitsu;
 通行	tsuu; kou;
 嶺上開花	rin; shan; kai; hou;
-圧縮	as; shuku;
+圧縮	as;shuku;
 圧縮	aq; shuku;
 体重	tai; juu;
 覚ま	sa; ma,
@@ -3197,7 +3197,7 @@ columns:
 笹原	sasa; hara;
 重苦し	omo; kuru; shi,
 畳みかけ	tata; mi, ka, ke,
-喫茶店	kis; sa; ten;
+喫茶店	kis;sa; ten;
 喫茶店	kiq; sa; ten;
 文明	bun; mei;
 真北	ma; kita;
@@ -3236,7 +3236,7 @@ columns:
 本体	hon; tai;
 選集	sen; shuu;
 高速度	kou; soku; do;
-出生	shus; shou;
+出生	shus;shou;
 出生	shuq; shou;
 御飯	go; han;
 砲撃	hou; geki;
@@ -3263,11 +3263,11 @@ columns:
 呼べ	yo; be,
 商業的	shou; gyou; teki;
 寂し	sabi; shi,
-一直線	ic; choku; sen;
-一直線	it; tyoku; sen;
+一直線	ic;choku; sen;
+一直線	it;tyoku; sen;
 一直線	iq; choku; sen;
 石島	ishi; jima;
-立法	rip; pou;
+立法	rip;pou;
 立法	riq; pou;
 降水	kou; sui;
 苦笑	ku; shou;
@@ -3318,7 +3318,7 @@ columns:
 殖え	fu; e,
 東京外国語	tou; kyou; gai; koku; go;
 夜景	ya; kei;
-一斉	is; sei;
+一斉	is;sei;
 一斉	iq; sei;
 割り込	wa; ri, ko;
 機会	ki; kai;
@@ -3343,7 +3343,7 @@ columns:
 永らく	naga; ra, ku,
 高ま	taka; ma,
 一時	ichi; ji;
-一時	it; toki;
+一時	it;toki;
 一時	iq; toki;
 人力	jin; riki;
 礼拝	rei; hai;
@@ -3367,7 +3367,7 @@ columns:
 積分	seki; bun;
 言の葉	koto; no, ha;
 参考文献	san; kou; bun; ken;
-出展	shut; ten;
+出展	shut;ten;
 出展	shuq; ten;
 子供	ko; domo;
 嫌がらせ	iya; ga, ra, se,
@@ -3416,7 +3416,7 @@ columns:
 隠れ	kaku; re,
 駐留	chuu; ryuu;
 業者	gyou; sha;
-切羽詰ま	sep; pa; tsu; ma,
+切羽詰ま	sep;pa; tsu; ma,
 切羽詰ま	seq; pa; tsu; ma,
 運命	un; mei;
 麻薬	ma; yaku;
@@ -3436,7 +3436,7 @@ columns:
 産総研	san; sou; ken;
 軍曹	gun; sou;
 元凶	gen; kyou;
-国境	kok; kyou;
+国境	kok;kyou;
 国境	koq; kyou;
 野原	no; hara;
 行き場	i; ki, ba;
@@ -3444,15 +3444,15 @@ columns:
 因果	in; ga;
 用事	you; ji;
 紹介	shou; kai;
-設置	sec; chi;
-設置	set; ti;
+設置	sec;chi;
+設置	set;ti;
 設置	seq; chi;
 読本	yomi; hon;
 即時	soku; ji;
 識別子	shiki; betsu; shi;
 成功	sei; kou;
 連射	ren; sha;
-合宿	gas; shuku;
+合宿	gas;shuku;
 合宿	gaq; shuku;
 常務	jou; mu;
 余計	yo; kei;
@@ -3535,7 +3535,7 @@ columns:
 意外と	i; gai; to,
 森谷	mori; ya;
 睨み	nira; mi,
-嫉妬	shit; to;
+嫉妬	shit;to;
 嫉妬	shiq; to;
 同意	dou; i;
 急速	kyuu; soku;
@@ -3618,12 +3618,12 @@ columns:
 豪族	gou; zoku;
 背面	hai; men;
 上級	jou; kyuu;
-復刊	fuk; kan;
+復刊	fuk;kan;
 復刊	fuq; kan;
 技術	gi; jutsu;
 移住	i; juu;
 計算機	kei; san; ki;
-発光	hak; kou;
+発光	hak;kou;
 発光	haq; kou;
 前のめり	mae; no, me, ri,
 要は	you; ha,
@@ -3634,7 +3634,7 @@ columns:
 平田	hira; ta;
 連盟	ren; mei;
 上位	jou; i;
-発効	hak; kou;
+発効	hak;kou;
 発効	haq; kou;
 更に	sara; ni,
 価値	ka; chi;
@@ -3651,14 +3651,14 @@ columns:
 作中	saku; chuu;
 売却	bai; kyaku;
 真似	ma; ne;
-立地	ric; chi;
-立地	rit; ti;
+立地	ric;chi;
+立地	rit;ti;
 立地	riq; chi;
 明槓	min; kan;
 不吉	fu; kitsu;
 劇場	geki; jou;
 鳴りだ	na; ri, da,
-熱気	nek; ki;
+熱気	nek;ki;
 熱気	neq; ki;
 ハレー彗星	ha. re. - sui; sei;
 煙草	ta; bako;
@@ -3667,7 +3667,7 @@ columns:
 重た	omo; ta,
 隠せ	kaku; se,
 神社	jin; ja;
-直角	chok; kaku;
+直角	chok;kaku;
 直角	choq; kaku;
 合わせ	a; wa, se,
 動態	dou; tai;
@@ -3739,7 +3739,7 @@ columns:
 略語	ryaku; go;
 掠れ	kasu; re,
 体積	tai; seki;
-実写	jis; sha;
+実写	jis;sha;
 実写	jiq; sha;
 早め	haya; me,
 観賞	kan; shou;
@@ -3748,7 +3748,7 @@ columns:
 日向	hi; nata;
 湯飲み	yu; no; mi,
 足場	ashi; ba;
-真平	map; pira;
+真平	map;pira;
 真平	maq; pira;
 諜報	chou; hou;
 引き連れ	hi; ki, tsu; re,
@@ -3757,7 +3757,7 @@ columns:
 楕円	da; en;
 お久しぶり	o, hisa; shi, bu, ri,
 対する	tai; su, ru,
-物価	buk; ka;
+物価	buk;ka;
 物価	buq; ka;
 空白	kuu; haku;
 独創	doku; sou;
@@ -3773,7 +3773,7 @@ columns:
 道具	dou; gu;
 印象深	in; shou; buka;
 心拍	shin; paku;
-滑稽	kok; kei;
+滑稽	kok;kei;
 滑稽	koq; kei;
 平年	hei; nen;
 焼け	ya; ke,
@@ -3813,7 +3813,7 @@ columns:
 不十分	fu; juu; bun;
 売り買い	u; ri, ka; i,
 次々	tsugi; tsugi;
-決済	kes; sai;
+決済	kes;sai;
 決済	keq; sai;
 飼育	shi; iku;
 名目	mei; moku;
@@ -3823,7 +3823,7 @@ columns:
 脱税	datsu; zei;
 宮下	miya; shita;
 愛蔵	ai; zou;
-漆喰	shik; kui;
+漆喰	shik;kui;
 漆喰	shiq; kui;
 行き交	i; ki, ka;
 花束	hana; taba;
@@ -3860,7 +3860,7 @@ columns:
 美男	bi; nan;
 引っかか	hi; kka, ka,
 引っかか	hi; q, ka, ka,
-説得	set; toku;
+説得	set;toku;
 説得	seq; toku;
 作画	saku; ga;
 男らし	otoko; ra, shi,
@@ -4000,7 +4000,7 @@ columns:
 島田	shima; da;
 人種	jin; shu;
 無性に	mu; shou; ni,
-出典	shut; ten;
+出典	shut;ten;
 出典	shuq; ten;
 振りかざ	fu; ri, ka, za,
 日日	hi; nichi;
@@ -4011,7 +4011,7 @@ columns:
 係数	kei; suu;
 個室	ko; shitsu;
 花粉症	ka; fun; shou;
-躍起	yak; ki;
+躍起	yak;ki;
 躍起	yaq; ki;
 看護婦	kan; go; fu;
 音韻	on; in;
@@ -4109,7 +4109,7 @@ columns:
 農民	nou; min;
 お過ごし	o, su; go, shi,
 原語	gen; go;
-一向	ik; kou;
+一向	ik;kou;
 一向	iq; kou;
 原作	gen; saku;
 藤井	fuji; i;
@@ -4121,7 +4121,7 @@ columns:
 連な	tsura; na,
 暮らせ	ku; ra, se,
 浪漫	rou; man;
-執権	shik; ken;
+執権	shik;ken;
 執権	shiq; ken;
 追記	tsui; ki;
 春休み	haru; yasu; mi,
@@ -4153,7 +4153,7 @@ columns:
 液体	eki; tai;
 足元	ashi; moto;
 今晩	kon; ban;
-結社	kes; sha;
+結社	kes;sha;
 結社	keq; sha;
 歩調	ho; chou;
 考察	kou; satsu;
@@ -4172,13 +4172,13 @@ columns:
 採取	sai; shu;
 直後	choku; go;
 状況	jou; kyou;
-仏陀	bud; da;
+仏陀	bud;da;
 仏陀	buq; da;
 手渡	te; wata;
 走査	sou; sa;
 管弦楽	kan; gen; gaku;
 お好み焼き	o, kono; mi, ya; ki,
-工学科	kou; gak; ka;
+工学科	kou; gak;ka;
 工学科	kou; gaq; ka;
 辰巳	tatsu; mi;
 用務員	you; mu; in;
@@ -4198,11 +4198,11 @@ columns:
 憤慨	fun; gai;
 可視	ka; shi;
 小学	shou; gaku;
-出版	shup; pan;
+出版	shup;pan;
 出版	shuq; pan;
 知識	chi; shiki;
 傷つけ	kizu; tsu, ke,
-圧倒	at; tou;
+圧倒	at;tou;
 圧倒	aq; tou;
 吹き抜け	fu; ki, nu; ke,
 遠ざけ	too; za, ke,
@@ -4219,7 +4219,7 @@ columns:
 罪人	tsumi; bito;
 時差	ji; sa;
 配達	hai; tatsu;
-一派	ip; pa;
+一派	ip;pa;
 一派	iq; pa;
 乗り	no; ri,
 得意	toku; i;
@@ -4294,7 +4294,7 @@ columns:
 高鳴	taka; na;
 西本	nishi; moto;
 壊滅	kai; metsu;
-一線	is; sen;
+一線	is;sen;
 一線	iq; sen;
 大阪	oo; saka;
 小俣	o; mata;
@@ -4320,7 +4320,7 @@ columns:
 改修	kai; shuu;
 降下	kou; ka;
 片方	kata; hou;
-発信	has; shin;
+発信	has;shin;
 発信	haq; shin;
 駅名	eki; mei;
 撥ね	ha; ne,
@@ -4345,7 +4345,7 @@ columns:
 不詳	fu; shou;
 要約	you; yaku;
 気付	ki; du;
-以ての外	mot; te, no, hoka;
+以ての外	mot;te, no, hoka;
 以ての外	moq; te, no, hoka;
 眠らせ	nemu; ra, se,
 建造	ken; zou;
@@ -4392,7 +4392,7 @@ columns:
 見にく	mi; ni, ku,
 凡そ	oyo; so,
 銀色	gin; iro;
-#ＦＡＸ	fak; ku; su;
+#ＦＡＸ	fak;ku; su;
 #ＦＡＸ	faq; ku; su;
 最小値	sai; shou; chi;
 降参	kou; san;
@@ -4440,7 +4440,7 @@ columns:
 様子	you; su;
 封鎖	fuu; sa;
 指さ	yubi; sa,
-作家	sak; ka;
+作家	sak;ka;
 作家	saq; ka;
 聞き捨て	ki; ki, zu; te,
 寝そべ	ne; so, be,
@@ -4455,7 +4455,7 @@ columns:
 深夜	shin; ya;
 花井	hana; i;
 条項	jou; kou;
-立候補	rik; kou; ho;
+立候補	rik;kou; ho;
 立候補	riq; kou; ho;
 東京工業	tou; kyou; kou; gyou;
 嫌々	iya; iya;
@@ -4474,7 +4474,7 @@ columns:
 松山	matsu; yama;
 路地	ro; ji;
 蒸気	jou; ki;
-立春	ris; shun;
+立春	ris;shun;
 立春	riq; shun;
 怪鳥	kai; chou;
 従姉妹	i; to; ko;
@@ -4483,7 +4483,7 @@ columns:
 汎用	han; you;
 極道	goku; dou;
 錬金術	ren; kin; jutsu;
-屈指	kus; shi;
+屈指	kus;shi;
 屈指	kuq; shi;
 一息	hito; iki;
 勝率	shou; ritsu;
@@ -4495,9 +4495,9 @@ columns:
 煮干し	ni; bo; shi,
 硫黄	i; ou;
 三暗刻	san; an; ko;
-絶版	zep; pan;
+絶版	zep;pan;
 絶版	zeq; pan;
-決定的	ket; tei; teki;
+決定的	ket;tei; teki;
 決定的	keq; tei; teki;
 請求書	sei; kyuu; sho;
 飛沫	hi; matsu;
@@ -4514,13 +4514,13 @@ columns:
 握手	aku; shu;
 憎たらし	niku; ta, ra, shi,
 小気味よ	ko; ki; mi; yo,
-一等賞	it; tou; shou;
+一等賞	it;tou; shou;
 一等賞	iq; tou; shou;
 記法	ki; hou;
 略号	ryaku; gou;
 湿っぽ	shime; ppo,
 湿っぽ	shime; q, po,
-脱線	das; sen;
+脱線	das;sen;
 脱線	daq; sen;
 衰退	sui; tai;
 秋元	aki; moto;
@@ -4536,7 +4536,7 @@ columns:
 海兵	kai; hei;
 大里	oo; sato;
 促進	soku; shin;
-浜田	hamad; a;
+浜田	hamad;a;
 立て続け	ta; te, tsudu; ke,
 ほほ笑	ho, ho, e;
 器用	ki; you;
@@ -4557,7 +4557,7 @@ columns:
 憂鬱	yuu; utsu;
 所望	sho; mou;
 人和	ren; ho-;
-作曲	sak; kyoku;
+作曲	sak;kyoku;
 作曲	saq; kyoku;
 動作	dou; sa;
 大切	tai; setsu;
@@ -4565,10 +4565,10 @@ columns:
 患者	kan; ja;
 委員	i; in;
 三宅	mi; yake;
-窃盗	set; tou;
+窃盗	set;tou;
 窃盗	seq; tou;
 笑い声	wara; i, goe;
-一変	ip; pen;
+一変	ip;pen;
 一変	iq; pen;
 真西	ma; nishi;
 鼻孔	bi; kou;
@@ -4638,7 +4638,7 @@ columns:
 迂闊	u; katsu;
 得がた	e; ga, ta,
 粉末	fun; matsu;
-密教	mik; kyou;
+密教	mik;kyou;
 密教	miq; kyou;
 入口	iri; guchi;
 生牌	shon; pai;
@@ -4677,8 +4677,8 @@ columns:
 交差点	kou; sa; ten;
 間違	ma; chiga;
 国語	koku; go;
-密着	mic; chaku;
-密着	mit; tyaku;
+密着	mic;chaku;
+密着	mit;tyaku;
 密着	miq; chaku;
 歌手	ka; shu;
 前方後円墳	zen; pou; kou; en; fun;
@@ -4709,7 +4709,7 @@ columns:
 観点	kan; ten;
 展示	ten; ji;
 読者	doku; sha;
-合戦	kas; sen;
+合戦	kas;sen;
 合戦	kaq; sen;
 美人	bi; jin;
 交換	kou; kan;
@@ -4769,7 +4769,7 @@ columns:
 統計	tou; kei;
 小突	ko; du;
 協議	kyou; gi;
-百貨店	hyak; ka; ten;
+百貨店	hyak;ka; ten;
 百貨店	hyaq; ka; ten;
 牽制	ken; sei;
 水曜	sui; you;
@@ -4848,7 +4848,7 @@ columns:
 辞書	ji; sho;
 お誘い	o, saso; i,
 子役	ko; yaku;
-一端	ip; pashi;
+一端	ip;pashi;
 一端	iq; pashi;
 番号	ban; gou;
 全権	zen; ken;
@@ -4900,7 +4900,7 @@ columns:
 突き刺	tsu; ki, sa;
 客席	kyaku; seki;
 駆け足	ka; ke, ashi;
-殺気	sak; ki;
+殺気	sak;ki;
 殺気	saq; ki;
 余裕	yo; yuu;
 大文字	dai; mon; ji;
@@ -4914,8 +4914,8 @@ columns:
 微か	kasu; ka,
 込め	ko; me,
 源流	gen; ryuu;
-出張	shuc; chou;
-出張	shut; tyou;
+出張	shuc;chou;
+出張	shut;tyou;
 出張	shuq; chou;
 出迎え	de; muka; e,
 教員	kyou; in;
@@ -4970,7 +4970,7 @@ columns:
 入社	nyuu; sha;
 独自	doku; ji;
 細長	hoso; naga;
-四角形	shi; kak; kei;
+四角形	shi; kak;kei;
 四角形	shi; kaq; kei;
 四角形	shi; kaku; kei;
 出かけ	de; ka, ke,
@@ -4995,10 +4995,10 @@ columns:
 転勤	ten; kin;
 勝て	ka; te,
 送受信	sou; ju; shin;
-一式	is; shiki;
+一式	is;shiki;
 一式	iq; shiki;
 古臭	furu; kusa;
-復帰	fuk; ki;
+復帰	fuk;ki;
 復帰	fuq; ki;
 横浜国立	yoko; hama; koku; ritsu;
 巡洋艦	jun; you; kan;
@@ -5025,7 +5025,7 @@ columns:
 奇しくも	ku; shi, ku, mo,
 お決まり	o, ki; ma, ri,
 見栄	mi; e;
-精一杯	sei; ip; pai;
+精一杯	sei; ip;pai;
 精一杯	sei; iq; pai;
 鶴岡	tsuru; oka;
 天王星	ten; ou; sei;
@@ -5092,7 +5092,7 @@ columns:
 休刊	kyuu; kan;
 共通	kyou; tsuu;
 先行	sen; kou;
-楽曲	gak; kyoku;
+楽曲	gak;kyoku;
 楽曲	gaq; kyoku;
 官僚	kan; ryou;
 委任	in; in;
@@ -5117,7 +5117,7 @@ columns:
 悶絶	mon; zetsu;
 苛め	iji; me,
 無料	mu; ryou;
-発車	has; sha;
+発車	has;sha;
 発車	haq; sha;
 生地	ki; ji;
 千尋	chi; hiro;
@@ -5140,8 +5140,8 @@ columns:
 確率	kaku; ritsu;
 恐れ	oso; re,
 並み	na; mi,
-三つ	mit; tsu;
-三つ	miq; tsu;
+#三つ	mit;tsu,
+#三つ	miq; tsu,
 障壁	shou; heki;
 長男	chou; nan;
 有難	ari; gata;
@@ -5154,7 +5154,7 @@ columns:
 天保	ten; pou;
 大坪	oo; tsubo;
 高須	taka; su;
-月光	gek; kou;
+月光	gek;kou;
 月光	geq; kou;
 究め	kiwa; me,
 別物	betsu; mono;
@@ -5168,13 +5168,13 @@ columns:
 表明	hyou; mei;
 調教	chou; kyou;
 山麓	san; roku;
-立国	rik; koku;
+立国	rik;koku;
 立国	riq; koku;
-月食	ges; shoku;
+月食	ges;shoku;
 月食	geq; shoku;
 融資	yuu; shi;
 一人称	ichi; nin; shou;
-欲求	yok; kyuu;
+欲求	yok;kyuu;
 欲求	yoq; kyuu;
 改正	kai; sei;
 敗北	hai; boku;
@@ -5201,13 +5201,13 @@ columns:
 暗号	an; gou;
 通販	tsuu; han;
 雑巾	zou; kin;
-骨折	kos; setsu;
+骨折	kos;setsu;
 骨折	koq; setsu;
 予感	yo; kan;
-若干	jak; kan;
+若干	jak;kan;
 若干	jaq; kan;
 念入り	nen; i; ri,
-日数	nis; suu;
+日数	nis;suu;
 日数	niq; suu;
 新聞	shin; bun;
 親善	shin; zen;
@@ -5287,7 +5287,7 @@ columns:
 入城	nyuu; jou;
 航海	kou; kai;
 死者	shi; sha;
-一気通貫	ik; ki; tsuu; kan;
+一気通貫	ik;ki; tsuu; kan;
 一気通貫	iq; ki; tsuu; kan;
 盗塁	tou; rui;
 日本	ni; hon;
@@ -5336,10 +5336,10 @@ columns:
 逐条	chiku; jou;
 叔父	o; ji;
 正直	shou; jiki;
-決壊	kek; kai;
+決壊	kek;kai;
 決壊	keq; kai;
 心筋梗塞	shin; kin; kou; soku;
-無鉄砲	mu; tep; pou;
+無鉄砲	mu; tep;pou;
 無鉄砲	mu; teq; pou;
 配信	hai; shin;
 花瓶	ka; bin;
@@ -5359,7 +5359,7 @@ columns:
 凍結	tou; ketsu;
 平山	hira; yama;
 乗換	nori; kae;
-出血	shuk; ketsu;
+出血	shuk;ketsu;
 出血	shuq; ketsu;
 花火	hana; bi;
 建設的	ken; setsu; teki;
@@ -5385,7 +5385,7 @@ columns:
 円満	en; man;
 先手	sen; te;
 共生	kyou; sei;
-脱出	das; shutsu;
+脱出	das;shutsu;
 脱出	daq; shutsu;
 新設	shin; setsu;
 営業	ei; gyou;
@@ -5413,7 +5413,7 @@ columns:
 証拠	shou; ko;
 編隊	hen; tai;
 内戦	nai; sen;
-石鹸	sek; ken;
+石鹸	sek;ken;
 石鹸	seq; ken;
 佐久間	sa; ku; ma;
 大川	oo; kawa;
@@ -5448,7 +5448,7 @@ columns:
 書き換え	ka; ki, ka; e,
 手順	te; jun;
 嫁入り	yome; i; ri,
-側近	sok; kin;
+側近	sok;kin;
 側近	soq; kin;
 作成	saku; sei;
 引き込	hi; ki, ko;
@@ -5458,7 +5458,7 @@ columns:
 特命	toku; mei;
 玉木	tama; ki;
 生育	sei; iku;
-直感	chok; kan;
+直感	chok;kan;
 直感	choq; kan;
 変わ	ka; wa,
 気心	ki; gokoro;
@@ -5469,14 +5469,14 @@ columns:
 手近	te; dika;
 連休	ren; kyuu;
 米国	bei; koku;
-刷新	sas; shin;
+刷新	sas;shin;
 刷新	saq; shin;
 萌え	mo; e,
 叩き込	tata; ki, ko;
 松崎	matsu; zaki;
 堪え	kota; e,
 査読	sa; doku;
-列挙	rek; kyo;
+列挙	rek;kyo;
 列挙	req; kyo;
 跡取り	ato; to; ri,
 中盤	chuu; ban;
@@ -5485,12 +5485,12 @@ columns:
 契機	kei; ki;
 久し振り	hisa; shi, bu; ri,
 頭脳	zu; nou;
-別途	bet; to;
+別途	bet;to;
 別途	beq; to;
 形成	kei; sei;
 弱点	jaku; ten;
 大崎	oo; saki;
-一回	ik; kai;
+一回	ik;kai;
 一回	iq; kai;
 課長	ka; chou;
 国政	koku; sei;
@@ -5509,7 +5509,7 @@ columns:
 県道	ken; dou;
 音声	on; sei;
 弾劾	dan; gai;
-発表	hap; pyou;
+発表	hap;pyou;
 発表	haq; pyou;
 低め	hiku; me,
 過程	ka; tei;
@@ -5552,12 +5552,12 @@ columns:
 赤面	seki; men;
 資料	shi; ryou;
 郡司	gun; ji;
-直行	chok; kou;
+直行	chok;kou;
 直行	choq; kou;
 局所	kyoku; sho;
 納期	nou; ki;
 後輩	kou; hai;
-月刊誌	gek; kan; shi;
+月刊誌	gek;kan; shi;
 月刊誌	geq; kan; shi;
 放置	hou; chi;
 仕組	shi; ku;
@@ -5568,7 +5568,7 @@ columns:
 絡みつ	kara; mi, tsu,
 日帰り	hi; gae; ri,
 退院	tai; in;
-決算	kes; san;
+決算	kes;san;
 決算	keq; san;
 基督教	ki; risuto; kyou;
 司法	shi; hou;
@@ -5582,7 +5582,7 @@ columns:
 多岐	ta; ki;
 生成	sei; sei;
 公職	kou; shoku;
-末期	mak; ki;
+末期	mak;ki;
 末期	maq; ki;
 厚み	atsu; mi,
 考え出	kanga; e, da;
@@ -5601,7 +5601,7 @@ columns:
 日焼け	hi; ya; ke,
 提唱	tei; shou;
 遅刻	chi; koku;
-実質	jis; shitsu;
+実質	jis;shitsu;
 実質	jiq; shitsu;
 桜井	sakura; i;
 幾何	ki; ka;
@@ -5629,7 +5629,7 @@ columns:
 変質	hen; shitsu;
 兄貴	ani; ki;
 起こ	o; ko,
-出発	shup; patsu;
+出発	shup;patsu;
 出発	shuq; patsu;
 覚醒	kaku; sei;
 手掛け	te; ga; ke,
@@ -5667,9 +5667,9 @@ columns:
 校則	kou; soku;
 農耕	nou; kou;
 農場	nou; jou;
-大雑把	oo; zap; pa;
+大雑把	oo; zap;pa;
 大雑把	oo; zaq; pa;
-決心	kes; shin;
+決心	kes;shin;
 決心	keq; shin;
 思い付	omo; i, tsu;
 当て	a; te,
@@ -5727,7 +5727,7 @@ columns:
 武蔵小杉	mu; sashi; ko; sugi;
 造営	zou; ei;
 小高	ko; daka;
-設定	set; tei;
+設定	set;tei;
 設定	seq; tei;
 従来	juu; rai;
 演奏	en; sou;
@@ -5784,7 +5784,7 @@ columns:
 使用人	shi; you; nin;
 押しつぶ	o; shi, tsu, bu,
 忙しな	sewa; shi, na,
-一説	is; setsu;
+一説	is;setsu;
 一説	iq; setsu;
 下位	ka; i;
 論じ	ron; ji,
@@ -5867,7 +5867,7 @@ columns:
 辞令	ji; rei;
 知らせ	shi; ra, se,
 光らせ	hika; ra, se,
-執行猶予	shik; kou; yuu; yo;
+執行猶予	shik;kou; yuu; yo;
 執行猶予	shiq; kou; yuu; yo;
 要綱	you; kou;
 国士無双	koku; shi; mu; sou;
@@ -5887,7 +5887,7 @@ columns:
 丸めこ	maru; me, ko,
 宮田	miya; ta;
 片目	kata; me;
-結界	kek; kai;
+結界	kek;kai;
 結界	keq; kai;
 石渡	ishi; wata;
 東口	higashi; guchi;
@@ -5919,7 +5919,7 @@ columns:
 正方形	sei; hou; kei;
 徐々に	jo; jo; ni,
 生意気	nama; i; ki;
-日刊	nik; kan;
+日刊	nik;kan;
 日刊	niq; kan;
 面白	omo; shiro;
 議事録	gi; ji; roku;
@@ -5940,7 +5940,7 @@ columns:
 当方	tou; hou;
 長谷	ha; se;
 全体	zen; tai;
-列強	rek; kyou;
+列強	rek;kyou;
 列強	req; kyou;
 矛盾	mu; jun;
 前年度	zen; nen; do;
@@ -5950,7 +5950,7 @@ columns:
 防備	bou; bi;
 再起動	sai; ki; dou;
 金子	kane; ko;
-弦楽器	gen; gak; ki;
+弦楽器	gen; gak;ki;
 弦楽器	gen; gaq; ki;
 川野	kawa; no;
 苦し	kuru; shi,
@@ -5958,7 +5958,7 @@ columns:
 多数	ta; suu;
 飛行船	hi; kou; sen;
 艦隊	kan; tai;
-徹底	tet; tei;
+徹底	tet;tei;
 徹底	teq; tei;
 排気	hai; ki;
 日下	kusa; ka;
@@ -5994,7 +5994,7 @@ columns:
 魔術	ma; jutsu;
 終点	shuu; ten;
 折れ	o; re,
-跳ね上が	ha; ne, ag; a,
+跳ね上が	ha; ne, ag;a,
 上方	kami; gata;
 大関	oo; zeki;
 眼中	gan; chuu;
@@ -6013,7 +6013,7 @@ columns:
 同居	dou; kyo;
 降ろ	o; ro,
 間際	ma; giwa;
-殺到	sat; tou;
+殺到	sat;tou;
 殺到	saq; tou;
 相田	ai; da;
 履歴	ri; reki;
@@ -6067,7 +6067,7 @@ columns:
 時雨	shi; gure;
 策定	saku; tei;
 審査	shin; sa;
-沸騰	fut; tou;
+沸騰	fut;tou;
 沸騰	fuq; tou;
 援助	en; jo;
 漫才	man; zai;
@@ -6120,7 +6120,7 @@ columns:
 書家	sho; ka;
 将来	shou; rai;
 能力	nou; ryoku;
-失踪	shis; sou;
+失踪	shis;sou;
 失踪	shiq; sou;
 伏し目	fu; shi, me;
 原画	gen; ga;
@@ -6136,10 +6136,10 @@ columns:
 花粉	ka; fun;
 麻雀	ma-; jan;
 饒舌	jou; zetsu;
-撤回	tek; kai;
+撤回	tek;kai;
 撤回	teq; kai;
 協定	kyou; tei;
-腹筋	fuk; kin;
+腹筋	fuk;kin;
 腹筋	fuq; kin;
 雄姿	yuu; shi;
 意志	i; shi;
@@ -6246,13 +6246,13 @@ columns:
 菅野	kan; no;
 菅野	suga; no;
 手伝い	te; tsuda; i,
-列島	ret; tou;
+列島	ret;tou;
 列島	req; tou;
 無名	mu; mei;
 反応	han; nou;
 不可能	fu; ka; nou;
 痺れ	shibi; re,
-国歌	kok; ka;
+国歌	kok;ka;
 国歌	koq; ka;
 凍りつ	koo; ri, tsu,
 賑わ	nigi; wa,
@@ -6279,7 +6279,7 @@ columns:
 夫妻	fu; sai;
 海岸	kai; gan;
 派手	ha; de;
-突発	top; patsu;
+突発	top;patsu;
 突発	toq; patsu;
 消費	shou; hi;
 真実	shin; jitsu;
@@ -6294,7 +6294,7 @@ columns:
 口論	kou; ron;
 寄り道	yo; ri, michi;
 剣客	ken; kyaku;
-物騒	bus; sou;
+物騒	bus;sou;
 物騒	buq; sou;
 応答	ou; tou;
 植田	ue; da;
@@ -6314,7 +6314,7 @@ columns:
 分解	bun; kai;
 事象	ji; shou;
 書斎	sho; sai;
-堀田	hot; ta;
+堀田	hot;ta;
 堀田	hoq; ta;
 食堂	shoku; dou;
 隠し	kaku; shi,
@@ -6377,7 +6377,7 @@ columns:
 抗議	kou; gi;
 沼田	numa; ta;
 女子大	jo; shi; dai;
-一揆	ik; ki;
+一揆	ik;ki;
 一揆	iq; ki;
 大腸	dai; chou;
 溶け込	to; ke, ko;
@@ -6424,7 +6424,7 @@ columns:
 教師	kyou; shi;
 尻目	shiri; me;
 次世代	ji; se; dai;
-早急	sak; kyuu;
+早急	sak;kyuu;
 早急	saq; kyuu;
 洋服	you; fuku;
 専属	sen; zoku;
@@ -6434,7 +6434,7 @@ columns:
 業務	gyou; mu;
 新保	shin; bo;
 思い知ら	omo; i, shi; ra,
-特急	tok; kyuu;
+特急	tok;kyuu;
 特急	toq; kyuu;
 瓢箪	hyou; tan;
 漏ら	mo; ra,
@@ -6465,7 +6465,7 @@ columns:
 吐け	ha; ke,
 不甲斐な	fu; ga; i; na,
 立ちはだか	ta; chi, ha, da, ka,
-日経	nik; kei;
+日経	nik;kei;
 日経	niq; kei;
 元祖	gan; so;
 予想	yo; sou;
@@ -6520,7 +6520,7 @@ columns:
 印鑑	in; kan;
 交戦	kou; sen;
 最高潮	sai; kou; chou;
-鉄筋	tek; kin;
+鉄筋	tek;kin;
 鉄筋	teq; kin;
 須山	su; yama;
 披露	hi; rou;
@@ -6534,7 +6534,7 @@ columns:
 指数	shi; suu;
 互いに	taga; i, ni,
 中小	chuu; shou;
-勝手口	kat; te; guchi;
+勝手口	kat;te; guchi;
 勝手口	kaq; te; guchi;
 真鍋	ma; nabe;
 改めて	arata; me, te,
@@ -6569,7 +6569,7 @@ columns:
 出来事	de; ki; goto;
 満面	man; men;
 書棚	sho; dana;
-一環	ik; kan;
+一環	ik;kan;
 一環	iq; kan;
 日当たり	hi; a; ta,ri,
 牡馬	bo; ba;
@@ -6633,7 +6633,7 @@ columns:
 開場	kai; jou;
 面持ち	omo; mo; chi,
 企て	kuwada; te,
-大百科	dai; hyak; ka;
+大百科	dai; hyak;ka;
 大百科	dai; hyaq; ka;
 理屈	ri; kutsu;
 息子	mu; suko;
@@ -6648,7 +6648,7 @@ columns:
 突き落と	tsu; ki, o; to,
 割譲	katsu; jou;
 力士	riki; shi;
-格好よ	kak; kou; yo,
+格好よ	kak;kou; yo,
 格好よ	kaq; kou; yo,
 上書き	uwa; ga; ki,
 統括	tou; katsu;
@@ -6657,7 +6657,7 @@ columns:
 見方	mi; kata;
 空虚	kuu; kyo;
 象形文字	shou; kei; mo; ji;
-物資	bus; shi;
+物資	bus;shi;
 物資	buq; shi;
 誤認	go; nin;
 昔話	mukashi; banashi;
@@ -6719,7 +6719,7 @@ columns:
 排除	hai; jo;
 東京	tou; kyou;
 東京	to; kyo;
-突進	tos; shin;
+突進	tos;shin;
 突進	toq; shin;
 仕種	shi; gusa;
 特徴	toku; chou;
@@ -6739,7 +6739,7 @@ columns:
 倍増	bai; zou;
 待ち合わせ	ma; chi, a; wa, se,
 姿見	sugata; mi;
-切符	kip; pu;
+切符	kip;pu;
 切符	kiq; pu;
 公営	kou; ei;
 動き出	ugo; ki, da;
@@ -6747,7 +6747,7 @@ columns:
 真っ先	ma; s,saki;
 真っ先	ma; q, saki;
 州立	shuu; ritsu;
-獨協	dok; kyou;
+獨協	dok;kyou;
 獨協	doq; kyou;
 議院	gi; in;
 竹村	take; mura;
@@ -6759,18 +6759,18 @@ columns:
 豪快	gou; kai;
 会話	kai; wa;
 横田	yoko; ta;
-北海道	hok; kai; dou;
+北海道	hok;kai; dou;
 北海道	hoq; kai; dou;
 賛否	san; pi;
 ひっくり返	hi, kku, ri, kae;
 ひっくり返	hi, q, ku, ri, kae;
-殺風景	sap; puu; kei;
+殺風景	sap;puu; kei;
 殺風景	saq; puu; kei;
 一人暮らし	hito; ri; gu; ra, shi,
 脚注	kyaku; chuu;
 蹌踉	sou; rou;
 入学式	nyuu; gaku; shiki;
-発揮	hak; ki;
+発揮	hak;ki;
 発揮	haq; ki;
 桔梗	ki; kyou;
 知能	chi; nou;
@@ -6781,7 +6781,7 @@ columns:
 地方自治体	chi; hou; ji; chi; tai;
 寝室	shin; shitsu;
 付け加え	tsu; ke, kuwa; e,
-日系	nik; kei;
+日系	nik;kei;
 日系	niq; kei;
 懇親	kon; shin;
 専念	sen; nen;
@@ -6853,9 +6853,9 @@ columns:
 敬礼	kei; rei;
 規制	ki; sei;
 参加費	san; ka; hi;
-脱退	dak; kai;
+脱退	dak;kai;
 脱退	daq; kai;
-脱退	dat; tai;
+脱退	dat;tai;
 脱退	daq; tai;
 後方	kou; hou;
 両家	ryou; ke;
@@ -6869,7 +6869,7 @@ columns:
 来歴	rai; reki;
 睨み合	nira; mi, a;
 両目	ryou; me;
-一回戦	ik; kai; sen;
+一回戦	ik;kai; sen;
 一回戦	iq; kai; sen;
 原告	gen; koku;
 飲み込	no; mi, ko;
@@ -6937,7 +6937,7 @@ columns:
 態勢	tai; sei;
 形勢	kei; sei;
 酔い	yo; i,
-薬局	yak; kyoku;
+薬局	yak;kyoku;
 薬局	yaq; kyoku;
 俊敏	shun; bin;
 主語	shu; go;
@@ -6946,12 +6946,12 @@ columns:
 体質	tai; shitsu;
 平面	hei; men;
 境界	kyou; kai;
-喫茶	kis; sa;
+喫茶	kis;sa;
 喫茶	kiq; sa;
 落ち着	o; chi, tsu;
 赤ちゃん	aka; cha, n,
 赤ちゃん	aka; chi, xya, n,
-白金	hak; kin;
+白金	hak;kin;
 白金	haq; kin;
 白金	shiro; gane;
 川村	kawa; mura;
@@ -6977,7 +6977,7 @@ columns:
 中国人	chuu; goku; jin;
 若々し	waka; waka; shi,
 属性	zoku; sei;
-受賞	jus; hou;
+受賞	jus;hou;
 加工	ka; kou;
 耕作	kou; saku;
 見かけ	mi; ka, ke,
@@ -7009,7 +7009,7 @@ columns:
 映像	ei; zou;
 ひじ掛け	hi, ji, ka; ke,
 安打	an; da;
-接戦	ses; sen;
+接戦	ses;sen;
 接戦	seq; sen;
 問題点	mon; dai; ten;
 女帝	nyo; tei;
@@ -7025,13 +7025,13 @@ columns:
 仕入れ	shi; i; re,
 切断	setsu; dan;
 問い詰め	to; i, tsu; me,
-勿体な	mot; tai; na,
+勿体な	mot;tai; na,
 勿体な	moq; tai; na,
 元首	gen; shu;
 言いよう	i; i, yo, u,
 二翻	ryan; fan;
 飲みこ	no; mi, ko,
-特権	tok; ken;
+特権	tok;ken;
 特権	toq; ken;
 廃れ	suta; re,
 準拠	jun; kyo;
@@ -7082,7 +7082,7 @@ columns:
 毛頭な	mou; tou; na,
 交じ	ma; ji,
 海底摸月	hai; tei; mo-; yue;
-別世界	bes; se; kai;
+別世界	bes;se; kai;
 別世界	beq; se; kai;
 今頃	ima; goro;
 粘り強	neba; ri, duyo;
@@ -7120,11 +7120,11 @@ columns:
 撮れ	to; re,
 生徒	sei; to;
 東北学院	tou; hoku; gaku; in;
-発着	hac; chaku;
-発着	hat; tyaku;
+発着	hac;chaku;
+発着	hat;tyaku;
 発着	haq; chaku;
 具体	gu; tai;
-結晶	kes; shou;
+結晶	kes;shou;
 結晶	keq; shou;
 増え	fu; e,
 手間	te; ma;
@@ -7138,11 +7138,11 @@ columns:
 他意	ta; i;
 航行	kou; kou;
 塩分	en; bun;
-熱中	nec; chuu;
-熱中	net; tyuu;
+熱中	nec;chuu;
+熱中	net;tyuu;
 熱中	neq; chuu;
 御馳走	go; chi; sou;
-発祥	has; shou;
+発祥	has;shou;
 発祥	haq; shou;
 閉じ込め	to; ji, ko; me,
 齋藤	sai; tou;
@@ -7225,7 +7225,7 @@ columns:
 鉢合わせ	hachi; a; wa, se,
 評判	hyou; ban;
 展覧	ten; ran;
-生年月日	sei; nen; gap; pi;
+生年月日	sei; nen; gap;pi;
 生年月日	sei; nen; gaq; pi;
 英訳	ei; yaku;
 遠回し	too; mawa; shi,
@@ -7240,7 +7240,7 @@ columns:
 手っ取り早	te; q, to; ri, baya;
 執念深	shuu; nen; buka;
 駅前通り	eki; mae; doo; ri,
-一気	ik; ki;
+一気	ik;ki;
 一気	iq; ki;
 各自	kaku; ji;
 修士	shuu; shi;
@@ -7255,11 +7255,11 @@ columns:
 横須賀線	yoko; su; ka; sen;
 今更	ima; sara;
 お腹	o, naka;
-四つ	yot; tsu;
-四つ	yoq; tsu;
+#四つ	yot;tsu,
+#四つ	yoq; tsu,
 借り物	ka; ri, mono;
 研究会	ken; kyuu; kai;
-出金	shuk; kin;
+出金	shuk;kin;
 出金	shuq; kin;
 財閥	zai; batsu;
 選手権	sen; shu; ken;
@@ -7272,7 +7272,7 @@ columns:
 駄菓子	da; ga; shi;
 胸倉	muna; gura;
 創業	sou; gyou;
-従姉	juu; shi;
+従姉	juu; shi;([kgsztdjhmyrwbp]); 
 学術	gaku; jutsu;
 駆け	ka; ke,
 灰色	hai; iro;
@@ -7284,7 +7284,7 @@ columns:
 読点	tou; ten;
 閉ま	shi; ma,
 書庫	sho; ko;
-察し	sas; shi,
+察し	sas;shi,
 察し	saq; shi,
 横浜市立	yoko; hama; shi; ritsu;
 埼玉県立	sai; tama; ken; ritsu;
@@ -7305,7 +7305,7 @@ columns:
 楽天	raku; ten;
 誘惑	yuu; waku;
 陸上	riku; jou;
-直轄	chok; katsu;
+直轄	chok;katsu;
 直轄	choq; katsu;
 軍縮	gun; shuku;
 フランス語	fu. ra. n. su. go;
@@ -7318,7 +7318,7 @@ columns:
 聴覚	chou; kaku;
 公共	kou; kyou;
 なだれ込	na, da, re, ko;
-一緒	is; sho;
+一緒	is;sho;
 一緒	iq; sho;
 凝ら	ko; ra,
 塗装	to; sou;
@@ -7333,7 +7333,7 @@ columns:
 時計	to; kei;
 海老沢	e; bi; sawa;
 赤らめ	aka; ra, me,
-決戦	kes; sen;
+決戦	kes;sen;
 決戦	keq; sen;
 生クリーム	nama; ku. ri. - mu.
 消毒	shou; doku;
@@ -7355,7 +7355,7 @@ columns:
 拍子抜け	hyou; shi; nu; ke,
 杉田	sugi; ta;
 硬度	kou; do;
-一見	ik; ken;
+一見	ik;ken;
 一見	iq; ken;
 引っ込め	hi; k,ko; me,
 引っ込め	hi; q, ko; me,
@@ -7419,7 +7419,7 @@ columns:
 硬化	kou; ka;
 図柄	zu; gara;
 醸造	jou; zou;
-一声	is; sei;
+一声	is;sei;
 一声	iq; sei;
 事柄	koto; gara;
 青磁	sei; ji;
@@ -7427,7 +7427,7 @@ columns:
 維持	i; ji;
 お湯	o, yu;
 箇条	ka; jou;
-立憲	rik; ken;
+立憲	rik;ken;
 立憲	riq; ken;
 布陣	fu; jin;
 既刊	ki; kan;
@@ -7454,7 +7454,7 @@ columns:
 引っ越し	hi; k,ko; shi,
 引っ越し	hi; q, ko; shi,
 順子	shun; tsu;
-直下	chok; ka;
+直下	chok;ka;
 直下	choq; ka;
 数式	suu; shiki;
 帰路	ki; ro;
@@ -7467,14 +7467,14 @@ columns:
 世間	se; ken;
 松木	matsu; ki;
 広告	kou; koku;
-骨格	kok; kaku;
+骨格	kok;kaku;
 骨格	koq; kaku;
 間接的	kan; setsu; teki;
 男の子	otoko; no, ko;
 動悸	dou; ki;
 真相	shin; sou;
 仕返し	shi; kae; shi,
-失態	shit; tai;
+失態	shit;tai;
 失態	shiq; tai;
 前衛	zen; ei;
 前衛	zen; wei;
@@ -7482,7 +7482,7 @@ columns:
 老舗	shini; se;
 徳島	toku; shima;
 無防備	mu; bou; bi;
-各国	kak; koku;
+各国	kak;koku;
 各国	kaq; koku;
 優遇	yuu; guu;
 埋め	u; me,
@@ -7490,14 +7490,14 @@ columns:
 貨車	ka; sha;
 戦隊	sen; tai;
 野山	no; yama;
-発掘	hak; kutsu;
+発掘	hak;kutsu;
 発掘	haq; kutsu;
 熟睡	juku; sui;
 素麺	sou; men;
 噴水	fun; sui;
 今や	ima; ya,
 曲げ	ma; ge,
-日課	nik; ka;
+日課	nik;ka;
 日課	niq; ka;
 酸素	san; so;
 菅谷	suga; ya;
@@ -7541,7 +7541,7 @@ columns:
 出場	shutsu; jou;
 標準軌	hyou; jun; ki;
 泊め	to; me,
-国教	kok; kyou;
+国教	kok;kyou;
 国教	koq; kyou;
 長生き	naga; i; ki,
 配向	hai; kou;
@@ -7576,7 +7576,7 @@ columns:
 許し	yuru; shi,
 追求	tsui; kyuu;
 多々	ta; ta;
-北方	hop; pou;
+北方	hop;pou;
 北方	hoq; pou;
 仕組み	shi; ku; mi,
 全盛期	zen; sei; ki;
@@ -7607,24 +7607,24 @@ columns:
 関根	seki; ne;
 明記	mei; ki;
 近付	chika; du;
-出勤	shuk; kin;
+出勤	shuk;kin;
 出勤	shuq; kin;
 振り絞	fu; ri, shibo;
 油性	yu; sei;
 究極	kyuu; kyoku;
-一般	ip; pan;
+一般	ip;pan;
 一般	iq; pan;
 溺れ	obo; re,
 暑苦し	atsu; kuru; shi,
-別荘	bes; sou;
+別荘	bes;sou;
 別荘	beq; sou;
 農村	nou; son;
-落花生	rak; ka; sei;
+落花生	rak;ka; sei;
 落花生	raq; ka; sei;
 和書	wa; sho;
 否定	hi; tei;
 引きずり込	hi; ki, zu, ri, ko;
-切手	kit; te;
+切手	kit;te;
 切手	kiq; te;
 基板	ki; ban;
 松尾	matsu; o;
@@ -7677,7 +7677,7 @@ columns:
 三枝	sae; gusa;
 後ろ髪	ushi; ro, gami;
 手当て	tea; te,
-歌合戦	uta; gas; sen;
+歌合戦	uta; gas;sen;
 歌合戦	uta; gaq; sen;
 手のひら	te; no, hi, ra,
 山積み	yama; du; mi,
@@ -7685,7 +7685,7 @@ columns:
 折りたたみ	o; ri, ta, ta, mi,
 子ども	ko; do, mo,
 命令	mei; rei;
-疾患	shik; kan;
+疾患	shik;kan;
 疾患	shiq; kan;
 民権	min; ken;
 在籍	zai; seki;
@@ -7712,7 +7712,7 @@ columns:
 想い出	omo; i, de;
 威力	i; ryoku;
 静けさ	shizu; ke, sa,
-一新	is; shin;
+一新	is;shin;
 一新	iq; shin;
 村木	mura; ki;
 燃費	nen; pi;
@@ -7750,7 +7750,7 @@ columns:
 万能	ban; nou;
 沁み	shi; mi,
 斎藤	sai; tou;
-一瞬	is; shun;
+一瞬	is;shun;
 一瞬	iq; shun;
 回想	kai; sou;
 背理法	hai; ri; hou;
@@ -7848,7 +7848,7 @@ columns:
 外縁	gai; en;
 資金	shi; kin;
 宰相	sai; shou;
-摂政	ses; shou;
+摂政	ses;shou;
 摂政	seq; shou;
 娯楽	go; raku;
 相原	ai; hara;
@@ -7863,7 +7863,7 @@ columns:
 返事	hen; ji;
 無益	mu; eki;
 脱衣	datsu; i;
-石器	sek; ki;
+石器	sek;ki;
 石器	seq; ki;
 管理人	kan; ri; nin;
 七月	shichi; gatsu;
@@ -7910,7 +7910,7 @@ columns:
 協奏曲	kyou; sou; kyoku;
 埋もれ	uzu; mo, re,
 鈍感	don; kan;
-絶品	zep; pin;
+絶品	zep;pin;
 絶品	zeq; pin;
 中世	chuu; sei;
 左側	hidari; gawa;
@@ -7921,7 +7921,7 @@ columns:
 口元	kuchi; moto;
 石田	ishi; da;
 二塁	ni; rui;
-熱帯	net; tai;
+熱帯	net;tai;
 熱帯	neq; tai;
 付け足	tsu; ke, ta;
 放射能	hou; sha; nou;
@@ -7960,7 +7960,7 @@ columns:
 心底	shin; soko;
 加速度	ka; soku; do;
 毒性	doku; sei;
-格好い	kak; kou; i,
+格好い	kak;kou; i,
 格好い	kaq; kou; i,
 血縁	ketsu; en;
 帰属	ki; zoku;
@@ -8077,7 +8077,7 @@ columns:
 慶長	kei; chou;
 麻生	aso; u;
 象徴	shou; chou;
-決定	ket; tei;
+決定	ket;tei;
 決定	keq; tei;
 顧問	ko; mon;
 準備	jun; bi;
@@ -8112,11 +8112,11 @@ columns:
 受容	ju; you;
 赤痢	seki; ri;
 愛くるし	ai; ku, ru, shi,
-楽器	gak; ki;
+楽器	gak;ki;
 楽器	gaq; ki;
 浸か	tsu; ka,
 三元牌	san; gen; pai;
-結成	kes; sei;
+結成	kes;sei;
 結成	keq; sei;
 傷口	kizu; guchi;
 寝転	ne; koro;
@@ -8127,7 +8127,7 @@ columns:
 開催	kai; sai;
 共和国	kyou; wa; koku;
 耐えがた	ta; e, ga, ta,
-卓球	tak; kyuu;
+卓球	tak;kyuu;
 卓球	taq; kyuu;
 関本	seki; moto;
 所定	sho; tei;
@@ -8141,13 +8141,13 @@ columns:
 靴音	kutsu; oto;
 中心部	chuu; shin; bu;
 来日	rai; nichi;
-立教	rik; kyou;
+立教	rik;kyou;
 立教	riq; kyou;
 皇子	ou; ji;
 江口	e; guchi;
 収入	shuu; nyuu;
 任命	nin; mei;
-物質	bus; shitsu;
+物質	bus;shitsu;
 物質	buq; shitsu;
 自意識	ji; i; shiki;
 身近	mi; dika;
@@ -8167,7 +8167,7 @@ columns:
 軌条	ki; jou;
 概ね	oomu; ne,
 軍需	gun; ju;
-窒息	chis; soku;
+窒息	chis;soku;
 窒息	chiq; soku;
 単数	tan; suu;
 興行	kou; gyou;
@@ -8214,7 +8214,7 @@ columns:
 五十嵐	i; gara; shi;
 必要	hitsu; you;
 背負	se; o;
-抹消	mas; shou;
+抹消	mas;shou;
 抹消	maq; shou;
 海域	kai; iki;
 制作	sei; saku;
@@ -8227,7 +8227,7 @@ columns:
 御苦労	go; ku; rou;
 植村	ue; mura;
 地和	chi-; ho-;
-末端	mat; tan;
+末端	mat;tan;
 末端	maq; tan;
 保育園	ho; iku; en;
 昔ながら	mukashi; na, ga, ra,
@@ -8246,7 +8246,7 @@ columns:
 持田	mochi; da;
 下着	shita; gi;
 反芻	han; suu;
-脱兎	dat; to;
+脱兎	dat;to;
 脱兎	daq; to;
 竹本	take; moto;
 言い捨て	i; i, su; te,
@@ -8278,7 +8278,7 @@ columns:
 専用	sen; you;
 居座	i; suwa;
 枝豆	eda; mame;
-月刊	gek; kan;
+月刊	gek;kan;
 月刊	geq; kan;
 薦め	susu; me,
 善処	zen; sho;
@@ -8307,7 +8307,7 @@ columns:
 上の空	uwa; no, sora;
 割引	wari; biki;
 随分	zui; bun;
-雑踏	zat; tou;
+雑踏	zat;tou;
 雑踏	zaq; tou;
 養子	you; shi;
 怪訝	ke; gen;
@@ -8335,12 +8335,12 @@ columns:
 定ま	sada; ma,
 ヶ月	xke. getsu;
 箇月	ka; getsu;
-明後日	a; sat; te;
+明後日	a; sat;te;
 明後日	a; saq; te;
 明後日	myou; go; nichi;
 松下	matsu; shita;
 岡島	oka; jima;
-北海学園	hok; kai; gaku; en;
+北海学園	hok;kai; gaku; en;
 北海学園	hoq; kai; gaku; en;
 議題	gi; dai;
 奈良	na; ra;
@@ -8353,7 +8353,7 @@ columns:
 枕元	makura; moto;
 締め	shi; me,
 軍人	gun; jin;
-合唱	gas; shou;
+合唱	gas;shou;
 合唱	gaq; shou;
 片手	kata; te;
 安売り	yasu; u; ri,
@@ -8398,7 +8398,7 @@ columns:
 踏襲	tou; shuu;
 度合い	do; a; i,
 注文	chuu; mon;
-発散	has; san;
+発散	has;san;
 発散	haq; san;
 利便	ri; ben;
 卒論	sotsu; ron;
@@ -8451,7 +8451,7 @@ columns:
 押し問答	o; shi, mon; dou;
 領有	ryou; yuu;
 向き合	mu; ki, a;
-一等	it; tou;
+一等	it;tou;
 一等	iq; tou;
 取次	tori; tsugi;
 本紀	hon; gi;
@@ -8468,7 +8468,7 @@ columns:
 交差	kou; sa;
 新横浜	shin; yoko; hama;
 新刊	shin; kan;
-一行	ik; kou;
+一行	ik;kou;
 一行	iq; kou;
 一行	ichi; gyou;
 透過	tou; ka;
@@ -8492,7 +8492,7 @@ columns:
 消化	shou; ka;
 転記	ten; ki;
 永世	ei; sei;
-一般に	ip; pan; ni,
+一般に	ip;pan; ni,
 一般に	iq; pan; ni,
 何度	nan; do;
 緩め	yuru; me,
@@ -8506,7 +8506,7 @@ columns:
 妖怪	you; kai;
 各駅	kaku; eki;
 放火	hou; ka;
-立腹	rip; puku;
+立腹	rip;puku;
 立腹	riq; puku;
 長谷川	ha; se; gawa;
 長谷川	ha; se; kawa;
@@ -8515,7 +8515,7 @@ columns:
 同姓	dou; sei;
 女子高	jo; shi; kou;
 待ち構え	ma; chi, kama; e,
-即行	sok; kou;
+即行	sok;kou;
 即行	soq; kou;
 領土	ryou; do;
 華族	ka; zoku;
@@ -8524,9 +8524,9 @@ columns:
 出汁	da; shi;
 市内	shi; nai;
 紀州	ki; shuu;
-真直ぐ	mas; su; gu,
+真直ぐ	mas;su; gu,
 混一色	hon; i-; so-;
-発進	has; shin;
+発進	has;shin;
 発進	haq; shin;
 製造	sei; zou;
 空想	kuu; sou;
@@ -8560,7 +8560,7 @@ columns:
 旅程	ryo; tei;
 野太	no; buto;
 落語	raku; go;
-発刊	hak; kan;
+発刊	hak;kan;
 発刊	haq; kan;
 自信満々	ji; shin; man; man;
 必ずしも	kanara; zu, shi, mo,
@@ -8570,7 +8570,7 @@ columns:
 製作	sei; saku;
 思いだ	omo; i, da,
 怪人	kai; jin;
-絶賛	zes; san;
+絶賛	zes;san;
 絶賛	zeq; san;
 基底	ki; tei;
 総合	sou; gou;
@@ -8622,7 +8622,7 @@ columns:
 琵琶	bi; wa;
 補強	ho; kyou;
 宮崎	miya; zaki;
-一貫性	ik; kan; sei;
+一貫性	ik;kan; sei;
 一貫性	iq; kan; sei;
 学堂	gaku; dou;
 思考	shi; kou;
@@ -8645,7 +8645,7 @@ columns:
 寸前	sun; zen;
 一礼	ichi; rei;
 悪影響	aku; ei; kyou;
-積極的	sek; kyoku; teki;
+積極的	sek;kyoku; teki;
 積極的	seq; kyoku; teki;
 不要	fu; you;
 不穏	fu; on;
@@ -8687,7 +8687,7 @@ columns:
 遠距離	en; kyo; ri;
 保険	ho; ken;
 帰れる	kae; re, ru,
-発端	hot; tan;
+発端	hot;tan;
 発端	hoq; tan;
 当事者	tou; ji; sha;
 学力	gaku; ryoku;
@@ -8744,7 +8744,7 @@ columns:
 当地	tou; chi;
 絞め	shi; me,
 生活	sei; katsu;
-撤去	tek; kyo;
+撤去	tek;kyo;
 撤去	teq; kyo;
 無邪気	mu; ja; ki;
 相関	sou; kan;
@@ -8759,9 +8759,9 @@ columns:
 鳥海	tori; umi;
 外山	to; yama;
 いい加減	i, i, ka; gen;
-夜行列車	ya; kou; res; sha;
+夜行列車	ya; kou; res;sha;
 夜行列車	ya; kou; req; sha;
-物性	bus; sei;
+物性	bus;sei;
 物性	buq; sei;
 小久保	ko; ku; bo;
 駅員	eki; in;
@@ -8781,7 +8781,7 @@ columns:
 志願	shi; gan;
 代理	dai; ri;
 恩田	on; da;
-中学校	chuu; gak; kou;
+中学校	chuu; gak;kou;
 中学校	chuu; gaq; kou;
 経歴	kei; reki;
 地上波	chi; jou; ha;
@@ -8849,7 +8849,7 @@ columns:
 始め	haji; me,
 市役所	shi; yaku; sho;
 言わば	i; wa, ba,
-一足飛び	is; soku; to; bi,
+一足飛び	is;soku; to; bi,
 県内	ken; nai;
 双方	sou; hou;
 食いつ	ku; i, tsu,
@@ -8864,9 +8864,9 @@ columns:
 召し上が	me; shi, a; ga,
 思い通り	omo; i, doo; ri,
 大嫌い	dai; kira; i,
-奪還	dak; kan;
+奪還	dak;kan;
 奪還	daq; kan;
-学会	gak; kai;
+学会	gak;kai;
 学会	gaq; kai;
 楽園	raku; en;
 在任	zai; nin;
@@ -8874,8 +8874,8 @@ columns:
 師匠	shi; shou;
 奇跡	ki; seki;
 悲鳴	hi; mei;
-察知	sac; chi;
-察知	sat; ti;
+察知	sac;chi;
+察知	sat;ti;
 察知	saq; chi;
 可哀想	ka; wai; sou;
 太陰暦	tai; in; reki;
@@ -8931,13 +8931,13 @@ columns:
 逃が	ni; ga,
 付きっきり	tsu; ki, kki, ri,
 付きっきり	tsu; ki, q, ki, ri,
-徹底的	tet; tei; teki;
+徹底的	tet;tei; teki;
 徹底的	teq; tei; teki;
 本社	hon; sha;
 妬まし	neta; ma, shi,
 芽生え	meba; e,
 五味	go; mi;
-一般人	ip; pan; jin;
+一般人	ip;pan; jin;
 一般人	iq; pan; jin;
 鴬谷	uguisu; dani;
 出せ	da; se,
@@ -8966,7 +8966,7 @@ columns:
 神戸	kan; be;
 山地	san; chi;
 人影	hito; kage;
-一帯	it; tai;
+一帯	it;tai;
 一帯	iq; tai;
 尊重	son; chou;
 就職	shuu; shoku;
@@ -8999,7 +8999,7 @@ columns:
 臨済宗	rin; zai; shuu;
 狭苦し	sema; kuru; shi,
 寝心地	ne; goko; chi;
-学会誌	gak; kai; shi;
+学会誌	gak;kai; shi;
 学会誌	gaq; kai; shi;
 知事	chi; ji;
 瀬戸	se; to;
@@ -9034,14 +9034,14 @@ columns:
 首脳	shu; nou;
 衝突	shou; totsu;
 改定	kai; tei;
-咄嗟	tos; sa;
+咄嗟	tos;sa;
 咄嗟	toq; sa;
 間近	ma; dika;
 進撃	shin; geki;
 果てしな	ha; te, shi, na,
 狙い	nera; i,
 大田	oo; ta;
-出身	shus; shin;
+出身	shus;shin;
 出身	shuq; shin;
 編曲	hen; kyoku;
 式場	shiki; jou;
@@ -9054,7 +9054,7 @@ columns:
 朱肉	shu; niku;
 主旨	shu; shi;
 長所	chou; sho;
-仏教	buk; kyou;
+仏教	buk;kyou;
 仏教	buq; kyou;
 現実味	gen; jitsu; mi;
 改革	kai; kaku;
@@ -9065,7 +9065,7 @@ columns:
 本人	hon; nin;
 奨励	shou; rei;
 苦しみ	kuru; shi, mi,
-接待	set; tai;
+接待	set;tai;
 接待	seq; tai;
 負傷	fu; shou;
 警戒	kei; kai;
@@ -9152,7 +9152,7 @@ columns:
 恋愛	ren; ai;
 不可解	fu; ka; kai;
 懸念	ke; nen;
-執行役員	shik; kou; yaku; in;
+執行役員	shik;kou; yaku; in;
 執行役員	shiq; kou; yaku; in;
 未だ	ima; da,
 通報	tsuu; hou;
@@ -9164,7 +9164,7 @@ columns:
 露天風呂	ro; ten; bu; ro;
 自治医科	ji; chi; i; ka;
 西原	nishi; hara;
-一挙一動	ik; kyo; ichi; dou;
+一挙一動	ik;kyo; ichi; dou;
 一挙一動	iq; kyo; ichi; dou;
 北北西	hoku; hoku; sei;
 同感	dou; kan;
@@ -9188,7 +9188,7 @@ columns:
 出願	shutsu; gan;
 複素	fuku; so;
 次官	ji; kan;
-出走	shus; sou;
+出走	shus;sou;
 出走	shuq; sou;
 原爆	gen; baku;
 読み出	yo; mi, da;
@@ -9196,7 +9196,7 @@ columns:
 持ち込み	mo; chi, ko; mi,
 成立	sei; ritsu;
 人民	jin; min;
-一層	is; sou;
+一層	is;sou;
 一層	iq; sou;
 泳がせ	oyo; ga, se,
 大槻	oo; tsuki;
@@ -9236,7 +9236,7 @@ columns:
 今度	kon; do;
 田沢	ta; zawa;
 色直し	iro; nao; shi,
-叱咤	shit; ta;
+叱咤	shit;ta;
 叱咤	shiq; ta;
 対立	tai; ritsu;
 思いき	omo; i, ki,
@@ -9247,7 +9247,7 @@ columns:
 仁王立ち	ni; ou; da; chi,
 朗読	rou; doku;
 新年	shin; nen;
-復活	fuk; katsu;
+復活	fuk;katsu;
 復活	fuq; katsu;
 収穫	shuu; kaku;
 欠け	ka; ke,
@@ -9284,7 +9284,7 @@ columns:
 屋上	oku; jou;
 絵本	e; hon;
 薬草	yaku; sou;
-実体	jit; tai;
+実体	jit;tai;
 実体	jiq; tai;
 #（株）	kabu; shiki; gai; sha;
 菩提	bo; dai;
@@ -9296,7 +9296,7 @@ columns:
 転じ	ten; ji,
 人達	hito; tachi;
 切り返	ki; ri, kae;
-決勝	kes; shou;
+決勝	kes;shou;
 決勝	keq; shou;
 樹脂	ju; shi;
 中心	chuu; shin;
@@ -9316,7 +9316,7 @@ columns:
 平坦	hei; tan;
 温度計	on; do; kei;
 焦げ臭	ko; ge, kusa;
-活発	kap; patsu;
+活発	kap;patsu;
 活発	kaq; patsu;
 命じ	mei; ji,
 差し込	sa; shi, ko;
@@ -9348,7 +9348,7 @@ columns:
 木曜日	moku; you; bi;
 変数	hen; suu;
 記事	ki; ji;
-借景	shak; kei;
+借景	shak;kei;
 借景	shaq; kei;
 景気	kei; ki;
 蒸れ	mu; re,
@@ -9369,7 +9369,7 @@ columns:
 教科書	kyou; ka; sho;
 考え方	kanga; e, kata;
 終焉	shuu; en;
-身勝手	mi; gat; te;
+身勝手	mi; gat;te;
 身勝手	mi; gaq; te;
 出来上が	de; ki; a; ga,
 湯呑	yu; nomi;
@@ -9440,7 +9440,7 @@ columns:
 支局	shi; kyoku;
 課程	ka; tei;
 遂に	tsui; ni,
-圧迫	ap; paku;
+圧迫	ap;paku;
 圧迫	aq; paku;
 平林	hira; bayashi;
 珊瑚	san; go;
@@ -9476,7 +9476,7 @@ columns:
 沿い	zo; i,
 改称	kai; shou;
 打ち明け	u; chi, a; ke,
-出家	shuk; ke;
+出家	shuk;ke;
 出家	shuq; ke;
 組み込み	ku; mi, ko; mi,
 色恋	iro; koi;
@@ -9513,7 +9513,7 @@ columns:
 縮れ	chidi; re,
 逃げ出	ni; ge, da;
 信用	shin; you;
-復刻	fuk; koku;
+復刻	fuk;koku;
 復刻	fuq; koku;
 濃度	nou; do;
 揃え	soro; e,
@@ -9535,7 +9535,7 @@ columns:
 薬品	yaku; hin;
 差しだ	sa; shi, da,
 変え	ka; e,
-積極	sek; kyoku;
+積極	sek;kyoku;
 積極	seq; kyoku;
 罵倒	ba; tou;
 築地	tsuki; ji;
@@ -9580,7 +9580,7 @@ columns:
 落と	o; to,
 政務	sei; mu;
 やむを得な	ya, mu, wo, e; na,
-発見	hak; ken;
+発見	hak;ken;
 発見	haq; ken;
 やり取り	ya, ri, to; ri,
 今田	ima; da;
@@ -9594,7 +9594,7 @@ columns:
 気味	gi; mi;
 支線	shi; sen;
 年明け	toshi; a; ke,
-実権	jik; ken;
+実権	jik;ken;
 実権	jiq; ken;
 遠慮	en; ryo;
 乗っけ	no; kke,
@@ -9614,7 +9614,7 @@ columns:
 告知	koku; chi;
 溢れ	afu; re,
 途方	to; hou;
-滅多	met; ta;
+滅多	met;ta;
 滅多	meq; ta;
 判定	han; tei;
 小野寺	o; no; dera;
@@ -9654,7 +9654,7 @@ columns:
 吹か	fu; ka,
 低音	tei; on,
 小柄	ko; gara;
-呆気	ak; ke;
+呆気	ak;ke;
 呆気	aq; ke;
 事業	ji; gyou;
 施行	shi; kou;
@@ -9675,7 +9675,7 @@ columns:
 屋敷	ya; shiki;
 記者	ki; sha;
 覆い	oo; i,
-実践	jis; sen;
+実践	jis;sen;
 実践	jiq; sen;
 等し	hito; shi,
 危う	aya; u,
@@ -9727,10 +9727,10 @@ columns:
 情緒	jou; cho;
 岐阜羽島	gi; fu; ha; shima;
 扱え	atsuka; e,
-熱血	nek; ketsu;
+熱血	nek;ketsu;
 熱血	neq; ketsu;
 漢書	kan; sho;
-百科	hyak; ka;
+百科	hyak;ka;
 百科	hyaq; ka;
 大宮	oo; miya;
 吸収	kyuu; shuu;
@@ -9773,7 +9773,7 @@ columns:
 頼み	tano; mi,
 土星	do; sei;
 群が	mura; ga,
-接点	set; ten;
+接点	set;ten;
 接点	seq; ten;
 電池	den; chi;
 飛行場	hi; kou; jou;
@@ -9798,7 +9798,7 @@ columns:
 影響	ei; kyou;
 小梅	ko; ume;
 改行	kai; gyou;
-実施	jis; shi;
+実施	jis;shi;
 実施	jiq; shi;
 差出人	sashi; dashi; nin;
 吹っ飛	fu; t,to;
@@ -9905,7 +9905,7 @@ columns:
 奇数	ki; suu;
 近々	chika; dika;
 信じる	shin; ji, ru,
-楽観	rak; kan;
+楽観	rak;kan;
 楽観	raq; kan;
 盗賊	tou; zoku;
 空腹	kuu; fuku;
@@ -9980,18 +9980,18 @@ columns:
 号機	gou; ki;
 小泉	ko; izumi;
 漢字	kan; ji;
-刻々	kok; koku;
+刻々	kok;koku;
 刻々	koq; koku;
 八巻	ya; maki;
 杉本	sugi; moto;
 隔離	kaku; ri;
 放送	hou; sou;
 展開	ten; kai;
-実態	jit; tai;
+実態	jit;tai;
 実態	jiq; tai;
 現行	gen; kou;
 標本	hyou; hon;
-食器洗い	shok; ki; ara; i,
+食器洗い	shok;ki; ara; i,
 食器洗い	shoq; ki; ara; i,
 周波	shuu; ha;
 前向き	mae; mu; ki,
@@ -10042,10 +10042,10 @@ columns:
 長浜	naga; hama;
 見下	mi; kuda;
 吾妻	a; duma;
-日本一	nip; pon; ichi;
+日本一	nip;pon; ichi;
 日本一	niq; pon; ichi;
 単騎	tan; ki;
-一角	ik; kaku;
+一角	ik;kaku;
 一角	iq; kaku;
 餓鬼	ga; ki;
 使用法	shi; you; hou;
@@ -10060,7 +10060,7 @@ columns:
 貧困	hin; kon;
 曇らせ	kumo; ra, se,
 星座	sei; za;
-颯爽	sas; sou;
+颯爽	sas;sou;
 颯爽	saq; sou;
 国内線	koku; nai; sen;
 勝ち誇	ka; chi, hoko;
@@ -10100,7 +10100,7 @@ columns:
 素っ頓狂	su; t,ton; kyou;
 素っ頓狂	su; q, ton; kyou;
 振幅	shin; puku;
-一般的	ip; pan; teki;
+一般的	ip;pan; teki;
 一般的	iq; pan; teki;
 検出	ken; shutsu;
 見繕	mi; tsukuro;
@@ -10114,7 +10114,7 @@ columns:
 多様	ta; you;
 点滅	ten; metsu;
 寄り	yo; ri,
-発症	has; shou;
+発症	has;shou;
 発症	haq; shou;
 冷気	rei; ki;
 儀礼	gi; rei;
@@ -10130,7 +10130,7 @@ columns:
 機密	ki; mitsu;
 世にも	yo; ni, mo,
 全身	zen; shin;
-筆頭	hit; tou;
+筆頭	hit;tou;
 筆頭	hiq; tou;
 政策	sei; saku;
 追いつ	o; i, tsu,
@@ -10149,7 +10149,7 @@ columns:
 終盤	shuu; ban;
 突っぱ	tsu; ppa,
 突っぱ	tsu; q, pa,
-活火山	kak; ka; zan;
+活火山	kak;ka; zan;
 活火山	kaq; ka; zan;
 受け	u; ke,
 無造作	mu; zou; sa;
@@ -10178,7 +10178,7 @@ columns:
 稼働	ka; dou;
 遥か	haru; ka,
 嬉々	ki; ki;
-折角	sek; kaku;
+折角	sek;kaku;
 折角	seq; kaku;
 領地	ryou; chi;
 リーグ戦	ri. - gu. sen;
@@ -10210,15 +10210,15 @@ columns:
 博覧	haku; ran;
 噴火	fun; ka;
 駅舎	eki; sha;
-落下	rak; ka;
+落下	rak;ka;
 落下	raq; ka;
 蓮見	hasu; mi;
 絶滅	zetsu; metsu;
 今朝	ke; sa;
 冷え	hi; e,
-接着	sec; chaku;
+接着	sec;chaku;
 接着	seq; chaku;
-接着	set; tyaku;
+接着	set;tyaku;
 代々	dai; dai;
 判例	han; rei;
 寄りかか	yo; ri, ka, ka,
@@ -10255,14 +10255,14 @@ columns:
 足首	ashi; kubi;
 三月	san; gatsu;
 提出	tei; shutsu;
-勿体	mot; tai;
+勿体	mot;tai;
 勿体	moq; tai;
 足立	a; dachi;
 信州	shin; shuu;
 懲り	ko; ri,
-血管	kek; kan;
+血管	kek;kan;
 血管	keq; kan;
-一貫	ik; kan;
+一貫	ik;kan;
 一貫	iq; kan;
 足り	ta; ri,
 高崎	taka; saki;
@@ -10310,7 +10310,7 @@ columns:
 改名	kai; mei;
 繁殖	han; shoku;
 渡せ	wata; se,
-実験	jik; ken;
+実験	jik;ken;
 実験	jiq; ken;
 探索	tan; saku;
 冷水	rei; sui;
@@ -10331,7 +10331,7 @@ columns:
 番地	ban; chi;
 膨ら	fuku; ra,
 歌唱	ka; shou;
-屈託	kut; taku;
+屈託	kut;taku;
 屈託	kuq; taku;
 漫談	man; dan;
 側線	soku; sen;
@@ -10405,7 +10405,7 @@ columns:
 夜中	yo; naka;
 夜中	ya; chuu;
 庭園	tei; en;
-列車	res; sha;
+列車	res;sha;
 列車	req; sha;
 怪談	kai; dan;
 子猫	ko; neko;
@@ -10451,7 +10451,7 @@ columns:
 目指	me; za;
 食べ物	ta; be, mono;
 外気	gai; ki;
-鉄拳	tek; ken;
+鉄拳	tek;ken;
 鉄拳	teq; ken;
 入場	nyuu; jou;
 聞け	ki; ke,
@@ -10494,7 +10494,7 @@ columns:
 弁護士	ben; go; shi;
 愛撫	ai; bu;
 間に合	ma; ni, a;
-出兵	shup; pei;
+出兵	shup;pei;
 出兵	shuq; pei;
 定番	tei; ban;
 色気	iro; ke;
@@ -10507,14 +10507,14 @@ columns:
 初回	sho; kai;
 規則正し	ki; soku; tada; shi,
 感慨深	kan; gai; buka;
-一階	ik; kai;
+一階	ik;kai;
 一階	iq; kai;
 平常心	hei; jou; shin;
 辞任	ji; nin;
 従兄弟	i; to; ko;
 何となく	nan; to, na, ku,
 女らし	onna; ra, shi,
-復古	fuk; ko;
+復古	fuk;ko;
 復古	fuq; ko;
 財産	zai; san;
 言い終わ	i; i, o; wa,
@@ -10524,7 +10524,7 @@ columns:
 退け	shirizo; ke,
 引き抜	hi; ki, nu;
 酒井	saka; i;
-食器	shok; ki;
+食器	shok;ki;
 食器	shoq; ki;
 御曹司	on; zou; shi;
 禍々し	maga; maga; shi,
@@ -10629,9 +10629,9 @@ columns:
 天然	ten; nen;
 古文	ko; bun;
 冷ややか	hi; ya, ya, ka,
-絶句	zek; ku;
+絶句	zek;ku;
 絶句	zeq; ku;
-別館	bek; kan;
+別館	bek;kan;
 別館	beq; kan;
 集まり	atsu; ma, ri,
 執拗	shitsu; you;
@@ -10678,7 +10678,7 @@ columns:
 上体	jou; tai;
 渾名	ada; na;
 膨張	bou; chou;
-括弧	kak; ko;
+括弧	kak;ko;
 括弧	kaq; ko;
 王女	ou; jo;
 受け流	u; ke, naga;
@@ -10694,10 +10694,10 @@ columns:
 英雄	ei; yuu;
 お袋	o, fukuro;
 阿部	a; be;
-合併	gap; pei;
+合併	gap;pei;
 合併	gaq; pei;
 比較	hi; kaku;
-却下	kyak; ka;
+却下	kyak;ka;
 却下	kyaq; ka;
 京都外国語	kyou; to; gai; koku; go;
 悔い	ku; i,
@@ -10752,10 +10752,10 @@ columns:
 見物	ken; butsu;
 川越	kawa; goe;
 充分	juu; bun;
-日直	nic; choku;
+日直	nic;choku;
 日直	niq; choku;
-日直	nit; tyoku;
-発達	hat; tatsu;
+日直	nit;tyoku;
+発達	hat;tatsu;
 発達	haq; tatsu;
 様々	sama; zama;
 年末年始	nen; matsu; nen; shi;
@@ -10766,11 +10766,11 @@ columns:
 親衛隊	shin; ei; tai;
 筆箱	fude; bako;
 瑞々し	mizu; mizu; shi,
-失敗	ship; pai;
+失敗	ship;pai;
 失敗	shiq; pai;
 水準	sui; jun;
 缶詰	kan; dume;
-発展	hat; ten;
+発展	hat;ten;
 発展	haq; ten;
 芸術	gei; jutsu;
 首吊り	kubi; tsu; ri,
@@ -10787,7 +10787,7 @@ columns:
 東京理科	tou; kyou; ri; ka;
 岡安	oka; yasu;
 検査	ken; sa;
-発作	hos; sa;
+発作	hos;sa;
 発作	hoq; sa;
 回し	mawa; shi,
 水道	sui; dou;
@@ -10795,7 +10795,7 @@ columns:
 奴隷	do; rei;
 連荘	ren; chan;
 伸び	no; bi,
-速攻	sok; kou;
+速攻	sok;kou;
 速攻	soq; kou;
 安部	a; be;
 同書	dou; sho;
@@ -10820,11 +10820,11 @@ columns:
 朝方	asa; gata;
 飛び上が	to; bi, a; ga,
 急進	kyuu; shin;
-絶対	zet; tai;
+絶対	zet;tai;
 絶対	zeq; tai;
 直接	choku; setsu;
 親方	oya; kata;
-匹敵	hit; teki;
+匹敵	hit;teki;
 匹敵	hiq; teki;
 自転車	ji; ten; sha;
 細め	hoso; me,
@@ -10832,7 +10832,7 @@ columns:
 気が付	ki; ga, tsu;
 愛知学院	ai; chi; gaku; in;
 卒業生	sotsu; gyou; sei;
-必殺	his; satsu;
+必殺	his;satsu;
 必殺	hiq; satsu;
 番外	ban; gai;
 記事数	ki; ji; suu;
@@ -10868,7 +10868,7 @@ columns:
 知人	chi; jin;
 亀山	kame; yama;
 不倫	fu; rin;
-日程	nit; tei;
+日程	nit;tei;
 日程	niq; tei;
 星空	hoshi; zora;
 生物	sei; butsu;
@@ -10911,7 +10911,7 @@ columns:
 券売	ken; bai;
 事物	ji; butsu;
 図鑑	zu; kan;
-一家	ik; ka;
+一家	ik;ka;
 一家	iq; ka;
 照れ	te; re,
 心無	kokoro; na;
@@ -10956,7 +10956,7 @@ columns:
 取り替え	to; ri, ka; e,
 意向	i; kou;
 可変	ka; hen;
-欠席	kes; seki;
+欠席	kes;seki;
 欠席	keq; seki;
 小国	shou; koku;
 肖像	shou; zou;
@@ -10976,9 +10976,9 @@ columns:
 解散	kai; san;
 大学生	dai; gaku; sei;
 優等	yuu; tou;
-接近	sek; kin;
+接近	sek;kin;
 接近	seq; kin;
-一心不乱	is; shin; fu; ran;
+一心不乱	is;shin; fu; ran;
 一心不乱	iq; shin; fu; ran;
 転居	ten; kyo;
 機長	ki; chou;
@@ -10991,7 +10991,7 @@ columns:
 銘柄	mei; gara;
 標識	hyou; shiki;
 浅海	sen; kai;
-発行	hak; kou;
+発行	hak;kou;
 発行	haq; kou;
 仕方	shi; kata;
 途上	to; jou;
@@ -11036,21 +11036,21 @@ columns:
 阻害	so; gai;
 断絶	dan; zetsu;
 本多	hon; da;
-四苦八苦	shi; ku; hak; ku;
+四苦八苦	shi; ku; hak;ku;
 四苦八苦	shi; ku; haq; ku;
 岩手	iwa; te;
-鳥取	tot; tori;
+鳥取	tot;tori;
 鳥取	toq; tori;
 移籍	i; seki;
 壊れ	kowa; re,
-発布	hap; pu;
+発布	hap;pu;
 発布	haq; pu;
 片山	kata; yama;
 馬券	ba; ken;
 世界史	se; kai; shi;
 誉め	ho; me,
 堀江	hori; e;
-画期的	kak; ki; teki;
+画期的	kak;ki; teki;
 画期的	kaq; ki; teki;
 太田	oo; ta;
 太田	ou; ta;
@@ -11068,7 +11068,7 @@ columns:
 長岡	naga; oka;
 再選	sai; sen;
 余地	yo; chi;
-突風	top; puu;
+突風	top;puu;
 突風	toq; puu;
 早朝	sou; chou;
 煙管	ki; seru;
@@ -11088,13 +11088,13 @@ columns:
 十一月	juu; ichi; gatsu;
 解法	kai; hou;
 電機	den; ki;
-実数	jis; suu;
+実数	jis;suu;
 実数	jiq; suu;
 主人	shu; jin;
-学校	gak; kou;
+学校	gak;kou;
 学校	gaq; kou;
 蜻蛉	ton; bo;
-一本	ip; pon;
+一本	ip;pon;
 一本	iq; pon;
 紀元前	ki; gen; zen;
 右折	u; setsu;
@@ -11127,7 +11127,7 @@ columns:
 大抵	tai; tei;
 北川	kita; gawa;
 北川	kita; kawa;
-合体	gat; tai;
+合体	gat;tai;
 合体	gaq; tai;
 崩壊	hou; kai;
 自爆	ji; baku;
@@ -11145,7 +11145,7 @@ columns:
 板敷	ita; jiki;
 真意	shin; i;
 細々	koma; goma;
-決行	kek; kou;
+決行	kek;kou;
 決行	keq; kou;
 社団	sha; dan;
 自身	ji; shin;
@@ -11154,15 +11154,15 @@ columns:
 前編	zen; pen;
 半荘	han; chan;
 進駐	shin; chuu;
-合衆国	gas; shuu; koku;
+合衆国	gas;shuu; koku;
 合衆国	gaq; shuu; koku;
 蓄え	takuwa; e,
 家具	ka; gu;
-一発	ip; patsu;
+一発	ip;patsu;
 一発	iq; patsu;
 替え	ka; e,
 替え	ga; e,
-熱心	nes; shin;
+熱心	nes;shin;
 熱心	neq; shin;
 騒ぎ出	sawa; gi, da;
 鉄人	tetsu; jin;
@@ -11171,12 +11171,12 @@ columns:
 泣きはら	na; ki, ha, ra,
 田中	ta; naka;
 田中	ata; naka;
-没頭	bot; tou;
+没頭	bot;tou;
 没頭	boq; tou;
 平手打ち	hira; te; u; chi,
 綱島	tsuna; shima;
 決まり	ki; ma, ri,
-着工	chak; kou;
+着工	chak;kou;
 着工	chaq; kou;
 曾根	so; ne;
 適度	teki; do;
@@ -11210,7 +11210,7 @@ columns:
 吸いこ	su; i, ko,
 起き上が	o; ki, a; ga,
 回転	kai; ten;
-別冊	bes; satsu;
+別冊	bes;satsu;
 別冊	beq; satsu;
 出口	de; guchi;
 介入	kai; nyuu;
@@ -11246,7 +11246,7 @@ columns:
 静電気	sei; den; ki;
 精算	sei; san;
 切な	setsu; na,
-漆黒	shik; koku;
+漆黒	shik;koku;
 漆黒	shiq; koku;
 話し声	hana; shi, goe;
 妖精	you; sei;
@@ -11263,7 +11263,7 @@ columns:
 正木	masa; ki;
 美音	bi; on;
 超過	chou; ka;
-お節介	o, sek; kai;
+お節介	o, sek;kai;
 お節介	o, seq; kai;
 現像	gen; zou;
 取り入れ	to; ri, i; re,
@@ -11274,9 +11274,9 @@ columns:
 黄色	ki; iro;
 某社	bou; sha;
 小型	ko; gata;
-一致	ic; chi;
+一致	ic;chi;
 一致	iq; chi;
-一致	it; ti;
+一致	it;ti;
 法政	hou; sei;
 草むら	kusa; mu, ra,
 音階	on; kai;
@@ -11311,7 +11311,7 @@ columns:
 試み	kokoro; mi,
 山手	yama; te;
 道路	dou; ro;
-服部	hat; tori;
+服部	hat;tori;
 服部	haq; tori;
 体裁	tei; sai;
 公立	kou; ritsu;
@@ -11331,7 +11331,7 @@ columns:
 本質的	hon; shitsu; teki;
 気さく	ki; sa, ku,
 権威	ken; i;
-発酵	hak; kou;
+発酵	hak;kou;
 発酵	haq; kou;
 断念	dan; nen;
 世に	yo; ni,
@@ -11378,7 +11378,7 @@ columns:
 自治	ji; chi;
 間食	kan; shoku;
 分け	wa; ke,
-出版社	shup; pan; sha;
+出版社	shup;pan; sha;
 出版社	shuq; pan; sha;
 視聴	shi; chou;
 仲良し	naka; yo; shi,
@@ -11388,9 +11388,9 @@ columns:
 門前	men; zen;
 損傷	son; shou;
 勝田	katsu; ta;
-出張所	shuc; chou; sho;
+出張所	shuc;chou; sho;
 出張所	shuq; chou; sho;
-出張所	shut; tyou; sho;
+出張所	shut;tyou; sho;
 目覚まし	me; za; ma, shi,
 頻度	hin; do;
 加え	kuwa; e,
@@ -11420,7 +11420,7 @@ columns:
 捕らわれ	to; ra, wa, re,
 法学	hou; gaku;
 昇格	shou; kaku;
-撤収	tes; shuu;
+撤収	tes;shuu;
 撤収	teq; shuu;
 乾か	kawa; ka,
 同誌	dou; shi;
@@ -11502,7 +11502,7 @@ columns:
 展覧会	ten; ran; kai;
 現れ	arawa; re,
 保存	ho; zon;
-月間	gek; kan;
+月間	gek;kan;
 月間	geq; kan;
 農学部	nou; gaku; bu;
 内輪	nai; rin;
@@ -11512,7 +11512,7 @@ columns:
 手ぶら	te; bu, ra,
 定め	sada; me,
 寝か	ne; ka,
-発覚	hak; kaku;
+発覚	hak;kaku;
 発覚	haq; kaku;
 敬意	kei; i;
 三上	mi; kami;
@@ -11536,7 +11536,7 @@ columns:
 照れ臭	te; re, kusa;
 任天堂	nin; ten; dou;
 大損	oo; zon;
-発声	has; sei;
+発声	has;sei;
 発声	haq; sei;
 飛び降り	to; bi, o; ri,
 無効	mu; kou;
@@ -11549,7 +11549,7 @@ columns:
 暢気	non; ki;
 図書館	to; sho; kan;
 控え室	hika; e, shitsu;
-合作	gas; saku;
+合作	gas;saku;
 合作	gaq; saku;
 原点	gen; ten;
 咳払い	seki; bara; i,
@@ -11582,7 +11582,7 @@ columns:
 項垂れ	una; da; re,
 見つけ出	mi; tsu, ke, da;
 公衆	kou; shuu;
-国家	kok; ka;
+国家	kok;ka;
 国家	koq; ka;
 年頃	toshi; goro;
 準教授	jun; kyou; ju;
@@ -11620,7 +11620,7 @@ columns:
 銀行	gin; kou;
 大分	oo; ita;
 大分	dai; bu;
-撤廃	tep; pai;
+撤廃	tep;pai;
 撤廃	teq; pai;
 自宅	ji; taku;
 間宮	ma; miya;
@@ -11646,7 +11646,7 @@ columns:
 代り	kawa; ri,
 取り乱	to; ri, mida;
 苦笑い	niga; wara; i,
-雑貨	zak; ka;
+雑貨	zak;ka;
 雑貨	zaq; ka;
 掛け布団	ka; ke, bu; ton;
 街路	gai; ro;
@@ -11655,7 +11655,7 @@ columns:
 筋肉	kin; niku;
 実例	jitsu; rei;
 沢山	taku; san;
-物体	but; tai;
+物体	but;tai;
 物体	buq; tai;
 議事堂	gi; ji; dou;
 山岳	san; gaku;
@@ -11666,7 +11666,7 @@ columns:
 主任	shu; nin;
 喜ばし	yoroko; ba, shi,
 苦労	ku; rou;
-絶景	zek; kei;
+絶景	zek;kei;
 絶景	zeq; kei;
 不敵	fu; teki;
 空き	a; ki,
@@ -11688,7 +11688,7 @@ columns:
 引退	in; tai;
 染め	so; me,
 纏ま	mato; ma,
-実績	jis; seki;
+実績	jis;seki;
 実績	jiq; seki;
 画鋲	ga; byou;
 集成	shuu; sei;
@@ -11714,7 +11714,7 @@ columns:
 黙々と	moku; moku; to,
 今月	kon; getsu;
 上品	jou; hin;
-学期	gak; ki;
+学期	gak;ki;
 学期	gaq; ki;
 柿沼	kaki; numa;
 世話人	se; wa; nin;
@@ -11755,7 +11755,7 @@ columns:
 陪審員	bai; shin; in;
 多言	ta; gen;
 根から	ne; ka, ra,
-一刀両断	it; tou; ryou; dan;
+一刀両断	it;tou; ryou; dan;
 一刀両断	iq; tou; ryou; dan;
 書房	sho; bou;
 副詞	fuku; shi;
@@ -11787,14 +11787,14 @@ columns:
 助手	jo; shu;
 晴天	sei; ten;
 降雪	kou; setsu;
-結局	kek; kyoku;
+結局	kek;kyoku;
 結局	keq; kyoku;
 寝息	ne; iki;
 未明	mi; mei;
 神尾	kami; o;
 狩猟	shu; ryou;
 言え	i; e,
-出世	shus; se;
+出世	shus;se;
 出世	shuq; se;
 家畜	ka; chiku;
 容姿	you; shi;
@@ -11807,13 +11807,13 @@ columns:
 琥珀	ko; haku;
 昨年	saku; nen;
 非公開	hi; kou; kai;
-一切	is; sai;
+一切	is;sai;
 一切	iq; sai;
 付き添	tsu; ki, so;
 脚本	kyaku; hon;
 本数	hon; suu;
 掲示板	kei; ji; ban;
-結果	kek; ka;
+結果	kek;ka;
 結果	keq; ka;
 乗れ	no; re,
 茄子	nasu; bi;
@@ -11839,7 +11839,7 @@ columns:
 青臭	ao; kusa;
 ヵ月	xka. getsu;
 追い詰め	o; i, tsu; me,
-即興	sok; kyou;
+即興	sok;kyou;
 即興	soq; kyou;
 電報	den; pou;
 中止	chuu; shi;
@@ -11847,7 +11847,7 @@ columns:
 寺本	tera; moto;
 甘美	kan; bi;
 競輪	kei; rin;
-切腹	sep; puku;
+切腹	sep;puku;
 切腹	seq; puku;
 長寿	chou; ju;
 移植	i; shoku;
@@ -11866,7 +11866,7 @@ columns:
 予備	yo; bi;
 既存	ki; zon;
 既存	ki; son;
-直結	chok; ketsu;
+直結	chok;ketsu;
 直結	choq; ketsu;
 白書	haku; sho;
 列伝	retsu; den;
@@ -11952,7 +11952,7 @@ columns:
 手配	te; hai;
 替わり	ga; wa, ri,
 飯野	ii; no;
-失点	shit; ten;
+失点	shit;ten;
 失点	shiq; ten;
 器具	ki; gu;
 有効	yuu; kou;
@@ -11978,12 +11978,12 @@ columns:
 果たして	ha; ta, shi, te,
 客車	kyaku; sha;
 知れ	shi; re,
-国会	kok; kai;
+国会	kok;kai;
 国会	koq; kai;
 成り立	na; ri, ta;
 彷徨	hou; kou;
 感触	kan; shoku;
-学科	gak; ka;
+学科	gak;ka;
 学科	gaq; ka;
 繁華	han; ka;
 在京	zai; kyou;
@@ -12019,7 +12019,7 @@ columns:
 釣り	du; ri,
 釣り	tsu; ri,
 同然	dou; zen;
-冊子	sas; shi;
+冊子	sas;shi;
 冊子	saq; shi;
 遠目	too; me;
 木霊	ko; dama;
@@ -12050,7 +12050,7 @@ columns:
 平凡	hei; bon;
 鎌倉	kama; kura;
 恋し	koi; shi,
-雑多	zat; ta;
+雑多	zat;ta;
 雑多	zaq; ta;
 依存	i; zon;
 玩具	omo; cha;
@@ -12067,13 +12067,13 @@ columns:
 根強	ne; duyo;
 詳細	shou; sai;
 共々	tomo; domo;
-鉄鋼	tek; kou;
+鉄鋼	tek;kou;
 鉄鋼	teq; kou;
 派生	ha; sei;
 通り過ぎ	too; ri, su; gi,
 来い	ko; i,
 忍法	nin; pou;
-必須	his; su;
+必須	his;su;
 必須	hiq; su;
 先ず	ma; zu,
 豪雨	gou; u;
@@ -12096,9 +12096,9 @@ columns:
 後姿	ushiro; sugata;
 バス停	ba. su. tei;
 署名	sho; mei;
-特記	tok; ki;
+特記	tok;ki;
 特記	toq; ki;
-国交	kok; kou;
+国交	kok;kou;
 国交	koq; kou;
 久々	hisa; bisa;
 神学	shin; gaku;
@@ -12146,7 +12146,7 @@ columns:
 独身	doku; shin;
 賞味	shou; mi;
 愛想	ai; so;
-直球	chok; kyuu;
+直球	chok;kyuu;
 直球	choq; kyuu;
 常に	tsune; ni,
 地底	chi; tei;
@@ -12168,7 +12168,7 @@ columns:
 首謀	shu; bou;
 獅子	shi; shi;
 獅子	ji; shi;
-実装	jis; sou;
+実装	jis;sou;
 実装	jiq; sou;
 兄さん	nii; sa, n,
 万端	ban; tan;
@@ -12263,13 +12263,13 @@ columns:
 電磁場	den; ji; ba;
 理性	ri; sei;
 筋電図	kin; den; zu;
-卒倒	sot; tou;
+卒倒	sot;tou;
 卒倒	soq; tou;
 半角片仮名	han; kaku; kata; ka; na;
 待ち受け	ma; chi, u; ke,
 恐ろし	oso; ro, shi,
 勧告	kan; koku;
-実証	jis; shou;
+実証	jis;shou;
 実証	jiq; shou;
 教祖	kyou; so;
 匿名	toku; mei;
@@ -12327,7 +12327,7 @@ columns:
 辻堂	tsuji; dou;
 戦艦	sen; kan;
 和解	wa; kai;
-失格	shik; kaku;
+失格	shik;kaku;
 失格	shiq; kaku;
 役立	yaku; da;
 三男	san; nan;
@@ -12364,9 +12364,9 @@ columns:
 品詞	hin; shi;
 異質	i; shitsu;
 信じ	shin; ji,
-率直	soc; choku;
+率直	soc;choku;
 率直	soq; choku;
-率直	sot; tyoku;
+率直	sot;tyoku;
 重点	juu; ten;
 機材	ki; zai;
 王族	ou; zoku;
@@ -12404,7 +12404,7 @@ columns:
 停車場	tei; sha; jou;
 二瓶	ni; hei;
 有無	u; mu;
-出席	shus; seki;
+出席	shus;seki;
 出席	shuq; seki;
 梅雨	tsu; yu;
 坂巻	saka; maki;
@@ -12478,14 +12478,14 @@ columns:
 体育	tai; iku;
 中一	chuu; ichi;
 若山	waka; yama;
-出社	shus; sha;
+出社	shus;sha;
 出社	shuq; sha;
 奇妙	ki; myou;
 お茶の水女子	o, cha; no, mizu; jo; shi;
 目黒	me; guro;
 関心	kan; shin;
 素肌	su; hada;
-一服	ip; puku;
+一服	ip;puku;
 一服	iq; puku;
 好き	su; ki,
 研究者	ken; kyuu; sha;
@@ -12506,7 +12506,7 @@ columns:
 落成	raku; sei;
 広大	kou; dai;
 埋め込	u; me, ko;
-客観	kyak; kan;
+客観	kyak;kan;
 客観	kyaq; kan;
 身体	shin; tai;
 損害	son; gai;
@@ -12599,7 +12599,7 @@ columns:
 ン歳	n. toshi;
 ン卜	n. boku;
 一歩	iq; po;
-一歩	ip; po;
+一歩	ip;po;
 魏武	gi; bu;
 久多	ku; ta;
 紫明	shi; a;
@@ -13339,7 +13339,7 @@ columns:
 し和	shi, wa;
 し我	shi, waga;
 出夫	deoq; to;
-出夫	deot; to;
+出夫	deot;to;
 出木	de; ki;
 出気	de; ki;
 出挙	de; kyo;
@@ -13362,7 +13362,7 @@ columns:
 ひ梅	hi, ume;
 ひ夫	hi, otto;
 干夫	hioq; to;
-干夫	hiot; to;
+干夫	hiot;to;
 ひ男	hi, otoko;
 ひ終	hi, owari;
 ひ女	hi, onna;
@@ -15342,13 +15342,13 @@ columns:
 い島	i, shima;
 医社	i; sha;
 逸店	iq; ten;
-逸店	it; ten;
+逸店	it;ten;
 壱発	iq; patsu;
-壱発	ip; patsu;
+壱発	ip;patsu;
 壱品	iq; pin;
-壱品	ip; pin;
+壱品	ip;pin;
 逸品	iq; pin;
-逸品	ip; pin;
+逸品	ip;pin;
 い亭	i, tei;
 い的	i, teki;
 い店	i, ten;
@@ -15369,32 +15369,32 @@ columns:
 絵羽	e; ba;
 絵羽	e; wa;
 乙骨	oq; kotsu;
-乙骨	ok; kotsu;
+乙骨	ok;kotsu;
 夫側	oq; togawa;
-夫側	ot; togawa;
+夫側	ot;togawa;
 夫源	oq; togen;
-夫源	ot; togen;
+夫源	ot;togen;
 夫様	oq; tosama;
-夫様	ot; tosama;
+夫様	ot;tosama;
 夫氏	oq; toshi;
-夫氏	ot; toshi;
+夫氏	ot;toshi;
 夫達	oq; totachi;
-夫達	ot; totachi;
+夫達	ot;totachi;
 夫的	oq; toteki;
-夫的	ot; toteki;
+夫的	ot;toteki;
 夫殿	oq; todono;
-夫殿	ot; todono;
+夫殿	ot;todono;
 夫用	oq; toyou;
-夫用	ot; toyou;
+夫用	ot;toyou;
 果期	ka; ki;
 可使	ka; shi;
 家士	ka; shi;
 家書	ka; sho;
 花樹	ka; ju;
 合角	kaq; kaku;
-合角	kak; kaku;
+合角	kak;kaku;
 活法	kaq; pou;
-活法	kap; pou;
+活法	kap;pou;
 華都	ka; to;
 火炉	ka; ro;
 臥位	ga; i;
@@ -15406,9 +15406,9 @@ columns:
 ガ性	ga. sei;
 ガ岳	ga. dake;
 顎下	gaq; ka;
-顎下	gak; ka;
+顎下	gak;ka;
 楽会	gaq; kai;
-楽会	gak; kai;
+楽会	gak;kai;
 ガ的	ga. teki;
 ガ島	ga. tou;
 希愛	ki; a;
@@ -15437,10 +15437,10 @@ columns:
 稀種	ki; shu;
 帰署	ki; sho;
 橘高	kiq; taka;
-橘高	kit; taka;
+橘高	kit;taka;
 橘中	kiq; chuu;
-橘中	kic; chuu;
-橘中	kit; tyuu;
+橘中	kic;chuu;
+橘中	kit;tyuu;
 木手	ki; te;
 希土	ki; do;
 木土	ki; do;
@@ -15458,7 +15458,7 @@ columns:
 期目	ki; me;
 黄目	ki; me;
 客家	kyaq; ka;
-客家	kyak; ka;
+客家	kyak;ka;
 喜屋	ki; ya;
 器屋	ki; ya;
 木家	ki; ya;
@@ -15478,24 +15478,24 @@ columns:
 苦目	ku; me;
 毛化	ke; ka;
 穴中	keq; chuu;
-穴中	kec; chuu;
-穴中	ket; tyuu;
+穴中	kec;chuu;
+穴中	ket;tyuu;
 欠品	keq; pin;
-欠品	kep; pin;
+欠品	kep;pin;
 気比	ke; hi;
 華会	ge; e;
 下魚	ge; gyo;
 月海	geq; kai;
-月海	gek; kai;
+月海	gek;kai;
 月記	geq; ki;
-月記	gek; ki;
+月記	gek;ki;
 月差	ge; tsa;
 月柱	geq; chuu;
-月柱	gec; chuu;
-月柱	get; tyuu;
+月柱	gec;chuu;
+月柱	get;tyuu;
 月虫	geq; chuu;
-月虫	gec; chuu;
-月虫	get; tyuu;
+月虫	gec;chuu;
+月虫	get;tyuu;
 こ位	ko, i;
 こ石	ko, ishi;
 子産	ko; u;
@@ -15561,9 +15561,9 @@ columns:
 こ著	ko, cho;
 こ長	ko, chou;
 国金	koq; kin;
-国金	kok; kin;
+国金	kok;kin;
 骨端	koq; tan;
-骨端	kot; tan;
+骨端	kot;tan;
 こ亭	ko, tei;
 こ邸	ko, tei;
 こ的	ko, teki;
@@ -15618,13 +15618,13 @@ columns:
 佐次	sa; ji;
 差次	sa; ji;
 作句	saq; ku;
-作句	sak; ku;
+作句	sak;ku;
 察度	saq; do;
-察度	sad; do;
+察度	sad;do;
 刷版	saq; pan;
-刷版	sap; pan;
+刷版	sap;pan;
 察安	saq; yasu;
-察安	say; yasu;
+察安	say;yasu;
 沙都	sa; to;
 座位	za; i;
 座座	za; za;
@@ -15650,10 +15650,10 @@ columns:
 シ者	shi. sha;
 屍者	shi; sha;
 失行	shiq; kou;
-失行	shik; kou;
+失行	shik;kou;
 失中	shiq; chuu;
-失中	shic; chuu;
-失中	shit; tyuu;
+失中	shic;chuu;
+失中	shit;tyuu;
 死都	shi; to;
 シ派	shi. ha;
 市馬	shi; ba;
@@ -15669,7 +15669,7 @@ columns:
 社区	sha; ku;
 社後	sha; go;
 尺骨	shaq; kotsu;
-尺骨	shak; kotsu;
+尺骨	shak;kotsu;
 朱家	shu; ka;
 主機	shu; ki;
 朱記	shu; ki;
@@ -15687,11 +15687,11 @@ columns:
 処家	sho; ka;
 処魚	sho; gyo;
 職級	shoq; kyuu;
-職級	shok; kyuu;
+職級	shok;kyuu;
 食系	shoq; kei;
-食系	shok; kei;
+食系	shok;kei;
 食痕	shoq; kon;
-食痕	shok; kon;
+食痕	shok;kon;
 字化	ji; ka;
 耳下	ji; ka;
 地粉	ji; ko;
@@ -15726,32 +15726,32 @@ columns:
 セ界	se. kai;
 背座	se; za;
 節間	seq; kan;
-節間	sek; kan;
+節間	sek;kan;
 接顔	seq; gao;
-接顔	seg; gao;
+接顔	seg;gao;
 石球	seq; kyuu;
-石球	sek; kyuu;
+石球	sek;kyuu;
 切痕	seq; kon;
-切痕	sek; kon;
+切痕	sek;kon;
 接死	se; tshi;
 接射	se; tsha;
 接手	se; tshu;
 接的	seq; teki;
-接的	set; teki;
+接的	set;teki;
 接方	seq; pou;
-接方	sep; pou;
+接方	sep;pou;
 セ店	se. ten;
 瀬人	se; to;
 世屋	se; ya;
 是時	ze; ji;
 絶禍	zeq; ka;
-絶禍	zek; ka;
+絶禍	zek;ka;
 絶界	zeq; kai;
-絶界	zek; kai;
+絶界	zek;kai;
 舌骨	zeq; kotsu;
-舌骨	zek; kotsu;
+舌骨	zek;kotsu;
 絶体	zeq; tai;
-絶体	zet; tai;
+絶体	zet;tai;
 是日	ze; bi;
 ソ店	so. ten;
 粗度	so; do;
@@ -15772,10 +15772,10 @@ columns:
 他部	ta; bu;
 多部	ta; be;
 脱型	daq; kei;
-脱型	dak; kei;
+脱型	dak;kei;
 脱調	daq; chou;
-脱調	dac; chou;
-脱調	dat; tyou;
+脱調	dac;chou;
+脱調	dat;tyou;
 知価	chi; ka;
 地機	chi; ki;
 地史	chi; shi;
@@ -15783,7 +15783,7 @@ columns:
 血時	chi; ji;
 知図	chi; zu;
 竹器	chiq; ki;
-竹器	chik; ki;
+竹器	chik;ki;
 地碑	chi; hi;
 知日	chi; bi;
 血府	chi; fu;
@@ -15805,33 +15805,33 @@ columns:
 手子	te; ko;
 手児	te; ji;
 適化	teq; ka;
-適化	tek; ka;
+適化	tek;ka;
 鉄海	teq; kai;
-鉄海	tek; kai;
+鉄海	tek;kai;
 鉄機	teq; ki;
-鉄機	tek; ki;
+鉄機	tek;ki;
 鉄研	teq; ken;
-鉄研	tek; ken;
+鉄研	tek;ken;
 鉄風	teq; puu;
-鉄風	tep; puu;
+鉄風	tep;puu;
 徹屋	teq; ya;
-徹屋	tey; ya;
+徹屋	tey;ya;
 手手	te; te;
 手簿	te; bo;
 手目	te; me;
 杜記	to; ki;
 特化	toq; ka;
-特化	tok; ka;
+特化	tok;ka;
 特科	toq; ka;
-特科	tok; ka;
+特科	tok;ka;
 特機	toq; ki;
-特機	tok; ki;
+特機	tok;ki;
 特休	toq; kyuu;
-特休	tok; kyuu;
+特休	tok;kyuu;
 特講	toq; kou;
-特講	tok; kou;
+特講	tok;kou;
 特品	toq; pin;
-特品	top; pin;
+特品	top;pin;
 鳥羽	to; ba;
 土風	to; fu;
 登路	to; ro;
@@ -15854,15 +15854,15 @@ columns:
 仁後	ni; go;
 荷時	ni; ji;
 日中	niq; chuu;
-日中	nic; chuu;
-日中	nit; tyuu;
+日中	nic;chuu;
+日中	nit;tyuu;
 値下	ne; sa;
 値差	ne; sa;
 熱橋	neq; kyou;
-熱橋	nek; kyou;
+熱橋	nek;kyou;
 熱死	ne; tshi;
 熱板	neq; pan;
-熱板	nep; pan;
+熱板	nep;pan;
 音流	ne; ru;
 野氏	no; shi;
 能世	no; se;
@@ -15871,7 +15871,7 @@ columns:
 刃具	ha; gu;
 覇種	ha; shu;
 白化	haq; ka;
-白化	hak; ka;
+白化	hak;ka;
 波通	ha; tsu;
 刃部	ha; bu;
 ば学	ba, gaku;
@@ -15882,7 +15882,7 @@ columns:
 ば様	ba, sama;
 馬事	ba; ji;
 罰打	baq; da;
-罰打	bad; da;
+罰打	bad;da;
 ば漬	ba, zuke;
 ば店	ba, ten;
 ば屋	ba, ya;
@@ -15891,7 +15891,7 @@ columns:
 肥後	hi; go;
 秘打	hi; da;
 筆界	hiq; kai;
-筆界	hik; kai;
+筆界	hik;kai;
 火間	hi; ma;
 火目	hi; me;
 陽目	hi; me;
@@ -15906,18 +15906,18 @@ columns:
 歩車	fu; sha;
 富士	fu; ji;
 弗化	fuq; ka;
-弗化	fuk; ka;
+弗化	fuk;ka;
 福高	fuq; kou;
-福高	fuk; kou;
+福高	fuk;kou;
 麩屋	fu; ya;
 物化	buq; ka;
-物化	buk; ka;
+物化	buk;ka;
 部派	bu; ha;
 別科	beq; ka;
-別科	bek; ka;
+別科	bek;ka;
 別子	be; tshi;
 別体	beq; tai;
-別体	bet; tai;
+別体	bet;tai;
 ペ様	pe. sama;
 ペ氏	pe. shi;
 ペ店	pe. ten;
@@ -15927,18 +15927,18 @@ columns:
 歩粉	ho; ko;
 歩車	ho; sha;
 法句	hoq; ku;
-法句	hok; ku;
+法句	hok;ku;
 法中	hoq; chuu;
-法中	hoc; chuu;
-法中	hot; tyuu;
+法中	hoc;chuu;
+法中	hot;tyuu;
 北派	hoq; pa;
-北派	hop; pa;
+北派	hop;pa;
 母機	bo; ki;
 母児	bo; ji;
 牧家	boq; ka;
-牧家	bok; ka;
+牧家	bok;ka;
 牧会	boq; kai;
-牧会	bok; kai;
+牧会	bok;kai;
 ポ君	po. kun;
 ポ口	po. guchi;
 ポ語	po. go;
@@ -15986,20 +15986,20 @@ columns:
 目屋	me; ya;
 目等	me; ra;
 木棺	moq; kan;
-木棺	mok; kan;
+木棺	mok;kan;
 木球	moq; kyuu;
-木球	mok; kyuu;
+木球	mok;kyuu;
 木高	moq; kou;
-木高	mok; kou;
+木高	mok;kou;
 藻場	mo; ba;
 屋市	ya; shi;
 矢視	ya; shi;
 屋次	ya; ji;
 矢次	ya; ji;
 薬球	yaq; kyuu;
-薬球	yak; kyuu;
+薬球	yak;kyuu;
 薬系	yaq; kei;
-薬系	yak; kei;
+薬系	yak;kei;
 や婦	ya, fu;
 邪馬	ya; ma;
 ゆ会	yu, kai;
@@ -16031,9 +16031,9 @@ columns:
 ラ族	ra. zoku;
 裸地	ra; chi;
 楽苦	raq; ku;
-楽苦	rak; ku;
+楽苦	rak;ku;
 楽君	raq; kun;
-楽君	rak; kun;
+楽君	rak;kun;
 ら店	ra, ten;
 ラ博	ra. haku;
 ラ米	ra. mai;
@@ -16238,9 +16238,9 @@ columns:
 麺く	men; ku,
 役く	yaku; ku,
 奴多	yaq; kooo;
-奴多	yak; kooo;
+奴多	yak;kooo;
 奴良	yaq; koyo;
-奴良	yak; koyo;
+奴良	yak;koyo;
 湯く	yu; ku,
 欲く	yoku; ku,
 楽く	raku; ku,
@@ -16256,26 +16256,26 @@ columns:
 聖ペ	kiyoshi; pe.
 魏志	gi; shi;
 屈腱	kuq; ken;
-屈腱	kuk; ken;
+屈腱	kuk;ken;
 阿夫	kumaoq; to;
-阿夫	kumaot; to;
+阿夫	kumaot;to;
 護佐	go; sa;
 徐庶	jo; sho;
 愿い	sunao; i,
 攝津	seq; tsu;
-攝津	set; tsu;
+攝津	set;tsu;
 曽利	so; ri;
 徹甲	teq; kou;
-徹甲	tek; kou;
+徹甲	tek;kou;
 独ソ	doku; so.
 日鉄	niq; tetsu;
-日鉄	nit; tetsu;
+日鉄	nit;tetsu;
 日歯	niq; pa;
-日歯	nip; pa;
+日歯	nip;pa;
 ネ申	ne. saru;
 武夷	bu; i;
 仏頭	buq; tou;
-仏頭	but; tou;
+仏頭	but;tou;
 米ソ	bei; so.
 弥陀	mi; da;
 求ム	moto; mu.
@@ -16349,9 +16349,9 @@ columns:
 魏使	gi; shi;
 魏書	gi; sho;
 屈筋	kuq; kin;
-屈筋	kuk; kin;
+屈筋	kuk;kin;
 結体	keq; tai;
-結体	ket; tai;
+結体	ket;tai;
 独楽	ko; ma;
 豪ら	gou; ra,
 呉器	go; ki;
@@ -16398,14 +16398,14 @@ columns:
 津見	tsu; mi;
 津路	tsu; ro;
 鐵鋼	teq; kou;
-鐵鋼	tek; kou;
+鐵鋼	tek;kou;
 電げ	den; ge,
 独角	doq; kaku;
-独角	dok; kaku;
+独角	dok;kaku;
 独協	doq; kyou;
-独協	dok; kyou;
+独協	dok;kyou;
 独研	doq; ken;
-独研	dok; ken;
+独研	dok;ken;
 中ち	naka; chi,
 奈部	na; bu;
 奈見	na; mi;
@@ -16413,64 +16413,64 @@ columns:
 奈代	na; yo;
 日ち	nichi; chi,
 日火	niq; ka;
-日火	nik; ka;
+日火	nik;ka;
 日科	niq; ka;
-日科	nik; ka;
+日科	nik;ka;
 日海	niq; kai;
-日海	nik; kai;
+日海	nik;kai;
 日観	niq; kan;
-日観	nik; kan;
+日観	nik;kan;
 日機	niq; ki;
-日機	nik; ki;
+日機	nik;ki;
 日共	niq; kyou;
-日共	nik; kyou;
+日共	nik;kyou;
 日協	niq; kyou;
-日協	nik; kyou;
+日協	nik;kyou;
 日教	niq; kyou;
-日教	nik; kyou;
+日教	nik;kyou;
 日局	niq; kyoku;
-日局	nik; kyoku;
+日局	nik;kyoku;
 日家	niq; ke;
-日家	nik; ke;
+日家	nik;ke;
 日券	niq; ken;
-日券	nik; ken;
+日券	nik;ken;
 日研	niq; ken;
-日研	nik; ken;
+日研	nik;ken;
 日鋼	niq; kou;
-日鋼	nik; kou;
+日鋼	nik;kou;
 日国	niq; koku;
-日国	nik; koku;
+日国	nik;koku;
 日誌	ni; tshi;
 日社	ni; tsha;
 日車	ni; tsha;
 日主	ni; tshu;
 日書	ni; tsho;
 日体	niq; tai;
-日体	nit; tai;
+日体	nit;tai;
 日達	niq; tatsu;
-日達	nit; tatsu;
+日達	nit;tatsu;
 日地	niq; chi;
-日地	nic; chi;
-日地	nit; ti;
+日地	nic;chi;
+日地	nit;ti;
 日柱	niq; chuu;
-日柱	nic; chuu;
-日柱	nit; tyuu;
+日柱	nic;chuu;
+日柱	nit;tyuu;
 日調	niq; chou;
-日調	nic; chou;
+日調	nic;chou;
 日通	niq; tsuu;
-日通	nit; tsuu;
+日通	nit;tsuu;
 日点	niq; ten;
-日点	nit; ten;
+日点	nit;ten;
 日図	niq; to;
-日図	nit; to;
+日図	nit;to;
 日土	niq; to;
-日土	nit; to;
+日土	nit;to;
 日発	niq; patsu;
-日発	nip; patsu;
+日発	nip;patsu;
 日版	niq; pan;
-日版	nip; pan;
+日版	nip;pan;
 日報	niq; pou;
-日報	nip; pou;
+日報	nip;pou;
 日焼	ni; ya;
 盧舎	no; sha;
 騰げ	noboru; ge,
@@ -16490,22 +16490,22 @@ columns:
 比路	hi; ro;
 仏手	bu; shu;
 仏風	buq; kaze;
-仏風	buk; kaze;
+仏風	buk;kaze;
 仏旗	buq; ki;
-仏旗	buk; ki;
+仏旗	buk;ki;
 仏光	buq; kou;
-仏光	buk; kou;
+仏光	buk;kou;
 仏骨	buq; kotsu;
-仏骨	buk; kotsu;
+仏骨	buk;kotsu;
 仏種	bu; tshu;
 仏所	bu; tsho;
 米ら	bei; ra,
 輔車	ho; sha;
 細ち	hoso; chi,
 墨家	boq; ka;
-墨家	bok; ka;
+墨家	bok;ka;
 墨国	boq; koku;
-墨国	bok; koku;
+墨国	bok;koku;
 眞流	ma; ru;
 磨ら	migaku; ra,
 滿ち	mitsuru; chi,
@@ -16535,10 +16535,10 @@ columns:
 李書	ri; sho;
 リ人	ri. jin;
 立海	riq; kai;
-立海	rik; kai;
+立海	rik;kai;
 立駐	riq; chuu;
-立駐	ric; chuu;
-立駐	rit; tyuu;
+立駐	ric;chuu;
+立駐	rit;tyuu;
 リ店	ri. ten;
 リ道	ri. dou;
 リ人	ri. nin;
@@ -16553,7 +16553,7 @@ columns:
 瑠人	ru; to;
 瑠愛	ru; me;
 烈光	req; kou;
-烈光	rek; kou;
+烈光	rek;kou;
 ロ間	ro. kan;
 露樹	ro; ki;
 ロ行	ro. gyou;
@@ -16595,7 +16595,7 @@ columns:
 小都	sa; to;
 志都	shi; to;
 寿都	suq; tsu;
-寿都	sut; tsu;
+寿都	sut;tsu;
 曽市	so; shi;
 田区	ta; ku;
 田都	ta; to;
@@ -16610,16 +16610,16 @@ columns:
 都都	to; to;
 都府	to; fu;
 日化	niq; ka;
-日化	nik; ka;
+日化	nik;ka;
 日都	niq; to;
-日都	nit; to;
+日都	nit;to;
 野区	no; ku;
 ノ島	no. tou;
 比視	hi; shi;
 比都	hi; to;
 布都	fu; to;
 仏都	buq; to;
-仏都	but; to;
+仏都	but;to;
 武都	bu; to;
 未市	mi; shi;
 深都	mi; to;
@@ -16833,17 +16833,17 @@ columns:
 高そ	taka; so,
 昂め	taka; me,
 貴会	taq; tokai;
-貴会	tat; tokai;
+貴会	tat;tokai;
 貴方	taq; tokata;
-貴方	tat; tokata;
+貴方	tat;tokata;
 貴学	taq; togaku;
-貴学	tat; togaku;
+貴学	tat;togaku;
 貴局	taq; tokyoku;
-貴局	tat; tokyoku;
+貴局	tat;tokyoku;
 貴職	taq; toshoku;
-貴職	tat; toshoku;
+貴職	tat;toshoku;
 貴妃	taq; tohi;
-貴妃	tat; tohi;
+貴妃	tat;tohi;
 懈ら	tayu; ra,
 近そ	chika; so,
 拙め	tsutana; me,
@@ -16988,7 +16988,7 @@ columns:
 悪す	aku; su,
 安愚	a; gu;
 悪球	aq; kyuu;
-悪球	ak; kyuu;
+悪球	ak;kyuu;
 異句	i; ku;
 異株	i; shu;
 異次	i; ji;
@@ -17044,7 +17044,7 @@ columns:
 お鬼	o, oni;
 大バ	oo; ba.
 大奴	ooyaq; ko;
-大奴	ooyak; ko;
+大奴	ooyak;ko;
 お終	o, owari;
 お菓	o, ka;
 お母	o, kaa;
@@ -17242,7 +17242,7 @@ columns:
 お蝶	o, chou;
 お亭	o, chin;
 追波	oq; pa;
-追波	op; pa;
+追波	op;pa;
 お通	o, tsuu;
 お塚	o, tsuka;
 お疲	o, tsukare;
@@ -17489,23 +17489,23 @@ columns:
 消ゆ	ki; yu,
 偽果	gi; ka;
 逆火	gyaq; ka;
-逆火	gyak; ka;
+逆火	gyak;ka;
 逆血	gyaq; ketsu;
-逆血	gyak; ketsu;
+逆血	gyak;ketsu;
 御記	gyo; ki;
 軽ジ	kei; ji.
 軽ト	kei; to.
 軽ろ	kei; ro,
 消ゆ	ke; yu,
 現夫	genoq; to;
-現夫	genot; to;
+現夫	genot;to;
 現レ	gen; re.
 現わ	gen; wa,
 古意	ko; i;
 子い	ko; i,
 小狼	ko; u;
 抗夫	kouoq; to;
-抗夫	kouot; to;
+抗夫	kouot;to;
 好キ	kou; ki.
 向ゲ	kou; ge.
 高コ	kou; ko.
@@ -17790,16 +17790,16 @@ columns:
 次世	ji; se;
 自知	ji; chi;
 実教	jiq; kyou;
-実教	jik; kyou;
+実教	jik;kyou;
 実券	jiq; ken;
-実券	jik; ken;
+実券	jik;ken;
 実釣	jiq; chou;
-実釣	jic; chou;
-実釣	jit; tyou;
+実釣	jic;chou;
+実釣	jit;tyou;
 実テ	jiq; te.
-実テ	jit; te.
+実テ	jit;te.
 実踏	jiq; tou;
-実踏	jit; tou;
+実踏	jit;tou;
 実テ	jitsu; te.
 実ハ	jitsu; ha.
 実ゆ	jitsu; yu,
@@ -17814,7 +17814,7 @@ columns:
 自惚	ji; bo;
 純ポ	jun; po.
 女夫	jooq; to;
-女夫	joot; to;
+女夫	joot;to;
 女媧	jo; ka;
 助理	jo; ri;
 自ラ	ji; ra.
@@ -17875,16 +17875,16 @@ columns:
 総レ	sou; re.
 粗鬆	so; su;
 即乾	soq; kan;
-即乾	sok; kan;
+即乾	sok;kan;
 即完	soq; kan;
-即完	sok; kan;
+即完	sok;kan;
 粗油	so; yu;
 続航	zoq; kou;
-続航	zok; kou;
+続航	zok;kou;
 他ア	ta; a.
 耐へ	tai; he,
 多夫	taoq; to;
-多夫	taot; to;
+多夫	taot;to;
 多花	ta; ka;
 高す	taka; su,
 他我	ta; ga;
@@ -17934,28 +17934,28 @@ columns:
 大ホ	dai; ho.
 大め	dai; me,
 大奴	daiyaq; ko;
-大奴	daiyak; ko;
+大奴	daiyak;ko;
 打碁	da; go;
 打手	da; shu;
 脱灰	daq; kai;
-脱灰	dak; kai;
+脱灰	dak;kai;
 脱解	daq; kai;
-脱解	dak; kai;
+脱解	dak;kai;
 脱核	daq; kaku;
-脱核	dak; kaku;
+脱核	dak;kaku;
 脱血	daq; ketsu;
-脱血	dak; ketsu;
+脱血	dak;ketsu;
 脱骨	daq; kotsu;
-脱骨	dak; kotsu;
+脱骨	dak;kotsu;
 脱炭	daq; tan;
-脱炭	dat; tan;
+脱炭	dat;tan;
 脱泡	daq; pou;
-脱泡	dap; pou;
+脱泡	dap;pou;
 打無	da; mu;
 打呂	da; ryo;
 中ア	chuu; a.
 駐夫	chuuoq; to;
-駐夫	chuuot; to;
+駐夫	chuuot;to;
 中ソ	chuu; so.
 駐ソ	chuu; so.
 中頁	chuu; pe-ji;
@@ -17972,7 +17972,7 @@ columns:
 超ロ	chou; ro.
 直ガ	choku; ga.
 直鞍	choq; kura;
-直鞍	chok; kura;
+直鞍	chok;kura;
 常ろ	tsune; ro,
 低コ	tei; ko.
 低ス	tei; su.
@@ -18077,12 +18077,12 @@ columns:
 悪め	niku; me,
 偽フ	nise; fu.
 新羽	niq; pa;
-新羽	nip; pa;
+新羽	nip;pa;
 入リ	nyuu; ri.
 入ル	nyuu; ru.
 入ル	hai; ru.
 初辰	haq; tatsu;
-初辰	hat; tatsu;
+初辰	hat;tatsu;
 初ウ	hatsu; u.
 初コ	hatsu; ko.
 初セ	hatsu; se.
@@ -18101,7 +18101,7 @@ columns:
 非ズ	hi; zu.
 非知	hi; chi;
 単冠	hitokaq; pu;
-単冠	hitokap; pu;
+単冠	hitokap;pu;
 被度	hi; do;
 非歯	hi; ha;
 比ベ	hi; be.
@@ -18143,14 +18143,14 @@ columns:
 不器	bu; ki;
 不気	bu; ki;
 別犬	beq; ken;
-別犬	bek; ken;
+別犬	bek;ken;
 別訴	be; tso;
 別定	beq; tei;
-別定	bet; tei;
+別定	bet;tei;
 別庭	beq; tei;
-別庭	bet; tei;
+別庭	bet;tei;
 別寅	beq; tora;
-別寅	bet; tora;
+別寅	bet;tora;
 別ゲ	betsu; ge.
 別シ	betsu; shi.
 別ソ	betsu; so.
@@ -18332,7 +18332,7 @@ columns:
 無目	mu; me;
 無眼	mu; me;
 無奴	muyaq; ko;
-無奴	muyak; ko;
+無奴	muyak;ko;
 無利	mu; ri;
 名ピ	mei; pi.
 名プ	mei; pu.
@@ -18356,7 +18356,7 @@ columns:
 逆ボ	gyaku; bo.
 逆ミ	gyaku; mi.
 逆計	gyaq; kei;
-逆計	gyak; kei;
+逆計	gyak;kei;
 み火	mi, hi;
 み湯	mi, yu;
 御湯	mi; yu;
@@ -18397,159 +18397,159 @@ columns:
 一頁	ichi; pe-ji;
 一ら	ichi; ra,
 一価	iq; ka;
-一価	ik; ka;
+一価	ik;ka;
 一課	iq; ka;
-一課	ik; ka;
+一課	ik;ka;
 一画	iq; kaku;
-一画	ik; kaku;
+一画	ik;kaku;
 一株	iq; kabu;
-一株	ik; kabu;
+一株	ik;kabu;
 一辛	iq; kara;
-一辛	ik; kara;
+一辛	ik;kara;
 一冠	iq; kan;
-一冠	ik; kan;
+一冠	ik;kan;
 一巻	iq; kan;
-一巻	ik; kan;
+一巻	ik;kan;
 一缶	iq; kan;
-一缶	ik; kan;
+一缶	ik;kan;
 一区	iq; ku;
-一区	ik; ku;
+一区	ik;ku;
 一句	iq; ku;
-一句	ik; ku;
+一句	ik;ku;
 一躯	iq; ku;
-一躯	ik; ku;
+一躯	ik;ku;
 一口	iq; kuchi;
-一口	ik; kuchi;
+一口	ik;kuchi;
 一組	iq; kumi;
-一組	ik; kumi;
+一組	ik;kumi;
 一桁	iq; keta;
-一桁	ik; keta;
+一桁	ik;keta;
 一件	iq; ken;
-一件	ik; ken;
+一件	ik;ken;
 一軒	iq; ken;
-一軒	ik; ken;
+一軒	ik;ken;
 一間	iq; ken;
-一間	ik; ken;
+一間	ik;ken;
 一個	iq; ko;
-一個	ik; ko;
+一個	ik;ko;
 一戸	iq; ko;
-一戸	ik; ko;
+一戸	ik;ko;
 一湖	iq; ko;
-一湖	ik; ko;
+一湖	ik;ko;
 一校	iq; kou;
-一校	ik; kou;
+一校	ik;kou;
 一港	iq; kou;
-一港	ik; kou;
+一港	ik;kou;
 一項	iq; kou;
-一項	ik; kou;
+一項	ik;kou;
 一子	i; tshi;
 一社	i; tsha;
 一種	i; tshu;
 一首	i; tshu;
 一卓	iq; taku;
-一卓	it; taku;
+一卓	it;taku;
 一択	iq; taku;
-一択	it; taku;
+一択	it;taku;
 一束	iq; taba;
-一束	it; taba;
+一束	it;taba;
 一玉	iq; tama;
-一玉	it; tama;
+一玉	it;tama;
 一樽	iq; taru;
-一樽	it; taru;
+一樽	it;taru;
 一反	iq; tan;
-一反	it; tan;
+一反	it;tan;
 一着	iq; chaku;
-一着	ic; chaku;
-一着	it; tyaku;
+一着	ic;chaku;
+一着	it;tyaku;
 一丁	iq; chou;
-一丁	ic; chou;
-一丁	it; tyou;
+一丁	ic;chou;
+一丁	it;tyou;
 一対	iq; tsui;
-一対	it; tsui;
+一対	it;tsui;
 一通	iq; tsuu;
-一通	it; tsuu;
+一通	it;tsuu;
 一粒	iq; tsubu;
-一粒	it; tsubu;
+一粒	it;tsubu;
 一坪	iq; tsubo;
-一坪	it; tsubo;
+一坪	it;tsubo;
 一手	iq; te;
-一手	it; te;
+一手	it;te;
 一艇	iq; tei;
-一艇	it; tei;
+一艇	it;tei;
 一滴	iq; teki;
-一滴	it; teki;
+一滴	it;teki;
 一店	iq; ten;
-一店	it; ten;
+一店	it;ten;
 一点	iq; ten;
-一点	it; ten;
+一点	it;ten;
 一斗	iq; to;
-一斗	it; to;
+一斗	it;to;
 一党	iq; tou;
-一党	it; tou;
+一党	it;tou;
 一灯	iq; tou;
-一灯	it; tou;
+一灯	it;tou;
 一答	iq; tou;
-一答	it; tou;
+一答	it;tou;
 一頭	iq; tou;
-一頭	it; tou;
+一頭	it;tou;
 一把	iq; pa;
-一把	ip; pa;
+一把	ip;pa;
 一波	iq; pa;
-一波	ip; pa;
+一波	ip;pa;
 一羽	iq; pa;
-一羽	ip; pa;
+一羽	ip;pa;
 一敗	iq; pai;
-一敗	ip; pai;
+一敗	ip;pai;
 一杯	iq; pai;
-一杯	ip; pai;
+一杯	ip;pai;
 一拍	iq; paku;
-一拍	ip; paku;
+一拍	ip;paku;
 一枠	iq; paku;
-一枠	ip; paku;
+一枠	ip;paku;
 一泊	iq; paku;
-一泊	ip; paku;
+一泊	ip;paku;
 一箱	iq; pako;
-一箱	ip; pako;
+一箱	ip;pako;
 一柱	iq; pashira;
-一柱	ip; pashira;
+一柱	ip;pashira;
 一鉢	iq; pachi;
-一鉢	ip; pachi;
+一鉢	ip;pachi;
 一割	iq; pari;
-一割	ip; pari;
+一割	ip;pari;
 一針	iq; pari;
-一針	ip; pari;
+一針	ip;pari;
 一椀	iq; pan;
-一椀	ip; pan;
+一椀	ip;pan;
 一版	iq; pan;
-一版	ip; pan;
+一版	ip;pan;
 一犯	iq; pan;
-一犯	ip; pan;
+一犯	ip;pan;
 一班	iq; pan;
-一班	ip; pan;
+一班	ip;pan;
 一日	iq; pi;
-一日	ip; pi;
+一日	ip;pi;
 一匹	iq; piki;
-一匹	ip; piki;
+一匹	ip;piki;
 一俵	iq; pyou;
-一俵	ip; pyou;
+一俵	ip;pyou;
 一票	iq; pyou;
-一票	ip; pyou;
+一票	ip;pyou;
 一品	iq; pin;
-一品	ip; pin;
+一品	ip;pin;
 一袋	iq; pukuro;
-一袋	ip; pukuro;
+一袋	ip;pukuro;
 一分	iq; pun;
-一分	ip; pun;
+一分	ip;pun;
 一片	iq; pen;
-一片	ip; pen;
+一片	ip;pen;
 一篇	iq; pen;
-一篇	ip; pen;
+一篇	ip;pen;
 一編	iq; pen;
-一編	ip; pen;
+一編	ip;pen;
 一辺	iq; pen;
-一辺	ip; pen;
+一辺	ip;pen;
 一遍	iq; pen;
-一遍	ip; pen;
+一遍	ip;pen;
 九%	kyuu; pa-sento;
 九頁	kyuu; pe-ji;
 九位	ku; i;
@@ -18685,108 +18685,108 @@ columns:
 八%	hachi; pa-sento;
 八頁	hachi; pe-ji;
 八課	haq; ka;
-八課	hak; ka;
+八課	hak;ka;
 八回	haq; kai;
-八回	hak; kai;
+八回	hak;kai;
 八階	haq; kai;
-八階	hak; kai;
+八階	hak;kai;
 八画	haq; kaku;
-八画	hak; kaku;
+八画	hak;kaku;
 八角	haq; kaku;
-八角	hak; kaku;
+八角	hak;kaku;
 八巻	haq; kan;
-八巻	hak; kan;
+八巻	hak;kan;
 八貫	haq; kan;
-八貫	hak; kan;
+八貫	hak;kan;
 八区	haq; ku;
-八区	hak; ku;
+八区	hak;ku;
 八句	haq; ku;
-八句	hak; ku;
+八句	hak;ku;
 八口	haq; kuchi;
-八口	hak; kuchi;
+八口	hak;kuchi;
 八組	haq; kumi;
-八組	hak; kumi;
+八組	hak;kumi;
 八桁	haq; keta;
-八桁	hak; keta;
+八桁	hak;keta;
 八件	haq; ken;
-八件	hak; ken;
+八件	hak;ken;
 八軒	haq; ken;
-八軒	hak; ken;
+八軒	hak;ken;
 八間	haq; ken;
-八間	hak; ken;
+八間	hak;ken;
 八個	haq; ko;
-八個	hak; ko;
+八個	hak;ko;
 八校	haq; kou;
-八校	hak; kou;
+八校	hak;kou;
 八項	haq; kou;
-八項	hak; kou;
+八項	hak;kou;
 八子	ha; tshi;
 八社	ha; tsha;
 八種	ha; tshu;
 八首	ha; tshu;
 八体	haq; tai;
-八体	hat; tai;
+八体	hat;tai;
 八束	haq; taba;
-八束	hat; taba;
+八束	hat;taba;
 八玉	haq; tama;
-八玉	hat; tama;
+八玉	hat;tama;
 八丁	haq; chou;
-八丁	hac; chou;
-八丁	hat; tyou;
+八丁	hac;chou;
+八丁	hat;tyou;
 八通	haq; tsuu;
-八通	hat; tsuu;
+八通	hat;tsuu;
 八坪	haq; tsubo;
-八坪	hat; tsubo;
+八坪	hat;tsubo;
 八手	haq; te;
-八手	hat; te;
+八手	hat;te;
 八店	haq; ten;
-八店	hat; ten;
+八店	hat;ten;
 八点	haq; ten;
-八点	hat; ten;
+八点	hat;ten;
 八転	haq; ten;
-八転	hat; ten;
+八転	hat;ten;
 八斗	haq; to;
-八斗	hat; to;
+八斗	hat;to;
 八灯	haq; tou;
-八灯	hat; tou;
+八灯	hat;tou;
 八等	haq; tou;
-八等	hat; tou;
+八等	hat;tou;
 八波	haq; pa;
-八波	hap; pa;
+八波	hap;pa;
 八杯	haq; pai;
-八杯	hap; pai;
+八杯	hap;pai;
 八柱	haq; pashira;
-八柱	hap; pashira;
+八柱	hap;pashira;
 八発	haq; patsu;
-八発	hap; patsu;
+八発	hap;patsu;
 八版	haq; pan;
-八版	hap; pan;
+八版	hap;pan;
 八班	haq; pan;
-八班	hap; pan;
+八班	hap;pan;
 八匹	haq; piki;
-八匹	hap; piki;
+八匹	hap;piki;
 八品	haq; pin;
-八品	hap; pin;
+八品	hap;pin;
 八分	haq; pun;
-八分	hap; pun;
+八分	hap;pun;
 八片	haq; pen;
-八片	hap; pen;
+八片	hap;pen;
 八篇	haq; pen;
-八篇	hap; pen;
+八篇	hap;pen;
 八編	haq; pen;
-八編	hap; pen;
+八編	hap;pen;
 八歩	haq; po;
-八歩	hap; po;
+八歩	hap;po;
 八本	haq; pon;
-八本	hap; pon;
+八本	hap;pon;
 三日	miq; ka;
-三日	mik; ka;
+三日	mik;ka;
 四児	yo; ji;
 四字	yo; ji;
 四時	yo; ji;
 四次	yo; ji;
 四日	yoq; ka;
-四日	yok; ka;
+四日	yok;ka;
 四羽	yo; wa;
 四%	yon; pa-sento;
 四頁	yon; pe-ji;
@@ -18799,422 +18799,422 @@ columns:
 六%	roku; pa-sento;
 六頁	roku; pe-ji;
 六価	roq; ka;
-六価	rok; ka;
+六価	rok;ka;
 六課	roq; ka;
-六課	rok; ka;
+六課	rok;ka;
 六回	roq; kai;
-六回	rok; kai;
+六回	rok;kai;
 六階	roq; kai;
-六階	rok; kai;
+六階	rok;kai;
 六画	roq; kaku;
-六画	rok; kaku;
+六画	rok;kaku;
 六角	roq; kaku;
-六角	rok; kaku;
+六角	rok;kaku;
 六冠	roq; kan;
-六冠	rok; kan;
+六冠	rok;kan;
 六巻	roq; kan;
-六巻	rok; kan;
+六巻	rok;kan;
 六缶	roq; kan;
-六缶	rok; kan;
+六缶	rok;kan;
 六貫	roq; kan;
-六貫	rok; kan;
+六貫	rok;kan;
 六区	roq; ku;
-六区	rok; ku;
+六区	rok;ku;
 六句	roq; ku;
-六句	rok; ku;
+六句	rok;ku;
 六口	roq; kuchi;
-六口	rok; kuchi;
+六口	rok;kuchi;
 六組	roq; kumi;
-六組	rok; kumi;
+六組	rok;kumi;
 六桁	roq; keta;
-六桁	rok; keta;
+六桁	rok;keta;
 六件	roq; ken;
-六件	rok; ken;
+六件	rok;ken;
 六軒	roq; ken;
-六軒	rok; ken;
+六軒	rok;ken;
 六間	roq; ken;
-六間	rok; ken;
+六間	rok;ken;
 六個	roq; ko;
-六個	rok; ko;
+六個	rok;ko;
 六戸	roq; ko;
-六戸	rok; ko;
+六戸	rok;ko;
 六湖	roq; ko;
-六湖	rok; ko;
+六湖	rok;ko;
 六校	roq; kou;
-六校	rok; kou;
+六校	rok;kou;
 六項	roq; kou;
-六項	rok; kou;
+六項	rok;kou;
 六波	roq; pa;
-六波	rop; pa;
+六波	rop;pa;
 六派	roq; pa;
-六派	rop; pa;
+六派	rop;pa;
 六杯	roq; pai;
-六杯	rop; pai;
+六杯	rop;pai;
 六泊	roq; paku;
-六泊	rop; paku;
+六泊	rop;paku;
 六柱	roq; pashira;
-六柱	rop; pashira;
+六柱	rop;pashira;
 六発	roq; patsu;
-六発	rop; patsu;
+六発	rop;patsu;
 六版	roq; pan;
-六版	rop; pan;
+六版	rop;pan;
 六匹	roq; piki;
-六匹	rop; piki;
+六匹	rop;piki;
 六品	roq; pin;
-六品	rop; pin;
+六品	rop;pin;
 六分	roq; pun;
-六分	rop; pun;
+六分	rop;pun;
 六片	roq; pen;
-六片	rop; pen;
+六片	rop;pen;
 六篇	roq; pen;
-六篇	rop; pen;
+六篇	rop;pen;
 六編	roq; pen;
-六編	rop; pen;
+六編	rop;pen;
 六歩	roq; po;
-六歩	rop; po;
+六歩	rop;po;
 六本	roq; pon;
-六本	rop; pon;
+六本	rop;pon;
 一射	i; tsha;
 一兆	iq; chou;
-一兆	ic; chou;
-一兆	it; tyou;
+一兆	ic;chou;
+一兆	it;tyou;
 八兆	haq; chou;
-八兆	hac; chou;
-八兆	hat; tyou;
+八兆	hac;chou;
+八兆	hat;tyou;
 八百	haq; pyaku;
-八百	hap; pyaku;
+八百	hap;pyaku;
 六百	roq; pyaku;
-六百	rop; pyaku;
+六百	rop;pyaku;
 億%	oku; pa-sento;
 京ち	kei; chi,
 京ら	kei; ra,
 十課	jiq; ka;
-十課	jik; ka;
+十課	jik;ka;
 十回	jiq; kai;
-十回	jik; kai;
+十回	jik;kai;
 十階	jiq; kai;
-十階	jik; kai;
+十階	jik;kai;
 十角	jiq; kaku;
-十角	jik; kaku;
+十角	jik;kaku;
 十株	jiq; kabu;
-十株	jik; kabu;
+十株	jik;kabu;
 十巻	jiq; kan;
-十巻	jik; kan;
+十巻	jik;kan;
 十貫	jiq; kan;
-十貫	jik; kan;
+十貫	jik;kan;
 十区	jiq; ku;
-十区	jik; ku;
+十区	jik;ku;
 十句	jiq; ku;
-十句	jik; ku;
+十句	jik;ku;
 十口	jiq; kuchi;
-十口	jik; kuchi;
+十口	jik;kuchi;
 十組	jiq; kumi;
-十組	jik; kumi;
+十組	jik;kumi;
 十桁	jiq; keta;
-十桁	jik; keta;
+十桁	jik;keta;
 十件	jiq; ken;
-十件	jik; ken;
+十件	jik;ken;
 十軒	jiq; ken;
-十軒	jik; ken;
+十軒	jik;ken;
 十間	jiq; ken;
-十間	jik; ken;
+十間	jik;ken;
 十個	jiq; ko;
-十個	jik; ko;
+十個	jik;ko;
 十戸	jiq; ko;
-十戸	jik; ko;
+十戸	jik;ko;
 十湖	jiq; ko;
-十湖	jik; ko;
+十湖	jik;ko;
 十校	jiq; kou;
-十校	jik; kou;
+十校	jik;kou;
 十行	jiq; kou;
-十行	jik; kou;
+十行	jik;kou;
 十項	jiq; kou;
-十項	jik; kou;
+十項	jik;kou;
 十言	jiq; koto;
-十言	jik; koto;
+十言	jik;koto;
 十子	ji; tshi;
 十社	ji; tsha;
 十種	ji; tshu;
 十首	ji; tshu;
 十糎	jiq; senchime-toru;
-十糎	jis; senchime-toru;
+十糎	jis;senchime-toru;
 十体	jiq; tai;
-十体	jit; tai;
+十体	jit;tai;
 十束	jiq; taba;
-十束	jit; taba;
+十束	jit;taba;
 十着	jiq; chaku;
-十着	jic; chaku;
-十着	jit; tyaku;
+十着	jic;chaku;
+十着	jit;tyaku;
 十丁	jiq; chou;
-十丁	jic; chou;
-十丁	jit; tyou;
+十丁	jic;chou;
+十丁	jit;tyou;
 十通	jiq; tsuu;
-十通	jit; tsuu;
+十通	jit;tsuu;
 十粒	jiq; tsubu;
-十粒	jit; tsubu;
+十粒	jit;tsubu;
 十坪	jiq; tsubo;
-十坪	jit; tsubo;
+十坪	jit;tsubo;
 十手	jiq; te;
-十手	jit; te;
+十手	jit;te;
 十店	jiq; ten;
-十店	jit; ten;
+十店	jit;ten;
 十点	jiq; ten;
-十点	jit; ten;
+十点	jit;ten;
 十頭	jiq; tou;
-十頭	jit; tou;
+十頭	jit;tou;
 十波	jiq; pa;
-十波	jip; pa;
+十波	jip;pa;
 十派	jiq; pa;
-十派	jip; pa;
+十派	jip;pa;
 十杯	jiq; pai;
-十杯	jip; pai;
+十杯	jip;pai;
 十泊	jiq; paku;
-十泊	jip; paku;
+十泊	jip;paku;
 十箱	jiq; pako;
-十箱	jip; pako;
+十箱	jip;pako;
 十柱	jiq; pashira;
-十柱	jip; pashira;
+十柱	jip;pashira;
 十発	jiq; patsu;
-十発	jip; patsu;
+十発	jip;patsu;
 十針	jiq; pari;
-十針	jip; pari;
+十針	jip;pari;
 十班	jiq; pan;
-十班	jip; pan;
+十班	jip;pan;
 十匹	jiq; piki;
-十匹	jip; piki;
+十匹	jip;piki;
 十票	jiq; pyou;
-十票	jip; pyou;
+十票	jip;pyou;
 十品	jiq; pin;
-十品	jip; pin;
+十品	jip;pin;
 十袋	jiq; pukuro;
-十袋	jip; pukuro;
+十袋	jip;pukuro;
 十分	jiq; pun;
-十分	jip; pun;
+十分	jip;pun;
 十篇	jiq; pen;
-十篇	jip; pen;
+十篇	jip;pen;
 十編	jiq; pen;
-十編	jip; pen;
+十編	jip;pen;
 十辺	jiq; pen;
-十辺	jip; pen;
+十辺	jip;pen;
 十遍	jiq; pen;
-十遍	jip; pen;
+十遍	jip;pen;
 十歩	jiq; po;
-十歩	jip; po;
+十歩	jip;po;
 十本	jiq; pon;
-十本	jip; pon;
+十本	jip;pon;
 十%	juu; pa-sento;
 十頁	juu; pe-ji;
 十米	juu; me-toru;
 十課	juq; ka;
-十課	juk; ka;
+十課	juk;ka;
 十回	juq; kai;
-十回	juk; kai;
+十回	juk;kai;
 十階	juq; kai;
-十階	juk; kai;
+十階	juk;kai;
 十角	juq; kaku;
-十角	juk; kaku;
+十角	juk;kaku;
 十株	juq; kabu;
-十株	juk; kabu;
+十株	juk;kabu;
 十巻	juq; kan;
-十巻	juk; kan;
+十巻	juk;kan;
 十貫	juq; kan;
-十貫	juk; kan;
+十貫	juk;kan;
 十区	juq; ku;
-十区	juk; ku;
+十区	juk;ku;
 十句	juq; ku;
-十句	juk; ku;
+十句	juk;ku;
 十口	juq; kuchi;
-十口	juk; kuchi;
+十口	juk;kuchi;
 十組	juq; kumi;
-十組	juk; kumi;
+十組	juk;kumi;
 十桁	juq; keta;
-十桁	juk; keta;
+十桁	juk;keta;
 十件	juq; ken;
-十件	juk; ken;
+十件	juk;ken;
 十軒	juq; ken;
-十軒	juk; ken;
+十軒	juk;ken;
 十間	juq; ken;
-十間	juk; ken;
+十間	juk;ken;
 十個	juq; ko;
-十個	juk; ko;
+十個	juk;ko;
 十戸	juq; ko;
-十戸	juk; ko;
+十戸	juk;ko;
 十湖	juq; ko;
-十湖	juk; ko;
+十湖	juk;ko;
 十校	juq; kou;
-十校	juk; kou;
+十校	juk;kou;
 十行	juq; kou;
-十行	juk; kou;
+十行	juk;kou;
 十項	juq; kou;
-十項	juk; kou;
+十項	juk;kou;
 十言	juq; koto;
-十言	juk; koto;
+十言	juk;koto;
 十子	ju; tshi;
 十社	ju; tsha;
 十種	ju; tshu;
 十首	ju; tshu;
 十糎	juq; senchime-toru;
-十糎	jus; senchime-toru;
+十糎	jus;senchime-toru;
 十体	juq; tai;
-十体	jut; tai;
+十体	jut;tai;
 十束	juq; taba;
-十束	jut; taba;
+十束	jut;taba;
 十着	juq; chaku;
-十着	juc; chaku;
-十着	jut; tyaku;
+十着	juc;chaku;
+十着	jut;tyaku;
 十丁	juq; chou;
-十丁	juc; chou;
-十丁	jut; tyou;
+十丁	juc;chou;
+十丁	jut;tyou;
 十通	juq; tsuu;
-十通	jut; tsuu;
+十通	jut;tsuu;
 十粒	juq; tsubu;
-十粒	jut; tsubu;
+十粒	jut;tsubu;
 十坪	juq; tsubo;
-十坪	jut; tsubo;
+十坪	jut;tsubo;
 十手	juq; te;
-十手	jut; te;
+十手	jut;te;
 十店	juq; ten;
-十店	jut; ten;
+十店	jut;ten;
 十点	juq; ten;
-十点	jut; ten;
+十点	jut;ten;
 十頭	juq; tou;
-十頭	jut; tou;
+十頭	jut;tou;
 十波	juq; pa;
-十波	jup; pa;
+十波	jup;pa;
 十派	juq; pa;
-十派	jup; pa;
+十派	jup;pa;
 十杯	juq; pai;
-十杯	jup; pai;
+十杯	jup;pai;
 十泊	juq; paku;
-十泊	jup; paku;
+十泊	jup;paku;
 十箱	juq; pako;
-十箱	jup; pako;
+十箱	jup;pako;
 十柱	juq; pashira;
-十柱	jup; pashira;
+十柱	jup;pashira;
 十発	juq; patsu;
-十発	jup; patsu;
+十発	jup;patsu;
 十針	juq; pari;
-十針	jup; pari;
+十針	jup;pari;
 十班	juq; pan;
-十班	jup; pan;
+十班	jup;pan;
 十匹	juq; piki;
-十匹	jup; piki;
+十匹	jup;piki;
 十票	juq; pyou;
-十票	jup; pyou;
+十票	jup;pyou;
 十品	juq; pin;
-十品	jup; pin;
+十品	jup;pin;
 十袋	juq; pukuro;
-十袋	jup; pukuro;
+十袋	jup;pukuro;
 十分	juq; pun;
-十分	jup; pun;
+十分	jup;pun;
 十篇	juq; pen;
-十篇	jup; pen;
+十篇	jup;pen;
 十編	juq; pen;
-十編	jup; pen;
+十編	jup;pen;
 十辺	juq; pen;
-十辺	jup; pen;
+十辺	jup;pen;
 十遍	juq; pen;
-十遍	jup; pen;
+十遍	jup;pen;
 十歩	juq; po;
-十歩	jup; po;
+十歩	jup;po;
 十本	juq; pon;
-十本	jup; pon;
+十本	jup;pon;
 千ち	sen; chi,
 百Ω	hyaku; o-mu;
 百%	hyaku; pa-sento;
 百頁	hyaku; pe-ji;
 百米	hyaku; me-toru;
 百回	hyaq; kai;
-百回	hyak; kai;
+百回	hyak;kai;
 百階	hyaq; kai;
-百階	hyak; kai;
+百階	hyak;kai;
 百株	hyaq; kabu;
-百株	hyak; kabu;
+百株	hyak;kabu;
 百巻	hyaq; kan;
-百巻	hyak; kan;
+百巻	hyak;kan;
 百貫	hyaq; kan;
-百貫	hyak; kan;
+百貫	hyak;kan;
 百基	hyaq; ki;
-百基	hyak; ki;
+百基	hyak;ki;
 百機	hyaq; ki;
-百機	hyak; ki;
+百機	hyak;ki;
 百騎	hyaq; ki;
-百騎	hyak; ki;
+百騎	hyak;ki;
 百球	hyaq; kyuu;
-百球	hyak; kyuu;
+百球	hyak;kyuu;
 百局	hyaq; kyoku;
-百局	hyak; kyoku;
+百局	hyak;kyoku;
 百曲	hyaq; kyoku;
-百曲	hyak; kyoku;
+百曲	hyak;kyoku;
 百斤	hyaq; kin;
-百斤	hyak; kin;
+百斤	hyak;kin;
 百句	hyaq; ku;
-百句	hyak; ku;
+百句	hyak;ku;
 百組	hyaq; kumi;
-百組	hyak; kumi;
+百組	hyak;kumi;
 百件	hyaq; ken;
-百件	hyak; ken;
+百件	hyak;ken;
 百軒	hyaq; ken;
-百軒	hyak; ken;
+百軒	hyak;ken;
 百間	hyaq; ken;
-百間	hyak; ken;
+百間	hyak;ken;
 百個	hyaq; ko;
-百個	hyak; ko;
+百個	hyak;ko;
 百戸	hyaq; ko;
-百戸	hyak; ko;
+百戸	hyak;ko;
 百校	hyaq; kou;
-百校	hyak; kou;
+百校	hyak;kou;
 百波	hyaq; pa;
-百波	hyap; pa;
+百波	hyap;pa;
 百羽	hyaq; pa;
-百羽	hyap; pa;
+百羽	hyap;pa;
 百敗	hyaq; pai;
-百敗	hyap; pai;
+百敗	hyap;pai;
 百杯	hyaq; pai;
-百杯	hyap; pai;
+百杯	hyap;pai;
 百発	hyaq; patsu;
-百発	hyap; patsu;
+百発	hyap;patsu;
 百匹	hyaq; piki;
-百匹	hyap; piki;
+百匹	hyap;piki;
 百俵	hyaq; pyou;
-百俵	hyap; pyou;
+百俵	hyap;pyou;
 百票	hyaq; pyou;
-百票	hyap; pyou;
+百票	hyap;pyou;
 百品	hyaq; pin;
-百品	hyap; pin;
+百品	hyap;pin;
 百分	hyaq; pun;
-百分	hyap; pun;
+百分	hyap;pun;
 百篇	hyaq; pen;
-百篇	hyap; pen;
+百篇	hyap;pen;
 百編	hyaq; pen;
-百編	hyap; pen;
+百編	hyap;pen;
 百遍	hyaq; pen;
-百遍	hyap; pen;
+百遍	hyap;pen;
 百歩	hyaq; po;
-百歩	hyap; po;
+百歩	hyap;po;
 百報	hyaq; pou;
-百報	hyap; pou;
+百報	hyap;pou;
 百本	hyaq; pon;
-百本	hyap; pon;
+百本	hyap;pon;
 万つ	man; tsu,
 万%	man; pa-sento;
 十兆	jiq; chou;
-十兆	jic; chou;
-十兆	jit; tyou;
+十兆	jic;chou;
+十兆	jit;tyou;
 十兆	juq; chou;
-十兆	juc; chou;
-十兆	jut; tyou;
+十兆	juc;chou;
+十兆	jut;tyou;
 百兆	hyaq; chou;
-百兆	hyac; chou;
-百兆	hyat; tyou;
+百兆	hyac;chou;
+百兆	hyat;tyou;
 之は	no; ha,
 閼伽	a; ka;
 英賀	a; ga;
 阿紫	a; shi;
 悪形	aq; kei;
-悪形	ak; kei;
+悪形	ak;kei;
 秋狐	aq; ko;
-秋狐	ak; ko;
+秋狐	ak;ko;
 亜朱	a; tshu;
 鴉鷺	a; ro;
 伊岐	i; ki;
@@ -19222,15 +19222,15 @@ columns:
 イ族	i. zoku;
 伊智	i; chi;
 一脚	iq; kyaku;
-一脚	ik; kyaku;
+一脚	ik;kyaku;
 一旧	iq; kyuu;
-一旧	ik; kyuu;
+一旧	ik;kyuu;
 一究	iq; kyuu;
-一究	ik; kyuu;
+一究	ik;kyuu;
 一剣	iq; ken;
-一剣	ik; ken;
+一剣	ik;ken;
 乙公	iq; kou;
-乙公	ik; kou;
+乙公	ik;kou;
 伊羽	i; ba;
 衣部	i; bu;
 李浩	i; ho;
@@ -19241,7 +19241,7 @@ columns:
 伺か	ukaga; ka,
 雨鬼	u; ki;
 唄奴	utayaq; ko;
-唄奴	utayak; ko;
+唄奴	utayak;ko;
 宇婆	u; ba;
 雨部	u; bu;
 禹歩	u; ho;
@@ -19287,18 +19287,18 @@ columns:
 化蛇	ka; da;
 華陀	ka; da;
 活丹	kaq; tan;
-活丹	kat; tan;
+活丹	kat;tan;
 勝弦	kaq; tsuru;
-勝弦	kat; tsuru;
+勝弦	kat;tsuru;
 河平	kaq; pei;
-河平	kap; pei;
+河平	kap;pei;
 火部	ka; bu;
 日部	ka; be;
 佳留	ka; ru;
 火瑠	ka; ru;
 雅歌	ga; ka;
 月兵	gaq; pei;
-月兵	gap; pei;
+月兵	gap;pei;
 瓦部	ga; bu;
 画魔	ga; ma;
 蛾蟇	ga; ma;
@@ -19313,13 +19313,13 @@ columns:
 箕子	ki; shi;
 鬼士	ki; shi;
 桔花	kiq; ka;
-桔花	kik; ka;
+桔花	kik;ka;
 橘花	kiq; ka;
-橘花	kik; ka;
+橘花	kik;ka;
 橘香	kiq; ka;
-橘香	kik; ka;
+橘香	kik;ka;
 吉興	kiq; kou;
-吉興	kik; kou;
+吉興	kik;kou;
 羈縻	ki; bi;
 己部	ki; bu;
 虫部	ki; bu;
@@ -19335,9 +19335,9 @@ columns:
 魚歌	gyo; ka;
 御史	gyo; shi;
 玉花	gyoq; ka;
-玉花	gyok; ka;
+玉花	gyok;ka;
 玉形	gyoq; kei;
-玉形	gyok; kei;
+玉形	gyok;kei;
 御府	gyo; fu;
 #喧嘩	kuo-raru;
 狗牙	ku; ga;
@@ -19345,27 +19345,27 @@ columns:
 九龍	ku-; ron;
 血種	ke; tshu;
 欠丁	keq; chou;
-欠丁	kec; chou;
-欠丁	ket; tyou;
+欠丁	kec;chou;
+欠丁	ket;tyou;
 懸魚	ge; gyo;
 偈頌	ge; ju;
 月姫	geq; ki;
-月姫	gek; ki;
+月姫	gek;ki;
 月鬼	geq; ki;
-月鬼	gek; ki;
+月鬼	gek;ki;
 月門	geq; to;
-月門	get; to;
+月門	get;to;
 月破	geq; pa;
-月破	gep; pa;
+月破	gep;pa;
 拳コ	gen; ko.
 胡渭	ko; i;
 胡佳	ko; ka;
 瑚瑚	ko; ko;
 古五	ko; go;
 尅気	koq; ki;
-尅気	kok; ki;
+尅気	kok;ki;
 骨破	koq; pa;
-骨破	kop; pa;
+骨破	kop;pa;
 胡斐	ko; hi;
 個魔	ko; ma;
 琥魔	ko; ma;
@@ -19385,16 +19385,16 @@ columns:
 酒よ	sake; yo,
 早紗	sa; sha;
 殺界	saq; kai;
-殺界	sak; kai;
+殺界	sak;kai;
 察度	saq; to;
-察度	sat; to;
+察度	sat;to;
 狭也	sa; ya;
 咲蘭	sa; ra;
 座木	za; ki;
 雑家	zaq; ka;
-雑家	zak; ka;
+雑家	zak;ka;
 雑鬼	zaq; ki;
-雑鬼	zak; ki;
+雑鬼	zak;ki;
 紫亜	shi; a;
 四夷	shi; i;
 士蔿	shi; i;
@@ -19411,7 +19411,7 @@ columns:
 止者	shi; sha;
 四智	shi; chi;
 湿拓	shiq; taku;
-湿拓	shit; taku;
+湿拓	shit;taku;
 四道	shi; do;
 柴コ	shiba; ko.
 士部	shi; bu;
@@ -19443,10 +19443,10 @@ columns:
 耳羽	ji; u;
 爾雅	ji; ga;
 十界	jiq; kai;
-十界	jik; kai;
+十界	jik;kai;
 十地	jiq; chi;
-十地	jic; chi;
-十地	jit; ti;
+十地	jic;chi;
+十地	jit;ti;
 使部	ji; bu;
 璽武	ji; mu;
 蛇牙	ja; ki;
@@ -19456,27 +19456,27 @@ columns:
 樹鬼	ju; ki;
 呪者	ju; sha;
 十町	juq; chou;
-十町	juc; chou;
-十町	jut; tyou;
+十町	juc;chou;
+十町	jut;tyou;
 女御	jo; gyo;
 徐寿	jo; ju;
 女部	jo; bu;
 背守	se; su;
 雪海	seq; kai;
-雪海	sek; kai;
+雪海	sek;kai;
 夕暉	seq; ki;
-夕暉	sek; ki;
+夕暉	sek;ki;
 雪鬼	seq; ki;
-雪鬼	sek; ki;
+雪鬼	sek;ki;
 石剣	seq; ken;
-石剣	sek; ken;
+石剣	sek;ken;
 窃視	se; tshi;
 絶華	zeq; ka;
-絶華	zek; ka;
+絶華	zek;ka;
 絶鬼	zeq; ki;
-絶鬼	zek; ki;
+絶鬼	zek;ki;
 舌筋	zeq; kin;
-舌筋	zek; kin;
+舌筋	zek;kin;
 是津	ze; tsu;
 是流	ze; ru;
 惣ど	sou; do,
@@ -19488,20 +19488,20 @@ columns:
 楚良	so; ra;
 空よ	sora; yo,
 属格	zoq; kaku;
-属格	zok; kaku;
+属格	zok;kaku;
 龍鬼	taq; ki;
-龍鬼	tak; ki;
+龍鬼	tak;ki;
 裁付	taq; tsuke;
-裁付	tat; tsuke;
+裁付	tat;tsuke;
 多手	ta; te;
 多肥	ta; hi;
 玉奴	tamayaq; ko;
-玉奴	tamayak; ko;
+玉奴	tamayak;ko;
 蛇雄	da; o;
 奪鬼	daq; ki;
-奪鬼	dak; ki;
+奪鬼	dak;ki;
 妲己	daq; ki;
-妲己	dak; ki;
+妲己	dak;ki;
 駄夢	da; mu;
 駄無	da; mu;
 蛇薬	da; ya;
@@ -19512,7 +19512,7 @@ columns:
 茶羅	cha; ra;
 茶狸	cha; ri;
 直階	choq; kai;
-直階	chok; kai;
+直階	chok;kai;
 智羅	chi; ra;
 郗慮	chi; ryo;
 千流	chi; ru;
@@ -19520,11 +19520,11 @@ columns:
 都流	tsu; ru;
 手師	te; shi;
 鉄拐	teq; kai;
-鉄拐	tek; kai;
+鉄拐	tek;kai;
 鉄鶏	teq; kei;
-鉄鶏	tek; kei;
+鉄鶏	tek;kei;
 鉄甲	teq; kou;
-鉄甲	tek; kou;
+鉄甲	tek;kou;
 鉄鼠	te; tso;
 杜威	to; i;
 杜畿	to; ki;
@@ -19537,9 +19537,9 @@ columns:
 怒鬼	do; ki;
 土車	do; sha;
 独孤	doq; ko;
-独孤	dok; ko;
+独孤	dok;ko;
 独漂	doq; pyou;
-独漂	dop; pyou;
+独漂	dop;pyou;
 那木	na; gi;
 何か	nani; ka,
 南三	na; mi;
@@ -19547,16 +19547,16 @@ columns:
 弐虎	ni; ko;
 爾子	ni; ko;
 日経	niq; kyou;
-日経	nik; kyou;
+日経	nik;kyou;
 日頂	niq; chou;
-日頂	nic; chou;
-日頂	nit; tyou;
+日頂	nic;chou;
+日頂	nit;tyou;
 日天	niq; ten;
-日天	nit; ten;
+日天	nit;ten;
 日破	niq; pa;
-日破	nip; pa;
+日破	nip;pa;
 日布	niq; pu;
-日布	nip; pu;
+日布	nip;pu;
 如鬼	nyo; ki;
 女孺	nyo; ju;
 寝子	ne; ko;
@@ -19569,23 +19569,23 @@ columns:
 破牙	ha; ga;
 羽玖	ha; ku;
 客家	haq; ka;
-客家	hak; ka;
+客家	hak;ka;
 白華	haq; ka;
-白華	hak; ka;
+白華	hak;ka;
 白海	haq; kai;
-白海	hak; kai;
+白海	hak;kai;
 八寒	haq; kan;
-八寒	hak; kan;
+八寒	hak;kan;
 八旗	haq; ki;
-八旗	hak; ki;
+八旗	hak;ki;
 髪鬼	haq; ki;
-髪鬼	hak; ki;
+髪鬼	hak;ki;
 薄筋	haq; kin;
-薄筋	hak; kin;
+薄筋	hak;kin;
 発勁	haq; kei;
-発勁	hak; kei;
+発勁	hak;kei;
 八犬	haq; ken;
-八犬	hak; ken;
+八犬	hak;ken;
 波摩	ha; ma;
 波真	ha; ma;
 葉矢	ha; ya;
@@ -19593,9 +19593,9 @@ columns:
 馬可	ba; ka;
 覇鬼	ba; ki;
 抜人	baq; to;
-抜人	bat; to;
+抜人	bat;to;
 伐倒	baq; tou;
-伐倒	bat; tou;
+伐倒	bat;tou;
 馬武	ba; bu;
 馬部	ba; bu;
 費禕	hi; i;
@@ -19610,16 +19610,16 @@ columns:
 飛部	hi; bu;
 悲夢	hi; mu;
 百鬼	hyaq; ki;
-百鬼	hyak; ki;
+百鬼	hyak;ki;
 百景	hyaq; kei;
-百景	hyak; kei;
+百景	hyak;kei;
 火男	hyoq; toko;
-火男	hyot; toko;
+火男	hyot;toko;
 飛良	hi; ra;
 白鬼	byaq; ki;
-白鬼	byak; ki;
+白鬼	byak;ki;
 白弧	byaq; ko;
-白弧	byak; ko;
+白弧	byak;ko;
 布貨	fu; ka;
 普化	fu; ke;
 巫蠱	fu; ko;
@@ -19630,7 +19630,7 @@ columns:
 布由	fu; yu;
 舞牙	bu; ki;
 仏哲	buq; tetsu;
-仏哲	but; tetsu;
+仏哲	but;tetsu;
 武流	bu; ru;
 変イ	hen; i.
 変ト	hen; to.
@@ -19639,7 +19639,7 @@ columns:
 変ホ	hen; ho.
 変ロ	hen; ro.
 別本	beq; pon;
-別本	bep; pon;
+別本	bep;pon;
 β鉄	be-ta; tetsu;
 補部	ho; bu;
 魔姫	ma; ki;
@@ -19651,9 +19651,9 @@ columns:
 媽祖	ma; so;
 末主	ma; tshu;
 真平	maq; taira;
-真平	mat; taira;
+真平	mat;taira;
 末帝	maq; tei;
-末帝	mat; tei;
+末帝	mat;tei;
 魔火	ma; bi;
 麻部	ma; bu;
 摩味	ma; mi;
@@ -19676,7 +19676,7 @@ columns:
 芽茶	me; cha;
 芽流	me; ru;
 木鼓	moq; ko;
-木鼓	mok; ko;
+木鼓	mok;ko;
 夜久	ya; ku;
 夜語	ya; go;
 夜主	ya; shu;
@@ -19711,13 +19711,13 @@ columns:
 李寿	ri; ju;
 理多	ri; ta;
 律花	riq; ka;
-律花	rik; ka;
+律花	rik;ka;
 立華	riq; ka;
-立華	rik; ka;
+立華	rik;ka;
 律管	riq; kan;
-律管	rik; kan;
+律管	rik;kan;
 陸閘	riq; kou;
-陸閘	rik; kou;
+陸閘	rik;kou;
 驪媚	ri; bi;
 李孚	ri; fu;
 李弥	ri; mi;
@@ -19735,23 +19735,23 @@ columns:
 瑠莉	ru; ri;
 礼保	re; o;
 烈花	req; ka;
-烈花	rek; ka;
+烈花	rek;ka;
 礫器	req; ki;
-礫器	rek; ki;
+礫器	rek;ki;
 裂空	req; kuu;
-裂空	rek; kuu;
+裂空	rek;kuu;
 列甲	req; kou;
-列甲	rek; kou;
+列甲	rek;kou;
 裂肛	req; kou;
-裂肛	rek; kou;
+裂肛	rek;kou;
 露鬼	ro; ki;
 盧思	ro; shi;
 六輝	roq; ki;
-六輝	rok; ki;
+六輝	rok;ki;
 鹿行	roq; kou;
-鹿行	rok; kou;
+鹿行	rok;kou;
 六骨	roq; kotsu;
-六骨	rok; kotsu;
+六骨	rok;kotsu;
 呂屠	ro; to;
 和茶	wa; cha;
 莉夢	ri; mu;
@@ -19769,7 +19769,7 @@ columns:
 阿井	a; i;
 飽い	a; i,
 愛冠	aikaq; pu;
-愛冠	aikap; pu;
+愛冠	aikap;pu;
 愛し	ai; shi,
 愛す	ai; su,
 愛せ	ai; se,
@@ -20029,43 +20029,43 @@ columns:
 遇っ	a; q,
 遭っ	a; q,
 悪貨	aq; ka;
-悪貨	ak; ka;
+悪貨	ak;ka;
 厚貝	aq; kai;
-厚貝	ak; kai;
+厚貝	ak;kai;
 圧巻	aq; kan;
-圧巻	ak; kan;
+圧巻	ak;kan;
 悪感	aq; kan;
-悪感	ak; kan;
+悪感	ak;kan;
 悪漢	aq; kan;
-悪漢	ak; kan;
+悪漢	ak;kan;
 悪鬼	aq; ki;
-悪鬼	ak; ki;
+悪鬼	ak;ki;
 厚岸	aq; keshi;
-厚岸	ak; keshi;
+厚岸	ak;keshi;
 悪口	aq; kou;
-悪口	ak; kou;
+悪口	ak;kou;
 悪行	aq; kou;
-悪行	ak; kou;
+悪行	ak;kou;
 圧し	aq; shi,
-圧し	as; shi,
+圧し	as;shi,
 圧死	a; tshi;
 圧せ	aq; se,
-圧せ	as; se,
+圧せ	as;se,
 且来	a; tso;
 暖か	atta; ka,
 温か	atta; ka,
 暖ま	atta; ma,
 圧着	aq; chaku;
-圧着	ac; chaku;
-圧着	at; tyaku;
+圧着	ac;chaku;
+圧着	at;tyaku;
 厚床	aq; toko;
-厚床	at; toko;
+厚床	at;toko;
 安比	aq; pi;
-安比	ap; pi;
+安比	ap;pi;
 圧伏	aq; puku;
-圧伏	ap; puku;
+圧伏	ap;puku;
 圧服	aq; puku;
-圧服	ap; puku;
+圧服	ap;puku;
 厚保	a; tsu;
 阿津	a; tsu;
 篤い	atsu; i,
@@ -20527,149 +20527,149 @@ columns:
 謂っ	i; q,
 逝っ	i; q,
 一過	iq; ka;
-一過	ik; ka;
+一過	ik;ka;
 一介	iq; kai;
-一介	ik; kai;
+一介	ik;kai;
 一廓	iq; kaku;
-一廓	ik; kaku;
+一廓	ik;kaku;
 一郭	iq; kaku;
-一郭	ik; kaku;
+一郭	ik;kaku;
 一喝	iq; katsu;
-一喝	ik; katsu;
+一喝	ik;katsu;
 一廉	iq; kado;
-一廉	ik; kado;
+一廉	ik;kado;
 一基	iq; ki;
-一基	ik; ki;
+一基	ik;ki;
 一季	iq; ki;
-一季	ik; ki;
+一季	ik;ki;
 一期	iq; ki;
-一期	ik; ki;
+一期	ik;ki;
 一箕	iq; ki;
-一箕	ik; ki;
+一箕	ik;ki;
 一輝	iq; ki;
-一輝	ik; ki;
+一輝	ik;ki;
 逸機	iq; ki;
-逸機	ik; ki;
+逸機	ik;ki;
 一掬	iq; kiku;
-一掬	ik; kiku;
+一掬	ik;kiku;
 一休	iq; kyuu;
-一休	ik; kyuu;
+一休	ik;kyuu;
 一級	iq; kyuu;
-一級	ik; kyuu;
+一級	ik;kyuu;
 一挙	iq; kyo;
-一挙	ik; kyo;
+一挙	ik;kyo;
 一興	iq; kyou;
-一興	ik; kyou;
+一興	ik;kyou;
 一驚	iq; kyou;
-一驚	ik; kyou;
+一驚	ik;kyou;
 一極	iq; kyoku;
-一極	ik; kyoku;
+一極	ik;kyoku;
 一九	iq; ku;
-一九	ik; ku;
+一九	ik;ku;
 一宮	iq; ku;
-一宮	ik; ku;
+一宮	ik;ku;
 飯喰	iq; kui;
-飯喰	ik; kui;
+飯喰	ik;kui;
 一慶	iq; kei;
-一慶	ik; kei;
+一慶	ik;kei;
 一景	iq; kei;
-一景	ik; kei;
+一景	ik;kei;
 一系	iq; kei;
-一系	ik; kei;
+一系	ik;kei;
 一計	iq; kei;
-一計	ik; kei;
+一計	ik;kei;
 一決	iq; ketsu;
-一決	ik; ketsu;
+一決	ik;ketsu;
 溢血	iq; ketsu;
-溢血	ik; ketsu;
+溢血	ik;ketsu;
 一己	iq; ko;
-一己	ik; ko;
+一己	ik;ko;
 一顧	iq; ko;
-一顧	ik; ko;
+一顧	ik;ko;
 一光	iq; kou;
-一光	ik; kou;
+一光	ik;kou;
 一考	iq; kou;
-一考	ik; kou;
+一考	ik;kou;
 一国	iq; koku;
-一国	ik; koku;
+一国	ik;koku;
 一献	iq; kon;
-一献	ik; kon;
+一献	ik;kon;
 一茶	i; tsa;
 逸さ	iq; sa,
-逸さ	is; sa,
+逸さ	is;sa,
 一指	i; tshi;
 一死	i; tshi;
 一矢	i; tshi;
 一糸	i; tshi;
 逸し	iq; shi,
-逸し	is; shi,
+逸し	is;shi,
 逸史	i; tshi;
 一所	i; tsho;
 一緒	i; tsho;
 佚書	i; tsho;
 逸書	i; tsho;
 逸す	iq; su,
-逸す	is; su,
+逸す	is;su,
 逸そ	iq; so,
-逸そ	is; so,
+逸そ	is;so,
 一端	iq; tan;
-一端	it; tan;
+一端	it;tan;
 一朝	iq; chou;
-一朝	ic; chou;
-一朝	it; tyou;
+一朝	ic;chou;
+一朝	it;tyou;
 一聴	iq; chou;
-一聴	ic; chou;
-一聴	it; tyou;
+一聴	ic;chou;
+一聴	it;tyou;
 一擲	iq; teki;
-一擲	it; teki;
+一擲	it;teki;
 一徹	iq; tetsu;
-一徹	it; tetsu;
+一徹	it;tetsu;
 一鉄	iq; tetsu;
-一鉄	it; tetsu;
+一鉄	it;tetsu;
 一天	iq; ten;
-一天	it; ten;
+一天	it;ten;
 一転	iq; ten;
-一転	it; ten;
+一転	it;ten;
 一刀	iq; tou;
-一刀	it; tou;
+一刀	it;tou;
 一投	iq; tou;
-一投	it; tou;
+一投	it;tou;
 一統	iq; tou;
-一統	it; tou;
+一統	it;tou;
 一得	iq; toku;
-一得	it; toku;
+一得	it;toku;
 一徳	iq; toku;
-一徳	it; toku;
+一徳	it;toku;
 一白	iq; paku;
-一白	ip; paku;
+一白	ip;paku;
 一髪	iq; patsu;
-一髪	ip; patsu;
+一髪	ip;patsu;
 一半	iq; pan;
-一半	ip; pan;
+一半	ip;pan;
 一臂	iq; pi;
-一臂	ip; pi;
+一臂	ip;pi;
 一疋	iq; piki;
-一疋	ip; piki;
+一疋	ip;piki;
 一筆	iq; pitsu;
-一筆	ip; pitsu;
+一筆	ip;pitsu;
 一瓢	iq; pyou;
-一瓢	ip; pyou;
+一瓢	ip;pyou;
 一風	iq; puu;
-一風	ip; puu;
+一風	ip;puu;
 一腹	iq; puku;
-一腹	ip; puku;
+一腹	ip;puku;
 一平	iq; pei;
-一平	ip; pei;
+一平	ip;pei;
 逸平	iq; pei;
-逸平	ip; pei;
+逸平	ip;pei;
 一碧	iq; peki;
-一碧	ip; peki;
+一碧	ip;peki;
 一報	iq; pou;
-一報	ip; pou;
+一報	ip;pou;
 一法	iq; pou;
-一法	ip; pou;
+一法	ip;pou;
 一品	iq; pon;
-一品	ip; pon;
+一品	ip;pon;
 斎き	itsu; ki,
 斎く	itsu; ku,
 偽っ	itsuwa; q,
@@ -20993,21 +20993,21 @@ columns:
 撃っ	u; q,
 討っ	u; q,
 鬱気	uq; ki;
-鬱気	uk; ki;
+鬱気	uk;ki;
 鬱結	uq; ketsu;
-鬱結	uk; ketsu;
+鬱結	uk;ketsu;
 鬱血	uq; ketsu;
-鬱血	uk; ketsu;
+鬱血	uk;ketsu;
 鬱し	uq; shi,
-鬱し	us; shi,
+鬱し	us;shi,
 鬱す	uq; su,
-鬱す	us; su,
+鬱す	us;su,
 討手	uq; te;
-討手	ut; te;
+討手	ut;te;
 打当	uq; tou;
-打当	ut; tou;
+打当	ut;tou;
 鬱憤	uq; pun;
-鬱憤	up; pun;
+鬱憤	up;pun;
 伐つ	u; tsu,
 宇津	u; tsu;
 射つ	u; tsu,
@@ -21058,7 +21058,7 @@ columns:
 撃て	u; te,
 討て	u; te,
 腕節	udeq; pushi;
-腕節	udep; pushi;
+腕節	udep;pushi;
 伐と	u; to,
 宇土	u; to;
 宇戸	u; to;
@@ -21274,23 +21274,23 @@ columns:
 愛知	e; chi;
 彫っ	e; q,
 越境	eq; kyou;
-越境	ek; kyou;
+越境	ek;kyou;
 謁見	eq; ken;
-謁見	ek; ken;
+謁見	ek;ken;
 越権	eq; ken;
-越権	ek; ken;
+越権	ek;ken;
 閲し	eq; shi,
-閲し	es; shi,
+閲し	es;shi,
 越訴	e; tso;
 越中	eq; chuu;
-越中	ec; chuu;
-越中	et; tyuu;
+越中	ec;chuu;
+越中	et;tyuu;
 江積	eq; tsumi;
-江積	et; tsumi;
+江積	et;tsumi;
 越冬	eq; tou;
-越冬	et; tou;
+越冬	et;tou;
 閲兵	eq; pei;
-閲兵	ep; pei;
+閲兵	ep;pei;
 恵津	e; tsu;
 得手	e; te;
 江渡	e; to;
@@ -21451,7 +21451,7 @@ columns:
 犯そ	oka; so,
 お方	o, kata;
 岡引	okaq; piki;
-岡引	okap; piki;
+岡引	okap;piki;
 岡ノ	oka; no.
 お株	o, kabu;
 お上	o, kami;
@@ -21524,9 +21524,9 @@ columns:
 興っ	oko; q,
 起っ	oko; q,
 奥戸	okoq; pe;
-奥戸	okop; pe;
+奥戸	okop;pe;
 興部	okoq; pe;
-興部	okop; pe;
+興部	okop;pe;
 行お	okona; o,
 行っ	okona; q,
 行わ	okona; wa,
@@ -21580,7 +21580,7 @@ columns:
 お下	o, shimo;
 オ社	o. sha;
 押帯	oshoq; pu;
-押帯	oshop; pu;
+押帯	oshop;pu;
 小父	o; ji;
 怖じ	o; ji,
 圧す	o; su,
@@ -21642,40 +21642,40 @@ columns:
 追っ	o; q,
 逐っ	o; q,
 追貝	oq; kai;
-追貝	ok; kai;
+追貝	ok;kai;
 億劫	oq; kuu;
-億劫	ok; kuu;
+億劫	ok;kuu;
 臆見	oq; ken;
-臆見	ok; ken;
+臆見	ok;ken;
 乙事	oq; koto;
-乙事	ok; koto;
+乙事	ok;koto;
 仰っ	otsha; q,
 仰ら	otsha; ra,
 仰り	otsha; ri,
 仰る	otsha; ru,
 乙父	oq; chi;
-乙父	oc; chi;
-乙父	ot; ti;
+乙父	oc;chi;
+乙父	ot;ti;
 追手	oq; te;
-追手	ot; te;
+追手	ot;te;
 乙戸	oq; to;
-乙戸	ot; to;
+乙戸	ot;to;
 夫沢	oq; tozawa;
-夫沢	ot; tozawa;
+夫沢	ot;tozawa;
 乙供	oq; tomo;
-乙供	ot; tomo;
+乙供	ot;tomo;
 越波	oq; ba;
-越波	ob; ba;
+越波	ob;ba;
 越原	oq; bara;
-越原	ob; bara;
+越原	ob;bara;
 追浜	oq; pama;
-追浜	op; pama;
+追浜	op;pama;
 大原	oq; para;
-大原	op; para;
+大原	op;para;
 追原	oq; para;
-追原	op; para;
+追原	op;para;
 尾別	oq; petsu;
-尾別	op; petsu;
+尾別	op;petsu;
 乙津	o; tsu;
 小津	o; tsu;
 落つ	o; tsu,
@@ -22320,101 +22320,101 @@ columns:
 駆っ	ka; q,
 駈っ	ka; q,
 各科	kaq; ka;
-各科	kak; ka;
+各科	kak;ka;
 核果	kaq; ka;
-核果	kak; ka;
+核果	kak;ka;
 閣下	kaq; ka;
-閣下	kak; ka;
+閣下	kak;ka;
 各回	kaq; kai;
-各回	kak; kai;
+各回	kak;kai;
 各界	kaq; kai;
-各界	kak; kai;
+各界	kak;kai;
 角界	kaq; kai;
-角界	kak; kai;
+角界	kak;kai;
 各巻	kaq; kan;
-各巻	kak; kan;
+各巻	kak;kan;
 客気	kaq; ki;
-客気	kak; ki;
+客気	kak;ki;
 割拠	kaq; kyo;
-割拠	kak; kyo;
+割拠	kak;kyo;
 活況	kaq; kyou;
-活況	kak; kyou;
+活況	kak;kyou;
 各局	kaq; kyoku;
-各局	kak; kyoku;
+各局	kak;kyoku;
 恪勤	kaq; kin;
-恪勤	kak; kin;
+恪勤	kak;kin;
 各区	kaq; ku;
-各区	kak; ku;
+各区	kak;ku;
 滑空	kaq; kuu;
-滑空	kak; kuu;
+滑空	kak;kuu;
 各組	kaq; kumi;
-各組	kak; kumi;
+各組	kak;kumi;
 脚気	kaq; ke;
-脚気	kak; ke;
+脚気	kak;ke;
 活計	kaq; kei;
-活計	kak; kei;
+活計	kak;kei;
 喀血	kaq; ketsu;
-喀血	kak; ketsu;
+喀血	kak;ketsu;
 各個	kaq; ko;
-各個	kak; ko;
+各個	kak;ko;
 各戸	kaq; ko;
-各戸	kak; ko;
+各戸	kak;ko;
 確乎	kaq; ko;
-確乎	kak; ko;
+確乎	kak;ko;
 確固	kaq; ko;
-確固	kak; ko;
+確固	kak;ko;
 羯鼓	kaq; ko;
-羯鼓	kak; ko;
+羯鼓	kak;ko;
 各校	kaq; kou;
-各校	kak; kou;
+各校	kak;kou;
 各行	kaq; kou;
-各行	kak; kou;
+各行	kak;kou;
 滑降	kaq; kou;
-滑降	kak; kou;
+滑降	kak;kou;
 角行	kaq; kou;
-角行	kak; kou;
+角行	kak;kou;
 郭公	kaq; kou;
-郭公	kak; kou;
+郭公	kak;kou;
 渇し	kaq; shi,
-渇し	kas; shi,
+渇し	kas;shi,
 活写	ka; tsha;
 滑車	ka; tsha;
 刈田	kaq; ta;
-刈田	kat; ta;
+刈田	kat;ta;
 勝田	kaq; ta;
-勝田	kat; ta;
+勝田	kat;ta;
 闊達	kaq; tatsu;
-闊達	kat; tatsu;
+闊達	kat;tatsu;
 褐炭	kaq; tan;
-褐炭	kat; tan;
+褐炭	kat;tan;
 活着	kaq; chaku;
-活着	kac; chaku;
-活着	kat; tyaku;
+活着	kac;chaku;
+活着	kat;tyaku;
 甲冑	kaq; chuu;
-甲冑	kac; chuu;
-甲冑	kat; tyuu;
+甲冑	kac;chuu;
+甲冑	kat;tyuu;
 合羽	kaq; pa;
-合羽	kap; pa;
+合羽	kap;pa;
 喝破	kaq; pa;
-喝破	kap; pa;
+喝破	kap;pa;
 活溌	kaq; patsu;
-活溌	kap; patsu;
+活溌	kap;patsu;
 活潑	kaq; patsu;
-活潑	kap; patsu;
+活潑	kap;patsu;
 活版	kaq; pan;
-活版	kap; pan;
+活版	kap;pan;
 割賦	kaq; pu;
-割賦	kap; pu;
+割賦	kap;pu;
 割腹	kaq; puku;
-割腹	kap; puku;
+割腹	kap;puku;
 恰幅	kaq; puku;
-恰幅	kap; puku;
+恰幅	kap;puku;
 闊歩	kaq; po;
-闊歩	kap; po;
+闊歩	kap;po;
 割烹	kaq; pou;
-割烹	kap; pou;
+割烹	kap;pou;
 滑落	kaq; raku;
-滑落	kar; raku;
+滑落	kar;raku;
 克つ	ka; tsu,
 加津	ka; tsu;
 加都	ka; tsu;
@@ -22682,37 +22682,37 @@ columns:
 語り	gata; ri,
 雅致	ga; chi;
 学課	gaq; ka;
-学課	gak; ka;
+学課	gak;ka;
 学海	gaq; kai;
-学海	gak; kai;
+学海	gak;kai;
 学界	gaq; kai;
-学界	gak; kai;
+学界	gak;kai;
 楽界	gaq; kai;
-楽界	gak; kai;
+楽界	gak;kai;
 月忌	gaq; ki;
-月忌	gak; ki;
+月忌	gak;ki;
 学究	gaq; kyuu;
-学究	gak; kyuu;
+学究	gak;kyuu;
 月京	gaq; kyou;
-月京	gak; kyou;
+月京	gak;kyou;
 学区	gaq; ku;
-学区	gak; ku;
+学区	gak;ku;
 学兄	gaq; kei;
-学兄	gak; kei;
+学兄	gak;kei;
 顎骨	gaq; kotsu;
-顎骨	gak; kotsu;
+顎骨	gak;kotsu;
 合点	gaq; ten;
-合点	gat; ten;
+合点	gat;ten;
 月日	gaq; pi;
-月日	gap; pi;
+月日	gap;pi;
 合評	gaq; pyou;
-合評	gap; pyou;
+合評	gap;pyou;
 合壁	gaq; peki;
-合壁	gap; peki;
+合壁	gap;peki;
 合邦	gaq; pou;
-合邦	gap; pou;
+合邦	gap;pou;
 合本	gaq; pon;
-合本	gap; pon;
+合本	gap;pon;
 難う	gato; u,
 蛾眉	ga; bi;
 画布	ga; fu;
@@ -22945,53 +22945,53 @@ columns:
 切っ	ki; q,
 斬っ	ki; q,
 菊花	kiq; ka;
-菊花	kik; ka;
+菊花	kik;ka;
 切欠	kiq; kake;
-切欠	kik; kake;
+切欠	kik;kake;
 吉川	kiq; kawa;
-吉川	kik; kawa;
+吉川	kik;kawa;
 橘川	kiq; kawa;
-橘川	kik; kawa;
+橘川	kik;kawa;
 吉凶	kiq; kyou;
-吉凶	kik; kyou;
+吉凶	kik;kyou;
 喫驚	kiq; kyou;
-喫驚	kik; kyou;
+喫驚	kik;kyou;
 喫緊	kiq; kin;
-喫緊	kik; kin;
+喫緊	kik;kin;
 吉根	kiq; ko;
-吉根	kik; ko;
+吉根	kik;ko;
 亀甲	kiq; kou;
-亀甲	kik; kou;
+亀甲	kik;kou;
 拮抗	kiq; kou;
-拮抗	kik; kou;
+拮抗	kik;kou;
 龜甲	kiq; kou;
-龜甲	kik; kou;
+龜甲	kik;kou;
 喫さ	kiq; sa,
-喫さ	kis; sa,
+喫さ	kis;sa,
 喫茶	ki; tsa;
 喫し	kiq; shi,
-喫し	kis; shi,
+喫し	kis;shi,
 喫す	kiq; su,
-喫す	kis; su,
+喫す	kis;su,
 喫せ	kiq; se,
-喫せ	kis; se,
+喫せ	kis;se,
 切田	kiq; ta;
-切田	kit; ta;
+切田	kit;ta;
 吉田	kiq; ta;
-吉田	kit; ta;
+吉田	kit;ta;
 橘田	kiq; ta;
-橘田	kit; ta;
+橘田	kit;ta;
 切立	kiq; tate;
-切立	kit; tate;
+切立	kit;tate;
 吉兆	kiq; chou;
-吉兆	kic; chou;
-吉兆	kit; tyou;
+吉兆	kic;chou;
+吉兆	kit;tyou;
 気風	kiq; pu;
-気風	kip; pu;
+気風	kip;pu;
 桔平	kiq; pei;
-桔平	kip; pei;
+桔平	kip;pei;
 吉報	kiq; pou;
-吉報	kip; pou;
+吉報	kip;pou;
 吉津	ki; tsu;
 木津	ki; tsu;
 企図	ki; to;
@@ -23039,12 +23039,12 @@ columns:
 極め	ki; me,
 肌理	ki; me;
 肝玉	kimoq; tama;
-肝玉	kimot; tama;
+肝玉	kimot;tama;
 花車	kya; sha;
 脚下	kyaq; ka;
-脚下	kyak; ka;
+脚下	kyak;ka;
 脚光	kyaq; kou;
-脚光	kyak; kou;
+脚光	kyak;kou;
 伽羅	kya; ra;
 木屋	ki; ya;
 木谷	ki; ya;
@@ -23081,17 +23081,17 @@ columns:
 許多	kyo; ta;
 許田	kyo; da;
 曲解	kyoq; kai;
-曲解	kyok; kai;
+曲解	kyok;kai;
 極冠	kyoq; kan;
-極冠	kyok; kan;
+極冠	kyok;kan;
 極官	kyoq; kan;
-極官	kyok; kan;
+極官	kyok;kan;
 極刑	kyoq; kei;
-極刑	kyok; kei;
+極刑	kyok;kei;
 旭光	kyoq; kou;
-旭光	kyok; kou;
+旭光	kyok;kou;
 極光	kyoq; kou;
-極光	kyok; kou;
+極光	kyok;kou;
 巨費	kyo; hi;
 許否	kyo; hi;
 巨富	kyo; fu;
@@ -23184,9 +23184,9 @@ columns:
 儀間	gi; ma;
 戯夢	gi; mu;
 逆境	gyaq; kyou;
-逆境	gyak; kyou;
+逆境	gyak;kyou;
 逆行	gyaq; kou;
-逆行	gyak; kou;
+逆行	gyak;kou;
 妓夫	gyu; u;
 牛生	gyu; u;
 御意	gyo; i;
@@ -23209,7 +23209,7 @@ columns:
 御す	gyo; su,
 御せ	gyo; se,
 玉稿	gyoq; kou;
-玉稿	gyok; kou;
+玉稿	gyok;kou;
 漁場	gyo; ba;
 魚肥	gyo; hi;
 漁父	gyo; fu;
@@ -23353,28 +23353,28 @@ columns:
 繰っ	ku; q,
 食っ	ku; q,
 屈強	kuq; kyou;
-屈強	kuk; kyou;
+屈強	kuk;kyou;
 究竟	kuq; kyou;
-究竟	kuk; kyou;
+究竟	kuk;kyou;
 屈曲	kuq; kyoku;
-屈曲	kuk; kyoku;
+屈曲	kuk;kyoku;
 屈さ	kuq; sa,
-屈さ	kus; sa,
+屈さ	kus;sa,
 屈し	kuq; shi,
-屈し	kus; shi,
+屈し	kus;shi,
 屈指	ku; tshi;
 屈す	kuq; su,
-屈す	kus; su,
+屈す	kus;su,
 屈せ	kuq; se,
-屈せ	kus; se,
+屈せ	kus;se,
 久田	kuq; ta;
-久田	kut; ta;
+久田	kut;ta;
 屈足	kuq; tari;
-屈足	kut; tari;
+屈足	kut;tari;
 屈伏	kuq; puku;
-屈伏	kup; puku;
+屈伏	kup;puku;
 屈服	kuq; puku;
-屈服	kup; puku;
+屈服	kup;puku;
 覆さ	kutsugae; sa,
 覆し	kutsugae; shi,
 覆せ	kutsugae; se,
@@ -23573,90 +23573,90 @@ columns:
 鶏知	ke; chi;
 蹴っ	ke; q,
 欠課	keq; ka;
-欠課	kek; ka;
+欠課	kek;ka;
 決潰	keq; kai;
-決潰	kek; kai;
+決潰	kek;kai;
 血塊	keq; kai;
-血塊	kek; kai;
+血塊	kek;kai;
 欠格	keq; kaku;
-欠格	kek; kaku;
+欠格	kek;kaku;
 結核	keq; kaku;
-結核	kek; kaku;
+結核	kek;kaku;
 血幹	keq; kan;
-血幹	kek; kan;
+血幹	kek;kan;
 決起	keq; ki;
-決起	kek; ki;
+決起	kek;ki;
 血気	keq; ki;
-血気	kek; ki;
+血気	kek;ki;
 蹶起	keq; ki;
-蹶起	kek; ki;
+蹶起	kek;ki;
 結球	keq; kyuu;
-結球	kek; kyuu;
+結球	kek;kyuu;
 血球	keq; kyuu;
-血球	kek; kyuu;
+血球	kek;kyuu;
 穴居	keq; kyo;
-穴居	kek; kyo;
+穴居	kek;kyo;
 欠勤	keq; kin;
-欠勤	kek; kin;
+欠勤	kek;kin;
 結句	keq; ku;
-結句	kek; ku;
+結句	kek;ku;
 欠航	keq; kou;
-欠航	kek; kou;
+欠航	kek;kou;
 血行	keq; kou;
-血行	kek; kou;
+血行	kek;kou;
 血痕	keq; kon;
-血痕	kek; kon;
+血痕	kek;kon;
 決さ	keq; sa,
-決さ	kes; sa,
+決さ	kes;sa,
 傑士	ke; tshi;
 決し	keq; shi,
-決し	kes; shi,
+決し	kes;shi,
 決死	ke; tshi;
 結社	ke; tsha;
 血腫	ke; tshu;
 血書	ke; tsho;
 決す	keq; su,
-決す	kes; su,
+決す	kes;su,
 決せ	keq; se,
-決せ	kes; se,
+決せ	kes;se,
 結滞	keq; tai;
-結滞	ket; tai;
+結滞	ket;tai;
 結託	keq; taku;
-結託	ket; taku;
+結託	ket;taku;
 血痰	keq; tan;
-血痰	ket; tan;
+血痰	ket;tan;
 結腸	keq; chou;
-結腸	kec; chou;
-結腸	ket; tyou;
+結腸	kec;chou;
+結腸	ket;tyou;
 血沈	keq; chin;
-血沈	kec; chin;
-血沈	ket; tin;
+血沈	kec;chin;
+血沈	ket;tin;
 結締	keq; tei;
-結締	ket; tei;
+結締	ket;tei;
 結党	keq; tou;
-結党	ket; tou;
+結党	ket;tou;
 結東	keq; tou;
-結東	ket; tou;
+結東	ket;tou;
 血糖	keq; tou;
-血糖	ket; tou;
+血糖	ket;tou;
 血統	keq; tou;
-血統	ket; tou;
+血統	ket;tou;
 欠配	keq; pai;
-欠配	kep; pai;
+欠配	kep;pai;
 潔白	keq; paku;
-潔白	kep; paku;
+潔白	kep;paku;
 結髪	keq; patsu;
-結髪	kep; patsu;
+結髪	kep;patsu;
 血判	keq; pan;
-血判	kep; pan;
+血判	kep;pan;
 結氷	keq; pyou;
-結氷	kep; pyou;
+結氷	kep;pyou;
 血粉	keq; pun;
-血粉	kep; pun;
+血粉	kep;pun;
 潔癖	keq; peki;
-潔癖	kep; peki;
+潔癖	kep;peki;
 欠本	keq; pon;
-欠本	kep; pon;
+欠本	kep;pon;
 気取	ke; do;
 貶さ	kena; sa,
 貶し	kena; shi,
@@ -23707,45 +23707,45 @@ columns:
 下田	ge; da;
 下知	ge; chi;
 月下	geq; ka;
-月下	gek; ka;
+月下	gek;ka;
 月給	geq; kyuu;
-月給	gek; kyuu;
+月給	gek;kyuu;
 月琴	geq; kin;
-月琴	gek; kin;
+月琴	gek;kin;
 月桂	geq; kei;
-月桂	gek; kei;
+月桂	gek;kei;
 月経	geq; kei;
-月経	gek; kei;
+月経	gek;kei;
 撃剣	geq; ken;
-撃剣	gek; ken;
+撃剣	gek;ken;
 月耕	geq; kou;
-月耕	gek; kou;
+月耕	gek;kou;
 月郊	geq; kou;
-月郊	gek; kou;
+月郊	gek;kou;
 激昂	geq; kou;
-激昂	gek; kou;
+激昂	gek;kou;
 激高	geq; kou;
-激高	gek; kou;
+激高	gek;kou;
 月子	ge; tshi;
 月謝	ge; tsha;
 月旦	geq; tan;
-月旦	get; tan;
+月旦	get;tan;
 月斗	geq; to;
-月斗	get; to;
+月斗	get;to;
 月販	geq; pan;
-月販	gep; pan;
+月販	gep;pan;
 月表	geq; pyou;
-月表	gep; pyou;
+月表	gep;pyou;
 月評	geq; pyou;
-月評	gep; pyou;
+月評	gep;pyou;
 月賦	geq; pu;
-月賦	gep; pu;
+月賦	gep;pu;
 月餅	geq; pei;
-月餅	gep; pei;
+月餅	gep;pei;
 月俸	geq; pou;
-月俸	gep; pou;
+月俸	gep;pou;
 月報	geq; pou;
-月報	gep; pou;
+月報	gep;pou;
 下渡	ge; do;
 下場	ge; ba;
 下馬	ge; ba;
@@ -23941,73 +23941,73 @@ columns:
 濃っ	ko; q,
 請っ	ko; q,
 刻下	koq; ka;
-刻下	kok; ka;
+刻下	kok;ka;
 国花	koq; ka;
-国花	kok; ka;
+国花	kok;ka;
 国華	koq; ka;
-国華	kok; ka;
+国華	kok;ka;
 国貨	koq; ka;
-国貨	kok; ka;
+国貨	kok;ka;
 告解	koq; kai;
-告解	kok; kai;
+告解	kok;kai;
 国界	koq; kai;
-国界	kok; kai;
+国界	kok;kai;
 骨灰	koq; kai;
-骨灰	kok; kai;
+骨灰	kok;kai;
 黒海	koq; kai;
-黒海	kok; kai;
+黒海	kok;kai;
 骨骼	koq; kaku;
-骨骼	kok; kaku;
+骨骼	kok;kaku;
 国観	koq; kan;
-国観	kok; kan;
+国観	kok;kan;
 酷寒	koq; kan;
-酷寒	kok; kan;
+酷寒	kok;kan;
 骨幹	koq; kan;
-骨幹	kok; kan;
+骨幹	kok;kan;
 克己	koq; ki;
-克己	kok; ki;
+克己	kok;ki;
 国共	koq; kyou;
-国共	kok; kyou;
+国共	kok;kyou;
 国禁	koq; kin;
-国禁	kok; kin;
+国禁	kok;kin;
 刻苦	koq; ku;
-刻苦	kok; ku;
+刻苦	kok;ku;
 国訓	koq; kun;
-国訓	kok; kun;
+国訓	kok;kun;
 酷刑	koq; kei;
-酷刑	kok; kei;
+酷刑	kok;kei;
 国憲	koq; ken;
-国憲	kok; ken;
+国憲	kok;ken;
 国権	koq; ken;
-国権	kok; ken;
+国権	kok;ken;
 国庫	koq; ko;
-国庫	kok; ko;
+国庫	kok;ko;
 国光	koq; kou;
-国光	kok; kou;
+国光	kok;kou;
 刻刻	koq; koku;
-刻刻	kok; koku;
+刻刻	kok;koku;
 骨子	ko; tshi;
 乞田	koq; ta;
-乞田	kot; ta;
+乞田	kot;ta;
 骨炭	koq; tan;
-骨炭	kot; tan;
+骨炭	kot;tan;
 骨頂	koq; chou;
-骨頂	koc; chou;
-骨頂	kot; tyou;
+骨頂	koc;chou;
+骨頂	kot;tyou;
 木津	koq; tsu;
-木津	kot; tsu;
+木津	kot;tsu;
 忽戸	koq; to;
-忽戸	kot; to;
+忽戸	kot;to;
 骨董	koq; tou;
-骨董	kot; tou;
+骨董	kot;tou;
 木端	koq; pa;
-木端	kop; pa;
+木端	kop;pa;
 骨牌	koq; pai;
-骨牌	kop; pai;
+骨牌	kop;pai;
 骨粉	koq; pun;
-骨粉	kop; pun;
+骨粉	kop;pun;
 骨法	koq; pou;
-骨法	kop; pou;
+骨法	kop;pou;
 木津	ko; tsu;
 小手	ko; te;
 篭手	ko; te;
@@ -24166,7 +24166,7 @@ columns:
 怖っ	kowa; q,
 恐っ	kowa; q,
 小童	kowaq; pa;
-小童	kowap; pa;
+小童	kowap;pa;
 毀れ	kowa; re,
 混ん	ko; n,
 込ん	ko; n,
@@ -24220,7 +24220,7 @@ columns:
 五智	go; chi;
 五知	go; chi;
 極寒	goq; kan;
-極寒	gok; kan;
+極寒	gok;kan;
 後手	go; te;
 如き	goto; ki,
 如く	goto; ku,
@@ -24406,60 +24406,60 @@ columns:
 佐田	sa; da;
 佐陀	sa; da;
 貞奴	sadayaq; ko;
-貞奴	sadayak; ko;
+貞奴	sadayak;ko;
 佐知	sa; chi;
 沙智	sa; chi;
 去っ	sa; q,
 作歌	saq; ka;
-作歌	sak; ka;
+作歌	sak;ka;
 作花	saq; ka;
-作花	sak; ka;
+作花	sak;ka;
 擦過	saq; ka;
-擦過	sak; ka;
+擦過	sak;ka;
 昨夏	saq; ka;
-昨夏	sak; ka;
+昨夏	sak;ka;
 錯角	saq; kaku;
-錯角	sak; kaku;
+錯角	sak;kaku;
 錯簡	saq; kan;
-錯簡	sak; kan;
+錯簡	sak;kan;
 数奇	saq; ki;
-数奇	sak; ki;
+数奇	sak;ki;
 遡及	saq; kyuu;
-遡及	sak; kyuu;
+遡及	sak;kyuu;
 作況	saq; kyou;
-作況	sak; kyou;
+作況	sak;kyou;
 殺菌	saq; kin;
-殺菌	sak; kin;
+殺菌	sak;kin;
 咲来	saq; kuru;
-咲来	sak; kuru;
+咲来	sak;kuru;
 作興	saq; kou;
-作興	sak; kou;
+作興	sak;kou;
 昨今	saq; kon;
-昨今	sak; kon;
+昨今	sak;kon;
 佐佐	sa; tsa;
 察さ	saq; sa,
-察さ	sas; sa,
+察さ	sas;sa,
 冊子	sa; tshi;
 察す	saq; su,
-察す	sas; su,
+察す	sas;su,
 察せ	saq; se,
-察せ	sas; se,
+察せ	sas;se,
 殺虫	saq; chuu;
-殺虫	sac; chuu;
-殺虫	sat; tyuu;
+殺虫	sac;chuu;
+殺虫	sat;tyuu;
 薩長	saq; chou;
-薩長	sac; chou;
-薩長	sat; tyou;
+薩長	sac;chou;
+薩長	sat;tyou;
 幸手	saq; te;
-幸手	sat; te;
+幸手	sat;te;
 札的	saq; teki;
-札的	sat; teki;
+札的	sat;teki;
 颯と	saq; to,
-颯と	sat; to,
+颯と	sat;to,
 撒布	saq; pu;
-撒布	sap; pu;
+撒布	sap;pu;
 札幌	saq; poro;
-札幌	sap; poro;
+札幌	sap;poro;
 佐津	sa; tsu;
 佐手	sa; te;
 佐登	sa; to;
@@ -24629,44 +24629,44 @@ columns:
 座せ	za; se,
 座そ	za; so,
 雑感	zaq; kan;
-雑感	zak; kan;
+雑感	zak;kan;
 雑観	zaq; kan;
-雑観	zak; kan;
+雑観	zak;kan;
 雑記	zaq; ki;
-雑記	zak; ki;
+雑記	zak;ki;
 雑居	zaq; kyo;
-雑居	zak; kyo;
+雑居	zak;kyo;
 雑菌	zaq; kin;
-雑菌	zak; kin;
+雑菌	zak;kin;
 雑件	zaq; ken;
-雑件	zak; ken;
+雑件	zak;ken;
 雑犬	zaq; ken;
-雑犬	zak; ken;
+雑犬	zak;ken;
 雑交	zaq; kou;
-雑交	zak; kou;
+雑交	zak;kou;
 雑考	zaq; kou;
-雑考	zak; kou;
+雑考	zak;kou;
 雑穀	zaq; koku;
-雑穀	zak; koku;
+雑穀	zak;koku;
 雑婚	zaq; kon;
-雑婚	zak; kon;
+雑婚	zak;kon;
 雑誌	za; tshi;
 雑種	za; tshu;
 雑書	za; tsho;
 雑沓	zaq; tou;
-雑沓	zat; tou;
+雑沓	zat;tou;
 雑俳	zaq; pai;
-雑俳	zap; pai;
+雑俳	zap;pai;
 雑駁	zaq; paku;
-雑駁	zap; paku;
+雑駁	zap;paku;
 雑費	zaq; pi;
-雑費	zap; pi;
+雑費	zap;pi;
 雑筆	zaq; pitsu;
-雑筆	zap; pitsu;
+雑筆	zap;pitsu;
 雑品	zaq; pin;
-雑品	zap; pin;
+雑品	zap;pin;
 雑報	zaq; pou;
-雑報	zap; pou;
+雑報	zap;pou;
 座波	za; ha;
 座間	za; ma;
 戯れ	za; re,
@@ -24875,91 +24875,91 @@ columns:
 し張	shi, chou;
 知っ	shi; q,
 失火	shiq; ka;
-失火	shik; ka;
+失火	shik;ka;
 悉皆	shiq; kai;
-悉皆	shik; kai;
+悉皆	shik;kai;
 尻労	shiq; kari;
-尻労	shik; kari;
+尻労	shik;kari;
 確り	shikka; ri,
 失陥	shiq; kan;
-失陥	shik; kan;
+失陥	shik;kan;
 漆器	shiq; ki;
-漆器	shik; ki;
+漆器	shik;ki;
 疾駆	shiq; ku;
-疾駆	shik; ku;
+疾駆	shik;ku;
 湿気	shiq; ke;
-湿気	shik; ke;
+湿気	shik;ke;
 失敬	shiq; kei;
-失敬	shik; kei;
+失敬	shik;kei;
 失権	shiq; ken;
-失権	shik; ken;
+失権	shik;ken;
 疾呼	shiq; ko;
-疾呼	shik; ko;
+疾呼	shik;ko;
 失効	shiq; kou;
-失効	shik; kou;
+失効	shik;kou;
 膝行	shiq; kou;
-膝行	shik; kou;
+膝行	shik;kou;
 桎梏	shiq; koku;
-桎梏	shik; koku;
+桎梏	shik;koku;
 失さ	shiq; sa,
-失さ	shis; sa,
+失さ	shis;sa,
 失し	shiq; shi,
-失し	shis; shi,
+失し	shis;shi,
 嫉視	shi; tshi;
 膝射	shi; tsha;
 失す	shiq; su,
-失す	shis; su,
+失す	shis;su,
 失せ	shiq; se,
-失せ	shis; se,
+失せ	shis;se,
 質素	shi; tso;
 失体	shiq; tai;
-失体	shit; tai;
+失体	shit;tai;
 尻高	shiq; taka;
-尻高	shit; taka;
+尻高	shit;taka;
 執達	shiq; tatsu;
-執達	shit; tatsu;
+執達	shit;tatsu;
 悉曇	shiq; tan;
-悉曇	shit; tan;
+悉曇	shit;tan;
 失地	shiq; chi;
-失地	shic; chi;
-失地	shit; ti;
+失地	shic;chi;
+失地	shit;ti;
 湿地	shiq; chi;
-湿地	shic; chi;
-湿地	shit; ti;
+湿地	shic;chi;
+湿地	shit;ti;
 失調	shiq; chou;
-失調	shic; chou;
-失調	shit; tyou;
+失調	shic;chou;
+失調	shit;tyou;
 七珍	shiq; chin;
-七珍	shic; chin;
-七珍	shit; tin;
+七珍	shic;chin;
+七珍	shit;tin;
 失墜	shiq; tsui;
-失墜	shit; tsui;
+失墜	shit;tsui;
 尻手	shiq; te;
-尻手	shit; te;
+尻手	shit;te;
 知手	shiq; te;
-知手	shit; te;
+知手	shit;te;
 執刀	shiq; tou;
-執刀	shit; tou;
+執刀	shit;tou;
 失当	shiq; tou;
-失当	shit; tou;
+失当	shit;tou;
 失投	shiq; tou;
-失投	shit; tou;
+失投	shit;tou;
 失費	shiq; pi;
-失費	ship; pi;
+失費	ship;pi;
 櫛比	shiq; pi;
-櫛比	ship; pi;
+櫛比	ship;pi;
 聚富	shiq; pu;
-聚富	ship; pu;
+聚富	ship;pu;
 疾病	shiq; pei;
-疾病	ship; pei;
+疾病	ship;pei;
 竹篦	shiq; pei;
-竹篦	ship; pei;
+竹篦	ship;pei;
 尻尾	shiq; po;
-尻尾	ship; po;
+尻尾	ship;po;
 七宝	shiq; pou;
-七宝	ship; pou;
+七宝	ship;pou;
 卓袱	shiq; poku;
-卓袱	ship; poku;
+卓袱	ship;poku;
 志津	shi; tsu;
 設い	shitsura; i,
 設え	shitsura; e,
@@ -25077,7 +25077,7 @@ columns:
 染む	shi; mu,
 沁む	shi; mu,
 占冠	shimukaq; pu;
-占冠	shimukap; pu;
+占冠	shimukap;pu;
 志免	shi; me;
 染め	shi; me,
 注連	shi; me;
@@ -25115,13 +25115,13 @@ columns:
 社是	sha; ze;
 社地	sha; chi;
 借家	shaq; ka;
-借家	shak; ka;
+借家	shak;ka;
 借款	shaq; kan;
-借款	shak; kan;
+借款	shak;kan;
 釈教	shaq; kyou;
-釈教	shak; kyou;
+釈教	shak;kyou;
 赤口	shaq; ku;
-赤口	shak; ku;
+赤口	shak;ku;
 赭土	sha; do;
 娑婆	sha; ba;
 車馬	sha; ba;
@@ -25181,27 +25181,27 @@ columns:
 主知	shu; chi;
 主著	shu; cho;
 出火	shuq; ka;
-出火	shuk; ka;
+出火	shuk;ka;
 出格	shuq; kaku;
-出格	shuk; kaku;
+出格	shuk;kaku;
 出棺	shuq; kan;
-出棺	shuk; kan;
+出棺	shuk;kan;
 出郷	shuq; kyou;
-出郷	shuk; kyou;
+出郷	shuk;kyou;
 出欠	shuq; ketsu;
-出欠	shuk; ketsu;
+出欠	shuk;ketsu;
 出庫	shuq; ko;
-出庫	shuk; ko;
+出庫	shuk;ko;
 出向	shuq; kou;
-出向	shuk; kou;
+出向	shuk;kou;
 出港	shuq; kou;
-出港	shuk; kou;
+出港	shuk;kou;
 出稿	shuq; kou;
-出稿	shuk; kou;
+出稿	shuk;kou;
 出航	shuq; kou;
-出航	shuk; kou;
+出航	shuk;kou;
 出国	shuq; koku;
-出国	shuk; koku;
+出国	shuk;koku;
 出仕	shu; tshi;
 出資	shu; tshi;
 出射	shu; tsha;
@@ -25210,27 +25210,27 @@ columns:
 出所	shu; tsho;
 出世	shu; tse;
 出立	shuq; tatsu;
-出立	shut; tatsu;
+出立	shut;tatsu;
 出炭	shuq; tan;
-出炭	shut; tan;
+出炭	shut;tan;
 出超	shuq; chou;
-出超	shuc; chou;
-出超	shut; tyou;
+出超	shuc;chou;
+出超	shut;tyou;
 出陳	shuq; chin;
-出陳	shuc; chin;
-出陳	shut; tin;
+出陳	shuc;chin;
+出陳	shut;tin;
 出廷	shuq; tei;
-出廷	shut; tei;
+出廷	shut;tei;
 出頭	shuq; tou;
-出頭	shut; tou;
+出頭	shut;tou;
 出帆	shuq; pan;
-出帆	shup; pan;
+出帆	shup;pan;
 出費	shuq; pi;
-出費	shup; pi;
+出費	shup;pi;
 出府	shuq; pu;
-出府	shup; pu;
+出府	shup;pu;
 出奔	shuq; pon;
-出奔	shup; pon;
+出奔	shup;pon;
 衆徒	shu; to;
 酒徒	shu; to;
 首途	shu; to;
@@ -25306,33 +25306,33 @@ columns:
 処そ	sho; so,
 諸田	sho; da;
 職階	shoq; kai;
-職階	shok; kai;
+職階	shok;kai;
 触覚	shoq; kaku;
-触覚	shok; kaku;
+触覚	shok;kaku;
 触角	shoq; kaku;
-触角	shok; kaku;
+触角	shok;kaku;
 触感	shoq; kan;
-触感	shok; kan;
+触感	shok;kan;
 食管	shoq; kan;
-食管	shok; kan;
+食管	shok;kan;
 食間	shoq; kan;
-食間	shok; kan;
+食間	shok;kan;
 織機	shoq; ki;
-織機	shok; ki;
+織機	shok;ki;
 食客	shoq; kyaku;
-食客	shok; kyaku;
+食客	shok;kyaku;
 初切	shoq; kiri;
-初切	shok; kiri;
+初切	shok;kiri;
 蜀錦	shoq; kin;
-蜀錦	shok; kin;
+蜀錦	shok;kin;
 職権	shoq; ken;
-職権	shok; ken;
+職権	shok;ken;
 食券	shoq; ken;
-食券	shok; ken;
+食券	shok;ken;
 燭光	shoq; kou;
-燭光	shok; kou;
+燭光	shok;kou;
 初端	shoq; pana;
-初端	shop; pana;
+初端	shop;pana;
 初手	sho; te;
 初度	sho; do;
 諸派	sho; ha;
@@ -25472,35 +25472,35 @@ columns:
 自他	ji; ta;
 耳朶	ji; da;
 実科	jiq; ka;
-実科	jik; ka;
+実科	jik;ka;
 十戒	jiq; kai;
-十戒	jik; kai;
+十戒	jik;kai;
 十誡	jiq; kai;
-十誡	jik; kai;
+十誡	jik;kai;
 十干	jiq; kan;
-十干	jik; kan;
+十干	jik;kan;
 実機	jiq; ki;
-実機	jik; ki;
+実機	jik;ki;
 実記	jiq; ki;
-実記	jik; ki;
+実記	jik;ki;
 実兄	jiq; kei;
-実兄	jik; kei;
+実兄	jik;kei;
 実刑	jiq; kei;
-実刑	jik; kei;
+実刑	jik;kei;
 実景	jiq; kei;
-実景	jik; kei;
+実景	jik;kei;
 実検	jiq; ken;
-実検	jik; ken;
+実検	jik;ken;
 実見	jiq; ken;
-実見	jik; ken;
+実見	jik;ken;
 実谷	jiq; koku;
-実谷	jik; koku;
+実谷	jik;koku;
 拾石	jiq; koku;
-拾石	jik; koku;
+拾石	jik;koku;
 入魂	jiq; kon;
-入魂	jik; kon;
+入魂	jik;kon;
 昵懇	jiq; kon;
-昵懇	jik; kon;
+昵懇	jik;kon;
 十指	ji; tshi;
 実姉	ji; tshi;
 実子	ji; tshi;
@@ -25509,30 +25509,30 @@ columns:
 実写	ji; tsha;
 実車	ji; tsha;
 実地	jiq; chi;
-実地	jic; chi;
-実地	jit; ti;
+実地	jic;chi;
+実地	jit;ti;
 寺中	jiq; chuu;
-寺中	jic; chuu;
-寺中	jit; tyuu;
+寺中	jic;chuu;
+寺中	jit;tyuu;
 実直	jiq; choku;
-実直	jic; choku;
-実直	jit; tyoku;
+実直	jic;choku;
+実直	jit;tyoku;
 実定	jiq; tei;
-実定	jit; tei;
+実定	jit;tei;
 実弟	jiq; tei;
-実弟	jit; tei;
+実弟	jit;tei;
 十徳	jiq; toku;
-十徳	jit; toku;
+十徳	jit;toku;
 実否	jiq; pi;
-実否	jip; pi;
+実否	jip;pi;
 実費	jiq; pi;
-実費	jip; pi;
+実費	jip;pi;
 実父	jiq; pu;
-実父	jip; pu;
+実父	jip;pu;
 十方	jiq; pou;
-十方	jip; pou;
+十方	jip;pou;
 実包	jiq; pou;
-実包	jip; pou;
+実包	jip;pou;
 磁土	ji; do;
 死に	ji; ni,
 地場	ji; ba;
@@ -25554,17 +25554,17 @@ columns:
 邪智	ja; chi;
 邪知	ja; chi;
 弱化	jaq; ka;
-弱化	jak; ka;
+弱化	jak;ka;
 弱冠	jaq; kan;
-弱冠	jak; kan;
+弱冠	jak;kan;
 惹起	jaq; ki;
-惹起	jak; ki;
+惹起	jak;ki;
 若楓	jaq; kyou;
-若楓	jak; kyou;
+若楓	jak;kyou;
 寂光	jaq; kou;
-寂光	jak; kou;
+寂光	jak;kou;
 弱国	jaq; koku;
-弱国	jak; koku;
+弱国	jak;koku;
 戯れ	ja; re,
 重そ	juu; so,
 儒家	ju; ka;
@@ -25582,20 +25582,20 @@ columns:
 授受	ju; ju;
 呪詛	ju; so;
 十花	juq; ka;
-十花	juk; ka;
+十花	juk;ka;
 述懐	juq; kai;
-述懐	juk; kai;
+述懐	juk;kai;
 十九	juq; ku;
-十九	juk; ku;
+十九	juk;ku;
 熟考	juq; kou;
-熟考	juk; kou;
+熟考	juk;kou;
 十谷	juq; koku;
-十谷	juk; koku;
+十谷	juk;koku;
 術中	juq; chuu;
-術中	juc; chuu;
-術中	jut; tyuu;
+術中	juc;chuu;
+術中	jut;tyuu;
 恤兵	juq; pei;
-恤兵	jup; pei;
+恤兵	jup;pei;
 樹皮	ju; hi;
 呪符	ju; fu;
 寿梨	ju; ri;
@@ -25725,7 +25725,7 @@ columns:
 漉け	su; ke,
 空け	su; ke,
 助人	sukeq; to;
-助人	suket; to;
+助人	suket;to;
 須下	su; ge;
 凄え	suge; e,
 好こ	su; ko,
@@ -25819,7 +25819,7 @@ columns:
 磨っ	su; q,
 酸っ	su; q,
 素裸	suq; padaka;
-素裸	sup; padaka;
+素裸	sup;padaka;
 寿都	su; tsu;
 棄て	su; te,
 素手	su; de;
@@ -25998,81 +25998,81 @@ columns:
 世知	se; chi;
 競っ	se; q,
 石火	seq; ka;
-石火	sek; ka;
+石火	sek;ka;
 赤化	seq; ka;
-赤化	sek; ka;
+赤化	sek;ka;
 切開	seq; kai;
-切開	sek; kai;
+切開	sek;kai;
 石灰	seq; kai;
-石灰	sek; kai;
+石灰	sek;kai;
 石槨	seq; kaku;
-石槨	sek; kaku;
+石槨	sek;kaku;
 摂関	seq; kan;
-摂関	sek; kan;
+摂関	sek;kan;
 石棺	seq; kan;
-石棺	sek; kan;
+石棺	sek;kan;
 節季	seq; ki;
-節季	sek; ki;
+節季	sek;ki;
 節気	seq; ki;
-節気	sek; ki;
+節気	sek;ki;
 隻脚	seq; kyaku;
-隻脚	sek; kyaku;
+隻脚	sek;kyaku;
 説経	seq; kyou;
-説経	sek; kyou;
+説経	sek;kyou;
 石琴	seq; kin;
-石琴	sek; kin;
+石琴	sek;kin;
 節供	seq; ku;
-節供	sek; ku;
+節供	sek;ku;
 節句	seq; ku;
-節句	sek; ku;
+節句	sek;ku;
 隻句	seq; ku;
-隻句	sek; ku;
+隻句	sek;ku;
 石窟	seq; kutsu;
-石窟	sek; kutsu;
+石窟	sek;kutsu;
 摂家	seq; ke;
-摂家	sek; ke;
+摂家	sek;ke;
 雪景	seq; kei;
-雪景	sek; kei;
+雪景	sek;kei;
 雪渓	seq; kei;
-雪渓	sek; kei;
+雪渓	sek;kei;
 席巻	seq; ken;
-席巻	sek; ken;
+席巻	sek;ken;
 席捲	seq; ken;
-席捲	sek; ken;
+席捲	sek;ken;
 接見	seq; ken;
-接見	sek; ken;
+接見	sek;ken;
 石鹼	seq; ken;
-石鹼	sek; ken;
+石鹼	sek;ken;
 節倹	seq; ken;
-節倹	sek; ken;
+節倹	sek;ken;
 拙攻	seq; kou;
-拙攻	sek; kou;
+拙攻	sek;kou;
 拙稿	seq; kou;
-拙稿	sek; kou;
+拙稿	sek;kou;
 斥候	seq; kou;
-斥候	sek; kou;
+斥候	sek;kou;
 浙江	seq; kou;
-浙江	sek; kou;
+浙江	sek;kou;
 石工	seq; kou;
-石工	sek; kou;
+石工	sek;kou;
 石膏	seq; kou;
-石膏	sek; kou;
+石膏	sek;kou;
 石刻	seq; koku;
-石刻	sek; koku;
+石刻	sek;koku;
 石斛	seq; koku;
-石斛	sek; koku;
+石斛	sek;koku;
 接骨	seq; kotsu;
-接骨	sek; kotsu;
+接骨	sek;kotsu;
 切磋	se; tsa;
 接さ	seq; sa,
-接さ	ses; sa,
+接さ	ses;sa,
 接し	seq; shi,
-接し	ses; shi,
+接し	ses;shi,
 摂し	seq; shi,
-摂し	ses; shi,
+摂し	ses;shi,
 摂氏	se; tshi;
 節し	seq; shi,
-節し	ses; shi,
+節し	ses;shi,
 拙者	se; tsha;
 接写	se; tsha;
 摂社	se; tsha;
@@ -26082,72 +26082,72 @@ columns:
 節酒	se; tshu;
 切所	se; tsho;
 接す	seq; su,
-接す	ses; su,
+接す	ses;su,
 摂す	seq; su,
-摂す	ses; su,
+摂す	ses;su,
 節す	seq; su,
-節す	ses; su,
+節す	ses;su,
 接せ	seq; se,
-接せ	ses; se,
+接せ	ses;se,
 摂せ	seq; se,
-摂せ	ses; se,
+摂せ	ses;se,
 雪踏	seq; ta;
-雪踏	set; ta;
+雪踏	set;ta;
 雪駄	seq; ta;
-雪駄	set; ta;
+雪駄	set;ta;
 拙宅	seq; taku;
-拙宅	set; taku;
+拙宅	set;taku;
 接地	seq; chi;
-接地	sec; chi;
-接地	set; ti;
+接地	sec;chi;
+接地	set;ti;
 折中	seq; chuu;
-折中	sec; chuu;
-折中	set; tyuu;
+折中	sec;chuu;
+折中	set;tyuu;
 折衷	seq; chuu;
-折衷	sec; chuu;
-折衷	set; tyuu;
+折衷	sec;chuu;
+折衷	set;tyuu;
 拙著	seq; cho;
-拙著	sec; cho;
-拙著	set; tyo;
+拙著	sec;cho;
+拙著	set;tyo;
 雪隠	seq; chin;
-雪隠	sec; chin;
-雪隠	set; tin;
+雪隠	sec;chin;
+雪隠	set;tin;
 摂津	seq; tsu;
-摂津	set; tsu;
+摂津	set;tsu;
 切点	seq; ten;
-切点	set; ten;
+切点	set;ten;
 節点	seq; ten;
-節点	set; ten;
+節点	set;ten;
 切羽	seq; pa;
-切羽	sep; pa;
+切羽	sep;pa;
 説破	seq; pa;
-説破	sep; pa;
+説破	sep;pa;
 切迫	seq; paku;
-切迫	sep; paku;
+切迫	sep;paku;
 雪白	seq; paku;
-雪白	sep; paku;
+雪白	sep;paku;
 折半	seq; pan;
-折半	sep; pan;
+折半	sep;pan;
 接伴	seq; pan;
-接伴	sep; pan;
+接伴	sep;pan;
 雪庇	seq; pi;
-雪庇	sep; pi;
+雪庇	sep;pi;
 拙筆	seq; pitsu;
-拙筆	sep; pitsu;
+拙筆	sep;pitsu;
 雪氷	seq; pyou;
-雪氷	sep; pyou;
+雪氷	sep;pyou;
 節婦	seq; pu;
-節婦	sep; pu;
+節婦	sep;pu;
 説伏	seq; puku;
-説伏	sep; puku;
+説伏	sep;puku;
 接吻	seq; pun;
-接吻	sep; pun;
+接吻	sep;pun;
 切片	seq; pen;
-切片	sep; pen;
+切片	sep;pen;
 雪片	seq; pen;
-雪片	sep; pen;
+雪片	sep;pen;
 説法	seq; pou;
-説法	sep; pou;
+説法	sep;pou;
 切に	setsu; ni,
 瀬戸	se; do;
 背戸	se; do;
@@ -26190,37 +26190,37 @@ columns:
 銭司	ze; zu;
 膳所	ze; ze;
 絶佳	zeq; ka;
-絶佳	zek; ka;
+絶佳	zek;ka;
 舌禍	zeq; ka;
-舌禍	zek; ka;
+舌禍	zek;ka;
 絶海	zeq; kai;
-絶海	zek; kai;
+絶海	zek;kai;
 絶境	zeq; kyou;
-絶境	zek; kyou;
+絶境	zek;kyou;
 絶家	zeq; ke;
-絶家	zek; ke;
+絶家	zek;ke;
 絶交	zeq; kou;
-絶交	zek; kou;
+絶交	zek;kou;
 絶好	zeq; kou;
-絶好	zek; kou;
+絶好	zek;kou;
 舌根	zeq; kon;
-舌根	zek; kon;
+舌根	zek;kon;
 絶す	zeq; su,
-絶す	zes; su,
+絶す	zes;su,
 舌苔	zeq; tai;
-舌苔	zet; tai;
+舌苔	zet;tai;
 舌端	zeq; tan;
-舌端	zet; tan;
+舌端	zet;tan;
 絶島	zeq; tou;
-絶島	zet; tou;
+絶島	zet;tou;
 舌頭	zeq; tou;
-舌頭	zet; tou;
+舌頭	zet;tou;
 絶筆	zeq; pitsu;
-絶筆	zep; pitsu;
+絶筆	zep;pitsu;
 絶壁	zeq; peki;
-絶壁	zep; peki;
+絶壁	zep;peki;
 舌鋒	zeq; pou;
-舌鋒	zep; pou;
+舌鋒	zep;pou;
 前く	zen; ku,
 削い	so; i,
 曽井	so; i;
@@ -26330,48 +26330,48 @@ columns:
 沿っ	so; q,
 添っ	so; q,
 足下	soq; ka;
-足下	sok; ka;
+足下	sok;ka;
 速記	soq; ki;
-速記	sok; ki;
+速記	sok;ki;
 即急	soq; kyuu;
-即急	sok; kyuu;
+即急	sok;kyuu;
 速急	soq; kyuu;
-速急	sok; kyuu;
+速急	sok;kyuu;
 速球	soq; kyuu;
-速球	sok; kyuu;
+速球	sok;kyuu;
 卒去	soq; kyo;
-卒去	sok; kyo;
+卒去	sok;kyo;
 即金	soq; kin;
-即金	sok; kin;
+即金	sok;kin;
 即決	soq; ketsu;
-即決	sok; ketsu;
+即決	sok;ketsu;
 速決	soq; ketsu;
-速決	sok; ketsu;
+速決	sok;ketsu;
 息軒	soq; ken;
-息軒	sok; ken;
+息軒	sok;ken;
 側溝	soq; kou;
-側溝	sok; kou;
+側溝	sok;kou;
 即効	soq; kou;
-即効	sok; kou;
+即効	sok;kou;
 測候	soq; kou;
-測候	sok; kou;
+測候	sok;kou;
 測光	soq; kou;
-測光	sok; kou;
+測光	sok;kou;
 速効	soq; kou;
-速効	sok; kou;
+速効	sok;kou;
 即刻	soq; koku;
-即刻	sok; koku;
+即刻	sok;koku;
 即今	soq; kon;
-即今	sok; kon;
+即今	sok;kon;
 卒し	soq; shi,
-卒し	sos; shi,
+卒し	sos;shi,
 卒す	soq; su,
-卒す	sos; su,
+卒す	sos;su,
 卒中	soq; chuu;
-卒中	soc; chuu;
-卒中	sot; tyuu;
+卒中	soc;chuu;
+卒中	sot;tyuu;
 率土	soq; to;
-率土	sot; to;
+率土	sot;to;
 具え	sona; e,
 嫉ま	sone; ma,
 嫉み	sone; mi,
@@ -26451,27 +26451,27 @@ columns:
 属せ	zoku; se,
 属そ	zoku; so,
 俗化	zoq; ka;
-俗化	zok; ka;
+俗化	zok;ka;
 俗歌	zoq; ka;
-俗歌	zok; ka;
+俗歌	zok;ka;
 俗界	zoq; kai;
-俗界	zok; kai;
+俗界	zok;kai;
 俗解	zoq; kai;
-俗解	zok; kai;
+俗解	zok;kai;
 続開	zoq; kai;
-続開	zok; kai;
+続開	zok;kai;
 俗間	zoq; kan;
-俗間	zok; kan;
+俗間	zok;kan;
 属官	zoq; kan;
-属官	zok; kan;
+属官	zok;kan;
 俗気	zoq; ki;
-俗気	zok; ki;
+俗気	zok;ki;
 俗曲	zoq; kyoku;
-俗曲	zok; kyoku;
+俗曲	zok;kyoku;
 俗気	zoq; ke;
-俗気	zok; ke;
+俗気	zok;ke;
 属国	zoq; koku;
-属国	zok; koku;
+属国	zok;koku;
 染め	zo; me,
 揃い	zoro; i,
 存ず	zon; zu,
@@ -26717,36 +26717,36 @@ columns:
 起っ	ta; q,
 足っ	ta; q,
 達観	taq; kan;
-達観	tak; kan;
+達観	tak;kan;
 謫居	taq; kyo;
-謫居	tak; kyo;
+謫居	tak;kyo;
 磔刑	taq; kei;
-磔刑	tak; kei;
+磔刑	tak;kei;
 卓見	taq; ken;
-卓見	tak; ken;
+卓見	tak;ken;
 達見	taq; ken;
-達見	tak; ken;
+達見	tak;ken;
 田子	taq; ko;
-田子	tak; ko;
+田子	tak;ko;
 達子	taq; ko;
-達子	tak; ko;
+達子	tak;ko;
 達さ	taq; sa,
-達さ	tas; sa,
+達さ	tas;sa,
 達し	taq; shi,
-達し	tas; shi,
+達し	tas;shi,
 達示	ta; tshi;
 達者	ta; tsha;
 達す	taq; su,
-達す	tas; su,
+達す	tas;su,
 達せ	taq; se,
-達せ	tas; se,
+達せ	tas;se,
 達そ	taq; so,
-達そ	tas; so,
+達そ	tas;so,
 立田	taq; ta;
-立田	tat; ta;
+立田	tat;ta;
 塔頭	taq; chuu;
-塔頭	tac; chuu;
-塔頭	tat; tyuu;
+塔頭	tac;chuu;
+塔頭	tat;tyuu;
 尊う	tatto; u,
 尊き	tatto; ki,
 貴き	tatto; ki,
@@ -26767,15 +26767,15 @@ columns:
 尊ん	tatto; n,
 貴ん	tatto; n,
 龍飛	taq; pi;
-龍飛	tap; pi;
+龍飛	tap;pi;
 達筆	taq; pitsu;
-達筆	tap; pitsu;
+達筆	tap;pitsu;
 達布	taq; pu;
-達布	tap; pu;
+達布	tap;pu;
 辰平	taq; pei;
-辰平	tap; pei;
+辰平	tap;pei;
 達平	taq; pei;
-達平	tap; pei;
+達平	tap;pei;
 佇つ	ta; tsu,
 多津	ta; tsu;
 発つ	ta; tsu,
@@ -26947,48 +26947,48 @@ columns:
 駄駄	da; da;
 駄知	da; chi;
 奪回	daq; kai;
-奪回	dak; kai;
+奪回	dak;kai;
 脱会	daq; kai;
-脱会	dak; kai;
+脱会	dak;kai;
 脱却	daq; kyaku;
-脱却	dak; kyaku;
+脱却	dak;kyaku;
 脱臼	daq; kyuu;
-脱臼	dak; kyuu;
+脱臼	dak;kyuu;
 脱去	daq; kyo;
-脱去	dak; kyo;
+脱去	dak;kyo;
 脱稿	daq; kou;
-脱稿	dak; kou;
+脱稿	dak;kou;
 脱肛	daq; kou;
-脱肛	dak; kou;
+脱肛	dak;kou;
 脱穀	daq; koku;
-脱穀	dak; koku;
+脱穀	dak;koku;
 脱さ	daq; sa,
-脱さ	das; sa,
+脱さ	das;sa,
 脱し	daq; shi,
-脱し	das; shi,
+脱し	das;shi,
 脱脂	da; tshi;
 奪取	da; tshu;
 脱す	daq; su,
-脱す	das; su,
+脱す	das;su,
 脱せ	daq; se,
-脱せ	das; se,
+脱せ	das;se,
 脱疽	da; tso;
 韃靼	daq; tan;
-韃靼	dat; tan;
+韃靼	dat;tan;
 脱着	daq; chaku;
-脱着	dac; chaku;
-脱着	dat; tyaku;
+脱着	dac;chaku;
+脱着	dat;tyaku;
 脱腸	daq; chou;
-脱腸	dac; chou;
-脱腸	dat; tyou;
+脱腸	dac;chou;
+脱腸	dat;tyou;
 脱党	daq; tou;
-脱党	dat; tou;
+脱党	dat;tou;
 脱藩	daq; pan;
-脱藩	dap; pan;
+脱藩	dap;pan;
 脱皮	daq; pi;
-脱皮	dap; pi;
+脱皮	dap;pi;
 脱法	daq; pou;
-脱法	dap; pou;
+脱法	dap;pou;
 頼み	dano; mi,
 駄馬	da; ba;
 荼毘	da; bi;
@@ -27121,11 +27121,11 @@ columns:
 遅遅	chi; chi;
 散っ	chi; q,
 蟄居	chiq; kyo;
-蟄居	chik; kyo;
+蟄居	chik;kyo;
 竹工	chiq; kou;
-竹工	chik; kou;
+竹工	chik;kou;
 築港	chiq; kou;
-築港	chik; kou;
+築港	chik;kou;
 窒素	chi; tso;
 因み	china; mi,
 因む	china; mu,
@@ -27151,13 +27151,13 @@ columns:
 着い	chaku; i,
 茶事	cha; ji;
 着火	chaq; ka;
-着火	chak; ka;
+着火	chak;ka;
 着荷	chaq; ka;
-着荷	chak; ka;
+着荷	chak;ka;
 着金	chaq; kin;
-着金	chak; kin;
+着金	chak;kin;
 着剣	chaq; ken;
-着剣	chak; ken;
+着剣	chak;ken;
 茶津	cha; tsu;
 茶戸	cha; do;
 茶舗	cha; ho;
@@ -27195,25 +27195,25 @@ columns:
 猪牙	cho; ki;
 猪口	cho; ko;
 直覚	choq; kaku;
-直覚	chok; kaku;
+直覚	chok;kaku;
 勅勘	choq; kan;
-勅勘	chok; kan;
+勅勘	chok;kan;
 直観	choq; kan;
-直観	chok; kan;
+直観	chok;kan;
 直諫	choq; kan;
-直諫	chok; kan;
+直諫	chok;kan;
 直間	choq; kan;
-直間	chok; kan;
+直間	chok;kan;
 勅許	choq; kyo;
-勅許	chok; kyo;
+勅許	chok;kyo;
 直近	choq; kin;
-直近	chok; kin;
+直近	chok;kin;
 直系	choq; kei;
-直系	chok; kei;
+直系	chok;kei;
 直航	choq; kou;
-直航	chok; kou;
+直航	chok;kou;
 一寸	choq; to;
-一寸	chot; to;
+一寸	chot;to;
 苧麻	cho; ma;
 知寄	cho; ri;
 千世	chi; yo;
@@ -27223,7 +27223,7 @@ columns:
 散り	chi; ri,
 知里	chi; ri;
 散布	chiriq; pu;
-散布	chirip; pu;
+散布	chirip;pu;
 鏤め	chiriba; me,
 知慮	chi; ryo;
 散れ	chi; re,
@@ -27329,7 +27329,7 @@ columns:
 衝き	tsu; ki,
 附き	tsu; ki,
 月寒	tsukisaq; pu;
-月寒	tsukisap; pu;
+月寒	tsukisap;pu;
 告ぎ	tsu; gi,
 嗣ぎ	tsu; gi,
 接ぎ	tsu; gi,
@@ -27635,89 +27635,89 @@ columns:
 照っ	te; q,
 輝っ	te; q,
 鉄火	teq; ka;
-鉄火	tek; ka;
+鉄火	tek;ka;
 適格	teq; kaku;
-適格	tek; kaku;
+適格	tek;kaku;
 鉄幹	teq; kan;
-鉄幹	tek; kan;
+鉄幹	tek;kan;
 鉄管	teq; kan;
-鉄管	tek; kan;
+鉄管	tek;kan;
 摘記	teq; ki;
-摘記	tek; ki;
+摘記	tek;ki;
 適期	teq; ki;
-適期	tek; ki;
+適期	tek;ki;
 鉄器	teq; ki;
-鉄器	tek; ki;
+鉄器	tek;ki;
 鉄騎	teq; ki;
-鉄騎	tek; ki;
+鉄騎	tek;ki;
 鉄脚	teq; kyaku;
-鉄脚	tek; kyaku;
+鉄脚	tek;kyaku;
 鉄橋	teq; kyou;
-鉄橋	tek; kyou;
+鉄橋	tek;kyou;
 剔抉	teq; ketsu;
-剔抉	tek; ketsu;
+剔抉	tek;ketsu;
 鉄血	teq; ketsu;
-鉄血	tek; ketsu;
+鉄血	tek;ketsu;
 鉄建	teq; ken;
-鉄建	tek; ken;
+鉄建	tek;ken;
 手甲	teq; kou;
-手甲	tek; kou;
+手甲	tek;kou;
 鉄工	teq; kou;
-鉄工	tek; kou;
+鉄工	tek;kou;
 鉄鉱	teq; kou;
-鉄鉱	tek; kou;
+鉄鉱	tek;kou;
 敵国	teq; koku;
-敵国	tek; koku;
+敵国	tek;koku;
 鉄骨	teq; kotsu;
-鉄骨	tek; kotsu;
+鉄骨	tek;kotsu;
 徹さ	teq; sa,
-徹さ	tes; sa,
+徹さ	tes;sa,
 鉄鎖	te; tsa;
 徹し	teq; shi,
-徹し	tes; shi,
+徹し	tes;shi,
 撤し	teq; shi,
-撤し	tes; shi,
+撤し	tes;shi,
 徹す	teq; su,
-徹す	tes; su,
+徹す	tes;su,
 徹せ	teq; se,
-徹せ	tes; se,
+徹せ	tes;se,
 哲太	teq; ta;
-哲太	tet; ta;
+哲太	tet;ta;
 鉄柱	teq; chuu;
-鉄柱	tec; chuu;
-鉄柱	tet; tyuu;
+鉄柱	tec;chuu;
+鉄柱	tet;tyuu;
 鉄槌	teq; tsui;
-鉄槌	tet; tsui;
+鉄槌	tet;tsui;
 鉄笛	teq; teki;
-鉄笛	tet; teki;
+鉄笛	tet;teki;
 鉄塔	teq; tou;
-鉄塔	tet; tou;
+鉄塔	tet;tou;
 鉄桶	teq; tou;
-鉄桶	tet; tou;
+鉄桶	tet;tou;
 鉄板	teq; pan;
-鉄板	tep; pan;
+鉄板	tep;pan;
 鉄扉	teq; pi;
-鉄扉	tep; pi;
+鉄扉	tep;pi;
 鉄筆	teq; pitsu;
-鉄筆	tep; pitsu;
+鉄筆	tep;pitsu;
 轍鮒	teq; pu;
-轍鮒	tep; pu;
+轍鮒	tep;pu;
 撤兵	teq; pei;
-撤兵	tep; pei;
+撤兵	tep;pei;
 鉄兵	teq; pei;
-鉄兵	tep; pei;
+鉄兵	tep;pei;
 鉄平	teq; pei;
-鉄平	tep; pei;
+鉄平	tep;pei;
 鉄壁	teq; peki;
-鉄壁	tep; peki;
+鉄壁	tep;peki;
 天辺	teq; pen;
-天辺	tep; pen;
+天辺	tep;pen;
 鉄片	teq; pen;
-鉄片	tep; pen;
+鉄片	tep;pen;
 鉄炮	teq; pou;
-鉄炮	tep; pou;
+鉄炮	tep;pou;
 鉄砲	teq; pou;
-鉄砲	tep; pou;
+鉄砲	tep;pou;
 手場	te; ba;
 手羽	te; ba;
 輝ら	te; ra,
@@ -27745,14 +27745,14 @@ columns:
 出津	de; zu;
 出瀬	de; ze;
 出路	deq; chi;
-出路	dec; chi;
-出路	det; ti;
+出路	dec;chi;
+出路	det;ti;
 出ぱ	deq; pa,
-出ぱ	dep; pa,
+出ぱ	dep;pa,
 出歯	deq; pa;
-出歯	dep; pa;
+出歯	dep;pa;
 出鼻	deq; pana;
-出鼻	dep; pana;
+出鼻	dep;pana;
 出戸	de; to;
 出端	de; ha;
 デ杯	de. hai;
@@ -27926,66 +27926,66 @@ columns:
 盗っ	to; q,
 訪っ	to; q,
 徳化	toq; ka;
-徳化	tok; ka;
+徳化	tok;ka;
 特価	toq; ka;
-特価	tok; ka;
+特価	tok;ka;
 特会	toq; kai;
-特会	tok; kai;
+特会	tok;kai;
 突角	toq; kaku;
-突角	tok; kaku;
+突角	tok;kaku;
 吶喊	toq; kan;
-吶喊	tok; kan;
+吶喊	tok;kan;
 突貫	toq; kan;
-突貫	tok; kan;
+突貫	tok;kan;
 突起	toq; ki;
-突起	tok; ki;
+突起	tok;ki;
 特級	toq; kyuu;
-特級	tok; kyuu;
+特級	tok;kyuu;
 特金	toq; kin;
-特金	tok; kin;
+特金	tok;kin;
 特区	toq; ku;
-特区	tok; ku;
+特区	tok;ku;
 徳利	toq; kuri;
-徳利	tok; kuri;
+徳利	tok;kuri;
 特訓	toq; kun;
-特訓	tok; kun;
+特訓	tok;kun;
 特恵	toq; kei;
-特恵	tok; kei;
+特恵	tok;kei;
 独狐	toq; ko;
-独狐	tok; ko;
+独狐	tok;ko;
 独鈷	toq; ko;
-独鈷	tok; ko;
+独鈷	tok;ko;
 取香	toq; kou;
-取香	tok; kou;
+取香	tok;kou;
 徳行	toq; kou;
-徳行	tok; kou;
+徳行	tok;kou;
 特効	toq; kou;
-特効	tok; kou;
+特効	tok;kou;
 特攻	toq; kou;
-特攻	tok; kou;
+特攻	tok;kou;
 特高	toq; kou;
-特高	tok; kou;
+特高	tok;kou;
 篤行	toq; kou;
-篤行	tok; kou;
+篤行	tok;kou;
 咄嗟	to; tsa;
 突端	toq; tan;
-突端	tot; tan;
+突端	tot;tan;
 取手	toq; te;
-取手	tot; te;
+取手	tot;te;
 把手	toq; te;
-把手	tot; te;
+把手	tot;te;
 突堤	toq; tei;
-突堤	tot; tei;
+突堤	tot;tei;
 鳥羽	toq; pa;
-鳥羽	top; pa;
+鳥羽	top;pa;
 突端	toq; pana;
-突端	top; pana;
+突端	top;pana;
 鳥原	toq; para;
-鳥原	top; para;
+鳥原	top;para;
 凸版	toq; pan;
-凸版	top; pan;
+凸版	top;pan;
 突飛	toq; pi;
-突飛	top; pi;
+突飛	top;pi;
 戸津	to; tsu;
 嫁い	totsu; i,
 嫁が	totsu; ga,
@@ -28177,21 +28177,21 @@ columns:
 土田	do; ta;
 土田	do; da;
 読会	doq; kai;
-読会	dok; kai;
+読会	dok;kai;
 読解	doq; kai;
-読解	dok; kai;
+読解	dok;kai;
 毒気	doq; ki;
-毒気	dok; ki;
+毒気	dok;ki;
 独居	doq; kyo;
-独居	dok; kyo;
+独居	dok;kyo;
 読経	doq; kyou;
-読経	dok; kyou;
+読経	dok;kyou;
 独航	doq; kou;
-独航	dok; kou;
+独航	dok;kou;
 独行	doq; kou;
-独行	dok; kou;
+独行	dok;kou;
 独歩	doq; po;
-独歩	dop; po;
+独歩	dop;po;
 百百	do; do;
 土場	do; ba;
 駑馬	do; ba;
@@ -28403,7 +28403,7 @@ columns:
 鳴っ	na; q,
 納所	na; tsho;
 納豆	naq; tou;
-納豆	nat; tou;
+納豆	nat;tou;
 奈津	na; tsu;
 懐い	natsu; i,
 懐か	natsu; ka,
@@ -28428,8 +28428,8 @@ columns:
 訛っ	nama; q,
 鈍っ	nama; q,
 生白	namaq; chiro;
-生白	namac; chiro;
-生白	namat; tiro;
+生白	namac;chiro;
+生白	namat;tiro;
 訛ら	nama; ra,
 鈍ら	nama; ra,
 訛り	nama; ri,
@@ -28523,7 +28523,7 @@ columns:
 新井	ni; i;
 新居	ni; i;
 新冠	niikaq; pu;
-新冠	niikap; pu;
+新冠	niikap;pu;
 仁宇	ni; u;
 仁江	ni; e;
 仁尾	ni; o;
@@ -28587,93 +28587,93 @@ columns:
 仁田	ni; ta;
 荷駄	ni; da;
 日貨	niq; ka;
-日貨	nik; ka;
+日貨	nik;ka;
 日活	niq; katsu;
-日活	nik; katsu;
+日活	nik;katsu;
 新川	niq; kawa;
-新川	nik; kawa;
+新川	nik;kawa;
 日川	niq; kawa;
-日川	nik; kawa;
+日川	nik;kawa;
 日管	niq; kan;
-日管	nik; kan;
+日管	nik;kan;
 日揮	niq; ki;
-日揮	nik; ki;
+日揮	nik;ki;
 日給	niq; kyuu;
-日給	nik; kyuu;
+日給	nik;kyuu;
 日勤	niq; kin;
-日勤	nik; kin;
+日勤	nik;kin;
 新国	niq; kuni;
-新国	nik; kuni;
+新国	nik;kuni;
 日型	niq; kei;
-日型	nik; kei;
+日型	nik;kei;
 日計	niq; kei;
-日計	nik; kei;
+日計	nik;kei;
 肉桂	niq; kei;
-肉桂	nik; kei;
+肉桂	nik;kei;
 日建	niq; ken;
-日建	nik; ken;
+日建	nik;ken;
 新光	niq; kou;
-新光	nik; kou;
+新光	nik;kou;
 日光	niq; kou;
-日光	nik; kou;
+日光	nik;kou;
 日工	niq; kou;
-日工	nik; kou;
+日工	nik;kou;
 日興	niq; kou;
-日興	nik; kou;
+日興	nik;kou;
 日航	niq; kou;
-日航	nik; kou;
+日航	nik;kou;
 日鉱	niq; kou;
-日鉱	nik; kou;
+日鉱	nik;kou;
 日子	ni; tshi;
 日射	ni; tsha;
 仁田	niq; ta;
-仁田	nit; ta;
+仁田	nit;ta;
 日田	niq; ta;
-日田	nit; ta;
+日田	nit;ta;
 仁玉	niq; tama;
-仁玉	nit; tama;
+仁玉	nit;tama;
 仁手	niq; te;
-仁手	nit; te;
+仁手	nit;te;
 新寺	niq; tera;
-新寺	nit; tera;
+新寺	nit;tera;
 日展	niq; ten;
-日展	nit; ten;
+日展	nit;ten;
 入戸	niq; to;
-入戸	nit; to;
+入戸	nit;to;
 日戸	niq; to;
-日戸	nit; to;
+日戸	nit;to;
 入唐	niq; tou;
-入唐	nit; tou;
+入唐	nit;tou;
 日当	niq; tou;
-日当	nit; tou;
+日当	nit;tou;
 日東	niq; tou;
-日東	nit; tou;
+日東	nit;tou;
 日藤	niq; tou;
-日藤	nit; tou;
+日藤	nit;tou;
 新波	niq; pa;
-新波	nip; pa;
+新波	nip;pa;
 新橋	niq; pashi;
-新橋	nip; pashi;
+新橋	nip;pashi;
 二八	niq; pachi;
-二八	nip; pachi;
+二八	nip;pachi;
 日原	niq; para;
-日原	nip; para;
+日原	nip;para;
 日販	niq; pan;
-日販	nip; pan;
+日販	nip;pan;
 新部	niq; pe;
-新部	nip; pe;
+新部	nip;pe;
 日辺	niq; pe;
-日辺	nip; pe;
+日辺	nip;pe;
 新平	niq; pei;
-新平	nip; pei;
+新平	nip;pei;
 日宝	niq; pou;
-日宝	nip; pou;
+日宝	nip;pou;
 日放	niq; pou;
-日放	nip; pou;
+日放	nip;pou;
 日豊	niq; pou;
-日豊	nip; pou;
+日豊	nip;pou;
 日本	niq; pon;
-日本	nip; pon;
+日本	nip;pon;
 二兎	ni; to;
 二戸	ni; to;
 二途	ni; to;
@@ -28744,18 +28744,18 @@ columns:
 脱ご	nu; go,
 塗師	nu; shi;
 盗人	nusuq; to;
-盗人	nusut; to;
+盗人	nusut;to;
 怒田	nu; ta;
 沼田	nu; ta;
 怒田	nu; da;
 塗っ	nu; q,
 縫っ	nu; q,
 沼垂	nuq; tari;
-沼垂	nut; tari;
+沼垂	nut;tari;
 奴婢	nu; hi;
 沼間	nu; ma;
 沼原	numaq; para;
-沼原	numap; para;
+沼原	numap;para;
 滑り	nume; ri,
 塗ら	nu; ra,
 塗り	nu; ri,
@@ -28825,35 +28825,35 @@ columns:
 練っ	ne; q,
 錬っ	ne; q,
 熱球	neq; kyuu;
-熱球	nek; kyuu;
+熱球	nek;kyuu;
 熱型	neq; kei;
-熱型	nek; kei;
+熱型	nek;kei;
 根子	neq; ko;
-根子	nek; ko;
+根子	nek;ko;
 熱さ	neq; sa,
-熱さ	nes; sa,
+熱さ	nes;sa,
 熱沙	ne; tsa;
 熱砂	ne; tsa;
 熱し	neq; shi,
-熱し	nes; shi,
+熱し	nes;shi,
 熱す	neq; su,
-熱す	nes; su,
+熱す	nes;su,
 熱せ	neq; se,
-熱せ	nes; se,
+熱せ	nes;se,
 熱そ	neq; so,
-熱そ	nes; so,
+熱そ	nes;so,
 熱湯	neq; tou;
-熱湯	net; tou;
+熱湯	net;tou;
 熱闘	neq; tou;
-熱闘	net; tou;
+熱闘	net;tou;
 熱鬧	neq; tou;
-熱鬧	net; tou;
+熱鬧	net;tou;
 熱発	neq; patsu;
-熱発	nep; patsu;
+熱発	nep;patsu;
 熱郛	neq; pu;
-熱郛	nep; pu;
+熱郛	nep;pu;
 熱風	neq; puu;
-熱風	nep; puu;
+熱風	nep;puu;
 祢津	ne; tsu;
 禰津	ne; tsu;
 寝取	ne; to;
@@ -29007,11 +29007,11 @@ columns:
 宣っ	no; q,
 載っ	no; q,
 乗附	noq; ke;
-乗附	nok; ke;
+乗附	nok;ke;
 野付	noq; ke;
-野付	nok; ke;
+野付	nok;ke;
 乗取	noq; to;
-乗取	not; to;
+乗取	not;to;
 則っ	notto; q,
 法っ	notto; q,
 則ら	notto; ra,
@@ -29021,7 +29021,7 @@ columns:
 法る	notto; ru,
 則れ	notto; re,
 野幌	noq; poro;
-野幌	nop; poro;
+野幌	nop;poro;
 箆津	no; tsu;
 野津	no; tsu;
 野手	no; te;
@@ -29303,7 +29303,7 @@ columns:
 波須	ha; su;
 派す	ha; su,
 蓮葉	hasuq; pa;
-蓮葉	hasup; pa;
+蓮葉	hasup;pa;
 幡豆	ha; zu;
 恥ず	ha; zu,
 波津	ha; zu;
@@ -29355,119 +29355,119 @@ columns:
 貼っ	ha; q,
 這っ	ha; q,
 八ケ	haq; ka.
-八ケ	hak; ka.
+八ケ	hak;ka.
 八箇	haq; ka;
-八箇	hak; ka;
+八箇	hak;ka;
 発火	haq; ka;
-発火	hak; ka;
+発火	hak;ka;
 薄荷	haq; ka;
-薄荷	hak; ka;
+薄荷	hak;ka;
 伯海	haq; kai;
-伯海	hak; kai;
+伯海	hak;kai;
 発会	haq; kai;
-発会	hak; kai;
+発会	hak;kai;
 発汗	haq; kan;
-発汗	hak; kan;
+発汗	hak;kan;
 白旗	haq; ki;
-白旗	hak; ki;
+白旗	hak;ki;
 発給	haq; kyuu;
-発給	hak; kyuu;
+発給	hak;kyuu;
 白球	haq; kyuu;
-白球	hak; kyuu;
+白球	hak;kyuu;
 薄給	haq; kyuu;
-薄給	hak; kyuu;
+薄給	hak;kyuu;
 発狂	haq; kyou;
-発狂	hak; kyou;
+発狂	hak;kyou;
 八苦	haq; ku;
-八苦	hak; ku;
+八苦	hak;ku;
 八卦	haq; ke;
-八卦	hak; ke;
+八卦	hak;ke;
 白鶏	haq; ke;
-白鶏	hak; ke;
+白鶏	hak;ke;
 百家	haq; ke;
-百家	hak; ke;
+百家	hak;ke;
 八景	haq; kei;
-八景	hak; kei;
+八景	hak;kei;
 発券	haq; ken;
-発券	hak; ken;
+発券	hak;ken;
 八光	haq; kou;
-八光	hak; kou;
+八光	hak;kou;
 八甲	haq; kou;
-八甲	hak; kou;
+八甲	hak;kou;
 八紘	haq; kou;
-八紘	hak; kou;
+八紘	hak;kou;
 八講	haq; kou;
-八講	hak; kou;
+八講	hak;kou;
 発向	haq; kou;
-発向	hak; kou;
+発向	hak;kou;
 白光	haq; kou;
-白光	hak; kou;
+白光	hak;kou;
 白甲	haq; kou;
-白甲	hak; kou;
+白甲	hak;kou;
 薄倖	haq; kou;
-薄倖	hak; kou;
+薄倖	hak;kou;
 薄幸	haq; kou;
-薄幸	hak; kou;
+薄幸	hak;kou;
 醗酵	haq; kou;
-醗酵	hak; kou;
+醗酵	hak;kou;
 醱酵	haq; kou;
-醱酵	hak; kou;
+醱酵	hak;kou;
 白骨	haq; kotsu;
-白骨	hak; kotsu;
+白骨	hak;kotsu;
 発さ	haq; sa,
-発さ	has; sa,
+発さ	has;sa,
 発し	haq; shi,
-発し	has; shi,
+発し	has;shi,
 発射	ha; tsha;
 発車	ha; tsha;
 発す	haq; su,
-発す	has; su,
+発す	has;su,
 発せ	haq; se,
-発せ	has; se,
+発せ	has;se,
 八曽	ha; tso;
 発そ	haq; so,
-発そ	has; so,
+発そ	has;so,
 八太	haq; ta;
-八太	hat; ta;
+八太	hat;ta;
 八田	haq; ta;
-八田	hat; ta;
+八田	hat;ta;
 初田	haq; ta;
-初田	hat; ta;
+初田	hat;ta;
 治田	haq; ta;
-治田	hat; ta;
+治田	hat;ta;
 波立	haq; tachi;
-波立	hat; tachi;
+波立	hat;tachi;
 八反	haq; tan;
-八反	hat; tan;
+八反	hat;tan;
 八端	haq; tan;
-八端	hat; tan;
+八端	hat;tan;
 八帖	haq; chou;
-八帖	hac; chou;
-八帖	hat; tyou;
+八帖	hac;chou;
+八帖	hat;tyou;
 八天	haq; ten;
-八天	hat; ten;
+八天	hat;ten;
 法度	haq; to;
-法度	hat; to;
+法度	hat;to;
 八東	haq; tou;
-八東	hat; tou;
+八東	hat;tou;
 発破	haq; pa;
-発破	hap; pa;
+発破	hap;pa;
 八白	haq; paku;
-八白	hap; paku;
+八白	hap;paku;
 法被	haq; pi;
-法被	hap; pi;
+法被	hap;pi;
 八風	haq; puu;
-八風	hap; puu;
+八風	hap;puu;
 発奮	haq; pun;
-発奮	hap; pun;
+発奮	hap;pun;
 発憤	haq; pun;
-発憤	hap; pun;
+発憤	hap;pun;
 八方	haq; pou;
-八方	hap; pou;
+八方	hap;pou;
 八甫	haq; pou;
-八甫	hap; pou;
+八甫	hap;pou;
 発砲	haq; pou;
-発砲	hap; pou;
+発砲	hap;pou;
 波津	ha; tsu;
 羽出	ha; de;
 波戸	ha; to;
@@ -29606,40 +29606,40 @@ columns:
 ば声	ba, sei;
 馬田	ba; ta;
 抜海	baq; kai;
-抜海	bak; kai;
+抜海	bak;kai;
 麦角	baq; kaku;
-麦角	bak; kaku;
+麦角	bak;kaku;
 麦稈	baq; kan;
-麦稈	bak; kan;
+麦稈	bak;kan;
 罰金	baq; kin;
-罰金	bak; kin;
+罰金	bak;kin;
 抜剣	baq; ken;
-抜剣	bak; ken;
+抜剣	bak;ken;
 跋扈	baq; ko;
-跋扈	bak; ko;
+跋扈	bak;ko;
 罰さ	baq; sa,
-罰さ	bas; sa,
+罰さ	bas;sa,
 抜歯	ba; tshi;
 抜糸	ba; tshi;
 末子	ba; tshi;
 罰し	baq; shi,
-罰し	bas; shi,
+罰し	bas;shi,
 罰す	baq; su,
-罰す	bas; su,
+罰す	bas;su,
 罰せ	baq; se,
-罰せ	bas; se,
+罰せ	bas;se,
 飛蝗	baq; ta;
-飛蝗	bat; ta;
+飛蝗	bat;ta;
 末弟	baq; tei;
-末弟	bat; tei;
+末弟	bat;tei;
 罰点	baq; ten;
-罰点	bat; ten;
+罰点	bat;ten;
 抜刀	baq; tou;
-抜刀	bat; tou;
+抜刀	bat;tou;
 罰杯	baq; pai;
-罰杯	bap; pai;
+罰杯	bap;pai;
 抜本	baq; pon;
-抜本	bap; pon;
+抜本	bap;pon;
 ば倒	ba, tou;
 馬塲	ba; ba;
 馬尾	ba; bi;
@@ -29836,23 +29836,23 @@ columns:
 小童	hi; chi;
 引っ	hi; q,
 筆禍	hiq; ka;
-筆禍	hik; ka;
+筆禍	hik;ka;
 筆画	hiq; kaku;
-筆画	hik; kaku;
+筆画	hik;kaku;
 筆記	hiq; ki;
-筆記	hik; ki;
+筆記	hik;ki;
 畢竟	hiq; kyou;
-畢竟	hik; kyou;
+畢竟	hik;kyou;
 必携	hiq; kei;
-必携	hik; kei;
+必携	hik;kei;
 必見	hiq; ken;
-必見	hik; ken;
+必見	hik;ken;
 筆硯	hiq; ken;
-筆硯	hik; ken;
+筆硯	hik;ken;
 筆耕	hiq; kou;
-筆耕	hik; kou;
+筆耕	hik;kou;
 引越	hiq; koshi;
-引越	hik; koshi;
+引越	hik;koshi;
 提げ	hitsa; ge,
 必死	hi; tshi;
 必至	hi; tshi;
@@ -29861,36 +29861,36 @@ columns:
 筆者	hi; tsha;
 必須	hi; tsu;
 筆端	hiq; tan;
-筆端	hit; tan;
+筆端	hit;tan;
 筆致	hiq; chi;
-筆致	hic; chi;
-筆致	hit; ti;
+筆致	hic;chi;
+筆致	hit;ti;
 必着	hiq; chaku;
-必着	hic; chaku;
-必着	hit; tyaku;
+必着	hic;chaku;
+必着	hit;tyaku;
 必中	hiq; chuu;
-必中	hic; chuu;
-必中	hit; tyuu;
+必中	hic;chuu;
+必中	hit;tyuu;
 筆誅	hiq; chuu;
-筆誅	hic; chuu;
-筆誅	hit; tyuu;
+筆誅	hic;chuu;
+筆誅	hit;tyuu;
 必聴	hiq; chou;
-必聴	hic; chou;
-必聴	hit; tyou;
+必聴	hic;chou;
+必聴	hit;tyou;
 筆筒	hiq; tou;
-筆筒	hit; tou;
+筆筒	hit;tou;
 筆答	hiq; tou;
-筆答	hit; tou;
+筆答	hit;tou;
 逼迫	hiq; paku;
-逼迫	hip; paku;
+逼迫	hip;paku;
 匹夫	hiq; pu;
-匹夫	hip; pu;
+匹夫	hip;pu;
 筆甫	hiq; po;
-筆甫	hip; po;
+筆甫	hip;po;
 筆法	hiq; pou;
-筆法	hip; pou;
+筆法	hip;pou;
 筆鋒	hiq; pou;
-筆鋒	hip; pou;
+筆鋒	hip;pou;
 比津	hi; tsu;
 日出	hi; de;
 酷え	hide; e,
@@ -29943,19 +29943,19 @@ columns:
 繙く	himoto; ku,
 繙け	himoto; ke,
 百花	hyaq; ka;
-百花	hyak; ka;
+百花	hyak;ka;
 百貨	hyaq; ka;
-百貨	hyak; ka;
+百貨	hyak;ka;
 百官	hyaq; kan;
-百官	hyak; kan;
+百官	hyak;kan;
 百計	hyaq; kei;
-百計	hyak; kei;
+百計	hyak;kei;
 百石	hyaq; koku;
-百石	hyak; koku;
+百石	hyak;koku;
 百般	hyaq; pan;
-百般	hyap; pan;
+百般	hyap;pan;
 百方	hyaq; pou;
-百方	hyap; pou;
+百方	hyap;pou;
 火矢	hi; ya;
 火箭	hi; ya;
 冷さ	hiya; sa,
@@ -29964,9 +29964,9 @@ columns:
 冷せ	hiya; se,
 冷そ	hiya; so,
 寒川	hiyaq; kogawa;
-寒川	hiyak; kogawa;
+寒川	hiyak;kogawa;
 冷奴	hiyayaq; ko;
-冷奴	hiyayak; ko;
+冷奴	hiyayak;ko;
 比ゆ	hi; yu,
 譬喩	hi; yu;
 評さ	hyou; sa,
@@ -29987,7 +29987,7 @@ columns:
 拓こ	hira; ko,
 開こ	hira; ko,
 平田	hiraq; ta;
-平田	hirat; ta;
+平田	hirat;ta;
 平に	hira; ni,
 平め	hira; me,
 閃い	hirame; i,
@@ -30051,15 +30051,15 @@ columns:
 備瀬	bi; se;
 鼻祖	bi; so;
 備中	biq; chuu;
-備中	bic; chuu;
-備中	bit; tyuu;
+備中	bic;chuu;
+備中	bit;tyuu;
 微微	bi; bi;
 美美	bi; bi;
 び漫	bi, man;
 白狐	byaq; ko;
-白狐	byak; ko;
+白狐	byak;ko;
 白虎	byaq; ko;
-白虎	byak; ko;
+白虎	byak;ko;
 別府	byu; u;
 別府	byo; u;
 病が	byou; ga,
@@ -30069,7 +30069,7 @@ columns:
 海狸	bi-; ba-;
 麦酒	bi-; ru;
 比布	piq; pu;
-比布	pip; pu;
+比布	pip;pu;
 吹い	fu; i,
 噴い	fu; i,
 布衣	fu; i;
@@ -30229,39 +30229,39 @@ columns:
 降っ	fu; q,
 震っ	fu; q,
 伏角	fuq; kaku;
-伏角	fuk; kaku;
+伏角	fuk;kaku;
 副官	fuq; kan;
-副官	fuk; kan;
+副官	fuk;kan;
 復仇	fuq; kyuu;
-復仇	fuk; kyuu;
+復仇	fuk;kyuu;
 復権	fuq; ken;
-復権	fuk; ken;
+復権	fuk;ken;
 福建	fuq; ken;
-福建	fuk; ken;
+福建	fuk;ken;
 復交	fuq; kou;
-復交	fuk; kou;
+復交	fuk;kou;
 復航	fuq; kou;
-復航	fuk; kou;
+復航	fuk;kou;
 覆刻	fuq; koku;
-覆刻	fuk; koku;
+覆刻	fuk;koku;
 吹越	fuq; koshi;
-吹越	fuk; koshi;
+吹越	fuk;koshi;
 福生	fu; tsa;
 弗素	fu; tso;
 古田	fuq; ta;
-古田	fut; ta;
+古田	fut;ta;
 富津	fuq; tsu;
-富津	fut; tsu;
+富津	fut;tsu;
 払底	fuq; tei;
-払底	fut; tei;
+払底	fut;tei;
 沸点	fuq; ten;
-沸点	fut; ten;
+沸点	fut;ten;
 古渡	fuq; to;
-古渡	fut; to;
+古渡	fut;to;
 払戸	fuq; to;
-払戸	fut; to;
+払戸	fut;to;
 吹張	fuq; pari;
-吹張	fup; pari;
+吹張	fup;pari;
 布津	fu; tsu;
 符津	fu; tsu;
 太え	fute; e,
@@ -30392,27 +30392,27 @@ columns:
 打ち	bu; chi,
 打っ	bu; q,
 仏果	buq; ka;
-仏果	buk; ka;
+仏果	buk;ka;
 仏界	buq; kai;
-仏界	buk; kai;
+仏界	buk;kai;
 物界	buq; kai;
-物界	buk; kai;
+物界	buk;kai;
 仏閣	buq; kaku;
-仏閣	buk; kaku;
+仏閣	buk;kaku;
 仏経	buq; kyou;
-仏経	buk; kyou;
+仏経	buk;kyou;
 仏家	buq; ke;
-仏家	buk; ke;
+仏家	buk;ke;
 物件	buq; ken;
-物件	buk; ken;
+物件	buk;ken;
 物権	buq; ken;
-物権	buk; ken;
+物権	buk;ken;
 物故	buq; ko;
-物故	buk; ko;
+物故	buk;ko;
 仏向	buq; kou;
-仏向	buk; kou;
+仏向	buk;kou;
 仏工	buq; kou;
-仏工	buk; kou;
+仏工	buk;kou;
 仏子	bu; tshi;
 仏師	bu; tshi;
 物資	bu; tshi;
@@ -30420,25 +30420,25 @@ columns:
 仏書	bu; tsho;
 仏祖	bu; tso;
 仏体	buq; tai;
-仏体	but; tai;
+仏体	but;tai;
 仏敵	buq; teki;
-仏敵	but; teki;
+仏敵	but;teki;
 物的	buq; teki;
-物的	but; teki;
+物的	but;teki;
 仏典	buq; ten;
-仏典	but; ten;
+仏典	but;ten;
 仏徒	buq; to;
-仏徒	but; to;
+仏徒	but;to;
 仏塔	buq; tou;
-仏塔	but; tou;
+仏塔	but;tou;
 仏徳	buq; toku;
-仏徳	but; toku;
+仏徳	but;toku;
 物販	buq; pan;
-物販	bup; pan;
+物販	bup;pan;
 物品	buq; pin;
-物品	bup; pin;
+物品	bup;pin;
 仏法	buq; pou;
-仏法	bup; pou;
+仏法	bup;pou;
 打つ	bu; tsu,
 打て	bu; te,
 打と	bu; to,
@@ -30472,8 +30472,8 @@ columns:
 隔た	heda; ta,
 減っ	he; q,
 辺地	heq; chi;
-辺地	hec; chi;
-辺地	het; ti;
+辺地	hec;chi;
+辺地	het;ti;
 諂い	hetsura; i,
 諂う	hetsura; u,
 諂っ	hetsura; q,
@@ -30505,37 +30505,37 @@ columns:
 変ぜ	hen; ze,
 辺ぴ	hen; pi,
 別海	beq; kai;
-別海	bek; kai;
+別海	bek;kai;
 別格	beq; kaku;
-別格	bek; kaku;
+別格	bek;kaku;
 別苅	beq; kari;
-別苅	bek; kari;
+別苅	bek;kari;
 別巻	beq; kan;
-別巻	bek; kan;
+別巻	bek;kan;
 別記	beq; ki;
-別記	bek; ki;
+別記	bek;ki;
 別居	beq; kyo;
-別居	bek; kyo;
+別居	bek;kyo;
 別宮	beq; ku;
-別宮	bek; ku;
+別宮	bek;ku;
 別宮	beq; kuu;
-別宮	bek; kuu;
+別宮	bek;kuu;
 別家	beq; ke;
-別家	bek; ke;
+別家	bek;ke;
 別掲	beq; kei;
-別掲	bek; kei;
+別掲	bek;kei;
 別件	beq; ken;
-別件	bek; ken;
+別件	bek;ken;
 瞥見	beq; ken;
-瞥見	bek; ken;
+瞥見	bek;ken;
 別個	beq; ko;
-別個	bek; ko;
+別個	bek;ko;
 別箇	beq; ko;
-別箇	bek; ko;
+別箇	bek;ko;
 別項	beq; kou;
-別項	bek; kou;
+別項	bek;kou;
 鼈甲	beq; kou;
-鼈甲	bek; kou;
+鼈甲	bek;kou;
 別使	be; tshi;
 別枝	be; tshi;
 別紙	be; tshi;
@@ -30544,41 +30544,41 @@ columns:
 別墅	be; tsho;
 別所	be; tsho;
 別宅	beq; taku;
-別宅	bet; taku;
+別宅	bet;taku;
 別注	beq; chuu;
-別注	bec; chuu;
-別注	bet; tyuu;
+別注	bec;chuu;
+別注	bet;tyuu;
 別珍	beq; chin;
-別珍	bec; chin;
-別珍	bet; tin;
+別珍	bec;chin;
+別珍	bet;tin;
 別井	beq; tsui;
-別井	bet; tsui;
+別井	bet;tsui;
 別邸	beq; tei;
-別邸	bet; tei;
+別邸	bet;tei;
 別天	beq; ten;
-別天	bet; ten;
+別天	bet;ten;
 別当	beq; tou;
-別当	bet; tou;
+別当	bet;tou;
 別棟	beq; tou;
-別棟	bet; tou;
+別棟	bet;tou;
 別派	beq; pa;
-別派	bep; pa;
+別派	bep;pa;
 別盃	beq; pai;
-別盃	bep; pai;
+別盃	bep;pai;
 別表	beq; pyou;
-別表	bep; pyou;
+別表	bep;pyou;
 別品	beq; pin;
-別品	bep; pin;
+別品	bep;pin;
 別嬪	beq; pin;
-別嬪	bep; pin;
+別嬪	bep;pin;
 別府	beq; pu;
-別府	bep; pu;
+別府	bep;pu;
 別封	beq; puu;
-別封	bep; puu;
+別封	bep;puu;
 別報	beq; pou;
-別報	bep; pou;
+別報	bep;pou;
 別法	beq; pou;
-別法	bep; pou;
+別法	bep;pou;
 別府	be; fu;
 部屋	be; ya;
 辺留	be; ru;
@@ -30622,7 +30622,7 @@ columns:
 放さ	hoka; sa,
 放し	hoka; shi,
 放す	hoka; su,
-祝ひ	hog; ai,
+祝ひ	hog;ai,
 保喜	ho; ki;
 補記	ho; ki;
 反古	ho; gu;
@@ -30675,66 +30675,66 @@ columns:
 彫っ	ho; q,
 掘っ	ho; q,
 北海	hoq; kai;
-北海	hok; kai;
+北海	hok;kai;
 北開	hoq; kai;
-北開	hok; kai;
+北開	hok;kai;
 北川	hoq; kawa;
-北川	hok; kawa;
+北川	hok;kawa;
 北韓	hoq; kan;
-北韓	hok; kan;
+北韓	hok;kan;
 法吉	hoq; ki;
-法吉	hok; ki;
+法吉	hok;ki;
 発起	hoq; ki;
-発起	hok; ki;
+発起	hok;ki;
 保久	hoq; kyuu;
-保久	hok; kyuu;
+保久	hok;kyuu;
 法橋	hoq; kyou;
-法橋	hok; kyou;
+法橋	hok;kyou;
 北極	hoq; kyoku;
-北極	hok; kyoku;
+北極	hok;kyoku;
 堀切	hoq; kiri;
-堀切	hok; kiri;
+堀切	hok;kiri;
 発句	hoq; ku;
-発句	hok; ku;
+発句	hok;ku;
 法花	hoq; ke;
-法花	hok; ke;
+法花	hok;ke;
 法華	hoq; ke;
-法華	hok; ke;
+法華	hok;ke;
 北光	hoq; kou;
-北光	hok; kou;
+北光	hok;kou;
 北幸	hoq; kou;
-北幸	hok; kou;
+北幸	hok;kou;
 北江	hoq; kou;
-北江	hok; kou;
+北江	hok;kou;
 北興	hoq; kou;
-北興	hok; kou;
+北興	hok;kou;
 北郊	hoq; kou;
-北郊	hok; kou;
+北郊	hok;kou;
 北国	hoq; koku;
-北国	hok; koku;
+北国	hok;koku;
 発作	ho; tsa;
 欲し	hoq; shi,
-欲し	hos; shi,
+欲し	hos;shi,
 法主	ho; tshu;
 払子	ho; tsu;
 法主	ho; tsu;
 欲せ	hoq; se,
-欲せ	hos; se,
+欲せ	hos;se,
 払田	hoq; ta;
-払田	hot; ta;
+払田	hot;ta;
 法体	hoq; tai;
-法体	hot; tai;
+法体	hot;tai;
 発地	hoq; chi;
-発地	hoc; chi;
-発地	hot; ti;
+発地	hoc;chi;
+発地	hot;ti;
 堀津	hoq; tsu;
-堀津	hot; tsu;
+堀津	hot;tsu;
 法度	hoq; to;
-法度	hot; to;
+法度	hot;to;
 発戸	hoq; to;
-発戸	hot; to;
+発戸	hot;to;
 発頭	hoq; tou;
-発頭	hot; tou;
+発頭	hot;tou;
 保津	ho; tsu;
 解れ	hotsu; re,
 熱っ	hote; q,
@@ -30784,7 +30784,7 @@ columns:
 捕吏	ho; ri;
 掘り	ho; ri,
 堀株	horikaq; pu;
-堀株	horikap; pu;
+堀株	horikap;pu;
 彫れ	ho; re,
 掘れ	ho; re,
 保呂	ho; ro;
@@ -30816,30 +30816,30 @@ columns:
 母子	bo; shi;
 墓所	bo; sho;
 牧歌	boq; ka;
-牧歌	bok; ka;
+牧歌	bok;ka;
 墨客	boq; kaku;
-墨客	bok; kaku;
+墨客	bok;kaku;
 木冠	boq; kan;
-木冠	bok; kan;
+木冠	bok;kan;
 墨客	boq; kyaku;
-墨客	bok; kyaku;
+墨客	bok;kyaku;
 没却	boq; kyaku;
-没却	bok; kyaku;
+没却	bok;kyaku;
 木剣	boq; ken;
-木剣	bok; ken;
+木剣	bok;ken;
 勃興	boq; kou;
-勃興	bok; kou;
+勃興	bok;kou;
 墨痕	boq; kon;
-墨痕	bok; kon;
+墨痕	bok;kon;
 没さ	boq; sa,
-没さ	bos; sa,
+没さ	bos;sa,
 没し	boq; shi,
-没し	bos; shi,
+没し	bos;shi,
 没取	bo; tshu;
 没す	boq; su,
-没す	bos; su,
+没す	bos;su,
 没せ	boq; se,
-没せ	bos; se,
+没せ	bos;se,
 墓碑	bo; hi;
 母間	bo; ma;
 小火	bo; ya;
@@ -30848,7 +30848,7 @@ columns:
 梵論	bo; ro;
 襤褸	bo; ro;
 木履	poq; kuri;
-木履	pok; kuri;
+木履	pok;kuri;
 卷い	ma; i,
 巻い	ma; i,
 捲い	ma; i,
@@ -31026,52 +31026,52 @@ columns:
 真智	ma; chi;
 真知	ma; chi;
 町奴	machiyaq; ko;
-町奴	machiyak; ko;
+町奴	machiyak;ko;
 待っ	ma; q,
 真っ	ma; q,
 舞っ	ma; q,
 真赤	maq; ka;
-真赤	mak; ka;
+真赤	mak;ka;
 真狩	maq; kari;
-真狩	mak; kari;
+真狩	mak;kari;
 末巻	maq; kan;
-末巻	mak; kan;
+末巻	mak;kan;
 真暗	maq; kura;
-真暗	mak; kura;
+真暗	mak;kura;
 真黒	maq; kuro;
-真黒	mak; kuro;
+真黒	mak;kuro;
 抹香	maq; kou;
-抹香	mak; kou;
+抹香	mak;kou;
 真向	maq; kou;
-真向	mak; kou;
+真向	mak;kou;
 末子	ma; tshi;
 末社	ma; tsha;
 末書	ma; tsho;
 末世	ma; tse;
 末弟	maq; tei;
-末弟	mat; tei;
+末弟	mat;tei;
 真人	maq; to;
-真人	mat; to;
+真人	mat;to;
 全う	matto; u,
 松任	maq; tou;
-松任	mat; tou;
+松任	mat;tou;
 松百	maq; tou;
-松百	mat; tou;
+松百	mat;tou;
 真当	maq; tou;
-真当	mat; tou;
+真当	mat;tou;
 末派	maq; ba;
-末派	mab; ba;
+末派	mab;ba;
 末筆	maq; pitsu;
-末筆	map; pitsu;
+末筆	map;pitsu;
 真布	maq; pu;
-真布	map; pu;
+真布	map;pu;
 末法	maq; pou;
-末法	map; pou;
+末法	map;pou;
 奉っ	matsu; q,
 祀っ	matsu; q,
 祭っ	matsu; q,
 松毬	matsuboq; kuri;
-松毬	matsubok; kuri;
+松毬	matsubok;kuri;
 奉ら	matsu; ra,
 祀ら	matsu; ra,
 祭ら	matsu; ra,
@@ -31221,7 +31221,7 @@ columns:
 丸み	maru; mi,
 円み	maru; mi,
 稀府	mareq; pu;
-稀府	marep; pu;
+稀府	marep;pu;
 舞わ	ma; wa,
 回さ	mawa; sa,
 廻さ	mawa; sa,
@@ -31397,28 +31397,28 @@ columns:
 充っ	mi; q,
 満っ	mi; q,
 密会	miq; kai;
-密会	mik; kai;
+密会	mik;kai;
 密計	miq; kei;
-密計	mik; kei;
+密計	mik;kei;
 密航	miq; kou;
-密航	mik; kou;
+密航	mik;kou;
 密行	miq; kou;
-密行	mik; kou;
+密行	mik;kou;
 密告	miq; koku;
-密告	mik; koku;
+密告	mik;koku;
 密使	mi; tshi;
 密書	mi; tsho;
 密勅	miq; choku;
-密勅	mic; choku;
-密勅	mit; tyoku;
+密勅	mic;choku;
+密勅	mit;tyoku;
 密通	miq; tsuu;
-密通	mit; tsuu;
+密通	mit;tsuu;
 密偵	miq; tei;
-密偵	mit; tei;
+密偵	mit;tei;
 密封	miq; puu;
-密封	mip; puu;
+密封	mip;puu;
 密閉	miq; pei;
-密閉	mip; pei;
+密閉	mip;pei;
 三津	mi; tsu;
 充つ	mi; tsu,
 御津	mi; tsu;
@@ -31692,22 +31692,22 @@ columns:
 滅茶	me; cha;
 目茶	me; cha;
 滅鬼	meq; ki;
-滅鬼	mek; ki;
+滅鬼	mek;ki;
 鍍金	meq; ki;
-鍍金	mek; ki;
+鍍金	mek;ki;
 滅却	meq; kyaku;
-滅却	mek; kyaku;
+滅却	mek;kyaku;
 滅菌	meq; kin;
-滅菌	mek; kin;
+滅菌	mek;kin;
 滅し	meq; shi,
-滅し	mes; shi,
+滅し	mes;shi,
 滅私	me; tshi;
 滅す	meq; su,
-滅す	mes; su,
+滅す	mes;su,
 滅せ	meq; se,
-滅せ	mes; se,
+滅せ	mes;se,
 滅法	meq; pou;
-滅法	mep; pou;
+滅法	mep;pou;
 馬手	me; te;
 愛で	me; de,
 目出	me; de;
@@ -31785,55 +31785,55 @@ columns:
 漏っ	mo; q,
 盛っ	mo; q,
 目下	moq; ka;
-目下	mok; ka;
+目下	mok;ka;
 黙過	moq; ka;
-黙過	mok; ka;
+黙過	mok;ka;
 木管	moq; kan;
-木管	mok; kan;
+木管	mok;kan;
 木簡	moq; kan;
-木簡	mok; kan;
+木簡	mok;kan;
 目木	moq; ki;
-目木	mok; ki;
+目木	mok;ki;
 黙許	moq; kyo;
-黙許	mok; kyo;
+黙許	mok;kyo;
 木琴	moq; kin;
-木琴	mok; kin;
+木琴	mok;kin;
 木筋	moq; kin;
-木筋	mok; kin;
+木筋	mok;kin;
 勿怪	moq; ke;
-勿怪	mok; ke;
+勿怪	mok;ke;
 物怪	moq; ke;
-物怪	mok; ke;
+物怪	mok;ke;
 黙契	moq; kei;
-黙契	mok; kei;
+黙契	mok;kei;
 木工	moq; kou;
-木工	mok; kou;
+木工	mok;kou;
 沐猴	moq; kou;
-沐猴	mok; kou;
+沐猴	mok;kou;
 黙考	moq; kou;
-黙考	mok; kou;
+黙考	mok;kou;
 木国	moq; koku;
-木国	mok; koku;
+木国	mok;koku;
 木斛	moq; koku;
-木斛	mok; koku;
+木斛	mok;koku;
 畚岳	moq; kodake;
-畚岳	mok; kodake;
+畚岳	mok;kodake;
 木骨	moq; kotsu;
-木骨	mok; kotsu;
+木骨	mok;kotsu;
 目今	moq; kon;
-目今	mok; kon;
+目今	mok;kon;
 持田	moq; ta;
-持田	mot; ta;
+持田	mot;ta;
 以て	moq; te,
-以て	mot; te,
+以て	mot;te,
 物袋	moq; te;
-物袋	mot; te;
+物袋	mot;te;
 元井	moq; toi;
-元井	mot; toi;
+元井	mot;toi;
 尤も	motto; mo,
 専ら	motpa; ra,
 木歩	moq; po;
-木歩	mop; po;
+木歩	mop;po;
 縺れ	motsu; re,
 弄ば	moteaso; ba,
 玩ば	moteaso; ba,
@@ -32012,19 +32012,19 @@ columns:
 殺っ	ya; q,
 遣っ	ya; q,
 薬価	yaq; ka;
-薬価	yak; ka;
+薬価	yak;ka;
 薬禍	yaq; ka;
-薬禍	yak; ka;
+薬禍	yak;ka;
 薬科	yaq; ka;
-薬科	yak; ka;
+薬科	yak;ka;
 約款	yaq; kan;
-約款	yak; kan;
+約款	yak;kan;
 薬莢	yaq; kyou;
-薬莢	yak; kyou;
+薬莢	yak;kyou;
 薬効	yaq; kou;
-薬効	yak; kou;
+薬効	yak;kou;
 奴凧	yaq; kodako;
-奴凧	yak; kodako;
+奴凧	yak;kodako;
 谷津	ya; tsu;
 窶し	yatsu; shi,
 窶す	yatsu; su,
@@ -32427,7 +32427,7 @@ columns:
 止せ	yo; se,
 余瀬	yo; ze;
 止そ	yo; so,
-装お	yos; o,
+装お	yos;o,
 装い	yoso; i,
 装う	yoso; u,
 装え	yoso; e,
@@ -32460,11 +32460,11 @@ columns:
 選っ	yo; q,
 酔っ	yo; q,
 欲界	yoq; kai;
-欲界	yok; kai;
+欲界	yok;kai;
 浴客	yoq; kaku;
-浴客	yok; kaku;
+浴客	yok;kaku;
 浴客	yoq; kyaku;
-浴客	yok; kyaku;
+浴客	yok;kyaku;
 四津	yo; tsu;
 余戸	yo; do;
 淀ま	yodo; ma,
@@ -32595,26 +32595,26 @@ columns:
 羅紗	ra; sha;
 ら致	ra, chi;
 落果	raq; ka;
-落果	rak; ka;
+落果	rak;ka;
 落花	raq; ka;
-落花	rak; ka;
+落花	rak;ka;
 落款	raq; kan;
-落款	rak; kan;
+落款	rak;kan;
 落球	raq; kyuu;
-落球	rak; kyuu;
+落球	rak;kyuu;
 辣韮	raq; kyou;
-辣韮	rak; kyou;
+辣韮	rak;kyou;
 落慶	raq; kei;
-落慶	rak; kei;
+落慶	rak;kei;
 猟虎	raq; ko;
-猟虎	rak; ko;
+猟虎	rak;ko;
 拉し	raq; shi,
-拉し	ras; shi,
+拉し	ras;shi,
 拉致	raq; chi;
-拉致	rac; chi;
-拉致	rat; ti;
+拉致	rac;chi;
+拉致	rat;ti;
 喇叭	raq; pa;
-喇叭	rap; pa;
+喇叭	rap;pa;
 騾馬	ra; ba;
 裸婦	ra; fu;
 理衣	ri; i;
@@ -32702,50 +32702,50 @@ columns:
 理智	ri; chi;
 理知	ri; chi;
 六花	riq; ka;
-六花	rik; ka;
+六花	rik;ka;
 立夏	riq; ka;
-立夏	rik; ka;
+立夏	rik;ka;
 立花	riq; ka;
-立花	rik; ka;
+立花	rik;ka;
 立脚	riq; kyaku;
-立脚	rik; kyaku;
+立脚	rik;kyaku;
 陸協	riq; kyou;
-陸協	rik; kyou;
+陸協	rik;kyou;
 陸橋	riq; kyou;
-陸橋	rik; kyou;
+陸橋	rik;kyou;
 立件	riq; ken;
-立件	rik; ken;
+立件	rik;ken;
 力行	riq; kou;
-力行	rik; kou;
+力行	rik;kou;
 立后	riq; kou;
-立后	rik; kou;
+立后	rik;kou;
 陸行	riq; kou;
-陸行	rik; kou;
+陸行	rik;kou;
 律さ	riq; sa,
-律さ	ris; sa,
+律さ	ris;sa,
 律し	riq; shi,
-律し	ris; shi,
+律し	ris;shi,
 律師	ri; tshi;
 律詩	ri; tshi;
 立志	ri; tshi;
 立射	ri; tsha;
 律す	riq; su,
-律す	ris; su,
+律す	ris;su,
 律せ	riq; se,
-律せ	ris; se,
+律せ	ris;se,
 立長	riq; chou;
-立長	ric; chou;
-立長	rit; tyou;
+立長	ric;chou;
+立長	rit;tyou;
 栗東	riq; tou;
-栗東	rit; tou;
+栗東	rit;tou;
 立党	riq; tou;
-立党	rit; tou;
+立党	rit;tou;
 立冬	riq; tou;
-立冬	rit; tou;
+立冬	rit;tou;
 立徳	riq; toku;
-立徳	rit; toku;
+立徳	rit;toku;
 立方	riq; pou;
-立方	rip; pou;
+立方	rip;pou;
 吏読	ri; to;
 理非	ri; hi;
 り病	ri, byou;
@@ -32759,9 +32759,9 @@ columns:
 略せ	ryaku; se,
 略そ	ryaku; so,
 略解	ryaq; kai;
-略解	ryak; kai;
+略解	ryak;kai;
 略記	ryaq; ki;
-略記	ryak; ki;
+略記	ryak;ki;
 里矢	ri; ya;
 了し	ryou; shi,
 領し	ryou; shi,
@@ -32773,7 +32773,7 @@ columns:
 料り	ryou; ri,
 料る	ryou; ru,
 緑化	ryoq; ka;
-緑化	ryok; ka;
+緑化	ryok;ka;
 旅費	ryo; hi;
 理代	ri; yo;
 理路	ri; ro;
@@ -32805,37 +32805,37 @@ columns:
 令す	rei; su,
 令せ	rei; se,
 列火	req; ka;
-列火	rek; ka;
+列火	rek;ka;
 烈火	req; ka;
-烈火	rek; ka;
+烈火	rek;ka;
 裂罅	req; ka;
-裂罅	rek; ka;
+裂罅	rek;ka;
 列記	req; ki;
-列記	rek; ki;
+列記	rek;ki;
 列侯	req; kou;
-列侯	rek; kou;
+列侯	rek;kou;
 列国	req; koku;
-列国	rek; koku;
+列国	rek;koku;
 列し	req; shi,
-列し	res; shi,
+列し	res;shi,
 烈士	re; tshi;
 列車	re; tsha;
 列す	req; su,
-列す	res; su,
+列す	res;su,
 列せ	req; se,
-列せ	res; se,
+列せ	res;se,
 劣等	req; tou;
-劣等	ret; tou;
+劣等	ret;tou;
 劣敗	req; pai;
-劣敗	rep; pai;
+劣敗	rep;pai;
 裂帛	req; paku;
-裂帛	rep; paku;
+裂帛	rep;paku;
 列藩	req; pan;
-列藩	rep; pan;
+列藩	rep;pan;
 烈婦	req; pu;
-烈婦	rep; pu;
+烈婦	rep;pu;
 烈風	req; puu;
-烈風	rep; puu;
+烈風	rep;puu;
 労し	rou; shi,
 労す	rou; su,
 労せ	rou; se,
@@ -32855,33 +32855,33 @@ columns:
 路次	ro; ji;
 ろ水	ro, sui;
 六花	roq; ka;
-六花	rok; ka;
+六花	rok;ka;
 六界	roq; kai;
-六界	rok; kai;
+六界	rok;kai;
 肋間	roq; kan;
-肋間	rok; kan;
+肋間	rok;kan;
 六供	roq; ku;
-六供	rok; ku;
+六供	rok;ku;
 六家	roq; ke;
-六家	rok; ke;
+六家	rok;ke;
 六甲	roq; kou;
-六甲	rok; kou;
+六甲	rok;kou;
 六興	roq; kou;
-六興	rok; kou;
+六興	rok;kou;
 肋骨	roq; kotsu;
-肋骨	rok; kotsu;
+肋骨	rok;kotsu;
 六根	roq; kon;
-六根	rok; kon;
+六根	rok;kon;
 六白	roq; paku;
-六白	rop; paku;
+六白	rop;paku;
 六腑	roq; pu;
-六腑	rop; pu;
+六腑	rop;pu;
 六福	roq; puku;
-六福	rop; puku;
+六福	rop;puku;
 六方	roq; pou;
-六方	rop; pou;
+六方	rop;pou;
 六法	roq; pou;
-六法	rop; pou;
+六法	rop;pou;
 驢馬	ro; ba;
 鹵簿	ro; bo;
 路美	ro; mi;
@@ -33006,9 +33006,9 @@ columns:
 和知	wa; chi;
 割っ	wa; q,
 稚内	waq; kanai;
-稚内	wak; kanai;
+稚内	wak;kanai;
 割賦	waq; pu;
-割賦	wap; pu;
+割賦	wap;pu;
 和戸	wa; do;
 侘び	wa; bi,
 上生	wa; bu;
@@ -33064,31 +33064,31 @@ columns:
 扱き	shigo; ki,
 扱く	shigo; ku,
 失禁	shiq; kin;
-失禁	shik; kin;
+失禁	shik;kin;
 縛り	shiba; ri,
 史歩	shi; ho;
 志帆	shi; ho;
 沙羅	sha; ra;
 諸多	sho; ta;
 職工	shoq; kou;
-職工	shok; kou;
+職工	shok;kou;
 自慰	ji; i;
 折檻	seq; kan;
-折檻	sek; kan;
+折檻	sek;kan;
 絶頂	zeq; chou;
-絶頂	zec; chou;
-絶頂	zet; tyou;
+絶頂	zec;chou;
+絶頂	zet;tyou;
 剃ろ	so; ro,
 弛い	tayu; i,
 堕す	da; su,
 脱糞	daq; pun;
-脱糞	dap; pun;
+脱糞	dap;pun;
 抓り	tsune; ri,
 撮も	tsuma; mo,
 抓り	tsume; ri,
 丁稚	deq; chi;
-丁稚	dec; chi;
-丁稚	det; ti;
+丁稚	dec;chi;
+丁稚	det;ti;
 蕩け	toro; ke,
 吃っ	domo; q,
 吃り	domo; ri,
@@ -33100,7 +33100,7 @@ columns:
 菜穂	na; ho;
 七海	na; mi;
 肉感	niq; kan;
-肉感	nik; kan;
+肉感	nik;kan;
 脱ぎ	nu; gi,
 盗ま	nusu; ma,
 盗め	nusu; me,
@@ -33109,16 +33109,16 @@ columns:
 舐り	nebu; ri,
 禿げ	ha; ge,
 発禁	haq; kin;
-発禁	hak; kin;
+発禁	hak;kin;
 孕ま	hara; ma,
 吃驚	biq; kuri;
-吃驚	bik; kuri;
+吃驚	bik;kuri;
 不具	fu; gu;
 勃起	boq; ki;
-勃起	bok; ki;
+勃起	bok;ki;
 跨り	mataga; ri,
 真裸	maq; padaka;
-真裸	map; padaka;
+真裸	map;padaka;
 美央	mi; o;
 美果	mi; ka;
 美花	mi; ka;
@@ -33275,9 +33275,9 @@ columns:
 會っ	a; q,
 温め	atta; me,
 圧痛	aq; tsuu;
-圧痛	at; tsuu;
+圧痛	at;tsuu;
 天晴	aq; pare;
-天晴	ap; pare;
+天晴	ap;pare;
 亜津	a; tsu;
 亜都	a; tsu;
 敦く	atsu; ku,
@@ -33452,69 +33452,69 @@ columns:
 伊知	i; chi;
 往っ	i; q,
 一下	iq; ka;
-一下	ik; ka;
+一下	ik;ka;
 一鶴	iq; kaku;
-一鶴	ik; kaku;
+一鶴	ik;kaku;
 一喜	iq; ki;
-一喜	ik; ki;
+一喜	ik;ki;
 一姫	iq; ki;
-一姫	ik; ki;
+一姫	ik;ki;
 一希	iq; ki;
-一希	ik; ki;
+一希	ik;ki;
 一木	iq; ki;
-一木	ik; ki;
+一木	ik;ki;
 一樹	iq; ki;
-一樹	ik; ki;
+一樹	ik;ki;
 一機	iq; ki;
-一機	ik; ki;
+一機	ik;ki;
 一毅	iq; ki;
-一毅	ik; ki;
+一毅	ik;ki;
 一粋	iq; ki;
-一粋	ik; ki;
+一粋	ik;ki;
 一記	iq; ki;
-一記	ik; ki;
+一記	ik;ki;
 一貴	iq; ki;
-一貴	ik; ki;
+一貴	ik;ki;
 一起	iq; ki;
-一起	ik; ki;
+一起	ik;ki;
 一騎	iq; ki;
-一騎	ik; ki;
+一騎	ik;ki;
 市木	iq; ki;
-市木	ik; ki;
+市木	ik;ki;
 一球	iq; kyuu;
-一球	ik; kyuu;
+一球	ik;kyuu;
 市休	iq; kyuu;
-市休	ik; kyuu;
+市休	ik;kyuu;
 一恭	iq; kyou;
-一恭	ik; kyou;
+一恭	ik;kyou;
 一啓	iq; kei;
-一啓	ik; kei;
+一啓	ik;kei;
 一圭	iq; kei;
-一圭	ik; kei;
+一圭	ik;kei;
 一慧	iq; kei;
-一慧	ik; kei;
+一慧	ik;kei;
 一敬	iq; kei;
-一敬	ik; kei;
+一敬	ik;kei;
 一功	iq; kou;
-一功	ik; kou;
+一功	ik;kou;
 一厚	iq; kou;
-一厚	ik; kou;
+一厚	ik;kou;
 一幸	iq; kou;
-一幸	ik; kou;
+一幸	ik;kou;
 一康	iq; kou;
-一康	ik; kou;
+一康	ik;kou;
 一晃	iq; kou;
-一晃	ik; kou;
+一晃	ik;kou;
 一紘	iq; kou;
-一紘	ik; kou;
+一紘	ik;kou;
 一興	iq; kou;
-一興	ik; kou;
+一興	ik;kou;
 一高	iq; kou;
-一高	ik; kou;
+一高	ik;kou;
 市行	iq; kou;
-市行	ik; kou;
+市行	ik;kou;
 一石	iq; koku;
-一石	ik; koku;
+一石	ik;koku;
 一佐	i; tsa;
 一咲	i; tsa;
 一沙	i; tsa;
@@ -33523,15 +33523,15 @@ columns:
 一志	i; tshi;
 一至	i; tshi;
 一登	iq; to;
-一登	it; to;
+一登	it;to;
 一兵	iq; pei;
-一兵	ip; pei;
+一兵	ip;pei;
 壱平	iq; pei;
-壱平	ip; pei;
+壱平	ip;pei;
 市兵	iq; pei;
-市兵	ip; pei;
+市兵	ip;pei;
 市平	iq; pei;
-市平	ip; pei;
+市平	ip;pei;
 伊津	i; tsu;
 伊都	i; tsu;
 衣都	i; tsu;
@@ -33872,17 +33872,17 @@ columns:
 落ら	ochi; ra,
 処っ	o; q,
 牛津	oq; kusufo-do;
-牛津	ok; kusufo-do;
+牛津	ok;kusufo-do;
 乙巳	o; tshi;
 押忍	o; tsu;
 乙丑	oq; chuu;
-乙丑	oc; chuu;
-乙丑	ot; tyuu;
+乙丑	oc;chuu;
+乙丑	ot;tyuu;
 良人	oq; to;
-良人	ot; to;
+良人	ot;to;
 夫ら	otto; ra,
 乙幡	oq; pan;
-乙幡	op; pan;
+乙幡	op;pan;
 尾津	o; tsu;
 乙ら	otsu; ra,
 弟ら	otouto; ra,
@@ -34074,18 +34074,18 @@ columns:
 徒歩	ka; chi;
 猟っ	ka; q,
 角化	kaq; ka;
-角化	kak; ka;
+角化	kak;ka;
 画期	kaq; ki;
-画期	kak; ki;
+画期	kak;ki;
 割球	kaq; kyuu;
-割球	kak; kyuu;
+割球	kak;kyuu;
 勝連	kaq; chin;
-勝連	kac; chin;
-勝連	kat; tin;
+勝連	kac;chin;
+勝連	kat;tin;
 甲藤	kaq; tou;
-甲藤	kat; tou;
+甲藤	kat;tou;
 克平	kaq; pei;
-克平	kap; pei;
+克平	kap;pei;
 香津	ka; tsu;
 曾て	katsu; te,
 甞て	katsu; te,
@@ -34203,17 +34203,17 @@ columns:
 賀寿	ga; ju;
 賀す	ga; su,
 学館	gaq; kan;
-学館	gak; kan;
+学館	gak;kan;
 楽句	gaq; ku;
-楽句	gak; ku;
+楽句	gak;ku;
 学系	gaq; kei;
-学系	gak; kei;
+学系	gak;kei;
 月東	gaq; tou;
-月東	gat; tou;
+月東	gat;tou;
 合肥	gaq; pi;
-合肥	gap; pi;
+合肥	gap;pi;
 合筆	gaq; pitsu;
-合筆	gap; pitsu;
+合筆	gap;pitsu;
 我部	ga; be;
 雅羅	ga; ra;
 狩り	ga; ri,
@@ -34280,13 +34280,13 @@ columns:
 揃っ	ki; q,
 斫っ	ki; q,
 菊川	kiq; kawa;
-菊川	kik; kawa;
+菊川	kik;kawa;
 吉向	kiq; kou;
-吉向	kik; kou;
+吉向	kik;kou;
 橘高	kiq; kou;
-橘高	kik; kou;
+橘高	kik;kou;
 橘餅	kiq; pan;
-橘餅	kip; pan;
+橘餅	kip;pan;
 木藤	ki; do;
 己未	ki; bi;
 癸未	ki; bi;
@@ -34468,35 +34468,35 @@ columns:
 苦し	guru; shi,
 剤っ	kezu; q,
 血虚	keq; kyo;
-血虚	kek; kyo;
+血虚	kek;kyo;
 結着	keq; chaku;
-結着	kec; chaku;
-結着	ket; tyaku;
+結着	kec;chaku;
+結着	ket;tyaku;
 血中	keq; chuu;
-血中	kec; chuu;
-血中	ket; tyuu;
+血中	kec;chuu;
+血中	ket;tyuu;
 血餅	keq; pei;
-血餅	kep; pei;
+血餅	kep;pei;
 烟り	kemu; ri,
 剣橋	kenburiq; ji;
-剣橋	kenburij; ji;
-剣橋	kenburiz; zi;
+剣橋	kenburij;ji;
+剣橋	kenburiz;zi;
 外記	ge; ki;
 解せ	ge; se,
 下足	ge; so;
 月華	geq; ka;
-月華	gek; ka;
+月華	gek;ka;
 月渓	geq; kei;
-月渓	gek; kei;
+月渓	gek;kei;
 月虹	geq; kou;
-月虹	gek; kou;
+月虹	gek;kou;
 月香	geq; kou;
-月香	gek; kou;
+月香	gek;kou;
 月初	ge; tsho;
 月天	geq; ten;
-月天	get; ten;
+月天	get;ten;
 月桃	geq; tou;
-月桃	get; tou;
+月桃	get;tou;
 現じ	gen; ji,
 宏偉	ko; i;
 戀い	ko; i,
@@ -34545,24 +34545,24 @@ columns:
 乞っ	ko; q,
 恋っ	ko; q,
 國華	koq; ka;
-國華	kok; ka;
+國華	kok;ka;
 骨化	koq; ka;
-骨化	kok; ka;
+骨化	kok;ka;
 骨気	koq; ki;
-骨気	kok; ki;
+骨気	kok;ki;
 骨棘	koq; kyoku;
-骨棘	kok; kyoku;
+骨棘	kok;kyoku;
 黒鍵	koq; ken;
-黒鍵	kok; ken;
+黒鍵	kok;ken;
 国公	koq; kou;
-国公	kok; kou;
+国公	kok;kou;
 此方	koq; chi;
-此方	koc; chi;
-此方	kot; ti;
+此方	koc;chi;
+此方	kot;ti;
 骨頭	koq; tou;
-骨頭	kot; tou;
+骨頭	kot;tou;
 骨片	koq; pen;
-骨片	kop; pen;
+骨片	kop;pen;
 小出	ko; de;
 盡く	kotogoto; ku,
 異っ	kotona; q,
@@ -34713,13 +34713,13 @@ columns:
 紗智	sa; chi;
 紗知	sa; chi;
 作監	saq; kan;
-作監	sak; kan;
+作監	sak;kan;
 冊封	saq; puu;
-冊封	sap; puu;
+冊封	sap;puu;
 冊封	saq; pou;
-冊封	sap; pou;
+冊封	sap;pou;
 殺法	saq; pou;
-殺法	sap; pou;
+殺法	sap;pou;
 佐都	sa; tsu;
 沙津	sa; tsu;
 啓さ	sato; sa,
@@ -34860,9 +34860,9 @@ columns:
 志智	shi; chi;
 識っ	shi; q,
 失活	shiq; katsu;
-失活	shik; katsu;
+失活	shik;katsu;
 失血	shiq; ketsu;
-失血	shik; ketsu;
+失血	shik;ketsu;
 躾け	shitsu; ke,
 死徒	shi; to;
 撓ら	shina; ra,
@@ -34893,9 +34893,9 @@ columns:
 釋迦	sha; ka;
 社史	sha; shi;
 赤光	shaq; kou;
-赤光	shak; kou;
+赤光	shak;kou;
 赤口	shaq; kou;
-赤口	shak; kou;
+赤口	shak;kou;
 斜度	sha; do;
 社保	sha; ho;
 沙弥	sha; mi;
@@ -34910,7 +34910,7 @@ columns:
 手指	shu; shi;
 主訴	shu; so;
 出講	shuq; kou;
-出講	shuk; kou;
+出講	shuk;kou;
 朱帆	shu; ho;
 酒母	shu; bo;
 首里	shu; ri;
@@ -34929,11 +34929,11 @@ columns:
 諸所	sho; sho;
 書字	sho; ji;
 食客	shoq; kaku;
-食客	shok; kaku;
+食客	shok;kaku;
 食感	shoq; kan;
-食感	shok; kan;
+食感	shok;kan;
 植菌	shoq; kin;
-植菌	shok; kin;
+植菌	shok;kin;
 氏ら	shi; ra,
 識ら	shi; ra,
 白鳥	shira; tuya-;
@@ -34967,7 +34967,7 @@ columns:
 持す	ji; su,
 自家	ji; cha;
 実根	jiq; kon;
-実根	jik; kon;
+実根	jik;kon;
 治部	ji; be;
 次頁	ji; pe-ji;
 染み	ji; mi,
@@ -34975,15 +34975,15 @@ columns:
 邪鬼	ja; ki;
 邪義	ja; gi;
 惹句	jaq; ku;
-惹句	jak; ku;
+惹句	jak;ku;
 爪哇	ja; wa;
 樹衣	ju; i;
 樹香	ju; ka;
 寿寿	ju; ju;
 十輝	juq; ki;
-十輝	juk; ki;
+十輝	juk;ki;
 恤救	juq; kyuu;
-恤救	juk; kyuu;
+恤救	juk;kyuu;
 如花	ju; fa;
 寿里	ju; ri;
 尾類	ju; ri;
@@ -35072,17 +35072,17 @@ columns:
 霊威	se; ji;
 世田	se; ta;
 雪花	seq; ka;
-雪花	sek; ka;
+雪花	sek;ka;
 節介	seq; kai;
-節介	sek; kai;
+節介	sek;kai;
 接結	seq; ketsu;
-接結	sek; ketsu;
+接結	sek;ketsu;
 切歯	se; tshi;
 雪中	seq; chuu;
-雪中	sec; chuu;
-雪中	set; tyuu;
+雪中	sec;chuu;
+雪中	set;tyuu;
 接敵	seq; teki;
-接敵	set; teki;
+接敵	set;teki;
 世津	se; tsu;
 勢津	se; tsu;
 瀬津	se; tsu;
@@ -35097,7 +35097,7 @@ columns:
 斎場	se-; fa;
 菜飯	se-; fan;
 舌下	zeq; ka;
-舌下	zek; ka;
+舌下	zek;ka;
 全頁	zen; pe-ji;
 前頁	zen; pe-ji;
 祖阿	so; a;
@@ -35119,7 +35119,7 @@ columns:
 曾田	so; da;
 瑞草	so; cho;
 測器	soq; ki;
-測器	sok; ki;
+測器	sok;ki;
 初ま	so; ma,
 初み	so; mi,
 初む	so; mu,
@@ -35139,7 +35139,7 @@ columns:
 索子	so-; zu;
 素麺	so-; men;
 続刊	zoq; kan;
-続刊	zok; kan;
+続刊	zok;kan;
 他阿	ta; a;
 他医	ta; i;
 多井	ta; i;
@@ -35207,15 +35207,15 @@ columns:
 勃っ	ta; q,
 經っ	ta; q,
 宅建	taq; ken;
-宅建	tak; ken;
+宅建	tak;ken;
 達等	taq; to;
-達等	tat; to;
+達等	tat;to;
 立飛	taq; pi;
-立飛	tap; pi;
+立飛	tap;pi;
 竜兵	taq; pei;
-竜兵	tap; pei;
+竜兵	tap;pei;
 竜平	taq; pei;
-竜平	tap; pei;
+竜平	tap;pei;
 勃つ	ta; tsu,
 經つ	ta; tsu,
 勃て	ta; te,
@@ -35262,11 +35262,11 @@ columns:
 起ち	da; chi,
 立っ	da; q,
 奪格	daq; kaku;
-奪格	dak; kaku;
+奪格	dak;kaku;
 脱気	daq; ki;
-脱気	dak; ki;
+脱気	dak;ki;
 脱北	daq; poku;
-脱北	dap; poku;
+脱北	dap;poku;
 立つ	da; tsu,
 立と	da; to,
 溜り	dama; ri,
@@ -35333,9 +35333,9 @@ columns:
 智世	chi; se;
 父ら	chichi; ra,
 窒化	chiq; ka;
-窒化	chik; ka;
+窒化	chik;ka;
 竹簡	chiq; kan;
-竹簡	chik; kan;
+竹簡	chik;kan;
 些と	chi; to,
 千波	chi; ba;
 千羽	chi; ba;
@@ -35349,11 +35349,11 @@ columns:
 知歩	chi; ho;
 千美	chi; mi;
 着艦	chaq; kan;
-着艦	chak; kan;
+着艦	chak;kan;
 着呼	chaq; ko;
-着呼	chak; ko;
+着呼	chak;ko;
 着袴	chaq; ko;
-着袴	chak; ko;
+着袴	chak;ko;
 茶都	cha; do;
 茶葉	cha; ba;
 茶谷	cha; ya;
@@ -35367,9 +35367,9 @@ columns:
 九萬	chu-; wan;
 長じ	chou; ji,
 直管	choq; kan;
-直管	chok; kan;
+直管	chok;kan;
 直帰	choq; ki;
-直帰	chok; ki;
+直帰	chok;ki;
 千与	chi; yo;
 千夜	chi; yo;
 千誉	chi; yo;
@@ -35480,32 +35480,32 @@ columns:
 照屋	ti-; ra;
 泰吾	te; o;
 摘花	teq; ka;
-摘花	tek; ka;
+摘花	tek;ka;
 鉄塊	teq; kai;
-鉄塊	tek; kai;
+鉄塊	tek;kai;
 適確	teq; kaku;
-適確	tek; kaku;
+適確	tek;kaku;
 敵機	teq; ki;
-敵機	tek; ki;
+敵機	tek;ki;
 鉄球	teq; kyuu;
-鉄球	tek; kyuu;
+鉄球	tek;kyuu;
 鉄琴	teq; kin;
-鉄琴	tek; kin;
+鉄琴	tek;kin;
 哲多	teq; ta;
-哲多	tet; ta;
+哲多	tet;ta;
 鉄腸	teq; chou;
-鉄腸	tec; chou;
-鉄腸	tet; tyou;
+鉄腸	tec;chou;
+鉄腸	tet;tyou;
 鉄粉	teq; pun;
-鉄粉	tep; pun;
+鉄粉	tep;pun;
 哲兵	teq; pei;
-哲兵	tep; pei;
+哲兵	tep;pei;
 哲平	teq; pei;
-哲平	tep; pei;
+哲平	tep;pei;
 徹平	teq; pei;
-徹平	tep; pei;
+徹平	tep;pei;
 撤平	teq; pei;
-撤平	tep; pei;
+撤平	tep;pei;
 汀良	te; ra;
 平良	te-; ra;
 出來	de; ki;
@@ -35558,11 +35558,11 @@ columns:
 穫っ	to; q,
 録っ	to; q,
 特快	toq; kai;
-特快	tok; kai;
+特快	tok;kai;
 特解	toq; kai;
-特解	tok; kai;
+特解	tok;kai;
 十鳥	toq; tori;
-十鳥	tot; tori;
+十鳥	tot;tori;
 凸っ	totsu; q,
 凸ら	totsu; ra,
 土肥	to; hi;
@@ -35771,27 +35771,27 @@ columns:
 野瀬	ni; se;
 仁田	ni; da;
 日華	niq; ka;
-日華	nik; ka;
+日華	nik;ka;
 日韓	niq; kan;
-日韓	nik; kan;
+日韓	nik;kan;
 憎き	nikku; ki,
 日顕	niq; ken;
-日顕	nik; ken;
+日顕	nik;ken;
 日ソ	niq; so.
-日ソ	nis; so.
+日ソ	nis;so.
 根人	niq; chu;
-根人	nic; chu;
-根人	nit; tyu;
+根人	nic;chu;
+根人	nit;tyu;
 日朝	niq; chou;
-日朝	nic; chou;
-日朝	nit; tyou;
+日朝	nic;chou;
+日朝	nit;tyou;
 日澄	niq; chou;
-日澄	nic; chou;
-日澄	nit; tyou;
+日澄	nic;chou;
+日澄	nit;tyou;
 日帝	niq; tei;
-日帝	nit; tei;
+日帝	nit;tei;
 日塔	niq; tou;
-日塔	nit; tou;
+日塔	nit;tou;
 二歩	ni; fu;
 仁部	ni; be;
 二馬	ni; ma;
@@ -35833,13 +35833,13 @@ columns:
 禰津	ne; zu;
 嫉ま	neta; ma,
 熱感	neq; kan;
-熱感	nek; kan;
+熱感	nek;kan;
 熱間	neq; kan;
-熱間	nek; kan;
+熱間	nek;kan;
 熱投	neq; tou;
-熱投	net; tou;
+熱投	net;tou;
 熱波	neq; pa;
-熱波	nep; pa;
+熱波	nep;pa;
 根保	ne; ho;
 根間	ne; ma;
 根無	ne; mu;
@@ -35934,17 +35934,17 @@ columns:
 葉田	ha; ta;
 開け	hada; ke,
 発艦	haq; kan;
-発艦	hak; kan;
+発艦	hak;kan;
 白鍵	haq; ken;
-白鍵	hak; ken;
+白鍵	hak;ken;
 発呼	haq; ko;
-発呼	hak; ko;
+発呼	hak;ko;
 発航	haq; kou;
-発航	hak; kou;
+発航	hak;kou;
 発根	haq; kon;
-発根	hak; kon;
+発根	hak;kon;
 服田	haq; ta;
-服田	hat; ta;
+服田	hat;ta;
 削っ	hatsu; q,
 削ら	hatsu; ra,
 削り	hatsu; ri,
@@ -35974,7 +35974,7 @@ columns:
 疾っ	haya; q,
 拂い	hara; i,
 聖林	hariuq; do;
-聖林	hariud; do;
+聖林	hariud;do;
 葉瑠	ha; ru;
 悠か	haru; ka,
 遙か	haru; ka,
@@ -35995,13 +35995,13 @@ columns:
 張っ	ba; q,
 貼っ	ba; q,
 幕閣	baq; kaku;
-幕閣	bak; kaku;
+幕閣	bak;kaku;
 曝気	baq; ki;
-曝気	bak; ki;
+曝気	bak;ki;
 抜去	baq; kyo;
-抜去	bak; kyo;
+抜去	bak;kyo;
 罰符	baq; pu;
-罰符	bap; pu;
+罰符	bap;pu;
 張ら	ba; ra,
 貼ら	ba; ra,
 貼り	ba; ri,
@@ -36043,7 +36043,7 @@ columns:
 緋田	hi; da;
 飛弾	hi; da;
 引張	hiq; pari;
-引張	hip; pari;
+引張	hip;pari;
 秀和	hi; de;
 斉し	hito; shi,
 人ら	hito; ra,
@@ -36059,7 +36059,7 @@ columns:
 日女	hi; me;
 姫ら	hime; ra,
 百閒	hyaq; ken;
-百閒	hyak; ken;
+百閒	hyak;ken;
 部谷	hi; ya;
 火矢	hi; ya-;
 啓い	hira; i,
@@ -36093,7 +36093,7 @@ columns:
 尾部	bi; bu;
 微妙	bi; myo;
 白花	byaq; ka;
-白花	byak; ka;
+白花	byak;ka;
 瓶子	bin; shi-;
 皮蛋	pi-; tan;
 #火神	pi-nukan;
@@ -36125,9 +36125,9 @@ columns:
 縁る	fuchido; ru,
 触っ	fu; q,
 腹腔	fuq; kuu;
-腹腔	fuk; kuu;
+腹腔	fuk;kuu;
 復建	fuq; ken;
-復建	fuk; ken;
+復建	fuk;ken;
 不破	fu; ha;
 付保	fu; ho;
 夫馬	fu; ma;
@@ -36162,7 +36162,7 @@ columns:
 豚め	buta; me,
 振っ	bu; q,
 佛教	buq; kyou;
-佛教	buk; kyou;
+佛教	buk;kyou;
 太く	buto; ku,
 振ら	bu; ra,
 振る	bu; ru,
@@ -36191,21 +36191,21 @@ columns:
 逸見	he; mi;
 部家	he; ya;
 別解	beq; kai;
-別解	bek; kai;
+別解	bek;kai;
 戸次	beq; ki;
-戸次	bek; ki;
+戸次	bek;ki;
 別置	beq; chi;
-別置	bec; chi;
-別置	bet; ti;
+別置	bec;chi;
+別置	bet;ti;
 別役	beq; chaku;
-別役	bec; chaku;
-別役	bet; tyaku;
+別役	bec;chaku;
+別役	bet;tyaku;
 別添	beq; ten;
-別添	bet; ten;
+別添	bet;ten;
 別當	beq; tou;
-別當	bet; tou;
+別當	bet;tou;
 別保	beq; po;
-別保	bep; po;
+別保	bep;po;
 #白露	be; raru-shi;
 白路	pe; ru-;
 北家	pe-; cha;
@@ -36231,18 +36231,18 @@ columns:
 保田	ho; da;
 放っ	ho; q,
 法界	hoq; kai;
-法界	hok; kai;
+法界	hok;kai;
 法顕	hoq; ken;
-法顕	hok; ken;
+法顕	hok;ken;
 北國	hoq; koku;
-北國	hok; koku;
+北國	hok;koku;
 欲さ	hoq; sa,
-欲さ	hos; sa,
+欲さ	hos;sa,
 欲す	hoq; su,
-欲す	hos; su,
+欲す	hos;su,
 堀地	hoq; chi;
-堀地	hoc; chi;
-堀地	hot; ti;
+堀地	hoc;chi;
+堀地	hot;ti;
 熱り	hotobo; ri,
 辺り	hoto; ri,
 保保	ho; ho;
@@ -36261,7 +36261,7 @@ columns:
 干し	bo; shi,
 母指	bo; shi;
 渤海	boq; kai;
-渤海	bok; kai;
+渤海	bok;kai;
 没っ	botsu; q,
 没り	botsu; ri,
 没る	botsu; ru,
@@ -36675,7 +36675,7 @@ columns:
 美夢	mi; mu;
 美芽	mi; me;
 脈管	myaq; kan;
-脈管	myak; kan;
+脈管	myak;kan;
 緬甸	myan; ma-;
 三也	mi; ya;
 実也	mi; ya;
@@ -36807,13 +36807,13 @@ columns:
 保っ	mo; q,
 守っ	mo; q,
 木鶏	moq; kei;
-木鶏	mok; kei;
+木鶏	mok;kei;
 牧谿	moq; kei;
-牧谿	mok; kei;
+牧谿	mok;kei;
 木瓜	moq; kou;
-木瓜	mok; kou;
+木瓜	mok;kou;
 木香	moq; kou;
-木香	mok; kou;
+木香	mok;kou;
 保つ	mo; tsu,
 保て	mo; te,
 饗さ	motena; sa,
@@ -36868,7 +36868,7 @@ columns:
 演っ	ya; q,
 破っ	ya; q,
 訳解	yaq; kai;
-訳解	yak; kai;
+訳解	yak;kai;
 柔い	yakko; i,
 柔く	yakko; ku,
 奴め	yatsu; me,
@@ -37178,7 +37178,7 @@ columns:
 歯っ	yowa; q,
 訓ん	yo; n,
 欧州	yo-roq; pa;
-欧州	yo-rop; pa;
+欧州	yo-rop;pa;
 ら行	ra, gyou;
 楽め	raku; me,
 裸子	ra; shi;
@@ -37285,11 +37285,11 @@ columns:
 理珠	ri; ju;
 梨世	ri; se;
 六夏	riq; ka;
-六夏	rik; ka;
+六夏	rik;ka;
 立県	riq; ken;
-立県	rik; ken;
+立県	rik;ken;
 律法	riq; pou;
-律法	rip; pou;
+律法	rip;pou;
 利津	ri; tsu;
 理津	ri; tsu;
 里津	ri; tsu;
@@ -37369,8 +37369,8 @@ columns:
 麗央	re; o;
 麗愛	re; o;
 列柱	req; chuu;
-列柱	rec; chuu;
-列柱	ret; tyuu;
+列柱	rec;chuu;
+列柱	ret;tyuu;
 玲麻	re; ma;
 連コ	ren; ko.
 弄さ	rou; sa,
@@ -37412,7 +37412,7 @@ columns:
 済ん	wata; n,
 輪田	wa; da;
 輪厚	waq; tsu;
-輪厚	wat; tsu;
+輪厚	wat;tsu;
 佗び	wa; bi,
 和由	wa; yu;
 咲い	wara; i,
@@ -37678,7 +37678,7 @@ columns:
 銘々	mei; mei;
 隙々	hima; hima;
 颯々	saq; satsu;
-颯々	sas; satsu;
+颯々	sas;satsu;
 凛々	rin; rin;
 熱々	atsu; atsu;
 皚々	gai; gai;
@@ -37756,7 +37756,7 @@ columns:
 一昨々日	sakio; to; to; i;
 一昨々年	sakio; to; to; shi;
 丁々発止	chou; chou; haq; shi;
-丁々発止	chou; chou; has; shi;
+丁々発止	chou; chou; has;shi;
 三々九度	san; san; ku; do;
 三々五々	san; san; go; go;
 三度々々	sando; sando;
@@ -37804,7 +37804,7 @@ columns:
 拳々服膺	ken; ken; fuku; you;
 捗々しい	haka; baka; shi, i,
 時々刻々	ji; ji; koq; koku;
-時々刻々	ji; ji; kok; koku;
+時々刻々	ji; ji; kok;koku;
 神々しい	kou; gou; shi, i,
 荒々しい	ara; ara; shi, i,
 堂々たる	dou; dou; ta, ru,

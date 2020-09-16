@@ -167,9 +167,11 @@ speller:
     - xform/^dvyu/dyu/
 ##### 簡化後綴 #####
     - xform/^([kspt])([,.])(.+)$/$1$3/
-    - derive/^([a-z-]+)([,.])$/$1/
-#關#    - derive/^([a-z-]+)([;])$/$1/
-    - abbrev/^([kstnhmyrwgzdbpxjl])([aiueo])([.,])$/$1/
+    - derive/^([a-z-]+)([;])([a-z-]+)([;])$/$1$3$4/ #漢字中含促音
+#關#    - derive/^([a-z-]+)([;])([a-z-]+)([,.])$/$1$3$4/ #漢字中含促音
+#關#    - derive/^([;a-z-]+)([;])$/$1/
+    - derive/^([;a-z-]+)([,.])$/$1/
+    - abbrev/^([kstnhmyrwgzdbpxjlf])([aiueo])([.,])$/$1/
     - abbrev/^([c])([h])([aiueo])([.,])$/$1/
 
 translator:
@@ -288,8 +290,8 @@ key_binder:
     - {accept: minus, send: minus, when: has_menu}
     - {accept: equal, send: equal, when: has_menu}
 ### 切分移位 ###
-    - {accept: Left, send: Page_Up, when: paging}
-    - {accept: Right, send: Page_Down, when: paging}
+    - {accept: Up, send: KP_Left, when: composing}
+    - {accept: Up, send: Up, when: paging}
     - {accept: Right, send: Shift+Right, when: composing}
     - {accept: Shift+Right, send: Right, when: composing}
     - {accept: Shift+Left, send: KP_Left, when: composing}
