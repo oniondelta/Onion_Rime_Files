@@ -1,10 +1,10 @@
 # Rime dictionary
 # encoding: utf-8
-# 《日語（平假名+片假名）字母碼表》
+# 《日語（平假名+片假名）碼表》
 # 『洋蔥』製作
 ---
 name: bo_mixin_jp
-version: "202007"
+version: "202009"
 sort: by_weight
 use_preset_vocabulary: false
 columns:
@@ -796,6 +796,33 @@ columns:
 #っじょ	!!jjyo	10000 #用正則轉寫
 っびょ	!!bbyo	10000
 っぴょ	!!ppyo	10000
+## 20200916 促音加拗音 補充
+っきぃ	!!kkyi
+っぎぃ	!!ggyi
+っしぃ	!!ssyi
+っじぃ	!!zzyi
+っじぃ	!!jjyi
+っちぃ	!!ttyi
+っぢぃ	!!ddyi
+っひぃ	!!hhyi
+っびぃ	!!bbyi
+っぴぃ	!!ppyi
+っみィ	!!mmyi
+っりぃ	!!rryi
+っい	!!yyi
+っきィ	!!kkye
+っぎィ	!!ggye
+っしぇ	!!ssye
+っじぇ	!!zzye
+っじぇ	!!jjye
+っちぇ	!!ttye
+っぢぇ	!!ddye
+っひぇ	!!hhye
+っびぇ	!!bbye
+っぴぇ	!!ppye
+っみぇ	!!mmye
+っりぇ	!!rrye
+っいぇ	!!yye
 ### 日文鼻濁音加另外拼法 ###
 か゚	!!nga
 き゚	!!ngi
@@ -1078,6 +1105,33 @@ columns:
 #ッジョ	!!!jjyo	9000 #用正則轉寫
 ッビョ	!!!bbyo	9000
 ッピョ	!!!ppyo	9000
+## 20200916 促音加拗音 補充
+ッキィ	!!!kkyi
+ッギィ	!!!ggyi
+ッシィ	!!!ssyi
+ッジィ	!!!zzyi
+ッジィ	!!!jjyi
+ッチィ	!!!ttyi
+ッヂィ	!!!ddyi
+ッヒィ	!!!hhyi
+ッビィ	!!!bbyi
+ッピィ	!!!ppyi
+ッミィ	!!!mmyi
+ッリィ	!!!rryi
+ッイ	!!!yyi
+ッキェ	!!!kkye
+ッギェ	!!!ggye
+ッシェ	!!!ssye
+ッジェ	!!!zzye
+ッジェ	!!!jjye
+ッチェ	!!!ttye
+ッヂェ	!!!ddye
+ッヒェ	!!!hhye
+ッビェ	!!!bbye
+ッピェ	!!!ppye
+ッミェ	!!!mmye
+ッリェ	!!!rrye
+ッイェ	!!!yye
 ### 日文鼻濁音加另外拼法 ###
 ラ゜	!!!la	1100
 リ゜	!!!li

@@ -820,6 +820,33 @@ columns:
 #っじょ	jjyo, #用正則取代
 っびょ	bbyo,	90000
 っぴょ	ppyo,	90000
+## 20200916 促音加拗音 補充
+っきぃ	kkyi,
+っぎぃ	ggyi,
+っしぃ	ssyi,
+っじぃ	zzyi,
+っじぃ	jjyi,
+っちぃ	ttyi,
+っぢぃ	ddyi,
+っひぃ	hhyi,
+っびぃ	bbyi,
+っぴぃ	ppyi,
+っみィ	mmyi,
+っりぃ	rryi,
+っい	yyi,
+っきィ	kkye,
+っぎィ	ggye,
+っしぇ	ssye,
+っじぇ	zzye,
+っじぇ	jjye,
+っちぇ	ttye,
+っぢぇ	ddye,
+っひぇ	hhye,
+っびぇ	bbye,
+っぴぇ	ppye,
+っみぇ	mmye,
+っりぇ	rrye,
+っいぇ	yye,
 ### 日文鼻濁音加另外拼法 ###
 か゚	nga,
 き゚	ngi,
@@ -1102,6 +1129,33 @@ columns:
 #ッジョ	jjyo. #用正則取代
 ッビョ	bbyo.	9000
 ッピョ	ppyo.	9000
+## 20200916 促音加拗音 補充
+ッキィ	kkyi.
+ッギィ	ggyi.
+ッシィ	ssyi.
+ッジィ	zzyi.
+ッジィ	jjyi.
+ッチィ	ttyi.
+ッヂィ	ddyi.
+ッヒィ	hhyi.
+ッビィ	bbyi.
+ッピィ	ppyi.
+ッミィ	mmyi.
+ッリィ	rryi.
+ッイ	yyi.
+ッキェ	kkye.
+ッギェ	ggye.
+ッシェ	ssye.
+ッジェ	zzye.
+ッジェ	jjye.
+ッチェ	ttye.
+ッヂェ	ddye.
+ッヒェ	hhye.
+ッビェ	bbye.
+ッピェ	ppye.
+ッミェ	mmye.
+ッリェ	rrye.
+ッイェ	yye.
 ### 日文鼻濁音加另外拼法 ###
 ラ゜	la.
 リ゜	li.
