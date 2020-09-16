@@ -287,16 +287,29 @@ key_binder:
     - {accept: period, send: period, when: has_menu}
     - {accept: minus, send: minus, when: has_menu}
     - {accept: equal, send: equal, when: has_menu}
-######################
+### 切分移位 ###
     - {accept: Left, send: Page_Up, when: paging}
     - {accept: Right, send: Page_Down, when: paging}
-######################
-    - {accept: Tab, send: Shift+Left, when: paging}
-    - {accept: Shift+space, send: Page_Down, when: has_menu}
-    - {accept: Shift+Tab, send: Page_Up, when: paging}
+    - {accept: Right, send: Shift+Right, when: composing}
+    - {accept: Shift+Right, send: Right, when: composing}
+    - {accept: Shift+Left, send: KP_Left, when: composing}
+    - {accept: Shift+space, send: Shift+Right, when: composing}
+### 選字翻頁 ###
+    - {accept: Left, send: Page_Up, when: paging}
+    - {accept: Right, send: Page_Down, when: paging}
+    - {accept: Tab, send: Page_Down, when: has_menu} #「tab」翻頁。
+    - {accept: Shift+Tab, send: Page_Up, when: paging} #選字時「Shift」+「tab」翻頁。
+    - {accept: Shift+Down, send: Page_Down, when: has_menu} #選字時「Shift」+「下」翻頁。
+    - {accept: Shift+Up, send: Page_Up, when: paging} #選字時「Shift」+「上」翻頁。
+    - {accept: Shift+space, send: Shift+Left, when: paging}
+### 選字翻頁 ###
+#    - {accept: Tab, send: Shift+Left, when: paging}
+#    - {accept: Shift+space, send: Page_Down, when: has_menu}
+#    - {accept: Shift+Tab, send: Page_Up, when: paging}
+###
     - {accept: Return, send: space, when: has_menu} #return,enter直出
-#    - {accept: space, send: space, when: has_menu} # 非空碼時，空白還是空白
-#    - {accept: space, send: Escape, when: composing} # 空碼時，按空格清除
+##    - {accept: space, send: space, when: has_menu} # 非空碼時，空白還是空白
+##    - {accept: space, send: Escape, when: composing} # 空碼時，按空格清除
 
 editor:
   bindings:
