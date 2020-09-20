@@ -97,6 +97,8 @@ shutil.copyfile("./allfiles/opencc/bpm_big5e_hkscs_jis.json", "./sort_rime/洋�
 shutil.copyfile("./allfiles/opencc/bpm_big5e_hkscs_jis.txt", "./sort_rime/洋蔥mixin版注音/opencc/bpm_big5e_hkscs_jis.txt")
 shutil.copyfile("./allfiles/opencc/emoji.json", "./sort_rime/洋蔥mixin版注音/opencc/emoji.json")
 shutil.copyfile("./allfiles/opencc/emoji.txt", "./sort_rime/洋蔥mixin版注音/opencc/emoji.txt")
+shutil.copyfile("./allfiles/opencc/ocm_big5e_hkscs_jis.json", "./sort_rime/洋蔥mixin版注音/opencc/ocm_big5e_hkscs_jis.json")
+shutil.copyfile("./allfiles/opencc/ocm_big5e_hkscs_jis.txt", "./sort_rime/洋蔥mixin版注音/opencc/ocm_big5e_hkscs_jis.txt")
 shutil.copyfile("./allfiles/opencc/punct_mark.json", "./sort_rime/洋蔥mixin版注音/opencc/punct_mark.json")
 shutil.copyfile("./allfiles/opencc/punct_mark.txt", "./sort_rime/洋蔥mixin版注音/opencc/punct_mark.txt")
 
@@ -169,6 +171,8 @@ shutil.copyfile("./allfiles/opencc/bpm_big5e_hkscs_jis.json", "./sort_rime/洋�
 shutil.copyfile("./allfiles/opencc/bpm_big5e_hkscs_jis.txt", "./sort_rime/洋蔥plus版注音/opencc/bpm_big5e_hkscs_jis.txt")
 shutil.copyfile("./allfiles/opencc/emoji.json", "./sort_rime/洋蔥plus版注音/opencc/emoji.json")
 shutil.copyfile("./allfiles/opencc/emoji.txt", "./sort_rime/洋蔥plus版注音/opencc/emoji.txt")
+shutil.copyfile("./allfiles/opencc/ocm_big5e_hkscs_jis.json", "./sort_rime/洋蔥plus版注音/opencc/ocm_big5e_hkscs_jis.json")
+shutil.copyfile("./allfiles/opencc/ocm_big5e_hkscs_jis.txt", "./sort_rime/洋蔥plus版注音/opencc/ocm_big5e_hkscs_jis.txt")
 shutil.copyfile("./allfiles/opencc/punct_mark.json", "./sort_rime/洋蔥plus版注音/opencc/punct_mark.json")
 shutil.copyfile("./allfiles/opencc/punct_mark.txt", "./sort_rime/洋蔥plus版注音/opencc/punct_mark.txt")
 
