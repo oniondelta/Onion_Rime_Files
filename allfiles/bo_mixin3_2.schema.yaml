@@ -105,6 +105,7 @@ simplifier:
 zh_tw:
   opencc_config: ocm_big5e_hkscs_jis.json #s2tw.json #t2tw.json
   option_name: zh_tw
+  tags: [ abc, reverse2_lookup ]
 
 emoji_switch:
   opencc_config: emoji.json
