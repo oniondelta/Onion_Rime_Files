@@ -68,7 +68,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "2020.09.12"
+version: "2020.09.22"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -493,12 +493,12 @@ min_phrase_weight: 100
 𣂷	jin4
 𣂷	qin2
 𣂼	qin2
-#?#𣂼	jin3
+#？#𣂼	jin3
 𣃚	hang2
 𣄃	qi2
 𣅽	po4
 𣅽	pei4
-#?#𣅽	bo2
+#？#𣅽	bo2
 𣇈	xiao3
 𣇪	yao4
 𣇪	yue4
@@ -622,7 +622,7 @@ min_phrase_weight: 100
 𤺧	fu1
 𤽜	mo4
 𤾆	dou1
-#?#𤾆	tou1
+#？#𤾆	tou1
 𤾗	kuang4
 𤾸	hua1
 𤾸	wei3
@@ -679,7 +679,7 @@ min_phrase_weight: 100
 𦅚	zhou4
 𦆭	ning2
 𦉘	cheng1
-𦉘	cang1
+#？#𦉘	cang1
 𦉪	ren2
 𦉪	wang3
 𦉫	ren2
@@ -698,7 +698,7 @@ min_phrase_weight: 100
 𦍑	qiang1
 𦏵	yi4
 𦐂	yi4
-#?#𦐂	an1
+#？#𦐂	an1
 𦑊	jing1
 𦑩	hui1
 𦒄	hui4
@@ -726,8 +726,8 @@ min_phrase_weight: 100
 𦸀	qi2
 𦸅	kou4
 𦸇	zhu2
-#?#𦸇	shu4
-#?#𦸇	shu2
+#？#𦸇	shu4
+#？#𦸇	shu2
 𦸒	yi1
 𦺈	sun1
 𦻐	zhao4
@@ -1133,7 +1133,7 @@ min_phrase_weight: 100
 𡁻	jue2
 𡂴	lian2
 𡃀	yi4
-𡃁	leng1
+#？#𡃁	leng1
 𡃁	jing4
 𡃉	jia4
 𡃓	bo1
@@ -1383,12 +1383,12 @@ min_phrase_weight: 100
 𣊉	ji3
 𣊊	jiao3
 𣊫	liu4
-#?#𣊫	hui3
-#?#𣊫	hui4
+#？#𣊫	hui3
+#？#𣊫	hui4
 𣊬	shun4
 𣊭	liu4
-#?#𣊭	hui3
-#?#𣊭	hui4
+#？#𣊭	hui3
+#？#𣊭	hui4
 𣋒	kui2
 𣋒	kui1
 𣋡	meng2
@@ -1396,7 +1396,7 @@ min_phrase_weight: 100
 𣏦	shi4
 𣏵	nan2
 𣏵	ran2
-#?#𣏵	ran3
+#？#𣏵	ran3
 𣏾	ge2
 𣏾	ge1
 𣐀	wen3
@@ -1775,7 +1775,7 @@ min_phrase_weight: 100
 𥌑	jun4
 𥌑	rui4
 𥌓	shu3
-#?#𥌓	shu4
+#？#𥌓	shu4
 𥐥	fan2
 𥐯	yun2
 𥐯	tan2
@@ -1801,9 +1801,9 @@ min_phrase_weight: 100
 𥗠	li4
 𥘵	zu3
 𥘵	tai2
-#?#𥘵	jie1
+#？#𥘵	jie1
 𥙑	shui4
-#?#𥙑	guang1
+#？#𥙑	guang1
 𥚕	chang1
 𥚕	mao4
 𥛣	dai4
@@ -1894,10 +1894,10 @@ min_phrase_weight: 100
 𦚵	xi1
 𦛼	bing1
 𦝁	qi1
-#?#𦝁	ji1
+#？#𦝁	ji1
 #補充#
 𣍠	qi1
-#?#𣍠	ji1
+#？#𣍠	ji1
 𦞳	qia4
 𦞴	a1
 𦞴	yan1
@@ -1913,7 +1913,7 @@ min_phrase_weight: 100
 𦤑	gao1
 𦤑	hao2
 𦦨	yan4
-#?#𦦨	yan2
+#？#𦦨	yan2
 𦦵	song1
 𦩂	xun2
 𦩑	lai2
@@ -1930,14 +1930,14 @@ min_phrase_weight: 100
 𦭓	shi4
 𦭛	qian1
 𦮖	you3
-#?#𦮖	you4
+#？#𦮖	you4
 𦮗	nan1
-#?#𦮗	lan1
+#？#𦮗	lan1
 𦮝	mang2
 𦮳	qi4
 𦯷	miao4
 𦱿	xiao3
-#?#𦱿	yo2
+#？#𦱿	yo2
 𦲀	yi2
 𦲁	ni2
 𦲁	ni1
@@ -1971,7 +1971,7 @@ min_phrase_weight: 100
 𦷜	xia4
 𦷪	sui1
 𦷫	hai3
-#?#𦷫	kang1
+#？#𦷫	kang1
 #補充#
 𢲨	hai3
 𦷰	fu2
@@ -2014,8 +2014,8 @@ min_phrase_weight: 100
 𧄉	cong1
 𧄉	zong3
 𧄌	dun3
-#?#𧄌	dun1
-#?#𧄌	man4
+#？#𧄌	dun1
+#？#𧄌	man4
 𧄦	fu4
 𧄧	yun4
 𧅤	bao3
@@ -3547,6 +3547,17 @@ min_phrase_weight: 100
 堁	kuo4	0%
 堁	kui4	0%
 堁	wo4	0%
+㷫	yun4	0%
+𠲬	ji1	0%
+僆	lian3	0%
+#靚	liang2	0%
+𬊜	luo2	0%
+#罉	cang1	0%
+䐁	niao3	0%
+㘭	ao1	0%
+㓤	jie2	0%
+㓞	qi4	0%
+㓞	yao2	0%
 #####@ 201912 比對教育部相關字詞典檔所新增 #####
 丁	zheng1	0%
 丂	kao3	0%
@@ -7771,7 +7782,7 @@ min_phrase_weight: 100
 㹲	xiao1
 㹲	xiao4
 㹳	wu2
-㹴	geng3
+#㹴	geng3
 㹵	ying3
 㹶	ting2
 㹷	shi3
