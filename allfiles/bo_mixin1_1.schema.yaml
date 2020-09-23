@@ -55,6 +55,7 @@ engine:
     - simplifier@back_mark
     - simplifier@punct_mark
     - reverse_lookup_filter@bpm_reverse_lookup
+    - reverse_lookup_filter@e_reverse_lookup
     - uniquifier
   processors:
     - ascii_composer
@@ -417,6 +418,13 @@ easy_en:
     - xform/;/; /
     - xform|\/|\/ |
     - 'xform/\\/ /'
+    
+e_reverse_lookup:
+  tags: [ abc ]
+  overwrite_comment: true
+  dictionary: easy_en_comment
+  comment_format:
+    - xform/@/ /
 ################################### 全形 ######################################
 fs2:
   tag: fs2
