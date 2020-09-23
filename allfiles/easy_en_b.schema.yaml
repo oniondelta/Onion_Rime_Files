@@ -5,7 +5,7 @@
 schema:
   schema_id: easy_en_b
   name: Easy English（B）
-  version: "202003"
+  version: "202009"
   author:
     - Patrick <ipatrickmac@gmail.com>
     - 洋蔥
@@ -41,7 +41,7 @@ engine:
     - uniquifier
 
 speller:
-  alphabet: "zyxwvutsrqponmlkjihgfedcba;/'"
+  alphabet: "zyxwvutsrqponmlkjihgfedcba-.;/'"
   delimiter: " "
   algebra:
 #    - derive|^//([a-z]+)$|$1|
