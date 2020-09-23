@@ -444,7 +444,7 @@ easy_en:
     - 'xform/\\/ /'
 
 e_reverse_lookup:
-  tags: [ abc ]
+  tags: [ easy_en ]
   overwrite_comment: true
   dictionary: easy_en_comment
   comment_format:
