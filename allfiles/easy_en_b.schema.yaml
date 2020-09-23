@@ -1,6 +1,6 @@
-﻿# Rime schema
-# vim: set sw=2 sts=2 et:
+# Rime schema settings
 # encoding: utf-8
+# vim: set sw=2 sts=2 et:
 
 schema:
   schema_id: easy_en_b
@@ -37,6 +37,7 @@ engine:
     - table_translator
     - punct_translator
   filters:
+    - reverse_lookup_filter@e_reverse_lookup
     - uniquifier
 
 speller:
@@ -54,6 +55,13 @@ translator:
   enable_completion: true
   enable_user_dict: true
 #  spelling_hints: 9
+
+e_reverse_lookup:
+  tags: [ abc ]
+  overwrite_comment: true
+  dictionary: easy_en_comment
+  comment_format:
+    - xform/@/ /
 
 key_binder:
   import_preset: default
