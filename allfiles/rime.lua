@@ -1494,17 +1494,22 @@ function mytranslator(input, seg)
 end
 
 --- 韓語（非英語等）空格鍵後添加" "
-function myproc(key, env)
+function endspace(key, env)
     local engine = env.engine
     local context = engine.context
     -- local arr = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}
     --- accept: space_do_space when: composing
     if (key:repr() == "space") and (context:is_composing())then
-        -- local s_orig = context:get_commit_composition()
-        local s_orig = context:get_commit_text()
         local caret_pos = context.caret_pos
-        if (not string.find(s_orig, "[%p%a%c%s]")) and (caret_pos == context.input:len()) then
-        -- 「半形標點」和「有切分」不作用（用字數統計驗證是否切分）
+        local s_orig = context:get_commit_text()
+        -- local s_orig = context:get_commit_composition()
+        -- local o_orig = context:commit()
+        -- local o_orig = context:get_script_text()
+        -- local o_orig = string.gsub(context:get_script_text(), " ", "a")
+        -- 以下「半形標點」和「有切分」不作用（用字數統計驗證是否切分）
+        if (not string.find(s_orig, "[%a%c%s]")) and (caret_pos == context.input:len()) then
+        -- if (not string.find(o_orig, "[%a%c%s]")) and (caret_pos == context.input:len()) then
+        -- if (string.find(o_orig, "[%a%c%s]")) and (caret_pos == context.input:len()) then
                 engine:commit_text(s_orig)
                 -- engine:commit_text(s_orig .. "a")
                 context:clear()
