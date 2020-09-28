@@ -1506,7 +1506,7 @@ function endspace(key, env)
         -- local o_orig = context:commit()
         -- local o_orig = context:get_script_text()
         -- local o_orig = string.gsub(context:get_script_text(), " ", "a")
-        -- 以下「含有英文字母、控制字元、空白」和「有切分」不作用（用字數統計驗證是否切分）
+        -- 以下「含有英文字母、控制字元、空白」和「切分上屏時」不作用（用字數統計驗證是否切分）
         if (not string.find(s_orig, "[%a%c%s]")) and (caret_pos == context.input:len()) then
         -- if (not string.find(o_orig, "[%a%c%s]")) and (caret_pos == context.input:len()) then
         -- if (string.find(o_orig, "[%a%c%s]")) and (caret_pos == context.input:len()) then
