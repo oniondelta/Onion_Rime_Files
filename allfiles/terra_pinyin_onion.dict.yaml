@@ -38,9 +38,10 @@
 #    PS：「啓(啟)」有一個於古籍存有前者，故保留。
 #
 #    選擇性修改：「臺(台)」「擡(抬)」「檯(枱)」「薹(苔)」「癡(痴)」←《日常常見，互相增補相關詞彙》（“痴”改設權重比高）
-#              「唸(念)」「棱(稜)」「泄(洩)」「涌(湧)」←《 字典中存有兩者之詞彙，待攷 》（“湧”改設權重比高）
+#              「唸(念)」「棱(稜)」「泄(洩)」←《 字典中存有兩者之詞彙，待攷 》
 #              「痹(痺)」「鍼(針)」←《 中醫常用前者，且字典中存有兩者之詞彙 》（“痺”改設權重比高）
 #              「脣(唇)」←《 前者為標準字，但後者太常用，把“脣”詞彙增補“唇” 》（“唇”改設權重比高）
+#              「涌(湧)」←《 地名和字典中有的保留前者，其餘使用後者 》
 #              「鮎(鯰)」←《 日語有用到前者，有方案包含日文 》
 #              「喫(吃)」「鉢(缽)」←《 主要選擇用後者，但前者偶會在特殊名詞或外國名用到 》
 #              「纔(才)」「檐(簷)」←《 主要選擇用後者，字典中存有少數相關詞彙，主要為古籍 》
@@ -74653,7 +74654,7 @@ min_phrase_weight: 100
 操演	cao1 yan3
 操琴	cao1 qin2
 操瓶湧泉	cao1 ping2 yong3 quan2
-操瓶涌泉	cao1 ping2 yong3 quan2
+#操瓶涌泉	cao1 ping2 yong3 quan2
 操盤	cao1 pan2
 操盤手	cao1 pan2 shou3
 操神	cao1 shen2
@@ -80638,7 +80639,7 @@ min_phrase_weight: 100
 波浪銳度	bo1 lang4 rui4 du4
 波濤	bo1 tao2
 波濤洶湧	bo1 tao2 xiong1 yong3
-波濤洶涌	bo1 tao2 xiong1 yong3
+#波濤洶涌	bo1 tao2 xiong1 yong3
 波爾卡舞	bo1 er3 ka3 wu3
 波爾卡舞曲	bo1 er3 ka3 wu3 qu3
 波爾干	bo1 er3 gan1
@@ -99941,7 +99942,7 @@ min_phrase_weight: 100
 鋪開	pu1 kai1
 鋪陳	pu1 chen2
 鋪霜湧雪	pu1 shuang1 yong3 xue3
-鋪霜涌雪	pu1 shuang1 yong3 xue3
+#鋪霜涌雪	pu1 shuang1 yong3 xue3
 鋪面	pu4 mian4
 鋪面房	pu4 mian4 fang2
 鋪面臨街房	pu4 mian4 lin2 jie1 fang2
@@ -103189,7 +103190,7 @@ min_phrase_weight: 100
 風靡	feng1 mi3
 風靡一時	feng1 mi3 yi4 shi2
 風靡雲湧	feng1 mi3 yun2 yong3
-風靡雲涌	feng1 mi3 yun2 yong3
+#風靡雲涌	feng1 mi3 yun2 yong3
 風靡雲蒸	feng1 mi3 yun2 zheng1
 風頭	feng1 tou2
 風頭	feng1 tou5
