@@ -521,6 +521,7 @@ all_bpm:
   preedit_format:
     - xform/';'?/A/
     - xform/^/《注音文》/
+    - xform/^《注音文》(.+)A$/$1《注音文》/
     - xform/A//
     - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-6347 |ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙ˉ|"
     - 'xform/\\//'
