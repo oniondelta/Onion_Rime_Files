@@ -435,10 +435,10 @@ easy_en:
   enable_user_dict: true
   prefix: "3"
   suffix: " "
-  tips: "【easy】▶"
-  closing_tips: "◀【easy】"
+  tips: "《easy》▶"
+  closing_tips: "◀《easy》"
   preedit_format:
-    - xform/^/【easy】/
+    - xform/^/《easy》/
     - xform/;/; /
     - xform|\/|\/ |
     - 'xform/\\/ /'
@@ -459,12 +459,12 @@ fs2:
   enable_user_dict: true
   prefix: "4"
   suffix: " "
-  tips: "【全】▶"
-  closing_tips: "◀【全】"
+  tips: "《全》▶"
+  closing_tips: "◀《全》"
   disable_user_dict_for_patterns:
     - ^[-a-z,./]{1}[;/]?$
   preedit_format:
-    - xform/^/【全】/
+    - xform/^/《全》/
     - 'xform/\\/ /'
 ########################### 西里爾字母 ###################################
 cyr2:
@@ -475,8 +475,8 @@ cyr2:
   enable_user_dict: true
   prefix: "6"
   suffix: " "
-  tips: "【俄】▶"
-  closing_tips: "◀【俄】"
+  tips: "《俄》▶"
+  closing_tips: "◀《俄》"
   disable_user_dict_for_patterns:
     - ^[a-z]{1}[;/]?$
     - ^[b][fir][;/]?$
@@ -486,7 +486,7 @@ cyr2:
     - ^[w][y][;/]?$
     - ^[a-z]+[;][;]$
   preedit_format:
-    - xform/^/【俄】/
+    - xform/^/《俄》/
     - 'xform/\\/ /'
 ############################# 希臘字母 #################################
 gr2:
@@ -497,12 +497,12 @@ gr2:
   enable_user_dict: true
   prefix: "7"
   suffix: " "
-  tips: "【希】▶"
-  closing_tips: "◀【希】"
+  tips: "《希》▶"
+  closing_tips: "◀《希》"
   disable_user_dict_for_patterns:
     - ^[a-z]{1}[;/]?$
   preedit_format:
-    - xform/^/【希】/
+    - xform/^/《希》/
     - 'xform/\\/ /'
 ################################『ㄅㄆㄇ注音文』##################################
 all_bpm:
@@ -513,11 +513,11 @@ all_bpm:
   enable_user_dict: false
   prefix: "';"
   suffix: "'"
-  tips: "【注音文】▶"
-  closing_tips: "◀【注音文】"
+  tips: "《注音文》▶"
+  closing_tips: "◀《注音文》"
   preedit_format:
     - xform/';'?/A/
-    - xform/^/【注音文】/
+    - xform/^/《注音文》/
     - xform/A//
     - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-6347 |ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙ˉ|"
     - 'xform/\\//'
@@ -538,12 +538,12 @@ reverse2_lookup:
   enable_user_dict: true
   prefix: "="
   suffix: " "
-  tips: "【查】▶"
-  closing_tips: "◀【查】"
+  tips: "《查》▶"
+  closing_tips: "◀《查》"
   preedit_format:
 #    - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
     - "xlit|abcdefghijklmnopqrstuvwxyz|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符|"
-    - xform/^/【查】/
+    - xform/^/《查》/
     - 'xform/\\/ /'
 
 bpm_reverse_lookup:
@@ -586,8 +586,8 @@ emoji_series:
   enable_user_dict: true
   prefix: "`"
   suffix: " "
-  tips: "【emoji集】▶"
-  closing_tips: "◀【emoji集】"
+  tips: "《emoji集》▶"
+  closing_tips: "◀《emoji集》"
   preedit_format:
     __include: element_bopomo:/emoji_series
 ################################### 符號處理 ######################################
