@@ -220,7 +220,7 @@ reverse2_lookup:
   preedit_format:
 #    - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
     - "xlit|abcdefghijklmnopqrstuvwxyz|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符|"
-    - xform/^/〔查〕/
+    - xform/^/《查》/
     - 'xform/\|/␣/'
     - 'xform/\\/ /'
 
@@ -266,7 +266,7 @@ easy_en:
   tips: "《Easy》▶"
   closing_tips: "◀《Easy》"
   preedit_format:
-    - xform/^/〔Easy〕/
+    - xform/^/《Easy》/
     - xform/;/; /
     - xform|\/|\/ |
     - 'xform/\\/ /'
@@ -292,7 +292,7 @@ european:
     - ^[-a-z,./]{1}[;/]?$
     - ^[a-z]+[;][;]$
   preedit_format:
-    - xform/^/〔拉〕/
+    - xform/^/《拉》/
     - xform/\|/␣/
     - 'xform/\\/ /'
 
@@ -310,7 +310,7 @@ korea:
     - ^[a-z]{1,2}$
   preedit_format:
     - "xlit|abcdefghijklmnopqrstuvwxyz;|ABCDEFGHIJKLMNOPQRSTUVWXYZ㉆|"
-    - xform/^/〔韓〕/
+    - xform/^/《韓》/
     - xform/\|/␣/
     - 'xform/\\/ /'
 
@@ -340,7 +340,7 @@ japan:
     - ^[.]$
   preedit_format:
     - "xlit|abcdefghijklmnopqrstuvwxyz;|ABCDEFGHIJKLMNOPQRSTUVWXYZ㉆|"
-    - xform/^/〔日〕/
+    - xform/^/《日》/
     - xform/\|/␣/
     - 'xform/\\/ /'
 ################################『外掛其他語言 2 』##################################
@@ -358,7 +358,7 @@ fs2:
   disable_user_dict_for_patterns:
     - ^[-a-z,./]{1}[;/]?$
   preedit_format:
-    - xform/^/〔全〕/
+    - xform/^/《全》/
     - xform/\|/␣/
     - 'xform/\\/ /'
 
@@ -375,7 +375,7 @@ gr2:
   disable_user_dict_for_patterns:
     - ^[a-z]{1}[;/]?$
   preedit_format:
-    - xform/^/〔希〕/
+    - xform/^/《希》/
     - xform/\|/␣/
     - 'xform/\\/ /'
 
@@ -398,7 +398,7 @@ cyr2:
     - ^[w][y][;/]?$
     - ^[a-z]+[;][;]$
   preedit_format:
-    - xform/^/〔俄〕/
+    - xform/^/《俄》/
     - xform/\|/␣/
     - 'xform/\\/ /'
 ################################『ㄅㄆㄇ注音文』##################################
@@ -414,7 +414,7 @@ all_bpm:
   closing_tips: "◀《注音文》"
   preedit_format:
     - xform/';'?/A/
-    - xform/^/〔注音文〕/
+    - xform/^/《注音文》/
     - xform/A//
     - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-6347 |ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙ˉ|"
     - xform/\|/ˉ/
