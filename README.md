@@ -32,6 +32,7 @@
 - [電腦 RIME 輸入法〖 地球拼音 洋蔥mix‧in多國語言-擴充版 〗](https://deltazone.pixnet.net/blog/post/353697089)
 
 ### Demo：
+
 - 洋蔥 mix-in 注音版
 
   > 推薦使用 mixin 1_2 版！
@@ -42,7 +43,7 @@
   
 - 洋蔥 plus 注音版
 
-  > 功能多，除外語還有一些功能和細節增加，輸入手感和純注音版一樣，即使沒用外語，也推薦使用！
+  > 功能多，除外語還有一堆功能和細節增加，輸入手感和純注音版一樣，即使沒用外語，也推薦使用！
   
   #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/demo_plus.gif)
   
