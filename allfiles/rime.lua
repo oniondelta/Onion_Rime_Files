@@ -1015,7 +1015,7 @@ function t_translator(input, seg)
             --]]
             -- local k = string.sub(numberout, 1, -1) -- 取參數
             local result = formatnumberthousands(numberout) --- 調用算法
-            yield(Candidate("number", seg.start, seg._end, result, "〔千位數字〕"))
+            yield(Candidate("number", seg.start, seg._end, result, "〔千分位數字〕"))
         return
         end
 
@@ -1777,7 +1777,7 @@ function t2_translator(input, seg)
             --]]
             -- local k = string.sub(numberout, 1, -1) -- 取參數
             local result = formatnumberthousands(numberout) --- 調用算法
-            yield(Candidate("number", seg.start, seg._end, result, "〔千位數字〕"))
+            yield(Candidate("number", seg.start, seg._end, result, "〔千分位數字〕"))
         return
         end
 
