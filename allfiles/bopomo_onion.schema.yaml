@@ -61,7 +61,7 @@ engine:
     - punct_translator
     - table_translator@bopomo_onion_phrase
     - script_translator@reverse2_lookup
-    - lua_translator@t2_translator
+#    - lua_translator@t2_translator
     - script_translator
 
 menu:
@@ -319,4 +319,4 @@ recognizer:
     email: "^[a-z][-_.0-9a-z]*@.*$"
     punct: "(?<![=`])`[`]?[-,;/0-9a-z]*$|[[][[]?[']?$|[]][]]?[']?$|[[][]]$|[[][[][]][]]$|[[]['][]][']$|[[][[]['][]][]][']$|[']['][']?$|[=][=][=]?$|[=][`][`]?$|[=]['][']?$|[=]['][']?[=]['][']?$|[=][][][][]?$|[=][][][][]?[=][][][][]?$|[=][-,./;][-,./;]? ?$|[=][,][,][=][.][.] ?$|[=][0-9] ?$|[=][9][=][0] ?$|[=][=][].,90'[]+ ?$"
     reverse2_lookup: "=[a-z]* ?$"
-    lua: "^'/[a-z0-9/-]*$"
+#    lua: "^'/[a-z0-9/-]*$"
