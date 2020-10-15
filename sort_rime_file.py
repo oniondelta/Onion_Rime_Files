@@ -18,7 +18,6 @@ shutil.copyfile("./allfiles/bopomo_onion.extended.dict.yaml", "./sort_rime/注�
 shutil.copyfile("./allfiles/bopomo_onion.schema.yaml", "./sort_rime/注音洋蔥純注音版/bopomo_onion.schema.yaml")
 shutil.copyfile("./allfiles/cangjie5.dict.yaml", "./sort_rime/注音洋蔥純注音版/cangjie5.dict.yaml")
 shutil.copyfile("./allfiles/cangjie5.schema.yaml", "./sort_rime/注音洋蔥純注音版/cangjie5.schema.yaml")
-shutil.copyfile("./allfiles/rime.lua", "./sort_rime/注音洋蔥純注音版/rime.lua")
 shutil.copyfile("./allfiles/terra_pinyin_onion_add.dict.yaml", "./sort_rime/注音洋蔥純注音版/terra_pinyin_onion_add.dict.yaml")
 shutil.copyfile("./allfiles/terra_pinyin_onion.dict.yaml", "./sort_rime/注音洋蔥純注音版/terra_pinyin_onion.dict.yaml")
 
