@@ -2333,8 +2333,7 @@ function charset_filter(input)
     -- 使用 `iter()` 遍歷所有輸入候選項
     for cand in input:iter() do
         -- 如果當前候選項 `cand` 不含 CJK 擴展漢字
-        if (not exists(is_cjk_ext, cand.text))
-        then
+        if (not exists(is_cjk_ext, cand.text)) then
             -- 結果中仍保留此候選
             yield(cand)
         end
@@ -2401,12 +2400,15 @@ end
 
 function charset_filter2(input)
     for cand in input:iter() do
-        if (not string.find(cand.text, '᰼᰼' ))
-        -- if (not string.find(cand.text, '.*᰼᰼.*' ))
-        then
+        if (not string.find(cand.text, '᰼᰼' )) then
+        -- if (not string.find(cand.text, '.*᰼᰼.*' )) then
             yield(cand)
         end
+        -- if (input == nil) then
+        --     cand = nil
+        -- end
     end
+    -- return nil
 end
 
 --- single_char_filter
@@ -2493,7 +2495,7 @@ function endspace(key, env)
     local context = engine.context
     -- local arr = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}
     --- accept: space_do_space when: composing
-    if (key:repr() == "space") and (context:is_composing())then
+    if (key:repr() == "space") and (context:is_composing()) then
         local caret_pos = context.caret_pos
         local s_orig = context:get_commit_text()
         -- local s_orig = context:get_commit_composition()
@@ -2504,15 +2506,14 @@ function endspace(key, env)
         if (not string.find(s_orig, "[%a%c%s]")) and (caret_pos == context.input:len()) then
         -- if (not string.find(o_orig, "[%a%c%s]")) and (caret_pos == context.input:len()) then
         -- if (string.find(o_orig, "[%a%c%s]")) and (caret_pos == context.input:len()) then
-                engine:commit_text(s_orig)
-                -- engine:commit_text(s_orig .. "a")
-                context:clear()
-                return 0 -- kAccepted
-                -- return kAccepted
+            engine:commit_text(s_orig)
+            -- engine:commit_text(s_orig .. "a")
+            context:clear()
+            return 0 -- kAccepted  --「0」「2」「kAccepted」「kRejected」「kNoop」：直接後綴產生空白   「1」：後綴不會產生空白，可用.." "增加空白或其他符號
+            -- 「收」 kAccepted、「拒」 kRejected、「不認得」 kNoop 分別對應返回值 1、0 和 2。
             -- end
         end
     end
     return 2 -- kNoop
-    -- return kNoop
 end
 
