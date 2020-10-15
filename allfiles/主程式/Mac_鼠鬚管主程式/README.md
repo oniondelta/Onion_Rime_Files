@@ -14,6 +14,8 @@
 - 修改 App 使 OS 默認 Squirrel 為繁體中文：
     - 於 /Library/Input Methods/Squirrel.app/Contents/Info.plist 把 Info.plist 中的 zh 改成 zh-Hant ⇨ 《重開機》。
 
-
+- 置換新版 librime 引擎：
+    - 原 librime 在使用 lua 的某些功能會產生記憶體泄漏問題，建議更換。
+    
 ### 可到官網 https://rime.im/ 下載安裝檔。
 
