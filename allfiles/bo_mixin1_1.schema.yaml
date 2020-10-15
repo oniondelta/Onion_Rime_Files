@@ -4,7 +4,7 @@
 schema:
   schema_id: bo_mixin1_1
   name: "☆注音(洋蔥mix-in版 1-1)☆〔拉日 ˇ  ˋ 韓〕"
-  version: "202009"
+  version: "202010"
   author:
     - 『洋蔥』
   description: |
@@ -33,7 +33,7 @@ switches:
     reset: 0
     states: ["完整", "简体"]
   - name: zh_tw
-#    reset: 1
+    reset: 1
     states: ["完整", "精簡"]
   - name: emoji_segestion
     reset: 1
@@ -48,7 +48,7 @@ switches:
 engine:
   filters:
     - simplifier@zh_tw
-#    - lua_filter@charset_filter2
+    - lua_filter@charset_filter2  #去除opencc轉換後留下的「᰼᰼」。
 #    - lua_filter@charset_filter  #打開後中文只保留CJK（精簡），但外語不受影響。
     - simplifier
     - simplifier@emoji_switch
