@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onion_double
   name: "☆注音(洋蔥雙拼版)☆"
-  version: "202009"
+  version: "202010"
   author:
     - 『洋蔥』
   description: |
@@ -26,17 +26,17 @@ switches:
   - name: simplification
     reset: 0
     states: ["完整", "简体"]
-  - options: [ utf8, big5, gbk]
-#    reset: 0
-    states:
-      - UTF-8
-      - BIG5
-      - GBK
+#   - options: [ utf8, big5, gbk]
+# #    reset: 0
+#     states:
+#       - UTF-8
+#       - BIG5
+#       - GBK
 
 engine:
   filters:
-    - charset_filter@big5
-    - charset_filter@gbk
+#     - charset_filter@big5
+#     - charset_filter@gbk
     - simplifier
     - reverse_lookup_filter@bpm_reverse_lookup
     - uniquifier
@@ -70,10 +70,10 @@ menu:
 simplifier:
   tips: all
 
-big5:
-  tags: [ abc ]
-gbk:
-  tags: [ abc ]
+# big5:
+#   tags: [ abc ]
+# gbk:
+#   tags: [ abc ]
 ############################## 拼寫正則 #####################################
 speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz;',./"
