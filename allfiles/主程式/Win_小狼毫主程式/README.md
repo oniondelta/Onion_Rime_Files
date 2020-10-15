@@ -9,6 +9,6 @@
 - 修改 程式 中 essay.txt（八股文）檔案，符合台灣用字用詞：
     - 於 "安裝目錄\data" 置換 essay.txt（八股文）。
     
-- 置換 librime：
+- 置換新版 librime 引擎：
     - 原 librime 在使用 lua 的某些功能會產生記憶體泄漏問題，建議更換。
 
