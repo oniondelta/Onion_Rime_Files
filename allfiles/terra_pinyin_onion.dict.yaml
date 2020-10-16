@@ -69,7 +69,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "2020.09.22"
+version: "2020.10.17"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -147,8 +147,9 @@ min_phrase_weight: 100
 冴	ya2
 䓀	jie2
 䓀	ju2
+𠵇	qi2
 𠵇	qi3
-#？#𠵇	ji1
+#𠵇	ji1
 𣋠	cai4
 𣋠	qi2
 𣑐	diao4
@@ -185,7 +186,7 @@ min_phrase_weight: 100
 㵟	mei2
 㶊	yi2
 㷌	gui1
-#？#㷌	zhou3
+#㷌	zhou3
 㷛	bao1
 㷧	yuan2
 㷨	feng1
@@ -360,7 +361,7 @@ min_phrase_weight: 100
 𡑒	kan3
 𡑒	gan3
 𡕷	xiong4
-#？#𡕷	xuan4
+#𡕷	xuan4
 𡖂	kui2
 𡖖	qing1
 𡘊	fen4
@@ -375,7 +376,7 @@ min_phrase_weight: 100
 𡚺	fan4
 𡚺	zhi2
 𡛂	yi1
-#？#𡛂	yin3
+#𡛂	yin3
 𡛦	bing3
 𡛾	nai3
 𡛾	ni4
@@ -387,7 +388,7 @@ min_phrase_weight: 100
 𡞲	pin4
 𡠠	tang2
 𡠪	man4
-#？#𡠪	man1
+#𡠪	man1
 𡠺	ying1
 𡢃	xian2
 #補簡體字#
@@ -440,7 +441,7 @@ min_phrase_weight: 100
 𢒑	xiang2
 𢓉	fan3
 𢓭	qun1
-#？#𢓭	jun4
+#𢓭	jun4
 𢔓	feng4
 𢖍	heng2
 𢖯	ji1
@@ -494,12 +495,12 @@ min_phrase_weight: 100
 𣂷	jin4
 𣂷	qin2
 𣂼	qin2
-#？#𣂼	jin3
+#𣂼	jin3
 𣃚	hang2
 𣄃	qi2
 𣅽	po4
 𣅽	pei4
-#？#𣅽	bo2
+#𣅽	bo2
 𣇈	xiao3
 𣇪	yao4
 𣇪	yue4
@@ -525,7 +526,7 @@ min_phrase_weight: 100
 𣙅	qi3
 𣙙	su4
 𣚞	yan2
-#？#𣚞	ta1
+#𣚞	ta1
 𣚺	xiang4
 𣛟	cheng1
 𣛟	zhang3
@@ -543,10 +544,10 @@ min_phrase_weight: 100
 𣷸	fan4
 𣸑	liang2
 𣸯	you2
-#？#𣸯	liu2
+#𣸯	liu2
 𣺹	zhan1
 𣺹	zhang1
-#？#𣺹	zhang4
+#𣺹	zhang4
 𣻗	yi2
 𣽊	jun4
 𣽊	xun4
@@ -570,7 +571,7 @@ min_phrase_weight: 100
 𤆤	zhen4
 𤆬	qu3
 𤆬	shi4
-#？#𤆬	chua1
+#𤆬	chua1
 𤈛	guang1
 𤈛	yang3
 𤉙	qun2
@@ -593,7 +594,7 @@ min_phrase_weight: 100
 𤓖	yi4
 𤔅	die2
 𤞏	shi1
-#？#𤞏	xi1
+#𤞏	xi1
 𤠒	si1
 𤣩	yu4
 𤣱	yi3
@@ -603,7 +604,7 @@ min_phrase_weight: 100
 𤦂	guo2
 𤦉	sheng4
 𤦩	e4
-#？#𤦩	eh4
+#𤦩	eh4
 𤦺	qi2
 𤧬	wan3
 𤧬	wan4
@@ -623,7 +624,7 @@ min_phrase_weight: 100
 𤺧	fu1
 𤽜	mo4
 𤾆	dou1
-#？#𤾆	tou1
+#𤾆	tou1
 𤾗	kuang4
 𤾸	hua1
 𤾸	wei3
@@ -680,7 +681,7 @@ min_phrase_weight: 100
 𦅚	zhou4
 𦆭	ning2
 𦉘	cheng1
-#？#𦉘	cang1
+#𦉘	cang1
 𦉪	ren2
 𦉪	wang3
 𦉫	ren2
@@ -699,7 +700,7 @@ min_phrase_weight: 100
 𦍑	qiang1
 𦏵	yi4
 𦐂	yi4
-#？#𦐂	an1
+#𦐂	an1
 𦑊	jing1
 𦑩	hui1
 𦒄	hui4
@@ -727,8 +728,8 @@ min_phrase_weight: 100
 𦸀	qi2
 𦸅	kou4
 𦸇	zhu2
-#？#𦸇	shu4
-#？#𦸇	shu2
+#𦸇	shu4
+#𦸇	shu2
 𦸒	yi1
 𦺈	sun1
 𦻐	zhao4
@@ -758,8 +759,8 @@ min_phrase_weight: 100
 𧣈	chu4
 𧣈	hu2
 𧤤	xi1
-#？#𧤤	hu4
-#？#𧤤	huo4
+#𧤤	hu4
+#𧤤	huo4
 𧥧	yan4
 𧥧	tong2
 𧥧	dong4
@@ -786,7 +787,7 @@ min_phrase_weight: 100
 𨀞	zhuai3
 𨀣	qi4
 𨀣	qi3
-#？#𨀣	qi2
+#𨀣	qi2
 𨂽	dan4
 𨂾	nan4
 𨂾	nan2
@@ -795,7 +796,7 @@ min_phrase_weight: 100
 𨃨	chan2
 𨃩	xian4
 𨃴	gu1
-#？#𨃴	kua1
+#𨃴	kua1
 𨅯	kua4
 𨆯	pu3
 𨆯	pu2
@@ -808,7 +809,7 @@ min_phrase_weight: 100
 𨑬	zhi4
 𨑬	li4
 𨑬	chi4
-#？#𨑬	shi4
+#𨑬	shi4
 𨑳	ting2
 𨑳	wang3
 𨑳	wang4
@@ -899,7 +900,7 @@ min_phrase_weight: 100
 𩁹	yu2
 𩁹	yu4
 𩄐	peng2
-#？#𩄐	jiang4
+#𩄐	jiang4
 𩆜	ling2
 #補充#
 𩆕	ling2
@@ -923,8 +924,8 @@ min_phrase_weight: 100
 𩸆	yi4
 𩻸	dai4
 𩿞	ze2
-#？#𩿞	pi3
-#？#𩿞	pi1
+#𩿞	pi3
+#𩿞	pi1
 #補充#
 𩿌	pi1
 𩿌	pi3
@@ -1066,8 +1067,8 @@ min_phrase_weight: 100
 𠩐	chen2
 𠪴	chu3
 𠮩	le5
-#？#𠮩	liao3
-#？#𠮩	liao4
+#𠮩	liao3
+#𠮩	liao4
 𠯆	nv3
 𠯢	sa4
 𠯻	you1
@@ -1134,7 +1135,7 @@ min_phrase_weight: 100
 𡁻	jue2
 𡂴	lian2
 𡃀	yi4
-#？#𡃁	leng1
+#𡃁	leng1
 𡃁	jing4
 𡃉	jia4
 𡃓	bo1
@@ -1247,7 +1248,7 @@ min_phrase_weight: 100
 𡣖	shang1
 𡣗	jia1
 𡣘	meng2
-#？#𡣘	meng1
+#𡣘	meng1
 𡣙	qi2
 𡣺	hui4
 𡤃	jian1
@@ -1290,7 +1291,7 @@ min_phrase_weight: 100
 𢄪	liu4
 𢄪	liao2
 𢅳	lian2
-#？#𢅳	jian1
+#𢅳	jian1
 𢇃	ya4
 𢇃	si1
 𢉼	geng1
@@ -1298,7 +1299,7 @@ min_phrase_weight: 100
 𢌥	cheng3
 𢎽	ji2
 𢏐	hong2
-#？#𢏐	gong1
+#𢏐	gong1
 𢑱	yi2
 𢒋	yong3
 𢒼	yi3
@@ -1384,12 +1385,12 @@ min_phrase_weight: 100
 𣊉	ji3
 𣊊	jiao3
 𣊫	liu4
-#？#𣊫	hui3
-#？#𣊫	hui4
+#𣊫	hui3
+#𣊫	hui4
 𣊬	shun4
 𣊭	liu4
-#？#𣊭	hui3
-#？#𣊭	hui4
+#𣊭	hui3
+#𣊭	hui4
 𣋒	kui2
 𣋒	kui1
 𣋡	meng2
@@ -1397,7 +1398,7 @@ min_phrase_weight: 100
 𣏦	shi4
 𣏵	nan2
 𣏵	ran2
-#？#𣏵	ran3
+#𣏵	ran3
 𣏾	ge2
 𣏾	ge1
 𣐀	wen3
@@ -1405,7 +1406,7 @@ min_phrase_weight: 100
 𣑲	pei4
 𣓥	rou2
 𣔰	zhi1
-#？#𣔰	zi1
+#𣔰	zi1
 𣕧	jia4
 𣖕	ping2
 𣖙	mei3
@@ -1449,14 +1450,14 @@ min_phrase_weight: 100
 𣲛	cheng2
 𣳇	zuo3
 𣳈	xian1
-#？#𣳈	sin1
+#𣳈	sin1
 𣳉	si3
 𣳼	duo3
 𣳽	pei4
 𣳾	juan4
 𣳾	quan1
 𣳾	tai4
-#？#𣳾	teng2
+#𣳾	teng2
 𣳿	yu3
 𣵛	xiu4
 𣶶	cai3
@@ -1564,7 +1565,7 @@ min_phrase_weight: 100
 #補充#
 𤉋	cheng2
 𤉋	zheng1
-#？#𤉋	zheng3
+#𤉋	zheng3
 𤉖	che1
 𤉶	xiao1
 𤉸	ju1
@@ -1621,7 +1622,7 @@ min_phrase_weight: 100
 𤣿	qi2
 𤣿	jian1
 𤤀	tun2
-#？#𤤀	zhun1
+#𤤀	zhun1
 𤤁	fang1
 𤤌	chen2
 𤤖	fu2
@@ -1776,7 +1777,7 @@ min_phrase_weight: 100
 𥌑	jun4
 𥌑	rui4
 𥌓	shu3
-#？#𥌓	shu4
+#𥌓	shu4
 𥐥	fan2
 𥐯	yun2
 𥐯	tan2
@@ -1802,9 +1803,9 @@ min_phrase_weight: 100
 𥗠	li4
 𥘵	zu3
 𥘵	tai2
-#？#𥘵	jie1
+#𥘵	jie1
 𥙑	shui4
-#？#𥙑	guang1
+#𥙑	guang1
 𥚕	chang1
 𥚕	mao4
 𥛣	dai4
@@ -1895,10 +1896,10 @@ min_phrase_weight: 100
 𦚵	xi1
 𦛼	bing1
 𦝁	qi1
-#？#𦝁	ji1
+#𦝁	ji1
 #補充#
 𣍠	qi1
-#？#𣍠	ji1
+#𣍠	ji1
 𦞳	qia4
 𦞴	a1
 𦞴	yan1
@@ -1914,7 +1915,7 @@ min_phrase_weight: 100
 𦤑	gao1
 𦤑	hao2
 𦦨	yan4
-#？#𦦨	yan2
+#𦦨	yan2
 𦦵	song1
 𦩂	xun2
 𦩑	lai2
@@ -1931,14 +1932,14 @@ min_phrase_weight: 100
 𦭓	shi4
 𦭛	qian1
 𦮖	you3
-#？#𦮖	you4
+#𦮖	you4
 𦮗	nan1
-#？#𦮗	lan1
+#𦮗	lan1
 𦮝	mang2
 𦮳	qi4
 𦯷	miao4
 𦱿	xiao3
-#？#𦱿	yo2
+#𦱿	yo2
 𦲀	yi2
 𦲁	ni2
 𦲁	ni1
@@ -1972,7 +1973,7 @@ min_phrase_weight: 100
 𦷜	xia4
 𦷪	sui1
 𦷫	hai3
-#？#𦷫	kang1
+#𦷫	kang1
 #補充#
 𢲨	hai3
 𦷰	fu2
@@ -2015,8 +2016,8 @@ min_phrase_weight: 100
 𧄉	cong1
 𧄉	zong3
 𧄌	dun3
-#？#𧄌	dun1
-#？#𧄌	man4
+#𧄌	dun1
+#𧄌	man4
 𧄦	fu4
 𧄧	yun4
 𧅤	bao3
@@ -2072,7 +2073,7 @@ min_phrase_weight: 100
 𧹏	zan4
 𨀂	zhi2
 𨀂	zhe4
-#？#𨀂	dun3
+#𨀂	dun3
 𨈇	lan4
 #補充#
 𨇣	lan4
@@ -2099,7 +2100,7 @@ min_phrase_weight: 100
 𨠄	zhen4
 𨠫	you2
 𨤳	li2
-#？#𨤳	lei3
+#𨤳	lei3
 𨥈	ji3
 𨥈	si4
 𨥉	shan1
@@ -2109,8 +2110,8 @@ min_phrase_weight: 100
 #補充#
 𨰚	shuang1
 𨥬	nu2
-#？#𨥬	na2
-#？#𨥬	ni4
+#𨥬	na2
+#𨥬	ni4
 𨦉	pian2
 𨦉	su4
 𨦨	pei4
@@ -2141,7 +2142,7 @@ min_phrase_weight: 100
 𨩅	hong2
 𨩆	wei1
 𨩇	nan2
-#？#𨩇	nie4
+#𨩇	nie4
 𨩈	bei4
 𨩈	bei1
 𨩉	huan4
@@ -2168,7 +2169,7 @@ min_phrase_weight: 100
 𨫣	qiu2
 𨫥	qiang1
 𨫪	han4
-#？#𨫪	han1
+#𨫪	han1
 𨬌	kun1
 𨬡	qu2
 𨬢	xian4
@@ -2194,15 +2195,15 @@ min_phrase_weight: 100
 𨯗	ying2
 𨯙	qing4
 𨯧	yan4
-#？#𨯧	yan1
+#𨯧	yan1
 𨯨	xi1
 𨯩	zan1
 𨯪	han4
 𨯫	e4
-#？#𨯫	he4
+#𨯫	he4
 𨯬	yuan2
 𨯬	huan2
-#？#𨯬	yi2
+#𨯬	yi2
 𨯿	jian4
 𨰃	ying1
 #補充#
@@ -2298,7 +2299,7 @@ min_phrase_weight: 100
 芳	fang1
 䕫	kui2
 蜨	die2
-#？#蜨	jie2
+#蜨	jie2
 貫	guan4
 𣄽	zhuo2
 𣄽	zhuo1
@@ -3559,6 +3560,19 @@ min_phrase_weight: 100
 㓤	jie2	0%
 㓞	qi4	0%
 㓞	yao2	0%
+蹒	man2	0%
+赁	ren4
+哇	gui1	0%
+哇	hua2	0%
+哇	wa2	0%
+呔	tai3	0%
+兌	rui4	0%
+兌	yue4	0%
+兑	yue4	0%
+兑	mian3	0%
+兑	wen4	0%
+兊	yue4	0%
+兊	rui4	0%
 #####@ 201912 比對教育部相關字詞典檔所新增 #####
 丁	zheng1	0%
 丂	kao3	0%
@@ -13134,7 +13148,7 @@ min_phrase_weight: 100
 兏	chang2
 児	er2
 兑	dui4
-兑	duo2
+#兑	duo2
 兑	rui4
 兒	er2	95%
 兒	er5	5%
@@ -14046,7 +14060,7 @@ min_phrase_weight: 100
 呑	tun1
 呒	fu3
 呓	yi4
-呔	tai1
+#呔	tai1
 呕	ou3
 呖	li4
 员	yuan2
