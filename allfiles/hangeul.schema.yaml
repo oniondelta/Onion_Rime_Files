@@ -44,7 +44,7 @@ engine:
     - script_translator
 
 menu:
-  alternative_select_keys: "0123456789"
+  alternative_select_keys: "1234567890"
   page_size: 10
 
 speller:
