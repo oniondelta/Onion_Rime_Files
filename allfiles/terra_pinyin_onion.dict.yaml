@@ -75,9 +75,9 @@ use_preset_vocabulary: true
 max_phrase_length: 7 #20
 min_phrase_weight: 100
 ...
-##### 定空碼「ㄥˇ」輸入「‧」間隔號 #####
+##### @定空碼「ㄥˇ」輸入「‧」間隔號 #####
 ‧	eng3
-##### 單個字，雙音節 #####
+##### @單個字，雙音節 #####
 瓩	qian1 wa3	10%
 瓧	shi2 wa3	10%
 瓸	bai3 wa3	10%
@@ -109,61 +109,2824 @@ min_phrase_weight: 100
 嗧	jia1 lun2	10%
 甅	li2 wa3	10%
 𣄽	xing1 qi2 yi1	10%
-##### 「韓文」「日文」漢字，有些沒有官方中文發音，『可能非正確讀音』！！！ #####
-#橴	za1
-#橴	ca1
-#橵	san4
-#欌	zang1
-巬	pu1
-巬	bu1
-巭	pu1
-巭	bu1
-乊	yi1
-#乊	ho5
-乤	xia4
-乥	hu4
-#乥	ho5
-乧	dou3
-乫	jia1
-乷	sha1
-乺	suo3
-乼	zhu4
-乼	cui1
-亪	ye5
-仒	bing1
-匁	wen2
-匁	mo5
-厼	er3
-壭	san5
-朩	deng3
-朩	pin4
-朩	tin4
-朰	mu4
-畓	duo1
-罖	wang3
-罖	luo2
-罖	ra1
-込	yu1
-冴	ya2
-䓀	jie2
-䓀	ju2
-𠵇	qi2
-𠵇	qi3
-#𠵇	ji1
-𣋠	cai4
-𣋠	qi2
-𣑐	diao4
-𣕚	mao4
-𣕚	mou4
-𣜿	ye4
-𣜿	die2
-𣺊	jia1
-𤨒	en1
-𦱾	ping2
-𧨎	wan2
-𨸶	ping2
-𩂱	yi1
-##### 補充 Big5E Hkscs JIS 中有的單字 #####
+##### @補充『官方字典』正確發音（不論是「讀音」、「語音」、「又音」），包含「台灣」和「大陸」發音 #####
+麼	ma5	1%
+眭	gui4
+蜊	li4	200%
+丼	dan3
+蔔	bo1
+蔔	bo2	70%
+癖	pi4	65%
+混	hun3
+混	kun1	3%
+混	gun3	3%
+誼	yi2
+們	men2	20%
+亞	ya1	5%
+著	zhao1	0.5%
+俄	e4
+蚵	ke1
+𠀈	qiu1	0.1%
+綜	zong4
+姊	jie3
+呀	ya1	1%
+呀	xia1	0.1%
+睚	ai4
+梧	wu4
+朴	pu3
+朴	piao2	10%
+朴	po1	10%
+朴	pu2	30%
+嘚	dei1
+危	wei2
+曳	yi4	100%
+崗	gang1	60%
+遍	pian4
+益	yi4
+瘩	da1
+瘩	da5
+體	ti1	1%
+体	ti3	10%
+体	ti1	1%
+栢	bo2
+殻	ke2
+殼	que4	0.1%
+蕃	fan1
+堤	ti2
+隄	ti2
+挾	xia2
+挟	xia2
+挟	jia2	80%
+挟	jia1
+徊	hui2
+暴	pu4	5%
+曝	bao4	50%
+臂	bei4
+臂	bei5
+剖	pou3
+踏	ta1	30%
+勝	sheng1	20%
+卓	zhuo1	40%
+泊	po1	20%
+泊	po4	60%
+傍	bang1
+傍	pang2
+築	zhu2
+洮	yao2	20%
+頗	po3
+颇	po3
+辱	ru4
+擁	yong3	50%
+拥	yong3	50%
+更	jing1	1.5%
+抹	ma1
+裳	shang1	50%
+夕	xi4
+寂	ji2
+慨	kai4
+褐	he2
+蹟	ji1
+眶	kuang1
+縛	fu2
+缚	fu2
+紊	wen4
+蜗	gua1
+餚	xiao2	100%
+发	fa4
+发	fa3
+髪	fa3
+妮	ni2
+逅	gou4
+綸	guan1	90%
+纶	guan1	90%
+艾	yi4	15%
+掬	ju2	90%
+粷	ju1
+毱	ju1
+匊	ju1
+浹	jia2
+浃	jia2
+壑	huo4
+储	chu2
+諷	feng4
+讽	feng4
+諷	feng1	60%
+讽	feng1	60%
+檜	kuai4
+桧	kuai4
+劊	kuai4
+刽	kuai4
+法	fa1
+法	fa2	2%
+咄	duo4
+踱	duo4
+顫	zhan4
+颤	zhan4
+播	bo4	20%
+挨	ai2
+究	jiu4
+携	xi1
+倔	jue4
+欸	ei2
+欸	ei3
+欸	ei4
+欸	ai1
+嵌	kan4	10%
+波	po1
+聘	ping4
+懾	zhe2
+慑	zhe2
+偽	wei4
+僞	wei4
+伪	wei4
+樸	pu2
+仆	pu2	90%
+仆	fu4
+撾	wo1	50%
+燥	sao4	50%
+煰	sao4
+煰	zao4
+玩	wan4	5%
+緝	qi4
+缉	qi4
+缉	qi1
+巫	wu2	50%
+咋	zha1	5%
+悄	qiao1
+昔	xi2
+昔	cuo4
+熄	xi2
+拙	zhuo2
+濤	tao2	50%
+涛	tao2	50%
+馴	xun2
+驯	xun4
+蹬	deng1
+剽	piao4
+署	shu4
+蹈	dao4
+坊	fang2	25%
+綏	sui1
+绥	sui1
+騎	ji4	30%
+骑	ji4	30%
+嘞	le1
+嘞	le4	5%
+嘞	lei1
+肖	xiao1	20%
+殺	sha4	5%
+杀	sha4	5%
+呱	gua1
+呱	gua3	1%
+呱	wa1	1%
+刻	ke1
+傾	keng1	1%
+町	ding1
+呲	ci1	50%
+呲	ci2	30%
+誒	ei2	0.1%
+誒	ei3	0.1%
+誒	ei4	0.1%
+誒	xi1	1%
+誒	eh4
+嗟	chai4	1%
+嗟	cuo4	0.1%
+嗟	jie4	0.1%
+嘎	ga1
+嘎	ga3	10%
+扳	ban3
+阿	a4
+宊	tu1	10%
+堗	tu2	10%
+拈	nian3
+拈	dian1	10%
+矻	ku1
+勞	lao4	10%
+劳	lao4	10%
+伯	ba4	1%
+伯	bai3	1%
+膜	mo4	20%
+賜	si4	50%
+赐	si4	50%
+傭	yong4
+佣	yong1	60%
+傭	yong2	5%
+佣	yong2	5%
+庸	yong2	5%
+慵	yong2	10%
+蟄	zhi2
+蛰	zhi2
+喳	zha1
+碁	ji1
+棋	ji1	25%
+薇	wei2
+度	duo4	1%
+系	ji4	1%
+蔘	san1	1%
+參	cen1	1%
+参	shen1	1%
+参	cen1	1%
+参	san1	1%
+叅	shen1	1%
+叅	cen1	1%
+叅	san1	1%
+叄	can1	1%
+叄	shen1	1%
+叄	cen1	1%
+叁	can1	1%
+叁	shen1	1%
+叁	cen1	1%
+颉	xie2	10%
+艘	sao1
+妊	ren2	1%
+暠	hao4	1%
+蕈	xin4	1%
+覃	qin2	1%
+喱	li3	98%
+釐	xi1	1%
+釐	xi3	1%
+斗	dou4	20%
+枓	dou1
+枓	zhu3
+樗	shu1
+櫖	shu1
+吖	ya1	10%
+叟	sou1	75%
+傁	sou1
+将	qiang1
+将	jiang4
+哏	hen1
+嘸	wu3	65%
+呒	wu3	65%
+無	mo2	1%
+南	na2	1%
+南	na1	1%
+鈷	gu1
+钴	gu1
+青	jing1	9%
+靑	jing1	100%
+甯	ning4	5%
+呵	o1	50%
+呵	a5	50%
+呵	ke1	1%
+啊	o1	1%
+喔	wu1	1%
+喔	wo4	0.1%
+喔	wo1	1%
+噢	yu3	0.5%
+哪	ne2	1%
+哪	nuo2	0.1%
+那	nei3	0.1%
+那	nei4	0.1%
+那	na1	10%
+那	nuo2	0.1%
+喲	yo1	5%
+囉	luo2	0.1%
+啰	luo2	0.1%
+啰	luo5
+蘇	su4	0.1%
+苏	su4	0.1%
+汆	tun3
+拗	ao3
+拮	jia2
+肋	le1	1%
+贮	zhu3
+掷	zhi2
+枱	yi2	1%
+汙	wu4	50%
+污	wu4	55%
+#汚	wu4
+汙	yu1	50%
+#污	yu1
+#汚	yu1
+汙	yu2	1%
+#污	yu2
+#汚	yu2
+汙	wa1	1%
+#污	wa1
+#汚	wa1
+洿	wu4
+壳	qiao4
+壳	que4
+繆	miu4	50%
+繆	mu4	1%
+繆	liao2	1%
+繆	liao3	1%
+缪	miao4	1%
+缪	miu4	0.1%
+缪	mu4	1%
+缪	liao2	1%
+缪	liao3	1%
+悖	bo2	10%
+勃	bei4	10%
+孛	bo2	10%
+索	suo2
+溈	wei2	100%
+沩	gui1	10%
+为	wei2
+泄	yi4	30%
+洩	yi4	90%
+澠	mian3	1%
+澠	min3	1%
+渑	sheng2	1%
+渑	min3	1%
+呣	mou2	1%
+兒	ni2	1%
+儿	ni2	1%
+児	ni2	1%
+觉	jiao4	1%
+覚	jiao4	1%
+说	shui4	0.5%
+说	yue4	0.21%
+說	yue4	0.21%
+圈	quan4	1%
+蝙	bian3	90%
+咔	ka1	50%
+咔	long4	1%
+㝀	hao3
+廍	bu4
+抓	zhao1	5%
+抓	chua3	5%
+浣	wan3
+龜	jun1	10%
+龜	qiu1	5%
+拚	fan1	0.1%
+埠	fu4
+噸	dun4	20%
+犽	ya2
+衹	zhi1	100%
+區	gou1	0.1%
+鮨	yi4	100%
+祇	zhi1	25%
+诶	ei1
+诶	ei3
+诶	ei4
+诶	xi1
+诶	eh4
+嚈	yan4
+呔	dai1	0.1%
+吽	ou5	0.1%
+吽	ou1	0.1%
+㕭	bi4	0.1%
+吡	pi3	0.1%
+咧	lie5	0.1%
+咧	lie2	0.1%
+唋	tu3	0.1%
+唋	tu4	0.1%
+咯	ka3	0.1%
+嘅	ge3	0.1%
+喝	ye4	0.1%
+嗮	sai3
+喲	yao1	20%
+嘛	ma2	0.5%
+咻	xiu3	0.1%
+呴	hou3	0.1%
+呴	gou3	0.1%
+喀	ke4
+蜡	cha4	0.1%
+冊	chai3	0.1%
+册	chai3	0.1%
+杠	gang1	0.1%
+胺	an1
+踮	dian4
+跛	bi4
+兹	ci2	800%
+茲	ci2	50%
+玆	ci2
+腋	yi4
+硐	tong2
+楔	xie4
+溯	shuo4
+鐧	jian4
+鐗	jian4
+锏	jian4
+亀	jun1	0.1%
+亀	qiu1	0.1%
+龟	jun1	0.1%
+龟	qiu1	0.1%
+区	gou1	0.1%
+区	ou1	0.1%
+吨	dun4
+頓	du2	0.1%
+顿	du2	0.1%
+圏	juan1	0.1%
+圏	juan4	0.1%
+圏	quan4	0.1%
+车	ju1	0.1%
+论	lun1	0.1%
+説	yue4	0.1%
+乐	yue4	0.1%
+乐	yao4	0.1%
+乐	lao4	0.1%
+樂	yao4	0.1%
+樂	lao4	0.1%
+楽	yao4	0.1%
+楽	lao4	0.1%
+得	dai3	0.1%
+华	hua4	0.1%
+悪	e3	0.1%
+悪	wu4	0.1%
+悪	wu1	0.1%
+恶	e3	0.1%
+恶	wu4	0.1%
+恶	wu1	0.1%
+亜	ya1	0.1%
+亜	ya3	0.1%
+亚	ya1	0.1%
+亚	ya3	0.1%
+塞	sei1	0.1%
+语	yu4	0.1%
+告	gu4	0.1%
+吿	gu4	0.1%
+數	cu4	0.1%
+數	su4	0.1%
+数	shu3	0.1%
+数	shuo4	0.1%
+数	cu4	0.1%
+数	su4	0.1%
+婢	bei4
+义	cha2
+义	cha3
+亲	qing4
+呒	mu2
+只	zhi2
+凈	zheng1
+吁	yu1	4%
+崖	ai2
+崕	ai2
+开	qi2
+恷	xiao1
+丆	han3
+個	ge3	0.1%
+个	ge5	0.1%
+个	ge3	0.1%
+亇	ge5	0.1%
+亇	ma1	0.1%
+捋	le4
+濕	ta4	0.1%
+濕	luo4	0.1%
+濕	xi2	0.1%
+湿	ta4	0.1%
+湿	luo4	0.1%
+湿	xi2	0.1%
+沌	zhuan4	0.1%
+豉	shi4
+噌	ceng3
+呠	pen3	10%
+尛	ma2	10%
+尛	ma5	10%
+尛	mo2	10%
+尛	mo5	10%
+痾	e1
+浣	huan3	10%
+澣	huan4	10%
+壬	wang2	10%
+壬	wang4	10%
+壬	yu4	10%
+邪	xia2	10%
+邪	ye2	10%
+邪	yu2	10%
+邪	xu2	10%
+邪	ya2	10%
+玡	ya4
+有	you4	0.1%
+碪	kan4	10%
+椹	zhen1	10%
+椹	ren4	10%
+諶	shen4
+谌	shen4
+箇	ge5	1%
+埤	bei1
+埤	bi4
+埤	pi4
+堄	ni2
+眭	wei4
+氣	xi4	0.1%
+吗	ma1	0.1%
+吗	ma3	0.1%
+吗	ma5	0.1%
+汐	xi4
+卬	yang3
+卬	mao3	0.1%
+睪	gao1	50%
+睪	ze2	0.1%
+睾	yi4	1%
+#皋	yao2	1%
+皋	hao2	0.1%
+禧	xi1
+痴	chi2
+癡	chi2	1%
+鉈	tuo2
+铊	tuo2
+炅	jiong3	0.1%
+焆	jue2	0.1%
+焨	juan1	0.1%
+炔	jue2	0.1%
+炴	gui4	0.1%
+渾	hun4	0.1%
+渾	gun3	0.1%
+浑	hun4	0.1%
+浑	gun3	0.1%
+屯	chun2	0.1%
+拚	fen4	40%
+拚	bian4	40%
+甚	shen2	5%
+甚	she2	5%
+皖	huan3	1%
+晥	huan3	1%
+晥	wan3	1%
+缶	guan4	1%
+兒	er1	1%
+莞	wan1	1%
+婠	wa4	1%
+斜	xia2	0.1%
+斜	ye2	0.1%
+#角	jia3	0.1%
+角	lu4	0.1%
+龘	ta4	0.1%
+龖	ta4	0.1%
+臬	ji4	0.1%
+犄	yi1	0.1%
+旮	xu4	0.1%
+婀	e3	0.1%
+呶	nu2	0.1%
+莠	you4	0.1%
+齟	zu1	0.1%
+龃	zu1	0.1%
+臧	zang4	0.1%
+臧	cang1	0.1%
+比	pi2	0.1%
+張	zhang4	0.1%
+翕	xi1	0.1%
+醍	ti3	0.1%
+沆	hang2	0.1%
+可	ke4	0.1%
+焱	yi4	0.1%
+炎	yan4	10%
+雙	shuang4	0.1%
+双	shuang4	0.1%
+辨	pian4	0.1%
+僻	bei4	0.1%
+落	lao4	10%
+華	hua1	0.1%
+华	hua1	0.1%
+説	shui4	0.1%
+平	pian2	0.1%
+日	mi4	0.1%
+紅	gong1	0.1%
+灥	chuan1	0.1%
+灥	quan2	0.1%
+灥	quan4	0.1%
+刕	zhou1	0.1%
+孨	ni3	0.1%
+犇	ben4	0.1%
+壘	lv4	0.1%
+垒	lv4	0.1%
+瞐	mao4	0.1%
+飍	biao1	0.1%
+馫	xing1	0.1%
+馨	xing1
+鱻	xian3	0.1%
+㐂	xi3	0.1%
+沉	shen3	0.1%
+迊	ying2	10%
+迊	ying4	0.1%
+迊	bi4	0.1%
+暝	ming4	0.1%
+舍	she3
+捨	she4	10%
+幹	gan1	1%
+幹	han2	0.1%
+谷	jue2	0.1%
+王	yu4	0.1%
+王	ren2	0.1%
+風	feng4	0.1%
+畿	qi2	30%
+各	ge3	0.1%
+剌	ci4	0.1%
+㞎	pa1	0.1%
+敧	qi1	0.1%
+敧	ji1	0.1%
+㹴	geng1
+䅟	shan1	0.1%
+䅟	cen1	0.1%
+穇	cen3	0.1%
+穇	cen1	0.1%
+䩞	tie4	0.1%
+䩞	die2	0.1%
+鹮	xuan2	0.1%
+許	hu3	0.1%
+冴	ya4	0.1%
+差	chai4	0.1%
+差	cuo1	0.1%
+不	fu1	0.1%
+不	fou3	0.1%
+不	fou1	0.1%
+哌	gua1	0.1%
+哌	wa1	0.1%
+睢	ju1	0.1%
+汗	han2	1%
+峮	qun2	10%
+導	dao4	10%
+导	dao4	10%
+敖	ao4	10%
+員	yun2	0.1%
+員	yun4	0.1%
+孚	fu1	0.1%
+肉	ru4	0.1%
+冒	mo4	0.1%
+仝	quan2	0.1%
+喺	xi2	10%
+质	zhi2
+貭	zhi4
+于	xu1	0.1%
+干	han2	0.1%
+转	zhuan4	0.1%
+红	gong1	0.1%
+单	shan4	0.1%
+单	chan2	0.1%
+応	ying1	0.1%
+应	ying4	0.1%
+噟	ying1	0.1%
+攝	nie4	0.1%
+摄	nie4	0.1%
+苹	pin2
+间	jian4
+们	men5
+们	men2
+長	zhang4	0.1%
+长	chang2
+长	zhang4	0.1%
+么	ma2	0.1%
+么	mo5	0.1%
+么	mo1	0.1%
+么	me1	0.1%
+属	zhu3	0.1%
+涨	zhang4
+音	yin4	0.1%
+倾	keng1	0.1%
+顷	qing1	0.1%
+压	ya4	1%
+当	dang4
+着	zhu4	0.1%
+還	xuan2	0.1%
+还	xuan2	0.1%
+綠	lu4	0.1%
+緑	lu4	0.1%
+绿	lu4	0.1%
+几	ming2	0.1%
+几	ren2	0.1%
+几	shu1	0.1%
+頁	xie2	0.1%
+页	xie2	0.1%
+覌	guan4	10%
+观	guan4	10%
+観	guan4	10%
+打	ding3	0.1%
+朾	ting1	0.1%
+朾	da2	0.1%
+朾	da3	0.1%
+担	qi4	0.1%
+升	dou3	0.1%
+種	chong2	0.1%
+也	yi2	0.1%
+會	hui3	0.1%
+會	gui4	0.1%
+会	kuai4	0.1%
+会	hui3	0.1%
+会	gui4	0.1%
+合	ge2	0.1%
+奇	ai3	0.1%
+椅	yi1	0.1%
+疋	ya3	0.1%
+疋	shu1	0.1%
+疋	zheng4	0.1%
+兄	kuang4	0.1%
+足	ju4	0.1%
+骨	gu1	0.1%
+骨	gu2	0.1%
+從	zong1	0.1%
+从	zong1	0.1%
+从	zong4	0.1%
+从	cong1	0.1%
+文	wen4	0.1%
+錯	cu4	0.1%
+錯	xi2	0.1%
+错	cu4	0.1%
+错	xi2	0.1%
+其	ji1	0.1%
+其	ji4	0.1%
+卞	ji1	0.1%
+卞	ji4	0.1%
+卞	qi2	0.1%
+夏	jia3	0.1%
+作	zuo1	0.1%
+作	zuo2	0.1%
+听	ting4	0.1%
+弁	pan2	0.1%
+女	nv4	0.1%
+难	nan4	0.1%
+击	ji2	0.1%
+嚇	he4	50%
+吓	he4	50%
+哧	he4	50%
+哧	xia4	50%
+黑	he4	0.1%
+黑	hei3	0.1%
+黒	he4	0.1%
+黒	hei3	0.1%
+反	fan4	0.1%
+使	shi4	0.1%
+了	liao4	0.1%
+共	gong1	0.1%
+共	gong3	0.1%
+三	san4	0.1%
+叁	san4	0.1%
+叄	san4	0.1%
+弎	san4	0.1%
+句	qu4	0.1%
+居	ji1	0.1%
+食	yi4	0.1%
+請	qing1	0.1%
+请	qing1	0.1%
+脫	tui4	0.1%
+它	tuo1	0.1%
+它	tuo2	0.1%
+它	she2	0.1%
+它	yi2	0.1%
+蛇	yi2	0.1%
+他	tuo1	0.1%
+佗	tuo1	0.1%
+佗	duo4	0.1%
+佗	ta1	0.1%
+她	jie3	0.1%
+牠	tuo1	0.1%
+牠	tuo2	0.1%
+㸰	ke1	0.1%
+我	e3	0.1%
+庅	ma1	0.1%
+庅	me5	0.1%
+麽	mo2	0.1%
+麽	mo5	0.1%
+麽	me1	0.1%
+麽	ma2	0.1%
+仩	shang4	0.1%
+仩	chang2	0.1%
+堔	chen1	0.1%
+忄	xin1	0.1%
+扌	shou3	0.1%
+繌	zong1	0.1%
+𩾀	gu1	0.1%
+𡞵	mou3	0.1%
+㛟	mou3	0.1%
+伬	chi3	0.1%
+凖	zhun3	0.1%
+匇	cong1	0.1%
+呗	bai4	0.1%
+呗	bai5	0.1%
+呗	bei1	0.1%
+呗	bei5	0.1%
+呚	qi4	0.1%
+呚	hua2	0.1%
+夈	zhai1	0.1%
+妛	chi1	0.1%
+婔	fei1	0.1%
+媫	jie2	0.1%
+崰	zi1	0.1%
+巕	nie4	0.1%
+庒	zhuang1	0.1%
+怽	mi4	0.1%
+怽	mi2	0.1%
+怽	mo4	0.1%
+恖	si1	0.1%
+恖	si4	0.1%
+恖	sai1	0.1%
+懳	hui4	0.1%
+擜	e4	0.1%
+槗	qiao2	0.1%
+槡	sang1	0.1%
+檪	li4	0.1%
+檪	yue4	0.1%
+氇	luo2	0.1%
+氇	lu3	0.1%
+#氇	lu5	0.1%
+濵	bin1	0.1%
+濵	pin2	0.1%
+灳	hui1	0.1%
+烮	lie4	0.1%
+熍	qiong2	0.1%
+熍	qiong1	0.1%
+爠	qu2	0.1%
+爠	yao4	0.1%
+爠	yue4	0.1%
+爫	zhao3	0.1%
+爫	zhua3	0.1%
+爫	lan4	0.1%
+牗	you3	0.1%
+牗	yong1	0.1%
+牗	yong2	0.1%
+犞	qiao2	0.1%
+犞	se4	0.1%
+瞣	huan4	0.1%
+礀	jian4	0.1%
+礂	xi1	0.1%
+穯	se4	0.1%
+窽	kuan3	0.1%
+窽	cuan4	0.1%
+籖	qian1	0.1%
+粀	zhang4	0.1%
+粌	yin3	0.1%
+粌	yin2	0.1%
+糬	shu3	0.1%
+翶	ao2	0.1%
+聨	lian2	0.1%
+舤	fan2	0.1%
+舿	kua1	0.1%
+萟	yi4	0.1%
+蒏	you3	0.1%
+蒏	yong4	0.1%
+蓤	leng2	0.1%
+蓤	ling2	0.1%
+蕱	shao1	0.1%
+蕱	shuo4	0.1%
+藲	ou1	0.1%
+藲	shu1	0.1%
+蘕	peng2	0.1%
+蛯	lao3	0.1%
+螁	tui4	0.1%
+螁	tun4	0.1%
+螁	shui4	0.1%
+謢	hu4	0.1%
+隡	sa4	0.1%
+霗	lian2	0.1%
+霗	ling2	0.1%
+韕	chun2	0.1%
+韕	kuo4	0.1%
+飊	biao1	0.1%
+饹	le5	0.1%
+鯂	su1	0.1%
+麶	li2	0.1%
+麶	chi1	0.1%
+𠮶	ga3	0.1%
+𠮶	ge3	0.1%
+𠮶	ge5	0.1%
+嗰	ga3	0.1%
+𪎌	lai2	0.1%
+鍅	fa3	0.1%
+倆	liang3
+俩	liang3
+霫	xi4	0.1%
+涴	wan3	0.1%
+涴	yuan1	0.1%
+鵪	ya1	0.1%
+鹌	ya1	0.1%
+凸	die2	0.1%
+凸	tu2	0.1%
+凸	gu3	0.1%
+凹	yao1	0.1%
+凹	wa1	0.1%
+凹	wa4	0.1%
+㗇	xia1	0.1%
+唻	lai2	0.1%
+㗈	man2	0.1%
+𠵘	men4	0.1%
+闷	men1	0.1%
+㕹	fei1	0.1%
+𪠽	dang1	0.1%
+呫	tie1	0.1%
+呫	che1	0.1%
+飩	dun4	0.1%
+㘆	tai2	0.1%
+噥	nang2	0.1%
+哝	nang2	0.1%
+#朥	lao5	0.1%
+𦛨	lao2	0.1%
+嗊	gong3	0.1%
+嗊	gong4	0.1%
+唝	hong3	0.1%
+唝	gong3	0.1%
+喀	ka4	0.1%
+衉	ka4	0.1%
+衉	ka1	0.1%
+啃	ken4	0.1%
+哯	jiao4	0.1%
+𠯟	jiao4	0.1%
+啅	zhuo2	0.1%
+匙	shi5
+嚷	rang1
+駔	cang3	0.1%
+駔	zu4	0.1%
+廁	ci4	0.1%
+廁	si4	0.1%
+厠	ci4	0.1%
+厠	si4	0.1%
+厕	ci4	0.1%
+厕	si4	0.1%
+挲	sa5
+挲	sha5
+挲	sa1
+挲	sha1
+沙	sha4	0.1%
+色	she4	0.1%
+鞥	e4	50%
+鞥	ying1	50%
+鞥	an1	50%
+喎	kuai1	0.1%
+茸	rong3	0.1%
+排	pai3	0.1%
+迫	pai3	0.1%
+縱	zong1	0.1%
+縱	zong3	0.1%
+調	zhou1	0.1%
+癟	bie1
+㿜	bie1
+瘪	bie1
+啈	xin1	0.1%
+啈	xing4	0.1%
+𪢥	bian1	0.1%
+單	dan4	0.1%
+单	dan4	0.1%
+単	shan4	0.1%
+単	chan2	0.1%
+単	dan4	0.1%
+叶	ye4
+叶	she4	0.1%
+洙	shu1
+鈾	you4
+铀	you4
+鉛	yan2	0.1%
+铅	yan2	0.1%
+北	bo4	0.1%
+北	bei4	0.1%
+鐵	die2	0.1%
+鉄	die2	0.1%
+铁	die2	0.1%
+鐡	die2	0.1%
+鳥	diao3	0.1%
+鸟	diao3	0.1%
+寫	xie4	0.1%
+写	xie4	0.1%
+㝍	xie4	0.1%
+冩	xie4	0.1%
+洫	xie3	0.1%
+洫	xue4	0.1%
+褚	zhe3	0.1%
+雪	xue4	10%
+伽	qie2	10%
+钥	yue4	0.1%
+叻	li4	10%
+勷	xiang1
+被	pi1	10%
+翦	jian4	1%
+思	si4	1%
+思	sai1	0.1%
+嚼	jiao4	0.1%
+喷	pen4	5%
+噴	fen5	0.1%
+喷	fen5	0.1%
+洽	xia2	0.1%
+剔	ti4
+宅	zhe4	1%
+軸	zhu2	1%
+舳	zhou2	0.1%
+提	shi2	1%
+提	di1	1%
+枝	qi2	1%
+啐	za2	0.1%
+啐	qi5	0.1%
+㟯	e4
+嗲	dia1	0.1%
+㖸	jue2	0.1%
+挼	nui2	0.1%
+捼	nui2	0.1%
+捼	ruo2	0.1%
+捼	wei3	0.1%
+捼	re2	0.1%
+㖸	xue1	0.1%
+孌	lvan3
+娈	lvan3
+攣	lvan2
+挛	lvan2
+孿	lvan2
+孪	lvan2
+臠	lvan3
+脔	lvan3
+挛	lian4
+汶	men2	0.1%
+毋	mu3	0.1%
+瓸	bo2	0.1%
+瓼	li2	0.1%
+瓱	mou3	0.1%
+竰	li2	0.1%
+竓	mao2	0.1%
+䇆	dou3	0.1%
+䇉	dan4	0.1%
+䇉	shi2	0.1%
+𥪕	bing3	0.1%
+𩓩	dou1	0.1%
+𩓩	wu3	0.1%
+癣	xian3
+似	shi4	1%
+䩞	nian2	0.1%
+䩞	tian3	0.1%
+䩞	wei3	0.1%
+譞	xuan4	0.1%
+曱	ya1	0.1%
+幺	mi4	0.1%
+㐖	xie2
+鮭	wa1	0.1%
+鲑	xie2	0.1%
+鲑	wa1	0.1%
+迹	ji1
+磅	pang2	10%
+熀	huang4	0.1%
+熀	ye4	0.1%
+庄	wu3	0.1%
+圧	ya4	0.1%
+澍	zhu4	0.1%
+厘	chan2	0.1%
+鉞	hui4	0.1%
+钺	hui4	0.1%
+匿	te4	0.1%
+僚	liao3	0.1%
+叕	zhui4	0.1%
+吾	yu4	0.1%
+吾	ya2	0.1%
+濼	po1	0.1%
+濼	li4	0.1%
+泺	po1	0.1%
+泺	li4	0.1%
+泺	bo2	0.1%
+泺	po4	0.1%
+処	chu4	0.1%
+处	chu3	0.1%
+蔹	lian2	0.1%
+蔹	lian4	0.1%
+蘝	lian2	0.1%
+蘝	lian4	0.1%
+薟	lian4	0.1%
+勔	min3	0.1%
+叡	rui3	0.1%
+扱	cha1	0.1%
+扱	qi4	0.1%
+担	da2	0.1%
+峉	e2	0.1%
+呢	ni3	0.1%
+啄	zhou4	0.1%
+𨻶	xi4	0.1%
+噍	jiao2	0.1%
+噍	jue2	0.1%
+潽	pu3	0.1%
+堕	hui1	0.1%
+噧	ta4	0.1%
+佛	bo2	0.1%
+埢	juan4	0.1%
+卡	nong4	0.1%
+卡	long4	0.1%
+嬭	ni4	0.1%
+妳	ni4	0.1%
+戍	xu1	0.1%
+隶	shi4	0.1%
+娉	pin4
+翁	weng3	0.1%
+蕑	jian3	0.1%
+䔵	jian1	0.1%
+#䔵	jian3	0.1%
+薔	se4	0.1%
+蔷	se4	0.1%
+掲	qi4	0.1%
+玚	yang2	0.1%
+𩾖	fu2	0.1%
+餄	jia2	0.1%
+饸	jia2	0.1%
+餎	ge1	0.1%
+餎	le4	0.1%
+饹	ge1	0.1%
+饹	le4	0.1%
+鞡	la1	0.1%
+𤷟	la1	0.1%
+和	si1	0.1%
+吅	lin2	0.1%
+墶	da5	0.1%
+墶	da2	0.1%
+垯	da1	0.1%
+垯	da2	0.1%
+𡐿	da2	0.1%
+胳	ge2	0.1%
+慌	huang3	0.1%
+尢	you2	0.1%
+兯	jie2	0.1%
+#兯	han1	0.1%
+#爳	han1	0.1%
+逡	xun4	0.1%
+彖	shi3	0.1%
+㞘	tun2	0.1%
+屈	jue2	0.1%
+翏	liao2
+㡘	jian1	0.1%
+#𢅏	jian1	0.1%
+冏	jiong1	0.1%
+乙	yi4	0.1%
+㤤	yu3	0.1%
+贛	zhuang4	0.1%
+搄	gen4	0.1%
+搄	geng4	0.1%
+揯	geng4	0.1%
+揯	geng1	0.1%
+捏	nian3	0.1%
+拘	gou1	0.1%
+措	ze2	0.1%
+措	ci4	0.1%
+揃	qian1	0.1%
+侰	jun4	0.1%
+㟒	qun2	0.1%
+湣	hun1	0.1%
+焟	xi2	0.1%
+藈	kui1	0.1%
+抆	wen3	0.1%
+抆	men2	0.1%
+㕙	rui4	0.1%
+柟	ran2	0.1%
+楪	ye4	0.1%
+㷤	he4	0.1%
+#㷤	hu2	0.1%
+謻	chi3	0.1%
+濬	xun4	0.1%
+浚	xun4	0.1%
+葠	shan1	0.1%
+薓	shan1	0.1%
+泞	chu3	0.1%
+泞	ning2	0.1%
+濘	ning2	0.1%
+泞	ni4	0.1%
+濘	ni4	0.1%
+綺	yi3
+绮	yi3
+净	zheng1	0.1%
+櫟	yue4
+炢	hu1	0.1%
+烼	hu1
+䀨	tian2	0.1%
+煎	jian4	0.1%
+丹	zhou1	0.1%
+珩	hang2	0.1%
+瑹	tu2	0.1%
+番	fan2	0.1%
+瞤	ruan2	0.1%
+碌	luo4	0.1%
+稅	tuo1	0.1%
+稅	tui4	0.1%
+稅	tuan2	0.1%
+鿋	xi1	0.1%
+喜	xi1	0.1%
+喜	chi4	0.1%
+撷	jie2	0.1%
+秔	geng1	0.1%
+稉	geng1	0.1%
+䊮	zhe2	0.1%
+䊮	zhe4	0.1%
+窈	yao4	0.1%
+芍	xiao4	0.1%
+芍	di4	0.1%
+芈	mie1	0.1%
+#𦒎	guan4	0.1%
+趼	yan4	0.1%
+臯	hao2	0.1%
+爓	xun2	0.1%
+爓	xian2	0.1%
+囡	ni4	0.1%
+衎	kan3	0.1%
+虹	gong4	0.1%
+袥	tuo4	0.1%
+桶	yong3	0.1%
+呃	ai4	0.1%
+迣	chi4	0.1%
+迣	li4	0.1%
+#迣	shi4	0.1%
+迋	kuang1	0.1%
+逌	you1	0.1%
+伽	ga1	0.1%
+遌	wu4	0.1%
+遌	wu3	0.1%
+薳	yuan3	0.1%
+䓕	wei3	0.1%
+䤨	pi1	0.1%
+銢	pi1	0.1%
+鈲	pi1	0.1%
+锯	ju1	0.1%
+胃	zhou4	0.1%
+熕	gong4	0.1%
+镝	di2	0.1%
+镐	hao4	0.1%
+䭕	jian4	0.1%
+鏏	hui4	0.1%
+鏸	wei4	0.1%
+𨰓	jian4	0.1%
+岯	pi1	0.1%
+逢	pang2	0.1%
+逄	peng2	0.1%
+逄	feng2	0.1%
+頯	qiu2	0.1%
+鮁	ba2	0.1%
+鲅	ba2	0.1%
+鲅	bo1	0.1%
+䱒	yi4	0.1%
+䱒	ye1	0.1%
+鴄	pi3	0.1%
+鴄	bei1	0.1%
+扻	kan3	0.1%
+扻	jie2	0.1%
+扻	sun3	0.1%
+扻	zhi4	0.1%
+欿	qian4	0.1%
+埳	xian4	0.1%
+请	qing2	0.1%
+与	yu2	0.1%
+与	yu4	0.1%
+瞓	fen4
+瞓	shui4	0.1%
+核	gai1	0.1%
+核	hu2	0.1%
+划	hua4	90%
+谯	qiao4	50%
+鉻	luo4	50%
+铬	luo4	50%
+囗	guo2	0.1%
+堁	kuo4	0.1%
+堁	kui4	0.1%
+堁	wo4	0.1%
+㷫	yun4	0.1%
+𠲬	ji1	0.1%
+僆	lian3	0.1%
+#靚	liang2	0.1%
+𬊜	luo2	0.1%
+#罉	cang1	0.1%
+䐁	niao3	0.1%
+㘭	ao1	0.1%
+㓤	jie2	0.1%
+㓞	qi4	0.1%
+㓞	yao2	0.1%
+蹒	man2	0.1%
+赁	ren4
+哇	gui1	0.1%
+哇	hua2	0.1%
+哇	wa2	0.1%
+呔	tai3	0.1%
+兌	rui4	0.1%
+兌	yue4	0.1%
+兑	yue4	0.1%
+兑	mian3	0.1%
+兑	wen4	0.1%
+兊	yue4	0.1%
+兊	rui4	0.1%
+𤓓	luo2
+##### @201912 比對教育部相關字詞典檔所新增 #####
+丁	zheng1	0.1%
+丂	kao3	0.1%
+乂	ai4	0.1%
+乜	nie4	0.1%
+入	ri4	0.1%
+入	ru3	0.1%
+凵	kan3	0.1%
+巜	guai4	0.1%
+三	sa1	0.1%
+乞	qi4	0.1%
+亡	wu2	0.1%
+勺	zhuo2	0.1%
+勺	shuo4	0.1%
+夊	cui1	0.1%
+大	tai4	0.1%
+幺	ao1	0.1%
+丮	ji2	0.1%
+乣	diu1	0.1%
+亢	gang1	0.1%
+內	na4	0.1%
+六	lu4	0.1%
+冘	you2	0.1%
+午	huo5	0.1%
+反	fan1	0.1%
+夃	gu1	0.1%
+夭	ao3	0.1%
+夭	yao3	0.1%
+尺	chi2	0.1%
+扎	zha3	0.1%
+歹	e4	0.1%
+氏	zhi1	0.1%
+父	fu3	0.1%
+爻	xiao2	0.1%
+爿	ban4	0.1%
+且	ju1	0.1%
+乎	hu2	0.1%
+仡	qi4	0.1%
+句	gou4	0.1%
+扔	reng2	0.1%
+扔	reng3	0.1%
+扔	reng4	0.1%
+氾	fan2	0.1%
+犮	bo2	0.1%
+瓦	wa4	0.1%
+甲	jia4	0.1%
+疒	chuang2	0.1%
+白	bo2	1%
+皿	ming3	0.1%
+示	qi2	0.1%
+份	bin1	0.1%
+伐	fa1	0.1%
+休	xiu3	0.1%
+休	xu3	0.1%
+先	xian4	0.1%
+同	tong4	0.1%
+吔	ye5	1%
+囝	yue4	0.1%
+圩	yu2	0.1%
+圳	chou2	0.1%
+圳	zun4	0.1%
+多	duo2	0.1%
+妃	pei4	0.1%
+守	shou4	0.1%
+彴	bo2	0.1%
+扠	zha3	0.1%
+朱	shu2	0.1%
+次	zi1	0.1%
+汏	dai4	0.1%
+犴	han4	0.1%
+百	bo2	1%
+羊	xiang2	0.1%
+行	hang4	0.1%
+襾	xia4	0.1%
+阤	zhi4	0.1%
+阤	yi3	0.1%
+亨	peng1	0.1%
+亨	heng2	0.1%
+估	gu3	0.1%
+佃	tian2	0.1%
+佔	zhan1	0.1%
+余	xu2	0.1%
+佚	die2	0.1%
+佛	bi4	0.1%
+佛	fu2	0.1%
+免	wen4	0.1%
+吡	bi4	0.1%
+含	han4	0.1%
+吹	chui4	0.1%
+吽	ou2	0.1%
+吾	yu2	0.1%
+呆	ai2	0.1%
+呔	tai5	0.1%
+囪	chuang1	0.1%
+囮	you2	0.1%
+圻	yin2	0.1%
+圾	ji2	0.1%
+均	yun4	0.1%
+夾	jia4	0.1%
+妎	xi4	0.1%
+妨	fang1	0.1%
+尨	meng2	0.1%
+尬	jie4	0.1%
+岔	cha2	0.1%
+庉	tun2	0.1%
+庋	ji3	0.1%
+弅	fen2	0.1%
+忘	wang2	0.1%
+忪	song1	0.1%
+把	bai3	0.1%
+抌	dan3	0.1%
+杉	sha1	0.1%
+杕	duo4	0.1%
+杘	chi1	0.1%
+汩	yu4	0.1%
+沃	wu4	0.1%
+沏	qu1	0.1%
+灺	duo4	0.1%
+牡	mou3	0.1%
+甸	tian2	0.1%
+皀	xiang1	0.1%
+芍	shuo4	0.1%
+芏	tu3	0.1%
+言	yin2	0.1%
+身	juan1	0.1%
+阨	ai4	0.1%
+並	bang4	0.1%
+丳	chan4	0.1%
+些	suo4	0.1%
+京	yuan2	0.1%
+佪	hui2	0.1%
+佰	bo2	0.1%
+佰	mo4	0.1%
+佷	heng2	0.1%
+佻	tiao2	0.1%
+來	lai4	0.1%
+冼	sheng3	0.1%
+卷	quan2	0.1%
+呫	che4	0.1%
+呴	hou1	0.1%
+呴	xu3	0.1%
+呷	xia2	0.1%
+呺	hao2	0.1%
+咇	bi3	0.1%
+咇	bie2	0.1%
+和	huo5	10%
+咎	gao1	0.1%
+坯	pei1	0.1%
+坳	ao1	0.1%
+妯	zhu2	0.1%
+始	shi4	0.1%
+姍	xian1	0.1%
+宓	fu2	0.1%
+宛	yuan1	0.1%
+岝	ze2	0.1%
+岡	gang3	0.1%
+帑	nu2	0.1%
+怔	leng4	0.1%
+怗	zhan1	0.1%
+怢	tu2	0.1%
+怫	bei4	0.1%
+怬	si4	0.1%
+怯	que4	100%
+戕	qiang2	0.1%
+披	pei1	0.1%
+抵	zhi3	0.1%
+抻	shen4	0.1%
+押	ya2	0.1%
+拂	bi4	0.1%
+拆	che4	0.1%
+拌	pan4	0.1%
+拍	bo2	0.1%
+拍	pa1	0.1%
+拍	po4	0.1%
+拎	ling1	0.1%
+拗	yu4	0.1%
+招	qiao2	0.1%
+招	shao2	0.1%
+放	fang3	0.1%
+杬	wan4	0.1%
+杷	ba5	0.1%
+杷	pa5	0.1%
+构	gou1	0.1%
+枕	zhen4	0.1%
+沮	ju1	0.1%
+沮	ju4	0.1%
+沷	fu2	0.1%
+沸	fu2	0.1%
+治	chi2	0.1%
+泌	bi4	0.1%
+泙	peng1	0.1%
+泛	feng3	0.1%
+泜	chi2	0.1%
+泭	fu2	0.1%
+炊	chui4	0.1%
+玢	bin1	0.1%
+玭	pi2	0.1%
+玭	pian2	0.1%
+甾	zi1	0.1%
+知	zhi4	0.1%
+矼	qiang1	0.1%
+穸	xi4	0.1%
+穹	qiong1	0.1%
+糾	jiu3	0.1%
+羋	mie1	0.1%
+耵	ding3	0.1%
+耵	ting1	0.1%
+肪	fang1	0.1%
+肯	keng3	0.1%
+肴	xiao2	0.1%
+肵	jing4	0.1%
+肵	qi2	0.1%
+肺	pei4	0.1%
+臾	yong3	0.1%
+芘	bi4	0.1%
+芧	zhu4	0.1%
+芴	hu1	0.1%
+芺	yao1	0.1%
+虎	hu1	0.1%
+迋	guang3	0.1%
+迎	ying4	0.1%
+迕	wu4	0.1%
+邳	pei2	0.1%
+雨	yu4	0.1%
+非	fei3	0.1%
+亮	liang2	0.1%
+俇	wang3	0.1%
+俔	qian4	0.1%
+俛	fu3	0.1%
+俞	shu1	0.1%
+俞	yu4	0.1%
+俟	qi2	0.1%
+俠	jia2	0.1%
+信	shen1	0.1%
+削	xue4	0.1%
+厖	mang2	0.1%
+咬	jiao1	0.1%
+咯	ge2	0.1%
+咳	ka3	0.1%
+咻	xu3	0.1%
+咼	kuai1	0.1%
+哆	che3	0.1%
+哇	wa5	100%
+哈	ka1	0.1%
+复	fou4	0.1%
+契	qie4	0.1%
+契	xie4	0.1%
+奓	zha1	0.1%
+奓	chi3	0.1%
+姣	jiao3	0.1%
+屎	xi1	0.1%
+峉	e1	0.1%
+帣	juan3	0.1%
+帥	shuo4	0.1%
+徇	xun2	0.1%
+怨	yuan1	0.1%
+恪	que4	0.1%
+恫	tong1	0.1%
+扃	jiong3	0.1%
+拶	za2	0.1%
+拾	shi1	0.1%
+拾	she4	0.1%
+挃	zhi2	0.1%
+挖	wa2	0.1%
+施	yi2	0.1%
+施	yi4	0.1%
+昫	xu3	0.1%
+昳	yi4	0.1%
+枳	ji3	0.1%
+枹	bao1	0.1%
+枹	fu2	0.1%
+柁	duo4	0.1%
+柄	bing4	0.1%
+柈	pan4	0.1%
+柑	qian2	0.1%
+柞	ze2	0.1%
+柣	die2	0.1%
+柵	shan4	0.1%
+柷	chu4	0.1%
+歪	wai3	0.1%
+洗	xian3	0.1%
+洞	tong2	0.1%
+洸	huang3	0.1%
+洼	gui1	0.1%
+癹	po1	0.1%
+盾	shun3	0.1%
+矜	guan1	0.1%
+矜	qin2	0.1%
+砈	e4	0.1%
+砉	huo4	0.1%
+砌	qie4	0.1%
+研	yan4	0.1%
+秎	fen2	0.1%
+籺	xi4	0.1%
+紀	ji3	0.1%
+罘	fou2	0.1%
+耑	duan1	0.1%
+胂	shen1	0.1%
+胉	po4	0.1%
+胖	pan2	0.1%
+胗	zhen3	0.1%
+胣	yi3	0.1%
+舡	xiang1	0.1%
+苑	yu4	0.1%
+苑	yuan2	0.1%
+苛	he2	0.1%
+若	re3	0.1%
+苴	ju3	0.1%
+茂	mou4	0.1%
+茇	bei4	0.1%
+茍	ji2	0.1%
+虷	han2	0.1%
+赳	jiu3	0.1%
+迮	zuo4	0.1%
+郃	ge2	0.1%
+釓	ga1	0.1%
+革	ji2	0.1%
+㟏	han1	0.1%
+㭘	xia2	0.1%
+亳	bo4	1%
+俱	ju1	0.1%
+俺	yan4	0.1%
+俾	bei1	0.1%
+俾	bi4	1%
+倘	chang2	0.1%
+倡	chang1	0.1%
+倬	zhuo2	0.1%
+倭	wo3	0.1%
+倭	wei1	0.1%
+值	zhi4	0.1%
+冣	zui4	0.1%
+剟	duo2	0.1%
+原	yuan4	0.1%
+哮	xiao4	0.1%
+哱	po4	0.1%
+哳	zha2	0.1%
+哷	le4	0.1%
+哺	bu4	0.1%
+哺	pu3	0.1%
+哿	ke3	0.1%
+唈	e4	0.1%
+唧	ji2	0.1%
+圂	huan4	0.1%
+垺	fu2	0.1%
+埒	le4	0.1%
+埔	bu3	0.1%
+娠	zhen4	0.1%
+娭	xi1	0.1%
+孫	xun4	0.1%
+孫	sun4	0.1%
+害	he2	0.1%
+家	gu1	0.1%
+射	shi2	0.1%
+屘	man1	0.1%
+崁	kan3	0.1%
+庫	she4	0.1%
+庬	mang2	0.1%
+庬	meng3	0.1%
+恣	zi1	0.1%
+恣	ci1	0.1%
+悗	men3	0.1%
+悚	song2	0.1%
+挐	ru2	0.1%
+振	zhen1	0.1%
+挼	nuo2	0.1%
+挼	hui1	0.1%
+捎	shao4	0.1%
+捕	bu4	0.1%
+旁	bang4	0.1%
+朓	tiao3	0.1%
+柴	zhai4	0.1%
+栖	xi1	0.1%
+栟	ping2	0.1%
+桁	hang4	0.1%
+桉	an4	0.1%
+欬	ke2	0.1%
+浪	lang2	0.1%
+浬	li2	0.1%
+浮	fou2	0.1%
+浸	jin1	0.1%
+涒	jun1	0.1%
+涒	yun1	0.1%
+烕	xue4	0.1%
+烙	luo4	0.1%
+畝	mou3	0.1%
+痃	xian2	0.1%
+益	yi2	0.1%
+眙	chi4	0.1%
+砟	zha4	0.1%
+砠	ju1	0.1%
+砢	ke1	0.1%
+砫	zhu4	0.1%
+秤	ping2	0.1%
+窄	ze2	0.1%
+竘	ju3	0.1%
+紑	fou1	0.1%
+純	zhun3	0.1%
+紕	pi2	0.1%
+紝	ren2	0.1%
+罜	zhu4	0.1%
+罞	meng2	0.1%
+耕	jing1	0.1%
+脊	ji2	0.1%
+般	bo1	20%
+茈	chai2	0.1%
+茈	ci2	0.1%
+茗	ming3	0.1%
+茩	gou3	0.1%
+茷	pei4	0.1%
+茹	ru4	0.1%
+荂	hua1	0.1%
+衃	fou2	0.1%
+衾	qin2	0.1%
+趵	bo1	0.1%
+趷	he2	0.1%
+迸	bing3	0.1%
+适	gua1	0.1%
+郘	lv3	0.1%
+郝	he4	0.1%
+釕	liao4	0.1%
+釘	ding4	0.1%
+釙	po4	0.1%
+隼	zhun3	0.1%
+髟	shan1	0.1%
+㖪	yu4	0.1%
+倏	shu4	0.1%
+偪	fu2	0.1%
+側	ze4	0.1%
+偺	za2	0.1%
+副	pi4	0.1%
+勘	kan4	0.1%
+厜	chui2	0.1%
+唶	ji2	0.1%
+唶	ze4	0.1%
+唼	qie4	0.1%
+唼	sha4	0.1%
+唼	za1	0.1%
+啁	chao2	0.1%
+啞	e4	0.1%
+埶	shi4	0.1%
+培	pou3	0.1%
+堁	ke3	0.1%
+堇	jin4	0.1%
+堋	beng4	0.1%
+堐	ai2	0.1%
+娶	qu4	0.1%
+娸	qi1	0.1%
+婁	lv3	0.1%
+婐	e3	0.1%
+寀	cai3	0.1%
+屠	chu2	0.1%
+崢	cheng2	0.1%
+帴	can2	0.1%
+庳	bei1	0.1%
+弸	peng2	0.1%
+徠	lai4	0.1%
+御	ya4	0.1%
+悷	li4	0.1%
+悾	kong3	0.1%
+惋	wan4	0.1%
+惏	lan2	0.1%
+惔	tan2	0.1%
+惛	men4	0.1%
+戚	cu4	0.1%
+捩	li4	0.1%
+捻	nie1	0.1%
+掇	duo2	0.1%
+掖	yi4	0.1%
+掗	ya3	0.1%
+掞	yan4	0.1%
+探	tan1	0.1%
+曼	wan4	0.1%
+桯	ying2	0.1%
+桵	rui3	0.1%
+梜	jie2	0.1%
+梣	chen2	0.1%
+梮	ju2	0.1%
+械	jie4	0.1%
+梲	tuo1	0.1%
+楖	jie2	0.1%
+欶	sou4	0.1%
+殹	yi1	0.1%
+殺	shai4	0.1%
+涎	yan4	0.1%
+涷	dong4	0.1%
+涸	hao4	0.1%
+涼	liang4	0.1%
+涿	zhuo2	0.1%
+淜	peng1	0.1%
+淠	pei4	0.1%
+淢	xu4	0.1%
+淰	shen3	0.1%
+淹	yan4	0.1%
+烴	qing1	0.1%
+猗	e3	0.1%
+猗	yi3	0.1%
+猞	she4	0.1%
+率	shuo4	0.1%
+琀	han4	0.1%
+琊	ye2	0.1%
+琍	li4	0.1%
+畦	xi1	0.1%
+疏	shu4	0.1%
+疏	su1	0.1%
+疵	ci2	0.1%
+痒	yang2	0.1%
+眯	mi1	0.1%
+眽	mai4	0.1%
+硌	luo4	0.1%
+票	piao1	0.1%
+笮	zha4	0.1%
+笴	ge3	0.1%
+紬	chou1	0.1%
+紮	zha2	0.1%
+累	lei2	0.1%
+脘	wan3	0.1%
+脟	luan3	0.1%
+脧	zui1	0.1%
+舺	jia3	0.1%
+荸	bo2	0.1%
+荼	shu1	0.1%
+莆	fu3	0.1%
+莏	cuo1	0.1%
+莙	jun4	0.1%
+莨	lang2	0.1%
+莨	liang2	0.1%
+莫	mu4	0.1%
+蚴	you3	0.1%
+蚺	tian4	0.1%
+蛆	ju1	0.1%
+術	sui4	0.1%
+袢	fan2	0.1%
+袤	mou4	0.1%
+訢	xi1	0.1%
+訥	na4	0.1%
+責	zhai4	0.1%
+趼	yan2	0.1%
+這	zhei4	0.1%
+造	cao4	0.1%
+逢	peng2	0.1%
+逤	sha1	0.1%
+酘	tou2	0.1%
+釤	shan4	0.1%
+陰	an1	0.1%
+陰	yin4	0.1%
+陳	zhen4	0.1%
+陶	yao2	0.1%
+雩	yu4	0.1%
+頄	kui2	0.1%
+麥	mo4	0.1%
+䟫	cheng2	0.1%
+傌	ma3	0.1%
+傒	xi4	0.1%
+傖	cheng2	0.1%
+凔	chuang4	0.1%
+啻	ti4	0.1%
+喁	yu2	0.1%
+喋	zha2	0.1%
+喌	zhu4	0.1%
+喏	nuo4	0.1%
+喒	za2	0.1%
+喦	ji2	0.1%
+喬	jiao1	0.1%
+塈	xi4	0.1%
+婼	ruo4	0.1%
+媕	yan3	0.1%
+媮	yu2	0.1%
+孳	zi4	0.1%
+尋	xin2	0.1%
+尰	chong4	0.1%
+崱	ze4	0.1%
+巽	sun4	0.1%
+幅	bi1	0.1%
+復	fou4	0.1%
+惺	xing3	0.1%
+愀	jiu3	0.1%
+愒	qi4	0.1%
+愓	shang1	0.1%
+愣	leng1	0.1%
+揃	jian3	0.1%
+揄	yao2	0.1%
+揄	you2	0.1%
+揆	kui3	0.1%
+揊	bi4	0.1%
+揖	ji2	0.1%
+揭	qi4	0.1%
+揵	jian4	0.1%
+敦	dui1	0.1%
+敦	dui4	0.1%
+敦	dun4	0.1%
+斐	fei1	0.1%
+景	ying3	0.1%
+棣	ti4	0.1%
+棲	xi1	0.1%
+棹	zhao4	0.1%
+椑	pi2	0.1%
+欻	xu4	0.1%
+毲	duo2	0.1%
+氯	lu4	0.1%
+氰	qing1	0.1%
+渣	zha3	0.1%
+渴	he2	0.1%
+渴	jie2	0.1%
+湛	dan1	0.1%
+湩	dong4	0.1%
+焚	fen4	0.1%
+焞	chun2	0.1%
+犆	zhi2	0.1%
+猒	yan4	0.1%
+琶	ba5	0.1%
+琶	pa5	0.1%
+番	po2	0.1%
+硪	e3	0.1%
+稍	shao4	0.1%
+窘	jun3	0.1%
+粥	zhu4	0.1%
+絎	heng4	0.1%
+絣	beng1	0.1%
+聒	gua1	0.1%
+腊	xi2	0.1%
+臷	zhi4	0.1%
+艵	ping2	0.1%
+菀	yu4	0.1%
+菀	yuan4	0.1%
+菂	di1	0.1%
+菉	lv4	0.1%
+菑	zai1	0.1%
+菔	bo2	0.1%
+菟	tu2	0.1%
+菲	fei4	0.1%
+菴	an4	0.1%
+菸	yu2	0.1%
+菹	ju1	0.1%
+菽	shu2	0.1%
+萁	ji1	0.1%
+萄	tao5	0.1%
+萆	bei1	0.1%
+蛬	gong3	0.1%
+袷	jie2	0.1%
+診	zhen1	0.1%
+詄	yi4	0.1%
+詐	zha3	0.1%
+詘	chu4	0.1%
+貸	te4	0.1%
+費	bi4	0.1%
+貿	mou4	0.1%
+賁	fen4	0.1%
+跇	chi4	0.1%
+跑	pao2	0.1%
+跕	tie1	0.1%
+跖	zhe4	0.1%
+軷	bo2	0.1%
+軸	zhou4	0.1%
+逮	di4	0.1%
+鄉	xiang4	0.1%
+鈀	ba1	0.1%
+鈃	jian1	0.1%
+鈔	chao4	0.1%
+鈚	pi2	0.1%
+鈧	kang1	0.1%
+閌	kang4	0.1%
+閒	jian1	0.1%
+隃	yao2	0.1%
+雅	ya1	0.1%
+颩	cuo1	0.1%
+飲	yin4	0.1%
+鳦	yi4	0.1%
+僄	piao1	0.1%
+僅	jin4	0.1%
+剸	zhuan1	0.1%
+勣	ji1	0.1%
+嗑	he2	0.1%
+嗛	qian1	0.1%
+嗛	qian3	0.1%
+嗛	xian2	0.1%
+嗲	die1	0.1%
+奧	yu4	0.1%
+徬	bang4	0.1%
+感	han4	0.1%
+愾	xi4	0.1%
+慅	cao3	0.1%
+慌	huang5	0.1%
+搐	chou1	0.1%
+搕	ke1	0.1%
+搨	ta1	0.1%
+搭	da2	0.1%
+搶	chuang3	0.1%
+搷	tian2	0.1%
+搽	ca1	0.1%
+暇	xia4	0.1%
+暈	yin4	0.1%
+暍	ye4	0.1%
+暖	xuan1	0.1%
+楄	bian1	0.1%
+楅	fu2	0.1%
+楗	juan4	0.1%
+楙	mou4	0.1%
+楬	qia4	0.1%
+業	nie4	0.1%
+楱	cou4	0.1%
+殜	ye4	0.1%
+毹	yu2	0.1%
+溜	liu4	0.1%
+溪	qi1	0.1%
+溰	yi1	0.1%
+煆	xia4	0.1%
+煠	zha2	0.1%
+煦	xu3	0.1%
+煬	yang4	0.1%
+犍	qian2	0.1%
+猼	pao2	0.1%
+瑁	mei4	0.1%
+瑊	zhen1	0.1%
+瓽	dang3	0.1%
+當	dang3	0.1%
+畷	zhuo2	0.1%
+盟	meng4	0.1%
+硼	peng1	0.1%
+碆	po2	0.1%
+稟	bin1	0.1%
+稟	lin3	0.1%
+粳	geng1	0.1%
+絻	wen4	0.1%
+綅	xian1	0.1%
+罫	hua4	0.1%
+羥	keng1	0.1%
+羧	zui1	0.1%
+翛	xiao1	0.1%
+腧	yu2	0.1%
+萹	bian3	0.1%
+葅	ju1	0.1%
+虜	luo3	0.1%
+蛻	shui4	0.1%
+蛾	yi3	0.1%
+蜍	yu2	0.1%
+蝍	jie2	0.1%
+衙	yu2	0.1%
+覛	mo4	0.1%
+誂	diao4	0.1%
+貉	hao2	0.1%
+賃	ren4	100%
+賄	hui3	0.1%
+賊	ze2	0.1%
+跐	ci1	0.1%
+跐	cai3	0.1%
+較	jiao3	0.1%
+較	jue2	0.1%
+逼	bi4	0.1%
+遂	sui2	0.1%
+過	guo1	0.1%
+達	ta4	0.1%
+鄑	jin4	0.1%
+鄗	qiao1	0.1%
+酩	ming2	0.1%
+鈸	ba2	0.1%
+鈹	pi1	0.1%
+鉭	dan4	0.1%
+隕	yuan2	0.1%
+隘	e4	0.1%
+零	lian2	0.1%
+雹	bo2	0.1%
+靸	ta1	0.1%
+頌	rong2	0.1%
+馲	luo4	0.1%
+鳪	bu3	0.1%
+䁑	shi4	0.1%
+僥	yao2	0.1%
+劁	qiao2	0.1%
+劁	qiao4	0.1%
+厭	yan1	0.1%
+嗾	zu2	0.1%
+嘁	za2	0.1%
+嘔	xu1	0.1%
+嘔	ou1	0.1%
+嘔	ou4	0.1%
+塺	mo4	0.1%
+墆	die2	0.1%
+墉	yong2	0.1%
+墐	jin4	0.1%
+嫖	piao1	0.1%
+嵷	zong1	0.1%
+嶄	chan2	0.1%
+幕	mo4	0.1%
+廑	jin4	0.1%
+廑	qin2	0.1%
+廜	tu1	0.1%
+彯	piao1	0.1%
+慥	cao4	0.1%
+慬	qin2	0.1%
+慷	kang3	0.1%
+憁	zong3	0.1%
+戧	qiang4	0.1%
+摎	jiu1	0.1%
+摘	ti4	0.1%
+摟	lou2	0.1%
+摸	mao1	0.1%
+摺	zhe3	0.1%
+摻	shan1	0.1%
+摻	can4	0.1%
+摽	biao4	0.1%
+斡	guan3	0.1%
+榜	beng4	0.1%
+榦	han2	0.1%
+槍	cheng1	0.1%
+歋	ye2	0.1%
+殠	xiu4	0.1%
+毄	ji2	0.1%
+滎	ying2	0.1%
+滫	xiu3	0.1%
+漆	qu4	0.1%
+漊	lou2	0.1%
+漕	zao4	0.1%
+漩	xuan4	0.1%
+漫	man2	0.1%
+漯	luo4	0.1%
+漱	sou4	0.1%
+潀	zhong1	0.1%
+潎	pie1	0.1%
+熅	yun2	0.1%
+熇	he4	0.1%
+熇	hu4	0.1%
+熏	xun4	0.1%
+熙	yi2	0.1%
+獃	ai2	0.1%
+獌	wan4	0.1%
+瑳	cuo1	0.1%
+瘈	qi4	0.1%
+瘈	zhi4	0.1%
+瘌	la5	0.1%
+瞀	mou4	0.1%
+瞂	fa1	0.1%
+碩	shi2	0.1%
+箐	jing1	0.1%
+箐	qian4	0.1%
+箑	jie2	0.1%
+粽	zhong4	0.1%
+綝	lin2	0.1%
+綮	qing4	0.1%
+緆	xi4	0.1%
+耤	jie4	0.1%
+聞	wen4	0.1%
+膏	gao4	0.1%
+蒯	kuai4	0.1%
+蓁	qin2	0.1%
+蓋	he2	0.1%
+蜚	fei1	0.1%
+蜼	lei3	0.1%
+蜿	wan3	0.1%
+蝀	dong4	0.1%
+裰	duo2	0.1%
+裻	du3	0.1%
+裼	xi2	0.1%
+誣	wu2	0.1%
+誨	hui3	0.1%
+賓	bin4	0.1%
+踆	cun1	0.1%
+遛	liu2	0.1%
+遜	sun4	0.1%
+鄘	yong2	0.1%
+鄙	bi4	0.1%
+鉺	er4	0.1%
+銨	an1	0.1%
+閩	min2	0.1%
+雌	ci1	0.1%
+需	ru2	0.1%
+鞄	bao1	0.1%
+鞅	yang3	0.1%
+颮	pao2	0.1%
+駃	jue2	0.1%
+骯	kang3	0.1%
+齊	ji4	0.1%
+齊	zhai1	0.1%
+齊	zi1	0.1%
+價	ga5	0.1%
+僿	shi4	0.1%
+儃	tan3	0.1%
+儃	shan4	0.1%
+儉	jian4	0.1%
+劇	ji2	0.1%
+厲	lai4	0.1%
+嘿	mo4	0.1%
+噀	sun4	0.1%
+噍	jiao1	0.1%
+噴	fen4	0.1%
+墮	hui1	0.1%
+墳	fen4	0.1%
+嬈	rao3	0.1%
+嬈	yao3	0.1%
+廞	qin1	0.1%
+彉	kuo4	0.1%
+憍	qiao2	0.1%
+憪	xian4	0.1%
+戭	yin3	0.1%
+摩	ma1	0.1%
+撈	lao2	0.1%
+撏	xun2	0.1%
+撕	xi1	0.1%
+撖	gan3	0.1%
+撞	chuang2	0.1%
+撟	jiao4	0.1%
+撢	tan4	0.1%
+撣	shan4	0.1%
+撬	qiao1	0.1%
+撮	zuo2	0.1%
+撮	zuo3	0.1%
+撮	zui4	0.1%
+撮	cuo4	0.1%
+敶	chen2	0.1%
+敺	ou1	0.1%
+槭	cu4	0.1%
+槮	san3	0.1%
+標	piao3	0.1%
+樠	man2	0.1%
+樣	xiang4	0.1%
+歐	ou3	0.1%
+殣	jin3	0.1%
+潝	xi4	0.1%
+潠	sun4	0.1%
+潦	lao4	0.1%
+潦	liao2	0.1%
+潬	dan4	0.1%
+潰	hui4	0.1%
+澎	peng1	0.1%
+濆	pen1	0.1%
+獝	xu4	0.1%
+瑾	jin4	0.1%
+璉	lian3	0.1%
+瘙	sao1	0.1%
+瞑	mian2	0.1%
+瞑	mian4	0.1%
+瞑	ming3	0.1%
+磅	beng4	0.1%
+磅	pang1	0.1%
+磈	kui3	0.1%
+磎	qi1	0.1%
+禜	yong4	0.1%
+糅	rou3	0.1%
+糊	hu1	0.1%
+糌	zan2	0.1%
+緣	yuan4	0.1%
+緫	zong1	0.1%
+緶	pian2	0.1%
+罷	pi2	0.1%
+羰	tan4	0.1%
+翨	shi4	0.1%
+蓩	mao4	0.1%
+蓿	su4	0.1%
+蔂	lei2	0.1%
+蔡	sa4	0.1%
+蔫	yan1	0.1%
+蔬	su1	0.1%
+蔽	fu2	0.1%
+蝐	mei4	0.1%
+蝤	jiu1	0.1%
+蝦	ha2	0.1%
+蝻	nan2	0.1%
+褊	pian2	0.1%
+褎	you4	0.1%
+褔	fu4	0.1%
+請	qing2	0.1%
+諍	zheng1	0.1%
+諒	liang2	0.1%
+諕	xia4	0.1%
+貏	bei4	0.1%
+賢	xian4	0.1%
+趣	cu4	0.1%
+踔	zhuo2	0.1%
+踖	que4	0.1%
+踝	hua4	0.1%
+踤	zu2	0.1%
+踦	qi2	0.1%
+踦	yi3	0.1%
+適	di2	0.1%
+遮	zhe3	0.1%
+醋	zuo4	0.1%
+銻	ti4	0.1%
+鋟	qian1	0.1%
+鋟	qin3	0.1%
+鋧	xian3	0.1%
+閬	lang3	0.1%
+鞈	jia2	0.1%
+頜	ge2	0.1%
+頜	han4	0.1%
+頦	hai2	0.1%
+養	yang4	0.1%
+駉	jiong1	0.1%
+駘	dai4	0.1%
+骲	bo2	0.1%
+骳	bi4	0.1%
+髲	bi4	0.1%
+髳	meng2	0.1%
+魄	tuo4	0.1%
+魬	ban4	0.1%
+鳽	yan2	0.1%
+鴃	ju2	0.1%
+麃	pao2	0.1%
+儐	bin4	0.1%
+儜	neng2	0.1%
+噠	da2	0.1%
+噦	yue1	0.1%
+噫	yi4	0.1%
+噱	xue1	0.1%
+噶	ge2	0.1%
+墼	ji2	0.1%
+壅	yong3	0.1%
+嬛	qiong2	0.1%
+廨	jie4	0.1%
+徼	jiao1	0.1%
+徼	yao1	0.1%
+懅	ju4	0.1%
+擄	luo3	0.1%
+擉	chu4	0.1%
+擗	pi4	0.1%
+樨	xu1	0.1%
+樿	shan4	0.1%
+橈	nao2	0.1%
+歙	xi4	0.1%
+澳	yu4	0.1%
+濊	huo4	0.1%
+濊	wei4	0.1%
+瀄	jie2	0.1%
+燉	dun1	0.1%
+燎	liao4	0.1%
+燜	men1	0.1%
+甋	di2	0.1%
+瘻	lv2	0.1%
+窶	lou2	0.1%
+篹	zuan3	0.1%
+篹	suan3	0.1%
+縣	xuan2	0.1%
+罺	chao1	0.1%
+翮	ge2	0.1%
+膦	lian3	0.1%
+膦	lin2	0.1%
+膴	wu3	0.1%
+膹	fei4	0.1%
+蕉	qiao2	0.1%
+蕝	zui4	0.1%
+螣	te4	0.1%
+褪	tui4	0.1%
+諞	pian2	0.1%
+諼	shuan4	0.1%
+踶	zhi4	0.1%
+踹	shuan4	0.1%
+遲	zhi4	0.1%
+遴	lin4	0.1%
+遺	wei4	0.1%
+遻	e4	0.1%
+鄳	meng3	0.1%
+鄳	ming3	0.1%
+醒	xing1	0.1%
+鋼	gang4	0.1%
+錞	dui4	0.1%
+錟	xian1	0.1%
+錢	jian3	0.1%
+閼	yan1	0.1%
+閼	yu4	0.1%
+隩	ao4	0.1%
+靦	tian3	0.1%
+鞔	wan3	0.1%
+鞘	shao1	0.1%
+鞙	juan1	0.1%
+頵	jun1	0.1%
+頸	geng3	0.1%
+餤	dan4	0.1%
+鴐	jia1	0.1%
+鴘	bian4	0.1%
+麇	qun2	0.1%
+麮	qu3	0.1%
+黕	dan3	0.1%
+壎	xuan1	0.1%
+嬬	ru2	0.1%
+尷	jian1	0.1%
+嶷	ni4	0.1%
+嶸	hong2	0.1%
+幪	meng3	0.1%
+懋	mou4	0.1%
+戲	hu1	0.1%
+戲	hui1	0.1%
+擩	ru4	0.1%
+斁	du4	0.1%
+曙	shu4	0.1%
+氉	zao4	0.1%
+濞	pi4	0.1%
+濟	ji3	0.1%
+燠	ao4	0.1%
+獲	huai2	0.1%
+穛	zhuo2	0.1%
+篸	zan4	0.1%
+簉	chou4	0.1%
+糙	cao4	0.1%
+糜	mi2
+縮	su4	0.1%
+縰	shi3	0.1%
+縳	chuan2	0.1%
+縹	piao4	0.1%
+繁	po2	0.1%
+繃	beng4	0.1%
+罾	zeng4	0.1%
+罿	chong1	0.1%
+翳	yi1	0.1%
+膻	dan4	0.1%
+臃	yong3	0.1%
+蕹	yong1	0.1%
+薜	bo4	0.1%
+薢	jie1	0.1%
+薢	xie4	0.1%
+螹	qian2	0.1%
+蟀	shuo4	0.1%
+褶	die2	0.1%
+褶	xue2	0.1%
+褶	zhe2	0.1%
+謅	zou1	0.1%
+謈	bo2	0.1%
+謈	bao4	0.1%
+謈	po4	0.1%
+謎	mei4	0.1%
+謎	mi4	0.1%
+謙	qian4	0.1%
+謚	yi4	0.1%
+謞	xue4	0.1%
+谿	qi1	0.1%
+豁	he4	0.1%
+趨	cu4	0.1%
+輾	nian3	0.1%
+避	bei4	0.1%
+鍉	di2	0.1%
+鍉	chi2	0.1%
+鍑	fu2	0.1%
+鍤	cha2	0.1%
+闇	an1	0.1%
+雖	sui2	0.1%
+鞞	bei1	0.1%
+顆	ke3	0.1%
+餫	yun4	0.1%
+餲	ai4	0.1%
+餳	tang2	0.1%
+馘	xu4	0.1%
+鮭	xie2	0.1%
+鵀	ren2	0.1%
+鵧	ping2	0.1%
+㲯	lan2	0.1%
+叢	cong1	0.1%
+嚗	bo1	0.1%
+嚜	mo4	0.1%
+奰	bei4	0.1%
+懫	zhi4	0.1%
+擷	jie2	0.1%
+擻	sou4	0.1%
+擿	ti4	0.1%
+擿	zhi2	0.1%
+曜	yue4	0.1%
+檳	bin1	0.1%
+歸	kui4	0.1%
+濼	bo2	0.1%
+濼	po4	0.1%
+瀁	yang3	0.1%
+燾	tao2	0.1%
+燿	yue4	0.1%
+爁	lan3	0.1%
+甔	dan4	0.1%
+癤	jie1	0.1%
+瞿	qu1	0.1%
+穢	wei4	0.1%
+簪	zen1	0.1%
+繜	zun3	0.1%
+羵	fen2	0.1%
+臑	ru2	0.1%
+臑	er2	0.1%
+艟	tong2	0.1%
+薶	wo1	0.1%
+藋	di2	0.1%
+蟫	tan2	0.1%
+蟯	rao2	0.1%
+襉	jian4	0.1%
+覲	jin3	0.1%
+謦	qing4	0.1%
+謷	ao4	0.1%
+貗	lv2	0.1%
+蹔	zan4	0.1%
+蹜	su4	0.1%
+蹡	qiang4	0.1%
+蹢	zhi2	0.1%
+蹣	man2	0.1%
+鄺	guang3	0.1%
+鎗	cheng1	0.1%
+鎘	li4	0.1%
+鎝	ta3	0.1%
+鎞	pi1	0.1%
+闖	chen4	0.1%
+闖	chuang4	0.1%
+雘	wo4	0.1%
+額	e4	0.1%
+鬵	xin2	0.1%
+魏	wei2	0.1%
+鮸	wan3	0.1%
+鯈	you2	0.1%
+鯓	shen1	0.1%
+麌	yu3	0.1%
+壞	guai4	0.1%
+懵	meng2	0.1%
+斄	li2	0.1%
+旝	kuai4	0.1%
+瀕	pin2	0.1%
+爆	bo2	0.1%
+爊	ao2	0.1%
+犦	bao4	0.1%
+獺	ta4	0.1%
+矊	mian3	0.1%
+矱	wo4	0.1%
+礛	lan2	0.1%
+禰	ni3	0.1%
+穫	hu4	0.1%
+簬	du4	0.1%
+簿	bo2	0.1%
+糪	bo2	0.1%
+繨	da5	0.1%
+繯	huan4	0.1%
+繰	zao3	0.1%
+繳	zhuo2	0.1%
+羹	lang2	0.1%
+藩	fan2	0.1%
+藷	zhu1	0.1%
+蟹	xie3	0.1%
+蟺	chan2	0.1%
+襝	lian4	0.1%
+襢	zhan4	0.1%
+蹲	cun2	0.1%
+蹶	jue3	0.1%
+蹻	jiao3	0.1%
+蹻	jue2	0.1%
+蹼	pu2	0.1%
+轑	lao2	0.1%
+邋	la2	0.1%
+醭	pu2	0.1%
+鎩	shai4	0.1%
+鏃	cu4	0.1%
+鏊	ao2	0.1%
+鏙	cui3	0.1%
+鏜	tang2	0.1%
+鏞	yong2	0.1%
+饉	jin4	0.1%
+騞	huo4	0.1%
+髂	ka4	0.1%
+鬌	duo4	0.1%
+鯖	zheng1	0.1%
+鯡	fei4	0.1%
+鵲	qiao3	0.1%
+麴	qu2	0.1%
+齗	yin2	0.1%
+㘔	sai1	0.1%
+㘔	sai2	0.1%
+嚱	xi1	0.1%
+嚵	chan4	0.1%
+攘	rang2	0.1%
+瀰	mi3	0.1%
+瀹	yao4	0.1%
+瀼	rang4	0.1%
+瀾	lan4	0.1%
+礦	gong3	0.1%
+礧	lei3	0.1%
+礩	zhi2	0.1%
+繻	ru2	0.1%
+翿	tao2	0.1%
+耀	yue4	0.1%
+蘁	e4	0.1%
+蠕	ruan3	0.1%
+蠖	wo4	0.1%
+蠙	pin2	0.1%
+躂	ta4	0.1%
+鐐	liao2	0.1%
+鐒	lao3	0.1%
+鐙	deng1	0.1%
+闞	kan3	0.1%
+闞	han3	0.1%
+闟	ta4	0.1%
+闟	xi4	0.1%
+韽	an4	0.1%
+顢	man2	0.1%
+顣	cu4	0.1%
+饎	xi1	0.1%
+騫	jian3	0.1%
+髊	zi4	0.1%
+鰓	xi3	0.1%
+鶤	yun4	0.1%
+鶩	mu4	0.1%
+鶿	ci2	0.1%
+黦	yu4	0.1%
+齙	pao2	0.1%
+齞	yan3	0.1%
+囀	zhuan3	0.1%
+囁	zhe2	0.1%
+巍	wei2	0.1%
+爚	yao4	0.1%
+瓓	lan2	0.1%
+籔	shu4	0.1%
+蘗	bo4	0.1%
+蘞	lian2	0.1%
+蘞	lian4	0.1%
+蘪	mi2	0.1%
+蠠	mi4	0.1%
+襬	bei1	0.1%
+鐭	ao4	0.1%
+霸	po4	0.1%
+驁	ao2	0.1%
+鰫	rong2	0.1%
+鶱	xian1	0.1%
+鶴	hao2	0.1%
+鶻	gu3	0.1%
+鷈	ti2	0.1%
+鷊	yi4	0.1%
+黭	an3	0.1%
+黮	tan3	0.1%
+孌	luan3	0.1%
+攞	luo1	0.1%
+癬	xian3	0.1%
+穰	rang3	0.1%
+籠	long3	0.1%
+躒	luo4	0.1%
+韁	gang1	0.1%
+驏	zhan4	0.1%
+驔	dian4	0.1%
+髒	zang3	0.1%
+鬫	han3	0.1%
+鬻	zhu4	0.1%
+鰿	ji2	0.1%
+鷩	bie1	0.1%
+鼵	tu2	0.1%
+攣	lian4	0.1%
+攪	gao3	0.1%
+籧	ju3	0.1%
+蠯	pi2	0.1%
+蠰	rang3	0.1%
+鱒	zun4	0.1%
+鱖	jue2	0.1%
+齰	ze2	0.1%
+㶟	lei2	0.1%
+贛	gong4	0.1%
+躟	rang3	0.1%
+躠	sa4	0.1%
+鱣	shan4	0.1%
+鸂	qi1	0.1%
+鹽	yan4	0.1%
+齵	ou2	0.1%
+囔	nang5	0.1%
+斸	zhu2	0.1%
+欙	lei3	0.1%
+纚	shi3	0.1%
+纛	du2	0.1%
+讘	zhe2	0.1%
+鑲	rang2	0.1%
+鸏	mang2	0.1%
+鸏	meng3	0.1%
+鸒	yu4	0.1%
+齹	chi1	0.1%
+蠼	jue2	0.1%
+釃	li2	0.1%
+鸔	bo2	0.1%
+鑽	zuan3	0.1%
+饡	zai4	0.1%
+䰖	zan3	0.1%
+㓦	bo4	0.1%
+##### @202003 比對 cc-cedict 字詞典檔所新增 #####
+㒺	wang3	0.1%
+㕥	yi3	0.1%
+㝵	ai4	0.1%
+㠶	fan1	0.1%
+㢴	xi1	0.1%
+㤙	en1	0.1%
+㧱	na2	0.1%
+㩗	xie2	0.1%
+㪟	dun1	0.1%
+㫺	xi1	0.1%
+㮎	bei1	0.1%
+㳒	fa3	0.1%
+㴱	shen1	0.1%
+㷭	feng1	0.1%
+㺵	jiu3	0.1%
+㼝	wan3	0.1%
+㽮	xing1	0.1%
+㿝	xiang1	0.1%
+䍃	yao2	0.1%
+䍹	shan1	0.1%
+䖟	meng2	0.1%
+䘚	zu2	0.1%
+䝔	huan1	0.1%
+䟖	zhi3	0.1%
+䤈	xi1	0.1%
+䥑	mai4	0.1%
+䦉	si4	0.1%
+䬠	fei1	0.1%
+䲔	jing1	0.1%
+侢	dai4	0.1%
+俊	zun4	0.1%
+俞	shu4	0.1%
+倶	ju4	0.1%
+倽	sha2	0.1%
+傓	shan1	0.1%
+儵	shu1	0.1%
+劄	zha1	0.1%
+劵	juan4	0.1%
+匔	gong1	0.1%
+呶	nu3	0.1%
+咗	zuo3	0.1%
+咼	wai1	0.1%
+哦	o5	0.1%
+唷	yo5	0.1%
+喂	wei2	0.1%
+嘅	kai3	0.1%
+嘜	mai4	0.1%
+嘠	ga2	0.1%
+噦	yue3	0.1%
+囝	nan1	0.1%
+囷	qun1	0.1%
+圕	tuan1	0.1%
+圩	xu1	0.1%
+坴	lu4	0.1%
+埒	lie4	0.1%
+埡	ya1	0.1%
+墬	di4	0.1%
+夅	xiang2	0.1%
+妳	nai3	0.1%
+姉	zi3	0.1%
+姫	ji1	0.1%
+媠	tuo2	0.1%
+寕	ning4	0.1%
+屓	xi4	0.1%
+屩	jue1	0.1%
+屫	jue1	0.1%
+峇	ke4	0.1%
+崤	xiao2	0.1%
+嶃	chan2	0.1%
+嶖	yan1	0.1%
+巂	gui1	0.1%
+巂	xi1	0.1%
+忛	fan1	0.1%
+慴	she4	0.1%
+戠	zhi2	0.1%
+払	fan3	0.1%
+扽	den4	0.1%
+抝	ao4	0.1%
+拽	zhuai3	0.1%
+挱	suo1	0.1%
+挵	nong4	0.1%
+捙	ye4	0.1%
+据	ju4	0.1%
+摿	yao2	0.1%
+攂	lei2	0.1%
+晿	cheng1	0.1%
+暜	pu3	0.1%
+暸	liao2	0.1%
+曽	ceng2	0.1%
+杷	ba4	0.1%
+柜	gui4	0.1%
+棁	zhuo1	0.1%
+榲	wen1	0.1%
+槕	zhuo1	0.1%
+樻	gui4	0.1%
+橎	fan3	0.1%
+欑	zan4	0.1%
+欻	xu1	0.1%
+歘	xu1	0.1%
+歛	han1	0.1%
+殀	yao1	0.1%
+殽	xiao2	0.1%
+沓	da2	0.1%
+洟	ti4	0.1%
+滊	xie1	0.1%
+潃	xiu3	0.1%
+灠	lan4	0.1%
+焢	kong4	0.1%
+爌	kong4	0.1%
+犮	quan3	0.1%
+獱	bian1	0.1%
+琝	min2	0.1%
+琢	zuo2	0.1%
+甬	tong3	0.1%
+畂	mu3	0.1%
+疸	da5	0.1%
+瘜	xi1	0.1%
+的	di1	0.1%
+眯	mi2	0.1%
+眰	die2	0.1%
+睖	leng4	0.1%
+矱	yue1	0.1%
+碌	liu4	0.1%
+碡	zhou2	0.1%
+磑	wei2	0.1%
+磕	ke4	0.1%
+磟	liu4	0.1%
+禝	ji4	0.1%
+秖	zhi3	0.1%
+節	jie1	0.1%
+籭	shai1	0.1%
+粚	chi1	0.1%
+紥	zha1	0.1%
+緫	zong3	0.1%
+縡	zai4	0.1%
+翖	xi1	0.1%
+翫	wan2	0.1%
+耊	die2	0.1%
+耶	ye5	0.1%
+芍	que4	0.1%
+芣	fu2	0.1%
+芥	gai4	0.1%
+草	cao4	0.1%
+萕	ji4	0.1%
+萹	bian1	0.1%
+蓿	xu4	0.1%
+蘤	hua1	0.1%
+蝃	zhuo1	0.1%
+蝡	ru2	0.1%
+衂	nv4	0.1%
+術	zhu2	0.1%
+衖	xiang4	0.1%
+袲	yi2	0.1%
+褀	qi2	0.1%
+襆	fu2	0.1%
+襥	fu2	0.1%
+覐	jiao4	0.1%
+諙	hua4	0.1%
+諝	xu1	0.1%
+謩	mo2	0.1%
+賌	gai1	0.1%
+踘	ju1	0.1%
+躹	ju1	0.1%
+軠	kuang2	0.1%
+鄫	zeng2	0.1%
+醱	fa1	0.1%
+鈆	qian1	0.1%
+鉄	zhi4	0.1%
+銕	tie3	0.1%
+鏚	qi1	0.1%
+鐱	jian4	0.1%
+鐽	da2	0.1%
+隗	kui2	0.1%
+霢	mai4	0.1%
+霺	wei1	0.1%
+鞝	shang4	0.1%
+颿	fan1	0.1%
+飬	yang3	0.1%
+髺	kuo4	0.1%
+魟	hong2	0.1%
+鮁	ba4	0.1%
+麫	mian4	0.1%
+齚	ze2	0.1%
+##### @補充 Big5E Hkscs JIS 中有的單字 #####
 㑀	tai4
 㒯	ye4
 㓻	gang1
@@ -587,9 +3350,6 @@ min_phrase_weight: 100
 𤒼	huang4
 𤒼	guang3
 𤓎	zuan3
-𤓓	luo2
-#補簡體字#
-𬊜	luo2
 𤓖	xie4
 𤓖	yi4
 𤔅	die2
@@ -953,7 +3713,7 @@ min_phrase_weight: 100
 #補充#
 𠯖	han4
 𠰮	sheng1
-##### 補充 Big5E Hkscs JIS 中有的單字，「方言」「人名」等漢字，沒有官方中文發音，補充多以偏旁為發音，『可能非正確讀音』！！！ #####
+##### @補充 Big5E Hkscs JIS 中有的單字，「方言」「人名」等漢字，沒有官方中文發音，補充多以偏旁為發音，『可能非正確讀音』！！！ #####
 㗝	gao1
 㘘	pei4
 㘾	yu3
@@ -2303,2823 +5063,62 @@ min_phrase_weight: 100
 貫	guan4
 𣄽	zhuo2
 𣄽	zhuo1
-##### 補充『官方字典』正確發音（不論是「讀音」、「語音」、「又音」），包含「台灣」和「大陸」發音 #####
-麼	ma5	1%
-眭	gui4
-蜊	li4	200%
-丼	dan3
-蔔	bo1
-蔔	bo2	70%
-癖	pi4	65%
-混	hun3
-混	kun1	3%
-混	gun3	3%
-誼	yi2
-們	men2	20%
-亞	ya1	5%
-著	zhao1	0.5%
-俄	e4
-蚵	ke1
-𠀈	qiu1	0%
-綜	zong4
-姊	jie3
-呀	ya1	1%
-呀	xia1	0%
-睚	ai4
-梧	wu4
-朴	pu3
-朴	piao2	10%
-朴	po1	10%
-朴	pu2	30%
-嘚	dei1
-危	wei2
-曳	yi4	100%
-崗	gang1	60%
-遍	pian4
-益	yi4
-瘩	da1
-瘩	da5
-體	ti1	1%
-体	ti3	10%
-体	ti1	1%
-栢	bo2
-殻	ke2
-殼	que4	0%
-蕃	fan1
-堤	ti2
-隄	ti2
-挾	xia2
-挟	xia2
-挟	jia2	80%
-挟	jia1
-徊	hui2
-暴	pu4	5%
-曝	bao4	50%
-臂	bei4
-臂	bei5
-剖	pou3
-踏	ta1	30%
-勝	sheng1	20%
-卓	zhuo1	40%
-泊	po1	20%
-泊	po4	60%
-傍	bang1
-傍	pang2
-築	zhu2
-洮	yao2	20%
-頗	po3
-颇	po3
-辱	ru4
-擁	yong3	50%
-拥	yong3	50%
-更	jing1	1.5%
-抹	ma1
-裳	shang1	50%
-夕	xi4
-寂	ji2
-慨	kai4
-褐	he2
-蹟	ji1
-眶	kuang1
-縛	fu2
-缚	fu2
-紊	wen4
-蜗	gua1
-餚	xiao2	100%
-发	fa4
-发	fa3
-髪	fa3
-妮	ni2
-逅	gou4
-綸	guan1	90%
-纶	guan1	90%
-艾	yi4	15%
-掬	ju2	90%
-粷	ju1
-毱	ju1
-匊	ju1
-浹	jia2
-浃	jia2
-壑	huo4
-储	chu2
-諷	feng4
-讽	feng4
-諷	feng1	60%
-讽	feng1	60%
-檜	kuai4
-桧	kuai4
-劊	kuai4
-刽	kuai4
-法	fa1
-法	fa2	2%
-咄	duo4
-踱	duo4
-顫	zhan4
-颤	zhan4
-播	bo4	20%
-挨	ai2
-究	jiu4
-携	xi1
-倔	jue4
-欸	ei2
-欸	ei3
-欸	ei4
-欸	ai1
-嵌	kan4	10%
-波	po1
-聘	ping4
-懾	zhe2
-慑	zhe2
-偽	wei4
-僞	wei4
-伪	wei4
-樸	pu2
-仆	pu2	90%
-仆	fu4
-撾	wo1	50%
-燥	sao4	50%
-煰	sao4
-煰	zao4
-玩	wan4	5%
-緝	qi4
-缉	qi4
-缉	qi1
-巫	wu2	50%
-咋	zha1	5%
-悄	qiao1
-昔	xi2
-昔	cuo4
-熄	xi2
-拙	zhuo2
-濤	tao2	50%
-涛	tao2	50%
-馴	xun2
-驯	xun4
-蹬	deng1
-剽	piao4
-署	shu4
-蹈	dao4
-坊	fang2	25%
-綏	sui1
-绥	sui1
-騎	ji4	30%
-骑	ji4	30%
-嘞	le1
-嘞	le4	5%
-嘞	lei1
-肖	xiao1	20%
-殺	sha4	5%
-杀	sha4	5%
-呱	gua1
-呱	gua3	1%
-呱	wa1	1%
-刻	ke1
-傾	keng1	1%
-町	ding1
-呲	ci1	50%
-呲	ci2	30%
-誒	ei2	0%
-誒	ei3	0%
-誒	ei4	0%
-誒	xi1	1%
-誒	eh4
-嗟	chai4	1%
-嗟	cuo4	0%
-嗟	jie4	0%
-嘎	ga1
-嘎	ga3	10%
-扳	ban3
-阿	a4
-宊	tu1	10%
-堗	tu2	10%
-拈	nian3
-拈	dian1	10%
-矻	ku1
-勞	lao4	10%
-劳	lao4	10%
-伯	ba4	1%
-伯	bai3	1%
-膜	mo4	20%
-賜	si4	50%
-赐	si4	50%
-傭	yong4
-佣	yong1	60%
-傭	yong2	5%
-佣	yong2	5%
-庸	yong2	5%
-慵	yong2	10%
-蟄	zhi2
-蛰	zhi2
-喳	zha1
-碁	ji1
-棋	ji1	25%
-薇	wei2
-度	duo4	1%
-系	ji4	1%
-蔘	san1	1%
-參	cen1	1%
-参	shen1	1%
-参	cen1	1%
-参	san1	1%
-叅	shen1	1%
-叅	cen1	1%
-叅	san1	1%
-叄	can1	1%
-叄	shen1	1%
-叄	cen1	1%
-叁	can1	1%
-叁	shen1	1%
-叁	cen1	1%
-颉	xie2	10%
-艘	sao1
-妊	ren2	1%
-暠	hao4	1%
-蕈	xin4	1%
-覃	qin2	1%
-喱	li3	98%
-釐	xi1	1%
-釐	xi3	1%
-斗	dou4	20%
-枓	dou1
-枓	zhu3
-樗	shu1
-櫖	shu1
-吖	ya1	10%
-叟	sou1	75%
-傁	sou1
-将	qiang1
-将	jiang4
-哏	hen1
-嘸	wu3	65%
-呒	wu3	65%
-無	mo2	1%
-南	na2	1%
-南	na1	1%
-鈷	gu1
-钴	gu1
-青	jing1	9%
-靑	jing1	100%
-甯	ning4	5%
-呵	o1	50%
-呵	a5	50%
-呵	ke1	1%
-啊	o1	1%
-喔	wu1	1%
-喔	wo4	0%
-喔	wo1	1%
-噢	yu3	0.5%
-哪	ne2	1%
-哪	nuo2	0%
-那	nei3	0%
-那	nei4	0%
-那	na1	10%
-那	nuo2	0%
-喲	yo1	5%
-囉	luo2	0%
-啰	luo2	0%
-啰	luo5
-蘇	su4	0%
-苏	su4	0%
-汆	tun3
-拗	ao3
-拮	jia2
-肋	le1	1%
-贮	zhu3
-掷	zhi2
-枱	yi2	1%
-汙	wu4	50%
-污	wu4	55%
-#汚	wu4
-汙	yu1	50%
-#污	yu1
-#汚	yu1
-汙	yu2	1%
-#污	yu2
-#汚	yu2
-汙	wa1	1%
-#污	wa1
-#汚	wa1
-洿	wu4
-壳	qiao4
-壳	que4
-繆	miu4	50%
-繆	mu4	1%
-繆	liao2	1%
-繆	liao3	1%
-缪	miao4	1%
-缪	miu4	0%
-缪	mu4	1%
-缪	liao2	1%
-缪	liao3	1%
-悖	bo2	10%
-勃	bei4	10%
-孛	bo2	10%
-索	suo2
-溈	wei2	100%
-沩	gui1	10%
-为	wei2
-泄	yi4	30%
-洩	yi4	90%
-澠	mian3	1%
-澠	min3	1%
-渑	sheng2	1%
-渑	min3	1%
-呣	mou2	1%
-兒	ni2	1%
-儿	ni2	1%
-児	ni2	1%
-觉	jiao4	1%
-覚	jiao4	1%
-说	shui4	0.5%
-说	yue4	0.21%
-說	yue4	0.21%
-圈	quan4	1%
-蝙	bian3	90%
-咔	ka1	50%
-咔	long4	1%
-㝀	hao3
-廍	bu4
-抓	zhao1	5%
-抓	chua3	5%
-浣	wan3
-龜	jun1	10%
-龜	qiu1	5%
-拚	fan1	0%
-埠	fu4
-噸	dun4	20%
-犽	ya2
-衹	zhi1	100%
-區	gou1	0%
-鮨	yi4	100%
-祇	zhi1	25%
-诶	ei1
-诶	ei3
-诶	ei4
-诶	xi1
-诶	eh4
-嚈	yan4
-呔	dai1	0%
-吽	ou5	0%
-吽	ou1	0%
-㕭	bi4	0%
-吡	pi3	0%
-咧	lie5	0%
-咧	lie2	0%
-唋	tu3	0%
-唋	tu4	0%
-咯	ka3	0%
-嘅	ge3	0%
-喝	ye4	0%
-嗮	sai3
-喲	yao1	20%
-嘛	ma2	0.5%
-咻	xiu3	0%
-呴	hou3	0%
-呴	gou3	0%
-喀	ke4
-蜡	cha4	0%
-冊	chai3	0%
-册	chai3	0%
-杠	gang1	0%
-胺	an1
-踮	dian4
-跛	bi4
-兹	ci2	800%
-茲	ci2	50%
-玆	ci2
-腋	yi4
-硐	tong2
-楔	xie4
-溯	shuo4
-鐧	jian4
-鐗	jian4
-锏	jian4
-亀	jun1	0%
-亀	qiu1	0%
-龟	jun1	0%
-龟	qiu1	0%
-区	gou1	0%
-区	ou1	0%
-吨	dun4
-頓	du2	0%
-顿	du2	0%
-圏	juan1	0%
-圏	juan4	0%
-圏	quan4	0%
-车	ju1	0%
-论	lun1	0%
-説	yue4	0%
-乐	yue4	0%
-乐	yao4	0%
-乐	lao4	0%
-樂	yao4	0%
-樂	lao4	0%
-楽	yao4	0%
-楽	lao4	0%
-得	dai3	0%
-华	hua4	0%
-悪	e3	0%
-悪	wu4	0%
-悪	wu1	0%
-恶	e3	0%
-恶	wu4	0%
-恶	wu1	0%
-亜	ya1	0%
-亜	ya3	0%
-亚	ya1	0%
-亚	ya3	0%
-塞	sei1	0%
-语	yu4	0%
-告	gu4	0%
-吿	gu4	0%
-數	cu4	0%
-數	su4	0%
-数	shu3	0%
-数	shuo4	0%
-数	cu4	0%
-数	su4	0%
-婢	bei4
-义	cha2
-义	cha3
-亲	qing4
-呒	mu2
-只	zhi2
-凈	zheng1
-吁	yu1	4%
-崖	ai2
-崕	ai2
-开	qi2
-恷	xiao1
-丆	han3
-個	ge3	0%
-个	ge5	0%
-个	ge3	0%
-亇	ge5	0%
-亇	ma1	0%
-捋	le4
-濕	ta4	0%
-濕	luo4	0%
-濕	xi2	0%
-湿	ta4	0%
-湿	luo4	0%
-湿	xi2	0%
-沌	zhuan4	0%
-豉	shi4
-噌	ceng3
-呠	pen3	10%
-尛	ma2	10%
-尛	ma5	10%
-尛	mo2	10%
-尛	mo5	10%
-痾	e1
-浣	huan3	10%
-澣	huan4	10%
-壬	wang2	10%
-壬	wang4	10%
-壬	yu4	10%
-邪	xia2	10%
-邪	ye2	10%
-邪	yu2	10%
-邪	xu2	10%
-邪	ya2	10%
-玡	ya4
-有	you4	0%
-碪	kan4	10%
-椹	zhen1	10%
-椹	ren4	10%
-諶	shen4
-谌	shen4
-箇	ge5	1%
-埤	bei1
-埤	bi4
-埤	pi4
-堄	ni2
-眭	wei4
-氣	xi4	0%
-吗	ma1	0%
-吗	ma3	0%
-吗	ma5	0%
-汐	xi4
-卬	yang3
-卬	mao3	0%
-睪	gao1	50%
-睪	ze2	0%
-睾	yi4	1%
-#皋	yao2	1%
-皋	hao2	0%
-禧	xi1
-痴	chi2
-癡	chi2	1%
-鉈	tuo2
-铊	tuo2
-炅	jiong3	0%
-焆	jue2	0%
-焨	juan1	0%
-炔	jue2	0%
-炴	gui4	0%
-渾	hun4	0.1%
-渾	gun3	0.1%
-浑	hun4	0%
-浑	gun3	0%
-屯	chun2	0%
-拚	fen4	40%
-拚	bian4	40%
-甚	shen2	5%
-甚	she2	5%
-皖	huan3	1%
-晥	huan3	1%
-晥	wan3	1%
-缶	guan4	1%
-兒	er1	1%
-莞	wan1	1%
-婠	wa4	1%
-斜	xia2	0%
-斜	ye2	0%
-#角	jia3	0%
-角	lu4	0%
-龘	ta4	0%
-龖	ta4	0%
-臬	ji4	0%
-犄	yi1	0%
-旮	xu4	0%
-婀	e3	0%
-呶	nu2	0%
-莠	you4	0%
-齟	zu1	0%
-龃	zu1	0%
-臧	zang4	0%
-臧	cang1	0%
-比	pi2	0%
-張	zhang4	0%
-翕	xi1	0%
-醍	ti3	0%
-沆	hang2	0%
-可	ke4	0%
-焱	yi4	0%
-炎	yan4	10%
-雙	shuang4	0%
-双	shuang4	0%
-辨	pian4	0%
-僻	bei4	0%
-落	lao4	10%
-華	hua1	0%
-华	hua1	0%
-説	shui4	0%
-平	pian2	0%
-日	mi4	0%
-紅	gong1	0%
-灥	chuan1	0%
-灥	quan2	0%
-灥	quan4	0%
-刕	zhou1	0%
-孨	ni3	0%
-犇	ben4	0%
-壘	lv4	0%
-垒	lv4	0%
-瞐	mao4	0%
-飍	biao1	0%
-馫	xing1	0%
-馨	xing1
-鱻	xian3	0%
-㐂	xi3	0%
-沉	shen3	0%
-迊	ying2	10%
-迊	ying4	0%
-迊	bi4	0%
-暝	ming4	0%
-舍	she3
-捨	she4	10%
-幹	gan1	1%
-幹	han2	0%
-谷	jue2	0%
-王	yu4	0%
-王	ren2	0%
-風	feng4	0%
-畿	qi2	30%
-各	ge3	0%
-剌	ci4	0%
-㞎	pa1	0%
-敧	qi1	0%
-敧	ji1	0%
-㹴	geng1
-䅟	shan1	0%
-䅟	cen1	0%
-穇	cen3	0%
-穇	cen1	0%
-䩞	tie4	0%
-䩞	die2	0%
-鹮	xuan2	0%
-許	hu3	0%
-冴	ya4	0%
-差	chai4	0%
-差	cuo1	0%
-不	fu1	0%
-不	fou3	0%
-不	fou1	0%
-哌	gua1	0%
-哌	wa1	0%
-睢	ju1	0%
-汗	han2	1%
-峮	qun2	10%
-導	dao4	10%
-导	dao4	10%
-敖	ao4	10%
-員	yun2	0%
-員	yun4	0%
-孚	fu1	0%
-肉	ru4	0%
-冒	mo4	0%
-仝	quan2	0%
-喺	xi2	10%
-质	zhi2
-貭	zhi4
-于	xu1	0%
-干	han2	0%
-转	zhuan4	0%
-红	gong1	0%
-单	shan4	0%
-单	chan2	0%
-応	ying1	0%
-应	ying4	0%
-噟	ying1	0%
-攝	nie4	0%
-摄	nie4	0%
-苹	pin2
-间	jian4
-们	men5
-们	men2
-長	zhang4	0%
-长	chang2
-长	zhang4	0%
-么	ma2	0%
-么	mo5	0%
-么	mo1	0%
-么	me1	0%
-属	zhu3	0%
-涨	zhang4
-音	yin4	0%
-倾	keng1	0%
-顷	qing1	0%
-压	ya4	1%
-当	dang4
-着	zhu4	0%
-還	xuan2	0%
-还	xuan2	0%
-綠	lu4	0%
-緑	lu4	0%
-绿	lu4	0%
-几	ming2	0%
-几	ren2	0%
-几	shu1	0%
-頁	xie2	0%
-页	xie2	0%
-覌	guan4	10%
-观	guan4	10%
-観	guan4	10%
-打	ding3	0%
-朾	ting1	0%
-朾	da2	0%
-朾	da3	0%
-担	qi4	0%
-升	dou3	0%
-種	chong2	0%
-也	yi2	0%
-會	hui3	0%
-會	gui4	0%
-会	kuai4	0%
-会	hui3	0%
-会	gui4	0%
-合	ge2	0%
-奇	ai3	0%
-椅	yi1	0%
-疋	ya3	0%
-疋	shu1	0%
-疋	zheng4	0%
-兄	kuang4	0%
-足	ju4	0%
-骨	gu1	0%
-骨	gu2	0%
-從	zong1	0%
-从	zong1	0%
-从	zong4	0%
-从	cong1	0%
-文	wen4	0%
-錯	cu4	0%
-錯	xi2	0%
-错	cu4	0%
-错	xi2	0%
-其	ji1	0%
-其	ji4	0%
-卞	ji1	0%
-卞	ji4	0%
-卞	qi2	0%
-夏	jia3	0%
-作	zuo1	0%
-作	zuo2	0%
-听	ting4	0%
-弁	pan2	0%
-女	nv4	0%
-难	nan4	0%
-击	ji2	0%
-嚇	he4	50%
-吓	he4	50%
-哧	he4	50%
-哧	xia4	50%
-黑	he4	0%
-黑	hei3	0%
-黒	he4	0%
-黒	hei3	0%
-反	fan4	0%
-使	shi4	0%
-了	liao4	0%
-共	gong1	0%
-共	gong3	0%
-三	san4	0%
-叁	san4	0%
-叄	san4	0%
-弎	san4	0%
-句	qu4	0%
-居	ji1	0%
-食	yi4	0%
-請	qing1	0%
-请	qing1	0%
-脫	tui4	0%
-它	tuo1	0%
-它	tuo2	0%
-它	she2	0%
-它	yi2	0%
-蛇	yi2	0%
-他	tuo1	0%
-佗	tuo1	0%
-佗	duo4	0%
-佗	ta1	0%
-她	jie3	0%
-牠	tuo1	0%
-牠	tuo2	0%
-㸰	ke1	0%
-我	e3	0%
-庅	ma1	0%
-庅	me5	0%
-麽	mo2	0%
-麽	mo5	0%
-麽	me1	0%
-麽	ma2	0%
-仩	shang4	0%
-仩	chang2	0%
-堔	chen1	0%
-忄	xin1	0%
-扌	shou3	0%
-繌	zong1	0%
-𩾀	gu1	0%
-𡞵	mou3	0%
-㛟	mou3	0%
-伬	chi3	0%
-凖	zhun3	0%
-匇	cong1	0%
-呗	bai4	0%
-呗	bai5	0%
-呗	bei1	0%
-呗	bei5	0%
-呚	qi4	0%
-呚	hua2	0%
-夈	zhai1	0%
-妛	chi1	0%
-婔	fei1	0%
-媫	jie2	0%
-崰	zi1	0%
-巕	nie4	0%
-庒	zhuang1	0%
-怽	mi4	0%
-怽	mi2	0%
-怽	mo4	0%
-恖	si1	0%
-恖	si4	0%
-恖	sai1	0%
-懳	hui4	0%
-擜	e4	0%
-槗	qiao2	0%
-槡	sang1	0%
-檪	li4	0%
-檪	yue4	0%
-氇	luo2	0%
-氇	lu3	0%
-#氇	lu5	0%
-濵	bin1	0%
-濵	pin2	0%
-灳	hui1	0%
-烮	lie4	0%
-熍	qiong2	0%
-熍	qiong1	0%
-爠	qu2	0%
-爠	yao4	0%
-爠	yue4	0%
-爫	zhao3	0%
-爫	zhua3	0%
-爫	lan4	0%
-牗	you3	0%
-牗	yong1	0%
-牗	yong2	0%
-犞	qiao2	0%
-犞	se4	0%
-瞣	huan4	0%
-礀	jian4	0%
-礂	xi1	0%
-穯	se4	0%
-窽	kuan3	0%
-窽	cuan4	0%
-籖	qian1	0%
-粀	zhang4	0%
-粌	yin3	0%
-粌	yin2	0%
-糬	shu3	0%
-翶	ao2	0%
-聨	lian2	0%
-舤	fan2	0%
-舿	kua1	0%
-萟	yi4	0%
-蒏	you3	0%
-蒏	yong4	0%
-蓤	leng2	0%
-蓤	ling2	0%
-蕱	shao1	0%
-蕱	shuo4	0%
-藲	ou1	0%
-藲	shu1	0%
-蘕	peng2	0%
-蛯	lao3	0%
-螁	tui4	0%
-螁	tun4	0%
-螁	shui4	0%
-謢	hu4	0%
-隡	sa4	0%
-霗	lian2	0%
-霗	ling2	0%
-韕	chun2	0%
-韕	kuo4	0%
-飊	biao1	0%
-饹	le5	0%
-鯂	su1	0%
-麶	li2	0%
-麶	chi1	0%
-𠮶	ga3	0%
-𠮶	ge3	0%
-𠮶	ge5	0%
-嗰	ga3	0%
-𪎌	lai2	0%
-鍅	fa3	0%
-倆	liang3
-俩	liang3
-霫	xi4	0%
-涴	wan3	0%
-涴	yuan1	0%
-鵪	ya1	0%
-鹌	ya1	0%
-凸	die2	0%
-凸	tu2	0%
-凸	gu3	0%
-凹	yao1	0%
-凹	wa1	0%
-凹	wa4	0%
-㗇	xia1	0%
-唻	lai2	0%
-㗈	man2	0%
-𠵘	men4	0%
-闷	men1	0%
-㕹	fei1	0%
-𪠽	dang1	0%
-呫	tie1	0%
-呫	che1	0%
-飩	dun4	0%
-㘆	tai2	0%
-噥	nang2	0%
-哝	nang2	0%
-#朥	lao5	0%
-𦛨	lao2	0%
-嗊	gong3	0%
-嗊	gong4	0%
-唝	hong3	0%
-唝	gong3	0%
-喀	ka4	0%
-衉	ka4	0%
-衉	ka1	0%
-啃	ken4	0%
-哯	jiao4	0%
-𠯟	jiao4	0%
-啅	zhuo2	0%
-匙	shi5
-嚷	rang1
-駔	cang3	0%
-駔	zu4	0%
-廁	ci4	0%
-廁	si4	0%
-厠	ci4	0%
-厠	si4	0%
-厕	ci4	0%
-厕	si4	0%
-挲	sa5
-挲	sha5
-挲	sa1
-挲	sha1
-沙	sha4	0%
-色	she4	0%
-鞥	e4	50%
-鞥	ying1	50%
-鞥	an1	50%
-喎	kuai1	0%
-茸	rong3	0%
-排	pai3	0%
-迫	pai3	0%
-縱	zong1	0%
-縱	zong3	0%
-調	zhou1	0%
-癟	bie1
-㿜	bie1
-瘪	bie1
-啈	xin1	0%
-啈	xing4	0%
-𪢥	bian1	0%
-單	dan4	0%
-单	dan4	0%
-単	shan4	0%
-単	chan2	0%
-単	dan4	0%
-叶	ye4
-叶	she4	0%
-洙	shu1
-鈾	you4
-铀	you4
-鉛	yan2	0%
-铅	yan2	0%
-北	bo4	0%
-北	bei4	0%
-鐵	die2	0%
-鉄	die2	0%
-铁	die2	0%
-鐡	die2	0%
-鳥	diao3	0%
-鸟	diao3	0%
-寫	xie4	0%
-写	xie4	0%
-㝍	xie4	0%
-冩	xie4	0%
-洫	xie3	0%
-洫	xue4	0%
-褚	zhe3	0%
-雪	xue4	10%
-伽	qie2	10%
-钥	yue4	0%
-叻	li4	10%
-勷	xiang1
-被	pi1	10%
-翦	jian4	1%
-思	si4	1%
-思	sai1	0%
-嚼	jiao4	0%
-喷	pen4	5%
-噴	fen5	0%
-喷	fen5	0%
-洽	xia2	0%
-剔	ti4
-宅	zhe4	1%
-軸	zhu2	1%
-舳	zhou2	0%
-提	shi2	1%
-提	di1	1%
-枝	qi2	1%
-啐	za2	0%
-啐	qi5	0%
-㟯	e4
-嗲	dia1	0%
-㖸	jue2	0%
-挼	nui2	0%
-捼	nui2	0%
-捼	ruo2	0%
-捼	wei3	0%
-捼	re2	0%
-㖸	xue1	0%
-孌	lvan3
-娈	lvan3
-攣	lvan2
-挛	lvan2
-孿	lvan2
-孪	lvan2
-臠	lvan3
-脔	lvan3
-挛	lian4
-汶	men2	0%
-毋	mu3	0%
-瓸	bo2	0%
-瓼	li2	0%
-瓱	mou3	0%
-竰	li2	0%
-竓	mao2	0%
-䇆	dou3	0%
-䇉	dan4	0%
-䇉	shi2	0%
-𥪕	bing3	0%
-𩓩	dou1	0%
-𩓩	wu3	0%
-癣	xian3
-似	shi4	1%
-䩞	nian2	0%
-䩞	tian3	0%
-䩞	wei3	0%
-譞	xuan4	0%
-曱	ya1	0%
-幺	mi4	0%
-㐖	xie2
-鮭	wa1	0%
-鲑	xie2	0%
-鲑	wa1	0%
-迹	ji1
-磅	pang2	10%
-熀	huang4	0%
-熀	ye4	0%
-庄	wu3	0%
-圧	ya4	0%
-澍	zhu4	0%
-厘	chan2	0%
-鉞	hui4	0%
-钺	hui4	0%
-匿	te4	0%
-僚	liao3	0%
-叕	zhui4	0%
-吾	yu4	0%
-吾	ya2	0%
-濼	po1	0%
-濼	li4	0%
-泺	po1	0%
-泺	li4	0%
-泺	bo2	0%
-泺	po4	0%
-処	chu4	0%
-处	chu3	0%
-蔹	lian2	0%
-蔹	lian4	0%
-蘝	lian2	0%
-蘝	lian4	0%
-薟	lian4	0%
-勔	min3	0%
-叡	rui3	0%
-扱	cha1	0%
-扱	qi4	0%
-担	da2	0%
-峉	e2	0%
-呢	ni3	0%
-啄	zhou4	0%
-𨻶	xi4	0%
-噍	jiao2	0%
-噍	jue2	0%
-潽	pu3	0%
-堕	hui1	0%
-噧	ta4	0%
-佛	bo2	0%
-埢	juan4	0%
-卡	nong4	0%
-卡	long4	0%
-嬭	ni4	0%
-妳	ni4	0%
-戍	xu1	0%
-隶	shi4	0%
-娉	pin4
-翁	weng3	0%
-蕑	jian3	0%
-䔵	jian1	0%
-#䔵	jian3	0%
-薔	se4	0%
-蔷	se4	0%
-掲	qi4	0%
-玚	yang2	0%
-𩾖	fu2	0%
-餄	jia2	0%
-饸	jia2	0%
-餎	ge1	0%
-餎	le4	0%
-饹	ge1	0%
-饹	le4	0%
-鞡	la1	0%
-𤷟	la1	0%
-和	si1	0%
-吅	lin2	0%
-墶	da5	0%
-墶	da2	0%
-垯	da1	0%
-垯	da2	0%
-𡐿	da2	0%
-胳	ge2	0%
-慌	huang3	0%
-尢	you2	0%
-兯	jie2	0%
-#兯	han1	0%
-#爳	han1	0%
-逡	xun4	0%
-彖	shi3	0%
-㞘	tun2	0%
-屈	jue2	0%
-翏	liao2
-㡘	jian1	0%
-#𢅏	jian1	0%
-冏	jiong1	0%
-乙	yi4	0%
-㤤	yu3	0%
-贛	zhuang4	0%
-搄	gen4	0%
-搄	geng4	0%
-揯	geng4	0%
-揯	geng1	0%
-捏	nian3	0%
-拘	gou1	0%
-措	ze2	0%
-措	ci4	0%
-揃	qian1	0%
-侰	jun4	0%
-㟒	qun2	0%
-湣	hun1	0%
-焟	xi2	0%
-藈	kui1	0%
-抆	wen3	0%
-抆	men2	0%
-㕙	rui4	0%
-柟	ran2	0%
-楪	ye4	0%
-㷤	he4	0%
-#㷤	hu2	0%
-謻	chi3	0%
-濬	xun4	0%
-浚	xun4	0%
-葠	shan1	0%
-薓	shan1	0%
-泞	chu3	0%
-泞	ning2	0%
-濘	ning2	0%
-泞	ni4	0%
-濘	ni4	0%
-綺	yi3
-绮	yi3
-净	zheng1	0%
-櫟	yue4
-炢	hu1	0%
-烼	hu1
-䀨	tian2	0%
-煎	jian4	0%
-丹	zhou1	0%
-珩	hang2	0%
-瑹	tu2	0%
-番	fan2	0%
-瞤	ruan2	0%
-碌	luo4	0%
-稅	tuo1	0%
-稅	tui4	0%
-稅	tuan2	0%
-鿋	xi1	0%
-喜	xi1	0%
-喜	chi4	0%
-撷	jie2	0%
-秔	geng1	0%
-稉	geng1	0%
-䊮	zhe2	0%
-䊮	zhe4	0%
-窈	yao4	0%
-芍	xiao4	0%
-芍	di4	0%
-芈	mie1	0%
-#𦒎	guan4	0%
-趼	yan4	0%
-臯	hao2	0%
-爓	xun2	0%
-爓	xian2	0%
-囡	ni4	0%
-衎	kan3	0%
-虹	gong4	0%
-袥	tuo4	0%
-桶	yong3	0%
-呃	ai4	0%
-迣	chi4	0%
-迣	li4	0%
-#迣	shi4	0%
-迋	kuang1	0%
-逌	you1	0%
-伽	ga1	0%
-遌	wu4	0%
-遌	wu3	0%
-薳	yuan3	0%
-䓕	wei3	0%
-䤨	pi1	0%
-銢	pi1	0%
-鈲	pi1	0%
-锯	ju1	0%
-胃	zhou4	0%
-熕	gong4	0%
-镝	di2	0%
-镐	hao4	0%
-䭕	jian4	0%
-鏏	hui4	0%
-鏸	wei4	0%
-𨰓	jian4	0%
-岯	pi1	0%
-逢	pang2	0%
-逄	peng2	0%
-逄	feng2	0%
-頯	qiu2	0%
-鮁	ba2	0%
-鲅	ba2	0%
-鲅	bo1	0%
-䱒	yi4	0%
-䱒	ye1	0%
-鴄	pi3	0%
-鴄	bei1	0%
-扻	kan3	0%
-扻	jie2	0%
-扻	sun3	0%
-扻	zhi4	0%
-欿	qian4	0%
-埳	xian4	0%
-请	qing2	0%
-与	yu2	0%
-与	yu4	0%
-瞓	fen4
-瞓	shui4	0%
-核	gai1	0%
-核	hu2	0%
-划	hua4	90%
-谯	qiao4	50%
-鉻	luo4	50%
-铬	luo4	50%
-囗	guo2	0%
-堁	kuo4	0%
-堁	kui4	0%
-堁	wo4	0%
-㷫	yun4	0%
-𠲬	ji1	0%
-僆	lian3	0%
-#靚	liang2	0%
-𬊜	luo2	0%
-#罉	cang1	0%
-䐁	niao3	0%
-㘭	ao1	0%
-㓤	jie2	0%
-㓞	qi4	0%
-㓞	yao2	0%
-蹒	man2	0%
-赁	ren4
-哇	gui1	0%
-哇	hua2	0%
-哇	wa2	0%
-呔	tai3	0%
-兌	rui4	0%
-兌	yue4	0%
-兑	yue4	0%
-兑	mian3	0%
-兑	wen4	0%
-兊	yue4	0%
-兊	rui4	0%
-#####@ 201912 比對教育部相關字詞典檔所新增 #####
-丁	zheng1	0%
-丂	kao3	0%
-乂	ai4	0%
-乜	nie4	0%
-入	ri4	0%
-入	ru3	0%
-凵	kan3	0%
-巜	guai4	0%
-三	sa1	0%
-乞	qi4	0%
-亡	wu2	0%
-勺	zhuo2	0%
-勺	shuo4	0%
-夊	cui1	0%
-大	tai4	0%
-幺	ao1	0%
-丮	ji2	0%
-乣	diu1	0%
-亢	gang1	0%
-內	na4	0%
-六	lu4	0%
-冘	you2	0%
-午	huo5	0%
-反	fan1	0%
-夃	gu1	0%
-夭	ao3	0%
-夭	yao3	0%
-尺	chi2	0%
-扎	zha3	0%
-歹	e4	0%
-氏	zhi1	0%
-父	fu3	0%
-爻	xiao2	0%
-爿	ban4	0%
-且	ju1	0%
-乎	hu2	0%
-仡	qi4	0%
-句	gou4	0%
-扔	reng2	0%
-扔	reng3	0%
-扔	reng4	0%
-氾	fan2	0%
-犮	bo2	0%
-瓦	wa4	0%
-甲	jia4	0%
-疒	chuang2	0%
-白	bo2	1%
-皿	ming3	0%
-示	qi2	0%
-份	bin1	0%
-伐	fa1	0%
-休	xiu3	0%
-休	xu3	0%
-先	xian4	0%
-同	tong4	0%
-吔	ye5	1%
-囝	yue4	0%
-圩	yu2	0%
-圳	chou2	0%
-圳	zun4	0%
-多	duo2	0%
-妃	pei4	0%
-守	shou4	0%
-彴	bo2	0%
-扠	zha3	0%
-朱	shu2	0%
-次	zi1	0%
-汏	dai4	0%
-犴	han4	0%
-百	bo2	1%
-羊	xiang2	0%
-行	hang4	0%
-襾	xia4	0%
-阤	zhi4	0%
-阤	yi3	0%
-亨	peng1	0%
-亨	heng2	0%
-估	gu3	0%
-佃	tian2	0%
-佔	zhan1	0%
-余	xu2	0%
-佚	die2	0%
-佛	bi4	0%
-佛	fu2	0%
-免	wen4	0%
-吡	bi4	0%
-含	han4	0%
-吹	chui4	0%
-吽	ou2	0%
-吾	yu2	0%
-呆	ai2	0%
-呔	tai5	0%
-囪	chuang1	0%
-囮	you2	0%
-圻	yin2	0%
-圾	ji2	0%
-均	yun4	0%
-夾	jia4	0%
-妎	xi4	0%
-妨	fang1	0%
-尨	meng2	0%
-尬	jie4	0%
-岔	cha2	0%
-庉	tun2	0%
-庋	ji3	0%
-弅	fen2	0%
-忘	wang2	0%
-忪	song1	0%
-把	bai3	0%
-抌	dan3	0%
-杉	sha1	0%
-杕	duo4	0%
-杘	chi1	0%
-汩	yu4	0%
-沃	wu4	0%
-沏	qu1	0%
-灺	duo4	0%
-牡	mou3	0%
-甸	tian2	0%
-皀	xiang1	0%
-芍	shuo4	0%
-芏	tu3	0%
-言	yin2	0%
-身	juan1	0%
-阨	ai4	0%
-並	bang4	0%
-丳	chan4	0%
-些	suo4	0%
-京	yuan2	0%
-佪	hui2	0%
-佰	bo2	0%
-佰	mo4	0%
-佷	heng2	0%
-佻	tiao2	0%
-來	lai4	0%
-冼	sheng3	0%
-卷	quan2	0%
-呫	che4	0%
-呴	hou1	0%
-呴	xu3	0%
-呷	xia2	0%
-呺	hao2	0%
-咇	bi3	0%
-咇	bie2	0%
-和	huo5	10%
-咎	gao1	0%
-坯	pei1	0%
-坳	ao1	0%
-妯	zhu2	0%
-始	shi4	0%
-姍	xian1	0%
-宓	fu2	0%
-宛	yuan1	0%
-岝	ze2	0%
-岡	gang3	0%
-帑	nu2	0%
-怔	leng4	0%
-怗	zhan1	0%
-怢	tu2	0%
-怫	bei4	0%
-怬	si4	0%
-怯	que4	100%
-戕	qiang2	0%
-披	pei1	0%
-抵	zhi3	0%
-抻	shen4	0%
-押	ya2	0%
-拂	bi4	0%
-拆	che4	0%
-拌	pan4	0%
-拍	bo2	0%
-拍	pa1	0%
-拍	po4	0%
-拎	ling1	0%
-拗	yu4	0%
-招	qiao2	0%
-招	shao2	0%
-放	fang3	0%
-杬	wan4	0%
-杷	ba5	0%
-杷	pa5	0%
-构	gou1	0%
-枕	zhen4	0%
-沮	ju1	0%
-沮	ju4	0%
-沷	fu2	0%
-沸	fu2	0%
-治	chi2	0%
-泌	bi4	0%
-泙	peng1	0%
-泛	feng3	0%
-泜	chi2	0%
-泭	fu2	0%
-炊	chui4	0%
-玢	bin1	0%
-玭	pi2	0%
-玭	pian2	0%
-甾	zi1	0%
-知	zhi4	0%
-矼	qiang1	0%
-穸	xi4	0%
-穹	qiong1	0%
-糾	jiu3	0%
-羋	mie1	0%
-耵	ding3	0%
-耵	ting1	0%
-肪	fang1	0%
-肯	keng3	0%
-肴	xiao2	0%
-肵	jing4	0%
-肵	qi2	0%
-肺	pei4	0%
-臾	yong3	0%
-芘	bi4	0%
-芧	zhu4	0%
-芴	hu1	0%
-芺	yao1	0%
-虎	hu1	0%
-迋	guang3	0%
-迎	ying4	0%
-迕	wu4	0%
-邳	pei2	0%
-雨	yu4	0%
-非	fei3	0%
-亮	liang2	0%
-俇	wang3	0%
-俔	qian4	0%
-俛	fu3	0%
-俞	shu1	0%
-俞	yu4	0%
-俟	qi2	0%
-俠	jia2	0%
-信	shen1	0%
-削	xue4	0%
-厖	mang2	0%
-咬	jiao1	0%
-咯	ge2	0%
-咳	ka3	0%
-咻	xu3	0%
-咼	kuai1	0%
-哆	che3	0%
-哇	wa5	100%
-哈	ka1	0%
-复	fou4	0%
-契	qie4	0%
-契	xie4	0%
-奓	zha1	0%
-奓	chi3	0%
-姣	jiao3	0%
-屎	xi1	0%
-峉	e1	0%
-帣	juan3	0%
-帥	shuo4	0%
-徇	xun2	0%
-怨	yuan1	0%
-恪	que4	0%
-恫	tong1	0%
-扃	jiong3	0%
-拶	za2	0%
-拾	shi1	0%
-拾	she4	0%
-挃	zhi2	0%
-挖	wa2	0%
-施	yi2	0%
-施	yi4	0%
-昫	xu3	0%
-昳	yi4	0%
-枳	ji3	0%
-枹	bao1	0%
-枹	fu2	0%
-柁	duo4	0%
-柄	bing4	0%
-柈	pan4	0%
-柑	qian2	0%
-柞	ze2	0%
-柣	die2	0%
-柵	shan4	0%
-柷	chu4	0%
-歪	wai3	0%
-洗	xian3	0%
-洞	tong2	0%
-洸	huang3	0%
-洼	gui1	0%
-癹	po1	0%
-盾	shun3	0%
-矜	guan1	0%
-矜	qin2	0%
-砈	e4	0%
-砉	huo4	0%
-砌	qie4	0%
-研	yan4	0%
-秎	fen2	0%
-籺	xi4	0%
-紀	ji3	0%
-罘	fou2	0%
-耑	duan1	0%
-胂	shen1	0%
-胉	po4	0%
-胖	pan2	0%
-胗	zhen3	0%
-胣	yi3	0%
-舡	xiang1	0%
-苑	yu4	0%
-苑	yuan2	0%
-苛	he2	0%
-若	re3	0%
-苴	ju3	0%
-茂	mou4	0%
-茇	bei4	0%
-茍	ji2	0%
-虷	han2	0%
-赳	jiu3	0%
-迮	zuo4	0%
-郃	ge2	0%
-釓	ga1	0%
-革	ji2	0%
-㟏	han1	0%
-㭘	xia2	0%
-亳	bo4	1%
-俱	ju1	0%
-俺	yan4	0%
-俾	bei1	0%
-俾	bi4	1%
-倘	chang2	0%
-倡	chang1	0%
-倬	zhuo2	0%
-倭	wo3	0%
-倭	wei1	0%
-值	zhi4	0%
-冣	zui4	0%
-剟	duo2	0%
-原	yuan4	0%
-哮	xiao4	0%
-哱	po4	0%
-哳	zha2	0%
-哷	le4	0%
-哺	bu4	0%
-哺	pu3	0%
-哿	ke3	0%
-唈	e4	0%
-唧	ji2	0%
-圂	huan4	0%
-垺	fu2	0%
-埒	le4	0%
-埔	bu3	0%
-娠	zhen4	0%
-娭	xi1	0%
-孫	xun4	0%
-孫	sun4	0%
-害	he2	0%
-家	gu1	0%
-射	shi2	0%
-屘	man1	0%
-崁	kan3	0%
-庫	she4	0%
-庬	mang2	0%
-庬	meng3	0%
-恣	zi1	0%
-恣	ci1	0%
-悗	men3	0%
-悚	song2	0%
-挐	ru2	0%
-振	zhen1	0%
-挼	nuo2	0%
-挼	hui1	0%
-捎	shao4	0%
-捕	bu4	0%
-旁	bang4	0%
-朓	tiao3	0%
-柴	zhai4	0%
-栖	xi1	0%
-栟	ping2	0%
-桁	hang4	0%
-桉	an4	0%
-欬	ke2	0%
-浪	lang2	0%
-浬	li2	0%
-浮	fou2	0%
-浸	jin1	0%
-涒	jun1	0%
-涒	yun1	0%
-烕	xue4	0%
-烙	luo4	0%
-畝	mou3	0%
-痃	xian2	0%
-益	yi2	0%
-眙	chi4	0%
-砟	zha4	0%
-砠	ju1	0%
-砢	ke1	0%
-砫	zhu4	0%
-秤	ping2	0%
-窄	ze2	0%
-竘	ju3	0%
-紑	fou1	0%
-純	zhun3	0%
-紕	pi2	0%
-紝	ren2	0%
-罜	zhu4	0%
-罞	meng2	0%
-耕	jing1	0%
-脊	ji2	0%
-般	bo1	20%
-茈	chai2	0%
-茈	ci2	0%
-茗	ming3	0%
-茩	gou3	0%
-茷	pei4	0%
-茹	ru4	0%
-荂	hua1	0%
-衃	fou2	0%
-衾	qin2	0%
-趵	bo1	0%
-趷	he2	0%
-迸	bing3	0%
-适	gua1	0%
-郘	lv3	0%
-郝	he4	0%
-釕	liao4	0%
-釘	ding4	0%
-釙	po4	0%
-隼	zhun3	0%
-髟	shan1	0%
-㖪	yu4	0%
-倏	shu4	0%
-偪	fu2	0%
-側	ze4	0%
-偺	za2	0%
-副	pi4	0%
-勘	kan4	0%
-厜	chui2	0%
-唶	ji2	0%
-唶	ze4	0%
-唼	qie4	0%
-唼	sha4	0%
-唼	za1	0%
-啁	chao2	0%
-啞	e4	0%
-埶	shi4	0%
-培	pou3	0%
-堁	ke3	0%
-堇	jin4	0%
-堋	beng4	0%
-堐	ai2	0%
-娶	qu4	0%
-娸	qi1	0%
-婁	lv3	0%
-婐	e3	0%
-寀	cai3	0%
-屠	chu2	0%
-崢	cheng2	0%
-帴	can2	0%
-庳	bei1	0%
-弸	peng2	0%
-徠	lai4	0%
-御	ya4	0%
-悷	li4	0%
-悾	kong3	0%
-惋	wan4	0%
-惏	lan2	0%
-惔	tan2	0%
-惛	men4	0%
-戚	cu4	0%
-捩	li4	0%
-捻	nie1	0%
-掇	duo2	0%
-掖	yi4	0%
-掗	ya3	0%
-掞	yan4	0%
-探	tan1	0%
-曼	wan4	0%
-桯	ying2	0%
-桵	rui3	0%
-梜	jie2	0%
-梣	chen2	0%
-梮	ju2	0%
-械	jie4	0%
-梲	tuo1	0%
-楖	jie2	0%
-欶	sou4	0%
-殹	yi1	0%
-殺	shai4	0%
-涎	yan4	0%
-涷	dong4	0%
-涸	hao4	0%
-涼	liang4	0%
-涿	zhuo2	0%
-淜	peng1	0%
-淠	pei4	0%
-淢	xu4	0%
-淰	shen3	0%
-淹	yan4	0%
-烴	qing1	0%
-猗	e3	0%
-猗	yi3	0%
-猞	she4	0%
-率	shuo4	0%
-琀	han4	0%
-琊	ye2	0%
-琍	li4	0%
-畦	xi1	0%
-疏	shu4	0%
-疏	su1	0%
-疵	ci2	0%
-痒	yang2	0%
-眯	mi1	0%
-眽	mai4	0%
-硌	luo4	0%
-票	piao1	0%
-笮	zha4	0%
-笴	ge3	0%
-紬	chou1	0%
-紮	zha2	0%
-累	lei2	0%
-脘	wan3	0%
-脟	luan3	0%
-脧	zui1	0%
-舺	jia3	0%
-荸	bo2	0%
-荼	shu1	0%
-莆	fu3	0%
-莏	cuo1	0%
-莙	jun4	0%
-莨	lang2	0%
-莨	liang2	0%
-莫	mu4	0%
-蚴	you3	0%
-蚺	tian4	0%
-蛆	ju1	0%
-術	sui4	0%
-袢	fan2	0%
-袤	mou4	0%
-訢	xi1	0%
-訥	na4	0%
-責	zhai4	0%
-趼	yan2	0%
-這	zhei4	0%
-造	cao4	0%
-逢	peng2	0%
-逤	sha1	0%
-酘	tou2	0%
-釤	shan4	0%
-陰	an1	0%
-陰	yin4	0%
-陳	zhen4	0%
-陶	yao2	0%
-雩	yu4	0%
-頄	kui2	0%
-麥	mo4	0%
-䟫	cheng2	0%
-傌	ma3	0%
-傒	xi4	0%
-傖	cheng2	0%
-凔	chuang4	0%
-啻	ti4	0%
-喁	yu2	0%
-喋	zha2	0%
-喌	zhu4	0%
-喏	nuo4	0%
-喒	za2	0%
-喦	ji2	0%
-喬	jiao1	0%
-塈	xi4	0%
-婼	ruo4	0%
-媕	yan3	0%
-媮	yu2	0%
-孳	zi4	0%
-尋	xin2	0%
-尰	chong4	0%
-崱	ze4	0%
-巽	sun4	0%
-幅	bi1	0%
-復	fou4	0%
-惺	xing3	0%
-愀	jiu3	0%
-愒	qi4	0%
-愓	shang1	0%
-愣	leng1	0%
-揃	jian3	0%
-揄	yao2	0%
-揄	you2	0%
-揆	kui3	0%
-揊	bi4	0%
-揖	ji2	0%
-揭	qi4	0%
-揵	jian4	0%
-敦	dui1	0%
-敦	dui4	0%
-敦	dun4	0%
-斐	fei1	0%
-景	ying3	0%
-棣	ti4	0%
-棲	xi1	0%
-棹	zhao4	0%
-椑	pi2	0%
-欻	xu4	0%
-毲	duo2	0%
-氯	lu4	0%
-氰	qing1	0%
-渣	zha3	0%
-渴	he2	0%
-渴	jie2	0%
-湛	dan1	0%
-湩	dong4	0%
-焚	fen4	0%
-焞	chun2	0%
-犆	zhi2	0%
-猒	yan4	0%
-琶	ba5	0%
-琶	pa5	0%
-番	po2	0%
-硪	e3	0%
-稍	shao4	0%
-窘	jun3	0%
-粥	zhu4	0%
-絎	heng4	0%
-絣	beng1	0%
-聒	gua1	0%
-腊	xi2	0%
-臷	zhi4	0%
-艵	ping2	0%
-菀	yu4	0%
-菀	yuan4	0%
-菂	di1	0%
-菉	lv4	0%
-菑	zai1	0%
-菔	bo2	0%
-菟	tu2	0%
-菲	fei4	0%
-菴	an4	0%
-菸	yu2	0%
-菹	ju1	0%
-菽	shu2	0%
-萁	ji1	0%
-萄	tao5	0%
-萆	bei1	0%
-蛬	gong3	0%
-袷	jie2	0%
-診	zhen1	0%
-詄	yi4	0%
-詐	zha3	0%
-詘	chu4	0%
-貸	te4	0%
-費	bi4	0%
-貿	mou4	0%
-賁	fen4	0%
-跇	chi4	0%
-跑	pao2	0%
-跕	tie1	0%
-跖	zhe4	0%
-軷	bo2	0%
-軸	zhou4	0%
-逮	di4	0%
-鄉	xiang4	0%
-鈀	ba1	0%
-鈃	jian1	0%
-鈔	chao4	0%
-鈚	pi2	0%
-鈧	kang1	0%
-閌	kang4	0%
-閒	jian1	0%
-隃	yao2	0%
-雅	ya1	0%
-颩	cuo1	0%
-飲	yin4	0%
-鳦	yi4	0%
-僄	piao1	0%
-僅	jin4	0%
-剸	zhuan1	0%
-勣	ji1	0%
-嗑	he2	0%
-嗛	qian1	0%
-嗛	qian3	0%
-嗛	xian2	0%
-嗲	die1	0%
-奧	yu4	0%
-徬	bang4	0%
-感	han4	0%
-愾	xi4	0%
-慅	cao3	0%
-慌	huang5	0%
-搐	chou1	0%
-搕	ke1	0%
-搨	ta1	0%
-搭	da2	0%
-搶	chuang3	0%
-搷	tian2	0%
-搽	ca1	0%
-暇	xia4	0%
-暈	yin4	0%
-暍	ye4	0%
-暖	xuan1	0%
-楄	bian1	0%
-楅	fu2	0%
-楗	juan4	0%
-楙	mou4	0%
-楬	qia4	0%
-業	nie4	0%
-楱	cou4	0%
-殜	ye4	0%
-毹	yu2	0%
-溜	liu4	0%
-溪	qi1	0%
-溰	yi1	0%
-煆	xia4	0%
-煠	zha2	0%
-煦	xu3	0%
-煬	yang4	0%
-犍	qian2	0%
-猼	pao2	0%
-瑁	mei4	0%
-瑊	zhen1	0%
-瓽	dang3	0%
-當	dang3	0%
-畷	zhuo2	0%
-盟	meng4	0%
-硼	peng1	0%
-碆	po2	0%
-稟	bin1	0%
-稟	lin3	0%
-粳	geng1	0%
-絻	wen4	0%
-綅	xian1	0%
-罫	hua4	0%
-羥	keng1	0%
-羧	zui1	0%
-翛	xiao1	0%
-腧	yu2	0%
-萹	bian3	0%
-葅	ju1	0%
-虜	luo3	0%
-蛻	shui4	0%
-蛾	yi3	0%
-蜍	yu2	0%
-蝍	jie2	0%
-衙	yu2	0%
-覛	mo4	0%
-誂	diao4	0%
-貉	hao2	0%
-賃	ren4	100%
-賄	hui3	0%
-賊	ze2	0%
-跐	ci1	0%
-跐	cai3	0%
-較	jiao3	0%
-較	jue2	0%
-逼	bi4	0%
-遂	sui2	0%
-過	guo1	0%
-達	ta4	0%
-鄑	jin4	0%
-鄗	qiao1	0%
-酩	ming2	0%
-鈸	ba2	0%
-鈹	pi1	0%
-鉭	dan4	0%
-隕	yuan2	0%
-隘	e4	0%
-零	lian2	0%
-雹	bo2	0%
-靸	ta1	0%
-頌	rong2	0%
-馲	luo4	0%
-鳪	bu3	0%
-䁑	shi4	0%
-僥	yao2	0%
-劁	qiao2	0%
-劁	qiao4	0%
-厭	yan1	0%
-嗾	zu2	0%
-嘁	za2	0%
-嘔	xu1	0%
-嘔	ou1	0%
-嘔	ou4	0%
-塺	mo4	0%
-墆	die2	0%
-墉	yong2	0%
-墐	jin4	0%
-嫖	piao1	0%
-嵷	zong1	0%
-嶄	chan2	0%
-幕	mo4	0%
-廑	jin4	0%
-廑	qin2	0%
-廜	tu1	0%
-彯	piao1	0%
-慥	cao4	0%
-慬	qin2	0%
-慷	kang3	0%
-憁	zong3	0%
-戧	qiang4	0%
-摎	jiu1	0%
-摘	ti4	0%
-摟	lou2	0%
-摸	mao1	0%
-摺	zhe3	0%
-摻	shan1	0%
-摻	can4	0%
-摽	biao4	0%
-斡	guan3	0%
-榜	beng4	0%
-榦	han2	0%
-槍	cheng1	0%
-歋	ye2	0%
-殠	xiu4	0%
-毄	ji2	0%
-滎	ying2	0%
-滫	xiu3	0%
-漆	qu4	0%
-漊	lou2	0%
-漕	zao4	0%
-漩	xuan4	0%
-漫	man2	0%
-漯	luo4	0%
-漱	sou4	0%
-潀	zhong1	0%
-潎	pie1	0%
-熅	yun2	0%
-熇	he4	0%
-熇	hu4	0%
-熏	xun4	0%
-熙	yi2	0%
-獃	ai2	0%
-獌	wan4	0%
-瑳	cuo1	0%
-瘈	qi4	0%
-瘈	zhi4	0%
-瘌	la5	0%
-瞀	mou4	0%
-瞂	fa1	0%
-碩	shi2	0%
-箐	jing1	0%
-箐	qian4	0%
-箑	jie2	0%
-粽	zhong4	0%
-綝	lin2	0%
-綮	qing4	0%
-緆	xi4	0%
-耤	jie4	0%
-聞	wen4	0%
-膏	gao4	0%
-蒯	kuai4	0%
-蓁	qin2	0%
-蓋	he2	0%
-蜚	fei1	0%
-蜼	lei3	0%
-蜿	wan3	0%
-蝀	dong4	0%
-裰	duo2	0%
-裻	du3	0%
-裼	xi2	0%
-誣	wu2	0%
-誨	hui3	0%
-賓	bin4	0%
-踆	cun1	0%
-遛	liu2	0%
-遜	sun4	0%
-鄘	yong2	0%
-鄙	bi4	0%
-鉺	er4	0%
-銨	an1	0%
-閩	min2	0%
-雌	ci1	0%
-需	ru2	0%
-鞄	bao1	0%
-鞅	yang3	0%
-颮	pao2	0%
-駃	jue2	0%
-骯	kang3	0%
-齊	ji4	0%
-齊	zhai1	0%
-齊	zi1	0%
-價	ga5	0%
-僿	shi4	0%
-儃	tan3	0%
-儃	shan4	0%
-儉	jian4	0%
-劇	ji2	0%
-厲	lai4	0%
-嘿	mo4	0%
-噀	sun4	0%
-噍	jiao1	0%
-噴	fen4	0%
-墮	hui1	0%
-墳	fen4	0%
-嬈	rao3	0%
-嬈	yao3	0%
-廞	qin1	0%
-彉	kuo4	0%
-憍	qiao2	0%
-憪	xian4	0%
-戭	yin3	0%
-摩	ma1	0%
-撈	lao2	0%
-撏	xun2	0%
-撕	xi1	0%
-撖	gan3	0%
-撞	chuang2	0%
-撟	jiao4	0%
-撢	tan4	0%
-撣	shan4	0%
-撬	qiao1	0%
-撮	zuo2	0%
-撮	zuo3	0%
-撮	zui4	0%
-撮	cuo4	0%
-敶	chen2	0%
-敺	ou1	0%
-槭	cu4	0%
-槮	san3	0%
-標	piao3	0%
-樠	man2	0%
-樣	xiang4	0%
-歐	ou3	0%
-殣	jin3	0%
-潝	xi4	0%
-潠	sun4	0%
-潦	lao4	0%
-潦	liao2	0%
-潬	dan4	0%
-潰	hui4	0%
-澎	peng1	0%
-濆	pen1	0%
-獝	xu4	0%
-瑾	jin4	0%
-璉	lian3	0%
-瘙	sao1	0%
-瞑	mian2	0%
-瞑	mian4	0%
-瞑	ming3	0%
-磅	beng4	0%
-磅	pang1	0%
-磈	kui3	0%
-磎	qi1	0%
-禜	yong4	0%
-糅	rou3	0%
-糊	hu1	0%
-糌	zan2	0%
-緣	yuan4	0%
-緫	zong1	0%
-緶	pian2	0%
-罷	pi2	0%
-羰	tan4	0%
-翨	shi4	0%
-蓩	mao4	0%
-蓿	su4	0%
-蔂	lei2	0%
-蔡	sa4	0%
-蔫	yan1	0%
-蔬	su1	0%
-蔽	fu2	0%
-蝐	mei4	0%
-蝤	jiu1	0%
-蝦	ha2	0%
-蝻	nan2	0%
-褊	pian2	0%
-褎	you4	0%
-褔	fu4	0%
-請	qing2	0%
-諍	zheng1	0%
-諒	liang2	0%
-諕	xia4	0%
-貏	bei4	0%
-賢	xian4	0%
-趣	cu4	0%
-踔	zhuo2	0%
-踖	que4	0%
-踝	hua4	0%
-踤	zu2	0%
-踦	qi2	0%
-踦	yi3	0%
-適	di2	0%
-遮	zhe3	0%
-醋	zuo4	0%
-銻	ti4	0%
-鋟	qian1	0%
-鋟	qin3	0%
-鋧	xian3	0%
-閬	lang3	0%
-鞈	jia2	0%
-頜	ge2	0%
-頜	han4	0%
-頦	hai2	0%
-養	yang4	0%
-駉	jiong1	0%
-駘	dai4	0%
-骲	bo2	0%
-骳	bi4	0%
-髲	bi4	0%
-髳	meng2	0%
-魄	tuo4	0%
-魬	ban4	0%
-鳽	yan2	0%
-鴃	ju2	0%
-麃	pao2	0%
-儐	bin4	0%
-儜	neng2	0%
-噠	da2	0%
-噦	yue1	0%
-噫	yi4	0%
-噱	xue1	0%
-噶	ge2	0%
-墼	ji2	0%
-壅	yong3	0%
-嬛	qiong2	0%
-廨	jie4	0%
-徼	jiao1	0%
-徼	yao1	0%
-懅	ju4	0%
-擄	luo3	0%
-擉	chu4	0%
-擗	pi4	0%
-樨	xu1	0%
-樿	shan4	0%
-橈	nao2	0%
-歙	xi4	0%
-澳	yu4	0%
-濊	huo4	0%
-濊	wei4	0%
-瀄	jie2	0%
-燉	dun1	0%
-燎	liao4	0%
-燜	men1	0%
-甋	di2	0%
-瘻	lv2	0%
-窶	lou2	0%
-篹	zuan3	0%
-篹	suan3	0%
-縣	xuan2	0%
-罺	chao1	0%
-翮	ge2	0%
-膦	lian3	0%
-膦	lin2	0%
-膴	wu3	0%
-膹	fei4	0%
-蕉	qiao2	0%
-蕝	zui4	0%
-螣	te4	0%
-褪	tui4	0%
-諞	pian2	0%
-諼	shuan4	0%
-踶	zhi4	0%
-踹	shuan4	0%
-遲	zhi4	0%
-遴	lin4	0%
-遺	wei4	0%
-遻	e4	0%
-鄳	meng3	0%
-鄳	ming3	0%
-醒	xing1	0%
-鋼	gang4	0%
-錞	dui4	0%
-錟	xian1	0%
-錢	jian3	0%
-閼	yan1	0%
-閼	yu4	0%
-隩	ao4	0%
-靦	tian3	0%
-鞔	wan3	0%
-鞘	shao1	0%
-鞙	juan1	0%
-頵	jun1	0%
-頸	geng3	0%
-餤	dan4	0%
-鴐	jia1	0%
-鴘	bian4	0%
-麇	qun2	0%
-麮	qu3	0%
-黕	dan3	0%
-壎	xuan1	0%
-嬬	ru2	0%
-尷	jian1	0%
-嶷	ni4	0%
-嶸	hong2	0%
-幪	meng3	0%
-懋	mou4	0%
-戲	hu1	0%
-戲	hui1	0%
-擩	ru4	0%
-斁	du4	0%
-曙	shu4	0%
-氉	zao4	0%
-濞	pi4	0%
-濟	ji3	0%
-燠	ao4	0%
-獲	huai2	0%
-穛	zhuo2	0%
-篸	zan4	0%
-簉	chou4	0%
-糙	cao4	0%
-糜	mi2
-縮	su4	0%
-縰	shi3	0%
-縳	chuan2	0%
-縹	piao4	0%
-繁	po2	0%
-繃	beng4	0%
-罾	zeng4	0%
-罿	chong1	0%
-翳	yi1	0%
-膻	dan4	0%
-臃	yong3	0%
-蕹	yong1	0%
-薜	bo4	0%
-薢	jie1	0%
-薢	xie4	0%
-螹	qian2	0%
-蟀	shuo4	0%
-褶	die2	0%
-褶	xue2	0%
-褶	zhe2	0%
-謅	zou1	0%
-謈	bo2	0%
-謈	bao4	0%
-謈	po4	0%
-謎	mei4	0%
-謎	mi4	0%
-謙	qian4	0%
-謚	yi4	0%
-謞	xue4	0%
-谿	qi1	0%
-豁	he4	0%
-趨	cu4	0%
-輾	nian3	0%
-避	bei4	0%
-鍉	di2	0%
-鍉	chi2	0%
-鍑	fu2	0%
-鍤	cha2	0%
-闇	an1	0%
-雖	sui2	0%
-鞞	bei1	0%
-顆	ke3	0%
-餫	yun4	0%
-餲	ai4	0%
-餳	tang2	0%
-馘	xu4	0%
-鮭	xie2	0%
-鵀	ren2	0%
-鵧	ping2	0%
-㲯	lan2	0%
-叢	cong1	0%
-嚗	bo1	0%
-嚜	mo4	0%
-奰	bei4	0%
-懫	zhi4	0%
-擷	jie2	0%
-擻	sou4	0%
-擿	ti4	0%
-擿	zhi2	0%
-曜	yue4	0%
-檳	bin1	0%
-歸	kui4	0%
-濼	bo2	0%
-濼	po4	0%
-瀁	yang3	0%
-燾	tao2	0%
-燿	yue4	0%
-爁	lan3	0%
-甔	dan4	0%
-癤	jie1	0%
-瞿	qu1	0%
-穢	wei4	0%
-簪	zen1	0%
-繜	zun3	0%
-羵	fen2	0%
-臑	ru2	0%
-臑	er2	0%
-艟	tong2	0%
-薶	wo1	0%
-藋	di2	0%
-蟫	tan2	0%
-蟯	rao2	0%
-襉	jian4	0%
-覲	jin3	0%
-謦	qing4	0%
-謷	ao4	0%
-貗	lv2	0%
-蹔	zan4	0%
-蹜	su4	0%
-蹡	qiang4	0%
-蹢	zhi2	0%
-蹣	man2	0%
-鄺	guang3	0%
-鎗	cheng1	0%
-鎘	li4	0%
-鎝	ta3	0%
-鎞	pi1	0%
-闖	chen4	0%
-闖	chuang4	0%
-雘	wo4	0%
-額	e4	0%
-鬵	xin2	0%
-魏	wei2	0%
-鮸	wan3	0%
-鯈	you2	0%
-鯓	shen1	0%
-麌	yu3	0%
-壞	guai4	0%
-懵	meng2	0%
-斄	li2	0%
-旝	kuai4	0%
-瀕	pin2	0%
-爆	bo2	0%
-爊	ao2	0%
-犦	bao4	0%
-獺	ta4	0%
-矊	mian3	0%
-矱	wo4	0%
-礛	lan2	0%
-禰	ni3	0%
-穫	hu4	0%
-簬	du4	0%
-簿	bo2	0%
-糪	bo2	0%
-繨	da5	0%
-繯	huan4	0%
-繰	zao3	0%
-繳	zhuo2	0%
-羹	lang2	0%
-藩	fan2	0%
-藷	zhu1	0%
-蟹	xie3	0%
-蟺	chan2	0%
-襝	lian4	0%
-襢	zhan4	0%
-蹲	cun2	0%
-蹶	jue3	0%
-蹻	jiao3	0%
-蹻	jue2	0%
-蹼	pu2	0%
-轑	lao2	0%
-邋	la2	0%
-醭	pu2	0%
-鎩	shai4	0%
-鏃	cu4	0%
-鏊	ao2	0%
-鏙	cui3	0%
-鏜	tang2	0%
-鏞	yong2	0%
-饉	jin4	0%
-騞	huo4	0%
-髂	ka4	0%
-鬌	duo4	0%
-鯖	zheng1	0%
-鯡	fei4	0%
-鵲	qiao3	0%
-麴	qu2	0%
-齗	yin2	0%
-㘔	sai1	0%
-㘔	sai2	0%
-嚱	xi1	0%
-嚵	chan4	0%
-攘	rang2	0%
-瀰	mi3	0%
-瀹	yao4	0%
-瀼	rang4	0%
-瀾	lan4	0%
-礦	gong3	0%
-礧	lei3	0%
-礩	zhi2	0%
-繻	ru2	0%
-翿	tao2	0%
-耀	yue4	0%
-蘁	e4	0%
-蠕	ruan3	0%
-蠖	wo4	0%
-蠙	pin2	0%
-躂	ta4	0%
-鐐	liao2	0%
-鐒	lao3	0%
-鐙	deng1	0%
-闞	kan3	0%
-闞	han3	0%
-闟	ta4	0%
-闟	xi4	0%
-韽	an4	0%
-顢	man2	0%
-顣	cu4	0%
-饎	xi1	0%
-騫	jian3	0%
-髊	zi4	0%
-鰓	xi3	0%
-鶤	yun4	0%
-鶩	mu4	0%
-鶿	ci2	0%
-黦	yu4	0%
-齙	pao2	0%
-齞	yan3	0%
-囀	zhuan3	0%
-囁	zhe2	0%
-巍	wei2	0%
-爚	yao4	0%
-瓓	lan2	0%
-籔	shu4	0%
-蘗	bo4	0%
-蘞	lian2	0%
-蘞	lian4	0%
-蘪	mi2	0%
-蠠	mi4	0%
-襬	bei1	0%
-鐭	ao4	0%
-霸	po4	0%
-驁	ao2	0%
-鰫	rong2	0%
-鶱	xian1	0%
-鶴	hao2	0%
-鶻	gu3	0%
-鷈	ti2	0%
-鷊	yi4	0%
-黭	an3	0%
-黮	tan3	0%
-孌	luan3	0%
-攞	luo1	0%
-癬	xian3	0%
-穰	rang3	0%
-籠	long3	0%
-躒	luo4	0%
-韁	gang1	0%
-驏	zhan4	0%
-驔	dian4	0%
-髒	zang3	0%
-鬫	han3	0%
-鬻	zhu4	0%
-鰿	ji2	0%
-鷩	bie1	0%
-鼵	tu2	0%
-攣	lian4	0%
-攪	gao3	0%
-籧	ju3	0%
-蠯	pi2	0%
-蠰	rang3	0%
-鱒	zun4	0%
-鱖	jue2	0%
-齰	ze2	0%
-㶟	lei2	0%
-贛	gong4	0%
-躟	rang3	0%
-躠	sa4	0%
-鱣	shan4	0%
-鸂	qi1	0%
-鹽	yan4	0%
-齵	ou2	0%
-囔	nang5	0%
-斸	zhu2	0%
-欙	lei3	0%
-纚	shi3	0%
-纛	du2	0%
-讘	zhe2	0%
-鑲	rang2	0%
-鸏	mang2	0%
-鸏	meng3	0%
-鸒	yu4	0%
-齹	chi1	0%
-蠼	jue2	0%
-釃	li2	0%
-鸔	bo2	0%
-鑽	zuan3	0%
-饡	zai4	0%
-䰖	zan3	0%
-㓦	bo4	0%
-##### 202003 比對 cc-cedict 字詞典檔所新增 #####
-㒺	wang3	0%
-㕥	yi3	0%
-㝵	ai4	0%
-㠶	fan1	0%
-㢴	xi1	0%
-㤙	en1	0%
-㧱	na2	0%
-㩗	xie2	0%
-㪟	dun1	0%
-㫺	xi1	0%
-㮎	bei1	0%
-㳒	fa3	0%
-㴱	shen1	0%
-㷭	feng1	0%
-㺵	jiu3	0%
-㼝	wan3	0%
-㽮	xing1	0%
-㿝	xiang1	0%
-䍃	yao2	0%
-䍹	shan1	0%
-䖟	meng2	0%
-䘚	zu2	0%
-䝔	huan1	0%
-䟖	zhi3	0%
-䤈	xi1	0%
-䥑	mai4	0%
-䦉	si4	0%
-䬠	fei1	0%
-䲔	jing1	0%
-侢	dai4	0%
-俊	zun4	0%
-俞	shu4	0%
-倶	ju4	0%
-倽	sha2	0%
-傓	shan1	0%
-儵	shu1	0%
-劄	zha1	0%
-劵	juan4	0%
-匔	gong1	0%
-呶	nu3	0%
-咗	zuo3	0%
-咼	wai1	0%
-哦	o5	0%
-唷	yo5	0%
-喂	wei2	0%
-嘅	kai3	0%
-嘜	mai4	0%
-嘠	ga2	0%
-噦	yue3	0%
-囝	nan1	0%
-囷	qun1	0%
-圕	tuan1	0%
-圩	xu1	0%
-坴	lu4	0%
-埒	lie4	0%
-埡	ya1	0%
-墬	di4	0%
-夅	xiang2	0%
-妳	nai3	0%
-姉	zi3	0%
-姫	ji1	0%
-媠	tuo2	0%
-寕	ning4	0%
-屓	xi4	0%
-屩	jue1	0%
-屫	jue1	0%
-峇	ke4	0%
-崤	xiao2	0%
-嶃	chan2	0%
-嶖	yan1	0%
-巂	gui1	0%
-巂	xi1	0%
-忛	fan1	0%
-慴	she4	0%
-戠	zhi2	0%
-払	fan3	0%
-扽	den4	0%
-抝	ao4	0%
-拽	zhuai3	0%
-挱	suo1	0%
-挵	nong4	0%
-捙	ye4	0%
-据	ju4	0%
-摿	yao2	0%
-攂	lei2	0%
-晿	cheng1	0%
-暜	pu3	0%
-暸	liao2	0%
-曽	ceng2	0%
-杷	ba4	0%
-柜	gui4	0%
-棁	zhuo1	0%
-榲	wen1	0%
-槕	zhuo1	0%
-樻	gui4	0%
-橎	fan3	0%
-欑	zan4	0%
-欻	xu1	0%
-歘	xu1	0%
-歛	han1	0%
-殀	yao1	0%
-殽	xiao2	0%
-沓	da2	0%
-洟	ti4	0%
-滊	xie1	0%
-潃	xiu3	0%
-灠	lan4	0%
-焢	kong4	0%
-爌	kong4	0%
-犮	quan3	0%
-獱	bian1	0%
-琝	min2	0%
-琢	zuo2	0%
-甬	tong3	0%
-畂	mu3	0%
-疸	da5	0%
-瘜	xi1	0%
-的	di1	0%
-眯	mi2	0%
-眰	die2	0%
-睖	leng4	0%
-矱	yue1	0%
-碌	liu4	0%
-碡	zhou2	0%
-磑	wei2	0%
-磕	ke4	0%
-磟	liu4	0%
-禝	ji4	0%
-秖	zhi3	0%
-節	jie1	0%
-籭	shai1	0%
-粚	chi1	0%
-紥	zha1	0%
-緫	zong3	0%
-縡	zai4	0%
-翖	xi1	0%
-翫	wan2	0%
-耊	die2	0%
-耶	ye5	0%
-芍	que4	0%
-芣	fu2	0%
-芥	gai4	0%
-草	cao4	0%
-萕	ji4	0%
-萹	bian1	0%
-蓿	xu4	0%
-蘤	hua1	0%
-蝃	zhuo1	0%
-蝡	ru2	0%
-衂	nv4	0%
-術	zhu2	0%
-衖	xiang4	0%
-袲	yi2	0%
-褀	qi2	0%
-襆	fu2	0%
-襥	fu2	0%
-覐	jiao4	0%
-諙	hua4	0%
-諝	xu1	0%
-謩	mo2	0%
-賌	gai1	0%
-踘	ju1	0%
-躹	ju1	0%
-軠	kuang2	0%
-鄫	zeng2	0%
-醱	fa1	0%
-鈆	qian1	0%
-鉄	zhi4	0%
-銕	tie3	0%
-鏚	qi1	0%
-鐱	jian4	0%
-鐽	da2	0%
-隗	kui2	0%
-霢	mai4	0%
-霺	wei1	0%
-鞝	shang4	0%
-颿	fan1	0%
-飬	yang3	0%
-髺	kuo4	0%
-魟	hong2	0%
-鮁	ba4	0%
-麫	mian4	0%
-齚	ze2	0%
-##### 以下為原 terra_pinyin 拼音編碼（部分有修正） #####
+##### @「韓文」「日文」漢字，有些沒有官方中文發音，『可能非正確讀音』！！！ #####
+#橴	za1
+#橴	ca1
+#橵	san4
+#欌	zang1
+巬	pu1
+巬	bu1
+巭	pu1
+巭	bu1
+乊	yi1
+#乊	ho5
+乤	xia4
+乥	hu4
+#乥	ho5
+乧	dou3
+乫	jia1
+乷	sha1
+乺	suo3
+乼	zhu4
+乼	cui1
+亪	ye5
+仒	bing1
+匁	wen2
+匁	mo5
+厼	er3
+壭	san5
+朩	deng3
+朩	pin4
+朩	tin4
+朰	mu4
+畓	duo1
+罖	wang3
+罖	luo2
+罖	ra1
+込	yu1
+冴	ya2
+䓀	jie2
+䓀	ju2
+𠵇	qi2
+𠵇	qi3
+#𠵇	ji1
+𣋠	cai4
+𣋠	qi2
+𣑐	diao4
+𣕚	mao4
+𣕚	mou4
+𣜿	ye4
+𣜿	die2
+𣺊	jia1
+𤨒	en1
+𦱾	ping2
+𧨎	wan2
+𨸶	ping2
+𩂱	yi1
+
+##### @以下為原 terra_pinyin 拼音編碼（部分有修正） #####
 ##### 以下為「單字」 #####
 
 〇	ling2
@@ -52250,7 +52249,7 @@ min_phrase_weight: 100
 𬌗	he2
 𫛸	ti2
 
-##### 以下為「詞組」@ #####
+##### @以下為「詞組」 #####
 㓦劃	bo4 hua4
 㕷啦	pa1 la1
 㕷噠	pa1 da2
@@ -104844,4 +104843,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### 結束 END - 102428@ #####
+##### @結束 END - 104848 #####
