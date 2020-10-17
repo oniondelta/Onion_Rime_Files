@@ -2509,11 +2509,11 @@ function endspace(key, env)
             engine:commit_text(s_orig)
             -- engine:commit_text(s_orig .. "a")
             context:clear()
-            return 0 -- kAccepted  --「0」「2」「kAccepted」「kRejected」「kNoop」：直接後綴產生空白   「1」：後綴不會產生空白，可用.." "增加空白或其他符號
-            -- 「收」 kAccepted、「拒」 kRejected、「不認得」 kNoop 分別對應返回值 1、0 和 2。
+            return 0 -- kRejected  --「0」「2」「kAccepted」「kRejected」「kNoop」：直接後綴產生空白   「1」：後綴不會產生空白，可用.." "增加空白或其他符號
+            -- 「拒」kRejected、「收」kAccepted、「不認得」kNoop，分別對應返回值：0、1、2。
+            -- 返回「拒絕」時，雖然我們已經處理過按鍵了，但系統以為沒有，於是會按默認值再處理一遍。
             -- end
         end
     end
     return 2 -- kNoop
 end
-
