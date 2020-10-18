@@ -1131,7 +1131,6 @@ min_phrase_weight: 100
 䩞	tian3	0.1%
 䩞	wei3	0.1%
 譞	xuan4	0.1%
-曱	ya1	0.1%
 幺	mi4	0.1%
 㐖	xie2
 鮭	wa1	0.1%
@@ -19749,6 +19748,7 @@ min_phrase_weight: 100
 曮	yan3
 曯	zhu2
 曰	yue1
+曱	ya1	0.1%
 曱	yue1
 曲	qu1	50%
 曲	qu3	50%
