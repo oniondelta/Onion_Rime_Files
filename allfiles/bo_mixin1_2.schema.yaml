@@ -34,7 +34,7 @@ switches:
     states: ["。，", "．，"]
   - name: simplification
     reset: 0
-    states: ["完整", "简体"]
+    states: ["原體", "简体"]
   - name: zh_tw
     reset: 1
     states: ["完整", "精簡"]
