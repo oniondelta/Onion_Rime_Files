@@ -25,7 +25,7 @@ switches:
     states: ["。，", "．，"]
   - name: simplification
     reset: 0
-    states: ["完整", "简体"]
+    states: ["原體", "简体"]
 #   - options: [ utf8, big5, gbk ]
 # #    reset: 0
 #     states:
