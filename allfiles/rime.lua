@@ -2506,14 +2506,21 @@ function endspace(key, env)
         if (not string.find(s_orig, "[%a%c%s]")) and (caret_pos == context.input:len()) then
         -- if (not string.find(o_orig, "[%a%c%s]")) and (caret_pos == context.input:len()) then
         -- if (string.find(o_orig, "[%a%c%s]")) and (caret_pos == context.input:len()) then
-            engine:commit_text(s_orig)
+            -- 下一句：游標位置向左一格，在本例無用，單純記錄用法
+            -- context.caret_pos = caret_pos - 1
+            -- 下兩句合用可使輸出句被電腦記憶
+            -- engine:commit_text("a")
+            -- engine:confirm_current_selection()
+            -- 下一句：用冒號為精簡寫法，該句為完整寫法
+            -- engine.commit_text(engine, s_orig .. "a")
             -- engine:commit_text(s_orig .. "a")
+            engine:commit_text(s_orig .. " ")
             context:clear()
-            return 0 -- kRejected  --「0」「2」「kAccepted」「kRejected」「kNoop」：直接後綴產生空白   「1」：後綴不會產生空白，可用.." "增加空白或其他符號
+            return 1 --「0」「2」「kAccepted」「kRejected」「kNoop」：直接後綴產生空白   「1」：後綴不會產生空白，可用.." "增加空白或其他符號
             -- 「拒」kRejected、「收」kAccepted、「不認得」kNoop，分別對應返回值：0、1、2。
             -- 返回「拒絕」時，雖然我們已經處理過按鍵了，但系統以為沒有，於是會按默認值再處理一遍。
-            -- end
         end
     end
     return 2 -- kNoop
 end
+
