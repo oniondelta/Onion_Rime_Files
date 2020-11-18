@@ -18,7 +18,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion_add
-version: "2020.10.17"
+version: "2020.11.18"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7
@@ -688,7 +688,7 @@ min_phrase_weight: 100
 嗃	he5	0%
 吓	he5	0%
 哈	ha5	1%
-吓	ha5	0%
+#吓	ha5	0%
 呵	he5	100%
 喝	he5	0%
 嗬	he5	0%
