@@ -4,7 +4,7 @@
 schema:
   schema_id: cyrillic
   name: ❃西里爾字母❃
-  version: "202003"
+  version: "202011"
   author:
     - 『洋蔥』
   description: |
@@ -44,12 +44,10 @@ speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz/;']"
   delimiter: "\""
   algebra:
-    - "xlit|]/|AB|"
-    - xform/^;;([a-z]+)$/$1;;/ #轉換「組合字符」前雙分號到後面
-    - xform/^([a-z]+)A$/$1;/ #大寫增加尾綴[;]
-    - xform/^([a-z]+)$/$1B/ #小寫尾綴「/」
-    - derive/^([a-z]+)([;B])$/$1/ #精簡尾綴「;」「/」
-    - "xlit|AB|]/|"
+    - xform|^;;([a-z]+)$|$1;;| #轉換「組合字符」前雙分號到後面
+    - xform|^([a-z]+)\]$|$1;| #大寫增加尾綴[;]
+    - xform|^([a-z]+)$|$1/| #小寫尾綴「/」
+    - derive|^([a-z]+)([;/])$|$1| #精簡尾綴「;」「/」
 
 translator:
   dictionary: cyrillic.extended
