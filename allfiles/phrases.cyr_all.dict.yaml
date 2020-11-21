@@ -4,7 +4,7 @@
 #『洋蔥』
 ---
 name: phrases.cyr_all
-version: "201903"
+version: "202011"
 sort: original
 use_preset_vocabulary: false
 columns:
