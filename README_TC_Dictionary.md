@@ -1,4 +1,4 @@
-#  中文字詞庫說明
+#  中文字詞庫修改說明
 
 ####  ※ 請勿使用於商業營利相關行為
 ####  ※ Commercial use is prohibited
