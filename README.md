@@ -14,7 +14,7 @@
 - 於本倉庫 Onion_Rime_Files 中按右上綠色 〔↓Code〕 ⇨ Download ZIP ⇨ 解壓縮 ZIP ⇨ 進入解壓縮後的資料夾，確認 allfiles 資料夾 和 sort_rime_file.py 是在同一層 ⇨ 執行 sort_rime_file.py ⇨ 產生一個『電腦RIME方案_{當天日期}』資料夾
 
 - 產生的『電腦RIME方案_{當天日期}』該資料夾裡面，把各方案所須使用的文件，分別安放在該『方案名稱』資料夾內，安裝部署時，把內含文件通通放入『 Rime 』安裝資料夾中，按「重新部署」即可使用。
-  > 建議替換 essay.txt（八股文）和置換新版 librime 引擎，Mac系統修改輸入法語系。
+  > 建議替換 essay.txt（八股文）和置換新版 librime 引擎，Mac系統修改輸入法語系。替換修改說明請見資料夾「主程式」內「Mac…」和「Win…」內 README.md。
 
   > 執行後產生的資料夾其名稱，後面所附註的日期為執行 sort_rime_file.py 當天日期！非版本號碼！
 
