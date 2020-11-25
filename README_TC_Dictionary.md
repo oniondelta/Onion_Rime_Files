@@ -1,4 +1,4 @@
-#  Bopomo_Pinyin_Rime_Dict（中文字詞庫，非方案）
+#  中文字詞庫說明
 
 ####  ※ 請勿使用於商業營利相關行為
 ####  ※ Commercial use is prohibited
