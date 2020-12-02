@@ -70,7 +70,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "2020.11.18"
+version: "2020.12"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -74291,7 +74291,9 @@ min_phrase_weight: 100
 撒手塵寰	sa1 shou3 chen2 huan2
 撒手歸去	sa1 shou3 gui1 qu4
 撒手鐗	sa1 shou3 jian3
+撒手鐗	sa1 shou3 jian4
 撒手鐧	sa1 shou3 jian3
+撒手鐧	sa1 shou3 jian4
 撒手閉眼	sa1 shou3 bi4 yan3
 撒拉	sa1 la1
 撒拉族	sa1 la1 zu2
