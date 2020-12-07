@@ -9,9 +9,10 @@
 
 ### 字詞庫說明：
 - essay.txt 《八股文》修改貼近台灣習慣用字，並修改詞頻，follow 官方更新。
-- terra_pinyin_onion.dict.yaml 《字庫&詞庫》原地球拼音增修，補充各字典「字」發音，「詞」改台灣習慣用字和發音。
+- terra_pinyin_onion.dict.yaml 《字庫&詞庫》原地球拼音增修，補充各字典「字」發音，「詞」改台灣習慣用字和發音，「詞」移動輕聲變調到 phrases.chtpp.dict.yaml 該檔。
 - terra_pinyin_onion_add.dict.yaml 《字庫》補充慣用但非正確之發音，且增加避免空碼產生問題刻意附加之發音。
 - phrases.chtp.dict.yaml 《詞庫》附加帶調拼音。
+- phrases.chtpp.dict.yaml 《詞庫》附加帶調拼音，只含有輕聲變音和大陸發音。
 - phrases.cht.dict.yaml 《詞庫》無附加拼音。
 
 ### 原則：
@@ -31,10 +32,11 @@
 
 - 「詞」原則上以臺灣為主，但上列原因，碼表中也存有許多對岸發音，且媒體日常影響，有些發音也不知該不該刪減，如不刪減，是否要補充沒附加到之相關詞彙發音？
 
-
 - 大量原 phrases.cht.dict.yaml 無附加拼音之詞彙，為避免破音字因素，故使用網路工具轉成帶拼音並存入 phrases.chtp.dict.yaml 中，其中因轉換之故，存有許多錯誤拼音和用字。
 
-- 「詞」的「變音」很是頭大，〈[教育部重編國語辭典](http://dict.revised.moe.edu.tw/cbdic/)〉裡（[萌典](https://www.moedict.tw/)所引用之辭典）含有許多這類詞彙發音，而網路上許多碼表更是大量引用此類發音，包含官方原版 terra_pinyin.dict.yaml，不能說是錯誤，只是一般人打字時多不會有如此變音之習慣，但「不：ㄅㄨˋ ㄅㄨˊ」「一：ㄧˊ ㄧˋ」「親屬稱謂 輕聲」等之變音，一般倒是很常慣用，故如有注意，會把這些常見變音都新增上，但冷門變音則還在思考如何處理。
+- 「詞」的「變音」（變調）很是頭大，〈[教育部重編國語辭典](http://dict.revised.moe.edu.tw/cbdic/)〉裡（[萌典](https://www.moedict.tw/)所引用之辭典）含有許多這類詞彙發音，而網路上許多碼表更是大量引用此類發音，包含官方原版 terra_pinyin.dict.yaml，不能說是錯誤，只是一般人打字時多不會有如此變音之習慣，但「不：ㄅㄨˋ ㄅㄨˊ」「一：ㄧˊ ㄧˋ」「親屬稱謂 輕聲」等之變音，一般倒是很常慣用，故如有注意，會把這些常見變音都新增上，但其他冷門變音則還在思考如何處理。
+
+- 202012 把「詞」中含有的輕聲變調和部分大陸獨有發音從 terra_pinyin_onion.dict.yaml 和 phrases.chtp.dict.yaml 兩檔移動到新建的 phrases.chtpp.dict.yaml，方案預設不啟用該檔。
 
 《字》：
 
