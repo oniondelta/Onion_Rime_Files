@@ -6,7 +6,7 @@
 # 包含中文、韓語、日語、拉丁+音標
 ---
 name: bo_mixin.extended
-version: "202002"
+version: "202012"
 sort: by_weight
 use_preset_vocabulary: true
 import_tables:
@@ -17,6 +17,7 @@ import_tables:
   - bo_mixin_la
   - phrases.cht_en_w
   - phrases.chtp
+#   - phrases.chtpp
   - phrases.cht
   - phrases.jp_hk
   - phrases.jp_hkkreduce
