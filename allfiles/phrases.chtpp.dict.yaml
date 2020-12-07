@@ -22,8 +22,8 @@
 #    詞句中，比對「髮」「著zhu4」「與」「紇乾、紇干」「怎 zen3 ze3」「企」「不」。
 #    預計比對「個 輕聲和一聲」變音。
 #
-#    （定義〈變調〉〈變音〉，為詞句中整句標註之發音，其單個字的發音與其單獨查詢字典不同為〈變調〉〈變音〉。）
-#    202012，把輕聲〈變調〉轉到 phrases.chtpp.dict.yaml ，並補上單個字有的發音。
+#    （定義〈變音(變調)〉，為詞句中整句標註之發音，其單個字的發音與其單獨查詢字典不同為〈變音(變調)〉。）
+#    202012，把輕聲〈變音(變調)〉轉到 phrases.chtpp.dict.yaml ，並補上單個字有的發音。
 # ===============================
 ---
 name: phrases.chtpp
@@ -39,6 +39,33 @@ columns:
 ...
 ####### @詞語變調輕聲 #######
 #### @其他變調為輕聲
+# 三個臭皮匠賽過一個諸葛亮	san1 ge4 chou4 pi2 jiang5 sai4 guo4 yi1 ge4 zhu1 ge3 liang4
+# 三個臭皮匠合成一個諸葛亮	san1 ge4 chou4 pi2 jiang5 he2 cheng2 yi1 ge4 zhu1 ge3 liang4
+# 三個臭皮匠勝過一個諸葛亮	san1 ge4 chou4 pi2 jiang5 sheng4 guo4 yi1 ge4 zhu1 ge3 liang4
+伙計	huo3 ji5
+扎扎實實	zha1 zha5 shi2 shi2
+三個臭皮匠賽過諸葛亮	san1 ge4 chou4 pi2 jiang5 sai4 guo4 zhu1 ge3 liang4
+三個臭皮匠頂個諸葛亮	san1 ge4 chou4 pi2 jiang5 ding3 ge4 zhu1 ge3 liang4
+躲得和尚躲不得寺	duo3 de2 he2 shang5 duo3 bu4 de2 si4
+遠來的和尚好看經	yuan3 lai2 de5 he2 shang5 hao3 kan4 jing1
+遠來的和尚會念經	yuan3 lai2 de5 he2 shang5 hui4 nian4 jing1
+當一天和尚撞一天鐘	dang1 yi1 tian1 he2 shang5 zhuang4 yi1 tian1 zhong1
+大部分	da4 bu4 fen5
+丫巴兒	ya1 ba5 er1
+擺設兒	bai3 she5 er1
+擺設兒	bai3 she5 er5
+大部分	da4 bu4 fen5
+隔扇	ge2 shan5
+苜蓿	mu4 xu5
+一機靈	yi4 ji1 ling5
+一機靈	yi1 ji1 ling5
+不在乎	bu4 zai4 hu5
+亂鬨不過來	luan4 hong5 bu4 guo4 lai2
+善罷干休	shan4 ba5 gan1 xiu1
+不見棺材不落淚	bu4 jian4 guan1 cai5 bu4 luo4 lei4
+一塌糊塗	yi1 ta1 hu2 tu5
+砢磣	ke1 chen5
+矯情	jiao2 qing5
 嘓嘓噥噥	guo1 guo5 nong2 nong1
 唧唧噥噥	ji1 ji5 nong1 nong1
 爹爹	die1 die5
@@ -67,7 +94,6 @@ columns:
 女朋友	nv3 peng2 you5
 沒德行	mei2 de2 xing5
 狗子夾尾巴	gou3 zi5 jia2 wei3 ba5
-狗日的糧食	gou3 ri4 de5 liang2 shi5
 硯台	yan4 tai5
 硯臺	yan4 tai5
 秀逗	xiu4 dou5
@@ -154,7 +180,6 @@ columns:
 上門的買賣好做	shang4 men2 de5 mai3 mai5 hao3 zuo4
 下場	xia4 chang5
 下場頭	xia4 chang5 tou2
-下工夫	xia4 gong1 fu5
 下巴	xia4 ba5
 下巴頦	xia4 ba5 ke1
 下水	xia4 shui5
@@ -716,8 +741,6 @@ columns:
 山藥	shan1 yao5
 山藥蛋	shan1 yao5 dan4
 岔換	cha4 huan5
-工夫	gong1 fu5
-工夫茶	gong1 fu5 cha2
 左性	zuo3 xing5
 左邊	zuo3 bian5
 左邊兒	zuo3 bian5 er5
@@ -1328,7 +1351,6 @@ columns:
 磨煩	mo2 fan5
 磨菇	mo2 gu5
 磨蹭	mo2 ceng5
-神甫	shen2 fu5
 禍害	huo4 hai5
 福分	fu2 fen5
 禮行貨	li3 xing5 huo4
@@ -1909,6 +1931,22 @@ columns:
 
 ##################################################
 #### @「路」「碌」「蘆」「嚕」「轆」變調為「lu5」
+葫蘆裡賣的是什麼藥	hu2 lu5 li3 mai4 de5 shi4 shen2 me5 yao4
+葫蘆裡賣的甚麼藥	hu2 lu5 li3 mai4 de5 shen2 me5 yao4
+葫蘆裡賣甚麼藥	hu2 lu5 li3 mai4 shen2 me5 yao4
+按下葫蘆浮起瓢	an4 xia4 hu2 lu5 fu2 qi3 piao2
+依葫蘆畫瓢	yi1 hu2 lu5 hua4 piao2
+軸轤千里	zhou2 lu5 qian1 li3
+葫蘆島市	hu2 lu5 dao3 shi4
+轂轆兒	gu1 lu5 er1
+葫蘆兒	hu2 lu5 er1
+葫蘆巴	hu2 lu5 ba1
+葫蘆絲	hu2 lu5 si1
+葫蘆谷	hu2 lu5 gu3
+打呼嚕	da3 hu1 lu5
+轆轤	lu4 lu5
+活路	huo2 lu5
+呼嚕	hu1 lu5
 來路貨	lai2 lu5 huo4
 外路	wai4 lu5
 外路人	wai4 lu5 ren2
@@ -1956,6 +1994,65 @@ columns:
 都嚕	du1 lu5
 轂轆	gu1 lu5
 #### @「西」「係」「息」「習」「洗」「細」「嘻」「犀」變調為「xi5」
+的消息	de5 xiao1 xi5
+短消息	duan3 xiao1 xi5
+什麼東西啊	shen2 me5 dong1 xi5 a5
+等消息	deng3 xiao1 xi5
+吃東西了嗎	chi1 dong1 xi5 le5 ma5
+那你休息吧	na4 ni3 xiu1 xi5 ba5
+關係代名詞	guan1 xi5 dai4 ming2 ci2
+你也早點休息	ni3 ye3 zao3 dian3 xiu1 xi5
+跟我沒關係	gen1 wo3 mei2 guan1 xi5
+跟你沒關係	gen1 ni3 mei2 guan1 xi5
+血液透析機	xue4 ye4 tou4 xi5 ji1
+和我沒關係	he2 wo3 mei2 guan1 xi5
+我今天休息	wo3 jin1 tian1 xiu1 xi5
+早點休息吧	zao3 dian3 xiu1 xi5 ba5
+等你好消息	deng3 ni3 hao3 xiao1 xi5
+是什麼東西	shi4 shen2 me5 dong1 xi5
+好好休息下	hao3 hao3 xiu1 xi5 xia4
+這東西	zhe4 dong1 xi5
+你早點休息	ni3 zao3 dian3 xiu1 xi5
+你好好休息	ni3 hao3 hao3 xiu1 xi5
+今天休息啊	jin1 tian1 xiu1 xi5 a5
+今天休息嗎	jin1 tian1 xiu1 xi5 ma5
+中獎等消息	zhong4 jiang3 deng3 xiao1 xi5
+今天休息	jin1 tian1 xiu1 xi5
+不過沒關係	bu2 guo4 mei2 guan1 xi5
+這個消息	zhe4 ge5 xiao1 xi5
+箇中消息	ge4 zhong1 xiao1 xi5
+買東西吃	mai3 dong1 xi5 chi1
+這個東西	zhe4 ge5 dong1 xi5
+血緣關係	xie3 yuan2 guan1 xi5
+血液透析	xue4 ye4 tou4 xi5
+休息一下	xiu1 xi5 yi2 xia4
+信息靈通	xin4 xi5 ling2 tong1
+參考消息	can1 kao3 xiao1 xi5
+好好休息	hao3 hao3 xiu1 xi5
+有消息說	you3 xiao1 xi5 shuo1
+發短消息	fa1 duan3 xiao1 xi5
+發送消息	fa1 song4 xiao1 xi5
+熟悉的	shu2 xi5 de5
+發消息	fa1 xiao1 xi5
+偷東西	tou1 dong1 xi5
+搬東西	ban1 dong1 xi5
+此消息	ci3 xiao1 xi5
+消息兒	xiao1 xi5 er1
+消息面	xiao1 xi5 mian4
+喲西	yo5 xi5
+關係	guan1 xi5
+關系	guan1 xi5
+休息啊	xiu1 xi5 a5
+休息日	xiu1 xi5 ri4
+你好好休息吧	ni3 hao3 hao3 xiu1 xi5 ba5
+你早點休息吧	ni3 zao3 dian3 xiu1 xi5 ba5
+好好休息一下	hao3 hao3 xiu1 xi5 yi2 xia4
+好好休息休息	hao3 hao3 xiu1 xi5 xiu1 xi5
+消息靈通人士	xiao1 xi5 ling2 tong1 ren2 shi4
+你也早點休息吧	ni3 ye3 zao3 dian3 xiu1 xi5 ba5
+最熟悉的陌生人	zui4 shu2 xi5 de5 mo4 sheng1 ren2
+這條消息太毒了	zhe4 tiao2 xiao1 xi5 tai4 du2 le5
+您剛才發送的消息	nin2 gang1 cai2 fa1 song4 de5 xiao1 xi5
 那卡西	na1 ka1 xi5
 不是東西	bu2 shi4 dong1 xi5
 不是東西	bu4 shi4 dong1 xi5
@@ -2009,6 +2106,10 @@ columns:
 木犀	mu4 xi5
 木犀肉	mu4 xi5 rou4
 #### @「下」變調為「xia5」
+鄉下	xiang1 xia5
+鄉下佬	xiang1 xia5 lao3
+根兒底下	gen1 er1 di3 xia5
+誇下海口	kua1 xia5 hai3 kou3
 坐下	zuo4 xia5
 放下	fang4 xia5
 黑下	hei1 xia5
@@ -2038,6 +2139,21 @@ columns:
 趴下	pa1 xia5
 跪下	gui4 xia5
 #### @「家」「稼」「甲」變調為「jia5」
+娘家姓	niang2 jia5 xing4
+慣家	guan4 jia5
+冤家	yuan1 jia5
+婆婆家	po2 po5 jia5
+實行家	shi2 xing2 jia5
+少東家	shao3 dong1 jia5
+指甲蓋	zhi3 jia5 gai4
+指甲鉗	zhi3 jia5 qian2
+旅行家	lv3 xing2 jia5
+冤家對頭	yuan1 jia5 dui4 tou2
+指甲套兒	zhi3 jia5 tao4 er1
+歡喜冤家	huan1 xi3 yuan1 jia5
+莊稼活兒	zhuang1 jia5 huo2 er1
+莊稼活兒	zhuang1 jia5 huo2 er5
+佔公家便宜	zhan4 gong1 jia5 pian2 yi2
 一會家	yi4 hui3 jia5
 一會家	yi1 hui3 jia5
 充行家	chong1 hang2 jia5
@@ -2091,6 +2207,18 @@ columns:
 指甲草	zhi3 jia5 cao3
 腳指甲	jiao3 zhi3 jia5
 #### @「量」「梁」「亮」「涼」「諒」變調為「liang5」
+鮮亮	xian1 liang5
+好商量	hao3 shang1 liang5
+月亮的	yue4 liang5 de5
+月亮門	yue4 liang5 men2
+紅高粱	hong2 gao1 liang5
+罈高粱	tan2 gao1 liang5
+月亮門兒	yue4 liang5 men2 er1
+行也思量	xing2 ye3 si1 liang5
+盼星星盼月亮	pan4 xing1 xing1 pan4 yue4 liang5
+月亮代表我的心	yue4 liang5 dai4 biao3 wo3 de5 xin1
+月亮照耀著山谷	yue4 liang5 zhao4 yao4 zhe5 shan1 gu3
+狗吃月亮差天遠	gou3 chi1 yue4 liang5 cha1 tian1 yuan3
 掂量	dian1 liang5
 打擊軍事力量	da3 ji2 jun1 shi4 li4 liang5
 比量	bi3 liang5
@@ -2136,6 +2264,30 @@ columns:
 風涼	feng1 liang5
 體諒	ti3 liang5
 #### @「里」「裡」「理」「娌」「狸」「麗」「藜」「犁」「籬」「曆」「利」「俐」「莉」「力」「李」「璃」變調為「li5」
+# 骨頭裡掙出來的錢才做得肉	gu2 tou5 li5 zheng4 chu1 lai2 de5 qian2 cai2 zuo4 de5 rou4
+# 骨頭裡掙出來的錢纔做得肉	gu2 tou5 li5 zheng4 chu1 lai2 de5 qian2 cai2 zuo4 de5 rou4
+搭理	da1 li5
+琉璃	liu2 li5
+道理	dao4 li5
+小狐狸	xiao3 hu2 li5
+勢利小人	shi4 li5 xiao3 ren2
+嘀里嘟嚕	di1 li5 du1 lu1
+稀裡馬虎	xi1 li5 ma3 hu3
+稀里光當	xi1 li5 guang1 dang1
+發狂狐狸精	fa1 kuang2 hu2 li5 jing1
+狗口裡吐不出象牙	gou3 kou3 li5 tu3 bu4 chu1 xiang4 ya2
+狗嘴裡吐不出象牙	gou3 zui3 li5 tu3 bu4 chu1 xiang4 ya2
+羊群裡跑出駱駝來	yang2 qun2 li5 pao3 chu5 luo4 tuo5 lai2
+晚娘的拳頭雲裡的日頭	wan3 niang2 de5 quan2 tou5 yun2 li5 de5 ri4 tou2
+噼裡啪啦	pi1 li5 pa1 la1
+噼里啪啦	pi1 li5 pa1 la1
+往心裡去	wang3 xin1 li5 qu4
+玻璃絲髮	bo1 li5 si1 fa3
+看在眼裡	kan4 zai4 yan3 li5
+擦玻璃	ca1 bo1 li5
+有道理	you3 dao4 li5
+窩裡鬥	wo1 li5 dou4
+傻裡傻氣	sha3 li5 sha3 qi4
 劈里啪啦	pi1 li5 pa1 la5
 勒里勒得	lei1 li5 lei1 de2
 嘰里咕嚕	ji1 li5 gu1 lu1
@@ -2332,7 +2484,70 @@ columns:
 雙層玻璃	shuang1 ceng2 bo1 li5
 風檔玻璃	feng1 dang3 bo1 li5
 風檔玻璃	feng1 dang4 bo1 li5
-#### @「夫」「婦」「袱」「服」「腐」「付」「傅」「負」「幅」變調為「fu5」
+#### @「夫」「婦」「袱」「服」「腐」「付」「傅」「負」「幅」「甫」變調為「fu5」
+# 走馬川行奉送封大夫出師西徵	zou3 ma3 chuan1 xing2 feng4 song4 feng1 dai4 fu5 chu1 shi1 xi1 zheng1
+# 魚生火肉生痰青菜豆腐保平安	yu2 sheng1 huo3 rou4 sheng1 tan2 qing1 cai4 dou4 fu5 bao3 ping2 an1
+# 踏破鐵鞋無覓處得來全不費工夫	ta4 po4 tie3 xie2 wu2 mi4 chu4 de2 lai2 quan2 bu4 fei4 gong1 fu5
+丈夫的	zhang4 fu5 de5
+兒媳婦	er2 xi2 fu5
+吃功夫	chi1 gong1 fu5
+大丈夫	da4 zhang4 fu5
+太舒服	tai4 shu1 fu5
+好舒服	hao3 shu1 fu5
+很舒服	hen3 shu1 fu5
+打埋伏	da3 mai2 fu5
+把衣服	ba3 yi1 fu5
+挺舒服	ting3 shu1 fu5
+新衣服	xin1 yi1 fu5
+梁師傅	liang2 shi1 fu5
+欺負人	qi1 fu5 ren2
+欺負你	qi1 fu5 ni3
+欺負我	qi1 fu5 wo3
+的衣服	de5 yi1 fu5
+真功夫	zhen1 gong1 fu5
+真舒服	zhen1 shu1 fu5
+硬功夫	ying4 gong1 fu5
+磨工夫	mo2 gong1 fu5
+舒服點	shu1 fu5 dian3
+衣服的	yi1 fu5 de5
+買衣服	mai3 yi1 fu5
+丈夫一言	zhang4 fu5 yi4 yan2
+不穿衣服	bu4 chuan1 yi1 fu5
+你欺負我	ni3 qi1 fu5 wo3
+兒媳婦兒	er2 xi2 fu5 er5
+榮祿大夫	rong2 lu4 dai4 fu5
+模範丈夫	mo2 fan4 zhang4 fu5
+麵包師傅	mian4 bao1 shi1 fu5
+一會兒功夫	yi2 hui3 er2 gong1 fu5
+剛洗完衣服	gang1 xi3 wan2 yi1 fu5
+多穿點衣服	duo1 chuan1 dian3 yi1 fu5
+心裡不舒服	xin1 li3 bu4 shu1 fu5
+有點不舒服	you3 dian3 bu4 shu1 fu5
+洗衣服去了	xi3 yi1 fu5 qu4 le5
+肚子不舒服	du4 zi5 bu4 shu1 fu5
+誰欺負你了	shei2 qi1 fu5 ni3 le5
+身體不舒服	shen1 ti3 bu4 shu1 fu5
+刀子嘴豆腐心	dao1 zi5 zui3 dou4 fu5 xin1
+我沒有不舒服	wo3 mei2 you3 bu4 shu1 fu5
+男子漢大丈夫	nan2 zi3 han4 da4 zhang4 fu5
+豆腐嘴刀子心	dou4 fu5 zui3 dao1 zi5 xin1
+馬尾兒穿豆腐	ma3 wei3 er1 chuan1 dou4 fu5
+不多一會兒工夫	bu4 duo1 yi1 hui3 er1 gong1 fu5
+功夫不負有心人	gong1 fu5 bu2 fu4 you3 xin1 ren2
+心急吃不了熱豆腐	xin1 ji2 chi1 bu4 liao3 re4 dou4 fu5
+沒肉也有四兩豆腐	mei2 rou4 ye3 you3 si4 liang3 dou4 fu5
+賣荳腐點了河灘地	mai4 dou4 fu5 dian3 le5 he2 tan1 di4
+雷公打豆腐揀軟的欺	lei2 gong1 da3 dou4 fu5 jian3 ruan3 de5 qi1
+馬尾穿豆腐提不起來	ma3 wei3 chuan1 dou4 fu5 ti2 bu4 qi3 lai5
+只要功夫深鐵杵磨成針	zhi3 yao4 gong1 fu5 shen1 tie3 chu3 mo2 cheng2 zhen1
+
+蒙古大夫	meng3 gu3 dai4 fu5
+下工夫	xia4 gong1 fu5
+工夫	gong1 fu5
+工夫茶	gong1 fu5 cha2
+神甫	shen2 fu5
+舒舒服服	shu1 shu5 fu5 fu5
+無毒不丈夫	wu2 du2 bu4 zhang4 fu5
 刀子嘴巴豆腐心	dao1 zi5 zui3 ba5 dou4 fu5 xin1
 黑寡婦	hei1 gua3 fu5
 麻婆豆腐	ma2 po2 dou4 fu5
@@ -2441,6 +2656,12 @@ columns:
 思想包袱	si1 xiang3 bao1 fu5
 賣工夫	mai4 gong1 fu5
 #### @「來」變調為「lai5」
+出來	chu5 lai5
+好起來	hao3 qi3 lai5
+蹦出來	beng4 chu1 lai5
+扁擔壓不出個屁來	bian3 dan5 ya1 bu4 chu1 ge5 pi4 lai5
+馬尾穿豆腐提不起來	ma3 wei3 chuan1 dou4 fu3 ti2 bu4 qi3 lai5
+喘不過氣來	chuan3 bu4 guo4 qi4 lai5
 喘不過氣來	chuan3 bu2 guo4 qi4 lai5
 想起來	xiang3 qi3 lai5
 拉不下臉來	la1 bu2 xia4 lian3 lai5
@@ -2461,6 +2682,21 @@ columns:
 起來	qi3 lai5
 過來	guo4 lai5
 #### @「乎」「呼」「胡」「湖」「糊」「虎」「唬」「忽」「惚」「護」「戶」變調為「hu5」
+含胡	han2 hu5
+暈乎	yun1 hu5
+熱乎	re4 hu5
+熱呼	re4 hu5
+嚇唬人	xia4 hu5 ren2
+在乎你	zai4 hu5 ni3
+太在乎	tai4 zai4 hu5
+窗戶眼兒	chuang1 hu5 yan3 er1
+血肉模糊	xue4 rou4 mo2 hu5
+點頭招呼	dian3 tou2 zhao1 hu5
+很在乎	hen3 zai4 hu5
+招呼著	zhao1 hu5 zhe5
+我不在乎	wo3 bu2 zai4 hu5
+打個招呼	da3 ge4 zhao1 hu5
+暈糊	yun1 hu5
 好學近乎知力行近乎仁知恥近乎勇	hao4 xue2 jin4 hu5 zhi1 li4 xing2 jin4 hu5 ren2 zhi1 chi3 jin4 hu5 yong3
 毫不在乎	hao2 bu2 zai4 hu5
 確乎	que4 hu5
@@ -2533,6 +2769,9 @@ columns:
 隔著窗戶吹喇叭	ge2 zhe5 chuang1 hu5 chui1 la3 ba5
 靠窗戶	kao4 chuang1 hu5
 #### @「在」變調為「zai5」
+安閑自在	an1 xian2 zi4 zai5
+閑在	xian2 zai5
+不自在	bu4 zi4 zai5
 找不自在	zhao3 bu2 zi4 zai5
 找不自在	zhao3 bu4 zi4 zai5
 不自在	bu2 zi4 zai5
@@ -2543,6 +2782,20 @@ columns:
 自繇自在	zi4 you2 zi4 zai5
 逍遙自在	xiao1 yao2 zi4 zai5
 #### @「氣」「起」「戚」「乞」「其」「嘁」變調為「qi5」
+不用客氣	bu4 yong4 ke4 qi5
+不客氣	bu4 ke4 qi5
+客氣了	ke4 qi5 le5
+小氣腔	xiao3 qi5 qiang1
+小氣鬼	xiao3 qi5 gui3
+很客氣	hen3 ke4 qi5
+撞運氣	zhuang4 yun4 qi5
+下大力氣	xia4 da4 li4 qi5
+有福氣	you3 fu2 qi5
+不要客氣	bu2 yao4 ke4 qi5
+小氣巴拉	xiao3 qi5 ba1 la1
+超小氣的	chao1 xiao3 qi5 de5
+愛發脾氣	ai4 fa1 pi2 qi5
+起來	qi5 lai5
 嘁嘁喳喳	qi1 qi5 cha1 cha1
 妖氣	yao1 qi5
 溼氣	shi1 qi5
@@ -2620,6 +2873,68 @@ columns:
 小家子氣	xiao3 jia1 zi5 qi5
 帥氣	shuai4 qi5
 #### @「思」「司」「廁」「螄」變調為「si5」
+不是那意思	bu2 shi4 na4 yi4 si5
+也不好意思	ye3 bu4 hao3 yi4 si5
+別不好意思	bie2 bu4 hao3 yi4 si5
+又不好意思	you4 bu4 hao3 yi4 si5
+多不好意思	duo1 bu4 hao3 yi4 si5
+太不夠意思	tai4 bu2 gou4 yi4 si5
+太不好意思	tai4 bu4 hao3 yi4 si5
+太沒意思了	tai4 mei2 yi4 si5 le5
+就沒意思了	jiu4 mei2 yi4 si5 le5
+很不好意思	hen3 bu4 hao3 yi4 si5
+怪不好意思	guai4 bu4 hao3 yi4 si5
+我都不好意思	wo3 dou1 bu4 hao3 yi4 si5
+怎麼個意思	zen3 me5 ge4 yi4 si5
+我的意思是	wo3 de5 yi4 si5 shi4
+挺不好意思	ting3 bu4 hao3 yi4 si5
+是什麼意思	shi4 shen2 me5 yi4 si5
+還好意思說	hai2 hao3 yi4 si5 shuo1
+那不好意思	na4 bu4 hao3 yi4 si5
+那你的意思	na4 ni3 de5 yi4 si5
+那多沒意思	na4 duo1 mei2 yi4 si5
+都不好意思	dou1 bu4 hao3 yi4 si5
+不是這個意思	bu2 shi4 zhe4 ge5 yi4 si5
+不是那個意思	bu2 shi4 na4 ge5 yi4 si5
+你什麼意思呀	ni3 shen2 me5 yi4 si5 ya5
+你什麼意思啊	ni3 shen2 me5 yi4 si5 a5
+太不好意思了	tai4 bu4 hao3 yi4 si5 le5
+實在不好意思	shi2 zai4 bu4 hao3 yi4 si5
+怪不好意思的	guai4 bu4 hao3 yi4 si5 de5
+我也不好意思	wo3 ye3 bu4 hao3 yi4 si5
+有什麼意思	you3 shen2 me5 yi4 si5
+毛廁裡磚兒	mao2 si5 li3 zhuan1 er1
+沒什麼意思	mei2 shen2 me5 yi4 si5
+沒別的意思	mei2 bie2 de5 yi4 si5
+真不夠意思	zhen1 bu2 gou4 yi4 si5
+還不好意思	hai2 bu4 hao3 yi4 si5
+什麼意思呀	shen2 me5 yi4 si5 ya5
+什麼意思呢	shen2 me5 yi4 si5 ne5
+什麼意思哦	shen2 me5 yi4 si5 o2
+什麼意思啊	shen2 me5 yi4 si5 a5
+什麼意思嗎	shen2 me5 yi4 si5 ma5
+什麼意思嘛	shen2 me5 yi4 si5 ma5
+你不好意思	ni3 bu4 hao3 yi4 si5
+你什麼意思	ni3 shen2 me5 yi4 si5
+你的意思是	ni3 de5 yi4 si5 shi4
+你還好意思	ni3 hai2 hao3 yi4 si5
+不好意思啊	bu4 hao3 yi4 si5 a5
+不好意思哈	bu4 hao3 yi4 si5 ha5
+不好意思哦	bu4 hao3 yi4 si5 o2
+不好意思啦	bu4 hao3 yi4 si5 la5
+不好意思是	bu4 hao3 yi4 si5 shi4
+不好意思的	bu4 hao3 yi4 si5 de5
+不好意思說	bu4 hao3 yi4 si5 shuo1
+不好意思了	bu4 hao3 yi4 si5 le5
+不好意思呀	bu4 hao3 yi4 si5 ya5
+夠意思	gou4 yi4 si5
+對心思	dui4 xin1 si5
+麼意思	me5 yi4 si5
+不夠意思	bu2 gou4 yi4 si5
+意思是說	yi4 si5 shi4 shuo1
+一面兒官司	yi1 mian4 er1 guan1 si5
+不太好意思	bu2 tai4 hao3 yi4 si5
+還好意思	hai2 hao3 yi4 si5
 我都不好意思了	wo3 dou1 bu4 hao3 yi4 si5 le5
 都不好意思了	dou1 bu4 hao3 yi4 si5 le5
 這是什麼意思	zhe4 shi4 shen2 me5 yi4 si5
@@ -3080,7 +3395,8 @@ columns:
 捨不得孩子套不著狼	she3 bu5 de5 hai2 zi5 tao4 bu4 zhao2 lang2
 馬尾穿豆腐提不起來	ma3 wei3 chuan1 dou4 fu5 ti2 bu5 qi3 lai5
 啞巴吃黃連有苦說不出	ya3 ba5 chi1 huang2 lian2 you3 ku3 shuo1 bu5 chu1
-#### @「一」「宜」「意」「義」「益」「藝」變調為「yi5」
+#### @「一」「宜」「意」「義」「益」「藝」「咿」變調為「yi5」
+咿唷	yi5 yo5
 仁義	ren2 yi5
 便益不失當家	pian2 yi5 bu4 shi1 dang1 jia1
 演義	yan3 yi5
@@ -3161,7 +3477,41 @@ columns:
 你先想一想吧	ni3 xian1 xiang3 yi5 xiang3 ba5
 便宜不過當家	pian2 yi5 bu4 guo4 dang1 jia1
 吃虧的是乖占便宜的是獃	chi1 kui1 de5 shi4 guai1 zhan4 pian2 yi5 de5 shi4 dai1
-#### @「識」「拾」「事」「是」「拾」「食」「侍」「失」「實」「使」「示」「市」「士」「勢」「式」變調為「shi5」
+#### @「識」「拾」「事」「是」「拾」「食」「侍」「失」「實」「使」「示」「市」「士」「勢」「式」「什」變調為「shi5」
+# 聯合國世界糧食計劃國際委員會	lian2 he2 guo2 shi4 jie4 liang2 shi5 ji4 hua4 guo2 ji4 wei3 yuan2 hui4
+毛澤東‧鮮為人知的故事	mao2 ze2 dong1 eng3 xian1 wei2 ren2 zhi1 de5 gu4 shi5
+壯實	zhuang4 shi5
+拉開架勢	la1 kai1 jia4 shi5
+收拾殘局	shou1 shi5 can2 ju2
+故事情節	gu4 shi5 qing2 jie2
+糧食生產	liang2 shi5 sheng1 chan3
+這個故事	zhe4 ge5 gu4 shi5
+我們的故事	wo3 men5 de5 gu4 shi5
+收拾好了嗎	shou1 shi5 hao3 le5 ma5
+一發而不可收拾	yi4 fa1 er2 bu4 ke3 shou1 shi5
+臨邛道士鴻都客	lin2 qiong2 dao4 shi5 hong2 du1 ke4
+真是	zhen1 shi5
+要是你	yao4 shi5 ni3
+要是我	yao4 shi5 wo3
+護士服	hu4 shi5 fu2
+賠不是	pei2 bu2 shi5
+一個故事	yi2 ge4 gu4 shi5
+你要是	ni3 yao4 shi5
+小故事	xiao3 gu4 shi5
+我要是	wo3 yao4 shi5
+收拾好	shou1 shi5 hao3
+故事中	gu4 shi5 zhong1
+故事會	gu4 shi5 hui4
+編故事	bian1 gu4 shi5
+衛道士	wei4 dao4 shi5
+愛情故事	ai4 qing2 gu4 shi5
+我的故事	wo3 de5 gu4 shi5
+戰鬥故事	zhan4 dou4 gu4 shi5
+扎實推進	zha1 shi5 tui1 jin4
+家什	jia1 shi5
+狗日的糧食	gou3 ri4 de5 liang2 shi5
+還是	hai2 shi5
+紮實	zha2 shi5
 差事	chai1 shi5
 差使	chai1 shi5
 幹事	gan4 shi5
@@ -3604,6 +3954,18 @@ columns:
 # 避其銳氣擊其惰歸	bi4 qi2 rui4 qi4 ji1 qi2 duo4 gui1
 # 誰能阻止小行星撞擊地球	shei2 neng2 zu3 zhi3 xiao3 xing2 xing1 zhuang4 ji1 di4 qiu2
 #### @大陸慣用發音「識」：「shi2」
+# 相識	xiang1 shi2
+# 結識	jie2 shi2
+# 識相	shi2 xiang4
+# 身份識別卡	shen1 fen4 shi2 bie2 ka3
+# 通識教育	tong1 shi2 jiao4 yu4
+# 識得	shi2 de5
+# 識時務者為俊傑	shi2 shi2 wu4 zhe3 wei4 jun4 jie2
+# 識微見幾	shi2 wei1 jian4 ji3
+# 識微見幾	shi2 wei2 jian4 ji3
+# 識字率	shi2 zi4 lv4
+# 識度	shi2 du4
+# 素不相識	su4 bu4 xiang1 shi2
 # 共識	gong4 shi2
 # 初識	chu1 shi2
 # 卓識	zhuo2 shi2
@@ -3666,6 +4028,8 @@ columns:
 # 長知識	zhang3 zhi1 shi2
 # 長見識	zhang3 jian4 shi2
 # 知識份子	zhi1 shi2 fen4 zi3
+# 一丁不識	yi4 ding1 bu4 shi2
+# 一字不識	yi2 zi4 bu4 shi2
 # 一丁不識	yi1 ding1 bu4 shi2
 # 一字不識	yi1 zi4 bu4 shi2
 # 不認識了	bu4 ren4 shi2 le5
@@ -3791,6 +4155,14 @@ columns:
 # 知識產權局	zhi1 shi2 chan3 quan2 ju2
 # 還認識我嗎	hai2 ren4 shi2 wo3 ma5
 # 都不認識了	dou1 bu4 ren4 shi2 le5
+# 不識一丁	bu4 shi2 yi4 ding1
+# 似曾相識	si4 ceng2 xiang1 shi2
+# 博聞強識	bo2 wen2 qiang2 shi2
+# 名重識暗	ming2 zhong4 shi2 an4
+# 火眼金睛識真假	huo3 yan3 jin1 jing1 shi2 zhen1 jia3
+# 數據鏈路連接識別碼	shu4 ju4 lian4 lu4 lian2 jie1 shi2 bie2 ma3
+# 不打不成相識	bu4 da3 bu4 cheng2 xiang1 shi2
+# 不打不相識	bu4 da3 bu4 xiang1 shi2
 # 不認識我了嗎	bu4 ren4 shi2 wo3 le5 ma5
 # 你不認識我啊	ni3 bu4 ren4 shi2 wo3 a5
 # 你不認識我嗎	ni3 bu4 ren4 shi2 wo3 ma5
@@ -3818,6 +4190,10 @@ columns:
 # 不怕不識貨就怕貨比貨	bu4 pa4 bu4 shi2 huo4 jiu4 pa4 huo4 bi3 huo4
 # 狗咬呂洞賓不識好人心	gou3 yao3 lv3 dong4 bin1 bu4 shi2 hao3 ren2 xin1
 #### @大陸慣用發音「企」：「qi3」
+# 企劃	qi3 hua4
+# 翹企	qiao2 qi3
+# 企業間網路	qi3 ye4 jian1 wang3 lu4
+# 恆生中資企業指數	heng2 sheng1 zhong1 zi1 qi3 ye4 zhi3 shu4
 # 企及	qi3 ji2
 # 企圖	qi3 tu2
 # 企慕	qi3 mu4
@@ -4015,6 +4391,7 @@ columns:
 # 中國外商投資企業協會	zhong1 guo2 wai4 shang1 tou2 zi1 qi3 ye4 xie2 hui4
 # 對大中型國營企業進行公司制改革	dui4 da4 zhong1 xing2 guo2 ying2 qi3 ye4 jin4 xing2 gong1 si1 zhi4 gai3 ge2
 #### @大陸慣用發音「麴」：「qu1」
+# 米麴菌	mi3 qu1 jun1
 # 大麴	da4 qu1
 # 神麴	shen2 qu1
 # 麴塵	qu1 chen2
@@ -4049,6 +4426,21 @@ columns:
 # 麴黴菌血清學試驗	qu1 mei2 jun1 xue3 qing1 xue2 shi4 yan4
 # 麴黴菌血清學試驗	qu1 mei2 jun1 xue4 qing1 xue2 shi4 yan4
 #### @大陸慣用發音「髮」：「fa4」
+# 結髮	jie2 fa4
+# 髮卡	fa4 qia3
+# 髮帶	fa4 dai4
+# 華髮	hua2 fa4
+# 長髮	chang2 fa4
+# 青山一髮	qing1 shan1 yi2 fa4
+# 一髮千鈞	yi2 fa4 qian1 jun1
+# 千鈞一髮	qian1 jun1 yi2 fa4
+# 怒髮衝冠	nu4 fa4 chong1 guan1
+# 披頭散髮	pi1 tou2 san4 fa4
+# 洗髮水兒	xi3 fa4 shui3 er5
+# 洗髮露	xi3 fa4 lu4
+# 牽一髮而動全身	qian1 yi2 fa4 er2 dong4 quan2 shen1
+# 假髮	jia3 fa4
+# 一髮	yi2 fa4
 # 卷髮	juan3 fa4
 # 削髮	xue1 fa4
 # 恤髮	xu4 fa4
@@ -4545,6 +4937,9 @@ columns:
 
 ###############################################################
 ####### @其他非臺灣慣用或錯誤發音 #######
+# 一把鑰匙開一把鎖	yi4 ba3 yao4 shi3 kai1 yi4 ba3 suo3
+# 波羅的海	bo1 luo2 de5 hai3
+# 個別差異	ge5 bie2 cha1 yi4
 # 後翻筋斗	hou4 fan1 jin1 dou4
 # 呼哧呼哧	hu1 chi4 hu1 chi4
 # 下調	xia4 diao2
