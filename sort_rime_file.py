@@ -72,6 +72,7 @@ shutil.copyfile("./allfiles/greek.schema.yaml", "./sort_rime/注音洋蔥mixin�
 shutil.copyfile("./allfiles/phrases.cht_en_w.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.cht_en_w.dict.yaml")
 shutil.copyfile("./allfiles/phrases.cht.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.cht.dict.yaml")
 shutil.copyfile("./allfiles/phrases.chtp.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.chtp.dict.yaml")
+shutil.copyfile("./allfiles/phrases.chtpp.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.chtpp.dict.yaml")
 shutil.copyfile("./allfiles/phrases.cyr_all.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.cyr_all.dict.yaml")
 shutil.copyfile("./allfiles/phrases.en_l_w.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.en_l_w.dict.yaml")
 shutil.copyfile("./allfiles/phrases.en_o_w.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.en_o_w.dict.yaml")
@@ -144,6 +145,7 @@ shutil.copyfile("./allfiles/latinin1.schema.yaml", "./sort_rime/注音洋蔥plus
 
 shutil.copyfile("./allfiles/phrases.cht.dict.yaml", "./sort_rime/注音洋蔥plus版/phrases.cht.dict.yaml")
 shutil.copyfile("./allfiles/phrases.chtp.dict.yaml", "./sort_rime/注音洋蔥plus版/phrases.chtp.dict.yaml")
+shutil.copyfile("./allfiles/phrases.chtpp.dict.yaml", "./sort_rime/注音洋蔥plus版/phrases.chtpp.dict.yaml")
 shutil.copyfile("./allfiles/phrases.cyr_all.dict.yaml", "./sort_rime/注音洋蔥plus版/phrases.cyr_all.dict.yaml")
 shutil.copyfile("./allfiles/phrases.en_l_w.dict.yaml", "./sort_rime/注音洋蔥plus版/phrases.en_l_w.dict.yaml")
 shutil.copyfile("./allfiles/phrases.en_o_w.dict.yaml", "./sort_rime/注音洋蔥plus版/phrases.en_o_w.dict.yaml")
@@ -190,6 +192,7 @@ shutil.copyfile("./allfiles/ocm_mixin_la.dict.yaml", "./sort_rime/地球拼音�
 shutil.copyfile("./allfiles/phrases.cht_en_w.dict.yaml", "./sort_rime/地球拼音洋蔥mix-in版/phrases.cht_en_w.dict.yaml")
 shutil.copyfile("./allfiles/phrases.cht.dict.yaml", "./sort_rime/地球拼音洋蔥mix-in版/phrases.cht.dict.yaml")
 shutil.copyfile("./allfiles/phrases.chtp.dict.yaml", "./sort_rime/地球拼音洋蔥mix-in版/phrases.chtp.dict.yaml")
+shutil.copyfile("./allfiles/phrases.chtpp.dict.yaml", "./sort_rime/地球拼音洋蔥mix-in版/phrases.chtpp.dict.yaml")
 shutil.copyfile("./allfiles/phrases.en_l_w.dict.yaml", "./sort_rime/地球拼音洋蔥mix-in版/phrases.en_l_w.dict.yaml")
 shutil.copyfile("./allfiles/phrases.en_o_w.dict.yaml", "./sort_rime/地球拼音洋蔥mix-in版/phrases.en_o_w.dict.yaml")
 shutil.copyfile("./allfiles/phrases.en_u_w.dict.yaml", "./sort_rime/地球拼音洋蔥mix-in版/phrases.en_u_w.dict.yaml")
