@@ -17,7 +17,7 @@
 
   > 建議替換 essay.txt（八股文）和置換新版 librime 引擎，如為 Mac 系統建議修改輸入法語系。替換修改說明請見「主程式」資料夾內「 Mac… 」和「 Win… 」中的 README.md。
 
-  > 《 Windows 用戶注意！！！》，洋蔥 plus 版和洋蔥 mix‧in 版內掛接《Easy》使用提示碼做英漢字典，可是 Windows 輸入時，整頁提示碼太多會使程式崩潰！但在 Windows 簡化提示碼的程式碼在 Mac 中會使《Easy》無法正常出字！故內建 custom 檔給 Windows 用戶使用，防止程式崩潰（ Mac 用戶不需理會）。分別在「plus注音_防崩潰：Win必加，Mac勿加」「mixin注音_同顯2修改檔(Win)」兩個資料夾內，Windows 用戶把資料夾內 custom.yaml 檔拖到上一層（和方案中其他文件同一層），按「重新部署」即可。
+  > 《 Windows 用戶注意！！！》，洋蔥 plus 版和洋蔥 mix‧in 版內掛接《Easy》使用提示碼做英漢字典，可是 Windows 輸入時，整頁提示碼太多會使程式崩潰！故使用正則簡化提示碼！但在 Windows 可行之程式碼在 Mac 中會使《Easy》無法正常出字！故內建 custom 檔給 Windows 用戶使用，防止程式崩潰（ Mac 用戶不需理會）。分別在「plus注音_防崩潰：Win必加，Mac勿加」「mixin注音_同顯2修改檔(Win)」兩個資料夾內，Windows 用戶把資料夾內 custom.yaml 檔拖到上一層（和方案中其他文件同一層），按「重新部署」即可。
 
   > 後面附註的日期為執行 sort_rime_file.py 當天日期！非版本號碼！
 
