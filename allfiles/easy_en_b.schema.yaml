@@ -37,7 +37,7 @@ engine:
     - table_translator
     - punct_translator
   filters:
-    - reverse_lookup_filter@e_reverse_lookup
+#    - reverse_lookup_filter@e_reverse_lookup
     - uniquifier
 
 speller:
@@ -53,15 +53,15 @@ translator:
   enable_encoder: false
   encode_commit_history: false
   enable_completion: true
-  enable_user_dict: true
+  enable_user_dict: false #true
 #  spelling_hints: 9
 
-e_reverse_lookup:
-  tags: [ abc ]
-  overwrite_comment: true
-  dictionary: easy_en_comment
-  comment_format:
-    - xform/@/ /
+# e_reverse_lookup:
+#   tags: [ abc ]
+#   overwrite_comment: true
+#   dictionary: easy_en_comment
+#   comment_format:
+#     - xform/@/ /
 
 key_binder:
   import_preset: default
