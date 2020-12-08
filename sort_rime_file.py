@@ -104,7 +104,9 @@ shutil.copyfile("./allfiles/opencc/ocm_big5e_hkscs_jis.txt", "./sort_rime/注音
 shutil.copyfile("./allfiles/opencc/punct_mark.json", "./sort_rime/注音洋蔥mixin版/opencc/punct_mark.json")
 shutil.copyfile("./allfiles/opencc/punct_mark.txt", "./sort_rime/注音洋蔥mixin版/opencc/punct_mark.txt")
 
-shutil.copytree('./allfiles/mixin注音_同顯1修改檔/', './sort_rime/注音洋蔥mixin版/mixin注音_同顯1修改檔/')
+shutil.copytree('./allfiles/mixin注音_同顯1修改檔(Mac)/', './sort_rime/注音洋蔥mixin版/mixin注音_同顯1修改檔(Mac)/')
+shutil.copytree('./allfiles/mixin注音_同顯2修改檔(Mac)/', './sort_rime/注音洋蔥mixin版/mixin注音_同顯2修改檔(Mac)/')
+shutil.copytree('./allfiles/mixin注音_同顯1修改檔(Win)/', './sort_rime/注音洋蔥mixin版/mixin注音_同顯1修改檔(Win)/')
 shutil.copytree('./allfiles/mixin注音_同顯2修改檔(Win)/', './sort_rime/注音洋蔥mixin版/mixin注音_同顯2修改檔(Win)/')
 
 
@@ -180,6 +182,8 @@ shutil.copyfile("./allfiles/opencc/ocm_big5e_hkscs_jis.json", "./sort_rime/注�
 shutil.copyfile("./allfiles/opencc/ocm_big5e_hkscs_jis.txt", "./sort_rime/注音洋蔥plus版/opencc/ocm_big5e_hkscs_jis.txt")
 shutil.copyfile("./allfiles/opencc/punct_mark.json", "./sort_rime/注音洋蔥plus版/opencc/punct_mark.json")
 shutil.copyfile("./allfiles/opencc/punct_mark.txt", "./sort_rime/注音洋蔥plus版/opencc/punct_mark.txt")
+
+shutil.copytree('./allfiles/plus注音_防崩潰：Win必加，Mac勿加/', './sort_rime/注音洋蔥plus版/plus注音_防崩潰：Win必加，Mac勿加/')
 
 
 #複製檔案(地球拼音洋蔥mix-in版)
