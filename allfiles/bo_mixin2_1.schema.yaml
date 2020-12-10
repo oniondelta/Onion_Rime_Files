@@ -415,6 +415,8 @@ easy_en:
     - xform/;/; /
     - xform|\/|\/ |
     - 'xform/\\/ /'
+  comment_format:
+    - xform|[~a-z;/.'-]*||
 
 e_reverse_lookup:
   tags: [ easy_en ]
