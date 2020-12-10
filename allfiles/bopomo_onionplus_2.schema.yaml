@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onionplus_2
   name: "☆注音(洋蔥plus版 2 )☆〔空白不直出〕"
-  version: "202010"
+  version: "202012"
   author:
     - 『洋蔥』
   description: |
@@ -270,6 +270,8 @@ easy_en:
     - xform/;/; /
     - xform|\/|\/ |
     - 'xform/\\/ /'
+  comment_format:
+    - xform|[~a-z;/.'-]*||
 
 e_reverse_lookup:
   tags: [ easy_en ]
