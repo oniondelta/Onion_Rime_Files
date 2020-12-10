@@ -4,7 +4,7 @@
 schema:
   schema_id: bo_mixin3_2
   name: "☆注音(洋蔥mix-in版 3-2)☆〔  '  [  ]  →拉日韓〕🅢 "
-  version: "202010"
+  version: "202012"
   author:
     - 『洋蔥』
   description: |
@@ -445,6 +445,8 @@ easy_en:
     - xform/;/; /
     - xform|\/|\/ |
     - 'xform/\\/ /'
+  comment_format:
+    - xform|[~a-z;/.'-]*||
 
 e_reverse_lookup:
   tags: [ easy_en ]
