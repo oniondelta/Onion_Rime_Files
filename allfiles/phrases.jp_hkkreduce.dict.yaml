@@ -7,7 +7,7 @@
 # 本詞庫刪除純「假名」之詞彙。純「假名」詞庫為「phrases.jp_hk」。
 ---
 name: phrases.jp_hkkreduce
-version: "202008"
+version: "202012"
 sort: by_weight #original
 use_preset_vocabulary: false
 columns:
@@ -1563,6 +1563,7 @@ columns:
 鮮やか
 鳴らす
 麗しい
+朗らか
 冷やかす
 分かれる
 剝がれる
@@ -5071,8 +5072,8 @@ columns:
 乳棒
 乳歯
 乳肉
-乳首
 乳鉢
+乳首
 乾い
 乾か
 乾き
@@ -7466,7 +7467,6 @@ columns:
 兄人
 兄嫁
 兄子
-兄貴
 兄達
 充た
 充ち
@@ -10614,7 +10614,6 @@ columns:
 口演
 口火
 口煩
-口癖
 口絵
 口脇
 口茶
@@ -30113,7 +30112,6 @@ columns:
 痩躯
 痳疾
 痴れ
-痴女
 痴愚
 痴態
 痴話
@@ -37109,8 +37107,8 @@ columns:
 衣部
 衣都
 衣里
-衣類
 衣鉢
+衣類
 表さ
 表し
 表せ
