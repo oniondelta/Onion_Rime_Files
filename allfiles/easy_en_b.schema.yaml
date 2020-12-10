@@ -5,7 +5,7 @@
 schema:
   schema_id: easy_en_b
   name: Easy English（B）
-  version: "202009"
+  version: "202012"
   author:
     - Patrick <ipatrickmac@gmail.com>
     - 洋蔥
@@ -49,10 +49,10 @@ speller:
 
 translator:
   dictionary: easy_en_b
-  enable_sentence: false
   enable_encoder: false
   encode_commit_history: false
   enable_completion: true
+  enable_sentence: true #false
   enable_user_dict: false #true
 #  spelling_hints: 9
 
