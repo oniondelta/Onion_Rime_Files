@@ -55,13 +55,27 @@ translator:
   enable_sentence: true #false
   enable_user_dict: false #true
 #  spelling_hints: 9
+#  comment_format:
+#    - xform|[~a-z;/.'-]*||
 
 # e_reverse_lookup:
 #   tags: [ abc ]
 #   overwrite_comment: true
 #   dictionary: easy_en_comment
 #   comment_format:
-#     - xform/@/ /
+#    - xform/^([a-z])/\n          $1/
+#    - xform/^(\[[^@醫計法化機經建電]+\])@/$1\n          /
+#    - xform/^(﹝.+﹞)(\[[^@醫計法化機經建電]+\]@)?/$1$2\n          /
+#    - xform/@@/\n          /
+#    - xform/@/ /
+#    - xform/(?<![ ])(\[醫\])/\n          $1/
+#    - xform/(?<![ ])(\[計\])/\n          $1/
+#    - xform/(?<![ ])(\[法\])/\n          $1/
+#    - xform/(?<![ ])(\[化\])/\n          $1/
+#    - xform/(?<![ ])(\[機\])/\n          $1/
+#    - xform/(?<![ ])(\[經\])/\n          $1/
+#    - xform/(?<![ ])(\[建\])/\n          $1/
+#    - xform/(?<![ ])(\[電\])/\n          $1/
 
 key_binder:
   import_preset: default
