@@ -64,7 +64,7 @@ translator:
 #   dictionary: easy_en_comment
 #   comment_format:
 #    - xform/^([a-z])/\n          $1/
-#    - xform/^(\[[^@醫計法化機經建電]+\])@/$1\n          /
+#    - xform/^(\[[^@醫計法化機經建電]+\])@@?/$1\n          /
 #    - xform/^(﹝.+﹞)(\[[^@醫計法化機經建電]+\]@)?/$1$2\n          /
 #    - xform/@@/\n          /
 #    - xform/@/ /
