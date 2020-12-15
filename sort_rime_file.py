@@ -79,9 +79,11 @@ shutil.copyfile("./allfiles/phrases.en_o_w.dict.yaml", "./sort_rime/注音洋蔥
 shutil.copyfile("./allfiles/phrases.en_u_w.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.en_u_w.dict.yaml")
 shutil.copyfile("./allfiles/phrases.fs_all.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.fs_all.dict.yaml")
 shutil.copyfile("./allfiles/phrases.gr_all.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.gr_all.dict.yaml")
+shutil.copyfile("./allfiles/phrases.jp_hk_more.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.jp_hk_more.dict.yaml")
 shutil.copyfile("./allfiles/phrases.jp_hk.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.jp_hk.dict.yaml")
 shutil.copyfile("./allfiles/phrases.jp_hkkreduce.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.jp_hkkreduce.dict.yaml")
 shutil.copyfile("./allfiles/phrases.kr_more.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.kr_more.dict.yaml")
+shutil.copyfile("./allfiles/phrases.kr.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.kr.dict.yaml")
 shutil.copyfile("./allfiles/phrases.la_py_w.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.la_py_w.dict.yaml")
 
 shutil.copyfile("./allfiles/punct_bopomo.yaml", "./sort_rime/注音洋蔥mixin版/punct_bopomo.yaml")
