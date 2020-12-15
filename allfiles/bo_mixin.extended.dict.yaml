@@ -17,11 +17,13 @@ import_tables:
   - bo_mixin_la
   - phrases.cht_en_w
   - phrases.chtp
-#   - phrases.chtpp
+#  - phrases.chtpp
 #  - phrases.cht
+#  - phrases.jp_hk_more
   - phrases.jp_hk
   - phrases.jp_hkkreduce
-  - phrases.kr_more
+#  - phrases.kr_more
+  - phrases.kr
   - phrases.en_o_w
   - phrases.la_py_w
   - phrases.en_l_w
