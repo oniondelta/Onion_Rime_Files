@@ -11,4 +11,5 @@
     
 - 置換新版 librime 引擎：
     - 原 librime 在使用 lua 的某些功能會產生記憶體泄漏問題，建議更換。
+    - rime-with-plugins-1.6.1-win32 ⇨ dist ⇨ lib ⇨ 提取 rime.dll ⇨ 取代 C:\Program Files (x86)\Rime\weasel-0.14.3\rime.dll ⇨《重開機》！
 
