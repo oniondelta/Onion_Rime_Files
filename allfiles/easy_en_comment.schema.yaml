@@ -53,8 +53,8 @@ translator:
   enable_sentence: false
   enable_encoder: false
   encode_commit_history: false
-  enable_completion: false #true
-  enable_user_dict: false #true
+  enable_completion: false
+  enable_user_dict: false
 
 punctuator:
   import_preset: default
