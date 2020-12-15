@@ -19,10 +19,10 @@ import_tables:
   - phrases.chtp
 #  - phrases.chtpp
 #  - phrases.cht
-#  - phrases.jp_hk_more
+#  - phrases.jp_hk_more #日語大詞庫，欲更精準 mapping，可打開並關閉小詞庫 phrases.jp_hk。
   - phrases.jp_hk
   - phrases.jp_hkkreduce
-#  - phrases.kr_more
+#  - phrases.kr_more #韓語大詞庫，欲更精準 mapping，可打開並關閉小詞庫 phrases.kr。
   - phrases.kr
   - phrases.en_o_w
   - phrases.la_py_w
