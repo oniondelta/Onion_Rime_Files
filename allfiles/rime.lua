@@ -247,7 +247,7 @@ local function formatnumberthousands(n3)
         r3 = string.sub(n3, -3, -1) .. "," .. r3
         n3 = string.sub(n3, 1, -4)
     end
-   -- 返回結果
+    -- 返回結果
     return r3
 end
 
