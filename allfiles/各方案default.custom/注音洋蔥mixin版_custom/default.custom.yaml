@@ -8,9 +8,9 @@ patch:
   schema_list:
 ######## 洋蔥 mix‧in 版 ########
     - schema: bo_mixin1
-#    - schema: bo_mixin1_old
     - schema: bo_mixin2
     - schema: bo_mixin3
+#    - schema: bo_mixin1_old
 #    - schema: bo_mixin3_old
     - schema: greek
     - schema: cyrillic
