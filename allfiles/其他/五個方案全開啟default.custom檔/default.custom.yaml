@@ -12,8 +12,6 @@ patch:
     - schema: bo_mixin1
     - schema: bo_mixin2
     - schema: bo_mixin3
-#    - schema: bo_mixin1_old
-#    - schema: bo_mixin3_old
     - schema: bopomo_onion
     - schema: bopomo_onion_double
     - schema: terra_pinyin_onion
