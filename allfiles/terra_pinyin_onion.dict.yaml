@@ -97762,10 +97762,15 @@ min_phrase_weight: 100
 請給	qing3 gei3
 請脈	qing3 mai4
 諍友	zheng1 you3
+諍友	zheng4 you3
 諍臣	zheng1 chen2
+諍臣	zheng4 chen2
 諍言	zheng1 yan2
+諍言	zheng4 yan2
 諍訟	zheng1 song4
+諍訟	zheng4 song4
 諍諫	zheng1 jian4
+諍諫	zheng4 jian4
 諒得過	liang4 de5 guo4
 諒陰	liang2 an1
 諔詭	chu4 gui3
@@ -97792,6 +97797,7 @@ min_phrase_weight: 100
 諫太宗十思疏	jian4 tai4 zong1 shi2 si1 shu4
 諫而剖腹	jian4 er2 pou3 fu4
 諫諍	jian4 zheng1
+諫諍	jian4 zheng4
 諭帖	yu4 tie3
 諰諰	xi3 xi3
 諱惡不悛	hui4 e4 bu4 quan1
@@ -97809,6 +97815,7 @@ min_phrase_weight: 100
 諷詞	feng4 ci2
 諷誦	feng4 song4
 諷諫	feng4 jian4
+諷諫	feng3 jian4
 諷諭	feng4 yu4
 諷諭詩	feng4 yu4 shi1
 諷讀	feng4 du2
@@ -97839,6 +97846,8 @@ min_phrase_weight: 100
 謊子	huang3 zi5
 謊稱	huang3 cheng1
 謎兒	mei4 er5
+謎兒	mi2 er1
+謎兒	mi2 er2
 謏才	xiao3 cai2
 謏聞之陋	xiao3 wen2 zhi1 lou4
 謏聞淺說	xiao3 wen2 qian3 shuo1
@@ -97895,6 +97904,7 @@ min_phrase_weight: 100
 譏刺	ji1 ci4
 譏呵	ji1 he1
 譏諷	ji1 feng4
+譏諷	ji1 feng3
 識丁	shi4 ding1
 識別	shi4 bie2
 識別信號	shi4 bie2 xin4 hao4
@@ -97961,6 +97971,7 @@ min_phrase_weight: 100
 議和	yi4 he2
 議和團	yi4 he2 tuan2
 議場	yi4 chang2
+議場	yi4 chang3
 議處	yi4 chu3
 議親	yi4 qin1
 議長	yi4 zhang3
@@ -97980,6 +97991,7 @@ min_phrase_weight: 100
 讀卡器	du2 ka3 qi4
 讀卡機	du2 ka3 ji1
 讀數	du2 shu4
+讀數	du2 shu3
 讀書破萬卷	du2 shu1 po4 wan4 juan4
 讀書種子	du2 shu1 zhong3 zi3
 讀書識字	du2 shu1 shi4 zi4
@@ -97993,6 +98005,7 @@ min_phrase_weight: 100
 變奏曲	bian4 zou4 qu3
 變弄	bian4 nong4
 變得	bian4 de5
+變得	bian4 de2
 變徵	bian4 zhi3
 變徵之聲	bian4 zhi3 zhi1 sheng1
 變徵之音	bian4 zhi3 zhi1 yin1
@@ -98022,6 +98035,7 @@ min_phrase_weight: 100
 讘䛟	zhe2 jia2
 讚唄	zan4 bai4
 讚詞	zan4 ci4
+讚詞	zan4 ci2
 谷地	gu3 di4
 谷蠡	gu3 li2
 谷都	gu3 du1
@@ -98118,6 +98132,7 @@ min_phrase_weight: 100
 豕突	shi3 tu2
 豕突狼奔	shi3 tu2 lang2 ben1
 豚拍	tun2 po4
+豚拍	tun2 bo2
 象傳	xiang4 zhuan4
 象度	xiang4 du4
 象拔蚌	xiang4 ba2 bang4
@@ -98134,6 +98149,7 @@ min_phrase_weight: 100
 豪強	hao2 qiang2
 豪忕	hao2 tai4
 豪橫	hao2 heng4
+豪橫	hao2 heng2
 豪氣干雲	hao2 qi4 gan1 yun2
 豪興	hao2 xing4
 豫西山地	yu4 xi1 shan1 di4
@@ -98201,6 +98217,7 @@ min_phrase_weight: 100
 貞節牌坊	zhen1 jie2 pai2 fang1
 貞節牌坊	zhen1 jie2 pai2 fang3
 貞觀	zhen1 guan4
+貞觀	zhen1 guan1
 貞觀之治	zhen1 guan4 zhi1 zhi4
 貞觀政要	zhen1 guan4 zheng4 yao4
 負乘致寇	fu4 sheng4 zhi4 kou4
@@ -98217,9 +98234,11 @@ min_phrase_weight: 100
 負片	fu4 pian4
 負笈擔簦	fu4 ji2 dan1 deng1
 負累	fu4 lei3
+負累	fu4 lei4
 負荷	fu4 he4
 負荷量	fu4 he4 liang4
 負載	fu4 zai4
+負載	fu4 zai3
 負載開關	fu4 zai4 kai1 guan1
 負載電壓降	fu4 zai4 dian4 ya1 jiang4
 負重	fu4 zhong4
@@ -98236,6 +98255,7 @@ min_phrase_weight: 100
 財政部長	cai2 zheng4 bu4 zhang3
 財會	cai2 kuai4
 財相	cai2 xiang1
+財相	cai2 xiang4
 財長	cai2 zhang3
 貢監	gong4 jian4
 貢禹彈冠	gong4 yu3 tan2 guan1
@@ -98250,6 +98270,7 @@ min_phrase_weight: 100
 貧窮潦倒	pin2 qiong2 liao2 dao3
 貧而樂道	pin2 er2 le4 dao4
 貧血	pin2 xie3
+貧血	pin2 xue4
 貧血病	pin2 xie3 bing4
 貧難	pin2 nan2
 貧骨頭	pin2 gu2 tou5
@@ -98265,6 +98286,7 @@ min_phrase_weight: 100
 貨運卡車	huo4 yun4 ka3 che1
 販夫俗子	fan4 fu1 su2 zi5
 販子	fan4 zi5
+販子	fan4 zi3
 販弄	fan4 nong4
 貪便宜	tan1 pian2 yi2
 貪冒	tan1 mo4
@@ -98288,7 +98310,9 @@ min_phrase_weight: 100
 責數	ze2 shu3
 責躬省過	ze2 gong1 xing3 guo4
 貯備	zhu3 bei4
+貯備	zhu4 bei4
 貯存	zhu3 cun2
+貯存	zhu4 cun2
 貯木場	zhu4 mu4 chang3
 貯氣槽	zhu3 qi4 cao2
 貯水	zhu3 shui3
@@ -98341,6 +98365,7 @@ min_phrase_weight: 100
 貼吧	tie1 ba5
 貼吧	tie1 ba1
 貼息	tie1 xi2
+貼息	tie1 xi1
 貼換	tie1 huan4
 貼現率	tie1 xian4 lv4
 貼票卡	tie1 piao4 ka3
@@ -98362,16 +98387,20 @@ min_phrase_weight: 100
 賁如	bi4 ru2
 賁張	ben1 zhang1
 賁然	bi4 ran2
+賁然	ben1 ran2
 賁石	ben1 shi2
 賁育	ben1 yu4
 賁臨	bi4 lin2
 賁華	bi4 hua1
 賁賁	ben1 ben1
 賁門	ben1 men2
+賁門	bi4 men2
+賁門	pen1 men2
 賄貨公行	hui4 huo4 gong1 xing2
 賄賂公行	hui4 lu4 gong1 xing2
 賄賂并行	hui4 lu4 bing4 xing2
 賅括	gai1 gua1
+賅括	gai1 kuo4
 資料傳輸	zi1 liao4 chuan2 shu1
 資料傳送服務	zi1 liao4 chuan2 song4 fu2 wu4
 資料處理	zi1 liao4 chu3 li3
@@ -98392,6 +98421,7 @@ min_phrase_weight: 100
 賈平凹	jia3 ping2 wa1
 賈怨	gu3 yuan4
 賈禍	gu3 huo4
+賈禍	jia3 huo4
 賈胡	gu3 hu2
 賈舶	gu3 bo2
 賈豎	gu3 shu4
@@ -98412,24 +98442,32 @@ min_phrase_weight: 100
 賓得	bin1 de2
 賓興	bin1 xing1
 賜予	si4 yu3
+賜予	ci4 yu3
 賜假	si4 jia4
 賜光	si4 guang1
 賜卹	si4 xu4
 賜名	si4 ming2
 賜告	si4 gao4
+賜告	ci4 gao4
 賜姓	si4 xing4
+賜姓	ci4 xing4
 賜宴	si4 yan4
+賜宴	ci4 yan4
 賜履	si4 lv3
 賜帛	si4 bo2
 賜復	si4 fu4
 賜教	si4 jiao4
+賜教	ci4 jiao4
 賜死	si4 si3
+賜死	ci4 si3
 賜爵	si4 jue2
 賜環	si4 huan2
 賜示	si4 shi4
 賜福	si4 fu2
+賜福	ci4 fu2
 賜紫	si4 zi3
 賜與	ci4 yu3
+賜與	si4 yu3
 賜酺	si4 fu3
 賜顧	si4 gu4
 賞不當功	shang3 bu4 dang1 gong1
@@ -98437,10 +98475,12 @@ min_phrase_weight: 100
 賞善罰惡	shang3 shan4 fa2 e4
 賞心樂事	shang3 xin1 le4 shi4
 賞玩	shang3 wan4
+賞玩	shang3 wan2
 賞罰不當	shang3 fa2 bu4 dang1
 賞罰分明	shang3 fa2 fen1 ming2
 賞識	shang3 shi4
 賞賜	shang3 si4
+賞賜	shang3 ci4
 賞錢	shang3 qian2
 賞面子	shang3 mian4 zi5
 賠了夫人又折兵	pei2 le5 fu1 ren2 you4 zhe2 bing1
@@ -98454,6 +98494,7 @@ min_phrase_weight: 100
 賢從	xian2 zong4
 賢愚不分	xian2 yu2 bu4 fen1
 賢淑	xian2 shu2
+賢淑	xian2 shu1
 賢相	xian2 xiang4
 賣了兒子招女婿	mai4 le5 er2 zi5 zhao1 nv3 xu4
 賣俏行姦	mai4 qiao4 xing2 jian1
@@ -98463,6 +98504,7 @@ min_phrase_weight: 100
 賣勁	mai4 jin4
 賣務場	mai4 wu4 chang2
 賣場	mai4 chang2
+賣場	mai4 chang3
 賣字號	mai4 zi4 hao4
 賣富差貧	mai4 fu4 chai1 pin2
 賣工夫	mai4 gong1 fu1
@@ -98511,18 +98553,21 @@ min_phrase_weight: 100
 質子數	zhi4 zi3 shu4
 質庫	zhi4 ku4
 質押	zhi4 ya1
+質押	zhi2 ya1
 質數	zhi2 shu4
 質數	zhi4 shu4
 質朴	zhi2 pu2
 質朴	zhi4 pu2
 質樸	zhi2 pu2
 質樸	zhi4 pu2
+質樸	zhi4 pu3
 質權	zhi4 quan2
 質當	zhi4 dang4
 質疑問難	zhi2 yi2 wen4 nan4
 質疑問難	zhi4 yi2 wen4 nan4
 質的	zhi2 di4
 質的	zhi4 di4
+質的	zhi2 de5
 質監	zhi2 jian1
 質監	zhi4 jian1
 質監局	zhi2 jian1 ju2
@@ -98530,6 +98575,7 @@ min_phrase_weight: 100
 質能不滅定律	zhi2 neng2 bu2 mie4 ding4 lv4
 質能不滅定律	zhi4 neng2 bu2 mie4 ding4 lv4
 質要	zhi4 yao1
+質要	zhi2 yao4
 質量	zhi2 liang4
 質量	zhi4 liang4
 質量不滅	zhi2 liang4 bu2 mie4
@@ -98595,6 +98641,7 @@ min_phrase_weight: 100
 賺弄	zuan4 nong4
 賺弄	zhuan4 nong4
 賺得	zhuan4 de2
+賺得	zhuan4 de5
 賺手	zhuan4 shou3
 賺漏	zuan4 lou4
 賺詞	zhuan4 ci2
@@ -98620,6 +98667,7 @@ min_phrase_weight: 100
 贍表子	shan4 biao3 zi5
 贏勾	ying2 gou1
 贏得	ying2 de2
+贏得	ying2 de5
 贏縮	ying2 su4
 贐行	jin4 xing2
 贓埋	zang1 mai2
@@ -98697,6 +98745,7 @@ min_phrase_weight: 100
 走馬看花	zou3 ma3 kan4 hua1
 走骨行屍	zou3 gu3 xing2 shi1
 赳赳	jiu1 jiu1
+赳赳	jiu3 jiu3
 赳赳武夫	jiu1 jiu1 wu3 fu1
 赳赳雄風	jiu1 jiu1 xiong2 feng1
 赴曲	fu4 qu3
@@ -98705,6 +98754,7 @@ min_phrase_weight: 100
 赴蹈	fu4 dao4
 赴蹈湯火	fu4 dao4 tang1 huo3
 赴難	fu4 nan4
+赴難	fu4 nan2
 起來	qi3 lai2
 起倒	qi3 dao3
 起偃為豎	qi3 yan3 wei2 shu4
@@ -98723,12 +98773,14 @@ min_phrase_weight: 100
 起皮子	qi3 pi2 zi5
 起磨	qi3 mo2
 起興	qi3 xing4
+起興	qi3 xing1
 起落	qi3 luo4
 起落場	qi3 luo4 chang3
 起落架	qi3 luo4 jia4
 起落裝置	qi3 luo4 zhuang1 zhi4
 起行	qi3 xing2
 起解	qi3 jie4
+起解	qi3 jie3
 起重機	qi3 zhong4 ji1
 起重葫蘆	qi3 chong2 hu2 lu2
 起重葫蘆	qi3 zhong4 hu2 lu2
@@ -98793,6 +98845,7 @@ min_phrase_weight: 100
 趕不上趟	gan3 bu2 shang4 tang4
 趕到	gan3 dao4
 趕場	gan3 chang2
+趕場	gan3 chang3
 趕場子	gan3 chang3 zi5
 趕座子	gan3 zuo4 zi5
 趕得上	gan3 de5 shang4
@@ -98827,7 +98880,9 @@ min_phrase_weight: 100
 足恭	ju4 gong1
 足數	zu2 shu4
 足癬	zu2 xian3
+足癬	zu2 xuan3
 足跡	zu2 ji1
+足跡	zu2 ji4
 足蹈手舞	zu2 dao4 shou3 wu3
 足量	zu2 liang4
 足高氣強	zu2 gao1 qi4 jiang4
@@ -98836,13 +98891,16 @@ min_phrase_weight: 100
 趵突泉	bao4 tu2 quan2
 趵突泉詩	bao4 tu2 quan2 shi1
 趵趵	bo1 bo1
+趵趵	bao4 bao4
 趼子	jian3 zi5
 趿拉	sa4 la1
 趿拉	ta1 la1
 跂坐	qi4 zuo4
 跂想	qi3 xiang3
+跂想	qi2 xiang3
 跂望	qi3 wang4
 跂望	qi4 wang4
+跂望	qi2 wang4
 跂行喙息	qi2 xing2 hui4 xi2
 跂訾	qi3 zi3
 跂訾	qi4 zi3
@@ -98850,17 +98908,21 @@ min_phrase_weight: 100
 跂蹻	qi2 jue2
 跌了彈的斑鳩	die2 le5 dan4 de5 ban1 jiu1
 跌交	die2 jiao1
+跌交	die1 jiao1
 跌倒	die1 dao3
 跌倒	die2 dao3
 跌停板	die2 ting2 ban3
 跌價	die2 jia4
+跌價	die1 jia4
 跌四平	die2 si4 ping2
 跌宕	die2 dang4
+跌宕	die1 dang4
 跌宕不羈	die2 dang4 bu4 ji1
 跌宕不群	die2 dang4 bu4 qun2
 跌宕昭彰	die2 dang4 zhao1 zhang1
 跌宕遒麗	die2 dang4 qiu2 li4
 跌幅	die2 fu2
+跌幅	die1 fu2
 跌得重	die2 de5 zhong4
 跌扑	die2 pu1
 跌打	die2 da3
@@ -98878,12 +98940,15 @@ min_phrase_weight: 100
 跌落	die1 luo4
 跌落	die2 luo4
 跌蕩	die2 dang4
+跌蕩	die1 dang4
 跌蕩不羈	die2 dang4 bu4 ji1
 跌蕩放言	die2 dang4 fang4 yan2
 跌足	die2 zu2
+跌足	die1 zu2
 跌跌撞撞	die2 die2 zhuang4 zhuang4
 跌跌蹌蹌	die1 die1 qiang4 qiang4
 跌跤	die2 jiao1
+跌跤	die1 jiao1
 跑不了	pao3 bu4 liao3
 跑不了寺	pao3 bu4 liao3 si4
 跑不了廟	pao3 bu4 liao3 miao4
@@ -98911,6 +98976,7 @@ min_phrase_weight: 100
 跑蹄	pao2 ti2
 跑蹄剪尾	pao2 ti2 jian3 wei3
 跑轍	pao3 che4
+跑轍	pao3 zhe2
 跑道容量	pao3 dao4 rong2 liang4
 跑馬場	pao3 ma3 chang2
 跑馬賣解	pao3 ma3 mai4 xie4
@@ -98935,6 +99001,7 @@ min_phrase_weight: 100
 跡地	ji1 di4
 跡捕	ji1 bu3
 跡象	ji1 xiang4
+跡象	ji4 xiang4
 跣子	xian3 zi5
 跨國企業	kua4 guo2 qi4 ye4
 跨地區	kua4 di4 qu1
@@ -98991,6 +99058,7 @@ min_phrase_weight: 100
 踉踉蹌蹌	liang4 liang4 qiang4 qiang4
 踉踉蹡蹡	liang4 liang4 qiang4 qiang4
 踉蹌	liang4 qiang4
+踉蹌	liang2 qiang1
 踉蹡	liang4 qiang4
 踏地	ta4 di4
 踏地知根	ta4 di4 zhi1 gen1
@@ -99024,6 +99092,7 @@ min_phrase_weight: 100
 踱拉	duo4 la1
 踱方步	duo4 fang1 bu4
 踱步	duo4 bu4
+踱步	duo2 bu4
 踳落	chun3 luo4
 踳駁	chun3 bo2
 踵決肘見	zhong3 jue2 zhou3 xian4
@@ -99078,6 +99147,7 @@ min_phrase_weight: 100
 蹤跡	zong1 ji1
 蹤跡	zong1 ji4
 蹦兒	beng4 er5
+蹦兒	beng4 er1
 蹦子	beng4 zi5
 蹦蹦兒車	beng4 beng4 er5 che1
 蹦躂	beng4 da1
@@ -99091,6 +99161,7 @@ min_phrase_weight: 100
 蹭棱子	ceng4 leng2 zi5
 蹲便器	dun1 bian4 qi4
 蹴鞠	cu4 ju2
+蹴鞠	cu4 ju1
 蹶子	jue2 zi5
 蹶子	jue3 zi5
 蹶石伐木	jue2 shi2 fa1 mu4
@@ -99100,12 +99171,14 @@ min_phrase_weight: 100
 蹺足而待	qiao1 zu2 er2 dai4
 蹺辮子	qiao1 bian4 zi5
 蹻勇	jiao3 yong3
+蹻勇	qiao1 yong3
 蹻捷	jiao3 jie2
 蹻跖	jiao3 zhi2
 蹻蹻	jiao3 jiao3
 蹼輪汽船	pu2 lun2 qi4 chuan2
 蹼辣	pu2 la4
 躁佻	zao4 tiao2
+躁佻	zao4 tiao1
 躉售市場	dun3 shou4 shi4 chang2
 躉當	dun3 dang4
 躋躋蹌蹌	ji1 ji1 qiang4 qiang4
@@ -99179,11 +99252,13 @@ min_phrase_weight: 100
 車右	ju1 you4
 車喝	che1 he1
 車場	che1 chang2
+車場	che1 chang3
 車塵馬跡	che1 chen2 ma3 ji1
 車墊子	che1 dian4 zi5
 車士	ju1 shi4
 車夫	che1 fu1
 車子	che1 zi5
+車子	che1 zi3
 車廠子	che1 chang3 zi5
 車把式	che1 ba3 shi4
 車書相望	che1 shu1 xiang1 wang4
@@ -99195,8 +99270,10 @@ min_phrase_weight: 100
 車簸箕	che1 bo4 ji1
 車蓋	che1 gai4
 車行	che1 hang2
+車行	che1 xing2
 車行通道	che1 xing2 tong1 dao4
 車裂	ju1 lie4
+車裂	che1 lie4
 車豁子	che1 huo1 zi5
 車載斗量	che1 zai4 dou3 liang2
 車輪子	che1 lun2 zi5
@@ -99204,10 +99281,13 @@ min_phrase_weight: 100
 車轂擊馳	che1 gu3 ji2 chi2
 車轍馬跡	che1 che4 ma3 ji1
 車長	che1 chang2
+車長	che1 zhang3
 車間	che1 jian1
 車頭相	che1 tou2 xiang4
 車駕	ju1 jia4
+車駕	che1 jia4
 車騎	ju1 ji4
+車騎	che1 ji4
 車鼓弄	che1 gu3 nong4
 軋一腳	ga2 yi4 jiao3
 軋場	ya4 chang2
@@ -99220,6 +99300,7 @@ min_phrase_weight: 100
 軋染機	ya4 ran3 ji1
 軋棉	ya4 mian2
 軋機	zha2 ji1
+軋機	ya4 ji1
 軋然	ga2 ran2
 軋著	ya4 zhao2
 軋著	ya4 zhe5
@@ -99229,12 +99310,15 @@ min_phrase_weight: 100
 軋製	zha2 zhi4
 軋路機	ya4 lu4 ji1
 軋軋	ya4 ya4
+軋軋	ga2 ga2
 軋輥	zha2 gun3
+軋輥	ya4 gun3
 軋轢	ya4 li4
 軋進	ga2 jin4
 軋道機	ya4 dao4 ji1
 軋道車	ya4 dao4 che1
 軋鋼	zha2 gang1
+軋鋼	ya4 gang1
 軋鋼廠	zha2 gang1 chang3
 軋鋼條	zha2 gang1 tiao2
 軋鋼機	zha2 gang1 ji1
@@ -99244,6 +99328,7 @@ min_phrase_weight: 100
 軌度	gui3 du4
 軌模	gui3 mo2
 軌跡	gui3 ji1
+軌跡	gui3 ji4
 軌轍	gui3 che4
 軌道空間站	gui3 dao4 kong1 jian1 zhan4
 軌量	gui3 liang4
@@ -99262,6 +99347,7 @@ min_phrase_weight: 100
 軍官學校	jun1 guan1 xue2 xiao4
 軍巡鋪	jun1 xun2 pu4
 軍帖	jun1 tie3
+軍帖	jun1 tie4
 軍情五處	jun1 qing2 wu3 chu4
 軍情六處	jun1 qing2 liu4 chu4
 軍操	jun1 cao1
@@ -99287,6 +99373,7 @@ min_phrase_weight: 100
 軟口蓋	ruan3 kou3 gai4
 軟呢	ruan3 ni2
 軟和	ruan3 huo5
+軟和	ruan3 he2
 軟底子	ruan3 di3 zi5
 軟怯怯	ruan3 que4 que4
 軟木塞	ruan3 mu4 sai1
@@ -99314,6 +99401,7 @@ min_phrase_weight: 100
 軸旋轉	zhou2 xuan2 zhuan3
 軸率	zhou2 lv4
 軸突	zhou2 tu2
+軸突	zhou2 tu1
 軸艫千里	zhou2 lu2 qian1 li3
 軸艫千里	zhu2 lu2 qian1 li3
 軻峨	ke1 e2
@@ -99324,6 +99412,7 @@ min_phrase_weight: 100
 較差	jiao4 cha1
 較時量力	jiao4 shi2 liang4 li4
 較為	jiao4 wei2
+較為	jiao3 wei2
 較真兒	jiao4 zhen1 er5
 較短絜長	jiao4 duan3 xie2 chang2
 較短量長	jiao4 duan3 liang4 chang2
@@ -99332,9 +99421,11 @@ min_phrase_weight: 100
 較長	jiao4 chang2
 較長絜短	jiao4 chang2 xie2 duan3
 載人	zai3 ren2
+載人	zai4 ren2
 載人軌道空間站	zai4 ren2 gui3 dao4 kong1 jian1 zhan4
 載伯德	zai3 bo2 de2
 載入	zai3 ru4
+載入	zai4 ru4
 載客	zai4 ke4
 載客車	zai4 ke4 che1
 載客量	zai4 ke4 liang4
@@ -99342,12 +99433,14 @@ min_phrase_weight: 100
 載攜	zai4 xi1
 載攜	zai4 xie2
 載明	zai4 ming2
+載明	zai3 ming2
 載書	zai4 shu1
 載機	zai4 ji1
 載歌且舞	zai4 ge1 qie3 wu3
 載歌載舞	zai4 ge1 zai4 wu3
 載沉載浮	zai4 chen2 zai4 fu2
 載波	zai4 bo1
+載波	zai3 po1
 載湉	zai3 tian2
 載漪	zai4 yi1
 載福	zai4 fu2
@@ -99362,6 +99455,7 @@ min_phrase_weight: 100
 載貨汽車	zai4 huo4 qi4 che1
 載途	zai4 tu2
 載運	zai4 yun4
+載運	zai3 yun4
 載道	zai4 dao4
 載道怨聲	zai4 dao4 yuan4 sheng1
 載酒	zai4 jiu3
@@ -99374,6 +99468,7 @@ min_phrase_weight: 100
 載馳載驅	zai4 chi2 zai4 qu1
 載驅	zai4 qu1
 載體	zai4 ti3
+載體	zai3 ti3
 輔相	fu3 xiang4
 輔行	fu3 xing2
 輔車相依	fu3 ju1 xiang1 yi1
@@ -99382,6 +99477,7 @@ min_phrase_weight: 100
 輔音釋放時間	fu3 yin1 shi4 fang4 shi2 jian1
 輕事重報	qing1 shi4 zhong4 bao4
 輕佻	qing1 tiao2
+輕佻	qing1 tiao1
 輕便	qing1 bian4
 輕剽	qing1 piao4
 輕口薄舌	qing1 kou3 bo2 she2
@@ -99401,6 +99497,7 @@ min_phrase_weight: 100
 輕省	qing1 sheng3
 輕看	qing1 kan4
 輕薄	qing1 bo2
+輕薄	qing1 bao2
 輕薄無知	qing1 bo2 wu2 zhi1
 輕薄無行	qing1 bo2 wu2 xing4
 輕裝簡從	qing1 zhuang1 jian3 zong4
@@ -99423,6 +99520,7 @@ min_phrase_weight: 100
 輕量貨幣	qing1 liang4 huo4 bi4
 輕音樂	qing1 yin1 yue4
 輕騎	qing1 ji4
+輕騎	qing1 qi2
 輕骨頭	qing1 gu2 tou5
 輕骨頭	qing1 gu3 tou2
 輘轢	ling2 li4
@@ -99446,6 +99544,7 @@ min_phrase_weight: 100
 輪唱曲	lun2 chang4 qu3
 輪圈	lun2 quan1
 輪子	lun2 zi5
+輪子	lun2 zi3
 輪旋曲	lun2 xuan2 qu3
 輪狀病毒傳染病	lun2 zhuang4 bing4 du2 chuan2 ran3 bing4
 輪種	lun2 zhong4
@@ -99463,6 +99562,7 @@ min_phrase_weight: 100
 輸著	shu1 zhe5
 輸肝剖膽	shu1 gan1 pou3 dan3
 輸血	shu1 xie3
+輸血	shu1 xue4
 輻射分解	fu2 she4 fen1 jie3
 輻射劑量	fu2 she4 ji4 liang4
 輻射劑量率	fu2 she4 ji4 liang4 lv4
@@ -99526,6 +99626,7 @@ min_phrase_weight: 100
 轉危為安	zhuan3 wei1 wei2 an1
 轉危為安	zhuan3 wei2 wei2 an1
 轉去	zhuan4 qu4
+轉去	zhuan3 qu4
 轉口	zhuan3 kou3
 轉口稅	zhuan3 kou3 shui4
 轉口貿易	zhuan3 kou3 mao4 yi4
@@ -99545,6 +99646,7 @@ min_phrase_weight: 100
 轉好	zhuan3 hao3
 轉嫁	zhuan3 jia4
 轉子	zhuan4 zi5
+轉子	zhuan3 zi5
 轉字鎖	zhuan4 zi4 suo3
 轉學	zhuan3 xue2
 轉學生	zhuan3 xue2 sheng1
@@ -99615,12 +99717,14 @@ min_phrase_weight: 100
 轉燈	zhuan4 deng1
 轉燭	zhuan3 zhu2
 轉爐	zhuan4 lu2
+轉爐	zhuan3 lu2
 轉珠繩子	zhuan3 zhu1 sheng2 zi5
 轉生	zhuan3 sheng1
 轉產	zhuan3 chan3
 轉用	zhuan3 yong4
 轉發	zhuan3 fa1
 轉盤	zhuan4 pan2
+轉盤	zhuan3 pan2
 轉盼	zhuan3 pan4
 轉盼多情	zhuan3 pan4 duo1 qing2
 轉看轉好	zhuan3 kan4 zhuan3 hao3
@@ -99632,6 +99736,7 @@ min_phrase_weight: 100
 轉矩	zhuan4 ju3
 轉矩臂	zhuan4 ju3 bi4
 轉磨	zhuan4 mo4
+轉磨	zhuan3 mo2
 轉磨磨	zhuan4 mo4 mo4
 轉禍為福	zhuan3 huo4 wei2 fu2
 轉科	zhuan3 ke1
@@ -99646,6 +99751,7 @@ min_phrase_weight: 100
 轉紐	zhuan4 niu3
 轉給	zhuan3 gei3
 轉置	zhuan4 zhi4
+轉置	zhuan3 zhi4
 轉義	zhuan3 yi4
 轉而	zhuan3 er2
 轉背	zhuan3 bei4
@@ -99679,12 +99785,15 @@ min_phrase_weight: 100
 轉踏	zhuan3 ta4
 轉身	zhuan3 shen1
 轉車	zhuan3 che1
+轉車	zhuan4 che1
 轉車台	zhuan4 che1 tai2
 轉車臺	zhuan4 che1 tai2
 轉軌	zhuan3 gui3
 轉軸	zhuan4 zhou2
+轉軸	zhuan3 zhou2
 轉軸兒	zhuan4 zhou2 er5
 轉載	zhuan3 zai4
+轉載	zhuan3 zai3
 轉載稿	zhuan3 zai4 gao3
 轉輪手槍	zhuan4 lun2 shou3 qiang1
 轉輪王	zhuan3 lun2 wang2
@@ -99718,6 +99827,7 @@ min_phrase_weight: 100
 轉面無情	zhuan3 mian4 wu2 qing2
 轉韻	zhuan3 yun4
 轉頭	zhuan3 tou2
+轉頭	zhuan4 tou2
 轉風	zhuan3 feng1
 轉首	zhuan3 shou3
 轉體	zhuan3 ti3
@@ -99729,6 +99839,7 @@ min_phrase_weight: 100
 轍鮒	che4 fu4
 轍鮒之急	che4 fu4 zhi1 ji2
 轎子	jiao4 zi5
+轎子	jiao4 zi3
 轟動效應	hong1 dong4 xiao4 ying4
 轟擊	hong1 ji2
 轟炸	hong1 zha4
@@ -99797,22 +99908,28 @@ min_phrase_weight: 100
 辭頭	ci2 tou5
 辭頭	ci2 tou2
 辮子	bian4 zi5
+辮子	bian4 zi3
 辮髮	bian4 fa3
 辯稱	bian4 cheng1
 辯答	bian4 da2
 辯給	bian4 ji3
 辯難	bian4 nan4
+辯難	bian4 nan2
 辰勾	chen2 gou1
 辰勾盼月	chen2 gou1 pan4 yue4
 辱命	ru4 ming4
+辱命	ru3 ming4
 辱國	ru4 guo2
+辱國	ru3 guo2
 辱國喪師	ru4 guo2 sang4 shi1
 辱子	ru4 zi3
 辱承華翰	ru4 cheng2 hua2 han4
 辱抹	ru4 mo3
 辱沒	ru4 mo4
+辱沒	ru3 mo4
 辱游	ru4 you2
 辱罵	ru4 ma4
+辱罵	ru3 ma4
 辱荷	ru4 he4
 辱身敗名	ru4 shen1 bai4 ming2
 辱門敗戶	ru4 men2 bai4 hu4
@@ -99825,6 +99942,7 @@ min_phrase_weight: 100
 農轉非	nong2 zhuan3 fei1
 迂回奔襲	yu1 hui2 ben1 xi2
 迂拙	yu1 zhuo2
+迂拙	yu1 zhuo1
 迂摸	yu1 mo1
 迂曲	yu1 qu1
 迂氣	yu1 qi4
@@ -99859,6 +99977,7 @@ min_phrase_weight: 100
 近幾年	jin4 ji3 nian2
 近方賣弄	jin4 fang1 mai4 nong4
 近期	jin4 qi2
+近期	jin4 qi1
 近畿地方	jin4 ji1 di4 fang1
 近端胞漿	jin4 duan1 bao1 jiang1
 近處	jin4 chu4
@@ -99895,6 +100014,7 @@ min_phrase_weight: 100
 迫擊炮	po4 ji2 pao4
 迫良為娼	po4 liang2 wei2 chang1
 迫降	po4 jiang4
+迫降	po4 xiang2
 迭興	die2 xing1
 迴旋	hui2 xuan2
 迴旋曲	hui2 xuan2 qu3
@@ -99928,6 +100048,7 @@ min_phrase_weight: 100
 追根究柢	zhui1 gen1 jiu4 di3
 追歡取樂	zhui1 huan1 qu3 le4
 追究	zhui1 jiu4
+追究	zhui1 jiu1
 追緝	zhui1 ji1
 追緝	zhui1 qi4
 追蹤調查	zhui1 zong1 diao4 cha2
@@ -99936,6 +100057,7 @@ min_phrase_weight: 100
 退一步海闊天空	tui4 yi2 bu4 hai3 kuo4 tian1 kong1
 退出運行	tui4 chu1 yun4 xing2
 退場	tui4 chang2
+退場	tui4 chang3
 退怯怯	tui4 qie4 qie4
 退怯怯	tui4 que4 que4
 退息	tui4 xi2
@@ -99954,6 +100076,7 @@ min_phrase_weight: 100
 逃北	tao2 bo4
 逃名晦跡	tao2 ming2 hui4 ji1
 逃奔	tao2 ben4
+逃奔	tao2 ben1
 逃散	tao2 san4
 逃災躲難	tao2 zai1 duo3 nan4
 逃災避難	tao2 zai1 bi4 nan4
@@ -99983,6 +100106,7 @@ min_phrase_weight: 100
 透明程度	tou4 ming2 cheng2 du4
 透消息	tou4 xiao1 xi2
 透露	tou4 lu4
+透露	tou4 lou4
 透露消息	tou4 lu4 xiao1 xi2
 透露消息	tou4 lou4 xiao1 xi2
 逐兔先得	zhu2 tu4 xian1 de2
@@ -100008,9 +100132,12 @@ min_phrase_weight: 100
 這一陣子	zhe4 yi2 zhen4 zi5
 這下子	zhe4 xia4 zi5
 這個	zhe4 ge5
+這個	zhe4 ge4
 這個擋口	zhe4 ge5 dang3 kou3
 這個那個	zhe4 ge5 na4 ge5
 這兒	zhe4 er5
+這兒	zhe4 er1
+這兒	zhe4 er2
 這其間	zhe4 qi2 jian1
 這和	zhe4 han4
 這和	zhe4 he2
@@ -100102,6 +100229,7 @@ min_phrase_weight: 100
 造化	zao4 hua4
 造化弄人	zao4 hua4 nong4 ren2
 造父	zao4 fu3
+造父	zao4 fu4
 造畜稠棧	zao4 chu4 chou2 zhan4
 逢人便講	feng2 ren2 bian4 jiang3
 逢人只說三分話	feng2 ren2 zhi3 shuo1 san1 fen1 hua4
@@ -100149,10 +100277,12 @@ min_phrase_weight: 100
 連續統假設	lian2 xu4 tong3 jia3 she4
 連續變調	lian2 xu4 bian4 diao4
 連署	lian2 shu4
+連署	lian2 shu3
 連翹	lian2 qiao2
 連跌帶爬	lian2 die2 dai4 pa2
 連軸轉	lian2 zhou2 zhuan4
 連載	lian2 zai4
+連載	lian2 zai3
 連連看	lian2 lian2 kan4
 連鎖反應	lian2 suo3 fan3 ying4
 連長	lian2 zhang3
@@ -100161,10 +100291,12 @@ min_phrase_weight: 100
 連鬼也不見一個	lian2 gui3 ye3 bu2 jian4 yi2 ge5
 逮下	dai4 xia4
 逮捕	dai4 bu3
+逮捕	dai3 bu3
 逮治	dai4 zhi4
 逮繫	dai4 xi4
 逮逮	di4 di4
 週期	zhou1 qi2
+週期	zhou1 qi1
 週期律	zhou1 qi2 lv4
 週期性	zhou1 qi2 xing4
 週期數	zhou1 qi1 shu4
@@ -100173,6 +100305,7 @@ min_phrase_weight: 100
 週轉	zhou1 zhuan3
 週轉金	zhou1 zhuan3 jin1
 週長	zhou1 chang2
+週長	zhou1 zhang3
 進剿	jin4 jiao3
 進占	jin4 zhan4
 進可替不	jin4 ke3 ti4 fou3
@@ -100217,6 +100350,8 @@ min_phrase_weight: 100
 逼良為娼	bi1 liang2 wei2 chang1
 逾分	yu2 fen4
 逾期	yu2 qi2
+逾期	yu2 qi1
+逾期	yu4 qi2
 遁入空門	dun4 ru4 kong1 men2
 遁名匿跡	dun4 ming2 ni4 ji1
 遁藏	dun4 cang2
@@ -100231,6 +100366,7 @@ min_phrase_weight: 100
 遇著	yu4 zhao2
 遇著	yu4 zhe5
 遇難	yu4 nan4
+遇難	yu4 nan2
 遇難成祥	yu4 nan4 cheng2 xiang2
 遇難者	yu4 nan4 zhe3
 遇難船	yu4 nan2 chuan2
@@ -100270,6 +100406,7 @@ min_phrase_weight: 100
 運行狀況	yun4 xing2 zhuang4 kuang4
 運計鋪謀	yun4 ji4 pu1 mou2
 運載	yun4 zai4
+運載	yun4 zai3
 運載火箭	yun4 zai4 huo3 jian4
 運載量	yun4 zai3 liang4
 運輸量	yun4 shu1 liang4
@@ -100278,6 +100415,7 @@ min_phrase_weight: 100
 遍及	bian4 ji2
 遍及	pian4 ji2
 遍地	bian4 di4
+遍地	pian4 di4
 遍地荒旱	bian4 di4 huang1 han4
 遍地開花	bian4 di4 kai1 hua1
 遍處	bian4 chu4
@@ -100306,6 +100444,7 @@ min_phrase_weight: 100
 過度緊張	guo4 du4 jin3 zhang1
 過度關懷	guo4 du4 guan1 huai2
 過得	guo4 de2
+過得	guo4 de5
 過得一天算一天	guo4 de5 yi4 tian1 suan4 yi4 tian1
 過得去	guo4 de2 qu4
 過得去	guo4 de5 qu4
@@ -100317,6 +100456,7 @@ min_phrase_weight: 100
 過數	guo4 shu4
 過日子	guo4 ri4 zi5
 過期	guo4 qi2
+過期	guo4 qi1
 過河卒子	guo4 he2 zu2 zi5
 過淋	guo4 lin2
 過渡時期	guo4 du4 shi2 qi2
@@ -100331,6 +100471,7 @@ min_phrase_weight: 100
 過蒙	guo4 meng2
 過處	guo4 chu4
 過載	guo4 zai4
+過載	guo4 zai3
 過過	guo4 guo4
 過過身	guo4 guo4 shen1
 過重	guo4 zhong4
@@ -100341,7 +100482,9 @@ min_phrase_weight: 100
 遏惡揚善	e4 e4 yang2 shan4
 遏漸防萌	e4 jian1 fang2 meng2
 遐跡	xia2 ji1
+遐跡	xia2 ji4
 遒勁	qiu2 jing4
+遒勁	qiu2 jin4
 道‧瓊斯	dao4 eng3 qiong2 si1
 道‧瓊斯指數	dao4 eng3 qiong2 si1 zhi3 shu4
 道三不著兩	dao4 san1 bu4 zhao2 liang3
@@ -100376,7 +100519,10 @@ min_phrase_weight: 100
 道範長昭	dao4 fan4 chang2 zhao1
 道茄子	dao4 qie2 zi5
 道藏	dao4 zang4
-道行	dao4 heng2
+道藏	dao4 cang2
+# 道行	dao4 heng2
+道行	dao4 hang2
+道行	dao4 xing2
 道袍竹冠	dao4 pao2 zhu2 guan1
 道觀	dao4 guan4
 道調	dao4 diao4
@@ -100523,6 +100669,7 @@ min_phrase_weight: 100
 遺落	yi2 luo4
 遺行	yi2 xing4
 遺跡	yi2 ji1
+遺跡	yi2 ji4
 遺蹟	yi2 ji1
 遼寧	liao2 ning2
 遼寧古盜鳥	liao2 ning2 gu3 dao4 niao3
@@ -100546,6 +100693,7 @@ min_phrase_weight: 100
 避賢謝拙	bi4 xian2 xie4 zhuo2
 避重就輕	bi4 zhong4 jiu4 qing1
 避難	bi4 nan4
+避難	bi4 nan2
 避難就易	bi4 nan2 jiu4 yi4
 避難所	bi4 nan4 suo3
 避風處	bi4 feng1 chu4
@@ -100577,6 +100725,7 @@ min_phrase_weight: 100
 還口	huan2 kou3
 還可以	hai2 ke3 yi3
 還和	hai2 he2
+還和	hai2 han4
 還嘴	huan2 zui3
 還報	huan2 bao4
 還好	hai2 hao3
@@ -100617,10 +100766,13 @@ min_phrase_weight: 100
 還賬	huan2 zhang4
 還辟	huan2 bi4
 還都	huan2 du1
+還都	hai2 dou1
 還鄉	huan2 xiang1
 還錢	huan2 qian2
+還錢	hai2 qian2
 還陽	huan2 yang2
 還願	huan2 yuan4
+還願	hai2 yuan4
 還飆	huan2 biao1
 還首	huan2 shou3
 還魂	huan2 hun2
@@ -100629,6 +100781,8 @@ min_phrase_weight: 100
 還魂記	huan2 hun2 ji4
 邊儲	bian1 chu2
 邊兒	bian1 er5
+邊兒	bian1 er1
+邊兒	bian1 er2
 邊卡	bian1 qia3
 邊地	bian1 di4
 邊塞	bian1 sai4
@@ -100639,6 +100793,7 @@ min_phrase_weight: 100
 邊度	bian1 du4
 邊張子	bian1 zhang1 zi5
 邊框	bian1 kuang1
+邊框	bian1 kuang4
 邊沿	bian1 yan2
 邊緣地區	bian1 yuan2 di4 qu1
 邊都沾不上	bian1 dou1 zhan1 bu2 shang4
@@ -100662,6 +100817,7 @@ min_phrase_weight: 100
 邏逤檀	luo2 sha1 tan2
 邏騎	luo2 ji4
 邐迤	li3 yi3
+邐迤	li3 yi2
 邕寧	yong1 ning2
 邕寧區	yong1 ning2 qu1
 邙山行	mang2 shan1 xing2
@@ -106663,168 +106819,6 @@ min_phrase_weight: 100
 ##### @結束 END - 106663 #####
 #####chtpc和terra重複，移到terra#######
 #####@2001-4000#####
-諍友	zheng4 you3
-諍臣	zheng4 chen2
-諍言	zheng4 yan2
-諍訟	zheng4 song4
-諍諫	zheng4 jian4
-諫諍	jian4 zheng4
-諷刺	feng1 ci4
-諷諫	feng3 jian4
-謎兒	mi2 er1
-謎兒	mi2 er2
-謾罵	man2 ma4
-譏諷	ji1 feng1
-譏諷	ji1 feng3
-議場	yi4 chang3
-讀數	du2 shu3
-變得	bian4 de2
-讚詞	zan4 ci2
-豚拍	tun2 bo2
-豪橫	hao2 heng2
-貞觀	zhen1 guan1
-負累	fu4 lei4
-負載	fu4 zai3
-財相	cai2 xiang4
-貧血	pin2 xue4
-販子	fan4 zi3
-貯備	zhu4 bei4
-貯存	zhu4 cun2
-貼息	tie1 xi1
-賁然	ben1 ran2
-賁門	bi4 men2
-賁門	pen1 men2
-賅括	gai1 kuo4
-賈禍	jia3 huo4
-賜予	ci4 yu3
-賜告	ci4 gao4
-賜姓	ci4 xing4
-賜宴	ci4 yan4
-賜教	ci4 jiao4
-賜死	ci4 si3
-賜福	ci4 fu2
-賜與	si4 yu3
-賞玩	shang3 wan2
-賞賜	shang3 ci4
-賢淑	xian2 shu1
-賣場	mai4 chang3
-質押	zhi2 ya1
-質朴	zhi2 po4
-質樸	zhi4 pu3
-質的	zhi2 de5
-質要	zhi2 yao4
-賺得	zhuan4 de5
-贏得	ying2 de5
-赳赳	jiu3 jiu3
-赴難	fu4 nan2
-起興	qi3 xing1
-起解	qi3 jie3
-趕場	gan3 chang3
-足癬	zu2 xuan3
-足跡	zu2 ji4
-趵趵	bao4 bao4
-跂想	qi2 xiang3
-跂望	qi2 wang4
-跌交	die1 jiao1
-跌價	die1 jia4
-跌宕	die1 dang4
-跌幅	die1 fu2
-跌蕩	die1 dang4
-跌足	die1 zu2
-跌跤	die1 jiao1
-跑轍	pao3 zhe2
-跡象	ji4 xiang4
-跳踉	tiao4 lang2
-踉蹌	liang2 qiang1
-踱步	duo2 bu4
-蹦兒	beng4 er1
-蹴鞠	cu4 ju1
-蹻勇	qiao1 yong3
-躁佻	zao4 tiao1
-車場	che1 chang3
-車子	che1 zi3
-車行	che1 xing2
-車裂	che1 lie4
-車長	che1 zhang3
-車駕	che1 jia4
-車騎	che1 ji4
-軋機	ya4 ji1
-軋軋	ga2 ga2
-軋輥	ya4 gun3
-軋鋼	ya4 gang1
-軌跡	gui3 ji4
-軍帖	jun1 tie4
-軟和	ruan3 he2
-軸突	zhou2 tu1
-較為	jiao3 wei2
-載人	zai4 ren2
-載入	zai4 ru4
-載明	zai3 ming2
-載波	zai3 po1
-載運	zai3 yun4
-載體	zai3 ti3
-輕佻	qing1 tiao1
-輕薄	qing1 bao2
-輕騎	qing1 qi2
-輪子	lun2 zi3
-輸血	shu1 xue4
-轉去	zhuan3 qu4
-轉子	zhuan3 zi5
-轉爐	zhuan3 lu2
-轉盤	zhuan3 pan2
-轉磨	zhuan3 mo2
-轉置	zhuan3 zhi4
-轉車	zhuan4 che1
-轉軸	zhuan3 zhou2
-轉載	zhuan3 zai3
-轉頭	zhuan4 tou2
-轎子	jiao4 zi3
-辮子	bian4 zi3
-辯難	bian4 nan2
-辱命	ru3 ming4
-辱國	ru3 guo2
-辱沒	ru3 mo4
-辱罵	ru3 ma4
-迂拙	yu1 zhuo1
-近期	jin4 qi1
-迫降	po4 xiang2
-追究	zhui1 jiu1
-退場	tui4 chang3
-逃奔	tao2 ben1
-透露	tou4 lou4
-這個	zhe4 ge4
-這兒	zhe4 er1
-這兒	zhe4 er2
-造父	zao4 fu4
-連署	lian2 shu3
-連載	lian2 zai3
-逮捕	dai3 bu3
-週期	zhou1 qi1
-週長	zhou1 zhang3
-逾期	yu2 qi1
-逾期	yu4 qi2
-遇難	yu4 nan2
-運載	yun4 zai3
-遍地	pian4 di4
-過得	guo4 de5
-過期	guo4 qi1
-過載	guo4 zai3
-遐跡	xia2 ji4
-遒勁	qiu2 jin4
-道藏	dao4 cang2
-道行	dao4 hang2
-道行	dao4 xing2
-遺跡	yi2 ji4
-避難	bi4 nan2
-還原	hai2 yuan2
-還和	hai2 han4
-還都	hai2 dou1
-還錢	hai2 qian2
-還願	hai2 yuan4
-邊兒	bian1 er1
-邊兒	bian1 er2
-邊框	bian1 kuang4
-邐迤	li3 yi2
 那個	na3 ge4
 那個	nei4 ge5
 那兒	na1 er2
