@@ -9,7 +9,7 @@
 ### 安裝後建議修改：
 
 - 修改 App 中 essay.txt（八股文）檔案，符合台灣用字用詞：
-    - 於 /Library/Input Methods/Squirrel.app/Contents/SharedSupport/ 置換 essay.txt（八股文）⇨ 《重新部署》。
+    - 於 /Library/Input Methods/Squirrel.app/Contents/SharedSupport/ 置換 essay.txt（八股文） ⇨《重新部署》。
     
 - 修改 App 使 OS 默認 Squirrel 為繁體中文：
     - 於 /Library/Input Methods/Squirrel.app/Contents/Info.plist 把 Info.plist 中的 zh 改成 zh-Hant ⇨ 《重開機》。
