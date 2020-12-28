@@ -6,8 +6,8 @@ patch:
   # style/horizontal: true      # 候選橫排
   style/inline_preedit: false #true
   style/corner_radius: 4 #10
-  style/line_spacing: 4 #6 #1
-  style/spacing: 4 #10 #5
+  style/line_spacing: 1 #4 #6
+  style/spacing: 5 #10 #4
   style/candidate_format: '%c. %@'
   style/font_face: 'Times-Roman,PingFangTC-Light,AppleColorEmoji' #,HanaMinA,HanaMinB
   style/font_point: 20 #21
@@ -15,6 +15,21 @@ patch:
   style/label_font_point: 14 #12 #18
 
 ###################################################
+  preset_color_schemes/liveon:
+    name: 時尚雜誌
+    author: onion
+    back_color: '0xF4F4F4'
+    text_color: '0xB5C3CF'
+    hilited_text_color: '0x373737'
+    hilited_back_color: '0xF4F4F4'
+    hilited_candidate_text_color: '0xF4F4F4' #'0x9CD4E6'
+    hilited_candidate_back_color: '0x373737'
+    hilited_candidate_label_color: '0xF4F4F4' #'0x9CD4E6'
+    hilited_comment_text_color: '0xF4F4F4' #'0xC0D0DC'
+    candidate_text_color: '0x83B2C0'
+    label_color: '0x83B2C0'
+    comment_text_color: '0xC0D0DC'
+
   preset_color_schemes/Louis:
     name: 名牌LV
     author: onion
