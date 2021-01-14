@@ -18,7 +18,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion_add
-version: "2020.12"
+version: "2021.01"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7
@@ -162,6 +162,7 @@ min_phrase_weight: 100
 窿	long1
 匙	shi2
 匙	shi3
+乘	cheng4
 ##### @補充以下，使注音(非輕聲時)的某些鍵位不會變英文空碼，『非正確發音』！！！ #####
 嗯	eng2	0%
 #嗯	eng3	0%
