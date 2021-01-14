@@ -162,7 +162,7 @@ min_phrase_weight: 100
 窿	long1
 匙	shi2
 匙	shi3
-乘	cheng4
+乘	cheng4	30%
 ##### @補充以下，使注音(非輕聲時)的某些鍵位不會變英文空碼，『非正確發音』！！！ #####
 嗯	eng2	0%
 #嗯	eng3	0%
