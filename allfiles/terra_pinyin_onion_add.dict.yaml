@@ -18,13 +18,17 @@
 # ===============================
 ---
 name: terra_pinyin_onion_add
-version: "2021.01"
+version: "202101"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7
 min_phrase_weight: 100
 ...
 ##### @補充「通俗慣用發音」，『非正確發音』！！！ #####
+#厘	li3
+#釐	li3
+#割	gua4	0%
+#泵	bang1	1%
 逾	yu4	90%
 蛤	ge3
 丼	dong4	200%
@@ -55,15 +59,12 @@ min_phrase_weight: 100
 澄	deng1	2%
 携	xi4	60%
 攜	xi4	30%
-召	zhao1
 坊	fang3	60%
 刈	gua4	60%
 剎	sha4
 刹	sha4
 堀	jue2
 蔘	sen1
-#厘	li3
-#釐	li3
 箍	ku1
 篐	ku1
 涮	shua1
@@ -84,7 +85,7 @@ min_phrase_weight: 100
 珀	bo4	1%
 抓	zhua3	5%
 擂	lei3	0.1%
-###焢	kong4	1%
+焢	kong4	1%
 鮨	zhi3	100%
 珈	ka1	1%
 懟	dui3	0.01%
@@ -134,8 +135,6 @@ min_phrase_weight: 100
 庾	yu2	50%
 熾	zhi4	50%
 汀	ding1	10%
-傾	qing3
-倾	qing3
 月	rou4	0%
 匣	jia2
 鰻	man4	50%
@@ -163,22 +162,50 @@ min_phrase_weight: 100
 匙	shi2
 匙	shi3
 乘	cheng4	10%
-##### @補充以下，使注音(非輕聲時)的某些鍵位不會變英文空碼，『非正確發音』！！！ #####
-嗯	eng2	0%
-#嗯	eng3	0%
-嗯	eng4	0%
-嗯	en2	0%
-誒	eh2	0%
-欸	eh2	0%
-诶	eh2	0%
-欸	eh3	0%
-誒	eh3	0%
-诶	eh3	0%
-噝	si2	0%
-嘶	si2	0%
-核	he3	0%
+傀	kui2	10%
+嘮	lao1	50%
+唠	lao1	50%
+懲	cheng3	10%
+惩	cheng3	10%
+揩	ka1	1%
+摻	can1	1%
+痙	jing1
+痉	jing1
+瞭	liao2	1%
+蠕	ru3	10%
+逾	yu4	10%
+伙	huo1	1%
+撒	sa4	0%
+扆	yi1	0%
+漪	yi3	0%
+洳	ru2	1%
+酺	fu3	1%
+塌	ta4	10%
+桔	ji2	10%
+樁	chun1	1%
+潛	qian3	1%
+嫉	ji4	1%
+沏	qi4	1%
+煽	shan4	1%
+琺	fa3	1%
+莆	pu3	1%
+貯	chu2	1%
+鎩	sha4	1%
+铩	sha4	1%
+韋	wei3	1%
+頷	han2	1%
+颔	han2	1%
+妨	fang3	1%
+偎	wei4	1%
+櫚	lv3
+榈	lv3
+軋	ga1	50%
+轧	ga1	50%
+賂	luo4	10%
+赂	luo4	10%
 ##### 以下對《一聲》做補充 #####
 ### @補充為《一聲》，方便輸入，『非正確發音』！！！ ###
+嘛	ma1	10%
 唄	bei1	10%
 朵	duo1
 麼	mo1	1%
@@ -237,6 +264,8 @@ min_phrase_weight: 100
 姥	lao5	0%
 寶	bao5	0%
 娃	wa5	50%
+嬤	ma5	0%
+嬷	ma5	0%
 ### @補充一般可理解為《輕聲》之發音，『非正確發音』！！！ ###
 #係	xi5
 #系	xi5
@@ -256,73 +285,100 @@ min_phrase_weight: 100
 薩	sa5	0%
 萨	sa5	0%
 撒	sa5	0%
+父	fu5	0%
+地	di5	0%
+################################################
+################################################
+##### @補充以下，使注音(非輕聲時)的某些鍵位不會變英文空碼，『非正確發音』！！！ #####
+#嗯	eng3	0%
+嗯	eng2	0%
+嗯	eng4	0%
+嗯	en2	0%
+誒	eh2	0%
+欸	eh2	0%
+诶	eh2	0%
+欸	eh3	0%
+誒	eh3	0%
+诶	eh3	0%
+噝	si2	0%
+嘶	si2	0%
+核	he3	0%
+昂	ang3	0%
 ### @以下使《輕聲》不會變空碼，『非正確發音』！！！ ###
 腌	ang5	0%
 骯	ang5	0%
 肮	ang5	0%
 日	ri5	0%
-# 承上，以下以官方詞庫詞句有的變音之發音為主 #
-在	zai5	0%
-#仔	zai5	0%
-#哉	zai5	0%
-#彆	bie5	0%
-#癟	bie5	0%
-#㿜	bie5	0%
-#瘪	bie5	0%
-#貓	mao5	0%
-#猫	mao5	0%
-#毛	mao5	0%
-對	dui5	0%
+# 承上，以下以官方詞庫詞句有的變音之發音為主(2021詞庫已去除變音，故不需) #
+#在	zai5	0%
+##仔	zai5	0%
+##哉	zai5	0%
+##彆	bie5	0%
+##癟	bie5	0%
+##㿜	bie5	0%
+##瘪	bie5	0%
+##貓	mao5	0%
+##猫	mao5	0%
+##毛	mao5	0%
+#對	dui5	0%
 #補充#
-对	dui5	0%
+#对	dui5	0%
 #補充#
-対	dui5	0%
-兌	dui5	0%
+#対	dui5	0%
+#兌	dui5	0%
 #補充#
-兑	dui5	0%
-#懟	dui5	0%
-#怼	dui5	0%
-挑	tiao5	0%
-跳	tiao5	0%
-條	tiao5	0%
-騰	teng5	0%
-#疼	teng5	0%
-嫩	nen5	0%
-亂	luan5	0%
+#兑	dui5	0%
+##懟	dui5	0%
+##怼	dui5	0%
+#挑	tiao5	0%
+#跳	tiao5	0%
+#條	tiao5	0%
+#騰	teng5	0%
+##疼	teng5	0%
+#嫩	nen5	0%
+#亂	luan5	0%
 #補充#
-乱	luan5	0%
-乖	guai5	0%
-棍	gun5	0%
-滾	gun5	0%
+#乱	luan5	0%
+#乖	guai5	0%
+#棍	gun5	0%
+#滾	gun5	0%
 #補充#
-滚	gun5	0%
-給	gei5	0%
+#滚	gun5	0%
+#給	gei5	0%
 #補充#
-给	gei5	0%
-告	gao5	0%
-高	gao5	0%
-#搞	gao5	0%
-空	kong5	0%
-裙	qun5	0%
-#群	qun5	0%
-#羣	qun5	0%
-#峮	qun5	0%
-抓	zhua5	0%
-#爪	zhua5	0%
-妝	zhuang5	0%
+#给	gei5	0%
+#告	gao5	0%
+#高	gao5	0%
+##搞	gao5	0%
+#空	kong5	0%
+#裙	qun5	0%
+##群	qun5	0%
+##羣	qun5	0%
+##峮	qun5	0%
+#抓	zhua5	0%
+##爪	zhua5	0%
+#妝	zhuang5	0%
 #補充#
-妆	zhuang5	0%
-#壯	zhuang5	0%
-#壮	zhuang5	0%
-丈	zhang5	0%
-仗	zhang5	0%
-掌	zhang5	0%
-#漲	zhang5	0%
-#涨	zhang5	0%
-水	shui5	0%
-走	zou5	0%
-算	suan5	0%
-#酸	suan5	0%
+#妆	zhuang5	0%
+##壯	zhuang5	0%
+##壮	zhuang5	0%
+#丈	zhang5	0%
+#仗	zhang5	0%
+#掌	zhang5	0%
+##漲	zhang5	0%
+##涨	zhang5	0%
+#水	shui5	0%
+#走	zou5	0%
+#算	suan5	0%
+##酸	suan5	0%
+##蘇	su5	1%
+##苏	su5	1%
+##汪	wang5	0%
+##尪	wang5	0%
+##尫	wang5	0%
+##尢	wang5	0%
+################################################
+################################################
 ### @補充「狀聲詞」、「語氣詞」為《輕聲》，『非字典有的發音』！！！ ###
 ### 以下另一目的為使《輕聲》不會變空碼 ###
 嗶	bi5	1%
@@ -459,7 +515,7 @@ min_phrase_weight: 100
 嘟	dou5	0%
 唗	dou5	0%
 唞	dou5	0%
-嘽	dan5	0%
+#嘽	dan5	0%
 啖	dan5	0%
 呾	dan5	0%
 唌	dan5	0%
@@ -492,6 +548,8 @@ min_phrase_weight: 100
 嘆	tan5	0%
 叹	tan5	0%
 嘾	tan5	0%
+嘽	tan5	0%
+啴	tan5	0%
 嘡	tang5	0%
 呢	ni5	0%
 囁	nie5	0%
@@ -875,6 +933,7 @@ min_phrase_weight: 100
 吷	xue5	0%
 嚯	xue5	0%
 㕰	xue5	0%
+噱	xue5	0%
 喧	xuan5	0%
 吅	xuan5	0%
 咺	xuan5	0%
@@ -956,6 +1015,7 @@ min_phrase_weight: 100
 嚋	chou5	0%
 吜	chou5	0%
 嘽	chan5	0%
+啴	chan5	0%
 嚵	chan5	0%
 嗔	chen5	0%
 㕴	chen5	0%
@@ -1072,8 +1132,6 @@ min_phrase_weight: 100
 㕽	si5	0%
 #窣	su5	0%
 囌	su5	0%
-#蘇	su5	1%
-#苏	su5	1%
 嗉	su5	0%
 𠻜	su5	0%
 嗦	suo5	1%
@@ -1123,6 +1181,7 @@ min_phrase_weight: 100
 哑	ya5	0%
 唖	ya5	0%
 呾	ya5	0%
+呷	ya5	0%
 #唷	yo5	99%
 哟	yo5	0%
 㖿	ye5	100%
@@ -1204,10 +1263,6 @@ min_phrase_weight: 100
 呡	wen5	0%
 㗃	wen5	0%
 㖧	wen5	0%
-#汪	wang5	0%
-#尪	wang5	0%
-#尫	wang5	0%
-#尢	wang5	0%
 嗡	weng5	0%
 𠰈	weng5	0%
 吁	yu5	0%
@@ -1215,6 +1270,7 @@ min_phrase_weight: 100
 噢	yu5	0%
 喐	yu5	0%
 喅	yu5	0%
+喻	yu5	0%
 喩	yu5	0%
 噊	yu5	0%
 噦	yue5	0%
@@ -1392,6 +1448,8 @@ min_phrase_weight: 100
 𡂎	lv5	0%
 𪚩	gui5	0%
 吆	yao5	0%
+######################################################
+######################################################
 ### @補充詞庫有的中文《輕聲》變音，『非字典有的發音』！！！ ###
 ### 一般不對特殊中文變音做單字發音補充，故遮屏 ###
 #彆	bie5	0%
@@ -2069,3 +2127,46 @@ min_phrase_weight: 100
 #願	yuan5	0%
 #用	yong5	0%
 ##### @END 2067 #####
+
+
+
+
+
+
+
+##### 下方為「舊版」 #####
+### 下方編碼，是為了錯按聲調時，不連續出現英文。不是正確拼音! ###
+#咦〜	yi5	0%
+#嗯〜	eng2	0%
+#嗯〜	eng3	0%
+#嗯〜	eng4	0%
+#欸〜	eh2	0%
+#欸〜	eh3	0%
+####欸〜	eh4	0%
+#欸〜	eh5	0%
+#呃〜	e5	0%
+#唉〜	ei3	0%
+####誒〜	ei4	0%
+#唉〜	ei5	0%
+#噢〜	ao5	0%
+#醬〜	ang5	0%
+#咹〜	an5	0%
+#嗯〜	en2	0%
+#哎〜	ai5	0%
+####唉〜	ai5	0%
+#唲〜	er1	0%
+#####ˇ	3	0% #無效
+#####ˋ	4	0% #無效
+#####ˊ	6	0% #無效
+#####˙	7	0% #無效
+#咐〜	f5	0%
+#哏〜	k5	0%
+#𠯦〜	q5	0%
+#吱〜	zhi5	0%
+#嗟〜	chi5	0%
+#喏〜	ri5	0%
+#呲〜	ci5	0%
+#嘶〜	si5	0%
+#唔〜	wu5	0%
+#吁〜	yu5	0%
+##### END #####

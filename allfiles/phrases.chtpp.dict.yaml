@@ -27,7 +27,7 @@
 # ===============================
 ---
 name: phrases.chtpp
-version: "202012"
+version: "202101"
 sort: by_weight
 use_preset_vocabulary: false
 max_phrase_length: 7 #20
@@ -42,6 +42,162 @@ columns:
 # 三個臭皮匠賽過一個諸葛亮	san1 ge4 chou4 pi2 jiang5 sai4 guo4 yi1 ge4 zhu1 ge3 liang4
 # 三個臭皮匠合成一個諸葛亮	san1 ge4 chou4 pi2 jiang5 he2 cheng2 yi1 ge4 zhu1 ge3 liang4
 # 三個臭皮匠勝過一個諸葛亮	san1 ge4 chou4 pi2 jiang5 sheng4 guo4 yi1 ge4 zhu1 ge3 liang4
+鬧騰勁兒	nao4 teng5 jin4 er1
+打一巴掌揉三揉	da3 yi4 ba1 zhang5 rou2 san1 rou2
+瞎折騰	xia1 zhe1 teng5
+眉毛鉗	mei2 mao5 qian2
+拍巴掌	pai1 ba1 zhang5
+嫁妝	jia4 zhuang5
+不折騰	bu4 zhe1 teng5
+拉㞎㞎	la1 ba3 ba5
+㞎㞎	ba3 ba5
+放著明白裝糊塗	fang4 zhe5 ming2 bai5 zhuang1 hu2 tu5
+顯白	xian3 bai5
+顯擺	xian3 bai5
+內行看門道外行看熱鬧	nei4 hang2 kan4 men2 dao5 wai4 hang2 kan4 re4 nao5
+運道	yun4 dao5
+老走道兒	lao3 zou3 dao5 er1
+蹄髈	ti2 pang5
+轉遊	zhuan4 you5
+裡脊	li3 ji5
+蛐蛐	qu1 qu5
+蛐蛐罐兒	qu1 qu5 guan4 er1
+蛐蛐兒罩子	qu1 qu5 er1 zhao4 zi5
+熱臉貼冷屁股	re4 lian3 tie1 leng3 pi4 gu5
+嘴上無毛辦事不牢	zui3 shang5 wu2 mao2 ban4 shi4 bu4 lao2
+蓋上	gai4 shang5
+包在我身上	bao1 zai4 wo3 shen1 shang5
+熱鍋上的螞蟻	re4 guo1 shang5 de5 ma3 yi3
+碟大碗小磕著碰著	die2 da4 wan3 xiao3 ke1 zhao5 peng4 zhao5
+臨著	lin2 zhao5
+芥茉	jie4 mo5
+疲塌	pi2 ta5
+私房	si1 fang5
+糟踐	zao1 jian5
+素淨	su4 jing5
+老到	lao3 dao5
+甘蔗	gan1 zhe5
+狗狗	gou3 gou5
+煙筒	yan1 tong5
+啞巴吃	ya3 ba5 chi1
+斂巴	lian3 ba5
+啞巴吃黃	ya3 ba5 chi1 huang2
+尾巴工程	wei3 ba5 gong1 cheng2
+扯雞巴蛋	che3 ji1 ba5 dan4
+啞巴吃餃子	ya3 ba5 chi1 jiao3 zi5
+狗長尾巴尖兒	gou3 zhang3 wei3 ba5 jian1 er1
+兔子尾巴長不了	tu4 zi5 wei3 ba5 chang2 bu4 liao3
+老鼠尾巴生瘡兒	lao3 shu3 wei3 ba5 sheng1 chuang1 er1
+老鼠尾巴上害癤子	lao3 shu3 wei3 ba5 shang4 hai4 jie2 zi5
+啞巴吃黃連有苦說不出	ya3 ba5 chi1 huang2 lian2 you3 ku3 shuo1 bu4 chu1
+斗篷	dou3 peng5
+好斗篷	hao4 dou3 peng5
+小斗篷	xiao3 dou3 peng5
+地下斗篷	di4 xia4 dou3 peng5
+強者斗篷	qiang2 zhe3 dou3 peng5
+徵戰斗篷	zheng1 zhan4 dou3 peng5
+暗影斗篷	an4 ying3 dou3 peng5
+狼王斗篷	lang2 wang2 dou3 peng5
+羽飾斗篷	yu3 shi4 dou3 peng5
+防毒斗篷	fang2 du2 dou3 peng5
+陽焰斗篷	yang2 yan4 dou3 peng5
+靈法斗篷	ling2 fa3 dou3 peng5
+靈霧斗篷	ling2 wu4 dou3 peng5
+頁岩斗篷	ye4 yan2 dou3 peng5
+魔鯊斗篷	mo2 sha1 dou3 peng5
+黑潮斗篷	hei1 chao2 dou3 peng5
+黑火斗篷	hei1 huo3 dou3 peng5
+黑邊斗篷	hei1 bian1 dou3 peng5
+黑鋼斗篷	hei1 gang1 dou3 peng5
+亡命者斗篷	wang2 ming4 zhe3 dou3 peng5
+看守者斗篷	kan1 shou3 zhe3 dou3 peng5
+薩菲隆斗篷	sa4 fei1 long2 dou3 peng5
+雨法師斗篷	yu3 fa3 shi1 dou3 peng5
+晶化絲線斗篷	jing1 hua4 si1 xian4 dou3 peng5
+黑暗幻影斗篷	hei1 an4 huan4 ying3 dou3 peng5
+得瑟	de2 se5
+德性	de2 xing5
+恭惟	gong1 wei5
+愛愛	ai4 ai5
+掰扯	bai1 che5
+拉扯大	la1 che5 da4
+撩開	liao1 kai5
+學摸	xue2 mo5
+尿泡	sui1 pao5
+屁屁	pi4 pi5
+嫁裝	jia4 zhuang5
+太陽	tai4 yang5
+奴才	nu2 cai5
+丁秀才	ding1 xiu4 cai5
+劉秀才	liu2 xiu4 cai5
+吳秀才	wu2 xiu4 cai5
+奴才相	nu2 cai5 xiang4
+孫秀才	sun1 xiu4 cai5
+小秀才	xiao3 xiu4 cai5
+張秀才	zhang1 xiu4 cai5
+徐秀才	xu2 xiu4 cai5
+敖秀才	ao2 xiu4 cai5
+林秀才	lin2 xiu4 cai5
+狗奴才	gou3 nu2 cai5
+王秀才	wang2 xiu4 cai5
+田秀才	tian2 xiu4 cai5
+當奴才	dang1 nu2 cai5
+秀才半	xiu4 cai5 ban4
+金秀才	jin1 xiu4 cai5
+陳秀才	chen2 xiu4 cai5
+麴秀才	qu2 xiu4 cai5
+秀才作醫	xiu4 cai5 zuo4 yi1
+金笛秀才	jin1 di2 xiu4 cai5
+小秀才學堂	xiao3 xiu4 cai5 xue2 tang2
+輞川閑居贈裴秀才迪	wang3 chuan1 xian2 ju1 zeng4 pei2 xiu4 cai5 di2
+輞川閒居贈裴秀才迪	wang3 chuan1 xian2 ju1 zeng4 pei2 xiu4 cai5 di2
+秀才不出門全知天下事	xiu4 cai5 bu4 chu1 men2 quan2 zhi1 tian1 xia4 shi4
+夥計	huo3 ji5
+報酬	bao4 chou5
+勞動報酬	lao2 dong4 bao4 chou5
+邊際報酬	bian1 ji4 bao4 chou5
+嘍羅	lou2 luo5
+埋汰	mai2 tai5
+哈欠	ha1 qian5
+乾脆利索	gan1 cui4 li4 suo5
+利索	li4 suo5
+我的愛人	wo3 de5 ai4 ren5
+媒人扔過牆	mei2 ren5 reng1 guo4 qiang2
+媒人口無量斗	mei2 ren5 kou3 wu2 liang4 dou3
+別人	bie2 ren5
+女人	nv3 ren5
+滴里耷拉	di1 li3 da1 la5
+趿拉板兒	ta1 la5 ban3 er1
+划拉	hua2 la5
+趿拉兒	ta1 la5 er1
+刀螂	dao1 lang5
+事情幹	shi4 qing5 gan4
+件事情	jian4 shi4 qing5
+大事情	da4 shi4 qing5
+好事情	hao3 shi4 qing5
+拉交情	la1 jiao1 qing5
+搞事情	gao3 shi4 qing5
+一些事情	yi4 xie1 shi4 qing5
+一件事情	yi2 jian4 shi4 qing5
+事情可幹	shi4 qing5 ke3 gan4
+事情好幹	shi4 qing5 hao3 gan4
+事情干脆	shi4 qing5 gan1 cui4
+事情要做	shi4 qing5 yao4 zuo4
+任何事情	ren4 he2 shi4 qing5
+很多事情	hen3 duo1 shi4 qing5
+矯情針物	jiao3 qing5 zhen1 wu4
+軍事情報	jun1 shi4 qing5 bao4
+這件事情	zhe4 jian4 shi4 qing5
+這個事情	zhe4 ge5 shi4 qing5
+這種事情	zhe4 zhong3 shi4 qing5
+什麼事情啊	shen2 me5 shi4 qing5 a5
+有什麼事情	you3 shen2 me5 shi4 qing5
+沒什麼事情	mei2 shen2 me5 shi4 qing5
+事情進展得怎樣	shi4 qing5 jin4 zhan3 de5 ze3 yang4
+事情進展得怎樣	shi4 qing5 jin4 zhan3 de5 zen3 yang4
+這事情不是你做得了的	zhe4 shi4 qing5 bu2 shi4 ni3 zuo4 de2 le5 de5
+事情	shi4 qing5
+麻麻亮	ma1 ma5 liang4
 雅致	ya3 zi5
 鑄字	zhu4 zi5
 伙計	huo3 ji5
@@ -3762,6 +3918,277 @@ columns:
 #### @其他大陸慣用發音
 # 阿堵物	e1 du3 wu4
 # 阿靈頓	e1 ling2 dun4
+#### @大陸慣用發音「息」：「xi1」
+# 一息	yi4 xi1
+# 一息奄奄	yi4 xi1 yan1 yan1
+# 一息尚存	yi4 xi1 shang4 cun2
+# 不息	bu4 xi1
+# 休息	xiu1 xi1
+# 休息室	xiu1 xi1 shi4
+# 作息	zuo4 xi1
+# 作息時間	zuo4 xi1 shi2 jian1
+# 作息時間表	zuo4 xi1 shi2 jian1 biao3
+# 信息	xin4 xi1
+# 信息與通訊技術	xin4 xi1 yu3 tong1 xun4 ji4 shu4
+# 停息	ting2 xi1
+# 出息	chu1 xi1
+# 切分信息	qie4 fen1 xin4 xi1
+# 利息	li4 xi1
+# 喘息	chuan3 xi1
+# 嘆息	tan4 xi1
+# 奄奄一息	yan1 yan1 yi4 xi1
+# 姑息	gu1 xi1
+# 安息	an1 xi1
+# 屏息	bing3 xi1
+# 平息	ping2 xi1
+# 年息	nian2 xi1
+# 微息	wei1 xi1
+# 息事寧人	xi1 shi4 ning2 ren2
+# 息怒	xi1 nu4
+# 息息相關	xi1 xi1 xiang1 guan1
+# 息爭和好	xi1 zheng1 he2 hao3
+# 息率	xi1 lv4
+# 息肉	xi1 rou4
+# 悄無聲息	qiao1 wu2 sheng1 xi1
+# 悄無聲息	qiao3 wu2 sheng1 xi1
+# 憩息處	qi4 xi1 chu4
+# 拆息	chai1 xi1
+# 月息	yue4 xi1
+# 本息	ben3 xi1
+# 棲息	qi1 xi1
+# 棲息地	qi1 xi1 di4
+# 歇息	xie1 xi1
+# 氣息	qi4 xi1
+# 生息	sheng1 xi1
+# 瞤息	shun4 xi1
+# 瞬息	shun4 xi1
+# 瞬息之間	shun4 xi1 zhi1 jian1
+# 稍息	shao4 xi1
+# 窒息	zhi4 xi1
+# 聲息	sheng1 xi1
+# 股息	gu3 xi1
+# 脈息	mai4 xi1
+# 自強不息	zi4 qiang2 bu4 xi1
+# 訊息	xun4 xi1
+# 訊息傳遞中介	xun4 xi1 chuan2 di4 zhong1 jie4
+# 訊息處理系統	xun4 xi1 chu3 li3 xi4 tong3
+# 貼息	tie1 xi1
+# 走漏消息	zou3 lou4 xiao1 xi1
+# 遺傳信息	yi2 chuan2 xin4 xi1
+# 降息	jiang4 xi1
+# 鼻息	bi2 xi1
+# 安息日	an1 xi1 ri4
+# 安息香	an1 xi1 xiang1
+# 仰人鼻息	yang3 ren2 bi2 xi1
+# 休養生息	xiu1 yang3 sheng1 xi1
+# 偃旗息鼓	yan3 qi2 xi1 gu3
+# 奄奄一息	yan3 yan3 yi1 xi1
+# 姑息養奸	gu1 xi1 yang3 jian1
+# 川流不息	chuan1 liu2 bu4 xi1
+# 杳無消息	yao3 wu2 xiao1 xi1
+# 無聲無息	wu2 sheng1 wu2 xi1
+# 生生不息	sheng1 sheng1 bu4 xi1
+# 瞬息萬變	shun4 xi1 wan4 bian4
+# 低息	di1 xi1
+# 免息	mian3 xi1
+# 升息	sheng1 xi1
+# 存息	cun2 xi1
+# 定息	ding4 xi1
+# 性息	xing4 xi1
+# 息止	xi1 zhi3
+# 息烽	xi1 feng1
+# 息票	xi1 piao4
+# 息縣	xi1 xian4
+# 暫息	zan4 xi1
+# 有息	you3 xi1
+# 派息	pai4 xi1
+# 減息	jian3 xi1
+# 罰息	fa2 xi1
+# 計息	ji4 xi1
+# 休息啊	xiu1 xi1 a5
+# 休息日	xiu1 xi1 ri4
+# 信息化	xin4 xi1 hua4
+# 信息員	xin4 xi1 yuan2
+# 信息學	xin4 xi1 xue2
+# 信息庫	xin4 xi1 ku4
+# 信息流	xin4 xi1 liu2
+# 信息港	xin4 xi1 gang3
+# 信息源	xin4 xi1 yuan2
+# 信息的	xin4 xi1 de5
+# 信息素	xin4 xi1 su4
+# 信息網	xin4 xi1 wang3
+# 信息表	xin4 xi1 biao3
+# 信息論	xin4 xi1 lun4
+# 信息費	xin4 xi1 fei4
+# 信息部	xin4 xi1 bu4
+# 信息量	xin4 xi1 liang4
+# 利息稅	li4 xi1 shui4
+# 嘆息聲	tan4 xi1 sheng1
+# 噴鼻息	pen1 bi2 xi1
+# 在信息	zai4 xin4 xi1
+# 安息國	an1 xi1 guo2
+# 息峰縣	xi1 feng1 xian4
+# 息烽縣	xi1 feng1 xian4
+# 此消息	ci3 xiao1 xi1
+# 派息日	pai4 xi1 ri4
+# 消息面	xiao1 xi1 mian4
+# 發信息	fa1 xin4 xi1
+# 發消息	fa1 xiao1 xi1
+# 的消息	de5 xiao1 xi1
+# 短信息	duan3 xin4 xi1
+# 短消息	duan3 xiao1 xi1
+# 等消息	deng3 xiao1 xi1
+# 與信息	yu3 xin4 xi1
+# 訊息原	xun4 xi1 yuan2
+# 頭信息	tou2 xin4 xi1
+# 鼻息肉	bi2 xi1 rou4
+# 一聲嘆息	yi1 sheng1 tan4 xi1
+# 一聲嘆息	yi4 sheng1 tan4 xi1
+# 今天休息	jin1 tian1 xiu1 xi1
+# 休息一下	xiu1 xi1 yi1 xia4
+# 供求信息	gong1 qiu2 xin4 xi1
+# 信息中心	xin4 xi1 zhong1 xin1
+# 信息交流	xin4 xi1 jiao1 liu2
+# 信息來源	xin4 xi1 lai2 yuan2
+# 信息傳播	xin4 xi1 chuan2 bo1
+# 信息傳遞	xin4 xi1 chuan2 di4
+# 信息內容	xin4 xi1 nei4 rong2
+# 信息共享	xin4 xi1 gong4 xiang3
+# 信息反饋	xin4 xi1 fan3 kui4
+# 信息安全	xin4 xi1 an1 quan2
+# 信息平台	xin4 xi1 ping2 tai2
+# 信息平臺	xin4 xi1 ping2 tai2
+# 信息技術	xin4 xi1 ji4 shu4
+# 信息披露	xin4 xi1 pi1 lu4
+# 信息時代	xin4 xi1 shi2 dai4
+# 信息時報	xin4 xi1 shi2 bao4
+# 信息服務	xin4 xi1 fu2 wu4
+# 信息產業	xin4 xi1 chan3 ye4
+# 信息發佈	xin4 xi1 fa1 bu4
+# 信息社會	xin4 xi1 she4 hui4
+# 信息科學	xin4 xi1 ke1 xue2
+# 信息管理	xin4 xi1 guan3 li3
+# 信息系統	xin4 xi1 xi4 tong3
+# 信息網絡	xin4 xi1 wang3 luo4
+# 信息處理	xin4 xi1 chu3 li3
+# 信息資源	xin4 xi1 zi1 yuan2
+# 個人信息	ge4 ren2 xin4 xi1
+# 傳遞信息	chuan2 di4 xin4 xi1
+# 全息照相	quan2 xi1 zhao4 xiang4
+# 出錯信息	chu1 cuo4 xin4 xi1
+# 分類信息	fen1 lei4 xin4 xi1
+# 參考消息	can1 kao3 xiao1 xi1
+# 反饋信息	fan3 kui4 xin4 xi1
+# 基本信息	ji1 ben3 xin4 xi1
+# 奮鬥不息	fen4 dou4 bu4 xi1
+# 好好休息	hao3 hao3 xiu1 xi1
+# 姑息遺患	gu1 xi1 yi2 huan4
+# 存款利息	cun2 kuan3 li4 xi1
+# 安息茴香	an1 xi1 hui2 xiang1
+# 安息香屬	an1 xi1 xiang1 shu3
+# 安息香科	an1 xi1 xiang1 ke1
+# 安息香脂	an1 xi1 xiang1 zhi1
+# 展會信息	zhan3 hui4 xin4 xi1
+# 市場信息	shi4 chang3 xin4 xi1
+# 息交絕遊	xi1 jiao1 jue2 you2
+# 所有信息	suo3 you3 xin4 xi1
+# 招聘信息	zhao1 pin4 xin4 xi1
+# 提示信息	ti2 shi4 xin4 xi1
+# 政府信息	zheng4 fu3 xin4 xi1
+# 更多信息	geng4 duo1 xin4 xi1
+# 會計信息	kuai4 ji4 xin4 xi1
+# 有消息說	you3 xiao1 xi1 shuo1
+# 特發信息	te4 fa1 xin4 xi1
+# 生命不息	sheng1 ming4 bu4 xi1
+# 產品信息	chan3 pin3 xin4 xi1
+# 發佈信息	fa1 bu4 xin4 xi1
+# 發短消息	fa1 duan3 xiao1 xi1
+# 發聲幽息	fa1 sheng1 you1 xi1
+# 發送信息	fa1 song4 xin4 xi1
+# 發送消息	fa1 song4 xiao1 xi1
+# 相關信息	xiang1 guan1 xin4 xi1
+# 科技信息	ke1 ji4 xin4 xi1
+# 箇中消息	ge4 zhong1 xiao1 xi1
+# 箇中訊息	ge4 zhong1 xun4 xi1
+# 網絡信息	wang3 luo4 xin4 xi1
+# 縷息僅存	lv3 xi1 jin3 cun2
+# 表面信息	biao3 mian4 xin4 xi1
+# 詳細信息	xiang2 xi4 xin4 xi1
+# 起居作息	qi3 ju1 zuo4 xi1
+# 這個消息	zhe4 ge4 xiao1 xi1
+# 這個消息	zhe4 ge5 xiao1 xi1
+# 還本付息	huan2 ben3 fu4 xi1
+# 錯誤信息	cuo4 wu4 xin4 xi1
+# 電子信息	dian4 zi3 xin4 xi1
+# 餘怒未息	yu2 nu4 wei4 xi1
+# 不回我信息	bu4 hui2 wo3 xin4 xi1
+# 中獎等消息	zhong4 jiang3 deng3 xiao1 xi1
+# 人才信息網	ren2 cai2 xin4 xi1 wang3
+# 今天休息啊	jin1 tian1 xiu1 xi1 a5
+# 今天休息嗎	jin1 tian1 xiu1 xi1 ma5
+# 你好好休息	ni3 hao3 hao3 xiu1 xi1
+# 你早點休息	ni3 zao3 dian3 xiu1 xi1
+# 信息不對稱	xin4 xi1 bu2 dui4 chen4
+# 信息不對稱	xin4 xi1 bu4 dui4 chen4
+# 信息化建設	xin4 xi1 hua4 jian4 she4
+# 信息化發展	xin4 xi1 hua4 fa1 zhan3
+# 信息產業部	xin4 xi1 chan3 ye4 bu4
+# 信息發佈人	xin4 xi1 fa1 bu4 ren2
+# 利息所得稅	li4 xi1 suo3 de2 shui4
+# 化學信息素	hua4 xue2 xin4 xi1 su4
+# 啟發式信息	qi3 fa1 shi4 xin4 xi1
+# 好好休息下	hao3 hao3 xiu1 xi1 xia4
+# 我今天休息	wo3 jin1 tian1 xiu1 xi1
+# 早點休息吧	zao3 dian3 xiu1 xi1 ba5
+# 發信息給我	fa1 xin4 xi1 gei3 wo3
+# 窒息性毒劑	zhi4 xi1 xing4 du2 ji4
+# 等你好消息	deng3 ni3 hao3 xiao1 xi1
+# 管理信息庫	guan3 li3 xin4 xi1 ku4
+# 給你發信息	gei3 ni3 fa1 xin4 xi1
+# 給我發信息	gei3 wo3 fa1 xin4 xi1
+# 那你休息吧	na4 ni3 xiu1 xi1 ba5
+# 首席信息官	shou3 xi2 xin4 xi1 guan1
+# 中文信息處理	zhong1 wen2 xin4 xi1 chu3 li3
+# 你也早點休息	ni3 ye3 zao3 dian3 xiu1 xi1
+# 你好好休息吧	ni3 hao3 hao3 xiu1 xi1 ba5
+# 你早點休息吧	ni3 zao3 dian3 xiu1 xi1 ba5
+# 併發信息系統	bing4 fa1 xin4 xi1 xi4 tong3
+# 信息分發系統	xin4 xi1 fen1 fa1 xi4 tong3
+# 信息產業發展	xin4 xi1 chan3 ye4 fa1 zhan3
+# 信息發佈系統	xin4 xi1 fa1 bu4 xi4 tong3
+# 信息發佈軟件	xin4 xi1 fa1 bu4 ruan3 jian4
+# 信息高速公路	xin4 xi1 gao1 su4 gong1 lu4
+# 免費發佈信息	mian3 fei4 fa1 bu4 xin4 xi1
+# 國家信息中心	guo2 jia1 xin4 xi1 zhong1 xin1
+# 好好休息一下	hao3 hao3 xiu1 xi1 yi1 xia4
+# 好好休息休息	hao3 hao3 xiu1 xi1 xiu1 xi1
+# 引發者信息素	yin3 fa1 zhe3 xin4 xi1 su4
+# 我給你發信息	wo3 gei3 ni3 fa1 xin4 xi1
+# 會計信息系統	kuai4 ji4 xin4 xi1 xi4 tong3
+# 消息靈通人士	xiao1 xi1 ling2 tong1 ren2 shi4
+# 發佈供求信息	fa1 bu4 gong1 qiu2 xin4 xi1
+# 發佈招聘信息	fa1 bu4 zhao1 pin4 xin4 xi1
+# 發佈求購信息	fa1 bu4 qiu2 gou4 xin4 xi1
+# 移動信息社會	yi2 dong4 xin4 xi1 she4 hui4
+# 給我發個信息	gei3 wo3 fa1 ge4 xin4 xi1
+# 電子信息工程	dian4 zi3 xin4 xi1 gong1 cheng2
+# 你也早點休息吧	ni3 ye3 zao3 dian3 xiu1 xi1 ba5
+# 洛陽行子空嘆息	luo4 yang2 xing2 zi5 kong1 tan4 xi1
+# 這條消息太毒了	zhe4 tiao2 xiao1 xi1 tai4 du2 le5
+# 協作信息系統開發	xie2 zuo4 xin4 xi1 xi4 tong3 kai1 fa1
+# 基督復臨安息日會	ji1 du1 fu4 lin2 an1 xi1 ri4 hui4
+# 您剛才發送的消息	nin2 gang1 cai2 fa1 song4 de5 xiao1 xi1
+# 成都信息工程學院	cheng2 du1 xin4 xi1 gong1 cheng2 xue2 yuan4
+# 日出而作日入而息	ri4 chu1 er2 zuo4 ri4 ru4 er2 xi1
+# 會計信息的質量特	kuai4 ji4 xin4 xi1 de5 zhi4 liang4 te4
+# 生命不息戰鬥不止	sheng1 ming4 bu4 xi1 zhan4 dou4 bu4 zhi3
+# 基督復臨安息日教會	ji1 du1 fu4 lin2 an1 xi1 ri4 jiao4 hui4
+# 窒息性胸廓發育不良	zhi4 xi1 xing4 xiong1 kuo4 fa1 yu4 bu4 liang2
+# 色素沉著息肉綜合徵	se4 su4 chen2 zhuo2 xi1 rou4 zong1 he2 zheng1
+# 中國人權民運信息中心	zhong1 guo2 ren2 quan2 min2 yun4 xin4 xi1 zhong1 xin1
+# 中國國防科技信息中心	zhong1 guo2 guo2 fang2 ke1 ji4 xin4 xi1 zhong1 xin1
+# 成都信息工程學院銀杏	cheng2 du1 xin4 xi1 gong1 cheng2 xue2 yuan4 yin2 xing4
+# #成都東軟信息技術職業學院	cheng2 du1 dong1 ruan3 xin4 xi1 ji4 shu4 zhi2 ye4 xue2 yuan4
 #### @大陸慣用發音「擊」：「ji1」
 # 不堪一擊	bu4 kan1 yi4 ji1
 # 以一擊十	yi3 yi1 ji1 shi2
@@ -4936,6 +5363,158 @@ columns:
 
 ###############################################################
 ####### @其他非臺灣慣用或錯誤發音 #######
+# 一呎	yi1 chi2
+# 一呎	yi4 chi2
+# 一養	yi1 yang2
+# 一養	yi4 yang2
+# 上頜	shang4 han2
+# 儘是	jin4 shi4
+# 儘速	jin4 su4
+# 割包	gua4 bao1
+# 加為	jia1 wei3
+# 勞里	lao3 li3
+# 只需	zhi4 xu1
+# 吸好	xi1 hao2
+# 呼哧	hu1 chi4
+# 哇噻	wa4 sai3
+# 哭夭	kao4 yao1
+# 噗哧	pu1 chi4
+# 園圃	yuan3 pu3
+# 培果	bei4 guo3
+# 堙滅	yan1 mie4
+# 奇硬	qi2 ying3
+# 奈何	nai3 he2
+# 妝扮	zhuang1 ban3
+# 學院	xiao2 yuan4
+# 對句	dui4 ju2
+# 尻川	ka3 ceng1
+# 尻川	ka3 cheng1
+# 屜兒	tie4 er1
+# 張敞	zhang1 chang2
+# 張著	zhang1 tie1
+# 彆拗	bie4 yao4
+# 得瑟	de4 se5
+# 恤衫	shu4 shan1
+# 憶述	yi4 su4
+# 戳破	cuo1 po4
+# 拴著	shuai1 zhe5
+# 指摘	zhi3 zhe2
+# 掃選	sao3 xuan2
+# 採摘	cai3 zhe2
+# 採暖	cai3 ruan3
+# 採礦	cai3 guang4
+# 探起	tan4 qi2
+# 接彈	jie1 tan4
+# 摘錄	zhe2 lu4
+# 撲哧	pu1 chi4
+# 擎著	qing2 zhe2
+# 新潟	xin1 xie4
+# 更長	geng4 chang3
+# 會看	hui1 kan4
+# 桎梏	zhi2 gu4
+# 桑眼	sang3 yan3
+# 梏桎	gu4 zhi2
+# 椅凳	yi3 deng1
+# 殫力	dan4 li4
+# 殫心	dan4 xin1
+# 氆氌	pu3 lu1
+# 水螅	shui3 xi2
+# 沁入	shen4 ru4
+# 沖壓	chong4 ya1
+# 泵浦	bang1 pu3
+# 港墘	gang3 qi2
+# 湄洲	mei4 zhou1
+# 滿口	man2 kou3
+# 烯烴	xi1 jing3
+# 烷烴	wan2 jing3
+# 無奈	wu2 nai3
+# 無疪	wu2 ci1
+# 煙囪	yan1 chong1
+# 煲湯	bao3 tang1
+# 牛蒡	niu2 pang2
+# 生好	sheng1 hao2
+# 痼疾	gu1 ji2
+# 瘴氣	zhang1 qi4
+# 瘴癘	zhang1 li4
+# 相沖	xiang1 chong4
+# 盼覆	pan2 fu4
+# 眨眼	zha2 yan3
+# 眼瞓	yan3 xun4
+# 短欠	duan3 qian3
+# 砝碼	fa2 ma3
+# 稱羡	chen1 yi2
+# 竊喜	qi1 suan1
+# 筵席	yan4 xi2
+# 縐絲	zhu4 si1
+# 縴夫	qian1 fu1
+# 纍纍	lei3 lei3
+# 羥基	qian1 ji1
+# 肆橫	si4 hong4
+# 腰巾	yao1 jun1
+# 腳本	jiao2 ben3
+# 臍帶	ji1 dai4
+# 芳烴	fang1 jing3
+# 菎麻	bi4 ma2
+# 著眉	zhuo4 mei2
+# 蕃廡	fan2 wu2
+# 藥渣	yao4 zha4
+# 蚍蜉	bi3 fu2
+# 蠅頭	ying3 tou2
+# 被發	bei4 fa3
+# 褒呔	bao1 tai1
+# 詨詐	jiao3 zha4
+# 買給	mai4 gei3
+# 貼文	tie1 wen1
+# 起迄	qi3 yi4
+# 踹踏	chuan4 ta4
+# 造渣	zao3 zha1
+# 邙山	mang1 shan1
+# 酸酐	suan1 hang3
+# 閘門	zha4 men2
+# 雅痞	ya3 pi2
+# 飛得	fei1 ge5
+# 高潮	gao1 chao1
+# 鮕鮘	gu1 dai1
+# 黥面	jing1 mian4
+# 齷齪	wo4 cuo4
+# 初期	cu1 qi2
+# 初乳	cu1 ru3
+# 初春	cu1 chun1
+# 初次	cu1 ci4
+# 初診	cu1 zhen3
+# 初選	cu1 xuan3
+# 初學者	cu1 xue2 zhe3
+# 初體驗	cu1 ti3 yan4
+# 初出茅廬	cu1 chu1 mao2 lu2
+# 初試啼聲	cu1 shi4 ti2 sheng1
+# 儘可能	jin4 ke3 neng2
+# 堆滿了	dui1 man2 le5
+# 後學兒	hou4 xiao2 er1
+# 滿喜歡	man2 xi3 huan1
+# 滿甜的	man2 tian2 de5
+# 環烷烴	huan2 wan2 jing3
+# 筵席捐	yan4 xi2 juan1
+# 芳香烴	fang1 xiang1 jing3
+# 一腔熱血	yi1 qiang1 re4 xie4
+# 一腔熱血	yi4 qiang1 re4 xie4
+# 一鞭先著	yi1 bian1 xian1 zhuo4
+# 三聲無奈	san1 sheng1 wu2 nai3
+# 上歲數兒	shang4 sui4 shu5 er1
+# 埔墘國小	bu3 qi2 guo2 xiao3
+# 奇硬無比	qi2 ying3 wu2 bi3
+# 殫思極慮	dan4 si1 ji2 lv4
+# 沁人心脾	shen4 ren2 xin1 pi2
+# 無可奈何	wu2 ke3 nai3 he2
+# 熱血沸騰	re4 xie4 fei4 teng2
+# 雨字頭兒	yu3 zi5 tou2 er1
+# 多環芳香烴	duo1 huan2 fang1 xiang1 jing3
+# 花錢不眨眼	hua1 qian2 bu4 zha2 yan3
+# 金腿鳳煲湯	jin1 tui3 feng4 bao3 tang1
+# 拋頭顱灑熱血	pao1 tou2 lu2 sa3 re4 xie4
+# 不在其位不謀其政	bu4 zai4 qi2 wei4 bu4 mou4 qi2 zheng4
+# 台北國際商業銀行	tai2 bei3 guo2 ji1 shang1 ye4 yin2 hang2
+###############################################
+# 崗樓	gang3 lou4
 # 卡洛斯	ka3 luo1 si1
 # 占便宜	zhan1 pian2 yi2
 # 占上風	zhan1 shang4 feng1
