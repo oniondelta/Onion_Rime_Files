@@ -48,10 +48,10 @@
 
 《2021修改字詞彙發音》：
 
-- 比對詞彙單個字的發音，修正為方案字典中單字有的發音，符合一般輸入法習慣，故詞彙發音可能會與某些詞典中的發音不同（例：[萌典](https://www.moedict.tw/)和[教育部重編國語辭典](http://dict.revised.moe.edu.tw/cbdic/)就有大量該類詞彙）。換句話說，詞句中變調等之發音不收錄，原變調或錯誤之發音等詞彙轉到 phrases.chtpp.dict.yaml 該檔；如詞彙中單個字的發音在以下比對之字典有的，但方案字典沒有，則補上。
+- 比對詞彙單個字的發音，修正為方案字典中單字有的發音，符合一般輸入法習慣，故詞彙發音可能會與某些詞典中的發音不同（例：〈[萌典](https://www.moedict.tw/)〉和〈[教育部重編國語辭典](http://dict.revised.moe.edu.tw/cbdic/)〉就有大量該類詞彙）。換句話說，詞句中變調等之發音不收錄，原變調或錯誤之發音等詞彙轉到 phrases.chtpp.dict.yaml 該檔；如詞彙中單個字的發音在以下比對之字典有的，但方案字典沒有，則補上。
 - 比對之字典：
-    >  * [教育部異體字字典](https://dict.variants.moe.edu.tw/variants/rbt/home.do)
-    >  * [古今文字集成](http://www.ccamc.co/)
-    >  * [文學網-在線新華字典](https://zd.hwxnet.com/)
-    >  * [漢典](https://www.zdic.net/)
-    >  * [萌典](https://www.moedict.tw/)
+    >  * 〈[教育部異體字字典](https://dict.variants.moe.edu.tw/variants/rbt/home.do)〉
+    >  * 〈[古今文字集成](http://www.ccamc.co/)〉
+    >  * 〈[文學網-在線新華字典](https://zd.hwxnet.com/)〉
+    >  * 〈[漢典](https://www.zdic.net/)〉
+    >  * 〈[萌典](https://www.moedict.tw/)〉
