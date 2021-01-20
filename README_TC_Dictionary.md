@@ -46,4 +46,12 @@
 
 - 許多字發音補充引用各家線上字典，過程發現〈[古今文字集成](http://www.ccamc.co/)〉其中附的「漢語大字典」其發音，其他字典皆沒有，雖不像〈[全字庫](https://www.cns11643.gov.tw/)〉經查基本就認定為錯誤發音，但實在太寬泛且獨門，〈[教育部異體字字典](https://dict.variants.moe.edu.tw/)〉雖然也很多字的發音也很寬泛和獨門，但都有附考據，故對「漢語大字典」獨有之發音，還在考慮是否增加或刪除，前面已經增加很多此發音，且官方原版 terra_pinyin.dict.yaml 也有相同之發音，這方面需待考。
 
+《2021修改字詞彙發音》：
 
+- 比對詞彙單個字的發音，修正為字典中單字有的發音，較符合一般輸入法習慣，故詞彙發音可能會與詞典中的發音不同。（詞句中變調等之發音不收錄，原變調或錯誤之發音詞彙轉到 phrases.chtpp.dict.yaml 該檔）
+- 比對之字典：
+    >  * 教育部異體字字典（https://dict.variants.moe.edu.tw/variants/rbt/home.do）
+    >  * 古今文字集成（http://www.ccamc.co/）
+    >  * 文學網-在線新華字典（https://zd.hwxnet.com/）
+    >  * 漢典（https://www.zdic.net/）
+    >  * 萌典（https://www.moedict.tw/）
