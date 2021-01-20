@@ -9,10 +9,10 @@
 
 ### 字詞庫說明：
 - essay.txt 《八股文》修改貼近台灣習慣用字，並修改詞頻，follow 官方更新。
-- terra_pinyin_onion.dict.yaml 《字庫&詞庫》原地球拼音增修，補充各字典「字」發音，「詞」改台灣習慣用字和發音，「詞」移動輕聲變調到 phrases.chtpp.dict.yaml 該檔。
+- terra_pinyin_onion.dict.yaml 《字庫&詞庫》原地球拼音增修，補充各字典「字」發音，「詞」改台灣習慣用字和發音，「詞」移動各種變音、該詞單個字發音在字典中查無、錯誤發音到 phrases.chtpp.dict.yaml 該檔。
 - terra_pinyin_onion_add.dict.yaml 《字庫》補充慣用但非正確之發音，且增加避免空碼產生問題刻意附加之發音。
 - phrases.chtp.dict.yaml 《詞庫》附加帶調拼音。
-- phrases.chtpp.dict.yaml 《詞庫》附加帶調拼音，只含有輕聲變音和大陸發音。
+- phrases.chtpp.dict.yaml 《詞庫》附加帶調拼音，只含有各種變音、該詞單個字發音在字典中查無、大陸發音、錯誤發音。
 - phrases.cht.dict.yaml 《詞庫》無附加拼音。
 
 ### 原則：
