@@ -254,6 +254,7 @@ easy_en:
   tag: easy_en
   dictionary: easy_en_b
   enable_completion: true
+  # sentence_over_completion: true
   enable_sentence: true #false
   enable_user_dict: false #true
   prefix: "3"
