@@ -10,18 +10,5 @@ use_preset_vocabulary: false
 #max_phrase_length: 7
 #min_phrase_weight: 100
 ...
-㸜	gnri
-㸜	gnbi
-䆞	nrdf
-䆞	nbdf
-䆞	nrdc
-䆞	nbdc
-鿫	kpnd
-鿫	kpob
-鿬	loq
-𬌗	xao
-𬌗	yao
-###
-㪁	ayzu
 
 
