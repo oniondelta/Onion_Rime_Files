@@ -266,6 +266,36 @@ local function fullshape_number(fs)
     return fs
 end
 
+local function math1_number(m1)
+    if m1 == "" then return "" end
+    m1 = string.gsub(m1, "0", "𝟎")
+    m1 = string.gsub(m1, "1", "𝟏")
+    m1 = string.gsub(m1, "2", "𝟐")
+    m1 = string.gsub(m1, "3", "𝟑")
+    m1 = string.gsub(m1, "4", "𝟒")
+    m1 = string.gsub(m1, "5", "𝟓")
+    m1 = string.gsub(m1, "6", "𝟔")
+    m1 = string.gsub(m1, "7", "𝟕")
+    m1 = string.gsub(m1, "8", "𝟖")
+    m1 = string.gsub(m1, "9", "𝟗")
+    return m1
+end
+
+local function math2_number(m2)
+    if m2 == "" then return "" end
+    m2 = string.gsub(m2, "0", "𝟘")
+    m2 = string.gsub(m2, "1", "𝟙")
+    m2 = string.gsub(m2, "2", "𝟚")
+    m2 = string.gsub(m2, "3", "𝟛")
+    m2 = string.gsub(m2, "4", "𝟜")
+    m2 = string.gsub(m2, "5", "𝟝")
+    m2 = string.gsub(m2, "6", "𝟞")
+    m2 = string.gsub(m2, "7", "𝟟")
+    m2 = string.gsub(m2, "8", "𝟠")
+    m2 = string.gsub(m2, "9", "𝟡")
+    return m2
+end
+
 local function purech_number(ch)
     if ch == "" then return "" end
     ch = string.gsub(ch, "0", "〇")
@@ -1290,6 +1320,8 @@ function t_translator(input, seg)
         if (numberout~=nil) and (tonumber(n)) ~= nil then
             yield(Candidate("number", seg.start, seg._end, numberout , "〔一般數字〕"))
             yield(Candidate("number", seg.start, seg._end, fullshape_number(numberout), "〔全形數字〕"))
+            yield(Candidate("number", seg.start, seg._end, math1_number(numberout), "〔數學粗體數字〕"))
+            yield(Candidate("number", seg.start, seg._end, math2_number(numberout), "〔數學空心數字〕"))
             for _, conf in ipairs(confs) do
                 local r = read_number(conf, n)
                 yield(Candidate("number", seg.start, seg._end, r, conf.comment))
@@ -2258,6 +2290,8 @@ function t2_translator(input, seg)
         if (numberout~=nil) and (tonumber(n)) ~= nil then
             yield(Candidate("number", seg.start, seg._end, numberout , "〔一般數字〕"))
             yield(Candidate("number", seg.start, seg._end, fullshape_number(numberout), "〔全形數字〕"))
+            yield(Candidate("number", seg.start, seg._end, math1_number(numberout), "〔數學粗體數字〕"))
+            yield(Candidate("number", seg.start, seg._end, math2_number(numberout), "〔數學空心數字〕"))
             for _, conf in ipairs(confs) do
                 local r = read_number(conf, n)
                 yield(Candidate("number", seg.start, seg._end, r, conf.comment))
