@@ -13,7 +13,6 @@ os.makedirs('./sort_rime/ocm/ocm_mixin/opencc/', exist_ok=True)
 os.makedirs('./sort_rime/ocm/ocm_plus/opencc/', exist_ok=True)
 
 
-
 #複製檔案(注音洋蔥純注音版)
 shutil.copyfile("./allfiles/bopomo_onion_phrase.txt", "./sort_rime/注音洋蔥純注音版/bopomo_onion_phrase.txt")
 shutil.copyfile("./allfiles/bopomo_onion_symbols.yaml", "./sort_rime/注音洋蔥純注音版/bopomo_onion_symbols.yaml")
