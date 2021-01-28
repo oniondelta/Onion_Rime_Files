@@ -1,0 +1,140 @@
+# Rime schema settings
+# encoding: utf-8
+# 《洋蔥蝦米 希臘字母（洋蔥形碼鍵位）設定頁》
+schema:
+  schema_id: ocm_mixin_greek
+  name: ✹希臘字母_新_蝦米✹
+  version: "201908"
+  author:
+    - 『洋蔥』
+  description: |
+    用戶字典蝦米
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 中文, 英文 ]
+  - name: full_shape
+    states: [ 半形, 全形 ]
+
+engine: 
+  processors: 
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - script_translator
+
+menu:
+  alternative_select_keys: "1234567890"
+
+speller:
+  alphabet: "abcdefghijklmnopqrstuvwxyz;'"
+  delimiter: "\""
+  algebra:
+    - "xlit|['|AC|"
+#    - xform/^;;([a-z]+)$/$1CC/ #轉換「組合字符」前雙分號到後面
+    - xform/^([a-z]+)A$/$1;/ #大寫增加尾綴「;」 ＃[;]
+    - xform/^([a-z]+)$/$1C/ #小寫尾綴「/」
+    - abbrev/^([a-z]+)([C;])$/$1/ #精簡尾綴「'」和「;」「/」
+#    - derive/^([a-z]+)([C])([C;])$/$1$2/ #精簡尾綴「;」「/」
+    - "xlit|AC|['|"
+
+translator:
+  dictionary: greek.extended
+  prism: ocm_mixin_greek
+  enable_user_dict: true
+  enable_sentence: false
+  enable_completion: false
+  preedit_format:
+    - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
+  comment_format:
+    - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
+
+key_binder:
+  import_preset: default
+  bindings:
+    - {accept: comma, send: comma, when: has_menu}
+    - {accept: period, send: period, when: has_menu}
+    - {accept: minus, send: minus, when: has_menu}
+    - {accept: equal, send: equal, when: has_menu}
+    - {accept: Return, send: space, when: has_menu}
+
+punctuator:
+#  import_preset: default
+  full_shape:
+    " " : { commit: "　" }
+    "<" : { commit: "，" }
+    ">" : { commit: "。" }
+    "?" : [ ？, ／, ÷ ]
+    ":" : [ ：, ； ]
+    "'" : { pair: [ "‘", "’" ] }
+    "\"" : { pair: [ "“", "”" ] }
+    "\\" : [ 、, ＼ ]
+    "|" : [ ·, ｜, "§", "¦" ]
+    "`" : ｀
+    "~" : ～
+    "!" : { commit: ！ }
+    "@" : [ ＠, ☯ ]
+    "#" : [ ＃, ⌘ ]
+    "%" : [ ％, "°", "℃" ]
+    "$" : [ ￥, "$", "€", "£", "¥", "¢", "¤" ]
+    "^" : { commit: …… }
+    "&" : ＆
+    "*" : [ ＊, ·, ・, ×, ※, ❂ ]
+    "(" : （
+    ")" : ）
+    "_" : [ ——, － ]
+    "+" : ＋
+    "=" : ＝
+    "[" : [ 「, 【, 《, 〔, ［ ]
+    "]" : [ 」, 】, 》, 〕, ］ ]
+    "{" : [ 『, 〖, 〈, ｛ ]
+    "}" : [ 』, 〗, 〉, ｝ ]
+  half_shape:
+    ',' : { commit: "," }
+    '.' : { commit: "." }
+    '<' : { commit: "<" }
+    '>' : { commit: ">" }
+    '?' : { commit: "?" }
+    '/' : { commit: "/" }
+    ':' : { commit: ":" }
+#    ';' : [ ';' ]
+#    "'" : [ "'" ]
+    '"' : { commit: "\"" }
+    '\\' : { commit: "\\" }
+    '|' : { commit: "|" }
+    '`' : { commit: "`" }
+    '~' : { commit: '~' }
+    '!' : { commit: '!' }
+    '@' : { commit: '@' }
+    '#' : { commit: '#' }
+    '%' : { commit: '%' }
+    '$' : { commit: '$' }
+    '^' : { commit: '^' }
+    '&' : { commit: '&' }
+    '*' : { commit: '*' }
+    '(' : { commit: '(' }
+    ')' : { commit: ')' }
+    '-' : { commit: '-' }
+    '+' : { commit: '+' }
+    '=' : { commit: '=' }
+    '[' : { commit: '[' }
+    ']' : { commit: ']' }
+    '{' : { commit: '{' }
+    '}' : { commit: '}' }
+
+recognizer:
+  import_preset: default

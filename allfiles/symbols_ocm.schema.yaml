@@ -1,0 +1,73 @@
+# symbols_bpmf.schema.yaml
+
+schema:
+  schema_id: symbols_ocm
+  name: 系列符號(嘸蝦米)
+  version: "202009"
+  description: |
+    由Unicode中「Emoticons」部份和「Miscellaneous Symbols and Pictographs」部份合成。
+    可在Mac中輸入iOS設備通用的Emoji表情，其他系統可能需安装專門字體。
+  author:
+    - 『洋蔥』
+
+switches:
+  - name: ascii_mode
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+#    - fluency_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - table_translator
+#    - echo_translator
+#    - script_translator
+  filters:
+    - uniquifier
+
+menu:
+  alternative_select_keys: "ABCDEFGHIJ"
+
+speller:
+  alphabet: "abcdefghijklmnopqrstuvwxyz[];,'./-=1234567890`"
+  delimiter: "_"
+
+translator:
+  dictionary: symbols_ocm
+  enable_completion: false
+  enable_encoder: false
+  enable_sentence: false
+#  spelling_hints: 1
+  enable_user_dict: false
+  preedit_format:
+    __include: element_ocm:/emoji_series
+
+key_binder:
+  import_preset: default
+  bindings:
+    - {accept: comma, send: comma, when: has_menu}
+    - {accept: period, send: period, when: has_menu}
+    - {accept: minus, send: minus, when: has_menu}
+    - {accept: equal, send: equal, when: has_menu}
+    - {accept: Return, send: space, when: has_menu}
+
+punctuator:
+  import_preset: default
+
+recognizer:
+#  import_preset: default
+  patterns:
+    uppercase: "^[A-Z][-_+.'0-9A-Za-z]*$"

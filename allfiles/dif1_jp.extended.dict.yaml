@@ -1,0 +1,13 @@
+# Rime dictionary
+# encoding: utf-8
+# 《字庫匯入設定頁》
+---
+name: dif1_jp.extended
+version: "201908"
+sort: original
+use_preset_vocabulary: false
+import_tables:
+  - ocm_mixin_jp
+#  - phrases.jp_hk
+  - phrases.jp_hk_more
+...

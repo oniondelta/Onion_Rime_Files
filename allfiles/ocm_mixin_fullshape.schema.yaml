@@ -1,0 +1,139 @@
+# Rime schema settings
+# encoding: utf-8
+# 《洋蔥蝦米 英數全形（洋蔥形碼鍵位）設定頁》
+schema:
+  schema_id: ocm_mixin_fullshape
+  name: ✹全形字母_新_蝦米✹
+  version: "201910"
+  author:
+    - 『洋蔥』
+  description: |
+    用戶字典蝦米
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 中文, 英文 ]
+  - name: full_shape
+    states: [ 半形, 全形 ]
+
+engine: 
+  processors: 
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - script_translator
+
+menu:
+  alternative_select_keys: "1234567890"
+
+speller:
+  alphabet: "abcdefghijklmnopqrstuvwxyz;'-"
+#  finals: ";'"
+  delimiter: "\""
+  algebra:
+    - 'xlit|"|F|'
+    - xform/^([-a-z]+)$/$1'/ #小寫改全碼
+    - xform/^([a-z]+)F$/$1;/ #大寫轉換
+    - abbrev/^([-a-z]+)([';])$/$1/ #精簡尾綴「'」和「;」
+    - 'xlit|F|"|'
+
+translator:
+  dictionary: fsonly.extended
+  prism: ocm_mixin_fullshape
+  enable_user_dict: true
+  enable_sentence: false
+  enable_completion: false
+  preedit_format:
+    - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
+  comment_format:
+    - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
+
+key_binder:
+  import_preset: default
+  bindings:
+    - {accept: comma, send: comma, when: has_menu}
+    - {accept: period, send: period, when: has_menu}
+    - {accept: minus, send: minus, when: has_menu}
+    - {accept: equal, send: equal, when: has_menu}
+    - {accept: Return, send: space, when: has_menu}
+
+punctuator:
+#  import_preset: default
+  full_shape:
+    " " : { commit: "　" }
+    "<" : { commit: "，" }
+    ">" : { commit: "。" }
+    "?" : [ ？, ／, ÷ ]
+    ":" : [ ：, ； ]
+    "'" : { pair: [ "‘", "’" ] }
+    "\"" : { pair: [ "“", "”" ] }
+    "\\" : [ 、, ＼ ]
+    "|" : [ ·, ｜, "§", "¦" ]
+    "`" : ｀
+    "~" : ～
+    "!" : { commit: ！ }
+    "@" : [ ＠, ☯ ]
+    "#" : [ ＃, ⌘ ]
+    "%" : [ ％, "°", "℃" ]
+    "$" : [ ￥, "$", "€", "£", "¥", "¢", "¤" ]
+    "^" : { commit: …… }
+    "&" : ＆
+    "*" : [ ＊, ·, ・, ×, ※, ❂ ]
+    "(" : （
+    ")" : ）
+    "_" : [ ——, － ]
+    "+" : ＋
+    "=" : ＝
+    "[" : [ 「, 【, 《, 〔, ［ ]
+    "]" : [ 」, 】, 》, 〕, ］ ]
+    "{" : [ 『, 〖, 〈, ｛ ]
+    "}" : [ 』, 〗, 〉, ｝ ]
+  half_shape:
+    ',' : { commit: "," }
+    '.' : { commit: "." }
+    '<' : { commit: "<" }
+    '>' : { commit: ">" }
+    '?' : { commit: "?" }
+    '/' : { commit: "/" }
+    ':' : { commit: ":" }
+#    ';' : [ ';' ]
+#    "'" : [ "'" ]
+    '"' : { commit: "\"" }
+    '\\' : { commit: "\\" }
+    '|' : { commit: "|" }
+    '`' : { commit: "`" }
+    '~' : { commit: '~' }
+    '!' : { commit: '!' }
+    '@' : { commit: '@' }
+    '#' : { commit: '#' }
+    '%' : { commit: '%' }
+    '$' : { commit: '$' }
+    '^' : { commit: '^' }
+    '&' : { commit: '&' }
+    '*' : { commit: '*' }
+    '(' : { commit: '(' }
+    ')' : { commit: ')' }
+    '-' : { commit: '-' }
+    '+' : { commit: '+' }
+    '=' : { commit: '=' }
+    '[' : { commit: '[' }
+    ']' : { commit: ']' }
+    '{' : { commit: '{' }
+    '}' : { commit: '}' }
+
+recognizer:
+  import_preset: default

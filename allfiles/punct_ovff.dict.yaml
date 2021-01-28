@@ -1,0 +1,10 @@
+# Rime schema 中州輸入法的字碼檔
+# encoding: utf-8
+# 《符號編碼》
+---
+name: punct_ovff
+version: "20190304"
+sort: original
+use_preset_vocabulary: false
+...
+

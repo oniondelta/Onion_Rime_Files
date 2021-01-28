@@ -1,0 +1,198 @@
+# Rime schema settings
+# encoding: utf-8
+# 《反查掛載專用 注音 設定頁》
+schema:
+  schema_id: Mount_bopomo
+  name: "☆注音(反查專用)☆"
+  version: "201908"
+  author:
+    - Onion
+  description: |
+    注音輸入法(反查掛載專用)
+  dependencies:
+#    - tconly
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 中文, 英文 ]
+  - name: full_shape
+    reset: 0
+    states: [ 半形, 全形 ]
+  - name: ascii_punct #當鍵位被佔用，在大千注音鍵盤無法作用！
+    reset: 0
+    states: [ "。，", "．，" ]
+  - name: simplification
+    reset: 0
+    states: [ 繁體, 简体 ]
+
+engine:
+  filters:
+    - simplifier
+    - uniquifier
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+#    - fluency_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+#    - echo_translator
+    - punct_translator
+#    - reverse_lookup_translator
+    - script_translator
+
+menu:
+  alternative_select_keys: "QAZWSX"
+  page_size: 6
+
+speller:
+  alphabet: '1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-6347'
+  delimiter: "|"
+  algebra:
+    - xform/^([a-z]*)1$/$1/ #一聲不用打空格
+    - xform/iu/iou/
+    - xform/ui/uei/
+    - xform/ong/ung/
+    - xform/yi?/i/
+    - xform/wu?/u/
+    - xform/iu/v/
+    - xform/([jqx])u/$1v/
+    - xform/([iuv])n/$1en/
+    - xform/zhi?/Z/
+    - xform/chi?/C/
+    - xform/shi?/S/
+    - xform/([zcsr])i/$1/
+    - xform/ai/A/
+    - xform/ei/I/
+    - xform/ao/O/
+    - xform/ou/U/
+    - xform/ang/K/
+    - xform/eng/G/
+    - xform/an/M/
+    - xform/en/N/
+    - xform/er/R/
+    - xform/eh/E/
+    - xform/([iv])e/$1E/
+##########注音聲韻母亂序##########
+    - derive/^([bpmfdtnlgkhjqxZCSrzcs])([iuv])/$2$1/
+    - derive/^([iuv])([aoeEAIOUMNKGR])/$2$1/
+    - derive/^([bpmfdtnlgkhjqxZCSrzcs])([aoeEAIOUMNKGR])/$2$1/
+    - derive/^([bpmfdtnlgkhjqxZCSrzcs])([iuv])([aoeEAIOUMNKGR])/$3$2$1/
+    - derive/^([bpmfdtnlgkhjqxZCSrzcs])([iuv])([aoeEAIOUMNKGR])/$3$1$2/
+    - derive/^([bpmfdtnlgkhjqxZCSrzcs])([iuv])([aoeEAIOUMNKGR])/$2$3$1/
+    - derive/^([bpmfdtnlgkhjqxZCSrzcs])([iuv])([aoeEAIOUMNKGR])/$1$3$2/
+    - 'xlit|bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR2345|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-6347|'
+
+translator:
+  dictionary: Mount_bopomo.extended
+#  prism: Mount_bopomo #開啟反查須用 prism 標註調用此棱鏡文件名
+  enable_user_dict: true
+  enable_completion: false
+  enable_sentence: false #是否開啓自動造句
+  enable_encoder: false #是否開啓自動造詞
+  encode_commit_history: false #是否對 已上屛詞 自動成詞
+#  spelling_hints: 5 #～字以內候選標註完整帶調拼音
+#  enable_charset_filter: true #是否開啓字符集過濾
+  preedit_format:
+    - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-6347|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙|"
+  comment_format:
+    - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-6347|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙|"
+
+#reverse_lookup:
+#  dictionary: tconly.extended
+#  enable_completion: false
+#  prefix: "`"
+#  suffix: "'"
+#  tips: 〔反查〕
+#  preedit_format:
+#    - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
+#  comment_format:
+#    - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 6347'|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˉˊˇˋ˙ |"
+
+punctuator:
+  full_shape:
+    " " : { commit: "　" }
+    "<" : { commit: "，" }
+    ">" : { commit: "。" }
+    "?" : [ ？, ／, ÷ ]
+    ":" : [ ：, ； ]
+    "'" : { pair: [ "‘", "’" ] }
+    "\"" : { pair: [ "“", "”" ] }
+    "\\" : [ 、, ＼ ]
+    "|" : [ ·, ｜, "§", "¦" ]
+#    "`" : ｀
+    "~" : ～
+    "!" : { commit: ！ }
+    "@" : [ ＠, ◎,☯ ]
+    "#" : [ ＃, ⌘ ]
+    "%" : [ ％, "°", "℃" ]
+    "$" : [ ￥, "$", "€", "£", "¥", "¢", "¤" ]
+    "^" : { commit: …… }
+    "&" : ＆
+    "*" : [ ＊, ·, ◎, ・, ×, ※, ❂ ]
+    "(" : （
+    ")" :  ）
+    "_" : [ －,—— ]
+    "+" : ＋
+    "=" : ＝
+    "[" : [ 「, 【, 《, 〔, ［ ]
+    "]" : [ 」, 】, 》, 〕, ］ ]
+    "{" : [ 『, 〖, 〈, ｛ ]
+    "}" : [ 』, 〗, 〉, ｝ ]
+  half_shape:
+    "<" : { commit: "，" }
+    ">" : { commit: "。" }
+    "?" : [ ？, ／, "/", ÷ ]
+    ":" : [ ：, ； ]
+    "'" : { pair: [ "‘", "’" ] }
+    "\"" : { pair: [ "“", "”" ] }
+    "\\" : [ 、, "\\", ＼ ]
+    "|" : [ ·, "|", ｜, "§", "¦" ]
+#    "`" : "`"
+    "~" : "~"
+    "!" : { commit: ！ }
+    "@" : "@"
+    "#" : "#"
+    "%" : [ "%", ％, "°", "℃" ]
+    "$" : [ ￥, "$", "€", "£", "¥", "¢", "¤" ]
+    "^" : { commit: …… }
+    "&" : "&"
+    "*" : [ "*", ＊, ·, ◎, ・, ×, ※, ❂ ]
+    "(" : （
+    ")" :  ）
+    "_" : [ －,—— , "-" ]
+    "+" : "+"
+    "=" : "="
+    "[" : [ 「, 【, 《, 〔, ［ ]
+    "]" : [ 」, 】, 》, 〕, ］ ]
+    "{" : [ 『, 〖, 〈, ｛ ]
+    "}" : [ 』, 〗, 〉, ｝ ]
+
+key_binder:
+  import_preset: default
+  bindings:
+    - {accept: comma, send: comma, when: has_menu} #ㄝ
+    - {accept: period, send: period, when: has_menu} #ㄡ
+    - {accept: minus, send: minus, when: has_menu} #ㄦ
+    - {accept: equal, send: equal, when: has_menu} #=
+    - {accept: Left, send: Page_Up, when: paging} #直式選單用
+    - {accept: Right, send: Page_Down, when: paging} #直式選單用
+    - {accept: Return, send: space, when: has_menu} #return,enter直出
+
+recognizer:
+  patterns:
+    uppercase: "^[A-Z][-_+.'0-9A-Za-z]*$"
+    email: "^[a-z][-_.0-9a-z]*@.*$"
+    url: "^(www[.]|https?:|ftp:|mailto:).*$"
+#    reverse_lookup: "`[a-z;]*'?$"
