@@ -1841,6 +1841,7 @@ min_phrase_weight: 100
 巻	quan2	0%
 偢	zhou4	0.1%
 偢	qiao4	0.1%
+㡌	mei4	0.1%
 ##### @201912 比對教育部相關字詞典檔所新增 #####
 丁	zheng1	0.1%
 丂	kao3	0.1%
@@ -102376,7 +102377,7 @@ min_phrase_weight: 100
 那麼	na4 mo5
 那麼著	na4 me5 zhao1
 那麼著	na4 me5 zhe5
-那麼著	na4 mo5 zhe
+那麼著	na4 mo5 zhe5
 邦媛	bang1 yuan4
 邦教	bang1 jiao4
 邪不干正	xie2 bu4 gan1 zheng4
