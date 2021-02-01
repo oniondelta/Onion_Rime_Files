@@ -6,9 +6,10 @@
 # 包含中文、韓語、日語、拉丁+音標
 ---
 name: terra_pinyin_onion.extended
-version: "202012"
+version: "202102"
 sort: by_weight
-use_preset_vocabulary: true
+vocabulary: essay-zh-hant-onion
+#use_preset_vocabulary: true
 import_tables:
   - ocm_mixin_jp
   - ocm_mixin_kr

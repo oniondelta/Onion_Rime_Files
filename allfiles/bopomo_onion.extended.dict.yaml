@@ -5,9 +5,10 @@
 # 中文字詞標註使用拼音
 ---
 name: bopomo_onion.extended
-version: "202005"
+version: "202102"
 sort: by_weight
-use_preset_vocabulary: true
+vocabulary: essay-zh-hant-onion
+#use_preset_vocabulary: true
 import_tables:
   - terra_pinyin_onion
   - terra_pinyin_onion_add
