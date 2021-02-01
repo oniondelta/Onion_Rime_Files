@@ -23,7 +23,7 @@
 #===================================
 ---
 name: phrases.jp_hkkseg
-version: "202009"
+version: "202101"
 sort: original
 use_preset_vocabulary: false
 columns:
@@ -27233,8 +27233,6 @@ columns:
 治和	chi; wa;
 痴話	chi; wa;
 知和	chi; wa;
-っ子	q, ko;
-っ子	k,ko;
 付い	tsu; i,
 告い	tsu; i,
 嗣い	tsu; i,
