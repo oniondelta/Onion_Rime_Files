@@ -14,6 +14,7 @@ os.makedirs('./sort_rime/ocm/ocm_plus/opencc/', exist_ok=True)
 
 
 #複製檔案(注音洋蔥純注音版)
+shutil.copyfile("./allfiles/essay-zh-hant-onion.txt", "./sort_rime/注音洋蔥純注音版/essay-zh-hant-onion.txt")
 shutil.copyfile("./allfiles/bopomo_onion_phrase.txt", "./sort_rime/注音洋蔥純注音版/bopomo_onion_phrase.txt")
 shutil.copyfile("./allfiles/bopomo_onion_symbols.yaml", "./sort_rime/注音洋蔥純注音版/bopomo_onion_symbols.yaml")
 shutil.copyfile("./allfiles/bopomo_onion.extended.dict.yaml", "./sort_rime/注音洋蔥純注音版/bopomo_onion.extended.dict.yaml")
@@ -27,6 +28,7 @@ shutil.copyfile("./allfiles/各方案default.custom/注音洋蔥純注音版_cus
 
 
 #複製檔案(注音洋蔥雙拼版版)
+shutil.copyfile("./allfiles/essay-zh-hant-onion.txt", "./sort_rime/注音洋蔥雙拼版/essay-zh-hant-onion.txt")
 shutil.copyfile("./allfiles/bopomo_onion_double.extended.dict.yaml", "./sort_rime/注音洋蔥雙拼版/bopomo_onion_double.extended.dict.yaml")
 shutil.copyfile("./allfiles/bopomo_onion_double.schema.yaml", "./sort_rime/注音洋蔥雙拼版/bopomo_onion_double.schema.yaml")
 shutil.copyfile("./allfiles/cangjie5.dict.yaml", "./sort_rime/注音洋蔥雙拼版/cangjie5.dict.yaml")
@@ -42,6 +44,7 @@ shutil.copytree('./allfiles/雙拼注音鍵位說明圖示/', './sort_rime/注�
 
 
 #複製檔案(注音洋蔥mixin版)
+shutil.copyfile("./allfiles/essay-zh-hant-onion.txt", "./sort_rime/注音洋蔥mixin版/essay-zh-hant-onion.txt")
 shutil.copyfile("./allfiles/allbpm.dict.yaml", "./sort_rime/注音洋蔥mixin版/allbpm.dict.yaml")
 shutil.copyfile("./allfiles/allbpm.schema.yaml", "./sort_rime/注音洋蔥mixin版/allbpm.schema.yaml")
 shutil.copyfile("./allfiles/bo_mixin_jp.dict.yaml", "./sort_rime/注音洋蔥mixin版/bo_mixin_jp.dict.yaml")
@@ -113,6 +116,7 @@ shutil.copytree('./allfiles/mixin注音_同顯2修改檔(Win)/', './sort_rime/�
 
 
 #複製檔案(注音洋蔥plus版)
+shutil.copyfile("./allfiles/essay-zh-hant-onion.txt", "./sort_rime/注音洋蔥plus版/essay-zh-hant-onion.txt")
 shutil.copyfile("./allfiles/allbpm.dict.yaml", "./sort_rime/注音洋蔥plus版/allbpm.dict.yaml")
 shutil.copyfile("./allfiles/allbpm.schema.yaml", "./sort_rime/注音洋蔥plus版/allbpm.schema.yaml")
 shutil.copyfile("./allfiles/bopomo_onionplus_2.schema.yaml", "./sort_rime/注音洋蔥plus版/bopomo_onionplus_2.schema.yaml")
@@ -189,6 +193,7 @@ shutil.copytree('./allfiles/plus注音_防崩潰：Win必加，Mac勿加/', './s
 
 
 #複製檔案(地球拼音洋蔥mix-in版)
+shutil.copyfile("./allfiles/essay-zh-hant-onion.txt", "./sort_rime/地球拼音洋蔥mix-in版/essay-zh-hant-onion.txt")
 shutil.copyfile("./allfiles/cangjie5.dict.yaml", "./sort_rime/地球拼音洋蔥mix-in版/cangjie5.dict.yaml")
 shutil.copyfile("./allfiles/cangjie5.schema.yaml", "./sort_rime/地球拼音洋蔥mix-in版/cangjie5.schema.yaml")
 shutil.copyfile("./allfiles/ocm_mixin_jp.dict.yaml", "./sort_rime/地球拼音洋蔥mix-in版/ocm_mixin_jp.dict.yaml")
@@ -219,6 +224,7 @@ shutil.copyfile("./allfiles/opencc/back_mark_ocm.txt", "./sort_rime/地球拼音
 
 
 #複製檔案(ocm_mixin)
+shutil.copyfile("./allfiles/essay-zh-hant-onion.txt", "./sort_rime/ocm/ocm_mixin/essay-zh-hant-onion.txt")
 shutil.copyfile("./allfiles/allbpm.dict.yaml", "./sort_rime/ocm/ocm_mixin/allbpm.dict.yaml")
 shutil.copyfile("./allfiles/allbpm.schema.yaml", "./sort_rime/ocm/ocm_mixin/allbpm.schema.yaml")
 shutil.copyfile("./allfiles/cyrillic.dict.yaml", "./sort_rime/ocm/ocm_mixin/cyrillic.dict.yaml")
@@ -287,6 +293,7 @@ shutil.copyfile("./allfiles/opencc/punct_mark.txt", "./sort_rime/ocm/ocm_mixin/o
 
 
 #複製檔案(ocm_plus)
+shutil.copyfile("./allfiles/essay-zh-hant-onion.txt", "./sort_rime/ocm/ocm_plus/essay-zh-hant-onion.txt")
 shutil.copyfile("./allfiles/allbpm.dict.yaml", "./sort_rime/ocm/ocm_plus/allbpm.dict.yaml")
 shutil.copyfile("./allfiles/allbpm.schema.yaml", "./sort_rime/ocm/ocm_plus/allbpm.schema.yaml")
 shutil.copyfile("./allfiles/cyrillic.dict.yaml", "./sort_rime/ocm/ocm_plus/cyrillic.dict.yaml")
@@ -361,7 +368,6 @@ shutil.copyfile("./allfiles/opencc/punct_mark.txt", "./sort_rime/ocm/ocm_plus/op
 #其他
 shutil.copytree('./allfiles/其他/', './sort_rime/其他/')
 
-shutil.copytree('./allfiles/其他/八股文(置入前請把檔名改成essay)/', './sort_rime/ocm/八股文_外掛注音要用到/')
 shutil.copytree('./allfiles/其他/OpenCC_ocd_64位元/', './sort_rime/ocm/OpenCC_ocd_64位元/')
 shutil.copytree('./allfiles/ocm_防崩潰：Win必加，Mac勿加/', './sort_rime/ocm/ocm_防崩潰：Win必加，Mac勿加/')
 
