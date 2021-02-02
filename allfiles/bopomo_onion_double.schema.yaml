@@ -82,7 +82,7 @@ speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz;',./"
   initials: "abcdefghijklmnopqrstuvwxyz"
   finals: ";',./"
-  delimiter: "`"
+  delimiter: " `"
   algebra:
     - xform/iu/iou/
     - xform/ui/uei/
@@ -143,7 +143,7 @@ translator:
   initial_quality: "0"
   preedit_format:
 ###############
-    - xform|^([a-z ,./';]*)$|\U$1\E\t（$1）|
+    - xform|^([a-z `,./';]*)$|\U$1\E\t（$1）|
     - xform|([A-Z])[,]|$1，|
     - xform|([A-Z])[.]|$1．|
     - xform|([A-Z])[/]|$1／|
@@ -204,7 +204,7 @@ emoji_series:
   enable_sentence: false
   enable_user_dict: true
   prefix: ";"
-#  suffix: " "
+  # suffix: "'"
   tips: "《emoji集》▶"
   closing_tips: "◀《emoji集》"
   preedit_format:
@@ -217,13 +217,14 @@ reverse2_lookup:
   enable_sentence: false
   enable_user_dict: true
   prefix: "="
-#  suffix: " "
-  tips: "《反查》"
+  # suffix: "'"
+  tips: "《反查》▶"
+  closing_tips: "◀《反查》"
   preedit_format:
 #    - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
     - "xlit|abcdefghijklmnopqrstuvwxyz|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符|"
     - xform/^/《反查》/
-    - 'xform/\\/ /'
+#    - 'xform/`/  /'
 
 bpm_reverse_lookup:
   tags: [ reverse2_lookup ]

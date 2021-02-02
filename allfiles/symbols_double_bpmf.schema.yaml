@@ -41,7 +41,7 @@ menu:
   alternative_select_keys: "ABCDEFGHIJ"
 
 speller:
-  alphabet: "abcdefghijklmnopqrstuvwxyz;,./-1234567890`"
+  alphabet: "abcdefghijklmnopqrstuvwxyz;-1234567890"
   delimiter: "|"
   algebra:
     - xform/^m2sm$/ydny!/ #【運動NY(女)】
