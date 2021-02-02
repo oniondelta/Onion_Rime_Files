@@ -82,7 +82,7 @@ speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz;',./"
   initials: "abcdefghijklmnopqrstuvwxyz"
   finals: ";',./"
-  delimiter: " `"
+  delimiter: "`"
   algebra:
     - xform/iu/iou/
     - xform/ui/uei/
