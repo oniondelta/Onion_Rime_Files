@@ -194,7 +194,7 @@ translator:
     - "xlit|bpmfdtnlgkhjqxrzcsiuywvao|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄖㄗㄘㄙㄧㄨㄩㄓㄔㄕ◌|"
     - "xlit|;/.,'|ˉˊˇˋ˙|"
 #######
-    - "xlit|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ，．／；＇|ABCDEFGHIJKLMNOPQRSTUVWXYZ,./;'|"
+    - "xlit|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ，．／；＇`|ABCDEFGHIJKLMNOPQRSTUVWXYZ,./;' |"
 ############################## 以下為系列符號 ##########################################
 emoji_series:
   tag: emoji_series
