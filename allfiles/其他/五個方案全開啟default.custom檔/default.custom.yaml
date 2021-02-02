@@ -25,6 +25,7 @@ patch:
     - schema: easy_en_comment
     - schema: fullshape
     - schema: symbols_bpmf
+    - schema: symbols_double_bpmf
     - schema: cangjie5
 ###############################
 
