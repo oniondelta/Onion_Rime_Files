@@ -36,6 +36,8 @@ shutil.copyfile("./allfiles/cangjie5.schema.yaml", "./sort_rime/注音洋蔥雙�
 shutil.copyfile("./allfiles/rime.lua", "./sort_rime/注音洋蔥雙拼版/rime.lua")
 shutil.copyfile("./allfiles/terra_pinyin_onion_add.dict.yaml", "./sort_rime/注音洋蔥雙拼版/terra_pinyin_onion_add.dict.yaml")
 shutil.copyfile("./allfiles/terra_pinyin_onion.dict.yaml", "./sort_rime/注音洋蔥雙拼版/terra_pinyin_onion.dict.yaml")
+shutil.copyfile("./allfiles/symbols_bpmf.dict.yaml", "./sort_rime/注音洋蔥雙拼版/symbols_bpmf.dict.yaml")
+shutil.copyfile("./allfiles/symbols_double_bpmf.schema.yaml", "./sort_rime/注音洋蔥雙拼版/symbols_double_bpmf.schema.yaml")
 
 shutil.copyfile("./allfiles/各方案default.custom/注音洋蔥雙拼版_custom/default.custom.yaml", "./sort_rime/注音洋蔥雙拼版/default.custom.yaml")
 
