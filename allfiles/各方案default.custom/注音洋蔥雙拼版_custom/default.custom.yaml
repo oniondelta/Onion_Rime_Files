@@ -9,6 +9,7 @@ patch:
 ######## 洋蔥注音雙拼版 ########
     - schema: bopomo_onion_double
     - schema: cangjie5
+    - schema: symbols_double_bpmf
 ##############################
 
   switcher/fix_schema_list_order: true #固定方案選單順序
