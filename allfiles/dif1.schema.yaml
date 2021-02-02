@@ -193,6 +193,7 @@ translator:
   preedit_format:
     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
     - xform/\|/  /
+    - xform/`/  /
 ####################### 新單字固頂功能 #######################
 top_fixed:
   __include: /translator
