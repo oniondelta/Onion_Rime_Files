@@ -128,7 +128,7 @@ speller:
     - xform/^yae$/zmg!/ #【字母括】
     - xform/^n5a$/swm!/ #【蘇州碼】
     - xform/^vx2$/xld!/ #【希臘大】
-    - xform/^km2$/eyd!/ #【俄語大】
+    - xform/^km2$/oyd!/ #【俄語大】
     - xform/^125$/bdw!/ #【標點直】
     - xform/^cyf$/hzq!/ #【漢字圈】
     - xform/^cye$/hzg!/ #【漢字括】
@@ -246,7 +246,7 @@ speller:
     - xform/^m2$/yd!/ #【運動】
     - xform/^r5$/jw!/ #【建築】
     - xform/^ga$/am!/ #【獸面／動物臉】
-    - xform/^je$/wg!/ #【五官】
+    - xform/^je$/ug!/ #【五官】
     - xform/^gg$/aa!/ #【手勢】
     - xform/^uj$/iu!/ #【衣物】
     - xform/^uz$/if!/ #【衣服】
@@ -439,7 +439,7 @@ translator:
     - xform/^zmg$/【字母括】/
     - xform/^swm$/【蘇州碼】/
     - xform/^xld$/【希臘大】/
-    - xform/^eyd$/【俄語大】/
+    - xform/^oyd$/【俄語大】/
     - xform/^bdw$/【標點直】/
     - xform/^hzq$/【漢字圈】/
     - xform/^hzg$/【漢字括】/
@@ -557,7 +557,7 @@ translator:
     - xform/^yd$/【運動】/
     - xform/^jw$/【建築】/
     - xform/^am$/【獸面／動物臉】/
-    - xform/^wg$/【五官】/
+    - xform/^ug$/【五官】/
     - xform/^aa$/【手勢】/
     - xform/^iu$/【衣物】/
     - xform/^if$/【衣服】/
