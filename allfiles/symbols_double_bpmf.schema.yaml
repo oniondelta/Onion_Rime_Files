@@ -221,9 +221,9 @@ speller:
     - xform/^a1$/mb!/ #【麵包】
     - xform/^zr$/fj!/ #【飛機】
     - xform/^az$/mf!/ #【米飯】
-    - xform/^sx$/ll!/ #【鳥類／鳥圖】
+    - xform/^sx$/nl!/ #【鳥類／鳥圖】
     - xform/^mw$/yt!/ #【魚圖／魚類圖】(魚類)
-    - xform/^sw$/lt!/ #【鳥圖／鳥類】
+    - xform/^sw$/nt!/ #【鳥圖／鳥類】
     - xform/^cj$/hu!/ #【韓文】
     - xform/^1f$/bq!/ #【表情】(符號表)
     - xform/^yb$/zr!/ #【自然】(符號表)
@@ -532,9 +532,9 @@ translator:
     - xform/^mb$/【麵包】/
     - xform/^fj$/【飛機】/
     - xform/^mf$/【米飯】/
-    - xform/^ll$/【鳥類／鳥圖】/
+    - xform/^nl$/【鳥類／鳥圖】/
     - xform/^yt$/【魚圖／魚類圖】(魚類)/
-    - xform/^lt$/【鳥圖／鳥類】/
+    - xform/^nt$/【鳥圖／鳥類】/
     - xform/^hu$/【韓文】/
     - xform/^bq$/【表情】(符號表)/
     - xform/^zr$/【自然】(符號表)/
