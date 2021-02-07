@@ -13,7 +13,7 @@
 
 - 置換新版 librime 引擎：
     - 原 librime 在使用 lua 某些功能會產生記憶體泄漏問題，建議更換。
-    - rime-with-plugins-1.7.0-osx.zip ⇨ dist ⇨ lib ⇨ 提取 librime.1.dylib ⇨ 取代 /Library/Input Methods/Squirrel.app/Contents/Frameworks/librime.1.dylib ⇨《重開機》！
+    - rime-with-plugins-1.7.1-osx.zip ⇨ dist ⇨ lib ⇨ 提取 librime.1.dylib ⇨ 取代 /Library/Input Methods/Squirrel.app/Contents/Frameworks/librime.1.dylib ⇨《重開機》！
 
 ### 可到官網 https://rime.im/ 下載安裝檔。
 
