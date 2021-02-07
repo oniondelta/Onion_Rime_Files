@@ -18,7 +18,7 @@
 --      - lua_translator@mytranslator
 --
 --      - lua_filter@charset_filter          -- 遮屏含 CJK 擴展漢字的候選項
---      - lua_filter@charset_filter3         -- 遮屏含 CJK 擴展漢字的候選項，並增加開關
+--      - lua_filter@charset_filter_plus         -- 遮屏含 CJK 擴展漢字的候選項，並增加開關
 --      - lua_filter@charset_comment_filter  -- 為候選項加上其所屬字符集的註釋
 --      - lua_filter@charset_filter2         -- 遮屏「᰼᰼」
 --      - lua_filter@single_char_filter      -- 候選項重排序，使單字優先
@@ -2448,12 +2448,11 @@ function charset_filter(input)
     end
 end
 
-
 --[[
 同上將濾除含 CJK 擴展漢字的候選項
 但增加開關設置
 --]]
-function charset_filter3(input, env)
+function charset_filter_plus(input, env)
     -- 使用 `iter()` 遍歷所有輸入候選項
     local o_c_f = env.engine.context:get_option("only_cjk_filter")
     for cand in input:iter() do
@@ -2466,9 +2465,7 @@ function charset_filter3(input, env)
             因此過濾結果中將不含有該候選。
         --]]
     end
-    -- end
 end
-
 
 --- charset comment filter
 --[[
