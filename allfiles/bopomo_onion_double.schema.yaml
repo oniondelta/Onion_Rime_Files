@@ -27,6 +27,9 @@ switches:
   - name: simplification
     reset: 0
     states: ["原體", "简体"]
+  - name: only_cjk_filter
+    reset: 1
+    states: ["完全", "CJK"]
 #   - options: [ utf8, big5, gbk]
 # #    reset: 0
 #     states:
@@ -38,6 +41,7 @@ engine:
   filters:
 #     - charset_filter@big5
 #     - charset_filter@gbk
+    - lua_filter@charset_filter3
     - simplifier
     - reverse_lookup_filter@bpm_reverse_lookup
     - uniquifier
@@ -72,6 +76,9 @@ menu:
 ############################### 濾鏡 ##################################
 simplifier:
   tips: all
+
+# only_cjk_filter:
+#   tags: [ abc ]
 
 # big5:
 #   tags: [ abc ]
@@ -464,6 +471,7 @@ key_binder:
 #略#    - {accept: backslash, send: Shift+BackSpace, when: has_menu} #「\」鍵位刪除整組拼音字符（一個字）。
 #    - {accept: backslash, send: Shift+Return, when: has_menu} #「\」鍵位上屏英文。
 ### 功能快捷鍵 ###
+    - {accept: Control+apostrophe, toggle: only_cjk_filter, when: always}
 #    - {accept: Control+apostrophe, toggle: zh_tw, when: always} #accept: Control+semicolon
 
 editor:
