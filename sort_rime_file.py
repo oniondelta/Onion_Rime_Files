@@ -103,8 +103,6 @@ shutil.copyfile("./allfiles/jpnin1_phrase.txt", "./sort_rime/注音洋蔥mixin�
 shutil.copyfile("./allfiles/jpnin1.dict.yaml", "./sort_rime/注音洋蔥mixin版/jpnin1.dict.yaml")
 shutil.copyfile("./allfiles/jpnin1.extended.dict.yaml", "./sort_rime/注音洋蔥mixin版/jpnin1.extended.dict.yaml")
 shutil.copyfile("./allfiles/jpnin1.schema.yaml", "./sort_rime/注音洋蔥mixin版/jpnin1.schema.yaml")
-shutil.copyfile("./allfiles/phrases.jp_hk.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.jp_hk.dict.yaml")
-shutil.copyfile("./allfiles/phrases.jp_hk_more.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.jp_hk_more.dict.yaml")
 shutil.copyfile("./allfiles/phrases.jp_hkk.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.jp_hkk.dict.yaml")
 shutil.copyfile("./allfiles/phrases.jp_hkkseg.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.jp_hkkseg.dict.yaml")
 shutil.copyfile("./allfiles/phrases.jp_hkup_w.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.jp_hkup_w.dict.yaml")
