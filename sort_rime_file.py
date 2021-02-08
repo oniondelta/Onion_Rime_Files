@@ -47,6 +47,7 @@ shutil.copytree('./allfiles/雙拼注音鍵位說明圖示/', './sort_rime/注�
 
 #複製檔案(注音洋蔥mixin版)
 shutil.copyfile("./allfiles/essay-zh-hant-onion.txt", "./sort_rime/注音洋蔥mixin版/essay-zh-hant-onion.txt")
+shutil.copyfile("./allfiles/essay-jp-onion.txt", "./sort_rime/注音洋蔥mixin版/essay-jp-onion.txt")
 shutil.copyfile("./allfiles/allbpm.dict.yaml", "./sort_rime/注音洋蔥mixin版/allbpm.dict.yaml")
 shutil.copyfile("./allfiles/allbpm.schema.yaml", "./sort_rime/注音洋蔥mixin版/allbpm.schema.yaml")
 shutil.copyfile("./allfiles/bo_mixin_jp.dict.yaml", "./sort_rime/注音洋蔥mixin版/bo_mixin_jp.dict.yaml")
@@ -97,6 +98,17 @@ shutil.copyfile("./allfiles/symbols_bpmf.dict.yaml", "./sort_rime/注音洋蔥mi
 shutil.copyfile("./allfiles/symbols_bpmf.schema.yaml", "./sort_rime/注音洋蔥mixin版/symbols_bpmf.schema.yaml")
 shutil.copyfile("./allfiles/terra_pinyin_onion_add.dict.yaml", "./sort_rime/注音洋蔥mixin版/terra_pinyin_onion_add.dict.yaml")
 shutil.copyfile("./allfiles/terra_pinyin_onion.dict.yaml", "./sort_rime/注音洋蔥mixin版/terra_pinyin_onion.dict.yaml")
+
+shutil.copyfile("./allfiles/jpnin1_phrase.txt", "./sort_rime/注音洋蔥mixin版/jpnin1_phrase.txt")
+shutil.copyfile("./allfiles/jpnin1.dict.yaml", "./sort_rime/注音洋蔥mixin版/jpnin1.dict.yaml")
+shutil.copyfile("./allfiles/jpnin1.extended.dict.yaml", "./sort_rime/注音洋蔥mixin版/jpnin1.extended.dict.yaml")
+shutil.copyfile("./allfiles/jpnin1.schema.yaml", "./sort_rime/注音洋蔥mixin版/jpnin1.schema.yaml")
+shutil.copyfile("./allfiles/phrases.jp_hk.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.jp_hk.dict.yaml")
+shutil.copyfile("./allfiles/phrases.jp_hk_more.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.jp_hk_more.dict.yaml")
+shutil.copyfile("./allfiles/phrases.jp_hkk.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.jp_hkk.dict.yaml")
+shutil.copyfile("./allfiles/phrases.jp_hkkseg.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.jp_hkkseg.dict.yaml")
+shutil.copyfile("./allfiles/phrases.jp_hkup_w.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.jp_hkup_w.dict.yaml")
+shutil.copyfile("./allfiles/phrases.jp_hkmoreup_w.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.jp_hkmoreup_w.dict.yaml")
 
 shutil.copyfile("./allfiles/各方案default.custom/注音洋蔥mixin版_custom/default.custom.yaml", "./sort_rime/注音洋蔥mixin版/default.custom.yaml")
 
