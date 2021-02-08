@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onionplus
   name: "☆注音(洋蔥plus版)☆"
-  version: "202012"
+  version: "202102"
   author:
     - 『洋蔥』
   description: |
@@ -322,19 +322,19 @@ japan:
   tips: "《日》▶"
   closing_tips: "◀《日》"
   disable_user_dict_for_patterns:
-    - ^[aiueohn]$
-    - ^[kstnhmrgzdbp][aiueo]$
-    - ^[sc][h][i]$
-    - ^[t][s][u]$
-    - ^[f][u]$
-    - ^[y][auo]$
-    - ^[w][ao]$
-    - ^[n]$
-    - ^[kgsztnhbpmr][y][auo]$
-    - ^[sc][h][auo]$
-    - ^[j][auo]$
-    - ^[-]{1,2}[.]$
-    - ^[.]$
+    - ^[-]{1,2}$
+    # - ^[.]$
+    # - ^[aiueohn]$
+    # - ^[kstnhmrgzdbp][aiueo]$
+    # - ^[sc][h][i]$
+    # - ^[t][s][u]$
+    # - ^[f][u]$
+    # - ^[y][auo]$
+    # - ^[w][ao]$
+    # - ^[n]$
+    # - ^[kgsztnhbpmr][y][auo]$
+    # - ^[sc][h][auo]$
+    # - ^[j][auo]$
   preedit_format:
     - "xlit|abcdefghijklmnopqrstuvwxyz;|ABCDEFGHIJKLMNOPQRSTUVWXYZ㉆|"
     - xform/^/《日》/
