@@ -313,7 +313,7 @@ korea:
   disable_user_dict_for_patterns:
     - ^[a-z]{1,2}$
   preedit_format:
-    - "xlit|abcdefghijklmnopqrstuvwxyz;|ABCDEFGHIJKLMNOPQRSTUVWXYZ㉆|"
+    - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
     - xform/^/《韓》/
     - xform/\|/␣/
     - 'xform/\\/ /'
@@ -343,7 +343,7 @@ japan:
     # - ^[sc][h][auo]$
     # - ^[j][auo]$
   preedit_format:
-    - "xlit|abcdefghijklmnopqrstuvwxyz;|ABCDEFGHIJKLMNOPQRSTUVWXYZ㉆|"
+    - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
     - xform/^/《日》/
     - xform/\|/␣/
     - 'xform/\\/ /'
