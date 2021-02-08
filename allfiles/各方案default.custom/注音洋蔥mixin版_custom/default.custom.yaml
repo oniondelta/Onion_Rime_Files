@@ -13,6 +13,7 @@ patch:
     - schema: greek
     - schema: cyrillic
     - schema: allbpm
+    - schema: jpnin1
     - schema: easy_en_b
     - schema: easy_en_comment
     - schema: fullshape
