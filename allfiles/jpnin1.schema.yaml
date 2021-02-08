@@ -185,10 +185,8 @@ translator:
   enable_sentence: false
   enable_completion: false
   preedit_format:
-    - "xlit|;|㉆|"
     - xform/ /  /
   comment_format:
-    - "xlit|;|㉆|"
     - xform/ /  /
   disable_user_dict_for_patterns:
     - ^[-]{1,2}$
