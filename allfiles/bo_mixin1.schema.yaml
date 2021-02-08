@@ -1,10 +1,10 @@
 # Rime schema settings
 # encoding: utf-8
-# 《洋蔥注音 mix-in 1版 設定頁》
+# 《洋蔥注音 mix-in 1 版 設定頁》
 schema:
   schema_id: bo_mixin1
   name: "☆注音(洋蔥mix-in版 1 )☆〔拉日 ˇ  ˋ 韓〕"
-  version: "202012"
+  version: "202102"
   author:
     - 『洋蔥』
   description: |
@@ -21,6 +21,7 @@ schema:
     - greek
     - cyrillic
     - allbpm
+    - jpnin1
 
 switches:
   - name: ascii_mode
@@ -80,6 +81,7 @@ engine:
     - affix_segmentor@cyr2
     - affix_segmentor@gr2
     - affix_segmentor@all_bpm
+    - affix_segmentor@japan
     - affix_segmentor@reverse2_lookup
     - punct_segmentor
     - fallback_segmentor
@@ -92,6 +94,7 @@ engine:
     - script_translator@cyr2
     - script_translator@gr2
     - script_translator@all_bpm
+    - script_translator@japan
     - script_translator@reverse2_lookup
     - lua_translator@t2_translator
     - script_translator
@@ -509,6 +512,38 @@ all_bpm:
     - xform/A//
     - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-6347 |ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙ˉ|"
     - 'xform/\\//'
+################################『日語假名輸入漢字』##################################
+japan:
+  tag: japan
+  dictionary: jpnin1.extended
+  enable_completion: false
+  enable_sentence: false
+  enable_user_dict: true
+  prefix: "'["
+  suffix: "'"
+  tips: "《純日語》▶"
+  closing_tips: "◀《純日語》"
+  disable_user_dict_for_patterns:
+    - ^[-]{1,2}$
+    # - ^[.]$
+    # - ^[aiueohn]$
+    # - ^[kstnhmrgzdbp][aiueo]$
+    # - ^[sc][h][i]$
+    # - ^[t][s][u]$
+    # - ^[f][u]$
+    # - ^[y][auo]$
+    # - ^[w][ao]$
+    # - ^[n]$
+    # - ^[kgsztnhbpmr][y][auo]$
+    # - ^[sc][h][auo]$
+    # - ^[j][auo]$
+  preedit_format:
+    - xform/'[[]'?/A/
+    - xform/^/《純日語》/
+    - xform/^《純日語》(.+)A$/$1《純日語》/
+    - xform/A//
+    - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
+    - 'xform/\\/ /'
 ################################### 短語 ######################################
 bo_mixin_phrase:
   dictionary: ""
@@ -609,6 +644,7 @@ recognizer:
     cyr2: "^6[a-z;/]* ?$|(?<=['])6[a-z;/]* ?$|(?<=[=][0-9])6[a-z;/]* ?$|(?<=[=][][])6[a-z;/]* ?$|(?<=[=][][][][])6[a-z;/]* ?$|(?<=[=][-,.;'=`])6[a-z;/]* ?$|(?<=[=][-,.;'=`][-,.;'=`])6[a-z;/]* ?$|(?<=[][])6[a-z;/]* ?$|(?<=[][][][])6[a-z;/]* ?$|(?<=[][]['])6[a-z;/]* ?$|(?<=[][][][]['])6[a-z;/]* ?$|(?<=(?<!'/)(?<!')(?<!'/[0-9]{1})(?<!'/[0-9]{2})(?<!'/[0-9]{3})(?<!'/[0-9]{4})(?<!'/[0-9]{5})(?<!'/[0-9]{6})(?<!'/[0-9]{7})(?<!'/[0-9]{8})(?<!'/[0-9]{9})(?<!'/[0-9]{10})(?<!'/[0-9]{11})(?<!'/[0-9]{12})(?<!'/[0-9]{13})(?<!'/[0-9]{14})(?<!'/[0-9]{15})(?<!'/[0-9]{16})(?<!'/[0-9]{17})[125890a-z,./;-][3467 ])6[a-z;/]* ?$"
     gr2: "^7[a-z;/]* ?$|(?<=['])7[a-z;/]* ?$|(?<=[=][0-9])7[a-z;/]* ?$|(?<=[=][][])7[a-z;/]* ?$|(?<=[=][][][][])7[a-z;/]* ?$|(?<=[=][-,.;'=`])7[a-z;/]* ?$|(?<=[=][-,.;'=`][-,.;'=`])7[a-z;/]* ?$|(?<=[][])7[a-z;/]* ?$|(?<=[][][][])7[a-z;/]* ?$|(?<=[][]['])7[a-z;/]* ?$|(?<=[][][][]['])7[a-z;/]* ?$|(?<=(?<!'/)(?<!')(?<!'/[0-9]{1})(?<!'/[0-9]{2})(?<!'/[0-9]{3})(?<!'/[0-9]{4})(?<!'/[0-9]{5})(?<!'/[0-9]{6})(?<!'/[0-9]{7})(?<!'/[0-9]{8})(?<!'/[0-9]{9})(?<!'/[0-9]{10})(?<!'/[0-9]{11})(?<!'/[0-9]{12})(?<!'/[0-9]{13})(?<!'/[0-9]{14})(?<!'/[0-9]{15})(?<!'/[0-9]{16})(?<!'/[0-9]{17})[125890a-z,./;-][3467 ])7[a-z;/]* ?$"
     all_bpm: "';[-a-z0-9.,/; ]*'?$|^[-a-z0-9.,/; ]+';'$"
+    japan: "'[[][-a-z,.;/]*'?$|^[-a-z,.;/]+'[[]'$"
     lua: "'/[a-z0-9/-]*$"
 
 style:
