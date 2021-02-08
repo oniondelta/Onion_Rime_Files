@@ -3,11 +3,15 @@
 # 『洋蔥』製作
 
 key_binder:
-### 避大千注音鍵位和 RIME 原設定鍵位衝突 ###
+### 避 RIME 原設定鍵位衝突 ###
     - {accept: comma, send: comma, when: has_menu}
+    - {accept: comma, send: comma, when: paging}
     - {accept: period, send: period, when: has_menu}
+    - {accept: period, send: period, when: paging}
     - {accept: minus, send: minus, when: has_menu}
+    - {accept: minus, send: minus, when: paging}
     - {accept: equal, send: equal, when: has_menu}
+    - {accept: equal, send: equal, when: paging}
 ### 切分移位 ###
     - {accept: Up, send: KP_Left, when: composing} #左移一個注音
     - {accept: Up, send: Up, when: paging} #修正上條目出現的bug

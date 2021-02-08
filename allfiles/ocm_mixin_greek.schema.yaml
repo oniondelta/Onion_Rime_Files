@@ -4,7 +4,7 @@
 schema:
   schema_id: ocm_mixin_greek
   name: ✹希臘字母_新_蝦米✹
-  version: "201908"
+  version: "202102"
   author:
     - 『洋蔥』
   description: |
@@ -67,9 +67,13 @@ key_binder:
   import_preset: default
   bindings:
     - {accept: comma, send: comma, when: has_menu}
+    - {accept: comma, send: comma, when: paging}
     - {accept: period, send: period, when: has_menu}
+    - {accept: period, send: period, when: paging}
     - {accept: minus, send: minus, when: has_menu}
+    - {accept: minus, send: minus, when: paging}
     - {accept: equal, send: equal, when: has_menu}
+    - {accept: equal, send: equal, when: paging}
     - {accept: Return, send: space, when: has_menu}
 
 punctuator:

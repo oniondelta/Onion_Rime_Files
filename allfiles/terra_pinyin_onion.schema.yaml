@@ -4,7 +4,7 @@
 schema:
   schema_id: terra_pinyin_onion
   name: "★地球拼音(洋蔥mix-in版)★"
-  version: "202009"
+  version: "202102"
   author:
     - 佛振 <chen.sst@gmail.com>
     - 『洋蔥』
@@ -323,11 +323,15 @@ punctuator:
 key_binder:
   import_preset: default
   bindings:
-### 避大千注音鍵位和 RIME 原設定鍵位衝突 ###
+### 避 RIME 原設定鍵位衝突 ###
     - {accept: comma, send: comma, when: has_menu}
+    - {accept: comma, send: comma, when: paging}
     - {accept: period, send: period, when: has_menu}
+    - {accept: period, send: period, when: paging}
     - {accept: minus, send: minus, when: has_menu}
+    - {accept: minus, send: minus, when: paging}
     - {accept: equal, send: equal, when: has_menu}
+    - {accept: equal, send: equal, when: paging}
 #    - {accept: minus, send: minus, when: has_menu}  # tone 1
 #    - {accept: minus, send: Page_Up,  when: paging}
 ### 切分移位 ###

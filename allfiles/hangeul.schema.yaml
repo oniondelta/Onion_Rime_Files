@@ -4,7 +4,7 @@
 schema:
   schema_id: hangeul # 注意此ID與文件名裏 .schema.yaml 之前的部分相同
   name: ❃韓語形碼❃
-  version: "202010"
+  version: "202102"
   author:
     - 『洋蔥』
   description: |
@@ -133,9 +133,13 @@ key_binder:
   import_preset: default
   bindings:
     - {accept: comma, send: comma, when: has_menu}
+    - {accept: comma, send: comma, when: paging}
     - {accept: period, send: period, when: has_menu}
+    - {accept: period, send: period, when: paging}
     - {accept: minus, send: minus, when: has_menu}
+    - {accept: minus, send: minus, when: paging}
     - {accept: equal, send: equal, when: has_menu}
+    - {accept: equal, send: equal, when: paging}
     - {accept: Left, send: Page_Up, when: paging}
     - {accept: Right, send: Page_Down, when: paging}
     - {accept: Tab, send: Shift+Left, when: paging}

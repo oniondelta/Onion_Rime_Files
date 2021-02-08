@@ -4,7 +4,7 @@
 schema:
   schema_id: Mount_bopomo
   name: "☆注音(反查專用)☆"
-  version: "201908"
+  version: "202102"
   author:
     - Onion
   description: |
@@ -182,10 +182,14 @@ punctuator:
 key_binder:
   import_preset: default
   bindings:
-    - {accept: comma, send: comma, when: has_menu} #ㄝ
-    - {accept: period, send: period, when: has_menu} #ㄡ
-    - {accept: minus, send: minus, when: has_menu} #ㄦ
-    - {accept: equal, send: equal, when: has_menu} #=
+    - {accept: comma, send: comma, when: has_menu}
+    - {accept: comma, send: comma, when: paging}
+    - {accept: period, send: period, when: has_menu}
+    - {accept: period, send: period, when: paging}
+    - {accept: minus, send: minus, when: has_menu}
+    - {accept: minus, send: minus, when: paging}
+    - {accept: equal, send: equal, when: has_menu}
+    - {accept: equal, send: equal, when: paging}
     - {accept: Left, send: Page_Up, when: paging} #直式選單用
     - {accept: Right, send: Page_Down, when: paging} #直式選單用
     - {accept: Return, send: space, when: has_menu} #return,enter直出

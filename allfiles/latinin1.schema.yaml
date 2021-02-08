@@ -4,7 +4,7 @@
 schema:
   schema_id: latinin1 # 注意此ID與文件名裏 .schema.yaml 之前的部分相同
   name: ❃拉丁 in 1❃
-  version: "202007"
+  version: "202102"
   author:
     - 『洋蔥』
   description: |
@@ -139,10 +139,15 @@ punctuator:
 key_binder:
   import_preset: default
   bindings:
+### 避 RIME 原設定鍵位衝突 ###
     - {accept: comma, send: comma, when: has_menu}
+    - {accept: comma, send: comma, when: paging}
     - {accept: period, send: period, when: has_menu}
+    - {accept: period, send: period, when: paging}
     - {accept: minus, send: minus, when: has_menu}
+    - {accept: minus, send: minus, when: paging}
     - {accept: equal, send: equal, when: has_menu}
+    - {accept: equal, send: equal, when: paging}
 ######################
     - {accept: Left, send: Page_Up, when: paging}
     - {accept: Right, send: Page_Down, when: paging}
