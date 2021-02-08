@@ -57,9 +57,9 @@ translator:
   enable_sentence: false
   enable_completion: false
   preedit_format:
-    - "xlit|abcdefghijklmnopqrstuvwxyz;'|ABCDEFGHIJKLMNOPQRSTUVWXYZ㉆ |"
+    - "xlit|abcdefghijklmnopqrstuvwxyz;'|ABCDEFGHIJKLMNOPQRSTUVWXYZ； |"
   comment_format:
-    - "xlit|abcdefghijklmnopqrstuvwxyz;'|ABCDEFGHIJKLMNOPQRSTUVWXYZ㉆ |"
+    - "xlit|abcdefghijklmnopqrstuvwxyz;'|ABCDEFGHIJKLMNOPQRSTUVWXYZ； |"
   disable_user_dict_for_patterns:
     - ^[a-z]{1}$
     - ^[a-z]{2}$
