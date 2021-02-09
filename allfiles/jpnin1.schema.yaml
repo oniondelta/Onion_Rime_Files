@@ -273,11 +273,11 @@ punctuator:
     "\"" : { pair: [ "“", "”" ] }
     ";" : { commit: "；" }
     ":" : { commit: "：" }
-#    "," : { commit: "、" } #使用日語方案打開，以掛載為主關閉
+#    "," : { commit: "、" }
     "<" : { commit: "＜" }
-#    "." : { commit: "。" } #使用日語方案打開，以掛載為主關閉
+#    "." : { commit: "。" }
     ">" : { commit: "＞" }
-    "/" : { commit: "・" }
+#    "/" : { commit: "・" }
     "?" : { commit: "？" }
     "\\" : { commit: "￥" }
     "|" : { commit: "｜" }
