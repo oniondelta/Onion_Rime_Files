@@ -160,6 +160,7 @@ shutil.copyfile("./allfiles/jpnin1_phrase.txt", "./sort_rime/注音洋蔥plus版
 shutil.copyfile("./allfiles/jpnin1.dict.yaml", "./sort_rime/注音洋蔥plus版/jpnin1.dict.yaml")
 shutil.copyfile("./allfiles/jpnin1.extended.dict.yaml", "./sort_rime/注音洋蔥plus版/jpnin1.extended.dict.yaml")
 shutil.copyfile("./allfiles/jpnin1.schema.yaml", "./sort_rime/注音洋蔥plus版/jpnin1.schema.yaml")
+shutil.copyfile("./allfiles/jpnin1.custom.yaml", "./sort_rime/注音洋蔥plus版/jpnin1.custom.yaml")
 shutil.copyfile("./allfiles/latinin1.dict.yaml", "./sort_rime/注音洋蔥plus版/latinin1.dict.yaml")
 shutil.copyfile("./allfiles/latinin1.extended.dict.yaml", "./sort_rime/注音洋蔥plus版/latinin1.extended.dict.yaml")
 shutil.copyfile("./allfiles/latinin1.schema.yaml", "./sort_rime/注音洋蔥plus版/latinin1.schema.yaml")
