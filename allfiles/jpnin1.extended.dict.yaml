@@ -15,7 +15,7 @@ import_tables:
 #  - phrases.jp_hk
 #  - phrases.jp_hkup_w #for phrases.jp_hk 漢字和假名混打時可打開
   - phrases.jp_hk_more
-#  - phrases.jp_hkmoreup_w #for phrases.jp_hk_more 漢字和假名混打時可打開
+  - phrases.jp_hkmoreup_w #for phrases.jp_hk_more 漢字和假名混打時可打開
   - phrases.jp_hkkseg
 #  - phrases.jp_hkk
 ...
