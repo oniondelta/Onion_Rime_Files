@@ -24,6 +24,8 @@
   > 後面附註的日期為執行 sort_rime_file.py 當天日期！非版本號碼！
 
   > 如果缺少檔案，會立即出錯無法執行！
+  
+  > 用 Visual Studio Code 等非 Python 原生程式執行 sort_rime_file.py 會出錯（需另設定），使用 Python 原生程式執行即可。
 
 ### 各方案說明：
 
