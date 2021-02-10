@@ -23,7 +23,7 @@
 #===================================
 ---
 name: phrases.jp_hkkseg
-version: "202101"
+version: "202102"
 sort: original
 use_preset_vocabulary: false
 columns:
@@ -31,6 +31,7 @@ columns:
   - code
   - weight
 ...
+大蛇	oroti;
 菜々子	na; na; ko;
 ##### 202002 補充 #####
 ## 資料來源：https://github.com/masui/Chaim
