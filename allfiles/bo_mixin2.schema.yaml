@@ -365,7 +365,7 @@ translator:
     - xform/8/n@/
     - xform/9/p@/
     - xform/0/q@/
-    - xform/^([a-z@\\]+)$/\U$1\E\n$1/
+    - xform/^([a-z@\\]+)$/\U$1\E　\n$1/
     - xform/a@/ㄝ/
     - xform/b@/ㄡ/
     - xform/c@/ㄥ/
