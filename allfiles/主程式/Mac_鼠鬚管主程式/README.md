@@ -12,8 +12,9 @@
     - 於 /Library/Input Methods/Squirrel.app/Contents/Info.plist 把 Info.plist 中唯一的 \<string>zh\</string> 改成 \<string>zh-Hant\</string> ⇨ 《重開機》。
 
 - 置換新版 librime 引擎：
-    - 原 librime 在使用 lua 某些功能會產生記憶體泄漏問題，建議更換。
-    - rime-with-plugins-1.7.1-osx.zip ⇨ dist ⇨ lib ⇨ 提取 librime.1.dylib ⇨ 取代 /Library/Input Methods/Squirrel.app/Contents/Frameworks/librime.1.dylib ⇨《重開機》！
+    - 原鼠鬚管 0.14.0 版其中 librime 在使用 lua 某些功能會產生記憶體泄漏問題，強烈建議更換。
+    - 新鼠鬚管 0.15.0 版，輸入時會因選字單和上方 preedit 不同字體其大小不同產生跳動，尤其 mix-in 版雙行同顯更是頻繁跳動，目前建議安裝 0.14.0 版然後置換 librime 核心。
+    - rime-with-plugins-1.7.3-osx.zip ⇨ dist ⇨ lib ⇨ 提取 librime.1.dylib ⇨ 取代 /Library/Input Methods/Squirrel.app/Contents/Frameworks/librime.1.dylib ⇨《重開機》！
 
 ### 可到官網 https://rime.im/ 下載安裝檔。
 
