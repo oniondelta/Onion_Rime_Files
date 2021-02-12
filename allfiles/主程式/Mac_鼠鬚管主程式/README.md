@@ -13,7 +13,7 @@
 
 - 置換新版 librime 引擎：
     - 原鼠鬚管 0.14.0 版其中 librime 在使用 lua 某些功能會產生記憶體泄漏問題，強烈建議更換。
-    - 新鼠鬚管 0.15.0 版，輸入時會因選字單和上方 preedit 不同字體其大小不同產生跳動，尤其 mix-in 版雙行同顯更是頻繁跳動，目前建議安裝 0.14.0 版然後置換 librime 核心。
+    - 新鼠鬚管 0.15.1 版，輸入時會因選字單和上方 preedit 不同字體其大小不同產生跳動，尤其 mix-in 版雙行同顯之設置更是，不想跳動可安裝 0.14.0 版然後置換 librime 核心。如不在意跳動，直接上官網下載最新版。
     - rime-with-plugins-1.7.3-osx.zip ⇨ dist ⇨ lib ⇨ 提取 librime.1.dylib ⇨ 取代 /Library/Input Methods/Squirrel.app/Contents/Frameworks/librime.1.dylib ⇨《重開機》！
 
 ### 可到官網 https://rime.im/ 下載安裝檔。
