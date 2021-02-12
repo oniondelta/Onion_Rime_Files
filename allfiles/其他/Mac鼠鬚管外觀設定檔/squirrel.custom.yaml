@@ -5,7 +5,7 @@ patch:
   style/color_scheme: lost_temple                      # 主題樣式 #apathy #psionics #mac_white #mac_white2
   style/horizontal: false                              # 候選橫排
   style/inline_preedit: false                          # 內嵌輸入碼
-  style/font_face: 'Times-Roman,PingFangTC-Light,AppleColorEmoji' #,HanaMinA,HanaMinB
+  style/font_face: 'TimesNewRomanPSMT,PingFangTC-Light,AppleColorEmoji' #,HanaMinA,HanaMinB
   style/font_point: 19 #20 #21                         # 備選字和輸入碼字體大小
   style/label_font_face: 'Andale Mono'                 # 前標號字體
   style/label_font_point: 14 #12 #18                   # 前標號字體大小
@@ -19,8 +19,8 @@ patch:
   # style/hilited_corner_radius: 5                       # 候選條圓角
 
   style/base_offset: 2 #-5
-  # style/candidate_list_layout: stacked #linear #stacked
-  # style/text_orientation: vertical #horizontal
+  style/candidate_list_layout: stacked #linear
+  style/text_orientation: horizontal #vertical
 
 ###################################################
   preset_color_schemes/liveon:
