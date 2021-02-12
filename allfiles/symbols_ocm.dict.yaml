@@ -4,7 +4,7 @@
 # 『洋蔥』製作
 ---
 name: symbols_ocm
-version: "202009"
+version: "202102"
 sort: original
 use_preset_vocabulary: false
 ...
@@ -4256,6 +4256,7 @@ use_preset_vocabulary: false
 ⊆	ms
 ⊇	ms
 ### 數字圈 ###
+⓪	mno
 ①	mno
 ②	mno
 ③	mno
@@ -8200,7 +8201,9 @@ $	tq
 ##### 數字 #####
 ### 數字0 ###
 ⓪	0
+🄋	0
 ⓿	0
+🄌	0
 ０	0
 零	0
 ₀	0

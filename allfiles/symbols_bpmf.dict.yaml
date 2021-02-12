@@ -4,7 +4,7 @@
 # 『洋蔥』製作
 ---
 name: symbols_bpmf
-version: "202012"
+version: "202102"
 sort: original
 use_preset_vocabulary: false
 ...
@@ -4085,6 +4085,7 @@ use_preset_vocabulary: false
 ⊆	gv
 ⊇	gv
 ### 數字圈 ###
+⓪	gyf
 ①	gyf
 ②	gyf
 ③	gyf
@@ -7997,7 +7998,9 @@ $	12
 ##### 數字 #####
 ### 數字0 ###
 ⓪	0
+🄋	0
 ⓿	0
+🄌	0
 ０	0
 零	0
 ₀	0
