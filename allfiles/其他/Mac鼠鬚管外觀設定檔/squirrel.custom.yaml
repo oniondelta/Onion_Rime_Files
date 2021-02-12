@@ -14,7 +14,7 @@ patch:
   # style/border_height: 0 #30                           # 窗口邊界高度，大於圓角半徑才有效果
   # style/border_width: 0 #10                            # 窗口邊界寬度，大於圓角半徑才有效果
   style/line_spacing: 1 #4 #6                          # 候選字間隙大小
-  style/spacing: 5 #4 #10                              # space between preedit and candidates in non-inline mode
+  style/spacing: 2 #4 #5 #10                           # space between preedit and candidates in non-inline mode
   style/candidate_format: '%c. %@'                     # 選字欄格式
   # style/hilited_corner_radius: 5                       # 候選條圓角
 
