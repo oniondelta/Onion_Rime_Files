@@ -7,8 +7,8 @@
 ### 安裝後建議修改：
     
 - 置換新版 librime 引擎：
-    - 原 librime 在使用 lua 某些功能會產生記憶體泄漏問題，建議更換。
-    - rime-with-plugins-1.7.1-win32.zip ⇨ dist ⇨ lib ⇨ 提取 rime.dll ⇨ 取代 C:\Program Files (x86)\Rime\weasel-0.14.3\rime.dll ⇨《重開機》！
+    - 原小狼毫 0.14.3 版其中 librime 在使用 lua 某些功能會產生記憶體泄漏問題，強烈建議更換。
+    - rime-with-plugins-1.7.3-win32.zip ⇨ dist ⇨ lib ⇨ 提取 rime.dll ⇨ 取代 C:\Program Files (x86)\Rime\weasel-0.14.3\rime.dll ⇨《重開機》！
     
 ### 可到官網 https://rime.im/ 下載安裝檔。
 
