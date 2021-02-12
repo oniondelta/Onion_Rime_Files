@@ -297,6 +297,81 @@ local function math2_number(m2)
     return m2
 end
 
+local function circled1_number(c1)
+    if c1 == "" then return "" end
+    c1 = string.gsub(c1, "0", "⓪")
+    c1 = string.gsub(c1, "1", "①")
+    c1 = string.gsub(c1, "2", "②")
+    c1 = string.gsub(c1, "3", "③")
+    c1 = string.gsub(c1, "4", "④")
+    c1 = string.gsub(c1, "5", "⑤")
+    c1 = string.gsub(c1, "6", "⑥")
+    c1 = string.gsub(c1, "7", "⑦")
+    c1 = string.gsub(c1, "8", "⑧")
+    c1 = string.gsub(c1, "9", "⑨")
+    return c1
+end
+
+local function circled2_number(c2)
+    if c2 == "" then return "" end
+    c2 = string.gsub(c2, "0", "🄋")
+    c2 = string.gsub(c2, "1", "➀")
+    c2 = string.gsub(c2, "2", "➁")
+    c2 = string.gsub(c2, "3", "➂")
+    c2 = string.gsub(c2, "4", "➃")
+    c2 = string.gsub(c2, "5", "➄")
+    c2 = string.gsub(c2, "6", "➅")
+    c2 = string.gsub(c2, "7", "➆")
+    c2 = string.gsub(c2, "8", "➇")
+    c2 = string.gsub(c2, "9", "➈")
+    return c2
+end
+
+local function circled3_number(c3)
+    if c3 == "" then return "" end
+    c3 = string.gsub(c3, "0", "⓿")
+    c3 = string.gsub(c3, "1", "❶")
+    c3 = string.gsub(c3, "2", "❷")
+    c3 = string.gsub(c3, "3", "❸")
+    c3 = string.gsub(c3, "4", "❹")
+    c3 = string.gsub(c3, "5", "❺")
+    c3 = string.gsub(c3, "6", "❻")
+    c3 = string.gsub(c3, "7", "❼")
+    c3 = string.gsub(c3, "8", "❽")
+    c3 = string.gsub(c3, "9", "❾")
+    return c3
+end
+
+local function circled4_number(c4)
+    if c4 == "" then return "" end
+    c4 = string.gsub(c4, "0", "🄌")
+    c4 = string.gsub(c4, "1", "➊")
+    c4 = string.gsub(c4, "2", "➋")
+    c4 = string.gsub(c4, "3", "➌")
+    c4 = string.gsub(c4, "4", "➍")
+    c4 = string.gsub(c4, "5", "➎")
+    c4 = string.gsub(c4, "6", "➏")
+    c4 = string.gsub(c4, "7", "➐")
+    c4 = string.gsub(c4, "8", "➑")
+    c4 = string.gsub(c4, "9", "➒")
+    return c4
+end
+
+local function circled5_number(c5)
+    if c5 == "" then return "" end
+    c5 = string.gsub(c5, "0", "Ⓞ")
+    c5 = string.gsub(c5, "1", "㊀")
+    c5 = string.gsub(c5, "2", "㊁")
+    c5 = string.gsub(c5, "3", "㊂")
+    c5 = string.gsub(c5, "4", "㊃")
+    c5 = string.gsub(c5, "5", "㊄")
+    c5 = string.gsub(c5, "6", "㊅")
+    c5 = string.gsub(c5, "7", "㊆")
+    c5 = string.gsub(c5, "8", "㊇")
+    c5 = string.gsub(c5, "9", "㊈")
+    return c5
+end
+
 local function purech_number(ch)
     if ch == "" then return "" end
     ch = string.gsub(ch, "0", "〇")
@@ -1342,11 +1417,16 @@ function t_translator(input, seg)
             yield(Candidate("number", seg.start, seg._end, fullshape_number(numberout), "〔全形數字〕"))
             yield(Candidate("number", seg.start, seg._end, math1_number(numberout), "〔數學粗體數字〕"))
             yield(Candidate("number", seg.start, seg._end, math2_number(numberout), "〔數學空心數字〕"))
+            yield(Candidate("number", seg.start, seg._end, circled1_number(numberout), "〔帶圈數字〕"))
+            yield(Candidate("number", seg.start, seg._end, circled2_number(numberout), "〔帶圈無襯線數字〕"))
+            yield(Candidate("number", seg.start, seg._end, circled3_number(numberout), "〔反白帶圈數字〕"))
+            yield(Candidate("number", seg.start, seg._end, circled4_number(numberout), "〔反白帶圈無襯線數字〕"))
             for _, conf in ipairs(confs) do
                 local r = read_number(conf, n)
                 yield(Candidate("number", seg.start, seg._end, r, conf.comment))
             end
             yield(Candidate("number", seg.start, seg._end, purech_number(numberout), "〔純中文數字〕"))
+            yield(Candidate("number", seg.start, seg._end, circled5_number(numberout), "〔帶圈中文數字〕"))
             --[[ 用 yield 產生一個候選項
             候選項的構造函數是 Candidate，它有五個參數：
             - type: 字符串，表示候選項的類型（可隨意取）
@@ -2331,11 +2411,16 @@ function t2_translator(input, seg)
             yield(Candidate("number", seg.start, seg._end, fullshape_number(numberout), "〔全形數字〕"))
             yield(Candidate("number", seg.start, seg._end, math1_number(numberout), "〔數學粗體數字〕"))
             yield(Candidate("number", seg.start, seg._end, math2_number(numberout), "〔數學空心數字〕"))
+            yield(Candidate("number", seg.start, seg._end, circled1_number(numberout), "〔帶圈數字〕"))
+            yield(Candidate("number", seg.start, seg._end, circled2_number(numberout), "〔帶圈無襯線數字〕"))
+            yield(Candidate("number", seg.start, seg._end, circled3_number(numberout), "〔反白帶圈數字〕"))
+            yield(Candidate("number", seg.start, seg._end, circled4_number(numberout), "〔反白帶圈無襯線數字〕"))
             for _, conf in ipairs(confs) do
                 local r = read_number(conf, n)
                 yield(Candidate("number", seg.start, seg._end, r, conf.comment))
             end
             yield(Candidate("number", seg.start, seg._end, purech_number(numberout), "〔純中文數字〕"))
+            yield(Candidate("number", seg.start, seg._end, circled5_number(numberout), "〔帶圈中文數字〕"))
             --[[ 用 yield 產生一個候選項
             候選項的構造函數是 Candidate，它有五個參數：
             - type: 字符串，表示候選項的類型（可隨意取）
