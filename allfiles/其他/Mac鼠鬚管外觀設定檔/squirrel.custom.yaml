@@ -2,17 +2,25 @@
 # 用法：想要哪項生效，就刪去該行行首的「#」字符，但注意保留用於縮進的空格
 
 patch:
-  style/color_scheme: lost_temple #apathy #psionics #mac_white #mac_white2
-  # style/horizontal: true      # 候選橫排
-  style/inline_preedit: false #true
-  style/corner_radius: 4 #10
-  style/line_spacing: 1 #4 #6
-  style/spacing: 5 #4 #10
-  style/candidate_format: '%c. %@'
+  style/color_scheme: lost_temple                      # 主題樣式 #apathy #psionics #mac_white #mac_white2
+  style/horizontal: false                              # 候選橫排
+  style/inline_preedit: false                          # 內嵌輸入碼
   style/font_face: 'Times-Roman,PingFangTC-Light,AppleColorEmoji' #,HanaMinA,HanaMinB
-  style/font_point: 20 #21
-  style/label_font_face: 'Andale Mono'
-  style/label_font_point: 14 #12 #18
+  style/font_point: 19 #20 #21                         # 備選字和輸入碼字體大小
+  style/label_font_face: 'Andale Mono'                 # 前標號字體
+  style/label_font_point: 14 #12 #18                   # 前標號字體大小
+
+  style/corner_radius: 4 #10                           # 整個窗口圓角
+  # style/border_height: 0 #30                           # 窗口邊界高度，大於圓角半徑才有效果
+  # style/border_width: 0 #10                            # 窗口邊界寬度，大於圓角半徑才有效果
+  style/line_spacing: 1 #4 #6                          # 候選字間隙大小
+  style/spacing: 5 #4 #10                              # space between preedit and candidates in non-inline mode
+  style/candidate_format: '%c. %@'                     # 選字欄格式
+  # style/hilited_corner_radius: 5                       # 候選條圓角
+
+  style/base_offset: 2 #-5
+  # style/candidate_list_layout: stacked #linear #stacked
+  # style/text_orientation: vertical #horizontal
 
 ###################################################
   preset_color_schemes/liveon:
@@ -59,7 +67,7 @@ patch:
     hilited_text_color: 0x96a8a7 #0xE3F0FD
     hilited_candidate_text_color: 0x000000
     hilited_candidate_label_color: 0x96a8a7
-    hilited_candidate_back_color: 0xFFE4CE #0xFEF0E4 
+    hilited_candidate_back_color: 0xFFE4CE #0xFEF0E4
     comment_text_color: 0x96a8a7
     hilited_comment_text_color: 0x96a8a7
 
@@ -82,21 +90,133 @@ patch:
     hilited_comment_text_color: 0xD5D6BF #0x96a8a7
 
 ###################################################
+  preset_color_schemes/ayaya:
+    name: "文文／Ayaya"
+    author: "Lufs <lufs@isteed.cc>"
+    # horizontal: true                               # 水平排列
+    # inline_preedit: true                           # 單行顯示，false雙行顯示
+    # font_face: "PingFangSC-Regular,HanaMinB"       # 候選詞字體
+    # font_point: 16                                 # 候選字詞大小
+    # label_font_face: "STHeitiSC-Light"             # 候選詞編號字體
+    # label_font_point: 12                           # 候選編號大小
+    candidate_format: "%c\u2005"                   # 編號 %c 和候選詞 %@ 前後的空間
+    corner_radius: 5                               # 候選條圓角
+    border_height: 0
+    border_width: 0
+    back_color: 0xFFFFFF                           # 候選條背景色
+    text_color: 0x8100EB                           # 高亮選中詞顏色
+    hilited_candidate_text_color: 0x7A40EC         # 候選文字顏色
+    hilited_candidate_back_color: 0xECE4FC         # 候選文字背景色
+    comment_text_color: 0x8E8E8E                   # 拼音等提示文字顏色
+    candidate_text_color: 0x121212                 # 預選項文字顏色
+
+  preset_color_schemes/Win10:
+    name: "Win10"
+    # horizontal: true
+    # inline_preedit: true
+    # font_point: 16
+    candidate_text_color: 0x000000
+    comment_text_color: 0x888888
+    text_color: 0x000000
+    back_color: 0xffffff
+    border_color: 0xcc8f29
+    hilited_text_color: 0x000000
+    hilited_back_color: 0xffffff
+    hilited_candidate_text_color: 0xffffff
+    hilited_candidate_back_color: 0xcc8f29
+    hilited_comment_text_color: 0xffffff
+    hilited_label_color: 0xffffff
+    label_color: 0x888888
+    label_format: "%s"
+    min_width: 160
+    min_height: 0
+    border_width: 6
+    border_height: 6
+    margin_x: 12
+    margin_y: 12
+    spacing: 5 #10
+    candidate_spacing: 24 #win才作用？
+    hilite_spacing: 8
+    hilite_padding: 12
+    round_corner: 0
+    candidate_format: "%c %@  "
+
+  preset_color_schemes/mac_lamb:
+    author: "lamb"
+    name: "lamb"
+    # horizontal: true                               # 設置水平還是竪直模式
+    # inline_preedit: true                           # 設置是否雙行顯示
+    # font_face: PingFangSC                          # 字體
+    # font_point: 16                                 # 字體大小
+    # label_font_point: 12                           # 普通標籤的字體大小
+    back_color: 0xffffff                           # 設置輸入條的背景色，色值是按照BGR的形式16進制填寫
+    corner_radius: 5                               # 設置輸入條的圓角效果
+    border_height: 4                               # 設置輸入條上下寬度
+    border_width: 4                                # 設置輸入條左右寬度
+    border_color: 0x9f62e8                         # 輸入條邊框顏色，似乎在橫向模式下不起作用
+    border_color_width: 0                          # 輸入條邊框寬度
+    candidate_format: "%c %@  "                    # 設置每個候選詞之間的間隔距離，%c代表備選的數字，%@代表候選字，可以通過輸入空格的形式來調整每個候選字之間的間隔距離
+    candidate_text_color: 0x333333                 # 候選字顏色
+    text_color: 0x333333                           # 普通候選字的顏色，非第一候選字
+    hilited_candidate_label_color: 0xffffff        # 第一候選字標籤顏色，也就是數字1
+    hilited_text_color: 0x888888
+    hilited_candidate_text_color: 0xffffff         # 第一候選字顏色
+    hilited_candidate_back_color: 0xD05B21         # 第一候選字高亮顏色（背景色）
+    hilited_corner_radius: 5                       # 第一候選字高亮顏色的圓角，當不設置時就是一整塊的顏色，設置了圓角之後就帶有圓角效果了
+    label_color: 0x888888                          # 普通標籤的顏色(非第一候選字)，也就是候選字數字
+
+  preset_color_schemes/solarized_light:
+    name: 曬經・日／Solarized Light
+    author: 雪齋 <lyc20041@gmail.com>
+    # color_space: display_p3                        # Only available on macOS 10.12+
+    back_color: 0xf0E5F6FB                         # Lab 97, 0, 10
+    border_color: 0xf0EDFFFF                       # Lab 100, 0, 10
+    preedit_back_color: 0xf0D7E8ED                 # Lab 92, 0, 10
+    candidate_text_color: 0x3942CB                 # Lab 50, 65, 45
+    label_color: 0x2566C6                          # Lab 55, 45, 65
+    comment_text_color: 0x8144C2                   # Lab 50, 65, -5
+    text_color: 0x756E5D                           # Lab 45, -7, -7
+    hilited_back_color: 0xf0E5F6FB #0xf0C9DADF     # Lab 87, 0, 10
+    hilited_candidate_back_color: 0x403516         # Lab 20, -12, -12
+    hilited_candidate_text_color: 0x989F52         # Lab 60, -35, -5
+    hilited_candidate_label_color: 0xCC8947        # Lab 55, -10, -45
+    hilited_comment_text_color: 0x289989           # Lab 60, -20, 65
+    hilited_text_color: 0xBE706D                   # Lab 50, 15, -45
+
+  preset_color_schemes/solarized_dark:
+    name: 曬經・月／Solarized Dark
+    author: 雪齋 <lyc20041@gmail.com>
+    # color_space: display_p3                        # Only available on macOS 10.12+
+    back_color: 0xf0352A0A                         # Lab 15, -12, -12
+    border_color: 0xf02A1F00                       # Lab 10, -12, -12
+    preedit_back_color: 0xf0403516                 # Lab 20, -12, -12
+    candidate_text_color: 0x989F52                 # Lab 60, -35, -5
+    label_color: 0xCC8947                          # Lab 55, -10, -45
+    comment_text_color: 0x289989                   # Lab 60, -20, 65
+    text_color: 0xA1A095                           # Lab 65, -05, -02
+    hilited_back_color: 0xf0352A0A #0xf04C4022     # Lab 25, -12, -12
+    hilited_candidate_back_color: 0xD7E8ED         # Lab 92, 0, 10
+    hilited_candidate_text_color: 0x3942CB         # Lab 50, 65, 45
+    hilited_candidate_label_color: 0x2566C6        # Lab 55, 45, 65
+    hilited_comment_text_color: 0x8144C2           # Lab 50, 65, -5
+    hilited_text_color: 0x2C8BAE                   # Lab 60, 10, 65
+
+###################################################
 
   preset_color_schemes/system_blue:
     name: "系統藍／System Blue"
-    author: "scomper <scomper@gmail.com>"    # 作者信息
-    back_color: 0xFFFFFF                     # 候選條背景色，24位色值，16進制，BGR順序
-    border_color: 0xE0B693                   # 邊框色
-    candidate_text_color: 0x000000           # 預選項文字顏色
-    comment_text_color: 0x999999             # 拼音等提示文字顏色
-    hilited_back_color: 0xfff0e3             # 第一候選項背景背景色
-    hilited_candidate_text_color: 0x000000   # 第一候選項文字顏色
-    hilited_candidate_label_color: 0x999999  # 第一候選項編號顏色
-    hilited_comment_text_color: 0x999999     # 註解文字高亮
-    hilited_text_color: 0x999999             # 高亮拼音 (需要開啓內嵌編碼)
-    text_color: 0x424242                     # 拼音行文字顏色
-    label_color: 0x999999                    # 預選欄編號顏色
+    author: "scomper <scomper@gmail.com>"          # 作者信息
+    back_color: 0xFFFFFF                           # 候選條背景色，24位色值，16進制，BGR順序
+    border_color: 0xE0B693                         # 邊框色
+    candidate_text_color: 0x000000                 # 預選項文字顏色
+    comment_text_color: 0x999999                   # 拼音等提示文字顏色
+    hilited_back_color: 0xfff0e3                   # 第一候選項背景背景色
+    hilited_candidate_text_color: 0x000000         # 第一候選項文字顏色
+    hilited_candidate_label_color: 0x999999        # 第一候選項編號顏色
+    hilited_comment_text_color: 0x999999           # 註解文字高亮
+    hilited_text_color: 0x999999                   # 高亮拼音 (需要開啓內嵌編碼)
+    text_color: 0x424242                           # 拼音行文字顏色
+    label_color: 0x999999                          # 預選欄編號顏色
 
   preset_color_schemes/metroblue:
     name: "現代藍／Metro Blue"
@@ -126,6 +246,21 @@ patch:
     hilited_candidate_back_color: 0xfafafa
     comment_text_color: 0x808080
 
+  preset_color_schemes/purity_of_form2:
+    name: 純粹的形式2／Purity of Form 2
+    author: 雨過之後、佛振、iDvel
+    # font_face: "PingFangSC"
+    # font_point: 18
+    # label_font_point: 13
+    text_color: 0x333333 #0xc2c2c2
+    back_color: 0x545554 #0x444444
+    candidate_text_color: 0xeeeeee
+    hilited_text_color: 0xeeeeee
+    hilited_back_color: 0x444444
+    hilited_candidate_text_color: 0x000000
+    hilited_candidate_back_color: 0xE3E3E3 #0xfafafa
+    comment_text_color: 0x808080
+
   preset_color_schemes/purity_of_essence:
     name: 純粹的本質／Purity of Essence
     author: 佛振
@@ -142,38 +277,38 @@ patch:
   preset_color_schemes/apathy:
     name: 冷漠／Apathy
     author: LIANG Hai
-    # horizontal: true  # 水平排列
-    # inline_preedit: true #單行顯示，false雙行顯示
-    candidate_format: "%c\u2005%@\u2005"  # 編號 %c 和候選詞 %@ 前後的空間
-    corner_radius: 5  #候選條圓角
+    # horizontal: true                                # 水平排列
+    # inline_preedit: true                            # 單行顯示，false雙行顯示
+    # font_face: "PingFangSC-Regular,HanaMinB"        # 候選詞字體
+    # font_point: 16                                  # 候選字詞大小
+    # label_font_face: "STHeitiSC-Light"              # 候選詞編號字體
+    # label_font_point: 12                            # 候選編號大小
+    candidate_format: "%c\u2005%@\u2005"            # 編號 %c 和候選詞 %@ 前後的空間
+    corner_radius: 5                                # 候選條圓角
     border_height: 0
     border_width: 0
-    back_color: 0xFFFFFF  #候選條背景色
-    # font_face: "PingFangSC-Regular,HanaMinB"  #候選詞字體
-    # font_point: 16  #候選字詞大小
-    text_color: 0x424242  #高亮選中詞顏色
-    # label_font_face: "STHeitiSC-Light"   #候選詞編號字體
-    # label_font_point: 12   #候選編號大小
-    hilited_candidate_text_color: 0xEE6E00  #候選文字顏色
-    hilited_candidate_back_color: 0xFFF0E4  #候選文字背景色
-    comment_text_color: 0x999999 #拼音等提示文字顏色
+    back_color: 0xFFFFFF                            # 候選條背景色
+    text_color: 0x424242                            # 高亮選中詞顏色
+    hilited_candidate_text_color: 0xEE6E00          # 候選文字顏色
+    hilited_candidate_back_color: 0xFFF0E4          # 候選文字背景色
+    comment_text_color: 0x999999                    # 拼音等提示文字顏色
 
   preset_color_schemes/dust:
     name: 浮塵／Dust
     author: Superoutman <asticosmo@gmail.com>
-    horizontal: true                                # 水平排列
-    inline_preedit: true                            # 單行顯示，false雙行顯示
+    # horizontal: true                                # 水平排列
+    # inline_preedit: true                            # 單行顯示，false雙行顯示
+    # font_face: "HYQiHei-55S Book,HanaMinA Regular"  # 候選詞字體
+    # font_point: 14                                  # 候選字詞大小
+    # label_font_face: "SimHei"                       # 候選詞編號字體
+    # label_font_point: 10                            # 候選編號大小
     candidate_format: "%c\u2005%@\u2005"            # 用 1/6 em 空格 U+2005 來控制編號 %c 和候選詞 %@ 前後的空間。
     corner_radius: 2                                # 候選條圓角
     border_height: 3                                # 窗口邊界高度，大於圓角半徑才生效
     border_width: 8                                 # 窗口邊界寬度，大於圓角半徑才生效
     back_color: 0xeeffffff                          # 候選條背景色
     border_color: 0xE0B693                          # 邊框色
-    font_face: "HYQiHei-55S Book,HanaMinA Regular"  # 候選詞字體
-    font_point: 14                                  # 候選字詞大小
     text_color: 0x424242                            # 高亮選中詞顏色
-    label_font_face: "SimHei"                       # 候選詞編號字體
-    label_font_point: 10                            # 候選編號大小
     label_color: 0xcbcbcb                           # 預選欄編號顏色
     candidate_text_color: 0x555555                  # 預選項文字顏色
     text_color: 0x9e9e9e                            # 拼音行文字顏色，24位色值，16進制，BGR順序
@@ -187,17 +322,17 @@ patch:
   preset_color_schemes/mritd_dark:
     name: 漠然／mritd dark
     author: mritd <mritd1234@gmail.com>
-    # horizontal: true                              # 水平排列
-    # inline_preedit: true                          # 單行顯示，false雙行顯示
+    # horizontal: true                                # 水平排列
+    # inline_preedit: true                            # 單行顯示，false雙行顯示
+    # font_face: "PingFangSC"                         # 候選詞字體
+    # font_point: 16                                  # 候選字詞大小
+    # label_font_point: 14                            # 候選編號大小
     candidate_format: "%c\u2005%@"                  # 用 1/6 em 空格 U+2005 來控制編號 %c 和候選詞 %@ 前後的空間。
     corner_radius: 5                                # 候選條圓角
     hilited_corner_radius: 3                        # 高亮圓角
     border_height: 6                                # 窗口邊界高度，大於圓角半徑才生效
     border_width: 6                                 # 窗口邊界寬度，大於圓角半徑才生效
     border_color_width: 0
-    #font_face: "PingFangSC"                        # 候選詞字體
-    # font_point: 16                                # 候選字詞大小
-    # label_font_point: 14                          # 候選編號大小
     text_color: 0x888785 #0xdedddd                  # 拼音行文字顏色，24位色值，16進制，BGR順序
     back_color: 0x4b4b4b                            # 候選條背景色
     label_color: 0x888785                           # 預選欄編號顏色
