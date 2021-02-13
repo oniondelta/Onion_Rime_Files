@@ -206,7 +206,7 @@ translator:
 jpnin1_phrase:
   dictionary: ""
   user_dict: jpnin1_phrase
-  db_class: tabledb #stabledb
+  db_class: stabledb #tabledb
   enable_completion: false
   enable_sentence: false
 
