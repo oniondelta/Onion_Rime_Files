@@ -203,7 +203,7 @@ translator:
 bpm_oplus_ph:
   dictionary: ""
   user_dict: bopomo_onionplus_phrase
-  db_class: tabledb
+  db_class: stabledb
   enable_completion: false
   enable_sentence: false
 ################################ 反查注音 ###################################
