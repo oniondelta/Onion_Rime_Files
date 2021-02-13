@@ -9,6 +9,7 @@
 ### 安裝後建議修改：
     
 - 修改 App 使 OS 默認 Squirrel 為繁體中文：
+    - 鼠鬚管 0.14.0 版推薦可修改，但 0.15.1 版修改後會產生問題！建議不要更改！
     - 於 /Library/Input Methods/Squirrel.app/Contents/Info.plist 把 Info.plist 中唯一的 \<string>zh\</string> 改成 \<string>zh-Hant\</string> ⇨ 《重開機》。
 
 - 置換新版 librime 引擎：
