@@ -68,7 +68,7 @@ translator:
 hangeul_phrase:
   dictionary: ""
   user_dict: hangeul_phrase
-  db_class: tabledb #stabledb
+  db_class: stabledb #tabledb
   enable_completion: false
   enable_sentence: false
   initial_quality: "0"
