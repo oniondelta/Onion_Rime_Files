@@ -233,7 +233,7 @@ speller:
 ocm_mixin_phrase:
   dictionary: ""
   user_dict: ocm_mixin_phrase
-  db_class: tabledb
+  db_class: stabledb
   enable_completion: false
   enable_sentence: false
 
