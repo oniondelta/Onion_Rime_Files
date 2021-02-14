@@ -6,7 +6,7 @@ patch:
   style/horizontal: false                              # 候選橫排
   style/inline_preedit: false                          # 內嵌輸入碼
   style/font_face: 'TimesNewRomanPSMT,PingFangTC-Light,AppleColorEmoji' #,HanaMinA,HanaMinB
-  style/font_point: 19 #20 #21                         # 備選字和輸入碼字體大小
+  style/font_point: 20 #19 #21                         # 備選字和輸入碼字體大小
   style/label_font_face: 'Andale Mono'                 # 前標號字體
   style/label_font_point: 14 #12 #18                   # 前標號字體大小
 
