@@ -51,7 +51,7 @@ speller:
   algebra:
 ##### 字詞彙中的漢字，拼音轉寫 #####
 ### 漢字中的促音 ###
-#漢字無此拼音#    - derive/cchi(.*)(;)$/qchi$1$2/ #っち
+    - derive/cchi(.*)(;)$/qchi$1$2/ #っち
     - derive/sshi(.*)(;)$/qshi$1$2/ #っし
 #漢字無此拼音#    - derive/ffu(.*)(;)$/qfu$1$2/ #っふ
     - derive/ttsu(.*)(;)$/qtsu$1$2/ #っつ
