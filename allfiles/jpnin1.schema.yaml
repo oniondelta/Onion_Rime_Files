@@ -89,7 +89,7 @@ speller:
 ### 漢字中的拗音 ###
     - derive/ky([auo])(.*)(;)$/kixy$1$2$3/ #きゃ
     - derive/gy([auoie])(.*)(;)$/gixy$1$2$3/ #ぎゃ
-    - derive/sh([auo])(.*)(;)$/sixy$1$2$3/ #しゃ
+    - derive/sh([auo])(.*)(;)$/shixy$1$2$3/ #しゃ
     - derive/j([auo])(.*)(;)$/jixy$1$2$3/ #じゃ
     - derive/dy([auoie])(.*)(;)$/dixy$1$2$3/ #ぢゃ
     - derive/ch([auoe])(.*)(;)$/chixy$1$2$3/ #ちゃ
