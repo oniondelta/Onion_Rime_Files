@@ -5,22 +5,22 @@ patch:
 ### 漢字中的促音 ###
     - derive/cchi(.*)(;)$/qchi$1$2/ #っち
     - derive/sshi(.*)(;)$/qshi$1$2/ #っし
-    - derive/ffu(.*)(;)$/qfu$1$2/ #っふ #漢字無此拼音#
+#漢字無此拼音#    - derive/ffu(.*)(;)$/qfu$1$2/ #っふ
     - derive/ttsu(.*)(;)$/qtsu$1$2/ #っつ
     - derive/jji(.*)(;)$/qji$1$2/ #っじ #暫時打開測試
 ##
     - derive/kky([auo])(.*)(;)$/qky$1$2$3/ #っきょ
-    - derive/ggy([auo])(.*)(;)$/qgy$1$2$3/ #っぎょ #漢字無此拼音#
+#漢字無此拼音#    - derive/ggy([auo])(.*)(;)$/qgy$1$2$3/ #っぎょ
     - derive/ssh([auo])(.*)(;)$/qsh$1$2$3/ #っしゃ #暫時打開測試
-    - derive/jj([auo])(.*)(;)$/qj$1$2$3/ #っじゅ #漢字無此拼音#
-    - derive/ddy([auo])(.*)(;)$/qdy$1$2$3/ #っぢょ #漢字無此拼音#
+#漢字無此拼音#    - derive/jj([auo])(.*)(;)$/qj$1$2$3/ #っじゅ
+#漢字無此拼音#    - derive/ddy([auo])(.*)(;)$/qdy$1$2$3/ #っぢょ
     - derive/cch([auo])(.*)(;)$/qch$1$2$3/ #っちゅ
     - derive/nny([auo])(.*)(;)$/qny$1$2$3/ #っにゃ
-    - derive/hhy([auo])(.*)(;)$/qhy$1$2$3/ #っひゃ #漢字無此拼音#
-    - derive/bby([auo])(.*)(;)$/qby$1$2$3/ #っびゃ #漢字無此拼音#
+#漢字無此拼音#    - derive/hhy([auo])(.*)(;)$/qhy$1$2$3/ #っひゃ
+#漢字無此拼音#    - derive/bby([auo])(.*)(;)$/qby$1$2$3/ #っびゃ
     - derive/ppy([auo])(.*)(;)$/qpy$1$2$3/ #っぴゃ #暫時打開測試
-    - derive/mmy([auo])(.*)(;)$/qmy$1$2$3/ #っみゃ #漢字無此拼音#
-    - derive/rry([auo])(.*)(;)$/qry$1$2$3/ #っりゃ #漢字無此拼音#
+#漢字無此拼音#    - derive/mmy([auo])(.*)(;)$/qmy$1$2$3/ #っみゃ
+#漢字無此拼音#    - derive/rry([auo])(.*)(;)$/qry$1$2$3/ #っりゃ
 ##
     - derive/kk([auoie])(.*)(;)$/qk$1$2$3/ #っか
     - derive/ss([auoie])(.*)(;)$/qs$1$2$3/ #っさ
@@ -28,7 +28,7 @@ patch:
     - derive/nn([auoie])(.*)(;)$/qn$1$2$3/ #っな
 #漢字無此拼音#    - derive/hh([auoie])(.*)(;)$/qh$1$2$3/ #っは
 #漢字無此拼音#    - derive/ff([auoie])(.*)(;)$/qh$1$2$3/ #っふ
-    - derive/mm([auoie])(.*)(;)$/qm$1$2$3/ #っま #漢字無此拼音#
+#漢字無此拼音#    - derive/mm([auoie])(.*)(;)$/qm$1$2$3/ #っま
     - derive/yy([auoie])(.*)(;)$/qy$1$2$3/ #っや #打開會衝突？？？ #暫時打開測試
     - derive/rr([auoie])(.*)(;)$/qr$1$2$3/ #っな #暫時打開測試
 #漢字無此拼音#    - derive/ww([auoie])(.*)(;)$/qw$1$2$3/ #っわ #打開會衝突？？？
@@ -66,18 +66,26 @@ patch:
     - derive/jj([auo])/jjy$1/
     - derive/ddy([auo])/zzy$1/
     - derive/ddy([auo])/jj$1/
+### 承上補充漢字中間可能會有的特殊情況
+    - derive/f([,;])fu/h$1hu/
+    - derive/j([,;])ji/z$1zi/
+    - derive/c([,;])ch([auo])/t$1ty$2/
+    - derive/j([,;])j([auo])/z$1zy$2/
+    - derive/d([,;])dy([auo])/z$1zy$2/
+    - derive/d([,;])dy([auo])/j$1j$2/
+###
     - derive/(?<!s)shi/si/
     - derive/(?<!c)chi/ti/
     - derive/(?<!t)tsu/tu/
-    - derive/(?<!f)fu/hu/
-    - derive/(?<!j)ji/zi/
+    - derive/(?<!f|,|;)fu/hu/
+    - derive/(?<!j|,|;)ji/zi/
     - derive/(?<!s)sh([auo])/sy$1/
     - derive/(?<!c)ch([auo])/cy$1/
-    - derive/(?<!c)ch([auo])/ty$1/
-    - derive/(?<!j)j([auo])/zy$1/
+    - derive/(?<!c|,|;)ch([auo])/ty$1/
+    - derive/(?<!j|,|;)j([auo])/zy$1/
     - derive/(?<!j)j([auo])/jy$1/
-    - derive/(?<!d)dy([auo])/zy$1/
-    - derive/(?<!d)dy([auo])/j$1/
+    - derive/(?<!d|,|;)dy([auo])/zy$1/
+    - derive/(?<!d|,|;)dy([auo])/j$1/
 ### 其他 ###
     - derive/tye/che/ #「崔tye」「陳tyen」：ちぇ、チェ。
 ##### 小字假名或符號等，拼音轉寫 #####
