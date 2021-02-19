@@ -66,18 +66,6 @@ patch:
     - derive/jj([auo])/jjy$1/
     - derive/ddy([auo])/zzy$1/
     - derive/ddy([auo])/jj$1/
-    # - derive/^([a-z]*)shi/$1si/
-    # - derive/^([a-z]*)chi/$1ti/
-    # - derive/^([a-z]*)tsu/$1tu/
-    # - derive/^([a-z]*)fu/$1hu/
-    # - derive/^([a-z]*)ji/$1zi/
-    # - derive/^([a-z]*)sh([auo])/$1sy$2/
-    # - derive/^([a-z]*)ch([auo])/$1cy$2/
-    # - derive/^([a-z]*)ch([auo])/$1ty$2/
-    # - derive/^([a-z]*)dy([auo])/$1zy$2/
-    # - derive/^([a-z]*)dy([auo])/$1j$2/
-    # - derive/^([a-z]*)j([auo])/$1zy$2/
-    # - derive/^([a-z]*)j([auo])/$1jy$2/
     - derive/(?<!s)shi/si/
     - derive/(?<!c)chi/ti/
     - derive/(?<!t)tsu/tu/
@@ -94,10 +82,6 @@ patch:
     - derive/tye/che/ #「崔tye」「陳tyen」：ちぇ、チェ。
 ##### 小字假名或符號等，拼音轉寫 #####
     - derive|\-(.*)(;)$|ev$1$2| #ー–長音符
-#    - derive/ー/-;/
-#    - derive/ー/vv/
-#    - derive/ー/ev/
-#    - xform/ー/-/
     - derive|^\-$|ev\,| #ー–長音符
     - derive|^\-$|ev\.| #ー–長音符
     - derive|^\-\-$|eev\,|
@@ -117,10 +101,6 @@ patch:
     - derive/q(?![yw][aeiou][.])/ltu/ #っッ
     - derive/q(?![yw][aeiou][.])/xtsu/ #っッ
     - derive/q(?![yw][aeiou][.])/ltsu/ #っッ
-    # - derive/q([;,.])/xtu$1/
-    # - derive/q([;,.])/ltu$1/
-    # - derive/q([;,.])/xtsu$1/
-    # - derive/q([;,.])/ltsu$1/
     - derive/xy/ly/ #ゃゅょ
     - derive/xwa/lwa/ #ゎ ヮ
     - derive/x([aeiou])/l$1/ #ぁぇぃぉぅ
@@ -138,7 +118,6 @@ patch:
     - derive/n([,.;])/nn$1/ #ん
     - xform/^dvyu/dyu/
 ##### 簡化和消除含促音字詞後綴 #####
-#直接改碼表＃    - xform/^([kspt])\-([,.])$/$1@$2/
     - xform/^([kspt])([,.])(.+)$/$1$3/
     - derive/^([a-z-]+)([;])([a-z-]+)([;])$/$1$3$4/ #漢字中含促音
 ##### 簡化漢字後綴（如需假名輸入漢字，打開；「關閉」選單中沒漢字） #####
@@ -146,16 +125,11 @@ patch:
 #關#    - derive/^([;a-z-]+)([;])$/$1/ #關#
 ##### 簡化假名後綴 #####
     - derive/^([;a-z-]+)([,.])$/$1/
-#    - abbrev/^([a-z-]+)([,.])$/$1/ #使用abbrev，某些詞庫的詞顯示不出?
-#    - abbrev/^([a-z-]+)([;])$/$1/ #使用abbrev，某些詞庫的詞顯示不出?
-##    - fuzz/^([a-z]+)([;])$/$1/
 ##### 其他方案掛接時，後綴'['調出 #####
     - derive/^(.+)$/$1\'\[\'/
 ##### 使開頭單個字母時（如：kst）也能有選項可選 #####
-#直接改碼表＃    - xform/^([kspt])@([,.])$/$1$2/
     - abbrev/^([kstnhmyrwgzdbpxjlf])([aiueo])([.,])$/$1/
     - abbrev/^([c])([h])([aiueo])([.,])$/$1/
-#直接改碼表＃    - fuzz/^([kspt])([,.])$/$1/
 ##################################################################
 
 
