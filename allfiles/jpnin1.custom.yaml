@@ -122,9 +122,9 @@ patch:
     - derive/^dou\.$/odoriji\./ #符號
     - derive/^dou\.$/kigou\./ #符號
 ##
-    - derive/^u/wu/ #うウ
-    - derive/n([,.;])/nn$1/ #ん
-    - xform/^dvyu/dyu/
+#關，減少prism大小#    - derive/^u/wu/ #うウ
+#關，減少prism大小#    - derive/n([,.;])/nn$1/ #ん
+    - xform/^dvyu\.$/dyu/ #デュ #先設不其他編碼，不被其他正則影響再轉回
 ##### 簡化和消除含促音字詞後綴 #####
     - xform/^([kspt])([,.])(.+)$/$1$3/
 #舊版漢字中有分段才有用到#    - derive/^([a-z-]+)([;])([a-z-]+)([;])$/$1$3$4/ #漢字中含促音
