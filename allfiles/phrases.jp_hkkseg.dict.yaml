@@ -1459,7 +1459,7 @@ columns:
 教会	kyoukai;
 重奏	juusou;
 飛び起き	to; bi, o; ki,
-罪滅ぼし	tsumihoro; bo,shi,
+罪滅ぼし	tsumihoro; bo, shi,
 症候群	shoukougun;
 仕事	shigoto;
 丁重	teichou;
@@ -2551,7 +2551,7 @@ columns:
 語弊	gohei;
 新型	shingata;
 片仮名	katakana;
-平方キロ	heihou; ki.ro.
+平方キロ	heihou; ki. ro.
 覇権	haken;
 戦い	tataka; i,
 嫌い	kira; i,
@@ -4482,7 +4482,7 @@ columns:
 怪鳥	kaichou;
 従姉妹	itoko;
 彼ら	kare; ra,
-考える	kanga; e,ru,
+考える	kanga; e, ru,
 汎用	hanyou;
 極道	gokudou;
 錬金術	renkinjutsu;
@@ -6497,7 +6497,7 @@ columns:
 運び	hako; bi,
 真っすぐ	ma; ssu, gu,
 真っすぐ	ma; q, su, gu,
-お揃いで	o, soro; i,de,
+お揃いで	o, soro; i, de,
 突きつけ	tsu; ki, tsu, ke,
 回答	kaitou;
 高等	koutou;
@@ -6574,7 +6574,7 @@ columns:
 書棚	shodana;
 一環	ikkan;
 #一環	iqkan;
-日当たり	hia; ta,ri,
+日当たり	hia; ta, ri,
 牡馬	boba;
 派遣	haken;
 雄大	yuudai;
@@ -7646,7 +7646,7 @@ columns:
 呼び寄せ	yo; bi, yo; se,
 計測	keisoku;
 大島	ooshima;
-入れ替わ	i; re,ka; wa,
+入れ替わ	i; re, ka; wa,
 解任	kainin;
 見過ご	misu; go,
 東京学芸	toukyougakugei;
@@ -34949,6 +34949,7 @@ columns:
 沙美	sami;
 寒め	samu; me,
 #武士	samure-;
+武士	samurai;
 覺め	sa; me,
 咲夜	saya;
 咲弥	saya;
@@ -36084,7 +36085,6 @@ columns:
 告り	no; ri,
 能里	nori;
 告る	no; ru,
-#諾威	noruwhe-;
 乘れ	no; re,
 告れ	no; re,
 祝女	noro;
@@ -43904,9 +43904,10 @@ columns:
 色落ち	iroo; chi,
 女遊び	onnaaso; bi,
 原綴り	mototsuzu; ri,
-糞婆あ	kusobabaa,
+糞婆あ	kusobaba; a,
 #糞婆あ	kusobaba_a,
-糞婆あ	kusobaba-,
+#糞婆あ	kusobaba-,
+糞婆あ	kusobaba-; a,
 何処ら	doko; ra,
 何所ら	doko; ra,
 御座り	osuwa; ri,
@@ -45931,8 +45932,9 @@ columns:
 窺く	nozo; ku,
 臨く	nozo; ku,
 婆あ	baba; a,
-婆あ	baba-,
-婆あ	ba; ba,
+#婆あ	baba-,
+婆あ	baba-; a,
+#婆あ	ba; ba,
 賦る	kuba; ru,
 匍う	ha; u,
 延う	ha; u,
@@ -46273,7 +46275,8 @@ columns:
 刳い	egu; i,
 蘞い	egu; i,
 醶い	egu; i,
-素っ	sut,
+#素っ	sut,
+素っ	su; q,
 現つ	utsu; tsu,
 掛り	gaka; ri,
 操す	ayana; su,
@@ -46411,9 +46414,12 @@ columns:
 販ぐ	hisa; gu,
 許し	baka; shi,
 許し	bakka; shi,
-怖っ	kowat,
-恐っ	kowat,
-痛っ	itat,
+#怖っ	kowat,
+怖っ	kowa; q,
+#恐っ	kowat,
+恐っ	kowa; q,
+#痛っ	itat,
+痛っ	ita; q,
 漱ぐ	kuchisusu; gu,
 嗽ぐ	kuchisusu; gu,
 美い	uttsu; i,
@@ -46566,7 +46572,8 @@ columns:
 放し	pana; shi,
 番る	tsugae; ru,
 蘖え	hikoba; e,
-引っ	hit,
+#引っ	hit,
+引っ	hi; q,
 馘る	kubiki; ru,
 剄る	kubiki; ru,
 天一	tenichi;
@@ -46639,7 +46646,8 @@ columns:
 礼す	rai; su,
 枝る	eda; ru,
 月一	tsukiichi;
-打っ	but,
+#打っ	but,
+打っ	bu; q,
 歩ぶ	ayu; bu,
 歩ぶ	ayo; bu,
 歩ぶ	ai; bu,
@@ -46702,8 +46710,10 @@ columns:
 叢り	muraga; ri,
 簇り	muraga; ri,
 刮ぐ	koso; gu,
-押っ	ot,
-追っ	ot,
+#押っ	ot,
+押っ	o; q,
+#追っ	ot,
+追っ	o; q,
 栄し	haya; shi,
 嫌や	iya; ya,
 嫌や	ya; ya,
@@ -46751,7 +46761,8 @@ columns:
 美ら	chuu; ra,
 免る	manoga; ru,
 屯う	tamuro; u,
-取っ	tot,
+#取っ	tot,
+取っ	to; q,
 包か	hou; ka,
 憂ふ	ure; fu,
 愁ふ	ure; fu,
@@ -127823,7 +127834,7 @@ columns:
 示寂	jijaku;
 嗚呼嗚呼	aaaa;
 嗚呼嗚呼	a-a-;
-嗚呼嗚呼	a---;
+#嗚呼嗚呼	a---;
 翻訳先言語	honyakusakigengo;
 翻訳元言語	honyakumotogengo;
 別料金	betsuryoukin;
