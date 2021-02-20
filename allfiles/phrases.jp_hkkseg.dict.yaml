@@ -1695,7 +1695,6 @@ columns:
 分秒	funbyou;
 単独	tandoku;
 複雑	fukuzatsu;
-〆切	shimekiri;
 代官山	daikanyama;
 製鉄	seitetsu;
 確信	kakushin;
@@ -4398,8 +4397,6 @@ columns:
 見にく	mi; ni, ku,
 凡そ	oyo; so,
 銀色	giniro;
-#ＦＡＸ	fakkusu;
-##ＦＡＸ	faqkusu;
 最小値	saishouchi;
 降参	kousan;
 本家	honke;
@@ -7278,7 +7275,7 @@ columns:
 駄菓子	dagashi;
 胸倉	munagura;
 創業	sougyou;
-従姉	juushi;([kgsztdjhmyrwbp]); 
+従姉	juushi;
 学術	gakujutsu;
 駆け	ka; ke,
 灰色	haiiro;
@@ -9292,7 +9289,6 @@ columns:
 薬草	yakusou;
 実体	jittai;
 #実体	jiqtai;
-#（株）	kabushikigaisha;
 菩提	bodai;
 何回	nankai;
 後発	kouhatsu;
@@ -12614,7 +12610,6 @@ columns:
 羅飛	rahi;
 何姿	kashi;
 何こ	nani; ko,
-何℃	nanidoshi-;
 何ゆ	nani; yu,
 何所	kasho;
 何げ	nani; ge,
@@ -15333,7 +15328,6 @@ columns:
 人そ	hito; so,
 水そ	mizu; so,
 麺そ	men; so,
-倍%	baipa-sento;
 網地	aji;
 い化	i, ka;
 威化	ika;
@@ -15854,16 +15848,6 @@ columns:
 ド感	do. kan;
 ド級	do. kyuu;
 ド系	do. kei;
-℃位	doshi-i;
-℃下	doshi-ka;
-℃級	doshi-kyuu;
-℃時	doshi-ji;
-℃弱	doshi-jaku;
-℃代	doshi-dai;
-℃台	doshi-dai;
-℃超	doshi-chou;
-℃品	doshi-hin;
-℃目	doshi-me;
 土味	domi;
 仁後	nigo;
 荷時	niji;
@@ -18419,14 +18403,12 @@ columns:
 字目	jime;
 打目	dame;
 つ目	tsu, me;
-%目	pa-sentome;
 尾目	bime;
 部目	bume;
 頁目	pe-jime;
 歩目	home;
 輪目	wame;
 一ち	ichi; chi,
-一%	ichipa-sento;
 一頁	ichipe-ji;
 一ら	ichi; ra,
 #一価	iqka;
@@ -18589,7 +18571,6 @@ columns:
 一辺	ippen;
 #一遍	iqpen;
 一遍	ippen;
-九%	kyuupa-sento;
 九頁	kyuupe-ji;
 九位	kui;
 九基	kuki;
@@ -18638,7 +18619,6 @@ columns:
 五手	gote;
 五斗	goto;
 五度	godo;
-五%	gopa-sento;
 五尾	gobi;
 五部	gobu;
 五頁	gope-ji;
@@ -18652,12 +18632,10 @@ columns:
 五話	gowa;
 三ち	san; chi,
 三つ	san; tsu,
-三%	sanpa-sento;
 三頁	sanpe-ji;
 三ら	san; ra,
 七粍	shichimirime-toru;
 七糎	nanasenchime-toru;
-七%	nanapa-sento;
 七頁	nanape-ji;
 七粍	nanamirime-toru;
 二位	nii;
@@ -18707,7 +18685,6 @@ columns:
 二度	nido;
 二波	niha;
 二派	niha;
-二%	nipa-sento;
 二尾	nibi;
 二府	nifu;
 二部	nibu;
@@ -18721,7 +18698,6 @@ columns:
 二羽	niwa;
 二話	niwa;
 八ち	hachi; chi,
-八%	hachipa-sento;
 八頁	hachipe-ji;
 #八課	haqka;
 八課	hakka;
@@ -18835,15 +18811,12 @@ columns:
 #四日	yoqka;
 四日	yokka;
 四羽	yowa;
-四%	yonpa-sento;
 四頁	yonpe-ji;
 零ち	rei; chi,
 零つ	rei; tsu,
-零%	reipa-sento;
 零頁	reipe-ji;
 零ら	rei; ra,
 六つ	roku; tsu,
-六%	rokupa-sento;
 六頁	rokupe-ji;
 #六価	roqka;
 六価	rokka;
@@ -18934,7 +18907,6 @@ columns:
 八百	happyaku;
 #六百	roqpyaku;
 六百	roppyaku;
-億%	okupa-sento;
 京ち	kei; chi,
 京ら	kei; ra,
 #十課	jiqka;
@@ -19059,7 +19031,6 @@ columns:
 十歩	jippo;
 #十本	jiqpon;
 十本	jippon;
-十%	juupa-sento;
 十頁	juupe-ji;
 十米	juume-toru;
 #十課	juqka;
@@ -19185,8 +19156,6 @@ columns:
 #十本	juqpon;
 十本	juppon;
 千ち	sen; chi,
-百Ω	hyakuo-mu;
-百%	hyakupa-sento;
 百頁	hyakupe-ji;
 百米	hyakume-toru;
 #百回	hyaqkai;
@@ -19262,7 +19231,6 @@ columns:
 #百本	hyaqpon;
 百本	hyappon;
 万つ	man; tsu,
-万%	manpa-sento;
 #十兆	jiqchou;
 十兆	jicchou;
 #十兆	jittyou;
@@ -19711,7 +19679,6 @@ columns:
 変ロ	hen; ro.
 #別本	beqpon;
 別本	beppon;
-β鉄	be-tatetsu;
 補部	hobu;
 魔姫	maki;
 麻鬼	maki;
@@ -26600,8 +26567,6 @@ columns:
 存せ	son; se,
 損せ	son; se,
 損ぜ	son; ze,
-#そ～	so, -
-#そ～	
 蔵し	zou; shi,
 蔵す	zou; su,
 蔵せ	zou; se,
@@ -30793,7 +30758,6 @@ columns:
 弁ず	ben; zu,
 弁ぜ	ben; ze,
 弁そ	ben; so,
-β線	be-tasen;
 吠陀	be-da;
 秘露	peru-;
 宝飯	hoi;
@@ -38359,7 +38323,7 @@ columns:
 一ケ月	ik;ke, getsu;
 一カ所	iq; ka. sho;
 一カ所	ik;ka. sho;
-#一ケ所	ikkasho
+#一ケ所	ikkasho;
 一ケ所	iq; ke, sho;
 一ケ所	ik;ke, sho;
 春一番	haruichiban;
@@ -38596,7 +38560,7 @@ columns:
 一挙両得	ikkyoryoutoku;
 一貫番号	ikkanbangou;
 一期一会	ichigoichie;
-ちょっと一杯	chottoippai
+ちょっと一杯	cho, tto, ippai;
 安全第一	anzendaiichi;
 一か八か	ichi; ka, bachi; ka,
 一かばちか	ichi; ka, ba, chi, ka,
@@ -38889,10 +38853,7 @@ columns:
 一行物	ichigyoumono;
 非一致	hiitchi;
 一門会	ichimonkai;
-誰一人	darehitori
-# 活け〆	ikejime
-活け〆	i; ke, shime,
-活け〆	i; ke, shime.
+誰一人	darehitori;
 一の松	ichi; no, matsu;
 二の松	ni; no, matsu;
 三の松	saq; no, matsu;
@@ -45576,8 +45537,6 @@ columns:
 カ所	ka. sho;
 ヵ所	xka. sho;
 ケ所	ka. sho;
-〆切	shime, kiri;
-〆切	shime. kiri;
 ひ孫	hi, imago;
 ひ孫	hi, ko;
 ひ孫	hi, hiko;
@@ -45592,9 +45551,7 @@ columns:
 お告	o, tsuge;
 ギ神	gi. kami;
 イ草	i. gusa;
-〆粕	shimekasu;
 お侠	o, kyan;
-γ線	ga, nmasen;
 ヵ国	xka. koku;
 ケ国	ka. koku;
 さ湯	sa, yu;
@@ -45607,7 +45564,6 @@ columns:
 ル又	ru. mata;
 だ体	da, tai;
 で候	de, sou;
-β版	be, -taban;
 お内	o, uchi;
 ん家	nchi;
 ネ申	ka. mi;
@@ -46244,8 +46200,6 @@ columns:
 黴る	kabi; ru,
 擦る	kasu; ru,
 川べ	kawa; be,
-煮〆	ni; shime,
-煮〆	ni; shime.
 早る	haya; ru,
 田ぶ	den; bu,
 紕い	mayo; i,
@@ -46660,9 +46614,6 @@ columns:
 瀞み	toro; mi,
 瀞む	toro; mu,
 抄い	suku; i,
-#活〆	ikeji; me,
-活〆	ike; shime,
-活〆	ike; shime.
 傾れ	nada; re,
 頽れ	nada; re,
 韲え	a; e,
@@ -59513,7 +59464,6 @@ columns:
 従軍記者	juugunkisha;
 従兄	itoko;
 従兄弟	juukeitei;
-従姉	juushi;
 従姉	itoko;
 従姉妹	juushimai;
 従者	juusha;
@@ -107572,7 +107522,6 @@ columns:
 派閥力学	habatsurikigaku;
 端役女優	hayakujoyuu;
 腹八分目	harahachibunme;
-腹8分目	harahachibunme;
 半跏趺坐	hankafuza;
 半跏趺座	hankafuza;
 万国共通	bankokukyoutsuu;
@@ -113619,7 +113568,6 @@ columns:
 檜扇	hiougi;
 桧扇	hiougi;
 紅団扇	beniuchiwa;
-Θ関数	te-takansuu;
 溝五位	mizogoi;
 画僧	gasou;
 説話集	setsuwashuu;
@@ -144421,7 +144369,6 @@ columns:
 線型結合	senkeiketsugou;
 漸化式	zenkashiki;
 冪乗則	bekijousoku;
-Γ分布	ganmabunpu;
 分布関数	bunpukansuu;
 爆破事件	bakuhajiken;
 房楊枝	fusayouji;
@@ -151083,4 +151030,67 @@ columns:
 お勘定	o, kanjou;
 お目付	o, metsuke;
 マ元帥	ma. gensui;
-#######@ 202102新增補充比對 japanese.jmdict.dict.yaml 結束 #######
+####### 202102新增補充比對 japanese.jmdict.dict.yaml 結束 #######
+#######@ 202102新增日語符號類 開始 #######
+Γ分布	ganmabunpu;
+β版	be-taban;
+γ線	ganmasen;
+β線	be-tasen;
+β鉄	be-tatetsu;
+Θ関数	te-takansuu;
+百Ω	hyakuo-mu;
+%目	pa-sentome;
+倍%	baipa-sento;
+零%	reipa-sento;
+一%	ichipa-sento;
+二%	nipa-sento;
+三%	sanpa-sento;
+四%	yonpa-sento;
+五%	gopa-sento;
+六%	rokupa-sento;
+七%	nanapa-sento;
+八%	hachipa-sento;
+九%	kyuupa-sento;
+十%	juupa-sento;
+百%	hyakupa-sento;
+万%	manpa-sento;
+億%	okupa-sento;
+何℃	nanidoshi-;
+℃位	doshi-i;
+℃下	doshi-ka;
+℃級	doshi-kyuu;
+℃時	doshi-ji;
+℃弱	doshi-jaku;
+℃代	doshi-dai;
+℃台	doshi-dai;
+℃超	doshi-chou;
+℃品	doshi-hin;
+℃目	doshi-me;
+腹8分目	harahachibunme;
+ＦＡＸ	fakkusu;
+#ＦＡＸ	faqkusu;
+#（株）	kabushikigaisha;
+#そ～	so, -
+#そ～	
+#活〆	ikeji; me,
+活〆	ike; shime,
+活〆	ike; shime.
+煮〆	ni; shime,
+煮〆	ni; shime.
+〆粕	shime, kasu;
+〆粕	shime. kasu;
+〆切	shime, kiri;
+〆切	shime. kiri;
+# 活け〆	ikejime,
+活け〆	i; ke, shime,
+活け〆	i; ke, shime.
+〆切	shime, kiri;
+〆切	shime. kiri;
+α米	arufamai;
+α化	arufaka;
+β波	be-taha;
+α波	arufaha;
+＠系	attokei;
+α線	arufasen;
+※印	komejirushi;
+#######@ 202102新增日語符號類 結束 #######

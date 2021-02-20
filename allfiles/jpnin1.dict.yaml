@@ -26569,7 +26569,6 @@ columns:
 針	pari;	654
 椀	pan;	147
 班	pan;	816
-%	pa-sento;
 牌	hi;	453
 雛	hiina;	290
 柊	hiiragi;	155
@@ -27539,7 +27538,6 @@ columns:
 棟	ton;	1282
 杜	dou;	522
 濤	dou;
-℃	doshi-;
 納	nau;	407
 央	nakaba;	433
 呂	naga;	986
@@ -28020,15 +28018,6 @@ columns:
 蔵	sashi;	1181
 #?#組	gu;
 ##
-○	shiromaru;
-○	zukei;
-○	rei;
-〇	kigou;
-〇	rei;
-〒	kigou;	437
-〒	yuubin;	437
-㍼	shouwa;
-㍽	taishou;
 ####### 202002新增補充結束 #######
 #######@ 202102新增補充比對 japanese.jmdict.dict.yaml 開始 #######
 𩺊	ara;
@@ -29124,7 +29113,7 @@ columns:
 莧	hiyu;
 莧	hyou;
 候	sourau;	408
-＃叱	shit;
+#叱	shit;
 叱	shikari;
 呵	shikari;
 幹	kara;	717
@@ -29457,4 +29446,196 @@ columns:
 炸	za-;
 斧	yoki;	275
 直	ne;	1802
-#######@ 202102新增補充比對 japanese.jmdict.dict.yaml 結束 #######
+####### 202102新增補充比對 japanese.jmdict.dict.yaml 結束 #######
+#######@ 202102新增日語符號類 開始 #######
+%	pa-sento;
+℃	doshi-;
+○	shiromaru;
+○	zukei;
+○	rei;
+〇	kigou;
+〇	rei;
+〒	kigou;	437
+〒	yuubin;	437
+㍼	shouwa;
+㍽	taishou;
+～	nyoro;	4214
+Α	arufa;	40
+α	arufa;	891
+Ｓ	esu;	44
+ｓ	esu;	25
+Ｈ	etchi;	53
+ｈ	etchi;	12
+Ｈ	eichi;	53
+ｈ	eichi;	12
+Ω	omega;	192
+ω	omega;	213
+Γ	ganma;	102
+γ	ganma;	322
+Γ	ganma-;	102
+γ	ganma-;	322
+Σ	shiguma;	131
+σ	shiguma;	243
+ς	shiguma;
+Δ	deruta;	216
+δ	deruta;	211
+Β	be-ta;	26
+β	be-ta;	745
+Β	be-ta-;	26
+β	be-ta-;	745
+Β	vita;	26
+β	vita;	745
+Λ	ramuda;	98
+λ	ramuda;	216
+１	ichi;
+２	aru;
+２	ni;
+２	futa;
+２	fu;
+２	fuu;
+３	san;
+３	mi;
+４	shi;
+５	go;
+５	itsu;
+５	i;
+６	roku;
+６	mu;
+６	muu;
+７	shichi;
+７	nana;
+７	na;
+８	hachi;
+８	ya;
+９	kyuu;
+９	ku;
+９	kokono;
+９	kono;
+９	koko;
+→	yajirushi;	2605
+←	yajirushi;	146
+↑	yajirushi;	113
+↓	yajirushi;	59
+◎	nijuumaru;
+Ε	ipushiron;	19
+ε	ipushiron;	220
+Ε	epushiron;	19
+ε	epushiron;	220
+Ζ	ze-ta;	326
+ζ	ze-ta;	123
+Η	i-ta;	13
+η	i-ta;	128
+Η	e-ta;	13
+η	e-ta;	128
+Θ	shi-ta;	26
+θ	shi-ta;	173
+Θ	te-ta;	26
+θ	te-ta;	173
+Ι	iota;	10
+ι	iota;	74
+Κ	kappa;	15
+κ	kappa;	138
+Κ	kappa-;	15
+κ	kappa-;	138
+Μ	myu-;	17
+μ	myu-;	522
+Ν	nyu-;	15
+ν	nyu-;	138
+Ο	omikuron;	17
+ο	omikuron;	58
+Ξ	kusai;	21
+ξ	kusai;	68
+Ξ	kushi-;	21
+ξ	kushi-;	68
+Ξ	guzai;	21
+ξ	guzai;	68
+Π	pai;	36
+π	pai;	237
+Ρ	ro-;	9
+ρ	ro-;	121
+Τ	tau;	14
+τ	tau;	134
+Υ	upushiron;	16
+υ	upushiron;	49
+Υ	yupushiron;	16
+υ	yupushiron;	49
+Υ	oipushiron;	16
+υ	oipushiron;	49
+Φ	fai;	83
+φ	fai;	246
+ϕ	fai;
+Φ	fi-;	83
+φ	fi-;	246
+ϕ	fi-;
+Χ	kai;	25
+χ	kai;	96
+Χ	ki-;	25
+χ	ki-;	96
+Ψ	pusai;	58
+ψ	pusai;	82
+Ψ	pushi-;	58
+ψ	pushi-;	82
+Ｍ	emu;	56
+ｍ	emu;	325
+△	sankaku;
+Ａ	e-;	133
+ａ	e-;	10
+Ａ	ei;	133
+ａ	ei;	10
+Ｂ	bi-;	83
+ｂ	bi-;	10
+Ｂ	be-;	83
+ｂ	be-;	10
+Ｃ	shi-;	54
+ｃ	shi-;	10
+Ｄ	di-;	53
+ｄ	di-;	10
+Ｄ	di;	53
+ｄ	di;	10
+Ｅ	i-;	45
+ｅ	i-;	10
+Ｆ	efu;	52
+ｆ	efu;	14
+Ｇ	ji-;	40
+ｇ	ji-;	25
+Ｉ	ai;	42
+ｉ	ai;	9
+Ｊ	je-;	45
+ｊ	je-;	7
+Ｋ	ke-;	36
+ｋ	ke-;	10
+Ｋ	kei;	36
+ｋ	kei;	10
+Ｌ	eru;	43
+ｌ	eru;	7
+Ｎ	enu;	27
+ｎ	enu;	21
+Ｏ	o-;	22
+ｏ	o-;	4
+Ｐ	pi-;	32
+ｐ	pi-;	18
+Ｑ	kyu-;	23
+ｑ	kyu-;	2
+Ｒ	a-ru;	34
+ｒ	a-ru;	6
+Ｔ	ti-;	56
+ｔ	ti-;	53
+Ｕ	yu-;	37
+ｕ	yu-;	4
+Ｖ	bui;	45
+ｖ	bui;	18
+Ｖ	vi-;	45
+ｖ	vi-;	18
+Ｗ	daburyu-;	32
+ｗ	daburyu-;	16
+Ｘ	ekkusu;	50
+ｘ	ekkusu;	35
+Ｙ	wai;	24
+ｙ	wai;	10
+Ｚ	zetto;	27
+ｚ	zetto;	9
+Ｚ	zeddo;	27
+ｚ	zeddo;	9
+ｗ	wara;	16
+ｗ	warai;	16
+#######@ 202102新增日語符號類 結束 #######
