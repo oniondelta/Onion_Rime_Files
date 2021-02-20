@@ -186,7 +186,7 @@ speller:
 ##### 使開頭單個字母時（如：kst）也能有選項可選 #####
     - abbrev/^([kstnhmyrwgzdbpjlfx])([aiueo])([.,])$/$1/
     - abbrev/^([c])([h])([aiueo])([.,])$/$1/ #避免「c」開頭沒有對應假名
-    - abbrev/^([kstnhmyrwgzdbpjlfcx][kstnhmyrwgzdbpjlfc])([aiueo])([.,])$/$1/
+    - abbrev/^([kstnhmyrwgzdbpjlfcx][kstnhmyrwgzdbpjlfc][y]?)([aiueo])([.,])$/$1/
 
 translator:
   dictionary: jpnin1.extended
