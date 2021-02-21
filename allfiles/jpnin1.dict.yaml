@@ -25821,7 +25821,8 @@ columns:
 教	oshie;	2353
 鴛	oshidori;	22
 牡	osu;	139
-仰	otsha;
+#仰	otsha;
+仰	ossha;
 棘	odoro;	458
 驚	odoroki;	47
 驚	odoroku;	47
@@ -25936,7 +25937,7 @@ columns:
 競	kisou;	110
 北	kitagata;	5995
 穢	kitana;	80
-鋒	kitsaki;	134
+鋒	kissaki;	134
 茸	kinoko;	74
 菌	kinoko;	1101
 乙	kinoto;	620
@@ -26158,7 +26159,8 @@ columns:
 涼	suzuka;	530
 菘	suzuna;	28
 簾	sudare;	90
-鼈	sutpon;	22
+#鼈	sutpon;	22
+鼈	suppon;	22
 沙	suna;	708
 愿	sunao;	31
 直	sunao;	1802
@@ -26861,7 +26863,8 @@ columns:
 萠	moe;	58
 捩	moji;
 糯	mochi;	27
-畚	motko;	14
+#畚	motko;	14
+#畚	mokko;	14
 幹	motoki;	717
 求	motomu;	354
 求	motome;	354
@@ -26886,7 +26889,8 @@ columns:
 恭	yasushi;	440
 泰	yasushi;	1115
 靖	yasushi;	479
-奴	yatko;	445
+#奴	yatko;	445
+#奴	yakko;	445
 傭	yatoi;	64
 寄	yadoriki;	402
 和	yamato;	1878
@@ -26957,7 +26961,7 @@ columns:
 跛	chinba;	16
 聾	tsunbo;	123
 莅	nozoki;	24
-跛	bitko;	16
+跛	bikko;	16
 妾	mekake;	206
 盲	meshii;	177
 丹	aka;	603
@@ -27063,7 +27067,7 @@ columns:
 転	utata;	761
 中	uchi;	17891
 裡	uchi;	104
-掟	utchi;	223
+掟	ucchi;	223
 疏	uto;
 巧	uma;	236
 甜	uma;
@@ -27836,7 +27840,7 @@ columns:
 悌	yasushi;
 祥	yasushi;	504
 雍	yasushi;
-柔	yatko;	310
+柔	yakko;	310
 鱧	yatsumeunagi;	18
 柳	yanaji;	764
 勇	yan;	640
@@ -28121,7 +28125,6 @@ columns:
 詰	zume;	318
 黍	kimi;	49
 稷	kimi;	87
-京	kyou;	1610
 侶	tomo;
 侠	kyan;
 卿	kei;	1223
@@ -28480,17 +28483,14 @@ columns:
 褌	fudoshi;	79
 褌	tafusagi;	79
 褌	tousagi;	79
-跛	bikko;	16
 跛	ashinae;	16
 踵	akuto;	108
 鑿	nomi;
 鮱	bora;
-#鯱	shatchoko;
 鯱	shacchoko;	133
 鯱	sachihoko;	133
 鱧	hamu;	18
 麬	fusuma;
-鼈	suppon;	22
 緯	yokoito;	129
 卯	bou;	176
 永	tokoshie;	2170
@@ -28599,7 +28599,6 @@ columns:
 脇	katawara;	788
 雉	kigisu;
 雉	kigishi;
-鋒	kissaki;	134
 犢	koushi;
 犢	kouji;
 悉	kotogoto;
@@ -28794,7 +28793,6 @@ columns:
 偶	tama;
 適	tama;	178
 私	asshi;	2714
-#私	watchi;
 私	wacchi;	2714
 私	wasshi;	2714
 鸛	kou;	13
@@ -29113,7 +29111,6 @@ columns:
 莧	hiyu;
 莧	hyou;
 候	sourau;	408
-#叱	shit;
 叱	shikari;
 呵	shikari;
 幹	kara;	717
@@ -29393,7 +29390,6 @@ columns:
 匜	hazou;
 鰻	u;	110
 鵠	kukui;	46
-#突	tot;
 閑	nodo;
 和	nodo;	1878
 倒	saka;
@@ -29406,9 +29402,7 @@ columns:
 螭	mitsuchi;
 捗	haka;
 果	haka;	569
-#一	itchi;
 一	icchi;	13530
-#逸	itchi;
 逸	icchi;	256
 一	hi;	13530
 一	hii;	13530
@@ -29464,8 +29458,8 @@ columns:
 α	arufa;	891
 Ｓ	esu;	44
 ｓ	esu;	25
-Ｈ	etchi;	53
-ｈ	etchi;	12
+Ｈ	ecchi;	53
+ｈ	ecchi;	12
 Ｈ	eichi;	53
 ｈ	eichi;	12
 Ω	omega;	192
