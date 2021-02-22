@@ -24,6 +24,9 @@
 # 詞彙中含拗音「ゃ」「ょ」「ゅ」，其變化需補齊「xy」於下，「ly」用正則轉寫。
 #     例：赤ちゃん	aka; cha, n,    赤ちゃん	aka; chi, xya, n,
 #
+# 定義：じ=ji，zi用正則轉。
+# 定義：づヅ=du、ずズ=zu，碼表尚未校正
+#
 #===================================
 ---
 name: phrases.jp_hkkseg
@@ -35,8 +38,6 @@ columns:
   - code
   - weight
 ...
-大蛇	oroti;
-菜々子	nanako;
 ##### 202002 補充 #####
 ## 資料來源：https://github.com/masui/Chaim
 左治木	sajiki;
@@ -1516,7 +1517,7 @@ columns:
 声優	seiyuu;
 産まれ	u; ma, re,
 合致	gacchi;
-合致	gatti;
+#合致	gatti;
 滋賀医科	shigaika;
 対談	taidan;
 歩み	ayu; mi,
@@ -3305,7 +3306,7 @@ columns:
 用事	youji;
 紹介	shoukai;
 設置	secchi;
-設置	setti;
+#設置	setti;
 読本	yomihon;
 即時	sokuji;
 識別子	shikibetsushi;
@@ -3506,7 +3507,7 @@ columns:
 売却	baikyaku;
 真似	mane;
 立地	ricchi;
-立地	ritti;
+#立地	ritti;
 明槓	minkan;
 不吉	fukitsu;
 劇場	gekijou;
@@ -8531,7 +8532,7 @@ columns:
 奇跡	kiseki;
 悲鳴	himei;
 察知	sacchi;
-察知	satti;
+#察知	satti;
 可哀想	kawaisou;
 太陰暦	taiinreki;
 素通り	sudoo; ri,
@@ -10832,7 +10833,7 @@ columns:
 某社	bousha;
 小型	kogata;
 一致	icchi;
-一致	itti;
+#一致	itti;
 法政	housei;
 草むら	kusa; mu, ra,
 音階	onkai;
@@ -15821,7 +15822,7 @@ columns:
 日体	nittai;
 日達	nittatsu;
 日地	nicchi;
-日地	nitti;
+#日地	nitti;
 日柱	nicchuu;
 日調	nicchou;
 日通	nittsuu;
@@ -18378,7 +18379,7 @@ columns:
 爾雅	jiga;
 十界	jikkai;
 十地	jicchi;
-十地	jitti;
+#十地	jitti;
 使部	jibu;
 璽武	jimu;
 蛇牙	jaki;
@@ -20421,7 +20422,7 @@ columns:
 #仰る	otsha; ru,
 仰る	ossha; ru,
 乙父	occhi;
-乙父	otti;
+#乙父	otti;
 追手	otte;
 乙戸	otto;
 夫沢	ottozawa;
@@ -22260,7 +22261,7 @@ columns:
 血痰	kettan;
 結腸	kecchou;
 血沈	kecchin;
-血沈	kettin;
+#血沈	kettin;
 結締	kettei;
 結党	kettou;
 結東	kettou;
@@ -23431,12 +23432,12 @@ columns:
 執達	shittatsu;
 悉曇	shittan;
 失地	shicchi;
-失地	shitti;
+#失地	shitti;
 湿地	shicchi;
-湿地	shitti;
+#湿地	shitti;
 失調	shicchou;
 七珍	shicchin;
-七珍	shittin;
+#七珍	shittin;
 失墜	shittsui;
 尻手	shitte;
 知手	shitte;
@@ -23685,7 +23686,7 @@ columns:
 出炭	shuttan;
 出超	shucchou;
 出陳	shucchin;
-出陳	shuttin;
+#出陳	shuttin;
 出廷	shuttei;
 出頭	shuttou;
 出帆	shuppan;
@@ -23939,7 +23940,7 @@ columns:
 実視	jisshi;
 実車	jissha;
 実地	jicchi;
-実地	jitti;
+#実地	jitti;
 寺中	jicchuu;
 実直	jicchoku;
 実定	jittei;
@@ -24472,12 +24473,12 @@ columns:
 雪駄	setta;
 拙宅	settaku;
 接地	secchi;
-接地	setti;
+#接地	setti;
 折中	secchuu;
 折衷	secchuu;
 拙著	seccho;
 雪隠	secchin;
-雪隠	settin;
+#雪隠	settin;
 摂津	settsu;
 切点	setten;
 節点	setten;
@@ -25952,7 +25953,7 @@ columns:
 出津	dezu;
 出瀬	deze;
 出路	decchi;
-出路	detti;
+#出路	detti;
 出ぱ	deq; pa,
 出ぱ	dep;pa,
 出歯	deppa;
@@ -26593,7 +26594,7 @@ columns:
 訛っ	nama; q,
 鈍っ	nama; q,
 生白	namacchiro;
-生白	namattiro;
+#生白	namattiro;
 訛ら	nama; ra,
 鈍ら	nama; ra,
 訛り	nama; ri,
@@ -27899,7 +27900,7 @@ columns:
 必須	hitsu;
 筆端	hittan;
 筆致	hicchi;
-筆致	hitti;
+#筆致	hitti;
 必着	hicchaku;
 必中	hicchuu;
 筆誅	hicchuu;
@@ -28446,7 +28447,7 @@ columns:
 隔た	heda; ta,
 減っ	he; q,
 辺地	hecchi;
-辺地	hetti;
+#辺地	hetti;
 諂い	hetsura; i,
 諂う	hetsura; u,
 諂っ	hetsura; q,
@@ -28503,7 +28504,7 @@ columns:
 別宅	bettaku;
 別注	becchuu;
 別珍	becchin;
-別珍	bettin;
+#別珍	bettin;
 別井	bettsui;
 別邸	bettei;
 別天	betten;
@@ -28561,6 +28562,8 @@ columns:
 放し	hoka; shi,
 放す	hoka; su,
 祝ひ	hog;ai,
+祝ひ	hogai;
+祝ひ	hoka; hi,
 保喜	hoki;
 補記	hoki;
 反古	hogu;
@@ -28642,7 +28645,7 @@ columns:
 払田	hotta;
 法体	hottai;
 発地	hocchi;
-発地	hotti;
+#発地	hotti;
 堀津	hottsu;
 法度	hotto;
 発戸	hotto;
@@ -30268,10 +30271,10 @@ columns:
 止せ	yo; se,
 余瀬	yoze;
 止そ	yo; so,
-装お	yos;o,
 装い	yoso; i,
 装う	yoso; u,
 装え	yoso; e,
+#装お	yos; o,
 装お	yoso; o,
 粧い	yosoo; i,
 装い	yosoo; i,
@@ -30442,7 +30445,7 @@ columns:
 拉し	raq; shi,
 拉し	ras;shi,
 拉致	racchi;
-拉致	ratti;
+#拉致	ratti;
 喇叭	rappa;
 騾馬	raba;
 裸婦	rafu;
@@ -30863,7 +30866,7 @@ columns:
 撮も	tsuma; mo,
 抓り	tsume; ri,
 丁稚	decchi;
-丁稚	detti;
+#丁稚	detti;
 蕩け	toro; ke,
 吃っ	domo; q,
 吃り	domo; ri,
@@ -31810,7 +31813,7 @@ columns:
 画期	kakki;
 割球	kakkyuu;
 勝連	kacchin;
-勝連	kattin;
+#勝連	kattin;
 甲藤	kattou;
 克平	kappei;
 香津	katsu;
@@ -32255,7 +32258,7 @@ columns:
 黒鍵	kokken;
 国公	kokkou;
 此方	kocchi;
-此方	kotti;
+#此方	kotti;
 骨頭	kottou;
 骨片	koppen;
 小出	kode;
@@ -33133,8 +33136,10 @@ columns:
 痙る	tsu; ru,
 痙れ	tsu; re,
 対い	tsurea; i,
-汀間	tima;
-照屋	ti-ra;
+#汀間	tima;
+汀間	chima;
+#照屋	ti-ra;
+照屋	chi-ra;
 泰吾	teo;
 摘花	tekka;
 鉄塊	tekkai;
@@ -33801,7 +33806,7 @@ columns:
 別解	bekkai;
 戸次	bekki;
 別置	becchi;
-別置	betti;
+#別置	betti;
 別役	becchaku;
 別添	betten;
 別當	bettou;
@@ -33838,7 +33843,7 @@ columns:
 欲す	hoq; su,
 欲す	hos;su,
 堀地	hocchi;
-堀地	hotti;
+#堀地	hotti;
 熱り	hotobo; ri,
 辺り	hoto; ri,
 保保	hoho;
@@ -35427,6 +35432,7 @@ columns:
 嫌々ながら	iyaiya; na, ga, ra,
 いけ図々しい	i, ke, zuuzuu; shi, i,
 正々堂々たる	seiseidoudou; ta, ru,
+菜々子	nanako;
 ##### 々字發音補完結束 #####
 ##### 新增詞句發音 #####
 佐佐木	sasaki;
@@ -35442,7 +35448,7 @@ columns:
 和久井	wa, kui;
 松嶋	matsushima;
 ##### 日語詞庫(附假名)結束 #####
-#######@ 202102新增補充比對 japanese.jmdict.dict.yaml 開始 #######
+#######@ 202102新增補充比對詞彙 japanese.jmdict.dict.yaml 開始 #######
 均一化	kinitsuka;
 靴一足	kutsuissoku;
 第一関節	daiichikansetsu;
@@ -37334,7 +37340,7 @@ columns:
 書出し	kakida; shi,
 書送る	kakioku; ru,
 書抜く	kakinu; ku,
-女狂い	onnagurui,
+女狂い	onnaguru; i,
 女好き	onnazu; ki,
 女誑し	onnatara; shi,
 女垂し	onnatara; shi,
@@ -38037,7 +38043,7 @@ columns:
 半乾き	hankawa; ki,
 半眼で	hangan; de,
 半殺し	hangoro; shi,
-半煮え	hannie,
+半煮え	hanni; e,
 半焼け	hanya; ke,
 半切れ	hanki; re,
 半張り	hanba; ri,
@@ -38193,7 +38199,7 @@ columns:
 本通り	hondoo; ri,
 本読み	honyo; mi,
 本曇り	hongumo; ri,
-本縫い	honnui,
+本縫い	honnu; i,
 盆祭り	bonmatsu; ri,
 盆暮れ	bonku; re,
 盆踊り	bonodo; ri,
@@ -40021,7 +40027,7 @@ columns:
 女振り	onnabu; ri,
 女殺し	onnagoro; shi,
 女盛り	onnazaka; ri,
-女嫌い	onnagirai,
+女嫌い	onnagira; i,
 若向き	wakamu; ki,
 若作り	wakazuku; ri,
 若禿げ	wakaha; ge,
@@ -40424,7 +40430,7 @@ columns:
 籠抜け	kagonu; ke,
 籠脱け	kagonu; ke,
 陸続き	rikutsuzu; ki,
-詮無い	sennai,
+詮無い	senna; i,
 代替り	daigawa; ri,
 代変り	daigawa; ri,
 袋綴じ	fukuroto; ji,
@@ -42198,7 +42204,7 @@ columns:
 非道く	hido; ku,
 磯臭い	isokusai,
 男臭い	otokokusai,
-女臭い	onnakusai,
+女臭い	onnakusa; i,
 血臭い	chikusai,
 言諭す	iisato; su,
 鬼殺し	onikoro; shi,
@@ -77247,6 +77253,7 @@ columns:
 大福	daifuku;
 第五	daigo;
 大蛇	daija;
+#大蛇	oroti;
 大蛇	orochi;
 大尽	daijin;
 大吉	daikichi;
@@ -134156,8 +134163,8 @@ columns:
 対流圏界面	tairyuukenkaimen;
 和地関	bachikan;
 和地関	vachikan;
-和地関	batikan;
-和地関	vatikan;
+#和地関	batikan;
+#和地関	vatikan;
 腿口類	taikourui;
 腺房	senbou;
 腹腔鏡検査	fukukuukyoukensa;
@@ -137513,8 +137520,10 @@ columns:
 正値性	seichisei;
 厚司	atsushi;
 厚子	atsushi;
-厚司	attushi;
-厚子	attushi;
+#厚司	attushi;
+厚司	attsushi;
+#厚子	attushi;
+厚子	attsushi;
 生馬	ikema;
 牛皮消	ikema;
 消滅危機言語	shoumetsukikigengo;
@@ -148708,7 +148717,7 @@ columns:
 下げ幕	sa; ge, maku;
 下げ翼	sa; ge, yoku;
 下し薬	kuda; shi, gusuri;
-下っぱ	shita ppa,
+下っぱ	shita; ppa,
 下っ腹	shita; p,para;
 下っ腹	shita; q, para;
 下の句	shimo; no, ku;
@@ -149169,7 +149178,7 @@ columns:
 固より	moto; yo, ri,
 素より	moto; yo, ri,
 原っぱ	hara; ppa,
-厳つい	ikatsu i,
+厳つい	ika; tsu, i,
 酷しい	kibi; shi, i,
 表わす	ara; wa, su,
 現わす	ara; wa, su,
@@ -149177,7 +149186,7 @@ columns:
 現し世	utsu; shi, yo;
 言い種	i; i, gusa;
 謂わば	i; wa, ba,
-言わ猿	i; wa,zaru;
+言わ猿	i; wa, zaru;
 言づて	koto; zu, te,
 こと霊	ko, to, dama;
 古びる	furu; bi, ru,
@@ -149203,8 +149212,8 @@ columns:
 ご座る	go, za; ru,
 お出で	o, i; de,
 おみ籤	o, mikuji;
-お弾き	o, haji ki,
-お釣り	o, tsu ri,
+お弾き	o, haji; ki,
+お釣り	o, tsu; ri,
 語り口	kata; ri, kuchi;
 語り手	kata; ri, te;
 混える	maji; e, ru,
@@ -149645,7 +149654,7 @@ columns:
 女の人	onna; no, hito;
 序の口	jo; no, kuchi;
 序ノ口	jo; no. kuchi;
-徐ろに	omomuro ni,
+徐ろに	omomu; ro, ni,
 除いて	nozo; i, te,
 傷もの	kizu; mo, no,
 勝ち味	ka; chi, mi;
@@ -149728,7 +149737,7 @@ columns:
 乗り馬	no; ri, uma;
 蒸かす	fu; ka, su,
 蒸ける	fu; ke, ru,
-飾り気	kaza; ri,ke;
+飾り気	kaza; ri, ke;
 飾り皿	kaza; ri, zara;
 織り糸	o; ri, ito;
 織り機	o; ri, ki;
@@ -150193,8 +150202,2690 @@ columns:
 番い目	tsuga; i, me;
 湧かす	wa; ka, su,
 涌かす	wa; ka, su,
-####### 202102新增補充比對 japanese.jmdict.dict.yaml 結束 #######
-#######@ 202102新增日語符號類 開始 #######
+赤チン	aka; chi. n.
+赤プリ	aka; pu. ri.
+赤っ恥	aka; p,paji;
+赤っ恥	aka; q, paji;
+赤かぶ	aka; ka, bu,
+赤カブ	aka; ka. bu.
+切ない	setsu; na, i,
+切らす	ki; ra, su,
+切り火	ki; ri, bi;
+鑽り火	ki; ri, bi;
+鑚り火	ki; ri, bi;
+切り花	ki; ri, bana;
+切り岸	ki; ri, gishi;
+切り屑	ki; ri, kuzu;
+切り戸	ki; ri, do;
+切り口	ki; ri, kuchi;
+截り口	ki; ri, kuchi;
+切り杭	ki; ri, kui;
+切り子	ki; ri, ko;
+切り籠	ki; ri, ko;
+切り枝	ki; ri, eda;
+切り紙	ki; ri, kami;
+切り紙	ki; ri, gami;
+切り手	ki; ri, te;
+切り場	ki; ri, ba;
+切り石	ki; ri, ishi;
+切り窓	ki; ri, mado;
+切り炭	ki; ri, zumi;
+切り端	ki; ri, hashi;
+切り賃	ki; ri, chin;
+切り釘	ki; ri, kugi;
+切り得	ki; ri, doku;
+切り縄	ki; ri, nawa;
+切り髪	ki; ri, gami;
+切り幣	ki; ri, nusa;
+切り方	ki; ri, kata;
+切れ屋	ki; re, ya;
+切れ間	ki; re, ma;
+切れ屑	ki; re, kuzu;
+切れ端	ki; re, hashi;
+切り羽	ki; ri, ha;
+切り端	ki; ri, ha;
+接する	ses;su, ru,
+接する	seq; su, ru,
+せっ生	se, s,sei;
+せっ生	se, q, sei;
+折から	ori; ka, ra,
+折り柄	o; ri, kara;
+折り柄	o; ri, gara;
+折も折	ori; mo, ori;
+折れ目	o; re, me;
+設える	shitsura; e, ru,
+節する	ses;su, ru,
+節する	seq; su, ru,
+切らず	ki; ra, zu,
+雪どけ	yuki; do, ke,
+断える	ta; e, ru,
+舌うち	shita; u, chi,
+先つ祖	saki; tsu, oya;
+先の世	saki; no, yo;
+先の祖	saki; no, oya;
+先の日	saki; no, hi;
+先どり	saki; do, ri,
+先だつ	saki; da, tsu,
+占めた	shi; me, ta,
+尖った	toga; tta,
+尖った	tonga; tta,
+尖がる	to; ga, ru,
+尖がる	ton; ga, ru,
+沁みる	shi; mi, ru,
+滲みる	shi; mi, ru,
+浸みる	shi; mi, ru,
+泌みる	shi; mi, ru,
+染みる	ji; mi, ru,
+潜める	hiso; me, ru,
+濳める	hiso; me, ru,
+潜り戸	kugu; ri, do;
+煎じる	sen; ji, ru,
+煎じ薬	sen; ji, gusuri;
+炒り卵	i; ri, tamago;
+煎り卵	i; ri, tamago;
+いり卵	i, ri, tamago;
+煽てる	oda; te, ru,
+つじ風	tsu, ji, kaze;
+閃かす	hirame; ka, su,
+せん光	se, n, kou;
+彩やか	aza; ya, ka,
+前の世	mae; no, yo;
+前かけ	mae; ka, ke,
+前ぶれ	mae; bu, re,
+前だれ	mae; da, re,
+然るに	shika; ru, ni,
+而るに	shika; ru, ni,
+真っ当	ma; t,tou;
+真っ当	ma; q, tou;
+狙い所	nera; i, dokoro;
+あら筋	a, ra, suji;
+組み方	ku; mi, kata;
+ふた子	fu, ta, go;
+そう氷	so, u, hyou;
+奏でる	kanad; e, ru,
+挿し木	sa; shi, ki;
+さし木	sa, shi, ki;
+掻き氷	ka; ki, goori;
+欠き氷	ka; ki, goori;
+カキ氷	ka. ki. goori;
+そう痒	so, u, you;
+早めに	haya; me, ni,
+速めに	haya; me, ni,
+巣くう	su; ku, u,
+やり玉	ya, ri, dama;
+ヤリ玉	ya. ri. dama;
+争い事	araso; i, goto;
+合い席	a; i, seki;
+相づち	ai; zu, chi,
+合づち	ai; zu, chi,
+窓ごし	mado; go, shi,
+そう身	so, u, mi;
+そう身	so, u, shin;
+草の根	kusa; no, ne;
+走り書	hashi; ri, gaki;
+送り火	oku; ri, bi;
+送り穴	oku; ri, ana;
+送り先	oku; ri, saki;
+送り狼	oku; ri, ookami;
+騒がす	sawa; ga, su,
+騒めく	zawa; me, ku,
+増やし	fu; ya, shi,
+贈り主	oku; ri, nushi;
+側める	soba; me, ru,
+即する	soku; su, ru,
+則する	soku; su, ru,
+息つぎ	iki; tsu, gi,
+むす子	mu, suko;
+足の甲	ashi; no, kou;
+足の指	ashi; no, yubi;
+足どり	ashi; do, ri,
+足ぶみ	ashi; bu, mi,
+属する	zoku; su, ru,
+続ける	tsuzu; ke, ru,
+続き柄	tsuzu; ki, gara;
+卒する	sos;su, ru,
+卒する	soq; su, ru,
+其の儘	so; no, mama;
+其の儘	so; no, manma;
+それ故	so, re, yue;
+其れ故	so; re, yue;
+揃える	soro; e, ru,
+揃え方	soro; e, kata;
+存じる	zon; ji, ru,
+損じる	son; ji, ru,
+そん色	so, n, shoku;
+他の物	hoka; no, mono;
+太った	futo; tta,
+肥った	futo; tta,
+太っ腹	futo; p,para;
+太っ腹	futo; q, para;
+太マラ	futo; ma. ra.
+堕する	da; su, ru,
+打つ手	u; tsu, te;
+打けん	da; ke, n,
+体つき	karada; tsu, ki,
+体よく	tei; yo, ku,
+たい肥	ta, i, hi;
+対して	tai; shi, te,
+懶ける	nama; ke, ru,
+怠け者	nama; ke, mono;
+懶け者	nama; ke, mono;
+替え玉	ka; e, dama;
+貸し付	ka; shi, tsuke;
+貸し家	ka; shi, ya;
+貸し屋	ka; shi, ya;
+貸し家	ka; shi, ie;
+貸し方	ka; shi, kata;
+退き時	hi; ki, doki;
+斥ける	shirizo; ke, ru,
+却ける	shirizo; ke, ru,
+退ける	no; ke, ru,
+除ける	no; ke, ru,
+退ける	do; ke, ru,
+代り役	kawa; ri, yaku;
+台なし	dai; na, shi,
+臺なし	dai; na, shi,
+大いに	oo; i,  ni,
+大きさ	oo; ki, sa,
+大きに	oo; ki, ni,
+大した	tai; shi, ta,
+大らか	oo; ra, ka,
+多らか	oo; ra, ka,
+大うそ	oo; u, so,
+大ウソ	oo; u. so.
+おが屑	o, ga, kuzu;
+大ぜい	oo; ze, i,
+大ぜい	tai; ze, i,
+大てい	tai; te, i,
+大へん	tai; he, n,
+大よそ	oo; yo, so,
+滝つぼ	taki; tsu, bo,
+託ける	kakotsu; ke, ru,
+濁り点	nigo; ri, ten;
+凧あげ	tako; a, ge,
+達する	tas;su, ru,
+達する	taq; su, ru,
+たっ成	ta, s,sei;
+たっ成	ta, q, sei;
+脱する	das;su, ru,
+脱する	daq; su, ru,
+たて琴	ta, te, goto;
+たな卸	ta, na, oroshi;
+谷あい	tani; a, i,
+たら子	ta, ra, ko;
+タラ子	ta. ra. ko;
+誰でも	dare; de, mo,
+誰それ	dare; so, re,
+単なる	tan; na, ru,
+短かい	miji; ka, i,
+耽ける	fu; ke, ru,
+胆のう	tan; no, u,
+弾き玉	haji; ki, dama;
+弾ける	haji; ke, ru,
+断り方	kotowa; ri, kata;
+断わる	koto; wa, ru,
+暖かさ	atata; ka, sa,
+段どり	dan; do, ri,
+男の児	otoko; no, ko;
+男のコ	otoko; no, ko.
+男の人	otoko; no, hito;
+値うち	ne; u, chi,
+報せる	shira; se, ru,
+知れる	shi; re, ru,
+地べた	ji; be, ta,
+恥らう	haji; ra, u,
+羞じる	ha; ji, ru,
+耻じる	ha; ji, ru,
+愧じる	ha; ji, ru,
+慙じる	ha; ji, ru,
+恥しい	hazuka; shi, i,
+羞しい	hazuka; shi, i,
+痴ほう	chi; ho, u,
+後らす	oku; ra, su,
+竹の杖	take; no, tsue;
+竹むら	taka; mu, ra,
+竹やぶ	take; ya, bu,
+茶きん	cha; ki, n,
+茶せん	cha; se, n,
+茶の間	cha; no, ma;
+茶の湯	cha; no, yu;
+ちゃ色	cha, iro;
+茶いろ	cha; i, ro,
+着こむ	ki; ko, mu,
+着やせ	ki; ya, se,
+着よい	ki; yo, i,
+中には	naka; ni, ha,
+中ごろ	naka; go, ro,
+中ほど	naka; ho, do,
+中テン	chuu; te. n.
+中テン	naka; te. n.
+中っ腹	chuu; p,para;
+中っ腹	chuu; q, para;
+中っ腹	chu; p,para;
+中っ腹	chu; q, para;
+仲よく	naka; yo, ku,
+仲よし	naka; yo, shi,
+抽せん	chuu; se, n,
+昼すぎ	hiru; su, gi,
+午すぎ	hiru; su, gi,
+昼めし	hiru; me, shi,
+虫の息	mushi; no, iki;
+酎ハイ	chuu; ha. i.
+酎ハイ	chu-; ha. i.
+著わす	ara; wa, su,
+貯める	ta; me, ru,
+弔する	chou; su, ru,
+張り紙	ha; ri, gami;
+貼り紙	ha; ri, gami;
+はり紙	ha, ri, gami;
+張り出	ha; ri, dashi;
+朝っ腹	asa; p,para;
+朝っ腹	asa; q, para;
+朝もや	asa; mo, ya,
+長い間	naga; i, aida;
+長いす	naga; i, su,
+長もち	naga; mo, chi,
+長そで	naga; so, de,
+頂き物	itada; ki, mono;
+戴き物	itada; ki, mono;
+頂だい	chou; da, i,
+すぐ側	su, gu, soba;
+直ぐ側	su; gu, soba;
+直ぐ様	su; gu, sama;
+すぐ様	su, gu, sama;
+直し物	nao; shi, mono;
+ただ中	ta, da, naka;
+追っ手	o; t,te;
+追っ手	o; q, te;
+通じて	tsuu; ji, te,
+通じる	tsuu; ji, ru,
+通り雨	too; ri, ame;
+通り道	too; ri, michi;
+通り魔	too; ri, ma;
+通り名	too; ri, na;
+浸かる	tsu; ka, ru,
+浸ける	tsu; ke, ru,
+漬け物	tsu; ke, mono;
+綴じる	to; ji, ru,
+吊るす	tsu; ru, su,
+釣り書	tsu; ri, gaki;
+釣り書	tsu; ri, sho;
+釣り鐘	tsu; ri, gane;
+吊り鐘	tsu; ri, gane;
+貞はる	sada; ha, ru,
+底なし	soko; na, shi,
+弟さん	otouto; sa, n,
+締り屋	shi; ma; ri, ya;
+緊まる	shi; ma, ru,
+締め金	shi; me, gane;
+泥んこ	doro; n, ko,
+泥レス	doro; re. su.
+ドロ沼	do. ro. numa;
+泥はね	doro; ha, ne,
+摘まみ	tsu; ma, mi,
+摘み物	tsuma; mi, mono;
+撮み物	tsuma; mi, mono;
+テキ屋	te. ki. ya;
+適する	teki; su, ru,
+天の下	ame; no, shita;
+天の原	ama; no, hara;
+天ぷら	ten; pu, ra,
+天プラ	ten; pu. ra.
+店さき	mise; sa, ki,
+添え字	so; e, ji;
+纏まり	mato; ma, ri,
+纏める	mato; me, ru,
+纏わる	matsu; wa, ru,
+転じる	ten; ji, ru,
+転ずる	ten; zu, ru,
+転ぷく	ten; pu, ku,
+点じる	ten; ji, ru,
+点ずる	ten; zu, ru,
+伝え話	tsuta; e, banashi;
+でん粉	de, n, pun;
+田んぼ	ta; n, bo,
+兎に角	to; ni, kaku;
+兎の毛	u; no, ke;
+兎も角	to; mo, kaku;
+兎や角	to; ya, kaku;
+吐きけ	ha; ki, ke,
+嘔き気	ha; ki, ke;
+塗り絵	nu; ri, e;
+ぬり絵	nu, ri, e;
+塗れる	mami; re, ru,
+塗れる	mabu; re, ru,
+徒し心	ada; shi, gokoro;
+あだ花	a, da, bana;
+渡し守	wata; shi, mori;
+渡し船	wata; shi, bune;
+渡し舟	wata; shi, bune;
+渡り者	wata; ri, mono;
+渡り鳥	wata; ri, dori;
+賭け事	ka; ke, goto;
+努めて	tsuto; me, te,
+勉めて	tsuto; me, te,
+力めて	tsuto; me, te,
+ど忘れ	do, wasu; re,
+ド忘れ	do. wasu; re,
+土のう	do; no, u,
+怒らす	ika; ra, su,
+瞋らす	ika; ra, su,
+逆しま	saka; shi, ma,
+凍てる	i; te, ru,
+凍みる	shi; mi, ru,
+凍らす	koo; ra, su,
+投じる	tou; ji, ru,
+投かん	tou; ka, n,
+投げ網	na; ge, ami;
+東の宮	haru; no, miya;
+もも色	mo, mo, iro;
+盗っ人	nusu; t,to;
+盗っ人	nusu; q, to;
+湯ぶね	yu; bu, ne,
+中たり	a; ta, ri,
+中たる	a; ta, ru,
+当て字	a; te, ji;
+あて字	a, te, ji;
+宛て字	a; te, ji;
+当て身	a; te, mi;
+当て物	a; te, mono;
+均しい	hito; shi, i,
+斉しい	hito; shi, i,
+総べる	su; be, ru,
+豆まき	mame; ma, ki,
+迯がす	ni; ga, su,
+迯げる	ni; ge, ru,
+遁れる	noga; re, ru,
+透かし	su; ka, shi,
+働き口	hatara; ki, guchi;
+働き者	hatara; ki, mono;
+働き人	hatara; ki, bito;
+働き蜂	hatara; ki, bachi;
+動じる	dou; ji, ru,
+動ずる	dou; zu, ru,
+同じ様	ona; ji, you;
+同じる	dou; ji, ru,
+同じ年	ona; ji, toshi;
+同じ年	ona; ji, doshi;
+同ずる	dou; zu, ru,
+同せい	dou; se, i,
+憬れる	akoga; re, ru,
+ほら穴	ho, ra, ana;
+道ばた	michi; ba, ta,
+匿まう	kaku; ma, u,
+囲まう	kaku; ma, u,
+特ダネ	toku; da. ne.
+禿げる	ha; ge, ru,
+毒づく	doku; zu, ku,
+読み手	yo; mi, te;
+突き指	tsu; ki, yubi;
+つき指	tsu, ki, yubi;
+突つく	tsu; tsu, ku,
+届ける	todo; ke, ru,
+届け先	todo; ke, saki;
+届け出	todo; ke, de;
+豚カツ	ton; ka. tsu.
+豚かつ	ton; ka, tsu,
+ぶた肉	bu, ta, niku;
+ブタ箱	bu. ta. bako;
+うち湯	u, chi, yu;
+なべ物	na, be, mono;
+馴じみ	na; ji, mi,
+軟こう	nan; ko, u,
+難しい	mutsuka; shi, i,
+難しさ	muzuka; shi, sa,
+二つ共	futa; tsu, tomo;
+二つ繭	futa; tsu, mayu;
+二の丸	ni; no, maru;
+二の句	ni; no, ku;
+二の次	ni; no, tsugi;
+二の膳	ni; no, zen;
+二の足	ni; no, ashi;
+二の町	ni; no, machi;
+二の舞	ni; no, mai;
+二の矢	ni; no, ya;
+二カ所	ni; ka. sho;
+#二ヶ所	nikasho;
+二ヶ所	ni; xke. sho;
+二か所	ni; ka, sho;
+#二ケ所	nikasho;
+二ケ所	ni; ke, sho;
+飛び級	to; bi, kyuu;
+二けた	futa; ke, ta,
+匂い袋	nio; i, bukuro;
+匂い油	nio; i, abura;
+匂わす	nio; wa, su,
+賑わい	nigi; wa, i,
+賑わう	nigi; wa, u,
+賑わす	nigi; wa, su,
+日の出	hi; no, de;
+日なた	hi; na, ta,
+日ごろ	hi; go, ro,
+日どり	hi; do, ri,
+日でり	hi; de, ri,
+日ぐれ	hi; gu, re,
+乳がん	nyuu; ga, n,
+うば車	u, ba, guruma;
+入り荷	i; ri, ni;
+入り波	i; ri, nami;
+入り浜	i; ri, hama;
+入り目	i; ri, me;
+入り用	i; ri, you;
+要り用	i; ri, you;
+容れる	i; re, ru,
+函れる	i; re, ru,
+入れ子	i; re, ko;
+入れ籠	i; re, ko;
+入れ毛	i; re, ge;
+入れ木	i; re, ki;
+入れ目	i; re, me;
+いか物	i, ka, mono;
+任じる	nin; ji, ru,
+任ずる	nin; zu, ru,
+委せる	maka; se, ru,
+忍び足	shino; bi, ashi;
+認める	shitata; me, ru,
+認める	mi; to; me, ru,
+濡らす	nu; ra, su,
+濡れる	nu; re, ru,
+熱する	nes;su, ru,
+熱する	neq; su, ru,
+年が年	toshi; ga, toshi;
+年の功	toshi; no, kou;
+年の市	toshi; no, ichi;
+歳の市	toshi; no, ichi;
+年の瀬	toshi; no, se;
+歳の瀬	toshi; no, se;
+年の豆	toshi; no, mame;
+年の暮	toshi; no, kure;
+年ぶり	nen; bu, ri,
+年ごろ	toshi; go, ro,
+年とる	toshi; to, ru,
+歳とる	toshi; to, ru,
+年かさ	toshi; ka, sa,
+念じる	nen; ji, ru,
+念ずる	nen; zu, ru,
+念の為	nen; no, tame;
+ねん出	ne, n, shutsu;
+粘り気	neba; ri, ke;
+能なし	nou; na, shi,
+覗き見	nozo; ki, mi;
+覗き魔	nozo; ki, ma;
+破れ目	yabu; re, me;
+破れ目	ya; re, me;
+破たん	ha; ta, n,
+ばか者	ba, ka, mono;
+バカ者	ba. ka. mono;
+ばか力	ba, ka, jikara;
+バカ力	ba. ka. jikara;
+バカ話	ba. ka. hanashi;
+ばか話	ba, ka, banashi;
+頽れる	suta; re, ru,
+排せつ	hai; se, tsu,
+背ぼね	se; bo, ne,
+背のび	se; no, bi,
+背なか	se; na, ka,
+煤ける	susu; ke, ru,
+ばい煙	ba, i, en;
+売り家	u; ri, ya;
+売り家	u; ri, ie;
+売り物	u; ri, mono;
+這い松	ha; i, matsu;
+剥ける	mu; ke, ru,
+剥げる	ha; ge, ru,
+剥し暦	haga; shi, goyomi;
+剝し暦	haga; shi, goyomi;
+すき焼	su, ki, yaki;
+剥き身	su; ki, mi;
+すき身	su, ki, mi;
+剝き身	su; ki, mi;
+むき身	mu, ki, mi;
+剥き身	mu; ki, mi;
+剝き身	mu; ki, mi;
+はく製	ha, ku, sei;
+はく離	ha, ku, ri;
+泊り客	toma; ri, kyaku;
+泊り賃	toma; ri, chin;
+白ける	shira; ke, ru,
+白バイ	shiro; ba. i.
+薄ばか	usu; ba, ka,
+ばく然	ba, ku, zen;
+縛り首	shiba; ri, kubi;
+ばく大	ba, ku, dai;
+麦の秋	mugi; no, aki;
+はだ色	ha, da, iro;
+八つ橋	ya; tsu, hashi;
+八ツ橋	ya; tsu. hashi;
+八ッ橋	ya; tsu. hashi;
+八つ口	ya; tsu, kuchi;
+八の字	hachi; no, ji;
+発する	has;su, ru,
+発する	haq; su, ru,
+発ガン	hatsu; ga. n.
+#はっ着	ha, tchaku;
+はっ着	ha, c,chaku;
+はっ着	ha, q, chaku;
+罰する	bas;su, ru,
+罰する	baq; su, ru,
+吐かす	nu; ka, su,
+脱ける	nu; ke, ru,
+抜け殻	nu; ke, gara;
+脱け殻	nu; ke, gara;
+抜てき	bat;te, ki,
+抜てき	baq; te, ki,
+伴なう	tomo; na, u,
+判じる	han; ji, ru,
+判じ絵	han; ji, e;
+判じ物	han; ji, mono;
+半か月	han; ka, getsu;
+半か年	han; ka, nen;
+半そで	han; so, de,
+反する	han; su, ru,
+叛する	han; su, ru,
+反り形	so; ri, kata;
+反り身	so; ri, mi;
+反すう	han; su, u,
+はん濫	ha, n, ran;
+氾らん	han; ra, n,
+あぜ道	a, ze, michi;
+煩さい	uru; sa, i,
+飯ごう	han; go, u,
+蛮カラ	ban; ka. ra.
+蛮から	ban; ka, ra,
+賤しい	iya; shi, i,
+賤しむ	iya; shi, mu,
+卑わい	hi; wa, i,
+哀しい	kana; shi, i,
+哀しむ	kana; shi, mu,
+比する	hi; su, ru,
+較べる	kura; be, ru,
+競べる	kura; be, ru,
+疲らす	tsuka; ra, su,
+皮ふ科	hi; fu, ka;
+皮フ科	hi; fu. ka;
+ヒフ科	hi. fuka;
+秘め事	hi; me, goto;
+秘けつ	hi; ke, tsu,
+被せる	kabu; se, ru,
+被ばく	hi; ba, ku,
+鼻っ柱	hana; p,pashira;
+鼻っ柱	hana; q, pashira;
+鼻すじ	hana; su, ji,
+はな水	ha, na, mizu;
+鼻ひげ	hana; hi, ge,
+鼻づら	hana; zu, ra,
+髭そり	hige; so, ri,
+ひし形	hi, shi, gata;
+必ずや	kanara; zu, ya,
+筆ペン	fude; pe. n.
+ひっ迫	hi, p,paku;
+ひっ迫	hi, q, paku;
+姫さま	hime; sa, ma,
+ユリ根	yu. ri. ne;
+氷のう	hyou; no, u,
+表する	hyou; su, ru,
+表ざた	omote; za, ta,
+評する	hyou; su, ru,
+品プリ	shina; pu. ri.
+ひん死	hi, n, shi;
+ふて寝	fu, te, ne;
+付する	fu; su, ru,
+附する	fu; su, ru,
+付き者	tsu; ki, mono;
+付き馬	tsu; ki, uma;
+付き物	tsu; kimono;
+つき物	tsu; kimono;
+附ける	tsu; ke, ru,
+付け火	tsu; ke, bi;
+付け根	tsu; ke, ne;
+つけ根	tsu; ke, ne;
+附け根	tsu; ke, ne;
+付け札	tsu; ke, fuda;
+付け紙	tsu; ke, gami;
+付け所	tsu; ke, dokoro;
+着け所	tsu; ke, dokoro;
+付け値	tsu; ke, ne;
+付け髪	tsu; ke, gami;
+付け鼻	tsu; ke, bana;
+付け髭	tsu; ke, hige;
+付け紐	tsu; ke, himo;
+付け文	tsu; ke, bumi;
+付け目	tsu; ke, me;
+付け薬	tsu; ke, gusuri;
+付け髷	tsu; ke, mage;
+夫の君	se; no, kimi;
+怖がる	kowa; ga, ru,
+恐がる	kowa; ga, ru,
+怖じる	o; ji, ru,
+怖じ気	o; ji, ke;
+怖じけ	o; ji, ke,
+浮べる	uka; be, ru,
+泛べる	uka; be, ru,
+泛かぶ	u; ka, bu,
+うわ気	u, wa, ki;
+父の日	chichi; no, hi;
+腐れ縁	kusa; re, en;
+負える	o; e, ru,
+敗ける	ma; ke, ru,
+負け犬	ma; ke, inu;
+負け戦	ma; ke, ikusa;
+負んぶ	o; n, bu,
+撫でる	na; de, ru,
+風しん	fuu; shi, n,
+風りん	fuu; ri, n,
+伏する	fuku; su, ru,
+伏して	fu; shi, te,
+伏せ籠	fu; se, kago;
+幅とび	haba; to, bi,
+腹ばい	hara; ba, i,
+鎔かす	wa; ka, su,
+物の怪	mono; no, ke;
+物の気	mono; no, ke;
+物ごと	mono; go, to,
+物まね	mono; ma, ne,
+分かず	wa; ka, zu,
+分かり	wa; ka, ri,
+分れ目	waka; re, me;
+別れ目	waka; re, me;
+別ける	wa; ke, ru,
+分け目	wa; ke, me;
+ぶ厚い	bu, atsu; i,
+ブ厚い	bu. atsu; i,
+分べん	bun; be, n,
+焚き火	ta; ki, bi;
+たき火	ta, ki, bi;
+奮って	furu; tte,
+粉じん	fun; ji, n,
+ふん尿	fu, n, nyou;
+ふん便	fu, n, ben;
+肥だめ	koe; da, me,
+肥え溜	ko; e, dame;
+聞かす	ki; ka, su,
+聞か猿	ki; ka, zaru;
+聞き手	ki; ki, te;
+聴き手	ki; ki, te;
+合せて	awa; se, te,
+併せて	awa; se, te,
+ピン音	pi. n. in;
+平たい	hira; ta, i,
+扁たい	hira; ta, i,
+平らか	tai; ra, ka,
+平らぐ	tai; ra, gu,
+平たん	hei; ta, n,
+双べる	nara; be, ru,
+並べ方	nara; be, kata;
+並いる	nami; i, ru,
+並み型	na; mi, gata;
+並み幅	na; mi, haba;
+並めて	na; me, te,
+米ドル	bei; do. ru.
+へき地	he, ki, chi;
+壁の花	kabe; no, hana;
+壁かけ	kabe; ka, ke,
+別して	bes;shi, te,
+別して	beq; shi, te,
+別けて	wa; ke, te,
+分けて	wa; ke, te,
+別れ路	waka; re, ji;
+別なく	betsu; na, ku,
+変じる	hen; ji, ru,
+変ずる	hen; zu, ru,
+変わり	ka; wa, ri,
+変り者	kawa; ri, mono;
+変り目	kawa; ri, me;
+替り目	kawa; ri, me;
+変ぼう	hen; bo, u,
+変てこ	hen; te, ko,
+片すみ	kata; su, mi,
+片づく	kata; zu, ku,
+片づけ	kata; zu, ke,
+かた目	ka, ta, me;
+網かけ	ami; ka, ke,
+編み笠	a; mi, gasa;
+編み機	a; mi, ki;
+編み針	a; mi, bari;
+編み棒	a; mi, bou;
+編み目	a; mi, me;
+網み目	a; mi, me;
+編さん	hen; sa, n,
+便じる	ben; ji, ru,
+便ずる	ben; zu, ru,
+弁える	wakima; e, ru,
+辨える	wakima; e, ru,
+弁じる	ben; ji, ru,
+弁ずる	ben; zu, ru,
+ベン髪	be. n. patsu;
+保する	ho; su, ru,
+保する	hou; su, ru,
+掴まる	tsuka; ma, ru,
+捉まる	tsuka; ma, ru,
+摑まる	tsuka; ma, ru,
+捕り縄	to; ri, nawa;
+捕そく	ho; so, ku,
+歩み方	ayu; mi, kata;
+歩こう	ho; ko, u,
+眩れる	ku; re, ru,
+暗れる	ku; re, ru,
+昏れる	ku; re, ru,
+母の日	haha; no, hi;
+包み物	tsutsu; mi, mono;
+包み釦	tsutsu; mi, botan;
+包める	kuru; me, ru,
+呆れる	aki; re, ru,
+惘れる	aki; re, ru,
+あっ気	a, k,ke;
+あっ気	a, q, ke;
+ぼう然	bo, u, zen;
+#ぼう然	bo, -zen;
+酬いる	muku; i, ru,
+報じる	hou; ji, ru,
+報ずる	hou; zu, ru,
+奉じる	hou; ji, ru,
+奉ずる	hou; zu, ru,
+宝くじ	takara; ku, ji,
+宝クジ	takara; ku, ji.
+捧げる	sasa; ge, ru,
+献げる	sasa; ge, ru,
+泡だつ	awa; da, tsu,
+縫い物	nu; i, mono;
+萌やし	mo; ya, shi,
+萌え木	mo; e, gi;
+蜂の巣	hachi; no, su;
+はち蜜	ha, chi, mitsu;
+褒め詞	ho; me, kotoba;
+厭かす	a; ka, su,
+飽かず	a; ka, zu,
+飽く迄	a; ku, made;
+亡き後	na; ki, ato;
+亡き魂	na; ki, tama;
+亡き者	na; ki, mono;
+無き者	na; ki, mono;
+亡き親	na; ki, oya;
+亡き人	na; ki, hito;
+無しで	na; shi, de,
+無しに	na; shi, ni,
+傍らに	katawa; ra, ni,
+わき見	wa, ki, mi;
+坊さん	bou; sa, n,
+暴れ者	aba; re, mono;
+暴れ馬	aba; re, uma;
+棒きれ	bou; ki, re,
+紡ぎ歌	tsumu; gi, uta;
+紡ぎ唄	tsumu; gi, uta;
+膨らみ	fuku; ra, mi,
+脹らみ	fuku; ra, mi,
+脹らむ	fuku; ra, mu,
+ぼう張	bo, u, chou;
+防じん	bou; ji, n,
+頬っぺ	ho; p,pe,
+頬っぺ	ho; q, pe,
+頬っ辺	ho; p,peta;
+頬っ辺	ho; q, peta;
+頰っ辺	ho; p,peta;
+頰っ辺	ho; q, peta;
+ほお紅	ho, o, beni;
+北の方	kita; no, kata;
+僕たち	boku; ta, chi,
+墨つぼ	sumi; tsu, bo,
+朴の木	hoo; no, ki;
+朴の木	hou; no, ki;
+朴とつ	boku; to,  tsu,
+ぼっ発	bo, p,patsu;
+ぼっ発	bo, q, patsu;
+殆んど	hoto; n, do,
+堀り鼠	ho; ri, nezumi;
+磨き砂	miga; ki, zuna;
+磨き紙	miga; ki, gami;
+磨き粉	miga; ki, ko;
+とぎ汁	to, gi, jiru;
+磨ぎ汁	to; gi, jiru;
+とぎ汁	to, gi, shiru;
+磨ぎ汁	to; gi, shiru;
+魔よけ	ma; yo, ke,
+麻しん	ma; shi, n,
+埋める	uzu; me, ru,
+填める	uzu; me, ru,
+妹さん	imouto; sa, n,
+幕あい	maku; a, i,
+又の日	mata; no, hi;
+又の名	mata; no, na;
+又もや	mata; mo, ya,
+又ない	mata; na, i,
+また木	ma, ta, gi;
+#まっ茶	ma, tcha;
+まっ茶	ma, c,cha;
+まっ茶	ma, q, cha;
+末つ方	sue; tsu, kata;
+末の世	sue; no, yo;
+末の末	sue; no, sue;
+充たす	mi; ta, su,
+満ち干	mi; chi, hi;
+満タン	man; ta. n.
+満きつ	man; ki, tsu,
+満ち潮	mi; chi, shio;
+まん延	ma, n, en;
+味つけ	aji; tsu, ke,
+味の素	aji; no, moto;
+味わい	aji; wa, i,
+みそ汁	mi, so, shiru;
+未だし	ima; da, shi,
+今だに	ima; da, ni,
+眠たい	nemu; ta, i,
+睡たい	nemu; ta, i,
+眠たい	nebu; ta, i,
+睡たい	nebu; ta, i,
+眠り薬	nemu; ri, gusuri;
+夢みる	yume; mi, ru,
+無くす	na; ku, su,
+失くす	na; ku, su,
+むだ骨	mu, da, bone;
+むだ足	mu, da, ashi;
+むだ話	mu, da, banashi;
+ほこ先	ho, ko, saki;
+娘さん	musume; sa, n,
+めい福	me, i, fuku;
+名のり	na; no, ri,
+名のる	na; no, ru,
+名まえ	na; ma, e,
+命じる	mei; ji, ru,
+命ずる	mei; zu, ru,
+命の綱	inochi; no, tsuna;
+命がけ	inochi; ga, ke,
+命とり	inochi; to, ri,
+明け方	a; ke, gata;
+顕らか	aki; ra, ka,
+明らむ	aka; ra, mu,
+明るい	aka; ru, i,
+明るさ	aka; ru, sa,
+迷い子	mayo; i, go;
+迷わす	mayo; wa, su,
+鳴き声	na; ki, goe;
+啼き声	na; ki, goe;
+免じて	men; ji, te,
+免じる	men; ji, ru,
+免ずる	men; zu, ru,
+綿あめ	wata; a, me,
+面する	men; su, ru,
+毛ガニ	ke; ga. ni.
+毛がに	ke; ga, ni,
+毛あな	ke; a, na,
+儲かる	mou; ka, ru,
+儲ける	mou; ke, ru,
+木の芽	ki; no, me;
+木の芽	ko; no, me;
+木の実	ko; no, mi;
+木のみ	ko; no, mi,
+木の実	ki; no, mi;
+木のみ	ki; no, mi,
+木の葉	ko; no, ha;
+木の葉	ki; no, ha;
+木かげ	ko; ka, ge,
+黙とう	moku; to, u,
+目ざす	me; za, su,
+目やに	me; ya, ni,
+目ぼし	me; bo, shi,
+目あて	me; a, te,
+目つき	me; tsu, ki,
+眼つき	me; tsu, ki,
+目だつ	me; da, tsu,
+尤なる	yuu; na, ru,
+戻り道	modo; ri, michi;
+悶える	moda; e, ru,
+夜ごと	yo; go, to,
+夜なべ	yo; na, be,
+夜なか	yo; na, ka,
+のら猫	no, ra, neko;
+野ばら	no; ba, ra,
+野バラ	no; ba, ra.
+役だつ	yaku; da, tsu,
+やぶ蛇	ya, bu, hebi;
+ただ今	ta, da, ima;
+優しげ	yasa; shi, ge,
+優れた	sugu; re, ta,
+勝れる	sugu; re, ru,
+傑れる	sugu; re, ru,
+やさ男	ya, sa, otoko;
+やさ男	ya, sa, o;
+勇み足	isa; mi, ashi;
+勇み肌	isa; mi, hada;
+友だち	tomo; da, chi,
+宥める	nada; me, ru,
+憂い顔	ure; i, gao;
+愁い顔	ure; i, gao;
+有する	yuu; su, ru,
+有り様	a; ri, sama;
+あり様	a, ri, sama;
+有り様	a; ri, you;
+あり様	a, ri, you;
+誘い水	saso; i, mizu;
+遊び場	aso; bi, ba;
+遊び心	aso; bi, gokoro;
+おん鳥	o, n, dori;
+おん鶏	o, n, dori;
+夕やみ	yuu; ya, mi,
+夕ぐれ	yuu; gu, re,
+夕がた	yuu; ga, ta,
+兼ねて	ka; ne, te,
+余し物	ama; shi, mono;
+余の儀	yo; no, gi;
+余り物	ama; ri, mono;
+よそ見	yo, so, mi;
+よそ事	yo, so, goto;
+よそ者	yo, so, mono;
+よそ目	yo, so, me;
+与え主	ata; e, nushi;
+与する	kumi; su, ru,
+組する	kumi; su, ru,
+よた話	yo, ta, banashi;
+預かり	azu; ka, ri,
+預け金	azu; ke, kin;
+傭い兵	yato; i, hei;
+幼な子	osa; na, go;
+た易い	ta, yasu; i,
+揚げ場	a; ge, ba;
+あげ物	a, ge, mono;
+揚げ幕	a; ge, maku;
+揺らす	yu; ra, su,
+擁する	you; su, ru,
+様みろ	zama; mi, ro,
+融かす	to; ka, su,
+熔かす	to; ka, su,
+鎔かす	to; ka, su,
+融ける	to; ke, ru,
+熔ける	to; ke, ru,
+鎔ける	to; ke, ru,
+かま元	ka, ma, moto;
+葉かげ	ha; ka, ge,
+要する	you; su, ru,
+要らぬ	i; ra, nu,
+踊り子	odo; ri, ko;
+遥かに	haru; ka, ni,
+遙かに	haru; ka, ni,
+陽の皮	you; no, kawa;
+養い親	yashina; i, oya;
+欲ばり	yoku; ba, ri,
+ヨウ素	yo. u. so;
+よう素	yo, u, so;
+ネジ山	ne. ji. yama;
+ねじ山	ne, ji, yama;
+来る日	ku; ru, hi;
+くる日	ku, ru, hi;
+来る年	ku; ru, toshi;
+来がけ	ki; ga, ke,
+来たて	ki; ta, te,
+堕ちる	o; chi, ru,
+墜ちる	o; chi, ru,
+落ち度	o; chi, do;
+落し穴	oto; shi, ana;
+紊れる	mida; re, ru,
+乱れ髪	mida; re, gami;
+らん用	ra, n, you;
+卵の殻	tamago; no, kara;
+あい色	a, i, iro;
+梨の礫	nashi; no, tsubute;
+立ち葵	ta; chi, aoi;
+立ち方	ta; chi, kata;
+掠める	kasu; me, ru,
+掠れる	kasu; re, ru,
+擦れる	kasu; re, ru,
+流れ者	naga; re, mono;
+流れ図	naga; re, zu;
+流れ星	naga; re, boshi;
+流れ弾	naga; re, dama;
+流れ玉	naga; re, dama;
+溜まり	ta; ma, ri,
+溜める	ta; me, ru,
+溜まる	ta; ma, ru,
+溜め池	ta; me, ike;
+ため池	ta, meike;
+竜の口	tatsu; no, kuchi;
+たび人	ta, bi, bito;
+旅だつ	tabi; da, tsu,
+凌ぎ場	shino; gi, ba;
+力なげ	chikara; na, ge,
+力こぶ	chikara; ko, bu,
+緑の日	midori; no, hi;
+輪ゴム	wa; go. mu.
+輪かく	rin; ka, ku,
+例えば	tato; e, ba,
+冷え性	hi; e, shou;
+冷え症	hi; e, shou;
+冷え腹	hi; e, bara;
+冷たい	tsume; ta, i,
+冷たい	tsube; ta, i,
+冷かす	hiya; ka, su,
+冷や水	hi; ya, mizu;
+冷や飯	hi; ya, meshi;
+零れる	kobo; re, ru,
+溢れる	kobo; re, ru,
+ゼロ戦	ze. ro. sen;
+割ける	sa; ke, ru,
+裂け目	sa; ke, me;
+裂れ痔	ki; re, ji;
+切れ痔	ki; re, ji;
+れん乳	re, n, nyuu;
+列なる	tsura; na, ru,
+列ねる	tsura; ne, ru,
+連れて	tsu; re, te,
+連れ子	tsu; re, ko;
+連ぱつ	ren; pa, tsu,
+労わる	ita; wa, ru,
+弄する	rou; su, ru,
+漏えい	rou; e, i,
+化ける	fu; ke, ru,
+聾する	rou; su, ru,
+ろう者	ro, u, sha;
+六つ子	mu; tsu, go;
+論じる	ron; ji, ru,
+論ずる	ron; zu, ru,
+和とじ	wa; to, ji,
+話し手	hana; shi, te;
+話せる	hana; se, ru,
+わい曲	wa, i, kyoku;
+わき腹	wa, ki, bara;
+わき役	wa, ki, yaku;
+惑わす	mado; wa, su,
+詫び言	wa; bi, goto;
+わび言	wa, bi, goto;
+詫び状	wa; bi, jou;
+わら靴	wa, ra, gutsu;
+藁ぐつ	wara; gu, tsu,
+わら沓	wa, ra, gutsu;
+わら紙	wa, ra, gami;
+藁ぶき	wara; bu, ki,
+わん曲	wa, n, kyoku;
+腕きき	ude; ki, ki,
+丼ぶり	don; bu, ri,
+丼もの	donburi; mo, no,
+仄めく	hono; me, ku,
+侘びる	wa; bi, ru,
+佗びる	wa; bi, ru,
+侘び言	wa; bi, koto;
+佗び寝	wa; bi, ne;
+佩びる	obi ru,
+俯ける	utsumu; ke, ru,
+ごう慢	go, u, man;
+僭する	sen; su, ru,
+えん罪	e, n, zai;
+べき乗	be, ki, jou;
+凭れる	mota; re, ru,
+靠れる	mota; re, ru,
+刳り舟	ku; ri, fune;
+刳り船	ku; ri, fune;
+刳り舟	ku; ri, bune;
+刳り船	ku; ri, bune;
+せん断	se, n, dan;
+へき開	he, ki, kai;
+咎める	toga; me, ru,
+かっ血	ka, k,ketsu;
+かっ血	ka, q, ketsu;
+ぜん息	ze, n, soku;
+ラマ教	ra. ma. kyou;
+おう吐	o, u, to;
+噎せる	mu; se, ru,
+咽せる	mu; se, ru,
+嘲けり	aza; ke, ri,
+嘲ける	aza; ke, ru,
+嘘ぶく	uso; bu, ku,
+夥しい	obitada; shi, i,
+媚びる	ko; bi, ru,
+靭やか	shina; ya, ka,
+むく犬	mu, ku, inu;
+ムク犬	mu. ku, inu;
+嵌める	ha; me, ru,
+填める	ha; me, ru,
+篏める	ha; me, ru,
+塡める	ha; me, ru,
+神なぎ	kan; na, gi,
+ほう助	ho, u, jo;
+すい星	su, i, sei;
+さ迷う	sa, mayo; u,
+忝くも	katajikena; ku, mo,
+りつ然	ri, tsu, zen;
+憑き物	tsu; ki, mono;
+いぬ年	i, nu, doshi;
+拗ける	neji; ke, ru,
+拗ねる	su; ne, ru,
+拗れる	koji; re, ru,
+拵える	koshira; e, ru,
+拵える	kosa; e, ru,
+捏ねる	ko; ne, ru,
+ねつ造	ne, tsu, zou;
+揉み手	mo; mi, de;
+もみ手	mo, mi, de;
+揉める	mo; me, ru,
+搦め手	kara; me, te;
+絡め手	kara; me, te;
+搦め手	kara; me, de;
+絡め手	kara; me, de;
+擡げる	mota; ge, ru,
+へい死	he, i, shi;
+しん酌	shi, n, shaku;
+干ばつ	kan; ba, tsu,
+暈かす	bo; ka, su,
+あい昧	a, i, mai;
+梟する	kyou; su, ru,
+こん棒	ko, n, bou;
+うつ病	u, tsu, byou;
+ウツ病	u. tsu, byou;
+かん養	ka, n, you;
+涸れる	ka; re, ru,
+炒める	ita; me, ru,
+煠める	ita; me, ru,
+炒め物	ita; me, mono;
+炒り子	i; ri, ko;
+熬り子	i; ri, ko;
+煎り子	i; ri, ko;
+さく薬	sa, ku, yaku;
+さく裂	sa, ku, retsu;
+らく印	ra, ku, in;
+煌めき	kira; me, ki,
+燻らす	kuyu; ra, su,
+薫らす	kuyu; ra, su,
+くん蒸	ku, n, jou;
+のし紙	no, shi, gami;
+のし袋	no, shi, bukuro;
+おき火	o, ki, bi;
+爛れる	tada; re, ru,
+わい談	wa, i, dan;
+痺れる	shibi; re, ru,
+痺れ感	shibi; re, kan;
+らい病	ra, i, byou;
+眩しい	mabu; shi, i,
+眩しい	mabo; shi, i,
+目まい	me; ma, i,
+まつ毛	ma, tsu, ge;
+コウ丸	ko. u. gan;
+めい想	me, i, sou;
+わい小	wa, i, shou;
+ホウ酸	ho. u. san;
+ほう酸	ho, u, san;
+ホウ素	ho. u. so;
+ほう素	ho, u, so;
+窘める	tashina; me, ru,
+嗜める	tashina; me, ru,
+窶れる	yatsu; re, ru,
+竦める	suku; me, ru,
+ろう城	ro, u, jou;
+翔ける	ka; ke, ru,
+聳える	sobi; e, ru,
+はい芽	ha, i, ga;
+こう化	ko, u, ka;
+こう着	ko, u, chaku;
+すい臓	su, i, zou;
+臍の緒	heso; no, o;
+舐める	na; me, ru,
+嘗める	na; me, ru,
+甞める	na; me, ru,
+舐ぶる	ne; bu, ru,
+茹でる	yu; de, ru,
+湯でる	yu; de, ru,
+茹でる	u; de, ru,
+湯でる	u; de, ru,
+茹で蛸	yu; de, dako;
+茹で蛸	yu; de, tako;
+ショ糖	sho. tou;
+バラ色	ba. ra. iro;
+ばら色	ba, ra, iro;
+うん蓄	u, n, chiku;
+蛻の殻	monuke; no, kara;
+蛻の空	monuke; no, kara;
+マテ貝	ma. te. gai;
+動めく	ugo; me, ku,
+褪せる	a; se, ru,
+褪める	sa; me, ru,
+ぼろ屋	bo, ro, ya;
+ぼろ家	bo, ro, ya;
+訝しい	ibuka; shi, i,
+訝しむ	ibuka; shi, mu,
+誂える	atsura; e, ru,
+誑かす	tabura; ka, su,
+誣いる	shi; i, ru,
+諌める	isa; me, ru,
+諫める	isa; me, ru,
+禁める	isa; me, ru,
+うわ言	u, wa, goto;
+せん妄	se, n, mou;
+けん責	ke, n, seki;
+さい銭	sa, i, sen;
+齎らす	mota; ra, su,
+躁うつ	sou; u, tsu,
+躾ける	shitsu; ke, ru,
+逞しい	takuma; shi, i,
+まい進	ma, i, shin;
+かん子	ka, n, shi;
+さく井	sa, ku, sei;
+ちん入	chi, n, nyuu;
+あい路	a, i, ro;
+いん石	i, n, seki;
+じん帯	ji, n, tai;
+和える	a; e, ru,
+韲える	a; e, ru,
+合える	a; e, ru,
+頷いて	unazu; i, te,
+顰める	shika; me, ru,
+蹙める	shika; me, ru,
+饐える	su; e, ru,
+ばく進	ba, ku, shin;
+鰤っ子	buri; k,ko;
+鰤っ子	buri; q, ko;
+靡かす	nabi; ka, su,
+ばい菌	ba, i, kin;
+バイ菌	ba. i. kin;
+べっ甲	be, k,kou;
+べっ甲	be, q, kou;
+あく促	a, ku, seku;
+あく促	a, ku, saku;
+やみ夜	ya, mi, yo;
+よこ糸	yo, ko, ito;
+ひと筋	hi, to, suji;
+ひと条	hi, to, suji;
+ひと言	hi, to, koto;
+おと年	o, to, toshi;
+ひと山	hi, to, yama;
+独り子	hito; ri, go;
+ひと組	hi, to, kumi;
+ひと度	hi, to, tabi;
+逸れる	so; re, ru,
+右はし	migi; ha, shi,
+雨あし	ama; a, shi,
+雨あし	ame; a, shi,
+曳き船	hi; ki, fune;
+引き船	hi; ki, fune;
+曳き船	hi; ki, bune;
+引き船	hi; ki, bune;
+長しえ	toko; shi, e,
+常しえ	toko; shi, e,
+くぼ地	ku, bo, chi;
+音いろ	ne; i, ro,
+何ゆえ	nani; yu, e,
+どれ程	do, re, hodo;
+何れ程	do; re, hodo;
+何がし	nani; ga, shi,
+あご骨	a, go, bone;
+干し魚	ho; shi, uo;
+干し魚	ho; shi, zakana;
+にせ札	ni, se, satsu;
+にせ札	ni, se, fuda;
+捨て子	su; te, go;
+棄て子	su; te, go;
+棄て児	su; te, go;
+にせ物	ni, se, mono;
+にせ物	ni, se, mon;
+ニセ物	ni. se. mono;
+ニセ物	ni. se. mon;
+戯ける	odo; ke, ru,
+戲ける	odo; ke, ru,
+戯ける	tawa; ke, ru,
+戲ける	tawa; ke, ru,
+たわ言	ta, wa, goto;
+たわ言	ta, wa, koto;
+嚇かす	odo; ka, su,
+威かす	odo; ka, su,
+劫かす	obiya; ka, su,
+曲り尺	maga; ri, gane;
+曲り金	maga; ri, gane;
+曲り尺	maga; ri, jaku;
+近ぢか	chika; ji, ka,
+金の鯱	kin; no, shachihoko;
+金の鯱	kin; no, shachi;
+傾げる	kashi; ge, ru,
+軽やか	karu; ya, ka,
+行き方	i; ki, kata;
+行き方	yu; ki, kata;
+往き来	i; ki, ki;
+行き来	yu; ki, ki;
+往き来	yu; ki, ki;
+行く末	yu; ku, sue;
+香しい	kanba; shi, i,
+馨しい	kanba; shi, i,
+窄める	subo; me, ru,
+窄める	tsubo; me, ru,
+殺りく	satsu; ri, ku,
+捌ける	saba; ke, ru,
+はけ口	ha, ke, guchi;
+捌け口	ha; ke, guchi;
+捌け口	saba; ke, guchi;
+私ごと	watakushi; go, to,
+借り家	ka; ri, ya;
+借り家	ka; ri, ie;
+淋しい	sabi; shi, i,
+寂しい	sami; shi, i,
+淋しい	sami; shi, i,
+出ばな	de; ba, na,
+出はな	de; ha, na,
+上あご	uwa; a, go,
+真っ直	ma; s,sugu;
+真っ直	ma; q, sugu;
+真すぐ	mas;su, gu,
+真すぐ	maq; su, gu,
+真すぐ	ma; su, gu,
+まっ白	ma, s,shiro;
+まっ白	ma, q, shiro;
+人びと	hito; bi, to,
+人かげ	hito; ka, ge,
+切り畑	ki; ri, hata;
+先ごろ	saki; go, ro,
+川づら	kawa; zu, ra,
+束ねる	taba; ne, ru,
+束ねる	tsuka; ne, ru,
+足あと	ashi; a, to,
+あさ飯	a, sa, meshi;
+あさ飯	a, sa, han;
+天が下	ama; ga, shita;
+天が下	ame; ga, shita;
+天の河	ama; no, gawa;
+天の川	ama; no, kawa;
+天の河	ama; no, kawa;
+天つ神	ama; tsu, kami;
+三つ口	mi; tsu, kuchi;
+灯し火	tomo; shi, bi;
+働き手	hatara; ki, te;
+入り船	i; ri, fune;
+入り船	i; ri, bune;
+入れ質	i; re, shichi;
+入れ質	i; re, jichi;
+入り口	i; ri, guchi;
+入り口	hai; ri, guchi;
+入り口	hai; ri, kuchi;
+麦わら	mugi; wa, ra,
+反り橋	so; ri, hashi;
+反り橋	so; ri, bashi;
+反ばく	han; ba, ku,
+避ける	yo; ke, ru,
+除ける	yo; ke, ru,
+伏せ勢	fu; se, zei;
+宝もの	takara; mo, no,
+乏しい	tomo; shi, i,
+はた目	ha, ta, me;
+埋まる	uzu; ma, ru,
+末っ子	sue; k,ko;
+末っ子	sue; q, ko;
+免れる	manuga; re, ru,
+雄しべ	o; shi, be,
+来し方	ki; shi, kata;
+来し方	ko; shi, kata;
+力づく	chikara; zu, ku,
+力ずく	chikara; zu, ku,
+冷や酒	hi; ya, zake;
+ろっ骨	ro, k,kotsu;
+ろっ骨	ro, q, kotsu;
+歪める	yuga; me, ru,
+歪める	iga; me, ru,
+どう猛	do, u, mou;
+茹だる	yu; da, ru,
+茹だる	u; da, ru,
+合い印	a; i, in;
+合い鍵	a; i, kagi;
+合かぎ	ai; ka, gi,
+合い詞	a; i, kotoba;
+合い性	a; i, shou;
+相い性	a; i, shou;
+合い印	a; i, jirushi;
+合い標	a; i, jirushi;
+間の戸	ai; no, to;
+哀びん	ai; bi, n,
+哀みん	ai; mi, n,
+灯かり	a; ka, ri,
+空き巣	a; ki, su;
+明き巣	a; ki, su;
+空き瓶	a; ki, bin;
+空き壜	a; ki, bin;
+厭きる	a; ki, ru,
+倦きる	a; ki, ru,
+挙げ句	a; ge, ku;
+揚げ句	a; ge, ku;
+朝ご飯	asa; go, han;
+足かせ	ashi; ka, se,
+暖かい	atta; ka, i,
+温かい	atta; ka, i,
+温まる	atta; ma, ru,
+暖まる	atta; ma, ru,
+温まる	nuku; ma, ru,
+温める	atta; me, ru,
+暖める	atta; me, ru,
+温める	nuku; me, ru,
+あだ名	a, da, na;
+宛て先	a; te, saki;
+あて先	a, te, saki;
+宛て名	a; te, na;
+あて名	a, te, na;
+後々に	atoato; ni,
+危な気	abu; na, ge;
+雨がさ	ama; ga, sa,
+雨だれ	ama; da, re,
+編み物	a; mi, mono;
+雨ふり	ame; fu, ri,
+洗い熊	ara; i, guma;
+荒れ野	a; re, no;
+凡ゆる	ara; yu, ru,
+在り方	a; ri, kata;
+有り方	a; ri, kata;
+或いは	aru; i, ha,
+合さる	awa; sa, ru,
+併さる	awa; sa, ru,
+案ずる	an; zu, ru,
+按ずる	an; zu, ru,
+あん分	a, n, bun;
+活かす	i; ka, su,
+生き方	i; ki, kata;
+生け垣	i; ke, gaki;
+生け花	i; ke, bana;
+活け花	i; ke, bana;
+活ける	i; ke, ru,
+逸する	is;su, ru,
+逸する	iq; su, ru,
+佚する	is;su, ru,
+佚する	iq; su, ru,
+今まで	ima; ma, de,
+忌み詞	i; mi, kotoba;
+入り相	i; ri, ai;
+入り海	i; ri, umi;
+入り江	i; ri, e;
+入り日	i; ri, hi;
+入り婿	i; ri, muko;
+入れ墨	i; re, zumi;
+入れ歯	i; re, ba;
+容れ物	i; re, mono;
+植え木	u; e, ki;
+浮き袋	u; ki, bukuro;
+浮き嚢	u; ki, bukuro;
+浮き彫	u; ki, bori;
+憂き目	u; ki, me;
+うき目	u, ki, me;
+浮き世	u; ki, yo;
+憂き世	u; ki, yo;
+受け付	u; ke, tsuke;
+打ち傷	u; chi, kizu;
+うっ血	u, k,ketsu;
+うっ血	u, q, ketsu;
+うっ滞	u, t,tai;
+うっ滞	u, q, tai;
+うっ憤	u, p,pun;
+うっ憤	u, q, pun;
+裏づけ	ura; zu, ke,
+売り上	u; ri, age;
+売り子	u; ri, ko;
+売り児	u; ri, ko;
+売り手	u; ri, te;
+憂い事	ure; i, goto;
+浮つく	uwa; tsu, ku,
+えら物	e, ra, butsu;
+えら物	e, ra, mono;
+追い風	o; i, kaze;
+追い風	o; i, te;
+大さじ	oo; sa, ji,
+置き物	o; ki, mono;
+行ない	oko; na, i,
+行なう	oko; na, u,
+押える	osa; e, ru,
+押し売	o; shi, uri;
+押し絵	o; shi, e;
+怖れる	oso; re, ru,
+懼れる	oso; re, ru,
+惧れる	oso; re, ru,
+落し物	oto; shi, mono;
+戯け者	tawa; ke, mono;
+戲け者	tawa; ke, mono;
+踊り字	odo; ri, ji;
+躍り字	odo; ri, ji;
+覚え書	obo; e, gaki;
+思いで	omo; i, de,
+想いで	omo; i, de,
+主なる	omo; na, ru,
+重なる	omo; na, ru,
+お八つ	o, ya; tsu,
+織り姫	o; ri, hime;
+折り目	o; ri, me;
+卸し金	oro; shi, gane;
+下し金	oro; shi, gane;
+卸し値	oro; shi, ne;
+終わり	o; wa, ri,
+了わる	o; wa, ru,
+卒わる	o; wa, ru,
+畢わる	o; wa, ru,
+竟わる	o; wa, ru,
+飼い犬	ka; i, inu;
+買い手	ka; i, te;
+買い主	ka; i, nushi;
+飼い主	ka; i, nushi;
+買い物	ka; i, mon;
+替え歌	ka; e, uta;
+係り員	kaka; ri, in;
+拘らず	kakawa; ra, zu,
+関らず	kakawa; ra, zu,
+係わり	kaka; wa, ri,
+係わる	kaka; wa, ru,
+拘わる	kaka; wa, ru,
+掛け金	ka; ke, kin;
+かけ声	ka, ke, goe;
+かけ算	ka, ke, zan;
+掛け軸	ka; ke, jiku;
+形どる	kata; do, ru,
+固まり	kata; ma, ri,
+塊まり	kata; ma, ri,
+語り部	kata; ri, be;
+語りべ	kata; ri, be,
+花だん	ka; da, n,
+且つ又	ka; tsu, mata;
+拐かす	kadowa; ka, su,
+勾かす	kadowa; ka, su,
+哀しみ	kana; shi, mi,
+愛しみ	kana; shi, mi,
+可なり	ka; na, ri,
+枯れ木	ka; re, ki;
+枯れ葉	ka; re, ha;
+替わり	ka; wa, ri,
+変り種	kawa; ri, dane;
+代りに	kawa; ri, ni,
+代り番	kawa; ri, ban;
+完ぺき	kan; pe, ki,
+効き目	ki; ki, me;
+利き目	ki; ki, me;
+きき眼	ki, ki, me;
+飢きん	ki; ki, n,
+木くず	ki; ku, zu,
+聞える	kiko; e, ru,
+聴える	kiko; e, ru,
+刻み足	kiza; mi, ashi;
+傷あと	kizu; a, to,
+傷つく	kizu; tsu, ku,
+疵つく	kizu; tsu, ku,
+来たす	ki; ta, su,
+来たる	ki; ta, ru,
+切っ掛	ki; k,kake;
+切っ掛	ki; q, kake;
+切かけ	kik;ka, ke,
+切かけ	kiq; ka, ke,
+切っ先	ki; s,saki;
+切っ先	ki; q, saki;
+気づく	ki; zu, ku,
+祈とう	ki; to, u,
+衣ずれ	kinu; zu, re,
+煌めく	kira; me, ku,
+切り株	ki; ri, kabu;
+切り傷	ki; ri, kizu;
+切り創	ki; ri, kizu;
+切り疵	ki; ri, kizu;
+切り身	ki; ri, mi;
+切れ味	ki; re, aji;
+斬れ味	ki; re, aji;
+切れ地	ki; re, ji;
+切れ手	ki; re, te;
+切れ目	ki; re, me;
+切れ物	ki; re, mono;
+切れ者	ki; re, mono;
+谷まる	kiwa; ma, ru,
+燻ぶる	kusu; bu, ru,
+燻ぶる	fusu; bu, ru,
+口々に	kuchiguchi; ni,
+朽ち葉	ku; chi, ba;
+組み版	ku; mi, han;
+組み紐	ku; mi, himo;
+悔し涙	kuya; shi, namida;
+悔やみ	ku; ya, mi,
+喰らう	ku; ra, u,
+繰り越	ku; ri, koshi;
+繰り言	ku; ri, goto;
+けい光	ke, i, kou;
+ケイ素	ke. i. so;
+けい部	ke, i, bu;
+消し印	ke; shi, in;
+凍おる	ko; o, ru,
+転ける	ko; ke, ru,
+倒ける	ko; ke, ru,
+個々に	koko; ni,
+刻々に	kokkoku; ni,
+託ける	kotozu; ke, ru,
+子ねこ	ko; ne, ko,
+子ネコ	ko; ne. ko.
+仔ネコ	ko; ne. ko.
+篭もる	ko; mo, ru,
+逆さま	saka; sa, ma,
+挿し絵	sa; shi, e;
+さし絵	sa, shi, e;
+戯れ事	za; re, goto;
+戯れ事	tawamu; re, goto;
+死がい	shi; ga, i,
+いき値	i, ki, chi;
+しこ名	shi, ko, na;
+鎮まる	shizu; ma, ru,
+鎮める	shizu; me, ru,
+下ばき	shita; ba, ki,
+島じま	shima; ji, ma,
+しめ縄	shi, me, nawa;
+知り合	shi; ri, ai;
+順々に	junjun; ni,
+吸い殻	su; i, gara;
+吸がら	sui; ga, ra,
+#数ヶ月	suukagetsu;
+数ヶ月	suu; xke. getsu;
+#数ヵ月	suukagetsu;
+数ヵ月	suu; xka. getsu;
+数カ月	suu; ka, getsu;
+数か月	suu; ka, getsu;
+#数ケ月	suukagetsu;
+数ケ月	suu; ke. getsu;
+尠くも	sukuna; ku, mo,
+助け平	su; ke, be;
+助け平	su; ke, bei;
+凄じい	susama; ji, i,
+奨める	susu; me, ru,
+捨て猫	su; te, neko;
+捨て場	su; te, ba;
+捨て鉢	su; te, bachi;
+捨て身	su; te, mi;
+総べて	su; be, te,
+滑り台	sube; ri, dai;
+住まい	su; ma, i,
+清し汁	suma; shi, jiru;
+澄し汁	suma; shi, jiru;
+擦り傷	su; ri, kizu;
+すり傷	su, ri, kizu;
+擦り疵	su; ri, kizu;
+擦り傷	kasu; ri, kizu;
+掠り傷	kasu; ri, kizu;
+擂り鉢	su; ri, bachi;
+すり鉢	su, ri, bachi;
+摺り鉢	su; ri, bachi;
+磨れる	su; re, ru,
+摩れる	su; re, ru,
+擂れる	su; re, ru,
+副える	so; e, ru,
+具わる	sona; wa, ru,
+そば杖	so, ba, zue;
+そら豆	so, ra, mame;
+託する	taku; su, ru,
+托する	taku; su, ru,
+貯える	takuwa; e, ru,
+竹の子	take; no, ko;
+たこ焼	ta, ko, yaki;
+タコ焼	ta. ko. yaki;
+佇まい	tatazu; ma, i,
+ただ者	ta, da, mono;
+建て坪	ta; te, tsubo;
+建て前	ta; te, mae;
+立て前	ta; te, mae;
+点て前	ta; te, mae;
+譬える	tato; e, ru,
+喩える	tato; e, ru,
+楽しげ	tano; shi, ge,
+愉しげ	tano; shi, ge,
+垂れ幕	ta; re, maku;
+垂れ耳	ta; re, mimi;
+近づき	chika; zu, ki,
+違い棚	chiga; i, dana;
+千々に	chiji; ni,
+茶さじ	cha; sa, ji,
+茶づけ	cha; zu, ke,
+茶わん	cha; wa, n,
+宙づり	chuu; zu, ri,
+使い捨	tsuka; i, sute;
+使い捨	tsuka; i, zute;
+使い所	tsuka; i, dokoro;
+使い処	tsuka; i, dokoro;
+作り言	tsuku; ri, goto;
+作り事	tsuku; ri, goto;
+造り手	tsuku; ri, te;
+作り手	tsuku; ri, te;
+付け馬	tsu; ke, uma;
+付け人	tsu; ke, bito;
+包み金	tsutsu; mi, gane;
+包み金	tsutsu; mi, kin;
+包み紙	tsutsu; mi, gami;
+摘まむ	tsu; ma, mu,
+釣り糸	tsu; ri, ito;
+釣り竿	tsu; ri, zao;
+釣ざお	tsuri; za, o,
+釣り銭	tsu; ri, sen;
+つり銭	tsu, ri, sen;
+吊り橋	tsu; ri, bashi;
+つり橋	tsu, ri, bashi;
+釣り橋	tsu; ri, bashi;
+吊り橋	tsu; ri, hashi;
+つり橋	tsu, ri, hashi;
+釣り橋	tsu; ri, hashi;
+釣り針	tsu; ri, bari;
+釣り鉤	tsu; ri, bari;
+つり針	tsu, ri, bari;
+釣り船	tsu; ri, bune;
+釣り舟	tsu; ri, bune;
+釣り船	tsu; ri, fune;
+釣り舟	tsu; ri, fune;
+釣り堀	tsu; ri, bori;
+手おち	te; o, chi,
+徹する	tes;su, ru,
+徹する	teq; su, ru,
+手まめ	te; ma, me,
+照り焼	te; ri, yaki;
+天びん	ten; bi, n,
+出あう	de; a, u,
+梳かす	to; ka, su,
+時どき	toki; do, ki,
+年より	toshi; yo, ri,
+把っ手	to; t,te;
+把っ手	to; q, te;
+留める	todo; me, ru,
+止める	todo; me, ru,
+停める	todo; me, ru,
+飛び石	to; bi, ishi;
+飛び魚	to; bi, uo;
+飛び火	to; bi, hi;
+留め金	to; me, gane;
+止め金	to; me, gane;
+共々に	tomodomo; ni,
+捕える	tora; e, ru,
+取り扱	to; ri, atsukai;
+取り組	to; ri, kumi;
+取り説	to; ri, setsu;
+捕り物	to; ri, mono;
+蕩ける	toro; ke, ru,
+盪ける	toro; ke, ru,
+投げ物	na; ge, mono;
+情ない	nasake; na, i,
+情ない	nassake; na, i,
+夏やせ	natsu; ya, se,
+並み足	na; mi, ashi;
+並み歩	na; mi, ashi;
+並み木	na; mi, ki;
+慣らう	na; ra, u,
+握り飯	nigi; ri, meshi;
+荷なう	ni; na, u,
+俄か雨	niwa; ka, ame;
+縫い針	nu; i, bari;
+縫い目	nu; i, me;
+抜け穴	nu; ke, ana;
+抜け路	nu; ke, michi;
+塗り物	nu; ri, mono;
+猫ばば	neko; ba, ba,
+捩れる	neji; re, ru,
+捻れる	neji; re, ru,
+拗れる	neji; re, ru,
+延べ板	no; be, ita;
+延べ金	no; be, gane;
+延べ坪	no; be, tsubo;
+延べ棒	no; be, bou;
+飲み水	no; mi, mizu;
+飲み屋	no; mi, ya;
+飮み屋	no; mi, ya;
+呑み屋	no; mi, ya;
+乗り手	no; ri, te;
+のん気	no, n, ki;
+肺がん	hai; ga, n,
+肺ガン	hai; ga, n.
+果ない	haka; na, i,
+剥がす	ha; ga, su,
+剥がす	he; ga, su,
+剝がす	he; ga, su,
+履き物	ha; ki, mono;
+育くむ	hagu; ku, mu,
+劇しい	hage; shi, i,
+烈しい	hage; shi, i,
+爆ぜる	ha; ze, ru,
+罅ぜる	ha; ze, ru,
+果し状	hata; shi, jou;
+果して	hata; shi, te,
+鼻かぜ	hana; ka, ze,
+鼻クソ	hana; ku. so.
+話し中	hana; shi, chuu;
+花やか	hana; ya, ka,
+華やぐ	hana; ya, gu,
+花やぐ	hana; ya, gu,
+羽つき	hane; tsu, ki,
+嵌まる	ha; ma, ru,
+填まる	ha; ma, ru,
+張り子	ha; ri, ko;
+晴れ着	ha; re, gi;
+化け物	ba; ke, mono;
+化け物	ba; ke, mon;
+晩ご飯	ban; go, han;
+引き網	hi; ki, ami;
+曳き網	hi; ki, ami;
+引き馬	hi; ki, uma;
+引き金	hi; ki, gane;
+引き鉄	hi; ki, gane;
+引き算	hi; ki, zan;
+引き潮	hi; ki, shio;
+引き汐	hi; ki, shio;
+引き綱	hi; ki, zuna;
+引き手	hi; ki, te;
+引き戸	hi; ki, to;
+引き窓	hi; ki, mado;
+日ざし	hi; za, shi,
+ひと肌	hi, to, hada;
+独り旅	hito; ri, tabi;
+捻くる	hine; ku, ru,
+拈くる	hine; ku, ru,
+日やけ	hi; ya, ke,
+冷や麦	hi; ya, mugi;
+冷やか	hiya; ya, ka,
+冷や奴	hiya; ya, kko;
+昼ご飯	hiru; go, han;
+拡がる	hiro; ga, ru,
+拡げる	hiro; ge, ru,
+展げる	hiro; ge, ru,
+頻ぴん	hin; pi, n,
+脹れる	fuku; re, ru,
+塞がる	futa; ga, ru,
+伏せ字	fu; se, ji;
+伏せ樋	fu; se, doi;
+伏せ屋	fu; se, ya;
+縁どる	fuchi; do, ru,
+踏み切	fu; mi, kiri;
+踏み車	fu; mi, guruma;
+振り替	fu; ri, kae;
+振り子	fu; ri, ko;
+振り袖	fu; ri, sode;
+振り出	fu; ri, dashi;
+ふる里	fu, ru, sato;
+別々に	betsubetsu; ni,
+吠える	ho; e, ru,
+吼える	ho; e, ru,
+誉める	ho; me, ru,
+賞める	ho; me, ru,
+称める	ho; me, ru,
+ほら貝	ho, ra, gai;
+ホラ貝	ho. ra. gai;
+彫り物	ho; ri, mono;
+亡びる	horo; bi, ru,
+亡ぼす	horo; bo, su,
+冒とく	bou; to, ku,
+巻き貝	ma; ki, gai;
+巻き尺	ma; ki, jaku;
+巻き物	ma; ki, mono;
+雑ざる	ma; za, ru,
+雑じる	ma; ji, ru,
+跨がる	mata; ga, ru,
+股がる	mata; ga, ru,
+まっ黒	ma, k,kuro;
+まっ黒	ma, q, kuro;
+まっ青	ma, s,sao;
+まっ青	ma, q, sao;
+真っ裸	ma; p,padaka;
+真っ裸	ma; q, padaka;
+まっ裸	ma, p,padaka;
+まっ裸	ma, q, padaka;
+真っ平	ma, p,pira;
+真っ平	ma, q, pira;
+松かさ	matsu; ka, sa,
+お祭り	o, matsu; ri,
+まな板	ma, na, ita;
+まん中	ma, n, naka;
+真ん円	ma; n, maru;
+妄りに	mida; ri, ni,
+濫りに	mida; ri, ni,
+猥りに	mida; ri, ni,
+充ちる	mi; chi, ru,
+盈ちる	mi; chi, ru,
+貢ぎ物	mitsu; gi, mono;
+凝める	mitsu; me, ru,
+見なす	mi; na, su,
+向い風	muka; i, kaze;
+向い側	muka; i, gawa;
+向い波	muka; i, nami;
+向う側	muko; u, gawa;
+蒸し器	mu; shi, ki;
+むし歯	mu, shi, ba;
+めん棒	me, n, bou;
+儲け口	mou; ke, guchi;
+儲け物	mou; ke, mono;
+儲け役	mou; ke, yaku;
+基づく	moto; zu, ku,
+揉め事	mo; me, goto;
+もめ事	mo, me, goto;
+洩らす	mo; ra, su,
+洩れる	mo; re, ru,
+焼き鳥	ya; ki, tori;
+焼もち	yaki; mo, chi,
+焼き餠	ya; ki, mochi;
+焼き餅	ya; ki, mochi;
+焼き物	ya; ki, mono;
+安らう	yasu; ra, u,
+休らう	yasu; ra, u,
+瘠せる	ya; se, ru,
+八つ手	ya; tsu, de;
+雇い人	yato; i, nin;
+雇い主	yato; i, nushi;
+柔かい	yawara; ka, i,
+憂うつ	yuu; u, tsu,
+揺り籠	yu; ri, kago;
+揺り篭	yu; ri, kago;
+因って	yo; tte,
+仍って	yo; tte,
+依って	yo; tte,
+縁って	yo; tte,
+夜ふけ	yo; fu, ke,
+蘇える	yomiga; e, ru,
+甦える	yomiga; e, ru,
+読み取	yo; mi, tori;
+読み物	yo; mi, mono;
+分かち	wa; ka, chi,
+別れ路	waka; re, michi;
+別れ道	waka; re, michi;
+分れ道	waka; re, michi;
+分れる	waka; re, ru,
+我が国	wa; ga, kuni;
+わが国	wa, ga, kuni;
+我が輩	wa; ga, hai;
+吾が輩	wa; ga, hai;
+わが輩	wa, ga, hai;
+わが家	wa, ga, ya;
+我が家	wa; ga, ie;
+わが家	wa, ga, ie;
+分け前	wa; ke, mae;
+別け前	wa; ke, mae;
+侘しい	wabi; shi, i,
+佗しい	wabi; shi, i,
+詫びる	wa; bi, ru,
+割り印	wa; ri, in;
+割り勘	wa; ri, kan;
+割り高	wa; ri, daka;
+割り注	wa; ri, chuu;
+割りに	wa; ri, ni,
+わり箸	wa, ri, bashi;
+割り引	wa; ri, biki;
+割り符	wa; ri, fu;
+割り前	wa; ri, mae;
+割り安	wa; ri, yasu;
+悪ずれ	waru; zu, re,
+割れ目	wa; re, me;
+破れ目	wa; re, me;
+割れ物	wa; re, mono;
+破れ物	wa; re, mono;
+閊える	tsuka; e, ru,
+支える	tsuka; e, ru,
+閊える	tsukka; e, ru,
+支える	tsukka; e, ru,
+使える	tsuka; e, ru,
+遣える	tsuka; e, ru,
+合い方	a; i, kata;
+うた沢	u, ta, zawa;
+挺する	tei; su, ru,
+早わざ	haya; wa, za,
+語り草	kata; ri, gusa;
+語り種	kata; ri, gusa;
+巻き雲	ma; ki, gumo;
+めん鶏	me, n, dori;
+めん鳥	me, n, dori;
+めん羊	me, n, you;
+お広め	o, hiro; me,
+玉に瑕	tama; ni, kizu;
+珠に瑕	tama; ni, kizu;
+玉に疵	tama; ni, kizu;
+珠に疵	tama; ni, kizu;
+歎じる	tan; ji, ru,
+歎ずる	tan; zu, ru,
+嘆ずる	tan; zu, ru,
+値する	atai; su, ru,
+価する	atai; su, ru,
+あま味	a, ma, mi;
+幾たび	iku; ta, bi,
+嫌がる	iya; ga, ru,
+厭がる	iya; ga, ru,
+色んな	iro; n, na,
+薄まる	usu; ma, ru,
+応ずる	ou; zu, ru,
+母さん	kaka; sa, n,
+害する	gai; su, ru,
+貸し間	ka; shi, ma;
+かぜ薬	ka, ze, gusuri;
+紙くず	kami; ku, zu,
+感ずる	kan; zu, ru,
+極まり	ki; ma, ri,
+狂わす	kuru; wa, su,
+咥える	kuwa; e, ru,
+銜える	kuwa; e, ru,
+啣える	kuwa; e, ru,
+恋する	koi; su, ru,
+強ばる	kowa; ba, ru,
+下がり	sa; ga, ri,
+親しみ	shita; shi, mi,
+そば屋	so, ba, ya;
+損する	son; su, ru,
+点ける	tsu; ke, ru,
+詰まり	tsu; ma, ri,
+得する	toku; su, ru,
+現われ	ara; wa, re,
+表われ	ara; wa, re,
+些さか	isa; sa, ka,
+盾つく	tate; tsu, ku,
+楯つく	tate; tsu, ku,
+立て札	ta; te, fuda;
+どの辺	do, no, hen;
+何の辺	do; no, hen;
+恍ける	tobo; ke, ru,
+長びく	naga; bi, ku,
+夏ばて	natsu; ba, te,
+夏バテ	natsu; ba. te.
+逃げ足	ni; ge, ashi;
+捩じる	ne; ji, ru,
+捻じる	ne; ji, ru,
+拗じる	ne; ji, ru,
+残らず	noko; ra, zu,
+婆さん	baa; sa, n,
+婆さん	ba-; sa, n,
+端ない	hashita; na, i,
+撥ねる	ha; ne, ru,
+刎ねる	ha; ne, ru,
+ひき肉	hi, ki, niku;
+挽き肉	hi; ki, niku;
+纏まる	mato; ma, ru,
+身がる	mi; ga, ru,
+認め印	mito; me, in;
+耳もと	mimi; mo, to,
+耳より	mimi; yo, ri,
+若しも	mo; shi, mo,
+縺れる	motsu; re, ru,
+湯のみ	yu; no, mi,
+用たし	you; ta, shi,
+善くも	yo; ku, mo,
+喜ばす	yoroko; ba, su,
+悦ばす	yoroko; ba, su,
+難なく	nan; na, ku,
+逃げ路	ni; ge, michi;
+根っ子	ne; k,ko;
+根っ子	ne; q, ko;
+根っこ	ne; kko,
+お休み	o, yasu; mi,
+その物	so, no, mono;
+其の物	so; no, mono;
+ちり紙	chi; ri, gami;
+ちり紙	chi; ri, shi;
+あの世	a, no, yo;
+彼の世	a; no, yo;
+お帰り	o, kae; ri,
+お替り	o, kawa; ri,
+お代り	o, kawa; ri,
+お早う	o, hayo; u,
+響めく	doyo; me, ku,
+指きり	yubi; ki, ri,
+デモ隊	de. mo. tai;
+ビー玉	bi. - dama;
+安らぐ	yasu; ra, gu,
+飲める	no; me, ru,
+映し絵	utsu; shi, e;
+あで姿	a, de, sugata;
+横やり	yoko; ya, ri,
+何にも	nan; ni, mo,
+横ばい	yoko; ba, i,
+べら棒	be, ra, bou;
+ごく稀	go, ku, mare;
+極まれ	goku; ma, re,
+ごく希	go, ku, mare;
+蛇の様	hebi; no, you;
+肥よく	hi; yo, ku,
+目も綾	me; mo, aya;
+忙しげ	sewa; shi, ge,
+紗の様	sha; no, you;
+類い稀	tagu; i, mare;
+類い希	tagu; i, mare;
+類まれ	tagui; ma, re,
+覚せい	kaku; se, i,
+ろう絡	ro, u, raku;
+尻ごみ	shiri; go, mi,
+当せん	tou; se, n,
+ガス状	ga. su. jou;
+この類	ko, no, rui;
+この種	ko, no, shu;
+大ぶり	oo; bu, ri,
+素っ裸	su; p,padaka;
+素っ裸	su; q, padaka;
+すっ裸	su, p,padaka;
+すっ裸	su, q, padaka;
+食べ頃	ta; be, goro;
+手すき	te; su, ki,
+粒より	tsubu; yo, ri,
+頭から	atama; ka, ra,
+場なれ	ba; na, re,
+びわ湖	bi, wa, ko;
+卜する	boku; su, ru,
+茶しぶ	chas; hi, bu,
+誓って	chika; tte,
+地の利	chi; no, ri;
+団らん	dan; ra, n,
+ど偉い	do, era; i,
+毒ガス	doku; ga. su.
+どん尻	do, n, jiri;
+枝ぶり	eda; bu, ri,
+駅ビル	eki; bi. ru.
+フジ棚	fu. ji. dana;
+降らす	fu; ra, su,
+諷する	fuu; su, ru,
+二つ目	futa; tsu, me;
+臥する	ga; su, ru,
+下の下	ge; no, ge;
+銀ねず	gin; ne, zu,
+ご尤も	go, motto; mo,
+生え際	ha; e, giwa;
+恥らい	haji; ra, i,
+羞らい	haji; ra, i,
+離れ島	hana; re, jima;
+端くれ	hashi; ku, re,
+ハト派	ha. to. ha;
+はと派	ha, to, ha;
+はと胸	ha, to, mune;
+辱しめ	hazuka; shi, me,
+へび座	he, bi, za;
+鄙びる	hina; bi, ru,
+ひん斥	hi, n, seki;
+瀕する	hin; su, ru,
+独り者	hito; ri, mono;
+冷かし	hiya; ka, shi,
+誇り顔	hoko; ri, gao;
+粋がる	iki; ga, ru,
+命ごい	inochi; go, i,
+射ぬく	i; nu, ku,
+明るむ	aka; ru, mu,
+頂ける	itada; ke, ru,
+戴ける	itada; ke, ru,
+橋かけ	hashi; ka, ke,
+梅の実	ume; no, mi;
+腹の虫	hara; no, mushi;
+脹ら脛	fuku; ra, hagi;
+膨ら脛	fuku; ra, hagi;
+足の裏	ashi; no, ura;
+うじ虫	u, ji, mushi;
+ウジ虫	u. ji. mushi;
+指の節	yubi; no, fushi;
+盆の窪	bon; no, kubo;
+酒かす	sake; ka, su,
+半ドン	han; do. n.
+半どん	han; do, n,
+まま娘	ma, ma, musume;
+くす玉	ku, su, dama;
+クス玉	ku. su. dama;
+跳び箱	to; bi, bako;
+とび箱	to, bi, bako;
+飛び箱	to; bi, bako;
+それ迄	so, re, made;
+其れ迄	so; re, made;
+敢ない	ae; na, i,
+脅かし	odo; ka, shi,
+曲がり	ma; ga, ri,
+君が代	kimi; ga, yo;
+君が世	kimi; ga, yo;
+決め球	ki; me, dama;
+見せ場	mi; se, ba;
+厳しさ	kibi; shi, sa,
+講じる	kou; ji, ru,
+講ずる	kou; zu, ru,
+高まり	taka; ma, ri,
+孫の手	mago; no, te;
+ポン酢	po. n. zu;
+恙ない	tsutsuga; na, i,
+退かす	do; ka, su,
+傾らか	nada; ra, ka,
+椈の木	buna; no, ki;
+橅の木	buna; no,ki;
+解ぐす	ho; gu, su,
+解ごす	ho; go, su,
+開き戸	hira; ki, do;
+金ぴか	kin; pi, ka,
+捲れる	maku; re, ru,
+捲れる	meku; re, ru,
+歯がみ	ha; ga, mi,
+疾うに	to; u, ni,
+取り手	to; ri, te;
+焼い弾	shou; i, dan;
+石づき	ishi; zu, ki,
+大また	oo; ma, ta,
+湯あみ	yu; a, mi,
+破ける	yabu; ke, ru,
+うす緑	u, su, midori;
+抜け目	nu; ke, me;
+敷き物	shi; ki, mono;
+遊び事	aso; bi, goto;
+鏤める	chiriba; me, ru,
+首まき	kubi; ma, ki,
+出かす	de; ka, su,
+尻もち	shiri; mo, chi,
+断わり	koto; wa, ri,
+煩がる	urusa; ga, ru,
+拱ねく	koma; ne, ku,
+縢がる	ka; ga, ru,
+内の人	uchi; no, hito;
+家の人	uchi; no, hito;
+旦つく	dan; tsu, ku,
+時たま	toki; ta,  ma,
+四つ子	yo; tsu, go;
+焼け跡	ya; ke, ato;
+現ずる	gen; zu, ru,
+減ずる	gen; zu, ru,
+致し方	ita; shi, kata;
+地の文	ji; no, bun;
+じり安	ji, ri, yasu;
+ジリ安	ji. ri. yasu;
+黴びる	ka; bi, ru,
+かぎ針	ka, gi, bari;
+賭け金	ka; ke, kin;
+核の傘	kaku; no, kasa;
+紙きれ	kami; ki, re,
+空だき	kara; da, ki,
+涸らす	ka; ra, su,
+重なり	kasa; na, ri,
+貸し金	ka; shi, kin;
+畏くも	kashiko; ku, mo,
+語らい	kata; ra, i,
+担ぎ屋	katsu; gi, ya;
+渇ごう	katsu; go, u,
+逃げ腰	ni; ge, goshi;
+みる貝	mi, ru, gai;
+甘えび	ama; e, bi,
+バカ貝	ba. ka. gai;
+とり貝	to, ri, gai;
+がん黒	ga, n, guro;
+飛ばし	to; ba, shi,
+仏の座	hotoke; no, za;
+煮しめ	ni; shi, me,
+がに股	ga, ni, mata;
+ガニ股	ga. ni. mata;
+着メロ	chaku; me. ro.
+干し飯	ho; shi, ii;
+乾し飯	ho; shi, ii;
+オフ会	o. fu. kai;
+担い手	nina; i, te;
+回し者	mawa; shi, mono;
+疚しい	yama; shi, i,
+貸し本	ka; shi, hon;
+飛び地	to; bi, chi;
+半ケツ	han; ke. tsu.
+捕り手	to; ri, te;
+外タレ	gai; ta. re.
+遊ばす	aso; ba, su,
+お祓い	o, hara; i,
+矢がら	ya; ga, ra,
+心ない	kokoro; na, i,
+心する	kokoro; su, ru,
+食い物	ku; i, mono;
+喰い物	ku; i, mono;
+位する	kurai; su, ru,
+草の葉	kusa; no, ha;
+くせ毛	ku, se, ge;
+狭さく	kyou; sa, ku,
+饗する	kyou; su, ru,
+賄い方	makana; i, kata;
+守り刀	mamo; ri, gatana;
+回し金	mawa; shi, gane;
+芽ぶく	me; bu, ku,
+巡らす	megu; ra, su,
+めし粒	me, shi, tsubu;
+身の程	mi; no, hodo;
+水きり	mizu; ki, ri,
+燃え殻	mo; e, gara;
+物ごい	mono; go, i,
+物おじ	mono; o, ji,
+迎え角	muka; e, kaku;
+流し網	naga; shi, ami;
+慰め顔	nagusa; me, gao;
+生つば	nama; tsu, ba,
+涙ぐむ	namida; gu, mu,
+なお又	na, o, mata;
+尚また	nao; ma, ta,
+猶また	nao; ma, ta,
+尚の事	nao; no, koto;
+猶の事	nao; no, koto;
+習い事	nara; i, goto;
+粘つく	neba; tsu, ku,
+寝とる	ne; to, ru,
+煮え湯	ni; e, yu;
+人べん	nin; be, n,
+後の世	nochi; no, yo;
+残った	noko; tta,
+抜かり	nu; ka, ri,
+抜け毛	nu; ke, ge;
+脱け毛	nu; ke, ge;
+尾ひれ	o; hi, re,
+尾びれ	o; bi, re,
+負い目	o; i, me;
+老い先	o; i, saki;
+措いて	o; i, te,
+臆する	oku; su, ru,
+面もち	omo; mo, chi,
+狭き門	sema; ki, mon;
+渋り腹	shibu; ri, bara;
+敷き石	shi; ki, ishi;
+知る辺	shi; ru, be;
+疲れた	tsuka; re, ta,
+マル秘	ma. ru. hi;
+レジ袋	re. ji. bukuro;
+鳴り物	na; ri, mono;
+跳び虫	to; bi, mushi;
+空き室	a; ki, shitsu;
+ダミ声	da. mi. goe;
+だみ声	da, mi, goe;
+訛み声	da; mi, goe;
+手おの	te; o, no,
+石ころ	ishi; ko, ro,
+雌しべ	me; shi, be,
+いく人	i, ku, nin;
+いく人	i, ku, tari;
+流し台	naga; shi, dai;
+ネコ科	ne. ko. ka;
+鬼ばば	oni; ba, ba,
+明き盲	a; ki, mekura;
+容ぼう	you; bo, u,
+抜き身	nu; ki, mi;
+抜き刷	nu; ki, zuri;
+別れ話	waka; re, banashi;
+合い服	a; i, fuku;
+濁り酒	nigo; ri, zake;
+守り札	mamo; ri, fuda;
+守り神	mamo; ri, gami;
+着つけ	ki; tsu, ke,
+勝ち栗	ka; chi, guri;
+搗ち栗	ka; chi, guri;
+マス目	ma. su. me;
+ます目	ma, su, me;
+取り分	to; ri, bun;
+現なま	gen; na, ma,
+鯛めし	tai; me, shi,
+据え膳	su; e, zen;
+拠り所	yo; ri, dokoro;
+より所	yo, ri, dokoro;
+絶え間	ta; e, ma;
+詰め所	tsu; me, sho;
+詰め襟	tsu; me, eri;
+飾り窓	kaza; ri, mado;
+宿なし	yado; na, shi,
+際して	sai; shi, te,
+止まり	to; ma, ri,
+死に体	shi; ni, tai;
+資する	shi; su, ru,
+持ち家	mo; chi, ie;
+持ち家	mo; chi, ya;
+持ち株	mo; chi, kabu;
+持ち味	mo; chi, aji;
+取り口	to; ri, kuchi;
+手の内	te; no, uchi;
+週あけ	shuu; a, ke,
+宿り木	yado; ri, gi;
+詰め物	tsu; me, mono;
+救い主	suku; i, nushi;
+たっ観	ta, k,kan;
+たっ観	ta, q, kan;
+弾よけ	tama; yo, ke,
+たて糸	ta, te, ito;
+立つ瀬	ta; tsu, se;
+床ずれ	toko; zu, re,
+鳥かご	tori; ka, go,
+掴み所	tsuka; mi, dokoro;
+摑み所	tsuka; mi, dokoro;
+売り方	u; ri, kata;
+歌い手	uta; i, te;
+寄る辺	yo; ru, be;
+攻め口	se; me, kuchi;
+攻め口	se; me, guchi;
+胸くそ	muna; ku, so,
+胸くそ	mune; ku, so,
+泣き面	na; ki, tsura;
+転た寝	uta; ta, ne;
+びん乱	bi, n, ran;
+この方	ko, no, kata;
+此の方	ko; no, kata;
+この方	ko, no, hou;
+此の方	ko; no, hou;
+二つ宛	futa; tsu, zutsu;
+二つ宛	futa; tsu, ate;
+焼き畑	ya; ki, bata;
+焼き畑	ya; ki, hata;
+焼き畑	ya; ki, batake;
+継ぎ歯	tsu; gi, ba;
+継ぎ歯	tsu; gi, ha;
+選り屑	e; ri, kuzu;
+選り屑	yo; ri, kuzu;
+風よけ	kaza; yo, ke,
+風よけ	kaze; yo, ke,
+降り口	o; ri, guchi;
+下り口	o; ri, guchi;
+降り口	o; ri, kuchi;
+下り口	o; ri, kuchi;
+届け書	todo; ke, sho;
+届け書	todo; ke, gaki;
+組み杯	ku; mi, sakazuki;
+組み盃	ku; mi, sakazuki;
+組み歌	ku; mi, uta;
+組み唄	ku; mi, uta;
+止り木	toma; ri, gi;
+慰み者	nagusa; mi, mono;
+慰み物	nagusa; mi, mono;
+活け魚	i; ke, uo;
+生け魚	i; ke, uo;
+燻し銀	ibu; shi, gin;
+熏し銀	ibu; shi, gin;
+懸け橋	ka; ke, hashi;
+掛け橋	ka; ke, hashi;
+かけ橋	ka, ke, hashi;
+架け橋	ka; ke, hashi;
+かす汁	ka, su, jiru;
+利き酒	ki; ki, zake;
+きき酒	ki, ki, zake;
+聞き酒	ki; ki, zake;
+唎き酒	ki; ki, zake;
+晒し者	sara; shi, mono;
+曝し者	sara; shi, mono;
+接ぎ穂	tsu; gi, ho;
+継ぎ穂	tsu; gi, ho;
+接ぎ穂	tsu; gi, bo;
+継ぎ穂	tsu; gi, bo;
+腕ずく	ude; zu, ku,
+腕づく	ude; zu, ku,
+腕っ節	ude; p,pushi;
+腕っ節	ude; q, pushi;
+巻き毛	ma; ki, ge;
+巻き舌	ma; ki, jita;
+巻き紙	ma; ki, gami;
+巻き網	ma; ki, ami;
+巻き鮨	ma; ki, zushi;
+願い主	nega; i, nushi;
+わい星	wa, i, sei;
+絹ごし	kinu; go, shi,
+かん水	ka, n, sui;
+かん木	ka, n, boku;
+囲い者	kako; i, mono;
+骨ばる	hone; ba, ru,
+骨つぼ	kotsu; tsu, bo,
+骨なし	hone; na, shi,
+骨っ節	hone; p,pushi;
+骨っ節	hone; q, pushi;
+鬼っ子	oni; k,ko;
+鬼っ子	oni; q, ko;
+#鬼ヶ島	onigashima;
+鬼ヶ島	oni; xke. shima;
+#鬼ケ島	onigashima;
+鬼ケ島	oni; ke. shima;
+鬼が島	oni; ga, shima;
+回り番	mawa; ri, ban;
+血どめ	chi; do, me,
+血の雨	chi; no, ame;
+血の海	chi; no, umi;
+血の涙	chi; no, namida;
+血の道	chi; no, michi;
+血たん	ket;ta, n,
+血たん	keq; ta, n,
+血のり	chi; no, ri,
+届け物	todo; ke, mono;
+幕の内	maku; no, uchi;
+暮れ方	ku; re, gata;
+荒れ肌	a; re, hada;
+あれ肌	a, re, hada;
+荒れ性	a; re, shou;
+あれ性	a, re, shou;
+望み薄	nozo; mi, usu;
+むだ花	mu, da, bana;
+むだ飯	mu, da, meshi;
+ムダ飯	mu. da. meshi;
+なで肩	na, de, gata;
+撫で肩	na; de, gata;
+馬の足	uma; no, ashi;
+馬の骨	uma; no, hone;
+馬そり	ba; so, ri,
+明け番	a; ke, ban;
+攻め手	se; me, te;
+空っ穴	kara; k,ketsu;
+空っ穴	kara; q, ketsu;
+そら耳	so, ra, mimi;
+空っ風	kara; k,kaze;
+空っ風	kara; q, kaze;
+乾っ風	kara; k,kaze;
+乾っ風	kara; q, kaze;
+空き家	a; ki, ya;
+空き屋	a; ki, ya;
+明き家	a; ki, ya;
+空き殻	a; ki, gara;
+空き間	a; ki, ma;
+空き箱	a; ki, bako;
+空クジ	kara; ku. ji.
+空くじ	kara; ku, ji,
+控え帳	hika; e, chou;
+恐れ気	oso; re, ge;
+松の内	matsu; no, uchi;
+松やに	matsu; ya, ni,
+松ヤニ	matsu; ya. ni.
+のど元	no, do, moto;
+のど仏	no, do, botoke;
+口つき	kuchi; tsu, ki,
+口うら	kuchi; u, ra,
+口の端	kuchi; no, ha;
+口ひげ	kuchi; hi, ge,
+あと口	a, to, kuchi;
+後ろ前	ushi; ro, mae;
+後ろ指	ushi; ro, yubi;
+後の祭	ato; no, matsuri;
+はね物	ha, ne, mono;
+撥ね物	ha; ne, mono;
+抜き手	nu; ki, te;
+抜き手	nu; ki, de;
+抜き糸	nu; ki, ito;
+抜け作	nu; ke, saku;
+抜き荷	nu; ki, ni;
+抜け裏	nu; ke, ura;
+返り血	kae; ri, chi;
+返り忠	kae; ri, chuu;
+返り点	kae; ri, ten;
+破れ鍋	wa; re, nabe;
+割れ鍋	wa; re, nabe;
+割れ鐘	wa; re, gane;
+破れ鐘	wa; re, gane;
+飲み料	no; mi, ryou;
+暗たん	an; ta, n,
+やみ屋	ya, mi, ya;
+タカ派	ta. ka. ha;
+たか派	ta, ka, ha;
+堪え性	kora; e, shou;
+泣き言	na; ki, goto;
+固ゆで	kata; yu, de,
+枯れ草	ka; re, kusa;
+かれ草	ka, re, kusa;
+額ずく	nuka; zu, ku,
+額づく	nuka; zu, ku,
+戸ごと	ko; go, to,
+行く先	yu; ku, saki;
+行く先	i; ku, saki;
+行く春	yu; ku, haru;
+腫れ物	ha; re, mono;
+種まき	tane; ma, ki,
+用なし	you; na, shi,
+湧き水	wa; ki, mizu;
+涌き水	wa; ki, mizu;
+わき水	wa, ki, mizu;
+通し矢	too; shi, ya;
+通い路	kayo; i, ji;
+痛い目	ita; i, me;
+続き物	tsuzu; ki, mono;
+続け様	tsuzu; ke, zama;
+続け様	tsuzu; ke, sama;
+読み人	yo; mi, bito;
+詠み人	yo; mi, bito;
+読み癖	yo; mi, kuse;
+はげ山	ha, ge, yama;
+禿げ山	ha; ge, yama;
+禿げ頭	ha; ge, atama;
+はげ頭	ha, ge, atama;
+分けつ	bun; ke, tsu,
+分げつ	bun; ge, tsu,
+払い物	hara; i, mono;
+配り物	kuba; ri, mono;
+焚き口	ta; ki, guchi;
+焚き物	ta; ki, mono;
+捉え所	tora; e, dokoro;
+捕え所	tora; e, dokoro;
+捕え処	tora; e, dokoro;
+執え所	tora; e, dokoro;
+敷き皮	shi; ki, gawa;
+敷き革	shi; ki, gawa;
+敷き紙	shi; ki, gami;
+敷き藁	shi; ki, wara;
+うす口	u, su, kuchi;
+薄のろ	usu; no, ro,
+うす塩	u, su, jio;
+うす塩	u, su, shio;
+釜めし	kama; me, shi,
+濁り江	nigo; ri, e;
+ずだ袋	zu, da, bukuro;
+ずた袋	zu, ta, bukuro;
+投げ文	na; ge, bumi;
+投げ技	na; ge, waza;
+投げ業	na; ge, waza;
+投げ首	na; ge, kubi;
+投げ荷	na; ge, ni;
+投げ槍	na; ge, yari;
+投げ縄	na; ge, nawa;
+語り物	kata; ri, mono;
+語い力	go; i, ryoku;
+顎ひげ	ago; hi, ge,
+逆ねじ	saka; ne, ji,
+逆さ睫	saka; sa, matsuge;
+逆ざや	gyaku; za, ya,
+逆ザヤ	gyaku; za. ya.
+仰むく	ao; mu, ku,
+迎え火	muka; e, bi;
+お平に	o, taira; ni,
+御の字	on; no, ji;
+お供え	o, sona; e,
+お負け	o, ma; ke,
+お浚い	o, sara; i,
+お通し	o, too; shi,
+お高い	o, taka; i,
+お捻り	o, hine; ri,
+お達し	o, tas; shi,
+お飾り	o, kaza; ri,
+お摘み	o, tsuma; mi,
+お抓み	o, tsuma; mi,
+お撮み	o, tsuma; mi,
+油さし	abura; sa, shi,
+油かす	abura; ka, su,
+袖なし	sode; na, shi,
+中づり	naka; zu, ri,
+中づり	naka; du, ri,
+あさ湯	a, sa, yu;
+透き見	su; ki, mi;
+首っ玉	kubi; t,tama;
+首っ玉	kubi; q, tama;
+組み下	ku; mi, shita;
+組み手	ku; mi, te;
+組み糸	ku; mi, ito;
+組み重	ku; mi, juu;
+惜し気	o; shi, ge;
+惜しげ	o; shi, ge,
+跡かた	ato; ka, ta,
+狩り場	ka; ri, ba;
+討っ手	u; t,te;
+討っ手	u; q, te;
+受け口	u; ke, guchi;
+受け口	u; ke, kuchi;
+受け手	u; ke, te;
+受け腰	u; ke, goshi;
+受け箱	u; ke, bako;
+手ふき	te; fu, ki,
+手まね	te; ma, ne,
+手まり	te; ma, ri,
+手づる	te; zu, ru,
+手づる	te; du, ru,
+手ずれ	te; zu, re,
+手なべ	te; na, be,
+手かご	te; ka, go,
+####### 202102新增補充比對詞彙 japanese.jmdict.dict.yaml 結束 #######
+#######@ 202102新增日語符號類詞彙 開始 #######
 Γ分布	ganmabunpu;
 β版	be-taban;
 γ線	ganmasen;
@@ -150239,10 +152930,16 @@ columns:
 活〆	ike; shime.
 煮〆	ni; shime,
 煮〆	ni; shime.
+〆る	shime, ru,
+〆る	shime. ru,
 〆粕	shime, kasu;
 〆粕	shime. kasu;
 〆切	shime, kiri;
 〆切	shime. kiri;
+〆切り	shime, ki; ri,
+〆切り	shime. ki; ri,
+〆切る	shime, ki; ru,
+〆切る	shime. ki; ru,
 # 活け〆	ikejime,
 活け〆	i; ke, shime,
 活け〆	i; ke, shime.
@@ -150253,4 +152950,4 @@ columns:
 ＠系	attokei;
 α線	arufasen;
 ※印	komejirushi;
-#######@ 202102新增日語符號類 結束 #######
+#######@ 202102新增日語符號類詞彙 結束 #######
