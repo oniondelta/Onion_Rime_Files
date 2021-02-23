@@ -38,19 +38,19 @@ patch:
     - derive/dd([auoie])(.*)([,.;])$/qd$1$2$3/ #っだ #暫時打開測試
     - derive/bb([auoie])(.*)([,.;])$/qb$1$2$3/ #っば #暫時打開測試
     - derive/pp([auoie])(.*)([,.;])$/qp$1$2$3/ #っぱ
-### 漢字中的拗音(包含詞句中標注假名之轉換) ###
-    - derive/ky([auo])(.*)([,.;])$/kixy$1$2$3/ #きゃ
-    - derive/gy([auoie])(.*)([,.;])$/gixy$1$2$3/ #ぎゃ
-    - derive/sh([auo])(.*)([,.;])$/shixy$1$2$3/ #しゃ
-    - derive/j([auo])(.*)([,.;])$/jixy$1$2$3/ #じゃ
-    - derive/dy([auoie])(.*)([,.;])$/dixy$1$2$3/ #ぢゃ
-    - derive/ch([auoe])(.*)([,.;])$/chixy$1$2$3/ #ちゃ
-    - derive/ny([auoie])(.*)([,.;])$/nixy$1$2$3/ #にゃ
-    - derive/hy([auoie])(.*)([,.;])$/hixy$1$2$3/ #ひゃ
-    - derive/by([auoe])(.*)([,.;])$/bixy$1$2$3/ #びゃ
-    - derive/py([auoie])(.*)([,.;])$/pixy$1$2$3/ #ぴゃ
-    - derive/my([auoie])(.*)([,.;])$/mixy$1$2$3/ #みゃ
-    - derive/ry([auoie])(.*)([,.;])$/rixy$1$2$3/ #りゃ
+# ### 漢字中的拗音(包含詞句中標注假名之轉換) ###
+#     - derive/ky([auo])(.*)([,.;])$/kixy$1$2$3/ #きゃ
+#     - derive/gy([auoie])(.*)([,.;])$/gixy$1$2$3/ #ぎゃ
+#     - derive/sh([auo])(.*)([,.;])$/shixy$1$2$3/ #しゃ
+#     - derive/j([auo])(.*)([,.;])$/jixy$1$2$3/ #じゃ
+#     - derive/dy([auoie])(.*)([,.;])$/dixy$1$2$3/ #ぢゃ
+#     - derive/ch([auoe])(.*)([,.;])$/chixy$1$2$3/ #ちゃ
+#     - derive/ny([auoie])(.*)([,.;])$/nixy$1$2$3/ #にゃ
+#     - derive/hy([auoie])(.*)([,.;])$/hixy$1$2$3/ #ひゃ
+#     - derive/by([auoe])(.*)([,.;])$/bixy$1$2$3/ #びゃ
+#     - derive/py([auoie])(.*)([,.;])$/pixy$1$2$3/ #ぴゃ
+#     - derive/my([auoie])(.*)([,.;])$/mixy$1$2$3/ #みゃ
+#     - derive/ry([auoie])(.*)([,.;])$/rixy$1$2$3/ #りゃ
 ### 漢字中的其他 ###
     - derive/ty([e])(.*)(;)$/chix$1$2$3/ #ちぇ
 ##### 單字或詞彙中的假名和漢字，拼音轉寫 #####
