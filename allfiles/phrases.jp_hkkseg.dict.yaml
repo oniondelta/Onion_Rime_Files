@@ -8012,6 +8012,7 @@ columns:
 原因	genin;
 開戦	kaisen;
 定ま	sada; ma,
+ヶ月	kagetsu;
 ヶ月	xke. getsu;
 箇月	kagetsu;
 明後日	asatte;
@@ -9549,6 +9550,7 @@ columns:
 思い描	omo; i, ega;
 交易	koueki;
 及第	kyuudai;
+ヶ国	kakoku;
 ヶ国	xke. koku;
 輝き	kagaya; ki,
 新製品	shinseihin;
@@ -11237,6 +11239,7 @@ columns:
 画鋲	gabyou;
 集成	shuusei;
 ヶ所	xke. sho;
+ヶ所	kasho;
 便所	benjo;
 多忙	tabou;
 大胆	daitan;
@@ -42860,9 +42863,10 @@ columns:
 アッと言う間に	a, tto, i; u, ma; ni,
 アッと言う間に	a, tto, yu; u, ma; ni,
 アッとゆう間に	a, tto, yu, u, ma; ni,
-#一ヶ	ikko;
-一ヶ	iq; xke,
-一ヶ	ik;ke,
+一ヶ	ikko;
+一ヶ	iq; xke.
+一ヶ	ik;ke.
+一ヶ	ig;ga.
 彼の	a; no,
 彼の	ka; no,
 あの人	a, no, hito;
@@ -148209,7 +148213,7 @@ columns:
 と畜場	to, chikujou;
 お目目	o, meme;
 お目々	o, meme;
-#ヶ国語	ka. kokugo;
+ヶ国語	kakokugo;
 ヶ国語	xke. kokugo;
 カ国語	ka. kokugo;
 か国語	ka, kokugo;
@@ -148750,7 +148754,7 @@ columns:
 何の某	nan; no, nanigashi;
 何れも	do; re, mo,
 何れも	izu; re, mo,
-#何ヶ月	nankagetsu;
+何ヶ月	nankagetsu;
 何ヶ月	nan; xke. getsu;
 #何ヵ月	nankagetsu;
 何ヵ月	nan; xka. getsu;
@@ -148793,7 +148797,7 @@ columns:
 虐める	iji; me, ru,
 似たり	ni; ta, ri,
 課する	ka; su, ru,
-#霞ヶ関	kasumigaseki;
+#霞ヶ関	kasumi; ga. seki;
 霞ヶ関	kasumi; xke. seki;
 霞が関	kasumi; ga, seki;
 #霞ケ関	kasumigaseki;
@@ -150667,7 +150671,7 @@ columns:
 二の舞	ni; no, mai;
 二の矢	ni; no, ya;
 二カ所	ni; ka. sho;
-#二ヶ所	nikasho;
+二ヶ所	nikasho;
 二ヶ所	ni; xke. sho;
 二か所	ni; ka, sho;
 #二ケ所	nikasho;
@@ -151883,7 +151887,7 @@ columns:
 順々に	junjun; ni,
 吸い殻	su; i, gara;
 吸がら	sui; ga, ra,
-#数ヶ月	suukagetsu;
+数ヶ月	suukagetsu;
 数ヶ月	suu; xke. getsu;
 #数ヵ月	suukagetsu;
 数ヵ月	suu; xka. getsu;
@@ -152720,7 +152724,7 @@ columns:
 骨っ節	hone; q, pushi;
 鬼っ子	oni; k,ko;
 鬼っ子	oni; q, ko;
-#鬼ヶ島	onigashima;
+#鬼ヶ島	oni; ga. shima;
 鬼ヶ島	oni; xke. shima;
 #鬼ケ島	onigashima;
 鬼ケ島	oni; ke. shima;
@@ -154618,13 +154622,13 @@ columns:
 身の毛	mi; no, ke;
 進め方	susu; me, kata;
 水の泡	mizu; no, awa;
-#数ヶ国	suukakoku;
+数ヶ国	suukakoku;
 数ヶ国	suu; xke. koku;
 #数ケ国	suukakoku;
 数ケ国	suu; ke. koku;
 数か国	suu; ka, koku;
 数カ国	suu; ka. koku;
-#数ヶ所	suukasho;
+数ヶ所	suukasho;
 数ヶ所	suu; xke. sho;
 #数ケ所	suukasho;
 数ケ所	suu; ke. sho;
@@ -156563,7 +156567,7 @@ columns:
 ヲタ車	wo. ta. sha;
 擦り半	su; ri, ban;
 擂り半	su; ri, ban;
-#二ヶ月	nikagetsu;
+二ヶ月	nikagetsu;
 二ヶ月	ni; xke. getsu;
 #二ヵ月	nikagetsu;
 二ヵ月	ni; xka. getsu;
@@ -156588,7 +156592,7 @@ columns:
 二カ年	ni; ka. nen;
 #二ヵ年	nikanen;
 二ヵ年	ni; xka. nen;
-#二ヶ年	nikanen;
+二ヶ年	nikanen;
 二ヶ年	ni; xke. nen;
 二か年	ni; ka, nen;
 #二ケ年	nikanen;
@@ -156596,7 +156600,7 @@ columns:
 三カ年	san; ka. nen;
 #三ヵ年	sankanen;
 三ヵ年	san; xka. nen;
-#三ヶ年	sankanen;
+三ヶ年	sankanen;
 三ヶ年	san; xke. nen;
 三か年	san; ka, nen;
 #三ケ年	sankanen;
@@ -156604,7 +156608,7 @@ columns:
 四カ年	yon; ka. nen;
 #四ヵ年	yonkanen;
 四ヵ年	yon; xka. nen;
-#四ヶ年	yonkanen;
+四ヶ年	yonkanen;
 四ヶ年	yon; xke. nen;
 四か年	yon; ka, nen;
 #四ケ年	yonkanen;
@@ -156612,7 +156616,7 @@ columns:
 五カ年	go; ka. nen;
 #五ヵ年	gokanen;
 五ヵ年	go; xka. nen;
-#五ヶ年	gokanen;
+五ヶ年	gokanen;
 五ヶ年	go; xke. nen;
 五か年	go; ka, nen;
 #五ケ年	gokanen;
@@ -156621,8 +156625,9 @@ columns:
 六カ年	roq; ka. nen;
 六ヵ年	rok;ka. nen;
 六ヵ年	roq; xka. nen;
-#六ヶ年	rokkanen;
+六ヶ年	rokkanen;
 六ヶ年	roq; xke. nen;
+六ヶ年	rog;ga. nen;
 六か年	rok;ka, nen;
 六か年	roq; ka, nen;
 #六ケ年	rokkanen;
@@ -156631,7 +156636,7 @@ columns:
 七カ年	nana; ka. nen;
 #七ヵ年	nanakanen;
 七ヵ年	nana; xka. nen;
-#七ヶ年	nanakanen;
+七ヶ年	nanakanen;
 七ヶ年	nana; xke. nen;
 七か年	nana; ka, nen;
 #七ケ年	nanakanen;
@@ -156639,7 +156644,7 @@ columns:
 八カ年	hachi; ka. nen;
 #八ヵ年	hachikanen;
 八ヵ年	hachi; xka. nen;
-#八ヶ年	hachikanen;
+八ヶ年	hachikanen;
 八ヶ年	hachi; xke. nen;
 八か年	hachi; ka, nen;
 #八ケ年	hachikanen;
@@ -156647,7 +156652,7 @@ columns:
 九カ年	kyuu; ka. nen;
 #九ヵ年	kyuukanen;
 九ヵ年	kyuu; xka. nen;
-#九ヶ年	kyuukanen;
+九ヶ年	kyuukanen;
 九ヶ年	kyuu; xke. nen;
 九か年	kyuu; ka, nen;
 #九ケ年	kyuukanen;
@@ -156655,7 +156660,7 @@ columns:
 十カ年	juu; ka. nen;
 #十ヵ年	juukanen;
 十ヵ年	juu; xka. nen;
-#十ヶ年	juukanen;
+十ヶ年	juukanen;
 十ヶ年	juu; xke. nen;
 十か年	juu; ka, nen;
 #十ケ年	juukanen;
@@ -158394,6 +158399,8 @@ columns:
 活け〆	i; ke, shime,
 活け〆	i; ke, shime.
 #見ヶ〆	mikajime;
+見ヶ〆	mika; shime,
+見ヶ〆	mika; shime.
 見ヶ〆	mi; xke. shime,
 見ヶ〆	mi; xke. shime.
 #見ケ〆	mikajime;
