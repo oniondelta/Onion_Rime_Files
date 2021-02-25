@@ -169857,7 +169857,7 @@ columns:
 バスク語	ba. su. ku. go;
 チンド犬	chi. n. do. ken;
 デモ活動	de. mo. katsudou;
-シュー皮	shu - kawa;
+シュー皮	shu. - kawa;
 ケレン味	ke. re. n. mi;
 ウェイ系	whe. i. kei;
 エラ張り	e. ra. ba; ri,
@@ -169907,6 +169907,509 @@ columns:
 お尋ね者	o, tazu; ne, mono;
 お疲れ様	o, tsuka; re, sama;
 お話し中	o, hana; shi, chuu;
+掻っ攫う	ka; s,sara; u,
+掻っ攫う	ka; q, sara; u,
+利かん気	ki; ka, n, ki;
+限り限り	gi; ri, gi; ri,
+食っ付く	ku; t,tsu; ku,
+食っ付く	ku; q, tsu; ku,
+験を担ぐ	gen; wo, katsu; gu,
+斯う言う	ko; u, i; u,
+斯う言う	ko; u, yu; u,
+曝け出す	sara; ke, da; su,
+様を見ろ	zama; wo, mi; ro,
+沁み沁み	shi; mi, ji; mi,
+染み染み	shi; mi, ji; mi,
+泌み泌み	shi; mi, ji; mi,
+啜り泣く	susu; ri, na; ku,
+擦れ擦れ	su; re, su; re,
+然う然う	so; u, so; u,
+漫ろ歩き	sozo; ro, aru; ki,
+其の上で	so; no, ue; de,
+其れ処か	so; re, dokoro; ka,
+其れ所か	so; re, dokoro; ka,
+其れ故に	so; re, yue; ni,
+騙し取る	dama; shi, to; ru,
+掴み取る	tsuka; mi, to; ru,
+摑み取る	tsuka; mi, to; ru,
+と言う物	to, i; u, mono;
+無け無し	na; ke, na; shi,
+打っ通し	bu; t,too; shi,
+打っ通し	bu; q, too; shi,
+殆どの人	hoton; do, no, hito;
+真っ四角	ma; s,shi; kaku;
+真っ四角	ma; q, shi; kaku;
+見す見す	mi; su, mi; su,
+持て成し	mo; te, na; shi,
+矢っ張り	ya; p,pa; ri,
+矢っ張り	ya; q, pa; ri,
+遣り繰り	ya; ri, ku; ri,
+遣り取り	ya; ri, to; ri,
+揺ら揺ら	yu; ra, yu; ra,
+打ち殺す	bu; chi, koro; su,
+ぷー太郎	pu, - tarou;
+ぷー太郎	pu, - taro-;
+愛の結晶	ai; no, kesshou;
+悪く言う	waru; ku, i; u,
+悪たれ口	aku; ta, re, guchi;
+悪に傾く	aku; ni, katamu; ku,
+握り寿司	nigi; ri, zushi;
+握り潰し	nigi; ri, tsubu; shi,
+圧し合う	he; shi, a; u,
+圧し込む	he; shi, ko; mu,
+圧し殺す	o; shi, koro; su,
+押し殺す	o; shi, koro; su,
+圧し折る	he; shi, o; ru,
+杏ジャム	anzu; ja. mu.
+以ての外	mot;te, no, hoka;
+以ての外	moq; te, no, hoka;
+囲み記事	kako; mi, kiji;
+為て遣る	shi; te, ya; ru,
+移り行く	utsu; ri, yu; ku,
+映り行く	utsu; ri, yu; ku,
+移り変り	utsu; ri, kawa; ri,
+育ち行く	soda; chi, yu; ku,
+育ての親	soda; te, no, oya;
+独り芝居	hito; ri, shibai;
+独り舞台	hito; ri, butai;
+独り歩き	hito; ri, aru; ki,
+溢れ出る	afu; re, de; ru,
+#芋づる式	imo; zu, ru, shiki;
+芋づる式	imo; du, ru, shiki;
+引き下げ	hi; ki, sa; ge,
+引き回す	hi; ki, mawa; su,
+引き廻す	hi; ki, mawa; su,
+引き起す	hi; ki, oko; su,
+惹き起す	hi; ki, oko; su,
+引き去る	hi; ki, sa; ru,
+引き継ぐ	hi; ki, tsu; gu,
+引き絞る	hi; ki, shibo; ru,
+引き合う	hi; ki, a; u,
+引き込む	hi; ki, ko; mu,
+引き取る	hi; ki, to; ru,
+引き摺り	hi; ki, zu; ri,
+引き摺る	hi; ki, zu; ru,
+引き締る	hi; ki, shima; ru,
+引き当て	hi; ki, a; te,
+引き抜き	hi; ki, nu; ki,
+引き抜く	hi; ki, nu; ku,
+引き払う	hi; ki, hara; u,
+引き分け	hi; ki, wa; ke,
+引き返す	hi; ki, kae; su,
+引き放つ	hi; ki, hana; tsu,
+引き戻す	hi; ki, modo; su,
+引き離す	hi; ki, hana; su,
+引き立つ	hi; ki, ta; tsu,
+引き裂く	hi; ki, sa; ku,
+引き籠る	hi; ki, komo; ru,
+引き篭る	hi; ki, komo; ru,
+引き攣り	hi; ki, tsu; ri,
+引き吊り	hi; ki, tsu; ri,
+引っ越す	hi; k,ko; su,
+引っ越す	hi; q, ko; su,
+引き越す	hi; ki, ko; su,
+引っ掛る	hi; k,kaka; ru,
+引っ掛る	hi; q, kaka; ru,
+引っ込み	hi; k,ko; mi,
+引っ込み	hi; q, ko; mi,
+引っ込む	hi; k,ko; mu,
+引っ込む	hi; q, ko; mu,
+引っ掻く	hi; k,ka; ku,
+引っ掻く	hi; q, ka; ku,
+引っ叩く	hi; p,pata; ku,
+引っ叩く	hi; q, pata; ku,
+飲み下す	no; mi, kuda; su,
+飲み回す	no; mi, mawa; su,
+飲み回る	no; mi, mawa; ru,
+飲み干す	no; mi, ho; su,
+飲み乾す	no; mi, ho; su,
+飲み食い	no; mi, ku; i,
+飲み逃げ	no; mi, ni; ge,
+飲み放題	no; mi, houdai;
+隠し撮り	kaku; shi, do; ri,
+隠し場所	kaku; shi, basho;
+隠し食い	kaku; shi, gu; i,
+隠し立て	kaku; shi, da; te,
+隠れ借金	kaku; re, shakkin;
+烏の行水	karasu; no, gyouzui;
+窺い知る	ukaga; i, shi; ru,
+伺い知る	ukaga; i, shi; ru,
+嘘っ八百	usoppa; p,pyaku;
+嘘っ八百	usoppa; q, pyaku;
+嘘を付く	uso; wo, tsu; ku,
+嘘を吐く	uso; wo, tsu; ku,
+運が悪い	un; ga, waru; i,
+運び込む	hako; bi, ko; mu,
+運び出す	hako; bi, da; su,
+嬰ヘ長調	ei; he, chouchou;
+悦に入る	etsu; ni, i; ru,
+円グラフ	en; gu. ra. fu.
+円すい形	en; su, i, kei;
+延び延び	no; bi, no; bi,
+延べ坪数	no; be, tsubosuu;
+凹レンズ	ou; re. n. zu.
+往き返り	yu; ki, kae; ri,
+押え込む	osa; e, ko; mu,
+押ボタン	oshi; bo. ta. n.
+押し詰る	o; shi, tsuma; ru,
+押し合い	o; shi, a; i,
+押し合う	o; shi, a; u,
+押し込む	o; shi, ko; mu,
+押し切る	o; shi, ki; ru,
+押し通す	o; shi, too; su,
+押し通る	o; shi, too; ru,
+押し潰す	o; shi, tsubu; su,
+圧し潰す	o; shi, tsubu; su,
+押し倒す	o; shi, tao; su,
+押し入る	o; shi, i; ru,
+押し破る	o; shi, yabu; ru,
+押し返す	o; shi, kae; su,
+押し黙る	o; shi, dama; ru,
+押し戻す	o; shi, modo; su,
+押し問答	o; shi, mondou;
+押し流す	o; shi, naga; su,
+押し切り	o; shi, ki; ri,
+殴り合い	nagu; ri, a; i,
+殴り合う	nagu; ri, a; u,
+殴り込み	nagu; ri, ko; mi,
+擲り込み	nagu; ri, ko; mi,
+殴り殺す	nagu; ri, koro; su,
+殴り倒す	nagu; ri, tao; su,
+億ション	oku; sho. n.
+卸し問屋	oro; shi, donya;
+恩が有る	on; ga, a; ru,
+下がり松	sa; ga, ri, matsu;
+下げ振り	sa; ge, fu; ri,
+下げ相場	sa; ge, souba;
+下げ渡す	sa; ge, wata; su,
+下し大根	oro; shi, daikon;
+卸し大根	oro; shi, daikon;
+下り上り	o; ri, nobo; ri,
+下がり目	sa; ga, ri, me;
+下り立つ	o; ri, ta; tsu,
+降り立つ	o; ri, ta; tsu,
+下り列車	kuda; ri, ressha;
+下ろし薬	o; ro, shigusuri;
+下っ放れ	shita; p,pana; re,
+下っ放れ	shita; q, pana; re,
+化けの皮	ba; ke, no, kawa;
+仮の宿り	kari; no, yado; ri,
+仮とじ本	kari; to, ji, hon;
+何だ彼だ	nan; da, kan; da,
+何だ彼だ	nan; da, ka; da,
+何でも屋	nan; de, mo, ya;
+何と言う	nan; to, i; u,
+何と言う	nan; to, yu; u,
+何や彼や	nani; ya, ka; ya,
+何れ何れ	do; re, do; re,
+家なき子	ie; na, ki, ko;
+果し合い	hata; shi, a; i,
+歌い合う	uta; i, a; u,
+火の見櫓	hi; no, miyagura;
+苛めっ子	iji; me, k,ko;
+苛めっ子	iji; me, q, ko;
+過ぎ去る	su; gi, sa; ru,
+俄か景気	niwa; ka, geiki;
+俄か成金	niwa; ka, narikin;
+俄か分限	niwa; ka, bungen;
+俄か勉強	niwa; ka, benkyou;
+我も我も	ware; mo, ware; mo,
+我を出す	ga; wo, da; su,
+我を折る	ga; wo, o; ru,
+我を張る	ga; wo, ha; ru,
+我を通す	ga; wo, too; su,
+我が物顔	wa; ga, monogao;
+臥し転ぶ	fu; shi, maro; bu,
+会う約束	a; u, yakusoku;
+回り舞台	mawa; ri, butai;
+悔し泣き	kuya; shi, na; ki,
+悔やみ状	ku; ya, mi, jou;
+開き直る	hira; ki, nao; ru,
+開け閉て	a; ke, ta; te,
+開け放す	a; ke, hana; su,
+明け放す	a; ke, hana; su,
+開け放つ	a; ke, hana; tsu,
+貝ボタン	kai; bo. ta. n.
+他に何か	hoka; ni, nani; ka,
+外に何か	hoka; ni, nani; ka,
+咳き払い	se; ki, bara; i,
+掛け合う	ka; ke, a; u,
+懸け合う	ka; ke, a; u,
+掛け算器	ka; ke, zanki;
+掛け売り	ka; ke, u; ri,
+割り引く	wa; ri, bi; ku,
+割り栗石	wa; ri, guriishi;
+割り出す	wa; ri, da; su,
+割り振り	wa; ri, fu; ri,
+割り振る	wa; ri, fu; ru,
+割り切る	wa; ri, ki; ru,
+割り普請	wa; ri, bushin;
+割り返し	wa; ri, kae; shi,
+割り戻す	wa; ri, modo; su,
+割れ易い	wa; re, yasu; i,
+割ぽう着	kap;po, u, gi;
+割ぽう着	kaq; po, u, gi;
+恰も好し	ataka; mo, yo; shi,
+滑り易い	sube; ri, yasu; i,
+滑り寄る	sube; ri, yo; ru,
+滑り込む	sube; ri, ko; mu,
+滑り入る	sube; ri, i; ru,
+釜を掘る	kama; wo, ho; ru,
+噛み合う	ka; mi, a; u,
+噛み砕く	ka; mi, kuda; ku,
+噛み殺す	ka; mi, koro; su,
+噛み熟す	ka; mi, kona; su,
+噛み切る	ka; mi, ki; ru,
+噛み付く	ka; mi, tsu; ku,
+刈り干す	ka; ri, ho; su,
+刈り込み	ka; ri, ko; mi,
+刈り込む	ka; ri, ko; mu,
+苅り込む	ka; ri, ko; mu,
+刈り取る	ka; ri, to; ru,
+刈り入れ	ka; ri, i; re,
+刈り葺く	ka; ri, fu; ku,
+刈り立て	ka; ri, ta; te,
+巻き込む	ma; ki, ko; mu,
+巻き付く	ma; ki, tsu; ku,
+巻き戻す	ma; ki, modo; su,
+感じ取る	kan; ji, to; ru,
+敢え無く	a; e, na; ku,
+汗を掻く	ase; wo, ka; ku,
+汗を搔く	ase; wo, ka; ku,
+甘い小説	ama; i, shousetsu;
+甘えっ子	ama; e, k,ko;
+甘えっ子	ama; e, q, ko;
+甘く見る	ama; ku, mi; ru,
+貫き通す	tsuranu; ki, too; su,
+貫き通す	nu; ki, too; su,
+間に合う	ma; ni, a; u,
+合いの子	ai; no, ko;
+間も無く	ma; mo, na; ku,
+落ち入る	o; chi, i; ru,
+丸っ切り	maru; k,ki; ri,
+丸っ切り	maru; q, ki; ri,
+丸め込む	maru; me, ko; mu,
+含み笑い	fuku; mi, wara; i,
+雁の使い	kari; no, tsuka; i,
+雁の便り	kari; no, tayo; ri,
+顔を潰す	kao; wo, tsubu; su,
+願い出る	nega; i, de; ru,
+喜び勇む	yoroko; bi, isa; mu,
+寄せ集め	yo; se, atsu; me,
+寄り合い	yo; ri, a; i,
+寄り合う	yo; ri, a; u,
+寄り添う	yo; ri, so; u,
+寄り付く	yo; ri, tsu; ku,
+寄り縋る	yo; ri, suga; ru,
+既の所で	sunde; no, tokoro; de,
+気が狂う	ki; ga, kuru; u,
+気が合う	ki; ga, a; u,
+気が済む	ki; ga, su; mu,
+気が重い	ki; ga, omo; i,
+気が短い	ki; ga, mijika; i,
+気が利く	ki; ga, ki; ku,
+気が立つ	ki; ga, ta; tsu,
+気に障る	ki; ni, sawa; ru,
+気に触る	ki; ni, sawa; ru,
+気に入る	ki; ni, i; ru,
+気の所為	ki; no, sei;
+気の無い	ki; no, na; i,
+気を許す	ki; wo, yuru; su,
+気を付け	ki; wo, tsu; ke,
+祈とう者	ki; to, u, sha;
+起き上る	o; ki, aga; ru,
+偽り語る	itsuwa; ri, kata; ru,
+偽り誓う	itsuwa; ri, chika; u,
+戯け芝居	odo; ke, shibai;
+疑い深い	utaga; i, buka; i,
+掬い取る	suku; i, to; ru,
+掬い出す	suku; i, da; su,
+菊の御紋	kiku; no, gomon;
+詰め寄る	tsu; me, yo; ru,
+詰め込む	tsu; me, ko; mu,
+久し振り	hisa; shi, bu; ri,
+休み休み	yasu; mi, yasu; mi,
+休み茶屋	yasu; mi, jaya;
+及び難い	oyo; bi, gata; i,
+吸い込む	su; i, ko; mu,
+吸い取る	su; i, to; ru,
+吸い付く	su; i, tsu; ku,
+急き込む	se; ki, ko; mu,
+救い出す	suku; i, da; su,
+汲み取る	ku; mi, to; ru,
+酌み取る	ku; mi, to; ru,
+汲み取り	ku; mi, to; ri,
+泣き喚く	na; ki, wame; ku,
+泣き叫ぶ	na; ki, sake; bu,
+泣き笑い	na; ki, wara; i,
+泣き上戸	na; ki, jougo;
+泣き潰す	na; ki, tsubu; su,
+泣き付く	na; ki, tsu; ku,
+泣き伏す	na; ki, fu; su,
+泣き別れ	na; ki, waka; re,
+泣き暮す	na; ki, kura; su,
+泣き明す	na; ki, aka; su,
+泣き落す	na; ki, oto; su,
+泣き沈む	na; ki, shizu; mu,
+恐れ戦く	oso; re, onono; ku,
+恐れ入る	oso; re, i; ru,
+畏れ入る	oso; re, i; ru,
+挟み撃ち	hasa; mi, u; chi,
+挟み打ち	hasa; mi, u; chi,
+挟み込む	hasa; mi, ko; mu,
+教え込む	oshi; e, ko; mu,
+狂い回る	kuru; i, mawa; ru,
+狂い咲き	kuru; i, za; ki,
+矯め直す	ta; me, nao; su,
+脅し文句	odo; shi, monku;
+響き渡る	hibi; ki, wata; ru,
+驚き入る	odoro; ki, i; ru,
+仰ぎ見る	ao; gi, mi; ru,
+仰ぎ奉る	ao; gi, tatematsu; ru,
+仰ぎ望み	ao; gi, nozo; mi,
+仰け反る	no; ke, zo; ru,
+仰る通り	ossha; ru, too; ri,
+曲がり角	ma; ga, ri, kado;
+曲がり目	ma; ga, ri, me;
+曲げ易い	ma; ge, yasu; i,
+勤め向き	tsuto; me, mu; ki,
+勤め振り	tsuto; me, bu; ri,
+勤め盛り	tsuto; me, zaka; ri,
+勤め働く	tsuto; me, hatara; ku,
+勤め奉公	tsuto; me, boukou;
+近い内に	chika; i, uchi; ni,
+近い将来	chika; i, shourai;
+金を遣う	kane; wo, tsuka; u,
+金を使う	kane; wo, tsuka; u,
+金メダル	kin; me. da. ru.
+銀メダル	gin; me. da. ru.
+駆け回る	ka; ke, mawa; ru,
+駆け寄る	ka; ke, yo; ru,
+駆け込み	ka; ke, ko; mi,
+駆け込む	ka; ke, ko; mu,
+駈け込む	ka; ke, ko; mu,
+駆け上る	ka; ke, aga; ru,
+駆け登る	ka; ke, nobo; ru,
+駆け上る	ka; ke, nobo; ru,
+空き部屋	a; ki, beya;
+掘り起す	ho; ri, oko; su,
+掘り出す	ho; ri, da; su,
+掘り抜く	ho; ri, nu; ku,
+堀り抜く	ho; ri, nu; ku,
+繰り越す	ku; ri, ko; su,
+繰り延べ	ku; ri, no; be,
+繰り込み	ku; ri, ko; mi,
+繰り出す	ku; ri, da; su,
+繰り返し	ku; ri, kae; shi,
+繰り返す	ku; ri, kae; su,
+群れ居る	mu; re, i; ru,
+係り合い	kaka; ri, a; i,
+掛り合い	kaka; ri, a; i,
+傾け倒す	katamu; ke, tao; su,
+継ぎ接ぎ	tsu; gi, ha; gi,
+継ぎ足す	tsu; gi, ta; su,
+接ぎ足す	tsu; gi, ta; su,
+迎え撃つ	muka; e, u; tsu,
+邀え撃つ	muka; e, u; tsu,
+打ち合う	u; chi, a; u,
+決り悪い	kima; ri, waru; i,
+決り文句	kima; ri, monku;
+決め込む	ki; me, ko; mu,
+極め込む	ki; me, ko; mu,
+穴あけ器	ana; a, ke, ki;
+結び付き	musu; bi, tsu; ki,
+結び付く	musu; bi, tsu; ku,
+血を引く	chi; wo, hi; ku,
+兼ね合い	ka; ne, a; i,
+剣を抜く	tsurugi; wo, nu; ku,
+剣を抜く	ken; wo, nu; ku,
+建て回す	ta; te, mawa; su,
+建て増す	ta; te, ma; su,
+肩を持つ	kata; wo, mo; tsu,
+見い出す	mi; i, da; su,
+見え透く	mi; e, su; ku,
+見かけ上	mi; ka, ke, jou;
+見せ掛け	mi; se, ka; ke,
+見て取る	mi; te, to; ru,
+遣り通す	ya; ri, too; su,
+幻を追う	maboroshi; wo, o; u,
+言い回し	i; i, mawa; shi,
+言い開く	i; i, hira; ku,
+言い寄る	i; i, yo; ru,
+言い及ぶ	i; i, oyo; bu,
+言い交す	i; i, kawa; su,
+言い出す	i; i, da; su,
+言い切る	i; i, ki; ru,
+言い争う	i; i, araso; u,
+言い送る	i; i, oku; ru,
+言い足す	i; i, ta; su,
+言い張る	i; i, ha; ru,
+言い渡す	i; i, wata; su,
+言い表す	i; i, arawa; su,
+言い現す	i; i, arawa; su,
+言い返す	i; i, kae; su,
+言い募る	i; i, tsuno; ru,
+言い放つ	i; i, hana; tsu,
+限り無い	kagi; ri, na; i,
+限り無く	kagi; ri, na; ku,
+呼び回る	yo; bi, mawa; ru,
+呼び起す	yo; bi, oko; su,
+喚び起す	yo; bi, oko; su,
+呼び込む	yo; bi, ko; mu,
+呼び捨て	yo; bi, su; te,
+呼び出す	yo; bi, da; su,
+喚び出す	yo; bi, da; su,
+呼び返す	yo; bi, kae; su,
+呼び戻す	yo; bi, modo; su,
+弧を描く	ko; wo, ega; ku,
+誇り高い	hoko; ri, taka; i,
+互い違い	taga; i, chiga; i,
+後ろ向き	ushi; ro, mu; ki,
+お互い様	o, taga; i, sama;
+ご用の方	go, you; no, kata;
+語り継ぐ	kata; ri, tsu; gu,
+語り合う	kata; ri, a; u,
+乞い取る	ko; i, to; ru,
+交ぜ織り	ma; ze, o; ri,
+光の速さ	hikari; no, haya; sa,
+光り輝く	hika; ri, kagaya; ku,
+口が悪い	kuchi; ga, waru; i,
+口が軽い	kuchi; ga, karu; i,
+口が重い	kuchi; ga, omo; i,
+口を出す	kuchi; wo, da; su,
+向かっ腹	mu; ka, p,para;
+向かっ腹	mu; ka, q, para;
+向き向き	mu; ki, mu; ki,
+向き合う	mu; ki, a; u,
+向け直す	mu; ke, nao; su,
+向け直る	mu; ke, nao; ru,
+向こう岸	mu; ko, u, gishi;
+向う見ず	muko; u, mi; zu,
+向こう脛	mu; ko, u, zune;
+喉が渇く	nodo; ga, kawa; ku,
+喉が乾く	nodo; ga, kawa; ku,
+好い加減	i; i, kagen;
+好き嫌い	su; ki, kira; i,
+好き勝手	su; ki, katte;
+広い支持	hiro; i, shiji;
+攻め入る	se; me, i; ru,
+絞め殺す	shi; me, koro; su,
+締め殺す	shi; me, koro; su,
+考え込む	kanga; e, ko; mu,
+考え出す	kanga; e, da; su,
+考え直す	kanga; e, nao; su,
+考え抜く	kanga; e, nu; ku,
+荒れ狂う	a; re, kuru; u,
+行き交う	yu; ki, ka; u,
+行き交う	i; ki, ka; u,
+行き着く	yu; ki, tsu; ku,
+行き着く	i; ki, tsu; ku,
+行き届く	i; ki, todo; ku,
+行き届く	yu; ki, todo; ku,
+行の先頭	gyou; no, sentou;
+行の末尾	gyou; no, matsubi;
+行き成り	i; ki, na; ri,
+行き成り	yu; ki, na; ri,
 ####### 202102新增補充比對詞彙 japanese.jmdict.dict.yaml 結束 #######
 #######@ 202102新增日語符號類詞彙 開始 #######
 Γ分布	ganmabunpu;
