@@ -36605,11 +36605,9 @@ columns:
 我勝ち	warega; chi,
 我先に	waresaki; ni,
 我褒め	warebo; me,
-芽生え	meba; e,
 介添え	kaizo; e,
 心良い	kokoroyo; i,
 快適さ	kaiteki; sa,
-海沿い	umizo; i,
 海鳴り	umina; ri,
 灰押し	haio; shi,
 灰均し	hainara; shi,
@@ -36622,7 +36620,6 @@ columns:
 絵描き	eka; ki,
 絵書き	eka; ki,
 外付け	sotozu; ke,
-咳払い	sekibara; i,
 蛙跳び	kaeruto; bi,
 格下げ	kakusa; ge,
 格上げ	kakua; ge,
@@ -36651,7 +36648,6 @@ columns:
 刈入れ	karii; re,
 乾干し	karabo; shi,
 乾拭き	karabu; ki,
-勘違い	kanchiga; i,
 勘繰る	kangu; ru,
 巻込む	makiko; mu,
 巻付く	makitsu; ku,
@@ -36664,13 +36660,11 @@ columns:
 缶詰め	kanzu; me,
 罐詰め	kanzu; me,
 缶切り	kanki; ri,
-間違い	machiga; i,
 間合い	maa; i,
 間借り	maga; ri,
 間取り	mado; ri,
 間貸し	maga; shi,
 丸刈り	maruga; ri,
-丸見え	marumi; e,
 丸持ち	marumo; chi,
 丸写し	maruutsu; shi,
 丸取り	marudo; ri,
@@ -36822,7 +36816,6 @@ columns:
 金儲け	kanemou; ke,
 句切り	kugi; ri,
 区分け	kuwa; ke,
-苦笑い	nigawara; i,
 駆回る	kakemawa; ru,
 駆寄る	kakeyo; ru,
 駆込み	kakeko; mi,
@@ -36891,7 +36884,6 @@ columns:
 見開く	mihira; ku,
 見誤る	miayama; ru,
 見向く	mimu; ku,
-見合い	mia; i,
 見合う	mia; u,
 見込む	miko; mu,
 見殺し	migoro; shi,
@@ -36956,7 +36948,6 @@ columns:
 呼捨て	yobisu; te,
 呼出す	yobida; su,
 呼戻す	yobimodo; su,
-戸惑い	tomado; i,
 戸惑う	tomado; u,
 糊付け	norizu; ke,
 糊付け	noritsu; ke,
@@ -37008,7 +36999,6 @@ columns:
 口走る	kuchibashi; ru,
 口直し	kuchinao; shi,
 口伝え	kuchizuta; e,
-口答え	kuchigota; e,
 口応え	kuchigota; e,
 口入れ	kuchii; re,
 口任せ	kuchimaka; se,
@@ -37173,7 +37163,6 @@ columns:
 事無し	kotona; shi,
 似寄り	niyo; ri,
 似寄る	niyo; ru,
-似合い	nia; i,
 似合う	nia; u,
 似通う	nikayo; u,
 似付く	nitsu; ku,
@@ -37266,14 +37255,12 @@ columns:
 手上げ	tea; ge,
 手触り	tezawa; ri,
 手振り	tebu; ri,
-手洗い	teara; i,
 手早い	tebaya; i,
 手後れ	teoku; re,
 手直し	tenao; shi,
 手痛い	teita; i,
 手提げ	tesa; ge,
 手堤げ	tesa; ge,
-手伝い	tetsuda; i,
 手伝う	tetsuda; u,
 手渡し	tewata; shi,
 手渡す	tewata; su,
@@ -37310,7 +37297,6 @@ columns:
 宿借り	yadoka; ri,
 出会す	dekuwa; su,
 出違う	dechiga; u,
-出会い	dea; i,
 出逢い	dea; i,
 出合い	dea; i,
 出遭い	dea; i,
@@ -37319,7 +37305,6 @@ columns:
 出廻る	demawa; ru,
 出外れ	dehazu; re,
 出掛け	dega; ke,
-出迎え	demuka; e,
 出嫌い	degira; i,
 出向く	demu; ku,
 出渋る	deshibu; ru,
@@ -37393,7 +37378,6 @@ columns:
 乗込む	noriko; mu,
 乗出す	norida; su,
 乗出す	noriida; su,
-場違い	bachiga; i,
 畳替え	tatamiga; e,
 蒸暑い	mushiatsu; i,
 蒸返す	mushikae; su,
@@ -37473,9 +37457,7 @@ columns:
 身動ぐ	mijiro; gu,
 身繕い	mizukuro; i,
 身寄り	miyo; ri,
-身構え	migama; e,
 身振り	mibu; ri,
-身震い	miburu; i,
 身振い	miburu; i,
 身代り	migawa; ri,
 身投げ	mina; ge,
@@ -37758,10 +37740,8 @@ columns:
 臺無し	daina; shi,
 大外れ	oohazu; re,
 大喜び	ooyoroko; bi,
-大嫌い	daikira; i,
 大慌て	ooawa; te,
 大祭り	oomatsu; ri,
-大笑い	oowara; i,
 大盛り	oomo; ri,
 大入り	ooi; ri,
 大目に	oome; ni,
@@ -37798,7 +37778,6 @@ columns:
 着込む	kiko; mu,
 着飾る	kikaza; ru,
 着痩せ	kiya; se,
-着替え	kiga; e,
 着直す	kinao; su,
 着払い	chakubara; i,
 着良い	kiyo; i,
@@ -37893,7 +37872,6 @@ columns:
 塗込む	nuriko; mu,
 途端に	totan; ni,
 都落ち	miyakoo; chi,
-度合い	doa; i,
 度忘れ	dowasu; re,
 胴忘れ	douwasu; re,
 怒鳴る	dona; ru,
@@ -38102,7 +38080,6 @@ columns:
 表立つ	omoteda; tsu,
 秒読み	byouyo; mi,
 品切れ	shinagi; re,
-品揃え	shinazoro; e,
 瓶詰め	binzu; me,
 壜詰め	binzu; me,
 不安げ	fuan; ge,
@@ -38474,7 +38451,6 @@ columns:
 可愛い	kawayu; i,
 過行く	sugiyu; ku,
 過行く	sugii; ku,
-見栄え	miba; e,
 見映え	miba; e,
 行違い	ikichiga; i,
 行違い	yukichiga; i,
@@ -38613,8 +38589,6 @@ columns:
 貸切り	kashiki; ri,
 貸出し	kashida; shi,
 風当り	kazeata; ri,
-片思い	kataomo; i,
-片想い	kataomo; i,
 肩書き	kataga; ki,
 肩代り	katagawa; ri,
 形取る	katado; ru,
@@ -38627,7 +38601,6 @@ columns:
 空揚げ	karaa; ge,
 仮住い	karizuma; i,
 完璧さ	kanpeki; sa,
-気合い	kia; i,
 傷付く	kizutsu; ku,
 疵付く	kizutsu; ku,
 切掛け	kikka; ke,
@@ -38690,7 +38663,6 @@ columns:
 下摺り	shitazu; ri,
 下穿き	shitaba; ki,
 下張り	shitaba; ri,
-支払い	shihara; i,
 仕舞い	shima; i,
 仕向る	shimuke; ru,
 締切り	shimeki; ri,
@@ -38902,7 +38874,6 @@ columns:
 真近い	majika; i,
 御祭り	omatsu; ri,
 見落し	mioto; shi,
-見覚え	miobo; e,
 見憶え	miobo; e,
 見返し	mikae; shi,
 見掛け	mika; ke,
@@ -38916,10 +38887,8 @@ columns:
 峰打ち	mineu; chi,
 見逃す	minoga; su,
 見遁す	minoga; su,
-見舞い	mima; i,
 見破る	miyabu; ru,
 看破る	miyabu; ru,
-召使い	meshitsuka; i,
 目盛り	memo; ri,
 申合せ	moushiawa; se,
 申込み	moushiko; mi,
@@ -39170,7 +39139,6 @@ columns:
 水汲み	mizuku; mi,
 水責め	mizuze; me,
 物乞い	monogo; i,
-物言い	monoi; i,
 物怖じ	monoo; ji,
 物思い	monoomo; i,
 物知り	monoshi; ri,
@@ -40963,7 +40931,6 @@ columns:
 言辛い	iizura; i,
 引付け	hikitsu; ke,
 言過ぎ	iisu; gi,
-間違え	machiga; e,
 枕投げ	makurana; ge,
 空高く	sorataka; ku,
 空高い	sorataka; i,
@@ -42043,7 +42010,6 @@ columns:
 湯取り	yuto; ri,
 淦取り	yuto; ri,
 股立ち	momoda; chi,
-途絶え	toda; e,
 跡絶え	toda; e,
 跡切れ	togi; re,
 油売り	aburau; ri,
@@ -165140,8 +165106,6 @@ columns:
 乾ぶどう	hoshi; bu, do, u,
 坊ちゃん	boc;cha, n,
 坊ちゃん	boq; cha, n,
-前もって	mae; mo, tte,
-前もって	mae; mo, q, te,
 巻きもの	maki; mo, no,
 見かける	mika; ke, ru,
 見つかる	mi; tsu, ka, ru,
@@ -165152,7 +165116,6 @@ columns:
 目にあう	me; ni, a, u,
 目につく	me; ni, tsu, ku,
 眼につく	me; ni, tsu, ku,
-女々しい	meme; shi, i,
 持ちもの	mo; chi, mo, no,
 焼きもち	ya; ki, mo, chi,
 焼きもの	ya; ki, mo, no,
@@ -165160,18 +165123,13 @@ columns:
 柔らかい	yawa; ra, ka, i,
 軟らかい	yawa; ra, ka, i,
 行きずり	yu; ki, zu, ri,
-由々しい	yuyu; shi, i,
 揺りかご	yu; ri, ka, go,
 宵っぱり	yoi; ppa, ri,
 宵っぱり	yoi; q, pa, ri,
 夜ふかし	yo; fu, ka, shi,
-弱々しい	yowayowa; shi, i,
-凛々しい	riri; shi, i,
 凜々しい	riri; shi, i,
 律々しい	riri; shi, i,
-麗々しい	reirei; shi, i,
 分かれる	wa; ka, re, ru,
-若々しい	wakawaka; shi, i,
 忘れがち	wasu; re, ga, chi,
 侘びしい	wa; bi, shi, i,
 割りこむ	wa; ri, ko, mu,
@@ -165182,7 +165140,6 @@ columns:
 愛でたい	me; de, ta, i,
 玉にきず	tama; ni, ki, zu,
 珠にきず	tama; ni, ki, zu,
-呼びかけ	yo; bi, ka, ke,
 行きすぎ	i; ki, su, gi,
 行きすぎ	yu; ki, su, gi,
 痛ましい	ita; ma, shi, i,
@@ -165195,7 +165152,6 @@ columns:
 湿っぽい	shime; q, po, i,
 済まない	su; ma, na, i,
 言いなり	i; i, na, ri,
-口げんか	kuchi; ge, n, ka,
 違いない	chiga; i, na, i,
 年とった	toshi; to, tta,
 年とった	toshi; to, q, ta,
@@ -165275,7 +165231,6 @@ columns:
 と来たら	to, ki; ta, ra,
 這いずる	ha; i, zu, ru,
 房々した	fusafusa; shi, ta,
-頑として	gan; to, shi, te,
 泣きだす	na; ki, da, su,
 呼ばわり	yo; ba, wa, ri,
 煮えたつ	ni; e, ta, tsu,
@@ -165305,7 +165260,6 @@ columns:
 女っぽい	onna; q, po, i,
 着こなす	ki; ko, na, su,
 汚らしい	kitana; ra, shi, i,
-神々しい	kougou; shi, i,
 心くばり	kokoro; ku, ba, ri,
 異にする	koto; ni, su, ru,
 首になる	kubi; ni, na, ru,
@@ -165337,12 +165291,10 @@ columns:
 熱さまし	netsu; sa, ma, shi,
 肉がつく	shishi; ga, tsu, ku,
 肉がつく	niku; ga, tsu, ku,
-憎々しい	nikuniku; shi, i,
 野ぶどう	no; bu, do, u,
 能がない	nou; ga, na, i,
 行われる	okona; wa, re, ru,
 面はゆい	omo; ha, yu, i,
-雄々しい	oo; shi, i,
 男々しい	oo; shi, i,
 男ざかり	otoko; za, ka, ri,
 染みつく	shi; mi, tsu, ku,
@@ -165361,7 +165313,6 @@ columns:
 横すべり	yoko; su, be, ri,
 咲かせる	sa; ka, se, ru,
 持たせる	mo; ta, se, ru,
-時として	toki; to, shi, te,
 辞さない	ji; sa, na, i,
 手のうち	te; no, u, chi,
 小ぎれい	ko; gi, re, i,
@@ -165382,7 +165333,6 @@ columns:
 張りつく	ha; ri, tsu, ku,
 貼りつく	ha; ri, tsu, ku,
 腕ずもう	ude; zu, mo, u,
-腕まくり	ude; ma, ku, ri,
 腕っぷし	ude; ppu, shi,
 腕っぷし	ude; q, pu, shi,
 巻きずし	ma; ki, zu, shi,
@@ -165412,7 +165362,6 @@ columns:
 続けさま	tsuzu; ke, sa, ma,
 払いすぎ	hara; i, su, gi,
 泊りがけ	toma; ri, ga, ke,
-投げやり	na; ge, ya, ri,
 お下がり	o, sa; ga, ri,
 お手つき	o, te; tsu, ki,
 お平らに	o, tai; ra, ni,
@@ -165452,7 +165401,6 @@ columns:
 薮にらみ	yabu; ni, ra, mi,
 野ざらし	no; za, ra, shi,
 吹きよせ	fu; ki, yo, se,
-見てくれ	mi; te, ku, re,
 見やすい	mi; ya, su, i,
 見にくい	mi; ni, ku, i,
 研ぎたて	to; gi, ta, te,
@@ -165460,14 +165408,12 @@ columns:
 肩すかし	kata; su, ka, shi,
 肩ならし	kata; na, ra, shi,
 居ながら	i; na, ga, ra,
-物々しい	monomono; shi, i,
 米どころ	kome; do, ko, ro,
 火あぶり	hi; a, bu, ri,
 火ぶくれ	hi; bu, ku, re,
 火だるま	hi; da, ru, ma,
 門がまえ	mon; ga, ma, e,
 門がまえ	kado; ga, ma, e,
-美々しい	bibi; shi, i,
 付けたり	tsu; ke, ta, ri,
 泥まみれ	doro; ma, mi, re,
 日ざかり	hi; za, ka, ri,
@@ -165491,8 +165437,6 @@ columns:
 慊りない	akita; ri, na, i,
 #腹づもり	hara; zu, mo, ri,
 腹づもり	hara; du, mo, ri,
-相まって	ai; ma, tte,
-相まって	ai; ma, q, te,
 晴ればれ	ha; re, ba, re,
 晴々しい	harebare; shi, i,
 星まつり	hoshi; ma, tsu, ri,
@@ -165507,7 +165451,6 @@ columns:
 顔づくり	kao; du, ku, ri,
 顔つなぎ	kao; tsu, na, gi,
 言いぶり	i; i, bu, ri,
-言いよう	i; i, yo, u,
 言いざま	i; i, za, ma,
 肝だめし	kimo; da, me, shi,
 肝ったま	kimo; tta, ma,
@@ -165592,7 +165535,6 @@ columns:
 思うつぼ	omo; u, tsu, bo,
 思うさま	omo; u, sa, ma,
 思うまま	omo; u, ma, ma,
-福々しい	fukubuku; shi, i,
 煮くずれ	ni; ku, zu, re,
 煮こごり	ni; ko, go, ri,
 赤とんぼ	aka; to, n, bo,
@@ -165601,7 +165543,6 @@ columns:
 燃えさし	mo; e, sa, shi,
 燃えかす	mo; e, ka, su,
 穀つぶし	goku; tsu, bu, shi,
-角々しい	kadokado; shi, i,
 建てつけ	ta; te, tsu, ke,
 立てつけ	ta; te, tsu, ke,
 #立ちづめ	ta; chi, zu, me,
@@ -165740,7 +165681,6 @@ columns:
 遠くから	too; ku, ka, ra,
 得になる	toku; ni, na, ru,
 解けない	to; ke, na, i,
-捕らわれ	to; ra, wa, re,
 翔んでる	to; n, de, ru,
 毒のある	doku; no, a, ru,
 直らない	nao; ra, na, i,
@@ -165809,7 +165749,6 @@ columns:
 怠けぐせ	nama; ke, gu, se,
 大それた	dai; so, re, ta,
 未だしも	ma; da, shi, mo,
-目くじら	me; ku, ji, ra,
 睨めっこ	nira; me, kko,
 睨めっこ	nira; me, q, ko,
 手ずから	te; zu, ka, ra,
@@ -165819,7 +165758,6 @@ columns:
 街じゅう	machi; ju, u,
 負わせる	o; wa, se, ru,
 大やけど	oo; ya, ke, do,
-お過ごし	o, su; go, shi,
 愛しあう	ai; shi, a, u,
 狆くしゃ	chin; ku, sha,
 打たれる	u; ta, re, ru,
@@ -165883,14 +165821,9 @@ columns:
 後じさり	ato; ji, sa, ri,
 急がせる	iso; ga, se, ru,
 軽んずる	karo; n, zu, ru,
-誇らしげ	hoko; ra, shi, ge,
-根こそぎ	ne; ko, so, gi,
 思わしい	omo; wa, shi, i,
 死すべき	shi; su, be, ki,
-若くして	waka; ku, shi, te,
 取りやめ	to; ri, ya, me,
-水しぶき	mizu; shi, bu, ki,
-早くから	haya; ku, ka, ra,
 足しげく	ashi; shi, ge, ku,
 太りすぎ	futo; ri, su, gi,
 大もうけ	oo; mo, u, ke,
@@ -165898,14 +165831,11 @@ columns:
 恥ずべき	ha; zu, be, ki,
 着こなし	ki; ko, na, shi,
 頼みごと	tano; mi, go, to,
-追っかけ	o; kka, ke,
-追っかけ	o; q, ka, ke,
 倒れこむ	tao; re, ko, mu,
 動きだす	ugo; ki, da, su,
 道すがら	michi; su, ga, ra,
 熱っぽい	netsu; ppo, i,
 熱っぽい	netsu; q, po, i,
-背もたれ	se; mo, ta, re,
 鳴りだす	na; ri, da, su,
 夕ごはん	yuu; go, ha, n,
 話しだす	hana; shi, da, su,
@@ -165966,7 +165896,6 @@ columns:
 新しがる	atara; shi, ga, ru,
 荒ごなし	ara; go, na, shi,
 粗ごなし	ara; go, na, shi,
-言いつけ	i; i, tsu, ke,
 板すだれ	ita; su, da, re,
 良からぬ	yo; ka, ra, nu,
 憂うべき	ure; u, be, ki,
@@ -165994,7 +165923,6 @@ columns:
 気がいい	ki; ga, i, i,
 気がちる	ki; ga, chi, ru,
 凄くない	sugo; ku, na, i,
-禍々しい	magamaga; shi, i,
 曲々しい	magamaga; shi, i,
 乗っける	no; kke, ru,
 乗っける	no; q, ke, ru,
@@ -166006,7 +165934,6 @@ columns:
 可くして	be; ku, shi, te,
 幸いあれ	saiwa; i, a, re,
 鼻につく	hana; ni, tsu, ku,
-行きつけ	i; ki, tsu, ke,
 行きつけ	yu; ki, tsu, ke,
 脳たりん	nou; ta, ri, n,
 脳たりん	no-; ta, ri, n,
@@ -166020,7 +165947,6 @@ columns:
 折りしも	o; ri, shi, mo,
 怖じける	o; ji, ke, ru,
 思いきや	omo; i, ki, ya,
-押しかけ	o; shi, ka, ke,
 悩ましげ	naya; ma, shi, ge,
 然ること	sa; ru, ko, to,
 何とでも	nan; to, de, mo,
@@ -166069,7 +165995,6 @@ columns:
 手がすく	te; ga, su, ku,
 脚がある	ashi; ga, a, ru,
 足がある	ashi; ga, a, ru,
-昔ながら	mukashi; na, ga, ra,
 瘡っかき	kasa; kka, ki,
 瘡っかき	kasa; q, ka, ki,
 皮かぶり	kawa; ka, bu, ri,
@@ -166085,7 +166010,6 @@ columns:
 弛みない	tayu; mi, na, i,
 幾つでも	iku; tsu, de, mo,
 小ちゃい	chii; cha, i,
-寒々しい	samuzamu; shi, i,
 を通して	wo, too; shi, te,
 #国づくり	kuni; zu, ku, ri,
 国づくり	kuni; du, ku, ri,
@@ -166135,7 +166059,6 @@ columns:
 櫃まぶし	hitsu; ma, bu, shi,
 実のない	mi; no, na, i,
 死にそう	shi; ni, so, u,
-陰ながら	kage; na, ga, ra,
 堪えない	ta; e, na, i,
 涙ながら	namida; na, ga, ra,
 許すまじ	yuru; su, ma, ji,
@@ -166159,8 +166082,6 @@ columns:
 火ばさみ	hi; ba, sa, mi,
 道なりに	michi; na, ri, ni,
 考えうる	kanga; e, u, ru,
-引っかけ	hi; kka, ke,
-引っかけ	hi; q, ka, ke,
 噛ませる	ka; ma, se, ru,
 嚼ませる	ka; ma, se, ru,
 咬ませる	ka; ma, se, ru,
@@ -166241,7 +166162,6 @@ columns:
 命をはる	inochi; wo, ha, ru,
 払いきる	hara; i, ki, ru,
 何れにも	do; re, ni, mo,
-姉ちゃん	nee; cha, n,
 幕があく	maku; ga, a, ku,
 細っこい	hoso; kko, i,
 細っこい	hoso; q, ko, i,
@@ -166386,7 +166306,6 @@ columns:
 無みする	na; mi, su, ru,
 何なのか	nan; na, no, ka,
 何なのか	nani; na, no, ka,
-兄ちゃん	nii; cha, n,
 菊ごぼう	kiku; go, bo, u,
 身ぐるみ	mi; gu, ru, mi,
 丸かっこ	maru; ka, kko,
@@ -166407,7 +166326,6 @@ columns:
 途につく	to; ni, tsu, ku,
 支えあう	sasa; e, a, u,
 花がるた	hana; ga, ru, ta,
-母ちゃん	kaa; cha, n,
 目にする	me; ni, su, ru,
 雪つばき	yuki; tsu, ba, ki,
 群をなす	gun; wo, na, su,
@@ -166437,13 +166355,11 @@ columns:
 後がない	ato; ga, na, i,
 裏がある	ura; ga, a, ru,
 離しょう	ri; sho, u,
-前のめり	mae; no, me, ri,
 若いころ	waka; i, ko, ro,
 幼いころ	osana; i, ko, ro,
 賞をとる	shou; wo, to, ru,
 騒がせる	sawa; ga, se, ru,
 騒がれる	sawa; ga, re, ru,
-由々しき	yuyu; shi, ki,
 序ながら	tsuide; na, ga, ra,
 休みなく	yasu; mi, na, ku,
 有るだけ	a; ru, da, ke,
@@ -166487,7 +166403,6 @@ columns:
 謂れない	iwa; re, na, i,
 お上さん	o, kami; sa, n,
 お楽しみ	o, tano; shi, mi,
-お決まり	o, ki; ma, ri,
 間がない	ma; ga, na, i,
 成しうる	na; shi, u, ru,
 成しえる	na; shi, e, ru,
@@ -166533,7 +166448,6 @@ columns:
 し終える	shi, o; e, ru,
 斗きょう	to; kyo, u,
 腐らせる	kusa; ra, se, ru,
-父ちゃん	tou; cha, n,
 父ちゃん	toc;cha, n,
 父ちゃん	toq; cha, n,
 唸りだす	una; ri, da, su,
@@ -166544,7 +166458,6 @@ columns:
 悩みごと	naya; mi, go, to,
 絶えざる	ta; e, za, ru,
 召される	me; sa, re, ru,
-押しつけ	o; shi, tsu, ke,
 無くても	na; ku, te, mo,
 懲りない	ko; ri, na, i,
 膝をつく	hiza; wo, tsu, ku,
@@ -166694,7 +166607,6 @@ columns:
 踊らせる	odo; ra, se, ru,
 頷きあう	unazu; ki, a, u,
 座りだこ	suwa; ri, da, ko,
-賑々しい	niginigi; shi, i,
 亀すくい	kame; su, ku, i,
 取っつく	to; ttsu, ku,
 取っつく	to; q, tsu, ku,
@@ -166859,7 +166771,6 @@ columns:
 薄れゆく	usu; re, yu, ku,
 汗まみれ	ase; ma, mi, re,
 身のため	mi; no, ta, me,
-問いかけ	to; i, ka, ke,
 磨きこむ	miga; ki, ko, mu,
 茨だらけ	ibara; da, ra, ke,
 絞りたて	shibo; ri, ta, te,
@@ -166906,7 +166817,6 @@ columns:
 淀みなく	yodo; mi, na, ku,
 澱みなく	yodo; mi, na, ku,
 毛ばたき	ke; ba, ta, ki,
-今ひとつ	ima; hi, to, tsu,
 誰あろう	dare; a, ro, u,
 毛だらけ	ke; da, ra, ke,
 磯あそび	iso; a, so, bi,
@@ -166980,7 +166890,6 @@ columns:
 丸ぽちゃ	maru; po, cha,
 嫌になる	iya; ni, na, ru,
 屁をこく	he; wo, ko, ku,
-細々しい	komagoma; shi, i,
 突として	totsu; to, shi, te,
 居られる	i; ra, re, ru,
 秘めやか	hi; me, ya, ka,
@@ -167152,7 +167061,6 @@ columns:
 お前たち	o, mae; ta, chi,
 口をきる	kuchi; wo, ki, ru,
 お局さま	o, tsubone; sa, ma,
-思いきり	omo; i, ki, ri,
 骨になる	hone; ni, na, ru,
 恨みっこ	ura; mi, kko,
 恨みっこ	ura; mi, q, ko,
@@ -167163,6 +167071,1574 @@ columns:
 風のつて	kaze; no, tsu, te,
 見られる	mi; ra, re, ru,
 笑いじわ	wara; i, ji, wa,
+あと一歩	a, to, ippo;
+いま一歩	i, ma, ippo;
+もう一つ	mo, u, hito; tsu,
+もう一遍	mo, u, ippen;
+もう一回	mo, u, ikkai;
+どれ一つ	do, re, hito; tsu,
+ごく一部	go, ku, ichibu;
+もう一人	mo, u, hitori;
+だれ一人	da, re, hitori;
+その一方	so, no, ippou;
+より一層	yo, ri, issou;
+なお一層	na, o, issou;
+もう一寸	mo, u, chotto;
+いま一つ	i, ma, hito; tsu,
+きかん気	ki, ka, n, ki;
+くっ付く	ku, t,tsu; ku,
+くっ付く	ku, q, tsu; ku,
+けつの穴	ke, tsu, no, ana;
+こう言う	ko, u, i; u,
+こう言う	ko, u, yu; u,
+この結果	ko, no, kekka;
+この場合	ko, no, baai;
+こぼし話	ko, bo, shi, banashi;
+ごみ入れ	go, mi, i; re,
+さて置く	sa, te, o, ku,
+また明日	ma, ta, ashita;
+じゃが芋	ja, ga, imo;
+じゃん拳	ja, n, ken;
+せん状骨	se, n, joukotsu;
+その上で	so, no, ue; de,
+その都度	so, no, tsudo;
+その反面	so, no, hanmen;
+それ処か	so, re, dokoro; ka,
+それ以上	so, re, ijou;
+それ以来	so, re, irai;
+それ故に	so, re, yue; ni,
+ちょび髭	cho, bi, hige;
+つなぎ目	tsu, na, gi, me;
+という物	to, i, u, mono;
+とも言う	to, mo, i; u,
+とろろ芋	to, ro, ro, imo;
+どう言う	do, u, i; u,
+どちら様	do, chi, ra; sama;
+ねじ回し	ne, ji, mawa; shi,
+はた迷惑	ha, ta, meiwaku;
+はめ倒す	ha, me, tao; su,
+ぶっ通し	bu, t,too; shi,
+ぶっ通し	bu, q, too; shi,
+へぼ医者	he, bo, isha;
+ぺてん師	pe, te, n, shi;
+ぼろ切れ	bo, ro, ki; re,
+ぽん引き	po, n, bi; ki,
+ぽん引き	po, n, pi; ki,
+まっ四角	ma, s,shikaku;
+まっ四角	ma, q, shikaku;
+やり繰り	ya, ri, ku; ri,
+やり切る	ya, ri, ki; ru,
+ごむの木	go, mu, no, ki;
+だめ押し	da, me, o; shi,
+どら息子	do, ra, musuko;
+びらん剤	bi, ra, n, zai;
+ぶち殺す	bu, chi, koro; su,
+あまに油	a, ma, ni, yu;
+いとし子	i, to, shi, go;
+あかね色	a, ka, ne, iro;
+にぎり鮨	ni, gi, ri, zushi;
+へし折る	he, shi, o; ru,
+あや織り	a, ya, o; ri,
+あわ立つ	a, wa, da; tsu,
+くら替え	ku, ra, ga; e,
+えこ贔屓	e, ko, hiiki;
+えらい人	e, ra, ihito;
+して遣る	shi, te, ya; ru,
+ひとつ目	hi, to, tsu; me;
+ひと安心	hi, to, anshin;
+ひと押し	hi, to, o; shi,
+ひと回り	hi, to, mawa; ri,
+ひと塊り	hi, to, katama; ri,
+ひと休み	hi, to, yasu; mi,
+ひと仕事	hi, to, shigoto;
+ひとり寝	hi, to, ri, ne;
+ひと吹き	hi, to, fu; ki,
+ひと昔前	hi, to, mukashimae;
+ひと切り	hi, to, ki; ri,
+ひと足先	hi, to, ashisaki;
+ひと揃い	hi, to, soro; i,
+ひと段落	hi, to, danraku;
+ひと抱え	hi, to, kaka; e,
+ひと眠り	hi, to, nemu; ri,
+いち早く	i, chi, haya; ku,
+いなり鮨	i, na, ri, zushi;
+いもち病	i, mo, chi, byou;
+いわし雲	i, wa, shi, gumo;
+ひき込む	hi, ki, ko; mu,
+たね違い	ta, ne, chiga; i,
+からす貝	ka, ra, su, gai;
+うず巻く	u, zu, ma; ku,
+うそ付き	u, so, tsu; ki,
+うそ吐き	u, so, tsu; ki,
+うそ八百	u, so, happyaku;
+うなぎ丼	u, na, gi, donburi;
+うり二つ	u, ri, futa; tsu,
+うん悪く	u, n, waru; ku,
+えごま油	e, go, ma, abura;
+えごま油	e, go, ma, yu;
+えのき茸	e, no, ki, take;
+えのき茸	e, no, ki, dake;
+つや出し	tsu, ya, da; shi,
+つや消し	tsu, ya, ke; shi,
+おし黙る	o, shi, dama; ru,
+おうし座	o, u, shi, za;
+おとめ座	o, to, me, za;
+おり立つ	o, ri, ta; tsu,
+かな遣い	ka, na, zuka; i,
+かな使い	ka, na, zuka; i,
+かな書き	ka, na, ga; ki,
+いつ何時	i, tsu, nandoki;
+かりん糖	ka, ri, n, tou;
+かこう岩	ka, ko, u, gan;
+いら立つ	i, ra, da; tsu,
+われ勝ち	wa, re, ga; chi,
+まわり道	ma, wa, ri, michi;
+あく洗い	a, ku, ara; i,
+せき払い	se, ki, bara; i,
+かけ合う	ka, ke, a; u,
+かつお節	ka, tsu, o, bushi;
+かば焼き	ka, ba, ya; ki,
+かみ合う	ka, mi, a; u,
+かみ砕く	ka, mi, kuda; ku,
+かみ殺す	ka, mi, koro; su,
+かみ殺す	ka, mi, kona; su,
+かみ切る	ka, mi, ki; ru,
+かみ付く	ka, mi, tsu; ku,
+から拭き	ka, ra, bu; ki,
+まき込む	ma, ki, ko; mu,
+まに合う	ma, ni, a; u,
+あいの子	a, i, no, ko;
+まる見え	ma, ru, mi; e,
+まる出し	ma, ru, da; shi,
+まる儲け	ma, ru, mou; ke,
+がんぎ車	ga, n, gi, guruma;
+あぶな絵	a, bu, na, e;
+おどけ話	o, do, ke, banashi;
+あり地獄	a, ri, jigoku;
+つめ込む	tsu, me, ko; mu,
+あだ討ち	a, da, u; chi,
+かたき討	ka, ta, ki, uchi;
+くみ取る	ku, mi, to; ru,
+きょう正	kyo, u, sei;
+のけ反る	no, ke, zo; ru,
+あお向け	a, o, mu; ke,
+すじ違い	su, ji, chiga; i,
+えり巻き	e, ri, ma; ki,
+かけ寄る	ka, ke, yo; ru,
+かけ込む	ka, ke, ko; mu,
+くり出す	ku, ri, da; su,
+くり返し	ku, ri, kae; shi,
+くり返す	ku, ri, kae; su,
+けい藻土	ke, i, soudo;
+けい線表	ke, i, senhyou;
+けい動脈	ke, i, doumyaku;
+けん怠感	ke, n, taikan;
+けんか腰	ke, n, ka, goshi;
+けん制球	ke, n, seikyuu;
+やり通す	ya, ri, too; su,
+みなし子	mi, na, shi, go;
+もも引き	mo, mo, hi; ki,
+とら刈り	to, ra, ga; ri,
+おとぎ噺	o, to, gi, banashi;
+むかっ腹	mu, ka, p,para;
+むかっ腹	mu, ka, q, para;
+むこう岸	mu, ko, u, gishi;
+ひかえ目	hi, ka, e, me;
+かん高い	ka, n, daka; i,
+ぬか喜び	nu, ka, yoroko; bi,
+あいの手	a, i, no, te;
+あわせ鏡	a, wa, se, kagami;
+ほれ込む	ho, re, ko; mu,
+こみ合う	ko, mi, a; u,
+さし出す	sa, shi, da; su,
+さし障る	sa, shi, sawa; ru,
+なし崩し	na, shi, kuzu; shi,
+あり付く	a, ri, tsu; ku,
+さえ渡る	sa, e, wata; ru,
+さくら肉	sa, ku, ra, niku;
+すり込む	su, ri, ko; mu,
+すれ合う	su, re, a; u,
+さつま芋	sa, tsu, ma, imo;
+さび付く	sa, bi, tsu; ku,
+さび止め	sa, bi, do; me,
+さんご礁	sa, n, go, shou;
+しつけ糸	shi, tsu, ke, ito;
+しもた屋	shi, mo, ta, ya;
+とげ抜き	to, ge, nu; ki,
+うまい汁	u, ma, i, shiru;
+わたし達	wa, ta, shi, tachi;
+あぶら身	a, bu, ra, mi;
+いたる所	i, ta, ru, tokoro;
+こと細か	ko, to, koma; ka,
+こと無く	ko, to, na; ku,
+もて余す	mo, te, ama; su,
+もて囃す	mo, te, haya; su,
+じゃま者	ja, ma, mono;
+しゃく熱	sha, ku, netsu;
+とり囲む	to, ri, kako; mu,
+とり急ぎ	to, ri, iso; gi,
+とり結ぶ	to, ri, musu; bu,
+とり残す	to, ri, noko; su,
+とり出す	to, ri, da; su,
+とり除く	to, ri, nozo; ku,
+とり戻す	to, ri, modo; su,
+とり会う	to, ri, a; u,
+ことの外	ko, to, no, hoka;
+ことの他	ko, to, no, hoka;
+うけ取る	u, ke, to; ru,
+でき次第	de, ki, shidai;
+しゅん工	shu, n, kou;
+しゅん功	shu, n, kou;
+かき直す	ka, ki, nao; su,
+なお且つ	na, o, ka; tsu,
+あがり湯	a, ga, ri, yu;
+あがり目	a, ga, ri, me;
+うわの空	u, wa, no, sora;
+のぼり口	no, bo, ri, guchi;
+のぼり口	no, bo, ri, kuchi;
+のぼり坂	no, bo, ri, zaka;
+むし暑い	mu, shi, atsu; i,
+ふき取る	fu, ki, to; ru,
+ふれ回る	fu, re, mawa; ru,
+くい違い	ku, i, chiga; i,
+くい違う	ku, i, chiga; u,
+はみ出る	ha, mi, de; ru,
+ふり返る	fu, ri, kae; ru,
+まっ最中	ma, s,saichuu;
+まっ最中	ma, q, saichuu;
+まっ正直	ma, s,shoujiki;
+まっ正直	ma, q, shoujiki;
+まっ昼間	ma, p,piruma;
+まっ昼間	ma, q, piruma;
+まっ平ら	ma, t,tai; ra,
+まっ平ら	ma, q, tai; ra,
+まん丸い	ma, n, maru; i,
+まん円い	ma, n, maru; i,
+ちり取り	chi, ri, to; ri,
+かさ張る	ka, sa, ba; ru,
+かずの子	ka, zu, no, ko;
+ひな祭り	hi, na, matsu; ri,
+うみ出す	u, mi, da; su,
+せみ時雨	se, mi, shigure;
+まず以て	ma, zu, motte,
+しみ込む	shi, mi, ko; mu,
+くぐり戸	ku, gu, ri, do;
+いり玉子	i, ri, tamago;
+つむじ風	tsu, mu, ji, kaze;
+えり好み	e, ri, gono; mi,
+えり抜く	e, ri, nu; ku,
+そう言う	so, u, i; u,
+そう言う	so, u, yu; u,
+あら探し	a, ra, saga; shi,
+あら捜し	a, ra, saga; shi,
+ねずみ色	ne, zu, mi, iro;
+ふたご座	fu, ta, go, za;
+かき回す	ka, ki, mawa; su,
+かき込む	ka, ki, ko; mu,
+かき乱す	ka, ki, mida; su,
+やせ我慢	ya, se, gaman;
+そば近く	so, ba, chika; ku,
+ほかの物	ho, ka, no, mono;
+ぶち壊す	bu, chi, kowa; su,
+ぶち砕く	bu, chi, kuda; ku,
+うち破る	u, chi, yabu; ru,
+うち抜く	u, chi, nu; ku,
+ぶち抜く	bu, chi, nu; ku,
+ぶん殴る	bu, n, nagu; ru,
+なまけ者	na, ma, ke, mono;
+だいご味	da, i, go, mi;
+たこ揚げ	ta, ko, a; ge,
+たこ上げ	ta, ko, a; ge,
+たな卸し	ta, na, oro; shi,
+たん白質	ta, n, pakushitsu;
+はり倒す	ha, ri, tao; su,
+はね返す	ha, ne, kae; su,
+はね返る	ha, ne, kae; ru,
+ながい間	na, ga, i, aida;
+ひた走り	hi, ta, hashi; ri,
+ひた走り	hi, ta, bashi; ri,
+つり合う	tsu, ri, a; u,
+ほど近い	ho, do, chika; i,
+はり付け	ha, ri, tsu; ke,
+いなか者	i, na, ka, mono;
+とも有れ	to, mo, a; re,
+どたん場	do, ta, n, ba;
+あずま屋	a, zu, ma, ya;
+あたり前	a, ta, ri, mae;
+あばた面	a, ba, ta, zura;
+にげ出す	ni, ge, da; su,
+わらべ歌	wa, ra, be, uta;
+わらべ唄	wa, ra, be, uta;
+ひとり言	hi, to, ri, goto;
+つき刺す	tsu, ki, sa; su,
+つき出す	tsu, ki, da; su,
+つん出す	tsu, n, da; su,
+つき出る	tsu, ki, de; ru,
+つっ立つ	tsu, t,ta; tsu,
+つっ立つ	tsu, q, ta; tsu,
+とび職人	to, bi, shokunin;
+なぎ倒す	na, gi, tao; su,
+なれ合い	na, re, a; i,
+なれ合う	na, re, a; u,
+のぞき見	no, zo, ki, mi;
+ばば抜き	ba, ba, nu; ki,
+ばか正直	ba, ka, shoujiki;
+ばか野郎	ba, ka, yarou;
+ばか野郎	ba, ka, yaro-;
+せが高い	se, ga, taka; i,
+むき出す	mu, ki, da; su,
+はぎ取り	ha, gi, to; ri,
+すき焼き	su, ki, ya; ki,
+うす暗い	u, su, gura; i,
+ぬき出す	nu, ki, da; su,
+そり返る	so, ri, kae; ru,
+ほたて貝	ho, ta, te, gai;
+とび交う	to, bi, ka; u,
+とび出る	to, bi, de; ru,
+ほほ笑み	ho, ho, e; mi,
+ほほ笑む	ho, ho, e; mu,
+ひげ剃り	hi, ge, so; ri,
+ひも付き	hi, mo, tsu; ki,
+ひょう変	hyo, u, hen;
+つかぬ事	tsu, ka, nu, koto;
+つき合い	tsu, ki, a; i,
+つけ回す	tsu, ke, mawa; su,
+つけ込む	tsu, ke, ko; mu,
+つけ足す	tsu, ke, ta; su,
+つけ入る	tsu, ke, i; ru,
+うかぬ顔	u, ka, nu, kao;
+くされ縁	ku, sa, re, en;
+なで回す	na, de, mawa; su,
+ぶどう酒	bu, do, u, shu;
+ぶどう糖	bu, do, u, tou;
+わき出す	wa, ki, da; su,
+もの好き	mo, no, zu; ki,
+もの凄い	mo, no, sugo; i,
+もの憂い	mo, no, u; i,
+くそ度胸	ku, so, dokyou;
+ふんい気	fu, n, i, ki;
+ふん囲気	fu, n, iki;
+ひら仮名	hi, ra, gana;
+ひれ伏す	hi, re, fu; su,
+わけ隔て	wa, ke, heda; te,
+あみ出す	a, mi, da; su,
+ほめ殺し	ho, me, goro; shi,
+ほめ言葉	ho, me, kotoba;
+つむぎ唄	tsu, mu, gi, uta;
+つむぎ歌	tsu, mu, gi, uta;
+ほうの木	ho, u, no, ki;
+ほうの木	ho, o, no, ki;
+またの日	ma, ta, no, hi;
+またの名	ma, ta, no, na;
+うら若い	u, ra, waka; i,
+よろず屋	yo, ro, zu, ya;
+みかん畑	mi, ka, n, batake;
+むだ遣い	mu, da, zuka; i,
+むだ使い	mu, da, zuka; i,
+あくる日	a, ku, ru, hi;
+めくら窓	me, ku, ra, mado;
+めくら判	me, ku, ra, ban;
+もらい物	mo, ra, i, mono;
+くすり屋	ku, su, ri, ya;
+くすり指	ku, su, ri, yubi;
+あぶら虫	a, bu, ra, mushi;
+あり得る	a, ri, u; ru,
+あり得る	a, ri, e; ru,
+あそび心	a, so, bi, gokoro;
+あまり物	a, ma, ri, mono;
+おさな子	o, sa, na, go;
+おさな心	o, sa, na, gokoro;
+ゆれ動く	yu, re, ugo; ku,
+ざま見ろ	za, ma, mi; ro,
+とけ込む	to, ke, ko; mu,
+みだれ髪	mi, da, re, gami;
+たまご色	ta, ma, go, iro;
+なしの礫	na, shi, no, tsubute;
+ため込む	ta, me, ko; mu,
+りゅう座	ryu, u, za;
+みどり色	mi, do, ri, iro;
+ねり歩く	ne, ri, aru; ku,
+つれ添う	tsu, re, so; u,
+ろう人形	ro, u, ningyou;
+わら半紙	wa, ra, banshi;
+ほの暗い	ho, no, gura; i,
+ほの白い	ho, no, jiro; i,
+うつ向く	u, tsu, mu; ku,
+うつ伏す	u, tsu, bu; su,
+ひょう窃	hyo, u, setsu;
+けちん坊	ke, chi, n, bou;
+けちん坊	ke, chi, n, bo;
+かぎ出す	ka, gi, da; su,
+むせ返る	mu, se, kae; ru,
+ちょう笑	cho, u, shou;
+あざ笑う	a, za, wara; u,
+はやし詞	ha, ya, shi, kotoba;
+はめ込む	ha, me, ko; mu,
+ねじ込む	ne, ji, ko; mu,
+ねじ切る	ne, ji, ki; ru,
+もみ合う	mo, mi, a; u,
+もみ消す	mo, mi, ke; su,
+もみ上げ	mo, mi, a; ge,
+もみ療治	mo, mi, ryouji;
+からめ手	ka, ra, me, te;
+からめ手	ka, ra, me, de;
+すりこ木	su, ri, ko, gi;
+くさび形	ku, sa, bi, gata;
+しょう液	sho, u, eki;
+しびれ感	shi, bi, re, kan;
+きょう体	kyo, u, tai;
+かん口令	ka, n, kourei;
+ひび割れ	hi, bi, wa; re,
+ひび焼き	hi, bi, ya; ki,
+へその緒	he, so, no, o;
+へそ曲り	he, so, maga; ri,
+ひまし油	hi, ma, shi, yu;
+じゅん菜	ju, n, sai;
+ぎょう虫	gyo, u, chuu;
+さそり座	sa, so, ri, za;
+ひいき目	hi, i, ki, me;
+しつけ方	shi, tsu, ke, kata;
+ひき殺す	hi, ki, koro; su,
+ひき逃げ	hi, ki, ni; ge,
+かぎ括弧	ka, gi, kakko;
+かんな屑	ka, n, na, kuzu;
+なまず髭	na, ma, zu, hige;
+ぶりっ子	bu, ri, k,ko;
+ぶりっ子	bu, ri, q, ko;
+かび臭い	ka, bi, kusa; i,
+こま撮り	ko, ma, do; ri,
+げっ歯類	ge, s,shirui;
+げっ歯類	ge, q, shirui;
+ひとり子	hi, to, ri, go;
+うるう月	u, ru, u, zuki;
+からす麦	ka, ra, su, mugi;
+#からす麦	e, n, baku;
+さばけ口	sa, ba, ke, guchi;
+あほう鳥	a, ho, u, dori;
+よし悪し	yo, shi, a; shi,
+うち込む	u, chi, ko; mu,
+つぎ込む	tsu, gi, ko; mu,
+つみ取る	tsu, mi, to; ru,
+ともし火	to, mo, shi, bi;
+また聞き	ma, ta, gi; ki,
+よそ行き	yo, so, yu; ki,
+よそ行き	yo, so, i; ki,
+あばら骨	a, ba, ra, bone;
+あなた方	a, na, ta, gata;
+あや取り	a, ya, to; ri,
+うるう年	u, ru, u, doshi;
+おい付く	o, i, tsu; ku,
+たわけ者	ta, wa, ke, mono;
+おろし金	o, ro, shi, gane;
+かけ引き	ka, ke, hi; ki,
+から揚げ	ka, ra, a; ge,
+きき返す	ki, ki, kae; su,
+きゅう舎	kyu, u, sha;
+くり抜く	ku, ri, nu; ku,
+くり貫く	ku, ri, nu; ku,
+けり込む	ke, ri, ko; mu,
+けり殺す	ke, ri, koro; su,
+しきい値	shi, ki, i, chi;
+しみ出る	shi, mi, de; ru,
+しょう油	sho, u, yu;
+しょう油	sho, u, yuu;
+#しょう油	shoyu;
+#しょう油	shoyuu;
+ことば典	ko, to, ba, ten;
+すし詰め	su, shi, zu; me,
+すべり台	su, be, ri, dai;
+すまし汁	su, ma, shi, jiru;
+すみ分け	su, mi, wa; ke,
+かすり傷	ka, su, ri, kizu;
+すり潰す	su, ri, tsubu; su,
+すり寄る	su, ri, yo; ru,
+すれ違う	su, re, chiga; u,
+ずる休み	zu, ru, yasu; mi,
+その代り	so, no, kawa; ri,
+たえ忍ぶ	ta, e, shino; bu,
+ただし書	ta, da, shi, gaki;
+だだっ子	da, da, k,ko;
+だだっ子	da, da, q, ko;
+だだっ児	da, da, k,ko;
+だだっ児	da, da, q, ko;
+つき合う	tsu, ki, a; u,
+つき従う	tsu, ki, shitaga; u,
+とり組み	to, ri, ku; mi,
+にわか雨	ni, wa, ka, ame;
+のべ日数	no, be, nissuu;
+のみ込む	no, mi, ko; mu,
+のろけ話	no, ro, ke, banashi;
+はい回る	ha, i, mawa; ru,
+はぎ取る	ha, gi, to; ru,
+はみ出し	ha, mi, da; shi,
+はみ出す	ha, mi, da; su,
+ばら撒く	ba, ra, ma; ku,
+ばら蒔く	ba, ra, ma; ku,
+ひき続く	hi, ki, tsuzu; ku,
+ひと先ず	hi, to, ma; zu,
+ひとり旅	hi, to, ri, tabi;
+ぶっ殺す	bu, k,koro; su,
+ぶっ殺す	bu, q, koro; su,
+まっ只中	ma, t,tadanaka;
+まっ只中	ma, q, tadanaka;
+まの当り	ma, no, ata; ri,
+まる暗記	ma, ru, anki;
+めに遭う	me, ni, a; u,
+もうけ物	mo, u, ke, mono;
+やかん頭	ya, ka, n, atama;
+やり合う	ya, ri, a; u,
+やり直し	ya, ri, nao; shi,
+やり直す	ya, ri, nao; su,
+ゆりの木	yu, ri, no, ki;
+わかれ道	wa, ka, re, michi;
+わき出る	wa, ki, de; ru,
+わり込む	wa, ri, ko; mu,
+ずる賢い	zu, ru, gashiko; i,
+たて続け	ta, te, tsuzu; ke,
+たばこ屋	ta, ba, ko, ya;
+あり合せ	a, ri, awa; se,
+たて突く	ta, te, tsu; ku,
+もの覚え	mo, no, obo; e,
+ふれ合い	fu, re, a; i,
+もの静か	mo, no, shizu; ka,
+かけ持ち	ka, ke, mo; chi,
+きゅう首	kyu, u, shu;
+なさぬ仲	na, sa, nu, naka;
+おお振り	o, o, bu; ri,
+はめ込み	ha, me, ko; mi,
+うるめ節	u, ru, me, bushi;
+ふくら脛	fu, ku, ra, hagi;
+ぬか味噌	nu, ka, miso;
+たい焼き	ta, i, ya; ki,
+まま息子	ma, ma, musuko;
+ぶなの木	bu, na, no, ki;
+よじ登る	yo, ji, nobo; ru,
+よじ上る	yo, ji, nobo; ru,
+かい摘む	ka, i, tsuma; mu,
+うちの人	u, chi, no, hito;
+いたし方	i, ta, shi, kata;
+いや増す	i, ya, ma; su,
+かつぎ屋	ka, tsu, gi, ya;
+けもの道	ke, mo, no, michi;
+たれ流し	ta, re, naga; shi,
+ならず者	na, ra, zu, mono;
+しゃ断機	sha, danpeki;
+にない手	ni, na, i, te;
+まわし者	ma, wa, shi, mono;
+ひと結び	hi, to, musu; bi,
+こがね虫	ko, ga, ne, mushi;
+よい旅を	yo, i, tabi; wo,
+ただ乗り	ta, da, no; ri,
+こげ茶色	ko, ge, chairo;
+くぎ抜き	ku, gi, nu; ki,
+くじら座	ku, ji, ra, za;
+もの乞い	mo, no, go; i,
+もの思い	mo, no, omo; i,
+むち打つ	mu, chi, u; tsu,
+なおの事	na, o, no, koto;
+おれ合う	o, re, a; u,
+しわ寄せ	shi, wa, yo; se,
+ただ働き	ta, da, batara; ki,
+とり払う	to, ri, hara; u,
+たな引く	ta, na, bi; ku,
+つかみ所	tsu, ka, mi, dokoro;
+ところ天	to, ko, ro, ten;
+いぶし銀	i, bu, shi, gin;
+さらし者	sa, ra, shi, mono;
+ばか丁寧	ba, ka, teinei;
+ばか笑い	ba, ka, wara; i,
+ばか騒ぎ	ba, ka, sawa; gi,
+ばり雑言	ba, ri, zougon;
+から元気	ka, ra, genki;
+からっ風	ka, ra, k,kaze;
+からっ風	ka, ra, q, kaze;
+そら笑い	so, ra, wara; i,
+うろ覚え	u, ro, obo; e,
+うろ憶え	u, ro, obo; e,
+すきっ腹	su, ki, p,para;
+すきっ腹	su, ki, q, para;
+から騒ぎ	ka, ra, sawa; gi,
+のど自慢	no, do, jiman;
+うしろ手	u, shi, ro, de;
+めり込む	me, ri, ko; mu,
+くみ出す	ku, mi, da; su,
+やみ討ち	ya, mi, u; chi,
+こらえ性	ko, ra, e, shou;
+けた外れ	ke, ta, hazu; re,
+けた違い	ke, ta, chiga; i,
+しめ飾り	shi, me, kaza; ri,
+おえら方	o, e, ra, gata;
+ねずみ算	ne, zu, mi, zan;
+ねずみ算	ne, zu, mi, san;
+ねずみ講	ne, zu, mi, kou;
+たれ込み	ta, re, ko; mi,
+はした金	ha, shi, ta, gane;
+ごみ溜め	go, mi, ta; me,
+やぶ医者	ya, bu, isha;
+かさ上げ	ka, sa, a; ge,
+はす交い	ha, su, ka; i,
+かぎ十字	ka, gi, juuji;
+かぎ裂き	ka, gi, za; ki,
+ふき寄せ	fu, ki, yo; se,
+うずら豆	u, zu, ra, mame;
+からし菜	ka, ra, shi, na;
+やり甲斐	ya, ri, gai;
+すそ分け	su, so, wa; ke,
+かすみ草	ka, su, mi, sou;
+かせぎ高	ka, se, gi, daka;
+ぜい弱性	ze, i, jakusei;
+ひざ掛け	hi, za, ka; ke,
+ひざ詰め	hi, za, zu; me,
+くず入れ	ku, zu, i; re,
+かじき座	ka, ji, ki, za;
+つまる所	tsu, ma, ru, tokoro;
+つまる処	tsu, ma, ru, tokoro;
+ひと苦労	hi, to, kurou;
+しかめ面	shi, ka, me, tsura;
+うるさ型	u, ru, sa, gata;
+うるさ方	u, ru, sa, gata;
+ふき掃除	fu, ki, souji;
+かざり職	ka, za, ri, shoku;
+きな臭い	ki, na, kusa; i,
+あき場所	a, ki, basho;
+ちぢれ毛	chi, ji, re, ge;
+さじ加減	sa, ji, kagen;
+ほど遠い	ho, do, too; i,
+ねじ切り	ne, ji, ki; ri,
+ふだん草	fu, da, n, sou;
+ありし日	a, ri, shi, hi;
+てれ隠し	te, re, kaku; shi,
+たこ部屋	ta, ko, beya;
+さや取り	sa, ya, to; ri,
+こぬか雨	ko, nu, ka, ame;
+あり切れ	a, ri, gi; re,
+ある限り	a, ru, kagi; ri,
+あぶく銭	a, bu, ku, zeni;
+うつけ者	u, tsu, ke, mono;
+あきれ顔	a, ki, re, gao;
+ざらめ糖	za, ra, me, tou;
+しびれ薬	shi, bi, re, gusuri;
+かじ取り	ka, ji, to; ri,
+きも吸い	ki, mo, su; i,
+かんこ鳥	ka, n, ko, dori;
+うろこ雲	u, ro, ko, gumo;
+にじり口	ni, ji, ri, guchi;
+はしご車	ha, shi, go, sha;
+はしご段	ha, shi, go, dan;
+はしご酒	ha, shi, go, zake;
+まがい物	ma, ga, i, mono;
+かみ合せ	ka, mi, awa; se,
+いかり肩	i, ka, ri, gata;
+ゆで玉子	yu, de, tamago;
+てこ入れ	te, ko, i; re,
+さらし首	sa, ra, shi, kubi;
+さらし粉	sa, ra, shi, ko;
+こま切れ	ko, ma, gi; re,
+はり千本	ha, ri, senbon;
+かぶり物	ka, bu, ri, mono;
+おくり名	o, ku, ri, na;
+のり巻き	no, ri, ma; ki,
+いるか座	i, ru, ka, za;
+すす払い	su, su, hara; i,
+なお以て	na, o, mot;te,
+なお以て	na, o, moq; te,
+すきま風	su, ki, ma, kaze;
+くぎ付け	ku, gi, zu; ke,
+きれい事	ki, re, i, goto;
+あば擦れ	a, ba, zu; re,
+つづら折	tsu, zu, ra, ori;
+でき損い	de, ki, sokona; i,
+つき出し	tsu, ki, da; shi,
+くま取り	ku, ma, do; ri,
+ただれ目	ta, da, re, me;
+すくい網	su, ku, i, ami;
+あて外れ	a, te, hazu; re,
+あて推量	a, te, zuiryou;
+あいそ笑	a, i, so, warai;
+やり投げ	ya, ri, na; ge,
+しだれ桜	shi, da, re, zakura;
+ほどき物	ho, do, ki, mono;
+まとめ役	ma, to, me, yaku;
+#つづり方	tsu, zu, ri, kata;
+つづり方	tsu, du, ri, kata;
+#つづり字	tsu, zu, ri, ji;
+つづり字	tsu, du, ri, ji;
+#つづれ錦	tsu, zu, re, nishiki;
+つづれ錦	tsu, du, re, nishiki;
+ほら吹き	ho, ra, fu; ki,
+きめ細か	ki, me, koma; ka,
+きめ細か	ki, me, goma; ka,
+でくの坊	de, ku, no, bou;
+はね返り	ha, ne, kae; ri,
+また擦れ	ma, ta, zu; re,
+つぼ焼き	tsu, bo, ya; ki,
+せん孔機	se, n, kouki;
+まんが家	ma, n, ga, ka;
+うなぎ屋	u, na, gi, ya;
+ちぎれ雲	chi, gi, re, gumo;
+とけい座	to, ke, i, za;
+しま模様	shi, ma, moyou;
+わら人形	wa, ra, ningyou;
+わら屋根	wa, ra, yane;
+きのこ雲	ki, no, ko, gumo;
+かけ合い	ka, ke, a; i,
+かけ蕎麦	ka, ke, soba;
+がけ崩れ	ga, ke, kuzu; re,
+たまご酒	ta, ma, go, zake;
+はだか麦	ha, da, ka, mugi;
+かくれ家	ka, ku, re, ga;
+かくれ家	ka, ku, re, ya;
+かすみ目	ka, su, mi, me;
+くそ勉強	ku, so, benkyou;
+おぼろ夜	o, bo, ro, yo;
+より抜き	yo, ri, nu; ki,
+えり抜き	e, ri, nu; ki,
+あそび女	a, so, bi, me;
+たまて箱	ta, ma, te, bako;
+おろか者	o, ro, ka, mono;
+なまり節	na, ma, ri, bushi;
+すね齧り	su, ne, kaji; ri,
+はまり役	ha, ma, ri, yaku;
+はめ殺し	ha, me, goro; shi,
+はめ殺し	ha, me, koro; shi,
+たぬき汁	ta, nu, ki, jiru;
+ながし目	na, ga, shi, me;
+ながし眼	na, ga, shi, me;
+はやり目	ha, ya, ri, me;
+はやり病	ha, ya, ri, yamai;
+かき揚げ	ka, ki, a; ge,
+いい気味	i, i, kimi;
+いい気味	i, i, kibi;
+ぼたん雪	bo, ta, n, yuki;
+ごく潰し	go, ku, tsubu; shi,
+たたき台	ta, ta, ki, dai;
+あか抜け	a, ka, nu; ke,
+りんご酒	ri, n, go, shu;
+たまり水	ta, ma, ri, mizu;
+たまり場	ta, ma, ri, ba;
+とかげ座	to, ka, ge, za;
+うそ泣き	u, so, na; ki,
+ときの声	to, ki, no, koe;
+とらの子	to, ra, no, ko;
+きつね色	ki, tsu, ne, iro;
+ぶどう色	bu, do, u, iro;
+ぶどう園	bu, do, u, en;
+たらば蟹	ta, ra, ba, gani;
+うどん粉	u, do, n, ko;
+やり出す	ya, ri, da; su,
+やり抜く	ya, ri, nu; ku,
+やり返す	ya, ri, kae; su,
+かち合う	ka, chi, a; u,
+もの言う	mo, no, i; u,
+こね回す	ko, ne, mawa; su,
+こね返す	ko, ne, kae; su,
+なぎ払う	na, gi, hara; u,
+のし歩く	no, shi, aru; ku,
+うち続く	u, chi, tsuzu; ku,
+おれ込む	o, re, ko; mu,
+さし招く	sa, shi, mane; ku,
+さし迫る	sa, shi, sema; ru,
+こき使う	ko, ki, tsuka; u,
+やせ細る	ya, se, hoso; ru,
+かき切る	ka, ki, ki; ru,
+かい出す	ka, i, da; su,
+かき出す	ka, ki, da; su,
+かい込む	ka, i, ko; mu,
+かき消す	ka, ki, ke; su,
+かい潜る	ka, i, kugu; ru,
+たち働く	ta, chi, hatara; ku,
+さくら貝	sa, ku, ra, gai;
+えびす講	e, bi, su, kou;
+しぼり粕	shi, bo, ri, kasu;
+しぼり滓	shi, bo, ri, kasu;
+たとえ話	ta, to, e, banashi;
+だまし絵	da, ma, shi, e;
+どまん中	do, ma, n, naka;
+なお良い	na, o, yo; i,
+ひつじ雲	hi, tsu, ji, gumo;
+ひん剥く	hi, nmu; ku,
+ひん剝く	hi, nmu; ku,
+よい天気	yo, i, tenki;
+いい天気	i, i, tenki;
+れんが塀	re, n, ga, bei;
+わめき声	wa, me, ki, goe;
+せん断箱	se, n, danbako;
+もの作り	mo, no, zuku; ri,
+もの作り	mo, no, tsuku; ri,
+ひよこ豆	hi, yo, ko, mame;
+ばった物	ba, tta, mon;
+ばった物	ba, q, ta, mon;
+ばった物	ba, tta, mono;
+ばった物	ba, q, ta, mono;
+うるう秒	u, ru, u, byou;
+なまこ板	na, ma, ko, ita;
+なまこ板	na, ma, ko, ban;
+くもの巣	ku, mo, no, su;
+もぎ取る	mo, gi, to; ru,
+ぬるま湯	nu, ru, ma, yu;
+しなの木	shi, na, no, ki;
+くつわ虫	ku, tsu, wa, mushi;
+あばら屋	a, ba, ra, ya;
+あばら家	a, ba, ra, ya;
+きり揉み	ki, ri, mo; mi,
+ちゃぶ台	cha, bu, dai;
+もらい子	mo, ra, i, go;
+もらい手	mo, ra, i, te;
+うめき声	u, me, ki, goe;
+もみ合い	mo, mi, a; i,
+かがり火	ka, ga, ri, bi;
+げっ歯目	ge, s,shimoku;
+げっ歯目	ge, q, shimoku;
+うるう日	u, ru, u, bi;
+いら立ち	i, ra, da; chi,
+にわか雪	ni, wa, ka, yuki;
+からし色	ka, ra, shi, iro;
+からし油	ka, ra, shi, yu;
+かに星雲	ka, ni, seiun;
+たたり目	ta, ta, ri, me;
+わきの下	wa, ki, no, shita;
+もて遊ぶ	mo, te, aso; bu,
+かけ直す	ka, ke, nao; su,
+あれ以来	a, re, irai;
+うちの奴	u, chi, no, yatsu;
+うわさ話	u, wa, sa, banashi;
+ささげ銃	sa, sa, ge, tsutsu;
+どん詰り	do, n, zuma; ri,
+うそ付け	u, so, tsu; ke,
+まる覚え	ma, ru, obo; e,
+ここん所	ko, ko, n, toko;
+あいつ等	a, i, tsu, ra;
+すり減る	su, ri, he; ru,
+つなぎ服	tsu, na, gi, fuku;
+どす黒い	do, su, guro; i,
+のみの市	no, mi, no, ichi;
+なお書き	na, o, ga; ki,
+ぶっ続け	bu, t,tsuzu; ke,
+ぶっ続け	bu, q, tsuzu; ke,
+ぶり返す	bu, ri, kae; su,
+ずわい蟹	zu, wa, i, gani;
+へこき虫	he, ko, ki, mushi;
+へこき蟲	he, ko, ki, mushi;
+あの様に	a, no, you; ni,
+こっ酷い	ko, p,pido; i,
+こっ酷い	ko, q, pido; i,
+この様に	ko, no, you; ni,
+どっち道	do, cchi, michi;
+どっち道	do, q, chi, michi;
+はい出す	ha, i, da; su,
+はい出る	ha, i, de; ru,
+もう直ぐ	mo, u, su; gu,
+やり過ぎ	ya, ri, su; gi,
+のれん代	no, re, n, dai;
+どさ回り	do, sa, mawa; ri,
+より良い	yo, ri, yo; i,
+せせり蝶	se, se, ri, chou;
+ぽい捨て	po, i, su; te,
+きかん坊	ki, ka, n, bou;
+はず押し	ha, zu, o; shi,
+こぼし屋	ko, bo, shi, ya;
+あく抜き	a, ku, nu; ki,
+あく抜け	a, ku, nu; ke,
+たわみ計	ta, wa, mi, kei;
+つり足場	tsu, ri, ashiba;
+へな猪口	he, na, choko;
+すっ飛ぶ	su, t,to; bu,
+すっ飛ぶ	su, q, to; bu,
+ずれ込む	zu, re, ko; mu,
+たらの木	ta, ra, no, ki;
+あら挽き	a, ra, bi; ki,
+あんこ型	a, n, ko, gata;
+あんこ形	a, n, ko, gata;
+うず高く	u, zu, taka; ku,
+うそ寒い	u, so, samu; i,
+えんま帳	e, n, ma, chou;
+とは言え	to, ha, i; e,
+べた付く	be, ta, tsu; ku,
+かぶき者	ka, bu, ki, mono;
+ごま塩頭	go, ma, shioatama;
+いらか段	i, ra, ka, dan;
+ぼろ儲け	bo, ro, mou; ke,
+せり出す	se, ri, da; su,
+しば漬け	shi, ba, zu; ke,
+その通り	so, no, too; ri,
+ろう付け	ro, u, zu; ke,
+けた上げ	ke, ta, a; ge,
+けた上り	ke, ta, aga; ri,
+たとう紙	ta, to, u, gami;
+たとう紙	ta, to, u, shi;
+あこう鯛	a, ko, u, dai;
+いやし系	i, ya, shi, kei;
+たらい船	ta, ra, i, bune;
+べた褒め	be, ta, bo; me,
+べた褒め	be, ta, ho; me,
+ひいて板	hi, i, te, ban;
+つれ帰る	tsu, re, kae; ru,
+のど越し	no, do, go; shi,
+ひと財産	hi, to, zaisan;
+ぱくり屋	pa, ku, ri, ya;
+せり上る	se, ri, aga; ru,
+その辺り	so, no, ata; ri,
+そこら辺	so, ko, ra, hen;
+かませ犬	ka, ma, se, inu;
+しかる後	shi, ka, ru, nochi;
+がまん汁	ga, ma, n, jiru;
+こん包材	ko, n, pouzai;
+かた焼き	ka, ta, ya; ki,
+かっ込む	ka, k,ko; mu,
+かっ込む	ka, q, ko; mu,
+ぼたん鍋	bo, ta, n, nabe;
+ひら社員	hi, ra, shain;
+どら焼き	do, ra, ya; ki,
+がた落ち	ga, ta, o; chi,
+ぼろ勝ち	bo, ro, ga; chi,
+ほろ苦い	ho, ro, niga; i,
+むち打ち	mu, chi, u; chi,
+でご座る	de, go, za; ru,
+こざと偏	ko, za, to, hen;
+むず痒い	mu, zu, gayu; i,
+すり切り	su, ri, ki; ri,
+そち退け	so, chi, no; ke,
+それ計り	so, re, baka; ri,
+こいつ等	ko, i, tsu, ra;
+さざれ石	sa, za, re, ishi;
+めくら縞	me, ku, ra, jima;
+ちびっ子	chi, bi, k,ko;
+ちびっ子	chi, bi, q, ko;
+がちゃ目	ga, cha, me;
+おわい屋	o, wa, i, ya;
+らくだ色	ra, ku, da, iro;
+もつ焼き	mo, tsu, ya; ki,
+おっ開く	o, p,pira; ku,
+おっ開く	o, q, pira; ku,
+それ切り	so, re, ki; ri,
+それ切り	so, re, gi; ri,
+でも無い	de, mo, na; i,
+いろは順	i, ro, ha, jun;
+ねぶた祭	ne, bu, ta, matsuri;
+ぶち切れ	bu, chi, ki; re,
+ぶち切れ	bu, chi, gi; re,
+がぶ飲み	ga, bu, no; mi,
+がぶ呑み	ga, bu, no; mi,
+がら空き	ga, ra, a; ki,
+がら明き	ga, ra, a; ki,
+がら空き	ga, ra, su; ki,
+きいた風	ki, i, ta, fuu;
+いう通り	i, u, too; ri,
+ばら撒き	ba, ra, ma; ki,
+どぶ漬け	do, bu, zu; ke,
+ざる蕎麦	za, ru, soba;
+かばん語	ka, ba, n, go;
+むつ五郎	mu, tsu, gorou;
+ゆかた地	yu, ka, ta, ji;
+ちょい役	cho, i, yaku;
+りんご飴	ri, n, go, ame;
+とう嚢炎	to, u, nouen;
+げん直し	ge, n, nao; shi,
+おにい系	o, ni, i, kei;
+やり残す	ya, ri, noko; su,
+やり残し	ya, ri, noko; shi,
+やり逃げ	ya, ri, ni; ge,
+ひた謝り	hi, ta, ayama; ri,
+えせ学者	e, se, gakusha;
+さり気に	sa, ri, ge; ni,
+ぶっ付け	bu, t,tsu; ke,
+ぶっ付け	bu, q, tsu; ke,
+さん付け	sa, n, zu; ke,
+ぼろ負け	bo, ro, ma; ke,
+あがり症	a, ga, ri, shou;
+あがり性	a, ga, ri, shou;
+うまい話	u, ma, i, hanashi;
+とは別に	to, ha, betsu; ni,
+ひと欠片	hi, to, kakera;
+ひと騒動	hi, to, soudou;
+らせん状	ra, se, n, jou;
+やけ食い	ya, ke, gu; i,
+がん診断	ga, n, shindan;
+えら呼吸	e, ra, kokyuu;
+もみの木	mo, mi, no, ki;
+つるし雲	tsu, ru, shi, gumo;
+くわ入れ	ku, wa, i; re,
+やしの木	ya, shi, no, ki;
+さて置き	sa, te, o; ki,
+とも無く	to, mo, na; ku,
+ちょん掛	cho, n, gake;
+もり蕎麦	mo, ri, soba;
+ちぎり絵	chi, gi, ri, e;
+すっ転ぶ	su, k,koro; bu,
+すっ転ぶ	su, q, koro; bu,
+うちの者	u, chi, no, mono;
+いろは楓	i, ro, ha, kaede;
+わたし的	wa, ta, shi, teki;
+なめ回す	na, me, mawa; su,
+はまり道	ha, ma, ri, michi;
+きぬた骨	ki, nu, ta, kotsu;
+あぶみ骨	a, bu, mi, kotsu;
+のた打つ	no, ta, u; tsu,
+にせ医者	ni, se, isha;
+めくら印	me, ku, ra, in;
+しみ出す	shi, mi, da; su,
+しみ出し	shi, mi, da; shi,
+やくざ者	ya, ku, za, mono;
+すり合せ	su, ri, awa; se,
+まむし丼	ma, mu, shi, donburi;
+まむし丼	ma, mu, shi, don;
+せせり箸	se, se, ri, bashi;
+ねぶり箸	ne, bu, ri, bashi;
+いし海豚	i, shi, iruka;
+それ来た	so, re, ki; ta,
+かごの鳥	ka, go, no, tori;
+なめし革	na, me, shi, gawa;
+なめし皮	na, me, shi, gawa;
+しいの木	shi, i, no, ki;
+しぼり汁	shi, bo, ri, jiru;
+ごま豆腐	go, ma, doufu;
+ひょう柄	hyo, u, gara;
+はこべ塩	ha, ko, be, jio;
+もも上げ	mo, mo, a; ge,
+ゆず胡椒	yu, zu, koshou;
+ゆず胡椒	yu, zu, goshou;
+である体	de, a, ru, tai;
+わらび粉	wa, ra, bi, ko;
+わらび糊	wa, ra, bi, nori;
+わらび餅	wa, ra, bi, mochi;
+きなこ餅	ki, na, ko, mochi;
+きな粉餅	ki, na, komochi;
+どん引き	do, n, bi; ki,
+ひと文字	hi, to, moji;
+そば切り	so, ba, ki; ri,
+その内に	so, no, uchi; ni,
+うみ葡萄	u, mi, budou;
+つぎ足す	tsu, gi, ta; su,
+おこし種	o, ko, shi, dane;
+とうの昔	to, u, no, mukashi;
+とくの昔	to, ku, no, mukashi;
+ぶち破る	bu, chi, yabu; ru,
+すみれ草	su, mi, re, gusa;
+くの字点	ku, no, jiten;
+どちら共	do, chi, ra, tomo;
+ない内に	na, i, uchi; ni,
+ながら族	na, ga, ra, zoku;
+ぶっ壊す	bu, k,kowa; su,
+ぶっ壊す	bu, q, kowa; su,
+ひと続き	hi, to, tsuzu; ki,
+それ見ろ	so, re, mi; ro,
+それ御覧	so, re, goran;
+それご覧	so, re, go, ran;
+つる植物	tsurushokubutsu;
+かぎ回る	ka, gi, mawa; ru,
+ひさし髪	hi, sa, shi, gami;
+ひと泳ぎ	hi, to, oyo; gi,
+かぶり笠	ka, bu, ri, gasa;
+たとえ歌	ta, to, e, uta;
+ねじり秤	ne, ji, ri, bakari;
+ねじれ秤	ne, ji, re, bakari;
+ごり押し	go, ri, o; shi,
+さいの目	sa, i, no, me;
+いい度胸	i, i, dokyou;
+よい度胸	yo, i, dokyou;
+はがき大	ha, ga, ki, dai;
+けち臭い	ke, chi, kusa; i,
+ちょう度	cho, u, do;
+ぶち抜き	bu, chi, nu; ki,
+はちの子	ha, chi, no, ko;
+この通り	ko, no, too; ri,
+あんぽ柿	a, n, po, gaki;
+さい帯血	sa, i, taiketsu;
+ひじ当て	hi, ji, a; te,
+どんど焼	do, n, do, yaki;
+とろき星	to, ro, ki, boshi;
+ちりこ星	chi, ri, ko, boshi;
+ぬりこ星	nu, ri, ko, boshi;
+たたら星	ta, ta, ra, boshi;
+ちちり星	chi, chi, ri, boshi;
+なまめ星	na, ma, me, boshi;
+はつい星	ha, tsu, i, boshi;
+とみて星	to, mi, te, boshi;
+うるき星	u, ru, ki, boshi;
+うたせ湯	u, ta, se, yu;
+どなり声	do, na, ri, goe;
+あま噛み	a, ma, ga; mi,
+あま噛み	a, ma, ka; mi,
+べた惚れ	be, ta, bo; re,
+やむ得ず	ya, mu, e; zu,
+つくも神	tsu, ku, mo, gami;
+いざ鎌倉	i, za, kamakura;
+ばら寿司	ba, ra, zushi;
+たれ込む	ta, re, ko; mu,
+かし携帯	ka, shi, keitai;
+うがい薬	u, ga, i, gusuri;
+りんご園	ri, n, go, en;
+もちの木	mo, chi, no, ki;
+ほつれ髪	ho, tsu, re, gami;
+いちい樫	i, chi, i, gashi;
+こけら板	ko, ke, ra, ita;
+ひと舐め	hi, to, na; me,
+いさら井	i, sa, ra, i;
+さざれ波	sa, za, re, nami;
+いささ川	i, sa, sa, gawa;
+いさら川	i, sa, ra, gawa;
+うその様	u, so, no, you;
+はめ合い	ha, me, a; i,
+さんや袋	sa, n, ya, bukuro;
+これ切り	ko, re, ki; ri,
+これ切り	ko, re, gi; ri,
+みかん箱	mi, ka, n, bako;
+ぶっ叩く	bu, t,tata; ku,
+ぶっ叩く	bu, q, tata; ku,
+かな入力	ka, na, nyuuryoku;
+けた位置	ke, ta, ichi;
+けた移動	ke, ta, idou;
+けた送り	ke, ta, oku; ri,
+より対線	yo, ri, tsuisen;
+はん用体	ha, n, youtai;
+あえぎ声	a, e, gi, goe;
+そこら中	so, ko, ra, juu;
+いち押し	i, chi, o; shi,
+いち推し	i, chi, o; shi,
+ごく最近	go, ku, saikin;
+そちら様	so, chi, ra, sama;
+さっ引く	sa, p,pi; ku,
+さっ引く	sa, q, pi; ku,
+いばら姫	i, ba, ra, hime;
+それ自身	so, re, jishin;
+かじ付き	ka, ji, tsu; ki,
+かじ無し	ka, ji, na; shi,
+かせ蚯蚓	ka, se, mimizu;
+ごった煮	go, tta, ni;
+ごった煮	go, q, ta, ni;
+うず形式	u, zu, keishiki;
+おさ打ち	o, sa, u; chi,
+おさ通し	o, sa, too; shi,
+かん状体	ka, n, joutai;
+あられ餅	a, ra, re, mochi;
+ひた隠し	hi, ta, kaku; shi,
+いい気持	i, i, kimochi;
+うつ状態	u, tsu, joutai;
+いい感じ	i, i, kan; ji,
+こん包費	ko, n, pouhi;
+ぶっ飛び	bu, t,to; bi,
+ぶっ飛び	bu, q, to; bi,
+ぶっ飛ぶ	bu, t,to; bu,
+ぶっ飛ぶ	bu, q, to; bu,
+なわ編み	na, wa, a; mi,
+ぶっ込む	bu, k,ko; mu,
+ぶっ込む	bu, q, ko; mu,
+ずく無し	zu, ku, na; shi,
+ごた混ぜ	go, ta, ma; ze,
+ぐい呑み	gu, i, no; mi,
+ぐい飲み	gu, i, no; mi,
+くせっ毛	ku, se, k,ke;
+くせっ毛	ku, se, q, ke;
+くるり棒	ku, ru, ri, bou;
+うなり声	u, na, ri, goe;
+でも医者	de, mo, isha;
+しゃこ貝	sha, ko, gai;
+あらぬ事	a, ra, nu, koto;
+かさ高い	ka, sa, daka; i,
+その折り	so, no, o; ri,
+それ自体	so, re, jitai;
+それ相応	so, re, souou;
+ひょう疽	hyo, u, so;
+ふるえ音	fu, ru, e, on;
+ふん縛る	fu, n, jiba; ru,
+ろう引き	ro, u, bi; ki,
+すみれ色	su, mi, re, iro;
+くさび石	ku, sa, bi, ishi;
+なし得る	na, shi, u; ru,
+なし得る	na, shi, e; ru,
+たばこ税	ta, ba, ko, zei;
+ひん抜く	hi, nnu; ku,
+うろ抜く	u, ro, nu; ku,
+かすれ声	ka, su, re, goe;
+かぎ取る	ka, gi, to; ru,
+べき級数	be, ki, kyuusuu;
+あぐら鼻	a, gu, ra, bana;
+こと自体	ko, to, jitai;
+かわら状	ka, wa, ra, gasane;
+にきび面	ni, ki, bi, zura;
+ねらい目	ne, ra, i, me;
+ざく切り	za, ku, gi; ri,
+そぎ切り	so, gi, gi; ri,
+こと始め	ko, to, haji; me,
+ぶっ放す	bu, p,pana; su,
+ぶっ放す	bu, q, pana; su,
+つり銭口	tsu, ri, senguchi;
+ひと呼吸	hi, to, kokyuu;
+いく日か	i, ku, nichi; ka,
+ずべら坊	zu, be, ra, bou;
+ため書き	ta, me, ga; ki,
+つる返し	tsu, ru, gae; shi,
+べた組み	be, ta, gu; mi,
+べた焼き	be, ta, ya; ki,
+いろは歌	i, ro, ha, uta;
+げん担ぎ	ge, n, katsu; gi,
+さく乳器	sa, ku, nyuuki;
+おさげ髪	o, sa, ge, gami;
+うず高い	u, zu, taka; i,
+よく言う	yo, ku, i; u,
+おひざ元	o, hi, za, moto;
+ごつい手	go, tsu, i, te;
+いとこ婚	i, to, ko, kon;
+あわ風呂	a, wa, buro;
+また来週	ma, ta, raishuu;
+ぶっ倒す	bu, t,tao; su,
+ぶっ倒す	bu, q, tao; su,
+つむぎ糸	tsu, mu, gi, ito;
+うまい菜	u, ma, i, na;
+すす掃き	su, su, ha; ki,
+んと欲す	n, to, hos;su,
+んと欲す	n, to, hoq; su,
+うさぎ座	u, sa, gi, za;
+おばけ話	o, ba, ke, banashi;
+ろくろ首	ro, ku, ro, kubi;
+うた沢節	u, ta, zawabushi;
+ざくろ鼻	za, ku, ro, bana;
+なごり雪	na, go, ri, yuki;
+すえ臭い	su, e, kusa; i,
+とち狂う	to, chi, guru; u,
+とち狂う	to, chi, kuru; u,
+どち狂う	do, chi, guru; u,
+ため塗り	ta, me, nu; ri,
+しらす漁	shi, ra, su, ryou;
+つぶし餡	tsu, bu, shi, an;
+もて扱う	mo, te, atsuka; u,
+つまみ菜	tsu, ma, mi, na;
+おぼろ雲	o, bo, ro, gumo;
+きゅう鏘	kyu, u, sou;
+そぼ降る	so, bo, fu; ru,
+すい臓癌	su, i, zougan;
+ばか囃子	ba, ka, bayashi;
+はす向い	ha, su, muka; i,
+おでん屋	o, de, n, ya;
+もみじ袋	mo, mi, ji, bukuro;
+やけっ腹	ya, ke, p,para;
+やけっ腹	ya, ke, q, para;
+さぶる児	sa, bu, ru, ko;
+もの憂げ	mo, no, u; ge,
+わかし湯	wa, ka, shi, yu;
+もの臭い	mo, no, gusa; i,
+しるこ屋	shi, ru, ko, ya;
+たんぽ槍	ta, n, po, yari;
+しだり尾	shi, da, ri, o;
+きび砂糖	ki, bi, zatou;
+うなぎ飯	u, na, gi, meshi;
+こま飛び	ko, ma, to; bi,
+かび止め	ka, bi, do; me,
+その下で	so, no, shita; de,
+その下に	so, no, shita; ni,
+ごく僅か	go, ku, wazu; ka,
+はだ脱ぐ	ha, da, nu; gu,
+どか食い	do, ka, gu; i,
+とりの日	to, ri, no, hi;
+ぬか漬け	nu, ka, zu; ke,
+ぶつ切り	bu, tsu, gi; ri,
+ふいご祭	fu, i, go, matsuri;
+みじん粉	mi, ji, n, ko;
+がさ入れ	ga, sa, i; re,
+はるの雲	ha, ru, no, kumo;
+やせ過ぎ	ya, se, su; gi,
+かます鰆	ka, ma, su, sawara;
+ぶっ違い	bu, c,chiga; i,
+ぶっ違い	bu, q, chiga; i,
+なつめ球	na, tsu, me, kyuu;
+ごみ処理	go, mi, shori;
+えんじ色	e, n, ji, iro;
+うこん茶	u, ko, n, cha;
+ゆで麺機	yu, de, menki;
+ゆで麺器	yu, de, menki;
+ごま和え	go, ma, a; e,
+どて焼き	do, te, ya; ki,
+すだれ頭	su, da, re, atama;
+ほぐし水	ho, gu, shi, mizu;
+さらし裏	sa, ra, shi, ura;
+ろくろ師	ro, ku, ro, shi;
+ひた隠す	hi, ta, kaku; su,
+もく拾い	mo, ku, hiro; i,
+しわ加工	shi, wa, kakou;
+こぼれ種	ko, bo, re, dane;
+ぱちん留	pa, chi, n, dome;
+しぼり器	shi, bo, ri, ki;
+ふさ飾り	fu, sa, kaza; ri,
+おきな草	o, ki, na, gusa;
+かた時も	ka, ta, toki; mo,
+かんの虫	ka, n, no, mushi;
+ずぼら箸	zu, bo, ra, bashi;
+あばら筋	a, ba, ra, kin;
+ひた走る	hi, ta, hashi; ru,
+ひた走る	hi, ta, bashi; ru,
+おぼこ娘	o, bo, ko, musume;
+だんご汁	da, n, go, jiru;
+やり込み	ya, ri, ko; mi,
+かん流圧	ka, n, ryuuatsu;
+いく種類	i, ku, shurui;
+くるみ油	ku, ru, mi, abura;
+くるみ油	ku, ru, mi, yu;
+こたつ虫	ko, ta, tsu, mushi;
+なたね粕	na, ta, ne, kasu;
+ほい駕籠	ho, i, kago;
+とう利天	to, u, iriten;
+あいの風	a, i, no, kaze;
+うなぎ鍋	u, na, gi, nabe;
+あへん法	a, he, n, hou;
+ひとり親	hi, to, ri, oya;
+ぶっ切る	bu, k,ki; ru,
+ぶっ切る	bu, q, ki; ru,
+つるっ禿	tsu, ru, p,page;
+つるっ禿	tsu, ru, q, page;
+あっち系	a, cchi, kei;
+あっち系	a, q, chi, kei;
+そっち系	so, cchi, kei;
+そっち系	so, q, chi, kei;
+ばら売り	ba, ra, u; ri,
+ごま味噌	go, ma, miso;
+じょう嚢	jo, u, nou;
+はけ塗り	ha, ke, nu; ri,
+ひざ蹴り	hi, za, ge; ri,
+かす饂飩	ka, su, udon;
+くらべ馬	ku, ra, be, uma;
+そり舌音	so, ri, jitaon;
+けり返す	ke, ri, kae; su,
+あゆの風	a, yu, no, kaze;
+あえの風	a, e, no, kaze;
+えび反り	e, bi, zo; ri,
+この頃様	ko, no, goroyou;
+その足で	so, no, ashi; de,
+おっ死ぬ	o, c,chi; nu,
+おっ死ぬ	o, q, chi; nu,
+ぶち込む	bu, chi, ko; mu,
+こま送り	ko, ma, oku; ri,
+ここの所	ko, ko, no, tokoro;
+からす座	ka, ra, su, za;
+こじし座	ko, ji, shi, za;
+ぽん太郎	po, n, tarou;
+わら細工	wa, ra, zaiku;
+あなぜ風	a, na, ze, kaze;
+あなじ風	a, na, ji, kaze;
+ひと浴び	hi, to, a; bi,
+たたみ皺	ta, ta, mi, jiwa;
+たたみ皴	ta, ta, mi, jiwa;
+やり難い	ya, ri, niku; i,
+ほうき星	ho, u, ki, boshi;
+さり乍ら	sa, ri, naga; ra,
+どぼ漬け	do, bo, zu; ke,
+めがね店	me, ga, ne, ten;
+ぬかに釘	nu, ka, ni, kugi;
+べた記事	be, ta, kiji;
+ここら辺	ko, ko, ra, hen;
+さび抜き	sa, bi, nu; ki,
+きゅん死	kyu, n, shi;
+ときの気	to, ki, no, ke;
+はしご高	ha, shi, go, daka;
+こぼれ球	ko, bo, re, dama;
+うなる程	u, na, ru, hodo;
+おんぶ紐	o, n, bu, himo;
+だっこ紐	da, kko, himo;
+だっこ紐	da, q, ko, himo;
+おぶい紐	o, bu, i, himo;
+いい迷惑	i, i, meiwaku;
+どの様に	do, no, you; ni,
+いため飯	i, ta, me, meshi;
+うそ臭い	u, so, kusa; i,
+いける口	i, ke, ru, kuchi;
+ひと手間	hi, to, tema;
+あがり牌	a, ga, ri, pai;
+ごみ屋敷	go, mi, yashiki;
+ぱっと見	pa, tto, mi;
+ぱっと見	pa, q, to, mi;
+これ幸い	ko, re, saiwa; i,
+って言う	tte, i; u,
+って言う	q, te, i; u,
+いぶし鮭	i, bu, shi, zake;
+この辺り	ko, no, ata; ri,
+ふくれ面	fu, ku, re, zura;
+ふくれ面	fu, ku, re, tsura;
+もぐら塚	mo, gu, ra, zuka;
+はげ具合	ha, ge, guai;
+うすめ液	u, su, me, eki;
+いい勝負	i, i, shoubu;
+かく言う	ka, ku, i; u,
+まっ黄色	ma, k,kiiro;
+まっ黄色	ma, q, kiiro;
+しけ込む	shi, ke, ko; mu,
+そこ退け	so, ko, no; ke,
+はな垂れ	ha, na, ta; re,
+ない交ぜ	na, i, ma; ze,
+だし巻き	da, shi, ma; ki,
+みそ炒め	mi, so, ita; me,
+そら来た	so, ra, ki; ta,
+いとこ煮	i, to, ko, ni;
+くだけ波	ku, da, ke, nami;
+むかご飯	mu, ka, go, meshi;
+とろろ汁	to, ro, ro, jiru;
+むしの声	mu, shi, no, koe;
+なつ近し	na, tsu, chika; shi,
+はるの川	ha, ru, no, kawa;
+はるの土	ha, ru, no, tsuchi;
+ぎょろ目	gyo, ro, me;
+ものの本	mo, no, no, hon;
+たぬき丼	ta, nu, ki, don;
+かち割る	ka, chi, wa; ru,
+かち割り	ka, chi, wa; ri,
+こぼれ話	ko, bo, re, banashi;
+ばら輝石	ba, ra, kiseki;
+わさび菜	wa, sa, bi, na;
+おなり神	o, na, ri, gami;
+ねた潰し	ne, ta, tsubu; shi,
+あご割れ	a, go, wa; re,
+ずた襤褸	zu, ta, boro;
+べた負け	be, ta, ma; ke,
+だだ漏れ	da, da, mo; re,
+めかし屋	me, ka, shi, ya;
+ちゃら男	cha, ra, o;
+ちゃら子	cha, ra, ko;
+かぜ立つ	ka, ze, da; tsu,
+かぜ立つ	ka, ze, ta; tsu,
+だんな様	da, n, na, sama;
+こおり鬼	ko, o, ri, oni;
+べき指数	be, ki, shisuu;
+いとこ半	i, to, ko, han;
+どが付く	do, ga, tsu; ku,
+ぶっ潰す	bu, t,tsubu; su,
+ぶっ潰す	bu, q, tsubu; su,
+すり流し	su, ri, naga; shi,
+かぶと焼	ka, bu, to, yaki;
+むらっ気	mu, ra, k,ke;
+むらっ気	mu, ra, q, ke;
+ひと飛び	hi, to, to; bi,
+なんか用	na, n, ka, you;
+なにか用	na, ni, ka, you;
+はっ倒す	ha, tta, o; su,
+はっ倒す	ha, q, ta, o; su,
+はやり神	ha, ya, ri, gami;
+ぽちゃ子	po, cha, ko;
+とっ外れ	to, p,pazu; re,
+とっ外れ	to, q, pazu; re,
+たき上げ	ta, ki, a; ge,
+くもの糸	ku, mo, no, ito;
+かに刺し	ka, ni, sa; shi,
+びら配り	bi, ra, kuba; ri,
+まめぶ汁	ma, me, bu, jiru;
+あんま機	a, n, ma, ki;
+かぶせ茶	ka, bu, se, cha;
+ゆで時間	yu, de, jikan;
+ひも付け	hi, mo, zu; ke,
+つめ研ぎ	tsu, me, to; gi,
+ても良い	te, mo, yo; i,
+よい感じ	yo, i, kan; ji,
+では無い	de, ha, na; i,
+はす葉氷	ha, su, hagoori;
+はす葉氷	ha, su, bagoori;
+いかり氷	i, ka, ri, koori;
+くぬぎ炭	ku, nu, gi, zumi;
+きれい目	ki, re, i, me;
+やすり目	ya, su, ri, me;
+いぼた蝋	i, bo, ta, rou;
+ぶどう豆	bu, do, u, mame;
+かすり筆	ka, su, ri, fude;
+どこの誰	do, ko, no, dare;
+ばか高い	ba, ka, taka; i,
+ばか高い	ba, ka, daka; i,
+おどけ者	o, do, ke, mono;
+しのり鴨	shi, no, ri, gamo;
+かずら橋	ka, zu, ra, bashi;
+まっ先に	ma, ssaki; ni,
+まっ先に	ma, q, saki; ni,
+ある意味	a, ru, imi;
+どくろ杯	do, ku, ro, hai;
+どこら辺	do, ko, ra, hen;
+いせ込み	i, se, ko; mi,
+たぬき顔	ta, nu, ki, gao;
+ぶり大根	bu, ri, daikon;
+とんぼ玉	to, n, bo, dama;
+また今度	ma, ta, kondo;
+ふるい絹	fu, ru, i, ginu;
+たて状地	ta, te, jouchi;
+かご落ち	ka, go, o; chi,
+うり抜く	u, ri, nu; ku,
+うり抜け	u, ri, nu; ke,
+もやい綱	mo, ya, i, zuna;
+へちま水	he, chi, ma, sui;
+ばら積み	ba, ra, zu; mi,
+ささえ棒	sa, sa, e, bou;
+つかえ棒	tsu, ka, e, bou;
+しわ取り	shi, wa, to; ri,
+べっ甲餡	be, k,kouan;
+べっ甲餡	be, q, kouan;
+ひみつ箱	hi, mi, tsu, bako;
+みせ出し	mi, se, da; shi,
+やや辛口	ya, ya, karakuchi;
+どん百姓	do, n, byakushou;
+おまま事	o, ma, ma, goto;
+うちん家	u, chi, n, chi;
+あなた達	a, na, ta, tachi;
+あぶれ者	a, bu, re, mono;
+のど風邪	no, do, kaze;
+やり出し	ya, ri, da; shi,
+ひり出す	hi, ri, da; su,
+けれん味	ke, re, n, mi;
+うぇい系	whe, i, kei;
+ごく偶に	go, ku, tama; ni,
+えら張り	e, ra, ba; ri,
+あごの骨	a, go, no, hone;
+おまえ等	o, ma, e, ra;
+みゆき族	mi, yu, ki, zoku;
+ふし浮き	fu, shi, u; ki,
+ぞっき屋	zo, kki, ya;
+ぞっき屋	zo, q, ki, ya;
+ぞっき本	zo, kki, bon;
+ぞっき本	zo, q, ki, bon;
+あんず飴	a, n, zu, ame;
+ぶどう飴	bu, do, u, ame;
+いちご飴	i, chi, go, ame;
+のばし棒	no, ba, shi, bou;
+もみ海苔	mo, mi, nori;
+ひと巡り	hi, to, megu; ri,
+ぼかし染	bo, ka, shi, zome;
+はえ出る	ha, e, de; ru,
+さぼり癖	sa, bo, ri, guse;
+にせ十字	ni, se, juuji;
+ひげ結晶	hi, ge, kesshou;
+あぶみ革	a, bu, mi, gawa;
+かむり板	ka, mu, ri, ita;
+ぽっと出	po, tto, de;
+ぽっと出	po, q, to, de;
+たばこ畑	ta, ba, ko, batake;
+おまえ達	o, ma, e, tachi;
+のぞき鏡	no, zo, ki, kagami;
+がら落ち	ga, ra, o; chi,
+つぶれ梅	tsu, bu, re, ume;
+よく焼き	yo, ku, ya; ki,
+あか取り	a, ka, to; ri,
+もの扱い	mo, no, atsuka; i,
+そり立つ	so, ri, ta; tsu,
+むれ立つ	mu, re, ta; tsu,
+ずり込む	zu, ri, ko; mu,
+ずり出る	zu, ri, de; ru,
+ずり這い	zu, ri, ba; i,
+ねり羊羹	ne, ri, youkan;
+もみ消し	mo, mi, ke; shi,
+声の出演	koe; no, shutsuen;
+モノ扱い	mo. no. atsuka; i,
+話が飛ぶ	hanashi; ga, to; bu,
+責め落す	se; me, oto; su,
+固まり肉	kata; ma, ri, niku;
+緑の窓口	midori; no, madoguchi;
+反り立つ	so; ri, ta; tsu,
+夜の営み	yoru; no, itona; mi,
+群れ立つ	mu; re, ta; tsu,
+ズリ這い	zu. ri. ba; i,
+掻い暮れ	ka; i, ku; re,
+練り羊羹	ne; ri, youkan;
+煉り羊羹	ne; ri, youkan;
+ロケ交渉	ro. ke. koushou;
+ガラス瓶	ga. ra. su. bin;
+スラム化	su. ra. mu. ka;
+飛ばし屋	to; ba, shi, ya;
+売り文句	u; ri, monku;
+ノミ取り	no. mi. to; ri,
+カツ閉じ	ka. tsu. to; ji,
+カツ綴じ	ka. tsu. to; ji,
+揉み消し	mo; mi, ke; shi,
 ####### 202102新增補充比對詞彙 japanese.jmdict.dict.yaml 結束 #######
 #######@ 202102新增日語符號類詞彙 開始 #######
 Γ分布	ganmabunpu;
