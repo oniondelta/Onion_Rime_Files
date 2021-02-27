@@ -166717,7 +166717,7 @@ columns:
 鬚もじゃ	hige; mo, ja,
 鬚もじゃ	hige; mo, ji, xya,
 髯もじゃ	hige; mo, ja,
-髯もじゃ	hige; mo, ji, xya
+髯もじゃ	hige; mo, ji, xya,
 空になる	kara; ni, na, ru,
 嫁たたき	yome; ta, ta, ki,
 空にする	kara; ni, su, ru,
@@ -177237,6 +177237,360 @@ columns:
 一つとっても	hito; tsu, to, q, te, mo,
 日がな一日	hi; ga, na, ichinichi;
 もう一踏ん張り	mo, u, hitofu; n, ba; ri,
+百聞は一見にしかず	hyakubun; ha, ikken; ni, shi, ka, zu,
+百聞は一見に如かず	hyakubun; ha, ikken; ni, shi; ka, zu,
+一本背負い	ipponzeo; i,
+一昨日来やがれ	ototoiki; ya, ga, re,
+一歩間違うと	ippomachiga; u, to,
+一流ホテル	ichiryuu; ho. te. ru.
+一本建て税率	ipponda; te, zeiritsu;
+一回り小さい	hitomawa; ri, chii; sa, i,
+一年の計は元旦にあり	ichinen; no, kei; ha, gantan; ni, a, ri,
+一年の計は元旦に在り	ichinen; no, kei; ha, gantan; ni, a; ri,
+一般ピープル	ippan; pi. - pu. ru.
+一般ピーポー	ippan; pi. - po. -
+一本建て為替	ipponda; te, kawase;
+関税と貿易に関する一般協定	kanzei; to, boueki; ni, kan; su, ru, ippankyoutei;
+一寸の光陰軽んずべからず	issun; no, kouinkaro; n, zu, be, ka, ra, zu,
+一寸の光陰軽んず可からず	issun; no, kouinkaro; n, zu, be; ka, ra, zu,
+熱力学の第一法則	netsurikigaku; no, daiichihousoku;
+千金の裘は一狐の腋に非ず	senkin; no, kyuu; ha, ikko; no, eki; ni, ara; zu,
+一杯飲み屋	ippaino; mi, ya;
+一杯呑み屋	ippaino; mi, ya;
+一寸やそっと	chotto; ya, so, tto,
+一寸やそっと	chotto; ya, so, q, to,
+コリントの信徒への手紙一	ko. ri. n. to. no, shinto; he, no, tegamiichi;
+テサロニケの信徒への手紙一	te. sa. ro. ni. ke. no, shinto; he, no, tegamiichi;
+テモテへの手紙一	te. mo. te. he, no, tegamiichi;
+ペトロの手紙一	pe. to. ro. no, tegamiichi;
+ヨハネの手紙一	yo. ha. ne. no, tegamiichi;
+一身上の都合	isshinjou; no, tsugou;
+一通り揃う	hitotoo; ri, soro; u,
+夜明け前が一番暗い	yoa; ke, mae; ga, ichibankura; i,
+一息入れる	hitoikii; re, ru,
+一息いれる	hitoiki; i, re, ru,
+一物一価の法則	ichibutsuikka; no, housoku;
+二者択一を迫られる	nishatakuitsu; wo, sema; ra, re, ru,
+十分の一税	juubun; no, ichizei;
+たった一人	ta, tta, hitori;
+たった一人	ta, q, ta, hitori;
+一人っきり	hitori; kki, ri,
+一人っきり	hitori; q, ki, ri,
+一人っ切り	hitori; k,ki; ri,
+一人っ切り	hitori; q, ki; ri,
+人っ子一人	hito; k,ko; hitori;
+人っ子一人	hito; q, ko; hitori;
+一角の人間	hitokado; no, ningen;
+一軸圧縮強さ	ichijikuasshukutsuyo; sa,
+#パンツ一丁	pa. ntsuitchou;
+パンツ一丁	pa. n. tsu. icchou;
+一見したところ	ikken; shi, ta, to, ko, ro,
+一見した所	ikken; shi, ta, tokoro;
+一人として	hitori; to, shi, te,
+一騎当千の兵	ikkitousen; no, tsuwamono;
+一騎当千のつわもの	ikkitousen; no, tsu, wa, mo, no,
+一本取られた	ipponto; ra, re, ta,
+一を聞いて十を知る	ichiwoki; i, te, juu; wo, shi; ru,
+サービスの貿易に関する一般協定	sa. - bi. su. no, boueki; ni, kan; su, ru, ippankyoutei;
+アクセス制御一覧	a. ku. se. su. seigyoichiran;
+#パターン一致	pa. ta-nitchi;
+パターン一致	pa. ta. - n. icchi;
+一意な識別子	ichii; na, shikibetsushi;
+一時ファイル	ichiji; fa. i. ru.
+一時的ウィンドウ	ichijiteki; whi. n. do. u.
+一時的エラー	ichijiteki; e. ra. -
+一時的ユーザ	ichijiteki; yu. - za.
+一時的リンクパック領域	ichijiteki; ri. n. ku. pa. kku. ryouiki;
+一時的リンクパック領域	ichijiteki; ri. n. ku. pa. q. ku. ryouiki;
+一次キャッシュ	ichiji; kya. sshu.
+一次キャッシュ	ichiji; kya. q. shu.
+一次キャッシュ	ichiji; ki. xya. sshu.
+一次キャッシュ	ichiji; ki. xya. q. shu.
+一体型モニタ	ittaigata; mo. ni. ta.
+一体型モニター	ittaigata; mo. ni. ta. -
+#一致ゲート	itchige-to.
+一致ゲート	icchi; ge. - to.
+一定ビットレート	ittei; bi. tto. re. - to.
+一定ビットレート	ittei; bi. q. to. re. - to.
+一般ユーザ	ippan; yu. - za.
+一般リリース	ippan; ri. ri. - su.
+一般区切り子	ippankugi; ri, shi;
+一般区切り子機能	ippankugi; ri, shikinou;
+格納メッセージ一覧	kakunou; me. sse. - ji. ichiran;
+格納メッセージ一覧	kakunou; me. q. se. - ji. ichiran;
+結果の一意名	kekka; no, ichiimei;
+第一レベルドメイン	daiichi; re. be. ru. do. me. i. n.
+単一言語シソーラス	tanitsugengo; shi. so. - ra. su.
+単一接続コンセントレータ	tanitsusetsuzoku; ko. n. se. n. to. re. - ta.
+統一スタンダード	touitsusu; ta. n. da. - do.
+一寸宜しい	chottoyoro; shi, i,
+二つに一つ	futa; tsu, ni, hito; tsu,
+一計を案じる	ikkei; wo, an; ji, ru,
+一パイント	ichi; pa. i. n. to.
+誰一人として	darehitori; to, shi, te,
+だれ一人として	da, re, hitori; to, shi, te,
+一服を盛る	ippuku; wo, mo; ru,
+一難去ってまた一難	ichinansa; tte, ma, ta, ichinan;
+一難去ってまた一難	ichinansa; q, te, ma, ta, ichinan;
+一度ならず	ichido; na, ra, zu,
+一緒になる	issho; ni, na, ru,
+一人住まい	hitorizu; ma, i,
+一味も二味も	ichimi; mo, nimi; mo,
+ローマは一日にして成らず	ro. - ma. ha, ichinichi; ni, shi, te, na; ra, zu,
+ローマは一日にしてならず	ro. - ma. ha, ichinichi; ni, shi, te, na, ra, zu,
+一寸の虫にも五分の魂	issun; no, mushi; ni, mo, gobu; no, tamashii;
+一銭を笑う者は一銭に泣く	issen; wo, wara; u, mono; ha, issen; ni, na; ku,
+一念天に通ず	ichinenten; ni, tsuu; zu,
+女の一念岩をも通す	onna; no, ichineniwa; wo, mo, too; su,
+人は一代名は末代	hito; ha, ichidaina; ha, matsudai;
+正直は一生の宝	shoujiki; ha, isshou; no, takara;
+千丈の堤も蟻の一穴より崩れる	senjou; no, tsutsumi; mo, ari; no, ikketsu; yo, ri, kuzu; re, ru,
+千里も一里	senri; mo, ichiri;
+知者も千慮に一失	chisha; mo, senryo; ni, isshitsu;
+茶腹も一時	chabara; mo, ittoki;
+二兎を追う者は一兎をも得ず	nito; wo, o; u, mono; ha, itto; wo, mo, e; zu,
+馬鹿の一つ覚え	baka; no, hito; tsu, obo; e,
+ばかの一つ覚え	ba, ka, no, hito; tsu, obo; e,
+バカの一つ覚え	ba. ka. no, hito; tsu, obo; e,
+板子一枚下は地獄	itagoichimaishita; ha, jigoku;
+糞も味噌も一緒	kuso; mo, miso; mo, issho;
+聞くは一時の恥聞かぬは末代の恥	ki; ku, ha, ittoki; no, hajiki; ka, nu, ha, matsudai; no, haji;
+盆と正月が一緒に来たよう	bon; to, shougatsu; ga, issho; ni, ki; ta, yo, u,
+盆と正月が一緒に来た様	bon; to, shougatsu; ga, issho; ni, ki; ta, you;
+問うは一旦の恥問わぬは末代の恥	to; u, ha, ittan; no, hajito; wa, nu, ha, matsudai; no, haji;
+一個あたり	ikko; a, ta, ri,
+アデノシン一リン酸	a. de. no. shi. n. ichi; ri. n. san;
+アデノシン一燐酸	a. de. no. shi. n. ichirinsan;
+一人エッチ	hitori; e. cchi.
+一人エッチ	hitori; e. q. chi.
+ミュンヘン一揆	myu. n. he. n. ikki;
+ミュンヘン一揆	mi. xyu. n. he. n. ikki;
+一巻の終わり	ikkan; no, o; wa, ri,
+一巻の終り	ikkan; no, o; wa, ri,
+会心の一撃	kaishin; no, ichigeki;
+世間一般の通念	sekenippan; no, tsuunen;
+一夜を共にする	ichiya; wo, tomo; ni, su, ru,
+一筋縄でいかない	hitosujinawa; de, i, ka, na, i,
+一筋縄で行かない	hitosujinawa; de, i; ka, na, i,
+一事が万事	ichiji; ga, banji;
+一二を争う	ichini; wo, araso; u,
+一切気にならない	issaiki; ni, na, ra, na, i,
+一目ゴム編み	hitome; go. mu. a; mi,
+愚者も千慮に一得	gusha; mo, senryo; ni, ittoku;
+千里の道も一歩から	senri; no, michi; mo, ippo; ka, ra,
+千番に一番の兼ね合い	senban; ni, ichiban; no, ka; ne, a; i,
+千番に一番の兼合	senban; ni, ichiban; no, kaneai;
+一分の隙もない	ichibu; no, suki; mo, na, i,
+一分のすきもない	ichibu; no, su, ki, mo, na, i,
+一部の隙もない	ichibu; no, suki; mo, na, i,
+一部のすきもない	ichibu; no, su, ki, mo, na, i,
+一層のこと	isso; no, ko, to,
+一層のこと	issou; no, ko, to,
+歴史の一ページ	rekishi; no, ichi; pe. - ji.
+意見が一致	iken; ga, icchi;
+一体となる	ittai; to, na, ru,
+一石を投じる	isseki; wo, tou; ji, ru,
+あたり一面	a, ta, ri, ichimen;
+あたり一帯	a, ta, ri, ittai;
+たった一つ	ta, tta, hito; tsu,
+たった一つ	ta, q, ta, hito; tsu,
+一つにかかって	hito; tsu, ni, ka, ka, tte,
+一つにかかって	hito; tsu, ni, ka, ka, q, te,
+一にかかって	hitotsu; ni, ka, ka, tte,
+一にかかって	hitotsu; ni, ka, ka, q, te,
+一つに掛かって	hito; tsu, ni, ka; ka, tte,
+一つに掛かって	hito; tsu, ni, ka; ka, q, te,
+一に掛かって	hitotsu; ni, ka; ka, tte,
+一に掛かって	hitotsu; ni, ka; ka, q, te,
+一にかかって	ichi; ni, ka, ka, tte,
+一にかかって	ichi; ni, ka, ka, q, te,
+一に掛かって	ichi; ni, ka; ka, tte,
+一に掛かって	ichi; ni, ka; ka, q, te,
+一点一画もおろそかにしない	ittenikkaku; mo, o, ro, so, ka, ni, shi, na, i,
+ふんどし一つ	fu, n, do, shi, hito; tsu,
+雲一つない	kumohito; tsu, na, i,
+アフリカ単一起源説	a. fu. ri. ka. tanitsukigensetsu;
+一日か二日	ichinichi; ka, futsuka;
+胸が一杯になる	mune; ga, ippai; ni, na, ru,
+味噌も糞も一緒	miso; mo, kuso; mo, issho;
+アホの一つ覚え	a. ho. no, hito; tsu, obo; e,
+あほの一つ覚え	a, ho, no, hito; tsu, obo; e,
+あほうの一つ覚え	a, ho, u, no, hito; tsu, obo; e,
+阿房の一つ覚え	ahou; no, hito; tsu, obo; e,
+あの世千日この世一日	a, no, yosennichi; ko, no, yoichinichi;
+彼の世千日此の世一日	a; no, yosennichiko; no, yoichinichi;
+第一種の過誤	daiisshu; no, kago;
+一票の格差	ippyou; no, kakusa;
+一発ギャグ	ippatsu; gya. gu.
+一発ギャグ	ippatsu; gi. xya. gu.
+第一リン酸カルシウム	daiichi; ri. n. san; ka. ru. shi. u. mu.
+デジタル一眼レフカメラ	de. ji. ta. ru. ichigan; re. fu. ka. me. ra.
+一つ葉田子	hito; tsu, batago;
+一つ葉たご	hito; tsu, ba; ta, go,
+一株当たり利益	hitokabua; ta, ri, rieki;
+首の皮一枚	kubi; no, kawaichimai;
+一人っ子政策	hitori; k,koseisaku;
+一人っ子政策	hitori; q, koseisaku;
+#問うは一度の恥、問わぬは末代の恥	to; u, ha, ichido; no, haji; to; wa, nu, ha, matsudai; no, haji;
+一生消えない	isshouki; e, na, i,
+一言に尽きる	hitokoto; ni, tsu; ki, ru,
+百日の説法屁一つ	hyakunichi; no, seppouhehito; tsu,
+一日も早く	ichinichi; mo, haya; ku,
+一日も早い	ichinichi; mo, haya; i,
+一癖も二癖もある	hitokuse; mo, futakuse; mo, a, ru,
+一癖も二癖も有る	hitokuse; mo, futakuse; mo, a; ru,
+偶然の一致	guuzen; no, icchi;
+一線を画する	issen; wo, kaku; su, ru,
+一人につき	hitori; ni, tsu, ki,
+起きて半畳寝て一畳	o; ki, te, hanjoune; te, ichijou;
+一つ穴のむじな	hito; tsu, ana; no, mu, ji, na,
+一つ穴の狢	hito; tsu, ana; no, mujina;
+一つ穴の貉	hito; tsu, ana; no, mujina;
+一戦を交える	issen; wo, maji; e, ru,
+一堂に会する	ichidou; ni, kai; su, ru,
+一円を笑う者は一円に泣く	ichien; wo, wara; u, mono; ha, ichien; ni, na; ku,
+一翼を担う	ichiyoku; wo, nina; u,
+一瞬にして	isshun; ni, shi, te,
+一山いくら	hitoyama; i, ku, ra,
+一般線形モデル	ippansenkei; mo. de. ru.
+一般化線形モデル	ippankasenkei; mo. de. ru.
+第一次オイルショック	daiichiji; o. i. ru. sho. kku.
+第一次オイルショック	daiichiji; o. i. ru. shi. xyo. kku.
+第一次オイルショック	daiichiji; o. i. ru. sho. q. ku.
+第一次オイルショック	daiichiji; o. i. ru. shi. xyo. q. ku.
+一応目を通す	ichioume; wo, too; su,
+一にも二にも	ichi; ni, mo, ni; ni, mo,
+一人でも多く	hitori; de, mo, oo; ku,
+一命を取り留める	ichimei; wo, to; ri, to; me, ru,
+一命を取りとめる	ichimei; wo, to; ri, to, me, ru,
+ヨーロッパ一位	yo. - ro. ppa. ichii;
+ヨーロッパ一位	yo. - ro. q. pa. ichii;
+一つまた一つ	hito; tsu, ma, ta, hito; tsu,
+一つ又一つ	hito; tsu, matahito; tsu,
+パンツ一枚	pa. n. tsu. ichimai;
+一つの中国	hito; tsu, no, chuugoku;
+鶏群の一鶴	keigun; no, ikkaku;
+一途をたどる	itto; wo, ta, do, ru,
+一途を辿る	itto; wo, tado; ru,
+一糸乱れぬ	isshimida; re, nu,
+一刻の猶予もない	ikkoku; no, yuuyo; mo, na; i,
+一刻の猶予も無い	ikkoku; no, yuuyo; mo, na; i,
+一緒くたに	issho; ku, ta, ni,
+一線を越える	issen; wo, ko; e, ru,
+一線を超える	issen; wo, ko; e, ru,
+雀の千声鶴の一声	suzume; no, senkoetsuru; no, hitokoe;
+馬鹿と天才は紙一重	baka; to, tensai; ha, kamihitoe;
+バカと天才は紙一重	ba. ka. to, tensai; ha, kamihitoe;
+一樹の陰一河の流れも他生の縁	ichiju; no, kageichiga; no, naga; re, mo, tashou; no, en;
+娘一人に婿八人	musumehitori; ni, mukohachinin;
+中流に舟を失えば一壺も千金	chuuryuu; ni, fune; wo, ushina; e, ba, ikko; mo, senkin;
+中流に船を失えば一壺も千金	chuuryuu; ni, fune; wo, ushina; e, ba, ikko; mo, senkin;
+地獄は壁一重	jigoku; ha, kabehitoe;
+#鱧も一期、海老も一期	hamo; mo, ichigoebi; mo, ichigo;
+鱧も一期海老も一期	hamo; mo, ichigoebi; mo, ichigo;
+一般アプリ	ippan; a. pu. ri.
+一将功成りて万骨枯る	isshoukouna; ri, te, bankotsuka; ru,
+一将功成って万骨枯る	isshoukouna; tte, bankotsuka; ru,
+一将功成って万骨枯る	isshoukouna; q, te, bankotsuka; ru,
+一将功なって万骨枯る	isshoukou; na, tte, bankotsuka; ru,
+一将功なって万骨枯る	isshoukou; na, q, te, bankotsuka; ru,
+親の意見と茄子の花は千に一つも無駄はない	oya; no, iken; to, nasubi; no, hana; ha, sen; ni, hito; tsu, mo, muda; ha, na, i,
+一身に集める	isshin; ni, atsu; me, ru,
+一つ着る物	hito; tsu, ki; ru, mono;
+お坊ちゃん	o, boc;cha, n,
+お坊ちゃん	o, boq; cha, n,
+お坊ちゃん	o, boc;chi, xya, n,
+お坊ちゃん	o, boq; chi, xya, n,
+お坊っちゃん	o, bo; ccha, n,
+お坊っちゃん	o, bo; cchi, xya, n,
+お坊っちゃん	o, bo; q, cha, n,
+お坊っちゃん	o, bo; q, chi, xya, n,
+御坊ちゃん	oboc;cha, n,
+御坊ちゃん	oboc;chi, xya, n,
+御坊ちゃん	oboq; cha, n,
+御坊ちゃん	oboq; chi, xya, n,
+御坊っちゃん	obo; ccha, n,
+御坊っちゃん	obo; cchi, xya, n,
+御坊っちゃん	obo; q, cha, n,
+御坊っちゃん	obo; q, chi, xya, n,
+お疲れさま	o, tsuka; re, sa, ma,
+お風呂に入る	o, furo; ni, hai; ru,
+がっちり屋	ga, cchi, ri, ya;
+がっちり屋	ga, q, chi, ri, ya;
+何方付かず	docchitsu; ka, zu,
+バス発着場	ba. su. hacchakujou;
+取っちめる	to; cchi, me, ru,
+取っちめる	to; q, chi, me, ru,
+小っちゃい	chi; ccha, i,
+小っちゃい	chi; q, cha, i,
+小っちゃい	chi; cchi, xya, i,
+小っちゃい	chi; q, chi, xya, i,
+二進も三進も	nicchi; mo, sacchi; mo,
+にっちもさっちも行かない	ni, cchi, mo, sa, cchi, mo, i; ka, na, i,
+にっちもさっちも行かない	ni, cchi, mo, sa, q, chi, mo, i; ka, na, i,
+二進も三進もいかない	nicchi; mo, sacchi; mo, i, ka, na, i,
+二進も三進も行かない	nicchi; mo, sacchi; mo, i; ka, na, i,
+独りぼっち	hito; ri, bo, cchi,
+独りぼっち	hito; ri, bo, q, chi,
+独りぽっち	hito; ri, po, cchi,
+独りぽっち	hito; ri, po, q, chi,
+胸突き八丁	munatsu; ki, hacchou;
+いっちょ前	i, ccho, mae;
+いっちょ前	i, q, cho, mae;
+いっちょ前	i, cchi, xyo, mae;
+いっちょ前	i, q, chi, xyo, mae;
+越中ふんどし	ecchuu; fu, n, do, shi,
+いいとこの坊ちゃん	i, i, to, ko, no, boq; cha, n,
+いいとこの坊ちゃん	i, i, to, ko, no, boc;cha, n,
+いいとこの坊ちゃん	i, i, to, ko, no, boq; chi, xya, n,
+いいとこの坊ちゃん	i, i, to, ko, no, boc;chi, xya, n,
+いい所の坊ちゃん	i, i, toko; no, boq; cha, n,
+いい所の坊ちゃん	i, i, toko; no, boc;cha, n,
+いい所の坊ちゃん	i, i, toko; no, boq; chi, xya, n,
+いい所の坊ちゃん	i, i, toko; no, boc;cha, xya, n,
+いいとこのお坊ちゃん	i, i, to, ko, no, o, boq; cha, n,
+いいとこのお坊ちゃん	i, i, to, ko, no, o, boc;cha, n,
+いいとこのお坊ちゃん	i, i, to, ko, no, o, boq; chi, xya, n,
+いいとこのお坊ちゃん	i, i, to, ko, no, o, boc;chi, xya, n,
+いい所のお坊ちゃん	i, i, toko; no, o, boq; cha, n,
+いい所のお坊ちゃん	i, i, toko; no, o, boc;cha, n,
+いい所のお坊ちゃん	i, i, toko; no, o, boq; chi, xya, n,
+いい所のお坊ちゃん	i, i, toko; no, o, boc;chi, xya, n,
+シャーシ接地	sha. - shi. secchi;
+シャーシ接地	shi. xya. - shi. secchi;
+オンラインバッチ処理システム	o. n. ra. i. n. ba. cchi. shori; shi. su. te. mu.
+オンラインバッチ処理システム	o. n. ra. i. n. ba. q. chi. shori; shi. su. te. mu.
+こっちの話	ko, cchi, no, hanashi;
+こっちの話	ko, q, chi, no, hanashi;
+リトマス紙	ri. to. ma. su. shi;
+小っちゃな	chi; ccha, na,
+小っちゃな	chi; q, cha, na,
+小っちゃな	chi; cchi, xya, na,
+小っちゃな	chi; q, chi, xya, na,
+言わんこっちゃない	i; wa, n, ko, ccha, na, i,
+言わんこっちゃない	i; wa, n, ko, q, cha, na, i,
+言わんこっちゃない	i; wa, n, ko, cchi, xya, na, i,
+言わんこっちゃない	i; wa, n, ko, q, chi, xya, na, i,
+パイプ椅子	pa. i. pu. isu;
+モホロビチッチ不連続面	mo. ho. ro. bi. chi. cchi. furenzokumen;
+モホロビチッチ不連続面	mo. ho. ro. bi. chi. q. chi. furenzokumen;
+モホロヴィチッチ不連続面	mo. ho. ro. vi. chi. cchi. furenzokumen;
+モホロヴィチッチ不連続面	mo. ho. ro. vi. chi. q. chi. furenzokumen;
+坊ちゃん刈り	boc;cha, n, ga; ri,
+坊ちゃん刈り	boq; cha, n, ga; ri,
+坊ちゃん刈り	boc;chi, xya, n, ga; ri,
+坊ちゃん刈り	boq; chi, xya, n, ga; ri,
+一ヶ月	ikkagetsu;
+一ヶ月	iq; ka. getsu;
+一ヶ月	iq; xke. getsu;
+一ヵ月	ikkagetsu;
+一ヵ月	iq, xka. getsu;
+一ヶ所	ikkasho;
+一ヶ所	iq; ka. sho;
+一ヶ所	iq; xke. sho;
+一ヵ所	ikkasho;
+一ヵ所	iq; ka. sho;
+一ヵ所	iq; xka. sho;
 ####### 202102新增補充比對詞彙 japanese.jmdict.dict.yaml 結束 #######
 #######@ 202102新增日語符號類詞彙 開始 #######
 Γ分布	ganmabunpu;
