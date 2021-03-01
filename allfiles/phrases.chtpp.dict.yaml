@@ -27,7 +27,7 @@
 # ===============================
 ---
 name: phrases.chtpp
-version: "202101"
+version: "202102"
 sort: by_weight
 use_preset_vocabulary: false
 max_phrase_length: 7 #20
@@ -4272,6 +4272,440 @@ columns:
 # 阿靈頓	e1 ling2 dun4
 # 睥睨一切	pi4 ni4 yi1 qie4
 # 睥睨一切	pi4 ni4 yi2 qie4
+#### @大陸慣用發音「期」：「qi1」
+# 不期	bu4 qi1
+# 不期然而然	bu4 qi1 ran2 er2 ran2
+# 中期	zhong1 qi1
+# 任期	ren4 qi1
+# 任職期間	ren4 zhi2 qi1 jian1
+# 佳期	jia1 qi1
+# 假期	jia4 qi1
+# 先期	xian1 qi1
+# 公共假期	gong1 gong4 jia4 qi1
+# 分期	fen1 qi1
+# 分期付款	fen1 qi1 fu4 kuan3
+# 初期	chu1 qi1
+# 到期	dao4 qi1
+# 刻期	ke4 qi1
+# 前期	qian2 qi1
+# 十三號星期五	shi2 san1 hao4 xing1 qi1 wu3
+# 半衰期	ban4 shuai1 qi1
+# 同期	tong2 qi1
+# 周期函數	zhou1 qi1 han2 shu4
+# 國際日期變更線	guo2 ji4 ri4 qi1 bian4 geng1 xian4
+# 在訴訟期間	zai4 su4 song4 qi1 jian1
+# 在這期間	zai4 zhe4 qi1 jian1
+# 失期	shi1 qi1
+# 如期	ru2 qi1
+# 婚期	hun1 qi1
+# 孕期	yun4 qi1
+# 孵化期	fu1 hua4 qi1
+# 學期	xue2 qi1
+# 安全期	an1 quan2 qi1
+# 定期	ding4 qi1
+# 展期	zhan3 qi1
+# 工期	gong1 qi1
+# 延期	yan2 qi1
+# 後期	hou4 qi1
+# 愆期	qian1 qi1
+# 指數期權	zhi3 shu4 qi1 quan2
+# 按期	an4 qi1
+# 改期	gai3 qi1
+# 旄期	mao4 qi1
+# 既得期間	ji4 de2 qi1 jian1
+# 日期	ri4 qi1
+# 早期	zao3 qi1
+# 早期效應	zao3 qi1 xiao4 ying4
+# 星期	xing1 qi1
+# 星期天	xing1 qi1 tian1
+# 星期幾	xing1 qi1 ji3
+# 星期日	xing1 qi1 ri4
+# 時期	shi2 qi1
+# 晚期	wan3 qi1
+# 暑期	shu3 qi1
+# 暑期學校	shu3 qi1 xue2 xiao4
+# 更年期	geng1 nian2 qi1
+# 會期	hui4 qi1
+# 有效期	you3 xiao4 qi1
+# 有期徒刑	you3 qi1 tu2 xing2
+# 期中考	qi1 zhong1 kao3
+# 期刊	qi1 kan1
+# 期待	qi1 dai4
+# 期望	qi1 wang4
+# 期望值	qi1 wang4 zhi2
+# 期末考	qi1 mo4 kao3
+# 期滿	qi1 man3
+# 期盼	qi1 pan4
+# 期票	qi1 piao4
+# 期考	qi1 kao3
+# 期許	qi1 xu3
+# 期貨	qi1 huo4
+# 期間	qi1 jian1
+# 期限	qi1 xian4
+# 末期	mo4 qi1
+# 枯水期	ku1 shui3 qi1
+# 極盛時期	ji2 sheng4 shi2 qi1
+# 檔期	dang4 qi1
+# 死期	si3 qi1
+# 汛期	xun4 qi1
+# 活期	huo2 qi1
+# 活期存款	huo2 qi1 cun2 kuan3
+# 潛伏期	qian2 fu2 qi1
+# 無期徒刑	wu2 qi1 tu2 xing2
+# 無霜期	wu2 shuang1 qi1
+# 為期	wei2 qi1
+# 生命週期	sheng1 ming4 zhou1 qi1
+# 產褥期	chan3 ru4 qi1
+# 發情期	fa1 qing2 qi1
+# 短期	duan3 qi1
+# 短期投資	duan3 qi1 tou2 zi1
+# 秋季學期	qiu1 ji4 xue2 qi1
+# 終期	zhong1 qi1
+# 經期	jing1 qi1
+# 緩期	huan3 qi1
+# 老年期	lao3 nian2 qi1
+# 考期	kao3 qi1
+# 耄期	mao4 qi1
+# 耶穌基督後期聖徒教會	ye1 su1 ji1 du1 hou4 qi1 sheng4 tu2 jiao4 hui4
+# 脫期	tuo1 qi1
+# 花期	hua1 qi1
+# 蜜月假期	mi4 yue4 jia4 qi1
+# 行期	xing2 qi1
+# 近期	jin4 qi1
+# 週期	zhou1 qi1
+# 週期性	zhou1 qi1 xing4
+# 週期數	zhou1 qi1 shu4
+# 週期表	zhou1 qi1 biao3
+# 逾期	yu2 qi1
+# 過期	guo4 qi1
+# 過渡時期	guo4 du4 shi2 qi1
+# 遙遙無期	yao2 yao2 wu2 qi1
+# 長期	chang2 qi1
+# 長期以來	chang2 qi1 yi3 lai2
+# 長期共存	chang2 qi1 gong4 cun2
+# 長期性	chang2 qi1 xing4
+# 長期穩定性	chang2 qi1 wen3 ding4 xing4
+# 長期飯票	chang2 qi1 fan4 piao4
+# 限期	xian4 qi1
+# 青年期	qing1 nian2 qi1
+# 青春期	qing1 chun1 qi1
+# 預期	yu4 qi1
+# 鼎盛時期	ding3 sheng4 shi2 qi1
+# 鼎盛期	ding3 sheng4 qi1
+# 不期而遇	bu4 qi1 er2 yu4
+# 冰河時期	bing1 he2 shi2 qi1
+# 定期存款	ding4 qi1 cun2 kuan3
+# 後會有期	hou4 hui4 you3 qi1
+# ###
+# 節期	jie2 qi1
+# 續期	xu4 qi1
+# 首期	shou3 qi1
+# 齋期	zhai1 qi1
+# 聘期	pin4 qi1
+# 苗期	miao2 qi1
+# 超期	chao1 qi1
+# 遠期	yuan3 qi1
+# 當期	dang1 qi1
+# 產期	chan3 qi1
+# 班期	ban1 qi1
+# 無期	wu2 qi1
+# 滿期	man3 qi1
+# 果期	guo3 qi1
+# 本期	ben3 qi1
+# 三期	san1 qi1
+# 克期	ke4 qi1
+# 冰期	bing1 qi1
+# 尾期	wei3 qi1
+# 掉期	diao4 qi1
+# 排期	pai2 qi1
+# 旬期	xun2 qi1
+# 期中	qi1 zhong1
+# 期價	qi1 jia4
+# 期內	qi1 nei4
+# 期初	qi1 chu1
+# 期房	qi1 fang2
+# 期指	qi1 zhi3
+# 期攷	qi1 kao3
+# 期末	qi1 mo4
+# 期於	qi1 yu2
+# 期權	qi1 quan2
+# 期的	qi1 de5
+# 期終	qi1 zhong1
+# 期銅	qi1 tong2
+# 以期	yi3 qi1
+# 上期	shang4 qi1
+# 一年期	yi1 nian2 qi1
+# 上一期	shang4 yi1 qi1
+# 上學期	shang4 xue2 qi1
+# 上星期	shang4 xing1 qi1
+# 下一期	xia4 yi1 qi1
+# 下學期	xia4 xue2 qi1
+# 下星期	xia4 xing1 qi1
+# 不定期	bu4 ding4 qi1
+# 不應期	bu4 ying4 qi1
+# 中後期	zhong1 hou4 qi1
+# 交貨期	jiao1 huo4 qi1
+# 任期制	ren4 qi1 zhi4
+# 使用期	shi3 yong4 qi1
+# 保修期	bao3 xiu1 qi1
+# 保存期	bao3 cun2 qi1
+# 保質期	bao3 zhi4 qi1
+# 保險期	bao3 xian3 qi1
+# 保鮮期	bao3 xian1 qi1
+# 修正期	xiu1 zheng4 qi1
+# 優惠期	you1 hui4 qi1
+# 兩星期	liang3 xing1 qi1
+# 冰川期	bing1 chuan1 qi1
+# 冰河期	bing1 he2 qi1
+# 冷靜期	leng3 jing4 qi1
+# 初發期	chu1 fa1 qi1
+# 到期後	dao4 qi1 hou4
+# 到期日	dao4 qi1 ri4
+# 動情期	dong4 qing2 qi1
+# 印支期	yin4 zhi1 qi1
+# 口唇期	kou3 chun2 qi1
+# 口欲期	kou3 yu4 qi1
+# 口脣期	kou3 chun2 qi1
+# 台指期	tai2 zhi3 qi1
+# 台期指	tai2 qi1 zhi3
+# 合同期	he2 tong2 qi1
+# 同時期	tong2 shi2 qi1
+# 呂梁期	lv3 liang2 qi1
+# 哺乳期	bu3 ru3 qi1
+# 執行期	zhi2 xing2 qi1
+# 多發期	duo1 fa1 qi1
+# 大齋期	da4 zhai1 qi1
+# 好期待	hao3 qi1 dai4
+# 妊娠期	ren4 shen1 qi1
+# 嬰兒期	ying1 er2 qi1
+# 實習期	shi2 xi2 qi1
+# 寬限期	kuan1 xian4 qi1
+# 封河期	feng1 he2 qi1
+# 導入期	dao3 ru4 qi1
+# 履行期	lv3 xing2 qi1
+# 復原期	fu4 yuan2 qi1
+# 思春期	si1 chun1 qi1
+# 恢復期	hui1 fu4 qi1
+# 患晚期	huan4 wan3 qi1
+# 成長期	cheng2 zhang3 qi1
+# 我期待	wo3 qi1 dai4
+# 拔節期	ba2 jie2 qi1
+# 採收期	cai3 shou1 qi1
+# 敏感期	min3 gan3 qi1
+# 新時期	xin1 shi2 qi1
+# 施工期	shi1 gong1 qi1
+# 星期一	xing1 qi1 yi1
+# 星期三	xing1 qi1 san1
+# 星期二	xing1 qi1 er4
+# 星期五	xing1 qi1 wu3
+# 星期六	xing1 qi1 liu4
+# 星期四	xing1 qi1 si4
+# 星期八	xing1 qi1 ba1
+# 星期後	xing1 qi1 hou4
+# 會計期	kuai4 ji4 qi1
+# 月光期	yue4 guang1 qi1
+# 月經期	yue4 jing1 qi1
+# 期待中	qi1 dai4 zhong1
+# 期待的	qi1 dai4 de5
+# 期盼著	qi1 pan4 zhe5
+# 期貨價	qi1 huo4 jia4
+# 期間的	qi1 jian1 de5
+# 本學期	ben3 xue2 qi1
+# 本星期	ben3 xing1 qi1
+# 核網期	he2 wang3 qi1
+# 極大期	ji2 da4 qi1
+# 段汛期	duan4 xun4 qi1
+# 決勝期	jue2 sheng4 qi1
+# 洪水期	hong2 shui3 qi1
+# 洪汛期	hong2 xun4 qi1
+# 滯期費	zhi4 qi1 fei4
+# 漁汛期	yu2 xun4 qi1
+# 無期別	wu2 qi1 bie2
+# 無限期	wu2 xian4 qi1
+# 生育期	sheng1 yu4 qi1
+# 發作期	fa1 zuo4 qi1
+# 發動期	fa1 dong4 qi1
+# 發展期	fa1 zhan3 qi1
+# 發熱期	fa1 re4 qi1
+# 發育期	fa1 yu4 qi1
+# 發身期	fa1 shen1 qi1
+# 盛發期	sheng4 fa1 qi1
+# 短時期	duan3 shi2 qi1
+# 第二期	di4 er4 qi1
+# 第八期	di4 ba1 qi1
+# 終期癌	zhong1 qi1 ai2
+# 絕經期	jue2 jing1 qi1
+# 聯會期	lian2 hui4 qi1
+# 肛欲期	gang1 yu4 qi1
+# 育齡期	yu4 ling2 qi1
+# 臺指期	tai2 zhi3 qi1
+# 臺期指	tai2 qi1 zhi3
+# 行使期	xing2 shi3 qi1
+# 衰退期	shuai1 tui4 qi1
+# 試用期	shi4 yong4 qi1
+# 試行期	shi4 xing2 qi1
+# 質保期	zhi4 bao3 qi1
+# 退行期	tui4 xing2 qi1
+# 這學期	zhe4 xue2 qi1
+# 這期間	zhe4 qi1 jian1
+# 週期系	zhou1 qi1 xi4
+# 週期解	zhou1 qi1 jie3
+# 進行期	jin4 xing2 qi1
+# 適婚期	shi4 hun1 qi1
+# 適應期	shi4 ying4 qi1
+# 長時期	chang2 shi2 qi1
+# 閉鎖期	bi4 suo3 qi1
+# 開河期	kai1 he2 qi1
+# 間冰期	jian1 bing1 qi1
+# 預期的	yu4 qi1 de5
+# 頭期款	tou2 qi1 kuan3
+# 高峰期	gao1 feng1 qi1
+# 高發期	gao1 fa1 qi1
+# 魚汛期	yu2 xun4 qi1
+# 黃體期	huang2 ti3 qi1
+# 一個星期	yi1 ge4 xing1 qi1
+# 一個星期	yi2 ge4 xing1 qi1
+# 上個星期	shang4 ge4 xing1 qi1
+# 上個星期	shang4 ge5 xing1 qi1
+# 下個星期	xia4 ge4 xing1 qi1
+# 下個星期	xia4 ge5 xing1 qi1
+# 不同時期	bu4 tong2 shi2 qi1
+# 二期工程	er4 qi1 gong1 cheng2
+# 五一期間	wu3 yi1 qi1 jian1
+# 值得期待	zhi2 de2 qi1 dai4
+# 先期錄音	xian1 qi1 lu4 yin1
+# 兩會期間	liang3 hui4 qi1 jian1
+# 出生日期	chu1 sheng1 ri4 qi1
+# 前景可期	qian2 jing3 ke3 qi1
+# 前期工作	qian2 qi1 gong1 zuo4
+# 加里東期	jia1 li3 dong1 qi1
+# 半排出期	ban4 pai2 chu1 qi1
+# 原油期貨	yuan2 you2 qi1 huo4
+# 去年同期	qu4 nian2 tong2 qi1
+# 商品期貨	shang1 pin3 qi1 huo4
+# 回覆日期	hui2 fu4 ri4 qi1
+# 在短期內	zai4 duan3 qi1 nei4
+# 失效日期	shi1 xiao4 ri4 qi1
+# 套期保值	tao4 qi1 bao3 zhi2
+# 如期而至	ru2 qi1 er2 zhi4
+# 定期儲蓄	ding4 qi1 chu3 xu4
+# 定期檢查	ding4 qi1 jian3 cha2
+# 延期付款	yan2 qi1 fu4 kuan3
+# 後會無期	hou4 hui4 wu2 qi1
+# 後期製作	hou4 qi1 zhi4 zuo4
+# 懷孕期間	huai2 yun4 qi1 jian1
+# 截止日期	jie2 zhi3 ri4 qi1
+# 提交日期	ti2 jiao1 ri4 qi1
+# 文期酒會	wen2 qi1 jiu3 hui4
+# 日治時期	ri4 zhi4 shi2 qi1
+# 星期天啊	xing1 qi1 tian1 a5
+# 春節期間	chun1 jie2 qi1 jian1
+# 春運期間	chun1 yun4 qi1 jian1
+# 晚期癌症	wan3 qi1 ai2 zheng4
+# 暑期社會	shu3 qi1 she4 hui4
+# 最後期限	zui4 hou4 qi1 xian4
+# 會計期間	kuai4 ji4 qi1 jian1
+# 會計週期	kuai4 ji4 zhou1 qi1
+# 會議期間	hui4 yi4 qi1 jian1
+# 有效期內	you3 xiao4 qi1 nei4
+# 期中考試	qi1 zhong1 kao3 shi4
+# 期末考試	qi1 mo4 kao3 shi4
+# 期貨交易	qi1 huo4 jiao1 yi4
+# 期貨價格	qi1 huo4 jia4 ge2
+# 期貨公司	qi1 huo4 gong1 si1
+# 期貨合約	qi1 huo4 he2 yue1
+# 期貨市場	qi1 huo4 shi4 chang3
+# 查找週期	cha2 zhao3 zhou1 qi1
+# 核心期刊	he2 xin1 qi1 kan1
+# 歷史時期	li4 shi3 shi2 qi1
+# 活期帳戶	huo2 qi1 zhang4 hu4
+# 活期貸款	huo2 qi1 dai4 kuan3
+# 活期資金	huo2 qi1 zi1 jin1
+# 生產日期	sheng1 chan3 ri4 qi1
+# 發佈日期	fa1 bu4 ri4 qi1
+# 發售日期	fa1 shou4 ri4 qi1
+# 發情週期	fa1 qing2 zhou1 qi1
+# 發薪日期	fa1 xin1 ri4 qi1
+# 短期融資	duan3 qi1 rong2 zi1
+# 短期行為	duan3 qi1 xing2 wei2
+# 社會期望	she4 hui4 qi1 wang4
+# 第一學期	di4 yi1 xue2 qi1
+# 節日期間	jie2 ri4 qi1 jian1
+# 簽發日期	qian1 fa1 ri4 qi1
+# 細胞周期	xi4 bao1 zhou1 qi1
+# 經濟週期	jing1 ji4 zhou1 qi1
+# 緩期付款	huan3 qi1 fu4 kuan3
+# 總統任期	zong3 tong3 ren4 qi1
+# 股指期貨	gu3 zhi3 qi1 huo4
+# 註冊日期	zhu4 ce4 ri4 qi1
+# 迫不期待	po4 bu4 qi1 dai4
+# 週期函數	zhou1 qi1 han2 shu4
+# 週期彗星	zhou1 qi1 hui4 xing1
+# 遠期合約	yuan3 qi1 he2 yue1
+# 郵戳日期	you2 chuo1 ri4 qi1
+# 金融期貨	jin1 rong2 qi1 huo4
+# 長期使用	chang2 qi1 shi3 yong4
+# 長期爭鬥	chang2 qi1 zheng1 dou4
+# 長期鬥爭	chang2 qi1 dou4 zheng1
+# 開發周期	kai1 fa1 zhou1 qi1
+# 開發週期	kai1 fa1 zhou1 qi1
+# 關鍵時期	guan1 jian4 shi2 qi1
+# 雙週期性	shuang1 zhou1 qi1 xing4
+# 預期推理	yu4 qi1 tui1 li3
+# 預期會計	yu4 qi1 kuai4 ji4
+# 一個星期了	yi1 ge4 xing1 qi1 le5
+# 一個星期了	yi2 ge4 xing1 qi1 le5
+# 今天星期天	jin1 tian1 xing1 qi1 tian1
+# 傳播發展期	chuan2 bo1 fa1 zhan3 qi1
+# 元素週期表	yuan2 su4 zhou1 qi1 biao3
+# 到期收益率	dao4 qi2 shou1 yi4 lv4
+# 基默里奇期	ji1 mo4 li3 qi2 qi1
+# 快速動眼期	kuai4 su4 dong4 yan3 qi1
+# 會計報告期	kuai4 ji4 bao4 gao4 qi1
+# 會計期概念	kuai4 ji4 qi1 gai4 nian4
+# 歐特里沃期	ou1 te4 li3 wo4 qi1
+# 無錯運行期	wu2 cuo4 yun4 xing2 qi1
+# 發生期預測	fa1 sheng1 qi1 yu4 ce4
+# 短期融資券	duan3 qi1 rong2 zi1 quan4
+# 貝里阿斯期	bei4 li3 a1 si1 qi1
+# 長期光行差	chang2 qi1 guang1 xing2 cha1
+# 今天是星期天	jin1 tian1 shi4 xing1 qi1 tian1
+# 信貸違約掉期	xin4 dai4 wei2 yue1 diao4 qi1
+# 平均期望壽命	ping2 jun1 qi1 wang4 shou4 ming4
+# 建築時期觀念	jian4 zhu4 shi2 qi1 guan1 nian4
+# 暑期社會實踐	shu3 qi1 she4 hui4 shi2 jian4
+# 會計結算日期	kuai4 ji4 jie2 suan4 ri4 qi1
+# 期中會計報表	qi1 zhong1 kuai4 ji4 bao4 biao3
+# 期後會計事項	qi1 hou4 kuai4 ji4 shi4 xiang4
+# 期權交易會員	qi1 quan2 jiao1 yi4 hui4 yuan2
+# 毛髮生長週期	mao2 fa3 sheng1 zhang3 zhou1 qi1
+# 特里馬道克期	te4 li3 ma3 dao4 ke4 qi1
+# 特里馬道剋期	te4 li3 ma3 dao4 ke4 qi1
+# 發放股利日期	fa1 fang4 gu3 li4 ri4 qi1
+# 軟件開發週期	ruan3 jian4 kai1 fa1 zhou1 qi1
+# 開發生存週期	kai1 fa1 sheng1 cun2 zhou1 qi1
+# 陸行鯊後期型	lu4 xing2 sha1 hou4 qi1 xing2
+# 項目發展週期	xiang4 mu4 fa1 zhan3 zhou1 qi1
+# 預期收入票據	yu4 qi1 shou1 ru4 piao4 ju4
+# 預期會計報表	yu4 qi1 kuai4 ji4 bao4 biao3
+# 他生緣會更難期	ta1 sheng1 yuan2 hui4 geng4 nan2 qi1
+# 佳期應未誤行雲	jia1 qi1 ying1 wei4 wu4 xing2 yun2
+# 如果逾期不交納	ru2 guo3 yu2 qi1 bu4 jiao1 na4
+# 復發性二期梅毒	fu4 fa1 xing4 er4 qi1 mei2 du2
+# 比去年同期增長	bi3 qu4 nian2 tong2 qi1 zeng1 zhang3
+# 複發性二期梅毒	fu4 fa1 xing4 er4 qi1 mei2 du2
+# 辨才須待七年期	bian4 cai2 xu1 dai1 qi1 nian2 qi1
+# 馬斯特里赫特期	ma3 si1 te4 li3 he4 te4 qi1
+# 中潛伏期誘發電位	zhong1 qian2 fu2 qi1 you4 fa1 dian4 wei4
+# 同一會計期內交易	tong2 yi1 kuai4 ji4 qi1 nei4 jiao1 yi4
+# 同一會計期內交易	tong2 yi2 kuai4 ji4 qi1 nei4 jiao1 yi4
+# 會計期間內的分攤	kuai4 ji4 qi1 jian1 nei4 de5 fen1 tan1
+# 澳大利亞期權市場	ao4 da4 li4 ya3 qi1 quan2 shi4 chang3
+# 澳大利亞期權市場	ao4 da4 li4 ya4 qi1 quan2 shi4 chang3
+# 青春期前乳房發育	qing1 chun1 qi1 qian2 ru3 fang2 fa1 yu4
+# 商品期貨交易委員會	shang1 pin3 qi1 huo4 jiao1 yi4 wei3 yuan2 hui4
+# 這是個兩全期美的辦法	zhe4 shi4 ge4 liang3 quan2 qi1 mei3 de5 ban4 fa3
+# 倫敦國際金融期貨交易所	lun2 dun1 guo2 ji4 jin1 rong2 qi1 huo4 jiao1 yi4 suo3
 #### @大陸慣用發音「息」：「xi1」
 # 一息	yi4 xi1
 # 一息奄奄	yi4 xi1 yan1 yan1
@@ -5718,6 +6152,8 @@ columns:
 
 ###############################################################
 ####### @@其他非臺灣慣用或錯誤發音 #######
+# 期期艾艾	qi2 ji1 ai4 ai4
+# 短時期	duan3 shi2 ji1
 # 長沙市	zhang3 sha1 shi4
 # 鑰匙圈	yao4 chi2 quan1
 # 稽查員	ji1 zha1 yuan2

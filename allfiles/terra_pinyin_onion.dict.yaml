@@ -88,7 +88,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "202101"
+version: "202102"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -54204,10 +54204,8 @@ min_phrase_weight: 100
 不服燒埋	bu4 fu2 shao1 mai2
 不朝	bu4 chao2
 不期	bu4 qi2
-不期	bu4 qi1
 不期然	bu4 qi2 ran2
 不期然而然	bu4 qi2 ran2 er2 ran2
-不期然而然	bu4 qi1 ran2 er2 ran2
 不期而會	bu4 qi2 er2 hui4
 不期而然	bu4 qi2 er2 ran2
 不期而遇	bu4 qi2 er2 yu4
@@ -54835,7 +54833,6 @@ min_phrase_weight: 100
 中暗箭	zhong4 an4 jian4
 中朝	zhong1 chao2
 中期	zhong1 qi2
-中期	zhong1 qi1
 中校	zhong1 xiao4
 中槍	zhong4 qiang1
 中標	zhong4 biao1
@@ -56116,9 +56113,7 @@ min_phrase_weight: 100
 任教	ren4 jiao4
 任昉	ren2 fang3
 任期	ren4 qi2
-任期	ren4 qi1
 任筆沈詩	ren2 bi3 shen3 shi1
-任職期間	ren4 zhi2 qi1 jian1
 任職期間	ren4 zhi2 qi2 jian1
 任脈	ren4 mai4
 任達華	ren4 da2 hua4
@@ -56505,7 +56500,6 @@ min_phrase_weight: 100
 佳人薄命	jia1 ren2 bo2 ming4
 佳得樂	jia1 de2 le4
 佳期	jia1 qi2
-佳期	jia1 qi1
 佳績	jia1 ji1
 併當	bing4 dang4
 併肩子	bing4 jian1 zi5
@@ -57413,7 +57407,6 @@ min_phrase_weight: 100
 假撇清	jia3 pie3 qing1
 假日	jia4 ri4
 假日花市	jia4 ri4 hua1 shi4
-假期	jia4 qi1
 假期	jia4 qi2
 假期憂鬱症候群	jia4 qi2 you1 yu4 zheng4 hou4 qun2
 假果	jia3 guo3
@@ -58144,7 +58137,6 @@ min_phrase_weight: 100
 先怎麼栽	xian1 zen3 mo5 zai1
 先憂後樂	xian1 you1 hou4 le4
 先期	xian1 qi2
-先期	xian1 qi1
 先王之樂	xian1 wang2 zhi1 yue4
 先生	xian1 sheng1
 先生們	xian1 sheng1 men5
@@ -58549,7 +58541,6 @@ min_phrase_weight: 100
 公公婆婆	gong1 gong5 po2 po5
 公公婆婆	gong1 gong1 po2 po2
 公公道道	gong1 gong1 dao4 dao4
-公共假期	gong1 gong4 jia4 qi1
 公共假期	gong1 gong4 jia4 qi2
 公共危險罪	gong1 gong4 wei2 xian3 zui4
 公共文教環境	gong1 gong4 wen2 jiao4 huan2 jing4
@@ -59291,9 +59282,7 @@ min_phrase_weight: 100
 分曹	fen1 cao2
 分會	fen1 hui4
 分會場	fen1 hui4 chang3
-分期	fen1 qi1
 分期	fen1 qi2
-分期付款	fen1 qi1 fu4 kuan3
 分期付款	fen1 qi2 fu4 kuan3
 分杯羹	fen1 bei1 geng1
 分析	fen1 xi1
@@ -59677,7 +59666,6 @@ min_phrase_weight: 100
 初更	chu1 geng1
 初更	chu1 jing1
 初期	chu1 qi2
-初期	chu1 qi1
 初等代數	chu1 deng3 dai4 shu4
 初等函數	chu1 deng3 han2 shu4
 初等教育	chu1 deng3 jiao4 yu4
@@ -59784,7 +59772,6 @@ min_phrase_weight: 100
 到得	dao4 de2
 到得	dao4 de5
 到期	dao4 qi2
-到期	dao4 qi1
 到此處	dao4 ci3 chu4
 到目前為止	dao4 mu4 qian2 wei2 zhi3
 到處	dao4 chu4
@@ -59911,7 +59898,6 @@ min_phrase_weight: 100
 刻度盤	ke4 du4 pan2
 刻度盤	ke1 du4 pan2
 刻期	ke4 qi2
-刻期	ke4 qi1
 刻木為吏	ke4 mu4 wei2 li4
 刻苦鑽研	ke4 ku3 zuan1 yan2
 刻薄	ke4 bo2
@@ -60013,7 +59999,6 @@ min_phrase_weight: 100
 前推後擁	qian2 tui1 hou4 yong3
 前朝	qian2 chao2
 前期	qian2 qi2
-前期	qian2 qi1
 前沿	qian2 yan2
 前燕	qian2 yan1
 前磨齒	qian2 mo2 chi3
@@ -61030,7 +61015,6 @@ min_phrase_weight: 100
 十七帖	shi2 qi1 tie4
 十三經注疏	shi2 san1 jing1 zhu4 shu4
 十三號星期五	shi2 san1 hao4 xing1 qi2 wu3
-十三號星期五	shi2 san1 hao4 xing1 qi1 wu3
 十三行	shi2 san1 hang2
 十三行遺址	shi2 san1 hang2 yi2 zhi3
 十三轍	shi2 san1 zhe2
@@ -61189,7 +61173,6 @@ min_phrase_weight: 100
 半菽不飽	ban4 shu2 bu4 bao3
 半落不合	ban4 luo4 bu4 he2
 半衰期	ban4 shuai1 qi2
-半衰期	ban4 shuai1 qi1
 半語子	ban4 yu3 zi5
 半身不遂	ban4 shen1 bu4 sui2
 半輩子	ban4 bei4 zi5
@@ -62496,7 +62479,6 @@ min_phrase_weight: 100
 同憂相救	tong2 you1 xiang1 jiu4
 同是天涯淪落人	tong2 shi4 tian1 ya2 lun2 luo4 ren2
 同期	tong2 qi2
-同期	tong2 qi1
 同期錄音	tong2 qi2 lu4 yin1
 同校	tong2 xiao4
 同校	tong2 jiao4
@@ -62880,7 +62862,6 @@ min_phrase_weight: 100
 周旋	zhou1 xuan2
 周旋到底	zhou1 xuan2 dao4 di3
 周朝	zhou1 chao2
-周期函數	zhou1 qi1 han2 shu4
 周期函數	zhou1 qi2 han2 shu4
 周期彗星	zhou1 qi2 hui4 xing1
 周正	zhou1 zheng4
@@ -64710,7 +64691,6 @@ min_phrase_weight: 100
 國際奧林匹克委員會	guo2 ji4 ao4 lin2 pi3 ke4 wei3 yuan2 hui4
 國際數學聯盟	guo2 ji4 shu4 xue2 lian2 meng2
 國際文傳通訊社	guo2 ji4 wen2 chuan2 tong1 xun4 she4
-國際日期變更線	guo2 ji4 ri4 qi1 bian4 geng1 xian4
 國際日期變更線	guo2 ji4 ri4 qi2 bian4 geng1 xian4
 國際民間組織	guo2 ji4 min2 jian1 zu3 zhi1
 國際清算銀行	guo2 ji4 qing1 suan4 yin2 hang2
@@ -64875,9 +64855,7 @@ min_phrase_weight: 100
 在罈子胡同	zai4 tan2 zi5 hu2 tong4
 在職教育	zai4 zhi2 jiao4 yu4
 在行	zai4 hang2
-在訴訟期間	zai4 su4 song4 qi1 jian1
 在訴訟期間	zai4 su4 song4 qi2 jian1
-在這期間	zai4 zhe4 qi1 jian1
 在這期間	zai4 zhe4 qi2 jian1
 在那兒	zai4 na4 er5
 在高處	zai4 gao1 chu4
@@ -66847,7 +66825,6 @@ min_phrase_weight: 100
 失教兒童	shi1 jiao4 er2 tong2
 失散	shi1 san4
 失期	shi1 qi2
-失期	shi1 qi1
 失業率	shi1 ye4 lv4
 失滅	shi1 mie4
 失當	shi1 dang4
@@ -67368,7 +67345,6 @@ min_phrase_weight: 100
 如數	ru2 shu3
 如數家珍	ru2 shu3 jia1 zhen1
 如期	ru2 qi2
-如期	ru2 qi1
 如法炮製	ru2 fa3 pao2 zhi4
 如泥	ru2 ni2
 如海一漚	ru2 hai3 yi4 ou1
@@ -67630,7 +67606,6 @@ min_phrase_weight: 100
 婚姻失調	hun1 yin1 shi1 tiao2
 婚姻調解	hun1 yin1 tiao2 jie3
 婚期	hun1 qi2
-婚期	hun1 qi1
 婠妠	wan1 na4
 婢妮	bi4 ni2
 婦人家	fu4 ren2 jia1
@@ -67773,7 +67748,6 @@ min_phrase_weight: 100
 孔鯉過庭	kong3 li3 guo4 ting2
 孕吐	yun4 tu4
 孕期	yun4 qi2
-孕期	yun4 qi1
 字帖	zi4 tie3
 字帖	zi4 tie4
 字帖	zi4 tie1
@@ -67891,7 +67865,6 @@ min_phrase_weight: 100
 孳蔓	zi1 man4
 孵化場	fu1 hua4 chang3
 孵化期	fu1 hua4 qi2
-孵化期	fu1 hua4 qi1
 學了個不留	xue2 le5 ge5 bu4 liu2
 學位制度	xue2 wei4 zhi4 du4
 學分	xue2 fen1
@@ -67902,7 +67875,6 @@ min_phrase_weight: 100
 學如逆水行舟	xue2 ru2 ni4 shui3 xing2 zhou1
 學富五車	xue2 fu4 wu3 ju1
 學期	xue2 qi2
-學期	xue2 qi1
 學校	xue2 xiao4
 學校教育	xue2 xiao4 jiao4 yu4
 學生	xue2 sheng1
@@ -67995,7 +67967,6 @@ min_phrase_weight: 100
 安全刀片	an1 quan2 dao1 pian4
 安全庫存量	an1 quan2 ku4 cun2 liang4
 安全期	an1 quan2 qi2
-安全期	an1 quan2 qi1
 安全殼	an1 quan2 ke2
 安全率	an1 quan2 lv4
 安全玻璃	an1 quan2 bo1 li2
@@ -68182,7 +68153,6 @@ min_phrase_weight: 100
 定時炸彈	ding4 shi2 zha4 dan4
 定更	ding4 geng1
 定期	ding4 qi2
-定期	ding4 qi1
 定期保險	ding4 qi2 bao3 xian3
 定期健康檢查	ding4 qi2 jian4 kang1 jian3 cha2
 定期存款	ding4 qi2 cun2 kuan3
@@ -69536,7 +69506,6 @@ min_phrase_weight: 100
 展播	zhan3 bo4
 展播	zhan3 bo1
 展期	zhan3 qi2
-展期	zhan3 qi1
 展樣	zhan3 yang4
 展爪	zhan3 zhua3
 展轉	zhan3 zhuan3
@@ -69804,7 +69773,6 @@ min_phrase_weight: 100
 工尺譜	gong1 che3 pu3
 工拙	gong1 zhuo2
 工期	gong1 qi2
-工期	gong1 qi1
 工業中毒	gong1 ye4 zhong4 du2
 工業分類	gong1 ye4 fen1 lei4
 工業殖民地	gong1 ye4 zhi2 min2 di4
@@ -70820,7 +70788,6 @@ min_phrase_weight: 100
 延安地區	yan2 an1 di4 qu1
 延屬	yan2 zhu3
 延期	yan2 qi2
-延期	yan2 qi1
 延蔓	yan2 man4
 延誤	yan2 wu4
 延邊地區	yan2 bian1 di4 qu1
@@ -71583,7 +71550,6 @@ min_phrase_weight: 100
 後會有期	hou4 hui4 you3 qi2
 後會難期	hou4 hui4 nan2 qi2
 後期	hou4 qi2
-後期	hou4 qi1
 後期印象派	hou4 qi2 yin4 xiang4 pai4
 後現代劇場	hou4 xian4 dai4 ju4 chang2
 後生小子	hou4 sheng1 xiao3 zi5
@@ -72837,7 +72803,6 @@ min_phrase_weight: 100
 愁腸百結	chou2 chang2 bai3 jie2
 愆忒	qian1 te4
 愆期	qian1 qi2
-愆期	qian1 qi1
 愆痾	qian1 e1
 愉愉呴呴	yu2 yu2 xu3 xu3
 意切言盡	yi4 qie4 yan2 jin4
@@ -74971,7 +74936,6 @@ min_phrase_weight: 100
 指數基金	zhi3 shu4 ji1 jin1
 指數套利	zhi3 shu4 tao4 li4
 指數方程式	zhi3 shu4 fang1 cheng2 shi4
-指數期權	zhi3 shu4 qi1 quan2
 指數期權	zhi3 shu4 qi2 quan2
 指數法則	zhi3 shu4 fa3 ze2
 指日可待	zhi3 ri4 ke3 dai4
@@ -75005,7 +74969,6 @@ min_phrase_weight: 100
 按捺不住	an4 na4 bu2 zhu4
 按時間先後	an4 shi2 jian1 xian1 hou4
 按期	an4 qi2
-按期	an4 qi1
 按照計劃	an4 zhao4 ji4 hua4
 按牛頭吃不得草	an4 niu2 tou2 chi1 bu4 de2 cao3
 按著葫蘆摳子	an4 zhe5 hu2 lu2 kou1 zi5
@@ -77003,7 +76966,6 @@ min_phrase_weight: 100
 改朝	gai3 chao2
 改朝換代	gai3 chao2 huan4 dai4
 改期	gai3 qi2
-改期	gai3 qi1
 改為	gai3 wei2
 改玉改行	gai3 yu4 gai3 xing2
 改稱	gai3 cheng1
@@ -77954,7 +77916,6 @@ min_phrase_weight: 100
 旁邊兒	bang4 bian1 er2
 旄丘	mao4 qiu1
 旄倪	mao4 ni2
-旄期	mao4 qi1
 旄期	mao4 qi2
 旄牛	mao2 niu2
 旄車	mao2 che1
@@ -78050,7 +78011,6 @@ min_phrase_weight: 100
 既夕禮	ji4 xi4 li3
 既得	ji4 de2
 既得利益	ji4 de2 li4 yi4
-既得期間	ji4 de2 qi1 jian1
 既得期間	ji4 de2 qi2 jian1
 既得權	ji4 de2 quan2
 既得隴	ji4 de2 long3
@@ -78084,7 +78044,6 @@ min_phrase_weight: 100
 日朘月削	ri4 juan1 yue4 xue4
 日朝	ri4 chao2
 日期	ri4 qi2
-日期	ri4 qi1
 日本航空	ri4 ben3 hang2 kong1
 日本銀行	ri4 ben3 yin2 hang2
 日本鬼子	ri4 ben3 gui3 zi5
@@ -78145,8 +78104,6 @@ min_phrase_weight: 100
 早早兒	zao3 zao3 er5
 早朝	zao3 chao2
 早期	zao3 qi2
-早期	zao3 qi1
-早期效應	zao3 qi1 xiao4 ying4
 早期效應	zao3 qi2 xiao4 ying4
 早熟兒童	zao3 shou2 er2 tong2
 早班兒	zao3 ban1 er5
@@ -78258,15 +78215,11 @@ min_phrase_weight: 100
 星星	xing1 xing1
 星星之火	xing1 xing1 zhi1 huo3
 星期	xing1 qi2
-星期	xing1 qi1
 星期五餐廳	xing1 qi2 wu3 can1 ting1
 星期報	xing1 qi2 bao4
 星期天	xing1 qi2 tian1
-星期天	xing1 qi1 tian1
-星期幾	xing1 qi1 ji3
 星期幾	xing1 qi2 ji3
 星期日	xing1 qi2 ri4
-星期日	xing1 qi1 ri4
 星火燎原	xing1 huo3 liao4 yuan2
 星相	xing1 xiang4
 星相圖	xing1 xiang4 tu2
@@ -78359,7 +78312,6 @@ min_phrase_weight: 100
 時差	shi2 cha1
 時數	shi2 shu4
 時期	shi2 qi2
-時期	shi2 qi1
 時段分析	shi2 duan4 fen1 xi1
 時氣	shi2 qi4
 時炸彈	shi2 zha4 dan4
@@ -78422,7 +78374,6 @@ min_phrase_weight: 100
 晚娘的拳頭	wan3 niang2 de5 quan2 tou5
 晚娘的拳頭	wan3 niang2 de5 quan2 tou2
 晚期	wan3 qi2
-晚期	wan3 qi1
 晚熟	wan3 shu2
 晚熟	wan3 shou2
 晚間	wan3 jian1
@@ -78537,9 +78488,7 @@ min_phrase_weight: 100
 暈高兒	yun1 gao1 er1
 暑假	shu3 jia4
 暑期	shu3 qi2
-暑期	shu3 qi1
 暑期學校	shu3 qi2 xue2 xiao4
-暑期學校	shu3 qi1 xue2 xiao4
 暖和	nuan3 huo5
 暖和	nuan3 huo2
 暖和和	nuan3 huo5 huo5
@@ -78823,7 +78772,6 @@ min_phrase_weight: 100
 更定	geng1 ding4
 更審	geng1 shen3
 更年	geng1 nian2
-更年期	geng1 nian2 qi1
 更年期	geng1 nian2 qi2
 更弦易轍	geng1 xian2 yi4 che4
 更張	geng1 zhang1
@@ -79018,7 +78966,6 @@ min_phrase_weight: 100
 會操	hui4 cao1
 會文切理	hui4 wen2 qie4 li3
 會期	hui4 qi2
-會期	hui4 qi1
 會稽	gui4 ji1
 會稽	kuai4 ji1
 會稽之恥	gui4 ji1 zhi1 chi3
@@ -79146,7 +79093,6 @@ min_phrase_weight: 100
 有擔保公債	you3 dan1 bao3 gong1 zhai4
 有效數字	you3 xiao4 shu4 zi4
 有效期	you3 xiao4 qi2
-有效期	you3 xiao4 qi1
 有教無類	you3 jiao4 wu2 lei4
 有教無類法	you3 jiao4 wu2 lei4 fa3
 有數	you3 shu4
@@ -79159,7 +79105,6 @@ min_phrase_weight: 100
 有朝	you3 zhao1
 有朝一日	you3 zhao1 yi2 ri4
 有期徒刑	you3 qi2 tu2 xing2
-有期徒刑	you3 qi1 tu2 xing2
 有案可稽	you3 an4 ke3 ji1
 有條不紊	you3 tiao2 bu2 wen4
 有條有理地	you3 tiao2 you3 li3 de5
@@ -79482,14 +79427,11 @@ min_phrase_weight: 100
 朝鮮語	chao2 xian3 yu3
 朝鮮語	zhao1 xian1 yu3
 期中考	qi2 zhong1 kao3
-期中考	qi1 zhong1 kao3
 期中選舉	qi2 zhong1 xuan3 ju3
 期刊	qi2 kan1
-期刊	qi1 kan1
 期功	ji1 gong1
 期勉	qi2 mian3
 期年	ji1 nian2
-期待	qi1 dai4
 期待	qi2 dai4
 期成	qi2 cheng2
 期日	qi2 ri4
@@ -79498,38 +79440,26 @@ min_phrase_weight: 100
 期月有成	ji1 yue4 you3 cheng2
 期服	ji1 fu2
 期望	qi2 wang4
-期望	qi1 wang4
 期望值	qi2 wang4 zhi2
-期望值	qi1 wang4 zhi2
 期期	qi2 qi2
 期期艾艾	qi2 qi2 ai4 ai4
-期期艾艾	qi2 ji1 ai4 ai4
 期末考	qi2 mo4 kao3
-期末考	qi1 mo4 kao3
 期歲	ji1 sui4
 期求	qi2 qiu2
 期滿	qi2 man3
-期滿	qi1 man3
 期盼	qi2 pan4
-期盼	qi1 pan4
 期票	qi2 piao4
-期票	qi1 piao4
 期程	qi2 cheng2
 期約	qi2 yue1
 期終考試	qi2 zhong1 kao3 shi4
 期考	qi2 kao3
-期考	qi1 kao3
 期艾	qi2 ai4
 期許	qi2 xu3
-期許	qi1 xu3
 期貨	qi2 huo4
-期貨	qi1 huo4
 期運	qi2 yun4
 期門	qi2 men2
-期間	qi1 jian1
 期間	qi2 jian1
 期限	qi2 xian4
-期限	qi1 xian4
 期頤	qi2 yi2
 期頤之壽	qi2 yi2 zhi1 shou4
 期頤偕老	qi2 yi2 xie2 lao3
@@ -79613,7 +79543,6 @@ min_phrase_weight: 100
 末子	mo4 zi5
 末子堆	mo4 zi5 dui1
 末期	mo4 qi2
-末期	mo4 qi1
 末末了	mo4 mo4 liao3
 末泥	mo4 ni2
 末著	mo4 zhao1
@@ -79993,7 +79922,6 @@ min_phrase_weight: 100
 枯楊生華	ku1 yang2 sheng1 hua1
 枯樹生華	ku1 shu4 sheng1 hua1
 枯水期	ku1 shui3 qi2
-枯水期	ku1 shui3 qi1
 枯草桿菌	ku1 cao3 gan3 jun1
 枯萎病	ku1 wei3 bing4
 枯魚涸轍	ku1 yu2 he2 che4
@@ -80666,7 +80594,6 @@ min_phrase_weight: 100
 極樂鳥	ji2 le4 niao3
 極為	ji2 wei2
 極為龐大	ji2 wei2 pang2 da4
-極盛時期	ji2 sheng4 shi2 qi1
 極盛時期	ji2 sheng4 shi2 qi2
 極端分子	ji2 duan1 fen4 zi5
 極處	ji2 chu4
@@ -81298,7 +81225,7 @@ min_phrase_weight: 100
 檀香扇	tan2 xiang1 shan4
 檉柏	cheng1 bo2
 檔期	dang3 qi2
-檔期	dang4 qi1
+檔期	dang4 qi2
 檔案夾	dang3 an4 jia2
 檔案夾	dang4 an4 jia2
 檔案轉送	dang3 an4 zhuan3 song4
@@ -81705,7 +81632,6 @@ min_phrase_weight: 100
 死有處	si3 you3 chu4
 死有重於泰山	si3 you3 zhong4 yu2 tai4 shan1
 死期	si3 qi2
-死期	si3 qi1
 死模活漾	si3 mu2 huo2 yang4
 死機藍屏	si3 ji1 lan2 ping2
 死法子	si3 fa2 zi5
@@ -82294,7 +82220,6 @@ min_phrase_weight: 100
 汛地	xun4 di4
 汛掃	xun4 sao3
 汛期	xun4 qi2
-汛期	xun4 qi1
 汞中毒	gong3 zhong4 du2
 汞齊	gong3 ji4
 江南弄	jiang1 nan2 nong4
@@ -83245,9 +83170,7 @@ min_phrase_weight: 100
 活支剌	huo2 zhi1 la4
 活教材	huo2 jiao4 cai2
 活期	huo2 qi2
-活期	huo2 qi1
 活期存款	huo2 qi2 cun2 kuan3
-活期存款	huo2 qi1 cun2 kuan3
 活期放款	huo2 qi2 fang4 kuan3
 活泛	huo2 fan4
 活潑	huo2 po1
@@ -84460,7 +84383,6 @@ min_phrase_weight: 100
 潘岳白髮	pan1 yue4 bai2 fa3
 溈仰宗	gui1 yang3 zong1
 潛伏期	qian2 fu2 qi2
-潛伏期	qian2 fu2 qi1
 潛伏期	qian3 fu2 qi2
 潛在危機	qian2 zai4 wei2 ji1
 潛在危險度	qian2 zai4 wei1 xian3 du4
@@ -84920,7 +84842,6 @@ min_phrase_weight: 100
 無是處	wu2 shi4 chu4
 無服之喪	wu2 fu2 zhi1 sang1
 無期徒刑	wu2 qi2 tu2 xing2
-無期徒刑	wu2 qi1 tu2 xing2
 無條件投降	wu2 tiao2 jian4 tou2 xiang2
 無業閒散	wu2 ye4 xian2 san3
 無殼蝸牛	wu2 ke2 gua1 niu2
@@ -84999,7 +84920,6 @@ min_phrase_weight: 100
 無間	wu2 jian1
 無限小數	wu2 xian4 xiao3 shu4
 無霜期	wu2 shuang1 qi2
-無霜期	wu2 shuang1 qi1
 無頭蒼蠅	wu2 tou2 cang1 ying2
 無顛無倒	wu2 dian1 wu2 dao3
 焦稜	jiao1 leng2
@@ -85645,7 +85565,6 @@ min_phrase_weight: 100
 為時已晚	wei2 shi2 yi3 wan3
 為時未晚	wei2 shi2 wei4 wan3
 為時過早	wei2 shi2 guo4 zao3
-為期	wei2 qi1
 為期	wei2 qi2
 為期不遠	wei2 qi2 bu4 yuan3
 為止	wei2 zhi3
@@ -86743,7 +86662,6 @@ min_phrase_weight: 100
 生分	sheng1 fen4
 生剌剌	sheng1 la4 la4
 生命週期	sheng1 ming4 zhou1 qi2
-生命週期	sheng1 ming4 zhou1 qi1
 生地	sheng1 di4
 生地方	sheng1 di4 fang1
 生存空間	sheng1 cun2 kong1 jian1
@@ -86834,7 +86752,6 @@ min_phrase_weight: 100
 產地價格	chan3 di4 jia4 ge2
 產地證	chan3 di4 zheng4
 產褥期	chan3 ru4 qi2
-產褥期	chan3 ru4 qi1
 產量	chan3 liang4
 產量多	chan3 liang4 duo1
 用一當十	yong4 yi1 dang1 shi2
@@ -87531,7 +87448,6 @@ min_phrase_weight: 100
 發怔	fa1 zheng1
 發息	fa1 xi2
 發情期	fa1 qing2 qi2
-發情期	fa1 qing2 qi1
 發憤圖強	fa1 fen4 tu2 qiang2
 發憷	fa1 chu4
 發揚踔厲	fa1 yang2 zhuo2 li4
@@ -89149,9 +89065,7 @@ min_phrase_weight: 100
 短折	duan3 zhe2
 短時間	duan3 shi2 jian1
 短期	duan3 qi2
-短期	duan3 qi1
 短期投資	duan3 qi2 tou2 zi1
-短期投資	duan3 qi1 tou2 zi1
 短波廣播	duan3 bo1 guang3 bo4
 短波長	duan3 bo1 chang2
 短片	duan3 pian4
@@ -89908,7 +89822,6 @@ min_phrase_weight: 100
 秋分	qiu1 fen1
 秋分點	qiu1 fen1 dian3
 秋場	qiu1 chang2
-秋季學期	qiu1 ji4 xue2 qi1
 秋季學期	qiu1 ji4 xue2 qi2
 秋扇	qiu1 shan4
 秋扇見捐	qiu1 shan4 jian4 juan1
@@ -91746,7 +91659,6 @@ min_phrase_weight: 100
 終曲	zhong1 qu3
 終朝	zhong1 zhao1
 終期	zhong1 qi2
-終期	zhong1 qi1
 終生教育	zhong1 sheng1 jiao4 yu4
 終究	zhong1 jiu4
 終究	zhong1 jiu1
@@ -92095,7 +92007,6 @@ min_phrase_weight: 100
 經得起	jing1 de5 qi3
 經旬累月	jing1 xun2 lei3 yue4
 經期	jing1 qi2
-經期	jing1 qi1
 經濟制度	jing1 ji4 zhi4 du4
 經濟力量	jing1 ji4 li4 liang4
 經濟危機	jing1 ji4 wei2 ji1
@@ -92335,7 +92246,6 @@ min_phrase_weight: 100
 緩急相濟	huan3 ji2 xiang1 ji4
 緩急輕重	huan3 ji2 qing1 zhong4
 緩期	huan3 qi2
-緩期	huan3 qi1
 緩步代車	huan3 bu4 dai4 ju1
 緩步徐行	huan3 bu4 xu2 xing2
 緩緩而行	huan3 huan3 er2 xing2
@@ -93087,7 +92997,6 @@ min_phrase_weight: 100
 老年得子	lao3 nian2 de2 zi3
 老年時期	lao3 nian2 shi2 qi2
 老年期	lao3 nian2 qi2
-老年期	lao3 nian2 qi1
 老年間	lao3 nian2 jian1
 老幾	lao3 ji3
 老底子	lao3 di3 zi5
@@ -93203,7 +93112,6 @@ min_phrase_weight: 100
 考卷	kao3 juan4
 考差	kao3 chai1
 考期	kao3 qi2
-考期	kao3 qi1
 考校	kao3 jiao4
 考究	kao3 jiu4
 考究	kao3 jiu1
@@ -93215,7 +93123,6 @@ min_phrase_weight: 100
 考試卷子	kao3 shi4 juan4 zi5
 考量	kao3 liang2
 耄期	mao4 qi2
-耄期	mao4 qi1
 耆儒碩德	qi2 ru2 shi2 de2
 耆儒碩望	qi2 ru2 shi2 wang4
 耆儒碩老	qi2 ru2 shi2 lao3
@@ -93328,7 +93235,6 @@ min_phrase_weight: 100
 耶穌升天節	ye1 su1 sheng1 tian1 jie2
 耶穌受難節	ye1 su1 shou4 nan4 jie2
 耶穌基督	ye1 su1 ji1 du1
-耶穌基督後期聖徒教會	ye1 su1 ji1 du1 hou4 qi1 sheng4 tu2 jiao4 hui4
 耶穌基督後期聖徒教會	ye1 su1 ji1 du1 hou4 qi2 sheng4 tu2 jiao4 hui4
 耶穌基督末世聖徒教會	ye1 su1 ji1 du1 mo4 shi4 sheng4 tu2 jiao4 hui4
 耶穌教	ye1 su1 jiao4
@@ -93954,7 +93860,6 @@ min_phrase_weight: 100
 脫帽露頂	tuo1 mao4 lu4 ding3
 脫悶	tuo1 men4
 脫期	tuo1 qi2
-脫期	tuo1 qi1
 脫殼	tuo1 ke2
 脫殼	tuo1 qiao4
 脫殼金蟬	tuo1 ke2 jin1 chan2
@@ -95017,7 +94922,6 @@ min_phrase_weight: 100
 花朝月夜	hua1 zhao1 yue4 ye4
 花朝節	hua1 zhao1 jie2
 花期	hua1 qi2
-花期	hua1 qi1
 花架子	hua1 jia4 zi5
 花柵子	hua1 zha4 zi5
 花栽子	hua1 zai1 zi5
@@ -96909,7 +96813,6 @@ min_phrase_weight: 100
 蜚鳥盡	fei1 niao3 jin4
 蜜丸子	mi4 wan2 zi5
 蜜供	mi4 gong4
-蜜月假期	mi4 yue4 jia4 qi1
 蜜月假期	mi4 yue4 jia4 qi2
 蜜月期	mi4 yue4 qi2
 蜜筒	mi4 tong2
@@ -97346,7 +97249,6 @@ min_phrase_weight: 100
 行書	xing2 shu1
 行會	hang2 hui4
 行有餘力	xing2 you3 yu2 li4
-行期	xing2 qi1
 行期	xing2 qi2
 行李	xing2 li3
 行李傳送帶	xing2 li3 chuan2 song4 dai4
@@ -101438,7 +101340,6 @@ min_phrase_weight: 100
 近幾年	jin4 ji3 nian2
 近方賣弄	jin4 fang1 mai4 nong4
 近期	jin4 qi2
-近期	jin4 qi1
 近畿地方	jin4 ji1 di4 fang1
 近端胞漿	jin4 duan1 bao1 jiang1
 近處	jin4 chu4
@@ -101767,14 +101668,10 @@ min_phrase_weight: 100
 逮繫	dai4 xi4
 逮逮	di4 di4
 週期	zhou1 qi2
-週期	zhou1 qi1
 週期律	zhou1 qi2 lv4
 週期性	zhou1 qi2 xing4
-週期性	zhou1 qi1 xing4
-週期數	zhou1 qi1 shu4
 週期數	zhou1 qi2 shu4
 週期表	zhou1 qi2 biao3
-週期表	zhou1 qi1 biao3
 週末效應	zhou1 mo4 xiao4 ying4
 週轉	zhou1 zhuan3
 週轉金	zhou1 zhuan3 jin1
@@ -101824,7 +101721,6 @@ min_phrase_weight: 100
 逼良為娼	bi1 liang2 wei2 chang1
 逾分	yu2 fen4
 逾期	yu2 qi2
-逾期	yu2 qi1
 逾期	yu4 qi2
 遁入空門	dun4 ru4 kong1 men2
 遁名匿跡	dun4 ming2 ni4 ji1
@@ -101931,11 +101827,9 @@ min_phrase_weight: 100
 過數	guo4 shu4
 過日子	guo4 ri4 zi5
 過期	guo4 qi2
-過期	guo4 qi1
 過河卒子	guo4 he2 zu2 zi5
 過淋	guo4 lin2
 過渡時期	guo4 du4 shi2 qi2
-過渡時期	guo4 du4 shi2 qi1
 過當	guo4 dang4
 過當防衛	guo4 dang4 fang2 wei4
 過盛必衰	guo4 sheng4 bi4 shuai1
@@ -102032,7 +101926,6 @@ min_phrase_weight: 100
 遙控操作	yao2 kong4 cao1 zuo4
 遙相應和	yao2 xiang1 ying4 he4
 遙遙無期	yao2 yao2 wu2 qi2
-遙遙無期	yao2 yao2 wu2 qi1
 遙遙相對	yao2 yao2 xiang1 dui4
 遛達	liu2 da2
 遛達	liu4 da2
@@ -103995,20 +103888,14 @@ min_phrase_weight: 100
 長春花	chang2 chun1 hua1
 長曆	chang2 li4
 長書	chang2 shu1
-長期	chang2 qi1
 長期	chang2 qi2
-長期以來	chang2 qi1 yi3 lai2
 長期以來	chang2 qi2 yi3 lai2
-長期共存	chang2 qi1 gong4 cun2
 長期共存	chang2 qi2 gong4 cun2
-長期性	chang2 qi1 xing4
 長期性	chang2 qi2 xing4
 長期投資	chang2 qi2 tou2 zi1
-長期穩定性	chang2 qi1 wen3 ding4 xing4
 長期穩定性	chang2 qi2 wen3 ding4 xing4
 長期趨勢	chang2 qi2 qu1 shi4
 長期飯票	chang2 qi2 fan4 piao4
-長期飯票	chang2 qi1 fan4 piao4
 長材	chang2 cai2
 長板	chang2 ban3
 長枕大被	chang2 zhen3 da4 bei4
@@ -105273,7 +105160,6 @@ min_phrase_weight: 100
 降龍伏虎	xiang2 long2 fu2 hu3
 限度	xian4 du4
 限期	xian4 qi2
-限期	xian4 qi1
 陝甘寧	shan3 gan1 ning2
 陝西大地震	shan3 xi1 da4 di4 zhen4
 陝西梆子	shan3 xi1 bang1 zi5
@@ -106199,11 +106085,9 @@ min_phrase_weight: 100
 青山一髮	qing1 shan1 yi4 fa3
 青年有為	qing1 nian2 you3 wei2
 青年期	qing1 nian2 qi2
-青年期	qing1 nian2 qi1
 青年節	qing1 nian2 jie2
 青康藏高原	qing1 kang1 zang4 gao1 yuan2
 青春期	qing1 chun1 qi2
-青春期	qing1 chun1 qi1
 青泥	qing1 ni2
 青海湖盆地	qing1 hai3 hu2 pen2 di4
 青燈黃卷	qing1 deng1 huang2 juan4
@@ -106562,7 +106446,6 @@ min_phrase_weight: 100
 預應力	yu4 ying4 li4
 預拌混凝土	yu4 ban4 hun4 ning2 tu3
 預期	yu4 qi2
-預期	yu4 qi1
 預產期	yu4 chan3 qi2
 預行	yu4 xing2
 預防接種	yu4 fang2 jie1 zhong4
@@ -108495,9 +108378,7 @@ min_phrase_weight: 100
 鼎力相助	ding3 li4 xiang1 zhu4
 鼎折足	ding3 zhe2 zu2
 鼎盛	ding3 sheng4
-鼎盛時期	ding3 sheng4 shi2 qi1
 鼎盛時期	ding3 sheng4 shi2 qi2
-鼎盛期	ding3 sheng4 qi1
 鼎盛期	ding3 sheng4 qi2
 鼎足三分	ding3 zu2 san1 fen1
 鼎鐺玉石	ding3 cheng1 yu4 shi2
@@ -108980,7 +108861,6 @@ min_phrase_weight: 100
 不是了處	bu4 shi4 liao3 chu4
 不是味兒	bu4 shi4 wei4 er5
 不是耍處	bu4 shi4 shua3 chu4
-不期而遇	bu4 qi1 er2 yu4
 不杖期夫	bu4 zhang4 ji1 fu1
 不正之風	bu4 zheng4 zhi1 feng1
 不為所動	bu4 wei4 suo3 dong4
@@ -109138,7 +109018,6 @@ min_phrase_weight: 100
 冠狀動脈	guan4 zhuang4 dong4 mai4
 冤魂不散	yuan1 hun2 bu4 san4
 冰山一角	bing1 shan1 yi1 jiao3
-冰河時期	bing1 he2 shi2 qi1
 冷嘲熱諷	leng3 chao2 re4 feng1
 冷血動物	leng3 xue4 dong4 wu4
 凹凸不平	ao1 tu1 bu4 ping2
@@ -109333,7 +109212,6 @@ min_phrase_weight: 100
 安營紮寨	an1 ying2 zha1 zhai4
 完全懂得	wan2 quan2 dong3 de2
 宏儒碩學	hong2 ru2 shuo4 xue2
-定期存款	ding4 qi1 cun2 kuan3
 定睛一相	ding4 jing1 yi1 xiang4
 定睛一看	ding4 jing1 yi1 kan4
 家無斗儲	jia1 wu2 dou3 chu3
@@ -109395,7 +109273,6 @@ min_phrase_weight: 100
 彼唱此和	bi3 chang4 ci3 he2
 徇情枉法	xun4 qing2 wang3 fa3
 徇私舞弊	xun4 si1 wu3 bi4
-後會有期	hou4 hui4 you3 qi1
 得來不易	de2 lai2 bu4 yi4
 從容不迫	cong1 rong2 bu4 po4
 從容不迫	cong2 rong2 bu4 po4
