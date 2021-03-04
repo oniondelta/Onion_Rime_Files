@@ -36,7 +36,7 @@
 #===================================
 ---
 name: jpnin1
-version: "202102"
+version: "202103"
 sort: by_weight #original
 use_preset_vocabulary: false
 columns:
@@ -25594,6 +25594,8 @@ columns:
 相	sau;	1829
 込	go;	389
 込	kon;	389
+茈	sai;	0
+茈	shi;	0
 ####### 日語『漢字大全』補充結束 #######
 #######@ 新增 nihongo-r 單字發音開始 #######
 艾	ai;	125
