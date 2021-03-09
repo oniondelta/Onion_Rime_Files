@@ -88,7 +88,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "202102"
+version: "202103"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -1843,6 +1843,7 @@ min_phrase_weight: 100
 偢	qiao4	0.1%
 㡌	mei4	0.1%
 戕	zang1	0.1%
+堡	pu3	0%
 ##### @201912 比對教育部相關字詞典檔所新增 #####
 丁	zheng1	0.1%
 丂	kao3	0.1%
