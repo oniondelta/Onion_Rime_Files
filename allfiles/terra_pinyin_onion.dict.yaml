@@ -1844,6 +1844,7 @@ min_phrase_weight: 100
 㡌	mei4	0.1%
 戕	zang1	0.1%
 堡	pu3	0%
+𫐓	rou2	0%
 ##### @201912 比對教育部相關字詞典檔所新增 #####
 丁	zheng1	0.1%
 丂	kao3	0.1%
@@ -52689,7 +52690,7 @@ min_phrase_weight: 100
 𫐆	kuai4
 𫐉	ling2
 𫐐	ni2
-𫐓	bu4
+#?#𫐓	bu4
 𫒶	han2
 𫓧	fu1
 𫓩	cong1
