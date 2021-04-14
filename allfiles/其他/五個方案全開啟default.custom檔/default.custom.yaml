@@ -35,6 +35,8 @@ patch:
     - Control+Shift+grave
     - F4
 
+  menu/page_size: 9
+
   key_binder/bindings:
     - { when: composing, accept: Control+p, send: Up }
     - { when: composing, accept: Control+n, send: Down }
