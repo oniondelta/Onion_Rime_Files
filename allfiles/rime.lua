@@ -1438,7 +1438,7 @@ function t_translator(input, seg)
             -- local k = string.sub(numberout, 1, -1) -- 取參數
             local result = formatnumberthousands(numberout) --- 調用算法
             yield(Candidate("number", seg.start, seg._end, result, "〔千分位數字〕"))
-        return
+            return
         end
 
     end
@@ -2432,7 +2432,7 @@ function t2_translator(input, seg)
             -- local k = string.sub(numberout, 1, -1) -- 取參數
             local result = formatnumberthousands(numberout) --- 調用算法
             yield(Candidate("number", seg.start, seg._end, result, "〔千分位數字〕"))
-        return
+            return
         end
 
     end
@@ -2495,7 +2495,7 @@ local function exists(single_filter, text)
     for i in utf8.codes(text) do
         local c = utf8.codepoint(text, i)
         if (not single_filter(c)) then
-        return false
+            return false
         end
     end
     return true
@@ -2685,8 +2685,8 @@ end
 
 function reverse_lookup_filter(input)
     for cand in input:iter() do
-       cand:get_genuine().comment = cand.comment .. " " .. xform_py(pydb:lookup(cand.text))
-       yield(cand)
+        cand:get_genuine().comment = cand.comment .. " " .. xform_py(pydb:lookup(cand.text))
+        yield(cand)
     end
 end
 
