@@ -4,7 +4,7 @@
 # 『洋蔥』製作
 ---
 name: bo_mixin_kr
-version: "202007"
+version: "202104"
 sort: by_weight
 use_preset_vocabulary: false
 ...
@@ -20383,7 +20383,7 @@ use_preset_vocabulary: false
 ᅧ	!g//
 ᅨ	!pp//
 ᅩ	!n//
-ᅪ	!ne//
+ᅪ	!nk//
 ᅫ	!nh//
 ᅬ	!ni//
 ᅭ	!m//

@@ -4,7 +4,7 @@
 # 『洋蔥』製作
 ---
 name: ocm_mixin_kr
-version: "202007"
+version: "202104"
 sort: original
 use_preset_vocabulary: false
 #max_phrase_length: 7
@@ -20385,7 +20385,7 @@ use_preset_vocabulary: false
 ᅧ	g//!
 ᅨ	pp//!
 ᅩ	n//!
-ᅪ	ne//!
+ᅪ	nk//!
 ᅫ	nh//!
 ᅬ	ni//!
 ᅭ	m//!

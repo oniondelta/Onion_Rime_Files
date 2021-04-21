@@ -19,7 +19,7 @@
 #===================================
 ---
 name: hangeul
-version: "202007"
+version: "202104"
 sort: by_weight #original
 use_preset_vocabulary: false
 ...
@@ -29128,7 +29128,7 @@ use_preset_vocabulary: false
 ᅧ	g//
 ᅨ	pp//
 ᅩ	n//
-ᅪ	ne//
+ᅪ	nk//
 ᅫ	nh//
 ᅬ	ni//
 ᅭ	m//
