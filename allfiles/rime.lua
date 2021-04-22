@@ -387,6 +387,318 @@ local function purech_number(ch)
     return ch
 end
 
+local function little1_number(l1)
+    if l1 == "" then return "" end
+    l1 = string.gsub(l1, "0", "⁰")
+    l1 = string.gsub(l1, "1", "¹")
+    l1 = string.gsub(l1, "2", "²")
+    l1 = string.gsub(l1, "3", "³")
+    l1 = string.gsub(l1, "4", "⁴")
+    l1 = string.gsub(l1, "5", "⁵")
+    l1 = string.gsub(l1, "6", "⁶")
+    l1 = string.gsub(l1, "7", "⁷")
+    l1 = string.gsub(l1, "8", "⁸")
+    l1 = string.gsub(l1, "9", "⁹")
+    return l1
+end
+
+local function little2_number(l2)
+    if l2 == "" then return "" end
+    l2 = string.gsub(l2, "0", "₀")
+    l2 = string.gsub(l2, "1", "₁")
+    l2 = string.gsub(l2, "2", "₂")
+    l2 = string.gsub(l2, "3", "₃")
+    l2 = string.gsub(l2, "4", "₄")
+    l2 = string.gsub(l2, "5", "₅")
+    l2 = string.gsub(l2, "6", "₆")
+    l2 = string.gsub(l2, "7", "₇")
+    l2 = string.gsub(l2, "8", "₈")
+    l2 = string.gsub(l2, "9", "₉")
+    return l2
+end
+
+local function english_1(en1)
+    if en1 == "" then return "" end
+    en1 = string.gsub(en1, "a", "𝔸")
+    en1 = string.gsub(en1, "b", "𝔹")
+    en1 = string.gsub(en1, "c", "ℂ")
+    en1 = string.gsub(en1, "d", "𝔻")
+    en1 = string.gsub(en1, "e", "𝔼")
+    en1 = string.gsub(en1, "f", "𝔽")
+    en1 = string.gsub(en1, "g", "𝔾")
+    en1 = string.gsub(en1, "h", "ℍ")
+    en1 = string.gsub(en1, "i", "𝕀")
+    en1 = string.gsub(en1, "j", "𝕁")
+    en1 = string.gsub(en1, "k", "𝕂")
+    en1 = string.gsub(en1, "l", "𝕃")
+    en1 = string.gsub(en1, "m", "𝕄")
+    en1 = string.gsub(en1, "n", "ℕ")
+    en1 = string.gsub(en1, "o", "𝕆")
+    en1 = string.gsub(en1, "p", "ℙ")
+    en1 = string.gsub(en1, "q", "ℚ")
+    en1 = string.gsub(en1, "r", "ℝ")
+    en1 = string.gsub(en1, "s", "𝕊")
+    en1 = string.gsub(en1, "t", "𝕋")
+    en1 = string.gsub(en1, "u", "𝕌")
+    en1 = string.gsub(en1, "v", "𝕍")
+    en1 = string.gsub(en1, "w", "𝕎")
+    en1 = string.gsub(en1, "x", "𝕏")
+    en1 = string.gsub(en1, "y", "𝕐")
+    en1 = string.gsub(en1, "z", "ℤ")
+    return en1
+end
+
+local function english_2(en2)
+    if en2 == "" then return "" end
+    en2 = string.gsub(en2, "a", "𝕒")
+    en2 = string.gsub(en2, "b", "𝕓")
+    en2 = string.gsub(en2, "c", "𝕔")
+    en2 = string.gsub(en2, "d", "𝕕")
+    en2 = string.gsub(en2, "e", "𝕖")
+    en2 = string.gsub(en2, "f", "𝕗")
+    en2 = string.gsub(en2, "g", "𝕘")
+    en2 = string.gsub(en2, "h", "𝕙")
+    en2 = string.gsub(en2, "i", "𝕚")
+    en2 = string.gsub(en2, "j", "𝕛")
+    en2 = string.gsub(en2, "k", "𝕜")
+    en2 = string.gsub(en2, "l", "𝕝")
+    en2 = string.gsub(en2, "m", "𝕞")
+    en2 = string.gsub(en2, "n", "𝕟")
+    en2 = string.gsub(en2, "o", "𝕠")
+    en2 = string.gsub(en2, "p", "𝕡")
+    en2 = string.gsub(en2, "q", "𝕢")
+    en2 = string.gsub(en2, "r", "𝕣")
+    en2 = string.gsub(en2, "s", "𝕤")
+    en2 = string.gsub(en2, "t", "𝕥")
+    en2 = string.gsub(en2, "u", "𝕦")
+    en2 = string.gsub(en2, "v", "𝕧")
+    en2 = string.gsub(en2, "w", "𝕨")
+    en2 = string.gsub(en2, "x", "𝕩")
+    en2 = string.gsub(en2, "y", "𝕪")
+    en2 = string.gsub(en2, "z", "𝕫")
+    return en2
+end
+
+local function english_3(en3)
+    if en3 == "" then return "" end
+    en3 = string.gsub(en3, "a", "Ⓐ")
+    en3 = string.gsub(en3, "b", "Ⓑ")
+    en3 = string.gsub(en3, "c", "Ⓒ")
+    en3 = string.gsub(en3, "d", "Ⓓ")
+    en3 = string.gsub(en3, "e", "Ⓔ")
+    en3 = string.gsub(en3, "f", "Ⓕ")
+    en3 = string.gsub(en3, "g", "Ⓖ")
+    en3 = string.gsub(en3, "h", "Ⓗ")
+    en3 = string.gsub(en3, "i", "Ⓘ")
+    en3 = string.gsub(en3, "j", "Ⓙ")
+    en3 = string.gsub(en3, "k", "Ⓚ")
+    en3 = string.gsub(en3, "l", "Ⓛ")
+    en3 = string.gsub(en3, "m", "Ⓜ")
+    en3 = string.gsub(en3, "n", "Ⓝ")
+    en3 = string.gsub(en3, "o", "Ⓞ")
+    en3 = string.gsub(en3, "p", "Ⓟ")
+    en3 = string.gsub(en3, "q", "Ⓠ")
+    en3 = string.gsub(en3, "r", "Ⓡ")
+    en3 = string.gsub(en3, "s", "Ⓢ")
+    en3 = string.gsub(en3, "t", "Ⓣ")
+    en3 = string.gsub(en3, "u", "Ⓤ")
+    en3 = string.gsub(en3, "v", "Ⓥ")
+    en3 = string.gsub(en3, "w", "Ⓦ")
+    en3 = string.gsub(en3, "x", "Ⓧ")
+    en3 = string.gsub(en3, "y", "Ⓨ")
+    en3 = string.gsub(en3, "z", "Ⓩ")
+    return en3
+end
+
+local function english_4(en4)
+    if en4 == "" then return "" end
+    en4 = string.gsub(en4, "a", "ⓐ")
+    en4 = string.gsub(en4, "b", "ⓑ")
+    en4 = string.gsub(en4, "c", "ⓒ")
+    en4 = string.gsub(en4, "d", "ⓓ")
+    en4 = string.gsub(en4, "e", "ⓔ")
+    en4 = string.gsub(en4, "f", "ⓕ")
+    en4 = string.gsub(en4, "g", "ⓖ")
+    en4 = string.gsub(en4, "h", "ⓗ")
+    en4 = string.gsub(en4, "i", "ⓘ")
+    en4 = string.gsub(en4, "j", "ⓙ")
+    en4 = string.gsub(en4, "k", "ⓚ")
+    en4 = string.gsub(en4, "l", "ⓛ")
+    en4 = string.gsub(en4, "m", "ⓜ")
+    en4 = string.gsub(en4, "n", "ⓝ")
+    en4 = string.gsub(en4, "o", "ⓞ")
+    en4 = string.gsub(en4, "p", "ⓟ")
+    en4 = string.gsub(en4, "q", "ⓠ")
+    en4 = string.gsub(en4, "r", "ⓡ")
+    en4 = string.gsub(en4, "s", "ⓢ")
+    en4 = string.gsub(en4, "t", "ⓣ")
+    en4 = string.gsub(en4, "u", "ⓤ")
+    en4 = string.gsub(en4, "v", "ⓥ")
+    en4 = string.gsub(en4, "w", "ⓦ")
+    en4 = string.gsub(en4, "x", "ⓧ")
+    en4 = string.gsub(en4, "y", "ⓨ")
+    en4 = string.gsub(en4, "z", "ⓩ")
+    return en4
+end
+
+local function english_5(en5)
+    if en5 == "" then return "" end
+    en5 = string.gsub(en5, "a", "🄐")
+    en5 = string.gsub(en5, "b", "🄑")
+    en5 = string.gsub(en5, "c", "🄒")
+    en5 = string.gsub(en5, "d", "🄓")
+    en5 = string.gsub(en5, "e", "🄔")
+    en5 = string.gsub(en5, "f", "🄕")
+    en5 = string.gsub(en5, "g", "🄖")
+    en5 = string.gsub(en5, "h", "🄗")
+    en5 = string.gsub(en5, "i", "🄘")
+    en5 = string.gsub(en5, "j", "🄙")
+    en5 = string.gsub(en5, "k", "🄚")
+    en5 = string.gsub(en5, "l", "🄛")
+    en5 = string.gsub(en5, "m", "🄜")
+    en5 = string.gsub(en5, "n", "🄝")
+    en5 = string.gsub(en5, "o", "🄞")
+    en5 = string.gsub(en5, "p", "🄟")
+    en5 = string.gsub(en5, "q", "🄠")
+    en5 = string.gsub(en5, "r", "🄡")
+    en5 = string.gsub(en5, "s", "🄢")
+    en5 = string.gsub(en5, "t", "🄣")
+    en5 = string.gsub(en5, "u", "🄤")
+    en5 = string.gsub(en5, "v", "🄥")
+    en5 = string.gsub(en5, "w", "🄦")
+    en5 = string.gsub(en5, "x", "🄧")
+    en5 = string.gsub(en5, "y", "🄨")
+    en5 = string.gsub(en5, "z", "🄩")
+    return en5
+end
+
+local function english_6(en6)
+    if en6 == "" then return "" end
+    en6 = string.gsub(en6, "a", "⒜")
+    en6 = string.gsub(en6, "b", "⒝")
+    en6 = string.gsub(en6, "c", "⒞")
+    en6 = string.gsub(en6, "d", "⒟")
+    en6 = string.gsub(en6, "e", "⒠")
+    en6 = string.gsub(en6, "f", "⒡")
+    en6 = string.gsub(en6, "g", "⒢")
+    en6 = string.gsub(en6, "h", "⒣")
+    en6 = string.gsub(en6, "i", "⒤")
+    en6 = string.gsub(en6, "j", "⒥")
+    en6 = string.gsub(en6, "k", "⒦")
+    en6 = string.gsub(en6, "l", "⒧")
+    en6 = string.gsub(en6, "m", "⒨")
+    en6 = string.gsub(en6, "n", "⒩")
+    en6 = string.gsub(en6, "o", "⒪")
+    en6 = string.gsub(en6, "p", "⒫")
+    en6 = string.gsub(en6, "q", "⒬")
+    en6 = string.gsub(en6, "r", "⒭")
+    en6 = string.gsub(en6, "s", "⒮")
+    en6 = string.gsub(en6, "t", "⒯")
+    en6 = string.gsub(en6, "u", "⒰")
+    en6 = string.gsub(en6, "v", "⒱")
+    en6 = string.gsub(en6, "w", "⒲")
+    en6 = string.gsub(en6, "x", "⒳")
+    en6 = string.gsub(en6, "y", "⒴")
+    en6 = string.gsub(en6, "z", "⒵")
+    return en6
+end
+
+local function english_7(en7)
+    if en7 == "" then return "" end
+    en7 = string.gsub(en7, "a", "🄰")
+    en7 = string.gsub(en7, "b", "🄱")
+    en7 = string.gsub(en7, "c", "🄲")
+    en7 = string.gsub(en7, "d", "🄳")
+    en7 = string.gsub(en7, "e", "🄴")
+    en7 = string.gsub(en7, "f", "🄵")
+    en7 = string.gsub(en7, "g", "🄶")
+    en7 = string.gsub(en7, "h", "🄷")
+    en7 = string.gsub(en7, "i", "🄸")
+    en7 = string.gsub(en7, "j", "🄹")
+    en7 = string.gsub(en7, "k", "🄺")
+    en7 = string.gsub(en7, "l", "🄻")
+    en7 = string.gsub(en7, "m", "🄼")
+    en7 = string.gsub(en7, "n", "🄽")
+    en7 = string.gsub(en7, "o", "🄾")
+    en7 = string.gsub(en7, "p", "🄿")
+    en7 = string.gsub(en7, "q", "🅀")
+    en7 = string.gsub(en7, "r", "🅁")
+    en7 = string.gsub(en7, "s", "🅂")
+    en7 = string.gsub(en7, "t", "🅃")
+    en7 = string.gsub(en7, "u", "🅄")
+    en7 = string.gsub(en7, "v", "🅅")
+    en7 = string.gsub(en7, "w", "🅆")
+    en7 = string.gsub(en7, "x", "🅇")
+    en7 = string.gsub(en7, "y", "🅈")
+    en7 = string.gsub(en7, "z", "🅉")
+    return en7
+end
+
+local function english_8(en8)
+    if en8 == "" then return "" end
+    en8 = string.gsub(en8, "a", "🅐")
+    en8 = string.gsub(en8, "b", "🅑")
+    en8 = string.gsub(en8, "c", "🅒")
+    en8 = string.gsub(en8, "d", "🅓")
+    en8 = string.gsub(en8, "e", "🅔")
+    en8 = string.gsub(en8, "f", "🅕")
+    en8 = string.gsub(en8, "g", "🅖")
+    en8 = string.gsub(en8, "h", "🅗")
+    en8 = string.gsub(en8, "i", "🅘")
+    en8 = string.gsub(en8, "j", "🅙")
+    en8 = string.gsub(en8, "k", "🅚")
+    en8 = string.gsub(en8, "l", "🅛")
+    en8 = string.gsub(en8, "m", "🅜")
+    en8 = string.gsub(en8, "n", "🅝")
+    en8 = string.gsub(en8, "o", "🅞")
+    en8 = string.gsub(en8, "p", "🅟")
+    en8 = string.gsub(en8, "q", "🅠")
+    en8 = string.gsub(en8, "r", "🅡")
+    en8 = string.gsub(en8, "s", "🅢")
+    en8 = string.gsub(en8, "t", "🅣")
+    en8 = string.gsub(en8, "u", "🅤")
+    en8 = string.gsub(en8, "v", "🅥")
+    en8 = string.gsub(en8, "w", "🅦")
+    en8 = string.gsub(en8, "x", "🅧")
+    en8 = string.gsub(en8, "y", "🅨")
+    en8 = string.gsub(en8, "z", "🅩")
+    return en8
+end
+
+local function english_9(en9)
+    if en9 == "" then return "" end
+    en9 = string.gsub(en9, "a", "🅰")
+    en9 = string.gsub(en9, "b", "🅱")
+    en9 = string.gsub(en9, "c", "🅲")
+    en9 = string.gsub(en9, "d", "🅳")
+    en9 = string.gsub(en9, "e", "🅴")
+    en9 = string.gsub(en9, "f", "🅵")
+    en9 = string.gsub(en9, "g", "🅶")
+    en9 = string.gsub(en9, "h", "🅷")
+    en9 = string.gsub(en9, "i", "🅸")
+    en9 = string.gsub(en9, "j", "🅹")
+    en9 = string.gsub(en9, "k", "🅺")
+    en9 = string.gsub(en9, "l", "🅻")
+    en9 = string.gsub(en9, "m", "🅼")
+    en9 = string.gsub(en9, "n", "🅽")
+    en9 = string.gsub(en9, "o", "🅾")
+    en9 = string.gsub(en9, "p", "🅿")
+    en9 = string.gsub(en9, "q", "🆀")
+    en9 = string.gsub(en9, "r", "🆁")
+    en9 = string.gsub(en9, "s", "🆂")
+    en9 = string.gsub(en9, "t", "🆃")
+    en9 = string.gsub(en9, "u", "🆄")
+    en9 = string.gsub(en9, "v", "🆅")
+    en9 = string.gsub(en9, "w", "🆆")
+    en9 = string.gsub(en9, "x", "🆇")
+    en9 = string.gsub(en9, "y", "🆈")
+    en9 = string.gsub(en9, "z", "🆉")
+    return en9
+end
+
+
+
+
 --[[
 number_translator: 將 `'/` + 阿拉伯數字 翻譯為大小寫漢字
 --]]
@@ -1314,7 +1626,7 @@ function t_translator(input, seg)
             , { '', '┃ n〔時:分〕┇ t〔時:分:秒〕' }
             , { '', '┃ fw〔年月日週〕┇ mdw〔月日週〕' }
             , { '', '┃ fn〔年月日 時:分〕┇ ft〔年月日 時:分:秒〕' }
-            , { '', '┃ ○○○〔數字〕' }
+            , { '', '┃ ○○○〔數字〕┇ ` [a-z]+〔字母〕' }
             , { '', '┃ ○/○/○〔 ○ 年 ○ 月 ○ 日〕┇ ○/○〔 ○ 月 ○ 日〕' }
             , { '', '┃ ○-○-○〔○年○月○日〕┇ ○-○〔○月○日〕' }
             }
@@ -1323,6 +1635,27 @@ function t_translator(input, seg)
                 cand.preedit = input .. '\t《數字時間日期》▶'
                 yield(cand)
             end
+            return
+        end
+
+        if(input=="``") then
+            local cand2 = Candidate("letter", seg.start, seg._end, "┃ ○○○〔數字〕┇ [a-z]+〔字母〕" , "")
+            cand2.preedit = input .. '\t《數字字母》▶'
+            yield(cand2)
+            return
+        end
+
+        local englishout = string.match(input, "``(%l+)$")
+        if (englishout~=nil) then
+            yield(Candidate("englishtype", seg.start, seg._end, english_1(englishout) , "〔數學字母大寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_2(englishout) , "〔數學字母小寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_3(englishout) , "〔帶圈字母大寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_4(englishout) , "〔帶圈字母小寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_5(englishout) , "〔括號字母大寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_6(englishout) , "〔括號字母小寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_7(englishout) , "〔方框字母〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_8(englishout) , "〔黑圈字母〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_9(englishout) , "〔黑框字母〕"))
             return
         end
 
@@ -1417,6 +1750,8 @@ function t_translator(input, seg)
             yield(Candidate("number", seg.start, seg._end, fullshape_number(numberout), "〔全形數字〕"))
             yield(Candidate("number", seg.start, seg._end, math1_number(numberout), "〔數學粗體數字〕"))
             yield(Candidate("number", seg.start, seg._end, math2_number(numberout), "〔數學空心數字〕"))
+            yield(Candidate("number", seg.start, seg._end, little1_number(numberout), "〔上標數字〕"))
+            yield(Candidate("number", seg.start, seg._end, little2_number(numberout), "〔下標數字〕"))
             yield(Candidate("number", seg.start, seg._end, circled1_number(numberout), "〔帶圈數字〕"))
             yield(Candidate("number", seg.start, seg._end, circled2_number(numberout), "〔帶圈無襯線數字〕"))
             yield(Candidate("number", seg.start, seg._end, circled3_number(numberout), "〔反白帶圈數字〕"))
@@ -2307,7 +2642,7 @@ function t2_translator(input, seg)
             , { '', '┃ n〔時:分〕┇ t〔時:分:秒〕' }
             , { '', '┃ fw〔年月日週〕┇ mdw〔月日週〕' }
             , { '', '┃ fn〔年月日 時:分〕┇ ft〔年月日 時:分:秒〕' }
-            , { '', '┃ ○○○〔數字〕' }
+            , { '', '┃ ○○○〔數字〕┇ / [a-z]+〔字母〕' }
             , { '', '┃ ○/○/○〔 ○ 年 ○ 月 ○ 日〕┇ ○/○〔 ○ 月 ○ 日〕' }
             , { '', '┃ ○-○-○〔○年○月○日〕┇ ○-○〔○月○日〕' }
             -- , { '〔夜思‧李白〕', '床前明月光，疑是地上霜。\r舉頭望明月，低頭思故鄉。' }
@@ -2317,6 +2652,27 @@ function t2_translator(input, seg)
                 cand.preedit = input .. '\t《數字時間日期》▶'
                 yield(cand)
             end
+            return
+        end
+
+        if(input=="'//") then
+            local cand2 = Candidate("letter", seg.start, seg._end, "┃  [a-z]+〔字母〕" , "")
+            cand2.preedit = input .. '\t《字母》▶'
+            yield(cand2)
+            return
+        end
+
+        local englishout = string.match(input, "'//(%l+)$")
+        if (englishout~=nil) then
+            yield(Candidate("englishtype", seg.start, seg._end, english_1(englishout) , "〔數學字母大寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_2(englishout) , "〔數學字母小寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_3(englishout) , "〔帶圈字母大寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_4(englishout) , "〔帶圈字母小寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_5(englishout) , "〔括號字母大寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_6(englishout) , "〔括號字母小寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_7(englishout) , "〔方框字母〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_8(englishout) , "〔黑圈字母〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_9(englishout) , "〔黑框字母〕"))
             return
         end
 
@@ -2404,6 +2760,7 @@ function t2_translator(input, seg)
             return
         end
 
+        -- local numberout = string.match(input, "'//?(%d+)$")
         local numberout = string.match(input, "'/(%d+)$")
         local n = string.sub(numberout, 1)
         if (numberout~=nil) and (tonumber(n)) ~= nil then
@@ -2411,6 +2768,8 @@ function t2_translator(input, seg)
             yield(Candidate("number", seg.start, seg._end, fullshape_number(numberout), "〔全形數字〕"))
             yield(Candidate("number", seg.start, seg._end, math1_number(numberout), "〔數學粗體數字〕"))
             yield(Candidate("number", seg.start, seg._end, math2_number(numberout), "〔數學空心數字〕"))
+            yield(Candidate("number", seg.start, seg._end, little1_number(numberout), "〔上標數字〕"))
+            yield(Candidate("number", seg.start, seg._end, little2_number(numberout), "〔下標數字〕"))
             yield(Candidate("number", seg.start, seg._end, circled1_number(numberout), "〔帶圈數字〕"))
             yield(Candidate("number", seg.start, seg._end, circled2_number(numberout), "〔帶圈無襯線數字〕"))
             yield(Candidate("number", seg.start, seg._end, circled3_number(numberout), "〔反白帶圈數字〕"))
