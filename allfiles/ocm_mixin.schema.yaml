@@ -9,7 +9,7 @@ schema:
 
   name: "❖超級混合蝦米(mix-in)❖"
   schema_id: ocm_mixin
-  version: "202101"
+  version: "202104"
   dependencies:
     - punct_ovff
     - symbols_ocm
@@ -598,7 +598,7 @@ recognizer:
     cyr: "^['][]][a-z';]*$"
     fs: "^['][.][-a-z';]*$"
     all_bpm: "^';'[-a-z0-9.,/;']*$"
-    lua: "^'/[a-z0-9/-]*$"
+    lua: "^'/[';]?[a-z0-9/-]*$"
 #
 #    emoji_series: "^;[;0-9a-z]*?$" #無法用數字選擇
 ##    pt: "[a-z[].,/'=-]*?$" ##掛接abc_segmentor用的。

@@ -696,8 +696,23 @@ local function english_9(en9)
     return en9
 end
 
+local function english_1_2(en_1_2)
+    if en_1_2 == "" then return "" end
+    en_1_2 = english_1(string.sub(en_1_2,1,1)) .. english_2(string.sub(en_1_2,2,-1))
+    return en_1_2
+end
 
+local function english_3_4(en_3_4)
+    if en_3_4 == "" then return "" end
+    en_3_4 = english_3(string.sub(en_3_4,1,1)) .. english_4(string.sub(en_3_4,2,-1))
+    return en_3_4
+end
 
+local function english_5_6(en_5_6)
+    if en_5_6 == "" then return "" end
+    en_5_6 = english_5(string.sub(en_5_6,1,1)) .. english_6(string.sub(en_5_6,2,-1))
+    return en_5_6
+end
 
 --[[
 number_translator: 將 `'/` + 阿拉伯數字 翻譯為大小寫漢字
@@ -1626,36 +1641,71 @@ function t_translator(input, seg)
             , { '', '┃ n〔時:分〕┇ t〔時:分:秒〕' }
             , { '', '┃ fw〔年月日週〕┇ mdw〔月日週〕' }
             , { '', '┃ fn〔年月日 時:分〕┇ ft〔年月日 時:分:秒〕' }
-            , { '', '┃ ○○○〔數字〕┇ ` [a-z]+〔字母〕' }
+            , { '', '┃ ○○○〔數字〕' }
             , { '', '┃ ○/○/○〔 ○ 年 ○ 月 ○ 日〕┇ ○/○〔 ○ 月 ○ 日〕' }
             , { '', '┃ ○-○-○〔○年○月○日〕┇ ○-○〔○月○日〕' }
+            , { '', '┃ \' [a-z]+〔小寫字母〕┇ / [a-z]+〔開頭大寫字母〕' }
+            , { '', '┃ ; [a-z]+〔大寫字母〕' }
             }
             for k, v in ipairs(date_table) do
                 local cand = Candidate('date', seg.start, seg._end, v[2], ' ' .. v[1])
-                cand.preedit = input .. '\t《數字時間日期》▶'
+                cand.preedit = input .. '\t《時間日期數字字母》▶'
                 yield(cand)
             end
             return
         end
 
-        if(input=="``") then
-            local cand2 = Candidate("letter", seg.start, seg._end, "┃ ○○○〔數字〕┇ [a-z]+〔字母〕" , "")
-            cand2.preedit = input .. '\t《數字字母》▶'
+        if(input=="`'") then
+            local cand2 = Candidate("letter", seg.start, seg._end, "┃  [a-z]+〔小寫字母〕" , "")
+            cand2.preedit = input .. '\t《小寫字母》▶'
             yield(cand2)
             return
         end
 
-        local englishout = string.match(input, "``(%l+)$")
-        if (englishout~=nil) then
-            yield(Candidate("englishtype", seg.start, seg._end, english_1(englishout) , "〔數學字母大寫〕"))
-            yield(Candidate("englishtype", seg.start, seg._end, english_2(englishout) , "〔數學字母小寫〕"))
-            yield(Candidate("englishtype", seg.start, seg._end, english_3(englishout) , "〔帶圈字母大寫〕"))
-            yield(Candidate("englishtype", seg.start, seg._end, english_4(englishout) , "〔帶圈字母小寫〕"))
-            yield(Candidate("englishtype", seg.start, seg._end, english_5(englishout) , "〔括號字母大寫〕"))
-            yield(Candidate("englishtype", seg.start, seg._end, english_6(englishout) , "〔括號字母小寫〕"))
-            yield(Candidate("englishtype", seg.start, seg._end, english_7(englishout) , "〔方框字母〕"))
-            yield(Candidate("englishtype", seg.start, seg._end, english_8(englishout) , "〔黑圈字母〕"))
-            yield(Candidate("englishtype", seg.start, seg._end, english_9(englishout) , "〔黑框字母〕"))
+        if(input=="`/") then
+            local cand2 = Candidate("letter", seg.start, seg._end, "┃  [a-z]+〔開頭大寫字母〕" , "")
+            cand2.preedit = input .. '\t《開頭大寫字母》▶'
+            yield(cand2)
+            return
+        end
+
+        if(input=="`;") then
+            local cand2 = Candidate("letter", seg.start, seg._end, "┃  [a-z]+〔大寫字母〕" , "")
+            cand2.preedit = input .. '\t《大寫字母》▶'
+            yield(cand2)
+            return
+        end
+
+        local englishout1 = string.match(input, "`'(%l+)$")
+        if (englishout1~=nil) then
+            -- yield(Candidate("englishtype", seg.start, seg._end, english_1(englishout1) , "〔數學字母大寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_2(englishout1) , "〔數學字母小寫〕"))
+            -- yield(Candidate("englishtype", seg.start, seg._end, english_3(englishout1) , "〔帶圈字母大寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_4(englishout1) , "〔帶圈字母小寫〕"))
+            -- yield(Candidate("englishtype", seg.start, seg._end, english_5(englishout1) , "〔括號字母大寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_6(englishout1) , "〔括號字母小寫〕"))
+            -- yield(Candidate("englishtype", seg.start, seg._end, english_7(englishout1) , "〔方框字母〕"))
+            -- yield(Candidate("englishtype", seg.start, seg._end, english_8(englishout1) , "〔黑圈字母〕"))
+            -- yield(Candidate("englishtype", seg.start, seg._end, english_9(englishout1) , "〔黑框字母〕"))
+            return
+        end
+
+        local englishout2 = string.match(input, "`/(%l+)$")
+        if (englishout2~=nil) then
+            yield(Candidate("englishtype", seg.start, seg._end, english_1_2(englishout2) , "〔數學字母開頭大寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_3_4(englishout2) , "〔數學字母開頭大寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_5_6(englishout2) , "〔帶圈字母開頭大寫〕"))
+            return
+        end
+
+        local englishout3 = string.match(input, "`;(%l+)$")
+        if (englishout3~=nil) then
+            yield(Candidate("englishtype", seg.start, seg._end, english_1(englishout3) , "〔數學字母大寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_3(englishout3) , "〔帶圈字母大寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_5(englishout3) , "〔括號字母大寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_7(englishout3) , "〔方框字母〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_8(englishout3) , "〔黑圈字母〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_9(englishout3) , "〔黑框字母〕"))
             return
         end
 
@@ -2642,37 +2692,72 @@ function t2_translator(input, seg)
             , { '', '┃ n〔時:分〕┇ t〔時:分:秒〕' }
             , { '', '┃ fw〔年月日週〕┇ mdw〔月日週〕' }
             , { '', '┃ fn〔年月日 時:分〕┇ ft〔年月日 時:分:秒〕' }
-            , { '', '┃ ○○○〔數字〕┇ / [a-z]+〔字母〕' }
+            , { '', '┃ ○○○〔數字〕' }
             , { '', '┃ ○/○/○〔 ○ 年 ○ 月 ○ 日〕┇ ○/○〔 ○ 月 ○ 日〕' }
             , { '', '┃ ○-○-○〔○年○月○日〕┇ ○-○〔○月○日〕' }
+            , { '', '┃ \' [a-z]+〔小寫字母〕┇ / [a-z]+〔開頭大寫字母〕' }
+            , { '', '┃ ; [a-z]+〔大寫字母〕' }
             -- , { '〔夜思‧李白〕', '床前明月光，疑是地上霜。\r舉頭望明月，低頭思故鄉。' }
             }
             for k, v in ipairs(date_table) do
                 local cand = Candidate('date', seg.start, seg._end, v[2], ' ' .. v[1])
-                cand.preedit = input .. '\t《數字時間日期》▶'
+                cand.preedit = input .. '\t《時間日期數字字母》▶'
                 yield(cand)
             end
             return
         end
 
-        if(input=="'//") then
-            local cand2 = Candidate("letter", seg.start, seg._end, "┃  [a-z]+〔字母〕" , "")
-            cand2.preedit = input .. '\t《字母》▶'
+        if(input=="'/'") then
+            local cand2 = Candidate("letter", seg.start, seg._end, "┃  [a-z]+〔小寫字母〕" , "")
+            cand2.preedit = input .. '\t《小寫字母》▶'
             yield(cand2)
             return
         end
 
-        local englishout = string.match(input, "'//(%l+)$")
-        if (englishout~=nil) then
-            yield(Candidate("englishtype", seg.start, seg._end, english_1(englishout) , "〔數學字母大寫〕"))
-            yield(Candidate("englishtype", seg.start, seg._end, english_2(englishout) , "〔數學字母小寫〕"))
-            yield(Candidate("englishtype", seg.start, seg._end, english_3(englishout) , "〔帶圈字母大寫〕"))
-            yield(Candidate("englishtype", seg.start, seg._end, english_4(englishout) , "〔帶圈字母小寫〕"))
-            yield(Candidate("englishtype", seg.start, seg._end, english_5(englishout) , "〔括號字母大寫〕"))
-            yield(Candidate("englishtype", seg.start, seg._end, english_6(englishout) , "〔括號字母小寫〕"))
-            yield(Candidate("englishtype", seg.start, seg._end, english_7(englishout) , "〔方框字母〕"))
-            yield(Candidate("englishtype", seg.start, seg._end, english_8(englishout) , "〔黑圈字母〕"))
-            yield(Candidate("englishtype", seg.start, seg._end, english_9(englishout) , "〔黑框字母〕"))
+        if(input=="'//") then
+            local cand2 = Candidate("letter", seg.start, seg._end, "┃  [a-z]+〔開頭大寫字母〕" , "")
+            cand2.preedit = input .. '\t《開頭大寫字母》▶'
+            yield(cand2)
+            return
+        end
+
+        if(input=="'/;") then
+            local cand2 = Candidate("letter", seg.start, seg._end, "┃  [a-z]+〔大寫字母〕" , "")
+            cand2.preedit = input .. '\t《大寫字母》▶'
+            yield(cand2)
+            return
+        end
+
+        local englishout1 = string.match(input, "'/'(%l+)$")
+        if (englishout1~=nil) then
+            -- yield(Candidate("englishtype", seg.start, seg._end, english_1(englishout1) , "〔數學字母大寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_2(englishout1) , "〔數學字母小寫〕"))
+            -- yield(Candidate("englishtype", seg.start, seg._end, english_3(englishout1) , "〔帶圈字母大寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_4(englishout1) , "〔帶圈字母小寫〕"))
+            -- yield(Candidate("englishtype", seg.start, seg._end, english_5(englishout1) , "〔括號字母大寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_6(englishout1) , "〔括號字母小寫〕"))
+            -- yield(Candidate("englishtype", seg.start, seg._end, english_7(englishout1) , "〔方框字母〕"))
+            -- yield(Candidate("englishtype", seg.start, seg._end, english_8(englishout1) , "〔黑圈字母〕"))
+            -- yield(Candidate("englishtype", seg.start, seg._end, english_9(englishout1) , "〔黑框字母〕"))
+            return
+        end
+
+        local englishout2 = string.match(input, "'//(%l+)$")
+        if (englishout2~=nil) then
+            yield(Candidate("englishtype", seg.start, seg._end, english_1_2(englishout2) , "〔數學字母開頭大寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_3_4(englishout2) , "〔數學字母開頭大寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_5_6(englishout2) , "〔帶圈字母開頭大寫〕"))
+            return
+        end
+
+        local englishout3 = string.match(input, "'/;(%l+)$")
+        if (englishout3~=nil) then
+            yield(Candidate("englishtype", seg.start, seg._end, english_1(englishout3) , "〔數學字母大寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_3(englishout3) , "〔帶圈字母大寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_5(englishout3) , "〔括號字母大寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_7(englishout3) , "〔方框字母〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_8(englishout3) , "〔黑圈字母〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_9(englishout3) , "〔黑框字母〕"))
             return
         end
 
