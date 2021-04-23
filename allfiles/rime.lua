@@ -696,6 +696,68 @@ local function english_9(en9)
     return en9
 end
 
+local function english_f_u(en_f_u)
+    if en_f_u == "" then return "" end
+    en_f_u = string.gsub(en_f_u, "a", "Ａ")
+    en_f_u = string.gsub(en_f_u, "b", "Ｂ")
+    en_f_u = string.gsub(en_f_u, "c", "Ｃ")
+    en_f_u = string.gsub(en_f_u, "d", "Ｄ")
+    en_f_u = string.gsub(en_f_u, "e", "Ｅ")
+    en_f_u = string.gsub(en_f_u, "f", "Ｆ")
+    en_f_u = string.gsub(en_f_u, "g", "Ｇ")
+    en_f_u = string.gsub(en_f_u, "h", "Ｈ")
+    en_f_u = string.gsub(en_f_u, "i", "Ｉ")
+    en_f_u = string.gsub(en_f_u, "j", "Ｊ")
+    en_f_u = string.gsub(en_f_u, "k", "Ｋ")
+    en_f_u = string.gsub(en_f_u, "l", "Ｌ")
+    en_f_u = string.gsub(en_f_u, "m", "Ｍ")
+    en_f_u = string.gsub(en_f_u, "n", "Ｎ")
+    en_f_u = string.gsub(en_f_u, "o", "Ｏ")
+    en_f_u = string.gsub(en_f_u, "p", "Ｐ")
+    en_f_u = string.gsub(en_f_u, "q", "Ｑ")
+    en_f_u = string.gsub(en_f_u, "r", "Ｒ")
+    en_f_u = string.gsub(en_f_u, "s", "Ｓ")
+    en_f_u = string.gsub(en_f_u, "t", "Ｔ")
+    en_f_u = string.gsub(en_f_u, "u", "Ｕ")
+    en_f_u = string.gsub(en_f_u, "v", "Ｖ")
+    en_f_u = string.gsub(en_f_u, "w", "Ｗ")
+    en_f_u = string.gsub(en_f_u, "x", "Ｘ")
+    en_f_u = string.gsub(en_f_u, "y", "Ｙ")
+    en_f_u = string.gsub(en_f_u, "z", "Ｚ")
+    return en_f_u
+end
+
+local function english_f_l(en_f_l)
+    if en_f_l == "" then return "" end
+    en_f_l = string.gsub(en_f_l, "a", "ａ")
+    en_f_l = string.gsub(en_f_l, "b", "ｂ")
+    en_f_l = string.gsub(en_f_l, "c", "ｃ")
+    en_f_l = string.gsub(en_f_l, "d", "ｄ")
+    en_f_l = string.gsub(en_f_l, "e", "ｅ")
+    en_f_l = string.gsub(en_f_l, "f", "ｆ")
+    en_f_l = string.gsub(en_f_l, "g", "ｇ")
+    en_f_l = string.gsub(en_f_l, "h", "Ｈ")
+    en_f_l = string.gsub(en_f_l, "i", "Ｉ")
+    en_f_l = string.gsub(en_f_l, "j", "ｊ")
+    en_f_l = string.gsub(en_f_l, "k", "ｋ")
+    en_f_l = string.gsub(en_f_l, "l", "ｌ")
+    en_f_l = string.gsub(en_f_l, "m", "ｍ")
+    en_f_l = string.gsub(en_f_l, "n", "ｎ")
+    en_f_l = string.gsub(en_f_l, "o", "ｏ")
+    en_f_l = string.gsub(en_f_l, "p", "ｐ")
+    en_f_l = string.gsub(en_f_l, "q", "ｑ")
+    en_f_l = string.gsub(en_f_l, "r", "ｒ")
+    en_f_l = string.gsub(en_f_l, "s", "ｓ")
+    en_f_l = string.gsub(en_f_l, "t", "ｔ")
+    en_f_l = string.gsub(en_f_l, "u", "ｕ")
+    en_f_l = string.gsub(en_f_l, "v", "ｖ")
+    en_f_l = string.gsub(en_f_l, "w", "ｗ")
+    en_f_l = string.gsub(en_f_l, "x", "ｘ")
+    en_f_l = string.gsub(en_f_l, "y", "ｙ")
+    en_f_l = string.gsub(en_f_l, "z", "ｚ")
+    return en_f_l
+end
+
 local function english_1_2(en_1_2)
     if en_1_2 == "" then return "" end
     en_1_2 = english_1(string.sub(en_1_2,1,1)) .. english_2(string.sub(en_1_2,2,-1))
@@ -712,6 +774,12 @@ local function english_5_6(en_5_6)
     if en_5_6 == "" then return "" end
     en_5_6 = english_5(string.sub(en_5_6,1,1)) .. english_6(string.sub(en_5_6,2,-1))
     return en_5_6
+end
+
+local function english_f_ul(en_ul)
+    if en_ul == "" then return "" end
+    en_ul = english_f_u(string.sub(en_ul,1,1)) .. english_f_l(string.sub(en_ul,2,-1))
+    return en_ul
 end
 
 --[[
@@ -1678,6 +1746,8 @@ function t_translator(input, seg)
 
         local englishout1 = string.match(input, "`'(%l+)$")
         if (englishout1~=nil) then
+            yield(Candidate("englishtype", seg.start, seg._end, englishout1 , "〔一般字母小寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_f_l(englishout1) , "〔全形字母小寫〕"))
             -- yield(Candidate("englishtype", seg.start, seg._end, english_1(englishout1) , "〔數學字母大寫〕"))
             yield(Candidate("englishtype", seg.start, seg._end, english_2(englishout1) , "〔數學字母小寫〕"))
             -- yield(Candidate("englishtype", seg.start, seg._end, english_3(englishout1) , "〔帶圈字母大寫〕"))
@@ -1692,6 +1762,8 @@ function t_translator(input, seg)
 
         local englishout2 = string.match(input, "`/(%l+)$")
         if (englishout2~=nil) then
+            yield(Candidate("englishtype", seg.start, seg._end, string.upper(string.sub(englishout2,1,1)) .. string.sub(englishout2,2,-1) , "〔一般字母開頭大寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_f_ul(englishout2) , "〔全形字母開頭大寫〕"))
             yield(Candidate("englishtype", seg.start, seg._end, english_1_2(englishout2) , "〔數學字母開頭大寫〕"))
             yield(Candidate("englishtype", seg.start, seg._end, english_3_4(englishout2) , "〔數學字母開頭大寫〕"))
             yield(Candidate("englishtype", seg.start, seg._end, english_5_6(englishout2) , "〔帶圈字母開頭大寫〕"))
@@ -1700,6 +1772,8 @@ function t_translator(input, seg)
 
         local englishout3 = string.match(input, "`;(%l+)$")
         if (englishout3~=nil) then
+            yield(Candidate("englishtype", seg.start, seg._end, string.upper(englishout3) , "〔一般字母大寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_f_u(englishout3) , "〔全形字母大寫〕"))
             yield(Candidate("englishtype", seg.start, seg._end, english_1(englishout3) , "〔數學字母大寫〕"))
             yield(Candidate("englishtype", seg.start, seg._end, english_3(englishout3) , "〔帶圈字母大寫〕"))
             yield(Candidate("englishtype", seg.start, seg._end, english_5(englishout3) , "〔括號字母大寫〕"))
@@ -2730,6 +2804,8 @@ function t2_translator(input, seg)
 
         local englishout1 = string.match(input, "'/'(%l+)$")
         if (englishout1~=nil) then
+            yield(Candidate("englishtype", seg.start, seg._end, englishout1 , "〔一般字母小寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_f_l(englishout1) , "〔全形字母小寫〕"))
             -- yield(Candidate("englishtype", seg.start, seg._end, english_1(englishout1) , "〔數學字母大寫〕"))
             yield(Candidate("englishtype", seg.start, seg._end, english_2(englishout1) , "〔數學字母小寫〕"))
             -- yield(Candidate("englishtype", seg.start, seg._end, english_3(englishout1) , "〔帶圈字母大寫〕"))
@@ -2744,6 +2820,8 @@ function t2_translator(input, seg)
 
         local englishout2 = string.match(input, "'//(%l+)$")
         if (englishout2~=nil) then
+            yield(Candidate("englishtype", seg.start, seg._end, string.upper(string.sub(englishout2,1,1)) .. string.sub(englishout2,2,-1) , "〔一般字母開頭大寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_f_ul(englishout2) , "〔全形字母開頭大寫〕"))
             yield(Candidate("englishtype", seg.start, seg._end, english_1_2(englishout2) , "〔數學字母開頭大寫〕"))
             yield(Candidate("englishtype", seg.start, seg._end, english_3_4(englishout2) , "〔數學字母開頭大寫〕"))
             yield(Candidate("englishtype", seg.start, seg._end, english_5_6(englishout2) , "〔帶圈字母開頭大寫〕"))
@@ -2752,6 +2830,8 @@ function t2_translator(input, seg)
 
         local englishout3 = string.match(input, "'/;(%l+)$")
         if (englishout3~=nil) then
+            yield(Candidate("englishtype", seg.start, seg._end, string.upper(englishout3) , "〔一般字母大寫〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_f_u(englishout3) , "〔全形字母大寫〕"))
             yield(Candidate("englishtype", seg.start, seg._end, english_1(englishout3) , "〔數學字母大寫〕"))
             yield(Candidate("englishtype", seg.start, seg._end, english_3(englishout3) , "〔帶圈字母大寫〕"))
             yield(Candidate("englishtype", seg.start, seg._end, english_5(englishout3) , "〔括號字母大寫〕"))
