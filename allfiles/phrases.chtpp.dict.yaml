@@ -27,7 +27,7 @@
 # ===============================
 ---
 name: phrases.chtpp
-version: "202102"
+version: "202104"
 sort: by_weight
 use_preset_vocabulary: false
 max_phrase_length: 7 #20
@@ -6152,6 +6152,19 @@ columns:
 
 ###############################################################
 ####### @@其他非臺灣慣用或錯誤發音 #######
+# 患難與共	huan4 nan2 yu3 gong4
+# 患難之交	huan4 nan2 zhi1 jiao1
+# 心電感應	xin1 dian4 gan3 ying1
+# 還以顏色	hai2 yi3 yan2 se4
+# 還我河山	hai2 wo3 he2 shan1
+# 引吭高歌	yin3 keng1 gao1 ge1
+# 重見天日	zhong4 jian4 tian1 ri4
+# 將士用命	jiang1 shi4 yong4 ming4
+# 雀屏中選	que4 bing3 zhong1 xuan3
+# 靜電感應	jing4 dian4 gan3 ying1
+# 鞭長莫及	bian1 zhang3 mo4 ji2
+# 顛倒乾坤	dian1 dao3 gan1 kun1
+# 鴻鵠之志	hong2 gu3 zhi1 zhi4
 # 好高騖遠	hao3 gao1 wu4 yuan3
 # 好吃懶做	hao4 ji2 lan3 zuo4
 # 好勇鬥狠	hao3 yong3 dou4 hen3
