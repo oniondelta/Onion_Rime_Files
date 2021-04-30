@@ -19,7 +19,7 @@ key_binder:
     - {accept: Right, send: Shift+Right, when: composing} #右移一整個字
     - {accept: Shift+Right, send: Right, when: composing} #右移一個注音
     - {accept: Shift+Left, send: KP_Left, when: composing} #左移一個注音
-    - {accept: Shift+space, send: Shift+Right, when: composing} #首節
+#關#    - {accept: Shift+space, send: Shift+Right, when: composing} #首節
 #    - {accept: Shift+space, send: KP_Left, when: composing} #左移一個注音
 #    - {accept: Left, send: KP_Left, when: composing} #左移一個注音
 ##
@@ -32,13 +32,14 @@ key_binder:
 #    - {accept: Down, send: Page_Down, when: paging} #橫式選單用
 #    - {accept: Left, send: Left, when: has_menu} #橫式選單用 #send: Shift+Up
 #    - {accept: Right, send: Right, when: has_menu} #橫式選單用 #send: Shift+Down
-    - {accept: Tab, send: Page_Down, when: has_menu} #「tab」翻頁。
-    - {accept: Shift+Tab, send: Page_Up, when: paging} #選字時「Shift」+「tab」翻頁。
     - {accept: Shift+Down, send: Page_Down, when: has_menu} #選字時「Shift」+「下」翻頁。
     - {accept: Shift+Up, send: Page_Up, when: paging} #選字時「Shift」+「上」翻頁。
-    - {accept: Shift+space, send: Shift+Left, when: paging} #於選單列選字時，回復到輸入列（避免有時回復不了，故增加）。
-#    - {accept: Tab, send: Shift+Left, when: paging} #於選單列選字時，回復到輸入列（避免有時回復不了，故增加）。
-#    - {accept: Shift+space, send: Page_Down, when: has_menu} #選字時「Shift」+「空白鍵」翻頁。 #send: Right #send: Down
+#關#    - {accept: Tab, send: Page_Down, when: has_menu} #「tab」翻頁。
+    - {accept: Shift+Tab, send: Page_Up, when: paging} #選字時「Shift」+「tab」翻頁。
+    - {accept: Shift+space, send: Page_Down, when: has_menu} #選字時「Shift」+「空白鍵」翻頁。 #send: Right #send: Down
+##回復到 composing 狀態：
+#關#    - {accept: Shift+space, send: Shift+Left, when: paging} #於選單列選字時，回復到輸入列（避免有時回復不了，故增加）。
+    - {accept: Tab, send: Shift+Left, when: paging} #於選單列選字時，回復到輸入列（避免有時回復不了，故增加）。
 ### 空白鍵 ###
     - {accept: space, send: Return, when: paging} #方向鍵選字時，space直接上屏（避免被一聲空格影響）
 #    - {accept: space, send: Page_Down, when: paging} #方向鍵選字時，space翻頁（上條遮屏需開啟，否則「=」+「符號」會誤按）

@@ -4,7 +4,7 @@
 schema:
   schema_id: jpnin1 # 注意此ID與文件名裏 .schema.yaml 之前的部分相同
   name: ❃日語 in 1❃
-  version: "202102"
+  version: "202104"
   author:
     - 『洋蔥』
   description: |
@@ -312,20 +312,19 @@ key_binder:
     - {accept: Right, send: Shift+Right, when: composing}
     - {accept: Shift+Right, send: Right, when: composing}
     - {accept: Shift+Left, send: KP_Left, when: composing}
-    - {accept: Shift+space, send: Shift+Right, when: composing}
+#關#    - {accept: Shift+space, send: Shift+Right, when: composing}
 ### 選字翻頁 ###
     - {accept: Left, send: Page_Up, when: paging}
     - {accept: Right, send: Page_Down, when: paging}
-    - {accept: Tab, send: Page_Down, when: has_menu} #「tab」翻頁。
-    - {accept: Shift+Tab, send: Page_Up, when: paging} #選字時「Shift」+「tab」翻頁。
     - {accept: Shift+Down, send: Page_Down, when: has_menu} #選字時「Shift」+「下」翻頁。
     - {accept: Shift+Up, send: Page_Up, when: paging} #選字時「Shift」+「上」翻頁。
-    - {accept: Shift+space, send: Shift+Left, when: paging}
-### 選字翻頁 ###
-#    - {accept: Tab, send: Shift+Left, when: paging}
-#    - {accept: Shift+space, send: Page_Down, when: has_menu}
-#    - {accept: Shift+Tab, send: Page_Up, when: paging}
-###
+#關#    - {accept: Tab, send: Page_Down, when: has_menu} #「tab」翻頁。
+    - {accept: Shift+Tab, send: Page_Up, when: paging} #選字時「Shift」+「tab」翻頁。
+    - {accept: Shift+space, send: Page_Down, when: has_menu}
+##回復到 composing 狀態：
+#關#    - {accept: Shift+space, send: Shift+Left, when: paging}
+    - {accept: Tab, send: Shift+Left, when: paging}
+######################
     - {accept: Return, send: space, when: has_menu} #return,enter直出
 ##    - {accept: space, send: space, when: has_menu} # 非空碼時，空白還是空白
 ##    - {accept: space, send: Escape, when: composing} # 空碼時，按空格清除

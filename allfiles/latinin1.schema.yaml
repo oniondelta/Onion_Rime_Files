@@ -4,7 +4,7 @@
 schema:
   schema_id: latinin1 # 注意此ID與文件名裏 .schema.yaml 之前的部分相同
   name: ❃拉丁 in 1❃
-  version: "202102"
+  version: "202104"
   author:
     - 『洋蔥』
   description: |
@@ -152,9 +152,11 @@ key_binder:
     - {accept: Left, send: Page_Up, when: paging}
     - {accept: Right, send: Page_Down, when: paging}
 ######################
-    - {accept: Tab, send: Shift+Left, when: paging}
-    - {accept: Shift+space, send: Page_Down, when: has_menu}
     - {accept: Shift+Tab, send: Page_Up, when: paging}
+    - {accept: Shift+space, send: Page_Down, when: has_menu}
+######################
+    - {accept: Tab, send: Shift+Left, when: paging}
+######################
     - {accept: Return, send: space, when: has_menu} #return,enter直出
 #    - {accept: space, send: space, when: has_menu} # 非空碼時，空白還是空白
 #    - {accept: space, send: Escape, when: composing} # 空碼時，按空格清除
