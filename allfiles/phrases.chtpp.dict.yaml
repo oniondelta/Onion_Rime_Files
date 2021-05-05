@@ -27,7 +27,7 @@
 # ===============================
 ---
 name: phrases.chtpp
-version: "202104"
+version: "202105"
 sort: by_weight
 use_preset_vocabulary: false
 max_phrase_length: 7 #20
@@ -6152,6 +6152,8 @@ columns:
 
 ###############################################################
 ####### @@其他非臺灣慣用或錯誤發音 #######
+# 幾內亞灣	ji1 nei4 ya3 wan1
+# 幾內亞灣	ji1 nei4 ya4 wan1
 # 維克佛瑞柏加	wei2 ke4 fo2 rui4 bai3 jia1
 # 埃克托柏遼茲	ai1 ke4 tuo1 bai3 liao2 zi1
 # 克萊柏	ke4 lai2 bai3

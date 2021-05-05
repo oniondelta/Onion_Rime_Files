@@ -88,7 +88,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "202104"
+version: "202105"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -29306,7 +29306,7 @@ min_phrase_weight: 100
 藆	jian3
 藇	xu4
 藈	kui2
-藉	ji2	50%
+藉	ji2	10%
 藉	jie4	50%
 藊	bian3
 藋	diao4
@@ -56458,6 +56458,7 @@ min_phrase_weight: 100
 仁和區	ren2 he2 qu1
 仁和縣	ren2 he2 xian4
 仁波切	ren2 bo1 qie4
+仁波切	ren2 po1 qie4
 仁義	ren2 yi4
 仁者樂山	ren2 zhe3 yao4 shan1
 仄行	ze4 xing2
@@ -57383,11 +57384,15 @@ min_phrase_weight: 100
 促脈	cu4 mai4
 促膝長談	cu4 xi1 chang2 tan2
 俄中朝	e2 zhong1 chao2
+俄中朝	e4 zhong1 chao2
 俄備得	e2 bei4 de2
+俄備得	e4 bei4 de2
 俄勒岡	e2 le4 gang1
+俄勒岡	e4 le4 gang1
 俄勒岡州	e2 le4 gang1 zhou1
 俄勒岡州	e4 le4 gang1 zhou1
 俄底浦斯情結	e2 di3 pu3 si1 qing2 jie2
+俄底浦斯情結	e4 di3 pu3 si1 qing2 jie2
 俇俇	wang3 wang3
 俇攘	wang3 rang3
 俏倬	qiao4 zhuo2
@@ -58770,6 +58775,7 @@ min_phrase_weight: 100
 光棍兒	guang1 gun4 er2
 光武中興	guang1 wu3 zhong1 xing1
 光波長	guang1 bo1 chang2
+光波長	guang1 po1 chang2
 光溜	guang1 liu1
 光滑	guang1 hua2
 光潔度	guang1 jie2 du4
@@ -58949,6 +58955,7 @@ min_phrase_weight: 100
 內蒙	nei4 meng3
 內蒙	nei4 meng2
 內蒙古大學	nei4 meng3 gu3 da4 xue2
+內蒙古大學	nei4 meng2 gu3 da4 xue2
 內蒙古自治區	nei4 meng3 gu3 zi4 zhi4 qu1
 內蒙古自治區	nei4 meng2 gu3 zi4 zhi4 qu1
 內行	nei4 hang2
@@ -59942,6 +59949,7 @@ min_phrase_weight: 100
 分泌系統	fen1 mi4 xi4 tong3
 分泌顆粒	fen1 mi4 ke1 li4
 分波多工	fen1 bo1 duo1 gong1
+分波多工	fen1 po1 duo1 gong1
 分洪	fen1 hong2
 分派	fen1 pai4
 分流	fen1 liu2
@@ -60640,6 +60648,7 @@ min_phrase_weight: 100
 前邊	qian2 bian1
 前邊兒	qian2 bian1 er5
 前郭爾羅斯蒙古族自治縣	qian2 guo1 er3 luo2 si1 meng3 gu3 zu2 zi4 zhi4 xian4
+前郭爾羅斯蒙古族自治縣	qian2 guo1 er3 luo2 si1 meng2 gu3 zu2 zi4 zhi4 xian4
 前鋸肌	qian2 ju4 ji1
 前長後短	qian2 chang2 hou4 duan3
 前門不進師姑後門不進和尚	qian2 men2 bu2 jin4 shi1 gu1 hou4 men2 bu2 jin4 he2 shang4
@@ -61122,6 +61131,7 @@ min_phrase_weight: 100
 加里寧格勒	jia1 li3 ning2 ge2 le4
 加里寧格勒州	jia1 li3 ning2 ge2 le4 zhou1
 加里波的	jia1 li3 bo1 di4
+加里波的	jia1 li3 po1 di4
 加重	jia1 zhong4
 加長	jia1 chang2
 劣怯	lie4 que4
@@ -61226,7 +61236,9 @@ min_phrase_weight: 100
 勒斃	lei1 bi4
 勒斃	le4 bi4
 勒斯波斯	le4 si1 bo1 si1
+勒斯波斯	le4 si1 po1 si1
 勒斯波斯島	le4 si1 bo1 si1 dao3
+勒斯波斯島	le4 si1 po1 si1 dao3
 勒死	lei1 si3
 勒死	le1 si3
 勒殺	lei1 sha1
@@ -61959,6 +61971,7 @@ min_phrase_weight: 100
 博樂縣	bo2 le4 xian4
 博浪飛椎	bo2 lang4 fei1 chui2
 博爾塔拉蒙古自治州	bo2 er3 ta3 la1 meng3 gu3 zi4 zhi4 zhou1
+博爾塔拉蒙古自治州	bo2 er3 ta3 la1 meng2 gu3 zi4 zhi4 zhou1
 博磨	bo2 mo2
 博聞多識	bo2 wen2 duo1 shi4
 博聞強記	bo2 wen2 qiang2 ji4
@@ -62089,7 +62102,9 @@ min_phrase_weight: 100
 卡樂星	ka3 le4 xing1
 卡死	ka3 si3
 卡波耶拉	ka3 bo1 ye1 la1
+卡波耶拉	ka3 po1 ye1 la1
 卡波西氏肉瘤	ka3 bo1 xi1 shi4 rou4 liu2
+卡波西氏肉瘤	ka3 po1 xi1 shi4 rou4 liu2
 卡洛娜	ka3 luo4 na4
 卡洛斯	ka3 luo4 si1
 卡港會議	ka3 gang3 hui4 yi4
@@ -62713,6 +62728,7 @@ min_phrase_weight: 100
 口齒便給	kou3 chi3 pian2 ji3
 口齒清楚	kou3 chi3 qing1 chu3
 古井重波	gu3 jing3 chong2 bo1
+古井重波	gu3 jing3 chong2 po1
 古人影子	gu3 ren2 ying3 zi5
 古今多少事	gu3 jin1 duo1 shao3 shi4
 古今少有	gu3 jin1 shao3 you3
@@ -63770,6 +63786,7 @@ min_phrase_weight: 100
 和差化積	he2 cha1 hua4 ji1
 和布克賽爾縣	he2 bu4 ke4 sai4 er3 xian4
 和布克賽爾蒙古自治縣	he2 bu4 ke4 sai4 er3 meng3 gu3 zi4 zhi4 xian4
+和布克賽爾蒙古自治縣	he2 bu4 ke4 sai4 er3 meng2 gu3 zi4 zhi4 xian4
 和帝	he2 di4
 和平	he2 ping2
 和平主義	he2 ping2 zhu3 yi4
@@ -64164,6 +64181,7 @@ min_phrase_weight: 100
 哈伯太空望遠鏡	ha1 bo2 tai4 kong1 wang4 yuan3 jing4
 哈克貝利‧芬歷險記	ha1 ke4 bei4 li4 eng3 fen1 li4 xian3 ji4
 哈利‧波特	ha1 li4 eng3 bo1 te4
+哈利‧波特	ha1 li4 eng3 po1 te4
 哈努卡	ha1 nu3 ka3
 哈努卡節	ha1 nu3 ka3 jie2
 哈叭狗	ha3 ba1 gou3
@@ -64506,6 +64524,7 @@ min_phrase_weight: 100
 喀喇崑崙山脈	ka1 la1 kun1 lun2 shan1 mai4
 喀喇沁	ka1 la1 qin4
 喀喇沁左翼蒙古族自治縣	ka1 la1 qin4 zuo3 yi4 meng3 gu3 zu2 zi4 zhi4 xian4
+喀喇沁左翼蒙古族自治縣	ka1 la1 qin4 zuo3 yi4 meng2 gu3 zu2 zi4 zhi4 xian4
 喀喇沁旗	ka1 la1 qin4 qi2
 喀噠聲	ka1 da1 sheng1
 喀布爾	ka4 bu4 er3
@@ -64520,6 +64539,7 @@ min_phrase_weight: 100
 喀斯特地形	ka4 si1 te4 di4 xing2
 喀斯特地貌	ka1 si1 te4 di4 mao4
 喀爾喀蒙古	ka4 er3 ka4 meng2 gu3
+喀爾喀蒙古	ka4 er3 ka4 meng3 gu3
 喀爾巴阡山脈	ka4 er3 ba1 qian1 shan1 mai4
 喀爾巴阡山脈	ka1 er3 ba1 qian1 shan1 mai4
 喀爾文教派	ka4 er3 wen2 jiao4 pai4
@@ -65106,6 +65126,7 @@ min_phrase_weight: 100
 噶大克	ge2 da4 ke4
 噶廈	ga2 xia4
 噶拉‧多傑‧仁波切	ga2 la1 eng3 duo1 jie2 eng3 ren2 bo1 qie4
+噶拉‧多傑‧仁波切	ga2 la1 eng3 duo1 jie2 eng3 ren2 po1 qie4
 噶當派	ga2 dang1 pai4
 噸位	dun4 wei4
 噸位	dun1 wei4
@@ -65458,6 +65479,7 @@ min_phrase_weight: 100
 國難識忠臣	guo2 nan4 shi4 zhong1 chen2
 圍剿	wei2 jiao3
 圍場滿族蒙古族自治縣	wei2 chang3 man3 zu2 meng3 gu3 zu2 zi4 zhi4 xian4
+圍場滿族蒙古族自治縣	wei2 chang3 man3 zu2 meng2 gu3 zu2 zi4 zhi4 xian4
 圍場縣	wei2 chang3 xian4
 圍子	wei2 zi5
 圍子	wei2 zi3
@@ -65972,6 +65994,7 @@ min_phrase_weight: 100
 地震帶	di4 zhen4 dai4
 地震強度	di4 zhen4 qiang2 du4
 地震波	di4 zhen4 bo1
+地震波	di4 zhen4 po1
 地震活動帶	di4 zhen4 huo2 dong4 dai4
 地震烈度	di4 zhen4 lie4 du4
 地震規模	di4 zhen4 gui1 mo2
@@ -66129,6 +66152,8 @@ min_phrase_weight: 100
 埃塞俄比亞	ai1 sai4 e4 bi3 ya4
 埃塞俄比亞語	ai1 sai1 e2 bi3 ya3 yu3
 埃塞俄比亞語	ai1 sai1 e2 bi3 ya4 yu3
+埃塞俄比亞語	ai1 sai1 e4 bi3 ya3 yu3
+埃塞俄比亞語	ai1 sai1 e4 bi3 ya4 yu3
 埃德加‧愛倫‧坡	ai1 de2 jia1 eng3 ai4 lun2 eng3 po1
 埃德加‧斯諾	ai1 de2 jia1 eng3 si1 nuo4
 埃德蒙頓	ai1 de2 meng2 dun4
@@ -66433,6 +66458,7 @@ min_phrase_weight: 100
 塞狗洞	sai1 gou3 dong4
 塞班島	sai4 ban1 dao3
 塞瓦斯托波爾	sai1 wa3 si1 tuo1 bo1 er3
+塞瓦斯托波爾	sai1 wa3 si1 tuo1 po1 er3
 塞納河	sai1 na4 he2
 塞納河	se4 na4 he2
 塞納河	sai4 na4 he2
@@ -67819,6 +67845,7 @@ min_phrase_weight: 100
 奔波	ben1 bo1
 奔波	ben1 po1
 奔波勞碌	ben1 bo1 lao2 lu4
+奔波勞碌	ben1 po1 lao2 lu4
 奔流	ben1 liu2
 奔流不息	ben1 liu2 bu4 xi2
 奔潰	ben1 kui4
@@ -69294,6 +69321,7 @@ min_phrase_weight: 100
 密度	mi4 du4
 密度指數	mi4 du4 zhi3 shu4
 密度波	mi4 du4 bo1
+密度波	mi4 du4 po1
 密度計	mi4 du4 ji4
 密教	mi4 jiao4
 密斯忒	mi4 si1 te4
@@ -69485,6 +69513,7 @@ min_phrase_weight: 100
 寧波	ning2 bo1
 寧波	ning2 po1
 寧波地區	ning2 bo1 di4 qu1
+寧波地區	ning2 po1 di4 qu1
 寧波市	ning2 bo1 shi4
 寧波市	ning2 po1 shi4
 寧津	ning2 jin1
@@ -70875,7 +70904,9 @@ min_phrase_weight: 100
 巴阿	ba1 a1
 巴音滿都呼	ba1 yin1 man3 du1 hu1
 巴音郭愣蒙古自治州	ba1 yin1 guo1 leng4 meng3 gu3 zi4 zhi4 zhou1
+巴音郭愣蒙古自治州	ba1 yin1 guo1 leng4 meng2 gu3 zi4 zhi4 zhou1
 巴音郭楞蒙古自治州	ba1 yin1 guo1 leng2 meng3 gu3 zi4 zhi4 zhou1
+巴音郭楞蒙古自治州	ba1 yin1 guo1 leng2 meng2 gu3 zi4 zhi4 zhou1
 巴顏喀喇山	ba1 yan2 ka4 la3 shan1
 巴顏喀喇山	ba1 yan2 ke4 la1 shan1
 巴馬乾酪	ba1 ma3 gan1 lao4
@@ -70943,6 +70974,7 @@ min_phrase_weight: 100
 布署	bu4 shu3
 布萊特妮‧墨菲	bu4 lai2 te4 ni1 eng3 mo4 fei1
 布萊雅特蒙古	bu4 lai2 ya3 te4 meng2 gu3
+布萊雅特蒙古	bu4 lai2 ya3 te4 meng3 gu3
 布蘭妮‧斯皮爾斯	bu4 lan2 ni1 eng3 si1 pi2 er3 si1
 布衣卿相	bu4 yi1 qing1 xiang4
 布袋和尚	bu4 dai4 he2 shang4
@@ -71224,9 +71256,11 @@ min_phrase_weight: 100
 平地樓臺	ping2 di4 lou2 tai2
 平地機	ping2 di4 ji1
 平地波瀾	ping2 di4 bo1 lan2
+平地波瀾	ping2 di4 po1 lan2
 平地起孤丁	ping2 di4 qi3 gu1 ding1
 平地起孤堆	ping2 di4 qi3 gu1 dui1
 平地起風波	ping2 di4 qi3 feng1 bo1
+平地起風波	ping2 di4 qi3 feng1 po1
 平地青雲	ping2 di4 qing1 yun2
 平地風波	ping2 di4 feng1 bo1
 平地風波	ping2 di4 feng1 po1
@@ -72052,6 +72086,7 @@ min_phrase_weight: 100
 強求	qiang3 qiu2
 強求	qiang2 qiu2
 強波器	qiang2 bo1 qi4
+強波器	qiang2 po1 qi4
 強流	qiang2 liu2
 強渡	qiang2 du4
 強烈	qiang2 lie4
@@ -75893,6 +75928,7 @@ min_phrase_weight: 100
 拿著雞毛當令箭	na2 zhe5 ji1 mao2 dang4 ling4 jian4
 拿矯	na2 jiao3
 拿破崙‧波拿巴	na2 po4 lun2 eng3 bo1 na2 ba1
+拿破崙‧波拿巴	na2 po4 lun2 eng3 po1 na2 ba1
 拿空子	na2 kong4 zi5
 拿粗挾細	na2 cu1 xie2 xi4
 拿翹	na2 qiao2
@@ -77424,6 +77460,7 @@ min_phrase_weight: 100
 擁護	yong3 hu4
 擁護	yong1 hu4
 擁霧翻波	yong3 wu4 fan1 bo1
+擁霧翻波	yong3 wu4 fan1 po1
 擁鼻	yong3 bi2
 擁鼻吟	yong3 bi2 yin2
 擂天倒地	lei2 tian1 dao3 di4
@@ -79202,6 +79239,7 @@ min_phrase_weight: 100
 明和	ming2 he2
 明夷待訪錄	ming2 yi2 dai4 fang3 lu4
 明尼阿波利斯	ming2 ni2 a1 bo1 li4 si1
+明尼阿波利斯	ming2 ni2 a1 po1 li4 si1
 明度	ming2 du4
 明忘八	ming2 wang2 ba1
 明恥教戰	ming2 chi3 jiao4 zhan4
@@ -80782,6 +80820,7 @@ min_phrase_weight: 100
 杜塞爾多夫	du4 sai1 er3 duo1 fu1
 杜塞道夫	du4 se4 dao4 fu1
 杜爾伯特蒙古族自治縣	du4 er3 bo2 te4 meng3 gu3 zu2 zi4 zhi4 xian4
+杜爾伯特蒙古族自治縣	du4 er3 bo2 te4 meng2 gu3 zu2 zi4 zhi4 xian4
 杜莎夫人	du4 suo1 fu1 ren2
 杜門卻掃	du4 men2 que4 sao3
 杜門屏跡	du4 men2 bing3 ji1
@@ -81513,6 +81552,7 @@ min_phrase_weight: 100
 梯己	ti1 ji3
 梯度	ti1 du4
 梯度回波	ti1 du4 hui2 bo1
+梯度回波	ti1 du4 hui2 po1
 梯恩梯當量	ti1 en1 ti1 dang1 liang4
 梯桄	ti1 guang4
 梯衝	ti1 chong1
@@ -82265,6 +82305,7 @@ min_phrase_weight: 100
 橫殃飛禍	heng4 yang1 fei1 huo4
 橫段山脈	heng2 duan4 shan1 mai4
 橫波	heng2 bo1
+橫波	heng2 po1
 橫浜	heng2 bin1
 橫渠	heng2 qu2
 橫渠學派	heng2 qu2 xue2 pai4
@@ -82731,6 +82772,7 @@ min_phrase_weight: 100
 歷歷可數	li4 li4 ke3 shu3
 歷歷落落	li4 li4 luo4 luo4
 歷經波折	li4 jing1 bo1 zhe2
+歷經波折	li4 jing1 po1 zhe2
 歷落	li4 luo4
 歷遍	li4 pian4
 歸宿	gui1 su4
@@ -83800,6 +83842,7 @@ min_phrase_weight: 100
 河南墜子	he2 nan2 zhui4 zi5
 河南梆子	he2 nan2 bang1 zi5
 河南蒙古族自治縣	he2 nan2 meng2 gu3 zu2 zi4 zhi4 xian4
+河南蒙古族自治縣	he2 nan2 meng3 gu3 zu2 zi4 zhi4 xian4
 河叉	he2 cha4
 河堤	he2 ti2
 河堤	he2 di1
@@ -83899,6 +83942,7 @@ min_phrase_weight: 100
 沿河縣	yan2 he2 xian4
 沿泝	yan2 su4
 沿波討源	yan2 bo1 tao3 yuan2
+沿波討源	yan2 po1 tao3 yuan2
 沿洄	yan2 hui2
 沿流溯源	yan2 liu2 su4 yuan2
 沿流討源	yan2 liu2 tao3 yuan2
@@ -83966,9 +84010,13 @@ min_phrase_weight: 100
 法國	fa3 guo2
 法國	fa4 guo2
 法國喜劇片	fa3 guo2 xi3 ju4 pian4
+法國喜劇片	fa4 guo2 xi3 ju4 pian4
 法國航空	fa3 guo2 hang2 kong1
+法國航空	fa4 guo2 hang2 kong1
 法國航空公司	fa3 guo2 hang2 kong1 gong1 si1
+法國航空公司	fa4 guo2 hang2 kong1 gong1 si1
 法國長棍	fa3 guo2 chang2 gun4
+法國長棍	fa4 guo2 chang2 gun4
 法堂疏	fa3 tang2 shu4
 法場換子	fa3 chang2 huan4 zi3
 法外行凶	fa3 wai4 xing2 xiong1
@@ -84047,28 +84095,47 @@ min_phrase_weight: 100
 泡麵	pao4 mian4
 泡麵市場	pao4 mian4 shi4 chang2
 波什格倫	bo1 shen2 ge2 lun2
+波什格倫	po1 shen2 ge2 lun2
 波函數	bo1 han2 shu4
+波函數	po1 han2 shu4
 波塞冬	bo1 sai1 dong1
+波塞冬	po1 sai1 dong1
 波布那共和國	bo1 bu4 na4 gong4 he2 guo2
+波布那共和國	po1 bu4 na4 gong4 he2 guo2
 波帶片	bo1 dai4 pian1
+波帶片	po1 dai4 pian1
 波扇	bo1 shan4
+波扇	po1 shan4
 波折	bo1 zhe2
 波折	po1 zhe2
 波數	bo1 shu4
+波數	po1 shu4
 波斯地毯	bo1 si1 di4 tan3
+波斯地毯	po1 si1 di4 tan3
 波斯尼亞和黑塞哥維納共和國	bo1 si1 ni2 ya3 he2 hei1 sai1 ge1 wei2 na4 gong4 he2 guo2
 波斯尼亞和黑塞哥維納共和國	bo1 si1 ni2 ya4 he2 hei1 sai1 ge1 wei2 na4 gong4 he2 guo2
+波斯尼亞和黑塞哥維納共和國	po1 si1 ni2 ya3 he2 hei1 sai1 ge1 wei2 na4 gong4 he2 guo2
+波斯尼亞和黑塞哥維納共和國	po1 si1 ni2 ya4 he2 hei1 sai1 ge1 wei2 na4 gong4 he2 guo2
 波斯教	bo1 si1 jiao4
+波斯教	po1 si1 jiao4
 波斯灣危機	bo1 si1 wan1 wei2 ji1
+波斯灣危機	po1 si1 wan1 wei2 ji1
 波旁王朝	bo1 pang2 wang2 chao2
 波旁王朝	po1 pang2 wang2 chao2
 波札那共和國	bo1 zha2 na4 gong4 he2 guo2
+波札那共和國	po1 zha2 na4 gong4 he2 guo2
 波稜菜	bo1 leng2 cai4
+波稜菜	po1 leng2 cai4
 波棱菜	bo1 leng2 cai4
+波棱菜	po1 leng2 cai4
 波波吒吒	bo1 bo1 zha4 zha4
+波波吒吒	po1 po1 zha4 zha4
 波浪週期	bo1 lang4 zhou1 qi2
+波浪週期	po1 lang4 zhou1 qi2
 波浪銳度	bo1 lang4 rui4 du4
+波浪銳度	po1 lang4 rui4 du4
 波濤	bo1 tao2
+波濤	po1 tao2
 波濤	bo1 tao1
 波濤	po1 tao1
 波濤洶湧	bo1 tao2 xiong1 yong3
@@ -84077,12 +84144,19 @@ min_phrase_weight: 100
 波濤洶湧	po1 tao2 xiong1 yong3
 #波濤洶涌	bo1 tao2 xiong1 yong3
 波爾卡舞	bo1 er3 ka3 wu3
+波爾卡舞	po1 er3 ka3 wu3
 波爾卡舞曲	bo1 er3 ka3 wu3 qu3
+波爾卡舞曲	po1 er3 ka3 wu3 qu3
 波爾干	bo1 er3 gan1
+波爾干	po1 er3 gan1
 波爾干地區	bo1 er3 gan1 di4 qu1
+波爾干地區	po1 er3 gan1 di4 qu1
 波特率	bo1 te4 lv4
+波特率	po1 te4 lv4
 波累	bo1 lei3
+波累	po1 lei3
 波羅提木叉	bo1 luo2 ti2 mu4 cha1
+波羅提木叉	po1 luo2 ti2 mu4 cha1
 波羅的海	bo1 luo2 di4 hai3
 波羅的海	po1 luo2 di4 hai3
 波羅的海	bo1 luo2 di2 hai3
@@ -84090,19 +84164,31 @@ min_phrase_weight: 100
 波羅的海三小國	bo1 luo2 di4 hai3 san1 xiao3 guo2
 波羅的海三小國	po1 luo2 di4 hai3 san1 xiao3 guo2
 波羅蓋	bo1 luo2 gai4
+波羅蓋	po1 luo2 gai4
 波美度	bo1 mei3 du4
+波美度	po1 mei3 du4
 波美比重計	bo1 mei3 bi3 zhong4 ji4
+波美比重計	po1 mei3 bi3 zhong4 ji4
 波蘭共和國	bo1 lan2 gong4 he2 guo2
+波蘭共和國	po1 lan2 gong4 he2 guo2
 波蘭舞曲	bo1 lan2 wu3 qu3
+波蘭舞曲	po1 lan2 wu3 qu3
 波蹅	bo1 cha3
+波蹅	po1 cha3
 波長	bo1 chang2
 波長	po1 chang2
 波阿斯	bo1 a1 si1
+波阿斯	po1 a1 si1
 波阿次	bo1 a1 ci4
+波阿次	po1 a1 ci4
 波隆那	bo1 long1 na4
 波隆那	bo1 long2 na4
+波隆那	po1 long1 na4
+波隆那	po1 long2 na4
 波雷羅舞曲	bo1 lei2 luo2 wu3 qu3
+波雷羅舞曲	po1 lei2 luo2 wu3 qu3
 波髮藻	bo1 fa3 zao3
+波髮藻	po1 fa3 zao3
 泣血枕戈	qi4 xue4 zhen4 ge1
 泣血稽顙	qi4 xue4 qi3 sang3
 泥中	ni2 zhong1
@@ -84601,6 +84687,7 @@ min_phrase_weight: 100
 海濤	hai3 tao1
 海燕	hai3 yan4
 海爾波普彗星	hai3 er3 po1 pu3 hui4 xing1
+海爾波普彗星	hai3 er3 bo1 pu3 hui4 xing1
 海牙和平會議	hai3 ya2 he2 ping2 hui4 yi4
 海獺	hai3 ta4
 海獺	hai3 ta3
@@ -84627,6 +84714,7 @@ min_phrase_weight: 100
 海螵蛸	hai3 piao1 xiao1
 海行	hai3 xing2
 海西蒙古族藏族自治州	hai3 xi1 meng3 gu3 zu2 zang4 zu2 zi4 zhi4 zhou1
+海西蒙古族藏族自治州	hai3 xi1 meng2 gu3 zu2 zang4 zu2 zi4 zhi4 zhou1
 海跡湖	hai3 ji1 hu2
 海軍基地	hai3 jun1 ji1 di4
 海軍少校	hai3 jun1 shao3 xiao4
@@ -86682,6 +86770,7 @@ min_phrase_weight: 100
 爆炸性	bao4 zha4 xing4
 爆炸性	bao4 zha2 xing4
 爆炸波	bao4 zha4 bo1
+爆炸波	bao4 zha4 po1
 爆炸物	bao4 zha4 wu4
 爆炸的無效彈	bao4 zha4 de5 wu2 xiao4 dan4
 爆肚	bao4 du3
@@ -88793,6 +88882,7 @@ min_phrase_weight: 100
 白乾兒	bai2 gan1 er5
 白了了	bai2 liao3 liao3
 白俄羅斯共和國	bai2 e2 luo2 si1 gong4 he2 guo2
+白俄羅斯共和國	bai2 e4 luo2 si1 gong4 he2 guo2
 白公堤	bai2 gong1 ti2
 白公堤	bai2 gong1 di1
 白刀子進去	bai2 dao1 zi5 jin4 qu4
@@ -90398,7 +90488,9 @@ min_phrase_weight: 100
 短期	duan3 qi2
 短期投資	duan3 qi2 tou2 zi1
 短波廣播	duan3 bo1 guang3 bo4
+短波廣播	duan3 po1 guang3 bo4
 短波長	duan3 bo1 chang2
+短波長	duan3 po1 chang2
 短片	duan3 pian4
 短處	duan3 chu4
 短處捏	duan3 chu4 nie1
@@ -92274,6 +92366,8 @@ min_phrase_weight: 100
 筐子	kuang1 zi5
 筑波	zhu2 bo1
 筑波	zhu4 bo1
+筑波	zhu2 po1
+筑波	zhu4 po1
 筒仔米糕	tong3 zi3 mi3 gao1
 筒仔米糕	tong3 zai3 mi3 gao1
 筒子	tong3 zi5
@@ -93745,7 +93839,9 @@ min_phrase_weight: 100
 縱橫馳騁	zong1 heng2 chi2 cheng3
 縱橫馳騁	zong4 heng2 chi2 cheng3
 縱波	zong1 bo1
+縱波	zong1 po1
 縱波	zong4 bo1
+縱波	zong4 po1
 縱深	zong1 shen1
 縱深	zong4 shen1
 縱縱	zong3 zong3
@@ -94878,6 +94974,7 @@ min_phrase_weight: 100
 聾子放炮仗	long2 zi5 fang4 pao4 zhang4
 聾盲瘖啞	long2 mang2 yin1 ya3
 肅北蒙古族自治縣	su4 bei3 meng3 gu3 zu2 zi4 zhi4 xian4
+肅北蒙古族自治縣	su4 bei3 meng2 gu3 zu2 zi4 zhi4 xian4
 肅寧	su4 ning2
 肅寧縣	su4 ning2 xian4
 肆意妄為	si4 yi4 wang4 wei2
@@ -95224,6 +95321,7 @@ min_phrase_weight: 100
 脈案	mai4 an4
 脈欂	mai4 bo2
 脈波體	mai4 bo1 ti3
+脈波體	mai4 po1 ti3
 脈理	mai4 li3
 脈理	mo4 li3
 脈石	mai4 shi2
@@ -96220,7 +96318,9 @@ min_phrase_weight: 100
 般舟三昧	pan2 zhou1 san1 mei4
 般若	bo1 re3
 般若波羅密	bo1 re3 bo1 luo2 mi4
+般若波羅密	bo1 re3 po1 luo2 mi4
 般若波羅密多心經	bo1 re3 bo1 luo2 mi4 duo1 xin1 jing1
+般若波羅密多心經	bo1 re3 po1 luo2 mi4 duo1 xin1 jing1
 般若湯	bo1 re3 tang1
 般若經	bo1 re3 jing1
 般調	ban1 tiao2
@@ -96724,6 +96824,7 @@ min_phrase_weight: 100
 莎拉‧佩林	sha1 la1 eng3 pei4 lin2
 莎拉‧布萊曼	sha1 la1 eng3 bu4 lai2 man4
 莎拉波娃	sha1 la1 bo1 wa2
+莎拉波娃	sha1 la1 po1 wa2
 莎樂美	sha1 le4 mei3
 莎草	suo1 cao3
 莎莎舞	sha1 sha1 wu3
@@ -97336,19 +97437,31 @@ min_phrase_weight: 100
 蒙古人	meng3 gu3 ren2
 蒙古人	meng2 gu3 ren2
 蒙古人民共和國	meng3 gu3 ren2 min2 gong4 he2 guo2
+蒙古人民共和國	meng2 gu3 ren2 min2 gong4 he2 guo2
 蒙古人種	meng2 gu3 ren2 zhong3
+蒙古人種	meng3 gu3 ren2 zhong3
 蒙古利亞	meng2 gu3 li4 ya3
 蒙古利亞	meng2 gu3 li4 ya4
+蒙古利亞	meng3 gu3 li4 ya3
+蒙古利亞	meng3 gu3 li4 ya4
 蒙古國	meng3 gu3 guo2
+蒙古國	meng2 gu3 guo2
 蒙古地方	meng2 gu3 di4 fang1
+蒙古地方	meng3 gu3 di4 fang1
 蒙古大夫	meng2 gu3 dai4 fu1
 蒙古大夫	meng2 gu3 da4 fu1
 蒙古大夫	meng3 gu3 dai4 fu1
+蒙古大夫	meng3 gu3 da4 fu1
 蒙古帝國	meng2 gu3 di4 guo2
+蒙古帝國	meng3 gu3 di4 guo2
 蒙古文	meng2 gu3 wen2
+蒙古文	meng3 gu3 wen2
 蒙古斑	meng2 gu3 ban1
+蒙古斑	meng3 gu3 ban1
 蒙古症	meng2 gu3 zheng4
+蒙古症	meng3 gu3 zheng4
 蒙古高原	meng2 gu3 gao1 yuan2
+蒙古高原	meng3 gu3 gao1 yuan2
 蒙召	meng2 zhao4
 蒙吏	meng2 li4
 蒙哄	meng2 hong3
@@ -97633,6 +97746,9 @@ min_phrase_weight: 100
 蕹菜	yong1 cai4
 蕹菜	weng4 cai4
 薄一波	bo2 yi1 bo1
+薄一波	bo2 yi4 bo1
+薄一波	bo2 yi1 po1
+薄一波	bo2 yi4 po1
 薄伎	bo2 ji4
 薄伽丘	bo2 qie2 qiu1
 薄伽丘	bo2 jia1 qiu1
@@ -97960,6 +98076,7 @@ min_phrase_weight: 100
 藻菌植物	zao3 jun4 zhi2 wu4
 蘇丹共和國	su1 dan1 gong4 he2 guo2
 蘇俄在中國	su1 e4 zai4 zhong1 guo2
+蘇俄在中國	su1 e2 zai4 zhong1 guo2
 蘇公隄	su1 gong1 ti2
 蘇利南共和國	su1 li4 nan2 gong4 he2 guo2
 蘇姆蓋特	su1 mu3 gai4 te4
@@ -97982,6 +98099,7 @@ min_phrase_weight: 100
 蘇打餅乾	su1 da3 bing3 gan1
 蘇格蘭場	su1 ge2 lan2 chang3
 蘇珊‧波伊爾	su1 shan1 eng3 bo1 yi1 er3
+蘇珊‧波伊爾	su1 shan1 eng3 po1 yi1 er3
 蘇秦刺股	su1 qin2 ci4 gu3
 蘇維埃社會主義共和國聯盟	su1 wei2 ai1 she4 hui4 zhu3 yi4 gong4 he2 guo2 lian2 meng2
 蘇維埃社會主義共和國聯邦	su1 wei2 ai1 she4 hui4 zhu3 yi4 gong4 he2 guo2 lian2 bang1
@@ -98785,6 +98903,7 @@ min_phrase_weight: 100
 行步如飛	xing2 bu4 ru2 fei1
 行水	xing2 shui3
 行波管	xing2 bo1 guan3
+行波管	xing2 po1 guan3
 行淫	xing2 yin2
 行滿功圓	xing2 man3 gong1 yuan2
 行滿功成	xing2 man3 gong1 cheng2
@@ -98991,12 +99110,15 @@ min_phrase_weight: 100
 衝擊	chong1 ji2
 衝擊力	chong1 ji2 li4
 衝擊波	chong1 ji2 bo1
+衝擊波	chong1 ji2 po1
 衝斷層	chong1 duan4 ceng2
 衝昏頭腦	chong1 hun1 tou2 nao3
 衝殺	chong1 sha1
 衝決	chong1 jue2
 衝波激浪	chong1 bo1 ji1 lang4
+衝波激浪	chong1 po1 ji1 lang4
 衝波逆折	chong1 bo1 ni4 zhe2
+衝波逆折	chong1 po1 ni4 zhe2
 衝浪	chong1 lang4
 衝浪板	chong1 lang4 ban3
 衝浪者	chong1 lang4 zhe3
@@ -100512,6 +100634,7 @@ min_phrase_weight: 100
 調補	diao4 bu3
 調製	tiao2 zhi4
 調製波	tiao2 zhi4 bo1
+調製波	tiao2 zhi4 po1
 調解	tiao2 jie3
 調訓	tiao2 xun4
 調訓	diao4 xun4
@@ -102368,7 +102491,9 @@ min_phrase_weight: 100
 載沉載浮	zai4 chen2 zai4 fu2
 載沉載浮	zai3 chen2 zai3 fu2
 載波	zai4 bo1
+載波	zai4 po1
 載波	zai3 po1
+載波	zai3 bo1
 載湉	zai3 tian2
 載漪	zai4 yi1
 載福	zai4 fu2
@@ -106152,6 +106277,7 @@ min_phrase_weight: 100
 阜寧	fu4 ning2
 阜寧縣	fu4 ning2 xian4
 阜新蒙古族自治縣	fu4 xin1 meng3 gu3 zu2 zi4 zhi4 xian4
+阜新蒙古族自治縣	fu4 xin1 meng2 gu3 zu2 zi4 zhi4 xian4
 阜盛	fu4 sheng4
 阜陽地區	fu4 yang2 di4 qu1
 阢隉	wu4 nie4
@@ -106169,6 +106295,7 @@ min_phrase_weight: 100
 防波堤	fang2 bo1 ti2
 防波堤	fang2 bo1 di1
 防波堤	fang2 po1 ti2
+防波堤	fang2 po1 di1
 防火長城	fang2 huo3 chang2 cheng2
 防空	fang2 kong1
 防空壕	fang2 kong1 hao2
@@ -106498,7 +106625,9 @@ min_phrase_weight: 100
 阿波羅	a1 bo1 luo2
 阿波羅	a1 po1 luo2
 阿波羅太空船	a1 bo1 luo2 tai4 kong1 chuan2
+阿波羅太空船	a1 po1 luo2 tai4 kong1 chuan2
 阿波羅計劃	a1 bo1 luo2 ji4 hua4
+阿波羅計劃	a1 po1 luo2 ji4 hua4
 阿洪	a1 hong2
 阿混	a1 hun4
 阿父	a1 fu4
@@ -106998,6 +107127,7 @@ min_phrase_weight: 100
 隨機時間	sui2 ji1 shi2 jian1
 隨機變數	sui2 ji1 bian4 shu4
 隨波漂流	sui2 bo1 piao1 liu2
+隨波漂流	sui2 po1 piao1 liu2
 隨珠彈雀	sui2 zhu1 tan2 que4
 隨緣樂助	sui2 yuan2 le4 zhu4
 隨聲附和	sui2 sheng1 fu4 he4
@@ -107604,6 +107734,7 @@ min_phrase_weight: 100
 震懾	zhen4 she4
 震撼彈	zhen4 han4 dan4
 震波曲線	zhen4 bo1 qu1 xian4
+震波曲線	zhen4 po1 qu1 xian4
 震眩彈	zhen4 xuan4 dan4
 震顫	zhen4 chan4
 震顫	zhen4 zhan4
@@ -108431,6 +108562,7 @@ min_phrase_weight: 100
 風水先生	feng1 shui3 xian1 sheng1
 風水輪流轉	feng1 shui3 lun2 liu2 zhuan4
 風波平地	feng1 bo1 ping2 di4
+風波平地	feng1 po1 ping2 di4
 風流婉轉	feng1 liu2 wan3 zhuan3
 風流宰相	feng1 liu2 zai3 xiang4
 風流家數	feng1 liu2 jia1 shu4
@@ -109720,6 +109852,7 @@ min_phrase_weight: 100
 鷂子	yao4 zi5
 鷂子翻身	yao4 zi5 fan1 shen1
 鷗波	ou1 bo1
+鷗波	ou1 po1
 鷗鳥忘機	ou1 niao3 wang2 ji1
 鷗鷺忘機	ou1 lu4 wang2 ji1
 鷲峰山脈	jiu4 feng1 shan1 mai4
@@ -109880,6 +110013,7 @@ min_phrase_weight: 100
 麼子	mo2 zi5
 麼子事	mo2 zi5 shi4
 麼波	mo2 bo1
+麼波	mo2 po1
 麼那	mo2 na4
 麼陋	mo2 lou4
 麼麼	me5 me5
@@ -110290,4 +110424,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 110273 #####
+##### @結束 END - 110427 #####
