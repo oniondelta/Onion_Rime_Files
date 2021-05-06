@@ -4,7 +4,7 @@
 # 『洋蔥』
 ---
 name: phrases.en_o_w
-version: "202003"
+version: "202005"
 sort: by_weight
 use_preset_vocabulary: false
 columns:
@@ -20,6 +20,10 @@ Typing
 TYPING
 ##### 補充品牌英語 #####
 HBO
+##### 補充其他英語 #####
+VOD
+vod
+Vod
 ##### 月份、星期 #####
 Jan.
 Feb.
@@ -725,7 +729,8 @@ Eslite
 Zippo
 VICTORINOX
 victorinox
-LOL	100
+LoL	100
+LOL
 lol
 OMG	100
 omg
