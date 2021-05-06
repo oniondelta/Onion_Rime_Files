@@ -403,8 +403,8 @@ min_phrase_weight: 100
 囉	luo2	0.1%
 啰	luo2	0.1%
 啰	luo5
-蘇	su4	0.1%
-苏	su4	0.1%
+#蘇	su4	0.1%
+#苏	su4	0.1%
 汆	tun3
 拗	ao3
 拮	jia2
@@ -550,7 +550,7 @@ min_phrase_weight: 100
 恶	wu4	0.1%
 恶	wu1	0.1%
 亜	ya1	0.1%
-亜	ya3	0.1%
+亜	ya3	50%
 亚	ya1	0.1%
 亚	ya3	0.1%
 塞	sei1	0.1%
@@ -559,7 +559,7 @@ min_phrase_weight: 100
 吿	gu4	0.1%
 數	cu4	0.1%
 數	su4	0.1%
-数	shu3	0.1%
+数	shu3	50%
 数	shuo4	0.1%
 数	cu4	0.1%
 数	su4	0.1%
