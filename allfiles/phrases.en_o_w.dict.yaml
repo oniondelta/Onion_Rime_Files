@@ -4,7 +4,7 @@
 # 『洋蔥』
 ---
 name: phrases.en_o_w
-version: "202005"
+version: "202105"
 sort: by_weight
 use_preset_vocabulary: false
 columns:
@@ -327,8 +327,6 @@ RSS
 rss
 dir
 DIR
-AC	100
-ac
 gpr
 GPR
 iThome
@@ -891,10 +889,6 @@ HISENSE
 Hisense
 hisense
 OBM
-AAA
-aaa
-AA
-aa
 RTM
 rtm
 LaTeX	100
@@ -1353,7 +1347,6 @@ EK
 opv
 Opv
 OPV
-Ac
 rakuten
 Rakuten
 RAKUTEN

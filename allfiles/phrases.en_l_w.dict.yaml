@@ -12,12 +12,21 @@ columns:
   - weight
 ...
 ##### 小寫起始 #####
+aa	11000
+aaa	11000
+aaaa	11000
 aachen	11000
+aaes	11000
+aaf	11000
+aah	11000
 aalborg	11000
 aalesund	11000
 aalii	11000
 aalst	11000
 aalto	11000
+aam	11000
+aap	11000
+aar	11000
 aarau	11000
 aardvark	11000
 aardwolf	11000
@@ -28,6 +37,8 @@ aaronic	11000
 aaronical	11000
 aaronite	11000
 aarp	11000
+ab	11000
+aba	11000
 abaca	11000
 abaciscus	11000
 abacist	11000
@@ -83,6 +94,7 @@ abbreviatory	11000
 abby	11000
 abc	11000
 abcoulomb	11000
+abd	11000
 abderhalden	11000
 abdias	11000
 abdicant	11000
@@ -356,6 +368,9 @@ abyss	11000
 abyssal	11000
 abyssinia	11000
 abzug	11000
+ac	11000
+aca	11000
+acaa	11000
 acacia	11000
 academe	11000
 academese	11000
@@ -5316,6 +5331,7 @@ aquinas	11000
 aquino	11000
 aquitaine	11000
 aquiver	11000
+ar	11000
 ara	11000
 arab	11000
 araban	11000
@@ -12401,6 +12417,7 @@ byzantinism	11000
 byzantinist	11000
 byzantium	11000
 byzas	11000
+ca	11000
 caa	11000
 cab	11000
 cabal	11000
@@ -19272,6 +19289,8 @@ cpr	11000
 cps	11000
 cpsc	11000
 cpu	11000
+cq	11000
+cr	11000
 craal	11000
 crab	11000
 crabb	11000
@@ -24522,6 +24541,7 @@ dp	11000
 dpc	11000
 dpl	11000
 dpt	11000
+dq	11000
 dr	11000
 drab	11000
 drabble	11000
@@ -37113,11 +37133,14 @@ hive	11000
 hives	11000
 hivite	11000
 hk	11000
+hl	11000
 hla	11000
 hlbb	11000
+hm	11000
 hmas	11000
 hmcs	11000
 hmf	11000
+hmmv	11000
 hmo	11000
 hmong	11000
 ho	11000
@@ -38948,6 +38971,7 @@ hyte	11000
 hythe	11000
 hythergraph	11000
 hyzone	11000
+ia	11000
 iaaf	11000
 iacocca	11000
 iadb	11000
@@ -39205,6 +39229,7 @@ ihp	11000
 ihram	11000
 ihs	11000
 iiwi	11000
+ij	11000
 ijaw	11000
 ijo	11000
 ijssel	11000
@@ -42476,6 +42501,7 @@ iztaccihuatl	11000
 izvestia	11000
 izzak	11000
 izzard	11000
+ja	11000
 jab	11000
 jabal	11000
 jabalpur	11000
@@ -43348,6 +43374,8 @@ juvenility	11000
 juvenilize	11000
 juxtapose	11000
 juxtaposition	11000
+jv	11000
+jy	11000
 jylland	11000
 kaapstad	11000
 kab	11000
@@ -44868,6 +44896,7 @@ kuwaiti	11000
 kuyp	11000
 kuznets	11000
 kuznetsk	11000
+kv	11000
 kva	11000
 kvass	11000
 kvell	11000
@@ -60862,6 +60891,7 @@ nystatin	11000
 nytril	11000
 nyungar	11000
 nyx	11000
+oa	11000
 oaf	11000
 oahu	11000
 oak	11000
@@ -74871,6 +74901,7 @@ qursh	11000
 qurush	11000
 qutb	11000
 qwerty	11000
+ra	11000
 raab	11000
 raamses	11000
 rab	11000
@@ -110426,9 +110457,12 @@ wuther	11000
 wutsin	11000
 wuxi	11000
 wuxian	11000
+wv	11000
+ww	11000
 www	11000
 wwi	11000
 wwii	11000
+wy	11000
 wyandot	11000
 wyandotte	11000
 wyatt	11000
@@ -111345,6 +111379,7 @@ zymosis	11000
 zymotic	11000
 zymurgy	11000
 zyryan	11000
+zz	11000
 ##### 小寫結束 #####
 ####### 20200923補充開始@ #######
 ##### 小寫開頭@ #####
