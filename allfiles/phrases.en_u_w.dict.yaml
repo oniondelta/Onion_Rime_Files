@@ -4,7 +4,7 @@
 # 『洋蔥』
 ---
 name: phrases.en_u_w
-version: "201909"
+version: "202105"
 sort: by_weight
 use_preset_vocabulary: false
 columns:
@@ -101311,6 +101311,7 @@ Uninspired	10000
 Uninspiring	10000
 Uninspirited	10000
 Uninspissated	10000
+Uninstall	10000
 Uninstalled	10000
 Uninstanced	10000
 Uninstated	10000
@@ -212645,6 +212646,7 @@ UNINSPIRED	9000
 UNINSPIRING	9000
 UNINSPIRITED	9000
 UNINSPISSATED	9000
+UNINSTALL	9000
 UNINSTALLED	9000
 UNINSTANCED	9000
 UNINSTATED	9000
