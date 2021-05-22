@@ -758,6 +758,37 @@ local function english_f_l(en_f_l)
     return en_f_l
 end
 
+local function english_s_u(en_s_u)
+    if en_s_u == "" then return "" end
+    en_s_u = string.gsub(en_s_u, "a", "ᴀ")
+    en_s_u = string.gsub(en_s_u, "b", "ʙ")
+    en_s_u = string.gsub(en_s_u, "c", "ᴄ")
+    en_s_u = string.gsub(en_s_u, "d", "ᴅ")
+    en_s_u = string.gsub(en_s_u, "e", "ᴇ")
+    en_s_u = string.gsub(en_s_u, "f", "ꜰ")
+    en_s_u = string.gsub(en_s_u, "g", "ɢ")
+    en_s_u = string.gsub(en_s_u, "h", "ʜ")
+    en_s_u = string.gsub(en_s_u, "i", "ɪ")
+    en_s_u = string.gsub(en_s_u, "j", "ᴊ")
+    en_s_u = string.gsub(en_s_u, "k", "ᴋ")
+    en_s_u = string.gsub(en_s_u, "l", "ʟ")
+    en_s_u = string.gsub(en_s_u, "m", "ᴍ")
+    en_s_u = string.gsub(en_s_u, "n", "ɴ")
+    en_s_u = string.gsub(en_s_u, "o", "ᴏ")
+    en_s_u = string.gsub(en_s_u, "p", "ᴘ")
+    en_s_u = string.gsub(en_s_u, "q", "ǫ")
+    en_s_u = string.gsub(en_s_u, "r", "ʀ")
+    en_s_u = string.gsub(en_s_u, "s", "s")
+    en_s_u = string.gsub(en_s_u, "t", "ᴛ")
+    en_s_u = string.gsub(en_s_u, "u", "ᴜ")
+    en_s_u = string.gsub(en_s_u, "v", "ᴠ")
+    en_s_u = string.gsub(en_s_u, "w", "ᴡ")
+    en_s_u = string.gsub(en_s_u, "x", "x")
+    en_s_u = string.gsub(en_s_u, "y", "ʏ")
+    en_s_u = string.gsub(en_s_u, "z", "ᴢ")
+    return en_s_u
+end
+
 local function english_1_2(en_1_2)
     if en_1_2 == "" then return "" end
     en_1_2 = english_1(string.sub(en_1_2,1,1)) .. english_2(string.sub(en_1_2,2,-1))
@@ -1704,16 +1735,16 @@ function t_translator(input, seg)
 
             local date_table = {
               -- { '〔半角〕', '`' }
-              { '', '┃ f〔年月日〕┇ ym〔年月〕┇ md〔月日〕' }
-            , { '', '┃ y〔年〕┇ m〔月〕┇ d〔日〕┇ w〔週〕' }
-            , { '', '┃ n〔時:分〕┇ t〔時:分:秒〕' }
-            , { '', '┃ fw〔年月日週〕┇ mdw〔月日週〕' }
-            , { '', '┃ fn〔年月日 時:分〕┇ ft〔年月日 時:分:秒〕' }
-            , { '', '┃ ○○○〔數字〕' }
-            , { '', '┃ ○/○/○〔 ○ 年 ○ 月 ○ 日〕┇ ○/○〔 ○ 月 ○ 日〕' }
-            , { '', '┃ ○-○-○〔○年○月○日〕┇ ○-○〔○月○日〕' }
-            , { '', '┃ \' [a-z]+〔小寫字母〕┇ / [a-z]+〔開頭大寫字母〕' }
-            , { '', '┃ ; [a-z]+〔大寫字母〕' }
+              { '', '    f〔年月日〕    ym〔年月〕    md〔月日〕' }
+            , { '', '    y〔年〕    m〔月〕    d〔日〕    w〔週〕' }
+            , { '', '    n〔時:分〕    t〔時:分:秒〕' }
+            , { '', '    fw〔年月日週〕    mdw〔月日週〕' }
+            , { '', '    fn〔年月日 時:分〕    ft〔年月日 時:分:秒〕' }
+            , { '', '    ○○○〔數字〕' }
+            , { '', '    ○/○/○〔 ○ 年 ○ 月 ○ 日〕    ○/○〔 ○ 月 ○ 日〕' }
+            , { '', '    ○-○-○〔○年○月○日〕    ○-○〔○月○日〕' }
+            , { '', '    \' [a-z]+〔小寫字母〕    / [a-z]+〔開頭大寫字母〕' }
+            , { '', '    ; [a-z]+〔大寫字母〕' }
             }
             for k, v in ipairs(date_table) do
                 local cand = Candidate('date', seg.start, seg._end, v[2], ' ' .. v[1])
@@ -1724,21 +1755,21 @@ function t_translator(input, seg)
         end
 
         if(input=="`'") then
-            local cand2 = Candidate("letter", seg.start, seg._end, "┃  [a-z]+〔小寫字母〕" , "")
+            local cand2 = Candidate("letter", seg.start, seg._end, "    [a-z]+〔小寫字母〕" , "")
             cand2.preedit = input .. '\t《小寫字母》▶'
             yield(cand2)
             return
         end
 
         if(input=="`/") then
-            local cand2 = Candidate("letter", seg.start, seg._end, "┃  [a-z]+〔開頭大寫字母〕" , "")
+            local cand2 = Candidate("letter", seg.start, seg._end, "    [a-z]+〔開頭大寫字母〕" , "")
             cand2.preedit = input .. '\t《開頭大寫字母》▶'
             yield(cand2)
             return
         end
 
         if(input=="`;") then
-            local cand2 = Candidate("letter", seg.start, seg._end, "┃  [a-z]+〔大寫字母〕" , "")
+            local cand2 = Candidate("letter", seg.start, seg._end, "    [a-z]+〔大寫字母〕" , "")
             cand2.preedit = input .. '\t《大寫字母》▶'
             yield(cand2)
             return
@@ -1780,6 +1811,7 @@ function t_translator(input, seg)
             yield(Candidate("englishtype", seg.start, seg._end, english_7(englishout3) , "〔方框字母〕"))
             yield(Candidate("englishtype", seg.start, seg._end, english_8(englishout3) , "〔黑圈字母〕"))
             yield(Candidate("englishtype", seg.start, seg._end, english_9(englishout3) , "〔黑框字母〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_s_u(englishout3) , "〔小型字母大寫〕"))
             return
         end
 
@@ -2761,16 +2793,16 @@ function t2_translator(input, seg)
             -- yield(Candidate("date", seg.start, seg._end, "┃ ○○○〔數字〕" , ""))
 
             local date_table = {
-              { '', '┃ f〔年月日〕┇ ym〔年月〕┇ md〔月日〕' }
-            , { '', '┃ y〔年〕┇ m〔月〕┇ d〔日〕┇ w〔週〕' }
-            , { '', '┃ n〔時:分〕┇ t〔時:分:秒〕' }
-            , { '', '┃ fw〔年月日週〕┇ mdw〔月日週〕' }
-            , { '', '┃ fn〔年月日 時:分〕┇ ft〔年月日 時:分:秒〕' }
-            , { '', '┃ ○○○〔數字〕' }
-            , { '', '┃ ○/○/○〔 ○ 年 ○ 月 ○ 日〕┇ ○/○〔 ○ 月 ○ 日〕' }
-            , { '', '┃ ○-○-○〔○年○月○日〕┇ ○-○〔○月○日〕' }
-            , { '', '┃ \' [a-z]+〔小寫字母〕┇ / [a-z]+〔開頭大寫字母〕' }
-            , { '', '┃ ; [a-z]+〔大寫字母〕' }
+              { '', '    f〔年月日〕    ym〔年月〕    md〔月日〕' }
+            , { '', '    y〔年〕    m〔月〕    d〔日〕    w〔週〕' }
+            , { '', '    n〔時:分〕    t〔時:分:秒〕' }
+            , { '', '    fw〔年月日週〕    mdw〔月日週〕' }
+            , { '', '    fn〔年月日 時:分〕    ft〔年月日 時:分:秒〕' }
+            , { '', '    ○○○〔數字〕' }
+            , { '', '    ○/○/○〔 ○ 年 ○ 月 ○ 日〕    ○/○〔 ○ 月 ○ 日〕' }
+            , { '', '    ○-○-○〔○年○月○日〕    ○-○〔○月○日〕' }
+            , { '', '    \' [a-z]+〔小寫字母〕    / [a-z]+〔開頭大寫字母〕' }
+            , { '', '    ; [a-z]+〔大寫字母〕' }
             -- , { '〔夜思‧李白〕', '床前明月光，疑是地上霜。\r舉頭望明月，低頭思故鄉。' }
             }
             for k, v in ipairs(date_table) do
@@ -2782,21 +2814,21 @@ function t2_translator(input, seg)
         end
 
         if(input=="'/'") then
-            local cand2 = Candidate("letter", seg.start, seg._end, "┃  [a-z]+〔小寫字母〕" , "")
+            local cand2 = Candidate("letter", seg.start, seg._end, "    [a-z]+〔小寫字母〕" , "")
             cand2.preedit = input .. '\t《小寫字母》▶'
             yield(cand2)
             return
         end
 
         if(input=="'//") then
-            local cand2 = Candidate("letter", seg.start, seg._end, "┃  [a-z]+〔開頭大寫字母〕" , "")
+            local cand2 = Candidate("letter", seg.start, seg._end, "    [a-z]+〔開頭大寫字母〕" , "")
             cand2.preedit = input .. '\t《開頭大寫字母》▶'
             yield(cand2)
             return
         end
 
         if(input=="'/;") then
-            local cand2 = Candidate("letter", seg.start, seg._end, "┃  [a-z]+〔大寫字母〕" , "")
+            local cand2 = Candidate("letter", seg.start, seg._end, "    [a-z]+〔大寫字母〕" , "")
             cand2.preedit = input .. '\t《大寫字母》▶'
             yield(cand2)
             return
@@ -2838,6 +2870,7 @@ function t2_translator(input, seg)
             yield(Candidate("englishtype", seg.start, seg._end, english_7(englishout3) , "〔方框字母〕"))
             yield(Candidate("englishtype", seg.start, seg._end, english_8(englishout3) , "〔黑圈字母〕"))
             yield(Candidate("englishtype", seg.start, seg._end, english_9(englishout3) , "〔黑框字母〕"))
+            yield(Candidate("englishtype", seg.start, seg._end, english_s_u(englishout3) , "〔小型字母大寫〕"))
             return
         end
 
