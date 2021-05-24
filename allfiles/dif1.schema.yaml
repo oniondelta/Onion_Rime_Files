@@ -8,7 +8,7 @@ schema:
 
   name: "❖分別調出蝦米(plus)❖"
   schema_id: dif1
-  version: "202104"
+  version: "202105"
   dependencies:
     - punct_ovff
     - dif1_jphi
@@ -419,11 +419,13 @@ phonetic_reverse_lookup:
     - xform/er/R/
     - xform/eh/E/
     - xform/([iv])e/$1E/
-    - xform/1//
+    - xform/1/ˉ/
     - 'xlit|bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR2345|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙|'
-    - xform/ /] [/
-    - xform/^/  [
-    - xform/$/]/
+    - xform/^/ /
+    - xform/ /   /
+#    - xform/ /] [/
+#    - xform/^/  [/
+#    - xform/$/]/
 ################################### 注音文 ######################################
 all_bpm:
   tag: all_bpm
