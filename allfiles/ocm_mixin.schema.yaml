@@ -9,7 +9,7 @@ schema:
 
   name: "❖超級混合蝦米(mix-in)❖"
   schema_id: ocm_mixin
-  version: "202104"
+  version: "202105"
   dependencies:
     - punct_ovff
     - symbols_ocm
@@ -540,9 +540,11 @@ phonetic_reverse_lookup: #該反查濾鏡名
     - xform/([iv])e/$1E/
     - xform/1/ˉ/
     - 'xlit|bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR2345|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙|'
-    - xform/ /] [/
-    - xform/^/  [
-    - xform/$/]/
+    - xform/^/ /
+    - xform/ /   /
+#    - xform/ /] [/
+#    - xform/^/  [/
+#    - xform/$/]/
 ################################### 注音文 ######################################
 all_bpm:
   tag: all_bpm
