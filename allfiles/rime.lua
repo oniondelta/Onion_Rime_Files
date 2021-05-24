@@ -1743,8 +1743,8 @@ function t_translator(input, seg)
             , { '', '    ○○○〔數字〕' }
             , { '', '    ○/○/○〔 ○ 年 ○ 月 ○ 日〕    ○/○〔 ○ 月 ○ 日〕' }
             , { '', '    ○-○-○〔○年○月○日〕    ○-○〔○月○日〕' }
-            , { '', '    \' [a-z]+〔小寫字母〕    / [a-z]+〔開頭大寫字母〕' }
-            , { '', '    ; [a-z]+〔大寫字母〕' }
+            , { '', '    / [a-z]+〔小寫字母〕' }
+            , { '', '    ; [a-z]+〔大寫字母〕    \' [a-z]+〔開頭大寫字母〕' }
             }
             for k, v in ipairs(date_table) do
                 local cand = Candidate('date', seg.start, seg._end, v[2], ' ' .. v[1])
@@ -1754,16 +1754,9 @@ function t_translator(input, seg)
             return
         end
 
-        if(input=="`'") then
+        if(input=="`/") then
             local cand2 = Candidate("letter", seg.start, seg._end, "    [a-z]+〔小寫字母〕" , "")
             cand2.preedit = input .. '\t《小寫字母》▶'
-            yield(cand2)
-            return
-        end
-
-        if(input=="`/") then
-            local cand2 = Candidate("letter", seg.start, seg._end, "    [a-z]+〔開頭大寫字母〕" , "")
-            cand2.preedit = input .. '\t《開頭大寫字母》▶'
             yield(cand2)
             return
         end
@@ -1775,7 +1768,14 @@ function t_translator(input, seg)
             return
         end
 
-        local englishout1 = string.match(input, "`'(%l+)$")
+        if(input=="`'") then
+            local cand2 = Candidate("letter", seg.start, seg._end, "    [a-z]+〔開頭大寫字母〕" , "")
+            cand2.preedit = input .. '\t《開頭大寫字母》▶'
+            yield(cand2)
+            return
+        end
+
+        local englishout1 = string.match(input, "`/(%l+)$")
         if (englishout1~=nil) then
             yield(Candidate("englishtype", seg.start, seg._end, englishout1 , "〔一般字母小寫〕"))
             yield(Candidate("englishtype", seg.start, seg._end, english_f_l(englishout1) , "〔全形字母小寫〕"))
@@ -1791,7 +1791,7 @@ function t_translator(input, seg)
             return
         end
 
-        local englishout2 = string.match(input, "`/(%l+)$")
+        local englishout2 = string.match(input, "`'(%l+)$")
         if (englishout2~=nil) then
             yield(Candidate("englishtype", seg.start, seg._end, string.upper(string.sub(englishout2,1,1)) .. string.sub(englishout2,2,-1) , "〔一般字母開頭大寫〕"))
             yield(Candidate("englishtype", seg.start, seg._end, english_f_ul(englishout2) , "〔全形字母開頭大寫〕"))
@@ -2801,8 +2801,8 @@ function t2_translator(input, seg)
             , { '', '    ○○○〔數字〕' }
             , { '', '    ○/○/○〔 ○ 年 ○ 月 ○ 日〕    ○/○〔 ○ 月 ○ 日〕' }
             , { '', '    ○-○-○〔○年○月○日〕    ○-○〔○月○日〕' }
-            , { '', '    \' [a-z]+〔小寫字母〕    / [a-z]+〔開頭大寫字母〕' }
-            , { '', '    ; [a-z]+〔大寫字母〕' }
+            , { '', '    / [a-z]+〔小寫字母〕' }
+            , { '', '    ; [a-z]+〔大寫字母〕    \' [a-z]+〔開頭大寫字母〕' }
             -- , { '〔夜思‧李白〕', '床前明月光，疑是地上霜。\r舉頭望明月，低頭思故鄉。' }
             }
             for k, v in ipairs(date_table) do
@@ -2813,16 +2813,9 @@ function t2_translator(input, seg)
             return
         end
 
-        if(input=="'/'") then
+        if(input=="'//") then
             local cand2 = Candidate("letter", seg.start, seg._end, "    [a-z]+〔小寫字母〕" , "")
             cand2.preedit = input .. '\t《小寫字母》▶'
-            yield(cand2)
-            return
-        end
-
-        if(input=="'//") then
-            local cand2 = Candidate("letter", seg.start, seg._end, "    [a-z]+〔開頭大寫字母〕" , "")
-            cand2.preedit = input .. '\t《開頭大寫字母》▶'
             yield(cand2)
             return
         end
@@ -2834,7 +2827,14 @@ function t2_translator(input, seg)
             return
         end
 
-        local englishout1 = string.match(input, "'/'(%l+)$")
+        if(input=="'/'") then
+            local cand2 = Candidate("letter", seg.start, seg._end, "    [a-z]+〔開頭大寫字母〕" , "")
+            cand2.preedit = input .. '\t《開頭大寫字母》▶'
+            yield(cand2)
+            return
+        end
+
+        local englishout1 = string.match(input, "'//(%l+)$")
         if (englishout1~=nil) then
             yield(Candidate("englishtype", seg.start, seg._end, englishout1 , "〔一般字母小寫〕"))
             yield(Candidate("englishtype", seg.start, seg._end, english_f_l(englishout1) , "〔全形字母小寫〕"))
@@ -2850,7 +2850,7 @@ function t2_translator(input, seg)
             return
         end
 
-        local englishout2 = string.match(input, "'//(%l+)$")
+        local englishout2 = string.match(input, "'/'(%l+)$")
         if (englishout2~=nil) then
             yield(Candidate("englishtype", seg.start, seg._end, string.upper(string.sub(englishout2,1,1)) .. string.sub(englishout2,2,-1) , "〔一般字母開頭大寫〕"))
             yield(Candidate("englishtype", seg.start, seg._end, english_f_ul(englishout2) , "〔全形字母開頭大寫〕"))

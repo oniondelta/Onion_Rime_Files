@@ -5,7 +5,7 @@
 schema:
   schema_id: easy_en_b
   name: Easy English（B）
-  version: "202012"
+  version: "202105"
   author:
     - Patrick <ipatrickmac@gmail.com>
     - 洋蔥
@@ -45,13 +45,16 @@ speller:
   delimiter: " "
   algebra:
 #    - derive|^//([a-z]+)$|$1|
-    - derive|\/|'| #特別的方案使用「'」
+#    - derive|\/|'| #特別的方案使用「'」
+    - xform|^\/|'| #開頭大寫後面小寫，全部轉成「'」
+    - derive|^([a-z])|\/$1| #全小寫，多增前綴「/」調出
 
 translator:
   dictionary: easy_en_b
   enable_encoder: false
   encode_commit_history: false
   enable_completion: true
+  # sentence_over_completion: true
   enable_sentence: true #false
   enable_user_dict: false #true
 #  spelling_hints: 9
