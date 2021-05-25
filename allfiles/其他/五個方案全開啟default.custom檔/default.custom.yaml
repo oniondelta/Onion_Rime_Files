@@ -6,7 +6,7 @@
 
 patch:
   schema_list:
-######## 洋蔥注音五個方案 ########
+######## 洋蔥注音拼音五個主方案 ########
     - schema: bopomo_onionplus
     - schema: bopomo_onionplus_2
     - schema: bo_mixin1
@@ -21,9 +21,9 @@ patch:
     - schema: greek
     - schema: cyrillic
     - schema: allbpm
+    - schema: fullshape
     - schema: easy_en_b
     - schema: easy_en_comment
-    - schema: fullshape
     - schema: symbols_bpmf
     - schema: symbols_double_bpmf
     - schema: cangjie5
