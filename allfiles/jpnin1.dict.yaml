@@ -36,7 +36,7 @@
 #===================================
 ---
 name: jpnin1
-version: "202103"
+version: "202105"
 sort: by_weight #original
 use_preset_vocabulary: false
 columns:
@@ -27217,7 +27217,7 @@ columns:
 支	sasoo;
 決	sadamu;	143
 定	sadame;	1494
-#里	satu;
+里	satu;	1499
 里	satoxu;	1499
 俊	satoshi;	759
 啓	satoshi;	543
@@ -29444,9 +29444,34 @@ columns:
 斧	yoki;	275
 直	ne;	1802
 ####### 202102新增補充比對 japanese.jmdict.dict.yaml 結束 #######
+#######@ 202105新增補充比對 japanese.mozc.dict.yaml 開始 #######
+佑	yuuya;	369
+充	ataru;	393
+光	rei;	3440
+廻	motoo;	217
+強	kou;	715
+彩	sayaka;	611
+怜	ren;	133
+恒	wataru;	515
+拗	neji;
+朱	akari;	889
+殯	mogari;
+涼	suzumi;	530
+濵	hama;
+百	pyaq;	2633
+瞳	akira;	443
+綴	tsuzuru;	79
+耀	hikari;
+萌	hajime;	260
+里	satu;	1499
+隼	hayato;	321
+駿	takashi;	634
+黄	fuxixan;	1262
+####### 202105新增補充比對 japanese.mozc.dict.yaml 結束 #######
 #######@ 202102新增日語符號類 開始 #######
 %	pa-sento;
 ℃	doshi-;
+℃	do;
 ○	shiromaru;
 ○	zukei;
 ○	rei;
