@@ -6,7 +6,7 @@
 
 patch:
   schema_list:
-######## 洋蔥 mix‧in 版 ########
+######## 洋蔥蝦米 plus(dif) 版 ########
     - {schema: dif1}
     - {schema: dif1_jphi}
     - {schema: dif1_jpka}
