@@ -6,7 +6,7 @@
 
 patch:
   schema_list:
-######## 洋蔥注音雙拼版 ########
+######## 洋蔥注音 雙拼 版 ########
     - schema: bopomo_onion_double
     - schema: cangjie5
     - schema: symbols_double_bpmf
