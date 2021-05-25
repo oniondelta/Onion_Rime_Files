@@ -43,11 +43,11 @@ engine:
 speller:
   alphabet: "zyxwvutsrqponmlkjihgfedcba-.;/'"
   delimiter: " "
-  algebra:
+  # algebra:
 #    - derive|^//([a-z]+)$|$1|
 #    - derive|\/|'| #特別的方案使用「'」
-    - xform|^\/|'| #開頭大寫後面小寫，全部轉成「'」
-    - derive|^([a-z])|\/$1| #全小寫，多增前綴「/」調出
+#    - xform|^\/|'| #開頭大寫後面小寫，全部轉成「'」
+    # - derive|^([a-z])|\/$1| #全小寫，多增前綴「/」調出
 
 translator:
   dictionary: easy_en_b
