@@ -6,7 +6,7 @@
 
 patch:
   schema_list:
-######## 地球拼音洋蔥擴充方案 ########
+######## 地球拼音 洋蔥擴充(mix‧in) 方案 ########
     - schema: terra_pinyin_onion
     - schema: cangjie5
 ###############################
