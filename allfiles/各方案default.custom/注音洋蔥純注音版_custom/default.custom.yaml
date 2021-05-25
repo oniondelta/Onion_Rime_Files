@@ -6,7 +6,7 @@
 
 patch:
   schema_list:
-######## 洋蔥純注音版 ########
+######## 洋蔥注音 純注音 版 ########
     - schema: bopomo_onion
     - schema: cangjie5
 ##############################
