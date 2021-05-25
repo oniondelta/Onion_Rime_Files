@@ -33,7 +33,7 @@
 #===================================
 ---
 name: phrases.jp_hkkseg
-version: "202102"
+version: "202105"
 sort: original
 use_preset_vocabulary: false
 columns:
@@ -35459,6 +35459,8 @@ columns:
 桜庭	sakuraba;	137
 和久井	wa, kui;	36
 松嶋	matsushima;	72
+熟睡男	neruo;
+起男	okio;
 ##### 日語詞庫(附假名)結束 #####
 #######@ 202102新增補充比對詞彙 japanese.jmdict.dict.yaml 開始 #######
 均一化	kinitsuka;
@@ -65096,6 +65098,7 @@ columns:
 日米安全保障条約	nichibeianzenhoshoujouyaku;
 日米貿易	nichibeiboueki;
 日暮	higure;	67
+日暮	higurashi;	67
 日没	nichibotsu;	210
 日本画	nihonga;
 日本海	nihonkai;	730
