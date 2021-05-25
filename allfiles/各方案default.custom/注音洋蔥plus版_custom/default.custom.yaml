@@ -6,7 +6,7 @@
 
 patch:
   schema_list:
-######## 洋蔥 plus 版 ########
+######## 洋蔥注音 plus 版 ########
     - schema: bopomo_onionplus
     - schema: bopomo_onionplus_2
     - schema: hangeul
@@ -15,9 +15,9 @@ patch:
     - schema: greek
     - schema: cyrillic
     - schema: allbpm
+    - schema: fullshape
     - schema: easy_en_b
     - schema: easy_en_comment
-    - schema: fullshape
     - schema: symbols_bpmf
     - schema: cangjie5
 ###############################
