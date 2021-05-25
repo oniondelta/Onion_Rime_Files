@@ -6,17 +6,17 @@
 
 patch:
   schema_list:
-######## 洋蔥 mix‧in 版 ########
+######## 洋蔥注音 mix‧in 版 ########
     - schema: bo_mixin1
     - schema: bo_mixin2
     - schema: bo_mixin3
+    - schema: jpnin1
     - schema: greek
     - schema: cyrillic
     - schema: allbpm
-    - schema: jpnin1
+    - schema: fullshape
     - schema: easy_en_b
     - schema: easy_en_comment
-    - schema: fullshape
     - schema: symbols_bpmf
     - schema: cangjie5
 #################################
