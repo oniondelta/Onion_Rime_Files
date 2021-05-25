@@ -6,7 +6,7 @@
 
 patch:
   schema_list:
-######## 洋蔥注音拼音五個主方案 ########
+######## 洋蔥注音/拼音 五個主方案 ########
     - schema: bopomo_onionplus
     - schema: bopomo_onionplus_2
     - schema: bo_mixin1
