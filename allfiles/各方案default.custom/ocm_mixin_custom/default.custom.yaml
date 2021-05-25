@@ -6,7 +6,7 @@
 
 patch:
   schema_list:
-######## 洋蔥 mix‧in 版 ########
+######## 洋蔥蝦米 mix‧in 版 ########
     - {schema: ocm_mixin}
     - {schema: ocm_mixin_greek}
     - {schema: ocm_mixin_cyrillic}
