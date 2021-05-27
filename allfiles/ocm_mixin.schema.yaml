@@ -403,7 +403,7 @@ cyr:
 
 fs:
   tag: fs
-  dictionary: fsonly.extended
+  dictionary: fullshape.extended
   prism: ocm_mixin_fullshape
   enable_completion: false
   enable_sentence: false

@@ -326,7 +326,7 @@ cyr_lookup:
 
 fs_lookup:
   tag: fs_lookup
-  dictionary: fsonly.extended
+  dictionary: fullshape.extended
   prism: dif1_fs
   enable_completion: false
   enable_sentence: false

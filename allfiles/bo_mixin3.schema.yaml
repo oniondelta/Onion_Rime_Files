@@ -463,7 +463,7 @@ e_reverse_lookup:
 ################################### 全形 ######################################
 fs2:
   tag: fs2
-  dictionary: fsonly.extended
+  dictionary: fullshape.extended
   prism: fullshape
   enable_completion: false
   enable_sentence: false

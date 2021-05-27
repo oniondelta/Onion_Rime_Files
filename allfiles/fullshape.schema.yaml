@@ -4,7 +4,7 @@
 schema:
   schema_id: fullshape
   name: ❃全形輸出❃
-  version: "202102"
+  version: "202105"
   author:
     - 『洋蔥』
   description: |
@@ -53,7 +53,7 @@ speller:
     - "xlit|ABCDEF|',.-/;|"
 
 translator:
-  dictionary: fsonly.extended
+  dictionary: fullshape.extended
   prism: fullshape
   enable_user_dict: true
   enable_sentence: false
