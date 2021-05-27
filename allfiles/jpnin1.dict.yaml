@@ -34,6 +34,8 @@
 # 定義：じゅ=ju，zy用正則轉。
 # 定義：ち=chi
 # 定義：ふ=fu
+# 定義：つ=tsu
+# 備註：ti和tu可能為texi(てィ)和toxu(とぅ)，之前可能誤轉。
 #
 #===================================
 ---
@@ -27219,7 +27221,7 @@ columns:
 支	sasoo;
 決	sadamu;	143
 定	sadame;	1494
-里	satu;	1499
+#錯碼# 里	satu;	1499
 里	satoxu;	1499
 俊	satoshi;	759
 啓	satoshi;	543
@@ -29465,7 +29467,6 @@ columns:
 綴	tsuzuru;	79
 耀	hikari;
 萌	hajime;	260
-里	satu;	1499
 隼	hayato;	321
 駿	takashi;	634
 黄	fuxixan;	1262
