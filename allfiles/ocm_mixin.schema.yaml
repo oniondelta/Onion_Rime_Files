@@ -461,7 +461,7 @@ cyr_reverse_lookup:
 
 fs_reverse_lookup: #該反查濾鏡名
   tags: [ fs ] #掛在這個tag所對應的翻譯器上
-  dictionary: fsonly.extended #反查所得爲
+  dictionary: fullshape.extended #反查所得爲
   overwrite_comment: false
   comment_format:
     - "xlit|.';|ABC|"
