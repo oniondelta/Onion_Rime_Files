@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onion_double
   name: "☆注音(洋蔥雙拼版)☆"
-  version: "202104"
+  version: "202105"
   author:
     - 『洋蔥』
   description: |
@@ -237,7 +237,7 @@ reverse2_lookup:
 bpm_reverse_lookup:
   tags: [ reverse2_lookup ]
   overwrite_comment: true
-  dictionary: bopomo_onion.extended
+  dictionary: bopomo_onion_double.extended
   comment_format:
     - xform/iu/iou/
     - xform/ui/uei/
