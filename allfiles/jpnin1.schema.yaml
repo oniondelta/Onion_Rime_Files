@@ -4,7 +4,7 @@
 schema:
   schema_id: jpnin1 # 注意此ID與文件名裏 .schema.yaml 之前的部分相同
   name: ❃日語 in 1❃
-  version: "202104"
+  version: "202105"
   author:
     - 『洋蔥』
   description: |
@@ -135,8 +135,8 @@ speller:
     - derive/(?<!d|,|;)dy([auo])/zy$1/
     - derive/(?<!d|,|;)dy([auo])/j$1/
 ### 其他 ###
-    - derive/ttye/cche/
-    - derive/ttye/ccye/
+    - derive/ttye/cche/ #っちぇ、ッチェ。
+    - derive/ttye/ccye/ #っちぇ、ッチェ。
     - derive/(?<!t)tye/che/ #「崔tye」「陳tyen」：ちぇ、チェ。
     - derive/(?<!t)tye/cye/ #「崔tye」「陳tyen」：ちぇ、チェ。
 ##### 小字假名或符號等，拼音轉寫 #####
