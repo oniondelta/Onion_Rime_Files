@@ -15,7 +15,7 @@ schema:
 switches:
   - name: ascii_mode
     reset: 0
-    states: [ "日文", "英文" ] 
+    states: [ "日文", "英文" ]
   - name: full_shape
     states: [ "半形", "全形" ]
 
