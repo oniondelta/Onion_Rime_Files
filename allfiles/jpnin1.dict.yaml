@@ -28,6 +28,18 @@
 # 詞彙中(非漢字裡)含拗音「ゃ」「ょ」「ゅ」「ャ」「ョ」「ュ」，其變化需補齊「xy」於下，「ly」用正則轉寫。
 #     例：赤ちゃん	aka; cha, n,    赤ちゃん	aka; chi, xya, n,
 #
+# 詞彙中(非漢字裡)含ェィァォゥ，其變化需補齊所有變化，除了 チェ、ちぇ=tye，che、cye用正則轉換外。
+#     例：フィン語	fi. n. go;    フィン語	fyi. n. go;    フィン語	fwi. n. go;    フィン語	fu. xi. n. go;
+#
+# 詞彙中(非漢字裡)含 チェ、ちぇ=tye，che、cye用正則轉換外，還需補上 chi. xe. 或 chi, xe,，漢字中不用補。
+#     例：チェコ人	tye. ko. jin;    チェコ人	chi. xe. ko. jin;
+#
+# 詞彙中(漢字裡)含 texi(てぃ)，其變化需補齊 ti 和 thi。
+# 詞彙中(漢字裡)含 toxu(とぅ)，其變化需補齊 tu 和 twu。
+# 備註： ti 和 tu 可能為 texi(てぃ)和 toxu(とぅ)，之前可能誤轉成 chi 和 tsu ？
+#     例：汀間	texima;    汀間	tima;    汀間	thima;
+#     例：友寄	toxumushi;    友寄	tumushi;    友寄	twumushi;
+#
 # 定義：じ=ji，zi用正則轉。
 # 定義：づヅ=du、ずズ=zu。
 # 定義：ぢゅ=dyu，zy、j用正則轉。
@@ -35,7 +47,7 @@
 # 定義：ち=chi
 # 定義：ふ=fu
 # 定義：つ=tsu
-# 備註：ti和tu可能為texi(てィ)和toxu(とぅ)，之前可能誤轉。
+# 定義：チェ=tye，che、cye用正則撰寫（所有che改成tye）
 #
 #===================================
 ---
@@ -845,11 +857,11 @@ columns:
 っひぃ	hhyi,
 っびぃ	bbyi,
 っぴぃ	ppyi,
-っみィ	mmyi,
+っみぃ	mmyi,
 っりぃ	rryi,
-っい	yyi,
-っきィ	kkye,
-っぎィ	ggye,
+っいぃ	yyi,
+っきぇ	kkye,
+っぎぇ	ggye,
 っしぇ	ssye,
 っじぇ	zzye,
 っじぇ	jjye,
@@ -883,7 +895,7 @@ columns:
 ちぇ	tye,
 #ちぇ	che, #用正則取代
 ちぃ	cyi,
-ちぇ	cye,
+#ちぇ	cye, #用正則取代
 にぃ	nyi,
 にぇ	nye,
 ひぃ	hyi,
@@ -1156,7 +1168,7 @@ columns:
 ッピィ	ppyi.
 ッミィ	mmyi.
 ッリィ	rryi.
-ッイ	yyi.
+ッイィ	yyi.
 ッキェ	kkye.
 ッギェ	ggye.
 ッシェ	ssye.
@@ -1289,7 +1301,7 @@ columns:
 チィ	tyi.
 チェ	tye.
 チィ	cyi.
-チェ	cye.
+#チェ	cye. #用正則取代
 テャ	tha.
 ティ	thi.
 テュ	thu.
@@ -27221,8 +27233,9 @@ columns:
 支	sasoo;
 決	sadamu;	143
 定	sadame;	1494
-#錯碼# 里	satu;	1499
 里	satoxu;	1499
+里	satu;	1499
+里	satwu;	1499
 俊	satoshi;	759
 啓	satoshi;	543
 怜	satoshi;	133
