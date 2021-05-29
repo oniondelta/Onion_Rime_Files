@@ -6,7 +6,7 @@ customization:
   rime_version: 1.3.0
 patch:
   "style/color_scheme": lost_temple
-  "style/font_face": Noto Sans Mono CJK TC Regular #Noto Sans CJK TC Light #HanaMinA
+  "style/font_face": Noto Sans Mono CJK TC #Noto Sans Mono CJK TC Regular #Noto Sans CJK TC Light #HanaMinA
   "style/font_point": 14 #16
   "style/label_format": "%s "
   "style/layout/border": 0
