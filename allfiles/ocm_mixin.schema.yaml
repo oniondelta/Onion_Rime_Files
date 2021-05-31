@@ -348,7 +348,7 @@ easy_en:
   enable_completion: true
   enable_sentence: true #false
   enable_user_dict: false #true
-  prefix: ";'"
+  prefix: "',"
   tips:  "《Easy英語》▶"
   preedit_format:
     - xform/^/《Easy英語》/
@@ -504,7 +504,7 @@ ovff_reverse_lookup:
 reverse3_lookup:
   __include: /top_fixed
   tag: reverse3_lookup
-  prefix: "',"
+  prefix: ";'"
   tips: "《查注音》▶"
   preedit_format:
     - xform/^/《查注音》/
@@ -593,9 +593,9 @@ recognizer:
     punct: "[=][=][=]?$|[=]['][']?[=]?[']?[']?$|[=]?[][][][]?[']?$|[=]?[[][[]?[']?[=]?[]]?[]]?[']?$|[=][`][`]?$|[=][-,./;][-,./;]?$|[=][,][,]?[=][.][.]?$|[=][0-9] ?$|[=][9][=][0]?$|[=][=][].,90'[]+ ?$"
     pt: "^[,.][,.'a-z]*$|^[']['a-z]*$|^[,][][]+[a-z]*$"
     reverse2_lookup: "^';[-.,;/0-9a-z]*$"
-    reverse3_lookup: "^',[a-z]*$"
-    easy_en: "^;'[a-z;/.'-]*$"
-    emoji_series: "^;[a-z]*$|^[;][;][-0-9a-z]$|^[;][a-z][b]?$|^[;][0-9]$|^[;][0-9][-][0-9]?$"
+    reverse3_lookup: "^;'[a-z]*$"
+    easy_en: "^',[a-z;/.'-]*$"
+    emoji_series: "^;[a-z]*$|^[;][;][-0-9a-z]$|^[;][0-9]$|^[;][0-9][-][0-9]?$" #|^[;][a-z][b]?$
 #第一個不能刪，否則無法用數字選擇。#「-」不能刪，顏文字會用到。
     gr: "^['][[][a-z';]*$"
     cyr: "^['][]][a-z';]*$"
