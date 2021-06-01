@@ -166,7 +166,7 @@ punct_mark:
 ################################### 拼寫 ######################################
 speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz;-"
-  delimiter: "\\`"
+  delimiter: "|`"
 ################################### 短語和外掛標點 ######################################
 dif1_phrase:
   dictionary: ""
@@ -194,7 +194,7 @@ translator:
   enable_charset_filter: false
   preedit_format:
     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
-    - xform/\\/  /
+    - xform/\|/  /
     - xform/`/  /
 ####################### 新單字固頂功能 #######################
 top_fixed:
@@ -233,7 +233,7 @@ jphi_lookup:
   preedit_format:
     - "xlit|,|A|"
     - xform/A/ (平)/
-    - xform/\\/ /
+    - xform/\|/ /
     - xform/`/ /
 
 jpka_lookup:
@@ -259,7 +259,7 @@ jpka_lookup:
   preedit_format:
     - "xlit|.|A|"
     - xform/A/ (片)/
-    - xform/\\/ /
+    - xform/\|/ /
     - xform/`/ /
 
 korea_lookup:
@@ -276,7 +276,7 @@ korea_lookup:
     - "xlit|abcdefghijklmnopqrstuvwxyz/|ㅂㅅㄷㅊㅌㅑㅕㅐㅣㅓㅏㄴㅛㅗㅁㅔㅇㅠㄹㅜㅈㅡㅎㅍㄱㅋA|"
     - xform/AA/ (韓-HJ)/
     - xform/A/ (韓)/
-    - xform/\\/ /
+    - xform/\|/ /
     - xform/`/ /
 
 latin_lookup:
@@ -292,7 +292,7 @@ latin_lookup:
     - xform/AAA/ (拉-組合)/
     - xform/AA/ (拉-大)/
     - xform/A/ (拉)/
-    - xform/\\/ /
+    - xform/\|/ /
     - xform/`/ /
 
 gr_lookup:
@@ -309,7 +309,7 @@ gr_lookup:
     - "xlit|[|A|"
     - xform/AA/ (希-大)/
     - xform/A/ (希)/
-    - xform/\\/ /
+    - xform/\|/ /
     - xform/`/ /
 
 cyr_lookup:
@@ -332,7 +332,7 @@ cyr_lookup:
     - xform/AAA/ (俄-組合)/
     - xform/AA/ (俄-大)/
     - xform/A/ (俄)/
-    - xform/\\/ /
+    - xform/\|/ /
     - xform/`/ /
 
 fs_lookup:
@@ -349,7 +349,7 @@ fs_lookup:
     - "xlit|=|A|"
     - xform/AA/ (全-大)/
     - xform/A/ (全)/
-    - xform/\\/ /
+    - xform/\|/ /
     - xform/`/ /
 ######################調出其他語言之翻譯器(開頭符號調出各國語言輸入)################
 easy_en:
@@ -383,11 +383,13 @@ reverse2_lookup:
   enable_sentence: false
   enable_user_dict: true
   prefix: "';"
+  suffix: "'"
   tips: "《注音反查》▶"
+  closing_tips: "◀《注音反查》"
   preedit_format:
     - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-6347|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙|"
     - xform/^/《注音反查》/
-    - xform/\\/  /
+    - xform/\|/  /
     - xform/`/  /
 
 ovff_reverse_lookup:
@@ -402,14 +404,16 @@ reverse3_lookup:
   __include: /top_fixed
   tag: reverse3_lookup
   prefix: ";'"
+  suffix: "'"
   tips: "《查注音》▶"
+  closing_tips: "◀《查注音》"
   initial_quality: 1000
   extra_tags:
     - reverse3_lookup_extra
   preedit_format:
     - xform/^/《查注音》/
     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
-    - xform/\\/  /
+    - xform/\|/  /
     - xform/`/  /
 
 reverse3_lookup_extra:
@@ -420,7 +424,7 @@ reverse3_lookup_extra:
   preedit_format:
     - xform/^/《查注音》/
     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
-    - xform/\\/  /
+    - xform/\|/  /
     - xform/`/  /
 
 phonetic_reverse_lookup:
@@ -467,10 +471,11 @@ all_bpm:
   enable_user_dict: false
   prefix: "';'"
   tips: "《注音文》▶"
+  # closing_tips: "◀《注音文》"
   preedit_format:
     - xform/^/《注音文》/
     - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-6347'|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙ˉ|"
-    - xform/\\//
+    - xform/\|//
     - xform/`//
 ################################### 系列符號 ######################################
 emoji_series:
@@ -517,11 +522,11 @@ recognizer:
     cyr_lookup: "^([a-z]+[]][]]?[]]?[]a-z]*)+$"
     gr_lookup: "^([a-z]+[[][[]?[a-z[]*)+$"
     fs_lookup: "^([-a-z]+[=][=]?[-a-z=]*)+$"
-    reverse2_lookup: "^';[-.,;/0-9a-z]*$"
-    reverse3_lookup: "^;'[\\a-z`]*$"
+    reverse2_lookup: "^';[-.,;/0-9a-z]*'?$"
+    reverse3_lookup: "^;'[a-z`|]*'?$"
     easy_en: "^',[a-z;/.'-]*$"
     emoji_series: "^;[a-z]*$|^[;][;][-0-9a-z]$|^[;][0-9]$|^[;][0-9][-][0-9]?$" #|^[;][a-z][b]?$
 #    第一個不能刪，否則無法用數字選擇。
 #    「-」不能刪，顏文字會用到。
     all_bpm: "^';'[-a-z0-9.,/;']*$"
-    lua: "^'/[';]?[a-z0-9/-]*$"
+    lua: "^'/[';/]?[a-z]*$|^'/[0-9/-]*$"

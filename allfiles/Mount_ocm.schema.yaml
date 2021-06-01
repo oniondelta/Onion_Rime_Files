@@ -1,0 +1,208 @@
+#錯誤查看%TEMP%\rime.weasel
+# Rime schema settings
+# encoding: utf-8
+# 《設定頁》
+
+schema:
+  schema_id: Mount_ocm
+  name: "❖蝦米(反查專用)❖"
+  version: "202106"
+  author:
+    - 洋蔥
+  description: |
+    用戶字典蝦米
+  dependencies:
+    - Mount_bopomo
+
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 中文, 英文 ]
+  - name: full_shape
+    states: [ 半形, 全形 ]
+  - name: ascii_punct
+    reset: 0
+    states: [ "。，", "．，" ]
+  - name: simplification
+    states: [ 繁體, 简体 ]
+
+engine:
+  filters:
+    - simplifier
+    - uniquifier
+    - reverse_lookup_filter@tr_reverse_lookup
+    - reverse_lookup_filter@ovff_reverse_lookup
+    - reverse_lookup_filter@phonetic_reverse_lookup
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - affix_segmentor@reverse2_lookup
+    - affix_segmentor@reverse3_lookup
+    - affix_segmentor@reverse3_lookup_extra
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - table_translator
+    - script_translator@reverse2_lookup
+    - table_translator@reverse3_lookup
+    - script_translator@reverse3_lookup_extra
+
+menu:
+  alternative_select_keys: "0123456789"
+  page_size: 9
+
+speller:
+  alphabet: "abcdefghijklmnopqrstuvwxyz[];,'."
+  delimiter: "|`"
+  max_code_length: 5
+  auto_select: false #自動上屛
+  auto_clear: max_length # auto：空碼自動清屏| manual：空碼按下一鍵確認清屏| max_length：達到最長碼時確認清屏
+  algebra:
+    - derive/^([a-z]+)$/$1`/
+
+translator:
+  dictionary: Mount_ocm.extended
+  enable_sentence: false
+  enable_encoder: false
+  encode_commit_history: false
+  enable_completion: false
+  enable_user_dict: false
+  preedit_format:
+    - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
+    - xform/\|/  /
+    - xform/`/  /
+
+tr_reverse_lookup:
+  tags: [ abc ]
+  overwrite_comment: true
+  dictionary: Mount_ocm.extended
+  comment_format:
+    - xform/^/  /
+    - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
+
+reverse2_lookup:
+  tag: reverse2_lookup
+  dictionary: "Mount_bopomo.extended"
+  enable_completion: false
+  enable_sentence: false
+  enable_user_dict: true
+  prefix: "';"
+  suffix: "'"
+  tips: "〔注音反查〕▶"
+  closing_tips: "◀〔注音反查〕"
+  preedit_format:
+    - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-6347|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙|"
+    - xform/^/〔注音反查〕/
+    - xform/\|/  /
+    - xform/`/  /
+
+ovff_reverse_lookup:
+  tags: [ reverse2_lookup ]
+  overwrite_comment: true
+  dictionary: Mount_ocm.extended
+  comment_format:
+    - xform/^/  /
+    - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
+
+reverse3_lookup:
+  __include: /translator
+  tag: reverse3_lookup
+  prefix: ";'"
+  suffix: "'"
+  tips: "〔查注音〕▶"
+  closing_tips: "◀〔查注音〕"
+  initial_quality: 1000
+  extra_tags:
+    - reverse3_lookup_extra
+  preedit_format:
+    - xform/^/〔查注音〕/
+    - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
+    - xform/\|/  /
+    - xform/`/  /
+
+reverse3_lookup_extra:
+  __include: /translator
+  tag: reverse3_lookup_extra
+  enable_user_dict: true
+  initial_quality: 1
+  preedit_format:
+    - xform/^/〔查注音〕/
+    - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
+    - xform/\|/  /
+    - xform/`/  /
+
+phonetic_reverse_lookup:
+  tags: [ reverse3_lookup ]
+  dictionary: "Mount_bopomo.extended"
+  overwrite_comment: true
+  comment_format:
+    - xform/iu/iou/
+    - xform/ui/uei/
+    - xform/ong/ung/
+    - xform/yi?/i/
+    - xform/wu?/u/
+    - xform/iu/v/
+    - xform/([jqx])u/$1v/
+    - xform/([iuv])n/$1en/
+    - xform/zhi?/Z/
+    - xform/chi?/C/
+    - xform/shi?/S/
+    - xform/([zcsr])i/$1/
+    - xform/ai/A/
+    - xform/ei/I/
+    - xform/ao/O/
+    - xform/ou/U/
+    - xform/ang/K/
+    - xform/eng/G/
+    - xform/an/M/
+    - xform/en/N/
+    - xform/er/R/
+    - xform/eh/E/
+    - xform/([iv])e/$1E/
+    - xform/1/ˉ/
+    - 'xlit|bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR2345|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙|'
+    - xform/^/ /
+    - xform/ /  /
+
+key_binder:
+  import_preset: default
+  bindings:
+### 避 RIME 原設定鍵位衝突 ###
+    - {accept: comma, send: comma, when: has_menu}
+    - {accept: comma, send: comma, when: paging}
+    - {accept: period, send: period, when: has_menu}
+    - {accept: period, send: period, when: paging}
+    - {accept: minus, send: minus, when: has_menu}
+    - {accept: minus, send: minus, when: paging}
+    - {accept: equal, send: equal, when: has_menu}
+    - {accept: equal, send: equal, when: paging}
+#######################################
+#    - {accept: Return, send: space, when: has_menu} #return直出
+    - {accept: space, send: Escape, when: composing} #空碼清屏用
+    - {accept: space, send: space, when: has_menu} #補上一條產生之bug
+    - {accept: Shift+space, send: Page_Down, when: has_menu}
+    - {accept: Shift+Tab, send: Page_Up, when: paging}
+
+punctuator:
+  # import_preset: default #symbols_ovff
+  half_shape:
+    ";": ["；", "："]
+
+recognizer:
+#  import_preset: default
+  patterns:
+    reverse2_lookup: "^';[-.,;/0-9a-z]*'?$"
+    reverse3_lookup: "^;'[a-z`|]*'?$"
+    # punct: "^;([a-z]+|[0-9]0?)$"

@@ -19,6 +19,7 @@ schema:
     - ocm_mixin_fullshape
     - Mount_bopomo
     - allbpm
+    - Mount_ocm
 
 switches:
   - name: ascii_mode
@@ -159,7 +160,7 @@ punct_mark:
 speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz;,'./-`"
   initials: "abcdefghijklmnopqrstuvwxyz-"
-  delimiter: "|\\"
+  delimiter: "|"
   algebra:
     - derive/^([a-z]+)$/$1`/
     - xform/^([a-z]+);$/$1;;/ #注音偏旁尾綴改寫
@@ -259,7 +260,6 @@ translator:
   enable_completion: false
   preedit_format:
     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
-    - xform/\\/  /
     - xform/\|/  /
 ####################### 新單字固頂功能 #######################
 top_fixed:
@@ -383,7 +383,6 @@ gr:
   preedit_format:
     - "xlit/abcdefghijklmnopqrstuvwxyz|/ABCDEFGHIJKLMNOPQRSTUVWXYZ /"
     - xform/^/《希》/
-    - xform/\\/ /
     - xform/\|/ /
 
 cyr:
@@ -405,7 +404,6 @@ cyr:
   preedit_format:
     - "xlit/abcdefghijklmnopqrstuvwxyz|/ABCDEFGHIJKLMNOPQRSTUVWXYZ /"
     - xform/^/《俄》/
-    - xform/\\/ /
     - xform/\|/ /
 
 fs:
@@ -422,7 +420,6 @@ fs:
   preedit_format:
     - "xlit/abcdefghijklmnopqrstuvwxyz|/ABCDEFGHIJKLMNOPQRSTUVWXYZ /"
     - xform/^/《全》/
-    - xform/\\/ /
     - xform/\|/ /
 ####################### 後方顯示字碼 #######################
 gr_reverse_lookup:
@@ -496,11 +493,12 @@ reverse2_lookup:
   enable_sentence: false
   enable_user_dict: true
   prefix: "';"
+  suffix: "'"
   tips: "《注音反查》▶"
+  closing_tips: "◀《注音反查》"
   preedit_format:
     - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-6347|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙|"
     - xform/^/《注音反查》/
-    - xform/\\/  /
     - xform/\|/  /
 
 ovff_reverse_lookup:
@@ -513,32 +511,43 @@ ovff_reverse_lookup:
     - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
 ################################### 使用嘸蝦米反查注音碼 ######################################
 reverse3_lookup:
-  __include: /top_fixed
+  # __include: /top_fixed
   tag: reverse3_lookup
+  dictionary: Mount_ocm.extended
+  enable_sentence: false
+  enable_encoder: false
+  encode_commit_history: false
+  enable_completion: false
+  enable_user_dict: false
   prefix: ";'"
+  suffix: "'"
   tips: "《查注音》▶"
+  closing_tips: "◀《查注音》"
   initial_quality: 1000
   extra_tags:
     - reverse3_lookup_extra
   preedit_format:
     - xform/^/《查注音》/
     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
-    - xform/\\/  /
     - xform/\|/  /
 
 reverse3_lookup_extra:
-  __include: /top_fixed
+  # __include: /top_fixed
   tag: reverse3_lookup_extra
+  dictionary: Mount_ocm.extended
+  enable_sentence: false
+  enable_encoder: false
+  encode_commit_history: false
+  enable_completion: false
   enable_user_dict: true
   initial_quality: 1
   preedit_format:
     - xform/^/《查注音》/
     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
-    - xform/\\/  /
     - xform/\|/  /
 
-phonetic_reverse_lookup: #該反查濾鏡名
-  tags: [ reverse3_lookup ] #掛在這個tag所對應的翻譯器上
+phonetic_reverse_lookup:
+  tags: [ reverse3_lookup ]
   dictionary: "Mount_bopomo.extended"
   overwrite_comment: true
   comment_format:
@@ -569,9 +578,6 @@ phonetic_reverse_lookup: #該反查濾鏡名
     - 'xlit|bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR2345|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙|'
     - xform/^/ /
     - xform/ /  /
-#    - xform/ /] [/
-#    - xform/^/  [/
-#    - xform/$/]/
 ################################### 注音文 ######################################
 all_bpm:
   tag: all_bpm
@@ -584,8 +590,7 @@ all_bpm:
   preedit_format:
     - xform/^/《注音文》/
     - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-6347'|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙ˉ|"
-    - xform/\\//
-    - 'xform/\|//'
+    - xform/\|//
 ################################### 系列符號 ######################################
 emoji_series:
   tag: emoji_series
@@ -619,44 +624,12 @@ recognizer:
     email: "^[a-z][-_.0-9a-z]*@.*$"
     punct: "[=][=][=]?$|[=]['][']?[=]?[']?[']?$|[=]?[][][][]?[']?$|[=]?[[][[]?[']?[=]?[]]?[]]?[']?$|[=][`][`]?$|[=][-,./;][-,./;]?$|[=][,][,]?[=][.][.]?$|[=][0-9] ?$|[=][9][=][0]?$|[=][=][].,90'[]+ ?$"
     pt: "^[,.][,.'a-z]*$|^[']['a-z]*$|^[,][][]+[a-z]*$"
-    reverse2_lookup: "^';[-.,;/0-9a-z]*$"
-    reverse3_lookup: "^;'[\\a-z`|]*$"
+    reverse2_lookup: "^';[-.,;/0-9a-z]*'?$"
+    reverse3_lookup: "^;'[a-z`|]*'?$"
     easy_en: "^',[a-z;/.'-]*$"
-    emoji_series: "^;[a-z]*$|^[;][;][-0-9a-z]$|^[;][0-9]$|^[;][0-9][-][0-9]?$" #|^[;][a-z][b]?$
-#第一個不能刪，否則無法用數字選擇。#「-」不能刪，顏文字會用到。
+    emoji_series: "^;[a-z]*$|^[;][;][-0-9a-z]$|^[;][0-9]$|^[;][0-9][-][0-9]?$"
     gr: "^['][[][a-z';]*$"
     cyr: "^['][]][a-z';]*$"
     fs: "^['][.][-a-z';]*$"
     all_bpm: "^';'[-a-z0-9.,/;']*$"
-    lua: "^'/[';]?[a-z0-9/-]*$"
-#
-#    emoji_series: "^;[;0-9a-z]*?$" #無法用數字選擇
-##    pt: "[a-z[].,/'=-]*?$" ##掛接abc_segmentor用的。
-##    pt: "^[-=,./'][-=,./'a-z]*$|^[[][[]*$|^[]][]]*$|^[,][[a-z]*$|^[,][]a-z]*$|^[;][;]*$"  #此條啟動會失效   ##加後面]和[的幾個碼，]和[才不會失效
-#    punct: "^;[-.,;/0-9a-z]*?$"
-#    punct: "^;([a-z]+|[0-9]0?)$" #打連續兩個數字調出符號時會無效。
-##    mark_lookup: "^([-a-z]+[=])*?$"  #轉到主碼表
-#########################################
-#    latin_lookup: "^[a-z]*'.*?$"  #"[a-z]*'" #"[a-z]*[']?$"
-#    cyr_lookup: "^[a-z]*].*?$"
-#    gr_lookup: "^[a-z]*[[].*?$"
-#    jphi_lookup: "^[a-z]*[,].*?$"
-#    jpka_lookup: "^[a-z]*[.].*?$"
-#    korea_lookup: "^[a-z]*/.*?$"
-#試#    latin_lookup: "^([a-z;]+['])*?$"
-#試#    cyr_lookup: "^([a-z]+[]])*?$"
-#試#    gr_lookup: "^([a-z]+[[])*?$"
-#試#    jphi_lookup: "^([a-z]+[,])*?$"
-#試#    jpka_lookup: "^([a-z]+[.])*?$"
-#試#    korea_lookup: "^([a-z]+[/])*?$"
-##以下都有問題,不要用,會莫名的跑出編碼
-##    latin_lookup: "^[a-z]*[']?$"  #"^[a-z]*'.*$" #前面編碼有問題，無法用數字鍵選字 #"[a-z]*'" 
-##    gr_lookup: "^[a-z]*[[]?$"
-##    cyr_lookup: "^[a-z]*[]]?$"
-##    jphi_lookup: "^[a-z]*[,]?$"
-##    jpka_lookup: "^[a-z]*[.]?$"
-##    korea_lookup: "^[a-z]*/?$"
-##    mark_lookup: "^[-a-z]*[=]?$"
-
-
-
+    lua: "^'/[';/]?[a-z]*$|^'/[0-9/-]*$"
