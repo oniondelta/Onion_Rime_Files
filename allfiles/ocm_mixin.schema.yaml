@@ -383,8 +383,8 @@ gr:
   preedit_format:
     - "xlit/abcdefghijklmnopqrstuvwxyz|/ABCDEFGHIJKLMNOPQRSTUVWXYZ /"
     - xform/^/《希》/
-    - xform/\\/  /
-    - xform/\|/  /
+    - xform/\\/ /
+    - xform/\|/ /
 
 cyr:
   tag: cyr
@@ -405,8 +405,8 @@ cyr:
   preedit_format:
     - "xlit/abcdefghijklmnopqrstuvwxyz|/ABCDEFGHIJKLMNOPQRSTUVWXYZ /"
     - xform/^/《俄》/
-    - xform/\\/  /
-    - xform/\|/  /
+    - xform/\\/ /
+    - xform/\|/ /
 
 fs:
   tag: fs
@@ -422,8 +422,8 @@ fs:
   preedit_format:
     - "xlit/abcdefghijklmnopqrstuvwxyz|/ABCDEFGHIJKLMNOPQRSTUVWXYZ /"
     - xform/^/《全》/
-    - xform/\\/  /
-    - xform/\|/  /
+    - xform/\\/ /
+    - xform/\|/ /
 ####################### 後方顯示字碼 #######################
 gr_reverse_lookup:
   tags: [ gr ]
@@ -508,6 +508,7 @@ ovff_reverse_lookup:
   dictionary: "ocm_mixin.extended"
   overwrite_comment: true
   comment_format:
+    - xform/^/  /
     - xform/;/;;/
     - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
 ################################### 使用嘸蝦米反查注音碼 ######################################
@@ -567,7 +568,7 @@ phonetic_reverse_lookup: #該反查濾鏡名
     - xform/1/ˉ/
     - 'xlit|bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR2345|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙|'
     - xform/^/ /
-    - xform/ /   /
+    - xform/ /  /
 #    - xform/ /] [/
 #    - xform/^/  [/
 #    - xform/$/]/

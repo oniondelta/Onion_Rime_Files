@@ -207,6 +207,7 @@ top_reverse_lookup:
   overwrite_comment: false
   dictionary: dif1.extended
   comment_format:
+    - xform/^/  /
     - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
 ######################調出其他語言之翻譯器(結尾符號調出各國語言輸入)################
 jphi_lookup:
@@ -394,6 +395,7 @@ ovff_reverse_lookup:
   overwrite_comment: true
   dictionary: "dif1.extended"
   comment_format:
+    - xform/^/  /
     - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
 ################################### 使用嘸蝦米反查注音碼 ######################################
 reverse3_lookup:
@@ -452,7 +454,7 @@ phonetic_reverse_lookup:
     - xform/1/ˉ/
     - 'xlit|bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR2345|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙|'
     - xform/^/ /
-    - xform/ /   /
+    - xform/ /  /
 #    - xform/ /] [/
 #    - xform/^/  [/
 #    - xform/$/]/
