@@ -166,7 +166,7 @@ punct_mark:
 ################################### 拼寫 ######################################
 speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz;-"
-  delimiter: "|`"
+  delimiter: "\\`"
 ################################### 短語和外掛標點 ######################################
 dif1_phrase:
   dictionary: ""
@@ -194,7 +194,7 @@ translator:
   enable_charset_filter: false
   preedit_format:
     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
-    - xform/\|/  /
+    - xform/\\/  /
     - xform/`/  /
 ####################### 新單字固頂功能 #######################
 top_fixed:
@@ -206,6 +206,8 @@ top_reverse_lookup:
   tags: [ abc ]
   overwrite_comment: false
   dictionary: dif1.extended
+  comment_format:
+    - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
 ######################調出其他語言之翻譯器(結尾符號調出各國語言輸入)################
 jphi_lookup:
   tag: jphi_lookup
@@ -230,7 +232,8 @@ jphi_lookup:
   preedit_format:
     - "xlit|,|A|"
     - xform/A/ (平)/
-    - xform/\|/ /
+    - xform/\\/ /
+    - xform/`/ /
 
 jpka_lookup:
   tag: jpka_lookup
@@ -255,7 +258,8 @@ jpka_lookup:
   preedit_format:
     - "xlit|.|A|"
     - xform/A/ (片)/
-    - xform/\|/ /
+    - xform/\\/ /
+    - xform/`/ /
 
 korea_lookup:
   tag: korea_lookup
@@ -271,7 +275,8 @@ korea_lookup:
     - "xlit|abcdefghijklmnopqrstuvwxyz/|ㅂㅅㄷㅊㅌㅑㅕㅐㅣㅓㅏㄴㅛㅗㅁㅔㅇㅠㄹㅜㅈㅡㅎㅍㄱㅋA|"
     - xform/AA/ (韓-HJ)/
     - xform/A/ (韓)/
-    - xform/\|/ /
+    - xform/\\/ /
+    - xform/`/ /
 
 latin_lookup:
   tag: latin_lookup
@@ -286,7 +291,8 @@ latin_lookup:
     - xform/AAA/ (拉-組合)/
     - xform/AA/ (拉-大)/
     - xform/A/ (拉)/
-    - xform/\|/ /
+    - xform/\\/ /
+    - xform/`/ /
 
 gr_lookup:
   tag: gr_lookup
@@ -302,7 +308,8 @@ gr_lookup:
     - "xlit|[|A|"
     - xform/AA/ (希-大)/
     - xform/A/ (希)/
-    - xform/\|/ /
+    - xform/\\/ /
+    - xform/`/ /
 
 cyr_lookup:
   tag: cyr_lookup
@@ -324,7 +331,8 @@ cyr_lookup:
     - xform/AAA/ (俄-組合)/
     - xform/AA/ (俄-大)/
     - xform/A/ (俄)/
-    - xform/\|/ /
+    - xform/\\/ /
+    - xform/`/ /
 
 fs_lookup:
   tag: fs_lookup
@@ -340,7 +348,8 @@ fs_lookup:
     - "xlit|=|A|"
     - xform/AA/ (全-大)/
     - xform/A/ (全)/
-    - xform/\|/ /
+    - xform/\\/ /
+    - xform/`/ /
 ######################調出其他語言之翻譯器(開頭符號調出各國語言輸入)################
 easy_en:
   tag: easy_en
@@ -377,12 +386,15 @@ reverse2_lookup:
   preedit_format:
     - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-6347|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙|"
     - xform/^/《注音反查》/
-    - xform/\|/  /
+    - xform/\\/  /
+    - xform/`/  /
 
 ovff_reverse_lookup:
   tags: [ reverse2_lookup ]
   overwrite_comment: true
   dictionary: "dif1.extended"
+  comment_format:
+    - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
 ################################### 使用嘸蝦米反查注音碼 ######################################
 reverse3_lookup:
   __include: /top_fixed
@@ -395,7 +407,7 @@ reverse3_lookup:
   preedit_format:
     - xform/^/《查注音》/
     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
-    - xform/\|/  /
+    - xform/\\/  /
     - xform/`/  /
 
 reverse3_lookup_extra:
@@ -406,7 +418,7 @@ reverse3_lookup_extra:
   preedit_format:
     - xform/^/《查注音》/
     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
-    - xform/\|/  /
+    - xform/\\/  /
     - xform/`/  /
 
 phonetic_reverse_lookup:
@@ -456,7 +468,8 @@ all_bpm:
   preedit_format:
     - xform/^/《注音文》/
     - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-6347'|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙ˉ|"
-    - 'xform/\|//'
+    - xform/\\//
+    - xform/`//
 ################################### 系列符號 ######################################
 emoji_series:
   tag: emoji_series
@@ -503,7 +516,7 @@ recognizer:
     gr_lookup: "^([a-z]+[[][[]?[a-z[]*)+$"
     fs_lookup: "^([-a-z]+[=][=]?[-a-z=]*)+$"
     reverse2_lookup: "^';[-.,;/0-9a-z]*$"
-    reverse3_lookup: "^;'[a-z`]*$"
+    reverse3_lookup: "^;'[\\a-z`]*$"
     easy_en: "^',[a-z;/.'-]*$"
     emoji_series: "^;[a-z]*$|^[;][;][-0-9a-z]$|^[;][0-9]$|^[;][0-9][-][0-9]?$" #|^[;][a-z][b]?$
 #    第一個不能刪，否則無法用數字選擇。

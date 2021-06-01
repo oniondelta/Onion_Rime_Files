@@ -133,7 +133,7 @@ emoji_switch:
   option_name: emoji_segestion
   tags: [ abc ]
   tips: all
-  comment_format: 
+  comment_format:
     - xform/^.+$/ /
 
 back_mark:
@@ -159,7 +159,7 @@ punct_mark:
 speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz;,'./-`"
   initials: "abcdefghijklmnopqrstuvwxyz-"
-  delimiter: "|"
+  delimiter: "|\\"
   algebra:
     - derive/^([a-z]+)$/$1`/
     - xform/^([a-z]+);$/$1;;/ #注音偏旁尾綴改寫
@@ -259,6 +259,7 @@ translator:
   enable_completion: false
   preedit_format:
     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
+    - xform/\\/  /
     - xform/\|/  /
 ####################### 新單字固頂功能 #######################
 top_fixed:
@@ -382,6 +383,8 @@ gr:
   preedit_format:
     - "xlit/abcdefghijklmnopqrstuvwxyz|/ABCDEFGHIJKLMNOPQRSTUVWXYZ /"
     - xform/^/《希》/
+    - xform/\\/  /
+    - xform/\|/  /
 
 cyr:
   tag: cyr
@@ -402,6 +405,8 @@ cyr:
   preedit_format:
     - "xlit/abcdefghijklmnopqrstuvwxyz|/ABCDEFGHIJKLMNOPQRSTUVWXYZ /"
     - xform/^/《俄》/
+    - xform/\\/  /
+    - xform/\|/  /
 
 fs:
   tag: fs
@@ -417,6 +422,8 @@ fs:
   preedit_format:
     - "xlit/abcdefghijklmnopqrstuvwxyz|/ABCDEFGHIJKLMNOPQRSTUVWXYZ /"
     - xform/^/《全》/
+    - xform/\\/  /
+    - xform/\|/  /
 ####################### 後方顯示字碼 #######################
 gr_reverse_lookup:
   tags: [ gr ]
@@ -493,6 +500,7 @@ reverse2_lookup:
   preedit_format:
     - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-6347|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙|"
     - xform/^/《注音反查》/
+    - xform/\\/  /
     - xform/\|/  /
 
 ovff_reverse_lookup:
@@ -514,6 +522,7 @@ reverse3_lookup:
   preedit_format:
     - xform/^/《查注音》/
     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
+    - xform/\\/  /
     - xform/\|/  /
 
 reverse3_lookup_extra:
@@ -524,6 +533,7 @@ reverse3_lookup_extra:
   preedit_format:
     - xform/^/《查注音》/
     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
+    - xform/\\/  /
     - xform/\|/  /
 
 phonetic_reverse_lookup: #該反查濾鏡名
@@ -573,6 +583,7 @@ all_bpm:
   preedit_format:
     - xform/^/《注音文》/
     - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-6347'|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙ˉ|"
+    - xform/\\//
     - 'xform/\|//'
 ################################### 系列符號 ######################################
 emoji_series:
@@ -608,7 +619,7 @@ recognizer:
     punct: "[=][=][=]?$|[=]['][']?[=]?[']?[']?$|[=]?[][][][]?[']?$|[=]?[[][[]?[']?[=]?[]]?[]]?[']?$|[=][`][`]?$|[=][-,./;][-,./;]?$|[=][,][,]?[=][.][.]?$|[=][0-9] ?$|[=][9][=][0]?$|[=][=][].,90'[]+ ?$"
     pt: "^[,.][,.'a-z]*$|^[']['a-z]*$|^[,][][]+[a-z]*$"
     reverse2_lookup: "^';[-.,;/0-9a-z]*$"
-    reverse3_lookup: "^;'[a-z`]*$"
+    reverse3_lookup: "^;'[\\a-z`|]*$"
     easy_en: "^',[a-z;/.'-]*$"
     emoji_series: "^;[a-z]*$|^[;][;][-0-9a-z]$|^[;][0-9]$|^[;][0-9][-][0-9]?$" #|^[;][a-z][b]?$
 #第一個不能刪，否則無法用數字選擇。#「-」不能刪，顏文字會用到。
