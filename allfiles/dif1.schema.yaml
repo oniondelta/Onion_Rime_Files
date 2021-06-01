@@ -8,7 +8,7 @@ schema:
 
   name: "❖分別調出蝦米(plus)❖"
   schema_id: dif1
-  version: "202105"
+  version: "202106"
   dependencies:
     - punct_ovff
     - dif1_jphi
@@ -90,6 +90,7 @@ engine:
     - affix_segmentor@easy_en
     - affix_segmentor@reverse2_lookup
     - affix_segmentor@reverse3_lookup
+    - affix_segmentor@reverse3_lookup_extra
     - affix_segmentor@all_bpm
     - affix_segmentor@jphi_lookup
     - affix_segmentor@jpka_lookup
@@ -114,11 +115,12 @@ engine:
     - script_translator@fs_lookup
     - table_translator@top_fixed
     - script_translator
+    - table_translator@emoji_series
     - script_translator@reverse2_lookup
     - table_translator@reverse3_lookup
+    - script_translator@reverse3_lookup_extra
     - script_translator@all_bpm
     - table_translator@easy_en
-    - table_translator@emoji_series
     - lua_translator@t2_translator
 ################################### 選單 ################################################
 menu:
@@ -387,6 +389,19 @@ reverse3_lookup:
   tag: reverse3_lookup
   prefix: ";'"
   tips: "《查注音》▶"
+  initial_quality: 1000
+  extra_tags:
+    - reverse3_lookup_extra
+  preedit_format:
+    - xform/^/《查注音》/
+    - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
+    - xform/\|/  /
+
+reverse3_lookup_extra:
+  __include: /top_fixed
+  tag: reverse3_lookup_extra
+  enable_user_dict: true
+  initial_quality: 1
   preedit_format:
     - xform/^/《查注音》/
     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
