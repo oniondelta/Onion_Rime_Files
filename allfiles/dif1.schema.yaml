@@ -396,6 +396,7 @@ reverse3_lookup:
     - xform/^/《查注音》/
     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
     - xform/\|/  /
+    - xform/`/  /
 
 reverse3_lookup_extra:
   __include: /top_fixed
@@ -406,6 +407,7 @@ reverse3_lookup_extra:
     - xform/^/《查注音》/
     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
     - xform/\|/  /
+    - xform/`/  /
 
 phonetic_reverse_lookup:
   tags: [ reverse3_lookup ]
@@ -501,7 +503,7 @@ recognizer:
     gr_lookup: "^([a-z]+[[][[]?[a-z[]*)+$"
     fs_lookup: "^([-a-z]+[=][=]?[-a-z=]*)+$"
     reverse2_lookup: "^';[-.,;/0-9a-z]*$"
-    reverse3_lookup: "^;'[a-z]*$"
+    reverse3_lookup: "^;'[a-z`]*$"
     easy_en: "^',[a-z;/.'-]*$"
     emoji_series: "^;[a-z]*$|^[;][;][-0-9a-z]$|^[;][0-9]$|^[;][0-9][-][0-9]?$" #|^[;][a-z][b]?$
 #    第一個不能刪，否則無法用數字選擇。
