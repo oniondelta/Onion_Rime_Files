@@ -381,7 +381,7 @@ gr:
   disable_user_dict_for_patterns:
     - ^[a-z]{1}[;']?[']?$
   preedit_format:
-    - "xlit/abcdefghijklmnopqrstuvwxyz|/ABCDEFGHIJKLMNOPQRSTUVWXYZ /"
+    # - "xlit/abcdefghijklmnopqrstuvwxyz|/ABCDEFGHIJKLMNOPQRSTUVWXYZ /"
     - xform/^/《希》/
     - xform/\|/ /
 
@@ -402,7 +402,7 @@ cyr:
     - ^[w][y][;']?$
     - ^[a-z]{1}[;']?[']?$
   preedit_format:
-    - "xlit/abcdefghijklmnopqrstuvwxyz|/ABCDEFGHIJKLMNOPQRSTUVWXYZ /"
+    # - "xlit/abcdefghijklmnopqrstuvwxyz|/ABCDEFGHIJKLMNOPQRSTUVWXYZ /"
     - xform/^/《俄》/
     - xform/\|/ /
 
@@ -418,7 +418,7 @@ fs:
   disable_user_dict_for_patterns:
     - ^[a-z]{1}[;']?[']?$
   preedit_format:
-    - "xlit/abcdefghijklmnopqrstuvwxyz|/ABCDEFGHIJKLMNOPQRSTUVWXYZ /"
+    # - "xlit/abcdefghijklmnopqrstuvwxyz|/ABCDEFGHIJKLMNOPQRSTUVWXYZ /"
     - xform/^/《全》/
     - xform/\|/ /
 ####################### 後方顯示字碼 #######################
