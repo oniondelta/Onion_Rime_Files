@@ -253,6 +253,8 @@ shutil.copyfile("./allfiles/greek.dict.yaml", "./sort_rime/ocm/ocm_mixin/greek.d
 shutil.copyfile("./allfiles/greek.extended.dict.yaml", "./sort_rime/ocm/ocm_mixin/greek.extended.dict.yaml")
 shutil.copyfile("./allfiles/Mount_bopomo.extended.dict.yaml", "./sort_rime/ocm/ocm_mixin/Mount_bopomo.extended.dict.yaml")
 shutil.copyfile("./allfiles/Mount_bopomo.schema.yaml", "./sort_rime/ocm/ocm_mixin/Mount_bopomo.schema.yaml")
+shutil.copyfile("./allfiles/Mount_ocm.extended.dict.yaml", "./sort_rime/ocm/ocm_mixin/Mount_ocm.extended.dict.yaml")
+shutil.copyfile("./allfiles/Mount_ocm.schema.yaml", "./sort_rime/ocm/ocm_mixin/Mount_ocm.schema.yaml")
 
 shutil.copyfile("./allfiles/ocm_mixin_cyrillic.schema.yaml", "./sort_rime/ocm/ocm_mixin/ocm_mixin_cyrillic.schema.yaml")
 shutil.copyfile("./allfiles/ocm_mixin_fullshape.schema.yaml", "./sort_rime/ocm/ocm_mixin/ocm_mixin_fullshape.schema.yaml")
