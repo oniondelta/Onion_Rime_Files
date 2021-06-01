@@ -203,6 +203,6 @@ punctuator:
 recognizer:
 #  import_preset: default
   patterns:
-    reverse2_lookup: "^';[-.,;/0-9a-z]*'?$"
+    reverse2_lookup: "^';[-.,;/0-9a-z`|]*'?$"
     reverse3_lookup: "^;'[a-z`|]*'?$"
     # punct: "^;([a-z]+|[0-9]0?)$"
