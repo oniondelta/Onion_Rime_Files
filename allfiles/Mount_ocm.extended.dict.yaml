@@ -7,7 +7,7 @@ version: "202105"
 sort: original
 use_preset_vocabulary: false
 import_tables:
-  - punct_ovff
+#   - punct_ovff
   - tcword
   - uniabcdword
 ...
