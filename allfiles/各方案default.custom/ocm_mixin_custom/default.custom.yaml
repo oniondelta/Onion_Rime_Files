@@ -8,6 +8,7 @@ patch:
   schema_list:
 ######## 洋蔥蝦米 mix‧in 版 ########
     - {schema: ocm_mixin}
+    - {schema: Mount_ocm}
     - {schema: ocm_mixin_greek}
     - {schema: ocm_mixin_cyrillic}
     - {schema: ocm_mixin_fullshape}
