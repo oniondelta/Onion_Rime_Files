@@ -114,11 +114,11 @@ reverse2_lookup:
   enable_user_dict: true
   prefix: "';"
   suffix: "'"
-  tips: "〔注音反查〕▶"
-  closing_tips: "◀〔注音反查〕"
+  tips: "《注音反查》▶"
+  closing_tips: "◀《注音反查》"
   preedit_format:
     - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-6347|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙|"
-    - xform/^/〔注音反查〕/
+    - xform/^/《注音反查》/
     - xform/\|/  /
     - xform/`/  /
 
@@ -136,13 +136,13 @@ reverse3_lookup:
   tag: reverse3_lookup
   prefix: ";'"
   suffix: "'"
-  tips: "〔查注音〕▶"
-  closing_tips: "◀〔查注音〕"
+  tips: "《查注音》▶"
+  closing_tips: "◀《查注音》"
   initial_quality: 1000
   extra_tags:
     - reverse3_lookup_extra
   preedit_format:
-    - xform/^/〔查注音〕/
+    - xform/^/《查注音》/
     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
     - xform/\|/  /
     - xform/`/  /
@@ -153,7 +153,7 @@ reverse3_lookup_extra:
   enable_user_dict: true
   initial_quality: 1
   preedit_format:
-    - xform/^/〔查注音〕/
+    - xform/^/《查注音》/
     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
     - xform/\|/  /
     - xform/`/  /
@@ -199,8 +199,8 @@ emoji_series:
   enable_user_dict: true
   prefix: ";"
 #  suffix: '"'
-  tips: "〔EMOJI集〕▶"
-#  closing_tips: "◀〔EMOJI集〕"
+  tips: "《EMOJI集》▶"
+#  closing_tips: "◀《EMOJI集》"
   preedit_format:
     __include: element_ocm:/emoji_series
 
@@ -233,6 +233,6 @@ recognizer:
   patterns:
     # punct: "^;([a-z]+|[0-9]0?)$"
     pt: "^[,.][,.'a-z]{0,4}$|^[']['a-z]{0,4}$|^[,][][]{1,2}[a-z]{0,2}$|^[,]v[][]{1,2}$|^v[][]{1,2}v?$|^[][]{1,2}[vrsf]{0,2}$"
-    emoji_series: "^;[a-z]*$|^[;][;][-0-9a-z]$|^[;][0-9]$|^[;][0-9][-][0-9]?$"
+    emoji_series: "^;[a-z]{0,5}$|^[;][;][-0-9a-z]$|^[;][0-9]$|^[;][0-9][-][0-9]?$"
     reverse2_lookup: "^';[-.,;/0-9a-z|]*'?$"
     reverse3_lookup: "^;'[a-z`|]*'?$"
