@@ -274,6 +274,7 @@ shutil.copyfile("./allfiles/symbols_ocm.schema.yaml", "./sort_rime/ocm/ocm_mixin
 shutil.copyfile("./allfiles/terra_pinyin_onion_add.dict.yaml", "./sort_rime/ocm/ocm_mixin/terra_pinyin_onion_add.dict.yaml")
 shutil.copyfile("./allfiles/terra_pinyin_onion.dict.yaml", "./sort_rime/ocm/ocm_mixin/terra_pinyin_onion.dict.yaml")
 shutil.copyfile("./allfiles/tcword.dict.yaml", "./sort_rime/ocm/ocm_mixin/tcword.dict.yaml")
+shutil.copyfile("./allfiles/kanaword.dict.yaml", "./sort_rime/ocm/ocm_mixin/kanaword.dict.yaml")
 shutil.copyfile("./allfiles/uniabcdword.dict.yaml", "./sort_rime/ocm/ocm_mixin/uniabcdword.dict.yaml")
 
 shutil.copyfile("./allfiles/phrases.cht_en_w.dict.yaml", "./sort_rime/ocm/ocm_mixin/phrases.cht_en_w.dict.yaml")
