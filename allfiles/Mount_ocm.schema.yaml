@@ -72,7 +72,7 @@ speller:
   delimiter: "|"
   max_code_length: 5
   auto_select: false #自動上屛
-  auto_clear: max_length # auto：空碼自動清屏| manual：空碼按下一鍵確認清屏| max_length：達到最長碼時確認清屏
+  # auto_clear: max_length # auto：空碼自動清屏| manual：空碼按下一鍵確認清屏| max_length：達到最長碼時確認清屏
   algebra:
     - derive/^([a-z]+)$/$1`/
 
@@ -232,7 +232,7 @@ recognizer:
 #  import_preset: default
   patterns:
     # punct: "^;([a-z]+|[0-9]0?)$"
-    pt: "^[,.][,.'a-z]{0,4}$|^[']['a-z]{0,4}$|^[,][][]{1,2}[a-z]{0,2}$|^[,]v[][]{1,2}$|^v[][]{1,2}v?$|^[][]{1,2}[vrsf]{0,2}$"
-    emoji_series: "^;[a-z]{0,5}$|^[;][;][-0-9a-z]$|^[;][0-9]$|^[;][0-9][-][0-9]?$"
+    pt: "^[,.][,.'a-z]*$|^[']['a-z]*$|^[,][][]+[a-z]*$|^[,]v[][]+$|^v[][]+v?$|^[][]+[vrsf]*$"
+    emoji_series: "^;[a-z]*$|^[;][;][-0-9a-z]$|^[;][0-9]$|^[;][0-9][-][0-9]?$"
     reverse2_lookup: "^';[-.,;/0-9a-z|]*'?$"
     reverse3_lookup: "^;'[a-z`|]*'?$"
