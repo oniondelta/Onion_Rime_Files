@@ -66,7 +66,7 @@ menu:
   page_size: 9
 
 speller:
-  alphabet: "abcdefghijklmnopqrstuvwxyz;."
+  alphabet: "abcdefghijklmnopqrstuvwxyz;,."
   delimiter: "|"
   max_code_length: 5
   auto_select: false #自動上屛
@@ -91,6 +91,7 @@ tr_reverse_lookup:
   overwrite_comment: true
   dictionary: Mount_ocm.extended
   comment_format:
+    - xform/ /  /
     - xform/^/  /
     - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
 
@@ -124,6 +125,7 @@ ovff_reverse_lookup:
   overwrite_comment: true
   dictionary: Mount_ocm.extended
   comment_format:
+    - xform/ /  /
     - xform/^/  /
     - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
 
