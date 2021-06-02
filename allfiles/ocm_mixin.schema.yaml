@@ -272,6 +272,7 @@ top_reverse_lookup:
   dictionary: ocm_mixin.extended
   overwrite_comment: false
   comment_format:
+    - xform/ /  /
 ##### 日語 #####
 ## 符號
     - xform/(^|[ ])([eaovs][v])([,])/$1$2$3 $2\./
@@ -506,6 +507,7 @@ ovff_reverse_lookup:
   dictionary: "ocm_mixin.extended"
   overwrite_comment: true
   comment_format:
+    - xform/ /  /
     - xform/^/  /
     - xform/;/;;/
     - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"

@@ -397,6 +397,7 @@ ovff_reverse_lookup:
   overwrite_comment: true
   dictionary: "dif1.extended"
   comment_format:
+    - xform/ /  /
     - xform/^/  /
     - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
 ################################### 使用嘸蝦米反查注音碼 ######################################

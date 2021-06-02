@@ -47,16 +47,18 @@ engine:
     - ascii_segmentor
     - matcher
     - abc_segmentor
+    - affix_segmentor@pt
+    - affix_segmentor@emoji_series
     - affix_segmentor@reverse2_lookup
     - affix_segmentor@reverse3_lookup
     - affix_segmentor@reverse3_lookup_extra
-    - affix_segmentor@pt
     - punct_segmentor
     - fallback_segmentor
   translators:
     - punct_translator
-    - table_translator@pt
     - table_translator
+    - table_translator@pt
+    - table_translator@emoji_series
     - script_translator@reverse2_lookup
     - table_translator@reverse3_lookup
     - script_translator@reverse3_lookup_extra
@@ -189,6 +191,19 @@ phonetic_reverse_lookup:
     - xform/^/ /
     - xform/ /  /
 
+emoji_series:
+  tag: emoji_series
+  dictionary: symbols_ocm
+  enable_completion: false
+  enable_sentence: false
+  enable_user_dict: true
+  prefix: ";"
+#  suffix: '"'
+  tips: "〔EMOJI集〕▶"
+#  closing_tips: "◀〔EMOJI集〕"
+  preedit_format:
+    __include: element_ocm:/emoji_series
+
 key_binder:
   import_preset: default
   bindings:
@@ -211,12 +226,13 @@ key_binder:
 punctuator:
   # import_preset: default #symbols_ovff
   half_shape:
-    # ";": ["；", "："]
+    ";": [";"]
 
 recognizer:
 #  import_preset: default
   patterns:
     # punct: "^;([a-z]+|[0-9]0?)$"
     pt: "^[,.][,.'a-z]{0,4}$|^[']['a-z]{0,4}$|^[,][][]{1,2}[a-z]{0,2}$|^[,]v[][]{1,2}$|^v[][]{1,2}v?$|^[][]{1,2}[vrsf]{0,2}$"
-    reverse2_lookup: "^';[-.,;/0-9a-z`|]*'?$"
+    emoji_series: "^;[a-z]*$|^[;][;][-0-9a-z]$|^[;][0-9]$|^[;][0-9][-][0-9]?$"
+    reverse2_lookup: "^';[-.,;/0-9a-z|]*'?$"
     reverse3_lookup: "^;'[a-z`|]*'?$"
