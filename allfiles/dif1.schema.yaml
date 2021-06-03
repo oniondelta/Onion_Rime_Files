@@ -123,7 +123,7 @@ engine:
     - table_translator@easy_en
     - lua_translator@t2_translator
     - lua_translator@email_translator
-    - lua_translator@url2_translator
+    - lua_translator@urlw_translator
 ################################### 選單 ################################################
 menu:
   alternative_select_keys: "0123456789"

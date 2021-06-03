@@ -17,7 +17,7 @@
 --      - lua_translator@date_translator     -- 「``」開頭打出時間日期
 --      - lua_translator@email_translator    -- 輸入email
 --      - lua_translator@url_translator      -- 輸入網址
---      - lua_translator@url2_translator      -- 輸入網址（多了www.）
+--      - lua_translator@urlw_translator      -- 輸入網址（多了www.）
 --      - lua_translator@mytranslator        -- （有缺函數，參考勿用）
 --
 --      - lua_filter@charset_filter          -- 遮屏含 CJK 擴展漢字的候選項
@@ -3074,8 +3074,8 @@ function url_translator(input, seg)
     end
 end
 
---- url2_translator
-function url2_translator(input, seg)
+--- urlw_translator
+function urlw_translator(input, seg)
     local www_in = string.match(input, "^(www[.].*)$")
     if (www_in~=nil) then
         yield(Candidate("englishtype", seg.start, seg._end, www_in , "〔URL〕"))
@@ -3089,7 +3089,7 @@ function url2_translator(input, seg)
     end
 
     local url2_in = string.match(input, "^(ftp:.*)$")
-    if (url1_in~=nil) then
+    if (url2_in~=nil) then
         yield(Candidate("englishtype", seg.start, seg._end, url2_in , "〔URL〕"))
         return
     end
