@@ -14,6 +14,7 @@ schema:
   dependencies:
     - Mount_bopomo
     - punct_ovff
+    - symbols_ocm
 
 switches:
   - name: ascii_mode
@@ -35,6 +36,7 @@ engine:
     - simplifier
     - uniquifier
     - reverse_lookup_filter@tr_reverse_lookup
+    - reverse_lookup_filter@tr2_reverse_lookup
     - reverse_lookup_filter@ovff_reverse_lookup
     - reverse_lookup_filter@phonetic_reverse_lookup
   processors:
@@ -96,6 +98,15 @@ tr_reverse_lookup:
   tags: [ abc ]
   overwrite_comment: true
   dictionary: Mount_ocm.extended
+  comment_format:
+    - xform/ /  /
+    - xform/^/  /
+    - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
+
+tr2_reverse_lookup:
+  tags: [ pt ]
+  overwrite_comment: true
+  dictionary: punct_ovff
   comment_format:
     - xform/ /  /
     - xform/^/  /
