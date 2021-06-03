@@ -11,6 +11,7 @@ os.makedirs('./sort_rime/注音洋蔥plus版/opencc/', exist_ok=True)
 os.makedirs('./sort_rime/地球拼音洋蔥mix-in版/opencc/', exist_ok=True)
 os.makedirs('./sort_rime/ocm/ocm_mixin/opencc/', exist_ok=True)
 os.makedirs('./sort_rime/ocm/ocm_plus/opencc/', exist_ok=True)
+os.makedirs('./sort_rime/ocm/ocm_mount/', exist_ok=True)
 
 
 #複製檔案(注音洋蔥純注音版)
@@ -380,6 +381,28 @@ shutil.copyfile("./allfiles/opencc/ocm_big5e_hkscs_jis.json", "./sort_rime/ocm/o
 shutil.copyfile("./allfiles/opencc/ocm_big5e_hkscs_jis.txt", "./sort_rime/ocm/ocm_plus/opencc/ocm_big5e_hkscs_jis.txt")
 shutil.copyfile("./allfiles/opencc/punct_mark.json", "./sort_rime/ocm/ocm_plus/opencc/punct_mark.json")
 shutil.copyfile("./allfiles/opencc/punct_mark.txt", "./sort_rime/ocm/ocm_plus/opencc/punct_mark.txt")
+
+
+#複製檔案(ocm_mount)
+shutil.copyfile("./allfiles/essay-zh-hant-onion.txt", "./sort_rime/ocm/ocm_mount/essay-zh-hant-onion.txt")
+shutil.copyfile("./allfiles/Mount_bopomo.extended.dict.yaml", "./sort_rime/ocm/ocm_mount/Mount_bopomo.extended.dict.yaml")
+shutil.copyfile("./allfiles/Mount_bopomo.schema.yaml", "./sort_rime/ocm/ocm_mount/Mount_bopomo.schema.yaml")
+
+shutil.copyfile("./allfiles/Mount_ocm.extended.dict.yaml", "./sort_rime/ocm/ocm_mount/Mount_ocm.extended.dict.yaml")
+shutil.copyfile("./allfiles/Mount_ocm.schema.yaml", "./sort_rime/ocm/ocm_mount/Mount_ocm.schema.yaml")
+
+shutil.copyfile("./allfiles/punct_ovff.dict.yaml", "./sort_rime/ocm/ocm_mount/punct_ovff.dict.yaml")
+shutil.copyfile("./allfiles/punct_ovff.schema.yaml", "./sort_rime/ocm/ocm_mount/punct_ovff.schema.yaml")
+shutil.copyfile("./allfiles/symbols_ocm.dict.yaml", "./sort_rime/ocm/ocm_mount/symbols_ocm.dict.yaml")
+shutil.copyfile("./allfiles/symbols_ocm.schema.yaml", "./sort_rime/ocm/ocm_mount/symbols_ocm.schema.yaml")
+
+shutil.copyfile("./allfiles/terra_pinyin_onion_add.dict.yaml", "./sort_rime/ocm/ocm_mount/terra_pinyin_onion_add.dict.yaml")
+shutil.copyfile("./allfiles/terra_pinyin_onion.dict.yaml", "./sort_rime/ocm/ocm_mount/terra_pinyin_onion.dict.yaml")
+shutil.copyfile("./allfiles/tcword.dict.yaml", "./sort_rime/ocm/ocm_mount/tcword.dict.yaml")
+shutil.copyfile("./allfiles/uniabcdword.dict.yaml", "./sort_rime/ocm/ocm_mount/uniabcdword.dict.yaml")
+shutil.copyfile("./allfiles/kanaword.dict.yaml", "./sort_rime/ocm/ocm_mount/kanaword.dict.yaml")
+
+shutil.copyfile("./allfiles/各方案default.custom/ocm_mount_custom/default.custom.yaml", "./sort_rime/ocm/ocm_mount/default.custom.yaml")
 
 
 #其他
