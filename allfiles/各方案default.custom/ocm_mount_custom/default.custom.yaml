@@ -8,6 +8,7 @@ patch:
   schema_list:
 ######## 洋蔥蝦米 mount（原-單出-可掛接用）版 ########
     - {schema: Mount_ocm}
+    - {schema: Mount_bopomo}
     - {schema: punct_ovff}
     - {schema: symbols_ocm}
 #################################
