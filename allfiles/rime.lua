@@ -3056,7 +3056,7 @@ function url_translator(input, seg)
     end
 
     local url2_in = string.match(input, "^(ftp:.*)$")
-    if (url1_in~=nil) then
+    if (url2_in~=nil) then
         yield(Candidate("englishtype", seg.start, seg._end, url2_in , "〔URL〕"))
         return
     end

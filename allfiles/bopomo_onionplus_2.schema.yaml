@@ -100,6 +100,8 @@ engine:
     - script_translator@cyr2
     - script_translator@all_bpm
     - lua_translator@t2_translator
+    - lua_translator@email_translator
+    - lua_translator@url_translator
     - script_translator
 
 menu:
