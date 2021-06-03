@@ -108,7 +108,7 @@ tr2_reverse_lookup:
   overwrite_comment: true
   dictionary: punct_ovff
   comment_format:
-    - xform/ /  /
+    - xform/ /   /
     - xform/^/  /
     - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
 
