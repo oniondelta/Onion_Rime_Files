@@ -66,6 +66,7 @@ engine:
     - simplifier@back_mark
     - simplifier@punct_mark
     - reverse_lookup_filter@top_reverse_lookup
+    - reverse_lookup_filter@pt_reverse_lookup
     - reverse_lookup_filter@ovff_reverse_lookup
     - reverse_lookup_filter@phonetic_reverse_lookup
     - reverse_lookup_filter@gr_reverse_lookup
@@ -250,6 +251,18 @@ pt:
   enable_user_dict: false
   preedit_format:
     - xform/^/〔蝦符〕/
+
+pt_reverse_lookup:
+  tags: [ pt ]
+  overwrite_comment: true
+  dictionary: punct_ovff
+  comment_format:
+    - xform| [][]+[a-z]*||
+    - xform| v[][]+v?||
+    - xform/ /   /
+    - xform/^/  /
+    - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
+    # - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
 ################################### 主引擎 ######################################
 translator:
   dictionary: ocm_mixin.extended
@@ -628,7 +641,7 @@ recognizer:
     # url: "^(https?:|ftp:|mailto:|file:).*$"
     # email: "^[a-z][-_.0-9a-z]*@.*$"
     punct: "[=][=][=]?$|[=]['][']?[=]?[']?[']?$|[=]?[][][][]?[']?$|[=]?[[][[]?[']?[=]?[]]?[]]?[']?$|[=][`][`]?$|[=][-,./;][-,./;]?$|[=][,][,]?[=][.][.]?$|[=][0-9] ?$|[=][9][=][0]?$|[=][=][].,90'[]+ ?$"
-    pt: "^[,.][,.'a-z]*$|^[']['a-z]*$|^[,][][]+[a-z]*$|^[,]v[][]+$" #|^v[][]+v?$|^[][]+[vrsf]*$"
+    pt: "^[,.][,.'a-z]*$|^[']['a-z]*$|^[,][][]+[a-z]*$|^[,]v[][]+$" #|^v[][]+v?$|^[][]+[a-z]*$"
     reverse2_lookup: "^';[-.,;/0-9a-z|]*'?$"
     reverse3_lookup: "^;'[a-z`|]*'?$"
     easy_en: "^',[a-z;/.'-]*$"
