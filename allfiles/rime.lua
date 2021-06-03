@@ -15,7 +15,10 @@
 --      - lua_translator@t_translator        -- 「`」開頭打出時間日期
 --      - lua_translator@t2_translator       -- 「'/」開頭打出時間日期
 --      - lua_translator@date_translator     -- 「``」開頭打出時間日期
---      - lua_translator@mytranslator
+--      - lua_translator@email_translator    -- 輸入email
+--      - lua_translator@url_translator      -- 輸入網址
+--      - lua_translator@url2_translator      -- 輸入網址（多了www.）
+--      - lua_translator@mytranslator        -- （有缺函數，參考勿用）
 --
 --      - lua_filter@charset_filter          -- 遮屏含 CJK 擴展漢字的候選項
 --      - lua_filter@charset_filter_plus         -- 遮屏含 CJK 擴展漢字的候選項，並增加開關
@@ -3029,6 +3032,81 @@ function date_translator(input, seg)
     end
 end
 
+-- function mytranslator(input, seg)
+--     date_translator(input, seg)
+--     time_translator(input, seg)
+-- end
+
+
+--- email_translator
+function email_translator(input, seg)
+    local email_in = string.match(input, "^([a-z][-_.0-9a-z]*@.*)$")
+    if (email_in~=nil) then
+        yield(Candidate("englishtype", seg.start, seg._end, email_in , "〔e-mail〕"))
+        return
+    end
+end
+
+--- url_translator
+function url_translator(input, seg)
+    local url1_in = string.match(input, "^(https?:.*)$")
+    if (url1_in~=nil) then
+        yield(Candidate("englishtype", seg.start, seg._end, url1_in , "〔URL〕"))
+        return
+    end
+
+    local url2_in = string.match(input, "^(ftp:.*)$")
+    if (url1_in~=nil) then
+        yield(Candidate("englishtype", seg.start, seg._end, url2_in , "〔URL〕"))
+        return
+    end
+
+    local url3_in = string.match(input, "^(mailto:.*)$")
+    if (url3_in~=nil) then
+        yield(Candidate("englishtype", seg.start, seg._end, url3_in , "〔URL〕"))
+        return
+    end
+
+    local url4_in = string.match(input, "^(file:.*)$")
+    if (url4_in~=nil) then
+        yield(Candidate("englishtype", seg.start, seg._end, url4_in , "〔URL〕"))
+        return
+    end
+end
+
+--- url2_translator
+function url2_translator(input, seg)
+    local www_in = string.match(input, "^(www[.].*)$")
+    if (www_in~=nil) then
+        yield(Candidate("englishtype", seg.start, seg._end, www_in , "〔URL〕"))
+        return
+    end
+
+    local url1_in = string.match(input, "^(https?:.*)$")
+    if (url1_in~=nil) then
+        yield(Candidate("englishtype", seg.start, seg._end, url1_in , "〔URL〕"))
+        return
+    end
+
+    local url2_in = string.match(input, "^(ftp:.*)$")
+    if (url1_in~=nil) then
+        yield(Candidate("englishtype", seg.start, seg._end, url2_in , "〔URL〕"))
+        return
+    end
+
+    local url3_in = string.match(input, "^(mailto:.*)$")
+    if (url3_in~=nil) then
+        yield(Candidate("englishtype", seg.start, seg._end, url3_in , "〔URL〕"))
+        return
+    end
+
+    local url4_in = string.match(input, "^(file:.*)$")
+    if (url4_in~=nil) then
+        yield(Candidate("englishtype", seg.start, seg._end, url4_in , "〔URL〕"))
+        return
+    end
+end
+
 --- charset filter
 --[[
 charset_filter: 濾除含 CJK 擴展漢字的候選項
@@ -3254,10 +3332,6 @@ function myfilter(input)
     reverse_lookup_filter(input2)
 end
 
-function mytranslator(input, seg)
-    date_translator(input, seg)
-    time_translator(input, seg)
-end
 
 --- 韓語（非英語等）空格鍵後添加" "
 function endspace(key, env)
