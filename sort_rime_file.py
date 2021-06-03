@@ -427,7 +427,7 @@ os.rename('./sort_rime/注音洋蔥plus版/', './sort_rime/注音洋蔥plus版_'
 
 os.rename('./sort_rime/ocm/ocm_mixin/', './sort_rime/ocm/ocm_mixin_'+localtime)
 os.rename('./sort_rime/ocm/ocm_plus/', './sort_rime/ocm/ocm_plus_'+localtime)
-os.rename('./sort_rime/ocm/ocm_plus/', './sort_rime/ocm/ocm_ocm_'+localtime)
+os.rename('./sort_rime/ocm/ocm_plus/', './sort_rime/ocm/ocm_mount_'+localtime)
 os.rename('./sort_rime/ocm/', './sort_rime/ocm_'+localtime)
 
 os.rename('./sort_rime/', './電腦RIME方案_'+localtime)
