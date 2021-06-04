@@ -403,6 +403,8 @@ shutil.copyfile("./allfiles/tcword.dict.yaml", "./sort_rime/ocm/ocm_mount/tcword
 shutil.copyfile("./allfiles/uniabcdword.dict.yaml", "./sort_rime/ocm/ocm_mount/uniabcdword.dict.yaml")
 shutil.copyfile("./allfiles/kanaword.dict.yaml", "./sort_rime/ocm/ocm_mount/kanaword.dict.yaml")
 
+shutil.copyfile("./allfiles/rime.lua", "./sort_rime/ocm/ocm_mount/rime.lua")
+
 shutil.copyfile("./allfiles/各方案default.custom/ocm_mount_custom/default.custom.yaml", "./sort_rime/ocm/ocm_mount/default.custom.yaml")
 
 
