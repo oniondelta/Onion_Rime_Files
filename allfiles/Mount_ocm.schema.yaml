@@ -241,8 +241,10 @@ key_binder:
     - {accept: space, send: space, when: has_menu} #補上一條產生之bug
     - {accept: Shift+space, send: Page_Down, when: has_menu}
     - {accept: Shift+Tab, send: Page_Up, when: paging}
+#######################################
     - {accept: Control+apostrophe, toggle: extended_charset, when: always } #增廣常用字符過濾，新增開關
     - {accept: Control+equal, toggle: simplify_comment, when: always } #提示碼開關
+    - {accept: Control+Shift+7, toggle: simplify_comment, when: always}
 
 punctuator:
   # import_preset: default #symbols_ovff
