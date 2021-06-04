@@ -53,6 +53,9 @@ switches:
   - name: punct_mark
     reset: 1
 #    states: [ 無, 註 ]
+  - name: simplify_comment
+    reset: 0
+    states: [ 碼, 無 ]
 
 engine:
   filters:
@@ -62,17 +65,18 @@ engine:
 #    - charset_filter@gbk
 #    - charset_filter@gb2312
     - simplifier
-    - simplifier@emoji_switch
-    - simplifier@back_mark
-    - simplifier@punct_mark
     - reverse_lookup_filter@top_reverse_lookup
     - reverse_lookup_filter@pt_reverse_lookup
-    - reverse_lookup_filter@ovff_reverse_lookup
-    - reverse_lookup_filter@phonetic_reverse_lookup
     - reverse_lookup_filter@gr_reverse_lookup
     - reverse_lookup_filter@cyr_reverse_lookup
     - reverse_lookup_filter@fs_reverse_lookup
+    - simplifier@back_mark
+    - lua_filter@comment_filter_plus
+    - simplifier@emoji_switch
+    - reverse_lookup_filter@ovff_reverse_lookup
+    - reverse_lookup_filter@phonetic_reverse_lookup
     - reverse_lookup_filter@e_reverse_lookup
+    - simplifier@punct_mark
     - uniquifier
   processors:
     - ascii_composer
