@@ -521,9 +521,6 @@ key_binder:
   import_preset: default
   bindings:
     __include: element_ocm:/key_binder
-    __append:
-    - {accept: Control+equal, toggle: simplify_comment, when: always } #「蝦米碼」提示碼開關
-    - {accept: Control+minus, toggle: back_mark, when: always } #「國際音標和符號」提示碼開關
 
 editor:
   bindings:
