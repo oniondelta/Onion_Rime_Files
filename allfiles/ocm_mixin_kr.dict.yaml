@@ -20141,144 +20141,144 @@ use_preset_vocabulary: false
 # 긆	yviv/
 ### 以簡根在後，韓文補碼vr結束 ###
 ### （與以上相反）以基本字根在後，韓文補碼vr起始 ###
-뺘	aafv/
-뼈	aagv/
-빼	aahv/
-삐	aaiv/
-뻐	aajv/
-뾰	aamv/
-뽀	aanv/
-뻬	aapv/
-쀼	aarv/
-뿌	aatv/
-쁘	aavv/
-빠	aakv/
-뱨	ahhv/
-봬	anhv/
-뵈	aniv/
-봐	ankv/
-볘	appv/
-뷔	ativ/
-붜	atjv/
-붸	atpv/
-븨	aviv/
-섀	bhhv/
-쇄	bnhv/
-쇠	bniv/
-솨	bnkv/
-셰	bppv/
-쉬	btiv/
-숴	btjv/
-쉐	btpv/
-싀	bviv/
-댸	chhv/
-돼	cnhv/
-되	cniv/
-돠	cnkv/
-뎨	cppv/
-뒤	ctiv/
-둬	ctjv/
-뒈	ctpv/
-듸	cviv/
-퍠	xhhv/
-퐤	xnhv/
-푀	xniv/
-퐈	xnkv/
-폐	xppv/
-퓌	xtiv/
-풔	xtjv/
-풰	xtpv/
-픠	xviv/
-턔	ehhv/
-퇘	enhv/
-퇴	eniv/
-톼	enkv/
-톄	eppv/
-튀	etiv/
-퉈	etjv/
-퉤	etpv/
-틔	eviv/
-컈	zhhv/
-쾌	znhv/
-쾨	zniv/
-콰	znkv/
-켸	zppv/
-퀴	ztiv/
-쿼	ztjv/
-퀘	ztpv/
-킈	zviv/
-냬	lhhv/
-놰	lnhv/
-뇌	lniv/
-놔	lnkv/
-녜	lppv/
-뉘	ltiv/
-눠	ltjv/
-눼	ltpv/
-늬	lviv/
-먜	ohhv/
-뫠	onhv/
-뫼	oniv/
-뫄	onkv/
-몌	oppv/
-뮈	otiv/
-뭐	otjv/
-뭬	otpv/
-믜	oviv/
-얘	qhhv/
-왜	qnhv/
-외	qniv/
-와	qnkv/
-예	qppv/
-위	qtiv/
-워	qtjv/
-웨	qtpv/
-의	qviv/
-럐	shhv/
-뢔	snhv/
-뢰	sniv/
-롸	snkv/
-례	sppv/
-뤼	stiv/
-뤄	stjv/
-뤠	stpv/
-릐	sviv/
-쟤	uhhv/
-좨	unhv/
-죄	univ/
-좌	unkv/
-졔	uppv/
-쥐	utiv/
-줘	utjv/
-줴	utpv/
-즤	uviv/
-햬	whhv/
-홰	wnhv/
-회	wniv/
-화	wnkv/
-혜	wppv/
-휘	wtiv/
-훠	wtjv/
-훼	wtpv/
-희	wviv/
-챼	dhhv/
-쵀	dnhv/
-최	dniv/
-촤	dnkv/
-쳬	dppv/
-취	dtiv/
-춰	dtjv/
-췌	dtpv/
-츼	dviv/
-걔	yhhv/
-괘	ynhv/
-괴	yniv/
-과	ynkv/
-계	yppv/
-귀	ytiv/
-궈	ytjv/
-궤	ytpv/
-긔	yviv/
+# 뺘	aafv/
+# 뼈	aagv/
+# 빼	aahv/
+# 삐	aaiv/
+# 뻐	aajv/
+# 뾰	aamv/
+# 뽀	aanv/
+# 뻬	aapv/
+# 쀼	aarv/
+# 뿌	aatv/
+# 쁘	aavv/
+# 빠	aakv/
+# 뱨	ahhv/
+# 봬	anhv/
+# 뵈	aniv/
+# 봐	ankv/
+# 볘	appv/
+# 뷔	ativ/
+# 붜	atjv/
+# 붸	atpv/
+# 븨	aviv/
+# 섀	bhhv/
+# 쇄	bnhv/
+# 쇠	bniv/
+# 솨	bnkv/
+# 셰	bppv/
+# 쉬	btiv/
+# 숴	btjv/
+# 쉐	btpv/
+# 싀	bviv/
+# 댸	chhv/
+# 돼	cnhv/
+# 되	cniv/
+# 돠	cnkv/
+# 뎨	cppv/
+# 뒤	ctiv/
+# 둬	ctjv/
+# 뒈	ctpv/
+# 듸	cviv/
+# 퍠	xhhv/
+# 퐤	xnhv/
+# 푀	xniv/
+# 퐈	xnkv/
+# 폐	xppv/
+# 퓌	xtiv/
+# 풔	xtjv/
+# 풰	xtpv/
+# 픠	xviv/
+# 턔	ehhv/
+# 퇘	enhv/
+# 퇴	eniv/
+# 톼	enkv/
+# 톄	eppv/
+# 튀	etiv/
+# 퉈	etjv/
+# 퉤	etpv/
+# 틔	eviv/
+# 컈	zhhv/
+# 쾌	znhv/
+# 쾨	zniv/
+# 콰	znkv/
+# 켸	zppv/
+# 퀴	ztiv/
+# 쿼	ztjv/
+# 퀘	ztpv/
+# 킈	zviv/
+# 냬	lhhv/
+# 놰	lnhv/
+# 뇌	lniv/
+# 놔	lnkv/
+# 녜	lppv/
+# 뉘	ltiv/
+# 눠	ltjv/
+# 눼	ltpv/
+# 늬	lviv/
+# 먜	ohhv/
+# 뫠	onhv/
+# 뫼	oniv/
+# 뫄	onkv/
+# 몌	oppv/
+# 뮈	otiv/
+# 뭐	otjv/
+# 뭬	otpv/
+# 믜	oviv/
+# 얘	qhhv/
+# 왜	qnhv/
+# 외	qniv/
+# 와	qnkv/
+# 예	qppv/
+# 위	qtiv/
+# 워	qtjv/
+# 웨	qtpv/
+# 의	qviv/
+# 럐	shhv/
+# 뢔	snhv/
+# 뢰	sniv/
+# 롸	snkv/
+# 례	sppv/
+# 뤼	stiv/
+# 뤄	stjv/
+# 뤠	stpv/
+# 릐	sviv/
+# 쟤	uhhv/
+# 좨	unhv/
+# 죄	univ/
+# 좌	unkv/
+# 졔	uppv/
+# 쥐	utiv/
+# 줘	utjv/
+# 줴	utpv/
+# 즤	uviv/
+# 햬	whhv/
+# 홰	wnhv/
+# 회	wniv/
+# 화	wnkv/
+# 혜	wppv/
+# 휘	wtiv/
+# 훠	wtjv/
+# 훼	wtpv/
+# 희	wviv/
+# 챼	dhhv/
+# 쵀	dnhv/
+# 최	dniv/
+# 촤	dnkv/
+# 쳬	dppv/
+# 취	dtiv/
+# 춰	dtjv/
+# 췌	dtpv/
+# 츼	dviv/
+# 걔	yhhv/
+# 괘	ynhv/
+# 괴	yniv/
+# 과	ynkv/
+# 계	yppv/
+# 귀	ytiv/
+# 궈	ytjv/
+# 궤	ytpv/
+# 긔	yviv/
 ### 以基本字根在後，韓文補碼vr結束 ###
 ##### 韓文音節 HangulSyllables 結束 #####
 ##### 韓文單音補充 (韓文古代使用字母-注意有些字母會自動合併) #####
