@@ -17,13 +17,15 @@
 --      - lua_translator@date_translator     -- 「``」開頭打出時間日期
 --      - lua_translator@email_translator    -- 輸入email
 --      - lua_translator@url_translator      -- 輸入網址
---      - lua_translator@urlw_translator      -- 輸入網址（多了www.）
+--      - lua_translator@urlw_translator     -- 輸入網址（多了www.）
 --      - lua_translator@mytranslator        -- （有缺函數，參考勿用）
 --
+--      《 ＊ 以下濾鏡注意在 filters 中的順序 》
 --      - lua_filter@charset_filter          -- 遮屏含 CJK 擴展漢字的候選項
---      - lua_filter@charset_filter_plus         -- 遮屏含 CJK 擴展漢字的候選項，並增加開關
---      - lua_filter@charset_comment_filter  -- 為候選項加上其所屬字符集的註釋
---      - lua_filter@charset_filter2         -- 遮屏「᰼᰼」
+--      - lua_filter@charset_filter_plus     -- 遮屏含 CJK 擴展漢字的候選項，開關（only_cjk_filter）
+--      - lua_filter@charset_filter2         -- 遮屏選含「᰼᰼」候選項
+--      - lua_filter@comment_filter_plus     -- 遮屏提示碼，開關（simplify_comment）
+--      - lua_filter@charset_comment_filter  -- 為候選項註釋其所屬字符集，如：CJK、ExtA
 --      - lua_filter@single_char_filter      -- 候選項重排序，使單字優先
 --      - lua_filter@reverse_lookup_filter   -- 依地球拼音為候選項加上帶調拼音的註釋
 --      - lua_filter@myfilter
@@ -3366,5 +3368,30 @@ function endspace(key, env)
         end
     end
     return 2 -- kNoop
+end
+
+
+--- 嘸蝦米後面註釋刪除
+-- local function xform_c(cf)
+--     if cf == "" then return "" end
+--     cf = string.gsub(cf, "[ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ%s]+$", "zk")
+--     return cf
+-- end
+
+function comment_filter_plus(input, env)
+    local s_c_f = env.engine.context:get_option("simplify_comment")
+    -- 使用 `iter()` 遍歷所有輸入候選項
+    for cand in input:iter() do
+        if (not s_c_f) then
+            yield(cand)
+        else
+        --     -- comment123 = cand.comment .. cand.text .. "open"
+        --     -- comment123 = cand.comment
+        --     -- comment123 = "kkk" .. comment123
+        --     -- cand:get_genuine().comment = comment123 .." "
+            cand:get_genuine().comment = ""
+            yield(cand)
+        end
+    end
 end
 
