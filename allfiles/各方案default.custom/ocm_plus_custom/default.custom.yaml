@@ -15,12 +15,14 @@ patch:
     - {schema: dif1_gr}
     - {schema: dif1_cy}
     - {schema: dif1_fs}
+    - {schema: jpnin1}
     - {schema: Mount_bopomo}
     - {schema: allbpm}
     - {schema: easy_en_b}
     - {schema: easy_en_comment}
     - {schema: punct_ovff}
     - {schema: symbols_ocm}
+    - {schema: cangjie5}
 #################################
 
   switcher/fix_schema_list_order: true #固定方案選單順序
