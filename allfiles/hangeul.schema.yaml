@@ -4,7 +4,7 @@
 schema:
   schema_id: hangeul # 注意此ID與文件名裏 .schema.yaml 之前的部分相同
   name: ❃韓語形碼❃
-  version: "202102"
+  version: "202106"
   author:
     - 『洋蔥』
   description: |
@@ -21,7 +21,7 @@ switches:
 
 engine:
   processors:
-    - lua_processor@endspace
+    - lua_processor@endspace #用戶詞典無法記憶，考慮關閉，但使用符號置換方式切分會有問題！且字典已用詞頻校正，測試效果中。hangeul2set 沒有記憶問題則開啟。
     - ascii_composer
     - recognizer
     - key_binder
@@ -115,7 +115,8 @@ punctuator:
     "}" : [ 』, 〗, 〉, ｝ ]
   half_shape:
     "`" : { commit: "₩" }
-#     "|" : { commit: " " }
+#關#    "|" : { commit: " " }
+#關#    "\\" : ['\', '|']
     "$" : [ "$", "₩", "＄", "¥", "￥", "€", "£", "￡", "₤", "¢", "￠", "₵", "₡", "¤", "৳", "฿", "₠", "₢", "₣", "₥", "₦", "₧", "₪", "₫", "₭", "₮", "₯", "₰", "₱", "₲", "₳", "₴", "₶", "₷", "₸", "₹", "₺", "₨", "﷼" ]
     "%" : [ "%", "％", "‰", "‱", "°", "℃", "℉", "Å", "㏃", "㏆", "㎈", "㏄", "㏅", "㎝", "㎠", "㎤", "㏈", "㎗", "㎙", "㎓", "㎬", "㏉", "㏊", "㏋", "㎐", "㏌", "㎄", "㎅", "㎉", "㎏", "㎑", "㏍", "㎘", "㎞", "㏎", "㎢", "㎦", "㎪", "㏏", "㎸", "㎾", "㏀", "㏐", "㏓", "㎧", "㎨", "㎡", "㎥", "㎃", "㏔", "㎆", "㎎", "㎒", "㏕", "㎖", "㎜", "㎟", "㎣", "㏖", "㎫", "㎳", "㎷", "㎹", "㎽", "㎿", "㏁", "㎁", "㎋", "㎚", "㎱", "㎵", "㎻", "㏘", "㎩", "㎀", "㎊", "㏗", "㏙", "㏚", "㎰", "㎴", "㎺", "㎭", "㎮", "㎯", "㏛", "㏜", "㎔", "㏝", "㎂", "㎌", "㎍", "㎕", "㎛", "㎲", "㎶", "㎼" ]
     "&" : [ "&", "＆", "＃", "＠", ⅟, ½, ↉, ⅓, ⅔, ¼, ⅕, ⅖, ⅗, ⅘, ⅙, ⅚, ⅐, ⅛, ⅜, ⅝, ⅞, ⅑, ⅒ ]
@@ -147,8 +148,8 @@ key_binder:
     - {accept: Shift+Tab, send: Page_Up, when: paging}
 #     - {accept: Return, send: space, when: paging}
 #     - {accept: Return, send: space, when: has_menu}
-#     - {accept: space, send: bar, when: has_menu}
-#     - {accept: space, send: space, when: paging}
+#關#    - {accept: space, send: bar, when: has_menu}
+#關#    - {accept: space, send: space, when: paging}
 
 editor:
   bindings:
