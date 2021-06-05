@@ -9,6 +9,7 @@ patch:
 ######## 洋蔥蝦米 mix‧in 版 ########
     - {schema: ocm_mixin}
     - {schema: Mount_ocm}
+    - {schema: jpnin1}
     - {schema: ocm_mixin_greek}
     - {schema: ocm_mixin_cyrillic}
     - {schema: ocm_mixin_fullshape}
@@ -18,6 +19,7 @@ patch:
     - {schema: easy_en_comment}
     - {schema: punct_ovff}
     - {schema: symbols_ocm}
+    - {schema: cangjie5}
 #################################
 
   switcher/fix_schema_list_order: true #固定方案選單順序
