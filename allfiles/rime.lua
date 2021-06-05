@@ -3370,10 +3370,13 @@ function endspace(key, env)
             -- 下一句：用冒號為精簡寫法，該句為完整寫法
             -- engine.commit_text(engine, s_orig .. "a")
             -- engine:commit_text(s_orig .. "a")
-            engine:commit_text(s_orig .. " ")
+            engine:commit_text(s_orig .. " ") --「return 1」時用
+            -- engine:commit_text(s_orig) --「return 0」「return 2」時用
             context:clear()
-            return 1 --「0」「2」「kAccepted」「kRejected」「kNoop」：直接後綴產生空白   「1」：後綴不會產生空白，可用.." "增加空白或其他符號
-            -- 「拒」kRejected、「收」kAccepted、「不認得」kNoop，分別對應返回值：0、1、2。
+            return 1
+            -- 「0」「2」「kAccepted」「kRejected」「kNoop」：直接後綴產生空白
+            -- 「1」：後綴不會產生空白，可用.." "增加空白或其他符號
+            -- （該條目有問題，實測對應不起來）「拒」kRejected、「收」kAccepted、「不認得」kNoop，分別對應返回值：0、1、2。
             -- 返回「拒絕」時，雖然我們已經處理過按鍵了，但系統以為沒有，於是會按默認值再處理一遍。
         end
     end
