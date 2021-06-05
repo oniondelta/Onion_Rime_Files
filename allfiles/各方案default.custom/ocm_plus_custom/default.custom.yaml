@@ -8,6 +8,7 @@ patch:
   schema_list:
 ######## 洋蔥蝦米 plus(dif) 版 ########
     - {schema: dif1}
+    - {schema: jpnin1}
     - {schema: dif1_jphi}
     - {schema: dif1_jpka}
     - {schema: dif1_kr}
@@ -15,7 +16,6 @@ patch:
     - {schema: dif1_gr}
     - {schema: dif1_cy}
     - {schema: dif1_fs}
-    - {schema: jpnin1}
     - {schema: Mount_bopomo}
     - {schema: allbpm}
     - {schema: easy_en_b}
