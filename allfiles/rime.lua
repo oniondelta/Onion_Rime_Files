@@ -28,7 +28,7 @@
 --      - lua_filter@charset_comment_filter  -- 為候選項註釋其所屬字符集，如：CJK、ExtA
 --      - lua_filter@single_char_filter      -- 候選項重排序，使單字優先
 --      - lua_filter@reverse_lookup_filter   -- 依地球拼音為候選項加上帶調拼音的註釋
---      - lua_filter@myfilter
+--      - lua_filter@myfilter                -- （有不明函數，暫關閉）
 --
 --      - lua_processor@endspace -- 韓語（非英語等）空格鍵後添加" "
 --      ...
@@ -3041,6 +3041,9 @@ end
 
 
 --- email_translator
+--[[
+把 recognizer 正則輸入 email 使用 lua 實現，使之有選項，避免設定空白清屏時無法上屏。
+--]]
 function email_translator(input, seg)
     local email_in = string.match(input, "^([a-z][-_.0-9a-z]*@.*)$")
     if (email_in~=nil) then
@@ -3050,6 +3053,9 @@ function email_translator(input, seg)
 end
 
 --- url_translator
+--[[
+把 recognizer 正則輸入網址使用 lua 實現，使之有選項，避免設定空白清屏時無法上屏。
+--]]
 function url_translator(input, seg)
     local url1_in = string.match(input, "^(https?:.*)$")
     if (url1_in~=nil) then
@@ -3077,6 +3083,10 @@ function url_translator(input, seg)
 end
 
 --- urlw_translator
+--[[
+把 recognizer 正則輸入網址使用 lua 實現，使之有選項，避免設定空白清屏時無法上屏。
+該項多加「www.」
+--]]
 function urlw_translator(input, seg)
     local www_in = string.match(input, "^(www[.].*)$")
     if (www_in~=nil) then
@@ -3329,10 +3339,10 @@ end
 
 
 --- composition
-function myfilter(input)
-    local input2 = Translation(charset_comment_filter, input)
-    reverse_lookup_filter(input2)
-end
+-- function myfilter(input)
+--     local input2 = Translation(charset_comment_filter, input)
+--     reverse_lookup_filter(input2)
+-- end
 
 
 --- 韓語（非英語等）空格鍵後添加" "
