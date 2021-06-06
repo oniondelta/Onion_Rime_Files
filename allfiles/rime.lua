@@ -1760,21 +1760,21 @@ function t_translator(input, seg)
         end
 
         if(input=="`/") then
-            local cand2 = Candidate("letter", seg.start, seg._end, "    [a-z]+〔小寫字母〕" , "")
+            local cand2 = Candidate("letter", seg.start, seg._end, " " , "  [a-z]+〔小寫字母〕")
             cand2.preedit = input .. '\t《小寫字母》▶'
             yield(cand2)
             return
         end
 
         if(input=="`;") then
-            local cand2 = Candidate("letter", seg.start, seg._end, "    [a-z]+〔大寫字母〕" , "")
+            local cand2 = Candidate("letter", seg.start, seg._end, " " , "  [a-z]+〔大寫字母〕")
             cand2.preedit = input .. '\t《大寫字母》▶'
             yield(cand2)
             return
         end
 
         if(input=="`'") then
-            local cand2 = Candidate("letter", seg.start, seg._end, "    [a-z]+〔開頭大寫字母〕" , "")
+            local cand2 = Candidate("letter", seg.start, seg._end, " " , "  [a-z]+〔開頭大寫字母〕")
             cand2.preedit = input .. '\t《開頭大寫字母》▶'
             yield(cand2)
             return
@@ -2819,21 +2819,21 @@ function t2_translator(input, seg)
         end
 
         if(input=="'//") then
-            local cand2 = Candidate("letter", seg.start, seg._end, "    [a-z]+〔小寫字母〕" , "")
+            local cand2 = Candidate("letter", seg.start, seg._end, " " , "  [a-z]+〔小寫字母〕")
             cand2.preedit = input .. '\t《小寫字母》▶'
             yield(cand2)
             return
         end
 
         if(input=="'/;") then
-            local cand2 = Candidate("letter", seg.start, seg._end, "    [a-z]+〔大寫字母〕" , "")
+            local cand2 = Candidate("letter", seg.start, seg._end, " " , "  [a-z]+〔大寫字母〕")
             cand2.preedit = input .. '\t《大寫字母》▶'
             yield(cand2)
             return
         end
 
         if(input=="'/'") then
-            local cand2 = Candidate("letter", seg.start, seg._end, "    [a-z]+〔開頭大寫字母〕" , "")
+            local cand2 = Candidate("letter", seg.start, seg._end, " " , "  [a-z]+〔開頭大寫字母〕")
             cand2.preedit = input .. '\t《開頭大寫字母》▶'
             yield(cand2)
             return
