@@ -10,6 +10,7 @@ patch:
     - schema: bo_mixin1
     - schema: bo_mixin2
     - schema: bo_mixin3
+    - schema: bo_mixin4
     - schema: jpnin1
     - schema: greek
     - schema: cyrillic
