@@ -59,6 +59,7 @@ shutil.copyfile("./allfiles/bo_mixin.extended.dict.yaml", "./sort_rime/注音洋
 shutil.copyfile("./allfiles/bo_mixin1.schema.yaml", "./sort_rime/注音洋蔥mixin版/bo_mixin1.schema.yaml")
 shutil.copyfile("./allfiles/bo_mixin2.schema.yaml", "./sort_rime/注音洋蔥mixin版/bo_mixin2.schema.yaml")
 shutil.copyfile("./allfiles/bo_mixin3.schema.yaml", "./sort_rime/注音洋蔥mixin版/bo_mixin3.schema.yaml")
+shutil.copyfile("./allfiles/bo_mixin4.schema.yaml", "./sort_rime/注音洋蔥mixin版/bo_mixin4.schema.yaml")
 shutil.copyfile("./allfiles/cangjie5.dict.yaml", "./sort_rime/注音洋蔥mixin版/cangjie5.dict.yaml")
 shutil.copyfile("./allfiles/cangjie5.schema.yaml", "./sort_rime/注音洋蔥mixin版/cangjie5.schema.yaml")
 shutil.copyfile("./allfiles/cyrillic.dict.yaml", "./sort_rime/注音洋蔥mixin版/cyrillic.dict.yaml")
