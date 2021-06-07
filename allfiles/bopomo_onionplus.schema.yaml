@@ -61,6 +61,7 @@ engine:
     - reverse_lookup_filter@e_reverse_lookup
     - uniquifier
   processors:
+    - lua_processor@s2r
     - ascii_composer
     - recognizer
     - key_binder
