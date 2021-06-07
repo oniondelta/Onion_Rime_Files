@@ -30,7 +30,10 @@
 --      - lua_filter@reverse_lookup_filter   -- 依地球拼音為候選項加上帶調拼音的註釋
 --      - lua_filter@myfilter                -- （有不明函數，暫關閉）
 --
---      - lua_processor@endspace -- 韓語（非英語等）空格鍵後添加" "
+--      - lua_processor@endspace             -- 韓語（非英語等）空格鍵後添加" "
+--      - lua_processor@s2r                  -- 注音掛接 t2_translator 空白上屏產生莫名空格去除
+--      - lua_processor@s2r3                 -- 注音 mixin3(特殊正則) 掛接 t2_translator 空白上屏產生莫名空格去除
+--      - lua_processor@s2r_e_u              -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（只針對 email 和 url ）
 --      ...
 
 local function rqzdx1(a)
@@ -3381,6 +3384,66 @@ function endspace(key, env)
         end
     end
     return 2 -- kNoop
+end
+
+
+--- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。
+function s2r(key, env)
+    local engine = env.engine
+    local context = engine.context
+    -- local page_size = engine.schema.page_size
+    if (key:repr() == 'space') then
+        local s_orig = context:get_commit_text()
+        local o_input = context.input
+        if (context:is_composing()) then
+            if (string.find(o_input, "'/[';/]?[a-z]*$") or string.find(o_input, "'/[0-9/-]*$") or string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$") or string.find(o_input, "^https?:.*$") or string.find(o_input, "^ftp:.*$") or string.find(o_input, "^mailto:.*$") or string.find(o_input, "^file:.*$") ) then
+                engine:commit_text(s_orig)
+                context:clear()
+            return 1 -- kAccepted
+            end
+        end
+    end
+end
+
+
+--- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（特別正則 for mixin3）
+function s2r3(key, env)
+    local engine = env.engine
+    local context = engine.context
+    -- local page_size = engine.schema.page_size
+    if (key:repr() == 'space') then
+        local s_orig = context:get_commit_text()
+        local o_input = context.input
+        if (context:is_composing()) then
+            if (string.find(o_input, "^'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[-,./;a-z125890][][3467%s]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "''/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[=][0-9]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[=][][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[=][][][][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[=][-,.;=`]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[=][-,.;'=`][-,.;'=`]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$") or string.find(o_input, "^https?:.*$") or string.find(o_input, "^ftp:.*$") or string.find(o_input, "^mailto:.*$") or string.find(o_input, "^file:.*$") ) then
+-- 無效的正則，不去影響一般輸入！
+-- string.find(o_input, "[=][-,.;'=`]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][']'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][][][']'/[';/]?[a-z0-9/-]*$") 
+-- "^'/[';/]?[a-z0-9/-]*$|(?<=[-,./;a-z125890][][3467 ])'/[';/]?[a-z0-9/-]*$|(?<=['])'/[';/]?[a-z0-9/-]*$|(?<=[=][0-9])'/[';/]?[a-z0-9/-]*$|(?<=[=][][])'/[';/]?[a-z0-9/-]*$|(?<=[=][][][][])'/[';/]?[a-z0-9/-]*$|(?<=[=][-,.;'=`])'/[';/]?[a-z0-9/-]*$|(?<=[=][-,.;'=`][-,.;'=`])'/[';/]?[a-z0-9/-]*$|(?<=[][])'/[';/]?[a-z0-9/-]*$|(?<=[][][][])'/[';/]?[a-z0-9/-]*$|(?<=[][]['])'/[';/]?[a-z0-9/-]*$|(?<=[][][][]['])'/[';/]?[a-z0-9/-]*$"
+                engine:commit_text(s_orig)
+                context:clear()
+            return 1 -- kAccepted
+            end
+        end
+    end
+end
+
+
+--- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（只針對 email 和 url ）
+function s2r_e_u(key, env)
+    local engine = env.engine
+    local context = engine.context
+    -- local page_size = engine.schema.page_size
+    if (key:repr() == 'space') then
+        local s_orig = context:get_commit_text()
+        local o_input = context.input
+        if (context:is_composing()) then
+            if (string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$") or string.find(o_input, "^https?:.*$") or string.find(o_input, "^ftp:.*$") or string.find(o_input, "^mailto:.*$") or string.find(o_input, "^file:.*$") ) then
+                engine:commit_text(s_orig)
+                context:clear()
+            return 1 -- kAccepted
+            end
+        end
+    end
 end
 
 
