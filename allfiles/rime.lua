@@ -1909,7 +1909,7 @@ function t_translator(input, seg)
 
         local numberout = string.match(input, "`(%d+)$")
         local n = string.sub(numberout, 1)
-        if (numberout~=nil) and (tonumber(n)) ~= nil then
+        if (numberout~=nil and (tonumber(n))~=nil) then
             yield(Candidate("number", seg.start, seg._end, numberout , "〔一般數字〕"))
             yield(Candidate("number", seg.start, seg._end, fullshape_number(numberout), "〔全形數字〕"))
             yield(Candidate("number", seg.start, seg._end, math1_number(numberout), "〔數學粗體數字〕"))
@@ -2969,7 +2969,7 @@ function t2_translator(input, seg)
         -- local numberout = string.match(input, "'//?(%d+)$")
         local numberout = string.match(input, "'/(%d+)$")
         local n = string.sub(numberout, 1)
-        if (numberout~=nil) and (tonumber(n)) ~= nil then
+        if (numberout~=nil and (tonumber(n))~=nil) then
             yield(Candidate("number", seg.start, seg._end, numberout , "〔一般數字〕"))
             yield(Candidate("number", seg.start, seg._end, fullshape_number(numberout), "〔全形數字〕"))
             yield(Candidate("number", seg.start, seg._end, math1_number(numberout), "〔數學粗體數字〕"))
@@ -3354,7 +3354,7 @@ function endspace(key, env)
     local context = engine.context
     -- local arr = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}
     --- accept: space_do_space when: composing
-    if (key:repr() == "space") and (context:is_composing()) then
+    if (key:repr() == "space" and context:is_composing()) then
         local caret_pos = context.caret_pos
         local s_orig = context:get_commit_text()
         -- local s_orig = context:get_commit_composition()
@@ -3362,7 +3362,7 @@ function endspace(key, env)
         -- local o_orig = context:get_script_text()
         -- local o_orig = string.gsub(context:get_script_text(), " ", "a")
         -- 以下「含有英文字母、控制字元、空白」和「切分上屏時」不作用（用字數統計驗證是否切分）
-        if (not string.find(s_orig, "[%a%c%s]")) and (caret_pos == context.input:len()) then
+        if (not string.find(s_orig, "[%a%c%s]") and caret_pos == context.input:len()) then
         -- if (not string.find(o_orig, "[%a%c%s]")) and (caret_pos == context.input:len()) then
         -- if (string.find(o_orig, "[%a%c%s]")) and (caret_pos == context.input:len()) then
             -- 下一句：游標位置向左一格，在本例無用，單純記錄用法
@@ -3392,15 +3392,13 @@ function s2r(key, env)
     local engine = env.engine
     local context = engine.context
     -- local page_size = engine.schema.page_size
-    if (key:repr() == 'space') then
+    if (key:repr() == 'space' and context:is_composing()) then
         local s_orig = context:get_commit_text()
         local o_input = context.input
-        if (context:is_composing()) then
-            if (string.find(o_input, "'/[';/]?[a-z]*$") or string.find(o_input, "'/[0-9/-]*$") or string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$") or string.find(o_input, "^https?:.*$") or string.find(o_input, "^ftp:.*$") or string.find(o_input, "^mailto:.*$") or string.find(o_input, "^file:.*$") ) then
-                engine:commit_text(s_orig)
-                context:clear()
+        if (string.find(o_input, "'/[';/]?[a-z]*$") or string.find(o_input, "'/[0-9/-]*$") or string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$") or string.find(o_input, "^https?:.*$") or string.find(o_input, "^ftp:.*$") or string.find(o_input, "^mailto:.*$") or string.find(o_input, "^file:.*$") ) then
+            engine:commit_text(s_orig)
+            context:clear()
             return 1 -- kAccepted
-            end
         end
     end
 end
@@ -3411,18 +3409,16 @@ function s2r3(key, env)
     local engine = env.engine
     local context = engine.context
     -- local page_size = engine.schema.page_size
-    if (key:repr() == 'space') then
+    if (key:repr() == 'space' and context:is_composing()) then
         local s_orig = context:get_commit_text()
         local o_input = context.input
-        if (context:is_composing()) then
-            if (string.find(o_input, "^'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[-,./;a-z125890][][3467%s]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "''/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[=][0-9]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[=][][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[=][][][][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[=][-,.;=`]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[=][-,.;'=`][-,.;'=`]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$") or string.find(o_input, "^https?:.*$") or string.find(o_input, "^ftp:.*$") or string.find(o_input, "^mailto:.*$") or string.find(o_input, "^file:.*$") ) then
+        if (string.find(o_input, "^'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[-,./;a-z125890][][3467%s]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "''/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[=][0-9]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[=][][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[=][][][][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[=][-,.;=`]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[=][-,.;'=`][-,.;'=`]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$") or string.find(o_input, "^https?:.*$") or string.find(o_input, "^ftp:.*$") or string.find(o_input, "^mailto:.*$") or string.find(o_input, "^file:.*$") ) then
 -- 無效的正則，不去影響一般輸入！
 -- string.find(o_input, "[=][-,.;'=`]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][']'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][][][']'/[';/]?[a-z0-9/-]*$") 
 -- "^'/[';/]?[a-z0-9/-]*$|(?<=[-,./;a-z125890][][3467 ])'/[';/]?[a-z0-9/-]*$|(?<=['])'/[';/]?[a-z0-9/-]*$|(?<=[=][0-9])'/[';/]?[a-z0-9/-]*$|(?<=[=][][])'/[';/]?[a-z0-9/-]*$|(?<=[=][][][][])'/[';/]?[a-z0-9/-]*$|(?<=[=][-,.;'=`])'/[';/]?[a-z0-9/-]*$|(?<=[=][-,.;'=`][-,.;'=`])'/[';/]?[a-z0-9/-]*$|(?<=[][])'/[';/]?[a-z0-9/-]*$|(?<=[][][][])'/[';/]?[a-z0-9/-]*$|(?<=[][]['])'/[';/]?[a-z0-9/-]*$|(?<=[][][][]['])'/[';/]?[a-z0-9/-]*$"
-                engine:commit_text(s_orig)
-                context:clear()
+            engine:commit_text(s_orig)
+            context:clear()
             return 1 -- kAccepted
-            end
         end
     end
 end
@@ -3433,15 +3429,13 @@ function s2r_e_u(key, env)
     local engine = env.engine
     local context = engine.context
     -- local page_size = engine.schema.page_size
-    if (key:repr() == 'space') then
+    if (key:repr() == 'space' and context:is_composing()) then
         local s_orig = context:get_commit_text()
         local o_input = context.input
-        if (context:is_composing()) then
-            if (string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$") or string.find(o_input, "^https?:.*$") or string.find(o_input, "^ftp:.*$") or string.find(o_input, "^mailto:.*$") or string.find(o_input, "^file:.*$") ) then
-                engine:commit_text(s_orig)
-                context:clear()
+        if (string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$") or string.find(o_input, "^https?:.*$") or string.find(o_input, "^ftp:.*$") or string.find(o_input, "^mailto:.*$") or string.find(o_input, "^file:.*$") ) then
+            engine:commit_text(s_orig)
+            context:clear()
             return 1 -- kAccepted
-            end
         end
     end
 end
@@ -3470,4 +3464,6 @@ function comment_filter_plus(input, env)
         end
     end
 end
+
+
 
