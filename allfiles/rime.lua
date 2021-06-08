@@ -1909,7 +1909,7 @@ function t_translator(input, seg)
 
         local numberout = string.match(input, "`(%d+)$")
         local n = string.sub(numberout, 1)
-        if (numberout~=nil and (tonumber(n))~=nil) then
+        if (numberout~=nil) and (tonumber(n)) ~= nil then
             yield(Candidate("number", seg.start, seg._end, numberout , "〔一般數字〕"))
             yield(Candidate("number", seg.start, seg._end, fullshape_number(numberout), "〔全形數字〕"))
             yield(Candidate("number", seg.start, seg._end, math1_number(numberout), "〔數學粗體數字〕"))
@@ -2969,7 +2969,7 @@ function t2_translator(input, seg)
         -- local numberout = string.match(input, "'//?(%d+)$")
         local numberout = string.match(input, "'/(%d+)$")
         local n = string.sub(numberout, 1)
-        if (numberout~=nil and (tonumber(n))~=nil) then
+        if (numberout~=nil) and (tonumber(n)) ~= nil then
             yield(Candidate("number", seg.start, seg._end, numberout , "〔一般數字〕"))
             yield(Candidate("number", seg.start, seg._end, fullshape_number(numberout), "〔全形數字〕"))
             yield(Candidate("number", seg.start, seg._end, math1_number(numberout), "〔數學粗體數字〕"))
@@ -3348,97 +3348,6 @@ end
 -- end
 
 
---- 韓語（非英語等）空格鍵後添加" "
-function endspace(key, env)
-    local engine = env.engine
-    local context = engine.context
-    -- local arr = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}
-    --- accept: space_do_space when: composing
-    if (key:repr() == "space" and context:is_composing()) then
-        local caret_pos = context.caret_pos
-        local s_orig = context:get_commit_text()
-        -- local s_orig = context:get_commit_composition()
-        -- local o_orig = context:commit()
-        -- local o_orig = context:get_script_text()
-        -- local o_orig = string.gsub(context:get_script_text(), " ", "a")
-        -- 以下「含有英文字母、控制字元、空白」和「切分上屏時」不作用（用字數統計驗證是否切分）
-        if (not string.find(s_orig, "[%a%c%s]") and caret_pos == context.input:len()) then
-        -- if (not string.find(o_orig, "[%a%c%s]")) and (caret_pos == context.input:len()) then
-        -- if (string.find(o_orig, "[%a%c%s]")) and (caret_pos == context.input:len()) then
-            -- 下一句：游標位置向左一格，在本例無用，單純記錄用法
-            -- context.caret_pos = caret_pos - 1
-            -- 下兩句合用可使輸出句被電腦記憶
-            -- engine:commit_text("a")
-            -- engine:confirm_current_selection()
-            -- 下一句：用冒號為精簡寫法，該句為完整寫法
-            -- engine.commit_text(engine, s_orig .. "a")
-            -- engine:commit_text(s_orig .. "a")
-            engine:commit_text(s_orig .. " ") --「return 1」時用
-            -- engine:commit_text(s_orig) --「return 0」「return 2」時用
-            context:clear()
-            return 1
-            -- 「0」「2」「kAccepted」「kRejected」「kNoop」：直接後綴產生空白
-            -- 「1」：後綴不會產生空白，可用.." "增加空白或其他符號
-            -- （該條目有問題，實測對應不起來）「拒」kRejected、「收」kAccepted、「不認得」kNoop，分別對應返回值：0、1、2。
-            -- 返回「拒絕」時，雖然我們已經處理過按鍵了，但系統以為沒有，於是會按默認值再處理一遍。
-        end
-    end
-    return 2 -- kNoop
-end
-
-
---- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。
-function s2r(key, env)
-    local engine = env.engine
-    local context = engine.context
-    -- local page_size = engine.schema.page_size
-    if (key:repr() == 'space' and context:is_composing()) then
-        local s_orig = context:get_commit_text()
-        local o_input = context.input
-        if (string.find(o_input, "'/[';/]?[a-z]*$") or string.find(o_input, "'/[0-9/-]*$") or string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$") or string.find(o_input, "^https?:.*$") or string.find(o_input, "^ftp:.*$") or string.find(o_input, "^mailto:.*$") or string.find(o_input, "^file:.*$") ) then
-            engine:commit_text(s_orig)
-            context:clear()
-            return 1 -- kAccepted
-        end
-    end
-end
-
-
---- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（特別正則 for mixin3）
-function s2r3(key, env)
-    local engine = env.engine
-    local context = engine.context
-    -- local page_size = engine.schema.page_size
-    if (key:repr() == 'space' and context:is_composing()) then
-        local s_orig = context:get_commit_text()
-        local o_input = context.input
-        if (string.find(o_input, "^'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[-,./;a-z125890][][3467%s]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "''/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[=][0-9]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[=][][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[=][][][][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[=][-,.;=`]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[=][-,.;'=`][-,.;'=`]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$") or string.find(o_input, "^https?:.*$") or string.find(o_input, "^ftp:.*$") or string.find(o_input, "^mailto:.*$") or string.find(o_input, "^file:.*$") ) then
--- 無效的正則，不去影響一般輸入！
--- string.find(o_input, "[=][-,.;'=`]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][']'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][][][']'/[';/]?[a-z0-9/-]*$") 
--- "^'/[';/]?[a-z0-9/-]*$|(?<=[-,./;a-z125890][][3467 ])'/[';/]?[a-z0-9/-]*$|(?<=['])'/[';/]?[a-z0-9/-]*$|(?<=[=][0-9])'/[';/]?[a-z0-9/-]*$|(?<=[=][][])'/[';/]?[a-z0-9/-]*$|(?<=[=][][][][])'/[';/]?[a-z0-9/-]*$|(?<=[=][-,.;'=`])'/[';/]?[a-z0-9/-]*$|(?<=[=][-,.;'=`][-,.;'=`])'/[';/]?[a-z0-9/-]*$|(?<=[][])'/[';/]?[a-z0-9/-]*$|(?<=[][][][])'/[';/]?[a-z0-9/-]*$|(?<=[][]['])'/[';/]?[a-z0-9/-]*$|(?<=[][][][]['])'/[';/]?[a-z0-9/-]*$"
-            engine:commit_text(s_orig)
-            context:clear()
-            return 1 -- kAccepted
-        end
-    end
-end
-
-
---- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（只針對 email 和 url ）
-function s2r_e_u(key, env)
-    local engine = env.engine
-    local context = engine.context
-    -- local page_size = engine.schema.page_size
-    if (key:repr() == 'space' and context:is_composing()) then
-        local s_orig = context:get_commit_text()
-        local o_input = context.input
-        if (string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$") or string.find(o_input, "^https?:.*$") or string.find(o_input, "^ftp:.*$") or string.find(o_input, "^mailto:.*$") or string.find(o_input, "^file:.*$") ) then
-            engine:commit_text(s_orig)
-            context:clear()
-            return 1 -- kAccepted
-        end
-    end
-end
 
 
 --- 嘸蝦米後面註釋刪除
@@ -3464,6 +3373,118 @@ function comment_filter_plus(input, env)
         end
     end
 end
+
+
+--- 韓語（非英語等）空格鍵後添加" "
+function endspace(key, env)
+    local engine = env.engine
+    local context = engine.context
+    -- local arr = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}
+    --- accept: space_do_space when: composing
+    if (key:repr() == "space") and (context:is_composing()) then
+        local caret_pos = context.caret_pos
+        local s_orig = context:get_commit_text()
+        -- local s_orig = context:get_commit_composition()
+        -- local o_orig = context:commit()
+        -- local o_orig = context:get_script_text()
+        -- local o_orig = string.gsub(context:get_script_text(), " ", "a")
+        -- 以下「含有英文字母、控制字元、空白」和「切分上屏時」不作用（用字數統計驗證是否切分）
+        if (not string.find(s_orig, "[%a%c%s]")) and (caret_pos == context.input:len()) then
+        -- if (not string.find(o_orig, "[%a%c%s]")) and (caret_pos == context.input:len()) then
+        -- if (string.find(o_orig, "[%a%c%s]")) and (caret_pos == context.input:len()) then
+            -- 下一句：游標位置向左一格，在本例無用，單純記錄用法
+            -- context.caret_pos = caret_pos - 1
+            -- 下兩句合用可使輸出句被電腦記憶
+            -- engine:commit_text("a")
+            -- engine:confirm_current_selection()
+            -- 下一句：用冒號為精簡寫法，該句為完整寫法
+            -- engine.commit_text(engine, s_orig .. "a")
+            -- engine:commit_text(s_orig .. "a")
+            engine:commit_text(s_orig .. " ") --「return 1」時用
+            -- engine:commit_text(s_orig) --「return 0」「return 2」時用
+            context:clear()
+            return 1
+            -- 「0」「2」「kAccepted」「kRejected」「kNoop」：直接後綴產生空白
+            -- 「1」：後綴不會產生空白，可用.." "增加空白或其他符號
+            -- （該條目有問題，實測對應不起來）「拒」kRejected、「收」kAccepted、「不認得」kNoop，分別對應返回值：0、1、2。
+            -- 返回「拒絕」時，雖然我們已經處理過按鍵了，但系統以為沒有，於是會按默認值再處理一遍。
+        end
+    end
+    return 2 -- kNoop
+end
+
+
+-- --- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。
+-- function s2r_s(key, env)
+--     local engine = env.engine
+--     local context = engine.context
+--     -- local page_size = engine.schema.page_size
+--     if (key:repr() == 'space') and (context:is_composing()) then
+--     local s_orig = context:get_commit_text()
+--     local o_input = context.input
+--         if (string.find(o_input, "^'/")) then
+--             engine:commit_text(s_orig)
+--             context:clear()
+--             return 1 -- kAccepted
+--         end
+--     end
+-- end
+
+
+-- --- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。
+-- function s2r(key, env)
+--     local engine = env.engine
+--     local context = engine.context
+--     -- local page_size = engine.schema.page_size
+--     if (key:repr() == 'space') and (context:is_composing()) then
+--         local s_orig = context:get_commit_text()
+--         local o_input = context.input
+--         if (string.find(o_input, "'/[';/]?[a-z]*$")) or (string.find(o_input, "'/[0-9/-]*$")) then
+-- -- or string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$") or string.find(o_input, "^https?:.*$") or string.find(o_input, "^ftp:.*$") or string.find(o_input, "^mailto:.*$") or string.find(o_input, "^file:.*$")
+--             engine:commit_text(s_orig)
+--             context:clear()
+--             return 1 -- kAccepted
+--         end
+--     end
+-- end
+
+
+-- --- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（特別正則 for mixin3）
+-- function s2r3(key, env)
+--     local engine = env.engine
+--     local context = engine.context
+--     -- local page_size = engine.schema.page_size
+--     if (key:repr() == 'space') and (context:is_composing()) then
+--         local s_orig = context:get_commit_text()
+--         local o_input = context.input
+--         if (string.find(o_input, "^'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[-,./;a-z125890][][3467%s]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "''/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][0-9]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][][]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][][][][]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][-,.;=`]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][-,.;'=`][-,.;'=`]'/[';/]?[a-z0-9/-]*$")) then
+-- -- or string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$") or string.find(o_input, "^https?:.*$") or string.find(o_input, "^ftp:.*$") or string.find(o_input, "^mailto:.*$") or string.find(o_input, "^file:.*$")
+-- -- 無效的正則，不去影響一般輸入：
+-- -- string.find(o_input, "[=][-,.;'=`]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][']'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][][][']'/[';/]?[a-z0-9/-]*$") 
+-- -- "^'/[';/]?[a-z0-9/-]*$|(?<=[-,./;a-z125890][][3467 ])'/[';/]?[a-z0-9/-]*$|(?<=['])'/[';/]?[a-z0-9/-]*$|(?<=[=][0-9])'/[';/]?[a-z0-9/-]*$|(?<=[=][][])'/[';/]?[a-z0-9/-]*$|(?<=[=][][][][])'/[';/]?[a-z0-9/-]*$|(?<=[=][-,.;'=`])'/[';/]?[a-z0-9/-]*$|(?<=[=][-,.;'=`][-,.;'=`])'/[';/]?[a-z0-9/-]*$|(?<=[][])'/[';/]?[a-z0-9/-]*$|(?<=[][][][])'/[';/]?[a-z0-9/-]*$|(?<=[][]['])'/[';/]?[a-z0-9/-]*$|(?<=[][][][]['])'/[';/]?[a-z0-9/-]*$"
+--             engine:commit_text(s_orig)
+--             context:clear()
+--             return 1 -- kAccepted
+--         end
+--     end
+-- end
+
+
+-- --- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（只針對 email 和 url ）
+-- function s2r_e_u(key, env)
+--     local engine = env.engine
+--     local context = engine.context
+--     -- local page_size = engine.schema.page_size
+--     if (key:repr() == 'space') and (context:is_composing()) then
+--         local s_orig = context:get_commit_text()
+--         local o_input = context.input
+--         if (string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(o_input, "^https?:.*$")) or (string.find(o_input, "^ftp:.*$")) or (string.find(o_input, "^mailto:.*$")) or (string.find(o_input, "^file:.*$")) then
+--             engine:commit_text(s_orig)
+--             context:clear()
+--             return 1 -- kAccepted
+--         end
+--     end
+-- end
 
 
 
