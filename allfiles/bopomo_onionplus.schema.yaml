@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onionplus
   name: "☆注音(洋蔥plus版)☆"
-  version: "202105"
+  version: "202106"
   author:
     - 『洋蔥』
   description: |
@@ -61,7 +61,7 @@ engine:
     - reverse_lookup_filter@e_reverse_lookup
     - uniquifier
   processors:
-    - lua_processor@s2r
+#     - lua_processor@s2r
     - ascii_composer
     - recognizer
     - key_binder
