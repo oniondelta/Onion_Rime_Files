@@ -3435,7 +3435,7 @@ function endspace(key, env)
 end
 
 
---- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。
+--- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（只針對開頭，並且寫法精簡，少了 is_composing ）
 function s2r_ss(key, env)
     local engine = env.engine
     local context = engine.context
@@ -3450,14 +3450,14 @@ function s2r_ss(key, env)
     return 2 -- kNoop
 end
 
---- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。
+--- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（只針對開頭）
 function s2r_s(key, env)
     local engine = env.engine
     local context = engine.context
     -- local page_size = engine.schema.page_size
     if (key:repr() == 'space') and (context:is_composing()) then
-    local s_orig = context:get_commit_text()
-    local o_input = context.input
+        local s_orig = context:get_commit_text()
+        local o_input = context.input
         if (string.find(o_input, "^'/")) then
             engine:commit_text(s_orig)
             context:clear()
@@ -3495,8 +3495,10 @@ function s2r3(key, env)
         local o_input = context.input
         if (string.find(o_input, "^'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[-,./;a-z125890][][3467%s]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "''/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][0-9]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][][]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][][][][]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][-,.;=`]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][-,.;'=`][-,.;'=`]'/[';/]?[a-z0-9/-]*$")) then
 -- or string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$") or string.find(o_input, "^https?:.*$") or string.find(o_input, "^ftp:.*$") or string.find(o_input, "^mailto:.*$") or string.find(o_input, "^file:.*$")
+--
 -- 無效的正則，不去影響一般輸入：
 -- string.find(o_input, "[=][-,.;'=`]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][']'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][][][']'/[';/]?[a-z0-9/-]*$") 
+-- 原始全部正則：
 -- "^'/[';/]?[a-z0-9/-]*$|(?<=[-,./;a-z125890][][3467 ])'/[';/]?[a-z0-9/-]*$|(?<=['])'/[';/]?[a-z0-9/-]*$|(?<=[=][0-9])'/[';/]?[a-z0-9/-]*$|(?<=[=][][])'/[';/]?[a-z0-9/-]*$|(?<=[=][][][][])'/[';/]?[a-z0-9/-]*$|(?<=[=][-,.;'=`])'/[';/]?[a-z0-9/-]*$|(?<=[=][-,.;'=`][-,.;'=`])'/[';/]?[a-z0-9/-]*$|(?<=[][])'/[';/]?[a-z0-9/-]*$|(?<=[][][][])'/[';/]?[a-z0-9/-]*$|(?<=[][]['])'/[';/]?[a-z0-9/-]*$|(?<=[][][][]['])'/[';/]?[a-z0-9/-]*$"
             engine:commit_text(s_orig)
             context:clear()
