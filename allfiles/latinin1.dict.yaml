@@ -4,7 +4,7 @@
 # 『洋蔥』製作
 ---
 name: latinin1
-version: "202012"
+version: "202106"
 sort: by_weight
 use_preset_vocabulary: false
 columns:
@@ -1278,6 +1278,10 @@ $	sy/
 ⱳ	wr/
 ⱶ	ih/
 ⱷ	eq/
+## 不鏡射而成都設成[q]，下面容錯碼
+ⱷ	eqk/
+##
+ⱷ	ekq/
 ##
 #ⱷ	fi/
 ⱸ	ec/
