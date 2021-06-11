@@ -88,7 +88,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "202105"
+version: "202106"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -1850,6 +1850,47 @@ min_phrase_weight: 100
 歺	e4	0%
 歺	can1	0.1%
 歹	jing1	0%
+𠁥	guai3	0%
+𠁥	gua3	0%
+𦫳	gua3	0%
+䈰	shuo4	0%
+梢	sao4	0%
+䰖	cuan2	0%
+䰖	za2	0%
+䰰	nou4	0%
+䰰	nou2	0%
+䀠	ju1	0%
+䀠	qu2	0%
+䀢	shen3	0%
+䟫	chang3	0%
+𥜾	xie4	0%
+齭	suo3	0%
+㸌	kuo4	0%
+𠦬	chui2	0%
+夨	ce4	0%
+魭	wan4	0%
+𩱚	pu1	0%
+𢙈	qin4	0%
+䀇	que4	0%
+𥝌	ji1	0%
+𥝌	ai1	0%
+𪏆	tuan1	0%
+蝆	mi3	0%
+䍪	kui4	0%
+幐	deng4	0%
+摣	na2	0%
+摣	zhai1	0%
+㩳	shuang3	0%
+丂	yu2	0%
+㘔	can3	0%
+𠿺	zang4	0%
+𠷎	tao2	0%
+𣘨	e2	0%
+鞼	gui1	0%
+䍡	liao4	0%
+屵	yue4	0%
+屵	an4	0%
+𡛖	nuo3	0%
 ##### @201912 比對教育部相關字詞典檔所新增 #####
 丁	zheng1	0.1%
 丂	kao3	0.1%
@@ -7398,7 +7439,7 @@ min_phrase_weight: 100
 㬈	wen1
 㬉	nuan3
 㬊	huan3
-㬊	huan4
+#㬊	huan4
 㬋	hou2
 㬌	jing4
 㬍	bo2
@@ -36825,7 +36866,7 @@ min_phrase_weight: 100
 𠁗	he4
 𠁗	shi4
 𠁠	qie4
-𠁥	ga3
+#𠁥	ga3
 𠁭	qi2
 𠁷	chan3
 𠂄	huan1
