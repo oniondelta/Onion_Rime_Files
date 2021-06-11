@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onionplus_2
   name: "☆注音(洋蔥plus版 2 )☆〔空白不直出〕"
-  version: "202105"
+  version: "202106"
   author:
     - 『洋蔥』
   description: |
@@ -112,7 +112,7 @@ simplifier:
   tips: all
 
 zh_tw:
-  opencc_config: ocm_big5e_hkscs_jis.json #s2tw.json #t2tw.json
+  opencc_config: ocm_moedict_big5e_hkscs_jis.json #s2tw.json #t2tw.json
   option_name: zh_tw
   tags: [ abc, reverse2_lookup ]
 
