@@ -287,7 +287,7 @@ key_binder:
     - {accept: Shift+BackSpace, send: BackSpace, when: has_menu}
 #關#    - {accept: backslash, send: BackSpace, when: has_menu} #「\」鍵位刪除一個拼音字符。
 #    - {accept: backslash, send: Shift+BackSpace, when: has_menu} #「\」鍵位刪除整組拼音字符（一個字）。
-#    - {accept: backslash, send: Shift+Return, when: has_menu} #「\」鍵位上屏英文。
+#關#    - {accept: backslash, send: Shift+Return, when: has_menu} #「\」鍵位上屏英文。
 ### 功能快捷鍵 ###
 #    - {accept: Control+apostrophe, toggle: zh_tw, when: always} #accept: Control+semicolon
 ##    - {accept: Control+Shift+6, toggle: zh_tw, when: always} #誤按沒警示，避免誤按，可關閉！（開關台灣習慣用字）
