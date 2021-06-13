@@ -253,7 +253,7 @@ jphi_lookup:
     - ^[j][auo][,]$
     - ^[-]{1,2}[,]$
   preedit_format:
-    - "xlit|,|AB|"
+    - "xlit|,.|AB|"
     - xform/A/ (平)/
     - xform/B/ (片)/
     - xform/\|/ /
