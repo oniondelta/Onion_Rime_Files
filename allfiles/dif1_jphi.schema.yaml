@@ -5,7 +5,7 @@
 schema:
   schema_id: dif1_jphi
   name: ✹新日語平假名_dif1✹
-  version: "202102"
+  version: "202106"
   author:
     - 『洋蔥』
   description: |
@@ -102,7 +102,7 @@ speller:
 ## 特殊
     - xform/^dvyu([.])$/dyu$1/ # デュ #特殊片假名被其他正則不轉寫。
 ##### 其他 #####
-    - erase/^([-a-z]+)([.])$/
+#     - erase/^([-a-z]+)([.])$/
     - derive/^([-a-z]+)([,])$/$1/
 
 translator:
