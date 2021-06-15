@@ -18400,8 +18400,8 @@ min_phrase_weight: 100
 惙	chuo4
 惚	hu1
 惛	hun1
-惜	xi1
-惜	xi2	0%
+惜	xi1	0%
+惜	xi2
 惝	chang3	50%
 惝	tang3	50%
 惞	xin1
@@ -54569,7 +54569,6 @@ min_phrase_weight: 100
 不悶	bu2 men4
 不悶	bu4 men4
 不惜	bu4 xi2
-不惜	bu4 xi1
 不惡而嚴	bu2 e4 er2 yan2
 不惡而嚴	bu4 e4 er2 yan2
 不憚強禦	bu2 dan4 qiang2 yu4
@@ -62932,7 +62931,6 @@ min_phrase_weight: 100
 可待因	ke3 dai4 yin1
 可得到	ke3 de2 dao4
 可惜	ke3 xi2
-可惜	ke3 xi1
 可惡	ke3 wu4
 可意會不可言傳	ke3 yi4 hui4 bu4 ke3 yan2 chuan2
 可懂度	ke3 dong3 du4
@@ -63418,7 +63416,6 @@ min_phrase_weight: 100
 君親	jun1 qin1
 君長	jun1 zhang3
 吝惜	lin4 xi2
-吝惜	lin4 xi1
 吞刀吐火	tun1 dao1 tu3 huo3
 吞吐	tun1 tu3
 吞吐其辭	tun1 tu3 qi2 ci2
@@ -73605,7 +73602,6 @@ min_phrase_weight: 100
 惋傷	wan4 shang1
 惋嘆	wan4 tan4
 惋惜	wan4 xi2
-惋惜	wan3 xi1
 惋愕	wan4 e4
 惋愴	wan4 chuang4
 惏悷	lin2 li4
@@ -73614,7 +73610,6 @@ min_phrase_weight: 100
 惛懵	hun1 meng2
 惜分陰	xi2 fen1 yin1
 惜別	xi2 bie2
-惜別	xi1 bie2
 惜別會	xi2 bie2 hui4
 惜力	xi2 li4
 惜售	xi2 shou4
@@ -73627,12 +73622,10 @@ min_phrase_weight: 100
 惜玉	xi2 yu4
 惜玉憐香	xi2 yu4 lian2 xiang1
 惜福	xi2 fu2
-惜福	xi1 fu2
 惜老憐貧	xi2 lao3 lian2 pin2
 惜身	xi2 shen1
 惜陰	xi2 yin1
 惜香憐玉	xi2 xiang1 lian2 yu4
-惜香憐玉	xi1 xiang1 lian2 yu4
 惝怳	chang3 huang3
 惝恍	chang3 huang3
 惝然	chang3 ran2
@@ -73834,9 +73827,7 @@ min_phrase_weight: 100
 惹麻煩	re3 ma2 fan2
 惺忪	xing1 song1
 惺惺惜惺惺	xing1 xing1 xi2 xing1 xing1
-惺惺惜惺惺	xing1 xing1 xi1 xing1 xing1
 惺惺相惜	xing1 xing1 xiang1 xi2
-惺惺相惜	xing1 xing1 xiang1 xi1
 愁山悶海	chou2 shan1 men4 hai3
 愁悶	chou2 men4
 愁腸九轉	chou2 chang2 jiu3 zhuan3
@@ -73900,7 +73891,6 @@ min_phrase_weight: 100
 愛情征服一切	ai4 qing2 zheng1 fu2 yi2 qie4
 愛情征服一切	ai4 qing2 zheng1 fu2 yi1 qie4
 愛惜	ai4 xi2
-愛惜	ai4 xi1
 愛惜羽毛	ai4 xi2 yu3 mao2
 愛憎分明	ai4 zeng1 fen1 ming2
 愛才好士	ai4 cai2 hao4 shi4
@@ -74044,10 +74034,8 @@ min_phrase_weight: 100
 憎惡	zeng1 wu4
 憐孤惜寡	lian2 gu1 xi2 gua3
 憐惜	lian2 xi2
-憐惜	lian2 xi1
 憐貧惜老	lian2 pin2 xi2 lao3
 憐香惜玉	lian2 xiang1 xi2 yu4
-憐香惜玉	lian2 xiang1 xi1 yu4
 憑票入場	ping2 piao4 ru4 chang3
 憑空	ping2 kong1
 憑空捏造	ping2 kong1 nie1 zao4
@@ -87757,7 +87745,6 @@ min_phrase_weight: 100
 玻色子	bo1 se4 zi3
 珍‧奧斯汀	zhen1 eng3 ao4 si1 ting1
 珍惜	zhen1 xi2
-珍惜	zhen1 xi1
 珍玩	zhen1 wan4
 珍珠丸子	zhen1 zhu1 wan2 zi5
 珍珠小番茄	zhen1 zhu1 xiao3 fan1 qie2
@@ -88681,7 +88668,6 @@ min_phrase_weight: 100
 疵蒙謬累	ci1 meng2 miu4 lei3
 疹子	zhen3 zi5
 疼惜	teng2 xi2
-疼惜	teng2 xi1
 疾之如仇	ji2 zhi1 ru2 chou2
 疾之若仇	ji2 zhi1 ruo4 chou2
 疾便	ji2 bian4
@@ -88743,7 +88729,6 @@ min_phrase_weight: 100
 痛快	tong4 kuai4
 痛快淋漓	tong4 kuai4 lin2 li2
 痛惜	tong4 xi2
-痛惜	tong4 xi1
 痛惡	tong4 wu4
 痛擊	tong4 ji2
 痛殺殺	tong4 sha4 sha4
@@ -90453,7 +90438,6 @@ min_phrase_weight: 100
 矜功自伐	jin1 gong1 zi4 fa1
 矜寡孤獨	guan1 gua3 gu1 du2
 矜惜	jin1 xi2
-矜惜	guan1 xi2
 矜重	jin1 zhong4
 矢石之間	shi3 shi2 zhi1 jian1
 矢石之難	shi3 shi2 zhi1 nan4
@@ -108503,7 +108487,6 @@ min_phrase_weight: 100
 顧影弄姿	gu4 ying3 nong4 zi1
 顧得過來	gu4 de5 guo4 lai2
 顧惜	gu4 xi2
-顧惜	gu4 xi1
 顧慮重重	gu4 lv4 chong2 chong2
 顧曲	gu4 qu3
 顧曲周郎	gu4 qu3 zhou1 lang2
@@ -109333,7 +109316,6 @@ min_phrase_weight: 100
 體己錢	ti3 ji3 qian2
 體度	ti3 du4
 體惜	ti3 xi2
-體惜	ti3 xi1
 體操	ti3 cao1
 體操運動員	ti3 cao1 yun4 dong4 yuan2
 體操隊	ti3 cao1 dui4
