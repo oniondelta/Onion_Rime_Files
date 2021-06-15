@@ -27,7 +27,7 @@
 # ===============================
 ---
 name: phrases.chtpp
-version: "202105"
+version: "202106"
 sort: by_weight
 use_preset_vocabulary: false
 max_phrase_length: 7 #20
@@ -6193,6 +6193,15 @@ columns:
 
 ###############################################################
 ####### @@其他非臺灣慣用或錯誤發音 #######
+# 什麼事	shi2 ma2 shi4
+# 什麼人	shi2 ma2 ren2
+# 什麼字	shi2 me5 zi4
+# 做什麼	zuo4 shi2 ma2
+# 玩什麼	wan2 shi2 me5
+# 報什麼蟲	bao4 shi2 me5 chong2
+# 煮什麼菜	zhu3 shi2 me5 cai4
+# 開什麼店	kai1 shi2 me5 dian4
+# 我跟你什麼仇什麼怨	wo3 gen1 ni3 shen2 me5 qiu2 shen2 me5 yuan4
 # 矜惜	guan1 xi2
 # 傢俱	jia1 ju1
 # 幾內亞灣	ji1 nei4 ya3 wan1

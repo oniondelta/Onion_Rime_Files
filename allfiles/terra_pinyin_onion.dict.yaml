@@ -54491,6 +54491,7 @@ min_phrase_weight: 100
 不差不錯	bu4 cha1 bu2 cuo4
 不差不錯	bu4 cha1 bu4 cuo4
 不差什麼	bu4 cha1 shen2 me5
+不差什麼	bu4 cha1 she2 me5
 不差毫釐	bu4 cha1 hao2 li2
 不差毫髮	bu4 cha1 hao2 fa3
 不差累黍	bu4 cha1 lei3 shu3
@@ -54873,6 +54874,7 @@ min_phrase_weight: 100
 不算什麼	bu2 suan4 she2 mo5
 不算什麼	bu2 suan4 shen2 mo5
 不算什麼	bu4 suan4 shen2 me5
+不算什麼	bu4 suan4 she2 me5
 不算數	bu2 suan4 shu4
 不算數	bu4 suan4 shu4
 不管生癬生瘡	bu4 guan3 sheng1 xian3 sheng1 chuang1
@@ -62912,6 +62914,7 @@ min_phrase_weight: 100
 可不道	ke3 bu2 dao4
 可了不得	ke3 liao3 bu4 de2
 可什麼	ke3 shen2 me5
+可什麼	ke3 she2 me5
 可以燎原	ke3 yi3 liao2 yuan2
 可以燎原	ke3 yi3 liao4 yuan2
 可以為錯	ke3 yi3 wei2 cuo4
@@ -73130,6 +73133,7 @@ min_phrase_weight: 100
 怎麼搞的	zen3 me5 gao3 de5
 怎麼搞的	zen3 mo5 gao3 de5
 怎麼著	zen3 me5 zhao1
+怎麼著	ze3 me5 zhao1
 怎麼著	ze3 me5 zhe5
 怎麼著	zen3 me5 zhe5
 怎麼著	zen3 mo5 zhe5
@@ -83610,6 +83614,7 @@ min_phrase_weight: 100
 沒什麼	mei2 she2 me5
 沒什麼	mei2 she2 mo5
 沒什麼要緊	mei2 shen2 me5 yao4 jin3
+沒什麼要緊	mei2 she2 me5 yao4 jin3
 沒件好當眼的	mei2 jian4 hao3 dang1 yan3 de5
 沒住頭	mei2 zhu4 tou5
 沒來頭	mei2 lai2 tou5
@@ -83707,6 +83712,7 @@ min_phrase_weight: 100
 沒有不散的筵席	mei2 you3 bu4 san4 de5 yan2 xi2
 沒有主意	mei2 you3 zhu3 yi4
 沒有什麼道理	mei2 you3 shen2 me5 dao4 li3
+沒有什麼道理	mei2 you3 she2 me5 dao4 li3
 沒有勁頭	mei2 you3 jin4 tou2
 沒有勁頭兒	mei2 you3 jin4 tou2 er5
 沒有差別	mei2 you3 cha1 bie2
@@ -92460,6 +92466,7 @@ min_phrase_weight: 100
 算不得	suan4 bu4 de2
 算什麼	suan4 shen2 me5
 算什麼	suan4 she2 mo5
+算什麼	suan4 she2 me5
 算命先生	suan4 ming4 xian1 sheng1
 算子	suan4 zi3
 算子	suan4 zi5
@@ -104303,6 +104310,7 @@ min_phrase_weight: 100
 醋娘子要食楊梅	cu4 niang2 zi3 yao4 shi2 yang2 mei2
 醋心	cu4 xin1
 醋打怎麼酸	cu4 da3 ze3 me5 suan1
+醋打怎麼酸	cu4 da3 zen3 me5 suan1
 醋罈子	cu4 tan2 zi5
 醋罈子	cu4 tan2 zi3
 醋罐子	cu4 guan4 zi5
@@ -109916,6 +109924,7 @@ min_phrase_weight: 100
 鹽埔鄉	yan2 pu3 xiang1
 鹽度	yan2 du4
 鹽打怎麼鹹	yan2 da3 ze3 me5 xian2
+鹽打怎麼鹹	yan2 da3 zen3 me5 xian2
 鹽水選種	yan2 shui3 xuan3 zhong3
 鹽藏品	yan2 cang2 pin3
 鹽都	yan2 du1
@@ -110447,4 +110456,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 110427 #####
+##### @結束 END - 110459 #####
