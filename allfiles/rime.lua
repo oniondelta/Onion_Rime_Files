@@ -1721,12 +1721,16 @@ function t_translator(input, seg)
             return
         end
 
-
-
         -- if (input == "`tm") then
         --   yield(Candidate("time", seg.start, seg._end, os.date("%H:%M"), "〔時:分〕"))
         --   return
         -- end
+
+        if (input == "`u") then
+            local tz, tzd = timezone_out1()
+            yield(Candidate("time", seg.start, seg._end, tz, tzd))
+            return
+        end
 
         if (input == "`n") then
             yield(Candidate("time", seg.start, seg._end, os.date("%H:%M"), "〔時:分〕 ~d"))
@@ -1737,8 +1741,6 @@ function t_translator(input, seg)
             yield(Candidate("time", seg.start, seg._end, ch_h_date(os.date("%H")).."時"..ch_minsec_date(os.date("%M")).."分", "〔時:分〕 ~z"))
             local chinese_time = time_description_chinese(os.time())
             yield(Candidate("time", seg.start, seg._end, chinese_time, "〔農曆！〕 ~l"))
-            local tz, tzd = timezone_out1()
-            yield(Candidate("time", seg.start, seg._end, tz, tzd))
             return
         end
 
@@ -2656,11 +2658,12 @@ function t_translator(input, seg)
             , { '  n〔時:分〕    t〔時:分:秒〕', '②' }
             , { '  fw〔年月日週〕    mdw〔月日週〕', '③' }
             , { '  fn〔年月日 時:分〕    ft〔年月日 時:分:秒〕', '④' }
-            , { '  ○○○〔數字〕', '⑤' }
-            , { '  ○/○/○〔 ○ 年 ○ 月 ○ 日〕    ○/○〔 ○ 月 ○ 日〕', '⑥' }
-            , { '  ○-○-○〔○年○月○日〕    ○-○〔○月○日〕', '⑦' }
-            , { '  / [a-z]+〔小寫字母〕', '⑧' }
-            , { '  ; [a-z]+〔大寫字母〕    \' [a-z]+〔開頭大寫字母〕', '⑨' }
+            , { '  s〔節氣〕    l〔月相〕    u〔時區〕', '⑤' }
+            , { '  ○○○〔數字〕', '⑥' }
+            , { '  ○/○/○〔 ○ 年 ○ 月 ○ 日〕    ○/○〔 ○ 月 ○ 日〕', '⑦' }
+            , { '  ○-○-○〔○年○月○日〕    ○-○〔○月○日〕', '⑧' }
+            , { '  / [a-z]+〔小寫字母〕', '⑨' }
+            , { '  ; [a-z]+〔大寫字母〕    \' [a-z]+〔開頭大寫字母〕', '⑩' }
             }
             for k, v in ipairs(date_table) do
                 local cand = Candidate('date', seg.start, seg._end, v[2], ' ' .. v[1])
@@ -2990,6 +2993,12 @@ function t2_translator(input, seg)
         --   return
         -- end
 
+        if (input == "'/u") then
+            local tz, tzd = timezone_out1()
+            yield(Candidate("time", seg.start, seg._end, tz, tzd))
+            return
+        end
+
         if (input == "'/n") then
             yield(Candidate("time", seg.start, seg._end, os.date("%H:%M"), "〔時:分〕 ~d"))
             local aptime1, aptime2, aptime3, aptime4 = time_out1()
@@ -2999,8 +3008,6 @@ function t2_translator(input, seg)
             yield(Candidate("time", seg.start, seg._end, ch_h_date(os.date("%H")).."時"..ch_minsec_date(os.date("%M")).."分", "〔時:分〕 ~z"))
             local chinese_time = time_description_chinese(os.time())
             yield(Candidate("time", seg.start, seg._end, chinese_time, "〔農曆！〕 ~l"))
-            local tz, tzd = timezone_out1()
-            yield(Candidate("time", seg.start, seg._end, tz, tzd))
             return
         end
 
@@ -3917,11 +3924,12 @@ function t2_translator(input, seg)
             , { '  n〔時:分〕    t〔時:分:秒〕', '②' }
             , { '  fw〔年月日週〕    mdw〔月日週〕', '③' }
             , { '  fn〔年月日 時:分〕    ft〔年月日 時:分:秒〕', '④' }
-            , { '  ○○○〔數字〕', '⑤' }
-            , { '  ○/○/○〔 ○ 年 ○ 月 ○ 日〕    ○/○〔 ○ 月 ○ 日〕', '⑥' }
-            , { '  ○-○-○〔○年○月○日〕    ○-○〔○月○日〕', '⑦' }
-            , { '  / [a-z]+〔小寫字母〕', '⑧' }
-            , { '  ; [a-z]+〔大寫字母〕    \' [a-z]+〔開頭大寫字母〕', '⑨' }
+            , { '  s〔節氣〕    l〔月相〕    u〔時區〕', '⑤' }
+            , { '  ○○○〔數字〕', '⑥' }
+            , { '  ○/○/○〔 ○ 年 ○ 月 ○ 日〕    ○/○〔 ○ 月 ○ 日〕', '⑦' }
+            , { '  ○-○-○〔○年○月○日〕    ○-○〔○月○日〕', '⑧' }
+            , { '  / [a-z]+〔小寫字母〕', '⑨' }
+            , { '  ; [a-z]+〔大寫字母〕    \' [a-z]+〔開頭大寫字母〕', '⑩' }
             -- , { '〔夜思‧李白〕', '床前明月光，疑是地上霜。\r舉頭望明月，低頭思故鄉。' }
             }
             for k, v in ipairs(date_table) do
