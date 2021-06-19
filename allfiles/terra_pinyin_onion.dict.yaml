@@ -53396,6 +53396,7 @@ min_phrase_weight: 100
 一生吃著不盡	yi4 sheng1 chi1 zhe5 bu2 jin4
 一生吃著不盡	yi1 sheng1 chi1 zhe5 bu4 jin4
 一生喫著不盡	yi4 sheng1 chi1 zhuo2 bu2 jin4
+一生喫著不盡	yi1 sheng1 chi1 zhuo2 bu4 jin4
 一畝三分地	yi4 mu3 san1 fen1 di4
 一畝三分地	yi1 mu3 san1 fen1 di4
 一瘸一簸	yi4 que2 yi4 bo3
@@ -54362,6 +54363,9 @@ min_phrase_weight: 100
 不可數集	bu4 ke3 shuo4 ji2
 不可期	bu4 ke3 qi2
 不可為	bu4 ke3 wei2
+不可為	bu2 ke3 wei2
+不可為	bu2 ke3 wei4
+不可為	bu4 ke3 wei4
 不可當	bu4 ke3 dang1
 不可磨滅	bu4 ke3 mo2 mie4
 不可缺少	bu4 ke3 que1 shao3
@@ -54429,15 +54433,19 @@ min_phrase_weight: 100
 不大離兒	bu4 da4 li2 er5
 不太好	bu2 tai4 hao3
 不太好	bu4 tai4 hao3
+不太好	bu2 tai4 hao4
+不太好	bu4 tai4 hao4
 不太明白	bu2 tai4 ming2 bai2
 不失為	bu4 shi1 wei2
 不好	bu2 hao4
 不好	bu4 hao3
 不好	bu4 hao4
 不好弄	bu4 hao3 nong4
+不好弄	bu2 hao3 nong4
 不好意思	bu4 hao3 yi4 si1
 不好意思	bu4 hao3 yi4 si4
 不好看	bu4 hao3 kan4
+不好看	bu2 hao3 kan4
 不好言笑	bu2 hao4 yan2 xiao4
 不好言笑	bu4 hao4 yan2 xiao4
 不好說話	bu2 hao4 shuo1 hua4
@@ -67573,6 +67581,7 @@ min_phrase_weight: 100
 太古傳宗	tai4 gu3 chuan2 zong1
 太古洋行	tai4 gu3 yang2 hang2
 太和	tai4 he2
+太和	tai4 han4
 太和區	tai4 he2 qu1
 太和正音譜	tai4 he2 zheng4 yin1 pu3
 太和殿	tai4 he2 dian4
@@ -68120,6 +68129,7 @@ min_phrase_weight: 100
 好幾年	hao3 ji3 nian2
 好弄玄虛	hao4 nong4 xuan2 xu1
 好強	hao4 qiang2
+好強	hao3 qiang2
 好心不得好報	hao3 xin1 bu4 de2 hao3 bao4
 好性子	hao3 xing4 zi5
 好惡	hao4 wu4
@@ -68193,6 +68203,7 @@ min_phrase_weight: 100
 好賢禮士	hao4 xian2 li3 shi4
 好賭	hao4 du3
 好轉	hao3 zhuan3
+好轉	hao3 zhuan4
 好辯	hao4 bian4
 好逸惡勞	hao4 yi4 wu4 lao2
 好逸惡勞	hao4 yi4 e4 lao2
@@ -110457,4 +110468,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 110459 #####
+##### @結束 END - 110471 #####
