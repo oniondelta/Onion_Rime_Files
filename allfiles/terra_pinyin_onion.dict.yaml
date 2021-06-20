@@ -96,6 +96,7 @@ min_phrase_weight: 100
 ...
 ##### @定空碼「ㄥˇ」輸入「‧」間隔號 #####
 ‧	eng3
+#嗯	eng3	0%
 ##### @單個字，雙音節 #####
 瓩	qian1 wa3	10%
 瓧	shi2 wa3	10%
@@ -1894,6 +1895,15 @@ min_phrase_weight: 100
 𡿨	gong1	0%
 孖	ma1	0%
 孖	zi4	0%
+嗯	en2	0%
+嗯	en3	0%
+嗯	eng2	0%
+嗯	eng4	0%
+蜙	zhong1	90%
+蚣	zhong1	0%
+蚣	song1	0%
+喔	o5	90%
+哦	o5	90%
 ##### @201912 比對教育部相關字詞典檔所新增 #####
 丁	zheng1	0.1%
 丂	kao3	0.1%
@@ -3299,7 +3309,6 @@ min_phrase_weight: 100
 呶	nu3	0.1%
 咗	zuo3	0.1%
 咼	wai1	0.1%
-哦	o5	0.1%
 唷	yo5	0.1%
 喂	wei2	0.1%
 嘅	kai3	0.1%
@@ -15096,10 +15105,10 @@ min_phrase_weight: 100
 嗬	he1
 嗭	zhi2
 嗮	sai4
-嗯	en1	1%
+# 嗯	en1	1%
 嗯	en4	1%
 嗯	en5	95%
-嗯	eng5	3%
+# 嗯	eng5	3%
 嗰	ge3
 嗱	na2
 嗲	dia3
