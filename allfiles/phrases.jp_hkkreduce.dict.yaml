@@ -7,7 +7,7 @@
 # 本詞庫刪除純「假名」之詞彙。純「假名」詞庫為「phrases.jp_hk」。
 ---
 name: phrases.jp_hkkreduce
-version: "202105"
+version: "202106"
 sort: by_weight #original
 use_preset_vocabulary: false
 columns:
@@ -10802,7 +10802,6 @@ columns:
 可穂
 可符
 可絵
-可美
 可聴
 可読
 可部
@@ -16886,7 +16885,6 @@ columns:
 已む
 已め
 已ん
-已上
 巳代
 巳弥
 巴志
@@ -23365,7 +23363,6 @@ columns:
 未佐
 未佳
 未収
-未和
 未咲
 未唯
 未喜
