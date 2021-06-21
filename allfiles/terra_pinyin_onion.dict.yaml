@@ -452,7 +452,7 @@ min_phrase_weight: 100
 渑	min3	1%
 呣	mou2	1%
 兒	ni2	1%
-儿	ni2	1%
+#儿	ni2	1%
 児	ni2	1%
 觉	jiao4	1%
 覚	jiao4	1%
@@ -1904,6 +1904,21 @@ min_phrase_weight: 100
 蚣	song1	0%
 喔	o5	90%
 哦	o5	90%
+沏	qie4	10%
+汶	wen2	50%
+汶	min2	0%
+衰	suo1	0%
+券	xuan4	0%
+鮑	bao1	30%
+鲍	bao1
+涮	shua1
+釧	chuan1	0.1%
+钏	chuan1	0.1%
+霰	san3	10%
+娃	wa1	20%
+嗒	da5	1%
+叭	ba5	10%
+嘠	ga3	0.1%
 ##### @201912 比對教育部相關字詞典檔所新增 #####
 丁	zheng1	0.1%
 丂	kao3	0.1%
@@ -57018,7 +57033,6 @@ min_phrase_weight: 100
 何種	he2 zhong3
 何與	he2 yu4
 何苦呢	he2 ku3 ne5
-何苦呢	he2 ku3 ne1
 何處	he2 chu4
 何西阿書	he2 xi1 a1 shu1
 何足為奇	he2 zu2 wei2 qi2
@@ -63615,7 +63629,6 @@ min_phrase_weight: 100
 呢呢痴痴	ni2 ni2 chi1 chi1
 呢呢癡癡	ni2 ni2 chi1 chi1
 呢喃	ni2 nan2
-呢喃	ne1 nan2
 呢喃細語	ni2 nan2 xi4 yu3
 呢子	ni2 zi5
 呢料	ni2 liao4
@@ -93552,7 +93565,7 @@ min_phrase_weight: 100
 經濟成長	jing1 ji4 cheng2 zhang3
 經濟成長率	jing1 ji4 cheng2 zhang3 lv4
 經濟指數	jing1 ji4 zhi3 shu4
-經濟社會及文化權利國際公約	jing1 ji4 she4 hui1 ji2 wen2 hua4 quan2 li4 guo2 ji4 gong1 yue1
+經濟社會及文化權利國際公約	jing1 ji4 she4 hui4 ji2 wen2 hua4 quan2 li4 guo2 ji4 gong1 yue1
 經濟落後	jing1 ji4 luo4 hou4
 經濟難民	jing1 ji4 nan4 min2
 經營管理和維護	jing1 ying2 guan3 li3 han4 wei2 hu4
@@ -95291,7 +95304,6 @@ min_phrase_weight: 100
 胡說散道	hu2 shuo1 san3 dao4
 胡謅	hu2 zou1
 胡謅	hu2 zhou1
-胡遮刺	hu2 zhe1 la4
 胡遮刺	hu2 zhe1 ci4
 胡遮剌	hu2 zhe1 la4
 胡鋪搭	hu2 pu1 da1
@@ -110479,4 +110491,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 110471 #####
+##### @結束 END - 110494 #####

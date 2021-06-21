@@ -39,6 +39,10 @@ min_phrase_weight: 100
 #𤍤	zhang4	0.1%
 #婁	lou3	0.1%
 #娄	lou3	0.1%
+#刺	la4	0%
+#貯	chu2	1%
+#贮	chu2	1%
+氙	shan1	50%
 蒲	pu3
 逾	yu4	90%
 蛤	ge3
@@ -77,7 +81,6 @@ min_phrase_weight: 100
 蔘	sen1
 箍	ku1
 篐	ku1
-涮	shua1
 蕈	jun4
 憧	chong3
 鏘	kiang1
@@ -95,7 +98,7 @@ min_phrase_weight: 100
 珀	bo4	1%
 抓	zhua3	5%
 擂	lei3	0.1%
-焢	kong4	1%
+焢	kong4	10%
 鮨	zhi3	100%
 珈	ka1	1%
 懟	dui3	0.01%
@@ -159,11 +162,9 @@ min_phrase_weight: 100
 娈	luan3	10%
 搐	xu4
 裇	xu4
-汶	wen2	50%
 ○	kong1	1000
 鮎	nian3
 鯰	nian3
-霰	san3	10%
 葩	pa2	10%
 脯	pu3	10%
 㹴	geng3
@@ -198,8 +199,6 @@ min_phrase_weight: 100
 煽	shan4	1%
 琺	fa3	1%
 莆	pu3	1%
-貯	chu2	1%
-贮	chu2	1%
 鎩	sha4	1%
 铩	sha4	1%
 韋	wei3	1%
@@ -223,17 +222,13 @@ min_phrase_weight: 100
 朵	duo5	0%
 戚	qi4	0.1%
 榴	liu3	0.1%
-刺	la4	0%
 皩	huang3	0.1%
-釧	chuan1	0.1%
-钏	chuan1	0.1%
 嗚	wu5	1%
 喔	wu5	0%
 擬	ni2	50%
 拟	ni2	50%
 氬	ya3
 氩	ya3
-氙	shan1	50%
 菠	po1	50%
 鍥	qi4	0.1%
 锲	qi4	0.1%
@@ -262,8 +257,6 @@ min_phrase_weight: 100
 佼	jiao1
 塢	wu1
 坞	wu1
-鮑	bao1	30%
-鲍	bao1
 蚫	bao1
 嗶	bi1
 哔	bi1
@@ -282,7 +275,6 @@ min_phrase_weight: 100
 呢	ne1
 係	xi1	5%
 哦	o1	12%
-娃	wa1	20%
 ##### 以下對《輕聲》做補充 #####
 ### @補充「稱謂」後一字為《輕聲》，『非字典有的發音』！！！ ###
 妹	mei5	0%
@@ -439,7 +431,6 @@ min_phrase_weight: 100
 卟	bu5	0%
 吥	bu5	0%
 咘	bu5	0%
-叭	ba5	10%
 卟	bo5	0%
 哵	ba5	0%
 唄	bai5	0%
@@ -547,7 +538,6 @@ min_phrase_weight: 100
 㖦	dong5	0%
 噠	da5	0%
 哒	da5	0%
-嗒	da5	1%
 呔	dai5	0%
 𠯈	dai5	0%
 𠰺	dai5	0%
