@@ -656,7 +656,6 @@ min_phrase_weight: 100
 晥	huan3	1%
 晥	wan3	1%
 缶	guan4	1%
-兒	er1	1%
 莞	wan1	1%
 婠	wa4	1%
 斜	xia2	0.1%
@@ -1919,6 +1918,9 @@ min_phrase_weight: 100
 嗒	da5	1%
 叭	ba5	10%
 嘠	ga3	0.1%
+皃	wan2	0%
+皃	er2	0%
+皃	ni2	0%
 ##### @201912 比對教育部相關字詞典檔所新增 #####
 丁	zheng1	0.1%
 丂	kao3	0.1%
@@ -13688,7 +13690,7 @@ min_phrase_weight: 100
 #兑	duo2
 兑	rui4
 兒	er2	95%
-兒	er5	5%
+#兒	er5	5%
 兓	jin1
 兓	zan4
 兔	tu4
@@ -52790,7 +52792,7 @@ min_phrase_weight: 100
 𬌗	he2
 𫛸	ti2
 
-##### @以下為「詞組」 #####
+##### @@以下為「詞組」 #####
 㓦劃	bo4 hua4
 㕷啦	pa1 la1
 㕷噠	pa1 da2
@@ -52809,7 +52811,9 @@ min_phrase_weight: 100
 一丈差九尺	yi2 zhang4 cha1 jiu3 chi3
 一丈差九尺	yi1 zhang4 cha1 jiu3 chi3
 一下兒	yi2 xia4 er5
+一下兒	yi2 xia4 er2
 一下兒	yi1 xia4 er5
+一下兒	yi1 xia4 er2
 一下子	yi2 xia4 zi5
 一下子	yi1 xia4 zi3
 一下子	yi1 xia4 zi5
@@ -52870,12 +52874,17 @@ min_phrase_weight: 100
 一個勁	yi2 ge4 jin4
 一個勁	yi1 ge4 jin4
 一個勁兒	yi2 ge4 jin4 er5
-一個勁兒	yi1 ge4 jin4 er1
-一個勁兒	yi1 ge4 jin4 er5
-一個勁兒	yi1 ge5 jin4 er1
-一個勁兒	yi1 ge5 jin4 er2
-一個勁兒	yi2 ge5 jin4 er1
+一個勁兒	yi2 ge4 jin4 er2
+一個勁兒	yi2 ge4 jin4 er1
+一個勁兒	yi2 ge5 jin4 er5
 一個勁兒	yi2 ge5 jin4 er2
+一個勁兒	yi2 ge5 jin4 er1
+一個勁兒	yi1 ge5 jin4 er5
+一個勁兒	yi1 ge5 jin4 er2
+一個勁兒	yi1 ge5 jin4 er1
+一個勁兒	yi1 ge4 jin4 er5
+一個勁兒	yi1 ge4 jin4 er2
+一個勁兒	yi1 ge4 jin4 er1
 一個富貴心	yi2 ge5 fu4 gui4 xin1
 一個巴掌拍不響	yi2 ge5 ba1 zhang3 pai1 bu4 xiang3
 一個巴掌拍不響	yi1 ge4 ba1 zhang3 pai1 bu4 xiang3
@@ -52955,7 +52964,9 @@ min_phrase_weight: 100
 一口吃個胖子	yi4 kou3 chi1 ge5 pang4 zi5
 一口吃個胖子	yi1 kou3 chi1 ge5 pang4 zi5
 一口氣兒	yi4 kou3 qi4 er5
+一口氣兒	yi4 kou3 qi4 er2
 一口氣兒	yi1 kou3 qi4 er5
+一口氣兒	yi1 kou3 qi4 er2
 一句	yi2 ju4
 一句	yi1 ju4
 一句話	yi2 ju4 hua4
@@ -53030,7 +53041,9 @@ min_phrase_weight: 100
 一大早	yi2 da4 zao3
 一大早	yi1 da4 zao3
 一大早兒	yi2 da4 zao3 er5
+一大早兒	yi2 da4 zao3 er2
 一大早兒	yi1 da4 zao3 er5
+一大早兒	yi1 da4 zao3 er2
 一大溜	yi2 da4 liu4
 一大溜	yi1 da4 liu4
 一大郎當	yi2 da4 lang2 dang1
@@ -53069,11 +53082,15 @@ min_phrase_weight: 100
 一將難求	yi2 jiang4 nan2 qiu2
 一將難求	yi1 jiang4 nan2 qiu2
 一對兒	yi2 dui4 er5
+一對兒	yi2 dui4 er2
 一對兒	yi1 dui4 er5
+一對兒	yi1 dui4 er2
 一小部分	yi4 xiao3 bu4 fen4
 一小部分	yi1 xiao3 bu4 fen4
 一小陣兒	yi4 xiao3 zhen4 er5
+一小陣兒	yi4 xiao3 zhen4 er2
 一小陣兒	yi1 xiao3 zhen4 er5
+一小陣兒	yi1 xiao3 zhen4 er2
 一尺還他十寸	yi4 chi3 huan2 ta1 shi2 cun4
 一尺還他十寸	yi1 chi3 huan2 ta1 shi2 cun4
 一展長才	yi4 zhan3 chang2 cai2
@@ -53190,7 +53207,9 @@ min_phrase_weight: 100
 一撇	yi4 pie3
 一撇	yi1 pie3
 一撥兒	yi4 bo1 er5
+一撥兒	yi4 bo1 er2
 一撥兒	yi1 bo1 er5
+一撥兒	yi1 bo1 er2
 一擁而上	yi4 yong1 er2 shang4
 一擁而上	yi4 yong3 er2 shang4
 一擁而上	yi1 yong1 er2 shang4
@@ -53222,7 +53241,9 @@ min_phrase_weight: 100
 一時半會	yi4 shi2 ban4 hui4
 一時半會	yi1 shi2 ban4 hui4
 一時半會兒	yi4 shi2 ban4 hui4 er5
+一時半會兒	yi4 shi2 ban4 hui4 er2
 一時半會兒	yi1 shi2 ban4 hui4 er5
+一時半會兒	yi1 shi2 ban4 hui4 er2
 一時糊塗	yi4 shi2 hu2 tu2
 一時糊塗	yi1 shi2 hu2 tu2
 一時間	yi4 shi2 jian1
@@ -53248,11 +53269,17 @@ min_phrase_weight: 100
 一會	yi1 hui3
 一會	yi1 hui4
 一會兒	yi2 hui4 er5
-一會兒	yi1 hui3 er1
-一會兒	yi1 hui3 er2
+一會兒	yi2 hui4 er2
+一會兒	yi2 hui4 er1
 一會兒	yi1 hui4 er5
-一會兒	yi4 hui3 er1
+一會兒	yi1 hui4 er2
+一會兒	yi1 hui4 er1
+一會兒	yi1 hui3 er5
+一會兒	yi1 hui3 er2
+一會兒	yi1 hui3 er1
+一會兒	yi4 hui3 er5
 一會兒	yi4 hui3 er2
+一會兒	yi4 hui3 er1
 一會子	yi4 hui3 zi5
 一會子	yi1 hui3 zi5
 一會家	yi4 hui3 jia1
@@ -53516,7 +53543,11 @@ min_phrase_weight: 100
 一答一合	yi4 da2 yi4 he2
 一答一合	yi1 da2 yi1 he2
 一答一和兒	yi1 da2 yi1 he2 er5
+一答一和兒	yi1 da2 yi1 he2 er2
 一答一和兒	yi1 da2 yi1 he2 er1
+一答一和兒	yi4 da2 yi4 he2 er5
+一答一和兒	yi4 da2 yi4 he2 er2
+一答一和兒	yi4 da2 yi4 he2 er1
 一箭上垛	yi2 jian4 shang4 duo4
 一箭上垛	yi1 jian4 shang4 duo3
 一箭之仇	yi2 jian4 zhi1 chou2
@@ -53772,11 +53803,11 @@ min_phrase_weight: 100
 一鱗片甲	yi4 lin2 pian4 jia3
 一鱗片甲	yi1 lin2 pian4 jia3
 一點兒	yi4 dian3 er5
-一點兒	yi1 dian3 er1
-一點兒	yi1 dian3 er2
-一點兒	yi1 dian3 er5
-一點兒	yi4 dian3 er1
 一點兒	yi4 dian3 er2
+一點兒	yi4 dian3 er1
+一點兒	yi1 dian3 er5
+一點兒	yi1 dian3 er2
+一點兒	yi1 dian3 er1
 一點水一個泡	yi4 dian3 shui3 yi2 ge5 pao4
 一點水一個泡	yi1 dian3 shui3 yi1 ge4 pao4
 一點水一個泡	yi1 dian3 shui3 yi1 ge5 pao4
@@ -54087,8 +54118,10 @@ min_phrase_weight: 100
 上輩子	shang4 bei4 zi3
 上邊	shang4 bian1
 上邊兒	shang4 bian1 er5
+上邊兒	shang4 bian1 er2
 上都	shang4 du1
 上鉤兒	shang4 gou1 er5
+上鉤兒	shang4 gou1 er2
 上門的買賣好做	shang4 men2 de5 mai3 mai4 hao3 zuo4
 上面	shang4 mian4
 上頭	shang4 tou2
@@ -54170,6 +54203,7 @@ min_phrase_weight: 100
 下輩子	xia4 bei4 zi3
 下邊	xia4 bian1
 下邊兒	xia4 bian1 er5
+下邊兒	xia4 bian1 er2
 下都	xia4 du1
 下降	xia4 jiang4
 下面	xia4 mian4
@@ -54456,7 +54490,9 @@ min_phrase_weight: 100
 不大離	bu2 da4 li2
 不大離	bu4 da4 li2
 不大離兒	bu2 da4 li2 er5
+不大離兒	bu2 da4 li2 er2
 不大離兒	bu4 da4 li2 er5
+不大離兒	bu4 da4 li2 er2
 不太好	bu2 tai4 hao3
 不太好	bu4 tai4 hao3
 不太好	bu2 tai4 hao4
@@ -54513,8 +54549,11 @@ min_phrase_weight: 100
 不對勁	bu2 dui4 jin4
 不對勁	bu4 dui4 jin4
 不對碴兒	bu2 dui4 cha2 er5
-不對碴兒	bu4 dui4 cha2 er1
+不對碴兒	bu2 dui4 cha2 er2
+不對碴兒	bu2 dui4 cha2 er1
 不對碴兒	bu4 dui4 cha2 er5
+不對碴兒	bu4 dui4 cha2 er2
+不對碴兒	bu4 dui4 cha2 er1
 不對稱	bu2 dui4 chen4
 不對稱	bu4 dui4 chen4
 不對頭	bu2 dui4 tou2
@@ -54663,7 +54702,9 @@ min_phrase_weight: 100
 不是了處	bu2 shi4 liao3 chu4
 不是了處	bu4 shi4 liao3 chu4
 不是味兒	bu2 shi4 wei4 er5
+不是味兒	bu2 shi4 wei4 er2
 不是味兒	bu4 shi4 wei4 er5
+不是味兒	bu4 shi4 wei4 er2
 不是嗎	bu2 shi4 ma5
 不是嗎	bu2 shi4 ma1
 不是嗎	bu4 shi4 ma5
@@ -54671,6 +54712,10 @@ min_phrase_weight: 100
 不是東西	bu4 shi4 dong1 xi1
 不是湯著就抹著	bu2 shi4 tang1 zhao2 jiu4 mo3 zhao2
 不是玩兒的	bu2 shi4 wan2 er5 de5
+不是玩兒的	bu2 shi4 wan2 er2 de5
+不是玩兒的	bu2 shi4 wan2 er1 de5
+不是玩兒的	bu4 shi4 wan2 er5 de5
+不是玩兒的	bu4 shi4 wan2 er2 de5
 不是玩兒的	bu4 shi4 wan2 er1 de5
 不是耍處	bu2 shi4 shua3 chu4
 不是耍處	bu4 shi4 shua3 chu4
@@ -55177,6 +55222,8 @@ min_phrase_weight: 100
 不隄防	bu4 ti2 fang2
 不雌不雄	bu4 ci1 bu4 xiong2
 不離兒	bu4 li2 er5
+不離兒	bu4 li2 er2
+不離兒	bu4 li2 er1
 不難	bu4 nan2
 不零不落	bu4 ling2 bu2 luo4
 不零不落	bu4 ling2 bu4 luo4
@@ -55294,6 +55341,7 @@ min_phrase_weight: 100
 丫叉	ya1 cha1
 丫子	ya1 zi5
 丫巴兒	ya1 ba1 er5
+丫巴兒	ya1 ba1 er2
 丫巴兒	ya1 ba1 er1
 丫杈	ya1 cha1
 丫杈	ya1 cha4
@@ -55544,6 +55592,7 @@ min_phrase_weight: 100
 串親戚	chuan4 qin1 qi1
 串親訪友	chuan4 qin1 fang3 you3
 串門兒	chuan4 men2 er5
+串門兒	chuan4 men2 er2
 串門子	chuan4 men2 zi5
 串門子	chuan4 men2 zi3
 串鼻子	chuan4 bi2 zi5
@@ -55982,8 +56031,8 @@ min_phrase_weight: 100
 事修而謗興	shi4 xiu1 er2 bang4 xing1
 事假	shi4 jia4
 事兒	shi4 er5
-事兒	shi4 er1
 事兒	shi4 er2
+事兒	shi4 er1
 事危累卵	shi4 wei1 lei3 luan3
 事危累卵	shi4 wei2 lei3 luan3
 事在人為	shi4 zai4 ren2 wei2
@@ -56402,6 +56451,7 @@ min_phrase_weight: 100
 人地相宜	ren2 di4 xiang1 yi2
 人家	ren2 jia1
 人尖兒	ren2 jian1 er5
+人尖兒	ren2 jian1 er2
 人工血液	ren2 gong1 xie3 ye4
 人工閱卷	ren2 gong1 yue4 juan4
 人工降雨	ren2 gong1 jiang4 yu3
@@ -56416,8 +56466,8 @@ min_phrase_weight: 100
 人情一把鋸	ren2 qing2 yi4 ba3 ju4
 人情一把鋸	ren2 qing2 yi1 ba3 ju4
 人情味兒	ren2 qing2 wei4 er5
-人情味兒	ren2 qing2 wei4 er1
 人情味兒	ren2 qing2 wei4 er2
+人情味兒	ren2 qing2 wei4 er1
 人情薄似紙	ren2 qing2 bo2 si4 zhi3
 人才濟濟	ren2 cai2 ji3 ji3
 人才難得	ren2 cai2 nan2 de2
@@ -56475,6 +56525,7 @@ min_phrase_weight: 100
 人窩子	ren2 wo1 zi5
 人給家足	ren2 ji3 jia1 zu2
 人緣兒	ren2 yuan2 er5
+人緣兒	ren2 yuan2 er2
 人肉市場	ren2 rou4 shi4 chang2
 人肉市場	ren2 rou4 shi4 chang3
 人脈	ren2 mai4
@@ -56562,8 +56613,8 @@ min_phrase_weight: 100
 仇香	chou2 xiang1
 今不如昔	jin1 bu4 ru2 xi2
 今兒	jin1 er5
-今兒	jin1 er1
 今兒	jin1 er2
+今兒	jin1 er1
 今夕	jin1 xi4
 今夕何夕	jin1 xi4 he2 xi4
 今昔	jin1 xi2
@@ -56598,6 +56649,7 @@ min_phrase_weight: 100
 付與	fu4 yu3
 仙人擔	xian1 ren2 dan4
 仙方兒	xian1 fang1 er5
+仙方兒	xian1 fang1 er2
 仙樂	xian1 yue4
 仙露明珠	xian1 lu4 ming2 zhu1
 仡仡	yi4 yi4
@@ -56749,6 +56801,7 @@ min_phrase_weight: 100
 任重致遠	ren4 zhong4 zhi4 yuan3
 任重道遠	ren4 zhong4 dao4 yuan3
 份兒	fen4 er5
+份兒	fen4 er2
 份量	fen4 liang4
 仿佛	fang3 fu2
 仿圈	fang3 quan1
@@ -56786,6 +56839,7 @@ min_phrase_weight: 100
 伊哩烏蘆	yi1 li1 wu1 lu2
 伊塞克湖	yi1 sai1 ke4 hu2
 伊妹兒	yi1 mei4 er5
+伊妹兒	yi1 mei4 er2
 伊娃‧門德斯	yi1 wa2 eng3 men2 de2 si1
 伊寧	yi1 ning2
 伊寧市	yi1 ning2 shi4
@@ -56908,6 +56962,7 @@ min_phrase_weight: 100
 估價行	gu1 jia4 hang2
 估喝	gu1 he4
 估堆兒	gu1 dui1 er5
+估堆兒	gu1 dui1 er2
 估堆兒	gu1 dui1 er1
 估摸	gu1 mo2
 估衣	gu4 yi1
@@ -57195,6 +57250,7 @@ min_phrase_weight: 100
 來比錫	lai2 bi3 xi2
 來派	lai2 pai4
 來火兒	lai2 huo3 er5
+來火兒	lai2 huo3 er2
 來煞	lai2 sha4
 來牟	lai2 mou2
 來看	lai2 kan4
@@ -57614,8 +57670,8 @@ min_phrase_weight: 100
 個人秀空間	ge4 ren2 xiu4 kong1 jian1
 個個稱羨	ge4 ge4 cheng1 xian4
 個兒	ge4 er5
-個兒	ge4 er1
 個兒	ge4 er2
+個兒	ge4 er1
 個別差異	ge4 bie2 cha1 yi4
 個子	ge4 zi5
 個性難改	ge4 xing4 nan2 gai3
@@ -57623,7 +57679,9 @@ min_phrase_weight: 100
 個案分析	ge4 an4 fen1 xi1
 個案研究	ge4 an4 yan2 jiu4
 個頭兒	ge4 tou2 er5
+個頭兒	ge4 tou2 er2
 倍兒	bei4 er5
+倍兒	bei4 er2
 倍兒	bei4 er1
 倍感親切	bei4 gan3 qin1 qie4
 倍數	bei4 shu4
@@ -57717,6 +57775,7 @@ min_phrase_weight: 100
 倒店	dao3 dian4
 倒座	dao4 zuo4
 倒座兒	dao4 zuo4 er5
+倒座兒	dao4 zuo4 er2
 倒廩傾囷	dao4 lin3 qing1 jun1
 倒弄	dao3 nong4
 倒彩	dao4 cai3
@@ -57833,6 +57892,7 @@ min_phrase_weight: 100
 倒背如流	dao4 bei4 ru2 liu2
 倒背手	dao4 bei4 shou3
 倒背手兒	dao4 bei4 shou3 er5
+倒背手兒	dao4 bei4 shou3 er2
 倒脫靴	dao4 tuo1 xue1
 倒臥	dao3 wo4
 倒台	dao3 tai2
@@ -57877,6 +57937,7 @@ min_phrase_weight: 100
 倒退	dao4 tui4
 倒運	dao3 yun4
 倒過兒	dao4 guo4 er5
+倒過兒	dao4 guo4 er2
 倒鉤	dao4 gou1
 倒錢	dao4 qian2
 倒錯	dao4 cuo4
@@ -57928,7 +57989,9 @@ min_phrase_weight: 100
 借古諷今	jie4 gu3 feng4 jin1
 借古諷今	jie4 gu3 feng3 jin1
 借單兒	jie4 dan1 er5
+借單兒	jie4 dan1 er2
 借字兒	jie4 zi4 er5
+借字兒	jie4 zi4 er2
 借客報仇	jie4 ke4 bao4 chou2
 借宿	jie4 su4
 借屍還魂	jie4 shi1 huan2 hun2
@@ -58170,6 +58233,7 @@ min_phrase_weight: 100
 做下來	zuo4 xia4 lai2
 做人處事	zuo4 ren2 chu3 shi4
 做伴兒	zuo4 ban4 er5
+做伴兒	zuo4 ban4 er2
 做作	zuo4 zuo4
 做倒包	zuo4 dao3 bao1
 做出事來	zuo4 chu1 shi4 lai2
@@ -58193,6 +58257,7 @@ min_phrase_weight: 100
 做朝	zuo4 zhao1
 做法子	zuo4 fa2 zi5
 做活兒	zuo4 huo2 er5
+做活兒	zuo4 huo2 er2
 做派	zuo4 pai4
 做為	zuo4 wei2
 做甚	zuo4 shen2
@@ -58281,6 +58346,7 @@ min_phrase_weight: 100
 傍午	bang4 wu3
 傍妻	pang2 qi1
 傍家兒	bang4 jia1 er5
+傍家兒	bang4 jia1 er2
 傍尊	pang2 zun1
 傍排	pang2 pai2
 傍晌	bang1 shang3
@@ -58556,10 +58622,12 @@ min_phrase_weight: 100
 傻勁	sha3 jin4
 傻呵呵	sha3 he1 he1
 傻大個兒	sha3 da4 ge4 er5
+傻大個兒	sha3 da4 ge4 er2
 傻子	sha3 zi5
 傻孩子	sha3 hai2 zi5
 傻小子	sha3 xiao3 zi5
 傻帽兒	sha3 mao4 er5
+傻帽兒	sha3 mao4 er2
 傻帽兒	sha3 mao4 er1
 傻楞楞	sha3 leng4 leng4
 傻樂	sha3 le4
@@ -58847,8 +58915,8 @@ min_phrase_weight: 100
 光棍	guang1 gun4
 光棍不吃眼前虧	guang1 gun4 bu4 chi1 yan3 qian2 kui1
 光棍兒	guang1 gun4 er5
-光棍兒	guang1 gun4 er1
 光棍兒	guang1 gun4 er2
+光棍兒	guang1 gun4 er1
 光武中興	guang1 wu3 zhong1 xing1
 光波長	guang1 bo1 chang2
 光波長	guang1 po1 chang2
@@ -58908,6 +58976,7 @@ min_phrase_weight: 100
 克萊斯勒	ke4 lai2 si1 le4
 克萊斯勒汽車公司	ke4 lai2 si1 le4 qi4 che1 gong1 si1
 克蕾兒	ke4 lei3 er5
+克蕾兒	ke4 lei3 er2
 克里斯汀‧貝爾	ke4 li3 si1 ting1 eng3 bei4 er3
 克里蒙梭	ke4 li3 meng2 suo1
 克難	ke4 nan2
@@ -58938,7 +59007,9 @@ min_phrase_weight: 100
 兒息	er2 xi2
 兒童樂園	er2 tong2 le4 yuan2
 兔兒不吃窠邊草	tu4 er1 bu4 chi1 ke1 bian1 cao3
+兔兒不吃窠邊草	tu4 er2 bu4 chi1 ke1 bian1 cao3
 兔兒不喫窠邊草	tu4 er1 bu4 chi1 ke1 bian1 cao3
+兔兒不喫窠邊草	tu4 er2 bu4 chi1 ke1 bian1 cao3
 兔子	tu4 zi5
 兔子	tu4 zi3
 兔子不吃窩邊草	tu4 zi5 bu4 chi1 wo1 bian1 cao3
@@ -58951,8 +59022,8 @@ min_phrase_weight: 100
 兔跡狐蹤	tu4 ji1 hu2 zong1
 党太尉吃匾食	dang3 tai4 wei4 chi1 bian3 shi2
 兜兒	dou1 er5
-兜兒	dou1 er1
 兜兒	dou1 er2
+兜兒	dou1 er1
 兜兜	dou1 dou1
 兜兜答答	dou1 dou1 da1 da1
 兜剿	dou1 jiao3
@@ -59117,6 +59188,7 @@ min_phrase_weight: 100
 兩相好	liang3 xiang1 hao3
 兩相情願	liang3 xiang1 qing2 yuan4
 兩著兒	liang3 zhao1 er5
+兩著兒	liang3 zhao1 er2
 兩瞽相扶	liang3 gu3 xiang1 fu2
 兩虎相爭	liang3 hu3 xiang1 zheng1
 兩虎相鬥	liang3 hu3 xiang1 dou4
@@ -59136,6 +59208,7 @@ min_phrase_weight: 100
 兩面鋸	liang3 mian4 ju4
 兩頭不著	liang3 tou2 bu4 zhao2
 兩頭兒	liang3 tou2 er5
+兩頭兒	liang3 tou2 er2
 兩鼠鬥穴	liang3 shu3 dou4 xue4
 八九分	ba1 jiu3 fen1
 八九分人	ba1 jiu3 fen1 ren2
@@ -59150,8 +59223,8 @@ min_phrase_weight: 100
 八千里路雲和月	ba1 qian1 li3 lu4 yun2 he2 yue4
 八卦教	ba1 gua4 jiao4
 八哥兒	ba1 ge1 er5
-八哥兒	ba1 ge1 er1
 八哥兒	ba1 ge1 er2
+八哥兒	ba1 ge1 er1
 八埏	ba1 yan2
 八大胡同	ba1 da4 hu2 tong2
 八字全帖	ba1 zi4 quan2 tie3
@@ -59163,9 +59236,11 @@ min_phrase_weight: 100
 八字還沒一撇	ba1 zi4 hai2 mei2 yi4 pie3
 八字還沒一撇	ba1 zi4 hai2 mei2 yi1 pie3
 八字還沒一撇兒	ba1 zi4 hai2 mei2 yi4 pie3 er5
-八字還沒一撇兒	ba1 zi4 hai2 mei2 yi1 pie3 er1
-八字還沒一撇兒	ba1 zi4 hai2 mei2 yi1 pie3 er5
+八字還沒一撇兒	ba1 zi4 hai2 mei2 yi4 pie3 er2
 八字還沒一撇兒	ba1 zi4 hai2 mei2 yi4 pie3 er1
+八字還沒一撇兒	ba1 zi4 hai2 mei2 yi1 pie3 er5
+八字還沒一撇兒	ba1 zi4 hai2 mei2 yi1 pie3 er2
+八字還沒一撇兒	ba1 zi4 hai2 mei2 yi1 pie3 er1
 八字都沒一撇	ba1 zi4 dou1 mei2 yi4 pie3
 八字都沒一撇	ba1 zi4 dou1 mei2 yi1 pie3
 八家將	ba1 jia1 jiang4
@@ -59246,8 +59321,8 @@ min_phrase_weight: 100
 公報私仇	gong1 bao4 si1 chou2
 公姥	gong1 lao3
 公子哥兒	gong1 zi3 ge1 er5
-公子哥兒	gong1 zi3 ge1 er1
 公子哥兒	gong1 zi3 ge1 er2
+公子哥兒	gong1 zi3 ge1 er1
 公家	gong1 jia1
 公家人	gong1 jia1 ren2
 公差	gong1 cha1
@@ -59559,8 +59634,8 @@ min_phrase_weight: 100
 冰島共和國	bing1 dao3 gong4 he2 guo2
 冰散瓦解	bing1 san4 wa3 jie3
 冰棍兒	bing1 gun4 er5
-冰棍兒	bing1 gun4 er1
 冰棍兒	bing1 gun4 er2
+冰棍兒	bing1 gun4 er1
 冰櫱	bing1 bo4
 冰河時期	bing1 he2 shi2 qi2
 冰淇淋	bing1 qi2 lin2
@@ -59711,6 +59786,7 @@ min_phrase_weight: 100
 出嘍子	chu1 lou2 zi5
 出圈	chu1 quan1
 出圈兒	chu1 quan1 er5
+出圈兒	chu1 quan1 er2
 出圈兒	chu1 quan1 er1
 出塞	chu1 sai4
 出大差	chu1 da4 chai1
@@ -59718,6 +59794,7 @@ min_phrase_weight: 100
 出婁子	chu1 lou2 zi5
 出將入相	chu1 jiang4 ru4 xiang4
 出尖兒	chu1 jian1 er5
+出尖兒	chu1 jian1 er2
 出岔子	chu1 cha4 zi5
 出差	chu1 chai1
 出差費	chu1 chai1 fei4
@@ -59750,6 +59827,7 @@ min_phrase_weight: 100
 出紅差	chu1 hong2 chai1
 出結	chu1 jie2
 出臭子兒	chu1 chou4 zi3 er5
+出臭子兒	chu1 chou4 zi3 er2
 出落	chu1 luo4
 出處不如聚處	chu1 chu4 bu4 ru2 ju4 chu4
 出蟄	chu1 zhi2
@@ -60406,6 +60484,7 @@ min_phrase_weight: 100
 刨工	bao4 gong1
 刨根	pao2 gen1
 刨根兒	pao2 gen1 er5
+刨根兒	pao2 gen1 er2
 刨根問底	pao2 gen1 wen4 di3
 刨根究底	pao2 gen1 jiu4 di3
 刨樹要尋根	pao2 shu4 yao4 xun2 gen1
@@ -60513,9 +60592,13 @@ min_phrase_weight: 100
 刺促	ci4 cu4
 刺傷	ci4 shang1
 刺兒	ci4 er5
+刺兒	ci4 er2
 刺兒李	ci4 er5 li3
+刺兒李	ci4 er2 li3
 刺兒話	ci4 er5 hua4
+刺兒話	ci4 er2 hua4
 刺兒頭	ci4 er5 tou2
+刺兒頭	ci4 er2 tou2
 刺兒頭	ci4 er1 tou2
 刺刀	ci4 dao1
 刺刺	ci4 ci4
@@ -60682,11 +60765,14 @@ min_phrase_weight: 100
 剌謬	la4 miu4
 前仇	qian2 chou2
 前兒	qian2 er5
+前兒	qian2 er2
 前兒	qian2 er1
 前冠	qian2 guan1
 前出後空	qian2 chu1 hou4 kong1
 前半天兒	qian2 ban4 tian1 er5
+前半天兒	qian2 ban4 tian1 er2
 前半晌兒	qian2 ban4 shang3 er5
+前半晌兒	qian2 ban4 shang3 er2
 前向擁塞通知	qian2 xiang4 yong1 sai1 tong1 zhi1
 前呼後應	qian2 hu1 hou4 ying4
 前呼後擁	qian2 hu1 hou4 yong3
@@ -60723,6 +60809,7 @@ min_phrase_weight: 100
 前遮後擁	qian2 zhe1 hou4 yong3
 前邊	qian2 bian1
 前邊兒	qian2 bian1 er5
+前邊兒	qian2 bian1 er2
 前郭爾羅斯蒙古族自治縣	qian2 guo1 er3 luo2 si1 meng3 gu3 zu2 zi4 zhi4 xian4
 前郭爾羅斯蒙古族自治縣	qian2 guo1 er3 luo2 si1 meng2 gu3 zu2 zi4 zhi4 xian4
 前鋸肌	qian2 ju4 ji1
@@ -61173,6 +61260,7 @@ min_phrase_weight: 100
 加利福尼亞大學洛杉磯分校	jia1 li4 fu2 ni2 ya4 da4 xue2 luo4 shan1 ji1 fen1 xiao4
 加勁	jia1 jin4
 加勁兒	jia1 jin4 er5
+加勁兒	jia1 jin4 er2
 加勒比	jia1 le4 bi3
 加勒比國家聯盟	jia1 le4 bi3 guo2 jia1 lian2 meng2
 加勒比海	jia1 le4 bi3 hai3
@@ -61180,6 +61268,7 @@ min_phrase_weight: 100
 加哩	jia1 li3
 加哩	jia1 li5
 加塞兒	jia1 sai1 er5
+加塞兒	jia1 sai1 er2
 加大力度	jia1 da4 li4 du4
 加工效率	jia1 gong1 xiao4 lv4
 加強	jia1 qiang2
@@ -61228,10 +61317,11 @@ min_phrase_weight: 100
 助興	zhu4 xing4
 助長	zhu4 zhang3
 努勁兒	nu3 jin4 er5
+努勁兒	nu3 jin4 er2
 努勁兒	nu3 jin4 er1
 努嘴兒	nu3 zui3 er5
-努嘴兒	nu3 zui3 er1
 努嘴兒	nu3 zui3 er2
+努嘴兒	nu3 zui3 er1
 努牙突嘴	nu3 ya2 tu2 zui3
 努著	nu3 zhe5
 努著	nu3 zhuo2
@@ -61245,8 +61335,8 @@ min_phrase_weight: 100
 劫難	jie2 nan4
 劾繫	he2 xi4
 勁兒	jin4 er5
-勁兒	jin4 er1
 勁兒	jin4 er2
+勁兒	jin4 er1
 勁兵	jing4 bing1
 勁力	jin4 li4
 勁卒	jing4 zu2
@@ -61351,6 +61441,7 @@ min_phrase_weight: 100
 動勁	dong4 jin4
 動員戡亂時期	dong4 yuan2 kan1 luan4 shi2 qi2
 動嘴皮兒	dong4 zui3 pi2 er5
+動嘴皮兒	dong4 zui3 pi2 er2
 動嘴皮子	dong4 zui3 pi2 zi5
 動地驚天	dong4 di4 jing1 tian1
 動如參商	dong4 ru2 shen1 shang1
@@ -61546,10 +61637,14 @@ min_phrase_weight: 100
 勿以善小而不為	wu4 yi3 shan4 xiao3 er2 bu4 wei2
 勿以惡小而為之	wu4 yi3 e4 xiao3 er2 wei2 zhi1
 包乾兒	bao1 gan1 er5
+包乾兒	bao1 gan1 er2
 包剿	bao1 jiao3
 包占	bao1 zhan4
 包園兒	bao1 yuan2 er5
+包園兒	bao1 yuan2 er2
+包園兒	bao1 yuan2 er1
 包圓兒	bao1 yuan2 er5
+包圓兒	bao1 yuan2 er2
 包圓兒	bao1 yuan2 er1
 包子	bao1 zi5
 包子	bao1 zi3
@@ -61578,6 +61673,7 @@ min_phrase_weight: 100
 包衣種子	bao1 yi1 zhong3 zi5
 包袱	bao1 fu2
 包袱底兒	bao1 fu2 di3 er5
+包袱底兒	bao1 fu2 di3 er2
 包袱底兒	bao1 fu2 di3 er1
 包間	bao1 jian1
 包頭地區	bao1 tou2 di4 qu1
@@ -61654,6 +61750,7 @@ min_phrase_weight: 100
 北路梆子	bei3 lu4 bang1 zi5
 北轍南轅	bei3 che4 nan2 yuan2
 北邊兒	bei3 bian1 er5
+北邊兒	bei3 bian1 er2
 北部地區	bei3 bu4 di4 qu1
 北部地方	bei3 bu4 di4 fang1
 北部橫貫公路	bei3 bu4 heng2 guan4 gong1 lu4
@@ -61931,6 +62028,7 @@ min_phrase_weight: 100
 半長軸	ban4 chang2 zhou2
 半門子	ban4 men2 zi5
 半開門兒	ban4 kai1 men2 er5
+半開門兒	ban4 kai1 men2 er2
 半間不界	ban4 jian4 bu2 jie4
 半間不界	ban4 jian4 bu4 jie4
 半零不落	ban4 ling2 bu2 luo4
@@ -62022,6 +62120,7 @@ min_phrase_weight: 100
 南通地區	nan2 tong1 di4 qu1
 南邊	nan2 bian1
 南邊兒	nan2 bian1 er5
+南邊兒	nan2 bian1 er2
 南部地方	nan2 bu4 di4 fang1
 南部橫貫公路	nan2 bu4 heng2 guan4 gong1 lu4
 南都	nan2 du1
@@ -62081,6 +62180,7 @@ min_phrase_weight: 100
 占卦	zhan1 gua4
 占地	zhan4 di4
 占地兒	zhan4 di4 er5
+占地兒	zhan4 di4 er2
 占地方	zhan4 di4 fang1
 占地步	zhan4 di4 bu4
 占地盤	zhan4 di4 pan2
@@ -62421,6 +62521,7 @@ min_phrase_weight: 100
 卸擔子	xie4 dan4 zi5
 卸磨殺驢	xie4 mo4 sha1 lv2
 卸肩兒	xie4 jian1 er5
+卸肩兒	xie4 jian1 er2
 卸載	xie4 zai4
 卸載	xie4 zai3
 卻倒	que4 dao4
@@ -62668,6 +62769,7 @@ min_phrase_weight: 100
 反間計	fan3 jian4 ji4
 反間諜	fan3 jian4 die2
 反面兒	fan3 mian4 er5
+反面兒	fan3 mian4 er2
 反革命宣傳	fan3 ge2 ming4 xuan1 chuan2
 反革命宣傳煽動罪	fan3 ge2 ming4 xuan1 chuan2 shan1 dong4 zui4
 反飛彈	fan3 fei1 dan4
@@ -63024,6 +63126,7 @@ min_phrase_weight: 100
 右轉	you4 zhuan3
 右邊	you4 bian1
 右邊兒	you4 bian1 er5
+右邊兒	you4 bian1 er2
 司更	si1 geng1
 司法行政	si1 fa3 xing2 zheng4
 司法行政部	si1 fa3 xing2 zheng4 bu4
@@ -63189,6 +63292,7 @@ min_phrase_weight: 100
 合眾銀行	he2 zhong4 yin2 hang2
 合轍	he2 zhe2
 合轍兒	he2 zhe2 er5
+合轍兒	he2 zhe2 er2
 合轍押韻	he2 zhe2 ya1 yun4
 合零為整	he2 ling2 wei2 zheng3
 吉丁當	ji2 ding1 dang1
@@ -63343,6 +63447,8 @@ min_phrase_weight: 100
 名角	ming2 jue2
 名角	ming2 jiao3
 名角兒	ming2 jue2 er5
+名角兒	ming2 jue2 er1
+名角兒	ming2 jue2 er2
 名譽掃地	ming2 yu4 sao3 di4
 名譽校長	ming2 yu4 xiao4 zhang3
 名蹟	ming2 ji1
@@ -63602,6 +63708,8 @@ min_phrase_weight: 100
 呆打頦	dai1 da2 hai2
 呆掙	dai1 zheng1
 呆會兒	dai1 hui4 er5
+呆會兒	dai1 hui4 er1
+呆會兒	dai1 hui4 er2
 呆答孩	dai1 da2 hai2
 呆答答	dai1 da1 da1
 呆裡撒奸	dai1 li3 sa1 jian1
@@ -64086,6 +64194,8 @@ min_phrase_weight: 100
 咖哩飯	ka1 li3 fan4
 咖哩飯	ga1 li3 fan4
 咖啡館兒	ka1 fei1 guan3 er5
+咖啡館兒	ka1 fei1 guan3 er2
+咖啡館兒	ka1 fei1 guan3 er1
 咖喱	ga1 li2
 咖喱	ga1 li3
 咖喱	ka1 li3
@@ -64108,7 +64218,9 @@ min_phrase_weight: 100
 咫尺之地	zhi3 chi3 zhi1 di4
 咫角驂駒	zhi3 jue2 can1 ju1
 咬人狗兒不露齒	yao3 ren2 gou3 er5 bu2 lu4 chi3
+咬人狗兒不露齒	yao3 ren2 gou3 er2 bu2 lu4 chi3
 咬人狗兒不露齒	yao3 ren2 gou3 er5 bu4 lu4 chi3
+咬人狗兒不露齒	yao3 ren2 gou3 er2 bu4 lu4 chi3
 咬合調整	yao3 he2 tiao2 zheng3
 咬咬	jiao1 jiao1
 咬折丁子的老婆	yao3 zhe2 ding1 zi5 de5 lao3 po2
@@ -64293,6 +64405,7 @@ min_phrase_weight: 100
 哤聒	mang2 gua1
 哥們兒	ge1 men5 er5
 哥們兒	ge1 men5 er1
+哥們兒	ge1 men5 er2
 哥倫比亞共和國	ge1 lun2 bi3 ya3 gong4 he2 guo2
 哥倫比亞共和國	ge1 lun2 bi3 ya4 gong4 he2 guo2
 哥兒	ge1 er5
@@ -64362,6 +64475,7 @@ min_phrase_weight: 100
 哲蚌寺	zhe2 bang4 si4
 哼兒哈兒	heng1 er5 ha1 er5
 哼兒哈兒	heng1 er1 ha1 er1
+哼兒哈兒	heng1 er1 ha1 er2
 哼哈二將	heng1 ha1 er4 jiang4
 哼哼唧唧	heng1 heng1 ji1 ji1
 哼哼唧唧	heng1 heng1 ji2 ji2
@@ -64445,6 +64559,7 @@ min_phrase_weight: 100
 唱賺	chang4 zhuan4
 唱高調	chang4 gao1 diao4
 唱高調兒	chang4 gao1 diao4 er5
+唱高調兒	chang4 gao1 diao4 er2
 唵嘛呢叭咪哞	an3 ma5 ni2 ba1 mi1 mou1
 唵嘛呢叭咪哞	an3 ma2 ni2 ba1 mi1 mou1
 唵嘛咪叭呢哞	an3 ma5 mi1 ba1 ni2 mou1
@@ -64865,6 +64980,10 @@ min_phrase_weight: 100
 單位向量	dan1 wei4 xiang4 liang4
 單個兒	dan1 ge4 er5
 單個兒	dan1 ge4 er1
+單個兒	dan1 ge4 er2
+單個兒	dan1 ge5 er5
+單個兒	dan1 ge5 er1
+單個兒	dan1 ge5 er2
 單傳	dan1 chuan2
 單元教學法	dan1 yuan2 jiao4 xue2 fa3
 單元頻率	dan1 yuan2 pin2 lv4
@@ -65181,6 +65300,7 @@ min_phrase_weight: 100
 噱頭	xue2 tou2
 噴吐	pen1 tu3
 噴嘴兒	pen1 zui3 er5
+噴嘴兒	pen1 zui3 er2
 噴壺的兒子	pen1 hu2 de5 er2 zi5
 噴子	pen1 zi5
 噴射凝結器	pen1 she4 ning2 jie2 qi4
@@ -65229,6 +65349,7 @@ min_phrase_weight: 100
 嚜嚜	mo4 mo4
 嚭嚭地	pi3 pi3 de5
 嚴了眼兒	yan2 le5 yan3 er5
+嚴了眼兒	yan2 le5 yan3 er2
 嚴以責己寬以待人	yan2 yi3 ze2 ji3 kuan1 yi3 dai4 ren2
 嚴切	yan2 qie4
 嚴實	yan2 shi2
@@ -65363,6 +65484,7 @@ min_phrase_weight: 100
 回去	hui2 qu4
 回和	hui2 he2
 回單兒	hui2 dan1 er5
+回單兒	hui2 dan1 er2
 回回	hui2 hui2
 回回曆	hui2 hui2 li4
 回回鼻子	hui2 hui2 bi2 zi5
@@ -65653,6 +65775,7 @@ min_phrase_weight: 100
 土地重劃	tu3 di4 chong2 hua4
 土地銀行	tu3 di4 yin2 hang2
 土坎兒	tu3 kan3 er5
+土坎兒	tu3 kan3 er2
 土埋半截	tu3 mai2 ban4 jie2
 土堤	tu3 ti2
 土堤	tu3 di1
@@ -65710,6 +65833,7 @@ min_phrase_weight: 100
 在訴訟期間	zai4 su4 song4 qi2 jian1
 在這期間	zai4 zhe4 qi2 jian1
 在那兒	zai4 na4 er5
+在那兒	zai4 na4 er2
 在高處	zai4 gao1 chu4
 圩堤	yu2 ti2
 圩堤	yu2 di1
@@ -66107,10 +66231,13 @@ min_phrase_weight: 100
 坍落	tan1 luo4
 坎兒	kan3 er5
 坎兒	kan3 er1
+坎兒	kan3 er2
 坎塔布連山脈	kan3 ta3 bu4 lian2 shan1 mai4
 坎子	kan3 zi5
 坎特伯雷大主教	kan3 te4 bo2 lei2 da4 zhu3 jiao4
 坎肩兒	kan3 jian1 er5
+坎肩兒	kan3 jian1 er2
+坎肩兒	kan3 jian1 er1
 坐下	zuo4 xia4
 坐不住	zuo4 bu2 zhu4
 坐不住	zuo4 bu4 zhu4
@@ -66163,6 +66290,7 @@ min_phrase_weight: 100
 坦迤	tan3 yi3
 坦露	tan3 lou4
 坨兒	tuo2 er5
+坨兒	tuo2 er2
 坨子	tuo2 zi5
 坩子土	gan1 zi5 tu3
 坪場	ping2 chang2
@@ -66440,6 +66568,7 @@ min_phrase_weight: 100
 堵塞費	du3 se4 fei4
 堵得慌	du3 de5 huang1
 塊兒八毛	kuai4 er5 ba1 mao2
+塊兒八毛	kuai4 er2 ba1 mao2
 塊然獨處	kuai4 ran2 du2 chu3
 塊菌	kuai4 jun4
 塊菌	kuai4 jun1
@@ -66463,7 +66592,9 @@ min_phrase_weight: 100
 塔吉克共和國	ta3 ji2 ke4 gong4 he2 guo2
 塔城地區	ta3 cheng2 di4 qu1
 塔塔兒	ta3 ta3 er5
+塔塔兒	ta3 ta3 er2
 塔塔兒人	ta3 ta3 er5 ren2
+塔塔兒人	ta3 ta3 er2 ren2
 塔尖上功德	ta3 jian1 shang4 gong1 de2
 塔扎	ta3 za1
 塔羅卡	ta3 luo2 ka3
@@ -66586,6 +66717,7 @@ min_phrase_weight: 100
 墊子	dian4 zi5
 墊子	dian4 zi3
 墊底兒	dian4 di3 er5
+墊底兒	dian4 di3 er2
 墊沒	dian4 mo4
 墊片	dian4 pian4
 墊腳	dian4 jiao3
@@ -66619,6 +66751,7 @@ min_phrase_weight: 100
 墨暈	mo4 yun4
 墨杘	mo4 chi1
 墨水兒	mo4 shui3 er5
+墨水兒	mo4 shui3 er2
 墨盪子	mo4 dang4 zi5
 墨突	mo4 tu2
 墨竹工卡	mo4 zhu2 gong1 ka3
@@ -66662,6 +66795,7 @@ min_phrase_weight: 100
 壓埋	ya1 mai2
 壓壓腳	ya1 ya1 jiao3
 壓壓腳兒	ya1 ya1 jiao3 er5
+壓壓腳兒	ya1 ya1 jiao3 er2
 壓子息	ya1 zi3 xi2
 壓強	ya1 qiang2
 壓板	ya4 ban3
@@ -66686,6 +66820,7 @@ min_phrase_weight: 100
 壞分子	huai4 fen4 zi3
 壞分子	huai4 fen4 zi5
 壞包兒	huai4 bao1 er5
+壞包兒	huai4 bao1 er2
 壞坯子	huai4 pei1 zi5
 壞東西	huai4 dong1 xi1
 壞痞子	huai4 pi3 zi5
@@ -66809,6 +66944,8 @@ min_phrase_weight: 100
 外道話	wai4 dao4 hua4
 外邊	wai4 bian1
 外邊兒	wai4 bian1 er5
+外邊兒	wai4 bian1 er2
+外邊兒	wai4 bian1 er1
 外長	wai4 zhang3
 外長城	wai4 chang2 cheng2
 外間	wai4 jian1
@@ -66923,6 +67060,8 @@ min_phrase_weight: 100
 夜場	ye4 chang2
 夜場	ye4 chang3
 夜宵兒	ye4 xiao1 er5
+夜宵兒	ye4 xiao1 er2
+夜宵兒	ye4 xiao1 er1
 夜宿曉行	ye4 su4 xiao3 xing2
 夜尿症	ye4 niao4 zheng4
 夜市場	ye4 shi4 chang2
@@ -67005,7 +67144,10 @@ min_phrase_weight: 100
 大便祕結	da4 bian4 mi4 jie2
 大修道院長	da4 xiu1 dao4 yuan4 zhang3
 大個兒	da4 ge4 er5
+大個兒	da4 ge4 er2
 大個兒	da4 ge4 er1
+大個兒	da4 ge5 er5
+大個兒	da4 ge5 er1
 大個兒	da4 ge5 er2
 大個子	da4 ge4 zi5
 大個子	da4 ge4 zi3
@@ -67225,6 +67367,7 @@ min_phrase_weight: 100
 大毒日頭地下	da4 du2 ri4 tou5 di4 xia4
 大比之期	da4 bi3 zhi1 qi2
 大氣兒	da4 qi4 er5
+大氣兒	da4 qi4 er2
 大氣圈	da4 qi4 quan1
 大氣壓強	da4 qi4 ya1 qiang2
 大氣折射	da4 qi4 zhe2 she4
@@ -67437,6 +67580,8 @@ min_phrase_weight: 100
 天假因緣	tian1 jia3 yin1 yuan2
 天假良緣	tian1 jia3 liang2 yuan2
 天兒	tian1 er5
+天兒	tian1 er1
+天兒	tian1 er2
 天公地道	tian1 gong1 di4 dao4
 天公地道地道	tian1 gong1 di4 dao4 di4 dao4
 天兵天將	tian1 bing1 tian1 jiang4
@@ -67766,6 +67911,7 @@ min_phrase_weight: 100
 夾和	jia2 huo4
 夾單	jia2 dan1
 夾塞兒	jia1 sai1 er5
+夾塞兒	jia1 sai1 er2
 夾壁	jia2 bi4
 夾子	jia1 zi5
 夾子	jia2 zi5
@@ -67802,6 +67948,7 @@ min_phrase_weight: 100
 夾界	jia2 jie4
 夾當	jia1 dang1
 夾當兒	jia1 dang1 er5
+夾當兒	jia1 dang1 er2
 夾著尾巴	jia2 zhe5 wei3 ba1
 夾著尾巴	jia2 zhe5 yi3 ba1
 夾磨	jia2 mo2
@@ -67950,7 +68097,9 @@ min_phrase_weight: 100
 奔頭	ben4 tou2
 奔頭	ben4 tou5
 奔頭兒	ben4 tou2 er5
+奔頭兒	ben4 tou2 er2
 奔頭兒	ben4 tou5 er5
+奔頭兒	ben4 tou5 er2
 奔馬	ben1 ma3
 奔馳	ben1 chi2
 奔馳如雷	ben1 chi2 ru2 lei2
@@ -67976,6 +68125,7 @@ min_phrase_weight: 100
 套色	tao4 se4
 套色	tao4 shai3
 套衫兒	tao4 shan1 er5
+套衫兒	tao4 shan1 er2
 套調	tao4 diao4
 套間	tao4 jian1
 奚落	xi1 luo4
@@ -68073,6 +68223,7 @@ min_phrase_weight: 100
 奴兒干都司	nu2 er2 gan1 du1 si1
 奴隸制度	nu2 li4 zhi4 du4
 奶嘴兒	nai3 zui3 er5
+奶嘴兒	nai3 zui3 er2
 奶奶	nai3 nai5
 奶奶	nai3 nai3
 奶媽懷裡的孩子	nai3 ma1 huai2 li3 de5 hai2 zi5
@@ -68188,6 +68339,7 @@ min_phrase_weight: 100
 好玩	hao4 wan2
 好玩	hao4 wan4
 好玩兒	hao3 wan2 er5
+好玩兒	hao3 wan2 er2
 好生	hao3 sheng1
 好生	hao4 sheng1
 好生之德	hao4 sheng1 zhi1 de2
@@ -68775,6 +68927,7 @@ min_phrase_weight: 100
 孫傳芳	sun1 chuan2 fang1
 孫叔敖	sun1 shu2 ao2
 孫女兒	sun1 nv3 er5
+孫女兒	sun1 nv3 er2
 孫女婿	sun1 nv3 xu4
 孫媳夫	sun1 xi2 fu1
 孫子	sun1 zi3
@@ -69680,6 +69833,7 @@ min_phrase_weight: 100
 寬待	kuan1 dai4
 寬心丸兒	kuan1 xin1 wan2 er5
 寬心丸兒	kuan1 xin1 wan2 er1
+寬心丸兒	kuan1 xin1 wan2 er2
 寬敞	kuan1 chang3
 寬洪大度	kuan1 hong2 da4 du4
 寬洪大量	kuan1 hong2 da4 liang4
@@ -69906,8 +70060,12 @@ min_phrase_weight: 100
 對刺	dui4 ci4
 對勁	dui4 jin4
 對勁兒	dui4 jin4 er5
+對勁兒	dui4 jin4 er2
+對勁兒	dui4 jin4 er1
 對口相聲	dui4 kou3 xiang4 sheng1
 對味兒	dui4 wei4 er5
+對味兒	dui4 wei4 er2
+對味兒	dui4 wei4 er1
 對品調用	dui4 pin3 diao4 yong4
 對嘴子	dui4 zui3 zi5
 對地	dui4 di4
@@ -69915,10 +70073,12 @@ min_phrase_weight: 100
 對子	dui4 zi3
 對子	dui4 zi5
 對工兒	dui4 gong1 er5
+對工兒	dui4 gong1 er2
 對待	dui4 dai4
 對得起	dui4 de5 qi3
 對得起	dui4 de2 qi3
 對心兒	dui4 xin1 er5
+對心兒	dui4 xin1 er2
 對應	dui4 ying4
 對應	dui4 ying1
 對折	dui4 zhe2
@@ -69943,6 +70103,7 @@ min_phrase_weight: 100
 對答	dui4 da2
 對答如流	dui4 da2 ru2 liu2
 對茬兒	dui4 cha2 er5
+對茬兒	dui4 cha2 er2
 對衝	dui4 chong1
 對衝基金	dui4 chong1 ji1 jin1
 對親	dui4 qin1
@@ -70020,6 +70181,7 @@ min_phrase_weight: 100
 小娃娃	xiao3 wa2 wa1
 小娃娃	xiao3 wa2 wa2
 小媳婦兒	xiao3 xi2 fu4 er5
+小媳婦兒	xiao3 xi2 fu4 er2
 小子	xiao3 zi3
 小子	xiao3 zi5
 小孩兒	xiao3 hai2 er5
@@ -70049,6 +70211,7 @@ min_phrase_weight: 100
 小彈	xiao3 dan4
 小心眼兒	xiao3 xin1 yan3 er5
 小心眼兒	xiao3 xin1 yan3 er1
+小心眼兒	xiao3 xin1 yan3 er2
 小怯大勇	xiao3 que4 da4 yong3
 小意思	xiao3 yi4 si1
 小意思	xiao3 yi4 si4
@@ -70056,6 +70219,7 @@ min_phrase_weight: 100
 小拇指	xiao3 mu3 zhi3
 小插曲	xiao3 cha1 qu3
 小攤兒	xiao3 tan1 er5
+小攤兒	xiao3 tan1 er2
 小數	xiao3 shu4
 小數點	xiao3 shu4 dian3
 小斂	xiao3 lian4
@@ -70084,6 +70248,7 @@ min_phrase_weight: 100
 小畜	xiao3 xu4
 小番子	xiao3 fan1 zi5
 小白臉兒	xiao3 bai2 lian3 er5
+小白臉兒	xiao3 bai2 lian3 er2
 小相	xiao3 xiang4
 小相公	xiao3 xiang4 gong1
 小看	xiao3 kan4
@@ -70094,6 +70259,7 @@ min_phrase_weight: 100
 小紅	xiao3 hong2
 小結	xiao3 jie2
 小缸缸兒	xiao3 gang1 gang1 er5
+小缸缸兒	xiao3 gang1 gang1 er2
 小老婆	xiao3 lao3 po5
 小老婆	xiao3 lao3 po2
 小老婆子	xiao3 lao3 po5 zi5
@@ -70107,8 +70273,10 @@ min_phrase_weight: 100
 小舅子	xiao3 jiu4 zi3
 小興安嶺	xiao3 xing1 an1 ling3
 小菜兒	xiao3 cai4 er5
+小菜兒	xiao3 cai4 er2
 小菜碟兒	xiao3 cai4 die2 er5
 小菜碟兒	xiao3 cai4 die2 er1
+小菜碟兒	xiao3 cai4 die2 er2
 小蘇打粉	xiao3 su1 da2 fen3
 小蘿蔔頭	xiao3 luo2 bo5 tou5
 小蘿蔔頭	xiao3 luo2 bo1 tou5
@@ -70270,6 +70438,7 @@ min_phrase_weight: 100
 尚比亞共和國	shang4 bi3 ya3 gong4 he2 guo2
 尚比亞共和國	shang4 bi3 ya4 gong4 he2 guo2
 尜兒	ga2 er5
+尜兒	ga2 er2
 尜尜	ga2 ga2
 尤侗	you2 tong2
 尤利婭‧季莫申科	you2 li4 ya4 eng3 ji4 mo4 shen1 ke1
@@ -70396,6 +70565,7 @@ min_phrase_weight: 100
 居息	ju1 xi2
 居民消費價格指數	ju1 min2 xiao1 fei4 jia4 ge2 zhi3 shu4
 居民點兒	ju1 min2 dian3 er5
+居民點兒	ju1 min2 dian3 er2
 居處	ju1 chu4
 居里夫人	ju1 li3 fu1 ren2
 居間	ju1 jian1
@@ -70780,6 +70950,7 @@ min_phrase_weight: 100
 左轉	zuo3 zhuan3
 左邊	zuo3 bian1
 左邊兒	zuo3 bian1 er5
+左邊兒	zuo3 bian1 er2
 左降	zuo3 jiang4
 巧偽不如拙誠	qiao3 wei3 bu4 ru2 zhuo2 cheng2
 巧偽不如拙誠	qiao3 wei4 bu4 ru2 zhuo2 cheng2
@@ -70799,8 +70970,10 @@ min_phrase_weight: 100
 差一點	cha4 yi1 dian3
 差一點兒	cha4 yi4 dian3 er5
 差一點兒	cha1 yi4 dian3 er1
-差一點兒	cha4 yi1 dian3 er1
+差一點兒	cha1 yi4 dian3 er2
 差一點兒	cha4 yi1 dian3 er5
+差一點兒	cha4 yi1 dian3 er1
+差一點兒	cha4 yi1 dian3 er2
 差三錯四	cha1 san1 cuo4 si4
 差不上下	cha4 bu2 shang4 xia4
 差不上下	cha4 bu4 shang4 xia4
@@ -70808,6 +70981,7 @@ min_phrase_weight: 100
 差不多	cha1 bu4 duo1
 差不離	cha4 bu4 li2
 差不離兒	cha4 bu4 li2 er5
+差不離兒	cha4 bu4 li2 er2
 差之千里	cha1 zhi1 qian1 li3
 差之千里	cha4 zhi1 qian1 li3
 差之毫釐	cha1 zhi1 hao2 li2
@@ -71165,6 +71339,7 @@ min_phrase_weight: 100
 帶俸差操	dai4 feng4 chai1 cao1
 帶個好	dai4 ge5 hao3
 帶兒	dai4 er5
+帶兒	dai4 er2
 帶分數	dai4 fen1 shu4
 帶刺	dai4 ci4
 帶勁	dai4 jin4
@@ -71224,6 +71399,7 @@ min_phrase_weight: 100
 帽子	mao4 zi3
 帽子戲法	mao4 zi5 xi4 fa3
 帽箍兒	mao4 gu1 er5
+帽箍兒	mao4 gu1 er2
 幀太長	zhen1 tai4 chang2
 幀太長	zheng4 tai4 chang2
 幃屏	wei2 ping2
@@ -71436,6 +71612,7 @@ min_phrase_weight: 100
 年湮代遠	nian2 yin1 dai4 yuan3
 年產量	nian2 chan3 liang4
 年畫兒	nian2 hua4 er5
+年畫兒	nian2 hua4 er2
 年程	nian2 cheng2
 年載	nian2 zai3
 年輕有為	nian2 qing1 you3 wei2
@@ -71665,6 +71842,7 @@ min_phrase_weight: 100
 度長絜大	duo4 chang2 xie2 da4
 座兒	zuo4 er5
 座兒	zuo4 er1
+座兒	zuo4 er2
 座子	zuo4 zi5
 座椅套子	zuo4 yi3 tao4 zi5
 座標空間	zuo4 biao1 kong1 jian1
@@ -71902,6 +72080,7 @@ min_phrase_weight: 100
 弄潮	nong4 chao2
 弄潮兒	nong4 chao2 er2
 弄潮兒	nong4 chao2 er1
+弄潮兒	nong4 chao2 er5
 弄濤	nong4 tao2
 弄狗相咬	nong4 gou3 xiang1 yao3
 弄獐	nong4 zhang1
@@ -71956,6 +72135,7 @@ min_phrase_weight: 100
 式子	shi4 zi5
 式子	shi4 zi3
 弓弦兒	gong1 xian2 er5
+弓弦兒	gong1 xian2 er2
 弓形鑽	gong1 xing2 zuan4
 弓折矢盡	gong1 zhe2 shi3 jin4
 弓折箭盡	gong1 zhe2 jian4 jin4
@@ -72417,6 +72597,7 @@ min_phrase_weight: 100
 影像解壓縮卡	ying3 xiang4 jie3 ya1 suo1 ka3
 影兒	ying3 er5
 影兒	ying3 er1
+影兒	ying3 er2
 影占	ying3 zhan4
 影圈	ying3 quan1
 影子	ying3 zi5
@@ -72507,9 +72688,9 @@ min_phrase_weight: 100
 待會兒	dai1 hui4 er5
 待會兒	dai1 hui4 er1
 待會兒	dai1 hui4 er2
+待會兒	dai1 hui3 er5
 待會兒	dai1 hui3 er1
 待會兒	dai1 hui3 er2
-待會兒	dai1 hui3 er5
 待月西廂	dai4 yue4 xi1 xiang1
 待期	dai4 qi2
 待東	dai4 dong1
@@ -72558,6 +72739,7 @@ min_phrase_weight: 100
 後人	hou4 ren2
 後兒	hou4 er5
 後兒	hou4 er1
+後兒	hou4 er2
 後加成分	hou4 jia1 cheng2 fen4
 後半場	hou4 ban4 chang3
 後天下之樂而樂	hou4 tian1 xia4 zhi1 le4 er2 le4
@@ -72583,8 +72765,10 @@ min_phrase_weight: 100
 後車戒	hou4 ju1 jie4
 後邊	hou4 bian1
 後邊兒	hou4 bian1 er5
+後邊兒	hou4 bian1 er2
 後重	hou4 zhong4
 後鉤兒	hou4 gou1 er5
+後鉤兒	hou4 gou1 er2
 後門不進和尚	hou4 men2 bu2 jin4 he2 shang4
 後面	hou4 mian4
 後頭	hou4 tou5
@@ -73120,6 +73304,7 @@ min_phrase_weight: 100
 快快樂樂	kuai4 kuai4 le4 le4
 快快當當	kuai4 kuai4 dang1 dang1
 快板兒	kuai4 ban3 er5
+快板兒	kuai4 ban3 er2
 快樂	kuai4 le4
 快樂丸	kuai4 le4 wan2
 快樂主義	kuai4 le4 zhu3 yi4
@@ -73132,6 +73317,8 @@ min_phrase_weight: 100
 快速帆船	kuai4 su4 fan2 chuan2
 快雪時晴帖	kuai4 xue3 shi2 qing2 tie4
 快點兒	kuai4 dian3 er5
+快點兒	kuai4 dian3 er1
+快點兒	kuai4 dian3 er2
 忳忳	tun2 tun2
 念叨	nian4 dao1
 念和	nian4 he2
@@ -73200,6 +73387,7 @@ min_phrase_weight: 100
 怔怔	zheng1 zheng1
 怔營	zheng1 ying2
 怔神兒	zheng1 shen2 er5
+怔神兒	zheng1 shen2 er2
 怕不	pa4 bu2
 怕不	pa4 bu4
 怕不待	pa4 bu2 dai4
@@ -73363,7 +73551,9 @@ min_phrase_weight: 100
 恐怖分子	kong3 bu4 fen4 zi3
 恐怖片	kong3 bu4 pian4
 恐怖片兒	kong3 bu4 pian4 er5
+恐怖片兒	kong3 bu4 pian4 er2
 恐怖片兒	kong3 bu4 pian1 er5
+恐怖片兒	kong3 bu4 pian1 er2
 恢宏大度	hui1 hong2 da4 du4
 恢廓大度	hui1 kuo4 da4 du4
 恢恑	hui1 gui3
@@ -73699,6 +73889,8 @@ min_phrase_weight: 100
 惡口	e4 kou3
 惡名	e4 ming2
 惡名兒	e4 ming2 er5
+惡名兒	e4 ming2 er2
+惡名兒	e4 ming2 er1
 惡名昭彰	e4 ming2 zhao1 zhang1
 惡名昭著	e4 ming2 zhao1 zhu4
 惡向膽邊生	e4 xiang4 dan3 bian1 sheng1
@@ -73975,11 +74167,15 @@ min_phrase_weight: 100
 感興	gan3 xing4
 感興趣	gan3 xing4 qu4
 愣勁兒	leng4 jin4 er5
+愣勁兒	leng4 jin4 er1
+愣勁兒	leng4 jin4 er2
 愣怔	leng4 leng4
 愣神兒	leng4 shen2 er5
 愣神兒	leng4 shen2 er1
+愣神兒	leng4 shen2 er2
 愣頭兒青	leng4 tou2 er5 qing1
 愣頭兒青	leng4 tou2 er1 qing1
+愣頭兒青	leng4 tou2 er2 qing1
 愧不敢當	kui4 bu4 gan3 dang1
 愧悔無地	kui4 hui3 wu2 di4
 愧惶無地	kui4 huang2 wu2 di4
@@ -74101,6 +74297,7 @@ min_phrase_weight: 100
 懂得	dong3 de2
 懂行	dong3 hang2
 懂門兒	dong3 men2 er5
+懂門兒	dong3 men2 er2
 懇切	ken3 qie4
 懇親	ken3 qin1
 懇親會	ken3 qin1 hui4
@@ -74138,6 +74335,7 @@ min_phrase_weight: 100
 應名	ying1 ming2
 應名兒	ying1 ming2 er5
 應名兒	ying4 ming2 er1
+應名兒	ying4 ming2 er2
 應名點卯	ying4 ming2 dian3 mao3
 應命	ying4 ming4
 應和	ying4 he4
@@ -74195,6 +74393,7 @@ min_phrase_weight: 100
 應時而生	ying4 shi2 er2 sheng1
 應景	ying4 jing3
 應景兒	ying4 jing3 er5
+應景兒	ying4 jing3 er2
 應有	ying1 you3
 應有盡有	ying1 you3 jin4 you3
 應機權變	ying4 ji1 quan2 bian4
@@ -74376,6 +74575,7 @@ min_phrase_weight: 100
 成數	cheng2 shu4
 成方兒	cheng2 fang1 er5
 成方兒	cheng2 fang1 er1
+成方兒	cheng2 fang1 er2
 成日家	cheng2 ri4 jia1
 成本效益分析	cheng2 ben3 xiao4 yi4 fen1 xi1
 成本會計	cheng2 ben3 kuai4 ji4
@@ -74487,9 +74687,12 @@ min_phrase_weight: 100
 戲綵娛親	xi4 cai3 yu2 qin1
 戲行	xi4 hang2
 戳份兒	chuo1 fen4 er5
+戳份兒	chuo1 fen4 er2
 戳個兒	chuo1 ge4 er5
+戳個兒	chuo1 ge4 er2
 戳兒	chuo1 er5
 戳兒	chuo1 er1
+戳兒	chuo1 er2
 戳刺感	chuo1 ci4 gan3
 戳子	chuo1 zi5
 戳得住	chuo1 de5 zhu4
@@ -74751,6 +74954,7 @@ min_phrase_weight: 100
 扒開	pa2 kai1
 扒頭兒	ba1 tou5 er5
 扒頭兒	ba1 tou5 er1
+扒頭兒	ba1 tou5 er2
 扒頭探腦	ba1 tou2 tan4 nao3
 扒飯	pa2 fan4
 扒高踩低	pa2 gao1 cai3 di1
@@ -74797,6 +75001,7 @@ min_phrase_weight: 100
 打哆嗦	da3 duo1 suo1
 打哈哈	da3 ha1 ha1
 打哈哈兒	da3 ha1 ha1 er5
+打哈哈兒	da3 ha1 ha1 er2
 打哈欠	da3 ha1 qian4
 打哨子	da3 shao4 zi5
 打哩	da3 li1
@@ -74880,6 +75085,7 @@ min_phrase_weight: 100
 打數	da3 shu4
 打旋	da3 xuan2
 打旋兒	da3 xuan2 er5
+打旋兒	da3 xuan2 er2
 打旋磨	da3 xuan2 mo4
 打更	da3 geng1
 打更	da3 jing1
@@ -74932,6 +75138,7 @@ min_phrase_weight: 100
 打知名度	da3 zhi1 ming2 du4
 打短兒	da3 duan3 er5
 打短兒	da3 duan3 er1
+打短兒	da3 duan3 er2
 打磨	da3 mo2
 打磨盤	da3 mo4 pan2
 打磨磨轉	da3 mo4 mo4 zhuan4
@@ -74965,6 +75172,7 @@ min_phrase_weight: 100
 打踅	da3 xue2
 打踅磨	da3 xue2 mo2
 打躉兒	da3 dun3 er5
+打躉兒	da3 dun3 er2
 打躬作揖	da3 gong1 zuo1 yi1
 打躬作揖	da3 gong1 zuo4 yi1
 打車子	da3 che1 zi5
@@ -74986,6 +75194,7 @@ min_phrase_weight: 100
 打靶場	da3 ba3 chang2
 打靶場	da3 ba3 chang3
 打頓兒	da3 dun4 er5
+打頓兒	da3 dun4 er2
 打頦歌	da3 hai2 ge1
 打顫	da3 chan4
 打顫	da3 zhan4
@@ -75003,6 +75212,8 @@ min_phrase_weight: 100
 打點	da3 dian3
 打點行裝	da3 dian3 xing2 zhuang1
 打鼓兒的	da3 gu3 er1 de1
+打鼓兒的	da3 gu3 er2 de1
+打鼓兒的	da3 gu3 er5 de1
 托勒密	tuo1 le4 mi4
 托勒密王	tuo1 le4 mi4 wang2
 托勒玫	tuo1 le4 mei2
@@ -75068,6 +75279,7 @@ min_phrase_weight: 100
 扯開嗓子	che3 kai1 sang3 zi5
 扳不倒兒	ban1 bu4 dao3 er5
 扳不倒兒	ban1 bu4 dao3 er1
+扳不倒兒	ban1 bu4 dao3 er2
 扳倒	ban1 dao3
 扳價	ban1 jia4
 扳動	ban1 dong4
@@ -75086,9 +75298,11 @@ min_phrase_weight: 100
 扳扯	ban1 che3
 扳指	ban1 zhi3
 扳指兒	ban1 zhi3 er5
+扳指兒	ban1 zhi3 er2
 扳搭饊子	ban1 da1 san3 zi5
 扳本	ban1 ben3
 扳本兒	ban1 ben3 er5
+扳本兒	ban1 ben3 er2
 扳機	ban1 ji1
 扳留	pan1 liu2
 扳纏不清	ban1 chan2 bu4 qing1
@@ -75152,6 +75366,7 @@ min_phrase_weight: 100
 找不自在	zhao3 bu2 zi4 zai4
 找不自在	zhao3 bu4 zi4 zai4
 找刺兒	zhao3 ci4 er5
+找刺兒	zhao3 ci4 er2
 找尋	zhao3 xun2
 找對頭	zhao3 dui4 tou5
 找對頭	zhao3 dui4 tou2
@@ -75159,10 +75374,13 @@ min_phrase_weight: 100
 找樂子	zhao3 le4 zi5
 找著	zhao3 zhao2
 找碴兒	zhao3 cha2 er5
+找碴兒	zhao3 cha2 er2
 找碴兒	zhao3 cha2 er1
 找縫子	zhao3 feng4 zi5
 找台階兒	zhao3 tai2 jie1 er5
+找台階兒	zhao3 tai2 jie1 er2
 找臺階兒	zhao3 tai2 jie1 er5
+找臺階兒	zhao3 tai2 jie1 er2
 找補	zhao3 bu3
 找轍	zhao3 zhe2
 找面子	zhao3 mian4 zi5
@@ -75199,6 +75417,7 @@ min_phrase_weight: 100
 抄沒	chao1 mo4
 抄轉	chao1 zhuan3
 抄近兒	chao1 jin4 er5
+抄近兒	chao1 jin4 er2
 抄靶子	chao1 ba3 zi5
 抉擿	jue2 ti4
 抉瑕擿釁	jue2 xia2 ti4 xin4
@@ -75234,6 +75453,7 @@ min_phrase_weight: 100
 抓地力	zhua1 di4 li4
 抓子兒	zhua1 zi3 er5
 抓子兒	chua3 zi3 er1
+抓子兒	chua3 zi3 er2
 抓尖要強	zhua1 jian1 yao4 qiang2
 抓工夫	zhua1 gong1 fu1
 抓弄	zhua1 nong4
@@ -75313,6 +75533,7 @@ min_phrase_weight: 100
 折兵	zhe2 bing1
 折刀	zhe2 dao1
 折刀兒	zhe2 dao1 er5
+折刀兒	zhe2 dao1 er2
 折券	zhe2 quan4
 折剉	zhe2 cuo4
 折半	zhe2 ban4
@@ -75411,6 +75632,7 @@ min_phrase_weight: 100
 折辱	zhe2 ru4
 折返	zhe2 fan3
 折過兒	zhe1 guo4 er5
+折過兒	zhe1 guo4 er2
 折長補短	zhe2 chang2 bu3 duan3
 折頭	zhe2 tou5
 折騰	zhe2 teng2
@@ -75600,6 +75822,7 @@ min_phrase_weight: 100
 拉個手	la1 ge5 shou3
 拉倒	la1 dao3
 拉勾兒	la1 gou4 er5
+拉勾兒	la1 gou4 er2
 拉卜楞	la1 bu3 leng2
 拉卜楞寺	la1 bu3 leng2 si4
 拉卜楞寺	la1 bu3 leng4 si4
@@ -75738,6 +75961,7 @@ min_phrase_weight: 100
 拔地搖山	ba2 di4 yao2 shan1
 拔地而起	ba2 di4 er2 qi3
 拔尖兒	ba2 jian1 er5
+拔尖兒	ba2 jian1 er2
 拔山扛鼎	ba2 shan1 gang1 ding3
 拔山曲	ba2 shan1 qu3
 拔山蓋世	ba2 shan1 gai4 shi4
@@ -75746,6 +75970,7 @@ min_phrase_weight: 100
 拔本塞原	ba2 ben3 se4 yuan2
 拔本塞源	ba2 ben3 se4 yuan2
 拔火罐兒	ba2 huo3 guan4 er5
+拔火罐兒	ba2 huo3 guan4 er2
 拔著短籌	ba2 zhao2 duan3 chou2
 拔突	ba2 tu2
 拔縫	ba2 feng4
@@ -75806,6 +76031,7 @@ min_phrase_weight: 100
 拘攣	ju1 luan2
 拘攣兒	ju1 luan2 er5
 拘攣兒	ju1 lvan2 er1
+拘攣兒	ju1 lvan2 er2
 拘攣補衲	ju1 lvan2 bu3 na4
 拘攣補衲	ju1 luan2 bu3 na4
 拘神遣將	ju1 shen2 qian3 jiang4
@@ -76083,6 +76309,7 @@ min_phrase_weight: 100
 按調	an4 diao4
 按需分配	an4 xu1 fen1 pei4
 挎兜兒	kua4 dou1 er5
+挎兜兒	kua4 dou1 er2
 挑三揀四	tiao1 san1 jian3 si4
 挑三窩四	tiao3 san1 wo1 si4
 挑三豁四	tiao3 san1 huo4 si4
@@ -76130,6 +76357,7 @@ min_phrase_weight: 100
 挑正梁	tiao1 zheng4 liang2
 挑毛剔刺	tiao1 mao2 ti1 ci4
 挑毛剔刺兒	tiao1 mao2 ti1 ci4 er5
+挑毛剔刺兒	tiao1 mao2 ti1 ci4 er2
 挑毛揀刺	tiao1 mao2 jian3 ci4
 挑毛病	tiao1 mao2 bing4
 挑泛	tiao3 fan4
@@ -76172,6 +76400,7 @@ min_phrase_weight: 100
 挑閃	tiao1 shan3
 挑雪填井	tiao1 xue3 tian2 jing3
 挑頭兒	tiao3 tou2 er5
+挑頭兒	tiao3 tou2 er2
 挑頭子	tiao3 tou2 zi5
 挑食	tiao1 shi2
 挑飭	tiao1 chi4
@@ -76195,12 +76424,13 @@ min_phrase_weight: 100
 挨個兒	ai1 ge4 er5
 挨個兒	ai1 ge4 er1
 挨個兒	ai1 ge4 er2
+挨個兒	ai1 ge5 er5
 挨個兒	ai1 ge5 er1
 挨個兒	ai1 ge5 er2
-挨個兒	ai1 ge5 er5
 挨剋	ai2 ke4
 挨呲	ai1 ci1
 挨呲兒	ai2 ci1 er5
+挨呲兒	ai2 ci1 er2
 挨山塞海	ai1 shan1 se4 hai3
 挨打受氣	ai2 da3 shou4 qi4
 挨打受罵	ai1 da3 shou4 ma4
@@ -76217,7 +76447,10 @@ min_phrase_weight: 100
 挨罵	ai2 ma4
 挨肩兒	ai1 jian1 er5
 挨肩兒	ai1 jian1 er1
+挨肩兒	ai1 jian1 er2
 挨邊兒	ai1 bian1 er5
+挨邊兒	ai1 bian1 er1
+挨邊兒	ai1 bian1 er2
 挨頭子	ai2 tou2 zi5
 挨風緝縫	ai1 feng1 qi4 feng4
 挨餓	ai1 e4
@@ -76225,6 +76458,7 @@ min_phrase_weight: 100
 挨鬥	ai2 dou4
 挪窩兒	nuo2 wo1 er5
 挪窩兒	nuo2 wo1 er1
+挪窩兒	nuo2 wo1 er2
 挫折	cuo4 zhe2
 挫折感	cuo4 zhe2 gan3
 挫辱	cuo4 ru4
@@ -76346,6 +76580,7 @@ min_phrase_weight: 100
 捧臭腳	peng3 chou4 jiao3
 捧角	peng3 jue2
 捧角兒	peng3 jue2 er5
+捧角兒	peng3 jue2 er2
 捧轂推輪	peng3 gu3 tui1 lun2
 捨不得	she3 bu4 de2
 捨不得	she3 bu4 de5
@@ -76496,6 +76731,7 @@ min_phrase_weight: 100
 掇青拾紫	duo2 qing1 shi2 zi3
 授與	shou4 yu3
 掉價兒	diao4 jia4 er5
+掉價兒	diao4 jia4 er2
 掉價兒	diao4 jia4 er1
 掉嘴弄舌	diao4 zui3 nong4 she2
 掉弄	diao4 nong4
@@ -76503,8 +76739,11 @@ min_phrase_weight: 100
 掉轉	diao4 zhuan3
 掉轉頭	diao4 zhuan3 tou2
 掉過兒	diao4 guo4 er5
+掉過兒	diao4 guo4 er2
 掉過兒	diao4 guo4 er1
 掉點兒	diao4 dian3 er5
+掉點兒	diao4 dian3 er2
+掉點兒	diao4 dian3 er1
 掊克	pou2 ke4
 掊刻	pou2 ke4
 掊剋	pou2 ke4
@@ -76611,6 +76850,7 @@ min_phrase_weight: 100
 掛號處	gua4 hao4 chu4
 掛貨鋪	gua4 huo4 pu4
 掛鉤兒	gua4 gou1 er5
+掛鉤兒	gua4 gou1 er2
 掛鉤子	gua4 gou1 zi5
 掠地攻城	lve4 di4 gong1 cheng2
 掠子	lve4 zi5
@@ -76646,6 +76886,7 @@ min_phrase_weight: 100
 探親家	tan4 qin1 jia1
 探身子	tan4 shen1 zi5
 探頭探腦兒	tan4 tou2 tan4 nao3 er5
+探頭探腦兒	tan4 tou2 tan4 nao3 er2
 探騎	tan4 ji4
 探驪得珠	tan4 li2 de2 zhu1
 掣曳	che4 yi4
@@ -76770,6 +77011,7 @@ min_phrase_weight: 100
 提省	ti2 xing3
 提稱語	ti2 cheng1 yu3
 提籃兒	ti2 lan2 er5
+提籃兒	ti2 lan2 er2
 提行	ti2 hang2
 提補	ti2 bu3
 提親	ti2 qin1
@@ -76780,6 +77022,7 @@ min_phrase_weight: 100
 提防	di1 fang2
 提防	ti2 fang2
 提頭兒	ti2 tou2 er5
+提頭兒	ti2 tou2 er2
 提高產品質量	ti2 gao1 chan3 pin3 zhi2 liang4
 提高產品質量	ti2 gao1 chan3 pin3 zhi4 liang4
 插上	cha1 shang4
@@ -76816,6 +77059,7 @@ min_phrase_weight: 100
 揚長避短	yang2 chang2 bi4 duan3
 揚雄吐鳳	yang2 xiong2 tu3 feng4
 換個兒	huan4 ge4 er5
+換個兒	huan4 ge4 er2
 換帖	huan4 tie3
 換帖兄弟	huan4 tie3 xiong1 di4
 換擋	huan4 dang3
@@ -76942,6 +77186,7 @@ min_phrase_weight: 100
 搞混	gao3 hun4
 搞笑片	gao3 xiao4 pian4
 搞花樣兒	gao3 hua1 yang4 er5
+搞花樣兒	gao3 hua1 yang4 er2
 搞頭	gao3 tou5
 搞頭	gao3 tou2
 搤肮拊背	e4 hang2 fu3 bei4
@@ -76976,6 +77221,7 @@ min_phrase_weight: 100
 搭圾	da1 se4
 搭子	da1 zi5
 搭把手兒	da1 ba3 shou3 er5
+搭把手兒	da1 ba3 shou3 er2
 搭拉	da1 la1
 搭接片	da1 jie1 pian4
 搭搭拈拈	da1 da1 nian2 nian2
@@ -76987,6 +77233,7 @@ min_phrase_weight: 100
 搭班子	da1 ban1 zi5
 搭縫	da1 feng4
 搭茬兒	da1 cha2 er5
+搭茬兒	da1 cha2 er2
 搭蓋	da1 gai4
 搭街坊	da1 jie1 fang1
 搭街坊	da1 jie1 fang3
@@ -77026,7 +77273,9 @@ min_phrase_weight: 100
 搽脂抹粉	cha2 zhi1 mo3 fen3
 摀蓋	wu3 gai4
 摁釘兒	en4 ding1 er5
+摁釘兒	en4 ding1 er2
 摁釦兒	en4 kou4 er5
+摁釦兒	en4 kou4 er2
 摑混	guo2 hun4
 摔倒	shuai1 dao3
 摔喪	shuai1 sang1
@@ -77090,6 +77339,7 @@ min_phrase_weight: 100
 摯切	zhi4 qie4
 摳字眼兒	kou1 zi4 yan3 er5
 摳字眼兒	kou1 zi4 yan3 er1
+摳字眼兒	kou1 zi4 yan3 er2
 摳心挖肚	kou1 xin1 wa1 du4
 摳扒	kou1 pa2
 摳搜	kou1 sou1
@@ -77487,6 +77737,7 @@ min_phrase_weight: 100
 撲棱	pu1 leng1
 撲空	pu1 kong1
 撲臉兒	pu1 lian3 er5
+撲臉兒	pu1 lian3 er2
 撲花行徑	pu1 hua1 xing2 jing4
 撲落	pu1 luo4
 撲跌	pu1 die2
@@ -77898,8 +78149,10 @@ min_phrase_weight: 100
 擺行陣	bai3 hang2 zhen4
 擺設兒	bai3 she4 er5
 擺設兒	bai3 she4 er1
+擺設兒	bai3 she4 er2
 擺譜兒	bai3 pu3 er5
 擺譜兒	bai3 pu3 er1
+擺譜兒	bai3 pu3 er2
 擺門子	bai3 men2 zi5
 擺露	bai3 lou4
 擻火	sou4 huo3
@@ -78420,6 +78673,7 @@ min_phrase_weight: 100
 敞快	chang3 kuai4
 敞開兒	chang3 kai1 er5
 敞開兒	chang3 kai1 er1
+敞開兒	chang3 kai1 er2
 敢作敢為	gan3 zuo4 gan3 wei2
 敢作敢當	gan3 zuo4 gan3 dang1
 敢做敢當	gan3 zuo4 gan3 dang1
@@ -78465,6 +78719,7 @@ min_phrase_weight: 100
 散帶衡門	san3 dai4 heng2 men2
 散座	san3 zuo4
 散座兒	san3 zuo4 er5
+散座兒	san3 zuo4 er2
 散心	san4 xin1
 散心解悶	san4 xin1 jie3 men4
 散悶	san4 men4
@@ -78841,11 +79096,15 @@ min_phrase_weight: 100
 料莫	liao4 mo4
 料豆兒	liao4 dou4 er5
 料豆兒	liao4 dou4 er1
+料豆兒	liao4 dou4 er2
 料頭兒	liao4 tou2 er5
+料頭兒	liao4 tou2 er1
+料頭兒	liao4 tou2 er2
 斜度	xie2 du4
 斜度標	xie2 du4 biao1
 斜愣眼	xie2 leng4 yan3
 斜愣眼兒	xie2 leng4 yan3 er5
+斜愣眼兒	xie2 leng4 yan3 er2
 斜槓	xie2 gang4
 斜率	xie2 lv4
 斜眼看	xie2 yan3 kan4
@@ -79258,11 +79517,15 @@ min_phrase_weight: 100
 早夭	zao3 yao1
 早操	zao3 cao1
 早早兒	zao3 zao3 er5
+早早兒	zao3 zao3 er2
+早早兒	zao3 zao3 er1
 早朝	zao3 chao2
 早期	zao3 qi2
 早期效應	zao3 qi2 xiao4 ying4
 早熟兒童	zao3 shou2 er2 tong2
 早班兒	zao3 ban1 er5
+早班兒	zao3 ban1 er2
+早班兒	zao3 ban1 er1
 早知今日何必當初	zao3 zhi1 jin1 ri4 he4 bi4 dang1 chu1
 早知今日何必當初	zao3 zhi1 jin1 ri4 he2 bi4 dang1 chu1
 早知道	zao3 zhi1 dao4
@@ -79271,6 +79534,7 @@ min_phrase_weight: 100
 早難道	zao3 nan2 dao4
 旮旯兒	ga1 la2 er5
 旮旯兒	ga1 la2 er1
+旮旯兒	ga1 la2 er2
 旱地	han4 di4
 旱潦	han4 lao4
 旱獺	han4 ta4
@@ -79651,7 +79915,11 @@ min_phrase_weight: 100
 暈頭轉向	yun1 tou2 zhuan4 xiang4
 暈頭轉向	yun1 tou2 zhuan3 xiang4
 暈高兒	yun4 gao1 er5
+暈高兒	yun4 gao1 er1
+暈高兒	yun4 gao1 er2
+暈高兒	yun1 gao1 er5
 暈高兒	yun1 gao1 er1
+暈高兒	yun1 gao1 er2
 暑假	shu3 jia4
 暑期	shu3 qi2
 暑期學校	shu3 qi2 xue2 xiao4
@@ -79686,16 +79954,19 @@ min_phrase_weight: 100
 暗結珠胎	an4 jie2 zhu1 tai1
 暗花兒	an4 hua1 er5
 暗花兒	an4 hua1 er1
+暗花兒	an4 hua1 er2
 暗藏	an4 cang2
 暗藏玄機	an4 cang2 xuan2 ji1
 暗處	an4 chu4
 暗行	an4 hang2
 暗記兒	an4 ji4 er5
+暗記兒	an4 ji4 er2
 暗轉	an4 zhuan3
 暗適應	an4 shi4 ying4
 暗門子	an4 men2 zi5
 暗間兒	an4 jian1 er5
 暗間兒	an4 jian1 er1
+暗間兒	an4 jian1 er2
 暗順應	an4 shun4 ying4
 暝子	ming2 zi5
 暢洽	chang4 xia2
@@ -80028,6 +80299,7 @@ min_phrase_weight: 100
 書歸正傳	shu1 gui1 zheng4 zhuan4
 書無百日工	shu1 wu2 bo2 ri4 gong1
 書皮兒	shu1 pi2 er5
+書皮兒	shu1 pi2 er2
 書目答問	shu1 mu4 da2 wen4
 書種	shu1 zhong3
 書空	shu1 kong1
@@ -80042,6 +80314,7 @@ min_phrase_weight: 100
 書鋪	shu1 pu4
 書館兒	shu1 guan3 er5
 書館兒	shu1 guan3 er1
+書館兒	shu1 guan3 er2
 曹不興	cao2 bu4 xing1
 曹大家	cao2 da4 gu1
 曹操	cao2 cao1
@@ -80098,8 +80371,10 @@ min_phrase_weight: 100
 替子	ti4 zi5
 替換	ti4 huan4
 替班兒	ti4 ban1 er5
+替班兒	ti4 ban1 er2
 替角	ti4 jue2
 替角兒	ti4 jue2 er5
+替角兒	ti4 jue2 er2
 替頭	ti4 tou5
 最低限度	zui4 di1 xian4 du4
 最低限度理論	zui4 di1 xian4 du4 li3 lun4
@@ -80203,12 +80478,15 @@ min_phrase_weight: 100
 月長石	yue4 chang2 shi2
 月頭兒	yue4 tou2 er5
 月頭兒	yue4 tou2 er1
+月頭兒	yue4 tou2 er2
 有一分心	you3 yi4 fen1 xin1
 有一句沒一句	you3 yi2 ju4 mei2 yi2 ju4
 有一句沒一句	you3 yi1 ju4 mei2 yi1 ju4
 有一得一	you3 yi1 de2 yi1
 有一點兒	you3 yi4 dian3 er5
+有一點兒	you3 yi4 dian3 er2
 有一點兒	you3 yi1 dian3 er5
+有一點兒	you3 yi1 dian3 er2
 有仇報仇	you3 chou2 bao4 chou2
 有作為	you3 zuo4 wei2
 有來頭	you3 lai2 tou5
@@ -80352,11 +80630,13 @@ min_phrase_weight: 100
 有識之士	you3 shi4 zhi1 shi4
 有譜兒	you3 pu3 er5
 有譜兒	you3 pu3 er1
+有譜兒	you3 pu3 er2
 有賺頭	you3 zhuan4 tou5
 有賺頭	you3 zhuan4 tou2
 有起色	you3 qi3 se4
 有道則見	you3 dao4 ze2 xian4
 有邊兒	you3 bian1 er5
+有邊兒	you3 bian1 er2
 有量	you3 liang4
 有鉤絛蟲	you3 gou1 tao1 chong2
 有間	you3 jian4
@@ -80724,6 +81004,7 @@ min_phrase_weight: 100
 未省	wei4 xing3
 未知數	wei4 zhi1 shu4
 未知數兒	wei4 zhi1 shu4 er5
+未知數兒	wei4 zhi1 shu4 er2
 未結束	wei4 jie2 shu4
 未艾方興	wei4 ai4 fang1 xing1
 未處理	wei4 chu3 li3
@@ -80992,6 +81273,7 @@ min_phrase_weight: 100
 東轉西晃	dong1 zhuan3 xi1 huang4
 東邊	dong1 bian1
 東邊兒	dong1 bian1 er5
+東邊兒	dong1 bian1 er2
 東部時間	dong1 bu4 shi2 jian1
 東都	dong1 du1
 東量西折	dong1 liang2 xi1 she2
@@ -81039,6 +81321,7 @@ min_phrase_weight: 100
 板強	ban3 qiang2
 板搭饊子	ban3 da1 san3 zi5
 板擦兒	ban3 ca1 er5
+板擦兒	ban3 ca1 er2
 板橋三娘子	ban3 qiao2 san1 niang2 zi5
 板殼蟲	ban3 ke2 chong2
 板築	ban3 zhu2
@@ -81079,6 +81362,7 @@ min_phrase_weight: 100
 枕經藉史	zhen4 jing1 jie4 shi3
 枕腕	zhen4 wan4
 枕蓆兒	zhen3 xi2 er5
+枕蓆兒	zhen3 xi2 er2
 枕藉	zhen3 jie4
 枕藉	zhen4 jie4
 枕頭	zhen3 tou5
@@ -81106,6 +81390,7 @@ min_phrase_weight: 100
 林薄	lin2 bo2
 果乾	guo3 gan1
 果仁兒	guo3 ren2 er5
+果仁兒	guo3 ren2 er2
 果勁	guo3 jing4
 果子	guo3 zi5
 果子凍	guo3 zi5 dong4
@@ -81120,6 +81405,7 @@ min_phrase_weight: 100
 果擲行車	guo3 zhi2 xing2 che1
 果料兒	guo3 liao4 er5
 果料兒	guo3 liao4 er1
+果料兒	guo3 liao4 er2
 果洛藏族自治州	guo3 luo4 zang4 zu2 zi4 zhi4 zhou1
 果熟自落	guo3 shu2 zi4 luo4
 果脯	guo3 fu3
@@ -81529,8 +81815,11 @@ min_phrase_weight: 100
 桌子	zhuo1 zi5
 桌子	zhuo1 zi3
 桌面兒	zhuo1 mian4 er5
+桌面兒	zhuo1 mian4 er1
+桌面兒	zhuo1 mian4 er2
 桌面兒上	zhuo1 mian4 er5 shang4
 桌面兒上	zhuo1 mian4 er1 shang4
+桌面兒上	zhuo1 mian4 er2 shang4
 桐柏	tong2 bai3
 桐柏	tong2 bo2
 桐柏山	tong2 bai3 shan1
@@ -81666,6 +81955,7 @@ min_phrase_weight: 100
 棒子手	bang4 zi5 shou3
 棒子麵	bang4 zi5 mian4
 棒子麵兒	bang4 zi5 mian4 er5
+棒子麵兒	bang4 zi5 mian4 er2
 棒打薄情郎	bang4 da3 bo2 qing2 lang2
 棒旋星系	bang4 xuan2 xing1 xi4
 棒狀桿菌	bang4 zhuang4 gan3 jun4
@@ -81865,6 +82155,7 @@ min_phrase_weight: 100
 榔頭	lang2 tou5
 榔頭	lang2 tou2
 榛仁兒	zhen1 ren2 er5
+榛仁兒	zhen1 ren2 er2
 榛子	zhen1 zi5
 榜人	beng4 ren2
 榜人	bang3 ren2
@@ -81911,9 +82202,11 @@ min_phrase_weight: 100
 槍把	qiang1 ba4
 槍把	qiang1 ba3
 槍把兒	qiang1 ba4 er5
+槍把兒	qiang1 ba4 er2
 槍擊	qiang1 ji2
 槍林彈雨	qiang1 lin2 dan4 yu3
 槍桿兒	qiang1 gan3 er5
+槍桿兒	qiang1 gan3 er2
 槍桿子	qiang1 gan3 zi5
 槍桿子裡出政權	qiang1 gan3 zi5 li3 chu1 zheng4 quan2
 槍榴彈	qiang1 liu2 dan4
@@ -82289,6 +82582,7 @@ min_phrase_weight: 100
 機靈	ji1 ling2
 橡子麵	xiang4 zi5 mian4
 橡子麵兒	xiang4 zi5 mian4 er5
+橡子麵兒	xiang4 zi5 mian4 er2
 橡漿	xiang4 jiang1
 橡皮圈	xiang4 pi2 quan1
 橡皮圈	xiang4 pi2 juan1
@@ -82446,6 +82740,7 @@ min_phrase_weight: 100
 橫議	heng2 yi4
 橫豎	heng2 shu4
 橫豎勁兒	heng2 shu4 jin4 er5
+橫豎勁兒	heng2 shu4 jin4 er2
 橫貫	heng2 guan4
 橫貫公路	heng2 guan4 gong1 lu4
 橫賦暴斂	heng2 fu4 bao4 lian4
@@ -82591,6 +82886,7 @@ min_phrase_weight: 100
 欽遲	qin1 zhi4
 款兒	kuan3 er5
 款兒	kuan3 er1
+款兒	kuan3 er2
 款塞	kuan3 sai4
 款子	kuan3 zi5
 款式	kuan3 shi4
@@ -83279,7 +83575,9 @@ min_phrase_weight: 100
 气沖沖	qi4 chong1 chong1
 氟化物中毒	fu2 hua4 wu4 zhong4 du2
 氣不忿兒	qi4 bu2 fen4 er5
+氣不忿兒	qi4 bu2 fen4 er2
 氣不忿兒	qi4 bu4 fen4 er5
+氣不忿兒	qi4 bu4 fen4 er2
 氣不過	qi4 bu2 guo4
 氣不過	qi4 bu4 guo4
 氣候溫和	qi4 hou4 wen1 he2
@@ -83440,6 +83738,7 @@ min_phrase_weight: 100
 水陸道場	shui3 lu4 dao4 chang2
 水面係數	shui3 mian4 xi4 shu4
 水餃兒	shui3 jiao3 er5
+水餃兒	shui3 jiao3 er2
 水龍卷	shui3 long2 juan3
 永不磨滅	yong3 bu4 mo2 mie4
 永久和平	yong3 jiu3 he2 ping2
@@ -83504,6 +83803,7 @@ min_phrase_weight: 100
 汗血馬	han4 xie3 ma3
 汗褟兒	han4 ta1 er5
 汗褟兒	han4 ta1 er1
+汗褟兒	han4 ta1 er2
 汗跡	han4 ji1
 汗馬之績	han4 ma3 zhi1 ji1
 汗馬功績	han4 ma3 gong1 ji1
@@ -83643,6 +83943,7 @@ min_phrase_weight: 100
 沒人	mei2 ren2
 沒人	mo4 ren2	1%
 沒人味兒	mei2 ren2 wei4 er5
+沒人味兒	mei2 ren2 wei4 er2
 沒人當你是啞吧	mei2 ren2 dang4 ni3 shi4 ya3 ba5
 沒人當你是啞吧	mei2 ren2 dang1 ni3 shi4 ya3 ba1
 沒人處	mei2 ren2 chu4
@@ -83678,6 +83979,7 @@ min_phrase_weight: 100
 沒分豁	mei2 fen1 huo4
 沒勁	mei2 jin4
 沒勁兒	mei2 jin4 er5
+沒勁兒	mei2 jin4 er2
 沒包彈	mei2 bao1 tan2
 沒叉路	mei2 cha1 lu4
 沒口子	mei2 kou3 zi5
@@ -83751,6 +84053,7 @@ min_phrase_weight: 100
 沒有什麼道理	mei2 you3 she2 me5 dao4 li3
 沒有勁頭	mei2 you3 jin4 tou2
 沒有勁頭兒	mei2 you3 jin4 tou2 er5
+沒有勁頭兒	mei2 you3 jin4 tou2 er2
 沒有差別	mei2 you3 cha1 bie2
 沒有意思	mei2 you3 yi4 si1
 沒有甚麼	mei2 you3 shen2 me5
@@ -83775,6 +84078,7 @@ min_phrase_weight: 100
 沒渾過事	mei2 hun4 guo4 shi4
 沒準兒	mei2 zhun3 er5
 沒準兒	mei2 zhun3 er1
+沒準兒	mei2 zhun3 er2
 沒準頭	mei2 zhun3 tou5
 沒準頭	mei2 zhun3 tou2
 沒溺	mo4 ni4
@@ -83794,6 +84098,7 @@ min_phrase_weight: 100
 沒著落	mei2 zhuo2 luo4
 沒空	mei2 kong4
 沒空兒	mei2 kong4 er5
+沒空兒	mei2 kong4 er2
 沒算數	mei2 suan4 shu4
 沒算當	mei2 suan4 dang4
 沒羞沒臊	mei2 xiu1 mei2 sao4
@@ -83825,6 +84130,7 @@ min_phrase_weight: 100
 沒調教	mei2 tiao2 jiao4
 沒講究	mei2 jiang3 jiu4
 沒譜兒	mei2 pu3 er5
+沒譜兒	mei2 pu3 er2
 沒賺頭	mei2 zhuan4 tou5
 沒賺頭	mei2 zhuan4 tou2
 沒起倒	mei2 qi3 dao3
@@ -83843,6 +84149,7 @@ min_phrase_weight: 100
 沒長眼	mei2 zhang3 yan3
 沒長進	mei2 zhang3 jin4
 沒門兒	mei2 men2 er5
+沒門兒	mei2 men2 er2
 沒開交處	mei2 kai1 jiao1 chu4
 沒關係	mei2 guan1 xi1
 沒關係	mei2 guan1 xi4
@@ -83931,6 +84238,7 @@ min_phrase_weight: 100
 河落海乾	he2 lao4 hai3 gan1
 河蚌	he2 bang4
 河裡孩兒岸上娘	he2 li3 hai2 er1 an4 shang4 niang2
+河裡孩兒岸上娘	he2 li3 hai2 er2 an4 shang4 niang2
 河西堡	he2 xi1 pu4
 河西堡	he2 xi1 bu3
 河西堡鎮	he2 xi1 pu4 zhen4
@@ -84007,6 +84315,7 @@ min_phrase_weight: 100
 沿才授職	yan2 cai2 shou4 zhi2
 沿條兒	yan2 tiao2 er5
 沿條兒	yan2 tiao2 er1
+沿條兒	yan2 tiao2 er2
 沿江	yan2 jiang1
 沿河	yan2 he2
 沿河土家族自治縣	yan2 he2 tu3 jia1 zu2 zi4 zhi4 xian4
@@ -84036,6 +84345,7 @@ min_phrase_weight: 100
 沿邊	yan2 bian1
 沿邊兒	yan2 bian1 er5
 沿邊兒	yan2 bian1 er1
+沿邊兒	yan2 bian1 er2
 沿門挨戶	yan2 men2 ai1 hu4
 沿門托缽	yan2 men2 tuo1 bo1
 沿階草	yan2 jie1 cao3
@@ -84431,6 +84741,7 @@ min_phrase_weight: 100
 洋片	yang2 pian4
 洋畫兒	yang2 hua4 er1
 洋畫兒	yang2 hua4 er5
+洋畫兒	yang2 hua4 er2
 洋相	yang2 xiang4
 洋碼子	yang2 ma3 zi5
 洋腔洋調	yang2 qiang1 yang2 diao4
@@ -84511,6 +84822,7 @@ min_phrase_weight: 100
 活儲	huo2 chu2
 活兒	huo2 er5
 活兒	huo2 er1
+活兒	huo2 er2
 活動分子	huo2 dong4 fen4 zi3
 活動卡通	huo2 dong4 ka3 tong1
 活動扳手	huo2 dong4 ban1 shou3
@@ -84835,9 +85147,11 @@ min_phrase_weight: 100
 消費者物價指數	xiao1 fei4 zhe3 wu4 jia4 zhi3 shu4
 消長	xiao1 zhang3
 消閒兒	xiao1 xian2 er5
+消閒兒	xiao1 xian2 er2
 消除對婦女一切形式歧視公約	xiao1 chu2 dui4 fu4 nv3 yi2 qie4 xing2 shi4 qi2 shi4 gong1 yue1
 消除鋸齒	xiao1 chu2 ju4 chi3
 消食兒	xiao1 shi2 er5
+消食兒	xiao1 shi2 er2
 涉危履險	she4 wei2 lv3 xian3
 涉艱履危	she4 jian1 lv3 wei2
 涎涎	yan4 yan4
@@ -85079,6 +85393,7 @@ min_phrase_weight: 100
 混同江	hun4 tong2 jiang1
 混名	hun4 ming2
 混名兒	hun4 ming2 er5
+混名兒	hun4 ming2 er2
 混和	hun4 he2
 混和	hun4 huo4
 混唚	hun4 qin4
@@ -85117,6 +85432,7 @@ min_phrase_weight: 100
 混混	hun2 hun2
 混混兒	hun4 hun4 er5
 混混兒	hun4 hun4 er1
+混混兒	hun4 hun4 er2
 混混沌沌	hun4 hun4 dun4 dun4
 混熟	hun4 shou2
 混為一談	hun4 wei2 yi4 tan2
@@ -85124,6 +85440,7 @@ min_phrase_weight: 100
 混猜	hun4 cai1
 混球兒	hun2 qiu2 er5
 混球兒	hun4 qiu2 er1
+混球兒	hun4 qiu2 er2
 混矇	hun4 meng1
 混種	hun4 zhong3
 混糖	hun4 tang2
@@ -85314,6 +85631,7 @@ min_phrase_weight: 100
 渾球	hun4 qiu2
 渾球	hun2 qiu2
 渾球兒	hun2 qiu2 er5
+渾球兒	hun2 qiu2 er2
 渾蓋	hun2 gai4
 渾號	hun4 hao4
 渾號	hun2 hao4
@@ -85386,6 +85704,7 @@ min_phrase_weight: 100
 溜達	liu1 da2
 溜邊兒	liu1 bian1 er5
 溜邊兒	liu1 bian1 er1
+溜邊兒	liu1 bian1 er2
 溜門子的	liu1 men2 zi5 de5
 溝壑	gou1 huo4
 溝壑	gou1 he4
@@ -85581,6 +85900,7 @@ min_phrase_weight: 100
 漁獲量	yu2 huo4 liang4
 漁翁得利	yu2 weng1 de2 li4
 漁鉤兒	yu2 gou1 er5
+漁鉤兒	yu2 gou1 er2
 漁陽弄	yu2 yang2 nong4
 漁陽摻撾	yu2 yang2 can4 zhua1
 漂亮	piao4 liang4
@@ -86003,6 +86323,7 @@ min_phrase_weight: 100
 火上弄冰	huo3 shang4 nong4 bing1
 火上弄冰凌	huo3 shang4 nong4 bing1 ling2
 火兒	huo3 er5
+火兒	huo3 er2
 火剌剌	huo3 la4 la4
 火匣子	huo3 xia2 zi5
 火囤	huo3 dun4
@@ -86084,6 +86405,7 @@ min_phrase_weight: 100
 炭簍子	tan4 lou3 zi5
 炮仗	pao4 zhang4
 炮兒局	pao4 er5 ju2
+炮兒局	pao4 er2 ju2
 炮兵學校	pao4 bing1 xue2 xiao4
 炮彈	pao4 dan4
 炮擊	pao4 ji2
@@ -86108,6 +86430,7 @@ min_phrase_weight: 100
 炸供	zha2 gong4
 炸土豆條	zha2 tu3 dou4 tiao2
 炸土豆條兒	zha2 tu3 dou4 tiao2 er5
+炸土豆條兒	zha2 tu3 dou4 tiao2 er2
 炸土豆片	zha2 tu3 dou4 pian1
 炸土豆片	zha2 tu3 dou4 pian4
 炸子雞	zha2 zi3 ji1
@@ -86168,6 +86491,7 @@ min_phrase_weight: 100
 烘乾	hong1 gan1
 烘乾機	hong1 gan1 ji1
 烘籠兒	hong1 long2 er5
+烘籠兒	hong1 long2 er2
 烙鐵	lao4 tie3
 烙鐵	luo4 tie3
 烴基	qing1 ji1
@@ -86559,6 +86883,7 @@ min_phrase_weight: 100
 熟路輕轍	shu2 lu4 qing1 che4
 熟道	shu2 dao4
 熟道兒	shu2 dao4 er5
+熟道兒	shu2 dao4 er2
 熟銅	shu2 tong2
 熟鐵	shu2 tie3
 熟鐵	shou2 tie3
@@ -86832,6 +87157,7 @@ min_phrase_weight: 100
 燮和之任	xie4 he2 zhi1 ren4
 燾育	tao2 yu4
 爆冷門兒	bao4 leng3 men2 er5
+爆冷門兒	bao4 leng3 men2 er2
 爆彈	bao4 dan4
 爆炸	bao4 zha4
 爆炸	bao4 zha2
@@ -86847,6 +87173,7 @@ min_phrase_weight: 100
 爆肚	bao4 du3
 爆肚兒	bao4 du3 er5
 爆肚兒	bao4 du3 er1
+爆肚兒	bao4 du3 er2
 爇櫬	ruo4 chen4
 爐子	lu2 zi5
 爐房	lu2 fang2
@@ -86865,6 +87192,7 @@ min_phrase_weight: 100
 爛醉如泥	lan4 zui4 ru2 ni2
 爣閬	tang3 lang3
 爪兒	zhua3 er5
+爪兒	zhua3 er2
 爪印	zhao3 yin4
 爪印	zhua3 yin4
 爪哇	zhao3 wa1
@@ -86879,6 +87207,7 @@ min_phrase_weight: 100
 爪尋	zhao3 xun2
 爪尖兒	zhua3 jian1 er5
 爪尖兒	zhao3 jian1 er1
+爪尖兒	zhao3 jian1 er2
 爪牙	zhao3 ya2
 爪牙之士	zhao3 ya2 zhi1 shi4
 爪牙之將	zhao3 ya2 zhi1 jiang4
@@ -87033,6 +87362,7 @@ min_phrase_weight: 100
 爹爹	die1 die1
 爺們兒	ye2 men5 er5
 爺們兒	ye2 men2 er1
+爺們兒	ye2 men2 er2
 爺爺	ye2 ye5
 爺爺	ye2 ye2
 爽心豁目	shuang3 xin1 huo4 mu4
@@ -87054,6 +87384,8 @@ min_phrase_weight: 100
 片兒	pian4 er1
 片兒	pian4 er2
 片兒警	pian4 er5 jing3
+片兒警	pian4 er2 jing3
+片兒警	pian4 er1 jing3
 片刻	pian4 ke4
 片刻不停	pian4 ke4 bu4 ting2
 片刻不離	pian4 ke4 bu4 li2
@@ -87135,6 +87467,7 @@ min_phrase_weight: 100
 牙縫	ya2 feng4
 牙縫	ya2 feng2
 牙縫兒	ya2 feng4 er5
+牙縫兒	ya2 feng4 er2
 牙縫高低	ya2 feng4 gao1 di1
 牙行	ya2 hang2
 牙鑽	ya2 zuan4
@@ -87283,6 +87616,7 @@ min_phrase_weight: 100
 犒勞	kao4 lao2
 犟勁	jiang4 jin4
 犟勁兒	jiang4 jin4 er5
+犟勁兒	jiang4 jin4 er2
 犢子	du2 zi5
 犢車	du2 ju1
 犬夜叉	quan3 ye4 cha4
@@ -87367,6 +87701,7 @@ min_phrase_weight: 100
 狗氣殺	gou3 qi4 sha4
 狗爪子	gou3 zhua3 zi5
 狗玩兒的	gou3 wan2 er5 de5
+狗玩兒的	gou3 wan2 er2 de5
 狗皮倒灶	gou3 pi2 dao3 zao4
 狗監	gou3 jian4
 狗眼看人低	gou3 yan3 kan4 ren2 di1
@@ -87426,6 +87761,7 @@ min_phrase_weight: 100
 猛勁	meng3 jin4
 猛勁	meng3 jing4
 猛勁兒	meng3 jin4 er5
+猛勁兒	meng3 jin4 er2
 猛可裡	meng3 ke3 li3
 猛地	meng3 de5
 猛地	meng3 di4
@@ -87451,6 +87787,7 @@ min_phrase_weight: 100
 猜得透	cai1 de5 tou4
 猜調	cai1 diao4
 猜謎兒	cai1 mi2 er5
+猜謎兒	cai1 mi2 er2
 猝嗟	cu4 jie1
 猝地	cu4 di4
 猞猁孫	she4 li4 sun1
@@ -87558,6 +87895,7 @@ min_phrase_weight: 100
 獨行獨斷	du2 xing2 du2 duan4
 獨門子貨	du2 men2 zi5 huo4
 獨院兒	du2 yuan4 er5
+獨院兒	du2 yuan4 er2
 獨陽則不長	du2 yang2 ze2 bu4 zhang3
 獬豸冠	xie4 zhi4 guan1
 獰惡	ning2 e4
@@ -87696,15 +88034,23 @@ min_phrase_weight: 100
 玩兒	wan2 er1
 玩兒	wan2 er2
 玩兒不轉	wan2 er5 bu2 zhuan4
+玩兒不轉	wan2 er2 bu2 zhuan4
 玩兒不轉	wan2 er5 bu4 zhuan4
+玩兒不轉	wan2 er2 bu4 zhuan4
 玩兒命	wan2 er5 ming4
 玩兒命	wan2 er1 ming4
+玩兒命	wan2 er2 ming4
 玩兒壞	wan2 er5 huai4
+玩兒壞	wan2 er2 huai4
 玩兒完	wan2 er5 wan2
 玩兒完	wan2 er1 wan2
+玩兒完	wan2 er2 wan2
 玩兒得轉	wan2 er5 de2 zhuan4
+玩兒得轉	wan2 er2 de2 zhuan4
 玩兒票	wan2 er5 piao4
+玩兒票	wan2 er2 piao4
 玩兒花招	wan2 er5 hua1 zhao1
+玩兒花招	wan2 er2 hua1 zhao1
 玩其磧礫	wan4 qi2 qi4 li4
 玩味	wan4 wei4
 玩味	wan2 wei4
@@ -87818,6 +88164,7 @@ min_phrase_weight: 100
 班荊相對	ban1 jing1 xiang1 dui4
 班行	ban1 hang2
 班輩兒	ban1 bei4 er5
+班輩兒	ban1 bei4 er2
 班都斯山	ban1 du1 si1 shan1
 班長	ban1 zhang3
 班門弄斧	ban1 men2 nong4 fu3
@@ -87996,6 +88343,7 @@ min_phrase_weight: 100
 瓣膜	ban4 mo2
 瓤兒	rang2 er5
 瓤兒	rang2 er1
+瓤兒	rang2 er2
 瓤子	rang2 zi5
 瓦刀	wa4 dao1
 瓦剌	wa3 la4
@@ -88272,7 +88620,6 @@ min_phrase_weight: 100
 男修道院長	nan2 xiu1 dao4 yuan4 zhang3
 男儐相	nan2 bin1 xiang4
 男兒有淚不輕彈	nan2 er2 you3 lei4 bu4 qing1 tan2
-男兒有淚不輕彈	nan2 er1 you3 lei4 bu2 qing1 tan2
 男大當婚	nan2 da4 dang1 hun1
 男女不親授	nan2 nv3 bu4 qin1 shou4
 男女授受不親	nan2 nv3 shou4 shou4 bu4 qin1
@@ -88306,6 +88653,7 @@ min_phrase_weight: 100
 留得青山在	liu2 de2 qing1 shan1 zai4
 留得青山在	liu2 de5 qing1 shan1 zai4
 留成兒	liu2 cheng2 er5
+留成兒	liu2 cheng2 er2
 留扣子	liu2 kou4 zi5
 留有餘地	liu2 you3 yu2 di4
 留種	liu2 zhong3
@@ -88485,6 +88833,7 @@ min_phrase_weight: 100
 當回事	dang4 hui2 shi4
 當回事	dang1 hui2 shi4
 當回事兒	dang4 hui2 shi4 er5
+當回事兒	dang4 hui2 shi4 er2
 當國	dang1 guo2
 當地	dang1 di4
 當地居民	dang1 di4 ju1 min2
@@ -88736,6 +89085,7 @@ min_phrase_weight: 100
 病假	bing4 jia4
 病包兒	bing4 bao1 er5
 病包兒	bing4 bao1 er1
+病包兒	bing4 bao1 er2
 病危	bing4 wei2
 病危	bing4 wei1
 病厭厭	bing4 yan1 yan1
@@ -88784,6 +89134,7 @@ min_phrase_weight: 100
 痦子	wu4 zi5
 痧子	sha1 zi5
 痰盂兒	tan2 yu2 er5
+痰盂兒	tan2 yu2 er2
 痱子	fei4 zi5
 痱子	fei4 zi3
 痱子粉	fei4 zi5 fen3
@@ -88859,6 +89210,7 @@ min_phrase_weight: 100
 癬疥	xian3 jie4
 癮頭兒	yin3 tou2 er5
 癮頭兒	yin3 tou2 er1
+癮頭兒	yin3 tou2 er2
 癱倒	tan1 dao3
 癱子	tan1 zi5
 癱子掉在井裡	tan1 zi5 diao4 zai4 jing3 li3
@@ -88948,6 +89300,7 @@ min_phrase_weight: 100
 白不呲咧	bai2 bu4 ci1 lie1
 白乾	bai2 gan1
 白乾兒	bai2 gan1 er5
+白乾兒	bai2 gan1 er2
 白了了	bai2 liao3 liao3
 白俄羅斯共和國	bai2 e2 luo2 si1 gong4 he2 guo2
 白俄羅斯共和國	bai2 e4 luo2 si1 gong4 he2 guo2
@@ -89004,12 +89357,14 @@ min_phrase_weight: 100
 白狗當災	bai2 gou3 dang1 zai1
 白猿傳	bai2 yuan2 zhuan4
 白班兒	bai2 ban1 er5
+白班兒	bai2 ban1 er2
 白當	bai2 dang1
 白癬	bai2 xian3
 白白淨淨	bai2 bai2 jing4 jing4
 白相	bai2 xiang4
 白相人	bai2 xiang4 ren2
 白眼珠兒	bai2 yan3 zhu1 er5
+白眼珠兒	bai2 yan3 zhu1 er2
 白石砬子	bai2 shi2 la2 zi5
 白種	bai2 zhong3
 白種人	bai2 zhong3 ren2
@@ -89245,6 +89600,7 @@ min_phrase_weight: 100
 皖中盆地	wan3 zhong1 pen2 di4
 皮下出血	pi2 xia4 chu1 xie3
 皮兒	pi2 er5
+皮兒	pi2 er2
 皮內反應法	pi2 nei4 fan3 ying4 fa3
 皮冠	pi2 guan1
 皮劃艇激流回旋	pi2 hua2 ting3 ji1 liu2 hui2 xuan2
@@ -89940,6 +90296,7 @@ min_phrase_weight: 100
 省刑薄斂	sheng3 xing2 bo2 lian4
 省勁	sheng3 jin4
 省勁兒	sheng3 jin4 er5
+省勁兒	sheng3 jin4 er2
 省墓	xing3 mu4
 省察	xing3 cha2
 省得	sheng3 de5
@@ -90056,6 +90413,7 @@ min_phrase_weight: 100
 看得起	kan4 de2 qi3
 看得過	kan4 de5 guo4
 看得過兒	kan4 de5 guo4 er5
+看得過兒	kan4 de5 guo4 er2
 看得開	kan4 de5 kai1
 看情形	kan4 qing2 xing2
 看情況	kan4 qing2 kuang4
@@ -90248,6 +90606,7 @@ min_phrase_weight: 100
 著先鞭	zhuo2 xian1 bian1
 著力	zhuo2 li4
 著勁兒	zhuo2 jin4 er5
+著勁兒	zhuo2 jin4 er2
 著即	zhuo2 ji2
 著呢	zhe5 ne5
 著地	zhao2 di4
@@ -90320,6 +90679,7 @@ min_phrase_weight: 100
 著道	zhao2 dao4
 著邊	zhao2 bian1
 著邊兒	zhao2 bian1 er5
+著邊兒	zhao2 bian1 er2
 著重	zhuo2 zhong4
 著重	zhu4 zhong4
 著重號	zhuo2 zhong4 hao4
@@ -90640,8 +91000,11 @@ min_phrase_weight: 100
 石勒	shi2 le4
 石南花	shi2 nan2 hua1
 石子兒	shi2 zi3 er5
-石子兒	shi2 zi5 er1
+石子兒	shi2 zi3 er2
+石子兒	shi2 zi3 er1
+石子兒	shi2 zi5 er5
 石子兒	shi2 zi5 er2
+石子兒	shi2 zi5 er1
 石室金匱	shi2 shi4 jin1 gui4
 石家莊地區	shi2 jia1 zhuang1 di4 qu1
 石屏	shi2 ping2
@@ -90829,6 +91192,7 @@ min_phrase_weight: 100
 硬骨頭	ying4 gu3 tou2
 硯水壺兒	yan4 shui3 hu2 er5
 硯水壺兒	yan4 shui3 hu2 er1
+硯水壺兒	yan4 shui3 hu2 er2
 硯台	yan4 tai2
 硯臺	yan4 tai2
 硶貨	chen3 huo4
@@ -90839,6 +91203,7 @@ min_phrase_weight: 100
 碌碌無為	lu4 lu4 wu2 wei2
 碎嘴子	sui4 zui3 zi5
 碎塊兒	sui4 kuai4 er5
+碎塊兒	sui4 kuai4 er2
 碎片	sui4 pian4
 碎片整理	sui4 pian4 zheng3 li3
 碎聒	sui4 gua1
@@ -90846,6 +91211,7 @@ min_phrase_weight: 100
 碑帖	bei1 tie4
 碑帖	bei1 tie3
 碑座兒	bei1 zuo4 er5
+碑座兒	bei1 zuo4 er2
 碗子	wan3 zi5
 碟子	die2 zi5
 碟式煞車	die2 shi4 sha1 che1
@@ -90869,6 +91235,7 @@ min_phrase_weight: 100
 碰著	peng4 zhao2
 碰碰和	peng4 peng4 hu2
 碰磁兒	peng4 ci2 er5
+碰磁兒	peng4 ci2 er2
 碰運氣	peng4 yun4 qi4
 碰釘子	peng4 ding1 zi5
 碰釘子	peng4 ding1 zi3
@@ -91162,6 +91529,7 @@ min_phrase_weight: 100
 神魂顛倒	shen2 hun2 dian1 dao3
 祥和	xiang2 he2
 票友兒	piao4 you3 er5
+票友兒	piao4 you3 er2
 票子	piao4 zi5
 票據行為	piao4 ju4 xing2 wei2
 票數	piao4 shu4
@@ -91759,9 +92127,11 @@ min_phrase_weight: 100
 空便	kong4 bian4
 空優迷彩	kong1 you1 mi2 cai3
 空兒	kong4 er5
+空兒	kong4 er1
+空兒	kong4 er2
+空兒	kong1 er5
 空兒	kong1 er1
 空兒	kong1 er2
-空兒	kong4 er1
 空函	kong1 han2
 空前	kong1 qian2
 空前	kong4 qian2
@@ -91813,6 +92183,7 @@ min_phrase_weight: 100
 空弦落雁	kong1 xian2 luo4 yan4
 空弮	kong1 quan1
 空心兒	kong4 xin1 er5
+空心兒	kong4 xin1 er2
 空心大老官	kong1 xin1 da4 lao3 guan1
 空心幣	kong1 xin1 bi4
 空心架子	kong1 xin1 jia4 zi5
@@ -91914,6 +92285,7 @@ min_phrase_weight: 100
 空穴來風未必無因	kong4 xue2 lai2 feng1 wei4 bi4 wu2 yin1
 空空	kong1 kong1
 空空兒	kong1 kong1 er2
+空空兒	kong1 kong1 er5
 空空如也	kong1 kong1 ru2 ye3
 空空導彈	kong1 kong1 dao3 dan4
 空空洞洞	kong1 kong1 dong4 dong4
@@ -92160,6 +92532,7 @@ min_phrase_weight: 100
 窩瞘眼	wo1 kou1 yan3
 窩窩頭	wo1 wo1 tou2
 窩脖兒	wo1 bo2 er5
+窩脖兒	wo1 bo2 er2
 窩藏	wo1 cang2
 窩裡反	wo1 li3 fan3
 窩裡炮	wo1 li3 pao4
@@ -92202,6 +92575,7 @@ min_phrase_weight: 100
 窯場	yao2 chang3
 窯姐兒	yao2 jie3 er5
 窯姐兒	yao2 jie3 er1
+窯姐兒	yao2 jie3 er2
 窯子	yao2 zi5
 窯桶子	yao2 tong3 zi5
 窳楛	yu3 ku3
@@ -92210,6 +92584,7 @@ min_phrase_weight: 100
 窺伺	kui1 si4
 窺伺	kui1 ci4
 竅門兒	qiao4 men2 er5
+竅門兒	qiao4 men2 er2
 灶地	zao4 di4
 灶突	zao4 tu2
 灶間	zao4 jian1
@@ -92301,6 +92676,7 @@ min_phrase_weight: 100
 竹筒倒豆子	zhu2 tong3 dao3 dou4 zi5
 竹筴魚	zhu2 jia2 yu2
 竹箍兒	zhu2 gu1 er5
+竹箍兒	zhu2 gu1 er2
 竹節蓼	zhu2 jie2 liao3
 竺乾	zhu2 qian2
 竺可楨	zhu2 ke3 zhen1
@@ -92328,6 +92704,7 @@ min_phrase_weight: 100
 笑渦	xiao4 wo1
 笑眯眯	xiao4 mi1 mi1
 笑臉兒	xiao4 lian3 er5
+笑臉兒	xiao4 lian3 er2
 笑臉相迎	xiao4 lian3 xiang1 ying2
 笑裡藏刀	xiao4 li3 cang2 dao1
 笑面夜叉	xiao4 mian4 ye4 cha1
@@ -92389,7 +92766,9 @@ min_phrase_weight: 100
 筆跡	bi3 ji4
 筆跡鑑定	bi3 ji1 jian4 ding4
 等一下兒	deng3 yi2 xia4 er5
+等一下兒	deng3 yi2 xia4 er2
 等一下兒	deng3 yi1 xia4 er5
+等一下兒	deng3 yi1 xia4 er2
 等一會	deng3 yi2 hui4
 等一會	deng3 yi1 hui3
 等一會	deng3 yi1 hui4
@@ -92493,6 +92872,7 @@ min_phrase_weight: 100
 箅子	bi4 zi5
 箍子	gu1 zi5
 箍節兒	gu1 jie2 er5
+箍節兒	gu1 jie2 er2
 箑脯	sha4 fu3
 箔子	bo2 zi5
 箕裘相繼	ji1 qiu2 xiang1 ji4
@@ -92624,6 +93004,7 @@ min_phrase_weight: 100
 簡子	jian3 zi5
 簡帖	jian3 tie3
 簡帖兒	jian3 tie3 er5
+簡帖兒	jian3 tie3 er2
 簡截了當	jian3 jie2 liao3 dang4
 簡括	jian3 gua1
 簡括	jian3 kuo4
@@ -92887,6 +93268,7 @@ min_phrase_weight: 100
 紀錄創造者	ji4 lu4 chuang4 zao4 zhe3
 紀錄片	ji4 lu4 pian4
 紀錄片兒	ji4 lu4 pian1 er5
+紀錄片兒	ji4 lu4 pian1 er2
 約分	yue1 fen1
 約分數	yue1 fen1 shu4
 約塔	yao1 ta3
@@ -92929,6 +93311,7 @@ min_phrase_weight: 100
 紅泥月亮	hong2 ni2 yue4 liang4
 紅種人	hong2 zhong3 ren2
 紅箍兒	hong2 gu1 er5
+紅箍兒	hong2 gu1 er2
 紅絲待選	hong2 si1 dai4 xuan3
 紅絲暗繫	hong2 si1 an4 xi4
 紅綠帖子	hong2 lv4 tie3 zi5
@@ -92965,7 +93348,9 @@ min_phrase_weight: 100
 紊亂	wen4 luan4
 紊亂	wen3 luan4
 紋絲兒	wen2 si1 er5
+紋絲兒	wen2 si1 er2
 紋縷兒	wen2 lv3 er5
+紋縷兒	wen2 lv3 er2
 納什	na4 shen2
 納什	na4 shi2
 納垢藏污	na4 gou4 cang2 wu1
@@ -92975,6 +93360,7 @@ min_phrase_weight: 100
 納悶	na4 men4
 納悶	na4 men1
 納悶兒	na4 men4 er5
+納悶兒	na4 men4 er2
 納扎爾巴耶夫	na4 zha1 er3 ba1 ye1 fu1
 納撒尼爾‧霍桑	na4 sa1 ni2 er3 eng3 huo4 sang1
 納米比亞共和國	na4 mi3 bi3 ya3 gong4 he2 guo2
@@ -93013,6 +93399,7 @@ min_phrase_weight: 100
 紙楣子	zhi3 mei2 zi5
 紙漿	zhi3 jiang1
 紙煤兒	zhi3 mei2 er5
+紙煤兒	zhi3 mei2 er2
 紙煤子	zhi3 mei2 zi5
 紙煤管子	zhi3 mei2 guan3 zi5
 紙片	zhi3 pian4
@@ -93023,6 +93410,7 @@ min_phrase_weight: 100
 紙紮店	zhi3 zha2 dian4
 紙葉子	zhi3 ye4 zi5
 紙馬兒	zhi3 ma3 er5
+紙馬兒	zhi3 ma3 er2
 紙馬鋪	zhi3 ma3 pu4
 級差	ji2 cha1
 級強	ji2 qiang2
@@ -94038,13 +94426,16 @@ min_phrase_weight: 100
 繞場	rao4 chang2
 繞彎兒	rao4 wan1 er5
 繞彎兒	rao4 wan1 er1
+繞彎兒	rao4 wan1 er2
 繞彎子	rao4 wan1 zi5
 繞彎子兒	rao4 wan1 zi3 er5
+繞彎子兒	rao4 wan1 zi3 er2
 繞磨	rao4 mo2
 繞脖子	rao4 bo2 zi5
 繞行	rao4 xing2
 繞遠兒	rao4 yuan3 er5
 繞遠兒	rao4 yuan3 er1
+繞遠兒	rao4 yuan3 er2
 繞騰	rao4 teng2
 繡花枕頭	xiu4 hua1 zhen3 tou5
 繡花枕頭	xiu4 hua1 zhen3 tou2
@@ -94105,6 +94496,7 @@ min_phrase_weight: 100
 缺少	que1 shao3
 缺心少肺	que1 xin1 shao3 fei4
 缺心眼兒	que1 xin1 yan3 er5
+缺心眼兒	que1 xin1 yan3 er2
 缺斤少兩	que1 jin1 shao3 liang3
 缺衣少食	que1 yi1 shao3 shi2
 缽子	bo1 zi5
@@ -94113,6 +94505,7 @@ min_phrase_weight: 100
 罄竹難書	qing4 zhu2 nan2 shu1
 罄筆難書	qing4 bi3 nan2 shu1
 罄身兒	qing4 shen1 er5
+罄身兒	qing4 shen1 er2
 罈子	tan2 zi5
 罌粟種子	ying1 su4 zhong3 zi5
 罌粟種子	ying1 su4 zhong3 zi3
@@ -94200,8 +94593,10 @@ min_phrase_weight: 100
 羅嗦	luo2 suo1
 羅圈	luo2 quan1
 羅圈兒	luo2 quan1 er5
+羅圈兒	luo2 quan1 er2
 羅圈兒揖	luo2 quan1 er5 yi1
 羅圈兒揖	luo2 quan1 er1 yi1
+羅圈兒揖	luo2 quan1 er2 yi1
 羅圈腿	luo2 quan1 tui3
 羅塞塔石碑	luo2 sai1 ta3 shi2 bei1
 羅塞提	luo2 sai4 ti2
@@ -94228,7 +94623,9 @@ min_phrase_weight: 100
 羅盤度	luo2 pan2 du4
 羅祖教	luo2 zu3 jiao4
 羅鍋兒	luo2 guo1 er5
+羅鍋兒	luo2 guo1 er2
 羅鍋兒橋	luo2 guo1 er5 qiao2
+羅鍋兒橋	luo2 guo1 er2 qiao2
 羅馬假期	luo2 ma3 jia4 qi2
 羅馬公教	luo2 ma3 gong1 jiao4
 羅馬共和國	luo2 ma3 gong4 he2 guo2
@@ -94504,6 +94901,7 @@ min_phrase_weight: 100
 老兄弟	lao3 xiong1 di4
 老先生	lao3 xian1 sheng1
 老兩口兒	lao3 liang3 kou3 er5
+老兩口兒	lao3 liang3 kou3 er2
 老八輩子	lao3 ba1 bei4 zi5
 老公	lao3 gong1
 老公公	lao3 gong1 gong1
@@ -94543,6 +94941,7 @@ min_phrase_weight: 100
 老子	lao3 zi3
 老子	lao3 zi5
 老客兒	lao3 ke4 er5
+老客兒	lao3 ke4 er2
 老宿	lao3 su4
 老實	lao3 shi2
 老實巴交	lao3 shi2 ba1 jiao1
@@ -95026,6 +95425,7 @@ min_phrase_weight: 100
 聽斷	ting4 duan4
 聽斷	ting1 duan4
 聽牆根兒	ting1 qiang2 gen1 er5
+聽牆根兒	ting1 qiang2 gen1 er2
 聽獄	ting4 yu4
 聽訟	ting4 song4
 聽訟	ting1 song4
@@ -95105,6 +95505,7 @@ min_phrase_weight: 100
 肘頭霍散腦	zhou3 tou2 huo4 san4 nao3
 肚兒	du3 er5
 肚兒	du4 er1
+肚兒	du4 er2
 肚兜	du4 dou1
 肚包	du4 bao1
 肚子	du3 zi5
@@ -95218,6 +95619,7 @@ min_phrase_weight: 100
 背山臨水	bei4 shan1 lin2 shui3
 背帶	bei1 dai4
 背影兒	bei4 ying3 er5
+背影兒	bei4 ying3 er2
 背景音樂	bei4 jing3 yin1 yue4
 背榜	bei1 bang3
 背水一戰	bei4 shui3 yi2 zhan4
@@ -95293,6 +95695,7 @@ min_phrase_weight: 100
 胡為	hu2 wei2
 胡琴	hu2 qin2
 胡琴兒	hu2 qin2 er5
+胡琴兒	hu2 qin2 er2
 胡突	hu2 tu2
 胡胡盧盧	hu2 hu2 lu2 lu2
 胡臭	hu2 chou4
@@ -95326,7 +95729,9 @@ min_phrase_weight: 100
 胳臂	ge1 bei4
 胳臂	ge1 bi4
 胳臂箍兒	ge1 bei4 gu1 er5
+胳臂箍兒	ge1 bei4 gu1 er2
 胳臂肘兒	ge1 bei4 zhou3 er5
+胳臂肘兒	ge1 bei4 zhou3 er2
 胸中有數	xiong1 zhong1 you3 shu4
 胸中無數	xiong1 zhong1 wu2 shu4
 胸廓切開術	xiong1 kuo4 qie1 kai1 shu4
@@ -95429,8 +95834,11 @@ min_phrase_weight: 100
 脖頸	bo2 jing3
 脖頸	bo2 geng3
 脖頸兒	bo2 jing3 er5
+脖頸兒	bo2 jing3 er2
+脖頸兒	bo2 jing3 er1
 脖頸兒	bo2 geng3 er1
 脖頸兒	bo2 geng3 er5
+脖頸兒	bo2 geng3 er2
 脖頸子	bo2 geng3 zi5
 脖頸子	bo2 jing3 zi5
 脢子肉	mei2 zi5 rou4
@@ -95521,9 +95929,11 @@ min_phrase_weight: 100
 腦殼	nao3 ke2
 腦漿	nao3 jiang1
 腦瓜兒	nao3 gua1 er5
+腦瓜兒	nao3 gua1 er2
 腦瓜子	nao3 gua1 zi5
 腦瓢兒	nao3 piao2 er5
 腦瓢兒	nao3 piao2 er1
+腦瓢兒	nao3 piao2 er2
 腦筋急轉彎	nao3 jin1 ji2 zhuan3 wan1
 腦膜炎	nao3 mo4 yan2
 腦膜炎	nao3 mo2 yan2
@@ -95700,12 +96110,14 @@ min_phrase_weight: 100
 臉皮薄	lian3 pi2 bao2
 臉盤兒	lian3 pan2 er5
 臉盤兒	lian3 pan2 er1
+臉盤兒	lian3 pan2 er2
 臉相	lian3 xiang4
 臉紅筋漲	lian3 hong2 jin1 zhang3
 臉紅脖子粗	lian3 hong2 bo2 zi5 cu1
 臉紅脖子粗	lian3 hong2 bo2 zi3 cu1
 臉薄	lian3 bao2
 臉蛋兒	lian3 dan4 er5
+臉蛋兒	lian3 dan4 er2
 臉蛋子	lian3 dan4 zi5
 臉都綠了	lian3 dou1 lv4 le5
 臉面	lian3 mian4
@@ -95725,6 +96137,7 @@ min_phrase_weight: 100
 臥旗息鼓	wo4 qi2 xi2 gu3
 臥果兒	wo4 guo3 er5
 臥果兒	wo4 guo3 er1
+臥果兒	wo4 guo3 er2
 臥狼當道	wo4 lang2 dang1 dao4
 臥虎藏龍	wo4 hu3 cang2 long2
 臥鋪	wo4 pu4
@@ -95761,6 +96174,7 @@ min_phrase_weight: 100
 臨時澳門市政執行委員會	lin2 shi2 ao4 men2 shi4 zheng4 zhi2 xing2 wei3 yuan2 hui4
 臨時的本地管理接口	lin2 shi2 de5 ben3 di4 guan3 li3 jie1 kou3
 臨月兒	lin2 yue4 er5
+臨月兒	lin2 yue4 er2
 臨朝	lin2 chao2
 臨期	lin2 qi2
 臨期失誤	lin2 qi2 shi1 wu4
@@ -95815,9 +96229,9 @@ min_phrase_weight: 100
 自個兒	zi4 ge3 er5
 自個兒	zi4 ge3 er1
 自個兒	zi4 ge3 er2
+自個兒	zi4 ge5 er5
 自個兒	zi4 ge5 er1
 自個兒	zi4 ge5 er2
-自個兒	zi4 ge5 er5
 自傳	zi4 zhuan4
 自僝自僽	zi4 chan2 zi4 zhou4
 自分	zi4 fen4
@@ -95958,6 +96372,7 @@ min_phrase_weight: 100
 臭味相投	xiu4 wei4 xiang1 tou2
 臭嚼	chou4 jiao2
 臭子兒	chou4 zi3 er5
+臭子兒	chou4 zi3 er2
 臭屁	chou4 pi4
 臭么	chou4 yao1
 臭彈	chou4 dan4
@@ -96573,6 +96988,7 @@ min_phrase_weight: 100
 花費	hua1 fei4
 花輪子	hua1 lun2 zi5
 花邊兒	hua1 bian1 er5
+花邊兒	hua1 bian1 er2
 花都	hua1 du1
 花都區	hua1 du1 qu1
 花鈿	hua1 dian4
@@ -96650,6 +97066,7 @@ min_phrase_weight: 100
 若開山脈	ruo4 kai1 shan1 mai4
 苦不唧	ku3 bu4 ji1
 苦不唧兒	ku3 bu4 ji1 er5
+苦不唧兒	ku3 bu4 ji1 er2
 苦中作樂	ku3 zhong1 zuo4 le4
 苦參	ku3 shen1
 苦地	ku3 di4
@@ -96668,6 +97085,7 @@ min_phrase_weight: 100
 苦樂	ku3 le4
 苦活兒	ku3 huo2 er5
 苦活兒	ku3 huo2 er1
+苦活兒	ku3 huo2 er2
 苦熬	ku3 ao2
 苦瓠子	ku3 hu4 zi5
 苦相	ku3 xiang4
@@ -96767,6 +97185,7 @@ min_phrase_weight: 100
 茶碾子	cha2 nian3 zi5
 茶缸子	cha2 gang1 zi5
 茶葉末兒	cha2 ye4 mo4 er5
+茶葉末兒	cha2 ye4 mo4 er2
 茶藨子	cha2 biao1 zi5
 茶行	cha2 hang2
 茶褐色	cha2 he2 se4
@@ -96774,6 +97193,7 @@ min_phrase_weight: 100
 茶錢	cha2 qian2
 茶食	cha2 shi2
 茶館兒	cha2 guan3 er5
+茶館兒	cha2 guan3 er2
 茶麵子	cha2 mian4 zi5
 茶點時間	cha2 dian3 shi2 jian1
 茹柔吐剛	ru2 rou2 tu3 gang1
@@ -96790,6 +97210,7 @@ min_phrase_weight: 100
 草墊子	cao3 dian4 zi5
 草字頭兒	cao3 zi4 tou2 er5
 草字頭兒	cao3 zi4 tou2 er1
+草字頭兒	cao3 zi4 tou2 er2
 草是年年長	cao3 shi4 nian2 nian2 zhang3
 草泥馬	cao3 ni2 ma3
 草爬子	cao3 pa2 zi5
@@ -96825,6 +97246,7 @@ min_phrase_weight: 100
 荒誕無稽	huang1 dan4 wu2 ji1
 荒謬無稽	huang1 miu4 wu2 ji1
 荳角兒	dou4 jiao3 er5
+荳角兒	dou4 jiao3 er2
 荷包	he2 bao1
 荷包蛋	he2 bao1 dan4
 荷塘	he2 tang2
@@ -96882,6 +97304,7 @@ min_phrase_weight: 100
 莊稼地	zhuang1 jia4 di4
 莊稼戶	zhuang1 jia4 hu4
 莊稼戶兒	zhuang1 jia4 hu4 er5
+莊稼戶兒	zhuang1 jia4 hu4 er2
 莊稼漢	zhuang1 jia4 han4
 莊重	zhuang1 zhong4
 莎喲娜拉	sha1 yao1 na4 la1
@@ -97438,7 +97861,9 @@ min_phrase_weight: 100
 葡萄乾	pu2 tao2 gan1
 葡萄乾	pu2 tao5 gan1
 葡萄乾兒	pu2 tao5 gan1 er5
+葡萄乾兒	pu2 tao5 gan1 er2
 葡萄乾兒	pu2 tao2 gan1 er5
+葡萄乾兒	pu2 tao2 gan1 er2
 葡萄炸彈	pu2 tao2 zha4 dan4
 葡萄牙共和國	pu2 tao2 ya2 gong4 he2 guo2
 葡萄球菌	pu2 tao2 qiu2 jun1
@@ -97677,6 +98102,7 @@ min_phrase_weight: 100
 蓋代	gai4 dai4
 蓋住	gai4 zhu4
 蓋兒	gai4 er5
+蓋兒	gai4 er2
 蓋印	gai4 yin4
 蓋喧	gai4 xuan1
 蓋壤	gai4 rang3
@@ -97781,7 +98207,9 @@ min_phrase_weight: 100
 蔥鬍子	cong1 hu2 zi5
 蔦蘿施喬松	niao3 luo2 yi4 qiao2 song1
 蔫兒	nian1 er5
+蔫兒	nian1 er2
 蔫兒壞	nian1 er5 huai4
+蔫兒壞	nian1 er2 huai4
 蔫甘	nian1 gan1
 蔽塞	bi4 se4
 蔽席	fu2 xi2
@@ -98072,6 +98500,7 @@ min_phrase_weight: 100
 藏象	zang4 xiang4
 藏貓兒	cang2 mao1 er5
 藏貓兒	cang2 mao1 er1
+藏貓兒	cang2 mao1 er2
 藏貓貓	cang2 mao1 mao1
 藏蹤	cang2 zong1
 藏身	cang2 shen1
@@ -98107,7 +98536,9 @@ min_phrase_weight: 100
 藥引子	yao4 yin3 zi5
 藥捻子	yao4 nian3 zi5
 藥方兒	yao4 fang1 er5
+藥方兒	yao4 fang1 er2
 藥水兒	yao4 shui3 er5
+藥水兒	yao4 shui3 er2
 藥片	yao4 pian4
 藥物中毒	yao4 wu4 zhong4 du2
 藥發傀儡	yao4 fa1 kui2 lei3
@@ -98651,6 +99082,7 @@ min_phrase_weight: 100
 蠙珠	pin2 zhu1
 蠙珠來入掌	pin2 zhu1 lai2 ru4 zhang3
 蠟坨兒	la4 tuo2 er5
+蠟坨兒	la4 tuo2 er2
 蠟坨子	la4 tuo2 zi5
 蠟彈	la4 dan4
 蠟查	la4 zha1
@@ -99266,10 +99698,13 @@ min_phrase_weight: 100
 衣裳	yi1 shang1
 衣裳	yi1 shang3
 衣裳鉤兒	yi1 chang2 gou1 er5
+衣裳鉤兒	yi1 chang2 gou1 er2
 衣裳鉤兒	yi1 shang1 gou1 er5
+衣裳鉤兒	yi1 shang1 gou1 er2
 衣褐懷寶	yi4 he2 huai2 bao3
 衣車	yi1 ju1
 衣鉤兒	yi1 gou1 er5
+衣鉤兒	yi1 gou1 er2
 衣錦之榮	yi4 jin3 zhi1 rong2
 衣錦夜游	yi4 jin3 ye4 you2
 衣錦夜行	yi4 jin3 ye4 xing2
@@ -99334,6 +99769,7 @@ min_phrase_weight: 100
 袖子	xiu4 zi5
 袖子	xiu4 zi3
 袖筒兒	xiu4 tong3 er5
+袖筒兒	xiu4 tong3 er2
 袜肚	mo4 du4
 袞闕	gun3 que4
 被乘數	bei4 cheng2 shu4
@@ -99353,6 +99789,7 @@ min_phrase_weight: 100
 被甲兵	pi1 jia3 bing1
 被禍	pi1 huo4
 被窩兒	bei4 wo1 er5
+被窩兒	bei4 wo1 er2
 被窩裡放屁	bei4 wo1 li3 fang4 pi4
 被罪	pi1 zui4
 被臥	bei4 wo4
@@ -99653,6 +100090,7 @@ min_phrase_weight: 100
 西調	xi1 diao4
 西谷椰子	xi1 gu3 ye2 zi3
 西邊兒	xi1 bian1 er5
+西邊兒	xi1 bian1 er2
 西部地方	xi1 bu4 di4 fang1
 西部片	xi1 bu4 pian4
 西部開拓史	xi1 bu4 kai1 tuo4 shi3
@@ -99699,6 +100137,7 @@ min_phrase_weight: 100
 要服	yao1 fu2
 要束	yao1 shu4
 要樣兒	yao4 yang4 er5
+要樣兒	yao4 yang4 er2
 要求	yao1 qiu2
 要求賠償	yao1 qiu2 pei2 chang2
 要盟	yao1 meng2
@@ -100237,6 +100676,7 @@ min_phrase_weight: 100
 討分上	tao3 fen4 shang4
 討分曉	tao3 fen1 xiao3
 討底兒	tao3 di3 er5
+討底兒	tao3 di3 er2
 討惡剪暴	tao3 e4 jian3 bao4
 討教	tao3 jiao4
 討沒意思	tao3 mei2 yi4 si1
@@ -100352,6 +100792,7 @@ min_phrase_weight: 100
 試卷	shi4 juan3
 試帖	shi4 tie3
 試手兒	shi4 shou3 er5
+試手兒	shi4 shou3 er2
 試播	shi4 bo4
 試播	shi4 bo1
 試片	shi4 pian4
@@ -100390,6 +100831,7 @@ min_phrase_weight: 100
 話柄	hua4 bing3
 話茬兒	hua4 cha2 er5
 話茬兒	hua4 cha2 er1
+話茬兒	hua4 cha2 er2
 話裡藏鬮	hua4 li3 cang2 jiu1
 話說回來	hua4 shuo1 hui2 lai2
 該應	gai1 ying1
@@ -100412,12 +100854,15 @@ min_phrase_weight: 100
 誇稱	kua1 cheng1
 認不出	ren4 bu4 chu1
 認人兒	ren4 ren2 er5
+認人兒	ren4 ren2 er2
 認分	ren4 fen4
 認同卡	ren4 tong2 ka3
 認得	ren4 de5
 認得	ren4 de2
 認死扣兒	ren4 si3 kou4 er5
+認死扣兒	ren4 si3 kou4 er2
 認死理兒	ren4 si3 li3 er5
+認死理兒	ren4 si3 li3 er2
 認為	ren4 wei2
 認為	ren4 wei4
 認知失調	ren4 zhi1 shi1 tiao2
@@ -100896,6 +101341,7 @@ min_phrase_weight: 100
 謎兒	mei4 er5
 謎兒	mi2 er1
 謎兒	mi2 er2
+謎兒	mi2 er5
 謏才	xiao3 cai2
 謏聞之陋	xiao3 wen2 zhi1 lou4
 謏聞淺說	xiao3 wen2 qian3 shuo1
@@ -101064,8 +101510,11 @@ min_phrase_weight: 100
 變數	bian4 shu4
 變更	bian4 geng1
 變樣兒	bian4 yang4 er5
+變樣兒	bian4 yang4 er2
+變樣兒	bian4 yang4 er1
 變法兒	bian4 fa3 er5
 變法兒	bian4 fa1 er1
+變法兒	bian4 fa1 er2
 變為	bian4 wei2
 變相	bian4 xiang4
 變著	bian4 zhao1
@@ -101240,6 +101689,7 @@ min_phrase_weight: 100
 貓哭耗子	mao1 ku1 hao4 zi5
 貓溺	mao1 niao4
 貓眼兒	mao1 yan3 er5
+貓眼兒	mao1 yan3 er2
 貓耳朵	mao1 er3 duo1
 貓耳朵	mao1 er3 duo3
 貓耳朵	mao1 er3 duo5
@@ -101260,6 +101710,7 @@ min_phrase_weight: 100
 貝寧	bei4 ning2
 貝殼	bei4 ke2
 貝殼兒	bei4 ke2 er5
+貝殼兒	bei4 ke2 er2
 貝殼杉	bei4 ke2 shan1
 貝爾格勒	bei4 er3 ge2 le4
 貝當	bei4 dang1
@@ -101412,6 +101863,7 @@ min_phrase_weight: 100
 費優姆遺跡	fei4 you1 mu3 yi2 ji1
 費勁	fei4 jin4
 費勁兒	fei4 jin4 er5
+費勁兒	fei4 jin4 er2
 費商量	fei4 shang1 liang2
 費德勒	fei4 de2 le4
 費思量	fei4 si1 liang2
@@ -101788,15 +102240,18 @@ min_phrase_weight: 100
 走及奔馬	zou3 ji2 ben1 ma3
 走味兒	zou3 wei4 er5
 走味兒	zou3 wei4 er1
+走味兒	zou3 wei4 er2
 走圓場	zou3 yuan2 chang3
 走小路子	zou3 xiao3 lu4 zi5
 走形兒	zou3 xing2 er5
+走形兒	zou3 xing2 er2
 走得開	zou3 de5 kai1
 走心經	zou3 xin1 jing1
 走扇	zou3 shan4
 走散	zou3 san4
 走斝傳觴	zou3 jia3 chuan2 shang1
 走樣兒	zou3 yang4 er5
+走樣兒	zou3 yang4 er2
 走水	zou3 shui3
 走江湖	zou3 jiang1 hu2
 走油子	zou3 you2 zi5
@@ -101809,9 +102264,11 @@ min_phrase_weight: 100
 走相	zou3 xiang4
 走神兒	zou3 shen2 er5
 走神兒	zou3 shen2 er1
+走神兒	zou3 shen2 er2
 走空	zou3 kong1
 走肉行屍	zou3 rou4 xing2 shi1
 走背字兒	zou3 bei4 zi4 er5
+走背字兒	zou3 bei4 zi4 er2
 走親	zou3 qin1
 走親戚	zou3 qin1 qi1
 走親訪友	zou3 qin1 fang3 you3
@@ -101840,6 +102297,7 @@ min_phrase_weight: 100
 起偃為豎	qi3 yan3 wei2 shu4
 起勁	qi3 jin4
 起名兒	qi3 ming2 er5
+起名兒	qi3 ming2 er2
 起圈	qi3 juan4
 起子	qi3 zi5
 起承轉合	qi3 cheng2 zhuan3 he2
@@ -102047,9 +102505,11 @@ min_phrase_weight: 100
 跑了和尚跑不了廟	pao3 le5 he2 shang4 pao3 bu4 liao3 miao4
 跑兔子	pao3 tu4 zi5
 跑味兒	pao3 wei4 er5
+跑味兒	pao3 wei4 er2
 跑圓場	pao3 yuan2 chang2
 跑堂兒的	pao3 tang2 er5 de5
 跑堂兒的	pao3 tang2 er1 de5
+跑堂兒的	pao3 tang2 er2 de5
 跑得了和尚	pao3 de2 liao3 he2 shang4
 跑得了和尚跑不了廟	pao3 de2 liao3 he2 shang4 pao3 bu4 liao3 miao4
 跑枱子	pao3 tai2 zi5
@@ -102059,8 +102519,10 @@ min_phrase_weight: 100
 跑碼頭	pao3 ma3 tou5
 跑碼頭	pao3 ma3 tou2
 跑神兒	pao3 shen2 er5
+跑神兒	pao3 shen2 er2
 跑肚	pao3 du4
 跑腿兒	pao3 tui3 er5
+跑腿兒	pao3 tui3 er2
 跑腿子	pao3 tui3 zi5
 跑街	pao2 jie1
 跑調	pao3 diao4
@@ -102201,6 +102663,7 @@ min_phrase_weight: 100
 踽踽獨行	ju3 ju3 du2 xing2
 踽踽而行	ju3 ju3 er2 xing2
 蹀兒鴨子	die2 er5 ya1 zi5
+蹀兒鴨子	die2 er2 ya1 zi5
 蹀踱	die2 duo4
 蹄子	ti2 zi5
 蹅踏	cha3 ta4
@@ -102246,12 +102709,15 @@ min_phrase_weight: 100
 蹤跡	zong1 ji1
 蹤跡	zong1 ji4
 蹦兒	beng4 er5
+蹦兒	beng4 er2
 蹦兒	beng4 er1
 蹦子	beng4 zi5
 蹦蹦兒車	beng4 beng4 er5 che1
+蹦蹦兒車	beng4 beng4 er2 che1
 蹦躂	beng4 da1
 蹦躂	beng4 ta4
 蹦高兒	beng4 gao1 er5
+蹦高兒	beng4 gao1 er2
 蹧塌	zao1 ta4
 蹧踐	zao1 jian4
 蹧蹋	zao1 ta4
@@ -102308,6 +102774,7 @@ min_phrase_weight: 100
 身教勝於言教	shen1 jiao1 sheng4 yu2 yan2 jiao1
 身教勝於言教	shen1 jiao4 sheng4 yu2 yan2 jiao4
 身板兒	shen1 ban3 er5
+身板兒	shen1 ban3 er2
 身毒	juan1 du2
 身無分文	shen1 wu2 fen1 wen2
 身無擇行	shen1 wu2 ze2 xing2
@@ -102352,6 +102819,7 @@ min_phrase_weight: 100
 車人	ju1 ren2
 車份兒	che1 fen4 er5
 車份兒	che1 fen4 er1
+車份兒	che1 fen4 er2
 車僮	che1 tong2
 車到沒惡路	che1 dao4 mei2 e4 lu4
 車右	ju1 you4
@@ -102492,6 +102960,7 @@ min_phrase_weight: 100
 軟殼雞蛋	ruan3 ke2 ji1 dan4
 軟泥	ruan3 ni2
 軟泥兒	ruan3 ni2 er5
+軟泥兒	ruan3 ni2 er2
 軟流圈	ruan3 liu2 quan1
 軟熟	ruan3 shu2
 軟片	ruan3 pian4
@@ -102522,6 +102991,7 @@ min_phrase_weight: 100
 較勁	jiao4 jin4
 較勁兒	jiao4 jin4 er5
 較勁兒	jiao4 jin4 er1
+較勁兒	jiao4 jin4 er2
 較少	jiao4 shao3
 較差	jiao4 cha1
 較時量力	jiao4 shi2 liang4 li4
@@ -102529,6 +102999,7 @@ min_phrase_weight: 100
 較為	jiao3 wei2
 較真兒	jiao4 zhen1 er5
 較真兒	jiao4 zhen1 er1
+較真兒	jiao4 zhen1 er2
 較短絜長	jiao4 duan3 xie2 chang2
 較短量長	jiao4 duan3 liang4 chang2
 較親	jiao4 qin1
@@ -102927,6 +103398,7 @@ min_phrase_weight: 100
 轉軸	zhuan4 zhou2
 轉軸	zhuan3 zhou2
 轉軸兒	zhuan4 zhou2 er5
+轉軸兒	zhuan4 zhou2 er2
 轉載	zhuan3 zai4
 轉載	zhuan3 zai3
 轉載稿	zhuan3 zai4 gao3
@@ -102955,6 +103427,7 @@ min_phrase_weight: 100
 轉遞	zhuan3 di4
 轉鈴	zhuan4 ling2
 轉鈴兒	zhuan4 ling2 er5
+轉鈴兒	zhuan4 ling2 er2
 轉錄	zhuan3 lu4
 轉門	zhuan4 men2
 轉關係	zhuan3 guan1 xi1
@@ -103103,6 +103576,7 @@ min_phrase_weight: 100
 迎阿	ying2 e1
 迎頭兒	ying2 tou2 er5
 迎頭兒	ying2 tou2 er1
+迎頭兒	ying2 tou2 er2
 迎頭棒喝	ying2 tou2 bang4 he4
 迎頭痛擊	ying2 tou2 tong4 ji2
 迎風待月	ying2 feng1 dai4 yue4
@@ -103184,6 +103658,7 @@ min_phrase_weight: 100
 追奔逐北	zhui1 ben1 zhu2 bei3
 追擊	zhui1 ji2
 追根究底兒	zhui1 gen1 jiu1 di3 er5
+追根究底兒	zhui1 gen1 jiu1 di3 er2
 追根究柢	zhui1 gen1 jiu4 di3
 追歡取樂	zhui1 huan1 qu3 le4
 追究	zhui1 jiu4
@@ -103267,7 +103742,9 @@ min_phrase_weight: 100
 逗樂	dou4 le4
 逗橈	dou4 nao2
 逗笑兒	dou4 xiao4 er5
+逗笑兒	dou4 xiao4 er2
 逗趣兒	dou4 qu4 er5
+逗趣兒	dou4 qu4 er2
 逗遛	dou4 liu2
 這一陣子	zhe4 yi2 zhen4 zi5
 這一陣子	zhe4 yi1 zhen4 zi5
@@ -103287,9 +103764,13 @@ min_phrase_weight: 100
 這家子	zhe4 jia1 zi5
 這幾天	zhe4 ji3 tian1
 這早晚兒	zhe4 zao3 wan3 er5
+這早晚兒	zhe4 zao3 wan3 er2
 這會兒	zhe4 hui4 er5
-這會兒	zhe4 hui3 er1
+這會兒	zhe4 hui4 er2
+這會兒	zhe4 hui4 er1
+這會兒	zhe4 hui3 er5
 這會兒	zhe4 hui3 er2
+這會兒	zhe4 hui3 er1
 這會子	zhe4 hui3 zi5
 這樣吧	zhe4 yang4 ba5
 這步田地	zhe4 bu4 tian2 di4
@@ -103303,8 +103784,11 @@ min_phrase_weight: 100
 這輩子	zhe4 bei4 zi3
 這還了得	zhe4 hai2 liao3 de2
 這邊兒	zhe4 bian1 er5
+這邊兒	zhe4 bian1 er2
+這邊兒	zhe4 bian1 er1
 這陣兒	zhe4 zhen4 er5
 這陣兒	zhe4 zhen4 er1
+這陣兒	zhe4 zhen4 er2
 這陣子	zhe4 zhen4 zi5
 這陣子	zhe4 zhen4 zi3
 這頭	zhe4 tou5
@@ -103573,7 +104057,9 @@ min_phrase_weight: 100
 遍處	bian4 chu4
 遍行	bian4 xing2
 過一會兒	guo4 yi2 hui4 er5
+過一會兒	guo4 yi2 hui4 er2
 過一會兒	guo4 yi1 hui4 er5
+過一會兒	guo4 yi1 hui4 er2
 過一過	guo4 yi2 guo4
 過一過	guo4 yi1 guo4
 過不下	guo4 bu2 xia4
@@ -104005,11 +104491,11 @@ min_phrase_weight: 100
 那倒是	na4 dao4 shi4
 那借	nuo2 jie4
 那兒	na4 er5
+那兒	na4 er1
+那兒	na4 er2
 那兒	na1 er2
 那兒	na3 er1
 那兒	na3 er2
-那兒	na4 er1
-那兒	na4 er2
 那動	nuo2 dong4
 那匡	na3 kuang1
 那卡西	na4 ka3 xi1
@@ -104088,6 +104574,7 @@ min_phrase_weight: 100
 邳邳	pei2 pei2
 邵陽地區	shao4 yang2 di4 qu1
 邷麼兒	wa3 mo2 er5
+邷麼兒	wa3 mo2 er2
 邾婁	zhu1 lv2
 邾婁	zhu1 lv3
 郁樸	yu4 pu2
@@ -104247,6 +104734,7 @@ min_phrase_weight: 100
 配分比例	pei4 fen1 bi3 li4
 配分法	pei4 fen1 fa3
 配對兒	pei4 dui4 er5
+配對兒	pei4 dui4 er2
 配接卡	pei4 jie1 ka3
 配樂	pei4 yue4
 配種	pei4 zhong3
@@ -104266,6 +104754,7 @@ min_phrase_weight: 100
 配頭	pei4 tou5
 配頭	pei4 tou2
 酒令兒	jiu3 ling4 er5
+酒令兒	jiu3 ling4 er2
 酒刺	jiu3 ci4
 酒吧	jiu3 ba1
 酒吧	jiu3 ba5
@@ -104295,6 +104784,7 @@ min_phrase_weight: 100
 酒錢	jiu3 qian2
 酒食地獄	jiu3 shi2 di4 yu4
 酒館兒	jiu3 guan3 er5
+酒館兒	jiu3 guan3 er2
 酒麯	jiu3 qu2
 酖毒	zhen4 du2
 酖毒	dan1 du2
@@ -104559,6 +105049,7 @@ min_phrase_weight: 100
 重活	zhong4 huo2
 重活	chong2 huo2
 重活兒	zhong4 huo2 er5
+重活兒	zhong4 huo2 er2
 重活化劑	zhong4 huo2 hua4 ji4
 重淵	chong2 yuan1
 重溟	chong2 ming2
@@ -104596,6 +105087,7 @@ min_phrase_weight: 100
 重眉毛	zhong4 mei2 mao2
 重眼皮	chong2 yan3 pi2
 重眼皮兒	chong2 yan3 pi2 er5
+重眼皮兒	chong2 yan3 pi2 er2
 重睹天日	chong2 du3 tian1 ri4
 重瞳	chong2 tong2
 重砂	zhong4 sha1
@@ -104925,8 +105417,10 @@ min_phrase_weight: 100
 針挑刀挖	zhen1 tiao1 dao1 wa1
 針眼	zhen1 yan3
 針箍兒	zhen1 gu1 er5
+針箍兒	zhen1 gu1 er2
 針線	zhen1 xian4
 針線活兒	zhen1 xian4 huo2 er5
+針線活兒	zhen1 xian4 huo2 er2
 針芥相投	zhen1 jie4 xiang1 tou2
 針針見血	zhen1 zhen1 jian4 xie3
 針鋒相對	zhen1 feng1 xiang1 dui4
@@ -104937,9 +105431,11 @@ min_phrase_weight: 100
 釣蝦場	diao4 xia1 chang3
 釣遊舊地	diao4 you2 jiu4 di4
 釣鉤兒	diao4 gou1 er5
+釣鉤兒	diao4 gou1 er2
 釦子	kou4 zi5
 釦子	kou4 zi3
 釦眼兒	kou4 yan3 er5
+釦眼兒	kou4 yan3 er2
 釵腳漏痕	chai1 jue2 lou4 hen2
 釺子	qian1 zi5
 釿鍔	yin2 e4
@@ -104978,10 +105474,12 @@ min_phrase_weight: 100
 鉗子	qian2 zi5
 鉗子	qian2 zi3
 鉚勁兒	mao3 jin4 er5
+鉚勁兒	mao3 jin4 er2
 鉛中毒	qian1 zhong4 du2
 鉛活字印刷機	qian1 huo2 zi4 yin4 shua1 ji1
 鉛玻璃	qian1 bo1 li2
 鉤兒	gou1 er5
+鉤兒	gou1 er2
 鉤勒	gou1 le4
 鉤子	gou1 zi5
 鉤搭	gou1 da1
@@ -105135,6 +105633,7 @@ min_phrase_weight: 100
 鋪臥	pu1 wo4
 鋪蓋	pu1 gai4
 鋪蓋卷兒	pu1 gai4 juan3 er5
+鋪蓋卷兒	pu1 gai4 juan3 er2
 鋪衍	pu4 yan3
 鋪襯	pu1 chen4
 鋪規	pu4 gui1
@@ -105225,6 +105724,7 @@ min_phrase_weight: 100
 錢不露白	qian2 bu2 lou4 bai2
 錢不露白	qian2 bu4 lou4 bai2
 錢串兒	qian2 chuan4 er5
+錢串兒	qian2 chuan4 er2
 錢串子	qian2 chuan4 zi5
 錢垛	qian2 duo4
 錢是萬惡之源	qian2 shi4 wan4 e4 zhi1 yuan2
@@ -105419,6 +105919,7 @@ min_phrase_weight: 100
 鐵路地下化	tie3 lu4 di4 xia4 hua4
 鐵都	tie3 du1
 鐵鉤兒	tie3 gou1 er5
+鐵鉤兒	tie3 gou1 er2
 鐵鎖橫江	tie3 suo3 heng2 jiang1
 鐵鐐	tie3 liao2
 鐵門檻	tie3 men2 kan3
@@ -105466,6 +105967,7 @@ min_phrase_weight: 100
 鑽刺	zuan1 ci4
 鑽勁	zuan1 jin4
 鑽勁兒	zuan1 jin4 er5
+鑽勁兒	zuan1 jin4 er2
 鑽卡	zuan1 qia3
 鑽卡	zuan4 qia3
 鑽圈	zuan1 quan1
@@ -105991,6 +106493,7 @@ min_phrase_weight: 100
 門圈子	men2 quan1 zi5
 門地	men2 di4
 門坎兒	men2 kan3 er5
+門坎兒	men2 kan3 er2
 門垛子	men2 duo3 zi5
 門子	men2 zi3
 門子	men2 zi5
@@ -106021,6 +106524,7 @@ min_phrase_weight: 100
 門面鋪席人	men2 mian4 pu4 xi2 ren2
 門館先生	men2 guan3 xian1 sheng1
 閃亮兒	shan3 liang4 er5
+閃亮兒	shan3 liang4 er2
 閃卡	shan3 ka3
 閃賺	shan3 zhuan4
 閃電式結婚	shan3 dian4 shi4 jie2 hun1
@@ -106096,6 +106600,7 @@ min_phrase_weight: 100
 開碼頭	kai1 ma3 tou5
 開碼頭	kai1 ma3 tou2
 開花兒	kai1 hua1 er5
+開花兒	kai1 hua1 er2
 開花期	kai1 hua1 qi2
 開花結實	kai1 hua1 jie2 shi2
 開花結果	kai1 hua1 jie2 guo3
@@ -106753,6 +107258,7 @@ min_phrase_weight: 100
 阿片	a1 pian4
 阿物兒	a1 wu4 er5
 阿物兒	a1 wu4 er1
+阿物兒	a1 wu4 er2
 阿特拉斯	a1 te4 la1 si1
 阿特蘭蒂斯	a1 te4 lan2 di4 si1
 阿特金斯	a1 te4 jin1 si1
@@ -107247,6 +107753,7 @@ min_phrase_weight: 100
 隱跡藏名	yin3 ji1 cang2 ming2
 隱身草兒	yin3 shen1 cao3 er5
 隱身草兒	yin3 shen1 cao3 er1
+隱身草兒	yin3 shen1 cao3 er2
 隱間	yin3 jian4
 隳突	hui1 tu2
 隳突叫號	hui1 tu2 jiao4 hao2
@@ -107423,15 +107930,19 @@ min_phrase_weight: 100
 雙重身分	shuang1 chong2 shen1 fen4
 雛燕	chu2 yan4
 雜件兒	za2 jian4 er5
+雜件兒	za2 jian4 er2
 雜合菜	za2 he2 cai4
 雜和麵	za2 huo5 mian4
 雜和麵兒	za2 huo5 mian4 er5
+雜和麵兒	za2 huo5 mian4 er2
 雜居地區	za2 ju1 di4 qu1
 雜廁	za2 ci4
 雜拌兒	za2 ban4 er5
 雜拌兒	za2 ban4 er1
 雜拌兒	za2 ban4 er2
 雜牌兒	za2 pai2 er5
+雜牌兒	za2 pai2 er2
+雜牌兒	za2 pai2 er1
 雜當	za2 dang1
 雜碎	za2 sui4
 雜種	za2 zhong3
@@ -107469,6 +107980,7 @@ min_phrase_weight: 100
 雞肋尊拳	ji1 le4 zun1 quan2
 雞膚鶴髮	ji1 fu1 he4 fa3
 雞蛋殼兒	ji1 dan4 ke2 er5
+雞蛋殼兒	ji1 dan4 ke2 er2
 雞蛋碰石頭	ji1 dan4 peng4 shi2 tou5
 雞蛋碰石頭	ji1 dan4 peng4 shi2 tou2
 雞蛋裡挑骨頭	ji1 dan4 li3 tiao1 gu2 tou5
@@ -107683,6 +108195,7 @@ min_phrase_weight: 100
 零落	ling2 luo4
 零落山丘	ling2 luo4 shan1 qiu1
 零雜兒	ling2 za2 er5
+零雜兒	ling2 za2 er2
 零零散散	ling2 ling2 san4 san4
 零零落落	ling2 ling2 luo4 luo4
 雷‧羅馬諾	lei2 eng3 luo2 ma3 nuo4
@@ -108098,6 +108611,7 @@ min_phrase_weight: 100
 靡靡之音	mi2 mi2 zhi1 yin1
 靡麗	mi3 li4
 面兒	mian4 er5
+面兒	mian4 er2
 面分	mian4 fen4
 面刺	mian4 ci4
 面善心惡	mian4 shan4 xin1 e4
@@ -108276,6 +108790,7 @@ min_phrase_weight: 100
 頂子	ding3 zi5
 頂子床	ding3 zi5 chuang2
 頂尖兒	ding3 jian1 er5
+頂尖兒	ding3 jian1 er2
 頂括括	ding3 gua1 gua1
 頂擋	ding3 dang3
 頂數	ding3 shu4
@@ -108293,6 +108808,7 @@ min_phrase_weight: 100
 順和	shun4 he2
 順嘴兒	shun4 zui3 er5
 順嘴兒	shun4 zui3 er1
+順嘴兒	shun4 zui3 er2
 順坦	shun4 tan3
 順天應人	shun4 tian1 ying4 ren2
 順天應時	shun4 tian1 ying4 shi2
@@ -108306,6 +108822,7 @@ min_phrase_weight: 100
 順應民心	shun4 ying4 min2 xin1
 順應潮流	shun4 ying4 chao2 liu2
 順手兒	shun4 shou3 er5
+順手兒	shun4 shou3 er2
 順水行舟	shun4 shui3 xing2 zhou1
 順水行船	shun4 shui3 xing2 chuan2
 順溜	shun4 liu1
@@ -108388,9 +108905,12 @@ min_phrase_weight: 100
 頭兒	tou2 er1
 頭兒	tou2 er2
 頭兒腦兒	tou2 er5 nao3 er5
+頭兒腦兒	tou2 er2 nao3 er2
+頭兒腦兒	tou2 er1 nao3 er1
 頭冠	tou2 guan1
 頭匹	tou2 pi1
 頭半天兒	tou2 ban4 tian1 er5
+頭半天兒	tou2 ban4 tian1 er2
 頭場	tou2 chang2
 頭子	tou2 zi5
 頭孢菌	tou2 bao1 jun1
@@ -108412,10 +108932,12 @@ min_phrase_weight: 100
 頭童齒豁	tou2 tong2 chi3 huo4
 頭箍兒	tou2 gu1 er5
 頭箍兒	tou2 gu1 er1
+頭箍兒	tou2 gu1 er2
 頭肘子	tou2 zhou3 zi5
 頭腦清楚	tou2 nao3 qing1 chu3
 頭腦體操	tou2 nao3 ti3 cao1
 頭臉兒	tou2 lian3 er5
+頭臉兒	tou2 lian3 er2
 頭蓋	tou2 gai4
 頭蓋骨	tou2 gai4 gu3
 頭裡	tou2 li3
@@ -108505,6 +109027,7 @@ min_phrase_weight: 100
 顛倒陰陽	dian1 dao3 yin1 yang2
 顛倒黑白	dian1 dao3 hei1 bai2
 顛兒面	dian1 er5 mian4
+顛兒面	dian1 er2 mian4
 顛播	dian1 bo4
 顛簸	dian1 bo3
 顛簸不破	dian1 bo3 bu2 po4
@@ -108783,6 +109306,7 @@ min_phrase_weight: 100
 飯量	fan4 liang4
 飯飽弄箸	fan4 bao3 nong4 zhu4
 飯館兒	fan4 guan3 er5
+飯館兒	fan4 guan3 er2
 飲冰茹蘗	yin3 bing1 ru2 bo4
 飲冰食蘗	yin3 bing1 shi2 bo4
 飲和	yin4 he2
@@ -108823,6 +109347,7 @@ min_phrase_weight: 100
 飽和點	bao3 he2 dian3
 飽嗝兒	bao3 ge2 er5
 飽嗝兒	bao3 ge2 er1
+飽嗝兒	bao3 ge2 er2
 飽當知人飢	bao3 dang1 zhi1 ren2 ji1
 飽看	bao3 kan4
 飽飽的	bao3 bao3 de5
@@ -108914,6 +109439,8 @@ min_phrase_weight: 100
 餡兒	xian4 er1
 餡兒	xian4 er2
 餡兒餅	xian4 er5 bing3
+餡兒餅	xian4 er2 bing3
+餡兒餅	xian4 er1 bing3
 餡子	xian4 zi5
 館地	guan3 di4
 館子	guan3 zi5
@@ -109106,6 +109633,7 @@ min_phrase_weight: 100
 馬賽進行曲	ma3 sai4 jin4 xing2 qu3
 馬赫數	ma3 he4 shu4
 馬路沿兒	ma3 lu4 yan2 er5
+馬路沿兒	ma3 lu4 yan2 er2
 馬路消息	ma3 lu4 xiao1 xi2
 馬路牙子	ma3 lu4 ya2 zi5
 馬蹄刀瓢裡切菜	ma3 ti2 dao1 piao2 li3 qie1 cai4
@@ -109336,6 +109864,7 @@ min_phrase_weight: 100
 骨頭硬	gu2 tou5 ying4
 骨頭硬	gu3 tou2 ying4
 骨頭節兒	gu3 tou5 jie2 er5
+骨頭節兒	gu3 tou5 jie2 er2
 骨頭骨腦	gu2 tou5 gu2 nao3
 骨頭骨腦	gu3 tou2 gu3 nao3
 骨顫肉驚	gu3 zhan4 rou4 jing1
@@ -109500,6 +110029,7 @@ min_phrase_weight: 100
 高高下下	gao1 gao1 xia4 xia4
 高高低低	gao1 gao1 di1 di1
 高高手兒	gao1 gao1 shou3 er5
+高高手兒	gao1 gao1 shou3 er2
 高高瘦瘦	gao1 gao1 shou4 shou4
 高高興興	gao1 gao1 xing4 xing4
 高鳳流麥	gao1 feng4 liu2 mo4
@@ -109591,6 +110121,7 @@ min_phrase_weight: 100
 鬥悶子	dou4 men4 zi5
 鬥葉子	dou4 ye4 zi5
 鬥趣兒	dou4 qu4 er5
+鬥趣兒	dou4 qu4 er2
 鬧亂子	nao4 luan4 zi5
 鬧哄哄	nao4 hong1 hong1
 鬧嗓子	nao4 sang3 zi5
@@ -109605,6 +110136,7 @@ min_phrase_weight: 100
 鬧擰了	nao4 ning3 le5
 鬧著玩兒	nao4 zhe5 wan2 er5
 鬧著玩兒	nao4 zhe5 wan2 er1
+鬧著玩兒	nao4 zhe5 wan2 er2
 鬧磨擦	nao4 mo2 ca1
 鬧耗子	nao4 hao4 zi5
 鬧肚子	nao4 du4 zi5
@@ -109683,6 +110215,7 @@ min_phrase_weight: 100
 魚刺	yu2 ci4
 魚叉	yu2 cha1
 魚和炸土豆條兒	yu2 he2 zha2 tu3 dou4 tiao2 er5
+魚和炸土豆條兒	yu2 he2 zha2 tu3 dou4 tiao2 er2
 魚拓	yu2 ta4
 魚拓	yu2 tuo4
 魚朝恩	yu2 chao2 en1
@@ -109706,6 +110239,7 @@ min_phrase_weight: 100
 魚藏劍	yu2 cang2 jian4
 魚貫而行	yu2 guan4 er2 xing2
 魚鉤兒	yu2 gou1 er5
+魚鉤兒	yu2 gou1 er2
 魚香茄子	yu2 xiang1 qie2 zi5
 魚香茄子	yu2 xiang1 qie2 zi3
 魚驚鳥散	yu2 jing1 niao3 san4
@@ -109767,9 +110301,9 @@ min_phrase_weight: 100
 鳥人	diao3 ren2
 鳥人	niao3 ren2
 鳥兒	niao3 er5
-鳥兒	diao3 er2
 鳥兒	niao3 er1
 鳥兒	niao3 er2
+鳥兒	diao3 er2
 鳥嘌呤	niao3 piao4 ling4
 鳥嘌呤	niao3 piao1 ling2
 鳥囀	niao3 zhuan3
@@ -109944,7 +110478,9 @@ min_phrase_weight: 100
 鸞鵠停峙	luan2 hu2 ting2 zhi4
 鹵地	lu3 di4
 鹹津津兒	xian2 jin1 jin1 er5
+鹹津津兒	xian2 jin1 jin1 er2
 鹹絲絲兒	xian2 si1 si1 er5
+鹹絲絲兒	xian2 si1 si1 er2
 鹹菜燒豆腐	xian2 cai4 shao1 dou4 fu3
 鹼中毒	jian3 zhong4 du2
 鹼地	jian3 di4
@@ -110022,11 +110558,13 @@ min_phrase_weight: 100
 麥阿密	mai4 a1 mi4
 麩子	fu1 zi5
 麵兒	mian4 er5
+麵兒	mian4 er2
 麵包片	mian4 bao1 pian1
 麵子	mian4 zi5
 麵子藥	mian4 zi5 yao4
 麵攤子	mian4 tan1 zi5
 麵條兒	mian4 tiao2 er5
+麵條兒	mian4 tiao2 er2
 麵漿	mian4 jiang1
 麵疙瘩	mian4 ge1 da5
 麵疙瘩	mian4 ge1 da1
@@ -110176,6 +110714,7 @@ min_phrase_weight: 100
 黎曼曲面	li2 man4 qu1 mian4
 黎曼空間	li2 man4 kong1 jian1
 黏兒	nian2 er5
+黏兒	nian2 er2
 黏度	nian2 du4
 黏涎	nian2 xian2
 黏涎子	nian2 xian2 zi5
@@ -110263,8 +110802,8 @@ min_phrase_weight: 100
 黜降	chu4 jiang4
 點不著	dian3 bu4 zhao2
 點兒	dian3 er5
-點兒	dian3 er1
 點兒	dian3 er2
+點兒	dian3 er1
 點兵派將	dian3 bing1 pai4 jiang4
 點到為止	dian3 dao4 wei2 zhi3
 點刺	dian3 ci4
@@ -110361,8 +110900,8 @@ min_phrase_weight: 100
 鼷穴	xi1 xue4
 鼻偃齒露	bi2 yan3 chi3 lu4
 鼻兒	bi2 er5
-鼻兒	bi2 er1
 鼻兒	bi2 er2
+鼻兒	bi2 er1
 鼻口部分	bi2 kou3 bu4 fen4
 鼻咽	bi2 yan1
 鼻咽癌	bi2 yan1 ai2
@@ -110381,8 +110920,8 @@ min_phrase_weight: 100
 鼻息	bi2 xi2
 鼻涕沒有倒流的	bi2 ti4 mei2 you3 dao4 liu2 de5
 鼻牛兒	bi2 niu2 er5
-鼻牛兒	bi2 niu2 er1
 鼻牛兒	bi2 niu2 er2
+鼻牛兒	bi2 niu2 er1
 鼻窪子	bi2 wa1 zi5
 鼻血	bi2 xie3
 鼻觀	bi2 guan4
@@ -110393,6 +110932,8 @@ min_phrase_weight: 100
 齊心滌慮	zhai1 xin1 di2 lv4
 齊截	qi2 jie2
 齊打夯兒地	qi2 da3 hang1 er5 de5
+齊打夯兒地	qi2 da3 hang1 er2 de5
+齊打夯兒地	qi2 da3 hang1 er2 de4
 齊攢	qi2 cuan2
 齊柏林	qi2 bo2 lin2
 齊柏林飛艇	qi2 bo2 lin2 fei1 ting3
@@ -110491,4 +111032,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 110494 #####
+##### @結束 END - 111035 #####

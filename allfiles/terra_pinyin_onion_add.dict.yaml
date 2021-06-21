@@ -246,6 +246,8 @@ min_phrase_weight: 100
 嗯	eng5	3%
 ##### 以下對《一聲》做補充 #####
 ### @補充為《一聲》，方便輸入，『非正確發音』！！！ ###
+兒	er1	1%
+儿	er1	1%
 腓	fei1
 嘛	ma1	10%
 唄	bei1	10%
@@ -318,6 +320,7 @@ min_phrase_weight: 100
 麼	mo5
 儿	er5
 児	er5
+兒	er5	5%
 什	she5	1%
 啥	sha5	1%
 甚	she5	0%
