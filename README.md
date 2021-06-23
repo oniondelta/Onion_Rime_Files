@@ -57,3 +57,15 @@
   
   #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/demo_pure.gif)
   
+### 贊助 Donate：
+  > 從第一個方案上傳已持續更新四年，花了族繁不及備載的心力！
+
+  > 贊助 (Donate) 支持，讓更新更有動力
+
+- 綠界：
+  #### ![donate1](https://payment.ecpay.com.tw/Upload/QRCode/202010/QRCode_170c287e-2db8-4b50-b87f-8d36500a3958.png)
+  [donate1]:https://p.ecpay.com.tw/D555162
+  
+- 歐付寶：
+  #### ![donate2](https://payment.opay.tw/Upload/Broadcaster/2294343/QRcode/QRCode_7AC0FA1CAD39F0B66CFD5513A2173D1A.png)
+  [donate2]:https://qr.opay.tw/q1ql7
