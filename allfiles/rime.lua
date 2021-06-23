@@ -1720,7 +1720,7 @@ function t_translator(input, seg)
     if (input == "`t") then
       yield(Candidate("time", seg.start, seg._end, os.date("%H:%M:%S"), "〔時:分:秒〕 ~d"))
       local a, b, c, d, aptime5, aptime6, aptime7, aptime8 = time_out1()
-      yield(Candidate("time", seg.start, seg._end, aptime6 , "〔時:分:秒〕 ~t"))
+      yield(Candidate("time", seg.start, seg._end, aptime6 , "〔時:分:秒〕 ~m"))
       -- yield(Candidate("time", seg.start, seg._end, os.date("%H:%M"), "〔時:分〕 ~m"))
       yield(Candidate("time", seg.start, seg._end, string.gsub(os.date("%H時%M分%S秒"), "0([%d])", "%1"), "〔時:分:秒〕 ~c"))
       yield(Candidate("time", seg.start, seg._end, ch_h_date(os.date("%H")).."時"..ch_minsec_date(os.date("%M")).."分"..ch_minsec_date(os.date("%S")).."秒", "〔時:分:秒〕 ~z"))
@@ -1733,7 +1733,7 @@ function t_translator(input, seg)
       return
     end
 
-    if (input == "`tt") then
+    if (input == "`tm") then
       local a, b, c, d, aptime5, aptime6, aptime7, aptime8 = time_out1()
       yield(Candidate("time", seg.start, seg._end, aptime6 , "〔時:分:秒〕"))
       yield(Candidate("time", seg.start, seg._end, aptime8 , "〔時:分:秒〕"))
@@ -1776,7 +1776,7 @@ function t_translator(input, seg)
     if (input == "`n") then
       yield(Candidate("time", seg.start, seg._end, os.date("%H:%M"), "〔時:分〕 ~d"))
       local aptime1, aptime2, aptime3, aptime4 = time_out1()
-      yield(Candidate("time", seg.start, seg._end, aptime2, "〔時:分〕 ~n"))
+      yield(Candidate("time", seg.start, seg._end, aptime2, "〔時:分〕 ~m"))
       -- yield(Candidate("time", seg.start, seg._end, os.date("%H:%M:%S"), "〔時:分:秒〕 ~s"))
       yield(Candidate("time", seg.start, seg._end, string.gsub(os.date("%H時%M分"), "0([%d])", "%1"), "〔時:分〕 ~c"))
       yield(Candidate("time", seg.start, seg._end, ch_h_date(os.date("%H")).."時"..ch_minsec_date(os.date("%M")).."分", "〔時:分〕 ~z"))
@@ -1791,7 +1791,7 @@ function t_translator(input, seg)
       return
     end
 
-    if (input == "`nn") then
+    if (input == "`nm") then
       local aptime1, aptime2, aptime3, aptime4 = time_out1()
       yield(Candidate("time", seg.start, seg._end, aptime2, "〔時:分〕"))
       yield(Candidate("time", seg.start, seg._end, aptime4, "〔時:分〕"))
@@ -3050,7 +3050,7 @@ function t2_translator(input, seg)
     if (input == "'/t") then
       yield(Candidate("time", seg.start, seg._end, os.date("%H:%M:%S"), "〔時:分:秒〕 ~d"))
       local a, b, c, d, aptime5, aptime6, aptime7, aptime8 = time_out1()
-      yield(Candidate("time", seg.start, seg._end, aptime6 , "〔時:分:秒〕 ~t"))
+      yield(Candidate("time", seg.start, seg._end, aptime6 , "〔時:分:秒〕 ~m"))
       -- yield(Candidate("time", seg.start, seg._end, os.date("%H:%M"), "〔時:分〕 ~m"))
       yield(Candidate("time", seg.start, seg._end, string.gsub(os.date("%H時%M分%S秒"), "0([%d])", "%1"), "〔時:分:秒〕 ~c"))
       yield(Candidate("time", seg.start, seg._end, ch_h_date(os.date("%H")).."時"..ch_minsec_date(os.date("%M")).."分"..ch_minsec_date(os.date("%S")).."秒", "〔時:分:秒〕 ~z"))
@@ -3063,7 +3063,7 @@ function t2_translator(input, seg)
       return
     end
 
-    if (input == "'/tt") then
+    if (input == "'/tm") then
       local a, b, c, d, aptime5, aptime6, aptime7, aptime8 = time_out1()
       yield(Candidate("time", seg.start, seg._end, aptime6 , "〔時:分:秒〕"))
       yield(Candidate("time", seg.start, seg._end, aptime8 , "〔時:分:秒〕"))
@@ -3106,7 +3106,7 @@ function t2_translator(input, seg)
     if (input == "'/n") then
       yield(Candidate("time", seg.start, seg._end, os.date("%H:%M"), "〔時:分〕 ~d"))
       local aptime1, aptime2, aptime3, aptime4 = time_out1()
-      yield(Candidate("time", seg.start, seg._end, aptime2, "〔時:分〕 ~n"))
+      yield(Candidate("time", seg.start, seg._end, aptime2, "〔時:分〕 ~m"))
       -- yield(Candidate("time", seg.start, seg._end, os.date("%H:%M:%S"), "〔時:分:秒〕 ~s"))
       yield(Candidate("time", seg.start, seg._end, string.gsub(os.date("%H時%M分"), "0([%d])", "%1"), "〔時:分〕 ~c"))
       yield(Candidate("time", seg.start, seg._end, ch_h_date(os.date("%H")).."時"..ch_minsec_date(os.date("%M")).."分", "〔時:分〕 ~z"))
@@ -3121,7 +3121,7 @@ function t2_translator(input, seg)
       return
     end
 
-    if (input == "'/nn") then
+    if (input == "'/nm") then
       local aptime1, aptime2, aptime3, aptime4 = time_out1()
       yield(Candidate("time", seg.start, seg._end, aptime2, "〔時:分〕"))
       yield(Candidate("time", seg.start, seg._end, aptime4, "〔時:分〕"))
