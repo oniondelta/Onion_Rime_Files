@@ -62,6 +62,7 @@ engine:
     - reverse_lookup_filter@e_reverse_lookup
     - uniquifier
   processors:
+    - lua_processor@ascii_punct_change
     - lua_processor@s2r3
     - ascii_composer
     - recognizer

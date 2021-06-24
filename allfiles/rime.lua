@@ -18,7 +18,7 @@
 --      - lua_translator@email_translator    -- 輸入email
 --      - lua_translator@url_translator      -- 輸入網址
 --      - lua_translator@urlw_translator     -- 輸入網址（多了www.）
---      - lua_translator@mytranslator        -- （有缺函數，參考勿用）
+--      - lua_translator@mytranslator        -- （有缺函數，參考勿用，暫關閉）
 --
 --      《 ＊ 以下濾鏡注意在 filters 中的順序 》
 --      - lua_filter@charset_filter          -- 遮屏含 CJK 擴展漢字的候選項
@@ -36,6 +36,7 @@
 --      - lua_processor@s2r                  -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin(1,2,4)和 plus 用）
 --      - lua_processor@s2r3                 -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin3 (特殊正則)專用）
 --      - lua_processor@s2r_e_u              -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（只針對 email 和 url ）
+--      - lua_processor@ascii_punct_change   -- 注音非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
 --      ...
 
 
@@ -5022,6 +5023,35 @@ function s2r_e_u(key, env)
   end
   return 2 -- kNoop
 end
+
+
+
+
+--[[
+@@ 於注音方案改變在非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
+--]]
+function ascii_punct_change(key, env)
+  local c_b_d = env.engine.context:get_option("ascii_punct")
+  local en_m = env.engine.context:get_option("ascii_mode")
+  if (c_b_d) and (not en_m) then
+    local engine = env.engine
+    local context = engine.context
+    if (key:repr() == 'Shift+less') then
+      local b_orig = context:get_commit_text()
+      engine:commit_text( b_orig .. ",")
+      context:clear()
+      return 1 -- kAccepted
+    end
+    if (key:repr() == 'Shift+greater') then
+      local b_orig = context:get_commit_text()
+      engine:commit_text( b_orig .. ".")
+      context:clear()
+      return 1 -- kAccepted
+    end
+  end
+  return 2 -- kNoop
+end
+
 
 
 
