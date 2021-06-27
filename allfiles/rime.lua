@@ -41,6 +41,529 @@
 
 
 
+
+--- @@ charset filter
+--[[
+charset_filter: 濾除含 CJK 擴展漢字的候選項
+charset_comment_filter: 為候選項加上其所屬字符集的註釋
+本例說明了 filter 最基本的寫法。
+請見 `charset_filter` 和 `charset_comment_filter` 上方註釋。
+--]]
+
+-- 幫助函數（可跳過）
+local charset = {
+  ["CJK"] = { first = 0x4E00, last = 0x9FFF },
+  ["ExtA"] = { first = 0x3400, last = 0x4DBF },
+  ["ExtB"] = { first = 0x20000, last = 0x2A6DF },
+  ["ExtC"] = { first = 0x2A700, last = 0x2B73F },
+  ["ExtD"] = { first = 0x2B740, last = 0x2B81F },
+  ["ExtE"] = { first = 0x2B820, last = 0x2CEAF },
+  ["ExtF"] = { first = 0x2CEB0, last = 0x2EBEF },
+  ["Compat"] = { first = 0x2F800, last = 0x2FA1F } }
+
+local function exists(single_filter, text)
+  for i in utf8.codes(text) do
+    local c = utf8.codepoint(text, i)
+    if (not single_filter(c)) then
+      return false
+    end
+  end
+  return true
+end
+
+local function is_charset(s)
+  return function (c)
+    return c >= charset[s].first and c <= charset[s].last
+  end
+end
+
+local function is_cjk_ext(c)
+  return is_charset("ExtA")(c) or is_charset("ExtB")(c) or
+    is_charset("ExtC")(c) or is_charset("ExtD")(c) or
+    is_charset("ExtE")(c) or is_charset("ExtF")(c) or
+    is_charset("Compat")(c)
+end
+
+
+--[[
+filter 的功能是對 translator 翻譯而來的候選項做修飾，
+如去除不想要的候選、為候選加註釋、候選項重排序等。
+欲定義的 filter 包含兩個輸入參數：
+ - input: 候選項列表
+ - env: 可選參數，表示 filter 所處的環境（本例沒有體現）
+filter 的輸出與 translator 相同，也是若干候選項，也要求您使用 `yield` 產生候選項。
+如下例所示，charset_filter 將濾除含 CJK 擴展漢字的候選項：
+--]]
+function charset_filter(input)
+  -- 使用 `iter()` 遍歷所有輸入候選項
+  for cand in input:iter() do
+    -- 如果當前候選項 `cand` 不含 CJK 擴展漢字
+    if (not exists(is_cjk_ext, cand.text)) then
+      -- 結果中仍保留此候選
+      yield(cand)
+    end
+    --[[ 上述條件不滿足時，當前的候選 `cand` 沒有被 yield。
+      因此過濾結果中將不含有該候選。
+    --]]
+  end
+end
+
+
+--[[
+同上將濾除含 CJK 擴展漢字的候選項
+但增加開關設置
+--]]
+function charset_filter_plus(input, env)
+  -- 使用 `iter()` 遍歷所有輸入候選項
+  local o_c_f = env.engine.context:get_option("only_cjk_filter")
+  for cand in input:iter() do
+    -- 如果當前候選項 `cand` 不含 CJK 擴展漢字
+    if (not o_c_f or not exists(is_cjk_ext, cand.text)) then
+      -- 結果中仍保留此候選
+      yield(cand)
+    end
+    --[[ 上述條件不滿足時，當前的候選 `cand` 沒有被 yield。
+      因此過濾結果中將不含有該候選。
+    --]]
+  end
+end
+
+
+--- charset comment filter
+--[[
+如下例所示，charset_comment_filter 為候選項加上其所屬字符集的註釋：
+--]]
+function charset_comment_filter(input)
+  for cand in input:iter() do
+    for s, r in pairs(charset) do
+      if (exists(is_charset(s), cand.text)) then
+        cand:get_genuine().comment = cand.comment .. " " .. s
+        break
+      end
+    end
+    yield(cand)
+  end
+end
+
+-- 本例中定義了兩個 filter，故使用一個表將兩者導出
+-- return { filter = charset_filter,
+--   comment_filter = charset_comment_filter }
+
+
+
+
+--- @@ charset filter2
+--[[
+把 opencc 轉換成「᰼」(或某個符號)，再用 lua 功能去除「᰼」
+--]]
+
+-- charset2 = {
+--  ["Deletesymbol"] = { first = 0x1C3C } }
+
+-- function exists2(single_filter2, text)
+--   for i in utf8.codes(text) do
+--    local c = utf8.codepoint(text, i)
+--    if (not single_filter2(c)) then
+--   return false
+--    end
+--   end
+--   return true
+-- end
+
+-- function is_charset2(s)
+--  return function (c)
+--     return c == charset2[s].first
+--  end
+-- end
+
+-- function is_symbol_ext(c)
+--  return is_charset2("Deletesymbol")(c)
+-- end
+
+-- function charset_filter2(input)
+--  for cand in input:iter() do
+--     if (not exists2(is_symbol_ext, cand.text))
+--     then
+--     yield(cand)
+--     end
+--  end
+-- end
+
+function charset_filter2(input)
+  for cand in input:iter() do
+    if (not string.find(cand.text, '᰼᰼' )) then
+    -- if (not string.find(cand.text, '.*᰼᰼.*' )) then
+      yield(cand)
+    end
+    -- if (input == nil) then
+    --   cand = nil
+    -- end
+  end
+  -- return nil
+end
+
+
+
+
+--- @@ single_char_filter
+--[[
+single_char_filter: 候選項重排序，使單字優先
+--]]
+function single_char_filter(input)
+  local l = {}
+  for cand in input:iter() do
+    if (utf8.len(cand.text) == 1) then
+      yield(cand)
+    else
+      table.insert(l, cand)
+    end
+  end
+  for i, cand in ipairs(l) do
+    yield(cand)
+  end
+end
+
+
+
+
+--- @@ reverse_lookup_filter
+--[[
+依地球拼音為候選項加上帶調拼音的註釋
+--]]
+local pydb = ReverseDb("build/terra_pinyin.reverse.bin")
+
+local function xform_py(inp)
+  if inp == "" then return "" end
+  inp = string.gsub(inp, "([aeiou])(ng?)([1234])", "%1%3%2")
+  inp = string.gsub(inp, "([aeiou])(r)([1234])", "%1%3%2")
+  inp = string.gsub(inp, "([aeo])([iuo])([1234])", "%1%3%2")
+  inp = string.gsub(inp, "a1", "ā")
+  inp = string.gsub(inp, "a2", "á")
+  inp = string.gsub(inp, "a3", "ǎ")
+  inp = string.gsub(inp, "a4", "à")
+  inp = string.gsub(inp, "e1", "ē")
+  inp = string.gsub(inp, "e2", "é")
+  inp = string.gsub(inp, "e3", "ě")
+  inp = string.gsub(inp, "e4", "è")
+  inp = string.gsub(inp, "o1", "ō")
+  inp = string.gsub(inp, "o2", "ó")
+  inp = string.gsub(inp, "o3", "ǒ")
+  inp = string.gsub(inp, "o4", "ò")
+  inp = string.gsub(inp, "i1", "ī")
+  inp = string.gsub(inp, "i2", "í")
+  inp = string.gsub(inp, "i3", "ǐ")
+  inp = string.gsub(inp, "i4", "ì")
+  inp = string.gsub(inp, "u1", "ū")
+  inp = string.gsub(inp, "u2", "ú")
+  inp = string.gsub(inp, "u3", "ǔ")
+  inp = string.gsub(inp, "u4", "ù")
+  inp = string.gsub(inp, "v1", "ǖ")
+  inp = string.gsub(inp, "v2", "ǘ")
+  inp = string.gsub(inp, "v3", "ǚ")
+  inp = string.gsub(inp, "v4", "ǜ")
+  inp = string.gsub(inp, "([nljqxy])v", "%1ü")
+  inp = string.gsub(inp, "eh[0-5]?", "ê")
+  return "(" .. inp .. ")"
+end
+
+function reverse_lookup_filter(input)
+  for cand in input:iter() do
+    cand:get_genuine().comment = cand.comment .. " " .. xform_py(pydb:lookup(cand.text))
+    yield(cand)
+  end
+end
+
+--- composition
+-- function myfilter(input)
+--   local input2 = Translation(charset_comment_filter, input)
+--   reverse_lookup_filter(input2)
+-- end
+
+
+
+
+--[[
+@@ 嘸蝦米後面註釋刪除
+--]]
+-- local function xform_c(cf)
+--   if cf == "" then return "" end
+--   cf = string.gsub(cf, "[ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ%s]+$", "zk")
+--   return cf
+-- end
+
+function comment_filter_plus(input, env)
+  local s_c_f = env.engine.context:get_option("simplify_comment")
+  -- 使用 `iter()` 遍歷所有輸入候選項
+  for cand in input:iter() do
+    if (not s_c_f) then
+      yield(cand)
+    else
+    --   -- comment123 = cand.comment .. cand.text .. "open"
+    --   -- comment123 = cand.comment
+    --   -- comment123 = "kkk" .. comment123
+    --   -- cand:get_genuine().comment = comment123 .." "
+      cand:get_genuine().comment = ""
+      yield(cand)
+    end
+  end
+end
+
+
+
+
+--[[
+@@ 韓語（非英語等）空格鍵後添加" "
+--]]
+function endspace(key, env)
+  local engine = env.engine
+  local context = engine.context
+  -- local arr = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}
+  --- accept: space_do_space when: composing
+  if (key:repr() == "space") and (context:is_composing()) then
+    local caret_pos = context.caret_pos
+    local s_orig = context:get_commit_text()
+    -- local s_orig = context:get_commit_composition()
+    -- local o_orig = context:commit()
+    -- local o_orig = context:get_script_text()
+    -- local o_orig = string.gsub(context:get_script_text(), " ", "a")
+    -- 以下「含有英文字母、控制字元、空白」和「切分上屏時」不作用（用字數統計驗證是否切分）
+    if (not string.find(s_orig, "[%a%c%s]")) and (caret_pos == context.input:len()) then
+    -- if (not string.find(o_orig, "[%a%c%s]")) and (caret_pos == context.input:len()) then
+    -- if (string.find(o_orig, "[%a%c%s]")) and (caret_pos == context.input:len()) then
+      -- 下一句：游標位置向左一格，在本例無用，單純記錄用法
+      -- context.caret_pos = caret_pos - 1
+      -- 下兩句合用可使輸出句被電腦記憶
+      -- engine:commit_text("a")
+      -- engine:confirm_current_selection()
+      -- 下一句：用冒號為精簡寫法，該句為完整寫法
+      -- engine.commit_text(engine, s_orig .. "a")
+      -- engine:commit_text(s_orig .. "a")
+      engine:commit_text(s_orig .. " ") --「return 1」時用
+      -- engine:commit_text(s_orig) --「return 0」「return 2」時用
+      context:clear()
+      return 1 -- kAccepted
+      -- 「0」「2」「kAccepted」「kRejected」「kNoop」：直接後綴產生空白
+      -- 「1」：後綴不會產生空白，可用.." "增加空白或其他符號
+      -- （該條目有問題，實測對應不起來）「拒」kRejected、「收」kAccepted、「不認得」kNoop，分別對應返回值：0、1、2。
+      -- 返回「拒絕」時，雖然我們已經處理過按鍵了，但系統以為沒有，於是會按默認值再處理一遍。
+    end
+  end
+  return 2 -- kNoop
+end
+
+
+
+
+--[[
+@@ 各種寫法，針對掛載 t2_translator 在注音（用到空白鍵時）去除上屏時跑出空格之函數
+--]]
+-- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（只針對開頭，並且寫法精簡，少了 is_composing ）
+function s2r_ss(key, env)
+  local engine = env.engine
+  local context = engine.context
+  local o_input = context.input
+  -- local kkk = string.find(o_input, "'/")
+  if (string.find(o_input, "^'/")) and (key:repr() == 'space') then  -- (kkk~=nil) and (context:is_composing())
+    local s_orig = context:get_commit_text()
+    engine:commit_text(s_orig) -- .. "a"
+    context:clear()
+    return 1 -- kAccepted
+  end
+  return 2 -- kNoop
+end
+
+--- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（只針對開頭）
+function s2r_s(key, env)
+  local engine = env.engine
+  local context = engine.context
+  -- local page_size = engine.schema.page_size
+  if (key:repr() == 'space') and (context:is_composing()) then
+    local s_orig = context:get_commit_text()
+    local o_input = context.input
+    if (string.find(o_input, "^'/")) then
+      engine:commit_text(s_orig)
+      context:clear()
+      return 1 -- kAccepted
+    end
+  end
+  return 2 -- kNoop
+end
+
+--- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。
+function s2r(key, env)
+  local engine = env.engine
+  local context = engine.context
+  -- local page_size = engine.schema.page_size
+  if (key:repr() == 'space') and (context:is_composing()) then
+    local s_orig = context:get_commit_text()
+    local o_input = context.input
+    if (string.find(o_input, "'/[';/]?[a-z]*$")) or (string.find(o_input, "'/[0-9/-]*$")) or (string.find(o_input, "'/[xco][0-9a-f]+$")) then
+-- or string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$") or string.find(o_input, "^https?:.*$") or string.find(o_input, "^ftp:.*$") or string.find(o_input, "^mailto:.*$") or string.find(o_input, "^file:.*$")
+      engine:commit_text(s_orig)
+      context:clear()
+      return 1 -- kAccepted
+    end
+  end
+  return 2 -- kNoop
+end
+
+--- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（特別正則 for mixin3）
+function s2r3(key, env)
+  local engine = env.engine
+  local context = engine.context
+  -- local page_size = engine.schema.page_size
+  if (key:repr() == 'space') and (context:is_composing()) then
+    local s_orig = context:get_commit_text()
+    local o_input = context.input
+    if (string.find(o_input, "^'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[-,./;a-z125890][][3467%s]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "''/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][0-9]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][][]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][][][][]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][-,.;=`]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][-,.;'=`][-,.;'=`]'/[';/]?[a-z0-9/-]*$")) then
+-- or string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$") or string.find(o_input, "^https?:.*$") or string.find(o_input, "^ftp:.*$") or string.find(o_input, "^mailto:.*$") or string.find(o_input, "^file:.*$")
+--
+-- 無效的正則，不去影響一般輸入：
+-- string.find(o_input, "[=][-,.;'=`]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][']'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][][][']'/[';/]?[a-z0-9/-]*$") 
+-- 原始全部正則：
+-- "^'/[';/]?[a-z0-9/-]*$|(?<=[-,./;a-z125890][][3467 ])'/[';/]?[a-z0-9/-]*$|(?<=['])'/[';/]?[a-z0-9/-]*$|(?<=[=][0-9])'/[';/]?[a-z0-9/-]*$|(?<=[=][][])'/[';/]?[a-z0-9/-]*$|(?<=[=][][][][])'/[';/]?[a-z0-9/-]*$|(?<=[=][-,.;'=`])'/[';/]?[a-z0-9/-]*$|(?<=[=][-,.;'=`][-,.;'=`])'/[';/]?[a-z0-9/-]*$|(?<=[][])'/[';/]?[a-z0-9/-]*$|(?<=[][][][])'/[';/]?[a-z0-9/-]*$|(?<=[][]['])'/[';/]?[a-z0-9/-]*$|(?<=[][][][]['])'/[';/]?[a-z0-9/-]*$"
+      engine:commit_text(s_orig)
+      context:clear()
+      return 1 -- kAccepted
+    end
+  end
+  return 2 -- kNoop
+end
+
+--- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（只針對 email 和 url ）
+function s2r_e_u(key, env)
+  local engine = env.engine
+  local context = engine.context
+  -- local page_size = engine.schema.page_size
+  if (key:repr() == 'space') and (context:is_composing()) then
+    local s_orig = context:get_commit_text()
+    local o_input = context.input
+    if (string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(o_input, "^https?:.*$")) or (string.find(o_input, "^ftp:.*$")) or (string.find(o_input, "^mailto:.*$")) or (string.find(o_input, "^file:.*$")) then
+      engine:commit_text(s_orig)
+      context:clear()
+      return 1 -- kAccepted
+    end
+  end
+  return 2 -- kNoop
+end
+
+
+
+
+--- @@ email_translator
+--[[
+把 recognizer 正則輸入 email 使用 lua 實現，使之有選項，避免設定空白清屏時無法上屏。
+--]]
+function email_translator(input, seg)
+  local email_in = string.match(input, "^([a-z][-_.0-9a-z]*@.*)$")
+  if (email_in~=nil) then
+    yield(Candidate("englishtype", seg.start, seg._end, email_in , "〔e-mail〕"))
+    return
+  end
+end
+
+
+
+
+--- @@ url_translator
+--[[
+把 recognizer 正則輸入網址使用 lua 實現，使之有選項，避免設定空白清屏時無法上屏。
+--]]
+function url_translator(input, seg)
+  local url1_in = string.match(input, "^(https?:.*)$")
+  if (url1_in~=nil) then
+    yield(Candidate("englishtype", seg.start, seg._end, url1_in , "〔URL〕"))
+    return
+  end
+
+  local url2_in = string.match(input, "^(ftp:.*)$")
+  if (url2_in~=nil) then
+    yield(Candidate("englishtype", seg.start, seg._end, url2_in , "〔URL〕"))
+    return
+  end
+
+  local url3_in = string.match(input, "^(mailto:.*)$")
+  if (url3_in~=nil) then
+    yield(Candidate("englishtype", seg.start, seg._end, url3_in , "〔URL〕"))
+    return
+  end
+
+  local url4_in = string.match(input, "^(file:.*)$")
+  if (url4_in~=nil) then
+    yield(Candidate("englishtype", seg.start, seg._end, url4_in , "〔URL〕"))
+    return
+  end
+end
+
+--- urlw_translator
+--[[
+把 recognizer 正則輸入網址使用 lua 實現，使之有選項，避免設定空白清屏時無法上屏。
+該項多加「www.」
+--]]
+function urlw_translator(input, seg)
+  local www_in = string.match(input, "^(www[.].*)$")
+  if (www_in~=nil) then
+    yield(Candidate("englishtype", seg.start, seg._end, www_in , "〔URL〕"))
+    return
+  end
+
+  local url1_in = string.match(input, "^(https?:.*)$")
+  if (url1_in~=nil) then
+    yield(Candidate("englishtype", seg.start, seg._end, url1_in , "〔URL〕"))
+    return
+  end
+
+  local url2_in = string.match(input, "^(ftp:.*)$")
+  if (url2_in~=nil) then
+    yield(Candidate("englishtype", seg.start, seg._end, url2_in , "〔URL〕"))
+    return
+  end
+
+  local url3_in = string.match(input, "^(mailto:.*)$")
+  if (url3_in~=nil) then
+    yield(Candidate("englishtype", seg.start, seg._end, url3_in , "〔URL〕"))
+    return
+  end
+
+  local url4_in = string.match(input, "^(file:.*)$")
+  if (url4_in~=nil) then
+    yield(Candidate("englishtype", seg.start, seg._end, url4_in , "〔URL〕"))
+    return
+  end
+end
+
+
+
+
+--[[
+@@ 於注音方案改變在非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
+--]]
+function ascii_punct_change(key, env)
+  local c_b_d = env.engine.context:get_option("ascii_punct")
+  local en_m = env.engine.context:get_option("ascii_mode")
+  if (c_b_d) and (not en_m) then
+    local engine = env.engine
+    local context = engine.context
+    if (key:repr() == 'Shift+less') then
+      local b_orig = context:get_commit_text()
+      engine:commit_text( b_orig .. ",")
+      context:clear()
+      return 1 -- kAccepted
+    end
+    if (key:repr() == 'Shift+greater') then
+      local b_orig = context:get_commit_text()
+      engine:commit_text( b_orig .. ".")
+      context:clear()
+      return 1 -- kAccepted
+    end
+  end
+  return 2 -- kNoop
+end
+
+
+
+
+
 -- 內碼輸入法
 --[[
 收入 unicode 碼得出該碼字元
@@ -927,7 +1450,7 @@ end
 
 
 --[[
-轉換農曆函數
+@轉換農曆函數
 --]]
 --十進制轉二進制
 local function Dec2bin(n)
@@ -1090,8 +1613,8 @@ local function Date2LunarDate(Gregorian)
 	end
 	--print(MonthInfo .. "-" .. LeapInfo .. "-" .. Leap .. "-" .. Newyear .. "-" .. Year)
 	Date3=Date3+1
-	LYear=Year	--農歷年份，就是上面計算後的值
-	if Leap>0 then	--有閏月
+	LYear=Year    --農歷年份，就是上面計算後的值
+	if Leap>0 then    --有閏月
 		thisMonthInfo=string.sub(MonthInfo,1,Leap) .. LeapInfo .. string.sub(MonthInfo,Leap+1)
 	else
 		thisMonthInfo=MonthInfo
@@ -1235,6 +1758,867 @@ local function LunarDate2Date(Gregorian,IsLeap)
 	return GDate
 end
 
+
+--[[
+@@@@@@@@
+--]]
+--*******農歷節氣計算部分
+--========角度變換===============
+local rad = 180*3600/math.pi --每弧度的角秒數
+local RAD = 180/math.pi      --每弧度的角度數
+function int2(v) --取整數部分
+	v=math.floor(v)
+	if v<0 then return v+1
+	else return v
+	end
+end
+
+local function rad2mrad(v)   --對超過0-2PI的角度轉為0-2PI
+	v=math.fmod(v ,2*math.pi)
+	if v<0 then  return v+2*math.pi
+	else return v
+	end
+end
+
+local function rad2str(d,tim) --將弧度轉為字串
+	---tim=0輸出格式示例: -23°59' 48.23"
+	---tim=1輸出格式示例:  18h 29m 44.52s
+	local s="+"
+	local w1="°" w2="’"  w3="」"
+	if d<0 then  d=-d  s='-'end
+	if tim~= 0 then  d=d*12/math.pi w1="h " w2="m " w3="s "
+	else     d=d*180/math.pi end
+	local a=math.floor(d) d=(d-a)*60
+	local b=math.floor(d) d=(d-b)*60
+	local c=math.floor(d) d=(d-c)*100
+	d=math.floor(d+0.5)
+	if d>=100 then d=d-100 c=c+1 end
+	if c>=60  then c=c-60  b=b+1 end
+	if b>=60  then b=b-60  a=a+1 end
+	a="   "+a b="0"+b c="0"+c d="0"+d
+	local alen = string.len(a)
+	local blen = string.len(b)
+	local clen = string.len(c)
+	local dlen = string.len(d)
+	s = s .. string.sub(a, alen-3,alen)+w1
+	s = s .. string.sub(b, blen-2,blen)+w2
+	s = s .. string.sub(c, clen-2,clen)+"."
+	s = s .. string.sub(d, dlen-2,dlen)+w3
+	return s
+end
+--================日曆計算===============
+local J2000=2451545 --2000年前儒略日數(2000-1-1 12:00:00格林威治平時)
+
+local JDate={ --日期元件
+Y=2000, M=1, D=1, h=12, m=0, s=0,
+dts = { --世界時與原子時之差計算表
+-4000, 108371.7,-13036.80,392.000, 0.0000, -500, 17201.0,  -627.82, 16.170,-0.3413,
+ -150,  12200.6,  -346.41,  5.403,-0.1593,  150,  9113.8,  -328.13, -1.647, 0.0377,
+  500,   5707.5,  -391.41,  0.915, 0.3145,  900,  2203.4,  -283.45, 13.034,-0.1778,
+ 1300,    490.1,   -57.35,  2.085,-0.0072, 1600,   120.0,    -9.81, -1.532, 0.1403,
+ 1700,     10.2,    -0.91,  0.510,-0.0370, 1800,    13.4,    -0.72,  0.202,-0.0193,
+ 1830,      7.8,    -1.81,  0.416,-0.0247, 1860,     8.3,    -0.13, -0.406, 0.0292,
+ 1880,     -5.4,     0.32, -0.183, 0.0173, 1900,    -2.3,     2.06,  0.169,-0.0135,
+ 1920,     21.2,     1.69, -0.304, 0.0167, 1940,    24.2,     1.22, -0.064, 0.0031,
+ 1960,     33.2,     0.51,  0.231,-0.0109, 1980,    51.0,     1.29, -0.026, 0.0032,
+ 2000,     64.7,    -1.66,  5.224,-0.2905, 2150,   279.4,   732.95,429.579, 0.0158, 6000},
+deltatT = function(JDate, y) --計算世界時與原子時之差,傳入年
+	local  i
+	local d=JDate.dts
+	for x=1,100, 5 do
+		if y<d[x+5] or x==96 then  i=x break end
+	end
+
+	local t1=(y-d[i])/(d[i+5]-d[i])*10
+	local t2=t1*t1
+	local t3=t2*t1
+	return d[i+1] +d[i+2]*t1 +d[i+3]*t2 +d[i+4]*t3
+end,
+deltatT2 = function(JDate,jd) --傳入儒略日(J2000起算),計算UTC與原子時的差(單位:日)
+	return JDate:deltatT(jd/365.2425+2000)/86400.0
+end,
+toJD = function(JDate, UTC) --公曆轉儒略日,UTC=1表示原日期是UTC
+	local  y=JDate.Y m=JDate.M n=0 --取出年月
+	if m<=2 then  m=m+12 y=y-1 end
+	if JDate.Y*372+JDate.M*31+JDate.D>=588829 then --判斷是否為格里高利歷日1582*372+10*31+15
+		n =int2(y/100) n =2-n+int2(n/4)--加百年閏
+	end
+	n = n + int2(365.2500001*(y+4716))    --加上年引起的偏移日數
+	n = n + int2(30.6*(m+1))+JDate.D       --加上月引起的偏移日數及日偏移數
+	n = n + ((JDate.s/60+JDate.m)/60+JDate.h)/24 - 1524.5
+	if(UTC == 1) then return n+JDate.deltatT2(n-J2000) end
+	return n
+end,
+setFromJD = function(JDate, jd,UTC) --儒略日數轉公曆,UTC=1表示目標公曆是UTC
+	if UTC==1 then  jd= jd - JDate:deltatT2(jd-J2000) end
+	jd =jd+0.5
+	local A=int2(jd) F=jd-A, D  --取得日數的整數部份A及小數部分F
+	if A>2299161 then  D=int2((A-1867216.25)/36524.25) A=A+1+D-int2(D/4) end
+	A = A + 1524 --向前移4年零2個月
+	JDate.Y =int2((A-122.1)/365.25)--年
+	D =A-int2(365.25*JDate.Y) --去除整年日數後余下日數
+	JDate.M =int2(D/30.6001)       --月數
+	JDate.D =D-int2(JDate.M*30.6001)--去除整月日數後余下日數
+	JDate.Y=JDate.Y-4716 JDate.M=JDate.M-1
+	if JDate.M>12 then  JDate.M=JDate.M - 12 end
+	if JDate.M<=2 then  JDate.Y = JDate.Y+1 end
+	--日的小數轉為時分秒
+	F=F*24 JDate.h=int2(F) F=F - JDate.h
+	F=F*60 JDate.m=int2(F) F=F - JDate.m
+	F=F*60 JDate.s=F
+end,
+
+setFromStr = function(JDate, s) --設置時間,參數例:"20000101 120000"或"20000101"
+	JDate.Y=string.sub(s, 1,4)    JDate.M=string.sub(s, 5, 6)  JDate.D=string.sub(s,7, 8)
+	JDate.h=string.sub(s, 10, 11) JDate.m=string.sub(s, 12,13) JDate.s=string.sub(s, 14,18)
+end,
+toStr = function(JDate) --日期轉為串
+	local Y="     " .. JDate.Y
+	local M="0" .. JDate.M
+	local D="0" .. JDate.D
+	local h=JDate.h
+	local m=JDate.m
+	local s=math.floor(JDate.s+.5)
+	if s>=60 then s=s-60 m=m+1 end
+	if m>=60 then m=m-60 h=h+1 end
+	h="0".. h m="0" .. m s="0" .. s
+	local Ylen = string.len(Y)
+	local Mlen = string.len(M)
+	local Dlen = string.len(D)
+	local hlen = string.len(h)
+	local mlen = string.len(m)
+	local slen = string.len(s)
+	Y=string.sub(Y, Ylen -4,Ylen) M=string.sub(M, Mlen-1,Mlen) D=string.sub(D,Dlen-1, Dlen)
+	h=string.sub(h, hlen-1, hlen) m=string.sub(m, mlen-1,mlen) s=string.sub(s, slen-1,slen)
+	return Y .. "-" .. M .. "-" .. D .. " " .. h .. ":" .. m .. ":" .. s
+end,
+
+JQ = function(JDate) --輸出節氣日期的秒數
+	local t = {}
+	t.year=JDate.Y
+	t.month=JDate.M
+	t.day=JDate.D
+	t.hour=JDate.h
+	t.min=JDate.m
+	t.sec=math.floor(JDate.s+.5)
+	if t.sec>=60 then t.sec=t.sec-60 t.min=t.min+1 end
+	if t.min>=60 then t.min=t.min-60 t.hour=t.hour+1 end
+	return os.time(t)
+end,
+
+Dint_dec = function(JDate, jd,shiqu,int_dec) --算出:jd轉到當地UTC後,UTC日數的整數部分或小數部分
+	--基於J2000力學時jd的起算點是12:00:00時,所以跳日時刻發生在12:00:00,這與日曆計算發生矛盾
+	--把jd改正為00:00:00起算,這樣儒略日的跳日動作就與日期的跳日同步
+	--改正方法為jd=jd+0.5-deltatT+shiqu/24
+	--把儒略日的起點移動-0.5(即前移12小時)
+	--式中shiqu是時區,北京的起算點是-8小時,shiqu取8
+	local u=jd+0.5-JDate.deltatT2(jd)+shiqu/24
+	if int_dec~= 0 then  return math.floor(u) --返回整數部分
+	else return u-math.floor(u)      --返回小數部分
+	end
+end,
+
+d1_d2 = function(JDate, d1,d2) --計算兩個日期的相差的天數,輸入字串格式日期,如:"20080101"
+	local Y=JDate.Y M=JDate.M D=JDate.D h=JDate.h m=JDate.m s=JDate.s --備份原來的數據
+	JDate.setFromStr(string.sub(d1,1,8)+" 120000")    local jd1=JDate.toJD(0)
+	JDate.setFromStr(string.sub(d2,1,8)+" 120000")    local jd2=JDate.toJD(0)
+
+	JDate.Y=Y JDate.M=M JDate.D=D JDate.h=h JDate.m=m JDate.s=s --還原
+	if jd1>jd2 then  return  math.floor(jd1-jd2+.0001)
+	else        return -Math.floor(jd2-jd1+.0001)
+	end
+end,
+}
+--=========黃赤交角及黃赤坐標變換===========
+local hcjjB = {84381.448, -46.8150, -0.00059, 0.001813}--黃赤交角系數表
+local preceB= {0,50287.92262,111.24406,0.07699,-0.23479,-0.00178,0.00018,0.00001}--Date黃道上的歲差p
+
+local function hcjj1 (t) --返回黃赤交角(常規精度),短期精度很高
+	local t1=t/36525 t2=t1*t1  t3=t2*t1
+	return (hcjjB[1] +hcjjB[2]*t1 +hcjjB[3]*t2 +hcjjB[4]*t3)/rad
+end
+
+local function HCconv(JW,E) --黃赤轉換(黃赤坐標旋轉)
+	--黃道赤道坐標變換,赤到黃E取負
+	local HJ=rad2mrad(JW[1])  HW=JW[2]
+	local sinE =math.sin(E) cosE =math.cos(E)
+	local sinW=cosE*math.sin(HW)+sinE*math.cos(HW)*math.sin(HJ)
+	local J=math.atan2( math.sin(HJ)*cosE-math.tan(HW)*sinE, math.cos(HJ) )
+	JW[1]=rad2mrad(J)
+	JW[2]=math.asin(sinW)
+end
+
+local function addPrece(jd,zb) --補歲差
+	local i t=1 v=0  t1=jd/365250
+	for i=2,8 do t=t*t1 v=v+preceB[i]*t end
+	zb[1]=rad2mrad(zb[1]+(v+2.9965*t1)/rad)
+end
+
+--===============光行差==================
+local GXC_e={0.016708634, -0.000042037,-0.0000001267} --離心率
+local GXC_p={102.93735/RAD,1.71946/RAD, 0.00046/RAD}  --近點
+local GXC_l={280.4664567/RAD,36000.76982779/RAD,0.0003032028/RAD,1/49931000/RAD,-1/153000000/RAD} --太平黃經
+local GXC_k=20.49552/rad --光行差常數
+function addGxc(t,zb)--恆星週年光行差計算(黃道坐標中)
+	local t1=t/36525
+	local t2=t1*t1
+	local t3=t2*t1
+	local t4=t3*t1
+	local L=GXC_l[1] +GXC_l[2]*t1 +GXC_l[3]*t2 +GXC_l[4]*t3 +GXC_l[5]*t4
+	local p=GXC_p[1] +GXC_p[2]*t1 +GXC_p[3]*t2
+	local e=GXC_e[1] +GXC_e[2]*t1 +GXC_e[3]*t2
+	local dL=L-zb[1]
+	local dP=p-zb[1]
+	zb[1]=zb[1] - (GXC_k * (math.cos(dL)-e*math.cos(dP)) / math.cos(zb[2]))
+	zb[2]=zb[2] - (GXC_k * math.sin(zb[2]) * (math.sin(dL)-e*math.sin(dP)))
+	--print('aa', L,p,e,dL,dP,zb[1], zb[2])
+	zb[1]=rad2mrad(zb[1])
+end
+
+--===============章動計算==================
+local nutB={--章動表
+2.1824391966,   -33.757045954, 0.0000362262, 3.7340E-08,-2.8793E-10,-171996,-1742,92025, 89,
+3.5069406862,  1256.663930738, 0.0000105845, 6.9813E-10,-2.2815E-10, -13187,  -16, 5736,-31,
+1.3375032491, 16799.418221925,-0.0000511866, 6.4626E-08,-5.3543E-10,  -2274,   -2,  977, -5,
+4.3648783932,   -67.514091907, 0.0000724525, 7.4681E-08,-5.7586E-10,   2062,    2, -895,  5,
+0.0431251803,  -628.301955171, 0.0000026820, 6.5935E-10, 5.5705E-11,  -1426,   34,   54, -1,
+2.3555557435,  8328.691425719, 0.0001545547, 2.5033E-07,-1.1863E-09,    712,    1,   -7,  0,
+3.4638155059,  1884.965885909, 0.0000079025, 3.8785E-11,-2.8386E-10,   -517,   12,  224, -6,
+5.4382493597, 16833.175267879,-0.0000874129, 2.7285E-08,-2.4750E-10,   -386,   -4,  200,  0,
+3.6930589926, 25128.109647645, 0.0001033681, 3.1496E-07,-1.7218E-09,   -301,    0,  129, -1,
+3.5500658664,   628.361975567, 0.0000132664, 1.3575E-09,-1.7245E-10,    217,   -5,  -95,  3}
+
+local function nutation(t) --計算黃經章動及交角章動
+	local d={}
+	d.Lon=0  d.Obl=0  t=t/36525
+	local i,c
+	local t1=t
+	local t2=t1*t1
+	local t3=t2*t1
+	local t4=t3*t1
+	local t5=t4*t1
+	for i=1,#nutB,9 do
+		c=nutB[i] +nutB[i+1]*t1 +nutB[i+2]*t2 +nutB[i+3]*t3 +nutB[i+4]*t4
+		d.Lon=d.Lon + (nutB[i+5]+nutB[i+6]*t/10)*math.sin(c) --黃經章動
+		d.Obl=d.Obl + (nutB[i+7]+nutB[i+8]*t/10)*math.cos(c) --交角章動
+	end
+	d.Lon=d.Lon/(rad*10000) --黃經章動
+	d.Obl=d.Obl/(rad*10000) --交角章動
+	return d
+end
+
+local function nutationRaDec(t,zb) --本函數計算赤經章動及赤緯章動
+	local Ra=zb[1]
+	local Dec=zb[2]
+	local E=hcjj1(t)
+	local sinE=math.sin(E)
+	local cosE=math.cos(E) --計算黃赤交角
+	local d=nutation(t)  --計算黃經章動及交角章動
+	local cosRa=math.cos(Ra)
+	local sinRa=math.sin(Ra)
+	local tanDec=math.tan(Dec)
+	zb[1]=zb[1] + (cosE+sinE*sinRa*tanDec)*d.Lon-cosRa*tanDec*d.Obl --赤經章動
+	zb[2]= zb[2] + sinE*cosRa*d.Lon+sinRa*d.Obl   --赤緯章動
+	zb[1]=rad2mrad(zb[1])
+end
+
+--=================以下是月球及地球運動參數表===================
+--[[***************************************
+* 如果用記事本查看此代碼,請在"格式"菜單中去除"自動換行"
+* E10是關於地球的,格式如下:
+*    它是一個數組,每3個數看作一條記錄,每條記錄的3個數記為A,B,C
+*    rec=A*cos(B+C*t)  式中t是J2000起算的儒略千年數
+*    每條記錄的計算結果(即rec)取和即得地球的日心黃經的週期量L0
+* E11格式如下: rec = A*cos*(B+C*t) *t,     取和後得泊松量L1
+* E12格式如下: rec = A*cos*(B+C*t) *t*t,   取和後得泊松量L2
+* E13格式如下: rec = A*cos*(B+C*t) *t*t*t, 取和後得泊松量L3
+* 最後地球的地心黃經:L = L0+L1+L2+L3+...
+* E20,E21,E22,E23...用於計算黃緯
+* M10,M11等是關於月球的,參數的用法請閱讀Mnn()函數
+***************************************** --]]
+--地球運動VSOP87參數
+local E10={ --黃經週期項
+1.75347045673, 0.00000000000,     0.0000000000,  0.03341656456, 4.66925680417,  6283.0758499914,  0.00034894275, 4.62610241759, 12566.1516999828,  0.00003417571, 2.82886579606,     3.5231183490,
+0.00003497056, 2.74411800971,  5753.3848848968,  0.00003135896, 3.62767041758, 77713.7714681205,  0.00002676218, 4.41808351397,  7860.4193924392,  0.00002342687, 6.13516237631,  3930.2096962196,
+0.00001273166, 2.03709655772,   529.6909650946,  0.00001324292, 0.74246356352, 11506.7697697936,  0.00000901855, 2.04505443513,    26.2983197998,  0.00001199167, 1.10962944315,  1577.3435424478,
+0.00000857223, 3.50849156957,   398.1490034082,  0.00000779786, 1.17882652114,  5223.6939198022,  0.00000990250, 5.23268129594,  5884.9268465832,  0.00000753141, 2.53339053818,  5507.5532386674,
+0.00000505264, 4.58292563052, 18849.2275499742,  0.00000492379, 4.20506639861,   775.5226113240,  0.00000356655, 2.91954116867,     0.0673103028,  0.00000284125, 1.89869034186,   796.2980068164,
+0.00000242810, 0.34481140906,  5486.7778431750,  0.00000317087, 5.84901952218, 11790.6290886588,  0.00000271039, 0.31488607649, 10977.0788046990,  0.00000206160, 4.80646606059,  2544.3144198834,
+0.00000205385, 1.86947813692,  5573.1428014331,  0.00000202261, 2.45767795458,  6069.7767545534,  0.00000126184, 1.08302630210,    20.7753954924,  0.00000155516, 0.83306073807,   213.2990954380,
+0.00000115132, 0.64544911683,     0.9803210682,  0.00000102851, 0.63599846727,  4694.0029547076,  0.00000101724, 4.26679821365,     7.1135470008,  0.00000099206, 6.20992940258,  2146.1654164752,
+0.00000132212, 3.41118275555,  2942.4634232916,  0.00000097607, 0.68101272270,   155.4203994342,  0.00000085128, 1.29870743025,  6275.9623029906,  0.00000074651, 1.75508916159,  5088.6288397668,
+0.00000101895, 0.97569221824, 15720.8387848784,  0.00000084711, 3.67080093025, 71430.6956181291,  0.00000073547, 4.67926565481,   801.8209311238,  0.00000073874, 3.50319443167,  3154.6870848956,
+0.00000078756, 3.03698313141, 12036.4607348882,  0.00000079637, 1.80791330700, 17260.1546546904,  0.00000085803, 5.98322631256,161000.6857376741,  0.00000056963, 2.78430398043,  6286.5989683404,
+0.00000061148, 1.81839811024,  7084.8967811152,  0.00000069627, 0.83297596966,  9437.7629348870,  0.00000056116, 4.38694880779, 14143.4952424306,  0.00000062449, 3.97763880587,  8827.3902698748,
+0.00000051145, 0.28306864501,  5856.4776591154,  0.00000055577, 3.47006009062,  6279.5527316424,  0.00000041036, 5.36817351402,  8429.2412664666,  0.00000051605, 1.33282746983,  1748.0164130670,
+0.00000051992, 0.18914945834, 12139.5535091068,  0.00000049000, 0.48735065033,  1194.4470102246,  0.00000039200, 6.16832995016, 10447.3878396044,  0.00000035566, 1.77597314691,  6812.7668150860,
+0.00000036770, 6.04133859347, 10213.2855462110,  0.00000036596, 2.56955238628,  1059.3819301892,  0.00000033291, 0.59309499459, 17789.8456197850,  0.00000035954, 1.70876111898,  2352.8661537718}
+local E11={ --黃經泊松1項
+6283.31966747491,0.00000000000,     0.0000000000,  0.00206058863, 2.67823455584,  6283.0758499914,  0.00004303430, 2.63512650414, 12566.1516999828,  0.00000425264, 1.59046980729,     3.5231183490,
+0.00000108977, 2.96618001993,  1577.3435424478,  0.00000093478, 2.59212835365, 18849.2275499742,  0.00000119261, 5.79557487799,    26.2983197998,  0.00000072122, 1.13846158196,   529.6909650946,
+0.00000067768, 1.87472304791,   398.1490034082,  0.00000067327, 4.40918235168,  5507.5532386674,  0.00000059027, 2.88797038460,  5223.6939198022,  0.00000055976, 2.17471680261,   155.4203994342,
+0.00000045407, 0.39803079805,   796.2980068164,  0.00000036369, 0.46624739835,   775.5226113240,  0.00000028958, 2.64707383882,     7.1135470008,  0.00000019097, 1.84628332577,  5486.7778431750,
+0.00000020844, 5.34138275149,     0.9803210682,  0.00000018508, 4.96855124577,   213.2990954380,  0.00000016233, 0.03216483047,  2544.3144198834,  0.00000017293, 2.99116864949,  6275.9623029906}
+local E12={ --黃經泊松2項
+0.00052918870, 0.00000000000,     0.0000000000,  0.00008719837, 1.07209665242,  6283.0758499914,  0.00000309125, 0.86728818832, 12566.1516999828,  0.00000027339, 0.05297871691,     3.5231183490,
+0.00000016334, 5.18826691036,    26.2983197998,  0.00000015752, 3.68457889430,   155.4203994342,  0.00000009541, 0.75742297675, 18849.2275499742,  0.00000008937, 2.05705419118, 77713.7714681205,
+0.00000006952, 0.82673305410,   775.5226113240,  0.00000005064, 4.66284525271,  1577.3435424478}
+local E13={ 0.00000289226, 5.84384198723,  6283.0758499914,  0.00000034955, 0.00000000000,     0.0000000000, 0.00000016819, 5.48766912348, 12566.1516999828}
+local E14={ 0.00000114084, 3.14159265359,     0.0000000000,  0.00000007717, 4.13446589358,  6283.0758499914, 0.00000000765, 3.83803776214, 12566.1516999828}
+local E15={ 0.00000000878, 3.14159265359,     0.0000000000 }
+local E20={ --黃緯週期項
+0.00000279620, 3.19870156017, 84334.6615813083,  0.00000101643, 5.42248619256,  5507.5532386674,  0.00000080445, 3.88013204458,  5223.6939198022,  0.00000043806, 3.70444689758,  2352.8661537718,
+0.00000031933, 4.00026369781,  1577.3435424478,  0.00000022724, 3.98473831560,  1047.7473117547,  0.00000016392, 3.56456119782,  5856.4776591154,  0.00000018141, 4.98367470263,  6283.0758499914,
+0.00000014443, 3.70275614914,  9437.7629348870,  0.00000014304, 3.41117857525, 10213.2855462110}
+local E21={ 0.00000009030, 3.89729061890,  5507.5532386674,  0.00000006177, 1.73038850355,  5223.6939198022}
+local E30={ --距離週期項
+1.00013988799, 0.00000000000,     0.0000000000,  0.01670699626, 3.09846350771,  6283.0758499914,  0.00013956023, 3.05524609620, 12566.1516999828,  0.00003083720, 5.19846674381, 77713.7714681205,
+0.00001628461, 1.17387749012,  5753.3848848968,  0.00001575568, 2.84685245825,  7860.4193924392,  0.00000924799, 5.45292234084, 11506.7697697936,  0.00000542444, 4.56409149777,  3930.2096962196}
+local E31={ 0.00103018608, 1.10748969588,  6283.0758499914,  0.00001721238, 1.06442301418, 12566.1516999828, 0.00000702215, 3.14159265359,     0.0000000000}
+local E32={ 0.00004359385, 5.78455133738,  6283.0758499914 }
+local E33={ 0.00000144595, 4.27319435148,  6283.0758499914 }
+--月球運動參數
+local M10={
+    22639.5858800,  2.3555545723,  8328.6914247251, 1.5231275E-04, 2.5041111E-07,-1.1863391E-09, 4586.4383203,  8.0413790709,  7214.0628654588,-2.1850087E-04,-1.8646419E-07, 8.7760973E-10, 2369.9139357, 10.3969336431, 15542.7542901840,-6.6188121E-05, 6.3946925E-08,-3.0872935E-10,  769.0257187,  4.7111091445, 16657.3828494503, 3.0462550E-04, 5.0082223E-07,-2.3726782E-09,
+    -666.4175399, -0.0431256817,   628.3019552485,-2.6638815E-06, 6.1639211E-10,-5.4439728E-11, -411.5957339,  3.2558104895, 16866.9323152810,-1.2804259E-04,-9.8998954E-09, 4.0433461E-11,  211.6555524,  5.6858244986, -1114.6285592663,-3.7081362E-04,-4.3687530E-07, 2.0639488E-09,  205.4359530,  8.0845047526,  6585.7609102104,-2.1583699E-04,-1.8708058E-07, 9.3204945E-10,
+    191.9561973, 12.7524882154, 23871.4457149091, 8.6124629E-05, 3.1435804E-07,-1.4950684E-09,  164.7286185, 10.4400593249, 14914.4523349355,-6.3524240E-05, 6.3330532E-08,-2.5428962E-10, -147.3213842, -2.3986802540, -7700.3894694766,-1.5497663E-04,-2.4979472E-07, 1.1318993E-09, -124.9881185,  5.1984668216,  7771.3771450920,-3.3094061E-05, 3.1973462E-08,-1.5436468E-10,
+    -109.3803637,  2.3124288905,  8956.9933799736, 1.4964887E-04, 2.5102751E-07,-1.2407788E-09,   55.1770578,  7.1411231536, -1324.1780250970, 6.1854469E-05, 7.3846820E-08,-3.4916281E-10,  -45.0996092,  5.6113650618, 25195.6237400061, 2.4270161E-05, 2.4051122E-07,-1.1459056E-09,   39.5333010, -0.9002559173, -8538.2408905558, 2.8035534E-04, 2.6031101E-07,-1.2267725E-09,
+    38.4298346, 18.4383127140, 22756.8171556428,-2.8468899E-04,-1.2251727E-07, 5.6888037E-10,   36.1238141,  7.0666637168, 24986.0742741754, 4.5693825E-04, 7.5123334E-07,-3.5590172E-09,   30.7725751, 16.0827581417, 14428.1257309177,-4.3700174E-04,-3.7292838E-07, 1.7552195E-09,  -28.3971008,  7.9982533891,  7842.3648207073,-2.2116475E-04,-1.8584780E-07, 8.2317000E-10,
+    -24.3582283, 10.3538079614, 16171.0562454324,-6.8852003E-05, 6.4563317E-08,-3.6316908E-10,  -18.5847068,  2.8429122493,  -557.3142796331,-1.8540681E-04,-2.1843765E-07, 1.0319744E-09,   17.9544674,  5.1553411398,  8399.6791003405,-3.5757942E-05, 3.2589854E-08,-2.0880440E-10,   14.5302779, 12.7956138971, 23243.1437596606, 8.8788511E-05, 3.1374165E-07,-1.4406287E-09,
+    14.3796974, 15.1080427876, 32200.1371396342, 2.3843738E-04, 5.6476915E-07,-2.6814075E-09,   14.2514576,-24.0810366320,    -2.3011998397, 1.5231275E-04, 2.5041111E-07,-1.1863391E-09,   13.8990596, 20.7938672862, 31085.5085803679,-1.3237624E-04, 1.2789385E-07,-6.1745870E-10,   13.1940636,  3.3302699264, -9443.3199839914,-5.2312637E-04,-6.8728642E-07, 3.2502879E-09,
+    -9.6790568, -4.7542348263,-16029.0808942018,-3.0728938E-04,-5.0020584E-07, 2.3182384E-09,   -9.3658635, 11.2971895604, 24080.9951807398,-3.4654346E-04,-1.9636409E-07, 9.1804319E-10,    8.6055318,  5.7289501804, -1742.9305145148,-3.6814974E-04,-4.3749170E-07, 2.1183885E-09,   -8.4530982,  7.5540213938, 16100.0685698171, 1.1921869E-04, 2.8238458E-07,-1.3407038E-09,
+    8.0501724, 10.4831850066, 14286.1503796870,-6.0860358E-05, 6.2714140E-08,-1.9984990E-10,   -7.6301553,  4.6679834628, 17285.6848046987, 3.0196162E-04, 5.0143862E-07,-2.4271179E-09,   -7.4474952, -0.0862513635,  1256.6039104970,-5.3277630E-06, 1.2327842E-09,-1.0887946E-10,    7.3712011,  8.1276304344,  5957.4589549619,-2.1317311E-04,-1.8769697E-07, 9.8648918E-10,
+    7.0629900,  0.9591375719,    33.7570471374,-3.0829302E-05,-3.6967043E-08, 1.7385419E-10,   -6.3831491,  9.4966777258,  7004.5133996281, 2.1416722E-04, 3.2425793E-07,-1.5355019E-09,   -5.7416071, 13.6527441326, 32409.6866054649,-1.9423071E-04, 5.4047029E-08,-2.6829589E-10,    4.3740095, 18.4814383957, 22128.5152003943,-2.8202511E-04,-1.2313366E-07, 6.2332010E-10,
+    -3.9976134,  7.9669196340, 33524.3151647312, 1.7658291E-04, 4.9092233E-07,-2.3322447E-09,   -3.2096876, 13.2398458924, 14985.4400105508,-2.5159493E-04,-1.5449073E-07, 7.2324505E-10,   -2.9145404, 12.7093625336, 24499.7476701576, 8.3460748E-05, 3.1497443E-07,-1.5495082E-09,    2.7318890, 16.1258838235, 13799.8237756692,-4.3433786E-04,-3.7354477E-07, 1.8096592E-09,
+    -2.5679459, -2.4418059357, -7072.0875142282,-1.5764051E-04,-2.4917833E-07, 1.0774596E-09,   -2.5211990,  7.9551277074,  8470.6667759558,-2.2382863E-04,-1.8523141E-07, 7.6873027E-10,    2.4888871,  5.6426988169,  -486.3266040178,-3.7347750E-04,-4.3625891E-07, 2.0095091E-09,    2.1460741,  7.1842488353, -1952.4799803455, 6.4518350E-05, 7.3230428E-08,-2.9472308E-10,
+    1.9777270, 23.1494218585, 39414.2000050930, 1.9936508E-05, 3.7830496E-07,-1.8037978E-09,    1.9336825,  9.4222182890, 33314.7656989005, 6.0925100E-04, 1.0016445E-06,-4.7453563E-09,    1.8707647, 20.8369929680, 30457.2066251194,-1.2971236E-04, 1.2727746E-07,-5.6301898E-10,   -1.7529659,  0.4873576771, -8886.0057043583,-3.3771956E-04,-4.6884877E-07, 2.2183135E-09,
+    -1.4371624,  7.0979974718,  -695.8760698485, 5.9190587E-05, 7.4463212E-08,-4.0360254E-10,   -1.3725701,  1.4552986550,  -209.5494658307, 4.3266809E-04, 5.1072212E-07,-2.4131116E-09,    1.2618162,  7.5108957121, 16728.3705250656, 1.1655481E-04, 2.8300097E-07,-1.3951435E-09
+}
+local M11={
+    1.6768000, -0.0431256817,   628.3019552485,-2.6638815E-06, 6.1639211E-10,-5.4439728E-11,    0.5164200, 11.2260974062,  6585.7609102104,-2.1583699E-04,-1.8708058E-07, 9.3204945E-10,    0.4138300, 13.5816519784, 14914.4523349355,-6.3524240E-05, 6.3330532E-08,-2.5428962E-10,    0.3711500,  5.5402729076,  7700.3894694766, 1.5497663E-04, 2.4979472E-07,-1.1318993E-09,
+    0.2756000,  2.3124288905,  8956.9933799736, 1.4964887E-04, 2.5102751E-07,-1.2407788E-09,    0.2459863,-25.6198212459,    -2.3011998397, 1.5231275E-04, 2.5041111E-07,-1.1863391E-09,    0.0711800,  7.9982533891,  7842.3648207073,-2.2116475E-04,-1.8584780E-07, 8.2317000E-10,    0.0612800, 10.3538079614, 16171.0562454324,-6.8852003E-05, 6.4563317E-08,-3.6316908E-10
+}
+local M12={ 0.0048700, -0.0431256817,   628.3019552485,-2.6638815E-06, 6.1639211E-10,-5.4439728E-11,  0.0022800,-27.1705318325,	-2.3011998397, 1.5231275E-04, 2.5041111E-07,-1.1863391E-09,  0.0015000, 11.2260974062,  6585.7609102104,-2.1583699E-04,-1.8708058E-07, 9.3204945E-10
+}
+local M20={
+    18461.2400600,  1.6279052448,  8433.4661576405,-6.4021295E-05,-4.9499477E-09, 2.0216731E-11, 1010.1671484,  3.9834598170, 16762.1575823656, 8.8291456E-05, 2.4546117E-07,-1.1661223E-09,  999.6936555,  0.7276493275,  -104.7747329154, 2.1633405E-04, 2.5536106E-07,-1.2065558E-09,  623.6524746,  8.7690283983,  7109.2881325435,-2.1668263E-06, 6.8896872E-08,-3.2894608E-10,
+    199.4837596,  9.6692843156, 15647.5290230993,-2.8252217E-04,-1.9141414E-07, 8.9782646E-10,  166.5741153,  6.4134738261, -1219.4032921817,-1.5447958E-04,-1.8151424E-07, 8.5739300E-10,  117.2606951, 12.0248388879, 23976.2204478244,-1.3020942E-04, 5.8996977E-08,-2.8851262E-10,   61.9119504,  6.3390143893, 25090.8490070907, 2.4060421E-04, 4.9587228E-07,-2.3524614E-09,
+    33.3572027, 11.1245829706, 15437.9795572686, 1.5014592E-04, 3.1930799E-07,-1.5152852E-09,   31.7596709,  3.0832038997,  8223.9166918098, 3.6864680E-04, 5.0577218E-07,-2.3928949E-09,   29.5766003,  8.8121540801,  6480.9861772950, 4.9705523E-07, 6.8280480E-08,-2.7450635E-10,   15.5662654,  4.0579192538, -9548.0947169068,-3.0679233E-04,-4.3192536E-07, 2.0437321E-09,
+    15.1215543, 14.3803934601, 32304.9118725496, 2.2103334E-05, 3.0940809E-07,-1.4748517E-09,  -12.0941511,  8.7259027166,  7737.5900877920,-4.8307078E-06, 6.9513264E-08,-3.8338581E-10,    8.8681426,  9.7124099974, 15019.2270678508,-2.7985829E-04,-1.9203053E-07, 9.5226618E-10,    8.0450400,  0.6687636586,  8399.7091105030,-3.3191993E-05, 3.2017096E-08,-1.5363746E-10,
+    7.9585542, 12.0679645696, 23347.9184925760,-1.2754553E-04, 5.8380585E-08,-2.3407289E-10,    7.4345550,  6.4565995078, -1847.7052474301,-1.5181570E-04,-1.8213063E-07, 9.1183272E-10,   -6.7314363, -4.0265854988,-16133.8556271171,-9.0955337E-05,-2.4484477E-07, 1.1116826E-09,    6.5795750, 16.8104074692, 14323.3509980023,-2.2066770E-04,-1.1756732E-07, 5.4866364E-10,
+    -6.4600721,  1.5847795630,  9061.7681128890,-6.6685176E-05,-4.3335556E-09,-3.4222998E-11,   -6.2964773,  4.8837157343, 25300.3984729215,-1.9206388E-04,-1.4849843E-08, 6.0650192E-11,   -5.6323538, -0.7707750092,   733.0766881638,-2.1899793E-04,-2.5474467E-07, 1.1521161E-09,   -5.3683961,  6.8263720663, 16204.8433027325,-9.7115356E-05, 2.7023515E-08,-1.3414795E-10,
+    -5.3112784,  3.9403341353, 17390.4595376141, 8.5627574E-05, 2.4607756E-07,-1.2205621E-09,   -5.0759179,  0.6845236457,   523.5272223331, 2.1367016E-04, 2.5597745E-07,-1.2609955E-09,   -4.8396143, -1.6710309265, -7805.1642023920, 6.1357413E-05, 5.5663398E-09,-7.4656459E-11,   -4.8057401,  3.5705615768,  -662.0890125485, 3.0927234E-05, 3.6923410E-08,-1.7458141E-10,
+    3.9840545,  8.6945689615, 33419.5404318159, 3.9291696E-04, 7.4628340E-07,-3.5388005E-09,    3.6744619, 19.1659620415, 22652.0424227274,-6.8354947E-05, 1.3284380E-07,-6.3767543E-10,    2.9984815, 20.0662179587, 31190.2833132833,-3.4871029E-04,-1.2746721E-07, 5.8909710E-10,    2.7986413, -2.5281611620,-16971.7070481963, 3.4437664E-04, 2.6526096E-07,-1.2469893E-09,
+    2.4138774, 17.7106633865, 22861.5918885581,-5.0102304E-04,-3.7787833E-07, 1.7754362E-09,    2.1863132,  5.5132179088, -9757.6441827375, 1.2587576E-04, 7.8796768E-08,-3.6937954E-10,    2.1461692, 13.4801375428, 23766.6709819937, 3.0245868E-04, 5.6971910E-07,-2.7016242E-09,    1.7659832, 11.1677086523, 14809.6776020201, 1.5280981E-04, 3.1869159E-07,-1.4608454E-09,
+    -1.6244212,  7.3137297434,  7318.8375983742,-4.3483492E-04,-4.4182525E-07, 2.0841655E-09,    1.5813036,  5.4387584720, 16552.6081165349, 5.2095955E-04, 7.5618329E-07,-3.5792340E-09,    1.5197528, 16.7359480324, 40633.6032972747, 1.7441609E-04, 5.5981921E-07,-2.6611908E-09,    1.5156341,  1.7023646816,-17876.7861416319,-4.5910508E-04,-6.8233647E-07, 3.2300712E-09,
+    1.5102092,  5.4977296450,  8399.6847301375,-3.3094061E-05, 3.1973462E-08,-1.5436468E-10,   -1.3178223,  9.6261586339, 16275.8309783478,-2.8518605E-04,-1.9079775E-07, 8.4338673E-10,   -1.2642739, 11.9817132061, 24604.5224030729,-1.3287330E-04, 5.9613369E-08,-3.4295235E-10,    1.1918723, 22.4217725310, 39518.9747380084,-1.9639754E-04, 1.2294390E-07,-5.9724197E-10,
+    1.1346110, 14.4235191419, 31676.6099173011, 2.4767216E-05, 3.0879170E-07,-1.4204120E-09,    1.0857810,  8.8552797618,  5852.6842220465, 3.1609367E-06, 6.7664088E-08,-2.2006663E-10,   -1.0193852,  7.2392703065, 33629.0898976466,-3.9751134E-05, 2.3556127E-07,-1.1256889E-09,   -0.8227141, 11.0814572888, 16066.2815125171, 1.4748204E-04, 3.1992438E-07,-1.5697249E-09,
+    0.8042238,  3.5274358950,   -33.7870573000, 2.8263353E-05, 3.7539802E-08,-2.2902113E-10,    0.8025939,  6.7832463846, 16833.1452579809,-9.9779237E-05, 2.7639907E-08,-1.8858767E-10,   -0.7931866, -6.3821400710,-24462.5470518423,-2.4326809E-04,-4.9525589E-07, 2.2980217E-09,   -0.7910153,  6.3703481443,  -591.1013369332,-1.5714346E-04,-1.8089785E-07, 8.0295327E-10,
+    -0.6674056,  9.1819266386, 24533.5347274576, 5.5197395E-05, 2.7743463E-07,-1.3204870E-09,    0.6502226,  4.1010449356,-10176.3966721553,-3.0412845E-04,-4.3254175E-07, 2.0981718E-09,   -0.6388131,  6.2958887075, 25719.1509623392, 2.3794032E-04, 4.9648867E-07,-2.4069012E-09
+}
+local M21={
+    0.0743000, 11.9537467337,  6480.9861772950, 4.9705523E-07, 6.8280480E-08,-2.7450635E-10,    0.0304300,  8.7259027166,  7737.5900877920,-4.8307078E-06, 6.9513264E-08,-3.8338581E-10,    0.0222900, 12.8540026510, 15019.2270678508,-2.7985829E-04,-1.9203053E-07, 9.5226618E-10,    0.0199900, 15.2095572232, 23347.9184925760,-1.2754553E-04, 5.8380585E-08,-2.3407289E-10,
+    0.0186900,  9.5981921614, -1847.7052474301,-1.5181570E-04,-1.8213063E-07, 9.1183272E-10,    0.0169600,  7.1681781524, 16133.8556271171, 9.0955337E-05, 2.4484477E-07,-1.1116826E-09,    0.0162300,  1.5847795630,  9061.7681128890,-6.6685176E-05,-4.3335556E-09,-3.4222998E-11,    0.0141900, -0.7707750092,   733.0766881638,-2.1899793E-04,-2.5474467E-07, 1.1521161E-09
+}
+local M30={
+    385000.5290396,  1.5707963268,     0.0000000000, 0.0000000E+00, 0.0000000E+00, 0.0000000E+00,-20905.3551378, 3.9263508990,  8328.6914247251, 1.5231275E-04, 2.5041111E-07,-1.1863391E-09,-3699.1109330,  9.6121753977,  7214.0628654588,-2.1850087E-04,-1.8646419E-07, 8.7760973E-10,-2955.9675626, 11.9677299699, 15542.7542901840,-6.6188121E-05, 6.3946925E-08,-3.0872935E-10,
+    -569.9251264,  6.2819054713, 16657.3828494503, 3.0462550E-04, 5.0082223E-07,-2.3726782E-09,  246.1584797,  7.2566208254, -1114.6285592663,-3.7081362E-04,-4.3687530E-07, 2.0639488E-09, -204.5861179, 12.0108556517, 14914.4523349355,-6.3524240E-05, 6.3330532E-08,-2.5428962E-10, -170.7330791, 14.3232845422, 23871.4457149091, 8.6124629E-05, 3.1435804E-07,-1.4950684E-09,
+    -152.1378118,  9.6553010794,  6585.7609102104,-2.1583699E-04,-1.8708058E-07, 9.3204945E-10, -129.6202242, -0.8278839272, -7700.3894694766,-1.5497663E-04,-2.4979472E-07, 1.1318993E-09,  108.7427014,  6.7692631483,  7771.3771450920,-3.3094061E-05, 3.1973462E-08,-1.5436468E-10,  104.7552944,  3.8832252173,  8956.9933799736, 1.4964887E-04, 2.5102751E-07,-1.2407788E-09,
+    79.6605685,  0.6705404095, -8538.2408905558, 2.8035534E-04, 2.6031101E-07,-1.2267725E-09,   48.8883284,  1.5276706450,   628.3019552485,-2.6638815E-06, 6.1639211E-10,-5.4439728E-11,  -34.7825237, 20.0091090408, 22756.8171556428,-2.8468899E-04,-1.2251727E-07, 5.6888037E-10,   30.8238599, 11.9246042882, 16171.0562454324,-6.8852003E-05, 6.4563317E-08,-3.6316908E-10,
+    24.2084985,  9.5690497159,  7842.3648207073,-2.2116475E-04,-1.8584780E-07, 8.2317000E-10,  -23.2104305,  8.6374600436, 24986.0742741754, 4.5693825E-04, 7.5123334E-07,-3.5590172E-09,  -21.6363439, 17.6535544685, 14428.1257309177,-4.3700174E-04,-3.7292838E-07, 1.7552195E-09,  -16.6747239,  6.7261374666,  8399.6791003405,-3.5757942E-05, 3.2589854E-08,-2.0880440E-10,
+    14.4026890,  4.9010662531, -9443.3199839914,-5.2312637E-04,-6.8728642E-07, 3.2502879E-09,  -12.8314035, 14.3664102239, 23243.1437596606, 8.8788511E-05, 3.1374165E-07,-1.4406287E-09,  -11.6499478, 22.3646636130, 31085.5085803679,-1.3237624E-04, 1.2789385E-07,-6.1745870E-10,  -10.4447578, 16.6788391144, 32200.1371396342, 2.3843738E-04, 5.6476915E-07,-2.6814075E-09,
+    10.3211071,  8.7119194804, -1324.1780250970, 6.1854469E-05, 7.3846820E-08,-3.4916281E-10,   10.0562033,  7.2997465071, -1742.9305145148,-3.6814974E-04,-4.3749170E-07, 2.1183885E-09,   -9.8844667, 12.0539813334, 14286.1503796870,-6.0860358E-05, 6.2714140E-08,-1.9984990E-10,    8.7515625,  6.3563649081, -9652.8694498221,-9.0458282E-05,-1.7656429E-07, 8.3717626E-10,
+    -8.3791067,  4.4137085761,  -557.3142796331,-1.8540681E-04,-2.1843765E-07, 1.0319744E-09,   -7.0026961, -3.1834384995,-16029.0808942018,-3.0728938E-04,-5.0020584E-07, 2.3182384E-09,    6.3220032,  9.1248177206, 16100.0685698171, 1.1921869E-04, 2.8238458E-07,-1.3407038E-09,    5.7508579,  6.2387797896, 17285.6848046987, 3.0196162E-04, 5.0143862E-07,-2.4271179E-09,
+    -4.9501349,  9.6984267611,  5957.4589549619,-2.1317311E-04,-1.8769697E-07, 9.8648918E-10,   -4.4211770,  3.0260949818,  -209.5494658307, 4.3266809E-04, 5.1072212E-07,-2.4131116E-09,    4.1311145, 11.0674740526,  7004.5133996281, 2.1416722E-04, 3.2425793E-07,-1.5355019E-09,   -3.9579827, 20.0522347225, 22128.5152003943,-2.8202511E-04,-1.2313366E-07, 6.2332010E-10,
+    3.2582371, 14.8106422192, 14985.4400105508,-2.5159493E-04,-1.5449073E-07, 7.2324505E-10,   -3.1483020,  4.8266068163, 16866.9323152810,-1.2804259E-04,-9.8998954E-09, 4.0433461E-11,    2.6164092, 14.2801588604, 24499.7476701576, 8.3460748E-05, 3.1497443E-07,-1.5495082E-09,    2.3536310,  9.5259240342,  8470.6667759558,-2.2382863E-04,-1.8523141E-07, 7.6873027E-10,
+    -2.1171283, -0.8710096090, -7072.0875142282,-1.5764051E-04,-2.4917833E-07, 1.0774596E-09,   -1.8970368, 17.6966801503, 13799.8237756692,-4.3433786E-04,-3.7354477E-07, 1.8096592E-09,   -1.7385258,  2.0581540038, -8886.0057043583,-3.3771956E-04,-4.6884877E-07, 2.2183135E-09,   -1.5713944, 22.4077892948, 30457.2066251194,-1.2971236E-04, 1.2727746E-07,-5.6301898E-10,
+    -1.4225541, 24.7202181853, 39414.2000050930, 1.9936508E-05, 3.7830496E-07,-1.8037978E-09,   -1.4189284, 17.1661967915, 23314.1314352759,-9.9282182E-05, 9.5920387E-08,-4.6309403E-10,    1.1655364,  3.8400995356,  9585.2953352221, 1.4698499E-04, 2.5164390E-07,-1.2952185E-09,   -1.1169371, 10.9930146158, 33314.7656989005, 6.0925100E-04, 1.0016445E-06,-4.7453563E-09,
+    1.0656723,  1.4845449633,  1256.6039104970,-5.3277630E-06, 1.2327842E-09,-1.0887946E-10,   1.0586190, 11.9220903668,  8364.7398411275,-2.1850087E-04,-1.8646419E-07, 8.7760973E-10,   -0.9333176,  9.0816920389, 16728.3705250656, 1.1655481E-04, 2.8300097E-07,-1.3951435E-09,    0.8624328, 12.4550876470,  6656.7485858257,-4.0390768E-04,-4.0490184E-07, 1.9095841E-09,
+    0.8512404,  4.3705828944,  70.9876756153,-1.8807069E-04,-2.1782126E-07, 9.7753467E-10,   -0.8488018, 16.7219647962, 31571.8351843857, 2.4110126E-04, 5.6415276E-07,-2.6269678E-09,   -0.7956264,  3.5134526588, -9095.5551701890, 9.4948529E-05, 4.1873358E-08,-1.9479814E-10
+}
+local M31={
+    0.5139500, 12.0108556517, 14914.4523349355,-6.3524240E-05, 6.3330532E-08,-2.5428962E-10, 0.3824500,  9.6553010794,  6585.7609102104,-2.1583699E-04,-1.8708058E-07, 9.3204945E-10,    0.3265400,  3.9694765808,  7700.3894694766, 1.5497663E-04, 2.4979472E-07,-1.1318993E-09,    0.2639600,  0.7416325637,  8956.9933799736, 1.4964887E-04, 2.5102751E-07,-1.2407788E-09,
+    0.1230200, -1.6139220085,   628.3019552485,-2.6638815E-06, 6.1639211E-10,-5.4439728E-11, 0.0775400,  8.7830116346, 16171.0562454324,-6.8852003E-05, 6.4563317E-08,-3.6316908E-10,    0.0606800,  6.4274570623,  7842.3648207073,-2.2116475E-04,-1.8584780E-07, 8.2317000E-10,    0.0497000, 12.0539813334, 14286.1503796870,-6.0860358E-05, 6.2714140E-08,-1.9984990E-10
+}
+local M1n={3.81034392032, 8.39968473021E+03,-3.31919929753E-05, --月球平黃經系數
+3.20170955005E-08,-1.53637455544E-10 }
+
+--==================日位置計算===================
+local EnnT=0 --調用Enn前先設置EnnT時間變量
+local function Enn(F) --計算E10,E11,E20等,即:某一組週期項或泊松項算出,計算前先設置EnnT時間
+	local i
+	local v=0
+	for i=1,#F,3 do
+		v=v+F[i]*math.cos(F[i+1]+EnnT*F[i+2])
+		--print('Fsize=' .. #F, 'i=' .. i, 'v='..v, 'F[i]='..F[i], 'm='..math.cos(F[i+1]+EnnT*F[i+2]))
+	end
+	return v
+end
+
+local function earCal(jd)--返回地球位置,日心Date黃道分點坐標
+	EnnT=jd/365250
+	--print('EnnT=' .. EnnT)
+	local llr={}
+	local t1=EnnT
+	local t2=t1*t1
+	local t3=t2*t1
+	local t4=t3*t1
+	local t5=t4*t1
+	--print('t1='..t1, 't2='..t2, 't3='..t3, 't4='..t4, 't5='..t5)
+	llr[1] =Enn(E10) +Enn(E11)*t1 +Enn(E12)*t2 +Enn(E13)*t3 +Enn(E14)*t4 +Enn(E15)*t5
+	--print('sppp')
+	llr[2] =Enn(E20) +Enn(E21)*t1
+	--print('eppp')
+	llr[3] =Enn(E30) +Enn(E31)*t1 +Enn(E32)*t2 +Enn(E33)*t3
+	llr[1]=rad2mrad(llr[1])
+	--print('llr[0]='..llr[1], 'llr[1]='..llr[2], 'llr[2]='..llr[3])
+	return llr
+end
+
+local function sunCal2(jd) --傳回jd時刻太陽的地心視黃經及黃緯
+	local sun=earCal(jd)  sun[1]=sun[1] + math.pi sun[2]=-sun[2] --計算太陽真位置
+	local d=nutation(jd)  sun[1]=rad2mrad(sun[1]+d.Lon)   --補章動
+	addGxc(jd,sun)  --補週年黃經光行差
+	return sun      --返回太陽視位置
+end
+
+--==================月位置計算===================
+local MnnT=0 --調用Mnn前先設置MnnT時間變量
+local function Mnn(F) --計算M10,M11,M20等,計算前先設置MnnT時間
+	local i
+	local  v=0
+	local t1=MnnT
+	local t2=t1*t1
+	local t3=t2*t1
+	local t4=t3*t1
+	for i=1,#F,6 do
+		v=v+F[i]*math.sin(F[i+1] +t1*F[i+2] +t2*F[i+3] +t3*F[i+4] +t4*F[i+5])
+	end
+	return v
+end
+
+local function moonCal(jd)--返回月球位置,返回地心Date黃道坐標
+	MnnT=jd/36525
+	local t1=MnnT
+	local t2=t1*t1
+	local t3=t2*t1
+	local t4=t3*t1
+	local llr={}
+	llr[1] =(Mnn(M10) +Mnn(M11)*t1 +Mnn(M12)*t2)/rad
+	llr[2] =(Mnn(M20) +Mnn(M21)*t1)/rad
+	llr[3] =(Mnn(M30) +Mnn(M31)*t1)*0.999999949827
+	llr[1] =llr[1] +M1n[1] +M1n[2]*t1 +M1n[3]*t2 +M1n[4]*t3 +M1n[5]*t4
+	llr[1] =rad2mrad(llr[1]) --地心Date黃道原點坐標(不含歲差)
+	addPrece(jd,llr) --補歲差
+	return llr
+end
+
+local function moonCal2(jd) --傳回月球的地心視黃經及視黃緯
+	local moon=moonCal(jd)
+	local d=nutation(jd)
+	moon[1]=rad2mrad(moon[1]+d.Lon) --補章動
+	return moon
+end
+
+local function moonCal3(jd) --傳回月球的地心視赤經及視赤緯
+	local moon=moonCal(jd)
+	HCconv(moon,hcjj1(jd))
+	nutationRaDec(jd,moon) --補赤經及赤緯章動
+	--如果黃赤轉換前補了黃經章動及交章動,就不能再補赤經赤緯章動
+	return moon
+end
+
+--==================地心坐標中的日月位置計算===================
+local function jiaoCai(lx,t,jiao)
+	--lx=1時計算t時刻日月角距與jiao的差, lx=0計算t時刻太陽黃經與jiao的差
+	local sun=earCal(t)  --計算太陽真位置(先算出日心坐標中地球的位置)
+	sun[1]=sun[1] + math.pi sun[2]=-sun[2] --轉為地心坐標
+	addGxc(t,sun)      --補週年光行差
+	--print('sun[1]=' .. sun[1], 'sun[2]=' .. sun[2])
+	if lx==0 then
+		local d=nutation(t)
+		sun[1]=sun[1] + d.Lon --補黃經章動
+		return rad2mrad(jiao-sun[1])
+	end
+	local moon=moonCal(t) --日月角差與章動無關
+	return rad2mrad(jiao-(moon[1]-sun[1]))
+end
+
+--==================已知位置反求時間===================
+local function jiaoCal(t1,jiao,lx) --t1是J2000起算儒略日數
+	--已知角度(jiao)求時間(t)
+	--lx=0是太陽黃經達某角度的時刻計算(用於節氣計算)
+	--lx=1是日月角距達某角度的時刻計算(用於定朔望等)
+	--傳入的t1是指定角度對應真時刻t的前一些天
+	--對於節氣計算,應滿足t在t1到t1+360天之間,對於Y年第n個節氣(n=0是春分),t1可取值Y*365.2422+n*15.2
+	--對於朔望計算,應滿足t在t1到t1+25天之間,在此範圍之外,求右邊的根
+	local t2=t1
+	local t=0
+	local v
+	if lx==0 then  t2=t2+360  --在t1到t2範圍內求解(範氣360天範圍),結果置於t
+	else t2=t2+25
+	end
+	jiao=jiao*math.pi/180  --待搜索目標角
+	--利用截弦法計算
+	--print('lx=' .. lx .. ', t1=' .. t1 .. ', t2=' .. t2 .. ', jiao=' .. jiao)
+	local v1=jiaoCai(lx,t1,jiao)           --v1,v2為t1,t2時對應的黃經
+	local v2=jiaoCai(lx,t2,jiao)
+	--print('v1=' .. v1 .. ', v2=' ..v2)
+	if v1<v2 then v2=v2 - 2*math.pi end  --減2pi作用是將週期性角度轉為連續角度
+	local k=1,k2,i  --k是截弦的斜率
+	for i=1,10 do       --快速截弦求根,通常截弦三四次就已達所需精度
+		k2=(v2-v1)/(t2-t1)    --算出斜率
+		if math.abs(k2)>1e-15 then k=k2  end   --差商可能為零,應排除
+		t=t1-v1/k  v=jiaoCai(lx,t,jiao)--直線逼近法求根(直線方程的根)
+		if v>1 then	 v=v-2*math.pi end        --一次逼近後,v1就已接近0,如果很大,則應減1周
+		if math.abs(v)<1e-8 then  break  end     --已達精度
+		t1=t2 v1=v2 t2=t v2=v          --下一次截弦
+	end
+	return t
+end
+
+--==================節氣計算===================
+local jqB={ --節氣表
+"春分","清明","谷雨","立夏","小滿","芒種","夏至","小暑","大暑","立秋","處暑","白露",
+"秋分","寒露","霜降","立冬","小雪","大雪","冬至","小寒","大寒","立春","雨水","驚蟄"}
+
+local function JQtest(y) --節氣使計算範例,y是年分,這是個測試函數
+	local i,q,s1,s2  y=tostring(y)
+	local jd=365.2422*(tonumber(y.sub(y,1,4))-2000)
+	for i=0,23 do
+		q=jiaoCal(jd+i*15.2,i*15,0)+J2000+8/24  --計算第i個節氣(i=0是春分),結果轉為北京時
+		--print('q=' .. q)
+		JDate:setFromJD(q,1)  s1=JDate:toStr()  --將儒略日轉成世界時
+		JDate:setFromJD(q,0)  s2=JDate:toStr()  --將儒略日轉成日期格式(輸出日期形式的力學時)
+		jqData=s1.sub(s1.gsub(s1, "^( )", ""),1,10)  jqData=jqData.gsub(jqData, "-", "")
+		--print(jqB[i+1] .. " : " .. jqData .. " " .. jqData.len(jqData) ) --顯示
+		if (jqData == y) then return "-" .. jqB[i+1] end
+	end
+	return ""
+end
+
+local function GetNextJQ(y) --節氣使計算範例,y是年分,這是個測試函數
+	local i,obj,q,s1,s2  y=tostring(y)
+	local jd=365.2422*(tonumber(y.sub(y,1,4))-2000)
+	obj={}
+	for i=0,23 do
+		q=jiaoCal(jd+i*15.2,i*15,0)+J2000+8/24  --計算第i個節氣(i=0是春風),結果轉為北京時
+		--print('q=' .. q)
+		JDate:setFromJD(q,1)  s1=JDate:toStr()  --將儒略日轉成世界時
+		JDate:setFromJD(q,0)  s2=JDate:toStr()  --將儒略日轉成日期格式(輸出日期形式的力學時)
+		jqData=s1.sub(s1.gsub(s1, "^( )", ""),1,10)  jqData=jqData.gsub(jqData, "-", "")
+		if (jqData>=y) then
+			table.insert(obj,jqB[i+1] .." ".. s1.sub(s1.gsub(s1, "^( )", ""),1,10))
+			--print(i .. s1.sub(s1.gsub(s1, "^( )", ""),1,10))
+		end
+	end
+	return obj
+end
+
+local function getJQ(y) --返回一年中各個節氣的時間表，從春分開始
+	local i
+	local jd=365.2422*(y-2000)
+	local q
+	local jq = {}
+	for i=0,23 do
+		q=jiaoCal(jd+i*15.2,i*15,0)+J2000+8/24  --計算第i個節氣(i=0是春分),結果轉為北京時
+		JDate:setFromJD(q,1)  jq[i+1] = JDate:JQ()  --將儒略日轉成世界時
+	end
+	return jq
+end
+
+--返回一年的二十四個節氣,從立春開始
+local function getYearJQ(y)
+	local jq1 = getJQ(y-1) --上一年
+	local jq2 = getJQ(y) -- 當年
+	local jq = {}
+	for i=1,3 do jq[i] = jq1[i+21] end
+	for i=1,21 do jq[i+3] = jq2[i] end
+	return jq
+end
+
+--=================定朔弦望計算========================
+local function dingSuo(y,arc) --這是個測試函數
+	local i,jd=365.2422*(y-2000),q,s1,s2
+	-- print("月份:世界時  原子時<br>")
+	for i=0,11 do
+		q=jiaoCal(jd+29.5*i,arc,1)+J2000+8/24    --計算第i個節氣(i=0是春風),結果轉為北京時
+		JDate.setFromJD(q,1)  s1=JDate:toStr()  --將儒略日轉成世界時
+		JDate.setFromJD(q,0)  s2=JDate:toStr()  --將儒略日轉成日期格式(輸出日期形式的力學時)
+		-- print((i+1) .. "月 : ".. s1 .. " " .. s2 ) --顯示
+	end
+end
+
+--=================農歷計算========================
+--[[*****
+1.冬至所在的UTC日期保存在A[0],根據"規定1"得知在A[0]之前(含A[0])的那個UTC朔日定為年首日期
+冬至之後的中氣分保存在A[1],A[2],A[3]...A[13],其中A[12]又回到了冬至,共計算13次中氣
+2.連續計算冬至後14個朔日,即起算時間時A[0]+1
+14個朔日編號為0,1...12,保存在C[0],C[1]...C[13]
+這14個朔日表示編號為0月,1月,...12月0月的各月終止日期,但要注意實際終止日是新月初一,不屬本月
+這14個朔日同樣表示編號為1月,2月...的開始日期
+設某月編號為n,那麼開始日期為C[n-1],結束日期為C[n],如果每月都含中氣,該月所含的中氣為A[n]
+注:為了全總計算出13個月的大小月情況,須算出14個朔日。
+3.閏年判斷:含有13個月的年份是閏年
+當第13月(月編號12月)終止日期大於冬至日,  即C[12]〉A[12], 那麼該月是新年,本年沒月12月,本年共12個月
+當第13月(月編號12月)終止日期小等於冬至日,即C[12]≤A[12],那麼該月是本年的有效月份,本年共13個月
+4.閏年中處理閏月:
+13個月中至少1個月份無中氣,首個無中氣的月置閏,在n=1...12月中找到閏月,即C[n]≤A[n]
+從農歷年首的定義知道,0月一定含有中氣冬至,所以不可能是閏月。
+首月有時很貪心,除冬至外還可能再吃掉本年或前年的另一個中氣
+定出閏月後,該月及以後的月編號減1
+5.以上所述的月編號不是日常生活中說的"正月","二月"等月名稱:
+如果"建子",0月為首月,如果"建寅",2月的月名"正月",3月是"二月",其餘類推
+*****--]]
+
+
+--local yueMing={"正","二","三","四","五","六","七","八","九","十","冬","臘"}
+--
+--function paiYue(inYear) --農歷排月序計算,可定出農歷
+--  --y=in1.value-0
+--  local y = inYear-0
+--  local zq={},jq={}, hs={}  --中氣表,節氣表,日月合朔表
+--
+--  --從冬至開始,連續計算14個中氣時刻
+--  local i,t1=365.2422*(y-2000)-50 --農歷年首始於前一年的冬至,為了節氣中氣一起算,取前年大雪之前
+--  for i=0,13 do   --計算節氣(從冬至開始),注意:返回的是力學時
+--	zq[i+1]=jiaoCal(t1+i*30.4,i*30-90, 0) --中氣計算,冬至的太陽黃經是270度(或-90度)
+--	jq[i+1]=jiaoCal(t1+i*30.4,i*30-105,0) --順便計算節氣,它不是農歷定朔計算所必需的
+--end
+--...
+--end
+
+local function GetNowTimeJq(date)
+	local JQtable1,JQtable2
+	date=tostring(date)
+	if string.len(date)<8 then return "無效日期" end
+	JQtable2=GetNextJQ(date)
+	if tonumber(string.sub(date,5,8))<322 then
+		JQtable1=GetNextJQ(tonumber(string.sub(date,1,4))-1 .. string.sub(date,5,8))
+		--print(#JQtable1)
+		if tonumber(string.sub(date,5,8))<108 then 
+			for i=20,24 do table.insert(JQtable2,i-19,JQtable1[i]) end
+		elseif tonumber(string.sub(date,5,8))<122 then
+			for i=21,24 do table.insert(JQtable2,i-20,JQtable1[i]) end
+		elseif tonumber(string.sub(date,5,8))<206 then
+			for i=22,24 do table.insert(JQtable2,i-21,JQtable1[i]) end
+		elseif tonumber(string.sub(date,5,8))<221 then
+			for i=23,24 do table.insert(JQtable2,i-22,JQtable1[i]) end
+		else
+			table.insert(JQtable2,1,JQtable1[24])
+		end
+		--print(table.concat(JQtable2))
+	end
+	return JQtable2
+end
+
+local GanZhiLi = {
+}
+
+--創建干支歷對象
+function GanZhiLi:new()
+	local o = {}
+	setmetatable(o, self)
+	self.__index = self
+	o:setTime(os.time())
+	return o
+end
+
+--將offset的數值轉化為特定偏移下的週期數，起始數，偏移量，週期
+function GanZhiLi:calRound(start, offset, round)
+	if start > round or start <=0 then return nil end --參數不對
+	offset = math.floor(math.fmod(start+offset, round))
+	if offset >=0 then
+		if offset==0 then offset=round end
+		return offset
+	else
+		return round + offset
+	end
+end
+
+--週期循環數
+local function calR2(n, round)
+	local x = math.floor(math.fmod(n,round))
+	if x==0 then x=round end
+	return x
+end
+
+--設置用於轉換干支歷的公曆時間
+function GanZhiLi:setTime(t)
+	self.ttime = t
+	self.tday = os.date('*t', t)
+	--for k,v in pairs(self.tday) do
+	--	print(k,v)
+	--end
+	--先取公曆今年的干支
+	self.jqs = getYearJQ(self.tday.year)
+	self.ganZhiYearNum = self:calGanZhiYearNum()
+	if self.ganZhiYearNum ~= self.tday.year then
+		--如果在節氣上還沒到今年的立春，則還沒到干支歷的今年，需要取干支歷的年份的24節氣
+		self.jqs = getYearJQ(self.ganZhiYearNum)
+	end
+	self.ganZhiMonNum = self:calGanZhiMonthNum()
+	self.curJq = self:getCurJQ()
+end
+
+function GanZhiLi:getCurJQ()
+	--for i=1,24 do
+	--	local x = os.date('*t', self.jqs[i])
+	--	print(x.year, x.month, x.day, x.hour, x.min, x.sec)
+	--end
+	local x = 0
+	if self.ttime < self.jqs[1] then return nil end --出錯，計算錯年了？
+	for i=1,23 do
+		if self.jqs[i] <= self.ttime and self.jqs[i+1] > self.ttime then x=i break end
+	end
+	if x==0 then x=24 end
+	return x --返回以立春為起始序號1的節氣
+end
+
+
+--根據公曆年份和節氣計算干支歷的年份
+function GanZhiLi:calGanZhiYearNum()
+	if (self.ttime < self.jqs[1]) then return self.tday.year -1
+	else return self.tday.year end
+end
+
+--獲取干支月份
+function GanZhiLi:calGanZhiMonthNum()
+	if self.ttime < self.jqs[1] then return nil end
+	local x = 0
+	if self.ttime < self.jqs[1] then return nil end --出錯，計算錯年了？
+	for i=1,23 do
+		if self.jqs[i] <= self.ttime and self.jqs[i+1] > self.ttime then x=i end
+	end
+	if x==0 then x=24 end
+	return math.floor((x+1)/2)
+end
+
+
+--返回年的干支序號，1為甲子。。。
+function GanZhiLi:getYearGanZhi()
+	local jiaziYear = 1984 --甲子年
+	--print(self.ganZhiYearNum)
+	local yeardiff = self.ganZhiYearNum - jiaziYear
+	return self:calRound(1,yeardiff,60)
+end
+
+--返回年的天干號，1為甲
+function GanZhiLi:getYearGan()
+	local idx = self:getYearGanZhi()
+	return self:calR2(idx,10)
+end
+
+--返回年的地支號，1為子
+function GanZhiLi:getYearZhi()
+	local idx = self:getYearGanZhi()
+	return self:calR2(idx,12)
+end
+
+--返回月的干支號
+function GanZhiLi:getMonGanZhi()
+	local ck ={year=2010,month=2,day=4,hour=6,min=42,sec=0}
+	local x = os.time(ck) --參考月，立春時間2010-2-4 6:42:00對應的干支序號為15
+	local ydiff = self.ganZhiYearNum - ck.year
+	local mdiff = self.ganZhiMonNum-1
+	if ydiff >=0 then
+		mdiff = ydiff*12 + mdiff
+	else
+		mdiff = (ydiff+1)*12 + mdiff -12
+	end
+	return self:calRound(15,mdiff, 60)
+end
+
+function GanZhiLi:getMonGan()
+	local idx = self:getMonGanZhi()
+	return self:calR2(idx,10)
+end
+
+function GanZhiLi:getMonZhi()
+	local idx = self:getMonGanZhi()
+	return self:calR2(idx,12)
+end
+
+--返回日的干支號，甲子從1開始
+function GanZhiLi:getDayGanZhi()
+	local DAYSEC = 24*3600
+	local jiaziDayTime = os.time({year=2012, month=8, day=30, hour=23, min=0,sec=0})
+	local daydiff = math.floor((self.ttime - jiaziDayTime)/DAYSEC)
+	return self:calRound(1,daydiff,60)
+end
+
+--返回日的天干號
+function GanZhiLi:getDayGan()
+	local idx = self:getDayGanZhi()
+	return self:calR2(idx,10)
+end
+
+--返回日的地支號
+function GanZhiLi:getDayZhi()
+	local idx = self:getDayGanZhi()
+	return self:calR2(idx,12)
+end
+
+--返回時辰的干支號
+function GanZhiLi:getHourGanZhi()
+	local SHICHENSEC=3600*2
+	local jiaziShiTime = os.time({year=2012, month=8, day=30, hour=23, min=0, sec=0})
+	local shiDiff = math.floor((self.ttime - jiaziShiTime)/SHICHENSEC)
+	return self:calRound(1,shiDiff,60)
+end
+
+--返回時乾號
+function GanZhiLi:getShiGan()
+	local idx = self:getHourGanZhi()
+	return self:calR2(idx,10)
+end
+
+--返回時支號
+function GanZhiLi:getShiZhi()
+	local idx = self:getHourGanZhi()
+	return self:calR2(idx,12)
+end
+
+--====================以下是測試代碼=============
+-- local jqB={ --節氣表
+-- "立春","雨水","驚蟄","春分","清明","谷雨","立夏","小滿","芒種","夏至","小暑","大暑","立秋","處暑","白露",
+-- "秋分","寒露","霜降","立冬","小雪","大雪","冬至","小寒","大寒",}
+
+--天干
+local tiangan = {'甲', '乙', '丙', '丁', '戊', '己', '庚', '辛', '壬', '癸'}
+
+--地支
+local dizhi = {'子', '丑', '寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥'}
+
+
+--根據六十甲子序號，返回六十甲子字符串,甲子從1開始
+local function get60JiaZiStr(i)
+local gan = i % 10
+		if gan == 0  then gan = 10 end
+		local zhi = i % 12
+		if zhi == 0 then zhi = 12 end
+		return tiangan[gan]..dizhi[zhi]
+end
+
+local function lunarJzl(y)
+	local x,yidx,midx,didx,hidx
+	y=tostring(y)
+	x = GanZhiLi:new()
+	x:setTime(os.time({year=tonumber(y.sub(y,1,4)),month=tonumber(y.sub(y,5,-5)), day=tonumber(y.sub(y,7,-3)),hour=tonumber(y.sub(y,9,-1)),min=4,sec=5}))
+	yidx = x:getYearGanZhi()
+	midx = x:getMonGanZhi()
+	didx = x:getDayGanZhi()
+	hidx = x:getHourGanZhi()
+	GzData= get60JiaZiStr(yidx) .. '年' .. get60JiaZiStr(midx) .. '月' .. get60JiaZiStr(didx) .. '日' .. get60JiaZiStr(hidx) .. '時'
+	--print('干支:'  .. GzData)
+	return GzData, get60JiaZiStr(yidx), get60JiaZiStr(midx), get60JiaZiStr(didx), get60JiaZiStr(hidx)
+end
+
+--測試
+-- print(lunarJzl(os.date("%Y%m%d%H")))
+--[[
+@@@@@@@@
+--]]
 
 
 
@@ -2252,6 +3636,8 @@ function t_translator(input, seg)
     if (input == "`nl") then
       local chinese_time = time_description_chinese(os.time())
       yield(Candidate("time", seg.start, seg._end, chinese_time, "〔農曆〕"))
+      local a, Y_g, M_g, D_g, H_g = lunarJzl(os.date("%Y%m%d%H"))
+      yield(Candidate("date", seg.start, seg._end, H_g.."時" , "〔農曆干支〕"))
       return
     end
 
@@ -2297,6 +3683,8 @@ function t_translator(input, seg)
       local ll_1, ll_2 = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, ll_1, "〔農曆〕"))
       yield(Candidate("date", seg.start, seg._end, ll_2, "〔農曆〕"))
+      local a, Y_g, M_g, D_g = lunarJzl(os.date("%Y%m%d%H"))
+      yield(Candidate("date", seg.start, seg._end, Y_g.."年"..M_g.."月"..D_g.."日" , "〔農曆干支〕"))
       return
     end
 
@@ -2406,6 +3794,7 @@ function t_translator(input, seg)
       local ll_1, ll_2 = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, ll_1 .." ".. chinese_time, "〔農曆〕"))
       yield(Candidate("date", seg.start, seg._end, ll_2 .." ".. chinese_time, "〔農曆〕"))
+      yield(Candidate("date", seg.start, seg._end, lunarJzl(os.date("%Y%m%d%H")), "〔農曆干支〕"))
       return
     end
 
@@ -2569,6 +3958,8 @@ function t_translator(input, seg)
       local a, b, ly_1, ly_2, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, ly_1, "〔農曆〕"))
       yield(Candidate("date", seg.start, seg._end, ly_2, "〔農曆〕"))
+      -- local a, Y_g = lunarJzl(os.date("%Y%m%d%H"))
+      -- yield(Candidate("date", seg.start, seg._end, Y_g.."年", "〔農曆干支〕"))
       return
     end
 
@@ -2609,6 +4000,8 @@ function t_translator(input, seg)
       -- local a, b, y, chinese_m = to_chinese_cal_local(os.time())
       local a, b, c, d, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, lm, "〔農曆〕"))
+      local a, Y_g, M_g = lunarJzl(os.date("%Y%m%d%H"))
+      yield(Candidate("date", seg.start, seg._end, M_g.."月", "〔農曆干支〕"))
       return
     end
 
@@ -2671,6 +4064,8 @@ function t_translator(input, seg)
       -- local a, b, y, m, chinese_d = to_chinese_cal_local(os.time())
       local a, b, c, d, e, ld = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, ld, "〔農曆〕"))
+      local a, Y_g, M_g, D_g = lunarJzl(os.date("%Y%m%d%H"))
+      yield(Candidate("date", seg.start, seg._end, D_g.."日", "〔農曆干支〕"))
       return
     end
 
@@ -2739,6 +4134,8 @@ function t_translator(input, seg)
       -- local a, b, y, chinese_m, chinese_d = to_chinese_cal_local(os.time())
       local a, b, c, d, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, lm .. ld, "〔農曆〕"))
+      local a, Y_g, M_g, D_g = lunarJzl(os.date("%Y%m%d%H"))
+      yield(Candidate("date", seg.start, seg._end, M_g.."月"..D_g.."日", "〔農曆干支〕"))
       return
     end
 
@@ -2838,6 +4235,8 @@ function t_translator(input, seg)
       -- local a, b, y, chinese_m, chinese_d = to_chinese_cal_local(os.time())
       local a, b, c, d, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, lm..ld.." "..weekstr_jp3.." ", "〔農曆〕"))
+      local a, Y_g, M_g, D_g = lunarJzl(os.date("%Y%m%d%H"))
+      yield(Candidate("date", seg.start, seg._end, M_g.."月"..D_g.."日".." "..weekstr_jp3.." " , "〔農曆干支〕"))
       return
     end
 
@@ -2905,6 +4304,8 @@ function t_translator(input, seg)
       local a, b, ly_1, ly_2, lm = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, ly_1 .. lm, "〔農曆〕"))
       yield(Candidate("date", seg.start, seg._end, ly_2 .. lm, "〔農曆〕"))
+      local a, Y_g, M_g = lunarJzl(os.date("%Y%m%d%H"))
+      yield(Candidate("date", seg.start, seg._end, Y_g.."年"..M_g.."月", "〔農曆干支〕"))
       return
     end
 
@@ -3042,6 +4443,8 @@ function t_translator(input, seg)
       local ll_1, ll_2 = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("qsj", seg.start, seg._end, ll_1.." "..weekstr_jp3.." ", "〔農曆〕"))
       yield(Candidate("qsj", seg.start, seg._end, ll_2.." "..weekstr_jp3.." ", "〔農曆〕"))
+      local a, Y_g, M_g, D_g = lunarJzl(os.date("%Y%m%d%H"))
+      yield(Candidate("date", seg.start, seg._end, Y_g.."年"..M_g.."月"..D_g.."日".." "..weekstr_jp3.." " , "〔農曆干支〕"))
       return
     end
 
@@ -3308,6 +4711,10 @@ function t_translator(input, seg)
         yield(Candidate("date", seg.start, seg._end, ll_1, "〔西曆→農曆〕"))
         yield(Candidate("date", seg.start, seg._end, ll_2, "〔西曆→農曆〕"))
       end
+      local All_g, Y_g, M_g, D_g = lunarJzl(y .. string.format("%02d", m) .. string.format("%02d", d) .. 12)
+      if(All_g~=nil) then
+        yield(Candidate("date", seg.start, seg._end, Y_g.."年"..M_g.."月"..D_g.."日", "〔西曆→農曆干支〕"))
+      end
       local LDD2D = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 0 )
       local LDD2D_leap_year  = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 1 )
       if(Date2LunarDate~=nil) then
@@ -3361,6 +4768,10 @@ function t_translator(input, seg)
       if(Date2LunarDate~=nil) then
         yield(Candidate("date", seg.start, seg._end, ll_1, "〔西曆→農曆〕"))
         yield(Candidate("date", seg.start, seg._end, ll_2, "〔西曆→農曆〕"))
+      end
+      local All_g, Y_g, M_g, D_g = lunarJzl(y .. string.format("%02d", m) .. string.format("%02d", d) .. 12)
+      if(All_g~=nil) then
+        yield(Candidate("date", seg.start, seg._end, Y_g.."年"..M_g.."月"..D_g.."日", "〔西曆→農曆干支〕"))
       end
       local LDD2D = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 0 )
       local LDD2D_leap_year  = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 1 )
@@ -3697,6 +5108,8 @@ function t2_translator(input, seg)
     if (input == "'/nl") then
       local chinese_time = time_description_chinese(os.time())
       yield(Candidate("time", seg.start, seg._end, chinese_time, "〔農曆〕"))
+      local a, Y_g, M_g, D_g, H_g = lunarJzl(os.date("%Y%m%d%H"))
+      yield(Candidate("date", seg.start, seg._end, H_g.."時" , "〔農曆干支〕"))
       return
     end
 
@@ -3742,6 +5155,8 @@ function t2_translator(input, seg)
       local ll_1, ll_2 = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, ll_1, "〔農曆〕"))
       yield(Candidate("date", seg.start, seg._end, ll_2, "〔農曆〕"))
+      local a, Y_g, M_g, D_g = lunarJzl(os.date("%Y%m%d%H"))
+      yield(Candidate("date", seg.start, seg._end, Y_g.."年"..M_g.."月"..D_g.."日" , "〔農曆干支〕"))
       return
     end
 
@@ -3851,6 +5266,7 @@ function t2_translator(input, seg)
       local ll_1, ll_2 = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, ll_1 .." ".. chinese_time, "〔農曆〕"))
       yield(Candidate("date", seg.start, seg._end, ll_2 .." ".. chinese_time, "〔農曆〕"))
+      yield(Candidate("date", seg.start, seg._end, lunarJzl(os.date("%Y%m%d%H")), "〔農曆干支〕"))
       return
     end
 
@@ -4014,6 +5430,8 @@ function t2_translator(input, seg)
       local a, b, ly_1, ly_2, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, ly_1, "〔農曆〕"))
       yield(Candidate("date", seg.start, seg._end, ly_2, "〔農曆〕"))
+      -- local a, Y_g = lunarJzl(os.date("%Y%m%d%H"))
+      -- yield(Candidate("date", seg.start, seg._end, Y_g.."年", "〔農曆干支〕"))
       return
     end
 
@@ -4054,6 +5472,8 @@ function t2_translator(input, seg)
       -- local a, b, y, chinese_m = to_chinese_cal_local(os.time())
       local a, b, c, d, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, lm, "〔農曆〕"))
+      local a, Y_g, M_g = lunarJzl(os.date("%Y%m%d%H"))
+      yield(Candidate("date", seg.start, seg._end, M_g.."月", "〔農曆干支〕"))
       return
     end
 
@@ -4116,6 +5536,8 @@ function t2_translator(input, seg)
       -- local a, b, y, m, chinese_d = to_chinese_cal_local(os.time())
       local a, b, c, d, e, ld = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, ld, "〔農曆〕"))
+      local a, Y_g, M_g, D_g = lunarJzl(os.date("%Y%m%d%H"))
+      yield(Candidate("date", seg.start, seg._end, D_g.."日", "〔農曆干支〕"))
       return
     end
 
@@ -4184,6 +5606,8 @@ function t2_translator(input, seg)
       -- local a, b, y, chinese_m, chinese_d = to_chinese_cal_local(os.time())
       local a, b, c, d, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, lm .. ld, "〔農曆〕"))
+      local a, Y_g, M_g, D_g = lunarJzl(os.date("%Y%m%d%H"))
+      yield(Candidate("date", seg.start, seg._end, M_g.."月"..D_g.."日", "〔農曆干支〕"))
       return
     end
 
@@ -4283,6 +5707,8 @@ function t2_translator(input, seg)
       -- local a, b, y, chinese_m, chinese_d = to_chinese_cal_local(os.time())
       local a, b, c, d, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, lm..ld.." "..weekstr_jp3.." ", "〔農曆〕"))
+      local a, Y_g, M_g, D_g = lunarJzl(os.date("%Y%m%d%H"))
+      yield(Candidate("date", seg.start, seg._end, M_g.."月"..D_g.."日".." "..weekstr_jp3.." " , "〔農曆干支〕"))
       return
     end
 
@@ -4350,6 +5776,8 @@ function t2_translator(input, seg)
       local a, b, ly_1, ly_2, lm = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, ly_1 .. lm, "〔農曆〕"))
       yield(Candidate("date", seg.start, seg._end, ly_2 .. lm, "〔農曆〕"))
+      local a, Y_g, M_g = lunarJzl(os.date("%Y%m%d%H"))
+      yield(Candidate("date", seg.start, seg._end, Y_g.."年"..M_g.."月", "〔農曆干支〕"))
       return
     end
 
@@ -4487,6 +5915,8 @@ function t2_translator(input, seg)
       local ll_1, ll_2 = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("qsj", seg.start, seg._end, ll_1.." "..weekstr_jp3.." ", "〔農曆〕"))
       yield(Candidate("qsj", seg.start, seg._end, ll_2.." "..weekstr_jp3.." ", "〔農曆〕"))
+      local a, Y_g, M_g, D_g = lunarJzl(os.date("%Y%m%d%H"))
+      yield(Candidate("date", seg.start, seg._end, Y_g.."年"..M_g.."月"..D_g.."日".." "..weekstr_jp3.." " , "〔農曆干支〕"))
       return
     end
 
@@ -4752,6 +6182,10 @@ function t2_translator(input, seg)
         yield(Candidate("date", seg.start, seg._end, ll_1, "〔西曆→農曆〕"))
         yield(Candidate("date", seg.start, seg._end, ll_2, "〔西曆→農曆〕"))
       end
+      local All_g, Y_g, M_g, D_g = lunarJzl(y .. string.format("%02d", m) .. string.format("%02d", d) .. 12)
+      if(All_g~=nil) then
+        yield(Candidate("date", seg.start, seg._end, Y_g.."年"..M_g.."月"..D_g.."日", "〔西曆→農曆干支〕"))
+      end
       local LDD2D = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 0 )
       local LDD2D_leap_year  = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 1 )
       if(Date2LunarDate~=nil) then
@@ -4805,6 +6239,10 @@ function t2_translator(input, seg)
       if(Date2LunarDate~=nil) then
         yield(Candidate("date", seg.start, seg._end, ll_1, "〔西曆→農曆〕"))
         yield(Candidate("date", seg.start, seg._end, ll_2, "〔西曆→農曆〕"))
+      end
+      local All_g, Y_g, M_g, D_g = lunarJzl(y .. string.format("%02d", m) .. string.format("%02d", d) .. 12)
+      if(All_g~=nil) then
+        yield(Candidate("date", seg.start, seg._end, Y_g.."年"..M_g.."月"..D_g.."日", "〔西曆→農曆干支〕"))
       end
       local LDD2D = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 0 )
       local LDD2D_leap_year  = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 1 )
@@ -4902,7 +6340,7 @@ function t2_translator(input, seg)
 end
 
 
--- --- date/time translator
+-- --- @@ date/time translator
 -- function date_translator(input, seg)
 --   if (string.match(input, "``")~=nil) then
 --     -- Candidate(type, start, end, text, comment)
@@ -4940,522 +6378,6 @@ end
 --   time_translator(input, seg)
 -- end
 
-
-
-
---- @@ email_translator
---[[
-把 recognizer 正則輸入 email 使用 lua 實現，使之有選項，避免設定空白清屏時無法上屏。
---]]
-function email_translator(input, seg)
-  local email_in = string.match(input, "^([a-z][-_.0-9a-z]*@.*)$")
-  if (email_in~=nil) then
-    yield(Candidate("englishtype", seg.start, seg._end, email_in , "〔e-mail〕"))
-    return
-  end
-end
-
-
-
-
---- @@ url_translator
---[[
-把 recognizer 正則輸入網址使用 lua 實現，使之有選項，避免設定空白清屏時無法上屏。
---]]
-function url_translator(input, seg)
-  local url1_in = string.match(input, "^(https?:.*)$")
-  if (url1_in~=nil) then
-    yield(Candidate("englishtype", seg.start, seg._end, url1_in , "〔URL〕"))
-    return
-  end
-
-  local url2_in = string.match(input, "^(ftp:.*)$")
-  if (url2_in~=nil) then
-    yield(Candidate("englishtype", seg.start, seg._end, url2_in , "〔URL〕"))
-    return
-  end
-
-  local url3_in = string.match(input, "^(mailto:.*)$")
-  if (url3_in~=nil) then
-    yield(Candidate("englishtype", seg.start, seg._end, url3_in , "〔URL〕"))
-    return
-  end
-
-  local url4_in = string.match(input, "^(file:.*)$")
-  if (url4_in~=nil) then
-    yield(Candidate("englishtype", seg.start, seg._end, url4_in , "〔URL〕"))
-    return
-  end
-end
-
-
---- urlw_translator
---[[
-把 recognizer 正則輸入網址使用 lua 實現，使之有選項，避免設定空白清屏時無法上屏。
-該項多加「www.」
---]]
-function urlw_translator(input, seg)
-  local www_in = string.match(input, "^(www[.].*)$")
-  if (www_in~=nil) then
-    yield(Candidate("englishtype", seg.start, seg._end, www_in , "〔URL〕"))
-    return
-  end
-
-  local url1_in = string.match(input, "^(https?:.*)$")
-  if (url1_in~=nil) then
-    yield(Candidate("englishtype", seg.start, seg._end, url1_in , "〔URL〕"))
-    return
-  end
-
-  local url2_in = string.match(input, "^(ftp:.*)$")
-  if (url2_in~=nil) then
-    yield(Candidate("englishtype", seg.start, seg._end, url2_in , "〔URL〕"))
-    return
-  end
-
-  local url3_in = string.match(input, "^(mailto:.*)$")
-  if (url3_in~=nil) then
-    yield(Candidate("englishtype", seg.start, seg._end, url3_in , "〔URL〕"))
-    return
-  end
-
-  local url4_in = string.match(input, "^(file:.*)$")
-  if (url4_in~=nil) then
-    yield(Candidate("englishtype", seg.start, seg._end, url4_in , "〔URL〕"))
-    return
-  end
-end
-
-
-
-
---- @@ charset filter
---[[
-charset_filter: 濾除含 CJK 擴展漢字的候選項
-charset_comment_filter: 為候選項加上其所屬字符集的註釋
-本例說明了 filter 最基本的寫法。
-請見 `charset_filter` 和 `charset_comment_filter` 上方註釋。
---]]
-
--- 幫助函數（可跳過）
-local charset = {
-  ["CJK"] = { first = 0x4E00, last = 0x9FFF },
-  ["ExtA"] = { first = 0x3400, last = 0x4DBF },
-  ["ExtB"] = { first = 0x20000, last = 0x2A6DF },
-  ["ExtC"] = { first = 0x2A700, last = 0x2B73F },
-  ["ExtD"] = { first = 0x2B740, last = 0x2B81F },
-  ["ExtE"] = { first = 0x2B820, last = 0x2CEAF },
-  ["ExtF"] = { first = 0x2CEB0, last = 0x2EBEF },
-  ["Compat"] = { first = 0x2F800, last = 0x2FA1F } }
-
-local function exists(single_filter, text)
-  for i in utf8.codes(text) do
-    local c = utf8.codepoint(text, i)
-    if (not single_filter(c)) then
-      return false
-    end
-  end
-  return true
-end
-
-local function is_charset(s)
-  return function (c)
-    return c >= charset[s].first and c <= charset[s].last
-  end
-end
-
-local function is_cjk_ext(c)
-  return is_charset("ExtA")(c) or is_charset("ExtB")(c) or
-    is_charset("ExtC")(c) or is_charset("ExtD")(c) or
-    is_charset("ExtE")(c) or is_charset("ExtF")(c) or
-    is_charset("Compat")(c)
-end
-
-
---[[
-filter 的功能是對 translator 翻譯而來的候選項做修飾，
-如去除不想要的候選、為候選加註釋、候選項重排序等。
-欲定義的 filter 包含兩個輸入參數：
- - input: 候選項列表
- - env: 可選參數，表示 filter 所處的環境（本例沒有體現）
-filter 的輸出與 translator 相同，也是若干候選項，也要求您使用 `yield` 產生候選項。
-如下例所示，charset_filter 將濾除含 CJK 擴展漢字的候選項：
---]]
-function charset_filter(input)
-  -- 使用 `iter()` 遍歷所有輸入候選項
-  for cand in input:iter() do
-    -- 如果當前候選項 `cand` 不含 CJK 擴展漢字
-    if (not exists(is_cjk_ext, cand.text)) then
-      -- 結果中仍保留此候選
-      yield(cand)
-    end
-    --[[ 上述條件不滿足時，當前的候選 `cand` 沒有被 yield。
-      因此過濾結果中將不含有該候選。
-    --]]
-  end
-end
-
-
---[[
-同上將濾除含 CJK 擴展漢字的候選項
-但增加開關設置
---]]
-function charset_filter_plus(input, env)
-  -- 使用 `iter()` 遍歷所有輸入候選項
-  local o_c_f = env.engine.context:get_option("only_cjk_filter")
-  for cand in input:iter() do
-    -- 如果當前候選項 `cand` 不含 CJK 擴展漢字
-    if (not o_c_f or not exists(is_cjk_ext, cand.text)) then
-      -- 結果中仍保留此候選
-      yield(cand)
-    end
-    --[[ 上述條件不滿足時，當前的候選 `cand` 沒有被 yield。
-      因此過濾結果中將不含有該候選。
-    --]]
-  end
-end
-
-
---- charset comment filter
---[[
-如下例所示，charset_comment_filter 為候選項加上其所屬字符集的註釋：
---]]
-function charset_comment_filter(input)
-  for cand in input:iter() do
-    for s, r in pairs(charset) do
-      if (exists(is_charset(s), cand.text)) then
-        cand:get_genuine().comment = cand.comment .. " " .. s
-        break
-      end
-    end
-    yield(cand)
-  end
-end
-
--- 本例中定義了兩個 filter，故使用一個表將兩者導出
--- return { filter = charset_filter,
---   comment_filter = charset_comment_filter }
-
-
---- charset filter2 把 opencc 轉換成「᰼」(或某個符號)，再用 lua 功能去除「᰼」
--- charset2 = {
---  ["Deletesymbol"] = { first = 0x1C3C } }
-
--- function exists2(single_filter2, text)
---   for i in utf8.codes(text) do
---    local c = utf8.codepoint(text, i)
---    if (not single_filter2(c)) then
---   return false
---    end
---   end
---   return true
--- end
-
--- function is_charset2(s)
---  return function (c)
---     return c == charset2[s].first
---  end
--- end
-
--- function is_symbol_ext(c)
---  return is_charset2("Deletesymbol")(c)
--- end
-
--- function charset_filter2(input)
---  for cand in input:iter() do
---     if (not exists2(is_symbol_ext, cand.text))
---     then
---     yield(cand)
---     end
---  end
--- end
-
-
-function charset_filter2(input)
-  for cand in input:iter() do
-    if (not string.find(cand.text, '᰼᰼' )) then
-    -- if (not string.find(cand.text, '.*᰼᰼.*' )) then
-      yield(cand)
-    end
-    -- if (input == nil) then
-    --   cand = nil
-    -- end
-  end
-  -- return nil
-end
-
-
-
-
---- @@ single_char_filter
---[[
-single_char_filter: 候選項重排序，使單字優先
---]]
-function single_char_filter(input)
-  local l = {}
-  for cand in input:iter() do
-    if (utf8.len(cand.text) == 1) then
-      yield(cand)
-    else
-      table.insert(l, cand)
-    end
-  end
-  for i, cand in ipairs(l) do
-    yield(cand)
-  end
-end
-
-
-
-
---- @@ reverse_lookup_filter
---[[
-依地球拼音為候選項加上帶調拼音的註釋
---]]
-local pydb = ReverseDb("build/terra_pinyin.reverse.bin")
-
-local function xform_py(inp)
-  if inp == "" then return "" end
-  inp = string.gsub(inp, "([aeiou])(ng?)([1234])", "%1%3%2")
-  inp = string.gsub(inp, "([aeiou])(r)([1234])", "%1%3%2")
-  inp = string.gsub(inp, "([aeo])([iuo])([1234])", "%1%3%2")
-  inp = string.gsub(inp, "a1", "ā")
-  inp = string.gsub(inp, "a2", "á")
-  inp = string.gsub(inp, "a3", "ǎ")
-  inp = string.gsub(inp, "a4", "à")
-  inp = string.gsub(inp, "e1", "ē")
-  inp = string.gsub(inp, "e2", "é")
-  inp = string.gsub(inp, "e3", "ě")
-  inp = string.gsub(inp, "e4", "è")
-  inp = string.gsub(inp, "o1", "ō")
-  inp = string.gsub(inp, "o2", "ó")
-  inp = string.gsub(inp, "o3", "ǒ")
-  inp = string.gsub(inp, "o4", "ò")
-  inp = string.gsub(inp, "i1", "ī")
-  inp = string.gsub(inp, "i2", "í")
-  inp = string.gsub(inp, "i3", "ǐ")
-  inp = string.gsub(inp, "i4", "ì")
-  inp = string.gsub(inp, "u1", "ū")
-  inp = string.gsub(inp, "u2", "ú")
-  inp = string.gsub(inp, "u3", "ǔ")
-  inp = string.gsub(inp, "u4", "ù")
-  inp = string.gsub(inp, "v1", "ǖ")
-  inp = string.gsub(inp, "v2", "ǘ")
-  inp = string.gsub(inp, "v3", "ǚ")
-  inp = string.gsub(inp, "v4", "ǜ")
-  inp = string.gsub(inp, "([nljqxy])v", "%1ü")
-  inp = string.gsub(inp, "eh[0-5]?", "ê")
-  return "(" .. inp .. ")"
-end
-
-function reverse_lookup_filter(input)
-  for cand in input:iter() do
-    cand:get_genuine().comment = cand.comment .. " " .. xform_py(pydb:lookup(cand.text))
-    yield(cand)
-  end
-end
-
---- composition
--- function myfilter(input)
---   local input2 = Translation(charset_comment_filter, input)
---   reverse_lookup_filter(input2)
--- end
-
-
-
-
---[[
-@@ 嘸蝦米後面註釋刪除
---]]
--- local function xform_c(cf)
---   if cf == "" then return "" end
---   cf = string.gsub(cf, "[ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ%s]+$", "zk")
---   return cf
--- end
-
-function comment_filter_plus(input, env)
-  local s_c_f = env.engine.context:get_option("simplify_comment")
-  -- 使用 `iter()` 遍歷所有輸入候選項
-  for cand in input:iter() do
-    if (not s_c_f) then
-      yield(cand)
-    else
-    --   -- comment123 = cand.comment .. cand.text .. "open"
-    --   -- comment123 = cand.comment
-    --   -- comment123 = "kkk" .. comment123
-    --   -- cand:get_genuine().comment = comment123 .." "
-      cand:get_genuine().comment = ""
-      yield(cand)
-    end
-  end
-end
-
-
-
-
---[[
-@@ 韓語（非英語等）空格鍵後添加" "
---]]
-function endspace(key, env)
-  local engine = env.engine
-  local context = engine.context
-  -- local arr = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}
-  --- accept: space_do_space when: composing
-  if (key:repr() == "space") and (context:is_composing()) then
-    local caret_pos = context.caret_pos
-    local s_orig = context:get_commit_text()
-    -- local s_orig = context:get_commit_composition()
-    -- local o_orig = context:commit()
-    -- local o_orig = context:get_script_text()
-    -- local o_orig = string.gsub(context:get_script_text(), " ", "a")
-    -- 以下「含有英文字母、控制字元、空白」和「切分上屏時」不作用（用字數統計驗證是否切分）
-    if (not string.find(s_orig, "[%a%c%s]")) and (caret_pos == context.input:len()) then
-    -- if (not string.find(o_orig, "[%a%c%s]")) and (caret_pos == context.input:len()) then
-    -- if (string.find(o_orig, "[%a%c%s]")) and (caret_pos == context.input:len()) then
-      -- 下一句：游標位置向左一格，在本例無用，單純記錄用法
-      -- context.caret_pos = caret_pos - 1
-      -- 下兩句合用可使輸出句被電腦記憶
-      -- engine:commit_text("a")
-      -- engine:confirm_current_selection()
-      -- 下一句：用冒號為精簡寫法，該句為完整寫法
-      -- engine.commit_text(engine, s_orig .. "a")
-      -- engine:commit_text(s_orig .. "a")
-      engine:commit_text(s_orig .. " ") --「return 1」時用
-      -- engine:commit_text(s_orig) --「return 0」「return 2」時用
-      context:clear()
-      return 1 -- kAccepted
-      -- 「0」「2」「kAccepted」「kRejected」「kNoop」：直接後綴產生空白
-      -- 「1」：後綴不會產生空白，可用.." "增加空白或其他符號
-      -- （該條目有問題，實測對應不起來）「拒」kRejected、「收」kAccepted、「不認得」kNoop，分別對應返回值：0、1、2。
-      -- 返回「拒絕」時，雖然我們已經處理過按鍵了，但系統以為沒有，於是會按默認值再處理一遍。
-    end
-  end
-  return 2 -- kNoop
-end
-
-
-
-
---[[
-@@ 各種寫法，針對掛載 t2_translator 在注音（用到空白鍵時）去除上屏時跑出空格之函數
---]]
--- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（只針對開頭，並且寫法精簡，少了 is_composing ）
-function s2r_ss(key, env)
-  local engine = env.engine
-  local context = engine.context
-  local o_input = context.input
-  -- local kkk = string.find(o_input, "'/")
-  if (string.find(o_input, "^'/")) and (key:repr() == 'space') then  -- (kkk~=nil) and (context:is_composing())
-    local s_orig = context:get_commit_text()
-    engine:commit_text(s_orig) -- .. "a"
-    context:clear()
-    return 1 -- kAccepted
-  end
-  return 2 -- kNoop
-end
-
---- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（只針對開頭）
-function s2r_s(key, env)
-  local engine = env.engine
-  local context = engine.context
-  -- local page_size = engine.schema.page_size
-  if (key:repr() == 'space') and (context:is_composing()) then
-    local s_orig = context:get_commit_text()
-    local o_input = context.input
-    if (string.find(o_input, "^'/")) then
-      engine:commit_text(s_orig)
-      context:clear()
-      return 1 -- kAccepted
-    end
-  end
-  return 2 -- kNoop
-end
-
---- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。
-function s2r(key, env)
-  local engine = env.engine
-  local context = engine.context
-  -- local page_size = engine.schema.page_size
-  if (key:repr() == 'space') and (context:is_composing()) then
-    local s_orig = context:get_commit_text()
-    local o_input = context.input
-    if (string.find(o_input, "'/[';/]?[a-z]*$")) or (string.find(o_input, "'/[0-9/-]*$")) or (string.find(o_input, "'/[xco][0-9a-f]+$")) then
--- or string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$") or string.find(o_input, "^https?:.*$") or string.find(o_input, "^ftp:.*$") or string.find(o_input, "^mailto:.*$") or string.find(o_input, "^file:.*$")
-      engine:commit_text(s_orig)
-      context:clear()
-      return 1 -- kAccepted
-    end
-  end
-  return 2 -- kNoop
-end
-
---- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（特別正則 for mixin3）
-function s2r3(key, env)
-  local engine = env.engine
-  local context = engine.context
-  -- local page_size = engine.schema.page_size
-  if (key:repr() == 'space') and (context:is_composing()) then
-    local s_orig = context:get_commit_text()
-    local o_input = context.input
-    if (string.find(o_input, "^'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[-,./;a-z125890][][3467%s]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "''/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][0-9]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][][]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][][][][]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][-,.;=`]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][-,.;'=`][-,.;'=`]'/[';/]?[a-z0-9/-]*$")) then
--- or string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$") or string.find(o_input, "^https?:.*$") or string.find(o_input, "^ftp:.*$") or string.find(o_input, "^mailto:.*$") or string.find(o_input, "^file:.*$")
---
--- 無效的正則，不去影響一般輸入：
--- string.find(o_input, "[=][-,.;'=`]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][']'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][][][']'/[';/]?[a-z0-9/-]*$") 
--- 原始全部正則：
--- "^'/[';/]?[a-z0-9/-]*$|(?<=[-,./;a-z125890][][3467 ])'/[';/]?[a-z0-9/-]*$|(?<=['])'/[';/]?[a-z0-9/-]*$|(?<=[=][0-9])'/[';/]?[a-z0-9/-]*$|(?<=[=][][])'/[';/]?[a-z0-9/-]*$|(?<=[=][][][][])'/[';/]?[a-z0-9/-]*$|(?<=[=][-,.;'=`])'/[';/]?[a-z0-9/-]*$|(?<=[=][-,.;'=`][-,.;'=`])'/[';/]?[a-z0-9/-]*$|(?<=[][])'/[';/]?[a-z0-9/-]*$|(?<=[][][][])'/[';/]?[a-z0-9/-]*$|(?<=[][]['])'/[';/]?[a-z0-9/-]*$|(?<=[][][][]['])'/[';/]?[a-z0-9/-]*$"
-      engine:commit_text(s_orig)
-      context:clear()
-      return 1 -- kAccepted
-    end
-  end
-  return 2 -- kNoop
-end
-
---- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（只針對 email 和 url ）
-function s2r_e_u(key, env)
-  local engine = env.engine
-  local context = engine.context
-  -- local page_size = engine.schema.page_size
-  if (key:repr() == 'space') and (context:is_composing()) then
-    local s_orig = context:get_commit_text()
-    local o_input = context.input
-    if (string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(o_input, "^https?:.*$")) or (string.find(o_input, "^ftp:.*$")) or (string.find(o_input, "^mailto:.*$")) or (string.find(o_input, "^file:.*$")) then
-      engine:commit_text(s_orig)
-      context:clear()
-      return 1 -- kAccepted
-    end
-  end
-  return 2 -- kNoop
-end
-
-
-
-
---[[
-@@ 於注音方案改變在非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
---]]
-function ascii_punct_change(key, env)
-  local c_b_d = env.engine.context:get_option("ascii_punct")
-  local en_m = env.engine.context:get_option("ascii_mode")
-  if (c_b_d) and (not en_m) then
-    local engine = env.engine
-    local context = engine.context
-    if (key:repr() == 'Shift+less') then
-      local b_orig = context:get_commit_text()
-      engine:commit_text( b_orig .. ",")
-      context:clear()
-      return 1 -- kAccepted
-    end
-    if (key:repr() == 'Shift+greater') then
-      local b_orig = context:get_commit_text()
-      engine:commit_text( b_orig .. ".")
-      context:clear()
-      return 1 -- kAccepted
-    end
-  end
-  return 2 -- kNoop
-end
 
 
 
