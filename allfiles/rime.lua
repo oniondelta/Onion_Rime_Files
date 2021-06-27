@@ -930,7 +930,7 @@ end
 轉換農曆函數
 --]]
 --十進制轉二進制
-function Dec2bin(n)
+local function Dec2bin(n)
 	local t,t1,t2
 	local tables={""}
 	t=tonumber(n)
@@ -988,8 +988,23 @@ local function IsLeap(y)
 	else return 365 end
 end
 
+--返回當年過了多少天
+local function leaveDate(y)
+	local day,total
+	total=0
+	if IsLeap(tonumber(string.sub(y,1,4)))>365 then day={31,29,31,30,31,30,31,31,30,31,30,31}
+	else day={31,28,31,30,31,30,31,31,30,31,30,31} end
+	if tonumber(string.sub(y,5,6))>1 then
+		for i=1,tonumber(string.sub(y,5,6))-1 do total=total+day[i] end
+		total=total+tonumber(string.sub(y,7,8))
+	else
+		return tonumber(string.sub(y,7,8))
+	end
+	return tonumber(total)
+end
+
 --計算日期差，兩個8位數日期之間相隔的天數，date2>date1
-function diffDate(date1,date2)
+local function diffDate(date1,date2)
 	local t1,t2,n,total
 	total=0 date1=tostring(date1) date2=tostring(date2)
 	if tonumber(date2)>tonumber(date1) then
@@ -1013,25 +1028,10 @@ function diffDate(date1,date2)
 	return total
 end
 
---返回當年過了多少天
-function leaveDate(y)
-	local day,total
-	total=0
-	if IsLeap(tonumber(string.sub(y,1,4)))>365 then day={31,29,31,30,31,30,31,31,30,31,30,31}
-	else day={31,28,31,30,31,30,31,31,30,31,30,31} end
-	if tonumber(string.sub(y,5,6))>1 then
-		for i=1,tonumber(string.sub(y,5,6))-1 do total=total+day[i] end
-		total=total+tonumber(string.sub(y,7,8))
-	else
-		return tonumber(string.sub(y,7,8))
-	end
-	return tonumber(total)
-end
-
 --公曆轉農歷，支持轉化範圍公元1900-2100年
 --公曆日期 Gregorian:格式 YYYYMMDD
 --<返回值>農歷日期 中文 天干地支屬相
-function Date2LunarDate(Gregorian)
+local function Date2LunarDate(Gregorian)
 	--天干名稱
 	local cTianGan = {"甲","乙","丙","丁","戊","己","庚","辛","壬","癸"}
 	--地支名稱
@@ -1169,7 +1169,7 @@ end
 --農歷 Gregorian:數字格式 YYYYMMDD
 --<返回值>公曆日期 格式YYYY年MM月DD日
 --農歷日期月份為閏月需指定參數IsLeap為1，非閏月需指定參數IsLeap為0
-function LunarDate2Date(Gregorian,IsLeap)
+local function LunarDate2Date(Gregorian,IsLeap)
 	LunarData={"AB500D2","4BD0883",
 		"4AE00DB","A5700D0","54D0581","D2600D8","D9500CC","655147D","56A00D5","9AD00CA","55D027A","4AE00D2",
 		"A5B0682","A4D00DA","D2500CE","D25157E","B5500D6","56A00CC","ADA027B","95B00D3","49717C9","49B00DC",
@@ -1517,7 +1517,7 @@ local function union(a, b)
   return result
 end
 
-function slice(tbl, first, last, step)
+local function slice(tbl, first, last, step)
   local sliced = {}
 
   for i = first or 1, last or #tbl, step or 1 do
@@ -3425,7 +3425,13 @@ function t_translator(input, seg)
       --]]
       -- local k = string.sub(numberout, 1, -1) -- 取參數
       local result = formatnumberthousands(numberout) --- 調用算法
-      yield(Candidate("number", seg.start, seg._end, result, "〔千分位數字〕"))
+      yield(Candidate("number", seg.start, seg._end, result, "〔千分位〕"))
+      yield(Candidate("number", seg.start, seg._end, string.format("%E",numberout), "〔科學計數〕"))
+      yield(Candidate("number", seg.start, seg._end, string.format("%e",numberout), "〔科學計數〕"))
+      yield(Candidate("number", seg.start, seg._end, Dec2bin(numberout), "〔二進位〕"))
+      yield(Candidate("number", seg.start, seg._end, string.format("%X",numberout), "〔十六進位〕"))
+      yield(Candidate("number", seg.start, seg._end, string.format("%x",numberout), "〔十六進位〕"))
+      yield(Candidate("number", seg.start, seg._end, string.format("%o",numberout), "〔八進位〕"))
       return
     end
 
@@ -4864,7 +4870,13 @@ function t2_translator(input, seg)
       --]]
       -- local k = string.sub(numberout, 1, -1) -- 取參數
       local result = formatnumberthousands(numberout) --- 調用算法
-      yield(Candidate("number", seg.start, seg._end, result, "〔千分位數字〕"))
+      yield(Candidate("number", seg.start, seg._end, result, "〔千分位〕"))
+      yield(Candidate("number", seg.start, seg._end, string.format("%E",numberout), "〔科學計數〕"))
+      yield(Candidate("number", seg.start, seg._end, string.format("%e",numberout), "〔科學計數〕"))
+      yield(Candidate("number", seg.start, seg._end, Dec2bin(numberout), "〔二進位〕"))
+      yield(Candidate("number", seg.start, seg._end, string.format("%X",numberout), "〔十六進位〕"))
+      yield(Candidate("number", seg.start, seg._end, string.format("%x",numberout), "〔十六進位〕"))
+      yield(Candidate("number", seg.start, seg._end, string.format("%o",numberout), "〔八進位〕"))
       return
     end
 
