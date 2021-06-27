@@ -31,13 +31,22 @@
 --      - lua_filter@myfilter                -- （有不明函數，暫關閉）
 --
 --      - lua_processor@endspace             -- 韓語（非英語等）空格鍵後添加" "
+--      - lua_processor@ascii_punct_change   -- 注音非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
 --      - lua_processor@s2r_ss               -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（只有開頭 ^'/ 才作用，比下條目更精簡，少了 is_composing 限定）
 --      - lua_processor@s2r_s                -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（只有開頭 ^'/ 才作用）
 --      - lua_processor@s2r                  -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin(1,2,4)和 plus 用）
 --      - lua_processor@s2r3                 -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin3 (特殊正則)專用）
 --      - lua_processor@s2r_e_u              -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（只針對 email 和 url ）
---      - lua_processor@ascii_punct_change   -- 注音非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
 --      ...
+
+
+
+
+--[[
+--------------------------------------------
+！！！！以下為 filter 掛接！！！！
+--------------------------------------------
+--]]
 
 
 
@@ -85,6 +94,9 @@ local function is_cjk_ext(c)
 end
 
 
+
+
+--- @@ charset_filter
 --[[
 filter 的功能是對 translator 翻譯而來的候選項做修飾，
 如去除不想要的候選、為候選加註釋、候選項重排序等。
@@ -109,6 +121,9 @@ function charset_filter(input)
 end
 
 
+
+
+--- @@ charset_filter_plus
 --[[
 同上將濾除含 CJK 擴展漢字的候選項
 但增加開關設置
@@ -129,7 +144,9 @@ function charset_filter_plus(input, env)
 end
 
 
---- charset comment filter
+
+
+--- @@ charset comment filter
 --[[
 如下例所示，charset_comment_filter 為候選項加上其所屬字符集的註釋：
 --]]
@@ -282,9 +299,11 @@ end
 
 
 
+--- @@ comment_filter_plus
 --[[
-@@ 嘸蝦米後面註釋刪除
+嘸蝦米後面註釋刪除
 --]]
+
 -- local function xform_c(cf)
 --   if cf == "" then return "" end
 --   cf = string.gsub(cf, "[ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ%s]+$", "zk")
@@ -312,7 +331,17 @@ end
 
 
 --[[
-@@ 韓語（非英語等）空格鍵後添加" "
+--------------------------------------------
+！！！！以下為 processor 掛接！！！！
+--------------------------------------------
+--]]
+
+
+
+
+--- @@ endspace 增加上屏空白
+--[[
+韓語（非英語等）空格鍵後添加" "
 --]]
 function endspace(key, env)
   local engine = env.engine
@@ -353,9 +382,37 @@ end
 
 
 
-
+--- @@ ascii_punct_change 改變標點符號
 --[[
-@@ 各種寫法，針對掛載 t2_translator 在注音（用到空白鍵時）去除上屏時跑出空格之函數
+於注音方案改變在非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
+--]]
+function ascii_punct_change(key, env)
+  local c_b_d = env.engine.context:get_option("ascii_punct")
+  local en_m = env.engine.context:get_option("ascii_mode")
+  if (c_b_d) and (not en_m) then
+    local engine = env.engine
+    local context = engine.context
+    if (key:repr() == 'Shift+less') then
+      local b_orig = context:get_commit_text()
+      engine:commit_text( b_orig .. ",")
+      context:clear()
+      return 1 -- kAccepted
+    end
+    if (key:repr() == 'Shift+greater') then
+      local b_orig = context:get_commit_text()
+      engine:commit_text( b_orig .. ".")
+      context:clear()
+      return 1 -- kAccepted
+    end
+  end
+  return 2 -- kNoop
+end
+
+
+
+--- @@ s2r……去除上屏空白
+--[[
+各種寫法，針對掛載 t2_translator 在注音（用到空白鍵時）去除上屏時跑出空格之函數
 --]]
 -- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（只針對開頭，並且寫法精簡，少了 is_composing ）
 function s2r_ss(key, env)
@@ -450,6 +507,15 @@ end
 
 
 
+--[[
+--------------------------------------------
+！！！！以下為 translator 掛接！！！！
+--------------------------------------------
+--]]
+
+
+
+
 --- @@ email_translator
 --[[
 把 recognizer 正則輸入 email 使用 lua 實現，使之有選項，避免設定空白清屏時無法上屏。
@@ -536,37 +602,7 @@ end
 
 
 --[[
-@@ 於注音方案改變在非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
---]]
-function ascii_punct_change(key, env)
-  local c_b_d = env.engine.context:get_option("ascii_punct")
-  local en_m = env.engine.context:get_option("ascii_mode")
-  if (c_b_d) and (not en_m) then
-    local engine = env.engine
-    local context = engine.context
-    if (key:repr() == 'Shift+less') then
-      local b_orig = context:get_commit_text()
-      engine:commit_text( b_orig .. ",")
-      context:clear()
-      return 1 -- kAccepted
-    end
-    if (key:repr() == 'Shift+greater') then
-      local b_orig = context:get_commit_text()
-      engine:commit_text( b_orig .. ".")
-      context:clear()
-      return 1 -- kAccepted
-    end
-  end
-  return 2 -- kNoop
-end
-
-
-
-
-
--- 內碼輸入法
---[[
-收入 unicode 碼得出該碼字元
+內碼輸入法，收入 unicode 碼得出該碼字元
 --]]
 local function utf8_out(cp)
   local string_char = string.char
@@ -1450,7 +1486,7 @@ end
 
 
 --[[
-@轉換農曆函數
+~~~~轉換農曆函數~~~~
 --]]
 --十進制轉二進制
 local function Dec2bin(n)
@@ -1760,7 +1796,7 @@ end
 
 
 --[[
-@@@@@@@@
+~~~~農歷節氣計算部分~~~~
 --]]
 --*******農歷節氣計算部分
 --========角度變換===============
@@ -2616,14 +2652,15 @@ end
 
 --測試
 -- print(lunarJzl(os.date("%Y%m%d%H")))
+
 --[[
-@@@@@@@@
+~~~~    ~~~~
 --]]
 
 
 
 --[[
-轉換農曆月相等各種函數（有bug）
+~~~~轉換農曆月相等各種函數（有bug）~~~~
 --]]
 -- Celestial algorithms and data derived from https://ytliu0.github.io/ChineseCalendar/sunMoon.html
 local moon_data = {
@@ -3375,7 +3412,6 @@ local function time_out2()
   local ampm =  string.gsub(ampm, "PM", "下午")
   return time_c_string, time_c_string_2, time_c_string_3, time_c_string_4, ampm
 end
-
 
 
 
@@ -6377,7 +6413,6 @@ end
 --   date_translator(input, seg)
 --   time_translator(input, seg)
 -- end
-
 
 
 
