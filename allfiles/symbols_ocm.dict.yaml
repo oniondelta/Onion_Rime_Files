@@ -4,7 +4,7 @@
 # 『洋蔥』製作
 ---
 name: symbols_ocm
-version: "202102"
+version: "202106"
 sort: original
 use_preset_vocabulary: false
 ...
@@ -3031,8 +3031,10 @@ use_preset_vocabulary: false
 ⏲	uu
 ⏳	uu
 ⌛	uu
-⌜⌝	uu
-⌞⌟	uu
+⌜	uu
+⌝	uu
+⌞	uu
+⌟	uu
 ⍑	uu
 ⏩	uu
 ⏪	uu
