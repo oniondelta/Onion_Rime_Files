@@ -3694,6 +3694,12 @@ function t_translator(input, seg)
       local jq1, jq2, jq3 ,jq4 = jieqi_out1()
       yield(Candidate("date", seg.start, seg._end, jq1, jq2))
       yield(Candidate("date", seg.start, seg._end, jq3, jq4))
+      -- local jqs = GetNowTimeJq(os.date("%Y%m%d"))
+      local jqs = GetNextJQ(os.date("%Y"))
+      for i =1,#jqs do
+        yield(Candidate("date", seg.start, seg._end, jqs[i], "〔節氣〕"))
+      end
+      jqs = nil
       return
     end
 
@@ -5166,6 +5172,12 @@ function t2_translator(input, seg)
       local jq1, jq2, jq3 ,jq4 = jieqi_out1()
       yield(Candidate("date", seg.start, seg._end, jq1, jq2))
       yield(Candidate("date", seg.start, seg._end, jq3, jq4))
+      -- local jqs = GetNowTimeJq(os.date("%Y%m%d"))
+      local jqs = GetNextJQ(os.date("%Y"))
+      for i =1,#jqs do
+        yield(Candidate("date", seg.start, seg._end, jqs[i], "〔節氣〕"))
+      end
+      jqs = nil
       return
     end
 
@@ -6413,6 +6425,7 @@ end
 --   date_translator(input, seg)
 --   time_translator(input, seg)
 -- end
+
 
 
 
