@@ -452,13 +452,15 @@ function s2r(key, env)
   local context = engine.context
   -- local page_size = engine.schema.page_size
   if (key:repr() == 'space') and (context:is_composing()) then
-    local s_orig = context:get_commit_text()
     local o_input = context.input
-    if (string.find(o_input, "'/[';/]?[a-z]*$")) or (string.find(o_input, "'/[0-9/-]*$")) or (string.find(o_input, "'/[xco][0-9a-f]+$")) then
+    if (string.find(o_input, "'/")) then
+      if (string.find(o_input, "'/[';/]?[a-z]*$")) or (string.find(o_input, "'/[0-9/-]*$")) or (string.find(o_input, "'/[xco][0-9a-f]+$")) then
 -- or string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$") or string.find(o_input, "^https?:.*$") or string.find(o_input, "^ftp:.*$") or string.find(o_input, "^mailto:.*$") or string.find(o_input, "^file:.*$")
-      engine:commit_text(s_orig)
-      context:clear()
-      return 1 -- kAccepted
+        local s_orig = context:get_commit_text()
+        engine:commit_text(s_orig)
+        context:clear()
+        return 1 -- kAccepted
+      end
     end
   end
   return 2 -- kNoop
@@ -470,18 +472,20 @@ function s2r3(key, env)
   local context = engine.context
   -- local page_size = engine.schema.page_size
   if (key:repr() == 'space') and (context:is_composing()) then
-    local s_orig = context:get_commit_text()
     local o_input = context.input
-    if (string.find(o_input, "^'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[-,./;a-z125890][][3467%s]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "''/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][0-9]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][][]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][][][][]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][-,.;=`]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][-,.;'=`][-,.;'=`]'/[';/]?[a-z0-9/-]*$")) then
+    if (string.find(o_input, "'/")) then
+      if (string.find(o_input, "^'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[-,./;a-z125890][][3467%s]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "''/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][0-9]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][][]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][][][][]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][-,.;=`]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][-,.;'=`][-,.;'=`]'/[';/]?[a-z0-9/-]*$")) then
 -- or string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$") or string.find(o_input, "^https?:.*$") or string.find(o_input, "^ftp:.*$") or string.find(o_input, "^mailto:.*$") or string.find(o_input, "^file:.*$")
 --
 -- 無效的正則，不去影響一般輸入：
 -- string.find(o_input, "[=][-,.;'=`]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][']'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][][][']'/[';/]?[a-z0-9/-]*$") 
 -- 原始全部正則：
 -- "^'/[';/]?[a-z0-9/-]*$|(?<=[-,./;a-z125890][][3467 ])'/[';/]?[a-z0-9/-]*$|(?<=['])'/[';/]?[a-z0-9/-]*$|(?<=[=][0-9])'/[';/]?[a-z0-9/-]*$|(?<=[=][][])'/[';/]?[a-z0-9/-]*$|(?<=[=][][][][])'/[';/]?[a-z0-9/-]*$|(?<=[=][-,.;'=`])'/[';/]?[a-z0-9/-]*$|(?<=[=][-,.;'=`][-,.;'=`])'/[';/]?[a-z0-9/-]*$|(?<=[][])'/[';/]?[a-z0-9/-]*$|(?<=[][][][])'/[';/]?[a-z0-9/-]*$|(?<=[][]['])'/[';/]?[a-z0-9/-]*$|(?<=[][][][]['])'/[';/]?[a-z0-9/-]*$"
-      engine:commit_text(s_orig)
-      context:clear()
-      return 1 -- kAccepted
+        local s_orig = context:get_commit_text()
+        engine:commit_text(s_orig)
+        context:clear()
+        return 1 -- kAccepted
+      end
     end
   end
   return 2 -- kNoop
@@ -493,12 +497,14 @@ function s2r_e_u(key, env)
   local context = engine.context
   -- local page_size = engine.schema.page_size
   if (key:repr() == 'space') and (context:is_composing()) then
-    local s_orig = context:get_commit_text()
     local o_input = context.input
-    if (string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(o_input, "^https?:.*$")) or (string.find(o_input, "^ftp:.*$")) or (string.find(o_input, "^mailto:.*$")) or (string.find(o_input, "^file:.*$")) then
-      engine:commit_text(s_orig)
-      context:clear()
-      return 1 -- kAccepted
+    if (string.find(o_input, "[@:]")) then
+      if (string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(o_input, "^https?:.*$")) or (string.find(o_input, "^ftp:.*$")) or (string.find(o_input, "^mailto:.*$")) or (string.find(o_input, "^file:.*$")) then
+        local s_orig = context:get_commit_text()
+        engine:commit_text(s_orig)
+        context:clear()
+        return 1 -- kAccepted
+      end
     end
   end
   return 2 -- kNoop
@@ -6425,6 +6431,9 @@ end
 --   date_translator(input, seg)
 --   time_translator(input, seg)
 -- end
+
+
+
 
 
 
