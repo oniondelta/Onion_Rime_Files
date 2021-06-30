@@ -38,7 +38,7 @@ switches:
     states: ["完整", "精簡"]
   - name: emoji_segestion
     reset: 1
-    states: [ 無, 🈶️️ ]
+    states: [ 🈚️, 🈶️ ]
   - name: back_mark
     reset: 1
     states: [ 無, 註 ]
