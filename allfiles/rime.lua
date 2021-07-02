@@ -20,7 +20,7 @@
 --      - lua_translator@urlw_translator     -- 輸入網址（多了www.）
 --      - lua_translator@mytranslator        -- （有缺函數，參考勿用，暫關閉）
 --
---      《 ＊ 以下濾鏡注意在 filters 中的順序 》
+--      《 ＊ 以下「濾鏡」注意在 filters 中的順序，關係到作用效果 》
 --      - lua_filter@charset_filter          -- 遮屏含 CJK 擴展漢字的候選項
 --      - lua_filter@charset_filter_plus     -- 遮屏含 CJK 擴展漢字的候選項，開關（only_cjk_filter）
 --      - lua_filter@charset_filter2         -- 遮屏選含「᰼᰼」候選項
@@ -30,6 +30,7 @@
 --      - lua_filter@reverse_lookup_filter   -- 依地球拼音為候選項加上帶調拼音的註釋
 --      - lua_filter@myfilter                -- （有不明函數，暫關閉）
 --
+--      《 ＊ 以下「處理」注意在 processors 中的順序，基本放在最前面 》
 --      - lua_processor@endspace             -- 韓語（非英語等）空格鍵後添加" "
 --      - lua_processor@ascii_punct_change   -- 注音非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
 --      - lua_processor@s2r_ss               -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（只有開頭 ^'/ 才作用，比下條目更精簡，少了 is_composing 限定）
@@ -130,16 +131,22 @@ end
 --]]
 function charset_filter_plus(input, env)
   -- 使用 `iter()` 遍歷所有輸入候選項
-  local o_c_f = env.engine.context:get_option("only_cjk_filter")
-  for cand in input:iter() do
-    -- 如果當前候選項 `cand` 不含 CJK 擴展漢字
-    if (not o_c_f or not exists(is_cjk_ext, cand.text)) then
-      -- 結果中仍保留此候選
+  local c_f_p_s = env.engine.context:get_option("only_cjk_filter")
+  if (c_f_p_s) then
+    for cand in input:iter() do
+      -- 如果當前候選項 `cand` 不含 CJK 擴展漢字
+      if (not exists(is_cjk_ext, cand.text)) then
+        -- 結果中仍保留此候選
+        yield(cand)
+      end
+      --[[ 上述條件不滿足時，當前的候選 `cand` 沒有被 yield。
+        因此過濾結果中將不含有該候選。
+      --]]
+    end
+  else
+    for cand in input:iter() do
       yield(cand)
     end
-    --[[ 上述條件不滿足時，當前的候選 `cand` 沒有被 yield。
-      因此過濾結果中將不含有該候選。
-    --]]
   end
 end
 
@@ -206,10 +213,17 @@ end
 --  end
 -- end
 
-function charset_filter2(input)
-  for cand in input:iter() do
-    if (not string.find(cand.text, '᰼᰼' )) then
-    -- if (not string.find(cand.text, '.*᰼᰼.*' )) then
+function charset_filter2(input, env)
+  local c_f2_s = env.engine.context:get_option("zh_tw")
+  if (c_f2_s) then
+    for cand in input:iter() do
+      if (not string.find(cand.text, '᰼᰼' )) then
+      -- if (not string.find(cand.text, '.*᰼᰼.*' )) then
+        yield(cand)
+      end
+    end
+  else
+    for cand in input:iter() do
       yield(cand)
     end
     -- if (input == nil) then
@@ -311,12 +325,14 @@ end
 -- end
 
 function comment_filter_plus(input, env)
-  local s_c_f = env.engine.context:get_option("simplify_comment")
+  local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
+  if (not s_c_f_p_s) then
   -- 使用 `iter()` 遍歷所有輸入候選項
-  for cand in input:iter() do
-    if (not s_c_f) then
+    for cand in input:iter() do
       yield(cand)
-    else
+    end
+  else
+    for cand in input:iter() do
     --   -- comment123 = cand.comment .. cand.text .. "open"
     --   -- comment123 = cand.comment
     --   -- comment123 = "kkk" .. comment123
