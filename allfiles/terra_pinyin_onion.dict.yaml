@@ -1294,7 +1294,7 @@ min_phrase_weight: 100
 稅	tuo1	0.1%
 稅	tui4	0.1%
 稅	tuan2	0.1%
-鿋	xi1	0.1%
+#鿋	xi1	0.1%
 喜	xi1	0.1%
 喜	chi4	0.1%
 撷	jie2	0.1%
@@ -1926,6 +1926,18 @@ min_phrase_weight: 100
 㘝	lan3	0%
 #㘝	nian3	0%
 #㘝	na4	0%
+龯	xu4
+龯	wu4
+𨱆	xu4
+𨱆	wu4
+鐬	yue4
+鐬	sui4
+龱	xin4
+䀹	shan3
+鿃	jie2
+鿈	che3
+龪	ren2
+龨	zhui1
 ##### @201912 比對教育部相關字詞典檔所新增 #####
 丁	zheng1	0.1%
 丂	kao3	0.1%
@@ -4292,16 +4304,16 @@ min_phrase_weight: 100
 䣳	zuo4
 䣳	cu4
 龨	huai2
-龨	yan4
+#龨	yan4
 龩	jin4
 龪	zhan1
-龪	fu4
+#龪	fu4
 龫	gan4
 龫	wo4
 龫	guan3
 龮	ji4
 龮	yi4
-龳	lu4
+#龳	lu4
 龳	xun2
 鿇	zheng1
 鿊	zhi3
@@ -8818,7 +8830,7 @@ min_phrase_weight: 100
 䀹	jia2
 䀹	jie2
 䀹	she4
-䀹	ya4
+#䀹	ya4
 䀹	zha3
 䀺	chou1
 䀺	tao1
