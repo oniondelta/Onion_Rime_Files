@@ -13,97 +13,24 @@ columns:
 ...
 ####### 拉丁英語補充詞庫 開始 #######
 ##### 補充一般英語 #####
-ing
-ING
-typing
-Typing
-TYPING
-##### 補充品牌英語 #####
-HBO
-GTA
-gta
-##### 補充其他英語 #####
+##### 電腦相關 #####
 VOD
 vod
 Vod
+GTA
+gta
 lua
 LUA
 dll
 DLL
 php
 PHP
-##### 月份、星期 #####
-Jan.
-Feb.
-Mar.
-Apr.
-#May.
-Jun.
-Jul.
-Aug.
-Sep.
-Oct.
-Nov.
-Dec.
-# 月份開頭大寫 #
-Jan
-Feb
-Mar
-Apr
-May
-Jun
-Jul
-Aug
-Sep
-Oct
-Nov
-Dec
-# 月份全大寫 #
-JAN
-FEB
-MAR
-APR
-MAY
-JUN
-JUL
-AUG
-SEP
-OCT
-NOV
-DEC
-# 星期開頭大寫 #
-Sun
-Mon
-Tue
-Wed
-Thu
-Fri
-Sat
-# 星期開頭大寫加點 #
-Sun.
-Mon.
-Tue.
-Wed.
-Thu.
-Fri.
-Sat.
-# 星期全大寫 #
-SUN
-MON
-TUE
-WED
-THU
-FRI
-SAT
-##### 電腦相關 #####
 google	100
 Google
 GOOGLE
 instagram	100
 Instagram
 INSTAGRAM
-fb	100
-FB
 facebook	100
 Facebook
 FACEBOOK
@@ -116,15 +43,9 @@ YOUTUBE
 gmail	100
 Gmail
 GMAIL
-wiki	100
-Wiki
-WIKI
 wikipedia	100
 Wikipedia
 WIKIPEDIA
-twitter	100
-Twitter
-TWITTER
 iTunes
 iPhone
 iCloud
@@ -142,13 +63,9 @@ MacBook	100
 macbook
 WiSpy
 FaceTime
-Microsoft	100
-microsoft
 Skype	100
 skype
 SKYPE
-Surface	100
-surface
 hotmail	100
 Hotmail
 msn
@@ -160,13 +77,9 @@ Xbox	100
 XBOX
 xbox
 TorBrowser	100
-Safari	100
-safari
 MATLAB
 MatLab	100
 matlab
-SPSS
-spss
 Minitab	100
 minitab
 VirtualBox	100
@@ -175,26 +88,9 @@ vb
 MySQL
 Joomla	100
 joomla
-CMS
-cms
-IBM	100
-ibm
 ORCL
 orcl
 CVS
-VM
-vm
-SSD	100
-ssd
-DVD	100
-dvd
-CD	100
-cd
-BT
-bt
-App	100
-app
-APP
 Apps	100
 apps
 APPS
@@ -207,52 +103,31 @@ NVIDIA
 nVIDIA	100
 nvidia
 GeForce
-AMD	100
-amd
 FAQ
 USB	100
 usb
 WiFi	100
 wifi
 WIFI
-VR
-vr
-PCI
-GPU
-gpu
 agp
 AGP
-GB
-gb
-Gb
 xyz
 XYZ
 Xyz
-icc
-ICC
 Photoshop	100
 photoshop
 PHOTOSHOP
-illustrator
-Illustrator	100
-ILLUSTRATOR
 InDesign	100
 indesign
 INDESIGN
 Linux	100
 linux
-UNIX	100
-unix
-Fedora	100
-fedora
 Ubuntu
 Firefox	100
 firefox
 Unicode	100
 unicode
 UNICODE
-GIMP
-GNU
 GPL
 org
 flv
@@ -263,23 +138,15 @@ ppt
 PPT	100
 PDF	100
 pdf
-eps
-EPS
 jpg
 JPG
 jpeg
 JPEG
 tif
 TIF
-tiff
-TIFF
 gif
 GIF
 Gif
-png
-PNG
-pcx
-PCX
 tga
 TGA
 exif
@@ -288,30 +155,20 @@ fpx
 FPX
 svg
 SVG
-cdr
-CDR
 pcd
 PCD
 dxf
 DXF
 txt
 TXT
-rtf
-RTF
-doc
-DOC
 docx
 DOCX
 dmg
 DMG
 indd
 INDD
-psd
-PSD
 bmp
 BMP
-ppm
-PPM
 swf
 SWF
 fla
@@ -320,8 +177,6 @@ wmf
 WMF
 cgm
 CGM
-bitmap
-BITMAP
 BitMap
 svgz
 SVGZ
@@ -330,55 +185,27 @@ psp
 HDR
 hdr
 rar
-TP
 RSS
 rss
-dir
-DIR
 gpr
 GPR
 iThome
-MBA	100
-mba
-Blog	100
-BLOG
-blog
 NTFS
 exFAT
 HFS
 ReFS
-NAS	100
-nas
-HD
-hd
 Bitcoin	100
 bitcoin
 BITCOIN
-online	100
-ONLINE
 onLINE
-Online
 SanDisk	100
 sandisk
-dat
-DAT
 vob
 VOB
-exp
-Exp
-EXP
 PUBG
 VPN
 vpn
-VGA
-DVI
 HDMI
-BIOS	100
-bios
-PCB
-esc
-ESC
-Esc
 PayPal	100
 paypal
 eSHOP
@@ -390,10 +217,6 @@ otf
 OTF
 ttc
 TTC
-exe
-EXE
-avi
-AVI
 wmv
 WMV
 asf
@@ -402,8 +225,6 @@ wmvhd
 WMVHD
 mpeg
 MPEG
-mpg
-MPG
 mkv
 MKV
 Matroska
@@ -411,65 +232,38 @@ rmvb
 RMVB
 mov
 MOV
-qt
-QT
 ogg
 OGG
 ogv
 OGV
 oga
 OGA
-mod
-MOD
 HTC
 hTC	100
 htc
 ASUS	100
 Asus
 asus
-Acer
-acer	100
-ACER
-Toshiba	100
-toshiba
-TOSHIBA
-Panasonic	100
-panasonic
-PANASONIC
 Garmin	100
 garmin
 GARMIN
-CASIO	100
-casio
-G-SHOCK
 Wii	100
 wii
 WII
-SONY
-Sony
-sony
-Epson
-epson
 Logitech	100
 logitech
-X-Plane	100
-X-PLANE
 PChome	100
 pchome
 Engadget
-Transcend	100
-transcend
 tsmc
 TSMC
 ASML
-D-Link
 LinkedIn
 GitHub	100
 github
 Stellarium	100
 stellarium
 STELLARIUM
-JVC
 DivX
 XviD
 SRT
@@ -487,10 +281,6 @@ OpenAL
 Playstation	100
 PLAYSTATION
 playstation
-RPG
-rpg
-FIFA
-fifa
 CorelDRAW	100
 coreldraw
 QuarkXPress
@@ -498,11 +288,7 @@ QK
 qk
 Qk
 PageMaker	100
-PAGEMAKER
-pagemaker
 AutoCAD	100
-autocad
-AUTOCAD
 Autodesk	100
 autodesk
 AUTODESK
@@ -515,48 +301,24 @@ POWERPOINT
 SketchUp	100
 sketchup
 SKETCHUP
-RSVP	100
-rsvp
-ASAP	100
-asap
 LMK	100
 lmk
 BRB	100
 brb
-DOB
-dob
-BCC
-bcc
 TBA
 tba
 TBC
 tbc
-ETA
-eta
-TGIF
-tgif
 FOMO
 fomo
-IMO
-imo
-AKA
-aka
 WTF
 wtf
-PVP
-pvp
-Pot
 Lvl	100
 lvl
 Dcard
 dcard
 DCARD
 LLC
-HQ
-HR
-PR
-dept
-div
 Attn
 attn
 ETD
@@ -565,15 +327,11 @@ fwd
 FWD
 BBA
 BA
-BS
 dict
 DICT
 GoPro	100
 gopro
 GOPRO
-ISABELLE
-Isabelle
-isabelle
 NAVER
 naver
 Naver
@@ -586,10 +344,6 @@ qnap
 Login	100
 login
 LOGIN
-ip
-IP
-Ip
-Nas
 DSM	100
 Dsm
 dsm
@@ -608,14 +362,6 @@ ToToLink	100
 totolink
 Totolink
 TotoLink
-TP-LINK
-tp-link
-Tp-Link	100
-tp
-Tp
-Giga
-giga
-GIGA
 IEEE
 ieee
 mbps
@@ -626,31 +372,18 @@ kbps
 Kbps	100
 tbps
 Tbps	100
-bps
-BPS	100
-Bps
 mbs
 Mbs
 gbs
 Gbs
 kbs
 Kbs
-tbs
-Tbs
-msi
-MSI
-Msi
-EEE
-eee
 PoE
 LINUX
 Realtek	100
 realtek
 REALTEK
 GbE
-So-net
-so-net
-SO-NET
 Sonet
 SoNet
 sonet
@@ -658,80 +391,34 @@ SONET
 HiNet	100
 HINET
 hinet
-Hi-Net
-HI-NET
-hi-net
-Full-Duplex	100
-ful-duplex
-FULL-DUPLEX
-intel
-Intel	100
-INTEL
 ADSL	100
 adsl
 allin
 ALLIN
 AllIn
-KINDER
-kinder
-Kinder
-raper
-Raper	100
-RAPER
-SAMSUNG	100
-Samsung
-samsung
+LaTeX	100
+Emacs
 ##### 體育 #####
-NBA	100
 MLB	100
 mlb
 BWF	100
 bwf
-WPA	100
-wpa
 ##### 補充（） #####
-MV	100
-mv
-gg
-GG	100
-inc
-INC
-CNN	100
-cnn
-BBC	100
-bbc
-ISA
-Ltd
-ltd
-LTD
-Jr
 KTV	100
 ktv
 TOEIC
-TOEFL
 iBT
-ETS
 IELTS
 LV	100
 lv
 Lv
 UNIQLO
-ZARA
 momo
 MOMO
-APA	100
-apa
-GMP
-NCC
-MIT
-OEM
 OCM
-gp
-GP
 eslite
 ESLITE
 Eslite
-Zippo
 VICTORINOX
 victorinox
 LoL	100
@@ -741,34 +428,17 @@ OMG	100
 omg
 THX
 thx
-et
-ET
-al
-AL
-WC
-wc
-LEGO
-der
 QRcode
 QRCODE
-QR
-qr
-YT
-yt
 Cosplay	100
 COSPLAY
 cosplay
-Lego
-lego
 HangTen
 HANGTEN
 hangten
 adidas
 Adidas
 ADIDAS
-Mizuno
-MIZUNO
-mizuno
 ASICS
 Asics
 asics
@@ -779,9 +449,6 @@ Ua
 MVP
 mvp
 Mvp
-Vuitton
-vuitton
-VUITTON
 Malle
 MALLE
 malle
@@ -801,23 +468,11 @@ AnimaTek	100
 Animatek
 animatek
 ANIMATEK
-Vue
-vue
-VUE
-VS
-Vs
-vs
 uniqlo
 Uniqlo	100
 CitiBank	100
-citibank
-CITIBANK
-Citibank
 HSBC	100
 hsbc
-HONGKONG
-Hongkong	100
-hongkong
 KHS	100
 Khs
 khs
@@ -827,23 +482,13 @@ MASI
 Masi
 CIPOLLINI
 Cipollini
-BMC
-Bmc
-bmc
 ORBEA
 Orbea
-CANYON
-Canyon
 DIZO
 Dizo
-GUSTO
-Gusto
 Foxconn
 FOXCONN
 foxconn
-Fujitsu
-FUJITSU
-fujitsu
 UDN
 Udn
 udn
@@ -851,10 +496,6 @@ ICRT
 Icrt
 icrt
 CoCo
-GONG-CHA
-gong-cha
-Gong-Cha
-Gong-cha
 GONGCHA
 gongcha
 GongCha
@@ -862,9 +503,6 @@ Gongcha
 CHATIME
 Chatime
 chatime
-HITACHI
-Hitachi
-hitachi
 ACCUPHASE
 Accuphase
 accuphase
@@ -883,9 +521,6 @@ teco
 ZOJIRUSHI
 Zojirushi
 zojirushi
-GREE
-Gree
-gree
 HERAN
 Heran
 heran
@@ -898,11 +533,6 @@ hisense
 OBM
 RTM
 rtm
-LaTeX	100
-Emacs
-IPO
-ipo
-Ipo
 ##### 汽車「品牌」 #####
 Abarth
 ABARTH
@@ -910,69 +540,26 @@ abarth
 Acura
 ACURA
 acura
-Audi
-AUDI
-audi
 Autozam
 AUTOZAM
 autozam
-Bedford
-BEDFORD
-bedford
-Bentley
 BETLEY
 betley
-BMW
-bmw
-Bmw
 Borgward
 BORGWARD
 borgward
 Brabus
 BRABUS
 brabus
-Bugatti	100
-BUGATTI
-bugatti
-Buick
-BUICK
-buick
 BYD
 Byd
 byd
-Cadillac
-CADILLAC
-cadillac
-Carlsson
-CARLSSON
-carlsson
-Chevrolet
-CHEVROLET
-chevrolet
-Chrysler
-CHRYSLER
-chrysler
 Citroën
 CITROËN
 citroën
-Citroen
-CITROEN
-citroen
-CMC
-Cmc
-cmc
 Daewoo
 DAEWOO
 daewoo
-DAF
-Daf
-daf
-Daihatsu
-DAIHATSU
-daihatsu
-Daimler
-DAIMLER
-daimler
 DMC
 Dmc
 dmc
@@ -982,133 +569,51 @@ dmc
 Efini
 EFINI
 efini
-Ferrari
-FERRARI
-ferrari
-FIAT
-Fiat
-fiat
 Fuso
 FUSO
 fuso
-GAZ
-Gaz
-gaz
-Geo
-GEO
-geo
 Hino
 HINO
 hino
-Hyundai
-HYUNDAI
-hyundai
 Infiniti
 INFINITI
 infiniti
-Isuzu
-ISUZU
-isuzu
 Koenigsegg
 KOENIGSEGG
 koenigsegg
-Lamborghini
-LAMBORGHINI
-lamborghini
-Lancia
-LANCIA
-lancia
 Lexus
 LEXUS
 lexus
 Luxgen
 LUXGEN
 luxgen
-Maserati
-MASERATI
-maserati
 Maybach
 MAYBACH
 maybach
-Mazda	100
-MAZDA
-mazda
 McLaren
-MCLAREN
-mclaren
-Mercedes-Benz	100
-MERCEDES-BENZ
 MercedesBenz
 MERCEDESBENZ
-Mercedes
-MERCEDES
-mercedes
-Benz	100
-BENZ
-benz
-MCI
-Mci
-mci
-MITSUBISHI	100
-Mitsubishi
-mitsubishi
 Mitsuoka	100
 MITSUOKA
 mitsuoka
-Nissan
-NISSAN
-nissan
 Oldsmobile
 OLDSMOBILE
 oldsmobile
-Opel	100
-OPEL
-opel
 Pagani
 PAGANI
 pagani
 Panoz
 PANOZ
 panoz
-Peugeot
-PEUGEOT
-peugeot
 Peterbilt
 PETERBILT
 peterbilt
-Pontiac
-PONTIAC
-pontiac
-Porsche
-PORSCHE
-porsche
-Proton
-PROTON
-proton
-Renault
-RENAULT
-renault
-Saab
-SAAB
-saab
-Scania
-SCANIA
-scania
-Skoda
-SKODA
-skoda
 Spyker
 SPYKER
 spyker
 Ssangyong
 SSANGYONG
 ssangyong
-Subaru
-SUBARU
-subaru
-Suzuki
-SUZUKI
-suzuki
 SYM
 Sym
 sym
@@ -1128,18 +633,6 @@ uaz
 UD
 Ud
 ud
-Vauxhall
-VAUXHALL
-vauxhall
-Venturi
-VENTURI
-venturi
-Volvo
-VOLVO
-volvo
-Volkswagen
-VOLKSWAGEN
-volkswagen
 WiLL
 Yueloong
 YUELOONG
@@ -1154,15 +647,6 @@ kymco
 PGO
 Pgo
 pgo
-YAMAHA
-Yamaha
-yamaha
-AEON
-Aeon
-aeon
-Kawasaki
-KAWASAKI
-kawasaki
 Yuki
 YUKI
 yuki
@@ -1175,18 +659,12 @@ vespa
 Gogoro
 GOGORO
 gogoro
-Avenger
-AVENGER
-avenger
 ADB
 Adb
 adb
 AGV
 Agv
 agv
-Alligator
-ALLIGATOR
-alligator
 ATK
 Atk
 atk
@@ -1205,28 +683,17 @@ tmz
 ROKON
 Rokon
 rokon
-HARLEY-DAVIDSON
-Harley-Davidson
-harley-davidson
 ##### 一般「品牌」#####
-PEPSI
-pepsi
-Pepsi
+HBO
 CocaCola	100
 cocacola
 COCACOLA
-Coca-Cola
-coca-cola
-COCA-COLA
 CBD
 cbd
 Cbd
 Levis	100
 LEVIS
 levis
-Gucci	100
-GUCCI
-gucci
 Prada	100
 PRADA
 prada
@@ -1236,9 +703,6 @@ bvlgari
 Fendi
 FENDI
 fendi
-Versace	100
-VERSACE
-versace
 Gabbana
 GABBANA
 gabbana
@@ -1270,21 +734,9 @@ moschino
 Trussardi	100
 TRUSSARDI
 trussardi
-Agnes.b	100
-AGNES.B
-agnes.b
 Agnesb
 AGNESB
 agnesb
-Vivienne	100
-VIVIENNE
-vivienne
-Giorgio	100
-GIORGIO
-giorgio
-Armani	100
-ARMANI
-armani
 Emporio	100
 EMPORIO
 emporio
@@ -1294,12 +746,6 @@ veneta
 TODS
 Tods
 tods
-Pringle
-PRINGLE
-pringle
-lim
-Lim
-LIM
 AKB
 akb
 Akb
@@ -1315,15 +761,10 @@ pokémon
 Pokemon
 POKEMON
 pokemon
-JR
-jr
 PAYPAL
 pixnext
 Pixnext
 PIXNEXT
-blogger
-Blogger
-BLOGGER
 flickr
 Flickr
 FLICKR
@@ -1336,9 +777,6 @@ IBON
 FamilyMart
 familymart
 FAMILYMART
-GORE-TEX
-Gore-Tex
-gore-tex
 GORETEX
 GoreTex
 goretex
@@ -1348,9 +786,6 @@ HV
 disp
 Disp
 DISP
-ek
-Ek
-EK
 opv
 Opv
 OPV
@@ -1360,9 +795,6 @@ RAKUTEN
 infoseed
 Infoseed
 INFOSEED
-nifty
-Nifty
-NIFTY
 seo
 Seo
 SEO
@@ -1375,18 +807,12 @@ PVDC
 pmma
 Pmma
 PMMA
-ptfe
-Ptfe
-PTFE
 uf
 Uf
 UF
 mf
 Mf
 MF
-kj
-Kj
-KJ
 amitābha
 Amitābha
 AMITĀBHA
@@ -1444,10 +870,6 @@ FHM
 vivi
 ViVi
 VIVI
-e-book
-E-Book
-e-Book
-E-BOOK
 ebook
 eBook
 EBook
@@ -1456,9 +878,6 @@ iWatch
 corel
 Corel
 COREL
-js
-Js
-JS
 sbl
 Sbl
 SBL
@@ -1474,9 +893,6 @@ HBL
 apbw
 APBW
 Apbw
-ALCATEL
-alcatel
-Alcatel
 AUDIOVOX
 audiovox
 Audiovox
@@ -1504,9 +920,6 @@ Alatech
 benq
 BenQ
 BENQ
-bosch
-BOSCH
-Bosch
 benefon
 BENEFON
 Benefon
@@ -1517,8 +930,6 @@ bellwave
 BELLWAVE
 Bellwave
 BlackBerry
-BLACKBERRY
-blackberry
 ckt
 CKT
 Ckt
@@ -1544,21 +955,12 @@ DMOBO
 dendee
 Dendee
 DENDEE
-elle
-ELLE
-Elle
 eten
 Eten
 ETEN
 eliya
 Eliya
 ELIYA
-ericsson
-Ericsson
-ERICSSON
-e-Touch
-e-touch
-E-TOUCH
 funai
 Funai
 FUNAI
@@ -1568,12 +970,6 @@ FUJIYAMA
 freetel
 Freetel
 FREETEL
-g-plus
-G-Plus
-G-PLUS
-g-tec
-G-Tec
-G-TEC
 HUAWEI
 Huawei
 HUGIGA
@@ -1586,8 +982,6 @@ iKoMo
 IKOMO
 ikomo
 iNO
-INO
-ino
 iTalk
 italk
 ITALK
@@ -1621,9 +1015,6 @@ KOLIN
 KOOOK
 Koook
 koook
-K-Touch
-k-touch
-K-TOUCH
 katoon
 KATOON
 Katoon
@@ -1663,9 +1054,6 @@ NIXXO
 neonode
 Neonode
 NEONODE
-nubia
-Nubia
-NUBIA
 Nextbit
 nextbit
 NEXTBIT
@@ -1684,9 +1072,6 @@ ONEPLUS
 pantech
 Pantech
 PANTECH
-sanyo
-Sanyo
-SANYO
 sagem
 Sagem
 SAGEM
@@ -1699,12 +1084,7 @@ SEWON
 santec
 Santec
 SANTEC
-sampo
-SAMPO
 Sanpo
-SK
-sk
-Sk
 sondyo
 SONDYO
 Sondyo
@@ -1723,15 +1103,9 @@ TRANSASIA
 tecom
 TECOM
 Tecom
-telson
-Telson
-TELSON
 toyo
 TOYO
 Toyo
-tatung
-TATUNG
-Tatung
 TORQ
 torq
 Torq
@@ -1750,9 +1124,6 @@ TSKY
 thl
 THL
 Thl
-UT-Starcom
-ut-starcom
-UT-STARCOM
 UTEC
 Utec
 utec
@@ -1768,24 +1139,13 @@ Vk
 ViewSonic
 viewsonic
 VIEWSONIC
-vivo
 ViVo
-VIVO
-Vertu
-VERTU
-vertu
-Vodafone
-vodafone
-VODAFONE
 VAIO
 vaio
 Vaio
 WELLCOM
 wellcom
 Wellcom
-WIZ
-wiz
-Wiz
 Wmobile
 wmobile
 WMOBILE
@@ -1811,9 +1171,6 @@ ZUK
 zuk
 Zuk
 ##### 其他「品牌」 #####
-Colgate
-colgate
-COLGATE
 FHD
 fhd
 Fhd
@@ -1826,8 +1183,6 @@ TAOBAO
 SUV
 suv
 Suv
-NGO
-ngo
 LHC
 lhc
 Lhc
@@ -1835,26 +1190,15 @@ TNN
 tnn
 Tnn
 TeV
-tev
-TEV
 PIXNET
 Pixnet
 pixnet
-DJ
-dj
-Dj
 JYP
 jyp
 Jyp
 macOS
 MACOS
 macos
-UBS
-Ubs
-ubs
-Mojave
-mojave
-MOJAVE
 emoji
 Emoji
 EMOJI
@@ -1921,22 +1265,9 @@ weren't
 Weren't
 WEREN'T
 ##### 含有「.」 #####
-.cn
-.co
-.com
-.de
-.edu
-.fr
-.gov
-.hk
-.info
-.jp
-.kr
-.net
-.org
-.tw
-.uk
-.us
+Agnes.b	100
+AGNES.B
+agnes.b
 a.m.
 A.M.	100
 al.
@@ -2015,8 +1346,46 @@ vs.
 Vs.
 W.C.
 w.c.
+# 月份、星期 #
+Jan.
+Feb.
+Mar.
+Apr.
+#May.
+Jun.
+Jul.
+Aug.
+Sep.
+Oct.
+Nov.
+Dec.
+# 星期開頭大寫加點 #
+Sun.
+Mon.
+Tue.
+Wed.
+Thu.
+Fri.
+Sat.
+# 網址 #
 www.
-##### 副檔名 #####
+.cn
+.co
+.com
+.de
+.edu
+.fr
+.gov
+.hk
+.info
+.jp
+.kr
+.net
+.org
+.tw
+.uk
+.us
+# 副檔名 #
 .aac
 .aaf
 .accdb
@@ -2117,6 +1486,7 @@ www.
 .nexe
 .odf
 .otf
+.pcx
 .pdf
 .pe
 .php
@@ -2207,7 +1577,57 @@ www.
 .xps
 .yaml
 .zip
-##### 含有「-」「/」「:」「~」 #####
+##### 含有「-」 #####
+G-SHOCK
+X-Plane	100
+X-PLANE
+D-Link
+TP-LINK
+tp-link
+Tp-Link	100
+So-net
+so-net
+SO-NET
+Hi-Net
+HI-NET
+hi-net
+Full-Duplex	100
+ful-duplex
+FULL-DUPLEX
+GONG-CHA
+gong-cha
+Gong-Cha
+Gong-cha
+Mercedes-Benz	100
+MERCEDES-BENZ
+HARLEY-DAVIDSON
+Harley-Davidson
+harley-davidson
+Coca-Cola
+coca-cola
+COCA-COLA
+GORE-TEX
+Gore-Tex
+gore-tex
+e-book
+E-Book
+e-Book
+E-BOOK
+e-Touch
+e-touch
+E-TOUCH
+g-plus
+G-Plus
+G-PLUS
+g-tec
+G-Tec
+G-TEC
+K-Touch
+k-touch
+K-TOUCH
+UT-Starcom
+ut-starcom
+UT-STARCOM
 All-In	100
 ALL-in
 all-in
@@ -2220,6 +1640,9 @@ S-Video
 PCI-E
 Wi-Fi	100
 wi-fi
+a-z	100
+A-Z
+##### 含有「/」「:」「~」 #####
 B/C
 B/W
 C/P	100
@@ -2231,8 +1654,6 @@ n/a
 Re:	100
 RE:	100
 re:	100
-a-z	100
-A-Z
 a~z	100
 A~Z
 ####### 20200923補充開始@ #######
