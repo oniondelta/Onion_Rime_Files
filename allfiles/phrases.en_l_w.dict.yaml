@@ -4,7 +4,7 @@
 # 『洋蔥』
 ---
 name: phrases.en_l_w
-version: "202106"
+version: "202107"
 sort: by_weight
 use_preset_vocabulary: false
 columns:
@@ -7162,6 +7162,7 @@ azusa	11000
 azygospore	11000
 azygous	11000
 azyme	11000
+ba	11000
 baa	11000
 baal	11000
 baalbek	11000
@@ -20571,6 +20572,7 @@ czechoslovak	11000
 czechoslovakia	11000
 czernowitz	11000
 czerny	11000
+da	11000
 dab	11000
 dabber	11000
 dabble	11000
@@ -28758,6 +28760,7 @@ eysk	11000
 ez	11000
 ezechias	11000
 ezekiel	11000
+fa	11000
 faa	11000
 fab	11000
 fabaceous	11000
@@ -31919,6 +31922,7 @@ fylfot	11000
 fyn	11000
 fyrd	11000
 fytte	11000
+ga	11000
 gab	11000
 gaba	11000
 gabaon	11000
@@ -34980,6 +34984,7 @@ gyrovague	11000
 gyrus	11000
 gysgt	11000
 gyttja	11000
+ha	11000
 haaf	11000
 haag	11000
 haar	11000
@@ -43377,6 +43382,7 @@ juxtaposition	11000
 jv	11000
 jy	11000
 jylland	11000
+ka	11000
 kaapstad	11000
 kab	11000
 kabab	11000
@@ -44954,6 +44960,7 @@ kythera	11000
 kytoon	11000
 kyushu	11000
 kyzyl	11000
+la	11000
 laager	11000
 laaland	11000
 lab	11000
@@ -48038,6 +48045,7 @@ lytta	11000
 lytton	11000
 lyubertsy	11000
 lyublin	11000
+ma	11000
 maar	11000
 maariv	11000
 maas	11000
@@ -53802,6 +53810,7 @@ myxomycete	11000
 myxomycetous	11000
 myxospore	11000
 myxovirus	11000
+na	11000
 naa	11000
 naacp	11000
 naafi	11000
@@ -64614,6 +64623,7 @@ ozonolysis	11000
 ozonous	11000
 ozostomia	11000
 ozzie	11000
+pa	11000
 paasikivi	11000
 paba	11000
 pablo	11000
@@ -79703,6 +79713,7 @@ rysanek	11000
 ryukyu	11000
 ryukyuan	11000
 ryun	11000
+sa	11000
 saadi	11000
 saar	11000
 saaremaa	11000
@@ -90876,6 +90887,7 @@ szigeti	11000
 szilard	11000
 szold	11000
 szombathely	11000
+ta	11000
 taal	11000
 tab	11000
 tabanid	11000
@@ -108553,6 +108565,7 @@ vycor	11000
 vyernyi	11000
 vying	11000
 vyshinsky	11000
+wa	11000
 waac	11000
 waadt	11000
 waaf	11000

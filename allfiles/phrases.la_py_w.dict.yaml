@@ -4,7 +4,7 @@
 # 『洋蔥』
 ---
 name: phrases.la_py_w
-version: "201909"
+version: "202107"
 sort: by_weight
 use_preset_vocabulary: false
 columns:
@@ -38,7 +38,7 @@ ao
 áo
 ǎo
 ào
-ba
+#ba
 bā
 bá
 bǎ
@@ -267,7 +267,7 @@ cuō
 cuó
 cuǒ
 cuò
-da
+#da
 dā
 dá
 dǎ
@@ -378,7 +378,7 @@ er
 ér
 ěr
 èr
-fa
+#fa
 fā
 fá
 fǎ
@@ -418,7 +418,7 @@ fū
 fú
 fǔ
 fù
-ga
+#ga
 gā
 gá
 gǎ
@@ -497,7 +497,7 @@ guō
 guó
 guǒ
 guò
-ha
+#ha
 hā
 há
 hǎ
@@ -645,7 +645,7 @@ juè
 jun
 jūn
 jùn
-ka
+#ka
 kā
 kǎ
 kai
@@ -719,7 +719,7 @@ kùn
 kuo
 kuō
 kuò
-la
+#la
 lā
 lá
 lǎ
@@ -831,7 +831,7 @@ luō
 luó
 luǒ
 luò
-ma
+#ma
 mā
 má
 mǎ
@@ -915,7 +915,7 @@ mù
 #ń
 #ň
 #ǹ
-na
+#na
 nā
 ná
 nǎ
@@ -1021,7 +1021,7 @@ ou
 ōu
 ǒu
 òu
-pa
+#pa
 pā
 pá
 pà
@@ -1221,7 +1221,7 @@ rùn
 ruo
 ruó
 ruò
-sa
+#sa
 sā
 sǎ
 sà
@@ -1359,7 +1359,7 @@ suo
 suō
 suǒ
 suò
-ta
+#ta
 tā
 tǎ
 tà
@@ -1449,7 +1449,7 @@ tuō
 tuó
 tuǒ
 tuò
-wa
+#wa
 wā
 wá
 wǎ
@@ -1812,7 +1812,7 @@ Ao
 Áo
 Ǎo
 Ào
-Ba
+#Ba
 Bā
 Bá
 Bǎ
@@ -2041,7 +2041,7 @@ Cuō
 Cuó
 Cuǒ
 Cuò
-Da
+#Da
 Dā
 Dá
 Dǎ
@@ -2152,7 +2152,7 @@ Er
 Ér
 Ěr
 Èr
-Fa
+#Fa
 Fā
 Fá
 Fǎ
@@ -2192,7 +2192,7 @@ Fū
 Fú
 Fǔ
 Fù
-Ga
+#Ga
 Gā
 Gá
 Gǎ
@@ -2271,7 +2271,7 @@ Guō
 Guó
 Guǒ
 Guò
-Ha
+#Ha
 Hā
 Há
 Hǎ
@@ -2419,7 +2419,7 @@ Juè
 Jun
 Jūn
 Jùn
-Ka
+#Ka
 Kā
 Kǎ
 Kai
@@ -2493,7 +2493,7 @@ Kùn
 Kuo
 Kuō
 Kuò
-La
+#La
 Lā
 Lá
 Lǎ
@@ -2605,7 +2605,7 @@ Luō
 Luó
 Luǒ
 Luò
-Ma
+#Ma
 Mā
 Má
 Mǎ
@@ -2689,7 +2689,7 @@ Mù
 #Ń
 #Ň
 #Ǹ
-Na
+#Na
 Nā
 Ná
 Nǎ
@@ -2795,7 +2795,7 @@ Ou
 Ōu
 Ǒu
 Òu
-Pa
+#Pa
 Pā
 Pá
 Pà
@@ -2995,7 +2995,7 @@ Rùn
 Ruo
 Ruó
 Ruò
-Sa
+#Sa
 Sā
 Sǎ
 Sà
@@ -3133,7 +3133,7 @@ Suo
 Suō
 Suǒ
 Suò
-Ta
+#Ta
 Tā
 Tǎ
 Tà
@@ -3223,7 +3223,7 @@ Tuō
 Tuó
 Tuǒ
 Tuò
-Wa
+#Wa
 Wā
 Wá
 Wǎ
@@ -3586,7 +3586,7 @@ AO
 ÁO
 ǍO
 ÀO
-BA
+#BA
 BĀ
 BÁ
 BǍ
@@ -3815,7 +3815,7 @@ CUŌ
 CUÓ
 CUǑ
 CUÒ
-DA
+#DA
 DĀ
 DÁ
 DǍ
@@ -3926,7 +3926,7 @@ ER
 ÉR
 ĚR
 ÈR
-FA
+#FA
 FĀ
 FÁ
 FǍ
@@ -3966,7 +3966,7 @@ FŪ
 FÚ
 FǓ
 FÙ
-GA
+#GA
 GĀ
 GÁ
 GǍ
@@ -4045,7 +4045,7 @@ GUŌ
 GUÓ
 GUǑ
 GUÒ
-HA
+#HA
 HĀ
 HÁ
 HǍ
@@ -4193,7 +4193,7 @@ JUÈ
 JUN
 JŪN
 JÙN
-KA
+#KA
 KĀ
 KǍ
 KAI
@@ -4267,7 +4267,7 @@ KÙN
 KUO
 KUŌ
 KUÒ
-LA
+#LA
 LĀ
 LÁ
 LǍ
@@ -4379,7 +4379,7 @@ LUŌ
 LUÓ
 LUǑ
 LUÒ
-MA
+#MA
 MĀ
 MÁ
 MǍ
@@ -4463,7 +4463,7 @@ MÙ
 #Ń
 #Ň
 #Ǹ
-NA
+#NA
 NĀ
 NÁ
 NǍ
@@ -4569,7 +4569,7 @@ OU
 ŌU
 ǑU
 ÒU
-PA
+#PA
 PĀ
 PÁ
 PÀ
@@ -4769,7 +4769,7 @@ RÙN
 RUO
 RUÓ
 RUÒ
-SA
+#SA
 SĀ
 SǍ
 SÀ
@@ -4907,7 +4907,7 @@ SUO
 SUŌ
 SUǑ
 SUÒ
-TA
+#TA
 TĀ
 TǍ
 TÀ
@@ -4997,7 +4997,7 @@ TUŌ
 TUÓ
 TUǑ
 TUÒ
-WA
+#WA
 WĀ
 WÁ
 WǍ
