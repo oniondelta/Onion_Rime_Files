@@ -1,0 +1,12 @@
+# Rime schema 中州輸入法的字碼檔
+# encoding: utf-8
+# 《蝦米樂園Unicode_ExtensionABCD增補碼表》
+# 201707把前面有「,」的打井字號！
+---
+name: uniabcdword
+version: "202107"
+sort: original
+use_preset_vocabulary: false
+#max_phrase_length: 7
+#min_phrase_weight: 100
+...
