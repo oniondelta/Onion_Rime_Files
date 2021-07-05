@@ -1926,22 +1926,24 @@ min_phrase_weight: 100
 㘝	lan3	0%
 #㘝	nian3	0%
 #㘝	na4	0%
-龯	xu4
-龯	wu4
-𨱆	xu4
-𨱆	wu4
-鐬	yue4
-鐬	sui4
-龱	xin4
-䀹	shan3
-鿃	jie2
-𥅴	jia2
-𥅴	shan3
-𥅴	she4
-𥅴	zha3
-鿈	che3
-龪	ren2
-龨	zhui1
+龯	xu4	0%
+龯	wu4	0%
+𨱆	xu4	0%
+𨱆	wu4	0%
+鐬	yue4	0%
+鐬	sui4	0%
+龱	xin4	0%
+䀹	shan3	0%
+鿃	jie2	0%
+𥅴	jia2	0%
+𥅴	shan3	0%
+𥅴	she4	0%
+𥅴	zha3	0%
+鿈	che3	0%
+龪	ren2	0%
+龨	zhui1	0%
+亰	yuan2	0%
+厡	yuan4	0%
 ##### @201912 比對教育部相關字詞典檔所新增 #####
 丁	zheng1	0.1%
 丂	kao3	0.1%
@@ -3564,7 +3566,7 @@ min_phrase_weight: 100
 龰	zhi3
 龱	si4
 龲	ku4
-鿈	chi3
+#鿈	chi3
 鿉	wu3
 龜	gui1
 龜	jun1
