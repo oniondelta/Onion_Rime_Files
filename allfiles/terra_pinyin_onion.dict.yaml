@@ -471,7 +471,7 @@ min_phrase_weight: 100
 龜	qiu1	5%
 拚	fan1	0.1%
 埠	fu4
-噸	dun4	20%
+噸	dun4
 犽	ya2
 衹	zhi1	100%
 區	gou1	0.1%
@@ -15333,7 +15333,7 @@ min_phrase_weight: 100
 噵	dao4
 噶	ga2
 噷	hen4
-噸	dun1
+噸	dun1	20%
 噹	dang1
 噺	xin1
 噻	sai1
@@ -63807,7 +63807,9 @@ min_phrase_weight: 100
 呫呫	che4 che4
 呫呫	tie4 tie4
 呫嗶	tie4 bi4
+呫噸	zhan1 dun4
 呫噸	zhan1 dun1
+呫噸酮	zhan1 dun4 tong2
 呫噸酮	zhan1 dun1 tong2
 呫嚅	che4 ru2
 呫嚅	tie4 ru2
@@ -65351,8 +65353,8 @@ min_phrase_weight: 100
 噶當派	ga2 dang1 pai4
 噸位	dun4 wei4
 噸位	dun1 wei4
-噸數	dun1 shu4
 噸數	dun4 shu4
+噸數	dun1 shu4
 噹啷落地	dang1 lang1 luo4 di4
 嚄唶	huo4 ze4
 嚄嚄	huo4 huo4
@@ -92816,6 +92818,7 @@ min_phrase_weight: 100
 等差數列	deng3 cha1 shu4 lie4
 等差級數	deng3 cha1 ji2 shu4
 等待	deng3 dai4
+等效百萬噸當量	deng3 xiao4 bai3 wan4 dun4 dang1 liang4
 等效百萬噸當量	deng3 xiao4 bai3 wan4 dun1 dang1 liang4
 等期	deng3 qi2
 等比數列	deng3 bi3 shu4 lie4
@@ -105227,6 +105230,7 @@ min_phrase_weight: 100
 重重落落	chong2 chong2 luo4 luo4
 重量	zhong4 liang4
 重量單位	zhong4 liang4 dan1 wei4
+重量噸	zhong4 liang4 dun4
 重量噸	zhong4 liang4 dun1
 重量級	zhong4 liang4 ji2
 重金	zhong4 jin1
@@ -111059,4 +111063,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 111035 #####
+##### @結束 END - 111066 #####

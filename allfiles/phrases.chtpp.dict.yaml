@@ -27,7 +27,7 @@
 # ===============================
 ---
 name: phrases.chtpp
-version: "202106"
+version: "202107"
 sort: by_weight
 use_preset_vocabulary: false
 max_phrase_length: 7 #20
