@@ -1948,6 +1948,9 @@ min_phrase_weight: 100
 哑	e4	0%
 唖	ya1	0%
 唖	e4	0%
+绰	chao1	0%
+淖	chuo4	0%
+淖	zhuo1	0%
 ##### @201912 比對教育部相關字詞典檔所新增 #####
 丁	zheng1	0.1%
 丂	kao3	0.1%
@@ -23382,7 +23385,7 @@ min_phrase_weight: 100
 焭	qiong2
 焮	xin4
 焯	chao1
-焯	chuo4
+#焯	chuo4
 焯	zhuo1
 焯	zhuo2
 焰	yan4
