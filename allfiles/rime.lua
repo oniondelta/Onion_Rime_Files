@@ -4895,13 +4895,17 @@ function t_translator(input, seg)
         fmt = "&#".."%d"..";"
       end
       -- 單獨查找
-      yield(Candidate("number", seg.start, seg._end, utf8_out(c), string.format(fmt, c) ))
+      local cand_ui_s = Candidate("number", seg.start, seg._end, utf8_out(c), string.format(fmt, c) )
+      cand_ui_s.preedit = "`" .. snd .. " " .. string.upper(string.sub(input, 3))
+      yield(cand_ui_s)
       -- 區間查找
       -- if c*n_bit+n_bit-1 < 1048575 then
       --   for i = c*n_bit, c*n_bit+n_bit-1 do
       if c+16 < 1048575 then
         for i = c+1, c+16 do
-          yield(Candidate("number", seg.start, seg._end, utf8_out(i), string.format(fmt, i) ))
+          local cand_ui_m = Candidate("number", seg.start, seg._end, utf8_out(i), string.format(fmt, i) )
+          cand_ui_m.preedit = "`" .. snd .. " " .. string.upper(string.sub(input, 3))
+          yield(cand_ui_m)
         end
       end
     end
@@ -4917,10 +4921,14 @@ function t_translator(input, seg)
         url_c_input = url_c_input .. '0'
       end
       local url_10 = url_decode(url_c_input)
+      local uc_i = string.upper(string.sub(input, 3, 4)) .. " " .. string.upper(string.sub(input, 5, 6)) .. " " .. string.upper(string.sub(input, 7, 8)) .. " " .. string.upper(string.sub(input, 9, 10)) .. " " .. string.upper(string.sub(input, 11, 12)) .. " " .. string.upper(string.sub(input, 13, 14))
+      local uc_i = string.gsub(uc_i, " +$", "" )
       if string.match(url_10, "無此編碼") ~= nil then
         yield(Candidate("number", seg.start, seg._end, url_10, '' ))
       elseif string.match(url_c_input, "^[0-9a-z]$") ~= nil then
-        yield(Candidate("number", seg.start, seg._end, url_10, url_10 ))
+        local cand_uci_a = Candidate("number", seg.start, seg._end, url_10, url_10 )
+        cand_uci_a.preedit = "`e " .. uc_i
+        yield(cand_uci_a)
       else
         -- local u_c = string.upper(url_c_input)
         -- local u_c = string.gsub(u_c, '^', '%%')
@@ -4932,13 +4940,17 @@ function t_translator(input, seg)
         -- local u_c = string.gsub(u_c, '^(..)(.?.?)(.?.?)(.?.?)(.?.?)(.?.?)$', '%%%1%%%2%%%3%%%4%%%5%%%6')
         -- local u_c = string.gsub(u_c, '[%%]+$', '')
         -- yield(Candidate("number", seg.start, seg._end, utf8_out(url_10), u_c ))
-        yield(Candidate("number", seg.start, seg._end, utf8_out(url_10), url_encode(utf8_out(url_10)) ))
+        local cand_uci_s = Candidate("number", seg.start, seg._end, utf8_out(url_10), url_encode(utf8_out(url_10)) )
+        cand_uci_s.preedit = "`e " .. uc_i
+        yield(cand_uci_s)
       end
       -- if url_10*10+10-1 < 1048575 then
       --   for i = url_10*10, url_10*10+10-1 do
       if url_10+16 < 1048575 then
         for i = url_10+1, url_10+16 do
-          yield(Candidate("number", seg.start, seg._end, utf8_out(i), url_encode(utf8_out(i)) ))
+          local cand_uci_m = Candidate("number", seg.start, seg._end, utf8_out(i), url_encode(utf8_out(i)) )
+          cand_uci_m.preedit = "`e " .. uc_i
+          yield(cand_uci_m)
         end
       end
       return
@@ -6424,13 +6436,17 @@ function t2_translator(input, seg)
         fmt = "&#".."%d"..";"
       end
       -- 單獨查找
-      yield(Candidate("number", seg.start, seg._end, utf8_out(c), string.format(fmt, c) ))
+      local cand_ui_s = Candidate("number", seg.start, seg._end, utf8_out(c), string.format(fmt, c) )
+      cand_ui_s.preedit = "'/" .. snd .. " " .. string.upper(string.sub(input, 4))
+      yield(cand_ui_s)
       -- 區間查找
       -- if c*n_bit+n_bit-1 < 1048575 then
       --   for i = c*n_bit, c*n_bit+n_bit-1 do
       if c+16 < 1048575 then
         for i = c+1, c+16 do
-          yield(Candidate("number", seg.start, seg._end, utf8_out(i), string.format(fmt, i) ))
+          local cand_ui_m = Candidate("number", seg.start, seg._end, utf8_out(i), string.format(fmt, i) )
+          cand_ui_m.preedit = "'/" .. snd .. " " .. string.upper(string.sub(input, 4))
+          yield(cand_ui_m)
         end
       end
     end
@@ -6446,10 +6462,14 @@ function t2_translator(input, seg)
         url_c_input = url_c_input .. '0'
       end
       local url_10 = url_decode(url_c_input)
+      local uc_i = string.upper(string.sub(input, 4, 5)) .. " " .. string.upper(string.sub(input, 6, 7)) .. " " .. string.upper(string.sub(input, 8, 9)) .. " " .. string.upper(string.sub(input, 10, 11)) .. " " .. string.upper(string.sub(input, 12, 13)) .. " " .. string.upper(string.sub(input, 14, 15))
+      local uc_i = string.gsub(uc_i, " +$", "" )
       if string.match(url_10, "無此編碼") ~= nil then
         yield(Candidate("number", seg.start, seg._end, url_10, '' ))
       elseif string.match(url_c_input, "^[0-9a-z]$") ~= nil then
-        yield(Candidate("number", seg.start, seg._end, url_10, url_10 ))
+        local cand_uci_a = Candidate("number", seg.start, seg._end, url_10, url_10 )
+        cand_uci_a.preedit = "'/e " .. uc_i
+        yield(cand_uci_a)
       else
         -- local u_c = string.upper(url_c_input)
         -- local u_c = string.gsub(u_c, '^', '%%')
@@ -6461,13 +6481,17 @@ function t2_translator(input, seg)
         -- local u_c = string.gsub(u_c, '^(..)(.?.?)(.?.?)(.?.?)(.?.?)(.?.?)$', '%%%1%%%2%%%3%%%4%%%5%%%6')
         -- local u_c = string.gsub(u_c, '[%%]+$', '')
         -- yield(Candidate("number", seg.start, seg._end, utf8_out(url_10), u_c ))
-        yield(Candidate("number", seg.start, seg._end, utf8_out(url_10), url_encode(utf8_out(url_10)) ))
+        local cand_uci_s = Candidate("number", seg.start, seg._end, utf8_out(url_10), url_encode(utf8_out(url_10)) )
+        cand_uci_s.preedit = "'/e " .. uc_i
+        yield(cand_uci_s)
       end
       -- if url_10*10+10-1 < 1048575 then
       --   for i = url_10*10, url_10*10+10-1 do
       if url_10+16 < 1048575 then
         for i = url_10+1, url_10+16 do
-          yield(Candidate("number", seg.start, seg._end, utf8_out(i), url_encode(utf8_out(i)) ))
+          local cand_uci_m = Candidate("number", seg.start, seg._end, utf8_out(i), url_encode(utf8_out(i)) )
+          cand_uci_m.preedit = "'/e " .. uc_i
+          yield(cand_uci_m)
         end
       end
       return
