@@ -1954,6 +1954,8 @@ min_phrase_weight: 100
 楻	heng2
 鱂	chang1
 鳉	chang1
+抙	fu1	0%
+抙	pou1	0%
 ##### @201912 比對教育部相關字詞典檔所新增 #####
 丁	zheng1	0.1%
 丂	kao3	0.1%
@@ -111072,4 +111074,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 111075 #####
+##### @結束 END - 111077 #####
