@@ -7,7 +7,7 @@
 # 本詞庫刪除純「假名」之詞彙。純「假名」詞庫為「phrases.jp_hk」。
 ---
 name: phrases.jp_hkkreduce
-version: "202106"
+version: "202107"
 sort: by_weight #original
 use_preset_vocabulary: false
 columns:
@@ -31650,7 +31650,6 @@ columns:
 祀る
 祀れ
 祀ろ
-祇園
 祈い
 祈っ
 祈ら
@@ -38325,7 +38324,6 @@ columns:
 諸家
 諸山
 諸岡
-諸島
 諸川
 諸市
 諸師
