@@ -1,0 +1,464 @@
+# Rime schema settings
+# encoding: utf-8
+
+schema:
+  schema_id: onion-array30
+  name: "▦ 行列３０（洋蔥版）"
+  version: "202107"
+  author:
+    - 洋蔥
+  description: |
+    行列
+  dependencies:
+    - onion-array30-wsymbols
+    - bopomo_onion
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 中文, 英文 ]
+  - name: full_shape
+    states: [ 半形, 全形 ]
+  - name: ascii_punct
+    reset: 0
+    states: [ "。，", "．，" ]
+  - name: simplification
+    states: [ 繁體, 简体 ]
+  - name: extended_charset
+    reset: 1
+    states: [ "常用", "增廣" ]
+  - name: array30_filter
+    reset: 1
+#    states: [ 無, 註 ]
+  - name: simplify_comment
+    reset: 0
+    states: [ 編碼, 無編 ]
+
+simplifier:
+  tips: all
+
+engine:
+  filters:
+    # - lua_filter@array30filter
+    - simplifier@array30_filter
+    - simplifier
+    - reverse_lookup_filter@array30_reverse_lookup
+    - lua_filter@comment_filter_plus
+    - reverse_lookup_filter@array30-zy_reverse_lookup
+    - reverse_lookup_filter@bpmf_reverse_lookup
+    # - uniquifier
+    # - single_char_filter
+  processors:
+    - lua_processor@array30up
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+#    - fluency_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor #一定要放在「affix_segmentor」前
+    - affix_segmentor@wsymbols
+    - affix_segmentor@reverse2_lookup
+    - affix_segmentor@reverse3_lookup
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    # - script_translator
+    - table_translator
+    - table_translator@wsymbols
+    - script_translator@reverse2_lookup
+    - table_translator@reverse3_lookup
+    - lua_translator@t_translator
+    - lua_translator@email_translator
+    - lua_translator@urlw_translator
+
+array30_filter:
+  opencc_config: array30_nil.json
+  option_name: array30_filter
+  tags: [ abc ]
+
+menu:
+  alternative_select_keys: "1234567890"
+  page_size: 10
+
+speller:
+  alphabet: "abcdefghijklmnopqrstuvwxyz,./; "
+  initials: "abcdefghijklmnopqrstuvwxyz,./;"
+  finals: " "
+  delimiter: "\\"
+  use_space: true
+  auto_select: true
+  auto_select_pattern: '^[wtasfhlxv] $|^[a-z,./;]{2} $' #|[a-z,./;]{3} |[a-z,./;]{4} |[a-z,./;]{4}i '
+  algebra:
+    - xform/@/ /
+    - derive|^([a-z,./;]{3})$|$1 |
+    - derive|^([a-z,./;]{4})$|$1 |
+    - derive|^([a-z,./;]{4}i)$|$1 |
+    # "?"萬用字元（部署不了!）
+    # - derive/^(.).$/$1\?/               # .?
+    # - derive/^.(.)$/\?$1/               # ?.
+    # - derive/^(.)(.).$/$1$2\?/          # ..?
+    # - derive/^(.).(.)$/$1\?$2/          # .?.
+    # - derive/^(.)..$/$1\?\?/            # .??
+    # - derive/^.(.)(.)$/\?$1$2/          # ?..
+    # - derive/^.(.).$/\?$1\?/            # ?.?
+    # - derive/^..(.)$/\?\?$1/            # ??.
+    # - derive/^(.)(.)(.).$/$1$2$3\?/     # ...?
+    # - derive/^(.)(.).(.)$/$1$2\?$3/     # ..?.
+    # - derive/^(.)(.)..$/$1$2\?\?/       # ..??
+    # - derive/^(.).(.)(.)$/$1\?$2$3/     # .?..
+    # - derive/^(.).(.).$/$1\?$2\?/       # .?.?
+    # - derive/^(.)..(.)$/$1\?\?$2/       # .??.
+    # - derive/^(.)...$/$1\?\?\?/         # .???
+    # - derive/^.(.)(.)(.)$/\?$1$2$3/     # ?...
+    # - derive/^.(.)(.).$/\?$1$2\?/       # ?..?
+    # - derive/^.(.).(.)$/\?$1\?$2/       # ?.?.
+    # - derive/^.(.)..$/\?$1\?\?/         # ?.??
+    # - derive/^..(.)(.)$/\?\?$1$2/       # ??..
+    # - derive/^..(.).$/\?\?$1\?/         # ??.?
+    # - derive/^...(.)$/\?\?\?$1/         # ???.
+
+
+translator:
+  dictionary: onion-array30.extended
+  prism: onion-array30
+  enable_charset_filter: true
+  enable_user_dict: false #true
+  enable_sentence: false #true ##此為自動造句，為打詞時，使用全拼。
+  enable_encoder: false #true ##打詞時，可使用簡略打法，簡略打法的規則在字典中設定。
+  encode_commit_history: false #true
+  # strict_spelling: true #false #配合speller中的fuzz規則，僅以畧拼碼組詞〔僅table_translator有效？〕實際好像script_translator才有效？
+  # max_phrase_length: 7 #4
+  enable_completion: false #逐碼提示
+  # initial_quality: 1000
+  # db_class: tabledb #userdb
+  preedit_format:
+    - xform/a/1-/
+    - xform/b/5⇣/
+    - xform/c/3⇣/
+    - xform/d/3-/
+    - xform/e/3⇡/
+    - xform/f/4-/
+    - xform/g/5-/
+    - xform/h/6-/
+    - xform/i/8⇡/
+    - xform/j/7-/
+    - xform/k/8-/
+    - xform/l/9-/
+    - xform/m/7⇣/
+    - xform/n/6⇣/
+    - xform/o/9⇡/
+    - xform/p/0⇡/
+    - xform/q/1⇡/
+    - xform/r/4⇡/
+    - xform/s/2-/
+    - xform/t/5⇡/
+    - xform/u/7⇡/
+    - xform/v/4⇣/
+    - xform/w/2⇡/
+    - xform/x/2⇣/
+    - xform/y/6⇡/
+    - xform/z/1⇣/
+    - xform|\.|9⇣|
+    - xform|\/|0⇣|
+    - xform|;|0-|
+    - xform|\,|8⇣|
+  comment_format:
+    - 'xform|^.+ zx$||'
+    - xform/a/1-/
+    - xform/b/5⇣/
+    - xform/c/3⇣/
+    - xform/d/3-/
+    - xform/e/3⇡/
+    - xform/f/4-/
+    - xform/g/5-/
+    - xform/h/6-/
+    - xform/i/8⇡/
+    - xform/j/7-/
+    - xform/k/8-/
+    - xform/l/9-/
+    - xform/m/7⇣/
+    - xform/n/6⇣/
+    - xform/o/9⇡/
+    - xform/p/0⇡/
+    - xform/q/1⇡/
+    - xform/r/4⇡/
+    - xform/s/2-/
+    - xform/t/5⇡/
+    - xform/u/7⇡/
+    - xform/v/4⇣/
+    - xform/w/2⇡/
+    - xform/x/2⇣/
+    - xform/y/6⇡/
+    - xform/z/1⇣/
+    - xform|\.|9⇣|
+    - xform|\/|0⇣|
+    - xform|;|0-|
+    - xform|\,|8⇣|
+    - xform/^/ /
+    - xform/ /  /
+    - xform/@/▫/
+
+
+array30_reverse_lookup:
+  tags: [ abc ]
+  overwrite_comment: false
+  dictionary: onion-array30.extended
+  comment_format:
+    - 'xform|^.{100}.+||'
+    - xform/a/1-/
+    - xform/b/5⇣/
+    - xform/c/3⇣/
+    - xform/d/3-/
+    - xform/e/3⇡/
+    - xform/f/4-/
+    - xform/g/5-/
+    - xform/h/6-/
+    - xform/i/8⇡/
+    - xform/j/7-/
+    - xform/k/8-/
+    - xform/l/9-/
+    - xform/m/7⇣/
+    - xform/n/6⇣/
+    - xform/o/9⇡/
+    - xform/p/0⇡/
+    - xform/q/1⇡/
+    - xform/r/4⇡/
+    - xform/s/2-/
+    - xform/t/5⇡/
+    - xform/u/7⇡/
+    - xform/v/4⇣/
+    - xform/w/2⇡/
+    - xform/x/2⇣/
+    - xform/y/6⇡/
+    - xform/z/1⇣/
+    - xform|\.|9⇣|
+    - xform|\/|0⇣|
+    - xform|;|0-|
+    - xform|\,|8⇣|
+    - xform/^/ /
+    - xform/ /  /
+    - xform/@/▫/
+
+
+wsymbols:
+  tag: wsymbols
+  dictionary: onion-array30-wsymbols
+  enable_completion: false
+  enable_sentence: false
+  enable_user_dict: false
+  preedit_format:
+    - xform/^/〔符〕/
+
+
+################################### 使用注音反查行列 ######################################
+reverse2_lookup:
+  tag: reverse2_lookup
+  dictionary: "bopomo_onion.extended"
+  prism: "bopomo_onion"
+  enable_completion: false
+  enable_sentence: false
+  enable_user_dict: true
+  prefix: "="
+  suffix: "'"
+  tips: "《注音反查》▶"
+  closing_tips: "◀《注音反查》"
+  preedit_format:
+    - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-6347 |ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙ˉ|"
+    - xform/^/《注音反查》/
+    - xform/\\/  /
+
+array30-zy_reverse_lookup:
+  tags: [ reverse2_lookup ]
+  overwrite_comment: false
+  dictionary: onion-array30.extended
+  comment_format:
+    - 'xform|^.{100}.+||'
+    - xform/a/1-/
+    - xform/b/5⇣/
+    - xform/c/3⇣/
+    - xform/d/3-/
+    - xform/e/3⇡/
+    - xform/f/4-/
+    - xform/g/5-/
+    - xform/h/6-/
+    - xform/i/8⇡/
+    - xform/j/7-/
+    - xform/k/8-/
+    - xform/l/9-/
+    - xform/m/7⇣/
+    - xform/n/6⇣/
+    - xform/o/9⇡/
+    - xform/p/0⇡/
+    - xform/q/1⇡/
+    - xform/r/4⇡/
+    - xform/s/2-/
+    - xform/t/5⇡/
+    - xform/u/7⇡/
+    - xform/v/4⇣/
+    - xform/w/2⇡/
+    - xform/x/2⇣/
+    - xform/y/6⇡/
+    - xform/z/1⇣/
+    - xform|\.|9⇣|
+    - xform|\/|0⇣|
+    - xform|;|0-|
+    - xform|\,|8⇣|
+    - xform/^/ /
+    - xform/ /  /
+    - xform/@/▫/
+
+################################### 使用行列反查注音碼 ######################################
+reverse3_lookup:
+  __include: /translator
+  tag: reverse3_lookup
+  prefix: "=="
+  suffix: "'"
+  tips: "《查注音》▶"
+  closing_tips: "◀《查注音》"
+  extra_tags:
+    - reverse3_lookup_extra
+  preedit_format:
+    - xform/^/《查注音》/
+    - xform/a/1-/
+    - xform/b/5⇣/
+    - xform/c/3⇣/
+    - xform/d/3-/
+    - xform/e/3⇡/
+    - xform/f/4-/
+    - xform/g/5-/
+    - xform/h/6-/
+    - xform/i/8⇡/
+    - xform/j/7-/
+    - xform/k/8-/
+    - xform/l/9-/
+    - xform/m/7⇣/
+    - xform/n/6⇣/
+    - xform/o/9⇡/
+    - xform/p/0⇡/
+    - xform/q/1⇡/
+    - xform/r/4⇡/
+    - xform/s/2-/
+    - xform/t/5⇡/
+    - xform/u/7⇡/
+    - xform/v/4⇣/
+    - xform/w/2⇡/
+    - xform/x/2⇣/
+    - xform/y/6⇡/
+    - xform/z/1⇣/
+    - xform|\.|9⇣|
+    - xform|\/|0⇣|
+    - xform|;|0-|
+    - xform|\,|8⇣|
+    # - xform/\\/  /
+
+bpmf_reverse_lookup:
+  tags: [ reverse3_lookup ]
+  dictionary: "bopomo_onion.extended"
+  overwrite_comment: true
+  comment_format:
+    - xform/iu/iou/
+    - xform/ui/uei/
+    - xform/ong/ung/
+    - xform/yi?/i/
+    - xform/wu?/u/
+    - xform/iu/v/
+    - xform/([jqx])u/$1v/
+    - xform/([iuv])n/$1en/
+    - xform/zhi?/Z/
+    - xform/chi?/C/
+    - xform/shi?/S/
+    - xform/([zcsr])i/$1/
+    - xform/ai/A/
+    - xform/ei/I/
+    - xform/ao/O/
+    - xform/ou/U/
+    - xform/ang/K/
+    - xform/eng/G/
+    - xform/an/M/
+    - xform/en/N/
+    - xform/er/R/
+    - xform/eh/E/
+    - xform/([iv])e/$1E/
+    - xform/1/ˉ/
+    - 'xlit|bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR2345|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙|'
+    - xform/^/ /
+    - xform/ /  /
+#    - xform/ /] [/
+#    - xform/^/  [/
+#    - xform/$/]/
+
+
+punctuator:
+  # import_preset: default
+  full_shape:
+    "`" : [ "｀" ]
+    "=" : [ "＝" ]
+  half_shape:
+    "`" : [ "`" ]
+    "=" : [ "=" ]
+
+key_binder:
+  # import_preset: default
+  bindings:
+### 避 RIME 原設定鍵位衝突 ###
+    - {accept: comma, send: comma, when: has_menu}
+    - {accept: comma, send: comma, when: paging}
+    - {accept: period, send: period, when: has_menu}
+    - {accept: period, send: period, when: paging}
+    - {accept: minus, send: minus, when: has_menu}
+    - {accept: minus, send: minus, when: paging}
+    - {accept: equal, send: equal, when: has_menu}
+    - {accept: equal, send: equal, when: paging}
+#    - {accept: equal, send: equal, when: always}
+### 選字翻頁 ###
+    - {accept: Left, send: Page_Up, when: paging}
+    - {accept: Right, send: Page_Down, when: paging}
+#    - {accept: Up, send: Page_Up, when: paging} #橫式選單用
+#    - {accept: Down, send: Page_Down, when: paging} #橫式選單用
+#    - {accept: Left, send: Left, when: has_menu} #橫式選單用 #send: Shift+Up
+#    - {accept: Right, send: Right, when: has_menu} #橫式選單用 #send: Shift+Down #send: Right
+    - {accept: Shift+Down, send: Page_Down, when: has_menu} #選字時「Shift」+「下」翻頁。
+    - {accept: Shift+Up, send: Page_Up, when: paging} #選字時「Shift」+「上」翻頁。
+    - {accept: Tab, send: Page_Down, when: has_menu} #「tab」翻頁。
+    - {accept: Shift+Tab, send: Page_Up, when: paging} #選字時「Shift」+「tab」翻頁。
+    - {accept: Shift+space, send: Page_Down, when: has_menu} #選字時「Shift」+「空白鍵」翻頁。 #send: Right #send: Down
+### 空白鍵 ###
+    - {accept: space, send: Escape, when: composing} #空碼清屏用
+    - {accept: space, send: space, when: has_menu} #補上一條產生之bug
+    - {accept: space, send: KP_Space, when: paging} #方向鍵選字時，space直接上屏（避免被一聲空格影響）
+###  新增下排功能快捷鍵 ###
+    # - { when: always, accept: Shift+space, toggle: ascii_mode }
+    - { when: always, accept: Control+comma, toggle: ascii_mode } #新增！
+#    - { when: always, accept: Control+Shift+space, toggle: ascii_mode } #新增！
+#    - { when: always, accept: Control+Shift+comma, toggle: ascii_mode } #新增！
+    - { when: always, accept: Control+period, toggle: full_shape } #新增！
+#    - { when: always, accept: Control+Shift+period, toggle: full_shape } #新增！
+    - { when: always, accept: Control+semicolon, toggle: simplification } #新增！
+#    - { when: always, accept: Control+Shift+slash, toggle: simplification } #新增！
+    - { when: always, accept: Control+slash, toggle: ascii_punct } #新增！
+    - {accept: Control+apostrophe, toggle: extended_charset, when: always } #增廣常用字符過濾，新增開關
+    - {accept: Control+equal, toggle: simplify_comment, when: always } #編碼提示開關
+
+editor:
+  bindings:
+    KP_Space: confirm
+
+recognizer:
+  patterns:
+    wsymbols: "^[w][0-9]$"
+    reverse2_lookup: "^=[-.,;/0-9a-z ]*'?$"
+    reverse3_lookup: "^==[a-z,./; ]*'?$"
+    lua: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|^`[;/']?[a-z]*$|^`[;/']?[0-9/-]*$|^`[xcoe][0-9a-z]+$"
+    # email: "^[a-z][-_.0-9a-z]*@.*$"
+    # url: "^(www[.]|https?:|ftp:|mailto:).*$"
+
+style:
+  inline_preedit: true

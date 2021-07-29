@@ -32,6 +32,7 @@
 --
 --      《 ＊ 以下「處理」注意在 processors 中的順序，基本放在最前面 》
 --      - lua_processor@endspace             -- 韓語（非英語等）空格鍵後添加" "
+--      - lua_processor@array30up            -- 列30三四碼字按空格直接上屏
 --      - lua_processor@ascii_punct_change   -- 注音非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
 --      - lua_processor@s2r_ss               -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（只有開頭 ^'/ 才作用，比下條目更精簡，少了 is_composing 限定）
 --      - lua_processor@s2r_s                -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（只有開頭 ^'/ 才作用）
@@ -345,6 +346,30 @@ end
 
 
 
+-- function array30filter(input, seg)
+--     for cand in input:iter() do
+--       -- local cccc = cand.text
+--       if (string.find(cand.text, '^⎔2$' )) or (not string.find(cand.text, '^⎔2$' )) then
+-- -- or (not string.find(cand.text, '^⎔2$' ))
+--         -- local cccc = string.gsub(cand.text, "^⎔2$", "⎔")
+--         -- yield(Candidate("date", seg.start, seg._end, string.gsub(cand.text, "^⎔2$", "⎔") , "〔日期〕"))
+--       -- if (not string.find(cand.text, '.*᰼᰼.*' )) then
+--         -- yield(cand)
+--           -- local cand_array30 = Candidate("number", seg.start, seg._end, string.gsub(cand.text, "^⎔2$", "⎔"), '' )
+--           -- cand_uci_m.preedit = "'/e " .. uc_i
+--       -- cand.text = '⎔'
+-- -- cand:get_genuine().comment = cand.comment .. "@"
+-- -- string.gsub(cand.text, "^⎔2$", "⎔")
+--         local cand = Candidate('date', seg.start, seg._end, '@@@', '@@@@')
+--           yield(cand)
+
+--       end
+--     end
+--   -- return nil
+-- end
+
+
+
 
 --[[
 --------------------------------------------
@@ -384,6 +409,33 @@ function endspace(key, env)
       -- engine.commit_text(engine, s_orig .. "a")
       -- engine:commit_text(s_orig .. "a")
       engine:commit_text(s_orig .. " ") --「return 1」時用
+      -- engine:commit_text(s_orig) --「return 0」「return 2」時用
+      context:clear()
+      return 1 -- kAccepted
+      -- 「0」「2」「kAccepted」「kRejected」「kNoop」：直接後綴產生空白
+      -- 「1」：後綴不會產生空白，可用.." "增加空白或其他符號
+      -- （該條目有問題，實測對應不起來）「拒」kRejected、「收」kAccepted、「不認得」kNoop，分別對應返回值：0、1、2。
+      -- 返回「拒絕」時，雖然我們已經處理過按鍵了，但系統以為沒有，於是會按默認值再處理一遍。
+    end
+  end
+  return 2 -- kNoop
+end
+
+
+
+--- @@ 行列30上屏
+--[[
+行列30三四碼字按空格直接上屏
+--]]
+function array30up(key, env)
+  local engine = env.engine
+  local context = engine.context
+  if (key:repr() == "space") and (context:has_menu()) then
+    local caret_pos = context.caret_pos
+    local array_s_orig = context:get_commit_text()
+    local array_o_input = context.input
+    if (string.find(array_o_input, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(array_o_input, "^`.+$")) then
+      engine:commit_text(array_s_orig) --「return 1」時用
       -- engine:commit_text(s_orig) --「return 0」「return 2」時用
       context:clear()
       return 1 -- kAccepted
@@ -6727,3 +6779,25 @@ end
 
 
 
+
+
+--- @@ 英漢辭典掛載
+local english = require("english")()
+english_processor = english.processor
+english_segmentor = english.segmentor
+english_translator = english.translator
+english_filter = english.filter
+english_filter0 = english.filter0
+
+---須仰賴外掛python程式，不建議使用
+--local easy_en = require("easy_en")
+--easy_en_enhance_filter = easy_en.enhance_filter
+
+local easy_en_2 = require("easy_en_2")
+append_blank_filter = easy_en_2.append_blank_filter
+
+--- 內碼輸入法掛載（改用內建）
+-- unicode_translator = require("unicode_translator")
+
+-- local data_time = require("data_time")
+-- date4_translator = data_time.date4_translator
