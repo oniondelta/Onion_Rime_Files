@@ -37,6 +37,9 @@
 
 - [電腦 RIME 輸入法〖 地球拼音 洋蔥mix‧in多國語言-擴充版 〗](https://deltazone.pixnet.net/blog/post/353697089)
 
+- [電腦-RIME 設定檔〖 洋蔥版 行列30 〗](https://deltazone.pixnet.net/blog/post/361766142)
+
+
 ### Demo：
 
 - 注音 洋蔥 mix-in 版
