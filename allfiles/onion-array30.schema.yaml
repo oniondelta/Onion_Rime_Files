@@ -89,15 +89,16 @@ menu:
   page_size: 10
 
 speller:
-  alphabet: "abcdefghijklmnopqrstuvwxyz,./; "
+  alphabet: "abcdefghijklmnopqrstuvwxyz,./; '"
   initials: "abcdefghijklmnopqrstuvwxyz,./;"
-  finals: " "
+  finals: " '"
   delimiter: "\\"
   use_space: true
   auto_select: true
   auto_select_pattern: '^[wtasfhlxv] $|^[a-z,./;]{2} $' #|[a-z,./;]{3} |[a-z,./;]{4} |[a-z,./;]{4}i '
   algebra:
     - xform/@/ /
+    - derive|^([a-z,./;]+)'$|$1| #詞庫
     - derive|^([a-z,./;]{3})$|$1 |
     - derive|^([a-z,./;]{4})$|$1 |
     - derive|^([a-z,./;]{4}i)$|$1 |
