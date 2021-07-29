@@ -485,6 +485,8 @@ os.rename('./sort_rime/ocm/ocm_plus/', './sort_rime/ocm/ocm_plus_'+localtime)
 os.rename('./sort_rime/ocm/ocm_mount/', './sort_rime/ocm/ocm_mount_'+localtime)
 os.rename('./sort_rime/ocm/', './sort_rime/ocm_'+localtime)
 
+os.rename('./sort_rime/洋蔥行列30/', './sort_rime/洋蔥行列30_'+localtime)
+
 os.rename('./sort_rime/', './電腦RIME方案_'+localtime)
 
 
