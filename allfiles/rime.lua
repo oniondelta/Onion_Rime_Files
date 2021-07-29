@@ -6776,28 +6776,3 @@ end
 
 
 
-
-
-
-
-
---- @@ 英漢辭典掛載
-local english = require("english")()
-english_processor = english.processor
-english_segmentor = english.segmentor
-english_translator = english.translator
-english_filter = english.filter
-english_filter0 = english.filter0
-
----須仰賴外掛python程式，不建議使用
---local easy_en = require("easy_en")
---easy_en_enhance_filter = easy_en.enhance_filter
-
-local easy_en_2 = require("easy_en_2")
-append_blank_filter = easy_en_2.append_blank_filter
-
---- 內碼輸入法掛載（改用內建）
--- unicode_translator = require("unicode_translator")
-
--- local data_time = require("data_time")
--- date4_translator = data_time.date4_translator
