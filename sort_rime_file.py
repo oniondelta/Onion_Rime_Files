@@ -12,6 +12,7 @@ os.makedirs('./sort_rime/地球拼音洋蔥mix-in版/opencc/', exist_ok=True)
 os.makedirs('./sort_rime/ocm/ocm_mixin/opencc/', exist_ok=True)
 os.makedirs('./sort_rime/ocm/ocm_plus/opencc/', exist_ok=True)
 os.makedirs('./sort_rime/ocm/ocm_mount/', exist_ok=True)
+os.makedirs('./sort_rime/洋蔥行列30/opencc/', exist_ok=True)
 
 
 #複製檔案(注音洋蔥純注音版)
@@ -429,6 +430,34 @@ shutil.copyfile("./allfiles/kanaword.dict.yaml", "./sort_rime/ocm/ocm_mount/kana
 shutil.copyfile("./allfiles/rime.lua", "./sort_rime/ocm/ocm_mount/rime.lua")
 
 shutil.copyfile("./allfiles/各方案default.custom/ocm_mount_custom/default.custom.yaml", "./sort_rime/ocm/ocm_mount/default.custom.yaml")
+
+
+#複製檔案(洋蔥行列30)
+shutil.copyfile("./allfiles/essay-zh-hant-onion.txt", "./sort_rime/洋蔥行列30/essay-zh-hant-onion.txt")
+shutil.copyfile("./allfiles/bopomo_onion_phrase.txt", "./sort_rime/洋蔥行列30/bopomo_onion_phrase.txt")
+shutil.copyfile("./allfiles/bopomo_onion_symbols.yaml", "./sort_rime/洋蔥行列30/bopomo_onion_symbols.yaml")
+shutil.copyfile("./allfiles/bopomo_onion.extended.dict.yaml", "./sort_rime/洋蔥行列30/bopomo_onion.extended.dict.yaml")
+shutil.copyfile("./allfiles/bopomo_onion.schema.yaml", "./sort_rime/洋蔥行列30/bopomo_onion.schema.yaml")
+shutil.copyfile("./allfiles/cangjie5.dict.yaml", "./sort_rime/洋蔥行列30/cangjie5.dict.yaml")
+shutil.copyfile("./allfiles/cangjie5.schema.yaml", "./sort_rime/洋蔥行列30/cangjie5.schema.yaml")
+shutil.copyfile("./allfiles/terra_pinyin_onion_add.dict.yaml", "./sort_rime/洋蔥行列30/terra_pinyin_onion_add.dict.yaml")
+shutil.copyfile("./allfiles/terra_pinyin_onion.dict.yaml", "./sort_rime/洋蔥行列30/terra_pinyin_onion.dict.yaml")
+
+shutil.copyfile("./allfiles/onion-array30.schema.yaml", "./sort_rime/洋蔥行列30/onion-array30.schema.yaml")
+shutil.copyfile("./allfiles/onion-array30-wsymbols.schema.yaml", "./sort_rime/洋蔥行列30/onion-array30-wsymbols.schema.yaml")
+shutil.copyfile("./allfiles/onion-array30.extended.dict.yaml", "./sort_rime/洋蔥行列30/onion-array30.extended.dict.yaml")
+shutil.copyfile("./allfiles/onion-array30-wsymbols.dict.yaml", "./sort_rime/洋蔥行列30/onion-array30-wsymbols.dict.yaml")
+shutil.copyfile("./allfiles/onion-array30-special.dict.yaml", "./sort_rime/洋蔥行列30/onion-array30-special.dict.yaml")
+shutil.copyfile("./allfiles/onion-array30-shortcode.dict.yaml", "./sort_rime/洋蔥行列30/onion-array30-shortcode.dict.yaml")
+shutil.copyfile("./allfiles/onion-array30-phrases.dict.yaml", "./sort_rime/洋蔥行列30/onion-array30-phrases.dict.yaml")
+shutil.copyfile("./allfiles/onion-array30-generally.dict.yaml", "./sort_rime/洋蔥行列30/onion-array30-generally.dict.yaml")
+
+shutil.copyfile("./allfiles/opencc/array30_nil.json", "./sort_rime/洋蔥行列30/opencc/array30_nil.json")
+shutil.copyfile("./allfiles/opencc/array30_nil.txt", "./sort_rime/洋蔥行列30/opencc/array30_nil.txt")
+
+shutil.copyfile("./allfiles/rime.lua", "./sort_rime/洋蔥行列30/rime.lua")
+
+shutil.copyfile("./allfiles/各方案default.custom/洋蔥行列30_custom/default.custom.yaml", "./sort_rime/洋蔥行列30/default.custom.yaml")
 
 
 #其他
