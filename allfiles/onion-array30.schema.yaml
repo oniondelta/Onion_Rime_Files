@@ -82,7 +82,7 @@ engine:
 array30_filter:
   opencc_config: array30_nil.json
   option_name: array30_filter
-  tags: [ abc ]
+  tags: [ abc, reverse3_lookup ]
 
 menu:
   alternative_select_keys: "1234567890"
