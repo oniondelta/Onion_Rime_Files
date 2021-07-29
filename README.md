@@ -1,4 +1,4 @@
-# Onion_Rime_Files（電腦 Rime 注音&拼音 洋蔥 方案）
+# Onion_Rime_Files（電腦 Rime 注音、拼音、行列30 洋蔥 方案）
 
 ####  ※ 請勿使用於商業營利相關行為
 ####  ※ Commercial use is prohibited
