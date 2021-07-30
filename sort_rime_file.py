@@ -12,7 +12,7 @@ os.makedirs('./sort_rime/地球拼音洋蔥mix-in版/opencc/', exist_ok=True)
 os.makedirs('./sort_rime/ocm/ocm_mixin/opencc/', exist_ok=True)
 os.makedirs('./sort_rime/ocm/ocm_plus/opencc/', exist_ok=True)
 os.makedirs('./sort_rime/ocm/ocm_mount/', exist_ok=True)
-os.makedirs('./sort_rime/洋蔥行列30/opencc/', exist_ok=True)
+os.makedirs('./sort_rime/洋蔥行列30/', exist_ok=True)
 
 
 #複製檔案(注音洋蔥純注音版)
@@ -451,9 +451,6 @@ shutil.copyfile("./allfiles/onion-array30-special.dict.yaml", "./sort_rime/洋�
 shutil.copyfile("./allfiles/onion-array30-shortcode.dict.yaml", "./sort_rime/洋蔥行列30/onion-array30-shortcode.dict.yaml")
 shutil.copyfile("./allfiles/onion-array30-phrases.dict.yaml", "./sort_rime/洋蔥行列30/onion-array30-phrases.dict.yaml")
 shutil.copyfile("./allfiles/onion-array30-generally.dict.yaml", "./sort_rime/洋蔥行列30/onion-array30-generally.dict.yaml")
-
-shutil.copyfile("./allfiles/opencc/array30_nil.json", "./sort_rime/洋蔥行列30/opencc/array30_nil.json")
-shutil.copyfile("./allfiles/opencc/array30_nil.txt", "./sort_rime/洋蔥行列30/opencc/array30_nil.txt")
 
 shutil.copyfile("./allfiles/rime.lua", "./sort_rime/洋蔥行列30/rime.lua")
 
