@@ -6,12 +6,13 @@ schema:
   name: "▦ 行列３０（洋蔥版）"
   version: "202107"
   author:
-    - 洋蔥
+    - 洋蔥 <deltazonetw@gmail.com>
   description: |
-    行列
+    行列30
   dependencies:
     - onion-array30-wsymbols
     - bopomo_onion
+
 
 switches:
   - name: ascii_mode
@@ -27,23 +28,17 @@ switches:
   - name: extended_charset
     reset: 1
     states: [ "常用", "增廣" ]
-  - name: array30_filter
-    reset: 1
-#    states: [ 無, 註 ]
   - name: simplify_comment
     reset: 0
     states: [ 編碼, 無編 ]
 
-simplifier:
-  tips: all
 
 engine:
   filters:
-    # - lua_filter@array30filter
-    - simplifier@array30_filter
     - simplifier
     - reverse_lookup_filter@array30_reverse_lookup
     - lua_filter@comment_filter_plus
+    - lua_filter@array30_nil_filter
     - reverse_lookup_filter@array30-zy_reverse_lookup
     - reverse_lookup_filter@bpmf_reverse_lookup
     # - uniquifier
@@ -79,15 +74,17 @@ engine:
     - lua_translator@email_translator
     - lua_translator@urlw_translator
 
-array30_filter:
-  opencc_config: array30_nil.json
-  option_name: array30_filter
-  tags: [ abc, reverse3_lookup ]
+
+simplifier:
+  tips: all
+
 
 menu:
   alternative_select_keys: "1234567890"
   page_size: 10
 
+
+##### 拼寫處理器 #####
 speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz,./; '"
   initials: "abcdefghijklmnopqrstuvwxyz,./;"
@@ -127,6 +124,7 @@ speller:
     # - derive/^...(.)$/\?\?\?$1/         # ???.
 
 
+##### 行列30主翻譯器 #####
 translator:
   dictionary: onion-array30.extended
   prism: onion-array30
@@ -249,6 +247,7 @@ array30_reverse_lookup:
     - xform/@/▫/
 
 
+##### 掛接行列30符號 #####
 wsymbols:
   tag: wsymbols
   dictionary: onion-array30-wsymbols
@@ -259,7 +258,7 @@ wsymbols:
     - xform/^/〔符〕/
 
 
-################################### 使用注音反查行列 ######################################
+##### 使用注音反查行列30碼 #####
 reverse2_lookup:
   tag: reverse2_lookup
   dictionary: "bopomo_onion.extended"
@@ -275,6 +274,7 @@ reverse2_lookup:
     - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-6347 |ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙ˉ|"
     - xform/^/《注音反查》/
     - xform/\\/  /
+
 
 array30-zy_reverse_lookup:
   tags: [ reverse2_lookup ]
@@ -316,7 +316,8 @@ array30-zy_reverse_lookup:
     - xform/ /  /
     - xform/@/▫/
 
-################################### 使用行列反查注音碼 ######################################
+
+##### 使用行列30反查注音碼 #####
 reverse3_lookup:
   __include: /translator
   tag: reverse3_lookup
@@ -360,6 +361,7 @@ reverse3_lookup:
     - xform|\,|8⇣|
     # - xform/\\/  /
 
+
 bpmf_reverse_lookup:
   tags: [ reverse3_lookup ]
   dictionary: "bopomo_onion.extended"
@@ -397,6 +399,7 @@ bpmf_reverse_lookup:
 #    - xform/$/]/
 
 
+##### 標點符號 #####
 punctuator:
   # import_preset: default
   full_shape:
@@ -406,8 +409,10 @@ punctuator:
     "`" : [ "`" ]
     "=" : [ "=" ]
 
+
+##### 按鍵設定 #####
 key_binder:
-  # import_preset: default
+  import_preset: default
   bindings:
 ### 避 RIME 原設定鍵位衝突 ###
     - {accept: comma, send: comma, when: has_menu}
@@ -448,10 +453,14 @@ key_binder:
     - {accept: Control+apostrophe, toggle: extended_charset, when: always } #增廣常用字符過濾，新增開關
     - {accept: Control+equal, toggle: simplify_comment, when: always } #編碼提示開關
 
+
+##### 按鍵綁定 #####
 editor:
   bindings:
     KP_Space: confirm
 
+
+##### 段落識別器 #####
 recognizer:
   patterns:
     wsymbols: "^[w][0-9]$"
@@ -461,5 +470,7 @@ recognizer:
     # email: "^[a-z][-_.0-9a-z]*@.*$"
     # url: "^(www[.]|https?:|ftp:|mailto:).*$"
 
+
 style:
   inline_preedit: true
+

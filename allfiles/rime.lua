@@ -29,10 +29,11 @@
 --      - lua_filter@single_char_filter      -- 候選項重排序，使單字優先
 --      - lua_filter@reverse_lookup_filter   -- 依地球拼音為候選項加上帶調拼音的註釋
 --      - lua_filter@myfilter                -- （有不明函數，暫關閉）
+--      - lua_filter@array30_nil_filter      -- 行列30空碼'⎔'轉成不輸出任何符號，符合原生
 --
 --      《 ＊ 以下「處理」注意在 processors 中的順序，基本放在最前面 》
 --      - lua_processor@endspace             -- 韓語（非英語等）空格鍵後添加" "
---      - lua_processor@array30up            -- 列30三四碼字按空格直接上屏
+--      - lua_processor@array30up            -- 行列30三四碼字按空格直接上屏
 --      - lua_processor@ascii_punct_change   -- 注音非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
 --      - lua_processor@s2r_ss               -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（只有開頭 ^'/ 才作用，比下條目更精簡，少了 is_composing 限定）
 --      - lua_processor@s2r_s                -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（只有開頭 ^'/ 才作用）
@@ -346,27 +347,33 @@ end
 
 
 
--- function array30filter(input, seg)
---     for cand in input:iter() do
---       -- local cccc = cand.text
---       if (string.find(cand.text, '^⎔2$' )) or (not string.find(cand.text, '^⎔2$' )) then
--- -- or (not string.find(cand.text, '^⎔2$' ))
---         -- local cccc = string.gsub(cand.text, "^⎔2$", "⎔")
---         -- yield(Candidate("date", seg.start, seg._end, string.gsub(cand.text, "^⎔2$", "⎔") , "〔日期〕"))
---       -- if (not string.find(cand.text, '.*᰼᰼.*' )) then
---         -- yield(cand)
---           -- local cand_array30 = Candidate("number", seg.start, seg._end, string.gsub(cand.text, "^⎔2$", "⎔"), '' )
---           -- cand_uci_m.preedit = "'/e " .. uc_i
---       -- cand.text = '⎔'
--- -- cand:get_genuine().comment = cand.comment .. "@"
--- -- string.gsub(cand.text, "^⎔2$", "⎔")
---         local cand = Candidate('date', seg.start, seg._end, '@@@', '@@@@')
---           yield(cand)
-
---       end
---     end
---   -- return nil
--- end
+--- @@ array30_nil_filter
+--[[
+行列30空碼'⎔'轉成不輸出任何符號，符合原生
+--]]
+function array30_nil_filter(input, env)
+  for cand in input:iter() do
+    -- local cccc = cand.text
+    if (string.find(cand.text, '^⎔%d$' )) then
+      -- local cccc = string.gsub(cand.text, "^⎔2$", "⎔")
+      -- local cand = Candidate('date', seg.start, seg._end, '@@@', '@@@@')
+      -- cand.preedit = input .. '@'
+      -- cand_uci_m.preedit = "'/e " .. uc_i
+      -- cand.text = '⎔'
+      -- cand:get_genuine().text = '@'
+      -- cand:get_genuine().comment = cand.comment .. "⎔"
+      local commit = env.engine.context:get_commit_text()
+      -- local text = cand.text
+      -- yield(Candidate("date", seg.start, seg._end, "⎔" , "〔日期〕"))
+      -- yield(Candidate("date", seg.start, seg._end, string.gsub(cand.text, "^⎔2$", "⎔") , "〔日期〕"))
+      -- yield(Candidate("cap", 0, string.len(commit) , text, cand.comment)) -- 原版樣式
+      yield(Candidate("array30nil", 0, string.len(commit) , "", "⎔")) -- 測試string.len('⎔')等於3
+    else
+      yield(cand)
+    end
+  end
+  -- return nil
+end
 
 
 
@@ -6769,10 +6776,6 @@ end
 --   date_translator(input, seg)
 --   time_translator(input, seg)
 -- end
-
-
-
-
 
 
 
