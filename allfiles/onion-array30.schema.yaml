@@ -259,8 +259,6 @@ reverse3_lookup:
   suffix: "'"
   tips: "《查注音》▶"
   closing_tips: "◀《查注音》"
-  extra_tags:
-    - reverse3_lookup_extra
   preedit_format:
     - xform/^/《查注音》/
     - xform/a/1-/
