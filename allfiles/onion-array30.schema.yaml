@@ -169,6 +169,7 @@ translator:
     - xform|\/|0⇣|
     - xform|;|0-|
     - xform|\,|8⇣|
+    - xform/ /▫/
   comment_format:
     - 'xform|^.+ zx$||'
     - xform/a/1-/
@@ -359,6 +360,7 @@ reverse3_lookup:
     - xform|\/|0⇣|
     - xform|;|0-|
     - xform|\,|8⇣|
+    - xform/ /▫/
     # - xform/\\/  /
 
 
