@@ -353,7 +353,6 @@ end
 --]]
 function array30_nil_filter(input, env)
   for cand in input:iter() do
-    -- local cccc = cand.text
     if (string.find(cand.text, '^⎔%d$' )) then
       -- local cccc = string.gsub(cand.text, "^⎔2$", "⎔")
       -- local cand = Candidate('date', seg.start, seg._end, '@@@', '@@@@')
@@ -363,11 +362,18 @@ function array30_nil_filter(input, env)
       -- cand:get_genuine().text = '@'
       -- cand:get_genuine().comment = cand.comment .. "⎔"
       local commit = env.engine.context:get_commit_text()
+--[[
+      欲定義的 translator 包含三個輸入參數：
+      - input: 待翻譯的字符串
+      - seg: 包含 `start` 和 `_end` 兩個屬性，分別表示當前串在輸入框中的起始和結束位置
+      - env: 可選參數，表示 translator 所處的環境
+--]]
       -- local text = cand.text
       -- yield(Candidate("date", seg.start, seg._end, "⎔" , "〔日期〕"))
       -- yield(Candidate("date", seg.start, seg._end, string.gsub(cand.text, "^⎔2$", "⎔") , "〔日期〕"))
       -- yield(Candidate("cap", 0, string.len(commit) , text, cand.comment)) -- 原版樣式
-      yield(Candidate("array30nil", 0, string.len(commit) , "", "⎔")) -- 測試string.len('⎔')等於3
+      -- yield(Candidate("array30nil", 0, string.len(commit) , "", "⎔")) -- 選擇空碼"⎔"效果為卡住
+      yield(Candidate("array30nil", 0, 2 , "", "⎔")) -- 選擇空碼"⎔"效果為取消 -- 測試string.len('⎔')等於3
     else
       yield(cand)
     end
