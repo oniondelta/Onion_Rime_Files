@@ -9,8 +9,7 @@ patch:
 ######## 洋蔥行列30 ########
     - schema: onion-array30
     - schema: onion-array30-wsymbols
-    - schema: bopomo_onion
-    - schema: cangjie5
+    - schema: Mount_bopomo
 ##############################
 
   switcher/fix_schema_list_order: true #固定方案選單順序
