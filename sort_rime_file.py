@@ -434,12 +434,8 @@ shutil.copyfile("./allfiles/各方案default.custom/ocm_mount_custom/default.cus
 
 #複製檔案(洋蔥行列30)
 shutil.copyfile("./allfiles/essay-zh-hant-onion.txt", "./sort_rime/洋蔥行列30/essay-zh-hant-onion.txt")
-shutil.copyfile("./allfiles/bopomo_onion_phrase.txt", "./sort_rime/洋蔥行列30/bopomo_onion_phrase.txt")
-shutil.copyfile("./allfiles/bopomo_onion_symbols.yaml", "./sort_rime/洋蔥行列30/bopomo_onion_symbols.yaml")
-shutil.copyfile("./allfiles/bopomo_onion.extended.dict.yaml", "./sort_rime/洋蔥行列30/bopomo_onion.extended.dict.yaml")
-shutil.copyfile("./allfiles/bopomo_onion.schema.yaml", "./sort_rime/洋蔥行列30/bopomo_onion.schema.yaml")
-shutil.copyfile("./allfiles/cangjie5.dict.yaml", "./sort_rime/洋蔥行列30/cangjie5.dict.yaml")
-shutil.copyfile("./allfiles/cangjie5.schema.yaml", "./sort_rime/洋蔥行列30/cangjie5.schema.yaml")
+shutil.copyfile("./allfiles/Mount_bopomo.extended.dict.yaml", "./sort_rime/洋蔥行列30/Mount_bopomo.extended.dict.yaml")
+shutil.copyfile("./allfiles/Mount_bopomo.schema.yaml", "./sort_rime/洋蔥行列30/Mount_bopomo.schema.yaml")
 shutil.copyfile("./allfiles/terra_pinyin_onion_add.dict.yaml", "./sort_rime/洋蔥行列30/terra_pinyin_onion_add.dict.yaml")
 shutil.copyfile("./allfiles/terra_pinyin_onion.dict.yaml", "./sort_rime/洋蔥行列30/terra_pinyin_onion.dict.yaml")
 
