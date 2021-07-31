@@ -10,8 +10,8 @@ schema:
   description: |
     行列30
   dependencies:
-    - onion-array30-wsymbols
-    - bopomo_onion
+    - onion-array30-wsymbols #（可用 symbols 更簡單實現，但沒有開頭提示）
+    - Mount_bopomo
 
 
 switches:
@@ -44,7 +44,8 @@ engine:
     # - uniquifier
     # - single_char_filter
   processors:
-    - lua_processor@array30up
+    - lua_processor@array30up #三、四、五碼空白鍵直上屏
+    - lua_processor@array30up_zy #注音反查 Return 和 space 上屏修正。 #架構關係，反查輸入法使用鍵位大於主輸入法，仍會產生 Bug。
     - ascii_composer
     - recognizer
     - key_binder
@@ -58,7 +59,7 @@ engine:
     - ascii_segmentor
     - matcher
     - abc_segmentor #一定要放在「affix_segmentor」前
-    - affix_segmentor@wsymbols
+    - affix_segmentor@wsymbols #（可用 symbols 更簡單實現，但沒有開頭提示）
     - affix_segmentor@reverse2_lookup
     - affix_segmentor@reverse3_lookup
     - punct_segmentor
@@ -67,7 +68,7 @@ engine:
     - punct_translator
     # - script_translator
     - table_translator
-    - table_translator@wsymbols
+    - table_translator@wsymbols #（可用 symbols 更簡單實現，但沒有開頭提示）
     - script_translator@reverse2_lookup
     - table_translator@reverse3_lookup
     - lua_translator@t_translator
@@ -89,10 +90,10 @@ speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz,./; '"
   initials: "abcdefghijklmnopqrstuvwxyz,./;"
   finals: " '"
-  delimiter: "\\"
+  delimiter: "|"
   use_space: true
   auto_select: true
-  auto_select_pattern: '^[wtasfhlxv] $|^[a-z,./;]{2} $' #|[a-z,./;]{3} |[a-z,./;]{4} |[a-z,./;]{4}i '
+  auto_select_pattern: '^[wtasfhlxv] $|^[a-z,./;]{2} $' #|[a-z,./;]{3} |[a-z,./;]{4} |[a-z,./;]{4}i ' #三、四、五碼會有非獨碼，故用 Lua 實現空白鍵直上。
   algebra:
     - xform/@/ /
     - derive|^([a-z,./;]+)'$|$1| #詞庫
@@ -170,7 +171,7 @@ translator:
     - xform|;|0-|
     - xform|\,|8⇣|
     - xform/ /▫/
-    # - xform/\\/  /
+    # - xform/\|/  /
   comment_format: &comment_format
     - 'xform|^.{100}.+||'
     - xform/a/1-/
@@ -215,7 +216,7 @@ array30_reverse_lookup:
   comment_format: *comment_format
 
 
-##### 掛接行列30符號 #####
+##### 掛接行列30符號 #####（可用 symbols 更簡單實現，但沒有開頭提示）
 wsymbols:
   tag: wsymbols
   dictionary: onion-array30-wsymbols
@@ -229,8 +230,8 @@ wsymbols:
 ##### 使用注音反查行列30碼 #####
 reverse2_lookup:
   tag: reverse2_lookup
-  dictionary: "bopomo_onion.extended"
-  prism: "bopomo_onion"
+  dictionary: "Mount_bopomo.extended"
+  # prism: "Mount_bopomo.extended"
   enable_completion: false
   enable_sentence: false
   enable_user_dict: true
@@ -241,7 +242,7 @@ reverse2_lookup:
   preedit_format:
     - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-6347 |ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙ˉ|"
     - xform/^/《注音反查》/
-    - xform/\\/  /
+    - xform/\|/  /
 
 
 array30-zy_reverse_lookup:
@@ -260,44 +261,14 @@ reverse3_lookup:
   tips: "《查注音》▶"
   closing_tips: "◀《查注音》"
   preedit_format:
+    __include: translator/preedit_format
+    __append:
     - xform/^/《查注音》/
-    - xform/a/1-/
-    - xform/b/5⇣/
-    - xform/c/3⇣/
-    - xform/d/3-/
-    - xform/e/3⇡/
-    - xform/f/4-/
-    - xform/g/5-/
-    - xform/h/6-/
-    - xform/i/8⇡/
-    - xform/j/7-/
-    - xform/k/8-/
-    - xform/l/9-/
-    - xform/m/7⇣/
-    - xform/n/6⇣/
-    - xform/o/9⇡/
-    - xform/p/0⇡/
-    - xform/q/1⇡/
-    - xform/r/4⇡/
-    - xform/s/2-/
-    - xform/t/5⇡/
-    - xform/u/7⇡/
-    - xform/v/4⇣/
-    - xform/w/2⇡/
-    - xform/x/2⇣/
-    - xform/y/6⇡/
-    - xform/z/1⇣/
-    - xform|\.|9⇣|
-    - xform|\/|0⇣|
-    - xform|;|0-|
-    - xform|\,|8⇣|
-    - xform/ /▫/
-    # - xform/\\/  /
 
 
 bpmf_reverse_lookup:
   tags: [ reverse3_lookup ]
-  dictionary: "bopomo_onion.extended"
+  dictionary: "Mount_bopomo.extended"
   overwrite_comment: true
   comment_format:
     - xform/iu/iou/
@@ -341,6 +312,17 @@ punctuator:
   half_shape:
     "`" : [ "`" ]
     "=" : [ "=" ]
+  # symbols:
+  #   "w1" : [ "，", "、", "。", "．", "‧", "；", "：", "？", "！", "︰", "…", "‥", "﹐", "﹑", "﹒", "·", "﹔", "﹕", "﹖", "﹗", "｜", "–", "︱", "—", "︳", "╴", "︴", "﹏" ]
+  #   "w2" : [ "（", "）", "︵", "︶", "｛", "｝", "︷", "︸", "〔", "〕", "︹", "︺", "【", "】", "︻", "︼", "《", "》", "︽", "︾", "〈", "〉", "︿", "﹀", "「", "」", "﹁", "﹂", "『", "』", "﹃", "﹄", "﹙", "﹚", "﹛", "﹜", "﹝", "﹞", "‘", "’", "“", "”", "〝", "〞", "‵", "′" ]
+  #   "w3" : [ "＃", "＆", "＊", "※", "§", "〃", "○", "●", "△", "▲", "◎", "☆", "★", "◇", "◆", "□", "■", "▽", "▼", "㊣", "℅", "¯", "￣", "＿", "ˍ", "﹉", "﹊", "﹍", "﹎", "﹋", "﹌", "﹟", "﹠", "﹡" ]
+  #   "w4" : [ "＋", "－", "×", "÷", "±", "√", "＜", "＞", "＝", "≦", "≧", "≠", "∞", "≒", "≡", "﹢", "﹣", "﹤", "﹥", "﹦", "～", "∩", "∪", "⊥", "∠", "∟", "⊿", "㏒", "㏑", "∫", "∮", "∵", "∴" ]
+  #   "w5" : [ "♀", "♂", "⊕", "⊙", "↑", "↓", "←", "→", "↖", "↗", "↙", "↘", "∥", "∣", "／", "＼", "∕", "﹨" ]
+  #   "w6" : [ "＄", "￥", "〒", "￠", "￡", "％", "＠", "℃", "℉", "﹩", "﹪", "﹫", "㏕", "㎜", "㎝", "㎞", "㏎", "㎡", "㎎", "㎏", "㏄", "°", "兙", "兛", "兞", "兝", "兡", "兣", "嗧", "瓩", "糎" ]
+  #   "w7" : [ "▁", "▂", "▃", "▄", "▅", "▆", "▇", "█", "▏", "▎", "▍", "▌", "▋", "▊", "▉", "┼", "┴", "┬", "┤", "├", "▔", "─", "│", "▕", "┌", "┐", "└", "┘", "╭", "╮", "╰", "╯", "═", "╞", "╪", "╡", "◢", "◣", "◥", "◤", "╱", "╲", "╳", "╔", "╦", "╗", "╠", "╬", "╣", "╚", "╩", "╝", "╒", "╤", "╕", "╞", "╪", "╡", "╘", "╧", "╛", "╓", "╥", "╖", "╟", "╫", "╢", "╙", "╨", "╜", "║", "═", "╭", "╮", "╰", "╯", "▓" ]
+  #   "w8" : [ "①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨", "⑩", "⑴", "⑵", "⑶", "⑷", "⑸", "⑹", "⑺", "⑻", "⑼", "⑽", "ⅰ", "ⅱ", "ⅲ", "ⅳ", "ⅴ", "ⅵ", "ⅶ", "ⅷ", "ⅸ", "ⅹ", "Ⅰ", "Ⅱ", "Ⅲ", "Ⅳ", "Ⅴ", "Ⅵ", "Ⅶ", "Ⅷ", "Ⅸ", "Ⅹ", "〡", "〢", "〣", "〤", "〥", "〦", "〧", "〨", "〩", "〸", "〹", "〺" ]
+  #   "w9" : [ "Α", "Β", "Γ", "Δ", "Ε", "Ζ", "Η", "Θ", "Ι", "Κ", "Λ", "Μ", "Ν", "Ξ", "Ο", "Π", "Ρ", "Σ", "Τ", "Υ", "Φ", "Χ", "Ψ", "Ω", "α", "β", "γ", "δ", "ε", "ζ", "η", "θ", "ι", "κ", "λ", "μ", "ν", "ξ", "ο", "π", "ρ", "σ", "τ", "υ", "φ", "χ", "ψ", "ω" ]
+  #   "w0" : [ "ㄅ", "ㄆ", "ㄇ", "ㄈ", "ㄉ", "ㄊ", "ㄋ", "ㄌ", "ㄍ", "ㄎ", "ㄏ", "ㄐ", "ㄑ", "ㄒ", "ㄓ", "ㄔ", "ㄕ", "ㄖ", "ㄗ", "ㄘ", "ㄙ", "ㄚ", "ㄛ", "ㄜ", "ㄝ", "ㄞ", "ㄟ", "ㄠ", "ㄡ", "ㄢ", "ㄣ", "ㄤ", "ㄥ", "ㄦ", "ㄧ", "ㄨ", "ㄩ", "˙", "ˉ", "ˊ", "ˇ", "ˋ" ]
 
 
 ##### 按鍵設定 #####
@@ -372,7 +354,7 @@ key_binder:
 ### 空白鍵 ###
     - {accept: space, send: Escape, when: composing} #空碼清屏用
     - {accept: space, send: space, when: has_menu} #補上一條產生之bug
-    - {accept: space, send: KP_Space, when: paging} #方向鍵選字時，space直接上屏（避免被一聲空格影響）
+    - {accept: space, send: KP_Space, when: paging} #方向鍵選字時，space直接上屏（避免被空格影響）
 ###  新增下排功能快捷鍵 ###
     # - { when: always, accept: Shift+space, toggle: ascii_mode }
     - { when: always, accept: Control+comma, toggle: ascii_mode } #新增！
@@ -396,8 +378,9 @@ editor:
 ##### 段落識別器 #####
 recognizer:
   patterns:
-    wsymbols: "^[w][0-9]$"
-    reverse2_lookup: "^=[-.,;/0-9a-z ]*'?$"
+    # punct: "^[w][0-9]$"
+    wsymbols: "^[w][0-9]$" #（可用 symbols 更簡單實現，但沒有開頭提示）
+    reverse2_lookup: "^=[-.,;/0-9a-z]*'?$"
     reverse3_lookup: "^==[a-z,./; ]*'?$"
     lua: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|^`[;/']?[a-z]*$|^`[;/']?[0-9/-]*$|^`[xcoe][0-9a-z]+$"
     # email: "^[a-z][-_.0-9a-z]*@.*$"

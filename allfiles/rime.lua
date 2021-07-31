@@ -34,6 +34,7 @@
 --      《 ＊ 以下「處理」注意在 processors 中的順序，基本放在最前面 》
 --      - lua_processor@endspace             -- 韓語（非英語等）空格鍵後添加" "
 --      - lua_processor@array30up            -- 行列30三四碼字按空格直接上屏
+--      - lua_processor@array30up_zy         -- 行列30注音反查 Return 和 space 上屏修正
 --      - lua_processor@ascii_punct_change   -- 注音非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
 --      - lua_processor@s2r_ss               -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（只有開頭 ^'/ 才作用，比下條目更精簡，少了 is_composing 限定）
 --      - lua_processor@s2r_s                -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（只有開頭 ^'/ 才作用）
@@ -488,12 +489,37 @@ function array30up(key, env)
   local engine = env.engine
   local context = engine.context
   if (key:repr() == "space") and (context:has_menu()) then
-    local caret_pos = context.caret_pos
+    -- local caret_pos = context.caret_pos
     local array_s_orig = context:get_commit_text()
     local array_o_input = context.input
-    if (string.find(array_o_input, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(array_o_input, "^`.+$")) then
-      engine:commit_text(array_s_orig) --「return 1」時用
-      -- engine:commit_text(s_orig) --「return 0」「return 2」時用
+    if (string.find(array_o_input, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(array_o_input, "^`.+$")) or (string.find(array_o_input, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(array_o_input, "^https?:.*$")) or (string.find(array_o_input, "^ftp:.*$")) or (string.find(array_o_input, "^mailto:.*$")) or (string.find(array_o_input, "^file:.*$")) or (string.find(array_o_input, "^www%..+$")) then
+      engine:commit_text(array_s_orig)
+      context:clear()
+      return 1 -- kAccepted
+      -- 「0」「2」「kAccepted」「kRejected」「kNoop」：直接後綴產生空白
+      -- 「1」：後綴不會產生空白，可用.." "增加空白或其他符號
+      -- （該條目有問題，實測對應不起來）「拒」kRejected、「收」kAccepted、「不認得」kNoop，分別對應返回值：0、1、2。
+      -- 返回「拒絕」時，雖然我們已經處理過按鍵了，但系統以為沒有，於是會按默認值再處理一遍。
+    end
+  end
+  return 2 -- kNoop
+end
+
+
+
+--- @@ 行列30注音反查 Return 和 space 上屏修正
+--[[
+--]]
+function array30up_zy(key, env)
+  local engine = env.engine
+  local context = engine.context
+  if (key:repr() == "Return" or key:repr() == "space" and context:has_menu()) then
+    -- local caret_pos = context.caret_pos
+    local array_s_orig = context:get_commit_text()
+    local array_o_input = context.input
+    -- if (string.find(array_o_input, "^=[a-z0-9 ,.;/-]+$")) and (not string.find(array_s_orig, "[%a%c%s]")) then
+    if (string.find(array_o_input, "^=[a-z0-9,.;/-]+$")) then
+      engine:commit_text(array_s_orig)
       context:clear()
       return 1 -- kAccepted
       -- 「0」「2」「kAccepted」「kRejected」「kNoop」：直接後綴產生空白
