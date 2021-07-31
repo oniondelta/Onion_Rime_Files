@@ -60,7 +60,8 @@ engine:
     - uniquifier
   processors:
     - lua_processor@ascii_punct_change
-    - lua_processor@s2r
+    - lua_processor@s2r_most
+#     - lua_processor@s2r
     - ascii_composer
     - recognizer
     - key_binder
