@@ -4,7 +4,7 @@
 schema:
   schema_id: bo_mixin3
   name: "☆注音(洋蔥mix-in版 3 )☆〔  '  [  ]  →拉日韓〕"
-  version: "202106"
+  version: "202107"
   author:
     - 『洋蔥』
   description: |
@@ -63,7 +63,7 @@ engine:
     - uniquifier
   processors:
     - lua_processor@ascii_punct_change
-    - lua_processor@s2r3
+    - lua_processor@s2r_mixin3
     - ascii_composer
     - recognizer
     - key_binder
