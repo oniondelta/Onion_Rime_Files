@@ -36,11 +36,13 @@
 --      - lua_processor@array30up            -- 行列30三四碼字按空格直接上屏
 --      - lua_processor@array30up_zy         -- 行列30注音反查 Return 和 space 上屏修正
 --      - lua_processor@ascii_punct_change   -- 注音非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
+--      === 以下針對「編碼有用到空白鍵」方案，如：注音一聲，去除空白上屏產生莫名之空格 ===
 --      - lua_processor@s2r_ss               -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（只有開頭 ^'/ 才作用，比下條目更精簡，少了 is_composing 限定）
 --      - lua_processor@s2r_s                -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（只有開頭 ^'/ 才作用）
 --      - lua_processor@s2r                  -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin(1,2,4)和 plus 用）
---      - lua_processor@s2r3                 -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin3 (特殊正則)專用）
 --      - lua_processor@s2r_e_u              -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（只針對 email 和 url ）
+--      - lua_processor@s2r_mixin3           -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin3 (特殊正則)專用）
+--      - lua_processor@s2r_most             -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin(1,2,4)和 plus 用，精簡寫法）
 --      ...
 
 
@@ -586,6 +588,7 @@ function s2r_s(key, env)
   local context = engine.context
   -- local page_size = engine.schema.page_size
   if (key:repr() == 'space') and (context:is_composing()) then
+  -- if (key:repr() == 'space') and (context:has_menu()) then
     local s_orig = context:get_commit_text()
     local o_input = context.input
     if (string.find(o_input, "^'/")) then
@@ -603,35 +606,11 @@ function s2r(key, env)
   local context = engine.context
   -- local page_size = engine.schema.page_size
   if (key:repr() == 'space') and (context:is_composing()) then
+  -- if (key:repr() == 'space') and (context:has_menu()) then
     local o_input = context.input
     if (string.find(o_input, "'/")) then
       if (string.find(o_input, "'/[';/]?[a-z]*$")) or (string.find(o_input, "'/[0-9/-]*$")) or (string.find(o_input, "'/[xcoe][0-9a-z]+$")) then
 -- or string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$") or string.find(o_input, "^https?:.*$") or string.find(o_input, "^ftp:.*$") or string.find(o_input, "^mailto:.*$") or string.find(o_input, "^file:.*$")
-        local s_orig = context:get_commit_text()
-        engine:commit_text(s_orig)
-        context:clear()
-        return 1 -- kAccepted
-      end
-    end
-  end
-  return 2 -- kNoop
-end
-
---- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（特別正則 for mixin3）
-function s2r3(key, env)
-  local engine = env.engine
-  local context = engine.context
-  -- local page_size = engine.schema.page_size
-  if (key:repr() == 'space') and (context:is_composing()) then
-    local o_input = context.input
-    if (string.find(o_input, "'/")) then
-      if (string.find(o_input, "^'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[-,./;a-z125890][][3467%s]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "''/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][0-9]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][][]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][][][][]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][-,.;=`]'/[';/]?[a-z0-9/-]*$")) or (string.find(o_input, "[=][-,.;'=`][-,.;'=`]'/[';/]?[a-z0-9/-]*$")) then
--- or string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$") or string.find(o_input, "^https?:.*$") or string.find(o_input, "^ftp:.*$") or string.find(o_input, "^mailto:.*$") or string.find(o_input, "^file:.*$")
---
--- 無效的正則，不去影響一般輸入：
--- string.find(o_input, "[=][-,.;'=`]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][']'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][][][']'/[';/]?[a-z0-9/-]*$") 
--- 原始全部正則：
--- "^'/[';/]?[a-z0-9/-]*$|(?<=[-,./;a-z125890][][3467 ])'/[';/]?[a-z0-9/-]*$|(?<=['])'/[';/]?[a-z0-9/-]*$|(?<=[=][0-9])'/[';/]?[a-z0-9/-]*$|(?<=[=][][])'/[';/]?[a-z0-9/-]*$|(?<=[=][][][][])'/[';/]?[a-z0-9/-]*$|(?<=[=][-,.;'=`])'/[';/]?[a-z0-9/-]*$|(?<=[=][-,.;'=`][-,.;'=`])'/[';/]?[a-z0-9/-]*$|(?<=[][])'/[';/]?[a-z0-9/-]*$|(?<=[][][][])'/[';/]?[a-z0-9/-]*$|(?<=[][]['])'/[';/]?[a-z0-9/-]*$|(?<=[][][][]['])'/[';/]?[a-z0-9/-]*$"
         local s_orig = context:get_commit_text()
         engine:commit_text(s_orig)
         context:clear()
@@ -648,6 +627,7 @@ function s2r_e_u(key, env)
   local context = engine.context
   -- local page_size = engine.schema.page_size
   if (key:repr() == 'space') and (context:is_composing()) then
+  -- if (key:repr() == 'space') and (context:has_menu()) then
     local o_input = context.input
     if (string.find(o_input, "[@:]")) then
       if (string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(o_input, "^https?:.*$")) or (string.find(o_input, "^ftp:.*$")) or (string.find(o_input, "^mailto:.*$")) or (string.find(o_input, "^file:.*$")) then
@@ -656,6 +636,52 @@ function s2r_e_u(key, env)
         context:clear()
         return 1 -- kAccepted
       end
+    end
+  end
+  return 2 -- kNoop
+end
+
+--- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（特別正則 for mixin3）
+function s2r_mixin3(key, env)
+  local engine = env.engine
+  local context = engine.context
+  -- local page_size = engine.schema.page_size
+  if (key:repr() == 'space') and (context:is_composing()) then
+  -- if (key:repr() == 'space') and (context:has_menu()) then
+    local o_input = context.input
+    -- if (string.find(o_input, "'/")) then
+
+      if ( string.find(o_input, "[@:]") or string.find(o_input, "^'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[-,./;a-z125890][][3467%s]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "''/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[=][0-9]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[=][][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[=][][][][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[=][-,.;=`]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[=][-,.;'=`][-,.;'=`]'/[';/]?[a-z0-9/-]*$") ) then
+-- or string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$") or string.find(o_input, "^https?:.*$") or string.find(o_input, "^ftp:.*$") or string.find(o_input, "^mailto:.*$") or string.find(o_input, "^file:.*$")
+--
+-- 無效的正則，不去影響一般輸入：
+-- string.find(o_input, "[=][-,.;'=`]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][']'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][][][']'/[';/]?[a-z0-9/-]*$") 
+-- 原始全部正則：
+-- "^'/[';/]?[a-z0-9/-]*$|(?<=[-,./;a-z125890][][3467 ])'/[';/]?[a-z0-9/-]*$|(?<=['])'/[';/]?[a-z0-9/-]*$|(?<=[=][0-9])'/[';/]?[a-z0-9/-]*$|(?<=[=][][])'/[';/]?[a-z0-9/-]*$|(?<=[=][][][][])'/[';/]?[a-z0-9/-]*$|(?<=[=][-,.;'=`])'/[';/]?[a-z0-9/-]*$|(?<=[=][-,.;'=`][-,.;'=`])'/[';/]?[a-z0-9/-]*$|(?<=[][])'/[';/]?[a-z0-9/-]*$|(?<=[][][][])'/[';/]?[a-z0-9/-]*$|(?<=[][]['])'/[';/]?[a-z0-9/-]*$|(?<=[][][][]['])'/[';/]?[a-z0-9/-]*$"
+        local s_orig = context:get_commit_text()
+        engine:commit_text(s_orig)
+        context:clear()
+        return 1 -- kAccepted
+      end
+
+    -- end
+  end
+  return 2 -- kNoop
+end
+
+--- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（ mixin(1,2,4)和 plus 用，精簡寫法）
+function s2r_most(key, env)
+  local engine = env.engine
+  local context = engine.context
+  -- local page_size = engine.schema.page_size
+  if (key:repr() == 'space') and (context:is_composing()) then
+  -- if (key:repr() == 'space') and (context:has_menu()) then
+    local o_input = context.input
+    if ( string.find(o_input, "[@:]") or string.find(o_input, "'/") ) then
+        local s_orig = context:get_commit_text()
+        engine:commit_text(s_orig)
+        context:clear()
+        return 1 -- kAccepted
     end
   end
   return 2 -- kNoop
