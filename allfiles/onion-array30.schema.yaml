@@ -225,6 +225,7 @@ wsymbols:
   enable_user_dict: false
   preedit_format:
     - xform/^/〔符〕/
+    - xform/w/2⇡/
 
 
 ##### 使用注音反查行列30碼 #####
@@ -367,6 +368,8 @@ key_binder:
     - { accept: Control+slash, toggle: ascii_punct, when: always } #新增！
     - { accept: Control+apostrophe, toggle: extended_charset, when: always } #增廣常用字符過濾，新增開關
     - { accept: Control+equal, toggle: simplify_comment, when: always } #編碼提示開關
+### Return/Enter鍵 ###
+    # - {accept: Return, send: space, when: has_menu} #Return/Enter鍵同空白鍵上屏中文
 
 
 ##### 按鍵綁定 #####
