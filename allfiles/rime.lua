@@ -5251,9 +5251,15 @@ function t_translator(input, seg)
       - comment: 候選項的注釋
       --]]
       yield(Candidate("number", seg.start, seg._end, numberout .. dot1 .. afterdot , "〔一般數字〕"))
-      -- local k = string.sub(numberout, 1, -1) -- 取參數
-      local result = formatnumberthousands(numberout) --- 調用算法
-      yield(Candidate("number", seg.start, seg._end, result .. dot1 .. afterdot , "〔千分位〕"))
+
+      if (string.len(numberout) < 4) then
+        yield(Candidate("number", seg.start, seg._end, "," , "〔千分位〕"))
+      else
+        -- local k = string.sub(numberout, 1, -1) -- 取參數
+        local result = formatnumberthousands(numberout) --- 調用算法
+        yield(Candidate("number", seg.start, seg._end, result .. dot1 .. afterdot , "〔千分位〕"))
+      end
+
       yield(Candidate("number", seg.start, seg._end, string.format("%E", numberout .. dot1 .. afterdot ), "〔科學計數〕"))
       yield(Candidate("number", seg.start, seg._end, string.format("%e", numberout .. dot1 .. afterdot ), "〔科學計數〕"))
       yield(Candidate("number", seg.start, seg._end, math1_number(numberout) .. dot1 .. math1_number(afterdot), "〔數學粗體數字〕"))
@@ -5268,7 +5274,12 @@ function t_translator(input, seg)
           local r = read_number(conf, nn)
           yield(Candidate("number", seg.start, seg._end, r, conf.comment))
         end
-        yield(Candidate("number", seg.start, seg._end, purech_number(numberout), "〔純中文數字〕"))
+
+        if (string.len(numberout) < 2) then
+          yield(Candidate("number", seg.start, seg._end, "元整", "〔純中文數字〕"))
+        else
+          yield(Candidate("number", seg.start, seg._end, purech_number(numberout), "〔純中文數字〕"))
+        end
 
         yield(Candidate("number", seg.start, seg._end, circled1_number(numberout), "〔帶圈數字〕"))
         yield(Candidate("number", seg.start, seg._end, circled2_number(numberout), "〔帶圈無襯線數字〕"))
@@ -5276,7 +5287,12 @@ function t_translator(input, seg)
         yield(Candidate("number", seg.start, seg._end, circled4_number(numberout), "〔反白帶圈無襯線數字〕"))
         yield(Candidate("number", seg.start, seg._end, circled5_number(numberout), "〔帶圈中文數字〕"))
 
-        yield(Candidate("number", seg.start, seg._end, Dec2bin(numberout), "〔二進位〕"))
+        if (numberout=='1') or (numberout=='0') then
+          yield(Candidate("number", seg.start, seg._end, numberout, "〔二進位〕"))
+        else
+          yield(Candidate("number", seg.start, seg._end, Dec2bin(numberout), "〔二進位〕"))
+        end
+
         yield(Candidate("number", seg.start, seg._end, string.format("%X",numberout), "〔十六進位〕"))
         yield(Candidate("number", seg.start, seg._end, string.format("%x",numberout), "〔十六進位〕"))
         yield(Candidate("number", seg.start, seg._end, string.format("%o",numberout), "〔八進位〕"))
@@ -6799,9 +6815,15 @@ function t2_translator(input, seg)
       - comment: 候選項的注釋
       --]]
       yield(Candidate("number", seg.start, seg._end, numberout .. dot1 .. afterdot , "〔一般數字〕"))
-      -- local k = string.sub(numberout, 1, -1) -- 取參數
-      local result = formatnumberthousands(numberout) --- 調用算法
-      yield(Candidate("number", seg.start, seg._end, result .. dot1 .. afterdot , "〔千分位〕"))
+
+      if (string.len(numberout) < 4) then
+        yield(Candidate("number", seg.start, seg._end, "," , "〔千分位〕"))
+      else
+        -- local k = string.sub(numberout, 1, -1) -- 取參數
+        local result = formatnumberthousands(numberout) --- 調用算法
+        yield(Candidate("number", seg.start, seg._end, result .. dot1 .. afterdot , "〔千分位〕"))
+      end
+
       yield(Candidate("number", seg.start, seg._end, string.format("%E", numberout .. dot1 .. afterdot ), "〔科學計數〕"))
       yield(Candidate("number", seg.start, seg._end, string.format("%e", numberout .. dot1 .. afterdot ), "〔科學計數〕"))
       yield(Candidate("number", seg.start, seg._end, math1_number(numberout) .. dot1 .. math1_number(afterdot), "〔數學粗體數字〕"))
@@ -6816,7 +6838,12 @@ function t2_translator(input, seg)
           local r = read_number(conf, nn)
           yield(Candidate("number", seg.start, seg._end, r, conf.comment))
         end
-        yield(Candidate("number", seg.start, seg._end, purech_number(numberout), "〔純中文數字〕"))
+
+        if (string.len(numberout) < 2) then
+          yield(Candidate("number", seg.start, seg._end, "元整", "〔純中文數字〕"))
+        else
+          yield(Candidate("number", seg.start, seg._end, purech_number(numberout), "〔純中文數字〕"))
+        end
 
         yield(Candidate("number", seg.start, seg._end, circled1_number(numberout), "〔帶圈數字〕"))
         yield(Candidate("number", seg.start, seg._end, circled2_number(numberout), "〔帶圈無襯線數字〕"))
@@ -6824,7 +6851,12 @@ function t2_translator(input, seg)
         yield(Candidate("number", seg.start, seg._end, circled4_number(numberout), "〔反白帶圈無襯線數字〕"))
         yield(Candidate("number", seg.start, seg._end, circled5_number(numberout), "〔帶圈中文數字〕"))
 
-        yield(Candidate("number", seg.start, seg._end, Dec2bin(numberout), "〔二進位〕"))
+        if (numberout=='1') or (numberout=='0') then
+          yield(Candidate("number", seg.start, seg._end, numberout, "〔二進位〕"))
+        else
+          yield(Candidate("number", seg.start, seg._end, Dec2bin(numberout), "〔二進位〕"))
+        end
+
         yield(Candidate("number", seg.start, seg._end, string.format("%X",numberout), "〔十六進位〕"))
         yield(Candidate("number", seg.start, seg._end, string.format("%x",numberout), "〔十六進位〕"))
         yield(Candidate("number", seg.start, seg._end, string.format("%o",numberout), "〔八進位〕"))
