@@ -28,7 +28,7 @@
 --      - lua_filter@charset_comment_filter  -- 為候選項註釋其所屬字符集，如：CJK、ExtA
 --      - lua_filter@single_char_filter      -- 候選項重排序，使單字優先
 --      - lua_filter@reverse_lookup_filter   -- 依地球拼音為候選項加上帶調拼音的註釋
---      - lua_filter@myfilter                -- （有不明函數，暫關閉）
+--      - lua_filter@myfilter                -- 把 charset_comment_filter 和 reverse_lookup_filter 串在一起，如 CJK(hǎo)
 --      - lua_filter@array30_nil_filter      -- 行列30空碼'⎔'轉成不輸出任何符號，符合原生
 --
 --      《 ＊ 以下「處理」注意在 processors 中的順序，基本放在最前面 》
@@ -310,10 +310,10 @@ function reverse_lookup_filter(input)
 end
 
 --- composition
--- function myfilter(input)
---   local input2 = Translation(charset_comment_filter, input)
---   reverse_lookup_filter(input2)
--- end
+function myfilter(input)
+  local input2 = Translation(charset_comment_filter, input)
+  reverse_lookup_filter(input2)
+end
 
 
 
