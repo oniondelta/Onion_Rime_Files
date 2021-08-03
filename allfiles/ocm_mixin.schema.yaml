@@ -9,7 +9,7 @@ schema:
 
   name: "❖超級混合蝦米(mix-in)❖"
   schema_id: ocm_mixin
-  version: "202107"
+  version: "202108"
   dependencies:
     - punct_ovff
     - symbols_ocm
@@ -673,4 +673,4 @@ recognizer:
     cyr: "^['][]][a-z';]*$"
     fs: "^['][=][-a-z';]*$"
     all_bpm: "^';'[-a-z0-9.,/;']*$"
-    lua: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|^'/[';/]?[a-z]*$|^'/[0-9/-]*$|^'/[xcoe][0-9a-z]+$"
+    lua: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|^'/[';/]?[a-z]*$|^'/[0-9./-]*$|^'/[xcoe][0-9a-z]+$"

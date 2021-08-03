@@ -609,7 +609,7 @@ function s2r(key, env)
   -- if (key:repr() == 'space') and (context:has_menu()) then
     local o_input = context.input
     if (string.find(o_input, "'/")) then
-      if (string.find(o_input, "'/[';/]?[a-z]*$")) or (string.find(o_input, "'/[0-9/-]*$")) or (string.find(o_input, "'/[xcoe][0-9a-z]+$")) then
+      if (string.find(o_input, "'/[';/]?[a-z]*$")) or (string.find(o_input, "'/[0-9./-]*$")) or (string.find(o_input, "'/[xcoe][0-9a-z]+$")) then
 -- or string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$") or string.find(o_input, "^https?:.*$") or string.find(o_input, "^ftp:.*$") or string.find(o_input, "^mailto:.*$") or string.find(o_input, "^file:.*$")
         local s_orig = context:get_commit_text()
         engine:commit_text(s_orig)
@@ -651,7 +651,7 @@ function s2r_mixin3(key, env)
     local o_input = context.input
     -- if (string.find(o_input, "'/")) then
 
-      if ( string.find(o_input, "[@:]") or string.find(o_input, "^'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[-,./;a-z125890][][3467%s]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "''/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[=][0-9]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[=][][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[=][][][][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[=][-,.;=`]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[=][-,.;'=`][-,.;'=`]'/[';/]?[a-z0-9/-]*$") ) then
+      if ( string.find(o_input, "[@:]") or string.find(o_input, "^'/[';/]?[a-z0-9./-]*$") or string.find(o_input, "[-,./;a-z125890][][3467%s]'/[';/]?[a-z0-9./-]*$") or string.find(o_input, "''/[';/]?[a-z0-9./-]*$") or string.find(o_input, "[=][0-9]'/[';/]?[a-z0-9./-]*$") or string.find(o_input, "[=][][]'/[';/]?[a-z0-9./-]*$") or string.find(o_input, "[=][][][][]'/[';/]?[a-z0-9./-]*$") or string.find(o_input, "[=][-,.;=`]'/[';/]?[a-z0-9./-]*$") or string.find(o_input, "[=][-,.;'=`][-,.;'=`]'/[';/]?[a-z0-9./-]*$") ) then
 -- or string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$") or string.find(o_input, "^https?:.*$") or string.find(o_input, "^ftp:.*$") or string.find(o_input, "^mailto:.*$") or string.find(o_input, "^file:.*$")
 --
 -- 無效的正則，不去影響一般輸入：
@@ -5238,25 +5238,10 @@ function t_translator(input, seg)
       return
     end
 
-    local numberout = string.match(input, "`(%d+)$")
+    -- local numberout = string.match(input, "'//?(%d+)$")
+    local numberout, dot1, afterdot = string.match(input, "`(%d+)(%.?)(%d*)$")
     local nn = string.sub(numberout, 1)
     if (numberout~=nil) and (tonumber(nn)) ~= nil then
-      yield(Candidate("number", seg.start, seg._end, numberout , "〔一般數字〕"))
-      yield(Candidate("number", seg.start, seg._end, fullshape_number(numberout), "〔全形數字〕"))
-      yield(Candidate("number", seg.start, seg._end, math1_number(numberout), "〔數學粗體數字〕"))
-      yield(Candidate("number", seg.start, seg._end, math2_number(numberout), "〔數學空心數字〕"))
-      yield(Candidate("number", seg.start, seg._end, little1_number(numberout), "〔上標數字〕"))
-      yield(Candidate("number", seg.start, seg._end, little2_number(numberout), "〔下標數字〕"))
-      yield(Candidate("number", seg.start, seg._end, circled1_number(numberout), "〔帶圈數字〕"))
-      yield(Candidate("number", seg.start, seg._end, circled2_number(numberout), "〔帶圈無襯線數字〕"))
-      yield(Candidate("number", seg.start, seg._end, circled3_number(numberout), "〔反白帶圈數字〕"))
-      yield(Candidate("number", seg.start, seg._end, circled4_number(numberout), "〔反白帶圈無襯線數字〕"))
-      for _, conf in ipairs(confs) do
-        local r = read_number(conf, nn)
-        yield(Candidate("number", seg.start, seg._end, r, conf.comment))
-      end
-      yield(Candidate("number", seg.start, seg._end, purech_number(numberout), "〔純中文數字〕"))
-      yield(Candidate("number", seg.start, seg._end, circled5_number(numberout), "〔帶圈中文數字〕"))
       --[[ 用 yield 產生一個候選項
       候選項的構造函數是 Candidate，它有五個參數：
       - type: 字符串，表示候選項的類型（可隨意取）
@@ -5265,15 +5250,37 @@ function t_translator(input, seg)
       - text:  候選項的文本
       - comment: 候選項的注釋
       --]]
+      yield(Candidate("number", seg.start, seg._end, numberout .. dot1 .. afterdot , "〔一般數字〕"))
       -- local k = string.sub(numberout, 1, -1) -- 取參數
       local result = formatnumberthousands(numberout) --- 調用算法
-      yield(Candidate("number", seg.start, seg._end, result, "〔千分位〕"))
-      yield(Candidate("number", seg.start, seg._end, string.format("%E",numberout), "〔科學計數〕"))
-      yield(Candidate("number", seg.start, seg._end, string.format("%e",numberout), "〔科學計數〕"))
-      yield(Candidate("number", seg.start, seg._end, Dec2bin(numberout), "〔二進位〕"))
-      yield(Candidate("number", seg.start, seg._end, string.format("%X",numberout), "〔十六進位〕"))
-      yield(Candidate("number", seg.start, seg._end, string.format("%x",numberout), "〔十六進位〕"))
-      yield(Candidate("number", seg.start, seg._end, string.format("%o",numberout), "〔八進位〕"))
+      yield(Candidate("number", seg.start, seg._end, result .. dot1 .. afterdot , "〔千分位〕"))
+      yield(Candidate("number", seg.start, seg._end, string.format("%E", numberout .. dot1 .. afterdot ), "〔科學計數〕"))
+      yield(Candidate("number", seg.start, seg._end, string.format("%e", numberout .. dot1 .. afterdot ), "〔科學計數〕"))
+      yield(Candidate("number", seg.start, seg._end, math1_number(numberout) .. dot1 .. math1_number(afterdot), "〔數學粗體數字〕"))
+      yield(Candidate("number", seg.start, seg._end, math2_number(numberout) .. dot1 .. math2_number(afterdot), "〔數學空心數字〕"))
+      yield(Candidate("number", seg.start, seg._end, fullshape_number(numberout) .. dot1 .. fullshape_number(afterdot), "〔全形數字〕"))
+
+      if (dot1~='.') then
+        yield(Candidate("number", seg.start, seg._end, little1_number(numberout), "〔上標數字〕"))
+        yield(Candidate("number", seg.start, seg._end, little2_number(numberout), "〔下標數字〕"))
+
+        for _, conf in ipairs(confs) do
+          local r = read_number(conf, nn)
+          yield(Candidate("number", seg.start, seg._end, r, conf.comment))
+        end
+        yield(Candidate("number", seg.start, seg._end, purech_number(numberout), "〔純中文數字〕"))
+
+        yield(Candidate("number", seg.start, seg._end, circled1_number(numberout), "〔帶圈數字〕"))
+        yield(Candidate("number", seg.start, seg._end, circled2_number(numberout), "〔帶圈無襯線數字〕"))
+        yield(Candidate("number", seg.start, seg._end, circled3_number(numberout), "〔反白帶圈數字〕"))
+        yield(Candidate("number", seg.start, seg._end, circled4_number(numberout), "〔反白帶圈無襯線數字〕"))
+        yield(Candidate("number", seg.start, seg._end, circled5_number(numberout), "〔帶圈中文數字〕"))
+
+        yield(Candidate("number", seg.start, seg._end, Dec2bin(numberout), "〔二進位〕"))
+        yield(Candidate("number", seg.start, seg._end, string.format("%X",numberout), "〔十六進位〕"))
+        yield(Candidate("number", seg.start, seg._end, string.format("%x",numberout), "〔十六進位〕"))
+        yield(Candidate("number", seg.start, seg._end, string.format("%o",numberout), "〔八進位〕"))
+      end
       return
     end
 
@@ -6780,25 +6787,9 @@ function t2_translator(input, seg)
     end
 
     -- local numberout = string.match(input, "'//?(%d+)$")
-    local numberout = string.match(input, "'/(%d+)$")
+    local numberout, dot1, afterdot = string.match(input, "'/(%d+)(%.?)(%d*)$")
     local nn = string.sub(numberout, 1)
     if (numberout~=nil) and (tonumber(nn)) ~= nil then
-      yield(Candidate("number", seg.start, seg._end, numberout , "〔一般數字〕"))
-      yield(Candidate("number", seg.start, seg._end, fullshape_number(numberout), "〔全形數字〕"))
-      yield(Candidate("number", seg.start, seg._end, math1_number(numberout), "〔數學粗體數字〕"))
-      yield(Candidate("number", seg.start, seg._end, math2_number(numberout), "〔數學空心數字〕"))
-      yield(Candidate("number", seg.start, seg._end, little1_number(numberout), "〔上標數字〕"))
-      yield(Candidate("number", seg.start, seg._end, little2_number(numberout), "〔下標數字〕"))
-      yield(Candidate("number", seg.start, seg._end, circled1_number(numberout), "〔帶圈數字〕"))
-      yield(Candidate("number", seg.start, seg._end, circled2_number(numberout), "〔帶圈無襯線數字〕"))
-      yield(Candidate("number", seg.start, seg._end, circled3_number(numberout), "〔反白帶圈數字〕"))
-      yield(Candidate("number", seg.start, seg._end, circled4_number(numberout), "〔反白帶圈無襯線數字〕"))
-      for _, conf in ipairs(confs) do
-        local r = read_number(conf, nn)
-        yield(Candidate("number", seg.start, seg._end, r, conf.comment))
-      end
-      yield(Candidate("number", seg.start, seg._end, purech_number(numberout), "〔純中文數字〕"))
-      yield(Candidate("number", seg.start, seg._end, circled5_number(numberout), "〔帶圈中文數字〕"))
       --[[ 用 yield 產生一個候選項
       候選項的構造函數是 Candidate，它有五個參數：
       - type: 字符串，表示候選項的類型（可隨意取）
@@ -6807,15 +6798,37 @@ function t2_translator(input, seg)
       - text:  候選項的文本
       - comment: 候選項的注釋
       --]]
+      yield(Candidate("number", seg.start, seg._end, numberout .. dot1 .. afterdot , "〔一般數字〕"))
       -- local k = string.sub(numberout, 1, -1) -- 取參數
       local result = formatnumberthousands(numberout) --- 調用算法
-      yield(Candidate("number", seg.start, seg._end, result, "〔千分位〕"))
-      yield(Candidate("number", seg.start, seg._end, string.format("%E",numberout), "〔科學計數〕"))
-      yield(Candidate("number", seg.start, seg._end, string.format("%e",numberout), "〔科學計數〕"))
-      yield(Candidate("number", seg.start, seg._end, Dec2bin(numberout), "〔二進位〕"))
-      yield(Candidate("number", seg.start, seg._end, string.format("%X",numberout), "〔十六進位〕"))
-      yield(Candidate("number", seg.start, seg._end, string.format("%x",numberout), "〔十六進位〕"))
-      yield(Candidate("number", seg.start, seg._end, string.format("%o",numberout), "〔八進位〕"))
+      yield(Candidate("number", seg.start, seg._end, result .. dot1 .. afterdot , "〔千分位〕"))
+      yield(Candidate("number", seg.start, seg._end, string.format("%E", numberout .. dot1 .. afterdot ), "〔科學計數〕"))
+      yield(Candidate("number", seg.start, seg._end, string.format("%e", numberout .. dot1 .. afterdot ), "〔科學計數〕"))
+      yield(Candidate("number", seg.start, seg._end, math1_number(numberout) .. dot1 .. math1_number(afterdot), "〔數學粗體數字〕"))
+      yield(Candidate("number", seg.start, seg._end, math2_number(numberout) .. dot1 .. math2_number(afterdot), "〔數學空心數字〕"))
+      yield(Candidate("number", seg.start, seg._end, fullshape_number(numberout) .. dot1 .. fullshape_number(afterdot), "〔全形數字〕"))
+
+      if (dot1~='.') then
+        yield(Candidate("number", seg.start, seg._end, little1_number(numberout), "〔上標數字〕"))
+        yield(Candidate("number", seg.start, seg._end, little2_number(numberout), "〔下標數字〕"))
+
+        for _, conf in ipairs(confs) do
+          local r = read_number(conf, nn)
+          yield(Candidate("number", seg.start, seg._end, r, conf.comment))
+        end
+        yield(Candidate("number", seg.start, seg._end, purech_number(numberout), "〔純中文數字〕"))
+
+        yield(Candidate("number", seg.start, seg._end, circled1_number(numberout), "〔帶圈數字〕"))
+        yield(Candidate("number", seg.start, seg._end, circled2_number(numberout), "〔帶圈無襯線數字〕"))
+        yield(Candidate("number", seg.start, seg._end, circled3_number(numberout), "〔反白帶圈數字〕"))
+        yield(Candidate("number", seg.start, seg._end, circled4_number(numberout), "〔反白帶圈無襯線數字〕"))
+        yield(Candidate("number", seg.start, seg._end, circled5_number(numberout), "〔帶圈中文數字〕"))
+
+        yield(Candidate("number", seg.start, seg._end, Dec2bin(numberout), "〔二進位〕"))
+        yield(Candidate("number", seg.start, seg._end, string.format("%X",numberout), "〔十六進位〕"))
+        yield(Candidate("number", seg.start, seg._end, string.format("%x",numberout), "〔十六進位〕"))
+        yield(Candidate("number", seg.start, seg._end, string.format("%o",numberout), "〔八進位〕"))
+      end
       return
     end
 
@@ -6878,6 +6891,199 @@ end
 --   date_translator(input, seg)
 --   time_translator(input, seg)
 -- end
+
+
+
+
+
+
+
+
+
+--[[
+！！！！！！！！！！！！！！以下通配符測試！！！！！！！！！！！！！！
+--]]
+-- function ww_translator( input, seg, env)
+--   local aadb = ReverseDb("build/onion-array30.extended.reverse.bin")
+--   -- local aadb = DictEntry("build/onion-array30.extended.reverse.bin")
+--   -- local aadb = dictLookup("build/onion-array30.extended.table.bin")
+--   -- local aadb = ReverseDb("build/onion-array30.extended.table.bin")
+--   -- local aadb = Translation("build/onion-array30.extended.table.bin")
+--   -- local aadb = Candidate("build/onion-array30.extended.table.bin")
+--   local kkk, qqq, rrr = string.match(input, "^([a-z]+)(%*)([a-z]*)$")
+--   if (kkk~=nil) then
+-- 		-- local tail = string.match(input,  '[^'.. '*' .. ']+$') or ''
+-- 		-- input = string.match(input, '^[^' ..'*' .. ']+')
+-- 		-- env.mem:dict_lookup(input,true, 100)  -- expand_search
+-- 		-- env.mem:dict_lookup(kkk,true, 100)  -- expand_search
+--   -- env.mem = Memory( env.engine, env.engine.schema)
+--    -- config = env.engine.schema.config
+-- --    namespace = 'expand_translator'
+-- --    env.wildcard = config:get_string(namespace .. '/wildcard')
+-- -- mem = Memory(env.ticket)
+-- 		-- input = string.match(input, '^[^' ..env.wildcard .. ']+')
+-- 		-- mem:dict_lookup('aa')  -- expand_search
+-- -- mem:dictLookup("onf",false)
+--     -- for dictentry in mem:iter_dict() do
+--   -- while (mem:dictResultExhausted()) do
+--   --      dict_entry = mem:dictPeek()
+-- yield(Candidate("type",seg.start,seg._end,dict_entry.text, ''))
+-- -- a23=env.wildcard
+-- 		-- for dictentry in env.mem:iter_dict()
+-- 		-- do
+-- -- ddd3 = push_input('a')
+
+--     -- for dictentry in kkk:raw_iter() do
+--     -- input = string.match(input, '^[^' ..'*' .. ']+')
+--     -- dictentry = env.mem:dict_lookup(input,true, 100)  -- expand_search
+--     -- for dictentry in env.mem:iter_dict() do
+--     -- dictentry = aadb:lookup('可')
+-- 		-- inp = string.match(inp, '^[^' ..env.wildcard .. ']+')
+-- 		-- aaaa3 = env.mem:dict_lookup('aa')  -- expand_search
+
+--     -- aaa = Dictionary('aa')
+--   -- env.mem = Memory(env.engine,env.engine.schema)
+-- -- Memory:lookup('aa',true, 100)
+-- -- for dictentry in env.memory:iter_dict() do
+
+--     -- dictentry = aadb:lookup('aa')
+--     -- dictentry = aadb:dictLookup('aa')
+--     -- dictentry = aadb:dict_lookup('als')
+--     -- ppppp = env.mem:dict_lookup(inp,true, 100)
+-- 		-- for dictentry in ppppp:iter_dict()
+-- 		-- do
+--      -- dictentry = aadb:dictLookup('als')
+--   -- for cdcc in aadb:lookup('a') do
+--   -- for ppppp in iter_dict("build/onion-array30.extended.table.bin"):lookup('a')
+-- -- env.memory:dict_lookup(kkk,true, 100)  -- expand_search
+-- -- for dictentry in env.memory:iter_dict() do
+-- -- env.memory:dictLookup(kkk)
+-- -- for dictentry in env.memory:iter_dict() do
+--     -- local array33 = {"王", "八", "蛋"}
+--     -- for i, dictentry in ipairs(array33) do
+--       -- yield(Candidate("number", seg.start, seg._end, a23, "〔帶圈中文數字〕"))
+--   return
+--     -- end
+--   end
+-- end
+
+-- function ww_translator( input, seg, env)
+--   local kkk, qqq = string.match(input, "^([a-z])(%*)$")
+--   if (kkk~=nil) then
+--     for word1 in env.dict:iter(kkk) do
+--       yield( Candidate('english' , seg.start,seg._end , word1.word , "[english]"))
+--     end
+--     -- return
+--   end
+-- end
+
+-- local function memoryCallback(memory, commit)
+-- 	for i,dictentry in ipairs(commit:get())
+-- 	do
+-- 		log.info(dictentry.text .. " " .. dictentry.weight .. " " .. dictentry.comment .. "")
+-- 		memory:update_userdict(dictentry,0,"") -- do nothing to userdict
+-- 		-- memory:update_userdict(dictentry,1,"") -- update entry to userdict
+-- 		-- memory:update_userdict(dictentry,1,"") -- delete entry to userdict
+-- 	end
+-- 	return true
+-- end
+
+-- local function init(env)
+--   env.mem = Memory(env.engine,env.engine.schema)
+--   env.mem:memorize(function(commit) memoryCallback(env.mem, commit) end)
+--   -- or use
+--   -- schema = Schema("cangjie5") -- schema_id
+--   -- env.mem = Memory(env.engine, schema, "translator")
+--    config = env.engine.schema.config
+--    namespace = 'expand_translator'
+--    env.wildcard = config:get_string(namespace .. '/wildcard')
+--    -- or try get config like this
+--    -- schema = Schema("cangjie5") -- schema_id
+--    -- config = schema.config
+--    log.info("expand_translator Initilized!")
+-- end
+
+
+-- local function translate(inp,seg,env)
+-- 	if string.match(inp,env.wildcard) then
+-- 		local tail = string.match(inp,  '[^'.. env.wildcard .. ']+$') or ''
+-- 		inp = string.match(inp, '^[^' ..env.wildcard .. ']+')
+-- 		env.mem:dict_lookup(inp,true, 100)  -- expand_search
+-- 		for dictentry in env.mem:iter_dict()
+-- 		do
+-- 			local codetail = string.match(dictentry.comment,tail .. '$') or ''
+-- 			if tail ~= nil and codetail == tail then	
+-- 				local code = env.mem:decode(dictentry.code)
+-- 				codeComment = table.concat(code, ",")
+-- 				local ph = Phrase(env.mem,"expand_translator", seg.start, seg._end, dictentry)
+-- 				ph.comment = codeComment
+-- 				yield(ph:toCandidate())
+-- 				-- you can also use Candidate Simply, but it cannot be recognized by memorize, memorize callback won't be called
+-- 				-- yield(Candidate("type",seg.start,seg.end,dictentry.text, codeComment	))
+-- 			end
+-- 		end
+-- 	end
+-- end	
+
+-- local function ww_translator(input,seg,env)
+--        -- local tab= wild_input( input)
+--        local tab= 'aa'
+--        for i,inp in ipairs(tab) do 
+--               local transltion= env.ww_translator(inp,seg,env)
+--                for cand in  iter(translation) do 
+--                           yield(cand)
+--                 end 
+--         end
+-- end
+
+-- require("Memory")()
+-- function ww_translator(inp,seg,env)
+-- 	-- if string.match(inp,env.wildcard) then
+--   local kkk, qqq, rrr = string.match(inp, "^([a-z]+)(%*)([a-z]*)$")
+--   if (kkk~=nil) then
+-- -- local mem = Memory(env.ticket)
+-- -- local ticket=Ticket(env.engine, "onion-array30")
+--   -- env.mem = Memory( env.engine, env.engine.schema)
+-- -- dddds=dictLookup('','aa')
+--    -- dd2 = Memory( env.engine, env.engine.schema)
+-- -- aa2=userLookup('aa')
+-- -- memory:update_userdict(dictentry,1,"")
+--   -- env.mem:memorize(function(commit) memoryCallback(env.mem, commit) end)
+--   -- or use
+--   -- schema = Schema("onion-array30") -- schema_id
+--   -- env.mem = Memory(env.engine.schema, "translator")
+--    config = env.engine.schema.config
+--    namespace = 'expand_translator'
+--    env.wildcard = config:get_string(namespace .. '/wildcard')
+--    -- log.info("ww_translator Initilized!")
+--    -- or try get config like this
+--    -- schema = Schema("cangjie5") -- schema_id
+--    -- config = schema.config
+--    -- log.info("expand_translator Initilized!")
+-- 		-- local tail = string.match(inp,  '[^'.. env.wildcard .. ']+$') or ''
+-- 		-- aa2 = string.match('aa', '^[^' ..env.wildcard .. ']+')
+-- 		-- aa2=table.concat(env.mem:dict_lookup(inp))  -- expand_search
+-- 		-- for dictentry in env.mem:iter_dict() do
+-- 			-- local codetail = string.match(dictentry.comment,tail .. '$') or ''
+-- 			-- if tail ~= nil and codetail == tail then
+-- 				-- local code = env.mem:decode(dictentry.code)
+-- 				-- codeComment = table.concat(code, ",")
+-- 				-- local ph = Phrase(env.mem,"expand_translator", seg.start, seg._end, dictentry)
+-- 				-- ph.comment = codeComment
+-- 				-- yield(ph:toCandidate())
+-- 				-- you can also use Candidate Simply, but it cannot be recognized by memorize, memorize callback won't be called
+-- 				yield(Candidate("type", seg.start, seg._end, env.wildcard .. 'aa2', '幹幹幹'))
+-- 				-- yield(Candidate("type", seg.start, seg._end, circled5_number(numberout), "〔帶圈中文數字〕"))
+-- 			-- end
+-- return
+-- 		-- end
+-- 	end
+-- end	
+
+--[[
+！！！！！！！！！！！！！！以上通配符測試！！！！！！！！！！！！！！
+--]]
+
 
 
 

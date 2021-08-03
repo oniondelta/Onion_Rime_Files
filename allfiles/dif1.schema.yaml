@@ -8,7 +8,7 @@ schema:
 
   name: "❖分別調出蝦米(plus)❖"
   schema_id: dif1
-  version: "202107"
+  version: "202108"
   dependencies:
     - punct_ovff
     - dif1_jphi
@@ -572,4 +572,4 @@ recognizer:
 #    第一個不能刪，否則無法用數字選擇。
 #    「-」不能刪，顏文字會用到。
     all_bpm: "^';'[-a-z0-9.,/;']*$"
-    lua: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|^'/[';/]?[a-z]*$|^'/[0-9/-]*$|^'/[xcoe][0-9a-z]+$"
+    lua: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|^'/[';/]?[a-z]*$|^'/[0-9./-]*$|^'/[xcoe][0-9a-z]+$"
