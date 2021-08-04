@@ -88,7 +88,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "202107"
+version: "202108"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -59050,8 +59050,10 @@ min_phrase_weight: 100
 兒童樂園	er2 tong2 le4 yuan2
 兔兒不吃窠邊草	tu4 er1 bu4 chi1 ke1 bian1 cao3
 兔兒不吃窠邊草	tu4 er2 bu4 chi1 ke1 bian1 cao3
+兔兒不吃窠邊草	tu4 er5 bu4 chi1 ke1 bian1 cao3
 兔兒不喫窠邊草	tu4 er1 bu4 chi1 ke1 bian1 cao3
 兔兒不喫窠邊草	tu4 er2 bu4 chi1 ke1 bian1 cao3
+兔兒不喫窠邊草	tu4 er5 bu4 chi1 ke1 bian1 cao3
 兔子	tu4 zi5
 兔子	tu4 zi3
 兔子不吃窩邊草	tu4 zi5 bu4 chi1 wo1 bian1 cao3
