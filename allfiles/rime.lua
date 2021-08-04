@@ -28,7 +28,7 @@
 --      - lua_filter@charset_comment_filter  -- 為候選項註釋其所屬字符集，如：CJK、ExtA
 --      - lua_filter@single_char_filter      -- 候選項重排序，使單字優先
 --      - lua_filter@reverse_lookup_filter   -- 依地球拼音為候選項加上帶調拼音的註釋
---      - lua_filter@myfilter                -- 把 charset_comment_filter 和 reverse_lookup_filter 串在一起，如 CJK(hǎo)
+--      - lua_filter@myfilter                -- 把 charset_comment_filter 和 reverse_lookup_filter 註釋串在一起，如 CJK(hǎo)
 --      - lua_filter@array30_nil_filter      -- 行列30空碼'⎔'轉成不輸出任何符號，符合原生
 --
 --      《 ＊ 以下「處理」注意在 processors 中的順序，基本放在最前面 》
@@ -1750,7 +1750,7 @@ number_translator: 將 `'/` + 阿拉伯數字 翻譯為大小寫漢字
 local confs = {
   {
     comment = "〔小寫中文數字〕",
-    number = { [0] = "零", "一", "二", "三", "四", "五", "六", "七", "八", "九" },
+    number = { [0] = "〇", "一", "二", "三", "四", "五", "六", "七", "八", "九" },
     suffix = { [0] = "", "十", "百", "千" },
     suffix2 = { [0] = "", "萬", "億", "兆", "京" }
   },
@@ -5241,7 +5241,7 @@ function t_translator(input, seg)
     -- local numberout = string.match(input, "'//?(%d+)$")
     local numberout, dot1, afterdot = string.match(input, "`(%d+)(%.?)(%d*)$")
     local nn = string.sub(numberout, 1)
-    if (numberout~=nil) and (tonumber(nn)) ~= nil then
+    if (numberout~=nil) and (tonumber(nn)~=nil) then
       --[[ 用 yield 產生一個候選項
       候選項的構造函數是 Candidate，它有五個參數：
       - type: 字符串，表示候選項的類型（可隨意取）
@@ -5287,15 +5287,15 @@ function t_translator(input, seg)
         yield(Candidate("number", seg.start, seg._end, circled4_number(numberout), "〔反白帶圈無襯線數字〕"))
         yield(Candidate("number", seg.start, seg._end, circled5_number(numberout), "〔帶圈中文數字〕"))
 
-        if (numberout=='1') or (numberout=='0') then
-          yield(Candidate("number", seg.start, seg._end, numberout, "〔二進位〕"))
+        if (tonumber(numberout)==1) or (tonumber(numberout)==0) then
+          yield(Candidate("number", seg.start, seg._end, string.sub(numberout, -1), "〔二進位〕"))
         else
           yield(Candidate("number", seg.start, seg._end, Dec2bin(numberout), "〔二進位〕"))
         end
 
+        yield(Candidate("number", seg.start, seg._end, string.format("%o",numberout), "〔八進位〕"))
         yield(Candidate("number", seg.start, seg._end, string.format("%X",numberout), "〔十六進位〕"))
         yield(Candidate("number", seg.start, seg._end, string.format("%x",numberout), "〔十六進位〕"))
-        yield(Candidate("number", seg.start, seg._end, string.format("%o",numberout), "〔八進位〕"))
       end
       return
     end
@@ -6805,7 +6805,7 @@ function t2_translator(input, seg)
     -- local numberout = string.match(input, "'//?(%d+)$")
     local numberout, dot1, afterdot = string.match(input, "'/(%d+)(%.?)(%d*)$")
     local nn = string.sub(numberout, 1)
-    if (numberout~=nil) and (tonumber(nn)) ~= nil then
+    if (numberout~=nil) and (tonumber(nn)~=nil) then
       --[[ 用 yield 產生一個候選項
       候選項的構造函數是 Candidate，它有五個參數：
       - type: 字符串，表示候選項的類型（可隨意取）
@@ -6851,15 +6851,15 @@ function t2_translator(input, seg)
         yield(Candidate("number", seg.start, seg._end, circled4_number(numberout), "〔反白帶圈無襯線數字〕"))
         yield(Candidate("number", seg.start, seg._end, circled5_number(numberout), "〔帶圈中文數字〕"))
 
-        if (numberout=='1') or (numberout=='0') then
-          yield(Candidate("number", seg.start, seg._end, numberout, "〔二進位〕"))
+        if (tonumber(numberout)==1) or (tonumber(numberout)==0) then
+          yield(Candidate("number", seg.start, seg._end, string.sub(numberout, -1), "〔二進位〕"))
         else
           yield(Candidate("number", seg.start, seg._end, Dec2bin(numberout), "〔二進位〕"))
         end
 
+        yield(Candidate("number", seg.start, seg._end, string.format("%o",numberout), "〔八進位〕"))
         yield(Candidate("number", seg.start, seg._end, string.format("%X",numberout), "〔十六進位〕"))
         yield(Candidate("number", seg.start, seg._end, string.format("%x",numberout), "〔十六進位〕"))
-        yield(Candidate("number", seg.start, seg._end, string.format("%o",numberout), "〔八進位〕"))
       end
       return
     end
