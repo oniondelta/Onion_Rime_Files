@@ -24,7 +24,8 @@
 --      - lua_filter@charset_filter          -- 遮屏含 CJK 擴展漢字的候選項
 --      - lua_filter@charset_filter_plus     -- 遮屏含 CJK 擴展漢字的候選項，開關（only_cjk_filter）
 --      - lua_filter@charset_filter2         -- 遮屏選含「᰼᰼」候選項
---      - lua_filter@comment_filter_plus     -- 遮屏提示碼，開關（simplify_comment）
+--      - lua_filter@comment_filter_plus     -- 遮屏提示碼，開關（simplify_comment）（遇到「'/」不遮屏）
+--      - lua_filter@comment_filter_array30  -- 遮屏提示碼，開關（simplify_comment）（遇到「`」不遮屏）
 --      - lua_filter@charset_comment_filter  -- 為候選項註釋其所屬字符集，如：CJK、ExtA
 --      - lua_filter@single_char_filter      -- 候選項重排序，使單字優先
 --      - lua_filter@reverse_lookup_filter   -- 依地球拼音為候選項加上帶調拼音的註釋
@@ -331,7 +332,8 @@ end
 
 function comment_filter_plus(input, env)
   local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
-  if (not s_c_f_p_s) then
+  local find_prefix = env.engine.context.input
+  if (not s_c_f_p_s) or (string.find(find_prefix, "^'/" )) then
   -- 使用 `iter()` 遍歷所有輸入候選項
     for cand in input:iter() do
       yield(cand)
@@ -348,6 +350,21 @@ function comment_filter_plus(input, env)
   end
 end
 
+function comment_filter_array30(input, env)
+  local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
+  local find_prefix = env.engine.context.input
+  if (not s_c_f_p_s) or (string.find(find_prefix, "^`" )) then
+  -- 使用 `iter()` 遍歷所有輸入候選項
+    for cand in input:iter() do
+      yield(cand)
+    end
+  else
+    for cand in input:iter() do
+      cand:get_genuine().comment = ""
+      yield(cand)
+    end
+  end
+end
 
 
 --- @@ array30_nil_filter
