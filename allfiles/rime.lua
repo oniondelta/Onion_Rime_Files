@@ -14,11 +14,12 @@
 --      ...
 --      - lua_translator@t_translator        -- 「`」開頭打出時間日期
 --      - lua_translator@t2_translator       -- 「'/」開頭打出時間日期
---      - lua_translator@date_translator     -- 「``」開頭打出時間日期（沒用到，暫關閉）
+--      - lua_translator@date_translator     -- 「``」開頭打出時間日期
 --      - lua_translator@email_translator    -- 輸入email
 --      - lua_translator@url_translator      -- 輸入網址
 --      - lua_translator@urlw_translator     -- 輸入網址（多了www.）
 --      - lua_translator@mytranslator        -- （有缺函數，參考勿用，暫關閉）
+--
 --
 --      《 ＊ 以下「濾鏡」注意在 filters 中的順序，關係到作用效果 》
 --      - lua_filter@charset_filter          -- 遮屏含 CJK 擴展漢字的候選項
@@ -26,18 +27,21 @@
 --      - lua_filter@charset_filter2         -- 遮屏選含「᰼᰼」候選項
 --      - lua_filter@comment_filter_plus     -- 遮屏提示碼，開關（simplify_comment）（遇到「'/」不遮屏）
 --      - lua_filter@comment_filter_array30  -- 遮屏提示碼，開關（simplify_comment）（遇到「`」不遮屏）
---      - lua_filter@charset_comment_filter  -- 為候選項註釋其所屬字符集，如：CJK、ExtA
+--      - lua_filter@charset_comment_filter  -- 候選項註釋其所屬字符集，如：CJK、ExtA
 --      - lua_filter@single_char_filter      -- 候選項重排序，使單字優先
 --      - lua_filter@reverse_lookup_filter   -- 依地球拼音為候選項加上帶調拼音的註釋
---      - lua_filter@myfilter                -- 把 charset_comment_filter 和 reverse_lookup_filter 註釋串在一起，如 CJK(hǎo)
+--      - lua_filter@myfilter                -- 把 charset_comment_filter 和 reverse_lookup_filter 註釋串在一起，如：CJK(hǎo)
+--      - lua_filter@symbols_mark_filter     -- 候選項註釋符號、音標等屬性之提示碼(comment)（用 opencc 可實現，但無法合併其他提示碼(comment)，改用 Lua 來實現）
 --      - lua_filter@array30_nil_filter      -- 行列30空碼'⎔'轉成不輸出任何符號，符合原生
+--
 --
 --      《 ＊ 以下「處理」注意在 processors 中的順序，基本放在最前面 》
 --      - lua_processor@endspace             -- 韓語（非英語等）空格鍵後添加" "
 --      - lua_processor@array30up            -- 行列30三四碼字按空格直接上屏
 --      - lua_processor@array30up_zy         -- 行列30注音反查 Return 和 space 上屏修正
 --      - lua_processor@ascii_punct_change   -- 注音非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
---      === 以下針對「編碼有用到空白鍵」方案，如：注音一聲，去除空白上屏產生莫名之空格 ===
+--
+--      = 以下針對「編碼有用到空白鍵」方案，如：注音一聲，去除空白上屏產生莫名之空格 =
 --      - lua_processor@s2r_ss               -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（只有開頭 ^'/ 才作用，比下條目更精簡，少了 is_composing 限定）
 --      - lua_processor@s2r_s                -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（只有開頭 ^'/ 才作用）
 --      - lua_processor@s2r                  -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin(1,2,4)和 plus 用）
@@ -132,8 +136,8 @@ end
 
 --- @@ charset_filter_plus
 --[[
-同上將濾除含 CJK 擴展漢字的候選項
-但增加開關設置
+同上，將濾除含 CJK 擴展漢字的候選項
+增加開關設置
 --]]
 function charset_filter_plus(input, env)
   -- 使用 `iter()` 遍歷所有輸入候選項
@@ -310,7 +314,14 @@ function reverse_lookup_filter(input)
   end
 end
 
+
+
+
+--- @@ myfilter
+--[[
 --- composition
+把 charset_comment_filter 和 reverse_lookup_filter 註釋串在一起，如：CJK(hǎo)
+--]]
 function myfilter(input)
   local input2 = Translation(charset_comment_filter, input)
   reverse_lookup_filter(input2)
@@ -319,11 +330,41 @@ end
 
 
 
+--- @@ symbols_mark_filter
+--[[
+候選項註釋符號、音標等屬性之提示碼(comment)（用 opencc 可實現，但無法合併其他提示碼(comment)，改用 Lua 來實現）
+--]]
+local ocmdb = ReverseDb("build/symbols-mark.reverse.bin")
+
+local function xform_mark(inp)
+  if inp == "" then return "" end
+    inp = string.gsub(inp, "^(〔.+〕)(〔.+〕)$", "%1")
+    inp = string.gsub(inp, "，", ", ")
+  return inp
+end
+
+function symbols_mark_filter(input, env)
+  local b_k = env.engine.context:get_option("back_mark")
+  if (b_k) then
+    for cand in input:iter() do
+      cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
+      -- cand:get_genuine().comment = cand.comment .. ocmdb:lookup(cand.text)
+      yield(cand)
+    end
+  else
+    for cand in input:iter() do
+      yield(cand)
+    end
+  end
+end
+
+
+
+
 --- @@ comment_filter_plus
 --[[
-嘸蝦米後面註釋刪除
+嘸蝦米和行列30後面註釋刪除
 --]]
-
 -- local function xform_c(cf)
 --   if cf == "" then return "" end
 --   cf = string.gsub(cf, "[ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ%s]+$", "zk")
@@ -367,11 +408,12 @@ function comment_filter_array30(input, env)
 end
 
 
+
+
 --- @@ array30_nil_filter
 --[[
 行列30空碼'⎔'轉成不輸出任何符號，符合原生
 --]]
-
 -- -- preedit_format 格式轉寫
 -- local function xform_array30_input(ainput)
 --   if ainput == "" then return "" end
@@ -6903,42 +6945,61 @@ function t2_translator(input, seg)
 end
 
 
--- --- @@ date/time translator
--- function date_translator(input, seg)
---   if (string.match(input, "``")~=nil) then
---     -- Candidate(type, start, end, text, comment)
---     if (input == "``time") then
---       yield(Candidate("time", seg.start, seg._end, os.date("%H:%M:%S"), " 現在時間"))
---       return
---     end
 
---     if (input == "``now") then
---       yield(Candidate("date", seg.start, seg._end, os.date("%Y年%m月%d日"), " 現在日期"))
---       return
---     end
 
---     if(input=="``") then
---       yield(Candidate("date", seg.start, seg._end, "" , "擴充模式"))
---       return
---     end
+--- @@ date/time translator
+--[[
+有些網上方案會掛載該項
+--]]
+function date_translator(input, seg)
+  if (string.match(input, "``")~=nil) then
+    -- Candidate(type, start, end, text, comment)
+    if (input == "``time") then
+      yield(Candidate("time", seg.start, seg._end, os.date("%H:%M:%S"), " 現在時間"))
+      return
+    end
 
---     local y, m, d = string.match(input, "``(%d+)/(%d?%d)/(%d?%d)$")
---     if(y~=nil) then
---       yield(Candidate("date", seg.start, seg._end, y.."年"..m.."月"..d.."日" , " 日期"))
---       return
---     end
+    if (input == "``now") then
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y年%m月%d日"), " 現在日期"))
+      return
+    end
 
---     local m, d = string.match(input, "``(%d?%d)/(%d?%d)$")
---     if(m~=nil) then
---       yield(Candidate("date", seg.start, seg._end, m.."月"..d.."日" , " 日期"))
---       return
---     end
---   end
--- end
+    if(input=="``") then
+      yield(Candidate("date", seg.start, seg._end, "" , "擴充模式"))
+      return
+    end
+
+    local y, m, d = string.match(input, "``(%d+)/(%d?%d)/(%d?%d)$")
+    if(y~=nil) then
+      yield(Candidate("date", seg.start, seg._end, y.."年"..m.."月"..d.."日" , " 日期"))
+      return
+    end
+
+    local m, d = string.match(input, "``(%d?%d)/(%d?%d)$")
+    if(m~=nil) then
+      yield(Candidate("date", seg.start, seg._end, m.."月"..d.."日" , " 日期"))
+      return
+    end
+  end
+end
 
 -- function mytranslator(input, seg)
 --   date_translator(input, seg)
 --   time_translator(input, seg)
+-- end
+
+
+
+
+--- @@ select_word_keys
+--[[
+修改選字鍵
+--]]
+-- function select_character_keys(input, seg, env)
+--   env.engine.schema.select_keys="YHNUJMIKOL"
+--   -- env.engine.schema.set_select_keys=[ QY, AH, ZN, WU, SJ, XM ] -- 試驗，無法
+--   -- env.engine.schema.selected_index=[ QY, AH, ZN, WU, SJ, XM ] -- 試驗，無法
+--   -- env.engine.schema.select_labels=[ QY, AH, ZN, WU, SJ, XM ] -- 試驗，無法
 -- end
 
 
