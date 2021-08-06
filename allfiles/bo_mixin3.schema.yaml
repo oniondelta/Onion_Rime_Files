@@ -104,7 +104,8 @@ engine:
     - script_translator
 ################################### 選單 ################################################
 menu:
-  alternative_select_keys: "QAZWSXEDCRFV"
+  # alternative_select_keys: "QAZWSXEDCRFV"
+  alternative_select_labels: [ QY, AH, ZN, WU, SJ, XM ]
   page_size: 6
 ################################### 濾鏡 ################################################
 simplifier:

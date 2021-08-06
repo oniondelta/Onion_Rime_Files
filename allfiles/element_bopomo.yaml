@@ -20,64 +20,86 @@ key_binder:
     - {accept: Shift+Right, send: Right, when: composing} #右移一個注音
     - {accept: Shift+Left, send: KP_Left, when: composing} #左移一個注音
 #關#    - {accept: Shift+space, send: Shift+Right, when: composing} #首節
-#    - {accept: Shift+space, send: KP_Left, when: composing} #左移一個注音
-#    - {accept: Left, send: KP_Left, when: composing} #左移一個注音
+    # - {accept: Shift+space, send: KP_Left, when: composing} #左移一個注音
+    # - {accept: Left, send: KP_Left, when: composing} #左移一個注音
 ##
-#    - {accept: Shift+Tab, send: Right, when: composing} #右移一個注音
-#    - {accept: Tab, send: KP_Left, when: composing} #左移一個注音
+    # - {accept: Shift+Tab, send: Right, when: composing} #右移一個注音
+    # - {accept: Tab, send: KP_Left, when: composing} #左移一個注音
 ### 選字翻頁 ###
     - {accept: Left, send: Page_Up, when: paging} #直式選單用 #has_menu
     - {accept: Right, send: Page_Down, when: paging} #直式選單用 #has_menu
-#    - {accept: Up, send: Page_Up, when: paging} #橫式選單用
-#    - {accept: Down, send: Page_Down, when: paging} #橫式選單用
-#    - {accept: Left, send: Left, when: has_menu} #橫式選單用 #send: Shift+Up
-#    - {accept: Right, send: Right, when: has_menu} #橫式選單用 #send: Shift+Down
-    - {accept: Shift+Down, send: Page_Down, when: has_menu} #選字時「Shift」+「下」翻頁。
+#關#    - {accept: Up, send: Page_Up, when: paging} #橫式選單用
+#關#    - {accept: Down, send: Page_Down, when: paging} #橫式選單用
+#關#    - {accept: Left, send: Left, when: has_menu} #橫式選單用 #send: Shift+Up
+#關#    - {accept: Right, send: Right, when: has_menu} #橫式選單用 #send: Shift+Down
+#其他快捷鍵翻頁
     - {accept: Shift+Up, send: Page_Up, when: paging} #選字時「Shift」+「上」翻頁。
+    - {accept: Shift+Down, send: Page_Down, when: has_menu} #選字時「Shift」+「下」翻頁。
 #關#    - {accept: Tab, send: Page_Down, when: has_menu} #「tab」翻頁。
-    - {accept: Shift+Tab, send: Page_Up, when: paging} #選字時「Shift」+「tab」翻頁。
+#關#    - {accept: Shift+Tab, send: Page_Up, when: paging} #選字時「Shift」+「tab」翻頁。
+    - {accept: Shift+C, send: Page_Up, when: paging}
     - {accept: Shift+space, send: Page_Down, when: has_menu} #選字時「Shift」+「空白鍵」翻頁。 #send: Right #send: Down
+    - {accept: Shift+O, send: Page_Up, when: paging}
+    - {accept: Shift+P, send: Page_Down, when: has_menu}
+#左邊選字
+    - {accept: Shift+Y, send: Control+1, when: has_menu}
+    - {accept: Shift+H, send: Control+2, when: has_menu}
+    - {accept: Shift+N, send: Control+3, when: has_menu}
+    - {accept: Shift+U, send: Control+4, when: has_menu}
+    - {accept: Shift+J, send: Control+5, when: has_menu}
+    - {accept: Shift+M, send: Control+6, when: has_menu}
+#右邊選字
+    - {accept: Shift+Q, send: Control+1, when: has_menu}
+    - {accept: Shift+A, send: Control+2, when: has_menu}
+    - {accept: Shift+Z, send: Control+3, when: has_menu}
+    - {accept: Shift+W, send: Control+4, when: has_menu}
+    - {accept: Shift+S, send: Control+5, when: has_menu}
+    - {accept: Shift+X, send: Control+6, when: has_menu}
 ##回復到 composing 狀態：
 #關#    - {accept: Shift+space, send: Shift+Left, when: paging} #於選單列選字時，回復到輸入列（避免有時回復不了，故增加）。
     - {accept: Tab, send: Shift+Left, when: paging} #於選單列選字時，回復到輸入列（避免有時回復不了，故增加）。
 ### 空白鍵 ###
     - {accept: space, send: Return, when: paging} #方向鍵選字時，space直接上屏（避免被一聲空格影響）
-#    - {accept: space, send: Page_Down, when: paging} #方向鍵選字時，space翻頁（上條遮屏需開啟，否則「=」+「符號」會誤按）
-##    - {accept: space, send: Down, when: has_menu}
-##    - {accept: space, send: Down, when: paging}
-##    - {accept: space, send: space, when: composing}
+    # - {accept: space, send: Page_Down, when: paging} #方向鍵選字時，space翻頁（上條遮屏需開啟，否則「=」+「符號」會誤按）
+    # - {accept: space, send: Down, when: has_menu}
+    # - {accept: space, send: Down, when: paging}
+    # - {accept: space, send: space, when: composing}
 #關#    - {accept: space, send: Escape, when: composing} #空碼時，按空格清除
 #關#    - {accept: space, send: space, when: has_menu} #非空碼時，空白還是空白
 ### 刪除鍵 ###
     - {accept: BackSpace, send: Control+BackSpace, when: has_menu} #〔關〕刪除前一個拼音字符〔開〕：刪除整組拼音字符（一個字）
     - {accept: Shift+BackSpace, send: BackSpace, when: has_menu}
     - {accept: backslash, send: BackSpace, when: has_menu} #「\」鍵位刪除一個拼音字符。
-#    - {accept: backslash, send: Shift+BackSpace, when: has_menu} #「\」鍵位刪除整組拼音字符（一個字）。
+    # - {accept: backslash, send: Shift+BackSpace, when: has_menu} #「\」鍵位刪除整組拼音字符（一個字）。
 #關#    - {accept: backslash, send: Shift+Return, when: has_menu} #「\」鍵位上屏英文。
 ### 功能快捷鍵 ###
-    - {accept: Control+apostrophe, toggle: zh_tw, when: always} #accept: Control+semicolon
     - {accept: Control+minus, toggle: back_mark, when: always } #「國際音標和符號」提示碼開關
+    - {accept: Control+apostrophe, toggle: zh_tw, when: always} #accept: Control+semicolon
     - {accept: Control+Shift+6, toggle: zh_tw, when: always} #誤按沒警示，避免誤按，可關閉！（開關台灣習慣用字）
     - {accept: Control+Shift+7, toggle: emoji_segestion, when: always} #誤按沒警示，避免誤按，可關閉！（開關跟隨的emoji）
     - {accept: Control+Shift+8, toggle: back_mark, when: always} #誤按沒警示，避免誤按，可關閉！（開關標註）
-#    - {accept: Return, send: space, when: has_menu}
+    # - {accept: Return, send: space, when: has_menu}
 ### 避聲調重複按 ###
-#    - {accept: 3, send: Escape, when: composing}
-#    - {accept: 3, send: 3, when: has_menu}
-#    - {accept: 4, send: Escape, when: composing}
-#    - {accept: 4, send: 4, when: has_menu}
-#    - {accept: 6, send: Escape, when: composing}
-#    - {accept: 6, send: 6, when: has_menu}
-#    - {accept: 7, send: Escape, when: composing}
-#    - {accept: 7, send: 7, when: has_menu}
-### shift 和 ctrl調換 ###
-#    - {accept: "Control+comma", send: "less", when: always} #「逗號」#接受「Contol」+「,」直出「<」
-#    - {accept: "Control+period", send: "greater", when: always} #「句號」#接受「Contol」+「.」直出「>」
-#    - {accept: "Control+slash", send: "question", when: always} #「問號」#接受「Contol」+「/」直出「？」
-#    - {accept: "Control+apostrophe", send: "quotedbl", when: always} #「頓號」#接受「Contol」+「'」直出「"」
+    # - {accept: 3, send: Escape, when: composing}
+    # - {accept: 3, send: 3, when: has_menu}
+    # - {accept: 4, send: Escape, when: composing}
+    # - {accept: 4, send: 4, when: has_menu}
+    # - {accept: 6, send: Escape, when: composing}
+    # - {accept: 6, send: 6, when: has_menu}
+    # - {accept: 7, send: Escape, when: composing}
+    # - {accept: 7, send: 7, when: has_menu}
+### ctrl 打出標點 ###
+#關#    - {accept: "Control+comma", send: "less", when: always} #「逗號」#接受「Contol」+「,」直出「<」
+#關#    - {accept: "Control+period", send: "greater", when: always} #「句號」#接受「Contol」+「.」直出「>」
+#關#    - {accept: "Control+slash", send: "question", when: always} #「問號」#接受「Contol」+「/」直出「？」
+#關#    - {accept: "Control+apostrophe", send: "quotedbl", when: always} #「頓號」#接受「Contol」+「'」直出「"」
 ### 空白鍵不上屏設置 ###
-#    - {accept: space, send: bar, when: composing}
-#    - {accept: space, send: space, when: has_menu}
+    # - {accept: space, send: bar, when: composing}
+    # - {accept: space, send: space, when: has_menu}
+### 切分\\不能在 recognizer 正則使用，嘗試用轉寫 ###
+    # - {accept: backslash, send: bar, when: has_menu} #可以，反過來不可以
+    # - {accept: bar, send: backslash, when: has_menu} #不能，反過來可以？！
+    # - {accept: apostrophe, send: backslash, when: has_menu}
 
 
 emoji_series:

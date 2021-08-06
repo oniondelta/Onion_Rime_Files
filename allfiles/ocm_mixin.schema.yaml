@@ -54,7 +54,7 @@ switches:
     reset: 1
 #    states: [ 無, 註 ]
   - name: simplify_comment
-    reset: 0
+    # reset: 0
     states: [ 碼, 無 ]
 
 engine:
@@ -70,8 +70,9 @@ engine:
     - reverse_lookup_filter@gr_reverse_lookup
     - reverse_lookup_filter@cyr_reverse_lookup
     - reverse_lookup_filter@fs_reverse_lookup
-    - simplifier@back_mark
+    # - simplifier@back_mark
     - lua_filter@comment_filter_plus
+    - lua_filter@symbols_mark_filter
     - simplifier@emoji_switch
     - reverse_lookup_filter@ovff_reverse_lookup
     - reverse_lookup_filter@phonetic_reverse_lookup
@@ -146,15 +147,15 @@ emoji_switch:
   comment_format:
     - xform/^.+$/ /
 
-back_mark:
-  opencc_config: back_mark_ocm.json
-  option_name: back_mark
-  show_in_comment: true
-  tags: [ abc, emoji_series ] #, fs
-  tips: char #all
-  comment_format:
-    - xform/^/  /
-    - xform/@/ /
+# back_mark:
+#   opencc_config: back_mark_ocm.json
+#   option_name: back_mark
+#   show_in_comment: true
+#   tags: [ abc, emoji_series ] #, fs
+#   tips: char #all
+#   comment_format:
+#     - xform/^/  /
+#     - xform/@/ /
 
 punct_mark:
   opencc_config: punct_mark.json

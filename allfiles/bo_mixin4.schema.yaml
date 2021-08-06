@@ -71,7 +71,6 @@ engine:
   processors:
     - lua_processor@ascii_punct_change
     - lua_processor@s2r_most
-#     - lua_processor@s2r
     - ascii_composer
     - recognizer
     - key_binder
@@ -112,7 +111,8 @@ engine:
     - script_translator
 ################################### 選單 ################################################
 menu:
-  alternative_select_keys: "QAZWSXEDCRFV"
+  # alternative_select_keys: "QAZWSXEDCRFV"
+  alternative_select_labels: [ QY, AH, ZN, WU, SJ, XM ]
   page_size: 6
 ################################### 濾鏡 ################################################
 simplifier:

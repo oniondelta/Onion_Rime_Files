@@ -63,7 +63,6 @@ engine:
   processors:
     - lua_processor@ascii_punct_change
     - lua_processor@s2r_most
-#     - lua_processor@s2r
     - ascii_composer
     - recognizer
     - key_binder
@@ -108,7 +107,8 @@ engine:
     - script_translator
 
 menu:
-  alternative_select_keys: "QAZWSXEDCRFV"
+  # alternative_select_keys: "QAZWSXEDCRFV"
+  alternative_select_labels: [ QY, AH, ZN, WU, SJ, XM ]
   page_size: 6
 ############################### 濾鏡 ################################
 simplifier:
@@ -199,7 +199,7 @@ translator:
   initial_quality: "0"
   preedit_format:
     - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 6347|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˉˊˇˋ˙|"
-    - 'xform/\\/\⁞/' #全形空格　 #半形空格  #| #⁞ #⁝ #⋮ #¦ #┆
+    - 'xform/\\/⁞/' #全形空格　 #半形空格  #| #⁞ #⁝ #⋮ #¦ #┆
 ############################## 短語 #########################################
 bpm_oplus_ph:
   dictionary: ""

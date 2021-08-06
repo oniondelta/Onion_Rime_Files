@@ -31,7 +31,7 @@ switches:
     reset: 1
     states: [ "常用", "增廣" ]
   - name: simplify_comment
-    reset: 0
+    # reset: 0
     states: [ 碼, 無 ]
 
 engine:
