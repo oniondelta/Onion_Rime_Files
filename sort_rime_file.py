@@ -322,6 +322,9 @@ shutil.copyfile("./allfiles/phrases.jp_hkmoreup_w.dict.yaml", "./sort_rime/ocm/o
 shutil.copyfile("./allfiles/cangjie5.dict.yaml", "./sort_rime/ocm/ocm_mixin/cangjie5.dict.yaml")
 shutil.copyfile("./allfiles/cangjie5.schema.yaml", "./sort_rime/ocm/ocm_mixin/cangjie5.schema.yaml")
 
+shutil.copyfile("./allfiles/symbols-mark.dict.yaml", "./sort_rime/ocm/ocm_mixin/symbols-mark.dict.yaml")
+shutil.copyfile("./allfiles/symbols-mark.schema.yaml", "./sort_rime/ocm/ocm_mixin/symbols-mark.schema.yaml")
+
 
 #複製檔案(ocm_plus)
 shutil.copyfile("./allfiles/essay-zh-hant-onion.txt", "./sort_rime/ocm/ocm_plus/essay-zh-hant-onion.txt")
