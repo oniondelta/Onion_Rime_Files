@@ -37,7 +37,8 @@
 #              「嫺(嫻)」「睾(睪)」「幺(么)」「繮(韁)」。
 #    PS：「啓(啟)」有一個於古籍存有前者，故保留。
 #
-#    選擇性修改：「臺(台)」「擡(抬)」「檯(枱)」「薹(苔)」「癡(痴)」←《日常常見，互相增補相關詞彙》（“痴”改設權重比高）
+#    選擇性修改：「臺(台)」「檯(枱)」「薹(苔)」「癡(痴)」←《日常常見，互相增補相關詞彙》（“痴”改設權重比高）
+#              「擡(抬)」←《前者已在日常不用，一般字典也少收含此字之詞彙，使用後者》
 #              「唸(念)」「棱(稜)」「泄(洩)」←《 字典中存有兩者之詞彙，待攷 》
 #              「痹(痺)」「鍼(針)」←《 中醫常用前者，且字典中存有兩者之詞彙 》（“痺”改設權重比高）
 #              「脣(唇)」←《 前者為標準字，但後者太常用，把“脣”詞彙增補“唇” 》（“唇”改設權重比高）
@@ -88,7 +89,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "202107"
+version: "202108"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -54268,8 +54269,6 @@ min_phrase_weight: 100
 不中意	bu4 zhong4 yi4
 不中抬舉	bu2 zhong4 tai2 ju3
 不中抬舉	bu4 zhong4 tai2 ju3
-不中擡舉	bu2 zhong4 tai2 ju3
-不中擡舉	bu4 zhong4 tai2 ju3
 不中用	bu2 zhong4 yong4
 不中用	bu4 zhong1 yong4
 不中相與	bu2 zhong4 xiang1 yu3
@@ -54436,8 +54435,6 @@ min_phrase_weight: 100
 不協調	bu4 xie2 tiao2
 不受抬舉	bu2 shou4 tai2 ju3
 不受抬舉	bu4 shou4 tai2 ju3
-不受擡舉	bu2 shou4 tai2 ju3
-不受擡舉	bu4 shou4 tai2 ju3
 不受用	bu2 shou4 yong4
 不受用	bu4 shou4 yong4
 不受約束	bu2 shou4 yue1 shu4
@@ -55161,8 +55158,6 @@ min_phrase_weight: 100
 不識廬山真面目	bu4 shi4 lu2 shan1 zhen1 mian4 mu4
 不識抬舉	bu2 shi4 tai2 ju3
 不識抬舉	bu4 shi4 tai2 ju3
-不識擡舉	bu2 shi4 tai2 ju3
-不識擡舉	bu4 shi4 tai2 ju3
 不識數	bu2 shi4 shu4
 不識數	bu4 shi4 shu4
 不識斤兩	bu2 shi4 jin1 liang3
@@ -64395,9 +64390,7 @@ min_phrase_weight: 100
 哄弄	hong3 nong4
 哄搶	hong1 qiang3
 哄抬	hong1 tai2
-哄擡	hong1 tai2
 哄抬物價	hong1 tai2 wu4 jia4
-哄擡物價	hong1 tai2 wu4 jia4
 哄然	hong1 ran2
 哄瞞	hong3 man2
 哄笑	hong1 xiao4
@@ -67372,7 +67365,6 @@ min_phrase_weight: 100
 大換血	da4 huan4 xie3
 大擋手的	da4 dang3 shou3 de5
 大抬其槓	da4 tai2 qi2 gang4
-大擡其槓	da4 tai2 qi2 gang4
 大擺褶子	da4 bai3 xue2 zi5
 大故	da4 gu4
 大故	dai4 gu4
@@ -78048,7 +78040,6 @@ min_phrase_weight: 100
 擔架	dan1 jia4
 擔架兵	dan1 jia4 bing1
 擔架抬	dan1 jia4 tai2
-擔架擡	dan1 jia4 tai2
 擔架床	dan1 jia4 chuang2
 擔水	dan1 shui3
 擔水向河頭賣	dan1 shui3 xiang4 he2 tou2 mai4
@@ -78102,19 +78093,12 @@ min_phrase_weight: 100
 擠訛頭	ji3 e2 tou5
 擠軋	ji3 ya4
 抬帖	tai2 tie3
-擡帖	tai2 tie3
 抬槓	tai2 gang4
-擡槓	tai2 gang4
 抬舉	tai2 ju3
-擡舉	tai2 ju3
 抬行市	tai2 hang2 shi4
-擡行市	tai2 hang2 shi4
 抬轎子	tai2 jiao4 zi5
-擡轎子	tai2 jiao4 zi5
 抬頦	tai2 hai2
-擡頦	tai2 hai2
 抬鼓弄	tai2 gu3 nong4
-擡鼓弄	tai2 gu3 nong4
 擢髮抽腸	zhuo2 fa3 chou1 chang2
 擢髮難數	zhuo2 fa3 nan2 shu3
 擣虛撇抗	dao3 xu1 pie1 kang4
@@ -111100,4 +111084,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 111103 #####
+##### @結束 END - 111087 #####
