@@ -12,42 +12,44 @@
 --      - lua_filter@lua_function2
 --    可掛接作用功能:
 --      ...
---      - lua_translator@t_translator        -- 「`」開頭打出時間日期
---      - lua_translator@t2_translator       -- 「'/」開頭打出時間日期
---      - lua_translator@date_translator     -- 「``」開頭打出時間日期
---      - lua_translator@email_translator    -- 輸入email
---      - lua_translator@url_translator      -- 輸入網址
---      - lua_translator@urlw_translator     -- 輸入網址（多了www.）
---      - lua_translator@mytranslator        -- （有缺函數，參考勿用，暫關閉）
+--      - lua_translator@t_translator             -- 「`」開頭打出時間日期
+--      - lua_translator@t2_translator            -- 「'/」開頭打出時間日期
+--      - lua_translator@date_translator          -- 「``」開頭打出時間日期
+--      - lua_translator@email_translator         -- 輸入email
+--      - lua_translator@url_translator           -- 輸入網址
+--      - lua_translator@urlw_translator          -- 輸入網址（多了www.）
+--      - lua_translator@mytranslator             -- （有缺函數，參考勿用，暫關閉）
+--      - lua_translator@instruction_dbpmf        -- 選項中顯示洋蔥雙拼各種說明
+--      - lua_translator@instruction_grave_bpmf   -- 選項中顯示洋蔥注音各種說明
 --
 --
 --      《 ＊ 以下「濾鏡」注意在 filters 中的順序，關係到作用效果 》
---      - lua_filter@charset_filter          -- 遮屏含 CJK 擴展漢字的候選項
---      - lua_filter@charset_filter_plus     -- 遮屏含 CJK 擴展漢字的候選項，開關（only_cjk_filter）
---      - lua_filter@charset_filter2         -- 遮屏選含「᰼᰼」候選項
---      - lua_filter@comment_filter_plus     -- 遮屏提示碼，開關（simplify_comment）（遇到「'/」不遮屏）
---      - lua_filter@comment_filter_array30  -- 遮屏提示碼，開關（simplify_comment）（遇到「`」不遮屏）
---      - lua_filter@charset_comment_filter  -- 候選項註釋其所屬字符集，如：CJK、ExtA
---      - lua_filter@single_char_filter      -- 候選項重排序，使單字優先
---      - lua_filter@reverse_lookup_filter   -- 依地球拼音為候選項加上帶調拼音的註釋
---      - lua_filter@myfilter                -- 把 charset_comment_filter 和 reverse_lookup_filter 註釋串在一起，如：CJK(hǎo)
---      - lua_filter@symbols_mark_filter     -- 候選項註釋符號、音標等屬性之提示碼(comment)（用 opencc 可實現，但無法合併其他提示碼(comment)，改用 Lua 來實現）
---      - lua_filter@array30_nil_filter      -- 行列30空碼'⎔'轉成不輸出任何符號，符合原生
+--      - lua_filter@charset_filter               -- 遮屏含 CJK 擴展漢字的候選項
+--      - lua_filter@charset_filter_plus          -- 遮屏含 CJK 擴展漢字的候選項，開關（only_cjk_filter）
+--      - lua_filter@charset_filter2              -- 遮屏選含「᰼᰼」候選項
+--      - lua_filter@comment_filter_plus          -- 遮屏提示碼，開關（simplify_comment）（遇到「'/」不遮屏）
+--      - lua_filter@comment_filter_array30       -- 遮屏提示碼，開關（simplify_comment）（遇到「`」不遮屏）
+--      - lua_filter@charset_comment_filter       -- 候選項註釋其所屬字符集，如：CJK、ExtA
+--      - lua_filter@single_char_filter           -- 候選項重排序，使單字優先
+--      - lua_filter@reverse_lookup_filter        -- 依地球拼音為候選項加上帶調拼音的註釋
+--      - lua_filter@myfilter                     -- 把 charset_comment_filter 和 reverse_lookup_filter 註釋串在一起，如：CJK(hǎo)
+--      - lua_filter@symbols_mark_filter          -- 候選項註釋符號、音標等屬性之提示碼(comment)（用 opencc 可實現，但無法合併其他提示碼(comment)，改用 Lua 來實現）
+--      - lua_filter@array30_nil_filter           -- 行列30空碼'⎔'轉成不輸出任何符號，符合原生
 --
 --
 --      《 ＊ 以下「處理」注意在 processors 中的順序，基本放在最前面 》
---      - lua_processor@endspace             -- 韓語（非英語等）空格鍵後添加" "
---      - lua_processor@array30up            -- 行列30三四碼字按空格直接上屏
---      - lua_processor@array30up_zy         -- 行列30注音反查 Return 和 space 上屏修正
---      - lua_processor@ascii_punct_change   -- 注音非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
+--      - lua_processor@endspace                  -- 韓語（非英語等）空格鍵後添加" "
+--      - lua_processor@array30up                 -- 行列30三四碼字按空格直接上屏
+--      - lua_processor@array30up_zy              -- 行列30注音反查 Return 和 space 上屏修正
+--      - lua_processor@ascii_punct_change        -- 注音非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
 --
 --      = 以下針對「編碼有用到空白鍵」方案，如：注音一聲，去除空白上屏產生莫名之空格 =
---      - lua_processor@s2r_ss               -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（只有開頭 ^'/ 才作用，比下條目更精簡，少了 is_composing 限定）
---      - lua_processor@s2r_s                -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（只有開頭 ^'/ 才作用）
---      - lua_processor@s2r                  -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin(1,2,4)和 plus 用）
---      - lua_processor@s2r_e_u              -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（只針對 email 和 url ）
---      - lua_processor@s2r_mixin3           -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin3 (特殊正則)專用）
---      - lua_processor@s2r_most             -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin(1,2,4)和 plus 用，精簡寫法）
+--      - lua_processor@s2r_ss          -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（只有開頭 ^'/ 才作用，比下條目更精簡，少了 is_composing 限定）
+--      - lua_processor@s2r_s           -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（只有開頭 ^'/ 才作用）
+--      - lua_processor@s2r             -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin(1,2,4)和 plus 用）
+--      - lua_processor@s2r_e_u         -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（只針對 email 和 url ）
+--      - lua_processor@s2r_mixin3      -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin3 (特殊正則)專用）
+--      - lua_processor@s2r_most        -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin(1,2,4)和 plus 用，精簡寫法）
 --      ...
 
 
@@ -6987,6 +6989,214 @@ end
 --   date_translator(input, seg)
 --   time_translator(input, seg)
 -- end
+
+
+
+
+--- @@ instruction_grave_bpmf
+--[[
+說明注音「`」開頭之符號集
+--]]
+function instruction_grave_bpmf(input, seg)
+  -- if input:find('^`$') then
+  if (string.match(input, "^`$")~=nil) then
+    -- for cand in input:iter() do
+    --   yield(cand)
+    -- end
+    local table_gb_1 = {
+          { ' ※ 輸入【項目】每字第一個注音，調出相關符號。', '𝟏' }
+        , { '【表情】【自然】【飲食】【活動】【旅遊】【物品】', '𝟐' }
+        , { '【符號】【國旗】【微笑】【大笑】【冒汗】【喜愛】', '𝟑' }
+        , { '【討厭】【無奈】【哭泣】【冷淡】【驚訝】【生氣】', '𝟒' }
+        , { '【懷疑】【大頭】【人物】【獸面】【貓頭】【怪物】', '𝟓' }
+        , { '【五官】【手勢】【亞裔】【白人】【黑人】【天氣】', '𝟔' }
+        , { '【下雪】【天體】【夜空】【地球】【景色】【景點】', '𝟕' }
+        , { '【名勝】【日本】【美國】【法國】【建築】【節日】', '𝟖' }
+        , { '【娛樂】【遊戲】【運動】【球具】【獎項】【獎牌】', '𝟗' }
+        , { '【食物】【正飯】【午餐】【早餐】【早點】【中餐】', '𝟏𝟎' }
+        , { '【西餐】【快餐】【速食】【米飯】【麵包】【捲物】', '𝟏𝟏' }
+        , { '【串物】【甜點】【零食】【飲料】【熱飲】【酒精】', '𝟏𝟐' }
+        , { '【酒類】【植物】【水果】【蔬菜】【粗糧】【花卉】', '𝟏𝟑' }
+        , { '【葉子】【肉類】【肉品】【牲畜】【畜牲】【禽類】', '𝟏𝟒' }
+        , { '【鳥類】【魚圖】【鳥圖】【衣物】【衣服】【褲子】', '𝟏𝟓' }
+        , { '【帽子】【包包】【頭髮】【膚色】【化妝】【愛情】', '𝟏𝟔' }
+        , { '【愛心】【兩性】【效果】【色塊】【宗教】【音樂】', '𝟏𝟕' }
+        , { '【樂器】【時鐘】【標誌】【圖示】【圖標】【箭標】', '𝟏𝟖' }
+        , { '【指示】【回收】【有害】【科學】【通訊】【電腦】', '𝟏𝟗' }
+        , { '【電子】【武器】【象棋】【麻將】【骰子】【撲克】', '𝟐𝟎' }
+        , { '【船隻】【飛機】【汽車】【車輛】【公交】【城軌】', '𝟐𝟏' }
+        , { '【捷運】【火車】【錢財】【鈔票】【紙鈔】【紙幣】', '𝟐𝟐' }
+        , { '【貨幣】【單位】【數學】【分數】【打勾】【星號】', '𝟐𝟑' }
+        , { '【箭頭】【線段】【幾何】【三角】【方塊】【圓形】', '𝟐𝟒' }
+        , { '【填色】【文化】【占星】【星座】【易經】【八卦】', '𝟐𝟓' }
+        , { '【卦名】【天干】【地支】【干支】【節氣】【月份】', '𝟐𝟔' }
+        , { '【日期】【曜日】【時間】【符碼】【標點】【合字】', '𝟐𝟕' }
+        , { '【部首】【偏旁】【筆畫】【倉頡】【結構】【拼音】', '𝟐𝟖' }
+        , { '【注音】【聲調】【上標】【下標】【羅馬】【希臘】', '𝟐𝟗' }
+        , { '【俄語】【韓文】【(平)假名】', '𝟑𝟎' }
+        , { '【幾何圖】【鞋子圖】【眼鏡圖】【工具圖】【電器圖】', '𝟑𝟏' }
+        , { '【甜食圖】【餐具圖】【動物圖】【生肖圖】【家禽圖】', '𝟑𝟐' }
+        , { '【魚類圖】【精怪圖】【月相圖】【交通圖】【飛行器】', '𝟑𝟑' }
+        , { '【黃種人】【拉美裔】【棕色人】【白種人】【阿拉伯】', '𝟑𝟒' }
+        , { '【動物臉】【猴子頭】【咧嘴笑】【做運動】【日本菜】', '𝟑𝟓' }
+        , { '【食物捲】【辦公室】【警消護】【大自然】【遊樂園】', '𝟑𝟔' }
+        , { '【撲克牌】【西洋棋】【輸入法】【日用品】【單線框】', '𝟑𝟕' }
+        , { '【雙線框】【色塊心】【色塊方】【色塊圓】【十字架】', '𝟑𝟖' }
+        , { '【星座名】【十二宮】【太玄經】【蘇州碼】【標點直】', '𝟑𝟗' }
+        , { '【羅馬大】【希臘大】【俄語大】【字母圈】【字母括】', '𝟒𝟎' }
+        , { '【字母方】【字母框】【數字圈】【數字括】【數字點】', '𝟒𝟏' }
+        , { '【數字標】【漢字圈】【漢字框】【漢字括】【韓文圈】', '𝟒𝟐' }
+        , { '【韓文括】【假名圈】【片假名】【IRO(いろは順)】', '𝟒𝟑' }
+        , { '【假名半(形)】【日本年】【填色塊】', '𝟒𝟒' }
+        , { '【猴子表情】【十二生肖】【交通工具】【公共運輸】', '𝟒𝟓' }
+        , { '【日式料理】【日本料理】【日本星期】【羅馬數字】', '𝟒𝟔' }
+        , { '【數字圈黑】【數字黑圈】【字母圈大】【字母括大】', '𝟒𝟕' }
+        , { '【字母黑圈】【字母圈黑】【字母黑方】【字母方黑】', '𝟒𝟖' }
+        , { '【字母框黑】【字母黑框】【易經卦名】【六十四卦】', '𝟒𝟗' }
+        , { '【六十四卦名】【羅馬數字大】', '𝟓𝟎' }
+        , { '【運動ㄋㄩ(女)】【運動ㄋㄢ(男)】', '𝟓𝟏' }
+        , { '【精怪ㄋㄩ(女)】【精怪ㄋㄢ(男)】', '𝟓𝟐' }
+        , { '【 a 假名】【 i 假名】【 u 假名】【 e 假名】【 o 假名】', '𝟓𝟑' }
+        , { '【 k 假名】【 g 假名】【 s 假名】【 z 假名】【 t 假名】', '𝟓𝟒' }
+        , { '【 d 假名】【 n 假名】【 h 假名】【 b 假名】【 p 假名】', '𝟓𝟓' }
+        , { '【 m 假名】【 y 假名】【 r 假名】【 w 假名】', '𝟓𝟔' }
+        , { '｢圈｣｢框｣｢括｣數字字母：【 0 ~ 10 】【 1-0 ~ 5-0 】【 a ~ z 】', '𝟓𝟕' }
+    }
+    for k, v in ipairs(table_gb_1) do
+      local cand = Candidate('help', seg.start, seg._end, v[2], ' ' .. v[1])
+      -- cand.preedit = input .. '\t※ 輸入【項目】每字第一個注音，調出相關符號。'
+      yield(cand)
+    end
+  end
+  -- if input:find('^``$') then
+  if(string.match(input, "^``$")~=nil) then
+    local table_gb_2 = {
+          { '〖 a ~ z 〗字母變化      ※ 以下 顏文字：', '𝟙' }
+        , { '〖 1 〗開心 〖 2 〗喜歡 〖 3 〗傷心', '𝟚' }
+        , { '〖 4 〗生氣 〖 5 〗驚訝 〖 6 〗無奈', '𝟛' }
+        , { '〖 7 〗喜     〖 8 〗樂     〖 9 〗怒', '𝟜' }
+        , { '〖 0 〗指示和圖示          〖 - 〗回話', '𝟝' }
+    }
+    for k, v in ipairs(table_gb_2) do
+      local cand = Candidate('help', seg.start, seg._end, v[2], ' ' .. v[1])
+      -- cand.preedit = input .. '\t※ 輸入【項目】每字第一個注音，調出相關符號。'
+      yield(cand)
+    end
+  end
+end
+
+
+
+
+--- @@ instruction_dbpmf
+--[[
+說明雙拼注音各種掛接
+--]]
+function instruction_dbpmf(input, seg)
+  -- if input:find('^;$') then
+  if (string.match(input, "^;$")~=nil) then
+    -- for cand in input:iter() do
+    --   yield(cand)
+    -- end
+    local table_sd_1 = {
+          { ' ※ 輸入【項目】每字第一個注音，調出相關符號。', '𝟏' }
+        , { '【表情】【自然】【飲食】【活動】【旅遊】【物品】', '𝟐' }
+        , { '【符號】【國旗】【微笑】【大笑】【冒汗】【喜愛】', '𝟑' }
+        , { '【討厭】【無奈】【哭泣】【冷淡】【驚訝】【生氣】', '𝟒' }
+        , { '【懷疑】【大頭】【人物】【獸面】【貓頭】【怪物】', '𝟓' }
+        , { '【五官】【手勢】【亞裔】【白人】【黑人】【天氣】', '𝟔' }
+        , { '【下雪】【天體】【夜空】【地球】【景色】【景點】', '𝟕' }
+        , { '【名勝】【日本】【美國】【法國】【建築】【節日】', '𝟖' }
+        , { '【娛樂】【遊戲】【運動】【球具】【獎項】【獎牌】', '𝟗' }
+        , { '【食物】【正飯】【午餐】【早餐】【早點】【中餐】', '𝟏𝟎' }
+        , { '【西餐】【快餐】【速食】【米飯】【麵包】【捲物】', '𝟏𝟏' }
+        , { '【串物】【甜點】【零食】【飲料】【熱飲】【酒精】', '𝟏𝟐' }
+        , { '【酒類】【植物】【水果】【蔬菜】【粗糧】【花卉】', '𝟏𝟑' }
+        , { '【葉子】【肉類】【肉品】【牲畜】【畜牲】【禽類】', '𝟏𝟒' }
+        , { '【鳥類】【魚圖】【鳥圖】【衣物】【衣服】【褲子】', '𝟏𝟓' }
+        , { '【帽子】【包包】【頭髮】【膚色】【化妝】【愛情】', '𝟏𝟔' }
+        , { '【愛心】【兩性】【效果】【色塊】【宗教】【音樂】', '𝟏𝟕' }
+        , { '【樂器】【時鐘】【標誌】【圖示】【圖標】【箭標】', '𝟏𝟖' }
+        , { '【指示】【回收】【有害】【科學】【通訊】【電腦】', '𝟏𝟗' }
+        , { '【電子】【武器】【象棋】【麻將】【骰子】【撲克】', '𝟐𝟎' }
+        , { '【船隻】【飛機】【汽車】【車輛】【公交】【城軌】', '𝟐𝟏' }
+        , { '【捷運】【火車】【錢財】【鈔票】【紙鈔】【紙幣】', '𝟐𝟐' }
+        , { '【貨幣】【單位】【數學】【分數】【打勾】【星號】', '𝟐𝟑' }
+        , { '【箭頭】【線段】【幾何】【三角】【方塊】【圓形】', '𝟐𝟒' }
+        , { '【填色】【文化】【占星】【星座】【易經】【八卦】', '𝟐𝟓' }
+        , { '【卦名】【天干】【地支】【干支】【節氣】【月份】', '𝟐𝟔' }
+        , { '【日期】【曜日】【時間】【符碼】【標點】【合字】', '𝟐𝟕' }
+        , { '【部首】【偏旁】【筆畫】【倉頡】【結構】【拼音】', '𝟐𝟖' }
+        , { '【注音】【聲調】【上標】【下標】【羅馬】【希臘】', '𝟐𝟗' }
+        , { '【俄語】【韓文】【(平)假名】', '𝟑𝟎' }
+        , { '【幾何圖】【鞋子圖】【眼鏡圖】【工具圖】【電器圖】', '𝟑𝟏' }
+        , { '【甜食圖】【餐具圖】【動物圖】【生肖圖】【家禽圖】', '𝟑𝟐' }
+        , { '【魚類圖】【精怪圖】【月相圖】【交通圖】【飛行器】', '𝟑𝟑' }
+        , { '【黃種人】【拉美裔】【棕色人】【白種人】【阿拉伯】', '𝟑𝟒' }
+        , { '【動物臉】【猴子頭】【咧嘴笑】【做運動】【日本菜】', '𝟑𝟓' }
+        , { '【食物捲】【辦公室】【警消護】【大自然】【遊樂園】', '𝟑𝟔' }
+        , { '【撲克牌】【西洋棋】【輸入法】【日用品】【單線框】', '𝟑𝟕' }
+        , { '【雙線框】【色塊心】【色塊方】【色塊圓】【十字架】', '𝟑𝟖' }
+        , { '【星座名】【十二宮】【太玄經】【蘇州碼】【標點直】', '𝟑𝟗' }
+        , { '【羅馬大】【希臘大】【俄語大】【字母圈】【字母括】', '𝟒𝟎' }
+        , { '【字母方】【字母框】【數字圈】【數字括】【數字點】', '𝟒𝟏' }
+        , { '【數字標】【漢字圈】【漢字框】【漢字括】【韓文圈】', '𝟒𝟐' }
+        , { '【韓文括】【假名圈】【IRO(いろは順)】', '𝟒𝟑' }
+        , { '【假名半(形)】【日本年】【填色塊】', '𝟒𝟒' }
+        , { '【猴子表情】【十二生肖】【交通工具】【公共運輸】', '𝟒𝟓' }
+        , { '【日式料理】【日本料理】【日本星期】【羅馬數字】', '𝟒𝟔' }
+        , { '【數字圈黑】【數字黑圈】【字母圈大】【字母括大】', '𝟒𝟕' }
+        , { '【字母黑圈】【字母圈黑】【字母黑方】【字母方黑】', '𝟒𝟖' }
+        , { '【字母框黑】【字母黑框】【易經卦名】【六十四卦】', '𝟒𝟗' }
+        , { '【六十四卦名】【羅馬數字大】', '𝟓𝟎' }
+        , { '【PM(片)假名】【運動NY(女)】【運動NH(男)】', '𝟓𝟏' }
+        , { '【精怪NY(女)】【精怪NH(男)】', '𝟓𝟐' }
+        , { '【 a 假名】【 i 假名】【 u 假名】【 e 假名】【 o 假名】', '𝟓𝟑' }
+        , { '【 k 假名】【 g 假名】【 s 假名】【 z 假名】【 t 假名】', '𝟓𝟒' }
+        , { '【 d 假名】【 n 假名】【 h 假名】【 b 假名】【 p 假名】', '𝟓𝟓' }
+        , { '【 m 假名】【 y 假名】【 r 假名】【 w 假名】', '𝟓𝟔' }
+        , { ' ｢圈｣｢框｣｢括｣數字字母：【 0 ~ 50 】【 a ~ z 】', '𝟓𝟕' }
+    }
+    for k, v in ipairs(table_sd_1) do
+      local cand = Candidate('help', seg.start, seg._end, v[2], ' ' .. v[1])
+      -- cand.preedit = input .. '\t※ 輸入【項目】每字第一個注音，調出相關符號。'
+      yield(cand)
+    end
+  end
+  -- if input:find('^;;$') then
+  if(string.match(input, "^;;$")~=nil) then
+    local table_sd_2 = {
+          { '〖 a ~ z 〗字母變化      ※ 以下 顏文字：', '𝟙' }
+        , { '〖 1 〗開心 〖 2 〗喜歡 〖 3 〗傷心', '𝟚' }
+        , { '〖 4 〗生氣 〖 5 〗驚訝 〖 6 〗無奈', '𝟛' }
+        , { '〖 7 〗喜     〖 8 〗樂     〖 9 〗怒', '𝟜' }
+        , { '〖 0 〗指示和圖示          〖 - 〗回話', '𝟝' }
+    }
+    for k, v in ipairs(table_sd_2) do
+      local cand = Candidate('help', seg.start, seg._end, v[2], ' ' .. v[1])
+      -- cand.preedit = input .. '\t※ 輸入【項目】每字第一個注音，調出相關符號。'
+      yield(cand)
+    end
+  end
+  -- if input:find('^e$') then
+  if(string.match(input, "^e$")~=nil) then
+    local table_sd_2 = {
+          { 'ㄅⒷ ㄆⓟ ㄇⓂ ㄈⒻ ｜ ㄉⒹ ㄊⓉ ㄋⓃ ㄌⓁ ｜ ㄍⒼ ㄎⓀ ㄏⒽ', '❶' }
+        , { 'ㄐⒿ ㄑⓆ ㄒⓍ ｜ㄓⓌ ㄔⓋ ㄕⒶ ㄖⓇ ｜ ㄗⓏ ㄘⒸ ㄙⓈ', '❷' }
+        , { 'ㄧⒾ ㄨⓊ ㄩⓎ      ║ 空韻碼： ㄭⒾ　(ㄧㄨㄩ)ㄭⒺ　◌Ⓞ ║', '❸' }
+        , { 'ㄚⒶ ㄛⓄ ㄜⒺ ㄝⓀ ｜ ㄞⒿ ㄟⓀ ㄠⓌ ㄡⒹ', '❹' }
+        , { 'ㄢⒽ ㄣⒻ ㄤⓈ ㄥⒼ ㄦⓇ', '❺' }
+        , { 'ㄧㄚⓏ ㄧㄝⓟ ㄧㄠⓆ ㄧㄡⒸ ㄧㄢⓂ ㄧㄣⓇ ㄧㄤⓍ ㄧㄥⓉ', '❻' }
+        , { 'ㄨㄚⓏ ㄨㄞⓂ ㄨㄟⓁ ㄨㄢⓃ ㄨㄣⓋ ㄨㄤⓍ ㄨㄥⒷ', '❼' }
+        , { 'ㄩㄢⓃ ㄩㄝⓁ ㄩㄣⓋ ㄩㄥⒷ', '❽' }
+    }
+    for k, v in ipairs(table_sd_2) do
+      local cand = Candidate('help', seg.start, seg._end, v[2], ' ' .. v[1])
+      cand.preedit = input .. '\t《查詢鍵位注音》▶'
+      yield(cand)
+    end
+  end
+end
 
 
 

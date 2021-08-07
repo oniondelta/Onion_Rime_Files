@@ -101,6 +101,7 @@ engine:
     - lua_translator@t2_translator
     - lua_translator@email_translator
     - lua_translator@url_translator
+    - lua_translator@instruction_grave_bpmf
     - script_translator
 ################################### 選單 ################################################
 menu:
