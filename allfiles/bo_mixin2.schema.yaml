@@ -51,6 +51,7 @@ engine:
     - simplifier@zh_tw
     - lua_filter@charset_filter2  #去除opencc轉換後留下的「᰼᰼」。
 #    - lua_filter@charset_filter  #打開後中文只保留CJK（精簡），但外語不受影響。
+    - lua_filter@missing_mark_filter  #補上標點符號因直上和 opencc 衝突沒附註之選項
     - simplifier
     - simplifier@emoji_switch
     - simplifier@back_mark
