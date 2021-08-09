@@ -35,6 +35,7 @@
 --      - lua_filter@myfilter                     -- 把 charset_comment_filter 和 reverse_lookup_filter 註釋串在一起，如：CJK(hǎo)
 --      - lua_filter@symbols_mark_filter          -- 候選項註釋符號、音標等屬性之提示碼(comment)（用 opencc 可實現，但無法合併其他提示碼(comment)，改用 Lua 來實現）
 --      - lua_filter@array30_nil_filter           -- 行列30空碼'⎔'轉成不輸出任何符號，符合原生
+--      - lua_filter@missing_mark_filter          -- 補上標點符號因直上和 opencc 衝突沒附註之選項
 --
 --
 --      《 ＊ 以下「處理」注意在 processors 中的順序，基本放在最前面 》
@@ -487,6 +488,34 @@ function array30_nil_filter(input, env)
     end
   end
   -- return nil
+end
+
+
+
+
+--- @@ missing_mark_filter
+--[[
+補上標點符號因直上和 opencc 衝突沒附註之選項
+--]]
+function missing_mark_filter(input, env)
+  local p_key = env.engine.context.input
+  if (string.match(p_key, '=%.$' )) or (string.match(p_key, '[][]$' )) then
+    for cand in input:iter() do
+      if (string.match(cand.text, '^。$' )) then
+        cand:get_genuine().comment = "〔句點〕"
+        yield(cand)
+      elseif (string.match(cand.text, '^〔$' )) or (string.match(cand.text, '^〕$' )) then
+        cand:get_genuine().comment = "〔六角括號〕"
+        yield(cand)
+      else
+        yield(cand)
+      end
+    end
+  else
+    for cand in input:iter() do
+      yield(cand)
+    end
+  end
 end
 
 
