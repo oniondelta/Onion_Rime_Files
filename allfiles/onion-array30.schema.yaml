@@ -37,8 +37,9 @@ engine:
   filters:
     - simplifier
     - reverse_lookup_filter@array30_reverse_lookup
-    - lua_filter@comment_filter_array30 #後面註解開關濾鏡。
-    - lua_filter@array30_nil_filter #把選字單中空碼符號轉換為""，且不會上屏。
+    - lua_filter@mix30_nil_comment_filter
+    # - lua_filter@comment_filter_array30 #後面註解開關濾鏡。
+    # - lua_filter@array30_nil_filter #把選字單中空碼符號轉換為""，且不會上屏。
     - reverse_lookup_filter@array30-zy_reverse_lookup
     - reverse_lookup_filter@bpmf_reverse_lookup
     # - uniquifier
