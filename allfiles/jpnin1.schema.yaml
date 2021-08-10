@@ -4,7 +4,7 @@
 schema:
   schema_id: jpnin1 # 注意此ID與文件名裏 .schema.yaml 之前的部分相同
   name: ❃日語 in 1❃
-  version: "202105"
+  version: "202108"
   author:
     - 『洋蔥』
   description: |
@@ -86,7 +86,7 @@ speller:
     - derive/dd([auoie])(.*)([;])$/qd$1$2$3/ #っだ #暫時打開測試
     - derive/bb([auoie])(.*)([;])$/qb$1$2$3/ #っば #暫時打開測試
     - derive/pp([auoie])(.*)([;])$/qp$1$2$3/ #っぱ
-# ### 漢字中的拗音 ###
+# ### 漢字中的拗音 ### @ 太影響效能，暫時關閉@
 #     - derive/ky([auo])(.*)([;])$/kixy$1$2$3/ #きゃ
 #     - derive/gy([auoie])(.*)([;])$/gixy$1$2$3/ #ぎゃ
 #     - derive/sh([auo])(.*)([;])$/shixy$1$2$3/ #しゃ

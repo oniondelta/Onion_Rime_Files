@@ -51,9 +51,10 @@ switches:
 engine:
   filters:
     - simplifier@zh_tw
-    - lua_filter@charset_filter2  #去除opencc轉換後留下的「᰼᰼」。
-#    - lua_filter@charset_filter  #打開後中文只保留CJK（精簡），但外語不受影響。
-    - lua_filter@missing_mark_filter  #補上標點符號因直上和 opencc 衝突沒附註之選項
+    - lua_filter@mix_cf2_miss_filter  #合併 charset_filter2 和 missing_mark_filter，兩個 lua filter 太耗效能。
+    # - lua_filter@charset_filter2  #去除opencc轉換後留下的「᰼᰼」。
+    # - lua_filter@charset_filter  #打開後中文只保留CJK（精簡），但外語不受影響。
+    # - lua_filter@missing_mark_filter  #補上標點符號因直上和 opencc 衝突沒附註之選項
     - simplifier
     - simplifier@emoji_switch
     - simplifier@back_mark
@@ -102,8 +103,7 @@ engine:
     - script_translator@cyr2
     - script_translator@all_bpm
     - lua_translator@t2_translator
-    - lua_translator@email_translator
-    - lua_translator@url_translator
+    - lua_translator@email_url_translator
     - lua_translator@instruction_grave_bpmf
     - script_translator
 
@@ -481,4 +481,5 @@ recognizer:
     cyr2: "^66[|a-z;/]*'?$|(?<=[|'])66[|a-z;/]*'?$|(?<=[=][0-9])66[|a-z;/]*'?$|(?<=[=][][])66[|a-z;/]*'?$|(?<=[=][][][][])66[|a-z;/]*'?$|(?<=[=][-,.;'=`])66[|a-z;/]*'?$|(?<=[=][-,.;'=`][-,.;'=`])66[|a-z;/]*'?$|(?<=[][])66[|a-z;/]*'?$|(?<=[][][][])66[|a-z;/]*'?$|(?<=[][]['])66[|a-z;/]*'?$|(?<=[][][][]['])66[|a-z;/]*'?$|(?<=(?<!'/)(?<!')(?<!'/[0-9.a-fxo]{1})(?<!'/[0-9.a-fxo]{2})(?<!'/[0-9.a-fxo]{3})(?<!'/[0-9.a-fxo]{4})(?<!'/[0-9.a-fxo]{5})(?<!'/[0-9.a-fxo]{6})(?<!'/[0-9.a-fxo]{7})(?<!'/[0-9.a-fxo]{8})(?<!'/[0-9.a-fxo]{9})(?<!'/[0-9.a-fxo]{10})(?<!'/[0-9.a-fxo]{11})(?<!'/[0-9.a-fxo]{12})(?<!'/[0-9.a-fxo]{13})(?<!'/[0-9.a-fxo]{14})(?<!'/[0-9.a-fxo]{15})(?<!'/[0-9.a-fxo]{16})(?<!'/[0-9.a-fxo]{17})[-,./;a-z125890][3467])66[|a-z;/]*'?$"
     gr2: "^77[|a-z;/]*'?$|(?<=[|'])77[|a-z;/]*'?$|(?<=[=][0-9])77[|a-z;/]*'?$|(?<=[=][][])77[|a-z;/]*'?$|(?<=[=][][][][])77[|a-z;/]*'?$|(?<=[=][-,.;'=`])77[|a-z;/]*'?$|(?<=[=][-,.;'=`][-,.;'=`])77[|a-z;/]*'?$|(?<=[][])77[|a-z;/]*'?$|(?<=[][][][])77[|a-z;/]*'?$|(?<=[][]['])77[|a-z;/]*'?$|(?<=[][][][]['])77[|a-z;/]*'?$|(?<=(?<!'/)(?<!')(?<!'/[0-9.a-fxo]{1})(?<!'/[0-9.a-fxo]{2})(?<!'/[0-9.a-fxo]{3})(?<!'/[0-9.a-fxo]{4})(?<!'/[0-9.a-fxo]{5})(?<!'/[0-9.a-fxo]{6})(?<!'/[0-9.a-fxo]{7})(?<!'/[0-9.a-fxo]{8})(?<!'/[0-9.a-fxo]{9})(?<!'/[0-9.a-fxo]{10})(?<!'/[0-9.a-fxo]{11})(?<!'/[0-9.a-fxo]{12})(?<!'/[0-9.a-fxo]{13})(?<!'/[0-9.a-fxo]{14})(?<!'/[0-9.a-fxo]{15})(?<!'/[0-9.a-fxo]{16})(?<!'/[0-9.a-fxo]{17})[-,./;a-z125890][3467])77[|a-z;/]*'?$"
     all_bpm: "';[-a-z0-9.,/;|]*'?$|^[-a-z0-9.,/;|]+';'$"
-    lua: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$|'/[';/]?[a-z]*$|'/[0-9./-]*$|'/[xcoe][0-9a-z]+$"
+    lua: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$|'/[';a-z0-9./-]*$" #"'/[';]?[a-z0-9./-]*$"
+    #舊# lua: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$|'/[';/]?[a-z]*$|'/[0-9./-]*$|'/[xcoe][0-9a-z]+$"

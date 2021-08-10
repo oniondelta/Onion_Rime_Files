@@ -62,15 +62,16 @@ switches:
 engine:
   filters:
     - simplifier@zh_tw
-    - lua_filter@charset_filter2  #去除opencc轉換後留下的「᰼᰼」。
+    # - lua_filter@charset_filter2  #去除opencc轉換後留下的「᰼᰼」。
 #    - charset_filter@big5
 #    - charset_filter@gbk
 #    - charset_filter@gb2312
     - simplifier
     - reverse_lookup_filter@top_reverse_lookup
     - reverse_lookup_filter@pt_reverse_lookup
+    - lua_filter@mix_cf2_cfp_filter  # 合併 charset_filter2 和 comment_filter_plus，兩個 lua filter 太耗效能。
+    # - lua_filter@comment_filter_plus
     - simplifier@back_mark
-    - lua_filter@comment_filter_plus
     - simplifier@emoji_switch
     - reverse_lookup_filter@ovff_reverse_lookup
     - reverse_lookup_filter@phonetic_reverse_lookup
@@ -129,8 +130,7 @@ engine:
     - table_translator@easy_en
     - script_translator@japan
     - lua_translator@t2_translator
-    - lua_translator@email_translator
-    - lua_translator@urlw_translator
+    - lua_translator@email_urlw_translator
 ################################### 選單 ################################################
 menu:
   alternative_select_keys: "0123456789"
@@ -572,4 +572,5 @@ recognizer:
 #    第一個不能刪，否則無法用數字選擇。
 #    「-」不能刪，顏文字會用到。
     all_bpm: "^';'[-a-z0-9.,/;']*$"
-    lua: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|^'/[';/]?[a-z]*$|^'/[0-9./-]*$|^'/[xcoe][0-9a-z]+$"
+    lua: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|^'/[';a-z0-9./-]*$" #"^'/[';]?[a-z0-9./-]*$"
+    #舊# lua: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|^'/[';/]?[a-z]*$|^'/[0-9./-]*$|^'/[xcoe][0-9a-z]+$"

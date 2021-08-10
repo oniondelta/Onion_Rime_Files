@@ -72,8 +72,7 @@ engine:
     - script_translator@reverse2_lookup
     - table_translator@reverse3_lookup
     - lua_translator@t_translator
-    - lua_translator@email_translator
-    - lua_translator@urlw_translator
+    - lua_translator@email_urlw_translator
 
 
 simplifier:
@@ -387,7 +386,8 @@ recognizer:
     wsymbols: "^[w][0-9]$" #（可用 symbols 更簡單實現，但沒有開頭提示）
     reverse2_lookup: "^=[-.,;/0-9a-z]*'?$"
     reverse3_lookup: "^==[a-z,./; ]*'?$"
-    lua: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|`[;/']?[a-z]*$|`[;/']?[0-9./-]*$|`[xcoe][0-9a-z]+$"
+    lua: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|`[';a-z0-9./-]*$"
+    #舊# lua: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|`[;/']?[a-z]*$|`[;/']?[0-9./-]*$|`[xcoe][0-9a-z]+$"
     # email: "^[a-z][-_.0-9a-z]*@.*$"
     # url: "^(www[.]|https?:|ftp:|mailto:).*$"
 

@@ -15,10 +15,9 @@
 --      - lua_translator@t_translator             -- 「`」開頭打出時間日期
 --      - lua_translator@t2_translator            -- 「'/」開頭打出時間日期
 --      - lua_translator@date_translator          -- 「``」開頭打出時間日期
---      - lua_translator@email_translator         -- 輸入email
---      - lua_translator@url_translator           -- 輸入網址
---      - lua_translator@urlw_translator          -- 輸入網址（多了www.）
 --      - lua_translator@mytranslator             -- （有缺函數，參考勿用，暫關閉）
+--      - lua_translator@email_url_translator     -- 輸入email、網址
+--      - lua_translator@email_urlw_translator    -- 輸入email、網址（多了www.）
 --      - lua_translator@instruction_dbpmf        -- 選項中顯示洋蔥雙拼各種說明
 --      - lua_translator@instruction_grave_bpmf   -- 選項中顯示洋蔥注音各種說明
 --
@@ -26,16 +25,19 @@
 --      《 ＊ 以下「濾鏡」注意在 filters 中的順序，關係到作用效果 》
 --      - lua_filter@charset_filter               -- 遮屏含 CJK 擴展漢字的候選項
 --      - lua_filter@charset_filter_plus          -- 遮屏含 CJK 擴展漢字的候選項，開關（only_cjk_filter）
---      - lua_filter@charset_filter2              -- 遮屏選含「᰼᰼」候選項
---      - lua_filter@comment_filter_plus          -- 遮屏提示碼，開關（simplify_comment）（遇到「'/」不遮屏）
---      - lua_filter@comment_filter_array30       -- 遮屏提示碼，開關（simplify_comment）（遇到「`」不遮屏）
 --      - lua_filter@charset_comment_filter       -- 候選項註釋其所屬字符集，如：CJK、ExtA
 --      - lua_filter@single_char_filter           -- 候選項重排序，使單字優先
 --      - lua_filter@reverse_lookup_filter        -- 依地球拼音為候選項加上帶調拼音的註釋
 --      - lua_filter@myfilter                     -- 把 charset_comment_filter 和 reverse_lookup_filter 註釋串在一起，如：CJK(hǎo)
+--
+--      - lua_filter@charset_filter2              -- 遮屏選含「᰼᰼」候選項
+--      - lua_filter@comment_filter_plus          -- 遮屏提示碼，開關（simplify_comment）（遇到「'/」不遮屏），蝦米用。
+--      - lua_filter@comment_filter_array30       -- 遮屏提示碼，開關（simplify_comment）（遇到「`」不遮屏）
 --      - lua_filter@symbols_mark_filter          -- 候選項註釋符號、音標等屬性之提示碼(comment)（用 opencc 可實現，但無法合併其他提示碼(comment)，改用 Lua 來實現）
 --      - lua_filter@array30_nil_filter           -- 行列30空碼'⎔'轉成不輸出任何符號，符合原生
 --      - lua_filter@missing_mark_filter          -- 補上標點符號因直上和 opencc 衝突沒附註之選項
+--      - lua_filter@mix_cf2_miss_filter          -- 合併 charset_filter2 和 missing_mark_filter，兩個 lua filter 太耗效能。
+--      - lua_filter@mix_cf2_cfp_filter           -- 合併 charset_filter2 和 comment_filter_plus，兩個 lua filter 太耗效能。
 --
 --
 --      《 ＊ 以下「處理」注意在 processors 中的順序，基本放在最前面 》
@@ -521,6 +523,90 @@ end
 
 
 
+--- @@ mix_cf2_miss_filter
+--[[
+合併 charset_filter2 和 missing_mark_filter，兩個 lua filter 太耗效能。
+--]]
+function mix_cf2_miss_filter(input, env)
+  local c_f2_s = env.engine.context:get_option("zh_tw")
+  local p_key = env.engine.context.input
+  local addcomment1 = string.match(p_key, '=%.$')
+  local addcomment2 = string.match(p_key, '[][]$')
+  if (c_f2_s) then
+    for cand in input:iter() do
+      if (not string.find(cand.text, '᰼᰼' )) and (not addcomment1) and (not addcomment2) then
+      -- if (not string.find(cand.text, '.*᰼᰼.*' )) then
+        yield(cand)
+      elseif (not string.find(cand.text, '᰼᰼' )) and (addcomment1) or (addcomment2) then
+        if (cand.text == '。') then
+          cand:get_genuine().comment = "〔句點〕"
+          yield(cand)
+        elseif (cand.text == '〔') or (cand.text == '〕') then
+          cand:get_genuine().comment = "〔六角括號〕"
+          yield(cand)
+        else
+          yield(cand)
+        end
+      end
+    end
+  else
+    if (addcomment1) or (addcomment2) then
+      for cand in input:iter() do
+        if (cand.text == '。') then
+          cand:get_genuine().comment = "〔句點〕"
+          yield(cand)
+        elseif (cand.text == '〔') or (cand.text == '〕') then
+          cand:get_genuine().comment = "〔六角括號〕"
+          yield(cand)
+        else
+          yield(cand)
+        end
+      end
+    else
+      for cand in input:iter() do
+        yield(cand)
+      end
+    end
+  end
+end
+
+
+
+
+--- @@ mix_cf2_cfp_filter
+--[[
+合併 charset_filter2 和 comment_filter_plus，兩個 lua filter 太耗效能。
+--]]
+function mix_cf2_cfp_filter(input, env)
+  local c_f2_s = env.engine.context:get_option("zh_tw")
+  local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
+  local find_prefix = env.engine.context.input
+  if (c_f2_s) then
+    for cand in input:iter() do
+      if (not string.find(cand.text, '᰼᰼' )) and (not s_c_f_p_s) or (string.find(find_prefix, "^'/" )) then
+        yield(cand)
+      elseif (not string.find(cand.text, '᰼᰼' )) and (s_c_f_p_s) and (not string.find(find_prefix, "^'/" ))  then
+        cand:get_genuine().comment = ""
+        yield(cand)
+      end
+    end
+  else
+    if (not s_c_f_p_s) or (string.find(find_prefix, "^'/" )) then
+      for cand in input:iter() do
+        yield(cand)
+      end
+    else
+      for cand in input:iter() do
+        cand:get_genuine().comment = ""
+        yield(cand)
+      end
+    end
+  end
+end
+
+
+
+
 --[[
 --------------------------------------------
 ！！！！以下為 processor 掛接！！！！
@@ -789,84 +875,46 @@ end
 
 
 
---- @@ email_translator
+--- @@ email_url_translator
 --[[
 把 recognizer 正則輸入 email 使用 lua 實現，使之有選項，避免設定空白清屏時無法上屏。
+把 recognizer 正則輸入網址使用 lua 實現，使之有選項，避免設定空白清屏時無法上屏。
 --]]
-function email_translator(input, seg)
+function email_url_translator(input, seg)
   local email_in = string.match(input, "^([a-z][-_.0-9a-z]*@.*)$")
+  local url1_in = string.match(input, "^(https?:.*)$")
+  local url2_in = string.match(input, "^(ftp:.*)$")
+  local url3_in = string.match(input, "^(mailto:.*)$")
+  local url4_in = string.match(input, "^(file:.*)$")
   if (email_in~=nil) then
     yield(Candidate("englishtype", seg.start, seg._end, email_in , "〔e-mail〕"))
     return
   end
-end
-
-
-
-
---- @@ url_translator
---[[
-把 recognizer 正則輸入網址使用 lua 實現，使之有選項，避免設定空白清屏時無法上屏。
---]]
-function url_translator(input, seg)
-  local url1_in = string.match(input, "^(https?:.*)$")
-  if (url1_in~=nil) then
-    yield(Candidate("englishtype", seg.start, seg._end, url1_in , "〔URL〕"))
-    return
-  end
-
-  local url2_in = string.match(input, "^(ftp:.*)$")
-  if (url2_in~=nil) then
-    yield(Candidate("englishtype", seg.start, seg._end, url2_in , "〔URL〕"))
-    return
-  end
-
-  local url3_in = string.match(input, "^(mailto:.*)$")
-  if (url3_in~=nil) then
-    yield(Candidate("englishtype", seg.start, seg._end, url3_in , "〔URL〕"))
-    return
-  end
-
-  local url4_in = string.match(input, "^(file:.*)$")
-  if (url4_in~=nil) then
-    yield(Candidate("englishtype", seg.start, seg._end, url4_in , "〔URL〕"))
+  if (url1_in~=nil) or (url2_in~=nil) or (url3_in~=nil) or (url4_in~=nil) then
+    yield(Candidate("englishtype", seg.start, seg._end, input , "〔URL〕"))
     return
   end
 end
 
---- urlw_translator
+
+--- @@ email_urlw_translator
 --[[
 把 recognizer 正則輸入網址使用 lua 實現，使之有選項，避免設定空白清屏時無法上屏。
 該項多加「www.」
 --]]
-function urlw_translator(input, seg)
+function email_urlw_translator(input, seg)
+  local email_in = string.match(input, "^([a-z][-_.0-9a-z]*@.*)$")
   local www_in = string.match(input, "^(www[.].*)$")
-  if (www_in~=nil) then
-    yield(Candidate("englishtype", seg.start, seg._end, www_in , "〔URL〕"))
-    return
-  end
-
   local url1_in = string.match(input, "^(https?:.*)$")
-  if (url1_in~=nil) then
-    yield(Candidate("englishtype", seg.start, seg._end, url1_in , "〔URL〕"))
-    return
-  end
-
   local url2_in = string.match(input, "^(ftp:.*)$")
-  if (url2_in~=nil) then
-    yield(Candidate("englishtype", seg.start, seg._end, url2_in , "〔URL〕"))
-    return
-  end
-
   local url3_in = string.match(input, "^(mailto:.*)$")
-  if (url3_in~=nil) then
-    yield(Candidate("englishtype", seg.start, seg._end, url3_in , "〔URL〕"))
+  local url4_in = string.match(input, "^(file:.*)$")
+  if (email_in~=nil) then
+    yield(Candidate("englishtype", seg.start, seg._end, email_in , "〔e-mail〕"))
     return
   end
-
-  local url4_in = string.match(input, "^(file:.*)$")
-  if (url4_in~=nil) then
-    yield(Candidate("englishtype", seg.start, seg._end, url4_in , "〔URL〕"))
+  if (www_in~=nil) or (url1_in~=nil) or (url2_in~=nil) or (url3_in~=nil) or (url4_in~=nil) then
+    yield(Candidate("englishtype", seg.start, seg._end, www_in , "〔URL〕"))
     return
   end
 end
