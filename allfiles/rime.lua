@@ -32,10 +32,11 @@
 --
 --      - lua_filter@charset_filter2              -- 遮屏選含「᰼᰼」候選項
 --      - lua_filter@comment_filter_plus          -- 遮屏提示碼，開關（simplify_comment）（遇到「'/」不遮屏），蝦米用。
---      - lua_filter@comment_filter_array30       -- 遮屏提示碼，開關（simplify_comment）（遇到「`」不遮屏）
 --      - lua_filter@symbols_mark_filter          -- 候選項註釋符號、音標等屬性之提示碼(comment)（用 opencc 可實現，但無法合併其他提示碼(comment)，改用 Lua 來實現）
---      - lua_filter@array30_nil_filter           -- 行列30空碼'⎔'轉成不輸出任何符號，符合原生
 --      - lua_filter@missing_mark_filter          -- 補上標點符號因直上和 opencc 衝突沒附註之選項
+--      - lua_filter@comment_filter_array30       -- 遮屏提示碼，開關（simplify_comment）（遇到「`」不遮屏）
+--      - lua_filter@array30_nil_filter           -- 行列30空碼'⎔'轉成不輸出任何符號，符合原生
+--      - lua_filter@mix30_nil_comment_filter     -- 合併 array30_nil_filter 和 comment_filter_array30，兩個 lua filter 太耗效能。
 --      - lua_filter@mix_cf2_miss_filter          -- 合併 charset_filter2 和 missing_mark_filter，兩個 lua filter 太耗效能。
 --      - lua_filter@mix_cf2_cfp_filter           -- 合併 charset_filter2 和 comment_filter_plus，兩個 lua filter 太耗效能。
 --
@@ -490,6 +491,42 @@ function array30_nil_filter(input, env)
     end
   end
   -- return nil
+end
+
+
+
+
+--- @@ mix30_nil_comment_filter
+--[[
+合併 array30_nil_filter 和 comment_filter_array30，兩個 lua filter 太耗效能。
+--]]
+function mix30_nil_comment_filter(input, env)
+  local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
+  local array30_input = env.engine.context.input  -- 原始未轉換輸入碼
+  if (not s_c_f_p_s) or (string.find(array30_input, "`" )) then
+    for cand in input:iter() do
+      local array30_preedit = cand.preedit  -- 轉換後輸入碼，如：ㄅㄆㄇㄈ、1-2⇡9⇡
+      local array30_nil_cand = Candidate("array30nil", 0, string.len(array30_input) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
+      if (string.find(cand.text, '^⎔%d$' )) then
+        array30_nil_cand.preedit = array30_preedit
+        yield(array30_nil_cand)
+      else
+        yield(cand)
+      end
+    end
+  else
+    for cand in input:iter() do
+      local array30_preedit = cand.preedit  -- 轉換後輸入碼，如：ㄅㄆㄇㄈ、1-2⇡9⇡
+      local array30_nil_cand = Candidate("array30nil", 0, string.len(array30_input) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
+      if (string.find(cand.text, '^⎔%d$' )) then
+        array30_nil_cand.preedit = array30_preedit
+        yield(array30_nil_cand)
+      else
+        cand:get_genuine().comment = ""
+        yield(cand)
+      end
+    end
+  end
 end
 
 
