@@ -2108,7 +2108,7 @@ min_phrase_weight: 100
 呺	hao2	0.1%
 咇	bi3	0.1%
 咇	bie2	0.1%
-和	huo5	10%
+和	huo5	1%
 咎	gao1	0.1%
 坯	pei1	0.1%
 坳	ao1	0.1%
@@ -14712,8 +14712,8 @@ min_phrase_weight: 100
 和	he2	90%
 和	he4	3%
 和	hu2	0%
-和	huo2	3%
-和	huo4	3%
+和	huo2	0%
+和	huo4	1%
 咍	hai1
 咎	jiu4
 咏	yong3
