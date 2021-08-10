@@ -397,7 +397,7 @@ end
 function comment_filter_array30(input, env)
   local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
   local find_prefix = env.engine.context.input
-  if (not s_c_f_p_s) or (string.find(find_prefix, "^`" )) then
+  if (not s_c_f_p_s) or (string.find(find_prefix, "`" )) then
   -- 使用 `iter()` 遍歷所有輸入候選項
     for cand in input:iter() do
       yield(cand)
@@ -501,10 +501,10 @@ function missing_mark_filter(input, env)
   local p_key = env.engine.context.input
   if (string.match(p_key, '=%.$' )) or (string.match(p_key, '[][]$' )) then
     for cand in input:iter() do
-      if (string.match(cand.text, '^。$' )) then
+      if (cand.text == '。') then
         cand:get_genuine().comment = "〔句點〕"
         yield(cand)
-      elseif (string.match(cand.text, '^〔$' )) or (string.match(cand.text, '^〕$' )) then
+      elseif (cand.text == '〔') or (cand.text == '〕') then
         cand:get_genuine().comment = "〔六角括號〕"
         yield(cand)
       else
@@ -584,7 +584,7 @@ function array30up(key, env)
     -- local caret_pos = context.caret_pos
     local array_s_orig = context:get_commit_text()
     local array_o_input = context.input
-    if (string.find(array_o_input, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(array_o_input, "^[=][=][a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(array_o_input, "^`.+$")) or (string.find(array_o_input, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(array_o_input, "^https?:.*$")) or (string.find(array_o_input, "^ftp:.*$")) or (string.find(array_o_input, "^mailto:.*$")) or (string.find(array_o_input, "^file:.*$")) or (string.find(array_o_input, "^www%..+$")) then
+    if (string.find(array_o_input, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(array_o_input, "^[=][=][a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(array_o_input, "`.+$")) or (string.find(array_o_input, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(array_o_input, "^https?:.*$")) or (string.find(array_o_input, "^ftp:.*$")) or (string.find(array_o_input, "^mailto:.*$")) or (string.find(array_o_input, "^file:.*$")) or (string.find(array_o_input, "^www%..+$")) then
       engine:commit_text(array_s_orig)
       context:clear()
       return 1 -- kAccepted
