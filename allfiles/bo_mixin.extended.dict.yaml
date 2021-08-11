@@ -18,7 +18,6 @@ import_tables:
   - bo_mixin_la
   - phrases.cht_en_w
   - phrases.chtp
-#  - phrases.chtpp
 #  - phrases.cht
 #  - phrases.jp_hk_more #日語大詞庫，欲更精準 mapping，可打開並關閉小詞庫 phrases.jp_hk。
   - phrases.jp_hk
