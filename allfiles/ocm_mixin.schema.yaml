@@ -341,7 +341,8 @@ top_reverse_lookup:
     - xform/([a-z]+)B/$1BB/
     - xform/^/  /
     - xform/BB([a-z]+)A/   $1AAA/
-    - xform/^(.+)CCD/    $1ZZ`韓-HJ@/
+    # - xform/^(.+)CCD/    $1ZZ`韓-HJ@/
+    - xform/^(.+)CCD/    $1ZZ`韓-擴@/
     - xform/CD/Z`韓-單@/
     - xform/C/C`韓@/
     - xform/Z/C/
