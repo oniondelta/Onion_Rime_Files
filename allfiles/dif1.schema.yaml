@@ -299,7 +299,8 @@ korea_lookup:
   preedit_format:
     # - "xlit|abcdefghijklmnopqrstuvwxyz/|ㅂㅅㄷㅊㅌㅑㅕㅐㅣㅓㅏㄴㅛㅗㅁㅔㅇㅠㄹㅜㅈㅡㅎㅍㄱㅋA|"
     - "xlit|/|A|"
-    - xform/AA/ (韓-HJ)/
+    # - xform/AA/ (韓-HJ)/
+    - xform/AA/ (韓-擴)/
     - xform/A/ (韓)/
     - xform/\|/ /
     - xform/`/ /
