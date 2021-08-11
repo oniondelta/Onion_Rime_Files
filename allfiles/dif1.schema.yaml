@@ -297,7 +297,8 @@ korea_lookup:
   disable_user_dict_for_patterns:
     - ^[a-z]{1,2}[/]$
   preedit_format:
-    - "xlit|abcdefghijklmnopqrstuvwxyz/|ㅂㅅㄷㅊㅌㅑㅕㅐㅣㅓㅏㄴㅛㅗㅁㅔㅇㅠㄹㅜㅈㅡㅎㅍㄱㅋA|"
+    # - "xlit|abcdefghijklmnopqrstuvwxyz/|ㅂㅅㄷㅊㅌㅑㅕㅐㅣㅓㅏㄴㅛㅗㅁㅔㅇㅠㄹㅜㅈㅡㅎㅍㄱㅋA|"
+    - "xlit|/|A|"
     - xform/AA/ (韓-HJ)/
     - xform/A/ (韓)/
     - xform/\|/ /
