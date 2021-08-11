@@ -370,8 +370,8 @@ key_binder:
     - { accept: Control+apostrophe, toggle: extended_charset, when: always } #增廣常用字符過濾，新增開關
     - { accept: Control+equal, toggle: simplify_comment, when: always } #編碼提示開關
 ### Return/Enter鍵 ###
+    - {accept: Return, send: KP_Space, when: paging} #選字時 Return/Enter 鍵同空白鍵上屏中文
     # - {accept: Return, send: space, when: has_menu} #有選單時 Return/Enter 鍵同空白鍵上屏中文
-    # - {accept: Return, send: KP_Space, when: paging} #選字時 Return/Enter 鍵同空白鍵上屏中文
     # - {accept: Shift+Return, send: Return, when: has_menu} #上兩例開啟可開啟補充。
 
 
