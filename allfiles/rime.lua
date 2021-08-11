@@ -40,7 +40,8 @@
 --      - ＊合併兩個以上函數：
 --      - lua_filter@mix30_nil_comment_filter     -- 合併 array30_nil_filter 和 comment_filter_array30，兩個 lua filter 太耗效能。
 --      - lua_filter@mix_cf2_miss_filter          -- 合併 charset_filter2 和 missing_mark_filter，兩個 lua filter 太耗效能。
---      - lua_filter@mix_cf2_cfp_filter           -- 合併 charset_filter2 和 comment_filter_plus，兩個 lua filter 太耗效能。
+--      - lua_filter@mix_cf2_cfp_filter           -- 合併 charset_filter2 和 comment_filter_plus，兩個 lua filter 太耗效能。 （蝦米plus用）
+--      - lua_filter@mix_cf2_cfp_smf_filter       -- 合併 charset_filter2 和 comment_filter_plus 和 symbols_mark_filter，三個 lua filter 太耗效能。 （蝦米mixin用）
 --
 --
 --      《 ＊ 以下「處理」注意在 processors 中的順序，基本放在最前面 》
@@ -387,7 +388,7 @@ end
 function comment_filter_plus(input, env)
   local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
   local find_prefix = env.engine.context.input
-  if (not s_c_f_p_s) or (string.find(find_prefix, "^'/" )) then
+  if (not s_c_f_p_s) or (string.find(find_prefix, "^'/" )) or (string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )) then
   -- 使用 `iter()` 遍歷所有輸入候選項
     for cand in input:iter() do
       yield(cand)
@@ -628,15 +629,74 @@ function mix_cf2_cfp_filter(input, env)
   local find_prefix = env.engine.context.input
   if (c_f2_s) then
     for cand in input:iter() do
-      if (not string.find(cand.text, '᰼᰼' )) and (not s_c_f_p_s) or (string.find(find_prefix, "^'/" )) then
+      if (not string.find(cand.text, '᰼᰼' )) and (not s_c_f_p_s) or (string.find(find_prefix, "^'/" )) or (string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )) then
         yield(cand)
-      elseif (not string.find(cand.text, '᰼᰼' )) and (s_c_f_p_s) and (not string.find(find_prefix, "^'/" ))  then
+      elseif (not string.find(cand.text, '᰼᰼' )) and (s_c_f_p_s) and (not string.find(find_prefix, "^'/" )) and (not string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )) then
         cand:get_genuine().comment = ""
         yield(cand)
       end
     end
   else
+    if (not s_c_f_p_s) or (string.find(find_prefix, "^'/" )) or (string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )) then
+      for cand in input:iter() do
+        yield(cand)
+      end
+    else
+      for cand in input:iter() do
+        cand:get_genuine().comment = ""
+        yield(cand)
+      end
+    end
+  end
+end
+
+
+
+
+--- @@ mix_cf2_cfp_smf_filter
+--[[
+合併 charset_filter2 和 comment_filter_plus 和 symbols_mark_filter，三個 lua filter 太耗效能。
+--]]
+function mix_cf2_cfp_smf_filter(input, env)
+  local c_f2_s = env.engine.context:get_option("zh_tw")
+  local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
+  local b_k = env.engine.context:get_option("back_mark")
+  local find_prefix = env.engine.context.input
+  if (c_f2_s) and (b_k) then
+    for cand in input:iter() do
+      if (not string.find(cand.text, '᰼᰼' )) and (not s_c_f_p_s) or (string.find(find_prefix, "^'/" )) or (string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )) then
+        cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
+        yield(cand)
+      elseif (not string.find(cand.text, '᰼᰼' )) and (s_c_f_p_s) and (not string.find(find_prefix, "^'/" )) and (not string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )) then
+        cand:get_genuine().comment = ""
+        cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
+        yield(cand)
+      end
+    end
+  elseif (not c_f2_s) and (b_k) then
     if (not s_c_f_p_s) or (string.find(find_prefix, "^'/" )) then
+      for cand in input:iter() do
+        cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
+        yield(cand)
+      end
+    else
+      for cand in input:iter() do
+        cand:get_genuine().comment = ""
+        cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
+        yield(cand)
+      end
+    end
+  elseif (c_f2_s) and (not b_k) then
+    for cand in input:iter() do
+      if (not string.find(cand.text, '᰼᰼' )) and (not s_c_f_p_s) or (string.find(find_prefix, "^'/" )) or (string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )) then
+        yield(cand)
+      elseif (not string.find(cand.text, '᰼᰼' )) and (s_c_f_p_s) and (not string.find(find_prefix, "^'/" )) and (not string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )) then
+        cand:get_genuine().comment = ""
+        yield(cand)
+      end
+    end
+  elseif (not c_f2_s) and (not b_k) then
+    if (not s_c_f_p_s) or (string.find(find_prefix, "^'/" )) or (string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )) then
       for cand in input:iter() do
         yield(cand)
       end
