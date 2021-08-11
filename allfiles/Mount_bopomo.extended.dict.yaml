@@ -14,8 +14,6 @@ import_tables:
   - terra_pinyin_onion
   - terra_pinyin_onion_add
 #  - phrases.chtp
-#  - phrases.chtpp
-#  - phrases.chtpv
 #  - phrases.cht
 ...
 ##### 測試字（測試是否少掉台灣以外的用字） #####
