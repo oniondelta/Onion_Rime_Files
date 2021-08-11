@@ -70,10 +70,10 @@ engine:
     - reverse_lookup_filter@gr_reverse_lookup
     - reverse_lookup_filter@cyr_reverse_lookup
     - reverse_lookup_filter@fs_reverse_lookup
-    - lua_filter@mix_cf2_cfp_filter  # 合併 charset_filter2 和 comment_filter_plus，兩個 lua filter 太耗效能。
-
+    - lua_filter@mix_cf2_cfp_smf_filter  #合併 charset_filter2 和 comment_filter_plus 和 symbols_mark_filter，三個 lua filter 太耗效能。
+    # - lua_filter@mix_cf2_cfp_filter  # 合併 charset_filter2 和 comment_filter_plus，兩個 lua filter 太耗效能。
     # - lua_filter@comment_filter_plus
-    - lua_filter@symbols_mark_filter
+    # - lua_filter@symbols_mark_filter
     # - simplifier@back_mark
     - simplifier@emoji_switch
     - reverse_lookup_filter@ovff_reverse_lookup
