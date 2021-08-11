@@ -43,9 +43,10 @@
 --
 --      《 ＊ 以下「處理」注意在 processors 中的順序，基本放在最前面 》
 --      - lua_processor@endspace                  -- 韓語（非英語等）空格鍵後添加" "
+--      - lua_processor@ascii_punct_change        -- 注音非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
 --      - lua_processor@array30up                 -- 行列30三四碼字按空格直接上屏
 --      - lua_processor@array30up_zy              -- 行列30注音反查 Return 和 space 上屏修正
---      - lua_processor@ascii_punct_change        -- 注音非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
+--      - lua_processor@array30up_mix             -- 合併 array30up 和 array30up_zy
 --
 --      = 以下針對「編碼有用到空白鍵」方案，如：注音一聲，去除空白上屏產生莫名之空格 =
 --      - lua_processor@s2r_ss          -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（只有開頭 ^'/ 才作用，比下條目更精簡，少了 is_composing 限定）
@@ -748,6 +749,36 @@ end
 
 
 
+
+--- @@ 合併 array30up 和 array30up_zy
+--[[
+行列30三四碼字按空格直接上屏
+行列30注音反查 Return 和 space 上屏修正
+--]]
+function array30up_mix(key, env)
+  local engine = env.engine
+  local context = engine.context
+  local array_s_orig = context:get_commit_text()
+  local array_o_input = context.input
+  if (key:repr() == "space") and (context:has_menu()) then
+    if (string.find(array_o_input, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(array_o_input, "^[=][=][a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(array_o_input, "`.+$")) or (string.find(array_o_input, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(array_o_input, "^https?:.*$")) or (string.find(array_o_input, "^ftp:.*$")) or (string.find(array_o_input, "^mailto:.*$")) or (string.find(array_o_input, "^file:.*$")) or (string.find(array_o_input, "^www%..+$")) or (string.find(array_o_input, "^=[a-z0-9,.;/-]+$")) then
+      engine:commit_text(array_s_orig)
+      context:clear()
+      return 1 -- kAccepted
+    end
+  elseif (key:repr() == "Return") and (context:has_menu()) then
+    if (string.find(array_o_input, "^=[a-z0-9,.;/-]+$")) then
+      engine:commit_text(array_s_orig)
+      context:clear()
+      return 1 -- kAccepted
+    end
+  end
+  return 2
+end
+
+
+
+
 --- @@ ascii_punct_change 改變標點符號
 --[[
 於注音方案改變在非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
@@ -864,7 +895,8 @@ function s2r_mixin3(key, env)
     local o_input = context.input
     -- if (string.find(o_input, "'/")) then
 
-      if ( string.find(o_input, "[@:]") or string.find(o_input, "^'/[';/]?[a-z0-9./-]*$") or string.find(o_input, "[-,./;a-z125890][][3467%s]'/[';/]?[a-z0-9./-]*$") or string.find(o_input, "''/[';/]?[a-z0-9./-]*$") or string.find(o_input, "[=][0-9]'/[';/]?[a-z0-9./-]*$") or string.find(o_input, "[=][][]'/[';/]?[a-z0-9./-]*$") or string.find(o_input, "[=][][][][]'/[';/]?[a-z0-9./-]*$") or string.find(o_input, "[=][-,.;=`]'/[';/]?[a-z0-9./-]*$") or string.find(o_input, "[=][-,.;'=`][-,.;'=`]'/[';/]?[a-z0-9./-]*$") ) then
+      if ( string.find(o_input, "[@:]") or string.find(o_input, "^'/[';a-z0-9./-]*$") or string.find(o_input, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][0-9]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][][]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][][][][]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][-,.;=`]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(o_input, "=[-1257890;,./]$") or string.find(o_input, "=[-][-]$") or string.find(o_input, "=[,][,]$") or string.find(o_input, "=[.][.]$") or string.find(o_input, "==[90]$") or string.find(o_input, "==[,][,]?$") or string.find(o_input, "==[.][.]?$") ) then
+      -- if ( string.find(o_input, "[@:]") or string.find(o_input, "^'/[';/]?[a-z0-9./-]*$") or string.find(o_input, "[-,./;a-z125890][][3467%s]'/[';/]?[a-z0-9./-]*$") or string.find(o_input, "''/[';/]?[a-z0-9./-]*$") or string.find(o_input, "[=][0-9]'/[';/]?[a-z0-9./-]*$") or string.find(o_input, "[=][][]'/[';/]?[a-z0-9./-]*$") or string.find(o_input, "[=][][][][]'/[';/]?[a-z0-9./-]*$") or string.find(o_input, "[=][-,.;=`]'/[';/]?[a-z0-9./-]*$") or string.find(o_input, "[=][-,.;'=`][-,.;'=`]'/[';/]?[a-z0-9./-]*$") ) then
 -- or string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$") or string.find(o_input, "^https?:.*$") or string.find(o_input, "^ftp:.*$") or string.find(o_input, "^mailto:.*$") or string.find(o_input, "^file:.*$")
 --
 -- 無效的正則，不去影響一般輸入：
@@ -890,7 +922,7 @@ function s2r_most(key, env)
   if (key:repr() == 'space') and (context:is_composing()) then
   -- if (key:repr() == 'space') and (context:has_menu()) then
     local o_input = context.input
-    if ( string.find(o_input, "[@:]") or string.find(o_input, "'/") ) then
+    if ( string.find(o_input, "[@:]") or string.find(o_input, "'/") or string.find(o_input, "=[-1257890;,./]$") or string.find(o_input, "=[-][-]$") or string.find(o_input, "=[,][,]$") or string.find(o_input, "=[.][.]$") or string.find(o_input, "==[90]$") or string.find(o_input, "==[,][,]?$") or string.find(o_input, "==[.][.]?$") ) then
         local s_orig = context:get_commit_text()
         engine:commit_text(s_orig)
         context:clear()

@@ -45,8 +45,9 @@ engine:
     # - uniquifier
     # - single_char_filter
   processors:
-    - lua_processor@array30up #三、四、五碼空白鍵直上屏
-    - lua_processor@array30up_zy #注音反查 Return 和 space 上屏修正。 #架構關係，反查輸入法使用鍵位大於主輸入法，仍會產生 Bug。
+    - lua_processor@array30up_mix
+    # - lua_processor@array30up #三、四、五碼空白鍵直上屏
+    # - lua_processor@array30up_zy #注音反查 Return 和 space 上屏修正。 #架構關係，反查輸入法使用鍵位大於主輸入法，仍會產生 Bug。
     - ascii_composer
     - recognizer
     - key_binder
