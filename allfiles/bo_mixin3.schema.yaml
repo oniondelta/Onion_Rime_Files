@@ -64,8 +64,9 @@ engine:
     - reverse_lookup_filter@e_reverse_lookup
     - uniquifier
   processors:
-    - lua_processor@ascii_punct_change
-    - lua_processor@s2r_mixin3
+    - lua_processor@mix_apc_s2rm_3  #合併 ascii_punct_change 和 s2r_mixin3，增進效能。
+    # - lua_processor@ascii_punct_change
+    # - lua_processor@s2r_mixin3
     - ascii_composer
     - recognizer
     - key_binder

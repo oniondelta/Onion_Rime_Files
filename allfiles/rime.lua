@@ -16,10 +16,10 @@
 --      - lua_translator@t2_translator            -- 「'/」開頭打出時間日期
 --      - lua_translator@date_translator          -- 「``」開頭打出時間日期
 --      - lua_translator@mytranslator             -- （有缺函數，參考勿用，暫關閉）
---      - lua_translator@email_url_translator     -- 輸入email、網址
---      - lua_translator@email_urlw_translator    -- 輸入email、網址（多了www.）
 --      - lua_translator@instruction_dbpmf        -- 選項中顯示洋蔥雙拼各種說明
 --      - lua_translator@instruction_grave_bpmf   -- 選項中顯示洋蔥注音各種說明
+--      - lua_translator@email_url_translator     -- 輸入email、網址
+--      - lua_translator@email_urlw_translator    -- 輸入email、網址（多了www.）
 --
 --
 --      《 ＊ 以下「濾鏡」注意在 filters 中的順序，關係到作用效果 》
@@ -36,6 +36,8 @@
 --      - lua_filter@missing_mark_filter          -- 補上標點符號因直上和 opencc 衝突沒附註之選項
 --      - lua_filter@comment_filter_array30       -- 遮屏提示碼，開關（simplify_comment）（遇到「`」不遮屏）
 --      - lua_filter@array30_nil_filter           -- 行列30空碼'⎔'轉成不輸出任何符號，符合原生
+--
+--      - ＊合併兩個以上函數：
 --      - lua_filter@mix30_nil_comment_filter     -- 合併 array30_nil_filter 和 comment_filter_array30，兩個 lua filter 太耗效能。
 --      - lua_filter@mix_cf2_miss_filter          -- 合併 charset_filter2 和 missing_mark_filter，兩個 lua filter 太耗效能。
 --      - lua_filter@mix_cf2_cfp_filter           -- 合併 charset_filter2 和 comment_filter_plus，兩個 lua filter 太耗效能。
@@ -46,7 +48,6 @@
 --      - lua_processor@ascii_punct_change        -- 注音非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
 --      - lua_processor@array30up                 -- 行列30三四碼字按空格直接上屏
 --      - lua_processor@array30up_zy              -- 行列30注音反查 Return 和 space 上屏修正
---      - lua_processor@array30up_mix             -- 合併 array30up 和 array30up_zy
 --
 --      = 以下針對「編碼有用到空白鍵」方案，如：注音一聲，去除空白上屏產生莫名之空格 =
 --      - lua_processor@s2r_ss          -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（只有開頭 ^'/ 才作用，比下條目更精簡，少了 is_composing 限定）
@@ -55,6 +56,11 @@
 --      - lua_processor@s2r_e_u         -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（只針對 email 和 url ）
 --      - lua_processor@s2r_mixin3      -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin3 (特殊正則)專用）
 --      - lua_processor@s2r_most        -- 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin(1,2,4)和 plus 用，精簡寫法）
+--
+--      - ＊合併兩個以上函數：
+--      - lua_processor@array30up_mix             -- 合併 array30up 和 array30up_zy
+--      - lua_processor@mix_apc_s2rm    -- 注音掛接，合併 ascii_punct_change 和 s2r_most，增進效能。
+--      - lua_processor@mix_apc_s2rm_3  -- 注音掛接，合併 ascii_punct_change 和 s2r_mixin3，增進效能。
 --      ...
 
 
@@ -368,7 +374,7 @@ end
 
 
 
---- @@ comment_filter_plus
+--- @@ comment_filter_plus 和 comment_filter_array30
 --[[
 嘸蝦米和行列30後面註釋刪除
 --]]
@@ -397,6 +403,7 @@ function comment_filter_plus(input, env)
     end
   end
 end
+
 
 function comment_filter_array30(input, env)
   local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
@@ -697,6 +704,7 @@ end
 
 
 
+
 --- @@ 行列30上屏
 --[[
 行列30三四碼字按空格直接上屏
@@ -720,6 +728,7 @@ function array30up(key, env)
   end
   return 2 -- kNoop
 end
+
 
 
 
@@ -794,8 +803,8 @@ function ascii_punct_change(key, env)
       engine:commit_text( b_orig .. ",")
       context:clear()
       return 1 -- kAccepted
-    end
-    if (key:repr() == 'Shift+greater') then
+    -- end
+    elseif (key:repr() == 'Shift+greater') then
       local b_orig = context:get_commit_text()
       engine:commit_text( b_orig .. ".")
       context:clear()
@@ -804,6 +813,7 @@ function ascii_punct_change(key, env)
   end
   return 2 -- kNoop
 end
+
 
 
 
@@ -935,6 +945,92 @@ end
 
 
 
+--- @@ mix_apc_s2rm 注音mixin 1_2_4 和 plus 專用
+--[[
+合併 ascii_punct_change 和 s2r_most，增進效能。
+--]]
+function mix_apc_s2rm(key, env)
+  local c_b_d = env.engine.context:get_option("ascii_punct")
+  local en_m = env.engine.context:get_option("ascii_mode")
+  local engine = env.engine
+  local context = engine.context
+  local b_orig = context:get_commit_text()
+  local o_input = context.input
+  if (c_b_d) and (not en_m) then
+    if (key:repr() == 'Shift+less') then
+      engine:commit_text( b_orig .. ",")
+      context:clear()
+      return 1 -- kAccepted
+    elseif (key:repr() == 'Shift+greater') then
+      engine:commit_text( b_orig .. ".")
+      context:clear()
+      return 1 -- kAccepted
+    elseif (key:repr() == 'space') and (context:is_composing()) then
+      -- if (key:repr() == 'space') and (context:has_menu()) then
+      if ( string.find(o_input, "[@:]") or string.find(o_input, "'/") or string.find(o_input, "=[-1257890;,./]$") or string.find(o_input, "=[-][-]$") or string.find(o_input, "=[,][,]$") or string.find(o_input, "=[.][.]$") or string.find(o_input, "==[90]$") or string.find(o_input, "==[,][,]?$") or string.find(o_input, "==[.][.]?$") ) then
+        engine:commit_text(b_orig)
+        context:clear()
+        return 1 -- kAccepted
+      end
+    end
+  elseif (not c_b_d) and (not en_m) then
+    if (key:repr() == 'space') and (context:is_composing()) then
+      if ( string.find(o_input, "[@:]") or string.find(o_input, "'/") or string.find(o_input, "=[-1257890;,./]$") or string.find(o_input, "=[-][-]$") or string.find(o_input, "=[,][,]$") or string.find(o_input, "=[.][.]$") or string.find(o_input, "==[90]$") or string.find(o_input, "==[,][,]?$") or string.find(o_input, "==[.][.]?$") ) then
+        engine:commit_text(b_orig)
+        context:clear()
+        return 1 -- kAccepted
+      end
+    end
+  end
+  return 2 -- kNoop
+end
+
+
+
+
+--- @@ mix_apc_s2rm_3 注音mixin 3
+--[[
+合併 ascii_punct_change 和 s2r_mixin3，增進效能。
+--]]
+function mix_apc_s2rm_3(key, env)
+  local c_b_d = env.engine.context:get_option("ascii_punct")
+  local en_m = env.engine.context:get_option("ascii_mode")
+  local engine = env.engine
+  local context = engine.context
+  local b_orig = context:get_commit_text()
+  local o_input = context.input
+  if (c_b_d) and (not en_m) then
+    if (key:repr() == 'Shift+less') then
+      engine:commit_text( b_orig .. ",")
+      context:clear()
+      return 1 -- kAccepted
+    elseif (key:repr() == 'Shift+greater') then
+      engine:commit_text( b_orig .. ".")
+      context:clear()
+      return 1 -- kAccepted
+    elseif (key:repr() == 'space') and (context:is_composing()) then
+      -- if (key:repr() == 'space') and (context:has_menu()) then
+      if ( string.find(o_input, "[@:]") or string.find(o_input, "^'/[';a-z0-9./-]*$") or string.find(o_input, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][0-9]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][][]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][][][][]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][-,.;=`]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(o_input, "=[-1257890;,./]$") or string.find(o_input, "=[-][-]$") or string.find(o_input, "=[,][,]$") or string.find(o_input, "=[.][.]$") or string.find(o_input, "==[90]$") or string.find(o_input, "==[,][,]?$") or string.find(o_input, "==[.][.]?$") ) then
+        engine:commit_text(b_orig)
+        context:clear()
+        return 1 -- kAccepted
+      end
+    end
+  elseif (not c_b_d) and (not en_m) then
+    if (key:repr() == 'space') and (context:is_composing()) then
+      if ( string.find(o_input, "[@:]") or string.find(o_input, "^'/[';a-z0-9./-]*$") or string.find(o_input, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][0-9]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][][]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][][][][]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][-,.;=`]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(o_input, "=[-1257890;,./]$") or string.find(o_input, "=[-][-]$") or string.find(o_input, "=[,][,]$") or string.find(o_input, "=[.][.]$") or string.find(o_input, "==[90]$") or string.find(o_input, "==[,][,]?$") or string.find(o_input, "==[.][.]?$") ) then
+        engine:commit_text(b_orig)
+        context:clear()
+        return 1 -- kAccepted
+      end
+    end
+  end
+  return 2 -- kNoop
+end
+
+
+
+
 --[[
 --------------------------------------------
 ！！！！以下為 translator 掛接！！！！
@@ -964,6 +1060,8 @@ function email_url_translator(input, seg)
     return
   end
 end
+
+
 
 
 --- @@ email_urlw_translator
