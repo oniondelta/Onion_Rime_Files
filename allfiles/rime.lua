@@ -388,7 +388,7 @@ end
 function comment_filter_plus(input, env)
   local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
   local find_prefix = env.engine.context.input
-  if (not s_c_f_p_s) or (string.find(find_prefix, "^'/" )) or (string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )) then
+  if (not s_c_f_p_s) or (string.find(find_prefix, "^'/" )) or (string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )) or (string.find(find_prefix, "[][]+$" )) then
   -- 使用 `iter()` 遍歷所有輸入候選項
     for cand in input:iter() do
       yield(cand)
@@ -629,15 +629,15 @@ function mix_cf2_cfp_filter(input, env)
   local find_prefix = env.engine.context.input
   if (c_f2_s) then
     for cand in input:iter() do
-      if (not string.find(cand.text, '᰼᰼' )) and (not s_c_f_p_s) or (string.find(find_prefix, "^'/" )) or (string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )) then
+      if (not string.find(cand.text, '᰼᰼' )) and (not s_c_f_p_s) or (string.find(find_prefix, "^'/" )) or (string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )) or (string.find(find_prefix, "[][]+$" )) then
         yield(cand)
-      elseif (not string.find(cand.text, '᰼᰼' )) and (s_c_f_p_s) and (not string.find(find_prefix, "^'/" )) and (not string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )) then
+      elseif (not string.find(cand.text, '᰼᰼' )) and (s_c_f_p_s) and (not string.find(find_prefix, "^'/" )) and (not string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )) and (not string.find(find_prefix, "[][]+$" )) then
         cand:get_genuine().comment = ""
         yield(cand)
       end
     end
   else
-    if (not s_c_f_p_s) or (string.find(find_prefix, "^'/" )) or (string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )) then
+    if (not s_c_f_p_s) or (string.find(find_prefix, "^'/" )) or (string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )) or (string.find(find_prefix, "[][]+$" )) then
       for cand in input:iter() do
         yield(cand)
       end
@@ -664,17 +664,17 @@ function mix_cf2_cfp_smf_filter(input, env)
   local find_prefix = env.engine.context.input
   if (c_f2_s) and (b_k) then
     for cand in input:iter() do
-      if (not string.find(cand.text, '᰼᰼' )) and (not s_c_f_p_s) or (string.find(find_prefix, "^'/" )) or (string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )) then
+      if (not string.find(cand.text, '᰼᰼' )) and (not s_c_f_p_s) or (string.find(find_prefix, "^'/" )) or (string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )) or (string.find(find_prefix, "[][]+$" )) then
         cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
         yield(cand)
-      elseif (not string.find(cand.text, '᰼᰼' )) and (s_c_f_p_s) and (not string.find(find_prefix, "^'/" )) and (not string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )) then
+      elseif (not string.find(cand.text, '᰼᰼' )) and (s_c_f_p_s) and (not string.find(find_prefix, "^'/" )) and (not string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )) and (not string.find(find_prefix, "[][]+$" )) then
         cand:get_genuine().comment = ""
         cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
         yield(cand)
       end
     end
   elseif (not c_f2_s) and (b_k) then
-    if (not s_c_f_p_s) or (string.find(find_prefix, "^'/" )) then
+    if (not s_c_f_p_s) or (string.find(find_prefix, "^'/" )) or (string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )) or (string.find(find_prefix, "[][]+$" )) then
       for cand in input:iter() do
         cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
         yield(cand)
@@ -688,15 +688,15 @@ function mix_cf2_cfp_smf_filter(input, env)
     end
   elseif (c_f2_s) and (not b_k) then
     for cand in input:iter() do
-      if (not string.find(cand.text, '᰼᰼' )) and (not s_c_f_p_s) or (string.find(find_prefix, "^'/" )) or (string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )) then
+      if (not string.find(cand.text, '᰼᰼' )) and (not s_c_f_p_s) or (string.find(find_prefix, "^'/" )) or (string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )) or (string.find(find_prefix, "[][]+$" )) then
         yield(cand)
-      elseif (not string.find(cand.text, '᰼᰼' )) and (s_c_f_p_s) and (not string.find(find_prefix, "^'/" )) and (not string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )) then
+      elseif (not string.find(cand.text, '᰼᰼' )) and (s_c_f_p_s) and (not string.find(find_prefix, "^'/" )) and (not string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )) and (not string.find(find_prefix, "[][]+$" )) then
         cand:get_genuine().comment = ""
         yield(cand)
       end
     end
   elseif (not c_f2_s) and (not b_k) then
-    if (not s_c_f_p_s) or (string.find(find_prefix, "^'/" )) or (string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )) then
+    if (not s_c_f_p_s) or (string.find(find_prefix, "^'/" )) or (string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )) or (string.find(find_prefix, "[][]+$" )) then
       for cand in input:iter() do
         yield(cand)
       end
