@@ -7409,9 +7409,10 @@ end
 --[[
 說明雙拼注音各種掛接
 --]]
-function instruction_dbpmf(input, seg)
+function instruction_dbpmf(input, seg, env)
   -- if input:find('^;$') then
-  if (string.match(input, "^;$")~=nil) then
+  local caret_pos = env.engine.context.caret_pos
+  if (string.match(input, "^;$")~=nil) and (caret_pos == 1) then
     -- for cand in input:iter() do
     --   yield(cand)
     -- end
@@ -7481,7 +7482,7 @@ function instruction_dbpmf(input, seg)
     end
   end
   -- if input:find('^;;$') then
-  if(string.match(input, "^;;$")~=nil) then
+  if(string.match(input, "^;;$")~=nil) and (caret_pos == 2) then
     local table_sd_2 = {
           { '〖 a ~ z 〗字母變化      ※ 以下 顏文字：', '𝟘' }
         , { '〖 1 〗開心 〖 2 〗喜歡 〖 3 〗傷心', '𝟙' }
@@ -7521,9 +7522,10 @@ end
 --[[
 說明蝦米各種掛接
 --]]
-function instruction_ocm(input, seg)
+function instruction_ocm(input, seg, env)
   -- if input:find('^;$') then
-  if (string.match(input, "^;$")~=nil) then
+  local caret_pos = env.engine.context.caret_pos
+  if (string.match(input, "^;$")~=nil) and (caret_pos == 1) then
     -- for cand in input:iter() do
     --   yield(cand)
     -- end
@@ -7595,7 +7597,7 @@ function instruction_ocm(input, seg)
     end
   end
   -- if input:find('^;;$') then
-  if(string.match(input, "^;;$")~=nil) then
+  if(string.match(input, "^;;$")~=nil) and (caret_pos == 2) then
     local table_sd_2 = {
           { '〖 a ~ z 〗字母變化      ※ 以下 顏文字：', '𝟘' }
         , { '〖 1 〗開心 〖 2 〗喜歡 〖 3 〗傷心', '𝟙' }
