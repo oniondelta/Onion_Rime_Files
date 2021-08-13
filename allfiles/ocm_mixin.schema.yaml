@@ -126,6 +126,7 @@ engine:
     - script_translator@fs
     - lua_translator@t2_translator
     - lua_translator@email_urlw_translator
+    - lua_translator@instruction_ocm
 ################################### 選單 ################################################
 menu:
   alternative_select_keys: '0123456789'
@@ -676,5 +677,5 @@ recognizer:
     cyr: "^['][]][a-z';]*$"
     fs: "^['][=][-a-z';]*$"
     all_bpm: "^';'[-a-z0-9.,/;']*$"
-    lua: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|^'/[';a-z0-9./-]*$" #"^'/[';]?[a-z0-9./-]*$"
+    lua: "^;;?$|^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|^'/[';a-z0-9./-]*$" #"^'/[';]?[a-z0-9./-]*$"
     #舊# lua: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|^'/[';/]?[a-z]*$|^'/[0-9./-]*$|^'/[xcoe][0-9a-z]+$"
