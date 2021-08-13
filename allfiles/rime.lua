@@ -7519,7 +7519,7 @@ end
 
 --- @@ instruction_ocm
 --[[
-說明雙拼注音各種掛接
+說明蝦米各種掛接
 --]]
 function instruction_ocm(input, seg)
   -- if input:find('^;$') then
