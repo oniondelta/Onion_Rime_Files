@@ -7472,7 +7472,7 @@ function instruction_dbpmf(input, seg)
         , { '【 k 假名】【 g 假名】【 s 假名】【 z 假名】【 t 假名】', '𝟓𝟑' }
         , { '【 d 假名】【 n 假名】【 h 假名】【 b 假名】【 p 假名】', '𝟓𝟒' }
         , { '【 m 假名】【 y 假名】【 r 假名】【 w 假名】', '𝟓𝟓' }
-        , { ' ｢圈｣｢框｣｢括｣數字字母：【 0 ~ 50 】【 a ~ z 】', '𝟓𝟔' }
+        , { ' ｢圈｣｢框｣｢括｣數字字母：【 0 ~ 10 】【 1-0 ~ 5-0 】【 a ~ z 】', '𝟓𝟔' }
     }
     for k, v in ipairs(table_sd_1) do
       local cand = Candidate('help', seg.start, seg._end, v[2], ' ' .. v[1])
@@ -7586,7 +7586,7 @@ function instruction_ocm(input, seg)
         , { '【 k 假名】【 g 假名】【 s 假名】【 z 假名】【 t 假名】', '𝟓𝟓' }
         , { '【 d 假名】【 n 假名】【 h 假名】【 b 假名】【 p 假名】', '𝟓𝟔' }
         , { '【 m 假名】【 y 假名】【 r 假名】【 w 假名】', '𝟓𝟕' }
-        , { ' ｢圈｣｢框｣｢括｣數字字母：【 0 ~ 50 】【 a ~ z 】', '𝟓𝟖' }
+        , { ' ｢圈｣｢框｣｢括｣數字字母：【 0 ~ 10 】【 1-0 ~ 5-0 】【 a ~ z 】', '𝟓𝟖' }
     }
     for k, v in ipairs(table_sd_1) do
       local cand = Candidate('help', seg.start, seg._end, v[2], ' ' .. v[1])
