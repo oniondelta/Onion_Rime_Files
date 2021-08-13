@@ -29,8 +29,8 @@ key_binder:
 #    - {accept: Shift+Tab, send: Right, when: composing} #右移一個注音
 #    - {accept: Tab, send: KP_Left, when: composing} #左移一個注音
 ### 選字翻頁 ###
-    - {accept: Left, send: Page_Up, when: paging}
-    - {accept: Right, send: Page_Down, when: paging}
+    - {accept: Left, send: Page_Up, when: paging} #直式選單用 #has_menu
+    - {accept: Right, send: Page_Down, when: paging} #直式選單用 #has_menu
 #    - {accept: Up, send: Page_Up, when: paging} #橫式選單用
 #    - {accept: Down, send: Page_Down, when: paging} #橫式選單用
 #    - {accept: Left, send: Left, when: has_menu} #橫式選單用 #send: Shift+Up
@@ -53,6 +53,7 @@ key_binder:
 #    - {accept: backslash, send: BackSpace, when: has_menu} #「\」鍵位刪除一個拼音字符。
 #關#    - {accept: backslash, send: Shift+BackSpace, when: has_menu} #「\」鍵位刪除整組拼音字符（一個字）。
     - {accept: backslash, send: Shift+Return, when: has_menu} #「\」鍵位上屏英文。
+#關#    - {accept: backslash, send: bar, when: has_menu} #「\」鍵位切分。
 ### 功能快捷鍵 ###
     - {accept: Control+apostrophe, toggle: zh_tw, when: always}
     - {accept: Control+minus, toggle: back_mark, when: always } #「國際音標和符號」提示碼開關
@@ -66,355 +67,355 @@ key_binder:
 
 emoji_series:
 ##### 以下四字 #####
-    - xform/^brnc/〔公共運輸／公交〕(公共交通)/
-    - xform/^damk/〔日式料理／日本料理／日本菜〕/
-    - xform/^dtmk/〔日本料理／日式料理／日本菜〕/
-    - xform/^dtdk/〔日本星期〕/
-    - xform/^ljfyc/〔六十四卦名／易經卦名〕/
-    - xform/^fmmnd/〔羅馬數字大〕/
-    - xform/^ljfy/〔六十四卦／易經〕/
-    - xform/^dsyc/〔易經卦名／六十四卦名〕/
-    - xform/^jrss/〔十二生肖／生肖〕/
-    - xform/^qzhh/〔猴子表情／猴子頭〕/
-    - xform/^ltim/〔交通工具／交通／交通圖〕/
-    - xform/^fmmn/〔羅馬數字〕/
-    - xform/^mnoq/〔數字圈黑／數字黑圈〕/
-    - xform/^mnqo/〔數字黑圈／數字圈黑〕/
-    - xform/^nood/〔字母圈大〕/
-    - xform/^nojd/〔字母括大〕/
-    - xform/^noqo/〔字母黑圈／字母圈黑〕(字母帶圓圈)/
-    - xform/^nooq/〔字母圈黑／字母黑圈〕(字母帶圓圈)/
-    - xform/^noqf/〔字母黑方／字母方黑／字母框黑／字母黑框〕(字母帶圓角方框)/
-    - xform/^nofq/〔字母方黑／字母黑方／字母框黑／字母黑框〕(字母帶圓角方框)/
-    - xform/^notq/〔字母框黑／字母黑框／字母黑方／字母方黑〕(字母帶圓角方框)/
-    - xform/^noqt/〔字母黑框／字母框黑／字母黑方／字母方黑〕(字母帶圓角方框)/
-    - xform/^pjpc/〔平假名(第一碼全碼)〕/
-    - xform/^pypc/〔片假名(第一碼全碼)〕/
-#    - xform/^chay/〔巴黎鐵塔〕/
-#    - xform/^pigr/〔自由女神〕/
-#    - xform/^mwzn/〔復活節島〕/
+    - xform/^brnc/【公共運輸／公交】(公共交通)/
+    - xform/^damk/【日式料理／日本料理／日本菜】/
+    - xform/^dtmk/【日本料理／日式料理／日本菜】/
+    - xform/^dtdk/【日本星期】/
+    - xform/^ljfyc/【六十四卦名／易經卦名】/
+    - xform/^fmmnd/【羅馬數字大】/
+    - xform/^ljfy/【六十四卦／易經】/
+    - xform/^dsyc/【易經卦名／六十四卦名】/
+    - xform/^jrss/【十二生肖／生肖】/
+    - xform/^qzhh/【猴子表情／猴子頭】/
+    - xform/^ltim/【交通工具／交通／交通圖】/
+    - xform/^fmmn/【羅馬數字】/
+    - xform/^mnoq/【數字圈黑／數字黑圈】/
+    - xform/^mnqo/【數字黑圈／數字圈黑】/
+    - xform/^nood/【字母圈大】/
+    - xform/^nojd/【字母括大】/
+    - xform/^noqo/【字母黑圈／字母圈黑】(字母帶圓圈)/
+    - xform/^nooq/【字母圈黑／字母黑圈】(字母帶圓圈)/
+    - xform/^noqf/【字母黑方／字母方黑／字母框黑／字母黑框】(字母帶圓角方框)/
+    - xform/^nofq/【字母方黑／字母黑方／字母框黑／字母黑框】(字母帶圓角方框)/
+    - xform/^notq/【字母框黑／字母黑框／字母黑方／字母方黑】(字母帶圓角方框)/
+    - xform/^noqt/【字母黑框／字母框黑／字母黑方／字母方黑】(字母帶圓角方框)/
+    - xform/^pjpc/【平假名(第一碼全碼)】/
+    - xform/^pypc/【片假名(第一碼全碼)】/
+#    - xform/^chay/【巴黎鐵塔】/
+#    - xform/^pigr/【自由女神】/
+#    - xform/^mwzn/【復活節島】/
 ##### 以下三字 #####
-    - xform/^dno/〔日用品〕/
-    - xform/^wny/〔顏色塊〕/
-    - xform/^nyh/〔色塊心〕/
-    - xform/^nyo/〔色塊圓〕/
-    - xform/^nyf/〔色塊方〕/
-    - xform/^uoo/〔電器圖〕(電器)/
-    - xform/^dtv/〔日本年〕/
-    - xform/^bjp/〔阿拉伯〕/
-    - xform/^khb/〔黃種人／亞裔〕/
-    - xform/^jbl/〔拉美裔／棕色人〕/
-    - xform/^tnb/〔棕色人／拉美裔〕/
-    - xform/^phb/〔白種人／白人〕/
-    - xform/^png/〔做運動〕/
-    - xform/^ngg/〔運動女〕/
-    - xform/^ngq/〔運動男〕/
-    - xform/^gsu/〔動物臉／獸面〕/
-    - xform/^xsj/〔食物捲〕/
-    - xform/^dqo/〔景點圖／名勝〕(景點)/
-    - xform/^dpu/〔大自然〕/
-    - xform/^mhg/〔精怪女〕/
-    - xform/^mhq/〔精怪男〕/
-    - xform/^dtr/〔日本菜／日本料理／日式料理〕/
-    - xform/^fwo/〔遊樂園〕/
-    - xform/^fmo/〔飛行器／飛機〕/
-    - xform/^rzo/〔鞋子圖〕(鞋子)/
-    - xform/^gqo/〔甜點圖／甜食〕(甜點)/
-    - xform/^bmo/〔禽類圖／家禽〕(禽類)/
-    - xform/^hso/〔科學圖〕(科學)/
-    - xform/^czo/〔西餐圖〕(西餐)/
-    - xform/^woo/〔樂器圖〕(樂器)/
-    - xform/^nmo/〔鳥類圖〕(鳥類)/
-    - xform/^yny/〔填色塊／填色〕/
-    - xform/^ost/〔單線框／單線〕/
-    - xform/^vst/〔雙線框／雙線〕/
-    - xform/^rwi/〔警消護〕/
-    - xform/^lbn/〔辦公室〕/
-    - xform/^lto/〔交通圖／交通／交通工具〕/
-    - xform/^kpc/〔 k 假名〕/
-    - xform/^gpc/〔 g 假名〕/
-    - xform/^spc/〔 s 假名〕/
-    - xform/^zpc/〔 z 假名〕/
-    - xform/^tpc/〔 t 假名〕/
-    - xform/^dpc/〔 d 假名〕/
-    - xform/^npc/〔 n 假名〕/
-    - xform/^hpc/〔 h 假名〕/
-    - xform/^bpc/〔 b 假名〕/
-    - xform/^ppc/〔 p 假名〕/
-    - xform/^mpc/〔 m 假名〕/
-    - xform/^ypc/〔 y 假名〕/
-    - xform/^rpc/〔 r 假名〕/
-    - xform/^wpc/〔 w 假名〕/
-    - xform/^apc/〔 a 假名〕/
-    - xform/^ipc/〔 i 假名〕/
-    - xform/^upc/〔 u 假名〕/
-    - xform/^epc/〔 e 假名〕/
-    - xform/^opc/〔 o 假名〕/
-    - xform/^pco/〔假名圈〕/
-    - xform/^pcb/〔假名半(形)〕/
-    - xform/^iro/〔 IRO 〕(いろは順)/
-    - xform/^zdo/〔節日圖／佳節圖〕(節日)/
-    - xform/^vzo/〔佳節圖／節日圖〕(節日)/
-    - xform/^gso/〔動物圖／動物〕/
-    - xform/^eho/〔愛心圖〕(愛心)/
-    - xform/^cbw/〔輸入法〕/
-    - xform/^wpo/〔幾何圖〕(幾何2)/
-    - xform/^jnd/〔十字架〕/ #(宗教)
-    - xform/^ooz/〔咧嘴笑〕/
-    - xform/^qzd/〔猴子頭／猴子表情〕/
-    - xform/^tio/〔標誌圖／號誌〕(公共號誌 標誌)/
-    - xform/^mnt/〔數字標〕/ #(數字)
-    - xform/^wnt/〔漢字框〕/
-    - xform/^nof/〔字母方／字母框〕(字母帶方框)/
-    - xform/^not/〔字母框／字母方〕(字母帶方框)/
-    - xform/^cwt/〔西洋棋／象棋〕/
-    - xform/^jjp/〔撲克牌／撲克〕/
-    - xform/^dlc/〔星座名〕/
-    - xform/^jrn/〔十二宮〕/
-    - xform/^dls/〔太玄經〕/
-    - xform/^zdm/〔占星術〕/ #(天體)
-    - xform/^mno/〔數字圈〕/
-    - xform/^mnj/〔數字括〕/
-    - xform/^mnq/〔數字點〕/
-    - xform/^noo/〔字母圈〕/
-    - xform/^noj/〔字母括〕/
-    - xform/^ryl/〔蘇州碼〕/
-    - xform/^fmd/〔羅馬大〕/
-    - xform/^fet/〔上標(第一字全碼)〕/
-    - xform/^fat/〔下標(第一字全碼)〕/
-    - xform/^xud/〔希臘大〕/
-    - xform/^pid/〔俄語大〕/
-    - xform/^tqj/〔標點直〕/
-    - xform/^wno/〔漢字圈〕/
-    - xform/^wnj/〔漢字括〕/
-    - xform/^jwo/〔韓文圈〕/
-    - xform/^jwj/〔韓文括〕/
-    - xform/^wxp/〔文化(第一字全碼)〕/
-#    - xform/^dtt/〔照相機(相機)〕/
-#    - xform/^jdt/〔攝影機〕/
-#    - xform/^urt/〔電視機〕/
-#    - xform/^glt/〔收音機〕/
-#    - xform/^adf/〔錄影帶〕/
-#    - xform/^ffo/〔火焰圖（火焰）〕/
-#    - xform/^huz/〔手電筒〕/
-#    - xform/^csa/〔螺絲釘〕/
-#    - xform/^dzo/〔刀子圖(刀子)〕/
-#    - xform/^dma/〔顯微鏡〕/
-#    - xform/^fya/〔望遠鏡〕/
-#    - xform/^wdk/〔水晶球〕/
-#    - xform/^nye/〔富士山〕/
-#    - xform/^aic/〔救護車〕/
-#    - xform/^wbc/〔消防車〕/
+    - xform/^dno/【日用品】/
+    - xform/^wny/【顏色塊】/
+    - xform/^nyh/【色塊心】/
+    - xform/^nyo/【色塊圓】/
+    - xform/^nyf/【色塊方】/
+    - xform/^uoo/【電器圖】(電器)/
+    - xform/^dtv/【日本年】/
+    - xform/^bjp/【阿拉伯】/
+    - xform/^khb/【黃種人／亞裔】/
+    - xform/^jbl/【拉美裔／棕色人】/
+    - xform/^tnb/【棕色人／拉美裔】/
+    - xform/^phb/【白種人／白人】/
+    - xform/^png/【做運動】/
+    - xform/^ngg/【運動女】/
+    - xform/^ngq/【運動男】/
+    - xform/^gsu/【動物臉／獸面】/
+    - xform/^xsj/【食物捲】/
+    - xform/^dqo/【景點圖／名勝】(景點)/
+    - xform/^dpu/【大自然】/
+    - xform/^mhg/【精怪女】/
+    - xform/^mhq/【精怪男】/
+    - xform/^dtr/【日本菜／日本料理／日式料理】/
+    - xform/^fwo/【遊樂園】/
+    - xform/^fmo/【飛行器／飛機】/
+    - xform/^rzo/【鞋子圖】(鞋子)/
+    - xform/^gqo/【甜點圖／甜食】(甜點)/
+    - xform/^bmo/【禽類圖／家禽】(禽類)/
+    - xform/^hso/【科學圖】(科學)/
+    - xform/^czo/【西餐圖】(西餐)/
+    - xform/^woo/【樂器圖】(樂器)/
+    - xform/^nmo/【鳥類圖】(鳥類)/
+    - xform/^yny/【填色塊／填色】/
+    - xform/^ost/【單線框／單線】/
+    - xform/^vst/【雙線框／雙線】/
+    - xform/^rwi/【警消護】/
+    - xform/^lbn/【辦公室】/
+    - xform/^lto/【交通圖／交通／交通工具】/
+    - xform/^kpc/【 k 假名】/
+    - xform/^gpc/【 g 假名】/
+    - xform/^spc/【 s 假名】/
+    - xform/^zpc/【 z 假名】/
+    - xform/^tpc/【 t 假名】/
+    - xform/^dpc/【 d 假名】/
+    - xform/^npc/【 n 假名】/
+    - xform/^hpc/【 h 假名】/
+    - xform/^bpc/【 b 假名】/
+    - xform/^ppc/【 p 假名】/
+    - xform/^mpc/【 m 假名】/
+    - xform/^ypc/【 y 假名】/
+    - xform/^rpc/【 r 假名】/
+    - xform/^wpc/【 w 假名】/
+    - xform/^apc/【 a 假名】/
+    - xform/^ipc/【 i 假名】/
+    - xform/^upc/【 u 假名】/
+    - xform/^epc/【 e 假名】/
+    - xform/^opc/【 o 假名】/
+    - xform/^pco/【假名圈】/
+    - xform/^pcb/【假名半(形)】/
+    - xform/^iro/【 IRO 】(いろは順)/
+    - xform/^zdo/【節日圖／佳節圖】(節日)/
+    - xform/^vzo/【佳節圖／節日圖】(節日)/
+    - xform/^gso/【動物圖／動物】/
+    - xform/^eho/【愛心圖】(愛心)/
+    - xform/^cbw/【輸入法】/
+    - xform/^wpo/【幾何圖】(幾何2)/
+    - xform/^jnd/【十字架】/ #(宗教)
+    - xform/^ooz/【咧嘴笑】/
+    - xform/^qzd/【猴子頭／猴子表情】/
+    - xform/^tio/【標誌圖／號誌】(公共號誌 標誌)/
+    - xform/^mnt/【數字標】/ #(數字)
+    - xform/^wnt/【漢字框】/
+    - xform/^nof/【字母方／字母框】(字母帶方框)/
+    - xform/^not/【字母框／字母方】(字母帶方框)/
+    - xform/^cwt/【西洋棋／象棋】/
+    - xform/^jjp/【撲克牌／撲克】/
+    - xform/^dlc/【星座名】/
+    - xform/^jrn/【十二宮】/
+    - xform/^dls/【太玄經】/
+    - xform/^zdm/【占星術】/ #(天體)
+    - xform/^mno/【數字圈】/
+    - xform/^mnj/【數字括】/
+    - xform/^mnq/【數字點】/
+    - xform/^noo/【字母圈】/
+    - xform/^noj/【字母括】/
+    - xform/^ryl/【蘇州碼】/
+    - xform/^fmd/【羅馬大】/
+    - xform/^fet/【上標(第一字全碼)】/
+    - xform/^fat/【下標(第一字全碼)】/
+    - xform/^xud/【希臘大】/
+    - xform/^pid/【俄語大】/
+    - xform/^tqj/【標點直】/
+    - xform/^wno/【漢字圈】/
+    - xform/^wnj/【漢字括】/
+    - xform/^jwo/【韓文圈】/
+    - xform/^jwj/【韓文括】/
+    - xform/^wxp/【文化(第一字全碼)】/
+#    - xform/^dtt/【照相機(相機)】/
+#    - xform/^jdt/【攝影機】/
+#    - xform/^urt/【電視機】/
+#    - xform/^glt/【收音機】/
+#    - xform/^adf/【錄影帶】/
+#    - xform/^ffo/【火焰圖（火焰）】/
+#    - xform/^huz/【手電筒】/
+#    - xform/^csa/【螺絲釘】/
+#    - xform/^dzo/【刀子圖(刀子)】/
+#    - xform/^dma/【顯微鏡】/
+#    - xform/^fya/【望遠鏡】/
+#    - xform/^wdk/【水晶球】/
+#    - xform/^nye/【富士山】/
+#    - xform/^aic/【救護車】/
+#    - xform/^wbc/【消防車】/
 ##### 以下二字 #####
-    - xform/^yn/〔填色／填色塊〕/
-    - xform/^os/〔單線／單線框〕/
-    - xform/^vs/〔雙線／雙線框〕/
-    - xform/^og/〔回收〕/
-    - xform/^zn/〔膚色〕/
-    - xform/^uz/〔電子〕/
-    - xform/^eo/〔武器〕/
-    - xform/^im/〔工具〕/
-    - xform/^dv/〔頭髮〕/
-    - xform/^ma/〔眼鏡〕/
-    - xform/^vz/〔褲子〕/
-    - xform/^nz/〔帽子〕/
-    - xform/^cr/〔中華〕/
-    - xform/^an/〔合字〕(日語)/
-    - xform/^ud/〔貓頭〕/
-    - xform/^cs/〔串物〕/
-    - xform/^lt/〔交通／交通圖／交通工具〕/
-    - xform/^cz/〔中餐〕(中華料理)/
-    - xform/^ex/〔正飯〕(正餐)/
-    - xform/^cx/〔西食〕(西餐)/
-    - xform/^ol/〔亞裔／黃種人〕/
-    - xform/^pb/〔白人／白種人〕/
-    - xform/^qb/〔黑人〕/
-    - xform/^wz/〔午餐／午飯〕/
-    - xform/^wx/〔午飯／午餐〕/
-    - xform/^dx/〔早飯／早點〕(早餐)/
-    - xform/^dq/〔早點／早飯〕(早餐)/
-    - xform/^js/〔捲物〕/
-    - xform/^rz/〔葉子〕/
-    - xform/^cu/〔名勝／景點圖〕(景點)/
-    - xform/^bl/〔公交／公共運輸〕(公共交通)/
-    - xform/^cb/〔軌道(城軌捷運)〕/
-    - xform/^fc/〔火車〕/
-    - xform/^ac/〔鈔票／紙鈔〕/
-    - xform/^sa/〔紙鈔／鈔票〕/
-    - xform/^ln/〔夜空〕/
-    - xform/^gi/〔獎項／獎牌〕/
-    - xform/^gp/〔獎牌／獎項〕/
-    - xform/^mh/〔精怪〕/
-    - xform/^hz/〔快餐〕/
-    - xform/^jx/〔速食〕/
-    - xform/^hs/〔怪物〕/
-    - xform/^ut/〔月相〕/
-    - xform/^xn/〔有害〕/
-    - xform/^wc/〔汽車〕/
-    - xform/^cc/〔車輛〕/
-    - xform/^yx/〔熱飲〕/
-    - xform/^sl/〔牲畜〕/
-    - xform/^km/〔球具〕/
-    - xform/^gx/〔甜食／甜點圖〕(甜點)/
-    - xform/^nb/〔家禽／禽類圖〕(禽類)/
-    - xform/^mm/〔粗糧〕/
-    - xform/^nm/〔肉類〕/
-    - xform/^no/〔肉品〕/
-    - xform/^zv/〔船隻〕/
-    - xform/^rj/〔花卉〕/
-    - xform/^rr/〔蔬菜〕/
-    - xform/^wm/〔酒精／酒類〕/
-    - xform/^fu/〔下雪〕/
-    - xform/^ux/〔零食〕/
-#    - xform/^ln/〔麵包〕/
-    - xform/^gn/〔麵包〕(gn)/
-    - xform/^ft/〔飛機／飛行器〕/
-    - xform/^mx/〔米飯〕/
-    - xform/^zm/〔餐具〕/
-    - xform/^um/〔魚類／魚圖〕/
-    - xform/^uo/〔魚圖／魚類〕/
-    - xform/^hh/〔表情〕(符號)/
-    - xform/^pu/〔自然〕(符號)/
-    - xform/^xx/〔飲食〕(符號)/
-    - xform/^wg/〔活動〕(符號)/
-    - xform/^ff/〔旅遊〕(符號)/
-    - xform/^so/〔物品〕(符號)/
-    - xform/^of/〔國旗〕(符號)/
-    - xform/^zo/〔符號〕(符號)/
-    - xform/^dn/〔景色〕/
-    - xform/^yk/〔地球〕/
-    - xform/^gq/〔天體〕/
-    - xform/^ts/〔植物〕/
-    - xform/^wq/〔水果〕/
-    - xform/^xs/〔食物〕/
-    - xform/^xm/〔飲料〕/
-    - xform/^gw/〔娛樂〕/
-    - xform/^fz/〔遊戲〕/
-    - xform/^ng/〔運動〕/
-    - xform/^ez/〔建築〕/
-    - xform/^gs/〔動物／動物圖〕/
-    - xform/^ss/〔生肖／十二生肖〕/
-    - xform/^ot/〔獸面／動物臉〕/
-    - xform/^wn/〔五官〕/
-    - xform/^hy/〔手勢〕/
-    - xform/^ls/〔衣物〕/
-    - xform/^lu/〔衣服〕/
-    - xform/^nn/〔包包〕/
-    - xform/^dp/〔頭像〕(大頭)/
-    - xform/^bs/〔人物〕/
-    - xform/^pg/〔化妝〕/
-    - xform/^eh/〔愛情〕/
-    - xform/^lq/〔效果〕/
-    - xform/^aa/〔金錢／錢財〕/
-    - xform/^am/〔錢財／金錢〕/
-    - xform/^or/〔圖示(符號)〕/
-    - xform/^ti/〔通訊〕/
-    - xform/^bt/〔介面〕(圖標)/
-#    - xform/^ot/〔圖標(介面)〕/
-    - xform/^zt/〔箭標／指示〕/ #(箭頭)
-    - xform/^jr/〔指示／箭標〕/ #(箭頭)
-    - xform/^ny/〔宗教〕/
-    - xform/^da/〔時鐘〕/
-    - xform/^dt/〔日本〕/
-    - xform/^bo/〔美國〕/
-    - xform/^wo/〔法國〕/
-    - xform/^mz/〔微笑〕/
-    - xform/^dz/〔大笑〕/
-    - xform/^il/〔討厭〕(厭惡)/
-    - xform/^vd/〔無奈〕(嘆氣)/
-    - xform/^ow/〔哭泣〕/
-    - xform/^bw/〔冷淡〕/
-    - xform/^ye/〔喜愛〕(喜歡)/
-    - xform/^ri/〔驚訝〕/
-    - xform/^sk/〔生氣〕/
-    - xform/^hf/〔懷疑／冒汗〕/
-    - xform/^dw/〔冒汗／懷疑〕/
-    - xform/^oi/〔號誌／標誌圖〕(公共號誌 標誌)/
-    - xform/^zl/〔符碼〕(單純符號)/
-    - xform/^uu/〔電腦〕/
-    - xform/^nt/〔象棋／西洋棋〕/
-    - xform/^lg/〔麻將〕/
-    - xform/^qz/〔骰子〕/
-    - xform/^jj/〔撲克／撲克牌〕/
-    - xform/^gk/〔天氣〕/
-    - xform/^lw/〔音樂〕/
-    - xform/^th/〔兩性〕/
-    - xform/^by/〔八卦〕/
-    - xform/^yc/〔卦名〕/
-    - xform/^dl/〔星座〕/
-    - xform/^do/〔星號〕/
-    - xform/^fy/〔方塊〕/
-    - xform/^wp/〔幾何〕/
-    - xform/^zd/〔箭頭〕/
-    - xform/^ms/〔數學〕/
-    - xform/^bm/〔分數〕/
-    - xform/^fm/〔羅馬〕/
-    - xform/^xu/〔希臘〕/
-    - xform/^pi/〔俄語〕/
-    - xform/^up/〔月份〕/
-    - xform/^dk/〔日期〕/
-    - xform/^dd/〔曜日〕/
-    - xform/^dm/〔時間〕/
-    - xform/^gg/〔天干〕/
-    - xform/^yj/〔地支〕/
-    - xform/^gj/〔干支〕/
-    - xform/^zk/〔節氣〕/
-    - xform/^op/〔單位〕/
-    - xform/^ps/〔貨幣〕(符號)/
-    - xform/^st/〔結構／倉頡〕/
-    - xform/^ay/〔倉頡／結構〕/
-    - xform/^pl/〔偏旁〕/
-    - xform/^lb/〔部首〕(康熙)/
-    - xform/^ze/〔筆畫〕/
-    - xform/^tq/〔標點〕/
-    - xform/^jl/〔拼音〕/
-    - xform/^wl/〔注音〕/
-    - xform/^yi/〔聲調〕/
-    - xform/^jw/〔韓文〕/
-    - xform/^ds/〔易經／六十四卦〕/
-    - xform/^se/〔線段〕/
-    - xform/^ok/〔圓形〕/
-    - xform/^sn/〔三角〕/
-    - xform/^jn/〔打勾〕/
-#    - xform/^az/〔針筒〕/
-#    - xform/^rz/〔藥丸〕/
-#    - xform/^ro/〔藥品(藥丸)〕/
-#    - xform/^tt/〔相機〕/
-#    - xform/^jd/〔攝影〕/
-#    - xform/^ur/〔電視〕/
-#    - xform/^du/〔刀叉〕/
-#    - xform/^jh/〔扳手〕/
-#    - xform/^tz/〔槌子〕/
-#    - xform/^cs/〔螺絲〕/
-#    - xform/^ch/〔巴黎(巴黎鐵塔)〕/
-#    - xform/^lr/〔摩艾〕/
-#    - xform/^rc/〔警車〕/
-    - xform/^;1/〘 1  開心〙(顏文字)/
-    - xform/^;2/〘 2  喜歡〙(顏文字)/
-    - xform/^;3/〘 3  傷心〙(顏文字)/
-    - xform/^;4/〘 4  生氣〙(顏文字)/
-    - xform/^;5/〘 5  驚訝〙(顏文字)/
-    - xform/^;6/〘 6  無奈〙(顏文字)/
-    - xform/^;7/〘 7  喜〙(顏文字)/
-    - xform/^;8/〘 8  樂〙(顏文字)/
-    - xform/^;9/〘 9  怒〙(顏文字)/
-    - xform/^;0/〘 0  指示和圖示〙(顏文字)/
-    - xform/^;-/〘 -  回話〙(顏文字)/
-    - xform/^([0-9][-]?[0-9]?)$/〔 $1 〕/
-    # - xform/10/〔10〕/
-    # - xform/^([1-5])e$/〔$1@1 \($1E\)〕/
-    # - xform/^([1-5])r$/〔$1@2 \($1R\)〕/
-    # - xform/^([1-5])s$/〔$1@3 \($1S\)〕/
-    # - xform/^([1-5])f$/〔$1@4 \($1F\)〕/
-    # - xform/^([1-5])w$/〔$1@5 \($1W\)〕/
-    # - xform/^([1-5])l$/〔$1@6 \($1L\)〕/
-    # - xform/^([1-5])c$/〔$1@7 \($1C\)〕/
-    # - xform/^([1-5])b$/〔$1@8 \($1B\)〕/
-    # - xform/^([1-5])k$/〔$1@9 \($1K\)〕/
-    # - xform/^([1-5])o$/〔$1@0 \($1O\)〕/
+    - xform/^yn/【填色／填色塊】/
+    - xform/^os/【單線／單線框】/
+    - xform/^vs/【雙線／雙線框】/
+    - xform/^og/【回收】/
+    - xform/^zn/【膚色】/
+    - xform/^uz/【電子】/
+    - xform/^eo/【武器】/
+    - xform/^im/【工具】/
+    - xform/^dv/【頭髮】/
+    - xform/^ma/【眼鏡】/
+    - xform/^vz/【褲子】/
+    - xform/^nz/【帽子】/
+    - xform/^cr/【中華】/
+    - xform/^an/【合字】(日語)/
+    - xform/^ud/【貓頭】/
+    - xform/^cs/【串物】/
+    - xform/^lt/【交通／交通圖／交通工具】/
+    - xform/^cz/【中餐】(中華料理)/
+    - xform/^ex/【正飯】(正餐)/
+    - xform/^cx/【西食】(西餐)/
+    - xform/^ol/【亞裔／黃種人】/
+    - xform/^pb/【白人／白種人】/
+    - xform/^qb/【黑人】/
+    - xform/^wz/【午餐／午飯】/
+    - xform/^wx/【午飯／午餐】/
+    - xform/^dx/【早飯／早點】(早餐)/
+    - xform/^dq/【早點／早飯】(早餐)/
+    - xform/^js/【捲物】/
+    - xform/^rz/【葉子】/
+    - xform/^cu/【名勝／景點圖】(景點)/
+    - xform/^bl/【公交／公共運輸】(公共交通)/
+    - xform/^cb/【軌道】(城軌捷運)/
+    - xform/^fc/【火車】/
+    - xform/^ac/【鈔票／紙鈔】/
+    - xform/^sa/【紙鈔／鈔票】/
+    - xform/^ln/【夜空】/
+    - xform/^gi/【獎項／獎牌】/
+    - xform/^gp/【獎牌／獎項】/
+    - xform/^mh/【精怪】/
+    - xform/^hz/【快餐】/
+    - xform/^jx/【速食】/
+    - xform/^hs/【怪物】/
+    - xform/^ut/【月相】/
+    - xform/^xn/【有害】/
+    - xform/^wc/【汽車】/
+    - xform/^cc/【車輛】/
+    - xform/^yx/【熱飲】/
+    - xform/^sl/【牲畜】/
+    - xform/^km/【球具】/
+    - xform/^gx/【甜食／甜點圖】(甜點)/
+    - xform/^nb/【家禽／禽類圖】(禽類)/
+    - xform/^mm/【粗糧】/
+    - xform/^nm/【肉類】/
+    - xform/^no/【肉品】/
+    - xform/^zv/【船隻】/
+    - xform/^rj/【花卉】/
+    - xform/^rr/【蔬菜】/
+    - xform/^wm/【酒精／酒類】/
+    - xform/^fu/【下雪】/
+    - xform/^ux/【零食】/
+#    - xform/^ln/【麵包】/
+    - xform/^gn/【麵包(gn)】/
+    - xform/^ft/【飛機／飛行器】/
+    - xform/^mx/【米飯】/
+    - xform/^zm/【餐具】/
+    - xform/^um/【魚類／魚圖】/
+    - xform/^uo/【魚圖／魚類】/
+    - xform/^hh/【表情】(符號)/
+    - xform/^pu/【自然】(符號)/
+    - xform/^xx/【飲食】(符號)/
+    - xform/^wg/【活動】(符號)/
+    - xform/^ff/【旅遊】(符號)/
+    - xform/^so/【物品】(符號)/
+    - xform/^of/【國旗】(符號)/
+    - xform/^zo/【符號】(符號)/
+    - xform/^dn/【景色】/
+    - xform/^yk/【地球】/
+    - xform/^gq/【天體】/
+    - xform/^ts/【植物】/
+    - xform/^wq/【水果】/
+    - xform/^xs/【食物】/
+    - xform/^xm/【飲料】/
+    - xform/^gw/【娛樂】/
+    - xform/^fz/【遊戲】/
+    - xform/^ng/【運動】/
+    - xform/^ez/【建築】/
+    - xform/^gs/【動物／動物圖】/
+    - xform/^ss/【生肖／十二生肖】/
+    - xform/^ot/【獸面／動物臉】/
+    - xform/^wn/【五官】/
+    - xform/^hy/【手勢】/
+    - xform/^ls/【衣物】/
+    - xform/^lu/【衣服】/
+    - xform/^nn/【包包】/
+    - xform/^dp/【頭像】(大頭)/
+    - xform/^bs/【人物】/
+    - xform/^pg/【化妝】/
+    - xform/^eh/【愛情】/
+    - xform/^lq/【效果】/
+    - xform/^aa/【金錢／錢財】/
+    - xform/^am/【錢財／金錢】/
+    - xform/^or/【圖示】(符號)/
+    - xform/^ti/【通訊】/
+    - xform/^bt/【介面】(圖標)/
+#    - xform/^ot/【圖標(介面)】/
+    - xform/^zt/【箭標／指示】/ #(箭頭)
+    - xform/^jr/【指示／箭標】/ #(箭頭)
+    - xform/^ny/【宗教】/
+    - xform/^da/【時鐘】/
+    - xform/^dt/【日本】/
+    - xform/^bo/【美國】/
+    - xform/^wo/【法國】/
+    - xform/^mz/【微笑】/
+    - xform/^dz/【大笑】/
+    - xform/^il/【討厭】(厭惡)/
+    - xform/^vd/【無奈】(嘆氣)/
+    - xform/^ow/【哭泣】/
+    - xform/^bw/【冷淡】/
+    - xform/^ye/【喜愛】(喜歡)/
+    - xform/^ri/【驚訝】/
+    - xform/^sk/【生氣】/
+    - xform/^hf/【懷疑／冒汗】/
+    - xform/^dw/【冒汗／懷疑】/
+    - xform/^oi/【號誌／標誌圖】(公共號誌 標誌)/
+    - xform/^zl/【符碼】(單純符號)/
+    - xform/^uu/【電腦】/
+    - xform/^nt/【象棋／西洋棋】/
+    - xform/^lg/【麻將】/
+    - xform/^qz/【骰子】/
+    - xform/^jj/【撲克／撲克牌】/
+    - xform/^gk/【天氣】/
+    - xform/^lw/【音樂】/
+    - xform/^th/【兩性】/
+    - xform/^by/【八卦】/
+    - xform/^yc/【卦名】/
+    - xform/^dl/【星座】/
+    - xform/^do/【星號】/
+    - xform/^fy/【方塊】/
+    - xform/^wp/【幾何】/
+    - xform/^zd/【箭頭】/
+    - xform/^ms/【數學】/
+    - xform/^bm/【分數】/
+    - xform/^fm/【羅馬】/
+    - xform/^xu/【希臘】/
+    - xform/^pi/【俄語】/
+    - xform/^up/【月份】/
+    - xform/^dk/【日期】/
+    - xform/^dd/【曜日】/
+    - xform/^dm/【時間】/
+    - xform/^gg/【天干】/
+    - xform/^yj/【地支】/
+    - xform/^gj/【干支】/
+    - xform/^zk/【節氣】/
+    - xform/^op/【單位】/
+    - xform/^ps/【貨幣】(符號)/
+    - xform/^st/【結構／倉頡】/
+    - xform/^ay/【倉頡／結構】/
+    - xform/^pl/【偏旁】/
+    - xform/^lb/【部首】(康熙)/
+    - xform/^ze/【筆畫】/
+    - xform/^tq/【標點】/
+    - xform/^jl/【拼音】/
+    - xform/^wl/【注音】/
+    - xform/^yi/【聲調】/
+    - xform/^jw/【韓文】/
+    - xform/^ds/【易經／六十四卦】/
+    - xform/^se/【線段】/
+    - xform/^ok/【圓形】/
+    - xform/^sn/【三角】/
+    - xform/^jn/【打勾】/
+#    - xform/^az/【針筒】/
+#    - xform/^rz/【藥丸】/
+#    - xform/^ro/【藥品(藥丸)】/
+#    - xform/^tt/【相機】/
+#    - xform/^jd/【攝影】/
+#    - xform/^ur/【電視】/
+#    - xform/^du/【刀叉】/
+#    - xform/^jh/【扳手】/
+#    - xform/^tz/【槌子】/
+#    - xform/^cs/【螺絲】/
+#    - xform/^ch/【巴黎(巴黎鐵塔)】/
+#    - xform/^lr/【摩艾】/
+#    - xform/^rc/【警車】/
+    - xform/^;1/〖 1  開心〗(顏文字)/
+    - xform/^;2/〖 2  喜歡〗(顏文字)/
+    - xform/^;3/〖 3  傷心〗(顏文字)/
+    - xform/^;4/〖 4  生氣〗(顏文字)/
+    - xform/^;5/〖 5  驚訝〗(顏文字)/
+    - xform/^;6/〖 6  無奈〗(顏文字)/
+    - xform/^;7/〖 7  喜〗(顏文字)/
+    - xform/^;8/〖 8  樂〗(顏文字)/
+    - xform/^;9/〖 9  怒〗(顏文字)/
+    - xform/^;0/〖 0  指示和圖示〗(顏文字)/
+    - xform/^;-/〖 -  回話〗(顏文字)/
+    - xform/^([0-9][-]?[0-9]?)$/【 $1 】/
+    # - xform/10/【10】/
+    # - xform/^([1-5])e$/【$1@1 \($1E\)】/
+    # - xform/^([1-5])r$/【$1@2 \($1R\)】/
+    # - xform/^([1-5])s$/【$1@3 \($1S\)】/
+    # - xform/^([1-5])f$/【$1@4 \($1F\)】/
+    # - xform/^([1-5])w$/【$1@5 \($1W\)】/
+    # - xform/^([1-5])l$/【$1@6 \($1L\)】/
+    # - xform/^([1-5])c$/【$1@7 \($1C\)】/
+    # - xform/^([1-5])b$/【$1@8 \($1B\)】/
+    # - xform/^([1-5])k$/【$1@9 \($1K\)】/
+    # - xform/^([1-5])o$/【$1@0 \($1O\)】/
     # - xform/@//
-    - xform/^ab$/〔 AB 〕/
-    - xform/^([a-z])$/〔 \U$1\E 〕/
-    - xform/^;([a-z])$/〘 \U$1\E 變化〙/
+    - xform/^ab$/【 AB 】/
+    - xform/^([a-z])$/【 \U$1\E 】/
+    - xform/^;([a-z])$/〖 \U$1\E 變化〗/
     - xform//Mac/
 ##### 結束 #####

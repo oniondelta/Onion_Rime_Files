@@ -18,6 +18,7 @@
 --      - lua_translator@mytranslator             -- （有缺函數，參考勿用，暫關閉）
 --      - lua_translator@instruction_dbpmf        -- 選項中顯示洋蔥雙拼各種說明
 --      - lua_translator@instruction_grave_bpmf   -- 選項中顯示洋蔥注音各種說明
+--      - lua_translator@instruction_ocm          -- 選項中顯示洋蔥蝦米各種說明
 --      - lua_translator@email_url_translator     -- 輸入email、網址
 --      - lua_translator@email_urlw_translator    -- 輸入email、網址（多了www.）
 --
@@ -390,8 +391,8 @@ function comment_filter_plus(input, env)
   local find_prefix = env.engine.context.input
   local pun1 = string.find(find_prefix, "^'/" )
   local pun2 = string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )
-  local pun3 = string.find(find_prefix, "[]\\;[]+$" )
-  local pun4 = string.find(find_prefix, "^%|$" )
+  local pun3 = string.find(find_prefix, "[]\\[]+$" )
+  local pun4 = string.find(find_prefix, "^[;|][;]?$" )
   if (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
   -- 使用 `iter()` 遍歷所有輸入候選項
     for cand in input:iter() do
@@ -633,8 +634,8 @@ function mix_cf2_cfp_filter(input, env)
   local find_prefix = env.engine.context.input
   local pun1 = string.find(find_prefix, "^'/" )
   local pun2 = string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )
-  local pun3 = string.find(find_prefix, "[]\\;[]+$" )
-  local pun4 = string.find(find_prefix, "^%|$" )
+  local pun3 = string.find(find_prefix, "[]\\[]+$" )
+  local pun4 = string.find(find_prefix, "^[;|][;]?$" )
   if (c_f2_s) then
     for cand in input:iter() do
       if (not string.find(cand.text, '᰼᰼' )) and (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
@@ -672,8 +673,8 @@ function mix_cf2_cfp_smf_filter(input, env)
   local find_prefix = env.engine.context.input
   local pun1 = string.find(find_prefix, "^'/" )
   local pun2 = string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )
-  local pun3 = string.find(find_prefix, "[]\\;[]+$" )
-  local pun4 = string.find(find_prefix, "^%|$" )
+  local pun3 = string.find(find_prefix, "[]\\[]+$" )
+  local pun4 = string.find(find_prefix, "^[;|][;]?$" )
   if (c_f2_s) and (b_k) then
     for cand in input:iter() do
       if (not string.find(cand.text, '᰼᰼' )) and (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
@@ -7509,6 +7510,102 @@ function instruction_dbpmf(input, seg)
     for k, v in ipairs(table_sd_2) do
       local cand = Candidate('help', seg.start, seg._end, v[2], ' ' .. v[1])
       cand.preedit = input .. '\t《查詢鍵位注音》▶'
+      yield(cand)
+    end
+  end
+end
+
+
+
+--- @@ instruction_ocm
+--[[
+說明雙拼注音各種掛接
+--]]
+function instruction_ocm(input, seg)
+  -- if input:find('^;$') then
+  if (string.match(input, "^;$")~=nil) then
+    -- for cand in input:iter() do
+    --   yield(cand)
+    -- end
+    local table_sd_1 = {
+          { ' ※ 輸入【項目】每字第一碼（正碼），調出相關符號。', '𝟎' }
+        , { '【表情】【自然】【飲食】【活動】【旅遊】【物品】', '𝟏' }
+        , { '【符號】【國旗】【微笑】【大笑】【冒汗】【喜愛】', '𝟐' }
+        , { '【討厭】【無奈】【哭泣】【冷淡】【驚訝】【生氣】', '𝟑' }
+        , { '【懷疑】【頭像】【人物】【獸面】【貓頭】【怪物】', '𝟒' }
+        , { '【五官】【手勢】【亞裔】【白人】【黑人】【天氣】', '𝟓' }
+        , { '【下雪】【天體】【夜空】【地球】【景色】【月相】', '𝟔' }
+        , { '【名勝】【日本】【美國】【法國】【建築】【生肖】', '𝟕' }
+        , { '【娛樂】【遊戲】【運動】【球具】【獎項】【獎牌】', '𝟖' }
+        , { '【食物】【正飯】【午餐】【午飯】【早飯】【早點】', '𝟗' }
+        , { '【中餐】【西食】【快餐】【速食】【米飯】【捲物】', '𝟏𝟎' }
+        , { '【串物】【甜食】【零食】【飲料】【熱飲】【酒精】', '𝟏𝟏' }
+        , { '【酒類】【植物】【水果】【蔬菜】【粗糧】【餐具】', '𝟏𝟐' }
+        , { '【花卉】【葉子】【肉類】【肉品】【牲畜】【禽類】', '𝟏𝟑' }
+        , { '【魚圖】【魚類】【家禽】【衣物】【衣服】【褲子】', '𝟏𝟒' }
+        , { '【眼鏡】【帽子】【包包】【頭髮】【膚色】【化妝】', '𝟏𝟓' }
+        , { '【愛情】【兩性】【效果】【宗教】【音樂】【工具】', '𝟏𝟔' }
+        , { '【時鐘】【號誌】【圖示】【介面】【箭標】【精怪】', '𝟏𝟕' }
+        , { '【指示】【回收】【有害】【通訊】【電腦】【交通】', '𝟏𝟖' }
+        , { '【電子】【武器】【象棋】【麻將】【骰子】【撲克】', '𝟏𝟗' }
+        , { '【船隻】【飛機】【汽車】【車輛】【公交】【軌道】', '𝟐𝟎' }
+        , { '【火車】【錢財】【金錢】【鈔票】【紙鈔】【動物】', '𝟐𝟏' }
+        , { '【貨幣】【單位】【數學】【分數】【打勾】【星號】', '𝟐𝟐' }
+        , { '【箭頭】【線段】【幾何】【三角】【方塊】【圓形】', '𝟐𝟑' }
+        , { '【填色】【單線】【雙線】【星座】【易經】【八卦】', '𝟐𝟒' }
+        , { '【卦名】【天干】【地支】【干支】【節氣】【月份】', '𝟐𝟓' }
+        , { '【日期】【曜日】【時間】【符碼】【標點】【合字】', '𝟐𝟔' }
+        , { '【部首】【偏旁】【筆畫】【倉頡】【結構】【拼音】', '𝟐𝟕' }
+        , { '【注音】【聲調】【羅馬】【希臘】【俄語】【韓文】', '𝟐𝟖' }
+        , { '【麵包(gn)】', '𝟐𝟗' }
+        , { '【幾何圖】【鞋子圖】【電器圖】【節日圖】【佳節圖】', '𝟑𝟎' }
+        , { '【甜點圖】【動物圖】【禽類圖】【鳥類圖】【標誌圖】', '𝟑𝟏' }
+        , { '【科學圖】【交通圖】【景點圖】【飛行器】【愛心圖】', '𝟑𝟐' }
+        , { '【黃種人】【拉美裔】【棕色人】【白種人】【阿拉伯】', '𝟑𝟑' }
+        , { '【顏色塊】【動物臉】【猴子頭】【咧嘴笑】【做運動】', '𝟑𝟒' }
+        , { '【日本菜】【食物捲】【辦公室】【警消護】【大自然】', '𝟑𝟓' }
+        , { '【遊樂園】【撲克牌】【西洋棋】【樂器圖】【日用品】', '𝟑𝟔' }
+        , { '【單線框】【雙線框】【色塊心】【色塊方】【色塊圓】', '𝟑𝟕' }
+        , { '【填色塊】【占星術】【十字架】【星座名】【十二宮】', '𝟑𝟖' }
+        , { '【太玄經】【蘇州碼】【標點直】【輸入法】【羅馬大】', '𝟑𝟗' }
+        , { '【希臘大】【俄語大】【字母圈】【字母括】【字母方】', '𝟒𝟎' }
+        , { '【字母框】【數字圈】【數字括】【數字點】【數字標】', '𝟒𝟏' }
+        , { '【漢字圈】【漢字框】【漢字括】【韓文圈】【韓文括】', '𝟒𝟐' }
+        , { '【假名圈】【運動女】【運動男】【精怪女】【精怪男】', '𝟒𝟑' }
+        , { '【日本年】【假名半(形)】', '𝟒𝟒' }
+        , { '【IRO(いろは順)】【文化(第一字全碼)】', '𝟒𝟓' }
+        , { '【平假名(第一碼全碼)】【片假名(第一碼全碼)】', '𝟒𝟔' }
+        , { '【上標(第一字全碼)】【下標(第一字全碼)】', '𝟒𝟕' }
+        , { '【猴子表情】【十二生肖】【交通工具】【公共運輸】', '𝟒𝟖' }
+        , { '【日式料理】【日本料理】【日本星期】【羅馬數字】', '𝟒𝟗' }
+        , { '【數字圈黑】【數字黑圈】【字母圈大】【字母括大】', '𝟓𝟎' }
+        , { '【字母黑圈】【字母圈黑】【字母黑方】【字母方黑】', '𝟓𝟏' }
+        , { '【字母框黑】【字母黑框】【易經卦名】【六十四卦】', '𝟓𝟐' }
+        , { '【六十四卦名】【羅馬數字大】', '𝟓𝟑' }
+        , { '【 a 假名】【 i 假名】【 u 假名】【 e 假名】【 o 假名】', '𝟓𝟒' }
+        , { '【 k 假名】【 g 假名】【 s 假名】【 z 假名】【 t 假名】', '𝟓𝟓' }
+        , { '【 d 假名】【 n 假名】【 h 假名】【 b 假名】【 p 假名】', '𝟓𝟔' }
+        , { '【 m 假名】【 y 假名】【 r 假名】【 w 假名】', '𝟓𝟕' }
+        , { ' ｢圈｣｢框｣｢括｣數字字母：【 0 ~ 50 】【 a ~ z 】', '𝟓𝟖' }
+    }
+    for k, v in ipairs(table_sd_1) do
+      local cand = Candidate('help', seg.start, seg._end, v[2], ' ' .. v[1])
+      -- cand.preedit = input .. '\t※ 輸入〔項目〕每字第一個注音，調出相關符號。'
+      yield(cand)
+    end
+  end
+  -- if input:find('^;;$') then
+  if(string.match(input, "^;;$")~=nil) then
+    local table_sd_2 = {
+          { '〖 a ~ z 〗字母變化      ※ 以下 顏文字：', '𝟘' }
+        , { '〖 1 〗開心 〖 2 〗喜歡 〖 3 〗傷心', '𝟙' }
+        , { '〖 4 〗生氣 〖 5 〗驚訝 〖 6 〗無奈', '𝟚' }
+        , { '〖 7 〗喜     〖 8 〗樂     〖 9 〗怒', '𝟛' }
+        , { '〖 0 〗指示和圖示          〖 - 〗回話', '𝟜' }
+    }
+    for k, v in ipairs(table_sd_2) do
+      local cand = Candidate('help', seg.start, seg._end, v[2], ' ' .. v[1])
+      -- cand.preedit = input .. '\t※ 輸入【項目】每字第一個注音，調出相關符號。'
       yield(cand)
     end
   end
