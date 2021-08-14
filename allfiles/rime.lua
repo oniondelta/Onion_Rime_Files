@@ -33,7 +33,7 @@
 --
 --      - lua_filter@charset_filter2              --（ocm_onionmix） 遮屏選含「᰼᰼」候選項
 --      - lua_filter@comment_filter_plus          --（Mount_ocm） 遮屏提示碼，開關（simplify_comment）（遇到「'/」不遮屏），蝦米用。
---      - lua_filter@symbols_mark_filter          --（關） 候選項註釋符號、音標等屬性之提示碼(comment)（用 opencc 可實現，但無法合併其他提示碼(comment)，改用 Lua 來實現）
+--      - lua_filter@symbols_mark_filter          --（關，但 mix_cf2_cfp_smf_filter 有用到某元件，部分開啟） 候選項註釋符號、音標等屬性之提示碼(comment)（用 opencc 可實現，但無法合併其他提示碼(comment)，改用 Lua 來實現）
 --      - lua_filter@missing_mark_filter          --（關） 補上標點符號因直上和 opencc 衝突沒附註之選項
 --      - lua_filter@comment_filter_array30       --（關） 遮屏提示碼，開關（simplify_comment）（遇到「`」不遮屏）
 --      - lua_filter@array30_nil_filter           --（關） 行列30空碼'⎔'轉成不輸出任何符號，符合原生
@@ -349,16 +349,17 @@ end
 
 --- @@ symbols_mark_filter
 --[[
+（關，但 mix_cf2_cfp_smf_filter 有用到某元件，部分開啟）
 候選項註釋符號、音標等屬性之提示碼(comment)（用 opencc 可實現，但無法合併其他提示碼(comment)，改用 Lua 來實現）
 --]]
 local ocmdb = ReverseDb("build/symbols-mark.reverse.bin")
 
--- local function xform_mark(inp)
---   if inp == "" then return "" end
---     inp = string.gsub(inp, "^(〔.+〕)(〔.+〕)$", "%1")
---     inp = string.gsub(inp, "，", ", ")
---   return inp
--- end
+local function xform_mark(inp)
+  if inp == "" then return "" end
+    inp = string.gsub(inp, "^(〔.+〕)(〔.+〕)$", "%1")
+    inp = string.gsub(inp, "，", ", ")
+  return inp
+end
 
 -- function symbols_mark_filter(input, env)
 --   local b_k = env.engine.context:get_option("back_mark")
