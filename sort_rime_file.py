@@ -134,7 +134,7 @@ shutil.copyfile("./allfiles/essay-zh-hant-onion.txt", "./sort_rime/注音洋蔥p
 shutil.copyfile("./allfiles/essay-jp-onion.txt", "./sort_rime/注音洋蔥plus版/essay-jp-onion.txt")
 shutil.copyfile("./allfiles/allbpm.dict.yaml", "./sort_rime/注音洋蔥plus版/allbpm.dict.yaml")
 shutil.copyfile("./allfiles/allbpm.schema.yaml", "./sort_rime/注音洋蔥plus版/allbpm.schema.yaml")
-shutil.copyfile("./allfiles/bopomo_onionplus_2.schema.yaml", "./sort_rime/注音洋蔥plus版/bopomo_onionplus_2.schema.yaml")
+shutil.copyfile("./allfiles/bopomo_onionplus_space.schema.yaml", "./sort_rime/注音洋蔥plus版/bopomo_onionplus_space.schema.yaml")
 shutil.copyfile("./allfiles/bopomo_onionplus_phrase.txt", "./sort_rime/注音洋蔥plus版/bopomo_onionplus_phrase.txt")
 shutil.copyfile("./allfiles/bopomo_onionplus.extended.dict.yaml", "./sort_rime/注音洋蔥plus版/bopomo_onionplus.extended.dict.yaml")
 shutil.copyfile("./allfiles/bopomo_onionplus.schema.yaml", "./sort_rime/注音洋蔥plus版/bopomo_onionplus.schema.yaml")
