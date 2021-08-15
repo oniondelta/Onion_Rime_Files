@@ -1,7 +1,0 @@
-patch:
-  e_reverse_lookup/comment_format:
-    - xform/^(﹝.+﹞)?\[[^@]+\]/$1/
-    - xform/([a-zA-Z0-9])@([a-zA-Z0-9])/$1 $2/
-    - xform/@//
-    - xform/^([^﹝])/ $1/
-    - xform/^(.{50}).+$/$1 ……《略》/
