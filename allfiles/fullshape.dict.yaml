@@ -5,7 +5,7 @@
 # 相同先前 fsword.dict.yaml 檔案
 ---
 name: fullshape
-version: "202001"
+version: "202108"
 sort: by_weight #original
 use_preset_vocabulary: false
 #max_phrase_length: 7
@@ -15,8 +15,6 @@ columns:
   - code #第二列碼
   - weight #第三列字／詞頻
 ...
-##### 以下一個為空格轉寫，使掛載語言能空格後繼續輸入！！！ #####
-　	|
 ####### 《全形》一般鍵盤標點符號 #######
 ##### 全形空格 #####
 　	./	50000

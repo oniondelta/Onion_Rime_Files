@@ -63,6 +63,7 @@
 --      - lua_processor@array30up_mix             --（onion-array30） 合併 array30up 和 array30up_zy，增進效能。
 --      - lua_processor@mix_apc_s2rm              --（bo_mixin 1、2、4；bopomo_onionplus） 注音掛接，合併 ascii_punct_change 和 s2r_most，增進效能。
 --      - lua_processor@mix_apc_s2rm_3            --（bo_mixin3） 注音掛接，合併 ascii_punct_change 和 s2r_mixin3，增進效能。
+--      - lua_processor@mix_apc_pluss             --（bopomo_onionplus_space） 以原 ascii_punct_change 增加功能，使初始空白可以直接上屏
 --      ...
 
 
@@ -1120,6 +1121,53 @@ function mix_apc_s2rm_3(key, env)
         context:clear()
         return 1 -- kAccepted
       end
+    end
+  end
+  return 2 -- kNoop
+end
+
+
+
+
+--- @@ mix_apc_pluss
+--[[
+（bopomo_onionplus_space）
+以原 ascii_punct_change 增加功能
+使初始空白可以直接上屏
+於注音方案改變在非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
+--]]
+function mix_apc_pluss(key, env)
+  local c_b_d = env.engine.context:get_option("ascii_punct")
+  local en_m = env.engine.context:get_option("ascii_mode")
+  local caret_pos = env.engine.context.caret_pos
+  if (c_b_d) and (not en_m) then
+    local engine = env.engine
+    local context = engine.context
+    if (key:repr() == 'Shift+less') then
+      local b_orig = context:get_commit_text()
+      engine:commit_text( b_orig .. ",")
+      context:clear()
+      return 1 -- kAccepted
+    -- end
+    elseif (key:repr() == 'Shift+greater') then
+      local b_orig = context:get_commit_text()
+      engine:commit_text( b_orig .. ".")
+      context:clear()
+      return 1 -- kAccepted
+    elseif (key:repr() == 'space') and (caret_pos == 0) then
+      -- local b_orig = context:get_commit_text()
+      engine:commit_text( " " )
+      context:clear()
+      return 1 -- kAccepted
+    end
+  elseif (not c_b_d) and (not en_m) then
+    if (key:repr() == 'space') and (caret_pos == 0) then
+      local engine = env.engine
+      local context = engine.context
+      -- local b_orig = context:get_commit_text()
+      engine:commit_text( " " )
+      context:clear() 
+      return 1 -- kAccepted
     end
   end
   return 2 -- kNoop

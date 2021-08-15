@@ -4,10 +4,12 @@
 # 『洋蔥』製作
 ---
 name: fullshape.extended
-version: "202105"
+version: "202108"
 sort: by_weight #original
 use_preset_vocabulary: false
 import_tables:
   - fullshape
   - phrases.fs_all
 ...
+##### 以下一個為空格轉寫，使掛載語言能空格後繼續輸入！！！ #####
+　	|

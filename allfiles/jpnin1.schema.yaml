@@ -190,6 +190,7 @@ speller:
     - abbrev/^([kstnhmyrwgzdbpjlfx])([aiueo])([.,])$/$1/
     - abbrev/^([c])([h])([aiueo])([.,])$/$1/ #避免「c」開頭沒有對應假名
     - abbrev/^([kstnhmyrwgzdbpjlfcx][kstnhmyrwgzdbpjlfc][y]?)([aiueo])([.,])$/$1/
+    - derive/^\|$/ /
 
 translator:
   dictionary: jpnin1.extended

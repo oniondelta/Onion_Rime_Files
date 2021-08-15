@@ -5,7 +5,7 @@
 schema:
   schema_id: easy_en_b
   name: Easy English（B）
-  version: "202105"
+  version: "202108"
   author:
     - Patrick <ipatrickmac@gmail.com>
     - 洋蔥
@@ -43,7 +43,8 @@ engine:
 speller:
   alphabet: "zyxwvutsrqponmlkjihgfedcba-.;/'"
   delimiter: " "
-  # algebra:
+  algebra:
+    - derive/^\|$/ /
 #    - derive|^//([a-z]+)$|$1|
 #    - derive|\/|'| #特別的方案使用「'」
 #    - xform|^\/|'| #開頭大寫後面小寫，全部轉成「'」
