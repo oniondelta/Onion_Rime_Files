@@ -8,7 +8,7 @@ patch:
   schema_list:
 ######## 洋蔥注音 plus 版 ########
     - schema: bopomo_onionplus
-    - schema: bopomo_onionplus_2
+    - schema: bopomo_onionplus_space
     - schema: hangeul
     - schema: jpnin1
     - schema: latinin1
