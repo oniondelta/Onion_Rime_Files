@@ -703,7 +703,8 @@ function mix_cf2_cfp_smf_filter(input, env)
       end
     end
   elseif (not c_f2_s) and (b_k) then
-    if (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
+    if (not s_c_f_p_s) then
+    -- if (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
       for cand in input:iter() do
         cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
         yield(cand)
