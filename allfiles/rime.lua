@@ -31,7 +31,7 @@
 --      - lua_filter@reverse_lookup_filter        -- 依地球拼音為候選項加上帶調拼音的註釋
 --      - lua_filter@myfilter                     -- 把 charset_comment_filter 和 reverse_lookup_filter 註釋串在一起，如：CJK(hǎo)
 --
---      - lua_filter@charset_filter2              --（ocm_onionmix） 遮屏選含「᰼᰼」候選項
+--      - lua_filter@charset_filter2              --（ocm_onionmix）（手機全方案會用到） 遮屏選含「᰼᰼」候選項
 --      - lua_filter@comment_filter_plus          --（Mount_ocm） 遮屏提示碼，開關（simplify_comment）（遇到「'/」不遮屏）。
 --      - lua_filter@symbols_mark_filter          --（關，但 mix_cf2_cfp_smf_filter 有用到某元件，部分開啟） 候選項註釋符號、音標等屬性之提示碼(comment)（用 opencc 可實現，但無法合併其他提示碼(comment)，改用 Lua 來實現）
 --      - lua_filter@missing_mark_filter          --（關） 補上標點符號因直上和 opencc 衝突沒附註之選項
@@ -207,7 +207,7 @@ end
 
 --- @@ charset_filter2
 --[[
-（ocm_onionmix）
+（ocm_onionmix）（手機全方案會用到）
 把 opencc 轉換成「᰼」(或某個符號)，再用 lua 功能去除「᰼」
 --]]
 
@@ -357,12 +357,12 @@ end
 --]]
 local ocmdb = ReverseDb("build/symbols-mark.reverse.bin")
 
-local function xform_mark(inp)
-  if inp == "" then return "" end
-    inp = string.gsub(inp, "^(〔.+〕)(〔.+〕)$", "%1")
-    inp = string.gsub(inp, "，", ", ")
-  return inp
-end
+-- local function xform_mark(inp)
+--   if inp == "" then return "" end
+--     inp = string.gsub(inp, "^(〔.+〕)(〔.+〕)$", "%1")
+--     inp = string.gsub(inp, "，", ", ")
+--   return inp
+-- end
 
 -- function symbols_mark_filter(input, env)
 --   local b_k = env.engine.context:get_option("back_mark")
@@ -696,12 +696,14 @@ function mix_cf2_cfp_smf_filter(input, env)
     for cand in input:iter() do
       if (not string.find(cand.text, '᰼᰼' )) and (not s_c_f_p_s) then
       -- if (not string.find(cand.text, '᰼᰼' )) and (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
-        cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
+        -- cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
+        cand:get_genuine().comment = cand.comment .. ocmdb:lookup(cand.text)
         yield(cand)
       elseif (not string.find(cand.text, '᰼᰼' )) and (s_c_f_p_s) then
       -- elseif (not string.find(cand.text, '᰼᰼' )) and (s_c_f_p_s) and (not pun1) and (not pun2) and (not pun3) and (not pun4) then
         cand:get_genuine().comment = ""
-        cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
+        -- cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
+        cand:get_genuine().comment = cand.comment .. ocmdb:lookup(cand.text)
         yield(cand)
       end
     end
@@ -709,13 +711,15 @@ function mix_cf2_cfp_smf_filter(input, env)
     if (not s_c_f_p_s) then
     -- if (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
       for cand in input:iter() do
-        cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
+        -- cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
+        cand:get_genuine().comment = cand.comment .. ocmdb:lookup(cand.text)
         yield(cand)
       end
     else
       for cand in input:iter() do
         cand:get_genuine().comment = ""
-        cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
+        -- cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
+        cand:get_genuine().comment = cand.comment .. ocmdb:lookup(cand.text)
         yield(cand)
       end
     end
