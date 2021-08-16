@@ -28,12 +28,12 @@ switches:
   - name: extended_charset
     reset: 1
     states: [ "常用", "增廣" ]
-  - name: simplify_comment
-    # reset: 1
-    states: [ 編碼, 無編 ]
   - name: 1_2_straight_up
     reset: 1
     states: [ 香草, 直上 ]
+  - name: simplify_comment
+    # reset: 1
+    states: [ 編碼, 無編 ]
 
 
 engine:
