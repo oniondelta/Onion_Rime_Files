@@ -145,8 +145,8 @@ punct_mark:
     - erase/^.*〔.*〕.+$/
     - erase/^.+〔.*〕$/
 
-mix_cf2_miss_filter:
-  tags: [ punct, abc, reverse2_lookup ]
+# mix_cf2_miss_filter:
+#   tags: [ punct, abc, reverse2_lookup ]
 ################################### 拼寫 ######################################
 speller:
   alphabet: "1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 3467'[]"
