@@ -31,6 +31,9 @@ switches:
   - name: simplify_comment
     # reset: 1
     states: [ 編碼, 無編 ]
+  - name: 1_2_straight_up
+    reset: 1
+    states: [ 香草, 直上 ]
 
 
 engine:
@@ -38,7 +41,8 @@ engine:
     - simplifier
     - reverse_lookup_filter@array30_reverse_lookup
     - lua_filter@mix30_nil_comment_filter
-    # - lua_filter@comment_filter_array30 #後面註解開關濾鏡。
+    - lua_filter@array30_spaceup_filter
+    # - lua_filter@array30_comment_filter #後面註解開關濾鏡。
     # - lua_filter@array30_nil_filter #把選字單中空碼符號轉換為""，且不會上屏。
     - reverse_lookup_filter@array30-zy_reverse_lookup
     - reverse_lookup_filter@bpmf_reverse_lookup
@@ -68,18 +72,24 @@ engine:
     - fallback_segmentor
   translators:
     - punct_translator
+    - lua_translator@t_translator
+    - lua_translator@email_url_translator
     # - script_translator
     - table_translator
     - table_translator@wsymbols #（可用 symbols 更簡單實現，但沒有開頭提示）
     - script_translator@reverse2_lookup
     - table_translator@reverse3_lookup
-    - lua_translator@t_translator
-    - lua_translator@email_urlw_translator
+
 
 
 simplifier:
   tips: all
 
+mix30_nil_comment_filter:
+  tags: [ abc ]
+
+array30_spaceup_filter:
+  tags: [ abc ]
 
 menu:
   alternative_select_keys: "1234567890"
@@ -94,9 +104,11 @@ speller:
   delimiter: "|"
   use_space: true
   auto_select: true
-  auto_select_pattern: '^[wtasfhlxv] $|^[a-z,./;]{2} $' #|[a-z,./;]{3} |[a-z,./;]{4} |[a-z,./;]{4}i ' #三、四、五碼會有非獨碼，故用 Lua 實現空白鍵直上。
+  auto_select_pattern: '^[a-z,./;] $|^[a-z,./;]{2} $' #'^[wtasfhlxv] $|^[a-z,./;]{2} $' #|[a-z,./;]{3} |[a-z,./;]{4} |[a-z,./;]{4}i ' #三、四、五碼會有非獨碼，故用 Lua 實現空白鍵直上。
   algebra:
+    - xform/@@/ /
     - xform/@/ /
+    - xform/ ~/ /
     - derive|^([a-z,./;]+)'$|$1| #詞庫
     - derive|^([a-z,./;]{3})$|$1 |
     - derive|^([a-z,./;]{4})$|$1 |
@@ -207,6 +219,8 @@ translator:
     - xform|\,|8⇣|
     - xform/^/ /
     - xform/ /  /
+    - xform/@@/▫/
+    - xform/@~/▪/ #該則不要隨意更動，欲動必須改動 Lua 相應程式碼，否則會有 Bug。
     - xform/@/▫/
 
 
@@ -369,6 +383,7 @@ key_binder:
     - { accept: Control+slash, toggle: ascii_punct, when: always } #新增！
     - { accept: Control+apostrophe, toggle: extended_charset, when: always } #增廣常用字符過濾，新增開關
     - { accept: Control+equal, toggle: simplify_comment, when: always } #編碼提示開關
+    - { accept: Control+minus, toggle: 1_2_straight_up, when: always } #空白直上開關
 ### Return/Enter鍵 ###
     - {accept: Return, send: KP_Space, when: paging} #選字時 Return/Enter 鍵同空白鍵上屏中文
     # - {accept: Return, send: space, when: has_menu} #有選單時 Return/Enter 鍵同空白鍵上屏中文
@@ -388,7 +403,8 @@ recognizer:
     wsymbols: "^[w][0-9]$" #（可用 symbols 更簡單實現，但沒有開頭提示）
     reverse2_lookup: "^=[-.,;/0-9a-z]*'?$"
     reverse3_lookup: "^==[a-z,./; ]*'?$"
-    lua: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|`[';/]?[a-z]*$|`[0-9./-]*$|`[xcoe][0-9a-z]+$"
+    lua: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$|`[';/]?[a-z]*$|`[0-9./-]*$|`[xcoe][0-9a-z]+$"
+    # lua: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|`[';/]?[a-z]*$|`[0-9./-]*$|`[xcoe][0-9a-z]+$"
     # lua: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|`[';a-z0-9./-]*$"
     # email: "^[a-z][-_.0-9a-z]*@.*$"
     # url: "^(www[.]|https?:|ftp:|mailto:).*$"

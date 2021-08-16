@@ -79,6 +79,9 @@ menu:
 simplifier:
   tips: all
 
+charset_filter_plus:
+  tags: [ abc, reverse2_lookup ]
+
 # only_cjk_filter:
 #   tags: [ abc ]
 

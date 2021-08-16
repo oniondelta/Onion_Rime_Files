@@ -173,6 +173,9 @@ punct_mark:
   comment_format:
     - erase/^.*〔.*〕.+$/
     - erase/^.+〔.*〕$/
+
+mix_cf2_cfp_filter:
+  tags: [ abc, reverse2_lookup, reverse3_lookup, emoji_series, pt, jphi_lookup, jpka_lookup, korea_lookup, latin_lookup, gr_lookup, cyr_lookup, fs_lookup ]
 ################################### 拼寫 ######################################
 speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz;-"

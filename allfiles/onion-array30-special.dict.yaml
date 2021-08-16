@@ -5,6 +5,11 @@
 # 依據行列輸入法官網於 2015/09/11 釋出的 V201509 版本製作
 # 感謝行列科技廖明德先生
 # 『洋蔥』製作
+#
+# 說明：
+#     尾綴「@」：空格，直出字
+#     尾綴「@~」：空格，但非首選
+#     尾綴「@@」：空格，為首選，但含有非首選的空格編碼，功能需求，特此標註
 ---
 name: onion-array30-special
 version: "202107"
@@ -13,7 +18,7 @@ use_preset_vocabulary: false
 #max_phrase_length: 7
 #min_phrase_weight: 100
 ...
-大	ak@
+大	ak@@
 不	ah@
 小	dk@
 是	pc@
@@ -280,7 +285,7 @@ use_preset_vocabulary: false
 聲	rb@
 會	i/@
 但	ka@
-雨	a,@
+雨	a,@@
 獨	./@
 喔	ba@
 取	be@

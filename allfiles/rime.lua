@@ -32,14 +32,15 @@
 --      - lua_filter@myfilter                     -- 把 charset_comment_filter 和 reverse_lookup_filter 註釋串在一起，如：CJK(hǎo)
 --
 --      - lua_filter@charset_filter2              --（ocm_onionmix） 遮屏選含「᰼᰼」候選項
---      - lua_filter@comment_filter_plus          --（Mount_ocm） 遮屏提示碼，開關（simplify_comment）（遇到「'/」不遮屏），蝦米用。
+--      - lua_filter@comment_filter_plus          --（Mount_ocm） 遮屏提示碼，開關（simplify_comment）（遇到「'/」不遮屏）。
 --      - lua_filter@symbols_mark_filter          --（關，但 mix_cf2_cfp_smf_filter 有用到某元件，部分開啟） 候選項註釋符號、音標等屬性之提示碼(comment)（用 opencc 可實現，但無法合併其他提示碼(comment)，改用 Lua 來實現）
 --      - lua_filter@missing_mark_filter          --（關） 補上標點符號因直上和 opencc 衝突沒附註之選項
---      - lua_filter@comment_filter_array30       --（關） 遮屏提示碼，開關（simplify_comment）（遇到「`」不遮屏）
+--      - lua_filter@array30_comment_filter       --（關） 遮屏提示碼，開關（simplify_comment）（遇到「`」不遮屏）
 --      - lua_filter@array30_nil_filter           --（關） 行列30空碼'⎔'轉成不輸出任何符號，符合原生
+--      - lua_filter@array30_spaceup_filter       --（onion-array30） 行列30開關一二碼按空格後，是否直上或可能有選單。
 --
 --      - ＊合併兩個以上函數：
---      - lua_filter@mix30_nil_comment_filter     --（onion-array30） 合併 array30_nil_filter 和 comment_filter_array30，兩個 lua filter 太耗效能。
+--      - lua_filter@mix30_nil_comment_filter     --（onion-array30） 合併 array30_nil_filter 和 array30_comment_filter，兩個 lua filter 太耗效能。
 --      - lua_filter@mix_cf2_miss_filter          --（bopomo_onionplus 和 bo_mixin 全系列） 合併 charset_filter2 和 missing_mark_filter，兩個 lua filter 太耗效能。
 --      - lua_filter@mix_cf2_cfp_filter           --（dif1） 合併 charset_filter2 和 comment_filter_plus，兩個 lua filter 太耗效能。
 --      - lua_filter@mix_cf2_cfp_smf_filter       --（ocm_mixin） 合併 charset_filter2 和 comment_filter_plus 和 symbols_mark_filter，三個 lua filter 太耗效能。
@@ -380,10 +381,10 @@ end
 
 
 
---- @@ comment_filter_plus 和 comment_filter_array30
+--- @@ comment_filter_plus
 --[[
 （Mount_ocm）
-嘸蝦米和行列30後面註釋刪除
+去除後面編碼註釋
 --]]
 -- local function xform_c(cf)
 --   if cf == "" then return "" end
@@ -394,11 +395,12 @@ end
 function comment_filter_plus(input, env)
   local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
   local find_prefix = env.engine.context.input
-  local pun1 = string.find(find_prefix, "^'/" )
-  local pun2 = string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )
-  local pun3 = string.find(find_prefix, "[]\\[]+$" )
-  local pun4 = string.find(find_prefix, "^[;|][;]?$" )
-  if (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
+  -- local pun1 = string.find(find_prefix, "^'/" )
+  -- local pun2 = string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )
+  -- local pun3 = string.find(find_prefix, "[]\\[]+$" )
+  -- local pun4 = string.find(find_prefix, "^[;|][;]?$" )
+  if (not s_c_f_p_s) then
+  -- if (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
   -- 使用 `iter()` 遍歷所有輸入候選項
     for cand in input:iter() do
       yield(cand)
@@ -416,7 +418,7 @@ function comment_filter_plus(input, env)
 end
 
 
--- function comment_filter_array30(input, env)
+-- function array30_comment_filter(input, env)
 --   local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
 --   local find_prefix = env.engine.context.input
 --   if (not s_c_f_p_s) or (string.find(find_prefix, "`" )) then
@@ -518,7 +520,7 @@ end
 --- @@ mix30_nil_comment_filter
 --[[
 （onion-array30）
-合併 array30_nil_filter 和 comment_filter_array30，兩個 lua filter 太耗效能。
+合併 array30_nil_filter 和 array30_comment_filter，兩個 lua filter 太耗效能。
 --]]
 function mix30_nil_comment_filter(input, env)
   local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
@@ -640,21 +642,24 @@ function mix_cf2_cfp_filter(input, env)
   local c_f2_s = env.engine.context:get_option("zh_tw")
   local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
   local find_prefix = env.engine.context.input
-  local pun1 = string.find(find_prefix, "^'/" )
-  local pun2 = string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )
-  local pun3 = string.find(find_prefix, "[]\\[]+$" )
-  local pun4 = string.find(find_prefix, "^[;|][;]?$" )
+  -- local pun1 = string.find(find_prefix, "^'/" )
+  -- local pun2 = string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )
+  -- local pun3 = string.find(find_prefix, "[]\\[]+$" )
+  -- local pun4 = string.find(find_prefix, "^[;|][;]?$" )
   if (c_f2_s) then
     for cand in input:iter() do
-      if (not string.find(cand.text, '᰼᰼' )) and (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
+      if (not string.find(cand.text, '᰼᰼' )) and (not s_c_f_p_s) then
+      -- if (not string.find(cand.text, '᰼᰼' )) and (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
         yield(cand)
-      elseif (not string.find(cand.text, '᰼᰼' )) and (s_c_f_p_s) and (not pun1) and (not pun2) and (not pun3) and (not pun4) then
+      elseif (not string.find(cand.text, '᰼᰼' )) and (s_c_f_p_s) then
+      -- elseif (not string.find(cand.text, '᰼᰼' )) and (s_c_f_p_s) and (not pun1) and (not pun2) and (not pun3) and (not pun4) then
         cand:get_genuine().comment = ""
         yield(cand)
       end
     end
   else
-    if (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
+    if (not s_c_f_p_s) then
+    -- if (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
       for cand in input:iter() do
         yield(cand)
       end
@@ -680,16 +685,18 @@ function mix_cf2_cfp_smf_filter(input, env)
   local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
   local b_k = env.engine.context:get_option("back_mark")
   local find_prefix = env.engine.context.input
-  local pun1 = string.find(find_prefix, "^'/" )
-  local pun2 = string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )
-  local pun3 = string.find(find_prefix, "[]\\[]+$" )
-  local pun4 = string.find(find_prefix, "^[;|][;]?$" )
+  -- local pun1 = string.find(find_prefix, "^'/" )
+  -- local pun2 = string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )
+  -- local pun3 = string.find(find_prefix, "[]\\[]+$" )
+  -- local pun4 = string.find(find_prefix, "^[;|][;]?$" )
   if (c_f2_s) and (b_k) then
     for cand in input:iter() do
-      if (not string.find(cand.text, '᰼᰼' )) and (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
+      if (not string.find(cand.text, '᰼᰼' )) and (not s_c_f_p_s) then
+      -- if (not string.find(cand.text, '᰼᰼' )) and (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
         cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
         yield(cand)
-      elseif (not string.find(cand.text, '᰼᰼' )) and (s_c_f_p_s) and (not pun1) and (not pun2) and (not pun3) and (not pun4) then
+      elseif (not string.find(cand.text, '᰼᰼' )) and (s_c_f_p_s) then
+      -- elseif (not string.find(cand.text, '᰼᰼' )) and (s_c_f_p_s) and (not pun1) and (not pun2) and (not pun3) and (not pun4) then
         cand:get_genuine().comment = ""
         cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
         yield(cand)
@@ -710,15 +717,18 @@ function mix_cf2_cfp_smf_filter(input, env)
     end
   elseif (c_f2_s) and (not b_k) then
     for cand in input:iter() do
-      if (not string.find(cand.text, '᰼᰼' )) and (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
+      if (not string.find(cand.text, '᰼᰼' )) and (not s_c_f_p_s) then
+      -- if (not string.find(cand.text, '᰼᰼' )) and (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
         yield(cand)
-      elseif (not string.find(cand.text, '᰼᰼' )) and (s_c_f_p_s) and (not pun1) and (not pun2) and (not pun3) and (not pun4) then
+      elseif (not string.find(cand.text, '᰼᰼' )) and (s_c_f_p_s) then
+      -- elseif (not string.find(cand.text, '᰼᰼' )) and (s_c_f_p_s) and (not pun1) and (not pun2) and (not pun3) and (not pun4) then
         cand:get_genuine().comment = ""
         yield(cand)
       end
     end
   elseif (not c_f2_s) and (not b_k) then
-    if (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
+    if (not s_c_f_p_s) then
+    -- if (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
       for cand in input:iter() do
         yield(cand)
       end
@@ -727,6 +737,38 @@ function mix_cf2_cfp_smf_filter(input, env)
         cand:get_genuine().comment = ""
         yield(cand)
       end
+    end
+  end
+end
+
+
+
+
+--- @@ array30_spaceup_filter
+--[[
+（onion-array30）
+行列30開關一二碼按空格後，是否直上或可能有選單。
+--]]
+function array30_spaceup_filter(input, env)
+  local s_up = env.engine.context:get_option("1_2_straight_up")
+  local find_prefix = env.engine.context.input
+  if (s_up) then
+    for cand in input:iter() do
+      if (string.find(find_prefix, "^[a-z,./;][a-z,./;]? $" )) and (not string.find(cand.comment, '▪' )) then
+        yield(cand)
+      elseif (string.find(find_prefix, "^[a-z.,/;][a-z.,/;]?[a-z.,/;']?[a-z.,/;']?[i']?$" )) or (string.find(find_prefix, "^a[k,] $" )) or (string.find(find_prefix, "^lr $" )) or (string.find(find_prefix, "^ol $" )) or (string.find(find_prefix, "^qk $" )) or (string.find(find_prefix, "^%.b $" )) or (string.find(find_prefix, "^/%. $" )) or (string.find(find_prefix, "^pe $" )) then
+        yield(cand)
+      elseif (string.find(find_prefix, "^sf $" )) and (string.find(cand.text, '毋' )) then
+        yield(cand)
+      elseif (string.find(find_prefix, "^lb $" )) and (string.find(cand.text, '及' )) then
+        yield(cand)
+      -- elseif (string.find(find_prefix, "`.*$" )) or (string.find(find_prefix, "^w[0-9]$" ))  or (string.find(find_prefix, "^[a-z][-_.0-9a-z]*@.*$" )) or (string.find(find_prefix, "^(www[.]|https?:|ftp:|mailto:|file:).*$" )) then
+      --   yield(cand)
+      end
+    end
+  elseif (not s_up) then
+    for cand in input:iter() do
+      yield(cand)
     end
   end
 end
@@ -1197,10 +1239,9 @@ function email_url_translator(input, seg)
   local url3_in = string.match(input, "^(mailto:.*)$")
   local url4_in = string.match(input, "^(file:.*)$")
   if (email_in~=nil) then
-    yield(Candidate("englishtype", seg.start, seg._end, email_in , "〔e-mail〕"))
+    yield(Candidate("englishtype", seg.start, seg._end, input , "〔e-mail〕"))
     return
-  end
-  if (url1_in~=nil) or (url2_in~=nil) or (url3_in~=nil) or (url4_in~=nil) then
+  elseif (url1_in~=nil) or (url2_in~=nil) or (url3_in~=nil) or (url4_in~=nil) then
     yield(Candidate("englishtype", seg.start, seg._end, input , "〔URL〕"))
     return
   end
@@ -1216,17 +1257,17 @@ end
 --]]
 function email_urlw_translator(input, seg)
   local email_in = string.match(input, "^([a-z][-_.0-9a-z]*@.*)$")
-  local www_in = string.match(input, "^(www[.].*)$")
+  local www_in = string.match(input, "^(www[.][-_0-9a-z]*[-_.0-9a-z]*)$")
   local url1_in = string.match(input, "^(https?:.*)$")
   local url2_in = string.match(input, "^(ftp:.*)$")
   local url3_in = string.match(input, "^(mailto:.*)$")
   local url4_in = string.match(input, "^(file:.*)$")
-  if (email_in~=nil) then
-    yield(Candidate("englishtype", seg.start, seg._end, email_in , "〔e-mail〕"))
+  if (www_in~=nil) or (url1_in~=nil) or (url2_in~=nil) or (url3_in~=nil) or (url4_in~=nil) then
+    yield(Candidate("englishtype", seg.start, seg._end, input , "〔URL〕"))
     return
   end
-  if (www_in~=nil) or (url1_in~=nil) or (url2_in~=nil) or (url3_in~=nil) or (url4_in~=nil) then
-    yield(Candidate("englishtype", seg.start, seg._end, www_in , "〔URL〕"))
+  if (email_in~=nil) then
+    yield(Candidate("englishtype", seg.start, seg._end, input , "〔e-mail〕"))
     return
   end
 end

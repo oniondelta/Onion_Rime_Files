@@ -72,6 +72,9 @@ engine:
     - table_translator@reverse3_lookup
     - script_translator@reverse3_lookup_extra
 
+comment_filter_plus:
+  tags: [ abc ]
+
 menu:
   alternative_select_keys: "0123456789"
   page_size: 9

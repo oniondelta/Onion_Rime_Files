@@ -147,6 +147,9 @@ punct_mark:
   comment_format:
     - erase/^.*〔.*〕.+$/
     - erase/^.+〔.*〕$/
+
+mix_cf2_miss_filter:
+  tags: [ punct, abc, reverse2_lookup ]
 ############################## 拼寫正則 #####################################
 speller:
   alphabet: "1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 3467"
