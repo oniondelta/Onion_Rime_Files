@@ -36,11 +36,12 @@
 --      - lua_filter@symbols_mark_filter          --（關，但 mix_cf2_cfp_smf_filter 有用到某元件，部分開啟） 候選項註釋符號、音標等屬性之提示碼(comment)（用 opencc 可實現，但無法合併其他提示碼(comment)，改用 Lua 來實現）
 --      - lua_filter@missing_mark_filter          --（關） 補上標點符號因直上和 opencc 衝突沒附註之選項
 --      - lua_filter@array30_comment_filter       --（關） 遮屏提示碼，開關（simplify_comment）（遇到「`」不遮屏）
---      - lua_filter@array30_nil_filter           --（關） 行列30空碼'⎔'轉成不輸出任何符號，符合原生
---      - lua_filter@array30_spaceup_filter       --（onion-array30） 行列30開關一二碼按空格後，是否直上或可能有選單。
+--      - lua_filter@array30_nil_filter           --（onion-array30） 行列30空碼'⎔'轉成不輸出任何符號，符合原生。後來移至「=」「=」反查用。
+--      - lua_filter@array30_spaceup_filter       --（關） 行列30開關一二碼按空格後，是否直上或可能有選單。
 --
 --      - ＊合併兩個以上函數：
---      - lua_filter@mix30_nil_comment_filter     --（onion-array30） 合併 array30_nil_filter 和 array30_comment_filter，兩個 lua filter 太耗效能。
+--      - lua_filter@mix30_nil_comment_filter     --（關） 合併 array30_nil_filter 和 array30_comment_filter，兩個 lua filter 太耗效能。
+--      - lua_filter@mix30_nil_comment_up_filter  --（onion-array30） 合併 array30_nil_filter 和 array30_comment_filter 和 array30_spaceup_filter，三個 lua filter 太耗效能。
 --      - lua_filter@mix_cf2_miss_filter          --（bopomo_onionplus 和 bo_mixin 全系列） 合併 charset_filter2 和 missing_mark_filter，兩個 lua filter 太耗效能。
 --      - lua_filter@mix_cf2_cfp_filter           --（dif1） 合併 charset_filter2 和 comment_filter_plus，兩個 lua filter 太耗效能。
 --      - lua_filter@mix_cf2_cfp_smf_filter       --（ocm_mixin） 合併 charset_filter2 和 comment_filter_plus 和 symbols_mark_filter，三個 lua filter 太耗效能。
@@ -394,7 +395,7 @@ end
 
 function comment_filter_plus(input, env)
   local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
-  local find_prefix = env.engine.context.input
+  -- local find_prefix = env.engine.context.input
   -- local pun1 = string.find(find_prefix, "^'/" )
   -- local pun2 = string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )
   -- local pun3 = string.find(find_prefix, "[]\\[]+$" )
@@ -437,119 +438,120 @@ end
 
 
 
--- --- @@ array30_nil_filter
--- --[[
--- 行列30空碼'⎔'轉成不輸出任何符號，符合原生
--- --]]
--- -- -- preedit_format 格式轉寫
--- -- local function xform_array30_input(ainput)
--- --   if ainput == "" then return "" end
--- --   ainput = string.gsub(ainput, "a", "1-")
--- --   ainput = string.gsub(ainput, "b", "5⇣")
--- --   ainput = string.gsub(ainput, "c", "3⇣")
--- --   ainput = string.gsub(ainput, "d", "3-")
--- --   ainput = string.gsub(ainput, "e", "3⇡")
--- --   ainput = string.gsub(ainput, "f", "4-")
--- --   ainput = string.gsub(ainput, "g", "5-")
--- --   ainput = string.gsub(ainput, "h", "6-")
--- --   ainput = string.gsub(ainput, "i", "8⇡")
--- --   ainput = string.gsub(ainput, "j", "7-")
--- --   ainput = string.gsub(ainput, "k", "8-")
--- --   ainput = string.gsub(ainput, "l", "9-")
--- --   ainput = string.gsub(ainput, "m", "7⇣")
--- --   ainput = string.gsub(ainput, "n", "6⇣")
--- --   ainput = string.gsub(ainput, "o", "9⇡")
--- --   ainput = string.gsub(ainput, "p", "0⇡")
--- --   ainput = string.gsub(ainput, "q", "1⇡")
--- --   ainput = string.gsub(ainput, "r", "4⇡")
--- --   ainput = string.gsub(ainput, "s", "2-")
--- --   ainput = string.gsub(ainput, "t", "5⇡")
--- --   ainput = string.gsub(ainput, "u", "7⇡")
--- --   ainput = string.gsub(ainput, "v", "4⇣")
--- --   ainput = string.gsub(ainput, "w", "2⇡")
--- --   ainput = string.gsub(ainput, "x", "2⇣")
--- --   ainput = string.gsub(ainput, "y", "6⇡")
--- --   ainput = string.gsub(ainput, "z", "1⇣")
--- --   ainput = string.gsub(ainput, "%.", "9⇣")
--- --   ainput = string.gsub(ainput, "/", "0⇣")
--- --   ainput = string.gsub(ainput, ";", "0-")
--- --   ainput = string.gsub(ainput, ",", "8⇣")
--- --   ainput = string.gsub(ainput, "% ", "▫")
--- --   ainput = string.gsub(ainput, "^==", "《查注音》")
--- --   return ainput
--- -- end
-
--- function array30_nil_filter(input, env)
---   for cand in input:iter() do
---     if (string.find(cand.text, '^⎔%d$' )) then
---       -- local cccc = string.gsub(cand.text, "^⎔2$", "⎔")
---       -- cand.text = '⎔'
---       -- cand:get_genuine().text = '@'
---       -- cand:get_genuine().comment = cand.comment .. "⎔"
--- --[[
---       欲定義的 translator 包含三個輸入參數：
---       - input: 待翻譯的字符串
---       - seg: 包含 `start` 和 `_end` 兩個屬性，分別表示當前串在輸入框中的起始和結束位置
---       - env: 可選參數，表示 translator 所處的環境
--- --]]
---       -- yield(Candidate("date", seg.start, seg._end, "⎔" , "〔日期〕"))
---       -- yield(Candidate("date", seg.start, seg._end, string.gsub(cand.text, "^⎔2$", "⎔") , "〔日期〕"))
--- --[[
---       -- local commit = env.engine.context:get_commit_text()  -- 原版樣式
---       -- local text = cand.text  -- 原版樣式
---       -- yield(Candidate("cap", 0, string.len(commit) , text, cand.comment))  -- 原版樣式
--- --]]
---       -- local array30_nil_preedit = cand:get_genuine().preedit  -- 效用同下，獲取原 preedit
---       local array30_preedit = cand.preedit  -- 轉換後輸入碼，如：ㄅㄆㄇㄈ、1-2⇡9⇡
---       local array30_input = env.engine.context.input  -- 原始未轉換輸入碼
---       local array30_nil_cand = Candidate("array30nil", 0, string.len(array30_input) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
---       -- local array30_nil_cand = Candidate("array30nil", 0, string.len(commit) , "", "⎔")  -- 選擇空碼"⎔"效果為卡住，但 preedit 顯示會有問題
---       array30_nil_cand.preedit = array30_preedit
---       -- array30_nil_cand.preedit = xform_array30_input(array30_input)  -- 使用 gsub 函數轉換，上列為不使用 gsub 轉換更精簡寫法
---       yield(array30_nil_cand)
---     else
---       yield(cand)
---     end
---   end
---   -- return nil
+--- @@ array30_nil_filter
+--[[
+（onion-array30）
+後來移至「=」「=」反查用。
+行列30空碼'⎔'轉成不輸出任何符號，符合原生
+--]]
+-- -- preedit_format 格式轉寫
+-- local function xform_array30_input(ainput)
+--   if ainput == "" then return "" end
+--   ainput = string.gsub(ainput, "a", "1-")
+--   ainput = string.gsub(ainput, "b", "5⇣")
+--   ainput = string.gsub(ainput, "c", "3⇣")
+--   ainput = string.gsub(ainput, "d", "3-")
+--   ainput = string.gsub(ainput, "e", "3⇡")
+--   ainput = string.gsub(ainput, "f", "4-")
+--   ainput = string.gsub(ainput, "g", "5-")
+--   ainput = string.gsub(ainput, "h", "6-")
+--   ainput = string.gsub(ainput, "i", "8⇡")
+--   ainput = string.gsub(ainput, "j", "7-")
+--   ainput = string.gsub(ainput, "k", "8-")
+--   ainput = string.gsub(ainput, "l", "9-")
+--   ainput = string.gsub(ainput, "m", "7⇣")
+--   ainput = string.gsub(ainput, "n", "6⇣")
+--   ainput = string.gsub(ainput, "o", "9⇡")
+--   ainput = string.gsub(ainput, "p", "0⇡")
+--   ainput = string.gsub(ainput, "q", "1⇡")
+--   ainput = string.gsub(ainput, "r", "4⇡")
+--   ainput = string.gsub(ainput, "s", "2-")
+--   ainput = string.gsub(ainput, "t", "5⇡")
+--   ainput = string.gsub(ainput, "u", "7⇡")
+--   ainput = string.gsub(ainput, "v", "4⇣")
+--   ainput = string.gsub(ainput, "w", "2⇡")
+--   ainput = string.gsub(ainput, "x", "2⇣")
+--   ainput = string.gsub(ainput, "y", "6⇡")
+--   ainput = string.gsub(ainput, "z", "1⇣")
+--   ainput = string.gsub(ainput, "%.", "9⇣")
+--   ainput = string.gsub(ainput, "/", "0⇣")
+--   ainput = string.gsub(ainput, ";", "0-")
+--   ainput = string.gsub(ainput, ",", "8⇣")
+--   ainput = string.gsub(ainput, "% ", "▫")
+--   ainput = string.gsub(ainput, "^==", "《查注音》")
+--   return ainput
 -- end
+
+function array30_nil_filter(input, env)
+  for cand in input:iter() do
+    if (string.find(cand.text, '^⎔%d$' )) then
+      -- local cccc = string.gsub(cand.text, "^⎔2$", "⎔")
+      -- cand.text = '⎔'
+      -- cand:get_genuine().text = '@'
+      -- cand:get_genuine().comment = cand.comment .. "⎔"
+--[[
+      欲定義的 translator 包含三個輸入參數：
+      - input: 待翻譯的字符串
+      - seg: 包含 `start` 和 `_end` 兩個屬性，分別表示當前串在輸入框中的起始和結束位置
+      - env: 可選參數，表示 translator 所處的環境
+--]]
+      -- yield(Candidate("date", seg.start, seg._end, "⎔" , "〔日期〕"))
+      -- yield(Candidate("date", seg.start, seg._end, string.gsub(cand.text, "^⎔2$", "⎔") , "〔日期〕"))
+--[[
+      -- local commit = env.engine.context:get_commit_text()  -- 原版樣式
+      -- local text = cand.text  -- 原版樣式
+      -- yield(Candidate("cap", 0, string.len(commit) , text, cand.comment))  -- 原版樣式
+--]]
+      -- local array30_nil_preedit = cand:get_genuine().preedit  -- 效用同下，獲取原 preedit
+      local array30_preedit = cand.preedit  -- 轉換後輸入碼，如：ㄅㄆㄇㄈ、1-2⇡9⇡
+      local array30_input = env.engine.context.input  -- 原始未轉換輸入碼
+      local array30_nil_cand = Candidate("array30nil", 0, string.len(array30_input) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
+      -- local array30_nil_cand = Candidate("array30nil", 0, string.len(commit) , "", "⎔")  -- 選擇空碼"⎔"效果為卡住，但 preedit 顯示會有問題
+      array30_nil_cand.preedit = array30_preedit
+      -- array30_nil_cand.preedit = xform_array30_input(array30_input)  -- 使用 gsub 函數轉換，上列為不使用 gsub 轉換更精簡寫法
+      yield(array30_nil_cand)
+    else
+      yield(cand)
+    end
+  end
+  -- return nil
+end
 
 
 
 
 --- @@ mix30_nil_comment_filter
 --[[
-（onion-array30）
 合併 array30_nil_filter 和 array30_comment_filter，兩個 lua filter 太耗效能。
 --]]
-function mix30_nil_comment_filter(input, env)
-  local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
-  local array30_input = env.engine.context.input  -- 原始未轉換輸入碼
-  if (not s_c_f_p_s) or (string.find(array30_input, "`" )) then
-    for cand in input:iter() do
-      local array30_preedit = cand.preedit  -- 轉換後輸入碼，如：ㄅㄆㄇㄈ、1-2⇡9⇡
-      local array30_nil_cand = Candidate("array30nil", 0, string.len(array30_input) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
-      if (string.find(cand.text, '^⎔%d$' )) then
-        array30_nil_cand.preedit = array30_preedit
-        yield(array30_nil_cand)
-      else
-        yield(cand)
-      end
-    end
-  else
-    for cand in input:iter() do
-      local array30_preedit = cand.preedit  -- 轉換後輸入碼，如：ㄅㄆㄇㄈ、1-2⇡9⇡
-      local array30_nil_cand = Candidate("array30nil", 0, string.len(array30_input) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
-      if (string.find(cand.text, '^⎔%d$' )) then
-        array30_nil_cand.preedit = array30_preedit
-        yield(array30_nil_cand)
-      else
-        cand:get_genuine().comment = ""
-        yield(cand)
-      end
-    end
-  end
-end
+-- function mix30_nil_comment_filter(input, env)
+--   local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
+--   local array30_input = env.engine.context.input  -- 原始未轉換輸入碼
+--   if (not s_c_f_p_s) or (string.find(array30_input, "`" )) then
+--     for cand in input:iter() do
+--       local array30_preedit = cand.preedit  -- 轉換後輸入碼，如：ㄅㄆㄇㄈ、1-2⇡9⇡
+--       local array30_nil_cand = Candidate("array30nil", 0, string.len(array30_input) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
+--       if (string.find(cand.text, '^⎔%d$' )) then
+--         array30_nil_cand.preedit = array30_preedit
+--         yield(array30_nil_cand)
+--       else
+--         yield(cand)
+--       end
+--     end
+--   else
+--     for cand in input:iter() do
+--       local array30_preedit = cand.preedit  -- 轉換後輸入碼，如：ㄅㄆㄇㄈ、1-2⇡9⇡
+--       local array30_nil_cand = Candidate("array30nil", 0, string.len(array30_input) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
+--       if (string.find(cand.text, '^⎔%d$' )) then
+--         array30_nil_cand.preedit = array30_preedit
+--         yield(array30_nil_cand)
+--       else
+--         cand:get_genuine().comment = ""
+--         yield(cand)
+--       end
+--     end
+--   end
+-- end
 
 
 
@@ -641,7 +643,7 @@ end
 function mix_cf2_cfp_filter(input, env)
   local c_f2_s = env.engine.context:get_option("zh_tw")
   local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
-  local find_prefix = env.engine.context.input
+  -- local find_prefix = env.engine.context.input
   -- local pun1 = string.find(find_prefix, "^'/" )
   -- local pun2 = string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )
   -- local pun3 = string.find(find_prefix, "[]\\[]+$" )
@@ -684,7 +686,7 @@ function mix_cf2_cfp_smf_filter(input, env)
   local c_f2_s = env.engine.context:get_option("zh_tw")
   local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
   local b_k = env.engine.context:get_option("back_mark")
-  local find_prefix = env.engine.context.input
+  -- local find_prefix = env.engine.context.input
   -- local pun1 = string.find(find_prefix, "^'/" )
   -- local pun2 = string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )
   -- local pun3 = string.find(find_prefix, "[]\\[]+$" )
@@ -745,31 +747,96 @@ end
 
 
 
---- @@ array30_spaceup_filter
+-- --- @@ array30_spaceup_filter
+-- --[[
+-- 行列30開關一二碼按空格後，是否直上或可能有選單。
+-- --]]
+-- function array30_spaceup_filter(input, env)
+--   local s_up = env.engine.context:get_option("1_2_straight_up")
+--   local find_prefix = env.engine.context.input
+--   if (s_up) then
+--     for cand in input:iter() do
+--       if (string.find(find_prefix, "^[a-z,./;][a-z,./;]? $" )) and (not string.find(cand.comment, '▪' )) then
+--         yield(cand)
+--       elseif (string.find(find_prefix, "^[a-z.,/;][a-z.,/;]?[a-z.,/;']?[a-z.,/;']?[i']?$" )) or (string.find(find_prefix, "^a[k,] $" )) or (string.find(find_prefix, "^lr $" )) or (string.find(find_prefix, "^ol $" )) or (string.find(find_prefix, "^qk $" )) or (string.find(find_prefix, "^%.b $" )) or (string.find(find_prefix, "^/%. $" )) or (string.find(find_prefix, "^pe $" )) then
+--         yield(cand)
+--       elseif (string.find(find_prefix, "^sf $" )) and (string.find(cand.text, '毋' )) then
+--         yield(cand)
+--       elseif (string.find(find_prefix, "^lb $" )) and (string.find(cand.text, '及' )) then
+--         yield(cand)
+--       -- elseif (string.find(find_prefix, "`.*$" )) or (string.find(find_prefix, "^w[0-9]$" ))  or (string.find(find_prefix, "^[a-z][-_.0-9a-z]*@.*$" )) or (string.find(find_prefix, "^(www[.]|https?:|ftp:|mailto:|file:).*$" )) then
+--       --   yield(cand)
+--       end
+--     end
+--   elseif (not s_up) then
+--     for cand in input:iter() do
+--       yield(cand)
+--     end
+--   end
+-- end
+
+
+
+
+--- @@ mix30_nil_comment_up_filter
 --[[
 （onion-array30）
-行列30開關一二碼按空格後，是否直上或可能有選單。
+合併 array30_nil_filter 和 array30_comment_filter 和 array30_spaceup_filter，三個 lua filter 太耗效能。
 --]]
-function array30_spaceup_filter(input, env)
+function mix30_nil_comment_up_filter(input, env)
+  local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
   local s_up = env.engine.context:get_option("1_2_straight_up")
-  local find_prefix = env.engine.context.input
-  if (s_up) then
+  local find_prefix = env.engine.context.input  -- 原始未轉換輸入碼
+  if (not s_c_f_p_s) or (string.find(find_prefix, "`" )) then
     for cand in input:iter() do
-      if (string.find(find_prefix, "^[a-z,./;][a-z,./;]? $" )) and (not string.find(cand.comment, '▪' )) then
-        yield(cand)
-      elseif (string.find(find_prefix, "^[a-z.,/;][a-z.,/;]?[a-z.,/;']?[a-z.,/;']?[i']?$" )) or (string.find(find_prefix, "^a[k,] $" )) or (string.find(find_prefix, "^lr $" )) or (string.find(find_prefix, "^ol $" )) or (string.find(find_prefix, "^qk $" )) or (string.find(find_prefix, "^%.b $" )) or (string.find(find_prefix, "^/%. $" )) or (string.find(find_prefix, "^pe $" )) then
-        yield(cand)
-      elseif (string.find(find_prefix, "^sf $" )) and (string.find(cand.text, '毋' )) then
-        yield(cand)
-      elseif (string.find(find_prefix, "^lb $" )) and (string.find(cand.text, '及' )) then
-        yield(cand)
-      -- elseif (string.find(find_prefix, "`.*$" )) or (string.find(find_prefix, "^w[0-9]$" ))  or (string.find(find_prefix, "^[a-z][-_.0-9a-z]*@.*$" )) or (string.find(find_prefix, "^(www[.]|https?:|ftp:|mailto:|file:).*$" )) then
-      --   yield(cand)
+      local array30_preedit = cand.preedit  -- 轉換後輸入碼，如：ㄅㄆㄇㄈ、1-2⇡9⇡
+      local array30_nil_cand = Candidate("array30nil", 0, string.len(find_prefix) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
+      if (string.find(cand.text, '^⎔%d$' )) then
+        array30_nil_cand.preedit = array30_preedit
+        yield(array30_nil_cand)
+      else
+        if (s_up) then
+          if (string.find(find_prefix, "^[a-z,./;][a-z,./;]? $" )) and (not string.find(cand.comment, '▪' )) then
+            yield(cand)
+          elseif (string.find(find_prefix, "^[a-z.,/;][a-z.,/;]?[a-z.,/;']?[a-z.,/;']?[i']?$" )) or (string.find(find_prefix, "^a[k,] $" )) or (string.find(find_prefix, "^lr $" )) or (string.find(find_prefix, "^ol $" )) or (string.find(find_prefix, "^qk $" )) or (string.find(find_prefix, "^%.b $" )) or (string.find(find_prefix, "^/%. $" )) or (string.find(find_prefix, "^pe $" )) then
+            yield(cand)
+          elseif (string.find(find_prefix, "^sf $" )) and (string.find(cand.text, '毋' )) then
+            yield(cand)
+          elseif (string.find(find_prefix, "^lb $" )) and (string.find(cand.text, '及' )) then
+            yield(cand)
+          -- elseif (string.find(find_prefix, "`.*$" )) or (string.find(find_prefix, "^w[0-9]$" ))  or (string.find(find_prefix, "^[a-z][-_.0-9a-z]*@.*$" )) or (string.find(find_prefix, "^(www[.]|https?:|ftp:|mailto:|file:).*$" )) then
+          --   yield(cand)
+          end
+        elseif (not s_up) then
+          yield(cand)
+        end
       end
     end
-  elseif (not s_up) then
+  else
     for cand in input:iter() do
-      yield(cand)
+      local array30_preedit = cand.preedit  -- 轉換後輸入碼，如：ㄅㄆㄇㄈ、1-2⇡9⇡
+      local array30_nil_cand = Candidate("array30nil", 0, string.len(find_prefix) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
+      if (string.find(cand.text, '^⎔%d$' )) then
+        array30_nil_cand.preedit = array30_preedit
+        yield(array30_nil_cand)
+      else
+        cand:get_genuine().comment = ""
+        if (s_up) then
+          if (string.find(find_prefix, "^(==)?[a-z,./;][a-z,./;]? $" )) and (not string.find(cand.comment, '▪' )) then
+            yield(cand)
+          elseif (string.find(find_prefix, "^(==)?[a-z.,/;][a-z.,/;]?[a-z.,/;']?[a-z.,/;']?[i']?$" )) or (string.find(find_prefix, "^a[k,] $" )) or (string.find(find_prefix, "^lr $" )) or (string.find(find_prefix, "^ol $" )) or (string.find(find_prefix, "^qk $" )) or (string.find(find_prefix, "^%.b $" )) or (string.find(find_prefix, "^/%. $" )) or (string.find(find_prefix, "^pe $" )) then
+            yield(cand)
+          elseif (string.find(find_prefix, "^sf $" )) and (string.find(cand.text, '毋' )) then
+            yield(cand)
+          elseif (string.find(find_prefix, "^lb $" )) and (string.find(cand.text, '及' )) then
+            yield(cand)
+          -- elseif (string.find(find_prefix, "`.*$" )) or (string.find(find_prefix, "^w[0-9]$" ))  or (string.find(find_prefix, "^[a-z][-_.0-9a-z]*@.*$" )) or (string.find(find_prefix, "^(www[.]|https?:|ftp:|mailto:|file:).*$" )) then
+          --   yield(cand)
+          end
+        elseif (not s_up) then
+            yield(cand)
+        end
+      end
     end
   end
 end
@@ -1239,11 +1306,12 @@ function email_url_translator(input, seg)
   local url2_in = string.match(input, "^(ftp:.*)$")
   local url3_in = string.match(input, "^(mailto:.*)$")
   local url4_in = string.match(input, "^(file:.*)$")
-  if (email_in~=nil) then
-    yield(Candidate("englishtype", seg.start, seg._end, input , "〔e-mail〕"))
-    return
-  elseif (url1_in~=nil) or (url2_in~=nil) or (url3_in~=nil) or (url4_in~=nil) then
+  if (url1_in~=nil) or (url2_in~=nil) or (url3_in~=nil) or (url4_in~=nil) then
     yield(Candidate("englishtype", seg.start, seg._end, input , "〔URL〕"))
+    return
+  end
+  if (email_in~=nil) then
+    yield(Candidate("englishtype", seg.start, seg._end, email_in , "〔e-mail〕"))
     return
   end
 end
@@ -1268,7 +1336,7 @@ function email_urlw_translator(input, seg)
     return
   end
   if (email_in~=nil) then
-    yield(Candidate("englishtype", seg.start, seg._end, input , "〔e-mail〕"))
+    yield(Candidate("englishtype", seg.start, seg._end, email_in , "〔e-mail〕"))
     return
   end
 end
