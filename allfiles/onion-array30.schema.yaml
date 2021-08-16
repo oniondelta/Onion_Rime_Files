@@ -104,7 +104,7 @@ speller:
   delimiter: "|"
   use_space: true
   auto_select: true
-  auto_select_pattern: '^[a-z,./;] $|^[a-z,./;]{2} $' #'^[wtasfhlxv] $|^[a-z,./;]{2} $' #|[a-z,./;]{3} |[a-z,./;]{4} |[a-z,./;]{4}i ' #三、四、五碼會有非獨碼，故用 Lua 實現空白鍵直上。
+  auto_select_pattern: '^[a-z,./;]{1,2} $' #'^[wtasfhlxv] $|^[a-z,./;]{2} $' #|[a-z,./;]{3} |[a-z,./;]{4} |[a-z,./;]{4}i ' #三、四、五碼會有非獨碼，故用 Lua 實現空白鍵直上。
   algebra:
     - xform/@@/ /
     - xform/@/ /
