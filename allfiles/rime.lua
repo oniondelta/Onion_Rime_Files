@@ -357,12 +357,12 @@ end
 --]]
 local ocmdb = ReverseDb("build/symbols-mark.reverse.bin")
 
--- local function xform_mark(inp)
---   if inp == "" then return "" end
---     inp = string.gsub(inp, "^(〔.+〕)(〔.+〕)$", "%1")
---     inp = string.gsub(inp, "，", ", ")
---   return inp
--- end
+local function xform_mark(inp)
+  if inp == "" then return "" end
+    -- inp = string.gsub(inp, "^(〔.+〕)(〔.+〕)$", "%1")
+    inp = string.gsub(inp, "，", ", ")
+  return inp
+end
 
 -- function symbols_mark_filter(input, env)
 --   local b_k = env.engine.context:get_option("back_mark")
@@ -696,14 +696,14 @@ function mix_cf2_cfp_smf_filter(input, env)
     for cand in input:iter() do
       if (not string.find(cand.text, '᰼᰼' )) and (not s_c_f_p_s) then
       -- if (not string.find(cand.text, '᰼᰼' )) and (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
-        -- cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
-        cand:get_genuine().comment = cand.comment .. ocmdb:lookup(cand.text)
+        cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
+        -- cand:get_genuine().comment = cand.comment .. ocmdb:lookup(cand.text)
         yield(cand)
       elseif (not string.find(cand.text, '᰼᰼' )) and (s_c_f_p_s) then
       -- elseif (not string.find(cand.text, '᰼᰼' )) and (s_c_f_p_s) and (not pun1) and (not pun2) and (not pun3) and (not pun4) then
         cand:get_genuine().comment = ""
-        -- cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
-        cand:get_genuine().comment = cand.comment .. ocmdb:lookup(cand.text)
+        cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
+        -- cand:get_genuine().comment = cand.comment .. ocmdb:lookup(cand.text)
         yield(cand)
       end
     end
@@ -711,15 +711,15 @@ function mix_cf2_cfp_smf_filter(input, env)
     if (not s_c_f_p_s) then
     -- if (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
       for cand in input:iter() do
-        -- cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
-        cand:get_genuine().comment = cand.comment .. ocmdb:lookup(cand.text)
+        cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
+        -- cand:get_genuine().comment = cand.comment .. ocmdb:lookup(cand.text)
         yield(cand)
       end
     else
       for cand in input:iter() do
         cand:get_genuine().comment = ""
-        -- cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
-        cand:get_genuine().comment = cand.comment .. ocmdb:lookup(cand.text)
+        cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
+        -- cand:get_genuine().comment = cand.comment .. ocmdb:lookup(cand.text)
         yield(cand)
       end
     end
