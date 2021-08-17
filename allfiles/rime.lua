@@ -597,14 +597,24 @@ function mix_cf2_miss_filter(input, env)
   local addcomment2 = string.find(p_key, '[][]$')
   if (c_f2_s) then
     for cand in input:iter() do
-      if (not string.find(cand.text, '᰼᰼' )) and (not addcomment1) and (not addcomment2) then
+      -- local dnch = string.find(cand.text, '᰼᰼' )
+      -- local dotend = string.find(cand.text, '。')
+      -- local bracket1 = string.find(cand.text, '〔')
+      -- local bracket2 = string.find(cand.text, '〕')
+      -- if (not dnch) and (not addcomment1) and (not addcomment2) then
       -- if (not string.find(cand.text, '.*᰼᰼.*' )) then
+      if (not string.find(cand.text, '᰼᰼' )) and (not addcomment1) and (not addcomment2) then
         yield(cand)
-      elseif (not string.find(cand.text, '᰼᰼' )) and (addcomment1) or (addcomment2) then
-        if (cand.text == '。') then
+      elseif (not dnch) and (addcomment1) or (addcomment2) then
+      -- elseif (not string.find(cand.text, '᰼᰼' )) and (addcomment1) or (addcomment2) then
+        -- if (dotend) then
+        -- if (cand.text == '。') then
+        if string.find(cand.text, '。') then
           cand:get_genuine().comment = "〔句點〕"
           yield(cand)
-        elseif (cand.text == '〔') or (cand.text == '〕') then
+        -- elseif (bracket1) or (bracket2) then
+        -- elseif (cand.text == '〔') or (cand.text == '〕') then
+        elseif string.find(cand.text, '〔') or string.find(cand.text, '〕') then
           cand:get_genuine().comment = "〔六角括號〕"
           yield(cand)
         else
@@ -615,10 +625,18 @@ function mix_cf2_miss_filter(input, env)
   else
     if (addcomment1) or (addcomment2) then
       for cand in input:iter() do
-        if (cand.text == '。') then
+        -- local dnch = string.find(cand.text, '᰼᰼' )
+        -- local dotend = string.find(cand.text, '。')
+        -- local bracket1 = string.find(cand.text, '〔')
+        -- local bracket2 = string.find(cand.text, '〕')
+        -- if (dotend) then
+        -- if (cand.text == '。') then
+        if string.find(cand.text, '。') then
           cand:get_genuine().comment = "〔句點〕"
           yield(cand)
-        elseif (cand.text == '〔') or (cand.text == '〕') then
+        -- elseif (bracket1) or (bracket2) then
+        -- elseif (cand.text == '〔') or (cand.text == '〕') then
+        elseif string.find(cand.text, '〔') or string.find(cand.text, '〕') then
           cand:get_genuine().comment = "〔六角括號〕"
           yield(cand)
         else
@@ -1326,25 +1344,6 @@ function email_url_translator(input, seg)
     return
   end
 end
-
--- function email_translator(input, seg)
---   local email_in = string.match(input, "^([a-z][-_.0-9a-z]*@.*)$")
---   if (email_in~=nil) then
---     yield(Candidate("englishtype", seg.start, seg._end, input , "〔e-mail〕"))
---     return
---   end
--- end
-
--- function url_translator(input, seg)
---   local url1_in = string.match(input, "^(https?:.*)$")
---   local url2_in = string.match(input, "^(ftp:.*)$")
---   local url3_in = string.match(input, "^(mailto:.*)$")
---   local url4_in = string.match(input, "^(file:.*)$")
---   if (url1_in~=nil) or (url2_in~=nil) or (url3_in~=nil) or (url4_in~=nil) then
---     yield(Candidate("englishtype", seg.start, seg._end, input , "〔URL〕"))
---     return
---   end
--- end
 
 
 
