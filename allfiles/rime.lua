@@ -593,8 +593,8 @@ end
 function mix_cf2_miss_filter(input, env)
   local c_f2_s = env.engine.context:get_option("zh_tw")
   local p_key = env.engine.context.input
-  local addcomment1 = string.match(p_key, '=%.$')
-  local addcomment2 = string.match(p_key, '[][]$')
+  local addcomment1 = string.find(p_key, '=%.$')
+  local addcomment2 = string.find(p_key, '[][]$')
   if (c_f2_s) then
     for cand in input:iter() do
       if (not string.find(cand.text, '᰼᰼' )) and (not addcomment1) and (not addcomment2) then
@@ -1326,6 +1326,25 @@ function email_url_translator(input, seg)
     return
   end
 end
+
+-- function email_translator(input, seg)
+--   local email_in = string.match(input, "^([a-z][-_.0-9a-z]*@.*)$")
+--   if (email_in~=nil) then
+--     yield(Candidate("englishtype", seg.start, seg._end, input , "〔e-mail〕"))
+--     return
+--   end
+-- end
+
+-- function url_translator(input, seg)
+--   local url1_in = string.match(input, "^(https?:.*)$")
+--   local url2_in = string.match(input, "^(ftp:.*)$")
+--   local url3_in = string.match(input, "^(mailto:.*)$")
+--   local url4_in = string.match(input, "^(file:.*)$")
+--   if (url1_in~=nil) or (url2_in~=nil) or (url3_in~=nil) or (url4_in~=nil) then
+--     yield(Candidate("englishtype", seg.start, seg._end, input , "〔URL〕"))
+--     return
+--   end
+-- end
 
 
 
