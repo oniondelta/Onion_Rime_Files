@@ -43,6 +43,7 @@
 #     尾綴「@」：空格，直出字
 #     尾綴「@~」：空格，但非首選
 #     尾綴「@@」：空格，為首選，但含有非首選的空格編碼，功能需求，特此標註
+#     前面「#」為重碼，為將來比對方便？故先只遮屏。
 ---
 name: onion-array30-generally
 version: "202107"
@@ -82029,7 +82030,7 @@ use_preset_vocabulary: false
 𪲬	yjd,i
 𪲬	ajdii
 𪲬	ajd,i
-𪲬	yjdii
+#𪲬	yjdii
 #𪲬	yjd,i
 𪲭	vhtsi
 𪲮	vnxhi
@@ -83962,7 +83963,7 @@ use_preset_vocabulary: false
 𫍜	yrxi
 𫍝	yqbi
 𫍞	ylii
-𧦧	yogsi
+#𧦧	yogsi
 #𧦧	yogsi
 𫍠	ymgsi
 𫍡	ynqi
