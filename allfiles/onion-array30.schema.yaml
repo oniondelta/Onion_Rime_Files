@@ -193,7 +193,7 @@ translator:
     - xform|\,|8⇣|
     - xform/ /▫/
     # - xform/\|/  /
-  comment_format: &comment_format
+  comment_format:
     - 'xform|^.{100}.+||'
     - xform/a/1-/
     - xform/b/5⇣/
@@ -236,7 +236,8 @@ array30_reverse_lookup:
   tags: [ abc ]
   overwrite_comment: false
   dictionary: onion-array30.extended
-  comment_format: *comment_format
+  comment_format:
+    __include: translator/comment_format
 
 
 ##### 掛接行列30符號 #####（可用 symbols 更簡單實現，但沒有開頭提示）
@@ -273,7 +274,8 @@ array30-zy_reverse_lookup:
   tags: [ reverse2_lookup ]
   overwrite_comment: false
   dictionary: onion-array30.extended
-  comment_format: *comment_format
+  comment_format:
+    __include: translator/comment_format
 
 
 ##### 使用行列30反查注音碼 #####
