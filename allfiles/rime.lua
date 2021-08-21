@@ -822,6 +822,8 @@ function mix30_nil_comment_up_filter(input, env)
         if (s_up) then
           if (string.find(find_prefix, "^[a-z,./;][a-z,./;]? $" )) and (not string.find(cand.comment, '▪' )) then
             yield(cand)
+          -- elseif (string.find(find_prefix, "^www%..*$")) then
+          --   yield(cand)
           elseif (string.find(find_prefix, "^[a-z.,/;][a-z.,/;]?[a-z.,/;']?[a-z.,/;']?[i']?$" )) or (string.find(find_prefix, "^a[k,] $" )) or (string.find(find_prefix, "^lr $" )) or (string.find(find_prefix, "^ol $" )) or (string.find(find_prefix, "^qk $" )) or (string.find(find_prefix, "^%.b $" )) or (string.find(find_prefix, "^/%. $" )) or (string.find(find_prefix, "^pe $" )) then
             yield(cand)
           elseif (string.find(find_prefix, "^sf $" )) and (string.find(cand.text, '毋' )) then
@@ -849,6 +851,8 @@ function mix30_nil_comment_up_filter(input, env)
           if (string.find(find_prefix, "^[a-z,./;][a-z,./;]? $" )) and (not string.find(cand.comment, '▪' )) then
             cand:get_genuine().comment = ""
             yield(cand)
+          -- elseif (string.find(find_prefix, "^www%..*$")) then
+          --   yield(cand)
           elseif (string.find(find_prefix, "^[a-z.,/;][a-z.,/;]?[a-z.,/;']?[a-z.,/;']?[i']?$" )) or (string.find(find_prefix, "^a[k,] $" )) or (string.find(find_prefix, "^lr $" )) or (string.find(find_prefix, "^ol $" )) or (string.find(find_prefix, "^qk $" )) or (string.find(find_prefix, "^%.b $" )) or (string.find(find_prefix, "^/%. $" )) or (string.find(find_prefix, "^pe $" )) then
             cand:get_genuine().comment = ""
             yield(cand)
@@ -993,7 +997,8 @@ function array30up_mix(key, env)
   local array_s_orig = context:get_commit_text()
   local array_o_input = context.input
   if (key:repr() == "space") and (context:has_menu()) then
-    if (string.find(array_o_input, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(array_o_input, "^[=][=][a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(array_o_input, "`.+$")) or (string.find(array_o_input, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(array_o_input, "^https?:.*$")) or (string.find(array_o_input, "^ftp:.*$")) or (string.find(array_o_input, "^mailto:.*$")) or (string.find(array_o_input, "^file:.*$")) or (string.find(array_o_input, "^www%..+$")) or (string.find(array_o_input, "^=[a-z0-9,.;/-]+$")) then
+    -- if (string.find(array_o_input, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(array_o_input, "^[=][=][a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(array_o_input, "`.+$")) or (string.find(array_o_input, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(array_o_input, "^https?:.*$")) or (string.find(array_o_input, "^ftp:.*$")) or (string.find(array_o_input, "^mailto:.*$")) or (string.find(array_o_input, "^file:.*$")) or (string.find(array_o_input, "^www%..+$")) or (string.find(array_o_input, "^=[a-z0-9,.;/-]+$")) then
+    if (string.find(array_o_input, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(array_o_input, "^[=][=][a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(array_o_input, "`.+$")) or (string.find(array_o_input, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(array_o_input, "^https?:.*$")) or (string.find(array_o_input, "^ftp:.*$")) or (string.find(array_o_input, "^mailto:.*$")) or (string.find(array_o_input, "^file:.*$")) or (string.find(array_o_input, "^=[a-z0-9,.;/-]+$")) then
       engine:commit_text(array_s_orig)
       context:clear()
       return 1 -- kAccepted
