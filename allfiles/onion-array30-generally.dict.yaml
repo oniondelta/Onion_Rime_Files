@@ -2,7 +2,7 @@
 # encoding: utf-8
 #######################################################################
 #                                                                     #
-#  array30.cin for OpenVanilla (v0.86), 2018-04-24                    #
+#  array30.cin for OpenVanilla (v0.93), 2021-08-03                    #
 #                                                                     #
 #  本 array30.cin 原始檔案是由霍東靈 Anthony Fok <foka@debian.org>    #
 #  利用行列科技在 porting.exe 檔內提供之 array30.txt 及 arrayhw.txt   #
@@ -35,7 +35,10 @@
 #  2015-09-16 配合行列官網釋出的特別碼版本 V201509，更新特別碼。      #
 #  2016-03-19 新增支援 CJK Ext-E，並依據行列輸入法官網發布之 CJK      #
 #             Ext-B V2016A 版對照表，修正 Ext-B 的部分鍵碼。          #
-#  2018-04-24 新增支援 CJK Ext-F。                                    #
+#  2018-04-24 新增支援 CJK Ext-F。(0.86)                              #
+#  2021-07-23 新增支援 CJK Ext-G，並補足中日韓統一表意文字非屬於      #（本碼表略）
+#             Ext-A 至 Ext-G 之部分。(0.90)                           #
+#  2021-08-03 刪除部分有重複收編的漢字。(0.91-0.93)                   #
 #######################################################################
 # 『洋蔥』製作
 #
@@ -80425,7 +80428,6 @@ use_preset_vocabulary: false
 𪜫	kgri
 𪜬	ivi
 𪜬	kavi
-#𪜬	kavi
 𪜭	kpti
 𪜮	kji
 𪜯	k;bi
@@ -80689,9 +80691,6 @@ use_preset_vocabulary: false
 𪠑	zqhhi
 𪠒	zuidi
 𪠓	zrpki
-#𪠓	zrpki
-#𪠓	zrpki
-#𪠓	zrpki
 𪠔	zlpbi
 𪠕	znkyi
 𪠖	zcazi
@@ -80795,7 +80794,6 @@ use_preset_vocabulary: false
 𪡧	;ipi
 𪡨	;b,i
 𪡩	;dz,i
-#𪡩	;dz,i
 𪡪	zaa;i
 𪡫	;r;xi
 𪡬	alp;i
@@ -81232,7 +81230,6 @@ use_preset_vocabulary: false
 𪧧	naxri
 𪧨	npabi
 𪧩	nszwi
-#𪧩	nszwi
 𪧪	ntl/i
 𪧫	nzg,i
 𪧬	napdi
@@ -81300,7 +81297,6 @@ use_preset_vocabulary: false
 𪨥	dgdsi
 𪨦	doi
 𪨦	doasi
-#𪨦	doi
 𪨧	dkqi
 𪨨	dyci
 𪨩	dqfsi
@@ -81562,7 +81558,6 @@ use_preset_vocabulary: false
 𪬏	nlvpi
 𪬐	iljni
 𪬑	nbafi
-#𪬑	nbafi
 𪬒	b.ni
 𪬓	vcani
 𪬔	namvi
@@ -82030,8 +82025,6 @@ use_preset_vocabulary: false
 𪲬	yjd,i
 𪲬	ajdii
 𪲬	ajd,i
-#𪲬	yjdii
-#𪲬	yjd,i
 𪲭	vhtsi
 𪲮	vnxhi
 𪲯	vtjfi
@@ -82092,7 +82085,6 @@ use_preset_vocabulary: false
 𪳣	vem;i
 𪳤	vo;ni
 𪳤	vofni
-#𪳤	vo;ni
 𪳥	vjpsi
 𪳦	lelvi
 𪳧	vsafi
@@ -82143,7 +82135,6 @@ use_preset_vocabulary: false
 𪴍	,y;vi
 𪴎	vnsmi
 𪴎	vnpmi
-#𪴎	vnpmi
 𪴏	vgfbi
 𪴐	vztni
 𪴑	vzapi
@@ -82360,7 +82351,6 @@ use_preset_vocabulary: false
 𪷑	cpari
 𪷒	cfldi
 𪷓	cepbi
-#𪷓	cepbi
 𪷔	csbmi
 𪷕	cee.i
 𪷖	cmz,i
@@ -82490,7 +82480,6 @@ use_preset_vocabulary: false
 𪹅	,alhi
 𪹆	,zqui
 𪹇	,dz,i
-#𪹇	,dz,i
 𪹈	,paei
 𪹉	jts,i
 𪹊	,iuei
@@ -82683,7 +82672,6 @@ use_preset_vocabulary: false
 𪻱	aradi
 𪻲	arsmi
 𪻲	arpmi
-#𪻲	arpmi
 𪻳	arffi
 𪻴	ara.i
 𪻵	arzri
@@ -82751,7 +82739,6 @@ use_preset_vocabulary: false
 𪼳	.xkzi
 𪼴	.xkki
 𪼴	.xkxi
-#𪼴	.xkki
 𪼵	zktki
 𪼶	qhtsi
 𪼷	qhari
@@ -83622,10 +83609,8 @@ use_preset_vocabulary: false
 𫈲	fctri
 𫈳	fccci
 𫈴	fbafi
-#𫈴	fbafi
 𫈵	fxjsi
 𫈶	fapxi
-#𫈶	fapxi
 𫈷	fvjqi
 𫈸	fzksi
 𫈹	fzqi
@@ -83645,9 +83630,6 @@ use_preset_vocabulary: false
 𫉇	fxtsi
 𫉈	fv;oi
 𫉉	frpki
-#𫉉	frpki
-#𫉉	frpki
-#𫉉	frpki
 𫉊	frkyi
 𫉋	farei
 𫉌	fzasi
@@ -83832,7 +83814,6 @@ use_preset_vocabulary: false
 𫋥	/,,ui
 𫋦	/rcbi
 𫋧	/nrki
-#𫋧	/nrki
 𫋨	/yv/i
 𫋩	/js,i
 𫋪	luqqi
@@ -83879,7 +83860,6 @@ use_preset_vocabulary: false
 𫌑	ykipi
 𫌒	ykxsi
 𫌓	ykpii
-#𫌓	ykpii
 𫌓	ykfii
 𫌓	ykdii
 𫌔	yktfi
@@ -83950,7 +83930,6 @@ use_preset_vocabulary: false
 𫍑	ynkyi
 𫍒	ynsmi
 𫍒	ynpmi
-#𫍒	ynpmi
 𫍓	ynici
 𫍔	yeqxi
 𫍕	ytski
@@ -83963,8 +83942,7 @@ use_preset_vocabulary: false
 𫍜	yrxi
 𫍝	yqbi
 𫍞	ylii
-#𧦧	yogsi
-#𧦧	yogsi
+𫍟	yogsi
 𫍠	ymgsi
 𫍡	ynqi
 𫍢	yaxsi
@@ -84155,7 +84133,6 @@ use_preset_vocabulary: false
 𫐆	qfzbi
 𫐇	qfjki
 𫐈	qfzhi
-#𫐈	qfzhi
 𫐉	qfibi
 𫐉	qfkbi
 𫐊	xzqfi
@@ -84492,7 +84469,6 @@ use_preset_vocabulary: false
 𫔫	ea.zi
 𫔬	alhji
 𫔭	hjafi
-#𫔭	hjafi
 𫔮	hjui
 𫔯	hjhfi
 𫔰	hjxfi
@@ -84506,7 +84482,6 @@ use_preset_vocabulary: false
 𫔸	efaji
 𫔹	hjaui
 𫔹	hjyui
-#𫔹	hjyui
 𫔺	tzi
 𫔻	ty.i
 𫔼	tpfi
@@ -84682,8 +84657,6 @@ use_preset_vocabulary: false
 𫗑	iblbi
 𫗒	ibnwi
 𫗓	ibo;i
-#𫗓	ibo;i
-#𫗓	ibo;i
 𫗔	ibazi
 𫗕	ibffi
 𫗖	ibaei
@@ -84948,7 +84921,6 @@ use_preset_vocabulary: false
 𫛂	poa,i
 𫛃	dar,i
 𫛄	ecl,i
-#𫛄	ecl,i
 𫛅	yfl,i
 𫛆	tjf,i
 𫛇	wbt,i
@@ -85101,7 +85073,6 @@ use_preset_vocabulary: false
 𫝈	kjqfi
 𫝉	itl;i
 𫝊	kaphi
-#𫝊	kaphi
 𫝋	kebii
 𫝌	evaki
 𫝍	jiei
@@ -85159,7 +85130,6 @@ use_preset_vocabulary: false
 𫝺	ojqi
 𫝻	op;i
 𫝼	obasi
-#𫝼	obasi
 𫝽	okd.i
 𫝾	ofkmi
 𫝾	ozkmi
@@ -90835,7 +90805,6 @@ use_preset_vocabulary: false
 𬫊	iklfi
 𬫋	i.abi
 𬫋	ilzbi
-#𬫋	i.abi
 𬫌	ioaai
 𬫌	ioahi
 𬫍	iafxi

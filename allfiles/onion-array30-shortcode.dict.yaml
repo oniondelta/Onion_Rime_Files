@@ -6,7 +6,7 @@
 # 『洋蔥』製作
 ---
 name: onion-array30-shortcode
-version: "202107"
+version: "202108"
 sort: original
 use_preset_vocabulary: false
 #max_phrase_length: 7
@@ -2118,20 +2118,20 @@ use_preset_vocabulary: false
 ⎔4	c,
 ⎔5	c,
 ⎔6	c,
+⎔7	c,
 淡	c,
-⎔8	c,
 ⎔9	c,
-淆	c,
+⎔0	c,
+淆	c.
 溪	c.
-⎔2	c.
 ⎔3	c.
+⎔4	c.
 淨	c.
-⎔5	c.
 ⎔6	c.
 ⎔7	c.
+⎔8	c.
 派	c.
 洛	c.
-⎔0	c.
 泗	c/
 ⎔2	c/
 ⎔3	c/
@@ -2141,8 +2141,8 @@ use_preset_vocabulary: false
 溫	c/
 ⎔8	c/
 濁	c/
-澡	c/
-⎔1	c;
+⎔0	c/
+呇	c;
 況	c;
 沖	c;
 ⎔4	c;
@@ -2151,7 +2151,7 @@ use_preset_vocabulary: false
 涓	c;
 ⎔8	c;
 ⎔9	c;
-⎔0	c;
+澡	c;
 添	ca
 光	ca
 洲	ca
