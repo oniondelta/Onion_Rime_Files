@@ -778,8 +778,8 @@ min_phrase_weight: 100
 长	zhang4	0.1%
 么	ma2	0.1%
 么	mo5	0.1%
-么	mo1	0.1%
-么	me1	0.1%
+#么	mo1	0.1%
+#么	me1	0.1%
 属	zhu3	0.1%
 涨	zhang4
 音	yin4	0.1%
@@ -887,7 +887,7 @@ min_phrase_weight: 100
 庅	me5	0.1%
 麽	mo2	0.1%
 麽	mo5	0.1%
-麽	me1	0.1%
+# 麽	me1	0.1%
 麽	ma2	0.1%
 仩	shang4	0.1%
 仩	chang2	0.1%
