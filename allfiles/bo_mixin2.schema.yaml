@@ -152,6 +152,8 @@ speller:
   delimiter: "\\"
   use_space: true
   algebra:
+##### 非正確注音（補空碼或慣用發音）轉寫 #####
+    - xform/[)(]//
 ##### 日文轉寫開始 #####
 ## 符號
     - derive|^(\!\!\!)\-$|$1ev|

@@ -156,6 +156,9 @@ speller:
   delimiter: "\\"
   use_space: true
   algebra:
+##### 非正確注音（補空碼或慣用發音）轉寫 #####
+    - xform/[)(]//
+########################################
     - xform/iu/iou/
     - xform/ui/uei/
     - xform/ong/ung/

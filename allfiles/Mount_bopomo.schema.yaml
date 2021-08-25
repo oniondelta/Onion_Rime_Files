@@ -4,7 +4,7 @@
 schema:
   schema_id: Mount_bopomo
   name: "☆注音(反查專用)☆"
-  version: "202102"
+  version: "202108"
   author:
     - Onion
   description: |
@@ -60,6 +60,9 @@ speller:
   alphabet: '1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-6347'
   delimiter: "|"
   algebra:
+##### 非正確注音（補空碼或慣用發音）轉寫 #####
+    - xform/[)(]//
+########################################
     - xform/^([a-z]*)1$/$1/ #一聲不用打空格
     - xform/iu/iou/
     - xform/ui/uei/
