@@ -240,7 +240,7 @@ jphi_lookup:
   tag: jphi_lookup
   dictionary: dif1_jp.extended
   prism: dif1_jphi
-  enable_completion: false
+  # enable_completion: false
   enable_sentence: false
   enable_user_dict: true
   suffix: ","
@@ -267,7 +267,7 @@ jpka_lookup:
   tag: jpka_lookup
   dictionary: dif1_jp.extended
   prism: dif1_jpka
-  enable_completion: false
+  # enable_completion: false
   enable_sentence: false
   enable_user_dict: true
   suffix: "."

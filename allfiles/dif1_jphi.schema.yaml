@@ -5,7 +5,7 @@
 schema:
   schema_id: dif1_jphi
   name: ✹新日語平假名_dif1✹
-  version: "202106"
+  version: "202108"
   author:
     - 『洋蔥』
   description: |
@@ -110,7 +110,7 @@ translator:
   prism: dif1_jphi
   enable_user_dict: true
   enable_sentence: false
-  enable_completion: false
+  # enable_completion: false
 #  preedit_format:
 #    - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
 #  comment_format:
