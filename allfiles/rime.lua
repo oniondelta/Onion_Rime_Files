@@ -60,6 +60,7 @@
 --      - lua_processor@s2r_e_u                   --（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（只針對 email 和 url ）
 --      - lua_processor@s2r_most                  --（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin(1,2,4)和 plus 用，精簡寫法）
 --      - lua_processor@s2r_mixin3                --（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin3 (特殊正則)專用）
+--      - lua_processor@mobile_bpmf               --（手機注音專用） 使 email_url_translator 功能按空白都能直接上屏
 --
 --      - ＊合併兩個以上函數：
 --      - lua_processor@array30up_mix             --（onion-array30） 合併 array30up 和 array30up_zy，增進效能。
@@ -1311,6 +1312,29 @@ function mix_apc_pluss(key, env)
       -- local b_orig = context:get_commit_text()
       engine:commit_text( " " )
       context:clear() 
+      return 1 -- kAccepted
+    end
+  end
+  return 2 -- kNoop
+end
+
+
+
+
+--- @@ mobile_bpmf
+--[[
+（手機注音用）
+使 email_url_translator 功能按空白都能直接上屏
+--]]
+function mobile_bpmf(key, env)
+  local engine = env.engine
+  local context = engine.context
+  local b_orig = context:get_commit_text()
+  local o_input = context.input
+  if (key:repr() == 'space') then
+    if ( string.find(o_input, "[@:]")) then
+      engine:commit_text(b_orig)
+      context:clear()
       return 1 -- kAccepted
     end
   end
