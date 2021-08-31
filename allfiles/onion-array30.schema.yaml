@@ -89,8 +89,8 @@ simplifier:
 mix30_nil_comment_up_filter:
   tags: [ abc ]
 
-array30_nil_filter:
-  tags: [ reverse3_lookup ]
+# array30_nil_filter:
+#   tags: [ reverse3_lookup ]
 
 # mix30_nil_comment_filter:
 #   tags: [ reverse3_lookup ]
