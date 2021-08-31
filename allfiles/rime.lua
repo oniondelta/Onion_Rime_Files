@@ -899,25 +899,25 @@ function endspace(key, env)
   --- accept: space_do_space when: composing
   if (key:repr() == "space") and (context:is_composing()) then
     local caret_pos_es = context.caret_pos
-    local s_orig_es = context:get_commit_text()
-    -- local s_orig = context:get_commit_composition()
-    -- local o_orig = context:commit()
-    -- local o_orig = context:get_script_text()
-    -- local o_orig = string.gsub(context:get_script_text(), " ", "a")
+    local orig_es = context:get_commit_text()
+    -- local orig_es = context:get_commit_composition()
+    -- local orig_es = context:commit()
+    -- local orig_es = context:get_script_text()
+    -- local orig_es = string.gsub(context:get_script_text(), " ", "a")
     -- 以下「含有英文字母、控制字元、空白」和「切分上屏時」不作用（用字數統計驗證是否切分）
-    if (not string.find(s_orig_es, "[%a%c%s]")) and (caret_pos_es == context.input:len()) then
-    -- if (not string.find(o_orig_es, "[%a%c%s]")) and (caret_pos_es == context.input:len()) then
-    -- if (string.find(o_orig, "[%a%c%s]")) and (caret_pos == context.input:len()) then
+    if (not string.find(orig_es, "[%a%c%s]")) and (caret_pos_es == context.input:len()) then
+    -- if (not string.find(orig_es, "[%a%c%s]")) and (caret_pos_es == context.input:len()) then
+    -- if (string.find(orig_es, "[%a%c%s]")) and (caret_pos_es == context.input:len()) then
       -- 下一句：游標位置向左一格，在本例無用，單純記錄用法
       -- context.caret_pos = caret_pos - 1
       -- 下兩句合用可使輸出句被電腦記憶
       -- engine:commit_text("a")
       -- engine:confirm_current_selection()
       -- 下一句：用冒號為精簡寫法，該句為完整寫法
-      -- engine.commit_text(engine, s_orig .. "a")
-      -- engine:commit_text(s_orig .. "a")
-      engine:commit_text(s_orig_es .. " ") --「return 1」時用
-      -- engine:commit_text(s_orig) --「return 0」「return 2」時用
+      -- engine.commit_text(engine, orig_es .. "a")
+      -- engine:commit_text(orig_es .. "a")
+      engine:commit_text(orig_es .. " ") --「return 1」時用
+      -- engine:commit_text(orig_es) --「return 0」「return 2」時用
       context:clear()
       return 1 -- kAccepted
       -- 「0」「2」「kAccepted」「kRejected」「kNoop」：直接後綴產生空白
@@ -995,20 +995,22 @@ end
 function array30up_mix(key, env)
   local engine = env.engine
   local context = engine.context
+  local input_array = context.input
+  local orig_array = context:get_commit_text()
   if (key:repr() == "space") and (context:has_menu()) then
-    local array_o_input = context.input
-    local array_s_orig = context:get_commit_text()
-    -- if (string.find(array_o_input, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(array_o_input, "^[=][=][a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(array_o_input, "`.+$")) or (string.find(array_o_input, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(array_o_input, "^https?:.*$")) or (string.find(array_o_input, "^ftp:.*$")) or (string.find(array_o_input, "^mailto:.*$")) or (string.find(array_o_input, "^file:.*$")) or (string.find(array_o_input, "^www%..+$")) or (string.find(array_o_input, "^=[a-z0-9,.;/-]+$")) then
-    if (string.find(array_o_input, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(array_o_input, "^[=][=][a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(array_o_input, "`.+$")) or (string.find(array_o_input, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(array_o_input, "^https?:.*$")) or (string.find(array_o_input, "^ftp:.*$")) or (string.find(array_o_input, "^mailto:.*$")) or (string.find(array_o_input, "^file:.*$")) or (string.find(array_o_input, "^=[a-z0-9,.;/-]+$")) then
-      engine:commit_text(array_s_orig)
+    -- local input_array = context.input
+    -- local orig_array = context:get_commit_text()
+    -- if (string.find(input_array, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(input_array, "^[=][=][a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(input_array, "`.+$")) or (string.find(input_array, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(input_array, "^https?:.*$")) or (string.find(input_array, "^ftp:.*$")) or (string.find(input_array, "^mailto:.*$")) or (string.find(input_array, "^file:.*$")) or (string.find(input_array, "^www%..+$")) or (string.find(input_array, "^=[a-z0-9,.;/-]+$")) then
+    if (string.find(input_array, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(input_array, "^[=][=][a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(input_array, "`.+$")) or (string.find(input_array, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(input_array, "^https?:.*$")) or (string.find(input_array, "^ftp:.*$")) or (string.find(input_array, "^mailto:.*$")) or (string.find(input_array, "^file:.*$")) or (string.find(input_array, "^=[a-z0-9,.;/-]+$")) then
+      engine:commit_text(orig_array)
       context:clear()
       return 1 -- kAccepted
     end
   elseif (key:repr() == "Return") and (context:has_menu()) then
-    local array_o_input = context.input
-    local array_s_orig = context:get_commit_text()
-    if (string.find(array_o_input, "^=[a-z0-9,.;/-]+$")) then
-      engine:commit_text(array_s_orig)
+    -- local input_array = context.input
+    -- local orig_array = context:get_commit_text()
+    if (string.find(input_array, "^=[a-z0-9,.;/-]+$")) then
+      engine:commit_text(orig_array)
       context:clear()
       return 1 -- kAccepted
     end
@@ -1029,16 +1031,17 @@ function ascii_punct_change(key, env)
   local context = engine.context
   local c_b_d = context:get_option("ascii_punct")
   local en_m = context:get_option("ascii_mode")
+  local orig_p23 = context:get_commit_text()
   if (c_b_d) and (not en_m) then
     if (key:repr() == 'Shift+less') then
-      local b_orig_p23 = context:get_commit_text()
-      engine:commit_text( b_orig_p23 .. ",")
+      -- local orig_p23 = context:get_commit_text()
+      engine:commit_text( orig_p23 .. "," )
       context:clear()
       return 1 -- kAccepted
     -- end
     elseif (key:repr() == 'Shift+greater') then
-      local b_orig_p23 = context:get_commit_text()
-      engine:commit_text( b_orig_p23 .. ".")
+      -- local orig_p23 = context:get_commit_text()
+      engine:commit_text( orig_p23 .. "." )
       context:clear()
       return 1 -- kAccepted
     end
@@ -1190,37 +1193,38 @@ function mix_apc_s2rm(key, env)
   local context = engine.context
   local c_b_d = context:get_option("ascii_punct")
   local en_m = context:get_option("ascii_mode")
+  local orig_124 = context:get_commit_text()
   if (c_b_d) and (not en_m) then
     if (key:repr() == 'Shift+less') then
-      local b_orig_124 = context:get_commit_text()
-      engine:commit_text( b_orig_124 .. ",")
+      -- local orig_124 = context:get_commit_text()
+      engine:commit_text( orig_124 .. "," )
       context:clear()
       return 1 -- kAccepted
     elseif (key:repr() == 'Shift+greater') then
-      local b_orig_124 = context:get_commit_text()
-      engine:commit_text( b_orig_124 .. ".")
+      -- local orig_124 = context:get_commit_text()
+      engine:commit_text( orig_124 .. "." )
       context:clear()
       return 1 -- kAccepted
     elseif (key:repr() == 'space') and (context:is_composing()) then
-      local o_input_124 = context.input
+      local input_124 = context.input
       -- if (key:repr() == 'space') and (context:has_menu()) then
-      if ( string.find(o_input_124, "[@:]") or string.find(o_input_124, "'/") or string.find(o_input_124, "=[-125890;,./]$") or string.find(o_input_124, "=[-;,./][-;,./]$") or string.find(o_input_124, "==[90]$") ) then  --or string.find(o_input_124, "==[,.]{2}$")
-      -- if ( string.find(o_input, "[@:]") or string.find(o_input, "'/") or string.find(o_input, "=[-125890;,./]$") or string.find(o_input, "=[-;,./][-;,./]$") or string.find(o_input, "==[90]$") or string.find(o_input, "==[,][,]?$") or string.find(o_input, "==[.][.]?$") ) then
-      --「全，非精簡」 if ( string.find(o_input, "[@:]") or string.find(o_input, "'/") or string.find(o_input, "=[-125890;,./]$") or string.find(o_input, "=[-][-]$") or string.find(o_input, "=[;][;]$") or string.find(o_input, "=[,][,]$") or string.find(o_input, "=[.][.]$") or string.find(o_input, "=[/][/]$") or string.find(o_input, "==[90]$") or string.find(o_input, "==[,][,]?$") or string.find(o_input, "==[.][.]?$") ) then
-        local b_orig_124 = context:get_commit_text()
-        engine:commit_text(b_orig_124)
+      if ( string.find(input_124, "[@:]") or string.find(input_124, "'/") or string.find(input_124, "=[-125890;,./]$") or string.find(input_124, "=[-;,./][-;,./]$") or string.find(input_124, "==[90]$") ) then  --or string.find(input_124, "==[,.]{2}$")
+      -- if ( string.find(input_124, "[@:]") or string.find(input_124, "'/") or string.find(input_124, "=[-125890;,./]$") or string.find(input_124, "=[-;,./][-;,./]$") or string.find(input_124, "==[90]$") or string.find(input_124, "==[,][,]?$") or string.find(input_124, "==[.][.]?$") ) then
+      --「全，非精簡」 if ( string.find(input_124, "[@:]") or string.find(input_124, "'/") or string.find(input_124, "=[-125890;,./]$") or string.find(input_124, "=[-][-]$") or string.find(input_124, "=[;][;]$") or string.find(input_124, "=[,][,]$") or string.find(input_124, "=[.][.]$") or string.find(input_124, "=[/][/]$") or string.find(input_124, "==[90]$") or string.find(input_124, "==[,][,]?$") or string.find(input_124, "==[.][.]?$") ) then
+        -- local orig_124 = context:get_commit_text()
+        engine:commit_text(orig_124)
         context:clear()
         return 1 -- kAccepted
       end
     end
   elseif (not c_b_d) and (not en_m) then
     if (key:repr() == 'space') and (context:is_composing()) then
-      local o_input_124 = context.input
-      if ( string.find(o_input_124, "[@:]") or string.find(o_input_124, "'/") or string.find(o_input_124, "=[-125890;,./]$") or string.find(o_input_124, "=[-;,./][-;,./]$") or string.find(o_input_124, "==[90]$") ) then  --or string.find(o_input_124, "==[,.]{2}$")
-      -- if ( string.find(o_input, "[@:]") or string.find(o_input, "'/") or string.find(o_input, "=[-125890;,./]$") or string.find(o_input, "=[-;,./][-;,./]$") or string.find(o_input, "==[90]$") or string.find(o_input, "==[,][,]?$") or string.find(o_input, "==[.][.]?$") ) then
-      --「全，非精簡」 if ( string.find(o_input, "[@:]") or string.find(o_input, "'/") or string.find(o_input, "=[-125890;,./]$") or string.find(o_input, "=[-][-]$") or string.find(o_input, "=[;][;]$") or string.find(o_input, "=[,][,]$") or string.find(o_input, "=[.][.]$") or string.find(o_input, "=[/][/]$") or string.find(o_input, "==[90]$") or string.find(o_input, "==[,][,]?$") or string.find(o_input, "==[.][.]?$") ) then
-        local b_orig_124 = context:get_commit_text()
-        engine:commit_text(b_orig_124)
+      local input_124 = context.input
+      if ( string.find(input_124, "[@:]") or string.find(input_124, "'/") or string.find(input_124, "=[-125890;,./]$") or string.find(input_124, "=[-;,./][-;,./]$") or string.find(input_124, "==[90]$") ) then  --or string.find(input_124, "==[,.]{2}$")
+      -- if ( string.find(input_124, "[@:]") or string.find(input_124, "'/") or string.find(input_124, "=[-125890;,./]$") or string.find(input_124, "=[-;,./][-;,./]$") or string.find(input_124, "==[90]$") or string.find(input_124, "==[,][,]?$") or string.find(input_124, "==[.][.]?$") ) then
+      --「全，非精簡」 if ( string.find(input_124, "[@:]") or string.find(input_124, "'/") or string.find(input_124, "=[-125890;,./]$") or string.find(input_124, "=[-][-]$") or string.find(input_124, "=[;][;]$") or string.find(input_124, "=[,][,]$") or string.find(input_124, "=[.][.]$") or string.find(input_124, "=[/][/]$") or string.find(input_124, "==[90]$") or string.find(input_124, "==[,][,]?$") or string.find(input_124, "==[.][.]?$") ) then
+        -- local orig_124 = context:get_commit_text()
+        engine:commit_text(orig_124)
         context:clear()
         return 1 -- kAccepted
       end
@@ -1242,37 +1246,38 @@ function mix_apc_s2rm_3(key, env)
   local context = engine.context
   local c_b_d = context:get_option("ascii_punct")
   local en_m = context:get_option("ascii_mode")
+  local orig_3 = context:get_commit_text()
   if (c_b_d) and (not en_m) then
     if (key:repr() == 'Shift+less') then
-      local b_orig_3 = context:get_commit_text()
-      engine:commit_text( b_orig_3 .. ",")
+      -- local orig_3 = context:get_commit_text()
+      engine:commit_text( orig_3 .. "," )
       context:clear()
       return 1 -- kAccepted
     elseif (key:repr() == 'Shift+greater') then
-      local b_orig_3 = context:get_commit_text()
-      engine:commit_text( b_orig_3 .. ".")
+      -- local orig_3 = context:get_commit_text()
+      engine:commit_text( orig_3 .. "." )
       context:clear()
       return 1 -- kAccepted
     elseif (key:repr() == 'space') and (context:is_composing()) then
-      local o_input_3 = context.input
-      -- if (key:repr() == 'space') and (context:has_menu()) then
-      if ( string.find(o_input_3, "[@:]") or string.find(o_input_3, "^'/[';a-z0-9./-]*$") or string.find(o_input_3, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(o_input_3, "[=][0-9]'/[';a-z0-9./-]*$") or string.find(o_input_3, "[=][][]'/[';a-z0-9./-]*$") or string.find(o_input_3, "[=][][][][]'/[';a-z0-9./-]*$") or string.find(o_input_3, "[=][-,.;=`]'/[';a-z0-9./-]*$") or string.find(o_input_3, "[=][-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(o_input_3, "=[-125890;,./]$") or string.find(o_input_3, "=[-;,./][-;,./]$") or string.find(o_input_3, "==[90]$") ) then  --or string.find(o_input_3, "==[,.]{2}$")
-      -- if ( string.find(o_input, "[@:]") or string.find(o_input, "^'/[';a-z0-9./-]*$") or string.find(o_input, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][0-9]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][][]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][][][][]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][-,.;=`]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(o_input, "=[-125890;,./]$") or string.find(o_input, "=[-;,./][-;,./]$") or string.find(o_input, "==[90]$") or string.find(o_input, "==[,][,]?$") or string.find(o_input, "==[.][.]?$") ) then
-      --「全，非精簡」 if ( string.find(o_input, "[@:]") or string.find(o_input, "^'/[';a-z0-9./-]*$") or string.find(o_input, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][0-9]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][][]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][][][][]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][-,.;=`]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(o_input, "=[-125890;,./]$") or string.find(o_input, "=[-][-]$") or string.find(o_input, "=[;][;]$") or string.find(o_input, "=[,][,]$") or string.find(o_input, "=[.][.]$") or string.find(o_input, "=[/][/]$") or string.find(o_input, "==[90]$") or string.find(o_input, "==[,][,]?$") or string.find(o_input, "==[.][.]?$") ) then
-        local b_orig_3 = context:get_commit_text()
-        engine:commit_text(b_orig_3)
+    -- if (key:repr() == 'space') and (context:has_menu()) then
+      local input_3 = context.input
+      if ( string.find(input_3, "[@:]") or string.find(input_3, "^'/[';a-z0-9./-]*$") or string.find(input_3, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][0-9]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][][]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][][][][]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][-,.;=`]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-125890;,./]$") or string.find(input_3, "=[-;,./][-;,./]$") or string.find(input_3, "==[90]$") ) then  --or string.find(input_3, "==[,.]{2}$")
+      -- if ( string.find(input_3, "[@:]") or string.find(input_3, "^'/[';a-z0-9./-]*$") or string.find(input_3, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][0-9]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][][]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][][][][]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][-,.;=`]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-125890;,./]$") or string.find(input_3, "=[-;,./][-;,./]$") or string.find(input_3, "==[90]$") or string.find(input_3, "==[,][,]?$") or string.find(input_3, "==[.][.]?$") ) then
+      --「全，非精簡」 if ( string.find(input_3, "[@:]") or string.find(input_3, "^'/[';a-z0-9./-]*$") or string.find(input_3, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][0-9]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][][]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][][][][]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][-,.;=`]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-125890;,./]$") or string.find(input_3, "=[-][-]$") or string.find(input_3, "=[;][;]$") or string.find(input_3, "=[,][,]$") or string.find(input_3, "=[.][.]$") or string.find(input_3, "=[/][/]$") or string.find(input_3, "==[90]$") or string.find(input_3, "==[,][,]?$") or string.find(input_3, "==[.][.]?$") ) then
+        -- local orig_3 = context:get_commit_text()
+        engine:commit_text(orig_3)
         context:clear()
         return 1 -- kAccepted
       end
     end
   elseif (not c_b_d) and (not en_m) then
     if (key:repr() == 'space') and (context:is_composing()) then
-      local o_input_3 = context.input
-      if ( string.find(o_input_3, "[@:]") or string.find(o_input_3, "^'/[';a-z0-9./-]*$") or string.find(o_input_3, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(o_input_3, "[=][0-9]'/[';a-z0-9./-]*$") or string.find(o_input_3, "[=][][]'/[';a-z0-9./-]*$") or string.find(o_input_3, "[=][][][][]'/[';a-z0-9./-]*$") or string.find(o_input_3, "[=][-,.;=`]'/[';a-z0-9./-]*$") or string.find(o_input_3, "[=][-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(o_input_3, "=[-125890;,./]$") or string.find(o_input_3, "=[-;,./][-;,./]$") or string.find(o_input_3, "==[90]$") ) then  --or string.find(o_input_3, "==[,.]{2}$")
-      -- if ( string.find(o_input, "[@:]") or string.find(o_input, "^'/[';a-z0-9./-]*$") or string.find(o_input, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][0-9]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][][]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][][][][]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][-,.;=`]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(o_input, "=[-125890;,./]$") or string.find(o_input, "=[-;,./][-;,./]$") or string.find(o_input, "==[90]$") or string.find(o_input, "==[,][,]?$") or string.find(o_input, "==[.][.]?$") ) then
-      --「全，非精簡」 if ( string.find(o_input, "[@:]") or string.find(o_input, "^'/[';a-z0-9./-]*$") or string.find(o_input, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][0-9]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][][]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][][][][]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][-,.;=`]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(o_input, "=[-125890;,./]$") or string.find(o_input, "=[-][-]$") or string.find(o_input, "=[;][;]$") or string.find(o_input, "=[,][,]$") or string.find(o_input, "=[.][.]$") or string.find(o_input, "=[/][/]$") or string.find(o_input, "==[90]$") or string.find(o_input, "==[,][,]?$") or string.find(o_input, "==[.][.]?$") ) then
-        local b_orig_3 = context:get_commit_text()
-        engine:commit_text(b_orig_3)
+      local input_3 = context.input
+      if ( string.find(input_3, "[@:]") or string.find(input_3, "^'/[';a-z0-9./-]*$") or string.find(input_3, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][0-9]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][][]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][][][][]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][-,.;=`]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-125890;,./]$") or string.find(input_3, "=[-;,./][-;,./]$") or string.find(input_3, "==[90]$") ) then  --or string.find(input_3, "==[,.]{2}$")
+      -- if ( string.find(input_3, "[@:]") or string.find(input_3, "^'/[';a-z0-9./-]*$") or string.find(input_3, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][0-9]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][][]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][][][][]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][-,.;=`]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-125890;,./]$") or string.find(input_3, "=[-;,./][-;,./]$") or string.find(input_3, "==[90]$") or string.find(input_3, "==[,][,]?$") or string.find(input_3, "==[.][.]?$") ) then
+      --「全，非精簡」 if ( string.find(input_3, "[@:]") or string.find(input_3, "^'/[';a-z0-9./-]*$") or string.find(input_3, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][0-9]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][][]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][][][][]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][-,.;=`]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-125890;,./]$") or string.find(input_3, "=[-][-]$") or string.find(input_3, "=[;][;]$") or string.find(input_3, "=[,][,]$") or string.find(input_3, "=[.][.]$") or string.find(input_3, "=[/][/]$") or string.find(input_3, "==[90]$") or string.find(input_3, "==[,][,]?$") or string.find(input_3, "==[.][.]?$") ) then
+        -- local orig_3 = context:get_commit_text()
+        engine:commit_text(orig_3)
         context:clear()
         return 1 -- kAccepted
       end
@@ -1296,21 +1301,22 @@ function mix_apc_pluss(key, env)
   local context = engine.context
   local c_b_d = context:get_option("ascii_punct")
   local en_m = context:get_option("ascii_mode")
+  local orig_ps = context:get_commit_text()
   if (c_b_d) and (not en_m) then
     local caret_pos_ps = context.caret_pos
     if (key:repr() == 'Shift+less') then
-      local b_orig_ps = context:get_commit_text()
-      engine:commit_text( b_orig_ps .. ",")
+      -- local orig_ps = context:get_commit_text()
+      engine:commit_text( orig_ps .. "," )
       context:clear()
       return 1 -- kAccepted
     -- end
     elseif (key:repr() == 'Shift+greater') then
-      local b_orig_ps = context:get_commit_text()
-      engine:commit_text( b_orig_ps .. ".")
+      -- local orig_ps = context:get_commit_text()
+      engine:commit_text( orig_ps .. "." )
       context:clear()
       return 1 -- kAccepted
     elseif (key:repr() == 'space') and (caret_pos_ps == 0) then
-      -- local b_orig_ps = context:get_commit_text()
+      -- local orig_ps = context:get_commit_text()
       engine:commit_text( " " )
       context:clear()
       return 1 -- kAccepted
@@ -1318,7 +1324,7 @@ function mix_apc_pluss(key, env)
   elseif (not c_b_d) and (not en_m) then
     local caret_pos_ps = context.caret_pos
     if (key:repr() == 'space') and (caret_pos_ps == 0) then
-      -- local b_orig_ps = context:get_commit_text()
+      -- local orig_ps = context:get_commit_text()
       engine:commit_text( " " )
       context:clear() 
       return 1 -- kAccepted
@@ -1339,10 +1345,10 @@ function mobile_bpmf(key, env)
   if (key:repr() == 'space') then
     -- local engine = env.engine
     -- local context = engine.context
-    local o_input_m = env.engine.context.input
-    if ( string.find(o_input_m, "[@:]")) then
-      local b_orig_m = env.engine.context:get_commit_text()
-      env.engine:commit_text(b_orig_m)
+    local input_m = env.engine.context.input
+    if ( string.find(input_m, "[@:]")) then
+      local orig_m = env.engine.context:get_commit_text()
+      env.engine:commit_text(orig_m)
       env.engine.context:clear()
       return 1 -- kAccepted
     end
