@@ -1194,6 +1194,7 @@ function mix_apc_s2rm(key, env)
   local c_b_d = context:get_option("ascii_punct")
   local en_m = context:get_option("ascii_mode")
   local orig_124 = context:get_commit_text()
+  -- local input_124 = context.input
   if (c_b_d) and (not en_m) then
     if (key:repr() == 'Shift+less') then
       -- local orig_124 = context:get_commit_text()
@@ -1206,8 +1207,8 @@ function mix_apc_s2rm(key, env)
       context:clear()
       return 1 -- kAccepted
     elseif (key:repr() == 'space') and (context:is_composing()) then
+    -- elseif (key:repr() == 'space') and (context:has_menu()) then
       local input_124 = context.input
-      -- if (key:repr() == 'space') and (context:has_menu()) then
       if ( string.find(input_124, "[@:]") or string.find(input_124, "'/") or string.find(input_124, "=[-125890;,./]$") or string.find(input_124, "=[-;,./][-;,./]$") or string.find(input_124, "==[90]$") ) then  --or string.find(input_124, "==[,.]{2}$")
       -- if ( string.find(input_124, "[@:]") or string.find(input_124, "'/") or string.find(input_124, "=[-125890;,./]$") or string.find(input_124, "=[-;,./][-;,./]$") or string.find(input_124, "==[90]$") or string.find(input_124, "==[,][,]?$") or string.find(input_124, "==[.][.]?$") ) then
       --「全，非精簡」 if ( string.find(input_124, "[@:]") or string.find(input_124, "'/") or string.find(input_124, "=[-125890;,./]$") or string.find(input_124, "=[-][-]$") or string.find(input_124, "=[;][;]$") or string.find(input_124, "=[,][,]$") or string.find(input_124, "=[.][.]$") or string.find(input_124, "=[/][/]$") or string.find(input_124, "==[90]$") or string.find(input_124, "==[,][,]?$") or string.find(input_124, "==[.][.]?$") ) then
@@ -1219,6 +1220,7 @@ function mix_apc_s2rm(key, env)
     end
   elseif (not c_b_d) and (not en_m) then
     if (key:repr() == 'space') and (context:is_composing()) then
+    -- if (key:repr() == 'space') and (context:has_menu()) then
       local input_124 = context.input
       if ( string.find(input_124, "[@:]") or string.find(input_124, "'/") or string.find(input_124, "=[-125890;,./]$") or string.find(input_124, "=[-;,./][-;,./]$") or string.find(input_124, "==[90]$") ) then  --or string.find(input_124, "==[,.]{2}$")
       -- if ( string.find(input_124, "[@:]") or string.find(input_124, "'/") or string.find(input_124, "=[-125890;,./]$") or string.find(input_124, "=[-;,./][-;,./]$") or string.find(input_124, "==[90]$") or string.find(input_124, "==[,][,]?$") or string.find(input_124, "==[.][.]?$") ) then
@@ -1247,6 +1249,7 @@ function mix_apc_s2rm_3(key, env)
   local c_b_d = context:get_option("ascii_punct")
   local en_m = context:get_option("ascii_mode")
   local orig_3 = context:get_commit_text()
+  -- local input_3 = context.input
   if (c_b_d) and (not en_m) then
     if (key:repr() == 'Shift+less') then
       -- local orig_3 = context:get_commit_text()
@@ -1259,7 +1262,7 @@ function mix_apc_s2rm_3(key, env)
       context:clear()
       return 1 -- kAccepted
     elseif (key:repr() == 'space') and (context:is_composing()) then
-    -- if (key:repr() == 'space') and (context:has_menu()) then
+    -- elseif (key:repr() == 'space') and (context:has_menu()) then
       local input_3 = context.input
       if ( string.find(input_3, "[@:]") or string.find(input_3, "^'/[';a-z0-9./-]*$") or string.find(input_3, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][0-9]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][][]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][][][][]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][-,.;=`]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-125890;,./]$") or string.find(input_3, "=[-;,./][-;,./]$") or string.find(input_3, "==[90]$") ) then  --or string.find(input_3, "==[,.]{2}$")
       -- if ( string.find(input_3, "[@:]") or string.find(input_3, "^'/[';a-z0-9./-]*$") or string.find(input_3, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][0-9]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][][]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][][][][]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][-,.;=`]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-125890;,./]$") or string.find(input_3, "=[-;,./][-;,./]$") or string.find(input_3, "==[90]$") or string.find(input_3, "==[,][,]?$") or string.find(input_3, "==[.][.]?$") ) then
@@ -1272,6 +1275,7 @@ function mix_apc_s2rm_3(key, env)
     end
   elseif (not c_b_d) and (not en_m) then
     if (key:repr() == 'space') and (context:is_composing()) then
+    -- if (key:repr() == 'space') and (context:has_menu()) then
       local input_3 = context.input
       if ( string.find(input_3, "[@:]") or string.find(input_3, "^'/[';a-z0-9./-]*$") or string.find(input_3, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][0-9]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][][]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][][][][]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][-,.;=`]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-125890;,./]$") or string.find(input_3, "=[-;,./][-;,./]$") or string.find(input_3, "==[90]$") ) then  --or string.find(input_3, "==[,.]{2}$")
       -- if ( string.find(input_3, "[@:]") or string.find(input_3, "^'/[';a-z0-9./-]*$") or string.find(input_3, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][0-9]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][][]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][][][][]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][-,.;=`]'/[';a-z0-9./-]*$") or string.find(input_3, "[=][-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-125890;,./]$") or string.find(input_3, "=[-;,./][-;,./]$") or string.find(input_3, "==[90]$") or string.find(input_3, "==[,][,]?$") or string.find(input_3, "==[.][.]?$") ) then
