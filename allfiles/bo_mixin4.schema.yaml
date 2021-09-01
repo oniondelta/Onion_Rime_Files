@@ -4,7 +4,7 @@
 schema:
   schema_id: bo_mixin4
   name: "☆注音(洋蔥mix-in版 4 )☆〔全 ˊ ˇ ˋ ˙ 〕"
-  version: "202108"
+  version: "202109"
   author:
     - 『洋蔥』
   description: |
@@ -302,7 +302,7 @@ speller:
 ##    - abbrev/^([bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR]+)\d$/$1/ #derive
 #    - abbrev/^([bpmfdtnlgkhjqxZCSrzcsiuv]).+(\d)$/$1$2/ #使得ㄎˇㄈˇ（可否）可以打的出來 #新增iuv，使得ㄧˊㄉˊ（贏得）可以打出
 #    - abbrev/^([bpmfdtnlgkhjqxZCSrzcs]).+(\d)$/$1$2/ #同上，但少了ㄧㄨㄩ
-#    - abbrev/^([bpmfdtnlgkhjqx]).+(\d)$/$1$2/ #同上，但再少了ㄓㄔㄕㄖㄗㄘㄙ
+#關#    - abbrev/^([bpmfdtnlgkhjqx]).+(\d)$/$1$2/ #同上，但再少了ㄓㄔㄕㄖㄗㄘㄙ
     - derive/^([bpmfdtnlgkhjqx]).+(\d)$/$1$2/
 ##### 注音聲韻母亂序 #####
     - derive/^([bpmfdtnlgkhjqxZCSrzcs])([iuv])/$2$1/
