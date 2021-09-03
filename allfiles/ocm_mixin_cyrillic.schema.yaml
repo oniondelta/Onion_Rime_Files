@@ -4,7 +4,7 @@
 schema:
   schema_id: ocm_mixin_cyrillic
   name: ✹西里爾字母_新_蝦米✹
-  version: "202102"
+  version: "202109"
   author:
     - 『洋蔥』
   description: |
@@ -44,13 +44,11 @@ speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz;'"
   delimiter: "\""
   algebra:
-    - "xlit|]'|AC|"
-    - xform/^;;([a-z]+)$/$1CC/ #轉換「組合字符」前雙分號到後面
-    - xform/^([a-z]+)A$/$1;/ #大寫增加尾綴「;」 ＃[;]
-    - xform/^([a-z]+)$/$1C/ #小寫尾綴「/」
-    - abbrev/^([a-z]+)([C;])$/$1/ #精簡尾綴「'」和「;」「/」
-#    - derive/^([a-z]+)([C])([C;])$/$1$2/ #精簡尾綴「;」「/」
-    - "xlit|AC|]'|"
+    - xform/^;;([a-z]+)$/$1''/ #轉換「組合字符」前雙分號到後面
+    - xform/^([a-z]+)[]]$/$1;/ #大寫增加尾綴「;」 ＃[;]
+    - xform/^([a-z]+)$/$1'/ #小寫尾綴「/」
+    - abbrev/^([a-z]+)([';])$/$1/ #精簡尾綴「'」和「;」「/」
+#    - derive/^([a-z]+)(['])([';])$/$1$2/ #精簡尾綴「;」「/」
 
 translator:
   dictionary: cyrillic.extended
