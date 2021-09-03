@@ -44,7 +44,7 @@ speller:
   alphabet: "zyxwvutsrqponmlkjihgfedcba-.;/'"
   delimiter: " "
   algebra:
-    - derive/^\|$/ /
+    - derive/^[|]$/ /
 #    - derive|^//([a-z]+)$|$1|
 #    - derive|\/|'| #特別的方案使用「'」
 #    - xform|^\/|'| #開頭大寫後面小寫，全部轉成「'」
