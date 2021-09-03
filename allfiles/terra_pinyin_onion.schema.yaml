@@ -4,7 +4,7 @@
 schema:
   schema_id: terra_pinyin_onion
   name: "★地球拼音(洋蔥mix-in版)★"
-  version: "202108"
+  version: "202109"
   author:
     - 佛振 <chen.sst@gmail.com>
     - 『洋蔥』
@@ -79,11 +79,11 @@ speller:
     - xform/[)(]//
 ##### 日語 #####
 ## 符號
-    - derive|^([eaovs][v])[,]$|$1\.|
-    - derive|^([e][e][v])[,]$|$1\.|
-    - derive|^[e][v]([,.])$|\-$1|
-    - derive|^[e][e][v]([,.])$|\-\-$1|
-    - derive|^([x][x])[,]$|$1\.|
+    - derive|^([eaovs][v]),$|$1\.|
+    - derive|^([e][e][v]),$|$1\.|
+    - derive|^[e][v]([,.])$|-$1|
+    - derive|^[e][e][v]([,.])$|--$1|
+    - derive|^([x][x]),$|$1\.|
     - derive|^[x][x]([,.])$|shime$1|
     - derive|^[x][x]([,.])$|sime$1|
     - derive|^noma([.])$|dou$1|
@@ -95,20 +95,20 @@ speller:
     - derive/^xtu([,.])$/ltu$1/
     - derive/^xtu([,.])$/xtsu$1/
     - derive/^xtu([,.])$/ltsu$1/
-    - derive/^x([aeiou])([,.])$/l$1$2/
+    - derive/^x([aeiou][,.])$/l$1/
     - derive/^x(y[auo]|wa)([,.])$/l$1$2/
     - derive/^xke([,.])$/lke$1/
     - derive/^xke([.])$/ke$1/
     - derive/^xka([,.])$/lka$1/
     - derive/^xka([.])$/ka$1/
 ## 促音+拗音
-    - derive/^ssh([auo])([,.])$/ssy$1$2/
-    - derive/^cch([auo])([,.])$/ccy$1$2/
-    - derive/^cch([auo])([,.])$/tty$1$2/
-    - derive/^jj([auo])([,.])$/zzy$1$2/ #っじゃ
-    - derive/^jj([auo])([,.])$/jjy$1$2/ #っじゃ #原字典沒有
-    - derive/^ddy([auo])([,.])$/zzy$1$2/ #っぢゃ
-    - derive/^ddy([auo])([,.])$/jj$1$2/ #っぢゃ
+    - derive/^ssh([auo][,.])$/ssy$1/
+    - derive/^cch([auo][,.])$/ccy$1/
+    - derive/^cch([auo][,.])$/tty$1/
+    - derive/^jj([auo][,.])$/zzy$1/ #っじゃ
+    - derive/^jj([auo][,.])$/jjy$1/ #っじゃ #原字典沒有
+    - derive/^ddy([auo][,.])$/zzy$1/ #っぢゃ
+    - derive/^ddy([auo][,.])$/jj$1/ #っぢゃ
 ## 促音
     - derive/^cchi([,.])$/tti$1/
     - derive/^sshi([,.])$/ssi$1/
@@ -116,13 +116,13 @@ speller:
     - derive/^ttsu([,.])$/ttu$1/
     - derive/^jji([,.])$/zzi$1/
 ## 拗音
-    - derive/^sh([auo])([,.])$/sy$1$2/
-    - derive/^ch([auo])([,.])$/cy$1$2/
-    - derive/^ch([auo])([,.])$/ty$1$2/
-    - derive/^j([auo])([,.])$/jy$1$2/
-    - derive/^j([auo])([,.])$/zy$1$2/
-    - derive/^dy([auo])([,.])$/j$1$2/
-    - derive/^dy([auo])([,.])$/zy$1$2/
+    - derive/^sh([auo][,.])$/sy$1/
+    - derive/^ch([auo][,.])$/cy$1/
+    - derive/^ch([auo][,.])$/ty$1/
+    - derive/^j([auo][,.])$/jy$1/
+    - derive/^j([auo][,.])$/zy$1/
+    - derive/^dy([auo][,.])$/j$1/
+    - derive/^dy([auo][,.])$/zy$1/
 ## 一般
     - derive/^shi([,.])$/si$1/
     - derive/^chi([,.])$/ti$1/
