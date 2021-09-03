@@ -44,10 +44,10 @@ speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz/;'["
   delimiter: "\""
   algebra:
-    - xform|^([a-z]+)\[$|$1;| #大寫增加尾綴「;」 ＃[;]
+    - xform|^([a-z]+)[[]$|$1;| #大寫增加尾綴「;」 ＃[;]
     - xform|^([a-z]+)$|$1/| #小寫尾綴「/」
     - derive|^([a-z]+)([;/])$|$1| #精簡尾綴「;」「/」
-    - derive/^\|$/ /
+    - derive/^[|]$/ /
 
 translator:
   dictionary: greek.extended
