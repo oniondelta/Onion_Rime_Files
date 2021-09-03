@@ -143,11 +143,11 @@ speller:
     - derive/(?<!t)tye/che/ #「崔tye」「陳tyen」：ちぇ、チェ。
     - derive/(?<!t)tye/cye/ #「崔tye」「陳tyen」：ちぇ、チェ。
 ##### 小字假名或符號等，拼音轉寫 #####
-    - derive|[-](.*;)$|ev$1| #ー–長音符
-    - derive|^[-]$|ev,| #ー–長音符
-    - derive|^[-]$|ev\.| #ー–長音符
-    - derive|^[-][-]$|eev,|
-    - derive|^[-][-]$|eev\.|
+    - derive|-(.*;)$|ev$1| #ー–長音符
+    - derive|^-$|ev,| #ー–長音符
+    - derive|^-$|ev\.| #ー–長音符
+    - derive|^--$|eev,|
+    - derive|^--$|eev\.|
     - derive|^[/]$|av,|
     - derive|^[/]$|av\.|
     - derive|^,,$|sv,|
@@ -204,7 +204,7 @@ translator:
   comment_format:
     - xform/ /  /
   disable_user_dict_for_patterns:
-    - ^[-]{1,2}$
+    - ^-{1,2}$
     # - ^[.]$
     # - ^[aiueohn]$
     # - ^[kstnhmrgzdbp][aiueo]$

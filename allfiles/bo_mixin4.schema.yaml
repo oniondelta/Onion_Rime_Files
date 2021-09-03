@@ -166,18 +166,18 @@ speller:
     - xform/[)(]//
 ##### 日文轉寫開始 #####
 ## 符號
-    - derive|^(!!!)[-]$|$1ev|
+    - derive|^(!!!)-$|$1ev|
     - derive|^(!!!)[/]$|$1av|
     - derive|^(!!!),,$|$1sv|
     - derive|^(!!!)[.];$|$1ov|
     - derive|^(!!!),;$|$1vv|
-    - derive|^(!!!)[-][-]$|$1eev|
-    - derive|^(!!)![-]$|$1ev|
+    - derive|^(!!!)--$|$1eev|
+    - derive|^(!!)!-$|$1ev|
     - derive|^(!!)![/]$|$1av|
     - derive|^(!!)!,,$|$1sv|
     - derive|^(!!)![.];$|$1ov|
     - derive|^(!!)!,;$|$1vv|
-    - derive|^(!!)![-][-]$|$1eev|
+    - derive|^(!!)!--$|$1eev|
     - derive/^(!!!)xx$/$1shime/
     - derive/^(!!!)xx$/$1sime/
     - derive/^(!!)!(xx)$/$1$2/
@@ -527,7 +527,7 @@ japan:
   tips: "《純日語》▶"
   closing_tips: "◀《純日語》"
   disable_user_dict_for_patterns:
-    - ^[-]{1,2}$
+    - ^-{1,2}$
     # - ^[.]$
     # - ^[aiueohn]$
     # - ^[kstnhmrgzdbp][aiueo]$
