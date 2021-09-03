@@ -51,7 +51,7 @@ speller:
     - xform/^([a-z]+)$/$1E/ #小寫增加尾綴「/」
     - derive/^([a-z]+)([EF])$/$1/
     - "xlit|ABCDEF|',.-/;|"
-    - derive/^\|$/ /
+    - derive/^[|]$/ /
 
 translator:
   dictionary: fullshape.extended
