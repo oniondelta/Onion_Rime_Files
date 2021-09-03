@@ -407,7 +407,7 @@ japan:
   tips: "《純日語》▶"
   closing_tips: "◀《純日語》"
   disable_user_dict_for_patterns:
-    - ^[-]{1,2}$
+    - ^-{1,2}$
   preedit_format:
     - xform/^/《純日語》/
     - 'xform/\|/ /'
