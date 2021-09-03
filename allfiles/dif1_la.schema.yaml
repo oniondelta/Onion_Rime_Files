@@ -5,7 +5,7 @@
 schema:
   schema_id: dif1_la
   name: ✹新拉丁_dif1✹
-  version: "202102"
+  version: "202109"
   author:
     - 『洋蔥』
   description: |
@@ -46,7 +46,7 @@ speller:
 #  finals: ";'"
   delimiter: "\""
   algebra:
-    - xform/^[;][;]([a-z]+)[']/$1'''/
+    - xform/^;;([a-z]+)[']/$1'''/
     - derive/^([-a-z]+)[']$/$1/
     - derive/^([-a-z]+)['][']$/$1/
 
