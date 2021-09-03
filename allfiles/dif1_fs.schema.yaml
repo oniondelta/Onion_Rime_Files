@@ -5,7 +5,7 @@
 schema:
   schema_id: dif1_fs
   name: ✹新全形_dif1✹
-  version: "202105"
+  version: "202109"
   author:
     - 『洋蔥』
   description: |
@@ -46,12 +46,10 @@ speller:
 #  finals: ";'"
   delimiter: "\""
   algebra:
-    - 'xlit|="|AB|'
-    - xform/^([-a-z]+)B$/$1AA/
-    - xform/^([-a-z]+)$/$1A/
-    - derive/^([-])A$/$1AA/
-    - derive/^([-a-z]+)[A][A]?$/$1/
-    - 'xlit|AB|="|'
+    - xform/^([-a-z]+)"$/$1==/
+    - xform/^([-a-z]+)$/$1=/
+    - derive/^(-)(=)$/$1$2$2/
+    - derive/^([-a-z]+)==?$/$1/
 
 translator:
   dictionary: fullshape.extended
