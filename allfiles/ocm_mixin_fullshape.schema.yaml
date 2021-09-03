@@ -4,7 +4,7 @@
 schema:
   schema_id: ocm_mixin_fullshape
   name: ✹全形字母_新_蝦米✹
-  version: "202105"
+  version: "202109"
   author:
     - 『洋蔥』
   description: |
@@ -45,11 +45,9 @@ speller:
 #  finals: ";'"
   delimiter: "\""
   algebra:
-    - 'xlit|"|F|'
     - xform/^([-a-z]+)$/$1'/ #小寫改全碼
-    - xform/^([a-z]+)F$/$1;/ #大寫轉換
-    - abbrev/^([-a-z]+)([';])$/$1/ #精簡尾綴「'」和「;」
-    - 'xlit|F|"|'
+    - xform/^([a-z]+)"$/$1;/ #大寫轉換
+    - abbrev/^([-a-z]+)[';]$/$1/ #精簡尾綴「'」和「;」
 
 translator:
   dictionary: fullshape.extended
