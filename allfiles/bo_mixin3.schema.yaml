@@ -159,91 +159,91 @@ speller:
     - xform/[)(]//
 ##### 日文轉寫開始 #####
 ## 符號
-    - derive|^(\!\!\!)\-$|$1ev|
-    - derive|^(\!\!\!)\/$|$1av|
-    - derive|^(\!\!\!)\,\,$|$1sv|
-    - derive|^(\!\!\!)\.\;$|$1ov|
-    - derive|^(\!\!\!)\,\;$|$1vv|
-    - derive|^(\!\!\!)\-\-$|$1eev|
-    - derive|^\!\!\!-$|\!\!ev|
-    - derive|^\!\!\!\/$|\!\!av|
-    - derive|^\!\!\!\,\,$|\!\!sv|
-    - derive|^\!\!\!\.\;$|\!\!ov|
-    - derive|^\!\!\!\,\;$|\!\!vv|
-    - derive|^\!\!\!\-\-$|\!\!eev|
-    - derive/^(\!\!\!)xx$/$1shime/
-    - derive/^(\!\!\!)xx$/$1sime/
-    - derive/^\!\!\!xx$/\!\!xx/
-    - derive/^\!\!\!shime$/\!\!shime/
-    - derive/^\!\!\!sime$/\!\!sime/
-    - derive/^(\!\!\!)noma$/$1dou/
-    - derive/^(\!\!\!)dou$/$1onaji/
-    - derive/^(\!\!\!)dou$/$1onazi/
-    - derive/^(\!\!\!)dou$/$1odoriji/
-    - derive/^(\!\!\!)dou$/$1odorizi/
+    - derive|^(!!!)[-]$|$1ev|
+    - derive|^(!!!)[/]$|$1av|
+    - derive|^(!!!),,$|$1sv|
+    - derive|^(!!!)[.];$|$1ov|
+    - derive|^(!!!),;$|$1vv|
+    - derive|^(!!!)[-][-]$|$1eev|
+    - derive|^(!!)![-]$|$1ev|
+    - derive|^(!!)![/]$|$1av|
+    - derive|^(!!)!,,$|$1sv|
+    - derive|^(!!)![.];$|$1ov|
+    - derive|^(!!)!,;$|$1vv|
+    - derive|^(!!)![-][-]$|$1eev|
+    - derive/^(!!!)xx$/$1shime/
+    - derive/^(!!!)xx$/$1sime/
+    - derive/^(!!)!(xx)$/$1$2/
+    - derive/^(!!)!(shime)$/$1$2/
+    - derive/^(!!)!(sime)$/$1$2/
+    - derive/^(!!!)noma$/$1dou/
+    - derive/^(!!!)dou$/$1onaji/
+    - derive/^(!!!)dou$/$1onazi/
+    - derive/^(!!!)dou$/$1odoriji/
+    - derive/^(!!!)dou$/$1odorizi/
 ## 小字
-    - derive/^(\!\!\!?)xtu$/$1ltu/
-    - derive/^(\!\!\!?)xtu$/$1xtsu/
-    - derive/^(\!\!\!?)xtu$/$1ltsu/
-    - derive/^(\!\!\!?)x([aeiou])/$1l$2/
-    - derive/^(\!\!\!?)x(y[auo]|wa)$/$1l$2/
-    - derive/^(\!\!\!?)xke$/$1lke/
-    - derive/^(\!\!\!)xke$/$1ke/
-    - derive/^(\!\!\!?)xka$/$1lka/
-    - derive/^(\!\!\!)xka$/$1ka/
+    - derive/^(!!!?)xtu$/$1ltu/
+    - derive/^(!!!?)xtu$/$1xtsu/
+    - derive/^(!!!?)xtu$/$1ltsu/
+    - derive/^(!!!?)x([aeiou])/$1l$2/
+    - derive/^(!!!?)x(y[auo]|wa)$/$1l$2/
+    - derive/^(!!!?)xke$/$1lke/
+    - derive/^(!!!)xke$/$1ke/
+    - derive/^(!!!?)xka$/$1lka/
+    - derive/^(!!!)xka$/$1ka/
 ## 促音+拗音
-    - derive/^(\!\!\!?)ssh([auo])$/$1ssy$2/
-    - derive/^(\!\!\!?)cch([auo])$/$1ccy$2/
-    - derive/^(\!\!\!?)cch([auo])$/$1tty$2/
-    - derive/^(\!\!\!?)jj([auo])$/$1zzy$2/ #っじゃ
-    - derive/^(\!\!\!?)jj([auo])$/$1jjy$2/ #っじゃ
-    - derive/^(\!\!\!?)ddy([auo])$/$1zzy$2/ #っぢゃ
-    - derive/^(\!\!\!?)ddy([auo])$/$1jj$2/ #っぢゃ
+    - derive/^(!!!?)ssh([auo])$/$1ssy$2/
+    - derive/^(!!!?)cch([auo])$/$1ccy$2/
+    - derive/^(!!!?)cch([auo])$/$1tty$2/
+    - derive/^(!!!?)jj([auo])$/$1zzy$2/ #っじゃ
+    - derive/^(!!!?)jj([auo])$/$1jjy$2/ #っじゃ
+    - derive/^(!!!?)ddy([auo])$/$1zzy$2/ #っぢゃ
+    - derive/^(!!!?)ddy([auo])$/$1jj$2/ #っぢゃ
 ## 促音
-    - derive/^(\!\!\!?)cchi$/$1tti/
-    - derive/^(\!\!\!?)sshi$/$1ssi/
-    - derive/^(\!\!\!?)ffu$/$1hhu/
-    - derive/^(\!\!\!?)ttsu$/$1ttu/
-    - derive/^(\!\!\!?)jji$/$1zzi/
+    - derive/^(!!!?)cchi$/$1tti/
+    - derive/^(!!!?)sshi$/$1ssi/
+    - derive/^(!!!?)ffu$/$1hhu/
+    - derive/^(!!!?)ttsu$/$1ttu/
+    - derive/^(!!!?)jji$/$1zzi/
 ## 拗音
-    - derive/^(\!\!\!?)sh([auo])$/$1sy$2/
-    - derive/^(\!\!\!?)ch([auo])$/$1cy$2/
-    - derive/^(\!\!\!?)ch([auo])$/$1ty$2/
-    - derive/^(\!\!\!?)j([auo])$/$1jy$2/
-    - derive/^(\!\!\!?)j([auo])$/$1zy$2/
-    - derive/^(\!\!\!?)dy([auo])$/$1j$2/
-    - derive/^(\!\!\!?)dy([auo])$/$1zy$2/
+    - derive/^(!!!?)sh([auo])$/$1sy$2/
+    - derive/^(!!!?)ch([auo])$/$1cy$2/
+    - derive/^(!!!?)ch([auo])$/$1ty$2/
+    - derive/^(!!!?)j([auo])$/$1jy$2/
+    - derive/^(!!!?)j([auo])$/$1zy$2/
+    - derive/^(!!!?)dy([auo])$/$1j$2/
+    - derive/^(!!!?)dy([auo])$/$1zy$2/
 ## 一般
-    - derive/^(\!\!\!?)shi$/$1si/
-    - derive/^(\!\!\!?)chi$/$1ti/
-    - derive/^(\!\!\!?)tsu$/$1tu/
-    - derive/^(\!\!\!?)fu$/$1hu/
-    - derive/^(\!\!\!?)ji$/$1zi/
-    - derive/^(\!\!\!?)u$/$1wu/
+    - derive/^(!!!?)shi$/$1si/
+    - derive/^(!!!?)chi$/$1ti/
+    - derive/^(!!!?)tsu$/$1tu/
+    - derive/^(!!!?)fu$/$1hu/
+    - derive/^(!!!?)ji$/$1zi/
+    - derive/^(!!!?)u$/$1wu/
 ## 特殊
-    - xform/^(\!\!\!)dvyu$/$1dyu/ # デュ #特殊片假名被其他正則不轉寫。
+    - xform/^(!!!)dvyu$/$1dyu/ # デュ #特殊片假名被其他正則不轉寫。
 ##### 日文轉寫結束 #####
 ### 日文特殊符號轉平假名尾綴也可輸入
     # - derive/^\!\!\!(noma|dou|onaji|onazi|odoriji|odorizi)$/\!\!$1/
 ##### 把外語言轉大寫或帶符號，不被注音正則影響 #####
-    - 'xlit|/;,.-"|斜分逗點橫分|' #注音佔用到的五個符號鍵位 #A|
+    - 'xlit|/;,.-|%"<>_|' #注音佔用到的五個符號鍵位 #A|
+    # - 'xlit|/;,.-"|斜分逗點橫分|'
 ### 各語言標點、組合字符先行轉寫（標點適應方案，多轉其他編碼） ###
 #    - derive/^([@])([逗點橫])$/$1分$2/ #拉丁三個標點「,.-」前加分號
 #    - derive/^([!][!][!])([逗點橫])$/$1分$2/ #日語二個標點「・ー」前加分號
 #    - derive/^!!!([s]?)([斜分逗點橫]+)$/!!$1$2/ #增加平假名標點
 #    - derive/^!!!([斜分逗點橫]+)$/!!$1/ #增加平假名標點
-    # - xform/^@分分([a-z]+)$/@$1分分/ #轉換「拉丁組合字符」前雙分號到後面
 #############################################
 ### 拉丁 ###
-    - xform/^@(分分)([a-z]+)$/\U$2\E$1\'/ #轉換「拉丁組合字符」前雙分號到後面
-    - derive/^@([a-z]+)$/\U$1\E斜\'/ #拉丁小寫尾綴「/」#######
-    - xform/^@([a-z]*)([斜分逗點橫]*)$/\U$1\E$2\'/ #拉丁尾綴
+    - xform/^@(["]["])([a-z]+)$/\U$2\E$1'/ #轉換「拉丁組合字符」前雙分號到後面
+    - derive/^@([a-z]+)$/\U$1\E%'/ #拉丁小寫尾綴「/」#######
+    - xform/^@([a-z]*)([%"<>_]*)$/\U$1\E$2'/ #拉丁尾綴
 ### 日語 ###
-    - xform/^!!!([斜分逗點橫]+)$/$1\[/ #日語標點
-    - xform/^!!!([a-z]+)$/\U$1\E\點\[/ #片假名尾綴
-    - xform/^!!([a-z]+)$/\U$1\E\逗\[/ #平假名尾綴
+    - xform/^!!!([%"<>_]+)$/$1[/ #日語標點
+    - xform/^!!!([a-z]+)$/\U$1\E>[/ #片假名尾綴
+    - xform/^!!([a-z]+)$/\U$1\E<[/ #平假名尾綴
 ### 韓語 ###
-    - xform/^!([a-z]+)([斜]*)$/\U$1\E$2\]/ #韓語尾綴
+    - xform/^!([a-z]+)(%*)$/\U$1\E$2]/ #韓語尾綴
 ###########
     - xform/Z/`Q/
     - xform/C/`W/
@@ -317,22 +317,22 @@ speller:
 ######################
 ### 日語 ###
 ##    - derive/^([A-Z]+)點[[]$/$1\[/ #片假名簡化
-    - derive/^([A-Z]+)逗[[]$/$1\[/ #平假名簡化
-    - abbrev/^([A-Z]+)點[[]$/$1/ #不使片假名轉成單「[」此條要「開啟」#
+    - derive/^([A-Z]+)<[[]$/$1[/ #平假名簡化
+    - abbrev/^([A-Z]+)>[[]$/$1/ #不使片假名轉成單「[」此條要「開啟」#
 ### 拉丁 ###
-    - abbrev/^([A-Z]+)分[\']$/$1/ #不使大寫轉成單「'」此條要「開啟」#
+    - abbrev/^([A-Z]+)["][']$/$1/ #不使大寫轉成單「'」此條要「開啟」#
     # - abbrev/^([橫A-Z]+)分[\']$/$1/ #不使大寫轉成單「'」此條要「開啟」#
 ##    - derive/^([橫A-Z]+)分[\']$/$1\'/ #拉丁字母大寫去掉「;」或「/」號 #測試##不使大寫轉成單「'」此條要「遮屏」#
 ###    - abbrev/^([橫A-Z]+)斜[\']$/$1/ #拉丁字母寫簡化（下列已可簡化）
 ##### 多國語言簡化 #####
-    - abbrev/^([斜分逗點橫A-Z]+)[]\'[]$/$1/ #derive #簡化外語去掉尾綴
+    - abbrev/^([%"<>_A-Z]+)[]'[]$/$1/ #derive #簡化外語去掉尾綴
 ##########################################################
     - xform/([A-Z]+)/\L$1\E/
-    - xform|點|\.| #點號
-    - xform|逗|\,| #逗號
-    - xform|分|\;| #分號
-    - xform|斜|\/| #斜線
-    - xform|橫|\-| #連字號
+    - xform|>|\.| #點號
+    - xform|<|,| #逗號
+    - xform|"|;| #分號
+    - xform|%|/| #斜線
+    - xform|_|-| #連字號
 ################################### 主注音引擎 ######################################
 translator:
   dictionary: bo_mixin.extended
