@@ -9,7 +9,7 @@ schema:
 
   name: "❖超級混合蝦米(mix-in)❖"
   schema_id: ocm_mixin
-  version: "202108"
+  version: "202109"
   dependencies:
     - punct_ovff
     - symbols_ocm
@@ -181,11 +181,11 @@ speller:
     - xform/^([a-z]+);$/$1;;/ #注音偏旁尾綴改寫
 ##### 日語 #####
 ## 符號
-    - derive|^([eaovs][v])[,]$|$1\.|
-    - derive|^([e][e][v])[,]$|$1\.|
-    - derive|^[e][v]([,.])$|\-$1|
-    - derive|^[e][e][v]([,.])$|\-\-$1|
-    - derive|^([x][x])[,]$|$1\.|
+    - derive|^([eaovs][v]),$|$1\.|
+    - derive|^([e][e][v]),$|$1\.|
+    - derive|^[e][v]([,.])$|-$1|
+    - derive|^[e][e][v]([,.])$|--$1|
+    - derive|^([x][x]),$|$1\.|
     - derive|^[x][x]([,.])$|shime$1|
     - derive|^[x][x]([,.])$|sime$1|
     - derive|^noma([.])$|dou$1|
@@ -197,20 +197,20 @@ speller:
     - derive/^xtu([,.])$/ltu$1/
     - derive/^xtu([,.])$/xtsu$1/
     - derive/^xtu([,.])$/ltsu$1/
-    - derive/^x([aeiou])([,.])$/l$1$2/
+    - derive/^x([aeiou][,.])$/l$1/
     - derive/^x(y[auo]|wa)([,.])$/l$1$2/
     - derive/^xke([,.])$/lke$1/
     - derive/^xke([.])$/ke$1/
     - derive/^xka([,.])$/lka$1/
     - derive/^xka([.])$/ka$1/
 ## 促音+拗音
-    - derive/^ssh([auo])([,.])$/ssy$1$2/
-    - derive/^cch([auo])([,.])$/ccy$1$2/
-    - derive/^cch([auo])([,.])$/tty$1$2/
-    - derive/^jj([auo])([,.])$/zzy$1$2/ #っじゃ
-    - derive/^jj([auo])([,.])$/jjy$1$2/ #っじゃ #原字典沒有
-    - derive/^ddy([auo])([,.])$/zzy$1$2/ #っぢゃ
-    - derive/^ddy([auo])([,.])$/jj$1$2/ #っぢゃ
+    - derive/^ssh([auo][,.])$/ssy$1/
+    - derive/^cch([auo][,.])$/ccy$1/
+    - derive/^cch([auo][,.])$/tty$1/
+    - derive/^jj([auo][,.])$/zzy$1/ #っじゃ
+    - derive/^jj([auo][,.])$/jjy$1/ #っじゃ #原字典沒有
+    - derive/^ddy([auo][,.])$/zzy$1/ #っぢゃ
+    - derive/^ddy([auo][,.])$/jj$1/ #っぢゃ
 ## 促音
     - derive/^cchi([,.])$/tti$1/
     - derive/^sshi([,.])$/ssi$1/
@@ -218,13 +218,13 @@ speller:
     - derive/^ttsu([,.])$/ttu$1/
     - derive/^jji([,.])$/zzi$1/
 ## 拗音
-    - derive/^sh([auo])([,.])$/sy$1$2/
-    - derive/^ch([auo])([,.])$/cy$1$2/
-    - derive/^ch([auo])([,.])$/ty$1$2/
-    - derive/^j([auo])([,.])$/jy$1$2/
-    - derive/^j([auo])([,.])$/zy$1$2/
-    - derive/^dy([auo])([,.])$/j$1$2/
-    - derive/^dy([auo])([,.])$/zy$1$2/
+    - derive/^sh([auo][,.])$/sy$1/
+    - derive/^ch([auo][,.])$/cy$1/
+    - derive/^ch([auo][,.])$/ty$1/
+    - derive/^j([auo][,.])$/jy$1/
+    - derive/^j([auo][,.])$/zy$1/
+    - derive/^dy([auo][,.])$/j$1/
+    - derive/^dy([auo][,.])$/zy$1/
 ## 一般
     - derive/^shi([,.])$/si$1/
     - derive/^chi([,.])$/ti$1/
@@ -235,18 +235,16 @@ speller:
 ## 特殊
     - xform/^dvyu([.])$/dyu$1/ # デュ #特殊片假名被其他正則不轉寫。
 ##### 其他 #####
-    - "xlit|/;,.-!|ABCDEF|"
-    - xform/^([svc])D$/$1Z/ #問號和驚嘆號不被略拼
-    - derive/^([a-zE]+)[CD]$/$1/ #假名
-    - xform/^([svc])Z$/$1D/ #問號和驚嘆號不被略拼
-    - derive/^([a-z]+)A$/$1/ #韓語
-    - xform/^([a-z]+)AF$/$1A/ #韓語
-    - xform/^([a-z]+)AAF$/$1AA/ #韓語
+    - xform/^([svc])[.]$/$1Z/ #問號和驚嘆號不被略拼
+    - derive/^([a-z-]+)[,.]$/$1/ #假名
+    - xform/^([svc])Z$/$1\./ #問號和驚嘆號不被略拼
+    - derive|^([a-z]+)[/]$|$1| #韓語
+    - xform|^([a-z]+)[/]!$|$1/| #韓語
+    - xform|^([a-z]+)[/][/]!$|$1//| #韓語
 ############
-    - xform/^([Ea-z]+)['][']$/$1B/ #拉丁-大寫轉換
-    - xform/^([B])([B])([a-z]+)(['])/$3''/ #拉丁-組合變音標記
-    - derive/^([a-zE]+)[']?[B]?$/$1/ #拉丁 #B' #[']?#不使大寫轉成單「'」此條要「遮屏」#
-    - 'xlit|ABCDEF|/;,.-!|'
+    - xform/^([a-z-]+)''$/$1;/ #拉丁-大寫轉換
+    - xform/^;;([a-z]+)(['])/$1$2$2/ #拉丁-組合變音標記
+    - derive/^([a-z-]+)[';]$/$1/ #拉丁 #B' #[']?#不使大寫轉成單「'」此條要「遮屏」#
 ################################### 短語和外掛標點 ######################################
 ocm_mixin_phrase:
   dictionary: ""
