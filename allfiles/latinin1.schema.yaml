@@ -62,7 +62,7 @@ speller:
   delimiter: " "
   algebra:
     - derive|^([a-z]+)[;/]$|$1| #精簡尾綴「;」「/」
-    - derive/^\|$/ /
+    - derive/^[|]$/ /
 
 translator:
   dictionary: latinin1.extended
