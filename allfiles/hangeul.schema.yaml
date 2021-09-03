@@ -51,7 +51,7 @@ speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz;/"
   delimiter: "'"
   algebra:
-    - derive/^\|$/ /
+    - derive/^[|]$/ /
 
 translator:
   dictionary: hangeul.extended
