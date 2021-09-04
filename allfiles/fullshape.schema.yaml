@@ -4,7 +4,7 @@
 schema:
   schema_id: fullshape
   name: ❃全形輸出❃
-  version: "202108"
+  version: "202109"
   author:
     - 『洋蔥』
   description: |
@@ -45,12 +45,9 @@ speller:
 ##  finals: ";'"
   delimiter: "\""
   algebra:
-    - 'xlit|"|F|'
-    - "xlit|',.-/;|ABCDEF|"
-    - xform/^([a-z]+)F$/$1F/ #大寫轉換尾綴[;]
-    - xform/^([a-z]+)$/$1E/ #小寫增加尾綴「/」
-    - derive/^([a-z]+)([EF])$/$1/
-    - "xlit|ABCDEF|',.-/;|"
+    - xform/^([a-z]+)"$/$1;/ #大寫轉換尾綴[;]
+    - xform|^([a-z]+)$|$1/| #小寫增加尾綴「/」
+    - derive|^([a-z]+)([/;])$|$1|
     - derive/^[|]$/ /
 
 translator:
