@@ -2,7 +2,7 @@
 # encoding: utf-8
 # 《拉丁+音標字母（洋蔥形碼鍵位）設定頁》
 schema:
-  schema_id: latinin1 # 注意此ID與文件名裏 .schema.yaml 之前的部分相同
+  schema_id: latinin1
   name: ❃拉丁 in 1❃
   version: "202109"
   author:
