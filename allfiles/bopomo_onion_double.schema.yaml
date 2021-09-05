@@ -158,8 +158,7 @@ translator:
   initial_quality: "0"
   preedit_format:
 ###############
-    - xform|\\|@|
-    - xform|^([a-z @,./';]*)$|\U$1\E\t（$1）|
+    - xform|^([a-z \\,./';]*)$|\U$1\E\t（$1）|
     - xform|([A-Z]),|$1，|
     - xform|([A-Z])[.]|$1．|
     - xform|([A-Z])[/]|$1／|
@@ -209,8 +208,9 @@ translator:
 #######
     - "xlit|bpmfdtnlgkhjqxrzcsiuywvao|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄖㄗㄘㄙㄧㄨㄩㄓㄔㄕ◌|"
     - "xlit|;/.,'|ˉˊˇˋ˙|"
+    - 'xform/\\/ /'
 #######
-    - "xlit|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ，．／；＇@|ABCDEFGHIJKLMNOPQRSTUVWXYZ,./;' |"
+    - "xlit|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ，．／；＇|ABCDEFGHIJKLMNOPQRSTUVWXYZ,./;'|"
     - 'xform/://'
 ############################## 以下為系列符號 ##########################################
 emoji_series:
