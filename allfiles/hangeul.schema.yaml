@@ -4,7 +4,7 @@
 schema:
   schema_id: hangeul # 注意此ID與文件名裏 .schema.yaml 之前的部分相同
   name: ❃韓語形碼❃
-  version: "202108"
+  version: "202109"
   author:
     - 『洋蔥』
   description: |
@@ -51,7 +51,7 @@ speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz;/"
   delimiter: "'"
   algebra:
-    - derive/^[|]$/ /
+    - derive/^\|$/ /
 
 translator:
   dictionary: hangeul.extended

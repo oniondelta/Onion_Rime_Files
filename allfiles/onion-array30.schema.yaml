@@ -4,7 +4,7 @@
 schema:
   schema_id: onion-array30
   name: "▦ 行列３０（洋蔥版）"
-  version: "202108"
+  version: "202109"
   author:
     - 洋蔥 <deltazonetw@gmail.com>
   description: |
@@ -188,9 +188,9 @@ translator:
     - xform/y/6⇡/
     - xform/z/1⇣/
     - xform|\.|9⇣|
-    - xform|\/|0⇣|
+    - xform|[/]|0⇣|
     - xform|;|0-|
-    - xform|\,|8⇣|
+    - xform|,|8⇣|
     - xform/ /▫/
     # - xform/\|/  /
   comment_format:
@@ -222,9 +222,9 @@ translator:
     - xform/y/6⇡/
     - xform/z/1⇣/
     - xform|\.|9⇣|
-    - xform|\/|0⇣|
+    - xform|[/]|0⇣|
     - xform|;|0-|
-    - xform|\,|8⇣|
+    - xform|,|8⇣|
     - xform/^/ /
     - xform/ /  /
     - xform/@@/▫/
@@ -409,8 +409,8 @@ editor:
 ##### 段落識別器 #####
 recognizer:
   patterns:
-    # punct: "^[w][0-9]$"
-    wsymbols: "^[w][0-9]$" #（可用 symbols 更簡單實現，但沒有開頭提示）
+    # punct: "^w[0-9]$"
+    wsymbols: "^w[0-9]$" #（可用 symbols 更簡單實現，但沒有開頭提示）
     reverse2_lookup: "^=[-.,;/0-9a-z]*'?$"
     reverse3_lookup: "^==[a-z,./; ]*'?$"
     lua: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$|`[';/]?[a-z]*$|`[0-9./-]*$|`[xcoe][0-9a-z]+$"

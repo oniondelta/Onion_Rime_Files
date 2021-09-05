@@ -54,54 +54,54 @@ speller:
   algebra:
 ##### 字詞彙中的漢字，拼音轉寫 #####
 ### 漢字中的促音 ###
-    - derive/cchi(.*[;])$/qchi$1/ #っち
-    - derive/sshi(.*[;])$/qshi$1/ #っし
-    - derive/ffu(.*[;])$/qfu$1/ #っふ #漢字無此拼音#
-    - derive/ttsu(.*[;])$/qtsu$1/ #っつ
-    - derive/jji(.*[;])$/qji$1/ #っじ #暫時打開測試
+    - derive/cchi(.*;)$/qchi$1/ #っち
+    - derive/sshi(.*;)$/qshi$1/ #っし
+    - derive/ffu(.*;)$/qfu$1/ #っふ #漢字無此拼音#
+    - derive/ttsu(.*;)$/qtsu$1/ #っつ
+    - derive/jji(.*;)$/qji$1/ #っじ #暫時打開測試
 ##
-    - derive/kky([auo].*[;])$/qky$1/ #っきょ
-    - derive/ggy([auo].*[;])$/qgy$1/ #っぎょ #漢字無此拼音#
-    - derive/ssh([auo].*[;])$/qsh$1/ #っしゃ #暫時打開測試
-    - derive/jj([auo].*[;])$/qj$1/ #っじゅ #漢字無此拼音#
-    - derive/ddy([auo].*[;])$/qdy$1/ #っぢょ #漢字無此拼音#
-    - derive/cch([auo].*[;])$/qch$1/ #っちゅ
-    - derive/nny([auo].*[;])$/qny$1/ #っにゃ
-    - derive/hhy([auo].*[;])$/qhy$1/ #っひゃ #漢字無此拼音#
-    - derive/bby([auo].*[;])$/qby$1/ #っびゃ #漢字無此拼音#
-    - derive/ppy([auo].*[;])$/qpy$1/ #っぴゃ #暫時打開測試
-    - derive/mmy([auo].*[;])$/qmy$1/ #っみゃ #漢字無此拼音#
-    - derive/rry([auo].*[;])$/qry$1/ #っりゃ #漢字無此拼音#
+    - derive/kky([auo].*;)$/qky$1/ #っきょ
+    - derive/ggy([auo].*;)$/qgy$1/ #っぎょ #漢字無此拼音#
+    - derive/ssh([auo].*;)$/qsh$1/ #っしゃ #暫時打開測試
+    - derive/jj([auo].*;)$/qj$1/ #っじゅ #漢字無此拼音#
+    - derive/ddy([auo].*;)$/qdy$1/ #っぢょ #漢字無此拼音#
+    - derive/cch([auo].*;)$/qch$1/ #っちゅ
+    - derive/nny([auo].*;)$/qny$1/ #っにゃ
+    - derive/hhy([auo].*;)$/qhy$1/ #っひゃ #漢字無此拼音#
+    - derive/bby([auo].*;)$/qby$1/ #っびゃ #漢字無此拼音#
+    - derive/ppy([auo].*;)$/qpy$1/ #っぴゃ #暫時打開測試
+    - derive/mmy([auo].*;)$/qmy$1/ #っみゃ #漢字無此拼音#
+    - derive/rry([auo].*;)$/qry$1/ #っりゃ #漢字無此拼音#
 ##
-    - derive/kk([auoie].*[;])$/qk$1/ #っか
-    - derive/ss([auoie].*[;])$/qs$1/ #っさ
-    - derive/tt([auoie].*[;])$/qt$1/ #った
-#漢字無此拼音，且會干擾ん(なにぬねの)，有標注之假名無此發音#    - derive/nn([auoie].*[;])$/qn$1/ #っな
-    - derive/hh([auoie].*[;])$/qh$1/ #っは #漢字無此拼音#
-    - derive/ff([auoie].*[;])$/qf$1/ #っふ #漢字無此拼音#
-    - derive/mm([auoie].*[;])$/qm$1/ #っま #漢字無此拼音#
-    - derive/yy([auoie].*[;])$/qy$1/ #っや #打開會衝突？？？ #暫時打開測試
-    - derive/rr([auoie].*[;])$/qr$1/ #っら #暫時打開測試
-#漢字無此拼音，有標注之假名無此發音#    - derive/ww([auoie].*[;])$/qw$1/ #っわ #打開會衝突？？？
+    - derive/kk([auoie].*;)$/qk$1/ #っか
+    - derive/ss([auoie].*;)$/qs$1/ #っさ
+    - derive/tt([auoie].*;)$/qt$1/ #った
+#漢字無此拼音，且會干擾ん(なにぬねの)，有標注之假名無此發音#    - derive/nn([auoie].*;)$/qn$1/ #っな
+    - derive/hh([auoie].*;)$/qh$1/ #っは #漢字無此拼音#
+    - derive/ff([auoie].*;)$/qf$1/ #っふ #漢字無此拼音#
+    - derive/mm([auoie].*;)$/qm$1/ #っま #漢字無此拼音#
+    - derive/yy([auoie].*;)$/qy$1/ #っや #打開會衝突？？？ #暫時打開測試
+    - derive/rr([auoie].*;)$/qr$1/ #っら #暫時打開測試
+#漢字無此拼音，有標注之假名無此發音#    - derive/ww([auoie].*;)$/qw$1/ #っわ #打開會衝突？？？
 ##
-    - derive/gg([auoie].*[;])$/qg$1/ #っが #暫時打開測試
-    - derive/zz([auoie].*[;])$/qz$1/ #っざ #暫時打開測試
-    - derive/dd([auoie].*[;])$/qd$1/ #っだ #暫時打開測試
-    - derive/bb([auoie].*[;])$/qb$1/ #っば #暫時打開測試
-    - derive/pp([auoie].*[;])$/qp$1/ #っぱ
+    - derive/gg([auoie].*;)$/qg$1/ #っが #暫時打開測試
+    - derive/zz([auoie].*;)$/qz$1/ #っざ #暫時打開測試
+    - derive/dd([auoie].*;)$/qd$1/ #っだ #暫時打開測試
+    - derive/bb([auoie].*;)$/qb$1/ #っば #暫時打開測試
+    - derive/pp([auoie].*;)$/qp$1/ #っぱ
 # ### 漢字中的拗音 ### @ 太影響效能，暫時關閉@
-#     - derive/ky([auo].*[;])$/kixy$1/ #きゃ
-#     - derive/gy([auoie].*[;])$/gixy$1/ #ぎゃ
-#     - derive/sh([auo].*[;])$/shixy$1/ #しゃ
-#     - derive/j([auo].*[;])$/jixy$1/ #じゃ
-#     - derive/dy([auoie].*[;])$/dixy$1/ #ぢゃ
-#     - derive/ch([auoe].*[;])$/chixy$1/ #ちゃ
-#     - derive/ny([auoie].*[;])$/nixy$1/ #にゃ
-#     - derive/hy([auoie].*[;])$/hixy$1/ #ひゃ
-#     - derive/by([auoe].*[;])$/bixy$1/ #びゃ
-#     - derive/py([auoie].*[;])$/pixy$1/ #ぴゃ
-#     - derive/my([auoie].*[;])$/mixy$1/ #みゃ
-#     - derive/ry([auoie].*[;])$/rixy$1/ #りゃ
+#     - derive/ky([auo].*;)$/kixy$1/ #きゃ
+#     - derive/gy([auoie].*;)$/gixy$1/ #ぎゃ
+#     - derive/sh([auo].*;)$/shixy$1/ #しゃ
+#     - derive/j([auo].*;)$/jixy$1/ #じゃ
+#     - derive/dy([auoie].*;)$/dixy$1/ #ぢゃ
+#     - derive/ch([auoe].*;)$/chixy$1/ #ちゃ
+#     - derive/ny([auoie].*;)$/nixy$1/ #にゃ
+#     - derive/hy([auoie].*;)$/hixy$1/ #ひゃ
+#     - derive/by([auoe].*;)$/bixy$1/ #びゃ
+#     - derive/py([auoie].*;)$/pixy$1/ #ぴゃ
+#     - derive/my([auoie].*;)$/mixy$1/ #みゃ
+#     - derive/ry([auoie].*;)$/rixy$1/ #りゃ
 ### 漢字中的其他 ###
     - derive/ty(e.*;)$/chix$1/ #ちぇ
 ##### 單字或詞彙中的假名和漢字，拼音轉寫 #####
@@ -181,7 +181,7 @@ speller:
     - xform/^dvyu([.])$/dyu$1/ #デュ #先設其他編碼，不被其他正則影響再轉回
 ##### 簡化和消除含促音字詞後綴 #####
     - xform/^([kspt])([,.])(.+)$/$1$3/
-#舊版漢字中有分段才有用到#    - derive/^([a-z-]+)([;])([a-z-]+)([;])$/$1$3$4/ #漢字中含促音
+#舊版漢字中有分段才有用到#    - derive/^([a-z-]+)(;)([a-z-]+)(;)$/$1$3$4/ #漢字中含促音
 ##### 簡化漢字後綴（如需假名輸入漢字，打開；「關閉」選單中沒漢字） #####
     - derive/([a-z-]);/$1/ #關#
 ##### 簡化假名後綴 #####
@@ -189,10 +189,10 @@ speller:
 ##### 其他方案掛接時，後綴'['調出 #####
     - derive/^(.+)$/$1'['/
 ##### 使開頭單個字母時（如：kst）也能有選項可選 #####
-    - abbrev/^([kstnhmyrwgzdbpjlfx])([aiueo][.,])$/$1/
-    - abbrev/^([c])([h][aiueo][.,])$/$1/ #避免「c」開頭沒有對應假名
-    - abbrev/^([kstnhmyrwgzdbpjlfcx][kstnhmyrwgzdbpjlfc][y]?)([aiueo][.,])$/$1/
-    - derive/^[|]$/ /
+    - abbrev/^([kstnhmyrwgzdbpjlfx])[aiueo][.,]$/$1/
+    - abbrev/^(c)h[aiueo][.,]$/$1/ #避免「c」開頭沒有對應假名
+    - abbrev/^([kstnhmyrwgzdbpjlfcx][kstnhmyrwgzdbpjlfc]y?)[aiueo][.,]$/$1/
+    - derive/^\|$/ /
 
 translator:
   dictionary: jpnin1.extended
@@ -208,15 +208,15 @@ translator:
     # - ^[.]$
     # - ^[aiueohn]$
     # - ^[kstnhmrgzdbp][aiueo]$
-    # - ^[sc][h][i]$
-    # - ^[t][s][u]$
-    # - ^[f][u]$
-    # - ^[y][auo]$
-    # - ^[w][ao]$
-    # - ^[n]$
-    # - ^[kgsztnhbpmr][y][auo]$
-    # - ^[sc][h][auo]$
-    # - ^[j][auo]$
+    # - ^[sc]hi$
+    # - ^tsu$
+    # - ^fu$
+    # - ^y[auo]$
+    # - ^w[ao]$
+    # - ^n$
+    # - ^[kgsztnhbpmr]y[auo]$
+    # - ^[sc]h[auo]$
+    # - ^j[auo]$
 
 jpnin1_phrase:
   dictionary: ""

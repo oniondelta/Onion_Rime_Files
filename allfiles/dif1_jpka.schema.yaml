@@ -48,13 +48,13 @@ speller:
   algebra:
 ##### 日語 #####
 ## 符號
-    - derive|^([eaovs][v]),$|$1\.|
-    - derive|^([e][e][v]),$|$1\.|
-    - derive|^[e][v]([,.])$|-$1|
-    - derive|^[e][e][v]([,.])$|--$1|
-    - derive|^([x][x]),$|$1\.|
-    - derive|^[x][x]([,.])$|shime$1|
-    - derive|^[x][x]([,.])$|sime$1|
+    - derive|^([eaovs]v),$|$1\.|
+    - derive|^(eev),$|$1\.|
+    - derive|^ev([,.])$|-$1|
+    - derive|^eev([,.])$|--$1|
+    - derive|^(xx),$|$1\.|
+    - derive|^xx([,.])$|shime$1|
+    - derive|^xx([,.])$|sime$1|
     - derive|^noma([.])$|dou$1|
     - derive|^dou([.])$|onaji$1|
     - derive|^dou([.])$|onazi$1|
@@ -102,7 +102,7 @@ speller:
 ## 特殊
     - xform/^dvyu([.])$/dyu$1/ # デュ #特殊片假名被其他正則不轉寫。
 ##### 其他 #####
-    # - erase/^[-a-z]+[,]$/
+    # - erase/^[-a-z]+,$/
     - derive/^([-a-z]+)[.]$/$1/
 
 translator:

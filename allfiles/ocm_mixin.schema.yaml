@@ -181,13 +181,13 @@ speller:
     - xform/^([a-z]+);$/$1;;/ #注音偏旁尾綴改寫
 ##### 日語 #####
 ## 符號
-    - derive|^([eaovs][v]),$|$1\.|
-    - derive|^([e][e][v]),$|$1\.|
-    - derive|^[e][v]([,.])$|-$1|
-    - derive|^[e][e][v]([,.])$|--$1|
-    - derive|^([x][x]),$|$1\.|
-    - derive|^[x][x]([,.])$|shime$1|
-    - derive|^[x][x]([,.])$|sime$1|
+    - derive|^([eaovs]v),$|$1\.|
+    - derive|^(eev),$|$1\.|
+    - derive|^ev([,.])$|-$1|
+    - derive|^eev([,.])$|--$1|
+    - derive|^(xx),$|$1\.|
+    - derive|^xx([,.])$|shime$1|
+    - derive|^xx([,.])$|sime$1|
     - derive|^noma([.])$|dou$1|
     - derive|^dou([.])$|onaji$1|
     - derive|^dou([.])$|onazi$1|
@@ -239,11 +239,11 @@ speller:
     - derive/^([a-z-]+)[,.]$/$1/ #假名
     - xform/^([svc])J$/$1\./ #問號和驚嘆號不被略拼
     - derive|^([a-z]+)[/]$|$1| #韓語
-    - xform|^([a-z]+)[/]!$|$1/| #韓語
-    - xform|^([a-z]+)[/][/]!$|$1//| #韓語
+    - xform|^([a-z]+)([/])!$|$1$2| #韓語
+    - xform|^([a-z]+)([/][/])!$|$1$2| #韓語
 ############
     - xform/^([a-z-]+)''$/$1;/ #拉丁-大寫轉換
-    - xform/^;;([a-z]+)(['])/$1$2$2/ #拉丁-組合變音標記
+    - xform/^;;([a-z]+)(')$/$1$2$2/ #拉丁-組合變音標記
     - derive/^([a-z-]+)[';]$/$1/ #拉丁 #B' #[']?#不使大寫轉成單「'」此條要「遮屏」#
 ################################### 短語和外掛標點 ######################################
 ocm_mixin_phrase:
@@ -300,44 +300,44 @@ top_reverse_lookup:
     - xform/ /  /
 ##### 日語 #####
 ## 符號
-    - xform/(^|[ ])([eaovs][v])([,])/$1$2$3 $2\./
-    - xform/(^|[ ])([e][e][v])([,])/$1$2$3 $2\./
-    - xform/(^|[ ])([e][v])([,])/$1\-$3 \-\. $2$3/
-    - xform/(^|[ ])([e][e][v])([,])/$1\-\-$3 \-\-\. $2$3/
-    - xform/(^|[ ])([x][x])([,])/$1 shime\, shime\. sime\, sime\. $2$3 $2./
-    - xform/(^|[ ])(noma)([.])/$1dou$3 $2$3/
-    - xform/(^|[ ])(dou)([.])/$1$2$3 odoriji$3 odorizi$3 onaji$3 onazi$3/
+    - xform/(^| )([eaovs]v)(,)/$1$2$3 $2\./
+    - xform/(^| )(eev)(,)/$1$2$3 $2\./
+    - xform/(^| )(ev)(,)/$1-$3 -\. $2$3/
+    - xform/(^| )(eev)(,)/$1--$3 --\. $2$3/
+    - xform/(^| )(xx)(,)/$1 shime, shime\. sime, sime\. $2$3 $2\./
+    - xform/(^| )(noma)([.])/$1dou$3 $2$3/
+    - xform/(^| )(dou)([.])/$1$2$3 odoriji$3 odorizi$3 onaji$3 onazi$3/
 ## 小字
-    - xform/(^|[ ])(xtu)([,.])/$1ltu$3 ltsu$3 xtsu$3 $2$3/
-    - xform/(^|[ ])x([aeiou])([,.])/$1l$2$3 x$2$3/
-    - xform/(^|[ ])x(y[auo]|wa)([,.])/$1l$2$3 x$2$3/
-    - xform/(^|[ ])x(k[ea])([,.])/$1l$2$3 x$2$3/
-    - xform/(^|[ ])l(k[ea])([.])/$1$2$3 l$2$3/
+    - xform/(^| )(xtu)([,.])/$1ltu$3 ltsu$3 xtsu$3 $2$3/
+    - xform/(^| )x([aeiou])([,.])/$1l$2$3 x$2$3/
+    - xform/(^| )x(y[auo]|wa)([,.])/$1l$2$3 x$2$3/
+    - xform/(^| )x(k[ea])([,.])/$1l$2$3 x$2$3/
+    - xform/(^| )l(k[ea])([.])/$1$2$3 l$2$3/
 ## 促音+拗音
-    - xform/(^|[ ])ssh([auo])([,.])/$1ssh$2$3 ssy$2$3/
-    - xform/(^|[ ])cch([auo])([,.])/$1cch$2$3 ccy$2$3 tty$2$3/
-    - xform/(^|[ ])jj([auo])([,.])/$1jj$2$3 jjy$2$3 zzy$2$3/ #っじゃ
-    - xform/(^|[ ])ddy([auo])([,.])/$1ddy$2$3 jj$2$3 zzy$2$3/ #っぢゃ
+    - xform/(^| )ssh([auo])([,.])/$1ssh$2$3 ssy$2$3/
+    - xform/(^| )cch([auo])([,.])/$1cch$2$3 ccy$2$3 tty$2$3/
+    - xform/(^| )jj([auo])([,.])/$1jj$2$3 jjy$2$3 zzy$2$3/ #っじゃ
+    - xform/(^| )ddy([auo])([,.])/$1ddy$2$3 jj$2$3 zzy$2$3/ #っぢゃ
 ## 促音
-    - xform/(^|[ ])(cchi)([,.])/$1$2$3 tti$3/
-    - xform/(^|[ ])(sshi)([,.])/$1$2$3 ssi$3/
-    - xform/(^|[ ])(ffu)([,.])/$1$2$3 hhu$3/
-    - xform/(^|[ ])(ttsu)([,.])/$1ttu$3 $2$3/
-    - xform/(^|[ ])(jji)([,.])/$1$2$3 zzi$3/
+    - xform/(^| )(cchi)([,.])/$1$2$3 tti$3/
+    - xform/(^| )(sshi)([,.])/$1$2$3 ssi$3/
+    - xform/(^| )(ffu)([,.])/$1$2$3 hhu$3/
+    - xform/(^| )(ttsu)([,.])/$1ttu$3 $2$3/
+    - xform/(^| )(jji)([,.])/$1$2$3 zzi$3/
 ## 拗音
-    - xform/(^|[ ])sh([auo])([,.])/$1sh$2$3 sy$2$3/
-    - xform/(^|[ ])ch([auo])([,.])/$1ch$2$3 cy$2$3 ty$2$3/
-    - xform/(^|[ ])j([auo])([,.])/$1j$2$3 jy$2$3 zy$2$3/
-    - xform/(^|[ ])dy([auo])([,.])/$1dy$2$3 j$2$3 zy$2$3/
+    - xform/(^| )sh([auo])([,.])/$1sh$2$3 sy$2$3/
+    - xform/(^| )ch([auo])([,.])/$1ch$2$3 cy$2$3 ty$2$3/
+    - xform/(^| )j([auo])([,.])/$1j$2$3 jy$2$3 zy$2$3/
+    - xform/(^| )dy([auo])([,.])/$1dy$2$3 j$2$3 zy$2$3/
 ## 一般
-    - xform/(^|[ ])(shi)([,.])/$1$2$3 si$3/
-    - xform/(^|[ ])(chi)([,.])/$1$2$3 ti$3/
-    - xform/(^|[ ])(tsu)([,.])/$1$2$3 tu$3/
-    - xform/(^|[ ])(fu)([,.])/$1$2$3 hu$3/
-    - xform/(^|[ ])(ji)([,.])/$1$2$3 zi$3/
-    - xform/(^|[ ])(u)([,.])/$1$2$3 wu$3/
+    - xform/(^| )(shi)([,.])/$1$2$3 si$3/
+    - xform/(^| )(chi)([,.])/$1$2$3 ti$3/
+    - xform/(^| )(tsu)([,.])/$1$2$3 tu$3/
+    - xform/(^| )(fu)([,.])/$1$2$3 hu$3/
+    - xform/(^| )(ji)([,.])/$1$2$3 zi$3/
+    - xform/(^| )(u)([,.])/$1$2$3 wu$3/
 ## 特殊
-    - xform/(^|[ ])(dvyu)([.])/$1dyu$3/
+    - xform/(^| )dvyu([.])/$1dyu$2/
 ##### 其他 #####
     - "xlit|';/!,.|ABCDEF|"
     - xform/([a-z]+)B/$1BB/
@@ -362,14 +362,14 @@ top_reverse_lookup:
     - xform/F/F`日-片@/
     - xform/`日-平@ / /
     - xform/`日-片@ / /
-    - xform/([svc])([F])`日-片@/$1$2/
-    - xform/([avse])([v])([F])/$1$2$3`日-符@/
-    - xform/evF`日-符@ v/evF v/ #日語符號
-    - xform/ rrBB$/ rrBB`拉-小@/ #修正錯漏
-    - xform/ wwBB$/ wwBB`拉-小@/ #修正錯漏
+    - xform/([svc]F)`日-片@/$1/
+    - xform/([avse]vF)/$1`日-符@/
+    - xform/(evF)`日-符@( v)/$1$2/ #日語符號
+    - xform/( ryBB)$/$1`拉-小@/ #修正錯漏
+    - xform/( wyBB)$/$1`拉-小@/ #修正錯漏
     - "xlit|ABCDEF`@|';/!,.〔〕|"
     - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
-    - xform/ ᴊᴊ;〔拉-大〕/ ᴊᴊ;〔拉〕/ #修正錯漏
+    - xform/( ᴊᴊ;)〔拉-大〕/$1〔拉〕/ #修正錯漏
 ######################調出其他語言之翻譯器(結尾符號調出各國語言輸入)################
 ######################調出其他語言之翻譯器(開頭符號調出各國語言輸入)################
 easy_en:
@@ -384,7 +384,7 @@ easy_en:
     - xform/^/《Easy英語》/
     - xform/》;/》; /
     - xform/》'/》' /
-    - xform|》\/|》\/ |
+    - xform|》[/]|》/ |
   comment_format:
     - xform|[~a-z;/.'-]*||
 
@@ -422,7 +422,7 @@ gr:
   prefix: "'["
   tips: "《希》▶"
   disable_user_dict_for_patterns:
-    - ^[a-z]{1}[;']?[']?$
+    - ^[a-z]{1}[;']?'?$
   preedit_format:
     # - "xlit/abcdefghijklmnopqrstuvwxyz|/ABCDEFGHIJKLMNOPQRSTUVWXYZ /"
     - xform/^/《希》/
@@ -438,12 +438,12 @@ cyr:
   prefix: "']"
   tips: "《俄》▶"
   disable_user_dict_for_patterns:
-    - ^[b][fir][;']?$
-    - ^[e][b][;']?$
-    - ^[n][u][;']?$
-    - ^[r][k][;']?$
-    - ^[w][y][;']?$
-    - ^[a-z]{1}[;']?[']?$
+    - ^b[fir][;']?$
+    - ^eb[;']?$
+    - ^nu[;']?$
+    - ^rk[;']?$
+    - ^wy[;']?$
+    - ^[a-z]{1}[;']?'?$
   preedit_format:
     # - "xlit/abcdefghijklmnopqrstuvwxyz|/ABCDEFGHIJKLMNOPQRSTUVWXYZ /"
     - xform/^/《俄》/
@@ -459,7 +459,7 @@ fs:
   prefix: "'="
   tips: "《全》▶"
   disable_user_dict_for_patterns:
-    - ^[a-z]{1}[;']?[']?$
+    - ^[a-z]{1}[;']?'?$
   preedit_format:
     # - "xlit/abcdefghijklmnopqrstuvwxyz|/ABCDEFGHIJKLMNOPQRSTUVWXYZ /"
     - xform/^/《全》/
@@ -472,11 +472,11 @@ gr_reverse_lookup:
   comment_format:
     - "xlit|[';|AAB|"
     - xform/^/  /
-    - xform/([A]+)?([a-z]+)/$2$1A/
+    - xform/(A+)?([a-z]+)/$2$1A/
     - xform/AAA$/`希-大@/
     - xform/AA ([a-z]+)A$/AA`希-大@/
     - xform/A$/A`希@/
-    - xform/AA ([a-z]+)A ([a-z]+)?A?([ ])?([a-z]+)?A?([ ])?([a-z]+)?A?([ ])?([a-z]+)?A?([ ])?([a-z]+)?A?`希@/AA`希-大@/
+    - xform/AA ([a-z]+)A ([a-z]+)?A? ?([a-z]+)?A? ?([a-z]+)?A? ?([a-z]+)?A? ?([a-z]+)?A?`希@/AA`希-大@/
     - xform/AA/B/
     - "xlit|A`@B|'〔〕;|"
     - xform/'〔希〕/'〔希-小〕/
@@ -491,11 +491,11 @@ cyr_reverse_lookup:
   comment_format:
     - "xlit|]';|AAB|"
     - xform/^/  /
-    - xform/([A]+)?([a-z]+)/$2$1A/
+    - xform/(A+)?([a-z]+)/$2$1A/
     - xform/AAA$/`俄-大@/
     - xform/AA ([a-z]+)A$/AA`俄-大@/
     - xform/A$/A`俄@/
-    - xform/AA ([a-z]+)A ([a-z]+)?A?([ ])?([a-z]+)?A?([ ])?([a-z]+)?A?([ ])?([a-z]+)?A?([ ])?([a-z]+)?A?`俄@/AA`俄-大@/
+    - xform/AA ([a-z]+)A ([a-z]+)?A? ?([a-z]+)?A? ?([a-z]+)?A? ?([a-z]+)?A? ?([a-z]+)?A?`俄@/AA`俄-大@/
     - xform/^  BB/     BB/
     - xform/BB([a-z]+)A/$1AAA/
     - xform/AAA`俄@/AAA`俄-組@/
@@ -522,7 +522,7 @@ fs_reverse_lookup: #該反查濾鏡名
     - xform/([a-z]+);$/$1;`全-大@/
     - xform/ -BC/ -;/
     - xform/[ACEF]//
-    - xform/^  [ ]+/  /
+    - xform/^   +/  /
     - xform/BD/;/
     - "xlit|ABC`@|.';〔〕|"
     - 'xlit|DEF|",/|'
@@ -667,15 +667,15 @@ recognizer:
     # url: "^(www[.]|https?:|ftp:|mailto:|file:).*$"
     # url: "^(https?:|ftp:|mailto:|file:).*$"
     # email: "^[a-z][-_.0-9a-z]*@.*$"
-    punct: "[=][=][=]?$|[=]['][']?[=]?[']?[']?$|[=]?[][][][]?[']?$|[=]?[[][[]?[']?[=]?[]]?[]]?[']?$|[=][`][`]?$|[=][-,./;][-,./;]?$|[=][,][,]?[=][.][.]?$|[=][0-9]$|[=][9][=][0]$|[=][=][].,90'[]+$"
-    pt: "^[,.][,.'a-z]*$|^[']['a-z]*$|^[,][][]+[a-z]*$|^[,]v[][]+$" #|^v[][]+v?$|^[][]+[a-z]*$"
+    punct: "===?$|=''?=?'?'?$|=?[][][][]?'?$|=?[[][[]?'?=?[]]?[]]?'?$|=``?$|=[-,./;][-,./;]?$|=,,?=[.][.]?$|=[0-9]$|=9=0$|==[].,90'[]+$"
+    pt: "^[,.][,.'a-z]*$|^'['a-z]*$|^,[][]+[a-z]*$|^,v[][]+$" #|^v[][]+v?$|^[][]+[a-z]*$"
     reverse2_lookup: "^';[-.,;/0-9a-z|]*'?$"
     reverse3_lookup: "^;'[a-z`|]*'?$"
-    easy_en: "^['][.][a-z;/.'-]*$"
+    easy_en: "^'[.][a-z;/.'-]*$"
     japan: "^',[-a-z,.;/|]*'?$"
-    emoji_series: "^;[a-z]*$|^;;[-0-9a-z]$|^;[0-9]$|^;[0-9][-][0-9]?$"
-    gr: "^['][[][a-z';]*$"
-    cyr: "^['][]][a-z';]*$"
-    fs: "^['][=][-a-z';]*$"
+    emoji_series: "^;[a-z]*$|^;;[-0-9a-z]$|^;[0-9]$|^;[0-9]-[0-9]?$"
+    gr: "^'[[][a-z';]*$"
+    cyr: "^'[]][a-z';]*$"
+    fs: "^'=[-a-z';]*$"
     all_bpm: "^';'[-a-z0-9.,/;']*$"
     lua: "^;;$|^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|^'/[';/]?[a-z]*$|^'/[0-9./-]*$|^'/[xcoe][0-9a-z]+$"

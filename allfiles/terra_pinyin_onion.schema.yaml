@@ -79,13 +79,13 @@ speller:
     - xform/[)(]//
 ##### 日語 #####
 ## 符號
-    - derive|^([eaovs][v]),$|$1\.|
-    - derive|^([e][e][v]),$|$1\.|
-    - derive|^[e][v]([,.])$|-$1|
-    - derive|^[e][e][v]([,.])$|--$1|
-    - derive|^([x][x]),$|$1\.|
-    - derive|^[x][x]([,.])$|shime$1|
-    - derive|^[x][x]([,.])$|sime$1|
+    - derive|^([eaovs]v),$|$1\.|
+    - derive|^(eev),$|$1\.|
+    - derive|^ev([,.])$|-$1|
+    - derive|^eev([,.])$|--$1|
+    - derive|^(xx),$|$1\.|
+    - derive|^xx([,.])$|shime$1|
+    - derive|^xx([,.])$|sime$1|
     - derive|^noma([.])$|dou$1|
     - derive|^dou([.])$|onaji$1|
     - derive|^dou([.])$|onazi$1|
@@ -133,11 +133,11 @@ speller:
 ## 特殊
     - xform/^dvyu([.])$/dyu$1/ # デュ #特殊片假名被其他正則不轉寫。
 ##### 其他 #####
-    - "xlit|/',.-!;|ABCDEFG|"
-    - xform/^([a-z]+)[B][B]$/$1G/ #拉丁-大寫
-    - xform/^([G])([G])([a-z]+)([B])$/$3BB/ #拉丁-組合變音標記
-    - xform/^([a-z]+)AF$/$1A/ #韓語-單音
-    - xform/^([a-z]+)AAF$/$1AA/ #韓語-單音
+    # - "xlit|/',.-!;|ABCDEFG|"
+    - xform/^([a-z]+)''$/$1;/ #拉丁-大寫
+    - xform/^;;([a-z]+)(')$/$1$2$2/ #拉丁-組合變音標記
+    - xform|^([a-z]+)([/])!$|$1$2| #韓語-單音
+    - xform|^([a-z]+)([/][/])!$|$1$2| #韓語-單音
     - derive/^([nl])ve([1-5])$/$1ue$2/
     - derive/^([jqxy])u([a-z]*)([1-5])$/$1v$2$3/
     - derive/^([a-z]+)un([1-5])$/$1uen$2/
@@ -148,10 +148,10 @@ speller:
     - derive/^([a-z]+)([iu])a(o|ng?)([1-5])$/$1a$2$3$4/
     - derive/^([dtngkhrzcs])o(u|ng)([1-5])$/$1o$3/
     - derive/^([a-z]+)ong([1-5])$/$1on$2/
-    - abbrev/^([a-z])([a-z]+)([1-5])$/$1/
-    - abbrev/^([zcs]h)([a-z]+)([1-5])$/$1/
-    - abbrev/^([a-zE]+)([1-5ABCDG])$/$1/
-    - "xlit|12345ABCDEFG|;/.,'/',.-!;|"
+    - abbrev/^([a-z])[a-z]+[1-5]$/$1/
+    - abbrev/^([zcs]h)[a-z]+[1-5]$/$1/
+    - abbrev|^([a-z-]+)[1-5/',.;]$|$1|
+    - "xlit|12345|;/.,'|"
 
 translator:
   dictionary: terra_pinyin_onion.extended
@@ -163,38 +163,6 @@ translator:
     - xform|³|⁽³ꞏ⁾|
     - xform|⁴|⁽⁴’⁾|
     - xform|⁵|⁽⁵'⁾|
-  comment_format:
-    - xform ([aeiou])(ng?|r)([1234]) $1$3$2
-    - xform ([aeo])([iuo])([1234]) $1$3$2
-    - xform a1 ā
-    - xform a2 á
-    - xform a3 ǎ
-    - xform a4 à
-    - xform e1 ē
-    - xform e2 é
-    - xform e3 ě
-    - xform e4 è
-    - xform o1 ō
-    - xform o2 ó
-    - xform o3 ǒ
-    - xform o4 ò
-    - xform i1 ī
-    - xform i2 í
-    - xform i3 ǐ
-    - xform i4 ì
-    - xform u1 ū
-    - xform u2 ú
-    - xform u3 ǔ
-    - xform u4 ù
-    - xform v1 ǖ
-    - xform v2 ǘ
-    - xform v3 ǚ
-    - xform v4 ǜ
-    - xform/eh1/ê̄/
-    - xform/eh4/ề/
-    - xform/eh5/ê/
-#    - xform/eh[0-5]/ê/
-    - xform/([a-z]+)[0-5]/$1/
 
 top_reverse_lookup:
   tags: [ abc ]
@@ -203,44 +171,44 @@ top_reverse_lookup:
   comment_format:
 ##### 日語 #####
 ## 符號
-    - xform/(^|[ ])([eaovs][v])([,])/$1$2$3 $2\./
-    - xform/(^|[ ])([e][e][v])([,])/$1$2$3 $2\./
-    - xform/(^|[ ])([e][v])([,])/$1\-$3 \-\. $2$3/
-    - xform/(^|[ ])([e][e][v])([,])/$1\-\-$3 \-\-\. $2$3/
-    - xform/(^|[ ])([x][x])([,])/$1 shime\, shime\. sime\, sime\. $2$3 $2./
-    - xform/(^|[ ])(noma)([.])/$1dou$3 $2$3/
-    - xform/(^|[ ])(dou)([.])/$1$2$3 odoriji$3 odorizi$3 onaji$3 onazi$3/
+    - xform/(^| )([eaovs]v)(,)/$1$2$3 $2\./
+    - xform/(^| )(eev)(,)/$1$2$3 $2\./
+    - xform/(^| )(ev)(,)/$1-$3 -\. $2$3/
+    - xform/(^| )(eev)(,)/$1--$3 --\. $2$3/
+    - xform/(^| )(xx)(,)/$1 shime, shime\. sime, sime\. $2$3 $2\./
+    - xform/(^| )(noma)([.])/$1dou$3 $2$3/
+    - xform/(^| )(dou)([.])/$1$2$3 odoriji$3 odorizi$3 onaji$3 onazi$3/
 ## 小字
-    - xform/(^|[ ])(xtu)([,.])/$1ltu$3 ltsu$3 xtsu$3 $2$3/
-    - xform/(^|[ ])x([aeiou])([,.])/$1l$2$3 x$2$3/
-    - xform/(^|[ ])x(y[auo]|wa)([,.])/$1l$2$3 x$2$3/
-    - xform/(^|[ ])x(k[ea])([,.])/$1l$2$3 x$2$3/
-    - xform/(^|[ ])l(k[ea])([.])/$1$2$3 l$2$3/
+    - xform/(^| )(xtu)([,.])/$1ltu$3 ltsu$3 xtsu$3 $2$3/
+    - xform/(^| )x([aeiou])([,.])/$1l$2$3 x$2$3/
+    - xform/(^| )x(y[auo]|wa)([,.])/$1l$2$3 x$2$3/
+    - xform/(^| )x(k[ea])([,.])/$1l$2$3 x$2$3/
+    - xform/(^| )l(k[ea])([.])/$1$2$3 l$2$3/
 ## 促音+拗音
-    - xform/(^|[ ])ssh([auo])([,.])/$1ssh$2$3 ssy$2$3/
-    - xform/(^|[ ])cch([auo])([,.])/$1cch$2$3 ccy$2$3 tty$2$3/
-    - xform/(^|[ ])jj([auo])([,.])/$1jj$2$3 jjy$2$3 zzy$2$3/ #っじゃ
-    - xform/(^|[ ])ddy([auo])([,.])/$1ddy$2$3 jj$2$3 zzy$2$3/ #っぢゃ
+    - xform/(^| )ssh([auo])([,.])/$1ssh$2$3 ssy$2$3/
+    - xform/(^| )cch([auo])([,.])/$1cch$2$3 ccy$2$3 tty$2$3/
+    - xform/(^| )jj([auo])([,.])/$1jj$2$3 jjy$2$3 zzy$2$3/ #っじゃ
+    - xform/(^| )ddy([auo])([,.])/$1ddy$2$3 jj$2$3 zzy$2$3/ #っぢゃ
 ## 促音
-    - xform/(^|[ ])(cchi)([,.])/$1$2$3 tti$3/
-    - xform/(^|[ ])(sshi)([,.])/$1$2$3 ssi$3/
-    - xform/(^|[ ])(ffu)([,.])/$1$2$3 hhu$3/
-    - xform/(^|[ ])(ttsu)([,.])/$1ttu$3 $2$3/
-    - xform/(^|[ ])(jji)([,.])/$1$2$3 zzi$3/
+    - xform/(^| )(cchi)([,.])/$1$2$3 tti$3/
+    - xform/(^| )(sshi)([,.])/$1$2$3 ssi$3/
+    - xform/(^| )(ffu)([,.])/$1$2$3 hhu$3/
+    - xform/(^| )(ttsu)([,.])/$1ttu$3 $2$3/
+    - xform/(^| )(jji)([,.])/$1$2$3 zzi$3/
 ## 拗音
-    - xform/(^|[ ])sh([auo])([,.])/$1sh$2$3 sy$2$3/
-    - xform/(^|[ ])ch([auo])([,.])/$1ch$2$3 cy$2$3 ty$2$3/
-    - xform/(^|[ ])j([auo])([,.])/$1j$2$3 jy$2$3 zy$2$3/
-    - xform/(^|[ ])dy([auo])([,.])/$1dy$2$3 j$2$3 zy$2$3/
+    - xform/(^| )sh([auo])([,.])/$1sh$2$3 sy$2$3/
+    - xform/(^| )ch([auo])([,.])/$1ch$2$3 cy$2$3 ty$2$3/
+    - xform/(^| )j([auo])([,.])/$1j$2$3 jy$2$3 zy$2$3/
+    - xform/(^| )dy([auo])([,.])/$1dy$2$3 j$2$3 zy$2$3/
 ## 一般
-    - xform/(^|[ ])(shi)([,.])/$1$2$3 si$3/
-    - xform/(^|[ ])(chi)([,.])/$1$2$3 ti$3/
-    - xform/(^|[ ])(tsu)([,.])/$1$2$3 tu$3/
-    - xform/(^|[ ])(fu)([,.])/$1$2$3 hu$3/
-    - xform/(^|[ ])(ji)([,.])/$1$2$3 zi$3/
-    - xform/(^|[ ])(u)([,.])/$1$2$3 wu$3/
+    - xform/(^| )(shi)([,.])/$1$2$3 si$3/
+    - xform/(^| )(chi)([,.])/$1$2$3 ti$3/
+    - xform/(^| )(tsu)([,.])/$1$2$3 tu$3/
+    - xform/(^| )(fu)([,.])/$1$2$3 hu$3/
+    - xform/(^| )(ji)([,.])/$1$2$3 zi$3/
+    - xform/(^| )(u)([,.])/$1$2$3 wu$3/
 ## 特殊
-    - xform/(^|[ ])(dvyu)([.])/$1dyu$3/
+    - xform/(^| )dvyu([.])/$1dyu$2/
 ##### 其他 #####
     - "xlit|';/!,.|ABCDEF|"
     - xform/^/  /
@@ -263,41 +231,41 @@ top_reverse_lookup:
     - xform/F/F`日-片@/
     - xform/`日-平@ / /
     - xform/`日-片@ / /
-    - xform/([svc])([F])`日-片@/$1$2/
-    - xform/([avse])([v])([F])/$1$2$3`日-符@/
-    - xform/evF`日-符@ v/evF v/
+    - xform/([svc]F)`日-片@/$1/
+    - xform/([avse]vF)/$1`日-符@/
+    - xform/(evF)`日-符@( v)/$1$2/
     - "xlit|ABCDEF`@|';/!,.〔〕|"
-    - xform ([aeiou])(ng?|r)([1234]) $1$3$2
-    - xform ([aeo])([iuo])([1234]) $1$3$2
-    - xform a1 ā
-    - xform a2 á
-    - xform a3 ǎ
-    - xform a4 à
-    - xform e1 ē
-    - xform e2 é
-    - xform e3 ě
-    - xform e4 è
-    - xform o1 ō
-    - xform o2 ó
-    - xform o3 ǒ
-    - xform o4 ò
-    - xform i1 ī
-    - xform i2 í
-    - xform i3 ǐ
-    - xform i4 ì
-    - xform u1 ū
-    - xform u2 ú
-    - xform u3 ǔ
-    - xform u4 ù
-    - xform v1 ǖ
-    - xform v2 ǘ
-    - xform v3 ǚ
-    - xform v4 ǜ
+    - xform/([aeiou])(ng?|r)([1234])/$1$3$2/
+    - xform/([aeo])([iuo])([1234])/$1$3$2/
+    - xform/a1/ā/
+    - xform/a2/á/
+    - xform/a3/ǎ/
+    - xform/a4/à/
+    - xform/e1/ē/
+    - xform/e2/é/
+    - xform/e3/ě/
+    - xform/e4/è/
+    - xform/o1/ō/
+    - xform/o2/ó/
+    - xform/o3/ǒ/
+    - xform/o4/ò/
+    - xform/i1/ī/
+    - xform/i2/í/
+    - xform/i3/ǐ/
+    - xform/i4/ì/
+    - xform/u1/ū/
+    - xform/u2/ú/
+    - xform/u3/ǔ/
+    - xform/u4/ù/
+    - xform/v1/ǖ/
+    - xform/v2/ǘ/
+    - xform/v3/ǚ/
+    - xform/v4/ǜ/
     - xform/eh1/ê̄/
     - xform/eh4/ề/
     - xform/eh5/ê/
 #    - xform/eh[0-5]/ê/
-    - xform/([a-z]+)[0-5]/$1/
+    - xform/([a-z]+)5/$1/
 
 custom_phrase:
   dictionary: ""
@@ -318,6 +286,38 @@ reverse_lookup:
   preedit_format:
     - "xlit|abcdefghijklmnopqrstuvwxyz|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符|"
     - 'xform/\\/ /'
+  comment_format:
+    - xform/([aeiou])(ng?|r)([1234])/$1$3$2/
+    - xform/([aeo])([iuo])([1234])/$1$3$2/
+    - xform/a1/ā/
+    - xform/a2/á/
+    - xform/a3/ǎ/
+    - xform/a4/à/
+    - xform/e1/ē/
+    - xform/e2/é/
+    - xform/e3/ě/
+    - xform/e4/è/
+    - xform/o1/ō/
+    - xform/o2/ó/
+    - xform/o3/ǒ/
+    - xform/o4/ò/
+    - xform/i1/ī/
+    - xform/i2/í/
+    - xform/i3/ǐ/
+    - xform/i4/ì/
+    - xform/u1/ū/
+    - xform/u2/ú/
+    - xform/u3/ǔ/
+    - xform/u4/ù/
+    - xform/v1/ǖ/
+    - xform/v2/ǘ/
+    - xform/v3/ǚ/
+    - xform/v4/ǜ/
+    - xform/eh1/ê̄/
+    - xform/eh4/ề/
+    - xform/eh5/ê/
+#    - xform/eh[0-5]/ê/
+    - xform/([a-z]+)5/$1/
 
 punctuator:
   import_preset: default

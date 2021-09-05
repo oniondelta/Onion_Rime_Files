@@ -8,7 +8,7 @@ schema:
 
   name: "❖分別調出蝦米(plus)❖"
   schema_id: dif1
-  version: "202108"
+  version: "202109"
   dependencies:
     - punct_ovff
     - dif1_jphi
@@ -245,17 +245,17 @@ jphi_lookup:
   enable_user_dict: true
   suffix: ","
   disable_user_dict_for_patterns:
-    - ^[kstnhmrgzdbp][aiueo][,]$
-    - ^[sc][h][i][,]$
-    - ^[t][s][u][,]$
-    - ^[f][u][,]$
-    - ^[y][auo][,]$
-    - ^[w][ao][,]$
-    - ^[n][,]$
-    - ^[kgsztnhbpmr][y][auo][,]$
-    - ^[sc][h][auo][,]$
-    - ^[j][auo][,]$
-    - ^-{1,2}[,]$
+    - ^[kstnhmrgzdbp][aiueo],$
+    - ^[sc]hi,$
+    - ^tsu,$
+    - ^fu,$
+    - ^y[auo],$
+    - ^w[ao],$
+    - ^n,$
+    - ^[kgsztnhbpmr]y[auo],$
+    - ^[sc]h[auo],$
+    - ^j[auo],$
+    - ^-{1,2},$
   preedit_format:
     - "xlit|,.|AB|"
     - xform/A/ (平)/
@@ -273,15 +273,15 @@ jpka_lookup:
   suffix: "."
   disable_user_dict_for_patterns:
     - ^[kstnhmrgzdbp][aiueo][.]$
-    - ^[sc][h][i][.]$
-    - ^[t][s][u][.]$
-    - ^[f][u][.]$
-    - ^[y][auo][.]$
-    - ^[w][ao][.]$
-    - ^[n][.]$
-    - ^[kgsztnhbpmr][y][auo][.]$
-    - ^[sc][h][auo][.]$
-    - ^[j][auo][.]$
+    - ^[sc]hi[.]$
+    - ^tsu[.]$
+    - ^fu[.]$
+    - ^y[auo][.]$
+    - ^w[ao][.]$
+    - ^n[.]$
+    - ^[kgsztnhbpmr]y[auo][.]$
+    - ^[sc]h[auo][.]$
+    - ^j[auo][.]$
     - ^-{1,2}[.]$
   preedit_format:
     - "xlit|.,|AB|"
@@ -334,7 +334,7 @@ gr_lookup:
   enable_user_dict: true
   suffix: "["
   disable_user_dict_for_patterns:
-    - ^[a-z]{1}[\[]$
+    - ^[a-z]{1}[[]$
   preedit_format:
     - "xlit|[|A|"
     - xform/AA/ (希-大)/
@@ -351,12 +351,12 @@ cyr_lookup:
   enable_user_dict: true
   suffix: "]"
   disable_user_dict_for_patterns:
-    - ^[a-z]{1}[\]]$
-    - ^[b][fir][\]]$
-    - ^[e][b][\]]$
-    - ^[n][u][\]]$
-    - ^[r][k][\]]$
-    - ^[w][y][\]]$
+    - ^[a-z]{1}[]]$
+    - ^b[fir][]]$
+    - ^eb[]]$
+    - ^nu[]]$
+    - ^rk[]]$
+    - ^wy[]]$
   preedit_format:
     - "xlit|]|A|"
     - xform/AAA/ (俄-組合)/
@@ -374,7 +374,7 @@ fs_lookup:
   enable_user_dict: true
   suffix: "="
   disable_user_dict_for_patterns:
-    - ^[a-z]{1}[=]$
+    - ^[a-z]{1}=$
   preedit_format:
     - "xlit|=|A|"
     - xform/AA/ (全-大)/
@@ -394,7 +394,7 @@ easy_en:
     - xform/^/《Easy英語》/
     - xform/》;/》; /
     - xform/》'/》' /
-    - xform|》\/|》\/ |
+    - xform|》[/]|》/ |
   comment_format:
     - xform|[~a-z;/.'-]*||
 
@@ -561,20 +561,20 @@ recognizer:
     # url: "^(www[.]|https?:|ftp:|mailto:|file:).*$"
     # url: "^(https?:|ftp:|mailto:|file:).*$"
     # email: "^[a-z][-_.0-9a-z]*@.*$"
-    punct: "^[svc][.]?$|[=][=][=]?$|[=]['][']?[=]?[']?[']?$|[=]?[][][][]?[']?$|[=]?[[][[]?[']?[=]?[]]?[]]?[']?$|[=][`][`]?$|[=][-,./;][-,./;]?$|[=][,][,]?[=][.][.]?$|[=][0-9]$|[=][9][=][0]$|[=][=][].,90'[]+$"
-    pt: "^[,.][,.'a-z]*$|^[']['a-z]*$|^[,][][]+[a-z]*$|^[,]v[][]+$" #|^v[][]+v?$|^[][]+[a-z]*$"
-    jphi_lookup: "^([-a-z]+[,][-a-z,.]*)+$"
+    punct: "^[svc][.]?$|===?$|=''?=?'?'?$|=?[][][][]?'?$|=?[[][[]?'?=?[]]?[]]?'?$|=``?$|=[-,./;][-,./;]?$|=,,?=[.][.]?$|=[0-9]$|=9=0$|==[].,90'[]+$"
+    pt: "^[,.][,.'a-z]*$|^'['a-z]*$|^,[][]+[a-z]*$|^,v[][]+$" #|^v[][]+v?$|^[][]+[a-z]*$"
+    jphi_lookup: "^([-a-z]+,[-a-z,.]*)+$"
     jpka_lookup: "^(?![svc][.])([-a-z]+[.][-a-z.,]*)+$"
     korea_lookup: "^([a-z]+[/][a-z/]*)+$"
-    latin_lookup: "^([-a-z]+['][']?[']?[-a-z']*)+$"
+    latin_lookup: "^([-a-z]+''?'?[-a-z']*)+$"
     cyr_lookup: "^([a-z]+[]][]]?[]]?[]a-z]*)+$"
     gr_lookup: "^([a-z]+[[][[]?[a-z[]*)+$"
-    fs_lookup: "^([-a-z]+[=][=]?[-a-z=]*)+$"
+    fs_lookup: "^([-a-z]+==?[-a-z=]*)+$"
     reverse2_lookup: "^';[-.,;/0-9a-z`|]*'?$"
     reverse3_lookup: "^;'[a-z`|]*'?$"
-    easy_en: "^['][.][a-z;/.'-]*$"
+    easy_en: "^'[.][a-z;/.'-]*$"
     japan: "^',[-a-z;|]*'?$" #^',[-a-z,./;|]*'?$
-    emoji_series: "^;[a-z]*$|^;;[-0-9a-z]$|^;[0-9]$|^;[0-9][-][0-9]?$"
+    emoji_series: "^;[a-z]*$|^;;[-0-9a-z]$|^;[0-9]$|^;[0-9]-[0-9]?$"
 #    第一個不能刪，否則無法用數字選擇。
 #    「-」不能刪，顏文字會用到。
     all_bpm: "^';'[-a-z0-9.,/;']*$"
