@@ -334,7 +334,7 @@ gr_lookup:
   enable_user_dict: true
   suffix: "["
   disable_user_dict_for_patterns:
-    - ^[a-z]{1}[[]$
+    - ^[a-z][[]$
   preedit_format:
     - "xlit|[|A|"
     - xform/AA/ (希-大)/
@@ -351,7 +351,7 @@ cyr_lookup:
   enable_user_dict: true
   suffix: "]"
   disable_user_dict_for_patterns:
-    - ^[a-z]{1}[]]$
+    - ^[a-z][]]$
     - ^b[fir][]]$
     - ^eb[]]$
     - ^nu[]]$
@@ -374,7 +374,7 @@ fs_lookup:
   enable_user_dict: true
   suffix: "="
   disable_user_dict_for_patterns:
-    - ^[a-z]{1}=$
+    - ^[a-z]=$
   preedit_format:
     - "xlit|=|A|"
     - xform/AA/ (全-大)/

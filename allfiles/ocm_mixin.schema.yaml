@@ -422,7 +422,7 @@ gr:
   prefix: "'["
   tips: "《希》▶"
   disable_user_dict_for_patterns:
-    - ^[a-z]{1}[;']?'?$
+    - ^[a-z][;']?'?$
   preedit_format:
     # - "xlit/abcdefghijklmnopqrstuvwxyz|/ABCDEFGHIJKLMNOPQRSTUVWXYZ /"
     - xform/^/《希》/
@@ -443,7 +443,7 @@ cyr:
     - ^nu[;']?$
     - ^rk[;']?$
     - ^wy[;']?$
-    - ^[a-z]{1}[;']?'?$
+    - ^[a-z][;']?'?$
   preedit_format:
     # - "xlit/abcdefghijklmnopqrstuvwxyz|/ABCDEFGHIJKLMNOPQRSTUVWXYZ /"
     - xform/^/《俄》/
@@ -459,7 +459,7 @@ fs:
   prefix: "'="
   tips: "《全》▶"
   disable_user_dict_for_patterns:
-    - ^[a-z]{1}[;']?'?$
+    - ^[a-z][;']?'?$
   preedit_format:
     # - "xlit/abcdefghijklmnopqrstuvwxyz|/ABCDEFGHIJKLMNOPQRSTUVWXYZ /"
     - xform/^/《全》/
