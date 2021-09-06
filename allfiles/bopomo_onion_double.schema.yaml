@@ -138,12 +138,12 @@ speller:
     - xform/^([bpmfdtnlgkhjqxZCSrzcs])[vu]M/$1n/
     - xform/^([bpmfdtnlgkhjqxZCSrzcs])iN/$1r/
     - xform/^([bpmfdtnlgkhjqxZCSrzcs])iG/$1t/
-    - xform/^([aoeEAIOUMNKGR])(\d)$/o$1$2/
+    - xform/^([aoeEAIOUMNKGR]\d)$/o$1/
     - xform/^([rZSCzsc])(\d)$/$1i$2/
     - xform/^([yui])(\d)$/$1e$2/
     - 'xlit|ORUAKMNGEIZSC|wrdjshfgkkwav|'
 ###########################
-    - abbrev/^([a-z])([a-z])\d$/$1$2/
+    - abbrev/^([a-z][a-z])\d$/$1/
     - abbrev/^([abcdfghijklmnopqrstuvwxyz])[a-z]\d$/$1/
 #    - abbrev/^([yui])i\d$/$1/
 #    - abbrev/^([yui])i(\d)$/$1$2/
@@ -159,7 +159,7 @@ translator:
   preedit_format:
 ###############
     - xform/\\/ /
-    - xform|^([a-z ,./';]*)$|\U$1\E\t（$1）|
+    - xform|^([a-z ,./';]+)$|\U$1\E\t（$1）|
     - xform|([A-Z]),|$1，|
     - xform|([A-Z])[.]|$1．|
     - xform|([A-Z])[/]|$1／|
