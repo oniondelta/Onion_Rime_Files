@@ -158,7 +158,8 @@ translator:
   initial_quality: "0"
   preedit_format:
 ###############
-    - xform|^([a-z \\,./';]*)$|\U$1\E\t（$1）|
+    - xform/\\/ /
+    - xform|^([a-z ,./';]*)$|\U$1\E\t（$1）|
     - xform|([A-Z]),|$1，|
     - xform|([A-Z])[.]|$1．|
     - xform|([A-Z])[/]|$1／|
@@ -206,9 +207,7 @@ translator:
     - 'xform/([bpmdtnljqx]):ㄧㄢ\|ㄨㄞ/$1:ㄧㄢ/'
     - 'xform/([gkhwva]):ㄧㄢ\|ㄨㄞ/$1:ㄨㄞ/'
 #######
-    - "xlit|bpmfdtnlgkhjqxrzcsiuywvao|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄖㄗㄘㄙㄧㄨㄩㄓㄔㄕ◌|"
-    - "xlit|;/.,'|ˉˊˇˋ˙|"
-    - 'xform/\\/ /'
+    - "xlit|bpmfdtnlgkhjqxrzcsiuywvao;/.,'|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄖㄗㄘㄙㄧㄨㄩㄓㄔㄕ◌ˉˊˇˋ˙|"
 #######
     - "xlit|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ，．／；＇|ABCDEFGHIJKLMNOPQRSTUVWXYZ,./;'|"
     - 'xform/://'

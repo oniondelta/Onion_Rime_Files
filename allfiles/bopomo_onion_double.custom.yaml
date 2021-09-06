@@ -1,0 +1,111 @@
+patch:
+  speller/algebra:
+    - xform/iu/iou/
+    - xform/ui/uei/
+    - xform/ong/ung/
+    - xform/yi?/i/
+    - xform/wu?/u/
+    - xform/iu/v/
+    - xform/([jqx])u/$1v/
+    - xform/([iuv])n/$1en/
+    - xform/zhi?/Z/
+    - xform/chi?/C/
+    - xform/shi?/S/
+    - xform/([zcsr])i/$1/
+    - xform/ai/A/
+    - xform/ei/I/
+    - xform/ao/O/
+    - xform/ou/U/
+    - xform/ang/K/
+    - xform/eng/G/
+    - xform/an/M/
+    - xform/en/N/
+    - xform/er/R/
+    - xform/eh/E/
+    - xform/([iv])e/$1E/
+#######
+    - xform/^([bpmfdtnlgkhjqxZCSrzcs])v(\d)$/$1y$2/
+    - xform/^v/y/
+    - xform/^([bpmfdtnlgkhjqxZCSrzcs])iO/$1q/
+    - xform/^([bpmfdtnlgkhjqxZCSrzcs])iU/$1c/
+    - xform/^([bpmfdtnlgkhjqxZCSrzcs])(uA|iM)/$1m/
+    - xform/^([bpmfdtnlgkhjqxZCSrzcs])uo/$1o/
+    - xform/^([bpmfdtnlgkhjqxZCSrzcs])iE/$1p/
+    - xform/^([bpmfdtnlgkhjqxZCSrzcs])[vu]N/$1v/
+    - xform/^([bpmfdtnlgkhjqxZCSrzcs])[vu]G/$1b/
+    - xform/^([bpmfdtnlgkhjqxZCSrzcs])(vE|uI)/$1l/
+    - xform/^([bpmfdtnlgkhjqxZCSrzcs])[ui]a/$1z/
+    - xform/^([bpmfdtnlgkhjqxZCSrzcs])[ui]K/$1x/
+    - xform/^([bpmfdtnlgkhjqxZCSrzcs])[vu]M/$1n/
+    - xform/^([bpmfdtnlgkhjqxZCSrzcs])iN/$1r/
+    - xform/^([bpmfdtnlgkhjqxZCSrzcs])iG/$1t/
+    - xform/^([aoeEAIOUMNKGR])(\d)$/o$1$2/
+    - xform/^([rZSCzscyui])(\d)$/$1i$2/
+    - derive/^([yui])i(\d)$/$1e$2/
+    - 'xlit|ORUAKMNGEIZSC|wrdjshfgkkwav|'
+#######
+    - abbrev/^([a-z])([a-z])\d$/$1$2/
+    - abbrev/^([yui])i\d$/$1/
+    - abbrev/^([yui])i(\d)$/$1$2/
+    - abbrev/^([abcdfghjklmnopqrstvwxz])[a-z](\d)$/$1$2/
+#######
+    - "xlit|12345|;/.,'|"
+###########################
+  translator/preedit_format:
+########
+    - xform/\\/ /
+    - xform|^([a-z ,./';]*)$|\U$1\E\t（$1）|
+    - xform|([A-Z]),|$1，|
+    - xform|([A-Z])[.]|$1．|
+    - xform|([A-Z])[/]|$1／|
+    - xform|([A-Z]);|$1；|
+    - xform|([A-Z])'|$1＇|
+    - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ|"
+#######
+    - 'xform/([a-z])([a-z])e/$2$1☯/'
+#######
+    - 'xform/([a-z])([a-z])/$1\U$2\E/'
+    - "xlit|ASDFGHJYUIEW|ㄚㄤㄡㄣㄥㄢㄞㄩㄨㄧㄜㄠ|"
+    - 'xform/([wraszcviuy])ㄧ/$1ㄭ/'
+    - 'xform/([iuy])ㄜ/$1ㄭ/'
+    - 'xform/Q/:ㄧㄠ/'
+    - 'xform/R/:ㄧㄣ\|ㄦ/'
+    - 'xform/T/:ㄧㄥ/'
+    - 'xform/O/:ㄛ\|ㄨㄛ/'
+    - 'xform/P/:ㄧㄝ/'
+    - 'xform/K/:ㄟ\|ㄝ/'
+    - 'xform/L/:ㄩㄝ\|ㄨㄟ/'
+    - 'xform/Z/:ㄧㄚ\|ㄨㄚ/'
+    - 'xform/X/:ㄧㄤ\|ㄨㄤ/'
+    - 'xform/C/:ㄧㄡ/'
+    - 'xform/V/:ㄨㄣ\|ㄩㄣ/'
+    - 'xform/B/:ㄨㄥ\|ㄩㄥ/'
+    - 'xform/N/:ㄨㄢ\|ㄩㄢ/'
+    - 'xform/M/:ㄧㄢ\|ㄨㄞ/'
+#######
+    - 'xform/(o):ㄧㄣ\|ㄦ/$1:ㄦ/'
+    - 'xform/([bpmdtnljqx]):ㄧㄣ\|ㄦ/$1:ㄧㄣ/'
+    - 'xform/([bmfiuo]):ㄛ\|ㄨㄛ/$1:ㄛ/'
+    - 'xform/([dtngkhwvarzcs]):ㄛ\|ㄨㄛ/$1:ㄨㄛ/'
+    - 'xform/([bpmfdtnlgkhwvarzcsu]):ㄟ\|ㄝ/$1:ㄟ/'
+    - 'xform/([yi]):ㄟ\|ㄝ/$1:ㄝ/'
+    - 'xform/([dtlgkhwvarzcs]):ㄩㄝ\|ㄨㄟ/$1:ㄨㄟ/'
+    - 'xform/([jqx]):ㄩㄝ\|ㄨㄟ/$1:ㄩㄝ/'
+    - 'xform/([pdnljqx]):ㄧㄚ\|ㄨㄚ/$1:ㄧㄚ/'
+    - 'xform/([gkhavw]):ㄧㄚ\|ㄨㄚ/$1:ㄨㄚ/'
+    - 'xform/([nljqx]):ㄧㄤ\|ㄨㄤ/$1:ㄧㄤ/'
+    - 'xform/([gkhavw]):ㄧㄤ\|ㄨㄤ/$1:ㄨㄤ/'
+    - 'xform/([dtnlgkhwvarzcs]):ㄨㄣ\|ㄩㄣ/$1:ㄨㄣ/'
+    - 'xform/([jqx]):ㄨㄣ\|ㄩㄣ/$1:ㄩㄣ/'
+    - 'xform/([dtnlgkhwvarzcs]):ㄨㄥ\|ㄩㄥ/$1:ㄨㄥ/'
+    - 'xform/([jqx]):ㄨㄥ\|ㄩㄥ/$1:ㄩㄥ/'
+    - 'xform/([dtngkhwvarzcs]):ㄨㄢ\|ㄩㄢ/$1:ㄨㄢ/'
+    - 'xform/([jqx]):ㄨㄢ\|ㄩㄢ/$1:ㄩㄢ/'
+    - 'xform/([bpmdtnljqx]):ㄧㄢ\|ㄨㄞ/$1:ㄧㄢ/'
+    - 'xform/([gkhwva]):ㄧㄢ\|ㄨㄞ/$1:ㄨㄞ/'
+#######
+    - "xlit|bpmfdtnlgkhjqxrzcsiuywvao;/.,'|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄖㄗㄘㄙㄧㄨㄩㄓㄔㄕ◌ˉˊˇˋ˙|"
+#######
+    - "xlit|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ，．／；＇|abcdefghijklmnopqrstuvwxyz,./;'|"
+    - 'xform/://'
+###################################
