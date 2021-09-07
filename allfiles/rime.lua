@@ -48,7 +48,7 @@
 --
 --
 --      《 ＊ 以下「處理」注意在 processors 中的順序，基本放在最前面 》
---      - lua_processor@endspace                  --（hangeul 和 hangeul2set） 韓語（非英語等）空格鍵後添加" "
+--      - lua_processor@endspace                  --（關） （hangeul 和 hangeul2set） 韓語（非英語等）空格鍵後添加" "（該方式無法記錄到用戶詞典，故使用原生程式另外方式達成該項功能）
 --      - lua_processor@ascii_punct_change        --（bopomo_onionplus_2和3） 注音非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
 --      - lua_processor@array30up                 --（關） 行列30三四碼字按空格直接上屏
 --      - lua_processor@array30up_zy              --（關） 行列30注音反查 Return 和 space 上屏修正
@@ -895,47 +895,47 @@ end
 
 
 
---- @@ endspace 增加上屏空白
---[[
-（hangeul 和 hangeul2set）
-韓語（非英語等）空格鍵後添加" "
---]]
-function endspace(key, env)
-  local engine = env.engine
-  local context = engine.context
-  -- local arr = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}
-  --- accept: space_do_space when: composing
-  if (key:repr() == "space") and (context:is_composing()) then
-    local caret_pos_es = context.caret_pos
-    local orig_es = context:get_commit_text()
-    -- local orig_es = context:get_commit_composition()
-    -- local orig_es = context:commit()
-    -- local orig_es = context:get_script_text()
-    -- local orig_es = string.gsub(context:get_script_text(), " ", "a")
-    -- 以下「含有英文字母、控制字元、空白」和「切分上屏時」不作用（用字數統計驗證是否切分）
-    if (not string.find(orig_es, "[%a%c%s]")) and (caret_pos_es == context.input:len()) then
-    -- if (not string.find(orig_es, "[%a%c%s]")) and (caret_pos_es == context.input:len()) then
-    -- if (string.find(orig_es, "[%a%c%s]")) and (caret_pos_es == context.input:len()) then
-      -- 下一句：游標位置向左一格，在本例無用，單純記錄用法
-      -- context.caret_pos = caret_pos - 1
-      -- 下兩句合用可使輸出句被電腦記憶
-      -- engine:commit_text("a")
-      -- engine:confirm_current_selection()
-      -- 下一句：用冒號為精簡寫法，該句為完整寫法
-      -- engine.commit_text(engine, orig_es .. "a")
-      -- engine:commit_text(orig_es .. "a")
-      engine:commit_text(orig_es .. " ") --「return 1」時用
-      -- engine:commit_text(orig_es) --「return 0」「return 2」時用
-      context:clear()
-      return 1 -- kAccepted
-      -- 「0」「2」「kAccepted」「kRejected」「kNoop」：直接後綴產生空白
-      -- 「1」：後綴不會產生空白，可用.." "增加空白或其他符號
-      -- （該條目有問題，實測對應不起來）「拒」kRejected、「收」kAccepted、「不認得」kNoop，分別對應返回值：0、1、2。
-      -- 返回「拒絕」時，雖然我們已經處理過按鍵了，但系統以為沒有，於是會按默認值再處理一遍。
-    end
-  end
-  return 2 -- kNoop
-end
+-- --- @@ endspace 增加上屏空白
+-- --[[
+-- （hangeul 和 hangeul2set）
+-- 韓語（非英語等）空格鍵後添加" "
+-- --]]
+-- function endspace(key, env)
+--   local engine = env.engine
+--   local context = engine.context
+--   -- local arr = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}
+--   --- accept: space_do_space when: composing
+--   if (key:repr() == "space") and (context:is_composing()) then
+--     local caret_pos_es = context.caret_pos
+--     local orig_es = context:get_commit_text()
+--     -- local orig_es = context:get_commit_composition()
+--     -- local orig_es = context:commit()
+--     -- local orig_es = context:get_script_text()
+--     -- local orig_es = string.gsub(context:get_script_text(), " ", "a")
+--     -- 以下「含有英文字母、控制字元、空白」和「切分上屏時」不作用（用字數統計驗證是否切分）
+--     if (not string.find(orig_es, "[%a%c%s]")) and (caret_pos_es == context.input:len()) then
+--     -- if (not string.find(orig_es, "[%a%c%s]")) and (caret_pos_es == context.input:len()) then
+--     -- if (string.find(orig_es, "[%a%c%s]")) and (caret_pos_es == context.input:len()) then
+--       -- 下一句：游標位置向左一格，在本例無用，單純記錄用法
+--       -- context.caret_pos = caret_pos - 1
+--       -- 下兩句合用可使輸出句被電腦記憶
+--       -- engine:commit_text("a")
+--       -- engine:confirm_current_selection()
+--       -- 下一句：用冒號為精簡寫法，該句為完整寫法
+--       -- engine.commit_text(engine, orig_es .. "a")
+--       -- engine:commit_text(orig_es .. "a")
+--       engine:commit_text(orig_es .. " ") --「return 1」時用
+--       -- engine:commit_text(orig_es) --「return 0」「return 2」時用
+--       context:clear()
+--       return 1 -- kAccepted
+--       -- 「0」「2」「kAccepted」「kRejected」「kNoop」：直接後綴產生空白
+--       -- 「1」：後綴不會產生空白，可用.." "增加空白或其他符號
+--       -- （該條目有問題，實測對應不起來）「拒」kRejected、「收」kAccepted、「不認得」kNoop，分別對應返回值：0、1、2。
+--       -- 返回「拒絕」時，雖然我們已經處理過按鍵了，但系統以為沒有，於是會按默認值再處理一遍。
+--     end
+--   end
+--   return 2 -- kNoop
+-- end
 
 
 
