@@ -21,7 +21,6 @@ switches:
 
 engine:
   processors:
-    - lua_processor@endspace #用戶詞典無法記憶，考慮關閉，但使用符號置換方式切分會有問題！且字典已用詞頻校正，測試效果中。hangeul2set 沒有記憶問題則開啟。
     - ascii_composer
     - recognizer
     - key_binder
@@ -84,8 +83,9 @@ reverse_lookup:
 
 punctuator:
 #  import_preset: default
+  use_space: true
   full_shape:
-    " " : { commit: "　" }
+    # " " : { commit: "　" }
     "<" : { commit: "，" }
     ">" : { commit: "。" }
     "?" : [ ？, ／, ÷ ]
@@ -114,9 +114,8 @@ punctuator:
     "{" : [ 『, 〖, 〈, ｛ ]
     "}" : [ 』, 〗, 〉, ｝ ]
   half_shape:
+    " ": " "
     "`" : { commit: "₩" }
-#關#    "|" : { commit: " " }
-#關#    "\\" : ['\', '|']
     "$" : [ "$", "₩", "＄", "¥", "￥", "€", "£", "￡", "₤", "¢", "￠", "₵", "₡", "¤", "৳", "฿", "₠", "₢", "₣", "₥", "₦", "₧", "₪", "₫", "₭", "₮", "₯", "₰", "₱", "₲", "₳", "₴", "₶", "₷", "₸", "₹", "₺", "₨", "﷼" ]
     "%" : [ "%", "％", "‰", "‱", "°", "℃", "℉", "Å", "㏃", "㏆", "㎈", "㏄", "㏅", "㎝", "㎠", "㎤", "㏈", "㎗", "㎙", "㎓", "㎬", "㏉", "㏊", "㏋", "㎐", "㏌", "㎄", "㎅", "㎉", "㎏", "㎑", "㏍", "㎘", "㎞", "㏎", "㎢", "㎦", "㎪", "㏏", "㎸", "㎾", "㏀", "㏐", "㏓", "㎧", "㎨", "㎡", "㎥", "㎃", "㏔", "㎆", "㎎", "㎒", "㏕", "㎖", "㎜", "㎟", "㎣", "㏖", "㎫", "㎳", "㎷", "㎹", "㎽", "㎿", "㏁", "㎁", "㎋", "㎚", "㎱", "㎵", "㎻", "㏘", "㎩", "㎀", "㎊", "㏗", "㏙", "㏚", "㎰", "㎴", "㎺", "㎭", "㎮", "㎯", "㏛", "㏜", "㎔", "㏝", "㎂", "㎌", "㎍", "㎕", "㎛", "㎲", "㎶", "㎼" ]
     "&" : [ "&", "＆", "＃", "＠", ⅟, ½, ↉, ⅓, ⅔, ¼, ⅕, ⅖, ⅗, ⅘, ⅙, ⅚, ⅐, ⅛, ⅜, ⅝, ⅞, ⅑, ⅒ ]
@@ -151,10 +150,9 @@ key_binder:
     - {accept: Tab, send: Shift+Left, when: paging}
     - {accept: Shift+space, send: Page_Down, when: has_menu}
     - {accept: Shift+Tab, send: Page_Up, when: paging}
-#     - {accept: Return, send: space, when: paging}
-#     - {accept: Return, send: space, when: has_menu}
-#關#    - {accept: space, send: bar, when: has_menu}
-#關#    - {accept: space, send: space, when: paging}
+    - {accept: space, send: Return, when: paging}
+    # - {accept: Return, send: space, when: composing}
+    # - {accept: Return, send: Return, when: paging}
 
 editor:
   bindings:
