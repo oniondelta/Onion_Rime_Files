@@ -556,7 +556,8 @@ bpm_reverse_lookup:
   overwrite_comment: true
   dictionary: bo_mixin.extended
   comment_format:
-    - xform/!!!([a-z]+) ?//
+    - xform/@[a-z]+ ?//
+    - xform/!!![a-z]+ ?//
     - xform/iu/iou/
     - xform/ui/uei/
     - xform/ong/ung/
