@@ -1003,10 +1003,11 @@ end
 function array30up_mix(key, env)
   local engine = env.engine
   local context = engine.context
-  local input_array = context.input
+  -- local input_array = context.input
   local orig_array = context:get_commit_text()
   if (key:repr() == "space") and (context:has_menu()) then
-    -- local input_array = context.input
+  -- if (key:repr() == "space") and (context:is_composing()) then
+    local input_array = context.input
     -- local orig_array = context:get_commit_text()
     -- if (string.find(input_array, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(input_array, "^==[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(input_array, "`.+$")) or (string.find(input_array, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(input_array, "^https?:.*$")) or (string.find(input_array, "^ftp:.*$")) or (string.find(input_array, "^mailto:.*$")) or (string.find(input_array, "^file:.*$")) or (string.find(input_array, "^www%..+$")) or (string.find(input_array, "^=[a-z0-9,.;/-]+$")) then
     if (string.find(input_array, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(input_array, "^==[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(input_array, "`.+$")) or (string.find(input_array, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(input_array, "^https?:.*$")) or (string.find(input_array, "^ftp:.*$")) or (string.find(input_array, "^mailto:.*$")) or (string.find(input_array, "^file:.*$")) or (string.find(input_array, "^=[a-z0-9,.;/-]+$")) then
@@ -1015,7 +1016,8 @@ function array30up_mix(key, env)
       return 1 -- kAccepted
     end
   elseif (key:repr() == "Return") and (context:has_menu()) then
-    -- local input_array = context.input
+  -- elseif (key:repr() == "Return") and (context:is_composing()) then
+    local input_array = context.input
     -- local orig_array = context:get_commit_text()
     if (string.find(input_array, "^=[a-z0-9,.;/-]+$")) then
       engine:commit_text(orig_array)
@@ -1214,9 +1216,9 @@ function mix_apc_s2rm(key, env)
       engine:commit_text( orig_124 .. "." )
       context:clear()
       return 1 -- kAccepted
-    elseif (key:repr() == 'space') and (context:is_composing()) then
-    -- elseif (key:repr() == 'space') and (context:has_menu()) then
-    -- elseif (key:repr() == 'space') then
+    elseif (key:repr() == "space") and (context:is_composing()) then
+    -- elseif (key:repr() == "space") and (context:has_menu()) then
+    -- elseif (key:repr() == "space") then
       local input_124 = context.input
       if ( string.find(input_124, "[@:]") or string.find(input_124, "'/") or string.find(input_124, "=[-125890;,./]$") or string.find(input_124, "=[-;,./][-;,./]$") or string.find(input_124, "==[90]$") ) then  --or string.find(input_124, "==[,.]{2}$")
       -- if ( string.find(input_124, "[@:]") or string.find(input_124, "'/") or string.find(input_124, "=[-125890;,./]$") or string.find(input_124, "=[-;,./][-;,./]$") or string.find(input_124, "==[90]$") or string.find(input_124, "==[,][,]?$") or string.find(input_124, "==[.][.]?$") ) then
@@ -1228,9 +1230,9 @@ function mix_apc_s2rm(key, env)
       end
     end
   elseif (not c_b_d) and (not en_m) then
-    if (key:repr() == 'space') and (context:is_composing()) then
-    -- if (key:repr() == 'space') and (context:has_menu()) then
-    -- if (key:repr() == 'space') then
+    if (key:repr() == "space") and (context:is_composing()) then
+    -- if (key:repr() == "space") and (context:has_menu()) then
+    -- if (key:repr() == "space") then
       local input_124 = context.input
       if ( string.find(input_124, "[@:]") or string.find(input_124, "'/") or string.find(input_124, "=[-125890;,./]$") or string.find(input_124, "=[-;,./][-;,./]$") or string.find(input_124, "==[90]$") ) then  --or string.find(input_124, "==[,.]{2}$")
       -- if ( string.find(input_124, "[@:]") or string.find(input_124, "'/") or string.find(input_124, "=[-125890;,./]$") or string.find(input_124, "=[-;,./][-;,./]$") or string.find(input_124, "==[90]$") or string.find(input_124, "==[,][,]?$") or string.find(input_124, "==[.][.]?$") ) then
@@ -1271,8 +1273,8 @@ function mix_apc_s2rm_3(key, env)
       engine:commit_text( orig_3 .. "." )
       context:clear()
       return 1 -- kAccepted
-    elseif (key:repr() == 'space') and (context:is_composing()) then
-    -- elseif (key:repr() == 'space') and (context:has_menu()) then
+    elseif (key:repr() == "space") and (context:is_composing()) then
+    -- elseif (key:repr() == "space") and (context:has_menu()) then
       local input_3 = context.input
       if ( string.find(input_3, "[@:]") or string.find(input_3, "^'/[';a-z0-9./-]*$") or string.find(input_3, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(input_3, "=[0-9]'/[';a-z0-9./-]*$") or string.find(input_3, "=[][]'/[';a-z0-9./-]*$") or string.find(input_3, "=[][][][]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-,.;=`]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-125890;,./]$") or string.find(input_3, "=[-;,./][-;,./]$") or string.find(input_3, "==[90]$") ) then  --or string.find(input_3, "==[,.]{2}$")
       -- if ( string.find(input_3, "[@:]") or string.find(input_3, "^'/[';a-z0-9./-]*$") or string.find(input_3, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(input_3, "=[0-9]'/[';a-z0-9./-]*$") or string.find(input_3, "=[][]'/[';a-z0-9./-]*$") or string.find(input_3, "=[][][][]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-,.;=`]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-125890;,./]$") or string.find(input_3, "=[-;,./][-;,./]$") or string.find(input_3, "==[90]$") or string.find(input_3, "==[,][,]?$") or string.find(input_3, "==[.][.]?$") ) then
@@ -1284,8 +1286,8 @@ function mix_apc_s2rm_3(key, env)
       end
     end
   elseif (not c_b_d) and (not en_m) then
-    if (key:repr() == 'space') and (context:is_composing()) then
-    -- if (key:repr() == 'space') and (context:has_menu()) then
+    if (key:repr() == "space") and (context:is_composing()) then
+    -- if (key:repr() == "space") and (context:has_menu()) then
       local input_3 = context.input
       if ( string.find(input_3, "[@:]") or string.find(input_3, "^'/[';a-z0-9./-]*$") or string.find(input_3, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(input_3, "=[0-9]'/[';a-z0-9./-]*$") or string.find(input_3, "=[][]'/[';a-z0-9./-]*$") or string.find(input_3, "=[][][][]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-,.;=`]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-125890;,./]$") or string.find(input_3, "=[-;,./][-;,./]$") or string.find(input_3, "==[90]$") ) then  --or string.find(input_3, "==[,.]{2}$")
       -- if ( string.find(input_3, "[@:]") or string.find(input_3, "^'/[';a-z0-9./-]*$") or string.find(input_3, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(input_3, "=[0-9]'/[';a-z0-9./-]*$") or string.find(input_3, "=[][]'/[';a-z0-9./-]*$") or string.find(input_3, "=[][][][]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-,.;=`]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-125890;,./]$") or string.find(input_3, "=[-;,./][-;,./]$") or string.find(input_3, "==[90]$") or string.find(input_3, "==[,][,]?$") or string.find(input_3, "==[.][.]?$") ) then
@@ -1329,7 +1331,7 @@ function mix_apc_pluss(key, env)
       engine:commit_text( orig_ps .. "." )
       context:clear()
       return 1 -- kAccepted
-    elseif (key:repr() == 'space') and (caret_pos_ps == 0) then
+    elseif (key:repr() == "space") and (caret_pos_ps == 0) then
       -- local orig_ps = context:get_commit_text()
       engine:commit_text( " " )
       context:clear()
@@ -1337,7 +1339,7 @@ function mix_apc_pluss(key, env)
     end
   elseif (not c_b_d) and (not en_m) then
     local caret_pos_ps = context.caret_pos
-    if (key:repr() == 'space') and (caret_pos_ps == 0) then
+    if (key:repr() == "space") and (caret_pos_ps == 0) then
       -- local orig_ps = context:get_commit_text()
       engine:commit_text( " " )
       context:clear() 
@@ -1350,25 +1352,26 @@ end
 
 
 
--- --- @@ mobile_bpmf
--- --[[
--- （手機注音用）
--- 使 email_url_translator 功能按空白都能直接上屏
--- --]]
--- function mobile_bpmf(key, env)
---   if (key:repr() == 'space') then
---     -- local engine = env.engine
---     -- local context = engine.context
---     local input_m = env.engine.context.input
---     if ( string.find(input_m, "[@:]")) then
---       local orig_m = env.engine.context:get_commit_text()
---       env.engine:commit_text(orig_m)
---       env.engine.context:clear()
---       return 1 -- kAccepted
---     end
---   end
---   return 2 -- kNoop
--- end
+--- @@ mobile_bpmf
+--[[
+（手機注音用）
+使 email_url_translator 功能按空白都能直接上屏
+--]]
+function mobile_bpmf(key, env)
+  local engine = env.engine
+  local context = engine.context
+  local orig_m = context:get_commit_text()
+  if (key:repr() == "space") and (context:is_composing()) then
+    local input_m = context.input
+    -- if ( string.find(input_m, "[@:]")) then
+    if (string.find(input_m, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(input_m, "^https?:.*$")) or (string.find(input_m, "^ftp:.*$")) or (string.find(input_m, "^mailto:.*$")) or (string.find(input_m, "^file:.*$")) then
+      engine:commit_text(orig_m)
+      context:clear()
+      return 1 -- kAccepted
+    end
+  end
+  return 2 -- kNoop
+end
 
 
 
