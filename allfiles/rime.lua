@@ -1003,11 +1003,11 @@ end
 function array30up_mix(key, env)
   local engine = env.engine
   local context = engine.context
-  -- local input_array = context.input
+  local input_array = context.input
   local orig_array = context:get_commit_text()
   if (key:repr() == "space") and (context:has_menu()) then
   -- if (key:repr() == "space") and (context:is_composing()) then
-    local input_array = context.input
+    -- local input_array = context.input
     -- local orig_array = context:get_commit_text()
     -- if (string.find(input_array, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(input_array, "^==[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(input_array, "`.+$")) or (string.find(input_array, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(input_array, "^https?:.*$")) or (string.find(input_array, "^ftp:.*$")) or (string.find(input_array, "^mailto:.*$")) or (string.find(input_array, "^file:.*$")) or (string.find(input_array, "^www%..+$")) or (string.find(input_array, "^=[a-z0-9,.;/-]+$")) then
     if (string.find(input_array, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(input_array, "^==[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(input_array, "`.+$")) or (string.find(input_array, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(input_array, "^https?:.*$")) or (string.find(input_array, "^ftp:.*$")) or (string.find(input_array, "^mailto:.*$")) or (string.find(input_array, "^file:.*$")) or (string.find(input_array, "^=[a-z0-9,.;/-]+$")) then
@@ -1017,7 +1017,7 @@ function array30up_mix(key, env)
     end
   elseif (key:repr() == "Return") and (context:has_menu()) then
   -- elseif (key:repr() == "Return") and (context:is_composing()) then
-    local input_array = context.input
+    -- local input_array = context.input
     -- local orig_array = context:get_commit_text()
     if (string.find(input_array, "^=[a-z0-9,.;/-]+$")) then
       engine:commit_text(orig_array)
