@@ -487,6 +487,7 @@ end
 function array30_nil_filter(input, env)
   local p_key = env.engine.context.input
   local array30_r = string.find(p_key, '^==')
+  local array30_input = env.engine.context.input  -- 原始未轉換輸入碼
   if (array30_r) then
     for cand in input:iter() do
       if (string.find(cand.text, '^⎔%d$' )) then
@@ -509,7 +510,7 @@ function array30_nil_filter(input, env)
   --]]
         -- local array30_nil_preedit = cand:get_genuine().preedit  -- 效用同下，獲取原 preedit
         local array30_preedit = cand.preedit  -- 轉換後輸入碼，如：ㄅㄆㄇㄈ、1-2⇡9⇡
-        local array30_input = env.engine.context.input  -- 原始未轉換輸入碼
+        -- local array30_input = env.engine.context.input  -- 原始未轉換輸入碼
         local array30_nil_cand = Candidate("array30nil", 0, string.len(array30_input) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
         -- local array30_nil_cand = Candidate("array30nil", 0, string.len(commit) , "", "⎔")  -- 選擇空碼"⎔"效果為卡住，但 preedit 顯示會有問題
         array30_nil_cand.preedit = array30_preedit
@@ -818,10 +819,11 @@ end
 function mix30_nil_comment_up_filter(input, env)
   local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
   local s_up = env.engine.context:get_option("1_2_straight_up")
+  local find_prefix = env.engine.context.input  -- 原始未轉換輸入碼
   -- if (not s_c_f_p_s) or (string.find(find_prefix, "`" )) then
   if (not s_c_f_p_s) then
     for cand in input:iter() do
-      local find_prefix = env.engine.context.input  -- 原始未轉換輸入碼
+      -- local find_prefix = env.engine.context.input  -- 原始未轉換輸入碼
       local array30_preedit = cand.preedit  -- 轉換後輸入碼，如：ㄅㄆㄇㄈ、1-2⇡9⇡
       local array30_nil_cand = Candidate("array30nil", 0, string.len(find_prefix) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
       if (string.find(cand.text, '^⎔%d$' )) then
@@ -849,7 +851,7 @@ function mix30_nil_comment_up_filter(input, env)
     end
   else
     for cand in input:iter() do
-      local find_prefix = env.engine.context.input  -- 原始未轉換輸入碼
+      -- local find_prefix = env.engine.context.input  -- 原始未轉換輸入碼
       local array30_preedit = cand.preedit  -- 轉換後輸入碼，如：ㄅㄆㄇㄈ、1-2⇡9⇡
       local array30_nil_cand = Candidate("array30nil", 0, string.len(find_prefix) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
       if (string.find(cand.text, '^⎔%d$' )) then
@@ -1204,7 +1206,7 @@ function mix_apc_s2rm(key, env)
   local c_b_d = context:get_option("ascii_punct")
   local en_m = context:get_option("ascii_mode")
   local orig_124 = context:get_commit_text()
-  -- local input_124 = context.input
+  local input_124 = context.input
   if (c_b_d) and (not en_m) then
     if (key:repr() == 'Shift+less') then
       -- local orig_124 = context:get_commit_text()
@@ -1219,7 +1221,7 @@ function mix_apc_s2rm(key, env)
     elseif (key:repr() == "space") and (context:is_composing()) then
     -- elseif (key:repr() == "space") and (context:has_menu()) then
     -- elseif (key:repr() == "space") then
-      local input_124 = context.input
+      -- local input_124 = context.input
       if ( string.find(input_124, "[@:]") or string.find(input_124, "'/") or string.find(input_124, "=[-125890;,./]$") or string.find(input_124, "=[-;,./][-;,./]$") or string.find(input_124, "==[90]$") ) then  --or string.find(input_124, "==[,.]{2}$")
       -- if ( string.find(input_124, "[@:]") or string.find(input_124, "'/") or string.find(input_124, "=[-125890;,./]$") or string.find(input_124, "=[-;,./][-;,./]$") or string.find(input_124, "==[90]$") or string.find(input_124, "==[,][,]?$") or string.find(input_124, "==[.][.]?$") ) then
       --「全，非精簡」 if ( string.find(input_124, "[@:]") or string.find(input_124, "'/") or string.find(input_124, "=[-125890;,./]$") or string.find(input_124, "=[-][-]$") or string.find(input_124, "=[;][;]$") or string.find(input_124, "=[,][,]$") or string.find(input_124, "=[.][.]$") or string.find(input_124, "=[/][/]$") or string.find(input_124, "==[90]$") or string.find(input_124, "==[,][,]?$") or string.find(input_124, "==[.][.]?$") ) then
@@ -1233,7 +1235,7 @@ function mix_apc_s2rm(key, env)
     if (key:repr() == "space") and (context:is_composing()) then
     -- if (key:repr() == "space") and (context:has_menu()) then
     -- if (key:repr() == "space") then
-      local input_124 = context.input
+      -- local input_124 = context.input
       if ( string.find(input_124, "[@:]") or string.find(input_124, "'/") or string.find(input_124, "=[-125890;,./]$") or string.find(input_124, "=[-;,./][-;,./]$") or string.find(input_124, "==[90]$") ) then  --or string.find(input_124, "==[,.]{2}$")
       -- if ( string.find(input_124, "[@:]") or string.find(input_124, "'/") or string.find(input_124, "=[-125890;,./]$") or string.find(input_124, "=[-;,./][-;,./]$") or string.find(input_124, "==[90]$") or string.find(input_124, "==[,][,]?$") or string.find(input_124, "==[.][.]?$") ) then
       --「全，非精簡」 if ( string.find(input_124, "[@:]") or string.find(input_124, "'/") or string.find(input_124, "=[-125890;,./]$") or string.find(input_124, "=[-][-]$") or string.find(input_124, "=[;][;]$") or string.find(input_124, "=[,][,]$") or string.find(input_124, "=[.][.]$") or string.find(input_124, "=[/][/]$") or string.find(input_124, "==[90]$") or string.find(input_124, "==[,][,]?$") or string.find(input_124, "==[.][.]?$") ) then
@@ -1261,7 +1263,7 @@ function mix_apc_s2rm_3(key, env)
   local c_b_d = context:get_option("ascii_punct")
   local en_m = context:get_option("ascii_mode")
   local orig_3 = context:get_commit_text()
-  -- local input_3 = context.input
+  local input_3 = context.input
   if (c_b_d) and (not en_m) then
     if (key:repr() == 'Shift+less') then
       -- local orig_3 = context:get_commit_text()
@@ -1275,7 +1277,7 @@ function mix_apc_s2rm_3(key, env)
       return 1 -- kAccepted
     elseif (key:repr() == "space") and (context:is_composing()) then
     -- elseif (key:repr() == "space") and (context:has_menu()) then
-      local input_3 = context.input
+      -- local input_3 = context.input
       if ( string.find(input_3, "[@:]") or string.find(input_3, "^'/[';a-z0-9./-]*$") or string.find(input_3, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(input_3, "=[0-9]'/[';a-z0-9./-]*$") or string.find(input_3, "=[][]'/[';a-z0-9./-]*$") or string.find(input_3, "=[][][][]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-,.;=`]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-125890;,./]$") or string.find(input_3, "=[-;,./][-;,./]$") or string.find(input_3, "==[90]$") ) then  --or string.find(input_3, "==[,.]{2}$")
       -- if ( string.find(input_3, "[@:]") or string.find(input_3, "^'/[';a-z0-9./-]*$") or string.find(input_3, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(input_3, "=[0-9]'/[';a-z0-9./-]*$") or string.find(input_3, "=[][]'/[';a-z0-9./-]*$") or string.find(input_3, "=[][][][]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-,.;=`]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-125890;,./]$") or string.find(input_3, "=[-;,./][-;,./]$") or string.find(input_3, "==[90]$") or string.find(input_3, "==[,][,]?$") or string.find(input_3, "==[.][.]?$") ) then
       --「全，非精簡」 if ( string.find(input_3, "[@:]") or string.find(input_3, "^'/[';a-z0-9./-]*$") or string.find(input_3, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(input_3, "=[0-9]'/[';a-z0-9./-]*$") or string.find(input_3, "=[][]'/[';a-z0-9./-]*$") or string.find(input_3, "=[][][][]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-,.;=`]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-125890;,./]$") or string.find(input_3, "=[-][-]$") or string.find(input_3, "=[;][;]$") or string.find(input_3, "=[,][,]$") or string.find(input_3, "=[.][.]$") or string.find(input_3, "=[/][/]$") or string.find(input_3, "==[90]$") or string.find(input_3, "==[,][,]?$") or string.find(input_3, "==[.][.]?$") ) then
@@ -1288,7 +1290,7 @@ function mix_apc_s2rm_3(key, env)
   elseif (not c_b_d) and (not en_m) then
     if (key:repr() == "space") and (context:is_composing()) then
     -- if (key:repr() == "space") and (context:has_menu()) then
-      local input_3 = context.input
+      -- local input_3 = context.input
       if ( string.find(input_3, "[@:]") or string.find(input_3, "^'/[';a-z0-9./-]*$") or string.find(input_3, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(input_3, "=[0-9]'/[';a-z0-9./-]*$") or string.find(input_3, "=[][]'/[';a-z0-9./-]*$") or string.find(input_3, "=[][][][]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-,.;=`]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-125890;,./]$") or string.find(input_3, "=[-;,./][-;,./]$") or string.find(input_3, "==[90]$") ) then  --or string.find(input_3, "==[,.]{2}$")
       -- if ( string.find(input_3, "[@:]") or string.find(input_3, "^'/[';a-z0-9./-]*$") or string.find(input_3, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(input_3, "=[0-9]'/[';a-z0-9./-]*$") or string.find(input_3, "=[][]'/[';a-z0-9./-]*$") or string.find(input_3, "=[][][][]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-,.;=`]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-125890;,./]$") or string.find(input_3, "=[-;,./][-;,./]$") or string.find(input_3, "==[90]$") or string.find(input_3, "==[,][,]?$") or string.find(input_3, "==[.][.]?$") ) then
       --「全，非精簡」 if ( string.find(input_3, "[@:]") or string.find(input_3, "^'/[';a-z0-9./-]*$") or string.find(input_3, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(input_3, "=[0-9]'/[';a-z0-9./-]*$") or string.find(input_3, "=[][]'/[';a-z0-9./-]*$") or string.find(input_3, "=[][][][]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-,.;=`]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(input_3, "=[-125890;,./]$") or string.find(input_3, "=[-][-]$") or string.find(input_3, "=[;][;]$") or string.find(input_3, "=[,][,]$") or string.find(input_3, "=[.][.]$") or string.find(input_3, "=[/][/]$") or string.find(input_3, "==[90]$") or string.find(input_3, "==[,][,]?$") or string.find(input_3, "==[.][.]?$") ) then
@@ -1318,8 +1320,9 @@ function mix_apc_pluss(key, env)
   local c_b_d = context:get_option("ascii_punct")
   local en_m = context:get_option("ascii_mode")
   local orig_ps = context:get_commit_text()
+  local caret_pos_ps = context.caret_pos
   if (c_b_d) and (not en_m) then
-    local caret_pos_ps = context.caret_pos
+    -- local caret_pos_ps = context.caret_pos
     if (key:repr() == 'Shift+less') then
       -- local orig_ps = context:get_commit_text()
       engine:commit_text( orig_ps .. "," )
@@ -1338,7 +1341,7 @@ function mix_apc_pluss(key, env)
       return 1 -- kAccepted
     end
   elseif (not c_b_d) and (not en_m) then
-    local caret_pos_ps = context.caret_pos
+    -- local caret_pos_ps = context.caret_pos
     if (key:repr() == "space") and (caret_pos_ps == 0) then
       -- local orig_ps = context:get_commit_text()
       engine:commit_text( " " )
@@ -1361,8 +1364,9 @@ end
 --   local engine = env.engine
 --   local context = engine.context
 --   local orig_m = context:get_commit_text()
+--   local input_m = context.input
 --   if (key:repr() == "space") and (context:is_composing()) then
---     local input_m = context.input
+--     -- local input_m = context.input
 --     -- if ( string.find(input_m, "[@:]")) then
 --     if (string.find(input_m, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(input_m, "^https?:.*$")) or (string.find(input_m, "^ftp:.*$")) or (string.find(input_m, "^mailto:.*$")) or (string.find(input_m, "^file:.*$")) then
 --       engine:commit_text(orig_m)
