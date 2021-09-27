@@ -1965,6 +1965,7 @@ min_phrase_weight: 100
 崴	wei3	0%
 懵	meng4	0%
 杲	zhao3	0%
+焄	hun1	0%
 ##### @201912 比對教育部相關字詞典檔所新增 #####
 丁	zheng1	0.1%
 丂	kao3	0.1%
@@ -75680,6 +75681,7 @@ min_phrase_weight: 100
 折長補短	zhe2 chang2 bu3 duan3
 折頭	zhe2 tou5
 折騰	zhe2 teng2
+折騰	zhe1 teng2
 折鼎覆餗	zhe2 ding3 fu4 su4
 抨彈	peng1 tan2
 抨擊	peng1 ji2
