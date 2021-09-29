@@ -273,7 +273,7 @@ shutil.copyfile("./allfiles/symbols_ocm.schema.yaml", "./sort_rime/ocm/ocm_mixin
 
 shutil.copyfile("./allfiles/terra_pinyin_onion_add.dict.yaml", "./sort_rime/ocm/ocm_mixin/terra_pinyin_onion_add.dict.yaml")
 shutil.copyfile("./allfiles/terra_pinyin_onion.dict.yaml", "./sort_rime/ocm/ocm_mixin/terra_pinyin_onion.dict.yaml")
-shutil.copyfile("./allfiles/tcword.dict.yaml", "./sort_rime/ocm/ocm_mixin/tcword.dict.yaml")
+shutil.copyfile("./allfiles/ocm_tc.dict.yaml", "./sort_rime/ocm/ocm_mixin/ocm_tc.dict.yaml")
 shutil.copyfile("./allfiles/kanaword.dict.yaml", "./sort_rime/ocm/ocm_mixin/kanaword.dict.yaml")
 shutil.copyfile("./allfiles/uniabcdword.dict.yaml", "./sort_rime/ocm/ocm_mixin/uniabcdword.dict.yaml")
 
@@ -290,6 +290,7 @@ shutil.copyfile("./allfiles/phrases.jp_hkk.dict.yaml", "./sort_rime/ocm/ocm_mixi
 shutil.copyfile("./allfiles/phrases.kr_more.dict.yaml", "./sort_rime/ocm/ocm_mixin/phrases.kr_more.dict.yaml")
 shutil.copyfile("./allfiles/phrases.kr.dict.yaml", "./sort_rime/ocm/ocm_mixin/phrases.kr.dict.yaml")
 shutil.copyfile("./allfiles/phrases.la_py_w.dict.yaml", "./sort_rime/ocm/ocm_mixin/phrases.la_py_w.dict.yaml")
+shutil.copyfile("./allfiles/phrases.ocmtc_essay_new.dict.yaml", "./sort_rime/ocm/ocm_mixin/phrases.ocmtc_essay_new.dict.yaml")
 shutil.copyfile("./allfiles/phrases.ocmtc_original.dict.yaml", "./sort_rime/ocm/ocm_mixin/phrases.ocmtc_original.dict.yaml")
 shutil.copyfile("./allfiles/phrases.ocmtc_terra.dict.yaml", "./sort_rime/ocm/ocm_mixin/phrases.ocmtc_terra.dict.yaml")
 
@@ -367,6 +368,7 @@ shutil.copyfile("./allfiles/phrases.jp_hk_more.dict.yaml", "./sort_rime/ocm/ocm_
 shutil.copyfile("./allfiles/phrases.jp_hk.dict.yaml", "./sort_rime/ocm/ocm_plus/phrases.jp_hk.dict.yaml")
 shutil.copyfile("./allfiles/phrases.kr.dict.yaml", "./sort_rime/ocm/ocm_plus/phrases.kr.dict.yaml")
 shutil.copyfile("./allfiles/phrases.la_py_w.dict.yaml", "./sort_rime/ocm/ocm_plus/phrases.la_py_w.dict.yaml")
+shutil.copyfile("./allfiles/phrases.ocmtc_essay_new.dict.yaml", "./sort_rime/ocm/ocm_plus/phrases.ocmtc_essay_new.dict.yaml")
 shutil.copyfile("./allfiles/phrases.ocmtc_original.dict.yaml", "./sort_rime/ocm/ocm_plus/phrases.ocmtc_original.dict.yaml")
 shutil.copyfile("./allfiles/phrases.ocmtc_terra.dict.yaml", "./sort_rime/ocm/ocm_plus/phrases.ocmtc_terra.dict.yaml")
 
@@ -377,7 +379,7 @@ shutil.copyfile("./allfiles/symbols_ocm.schema.yaml", "./sort_rime/ocm/ocm_plus/
 
 shutil.copyfile("./allfiles/terra_pinyin_onion_add.dict.yaml", "./sort_rime/ocm/ocm_plus/terra_pinyin_onion_add.dict.yaml")
 shutil.copyfile("./allfiles/terra_pinyin_onion.dict.yaml", "./sort_rime/ocm/ocm_plus/terra_pinyin_onion.dict.yaml")
-shutil.copyfile("./allfiles/tcword.dict.yaml", "./sort_rime/ocm/ocm_plus/tcword.dict.yaml")
+shutil.copyfile("./allfiles/ocm_tc.dict.yaml", "./sort_rime/ocm/ocm_plus/ocm_tc.dict.yaml")
 shutil.copyfile("./allfiles/uniabcdword.dict.yaml", "./sort_rime/ocm/ocm_plus/uniabcdword.dict.yaml")
 
 shutil.copyfile("./allfiles/element_ocm.yaml", "./sort_rime/ocm/ocm_plus/element_ocm.yaml")
@@ -423,7 +425,7 @@ shutil.copyfile("./allfiles/symbols_ocm.schema.yaml", "./sort_rime/ocm/ocm_mount
 
 shutil.copyfile("./allfiles/terra_pinyin_onion_add.dict.yaml", "./sort_rime/ocm/ocm_mount/terra_pinyin_onion_add.dict.yaml")
 shutil.copyfile("./allfiles/terra_pinyin_onion.dict.yaml", "./sort_rime/ocm/ocm_mount/terra_pinyin_onion.dict.yaml")
-shutil.copyfile("./allfiles/tcword.dict.yaml", "./sort_rime/ocm/ocm_mount/tcword.dict.yaml")
+shutil.copyfile("./allfiles/ocm_tc.dict.yaml", "./sort_rime/ocm/ocm_mount/ocm_tc.dict.yaml")
 shutil.copyfile("./allfiles/uniabcdword.dict.yaml", "./sort_rime/ocm/ocm_mount/uniabcdword.dict.yaml")
 shutil.copyfile("./allfiles/kanaword.dict.yaml", "./sort_rime/ocm/ocm_mount/kanaword.dict.yaml")
 
