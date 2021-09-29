@@ -4,17 +4,18 @@
 # 『洋蔥』製作
 ---
 name: ocm_mixin.extended
-version: "202012"
+version: "202109"
 sort: original
 use_preset_vocabulary: false
 import_tables:
-  - tcword
+  - ocm_tc
   - uniabcdword
   - ocm_mixin_jp
   - ocm_mixin_kr
   - ocm_mixin_la
-  - phrases.ocmtc_terra
-#  - phrases.ocmtc_original
+  - phrases.ocmtc_essay_new
+  # - phrases.ocmtc_terra
+  # - phrases.ocmtc_original
   - phrases.cht_en_w
 ##  - phrases.jp_hk_more ##
 #  - phrases.jp_hk #

@@ -1,0 +1,12 @@
+# Rime schema 中州輸入法的字碼檔
+# encoding: utf-8
+# 《正體中文字碼表 - 繁體 優先，含 日文漢字 和 簡體字 》
+# 字碼有少部分重複，但勿用excel去刪除重複的，因會把相通的字給一並刪除，如：aduu->[朗]和[朗]會給一並的刪除！
+---
+name: ocm_tc
+version: "202109"
+sort: original
+use_preset_vocabulary: false
+#max_phrase_length: 7
+#min_phrase_weight: 100
+...
