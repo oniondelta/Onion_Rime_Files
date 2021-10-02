@@ -1837,6 +1837,48 @@ local function formatnumberthousands(n3)
   return r3
 end
 
+local function min_guo(mg)
+  -- if mg == "" then return "" end
+  -- local mg = tonumber(mg) - 1911
+  local mg = tonumber(mg)
+  if mg > 1911 then
+    mg = mg - 1911
+  elseif mg <= 1911 then
+    -- mg = '前' .. 1912 - mg
+    mg = 1912 - mg
+  else
+    mg = ""
+  end
+  return mg
+end
+
+local function jp_ymd(jpy, jpm, jpd)
+  local jpa = tonumber(string.format("%02d", jpy) .. string.format("%02d", jpm) .. string.format("%02d", jpd))
+  if jpa > 20190430 then
+    ja = "令和" .. tostring( tonumber(jpy) - 2018 ) .. "年".. string.format("%02d", jpm) .. "月" .. string.format("%02d", jpd) .. "日"
+    jy = "令和" .. tostring( tonumber(jpy) - 2018 ) .. "年"
+  elseif 19890107 < jpa and jpa < 20190501 then
+    ja = "平成" .. tostring( tonumber(jpy) - 1988 ) .. "年".. string.format("%02d", jpm) .. "月" .. string.format("%02d", jpd) .. "日"
+    jy = "平成" .. tostring( tonumber(jpy) - 1988 ) .. "年"
+  elseif 19261224 < jpa and jpa < 19890108 then
+    ja = "昭和" .. tostring( tonumber(jpy) - 1925 ) .. "年".. string.format("%02d", jpm) .. "月" .. string.format("%02d", jpd) .. "日"
+    jy = "昭和" .. tostring( tonumber(jpy) - 1925 ) .. "年"
+  elseif 19120729 < jpa and jpa < 19261226 then
+    ja = "大正" .. tostring( tonumber(jpy) - 1911 ) .. "年".. string.format("%02d", jpm) .. "月" .. string.format("%02d", jpd) .. "日"
+    jy = "大正" .. tostring( tonumber(jpy) - 1911 ) .. "年"
+  elseif 18681022 < jpa and jpa < 19120731 then
+    ja = "明治" .. tostring( tonumber(jpy) - 1867 ) .. "年".. string.format("%02d", jpm) .. "月" .. string.format("%02d", jpd) .. "日"
+    jy = "明治" .. tostring( tonumber(jpy) - 1867 ) .. "年"
+  elseif 18681023 > jpa then
+    ja = "明治前" .. string.format("%02d", jpm) .. "月" .. string.format("%02d", jpd) .. "日"
+    jy = "明治前"
+  else
+    ja = ""
+    jy = ""
+  end
+  return ja, jy
+end
+
 local function fullshape_number(fs)
   if fs == "" then return "" end
   fs = string.gsub(fs, "0", "０")
@@ -4692,10 +4734,42 @@ function t_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, os.date("%Y_%m_%d"), "〔年月日〕 ~u"))
       yield(Candidate("date", seg.start, seg._end, eng1_m_date(os.date("%m")).." "..eng2_d_date(os.date("%d"))..", "..os.date("%Y"), "〔月日年〕 ~a"))
       yield(Candidate("date", seg.start, seg._end, eng2_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")).." "..os.date("%Y"), "〔日月年〕 ~e"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")), "〔年月日〕 ~j"))
+      -- yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")), "〔年月日〕 ~j"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1"), "〔日本元号〕 ~j"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日", "([^%d])0", "%1"), "〔民國〕 ~h"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(23), "〔民國〕 ~g"))
       -- local chinese_date = to_chinese_cal_local(os.time())
       local ll_1, ll_2 = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, ll_1, "〔農曆〕 ~l"))
+      return
+    end
+
+    if (input == "`fj") then
+      yield(Candidate("date", seg.start, seg._end, string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1"), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1")), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))), "〔日本元号〕"))
+      return
+    end
+    -- if (input == "`fj") then
+    --   yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")), "〔年月日〕"))
+    --   return
+    -- end
+
+    if (input == "`fh") then
+      -- yield(Candidate("date", seg.start, seg._end, string.gsub("民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日", "([^%d])0", "%1"), "〔*年月日〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日", "([^%d])0", "%1"), "〔年月日〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(string.gsub(os.date("%m").."月"..os.date("%d").."日", "([^%d])0", "%1") ), "〔年月日〕"))
+      -- yield(Candidate("date", seg.start, seg._end, "民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日", "〔*年月日〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日", "〔年月日〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日", "〔年月日〕"))
+      return
+    end
+
+    if (input == "`fg") then
+      yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(23), "〔年月日〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[1], min_guo(os.date("%Y"))).."年"..rqzdx1(23), "〔年月日〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[2], min_guo(os.date("%Y"))).."年"..rqzdx2(23), "〔年月日〕"))
       return
     end
 
@@ -4706,11 +4780,6 @@ function t_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, ll_2, "〔農曆〕"))
       local a, Y_g, M_g, D_g = lunarJzl(os.date("%Y%m%d%H"))
       yield(Candidate("date", seg.start, seg._end, Y_g.."年"..M_g.."月"..D_g.."日" , "〔農曆干支〕"))
-      return
-    end
-
-    if (input == "`fj") then
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")), "〔年月日〕"))
       return
     end
 
@@ -4799,11 +4868,43 @@ function t_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, os.date("%Y/%m/%d %H:%M"), "〔年月日 時:分〕 ~s"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d %H:%M"), "〔年月日 時:分〕 ~m"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y_%m_%d %H:%M"), "〔年月日 時:分〕 ~u"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..os.date("%H")..":"..os.date("%M"), "〔年月日 時:分〕 ~j"))
+      -- yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..os.date("%H")..":"..os.date("%M"), "〔年月日 時:分〕 ~j"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1").." "..os.date("%H:%M"), "〔日本元号〕 ~j"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日 "..os.date("%H點%M分"), "([^%d])0", "%1"), "〔民國〕 ~h"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(23).." "..ch_h_date(os.date("%H")).."點"..ch_minsec_date(os.date("%M")).."分", "〔民國〕 ~g"))
       -- local chinese_date = to_chinese_cal_local(os.time())
       local chinese_time = time_description_chinese(os.time())
       local ll_1, ll_2 = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, ll_1 .." ".. chinese_time, "〔農曆〕 ~l"))
+      return
+    end
+
+    if (input == "`fnj") then
+      yield(Candidate("date", seg.start, seg._end, string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1").." "..os.date("%H:%M"), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1")).." "..os.date("%H:%M"), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")).." "..os.date("%H:%M"), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")).." "..os.date("%H:%M")), "〔日本元号〕"))
+      return
+    end
+    -- if (input == "`fnj") then
+    --   yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..os.date("%H")..":"..os.date("%M"), "〔年月日 時:分〕"))
+    --   return
+    -- end
+
+    if (input == "`fnh") then
+      -- yield(Candidate("date", seg.start, seg._end, string.gsub("民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日 "..os.date("%H點%M分 "), "([^%d])0", "%1"), "〔*年月日〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日 "..os.date("%H點%M分"), "([^%d])0", "%1"), "〔年月日〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(string.gsub(os.date("%m").."月"..os.date("%d").."日"..os.date("%H點%M分"), "([^%d])0", "%1") ), "〔年月日〕"))
+      -- yield(Candidate("date", seg.start, seg._end, "民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日 "..os.date("%H點%M分 "), "〔*年月日〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日"..os.date("%H點%M分"), "〔年月日〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日"..fullshape_number(os.date("%H點%M分")), "〔年月日〕"))
+      return
+    end
+
+    if (input == "`fng") then
+      yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(23).." "..ch_h_date(os.date("%H")).."點"..ch_minsec_date(os.date("%M")).."分", "〔年月日〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[1], min_guo(os.date("%Y"))).."年"..rqzdx1(23).." "..ch_h_date(os.date("%H")).."點"..ch_minsec_date(os.date("%M")).."分", "〔年月日〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[2], min_guo(os.date("%Y"))).."年"..rqzdx2(23).." "..chb_h_date(os.date("%H")).."點"..chb_minsec_date(os.date("%M")).."分", "〔年月日〕"))
       return
     end
 
@@ -4814,11 +4915,6 @@ function t_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, ll_1 .." ".. chinese_time, "〔農曆〕"))
       yield(Candidate("date", seg.start, seg._end, ll_2 .." ".. chinese_time, "〔農曆〕"))
       yield(Candidate("date", seg.start, seg._end, lunarJzl(os.date("%Y%m%d%H")), "〔農曆干支〕"))
-      return
-    end
-
-    if (input == "`fnj") then
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..os.date("%H")..":"..os.date("%M"), "〔年月日 時:分〕"))
       return
     end
 
@@ -4889,12 +4985,39 @@ function t_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, os.date("%Y/%m/%d %H:%M:%S"), "〔年月日 時:分:秒〕 ~s"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d %H:%M:%S"), "〔年月日 時:分:秒〕 ~m"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y_%m_%d %H:%M:%S"), "〔年月日 時:分:秒〕 ~u"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..os.date("%H")..":"..os.date("%M")..":"..os.date("%S"), "〔年月日 時:分:秒〕 ~j"))
+      -- yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..os.date("%H")..":"..os.date("%M")..":"..os.date("%S"), "〔年月日 時:分:秒〕 ~j"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1").." "..os.date("%H:%M:%S"), "〔日本元号〕 ~j"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日 "..os.date("%H點%M分%S秒"), "([^%d])0", "%1"), "〔年月日 時:分:秒〕 ~h"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(23).." "..ch_h_date(os.date("%H")).."點"..ch_minsec_date(os.date("%M")).."分"..ch_minsec_date(os.date("%S")).."秒", "〔年月日 時:分:秒〕 ~g"))
       return
     end
 
     if (input == "`ftj") then
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..os.date("%H")..":"..os.date("%M")..":"..os.date("%S"), "〔年月日 時:分:秒〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1").." "..os.date("%H:%M:%S"), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1")).." "..os.date("%H:%M:%S"), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")).." "..os.date("%H:%M:%S"), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")).." "..os.date("%H:%M:%S")), "〔日本元号〕"))
+      return
+    end
+    -- if (input == "`ftj") then
+    --   yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..os.date("%H")..":"..os.date("%M")..":"..os.date("%S"), "〔年月日 時:分:秒〕"))
+    --   return
+    -- end
+
+    if (input == "`fth") then
+      -- yield(Candidate("date", seg.start, seg._end, string.gsub("民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日 "..os.date("%H點%M分%S秒 "), "([^%d])0", "%1"), "〔*年月日 時:分:秒〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日 "..os.date("%H點%M分%S秒"), "([^%d])0", "%1"), "〔年月日 時:分:秒〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(string.gsub(os.date("%m").."月"..os.date("%d").."日"..os.date("%H點%M分%S秒"), "([^%d])0", "%1") ), "〔年月日 時:分:秒〕"))
+      -- yield(Candidate("date", seg.start, seg._end, "民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日 "..os.date("%H點%M分%S秒 "), "〔*年月日 時:分:秒〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日"..os.date("%H點%M分%S秒"), "〔年月日 時:分:秒〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日"..fullshape_number(os.date("%H點%M分%S秒")), "〔年月日 時:分:秒〕"))
+      return
+    end
+
+    if (input == "`ftg") then
+      yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(23).." "..ch_h_date(os.date("%H")).."點"..ch_minsec_date(os.date("%M")).."分"..ch_minsec_date(os.date("%S")).."秒", "〔年月日 時:分:秒〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[1], min_guo(os.date("%Y"))).."年"..rqzdx1(23).." "..ch_h_date(os.date("%H")).."點"..ch_minsec_date(os.date("%M")).."分"..ch_minsec_date(os.date("%S")).."秒", "〔年月日 時:分:秒〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[2], min_guo(os.date("%Y"))).."年"..rqzdx2(23).." "..chb_h_date(os.date("%H")).."點"..chb_minsec_date(os.date("%M")).."分"..chb_minsec_date(os.date("%S")).."秒", "〔年月日 時:分:秒〕"))
       return
     end
 
@@ -4962,9 +5085,34 @@ function t_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, rqzdx1(1), "〔年〕 ~z"))
       -- yield(Candidate("date", seg.start, seg._end, rqzdx2(1), "〔年〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y"), "〔年〕 ~d"))
+      local jpymd, jp_y = jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))
+      yield(Candidate("date", seg.start, seg._end, jp_y, "〔日本元号〕 ~j"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(os.date("%Y")).."年", "〔民國〕 ~h"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年", "〔民國〕 ~g"))
       -- local a, b, chinese_y = to_chinese_cal_local(os.time())
       local a, b, ly_1, ly_2, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, ly_1, "〔農曆〕 ~l"))
+      return
+    end
+
+    if (input == "`yj") then
+      local jpymd, jp_y = jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))
+      yield(Candidate("date", seg.start, seg._end, jp_y, "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(jp_y), "〔日本元号〕"))
+      return
+    end
+
+    if (input == "`yh") then
+      -- yield(Candidate("date", seg.start, seg._end, "民國 "..min_guo(os.date("%Y")).." 年", "〔*年〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(os.date("%Y")).."年", "〔年〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年", "〔年〕"))
+      return
+    end
+
+    if (input == "`yg") then
+      yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年", "〔年〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[1], min_guo(os.date("%Y"))).."年", "〔年〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[2], min_guo(os.date("%Y"))).."年", "〔年〕"))
       return
     end
 
@@ -5141,14 +5289,14 @@ function t_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")), "〔月日〕 ~j"))
       -- local a, b, y, chinese_m, chinese_d = to_chinese_cal_local(os.time())
       local a, b, c, d, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
-      yield(Candidate("date", seg.start, seg._end, lm .. ld, "〔農曆〕 ~l"))
+      yield(Candidate("date", seg.start, seg._end, lm..ld, "〔農曆〕 ~l"))
       return
     end
 
     if (input == "`mdl") then
       -- local a, b, y, chinese_m, chinese_d = to_chinese_cal_local(os.time())
       local a, b, c, d, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
-      yield(Candidate("date", seg.start, seg._end, lm .. ld, "〔農曆〕"))
+      yield(Candidate("date", seg.start, seg._end, lm..ld, "〔農曆〕"))
       local a, Y_g, M_g, D_g = lunarJzl(os.date("%Y%m%d%H"))
       yield(Candidate("date", seg.start, seg._end, M_g.."月"..D_g.."日", "〔農曆干支〕"))
       return
@@ -5238,7 +5386,7 @@ function t_translator(input, seg)
       -- yield(Candidate("date", seg.start, seg._end, rqzdx2(23).." ".."星期"..weekstr.." ", "〔月日週〕"))
       yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng1_m_date(os.date("%m")).." "..eng2_d_date(os.date("%d")), "〔週月日〕 ~a"))
       yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng2_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")), "〔週日月〕 ~e"))
-      yield(Candidate("date", seg.start, seg._end, jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..weekstr_jp1.." ", "〔月日週〕 ~j"))
+      yield(Candidate("date", seg.start, seg._end, jp_m_date(os.date("%m"))..jp_d_date(os.date("%d"))..weekstr_jp1, "〔日本〕 ~j"))
       -- local a, b, y, chinese_m, chinese_d = to_chinese_cal_local(os.time())
       local a, b, c, d, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, lm..ld.." "..weekstr_jp3.." ", "〔農曆〕 ~l"))
@@ -5283,10 +5431,19 @@ function t_translator(input, seg)
     end
 
     if (input == "`mdwj") then
-      yield(Candidate("date", seg.start, seg._end, jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..weekstr_jp1.." ", "〔月日週〕"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日").." "..weekstr_jp3.."曜日 ", "〔月日週〕"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日").."("..weekstr_jp3.."曜日)", "〔月日週〕"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日").."（"..weekstr_jp3.."曜日）", "〔月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, jp_m_date(os.date("%m"))..jp_d_date(os.date("%d"))..weekstr_jp1, "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1")..weekstr_jp1, "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1").." "..weekstr_jp3.."曜日 ", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1").."("..weekstr_jp3.."曜日)", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1").."（"..weekstr_jp3.."曜日）", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1"))..weekstr_jp1, "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).." "..weekstr_jp3.."曜日 ", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).."("..weekstr_jp3.."曜日)", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).."（"..weekstr_jp3.."曜日）", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日")..weekstr_jp1, "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日").." "..weekstr_jp3.."曜日 ", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日").."("..weekstr_jp3.."曜日)", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日").."（"..weekstr_jp3.."曜日）", "〔日本〕"))
       return
     end
 
@@ -5306,18 +5463,52 @@ function t_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, os.date("%Y_%m"), "〔年月〕 ~u"))
       yield(Candidate("date", seg.start, seg._end, eng1_m_date(os.date("%m"))..", "..os.date("%Y"), "〔月年〕 ~a"))
       yield(Candidate("date", seg.start, seg._end, eng1_m_date(os.date("%m")).." "..os.date("%Y"), "〔月年〕 ~e"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m")), "〔年月〕 ~j"))
+      -- yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m")), "〔年月〕 ~j"))
+      local jpymd, jp_y = jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))
+      yield(Candidate("date", seg.start, seg._end, jp_y..string.gsub(os.date("%m").."月", "([^%d])0", "%1"), "〔日本元号〕 ~j"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月", "([^%d])0", "%1"), "〔民國〕 ~h"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(2), "〔民國〕 ~g"))
       -- local a, b, chinese_y, chinese_m = to_chinese_cal_local(os.time())
       local a, b, ly_1, ly_2, lm = Date2LunarDate(os.date("%Y%m%d"))
-      yield(Candidate("date", seg.start, seg._end, ly_1 .. lm, "〔農曆〕 ~l"))
+      yield(Candidate("date", seg.start, seg._end, ly_1..lm, "〔農曆〕 ~l"))
+      return
+    end
+
+    if (input == "`ymj") then
+      local jpymd, jp_y = jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))
+      yield(Candidate("date", seg.start, seg._end, jp_y..string.gsub(os.date("%m").."月", "([^%d])0", "%1"), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(jp_y..string.gsub(os.date("%m").."月", "([^%d])0", "%1")), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, jp_y..os.date("%m").."月", "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(jp_y..os.date("%m").."月"), "〔日本元号〕"))
+      return
+    end
+    -- if (input == "`ymj") then
+    --   yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m")), "〔年月〕"))
+    --   return
+    -- end
+
+    if (input == "`ymh") then
+      -- yield(Candidate("date", seg.start, seg._end, string.gsub("民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月", "([^%d])0", "%1"), "〔*年月〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月", "([^%d])0", "%1"), "〔年月〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(string.gsub(os.date("%m"), "([^%d])0", "%1")).."月", "〔年月〕"))
+      -- yield(Candidate("date", seg.start, seg._end, "民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月", "〔*年月〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月", "〔年月〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(os.date("%m")).."月", "〔年月〕"))
+      return
+    end
+
+    if (input == "`ymg") then
+      yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(2), "〔年月〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[1], min_guo(os.date("%Y"))).."年"..rqzdx1(2), "〔年月〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[2], min_guo(os.date("%Y"))).."年"..rqzdx2(2), "〔年月〕"))
       return
     end
 
     if (input == "`yml") then
       -- local a, b, chinese_y, chinese_m = to_chinese_cal_local(os.time())
       local a, b, ly_1, ly_2, lm = Date2LunarDate(os.date("%Y%m%d"))
-      yield(Candidate("date", seg.start, seg._end, ly_1 .. lm, "〔農曆〕"))
-      yield(Candidate("date", seg.start, seg._end, ly_2 .. lm, "〔農曆〕"))
+      yield(Candidate("date", seg.start, seg._end, ly_1..lm, "〔農曆〕"))
+      yield(Candidate("date", seg.start, seg._end, ly_2..lm, "〔農曆〕"))
       local a, Y_g, M_g = lunarJzl(os.date("%Y%m%d%H"))
       yield(Candidate("date", seg.start, seg._end, Y_g.."年"..M_g.."月", "〔農曆干支〕"))
       return
@@ -5343,11 +5534,6 @@ function t_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, os.date(" %Y 年 %m 月 "), "〔*年月*〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y年%m月"), "〔年月〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y")).."年"..fullshape_number(os.date("%m")).."月", "〔年月〕"))
-      return
-    end
-
-    if (input == "`ymj") then
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m")), "〔年月〕"))
       return
     end
 
@@ -5454,10 +5640,58 @@ function t_translator(input, seg)
       -- yield(Candidate("qsj", seg.start, seg._end, rqzdx2().." ".."星期"..weekstr.." ", "〔年月日週〕"))
       yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng1_m_date(os.date("%m")).." "..eng2_d_date(os.date("%d"))..", "..os.date("%Y"), "〔週月日年〕 ~a"))
       yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng2_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")).." "..os.date("%Y"), "〔週日月年〕 ~e"))
-      yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..weekstr_jp1.." ", "〔年月日週〕 ~j"))
+      -- yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..weekstr_jp1.." ", "〔年月日週〕 ~j"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1")..weekstr_jp1, "〔日本元号〕 ~j"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日", "([^%d])0", "%1").." ".."星期"..weekstr.." ", "〔民國〕 ~h"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(23).." ".."星期"..weekstr.." ", "〔民國〕 ~g"))
       -- local chinese_date = to_chinese_cal_local(os.time())
       local ll_1, ll_2 = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("qsj", seg.start, seg._end, ll_1.." "..weekstr_jp3.." ", "〔農曆〕 ~l"))
+      return
+    end
+
+    if (input == "`fwj") then
+      yield(Candidate("date", seg.start, seg._end, string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1")..weekstr_jp1, "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1").." "..weekstr_jp3.."曜日 ", "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1").."("..weekstr_jp3.."曜日)", "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1").."（"..weekstr_jp3.."曜日）", "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1")..weekstr_jp1), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1").." "..weekstr_jp3.."曜日 "), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1").."("..weekstr_jp3.."曜日)"), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1").."（"..weekstr_jp3.."曜日）"), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))..weekstr_jp1, "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")).." "..weekstr_jp3.."曜日 ", "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")).."("..weekstr_jp3.."曜日)", "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")).."（"..weekstr_jp3.."曜日）", "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))..weekstr_jp1), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")).." "..weekstr_jp3.."曜日 "), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")).."("..weekstr_jp3.."曜日)"), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")).."（"..weekstr_jp3.."曜日）"), "〔日本元号〕"))
+      return
+    end
+    -- if (input == "`fwj") then
+    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..weekstr_jp1.." ", "〔年月日週〕"))
+    --   -- yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." ".."星期"..weekstr.." ", "〔年月日週〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." "..weekstr_jp3.."曜日 ", "〔年月日週〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").."("..weekstr_jp3.."曜日)", "〔年月日週〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").."（"..weekstr_jp3.."曜日）", "〔年月日週〕"))
+    --   return
+    -- end
+
+    if (input == "`fwh") then
+      -- yield(Candidate("date", seg.start, seg._end, string.gsub("民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日", "([^%d])0", "%1").." ".."星期"..weekstr.." ", "〔*年月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日", "([^%d])0", "%1").." ".."星期"..weekstr.." ", "〔年月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(string.gsub(os.date("%m").."月"..os.date("%d").."日", "([^%d])0", "%1") ).." ".."星期"..weekstr.." ", "〔年月日週〕"))
+      -- yield(Candidate("date", seg.start, seg._end, "民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日".." ".."星期"..weekstr.." ", "〔*年月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日".." ".."星期"..weekstr.." ", "〔年月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日".." ".."星期"..weekstr.." ", "〔年月日週〕"))
+      return
+    end
+
+    if (input == "`fwg") then
+      yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(23).." ".."星期"..weekstr.." ", "〔年月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[1], min_guo(os.date("%Y"))).."年"..rqzdx1(23).." ".."星期"..weekstr.." ", "〔年月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[2], min_guo(os.date("%Y"))).."年"..rqzdx2(23).." ".."星期"..weekstr_c.." ", "〔年月日週〕"))
       return
     end
 
@@ -5496,15 +5730,6 @@ function t_translator(input, seg)
       yield(Candidate("qsj", seg.start, seg._end, os.date(" %Y 年 %m 月 %d 日").." ".."星期"..weekstr.." ", "〔*年月日週*〕"))
       yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." ".."星期"..weekstr.." ", "〔年月日週〕"))
       yield(Candidate("qsj", seg.start, seg._end, fullshape_number(os.date("%Y")).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日 ".."星期"..weekstr.." ", "〔年月日週〕"))
-      return
-    end
-
-    if (input == "`fwj") then
-      yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..weekstr_jp1.." ", "〔年月日週〕"))
-      -- yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." ".."星期"..weekstr.." ", "〔年月日週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." "..weekstr_jp3.."曜日 ", "〔年月日週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").."("..weekstr_jp3.."曜日)", "〔年月日週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").."（"..weekstr_jp3.."曜日）", "〔年月日週〕"))
       return
     end
 
@@ -5789,7 +6014,18 @@ function t_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, eng2_d_date(d).." "..eng2_m_date(m).." "..y, "〔英式日月年〕"))
       yield(Candidate("date", seg.start, seg._end, "the "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
       yield(Candidate("date", seg.start, seg._end, "The "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
-      yield(Candidate("date", seg.start, seg._end, y.."年 "..jp_m_date(m)..jp_d_date(d), "〔日文日期〕"))
+      -- yield(Candidate("date", seg.start, seg._end, y.."年 "..jp_m_date(m)..jp_d_date(d), "〔日文日期〕"))
+      local jpymd, jp_y = jp_ymd(y,m,d)
+      yield(Candidate("date", seg.start, seg._end, jp_y..m.."月"..d.."日" , "〔日本元号〕"))
+      if tonumber(y) > 1911 then
+        yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(y).."年"..m.."月"..d.."日" , "〔民國〕"))
+        yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔民國〕"))
+        yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[1], min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔民國〕"))
+      elseif tonumber(y) <= 1911 then
+        yield(Candidate("date", seg.start, seg._end, "民國前"..min_guo(y).."年"..m.."月"..d.."日" , "〔民國〕"))
+        yield(Candidate("date", seg.start, seg._end, "民國前"..purech_number(min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔民國〕"))
+        yield(Candidate("date", seg.start, seg._end, "民國前"..read_number(confs[1], min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔民國〕"))
+      end
       -- local chinese_date_input = to_chinese_cal_local(os.time({year = y, month = m, day = d, hour = 12}))
       local ll_1, ll_2 = Date2LunarDate(y .. string.format("%02d", m) .. string.format("%02d", d))
       if(Date2LunarDate~=nil) then
@@ -5847,7 +6083,18 @@ function t_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, eng2_d_date(d).." "..eng2_m_date(m).." "..y, "〔英式日月年〕"))
       yield(Candidate("date", seg.start, seg._end, "the "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
       yield(Candidate("date", seg.start, seg._end, "The "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
-      yield(Candidate("date", seg.start, seg._end, y.."年 "..jp_m_date(m)..jp_d_date(d), "〔日文日期〕"))
+      -- yield(Candidate("date", seg.start, seg._end, y.."年 "..jp_m_date(m)..jp_d_date(d), "〔日文日期〕"))
+      local jpymd, jp_y = jp_ymd(y,m,d)
+      yield(Candidate("date", seg.start, seg._end, jp_y..m.."月"..d.."日" , "〔日本元号〕"))
+      if tonumber(y) > 1911 then
+        yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(y).."年"..m.."月"..d.."日" , "〔民國〕"))
+        yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔民國〕"))
+        yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[1], min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔民國〕"))
+      elseif tonumber(y) <= 1911 then
+        yield(Candidate("date", seg.start, seg._end, "民國前"..min_guo(y).."年"..m.."月"..d.."日" , "〔民國〕"))
+        yield(Candidate("date", seg.start, seg._end, "民國前"..purech_number(min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔民國〕"))
+        yield(Candidate("date", seg.start, seg._end, "民國前"..read_number(confs[1], min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔民國〕"))
+      end
       -- local chinese_date_input = to_chinese_cal_local(os.time({year = y, month = m, day = d, hour = 12}))
       local ll_1, ll_2 = Date2LunarDate(y .. string.format("%02d", m) .. string.format("%02d", d))
       if(Date2LunarDate~=nil) then
@@ -5924,10 +6171,12 @@ function t_translator(input, seg)
         yield(Candidate("number", seg.start, seg._end, little1_number(numberout), "〔上標數字〕"))
         yield(Candidate("number", seg.start, seg._end, little2_number(numberout), "〔下標數字〕"))
 
-        for _, conf in ipairs(confs) do
-          local r = read_number(conf, nn)
-          yield(Candidate("number", seg.start, seg._end, r, conf.comment))
-        end
+        -- for _, conf in ipairs(confs) do
+        --   local r = read_number(conf, nn)
+        --   yield(Candidate("number", seg.start, seg._end, r, conf.comment))
+        -- end
+        yield(Candidate("number", seg.start, seg._end, read_number(confs[1], nn), confs[1].comment))
+        yield(Candidate("number", seg.start, seg._end, read_number(confs[2], nn), confs[2].comment))
 
         if (string.len(numberout) < 2) then
           yield(Candidate("number", seg.start, seg._end, "元整", "〔純中文數字〕"))
@@ -6257,10 +6506,42 @@ function t2_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, os.date("%Y_%m_%d"), "〔年月日〕 ~u"))
       yield(Candidate("date", seg.start, seg._end, eng1_m_date(os.date("%m")).." "..eng2_d_date(os.date("%d"))..", "..os.date("%Y"), "〔月日年〕 ~a"))
       yield(Candidate("date", seg.start, seg._end, eng2_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")).." "..os.date("%Y"), "〔日月年〕 ~e"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")), "〔年月日〕 ~j"))
+      -- yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")), "〔年月日〕 ~j"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1"), "〔日本元号〕 ~j"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日", "([^%d])0", "%1"), "〔民國〕 ~h"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(23), "〔民國〕 ~g"))
       -- local chinese_date = to_chinese_cal_local(os.time())
       local ll_1, ll_2 = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, ll_1, "〔農曆〕 ~l"))
+      return
+    end
+
+    if (input == "'/fj") then
+      yield(Candidate("date", seg.start, seg._end, string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1"), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1")), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))), "〔日本元号〕"))
+      return
+    end
+    -- if (input == "'/fj") then
+    --   yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")), "〔年月日〕"))
+    --   return
+    -- end
+
+    if (input == "'/fh") then
+      -- yield(Candidate("date", seg.start, seg._end, string.gsub("民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日", "([^%d])0", "%1"), "〔*年月日〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日", "([^%d])0", "%1"), "〔年月日〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(string.gsub(os.date("%m").."月"..os.date("%d").."日", "([^%d])0", "%1") ), "〔年月日〕"))
+      -- yield(Candidate("date", seg.start, seg._end, "民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日", "〔*年月日〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日", "〔年月日〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日", "〔年月日〕"))
+      return
+    end
+
+    if (input == "'/fg") then
+      yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(23), "〔年月日〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[1], min_guo(os.date("%Y"))).."年"..rqzdx1(23), "〔年月日〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[2], min_guo(os.date("%Y"))).."年"..rqzdx2(23), "〔年月日〕"))
       return
     end
 
@@ -6271,11 +6552,6 @@ function t2_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, ll_2, "〔農曆〕"))
       local a, Y_g, M_g, D_g = lunarJzl(os.date("%Y%m%d%H"))
       yield(Candidate("date", seg.start, seg._end, Y_g.."年"..M_g.."月"..D_g.."日" , "〔農曆干支〕"))
-      return
-    end
-
-    if (input == "'/fj") then
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")), "〔年月日〕"))
       return
     end
 
@@ -6364,11 +6640,43 @@ function t2_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, os.date("%Y/%m/%d %H:%M"), "〔年月日 時:分〕 ~s"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d %H:%M"), "〔年月日 時:分〕 ~m"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y_%m_%d %H:%M"), "〔年月日 時:分〕 ~u"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..os.date("%H")..":"..os.date("%M"), "〔年月日 時:分〕 ~j"))
+      -- yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..os.date("%H")..":"..os.date("%M"), "〔年月日 時:分〕 ~j"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1").." "..os.date("%H:%M"), "〔日本元号〕 ~j"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日 "..os.date("%H點%M分"), "([^%d])0", "%1"), "〔民國〕 ~h"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(23).." "..ch_h_date(os.date("%H")).."點"..ch_minsec_date(os.date("%M")).."分", "〔民國〕 ~g"))
       -- local chinese_date = to_chinese_cal_local(os.time())
       local chinese_time = time_description_chinese(os.time())
       local ll_1, ll_2 = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, ll_1 .." ".. chinese_time, "〔農曆〕 ~l"))
+      return
+    end
+
+    if (input == "'/fnj") then
+      yield(Candidate("date", seg.start, seg._end, string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1").." "..os.date("%H:%M"), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1")).." "..os.date("%H:%M"), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")).." "..os.date("%H:%M"), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")).." "..os.date("%H:%M")), "〔日本元号〕"))
+      return
+    end
+    -- if (input == "'/fnj") then
+    --   yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..os.date("%H")..":"..os.date("%M"), "〔年月日 時:分〕"))
+    --   return
+    -- end
+
+    if (input == "'/fnh") then
+      -- yield(Candidate("date", seg.start, seg._end, string.gsub("民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日 "..os.date("%H點%M分 "), "([^%d])0", "%1"), "〔*年月日〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日 "..os.date("%H點%M分"), "([^%d])0", "%1"), "〔年月日〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(string.gsub(os.date("%m").."月"..os.date("%d").."日"..os.date("%H點%M分"), "([^%d])0", "%1") ), "〔年月日〕"))
+      -- yield(Candidate("date", seg.start, seg._end, "民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日 "..os.date("%H點%M分 "), "〔*年月日〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日"..os.date("%H點%M分"), "〔年月日〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日"..fullshape_number(os.date("%H點%M分")), "〔年月日〕"))
+      return
+    end
+
+    if (input == "'/fng") then
+      yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(23).." "..ch_h_date(os.date("%H")).."點"..ch_minsec_date(os.date("%M")).."分", "〔年月日〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[1], min_guo(os.date("%Y"))).."年"..rqzdx1(23).." "..ch_h_date(os.date("%H")).."點"..ch_minsec_date(os.date("%M")).."分", "〔年月日〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[2], min_guo(os.date("%Y"))).."年"..rqzdx2(23).." "..chb_h_date(os.date("%H")).."點"..chb_minsec_date(os.date("%M")).."分", "〔年月日〕"))
       return
     end
 
@@ -6379,11 +6687,6 @@ function t2_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, ll_1 .." ".. chinese_time, "〔農曆〕"))
       yield(Candidate("date", seg.start, seg._end, ll_2 .." ".. chinese_time, "〔農曆〕"))
       yield(Candidate("date", seg.start, seg._end, lunarJzl(os.date("%Y%m%d%H")), "〔農曆干支〕"))
-      return
-    end
-
-    if (input == "'/fnj") then
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..os.date("%H")..":"..os.date("%M"), "〔年月日 時:分〕"))
       return
     end
 
@@ -6454,12 +6757,39 @@ function t2_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, os.date("%Y/%m/%d %H:%M:%S"), "〔年月日 時:分:秒〕 ~s"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d %H:%M:%S"), "〔年月日 時:分:秒〕 ~m"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y_%m_%d %H:%M:%S"), "〔年月日 時:分:秒〕 ~u"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..os.date("%H")..":"..os.date("%M")..":"..os.date("%S"), "〔年月日 時:分:秒〕 ~j"))
+      -- yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..os.date("%H")..":"..os.date("%M")..":"..os.date("%S"), "〔年月日 時:分:秒〕 ~j"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1").." "..os.date("%H:%M:%S"), "〔日本元号〕 ~j"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日 "..os.date("%H點%M分%S秒"), "([^%d])0", "%1"), "〔年月日 時:分:秒〕 ~h"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(23).." "..ch_h_date(os.date("%H")).."點"..ch_minsec_date(os.date("%M")).."分"..ch_minsec_date(os.date("%S")).."秒", "〔年月日 時:分:秒〕 ~g"))
       return
     end
 
     if (input == "'/ftj") then
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..os.date("%H")..":"..os.date("%M")..":"..os.date("%S"), "〔年月日 時:分:秒〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1").." "..os.date("%H:%M:%S"), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1")).." "..os.date("%H:%M:%S"), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")).." "..os.date("%H:%M:%S"), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")).." "..os.date("%H:%M:%S")), "〔日本元号〕"))
+      return
+    end
+    -- if (input == "'/ftj") then
+    --   yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..os.date("%H")..":"..os.date("%M")..":"..os.date("%S"), "〔年月日 時:分:秒〕"))
+    --   return
+    -- end
+
+    if (input == "'/fth") then
+      -- yield(Candidate("date", seg.start, seg._end, string.gsub("民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日 "..os.date("%H點%M分%S秒 "), "([^%d])0", "%1"), "〔*年月日 時:分:秒〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日 "..os.date("%H點%M分%S秒"), "([^%d])0", "%1"), "〔年月日 時:分:秒〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(string.gsub(os.date("%m").."月"..os.date("%d").."日"..os.date("%H點%M分%S秒"), "([^%d])0", "%1") ), "〔年月日 時:分:秒〕"))
+      -- yield(Candidate("date", seg.start, seg._end, "民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日 "..os.date("%H點%M分%S秒 "), "〔*年月日 時:分:秒〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日"..os.date("%H點%M分%S秒"), "〔年月日 時:分:秒〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日"..fullshape_number(os.date("%H點%M分%S秒")), "〔年月日 時:分:秒〕"))
+      return
+    end
+
+    if (input == "'/ftg") then
+      yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(23).." "..ch_h_date(os.date("%H")).."點"..ch_minsec_date(os.date("%M")).."分"..ch_minsec_date(os.date("%S")).."秒", "〔年月日 時:分:秒〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[1], min_guo(os.date("%Y"))).."年"..rqzdx1(23).." "..ch_h_date(os.date("%H")).."點"..ch_minsec_date(os.date("%M")).."分"..ch_minsec_date(os.date("%S")).."秒", "〔年月日 時:分:秒〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[2], min_guo(os.date("%Y"))).."年"..rqzdx2(23).." "..chb_h_date(os.date("%H")).."點"..chb_minsec_date(os.date("%M")).."分"..chb_minsec_date(os.date("%S")).."秒", "〔年月日 時:分:秒〕"))
       return
     end
 
@@ -6527,9 +6857,34 @@ function t2_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, rqzdx1(1), "〔年〕 ~z"))
       -- yield(Candidate("date", seg.start, seg._end, rqzdx2(1), "〔年〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y"), "〔年〕 ~d"))
+      local jpymd, jp_y = jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))
+      yield(Candidate("date", seg.start, seg._end, jp_y, "〔日本元号〕 ~j"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(os.date("%Y")).."年", "〔民國〕 ~h"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年", "〔民國〕 ~g"))
       -- local a, b, chinese_y = to_chinese_cal_local(os.time())
       local a, b, ly_1, ly_2, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, ly_1, "〔農曆〕 ~l"))
+      return
+    end
+
+    if (input == "'/yj") then
+      local jpymd, jp_y = jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))
+      yield(Candidate("date", seg.start, seg._end, jp_y, "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(jp_y), "〔日本元号〕"))
+      return
+    end
+
+    if (input == "'/yh") then
+      -- yield(Candidate("date", seg.start, seg._end, "民國 "..min_guo(os.date("%Y")).." 年", "〔*年〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(os.date("%Y")).."年", "〔年〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年", "〔年〕"))
+      return
+    end
+
+    if (input == "'/yg") then
+      yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年", "〔年〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[1], min_guo(os.date("%Y"))).."年", "〔年〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[2], min_guo(os.date("%Y"))).."年", "〔年〕"))
       return
     end
 
@@ -6706,14 +7061,14 @@ function t2_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")), "〔月日〕 ~j"))
       -- local a, b, y, chinese_m, chinese_d = to_chinese_cal_local(os.time())
       local a, b, c, d, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
-      yield(Candidate("date", seg.start, seg._end, lm .. ld, "〔農曆〕 ~l"))
+      yield(Candidate("date", seg.start, seg._end, lm..ld, "〔農曆〕 ~l"))
       return
     end
 
     if (input == "'/mdl") then
       -- local a, b, y, chinese_m, chinese_d = to_chinese_cal_local(os.time())
       local a, b, c, d, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
-      yield(Candidate("date", seg.start, seg._end, lm .. ld, "〔農曆〕"))
+      yield(Candidate("date", seg.start, seg._end, lm..ld, "〔農曆〕"))
       local a, Y_g, M_g, D_g = lunarJzl(os.date("%Y%m%d%H"))
       yield(Candidate("date", seg.start, seg._end, M_g.."月"..D_g.."日", "〔農曆干支〕"))
       return
@@ -6803,7 +7158,7 @@ function t2_translator(input, seg)
       -- yield(Candidate("date", seg.start, seg._end, rqzdx2(23).." ".."星期"..weekstr.." ", "〔月日週〕"))
       yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng1_m_date(os.date("%m")).." "..eng2_d_date(os.date("%d")), "〔週月日〕 ~a"))
       yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng2_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")), "〔週日月〕 ~e"))
-      yield(Candidate("date", seg.start, seg._end, jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..weekstr_jp1.." ", "〔月日週〕 ~j"))
+      yield(Candidate("date", seg.start, seg._end, jp_m_date(os.date("%m"))..jp_d_date(os.date("%d"))..weekstr_jp1, "〔日本〕 ~j"))
       -- local a, b, y, chinese_m, chinese_d = to_chinese_cal_local(os.time())
       local a, b, c, d, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, lm..ld.." "..weekstr_jp3.." ", "〔農曆〕 ~l"))
@@ -6848,10 +7203,19 @@ function t2_translator(input, seg)
     end
 
     if (input == "'/mdwj") then
-      yield(Candidate("date", seg.start, seg._end, jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..weekstr_jp1.." ", "〔月日週〕"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日").." "..weekstr_jp3.."曜日 ", "〔月日週〕"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日").."("..weekstr_jp3.."曜日)", "〔月日週〕"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日").."（"..weekstr_jp3.."曜日）", "〔月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, jp_m_date(os.date("%m"))..jp_d_date(os.date("%d"))..weekstr_jp1, "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1")..weekstr_jp1, "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1").." "..weekstr_jp3.."曜日 ", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1").."("..weekstr_jp3.."曜日)", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1").."（"..weekstr_jp3.."曜日）", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1"))..weekstr_jp1, "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).." "..weekstr_jp3.."曜日 ", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).."("..weekstr_jp3.."曜日)", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).."（"..weekstr_jp3.."曜日）", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日")..weekstr_jp1, "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日").." "..weekstr_jp3.."曜日 ", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日").."("..weekstr_jp3.."曜日)", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日").."（"..weekstr_jp3.."曜日）", "〔日本〕"))
       return
     end
 
@@ -6871,18 +7235,52 @@ function t2_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, os.date("%Y_%m"), "〔年月〕 ~u"))
       yield(Candidate("date", seg.start, seg._end, eng1_m_date(os.date("%m"))..", "..os.date("%Y"), "〔月年〕 ~a"))
       yield(Candidate("date", seg.start, seg._end, eng1_m_date(os.date("%m")).." "..os.date("%Y"), "〔月年〕 ~e"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m")), "〔年月〕 ~j"))
+      -- yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m")), "〔年月〕 ~j"))
+      local jpymd, jp_y = jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))
+      yield(Candidate("date", seg.start, seg._end, jp_y..string.gsub(os.date("%m").."月", "([^%d])0", "%1"), "〔日本元号〕 ~j"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月", "([^%d])0", "%1"), "〔民國〕 ~h"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(2), "〔民國〕 ~g"))
       -- local a, b, chinese_y, chinese_m = to_chinese_cal_local(os.time())
       local a, b, ly_1, ly_2, lm = Date2LunarDate(os.date("%Y%m%d"))
-      yield(Candidate("date", seg.start, seg._end, ly_1 .. lm, "〔農曆〕 ~l"))
+      yield(Candidate("date", seg.start, seg._end, ly_1..lm, "〔農曆〕 ~l"))
+      return
+    end
+
+    if (input == "'/ymj") then
+      local jpymd, jp_y = jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))
+      yield(Candidate("date", seg.start, seg._end, jp_y..string.gsub(os.date("%m").."月", "([^%d])0", "%1"), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(jp_y..string.gsub(os.date("%m").."月", "([^%d])0", "%1")), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, jp_y..os.date("%m").."月", "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(jp_y..os.date("%m").."月"), "〔日本元号〕"))
+      return
+    end
+    -- if (input == "'/ymj") then
+    --   yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m")), "〔年月〕"))
+    --   return
+    -- end
+
+    if (input == "'/ymh") then
+      -- yield(Candidate("date", seg.start, seg._end, string.gsub("民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月", "([^%d])0", "%1"), "〔*年月〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月", "([^%d])0", "%1"), "〔年月〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(string.gsub(os.date("%m"), "([^%d])0", "%1")).."月", "〔年月〕"))
+      -- yield(Candidate("date", seg.start, seg._end, "民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月", "〔*年月〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月", "〔年月〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(os.date("%m")).."月", "〔年月〕"))
+      return
+    end
+
+    if (input == "'/ymg") then
+      yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(2), "〔年月〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[1], min_guo(os.date("%Y"))).."年"..rqzdx1(2), "〔年月〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[2], min_guo(os.date("%Y"))).."年"..rqzdx2(2), "〔年月〕"))
       return
     end
 
     if (input == "'/yml") then
       -- local a, b, chinese_y, chinese_m = to_chinese_cal_local(os.time())
       local a, b, ly_1, ly_2, lm = Date2LunarDate(os.date("%Y%m%d"))
-      yield(Candidate("date", seg.start, seg._end, ly_1 .. lm, "〔農曆〕"))
-      yield(Candidate("date", seg.start, seg._end, ly_2 .. lm, "〔農曆〕"))
+      yield(Candidate("date", seg.start, seg._end, ly_1..lm, "〔農曆〕"))
+      yield(Candidate("date", seg.start, seg._end, ly_2..lm, "〔農曆〕"))
       local a, Y_g, M_g = lunarJzl(os.date("%Y%m%d%H"))
       yield(Candidate("date", seg.start, seg._end, Y_g.."年"..M_g.."月", "〔農曆干支〕"))
       return
@@ -6908,11 +7306,6 @@ function t2_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, os.date(" %Y 年 %m 月 "), "〔*年月*〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y年%m月"), "〔年月〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y")).."年"..fullshape_number(os.date("%m")).."月", "〔年月〕"))
-      return
-    end
-
-    if (input == "'/ymj") then
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m")), "〔年月〕"))
       return
     end
 
@@ -7019,10 +7412,58 @@ function t2_translator(input, seg)
       -- yield(Candidate("qsj", seg.start, seg._end, rqzdx2().." ".."星期"..weekstr.." ", "〔年月日週〕"))
       yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng1_m_date(os.date("%m")).." "..eng2_d_date(os.date("%d"))..", "..os.date("%Y"), "〔週月日年〕 ~a"))
       yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng2_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")).." "..os.date("%Y"), "〔週日月年〕 ~e"))
-      yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..weekstr_jp1.." ", "〔年月日週〕 ~j"))
+      -- yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..weekstr_jp1.." ", "〔年月日週〕 ~j"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1")..weekstr_jp1, "〔日本元号〕 ~j"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日", "([^%d])0", "%1").." ".."星期"..weekstr.." ", "〔民國〕 ~h"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(23).." ".."星期"..weekstr.." ", "〔民國〕 ~g"))
       -- local chinese_date = to_chinese_cal_local(os.time())
       local ll_1, ll_2 = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("qsj", seg.start, seg._end, ll_1.." "..weekstr_jp3.." ", "〔農曆〕 ~l"))
+      return
+    end
+
+    if (input == "'/fwj") then
+      yield(Candidate("date", seg.start, seg._end, string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1")..weekstr_jp1, "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1").." "..weekstr_jp3.."曜日 ", "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1").."("..weekstr_jp3.."曜日)", "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1").."（"..weekstr_jp3.."曜日）", "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1")..weekstr_jp1), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1").." "..weekstr_jp3.."曜日 "), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1").."("..weekstr_jp3.."曜日)"), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")), "([^%d])0", "%1").."（"..weekstr_jp3.."曜日）"), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))..weekstr_jp1, "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")).." "..weekstr_jp3.."曜日 ", "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")).."("..weekstr_jp3.."曜日)", "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")).."（"..weekstr_jp3.."曜日）", "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))..weekstr_jp1), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")).." "..weekstr_jp3.."曜日 "), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")).."("..weekstr_jp3.."曜日)"), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d")).."（"..weekstr_jp3.."曜日）"), "〔日本元号〕"))
+      return
+    end
+    -- if (input == "'/fwj") then
+    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..weekstr_jp1.." ", "〔年月日週〕"))
+    --   -- yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." ".."星期"..weekstr.." ", "〔年月日週〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." "..weekstr_jp3.."曜日 ", "〔年月日週〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").."("..weekstr_jp3.."曜日)", "〔年月日週〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").."（"..weekstr_jp3.."曜日）", "〔年月日週〕"))
+    --   return
+    -- end
+
+    if (input == "'/fwh") then
+      -- yield(Candidate("date", seg.start, seg._end, string.gsub("民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日", "([^%d])0", "%1").." ".."星期"..weekstr.." ", "〔*年月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日", "([^%d])0", "%1").." ".."星期"..weekstr.." ", "〔年月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(string.gsub(os.date("%m").."月"..os.date("%d").."日", "([^%d])0", "%1") ).." ".."星期"..weekstr.." ", "〔年月日週〕"))
+      -- yield(Candidate("date", seg.start, seg._end, "民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日".." ".."星期"..weekstr.." ", "〔*年月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日".." ".."星期"..weekstr.." ", "〔年月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日".." ".."星期"..weekstr.." ", "〔年月日週〕"))
+      return
+    end
+
+    if (input == "'/fwg") then
+      yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(23).." ".."星期"..weekstr.." ", "〔年月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[1], min_guo(os.date("%Y"))).."年"..rqzdx1(23).." ".."星期"..weekstr.." ", "〔年月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[2], min_guo(os.date("%Y"))).."年"..rqzdx2(23).." ".."星期"..weekstr_c.." ", "〔年月日週〕"))
       return
     end
 
@@ -7061,15 +7502,6 @@ function t2_translator(input, seg)
       yield(Candidate("qsj", seg.start, seg._end, os.date(" %Y 年 %m 月 %d 日").." ".."星期"..weekstr.." ", "〔*年月日週*〕"))
       yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." ".."星期"..weekstr.." ", "〔年月日週〕"))
       yield(Candidate("qsj", seg.start, seg._end, fullshape_number(os.date("%Y")).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日 ".."星期"..weekstr.." ", "〔年月日週〕"))
-      return
-    end
-
-    if (input == "'/fwj") then
-      yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..weekstr_jp1.." ", "〔年月日週〕"))
-      -- yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." ".."星期"..weekstr.." ", "〔年月日週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." "..weekstr_jp3.."曜日 ", "〔年月日週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").."("..weekstr_jp3.."曜日)", "〔年月日週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").."（"..weekstr_jp3.."曜日）", "〔年月日週〕"))
       return
     end
 
@@ -7353,7 +7785,18 @@ function t2_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, eng2_d_date(d).." "..eng2_m_date(m).." "..y, "〔英式日月年〕"))
       yield(Candidate("date", seg.start, seg._end, "the "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
       yield(Candidate("date", seg.start, seg._end, "The "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
-      yield(Candidate("date", seg.start, seg._end, y.."年 "..jp_m_date(m)..jp_d_date(d), "〔日文日期〕"))
+      -- yield(Candidate("date", seg.start, seg._end, y.."年 "..jp_m_date(m)..jp_d_date(d), "〔日文日期〕"))
+      local jpymd, jp_y = jp_ymd(y,m,d)
+      yield(Candidate("date", seg.start, seg._end, jp_y..m.."月"..d.."日" , "〔日本元号〕"))
+      if tonumber(y) > 1911 then
+        yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(y).."年"..m.."月"..d.."日" , "〔民國〕"))
+        yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔民國〕"))
+        yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[1], min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔民國〕"))
+      elseif tonumber(y) <= 1911 then
+        yield(Candidate("date", seg.start, seg._end, "民國前"..min_guo(y).."年"..m.."月"..d.."日" , "〔民國〕"))
+        yield(Candidate("date", seg.start, seg._end, "民國前"..purech_number(min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔民國〕"))
+        yield(Candidate("date", seg.start, seg._end, "民國前"..read_number(confs[1], min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔民國〕"))
+      end
       -- local chinese_date_input = to_chinese_cal_local(os.time({year = y, month = m, day = d, hour = 12}))
       local ll_1, ll_2 = Date2LunarDate(y .. string.format("%02d", m) .. string.format("%02d", d))
       if(Date2LunarDate~=nil) then
@@ -7411,7 +7854,18 @@ function t2_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, eng2_d_date(d).." "..eng2_m_date(m).." "..y, "〔英式日月年〕"))
       yield(Candidate("date", seg.start, seg._end, "the "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
       yield(Candidate("date", seg.start, seg._end, "The "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
-      yield(Candidate("date", seg.start, seg._end, y.."年 "..jp_m_date(m)..jp_d_date(d), "〔日文日期〕"))
+      -- yield(Candidate("date", seg.start, seg._end, y.."年 "..jp_m_date(m)..jp_d_date(d), "〔日文日期〕"))
+      local jpymd, jp_y = jp_ymd(y,m,d)
+      yield(Candidate("date", seg.start, seg._end, jp_y..m.."月"..d.."日" , "〔日本元号〕"))
+      if tonumber(y) > 1911 then
+        yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(y).."年"..m.."月"..d.."日" , "〔民國〕"))
+        yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔民國〕"))
+        yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[1], min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔民國〕"))
+      elseif tonumber(y) <= 1911 then
+        yield(Candidate("date", seg.start, seg._end, "民國前"..min_guo(y).."年"..m.."月"..d.."日" , "〔民國〕"))
+        yield(Candidate("date", seg.start, seg._end, "民國前"..purech_number(min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔民國〕"))
+        yield(Candidate("date", seg.start, seg._end, "民國前"..read_number(confs[1], min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔民國〕"))
+      end
       -- local chinese_date_input = to_chinese_cal_local(os.time({year = y, month = m, day = d, hour = 12}))
       local ll_1, ll_2 = Date2LunarDate(y .. string.format("%02d", m) .. string.format("%02d", d))
       if(Date2LunarDate~=nil) then
@@ -7488,10 +7942,12 @@ function t2_translator(input, seg)
         yield(Candidate("number", seg.start, seg._end, little1_number(numberout), "〔上標數字〕"))
         yield(Candidate("number", seg.start, seg._end, little2_number(numberout), "〔下標數字〕"))
 
-        for _, conf in ipairs(confs) do
-          local r = read_number(conf, nn)
-          yield(Candidate("number", seg.start, seg._end, r, conf.comment))
-        end
+        -- for _, conf in ipairs(confs) do
+        --   local r = read_number(conf, nn)
+        --   yield(Candidate("number", seg.start, seg._end, r, conf.comment))
+        -- end
+        yield(Candidate("number", seg.start, seg._end, read_number(confs[1], nn), confs[1].comment))
+        yield(Candidate("number", seg.start, seg._end, read_number(confs[2], nn), confs[2].comment))
 
         if (string.len(numberout) < 2) then
           yield(Candidate("number", seg.start, seg._end, "元整", "〔純中文數字〕"))
