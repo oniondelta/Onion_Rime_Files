@@ -4443,6 +4443,13 @@ end
 --]]
 function t_translator(input, seg)
   if (string.match(input, "`")~=nil) then
+    -- local jpymd, jp_y = jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))
+    -- local chinese_time = time_description_chinese(os.time())
+    -- local All_g, Y_g, M_g, D_g, H_g = lunarJzl(os.date("%Y%m%d%H"))
+    -- local ll_1, ll_2, ly_1, ly_2, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
+    -- local aptime1, aptime2, aptime3, aptime4, aptime5, aptime6, aptime7, aptime8, aptime0_1, aptime0_2, aptime0_3, aptime0_4, aptime00_1, aptime00_2,  aptime00_3, aptime00_4 = time_out1()
+    -- local aptime_c1, aptime_c2, aptime_c3, aptime_c4, ap_5 = time_out2()
+
     -- 先展示星期，以便後面使用
     if (os.date("%w") == "0") then
       weekstr = "日"
@@ -4530,10 +4537,10 @@ function t_translator(input, seg)
       local a, b, c, d, aptime5, aptime6, aptime7, aptime8 = time_out1()
       yield(Candidate("time", seg.start, seg._end, aptime6 , "〔時:分:秒〕 ~m"))
       yield(Candidate("time", seg.start, seg._end, string.gsub(os.date("%H時%M分%S秒"), "0([%d])", "%1"), "〔時:分:秒〕 ~c"))
-      local a, b, aptime_c3, aptime_c4, ap = time_out2()
+      local a, b, aptime_c3, aptime_c4, ap_5 = time_out2()
       yield(Candidate("time", seg.start, seg._end, string.gsub(aptime_c3, "0([%d])", "%1"), "〔時:分:秒〕 ~w"))
       yield(Candidate("time", seg.start, seg._end, ch_h_date(os.date("%H")).."時"..ch_minsec_date(os.date("%M")).."分"..ch_minsec_date(os.date("%S")).."秒", "〔時:分:秒〕 ~z"))
-      yield(Candidate("time", seg.start, seg._end, ap.." "..ch_h_date(os.date("%I")).."時"..ch_minsec_date(os.date("%M")).."分"..ch_minsec_date(os.date("%S")).."秒", "〔時:分:秒〕 ~u"))
+      yield(Candidate("time", seg.start, seg._end, ap_5.." "..ch_h_date(os.date("%I")).."時"..ch_minsec_date(os.date("%M")).."分"..ch_minsec_date(os.date("%S")).."秒", "〔時:分:秒〕 ~u"))
       return
     end
 
@@ -4551,11 +4558,11 @@ function t_translator(input, seg)
     end
 
     if (input == "`tu") then
-      local a, b, aptime_c3, aptime_c4, ap = time_out2()
-      yield(Candidate("time", seg.start, seg._end, ap.." "..ch_h_date(os.date("%I")).."時"..ch_minsec_date(os.date("%M")).."分"..ch_minsec_date(os.date("%S")).."秒", "〔時:分:秒〕"))
-      yield(Candidate("time", seg.start, seg._end, ap.." "..ch_h_date(os.date("%I")).."點"..ch_minsec_date(os.date("%M")).."分"..ch_minsec_date(os.date("%S")).."秒", "〔時:分:秒〕"))
-      yield(Candidate("time", seg.start, seg._end, ap.." "..chb_h_date(os.date("%I")).."時"..chb_minsec_date(os.date("%M")).."分"..chb_minsec_date(os.date("%S")).."秒", "〔時:分:秒〕"))
-      yield(Candidate("time", seg.start, seg._end, ap.." "..chb_h_date(os.date("%I")).."點"..chb_minsec_date(os.date("%M")).."分"..chb_minsec_date(os.date("%S")).."秒", "〔時:分:秒〕"))
+      local a, b, aptime_c3, aptime_c4, ap_5 = time_out2()
+      yield(Candidate("time", seg.start, seg._end, ap_5.." "..ch_h_date(os.date("%I")).."時"..ch_minsec_date(os.date("%M")).."分"..ch_minsec_date(os.date("%S")).."秒", "〔時:分:秒〕"))
+      yield(Candidate("time", seg.start, seg._end, ap_5.." "..ch_h_date(os.date("%I")).."點"..ch_minsec_date(os.date("%M")).."分"..ch_minsec_date(os.date("%S")).."秒", "〔時:分:秒〕"))
+      yield(Candidate("time", seg.start, seg._end, ap_5.." "..chb_h_date(os.date("%I")).."時"..chb_minsec_date(os.date("%M")).."分"..chb_minsec_date(os.date("%S")).."秒", "〔時:分:秒〕"))
+      yield(Candidate("time", seg.start, seg._end, ap_5.." "..chb_h_date(os.date("%I")).."點"..chb_minsec_date(os.date("%M")).."分"..chb_minsec_date(os.date("%S")).."秒", "〔時:分:秒〕"))
       return
     end
 
@@ -4618,10 +4625,10 @@ function t_translator(input, seg)
       local aptime1, aptime2, aptime3, aptime4 = time_out1()
       yield(Candidate("time", seg.start, seg._end, aptime2, "〔時:分〕 ~m"))
       yield(Candidate("time", seg.start, seg._end, string.gsub(os.date("%H時%M分"), "0([%d])", "%1"), "〔時:分〕 ~c"))
-      local aptime_c1, aptime_c2, a, b, ap = time_out2()
+      local aptime_c1, aptime_c2, a, b, ap_5 = time_out2()
       yield(Candidate("time", seg.start, seg._end, string.gsub(aptime_c1, "0([%d])", "%1"), "〔時:分〕 ~w"))
       yield(Candidate("time", seg.start, seg._end, ch_h_date(os.date("%H")).."時"..ch_minsec_date(os.date("%M")).."分", "〔時:分〕 ~z"))
-      yield(Candidate("time", seg.start, seg._end, ap.." "..ch_h_date(os.date("%I")).."時"..ch_minsec_date(os.date("%M")).."分", "〔時:分〕 ~u"))
+      yield(Candidate("time", seg.start, seg._end, ap_5.." "..ch_h_date(os.date("%I")).."時"..ch_minsec_date(os.date("%M")).."分", "〔時:分〕 ~u"))
       local chinese_time = time_description_chinese(os.time())
       yield(Candidate("time", seg.start, seg._end, chinese_time, "〔農曆〕 ~l"))
       return
@@ -4641,11 +4648,11 @@ function t_translator(input, seg)
     end
 
     if (input == "`nu") then
-      local a, b, c, d, ap = time_out2()
-      yield(Candidate("time", seg.start, seg._end, ap.." "..ch_h_date(os.date("%I")).."時"..ch_minsec_date(os.date("%M")).."分", "〔時:分〕"))
-      yield(Candidate("time", seg.start, seg._end, ap.." "..ch_h_date(os.date("%I")).."點"..ch_minsec_date(os.date("%M")).."分", "〔時:分〕"))
-      yield(Candidate("time", seg.start, seg._end, ap.." "..chb_h_date(os.date("%I")).."時"..chb_minsec_date(os.date("%M")).."分", "〔時:分〕"))
-      yield(Candidate("time", seg.start, seg._end, ap.." "..chb_h_date(os.date("%I")).."點"..chb_minsec_date(os.date("%M")).."分", "〔時:分〕"))
+      local a, b, c, d, ap_5 = time_out2()
+      yield(Candidate("time", seg.start, seg._end, ap_5.." "..ch_h_date(os.date("%I")).."時"..ch_minsec_date(os.date("%M")).."分", "〔時:分〕"))
+      yield(Candidate("time", seg.start, seg._end, ap_5.." "..ch_h_date(os.date("%I")).."點"..ch_minsec_date(os.date("%M")).."分", "〔時:分〕"))
+      yield(Candidate("time", seg.start, seg._end, ap_5.." "..chb_h_date(os.date("%I")).."時"..chb_minsec_date(os.date("%M")).."分", "〔時:分〕"))
+      yield(Candidate("time", seg.start, seg._end, ap_5.." "..chb_h_date(os.date("%I")).."點"..chb_minsec_date(os.date("%M")).."分", "〔時:分〕"))
       return
     end
 
@@ -6027,8 +6034,8 @@ function t_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, "the "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
       yield(Candidate("date", seg.start, seg._end, "The "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
       -- yield(Candidate("date", seg.start, seg._end, y.."年 "..jp_m_date(m)..jp_d_date(d), "〔日文日期〕"))
-      local jpymd, jp_y = jp_ymd(y,m,d)
-      yield(Candidate("date", seg.start, seg._end, jp_y..m.."月"..d.."日" , "〔日本元号〕"))
+      local jpymd2, jp_y2 = jp_ymd(y,m,d)
+      yield(Candidate("date", seg.start, seg._end, jp_y2..m.."月"..d.."日" , "〔日本元号〕"))
       if tonumber(y) > 1911 then
         yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(y).."年"..m.."月"..d.."日" , "〔民國〕"))
         yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔民國〕"))
@@ -6039,18 +6046,20 @@ function t_translator(input, seg)
         yield(Candidate("date", seg.start, seg._end, "民國前"..read_number(confs[1], min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔民國〕"))
       end
       -- local chinese_date_input = to_chinese_cal_local(os.time({year = y, month = m, day = d, hour = 12}))
-      local ll_1, ll_2 = Date2LunarDate(y .. string.format("%02d", m) .. string.format("%02d", d))
-      if(Date2LunarDate~=nil) then
-        yield(Candidate("date", seg.start, seg._end, ll_1, "〔西曆→農曆〕"))
-        yield(Candidate("date", seg.start, seg._end, ll_2, "〔西曆→農曆〕"))
+      local ll_1b, ll_2b = Date2LunarDate(y .. string.format("%02d", m) .. string.format("%02d", d))
+      -- if(Date2LunarDate~=nil) then
+      if(ll_1b~=nil) then
+        yield(Candidate("date", seg.start, seg._end, ll_1b, "〔西曆→農曆〕"))
+        yield(Candidate("date", seg.start, seg._end, ll_2b, "〔西曆→農曆〕"))
       end
-      local All_g, Y_g, M_g, D_g = lunarJzl(y .. string.format("%02d", m) .. string.format("%02d", d) .. 12)
-      if(All_g~=nil) then
-        yield(Candidate("date", seg.start, seg._end, Y_g.."年"..M_g.."月"..D_g.."日", "〔西曆→農曆干支〕"))
+      local All_g2, Y_g2, M_g2, D_g2 = lunarJzl(y .. string.format("%02d", m) .. string.format("%02d", d) .. 12)
+      if(All_g2~=nil) then
+        yield(Candidate("date", seg.start, seg._end, Y_g2.."年"..M_g2.."月"..D_g2.."日", "〔西曆→農曆干支〕"))
       end
       local LDD2D = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 0 )
       local LDD2D_leap_year  = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 1 )
-      if(Date2LunarDate~=nil) then
+      -- if(Date2LunarDate~=nil) then
+      if(LDD2D~=nil) then
         yield(Candidate("date", seg.start, seg._end, LDD2D, "〔農曆→西曆〕"))
         yield(Candidate("date", seg.start, seg._end, LDD2D_leap_year, "〔農曆(閏)→西曆〕"))
       end
@@ -6096,8 +6105,8 @@ function t_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, "the "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
       yield(Candidate("date", seg.start, seg._end, "The "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
       -- yield(Candidate("date", seg.start, seg._end, y.."年 "..jp_m_date(m)..jp_d_date(d), "〔日文日期〕"))
-      local jpymd, jp_y = jp_ymd(y,m,d)
-      yield(Candidate("date", seg.start, seg._end, jp_y..m.."月"..d.."日" , "〔日本元号〕"))
+      local jpymd2, jp_y2 = jp_ymd(y,m,d)
+      yield(Candidate("date", seg.start, seg._end, jp_y2..m.."月"..d.."日" , "〔日本元号〕"))
       if tonumber(y) > 1911 then
         yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(y).."年"..m.."月"..d.."日" , "〔民國〕"))
         yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔民國〕"))
@@ -6108,18 +6117,20 @@ function t_translator(input, seg)
         yield(Candidate("date", seg.start, seg._end, "民國前"..read_number(confs[1], min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔民國〕"))
       end
       -- local chinese_date_input = to_chinese_cal_local(os.time({year = y, month = m, day = d, hour = 12}))
-      local ll_1, ll_2 = Date2LunarDate(y .. string.format("%02d", m) .. string.format("%02d", d))
-      if(Date2LunarDate~=nil) then
-        yield(Candidate("date", seg.start, seg._end, ll_1, "〔西曆→農曆〕"))
-        yield(Candidate("date", seg.start, seg._end, ll_2, "〔西曆→農曆〕"))
+      local ll_1b, ll_2b = Date2LunarDate(y .. string.format("%02d", m) .. string.format("%02d", d))
+      -- if(Date2LunarDate~=nil) then
+      if(ll_1b~=nil) then
+        yield(Candidate("date", seg.start, seg._end, ll_1b, "〔西曆→農曆〕"))
+        yield(Candidate("date", seg.start, seg._end, ll_2b, "〔西曆→農曆〕"))
       end
-      local All_g, Y_g, M_g, D_g = lunarJzl(y .. string.format("%02d", m) .. string.format("%02d", d) .. 12)
-      if(All_g~=nil) then
-        yield(Candidate("date", seg.start, seg._end, Y_g.."年"..M_g.."月"..D_g.."日", "〔西曆→農曆干支〕"))
+      local All_g2, Y_g2, M_g2, D_g2 = lunarJzl(y .. string.format("%02d", m) .. string.format("%02d", d) .. 12)
+      if(All_g2~=nil) then
+        yield(Candidate("date", seg.start, seg._end, Y_g2.."年"..M_g2.."月"..D_g2.."日", "〔西曆→農曆干支〕"))
       end
       local LDD2D = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 0 )
       local LDD2D_leap_year  = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 1 )
-      if(Date2LunarDate~=nil) then
+      -- if(Date2LunarDate~=nil) then
+      if(LDD2D~=nil) then
         yield(Candidate("date", seg.start, seg._end, LDD2D, "〔農曆→西曆〕"))
         yield(Candidate("date", seg.start, seg._end, LDD2D_leap_year, "〔農曆(閏)→西曆〕"))
       end
@@ -6227,6 +6238,13 @@ end
 --]]
 function t2_translator(input, seg)
   if (string.match(input, "'/")~=nil) then
+    -- local jpymd, jp_y = jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))
+    -- local chinese_time = time_description_chinese(os.time())
+    -- local All_g, Y_g, M_g, D_g, H_g = lunarJzl(os.date("%Y%m%d%H"))
+    -- local ll_1, ll_2, ly_1, ly_2, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
+    -- local aptime1, aptime2, aptime3, aptime4, aptime5, aptime6, aptime7, aptime8, aptime0_1, aptime0_2, aptime0_3, aptime0_4, aptime00_1, aptime00_2,  aptime00_3, aptime00_4 = time_out1()
+    -- local aptime_c1, aptime_c2, aptime_c3, aptime_c4, ap_5 = time_out2()
+
     -- 先展示星期，以便後面使用
     if (os.date("%w") == "0") then
       weekstr = "日"
@@ -6314,10 +6332,10 @@ function t2_translator(input, seg)
       local a, b, c, d, aptime5, aptime6, aptime7, aptime8 = time_out1()
       yield(Candidate("time", seg.start, seg._end, aptime6 , "〔時:分:秒〕 ~m"))
       yield(Candidate("time", seg.start, seg._end, string.gsub(os.date("%H時%M分%S秒"), "0([%d])", "%1"), "〔時:分:秒〕 ~c"))
-      local a, b, aptime_c3, aptime_c4, ap = time_out2()
+      local a, b, aptime_c3, aptime_c4, ap_5 = time_out2()
       yield(Candidate("time", seg.start, seg._end, string.gsub(aptime_c3, "0([%d])", "%1"), "〔時:分:秒〕 ~w"))
       yield(Candidate("time", seg.start, seg._end, ch_h_date(os.date("%H")).."時"..ch_minsec_date(os.date("%M")).."分"..ch_minsec_date(os.date("%S")).."秒", "〔時:分:秒〕 ~z"))
-      yield(Candidate("time", seg.start, seg._end, ap.." "..ch_h_date(os.date("%I")).."時"..ch_minsec_date(os.date("%M")).."分"..ch_minsec_date(os.date("%S")).."秒", "〔時:分:秒〕 ~u"))
+      yield(Candidate("time", seg.start, seg._end, ap_5.." "..ch_h_date(os.date("%I")).."時"..ch_minsec_date(os.date("%M")).."分"..ch_minsec_date(os.date("%S")).."秒", "〔時:分:秒〕 ~u"))
       return
     end
 
@@ -6335,11 +6353,11 @@ function t2_translator(input, seg)
     end
 
     if (input == "'/tu") then
-      local a, b, aptime_c3, aptime_c4, ap = time_out2()
-      yield(Candidate("time", seg.start, seg._end, ap.." "..ch_h_date(os.date("%I")).."時"..ch_minsec_date(os.date("%M")).."分"..ch_minsec_date(os.date("%S")).."秒", "〔時:分:秒〕"))
-      yield(Candidate("time", seg.start, seg._end, ap.." "..ch_h_date(os.date("%I")).."點"..ch_minsec_date(os.date("%M")).."分"..ch_minsec_date(os.date("%S")).."秒", "〔時:分:秒〕"))
-      yield(Candidate("time", seg.start, seg._end, ap.." "..chb_h_date(os.date("%I")).."時"..chb_minsec_date(os.date("%M")).."分"..chb_minsec_date(os.date("%S")).."秒", "〔時:分:秒〕"))
-      yield(Candidate("time", seg.start, seg._end, ap.." "..chb_h_date(os.date("%I")).."點"..chb_minsec_date(os.date("%M")).."分"..chb_minsec_date(os.date("%S")).."秒", "〔時:分:秒〕"))
+      local a, b, aptime_c3, aptime_c4, ap_5 = time_out2()
+      yield(Candidate("time", seg.start, seg._end, ap_5.." "..ch_h_date(os.date("%I")).."時"..ch_minsec_date(os.date("%M")).."分"..ch_minsec_date(os.date("%S")).."秒", "〔時:分:秒〕"))
+      yield(Candidate("time", seg.start, seg._end, ap_5.." "..ch_h_date(os.date("%I")).."點"..ch_minsec_date(os.date("%M")).."分"..ch_minsec_date(os.date("%S")).."秒", "〔時:分:秒〕"))
+      yield(Candidate("time", seg.start, seg._end, ap_5.." "..chb_h_date(os.date("%I")).."時"..chb_minsec_date(os.date("%M")).."分"..chb_minsec_date(os.date("%S")).."秒", "〔時:分:秒〕"))
+      yield(Candidate("time", seg.start, seg._end, ap_5.." "..chb_h_date(os.date("%I")).."點"..chb_minsec_date(os.date("%M")).."分"..chb_minsec_date(os.date("%S")).."秒", "〔時:分:秒〕"))
       return
     end
 
@@ -6402,10 +6420,10 @@ function t2_translator(input, seg)
       local aptime1, aptime2, aptime3, aptime4 = time_out1()
       yield(Candidate("time", seg.start, seg._end, aptime2, "〔時:分〕 ~m"))
       yield(Candidate("time", seg.start, seg._end, string.gsub(os.date("%H時%M分"), "0([%d])", "%1"), "〔時:分〕 ~c"))
-      local aptime_c1, aptime_c2, a, b, ap = time_out2()
+      local aptime_c1, aptime_c2, a, b, ap_5 = time_out2()
       yield(Candidate("time", seg.start, seg._end, string.gsub(aptime_c1, "0([%d])", "%1"), "〔時:分〕 ~w"))
       yield(Candidate("time", seg.start, seg._end, ch_h_date(os.date("%H")).."時"..ch_minsec_date(os.date("%M")).."分", "〔時:分〕 ~z"))
-      yield(Candidate("time", seg.start, seg._end, ap.." "..ch_h_date(os.date("%I")).."時"..ch_minsec_date(os.date("%M")).."分", "〔時:分〕 ~u"))
+      yield(Candidate("time", seg.start, seg._end, ap_5.." "..ch_h_date(os.date("%I")).."時"..ch_minsec_date(os.date("%M")).."分", "〔時:分〕 ~u"))
       local chinese_time = time_description_chinese(os.time())
       yield(Candidate("time", seg.start, seg._end, chinese_time, "〔農曆〕 ~l"))
       return
@@ -6425,11 +6443,11 @@ function t2_translator(input, seg)
     end
 
     if (input == "'/nu") then
-      local a, b, c, d, ap = time_out2()
-      yield(Candidate("time", seg.start, seg._end, ap.." "..ch_h_date(os.date("%I")).."時"..ch_minsec_date(os.date("%M")).."分", "〔時:分〕"))
-      yield(Candidate("time", seg.start, seg._end, ap.." "..ch_h_date(os.date("%I")).."點"..ch_minsec_date(os.date("%M")).."分", "〔時:分〕"))
-      yield(Candidate("time", seg.start, seg._end, ap.." "..chb_h_date(os.date("%I")).."時"..chb_minsec_date(os.date("%M")).."分", "〔時:分〕"))
-      yield(Candidate("time", seg.start, seg._end, ap.." "..chb_h_date(os.date("%I")).."點"..chb_minsec_date(os.date("%M")).."分", "〔時:分〕"))
+      local a, b, c, d, ap_5 = time_out2()
+      yield(Candidate("time", seg.start, seg._end, ap_5.." "..ch_h_date(os.date("%I")).."時"..ch_minsec_date(os.date("%M")).."分", "〔時:分〕"))
+      yield(Candidate("time", seg.start, seg._end, ap_5.." "..ch_h_date(os.date("%I")).."點"..ch_minsec_date(os.date("%M")).."分", "〔時:分〕"))
+      yield(Candidate("time", seg.start, seg._end, ap_5.." "..chb_h_date(os.date("%I")).."時"..chb_minsec_date(os.date("%M")).."分", "〔時:分〕"))
+      yield(Candidate("time", seg.start, seg._end, ap_5.." "..chb_h_date(os.date("%I")).."點"..chb_minsec_date(os.date("%M")).."分", "〔時:分〕"))
       return
     end
 
@@ -7810,8 +7828,8 @@ function t2_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, "the "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
       yield(Candidate("date", seg.start, seg._end, "The "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
       -- yield(Candidate("date", seg.start, seg._end, y.."年 "..jp_m_date(m)..jp_d_date(d), "〔日文日期〕"))
-      local jpymd, jp_y = jp_ymd(y,m,d)
-      yield(Candidate("date", seg.start, seg._end, jp_y..m.."月"..d.."日" , "〔日本元号〕"))
+      local jpymd2, jp_y2 = jp_ymd(y,m,d)
+      yield(Candidate("date", seg.start, seg._end, jp_y2..m.."月"..d.."日" , "〔日本元号〕"))
       if tonumber(y) > 1911 then
         yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(y).."年"..m.."月"..d.."日" , "〔民國〕"))
         yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔民國〕"))
@@ -7822,18 +7840,20 @@ function t2_translator(input, seg)
         yield(Candidate("date", seg.start, seg._end, "民國前"..read_number(confs[1], min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔民國〕"))
       end
       -- local chinese_date_input = to_chinese_cal_local(os.time({year = y, month = m, day = d, hour = 12}))
-      local ll_1, ll_2 = Date2LunarDate(y .. string.format("%02d", m) .. string.format("%02d", d))
-      if(Date2LunarDate~=nil) then
-        yield(Candidate("date", seg.start, seg._end, ll_1, "〔西曆→農曆〕"))
-        yield(Candidate("date", seg.start, seg._end, ll_2, "〔西曆→農曆〕"))
+      local ll_1b, ll_2b = Date2LunarDate(y .. string.format("%02d", m) .. string.format("%02d", d))
+      -- if(Date2LunarDate~=nil) then
+      if(ll_1b~=nil) then
+        yield(Candidate("date", seg.start, seg._end, ll_1b, "〔西曆→農曆〕"))
+        yield(Candidate("date", seg.start, seg._end, ll_2b, "〔西曆→農曆〕"))
       end
-      local All_g, Y_g, M_g, D_g = lunarJzl(y .. string.format("%02d", m) .. string.format("%02d", d) .. 12)
-      if(All_g~=nil) then
-        yield(Candidate("date", seg.start, seg._end, Y_g.."年"..M_g.."月"..D_g.."日", "〔西曆→農曆干支〕"))
+      local All_g2, Y_g2, M_g2, D_g2 = lunarJzl(y .. string.format("%02d", m) .. string.format("%02d", d) .. 12)
+      if(All_g2~=nil) then
+        yield(Candidate("date", seg.start, seg._end, Y_g2.."年"..M_g2.."月"..D_g2.."日", "〔西曆→農曆干支〕"))
       end
       local LDD2D = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 0 )
       local LDD2D_leap_year  = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 1 )
-      if(Date2LunarDate~=nil) then
+      -- if(Date2LunarDate~=nil) then
+      if(LDD2D~=nil) then
         yield(Candidate("date", seg.start, seg._end, LDD2D, "〔農曆→西曆〕"))
         yield(Candidate("date", seg.start, seg._end, LDD2D_leap_year, "〔農曆(閏)→西曆〕"))
       end
@@ -7879,8 +7899,8 @@ function t2_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, "the "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
       yield(Candidate("date", seg.start, seg._end, "The "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
       -- yield(Candidate("date", seg.start, seg._end, y.."年 "..jp_m_date(m)..jp_d_date(d), "〔日文日期〕"))
-      local jpymd, jp_y = jp_ymd(y,m,d)
-      yield(Candidate("date", seg.start, seg._end, jp_y..m.."月"..d.."日" , "〔日本元号〕"))
+      local jpymd2, jp_y2 = jp_ymd(y,m,d)
+      yield(Candidate("date", seg.start, seg._end, jp_y2..m.."月"..d.."日" , "〔日本元号〕"))
       if tonumber(y) > 1911 then
         yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(y).."年"..m.."月"..d.."日" , "〔民國〕"))
         yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔民國〕"))
@@ -7891,18 +7911,20 @@ function t2_translator(input, seg)
         yield(Candidate("date", seg.start, seg._end, "民國前"..read_number(confs[1], min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔民國〕"))
       end
       -- local chinese_date_input = to_chinese_cal_local(os.time({year = y, month = m, day = d, hour = 12}))
-      local ll_1, ll_2 = Date2LunarDate(y .. string.format("%02d", m) .. string.format("%02d", d))
-      if(Date2LunarDate~=nil) then
-        yield(Candidate("date", seg.start, seg._end, ll_1, "〔西曆→農曆〕"))
-        yield(Candidate("date", seg.start, seg._end, ll_2, "〔西曆→農曆〕"))
+      local ll_1b, ll_2b = Date2LunarDate(y .. string.format("%02d", m) .. string.format("%02d", d))
+      -- if(Date2LunarDate~=nil) then
+      if(ll_1b~=nil) then
+        yield(Candidate("date", seg.start, seg._end, ll_1b, "〔西曆→農曆〕"))
+        yield(Candidate("date", seg.start, seg._end, ll_2b, "〔西曆→農曆〕"))
       end
-      local All_g, Y_g, M_g, D_g = lunarJzl(y .. string.format("%02d", m) .. string.format("%02d", d) .. 12)
-      if(All_g~=nil) then
-        yield(Candidate("date", seg.start, seg._end, Y_g.."年"..M_g.."月"..D_g.."日", "〔西曆→農曆干支〕"))
+      local All_g2, Y_g2, M_g2, D_g2 = lunarJzl(y .. string.format("%02d", m) .. string.format("%02d", d) .. 12)
+      if(All_g2~=nil) then
+        yield(Candidate("date", seg.start, seg._end, Y_g2.."年"..M_g2.."月"..D_g2.."日", "〔西曆→農曆干支〕"))
       end
       local LDD2D = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 0 )
       local LDD2D_leap_year  = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 1 )
-      if(Date2LunarDate~=nil) then
+      -- if(Date2LunarDate~=nil) then
+      if(LDD2D~=nil) then
         yield(Candidate("date", seg.start, seg._end, LDD2D, "〔農曆→西曆〕"))
         yield(Candidate("date", seg.start, seg._end, LDD2D_leap_year, "〔農曆(閏)→西曆〕"))
       end
