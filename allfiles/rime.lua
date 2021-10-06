@@ -4317,7 +4317,7 @@ local function Moonphase_out1()
   local choice = math.floor((moon_phase_fraction * 8 + 0.5) % 8.0) + 1
   local Moonphase1 = moon_phase_emojis[choice]
   local Moonphase2 = string.format("%.f °", moon_phase_fraction * 360)
-  return Moonphase1, Moonphase2
+  return {Moonphase1, Moonphase2}
 end
 
 -- 月相（朔望文字）
@@ -4335,7 +4335,7 @@ local function Moonphase_out2()
   local date_diff_to_previous = math.floor(date_diff_to_previous // 3600 //24 + 0.5)
   local date_diff_to_previous = date_diff_chinese(-date_diff_to_previous)
   local date_diff_to_previous = date_diff_to_previous .. time_description_chinese(to_local_timezone(moon_phase[index], 8))
-  return previous_lunar_event, date_diff_to_previous
+  return {previous_lunar_event, date_diff_to_previous}
 end
 
 -- 前後節氣（文字）
@@ -4366,7 +4366,7 @@ local function timezone_out1()
   local timezone = utc_timezone(os.date("%z"))
   local timezone_discrpt = os.date("%Z")
   -- local candidate = Candidate("timezone", seg.start, seg._end, timezone, timezone_discrpt)
-  return timezone, timezone_discrpt
+  return {timezone, timezone_discrpt}
 end
 
 -- 上下午時間
@@ -4613,8 +4613,8 @@ function t_translator(input, seg)
     -- end
 
     if (input == "`u") then
-      local tz, tzd = timezone_out1()
-      yield(Candidate("time", seg.start, seg._end, tz, tzd))
+      -- local tz, tzd = timezone_out1()
+      yield(Candidate("time", seg.start, seg._end, timezone_out1()[1], timezone_out1()[2]))
       return
     end
 
@@ -4629,8 +4629,8 @@ function t_translator(input, seg)
       yield(Candidate("time", seg.start, seg._end, string.gsub(time_out2()[1], "0([%d])", "%1"), "〔時:分〕 ~w"))
       yield(Candidate("time", seg.start, seg._end, ch_h_date(os.date("%H")).."時"..ch_minsec_date(os.date("%M")).."分", "〔時:分〕 ~z"))
       yield(Candidate("time", seg.start, seg._end, time_out2()[5].." "..ch_h_date(os.date("%I")).."時"..ch_minsec_date(os.date("%M")).."分", "〔時:分〕 ~u"))
-      local chinese_time = time_description_chinese(os.time())
-      yield(Candidate("time", seg.start, seg._end, chinese_time, "〔農曆〕 ~l"))
+      -- local chinese_time = time_description_chinese(os.time())
+      yield(Candidate("time", seg.start, seg._end, time_description_chinese(os.time()), "〔農曆〕 ~l"))
       return
     end
 
@@ -4698,8 +4698,8 @@ function t_translator(input, seg)
     end
 
     if (input == "`nl") then
-      local chinese_time = time_description_chinese(os.time())
-      yield(Candidate("time", seg.start, seg._end, chinese_time, "〔農曆〕"))
+      -- local chinese_time = time_description_chinese(os.time())
+      yield(Candidate("time", seg.start, seg._end, time_description_chinese(os.time()), "〔農曆〕"))
       local All_g, Y_g, M_g, D_g, H_g = lunarJzl(os.date("%Y%m%d%H"))
       yield(Candidate("date", seg.start, seg._end, H_g.."時" , "〔農曆干支〕"))
       return
@@ -4711,23 +4711,23 @@ function t_translator(input, seg)
     -- end
 
     if (input == "`l") then
-      local Moonshape, Moonangle = Moonphase_out1()
-      yield(Candidate("date", seg.start, seg._end, Moonshape, Moonangle))
-      local p, d = Moonphase_out2()
-      yield(Candidate("date", seg.start, seg._end, p, d))
+      -- local Moonshape, Moonangle = Moonphase_out1()
+      yield(Candidate("date", seg.start, seg._end, Moonphase_out1()[1], Moonphase_out1()[2]))
+      -- local p, d = Moonphase_out2()
+      yield(Candidate("date", seg.start, seg._end, Moonphase_out2()[1], Moonphase_out2()[2]))
       return
     end
 
     if (input == "`s") then
-      local jq1, jq2, jq3 ,jq4 = jieqi_out1()
-      yield(Candidate("date", seg.start, seg._end, jq1, jq2))
-      yield(Candidate("date", seg.start, seg._end, jq3, jq4))
+      local jq_1, jq_2, jq_3 ,jq_4 = jieqi_out1()
+      yield(Candidate("date", seg.start, seg._end, jq_1, jq_2))
+      yield(Candidate("date", seg.start, seg._end, jq_3, jq_4))
       -- local jqs = GetNowTimeJq(os.date("%Y%m%d"))
-      local jqs = GetNextJQ(os.date("%Y"))
-      for i =1,#jqs do
-        yield(Candidate("date", seg.start, seg._end, jqs[i], "〔節氣〕"))
+      local jqsy = GetNextJQ(os.date("%Y"))
+      for i =1,#jqsy do
+        yield(Candidate("date", seg.start, seg._end, jqsy[i], "〔節氣〕"))
       end
-      jqs = nil
+      jqsy = nil
       return
     end
 
@@ -4883,9 +4883,9 @@ function t_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日 "..os.date("%H點%M分"), "([^%d])0", "%1"), "〔民國〕 ~h"))
       yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(23).." "..ch_h_date(os.date("%H")).."點"..ch_minsec_date(os.date("%M")).."分", "〔民國〕 ~g"))
       -- local chinese_date = to_chinese_cal_local(os.time())
-      local chinese_time = time_description_chinese(os.time())
+      -- local chinese_time = time_description_chinese(os.time())
       local ll_1, ll_2 = Date2LunarDate(os.date("%Y%m%d"))
-      yield(Candidate("date", seg.start, seg._end, ll_1 .." ".. chinese_time, "〔農曆〕 ~l"))
+      yield(Candidate("date", seg.start, seg._end, ll_1 .." ".. time_description_chinese(os.time()), "〔農曆〕 ~l"))
       return
     end
 
@@ -4921,11 +4921,12 @@ function t_translator(input, seg)
 
     if (input == "`fnl") then
       -- local chinese_date = to_chinese_cal_local(os.time())
-      local chinese_time = time_description_chinese(os.time())
+      -- local chinese_time = time_description_chinese(os.time())
       local ll_1, ll_2 = Date2LunarDate(os.date("%Y%m%d"))
-      yield(Candidate("date", seg.start, seg._end, ll_1 .." ".. chinese_time, "〔農曆〕"))
-      yield(Candidate("date", seg.start, seg._end, ll_2 .." ".. chinese_time, "〔農曆〕"))
-      yield(Candidate("date", seg.start, seg._end, lunarJzl(os.date("%Y%m%d%H")), "〔農曆干支〕"))
+      local All_g = lunarJzl(os.date("%Y%m%d%H"))
+      yield(Candidate("date", seg.start, seg._end, ll_1 .." ".. time_description_chinese(os.time()), "〔農曆〕"))
+      yield(Candidate("date", seg.start, seg._end, ll_2 .." ".. time_description_chinese(os.time()), "〔農曆〕"))
+      yield(Candidate("date", seg.start, seg._end, All_g, "〔農曆干支〕"))
       return
     end
 
@@ -6408,8 +6409,8 @@ function t2_translator(input, seg)
     -- end
 
     if (input == "'/u") then
-      local tz, tzd = timezone_out1()
-      yield(Candidate("time", seg.start, seg._end, tz, tzd))
+      -- local tz, tzd = timezone_out1()
+      yield(Candidate("time", seg.start, seg._end, timezone_out1()[1], timezone_out1()[2]))
       return
     end
 
@@ -6424,8 +6425,8 @@ function t2_translator(input, seg)
       yield(Candidate("time", seg.start, seg._end, string.gsub(time_out2()[1], "0([%d])", "%1"), "〔時:分〕 ~w"))
       yield(Candidate("time", seg.start, seg._end, ch_h_date(os.date("%H")).."時"..ch_minsec_date(os.date("%M")).."分", "〔時:分〕 ~z"))
       yield(Candidate("time", seg.start, seg._end, time_out2()[5].." "..ch_h_date(os.date("%I")).."時"..ch_minsec_date(os.date("%M")).."分", "〔時:分〕 ~u"))
-      local chinese_time = time_description_chinese(os.time())
-      yield(Candidate("time", seg.start, seg._end, chinese_time, "〔農曆〕 ~l"))
+      -- local chinese_time = time_description_chinese(os.time())
+      yield(Candidate("time", seg.start, seg._end, time_description_chinese(os.time()), "〔農曆〕 ~l"))
       return
     end
 
@@ -6493,8 +6494,8 @@ function t2_translator(input, seg)
     end
 
     if (input == "'/nl") then
-      local chinese_time = time_description_chinese(os.time())
-      yield(Candidate("time", seg.start, seg._end, chinese_time, "〔農曆〕"))
+      -- local chinese_time = time_description_chinese(os.time())
+      yield(Candidate("time", seg.start, seg._end, time_description_chinese(os.time()), "〔農曆〕"))
       local All_g, Y_g, M_g, D_g, H_g = lunarJzl(os.date("%Y%m%d%H"))
       yield(Candidate("date", seg.start, seg._end, H_g.."時" , "〔農曆干支〕"))
       return
@@ -6506,23 +6507,23 @@ function t2_translator(input, seg)
     -- end
 
     if (input == "'/l") then
-      local Moonshape, Moonangle = Moonphase_out1()
-      yield(Candidate("date", seg.start, seg._end, Moonshape, Moonangle))
-      local p, d = Moonphase_out2()
-      yield(Candidate("date", seg.start, seg._end, p, d))
+      -- local Moonshape, Moonangle = Moonphase_out1()
+      yield(Candidate("date", seg.start, seg._end, Moonphase_out1()[1], Moonphase_out1()[2]))
+      -- local p, d = Moonphase_out2()
+      yield(Candidate("date", seg.start, seg._end, Moonphase_out2()[1], Moonphase_out2()[2]))
       return
     end
 
     if (input == "'/s") then
-      local jq1, jq2, jq3 ,jq4 = jieqi_out1()
-      yield(Candidate("date", seg.start, seg._end, jq1, jq2))
-      yield(Candidate("date", seg.start, seg._end, jq3, jq4))
+      local jq_1, jq_2, jq_3 ,jq_4 = jieqi_out1()
+      yield(Candidate("date", seg.start, seg._end, jq_1, jq_2))
+      yield(Candidate("date", seg.start, seg._end, jq_3, jq_4))
       -- local jqs = GetNowTimeJq(os.date("%Y%m%d"))
-      local jqs = GetNextJQ(os.date("%Y"))
-      for i =1,#jqs do
-        yield(Candidate("date", seg.start, seg._end, jqs[i], "〔節氣〕"))
+      local jqsy = GetNextJQ(os.date("%Y"))
+      for i =1,#jqsy do
+        yield(Candidate("date", seg.start, seg._end, jqsy[i], "〔節氣〕"))
       end
-      jqs = nil
+      jqsy = nil
       return
     end
 
@@ -6678,9 +6679,9 @@ function t2_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日 "..os.date("%H點%M分"), "([^%d])0", "%1"), "〔民國〕 ~h"))
       yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(23).." "..ch_h_date(os.date("%H")).."點"..ch_minsec_date(os.date("%M")).."分", "〔民國〕 ~g"))
       -- local chinese_date = to_chinese_cal_local(os.time())
-      local chinese_time = time_description_chinese(os.time())
+      -- local chinese_time = time_description_chinese(os.time())
       local ll_1, ll_2 = Date2LunarDate(os.date("%Y%m%d"))
-      yield(Candidate("date", seg.start, seg._end, ll_1 .." ".. chinese_time, "〔農曆〕 ~l"))
+      yield(Candidate("date", seg.start, seg._end, ll_1 .." ".. time_description_chinese(os.time()), "〔農曆〕 ~l"))
       return
     end
 
@@ -6716,11 +6717,12 @@ function t2_translator(input, seg)
 
     if (input == "'/fnl") then
       -- local chinese_date = to_chinese_cal_local(os.time())
-      local chinese_time = time_description_chinese(os.time())
+      -- local chinese_time = time_description_chinese(os.time())
       local ll_1, ll_2 = Date2LunarDate(os.date("%Y%m%d"))
-      yield(Candidate("date", seg.start, seg._end, ll_1 .." ".. chinese_time, "〔農曆〕"))
-      yield(Candidate("date", seg.start, seg._end, ll_2 .." ".. chinese_time, "〔農曆〕"))
-      yield(Candidate("date", seg.start, seg._end, lunarJzl(os.date("%Y%m%d%H")), "〔農曆干支〕"))
+      local All_g = lunarJzl(os.date("%Y%m%d%H"))
+      yield(Candidate("date", seg.start, seg._end, ll_1 .." ".. time_description_chinese(os.time()), "〔農曆〕"))
+      yield(Candidate("date", seg.start, seg._end, ll_2 .." ".. time_description_chinese(os.time()), "〔農曆〕"))
+      yield(Candidate("date", seg.start, seg._end, All_g, "〔農曆干支〕"))
       return
     end
 
