@@ -714,7 +714,7 @@ min_phrase_weight: 100
 暝	ming4	0.1%
 舍	she3
 捨	she4	10%
-幹	gan1	1%
+#幹	gan1	1%
 幹	han2	0.1%
 谷	jue2	0.1%
 王	yu4	0.1%
@@ -67431,7 +67431,9 @@ min_phrase_weight: 100
 大洞難補	da4 dong4 nan2 bu3
 大流行病	da4 liu2 xing2 bing4
 大溪地	da4 xi1 di4
-大溪豆幹	da4 xi1 dou4 gan1
+# 大溪豆幹	da4 xi1 dou4 gan1
+大溪豆乾	da4 xi1 dou4 gan1
+大溪豆干	da4 xi1 dou4 gan1
 大滑答子貨	da4 hua2 da2 zi5 huo4
 大漲小回	da4 zhang3 xiao3 hui2
 大災難	da4 zai1 nan4
@@ -71178,9 +71180,9 @@ min_phrase_weight: 100
 巴氏殺菌法	ba1 shi4 sha1 jun1 fa3
 巴爾喀什湖	ba1 er3 ka4 shi2 hu2
 巴爾喀什湖	ba1 er3 ka1 shi2 hu2
-巴爾幹	ba1 er3 gan1
+# 巴爾幹	ba1 er3 gan1
 巴爾幹	ba1 er3 gan4
-巴爾幹半島	ba1 er3 gan1 ban4 dao3
+# 巴爾幹半島	ba1 er3 gan1 ban4 dao3
 巴爾幹半島	ba1 er3 gan4 ban4 dao3
 巴爾幹山脈	ba1 er3 gan4 shan1 mai4
 巴爾幹山脈	ba1 er3 gan4 shan1 mo4
@@ -97124,7 +97126,7 @@ min_phrase_weight: 100
 苦寒行	ku3 han2 xing2
 苦差	ku3 chai1
 苦差事	ku3 chai1 shi4
-苦幹	ku3 gan1
+# 苦幹	ku3 gan1
 苦幹	ku3 gan4
 苦待	ku3 dai4
 苦思惡想	ku3 si1 e4 xiang3
@@ -97370,7 +97372,7 @@ min_phrase_weight: 100
 莎車	sha1 che1
 莎車縣	sha1 che1 xian4
 莎雞	sha1 ji1
-莖幹	jing1 gan1
+# 莖幹	jing1 gan1
 莖幹	jing1 gan4
 莘縣	shen1 xian4
 莘莘	shen1 shen1
