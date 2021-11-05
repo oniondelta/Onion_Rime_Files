@@ -4,7 +4,7 @@
 # 可能以最舊之八股文(essay)為範本，刪除單字， 刪除「‧」間隔號，遮屏五字以上詞句
 ---
 name: phrases.ocmtc_original
-version: "202007"
+version: "202111"
 sort: original #by_weight
 use_preset_vocabulary: false
 # max_phrase_length: 7 #20

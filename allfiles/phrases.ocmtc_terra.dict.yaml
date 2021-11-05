@@ -3,7 +3,7 @@
 # 20201210 以當時 terra_pinyin_onion.dict 為範本，刪除單字，刪除「‧」間隔號，遮屏五字以上詞句
 ---
 name: phrases.ocmtc_terra
-version: "202012"
+version: "202111"
 sort: original #by_weight
 use_preset_vocabulary: false
 # max_phrase_length: 7 #20

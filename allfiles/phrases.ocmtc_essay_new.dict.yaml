@@ -8,7 +8,7 @@
 # 202109 沒有刻意刪除「‧」間隔號，但含有「‧」間隔號詞頻都小於10
 ---
 name: phrases.ocmtc_essay_new
-version: "202109"
+version: "202111"
 sort: original #by_weight
 use_preset_vocabulary: false
 # max_phrase_length: 7 #20
