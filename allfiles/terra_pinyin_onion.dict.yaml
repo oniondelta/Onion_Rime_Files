@@ -58762,6 +58762,7 @@ min_phrase_weight: 100
 僮手指千	tong2 shou3 zhi3 qian1
 僮族	zhuang4 zu2
 價值衝突	jia4 zhi2 chong1 tu2
+價值衝突	jia4 zhi2 chong1 tu1
 價值量	jia4 zhi2 liang4
 價格凍結	jia4 ge2 dong4 jie2
 價錢	jia4 qian2
@@ -59580,9 +59581,12 @@ min_phrase_weight: 100
 冒失	mao4 shi1
 冒失鬼	mao4 shi1 gui3
 冒煙突火	mao4 yan1 tu2 huo3
+冒煙突火	mao4 yan1 tu1 huo3
 冒稱	mao4 cheng1
 冒突	mao4 tu2
+冒突	mao4 tu1
 冒鋒突圍	mao4 feng1 tu2 wei2
+冒鋒突圍	mao4 feng1 tu1 wei2
 冒鏑當鋒	mao4 di2 dang1 feng1
 冒險犯難	mao4 xian3 fan4 nan4
 冒霜撥露	mao4 shuang1 bo1 lu4
@@ -59788,31 +59792,38 @@ min_phrase_weight: 100
 凶惡	xiong1 e4
 凶煞	xiong1 sha4
 凶神惡煞	xiong1 shen2 e4 sha4
-凸出	tu2 chu1
 凸出	tu1 chu1
+凸出	tu2 chu1
+凸岸	tu1 an4
 凸岸	tu2 an4
-凸版	tu2 ban3
 凸版	tu1 ban3
+凸版	tu2 ban3
 凸版印刷	tu1 ban3 yin4 shua1
 凸版印刷	tu2 ban3 yin4 shua1
+凸狀	tu1 zhuang4
 凸狀	tu2 zhuang4
-凸起	tu2 qi3
 凸起	tu1 qi3
-凸透鏡	tu2 tou4 jing4
+凸起	tu2 qi3
 凸透鏡	tu1 tou4 jing4
+凸透鏡	tu2 tou4 jing4
 凸面部分	tu1 mian4 bu4 fen4
-凸面鏡	tu2 mian4 jing4
+凸面部分	tu2 mian4 bu4 fen4
 凸面鏡	tu1 mian4 jing4
+凸面鏡	tu2 mian4 jing4
+凸額	tu1 e2
 凸額	tu2 e2
-凸顯	tu2 xian3
 凸顯	tu1 xian3
-凹凸	ao1 tu2
+凸顯	tu2 xian3
 凹凸	ao1 tu1
-凹凸不平	ao1 tu2 bu4 ping2
+凹凸	ao1 tu2
 凹凸不平	ao1 tu1 bu4 ping2
+凹凸不平	ao1 tu2 bu4 ping2
 凹凸印刷	ao1 tu1 yin4 shua1
+凹凸印刷	ao1 tu2 yin4 shua1
+凹凸有致	ao1 tu1 you3 zhi4
 凹凸有致	ao1 tu2 you3 zhi4
 凹凸軋花	ao1 tu1 ya4 hua1
+凹凸軋花	ao1 tu2 ya4 hua1
 凹地	ao1 di4
 凹度	ao1 du4
 凹版印刷	ao1 ban3 yin4 shua1
@@ -60549,8 +60560,8 @@ min_phrase_weight: 100
 利字當頭	li4 zi4 dang1 tou2
 利害	li4 hai4
 利害得失	li4 hai4 de2 shi1
-利害衝突	li4 hai4 chong1 tu1
 利害衝突	li4 hai4 chong1 tu2
+利害衝突	li4 hai4 chong1 tu1
 利害關係	li4 hai4 guan1 xi4
 利害關係人	li4 hai4 guan1 xi4 ren2
 利害關係方	li4 hai4 guan1 xi4 fang1
@@ -61369,9 +61380,11 @@ min_phrase_weight: 100
 努嘴兒	nu3 zui3 er2
 努嘴兒	nu3 zui3 er1
 努牙突嘴	nu3 ya2 tu2 zui3
+努牙突嘴	nu3 ya2 tu1 zui3
 努著	nu3 zhe5
 努著	nu3 zhuo2
 努睛突眼	nu3 jing1 tu2 yan3
+努睛突眼	nu3 jing1 tu1 yan3
 劫後英雄傳	jie2 hou4 ying1 xiong2 zhuan4
 劫持人質	jie2 chi2 ren2 zhi4
 劫持人質	jie2 chi2 ren2 zhi2
@@ -64566,6 +64579,7 @@ min_phrase_weight: 100
 唐突	tang2 tu2
 唐突	tang2 tu1
 唐突西施	tang2 tu2 xi1 shi1
+唐突西施	tang2 tu1 xi1 shi1
 唐納德‧川普	tang2 na4 de2 eng5 chuan1 pu3
 唐臨晉帖	tang2 lin2 jin4 tie4
 唓嗻	che1 zhe1
@@ -65454,6 +65468,7 @@ min_phrase_weight: 100
 囉曼帶克	luo1 man4 dai4 ke4
 囊囊咄咄	nang2 nang2 duo4 duo4
 囊囊突突	nang2 nang2 tu2 tu2
+囊囊突突	nang2 nang2 tu1 tu1
 囊括	nang2 gua1
 囊括	nang2 kuo4
 囊揣	nang1 chuai4
@@ -65965,6 +65980,7 @@ min_phrase_weight: 100
 地區方言	di4 qu1 fang1 yan2
 地區法院	di4 qu1 fa3 yuan4
 地區經濟	di4 qu1 jing1 ji4
+地區衝突	di4 qu1 chong1 tu2
 地區衝突	di4 qu1 chong1 tu1
 地區通行證	di4 qu1 tong1 xing2 zheng4
 地史	di4 shi3
@@ -66803,6 +66819,7 @@ min_phrase_weight: 100
 墨水兒	mo4 shui3 er2
 墨盪子	mo4 dang4 zi5
 墨突	mo4 tu2
+墨突	mo4 tu1
 墨竹工卡	mo4 zhu2 gong1 ka3
 墨竹工卡縣	mo4 zhu2 gong1 ka3 xian4
 墨累	mo4 lei4
@@ -67467,6 +67484,7 @@ min_phrase_weight: 100
 大秤分金銀	da4 cheng4 fen1 jin1 yin2
 大秦景教碑	da4 qin2 jing3 jiao4 bei1
 大突破	da4 tu2 po4
+大突破	da4 tu1 po4
 大紅日子	da4 hong2 ri4 zi5
 大紅鼻子	da4 hong2 bi2 zi5
 大義滅親	da4 yi4 mie4 qin1
@@ -68124,6 +68142,7 @@ min_phrase_weight: 100
 奔瀉	ben1 xie4
 奔碌	ben1 lu4
 奔突	ben1 tu2
+奔突	ben1 tu1
 奔竄	ben1 cuan4
 奔競	ben1 jing4
 奔箭	ben1 jian4
@@ -70335,6 +70354,7 @@ min_phrase_weight: 100
 小行	xiao3 xing2
 小行星	xiao3 xing2 xing1
 小行星帶	xiao3 xing2 xing1 dai4
+小衝突	xiao3 chong1 tu2
 小衝突	xiao3 chong1 tu1
 小衣裳	xiao3 yi1 shang1
 小衣裳	xiao3 yi1 chang2
@@ -70454,6 +70474,7 @@ min_phrase_weight: 100
 少私寡慾	shao3 si1 gua3 yu4
 少突膠質	shao3 tu1 jiao1 zhi2
 少突膠質	shao3 tu1 jiao1 zhi4
+少突膠質	shao3 tu2 jiao1 zhi2
 少管閒事	shao3 guan3 xian2 shi4
 少艾	shao4 ai4
 少見	shao3 jian4
@@ -70997,6 +71018,7 @@ min_phrase_weight: 100
 左擁右抱	zuo3 yong1 you4 bao4
 左行	zuo3 xing2
 左衝右突	zuo3 chong1 you4 tu2
+左衝右突	zuo3 chong1 you4 tu1
 左轉	zuo3 zhuan3
 左邊	zuo3 bian1
 左邊兒	zuo3 bian1 er5
@@ -73422,6 +73444,7 @@ min_phrase_weight: 100
 怒目橫眉	nu4 mu4 heng2 mei2
 怒目相向	nu4 mu4 xiang1 xiang4
 怒突	nu4 tu2
+怒突	nu4 tu1
 怒臂當車	nu4 bi4 dang1 ju1
 怒號	nu4 hao2
 怒顏相報	nu4 yan2 xiang1 bao4
@@ -73451,6 +73474,7 @@ min_phrase_weight: 100
 怙惡不改	hu4 e4 bu4 gai3
 怛吒	da2 zha4
 怛突	da2 tu2
+怛突	da2 tu1
 思想包袱	si1 xiang3 bao1 fu2
 思省	si1 xing3
 思茅地區	si1 mao2 di4 qu1
@@ -73886,6 +73910,7 @@ min_phrase_weight: 100
 惋愴	wan4 chuang4
 惏悷	lin2 li4
 惑突	huo4 tu2
+惑突	huo4 tu1
 惕息	ti4 xi2
 惛懵	hun1 meng2
 惜分陰	xi2 fen1 yin1
@@ -76024,6 +76049,7 @@ min_phrase_weight: 100
 拔火罐兒	ba2 huo3 guan4 er2
 拔著短籌	ba2 zhao2 duan3 chou2
 拔突	ba2 tu2
+拔突	ba2 tu1
 拔縫	ba2 feng4
 拔罐子	ba2 guan4 zi3
 拔罐子	ba2 guan4 zi5
@@ -76524,6 +76550,7 @@ min_phrase_weight: 100
 振衣濯足	zhen4 yi1 zhuo2 zu2
 挺撅挺橫	ting3 jue2 ting3 heng4
 挺胸凸肚	ting3 xiong1 tu1 du4
+挺胸凸肚	ting3 xiong1 tu2 du4
 挺胸疊肚	ting3 xiong1 die2 du4
 挺腰子	ting3 yao1 zi5
 挼挲	nuo2 suo1
@@ -76847,6 +76874,7 @@ min_phrase_weight: 100
 排空	pai2 kong1
 排空而至	pai2 kong1 er2 zhi4
 排突	pai2 tu2
+排突	pai2 tu1
 排行	pai2 hang2
 排行榜	pai2 hang2 bang3
 排起長隊	pai2 qi3 chang2 dui4
@@ -80152,6 +80180,7 @@ min_phrase_weight: 100
 曲直分明	qu1 zhi2 fen1 ming2
 曲禮	qu1 li3
 曲突徙薪	qu1 tu2 xi3 xin1
+曲突徙薪	qu1 tu1 xi3 xin1
 曲筆	qu1 bi3
 曲終人散	qu3 zhong1 ren2 san4
 曲終奏雅	qu3 zhong1 zou4 ya3
@@ -81308,6 +81337,7 @@ min_phrase_weight: 100
 東藏西躲	dong1 cang2 xi1 duo3
 東行	dong1 xing2
 東衝西突	dong1 chong1 xi1 tu2
+東衝西突	dong1 chong1 xi1 tu1
 東西	dong1 xi1
 東西橫貫公路	dong1 xi1 heng2 guan4 gong1 lu4
 東觀	dong1 guan4
@@ -81379,6 +81409,7 @@ min_phrase_weight: 100
 枉擔虛名	wang3 dan1 xu1 ming2
 枉橈	wang3 nao2
 枉突徙薪	wang3 tu2 xi3 xin1
+枉突徙薪	wang3 tu1 xi3 xin1
 枋子	fang1 zi5
 析圭分土	xi1 gui1 fen1 tu3
 析圭擔爵	xi1 gui1 dan1 jue2
@@ -83150,6 +83181,7 @@ min_phrase_weight: 100
 武藝高強	wu3 yi4 gao1 qiang2
 武行	wu3 hang2
 武裝力量	wu3 zhuang1 li4 liang4
+武裝衝突	wu3 zhuang1 chong1 tu2
 武裝衝突	wu3 zhuang1 chong1 tu1
 武都	wu3 du1
 武都區	wu3 du1 qu1
@@ -85068,6 +85100,7 @@ min_phrase_weight: 100
 海乾河盡	hai3 gan1 he2 jin4
 海事處	hai3 shi4 chu4
 海倫凱勒	hai3 lun2 kai3 le4
+海凸	hai3 tu1
 海凸	hai3 tu2
 海刺芹	hai3 ci4 qin2
 海北藏族自治州	hai3 bei3 zang4 zu2 zi4 zhi4 zhou1
@@ -85852,6 +85885,8 @@ min_phrase_weight: 100
 滑稽戲	gu3 ji1 xi4
 滑稽突梯	hua2 ji1 tu2 ti1
 滑稽突梯	gu3 ji1 tu2 ti1
+滑稽突梯	hua2 ji1 tu1 ti1
+滑稽突梯	gu3 ji1 tu1 ti1
 滑落	hua2 luo4
 滑蓋	hua2 gai4
 滑藉	hua2 jie4
@@ -86728,6 +86763,7 @@ min_phrase_weight: 100
 煙熏火燎	yan1 xun1 huo3 liao4
 煙燻火燎	yan1 xun1 huo3 liao3
 煙突	yan1 tu2
+煙突	yan1 tu1
 煙台地區	yan1 tai2 di4 qu1
 煙臺地區	yan1 tai2 di4 qu1
 煙花場	yan1 hua1 chang3
@@ -86787,6 +86823,7 @@ min_phrase_weight: 100
 照片子	zhao4 pian4 zi5
 照片底版	zhao4 pian4 di3 ban3
 照相	zhao4 xiang4
+照相凸版	zhao4 xiang4 tu1 ban3
 照相凸版	zhao4 xiang4 tu2 ban3
 照相凹版	zhao4 xiang4 ao1 ban3
 照相平版	zhao4 xiang4 ping2 ban3
@@ -87714,6 +87751,7 @@ min_phrase_weight: 100
 狄斯耐樂園	di2 si1 nai4 le4 yuan2
 狄更斯	di2 geng1 si1
 狄良突盧	di2 liang2 tu2 lu2
+狄良突盧	di2 liang2 tu1 lu2
 狌狌	xing1 xing1
 狎弄	xia2 nong4
 狎玩	xia2 wan4
@@ -87861,6 +87899,7 @@ min_phrase_weight: 100
 猼且	pao2 ju1
 猼訑	bo2 yi2
 猾猾突突	hua2 hua2 tu2 tu2
+猾猾突突	hua2 hua2 tu1 tu1
 猾賊	hua2 ze2
 猿穴壞山	yuan2 xue4 guai4 shan1
 獃子	dai1 zi5
@@ -90066,6 +90105,7 @@ min_phrase_weight: 100
 相同	xiang1 tong2
 相同名字	xiang1 tong2 ming2 zi4
 相向	xiang1 xiang4
+相向突擊	xiang1 xiang4 tu2 ji2
 相向突擊	xiang1 xiang4 tu1 ji2
 相吸	xiang1 xi1
 相呴相濡	xiang1 xu3 xiang1 ru2
@@ -92476,10 +92516,13 @@ min_phrase_weight: 100
 突厥	tu2 jue2
 突厥	tu1 jue2
 突厥文	tu2 jue2 wen2
+突厥文	tu1 jue2 wen2
 突厥語族	tu2 jue2 yu3 zu2
+突厥語族	tu1 jue2 yu3 zu2
 突圍	tu2 wei2
 突圍	tu1 wei2
 突地	tu2 di4
+突地	tu1 di4
 突如其來	tu2 ru2 qi2 lai2
 突如其來	tu1 ru2 qi2 lai2
 突尼斯	tu2 ni2 si1
@@ -92490,35 +92533,54 @@ min_phrase_weight: 100
 突尼西亞	tu1 ni2 xi1 ya4
 突尼西亞共和國	tu2 ni2 xi1 ya3 gong4 he2 guo2
 突尼西亞共和國	tu2 ni2 xi1 ya4 gong4 he2 guo2
+突尼西亞共和國	tu1 ni2 xi1 ya3 gong4 he2 guo2
+突尼西亞共和國	tu1 ni2 xi1 ya4 gong4 he2 guo2
 突怒	tu2 nu4
+突怒	tu1 nu4
 突擊	tu2 ji2
+突擊	tu1 ji2
 突擊檢查	tu2 ji2 jian3 cha2
+突擊檢查	tu1 ji2 jian3 cha2
 突梯	tu2 ti1
+突梯	tu1 ti1
 突梯滑稽	tu2 ti1 hua2 ji1
 突梯滑稽	tu2 ti1 gu3 ji1
+突梯滑稽	tu1 ti1 hua2 ji1
+突梯滑稽	tu1 ti1 gu3 ji1
 突火	tu2 huo3
+突火	tu1 huo3
 突然	tu2 ran2
 突然	tu1 ran2
 突然襲擊	tu2 ran2 xi2 ji2
-突然間	tu1 ran2 jian1
+突然襲擊	tu1 ran2 xi2 ji2
 突然間	tu2 ran2 jian1
+突然間	tu1 ran2 jian1
 突發	tu2 fa1
 突發	tu1 fa1
 突發奇想	tu2 fa1 qi2 xiang3
 突發奇想	tu1 fa1 qi2 xiang3
 突眼	tu2 yan3
+突眼	tu1 yan3
 突破	tu2 po4
 突破	tu1 po4
 突破口	tu2 po4 kou3
+突破口	tu1 po4 kou3
 突破瓶頸	tu2 po4 ping2 jing3
+突破瓶頸	tu1 po4 ping2 jing3
 突磨	tu2 mo2
+突磨	tu1 mo2
 突禿	tu2 tu1
+突禿	tu1 tu1
 突突	tu2 tu2
 突突	tu1 tu1
 突突噥噥	tu2 tu2 nong2 nong2
+突突噥噥	tu1 tu1 nong2 nong2
 突突囔囔	tu2 tu2 nang5 nang5
+突突囔囔	tu1 tu1 nang5 nang5
 突突摸摸	tu2 tu2 mo1 mo1
+突突摸摸	tu1 tu1 mo1 mo1
 突突的	tu2 tu2 de5
+突突的	tu1 tu1 de5
 突襲	tu2 xi2
 突襲	tu1 xi2
 突變	tu2 bian4
@@ -92526,12 +92588,15 @@ min_phrase_weight: 100
 突起	tu2 qi3
 突起	tu1 qi3
 突進	tu2 jin4
+突進	tu1 jin4
 突顯	tu2 xian3
 突顯	tu1 xian3
 突飛猛進	tu2 fei1 meng3 jin4
 突飛猛進	tu1 fei1 meng3 jin4
 突騎	tu2 ji4
+突騎	tu1 ji4
 突高	tu2 gao1
+突高	tu1 gao1
 窄巴	zhai3 ba1
 窄縫	zhai3 feng4
 窈娜	yao3 nuo2
@@ -92635,6 +92700,7 @@ min_phrase_weight: 100
 竅門兒	qiao4 men2 er2
 灶地	zao4 di4
 灶突	zao4 tu2
+灶突	zao4 tu1
 灶間	zao4 jian1
 灶頭	zao4 tou5
 竊占	qie4 zhan4
@@ -92657,6 +92723,7 @@ min_phrase_weight: 100
 立當	li4 dang1
 立盹行眠	li4 dun3 xing2 mian2
 立突	li4 tu2
+立突	li4 tu1
 立規矩	li4 gui1 ju3
 立談之間	li4 tan2 zhi1 jian1
 立足之地	li4 zu2 zhi1 di4
@@ -93133,6 +93200,7 @@ min_phrase_weight: 100
 米突	mi3 tu1
 米苔目	mi3 tai2 mu4
 米釐米突	mi3 li2 mi3 tu2
+米釐米突	mi3 li2 mi3 tu1
 米麴菌	mi3 qu2 jun1
 粉刷	fen3 shua1
 粉刺	fen3 ci4
@@ -93254,7 +93322,9 @@ min_phrase_weight: 100
 糊弄局	hu4 nong4 ju2
 糊弄局	hu2 nong4 ju2
 糊突	hu2 tu2
+糊突	hu2 tu1
 糊突神	hu2 tu2 shen2
+糊突神	hu2 tu1 shen2
 糊突突	hu2 tu1 tu1
 糊突突	hu2 tu2 tu2
 糊精	hu2 jing1
@@ -95748,6 +95818,7 @@ min_phrase_weight: 100
 胡琴兒	hu2 qin2 er5
 胡琴兒	hu2 qin2 er2
 胡突	hu2 tu2
+胡突	hu2 tu1
 胡胡盧盧	hu2 hu2 lu2 lu2
 胡臭	hu2 chou4
 胡蔓草	hu2 man4 cao3
@@ -96010,7 +96081,9 @@ min_phrase_weight: 100
 腰椎穿刺	yao1 zhui1 chuan1 ci4
 腰椎間盤	yao1 zhui1 jian1 pan2
 腰椎間盤突出	yao1 zhui1 jian1 pan2 tu1 chu1
+腰椎間盤突出	yao1 zhui1 jian1 pan2 tu2 chu1
 腰椎間盤突出症	yao1 zhui1 jian1 pan2 tu1 chu1 zheng4
+腰椎間盤突出症	yao1 zhui1 jian1 pan2 tu2 chu1 zheng4
 腰褡子	yao1 da1 zi5
 腰金衣紫	yao1 jin1 yi4 zi3
 腰金衣紫	yao1 jin1 yi1 zi3
@@ -99677,8 +99750,8 @@ min_phrase_weight: 100
 衝犯	chong1 fan4
 衝破	chong1 po4
 衝程	chong1 cheng2
-衝突	chong1 tu1
 衝突	chong1 tu2
+衝突	chong1 tu1
 衝要	chong1 yao4
 衝進	chong1 jin4
 衝量	chong1 liang4
@@ -100126,6 +100199,7 @@ min_phrase_weight: 100
 西班牙舞蹈	xi1 ban1 ya2 wu3 dao4
 西班牙音樂	xi1 ban1 ya2 yin1 yue4
 西突厥史料	xi1 tu2 jue2 shi3 liao4
+西突厥史料	xi1 tu1 jue2 shi3 liao4
 西耶那	xi1 ye1 na4
 西葫蘆	xi1 hu2 lu2
 西蒙‧舒斯特	xi1 meng3 eng5 shu1 si1 te4
@@ -100523,6 +100597,8 @@ min_phrase_weight: 100
 角色扮演遊戲	jue2 se4 ban4 yan3 you2 xi4
 角色衝突	jiao3 se4 chong1 tu2
 角色衝突	jue2 se4 chong1 tu2
+角色衝突	jiao3 se4 chong1 tu1
+角色衝突	jue2 se4 chong1 tu1
 角落	jiao3 luo4
 角落	jue2 luo4
 角角	jue2 jue2
@@ -100616,6 +100692,7 @@ min_phrase_weight: 100
 觸摸屏幕	chu4 mo1 ping2 mu4
 觸機落阱	chu4 ji1 luo4 jing3
 觸突	chu4 tu2
+觸突	chu4 tu1
 觸興	chu4 xing4
 觸處	chu4 chu4
 觸霉頭	chu4 mei2 tou5
@@ -101512,8 +101589,8 @@ min_phrase_weight: 100
 警察廣播電台	jing3 cha2 guang3 bo1 dian4 tai2
 警察廣播電臺	jing3 cha2 guang3 bo4 dian4 tai2
 警察廣播電臺	jing3 cha2 guang3 bo1 dian4 tai2
-警民衝突	jing3 min2 chong1 tu1
 警民衝突	jing3 min2 chong1 tu2
+警民衝突	jing3 min2 chong1 tu1
 警種	jing3 zhong3
 警角	jing3 jue2
 譨譨	nou2 nou2
@@ -101685,7 +101762,9 @@ min_phrase_weight: 100
 豔歌羅敷行	yan4 ge1 luo2 fu1 xing2
 豕交獸畜	shi3 jiao1 shou4 xu4
 豕突	shi3 tu2
+豕突	shi3 tu1
 豕突狼奔	shi3 tu2 lang2 ben1
+豕突狼奔	shi3 tu1 lang2 ben1
 豚拍	tun2 po4
 豚拍	tun2 bo2
 象傳	xiang4 zhuan4
@@ -101697,6 +101776,7 @@ min_phrase_weight: 100
 象車	xiang4 ju1
 象闕	xiang4 que4
 豨突	xi1 tu2
+豨突	xi1 tu1
 豪伊杜‧比豪爾	hao2 yi1 du4 eng5 bi3 hao2 er3
 豪伊杜‧比豪爾州	hao2 yi1 du4 eng5 bi4 hao2 er3 zhou1
 豪伊杜‧比豪爾州	hao2 yi1 du4 eng5 bi3 hao2 er3 zhou1
@@ -102484,7 +102564,9 @@ min_phrase_weight: 100
 趴下	pa1 xia4
 趴鼻子	pa1 bi2 zi5
 趵突泉	bao4 tu2 quan2
+趵突泉	bao4 tu1 quan2
 趵突泉詩	bao4 tu2 quan2 shi1
+趵突泉詩	bao4 tu1 quan2 shi1
 趵趵	bo1 bo1
 趵趵	bao4 bao4
 趼子	jian3 zi5
@@ -104492,6 +104574,7 @@ min_phrase_weight: 100
 邊塞詩	bian1 sai4 shi1
 邊境地區	bian1 jing4 di4 qu1
 邊境衝突	bian1 jing4 chong1 tu1
+邊境衝突	bian1 jing4 chong1 tu2
 邊將	bian1 jiang4
 邊度	bian1 du4
 邊張子	bian1 zhang1 zi5
@@ -107818,7 +107901,9 @@ min_phrase_weight: 100
 隱身草兒	yin3 shen1 cao3 er2
 隱間	yin3 jian4
 隳突	hui1 tu2
+隳突	hui1 tu1
 隳突叫號	hui1 tu2 jiao4 hao2
+隳突叫號	hui1 tu1 jiao4 hao2
 隴南地區	long3 nan2 di4 qu1
 隴種	long3 zhong4
 隴西行	long3 xi1 xing2
@@ -107848,6 +107933,7 @@ min_phrase_weight: 100
 雄赳赳	xiong2 jiu3 jiu3
 雄長	xiong2 zhang3
 雄飛突進	xiong2 fei1 tu2 jin4
+雄飛突進	xiong2 fei1 tu1 jin4
 雅丹地貌	ya3 dan1 di4 mao4
 雅俗稽言	ya3 su2 ji1 yan2
 雅安地區	ya3 an1 di4 qu1
@@ -108507,6 +108593,7 @@ min_phrase_weight: 100
 露齒而笑	lu4 chi3 er2 xiao4
 霸占	ba4 zhan4
 霸突	ba4 tu2
+霸突	ba4 tu1
 霸都魯	ba4 du1 lu3
 霸陵呵夜	ba4 ling2 he1 ye4
 霸陵折柳	ba4 ling2 zhe2 liu3
@@ -109257,6 +109344,7 @@ min_phrase_weight: 100
 風雲叱吒	feng1 yun2 chi4 zha4
 風雲月露	feng1 yun2 yue4 lu4
 風雲突變	feng1 yun2 tu2 bian4
+風雲突變	feng1 yun2 tu1 bian4
 風靡	feng1 mi3
 風靡	feng1 mi2
 風靡一時	feng1 mi3 yi4 shi2
@@ -109735,6 +109823,7 @@ min_phrase_weight: 100
 馱馬	tuo2 ma3
 馳傳	chi2 zhuan4
 馳突	chi2 tu2
+馳突	chi2 tu1
 馴伏	xun2 fu2
 馴化	xun2 hua4
 馴化	xun4 hua4
@@ -110511,6 +110600,7 @@ min_phrase_weight: 100
 鶴髮童顏	he4 fa3 tong2 yan2
 鶴髮雞皮	he4 fa3 ji1 pi2
 鶻突	hu2 tu2
+鶻突	hu2 tu1
 鶻鳩	gu3 jiu1
 鶻鵃	gu3 zhou1
 鷂子	yao4 zi5
@@ -110861,6 +110951,7 @@ min_phrase_weight: 100
 黑黶子	hei1 yan3 zi5
 黔東南苗族侗族自治州	qian2 dong1 nan2 miao2 zu2 dong4 zu2 zi4 zhi4 zhou1
 黔突暖席	qian2 tu2 nuan3 xi2
+黔突暖席	qian2 tu1 nuan3 xi2
 默片	mo4 pian4
 默識	mo4 zhi4
 黜降	chu4 jiang4
@@ -111096,4 +111187,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 111099 #####
+##### @結束 END - 111190 #####
