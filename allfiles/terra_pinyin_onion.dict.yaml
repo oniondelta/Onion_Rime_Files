@@ -55868,6 +55868,7 @@ min_phrase_weight: 100
 乾坤一擲	qian2 kun1 yi1 zhi2
 乾坤再造	qian2 kun1 zai4 zao4
 乾塢	gan1 wu4
+乾塢	gan1 wu1	80%
 乾女兒	gan1 nv3 er2
 乾奴才	gan1 nu2 cai2
 乾妹妹	gan1 mei4 mei5
@@ -60887,6 +60888,7 @@ min_phrase_weight: 100
 前鋸肌	qian2 ju4 ji1
 前長後短	qian2 chang2 hou4 duan3
 前門不進師姑後門不進和尚	qian2 men2 bu2 jin4 shi1 gu1 hou4 men2 bu2 jin4 he2 shang4
+前門不進師姑後門不進和尚	qian2 men2 bu4 jin4 shi1 gu1 hou4 men2 bu4 jin4 he2 shang4
 前頭	qian2 tou5
 前頭	qian2 tou2
 前首相	qian2 shou3 xiang4
@@ -64770,6 +64772,8 @@ min_phrase_weight: 100
 啲咑	di1 da1
 啴啴	tan1 tan1
 啵啵	bo1 bo1
+啵啵	bo1 bo5
+啵啵	bo5 bo5
 啷鐺	lang1 dang1
 啼啼哭哭	ti2 ti2 ku1 ku1
 啼天哭地	ti2 tian1 ku1 di4
@@ -76713,6 +76717,7 @@ min_phrase_weight: 100
 捶胸跌足	chui2 xiong1 die2 zu2
 捷克共和國	jie2 ke4 gong4 he2 guo2
 捷克暨斯洛伐克聯邦共和國	jie2 ke4 ji4 si1 luo4 fa2 ke4 lian2 bang1 gong4 he2 guo2
+# 捷克暨斯洛伐克聯邦共和國	jie2 ke4 ji4 si1 luo4 fa1 ke4 lian2 bang1 gong4 he2 guo2
 捷報頻傳	jie2 bao4 pin2 chuan2
 捷給	jie2 ji3
 捷足先得	jie2 zu2 xian1 de2
@@ -85243,6 +85248,7 @@ min_phrase_weight: 100
 消閒兒	xiao1 xian2 er5
 消閒兒	xiao1 xian2 er2
 消除對婦女一切形式歧視公約	xiao1 chu2 dui4 fu4 nv3 yi2 qie4 xing2 shi4 qi2 shi4 gong1 yue1
+消除對婦女一切形式歧視公約	xiao1 chu2 dui4 fu4 nv3 yi1 qie4 xing2 shi4 qi2 shi4 gong1 yue1
 消除鋸齒	xiao1 chu2 ju4 chi3
 消食兒	xiao1 shi2 er5
 消食兒	xiao1 shi2 er2
@@ -105879,6 +105885,7 @@ min_phrase_weight: 100
 錠子	ding4 zi5
 錢三強	qian2 san1 qiang2
 錢不是萬能的沒錢是萬萬不能的	qian2 bu2 shi4 wan4 neng2 de5 mei2 qian2 shi4 wan4 wan4 bu4 neng2 de5
+錢不是萬能的沒錢是萬萬不能的	qian2 bu4 shi4 wan4 neng2 de5 mei2 qian2 shi4 wan4 wan4 bu4 neng2 de5
 錢不露白	qian2 bu2 lou4 bai2
 錢不露白	qian2 bu4 lou4 bai2
 錢串兒	qian2 chuan4 er5
@@ -111202,4 +111209,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 111205 #####
+##### @結束 END - 111212 #####

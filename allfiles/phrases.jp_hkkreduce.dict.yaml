@@ -7,7 +7,7 @@
 # 本詞庫刪除純「假名」之詞彙。純「假名」詞庫為「phrases.jp_hk」。
 ---
 name: phrases.jp_hkkreduce
-version: "202109"
+version: "202111"
 sort: by_weight #original
 use_preset_vocabulary: false
 columns:
@@ -3883,7 +3883,6 @@ columns:
 一顧
 一風
 一飜
-一騎
 一髪
 一鶴
 丁々
