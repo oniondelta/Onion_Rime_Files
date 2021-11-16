@@ -70304,6 +70304,7 @@ min_phrase_weight: 100
 小弟弟	xiao3 di4 di5
 小弟弟	xiao3 di4 di4
 小彈	xiao3 dan4
+小彈	xiao3 tan2
 小心眼兒	xiao3 xin1 yan3 er5
 小心眼兒	xiao3 xin1 yan3 er1
 小心眼兒	xiao3 xin1 yan3 er2
@@ -70323,6 +70324,7 @@ min_phrase_weight: 100
 小時了了	xiao3 shi2 liao3 liao3
 小時候	xiao3 shi2 hou4
 小曲	xiao3 qu3
+小曲	xiao3 qu1
 小月	xiao3 yue4
 小有小難	xiao3 you3 xiao3 nan2
 小朝廷	xiao3 chao2 ting2
@@ -70345,6 +70347,7 @@ min_phrase_weight: 100
 小白臉兒	xiao3 bai2 lian3 er5
 小白臉兒	xiao3 bai2 lian3 er2
 小相	xiao3 xiang4
+小相	xiao3 xiang1
 小相公	xiao3 xiang4 gong1
 小看	xiao3 kan4
 小眼薄皮	xiao3 yan3 bao2 pi2
@@ -107095,6 +107098,7 @@ min_phrase_weight: 100
 阿來	a1 lai2
 阿依莎	a1 yi1 sha1
 阿保	e1 bao3
+阿保	a1 bao3
 阿保之功	e1 bao3 zhi1 gong1
 阿保之勞	e1 bao3 zhi1 lao2
 阿修羅	a1 xiu1 luo2
@@ -107146,6 +107150,7 @@ min_phrase_weight: 100
 阿卡迪亞大學	a1 ka3 di2 ya3 da4 xue2
 阿卡迪亞大學	a1 ka3 di2 ya4 da4 xue2
 阿叔	a1 shu2
+阿叔	a1 shu1
 阿司匹林	a1 si1 pi3 lin2
 阿司匹林	a1 si1 pi1 lin2
 阿司匹林	a4 si1 pi1 lin2
@@ -107190,6 +107195,7 @@ min_phrase_weight: 100
 阿奴	a1 nu2
 阿奶	a1 nai3
 阿好	e1 hao4
+阿好	a1 hao3
 阿妹	a1 mei4
 阿姆	a1 mu3
 阿姆哈拉	a1 mu3 ha1 la1
@@ -107208,6 +107214,7 @@ min_phrase_weight: 100
 阿嬌	a1 jiao1
 阿嬭	a1 nai3
 阿家	a1 gu1
+阿家	a1 jia1
 阿家翁	a1 gu1 weng1
 阿富汗	a1 fu4 han4
 阿富汗伊斯蘭國	a1 fu4 han4 yi1 si1 lan2 guo2
@@ -107218,6 +107225,7 @@ min_phrase_weight: 100
 阿小	a1 xiao3
 阿尼林	a1 ni2 lin2
 阿屎	e1 shi3
+阿屎	a1 shi3
 阿巴	a1 ba1
 阿巴丹	a1 ba1 dan1
 阿巴嘎旗	a1 ba1 ga1 qi2
@@ -107490,6 +107498,7 @@ min_phrase_weight: 100
 阿育吠陀	a1 yu4 fei4 tuo2
 阿育王	a1 yu4 wang2
 阿膠	e1 jiao1
+阿膠	a1 jiao1
 阿膠版	a1 jiao1 ban3
 阿舅	a1 jiu4
 阿芙樂爾號	a1 fu2 le4 er3 hao2
@@ -107525,6 +107534,7 @@ min_phrase_weight: 100
 阿蘭若	a1 lan2 re3
 阿蘭若	a1 lan2 ruo4
 阿衡	e1 heng2
+阿衡	a1 heng2
 阿訇	a1 hong1
 阿誰	a1 shui2
 阿諂	e1 chan3
@@ -107574,6 +107584,7 @@ min_phrase_weight: 100
 阿阿	a1 a1
 阿附	e1 fu4
 阿難	a1 nan2
+阿難	a1 nan4
 阿難	e1 nan2
 阿難陀	a1 nan2 tuo2
 阿難陀	e1 nan2 tuo2
@@ -107596,6 +107607,7 @@ min_phrase_weight: 100
 阿麗亞娜	a1 li4 ya4 na4
 阿黑門尼德王朝	a1 hei1 men2 ni2 de2 wang2 chao2
 阿黨	e1 dang3
+阿黨	a1 dang3
 阿鼻	a1 bi2
 阿鼻地獄	a1 bi2 di4 yu4
 陂陀	po1 tuo2
@@ -111218,4 +111230,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 111221 #####
+##### @結束 END - 111233 #####
