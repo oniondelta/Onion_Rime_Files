@@ -183,7 +183,7 @@ use_preset_vocabulary: false
 👰	hh
 🚶	hh
 🏃	hh
-💃 	hh
+💃	hh
 👯	hh
 👫	hh
 👬	hh
@@ -216,7 +216,7 @@ use_preset_vocabulary: false
 👨‍👨‍👦	hh
 👨‍👨‍👧	hh
 👨‍👨‍👧‍👦	hh
-👨‍👨‍👦‍👦 	hh
+👨‍👨‍👦‍👦	hh
 👨‍👨‍👧‍👧	hh
 👚	hh
 👕	hh
@@ -2451,7 +2451,7 @@ use_preset_vocabulary: false
 🚤	lto
 ### 警消護 ###
 🚑	rwi
-🚒 	rwi
+🚒	rwi
 🚓	rwi
 🚔	rwi
 🚐	rwi
