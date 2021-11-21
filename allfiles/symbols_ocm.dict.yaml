@@ -4,7 +4,7 @@
 # 『洋蔥』製作
 ---
 name: symbols_ocm
-version: "202106"
+version: "202111"
 sort: original
 use_preset_vocabulary: false
 ...
@@ -1815,6 +1815,7 @@ use_preset_vocabulary: false
 👈	hy
 👉	hy
 👊	hy
+✋	hy
 👋	hy
 👌	hy
 👍	hy
