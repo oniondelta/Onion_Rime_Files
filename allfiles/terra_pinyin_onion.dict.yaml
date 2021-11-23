@@ -85,6 +85,7 @@
 #    詞句中，「波」字典發音為「bo1」，「po1」為又音且常見於日常發音中，故全都補齊「bo1」「po1」。
 #    詞句中，「突」臺灣發音為「tu2」，大陸發音為「tu1」，兩者皆常見於日常發音中，故全都補齊「tu2」「tu1」。
 #    詞句中，「凸」臺灣字典發音為「tu2」，大陸發音為「tu1」，「tu1」也為臺灣字典之又音，故全都補齊「tu2」「tu1」。
+#    詞句中，「坊」臺灣字典發音有「fang1」和「fang2」，許多詞發音於各字典標註不一，且於詞尾慣用發音（變音）為「fang3」，如果於詞尾，補齊「fang1」「fang2」「fang3」。（待攷）
 #    預計比對「個 輕聲和一聲」變音。
 #
 #  〈2020修改字詞彙發音〉：
@@ -57196,9 +57197,11 @@ min_phrase_weight: 100
 作假賬	zuo4 jia3 zhang4
 作偽	zuo4 wei4
 作坊	zuo1 fang1
-作坊	zuo1 fang3
+作坊	zuo1 fang2
+作坊	zuo1 fang3	80%
 作坊	zuo4 fang1
-作坊	zuo4 fang3
+作坊	zuo4 fang2
+作坊	zuo4 fang3	80%
 作場	zuo4 chang2
 作幌子	zuo4 huang3 zi5
 作弄	zuo4 nong4
@@ -66315,10 +66318,14 @@ min_phrase_weight: 100
 坊刻本	fang1 ke1 ben3
 坊子	fang1 zi3
 坊子	fang1 zi5
+坊子	fang2 zi3
+坊子	fang2 zi5
+坊子	fang3 zi3	80%
+坊子	fang3 zi5	80%
 坊曲	fang1 qu1
 坊記	fang2 ji4
 坊間	fang1 jian1
-坊間	fang3 jian1
+坊間	fang3 jian1	80%
 坍落	tan1 luo4
 坎兒	kan3 er5
 坎兒	kan3 er1
@@ -71995,6 +72002,7 @@ min_phrase_weight: 100
 廉白	lian2 bo2
 廊坊地區	lang2 fang1 di4 qu1
 廊坊地區	lang2 fang2 di4 qu1
+廊坊地區	lang2 fang3 di4 qu1	80%
 廊子	lang2 zi5
 廊廡	lang2 wu3
 廓爾喀人	kuo4 er3 ke4 ren2
@@ -77345,7 +77353,8 @@ min_phrase_weight: 100
 搭茬兒	da1 cha2 er2
 搭蓋	da1 gai4
 搭街坊	da1 jie1 fang1
-搭街坊	da1 jie1 fang3
+搭街坊	da1 jie1 fang2
+搭街坊	da1 jie1 fang3	80%
 搭褳	da1 lian2
 搭調	da1 diao4
 搭識	da1 shi4
@@ -78620,8 +78629,14 @@ min_phrase_weight: 100
 教唆犯	jiao4 suo1 fan4
 教唆罪	jiao4 suo1 zui4
 教坊	jiao4 fang1
+教坊	jiao4 fang2
+教坊	jiao4 fang3	80%
 教坊司	jiao4 fang1 si1
+教坊司	jiao4 fang2 si1
+教坊司	jiao4 fang3 si1	80%
 教坊記	jiao4 fang1 ji4
+教坊記	jiao4 fang2 ji4
+教坊記	jiao4 fang3 ji4	80%
 教堂	jiao4 tang2
 教堂墓地	jiao4 tang2 mu4 di4
 教場	jiao4 chang2
@@ -82340,7 +82355,8 @@ min_phrase_weight: 100
 槭葉止血草	cu4 ye4 zhi3 xie3 cao3
 槮爽	san3 shuang3
 槽坊	cao2 fang1
-槽坊	cao2 fang3
+槽坊	cao2 fang2
+槽坊	cao2 fang3	80%
 槽子	cao2 zi5
 槽頭買馬看母子	cao2 tou2 mai3 ma3 kan4 mu3 zi3
 樀樀	di2 di2
@@ -83768,8 +83784,9 @@ min_phrase_weight: 100
 水上漚	shui3 shang4 ou1
 水下核爆炸	shui3 xia4 he2 bao4 zha4
 水中毒	shui3 zhong4 du2
-水作坊	shui3 zuo1 fang3
+水作坊	shui3 zuo1 fang3	80%
 水作坊	shui3 zuo1 fang1
+水作坊	shui3 zuo1 fang2
 水分	shui3 fen4
 水刑逼供	shui3 xing2 bi1 gong4
 水到渠成	shui3 dao4 qu2 cheng2
@@ -86390,6 +86407,8 @@ min_phrase_weight: 100
 濯身	zhuo2 shen1
 濯錦以魚	zhuo2 jin3 yi3 yu2
 濰坊地區	wei2 fang1 di4 qu1
+濰坊地區	wei2 fang2 di4 qu1
+濰坊地區	wei2 fang3 di4 qu1	80%
 濱州地區	bin1 zhou1 di4 qu1
 濺落	jian4 luo4
 濾子	lv4 zi5
@@ -87559,7 +87578,8 @@ min_phrase_weight: 100
 版築飯牛	ban3 zhu2 fan4 niu2
 牌告利率	pai2 gao4 li4 lv4
 牌坊	pai2 fang1
-牌坊	pai2 fang3
+牌坊	pai2 fang2
+牌坊	pai2 fang3	80%
 牌子	pai2 zi5
 牌子	pai2 zi3
 牌子曲	pai2 zi5 qu3
@@ -87624,7 +87644,9 @@ min_phrase_weight: 100
 牡丹亭	mu3 dan1 ting2
 牡丹區	mu3 dan1 qu1
 牡丹卡	mu3 dan1 ka3
-牡丹坊	mu3 dan1 fang3
+牡丹坊	mu3 dan1 fang3	80%
+牡丹坊	mu3 dan1 fang1
+牡丹坊	mu3 dan1 fang2
 牡丹江	mu3 dan1 jiang1
 牡丹江地區	mu3 dan1 jiang1 di4 qu1
 牡丹江市	mu3 dan1 jiang1 shi4
@@ -88956,6 +88978,8 @@ min_phrase_weight: 100
 當地居民	dang1 di4 ju1 min2
 當地時間	dang1 di4 shi2 jian1
 當坊土地	dang1 fang1 tu3 di4
+當坊土地	dang1 fang2 tu3 di4
+當坊土地	dang1 fang3 tu3 di4	80%
 當堂	dang1 tang2
 當場	dang1 chang2
 當場	dang1 chang3
@@ -91370,6 +91394,7 @@ min_phrase_weight: 100
 碼頭	ma3 tou2
 碾坊	nian3 fang1
 碾坊	nian3 fang2
+碾坊	nian3 fang3	80%
 碾場	nian3 chang2
 碾子	nian3 zi5
 碾子山	nian3 zi5 shan1
@@ -91439,10 +91464,13 @@ min_phrase_weight: 100
 磨嘴皮子	mo2 zui3 pi2 zi5
 磨坊	mo4 fang1
 磨坊	mo4 fang2
+磨坊	mo4 fang3	80%
 磨坊	mo2 fang1
-磨坊	mo2 fang3
+磨坊	mo2 fang2
+磨坊	mo2 fang3	80%
 磨坊主	mo4 fang2 zhu3
-磨坊主	mo2 fang3 zhu3
+磨坊主	mo4 fang1 zhu3
+磨坊主	mo2 fang3 zhu3	80%
 磨墨	mo2 mo4
 磨子	mo4 zi3
 磨子	mo4 zi5
@@ -94853,7 +94881,8 @@ min_phrase_weight: 100
 美處	mei3 chu4
 美髮	mei3 fa3
 美麗的磨坊少女	mei3 li4 de5 mo4 fang1 shao4 nv3
-美麗的磨坊少女	mei3 li4 de5 mo2 fang3 shao4 nv3
+美麗的磨坊少女	mei3 li4 de5 mo2 fang3 shao4 nv3	80%
+美麗的磨坊少女	mei3 li4 de5 mo4 fang2 shao4 nv3
 羓子	ba1 zi5
 羔子	gao1 zi5
 羔酒自勞	gao1 jiu3 zi4 lao4
@@ -95200,7 +95229,8 @@ min_phrase_weight: 100
 老行家	lao3 hang2 jia1
 老行尊	lao3 hang2 zun1
 老街坊	lao3 jie1 fang1
-老街坊	lao3 jie1 fang3
+老街坊	lao3 jie1 fang2
+老街坊	lao3 jie1 fang3	80%
 老規矩	lao3 gui1 ju3
 老親	lao3 qin1
 老調	lao3 diao4
@@ -97335,7 +97365,7 @@ min_phrase_weight: 100
 茶上	cha2 shang4
 茶坊	cha2 fang1
 茶坊	cha2 fang2
-茶坊	cha2 fang3
+茶坊	cha2 fang3	80%
 茶局子	cha2 ju2 zi5
 茶水錢	cha2 shui3 qian2
 茶碾子	cha2 nian3 zi5
@@ -98378,6 +98408,8 @@ min_phrase_weight: 100
 蕁麻	xun2 ma2
 蕁麻疹	xun2 ma2 zhen3
 蕃坊	fan1 fang1
+蕃坊	fan1 fang2
+蕃坊	fan1 fang3	80%
 蕃孌	fan2 lvan3
 蕃孌	fan2 luan3
 蕃帽	fan1 mao4
@@ -99723,15 +99755,21 @@ min_phrase_weight: 100
 術數	shu4 shu4
 街上	jie1 shang4
 街坊	jie1 fang1
-街坊	jie1 fang3
-街坊四鄰	jie1 fang3 si4 lin2
-街坊鄰里	jie1 fang3 lin2 li3
+街坊	jie1 fang2
+街坊	jie1 fang3	80%
+街坊四鄰	jie1 fang3 si4 lin2	80%
+街坊四鄰	jie1 fang1 si4 lin2
+街坊四鄰	jie1 fang2 si4 lin2
+街坊鄰里	jie1 fang3 lin2 li3	80%
+街坊鄰里	jie1 fang1 lin2 li3
+街坊鄰里	jie1 fang2 lin2 li3
 街死街埋	jie1 si3 jie1 mai2
 街溜子	jie1 liu1 zi5
 街號巷哭	jie1 hao2 xiang4 ku1
 街道辦事處	jie1 dao4 ban4 shi4 chu4
 街里街坊	jie1 li3 jie1 fang1
-街里街坊	jie1 li3 jie1 fang3
+街里街坊	jie1 li3 jie1 fang3	80%
+街里街坊	jie1 li3 jie1 fang2
 衙門	ya2 men2
 衚衕	hu2 tong4
 衛從	wei4 zong4
@@ -101888,7 +101926,8 @@ min_phrase_weight: 100
 貞淑	zhen1 shu2
 貞白	zhen1 bo2
 貞節牌坊	zhen1 jie2 pai2 fang1
-貞節牌坊	zhen1 jie2 pai2 fang3
+貞節牌坊	zhen1 jie2 pai2 fang3	80%
+貞節牌坊	zhen1 jie2 pai2 fang2
 貞觀	zhen1 guan4
 貞觀	zhen1 guan1
 貞觀之治	zhen1 guan4 zhi1 zhi4
@@ -111231,4 +111270,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 111234 #####
+##### @結束 END - 111273 #####
