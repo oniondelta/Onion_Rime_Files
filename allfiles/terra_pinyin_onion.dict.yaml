@@ -86,6 +86,7 @@
 #    詞句中，「突」臺灣發音為「tu2」，大陸發音為「tu1」，兩者皆常見於日常發音中，故全都補齊「tu2」「tu1」。
 #    詞句中，「凸」臺灣字典發音為「tu2」，大陸發音為「tu1」，「tu1」也為臺灣字典之又音，故全都補齊「tu2」「tu1」。
 #    詞句中，「坊」臺灣字典發音有「fang1」和「fang2」，許多詞發音於各字典標註不一，且於詞尾慣用發音（變音）為「fang3」，如果於詞尾，補齊「fang1」「fang2」「fang3」。（待攷）
+#    詞句中，「鑿」發音補齊「zao2」和「zuo4」。
 #    預計比對「個 輕聲和一聲」變音。
 #
 #  〈2020修改字詞彙發音〉：
@@ -61504,6 +61505,7 @@ min_phrase_weight: 100
 勒維夫	le4 wei2 fu1
 勒維納斯	le4 wei2 na4 si1
 勒緊	lei1 jin3
+勒緊	le1 jin3	80%
 勒緊褲帶	lei1 jin3 ku4 dai4
 勒脖子	lei1 bo2 zi5
 勒詐	le4 zha4
@@ -79243,7 +79245,9 @@ min_phrase_weight: 100
 斧削	fu3 xue4
 斧子	fu3 zi5
 斧鑿	fu3 zao2
+斧鑿	fu3 zuo4
 斧鑿痕	fu3 zuo4 hen2
+斧鑿痕	fu3 zao2 hen2
 斧頭	fu3 tou5
 斧頭	fu3 tou2
 斫喪	zhuo2 sang4
@@ -82292,6 +82296,7 @@ min_phrase_weight: 100
 榧子	fei3 zi5
 榫子	sun3 zi5
 榫鑿	sun3 zao2
+榫鑿	sun3 zuo4
 榫頭	sun3 tou5
 榫頭	sun3 tou2
 榮名及親	rong2 ming2 ji2 qin1
@@ -90961,6 +90966,7 @@ min_phrase_weight: 100
 矇特卡洛法	meng2 te4 ka3 luo4 fa3
 矇特卡羅方法	meng2 te4 ka3 luo2 fang1 fa3
 矇著	meng1 zhao2
+矇著	meng1 zhe5
 矇瞍	meng2 sou3
 矇矇	meng2 meng2
 矇矇亮	meng1 meng1 liang4
@@ -96132,6 +96138,7 @@ min_phrase_weight: 100
 腦貧血	nao3 pin2 xue4
 腦量	nao3 liang4
 腦鑿子	nao3 zao2 zi5
+腦鑿子	nao3 zuo4 zi5
 腦門子	nao3 men2 zi5
 腫瘤切除術	zhong3 liu2 qie4 chu2 shu4
 腮幫子	sai1 bang1 zi5
@@ -105923,6 +105930,7 @@ min_phrase_weight: 100
 鋼絲鋸	gang1 si1 ju4
 鋼鋸	gang1 ju4
 鋼鑿	gang1 zao2
+鋼鑿	gang1 zuo4
 鋼骨水泥	gang1 gu3 shui3 ni2
 錁子	ke4 zi5
 錄像片	lu4 xiang4 pian4
@@ -106248,8 +106256,12 @@ min_phrase_weight: 100
 鑿井	zuo4 jing3
 鑿子	zao2 zi3
 鑿子	zao2 zi5
+鑿子	zuo4 zi3
+鑿子	zuo4 zi5
 鑿石場	zao2 shi2 chang3
+鑿石場	zuo4 shi2 chang3
 鑿石穿	zao2 shi2 chuan1
+鑿石穿	zuo4 shi2 chuan1
 鑿空	zao2 kong1
 鑿空	zuo4 kong1
 鑿空指鹿	zao2 kong1 zhi3 lu4
@@ -109238,6 +109250,7 @@ min_phrase_weight: 100
 顏色	yan2 se4
 顏色	yan2 shai3
 顏闔鑿培	yan2 he2 zuo4 pei2
+顏闔鑿培	yan2 he2 zao2 pei2
 顏面掃地	yan2 mian4 sao3 di4
 顓蒙	zhuan1 meng2
 顓頊	zhuan1 xu1
@@ -111270,4 +111283,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 111273 #####
+##### @結束 END - 111286 #####
