@@ -90,6 +90,7 @@
 #    詞句中，「一」發音標註為「yi1」，如非單純數字含義，另加註：「一」後接字聲調為「123聲」，則標註「yi4」；後接字聲調為「4聲」，則標註「yi2」。
 #    詞句中，「不」發音，後接字聲調為「123聲」，則標註「bu4」；後接字聲調為「4聲」，則標註「bu2」。
 #    詞句中，「個」發音，依臺灣字典於量詞時多標「ge5」，如：「一個」標註為「ge5」，「個人」「高個」等相關語義標「ge4」；少數例外「個」量詞時，在臺灣字典也標「ge4」，則依字典附加。
+#    詞句中，「扎」發音，依臺灣字典沒有「za1」該發音，故全修改為「zha1」。
 #    預計比對「輕聲和一聲」變音。
 #
 #  〈2020修改字詞彙發音〉：
@@ -61505,7 +61506,6 @@ min_phrase_weight: 100
 包干制	bao1 gan1 zhi4
 包彈	bao1 tan2
 包待制	bao1 dai4 zhi4
-包扎	bao1 za1
 包扎	bao1 zha1
 包括內置配重	bao1 kuo4 nei4 zhi4 pei4 zhong4
 包晶反應	bao1 jing1 fan3 ying4
@@ -62137,7 +62137,7 @@ min_phrase_weight: 100
 卡爾加里	ka3 er3 jia1 li3
 卡爾巴拉	ka3 er3 ba1 la1
 卡爾德龍	ka3 er3 de2 long2
-卡爾扎伊	ka3 er3 za1 yi1
+卡爾扎伊	ka3 er3 zha1 yi1
 卡爾文	ka3 er3 wen2
 卡爾文克萊因	ka3 er3 wen2 ke4 lai2 yin1
 卡爾斯魯厄	ka3 er3 si1 lu3 e4
@@ -66432,7 +66432,7 @@ min_phrase_weight: 100
 塔塔兒人	ta3 ta3 er5 ren2
 塔塔兒人	ta3 ta3 er2 ren2
 塔尖上功德	ta3 jian1 shang4 gong1 de2
-塔扎	ta3 za1
+塔扎	ta3 zha1
 塔羅卡	ta3 luo2 ka3
 塔里木盆地	ta3 li3 mu4 pen2 di4
 塗刷	tu2 shua1
@@ -74683,8 +74683,8 @@ min_phrase_weight: 100
 扎住	zha3 zhu4
 扎啤	zha1 pi2
 扎嘴	zha1 zui3
-扎囊	za1 nang2
-扎囊縣	za1 nang2 xian4
+扎囊	zha1 nang2
+扎囊縣	zha1 nang2 xian4
 扎堆	zha1 dui1
 扎墊	zha2 dian4
 扎實	zha1 shi2
@@ -74697,12 +74697,12 @@ min_phrase_weight: 100
 扎掙	zha2 zheng1
 扎撒	zha1 sa3
 扎根	zha1 gen1
-扎格羅斯	za1 ge2 luo2 si1
-扎格羅斯山脈	za1 ge2 luo2 si1 shan1 mai4
+扎格羅斯	zha1 ge2 luo2 si1
+扎格羅斯山脈	zha1 ge2 luo2 si1 shan1 mai4
 扎槍	zha1 qiang1
 扎款	zha1 kuan3
 扎煞	zha1 sha1
-扎爾達里	za1 er3 da2 li3
+扎爾達里	zha1 er3 da2 li3
 扎猛子	zha1 meng3 zi5
 扎眉扎眼	zha1 mei2 zha1 yan3
 扎眼	zha1 yan3
@@ -74723,8 +74723,8 @@ min_phrase_weight: 100
 扎賚特	zha1 lai4 te4
 扎賚特旗	zha1 lai4 te4 qi2
 扎針	zha1 zhen1
-扎魯特	za1 lu3 te4
-扎魯特旗	za1 lu3 te4 qi2
+扎魯特	zha1 lu3 te4
+扎魯特旗	zha1 lu3 te4 qi2
 扑作教刑	pu1 zuo4 jiao4 xing2
 扑打	pu1 da3
 扑撻	pu1 ta4
@@ -97115,7 +97115,8 @@ min_phrase_weight: 100
 莫得	mo4 de2
 莫扎特	mo4 zha1 te4
 莫扎特	mo4 zha2 te4
-莫扎里拉	mo4 za1 li3 la1
+莫扎里拉	mo4 zha1 li3 la1
+莫扎里拉	mo4 zha2 li3 la1
 莫教	mo4 jiao4
 莫敢誰何	mo4 gan3 shui2 he2
 莫春	mu4 chun1
@@ -106817,9 +106818,10 @@ min_phrase_weight: 100
 阿巴桑	a1 ba1 sang1
 阿布叔醇	a1 bu4 shu1 chun2
 阿布哈茲	a1 bu4 ha1 zi1
-阿布扎比	a1 bu4 za1 bi3
 阿布扎比	a1 bu4 zha2 bi3
+阿布扎比	a1 bu4 zha1 bi3
 阿布扎比市	a1 bu4 zha1 bi3 shi4
+阿布扎比市	a1 bu4 zha2 bi3 shi4
 阿布沙耶夫	a1 bu4 sha1 ye1 fu1
 阿布賈	a1 bu4 jia3
 阿布達比	a1 bu4 da2 bi3
@@ -110802,4 +110804,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 110805 #####
+##### @結束 END - 110807 #####
