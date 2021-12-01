@@ -8,7 +8,7 @@ schema:
 
   name: "❖分別調出蝦米(plus)❖"
   schema_id: dif1
-  version: "202109"
+  version: "202112"
   dependencies:
     - punct_ovff
     - dif1_jphi
@@ -138,6 +138,7 @@ menu:
   page_size: 9
 ################################### 濾鏡 ################################################
 simplifier:
+  opencc_config: tw2s.json
   tips: all
 
 zh_tw:

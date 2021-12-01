@@ -6,7 +6,7 @@
 schema:
   schema_id: Mount_ocm
   name: "❖蝦米(單出-反查專用)❖"
-  version: "202109"
+  version: "202112"
   author:
     - 洋蔥
   description: |
@@ -152,6 +152,10 @@ ovff_reverse_lookup:
     - xform/ /  /
     - xform/^/  /
     - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
+
+simplifier:
+  opencc_config: tw2s.json
+  tips: all
 
 reverse3_lookup:
   __include: /translator

@@ -4,7 +4,7 @@
 schema:
   schema_id: onion-array30
   name: "▦ 行列３０（洋蔥版）"
-  version: "202109"
+  version: "202112"
   author:
     - 洋蔥 <deltazonetw@gmail.com>
   description: |
@@ -84,6 +84,7 @@ engine:
 
 
 simplifier:
+  opencc_config: tw2s.json
   tips: all
 
 mix30_nil_comment_up_filter:

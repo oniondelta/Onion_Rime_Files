@@ -4,7 +4,7 @@
 schema:
   schema_id: terra_pinyin_onion
   name: "★地球拼音(洋蔥mix-in版)★"
-  version: "202109"
+  version: "202112"
   author:
     - 佛振 <chen.sst@gmail.com>
     - 『洋蔥』
@@ -59,6 +59,10 @@ engine:
 
 menu:
   page_size: 9
+
+simplifier:
+  opencc_config: tw2s.json
+  tips: all
 
 back_mark:
   opencc_config: back_mark_ocm.json

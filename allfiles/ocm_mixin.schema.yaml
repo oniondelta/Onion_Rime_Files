@@ -9,7 +9,7 @@ schema:
 
   name: "❖超級混合蝦米(mix-in)❖"
   schema_id: ocm_mixin
-  version: "202109"
+  version: "202112"
   dependencies:
     - punct_ovff
     - symbols_ocm
@@ -133,6 +133,7 @@ menu:
   page_size: 9
 ################################### 濾鏡 ################################################
 simplifier:
+  opencc_config: tw2s.json
   tips: all
 
 zh_tw:
