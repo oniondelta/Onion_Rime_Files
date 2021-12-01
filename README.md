@@ -25,6 +25,8 @@
 
 ### 各方案說明：
 
+> 目前關閉，各方案說明等有閒情逸致時再移植來 GitHub 這邊。
+
 - [電腦 RIME 輸入法『注音 洋蔥純注音版』](https://deltazone.pixnet.net/blog/post/264319309)
 
 - [電腦 RIME 輸入法『注音 洋蔥plus版 』](https://deltazone.pixnet.net/blog/post/343650692)
