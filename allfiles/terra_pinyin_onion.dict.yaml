@@ -113,7 +113,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "202111"
+version: "202112"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -13364,7 +13364,7 @@ min_phrase_weight: 100
 倈	lie1
 倉	cang1
 倊	zong4
-個	ge4	100%
+個	ge4	3%
 個	ge5	100%
 倌	guan1
 倍	bei4
