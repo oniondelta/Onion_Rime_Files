@@ -1996,6 +1996,8 @@ min_phrase_weight: 100
 称	cheng4
 鸌	huo4
 鹱	huo4
+塣	cheng3	0%
+浧	cheng3	0%
 ##### @201912 比對教育部相關字詞典檔所新增 #####
 丁	zheng1	0.1%
 丂	kao3	0.1%
@@ -6810,7 +6812,7 @@ min_phrase_weight: 100
 㡖	chuang2
 㡗	ti2
 㡘	lian2
-#㡘	lin2
+㡘	lin2	0%
 㡙	bi1
 㡚	gou1
 㡛	mang2
@@ -8888,7 +8890,7 @@ min_phrase_weight: 100
 䀹	jia2
 䀹	jie2
 䀹	she4
-#䀹	ya4
+䀹	ya4	0%
 䀹	zha3
 䀺	chou1
 䀺	tao1
@@ -110804,4 +110806,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 110807 #####
+##### @結束 END - 110809 #####
