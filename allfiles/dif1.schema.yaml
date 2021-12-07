@@ -66,13 +66,13 @@ engine:
 #    - charset_filter@big5
 #    - charset_filter@gbk
 #    - charset_filter@gb2312
+    - simplifier@emoji_switch
     - simplifier
     - reverse_lookup_filter@top_reverse_lookup
     - reverse_lookup_filter@pt_reverse_lookup
     - lua_filter@mix_cf2_cfp_filter  # 合併 charset_filter2 和 comment_filter_plus，兩個 lua filter 太耗效能。
     # - lua_filter@comment_filter_plus
     - simplifier@back_mark
-    - simplifier@emoji_switch
     - reverse_lookup_filter@ovff_reverse_lookup
     - reverse_lookup_filter@phonetic_reverse_lookup
     - reverse_lookup_filter@e_reverse_lookup
@@ -148,7 +148,7 @@ zh_tw:
 #  tips: all
 
 emoji_switch:
-  opencc_config: emoji.json
+  opencc_config: emoji_2021t.json
   option_name: emoji_segestion
   tags: [ abc ]
   tips: all

@@ -53,8 +53,8 @@ engine:
     # - lua_filter@charset_filter2  #去除opencc轉換後留下的「᰼᰼」。
     # - lua_filter@charset_filter  #打開後中文只保留CJK（精簡），但外語不受影響。
     # - lua_filter@missing_mark_filter  #補上標點符號因直上和 opencc 衝突沒附註之選項
-    - simplifier
     - simplifier@emoji_switch
+    - simplifier
     - simplifier@back_mark
     - simplifier@punct_mark
     - reverse_lookup_filter@bpm_reverse_lookup
@@ -118,7 +118,7 @@ zh_tw:
   tags: [ abc, reverse2_lookup ]
 
 emoji_switch:
-  opencc_config: emoji.json
+  opencc_config: emoji_2021t.json
   option_name: emoji_segestion
   tags: [ abc ]
 #  tips: all
