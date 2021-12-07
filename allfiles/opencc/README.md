@@ -12,8 +12,14 @@
 - punct_mark.json  選項後標點符號註解
 - punct_mark.txt
 
-- emoji.json  附隨相關表情符號
+- emoji.json  附隨相關表情符號（舊版）
 - emoji.txt
+
+- emoji_2021.json  附隨相關表情符號（新版）
+- emoji_2021.txt
+
+- emoji_2021t.json  附隨相關表情符號（新版，只保留繁體轉換，方案設定後簡體仍可轉換，方案實際使用）
+- emoji_2021t.txt
 
 - ocm_big5e_hkscs_jis.json 遮屏非 Big5e Hkscs JIS 之中文(限定 utf8 )
 - ocm_big5e_hkscs_jis.txt
