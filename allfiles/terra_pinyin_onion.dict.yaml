@@ -91,6 +91,8 @@
 #    詞句中，「不」發音，後接字聲調為「123聲」，則標註「bu4」；後接字聲調為「4聲」，則標註「bu2」。
 #    詞句中，「個」發音，依臺灣字典於量詞時多標「ge5」，如：「一個」標註為「ge5」，「個人」「高個」等相關語義標「ge4」；少數例外「個」量詞時，在臺灣字典也標「ge4」，則依字典附加。
 #    詞句中，「扎」發音，依臺灣字典沒有「za1」該發音，故全修改為「zha1」。
+#    詞句中，「微」字典發音為「wei2」，「wei1」為又音且常用，故全都補齊「wei2」「wei1」。
+#    詞句中，「薇」臺灣字典發音為「wei2」，大陸發音為「wei1」，但臺灣日常也常發「wei1」，故全都補齊「wei2」「wei1」。
 #    預計比對「輕聲和一聲」變音。
 #
 #  〈2020修改字詞彙發音〉：
@@ -1998,6 +2000,10 @@ min_phrase_weight: 100
 鹱	huo4
 塣	cheng3	0%
 浧	cheng3	0%
+婭	ya3	50%
+婭	ya1	0%
+娅	ya3	50%
+娅	ya1	0%
 ##### @201912 比對教育部相關字詞典檔所新增 #####
 丁	zheng1	0.1%
 丂	kao3	0.1%
@@ -68875,6 +68881,7 @@ min_phrase_weight: 100
 守藏	shou3 cang2
 守規矩	shou3 gui1 ju3
 安‧海瑟薇	an1 eng5 hai3 se4 wei1
+安‧海瑟薇	an1 eng5 hai3 se4 wei2
 安上	an1 shang4
 安不忘危	an1 bu2 wang4 wei2
 安內攘外	an1 nei4 rang2 wai4
@@ -68910,6 +68917,7 @@ min_phrase_weight: 100
 安塞縣	an1 sai1 xian4
 安妮‧夏菲維	an1 ni2 eng5 xia4 fei1 wei2
 安妮‧海瑟薇	an1 ni2 eng5 hai3 se4 wei1
+安妮‧海瑟薇	an1 ni2 eng5 hai3 se4 wei2
 安妮的日記	an1 ni2 de5 ri4 ji4
 安娜‧卡列尼娜	an1 na4 eng5 ka3 lie4 ni2 na4
 安宅	an1 zhe4
@@ -76664,6 +76672,7 @@ min_phrase_weight: 100
 採種	cai3 zhong3
 採蓮曲	cai3 lian2 qu3
 採薇	cai3 wei2
+採薇	cai3 wei1
 採行	cai3 xing2
 探個究竟	tan4 ge5 jiu4 jing4
 探刺	tan4 ci4
@@ -89141,6 +89150,7 @@ min_phrase_weight: 100
 白落	bai2 luo4
 白蓮教	bai2 lian2 jiao4
 白薇	bai2 wei2
+白薇	bai2 wei1
 白蘋	bai2 pin2
 白蘋洲	bai2 pin2 zhou1
 白蘞	bai2 lian4
@@ -98130,13 +98140,18 @@ min_phrase_weight: 100
 薄養厚葬	bo2 yang3 hou4 zang4
 薄鬢	bo2 bin4
 薇蕨	wei2 jue2
+薇蕨	wei1 jue2
 薑還是老的辣	jiang1 hai2 shi4 lao3 de5 la4
 薔薇	qiang2 wei2
 薔薇	qiang2 wei1
 薔薇戰爭	qiang2 wei2 zhan4 zheng1
+薔薇戰爭	qiang2 wei1 zhan4 zheng1
 薔薇硝	qiang2 wei2 xiao1
+薔薇硝	qiang2 wei1 xiao1
 薔薇科	qiang2 wei2 ke1
+薔薇科	qiang2 wei1 ke1
 薔薇露	qiang2 wei2 lu4
+薔薇露	qiang2 wei1 lu4
 薙髮	ti4 fa3
 薙髮令	ti4 fa3 ling4
 薛濤	xue1 tao2
@@ -104634,6 +104649,7 @@ min_phrase_weight: 100
 采菽	cai3 shu2
 采葛	cai3 ge2
 采薇	cai3 wei2
+采薇	cai3 wei1
 采蘋	cai3 pin2
 采蘭贈芍	cai3 lan2 zeng4 shuo4
 采邑	cai4 yi4
@@ -105010,6 +105026,7 @@ min_phrase_weight: 100
 野莩	ye3 piao3
 野葛	ye3 ge2
 野薔薇	ye3 qiang2 wei2
+野薔薇	ye3 qiang2 wei1
 野調無腔	ye3 diao4 wu2 qiang1
 野路子	ye3 lu4 zi5
 野顛茄	ye3 dian1 qie2
@@ -110807,4 +110824,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 110810 #####
+##### @結束 END - 110827 #####
