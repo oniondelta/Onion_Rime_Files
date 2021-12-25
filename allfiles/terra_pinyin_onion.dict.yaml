@@ -53136,12 +53136,12 @@ min_phrase_weight: 100
 一夥子持臥單	yi1 huo3 zi5 chi2 wo4 dan1
 一大早	yi2 da4 zao3
 一大早	yi1 da4 zao3
-一大早兒	yi2 da4 zao3 er5	80
+一大早兒	yi2 da4 zao3 er5	80%
 一大早兒	yi2 da4 zao3 er2
-一大早兒	yi2 da4 zao3 er1	80
-一大早兒	yi1 da4 zao3 er5	80
+一大早兒	yi2 da4 zao3 er1	80%
+一大早兒	yi1 da4 zao3 er5	80%
 一大早兒	yi1 da4 zao3 er2
-一大早兒	yi1 da4 zao3 er1	80
+一大早兒	yi1 da4 zao3 er1	80%
 一大溜	yi2 da4 liu4
 一大溜	yi1 da4 liu4
 一大郎當	yi2 da4 lang2 dang1
@@ -53320,12 +53320,12 @@ min_phrase_weight: 100
 一摑一掌血	yi1 guo2 yi1 zhang3 xie3
 一撇	yi4 pie3
 一撇	yi1 pie3
-一撥兒	yi4 bo1 er5	80
+一撥兒	yi4 bo1 er5	80%
 一撥兒	yi4 bo1 er2
-一撥兒	yi4 bo1 er1	80
-一撥兒	yi1 bo1 er5	80
+一撥兒	yi4 bo1 er1	80%
+一撥兒	yi1 bo1 er5	80%
 一撥兒	yi1 bo1 er2
-一撥兒	yi1 bo1 er1	80
+一撥兒	yi1 bo1 er1	80%
 一擁而上	yi4 yong1 er2 shang4
 一擁而上	yi4 yong3 er2 shang4
 一擁而上	yi1 yong1 er2 shang4
@@ -53358,12 +53358,12 @@ min_phrase_weight: 100
 一時之間	yi1 shi2 zhi1 jian1
 一時半會	yi4 shi2 ban4 hui4
 一時半會	yi1 shi2 ban4 hui4
-一時半會兒	yi4 shi2 ban4 hui3 er5	80
+一時半會兒	yi4 shi2 ban4 hui3 er5	80%
 一時半會兒	yi4 shi2 ban4 hui3 er2
-一時半會兒	yi4 shi2 ban4 hui3 er1	80
-一時半會兒	yi1 shi2 ban4 hui3 er5	80
+一時半會兒	yi4 shi2 ban4 hui3 er1	80%
+一時半會兒	yi1 shi2 ban4 hui3 er5	80%
 一時半會兒	yi1 shi2 ban4 hui3 er2
-一時半會兒	yi1 shi2 ban4 hui3 er1	80
+一時半會兒	yi1 shi2 ban4 hui3 er1	80%
 一時糊塗	yi4 shi2 hu2 tu2
 一時糊塗	yi1 shi2 hu2 tu2
 一時間	yi4 shi2 jian1
@@ -53394,12 +53394,12 @@ min_phrase_weight: 100
 # 一會兒	yi1 hui4 er5
 # 一會兒	yi1 hui4 er2
 # 一會兒	yi1 hui4 er1
-一會兒	yi1 hui3 er5	80
+一會兒	yi1 hui3 er5	80%
 一會兒	yi1 hui3 er2
-一會兒	yi1 hui3 er1	80
-一會兒	yi4 hui3 er5	80
+一會兒	yi1 hui3 er1	80%
+一會兒	yi4 hui3 er5	80%
 一會兒	yi4 hui3 er2
-一會兒	yi4 hui3 er1	80
+一會兒	yi4 hui3 er1	80%
 一會子	yi4 hui3 zi5
 一會子	yi1 hui3 zi5
 一會家	yi4 hui3 jia1
