@@ -7,7 +7,7 @@
 # 本詞庫刪除純「假名」之詞彙。純「假名」詞庫為「phrases.jp_hk」。
 ---
 name: phrases.jp_hkkreduce
-version: "202111"
+version: "202112"
 sort: by_weight #original
 use_preset_vocabulary: false
 columns:
@@ -10499,7 +10499,6 @@ columns:
 受像
 受光
 受入
-受動
 受口
 受容
 受書
@@ -21396,7 +21395,6 @@ columns:
 整っ
 整わ
 整体
-整列
 整数
 整斉
 整然
