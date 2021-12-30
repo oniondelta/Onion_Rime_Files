@@ -54136,7 +54136,8 @@ min_phrase_weight: 100
 三軍易得	san1 jun1 yi4 de2
 三轉身	san1 zhuan3 shen1
 三辟	san1 pi4
-三郎爺爺	san1 lang2 ye2 ye5
+三郎爺爺	san1 lang2 ye2 ye5	80%
+三郎爺爺	san1 lang2 ye2 ye2
 三部曲	san1 bu4 qu3
 三都縣	san1 du1 xian4
 三都賦	san1 du1 fu4
@@ -59193,7 +59194,7 @@ min_phrase_weight: 100
 公然侮辱	gong1 ran2 wu3 ru4
 公然侮辱	gong1 ran2 wu3 ru3
 公營企業	gong1 ying2 qi4 ye4
-公爺	gong1 ye5
+公爺	gong1 ye5	80%
 公爺	gong1 ye2
 公用事業費率	gong1 yong4 shi4 ye4 fei4 lv4
 公用費率	gong1 yong4 fei4 lv4
@@ -67238,8 +67239,8 @@ min_phrase_weight: 100
 大為受用	da4 wei2 shou4 yong4
 大為失望	da4 wei2 shi1 wang4
 大爺	da4 ye2
-大爺	da4 ye5
-大爺公	da4 ye5 gong1
+大爺	da4 ye5	80%
+大爺公	da4 ye5 gong1	80%
 大爺公	da4 ye2 gong1
 大片	da4 pian4
 大猩猩	da4 xing1 xing1
@@ -68372,11 +68373,11 @@ min_phrase_weight: 100
 姑洗	gu1 xian3
 姑洗	gu1 xi3
 姑父	gu1 fu4
-姑爺	gu1 ye5
+姑爺	gu1 ye5	80%
 姑爺	gu1 ye2
-姑爺爺	gu1 ye2 ye5
+姑爺爺	gu1 ye2 ye5	80%
 姑爺爺	gu1 ye2 ye2
-姑老爺	gu1 lao3 ye5
+姑老爺	gu1 lao3 ye5	80%
 姑老爺	gu1 lao3 ye2
 姑舅作親	gu1 jiu4 zuo4 qin1
 委內瑞拉共和國	wei3 nei4 rui4 la1 gong4 he2 guo2
@@ -68406,7 +68407,7 @@ min_phrase_weight: 100
 姥姥不疼	lao3 lao5 bu4 teng2
 姥姥不疼	lao3 lao3 bu4 teng2
 姥娘	lao3 niang2
-姥爺	lao3 ye5
+姥爺	lao3 ye5	80%
 姥爺	lao3 ye2
 姨太太	yi2 tai4 tai4
 姨太太	yi2 tai4 tai5
@@ -69062,7 +69063,7 @@ min_phrase_weight: 100
 官止神行	guan1 zhi3 shen2 xing2
 官燕	guan1 yan4
 官稱	guan1 cheng1
-官老爺	guan1 lao3 ye5
+官老爺	guan1 lao3 ye5	80%
 官老爺	guan1 lao3 ye2
 官親	guan1 qin1
 官長	guan1 zhang3
@@ -70228,7 +70229,7 @@ min_phrase_weight: 100
 少歇	shao3 xie1
 少氣無力	shao3 qi4 wu2 li4
 少焉	shao3 yan1
-少爺	shao4 ye5
+少爺	shao4 ye5	80%
 少爺	shao4 ye2
 少牢	shao4 lao2
 少白頭	shao4 bai2 tou2
@@ -70971,6 +70972,7 @@ min_phrase_weight: 100
 巴爾幹山脈	ba1 er3 gan4 shan1 mo4
 巴爾扎克	ba1 er3 zha1 ke4
 巴爾的摩	ba1 er3 di4 mo2
+巴爾的摩	ba1 er3 di2 mo2
 巴爾舍夫斯基	ba1 er3 she3 fu1 si1 ji1
 巴登‧符騰堡州	ba1 deng1 eng5 fu2 teng2 bao3 zhou1
 巴著	ba1 zhao2
@@ -71147,7 +71149,7 @@ min_phrase_weight: 100
 師父領進門	shi1 fu5 ling3 jin4 men2
 師父領進門	shi1 fu4 ling3 jin4 men2
 師爺	shi1 ye2
-師爺	shi1 ye5
+師爺	shi1 ye5	80%
 師直為壯	shi1 zhi2 wei2 zhuang4
 師範學校	shi1 fan4 xue2 xiao4
 師範教育	shi1 fan4 jiao4 yu4
@@ -83561,7 +83563,7 @@ min_phrase_weight: 100
 求教	qiu2 jiao4
 求死不得	qiu2 si3 bu4 de2
 求漿得酒	qiu2 jiang1 de2 jiu3
-求爺爺	qiu2 ye2 ye5
+求爺爺	qiu2 ye2 ye5	80%
 求爺爺	qiu2 ye2 ye2
 求生不得	qiu2 sheng1 bu4 de2
 求親	qiu2 qin1
@@ -87133,10 +87135,10 @@ min_phrase_weight: 100
 爹地	die1 di4
 爹地	die1 di5
 爹爹	die1 die1
-爺們兒	ye2 men5 er5
-爺們兒	ye2 men2 er1
+爺們兒	ye2 men5 er5	80%
+爺們兒	ye2 men2 er1	80%
 爺們兒	ye2 men2 er2
-爺爺	ye2 ye5
+爺爺	ye2 ye5	80%
 爺爺	ye2 ye2
 爽心豁目	shuang3 xin1 huo4 mu4
 爽快	shuang3 kuai4
@@ -87781,7 +87783,7 @@ min_phrase_weight: 100
 王朝	wang2 chao2
 王母娘娘	wang2 mu3 niang2 niang2
 王漿	wang2 jiang1
-王爺	wang2 ye5
+王爺	wang2 ye5	80%
 王爺	wang2 ye2
 王蒙	wang2 meng2
 王虺	wang2 hui3
@@ -91850,7 +91852,7 @@ min_phrase_weight: 100
 空中封鎖	kong1 zhong1 feng1 suo3
 空中小姐	kong1 zhong1 xiao3 jie3
 空中少爺	kong1 zhong1 shao4 ye2
-空中少爺	kong1 zhong1 shao4 ye5
+空中少爺	kong1 zhong1 shao4 ye5	80%
 空中巴士	kong1 zhong1 ba1 shi4
 空中教學	kong1 zhong1 jiao4 xue2
 空中核爆炸	kong1 zhong1 he2 bao4 zha4
@@ -94678,7 +94680,7 @@ min_phrase_weight: 100
 老伴兒	lao3 ban4 er5
 老伴兒	lao3 ban4 er1
 老伴兒	lao3 ban4 er2
-老佛爺	lao3 fo2 ye5
+老佛爺	lao3 fo2 ye5	80%
 老佛爺	lao3 fo2 ye2
 老來少	lao3 lai2 shao4
 老兄弟	lao3 xiong1 di5
@@ -94782,17 +94784,17 @@ min_phrase_weight: 100
 老淚縱橫	lao3 lei4 zong4 heng2
 老熊當道	lao3 xiong2 dang1 dao4
 老營生	lao3 ying2 sheng1
-老爺	lao3 ye5
+老爺	lao3 ye5	80%
 老爺	lao3 ye2
 老爺子	lao3 ye2 zi5
-老爺嶺	lao3 ye5 ling3
+老爺嶺	lao3 ye5 ling3	80%
 老爺嶺	lao3 ye2 ling3
-老爺廟	lao3 ye5 miao4
+老爺廟	lao3 ye5 miao4	80%
 老爺廟	lao3 ye2 miao4
-老爺爺	lao3 ye2 ye5
+老爺爺	lao3 ye2 ye5	80%
 老爺爺	lao3 ye2 ye2
 老爺車	lao3 ye2 che1
-老爺車	lao3 ye5 che1
+老爺車	lao3 ye5 che1	80%
 老牌子	lao3 pai2 zi5
 老狐狸	lao3 hu2 li2
 老畜生	lao3 chu4 sheng1
@@ -96227,8 +96229,8 @@ min_phrase_weight: 100
 舅奶奶	jiu4 nai3 nai3
 舅子	jiu4 zi5
 舅爺	jiu4 ye2
-舅爺	jiu4 ye5
-舅老爺	jiu4 lao3 ye5
+舅爺	jiu4 ye5	80%
+舅老爺	jiu4 lao3 ye5	80%
 舅老爺	jiu4 lao3 ye2
 舅舅	jiu4 jiu5
 舅舅	jiu4 jiu4
@@ -100103,7 +100105,7 @@ min_phrase_weight: 100
 親家禮道	qing4 jia1 li3 dao4
 親家翁	qin1 jia1 weng1
 親家翁	qing4 jia1 weng1
-親家老爺	qing4 jia1 lao3 ye5
+親家老爺	qing4 jia1 lao3 ye5	80%
 親家老爺	qing4 jia1 lao3 ye2
 親密	qin1 mi4
 親密無間	qin1 mi4 wu2 jian1
@@ -108262,7 +108264,7 @@ min_phrase_weight: 100
 靈頭幡	ling2 tou5 fan1
 靈魂深處	ling2 hun2 shen1 chu4
 青史傳名	qing1 shi3 chuan2 ming2
-青天大老爺	qing1 tian1 da4 lao3 ye5
+青天大老爺	qing1 tian1 da4 lao3 ye5	80%
 青天大老爺	qing1 tian1 da4 lao3 ye2
 青天白日滿地紅	qing1 tian1 bai2 ri4 man3 di4 hong2
 青少年	qing1 shao4 nian2
@@ -110824,4 +110826,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 110827 #####
+##### @結束 END - 110829 #####
