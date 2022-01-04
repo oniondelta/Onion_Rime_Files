@@ -93,6 +93,7 @@
 #    詞句中，「扎」發音，依臺灣字典沒有「za1」該發音，故全修改為「zha1」。
 #    詞句中，「微」字典發音為「wei2」，「wei1」為又音且常用，故全都補齊「wei2」「wei1」。
 #    詞句中，「薇」臺灣字典發音為「wei2」，大陸發音為「wei1」，但臺灣日常也常發「wei1」，故全都補齊「wei2」「wei1」。
+#    詞句中，「帆」字典發音為「fan1」和「fan2」，其中「fan2」為臺灣日常慣用發音，故詞彙全都增加「fan2」該發音。
 #    預計比對「輕聲和一聲」變音。
 #
 #  〈2020修改字詞彙發音〉：
@@ -115,7 +116,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "202112"
+version: "202201"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -82450,6 +82451,7 @@ min_phrase_weight: 100
 橫暴	heng4 bao4
 橫木	heng2 mu4
 橫桁帆	heng2 heng2 fan1
+橫桁帆	heng2 heng2 fan2
 橫梁	heng2 liang2
 橫梗	heng2 geng3
 橫楣	heng2 mei2
@@ -103033,6 +103035,7 @@ min_phrase_weight: 100
 轉差	zhuan3 cha1
 轉差率	zhuan3 cha1 lv4
 轉帆	zhuan3 fan1
+轉帆	zhuan3 fan2
 轉帳	zhuan3 zhang4
 轉帳交易	zhuan3 zhang4 jiao1 yi4
 轉幹	zhuan3 gan4
@@ -110826,4 +110829,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 110829 #####
+##### @結束 END - 110832 #####
