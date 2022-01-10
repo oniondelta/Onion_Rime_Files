@@ -94,6 +94,7 @@
 #    詞句中，「微」字典發音為「wei2」，「wei1」為又音且常用，故全都補齊「wei2」「wei1」。
 #    詞句中，「薇」臺灣字典發音為「wei2」，大陸發音為「wei1」，但臺灣日常也常發「wei1」，故全都補齊「wei2」「wei1」。
 #    詞句中，「帆」字典發音為「fan1」和「fan2」，其中「fan2」為臺灣日常慣用發音，故詞彙全都增加「fan2」該發音。
+#    詞句中，「喀」作為音譯名詞時，臺灣標準為「ka4」，大陸標準為「ka1」，慣用也常發音「ke4」，由於日常三者皆常出現，故作為音譯名詞時，「ka4」「ka1」「ke4」全都補齊。
 #    預計比對「輕聲和一聲」變音。
 #
 #  〈2020修改字詞彙發音〉：
@@ -64553,42 +64554,74 @@ min_phrase_weight: 100
 啾唧	jiu1 ji2
 喀什噶爾	ka4 shi2 ge2 er3
 喀什噶爾	ka1 shi2 ga2 er3
+喀什噶爾	ke4 shi2 ga2 er3
+喀什地區	ka4 shi2 di4 qu1
 喀什地區	ka1 shi2 di4 qu1
+喀什地區	ke4 shi2 di4 qu1
 喀什米爾	ka4 shi2 mi3 er3
-喀什米爾	ke4 she2 mi3 er3
+喀什米爾	ka1 shi2 mi3 er3
 喀什米爾	ke4 shi2 mi3 er3
 喀啦喀啦	ka1 la1 ka1 la1
 喀喀	ke4 ke4
+喀喇崑崙公路	ka4 la1 kun1 lun2 gong1 lu4
 喀喇崑崙公路	ka1 la1 kun1 lun2 gong1 lu4
-喀喇崑崙山	ka1 la1 kun1 lun2 shan1
+喀喇崑崙公路	ke4 la1 kun1 lun2 gong1 lu4
 喀喇崑崙山	ka4 la3 kun1 lun2 shan1
+喀喇崑崙山	ka1 la1 kun1 lun2 shan1
+喀喇崑崙山	ke4 la3 kun1 lun2 shan1
+喀喇崑崙山脈	ka4 la1 kun1 lun2 shan1 mai4
 喀喇崑崙山脈	ka1 la1 kun1 lun2 shan1 mai4
+喀喇崑崙山脈	ke4 la1 kun1 lun2 shan1 mai4
 喀喇沁	ka1 la1 qin4
+喀喇沁	ka4 la1 qin4
+喀喇沁	ke4 la1 qin4
 喀喇沁左翼蒙古族自治縣	ka1 la1 qin4 zuo3 yi4 meng3 gu3 zu2 zi4 zhi4 xian4
 喀喇沁左翼蒙古族自治縣	ka1 la1 qin4 zuo3 yi4 meng2 gu3 zu2 zi4 zhi4 xian4
+喀喇沁左翼蒙古族自治縣	ka4 la1 qin4 zuo3 yi4 meng3 gu3 zu2 zi4 zhi4 xian4
+喀喇沁左翼蒙古族自治縣	ka4 la1 qin4 zuo3 yi4 meng2 gu3 zu2 zi4 zhi4 xian4
+喀喇沁左翼蒙古族自治縣	ke4 la1 qin4 zuo3 yi4 meng3 gu3 zu2 zi4 zhi4 xian4
+喀喇沁左翼蒙古族自治縣	ke4 la1 qin4 zuo3 yi4 meng2 gu3 zu2 zi4 zhi4 xian4
 喀喇沁旗	ka1 la1 qin4 qi2
+喀喇沁旗	ka4 la1 qin4 qi2
+喀喇沁旗	ke4 la1 qin4 qi2
 喀噠聲	ka1 da1 sheng1
 喀布爾	ka4 bu4 er3
 喀布爾	ka1 bu4 er3
 喀布爾	ke4 bu4 er3
 喀布爾河	ka4 bu4 er3 he2
+喀布爾河	ka1 bu4 er3 he2
+喀布爾河	ke4 bu4 er3 he2
+喀拉汗王朝	ka4 la1 han4 wang2 chao2
+喀拉汗王朝	ka4 la1 han2 wang2 chao2
 喀拉汗王朝	ka1 la1 han4 wang2 chao2
 喀拉汗王朝	ka1 la1 han2 wang2 chao2
+喀拉汗王朝	ke4 la1 han4 wang2 chao2
+喀拉汗王朝	ke4 la1 han2 wang2 chao2
 喀拉蚩	ka4 la1 chi1
 喀拉蚩	ka1 la1 chi1
 喀拉蚩	ke4 la1 chi1
 喀斯特地形	ka4 si1 te4 di4 xing2
 喀斯特地貌	ka1 si1 te4 di4 mao4
+喀斯特地貌	ke4 si1 te4 di4 mao4
 喀爾喀蒙古	ka4 er3 ka4 meng2 gu3
 喀爾喀蒙古	ka4 er3 ka4 meng3 gu3
+喀爾喀蒙古	ka1 er3 ka4 meng2 gu3
+喀爾喀蒙古	ka1 er3 ka4 meng3 gu3
+喀爾喀蒙古	ke4 er3 ka4 meng2 gu3
+喀爾喀蒙古	ke4 er3 ka4 meng3 gu3
 喀爾巴阡山脈	ka4 er3 ba1 qian1 shan1 mai4
 喀爾巴阡山脈	ka1 er3 ba1 qian1 shan1 mai4
+喀爾巴阡山脈	ke4 er3 ba1 qian1 shan1 mai4
 喀爾文教派	ka4 er3 wen2 jiao4 pai4
+喀爾文教派	ka1 er3 wen2 jiao4 pai4
+喀爾文教派	ke4 er3 wen2 jiao4 pai4
 喀血	ke4 xie3
 喀麥隆	ka4 mai4 long2
 喀麥隆	ka1 mai4 long2
 喀麥隆	ke4 mai4 long2
 喀麥隆共和國	ka4 mai4 long2 gong4 he2 guo2
+喀麥隆共和國	ka1 mai4 long2 gong4 he2 guo2
+喀麥隆共和國	ke4 mai4 long2 gong4 he2 guo2
 喁喁	yong2 yong2
 喁喁	yu2 yu2
 喁喁噥噥	yu2 yu2 nong2 nong2
@@ -69020,6 +69053,7 @@ min_phrase_weight: 100
 宓羲	fu2 xi1
 宗喀巴	zong1 ka4 ba1
 宗喀巴	zong1 ka1 ba1
+宗喀巴	zong1 ke4 ba1
 宗教	zong1 jiao4
 宗教儀式	zong1 jiao4 yi2 shi4
 宗教團	zong1 jiao4 tuan2
@@ -70965,6 +70999,7 @@ min_phrase_weight: 100
 巴氏殺菌法	ba1 shi4 sha1 jun1 fa3
 巴爾喀什湖	ba1 er3 ka4 shi2 hu2
 巴爾喀什湖	ba1 er3 ka1 shi2 hu2
+巴爾喀什湖	ba1 er3 ke4 shi2 hu2
 # 巴爾幹	ba1 er3 gan1
 巴爾幹	ba1 er3 gan4
 # 巴爾幹半島	ba1 er3 gan1 ban4 dao3
@@ -70995,6 +71030,7 @@ min_phrase_weight: 100
 巴音郭楞蒙古自治州	ba1 yin1 guo1 leng2 meng3 gu3 zi4 zhi4 zhou1
 巴音郭楞蒙古自治州	ba1 yin1 guo1 leng2 meng2 gu3 zi4 zhi4 zhou1
 巴顏喀喇山	ba1 yan2 ka4 la3 shan1
+巴顏喀喇山	ba1 yan2 ka1 la1 shan1
 巴顏喀喇山	ba1 yan2 ke4 la1 shan1
 巴馬乾酪	ba1 ma3 gan1 lao4
 巴駱和	ba1 luo4 he2
@@ -71036,6 +71072,8 @@ min_phrase_weight: 100
 布卡拉	bu4 ka3 la1
 布哈林模式	bu4 ha1 lin2 mo2 shi4
 布喀河	bu4 ka4 he2
+布喀河	bu4 ka1 he2
+布喀河	bu4 ke4 he2
 布娃娃	bu4 wa2 wa5
 布娃娃	bu4 wa2 wa1
 布娃娃	bu4 wa2 wa2
@@ -71067,6 +71105,8 @@ min_phrase_weight: 100
 布袋和尚	bu4 dai4 he2 shang4
 布褐	bu4 he2
 布那喀	bu4 na4 ka4
+布那喀	bu4 na4 ka1
+布那喀	bu4 na4 ke4
 布隆伯格	bu4 long1 bo2 ge2
 布雷克磨	bu4 lei2 ke4 mo2
 布面相片	bu4 mian4 xiang4 pian1
@@ -71730,6 +71770,8 @@ min_phrase_weight: 100
 廊坊地區	lang2 fang3 di4 qu1	80%
 廊子	lang2 zi5
 廊廡	lang2 wu3
+廓爾喀人	kuo4 er3 ka4 ren2
+廓爾喀人	kuo4 er3 ka1 ren2
 廓爾喀人	kuo4 er3 ke4 ren2
 廓落	kuo4 luo4
 廕監	yin4 jian4
@@ -79234,9 +79276,12 @@ min_phrase_weight: 100
 日光節約時間	ri4 guang1 jie2 yue1 shi2 jian1
 日入而息	ri4 ru4 er2 xi2
 日削月朘	ri4 xue4 yue4 juan1
-日喀則	ri4 ke4 ze2
+日喀則	ri4 ka4 ze2
 日喀則	ri4 ka1 ze2
+日喀則	ri4 ke4 ze2
+日喀則地區	ri4 ka4 ze2 di4 qu1
 日喀則地區	ri4 ka1 ze2 di4 qu1
+日喀則地區	ri4 ke4 ze2 di4 qu1
 日場	ri4 chang2
 日場	ri4 chang3
 日夕	ri4 xi4
@@ -89326,7 +89371,11 @@ min_phrase_weight: 100
 的的	di2 di2
 的的	di4 di4
 的的喀喀湖	di2 di2 ka4 ka4 hu2
+的的喀喀湖	di4 di4 ka4 ka4 hu2
+的的喀喀湖	di2 di2 ka1 ka1 hu2
 的的喀喀湖	di4 di4 ka1 ka1 hu2
+的的喀喀湖	di2 di2 ke4 ke4 hu2
+的的喀喀湖	di4 di4 ke4 ke4 hu2
 的皪	di4 li4
 的盧	di4 lu2
 的知	di2 zhi1
@@ -106772,7 +106821,9 @@ min_phrase_weight: 100
 阿哥	a1 ge1
 阿哥	a4 ge5
 阿哥哥	a1 ge1 ge1
+阿喀琉斯	a1 ka4 liu2 si1
 阿喀琉斯	a1 ka1 liu2 si1
+阿喀琉斯	a1 ke4 liu2 si1
 阿嚏	a1 ti4
 阿囡	a1 nan1
 阿圖什	a1 tu2 shi2
@@ -110829,4 +110880,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 110832 #####
+##### @結束 END - 110883 #####
