@@ -18,7 +18,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion_add
-version: "202112"
+version: "202201"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7
@@ -250,6 +250,7 @@ min_phrase_weight: 100
 么	(mo1)	0.1%
 么	(me1)	0.1%
 麽	(me1)	0.1%
+琲	(fei1)	1%
 ######################################################
 ##### 以下對《一聲》做補充 #####
 ### @補充為《一聲》，方便輸入，『非正確發音』！！！ ###
