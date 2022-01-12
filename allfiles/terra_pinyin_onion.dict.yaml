@@ -66808,6 +66808,7 @@ min_phrase_weight: 100
 外相	wai4 xiang4
 外膜	wai4 mo4
 外蒙	wai4 meng2
+外蒙	wai4 meng3
 外藩	wai4 fan2
 外行	wai4 hang2
 外行人	wai4 hang2 ren2
@@ -71138,7 +71139,6 @@ min_phrase_weight: 100
 希臘建築	xi1 la4 jian4 zhu2
 希臘教會	xi1 la4 jiao4 hui4
 希臘正教	xi1 la4 zheng4 jiao4
-希蒙‧佩雷斯	xi1 meng3 eng5 pei4 lei2 si1
 希蒙‧佩雷斯	xi1 meng2 eng5 pei4 lei2 si1
 希行	xi1 xing2
 帑藏	tang3 zang4
@@ -84704,7 +84704,7 @@ min_phrase_weight: 100
 派上用場	pai4 shang4 yong4 chang2
 派上用場	pai4 shang4 yong4 chang3
 派不是	pai4 bu2 shi4
-派拉蒙影	pai4 la1 meng3 ying3
+派拉蒙影	pai4 la1 meng2 ying3
 流乾	liu2 gan1
 流亡曲	liu2 wang2 qu3
 流傳	liu2 chuan2
@@ -97784,7 +97784,7 @@ min_phrase_weight: 100
 蒙哄	meng2 hong3
 蒙哥	meng2 ge1
 蒙哥馬利	meng2 ge1 ma3 li4
-蒙嘉慧	meng3 jia1 hui4
+蒙嘉慧	meng2 jia1 hui4
 蒙在鼓裡	meng2 zai4 gu3 li3
 蒙地卡羅	meng2 di4 ka3 luo2
 蒙坑	meng2 keng1
@@ -97801,7 +97801,7 @@ min_phrase_weight: 100
 蒙山	meng2 shan1
 蒙山縣	meng2 shan1 xian4
 蒙巴薩	meng2 ba1 sa4
-蒙帕納斯	meng3 pa4 na4 si1
+蒙帕納斯	meng2 pa4 na4 si1
 蒙師	meng2 shi1
 蒙席	meng2 xi2
 蒙彼利埃	meng2 bi3 li4 ai1
@@ -97816,7 +97816,9 @@ min_phrase_weight: 100
 蒙拾	meng2 shi2
 蒙故業	meng2 gu4 ye4
 蒙文	meng3 wen2
+蒙文	meng2 wen2
 蒙族	meng2 zu2
+蒙族	meng3 zu2
 蒙日	meng2 ri4
 蒙昧	meng2 mei4
 蒙昧無知	meng2 mei4 wu2 zhi1
@@ -97852,7 +97854,7 @@ min_phrase_weight: 100
 蒙藥	meng1 yao4
 蒙蘢	meng2 long2
 蒙衝	meng2 chong1
-蒙覆	meng3 fu4
+蒙覆	meng2 fu4
 蒙谷	meng2 gu3
 蒙陰	meng2 yin1
 蒙陰縣	meng2 yin1 xian4
@@ -99897,6 +99899,7 @@ min_phrase_weight: 100
 西曲	xi1 qu3
 西柏林	xi1 bo2 lin2
 西格蒙德	xi1 ge2 meng1 de2
+西格蒙德	xi1 ge2 meng2 de2
 西樂	xi1 yue4
 西歪東倒	xi1 wai1 dong1 dao3
 西洋參	xi1 yang2 shen1
@@ -99909,7 +99912,6 @@ min_phrase_weight: 100
 西突厥史料	xi1 tu1 jue2 shi3 liao4
 西耶那	xi1 ye1 na4
 西葫蘆	xi1 hu2 lu2
-西蒙‧舒斯特	xi1 meng3 eng5 shu1 si1 te4
 西蒙‧舒斯特	xi1 meng2 eng5 shu1 si1 te4
 西蒙遜	xi1 meng2 xun4
 西藏	xi1 zang4
@@ -110880,4 +110882,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 110883 #####
+##### @結束 END - 110885 #####
