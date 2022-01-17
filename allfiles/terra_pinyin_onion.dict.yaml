@@ -53868,6 +53868,8 @@ min_phrase_weight: 100
 一錢不落虛空地	yi1 qian2 bu4 luo4 xu1 kong1 di4
 一鍬掘個井	yi4 qiao1 jue2 ge5 jing3
 一鍬掘個井	yi1 qiao1 jue2 ge5 jing3
+一鍬掘個井	yi4 qiu1 jue2 ge5 jing3	80%
+一鍬掘個井	yi1 qiu1 jue2 ge5 jing3	80%
 一長一短	yi4 chang2 yi4 duan3
 一長一短	yi1 chang2 yi1 duan3
 一長二短	yi4 chang2 er4 duan3
@@ -54145,6 +54147,7 @@ min_phrase_weight: 100
 三都賦	san1 du1 fu4
 三重	san1 chong2
 三重埔	san1 chong2 pu3
+三重埔	san1 chong2 bu3
 三重奏	san1 chong2 zou4
 三重市	san1 chong2 shi4
 三重縣	san1 chong2 xian4
@@ -55143,6 +55146,7 @@ min_phrase_weight: 100
 世代相傳	shi4 dai4 xiang1 chuan2
 世傳	shi4 chuan2
 世叔	shi4 shu2
+世叔	shi4 shu1
 世好	shi4 hao3
 世好	shi4 hao4
 世情看冷暖	shi4 qing2 kan4 leng3 nuan3
@@ -55275,8 +55279,10 @@ min_phrase_weight: 100
 中地	zhong1 di4
 中埔	zhong1 bu4
 中埔	zhong1 pu3
+中埔	zhong1 bu3
 中埔鄉	zhong1 bu4 xiang1
 中埔鄉	zhong1 pu3 xiang1
+中埔鄉	zhong1 bu3 xiang1
 中堂	zhong1 tang2
 中場	zhong1 chang3
 中場	zhong1 chang2
@@ -62636,12 +62642,15 @@ min_phrase_weight: 100
 叔于田	shu2 yu2 tian2
 叔伯	shu1 bai3
 叔伯	shu2 bo2
+叔伯	shu1 bo2
 叔公	shu2 gong1
 叔公	shu1 gong1
-叔叔	shu1 shu5
 叔叔	shu2 shu5
 叔叔	shu2 shu2
+叔叔	shu1 shu1
+叔叔	shu1 shu5
 叔姪	shu2 zhi2
+叔姪	shu1 zhi2
 叔婆	shu2 po2
 叔婆	shu1 po2
 叔子	shu1 zi5
@@ -63972,6 +63981,7 @@ min_phrase_weight: 100
 和解費	he2 jie3 fei4
 和訊	he2 xun4
 和記黃埔	he2 ji4 huang2 pu3
+和記黃埔	he2 ji4 huang2 bu3
 和詩	he4 shi1
 和誘	he2 you4
 和誘罪	he2 you4 zui4
@@ -64065,6 +64075,7 @@ min_phrase_weight: 100
 咚咚	dong1 dong1
 咧咧	lie1 lie1
 咧咧	lie2 lie2
+咧咧	lie3 lie3
 咧嘴	lie3 zui3
 咧子	lie1 zi5
 咧開嘴笑	lie3 kai1 zui3 xiao4
@@ -66789,6 +66800,7 @@ min_phrase_weight: 100
 外埔	wai4 pu3
 外埔鄉	wai4 bu4 xiang1
 外埔鄉	wai4 bu3 xiang1
+外埔鄉	wai4 pu3 xiang1
 外場人	wai4 chang2 ren2
 外外	wai4 wai4
 外太空	wai4 tai4 kong1
@@ -67110,8 +67122,11 @@ min_phrase_weight: 100
 大埔	da4 bu3
 大埔	da4 pu3
 大埔縣	da4 bu4 xian4
+大埔縣	da4 bu3 xian4
+大埔縣	da4 pu3 xian4
 大埔鄉	da4 bu4 xiang1
 大埔鄉	da4 pu3 xiang1
+大埔鄉	da4 bu3 xiang1
 大場面	da4 chang2 mian4
 大場鶇	da4 chang3 dong1
 大壑	da4 huo4
@@ -67343,6 +67358,7 @@ min_phrase_weight: 100
 大般涅槃經	da4 bo1 nie4 pan2 jing1
 大般涅槃經	da4 ban1 nie4 pan2 jing1
 大茅埔	da4 mao2 pu3
+大茅埔	da4 mao2 bu3
 大茴香子	da4 hui2 xiang1 zi5
 大菜間	da4 cai4 jian1
 大落	da4 luo4
@@ -67627,6 +67643,7 @@ min_phrase_weight: 100
 太僕寺旗	tai4 pu1 si4 qi2
 太公家教	tai4 gong1 jia1 jiao4
 太叔	tai4 shu2
+太叔	tai4 shu1
 太古傳宗	tai4 gu3 chuan2 zong1
 太古洋行	tai4 gu3 yang2 hang2
 太和	tai4 he2
@@ -70598,6 +70615,8 @@ min_phrase_weight: 100
 山坳	shan1 ao1
 山姆叔叔	shan1 mu3 shu2 shu5
 山姆叔叔	shan1 mu3 shu2 shu2
+山姆叔叔	shan1 mu3 shu1 shu5
+山姆叔叔	shan1 mu3 shu1 shu1
 山子	shan1 zi3
 山子	shan1 zi5
 山崗	shan1 gang1
@@ -71186,6 +71205,7 @@ min_phrase_weight: 100
 帥氣	shuai4 qi4
 師傅	shi1 fu4
 師叔	shi1 shu2
+師叔	shi1 shu1
 師父	shi1 fu5
 師父	shi1 fu4
 師父領進門	shi1 fu5 ling3 jin4 men2
@@ -71380,6 +71400,7 @@ min_phrase_weight: 100
 平地一聲雷	ping2 di4 yi4 sheng1 lei2
 平地一聲雷	ping2 di4 yi1 sheng1 lei2
 平地下鍬撅	ping2 di4 xia4 qiao1 jue1
+平地下鍬撅	ping2 di4 xia4 qiu1 jue1	80%
 平地山胞	ping2 di4 shan1 bao1
 平地松林	ping2 di4 song1 lin2
 平地樓台	ping2 di4 lou2 tai2
@@ -73353,7 +73374,9 @@ min_phrase_weight: 100
 怪不得	guai4 bu4 de5
 怪人奧爾‧揚科維奇	guai4 ren2 ao4 er3 eng5 yang2 ke1 wei2 qi2
 怪叔叔	guai4 shu1 shu5
+怪叔叔	guai4 shu1 shu1
 怪叔叔	guai4 shu2 shu2
+怪叔叔	guai4 shu2 shu5
 怪圈	guai4 quan1
 怪念頭	guai4 nian4 tou5
 怪念頭	guai4 nian4 tou2
@@ -79256,6 +79279,7 @@ min_phrase_weight: 100
 旌旗蔽空	jing1 qi2 bi4 kong1
 旌車	jing1 ju1
 族叔	zu2 shu2
+族叔	zu2 shu1
 族親	zu2 qin1
 族長	zu2 zhang3
 旗子	qi2 zi5
@@ -81421,8 +81445,10 @@ min_phrase_weight: 100
 柬吳哥王朝	jian3 wu2 ge1 wang2 chao2
 柬埔寨	jian3 pu3 zhai4
 柬埔寨	jian3 bu3 zhai4
-柬埔寨人民黨	jian3 bu4 zhai4 ren2 min2 dang3
+柬埔寨人民黨	jian3 bu3 zhai4 ren2 min2 dang3
+柬埔寨人民黨	jian3 pu3 zhai4 ren2 min2 dang3
 柬埔寨民主國	jian3 pu3 zhai4 min2 zhu3 guo2
+柬埔寨民主國	jian3 bu3 zhai4 min2 zhu3 guo2
 柬帖	jian3 tie3
 柯南‧道爾	ke1 nan2 eng5 dao4 er3
 柯邵忞	ke1 shao4 min2
@@ -84863,6 +84889,7 @@ min_phrase_weight: 100
 海埔地	hai3 pu3 di4
 海埔地	hai3 bu3 di4
 海埔姜	hai3 pu3 jiang1
+海埔姜	hai3 bu3 jiang1
 海埔新生地	hai3 pu3 xin1 sheng1 di4
 海埔新生地	hai3 bu3 xin1 sheng1 di4
 海堤	hai3 ti2
@@ -86824,7 +86851,7 @@ min_phrase_weight: 100
 燎髮	liao4 fa3
 燒刀子	shao1 dao1 zi5
 燒喇嘛	shao1 la3 ma5
-燒喇嘛	shao1 la3 ma2
+燒喇嘛	shao1 la3 ma1
 燒地眠	shao1 di4 mian2
 燒埋	shao1 mai2
 燒埋錢	shao1 mai2 qian2
@@ -87982,7 +88009,6 @@ min_phrase_weight: 100
 班師得勝	ban1 shi1 de2 sheng4
 班強森	ban1 qiang2 sen1
 班禪喇嘛	ban1 chan2 la3 ma5
-班禪喇嘛	ban1 chan2 la1 ma5
 班禪喇嘛	ban1 chan2 la3 ma1
 班荊相對	ban1 jing1 xiang1 dui4
 班行	ban1 hang2
@@ -88433,6 +88459,7 @@ min_phrase_weight: 100
 甲魚	jia4 yu2
 甲魚	jia3 yu2
 申叔	shen1 shu2
+申叔	shen1 shu1
 申扎	shen1 zha1
 申扎縣	shen1 zha1 xian4
 申旦達夕	shen1 dan4 da2 xi4
@@ -88961,7 +88988,9 @@ min_phrase_weight: 100
 痴倒	chi1 dao3
 癡倒	chi1 dao3
 痴叔	chi1 shu2
+痴叔	chi1 shu1
 癡叔	chi1 shu2
+癡叔	chi1 shu1
 痴呆懵懂	chi1 dai1 meng2 dong3
 癡呆懵懂	chi1 dai1 meng2 dong3
 痴子	chi1 zi5
@@ -89401,6 +89430,7 @@ min_phrase_weight: 100
 皇冠出版集團	huang2 guan1 chu1 ban3 ji2 tuan2
 皇冠出版集團	huang2 guan4 chu1 ban3 ji2 tuan2
 皇叔	huang2 shu2
+皇叔	huang2 shu1
 皇天無親	huang2 tian1 wu2 qin1
 皇家加勒比海遊輪公司	huang2 jia1 jia1 le4 bi3 hai3 you2 lun2 gong1 si1
 皇帝不差餓兵	huang2 di4 bu4 chai1 e4 bing1
@@ -92733,6 +92763,7 @@ min_phrase_weight: 100
 管制空域	guan3 zhi4 kong1 yu4
 管勾	guan3 gou1
 管叔	guan3 shu2
+管叔	guan3 shu1
 管子	guan3 zi3
 管子	guan3 zi5
 管子工	guan3 zi5 gong1
@@ -94745,6 +94776,7 @@ min_phrase_weight: 100
 老公公	lao3 gong1 gong1
 老匹夫	lao3 pi3 fu1
 老叔	lao3 shu2
+老叔	lao3 shu1
 老和尚	lao3 he2 shang4
 老和尚撞鐘	lao3 he2 shang4 zhuang4 zhong1
 老和尚看嫁妝	lao3 he2 shang4 kan4 jia4 zhuang1
@@ -98025,6 +98057,7 @@ min_phrase_weight: 100
 蔚縣	yu4 xian4
 蔚蔚	yu4 yu4
 蔡叔	cai4 shu2
+蔡叔	cai4 shu1
 蔡國強	cai4 guo2 qiang2
 蔡澤看相	cai4 ze2 kan4 xiang4
 蔡邕倒屣	cai4 yong1 dao4 xi3
@@ -108249,6 +108282,7 @@ min_phrase_weight: 100
 露空	lou4 kong1
 露章	lu4 zhang1
 露背	lou4 bei4
+露背	lu4 bei4
 露脊鯨	lu4 ji3 jing1
 露脊鯨	lu4 ji2 jing1
 露膽披肝	lu4 dan3 pi1 gan1
@@ -110342,8 +110376,10 @@ min_phrase_weight: 100
 鹽坨子	yan2 tuo2 zi5
 鹽埔	yan2 bu4
 鹽埔	yan2 bu3
+鹽埔	yan2 pu3
 鹽埔鄉	yan2 bu4 xiang1
 鹽埔鄉	yan2 pu3 xiang1
+鹽埔鄉	yan2 bu3 xiang1
 鹽度	yan2 du4
 鹽打怎麼鹹	yan2 da3 ze3 me5 xian2
 鹽打怎麼鹹	yan2 da3 zen3 me5 xian2
@@ -110402,7 +110438,9 @@ min_phrase_weight: 100
 麥畦	mai4 xi1
 麥當勞	mai4 dang1 lao2
 麥當勞叔叔	mai4 dang1 lao2 shu1 shu5
+麥當勞叔叔	mai4 dang1 lao2 shu1 shu1
 麥當勞叔叔	mai4 dang1 lao2 shu2 shu2
+麥當勞叔叔	mai4 dang1 lao2 shu2 shu5
 麥蓋提	mai4 ge3 ti2
 麥蓋提縣	mai4 ge3 ti2 xian4
 麥迪遜廣場花園	mai4 di2 xun4 guang3 chang3 hua1 yuan2
@@ -110490,12 +110528,15 @@ min_phrase_weight: 100
 黃埔	huang2 pu3
 黃埔	huang2 bu3
 黃埔區	huang2 pu3 qu1
+黃埔區	huang2 bu3 qu1
 黃埔條約	huang2 pu3 tiao2 yue1
+黃埔條約	huang2 bu3 tiao2 yue1
 黃埔軍官學校	huang2 pu3 jun1 guan1 xue2 xiao4
 黃埔軍官學校	huang2 bu3 jun1 guan1 xue2 xiao4
 黃埔軍校	huang2 pu3 jun1 xiao4
 黃埔軍校	huang2 bu3 jun1 xiao4
 黃埔鎮	huang2 pu3 zhen4
+黃埔鎮	huang2 bu3 zhen4
 黃州寒食詩卷	huang2 zhou1 han2 shi2 shi1 juan4
 黃帝八十一難經	huang2 di4 ba1 shi2 yi1 nan2 jing1
 黃帝八十一難經	huang2 di4 ba1 shi2 yi1 nan4 jing1
@@ -110883,4 +110924,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 110886 #####
+##### @結束 END - 110927 #####
