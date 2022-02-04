@@ -18,7 +18,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion_add
-version: "202201"
+version: "202202"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7
@@ -254,6 +254,7 @@ min_phrase_weight: 100
 鼹	(yan4)	1%
 鼴	(yan4)	1%
 鍬	(qiu1)	1%
+湳	(nan2)	1%
 ######################################################
 ##### 以下對《一聲》做補充 #####
 ### @補充為《一聲》，方便輸入，『非正確發音』！！！ ###
