@@ -105,9 +105,9 @@ patch:
     - derive|^,;$|vv\.|
     - derive|^[.];$|ov,|
     - derive|^([.]);$|ov$1|
-    - derive|^shime(,)$|xx$1|
-    - derive|^shime([.])$|xx$1|
-    - derive|^shime([.])$|kigou$1| #只片假名
+    - derive|^(xx)[.]$|$1,|
+    - derive|^xx([.,])$|shime$1|
+    - derive|^xx([.])$|kigou$1| #只片假名
     - derive/q(?![yw][aeiou][.])/xtu/ #っッ
     - derive/q(?![yw][aeiou][.])/ltu/ #っッ
     - derive/q(?![yw][aeiou][.])/xtsu/ #っッ
@@ -130,7 +130,8 @@ patch:
     - xform/^dvyu([.])$/dyu$1/ #デュ #先設其他編碼，不被其他正則影響再轉回
 ##### 簡化和消除含促音字詞後綴 #####
     # - xform/^([kspt])[,.](.+)$/$1$2/
-    - xform/^([kspt])[,.]/$1/
+    - xform/^([ksptgchmyrwdbz])[,.]/$1/ #「n」無法，會有bug
+    - xform/[;]([ksptgchmyrwdbz])/$1/ #「n」無法，會有bug
 #舊版漢字中有分段才有用到#    - derive/^([a-z-]+)(;)([a-z-]+)(;)$/$1$3$4/ #漢字中含促音
 ##### 簡化漢字後綴（如需假名輸入漢字，打開；「關閉」選單中沒漢字） #####
 #關#    - derive/([a-z-]);/$1/

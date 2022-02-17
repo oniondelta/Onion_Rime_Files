@@ -52,7 +52,7 @@
 #===================================
 ---
 name: jpnin1
-version: "202105"
+version: "202202"
 sort: by_weight #original
 use_preset_vocabulary: false
 columns:
@@ -101,12 +101,12 @@ columns:
 #用正則轉#——	eev,
 #用正則轉#゠	eev,
 ### 特殊『符號』 ###
-〆	shime,
-〆	shime.
+#用正則轉#〆	shime,
+#用正則轉#〆	shime.
 #用正則轉#〆	sime,
 #用正則轉#〆	sime.
 #用正則轉#〆	xx,
-#用正則轉#〆	xx.
+〆	xx.
 #用正則轉#〆	kigou.
 #々	naa.
 #々	na.
