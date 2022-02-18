@@ -957,7 +957,7 @@ min_phrase_weight: 100
 檪	yue4	0.1%
 氇	luo2	0.1%
 氇	lu3	0.1%
-#氇	lu5	0.1%
+氇	lu5	0.1%
 濵	bin1	0.1%
 濵	pin2	0.1%
 灳	hui1	0.1%
@@ -1660,8 +1660,8 @@ min_phrase_weight: 100
 螅	ci4	0%
 摰	che4	0.1%
 烃	qing1	0.1%
-#烴	jing3	0.1%
-#烃	jing3	0.1%
+烴	jing3	0.1%
+烃	jing3	0.1%
 轧	ga2	0.1%
 轧	zha2	0.1%
 蒡	pang2	0.1%
@@ -1676,7 +1676,7 @@ min_phrase_weight: 100
 鉾	mao2	0.1%
 𫓴	mou2	0.1%
 𫓴	mao2	0.1%
-#庑	wu2	0.1%
+庑	wu2	0.1%
 髈	bang4	0.1%
 髈	pang1	0.1%
 俉	wu4
@@ -2010,6 +2010,12 @@ min_phrase_weight: 100
 甫	pu3	0%
 甫	fu1	0%
 場	shang1	0%
+乙	jue2	0%
+槌	zhui4	0%
+輮	rou3	0%
+𫐓	rou3	0%
+權	guan4	0%
+氌	lu5	0%
 ##### @201912 比對教育部相關字詞典檔所新增 #####
 丁	zheng1	0.1%
 丂	kao3	0.1%
@@ -7557,7 +7563,7 @@ min_phrase_weight: 100
 㬈	wen1
 㬉	nuan3
 㬊	huan3
-#㬊	huan4
+#㬊	huan4	0%
 㬋	hou2
 㬌	jing4
 㬍	bo2
@@ -12823,7 +12829,7 @@ min_phrase_weight: 100
 丨	gun3	50%
 丨	shu4	50%
 丩	jiu1
-#个	gan4
+个	gan4	0%
 个	ge4
 丫	ya1
 丬	qiang2
@@ -13776,7 +13782,7 @@ min_phrase_weight: 100
 兏	chang2
 児	er2
 兑	dui4
-#兑	duo2
+兑	duo2	0%
 兑	rui4
 兒	er2	95%
 #兒	er5	5%
@@ -14600,7 +14606,7 @@ min_phrase_weight: 100
 向	xiang4
 吒	zha1	50%
 吒	zha4	50%
-#吓	ha4
+吓	ha4	0%
 吓	xia4
 吔	ye1
 吔	ye3
@@ -14997,10 +15003,10 @@ min_phrase_weight: 100
 啇	di4
 啇	shi4
 啇	zhai1
-#啈	e4
+啈	e4	0%
 啈	heng1
 啈	heng4
-#啈	za2
+啈	za2	0%
 啉	lin2
 啊	a1	10%
 啊	a2	10%
@@ -15315,9 +15321,9 @@ min_phrase_weight: 100
 嘼	chu4
 嘼	shou4
 嘼	xu4
-#嘽	chan1
+嘽	chan1	0%
 嘽	chan3
-#嘽	dan3
+嘽	dan3	0%
 嘽	tan1
 嘽	tuo1
 嘾	dan4
@@ -16249,7 +16255,7 @@ min_phrase_weight: 100
 #奋	ben3	2.5%
 奋	fen4	0.5%
 奋	gang3	97%
-#奋	kang3	97%
+奋	kang3	0%
 奌	dian3
 奍	juan4
 奍	quan1
@@ -17809,7 +17815,7 @@ min_phrase_weight: 100
 庁	ting1
 庂	ze4
 広	guang3
-#庄	peng2	98%
+庄	peng2	0%
 庄	zhuang1	2%
 庅	mo2
 庆	qing4
@@ -17910,7 +17916,7 @@ min_phrase_weight: 100
 廞	xin1
 廟	miao4
 廠	chang3
-#廡	wu2	50%
+廡	wu2	0%
 廡	wu3	50%
 廢	fei4
 廣	guang3
@@ -18063,7 +18069,7 @@ min_phrase_weight: 100
 彣	wen2
 彤	tong2
 彥	yan4
-#彦	pan2
+彦	pan2	0%
 彦	yan4
 彧	yu4
 彨	chi1
@@ -18949,7 +18955,7 @@ min_phrase_weight: 100
 扎	zha2	10%
 扏	qiu2
 扐	le4
-#扑	pi4	0.1%
+扑	pi4	0.1%
 #扑	po3	1%
 #扑	pou4	0.9%
 扑	pu1	98%
@@ -19079,7 +19085,7 @@ min_phrase_weight: 100
 抲	qia1
 抳	ni2
 抳	ni3
-#抴	she2
+抴	she2	0%
 抴	ye4
 抵	di3
 抶	chi4
@@ -19245,10 +19251,10 @@ min_phrase_weight: 100
 挺	ting3
 挻	shan1
 挻	yan2
-#挼	luo4
-#挼	rua2
+挼	luo4	0%
+挼	rua2	0%
 挼	ruo2
-#挼	sui1
+挼	sui1	0%
 挽	wan3
 挾	jia1	50%
 挾	jia2	50%
@@ -19329,8 +19335,8 @@ min_phrase_weight: 100
 捳	yue4
 捴	zong3
 捵	chen1
-#捵	nian3
-#捵	tian3
+捵	nian3	0%
+捵	tian3	0%
 捶	chui2
 捷	jie2
 捸	tu1
@@ -20036,7 +20042,7 @@ min_phrase_weight: 100
 新	xin1
 斱	zhuo2
 斲	zhuo2
-#斳	jin3
+斳	jin3	0%
 斳	qin2
 斴	lin2
 斵	zhuo2
@@ -20472,7 +20478,7 @@ min_phrase_weight: 100
 朹	qiu2
 机	ji1	20%
 机	ji3	70%
-#机	wei4	10%
+机	wei4	0%
 朻	jiu1
 朼	bi3
 朽	xiu3
@@ -20811,7 +20817,7 @@ min_phrase_weight: 100
 桕	jiu4
 桖	xue4
 桗	duo4
-#桘	zhui4
+桘	zhui4	0%
 桙	mou2
 桙	yu2
 桚	zan3
@@ -20981,10 +20987,10 @@ min_phrase_weight: 100
 森	sen1
 棯	ren3
 棰	chui2
-#棱	cheng1
+棱	cheng1	0%
 棱	leng1
 棱	leng2
-#棱	leng4
+棱	leng4	0%
 棱	ling2
 棲	qi1
 棳	zhuo2
@@ -22544,7 +22550,7 @@ min_phrase_weight: 100
 渐	jian4
 渑	mian3
 渒	pi4
-#渓	qi1
+渓	qi1	0%
 渓	xi1
 渔	yu2
 渕	yuan1
@@ -23444,7 +23450,7 @@ min_phrase_weight: 100
 焭	qiong2
 焮	xin4
 焯	chao1
-#焯	chuo4
+焯	chuo4	0%
 焯	zhuo1
 焯	zhuo2
 焰	yan4
@@ -24024,7 +24030,7 @@ min_phrase_weight: 100
 猪	zhu1
 猫	mao1
 猫	mao2
-#猫	miao2
+猫	miao2	0%
 猬	wei4
 猭	yuan2
 献	xian4
@@ -24354,7 +24360,7 @@ min_phrase_weight: 100
 瑐	jian3
 瑑	zhuan4
 瑒	chang4
-#瑒	dang4
+瑒	dang4	0%
 瑒	yang2
 瑓	lian4
 瑔	quan2
@@ -25283,7 +25289,7 @@ min_phrase_weight: 100
 瞐	mo4
 瞑	ming2
 瞒	man2
-#瞓	xun4
+瞓	xun4	0%
 瞔	ze2
 瞕	zhang4
 瞖	yi4
@@ -28040,7 +28046,7 @@ min_phrase_weight: 100
 脑	nao3
 脒	mi3
 脓	nong2
-#脔	ji1
+脔	ji1	0%
 脔	luan2
 脕	wan4
 脕	wen4
@@ -28366,7 +28372,7 @@ min_phrase_weight: 100
 舗	pu4
 舘	guan3
 舙	hua4
-#舙	qi4
+舙	qi4	0%
 舚	tian4
 舛	chuan3
 舜	shun4
@@ -29413,10 +29419,10 @@ min_phrase_weight: 100
 薜	bi4
 薝	zhan1
 薞	sun1
-#薟	kan4
+薟	kan4	0%
 薟	lian3
 薟	xian1
-#薟	yan2
+薟	yan2	0%
 薠	fan2
 薡	ding3
 薢	xiao4
@@ -34205,7 +34211,7 @@ min_phrase_weight: 100
 门	men2
 闩	shuan1
 闪	shan3
-#闫	yan4
+#闫	yan4	0%
 闫	yan2
 闬	han4
 闭	bi4
@@ -34703,7 +34709,7 @@ min_phrase_weight: 100
 鞡	la5
 鞢	die2
 鞢	xie4
-#鞢	zha2
+鞢	zha2	0%
 鞣	rou2
 鞤	bang1
 鞥	eng1
@@ -36191,7 +36197,7 @@ min_phrase_weight: 100
 鳩	jiu1
 鳪	bu2
 鳫	yan4
-#鳬	fu3
+鳬	fu3	0%
 鳬	fu2
 鳭	diao1
 鳭	zhao1
@@ -44438,7 +44444,7 @@ min_phrase_weight: 100
 𥦨	ke4
 𥦶	xian4
 𥦷	weng4
-#𥦷	wong4
+#𥦷	wong4#拼音錯碼
 𥧂	gong3
 𥧆	ou3
 𥧇	chao2
