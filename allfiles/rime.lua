@@ -611,20 +611,22 @@ function mix_cf2_miss_filter(input, env)
       -- local dotend = string.find(cand.text, '。')
       -- local bracket1 = string.find(cand.text, '〔')
       -- local bracket2 = string.find(cand.text, '〕')
+      if (not string.find(cand.text, '᰼᰼' )) and (not addcomment1) and (not addcomment2) then
       -- if (not dnch) and (not addcomment1) and (not addcomment2) then
       -- if (not string.find(cand.text, '.*᰼᰼.*' )) then
-      if (not string.find(cand.text, '᰼᰼' )) and (not addcomment1) and (not addcomment2) then
         yield(cand)
-      elseif (not dnch) and (addcomment1) or (addcomment2) then
+      elseif (addcomment1) or (addcomment2) then
+      -- elseif (not dnch) and (addcomment1) or (addcomment2) then
       -- elseif (not string.find(cand.text, '᰼᰼' )) and (addcomment1) or (addcomment2) then
+        if string.find(cand.text, '。') then
         -- if (dotend) then
         -- if (cand.text == '。') then
-        if string.find(cand.text, '。') then
           cand:get_genuine().comment = "〔句點〕"
           yield(cand)
+        elseif string.find(cand.text, '〔') or string.find(cand.text, '〕') then
+        -- elseif string.find(cand.text, "[〕〔]") then
         -- elseif (bracket1) or (bracket2) then
         -- elseif (cand.text == '〔') or (cand.text == '〕') then
-        elseif string.find(cand.text, '〔') or string.find(cand.text, '〕') then
           cand:get_genuine().comment = "〔六角括號〕"
           yield(cand)
         else
@@ -639,14 +641,15 @@ function mix_cf2_miss_filter(input, env)
         -- local dotend = string.find(cand.text, '。')
         -- local bracket1 = string.find(cand.text, '〔')
         -- local bracket2 = string.find(cand.text, '〕')
+        if string.find(cand.text, '。') then
         -- if (dotend) then
         -- if (cand.text == '。') then
-        if string.find(cand.text, '。') then
           cand:get_genuine().comment = "〔句點〕"
           yield(cand)
+        elseif string.find(cand.text, '〔') or string.find(cand.text, '〕') then
+        -- elseif string.find(cand.text, "[〕〔]") then
         -- elseif (bracket1) or (bracket2) then
         -- elseif (cand.text == '〔') or (cand.text == '〕') then
-        elseif string.find(cand.text, '〔') or string.find(cand.text, '〕') then
           cand:get_genuine().comment = "〔六角括號〕"
           yield(cand)
         else
@@ -8406,6 +8409,5 @@ end
 --   -- env.engine.schema.selected_index=[ QY, AH, ZN, WU, SJ, XM ] -- 試驗，無法
 --   -- env.engine.schema.select_labels=[ QY, AH, ZN, WU, SJ, XM ] -- 試驗，無法
 -- end
-
 
 
