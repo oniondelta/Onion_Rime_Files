@@ -103136,6 +103136,7 @@ min_phrase_weight: 100
 輕財重義	qing1 cai2 zhong4 yi4
 輕身重義	qing1 shen1 zhong4 yi4
 輕車	qing1 ju1
+輕車	qing1 che1
 輕車介士	qing1 ju1 jie4 shi4
 輕車熟路	qing1 ju1 shu2 lu4
 輕車熟路	qing1 che1 shu2 lu4
@@ -104946,18 +104947,22 @@ min_phrase_weight: 100
 重作馮婦	chong2 zuo4 feng2 fu4
 重侍下	chong2 shi4 xia4
 重修	chong2 xiu1
+重修	zhong4 xiu1
 重修舊好	chong2 xiu1 jiu4 hao3
 重倒	zhong4 dao3
 重傷罪	zhong4 shang1 zui4
 重傷風	zhong4 shang1 feng1
 重價	zhong4 jia4
+重價	chong2 jia4
 重元素	zhong4 yuan2 su4
 重光	chong2 guang1
 重光累洽	chong2 guang1 lei3 xia2
 重兵	zhong4 bing1
 重典	zhong4 dian3
 重出	chong2 chu1
+重出	zhong4 chu1
 重判	zhong4 pan4
+重判	chong2 pan4
 重利	zhong4 li4
 重利盤剝	zhong4 li4 pan2 bo1
 重創	chong2 chuang1
@@ -104994,6 +104999,7 @@ min_phrase_weight: 100
 重塑	chong2 su4
 重壁	chong2 bi4
 重壓	zhong4 ya1
+重壓	chong2 ya1
 重大	zhong4 da4
 重大貢獻	zhong4 da4 gong4 xian4
 重大過失	zhong4 da4 guo4 shi1
@@ -105007,6 +105013,7 @@ min_phrase_weight: 100
 重孫媳	chong2 sun1 xi2
 重定向	chong2 ding4 xiang4
 重寄	zhong4 ji4
+重寄	chong2 ji4
 重審	chong2 shen3
 重寶	zhong4 bao3
 重屋	chong2 wu1
@@ -105016,9 +105023,11 @@ min_phrase_weight: 100
 重工業	zhong4 gong1 ye4
 重幃	chong2 wei2
 重度	zhong4 du4
+重度	chong2 du4
 重建	chong2 jian4
 重張	chong2 zhang1
 重彈	chong2 tan2
+重彈	zhong4 tan2
 重形式輕內容	zhong4 xing2 shi4 qing1 nei4 rong2
 重影	chong2 ying3
 重心	zhong4 xin1
@@ -105028,6 +105037,9 @@ min_phrase_weight: 100
 重慶市	chong2 qing4 shi4
 重慶科技學院	chong2 qing4 ke1 ji4 xue2 yuan4
 重懲	zhong4 cheng2
+重懲	zhong4 cheng3
+重懲	chong2 cheng2
+重懲	chong2 cheng3
 重托	zhong4 tuo1
 重拍	chong2 pai1
 重拍	zhong4 pai1
@@ -105045,6 +105057,7 @@ min_phrase_weight: 100
 重操舊業	chong2 cao1 jiu4 ye4
 重擔	zhong4 dan4
 重整	chong2 zheng3
+重整	zhong4 zheng3
 重整人	chong2 zheng3 ren2
 重整旗鼓	chong2 zheng3 qi2 gu3
 重文輕武	zhong4 wen2 qing1 wu3
@@ -105082,6 +105095,7 @@ min_phrase_weight: 100
 重歷舊遊	chong2 li4 jiu4 you2
 重殘	zhong4 can2
 重比	zhong4 bi3
+重比	chong2 bi3
 重氣	zhong4 qi4
 重氣輕生	zhong4 qi4 qing1 sheng1
 重氫	zhong4 qing1
@@ -105123,6 +105137,7 @@ min_phrase_weight: 100
 重生父母	chong2 sheng1 fu4 mu3
 重生爺娘	chong2 sheng1 ye2 niang2
 重用	zhong4 yong4
+重用	chong2 yong4
 重申	chong2 shen1
 重男輕女	zhong4 nan2 qing1 nv3
 重疊	chong2 die2
@@ -105169,7 +105184,9 @@ min_phrase_weight: 100
 重臂	zhong4 bei4
 重臣	zhong4 chen2
 重台	chong2 tai2
+重台	zhong4 tai2
 重臺	chong2 tai2
+重臺	zhong4 tai2
 重舌	chong2 she2
 重色輕友	zhong4 se4 qing1 you3
 重荷	zhong4 he4
@@ -105186,6 +105203,7 @@ min_phrase_weight: 100
 重複語境	chong2 fu4 yu3 jing4
 重複課稅	chong2 fu4 ke4 shui4
 重要	zhong4 yao4
+重要	chong2 yao4
 重要分子	zhong4 yao4 fen4 zi3
 重要分子	zhong4 yao4 fen4 zi5
 重要問題	zhong4 yao4 wen4 ti2
@@ -105205,7 +105223,9 @@ min_phrase_weight: 100
 重設	chong2 she4
 重評	chong2 ping2
 重話	zhong4 hua4
+重話	chong2 hua4
 重謝	zhong4 xie4
+重謝	chong2 xie4
 重譯	chong2 yi4
 重負	zhong4 fu4
 重責	zhong4 ze2
@@ -105229,6 +105249,9 @@ min_phrase_weight: 100
 重身子	zhong4 shen1 zi5
 重軒	chong2 xuan1
 重載	zhong4 zai4
+重載	chong2 zai3
+重載	chong2 zai4
+重載	zhong4 zai3
 重辣	zhong4 la4
 重農	zhong4 nong2
 重返	chong2 fan3
@@ -105246,6 +105269,7 @@ min_phrase_weight: 100
 重重的	zhong4 zhong4 de5
 重重落落	chong2 chong2 luo4 luo4
 重量	zhong4 liang4
+重量	chong2 liang2
 重量單位	zhong4 liang4 dan1 wei4
 重量噸	zhong4 liang4 dun4
 重量噸	zhong4 liang4 dun1
@@ -105258,9 +105282,11 @@ min_phrase_weight: 100
 重門擊柝	chong2 men2 ji2 tuo4
 重門深鎖	chong2 men2 shen1 suo3
 重開	chong2 kai1
+重開	zhong4 kai1
 重閨	chong2 gui1
 重闈	chong2 wei2
 重關	chong2 guan1
+重關	zhong4 guan1
 重阻	chong2 zu3
 重陰	chong2 yin1
 重陽	chong2 yang2
@@ -111096,4 +111122,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 111093 #####
+##### @結束 END - 111125 #####
