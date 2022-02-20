@@ -1370,8 +1370,8 @@ end
 --   local input_m = context.input
 --   if (key:repr() == "space") and (context:is_composing()) then
 --     -- local input_m = context.input
---     -- if ( string.find(input_m, "[@:]")) then
 --     if (string.find(input_m, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(input_m, "^https?:.*$")) or (string.find(input_m, "^ftp:.*$")) or (string.find(input_m, "^mailto:.*$")) or (string.find(input_m, "^file:.*$")) then
+--     -- if ( string.find(input_m, "[@:]")) then
 --       engine:commit_text(orig_m)
 --       context:clear()
 --       return 1 -- kAccepted
