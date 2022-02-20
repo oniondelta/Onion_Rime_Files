@@ -360,8 +360,8 @@ local ocmdb = ReverseDb("build/symbols-mark.reverse.bin")
 
 local function xform_mark(inp)
   if inp == "" then return "" end
-    -- inp = string.gsub(inp, "^(〔.+〕)(〔.+〕)$", "%1")
     inp = string.gsub(inp, "，", ", ")
+    -- inp = string.gsub(inp, "^(〔.+〕)(〔.+〕)$", "%1")
   return inp
 end
 
@@ -423,8 +423,8 @@ end
 -- function array30_comment_filter(input, env)
 --   local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
 --   local find_prefix = env.engine.context.input
---   -- if (not s_c_f_p_s) or (string.find(find_prefix, "`" )) then
 --   if (not s_c_f_p_s) then
+--   -- if (not s_c_f_p_s) or (string.find(find_prefix, "`" )) then
 --   -- 使用 `iter()` 遍歷所有輸入候選項
 --     for cand in input:iter() do
 --       yield(cand)
@@ -446,7 +446,7 @@ end
 後來移至「=」「=」反查用。
 行列30空碼'⎔'轉成不輸出任何符號，符合原生
 --]]
--- -- preedit_format 格式轉寫
+-- -- preedit_format 格式轉寫（精簡不用）
 -- local function xform_array30_input(ainput)
 --   if ainput == "" then return "" end
 --   ainput = string.gsub(ainput, "a", "1-")
@@ -823,8 +823,8 @@ function mix30_nil_comment_up_filter(input, env)
   local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
   local s_up = env.engine.context:get_option("1_2_straight_up")
   local find_prefix = env.engine.context.input  -- 原始未轉換輸入碼
-  -- if (not s_c_f_p_s) or (string.find(find_prefix, "`" )) then
   if (not s_c_f_p_s) then
+  -- if (not s_c_f_p_s) or (string.find(find_prefix, "`" )) then
     for cand in input:iter() do
       -- local find_prefix = env.engine.context.input  -- 原始未轉換輸入碼
       local array30_preedit = cand.preedit  -- 轉換後輸入碼，如：ㄅㄆㄇㄈ、1-2⇡9⇡
