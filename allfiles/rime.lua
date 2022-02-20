@@ -4771,7 +4771,7 @@ function t_translator(input, seg)
     if (input == "`fh") then
       -- yield(Candidate("date", seg.start, seg._end, string.gsub("民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日", "([^%d])0", "%1"), "〔*年月日〕"))
       yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日", "([^%d])0", "%1"), "〔年月日〕"))
-      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(string.gsub(os.date("%m").."月"..os.date("%d").."日", "([^%d])0", "%1") ), "〔年月日〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")), "〔年月日〕"))
       -- yield(Candidate("date", seg.start, seg._end, "民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日", "〔*年月日〕"))
       yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日", "〔年月日〕"))
       yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日", "〔年月日〕"))
@@ -6567,7 +6567,7 @@ function t2_translator(input, seg)
     if (input == "'/fh") then
       -- yield(Candidate("date", seg.start, seg._end, string.gsub("民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日", "([^%d])0", "%1"), "〔*年月日〕"))
       yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日", "([^%d])0", "%1"), "〔年月日〕"))
-      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(string.gsub(os.date("%m").."月"..os.date("%d").."日", "([^%d])0", "%1") ), "〔年月日〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")), "〔年月日〕"))
       -- yield(Candidate("date", seg.start, seg._end, "民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日", "〔*年月日〕"))
       yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日", "〔年月日〕"))
       yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日", "〔年月日〕"))
@@ -8409,5 +8409,6 @@ end
 --   -- env.engine.schema.selected_index=[ QY, AH, ZN, WU, SJ, XM ] -- 試驗，無法
 --   -- env.engine.schema.select_labels=[ QY, AH, ZN, WU, SJ, XM ] -- 試驗，無法
 -- end
+
 
 
