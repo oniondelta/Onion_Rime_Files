@@ -908,11 +908,13 @@ end
 -- function endspace(key, env)
 --   local engine = env.engine
 --   local context = engine.context
+--   local caret_pos_es = context.caret_pos
+--   local orig_es = context:get_commit_text()
 --   -- local arr = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}
 --   --- accept: space_do_space when: composing
 --   if (key:repr() == "space") and (context:is_composing()) then
---     local caret_pos_es = context.caret_pos
---     local orig_es = context:get_commit_text()
+--     -- local caret_pos_es = context.caret_pos
+--     -- local orig_es = context:get_commit_text()
 --     -- local orig_es = context:get_commit_composition()
 --     -- local orig_es = context:commit()
 --     -- local orig_es = context:get_script_text()
@@ -921,6 +923,7 @@ end
 --     if (not string.find(orig_es, "[%a%c%s]")) and (caret_pos_es == context.input:len()) then
 --     -- if (not string.find(orig_es, "[%a%c%s]")) and (caret_pos_es == context.input:len()) then
 --     -- if (string.find(orig_es, "[%a%c%s]")) and (caret_pos_es == context.input:len()) then
+--       -- local orig_es = context:get_commit_text()
 --       -- 下一句：游標位置向左一格，在本例無用，單純記錄用法
 --       -- context.caret_pos = caret_pos - 1
 --       -- 下兩句合用可使輸出句被電腦記憶
@@ -952,11 +955,13 @@ end
 -- function array30up(key, env)
 --   local engine = env.engine
 --   local context = engine.context
+--   local array_o_input = context.input
+--   local array_s_orig = context:get_commit_text()
 --   if (key:repr() == "space") and (context:has_menu()) then
 --     -- local caret_pos = context.caret_pos
---     local array_s_orig = context:get_commit_text()
---     local array_o_input = context.input
+--     -- local array_o_input = context.input
 --     if (string.find(array_o_input, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(array_o_input, "^[=][=][a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(array_o_input, "`.+$")) or (string.find(array_o_input, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(array_o_input, "^https?:.*$")) or (string.find(array_o_input, "^ftp:.*$")) or (string.find(array_o_input, "^mailto:.*$")) or (string.find(array_o_input, "^file:.*$")) or (string.find(array_o_input, "^www%..+$")) then
+--       -- local array_s_orig = context:get_commit_text()
 --       engine:commit_text(array_s_orig)
 --       context:clear()
 --       return 1 -- kAccepted
@@ -978,12 +983,14 @@ end
 -- function array30up_zy(key, env)
 --   local engine = env.engine
 --   local context = engine.context
+--   local array_o_input = context.input
+--   local array_s_orig = context:get_commit_text()
 --   if (key:repr() == "Return" or key:repr() == "space" and context:has_menu()) then
 --     -- local caret_pos = context.caret_pos
---     local array_s_orig = context:get_commit_text()
---     local array_o_input = context.input
---     -- if (string.find(array_o_input, "^=[a-z0-9 ,.;/-]+$")) and (not string.find(array_s_orig, "[%a%c%s]")) then
+--     -- local array_o_input = context.input
 --     if (string.find(array_o_input, "^=[a-z0-9,.;/-]+$")) then
+--     -- if (string.find(array_o_input, "^=[a-z0-9 ,.;/-]+$")) and (not string.find(array_s_orig, "[%a%c%s]")) then
+--       -- local array_s_orig = context:get_commit_text()
 --       engine:commit_text(array_s_orig)
 --       context:clear()
 --       return 1 -- kAccepted
@@ -1013,9 +1020,9 @@ function array30up_mix(key, env)
   if (key:repr() == "space") and (context:has_menu()) then
   -- if (key:repr() == "space") and (context:is_composing()) then
     -- local input_array = context.input
-    -- local orig_array = context:get_commit_text()
-    -- if (string.find(input_array, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(input_array, "^==[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(input_array, "`.+$")) or (string.find(input_array, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(input_array, "^https?:.*$")) or (string.find(input_array, "^ftp:.*$")) or (string.find(input_array, "^mailto:.*$")) or (string.find(input_array, "^file:.*$")) or (string.find(input_array, "^www%..+$")) or (string.find(input_array, "^=[a-z0-9,.;/-]+$")) then
     if (string.find(input_array, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(input_array, "^==[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(input_array, "`.+$")) or (string.find(input_array, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(input_array, "^https?:.*$")) or (string.find(input_array, "^ftp:.*$")) or (string.find(input_array, "^mailto:.*$")) or (string.find(input_array, "^file:.*$")) or (string.find(input_array, "^=[a-z0-9,.;/-]+$")) then
+    -- if (string.find(input_array, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(input_array, "^==[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(input_array, "`.+$")) or (string.find(input_array, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(input_array, "^https?:.*$")) or (string.find(input_array, "^ftp:.*$")) or (string.find(input_array, "^mailto:.*$")) or (string.find(input_array, "^file:.*$")) or (string.find(input_array, "^www%..+$")) or (string.find(input_array, "^=[a-z0-9,.;/-]+$")) then
+      -- local orig_array = context:get_commit_text()
       engine:commit_text(orig_array)
       context:clear()
       return 1 -- kAccepted
@@ -1023,8 +1030,8 @@ function array30up_mix(key, env)
   elseif (key:repr() == "Return") and (context:has_menu()) then
   -- elseif (key:repr() == "Return") and (context:is_composing()) then
     -- local input_array = context.input
-    -- local orig_array = context:get_commit_text()
     if (string.find(input_array, "^=[a-z0-9,.;/-]+$")) then
+      -- local orig_array = context:get_commit_text()
       engine:commit_text(orig_array)
       context:clear()
       return 1 -- kAccepted
@@ -1044,10 +1051,11 @@ end
 function ascii_punct_change(key, env)
   local engine = env.engine
   local context = engine.context
+  local orig_p23 = context:get_commit_text()
   local c_b_d = context:get_option("ascii_punct")
   local en_m = context:get_option("ascii_mode")
-  local orig_p23 = context:get_commit_text()
   if (c_b_d) and (not en_m) then
+    -- local orig_p23 = context:get_commit_text()
     if (key:repr() == 'Shift+less') then
       -- local orig_p23 = context:get_commit_text()
       engine:commit_text( orig_p23 .. "," )
@@ -1076,9 +1084,10 @@ end
 --   local engine = env.engine
 --   local context = engine.context
 --   local o_input = context.input
+--   local s_orig = context:get_commit_text()
 --   -- local kkk = string.find(o_input, "'/")
 --   if (string.find(o_input, "^'/")) and (key:repr() == 'space') then  -- (kkk~=nil) and (context:is_composing())
---     local s_orig = context:get_commit_text()
+--     -- local s_orig = context:get_commit_text()
 --     engine:commit_text(s_orig) -- .. "a"
 --     context:clear()
 --     return 1 -- kAccepted
@@ -1090,12 +1099,14 @@ end
 -- function s2r_s(key, env)
 --   local engine = env.engine
 --   local context = engine.context
+--   local o_input = context.input
+--   local s_orig = context:get_commit_text()
 --   -- local page_size = engine.schema.page_size
 --   if (key:repr() == 'space') and (context:is_composing()) then
 --   -- if (key:repr() == 'space') and (context:has_menu()) then
---     local s_orig = context:get_commit_text()
---     local o_input = context.input
+--     -- local o_input = context.input
 --     if (string.find(o_input, "^'/")) then
+--       -- local s_orig = context:get_commit_text()
 --       engine:commit_text(s_orig)
 --       context:clear()
 --       return 1 -- kAccepted
@@ -1108,14 +1119,16 @@ end
 -- function s2r(key, env)
 --   local engine = env.engine
 --   local context = engine.context
+--   local o_input = context.input
+--   local s_orig = context:get_commit_text()
 --   -- local page_size = engine.schema.page_size
 --   if (key:repr() == 'space') and (context:is_composing()) then
 --   -- if (key:repr() == 'space') and (context:has_menu()) then
---     local o_input = context.input
+--     -- local o_input = context.input
 --     if (string.find(o_input, "'/")) then
 --       if (string.find(o_input, "'/[';/]?[a-z]*$")) or (string.find(o_input, "'/[0-9./-]*$")) or (string.find(o_input, "'/[xcoe][0-9a-z]+$")) then
--- -- or string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$") or string.find(o_input, "^https?:.*$") or string.find(o_input, "^ftp:.*$") or string.find(o_input, "^mailto:.*$") or string.find(o_input, "^file:.*$")
---         local s_orig = context:get_commit_text()
+--       -- or string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$") or string.find(o_input, "^https?:.*$") or string.find(o_input, "^ftp:.*$") or string.find(o_input, "^mailto:.*$") or string.find(o_input, "^file:.*$")
+--         -- local s_orig = context:get_commit_text()
 --         engine:commit_text(s_orig)
 --         context:clear()
 --         return 1 -- kAccepted
@@ -1129,13 +1142,15 @@ end
 -- function s2r_e_u(key, env)
 --   local engine = env.engine
 --   local context = engine.context
+--   local o_input = context.input
+--   local s_orig = context:get_commit_text()
 --   -- local page_size = engine.schema.page_size
 --   if (key:repr() == 'space') and (context:is_composing()) then
 --   -- if (key:repr() == 'space') and (context:has_menu()) then
---     local o_input = context.input
+--     -- local o_input = context.input
 --     if (string.find(o_input, "[@:]")) then
 --       if (string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(o_input, "^https?:.*$")) or (string.find(o_input, "^ftp:.*$")) or (string.find(o_input, "^mailto:.*$")) or (string.find(o_input, "^file:.*$")) then
---         local s_orig = context:get_commit_text()
+--         -- local s_orig = context:get_commit_text()
 --         engine:commit_text(s_orig)
 --         context:clear()
 --         return 1 -- kAccepted
@@ -1149,10 +1164,12 @@ end
 -- function s2r_mixin3(key, env)
 --   local engine = env.engine
 --   local context = engine.context
+--   local o_input = context.input
+--   local s_orig = context:get_commit_text()
 --   -- local page_size = engine.schema.page_size
 --   if (key:repr() == 'space') and (context:is_composing()) then
 --   -- if (key:repr() == 'space') and (context:has_menu()) then
---     local o_input = context.input
+--     -- local o_input = context.input
 --     -- if (string.find(o_input, "'/")) then
 --       if ( string.find(o_input, "[@:]") or string.find(o_input, "^'/[';a-z0-9./-]*$") or string.find(o_input, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][0-9]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][][]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][][][][]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][-,.;=`]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(o_input, "=[-125890;,./]$") or string.find(o_input, "=[-;,./][-;,./]$") or string.find(o_input, "==[90]$") ) then  --or string.find(o_input, "==[,.]{2}$")
 --       -- if ( string.find(o_input, "[@:]") or string.find(o_input, "^'/[';a-z0-9./-]*$") or string.find(o_input, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][0-9]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][][]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][][][][]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][-,.;=`]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(o_input, "=[-125890;,./]$") or string.find(o_input, "=[-;,./][-;,./]$") or string.find(o_input, "==[90]$") or string.find(o_input, "==[,][,]?$") or string.find(o_input, "==[.][.]?$") ) then
@@ -1164,7 +1181,7 @@ end
 -- -- string.find(o_input, "[=][-,.;'=`]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][']'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][][][']'/[';/]?[a-z0-9/-]*$") 
 -- -- 原始全部正則：
 -- -- "^'/[';/]?[a-z0-9/-]*$|(?<=[-,./;a-z125890][][3467 ])'/[';/]?[a-z0-9/-]*$|(?<=['])'/[';/]?[a-z0-9/-]*$|(?<=[=][0-9])'/[';/]?[a-z0-9/-]*$|(?<=[=][][])'/[';/]?[a-z0-9/-]*$|(?<=[=][][][][])'/[';/]?[a-z0-9/-]*$|(?<=[=][-,.;'=`])'/[';/]?[a-z0-9/-]*$|(?<=[=][-,.;'=`][-,.;'=`])'/[';/]?[a-z0-9/-]*$|(?<=[][])'/[';/]?[a-z0-9/-]*$|(?<=[][][][])'/[';/]?[a-z0-9/-]*$|(?<=[][]['])'/[';/]?[a-z0-9/-]*$|(?<=[][][][]['])'/[';/]?[a-z0-9/-]*$"
---         local s_orig = context:get_commit_text()
+--         -- local s_orig = context:get_commit_text()
 --         engine:commit_text(s_orig)
 --         context:clear()
 --         return 1 -- kAccepted
@@ -1179,14 +1196,16 @@ end
 -- function s2r_most(key, env)
 --   local engine = env.engine
 --   local context = engine.context
+--   local o_input = context.input
+--   local s_orig = context:get_commit_text()
 --   -- local page_size = engine.schema.page_size
 --   if (key:repr() == 'space') and (context:is_composing()) then
 --   -- if (key:repr() == 'space') and (context:has_menu()) then
---     local o_input = context.input
+--     -- local o_input = context.input
 --     if ( string.find(o_input, "[@:]") or string.find(o_input, "'/") or string.find(o_input, "=[-125890;,./]$") or string.find(o_input, "=[-;,./][-;,./]$") or string.find(o_input, "==[90]$") ) then  --or string.find(o_input, "==[,.]{2}$")
 --     -- if ( string.find(o_input, "[@:]") or string.find(o_input, "'/") or string.find(o_input, "=[-125890;,./]$") or string.find(o_input, "=[-;,./][-;,./]$") or string.find(o_input, "==[90]$") or string.find(o_input, "==[,][,]?$") or string.find(o_input, "==[.][.]?$") ) then
 --     --「全，非精簡」 if ( string.find(o_input, "[@:]") or string.find(o_input, "'/") or string.find(o_input, "=[-125890;,./]$") or string.find(o_input, "=[-][-]$") or string.find(o_input, "=[;][;]$") or string.find(o_input, "=[,][,]$") or string.find(o_input, "=[.][.]$") or string.find(o_input, "=[/][/]$") or string.find(o_input, "==[90]$") or string.find(o_input, "==[,][,]?$") or string.find(o_input, "==[.][.]?$") ) then
---         local s_orig = context:get_commit_text()
+--         -- local s_orig = context:get_commit_text()
 --         engine:commit_text(s_orig)
 --         context:clear()
 --         return 1 -- kAccepted
@@ -1206,10 +1225,10 @@ end
 function mix_apc_s2rm(key, env)
   local engine = env.engine
   local context = engine.context
+  local input_124 = context.input
+  local orig_124 = context:get_commit_text()
   local c_b_d = context:get_option("ascii_punct")
   local en_m = context:get_option("ascii_mode")
-  local orig_124 = context:get_commit_text()
-  local input_124 = context.input
   if (c_b_d) and (not en_m) then
     if (key:repr() == 'Shift+less') then
       -- local orig_124 = context:get_commit_text()
@@ -1263,10 +1282,10 @@ end
 function mix_apc_s2rm_3(key, env)
   local engine = env.engine
   local context = engine.context
+  local input_3 = context.input
+  local orig_3 = context:get_commit_text()
   local c_b_d = context:get_option("ascii_punct")
   local en_m = context:get_option("ascii_mode")
-  local orig_3 = context:get_commit_text()
-  local input_3 = context.input
   if (c_b_d) and (not en_m) then
     if (key:repr() == 'Shift+less') then
       -- local orig_3 = context:get_commit_text()
@@ -1320,10 +1339,10 @@ end
 function mix_apc_pluss(key, env)
   local engine = env.engine
   local context = engine.context
+  local caret_pos_ps = context.caret_pos
+  local orig_ps = context:get_commit_text()
   local c_b_d = context:get_option("ascii_punct")
   local en_m = context:get_option("ascii_mode")
-  local orig_ps = context:get_commit_text()
-  local caret_pos_ps = context.caret_pos
   if (c_b_d) and (not en_m) then
     -- local caret_pos_ps = context.caret_pos
     if (key:repr() == 'Shift+less') then
@@ -1338,7 +1357,6 @@ function mix_apc_pluss(key, env)
       context:clear()
       return 1 -- kAccepted
     elseif (key:repr() == "space") and (caret_pos_ps == 0) then
-      -- local orig_ps = context:get_commit_text()
       engine:commit_text( " " )
       context:clear()
       return 1 -- kAccepted
@@ -1346,7 +1364,6 @@ function mix_apc_pluss(key, env)
   elseif (not c_b_d) and (not en_m) then
     -- local caret_pos_ps = context.caret_pos
     if (key:repr() == "space") and (caret_pos_ps == 0) then
-      -- local orig_ps = context:get_commit_text()
       engine:commit_text( " " )
       context:clear() 
       return 1 -- kAccepted
@@ -1366,12 +1383,13 @@ end
 -- function mobile_bpmf(key, env)
 --   local engine = env.engine
 --   local context = engine.context
---   local orig_m = context:get_commit_text()
 --   local input_m = context.input
+--   local orig_m = context:get_commit_text()
 --   if (key:repr() == "space") and (context:is_composing()) then
 --     -- local input_m = context.input
 --     if (string.find(input_m, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(input_m, "^https?:.*$")) or (string.find(input_m, "^ftp:.*$")) or (string.find(input_m, "^mailto:.*$")) or (string.find(input_m, "^file:.*$")) then
 --     -- if ( string.find(input_m, "[@:]")) then
+--       -- local orig_m = context:get_commit_text()
 --       engine:commit_text(orig_m)
 --       context:clear()
 --       return 1 -- kAccepted
