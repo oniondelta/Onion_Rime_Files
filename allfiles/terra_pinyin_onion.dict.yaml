@@ -97,6 +97,7 @@
 #    詞句中，「喀」作為音譯名詞時，臺灣標準為「ka4」，大陸標準為「ka1」，慣用也常發音「ke4」，由於日常三者皆常出現，故作為音譯名詞時，「ka4」「ka1」「ke4」全都補齊。
 #    詞句中，「場」臺灣日常慣用語音為「chang3」，臺灣標準為「chang2」，故「場」全都補齊「chang3」「chang2」。
 #    詞句中，「們」慣用發音「men5」和「men2」都有，字典中一個為語音一個為讀音，除音譯名詞外，全都補齊「men5」「men2」。
+#    詞句中，「誰」臺灣字典發音「shei2」為語音，「shui2」為讀音，全都補齊「shei2」[shui2]。
 #    預計比對「輕聲和一聲」變音。
 #
 #  〈2020修改字詞彙發音〉：
@@ -56387,6 +56388,7 @@ min_phrase_weight: 100
 人生朝露	ren2 sheng1 zhao1 lu4
 人生盛衰	ren2 sheng1 sheng4 shuai1
 人生自古誰無死	ren2 sheng1 zi4 gu3 shei2 wu2 si3
+人生自古誰無死	ren2 sheng1 zi4 gu3 shui2 wu2 si3
 人生識字憂患始	ren2 sheng1 shi4 zi4 you1 huan4 shi3
 人生路不熟	ren2 sheng1 lu4 bu4 shu2
 人生路不熟	ren2 sheng1 lu4 bu4 shou2
@@ -58699,6 +58701,7 @@ min_phrase_weight: 100
 兀的	wu4 di4
 兀的不	wu4 di4 bu4
 兀誰	wu4 shei2
+兀誰	wu4 shui2
 允洽	yun3 xia2
 允當	yun3 dang4
 元和	yuan2 he2
@@ -76580,6 +76583,7 @@ min_phrase_weight: 100
 捨得	she3 de5
 捨得	she3 de2
 捨我其誰	she3 wo3 qi2 shei2
+捨我其誰	she3 wo3 qi2 shui2
 捨短取長	she3 duan3 qu3 chang2
 捨車保帥	she3 ju1 bao3 shuai4
 捫參歷井	men2 shen1 li4 jing3
@@ -96730,8 +96734,9 @@ min_phrase_weight: 100
 舍利子塔	she3 li4 zi3 ta3
 舍己從人	she3 ji3 cong2 ren2
 舍己芸人	she3 ji3 yun2 ren2
-舍我其誰	she3 wo3 qi2 shui2
 舍我其誰	she3 wo3 qi2 shei2
+舍我其誰	she3 wo3 qi2 shui2
+舍我復誰	she3 wo3 fu4 shei2
 舍我復誰	she3 wo3 fu4 shui2
 舍本事末	she3 ben3 shi4 mo4
 舍本問末	she3 ben3 wen4 mo4
@@ -97376,6 +97381,7 @@ min_phrase_weight: 100
 莫扎里拉	mo4 zha1 li3 la1
 莫扎里拉	mo4 zha2 li3 la1
 莫教	mo4 jiao4
+莫敢誰何	mo4 gan3 shei2 he2
 莫敢誰何	mo4 gan3 shui2 he2
 莫春	mu4 chun1
 莫景	mu4 jing3
@@ -100998,19 +101004,31 @@ min_phrase_weight: 100
 說長論短	shuo1 chang2 lun4 duan3
 說長道短	shuo1 chang2 dao4 duan3
 誰人	shei2 ren2
-誰人樂隊	shui2 ren2 yue4 dui4
+誰人	shui2 ren2
 誰人樂隊	shei2 ren2 yue4 dui4
+誰人樂隊	shui2 ren2 yue4 dui4
 誰何	shei2 he2
+誰何	shui2 he2
 誰入地獄	shei2 ru4 di4 yu4
+誰入地獄	shui2 ru4 di4 yu4
 誰家	shei2 jia1
+誰家	shui2 jia1
 誰家灶內無煙	shei2 jia1 zao4 nei4 wu2 yan1
+誰家灶內無煙	shui2 jia1 zao4 nei4 wu2 yan1
 誰承望	shei2 cheng2 wang4
+誰承望	shui2 cheng2 wang4
 誰敢留人到五更	shei2 gan3 liu2 ren2 dao4 wu3 geng1
+誰敢留人到五更	shui2 gan3 liu2 ren2 dao4 wu3 geng1
+誰笑得最好	shei2 xiao4 de2 zui4 hao3
 誰笑得最好	shui2 xiao4 de2 zui4 hao3
 誰能無情	shei2 neng2 wu2 qing2
+誰能無情	shui2 neng2 wu2 qing2
 誰能無過	shei2 neng2 wu2 guo4
+誰能無過	shui2 neng2 wu2 guo4
 誰行	shei2 hang2
+誰行	shui2 hang2
 誰誰	shei2 shei2
+誰誰	shui2 shui2
 課卷	ke4 juan4
 課嘴撩牙	ke4 zui3 liao2 ya2
 課稅所得	ke4 shui4 suo3 de2
@@ -107441,6 +107459,7 @@ min_phrase_weight: 100
 阿衡	e1 heng2
 阿衡	a1 heng2
 阿訇	a1 hong1
+阿誰	a1 shei2
 阿誰	a1 shui2
 阿諂	e1 chan3
 阿諛	e1 yu2
@@ -110602,8 +110621,8 @@ min_phrase_weight: 100
 鹿柴	lu4 zhai4
 鹿柴	lu4 chai2
 鹿死不擇音	lu4 si3 bu4 ze2 yin4
-鹿死誰手	lu4 si3 shui2 shou3
 鹿死誰手	lu4 si3 shei2 shou3
+鹿死誰手	lu4 si3 shui2 shou3
 鹿皮冠	lu4 pi2 guan1
 鹿脯	lu4 fu3
 鹿車	lu4 ju1
@@ -111135,4 +111154,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 111138 #####
+##### @結束 END - 111157 #####
