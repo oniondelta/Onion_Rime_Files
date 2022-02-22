@@ -96,6 +96,7 @@
 #    詞句中，「帆」字典發音為「fan1」和「fan2」，其中「fan2」為臺灣日常慣用發音，故詞彙全都增加「fan2」該發音。
 #    詞句中，「喀」作為音譯名詞時，臺灣標準為「ka4」，大陸標準為「ka1」，慣用也常發音「ke4」，由於日常三者皆常出現，故作為音譯名詞時，「ka4」「ka1」「ke4」全都補齊。
 #    詞句中，「場」臺灣日常慣用語音為「chang3」，臺灣標準為「chang2」，故「場」全都補齊「chang3」「chang2」。
+#    詞句中，「們」慣用發音「men5」和「men2」都有，字典中一個為語音一個為讀音，除音譯名詞外，全都補齊「men5」「men2」。
 #    預計比對「輕聲和一聲」變音。
 #
 #  〈2020修改字詞彙發音〉：
@@ -2016,6 +2017,7 @@ min_phrase_weight: 100
 𫐓	rou3	0%
 權	guan4	0%
 氌	lu5	0%
+媜	zhen1
 ##### @201912 比對教育部相關字詞典檔所新增 #####
 丁	zheng1	0.1%
 丂	kao3	0.1%
@@ -64174,6 +64176,7 @@ min_phrase_weight: 100
 咱們	zan2 men5
 咱們	za2 men5
 咱們	zan2 men2
+咱們	za2 men2
 咱每	zan2 mei3
 咳唾	ke2 tuo4
 咳唾成珠	ke2 tuo4 cheng2 zhu1
@@ -64309,9 +64312,12 @@ min_phrase_weight: 100
 哏哏	hen1 hen1
 哏毒	hen1 du2
 哤聒	mang2 gua1
-哥們兒	ge1 men5 er5
-哥們兒	ge1 men5 er1
+哥們兒	ge1 men5 er5	80%
+哥們兒	ge1 men5 er1	80%
 哥們兒	ge1 men5 er2
+哥們兒	ge1 men2 er5	80%
+哥們兒	ge1 men2 er1	80%
+哥們兒	ge1 men2 er2
 哥倫比亞共和國	ge1 lun2 bi3 ya3 gong4 he2 guo2
 哥倫比亞共和國	ge1 lun2 bi3 ya4 gong4 he2 guo2
 哥兒	ge1 er5
@@ -74596,6 +74602,7 @@ min_phrase_weight: 100
 成長股	cheng2 zhang3 gu3
 我不入地獄	wo3 bu2 ru4 di4 yu4
 我們死後將會洪水滔天	wo3 men5 si3 hou4 jiang1 hui4 hong2 shui3 tao1 tian1
+我們死後將會洪水滔天	wo3 men2 si3 hou4 jiang1 hui4 hong2 shui3 tao1 tian1
 我和	wo3 han4
 我和	wo3 he2
 我和他	wo3 han4 ta1
@@ -85517,6 +85524,7 @@ min_phrase_weight: 100
 減殺	jian3 sha4
 減煠	jian3 zha2
 渠們	qu2 men5
+渠們	qu2 men2
 渠儂	qu2 nong2
 渠水	qu2 shui3
 渠江	qu2 jiang1
@@ -87344,6 +87352,9 @@ min_phrase_weight: 100
 爹地	die1 di5
 爹爹	die1 die1
 爺們兒	ye2 men5 er5	80%
+爺們兒	ye2 men5 er1	80%
+爺們兒	ye2 men5 er2
+爺們兒	ye2 men2 er5	80%
 爺們兒	ye2 men2 er1	80%
 爺們兒	ye2 men2 er2
 爺爺	ye2 ye5	80%
@@ -111124,4 +111135,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 111127 #####
+##### @結束 END - 111138 #####
