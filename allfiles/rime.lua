@@ -1460,177 +1460,6 @@ end
 
 
 --[[
-內碼輸入法，收入 unicode 碼得出該碼字元
---]]
-local function utf8_out(cp)
-  local string_char = string.char
-  if cp < 128 then
-    return string_char(cp)
-  end
-  local suffix = cp % 64
-  local c4 = 128 + suffix
-  cp = (cp - suffix) / 64
-  if cp < 32 then
-    return string_char(192 + cp, c4)
-  end
-  suffix = cp % 64
-  local c3 = 128 + suffix
-  cp = (cp - suffix) / 64
-  if cp < 16 then
-    return string_char(224 + cp, c3, c4)
-  end
-  suffix = cp % 64
-  cp = (cp - suffix) / 64
-  return string_char(240 + cp, 128 + suffix, c3, c4)
-end
-
-
-
-
---[[
-百分號編碼（英語：Percent-encoding），又稱：URL編碼（URL encoding）
-從編碼到文字。
-導出暫轉到十進位編碼，後續變成文字，要再用以下函數轉換。
---]]
-local function url_decode(str_d)
-  if string.match(str_d,'^[%x][%x]$') then
-    local ch_1 = string.gsub(str_d,'^([%x][%x])$', '%1')
-    local x_1 = tonumber(ch_1, 16)
-    local o_1 = Dec2bin(x_1)
-    local o_1=o_1-00000000
-    local out_all=tonumber(string.format("%07d",o_1),2)
-    return out_all
-  elseif string.match(str_d,'^[%x][%x][%x][%x]$') then
-    local ch_1 = string.gsub(str_d,'^([%x][%x])..$', '%1')
-    local ch_2 = string.gsub(str_d,'^..([%x][%x])$', '%1')
-    local x_1 = tonumber(ch_1, 16)
-    local x_2 = tonumber(ch_2, 16)
-    local o_1 = Dec2bin(x_1)
-    local o_2 = Dec2bin(x_2)
-    local o_1=o_1-11000000
-    local o_2=o_2-10000000
-    local out_all=tonumber(string.format("%05d",o_1) .. string.format("%06d",o_2),2)
-    return out_all
-  elseif string.match(str_d,'^[%x][%x][%x][%x][%x][%x]$') then
-    local ch_1 = string.gsub(str_d,'^([%x][%x])....$', '%1')
-    local ch_2 = string.gsub(str_d,'^..([%x][%x])..$', '%1')
-    local ch_3 = string.gsub(str_d,'^....([%x][%x])$', '%1')
-    local x_1 = tonumber(ch_1, 16)
-    local x_2 = tonumber(ch_2, 16)
-    local x_3 = tonumber(ch_3, 16)
-    local o_1 = Dec2bin(x_1)
-    local o_2 = Dec2bin(x_2)
-    local o_3 = Dec2bin(x_3)
-    local o_1=o_1-11100000
-    local o_2=o_2-10000000
-    local o_3=o_3-10000000
-    local out_all=tonumber(string.format("%04d",o_1) .. string.format("%06d",o_2) .. string.format("%06d",o_3),2)
-    return out_all
-  elseif string.match(str_d,'^[%x][%x][%x][%x][%x][%x][%x][%x]$') then
-    local ch_1 = string.gsub(str_d,'^([%x][%x])......$', '%1')
-    local ch_2 = string.gsub(str_d,'^..([%x][%x])....$', '%1')
-    local ch_3 = string.gsub(str_d,'^....([%x][%x])..$', '%1')
-    local ch_4 = string.gsub(str_d,'^......([%x][%x])$', '%1')
-    local x_1 = tonumber(ch_1, 16)
-    local x_2 = tonumber(ch_2, 16)
-    local x_3 = tonumber(ch_3, 16)
-    local x_4 = tonumber(ch_4, 16)
-    local o_1 = Dec2bin(x_1)
-    local o_2 = Dec2bin(x_2)
-    local o_3 = Dec2bin(x_3)
-    local o_4 = Dec2bin(x_4)
-    local o_1=o_1-11110000
-    local o_2=o_2-10000000
-    local o_3=o_3-10000000
-    local o_4=o_4-10000000
-    local out_all=tonumber(string.format("%03d",o_1) .. string.format("%06d",o_2) .. string.format("%06d",o_3) .. string.format("%06d",o_4),2)
-    return out_all
-  elseif string.match(str_d,'^[%x][%x][%x][%x][%x][%x][%x][%x][%x][%x]$') then
-    local ch_1 = string.gsub(str_d,'^([%x][%x])........$', '%1')
-    local ch_2 = string.gsub(str_d,'^..([%x][%x])......$', '%1')
-    local ch_3 = string.gsub(str_d,'^....([%x][%x])....$', '%1')
-    local ch_4 = string.gsub(str_d,'^......([%x][%x])..$', '%1')
-    local ch_5 = string.gsub(str_d,'^........([%x][%x])$', '%1')
-    local x_1 = tonumber(ch_1, 16)
-    local x_2 = tonumber(ch_2, 16)
-    local x_3 = tonumber(ch_3, 16)
-    local x_4 = tonumber(ch_4, 16)
-    local x_5 = tonumber(ch_5, 16)
-    local o_1 = Dec2bin(x_1)
-    local o_2 = Dec2bin(x_2)
-    local o_3 = Dec2bin(x_3)
-    local o_4 = Dec2bin(x_4)
-    local o_5 = Dec2bin(x_5)
-    local o_1=o_1-11111000
-    local o_2=o_2-10000000
-    local o_3=o_3-10000000
-    local o_4=o_4-10000000
-    local o_5=o_5-10000000
-    local out_all=tonumber(string.format("%02d",o_1) .. string.format("%06d",o_2) .. string.format("%06d",o_3) .. string.format("%06d",o_4) .. string.format("%06d",o_5),2)
-    return out_all
-  elseif string.match(str_d,'^[%x][%x][%x][%x][%x][%x][%x][%x][%x][%x][%x]$') then
-    local ch_1 = string.gsub(str_d,'^([%x][%x])..........$', '%1')
-    local ch_2 = string.gsub(str_d,'^..([%x][%x])........$', '%1')
-    local ch_3 = string.gsub(str_d,'^....([%x][%x])......$', '%1')
-    local ch_4 = string.gsub(str_d,'^......([%x][%x])....$', '%1')
-    local ch_5 = string.gsub(str_d,'^........([%x][%x])..$', '%1')
-    local ch_6 = string.gsub(str_d,'^..........([%x][%x])$', '%1')
-    local x_1 = tonumber(ch_1, 16)
-    local x_2 = tonumber(ch_2, 16)
-    local x_3 = tonumber(ch_3, 16)
-    local x_4 = tonumber(ch_4, 16)
-    local x_5 = tonumber(ch_5, 16)
-    local x_6 = tonumber(ch_6, 16)
-    local o_1 = Dec2bin(x_1)
-    local o_2 = Dec2bin(x_2)
-    local o_3 = Dec2bin(x_3)
-    local o_4 = Dec2bin(x_4)
-    local o_5 = Dec2bin(x_5)
-    local o_6 = Dec2bin(x_6)
-    local o_1=o_1-11111100
-    local o_2=o_2-10000000
-    local o_3=o_3-10000000
-    local o_4=o_4-10000000
-    local o_5=o_5-10000000
-    local o_6=o_6-10000000
-    local out_all=tonumber(string.format("%01d",o_1) .. string.format("%06d",o_2) .. string.format("%06d",o_3) .. string.format("%06d",o_4) .. string.format("%06d",o_5) .. string.format("%06d",o_6),2)
-    return out_all
-  elseif string.match(str_d,'^[a-z0-9]$') then
-    return str_d
-  else
-    local out_all='無此編碼'
-    return out_all
-  end
-end
-
--- -- 網上方法，但空碼無法再接後續，不適用
--- local out_all = string.gsub(str_d, "%x%x", function(h) return string.char(tonumber(h,16)) end)
--- local function url_decode(str)
---   local str = string.gsub (str, "+", " ")
---   local str = string.gsub (str, "%%(%x%x)", function(h) return string.char(tonumber(h,16)) end)
---   local str = string.gsub (str, "\r\n", "\n")
---   return str
--- end
--- -- print(url_decode('EAb080'))
-
-
---[[
-百分號編碼（英語：Percent-encoding），又稱：URL編碼（URL encoding）
-從文字到編碼
---]]
-local function url_encode(str_e)
-  if (str_e) then
-    str_e = string.gsub (str_e, "\n", "\r\n")
-    str_e = string.gsub (str_e, "([^%w ])", function (c) return string.format ("%%%02X", string.byte(c)) end)
-    str_e = string.gsub (str_e, " ", "+")
-  end
-  return str_e
-end
-
-
-
-
---[[
 數字日期字母各種轉寫
 --]]
 -- 日期轉大寫1
@@ -2532,7 +2361,7 @@ end
 ~~~~轉換農曆函數~~~~
 --]]
 --十進制轉二進制
-function Dec2bin(n)
+local function Dec2bin(n)
 	local t,t1,t2
 	local tables={""}
 	t=tonumber(n)
@@ -4542,6 +4371,178 @@ local function weekstyle()
   -- end
   return {weekstr, weekstr_c, weekstr_jp1, weekstr_jp2, weekstr_jp3, weekstr_eng1, weekstr_eng2, weekstr_eng3 }
 end
+
+
+
+
+--[[
+內碼輸入法，收入 unicode 碼得出該碼字元
+--]]
+local function utf8_out(cp)
+  local string_char = string.char
+  if cp < 128 then
+    return string_char(cp)
+  end
+  local suffix = cp % 64
+  local c4 = 128 + suffix
+  cp = (cp - suffix) / 64
+  if cp < 32 then
+    return string_char(192 + cp, c4)
+  end
+  suffix = cp % 64
+  local c3 = 128 + suffix
+  cp = (cp - suffix) / 64
+  if cp < 16 then
+    return string_char(224 + cp, c3, c4)
+  end
+  suffix = cp % 64
+  cp = (cp - suffix) / 64
+  return string_char(240 + cp, 128 + suffix, c3, c4)
+end
+
+
+--[[
+百分號編碼（英語：Percent-encoding），又稱：URL編碼（URL encoding）
+從編碼到文字。
+導出暫轉到十進位編碼，後續變成文字，要再用以下函數轉換。
+--]]
+local function url_decode(str_d)
+  if string.match(str_d,'^[%x][%x]$') then
+    local ch_1 = string.gsub(str_d,'^([%x][%x])$', '%1')
+    local x_1 = tonumber(ch_1, 16)
+    local o_1 = Dec2bin(x_1)
+    local o_1=o_1-00000000
+    local out_all=tonumber(string.format("%07d",o_1),2)
+    return out_all
+  elseif string.match(str_d,'^[%x][%x][%x][%x]$') then
+    local ch_1 = string.gsub(str_d,'^([%x][%x])..$', '%1')
+    local ch_2 = string.gsub(str_d,'^..([%x][%x])$', '%1')
+    local x_1 = tonumber(ch_1, 16)
+    local x_2 = tonumber(ch_2, 16)
+    local o_1 = Dec2bin(x_1)
+    local o_2 = Dec2bin(x_2)
+    local o_1=o_1-11000000
+    local o_2=o_2-10000000
+    local out_all=tonumber(string.format("%05d",o_1) .. string.format("%06d",o_2),2)
+    return out_all
+  elseif string.match(str_d,'^[%x][%x][%x][%x][%x][%x]$') then
+    local ch_1 = string.gsub(str_d,'^([%x][%x])....$', '%1')
+    local ch_2 = string.gsub(str_d,'^..([%x][%x])..$', '%1')
+    local ch_3 = string.gsub(str_d,'^....([%x][%x])$', '%1')
+    local x_1 = tonumber(ch_1, 16)
+    local x_2 = tonumber(ch_2, 16)
+    local x_3 = tonumber(ch_3, 16)
+    local o_1 = Dec2bin(x_1)
+    local o_2 = Dec2bin(x_2)
+    local o_3 = Dec2bin(x_3)
+    local o_1=o_1-11100000
+    local o_2=o_2-10000000
+    local o_3=o_3-10000000
+    local out_all=tonumber(string.format("%04d",o_1) .. string.format("%06d",o_2) .. string.format("%06d",o_3),2)
+    return out_all
+  elseif string.match(str_d,'^[%x][%x][%x][%x][%x][%x][%x][%x]$') then
+    local ch_1 = string.gsub(str_d,'^([%x][%x])......$', '%1')
+    local ch_2 = string.gsub(str_d,'^..([%x][%x])....$', '%1')
+    local ch_3 = string.gsub(str_d,'^....([%x][%x])..$', '%1')
+    local ch_4 = string.gsub(str_d,'^......([%x][%x])$', '%1')
+    local x_1 = tonumber(ch_1, 16)
+    local x_2 = tonumber(ch_2, 16)
+    local x_3 = tonumber(ch_3, 16)
+    local x_4 = tonumber(ch_4, 16)
+    local o_1 = Dec2bin(x_1)
+    local o_2 = Dec2bin(x_2)
+    local o_3 = Dec2bin(x_3)
+    local o_4 = Dec2bin(x_4)
+    local o_1=o_1-11110000
+    local o_2=o_2-10000000
+    local o_3=o_3-10000000
+    local o_4=o_4-10000000
+    local out_all=tonumber(string.format("%03d",o_1) .. string.format("%06d",o_2) .. string.format("%06d",o_3) .. string.format("%06d",o_4),2)
+    return out_all
+  elseif string.match(str_d,'^[%x][%x][%x][%x][%x][%x][%x][%x][%x][%x]$') then
+    local ch_1 = string.gsub(str_d,'^([%x][%x])........$', '%1')
+    local ch_2 = string.gsub(str_d,'^..([%x][%x])......$', '%1')
+    local ch_3 = string.gsub(str_d,'^....([%x][%x])....$', '%1')
+    local ch_4 = string.gsub(str_d,'^......([%x][%x])..$', '%1')
+    local ch_5 = string.gsub(str_d,'^........([%x][%x])$', '%1')
+    local x_1 = tonumber(ch_1, 16)
+    local x_2 = tonumber(ch_2, 16)
+    local x_3 = tonumber(ch_3, 16)
+    local x_4 = tonumber(ch_4, 16)
+    local x_5 = tonumber(ch_5, 16)
+    local o_1 = Dec2bin(x_1)
+    local o_2 = Dec2bin(x_2)
+    local o_3 = Dec2bin(x_3)
+    local o_4 = Dec2bin(x_4)
+    local o_5 = Dec2bin(x_5)
+    local o_1=o_1-11111000
+    local o_2=o_2-10000000
+    local o_3=o_3-10000000
+    local o_4=o_4-10000000
+    local o_5=o_5-10000000
+    local out_all=tonumber(string.format("%02d",o_1) .. string.format("%06d",o_2) .. string.format("%06d",o_3) .. string.format("%06d",o_4) .. string.format("%06d",o_5),2)
+    return out_all
+  elseif string.match(str_d,'^[%x][%x][%x][%x][%x][%x][%x][%x][%x][%x][%x]$') then
+    local ch_1 = string.gsub(str_d,'^([%x][%x])..........$', '%1')
+    local ch_2 = string.gsub(str_d,'^..([%x][%x])........$', '%1')
+    local ch_3 = string.gsub(str_d,'^....([%x][%x])......$', '%1')
+    local ch_4 = string.gsub(str_d,'^......([%x][%x])....$', '%1')
+    local ch_5 = string.gsub(str_d,'^........([%x][%x])..$', '%1')
+    local ch_6 = string.gsub(str_d,'^..........([%x][%x])$', '%1')
+    local x_1 = tonumber(ch_1, 16)
+    local x_2 = tonumber(ch_2, 16)
+    local x_3 = tonumber(ch_3, 16)
+    local x_4 = tonumber(ch_4, 16)
+    local x_5 = tonumber(ch_5, 16)
+    local x_6 = tonumber(ch_6, 16)
+    local o_1 = Dec2bin(x_1)
+    local o_2 = Dec2bin(x_2)
+    local o_3 = Dec2bin(x_3)
+    local o_4 = Dec2bin(x_4)
+    local o_5 = Dec2bin(x_5)
+    local o_6 = Dec2bin(x_6)
+    local o_1=o_1-11111100
+    local o_2=o_2-10000000
+    local o_3=o_3-10000000
+    local o_4=o_4-10000000
+    local o_5=o_5-10000000
+    local o_6=o_6-10000000
+    local out_all=tonumber(string.format("%01d",o_1) .. string.format("%06d",o_2) .. string.format("%06d",o_3) .. string.format("%06d",o_4) .. string.format("%06d",o_5) .. string.format("%06d",o_6),2)
+    return out_all
+  elseif string.match(str_d,'^[a-z0-9]$') then
+    return str_d
+  else
+    local out_all='無此編碼'
+    return out_all
+  end
+end
+
+-- -- 網上方法，但空碼無法再接後續，不適用
+-- local out_all = string.gsub(str_d, "%x%x", function(h) return string.char(tonumber(h,16)) end)
+-- local function url_decode(str)
+--   local str = string.gsub (str, "+", " ")
+--   local str = string.gsub (str, "%%(%x%x)", function(h) return string.char(tonumber(h,16)) end)
+--   local str = string.gsub (str, "\r\n", "\n")
+--   return str
+-- end
+-- -- print(url_decode('EAb080'))
+
+
+--[[
+百分號編碼（英語：Percent-encoding），又稱：URL編碼（URL encoding）
+從文字到編碼
+--]]
+local function url_encode(str_e)
+  if (str_e) then
+    str_e = string.gsub (str_e, "\n", "\r\n")
+    str_e = string.gsub (str_e, "([^%w ])", function (c) return string.format ("%%%02X", string.byte(c)) end)
+    str_e = string.gsub (str_e, " ", "+")
+  end
+  return str_e
+end
+
+
+
 
 --- @@ date/t translator
 --[[
