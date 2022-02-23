@@ -1604,6 +1604,7 @@ local function url_decode(str_d)
 end
 
 -- -- 網上方法，但空碼無法再接後續，不適用
+-- local out_all = string.gsub(str_d, "%x%x", function(h) return string.char(tonumber(h,16)) end)
 -- local function url_decode(str)
 --   local str = string.gsub (str, "+", " ")
 --   local str = string.gsub (str, "%%(%x%x)", function(h) return string.char(tonumber(h,16)) end)
@@ -4450,13 +4451,97 @@ local function time_out2()
   local time_c_string_4 = string.gsub(time_c_string_4, "PM", "下午")
   -- 只有上下午
   local ampm = os.date("%p")
-  local ampm =  string.gsub(ampm, "AM", "上午")
-  local ampm =  string.gsub(ampm, "PM", "下午")
+  local ampm = string.gsub(ampm, "AM", "上午")
+  local ampm = string.gsub(ampm, "PM", "下午")
   return {time_c_string, time_c_string_2, time_c_string_3, time_c_string_4, ampm}
 end
 
-
-
+-- 星期格式
+local function weekstyle()
+  local week_n = os.date("%w")
+  local l_w = { "日", "一", "二", "三", "四", "五", "六" }
+  local l_w_c = { "日", "壹", "貳", "參", "肆", "伍", "陸" }
+  local l_w_jp1 = { "㈰", "㈪", "㈫", "㈬", "㈭", "㈮", "㈯" }
+  local l_w_jp2 = { "㈰", "㈪", "㈫", "㈬", "㈭", "㈮", "㊏" }
+  local l_w_jp3 = { "日", "月", "火", "水", "木", "金", "土" }
+  local l_w_eng1 = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" }
+  local l_w_eng2 = { "Sun.", "Mon.", "Tues.", "Wed.", "Thur.", "Fri.", "Sat." }
+  local l_w_eng3 = { "Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat" }
+  local weekstr = l_w[week_n+1]
+  local weekstr_c = l_w_c[week_n+1]
+  local weekstr_jp1 = l_w_jp1[week_n+1]
+  local weekstr_jp2 = l_w_jp2[week_n+1]
+  local weekstr_jp3 = l_w_jp3[week_n+1]
+  local weekstr_eng1 = l_w_eng1[week_n+1]
+  local weekstr_eng2 = l_w_eng2[week_n+1]
+  local weekstr_eng3 = l_w_eng3[week_n+1]
+  -- 先展示星期，以便後面使用
+  -- if (os.date("%w") == "0") then
+  --     weekstr = "日"
+  --     weekstr_c = "日"
+  --     weekstr_jp1 = "㈰"
+  --     weekstr_jp2 = "㊐"
+  --     weekstr_jp3 = "日"
+  --     weekstr_eng1 = "Sunday"
+  --     weekstr_eng2 = "Sun."
+  --     weekstr_eng3 = "Sun"
+  -- elseif (os.date("%w") == "1") then
+  --     weekstr = "一"
+  --     weekstr_c = "壹"
+  --     weekstr_jp1 = "㈪"
+  --     weekstr_jp2 = "㊊"
+  --     weekstr_jp3 = "月"
+  --     weekstr_eng1 = "Monday"
+  --     weekstr_eng2 = "Mon."
+  --     weekstr_eng3 = "Mon"
+  -- elseif (os.date("%w") == "2") then
+  --     weekstr = "二"
+  --     weekstr_c = "貳"
+  --     weekstr_jp1 = "㈫"
+  --     weekstr_jp2 = "㊋"
+  --     weekstr_jp3 = "火"
+  --     weekstr_eng1 = "Tuesday"
+  --     weekstr_eng2 = "Tues."
+  --     weekstr_eng3 = "Tues"
+  -- elseif (os.date("%w") == "3") then
+  --     weekstr = "三"
+  --     weekstr_c = "參"
+  --     weekstr_jp1 = "㈬"
+  --     weekstr_jp2 = "㊌"
+  --     weekstr_jp3 = "水"
+  --     weekstr_eng1 = "Wednesday"
+  --     weekstr_eng2 = "Wed."
+  --     weekstr_eng3 = "Wed"
+  -- elseif (os.date("%w") == "4") then
+  --     weekstr = "四"
+  --     weekstr_c = "肆"
+  --     weekstr_jp1 = "㈭"
+  --     weekstr_jp2 = "㊍"
+  --     weekstr_jp3 = "木"
+  --     weekstr_eng1 = "Thursday"
+  --     weekstr_eng2 = "Thur."
+  --     weekstr_eng3 = "Thur"
+  -- elseif (os.date("%w") == "5") then
+  --     weekstr = "五"
+  --     weekstr_c = "伍"
+  --     weekstr_jp1 = "㈮"
+  --     weekstr_jp2 = "㊎"
+  --     weekstr_jp3 = "金"
+  --     weekstr_eng1 = "Friday"
+  --     weekstr_eng2 = "Fri."
+  --     weekstr_eng3 = "Fri"
+  -- elseif (os.date("%w") == "6") then
+  --     weekstr = "六"
+  --     weekstr_c = "陸"
+  --     weekstr_jp1 = "㈯"
+  --     weekstr_jp2 = "㊏"
+  --     weekstr_jp3 = "土"
+  --     weekstr_eng1 = "Saturday"
+  --     weekstr_eng2 = "Sat."
+  --     weekstr_eng3 = "Sat"
+  -- end
+  return {weekstr, weekstr_c, weekstr_jp1, weekstr_jp2, weekstr_jp3, weekstr_eng1, weekstr_eng2, weekstr_eng3 }
+end
 
 --- @@ date/t translator
 --[[
@@ -4470,78 +4555,6 @@ function t_translator(input, seg)
     -- local ll_1, ll_2, ly_1, ly_2, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
     -- local aptime1, aptime2, aptime3, aptime4, aptime5, aptime6, aptime7, aptime8, aptime0_1, aptime0_2, aptime0_3, aptime0_4, aptime00_1, aptime00_2,  aptime00_3, aptime00_4 = time_out1()
     -- local aptime_c1, aptime_c2, aptime_c3, aptime_c4, ap_5 = time_out2()
-
-    -- 先展示星期，以便後面使用
-    if (os.date("%w") == "0") then
-      weekstr = "日"
-      weekstr_c = "日"
-      weekstr_jp1 = "㈰"
-      weekstr_jp2 = "㊐"
-      weekstr_jp3 = "日"
-      weekstr_eng1 = "Sunday"
-      weekstr_eng2 = "Sun."
-      weekstr_eng3 = "Sun"
-    end
-    if (os.date("%w") == "1") then
-      weekstr = "一"
-      weekstr_c = "壹"
-      weekstr_jp1 = "㈪"
-      weekstr_jp2 = "㊊"
-      weekstr_jp3 = "月"
-      weekstr_eng1 = "Monday"
-      weekstr_eng2 = "Mon."
-      weekstr_eng3 = "Mon"
-    end
-    if (os.date("%w") == "2") then
-      weekstr = "二"
-      weekstr_c = "貳"
-      weekstr_jp1 = "㈫"
-      weekstr_jp2 = "㊋"
-      weekstr_jp3 = "火"
-      weekstr_eng1 = "Tuesday"
-      weekstr_eng2 = "Tues."
-      weekstr_eng3 = "Tues"
-    end
-    if (os.date("%w") == "3") then
-      weekstr = "三"
-      weekstr_c = "參"
-      weekstr_jp1 = "㈬"
-      weekstr_jp2 = "㊌"
-      weekstr_jp3 = "水"
-      weekstr_eng1 = "Wednesday"
-      weekstr_eng2 = "Wed."
-      weekstr_eng3 = "Wed"
-    end
-    if (os.date("%w") == "4") then
-      weekstr = "四"
-      weekstr_c = "肆"
-      weekstr_jp1 = "㈭"
-      weekstr_jp2 = "㊍"
-      weekstr_jp3 = "木"
-      weekstr_eng1 = "Thursday"
-      weekstr_eng2 = "Thur."
-      weekstr_eng3 = "Thur"
-    end
-    if (os.date("%w") == "5") then
-      weekstr = "五"
-      weekstr_c = "伍"
-      weekstr_jp1 = "㈮"
-      weekstr_jp2 = "㊎"
-      weekstr_jp3 = "金"
-      weekstr_eng1 = "Friday"
-      weekstr_eng2 = "Fri."
-      weekstr_eng3 = "Fri"
-    end
-    if (os.date("%w") == "6") then
-      weekstr = "六"
-      weekstr_c = "陸"
-      weekstr_jp1 = "㈯"
-      weekstr_jp2 = "㊏"
-      weekstr_jp3 = "土"
-      weekstr_eng1 = "Saturday"
-      weekstr_eng2 = "Sat."
-      weekstr_eng3 = "Sat"
-    end
 
     -- lua 程式原生時間
     if (input == "`p") then
@@ -5415,80 +5428,80 @@ function t_translator(input, seg)
     end
 
     if (input == "`mdw") then
-      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1").." ".."星期"..weekstr.." ", "〔月日週〕 ~c"))
-      -- yield(Candidate("date", seg.start, seg._end, jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." ".."星期"..weekstr.." ", "〔月日週〕"))
-      yield(Candidate("date", seg.start, seg._end, rqzdx1(23).." ".."星期"..weekstr.." ", "〔月日週〕 ~z"))
-      -- yield(Candidate("date", seg.start, seg._end, rqzdx2(23).." ".."星期"..weekstr.." ", "〔月日週〕"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng1_m_date(os.date("%m")).." "..eng2_d_date(os.date("%d")), "〔週月日〕 ~a"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng2_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")), "〔週日月〕 ~e"))
-      yield(Candidate("date", seg.start, seg._end, jp_m_date(os.date("%m"))..jp_d_date(os.date("%d"))..weekstr_jp1, "〔日本〕 ~j"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1").." ".."星期"..weekstyle()[1].." ", "〔月日週〕 ~c"))
+      -- yield(Candidate("date", seg.start, seg._end, jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." ".."星期"..weekstyle()[1].." ", "〔月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, rqzdx1(23).." ".."星期"..weekstyle()[1].." ", "〔月日週〕 ~z"))
+      -- yield(Candidate("date", seg.start, seg._end, rqzdx2(23).." ".."星期"..weekstyle()[1].." ", "〔月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng1_m_date(os.date("%m")).." "..eng2_d_date(os.date("%d")), "〔週月日〕 ~a"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng2_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")), "〔週日月〕 ~e"))
+      yield(Candidate("date", seg.start, seg._end, jp_m_date(os.date("%m"))..jp_d_date(os.date("%d"))..weekstyle()[3], "〔日本〕 ~j"))
       -- local a, b, y, chinese_m, chinese_d = to_chinese_cal_local(os.time())
       local a, b, c, d, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
-      yield(Candidate("date", seg.start, seg._end, lm..ld.." "..weekstr_jp3.." ", "〔農曆〕 ~l"))
+      yield(Candidate("date", seg.start, seg._end, lm..ld.." "..weekstyle()[5].." ", "〔農曆〕 ~l"))
       return
     end
 
     if (input == "`mdwl") then
       -- local a, b, y, chinese_m, chinese_d = to_chinese_cal_local(os.time())
       local a, b, c, d, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
-      yield(Candidate("date", seg.start, seg._end, lm..ld.." "..weekstr_jp3.." ", "〔農曆〕"))
+      yield(Candidate("date", seg.start, seg._end, lm..ld.." "..weekstyle()[5].." ", "〔農曆〕"))
       local All_g, Y_g, M_g, D_g = lunarJzl(os.date("%Y%m%d%H"))
-      yield(Candidate("date", seg.start, seg._end, M_g.."月"..D_g.."日".." "..weekstr_jp3.." " , "〔農曆干支〕"))
+      yield(Candidate("date", seg.start, seg._end, M_g.."月"..D_g.."日".." "..weekstyle()[5].." " , "〔農曆干支〕"))
       return
     end
 
     if (input == "`mdwa") then
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng1_m_date(os.date("%m")).." "..eng2_d_date(os.date("%d")), "〔週月日〕"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng1_m_date(os.date("%m")).." "..eng3_d_date(os.date("%d")), "〔週月日〕"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng2..", "..eng2_m_date(os.date("%m")).." "..eng3_d_date(os.date("%d")), "〔週月日〕"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng3.." "..eng3_m_date(os.date("%m")).." "..eng4_d_date(os.date("%d")), "〔週月日〕"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng1_m_date(os.date("%m")).." the "..eng1_d_date(os.date("%d")), "〔週月日〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng1_m_date(os.date("%m")).." "..eng2_d_date(os.date("%d")), "〔週月日〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng1_m_date(os.date("%m")).." "..eng3_d_date(os.date("%d")), "〔週月日〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[7]..", "..eng2_m_date(os.date("%m")).." "..eng3_d_date(os.date("%d")), "〔週月日〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[8].." "..eng3_m_date(os.date("%m")).." "..eng4_d_date(os.date("%d")), "〔週月日〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng1_m_date(os.date("%m")).." the "..eng1_d_date(os.date("%d")), "〔週月日〕"))
       return
     end
 
     if (input == "`mdwe") then
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng2_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")), "〔週日月〕"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng3_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")), "〔週日月〕"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng2..", "..eng2_d_date(os.date("%d")).." "..eng2_m_date(os.date("%m")), "〔週日月〕"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", ".."the "..eng1_d_date(os.date("%d")).." of "..eng1_m_date(os.date("%m")), "〔週日月〕"))
-      -- yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", ".."The "..eng1_d_date(os.date("%d")).." of "..eng1_m_date(os.date("%m"))..", "..os.date("%Y"), "〔週日月〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng2_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")), "〔週日月〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng3_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")), "〔週日月〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[7]..", "..eng2_d_date(os.date("%d")).." "..eng2_m_date(os.date("%m")), "〔週日月〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", ".."the "..eng1_d_date(os.date("%d")).." of "..eng1_m_date(os.date("%m")), "〔週日月〕"))
+      -- yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", ".."The "..eng1_d_date(os.date("%d")).." of "..eng1_m_date(os.date("%m"))..", "..os.date("%Y"), "〔週日月〕"))
       return
     end
 
     if (input == "`mdwc") then
-      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date(" %m 月 %d 日"), "([ ])0", "%1").." ".."星期"..weekstr.." ", "〔*月日週*〕"))
-      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1").." ".."星期"..weekstr.." ", "〔月日週〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).." ".."星期"..weekstr.." ", "〔月日週〕"))
-      yield(Candidate("date", seg.start, seg._end, os.date(" %m 月 %d 日").." ".."星期"..weekstr.." ", "〔*月日週*〕"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日").." ".."星期"..weekstr.." ", "〔月日週〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日".." ".."星期"..weekstr.." ", "〔月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date(" %m 月 %d 日"), "([ ])0", "%1").." ".."星期"..weekstyle()[1].." ", "〔*月日週*〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1").." ".."星期"..weekstyle()[1].." ", "〔月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).." ".."星期"..weekstyle()[1].." ", "〔月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date(" %m 月 %d 日").." ".."星期"..weekstyle()[1].." ", "〔*月日週*〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日").." ".."星期"..weekstyle()[1].." ", "〔月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日".." ".."星期"..weekstyle()[1].." ", "〔月日週〕"))
       return
     end
 
     if (input == "`mdwj") then
-      yield(Candidate("date", seg.start, seg._end, jp_m_date(os.date("%m"))..jp_d_date(os.date("%d"))..weekstr_jp1, "〔日本〕"))
-      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1")..weekstr_jp1, "〔日本〕"))
-      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1").." "..weekstr_jp3.."曜日 ", "〔日本〕"))
-      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1").."("..weekstr_jp3.."曜日)", "〔日本〕"))
-      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1").."（"..weekstr_jp3.."曜日）", "〔日本〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1"))..weekstr_jp1, "〔日本〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).." "..weekstr_jp3.."曜日 ", "〔日本〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).."("..weekstr_jp3.."曜日)", "〔日本〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).."（"..weekstr_jp3.."曜日）", "〔日本〕"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日")..weekstr_jp1, "〔日本〕"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日").." "..weekstr_jp3.."曜日 ", "〔日本〕"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日").."("..weekstr_jp3.."曜日)", "〔日本〕"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日").."（"..weekstr_jp3.."曜日）", "〔日本〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%m月%d日")..weekstr_jp1), "〔日本〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%m月%d日").." "..weekstr_jp3.."曜日 "), "〔日本〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%m月%d日").."("..weekstr_jp3.."曜日)"), "〔日本〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%m月%d日").."（"..weekstr_jp3.."曜日）"), "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, jp_m_date(os.date("%m"))..jp_d_date(os.date("%d"))..weekstyle()[3], "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1")..weekstyle()[3], "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1").." "..weekstyle()[5].."曜日 ", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1").."("..weekstyle()[5].."曜日)", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1").."（"..weekstyle()[5].."曜日）", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1"))..weekstyle()[3], "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).." "..weekstyle()[5].."曜日 ", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).."("..weekstyle()[5].."曜日)", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).."（"..weekstyle()[5].."曜日）", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日")..weekstyle()[3], "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日").." "..weekstyle()[5].."曜日 ", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日").."("..weekstyle()[5].."曜日)", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日").."（"..weekstyle()[5].."曜日）", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%m月%d日")..weekstyle()[3]), "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%m月%d日").." "..weekstyle()[5].."曜日 "), "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%m月%d日").."("..weekstyle()[5].."曜日)"), "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%m月%d日").."（"..weekstyle()[5].."曜日）"), "〔日本〕"))
       return
     end
 
     if (input == "`mdwz") then
-      yield(Candidate("date", seg.start, seg._end, rqzdx1(23).." ".."星期"..weekstr.." ", "〔月日週〕"))
-      yield(Candidate("date", seg.start, seg._end, rqzdx2(23).." ".."星期"..weekstr_c.." ", "〔月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, rqzdx1(23).." ".."星期"..weekstyle()[1].." ", "〔月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, rqzdx2(23).." ".."星期"..weekstyle()[2].." ", "〔月日週〕"))
       return
     end
 
@@ -5622,198 +5635,198 @@ function t_translator(input, seg)
 
 -- function week_translator0(input, seg)
     if (input == "`w") then
-      yield(Candidate("qsj", seg.start, seg._end, "星期"..weekstr, "〔週〕 ~c"))
-      yield(Candidate("qsj", seg.start, seg._end, "週"..weekstr, "〔週〕 ~z"))
-      yield(Candidate("qsj", seg.start, seg._end, weekstr_eng1, "〔週〕 ~a"))
-      yield(Candidate("qsj", seg.start, seg._end, weekstr_eng2, "〔週〕 ~e"))
-      yield(Candidate("qsj", seg.start, seg._end, weekstr_jp3.."曜日", "〔週〕 ~j"))
+      yield(Candidate("qsj", seg.start, seg._end, "星期"..weekstyle()[1], "〔週〕 ~c"))
+      yield(Candidate("qsj", seg.start, seg._end, "週"..weekstyle()[1], "〔週〕 ~z"))
+      yield(Candidate("qsj", seg.start, seg._end, weekstyle()[6], "〔週〕 ~a"))
+      yield(Candidate("qsj", seg.start, seg._end, weekstyle()[7], "〔週〕 ~e"))
+      yield(Candidate("qsj", seg.start, seg._end, weekstyle()[5].."曜日", "〔週〕 ~j"))
       return
     end
 
     if (input == "`wa") then
-      yield(Candidate("qsj", seg.start, seg._end, " "..weekstr_eng1.." ", "〔*週*〕"))
-      yield(Candidate("qsj", seg.start, seg._end, weekstr_eng1, "〔週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, " "..weekstyle()[6].." ", "〔*週*〕"))
+      yield(Candidate("qsj", seg.start, seg._end, weekstyle()[6], "〔週〕"))
       return
     end
 
     if (input == "`we") then
-      yield(Candidate("qsj", seg.start, seg._end, " "..weekstr_eng2.." ", "〔*週*〕"))
-      yield(Candidate("qsj", seg.start, seg._end, weekstr_eng2, "〔週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, " "..weekstr_eng3.." ", "〔*週*〕"))
-      yield(Candidate("qsj", seg.start, seg._end, weekstr_eng3, "〔週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, " "..weekstyle()[7].." ", "〔*週*〕"))
+      yield(Candidate("qsj", seg.start, seg._end, weekstyle()[7], "〔週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, " "..weekstyle()[8].." ", "〔*週*〕"))
+      yield(Candidate("qsj", seg.start, seg._end, weekstyle()[8], "〔週〕"))
       return
     end
 
     if (input == "`wc") then
-      yield(Candidate("qsj", seg.start, seg._end, " ".."星期"..weekstr.." ", "〔*週*〕"))
-      yield(Candidate("qsj", seg.start, seg._end, "星期"..weekstr, "〔週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, "(".."星期"..weekstr..")", "〔週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, "（".."星期"..weekstr.."）", "〔週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, " ".."星期"..weekstr_c.." ", "〔*週*〕"))
+      yield(Candidate("qsj", seg.start, seg._end, " ".."星期"..weekstyle()[1].." ", "〔*週*〕"))
+      yield(Candidate("qsj", seg.start, seg._end, "星期"..weekstyle()[1], "〔週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, "(".."星期"..weekstyle()[1]..")", "〔週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, "（".."星期"..weekstyle()[1].."）", "〔週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, " ".."星期"..weekstyle()[2].." ", "〔*週*〕"))
       return
     end
 
     if (input == "`wz") then
-      yield(Candidate("qsj", seg.start, seg._end, " ".."週"..weekstr.." ", "〔*週*〕"))
-      yield(Candidate("qsj", seg.start, seg._end, "週"..weekstr, "〔週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, "(".."週"..weekstr..")", "〔週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, "（".."週"..weekstr.."）", "〔週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, " ".."週"..weekstr_c.." ", "〔*週*〕"))
+      yield(Candidate("qsj", seg.start, seg._end, " ".."週"..weekstyle()[1].." ", "〔*週*〕"))
+      yield(Candidate("qsj", seg.start, seg._end, "週"..weekstyle()[1], "〔週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, "(".."週"..weekstyle()[1]..")", "〔週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, "（".."週"..weekstyle()[1].."）", "〔週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, " ".."週"..weekstyle()[2].." ", "〔*週*〕"))
       return
     end
 
     if (input == "`wj") then
-      yield(Candidate("qsj", seg.start, seg._end, " "..weekstr_jp3.."曜日 ", "〔*週*〕"))
-      yield(Candidate("qsj", seg.start, seg._end, weekstr_jp3.."曜日", "〔週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, "("..weekstr_jp3.."曜日)", "〔週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, "（"..weekstr_jp3.."曜日）", "〔週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, weekstr_jp1, "〔週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, weekstr_jp2, "〔週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, " "..weekstyle()[5].."曜日 ", "〔*週*〕"))
+      yield(Candidate("qsj", seg.start, seg._end, weekstyle()[5].."曜日", "〔週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, "("..weekstyle()[5].."曜日)", "〔週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, "（"..weekstyle()[5].."曜日）", "〔週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, weekstyle()[3], "〔週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, weekstyle()[4], "〔週〕"))
       return
     end
 
 -- function week_translator1(input, seg)
     if (input == "`fw") then
-      yield(Candidate("qsj", seg.start, seg._end, string.gsub(os.date("%Y年%m月%d日"), "([^%d])0", "%1").." ".."星期"..weekstr.." ", "〔年月日週〕 ~c"))
-      yield(Candidate("qsj", seg.start, seg._end, rqzdx1().." ".."星期"..weekstr.." ", "〔年月日週〕 ~z"))
-      -- yield(Candidate("qsj", seg.start, seg._end, rqzdx2().." ".."星期"..weekstr.." ", "〔年月日週〕"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng1_m_date(os.date("%m")).." "..eng2_d_date(os.date("%d"))..", "..os.date("%Y"), "〔週月日年〕 ~a"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng2_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")).." "..os.date("%Y"), "〔週日月年〕 ~e"))
-      -- yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..weekstr_jp1.." ", "〔年月日週〕 ~j"))
+      yield(Candidate("qsj", seg.start, seg._end, string.gsub(os.date("%Y年%m月%d日"), "([^%d])0", "%1").." ".."星期"..weekstyle()[1].." ", "〔年月日週〕 ~c"))
+      yield(Candidate("qsj", seg.start, seg._end, rqzdx1().." ".."星期"..weekstyle()[1].." ", "〔年月日週〕 ~z"))
+      -- yield(Candidate("qsj", seg.start, seg._end, rqzdx2().." ".."星期"..weekstyle()[1].." ", "〔年月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng1_m_date(os.date("%m")).." "..eng2_d_date(os.date("%d"))..", "..os.date("%Y"), "〔週月日年〕 ~a"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng2_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")).." "..os.date("%Y"), "〔週日月年〕 ~e"))
+      -- yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..weekstyle()[3].." ", "〔年月日週〕 ~j"))
       local jpymd, jp_y = jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))
-      yield(Candidate("date", seg.start, seg._end, string.gsub(jpymd, "([^%d])0", "%1")..weekstr_jp1, "〔日本元号〕 ~j"))
-      yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日", "([^%d])0", "%1").." ".."星期"..weekstr.." ", "〔民國〕 ~h"))
-      yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(23).." ".."星期"..weekstr.." ", "〔民國〕 ~g"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(jpymd, "([^%d])0", "%1")..weekstyle()[3], "〔日本元号〕 ~j"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日", "([^%d])0", "%1").." ".."星期"..weekstyle()[1].." ", "〔民國〕 ~h"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(23).." ".."星期"..weekstyle()[1].." ", "〔民國〕 ~g"))
       -- local chinese_date = to_chinese_cal_local(os.time())
       local ll_1, ll_2 = Date2LunarDate(os.date("%Y%m%d"))
-      yield(Candidate("qsj", seg.start, seg._end, ll_1.." "..weekstr_jp3.." ", "〔農曆〕 ~l"))
+      yield(Candidate("qsj", seg.start, seg._end, ll_1.." "..weekstyle()[5].." ", "〔農曆〕 ~l"))
       return
     end
 
     if (input == "`fwj") then
       local jpymd, jp_y = jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))
-      yield(Candidate("date", seg.start, seg._end, string.gsub(jpymd, "([^%d])0", "%1")..weekstr_jp1, "〔日本元号〕"))
-      yield(Candidate("date", seg.start, seg._end, string.gsub(jpymd, "([^%d])0", "%1").." "..weekstr_jp3.."曜日 ", "〔日本元号〕"))
-      yield(Candidate("date", seg.start, seg._end, string.gsub(jpymd, "([^%d])0", "%1").."("..weekstr_jp3.."曜日)", "〔日本元号〕"))
-      yield(Candidate("date", seg.start, seg._end, string.gsub(jpymd, "([^%d])0", "%1").."（"..weekstr_jp3.."曜日）", "〔日本元号〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jpymd, "([^%d])0", "%1")..weekstr_jp1), "〔日本元号〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jpymd, "([^%d])0", "%1").." "..weekstr_jp3.."曜日 "), "〔日本元号〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jpymd, "([^%d])0", "%1").."("..weekstr_jp3.."曜日)"), "〔日本元号〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jpymd, "([^%d])0", "%1").."（"..weekstr_jp3.."曜日）"), "〔日本元号〕"))
-      yield(Candidate("date", seg.start, seg._end, jpymd..weekstr_jp1, "〔日本元号〕"))
-      yield(Candidate("date", seg.start, seg._end, jpymd.." "..weekstr_jp3.."曜日 ", "〔日本元号〕"))
-      yield(Candidate("date", seg.start, seg._end, jpymd.."("..weekstr_jp3.."曜日)", "〔日本元号〕"))
-      yield(Candidate("date", seg.start, seg._end, jpymd.."（"..weekstr_jp3.."曜日）", "〔日本元号〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(jpymd..weekstr_jp1), "〔日本元号〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(jpymd.." "..weekstr_jp3.."曜日 "), "〔日本元号〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(jpymd.."("..weekstr_jp3.."曜日)"), "〔日本元号〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(jpymd.."（"..weekstr_jp3.."曜日）"), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(jpymd, "([^%d])0", "%1")..weekstyle()[3], "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(jpymd, "([^%d])0", "%1").." "..weekstyle()[5].."曜日 ", "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(jpymd, "([^%d])0", "%1").."("..weekstyle()[5].."曜日)", "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(jpymd, "([^%d])0", "%1").."（"..weekstyle()[5].."曜日）", "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jpymd, "([^%d])0", "%1")..weekstyle()[3]), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jpymd, "([^%d])0", "%1").." "..weekstyle()[5].."曜日 "), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jpymd, "([^%d])0", "%1").."("..weekstyle()[5].."曜日)"), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jpymd, "([^%d])0", "%1").."（"..weekstyle()[5].."曜日）"), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, jpymd..weekstyle()[3], "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, jpymd.." "..weekstyle()[5].."曜日 ", "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, jpymd.."("..weekstyle()[5].."曜日)", "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, jpymd.."（"..weekstyle()[5].."曜日）", "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(jpymd..weekstyle()[3]), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(jpymd.." "..weekstyle()[5].."曜日 "), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(jpymd.."("..weekstyle()[5].."曜日)"), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(jpymd.."（"..weekstyle()[5].."曜日）"), "〔日本元号〕"))
       return
     end
     -- if (input == "`fwj") then
-    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..weekstr_jp1.." ", "〔年月日週〕"))
-    --   -- yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." ".."星期"..weekstr.." ", "〔年月日週〕"))
-    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." "..weekstr_jp3.."曜日 ", "〔年月日週〕"))
-    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").."("..weekstr_jp3.."曜日)", "〔年月日週〕"))
-    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").."（"..weekstr_jp3.."曜日）", "〔年月日週〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..weekstyle()[3].." ", "〔年月日週〕"))
+    --   -- yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." ".."星期"..weekstyle()[1].." ", "〔年月日週〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." "..weekstyle()[5].."曜日 ", "〔年月日週〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").."("..weekstyle()[5].."曜日)", "〔年月日週〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").."（"..weekstyle()[5].."曜日）", "〔年月日週〕"))
     --   return
     -- end
 
     if (input == "`fwh") then
-      -- yield(Candidate("date", seg.start, seg._end, string.gsub("民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日", "([^%d])0", "%1").." ".."星期"..weekstr.." ", "〔*年月日週〕"))
-      yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日", "([^%d])0", "%1").." ".."星期"..weekstr.." ", "〔年月日週〕"))
-      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(string.gsub(os.date("%m").."月"..os.date("%d").."日", "([^%d])0", "%1") ).." ".."星期"..weekstr.." ", "〔年月日週〕"))
-      -- yield(Candidate("date", seg.start, seg._end, "民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日".." ".."星期"..weekstr.." ", "〔*年月日週〕"))
-      yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日".." ".."星期"..weekstr.." ", "〔年月日週〕"))
-      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日".." ".."星期"..weekstr.." ", "〔年月日週〕"))
+      -- yield(Candidate("date", seg.start, seg._end, string.gsub("民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日", "([^%d])0", "%1").." ".."星期"..weekstyle()[1].." ", "〔*年月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日", "([^%d])0", "%1").." ".."星期"..weekstyle()[1].." ", "〔年月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).." ".."星期"..weekstyle()[1].." ", "〔年月日週〕"))
+      -- yield(Candidate("date", seg.start, seg._end, "民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日".." ".."星期"..weekstyle()[1].." ", "〔*年月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日".." ".."星期"..weekstyle()[1].." ", "〔年月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日".." ".."星期"..weekstyle()[1].." ", "〔年月日週〕"))
       return
     end
 
     if (input == "`fwg") then
-      yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(23).." ".."星期"..weekstr.." ", "〔年月日週〕"))
-      yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[1], min_guo(os.date("%Y"))).."年"..rqzdx1(23).." ".."星期"..weekstr.." ", "〔年月日週〕"))
-      yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[2], min_guo(os.date("%Y"))).."年"..rqzdx2(23).." ".."星期"..weekstr_c.." ", "〔年月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(23).." ".."星期"..weekstyle()[1].." ", "〔年月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[1], min_guo(os.date("%Y"))).."年"..rqzdx1(23).." ".."星期"..weekstyle()[1].." ", "〔年月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[2], min_guo(os.date("%Y"))).."年"..rqzdx2(23).." ".."星期"..weekstyle()[2].." ", "〔年月日週〕"))
       return
     end
 
     if (input == "`fwl") then
       -- local chinese_date = to_chinese_cal_local(os.time())
       local ll_1, ll_2 = Date2LunarDate(os.date("%Y%m%d"))
-      yield(Candidate("qsj", seg.start, seg._end, ll_1.." "..weekstr_jp3.." ", "〔農曆〕"))
-      yield(Candidate("qsj", seg.start, seg._end, ll_2.." "..weekstr_jp3.." ", "〔農曆〕"))
+      yield(Candidate("qsj", seg.start, seg._end, ll_1.." "..weekstyle()[5].." ", "〔農曆〕"))
+      yield(Candidate("qsj", seg.start, seg._end, ll_2.." "..weekstyle()[5].." ", "〔農曆〕"))
       local All_g, Y_g, M_g, D_g = lunarJzl(os.date("%Y%m%d%H"))
-      yield(Candidate("date", seg.start, seg._end, Y_g.."年"..M_g.."月"..D_g.."日".." "..weekstr_jp3.." " , "〔農曆干支〕"))
+      yield(Candidate("date", seg.start, seg._end, Y_g.."年"..M_g.."月"..D_g.."日".." "..weekstyle()[5].." " , "〔農曆干支〕"))
       return
     end
 
     if (input == "`fwa") then
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng1_m_date(os.date("%m")).." "..eng2_d_date(os.date("%d"))..", "..os.date("%Y"), "〔週月日年〕"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng1_m_date(os.date("%m")).." "..eng3_d_date(os.date("%d"))..", "..os.date("%Y"), "〔週月日年〕"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng2..", "..eng2_m_date(os.date("%m")).." "..eng3_d_date(os.date("%d"))..", "..os.date("%Y"), "〔週月日年〕"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng3.." "..eng3_m_date(os.date("%m")).." "..eng4_d_date(os.date("%d")).." "..os.date("%Y"), "〔週月日年〕"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng1_m_date(os.date("%m")).." the "..eng1_d_date(os.date("%d"))..", "..os.date("%Y"), "〔週月日年〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng1_m_date(os.date("%m")).." "..eng2_d_date(os.date("%d"))..", "..os.date("%Y"), "〔週月日年〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng1_m_date(os.date("%m")).." "..eng3_d_date(os.date("%d"))..", "..os.date("%Y"), "〔週月日年〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[7]..", "..eng2_m_date(os.date("%m")).." "..eng3_d_date(os.date("%d"))..", "..os.date("%Y"), "〔週月日年〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[8].." "..eng3_m_date(os.date("%m")).." "..eng4_d_date(os.date("%d")).." "..os.date("%Y"), "〔週月日年〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng1_m_date(os.date("%m")).." the "..eng1_d_date(os.date("%d"))..", "..os.date("%Y"), "〔週月日年〕"))
       return
     end
 
     if (input == "`fwe") then
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng2_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")).." "..os.date("%Y"), "〔週日月年〕"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng3_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")).." "..os.date("%Y"), "〔週日月年〕"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng2..", "..eng2_d_date(os.date("%d")).." "..eng2_m_date(os.date("%m")).." "..os.date("%Y"), "〔週日月年〕"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", ".."the "..eng1_d_date(os.date("%d")).." of "..eng1_m_date(os.date("%m"))..", "..os.date("%Y"), "〔週日月年〕"))
-      -- yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", ".."The "..eng1_d_date(os.date("%d")).." of "..eng1_m_date(os.date("%m"))..", "..os.date("%Y"), "〔週日月年〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng2_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")).." "..os.date("%Y"), "〔週日月年〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng3_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")).." "..os.date("%Y"), "〔週日月年〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[7]..", "..eng2_d_date(os.date("%d")).." "..eng2_m_date(os.date("%m")).." "..os.date("%Y"), "〔週日月年〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", ".."the "..eng1_d_date(os.date("%d")).." of "..eng1_m_date(os.date("%m"))..", "..os.date("%Y"), "〔週日月年〕"))
+      -- yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", ".."The "..eng1_d_date(os.date("%d")).." of "..eng1_m_date(os.date("%m"))..", "..os.date("%Y"), "〔週日月年〕"))
       return
     end
 
     if (input == "`fwc") then
-      yield(Candidate("qsj", seg.start, seg._end, string.gsub(os.date(" %Y 年 %m 月 %d 日"), "([^%d])0", "%1").." ".."星期"..weekstr.." ", "〔*年月日週*〕"))
-      yield(Candidate("qsj", seg.start, seg._end, string.gsub(os.date("%Y年%m月%d日"), "([^%d])0", "%1").." ".."星期"..weekstr.." ", "〔年月日週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, fullshape_number(string.gsub(os.date("%Y年%m月%d日"), "([^%d])0", "%1")).." 星期"..weekstr.." ", "〔年月日週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, os.date(" %Y 年 %m 月 %d 日").." ".."星期"..weekstr.." ", "〔*年月日週*〕"))
-      yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." ".."星期"..weekstr.." ", "〔年月日週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, fullshape_number(os.date("%Y")).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日 ".."星期"..weekstr.." ", "〔年月日週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, string.gsub(os.date(" %Y 年 %m 月 %d 日"), "([^%d])0", "%1").." ".."星期"..weekstyle()[1].." ", "〔*年月日週*〕"))
+      yield(Candidate("qsj", seg.start, seg._end, string.gsub(os.date("%Y年%m月%d日"), "([^%d])0", "%1").." ".."星期"..weekstyle()[1].." ", "〔年月日週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, fullshape_number(string.gsub(os.date("%Y年%m月%d日"), "([^%d])0", "%1")).." 星期"..weekstyle()[1].." ", "〔年月日週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, os.date(" %Y 年 %m 月 %d 日").." ".."星期"..weekstyle()[1].." ", "〔*年月日週*〕"))
+      yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." ".."星期"..weekstyle()[1].." ", "〔年月日週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, fullshape_number(os.date("%Y")).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日 ".."星期"..weekstyle()[1].." ", "〔年月日週〕"))
       return
     end
 
     if (input == "`fwz") then
-      yield(Candidate("qsj", seg.start, seg._end, rqzdx1().." ".."星期"..weekstr.." ", "〔年月日週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, rqzdx2().." ".."星期"..weekstr_c.." ", "〔年月日週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, rqzdx1().." ".."星期"..weekstyle()[1].." ", "〔年月日週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, rqzdx2().." ".."星期"..weekstyle()[2].." ", "〔年月日週〕"))
       return
     end
 
 -- function week_translator2(input, seg)
     -- if (input == "`fwt") then
-    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." ".."星期"..weekstr.." "..os.date("%H:%M:%S"), "〔年月日週 時:分:秒〕"))
-    --   yield(Candidate("qsj", seg.start, seg._end, os.date(" %Y 年 %m 月 %d 日").." ".."星期"..weekstr.." "..os.date("%H:%M:%S"), "〔*年月日週 時:分:秒〕"))
-    --   yield(Candidate("qsj", seg.start, seg._end, fullshape_number(os.date("%Y")).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日 ".."星期"..weekstr.." "..fullshape_number(os.date("%H")).."："..fullshape_number(os.date("%M")).."："..fullshape_number(os.date("%S")), "〔年月日週 時:分:秒〕"))
-    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." "..weekstr_jp3.."曜日 "..os.date("%H:%M:%S"), "〔年月日週 時:分:秒〕"))
-    --   -- yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." ".."星期"..weekstr.." "..os.date("%H")..":"..os.date("%M")..":"..os.date("%S"), "〔年月日週 時:分:秒〕"))
-    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..weekstr_jp1.." "..os.date("%H")..":"..os.date("%M")..":"..os.date("%S"), "〔年月日週 時:分:秒〕"))
-    --   yield(Candidate("qsj", seg.start, seg._end, rqzdx1().." ".."星期"..weekstr.." "..os.date("%H:%M:%S"), "〔年月日週 時:分:秒〕 ~z"))
-    --   -- yield(Candidate("qsj", seg.start, seg._end, rqzdx2().." ".."星期"..weekstr.." "..os.date("%H:%M:%S"), "〔年月日週 時:分:秒〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." ".."星期"..weekstyle()[1].." "..os.date("%H:%M:%S"), "〔年月日週 時:分:秒〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, os.date(" %Y 年 %m 月 %d 日").." ".."星期"..weekstyle()[1].." "..os.date("%H:%M:%S"), "〔*年月日週 時:分:秒〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, fullshape_number(os.date("%Y")).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日 ".."星期"..weekstyle()[1].." "..fullshape_number(os.date("%H")).."："..fullshape_number(os.date("%M")).."："..fullshape_number(os.date("%S")), "〔年月日週 時:分:秒〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." "..weekstyle()[5].."曜日 "..os.date("%H:%M:%S"), "〔年月日週 時:分:秒〕"))
+    --   -- yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." ".."星期"..weekstyle()[1].." "..os.date("%H")..":"..os.date("%M")..":"..os.date("%S"), "〔年月日週 時:分:秒〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..weekstyle()[3].." "..os.date("%H")..":"..os.date("%M")..":"..os.date("%S"), "〔年月日週 時:分:秒〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, rqzdx1().." ".."星期"..weekstyle()[1].." "..os.date("%H:%M:%S"), "〔年月日週 時:分:秒〕 ~z"))
+    --   -- yield(Candidate("qsj", seg.start, seg._end, rqzdx2().." ".."星期"..weekstyle()[1].." "..os.date("%H:%M:%S"), "〔年月日週 時:分:秒〕"))
     --   return
     -- end
 
     -- if (input == "`fwtz") then
-    --   yield(Candidate("qsj", seg.start, seg._end, rqzdx1().." ".."星期"..weekstr.." "..os.date("%H:%M:%S"), "〔年月日週 時:分:秒〕"))
-    --   yield(Candidate("qsj", seg.start, seg._end, rqzdx2().." ".."星期"..weekstr.." "..os.date("%H:%M:%S"), "〔年月日週 時:分:秒〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, rqzdx1().." ".."星期"..weekstyle()[1].." "..os.date("%H:%M:%S"), "〔年月日週 時:分:秒〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, rqzdx2().." ".."星期"..weekstyle()[1].." "..os.date("%H:%M:%S"), "〔年月日週 時:分:秒〕"))
     --   return
     -- end
 -- function week_translator3(input, seg)
     -- if (input == "`fwn") then
-    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." ".."星期"..weekstr.." "..os.date("%H:%M"), "〔年月日週 時:分〕"))
-    --   yield(Candidate("qsj", seg.start, seg._end, os.date(" %Y 年 %m 月 %d 日").." ".."星期"..weekstr.." "..os.date("%H:%M"), "〔*年月日週 時:分〕"))
-    --   yield(Candidate("qsj", seg.start, seg._end, fullshape_number(os.date("%Y")).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日 ".."星期"..weekstr.." "..fullshape_number(os.date("%H")).."："..fullshape_number(os.date("%M")), "〔年月日週 時:分〕"))
-    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." "..weekstr_jp3.."曜日 "..os.date("%H:%M"), "〔年月日週 時:分〕"))
-    --   -- yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." ".."星期"..weekstr.." "..os.date("%H")..":"..os.date("%M"), "〔年月日週 時:分〕"))
-    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..weekstr_jp1.." "..os.date("%H")..":"..os.date("%M"), "〔年月日週 時:分〕"))
-    --   yield(Candidate("qsj", seg.start, seg._end, rqzdx1().." ".."星期"..weekstr.." "..os.date("%H:%M"), "〔年月日週 時:分〕 ~z"))
-    --   -- yield(Candidate("qsj", seg.start, seg._end, rqzdx2().." ".."星期"..weekstr.." "..os.date("%H:%M"), "〔年月日週 時:分〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." ".."星期"..weekstyle()[1].." "..os.date("%H:%M"), "〔年月日週 時:分〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, os.date(" %Y 年 %m 月 %d 日").." ".."星期"..weekstyle()[1].." "..os.date("%H:%M"), "〔*年月日週 時:分〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, fullshape_number(os.date("%Y")).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日 ".."星期"..weekstyle()[1].." "..fullshape_number(os.date("%H")).."："..fullshape_number(os.date("%M")), "〔年月日週 時:分〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." "..weekstyle()[5].."曜日 "..os.date("%H:%M"), "〔年月日週 時:分〕"))
+    --   -- yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." ".."星期"..weekstyle()[1].." "..os.date("%H")..":"..os.date("%M"), "〔年月日週 時:分〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..weekstyle()[3].." "..os.date("%H")..":"..os.date("%M"), "〔年月日週 時:分〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, rqzdx1().." ".."星期"..weekstyle()[1].." "..os.date("%H:%M"), "〔年月日週 時:分〕 ~z"))
+    --   -- yield(Candidate("qsj", seg.start, seg._end, rqzdx2().." ".."星期"..weekstyle()[1].." "..os.date("%H:%M"), "〔年月日週 時:分〕"))
     --   return
     -- end
 
     -- if (input == "`fwnz") then
-    --   yield(Candidate("qsj", seg.start, seg._end, rqzdx1().." ".."星期"..weekstr.." "..os.date("%H:%M"), "〔年月日週 時:分〕"))
-    --   yield(Candidate("qsj", seg.start, seg._end, rqzdx2().." ".."星期"..weekstr.." "..os.date("%H:%M"), "〔年月日週 時:分〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, rqzdx1().." ".."星期"..weekstyle()[1].." "..os.date("%H:%M"), "〔年月日週 時:分〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, rqzdx2().." ".."星期"..weekstyle()[1].." "..os.date("%H:%M"), "〔年月日週 時:分〕"))
     --   return
     -- end
 
@@ -6266,78 +6279,6 @@ function t2_translator(input, seg)
     -- local ll_1, ll_2, ly_1, ly_2, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
     -- local aptime1, aptime2, aptime3, aptime4, aptime5, aptime6, aptime7, aptime8, aptime0_1, aptime0_2, aptime0_3, aptime0_4, aptime00_1, aptime00_2,  aptime00_3, aptime00_4 = time_out1()
     -- local aptime_c1, aptime_c2, aptime_c3, aptime_c4, ap_5 = time_out2()
-
-    -- 先展示星期，以便後面使用
-    if (os.date("%w") == "0") then
-      weekstr = "日"
-      weekstr_c = "日"
-      weekstr_jp1 = "㈰"
-      weekstr_jp2 = "㊐"
-      weekstr_jp3 = "日"
-      weekstr_eng1 = "Sunday"
-      weekstr_eng2 = "Sun."
-      weekstr_eng3 = "Sun"
-    end
-    if (os.date("%w") == "1") then
-      weekstr = "一"
-      weekstr_c = "壹"
-      weekstr_jp1 = "㈪"
-      weekstr_jp2 = "㊊"
-      weekstr_jp3 = "月"
-      weekstr_eng1 = "Monday"
-      weekstr_eng2 = "Mon."
-      weekstr_eng3 = "Mon"
-    end
-    if (os.date("%w") == "2") then
-      weekstr = "二"
-      weekstr_c = "貳"
-      weekstr_jp1 = "㈫"
-      weekstr_jp2 = "㊋"
-      weekstr_jp3 = "火"
-      weekstr_eng1 = "Tuesday"
-      weekstr_eng2 = "Tues."
-      weekstr_eng3 = "Tues"
-    end
-    if (os.date("%w") == "3") then
-      weekstr = "三"
-      weekstr_c = "參"
-      weekstr_jp1 = "㈬"
-      weekstr_jp2 = "㊌"
-      weekstr_jp3 = "水"
-      weekstr_eng1 = "Wednesday"
-      weekstr_eng2 = "Wed."
-      weekstr_eng3 = "Wed"
-    end
-    if (os.date("%w") == "4") then
-      weekstr = "四"
-      weekstr_c = "肆"
-      weekstr_jp1 = "㈭"
-      weekstr_jp2 = "㊍"
-      weekstr_jp3 = "木"
-      weekstr_eng1 = "Thursday"
-      weekstr_eng2 = "Thur."
-      weekstr_eng3 = "Thur"
-    end
-    if (os.date("%w") == "5") then
-      weekstr = "五"
-      weekstr_c = "伍"
-      weekstr_jp1 = "㈮"
-      weekstr_jp2 = "㊎"
-      weekstr_jp3 = "金"
-      weekstr_eng1 = "Friday"
-      weekstr_eng2 = "Fri."
-      weekstr_eng3 = "Fri"
-    end
-    if (os.date("%w") == "6") then
-      weekstr = "六"
-      weekstr_c = "陸"
-      weekstr_jp1 = "㈯"
-      weekstr_jp2 = "㊏"
-      weekstr_jp3 = "土"
-      weekstr_eng1 = "Saturday"
-      weekstr_eng2 = "Sat."
-      weekstr_eng3 = "Sat"
-    end
 
     -- lua 程式原生時間
     if (input == "'/p") then
@@ -7211,80 +7152,80 @@ function t2_translator(input, seg)
     end
 
     if (input == "'/mdw") then
-      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1").." ".."星期"..weekstr.." ", "〔月日週〕 ~c"))
-      -- yield(Candidate("date", seg.start, seg._end, jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." ".."星期"..weekstr.." ", "〔月日週〕"))
-      yield(Candidate("date", seg.start, seg._end, rqzdx1(23).." ".."星期"..weekstr.." ", "〔月日週〕 ~z"))
-      -- yield(Candidate("date", seg.start, seg._end, rqzdx2(23).." ".."星期"..weekstr.." ", "〔月日週〕"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng1_m_date(os.date("%m")).." "..eng2_d_date(os.date("%d")), "〔週月日〕 ~a"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng2_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")), "〔週日月〕 ~e"))
-      yield(Candidate("date", seg.start, seg._end, jp_m_date(os.date("%m"))..jp_d_date(os.date("%d"))..weekstr_jp1, "〔日本〕 ~j"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1").." ".."星期"..weekstyle()[1].." ", "〔月日週〕 ~c"))
+      -- yield(Candidate("date", seg.start, seg._end, jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." ".."星期"..weekstyle()[1].." ", "〔月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, rqzdx1(23).." ".."星期"..weekstyle()[1].." ", "〔月日週〕 ~z"))
+      -- yield(Candidate("date", seg.start, seg._end, rqzdx2(23).." ".."星期"..weekstyle()[1].." ", "〔月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng1_m_date(os.date("%m")).." "..eng2_d_date(os.date("%d")), "〔週月日〕 ~a"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng2_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")), "〔週日月〕 ~e"))
+      yield(Candidate("date", seg.start, seg._end, jp_m_date(os.date("%m"))..jp_d_date(os.date("%d"))..weekstyle()[3], "〔日本〕 ~j"))
       -- local a, b, y, chinese_m, chinese_d = to_chinese_cal_local(os.time())
       local a, b, c, d, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
-      yield(Candidate("date", seg.start, seg._end, lm..ld.." "..weekstr_jp3.." ", "〔農曆〕 ~l"))
+      yield(Candidate("date", seg.start, seg._end, lm..ld.." "..weekstyle()[5].." ", "〔農曆〕 ~l"))
       return
     end
 
     if (input == "'/mdwl") then
       -- local a, b, y, chinese_m, chinese_d = to_chinese_cal_local(os.time())
       local a, b, c, d, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
-      yield(Candidate("date", seg.start, seg._end, lm..ld.." "..weekstr_jp3.." ", "〔農曆〕"))
+      yield(Candidate("date", seg.start, seg._end, lm..ld.." "..weekstyle()[5].." ", "〔農曆〕"))
       local All_g, Y_g, M_g, D_g = lunarJzl(os.date("%Y%m%d%H"))
-      yield(Candidate("date", seg.start, seg._end, M_g.."月"..D_g.."日".." "..weekstr_jp3.." " , "〔農曆干支〕"))
+      yield(Candidate("date", seg.start, seg._end, M_g.."月"..D_g.."日".." "..weekstyle()[5].." " , "〔農曆干支〕"))
       return
     end
 
     if (input == "'/mdwa") then
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng1_m_date(os.date("%m")).." "..eng2_d_date(os.date("%d")), "〔週月日〕"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng1_m_date(os.date("%m")).." "..eng3_d_date(os.date("%d")), "〔週月日〕"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng2..", "..eng2_m_date(os.date("%m")).." "..eng3_d_date(os.date("%d")), "〔週月日〕"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng3.." "..eng3_m_date(os.date("%m")).." "..eng4_d_date(os.date("%d")), "〔週月日〕"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng1_m_date(os.date("%m")).." the "..eng1_d_date(os.date("%d")), "〔週月日〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng1_m_date(os.date("%m")).." "..eng2_d_date(os.date("%d")), "〔週月日〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng1_m_date(os.date("%m")).." "..eng3_d_date(os.date("%d")), "〔週月日〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[7]..", "..eng2_m_date(os.date("%m")).." "..eng3_d_date(os.date("%d")), "〔週月日〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[8].." "..eng3_m_date(os.date("%m")).." "..eng4_d_date(os.date("%d")), "〔週月日〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng1_m_date(os.date("%m")).." the "..eng1_d_date(os.date("%d")), "〔週月日〕"))
       return
     end
 
     if (input == "'/mdwe") then
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng2_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")), "〔週日月〕"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng3_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")), "〔週日月〕"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng2..", "..eng2_d_date(os.date("%d")).." "..eng2_m_date(os.date("%m")), "〔週日月〕"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", ".."the "..eng1_d_date(os.date("%d")).." of "..eng1_m_date(os.date("%m")), "〔週日月〕"))
-      -- yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", ".."The "..eng1_d_date(os.date("%d")).." of "..eng1_m_date(os.date("%m"))..", "..os.date("%Y"), "〔週日月〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng2_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")), "〔週日月〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng3_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")), "〔週日月〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[7]..", "..eng2_d_date(os.date("%d")).." "..eng2_m_date(os.date("%m")), "〔週日月〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", ".."the "..eng1_d_date(os.date("%d")).." of "..eng1_m_date(os.date("%m")), "〔週日月〕"))
+      -- yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", ".."The "..eng1_d_date(os.date("%d")).." of "..eng1_m_date(os.date("%m"))..", "..os.date("%Y"), "〔週日月〕"))
       return
     end
 
     if (input == "'/mdwc") then
-      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date(" %m 月 %d 日"), "([ ])0", "%1").." ".."星期"..weekstr.." ", "〔*月日週*〕"))
-      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1").." ".."星期"..weekstr.." ", "〔月日週〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).." ".."星期"..weekstr.." ", "〔月日週〕"))
-      yield(Candidate("date", seg.start, seg._end, os.date(" %m 月 %d 日").." ".."星期"..weekstr.." ", "〔*月日週*〕"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日").." ".."星期"..weekstr.." ", "〔月日週〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日".." ".."星期"..weekstr.." ", "〔月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date(" %m 月 %d 日"), "([ ])0", "%1").." ".."星期"..weekstyle()[1].." ", "〔*月日週*〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1").." ".."星期"..weekstyle()[1].." ", "〔月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).." ".."星期"..weekstyle()[1].." ", "〔月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date(" %m 月 %d 日").." ".."星期"..weekstyle()[1].." ", "〔*月日週*〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日").." ".."星期"..weekstyle()[1].." ", "〔月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日".." ".."星期"..weekstyle()[1].." ", "〔月日週〕"))
       return
     end
 
     if (input == "'/mdwj") then
-      yield(Candidate("date", seg.start, seg._end, jp_m_date(os.date("%m"))..jp_d_date(os.date("%d"))..weekstr_jp1, "〔日本〕"))
-      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1")..weekstr_jp1, "〔日本〕"))
-      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1").." "..weekstr_jp3.."曜日 ", "〔日本〕"))
-      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1").."("..weekstr_jp3.."曜日)", "〔日本〕"))
-      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1").."（"..weekstr_jp3.."曜日）", "〔日本〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1"))..weekstr_jp1, "〔日本〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).." "..weekstr_jp3.."曜日 ", "〔日本〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).."("..weekstr_jp3.."曜日)", "〔日本〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).."（"..weekstr_jp3.."曜日）", "〔日本〕"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日")..weekstr_jp1, "〔日本〕"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日").." "..weekstr_jp3.."曜日 ", "〔日本〕"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日").."("..weekstr_jp3.."曜日)", "〔日本〕"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日").."（"..weekstr_jp3.."曜日）", "〔日本〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%m月%d日")..weekstr_jp1), "〔日本〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%m月%d日").." "..weekstr_jp3.."曜日 "), "〔日本〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%m月%d日").."("..weekstr_jp3.."曜日)"), "〔日本〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%m月%d日").."（"..weekstr_jp3.."曜日）"), "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, jp_m_date(os.date("%m"))..jp_d_date(os.date("%d"))..weekstyle()[3], "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1")..weekstyle()[3], "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1").." "..weekstyle()[5].."曜日 ", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1").."("..weekstyle()[5].."曜日)", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1").."（"..weekstyle()[5].."曜日）", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1"))..weekstyle()[3], "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).." "..weekstyle()[5].."曜日 ", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).."("..weekstyle()[5].."曜日)", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).."（"..weekstyle()[5].."曜日）", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日")..weekstyle()[3], "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日").." "..weekstyle()[5].."曜日 ", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日").."("..weekstyle()[5].."曜日)", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日").."（"..weekstyle()[5].."曜日）", "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%m月%d日")..weekstyle()[3]), "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%m月%d日").." "..weekstyle()[5].."曜日 "), "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%m月%d日").."("..weekstyle()[5].."曜日)"), "〔日本〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%m月%d日").."（"..weekstyle()[5].."曜日）"), "〔日本〕"))
       return
     end
 
     if (input == "'/mdwz") then
-      yield(Candidate("date", seg.start, seg._end, rqzdx1(23).." ".."星期"..weekstr.." ", "〔月日週〕"))
-      yield(Candidate("date", seg.start, seg._end, rqzdx2(23).." ".."星期"..weekstr_c.." ", "〔月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, rqzdx1(23).." ".."星期"..weekstyle()[1].." ", "〔月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, rqzdx2(23).." ".."星期"..weekstyle()[2].." ", "〔月日週〕"))
       return
     end
 
@@ -7418,198 +7359,198 @@ function t2_translator(input, seg)
 
 -- function week_translator0(input, seg)
     if (input == "'/w") then
-      yield(Candidate("qsj", seg.start, seg._end, "星期"..weekstr, "〔週〕 ~c"))
-      yield(Candidate("qsj", seg.start, seg._end, "週"..weekstr, "〔週〕 ~z"))
-      yield(Candidate("qsj", seg.start, seg._end, weekstr_eng1, "〔週〕 ~a"))
-      yield(Candidate("qsj", seg.start, seg._end, weekstr_eng2, "〔週〕 ~e"))
-      yield(Candidate("qsj", seg.start, seg._end, weekstr_jp3.."曜日", "〔週〕 ~j"))
+      yield(Candidate("qsj", seg.start, seg._end, "星期"..weekstyle()[1], "〔週〕 ~c"))
+      yield(Candidate("qsj", seg.start, seg._end, "週"..weekstyle()[1], "〔週〕 ~z"))
+      yield(Candidate("qsj", seg.start, seg._end, weekstyle()[6], "〔週〕 ~a"))
+      yield(Candidate("qsj", seg.start, seg._end, weekstyle()[7], "〔週〕 ~e"))
+      yield(Candidate("qsj", seg.start, seg._end, weekstyle()[5].."曜日", "〔週〕 ~j"))
       return
     end
 
     if (input == "'/wa") then
-      yield(Candidate("qsj", seg.start, seg._end, " "..weekstr_eng1.." ", "〔*週*〕"))
-      yield(Candidate("qsj", seg.start, seg._end, weekstr_eng1, "〔週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, " "..weekstyle()[6].." ", "〔*週*〕"))
+      yield(Candidate("qsj", seg.start, seg._end, weekstyle()[6], "〔週〕"))
       return
     end
 
     if (input == "'/we") then
-      yield(Candidate("qsj", seg.start, seg._end, " "..weekstr_eng2.." ", "〔*週*〕"))
-      yield(Candidate("qsj", seg.start, seg._end, weekstr_eng2, "〔週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, " "..weekstr_eng3.." ", "〔*週*〕"))
-      yield(Candidate("qsj", seg.start, seg._end, weekstr_eng3, "〔週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, " "..weekstyle()[7].." ", "〔*週*〕"))
+      yield(Candidate("qsj", seg.start, seg._end, weekstyle()[7], "〔週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, " "..weekstyle()[8].." ", "〔*週*〕"))
+      yield(Candidate("qsj", seg.start, seg._end, weekstyle()[8], "〔週〕"))
       return
     end
 
     if (input == "'/wc") then
-      yield(Candidate("qsj", seg.start, seg._end, " ".."星期"..weekstr.." ", "〔*週*〕"))
-      yield(Candidate("qsj", seg.start, seg._end, "星期"..weekstr, "〔週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, "(".."星期"..weekstr..")", "〔週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, "（".."星期"..weekstr.."）", "〔週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, " ".."星期"..weekstr_c.." ", "〔*週*〕"))
+      yield(Candidate("qsj", seg.start, seg._end, " ".."星期"..weekstyle()[1].." ", "〔*週*〕"))
+      yield(Candidate("qsj", seg.start, seg._end, "星期"..weekstyle()[1], "〔週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, "(".."星期"..weekstyle()[1]..")", "〔週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, "（".."星期"..weekstyle()[1].."）", "〔週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, " ".."星期"..weekstyle()[2].." ", "〔*週*〕"))
       return
     end
 
     if (input == "'/wz") then
-      yield(Candidate("qsj", seg.start, seg._end, " ".."週"..weekstr.." ", "〔*週*〕"))
-      yield(Candidate("qsj", seg.start, seg._end, "週"..weekstr, "〔週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, "(".."週"..weekstr..")", "〔週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, "（".."週"..weekstr.."）", "〔週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, " ".."週"..weekstr_c.." ", "〔*週*〕"))
+      yield(Candidate("qsj", seg.start, seg._end, " ".."週"..weekstyle()[1].." ", "〔*週*〕"))
+      yield(Candidate("qsj", seg.start, seg._end, "週"..weekstyle()[1], "〔週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, "(".."週"..weekstyle()[1]..")", "〔週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, "（".."週"..weekstyle()[1].."）", "〔週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, " ".."週"..weekstyle()[2].." ", "〔*週*〕"))
       return
     end
 
     if (input == "'/wj") then
-      yield(Candidate("qsj", seg.start, seg._end, " "..weekstr_jp3.."曜日 ", "〔*週*〕"))
-      yield(Candidate("qsj", seg.start, seg._end, weekstr_jp3.."曜日", "〔週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, "("..weekstr_jp3.."曜日)", "〔週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, "（"..weekstr_jp3.."曜日）", "〔週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, weekstr_jp1, "〔週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, weekstr_jp2, "〔週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, " "..weekstyle()[5].."曜日 ", "〔*週*〕"))
+      yield(Candidate("qsj", seg.start, seg._end, weekstyle()[5].."曜日", "〔週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, "("..weekstyle()[5].."曜日)", "〔週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, "（"..weekstyle()[5].."曜日）", "〔週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, weekstyle()[3], "〔週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, weekstyle()[4], "〔週〕"))
       return
     end
 
 -- function week_translator1(input, seg)
     if (input == "'/fw") then
-      yield(Candidate("qsj", seg.start, seg._end, string.gsub(os.date("%Y年%m月%d日"), "([^%d])0", "%1").." ".."星期"..weekstr.." ", "〔年月日週〕 ~c"))
-      yield(Candidate("qsj", seg.start, seg._end, rqzdx1().." ".."星期"..weekstr.." ", "〔年月日週〕 ~z"))
-      -- yield(Candidate("qsj", seg.start, seg._end, rqzdx2().." ".."星期"..weekstr.." ", "〔年月日週〕"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng1_m_date(os.date("%m")).." "..eng2_d_date(os.date("%d"))..", "..os.date("%Y"), "〔週月日年〕 ~a"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng2_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")).." "..os.date("%Y"), "〔週日月年〕 ~e"))
-      -- yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..weekstr_jp1.." ", "〔年月日週〕 ~j"))
+      yield(Candidate("qsj", seg.start, seg._end, string.gsub(os.date("%Y年%m月%d日"), "([^%d])0", "%1").." ".."星期"..weekstyle()[1].." ", "〔年月日週〕 ~c"))
+      yield(Candidate("qsj", seg.start, seg._end, rqzdx1().." ".."星期"..weekstyle()[1].." ", "〔年月日週〕 ~z"))
+      -- yield(Candidate("qsj", seg.start, seg._end, rqzdx2().." ".."星期"..weekstyle()[1].." ", "〔年月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng1_m_date(os.date("%m")).." "..eng2_d_date(os.date("%d"))..", "..os.date("%Y"), "〔週月日年〕 ~a"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng2_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")).." "..os.date("%Y"), "〔週日月年〕 ~e"))
+      -- yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..weekstyle()[3].." ", "〔年月日週〕 ~j"))
       local jpymd, jp_y = jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))
-      yield(Candidate("date", seg.start, seg._end, string.gsub(jpymd, "([^%d])0", "%1")..weekstr_jp1, "〔日本元号〕 ~j"))
-      yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日", "([^%d])0", "%1").." ".."星期"..weekstr.." ", "〔民國〕 ~h"))
-      yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(23).." ".."星期"..weekstr.." ", "〔民國〕 ~g"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(jpymd, "([^%d])0", "%1")..weekstyle()[3], "〔日本元号〕 ~j"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日", "([^%d])0", "%1").." ".."星期"..weekstyle()[1].." ", "〔民國〕 ~h"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(23).." ".."星期"..weekstyle()[1].." ", "〔民國〕 ~g"))
       -- local chinese_date = to_chinese_cal_local(os.time())
       local ll_1, ll_2 = Date2LunarDate(os.date("%Y%m%d"))
-      yield(Candidate("qsj", seg.start, seg._end, ll_1.." "..weekstr_jp3.." ", "〔農曆〕 ~l"))
+      yield(Candidate("qsj", seg.start, seg._end, ll_1.." "..weekstyle()[5].." ", "〔農曆〕 ~l"))
       return
     end
 
     if (input == "'/fwj") then
       local jpymd, jp_y = jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))
-      yield(Candidate("date", seg.start, seg._end, string.gsub(jpymd, "([^%d])0", "%1")..weekstr_jp1, "〔日本元号〕"))
-      yield(Candidate("date", seg.start, seg._end, string.gsub(jpymd, "([^%d])0", "%1").." "..weekstr_jp3.."曜日 ", "〔日本元号〕"))
-      yield(Candidate("date", seg.start, seg._end, string.gsub(jpymd, "([^%d])0", "%1").."("..weekstr_jp3.."曜日)", "〔日本元号〕"))
-      yield(Candidate("date", seg.start, seg._end, string.gsub(jpymd, "([^%d])0", "%1").."（"..weekstr_jp3.."曜日）", "〔日本元号〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jpymd, "([^%d])0", "%1")..weekstr_jp1), "〔日本元号〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jpymd, "([^%d])0", "%1").." "..weekstr_jp3.."曜日 "), "〔日本元号〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jpymd, "([^%d])0", "%1").."("..weekstr_jp3.."曜日)"), "〔日本元号〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jpymd, "([^%d])0", "%1").."（"..weekstr_jp3.."曜日）"), "〔日本元号〕"))
-      yield(Candidate("date", seg.start, seg._end, jpymd..weekstr_jp1, "〔日本元号〕"))
-      yield(Candidate("date", seg.start, seg._end, jpymd.." "..weekstr_jp3.."曜日 ", "〔日本元号〕"))
-      yield(Candidate("date", seg.start, seg._end, jpymd.."("..weekstr_jp3.."曜日)", "〔日本元号〕"))
-      yield(Candidate("date", seg.start, seg._end, jpymd.."（"..weekstr_jp3.."曜日）", "〔日本元号〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(jpymd..weekstr_jp1), "〔日本元号〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(jpymd.." "..weekstr_jp3.."曜日 "), "〔日本元号〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(jpymd.."("..weekstr_jp3.."曜日)"), "〔日本元号〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(jpymd.."（"..weekstr_jp3.."曜日）"), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(jpymd, "([^%d])0", "%1")..weekstyle()[3], "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(jpymd, "([^%d])0", "%1").." "..weekstyle()[5].."曜日 ", "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(jpymd, "([^%d])0", "%1").."("..weekstyle()[5].."曜日)", "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub(jpymd, "([^%d])0", "%1").."（"..weekstyle()[5].."曜日）", "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jpymd, "([^%d])0", "%1")..weekstyle()[3]), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jpymd, "([^%d])0", "%1").." "..weekstyle()[5].."曜日 "), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jpymd, "([^%d])0", "%1").."("..weekstyle()[5].."曜日)"), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jpymd, "([^%d])0", "%1").."（"..weekstyle()[5].."曜日）"), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, jpymd..weekstyle()[3], "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, jpymd.." "..weekstyle()[5].."曜日 ", "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, jpymd.."("..weekstyle()[5].."曜日)", "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, jpymd.."（"..weekstyle()[5].."曜日）", "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(jpymd..weekstyle()[3]), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(jpymd.." "..weekstyle()[5].."曜日 "), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(jpymd.."("..weekstyle()[5].."曜日)"), "〔日本元号〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(jpymd.."（"..weekstyle()[5].."曜日）"), "〔日本元号〕"))
       return
     end
     -- if (input == "'/fwj") then
-    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..weekstr_jp1.." ", "〔年月日週〕"))
-    --   -- yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." ".."星期"..weekstr.." ", "〔年月日週〕"))
-    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." "..weekstr_jp3.."曜日 ", "〔年月日週〕"))
-    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").."("..weekstr_jp3.."曜日)", "〔年月日週〕"))
-    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").."（"..weekstr_jp3.."曜日）", "〔年月日週〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..weekstyle()[3].." ", "〔年月日週〕"))
+    --   -- yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." ".."星期"..weekstyle()[1].." ", "〔年月日週〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." "..weekstyle()[5].."曜日 ", "〔年月日週〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").."("..weekstyle()[5].."曜日)", "〔年月日週〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").."（"..weekstyle()[5].."曜日）", "〔年月日週〕"))
     --   return
     -- end
 
     if (input == "'/fwh") then
-      -- yield(Candidate("date", seg.start, seg._end, string.gsub("民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日", "([^%d])0", "%1").." ".."星期"..weekstr.." ", "〔*年月日週〕"))
-      yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日", "([^%d])0", "%1").." ".."星期"..weekstr.." ", "〔年月日週〕"))
-      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(string.gsub(os.date("%m").."月"..os.date("%d").."日", "([^%d])0", "%1") ).." ".."星期"..weekstr.." ", "〔年月日週〕"))
-      -- yield(Candidate("date", seg.start, seg._end, "民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日".." ".."星期"..weekstr.." ", "〔*年月日週〕"))
-      yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日".." ".."星期"..weekstr.." ", "〔年月日週〕"))
-      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日".." ".."星期"..weekstr.." ", "〔年月日週〕"))
+      -- yield(Candidate("date", seg.start, seg._end, string.gsub("民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日", "([^%d])0", "%1").." ".."星期"..weekstyle()[1].." ", "〔*年月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日", "([^%d])0", "%1").." ".."星期"..weekstyle()[1].." ", "〔年月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).." ".."星期"..weekstyle()[1].." ", "〔年月日週〕"))
+      -- yield(Candidate("date", seg.start, seg._end, "民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日".." ".."星期"..weekstyle()[1].." ", "〔*年月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日".." ".."星期"..weekstyle()[1].." ", "〔年月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日".." ".."星期"..weekstyle()[1].." ", "〔年月日週〕"))
       return
     end
 
     if (input == "'/fwg") then
-      yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(23).." ".."星期"..weekstr.." ", "〔年月日週〕"))
-      yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[1], min_guo(os.date("%Y"))).."年"..rqzdx1(23).." ".."星期"..weekstr.." ", "〔年月日週〕"))
-      yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[2], min_guo(os.date("%Y"))).."年"..rqzdx2(23).." ".."星期"..weekstr_c.." ", "〔年月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(23).." ".."星期"..weekstyle()[1].." ", "〔年月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[1], min_guo(os.date("%Y"))).."年"..rqzdx1(23).." ".."星期"..weekstyle()[1].." ", "〔年月日週〕"))
+      yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[2], min_guo(os.date("%Y"))).."年"..rqzdx2(23).." ".."星期"..weekstyle()[2].." ", "〔年月日週〕"))
       return
     end
 
     if (input == "'/fwl") then
       -- local chinese_date = to_chinese_cal_local(os.time())
       local ll_1, ll_2 = Date2LunarDate(os.date("%Y%m%d"))
-      yield(Candidate("qsj", seg.start, seg._end, ll_1.." "..weekstr_jp3.." ", "〔農曆〕"))
-      yield(Candidate("qsj", seg.start, seg._end, ll_2.." "..weekstr_jp3.." ", "〔農曆〕"))
+      yield(Candidate("qsj", seg.start, seg._end, ll_1.." "..weekstyle()[5].." ", "〔農曆〕"))
+      yield(Candidate("qsj", seg.start, seg._end, ll_2.." "..weekstyle()[5].." ", "〔農曆〕"))
       local All_g, Y_g, M_g, D_g = lunarJzl(os.date("%Y%m%d%H"))
-      yield(Candidate("date", seg.start, seg._end, Y_g.."年"..M_g.."月"..D_g.."日".." "..weekstr_jp3.." " , "〔農曆干支〕"))
+      yield(Candidate("date", seg.start, seg._end, Y_g.."年"..M_g.."月"..D_g.."日".." "..weekstyle()[5].." " , "〔農曆干支〕"))
       return
     end
 
     if (input == "'/fwa") then
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng1_m_date(os.date("%m")).." "..eng2_d_date(os.date("%d"))..", "..os.date("%Y"), "〔週月日年〕"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng1_m_date(os.date("%m")).." "..eng3_d_date(os.date("%d"))..", "..os.date("%Y"), "〔週月日年〕"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng2..", "..eng2_m_date(os.date("%m")).." "..eng3_d_date(os.date("%d"))..", "..os.date("%Y"), "〔週月日年〕"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng3.." "..eng3_m_date(os.date("%m")).." "..eng4_d_date(os.date("%d")).." "..os.date("%Y"), "〔週月日年〕"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng1_m_date(os.date("%m")).." the "..eng1_d_date(os.date("%d"))..", "..os.date("%Y"), "〔週月日年〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng1_m_date(os.date("%m")).." "..eng2_d_date(os.date("%d"))..", "..os.date("%Y"), "〔週月日年〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng1_m_date(os.date("%m")).." "..eng3_d_date(os.date("%d"))..", "..os.date("%Y"), "〔週月日年〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[7]..", "..eng2_m_date(os.date("%m")).." "..eng3_d_date(os.date("%d"))..", "..os.date("%Y"), "〔週月日年〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[8].." "..eng3_m_date(os.date("%m")).." "..eng4_d_date(os.date("%d")).." "..os.date("%Y"), "〔週月日年〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng1_m_date(os.date("%m")).." the "..eng1_d_date(os.date("%d"))..", "..os.date("%Y"), "〔週月日年〕"))
       return
     end
 
     if (input == "'/fwe") then
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng2_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")).." "..os.date("%Y"), "〔週日月年〕"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", "..eng3_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")).." "..os.date("%Y"), "〔週日月年〕"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng2..", "..eng2_d_date(os.date("%d")).." "..eng2_m_date(os.date("%m")).." "..os.date("%Y"), "〔週日月年〕"))
-      yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", ".."the "..eng1_d_date(os.date("%d")).." of "..eng1_m_date(os.date("%m"))..", "..os.date("%Y"), "〔週日月年〕"))
-      -- yield(Candidate("date", seg.start, seg._end, weekstr_eng1..", ".."The "..eng1_d_date(os.date("%d")).." of "..eng1_m_date(os.date("%m"))..", "..os.date("%Y"), "〔週日月年〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng2_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")).." "..os.date("%Y"), "〔週日月年〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng3_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")).." "..os.date("%Y"), "〔週日月年〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[7]..", "..eng2_d_date(os.date("%d")).." "..eng2_m_date(os.date("%m")).." "..os.date("%Y"), "〔週日月年〕"))
+      yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", ".."the "..eng1_d_date(os.date("%d")).." of "..eng1_m_date(os.date("%m"))..", "..os.date("%Y"), "〔週日月年〕"))
+      -- yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", ".."The "..eng1_d_date(os.date("%d")).." of "..eng1_m_date(os.date("%m"))..", "..os.date("%Y"), "〔週日月年〕"))
       return
     end
 
     if (input == "'/fwc") then
-      yield(Candidate("qsj", seg.start, seg._end, string.gsub(os.date(" %Y 年 %m 月 %d 日"), "([^%d])0", "%1").." ".."星期"..weekstr.." ", "〔*年月日週*〕"))
-      yield(Candidate("qsj", seg.start, seg._end, string.gsub(os.date("%Y年%m月%d日"), "([^%d])0", "%1").." ".."星期"..weekstr.." ", "〔年月日週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, fullshape_number(string.gsub(os.date("%Y年%m月%d日"), "([^%d])0", "%1")).." 星期"..weekstr.." ", "〔年月日週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, os.date(" %Y 年 %m 月 %d 日").." ".."星期"..weekstr.." ", "〔*年月日週*〕"))
-      yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." ".."星期"..weekstr.." ", "〔年月日週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, fullshape_number(os.date("%Y")).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日 ".."星期"..weekstr.." ", "〔年月日週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, string.gsub(os.date(" %Y 年 %m 月 %d 日"), "([^%d])0", "%1").." ".."星期"..weekstyle()[1].." ", "〔*年月日週*〕"))
+      yield(Candidate("qsj", seg.start, seg._end, string.gsub(os.date("%Y年%m月%d日"), "([^%d])0", "%1").." ".."星期"..weekstyle()[1].." ", "〔年月日週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, fullshape_number(string.gsub(os.date("%Y年%m月%d日"), "([^%d])0", "%1")).." 星期"..weekstyle()[1].." ", "〔年月日週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, os.date(" %Y 年 %m 月 %d 日").." ".."星期"..weekstyle()[1].." ", "〔*年月日週*〕"))
+      yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." ".."星期"..weekstyle()[1].." ", "〔年月日週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, fullshape_number(os.date("%Y")).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日 ".."星期"..weekstyle()[1].." ", "〔年月日週〕"))
       return
     end
 
     if (input == "'/fwz") then
-      yield(Candidate("qsj", seg.start, seg._end, rqzdx1().." ".."星期"..weekstr.." ", "〔年月日週〕"))
-      yield(Candidate("qsj", seg.start, seg._end, rqzdx2().." ".."星期"..weekstr_c.." ", "〔年月日週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, rqzdx1().." ".."星期"..weekstyle()[1].." ", "〔年月日週〕"))
+      yield(Candidate("qsj", seg.start, seg._end, rqzdx2().." ".."星期"..weekstyle()[2].." ", "〔年月日週〕"))
       return
     end
 
 -- function week_translator2(input, seg)
     -- if (input == "'/fwt") then
-    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." ".."星期"..weekstr.." "..os.date("%H:%M:%S"), "〔年月日週 時:分:秒〕"))
-    --   yield(Candidate("qsj", seg.start, seg._end, os.date(" %Y 年 %m 月 %d 日").." ".."星期"..weekstr.." "..os.date("%H:%M:%S"), "〔*年月日週 時:分:秒〕"))
-    --   yield(Candidate("qsj", seg.start, seg._end, fullshape_number(os.date("%Y")).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日 ".."星期"..weekstr.." "..fullshape_number(os.date("%H")).."："..fullshape_number(os.date("%M")).."："..fullshape_number(os.date("%S")), "〔年月日週 時:分:秒〕"))
-    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." "..weekstr_jp3.."曜日 "..os.date("%H:%M:%S"), "〔年月日週 時:分:秒〕"))
-    --   -- yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." ".."星期"..weekstr.." "..os.date("%H")..":"..os.date("%M")..":"..os.date("%S"), "〔年月日週 時:分:秒〕"))
-    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..weekstr_jp1.." "..os.date("%H")..":"..os.date("%M")..":"..os.date("%S"), "〔年月日週 時:分:秒〕"))
-    --   yield(Candidate("qsj", seg.start, seg._end, rqzdx1().." ".."星期"..weekstr.." "..os.date("%H:%M:%S"), "〔年月日週 時:分:秒〕 ~z"))
-    --   -- yield(Candidate("qsj", seg.start, seg._end, rqzdx2().." ".."星期"..weekstr.." "..os.date("%H:%M:%S"), "〔年月日週 時:分:秒〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." ".."星期"..weekstyle()[1].." "..os.date("%H:%M:%S"), "〔年月日週 時:分:秒〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, os.date(" %Y 年 %m 月 %d 日").." ".."星期"..weekstyle()[1].." "..os.date("%H:%M:%S"), "〔*年月日週 時:分:秒〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, fullshape_number(os.date("%Y")).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日 ".."星期"..weekstyle()[1].." "..fullshape_number(os.date("%H")).."："..fullshape_number(os.date("%M")).."："..fullshape_number(os.date("%S")), "〔年月日週 時:分:秒〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." "..weekstyle()[5].."曜日 "..os.date("%H:%M:%S"), "〔年月日週 時:分:秒〕"))
+    --   -- yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." ".."星期"..weekstyle()[1].." "..os.date("%H")..":"..os.date("%M")..":"..os.date("%S"), "〔年月日週 時:分:秒〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..weekstyle()[3].." "..os.date("%H")..":"..os.date("%M")..":"..os.date("%S"), "〔年月日週 時:分:秒〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, rqzdx1().." ".."星期"..weekstyle()[1].." "..os.date("%H:%M:%S"), "〔年月日週 時:分:秒〕 ~z"))
+    --   -- yield(Candidate("qsj", seg.start, seg._end, rqzdx2().." ".."星期"..weekstyle()[1].." "..os.date("%H:%M:%S"), "〔年月日週 時:分:秒〕"))
     --   return
     -- end
 
     -- if (input == "'/fwtz") then
-    --   yield(Candidate("qsj", seg.start, seg._end, rqzdx1().." ".."星期"..weekstr.." "..os.date("%H:%M:%S"), "〔年月日週 時:分:秒〕"))
-    --   yield(Candidate("qsj", seg.start, seg._end, rqzdx2().." ".."星期"..weekstr.." "..os.date("%H:%M:%S"), "〔年月日週 時:分:秒〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, rqzdx1().." ".."星期"..weekstyle()[1].." "..os.date("%H:%M:%S"), "〔年月日週 時:分:秒〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, rqzdx2().." ".."星期"..weekstyle()[1].." "..os.date("%H:%M:%S"), "〔年月日週 時:分:秒〕"))
     --   return
     -- end
 -- function week_translator3(input, seg)
     -- if (input == "'/fwn") then
-    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." ".."星期"..weekstr.." "..os.date("%H:%M"), "〔年月日週 時:分〕"))
-    --   yield(Candidate("qsj", seg.start, seg._end, os.date(" %Y 年 %m 月 %d 日").." ".."星期"..weekstr.." "..os.date("%H:%M"), "〔*年月日週 時:分〕"))
-    --   yield(Candidate("qsj", seg.start, seg._end, fullshape_number(os.date("%Y")).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日 ".."星期"..weekstr.." "..fullshape_number(os.date("%H")).."："..fullshape_number(os.date("%M")), "〔年月日週 時:分〕"))
-    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." "..weekstr_jp3.."曜日 "..os.date("%H:%M"), "〔年月日週 時:分〕"))
-    --   -- yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." ".."星期"..weekstr.." "..os.date("%H")..":"..os.date("%M"), "〔年月日週 時:分〕"))
-    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..weekstr_jp1.." "..os.date("%H")..":"..os.date("%M"), "〔年月日週 時:分〕"))
-    --   yield(Candidate("qsj", seg.start, seg._end, rqzdx1().." ".."星期"..weekstr.." "..os.date("%H:%M"), "〔年月日週 時:分〕 ~z"))
-    --   -- yield(Candidate("qsj", seg.start, seg._end, rqzdx2().." ".."星期"..weekstr.." "..os.date("%H:%M"), "〔年月日週 時:分〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." ".."星期"..weekstyle()[1].." "..os.date("%H:%M"), "〔年月日週 時:分〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, os.date(" %Y 年 %m 月 %d 日").." ".."星期"..weekstyle()[1].." "..os.date("%H:%M"), "〔*年月日週 時:分〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, fullshape_number(os.date("%Y")).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日 ".."星期"..weekstyle()[1].." "..fullshape_number(os.date("%H")).."："..fullshape_number(os.date("%M")), "〔年月日週 時:分〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." "..weekstyle()[5].."曜日 "..os.date("%H:%M"), "〔年月日週 時:分〕"))
+    --   -- yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." ".."星期"..weekstyle()[1].." "..os.date("%H")..":"..os.date("%M"), "〔年月日週 時:分〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..weekstyle()[3].." "..os.date("%H")..":"..os.date("%M"), "〔年月日週 時:分〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, rqzdx1().." ".."星期"..weekstyle()[1].." "..os.date("%H:%M"), "〔年月日週 時:分〕 ~z"))
+    --   -- yield(Candidate("qsj", seg.start, seg._end, rqzdx2().." ".."星期"..weekstyle()[1].." "..os.date("%H:%M"), "〔年月日週 時:分〕"))
     --   return
     -- end
 
     -- if (input == "'/fwnz") then
-    --   yield(Candidate("qsj", seg.start, seg._end, rqzdx1().." ".."星期"..weekstr.." "..os.date("%H:%M"), "〔年月日週 時:分〕"))
-    --   yield(Candidate("qsj", seg.start, seg._end, rqzdx2().." ".."星期"..weekstr.." "..os.date("%H:%M"), "〔年月日週 時:分〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, rqzdx1().." ".."星期"..weekstyle()[1].." "..os.date("%H:%M"), "〔年月日週 時:分〕"))
+    --   yield(Candidate("qsj", seg.start, seg._end, rqzdx2().." ".."星期"..weekstyle()[1].." "..os.date("%H:%M"), "〔年月日週 時:分〕"))
     --   return
     -- end
 
