@@ -360,8 +360,8 @@ local ocmdb = ReverseDb("build/symbols-mark.reverse.bin")
 
 local function xform_mark(inp)
   if inp == "" then return "" end
-    inp = string.gsub(inp, "，", ", ")
-    -- inp = string.gsub(inp, "^(〔.+〕)(〔.+〕)$", "%1")
+  inp = string.gsub(inp, "，", ", ")
+  -- inp = string.gsub(inp, "^(〔.+〕)(〔.+〕)$", "%1")
   return inp
 end
 
@@ -1865,6 +1865,22 @@ local function purech_number(ch)
   return ch
 end
 
+local function military_number(jn)
+  if jn == "" then return "" end
+  jn = string.gsub(jn, "0", "洞")
+  jn = string.gsub(jn, "1", "么")
+  jn = string.gsub(jn, "2", "兩")
+  jn = string.gsub(jn, "3", "三")
+  jn = string.gsub(jn, "4", "四")
+  jn = string.gsub(jn, "5", "五")
+  jn = string.gsub(jn, "6", "六")
+  jn = string.gsub(jn, "7", "拐")
+  jn = string.gsub(jn, "8", "八")
+  jn = string.gsub(jn, "9", "勾")
+  jn = string.gsub(jn, "%.", "點")
+  return jn
+end
+
 local function little1_number(l1)
   if l1 == "" then return "" end
   l1 = string.gsub(l1, "0", "⁰")
@@ -2298,13 +2314,13 @@ local confs = {
   {
     comment = "〔小寫中文數字〕",
     number = { [0] = "〇", "一", "二", "三", "四", "五", "六", "七", "八", "九" },
-    suffix = { [0] = "", "十", "百", "千" },
+    suffix1 = { [0] = "", "十", "百", "千" },
     suffix2 = { [0] = "", "萬", "億", "兆", "京" }
   },
   {
     comment = "〔大寫中文數字〕",
     number = { [0] = "零", "壹", "貳", "參", "肆", "伍", "陸", "柒", "捌", "玖" },
-    suffix = { [0] = "", "拾", "佰", "仟" },
+    suffix1 = { [0] = "", "拾", "佰", "仟" },
     suffix2 = { [0] = "", "萬", "億", "兆", "京" }
   },
 }
@@ -2316,7 +2332,7 @@ local function read_seg(conf, n)
   while string.len(n) > 0 do
     local d = tonumber(string.sub(n, -1, -1))
     if d ~= 0 then
-      s = conf.number[d] .. conf.suffix[i] .. s
+      s = conf.number[d] .. conf.suffix1[i] .. s
       zf = false
     else
       if not zf then
@@ -6243,6 +6259,8 @@ function t_translator(input, seg)
           yield(Candidate("number", seg.start, seg._end, purech_number(numberout), "〔純中文數字〕"))
         end
 
+        yield(Candidate("number", seg.start, seg._end, military_number(numberout), "〔軍中數字〕"))
+
         yield(Candidate("number", seg.start, seg._end, circled1_number(numberout), "〔帶圈數字〕"))
         yield(Candidate("number", seg.start, seg._end, circled2_number(numberout), "〔帶圈無襯線數字〕"))
         yield(Candidate("number", seg.start, seg._end, circled3_number(numberout), "〔反白帶圈數字〕"))
@@ -6258,6 +6276,8 @@ function t_translator(input, seg)
         yield(Candidate("number", seg.start, seg._end, string.format("%o",numberout), "〔八進位〕"))
         yield(Candidate("number", seg.start, seg._end, string.format("%X",numberout), "〔十六進位〕"))
         yield(Candidate("number", seg.start, seg._end, string.format("%x",numberout), "〔十六進位〕"))
+      elseif (dot1=='.') then
+        yield(Candidate("number", seg.start, seg._end, military_number(numberout..dot1..afterdot), "〔軍中數字〕"))
       end
       return
     end
@@ -7966,6 +7986,8 @@ function t2_translator(input, seg)
           yield(Candidate("number", seg.start, seg._end, purech_number(numberout), "〔純中文數字〕"))
         end
 
+        yield(Candidate("number", seg.start, seg._end, military_number(numberout), "〔軍中數字〕"))
+
         yield(Candidate("number", seg.start, seg._end, circled1_number(numberout), "〔帶圈數字〕"))
         yield(Candidate("number", seg.start, seg._end, circled2_number(numberout), "〔帶圈無襯線數字〕"))
         yield(Candidate("number", seg.start, seg._end, circled3_number(numberout), "〔反白帶圈數字〕"))
@@ -7981,6 +8003,8 @@ function t2_translator(input, seg)
         yield(Candidate("number", seg.start, seg._end, string.format("%o",numberout), "〔八進位〕"))
         yield(Candidate("number", seg.start, seg._end, string.format("%X",numberout), "〔十六進位〕"))
         yield(Candidate("number", seg.start, seg._end, string.format("%x",numberout), "〔十六進位〕"))
+      elseif (dot1=='.') then
+        yield(Candidate("number", seg.start, seg._end, military_number(numberout..dot1..afterdot), "〔軍中數字〕"))
       end
       return
     end
