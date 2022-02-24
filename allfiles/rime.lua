@@ -2377,7 +2377,7 @@ end
 ~~~~轉換農曆函數~~~~
 --]]
 --十進制轉二進制
-local function Dec2bin(n)
+function Dec2bin(n)
 	local t,t1,t2
 	local tables={""}
 	t=tonumber(n)
