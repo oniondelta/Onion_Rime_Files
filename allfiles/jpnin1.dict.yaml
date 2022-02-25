@@ -26680,6 +26680,7 @@ columns:
 彪	pyou;	174
 震	fu;	306
 比	firipin;	1670
+比	fuxiripin;	1670
 吭	fue;	1
 深	fukashi;	138
 淵	fukashi;	545
@@ -27080,8 +27081,11 @@ columns:
 林	imu;	2138
 初	u;	9142
 偉	whei;
+偉	uxei;
 薇	whei;	41
+薇	uxei;	41
 魏	whei;	1173
+魏	uxei;	1173
 汐	ushio;	150
 転	utata;	761
 中	uchi;	17891
@@ -27294,7 +27298,9 @@ columns:
 沈	shin;
 晋	shinji;	1234
 激	ji;	226
-堅	jen;	517
+#堅	jen;	517
+堅	jyen;	517
+堅	jixen;	517
 杰	jie;
 舳	jiku;	19
 爺	jiji;	121
@@ -27717,13 +27723,20 @@ columns:
 平	pin;	2085
 萍	pingu;
 化	fa;	13047
+化	fuxa;	13047
 華	fa;	1175
+華	fuxa;	1175
 帆	fan;	389
+帆	fuxan;	389
 翻	fan;	174
+翻	fuxan;	174
 飜	fan;
+飜	fuan;
 黄	fan;	1262
 輝	fi;	674
+輝	fuxi;	674
 黄	fixan;	1262
+黄	fuxixan;	1262
 鯊	fuka;	10
 洋	fukashi;	931
 寅	fusa;	343
@@ -29482,7 +29495,6 @@ columns:
 萌	hajime;	260
 隼	hayato;	321
 駿	takashi;	634
-黄	fuxixan;	1262
 ####### 202105新增補充比對 japanese.mozc.dict.yaml 結束 #######
 #######@ 202102新增日語符號類 開始 #######
 %	pa-sento;
