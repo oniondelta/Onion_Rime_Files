@@ -55456,6 +55456,7 @@ min_phrase_weight: 100
 中間砧木	zhong1 jian1 zhen1 mu4
 中間神經元	zhong1 jian1 shen2 jing1 yuan2
 中間纖維	zhong1 jian1 xian1 wei2
+中間纖維	zhong1 jian1 qian1 wei2	80%
 中間路線	zhong1 jian1 lu4 xian4
 中非共和國	zhong1 fei1 gong4 he2 guo2
 中音	zhong1 yin1
@@ -58825,9 +58826,13 @@ min_phrase_weight: 100
 光照監視裝置	guang1 zhao4 jian1 shi4 zhuang1 zhi4
 光祿大夫	guang1 lu4 da4 fu1
 光纖分佈式數據介面	guang1 xian1 fen1 bu4 shi4 shu4 ju4 jie4 mian4
+光纖分佈式數據介面	guang1 qian1 fen1 bu4 shi4 shu4 ju4 jie4 mian4	80%
 光纖分佈數據接口	guang1 xian1 fen1 bu4 shu4 ju4 jie1 kou3
+光纖分佈數據接口	guang1 qian1 fen1 bu4 shu4 ju4 jie1 kou3	80%
 光纖分散式資料介面	guang1 xian1 fen1 san4 shi4 zi1 liao4 jie4 mian4
+光纖分散式資料介面	guang1 qian1 fen1 san4 shi4 zi1 liao4 jie4 mian4	80%
 光纖飛彈	guang1 xian1 fei1 dan4
+光纖飛彈	guang1 qian1 fei1 dan4	80%
 光脊梁	guang1 ji2 liang2
 光脊梁	guang1 ji3 liang2
 光膀子	guang1 bang3 zi5
@@ -64949,6 +64954,7 @@ min_phrase_weight: 100
 單槓	dan1 gang4
 單模	dan1 mo2
 單模光纖	dan1 mo2 guang1 xian1
+單模光纖	dan1 mo2 guang1 qian1	80%
 單浪瓦房子	dan1 lang4 wa3 fang2 zi5
 單片機	dan1 pian4 ji1
 單獨行為	dan1 du2 xing2 wei2
@@ -66972,6 +66978,7 @@ min_phrase_weight: 100
 多栽花少栽刺	duo1 zai1 hua1 shao3 zai1 ci4
 多模	duo1 mo2
 多模光纖	duo1 mo2 guang1 xian1
+多模光纖	duo1 mo2 guang1 qian1	80%
 多模塊	duo1 mo2 kuai4
 多水分	duo1 shui3 fen4
 多災多難	duo1 zai1 duo1 nan4
@@ -72467,6 +72474,7 @@ min_phrase_weight: 100
 彈性模量	tan2 xing4 mo2 liang4
 彈性疲乏	tan2 xing4 pi2 fa2
 彈性纖維	tan2 xing4 xian1 wei2
+彈性纖維	tan2 xing4 qian1 wei2	80%
 彈性製造系統	tan2 xing4 zhi4 zao4 xi4 tong3
 彈性限度	tan2 xing4 xian4 du4
 彈指	tan2 zhi3
@@ -88123,6 +88131,7 @@ min_phrase_weight: 100
 玻璃絲	bo1 li2 si1
 玻璃絲襪	bo1 li2 si1 wa4
 玻璃纖維	bo1 li2 xian1 wei2
+玻璃纖維	bo1 li2 qian1 wei2	80%
 玻璃質肥料	bo1 li2 zhi2 fei2 liao4
 玻璃質肥料	bo1 li2 zhi4 fei2 liao4
 玻璃鋼	bo1 li2 gang1
@@ -97262,6 +97271,7 @@ min_phrase_weight: 100
 荎藸	chi2 chu2
 荐言	jian4 yan2
 荑手纖纖	ti2 shou3 xian1 xian1
+荑手纖纖	ti2 shou3 qian1 xian1	80%
 荒功好頑	huang1 gong1 hao4 wan2
 荒唐無稽	huang1 tang2 wu2 ji1
 荒地	huang1 di4
@@ -111154,4 +111164,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 111157 #####
+##### @結束 END - 111167 #####
