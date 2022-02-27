@@ -212,7 +212,7 @@ top_reverse_lookup:
     - xform/(^| )(ji)([,.])/$1$2$3 zi$3/
     - xform/(^| )(u)([,.])/$1$2$3 wu$3/
 ## 特殊
-    - xform/(^| )dvyu([.])/$1dyu$2/
+    - xform/(^| )dvyu([,.])/$1dyu$2/
 ##### 其他 #####
     - "xlit|';/!,.|ABCDEF|"
     - xform/^/  /
