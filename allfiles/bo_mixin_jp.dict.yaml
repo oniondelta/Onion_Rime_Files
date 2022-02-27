@@ -4,7 +4,7 @@
 # 『洋蔥』製作
 ---
 name: bo_mixin_jp
-version: "202009"
+version: "202202"
 sort: by_weight
 use_preset_vocabulary: false
 columns:
@@ -832,7 +832,7 @@ columns:
 き゚ゃ	!!ngya
 き゚ゅ	!!ngyu
 き゚ょ	!!ngyo
-##
+### 特殊讀音拼法 ###
 ぎぃ	!!gyi
 ぎぇ	!!gye
 しぃ	!!syi
@@ -897,6 +897,84 @@ columns:
 びゎ	!!bwa
 すぁ	!!swa
 ずゎ	!!zwa
+## 202202補充
+うぉ	!!wo
+#ゔぁ(可怱略)#va
+ゔぃ	!!vi
+ゔぇ	!!ve
+ゔぉ	!!vo
+すぃ	!!si
+ずぃ	!!zi
+しぇ	!!she
+じぇ	!!je
+てぃ	!!ti
+とぅ	!!tu
+でぃ	!!di
+どぅ	!!du
+すゅ	!!syu
+ずゅ	!!zyu
+てゅ	!!tyu
+てゅ	!!tu
+でゅ	!!dvyu
+#でゅ	!!dyu #用正則轉寫
+ふゅ	!!fyu
+ふゅ	!!fu
+ふょ	!!fyo
+くゎ	!!kwa
+くぃ	!!kwi
+くぇ	!!kwe
+くぉ	!!kwo
+ぐゎ	!!gwa
+ぐぃ	!!gwi
+ぐぇ	!!gwe
+ぐぉ	!!gwo
+いぃ	!!yi
+うぁ	!!wa
+うぅ	!!wu
+うゅ	!!wyu
+ゔぁ	!!va
+ゔゃ	!!vya
+ゔゅ	!!vyu
+ゔぃぇ	!!vye
+ゔょ	!!vyo
+きぇ	!!kye
+くぁ	!!kwa
+ぐぁ	!!gwa
+つゅ	!!tsyu
+びぇ	!!bye
+ふゃ	!!fya
+ふぃぇ	!!fye
+ほぅ	!!hu
+うぁ	!!wha
+うぃ	!!whi
+うぅ	!!whu
+うぇ	!!whe
+うぉ	!!who
+くゃ	!!qya
+くぃ	!!qyi
+くゅ	!!qyu
+くぇ	!!qye
+くょ	!!qyo
+くぁ	!!qwa
+くぃ	!!qwi
+くぅ	!!qwu
+くぅ	!!kwu
+くぇ	!!qwe
+くぉ	!!qwo
+ぐぅ	!!gwu
+すぃ	!!swi
+すぅ	!!swu
+すぇ	!!swe
+すぉ	!!swo
+ふぃ	!!fyi
+ふぇ	!!fye
+ふぁ	!!fwa
+ふぃ	!!fwi
+ふぅ	!!fwu
+ふぇ	!!fwe
+ふぉ	!!fwo
+ゔぃ	!!vyi
+ゔぇ	!!vye
 ##### 日語『補充平假名』結束 #####
 ####### 日語『補充片假名』開始 #######
 ### 日文拗音片假名 ###
@@ -1289,6 +1367,11 @@ columns:
 リィ	!!!lyi
 ヴィ	!!!vyi
 ヴェ	!!!vye
+## 202202補充
+チィ	!!!thi
+プヮ	!!!pwa
+ビヮ	!!!bwa
+ズヮ	!!!zwa
 ### 日文撥音平假名(撥音省略) ###
 # わん	!!wan	10000
 # らん	!!ran	10000
