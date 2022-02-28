@@ -37,8 +37,8 @@
 # 詞彙中(漢字裡)含 texi(てぃ)，其變化需補齊 thi （ ti 後來改不補）。
 # 詞彙中(漢字裡)含 toxu(とぅ)，其變化需補齊 twu （ tu 後來改不補）。
 # 備註： ti 和 tu 可能為 texi(てぃ)和 toxu(とぅ)，之前可能誤轉成 chi 和 tsu ？
-#     例：汀間	texima;    汀間	tima;    汀間	thima;
-#     例：友寄	toxumushi;    友寄	tumushi;    友寄	twumushi;
+#     例：汀間	texima;    汀間	thima;    （後改不補 汀間	tima;）
+#     例：友寄	toxumushi;    友寄	twumushi;    （後改不補 友寄	tumushi;）
 #
 # 定義：じ=ji，zi用正則轉。
 # 定義：づヅ=du、ずズ=zu。
