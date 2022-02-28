@@ -195,9 +195,9 @@ speller:
 ##### 其他方案掛接時，後綴'['調出 #####
     # - derive/^(.+)$/$1'['/
 ##### 使開頭單個字母時（如：kst）也能有選項可選 #####
-    - abbrev/^([kstnhmyrwgzdbpjlfx])[aiueo][.,]$/$1/
+    - abbrev/^([kstnhmyrwgzdbpjlfxv])[aiueo][.,]$/$1/
     - abbrev/^(c)h[aiueo][.,]$/$1/ #避免「c」開頭沒有對應假名
-    - abbrev/^([kstnhmyrwgzdbpjlfcx][kstnhmyrwgzdbpjlfc]y?)[aiueo][.,]$/$1/
+    - abbrev/^([kstnhmyrwgzdbpjlfcxv][kstnhmyrwgzdbpjlfc]y?)[aiueo][.,]$/$1/
     - derive/^\|$/ /
 
 translator:
