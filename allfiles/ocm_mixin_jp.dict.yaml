@@ -385,7 +385,7 @@ use_preset_vocabulary: false
 ぽ	po,
 ##
 ゔ	vu,
-ゔ	va,
+# ゔ	va, #MAC日語輸入法沒有，精簡！
 ゑ	we,
 ゑ	e,
 ゑ	wye,
@@ -540,7 +540,7 @@ use_preset_vocabulary: false
 ポ	po.
 ##
 ヴ	vu.
-ヷ	va.
+#ヷ	va. #MAC日語輸入法沒有，精簡！
 ヰ	wi.
 ヰ	i.
 ヱ	we.
@@ -943,7 +943,7 @@ use_preset_vocabulary: false
 うぃ	wi,
 うぇ	we,
 ## 202002補充
-ちぃ	thi,
+# ちぃ	thi, #MAC日語輸入法沒有，精簡！
 ぢぃ	dyi,
 ぢぇ	dye,
 つぁ	tsa,
@@ -979,27 +979,28 @@ use_preset_vocabulary: false
 すぁ	swa,
 ずゎ	zwa,
 ## 202202補充
-うぉ	wo,
-#ゔぁ(可怱略)#va,
+# うぉ	wo, #MAC日語輸入法沒有，精簡！
+ゔぁ	va,
 ゔぃ	vi,
 ゔぇ	ve,
 ゔぉ	vo,
-すぃ	si,
-ずぃ	zi,
+# すぃ	si, #MAC日語輸入法沒有，精簡！
+# ずぃ	zi, #MAC日語輸入法沒有，精簡！
+ずぃ	zwi,
 しぇ	she,
 じぇ	je,
-てぃ	ti,
-とぅ	tu,
-でぃ	di,
-どぅ	du,
+# てぃ	ti, #MAC日語輸入法沒有，精簡！
+# とぅ	tu, #MAC日語輸入法沒有，精簡！
+# でぃ	di, #MAC日語輸入法沒有，精簡！
+# どぅ	du, #MAC日語輸入法沒有，精簡！
 すゅ	syu,
 ずゅ	zyu,
 てゅ	tyu,
-てゅ	tu,
+# てゅ	tu, #MAC日語輸入法沒有，精簡！
 でゅ	dvyu,
 #でゅ	dyu, #用正則轉寫
 ふゅ	fyu,
-ふゅ	fu,
+# ふゅ	fu, #MAC日語輸入法沒有，精簡！
 ふょ	fyo,
 くゎ	kwa,
 くぃ	kwi,
@@ -1010,10 +1011,9 @@ use_preset_vocabulary: false
 ぐぇ	gwe,
 ぐぉ	gwo,
 いぃ	yi,
-うぁ	wa,
-うぅ	wu,
+# うぁ	wa, #MAC日語輸入法沒有，精簡！
+# うぅ	wu, #MAC日語輸入法沒有，精簡！
 うゅ	wyu,
-ゔぁ	va,
 ゔゃ	vya,
 ゔゅ	vyu,
 ゔぃぇ	vye,
@@ -1025,7 +1025,8 @@ use_preset_vocabulary: false
 びぇ	bye,
 ふゃ	fya,
 ふぃぇ	fye,
-ほぅ	hu,
+# ほぅ	hu, #MAC日語輸入法沒有，精簡！
+ほぅ	hwu,
 うぁ	wha,
 うぃ	whi,
 うぅ	whu,
@@ -1392,21 +1393,21 @@ use_preset_vocabulary: false
 イェ	ye.
 ウィ	wi.
 ウェ	we.
-ウォ	wo.
+# ウォ	wo. #MAC日語輸入法沒有，精簡！
 #ヴァ(可怱略)#va
 ヴィ	vi.
-#ヴ	vu.
 ヴェ	ve.
 ヴォ	vo.
-スィ	si.
-ズィ	zi.
+# スィ	si. #MAC日語輸入法沒有，精簡！
+# ズィ	zi. #MAC日語輸入法沒有，精簡！
+ズィ	zwi.
 シェ	she.
 ジェ	je.
 チェ	che.
-ティ	ti.
-トゥ	tu.
-ディ	di.
-ドゥ	du.
+# ティ	ti. #MAC日語輸入法沒有，精簡！
+# トゥ	tu. #MAC日語輸入法沒有，精簡！
+# ディ	di. #MAC日語輸入法沒有，精簡！
+# ドゥ	du. #MAC日語輸入法沒有，精簡！
 ツァ	tsa.
 ツィ	tsi.
 ファ	fa.
@@ -1419,12 +1420,12 @@ use_preset_vocabulary: false
 ズュ	zyu.
 テュ	tyu.
 ## 下一個20160930新加
-テュ	tu.
+# テュ	tu. #MAC日語輸入法沒有，精簡！
 デュ	dvyu.
 # デュ	dyu. #用正則轉寫
 フュ	fyu.
 ## 下一個20160930新加
-フュ	fu.
+# フュ	fu. #MAC日語輸入法沒有，精簡！
 フョ	fyo.
 クヮ	kwa.
 クィ	kwi.
@@ -1436,8 +1437,8 @@ use_preset_vocabulary: false
 グォ	gwo.
 ### 日文拗音外國讀音片假名(二) ###
 イィ	yi.
-ウァ	wa.
-ウゥ	wu.
+# ウァ	wa. #MAC日語輸入法沒有，精簡！
+# ウゥ	wu. #MAC日語輸入法沒有，精簡！
 ウュ	wyu.
 ヴァ	va.
 ヴャ	vya.
@@ -1455,7 +1456,8 @@ use_preset_vocabulary: false
 ピェ	pye.
 フャ	fya.
 フィェ	fye.
-ホゥ	hu.
+# ホゥ	hu. #MAC日語輸入法沒有，精簡！
+ホゥ	hwu.
 ミェ	mye.
 リェ	rye.
 ## 以要下一個新補充
@@ -1532,7 +1534,7 @@ use_preset_vocabulary: false
 ヴィ	vyi.
 ヴェ	vye.
 ## 202202補充
-チィ	thi.
+# チィ	thi. #MAC日語輸入法沒有，精簡！
 プヮ	pwa.
 ビヮ	bwa.
 ズヮ	zwa.
