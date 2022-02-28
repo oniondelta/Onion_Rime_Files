@@ -387,10 +387,10 @@ use_preset_vocabulary: false
 ゔ	vu,
 # ゔ	va, #MAC日語輸入法沒有，精簡！
 ゑ	we,
-# ゑ	e, #MAC日語輸入法沒有，精簡！
+ゑ	e,
 ゑ	wye,
 ゐ	wi,
-# ゐ	i, #MAC日語輸入法沒有，精簡！
+ゐ	i,
 ゐ	wyi,
 ### 小字 ###
 ぁ	xa,
@@ -542,9 +542,9 @@ use_preset_vocabulary: false
 ヴ	vu.
 ヷ	va.
 ヰ	wi.
-# ヰ	i. #MAC日語輸入法沒有，精簡！
+ヰ	i.
 ヱ	we.
-# ヱ	e. #MAC日語輸入法沒有，精簡！
+ヱ	e.
 ##
 ヸ	vi.
 ヹ	ve.
