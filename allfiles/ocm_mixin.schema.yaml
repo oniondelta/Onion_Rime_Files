@@ -64,8 +64,8 @@ engine:
 #    - charset_filter@big5
 #    - charset_filter@gbk
 #    - charset_filter@gb2312
-    - simplifier@emoji_switch
-    - simplifier
+##     - simplifier@emoji_switch
+##     - simplifier
     - reverse_lookup_filter@top_reverse_lookup
     - reverse_lookup_filter@pt_reverse_lookup
     - reverse_lookup_filter@gr_reverse_lookup
@@ -76,6 +76,10 @@ engine:
     # - lua_filter@comment_filter_plus
     # - lua_filter@symbols_mark_filter
     # - simplifier@back_mark
+    
+    - simplifier@emoji_switch
+    - simplifier
+    
     - reverse_lookup_filter@ovff_reverse_lookup
     - reverse_lookup_filter@phonetic_reverse_lookup
     - reverse_lookup_filter@e_reverse_lookup
