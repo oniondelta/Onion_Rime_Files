@@ -7,7 +7,7 @@
 # 本詞庫刪除純「假名」之詞彙。純「假名」詞庫為「phrases.jp_hk」。
 ---
 name: phrases.jp_hkkreduce
-version: "202202"
+version: "202203"
 sort: by_weight #original
 use_preset_vocabulary: false
 columns:
@@ -12131,7 +12131,6 @@ columns:
 坐乗
 坐礁
 坐禅
-坐臥
 坐薬
 坑内
 坑夫
@@ -37031,15 +37030,8 @@ columns:
 誤ろ
 誤伝
 誤写
-誤字
-誤射
-誤打
 誤摩
-誤治
-誤爆
-誤算
 誤聞
-誤記
 誤読
 誤魔
 誦し
