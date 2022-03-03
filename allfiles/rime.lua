@@ -1057,14 +1057,22 @@ function ascii_punct_change(key, env)
   if (c_b_d) and (not en_m) then
     -- local orig_p23 = context:get_commit_text()
     if (key:repr() == 'Shift+less') then
-      -- local orig_p23 = context:get_commit_text()
-      engine:commit_text( orig_p23 .. "," )
+      if (context:is_composing()) then
+        -- local orig_p23 = context:get_commit_text()
+        engine:commit_text( orig_p23 .. "," )
+      else
+        engine:commit_text( "," )
+      end
       context:clear()
       return 1 -- kAccepted
     -- end
     elseif (key:repr() == 'Shift+greater') then
-      -- local orig_p23 = context:get_commit_text()
-      engine:commit_text( orig_p23 .. "." )
+      if (context:is_composing()) then
+        -- local orig_p23 = context:get_commit_text()
+        engine:commit_text( orig_p23 .. "." )
+      else
+        engine:commit_text( "." )
+      end
       context:clear()
       return 1 -- kAccepted
     end
@@ -1231,13 +1239,21 @@ function mix_apc_s2rm(key, env)
   local en_m = context:get_option("ascii_mode")
   if (c_b_d) and (not en_m) then
     if (key:repr() == 'Shift+less') then
-      -- local orig_124 = context:get_commit_text()
-      engine:commit_text( orig_124 .. "," )
+      if (context:is_composing()) then
+        -- local orig_124 = context:get_commit_text()
+        engine:commit_text( orig_124 .. "," )
+      else
+        engine:commit_text( "," )
+      end
       context:clear()
       return 1 -- kAccepted
     elseif (key:repr() == 'Shift+greater') then
-      -- local orig_124 = context:get_commit_text()
-      engine:commit_text( orig_124 .. "." )
+      if (context:is_composing()) then
+        -- local orig_124 = context:get_commit_text()
+        engine:commit_text( orig_124 .. "." )
+      else
+        engine:commit_text( "." )
+      end
       context:clear()
       return 1 -- kAccepted
     elseif (key:repr() == "space") and (context:is_composing()) then
@@ -1288,13 +1304,21 @@ function mix_apc_s2rm_3(key, env)
   local en_m = context:get_option("ascii_mode")
   if (c_b_d) and (not en_m) then
     if (key:repr() == 'Shift+less') then
-      -- local orig_3 = context:get_commit_text()
-      engine:commit_text( orig_3 .. "," )
+      if (context:is_composing()) then
+        -- local orig_3 = context:get_commit_text()
+        engine:commit_text( orig_3 .. "," )
+      else
+        engine:commit_text( "," )
+      end
       context:clear()
       return 1 -- kAccepted
     elseif (key:repr() == 'Shift+greater') then
-      -- local orig_3 = context:get_commit_text()
-      engine:commit_text( orig_3 .. "." )
+      if (context:is_composing()) then
+        -- local orig_3 = context:get_commit_text()
+        engine:commit_text( orig_3 .. "." )
+      else
+        engine:commit_text( "." )
+      end
       context:clear()
       return 1 -- kAccepted
     elseif (key:repr() == "space") and (context:is_composing()) then
@@ -1346,14 +1370,22 @@ function mix_apc_pluss(key, env)
   if (c_b_d) and (not en_m) then
     -- local caret_pos_ps = context.caret_pos
     if (key:repr() == 'Shift+less') then
-      -- local orig_ps = context:get_commit_text()
-      engine:commit_text( orig_ps .. "," )
+      if (context:is_composing()) then
+        -- local orig_ps = context:get_commit_text()
+        engine:commit_text( orig_ps .. "," )
+      else
+        engine:commit_text( "," )
+      end
       context:clear()
       return 1 -- kAccepted
     -- end
     elseif (key:repr() == 'Shift+greater') then
-      -- local orig_ps = context:get_commit_text()
-      engine:commit_text( orig_ps .. "." )
+      if (context:is_composing()) then
+        -- local orig_ps = context:get_commit_text()
+        engine:commit_text( orig_ps .. "." )
+      else
+        engine:commit_text( "." )
+      end
       context:clear()
       return 1 -- kAccepted
     elseif (key:repr() == "space") and (caret_pos_ps == 0) then
