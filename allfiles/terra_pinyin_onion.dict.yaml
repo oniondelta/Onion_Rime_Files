@@ -99,7 +99,7 @@
 #    詞句中，「場」臺灣日常慣用語音為「chang3」，臺灣標準為「chang2」，故「場」全都補齊「chang3」「chang2」。
 #    詞句中，「們」慣用發音「men5」和「men2」都有，字典中一個為語音一個為讀音，除音譯名詞外，全都補齊「men5」「men2」。
 #    詞句中，「誰」臺灣字典發音「shei2」為語音，「shui2」為讀音，全都補齊「shei2」[shui2]。
-#    詞句中，「剔」臺灣字典發音為「ti1」，故皆標註為「ti1」。但「挑剔」「剔透」之「剔」一般慣發音為「ti4」，補上「ti4」之發音。
+#    詞句中，「剔」臺灣字典發音為「ti1」，故皆標註為「ti1」。但「挑剔」「剔透」等詞之「剔」一般慣發音為「ti4」，故全都補齊「ti1」「ti4」。
 #    詞句中，「兒」臺灣字典發音為「er2」，慣用發音為「er5」。但為兒化音時，臺灣字典中會標註「ㄦ」，但拼音為單獨「r」，可理解為「er5」。兩岸字典中對單獨「兒」皆沒有「er1」「er5」之發音標註，故兒化音時選擇標註「er2」「er5」，不標註「er1」。
 #    預計比對「輕聲和一聲」變音。
 #
@@ -60692,9 +60692,13 @@ min_phrase_weight: 100
 剎車燈	sha1 che1 deng1
 剎那	cha4 na4
 剔子	ti1 zi5
+剔子	ti4 zi5
 剔抽禿刷	ti1 chou1 tu1 shua1
+剔抽禿刷	ti4 chou1 tu1 shua1
 剔抽禿揣	ti1 chou1 tu1 chuai3
+剔抽禿揣	ti4 chou1 tu1 chuai3
 剔蠍撩蜂	ti1 xie1 liao2 feng1
+剔蠍撩蜂	ti4 xie1 liao2 feng1
 剖分	pou3 fen1
 剖判	pou3 pan4
 剖別	pou3 bie2
@@ -76225,8 +76229,11 @@ min_phrase_weight: 100
 挑槽	tiao1 cao2
 挑正梁	tiao1 zheng4 liang2
 挑毛剔刺	tiao1 mao2 ti1 ci4
+挑毛剔刺	tiao1 mao2 ti4 ci4
 挑毛剔刺兒	tiao1 mao2 ti1 ci4 er5	80%
 挑毛剔刺兒	tiao1 mao2 ti1 ci4 er2
+挑毛剔刺兒	tiao1 mao2 ti4 ci4 er5	80%
+挑毛剔刺兒	tiao1 mao2 ti4 ci4 er2
 挑毛揀刺	tiao1 mao2 jian3 ci4
 挑毛病	tiao1 mao2 bing4
 挑泛	tiao3 fan4
@@ -96333,6 +96340,7 @@ min_phrase_weight: 100
 興凱湖	xing1 kai3 hu2
 興利	xing1 li4
 興利剔弊	xing1 li4 ti1 bi4
+興利剔弊	xing1 li4 ti4 bi4
 興利除害	xing1 li4 chu2 hai4
 興利除弊	xing1 li4 chu2 bi4
 興動	xing1 dong4
@@ -110885,4 +110893,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 110888 #####
+##### @結束 END - 110896 #####
