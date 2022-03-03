@@ -25,7 +25,7 @@
 
 ### 各方案說明：
 
-> 目前關閉，各方案說明等有閒情逸致時再移植來 GitHub 這邊。
+> 密碼：onionrime，請勿傳播密碼！
 
 - [電腦 RIME 輸入法『注音 洋蔥純注音版』](https://deltazone.pixnet.net/blog/post/264319309)
 
