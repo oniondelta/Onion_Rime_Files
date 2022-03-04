@@ -1687,8 +1687,8 @@ min_phrase_weight: 100
 髈	pang1	0.1%
 俉	wu4
 齱	chuo4	0.1%
-傾	qing2	0%
-倾	qing2	0%
+#傾	qing2	0%
+#倾	qing2	0%
 傾	qing3
 倾	qing3
 夾	shan3	0%
