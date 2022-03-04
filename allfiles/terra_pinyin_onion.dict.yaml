@@ -80,7 +80,7 @@
 #    詞句中，「暴露」「bao4」和「pu4」補齊，「露」以「lu4」為主。
 #    詞句中，「租賃」補齊「lin4」和「ren4」。
 #    詞句中，比對「髮」「著zhu4」「與」「紇乾、紇干」「怎 zen3 ze3」「企」「不」。
-#    詞句中，「柏」補齊「bo2」。
+#    詞句中，「柏」臺灣字典讀音為「bo2」，語音為「bai3」，但詞句中全標「bo2」，日常幾乎不用「bai3」發音，故全都標註「bo2」。
 #    詞句中，「俄」地名人名等名詞補齊「e2」和「e4」。
 #    詞句中，「法國」字典正確發音「fa3 guo2」，但「fa4 guo2」語音太常用，故補齊「fa3」「fa4」。（「法」地名相關也修改，如：「中法」）
 #    詞句中，「波」字典發音為「bo1」，「po1」為又音且常見於日常發音中，故全都補齊「bo1」「po1」。
@@ -104,6 +104,7 @@
 #    詞句中，「傾」臺灣字典發音為「qing1」但日常生活發音太常使用「qing3」，故全都補齊「qing1」「qing3」。
 #    詞句中，「危」臺灣字典發音和習慣發音為「wei2」，大陸發音為「wei1」，斟酌後全改成臺灣發音「wei2」。
 #    詞句中，「夕」臺灣字典發音和習慣發音為「xi4」，大陸發音為「xi1」，斟酌後全改成臺灣發音「xi4」。
+#    詞句中，「關係」其「係」臺灣字典發音為「xi4」，但日常常發「xi1」，故「關係」其「係」都補上「xi1」該發音。
 #    預計比對「輕聲和一聲」變音。
 #
 #  〈2020修改字詞彙發音〉：
@@ -54739,6 +54740,7 @@ min_phrase_weight: 100
 不正當	bu2 zheng4 dang1
 不正當競爭	bu2 zheng4 dang1 jing4 zheng1
 不正當關係	bu2 zheng4 dang1 guan1 xi4
+不正當關係	bu2 zheng4 dang1 guan1 xi1	80%
 不正確	bu2 zheng4 que4
 不正經	bu2 zheng4 jing1
 不殺	bu2 shai4
@@ -55310,6 +55312,7 @@ min_phrase_weight: 100
 中彩	zhong4 cai3
 中心匯率	zhong1 xin1 hui4 lv4
 中心埋置關係從句	zhong1 xin1 mai2 zhi4 guan1 xi4 cong2 ju4
+中心埋置關係從句	zhong1 xin1 mai2 zhi4 guan1 xi1 cong2 ju4	80%
 中惡	zhong4 e4
 中意	zhong4 yi4
 中意	zhong1 yi4
@@ -56104,6 +56107,8 @@ min_phrase_weight: 100
 亞塞拜然	ya4 sai4 bai4 ran2
 亞塞拜然共和國	ya3 se4 bai4 ran2 gong4 he2 guo2
 亞塞拜然共和國	ya4 se4 bai4 ran2 gong4 he2 guo2
+亞塞拜然共和國	ya3 sai4 bai4 ran2 gong4 he2 guo2
+亞塞拜然共和國	ya4 sai4 bai4 ran2 gong4 he2 guo2
 亞太地區	ya3 tai4 di4 qu1
 亞太地區	ya4 tai4 di4 qu1
 亞平寧	ya3 ping2 ning4
@@ -56203,7 +56208,9 @@ min_phrase_weight: 100
 交與	jiao1 yu3
 交通卡	jiao1 tong1 ka3
 交通堵塞	jiao1 tong1 du3 se4
+交通堵塞	jiao1 tong1 du3 sai1
 交通壅塞	jiao1 tong1 yong1 se4
+交通壅塞	jiao1 tong1 yong1 sai1
 交通安全教育	jiao1 tong1 an1 quan2 jiao4 yu4
 交通密度	jiao1 tong1 mi4 du4
 交通流量	jiao1 tong1 liu2 liang4
@@ -56685,6 +56692,7 @@ min_phrase_weight: 100
 伊兒汗國	yi1 er2 han2 guo2
 伊哩烏蘆	yi1 li1 wu1 lu2
 伊塞克湖	yi1 sai1 ke4 hu2
+伊塞克湖	yi1 se4 ke4 hu2
 伊妹兒	yi1 mei4 er5	80%
 伊妹兒	yi1 mei4 er2
 伊娃‧門德斯	yi1 wa2 eng5 men2 de2 si1
@@ -58708,6 +58716,7 @@ min_phrase_weight: 100
 充場面	chong1 chang2 mian4	3%
 充場面	chong1 chang3 mian4
 充塞	chong1 se4
+充塞	chong1 sai1
 充填因數	chong1 tian2 yin1 shu4
 充排場	chong1 pai2 chang2	3%
 充排場	chong1 pai2 chang3
@@ -59071,6 +59080,7 @@ min_phrase_weight: 100
 兩虎相鬥	liang3 hu3 xiang1 dou4
 兩處為難	liang3 chu4 wei2 nan2
 兩豆塞耳	liang3 dou4 se4 er3
+兩豆塞耳	liang3 dou4 sai1 er3
 兩賴子	liang3 lai4 zi5
 兩邊	liang3 bian1
 兩邊倒	liang3 bian1 dao3
@@ -59211,6 +59221,7 @@ min_phrase_weight: 100
 公民權利和政治權利國際公約	gong1 min2 quan2 li4 han4 zheng4 zhi4 quan2 li4 guo2 ji4 gong1 yue1
 公民權利和政治權利國際公約	gong1 min2 quan2 li4 he2 zheng4 zhi4 quan2 li4 guo2 ji4 gong1 yue1
 公法上職務關係	gong1 fa3 shang4 zhi2 wu4 guan1 xi4
+公法上職務關係	gong1 fa3 shang4 zhi2 wu4 guan1 xi1	80%
 公然侮辱	gong1 ran2 wu3 ru4
 公然侮辱	gong1 ran2 wu3 ru3
 公營企業	gong1 ying2 qi4 ye4
@@ -60390,8 +60401,11 @@ min_phrase_weight: 100
 利害衝突	li4 hai4 chong1 tu2
 利害衝突	li4 hai4 chong1 tu1
 利害關係	li4 hai4 guan1 xi4
+利害關係	li4 hai4 guan1 xi1	80%
 利害關係人	li4 hai4 guan1 xi4 ren2
+利害關係人	li4 hai4 guan1 xi1 ren2	80%
 利害關係方	li4 hai4 guan1 xi4 fang1
+利害關係方	li4 hai4 guan1 xi1 fang1	80%
 利尿	li4 niao4
 利尿劑	li4 niao4 ji4
 利弊得失	li4 bi4 de2 shi1
@@ -60500,7 +60514,6 @@ min_phrase_weight: 100
 刺探	ci4 tan4
 刺撓	ci4 nao2
 刺斜	ci4 xie2
-刺柏	ci4 bai3
 刺柏	ci4 bo2
 刺柑	ci4 gan1
 刺桐	ci4 tong2
@@ -60654,6 +60667,7 @@ min_phrase_weight: 100
 前半晌兒	qian2 ban4 shang3 er5	80%
 前半晌兒	qian2 ban4 shang3 er2
 前向擁塞通知	qian2 xiang4 yong1 sai1 tong1 zhi1
+前向擁塞通知	qian2 xiang4 yong1 se4 tong1 zhi1
 前呼後應	qian2 hu1 hou4 ying4
 前呼後擁	qian2 hu1 hou4 yong3
 前和	qian2 he2
@@ -62981,6 +62995,7 @@ min_phrase_weight: 100
 史跡	shi3 ji1
 右側通行	you4 ce4 tong1 xing2
 右分枝關係從句	you4 fen1 zhi1 guan1 xi4 cong2 ju4
+右分枝關係從句	you4 fen1 zhi1 guan1 xi1 cong2 ju4	80%
 右地	you4 di4
 右相	you4 xiang4
 右翼分子	you4 yi4 fen4 zi3
@@ -64217,6 +64232,7 @@ min_phrase_weight: 100
 哆囉美遠族	duo1 luo1 mei3 yuan3 zu2
 哆張	che3 zhang1
 哇塞	wa1 sai1
+哇塞	wa1 sai4
 哈伯太空望遠鏡	ha1 bo2 tai4 kong1 wang4 yuan3 jing4
 哈克貝利‧芬歷險記	ha1 ke4 bei4 li4 eng5 fen1 li4 xian3 ji4
 哈利‧波特	ha1 li4 eng5 bo1 te4
@@ -64670,6 +64686,7 @@ min_phrase_weight: 100
 喉咽	hou2 yan1
 喉嚨	hou2 long2
 喉塞音	hou2 se4 yin1
+喉塞音	hou2 sai1 yin1
 喉片	hou2 pian4
 喉結	hou2 jie2
 喉長氣短	hou2 chang2 qi4 duan3
@@ -65419,7 +65436,7 @@ min_phrase_weight: 100
 因數分解	yin1 shu4 fen1 jie3
 因材施教	yin1 cai2 shi1 jiao4
 因果報應	yin1 guo3 bao4 ying4
-因果關係	yin1 guo3 guan1 xi1
+因果關係	yin1 guo3 guan1 xi1	80%
 因果關係	yin1 guo3 guan1 xi4
 因樹為屋	yin1 shu4 wei2 wu1
 因此上	yin1 ci3 shang4
@@ -66463,7 +66480,9 @@ min_phrase_weight: 100
 堵喪	du3 sang4
 堵喪	du3 sang1
 堵塞	du3 se4
+堵塞	du3 sai1
 堵塞費	du3 se4 fei4
+堵塞費	du3 sai1 fei4
 堵得慌	du3 de5 huang1
 塊兒八毛	kuai4 er5 ba1 mao2	80%
 塊兒八毛	kuai4 er2 ba1 mao2
@@ -69439,6 +69458,7 @@ min_phrase_weight: 100
 密切相關	mi4 qie4 xiang1 guan1
 密切追隨	mi4 qie4 zhui1 sui2
 密切關係	mi4 qie4 guan1 xi4
+密切關係	mi4 qie4 guan1 xi1	80%
 密勒日巴	mi4 le4 ri4 ba1
 密地	mi4 di4
 密密切切	mi4 mi4 qie4 qie4
@@ -73367,7 +73387,8 @@ min_phrase_weight: 100
 性行為	xing4 xing2 wei2
 性衝動	xing4 chong1 dong4
 性變態行為	xing4 bian4 tai4 xing2 wei2
-性關係	xing4 guan1 xi1
+性關係	xing4 guan1 xi1	80%
+性關係	xing4 guan1 xi4
 怨不得	yuan4 bu4 de5
 怨不得	yuan4 bu4 de2
 怨仇	yuan4 chou2
@@ -74647,7 +74668,6 @@ min_phrase_weight: 100
 扁擔飯	bian3 dan1 fan4
 扁擔飯	bian3 dan4 fan4
 扁柏	bian3 bo2
-扁柏	bian3 bai3
 扁毛畜生	bian3 mao2 chu4 sheng1
 扁舟	pian1 zhou1
 扁鑽	bian3 zuan4
@@ -76792,7 +76812,7 @@ min_phrase_weight: 100
 接舌子	jie1 she2 zi5
 接觸傳染	jie1 chu4 chuan2 ran3
 接踵比肩	jie1 zhong3 bi4 jian1
-接關係	jie1 guan1 xi1
+接關係	jie1 guan1 xi1	80%
 接關係	jie1 guan1 xi4
 控制卡	kong4 zhi4 ka3
 推倒	tui1 dao3
@@ -78210,6 +78230,7 @@ min_phrase_weight: 100
 攸斁	you1 du4
 改削	gai3 xue4
 改善關係	gai3 shan4 guan1 xi4
+改善關係	gai3 shan4 guan1 xi1	80%
 改天換地	gai3 tian1 huan4 di4
 改姓更名	gai3 xing4 geng1 ming2
 改弦易調	gai3 xian2 yi4 diao4
@@ -80499,7 +80520,7 @@ min_phrase_weight: 100
 有鉤絛蟲	you3 gou1 tao1 chong2
 有間	you3 jian4
 有間	you3 jian1
-有關係	you3 guan1 xi1
+有關係	you3 guan1 xi1	80%
 有關係	you3 guan1 xi4
 有限小數	you3 xian4 xiao3 shu4
 有難同當	you3 nan4 tong2 dang1
@@ -81145,10 +81166,8 @@ min_phrase_weight: 100
 松柏之茂	song1 bo2 zhi1 mao4
 松柏園	song1 bo2 yuan2
 松柏後凋	song1 bo2 hou4 diao1
-松柏後凋	song1 bai3 hou4 diao1
 松柏節操	song1 bo2 jie2 cao1
 松柏長青	song1 bo2 chang2 qing1
-松柏長青	song1 bai3 chang2 qing1
 松柏長青茶	song1 bo2 chang2 qing1 cha2
 松濤	song1 tao2
 松濤	song1 tao1
@@ -81313,11 +81332,8 @@ min_phrase_weight: 100
 柏吉烏斯	bo2 ji2 wu1 si1
 柏塞麥	bo2 se4 mai4
 柏子	bo2 zi5
-柏崎	bai3 qi2
 柏崎	bo2 qi2
-柏崎刈羽	bai3 qi2 yi4 yu3
 柏崎刈羽	bo2 qi2 yi4 yu3
-柏崎市	bai3 qi2 shi4
 柏崎市	bo2 qi2 shi4
 柏府	bo2 fu3
 柏悅	bo2 yue4
@@ -81325,7 +81341,6 @@ min_phrase_weight: 100
 柏拉圖哲學	bo2 la1 tu2 zhe2 xue2
 柏文蔚	bo2 wen2 wei4
 柏木	bo2 mu4
-柏木	bai3 mu4
 柏木油	bo2 mu4 you2
 柏林	bo2 lin2
 柏林劇團	bo2 lin2 ju4 tuan2
@@ -81337,7 +81352,6 @@ min_phrase_weight: 100
 柏林樂派	bo2 lin2 yue4 pai4
 柏林牆	bo2 lin2 qiang2
 柏柏人	bo2 bo2 ren2
-柏柏爾	bo4 bo4 er3
 柏柏爾	bo2 bo2 er3
 柏格曼	bo2 ge2 man4
 柏格森	bo2 ge2 sen1
@@ -81346,21 +81360,17 @@ min_phrase_weight: 100
 柏梁詩	bo2 liang2 shi1
 柏梁體	bo2 liang2 ti3
 柏油紙	bo2 you2 zhi3
-柏油腳跟之州	bai3 you2 jiao3 gen1 zhi1 zhou1
 柏油腳跟之州	bo2 you2 jiao3 gen1 zhi1 zhou1
-柏油馬路	bai3 you2 ma3 lu4
 柏油馬路	bo2 you2 ma3 lu4
 柏濟力阿斯	bo2 ji4 li4 a1 si1
 柏濩	bo2 huo4
 柏特斯加登	bo2 te4 si1 jia1 deng1
-柏節松操	bai3 jie2 song1 cao1
 柏節松操	bo2 jie2 song1 cao1
 柏翳	bo2 yi4
 柏台	bo2 tai2
 柏臺	bo2 tai2
 柏台烏府	bo2 tai2 wu1 fu3
 柏臺烏府	bo2 tai2 wu1 fu3
-柏舉之戰	bai3 ju3 zhi1 zhan4
 柏舉之戰	bo2 ju3 zhi1 zhan4
 柏舟	bo2 zhou1
 柏舟之痛	bo2 zhou1 zhi1 tong4
@@ -81369,7 +81379,6 @@ min_phrase_weight: 100
 柏舟操	bo2 zhou1 cao1
 柏蒂切利	bo2 di4 qie4 li4
 柏遼茲	bo2 liao2 zi1
-柏鄉	bai3 xiang1
 柏鄉	bo2 xiang1
 柏酒	bo2 jiu3
 柏金	bo2 jin1
@@ -81665,11 +81674,8 @@ min_phrase_weight: 100
 桌面兒	zhuo1 mian4 er2
 桌面兒上	zhuo1 mian4 er5 shang4	80%
 桌面兒上	zhuo1 mian4 er2 shang4
-桐柏	tong2 bai3
 桐柏	tong2 bo2
-桐柏山	tong2 bai3 shan1
 桐柏山	tong2 bo2 shan1
-桐柏縣	tong2 bai3 xian4
 桐柏縣	tong2 bo2 xian4
 桑乾河	sang1 gan1 he2
 桑乾盆地	sang1 gan1 pen2 di4
@@ -82623,7 +82629,6 @@ min_phrase_weight: 100
 檔案轉送	dang4 an4 zhuan3 song4
 檜木	gui4 mu4
 檜木	kuai4 mu4
-檜柏	gui4 bai3
 檜柏	gui4 bo2
 檜柏	kuai4 bo2
 檢場	jian3 chang2	3%
@@ -83880,7 +83885,8 @@ min_phrase_weight: 100
 沒有甚麼不可能	mei2 you3 shen2 me5 bu4 ke3 neng2
 沒有聯繫	mei2 you3 lian2 xi4
 沒有規矩	mei2 you3 gui1 ju3
-沒有關係	mei2 you3 guan1 xi1
+沒有關係	mei2 you3 guan1 xi1	80%
+沒有關係	mei2 you3 guan1 xi4
 沒本事	mei2 ben3 shi4
 沒本錢買賣	mei2 ben3 qian2 mai3 mai4
 沒架子	mei2 jia4 zi5
@@ -83970,7 +83976,7 @@ min_phrase_weight: 100
 沒門兒	mei2 men2 er5	80%
 沒門兒	mei2 men2 er2
 沒開交處	mei2 kai1 jiao1 chu4
-沒關係	mei2 guan1 xi1
+沒關係	mei2 guan1 xi1	80%
 沒關係	mei2 guan1 xi4
 沒雕當	mei2 diao1 dang4
 沒頂	mo4 ding3
@@ -84866,7 +84872,8 @@ min_phrase_weight: 100
 海寧市	hai3 ning2 shi4
 海寧觀潮	hai3 ning2 guan1 chao2
 海岸山脈	hai3 an4 shan1 mai4
-海峽兩岸關係協會	hai3 xia2 liang3 an4 guan1 xi1 xie2 hui4
+海峽兩岸關係協會	hai3 xia2 liang3 an4 guan1 xi1 xie2 hui4	80%
+海峽兩岸關係協會	hai3 xia2 liang3 an4 guan1 xi4 xie2 hui4
 海帶卷	hai3 dai4 juan3
 海底地震	hai3 di3 di4 zhen4
 海底摸月	hai3 di3 mo1 yue4
@@ -89772,6 +89779,7 @@ min_phrase_weight: 100
 相互保證毀滅	xiang1 hu4 bao3 zheng4 hui3 mie4
 相互兼容	xiang1 hu4 jian1 rong2
 相互關係	xiang1 hu4 guan1 xi4
+相互關係	xiang1 hu4 guan1 xi1	80%
 相交	xiang1 jiao1
 相交數	xiang1 jiao1 shu4
 相交滿天下	xiang1 jiao1 man3 tian1 xia4
@@ -97868,7 +97876,6 @@ min_phrase_weight: 100
 蒸餾酒	zheng1 liu4 jiu3
 蒸餾酒	zheng1 liu2 jiu3
 蒼朮	cang1 zhu2
-蒼松翠柏	cang1 song1 cui4 bai3
 蒼松翠柏	cang1 song1 cui4 bo2
 蒼穹	cang1 qiong1
 蒼穹	cang1 qiong2
@@ -100113,6 +100120,7 @@ min_phrase_weight: 100
 親子教養	qin1 zi3 jiao4 yang3
 親子鑒定	qin1 zi3 jian4 ding4
 親子關係	qin1 zi3 guan1 xi4
+親子關係	qin1 zi3 guan1 xi1	80%
 親家	qin1 jia1
 親家	qing4 jia1
 親家公	qin1 jia1 gong1
@@ -100188,6 +100196,7 @@ min_phrase_weight: 100
 親系	qin1 xi4
 親緣	qin1 yuan2
 親緣關係	qin1 yuan2 guan1 xi4
+親緣關係	qin1 yuan2 guan1 xi1	80%
 親翁	qing4 weng1
 親者痛	qin1 zhe3 tong4
 親耕	qin1 geng1
@@ -103247,7 +103256,7 @@ min_phrase_weight: 100
 轉鈴兒	zhuan4 ling2 er2
 轉錄	zhuan3 lu4
 轉門	zhuan4 men2
-轉關係	zhuan3 guan1 xi1
+轉關係	zhuan3 guan1 xi1	80%
 轉關係	zhuan3 guan1 xi4
 轉院	zhuan3 yuan4
 轉面無情	zhuan3 mian4 wu2 qing2
@@ -104464,7 +104473,6 @@ min_phrase_weight: 100
 都會區	du1 hui4 qu1
 都會文學	du1 hui4 wen2 xue2
 都柏林	du1 bo2 lin2
-都柏林	dou1 bo2 lin2
 都江堰	du1 jiang1 yan4
 都江堰市	du1 jiang1 yan4 shi4
 都督	du1 du1
@@ -105344,6 +105352,7 @@ min_phrase_weight: 100
 銀苔	yin2 tai2
 銀行	yin2 hang2
 銀行利害關係人	yin2 hang2 li4 hai4 guan1 xi4 ren2
+銀行利害關係人	yin2 hang2 li4 hai4 guan1 xi1 ren2	80%
 銀行券	yin2 hang2 quan4
 銀行卡	yin2 hang2 ka3
 銀行團	yin2 hang2 tuan2
@@ -106650,11 +106659,15 @@ min_phrase_weight: 100
 關上	guan1 shang4
 關中地區	guan1 zhong1 di4 qu1
 關係企業	guan1 xi4 qi4 ye4
+關係企業	guan1 xi1 qi4 ye4	80%
 關係和	guan1 xi4 han4
+關係和	guan1 xi1 han4	80%
 關係和	guan1 xi4 he2
+關係和	guan1 xi1 he2	80%
 關係密切	guan1 xi4 mi4 qie4
-關係密切	guan1 xi1 mi4 qie4
+關係密切	guan1 xi1 mi4 qie4	80%
 關係調	guan1 xi4 diao4
+關係調	guan1 xi1 diao4	80%
 關切	guan1 qie4
 關切補詞	guan1 qie4 bu3 ci2
 關塞	guan1 sai4
@@ -107748,9 +107761,7 @@ min_phrase_weight: 100
 雙曲線正弦	shuang1 qu1 xian4 zheng4 xian2
 雙曲餘割	shuang1 qu1 yu2 ge1
 雙曲餘弦	shuang1 qu1 yu2 xian2
-雙柏	shuang1 bai3
 雙柏	shuang1 bo2
-雙柏縣	shuang1 bai3 xian4
 雙柏縣	shuang1 bo2 xian4
 雙核都市	shuang1 he2 du1 shi4
 雙棲雙宿	shuang1 qi1 shuang1 su4
@@ -109024,7 +109035,7 @@ min_phrase_weight: 100
 風鑽	feng1 zuan4
 風門子	feng1 men2 zi5
 風險與收益的關係	feng1 xian3 yu3 shou1 yi4 de5 guan1 xi4
-風險與收益的關係	feng1 xian3 yu3 shou1 yi4 de5 guan1 xi1
+風險與收益的關係	feng1 xian3 yu3 shou1 yi4 de5 guan1 xi1	80%
 風雨漂搖	feng1 yu3 piao1 yao2
 風雲叱吒	feng1 yun2 chi4 zha4
 風雲月露	feng1 yun2 yue4 lu4
@@ -110494,7 +110505,6 @@ min_phrase_weight: 100
 黃昏時分	huang2 hun1 shi2 fen1
 黃曆	huang2 li4
 黃柏	huang2 bo2
-黃柏	huang2 bo4
 黃柏木作磬槌子	huang2 bo2 mu4 zuo4 qing4 chui2 zi5
 黃梅不落青梅落	huang2 mei2 bu2 luo4 qing1 mei2 luo4
 黃梅調	huang2 mei2 diao4
@@ -110870,4 +110880,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 110873 #####
+##### @結束 END - 110883 #####
