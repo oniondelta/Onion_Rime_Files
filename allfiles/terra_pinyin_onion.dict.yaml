@@ -105,6 +105,7 @@
 #    詞句中，「危」臺灣字典發音和習慣發音為「wei2」，大陸發音為「wei1」，斟酌後全改成臺灣發音「wei2」。
 #    詞句中，「夕」臺灣字典發音和習慣發音為「xi4」，大陸發音為「xi1」，斟酌後全改成臺灣發音「xi4」。
 #    詞句中，「關係」其「係」臺灣字典發音為「xi4」，但日常常發「xi1」，故「關係」其「係」都補上「xi1」該發音。
+#    詞句中，「地」於句尾當結構助詞時，意思同「的」時，不標註「di4」，標註「de5」「di5」。
 #    預計比對「輕聲和一聲」變音。
 #
 #  〈2020修改字詞彙發音〉：
@@ -53892,7 +53893,9 @@ min_phrase_weight: 100
 一音教	yi4 yin1 jiao4
 一音教	yi1 yin1 jiao4
 一項一項地	yi2 xiang4 yi2 xiang4 de5
+一項一項地	yi2 xiang4 yi2 xiang4 di5	80%
 一項一項地	yi1 xiang4 yi1 xiang4 de5
+一項一項地	yi1 xiang4 yi1 xiang4 di5	80%
 一頭	yi4 tou2
 一頭	yi1 tou2
 一頭撞倒南牆	yi4 tou2 zhuang4 dao3 nan2 qiang2
@@ -57095,6 +57098,7 @@ min_phrase_weight: 100
 來勁	lai2 jin4
 來去分明	lai2 qu4 fen1 ming2
 來回來去地	lai2 hui2 lai2 qu4 de5
+來回來去地	lai2 hui2 lai2 qu4 di5	80%
 來往	lai2 wang3
 來得	lai2 de5
 來得	lai2 de2
@@ -57551,6 +57555,7 @@ min_phrase_weight: 100
 倏來忽往	shu4 lai2 hu1 wang3
 倏地	shu1 de5
 倏地	shu4 di4
+倏地	shu1 di5	80%
 倏忽	shu4 hu1
 倏忽	shu1 hu1
 倏然	shu4 ran2
@@ -63410,6 +63415,8 @@ min_phrase_weight: 100
 吐魯番盆地	tu3 lu3 fan1 pen2 di4
 吐魯番窪地	tu3 lu3 fan1 wa1 di4
 向上地	xiang4 shang4 di4
+向上地	xiang4 shang4 de5
+向上地	xiang4 shang4 di5	80%
 向何處	xiang4 he2 chu4
 向北地	xiang4 bei3 di4
 向地性	xiang4 di4 xing4
@@ -63576,6 +63583,7 @@ min_phrase_weight: 100
 呃喔	e4 o1
 呆僗	dai1 lao2
 呆呆地	dai1 dai1 de5
+呆呆地	dai1 dai1 di5	80%
 呆呆掙掙	dai1 dai1 zheng1 zheng1
 呆子	dai1 zi5
 呆打頦	dai1 da2 hai2
@@ -64176,6 +64184,7 @@ min_phrase_weight: 100
 咿喔	yi1 wo4
 咿軋	yi1 ya4
 哀傷地	ai1 shang1 de5
+哀傷地	ai1 shang1 di5	80%
 哀哭切齒	ai1 ku1 qie4 chi3
 哀恫	ai1 tong1
 哀的美敦書	ai1 di4 mei3 dun1 shu1
@@ -65246,6 +65255,7 @@ min_phrase_weight: 100
 嚕囌	lu1 su1
 嚜嚜	mo4 mo4
 嚭嚭地	pi3 pi3 de5
+嚭嚭地	pi3 pi3 di5	80%
 嚴了眼兒	yan2 le5 yan3 er5	80%
 嚴了眼兒	yan2 le5 yan3 er2
 嚴以責己寬以待人	yan2 yi3 ze2 ji3 kuan1 yi3 dai4 ren2
@@ -73260,6 +73270,8 @@ min_phrase_weight: 100
 忿悁	fen4 juan4
 怎地	zen3 de5
 怎地	ze3 de5
+怎地	zen3 di5	80%
+怎地	ze3 di5	80%
 怎麼	ze3 me5
 怎麼	zen3 mo5
 怎麼	zen3 me5
@@ -73455,7 +73467,8 @@ min_phrase_weight: 100
 怵怵忐忐	chu4 chu4 tan3 tan3
 恁地	nen4 de5
 恁地	ren4 de5
-恁地	ren4 di4
+恁地	nen4 di5	80%
+恁地	ren4 di5	80%
 恁麼	nen4 me5
 恁麼	ren4 me5
 恃強凌弱	shi4 qiang2 ling2 ruo4
@@ -77630,6 +77643,7 @@ min_phrase_weight: 100
 撲奔	pu1 ben1
 撲扇	pu1 shan4
 撲搭地	pu1 da1 de5
+撲搭地	pu1 da1 di5	80%
 撲撒	pu1 sa3
 撲擊	pu1 ji2
 撲散	pu1 san4
@@ -83817,6 +83831,7 @@ min_phrase_weight: 100
 沒圈子跳	mei2 quan1 zi5 tiao4
 沒地	mei2 de5
 沒地	mei2 di4
+沒地	mei2 di5	80%
 沒地	mo4 di4
 沒地裡巡檢	mei2 di4 li3 xun2 jian3
 沒地里	mei2 de5 li3
@@ -83857,6 +83872,7 @@ min_phrase_weight: 100
 沒掂三	mei2 dian1 san1
 沒揣	mei2 chuai3
 沒揣地	mei2 chuai3 de5
+沒揣地	mei2 chuai3 di5	80%
 沒揣的	mei2 chuai3 de5
 沒揣的	mo4 chuai3 di4
 沒搭撒	mei2 da1 sa4
@@ -87176,7 +87192,7 @@ min_phrase_weight: 100
 爸爸	ba4 ba5
 爸爸	ba4 ba4
 爹地	die1 di4
-爹地	die1 di5
+爹地	die1 di5	80%
 爹爹	die1 die1
 爺們兒	ye2 men5 er5	80%
 爺們兒	ye2 men5 er2
@@ -87585,9 +87601,12 @@ min_phrase_weight: 100
 猛勁兒	meng3 jin4 er5	80%
 猛勁兒	meng3 jin4 er2
 猛可裡	meng3 ke3 li3
-猛地	meng3 de5
 猛地	meng3 di4
+猛地	meng3 de5
+猛地	meng3 di5	80%
 猛地裡	meng3 di4 li3
+猛地裡	meng3 de5 li3
+猛地裡	meng3 di5 li3	80%
 猛子	meng3 zi5
 猛子	meng3 zi3
 猛將	meng3 jiang4
@@ -90321,6 +90340,7 @@ min_phrase_weight: 100
 真分數	zhen1 fen1 shu4
 真切	zhen1 qie4
 真心實意地	zhen1 xin1 shi2 yi4 de5
+真心實意地	zhen1 xin1 shi2 yi4 di5	80%
 真情流露	zhen1 qing2 liu2 lu4
 真情流露	zhen1 qing2 liu2 lou4
 真數	zhen1 shu4
@@ -90413,6 +90433,7 @@ min_phrase_weight: 100
 著呢	zhe5 ne5
 著地	zhao2 di4
 著地	zhuo2 de5
+著地	zhuo2 di5	80%
 著地	zhuo2 di4
 著地還錢	zhuo2 di4 huan2 qian2
 著墨	zhuo2 mo4
@@ -91961,6 +91982,7 @@ min_phrase_weight: 100
 空地	kong4 di4
 空地	kong1 di4
 空地稅	kong4 di4 shui4
+空地稅	kong1 di4 shui4
 空城	kong1 cheng2
 空城計	kong1 cheng2 ji4
 空堂	kong1 tang2
@@ -92824,7 +92846,9 @@ min_phrase_weight: 100
 簡便	jian3 bian4
 簡分數	jian3 fen1 shu4
 簡單地	jian3 dan1 de5
+簡單地	jian3 dan1 di5	80%
 簡單地說	jian3 dan1 de5 shuo1
+簡單地說	jian3 dan1 di5 shuo1	80%
 簡單明瞭	jian3 dan1 ming2 liao3
 簡子	jian3 zi3
 簡子	jian3 zi5
@@ -93384,6 +93408,7 @@ min_phrase_weight: 100
 細看	xi4 kan4
 細磨刀石	xi4 mo4 dao1 shi2
 細細地流	xi4 xi4 de5 liu2
+細細地流	xi4 xi4 di5 liu2	80%
 細胞分裂	xi4 bao1 fen1 lie4
 細胞週期	xi4 bao1 zhou1 qi2
 細胞遺傳學	xi4 bao1 yi2 chuan2 xue2
@@ -96042,6 +96067,7 @@ min_phrase_weight: 100
 自助旅行	zi4 zhu4 lv3 xing2
 自動光圈	zi4 dong4 guang1 quan1
 自動地工作	zi4 dong4 de5 gong1 zuo4
+自動地工作	zi4 dong4 di5 gong1 zuo4	80%
 自動掛擋	zi4 dong4 gua4 dang3
 自動擋	zi4 dong4 dang3
 自動辨識	zi4 dong4 bian4 shi4
@@ -101344,6 +101370,7 @@ min_phrase_weight: 100
 讒間	chan2 jian4
 讓三分	rang4 san1 fen1
 讓步地	rang4 bu4 de5
+讓步地	rang4 bu4 di5	80%
 讓與	rang4 yu3
 讓賢與能	rang4 xian2 yu3 neng2
 讕調	lan2 diao4
@@ -110783,7 +110810,6 @@ min_phrase_weight: 100
 齊截	qi2 jie2
 齊打夯兒地	qi2 da3 hang1 er5 de5	80%
 齊打夯兒地	qi2 da3 hang1 er2 de5
-齊打夯兒地	qi2 da3 hang1 er2 di4
 齊攢	qi2 cuan2
 齊柏林	qi2 bo2 lin2
 齊柏林飛艇	qi2 bo2 lin2 fei1 ting3
@@ -110880,4 +110906,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 110883 #####
+##### @結束 END - 110909 #####
