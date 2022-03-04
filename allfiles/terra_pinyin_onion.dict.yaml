@@ -74,8 +74,8 @@
 #    單個「ㄝ」拼音為「eh」。
 #
 #  〈詞音〉：
-#    詞句中，「一」和「宜」之變音「yi5」改掉。「不」之變音「bu5」改掉。(部分未改到？)
-#    詞句中，「識」大陸發音「shi2」和變音「shi5」改成臺灣發音「shi4」。(部分未改到？)
+#    詞句中，「一」和「宜」之變音「yi5」改掉。「不」之變音「bu5」改掉。
+#    詞句中，「識」大陸發音「shi2」和變音「shi5」改成臺灣發音「shi4」。
 #    詞句中，「亞」發音「ya3」和「ya4」補齊同存；「堤」發音「ti2」和「di1」補齊同存。（人名等名詞太常用除外）
 #    詞句中，「暴露」「bao4」和「pu4」補齊，「露」以「lu4」為主。
 #    詞句中，「租賃」補齊「lin4」和「ren4」。
@@ -101,6 +101,9 @@
 #    詞句中，「誰」臺灣字典發音「shei2」為語音，「shui2」為讀音，全都補齊「shei2」[shui2]。
 #    詞句中，「剔」臺灣字典發音為「ti1」，故皆標註為「ti1」。但「挑剔」「剔透」等詞之「剔」一般慣發音為「ti4」，故全都補齊「ti1」「ti4」。
 #    詞句中，「兒」臺灣字典發音為「er2」，慣用發音為「er5」。但為兒化音時，臺灣字典中會標註「ㄦ」，但拼音為單獨「r」，可理解為「er5」。兩岸字典中對單獨「兒」皆沒有「er1」「er5」之發音標註，故兒化音時選擇標註「er2」「er5」，不標註「er1」。
+#    詞句中，「傾」臺灣字典發音為「qing1」但日常生活發音太常使用「qing3」，故全都補齊「qing1」「qing3」。
+#    詞句中，「危」臺灣字典發音和習慣發音為「wei2」，大陸發音為「wei1」，斟酌後全改成臺灣發音「wei2」。
+#    詞句中，「夕」臺灣字典發音和習慣發音為「xi4」，大陸發音為「xi1」，斟酌後全改成臺灣發音「xi4」。
 #    預計比對「輕聲和一聲」變音。
 #
 #  〈2020修改字詞彙發音〉：
@@ -334,7 +337,7 @@ min_phrase_weight: 100
 呱	gua3	1%
 呱	wa1	1%
 刻	ke1
-傾	keng1	1%
+傾	keng1	0%
 町	ding1
 呲	ci1	50%
 呲	ci2	30%
@@ -1574,8 +1577,6 @@ min_phrase_weight: 100
 鷑	li4	0.1%
 嵴	ji3
 㪁	qian1
-傾	qin2	0%
-倾	qin2	0%
 厂	chang3	0.1%
 厂	an1	0.1%
 厂	han4	0.1%
@@ -2022,6 +2023,7 @@ min_phrase_weight: 100
 權	guan4	0%
 氌	lu5	0%
 媜	zhen1
+夕	yi4	0%
 ##### @201912 比對教育部相關字詞典檔所新增 #####
 丁	zheng1	0.1%
 丂	kao3	0.1%
@@ -16190,7 +16192,7 @@ min_phrase_weight: 100
 夓	xia4
 夔	kui2
 夕	xi1
-夕	xi2	0%
+#夕	xi2	0%
 外	wai4
 夗	yuan4
 夘	mao3
@@ -53143,7 +53145,6 @@ min_phrase_weight: 100
 一塌糊塗	yi2 ta4 hu2 tu2
 一塌糊塗	yi1 ta4 hu2 tu2
 一夕	yi2 xi4
-#一夕	yi4 xi1
 一夕	yi1 xi4
 一多對應	yi1 duo1 dui4 ying4
 一多對應	yi4 duo1 dui4 ying4
@@ -53409,7 +53410,6 @@ min_phrase_weight: 100
 一朝	yi4 zhao1
 一朝	yi1 zhao1
 一朝一夕	yi4 zhao1 yi2 xi4
-# 一朝一夕	yi1 zhao1 yi1 xi1
 一朝一夕	yi1 zhao1 yi1 xi4
 一朝天子一朝臣	yi4 chao2 tian1 zi3 yi4 chao2 chen2
 一朝天子一朝臣	yi1 chao2 tian1 zi3 yi1 chao2 chen2
@@ -53773,6 +53773,8 @@ min_phrase_weight: 100
 一衝一撞	yi1 chong1 yi1 zhuang4
 一見傾心	yi2 jian4 qing1 xin1
 一見傾心	yi1 jian4 qing1 xin1
+一見傾心	yi2 jian4 qing3 xin1
+一見傾心	yi1 jian4 qing3 xin1
 一見如故	yi2 jian4 ru2 gu4
 一見如故	yi1 jian4 ru2 gu4
 一見鍾情	yi2 jian4 zhong1 qing2
@@ -53961,7 +53963,6 @@ min_phrase_weight: 100
 七十二行	qi1 shi2 er4 hang2
 七和絃	qi1 he2 xian2
 七夕	qi1 xi4
-七夕	qi1 xi1
 七孔流血	qi1 kong3 liu2 xie3
 七折八扣	qi1 zhe2 ba1 kou4
 七橫八縱	qi1 heng2 ba1 zong1
@@ -55533,7 +55534,6 @@ min_phrase_weight: 100
 乖離率	guai1 li2 lv4
 乘人不備	cheng2 ren2 bu2 bei4
 乘人之危	cheng2 ren2 zhi1 wei2
-乘人之危	cheng2 ren2 zhi1 wei1
 乘人之危	cheng4 ren2 zhi1 wei2
 乘便	cheng2 bian4
 乘傳	cheng2 zhuan4
@@ -55883,7 +55883,6 @@ min_phrase_weight: 100
 事假	shi4 jia4
 事兒	shi4 er5	80%
 事兒	shi4 er2
-事危累卵	shi4 wei1 lei3 luan3
 事危累卵	shi4 wei2 lei3 luan3
 事在人為	shi4 zai4 ren2 wei2
 事在必行	shi4 zai4 bi4 xing2
@@ -57619,6 +57618,7 @@ min_phrase_weight: 100
 倒屣迎賓	dao4 xi3 ying2 bin1
 倒履相迎	dao4 lv3 xiang1 ying2
 倒山傾海	dao3 shan1 qing1 hai3
+倒山傾海	dao3 shan1 qing3 hai3
 倒帳	dao3 zhang4
 倒帶	dao4 dai4
 倒序	dao3 xu4
@@ -57628,13 +57628,13 @@ min_phrase_weight: 100
 倒座兒	dao4 zuo4 er5	80%
 倒座兒	dao4 zuo4 er2
 倒廩傾囷	dao4 lin3 qing1 jun1
+倒廩傾囷	dao4 lin3 qing3 jun1
 倒弄	dao3 nong4
 倒彩	dao4 cai3
 倒影	dao4 ying3
 倒心	dao3 xin1
 倒心伏計	dao3 xin1 fu2 ji4
 倒懸	dao4 xuan2
-倒懸之危	dao4 xuan2 zhi1 wei1
 倒懸之危	dao4 xuan2 zhi1 wei2
 倒懸之急	dao4 xuan2 zhi1 ji2
 倒懸之苦	dao4 xuan2 zhi1 ku3
@@ -58490,26 +58490,42 @@ min_phrase_weight: 100
 傻瓜相機	sha3 gua1 xiang4 ji1
 傻屄	sha3 bi1
 傾危	qing1 wei2
-傾危	qing1 wei1
+傾危	qing3 wei2
 傾卸卡車	qing1 xie4 ka3 che1
+傾卸卡車	qing3 xie4 ka3 che1
 傾吐	qing1 tu3
+傾吐	qing3 tu3
 傾吐胸臆	qing1 tu3 xiong1 yi4
+傾吐胸臆	qing3 tu3 xiong1 yi4
 傾吐衷腸	qing1 tu3 zhong1 chang2
+傾吐衷腸	qing3 tu3 zhong1 chang2
 傾囊相授	qing1 nang2 xiang1 shou4
+傾囊相授	qing3 nang2 xiang1 shou4
 傾家	keng1 jia1
 傾家	qing1 jia1
+傾家	qing3 jia1
 傾心吐膽	qing1 xin1 tu3 dan3
+傾心吐膽	qing3 xin1 tu3 dan3
 傾斜度	qing1 xie2 du4
-傾斜度	qing1 xia2 du4
+傾斜度	qing3 xie2 du4
 傾筐倒庋	qing1 kuang1 dao4 ji3
+傾筐倒庋	qing3 kuang1 dao4 ji3
 傾筐倒篋	qing1 kuang1 dao4 qie4
+傾筐倒篋	qing3 kuang1 dao4 qie4
 傾腸倒腹	qing1 chang2 dao4 fu4
+傾腸倒腹	qing3 chang2 dao4 fu4
 傾蓋	qing1 gai4
+傾蓋	qing3 gai4
 傾蓋定交	qing1 gai4 ding4 jiao1
+傾蓋定交	qing3 gai4 ding4 jiao1
 傾蓋相逢	qing1 gai4 xiang1 feng2
+傾蓋相逢	qing3 gai4 xiang1 feng2
 傾蓋而語	qing1 gai4 er2 yu3
+傾蓋而語	qing3 gai4 er2 yu3
 傾覆重器	qing1 fu4 zhong4 qi4
+傾覆重器	qing3 fu4 zhong4 qi4
 傾軋	qing1 ya4
+傾軋	qing3 ya4
 僂人	lou2 ren2
 僂儸	lou2 luo2
 僂指	lou2 zhi3
@@ -60643,7 +60659,6 @@ min_phrase_weight: 100
 前和	qian2 he2
 前咽	qian2 yan1
 前夕	qian2 xi4
-前夕	qian2 xi1
 前失	qian2 shi1
 前奏曲	qian2 zou4 qu3
 前幾天	qian2 ji3 tian1
@@ -61393,6 +61408,7 @@ min_phrase_weight: 100
 勢不可當	shi4 bu4 ke3 dang1
 勢不得已	shi4 bu4 de2 yi3
 勢傾朝野	shi4 qing1 chao2 ye3
+勢傾朝野	shi4 qing3 chao2 ye3
 勢利	shi4 li4
 勢利眼	shi4 li4 yan3
 勢利鬼	shi4 li4 gui3
@@ -62262,65 +62278,48 @@ min_phrase_weight: 100
 印行	yin4 xing2
 印鋪	yin4 pu4
 危亡	wei2 wang2
-危亡	wei1 wang2
 危及	wei2 ji2
-危及	wei1 ji2
 危在旦夕	wei2 zai4 dan4 xi4
-危在旦夕	wei1 zai4 dan4 xi1
-危地馬拉	wei1 di4 ma3 la1
-危地馬拉人	wei1 di4 ma3 la1 ren2
+危地馬拉	wei2 di4 ma3 la1
+危地馬拉人	wei2 di4 ma3 la1 ren2
 危坐	wei2 zuo4
 危城	wei2 cheng2
-危如朝露	wei1 ru2 zhao1 lu4
-危如累卵	wei1 ru2 lei3 luan3
+危如朝露	wei2 ru2 zhao1 lu4
 危如累卵	wei2 ru2 lei3 luan3
 危害	wei2 hai4
-危害	wei1 hai4
 危局	wei2 ju2
-危局	wei1 ju2
 危屋	wei2 wu1
 危弱	wei2 ruo4
 危急	wei2 ji2
-危急	wei1 ji2
 危急存亡之秋	wei2 ji2 cun2 wang2 zhi1 qiu1
 危情	wei2 qing2
 危惙	wei2 chuo4
 危房	wei2 fang2
-危房	wei1 fang2
 危於累卵	wei2 yu2 lei3 luan3
 危樓	wei2 lou2
-危樓	wei1 lou2
 危機	wei2 ji1
-危機	wei1 ji1
 危機四伏	wei2 ji1 si4 fu2
-危機四伏	wei1 ji1 si4 fu2
 危機意識	wei2 ji1 yi4 shi4
 危檣	wei2 qiang2
 危殆	wei2 dai4
-危殆	wei1 dai4
 危竿	wei2 gan1
 危篤	wei2 du3
-危篤	wei1 du3
-危若朝露	wei1 ruo4 zhao1 lu4
 危若朝露	wei2 ruo4 zhao1 lu4
 危行	wei2 xing4
 危言	wei2 yan2
 危言危行	wei2 yan2 wei2 xing4
 危言正色	wei2 yan2 zheng4 se4
 危言聳聽	wei2 yan2 song3 ting1
-危言聳聽	wei1 yan2 song3 ting1
 危言讜論	wei2 yan2 dang3 lun4
 危邦	wei2 bang1
-危重	wei1 zhong4
-危重病人	wei1 zhong4 bing4 ren2
+危重	wei2 zhong4
+危重病人	wei2 zhong4 bing4 ren2
 危險	wei2 xian3
-危險	wei1 xian3
 危險分子	wei2 xian3 fen4 zi3
 危險分子	wei2 xian3 fen4 zi5
 危險性	wei2 xian3 xing4
 危險期	wei2 xian3 qi2
 危險物	wei2 xian3 wu4
-危難	wei1 nan4
 危難	wei2 nan4
 即便	ji2 bian4
 即將	ji2 jiang1
@@ -62872,7 +62871,6 @@ min_phrase_weight: 100
 只教	zhi3 jiao4
 只會撒氣	zhi3 hui4 sa1 qi4
 只爭旦夕	zhi3 zheng1 dan4 xi4
-只爭旦夕	zhi3 zheng1 dan4 xi1
 只為嘴傷人	zhi3 wei4 zui3 shang1 ren2
 只甚	zhi3 shen2
 只當	zhi3 dang1
@@ -63365,6 +63363,7 @@ min_phrase_weight: 100
 吐綬雞	tu3 shou4 ji1
 吐膽	tu3 dan3
 吐膽傾心	tu3 dan3 qing1 xin1
+吐膽傾心	tu3 dan3 qing3 xin1
 吐舊容新	tu3 jiu4 rong2 xin1
 吐舌	tu3 she2
 吐舌頭	tu3 she2 tou5
@@ -63719,7 +63718,6 @@ min_phrase_weight: 100
 命乖運拙	ming4 guai1 yun4 zhuo2
 命分	ming4 fen4
 命在旦夕	ming4 zai4 dan4 xi4
-命在旦夕	ming4 zai4 dan4 xi1
 命小福薄	ming4 xiao3 fu2 bo2
 命數	ming4 shu4
 命根子	ming4 gen1 zi5
@@ -64508,6 +64506,7 @@ min_phrase_weight: 100
 啞啞	ya3 ya3
 啞嗓	ya3 sang3
 啞婦傾杯反受殃	ya3 fu4 qing1 bei1 fan3 shou4 yang1
+啞婦傾杯反受殃	ya3 fu4 qing3 bei1 fan3 shou4 yang1
 啞子	ya3 zi5
 啞子做夢	ya3 zi5 zuo4 meng4
 啞子吃黃蓮	ya3 zi5 chi1 huang2 lian2
@@ -65242,7 +65241,7 @@ min_phrase_weight: 100
 嚴處	yan2 chu3
 嚴親	yan2 qin1
 嚴重	yan2 zhong4
-嚴重危害	yan2 zhong4 wei1 hai4
+嚴重危害	yan2 zhong4 wei2 hai4
 嚴重問題	yan2 zhong4 wen4 ti2
 嚴重後果	yan2 zhong4 hou4 guo3
 嚴重性	yan2 zhong4 xing4
@@ -66194,7 +66193,6 @@ min_phrase_weight: 100
 坳塘	ao1 tang2
 坼副	che4 pi4
 垂危	chui2 wei2
-垂危	chui2 wei1
 垂懸分詞	chui2 xuan2 fen1 ci2
 垂手可得	chui2 shou3 ke3 de2
 垂手而得	chui2 shou3 er2 de2
@@ -67201,7 +67199,9 @@ min_phrase_weight: 100
 大度汪洋	da4 du4 wang1 yang2
 大度豁達	da4 du4 huo4 da2
 大廈將傾	da4 sha4 jiang1 qing1
+大廈將傾	da4 sha4 jiang1 qing3
 大廈將傾	da4 xia4 jiang1 qing1
+大廈將傾	da4 xia4 jiang1 qing3
 大廈棟梁	da4 xia4 dong4 liang2
 大廟	tai4 miao4
 大廟	da4 miao4
@@ -68967,7 +68967,6 @@ min_phrase_weight: 100
 安南山脈	an1 nan2 shan1 mai4
 安卡拉	an1 ka3 la1
 安危	an1 wei2
-安危	an1 wei1
 安和	an1 he2
 安和樂利	an1 he2 le4 li4
 安和路	an1 he2 lu4
@@ -70191,7 +70190,6 @@ min_phrase_weight: 100
 小鏟子	xiao3 chan3 zi5
 小阿姨	xiao3 a1 yi2
 小除夕	xiao3 chu2 xi4
-小除夕	xiao3 chu2 xi1
 小馬乍行嫌路窄	xiao3 ma3 zha4 xing2 xian2 lu4 zhai3
 小鬼難當	xiao3 gui3 nan2 dang1
 小鬼難纏	xiao3 gui3 nan2 chan2
@@ -70450,7 +70448,6 @@ min_phrase_weight: 100
 居住密度	ju1 zhu4 mi4 du4
 居喪	ju1 sang1
 居安思危	ju1 an1 si1 wei2
-居安思危	ju1 an1 si1 wei1
 居安慮危	ju1 an1 lv4 wei2
 居心險惡	ju1 xin1 xian3 e4
 居息	ju1 xi2
@@ -70636,6 +70633,7 @@ min_phrase_weight: 100
 山楂	shan1 zha1
 山楂糕	shan1 zha1 gao1
 山泥傾瀉	shan1 ni2 qing1 xie4
+山泥傾瀉	shan1 ni2 qing3 xie4
 山溜穿石	shan1 liu4 chuan1 shi2
 山濤	shan1 tao2
 山砠	shan1 ju1
@@ -70657,7 +70655,6 @@ min_phrase_weight: 100
 岈然	xia1 ran2
 岋岋惙惙	e4 e4 chuo4 chuo4
 岌岌可危	ji2 ji2 ke3 wei2
-岌岌可危	ji2 ji2 ke3 wei1
 岐嶷	qi2 ni4
 岑參	cen2 shen1
 岑寂	cen2 ji2
@@ -73974,6 +73971,7 @@ min_phrase_weight: 100
 意意思思	yi4 yi4 si1 si1
 意樂	yi4 le4
 意氣相傾	yi4 qi4 xiang1 qing1
+意氣相傾	yi4 qi4 xiang1 qing3
 意氣相合	yi4 qi4 xiang1 he2
 意氣相投	yi4 qi4 xiang1 tou2
 意氣自得	yi4 qi4 zi4 de2
@@ -75198,16 +75196,15 @@ min_phrase_weight: 100
 扳障	ban1 zhang4
 扳龍附鳳	ban1 long2 fu4 feng4
 扶危	fu2 wei2
-扶危	fu2 wei1
 扶危定亂	fu2 wei2 ding4 luan4
 扶危定傾	fu2 wei2 ding4 qing1
-扶危定傾	fu2 wei2 ding4 qing2
+扶危定傾	fu2 wei2 ding4 qing3
 扶危拯溺	fu2 wei2 zheng3 ni4
 扶危持顛	fu2 wei2 chi2 dian1
 扶危救困	fu2 wei2 jiu4 kun4
 扶危濟困	fu2 wei2 ji4 kun4
-扶危濟困	fu2 wei1 ji4 kun4
 扶危翼傾	fu2 wei2 yi4 qing1
+扶危翼傾	fu2 wei2 yi4 qing3
 扶善懲惡	fu2 shan4 cheng2 e4
 扶將	fu2 jiang1
 扶弱抑強	fu2 ruo4 yi4 qiang2
@@ -79687,7 +79684,7 @@ min_phrase_weight: 100
 晦跡韜光	hui4 ji1 tao1 guang1
 晨參暮省	chen2 can1 mu4 xing3
 晨夕	chen2 xi4
-晨夕共處	chen2 xi1 gong4 chu3
+晨夕共處	chen2 xi4 gong4 chu3
 晨操	chen2 cao1
 晨昏定省	chen2 hun1 ding4 xing3
 晨昏顛倒	chen2 hun1 dian1 dao3
@@ -80565,21 +80562,17 @@ min_phrase_weight: 100
 望風而靡	wang4 feng1 er2 mi3
 望風響應	wang4 feng1 xiang3 ying4
 朝三暮四	zhao1 san1 mu4 si4
-朝不保夕	zhao1 bu4 bao3 xi1
 朝不保夕	zhao1 bu4 bao3 xi4
 朝不保暮	zhao1 bu4 bao3 mu4
 朝不及夕	zhao1 bu4 ji2 xi4
 朝不圖夕	zhao1 bu4 tu2 xi4
-朝不慮夕	zhao1 bu2 lv4 xi1
 朝不慮夕	zhao1 bu2 lv4 xi4
 朝不謀夕	zhao1 bu4 mou2 xi4
 朝中	chao2 zhong1
 朝中有人好做官	chao2 zhong1 you3 ren2 hao3 zuo4 guan1
 朝中社	chao2 zhong1 she4
 朝乾夕惕	zhao1 qian2 xi4 ti4
-朝乾夕惕	zhao1 qian2 xi1 ti4
 朝代	chao2 dai4
-朝令夕改	zhao1 ling4 xi1 gai3
 朝令夕改	zhao1 ling4 xi4 gai3
 朝令暮改	zhao1 ling4 mu4 gai3
 朝來暮去	zhao1 lai2 mu4 qu4
@@ -80594,7 +80587,6 @@ min_phrase_weight: 100
 朝四暮三	zhao1 si4 mu4 san1
 朝報	chao2 bao4
 朝士	chao2 shi4
-朝夕	zhao1 xi1
 朝夕	zhao1 xi4
 朝夕不倦	zhao1 xi4 bu2 juan4
 朝夕難保	zhao1 xi4 nan2 bao3
@@ -80675,7 +80667,6 @@ min_phrase_weight: 100
 朝聖	chao2 sheng4
 朝聖者	chao2 sheng4 zhe3
 朝聘	chao2 pin4
-朝聞夕改	zhao1 wen2 xi1 gai3
 朝聞夕改	zhao1 wen2 xi4 gai3
 朝聞夕死	zhao1 wen2 xi4 si3
 朝聞道	zhao1 wen2 dao4
@@ -80693,7 +80684,6 @@ min_phrase_weight: 100
 朝貴	chao2 gui4
 朝賀	chao2 he4
 朝趁暮食	zhao1 chen4 mu4 shi2
-朝過夕改	zhao1 guo4 xi1 gai3
 朝過夕改	zhao1 guo4 xi4 gai3
 朝遷市變	chao2 qian1 shi4 bian4
 朝野	chao2 ye3
@@ -80724,7 +80714,6 @@ min_phrase_weight: 100
 朝飯	zhao1 fan4
 朝餐夜宿	zhao1 can1 ye4 su4
 朝饔夕飧	zhao1 yong1 xi4 sun1
-朝饔夕飧	zhao1 yong1 xi1 sun1
 朝鮮	chao2 xian1
 朝鮮	chao2 xian3
 朝鮮	zhao1 xian1
@@ -82886,7 +82875,6 @@ min_phrase_weight: 100
 正經八百	zheng4 jing1 ba1 bai3
 正色危言	zheng4 se4 wei2 yan2
 正襟危坐	zheng4 jin1 wei2 zuo4
-正襟危坐	zheng4 jin1 wei1 zuo4
 正規教育	zheng4 gui1 jiao4 yu4
 正視繩行	zheng4 shi4 sheng2 xing2
 正身率下	zheng4 shen1 shuai4 xia4
@@ -85926,7 +85914,7 @@ min_phrase_weight: 100
 潛伏期	qian2 fu2 qi2
 潛伏期	qian3 fu2 qi2
 潛在危機	qian2 zai4 wei2 ji1
-潛在危險度	qian2 zai4 wei1 xian3 du4
+潛在危險度	qian2 zai4 wei2 xian3 du4
 潛形匿跡	qian2 xing2 ni4 ji1
 潛意識	qian2 yi4 shi4
 潛意識歷程	qian2 yi4 shi4 li4 cheng2
@@ -86055,7 +86043,6 @@ min_phrase_weight: 100
 濟南市	ji3 nan2 shi4
 濟南慘案	ji3 nan2 can3 an4
 濟困扶危	ji4 kun4 fu2 wei2
-濟困扶危	ji4 kun4 fu2 wei1
 濟寧	ji4 ning2
 濟寧	ji3 ning2
 濟寧地區	ji4 ning2 di4 qu1
@@ -86121,10 +86108,8 @@ min_phrase_weight: 100
 瀏覽量	liu2 lan3 liang4
 瀑風	bao4 feng1
 瀕危	bin1 wei2
-瀕危	bin1 wei1
-瀕危物種	bin1 wei1 wu4 zhong3
 瀕危物種	bin1 wei2 wu4 zhong3
-瀕危野生動植物種國際貿易公約	bin1 wei1 ye3 sheng1 dong4 zhi2 wu4 zhong3 guo2 ji4 mao4 yi4 gong1 yue1
+瀕危野生動植物種國際貿易公約	bin1 wei2 ye3 sheng1 dong4 zhi2 wu4 zhong3 guo2 ji4 mao4 yi4 gong1 yue1
 瀝血之仇	li4 xue4 zhi1 chou2
 瀧夫	long2 fu1
 瀧岡	shuang1 gang1
@@ -87786,6 +87771,7 @@ min_phrase_weight: 100
 玉屏侗族自治縣	yu4 ping2 dong4 zu2 zi4 zhi4 xian4
 玉屏縣	yu4 ping2 xian4
 玉山傾倒	yu4 shan1 qing1 dao3
+玉山傾倒	yu4 shan1 qing3 dao3
 玉山將崩	yu4 shan1 jiang1 beng1
 玉林地區	yu4 lin2 di4 qu1
 玉柏	yu4 bo2
@@ -88914,7 +88900,6 @@ min_phrase_weight: 100
 病包兒	bing4 bao1 er5	80%
 病包兒	bing4 bao1 er2
 病危	bing4 wei2
-病危	bing4 wei1
 病厭厭	bing4 yan1 yan1
 病因子	bing4 yin1 zi5
 病因子	bing4 yin1 zi3
@@ -89460,6 +89445,7 @@ min_phrase_weight: 100
 皺褶	zhou4 zhe3
 盅子	zhong1 zi5
 盆傾甕倒	pen2 qing1 weng4 dao3
+盆傾甕倒	pen2 qing3 weng4 dao3
 盆地	pen2 di4
 盆子	pen2 zi5
 盆成括	pen2 cheng2 gua1
@@ -91588,6 +91574,7 @@ min_phrase_weight: 100
 程子	cheng2 zi5
 程子	cheng2 zi3
 程孔傾蓋	cheng2 kong3 qing1 gai4
+程孔傾蓋	cheng2 kong3 qing3 gai4
 程度	cheng2 du4
 程式規劃	cheng2 shi4 gui1 hua4
 程長庚	cheng2 chang2 geng1
@@ -93777,7 +93764,6 @@ min_phrase_weight: 100
 經濟制度	jing1 ji4 zhi4 du4
 經濟力量	jing1 ji4 li4 liang4
 經濟危機	jing1 ji4 wei2 ji1
-經濟危機	jing1 ji4 wei1 ji1
 經濟合作與發展組織	jing1 ji4 he2 zuo4 yu3 fa1 zhan3 zu3 zhi1
 經濟地理學	jing1 ji4 di4 li3 xue2
 經濟增長	jing1 ji4 zeng1 zhang3
@@ -95582,7 +95568,6 @@ min_phrase_weight: 100
 能弱能強	neng2 ruo4 neng2 qiang2
 能樂	neng2 yue4
 能源危機	neng2 yuan2 wei2 ji1
-能源危機	neng2 yuan2 wei1 ji1
 能為	neng2 wei2
 能為	neng2 wei4
 能牙利爪	neng2 ya2 li4 zhao3
@@ -95967,7 +95952,6 @@ min_phrase_weight: 100
 臧否人物	zang1 pi3 ren2 wu4
 臨了	lin2 liao3
 臨危	lin2 wei2
-臨危	lin2 wei1
 臨危下石	lin2 wei2 xia4 shi2
 臨危不亂	lin2 wei2 bu2 luan4
 臨危不懼	lin2 wei2 bu2 ju4
@@ -95976,7 +95960,6 @@ min_phrase_weight: 100
 臨危受命	lin2 wei2 shou4 ming4
 臨危履冰	lin2 wei2 lv3 bing1
 臨危授命	lin2 wei2 shou4 ming4
-臨危授命	lin2 wei1 shou4 ming4
 臨危效命	lin2 wei2 xiao4 ming4
 臨危自悔	lin2 wei2 zi4 hui3
 臨危自省	lin2 wei2 zi4 xing3
@@ -96773,7 +96756,6 @@ min_phrase_weight: 100
 花晨月夕	hua1 chen2 yue4 xi4
 花朝	hua1 zhao1
 花朝日	hua1 zhao1 ri4
-花朝月夕	hua1 zhao1 yue4 xi1
 花朝月夕	hua1 zhao1 yue4 xi4
 花朝月夜	hua1 zhao1 yue4 ye4
 花朝節	hua1 zhao1 jie2
@@ -101783,8 +101765,6 @@ min_phrase_weight: 100
 賑給	zhen4 ji3
 賓夕法尼亞州	bin1 xi4 fa3 ni2 ya3 zhou1
 賓夕法尼亞州	bin1 xi4 fa3 ni2 ya4 zhou1
-賓夕法尼亞州	bin1 xi1 fa3 ni2 ya3 zhou1
-賓夕法尼亞州	bin1 xi1 fa3 ni2 ya4 zhou1
 賓待	bin1 dai4
 賓得	bin1 de2
 賓興	bin1 xing1
@@ -103061,7 +103041,6 @@ min_phrase_weight: 100
 轉化酶	zhuan3 hua4 mei2
 轉印	zhuan3 yin4
 轉印紙	zhuan3 yin4 zhi3
-轉危為安	zhuan3 wei1 wei2 an1
 轉危為安	zhuan3 wei2 wei2 an1
 轉去	zhuan4 qu4
 轉去	zhuan3 qu4
@@ -107400,7 +107379,6 @@ min_phrase_weight: 100
 除喪	chu2 sang1
 除地	chu2 di4
 除夕	chu2 xi4
-除夕	chu2 xi1
 除息	chu2 xi2
 除患興利	chu2 huan4 xing1 li4
 除惡務本	chu2 e4 wu4 ben3
@@ -108835,7 +108813,7 @@ min_phrase_weight: 100
 頹落	tui2 luo4
 頹靡不振	tui2 mi3 bu2 zhen4
 頻傳	pin2 chuan2
-頻危物種	pin2 wei1 wu4 zhong3
+頻危物種	pin2 wei2 wu4 zhong3
 頻尿	pin2 niao4
 頻度	pin2 du4
 頻數	pin2 shu4
@@ -110816,7 +110794,6 @@ min_phrase_weight: 100
 齍盛	zi1 cheng2
 齎志沒地	ji1 zhi4 mo4 di4
 齒危髮秀	chi3 wei2 fa3 xiu4
-齒危髮秀	chi3 wei1 fa3 xiu4
 齒嵴	chi3 ji3
 齒擊	chi3 ji2
 齒更	chi3 geng1
@@ -110893,4 +110870,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 110896 #####
+##### @結束 END - 110873 #####
