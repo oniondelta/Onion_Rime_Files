@@ -44,7 +44,7 @@
 --      - lua_filter@mix30_nil_comment_up_filter  --（onion-array30） 合併 array30_nil_filter 和 array30_comment_filter 和 array30_spaceup_filter，三個 lua filter 太耗效能。
 --      - lua_filter@mix_cf2_miss_filter          --（bopomo_onionplus 和 bo_mixin 全系列） 合併 charset_filter2 和 missing_mark_filter，兩個 lua filter 太耗效能。
 --      - lua_filter@mix_cf2_cfp_filter           --（dif1） 合併 charset_filter2 和 comment_filter_plus，兩個 lua filter 太耗效能。
---      - lua_filter@mix_cf2_cfp_smf_filter       --（ocm_mixin） 合併 charset_filter2 和 comment_filter_plus 和 symbols_mark_filter，三個 lua filter 太耗效能。
+--      - lua_filter@mix_cf2_cfp_smf_filter       --（lua資料夾）（ocm_mixin） 合併 charset_filter2 和 comment_filter_plus 和 symbols_mark_filter，三個 lua filter 太耗效能。
 --
 --
 --      《 ＊ 以下「處理」注意在 processors 中的順序，基本放在最前面 》
@@ -60,7 +60,7 @@
 --      - lua_processor@s2r_e_u                   --（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（只針對 email 和 url ）
 --      - lua_processor@s2r_most                  --（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin(1,2,4)和 plus 用，精簡寫法）
 --      - lua_processor@s2r_mixin3                --（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin3 (特殊正則)專用）
---      - lua_processor@mobile_bpmf               --（手機注音專用） 使 email_url_translator 功能按空白都能直接上屏
+--      - lua_processor@mobile_bpmf               --（lua資料夾）（手機注音專用） 使 email_url_translator 功能按空白都能直接上屏
 --
 --      - ＊合併兩個以上函數：
 --      - lua_processor@array30up_mix             --（onion-array30） 合併 array30up 和 array30up_zy，增進效能。
@@ -351,11 +351,11 @@ end
 
 
 
---- @@ symbols_mark_filter
---[[
-（關，但 mix_cf2_cfp_smf_filter 有用到某元件，部分開啟）
-候選項註釋符號、音標等屬性之提示碼(comment)（用 opencc 可實現，但無法合併其他提示碼(comment)，改用 Lua 來實現）
---]]
+-- --- @@ symbols_mark_filter
+-- --[[
+-- （關，但 mix_cf2_cfp_smf_filter 有用到某元件，部分開啟）
+-- 候選項註釋符號、音標等屬性之提示碼(comment)（用 opencc 可實現，但無法合併其他提示碼(comment)，改用 Lua 來實現）
+-- --]]
 -- local ocmdb = ReverseDb("build/symbols-mark.reverse.bin")
 
 -- local function xform_mark(inp)
@@ -365,20 +365,20 @@ end
 --   return inp
 -- end
 
--- function symbols_mark_filter(input, env)
---   local b_k = env.engine.context:get_option("back_mark")
---   if (b_k) then
---     for cand in input:iter() do
---       cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
---       -- cand:get_genuine().comment = cand.comment .. ocmdb:lookup(cand.text)
---       yield(cand)
---     end
---   else
---     for cand in input:iter() do
---       yield(cand)
---     end
---   end
--- end
+-- -- function symbols_mark_filter(input, env)
+-- --   local b_k = env.engine.context:get_option("back_mark")
+-- --   if (b_k) then
+-- --     for cand in input:iter() do
+-- --       cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
+-- --       -- cand:get_genuine().comment = cand.comment .. ocmdb:lookup(cand.text)
+-- --       yield(cand)
+-- --     end
+-- --   else
+-- --     for cand in input:iter() do
+-- --       yield(cand)
+-- --     end
+-- --   end
+-- -- end
 
 
 
@@ -709,11 +709,12 @@ end
 
 
 
---- @@ mix_cf2_cfp_smf_filter
---[[
-（ocm_mixin）
-合併 charset_filter2 和 comment_filter_plus 和 symbols_mark_filter，三個 lua filter 太耗效能。
---]]
+-- --- @@ mix_cf2_cfp_smf_filter
+-- --[[
+-- （ocm_mixin）
+-- 合併 charset_filter2 和 comment_filter_plus 和 symbols_mark_filter，三個 lua filter 太耗效能。
+-- 沒用到 ocm_mixin 方案時，ReverseDb("build/symbols-mark.reverse.bin")會找不到。
+-- --]]
 -- function mix_cf2_cfp_smf_filter(input, env)
 --   local c_f2_s = env.engine.context:get_option("zh_tw")
 --   local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
@@ -1225,11 +1226,11 @@ end
 
 
 
---- @@ mix_apc_s2rm 注音mixin 1_2_4 和 plus 專用
---[[
-（bo_mixin 1、2、4；bopomo_onionplus）
-合併 ascii_punct_change 和 s2r_most，增進效能。
---]]
+-- --- @@ mix_apc_s2rm 注音mixin 1_2_4 和 plus 專用
+-- --[[
+-- （bo_mixin 1、2、4；bopomo_onionplus）
+-- 合併 ascii_punct_change 和 s2r_most，增進效能。
+-- --]]
 function mix_apc_s2rm(key, env)
   local engine = env.engine
   local context = engine.context
@@ -8427,4 +8428,32 @@ end
 -- end
 
 
+
+
+--- @@ mix_cf2_cfp_smf_filter
+--[[
+（ocm_mixin）
+合併 charset_filter2 和 comment_filter_plus 和 symbols_mark_filter，三個 lua filter 太耗效能。
+沒用到 ocm_mixin 方案時，ReverseDb("build/symbols-mark.reverse.bin")會找不到。
+--]]
+-- local ocm_mixin_filter = require("ocm_mixin_filter")
+-- mix_cf2_cfp_smf_filter = ocm_mixin_filter.mix_cf2_cfp_smf_filter
+
+
+--- @@ charset_filter2
+--[[
+（ocm_onionmix）（手機全方案會用到）
+把 opencc 轉換成「᰼」(或某個符號)，再用 lua 功能去除「᰼」
+--]]
+-- charset_filter2 = require("mobile_charset_filter")
+-- local mobile_charset_filter = require("mobile_charset_filter")
+-- charset_filter2 = mobile_charset_filter.charset_filter2
+
+
+--- @@ mobile_bpmf
+--[[
+（手機注音用）
+使 email_url_translator 功能按空白都能直接上屏
+--]]
+-- local mobile_bpmf = require("mobile_bpmf_processor")
 
