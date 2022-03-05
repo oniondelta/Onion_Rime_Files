@@ -1226,11 +1226,11 @@ end
 
 
 
--- --- @@ mix_apc_s2rm 注音mixin 1_2_4 和 plus 專用
--- --[[
--- （bo_mixin 1、2、4；bopomo_onionplus）
--- 合併 ascii_punct_change 和 s2r_most，增進效能。
--- --]]
+--- @@ mix_apc_s2rm 注音mixin 1_2_4 和 plus 專用
+--[[
+（bo_mixin 1、2、4；bopomo_onionplus）
+合併 ascii_punct_change 和 s2r_most，增進效能。
+--]]
 function mix_apc_s2rm(key, env)
   local engine = env.engine
   local context = engine.context
@@ -8430,16 +8430,6 @@ end
 
 
 
---- @@ mix_cf2_cfp_smf_filter
---[[
-（ocm_mixin）
-合併 charset_filter2 和 comment_filter_plus 和 symbols_mark_filter，三個 lua filter 太耗效能。
-沒用到 ocm_mixin 方案時，ReverseDb("build/symbols-mark.reverse.bin")會找不到。
---]]
--- local ocm_mixin_filter = require("ocm_mixin_filter")
--- mix_cf2_cfp_smf_filter = ocm_mixin_filter.mix_cf2_cfp_smf_filter
-
-
 --- @@ charset_filter2
 --[[
 （ocm_onionmix）（手機全方案會用到）
@@ -8450,10 +8440,22 @@ end
 -- charset_filter2 = mobile_charset_filter.charset_filter2
 
 
+--- @@ mix_cf2_cfp_smf_filter
+--[[
+（ocm_mixin）
+合併 charset_filter2 和 comment_filter_plus 和 symbols_mark_filter，三個 lua filter 太耗效能。
+沒用到 ocm_mixin 方案時，ReverseDb("build/symbols-mark.reverse.bin")會找不到。
+--]]
+-- local ocm_mixin_filter = require("ocm_mixin_filter")
+-- mix_cf2_cfp_smf_filter = ocm_mixin_filter.mix_cf2_cfp_smf_filter
+
+
 --- @@ mobile_bpmf
 --[[
 （手機注音用）
 使 email_url_translator 功能按空白都能直接上屏
 --]]
 -- local mobile_bpmf = require("mobile_bpmf_processor")
+
+
 
