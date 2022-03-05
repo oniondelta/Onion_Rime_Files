@@ -296,7 +296,8 @@ shutil.copyfile("./allfiles/phrases.ocmtc_terra.dict.yaml", "./sort_rime/ocm/ocm
 
 shutil.copyfile("./allfiles/element_ocm.yaml", "./sort_rime/ocm/ocm_mixin/element_ocm.yaml")
 shutil.copyfile("./allfiles/punct_ocm.yaml", "./sort_rime/ocm/ocm_mixin/punct_ocm.yaml")
-shutil.copyfile("./allfiles/rime.lua", "./sort_rime/ocm/ocm_mixin/rime.lua")
+shutil.copyfile("./allfiles/ocm_mixin_lua/rime.lua", "./sort_rime/ocm/ocm_mixin/rime.lua")
+shutil.copytree("./allfiles/ocm_mixin_lua/lua/", "./sort_rime/ocm/ocm_mixin/lua/")
 
 shutil.copyfile("./allfiles/各方案default.custom/ocm_mixin_custom/default.custom.yaml", "./sort_rime/ocm/ocm_mixin/default.custom.yaml")
 
