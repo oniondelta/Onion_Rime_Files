@@ -4,7 +4,7 @@
 schema:
   schema_id: bo_mixin1
   name: "☆注音(洋蔥mix-in版 1 )☆〔拉日 ˇ  ˋ 韓〕"
-  version: "202112"
+  version: "202203"
   author:
     - 『洋蔥』
   description: |
@@ -82,11 +82,11 @@ engine:
     - abc_segmentor
     - affix_segmentor@emoji_series
     - affix_segmentor@easy_en
-    - affix_segmentor@fs2
+    - affix_segmentor@japan
     - affix_segmentor@cyr2
     - affix_segmentor@gr2
+    - affix_segmentor@fs2
     - affix_segmentor@all_bpm
-    - affix_segmentor@japan
     - affix_segmentor@reverse2_lookup
     - punct_segmentor
     - fallback_segmentor
@@ -95,11 +95,11 @@ engine:
     - table_translator@bo_mixin_phrase
     - table_translator@emoji_series
     - table_translator@easy_en
-    - script_translator@fs2
+    - script_translator@japan
     - script_translator@cyr2
     - script_translator@gr2
+    - script_translator@fs2
     - script_translator@all_bpm
-    - script_translator@japan
     - script_translator@reverse2_lookup
     - lua_translator@t2_translator
     - lua_translator@email_url_translator
@@ -430,7 +430,7 @@ fs2:
   enable_completion: false
   enable_sentence: false
   enable_user_dict: true
-  prefix: "4"
+  prefix: "]["
   suffix: " "
   tips: "《全》▶"
   closing_tips: "◀《全》"
@@ -502,7 +502,7 @@ japan:
   enable_completion: false
   enable_sentence: false
   enable_user_dict: true
-  prefix: "'["
+  prefix: "4"
   suffix: " "
   tips: "《純日語》▶"
   closing_tips: "◀《純日語》"
