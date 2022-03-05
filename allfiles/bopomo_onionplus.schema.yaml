@@ -356,23 +356,6 @@ japan:
     - xform/^/《日》/
     - 'xform/\\/ /'
 ################################『外掛其他語言 2 』##################################
-fs2:
-  tag: fs2
-  dictionary: fullshape.extended
-  prism: fullshape
-  enable_completion: false
-  enable_sentence: false
-  enable_user_dict: true
-  prefix: "]["
-  suffix: " "
-  tips: "《全》▶"
-  closing_tips: "◀《全》"
-  disable_user_dict_for_patterns:
-    - ^[-a-z,./]{1}[;/]?$
-  preedit_format:
-    - xform/^/《全》/
-    - 'xform/\\/ /'
-
 gr2:
   tag: gr2
   dictionary: greek.extended
@@ -409,6 +392,23 @@ cyr2:
     - ^[a-z]+;;$
   preedit_format:
     - xform/^/《俄》/
+    - 'xform/\\/ /'
+
+fs2:
+  tag: fs2
+  dictionary: fullshape.extended
+  prism: fullshape
+  enable_completion: false
+  enable_sentence: false
+  enable_user_dict: true
+  prefix: "]["
+  suffix: " "
+  tips: "《全》▶"
+  closing_tips: "◀《全》"
+  disable_user_dict_for_patterns:
+    - ^[-a-z,./]{1}[;/]?$
+  preedit_format:
+    - xform/^/《全》/
     - 'xform/\\/ /'
 ################################『ㄅㄆㄇ注音文』##################################
 all_bpm:

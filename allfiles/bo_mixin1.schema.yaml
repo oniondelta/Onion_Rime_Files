@@ -422,22 +422,37 @@ e_reverse_lookup:
   comment_format:
     - xform/@@/\n          /
     - xform/@/ /
-################################### 全形 ######################################
-fs2:
-  tag: fs2
-  dictionary: fullshape.extended
-  prism: fullshape
+################################『日語假名輸入漢字』##################################
+japan:
+  tag: japan
+  dictionary: jpnin1.extended
   enable_completion: false
   enable_sentence: false
   enable_user_dict: true
-  prefix: "]["
+  prefix: "4"
   suffix: " "
-  tips: "《全》▶"
-  closing_tips: "◀《全》"
+  tips: "《純日語》▶"
+  closing_tips: "◀《純日語》"
   disable_user_dict_for_patterns:
-    - ^[-a-z,./]{1}[;/]?$
+    - ^-{1,2}$
+    # - ^[.]$
+    # - ^[aiueohn]$
+    # - ^[kstnhmrgzdbp][aiueo]$
+    # - ^[sc]hi$
+    # - ^tsu$
+    # - ^fu$
+    # - ^y[auo]$
+    # - ^w[ao]$
+    # - ^n$
+    # - ^[kgsztnhbpmr]y[auo]$
+    # - ^[sc]h[auo]$
+    # - ^j[auo]$
   preedit_format:
-    - xform/^/《全》/
+    - xform/'[[]'?/A/
+    - xform/^/《純日語》/
+    - xform/^《純日語》(.+)A$/$1《純日語》/
+    - xform/A//
+    - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
     - 'xform/\\/ /'
 ########################### 西里爾字母 ###################################
 cyr2:
@@ -477,6 +492,23 @@ gr2:
   preedit_format:
     - xform/^/《希》/
     - 'xform/\\/ /'
+################################### 全形 ######################################
+fs2:
+  tag: fs2
+  dictionary: fullshape.extended
+  prism: fullshape
+  enable_completion: false
+  enable_sentence: false
+  enable_user_dict: true
+  prefix: "]["
+  suffix: " "
+  tips: "《全》▶"
+  closing_tips: "◀《全》"
+  disable_user_dict_for_patterns:
+    - ^[-a-z,./]{1}[;/]?$
+  preedit_format:
+    - xform/^/《全》/
+    - 'xform/\\/ /'
 ################################『ㄅㄆㄇ注音文』##################################
 all_bpm:
   tag: all_bpm
@@ -495,38 +527,6 @@ all_bpm:
     - xform/A//
     - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-6347 |ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙ˉ|"
     - 'xform/\\//'
-################################『日語假名輸入漢字』##################################
-japan:
-  tag: japan
-  dictionary: jpnin1.extended
-  enable_completion: false
-  enable_sentence: false
-  enable_user_dict: true
-  prefix: "4"
-  suffix: " "
-  tips: "《純日語》▶"
-  closing_tips: "◀《純日語》"
-  disable_user_dict_for_patterns:
-    - ^-{1,2}$
-    # - ^[.]$
-    # - ^[aiueohn]$
-    # - ^[kstnhmrgzdbp][aiueo]$
-    # - ^[sc]hi$
-    # - ^tsu$
-    # - ^fu$
-    # - ^y[auo]$
-    # - ^w[ao]$
-    # - ^n$
-    # - ^[kgsztnhbpmr]y[auo]$
-    # - ^[sc]h[auo]$
-    # - ^j[auo]$
-  preedit_format:
-    - xform/'[[]'?/A/
-    - xform/^/《純日語》/
-    - xform/^《純日語》(.+)A$/$1《純日語》/
-    - xform/A//
-    - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
-    - 'xform/\\/ /'
 ################################### 短語 ######################################
 bo_mixin_phrase:
   dictionary: ""
