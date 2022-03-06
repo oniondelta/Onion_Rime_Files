@@ -4,7 +4,7 @@
 schema:
   schema_id: jpnin1 # 注意此ID與文件名裏 .schema.yaml 之前的部分相同
   name: ❃日語 in 1❃
-  version: "202202"
+  version: "202203"
   author:
     - 『洋蔥』
   description: |
@@ -159,10 +159,10 @@ speller:
     - derive|^(xx)[.]$|$1,|
     - derive|^xx([.,])$|shime$1|
     - derive|^xx([.])$|kigou$1| #只片假名
-    - derive/q(?![yw][aeiou][.])/xtu/ #っッ
-    - derive/q(?![yw][aeiou][.])/ltu/ #っッ
-    - derive/q(?![yw][aeiou][.])/xtsu/ #っッ
-    - derive/q(?![yw][aeiou][.])/ltsu/ #っッ
+    - xform/q(?![yw][aeiou][,.])/xtu/ #っッ
+    - derive/xtu/ltu/ #っッ
+    - derive/xtu/xtsu/ #っッ
+    - derive/xtu/ltsu/ #っッ
     - derive/xy/ly/ #ゃゅょ
     - derive/xwa/lwa/ #ゎ ヮ
     - derive/x([aeiou])/l$1/ #ぁぇぃぉぅ
@@ -197,7 +197,8 @@ speller:
 ##### 使開頭單個字母時（如：kst）也能有選項可選 #####
     - abbrev/^([kstnhmyrwgzdbpjlfxv])[aiueo][,.]$/$1/
     - abbrev/^(c)h[aiueo][,.]$/$1/ #避免「c」開頭沒有對應假名
-    - abbrev/^([kstnhmyrwgzdbpjlfcxv][kstnhmyrwgzdbpjlfc]y?)[aiueo][,.]$/$1/
+    - abbrev/^([kstnhmyrwgzdbpjlfcxvq][kstnhmyrwgzdbpjlfc]y?)[aiueo][,.]$/$1/
+    - abbrev/^(q)[wy][aiueo]$/$1/ #避免「q」開頭沒有對應假名
     - derive/^\|$/ /
 
 translator:
