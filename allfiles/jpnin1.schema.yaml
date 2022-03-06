@@ -198,7 +198,7 @@ speller:
     - abbrev/^([kstnhmyrwgzdbpjlfxv])[aiueo][,.]$/$1/
     - abbrev/^(c)h[aiueo][,.]$/$1/ #避免「c」開頭沒有對應假名
     - abbrev/^([kstnhmyrwgzdbpjlfcxvq][kstnhmyrwgzdbpjlfc]y?)[aiueo][,.]$/$1/
-    - abbrev/^(q)[wy][aiueo]$/$1/ #避免「q」開頭沒有對應假名
+    - abbrev/^(q)[wy][aiueo][,.]$/$1/ #避免「q」開頭沒有對應假名
     - derive/^\|$/ /
 
 translator:
