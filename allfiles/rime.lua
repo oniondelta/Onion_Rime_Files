@@ -28,39 +28,39 @@
 --      - lua_filter@charset_cjk_filter_plus      --（bopomo_onion_double） 遮屏含 CJK 擴展漢字的候選項，開關（only_cjk_filter）
 --      - lua_filter@charset_comment_filter       -- 候選項註釋其所屬字符集，如：CJK、ExtA
 --      - lua_filter@single_char_filter           -- 候選項重排序，使單字優先
---      - lua_filter@reverse_lookup_filter        -- （lua資料夾）依地球拼音為候選項加上帶調拼音的註釋
---      - lua_filter@myfilter                     -- （lua資料夾）把 charset_comment_filter 和 reverse_lookup_filter 註釋串在一起，如：CJK(hǎo)
+--      - lua_filter@reverse_lookup_filter        -- （lua資料夾）（關）依地球拼音為候選項加上帶調拼音的註釋
+--      - lua_filter@myfilter                     -- （lua資料夾）（關）把 charset_comment_filter 和 reverse_lookup_filter 註釋串在一起，如：CJK(hǎo)
 --
 --      - lua_filter@charset_filter2              --（ocm_onionmix）（手機全方案會用到） 遮屏選含「᰼᰼」候選項
 --      - lua_filter@comment_filter_plus          --（Mount_ocm） 遮屏提示碼，開關（simplify_comment）（遇到「'/」不遮屏）。
---      - lua_filter@symbols_mark_filter          --（關，但 mix_cf2_cfp_smf_filter 有用到某元件，部分開啟） 候選項註釋符號、音標等屬性之提示碼(comment)（用 opencc 可實現，但無法合併其他提示碼(comment)，改用 Lua 來實現）
---      - lua_filter@missing_mark_filter          --（關） 補上標點符號因直上和 opencc 衝突沒附註之選項
---      - lua_filter@array30_comment_filter       --（關） 遮屏提示碼，開關（simplify_comment）（遇到「`」不遮屏）
+--      - lua_filter@symbols_mark_filter          --（lua資料夾）（關，但 mix_cf2_cfp_smf_filter 有用到某元件，部分開啟） 候選項註釋符號、音標等屬性之提示碼(comment)（用 opencc 可實現，但無法合併其他提示碼(comment)，改用 Lua 來實現）
+--      - lua_filter@missing_mark_filter          --（lua資料夾）（關） 補上標點符號因直上和 opencc 衝突沒附註之選項
+--      - lua_filter@array30_comment_filter       --（lua資料夾）（關） 遮屏提示碼，開關（simplify_comment）（遇到「`」不遮屏）
 --      - lua_filter@array30_nil_filter           --（onion-array30） 行列30空碼'⎔'轉成不輸出任何符號，符合原生。後來移至「=」「=」反查用。
---      - lua_filter@array30_spaceup_filter       --（關） 行列30開關一二碼按空格後，是否直上或可能有選單。
+--      - lua_filter@array30_spaceup_filter       --（lua資料夾）（關） 行列30開關一二碼按空格後，是否直上或可能有選單。
 --
 --      - ＊合併兩個以上函數：
---      - lua_filter@mix30_nil_comment_filter     --（關） 合併 array30_nil_filter 和 array30_comment_filter，兩個 lua filter 太耗效能。
+--      - lua_filter@mix30_nil_comment_filter     --（lua資料夾）（關） 合併 array30_nil_filter 和 array30_comment_filter，兩個 lua filter 太耗效能。
 --      - lua_filter@mix30_nil_comment_up_filter  --（onion-array30） 合併 array30_nil_filter 和 array30_comment_filter 和 array30_spaceup_filter，三個 lua filter 太耗效能。
 --      - lua_filter@mix_cf2_miss_filter          --（bopomo_onionplus 和 bo_mixin 全系列） 合併 charset_filter2 和 missing_mark_filter，兩個 lua filter 太耗效能。
 --      - lua_filter@mix_cf2_cfp_filter           --（dif1） 合併 charset_filter2 和 comment_filter_plus，兩個 lua filter 太耗效能。
---      - lua_filter@mix_cf2_cfp_smf_filter       --（lua資料夾）（ocm_mixin） 合併 charset_filter2 和 comment_filter_plus 和 symbols_mark_filter，三個 lua filter 太耗效能。
+--      - lua_filter@mix_cf2_cfp_smf_filter       --（引lua資料夾）（ocm_mixin） 合併 charset_filter2 和 comment_filter_plus 和 symbols_mark_filter，三個 lua filter 太耗效能。
 --
 --
 --      《 ＊ 以下「處理」注意在 processors 中的順序，基本放在最前面 》
---      - lua_processor@endspace                  --（關） （hangeul 和 hangeul2set） 韓語（非英語等）空格鍵後添加" "（該方式無法記錄到用戶詞典，故使用原生程式另外方式達成該項功能）
+--      - lua_processor@endspace                  --（lua資料夾）（關） （hangeul 和 hangeul2set） 韓語（非英語等）空格鍵後添加" "（該方式無法記錄到用戶詞典，故使用原生程式另外方式達成該項功能）
 --      - lua_processor@ascii_punct_change        --（bopomo_onionplus_2和3） 注音非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
---      - lua_processor@array30up                 --（關） 行列30三四碼字按空格直接上屏
---      - lua_processor@array30up_zy              --（關） 行列30注音反查 Return 和 space 上屏修正
+--      - lua_processor@array30up                 --（lua資料夾）（關） 行列30三四碼字按空格直接上屏
+--      - lua_processor@array30up_zy              --（lua資料夾）（關） 行列30注音反查 Return 和 space 上屏修正
 --
 --      = 以下針對「編碼有用到空白鍵」方案，如：注音一聲，去除空白上屏產生莫名之空格 =
---      - lua_processor@s2r_ss                    --（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（只有開頭 ^'/ 才作用，比下條目更精簡，少了 is_composing 限定）
---      - lua_processor@s2r_s                     --（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（只有開頭 ^'/ 才作用）
---      - lua_processor@s2r                       --（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin(1,2,4)和 plus 用）
---      - lua_processor@s2r_e_u                   --（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（只針對 email 和 url ）
---      - lua_processor@s2r_most                  --（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin(1,2,4)和 plus 用，精簡寫法）
---      - lua_processor@s2r_mixin3                --（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin3 (特殊正則)專用）
---      - lua_processor@mobile_bpmf               --（lua資料夾）（手機注音專用） 使 email_url_translator 功能按空白都能直接上屏
+--      - lua_processor@s2r_ss                    --（lua資料夾）（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（只有開頭 ^'/ 才作用，比下條目更精簡，少了 is_composing 限定）
+--      - lua_processor@s2r_s                     --（lua資料夾）（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（只有開頭 ^'/ 才作用）
+--      - lua_processor@s2r                       --（lua資料夾）（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin(1,2,4)和 plus 用）
+--      - lua_processor@s2r_e_u                   --（lua資料夾）（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（只針對 email 和 url ）
+--      - lua_processor@s2r_most                  --（lua資料夾）（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin(1,2,4)和 plus 用，精簡寫法）
+--      - lua_processor@s2r_mixin3                --（lua資料夾）（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin3 (特殊正則)專用）
+--      - lua_processor@mobile_bpmf               --（引lua資料夾）（手機注音專用） 使 email_url_translator 功能按空白都能直接上屏
 --
 --      - ＊合併兩個以上函數：
 --      - lua_processor@array30up_mix             --（onion-array30） 合併 array30up 和 array30up_zy，增進效能。
@@ -288,70 +288,6 @@ end
 
 
 
--- --- @@ reverse_lookup_filter
--- --[[
--- 依地球拼音為候選項加上帶調拼音的註釋
--- 沒用到時，ReverseDb("build/terra_pinyin.reverse.bin")可能會找不到。
--- --]]
--- local pydb = ReverseDb("build/terra_pinyin.reverse.bin")
-
--- local function xform_py(inp)
---   if inp == "" then return "" end
---   inp = string.gsub(inp, "([aeiou])(ng?)([1234])", "%1%3%2")
---   inp = string.gsub(inp, "([aeiou])(r)([1234])", "%1%3%2")
---   inp = string.gsub(inp, "([aeo])([iuo])([1234])", "%1%3%2")
---   inp = string.gsub(inp, "a1", "ā")
---   inp = string.gsub(inp, "a2", "á")
---   inp = string.gsub(inp, "a3", "ǎ")
---   inp = string.gsub(inp, "a4", "à")
---   inp = string.gsub(inp, "e1", "ē")
---   inp = string.gsub(inp, "e2", "é")
---   inp = string.gsub(inp, "e3", "ě")
---   inp = string.gsub(inp, "e4", "è")
---   inp = string.gsub(inp, "o1", "ō")
---   inp = string.gsub(inp, "o2", "ó")
---   inp = string.gsub(inp, "o3", "ǒ")
---   inp = string.gsub(inp, "o4", "ò")
---   inp = string.gsub(inp, "i1", "ī")
---   inp = string.gsub(inp, "i2", "í")
---   inp = string.gsub(inp, "i3", "ǐ")
---   inp = string.gsub(inp, "i4", "ì")
---   inp = string.gsub(inp, "u1", "ū")
---   inp = string.gsub(inp, "u2", "ú")
---   inp = string.gsub(inp, "u3", "ǔ")
---   inp = string.gsub(inp, "u4", "ù")
---   inp = string.gsub(inp, "v1", "ǖ")
---   inp = string.gsub(inp, "v2", "ǘ")
---   inp = string.gsub(inp, "v3", "ǚ")
---   inp = string.gsub(inp, "v4", "ǜ")
---   inp = string.gsub(inp, "([nljqxy])v", "%1ü")
---   inp = string.gsub(inp, "eh[0-5]?", "ê")
---   return "(" .. inp .. ")"
--- end
-
--- function reverse_lookup_filter(input)
---   for cand in input:iter() do
---     cand:get_genuine().comment = cand.comment .. " " .. xform_py(pydb:lookup(cand.text))
---     yield(cand)
---   end
--- end
-
-
-
-
--- --- @@ myfilter
--- --[[
--- --- composition
--- 把 charset_comment_filter 和 reverse_lookup_filter 註釋串在一起，如：CJK(hǎo)
--- --]]
--- function myfilter(input)
---   local input2 = Translation(charset_comment_filter, input)
---   reverse_lookup_filter(input2)
--- end
-
-
-
-
 -- --- @@ symbols_mark_filter
 -- --[[
 -- （關，但 mix_cf2_cfp_smf_filter 有用到某元件，部分開啟）
@@ -419,24 +355,6 @@ function comment_filter_plus(input, env)
     end
   end
 end
-
-
--- function array30_comment_filter(input, env)
---   local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
---   local find_prefix = env.engine.context.input
---   if (not s_c_f_p_s) then
---   -- if (not s_c_f_p_s) or (string.find(find_prefix, "`" )) then
---   -- 使用 `iter()` 遍歷所有輸入候選項
---     for cand in input:iter() do
---       yield(cand)
---     end
---   else
---     for cand in input:iter() do
---       cand:get_genuine().comment = ""
---       yield(cand)
---     end
---   end
--- end
 
 
 
@@ -528,70 +446,6 @@ function array30_nil_filter(input, env)
     end
   end
 end
-
-
-
-
--- --- @@ mix30_nil_comment_filter
--- --[[
--- 合併 array30_nil_filter 和 array30_comment_filter，兩個 lua filter 太耗效能。
--- --]]
--- function mix30_nil_comment_filter(input, env)
---   local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
---   local array30_input = env.engine.context.input  -- 原始未轉換輸入碼
---   if (not s_c_f_p_s) or (string.find(array30_input, "`" )) then
---     for cand in input:iter() do
---       local array30_preedit = cand.preedit  -- 轉換後輸入碼，如：ㄅㄆㄇㄈ、1-2⇡9⇡
---       local array30_nil_cand = Candidate("array30nil", 0, string.len(array30_input) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
---       if (string.find(cand.text, '^⎔%d$' )) then
---         array30_nil_cand.preedit = array30_preedit
---         yield(array30_nil_cand)
---       else
---         yield(cand)
---       end
---     end
---   else
---     for cand in input:iter() do
---       local array30_preedit = cand.preedit  -- 轉換後輸入碼，如：ㄅㄆㄇㄈ、1-2⇡9⇡
---       local array30_nil_cand = Candidate("array30nil", 0, string.len(array30_input) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
---       if (string.find(cand.text, '^⎔%d$' )) then
---         array30_nil_cand.preedit = array30_preedit
---         yield(array30_nil_cand)
---       else
---         cand:get_genuine().comment = ""
---         yield(cand)
---       end
---     end
---   end
--- end
-
-
-
-
--- --- @@ missing_mark_filter
--- --[[
--- 補上標點符號因直上和 opencc 衝突沒附註之選項
--- --]]
--- function missing_mark_filter(input, env)
---   local p_key = env.engine.context.input
---   if (string.match(p_key, '=%.$' )) or (string.match(p_key, '[][]$' )) then
---     for cand in input:iter() do
---       if (cand.text == '。') then
---         cand:get_genuine().comment = "〔句點〕"
---         yield(cand)
---       elseif (cand.text == '〔') or (cand.text == '〕') then
---         cand:get_genuine().comment = "〔六角括號〕"
---         yield(cand)
---       else
---         yield(cand)
---       end
---     end
---   else
---     for cand in input:iter() do
---       yield(cand)
---     end
---   end
--- end
 
 
 
@@ -785,37 +639,6 @@ end
 
 
 
--- --- @@ array30_spaceup_filter
--- --[[
--- 行列30開關一二碼按空格後，是否直上或可能有選單。
--- --]]
--- function array30_spaceup_filter(input, env)
---   local s_up = env.engine.context:get_option("1_2_straight_up")
---   local find_prefix = env.engine.context.input
---   if (s_up) then
---     for cand in input:iter() do
---       if (string.find(find_prefix, "^[a-z,./;][a-z,./;]? $" )) and (not string.find(cand.comment, '▪' )) then
---         yield(cand)
---       elseif (string.find(find_prefix, "^[a-z.,/;][a-z.,/;]?[a-z.,/;']?[a-z.,/;']?[i']?$" )) or (string.find(find_prefix, "^a[k,] $" )) or (string.find(find_prefix, "^lr $" )) or (string.find(find_prefix, "^ol $" )) or (string.find(find_prefix, "^qk $" )) or (string.find(find_prefix, "^%.b $" )) or (string.find(find_prefix, "^/%. $" )) or (string.find(find_prefix, "^pe $" )) then
---         yield(cand)
---       elseif (string.find(find_prefix, "^sf $" )) and (string.find(cand.text, '毋' )) then
---         yield(cand)
---       elseif (string.find(find_prefix, "^lb $" )) and (string.find(cand.text, '及' )) then
---         yield(cand)
---       -- elseif (string.find(find_prefix, "`.*$" )) or (string.find(find_prefix, "^w[0-9]$" ))  or (string.find(find_prefix, "^[a-z][-_.0-9a-z]*@.*$" )) or (string.find(find_prefix, "^(www[.]|https?:|ftp:|mailto:|file:).*$" )) then
---       --   yield(cand)
---       end
---     end
---   elseif (not s_up) then
---     for cand in input:iter() do
---       yield(cand)
---     end
---   end
--- end
-
-
-
-
 --- @@ mix30_nil_comment_up_filter
 --[[
 （onion-array30）
@@ -902,104 +725,24 @@ end
 
 
 
--- --- @@ endspace 增加上屏空白
+-- --- @@ mobile_bpmf
 -- --[[
--- （hangeul 和 hangeul2set）
--- 韓語（非英語等）空格鍵後添加" "
+-- （手機注音用）
+-- 使 email_url_translator 功能按空白都能直接上屏
 -- --]]
--- function endspace(key, env)
+-- function mobile_bpmf(key, env)
 --   local engine = env.engine
 --   local context = engine.context
---   local caret_pos_es = context.caret_pos
---   local orig_es = context:get_commit_text()
---   -- local arr = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}
---   --- accept: space_do_space when: composing
+--   local input_m = context.input
+--   local orig_m = context:get_commit_text()
 --   if (key:repr() == "space") and (context:is_composing()) then
---     -- local caret_pos_es = context.caret_pos
---     -- local orig_es = context:get_commit_text()
---     -- local orig_es = context:get_commit_composition()
---     -- local orig_es = context:commit()
---     -- local orig_es = context:get_script_text()
---     -- local orig_es = string.gsub(context:get_script_text(), " ", "a")
---     -- 以下「含有英文字母、控制字元、空白」和「切分上屏時」不作用（用字數統計驗證是否切分）
---     if (not string.find(orig_es, "[%a%c%s]")) and (caret_pos_es == context.input:len()) then
---     -- if (not string.find(orig_es, "[%a%c%s]")) and (caret_pos_es == context.input:len()) then
---     -- if (string.find(orig_es, "[%a%c%s]")) and (caret_pos_es == context.input:len()) then
---       -- local orig_es = context:get_commit_text()
---       -- 下一句：游標位置向左一格，在本例無用，單純記錄用法
---       -- context.caret_pos = caret_pos - 1
---       -- 下兩句合用可使輸出句被電腦記憶
---       -- engine:commit_text("a")
---       -- engine:confirm_current_selection()
---       -- 下一句：用冒號為精簡寫法，該句為完整寫法
---       -- engine.commit_text(engine, orig_es .. "a")
---       -- engine:commit_text(orig_es .. "a")
---       engine:commit_text(orig_es .. " ") --「return 1」時用
---       -- engine:commit_text(orig_es) --「return 0」「return 2」時用
+--     -- local input_m = context.input
+--     if (string.find(input_m, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(input_m, "^https?:.*$")) or (string.find(input_m, "^ftp:.*$")) or (string.find(input_m, "^mailto:.*$")) or (string.find(input_m, "^file:.*$")) then
+--     -- if ( string.find(input_m, "[@:]")) then
+--       -- local orig_m = context:get_commit_text()
+--       engine:commit_text(orig_m)
 --       context:clear()
 --       return 1 -- kAccepted
---       -- 「0」「2」「kAccepted」「kRejected」「kNoop」：直接後綴產生空白
---       -- 「1」：後綴不會產生空白，可用.." "增加空白或其他符號
---       -- （該條目有問題，實測對應不起來）「拒」kRejected、「收」kAccepted、「不認得」kNoop，分別對應返回值：0、1、2。
---       -- 返回「拒絕」時，雖然我們已經處理過按鍵了，但系統以為沒有，於是會按默認值再處理一遍。
---     end
---   end
---   return 2 -- kNoop
--- end
-
-
-
-
--- --- @@ 行列30上屏
--- --[[
--- 行列30三四碼字按空格直接上屏
--- --]]
--- function array30up(key, env)
---   local engine = env.engine
---   local context = engine.context
---   local array_o_input = context.input
---   local array_s_orig = context:get_commit_text()
---   if (key:repr() == "space") and (context:has_menu()) then
---     -- local caret_pos = context.caret_pos
---     -- local array_o_input = context.input
---     if (string.find(array_o_input, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(array_o_input, "^[=][=][a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(array_o_input, "`.+$")) or (string.find(array_o_input, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(array_o_input, "^https?:.*$")) or (string.find(array_o_input, "^ftp:.*$")) or (string.find(array_o_input, "^mailto:.*$")) or (string.find(array_o_input, "^file:.*$")) or (string.find(array_o_input, "^www%..+$")) then
---       -- local array_s_orig = context:get_commit_text()
---       engine:commit_text(array_s_orig)
---       context:clear()
---       return 1 -- kAccepted
---       -- 「0」「2」「kAccepted」「kRejected」「kNoop」：直接後綴產生空白
---       -- 「1」：後綴不會產生空白，可用.." "增加空白或其他符號
---       -- （該條目有問題，實測對應不起來）「拒」kRejected、「收」kAccepted、「不認得」kNoop，分別對應返回值：0、1、2。
---       -- 返回「拒絕」時，雖然我們已經處理過按鍵了，但系統以為沒有，於是會按默認值再處理一遍。
---     end
---   end
---   return 2 -- kNoop
--- end
-
-
-
-
--- --- @@ 行列30注音反查 Return 和 space 上屏修正
--- --[[
--- --]]
--- function array30up_zy(key, env)
---   local engine = env.engine
---   local context = engine.context
---   local array_o_input = context.input
---   local array_s_orig = context:get_commit_text()
---   if (key:repr() == "Return" or key:repr() == "space" and context:has_menu()) then
---     -- local caret_pos = context.caret_pos
---     -- local array_o_input = context.input
---     if (string.find(array_o_input, "^=[a-z0-9,.;/-]+$")) then
---     -- if (string.find(array_o_input, "^=[a-z0-9 ,.;/-]+$")) and (not string.find(array_s_orig, "[%a%c%s]")) then
---       -- local array_s_orig = context:get_commit_text()
---       engine:commit_text(array_s_orig)
---       context:clear()
---       return 1 -- kAccepted
---       -- 「0」「2」「kAccepted」「kRejected」「kNoop」：直接後綴產生空白
---       -- 「1」：後綴不會產生空白，可用.." "增加空白或其他符號
---       -- （該條目有問題，實測對應不起來）「拒」kRejected、「收」kAccepted、「不認得」kNoop，分別對應返回值：0、1、2。
---       -- 返回「拒絕」時，雖然我們已經處理過按鍵了，但系統以為沒有，於是會按默認值再處理一遍。
 --     end
 --   end
 --   return 2 -- kNoop
@@ -1081,148 +824,6 @@ function ascii_punct_change(key, env)
   end
   return 2 -- kNoop
 end
-
-
-
-
--- --- @@ s2r……去除上屏空白
--- --[[
--- 各種寫法，針對掛載 t2_translator 在注音（用到空白鍵時）去除上屏時跑出空格之函數
--- --]]
--- -- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（只針對開頭，並且寫法精簡，少了 is_composing ）
--- function s2r_ss(key, env)
---   local engine = env.engine
---   local context = engine.context
---   local o_input = context.input
---   local s_orig = context:get_commit_text()
---   -- local kkk = string.find(o_input, "'/")
---   if (string.find(o_input, "^'/")) and (key:repr() == 'space') then  -- (kkk~=nil) and (context:is_composing())
---     -- local s_orig = context:get_commit_text()
---     engine:commit_text(s_orig) -- .. "a"
---     context:clear()
---     return 1 -- kAccepted
---   end
---   return 2 -- kNoop
--- end
-
--- --- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（只針對開頭）
--- function s2r_s(key, env)
---   local engine = env.engine
---   local context = engine.context
---   local o_input = context.input
---   local s_orig = context:get_commit_text()
---   -- local page_size = engine.schema.page_size
---   if (key:repr() == 'space') and (context:is_composing()) then
---   -- if (key:repr() == 'space') and (context:has_menu()) then
---     -- local o_input = context.input
---     if (string.find(o_input, "^'/")) then
---       -- local s_orig = context:get_commit_text()
---       engine:commit_text(s_orig)
---       context:clear()
---       return 1 -- kAccepted
---     end
---   end
---   return 2 -- kNoop
--- end
-
--- --- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。
--- function s2r(key, env)
---   local engine = env.engine
---   local context = engine.context
---   local o_input = context.input
---   local s_orig = context:get_commit_text()
---   -- local page_size = engine.schema.page_size
---   if (key:repr() == 'space') and (context:is_composing()) then
---   -- if (key:repr() == 'space') and (context:has_menu()) then
---     -- local o_input = context.input
---     if (string.find(o_input, "'/")) then
---       if (string.find(o_input, "'/[';/]?[a-z]*$")) or (string.find(o_input, "'/[0-9./-]*$")) or (string.find(o_input, "'/[xcoe][0-9a-z]+$")) then
---       -- or string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$") or string.find(o_input, "^https?:.*$") or string.find(o_input, "^ftp:.*$") or string.find(o_input, "^mailto:.*$") or string.find(o_input, "^file:.*$")
---         -- local s_orig = context:get_commit_text()
---         engine:commit_text(s_orig)
---         context:clear()
---         return 1 -- kAccepted
---       end
---     end
---   end
---   return 2 -- kNoop
--- end
-
--- --- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（只針對 email 和 url ）
--- function s2r_e_u(key, env)
---   local engine = env.engine
---   local context = engine.context
---   local o_input = context.input
---   local s_orig = context:get_commit_text()
---   -- local page_size = engine.schema.page_size
---   if (key:repr() == 'space') and (context:is_composing()) then
---   -- if (key:repr() == 'space') and (context:has_menu()) then
---     -- local o_input = context.input
---     if (string.find(o_input, "[@:]")) then
---       if (string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(o_input, "^https?:.*$")) or (string.find(o_input, "^ftp:.*$")) or (string.find(o_input, "^mailto:.*$")) or (string.find(o_input, "^file:.*$")) then
---         -- local s_orig = context:get_commit_text()
---         engine:commit_text(s_orig)
---         context:clear()
---         return 1 -- kAccepted
---       end
---     end
---   end
---   return 2 -- kNoop
--- end
-
--- --- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（特別正則 for mixin3）
--- function s2r_mixin3(key, env)
---   local engine = env.engine
---   local context = engine.context
---   local o_input = context.input
---   local s_orig = context:get_commit_text()
---   -- local page_size = engine.schema.page_size
---   if (key:repr() == 'space') and (context:is_composing()) then
---   -- if (key:repr() == 'space') and (context:has_menu()) then
---     -- local o_input = context.input
---     -- if (string.find(o_input, "'/")) then
---       if ( string.find(o_input, "[@:]") or string.find(o_input, "^'/[';a-z0-9./-]*$") or string.find(o_input, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][0-9]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][][]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][][][][]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][-,.;=`]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(o_input, "=[-125890;,./]$") or string.find(o_input, "=[-;,./][-;,./]$") or string.find(o_input, "==[90]$") ) then  --or string.find(o_input, "==[,.]{2}$")
---       -- if ( string.find(o_input, "[@:]") or string.find(o_input, "^'/[';a-z0-9./-]*$") or string.find(o_input, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][0-9]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][][]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][][][][]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][-,.;=`]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(o_input, "=[-125890;,./]$") or string.find(o_input, "=[-;,./][-;,./]$") or string.find(o_input, "==[90]$") or string.find(o_input, "==[,][,]?$") or string.find(o_input, "==[.][.]?$") ) then
---       --「全，非精簡」 if ( string.find(o_input, "[@:]") or string.find(o_input, "^'/[';a-z0-9./-]*$") or string.find(o_input, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][0-9]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][][]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][][][][]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][-,.;=`]'/[';a-z0-9./-]*$") or string.find(o_input, "[=][-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.find(o_input, "=[-125890;,./]$") or string.find(o_input, "=[-][-]$") or string.find(o_input, "=[;][;]$") or string.find(o_input, "=[,][,]$") or string.find(o_input, "=[.][.]$") or string.find(o_input, "=[/][/]$") or string.find(o_input, "==[90]$") or string.find(o_input, "==[,][,]?$") or string.find(o_input, "==[.][.]?$") ) then
---       -- if ( string.find(o_input, "[@:]") or string.find(o_input, "^'/[';/]?[a-z0-9./-]*$") or string.find(o_input, "[-,./;a-z125890][][3467%s]'/[';/]?[a-z0-9./-]*$") or string.find(o_input, "''/[';/]?[a-z0-9./-]*$") or string.find(o_input, "[=][0-9]'/[';/]?[a-z0-9./-]*$") or string.find(o_input, "[=][][]'/[';/]?[a-z0-9./-]*$") or string.find(o_input, "[=][][][][]'/[';/]?[a-z0-9./-]*$") or string.find(o_input, "[=][-,.;=`]'/[';/]?[a-z0-9./-]*$") or string.find(o_input, "[=][-,.;'=`][-,.;'=`]'/[';/]?[a-z0-9./-]*$") ) then
--- -- or string.find(o_input, "^[a-z][-_.0-9a-z]*@.*$") or string.find(o_input, "^https?:.*$") or string.find(o_input, "^ftp:.*$") or string.find(o_input, "^mailto:.*$") or string.find(o_input, "^file:.*$")
--- --
--- -- 無效的正則，不去影響一般輸入：
--- -- string.find(o_input, "[=][-,.;'=`]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][][]'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][']'/[';/]?[a-z0-9/-]*$") or string.find(o_input, "[][][][][']'/[';/]?[a-z0-9/-]*$") 
--- -- 原始全部正則：
--- -- "^'/[';/]?[a-z0-9/-]*$|(?<=[-,./;a-z125890][][3467 ])'/[';/]?[a-z0-9/-]*$|(?<=['])'/[';/]?[a-z0-9/-]*$|(?<=[=][0-9])'/[';/]?[a-z0-9/-]*$|(?<=[=][][])'/[';/]?[a-z0-9/-]*$|(?<=[=][][][][])'/[';/]?[a-z0-9/-]*$|(?<=[=][-,.;'=`])'/[';/]?[a-z0-9/-]*$|(?<=[=][-,.;'=`][-,.;'=`])'/[';/]?[a-z0-9/-]*$|(?<=[][])'/[';/]?[a-z0-9/-]*$|(?<=[][][][])'/[';/]?[a-z0-9/-]*$|(?<=[][]['])'/[';/]?[a-z0-9/-]*$|(?<=[][][][]['])'/[';/]?[a-z0-9/-]*$"
---         -- local s_orig = context:get_commit_text()
---         engine:commit_text(s_orig)
---         context:clear()
---         return 1 -- kAccepted
---       end
-
---     -- end
---   end
---   return 2 -- kNoop
--- end
-
--- --- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（ mixin(1,2,4)和 plus 用，精簡寫法）
--- function s2r_most(key, env)
---   local engine = env.engine
---   local context = engine.context
---   local o_input = context.input
---   local s_orig = context:get_commit_text()
---   -- local page_size = engine.schema.page_size
---   if (key:repr() == 'space') and (context:is_composing()) then
---   -- if (key:repr() == 'space') and (context:has_menu()) then
---     -- local o_input = context.input
---     if ( string.find(o_input, "[@:]") or string.find(o_input, "'/") or string.find(o_input, "=[-125890;,./]$") or string.find(o_input, "=[-;,./][-;,./]$") or string.find(o_input, "==[90]$") ) then  --or string.find(o_input, "==[,.]{2}$")
---     -- if ( string.find(o_input, "[@:]") or string.find(o_input, "'/") or string.find(o_input, "=[-125890;,./]$") or string.find(o_input, "=[-;,./][-;,./]$") or string.find(o_input, "==[90]$") or string.find(o_input, "==[,][,]?$") or string.find(o_input, "==[.][.]?$") ) then
---     --「全，非精簡」 if ( string.find(o_input, "[@:]") or string.find(o_input, "'/") or string.find(o_input, "=[-125890;,./]$") or string.find(o_input, "=[-][-]$") or string.find(o_input, "=[;][;]$") or string.find(o_input, "=[,][,]$") or string.find(o_input, "=[.][.]$") or string.find(o_input, "=[/][/]$") or string.find(o_input, "==[90]$") or string.find(o_input, "==[,][,]?$") or string.find(o_input, "==[.][.]?$") ) then
---         -- local s_orig = context:get_commit_text()
---         engine:commit_text(s_orig)
---         context:clear()
---         return 1 -- kAccepted
---     end
---   end
---   return 2 -- kNoop
--- end
 
 
 
@@ -1407,30 +1008,6 @@ function mix_apc_pluss(key, env)
 end
 
 
-
-
--- --- @@ mobile_bpmf
--- --[[
--- （手機注音用）
--- 使 email_url_translator 功能按空白都能直接上屏
--- --]]
--- function mobile_bpmf(key, env)
---   local engine = env.engine
---   local context = engine.context
---   local input_m = context.input
---   local orig_m = context:get_commit_text()
---   if (key:repr() == "space") and (context:is_composing()) then
---     -- local input_m = context.input
---     if (string.find(input_m, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(input_m, "^https?:.*$")) or (string.find(input_m, "^ftp:.*$")) or (string.find(input_m, "^mailto:.*$")) or (string.find(input_m, "^file:.*$")) then
---     -- if ( string.find(input_m, "[@:]")) then
---       -- local orig_m = context:get_commit_text()
---       engine:commit_text(orig_m)
---       context:clear()
---       return 1 -- kAccepted
---     end
---   end
---   return 2 -- kNoop
--- end
 
 
 
@@ -8431,12 +8008,7 @@ end
 
 
 
--- --- @@ 使用 lua 資料夾掛載
-
--- --- mix_cf2_cfp_smf_filter（ocm_mixin）
--- --- 沒用到 ocm_mixin 方案時，ReverseDb("build/symbols-mark.reverse.bin")會找不到。
--- local ocm_mixin_filter = require("ocm_mixin_filter")
--- mix_cf2_cfp_smf_filter = ocm_mixin_filter.mix_cf2_cfp_smf_filter
+--- @@ 〈 filter 〉使用 lua 資料夾掛載
 
 -- --- reverse_lookup_filter
 -- -- 依地球拼音為候選項加上帶調拼音的註釋
@@ -8445,13 +8017,78 @@ end
 -- reverse_lookup_filter = pinyin_reverse_filter.reverse_lookup_filter
 -- myfilter = pinyin_reverse_filter.myfilter
 
--- --- mobile_bpmf（手機注音用）
--- --- 使 email_url_translator 功能按空白都能直接上屏
--- local mobile_bpmf = require("mobile_bpmf_processor")
-
 -- --- charset_filter2（ocm_onionmix）（手機全方案會用到）
 -- --- 把 opencc 轉換成「᰼」(或某個符號)，再用 lua 功能去除「᰼」
 -- -- charset_filter2 = require("mobile_charset_filter")
 -- local mobile_charset_filter = require("mobile_charset_filter")
 -- charset_filter2 = mobile_charset_filter.charset_filter2
+
+-- --- missing_mark_filter
+-- -- 補上標點符號因直上和 opencc 衝突沒附註之選項
+-- missing_mark_filter = require("missing_mark_f_filter")
+
+-- --- array30_comment_filter
+-- -- 遮屏提示碼，開關（simplify_comment）（遇到「`」不遮屏）
+-- array30_comment_filter = require("array30_comment_f_filter")
+
+-- --- array30_spaceup_filter
+-- -- 行列30開關一二碼按空格後，是否直上或可能有選單。
+-- array30_spaceup_filter = require("array30_spaceup_f_filter")
+
+-- --- mix30_nil_comment_filter
+-- -- 合併 array30_nil_filter 和 array30_comment_filter，兩個 lua filter 
+-- mix30_nil_comment_filter = require("mix30_nil_comment_f_filter")
+
+-- --- mix_cf2_cfp_smf_filter（ocm_mixin）
+-- --- 沒用到 ocm_mixin 方案時，ReverseDb("build/symbols-mark.reverse.bin")會找不到。
+-- local ocm_mixin_filter = require("ocm_mixin_filter")
+-- mix_cf2_cfp_smf_filter = ocm_mixin_filter.mix_cf2_cfp_smf_filter
+
+
+
+
+--- @@ 〈 processor 〉使用 lua 資料夾掛載
+
+-- --- endspace 增加上屏空白
+-- -- （hangeul 和 hangeul2set）
+-- -- 韓語（非英語等）空格鍵後添加" "
+-- endspace = require("endspace_processor")
+
+-- --- 行列30上屏
+-- -- 行列30三四碼字按空格直接上屏
+-- array30up = require("array30up_processor")
+
+-- --- 行列30注音反查 Return 和 space 上屏修正
+-- array30up_zy = require("array30up_zy_processor")
+
+-- --- s2r_ss……去除上屏空白
+-- -- 各種寫法，針對掛載 t2_translator 在注音（用到空白鍵時）去除上屏時跑出空格之函數
+-- -- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（只針對開頭，並且寫法精簡，少了 is_composing ）
+-- s2r_ss = require("s2r_ss_processor")
+
+-- --- s2r_s
+-- --- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（只針對開頭）
+-- s2r_s = require("s2r_s_processor")
+
+-- --- s2r
+-- --- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。
+-- s2r = require("s2r_processor")
+
+-- --- s2r_e_u
+-- --- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（只針對 email 和 url ）
+-- s2r_e_u = require("s2r_e_u_processor")
+
+-- --- s2r_most
+-- --- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（ mixin(1,2,4)和 plus 用，精簡寫法）
+-- s2r_most = require("s2r_most_processor")
+
+-- --- s2r_mixin3
+-- --- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（特別正則 for mixin3）
+-- s2r_mixin3 = require("s2r_mixin3_processor")
+
+-- --- mobile_bpmf（手機注音用）
+-- --- 使 email_url_translator 功能按空白都能直接上屏
+-- mobile_bpmf = require("mobile_bpmf_processor")
+
+
 
