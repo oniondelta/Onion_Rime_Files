@@ -38,9 +38,10 @@
 #  2018-04-24 新增支援 CJK Ext-F。                                    #
 #######################################################################
 # 『洋蔥』製作
+# 20220308 以下遮屏重複，不遮屏 Rime 部署時也會自動合併。
 ---
 name: onion-array30-wsymbols
-version: "202107"
+version: "202203"
 sort: original
 use_preset_vocabulary: false
 #max_phrase_length: 7
@@ -311,10 +312,10 @@ use_preset_vocabulary: false
 ╮	w7
 ╰	w7
 ╯	w7
-═	w7
-╞	w7
-╪	w7
-╡	w7
+#有重複#═	w7
+#有重複#╞	w7
+#有重複#╪	w7
+#有重複#╡	w7
 ◢	w7
 ◣	w7
 ◥	w7
@@ -351,10 +352,10 @@ use_preset_vocabulary: false
 ╜	w7
 ║	w7
 ═	w7
-╭	w7
-╮	w7
-╰	w7
-╯	w7
+#有重複#╭	w7
+#有重複#╮	w7
+#有重複#╰	w7
+#有重複#╯	w7
 ▓	w7
 ①	w8
 ②	w8
