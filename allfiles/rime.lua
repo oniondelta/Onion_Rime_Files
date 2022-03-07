@@ -24,12 +24,12 @@
 --
 --
 --      《 ＊ 以下「濾鏡」注意在 filters 中的順序，關係到作用效果 》
---      - lua_filter@charset_filter               -- 遮屏含 CJK 擴展漢字的候選項
---      - lua_filter@charset_filter_plus          --（bopomo_onion_double） 遮屏含 CJK 擴展漢字的候選項，開關（only_cjk_filter）
+--      - lua_filter@charset_cjk_filter           -- 遮屏含 CJK 擴展漢字的候選項
+--      - lua_filter@charset_cjk_filter_plus      --（bopomo_onion_double） 遮屏含 CJK 擴展漢字的候選項，開關（only_cjk_filter）
 --      - lua_filter@charset_comment_filter       -- 候選項註釋其所屬字符集，如：CJK、ExtA
 --      - lua_filter@single_char_filter           -- 候選項重排序，使單字優先
---      - lua_filter@reverse_lookup_filter        -- 依地球拼音為候選項加上帶調拼音的註釋
---      - lua_filter@myfilter                     -- 把 charset_comment_filter 和 reverse_lookup_filter 註釋串在一起，如：CJK(hǎo)
+--      - lua_filter@reverse_lookup_filter        -- （lua資料夾）依地球拼音為候選項加上帶調拼音的註釋
+--      - lua_filter@myfilter                     -- （lua資料夾）把 charset_comment_filter 和 reverse_lookup_filter 註釋串在一起，如：CJK(hǎo)
 --
 --      - lua_filter@charset_filter2              --（ocm_onionmix）（手機全方案會用到） 遮屏選含「᰼᰼」候選項
 --      - lua_filter@comment_filter_plus          --（Mount_ocm） 遮屏提示碼，開關（simplify_comment）（遇到「'/」不遮屏）。
@@ -81,12 +81,12 @@
 
 
 
---- @@ charset filter
+--- @@ charset cjk filter
 --[[
-charset_filter: 濾除含 CJK 擴展漢字的候選項
+charset_cjk_filter: 濾除含 CJK 擴展漢字的候選項
 charset_comment_filter: 為候選項加上其所屬字符集的註釋
 本例說明了 filter 最基本的寫法。
-請見 `charset_filter` 和 `charset_comment_filter` 上方註釋。
+請見 `charset_cjk_filter` 和 `charset_comment_filter` 上方註釋。
 --]]
 
 -- 幫助函數（可跳過）
@@ -126,7 +126,7 @@ end
 
 
 
---- @@ charset_filter
+--- @@ charset_cjk_filter
 --[[
 filter 的功能是對 translator 翻譯而來的候選項做修飾，
 如去除不想要的候選、為候選加註釋、候選項重排序等。
@@ -134,9 +134,9 @@ filter 的功能是對 translator 翻譯而來的候選項做修飾，
  - input: 候選項列表
  - env: 可選參數，表示 filter 所處的環境（本例沒有體現）
 filter 的輸出與 translator 相同，也是若干候選項，也要求您使用 `yield` 產生候選項。
-如下例所示，charset_filter 將濾除含 CJK 擴展漢字的候選項：
+如下例所示，charset_cjk_filter 將濾除含 CJK 擴展漢字的候選項：
 --]]
-function charset_filter(input)
+function charset_cjk_filter(input)
   -- 使用 `iter()` 遍歷所有輸入候選項
   for cand in input:iter() do
     -- 如果當前候選項 `cand` 不含 CJK 擴展漢字
@@ -153,13 +153,13 @@ end
 
 
 
---- @@ charset_filter_plus
+--- @@ charset_cjk_filter_plus
 --[[
 （bopomo_onion_double）
 同上，將濾除含 CJK 擴展漢字的候選項
 增加開關設置
 --]]
-function charset_filter_plus(input, env)
+function charset_cjk_filter_plus(input, env)
   -- 使用 `iter()` 遍歷所有輸入候選項
   local c_f_p_s = env.engine.context:get_option("only_cjk_filter")
   if (c_f_p_s) then
@@ -200,7 +200,7 @@ function charset_comment_filter(input)
 end
 
 -- 本例中定義了兩個 filter，故使用一個表將兩者導出
--- return { filter = charset_filter,
+-- return { filter = charset_cjk_filter,
 --   comment_filter = charset_comment_filter }
 
 
@@ -288,65 +288,66 @@ end
 
 
 
---- @@ reverse_lookup_filter
---[[
-依地球拼音為候選項加上帶調拼音的註釋
---]]
-local pydb = ReverseDb("build/terra_pinyin.reverse.bin")
+-- --- @@ reverse_lookup_filter
+-- --[[
+-- 依地球拼音為候選項加上帶調拼音的註釋
+-- 沒用到時，ReverseDb("build/terra_pinyin.reverse.bin")可能會找不到。
+-- --]]
+-- local pydb = ReverseDb("build/terra_pinyin.reverse.bin")
 
-local function xform_py(inp)
-  if inp == "" then return "" end
-  inp = string.gsub(inp, "([aeiou])(ng?)([1234])", "%1%3%2")
-  inp = string.gsub(inp, "([aeiou])(r)([1234])", "%1%3%2")
-  inp = string.gsub(inp, "([aeo])([iuo])([1234])", "%1%3%2")
-  inp = string.gsub(inp, "a1", "ā")
-  inp = string.gsub(inp, "a2", "á")
-  inp = string.gsub(inp, "a3", "ǎ")
-  inp = string.gsub(inp, "a4", "à")
-  inp = string.gsub(inp, "e1", "ē")
-  inp = string.gsub(inp, "e2", "é")
-  inp = string.gsub(inp, "e3", "ě")
-  inp = string.gsub(inp, "e4", "è")
-  inp = string.gsub(inp, "o1", "ō")
-  inp = string.gsub(inp, "o2", "ó")
-  inp = string.gsub(inp, "o3", "ǒ")
-  inp = string.gsub(inp, "o4", "ò")
-  inp = string.gsub(inp, "i1", "ī")
-  inp = string.gsub(inp, "i2", "í")
-  inp = string.gsub(inp, "i3", "ǐ")
-  inp = string.gsub(inp, "i4", "ì")
-  inp = string.gsub(inp, "u1", "ū")
-  inp = string.gsub(inp, "u2", "ú")
-  inp = string.gsub(inp, "u3", "ǔ")
-  inp = string.gsub(inp, "u4", "ù")
-  inp = string.gsub(inp, "v1", "ǖ")
-  inp = string.gsub(inp, "v2", "ǘ")
-  inp = string.gsub(inp, "v3", "ǚ")
-  inp = string.gsub(inp, "v4", "ǜ")
-  inp = string.gsub(inp, "([nljqxy])v", "%1ü")
-  inp = string.gsub(inp, "eh[0-5]?", "ê")
-  return "(" .. inp .. ")"
-end
+-- local function xform_py(inp)
+--   if inp == "" then return "" end
+--   inp = string.gsub(inp, "([aeiou])(ng?)([1234])", "%1%3%2")
+--   inp = string.gsub(inp, "([aeiou])(r)([1234])", "%1%3%2")
+--   inp = string.gsub(inp, "([aeo])([iuo])([1234])", "%1%3%2")
+--   inp = string.gsub(inp, "a1", "ā")
+--   inp = string.gsub(inp, "a2", "á")
+--   inp = string.gsub(inp, "a3", "ǎ")
+--   inp = string.gsub(inp, "a4", "à")
+--   inp = string.gsub(inp, "e1", "ē")
+--   inp = string.gsub(inp, "e2", "é")
+--   inp = string.gsub(inp, "e3", "ě")
+--   inp = string.gsub(inp, "e4", "è")
+--   inp = string.gsub(inp, "o1", "ō")
+--   inp = string.gsub(inp, "o2", "ó")
+--   inp = string.gsub(inp, "o3", "ǒ")
+--   inp = string.gsub(inp, "o4", "ò")
+--   inp = string.gsub(inp, "i1", "ī")
+--   inp = string.gsub(inp, "i2", "í")
+--   inp = string.gsub(inp, "i3", "ǐ")
+--   inp = string.gsub(inp, "i4", "ì")
+--   inp = string.gsub(inp, "u1", "ū")
+--   inp = string.gsub(inp, "u2", "ú")
+--   inp = string.gsub(inp, "u3", "ǔ")
+--   inp = string.gsub(inp, "u4", "ù")
+--   inp = string.gsub(inp, "v1", "ǖ")
+--   inp = string.gsub(inp, "v2", "ǘ")
+--   inp = string.gsub(inp, "v3", "ǚ")
+--   inp = string.gsub(inp, "v4", "ǜ")
+--   inp = string.gsub(inp, "([nljqxy])v", "%1ü")
+--   inp = string.gsub(inp, "eh[0-5]?", "ê")
+--   return "(" .. inp .. ")"
+-- end
 
-function reverse_lookup_filter(input)
-  for cand in input:iter() do
-    cand:get_genuine().comment = cand.comment .. " " .. xform_py(pydb:lookup(cand.text))
-    yield(cand)
-  end
-end
-
-
+-- function reverse_lookup_filter(input)
+--   for cand in input:iter() do
+--     cand:get_genuine().comment = cand.comment .. " " .. xform_py(pydb:lookup(cand.text))
+--     yield(cand)
+--   end
+-- end
 
 
---- @@ myfilter
---[[
---- composition
-把 charset_comment_filter 和 reverse_lookup_filter 註釋串在一起，如：CJK(hǎo)
---]]
-function myfilter(input)
-  local input2 = Translation(charset_comment_filter, input)
-  reverse_lookup_filter(input2)
-end
+
+
+-- --- @@ myfilter
+-- --[[
+-- --- composition
+-- 把 charset_comment_filter 和 reverse_lookup_filter 註釋串在一起，如：CJK(hǎo)
+-- --]]
+-- function myfilter(input)
+--   local input2 = Translation(charset_comment_filter, input)
+--   reverse_lookup_filter(input2)
+-- end
 
 
 
@@ -8430,14 +8431,27 @@ end
 
 
 
---- @@ 使用 lua 資料夾掛載
+-- --- @@ 使用 lua 資料夾掛載
 
---- mix_cf2_cfp_smf_filter（ocm_mixin）
---- 沒用到 ocm_mixin 方案時，ReverseDb("build/symbols-mark.reverse.bin")會找不到。
+-- --- mix_cf2_cfp_smf_filter（ocm_mixin）
+-- --- 沒用到 ocm_mixin 方案時，ReverseDb("build/symbols-mark.reverse.bin")會找不到。
 -- local ocm_mixin_filter = require("ocm_mixin_filter")
 -- mix_cf2_cfp_smf_filter = ocm_mixin_filter.mix_cf2_cfp_smf_filter
 
---- mobile_bpmf（手機注音用）
---- 使 email_url_translator 功能按空白都能直接上屏
+-- --- reverse_lookup_filter
+-- -- 依地球拼音為候選項加上帶調拼音的註釋
+-- -- 沒用到時，ReverseDb("build/terra_pinyin.reverse.bin")可能會找不到。
+-- local pinyin_reverse_filter = require("pinyin_reverse_filter")
+-- reverse_lookup_filter = pinyin_reverse_filter.reverse_lookup_filter
+-- myfilter = pinyin_reverse_filter.myfilter
+
+-- --- mobile_bpmf（手機注音用）
+-- --- 使 email_url_translator 功能按空白都能直接上屏
 -- local mobile_bpmf = require("mobile_bpmf_processor")
+
+-- --- charset_filter2（ocm_onionmix）（手機全方案會用到）
+-- --- 把 opencc 轉換成「᰼」(或某個符號)，再用 lua 功能去除「᰼」
+-- -- charset_filter2 = require("mobile_charset_filter")
+-- local mobile_charset_filter = require("mobile_charset_filter")
+-- charset_filter2 = mobile_charset_filter.charset_filter2
 
