@@ -41,7 +41,7 @@ engine:
   filters:
 #    - charset_filter@big5
 #    - charset_filter@gbk
-    - lua_filter@charset_filter_plus
+    - lua_filter@charset_cjk_filter_plus
     - simplifier
     - reverse_lookup_filter@bpm_reverse_lookup
     - uniquifier
