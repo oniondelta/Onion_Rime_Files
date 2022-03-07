@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onion_double
   name: "☆注音(洋蔥雙拼版)☆"
-  version: "202112"
+  version: "202203"
   author:
     - 『洋蔥』
   description: |
@@ -80,7 +80,7 @@ simplifier:
   opencc_config: tw2s.json
   tips: all
 
-# charset_filter_plus:
+# charset_cjk_filter_plus:
 #   tags: [ abc, reverse2_lookup ]
 
 # only_cjk_filter:
