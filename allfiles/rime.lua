@@ -14,8 +14,8 @@
 --      ...
 --      - lua_translator@t_translator             -- 「`」開頭打出時間日期
 --      - lua_translator@t2_translator            -- 「'/」開頭打出時間日期
---      - lua_translator@date_translator          -- 「``」開頭打出時間日期
---      - lua_translator@mytranslator             -- （有缺函數，參考勿用，暫關閉）
+--      - lua_translator@date_translator          -- （引lua資料夾）（liur）「``」開頭打出時間日期
+--      - lua_translator@mytranslator             -- （lua資料夾）（關）（有缺函數，參考勿用，暫關閉）
 --      - lua_translator@instruction_dbpmf        -- 選項中顯示洋蔥雙拼各種說明
 --      - lua_translator@instruction_grave_bpmf   -- 選項中顯示洋蔥注音各種說明
 --      - lua_translator@instruction_ocm          -- 選項中顯示洋蔥蝦米各種說明
@@ -7644,41 +7644,41 @@ end
 
 
 
---- @@ date/time translator
---[[
-有些網上方案會掛載該項
---]]
-function date_translator(input, seg)
-  if (string.match(input, "``")~=nil) then
-    -- Candidate(type, start, end, text, comment)
-    if (input == "``time") then
-      yield(Candidate("time", seg.start, seg._end, os.date("%H:%M:%S"), " 現在時間"))
-      return
-    end
+-- --- @@ date/time translator
+-- --[[
+-- 有些網上方案會掛載該項
+-- --]]
+-- function date_translator(input, seg)
+--   if (string.match(input, "``")~=nil) then
+--     -- Candidate(type, start, end, text, comment)
+--     if (input == "``time") then
+--       yield(Candidate("time", seg.start, seg._end, os.date("%H:%M:%S"), " 現在時間"))
+--       return
+--     end
 
-    if (input == "``now") then
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y年%m月%d日"), " 現在日期"))
-      return
-    end
+--     if (input == "``now") then
+--       yield(Candidate("date", seg.start, seg._end, os.date("%Y年%m月%d日"), " 現在日期"))
+--       return
+--     end
 
-    if(input=="``") then
-      yield(Candidate("date", seg.start, seg._end, "" , "擴充模式"))
-      return
-    end
+--     if(input=="``") then
+--       yield(Candidate("date", seg.start, seg._end, "" , "擴充模式"))
+--       return
+--     end
 
-    local y, m, d = string.match(input, "``(%d+)/(%d?%d)/(%d?%d)$")
-    if(y~=nil) then
-      yield(Candidate("date", seg.start, seg._end, y.."年"..m.."月"..d.."日" , " 日期"))
-      return
-    end
+--     local y, m, d = string.match(input, "``(%d+)/(%d?%d)/(%d?%d)$")
+--     if(y~=nil) then
+--       yield(Candidate("date", seg.start, seg._end, y.."年"..m.."月"..d.."日" , " 日期"))
+--       return
+--     end
 
-    local m, d = string.match(input, "``(%d?%d)/(%d?%d)$")
-    if(m~=nil) then
-      yield(Candidate("date", seg.start, seg._end, m.."月"..d.."日" , " 日期"))
-      return
-    end
-  end
-end
+--     local m, d = string.match(input, "``(%d?%d)/(%d?%d)$")
+--     if(m~=nil) then
+--       yield(Candidate("date", seg.start, seg._end, m.."月"..d.."日" , " 日期"))
+--       return
+--     end
+--   end
+-- end
 
 -- function mytranslator(input, seg)
 --   date_translator(input, seg)
@@ -8008,6 +8008,10 @@ end
 
 
 
+
+
+
+
 --- @@ 〈 filter 〉使用 lua 資料夾掛載
 
 -- --- reverse_lookup_filter
@@ -8041,6 +8045,7 @@ end
 
 -- --- mix_cf2_cfp_smf_filter（ocm_mixin）
 -- --- 沒用到 ocm_mixin 方案時，ReverseDb("build/symbols-mark.reverse.bin")會找不到。
+-- -- mix_cf2_cfp_smf_filter =  require("ocm_mixin_filter")
 -- local ocm_mixin_filter = require("ocm_mixin_filter")
 -- mix_cf2_cfp_smf_filter = ocm_mixin_filter.mix_cf2_cfp_smf_filter
 
@@ -8089,6 +8094,15 @@ end
 -- --- mobile_bpmf（手機注音用）
 -- --- 使 email_url_translator 功能按空白都能直接上屏
 -- mobile_bpmf = require("mobile_bpmf_processor")
+
+
+
+
+--- @@ 〈 translator 〉使用 lua 資料夾掛載
+
+-- --- date/time translator
+-- -- 有些網上方案會掛載該項，如：liur。
+-- date_translator = require("liur_date_translator")
 
 
 
