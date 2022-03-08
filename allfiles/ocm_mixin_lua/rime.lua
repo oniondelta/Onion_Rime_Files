@@ -8012,42 +8012,58 @@ end
 
 
 
+--[[
+掛接備註：
+
+如果 lua 資料夾檔案最後 return {table} ，掛接使用：
+local 檔名 = require("檔名")
+函數名 = 檔名.函數名
+
+如果 lua 資料夾檔案最後 return 函數名 ，掛接使用：
+函數名 = require("檔名")
+
+--]]
+
 --- @@ 〈 filter 〉使用 lua 資料夾掛載
 
 -- --- reverse_lookup_filter
 -- -- 依地球拼音為候選項加上帶調拼音的註釋
 -- -- 沒用到時，ReverseDb("build/terra_pinyin.reverse.bin")可能會找不到。
--- local pinyin_reverse_filter = require("pinyin_reverse_filter")
--- reverse_lookup_filter = pinyin_reverse_filter.reverse_lookup_filter
--- myfilter = pinyin_reverse_filter.myfilter
+-- local filter_reverse_lookup_filter = require("filter_reverse_lookup_filter")
+-- reverse_lookup_filter = filter_reverse_lookup_filter.reverse_lookup_filter
+-- myfilter = filter_reverse_lookup_filter.myfilter
 
 -- --- charset_filter2（ocm_onionmix）（手機全方案會用到）
 -- --- 把 opencc 轉換成「᰼」(或某個符號)，再用 lua 功能去除「᰼」
--- -- charset_filter2 = require("mobile_charset_filter")
--- local mobile_charset_filter = require("mobile_charset_filter")
--- charset_filter2 = mobile_charset_filter.charset_filter2
+-- -- charset_filter2 = require("filter_charset_filter2")
+-- local filter_charset_filter2 = require("filter_charset_filter2")
+-- charset_filter2 = filter_charset_filter2.charset_filter2
 
--- --- missing_mark_filter
+-- --- missing_mark_filter（bopomo_onionplus 和 bo_mixin 全系列）
 -- -- 補上標點符號因直上和 opencc 衝突沒附註之選項
--- missing_mark_filter = require("missing_mark_f_filter")
+-- local filter_missing_mark_filter = require("filter_missing_mark_filter")
+-- missing_mark_filter = filter_missing_mark_filter.missing_mark_filter
 
--- --- array30_comment_filter
+-- --- array30_comment_filter（array30）
 -- -- 遮屏提示碼，開關（simplify_comment）（遇到「`」不遮屏）
--- array30_comment_filter = require("array30_comment_f_filter")
+-- local filter_array30_comment_filter = require("filter_array30_comment_filter")
+-- array30_comment_filter = filter_array30_comment_filter.array30_comment_filter
 
--- --- array30_spaceup_filter
+-- --- array30_spaceup_filter（array30）
 -- -- 行列30開關一二碼按空格後，是否直上或可能有選單。
--- array30_spaceup_filter = require("array30_spaceup_f_filter")
+-- local filter_array30_spaceup_filter = require("filter_array30_spaceup_filter")
+-- array30_spaceup_filter = filter_array30_spaceup_filter.array30_spaceup_filter
 
--- --- mix30_nil_comment_filter
+-- --- mix30_nil_comment_filter（array30）
 -- -- 合併 array30_nil_filter 和 array30_comment_filter，兩個 lua filter 
--- mix30_nil_comment_filter = require("mix30_nil_comment_f_filter")
+-- local filter_mix30_nil_comment_filter = require("filter_mix30_nil_comment_filter")
+-- mix30_nil_comment_filter = filter_mix30_nil_comment_filter.mix30_nil_comment_filter
 
 --- mix_cf2_cfp_smf_filter（ocm_mixin）
 --- 沒用到 ocm_mixin 方案時，ReverseDb("build/symbols-mark.reverse.bin")會找不到。
--- mix_cf2_cfp_smf_filter = require("ocm_mixin_filter") --無效
-local ocm_mixin_filter = require("ocm_mixin_filter")
-mix_cf2_cfp_smf_filter = ocm_mixin_filter.mix_cf2_cfp_smf_filter
+-- mix_cf2_cfp_smf_filter = require("filter_mix_cf2_cfp_smf_filter") --無效
+local filter_mix_cf2_cfp_smf_filter = require("filter_mix_cf2_cfp_smf_filter")
+mix_cf2_cfp_smf_filter = filter_mix_cf2_cfp_smf_filter.mix_cf2_cfp_smf_filter
 
 
 
@@ -8057,52 +8073,52 @@ mix_cf2_cfp_smf_filter = ocm_mixin_filter.mix_cf2_cfp_smf_filter
 -- --- endspace 增加上屏空白
 -- -- （hangeul 和 hangeul2set）
 -- -- 韓語（非英語等）空格鍵後添加" "
--- endspace = require("endspace_processor")
+-- endspace = require("processor_endspace")
 
 -- --- 行列30上屏
 -- -- 行列30三四碼字按空格直接上屏
--- array30up = require("array30up_processor")
+-- array30up = require("processor_array30up")
 
 -- --- 行列30注音反查 Return 和 space 上屏修正
--- array30up_zy = require("array30up_zy_processor")
+-- array30up_zy = require("processor_array30up_zy")
 
 -- --- s2r_ss……去除上屏空白
 -- -- 各種寫法，針對掛載 t2_translator 在注音（用到空白鍵時）去除上屏時跑出空格之函數
 -- -- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（只針對開頭，並且寫法精簡，少了 is_composing ）
--- s2r_ss = require("s2r_ss_processor")
+-- s2r_ss = require("processor_s2r_ss")
 
 -- --- s2r_s
 -- --- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（只針對開頭）
--- s2r_s = require("s2r_s_processor")
+-- s2r_s = require("processor_s2r_s")
 
 -- --- s2r
 -- --- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。
--- s2r = require("s2r_processor")
+-- s2r = require("processor_s2r")
 
 -- --- s2r_e_u
 -- --- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（只針對 email 和 url ）
--- s2r_e_u = require("s2r_e_u_processor")
+-- s2r_e_u = require("processor_s2r_e_u")
 
 -- --- s2r_most
 -- --- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（ mixin(1,2,4)和 plus 用，精簡寫法）
--- s2r_most = require("s2r_most_processor")
+-- s2r_most = require("processor_s2r_most")
 
 -- --- s2r_mixin3
 -- --- 把注音掛接 t2_translator 時，時不時尾邊出現" "問題去除，直接上屏。（特別正則 for mixin3）
--- s2r_mixin3 = require("s2r_mixin3_processor")
+-- s2r_mixin3 = require("processor_s2r_mixin3")
 
 -- --- mobile_bpmf（手機注音用）
 -- --- 使 email_url_translator 功能按空白都能直接上屏
--- mobile_bpmf = require("mobile_bpmf_processor")
+-- mobile_bpmf = require("processor_mobile_bpmf")
 
 
 
 
---- @@ 〈 translator 〉使用 lua 資料夾掛載
+-- --- @@ 〈 translator 〉使用 lua 資料夾掛載
 
 -- --- date/time translator
 -- -- 有些網上方案會掛載該項，如：liur。
--- date_translator = require("liur_date_translator")
+-- date_translator = require("translator_date_translator")
 
 
 
