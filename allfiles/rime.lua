@@ -8045,7 +8045,7 @@ end
 
 -- --- mix_cf2_cfp_smf_filter（ocm_mixin）
 -- --- 沒用到 ocm_mixin 方案時，ReverseDb("build/symbols-mark.reverse.bin")會找不到。
--- -- mix_cf2_cfp_smf_filter =  require("ocm_mixin_filter")
+-- -- mix_cf2_cfp_smf_filter = require("ocm_mixin_filter") --無效
 -- local ocm_mixin_filter = require("ocm_mixin_filter")
 -- mix_cf2_cfp_smf_filter = ocm_mixin_filter.mix_cf2_cfp_smf_filter
 
