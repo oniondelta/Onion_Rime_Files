@@ -58734,17 +58734,17 @@ min_phrase_weight: 100
 充行家	chong1 hang2 jia1
 兆頭	zhao4 tou5
 兆頭	zhao4 tou2
-#凶惡	xiong1 e4
+# 凶惡	xiong1 e4
 兇惡	xiong1 e4
 凶橫	xiong1 heng4
 兇橫	xiong1 heng4
-#凶煞	xiong1 sha4
+# 凶煞	xiong1 sha4
 兇煞	xiong1 sha4
 凶相	xiong1 xiang4
 兇相	xiong1 xiang4
 凶相畢露	xiong1 xiang4 bi4 lu4
 兇相畢露	xiong1 xiang4 bi4 lu4
-#凶神惡煞	xiong1 shen2 e4 sha4
+# 凶神惡煞	xiong1 shen2 e4 sha4
 兇神惡煞	xiong1 shen2 e4 sha4
 先下手為強	xian1 xia4 shou3 wei2 qiang2
 先入為主	xian1 ru4 wei2 zhu3
@@ -77847,7 +77847,7 @@ min_phrase_weight: 100
 操演	cao1 yan3
 操琴	cao1 qin2
 操瓶湧泉	cao1 ping2 yong3 quan2
-#操瓶涌泉	cao1 ping2 yong3 quan2
+# 操瓶涌泉	cao1 ping2 yong3 quan2
 操盤	cao1 pan2
 操盤手	cao1 pan2 shou3
 操神	cao1 shen2
@@ -79098,10 +79098,10 @@ min_phrase_weight: 100
 新年快樂	xin1 nian2 kuai4 le4
 新幾內亞	xin1 ji3 nei4 ya3
 新幾內亞	xin1 ji3 nei4 ya4
-#新幾內亞	xin1 ji1 nei4 ya3
-#新幾內亞	xin1 ji1 nei4 ya4
-#新幾內亞島	xin1 ji1 nei4 ya3 dao3
-#新幾內亞島	xin1 ji1 nei4 ya4 dao3
+# 新幾內亞	xin1 ji1 nei4 ya3
+# 新幾內亞	xin1 ji1 nei4 ya4
+# 新幾內亞島	xin1 ji1 nei4 ya3 dao3
+# 新幾內亞島	xin1 ji1 nei4 ya4 dao3
 新幾內亞島	xin1 ji3 nei4 ya3 dao3
 新幾內亞島	xin1 ji3 nei4 ya4 dao3
 新廈	xin1 xia4
@@ -83678,18 +83678,18 @@ min_phrase_weight: 100
 江靡	jiang1 mi3
 池子	chi2 zi5
 池魚堂燕	chi2 yu2 tang2 yan4
-#污尊	wa1 zun1
+# 污尊	wa1 zun1
 汙尊	wa1 zun1
-#污庳	wa1 bei1
+# 污庳	wa1 bei1
 汙庳	wa1 bei1
 污水	wu1 shui3
-#污水	yu2 shui3
+# 污水	yu2 shui3
 汙水	wu1 shui3
 汙水	yu2 shui3
 污水處理	wu1 shui3 chu3 li3
 污水處理廠	wu1 shui3 chu3 li3 chang3
 污泥	wu1 ni2
-#污膺	wa1 ying1
+# 污膺	wa1 ying1
 汙膺	wa1 ying1
 污辱	wu1 ru4
 污辱	wu1 ru3
@@ -84202,10 +84202,10 @@ min_phrase_weight: 100
 洩洩沓沓	yi4 yi4 ta4 ta4
 泄泄沓沓	yi4 yi4 ta4 ta4
 泄泄沓沓	xie4 xie4 ta4 ta4
-#洩漏	xie4 lou4
+# 洩漏	xie4 lou4
 泄漏	xie4 lou4
-#洩漏	xie4 lu4
-#泄漏	xie4 lu4
+# 洩漏	xie4 lu4
+# 泄漏	xie4 lu4
 洩露	xie4 lu4
 洩露	xie4 lou4
 泄露	xie4 lu4
@@ -84367,7 +84367,7 @@ min_phrase_weight: 100
 波濤洶湧	bo1 tao1 xiong1 yong3
 波濤洶湧	po1 tao1 xiong1 yong3
 波濤洶湧	po1 tao2 xiong1 yong3
-#波濤洶涌	bo1 tao2 xiong1 yong3
+# 波濤洶涌	bo1 tao2 xiong1 yong3
 波爾卡舞	bo1 er3 ka3 wu3
 波爾卡舞	po1 er3 ka3 wu3
 波爾卡舞曲	bo1 er3 ka3 wu3 qu3
@@ -86220,7 +86220,7 @@ min_phrase_weight: 100
 灰沒	hui1 mo4
 灰泥	hui1 ni2
 灰漿	hui1 jiang1
-#灰濛濛	hui1 meng1 meng1
+# 灰濛濛	hui1 meng1 meng1
 灰濛濛	hui1 meng2 meng2
 灰軀糜骨	hui1 qu1 mi2 gu3
 灸刺	jiu3 ci4
@@ -93280,7 +93280,7 @@ min_phrase_weight: 100
 紛縕	fen1 yun1
 素不相識	su4 bu4 xiang1 shi4
 素冠	su4 guan1
-#素女弦	su4 nv3 xuan2
+# 素女弦	su4 nv3 xuan2
 素女弦	su4 nv3 xian2
 素數	su4 shu4
 素朴	su4 pu2
@@ -104896,7 +104896,7 @@ min_phrase_weight: 100
 重樣	chong2 yang4
 重機槍	zhong4 ji1 qiang1
 重機關槍	zhong4 ji1 guan1 qiang1
-#重簷	chong2 yan2
+重簷	chong2 yan2
 重檐	chong2 yan2
 重正化	chong2 zheng4 hua4
 重武器	zhong4 wu3 qi4
@@ -105533,7 +105533,7 @@ min_phrase_weight: 100
 鋪開	pu1 kai1
 鋪陳	pu1 chen2
 鋪霜湧雪	pu1 shuang1 yong3 xue3
-#鋪霜涌雪	pu1 shuang1 yong3 xue3
+# 鋪霜涌雪	pu1 shuang1 yong3 xue3
 鋪面	pu4 mian4
 鋪面	pu1 mian4
 鋪面房	pu4 mian4 fang2
@@ -107442,7 +107442,7 @@ min_phrase_weight: 100
 陪都	pei2 du1
 陬落	zou1 luo4
 陰乾	yin1 gan1
-#陰了信的炮𤍤	yin1 le5 xin4 de5 pao4 zhang4
+# 陰了信的炮𤍤	yin1 le5 xin4 de5 pao4 zhang4
 陰了信的炮𤍤	yin1 le5 xin4 de5 pao4 zhang1
 陰占	yin1 zhan4
 陰地	yin1 di4
@@ -109083,7 +109083,7 @@ min_phrase_weight: 100
 風靡一時	feng1 mi2 yi4 shi2
 風靡一時	feng1 mi3 yi1 shi2
 風靡雲湧	feng1 mi3 yun2 yong3
-#風靡雲涌	feng1 mi3 yun2 yong3
+# 風靡雲涌	feng1 mi3 yun2 yong3
 風靡雲蒸	feng1 mi3 yun2 zheng1
 風頭	feng1 tou2
 風頭	feng1 tou5
