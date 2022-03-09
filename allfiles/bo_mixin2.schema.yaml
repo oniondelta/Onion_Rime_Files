@@ -71,8 +71,8 @@ engine:
     - punctuator
     - selector
     - navigator
-    - express_editor
-#    - fluency_editor
+#    - express_editor
+    - fluency_editor
   segmentors:
     - ascii_segmentor
     - matcher
@@ -614,10 +614,10 @@ key_binder:
 
 editor:
   bindings:
-    Return: confirm #使用 express_editor 時開啟 #commit_composition
+    # Return: confirm #使用 express_editor 時開啟 #commit_composition
     Shift+Return: commit_raw_input # 上屏原始輸入
     Control+Return: commit_script_text # 上屏變換後輸入
-#    space: commit_composition #使用 fluency_editor 時開啟
+    space: commit_composition #使用 fluency_editor 時開啟
 #    space: toggle_selection
 #    space: noop
 ########################## 正則調出各種功能 ##############################
