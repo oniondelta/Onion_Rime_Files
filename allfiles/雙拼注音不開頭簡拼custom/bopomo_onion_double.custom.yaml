@@ -52,7 +52,8 @@ patch:
     - abbrev/^([yui])i(\d)$/$1$2/
     - abbrev/^([abcdfghjklmnopqrstvwxz])[a-z](\d)$/$1$2/
 #######
-    - "xlit|12345|;/.,'|"
+    #之前聲調# - "xlit|12345|;/.,'|"
+    - "xlit|12345|;/,'.|"
 ###########################
   translator/preedit_format:
 ########
@@ -107,7 +108,8 @@ patch:
     - 'xform/([bpmdtnljqx]):ㄧㄢ\|ㄨㄞ/$1:ㄧㄢ/'
     - 'xform/([gkhwva]):ㄧㄢ\|ㄨㄞ/$1:ㄨㄞ/'
 #######
-    - "xlit|bpmfdtnlgkhjqxrzcsiuywvao;/.,'|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄖㄗㄘㄙㄧㄨㄩㄓㄔㄕ◌ˉˊˇˋ˙|"
+    #之前聲調# - "xlit|bpmfdtnlgkhjqxrzcsiuywvao;/.,'|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄖㄗㄘㄙㄧㄨㄩㄓㄔㄕ◌ˉˊˇˋ˙|"
+    - "xlit|bpmfdtnlgkhjqxrzcsiuywvao;/,'.|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄖㄗㄘㄙㄧㄨㄩㄓㄔㄕ◌ˉˊˇˋ˙|"
 #######
     - "xlit|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ，．／；＇|abcdefghijklmnopqrstuvwxyz,./;'|"
     - 'xform/://'
