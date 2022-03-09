@@ -7885,6 +7885,8 @@ function instruction_dbpmf(input, seg, env)
         , { 'ㄧㄚⓏ ㄧㄝⓟ ㄧㄠⓆ ㄧㄡⒸ ㄧㄢⓂ ㄧㄣⓇ ㄧㄤⓍ ㄧㄥⓉ', '❺' }
         , { 'ㄨㄚⓏ ㄨㄞⓂ ㄨㄟⓁ ㄨㄢⓃ ㄨㄣⓋ ㄨㄤⓍ ㄨㄥⒷ', '❻' }
         , { 'ㄩㄢⓃ ㄩㄝⓁ ㄩㄣⓋ ㄩㄥⒷ', '❼' }
+        , { '一聲 ˉ =（ ; ） 二聲 ˊ =（ / ） 三聲 ˇ =（ , ） 四聲 ˋ =（ \' ）', '❽' }
+        , { '輕聲 ˙ = （ . ）', '❾' }
     }
     for k, v in ipairs(table_sd_2) do
       local cand = Candidate('help', seg.start, seg._end, v[2], ' ' .. v[1])
@@ -8114,7 +8116,7 @@ local 檔名 = require("檔名")
 
 
 
--- --- @@ 〈 translator 〉使用 lua 資料夾掛載
+--- @@ 〈 translator 〉使用 lua 資料夾掛載
 
 -- --- date/time translator
 -- -- 有些網上方案會掛載該項，如：liur。

@@ -150,7 +150,8 @@ speller:
 #    - abbrev/^([yui])i(\d)$/$1$2/
 #    - abbrev/^([abcdfghjklmnopqrstvwxz])[a-z](\d)$/$1$2/
 ###########################
-    - "xlit|12345|;/.,'|"
+    #之前聲調# - "xlit|12345|;/.,'|"
+    - "xlit|12345|;/,'.|"
 ################################### 主翻譯器 ###################################
 translator:
   dictionary: bopomo_onion_double.extended
@@ -208,7 +209,8 @@ translator:
     - 'xform/([bpmdtnljqx]):ㄧㄢ\|ㄨㄞ/$1:ㄧㄢ/'
     - 'xform/([gkhwva]):ㄧㄢ\|ㄨㄞ/$1:ㄨㄞ/'
 #######
-    - "xlit|bpmfdtnlgkhjqxrzcsiuywvao;/.,'|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄖㄗㄘㄙㄧㄨㄩㄓㄔㄕ◌ˉˊˇˋ˙|"
+    #之前聲調# - "xlit|bpmfdtnlgkhjqxrzcsiuywvao;/.,'|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄖㄗㄘㄙㄧㄨㄩㄓㄔㄕ◌ˉˊˇˋ˙|"
+    - "xlit|bpmfdtnlgkhjqxrzcsiuywvao;/,'.|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄖㄗㄘㄙㄧㄨㄩㄓㄔㄕ◌ˉˊˇˋ˙|"
 #######
     - "xlit|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ，．／；＇|ABCDEFGHIJKLMNOPQRSTUVWXYZ,./;'|"
     - 'xform/://'
@@ -429,10 +431,10 @@ punctuator:
     "eo" : [ "ㄛ", "ㄨㄛ", "◌" ]
     "ee" : [ "ㄜ", "(ㄧㄨㄩ)ㄭ" ]
     "e;" : [ "ˉ" ]
-    "e," : [ "ˋ" ]
-    "e." : [ "ˇ" ]
+    "e," : [ "ˇ" ]
+    "e." : [ "˙" ]
     "e/" : [ "ˊ" ]
-    "e'" : [ "˙" ]
+    "e'" : [ "ˋ" ]
 ################################# 按鍵處理 ######################################
 key_binder:
   import_preset: default
