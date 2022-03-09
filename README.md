@@ -68,6 +68,11 @@
   
   #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/demo_pure.gif)
   
+- 洋蔥 雙拼注音 版
+  > 無加 custom 可簡拼，有 custom 為一般雙拼兩種，鍵位圖示如下：
+
+  #### ![image]( https://github.com/oniondelta/Onion_Rime_Files/blob/master/allfiles/%E9%9B%99%E6%8B%BC%E6%B3%A8%E9%9F%B3%E9%8D%B5%E4%BD%8D%E8%AA%AA%E6%98%8E%E5%9C%96%E7%A4%BA/%E6%B4%8B%E8%94%A5%E9%9B%99%E6%8B%BC%E6%B3%A8%E9%9F%B3%E8%AA%AA%E6%98%8E.png)
+
 ### 贊助 Donate：
 
   > 從第一個方案上傳已持續更新四年！方案從頭到尾大改、新創、新增非常多功能！且做了許多圖文說明！花了族繁不及備載的心力！
