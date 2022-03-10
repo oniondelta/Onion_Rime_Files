@@ -70,7 +70,9 @@
   > 功能少，給新手使用，較不推薦！
   
   #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/demo_pure.gif)
-  
+ 
+### Keys：
+ 
 - 洋蔥 雙拼注音 版 鍵位
   > 無加 custom 可簡拼，有 custom 為一般雙拼每字須鍵兩碼（聲調可省略），鍵位圖示如下：
 
