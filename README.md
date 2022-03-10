@@ -15,7 +15,7 @@
 ### sort_rime_file.py 使用方法：
 - 於本倉庫 Onion_Rime_Files 中按右上綠色 〔↓Code〕 ⇨ Download ZIP ⇨ 解壓縮 ZIP ⇨ 進入解壓縮後的資料夾，確認 allfiles 資料夾 和 sort_rime_file.py 是在同一層 ⇨ 執行 sort_rime_file.py ⇨ 產生一個『電腦RIME方案_{當天日期}』資料夾
 
-- 產生的『電腦RIME方案_{當天日期}』該資料夾內，會把各方案所須文件，分別在該『方案名稱』資料夾內。把內含文件通通放入『 Rime 』用戶設定資料夾，預設已有 opencc 資料夾，移動方案 opencc 裡面檔案到電腦 rime/opencc ，按「重新部署」即可使用。
+- 產生的『電腦RIME方案_{當天日期}』該資料夾內，會把各方案所須文件，分別在該『方案名稱』資料夾內。把內含文件通通放入『 Rime 』用戶設定資料夾，如已有 opencc 資料夾，移動 opencc 裡面檔案到 opencc 資料夾內，沒有整個 opencc 資料夾移過去，按「重新部署」即可使用。
 ```
 ~/Library/Rime  (鼠鬚管 Mac OS)
 %APPDATA%\Rime  (小狼毫 Windows)
