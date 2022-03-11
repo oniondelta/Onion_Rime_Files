@@ -87,10 +87,14 @@
   #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/bpmf_mixin_1_keyboard.png)
   
   
-  #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/bpmf_mixin_1_keyboard.png)
+  #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/bpmf_mixin_2_keyboard.png)
   
   
-  #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/bpmf_mixin_1_keyboard.png)
+  #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/bpmf_mixin_3_keyboard.png)
+  
+  
+  #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/bpmf_mixin_4_keyboard.png)
+  
 
 ### 贊助 Donate：
 
