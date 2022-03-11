@@ -69,7 +69,7 @@
   
 - 注音 洋蔥 純注音 版
   
-  > 功能少，給新手使用，較不推薦！
+  > 精簡功能，給新手或測試使用
   
   #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/demo_pure.gif)
  
