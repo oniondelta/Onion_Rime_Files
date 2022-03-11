@@ -82,7 +82,7 @@
 
   #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/bpmf_plus_keyboard.png)
 
-- 注音 洋蔥 mixin 版 鍵位
+- 注音 洋蔥 mixin 版 四個分版 鍵位
 
   #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/bpmf_mixin_1_keyboard.png)
   
