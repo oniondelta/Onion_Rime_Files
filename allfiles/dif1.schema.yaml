@@ -181,6 +181,8 @@ mix_cf2_cfp_filter:
 speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz;-"
   delimiter: "|`"
+  algebra:
+    - abbrev/-@/-/ #修改順序用
 ################################### 短語和外掛標點 ######################################
 dif1_phrase:
   dictionary: ""
@@ -235,6 +237,7 @@ top_reverse_lookup:
   comment_format:
     - xform/ /  /
     - xform/^/  /
+    - xform/-@/-/
     - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
 ######################調出其他語言之翻譯器(結尾符號調出各國語言輸入)################
 jphi_lookup:
@@ -539,10 +542,10 @@ emoji_series:
 ################################### 標點符號處理 ######################################
 punctuator:
   import_preset: punct_ocm
-  # full_shape:
-  #   "-" : [ "－" ]
-  # half_shape:
-  #   "-" : [ "-" ]
+  full_shape:
+    "-" : [ "－" ]
+  half_shape:
+    "-" : [ "-" ]
   symbols:
     "s." : [ "？" ] #
     "v." : [ "！" ] #
