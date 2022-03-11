@@ -84,7 +84,7 @@
 
 - 注音 洋蔥 mixin 版 鍵位
 
-  > 四個分版：「1」標準版、「2」只有後綴易懂、「3」語言分野最明避免撞碼、「4」集中下排手順最好
+  > 四個衍伸方案：「1」標準版、「2」只有後綴易懂、「3」語言分野最明避免撞碼、「4」集中下排手順最好
 
   #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/bpmf_mixin_1_keyboard.png)
   
