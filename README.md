@@ -26,11 +26,10 @@
 %APPDATA%\Rime  ( Windows 小狼毫 )
 ~/.config/ibus/rime  ( Linux 中州韻 )
 ~/.config/fcitx/rime  ( Linux )
+
+不要放錯資料夾，上方為正確路徑，反饋有好幾人放錯放到程式本身攜帶方案之預設資料夾 orz ！這麼做雖可使用，但會掉功能。
+Linux 上問題好似很多，使用前請自行注意！並自行解決！
 ```
-
-- 不要放錯資料夾，上方為正確路徑，反饋有好幾人放錯放到程式本身攜帶方案之預設資料夾 orz ！這麼做雖可使用，但會掉功能。
-
-- Linux 上問題好似很多，使用前請自行注意！
 
   > 《 Windows 用戶注意！！！》，注音洋蔥 plus 版和注音洋蔥 mix‧in 版掛接《Easy》，使用提示碼做英漢字典，但 Windows 輸入時，整頁提示碼太多會使程式崩潰！故以正則簡化提示碼！不過 Windows 可行程式碼在 Mac 會使《Easy》無法正常出字！提供 custom 檔給 Windows 用戶，防止程式崩潰（ Mac 用戶勿使用該 custom 檔）。分別在「plus注音_防崩潰：Win必加，Mac勿加」和「mixin注音_同顯2修改檔(Win)」資料夾內，Windows 用戶把資料夾內 custom.yaml 檔拖到上一層（和方案中其他文件同一層），按「重新部署」即可。
 
