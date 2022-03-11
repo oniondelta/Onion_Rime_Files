@@ -4,7 +4,7 @@
 schema:
   schema_id: terra_pinyin_onion
   name: "★地球拼音(洋蔥mix-in版)★"
-  version: "202112"
+  version: "202203"
   author:
     - 佛振 <chen.sst@gmail.com>
     - 『洋蔥』
@@ -135,7 +135,7 @@ speller:
     - derive/^ji([,.])$/zi$1/
     - derive/^u([,.])$/wu$1/
 ## 特殊
-    - xform/^dvyu([.])$/dyu$1/ # デュ #特殊片假名被其他正則不轉寫。
+    - xform/^dvyu([,.])$/dyu$1/ # デュ #特殊片假名被其他正則不轉寫。
 ##### 其他 #####
     # - "xlit|/',.-!;|ABCDEFG|"
     - xform/^([a-z]+)''$/$1;/ #拉丁-大寫
@@ -155,18 +155,18 @@ speller:
     - abbrev/^([a-z])[a-z]+[1-5]$/$1/
     - abbrev/^([zcs]h)[a-z]+[1-5]$/$1/
     - abbrev|^([a-z-]+)[1-5/',.;]$|$1|
-    - "xlit|12345|;/.,'|"
+    - "xlit|12345|;/,'.|"
 
 translator:
   dictionary: terra_pinyin_onion.extended
   prism: terra_pinyin_onion
   preedit_format:
-    - "xlit|;/.,'|¹²³⁴⁵|"
+    - "xlit|;/,'.|¹²³⁴⁵|"
     - xform|¹|⁽¹˸⁾|
     - xform|²|⁽²ˊ⁾|
-    - xform|³|⁽³ꞏ⁾|
-    - xform|⁴|⁽⁴’⁾|
-    - xform|⁵|⁽⁵'⁾|
+    - xform|³|⁽³’⁾|
+    - xform|⁴|⁽⁴'⁾|
+    - xform|⁵|⁽⁵ꞏ⁾|
 
 top_reverse_lookup:
   tags: [ abc ]
