@@ -80,8 +80,17 @@
 
 - 注音 洋蔥 plus 版 鍵位
 
-  #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/demo_plus_keyboard.jpg)
+  #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/bpmf_plus_keyboard.png)
 
+- 注音 洋蔥 mixin 版 鍵位
+
+  #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/bpmf_mixin_1_keyboard.png)
+  
+  
+  #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/bpmf_mixin_1_keyboard.png)
+  
+  
+  #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/bpmf_mixin_1_keyboard.png)
 
 ### 贊助 Donate：
 
