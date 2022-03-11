@@ -8,7 +8,7 @@ schema:
 
   name: "❖分別調出蝦米(plus)❖"
   schema_id: dif1
-  version: "202112"
+  version: "202203"
   dependencies:
     - punct_ovff
     - dif1_jphi
@@ -539,6 +539,10 @@ emoji_series:
 ################################### 標點符號處理 ######################################
 punctuator:
   import_preset: punct_ocm
+  full_shape:
+    "-" : [ "－" ]
+  half_shape:
+    "-" : [ "-" ]
   symbols:
     "s." : [ "？" ] #
     "v." : [ "！" ] #
