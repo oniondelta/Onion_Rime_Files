@@ -9,7 +9,7 @@ schema:
 
   name: "❖超級混合蝦米(mix-in)❖"
   schema_id: ocm_mixin
-  version: "202112"
+  version: "202203"
   dependencies:
     - punct_ovff
     - symbols_ocm
@@ -342,7 +342,7 @@ top_reverse_lookup:
     - xform/(^| )(ji)([,.])/$1$2$3 zi$3/
     - xform/(^| )(u)([,.])/$1$2$3 wu$3/
 ## 特殊
-    - xform/(^| )dvyu([.])/$1dyu$2/
+    - xform/(^| )dvyu([,.])/$1dyu$2/
 ##### 其他 #####
     - "xlit|';/!,.|ABCDEF|"
     - xform/([a-z]+)B/$1BB/
