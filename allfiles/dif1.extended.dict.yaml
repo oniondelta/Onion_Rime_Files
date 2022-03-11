@@ -3,7 +3,7 @@
 # 《多蝦米詞庫匯入設定頁》
 ---
 name: dif1.extended
-version: "202109"
+version: "202203"
 sort: original
 use_preset_vocabulary: false
 #encoder:
@@ -23,3 +23,5 @@ import_tables:
   # - phrases.ocmtc_terra
   # - phrases.ocmtc_original
 ...
+-	-
+‧	-
