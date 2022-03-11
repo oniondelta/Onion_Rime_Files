@@ -539,10 +539,10 @@ emoji_series:
 ################################### 標點符號處理 ######################################
 punctuator:
   import_preset: punct_ocm
-  full_shape:
-    "-" : [ "－" ]
-  half_shape:
-    "-" : [ "-" ]
+  # full_shape:
+  #   "-" : [ "－" ]
+  # half_shape:
+  #   "-" : [ "-" ]
   symbols:
     "s." : [ "？" ] #
     "v." : [ "！" ] #
