@@ -18,7 +18,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion_add
-version: "202202"
+version: "202203"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7
@@ -28,23 +28,23 @@ min_phrase_weight: 100
 ○	(kong1)	1000
 □	(que1)	1000
 ### @補充「通俗慣用發音」，『非正確發音』！！！ ###
-#厘	(li3)
-#釐	(li3)
-#割	(gua4)	0%
-#脊	(ji1)
-#泵	(bang1)	1%
-#翹	(qiao1)	0.1%
-#翘	(qiao1)	0.1%
-#蓬	(peng1)	0.1%
-#濛	(meng1)	0.1%
-#弦	(xuan2)	0.1%
-#答	(da5)
-#𤍤	(zhang4)	0.1%
-#婁	(lou3)	0.1%
-#娄	(lou3)	0.1%
-#刺	(la4)	0%
-#貯	(chu2)	1%
-#贮	(chu2)	1%
+# 厘	(li3)
+# 釐	(li3)
+# 割	(gua4)	0%
+# 脊	(ji1)
+# 泵	(bang1)	1%
+# 翹	(qiao1)	0.1%
+# 翘	(qiao1)	0.1%
+# 蓬	(peng1)	0.1%
+# 濛	(meng1)	0.1%
+# 弦	(xuan2)	0.1%
+# 答	(da5)
+# 𤍤	(zhang4)	0.1%
+# 婁	(lou3)	0.1%
+# 娄	(lou3)	0.1%
+# 刺	(la4)	0%
+# 貯	(chu2)	1%
+# 贮	(chu2)	1%
 蒲	(pu3)
 逾	(yu4)	90%
 蛤	(ge3)
@@ -95,7 +95,7 @@ min_phrase_weight: 100
 毘	(bi4)
 毗	(pi4)	50%
 毘	(pi4)	50%
-哞	(mou2)	10%
+# 哞	(mou2)	10%
 焙	(pei2)
 呷	(jia3)
 楔	(qi4)
@@ -138,6 +138,7 @@ min_phrase_weight: 100
 裇	(xu4)
 鮎	(nian3)
 鯰	(nian3)
+鲶	(nian3)
 葩	(pa2)	10%
 脯	(pu3)	10%
 㹴	(geng3)
@@ -229,6 +230,10 @@ min_phrase_weight: 100
 媧	(wo1)
 娲	(wo1)
 衰	(sui1)
+嗨	(hai4)	20%
+遢	(ta1)	10%
+鵜	(ti4)	10%
+鹈	(ti4)	10%
 ### @補充為《一聲》，通俗慣用或方便輸入，『非正確發音』！！！ ###
 腓	(fei1)	1%
 琲	(fei1)	1%
@@ -319,10 +324,10 @@ min_phrase_weight: 100
 嬷	(ma5)	0%
 太	(tai5)	0%
 ### @補充一般可理解為《輕聲》之發音，『非正確發音』！！！ ###
-#嗯	(eng5)	3% #已有「ㄥ˙」輸入「‧」間隔號
-#係	(xi5)
-#系	(xi5)
-#字	(zi5)	1%
+# 嗯	(eng5)	3% #已有「ㄥ˙」輸入「‧」間隔號
+# 係	(xi5)
+# 系	(xi5)
+# 字	(zi5)	1%
 啲	(de5)	0%
 啲	(di5)	1%
 嘚	(de5)	0%
@@ -336,22 +341,23 @@ min_phrase_weight: 100
 啥	(sha5)	1%
 甚	(she5)	0%
 謝	(xie5)	0%
+谢	(xie5)	0%
 薩	(sa5)	0%
 萨	(sa5)	0%
 撒	(sa5)	0%
 父	(fu5)	0%
 地	(di5)	0%
 ### @補充以下，使注音（非輕聲時）的某些鍵位不會變空碼，『非正確發音』！！！ ###
-誒	(eh2)	0%
-欸	(eh2)	0%
-诶	(eh2)	0%
-欸	(eh3)	0%
-誒	(eh3)	0%
-诶	(eh3)	0%
+# 誒	(eh2)	0%
+# 欸	(eh2)	0%
+# 诶	(eh2)	0%
+# 欸	(eh3)	0%
+# 誒	(eh3)	0%
+# 诶	(eh3)	0%
 噝	(si2)	0%
 嘶	(si2)	0%
 核	(he3)	0%
-昂	(ang3)	0%
+# 昂	(ang3)	0%
 呱	(gua2)	0%
 ### @以下使《輕聲》不會變空碼，『非正確發音』！！！ ###
 腌	(ang5)	0%
@@ -419,7 +425,7 @@ min_phrase_weight: 100
 吀	(mie5)	0%
 哶	(mie5)	0%
 喵	(miao5)	1%
-#呣	(miu5)	1%
+# 呣	(miu5)	1%
 喕	(mian5)	0%
 鳴	(ming5)	0%
 鸣	(ming5)	0%
@@ -467,6 +473,7 @@ min_phrase_weight: 100
 嗲	(die5)	1%
 嗲	(dia5)	1%
 叼	(diao5)	0%
+啁	(diao5)	0%
 𠲍	(diu5)	0%
 𠶧	(dian5)	0%
 唸	(dian5)	0%
@@ -488,11 +495,12 @@ min_phrase_weight: 100
 叨	(dao5)	1%
 嘄	(dao5)	0%
 𠴼	(dao5)	0%
+啁	(dao5)	0%
 呌	(dou5)	0%
 嘟	(dou5)	0%
 唗	(dou5)	0%
 唞	(dou5)	0%
-#嘽	(dan5)	0%
+# 嘽	(dan5)	0%
 啖	(dan5)	0%
 呾	(dan5)	0%
 唌	(dan5)	0%
@@ -509,6 +517,7 @@ min_phrase_weight: 100
 㖭	(tian5)	0%
 唺	(tian5)	0%
 听	(ting5)	0%
+啁	(tiao5)	0%
 唋	(tu5)	0%
 吐	(tu5)	0%
 咃	(tuo5)	1%
@@ -660,6 +669,7 @@ min_phrase_weight: 100
 喀	(ka5)	0%
 咯	(ka5)	0%
 咖	(ka5)	0%
+咳	(ka5)	0%
 嗑	(ke5)	0%
 呵	(ke5)	0%
 咳	(ke5)	0%
@@ -672,21 +682,23 @@ min_phrase_weight: 100
 啃	(ken5)	0%
 𠻞	(kang5)	0%
 吭	(keng5)	0%
-#啃	(keng5)	0%
+# 啃	(keng5)	0%
 呼	(hu5)	0%
 唿	(hu5)	0%
 嘑	(hu5)	0%
 嚛	(hu5)	0%
 喖	(hu5)	0%
 唬	(hu5)	0%
+啒	(hu5)	0%
 嘩	(hua5)	1%
 哗	(hua5)	1%
 咴	(hui5)	0%
 㕲	(hua5)	0%
 呚	(hua5)	0%
 咶	(hua5)	0%
-#㕷	(hua5)	0%
+㕷	(hua5)	0%
 㕷	(pia5)	0%
+啪	(pia5)	0%
 吙	(huo5)	0%
 嚯	(huo5)	0%
 咟	(huo5)	0%
@@ -710,6 +722,7 @@ min_phrase_weight: 100
 㖧	(hun5)	0%
 㗃	(hun5)	0%
 喤	(huang5)	0%
+嚝	(huang5)	0%
 哄	(hong5)	0%
 叿	(hong5)	0%
 吽	(hong5)	0%
@@ -742,6 +755,7 @@ min_phrase_weight: 100
 嚡	(hai5)	0%
 嗐	(hai5)	0%
 嘿	(hei5)	1%
+嗨	(hei5)	0%
 嚎	(hao5)	1%
 嚆	(hao5)	0%
 嗥	(hao5)	0%
@@ -762,6 +776,7 @@ min_phrase_weight: 100
 哻	(han5)	0%
 𠯖	(han5)	0%
 哏	(hen5)	0%
+噷	(hen5)	0%
 吭	(hang5)	0%
 哼	(heng5)	1%
 啈	(heng5)	0%
@@ -871,6 +886,7 @@ min_phrase_weight: 100
 噧	(xie5)	0%
 噧	(ta5)	0%
 㖑	(xie5)	0%
+喈	(xie5)	0%
 嘯	(xiao5)	1%
 啸	(xiao5)	0%
 嘨	(xiao5)	0%
@@ -896,9 +912,10 @@ min_phrase_weight: 100
 噺	(xin5)	0%
 㖕	(xin5)	0%
 啈	(xin5)	0%
+噷	(xin5)	0%
 啌	(xiang5)	0%
 响	(xiang5)	0%
-#響	(xiang5)	0%
+# 響	(xiang5)	0%
 哘	(xing5)	0%
 啈	(xing5)	0%
 哅	(xiong5)	0%
@@ -909,11 +926,13 @@ min_phrase_weight: 100
 㗵	(xu5)	0%
 㖅	(xu5)	0%
 喐	(xu5)	0%
+嘘	(xu5)	1%
 㖸	(xue5)	0%
 吷	(xue5)	0%
 嚯	(xue5)	0%
 㕰	(xue5)	0%
 噱	(xue5)	0%
+吙	(xue5)	0%
 喧	(xuan5)	0%
 吅	(xuan5)	0%
 咺	(xuan5)	0%
@@ -966,6 +985,7 @@ min_phrase_weight: 100
 叺	(chi5)	0%
 叱	(chi5)	0%
 呹	(chi5)	0%
+呬	(chi5)	0%
 㗙	(chu5)	0%
 吷	(chuo5)	0%
 啜	(chuo5)	0%
@@ -992,6 +1012,7 @@ min_phrase_weight: 100
 囆	(chai5)	0%
 嘲	(chao5)	0%
 吵	(chao5)	0%
+啁	(chao5)	0%
 嚋	(chou5)	0%
 吜	(chou5)	0%
 嘽	(chan5)	0%
@@ -1010,9 +1031,12 @@ min_phrase_weight: 100
 噬	(shi5)	0%
 呩	(shi5)	0%
 咶	(shi5)	0%
+噓	(shi5)	0%
+唑	(shi5)	0%
 叶	(she5)	0%
 咰	(shu5)	0%
 唰	(shua5)	0%
+咰	(shuai5)	0%
 哾	(shuo5)	0%
 嗍	(shuo5)	0%
 吮	(shun5)	0%
@@ -1056,6 +1080,7 @@ min_phrase_weight: 100
 吇	(zi5)	0%
 嗞	(zi5)	0%
 哫	(zu5)	0%
+嘁	(zu5)	0%
 嘬	(zuo5)	0%
 唨	(zuo5)	0%
 唑	(zuo5)	0%
@@ -1075,6 +1100,8 @@ min_phrase_weight: 100
 𠱥	(za5)	0%
 𠱥	(hui5)	0%
 囃	(za5)	0%
+喒	(za5)	0%
+嘁	(za5)	0%
 咋	(ze5)	1%
 嘖	(ze5)	100%
 啧	(ze5)	1%
@@ -1083,7 +1110,7 @@ min_phrase_weight: 100
 唣	(zao5)	0%
 唕	(zao5)	0%
 咱	(zan5)	1%
-喒	(zan5)	0%
+# 喒	(zan5)	0%
 噆	(zan5)	0%
 囋	(zan5)	0%
 噌	(zeng5)	0%
@@ -1111,7 +1138,7 @@ min_phrase_weight: 100
 噝	(si5)	1%
 咝	(si5)	1%
 㕽	(si5)	0%
-#窣	(su5)	0%
+# 窣	(su5)	0%
 囌	(su5)	0%
 嗉	(su5)	0%
 𠻜	(su5)	0%
@@ -1163,7 +1190,7 @@ min_phrase_weight: 100
 唖	(ya5)	0%
 呾	(ya5)	0%
 呷	(ya5)	0%
-#唷	(yo5)	99%
+# 唷	(yo5)	99%
 哟	(yo5)	0%
 㖿	(ye5)	100%
 嚈	(ye5)	0%
@@ -1263,7 +1290,7 @@ min_phrase_weight: 100
 喁	(yong5)	0%
 咏	(yong5)	0%
 吖	(a5)	1%
-#嗄	(a5)	0%
+# 嗄	(a5)	0%
 噢	(o5)	1%
 呵	(o5)	1%
 哦	(e5)	1%
@@ -1276,8 +1303,8 @@ min_phrase_weight: 100
 唉	(ai5)	1%
 欸	(ai5)	1%
 哎	(ai5)	1%
-誒	(ai5)	0%
-诶	(ai5)	0%
+# 誒	(ai5)	0%
+# 诶	(ai5)	0%
 噯	(ai5)	0%
 嗌	(ai5)	0%
 㗒	(ai5)	1%
@@ -1326,7 +1353,7 @@ min_phrase_weight: 100
 𠴕	(miao5)	0%
 𠵆	(dan5)	0%
 𠵇	(qi5)	0%
-#𠵇	(ji5)	0%
+# 𠵇	(ji5)	0%
 𠵈	(mei5)	0%
 𠵉	(hang5)	0%
 𠵌	(yi5)	0%
@@ -1401,11 +1428,11 @@ min_phrase_weight: 100
 𡁸	(xi5)	0%
 𡁻	(jiao5)	0%
 𡁻	(zhao5)	0%
-#𡁻	(jue5)	0%
+# 𡁻	(jue5)	0%
 𡂈	(pu5)	0%
 𡂴	(lian5)	0%
 𡃀	(yi5)	0%
-#𡃁	(leng5)	0%
+# 𡃁	(leng5)	0%
 𡃁	(jing5)	0%
 𡃇	(bi5)	0%
 𡃈	(ke5)	0%
