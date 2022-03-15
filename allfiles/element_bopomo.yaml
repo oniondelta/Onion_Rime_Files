@@ -69,7 +69,7 @@ key_binder:
 ### 補一聲和上屏 raw_input （ paging 時，空白鍵無法輸出一聲 ） ###
     - {accept: Shift+V, send: space, when: has_menu}
     - {accept: Shift+L, send: space, when: has_menu}
-    - {accept: Shift+F, send: Shift+Return, when: has_menu}
+    - {accept: Shift+D, send: Shift+Return, when: has_menu}
     - {accept: Shift+O, send: Shift+Return, when: has_menu}
 ### 刪除鍵 ###
     - {accept: BackSpace, send: Control+BackSpace, when: has_menu} #〔關〕刪除前一個拼音字符〔開〕：刪除整組拼音字符（一個字）
@@ -78,7 +78,7 @@ key_binder:
     # - {accept: backslash, send: Shift+BackSpace, when: has_menu} #「\」鍵位刪除整組拼音字符（一個字）。
 #關#    - {accept: backslash, send: Shift+Return, when: has_menu} #「\」鍵位上屏英文。
 ### 另設快捷刪除鍵 ###
-    - {accept: Shift+B, send: BackSpace, when: has_menu}
+    - {accept: Shift+F, send: BackSpace, when: has_menu}
     - {accept: Shift+P, send: BackSpace, when: has_menu}
 ### 功能快捷鍵 ###
     - {accept: Control+minus, toggle: back_mark, when: always } #「國際音標和符號」提示碼開關
