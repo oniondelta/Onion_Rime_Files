@@ -463,9 +463,10 @@ key_binder:
   import_preset: default
   bindings:
     __include: element_bopomo:/key_binder
-    __append:
-      - {accept: Shift+V, send: Return, when: has_menu}
-      - {accept: Shift+L, send: Return, when: has_menu}
+
+__patch:
+  key_binder/bindings/@35/send: Return
+  key_binder/bindings/@36/send: Return
 
 editor:
   bindings:
