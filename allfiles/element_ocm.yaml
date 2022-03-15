@@ -94,7 +94,9 @@ emoji_series:
 #    - xform/^chay/【巴黎鐵塔】/
 #    - xform/^pigr/【自由女神】/
 #    - xform/^mwzn/【復活節島】/
+    - xform/^qsgs/【野生動物】/
 ##### 以下三字 #####
+    - xform/^cgq/【多媒體】/
     - xform/^dno/【日用品】/
     - xform/^wny/【顏色塊】/
     - xform/^nyh/【色塊心】/
@@ -298,7 +300,8 @@ emoji_series:
     - xform/^ot/【獸面／動物臉】/
     - xform/^wn/【五官】/
     - xform/^hy/【手勢】/
-    - xform/^ls/【衣物】/
+    - xform/^ls/【衣物／服裝】/
+    - xform/^ug/【服裝／衣物】/
     - xform/^lu/【衣服】/
     - xform/^nn/【包包】/
     - xform/^dp/【頭像】(大頭)/
@@ -377,6 +380,11 @@ emoji_series:
     - xform/^ok/【圓形】/
     - xform/^sn/【三角】/
     - xform/^jn/【打勾】/
+    - xform/^pw/【血液／血型】/
+    - xform/^pk/【血型／血液】/
+    - xform/^on/【器官】/
+    - xform/^cm/【蟲類／蟲圖】/
+    - xform/^co/【蟲圖／蟲類】/
 #    - xform/^az/【針筒】/
 #    - xform/^rz/【藥丸】/
 #    - xform/^ro/【藥品(藥丸)】/

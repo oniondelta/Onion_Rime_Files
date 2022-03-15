@@ -4,7 +4,7 @@
 # 『洋蔥』製作
 ---
 name: symbols_ocm
-version: "202202"
+version: "202203"
 sort: original
 use_preset_vocabulary: false
 ...
@@ -1797,6 +1797,7 @@ use_preset_vocabulary: false
 🎄	ts
 ☘️	ts
 🎍	ts
+🪴	ts
 ### 水果 ###
 🍅	wq
 🍆	wq
@@ -1817,6 +1818,7 @@ use_preset_vocabulary: false
 🥑	wq
 🥥	wq
 🥭	wq
+🫐	wq
 ### 食物 ###
 🍔	xs
 🍕	xs
@@ -1868,6 +1870,7 @@ use_preset_vocabulary: false
 🍾	xm
 🧃	xm
 🧉	xm
+🧋	xm
 ### 節日圖(節日) ###
 🎀	zdo
 🎁	zdo
@@ -1889,6 +1892,10 @@ use_preset_vocabulary: false
 🎑	zdo
 🎒	zdo
 🎓	zdo
+🪅	zdo
+🏮	zdo
+🧧	zdo
+🧨	zdo
 ### 佳節圖(節日) ###
 🎀	vzo
 🎁	vzo
@@ -1910,6 +1917,10 @@ use_preset_vocabulary: false
 🎑	vzo
 🎒	vzo
 🎓	vzo
+🪅	vzo
+🏮	vzo
+🧧	vzo
+🧨	vzo
 ### 娛樂 ###
 🎠	gw
 🎡	gw
@@ -1931,6 +1942,11 @@ use_preset_vocabulary: false
 🎯	gw
 🎳	gw
 🎟	gw
+♟️	gw
+🕹	gw
+🖲	gw
+🪀	gw
+🪩	gw
 ### 遊戲 ###
 🎮	fz
 🎯	fz
@@ -2032,6 +2048,24 @@ use_preset_vocabulary: false
 🦦	gs
 🦨	gs
 🦧	gs
+🪲	gs
+🦟	gs
+🦞	gs
+🦪	gs
+🦬	gs
+🦣	gs
+🐈‍⬛️	gs
+🦩	gs
+🦡	gs
+🦝	gs
+🦫	gs
+🦭	gs
+🦢	gs
+🦜	gs
+🦤	gs
+🦚	gs
+🦙	gs
+🦛	gs
 ### 動物圖(動物) ###
 🐀	gso
 🐁	gso
@@ -2106,6 +2140,24 @@ use_preset_vocabulary: false
 🦦	gso
 🦨	gso
 🦧	gso
+🪲	gso
+🦟	gso
+🦞	gso
+🦪	gso
+🦬	gso
+🦣	gso
+🐈‍⬛️	gso
+🦩	gso
+🦡	gso
+🦝	gso
+🦫	gso
+🦭	gso
+🦢	gso
+🦜	gso
+🦤	gso
+🦚	gso
+🦙	gso
+🦛	gso
 ### 生肖 ###
 🐭	ss
 🐮	ss
@@ -2124,6 +2176,7 @@ use_preset_vocabulary: false
 🐂	ss
 🐃	ss
 🐄	ss
+🦬	ss
 🐅	ss
 🐆	ss
 🐇	ss
@@ -2134,9 +2187,13 @@ use_preset_vocabulary: false
 🐐	ss
 🐑	ss
 🐒	ss
+🦧	ss
+🦍	ss
 🦃	ss
 🐓	ss
 🐕	ss
+🦮	ss
+🐕‍🦺	ss
 🐖	ss
 🐗	ss
 ##十二生肖(生肖)
@@ -2157,6 +2214,7 @@ use_preset_vocabulary: false
 🐂	jrss
 🐃	jrss
 🐄	jrss
+🦬	jrss
 🐅	jrss
 🐆	jrss
 🐇	jrss
@@ -2167,9 +2225,13 @@ use_preset_vocabulary: false
 🐐	jrss
 🐑	jrss
 🐒	jrss
+🦧	jrss
+🦍	jrss
 🦃	jrss
 🐓	jrss
 🐕	jrss
+🦮	jrss
+🐕‍🦺	jrss
 🐖	jrss
 🐗	jrss
 ### 獸面(動物臉) ###
@@ -2180,6 +2242,7 @@ use_preset_vocabulary: false
 🐰	ot
 🦊	ot
 🐻	ot
+🐻‍❄️	ot
 🐼	ot
 🐨	ot
 🐯	ot
@@ -2206,6 +2269,7 @@ use_preset_vocabulary: false
 🐰	gsu
 🦊	gsu
 🐻	gsu
+🐻‍❄️	gsu
 🐼	gsu
 🐨	gsu
 🐯	gsu
@@ -2264,7 +2328,7 @@ use_preset_vocabulary: false
 🖕	hy
 ✍️	hy
 🙏	hy
-### 衣物 ###
+### 衣物（服裝） ###
 👑	ls
 👒	ls
 🧢	ls
@@ -2303,6 +2367,45 @@ use_preset_vocabulary: false
 🩰	ls
 🧦	ls
 👣	ls
+### 服裝（衣物） ###
+👑	ug
+👒	ug
+🧢	ug
+🎩	ug
+🎓	ug
+⛑	ug
+👓	ug
+🕶	ug
+🥽	ug
+🧤	ug
+🧣	ug
+👔	ug
+👕	ug
+👖	ug
+🩳	ug
+🥼	ug
+👗	ug
+👘	ug
+🥻	ug
+🥋	ug
+🧥	ug
+👙	ug
+🩲	ug
+🩱	ug
+👚	ug
+👛	ug
+👜	ug
+👝	ug
+👞	ug
+👟	ug
+👠	ug
+👡	ug
+🥿	ug
+👢	ug
+🥾	ug
+🩰	ug
+🧦	ug
+👣	ug
 ### 頭像 ###
 👤	dp
 👥	dp
@@ -3811,6 +3914,9 @@ use_preset_vocabulary: false
 ### 天氣(新增補充) ###
 ☀	gk
 ☁	gk
+☀️	gk
+⛅️	gk
+☁️	gk
 ⛅	gk
 ⛈	gk
 ⛆	gk
@@ -3834,6 +3940,7 @@ use_preset_vocabulary: false
 💨	gk
 🌪	gk
 🌫	gk
+❄️	gk
 ### 音樂(新增補充) ###
 𝄞	lw
 ♩	lw
@@ -7465,6 +7572,9 @@ $	tq
 🎾	ng
 🎱	ng
 ⛸	ng
+🛼	ng
+🪃	ng
+🪁	ng
 🎳	ng
 🛹	ng
 🥏	ng
@@ -7515,6 +7625,9 @@ $	tq
 🌭	cx
 🥞	cx
 🥪	cx
+🥯	cx
+🧇	cx
+🫕	cx
 ### 西餐圖(西餐) ###
 🍕	czo
 🥓	czo
@@ -7530,6 +7643,9 @@ $	tq
 🌭	czo
 🥞	czo
 🥪	czo
+🥯	czo
+🧇	czo
+🫕	czo
 ### 串物圖(串物) ###
 🍢	cs
 🍡	cs
@@ -7541,6 +7657,8 @@ $	tq
 🎺	woo
 🥁	woo
 🪕	woo
+🪘	woo
+🪗	woo
 ### 亞裔 ###
 👨🏻	ol
 👩🏻	ol
@@ -7687,6 +7805,7 @@ $	tq
 🥫	dx
 🥯	dx
 🧇	dx
+🫓	dx
 ### 早點 ###
 🍳	dq
 🥚	dq
@@ -7698,14 +7817,17 @@ $	tq
 🥫	dq
 🥯	dq
 🧇	dq
+🫓	dq
 ### 捲物 ###
 🥙	js
 🌮	js
 🌯	js
+🫔	js
 ### 食物捲 ###
 🥙	xsj
 🌮	xsj
 🌯	xsj
+🫔	xsj
 ### 葉子 ###
 🍃	rz
 🍂	rz
@@ -7806,6 +7928,7 @@ $	tq
 🔥	dpu
 💧	dpu
 🌬	dpu
+🫧	dpu
 ☀️	dpu
 🌤	dpu
 ⛅️	dpu
@@ -7821,6 +7944,8 @@ $	tq
 🌪	dpu
 🌫	dpu
 🌊	dpu
+🧊	dpu
+🪨	dpu
 ### 獎項(獎牌) ###
 🏅	gi
 🎖	gi
@@ -7914,6 +8039,7 @@ $	tq
 ☣️	xn
 ☠	xn
 ⚠	xn
+🦠	xn
 ⛔	xn
 🛑	xn
 ✋🏻	xn
@@ -7936,6 +8062,8 @@ $	tq
 🚐	wc
 🚚	wc
 🚛	wc
+🎢	wc
+🛻	wc
 🚔	wc
 🚍	wc
 🚘	wc
@@ -7946,6 +8074,7 @@ $	tq
 🎡	fwo
 🎢	fwo
 🎠	fwo
+🛝	fwo
 ### 熱飲 ###
 ☕️	yx
 🍵	yx
@@ -7953,13 +8082,17 @@ $	tq
 🐄	sl
 🐃	sl
 🐂	sl
+🦬	sl
 🐐	sl
 🐏	sl
 🐖	sl
 🐑	sl
 🐕	sl
+🦮	sl
+🐕‍🦺	sl
 🐩	sl
 🐈	sl
+🐈‍⬛️	sl
 ### 球具 ###
 ⚽️	km
 🏀	km
@@ -7970,6 +8103,7 @@ $	tq
 🥎️	km
 🎾	km
 🎱	km
+🪀	km
 🏓	km
 🏸	km
 🏒	km
@@ -7990,6 +8124,9 @@ $	tq
 🍰	gx
 🎂	gx
 🍩	gx
+🧁	gx
+🧇	gx
+🧆	gx
 ### 甜點圖(甜點) ###
 🍯	gqo
 🍭	gqo
@@ -8003,6 +8140,9 @@ $	tq
 🍰	gqo
 🎂	gqo
 🍩	gqo
+🧁	gqo
+🧇	gqo
+🧆	gqo
 ### 家禽 ###
 🦆	nb
 🐓	nb
@@ -8033,6 +8173,7 @@ $	tq
 🧪	hso
 🧫	hso
 🩺	hso
+🩻	hso
 ### 粗糧 ###
 🌽	mm
 🥔	mm
@@ -8069,6 +8210,7 @@ $	tq
 🌹	rj
 💐	rj
 🥀	rj
+🪷	rj
 ### 蔬菜 ###
 🍅	rr
 🍆	rr
@@ -8078,6 +8220,9 @@ $	tq
 🥦	rr
 🥗	rr
 🥬	rr
+🫒	rr
+🫑	rr
+🫘	rr
 ### 車輛 ###
 🚗	cc
 🚕	cc
@@ -8091,6 +8236,8 @@ $	tq
 🚐	cc
 🚚	cc
 🚛	cc
+🎢	cc
+🛻	cc
 🚔	cc
 🚍	cc
 🚘	cc
@@ -8160,6 +8307,7 @@ $	tq
 🍽	zm
 🥣	zm
 🥢	zm
+🫖	zm
 ### 魚類 ###
 🐠	um
 🐟	um
@@ -8189,6 +8337,7 @@ $	tq
 🦚	nmo
 🦜	nmo
 🦩	nmo
+🦤	nmo
 ### 鞋子圖(鞋子) ###
 👞	rzo
 👟	rzo
@@ -8200,6 +8349,8 @@ $	tq
 🩰	rzo
 🧦	rzo
 👣	rzo
+⛸	rzo
+🛼	rzo
 ### 包包 ###
 👝	nn
 👛	nn
@@ -8347,6 +8498,7 @@ $	tq
 🎩	nz
 🎓	nz
 ⛑	nz
+🪖	nz
 ### 褲子 ###
 👖	vz
 🩳	vz
@@ -8365,6 +8517,7 @@ $	tq
 🔩	im
 ⛏	im
 🛠	im
+⚒️	im
 ⚒	im
 🔨	im
 🔧	im
@@ -8373,6 +8526,10 @@ $	tq
 🪒	im
 🦾	im
 🦿	im
+🪚	im
+🪛	im
+🪜	im
+🪡	im
 ### 武器 ###
 🔫	eo
 🗡	eo
@@ -8475,9 +8632,12 @@ $	tq
 🧼	dno
 🧻	dno
 🧽	dno
+🪒	dno
 💄	dno
 🌂️	dno
 ☂️	dno
+🪥	dno
+🪣	dno
 ### 回收 ###
 ♲	og
 ♳	og
@@ -8641,6 +8801,93 @@ $	tq
 ╘	vst
 ╧	vst
 ╛	vst
+### 血液（血型） ###
+🅰️	pw
+🅱️	pw
+🅾️	pw
+🆎️	pw
+### 血型（血液） ###
+🅰️	pk
+🅱️	pk
+🅾️	pk
+🆎️	pk
+### 器官 ###
+👁	on
+👂	on
+👃	on
+👄	on
+🦷	on
+🧠	on
+🫁	on
+🫀	on
+🦵	on
+🦶	on
+🖐	on
+👅	on
+### 多媒體 ###
+📽	cgq
+🎥	cgq
+📹	cgq
+📷	cgq
+🎙	cgq
+📡	cgq
+### 蟲圖（蟲類） ###
+🐛	co
+🪱	co
+🐞	co
+🪲	co
+🪳	co
+🦗	co
+🦟	co
+🐜	co
+🪰	co
+🐌	co
+🐝	co
+### 蟲類（蟲圖） ###
+🐛	cm
+🪱	cm
+🐞	cm
+🪲	cm
+🪳	cm
+🦗	cm
+🦟	cm
+🐜	cm
+🪰	cm
+🐌	cm
+🐝	cm
+### 野生動物 ###
+🦉	qsgs
+🦇	qsgs
+🐍	qsgs
+🐢	qsgs
+🦝	qsgs
+🦨	qsgs
+🦡	qsgs
+🦫	qsgs
+🐿	qsgs
+🦦	qsgs
+🦥	qsgs
+🦔	qsgs
+🐺	qsgs
+🐗	qsgs
+🐡	qsgs
+🐬	qsgs
+🐳	qsgs
+🐋	qsgs
+🦈	qsgs
+🦭	qsgs
+🐊	qsgs
+🐅	qsgs
+🐆	qsgs
+🦓	qsgs
+🦍	qsgs
+🦧	qsgs
+🐘	qsgs
+🦛	qsgs
+🦏	qsgs
+🦒	qsgs
+🦘	qsgs
+🦩	qsgs
 ##### 數字 #####
 ### 數字0 ###
 ⓪	0
@@ -10538,13 +10785,17 @@ ZZzz…(-Ｃ_,-)｡｡ooO((【･:*:･夢･:*:･】))	;-
 #🐄	ls
 #🐃	ls
 #🐂	ls
+#🦬	ls
 #🐐	ls
 #🐏	ls
 #🐖	ls
 #🐑	ls
 #🐕	ls
+#🦮	ls
+#🐕‍🦺	ls
 #🐩	ls
 #🐈	ls
+#🐈‍⬛️	ls
 ### 糧食 ###
 #🌽	mx
 #🥔	mx
@@ -10564,6 +10815,7 @@ ZZzz…(-Ｃ_,-)｡｡ooO((【･:*:･夢･:*:･】))	;-
 #🦚	no
 #🦜	no
 #🦩	no
+#🦤	no
 ##針筒
 #💉	az
 ##藥丸

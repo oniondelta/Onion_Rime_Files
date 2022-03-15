@@ -138,8 +138,12 @@ emoji_series:
     - xform/^yaf2/【字母圈大】/
     - xform/^yae2/【字母括大】/
     - xform/^xagy/【羅馬數字】/
+    - xform/^ug2j/【野生動物】/
 ##### 以下三字 #####
-    - xform/^bmq/【日用品】/
+    - xform/^txw/【蟲類圖／蟲圖】/
+    - xform/^2aw/【多媒體】/
+    - xform/^vvw/【血型圖／血液】/
+    - xform/^bmq/【日用品／日用】/
     - xform/^ndv/【色塊心】/
     - xform/^ndm/【色塊圓】/
     - xform/^ndz/【色塊方】/
@@ -316,7 +320,8 @@ emoji_series:
     - xform/^ga/【獸面／動物臉】/
     - xform/^je/【五官】/
     - xform/^gg/【手勢】/
-    - xform/^uj/【衣物】/
+    - xform/^uj/【衣物／服裝】/
+    - xform/^z5/【服裝／衣物】/
     - xform/^uz/【衣服】/
     - xform/^11/【包包】/
     - xform/^2w/【大頭】(頭像)/
@@ -399,6 +404,10 @@ emoji_series:
     - xform/^mv/【圓形】/
     - xform/^nr/【三角】/
     - xform/^2e/【打勾】/
+    - xform/^bm/【日用／日用品】/
+    - xform/^vu/【血液／血型圖】/
+    - xform/^fe/【器官】/
+    - xform/^tw/【蟲圖／蟲類圖】/
     - xform/^`1/〖 1  開心〗(顏文字)/
     - xform/^`2/〖 2  喜歡〗(顏文字)/
     - xform/^`3/〖 3  傷心〗(顏文字)/

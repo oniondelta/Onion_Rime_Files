@@ -4,7 +4,7 @@
 schema:
   schema_id: symbols_double_bpmf
   name: 系列符號(雙拼注音)
-  version: "202102"
+  version: "202203"
   description: |
     由Unicode中「Emoticons」部份和「Miscellaneous Symbols and Pictographs」部份合成。
     可在Mac中輸入iOS設備通用的Emoji表情，其他系統可能需安装專門字體。
@@ -70,8 +70,12 @@ speller:
     - xform/^yaf2$/zmqd!/ #【字母圈大】
     - xform/^yae2$/zmgd!/ #【字母括大】
     - xform/^xagy$/lmaz!/ #【羅馬數字】
+    - xform/^ug2j$/iadu!/ #【野生動物】
 ##### 以下三字 #####
-    - xform/^bmq$/ryp!/ #【日用品】
+    - xform/^txw$/vlt!/ #【蟲類圖／蟲圖】
+    - xform/^2aw$/dmt!/ #【多媒體】
+    - xform/^vvw$/xxt!/ #【血型圖／血液】
+    - xform/^bmq$/ryp!/ #【日用品／日用】
     - xform/^ndv$/skx!/ #【色塊心】
     - xform/^ndm$/sky!/ #【色塊圓】
     - xform/^ndz$/skf!/ #【色塊方】
@@ -248,7 +252,8 @@ speller:
     - xform/^ga$/am!/ #【獸面／動物臉】
     - xform/^je$/ug!/ #【五官】
     - xform/^gg$/aa!/ #【手勢】
-    - xform/^uj$/iu!/ #【衣物】
+    - xform/^uj$/iu!/ #【衣物／服裝】
+    - xform/^z5$/fw!/ #【服裝／衣物】
     - xform/^uz$/if!/ #【衣服】
     - xform/^11$/bb!/ #【包包】
     - xform/^2w$/dt!/ #【大頭】(頭像)
@@ -331,6 +336,10 @@ speller:
     - xform/^mv$/yx!/ #【圓形】
     - xform/^nr$/sj!/ #【三角】
     - xform/^2e$/dg!/ #【打勾】
+    - xform/^bm$/ry!/ #【日用／日用品】/
+    - xform/^vu$/xi!/ #【血液／血型圖】/
+    - xform/^fe$/qg!/ #【器官】/
+    - xform/^tw$/vt!/ #【蟲圖／蟲類圖】/
     - xform/^`1$/;1/ #〖 1  開心〗(顏文字)
     - xform/^`2$/;2/ #〖 2  喜歡〗(顏文字)
     - xform/^`3$/;3/ #〖 3  傷心〗(顏文字)
@@ -380,8 +389,12 @@ translator:
     - xform/^zmqd$/【字母圈大】/
     - xform/^zmgd$/【字母括大】/
     - xform/^lmaz$/【羅馬數字】/
+    - xform/^iadu$/【野生動物】/
 ##### 以下三字 #####
-    - xform/^ryp$/【日用品】/
+    - xform/^vlt$/【蟲類圖／蟲圖】/
+    - xform/^dmt$/【多媒體】/
+    - xform/^xxt$/【血型圖／血液】/
+    - xform/^ryp$/【日用品／日用】/
     - xform/^skx$/【色塊心】/
     - xform/^sky$/【色塊圓】/
     - xform/^skf$/【色塊方】/
@@ -558,7 +571,8 @@ translator:
     - xform/^am$/【獸面／動物臉】/
     - xform/^ug$/【五官】/
     - xform/^aa$/【手勢】/
-    - xform/^iu$/【衣物】/
+    - xform/^iu$/【衣物／服裝】/
+    - xform/^fw$/【服裝／衣物】/
     - xform/^if$/【衣服】/
     - xform/^bb$/【包包】/
     - xform/^dt$/【大頭】(頭像)/
@@ -641,6 +655,10 @@ translator:
     - xform/^yx$/【圓形】/
     - xform/^sj$/【三角】/
     - xform/^dg$/【打勾】/
+    - xform/^ry$/【日用／日用品】/
+    - xform/^xi$/【血液／血型圖】/
+    - xform/^qg$/【器官】/
+    - xform/^vt$/【蟲圖／蟲類圖】/
     - xform/^;1/〖 1  開心〗(顏文字)/
     - xform/^;2/〖 2  喜歡〗(顏文字)/
     - xform/^;3/〖 3  傷心〗(顏文字)/
