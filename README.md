@@ -100,6 +100,9 @@ Linux 上問題好似很多，使用前請注意！並自行解決！
   
   #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/bpmf_mixin_4_keyboard.png)
   
+- 洋蔥注音選字鍵位
+
+  #### ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/master/bpmf_select_keys_keyboard.png)
 
 ### 贊助 Donate：
 
