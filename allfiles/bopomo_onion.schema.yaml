@@ -310,6 +310,8 @@ key_binder:
     - {accept: Shift+L, send: space, when: has_menu}
     - {accept: Shift+D, send: Shift+Return, when: has_menu}
     - {accept: Shift+O, send: Shift+Return, when: has_menu}
+### 純注音專門上屏注音文用 ###
+    - {accept: Shift+B, send: Control+Return, when: has_menu}
 ### 刪除鍵 ###
     - {accept: BackSpace, send: Control+BackSpace, when: has_menu} #〔關〕刪除前一個拼音字符〔開〕：刪除整組拼音字符（一個字）
     - {accept: Shift+BackSpace, send: BackSpace, when: has_menu}
