@@ -278,8 +278,8 @@ key_binder:
 #關#    - {accept: Tab, send: Page_Down, when: has_menu} #「tab」翻頁。
     - {accept: Shift+C, send: Page_Up, when: has_menu}
     - {accept: Shift+space, send: Page_Down, when: has_menu} #選字時「Shift」+「空白鍵」翻頁。 #send: Right #send: Down
-    - {accept: Shift+O, send: Page_Up, when: has_menu}
-    - {accept: Shift+P, send: Page_Down, when: has_menu}
+    - {accept: Shift+I, send: Page_Up, when: has_menu}
+    - {accept: Shift+K, send: Page_Down, when: has_menu}
 #左邊選字
     - {accept: Shift+Y, send: Control+1, when: has_menu}
     - {accept: Shift+H, send: Control+2, when: has_menu}
@@ -305,12 +305,20 @@ key_binder:
     # - {accept: space, send: space, when: composing}
 #關#    - {accept: space, send: Escape, when: composing} #空碼時，按空格清除
 #關#    - {accept: space, send: space, when: has_menu} #非空碼時，空白還是空白
+### 補一聲和上屏 raw_input （ paging 時，空白鍵無法輸出一聲 ） ###
+    - {accept: Shift+V, send: space, when: has_menu}
+    - {accept: Shift+L, send: space, when: has_menu}
+    - {accept: Shift+F, send: Shift+Return, when: has_menu}
+    - {accept: Shift+O, send: Shift+Return, when: has_menu}
 ### 刪除鍵 ###
     - {accept: BackSpace, send: Control+BackSpace, when: has_menu} #〔關〕刪除前一個拼音字符〔開〕：刪除整組拼音字符（一個字）
     - {accept: Shift+BackSpace, send: BackSpace, when: has_menu}
 #關#    - {accept: backslash, send: BackSpace, when: has_menu} #「\」鍵位刪除一個拼音字符。
     # - {accept: backslash, send: Shift+BackSpace, when: has_menu} #「\」鍵位刪除整組拼音字符（一個字）。
 #關#    - {accept: backslash, send: Shift+Return, when: has_menu} #「\」鍵位上屏英文。
+### 另設快捷刪除鍵 ###
+    - {accept: Shift+B, send: BackSpace, when: has_menu}
+    - {accept: Shift+P, send: BackSpace, when: has_menu}
 ### 功能快捷鍵 ###
     # - {accept: Control+minus, toggle: back_mark, when: always } #「國際音標和符號」提示碼開關
 #關#    - {accept: Control+apostrophe, toggle: zh_tw, when: always} #accept: Control+semicolon
