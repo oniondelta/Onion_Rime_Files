@@ -4155,18 +4155,18 @@ end
 -- -- print(url_decode('EAb080'))
 
 
--- --[[
--- 百分號編碼（英語：Percent-encoding），又稱：URL編碼（URL encoding）
--- 從文字到編碼
--- --]]
--- local function url_encode(str_e)
---   if (str_e) then
---     str_e = string.gsub (str_e, "\n", "\r\n")
---     str_e = string.gsub (str_e, "([^%w ])", function (c) return string.format ("%%%02X", string.byte(c)) end)
---     str_e = string.gsub (str_e, " ", "+")
---   end
---   return str_e
--- end
+--[[
+百分號編碼（英語：Percent-encoding），又稱：URL編碼（URL encoding）
+從文字到編碼
+--]]
+local function url_encode(str_e)
+  if (str_e) then
+    str_e = string.gsub (str_e, "\n", "\r\n")
+    str_e = string.gsub (str_e, "([^%w ])", function (c) return string.format ("%%%02X", string.byte(c)) end)
+    str_e = string.gsub (str_e, " ", "+")
+  end
+  return str_e
+end
 
 
 
@@ -5609,15 +5609,15 @@ function t_translator(input, seg)
       local utf_o = string.match(utf_input, "^o")
       local utf_c = string.match(utf_input, "^c")
       if ( utf_x ~= nil) then
-          -- local fmt = "U"..snd.."%"..(n_bit==16 and "X" or snd)
-        fmt = "U+".."%X"
+        -- local fmt = "U"..snd.."%"..(n_bit==16 and "X" or snd)
+        fmt = "  U+".."%X"
       elseif ( utf_o ~= nil) then
-        fmt = "0o".."%o"
+        fmt = "  0o".."%o"
       else
-        fmt = "&#".."%d"..";"
+        fmt = "  &#".."%d"..";"
       end
       -- 單獨查找
-      local cand_ui_s = Candidate("number", seg.start, seg._end, utf8_out(c), string.format(fmt, c) )
+      local cand_ui_s = Candidate("number", seg.start, seg._end, utf8_out(c), string.format(fmt, c) .. "  ( " .. url_encode(utf8_out(c)) .. " ）" )
       cand_ui_s.preedit = "`" .. snd .. " " .. string.upper(string.sub(input, 3))
       yield(cand_ui_s)
       -- 區間查找
@@ -5625,7 +5625,7 @@ function t_translator(input, seg)
       --   for i = c*n_bit, c*n_bit+n_bit-1 do
       if c+16 < 1048575 then
         for i = c+1, c+16 do
-          local cand_ui_m = Candidate("number", seg.start, seg._end, utf8_out(i), string.format(fmt, i) )
+          local cand_ui_m = Candidate("number", seg.start, seg._end, utf8_out(i), string.format(fmt, i) .. "  ( " .. url_encode(utf8_out(i)) .. " ）" )
           cand_ui_m.preedit = "`" .. snd .. " " .. string.upper(string.sub(input, 3))
           yield(cand_ui_m)
         end
@@ -7337,15 +7337,15 @@ function t2_translator(input, seg)
       local utf_o = string.match(utf_input, "^o")
       local utf_c = string.match(utf_input, "^c")
       if ( utf_x ~= nil) then
-          -- local fmt = "U"..snd.."%"..(n_bit==16 and "X" or snd)
-        fmt = "U+".."%X"
+        -- local fmt = "U"..snd.."%"..(n_bit==16 and "X" or snd)
+        fmt = "  U+".."%X"
       elseif ( utf_o ~= nil) then
-        fmt = "0o".."%o"
+        fmt = "  0o".."%o"
       else
-        fmt = "&#".."%d"..";"
+        fmt = "  &#".."%d"..";"
       end
       -- 單獨查找
-      local cand_ui_s = Candidate("number", seg.start, seg._end, utf8_out(c), string.format(fmt, c) )
+      local cand_ui_s = Candidate("number", seg.start, seg._end, utf8_out(c), string.format(fmt, c) .. "  ( " .. url_encode(utf8_out(c)) .. " ）" )
       cand_ui_s.preedit = "'/" .. snd .. " " .. string.upper(string.sub(input, 4))
       yield(cand_ui_s)
       -- 區間查找
@@ -7353,7 +7353,7 @@ function t2_translator(input, seg)
       --   for i = c*n_bit, c*n_bit+n_bit-1 do
       if c+16 < 1048575 then
         for i = c+1, c+16 do
-          local cand_ui_m = Candidate("number", seg.start, seg._end, utf8_out(i), string.format(fmt, i) )
+          local cand_ui_m = Candidate("number", seg.start, seg._end, utf8_out(i), string.format(fmt, i) .. "  ( " .. url_encode(utf8_out(i)) .. " ）" )
           cand_ui_m.preedit = "'/" .. snd .. " " .. string.upper(string.sub(input, 4))
           yield(cand_ui_m)
         end
@@ -8123,7 +8123,7 @@ mix_cf2_cfp_smf_filter = filter_mix_cf2_cfp_smf_filter.mix_cf2_cfp_smf_filter
 
 
 
--- --- @@ 〈 translator 〉使用 lua 資料夾掛載
+--- @@ 〈 translator 〉使用 lua 資料夾掛載
 
 -- --- date/time translator
 -- -- 有些網上方案會掛載該項，如：liur。
