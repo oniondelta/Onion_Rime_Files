@@ -4028,121 +4028,121 @@ local function utf8_out(cp)
 end
 
 
---[[
-百分號編碼（英語：Percent-encoding），又稱：URL編碼（URL encoding）
-從編碼到文字。
-導出暫轉到十進位編碼，後續變成文字，要再用以下函數轉換。
---]]
-local function url_decode(str_d)
-  if string.match(str_d,'^[%x][%x]$') then
-    local ch_1 = string.gsub(str_d,'^([%x][%x])$', '%1')
-    local x_1 = tonumber(ch_1, 16)
-    local o_1 = Dec2bin(x_1)
-    local o_1=o_1-00000000
-    local out_all=tonumber(string.format("%07d",o_1),2)
-    return out_all
-  elseif string.match(str_d,'^[%x][%x][%x][%x]$') then
-    local ch_1 = string.gsub(str_d,'^([%x][%x])..$', '%1')
-    local ch_2 = string.gsub(str_d,'^..([%x][%x])$', '%1')
-    local x_1 = tonumber(ch_1, 16)
-    local x_2 = tonumber(ch_2, 16)
-    local o_1 = Dec2bin(x_1)
-    local o_2 = Dec2bin(x_2)
-    local o_1=o_1-11000000
-    local o_2=o_2-10000000
-    local out_all=tonumber(string.format("%05d",o_1) .. string.format("%06d",o_2),2)
-    return out_all
-  elseif string.match(str_d,'^[%x][%x][%x][%x][%x][%x]$') then
-    local ch_1 = string.gsub(str_d,'^([%x][%x])....$', '%1')
-    local ch_2 = string.gsub(str_d,'^..([%x][%x])..$', '%1')
-    local ch_3 = string.gsub(str_d,'^....([%x][%x])$', '%1')
-    local x_1 = tonumber(ch_1, 16)
-    local x_2 = tonumber(ch_2, 16)
-    local x_3 = tonumber(ch_3, 16)
-    local o_1 = Dec2bin(x_1)
-    local o_2 = Dec2bin(x_2)
-    local o_3 = Dec2bin(x_3)
-    local o_1=o_1-11100000
-    local o_2=o_2-10000000
-    local o_3=o_3-10000000
-    local out_all=tonumber(string.format("%04d",o_1) .. string.format("%06d",o_2) .. string.format("%06d",o_3),2)
-    return out_all
-  elseif string.match(str_d,'^[%x][%x][%x][%x][%x][%x][%x][%x]$') then
-    local ch_1 = string.gsub(str_d,'^([%x][%x])......$', '%1')
-    local ch_2 = string.gsub(str_d,'^..([%x][%x])....$', '%1')
-    local ch_3 = string.gsub(str_d,'^....([%x][%x])..$', '%1')
-    local ch_4 = string.gsub(str_d,'^......([%x][%x])$', '%1')
-    local x_1 = tonumber(ch_1, 16)
-    local x_2 = tonumber(ch_2, 16)
-    local x_3 = tonumber(ch_3, 16)
-    local x_4 = tonumber(ch_4, 16)
-    local o_1 = Dec2bin(x_1)
-    local o_2 = Dec2bin(x_2)
-    local o_3 = Dec2bin(x_3)
-    local o_4 = Dec2bin(x_4)
-    local o_1=o_1-11110000
-    local o_2=o_2-10000000
-    local o_3=o_3-10000000
-    local o_4=o_4-10000000
-    local out_all=tonumber(string.format("%03d",o_1) .. string.format("%06d",o_2) .. string.format("%06d",o_3) .. string.format("%06d",o_4),2)
-    return out_all
-  elseif string.match(str_d,'^[%x][%x][%x][%x][%x][%x][%x][%x][%x][%x]$') then
-    local ch_1 = string.gsub(str_d,'^([%x][%x])........$', '%1')
-    local ch_2 = string.gsub(str_d,'^..([%x][%x])......$', '%1')
-    local ch_3 = string.gsub(str_d,'^....([%x][%x])....$', '%1')
-    local ch_4 = string.gsub(str_d,'^......([%x][%x])..$', '%1')
-    local ch_5 = string.gsub(str_d,'^........([%x][%x])$', '%1')
-    local x_1 = tonumber(ch_1, 16)
-    local x_2 = tonumber(ch_2, 16)
-    local x_3 = tonumber(ch_3, 16)
-    local x_4 = tonumber(ch_4, 16)
-    local x_5 = tonumber(ch_5, 16)
-    local o_1 = Dec2bin(x_1)
-    local o_2 = Dec2bin(x_2)
-    local o_3 = Dec2bin(x_3)
-    local o_4 = Dec2bin(x_4)
-    local o_5 = Dec2bin(x_5)
-    local o_1=o_1-11111000
-    local o_2=o_2-10000000
-    local o_3=o_3-10000000
-    local o_4=o_4-10000000
-    local o_5=o_5-10000000
-    local out_all=tonumber(string.format("%02d",o_1) .. string.format("%06d",o_2) .. string.format("%06d",o_3) .. string.format("%06d",o_4) .. string.format("%06d",o_5),2)
-    return out_all
-  elseif string.match(str_d,'^[%x][%x][%x][%x][%x][%x][%x][%x][%x][%x][%x]$') then
-    local ch_1 = string.gsub(str_d,'^([%x][%x])..........$', '%1')
-    local ch_2 = string.gsub(str_d,'^..([%x][%x])........$', '%1')
-    local ch_3 = string.gsub(str_d,'^....([%x][%x])......$', '%1')
-    local ch_4 = string.gsub(str_d,'^......([%x][%x])....$', '%1')
-    local ch_5 = string.gsub(str_d,'^........([%x][%x])..$', '%1')
-    local ch_6 = string.gsub(str_d,'^..........([%x][%x])$', '%1')
-    local x_1 = tonumber(ch_1, 16)
-    local x_2 = tonumber(ch_2, 16)
-    local x_3 = tonumber(ch_3, 16)
-    local x_4 = tonumber(ch_4, 16)
-    local x_5 = tonumber(ch_5, 16)
-    local x_6 = tonumber(ch_6, 16)
-    local o_1 = Dec2bin(x_1)
-    local o_2 = Dec2bin(x_2)
-    local o_3 = Dec2bin(x_3)
-    local o_4 = Dec2bin(x_4)
-    local o_5 = Dec2bin(x_5)
-    local o_6 = Dec2bin(x_6)
-    local o_1=o_1-11111100
-    local o_2=o_2-10000000
-    local o_3=o_3-10000000
-    local o_4=o_4-10000000
-    local o_5=o_5-10000000
-    local o_6=o_6-10000000
-    local out_all=tonumber(string.format("%01d",o_1) .. string.format("%06d",o_2) .. string.format("%06d",o_3) .. string.format("%06d",o_4) .. string.format("%06d",o_5) .. string.format("%06d",o_6),2)
-    return out_all
-  elseif string.match(str_d,'^[a-z0-9]$') then
-    return str_d
-  else
-    local out_all='無此編碼'
-    return out_all
-  end
-end
+-- --[[
+-- 百分號編碼（英語：Percent-encoding），又稱：URL編碼（URL encoding）
+-- 從編碼到文字。
+-- 導出暫轉到十進位編碼，後續變成文字，要再用以下函數轉換。
+-- --]]
+-- local function url_decode(str_d)
+--   if string.match(str_d,'^[%x][%x]$') then
+--     local ch_1 = string.gsub(str_d,'^([%x][%x])$', '%1')
+--     local x_1 = tonumber(ch_1, 16)
+--     local o_1 = Dec2bin(x_1)
+--     local o_1=o_1-00000000
+--     local out_all=tonumber(string.format("%07d",o_1),2)
+--     return out_all
+--   elseif string.match(str_d,'^[%x][%x][%x][%x]$') then
+--     local ch_1 = string.gsub(str_d,'^([%x][%x])..$', '%1')
+--     local ch_2 = string.gsub(str_d,'^..([%x][%x])$', '%1')
+--     local x_1 = tonumber(ch_1, 16)
+--     local x_2 = tonumber(ch_2, 16)
+--     local o_1 = Dec2bin(x_1)
+--     local o_2 = Dec2bin(x_2)
+--     local o_1=o_1-11000000
+--     local o_2=o_2-10000000
+--     local out_all=tonumber(string.format("%05d",o_1) .. string.format("%06d",o_2),2)
+--     return out_all
+--   elseif string.match(str_d,'^[%x][%x][%x][%x][%x][%x]$') then
+--     local ch_1 = string.gsub(str_d,'^([%x][%x])....$', '%1')
+--     local ch_2 = string.gsub(str_d,'^..([%x][%x])..$', '%1')
+--     local ch_3 = string.gsub(str_d,'^....([%x][%x])$', '%1')
+--     local x_1 = tonumber(ch_1, 16)
+--     local x_2 = tonumber(ch_2, 16)
+--     local x_3 = tonumber(ch_3, 16)
+--     local o_1 = Dec2bin(x_1)
+--     local o_2 = Dec2bin(x_2)
+--     local o_3 = Dec2bin(x_3)
+--     local o_1=o_1-11100000
+--     local o_2=o_2-10000000
+--     local o_3=o_3-10000000
+--     local out_all=tonumber(string.format("%04d",o_1) .. string.format("%06d",o_2) .. string.format("%06d",o_3),2)
+--     return out_all
+--   elseif string.match(str_d,'^[%x][%x][%x][%x][%x][%x][%x][%x]$') then
+--     local ch_1 = string.gsub(str_d,'^([%x][%x])......$', '%1')
+--     local ch_2 = string.gsub(str_d,'^..([%x][%x])....$', '%1')
+--     local ch_3 = string.gsub(str_d,'^....([%x][%x])..$', '%1')
+--     local ch_4 = string.gsub(str_d,'^......([%x][%x])$', '%1')
+--     local x_1 = tonumber(ch_1, 16)
+--     local x_2 = tonumber(ch_2, 16)
+--     local x_3 = tonumber(ch_3, 16)
+--     local x_4 = tonumber(ch_4, 16)
+--     local o_1 = Dec2bin(x_1)
+--     local o_2 = Dec2bin(x_2)
+--     local o_3 = Dec2bin(x_3)
+--     local o_4 = Dec2bin(x_4)
+--     local o_1=o_1-11110000
+--     local o_2=o_2-10000000
+--     local o_3=o_3-10000000
+--     local o_4=o_4-10000000
+--     local out_all=tonumber(string.format("%03d",o_1) .. string.format("%06d",o_2) .. string.format("%06d",o_3) .. string.format("%06d",o_4),2)
+--     return out_all
+--   elseif string.match(str_d,'^[%x][%x][%x][%x][%x][%x][%x][%x][%x][%x]$') then
+--     local ch_1 = string.gsub(str_d,'^([%x][%x])........$', '%1')
+--     local ch_2 = string.gsub(str_d,'^..([%x][%x])......$', '%1')
+--     local ch_3 = string.gsub(str_d,'^....([%x][%x])....$', '%1')
+--     local ch_4 = string.gsub(str_d,'^......([%x][%x])..$', '%1')
+--     local ch_5 = string.gsub(str_d,'^........([%x][%x])$', '%1')
+--     local x_1 = tonumber(ch_1, 16)
+--     local x_2 = tonumber(ch_2, 16)
+--     local x_3 = tonumber(ch_3, 16)
+--     local x_4 = tonumber(ch_4, 16)
+--     local x_5 = tonumber(ch_5, 16)
+--     local o_1 = Dec2bin(x_1)
+--     local o_2 = Dec2bin(x_2)
+--     local o_3 = Dec2bin(x_3)
+--     local o_4 = Dec2bin(x_4)
+--     local o_5 = Dec2bin(x_5)
+--     local o_1=o_1-11111000
+--     local o_2=o_2-10000000
+--     local o_3=o_3-10000000
+--     local o_4=o_4-10000000
+--     local o_5=o_5-10000000
+--     local out_all=tonumber(string.format("%02d",o_1) .. string.format("%06d",o_2) .. string.format("%06d",o_3) .. string.format("%06d",o_4) .. string.format("%06d",o_5),2)
+--     return out_all
+--   elseif string.match(str_d,'^[%x][%x][%x][%x][%x][%x][%x][%x][%x][%x][%x]$') then
+--     local ch_1 = string.gsub(str_d,'^([%x][%x])..........$', '%1')
+--     local ch_2 = string.gsub(str_d,'^..([%x][%x])........$', '%1')
+--     local ch_3 = string.gsub(str_d,'^....([%x][%x])......$', '%1')
+--     local ch_4 = string.gsub(str_d,'^......([%x][%x])....$', '%1')
+--     local ch_5 = string.gsub(str_d,'^........([%x][%x])..$', '%1')
+--     local ch_6 = string.gsub(str_d,'^..........([%x][%x])$', '%1')
+--     local x_1 = tonumber(ch_1, 16)
+--     local x_2 = tonumber(ch_2, 16)
+--     local x_3 = tonumber(ch_3, 16)
+--     local x_4 = tonumber(ch_4, 16)
+--     local x_5 = tonumber(ch_5, 16)
+--     local x_6 = tonumber(ch_6, 16)
+--     local o_1 = Dec2bin(x_1)
+--     local o_2 = Dec2bin(x_2)
+--     local o_3 = Dec2bin(x_3)
+--     local o_4 = Dec2bin(x_4)
+--     local o_5 = Dec2bin(x_5)
+--     local o_6 = Dec2bin(x_6)
+--     local o_1=o_1-11111100
+--     local o_2=o_2-10000000
+--     local o_3=o_3-10000000
+--     local o_4=o_4-10000000
+--     local o_5=o_5-10000000
+--     local o_6=o_6-10000000
+--     local out_all=tonumber(string.format("%01d",o_1) .. string.format("%06d",o_2) .. string.format("%06d",o_3) .. string.format("%06d",o_4) .. string.format("%06d",o_5) .. string.format("%06d",o_6),2)
+--     return out_all
+--   elseif string.match(str_d,'^[a-z0-9]$') then
+--     return str_d
+--   else
+--     local out_all='無此編碼'
+--     return out_all
+--   end
+-- end
 
 -- -- 網上方法，但空碼無法再接後續，不適用
 -- local out_all = string.gsub(str_d, "%x%x", function(h) return string.char(tonumber(h,16)) end)
@@ -4155,18 +4155,18 @@ end
 -- -- print(url_decode('EAb080'))
 
 
---[[
-百分號編碼（英語：Percent-encoding），又稱：URL編碼（URL encoding）
-從文字到編碼
---]]
-local function url_encode(str_e)
-  if (str_e) then
-    str_e = string.gsub (str_e, "\n", "\r\n")
-    str_e = string.gsub (str_e, "([^%w ])", function (c) return string.format ("%%%02X", string.byte(c)) end)
-    str_e = string.gsub (str_e, " ", "+")
-  end
-  return str_e
-end
+-- --[[
+-- 百分號編碼（英語：Percent-encoding），又稱：URL編碼（URL encoding）
+-- 從文字到編碼
+-- --]]
+-- local function url_encode(str_e)
+--   if (str_e) then
+--     str_e = string.gsub (str_e, "\n", "\r\n")
+--     str_e = string.gsub (str_e, "([^%w ])", function (c) return string.format ("%%%02X", string.byte(c)) end)
+--     str_e = string.gsub (str_e, " ", "+")
+--   end
+--   return str_e
+-- end
 
 
 
@@ -5491,10 +5491,10 @@ function t_translator(input, seg)
       , { '  / [a-z]+〔小寫字母〕', '⑨' }
       , { '  ; [a-z]+〔大寫字母〕', '⑩' }
       , { '  \' [a-z]+〔開頭大寫字母〕', '⑪' }
-      , { '  e [0-9a-f]+〔Percent/URL encoding〕', '⑫' }
-      , { '  x [0-9a-f]+〔內碼十六進制 Hex〕', '⑬' }
-      , { '  c [0-9]+〔內碼十進制 Dec〕', '⑭' }
-      , { '  o [0-7]+〔內碼八進制 Oct〕', '⑮' }
+      , { '  x [0-9a-f]+〔內碼十六進制 Hex〕', '⑫' }
+      , { '  c [0-9]+〔內碼十進制 Dec〕', '⑬' }
+      , { '  o [0-7]+〔內碼八進制 Oct〕', '⑭' }
+      -- , { '  e [0-9a-f]+〔Percent/URL encoding〕', '⑮' }
 
       -- , { '〔夜思‧李白〕', '床前明月光，疑是地上霜。\r舉頭望明月，低頭思故鄉。' }
       }
@@ -5548,12 +5548,12 @@ function t_translator(input, seg)
       return
     end
 
-    if(input=="`e") then
-      local cand2 = Candidate("letter", seg.start, seg._end, " " , "  [0-9a-f]+〔Percent/URL encoding〕")
-      cand2.preedit = input .. '\t《Percent/URL encoding》▶'
-      yield(cand2)
-      return
-    end
+    -- if(input=="`e") then
+    --   local cand2 = Candidate("letter", seg.start, seg._end, " " , "  [0-9a-f]+〔Percent/URL encoding〕")
+    --   cand2.preedit = input .. '\t《Percent/URL encoding》▶'
+    --   yield(cand2)
+    --   return
+    -- end
 
     local englishout1 = string.match(input, "`/(%l+)$")
     if (englishout1~=nil) then
@@ -5633,50 +5633,50 @@ function t_translator(input, seg)
     end
 
 
-    local url_c_input = string.match(input, "`e([0-9a-z][0-9a-f]*)$")
-    if (url_c_input~=nil) then
-      local u_1 = string.match(url_c_input,"^([0-9a-f][0-9a-f][0-9a-f])$")
-      local u_2 = string.match(url_c_input,"^([0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f])$")
-      local u_3 = string.match(url_c_input,"^([0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f])$")
-      local u_4 = string.match(url_c_input,"^([0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f])$")
-      if (u_1 ~= nil) or (u_2 ~= nil) or (u_3 ~= nil) or (u_4 ~= nil) then
-        url_c_input = url_c_input .. '0'
-      end
-      local url_10 = url_decode(url_c_input)
-      local uc_i = string.upper(string.sub(input, 3, 4)) .. " " .. string.upper(string.sub(input, 5, 6)) .. " " .. string.upper(string.sub(input, 7, 8)) .. " " .. string.upper(string.sub(input, 9, 10)) .. " " .. string.upper(string.sub(input, 11, 12)) .. " " .. string.upper(string.sub(input, 13, 14))
-      local uc_i = string.gsub(uc_i, " +$", "" )
-      if string.match(url_10, "無此編碼") ~= nil then
-        yield(Candidate("number", seg.start, seg._end, url_10, '' ))
-      elseif string.match(url_c_input, "^[0-9a-z]$") ~= nil then
-        local cand_uci_a = Candidate("number", seg.start, seg._end, url_10, url_10 )
-        cand_uci_a.preedit = "`e " .. uc_i
-        yield(cand_uci_a)
-      else
-        -- local u_c = string.upper(url_c_input)
-        -- local u_c = string.gsub(u_c, '^', '%%')
-        -- local u_c = string.gsub(u_c, '^(%%..)(..)', '%1%%%2')
-        -- local u_c = string.gsub(u_c, '^(%%..%%..)(.+)', '%1%%%2')
-        -- local u_c = string.gsub(u_c, '^(%%..%%..%%..)(.+)', '%1%%%2')
-        -- local u_c = string.gsub(u_c, '^(%%..%%..%%..%%..)(.+)', '%1%%%2')
-        -- local u_c = string.gsub(u_c, '^(%%..%%..%%..%%..%%..)(.+)', '%1%%%2')
-        -- local u_c = string.gsub(u_c, '^(..)(.?.?)(.?.?)(.?.?)(.?.?)(.?.?)$', '%%%1%%%2%%%3%%%4%%%5%%%6')
-        -- local u_c = string.gsub(u_c, '[%%]+$', '')
-        -- yield(Candidate("number", seg.start, seg._end, utf8_out(url_10), u_c ))
-        local cand_uci_s = Candidate("number", seg.start, seg._end, utf8_out(url_10), url_encode(utf8_out(url_10)) )
-        cand_uci_s.preedit = "`e " .. uc_i
-        yield(cand_uci_s)
-      end
-      -- if url_10*10+10-1 < 1048575 then
-      --   for i = url_10*10, url_10*10+10-1 do
-      if url_10+16 < 1048575 then
-        for i = url_10+1, url_10+16 do
-          local cand_uci_m = Candidate("number", seg.start, seg._end, utf8_out(i), url_encode(utf8_out(i)) )
-          cand_uci_m.preedit = "`e " .. uc_i
-          yield(cand_uci_m)
-        end
-      end
-      return
-    end
+    -- local url_c_input = string.match(input, "`e([0-9a-z][0-9a-f]*)$")
+    -- if (url_c_input~=nil) then
+    --   local u_1 = string.match(url_c_input,"^([0-9a-f][0-9a-f][0-9a-f])$")
+    --   local u_2 = string.match(url_c_input,"^([0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f])$")
+    --   local u_3 = string.match(url_c_input,"^([0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f])$")
+    --   local u_4 = string.match(url_c_input,"^([0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f])$")
+    --   if (u_1 ~= nil) or (u_2 ~= nil) or (u_3 ~= nil) or (u_4 ~= nil) then
+    --     url_c_input = url_c_input .. '0'
+    --   end
+    --   local url_10 = url_decode(url_c_input)
+    --   local uc_i = string.upper(string.sub(input, 3, 4)) .. " " .. string.upper(string.sub(input, 5, 6)) .. " " .. string.upper(string.sub(input, 7, 8)) .. " " .. string.upper(string.sub(input, 9, 10)) .. " " .. string.upper(string.sub(input, 11, 12)) .. " " .. string.upper(string.sub(input, 13, 14))
+    --   local uc_i = string.gsub(uc_i, " +$", "" )
+    --   if string.match(url_10, "無此編碼") ~= nil then
+    --     yield(Candidate("number", seg.start, seg._end, url_10, '' ))
+    --   elseif string.match(url_c_input, "^[0-9a-z]$") ~= nil then
+    --     local cand_uci_a = Candidate("number", seg.start, seg._end, url_10, url_10 )
+    --     cand_uci_a.preedit = "`e " .. uc_i
+    --     yield(cand_uci_a)
+    --   else
+    --     -- local u_c = string.upper(url_c_input)
+    --     -- local u_c = string.gsub(u_c, '^', '%%')
+    --     -- local u_c = string.gsub(u_c, '^(%%..)(..)', '%1%%%2')
+    --     -- local u_c = string.gsub(u_c, '^(%%..%%..)(.+)', '%1%%%2')
+    --     -- local u_c = string.gsub(u_c, '^(%%..%%..%%..)(.+)', '%1%%%2')
+    --     -- local u_c = string.gsub(u_c, '^(%%..%%..%%..%%..)(.+)', '%1%%%2')
+    --     -- local u_c = string.gsub(u_c, '^(%%..%%..%%..%%..%%..)(.+)', '%1%%%2')
+    --     -- local u_c = string.gsub(u_c, '^(..)(.?.?)(.?.?)(.?.?)(.?.?)(.?.?)$', '%%%1%%%2%%%3%%%4%%%5%%%6')
+    --     -- local u_c = string.gsub(u_c, '[%%]+$', '')
+    --     -- yield(Candidate("number", seg.start, seg._end, utf8_out(url_10), u_c ))
+    --     local cand_uci_s = Candidate("number", seg.start, seg._end, utf8_out(url_10), url_encode(utf8_out(url_10)) )
+    --     cand_uci_s.preedit = "`e " .. uc_i
+    --     yield(cand_uci_s)
+    --   end
+    --   -- if url_10*10+10-1 < 1048575 then
+    --   --   for i = url_10*10, url_10*10+10-1 do
+    --   if tonumber(url_10)+16 < 1048575 then
+    --     for i = tonumber(url_10)+1, tonumber(url_10)+16 do
+    --       local cand_uci_m = Candidate("number", seg.start, seg._end, utf8_out(i), url_encode(utf8_out(i)) )
+    --       cand_uci_m.preedit = "`e " .. uc_i
+    --       yield(cand_uci_m)
+    --     end
+    --   end
+    --   return
+    -- end
 
 
     local y, m, d = string.match(input, "`(%d+)/(%d?%d)/(%d?%d)$")
@@ -5827,8 +5827,9 @@ function t_translator(input, seg)
 
     -- local numberout = string.match(input, "'//?(%d+)$")
     local numberout, dot1, afterdot = string.match(input, "`(%d+)(%.?)(%d*)$")
-    local nn = string.sub(numberout, 1)
-    if (numberout~=nil) and (tonumber(nn)~=nil) then
+    if (tonumber(numberout)~=nil) then
+    -- if (numberout~=nil) and (tonumber(nn)~=nil) then
+      local nn = string.sub(numberout, 1)
       --[[ 用 yield 產生一個候選項
       候選項的構造函數是 Candidate，它有五個參數：
       - type: 字符串，表示候選項的類型（可隨意取）
@@ -7218,10 +7219,10 @@ function t2_translator(input, seg)
       , { '  / [a-z]+〔小寫字母〕', '⑨' }
       , { '  ; [a-z]+〔大寫字母〕', '⑩' }
       , { '  \' [a-z]+〔開頭大寫字母〕', '⑪' }
-      , { '  e [0-9a-f]+〔Percent/URL encoding〕', '⑫' }
-      , { '  x [0-9a-f]+〔內碼十六進制 Hex〕', '⑬' }
-      , { '  c [0-9]+〔內碼十進制 Dec〕', '⑭' }
-      , { '  o [0-7]+〔內碼八進制 Oct〕', '⑮' }
+      , { '  x [0-9a-f]+〔內碼十六進制 Hex〕', '⑫' }
+      , { '  c [0-9]+〔內碼十進制 Dec〕', '⑬' }
+      , { '  o [0-7]+〔內碼八進制 Oct〕', '⑭' }
+      -- , { '  e [0-9a-f]+〔Percent/URL encoding〕', '⑮' }
 
       -- , { '〔夜思‧李白〕', '床前明月光，疑是地上霜。\r舉頭望明月，低頭思故鄉。' }
       }
@@ -7275,12 +7276,12 @@ function t2_translator(input, seg)
       return
     end
 
-    if(input=="'/e") then
-      local cand2 = Candidate("letter", seg.start, seg._end, " " , "  [0-9a-f]+〔Percent/URL encoding〕")
-      cand2.preedit = input .. '\t《Percent/URL encoding》▶'
-      yield(cand2)
-      return
-    end
+    -- if(input=="'/e") then
+    --   local cand2 = Candidate("letter", seg.start, seg._end, " " , "  [0-9a-f]+〔Percent/URL encoding〕")
+    --   cand2.preedit = input .. '\t《Percent/URL encoding》▶'
+    --   yield(cand2)
+    --   return
+    -- end
 
     local englishout1 = string.match(input, "'//(%l+)$")
     if (englishout1~=nil) then
@@ -7360,50 +7361,50 @@ function t2_translator(input, seg)
     end
 
 
-    local url_c_input = string.match(input, "'/e([0-9a-z][0-9a-f]*)$")
-    if (url_c_input~=nil) then
-      local u_1 = string.match(url_c_input,"^([0-9a-f][0-9a-f][0-9a-f])$")
-      local u_2 = string.match(url_c_input,"^([0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f])$")
-      local u_3 = string.match(url_c_input,"^([0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f])$")
-      local u_4 = string.match(url_c_input,"^([0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f])$")
-      if (u_1 ~= nil) or (u_2 ~= nil) or (u_3 ~= nil) or (u_4 ~= nil) then
-        url_c_input = url_c_input .. '0'
-      end
-      local url_10 = url_decode(url_c_input)
-      local uc_i = string.upper(string.sub(input, 4, 5)) .. " " .. string.upper(string.sub(input, 6, 7)) .. " " .. string.upper(string.sub(input, 8, 9)) .. " " .. string.upper(string.sub(input, 10, 11)) .. " " .. string.upper(string.sub(input, 12, 13)) .. " " .. string.upper(string.sub(input, 14, 15))
-      local uc_i = string.gsub(uc_i, " +$", "" )
-      if string.match(url_10, "無此編碼") ~= nil then
-        yield(Candidate("number", seg.start, seg._end, url_10, '' ))
-      elseif string.match(url_c_input, "^[0-9a-z]$") ~= nil then
-        local cand_uci_a = Candidate("number", seg.start, seg._end, url_10, url_10 )
-        cand_uci_a.preedit = "'/e " .. uc_i
-        yield(cand_uci_a)
-      else
-        -- local u_c = string.upper(url_c_input)
-        -- local u_c = string.gsub(u_c, '^', '%%')
-        -- local u_c = string.gsub(u_c, '^(%%..)(..)', '%1%%%2')
-        -- local u_c = string.gsub(u_c, '^(%%..%%..)(.+)', '%1%%%2')
-        -- local u_c = string.gsub(u_c, '^(%%..%%..%%..)(.+)', '%1%%%2')
-        -- local u_c = string.gsub(u_c, '^(%%..%%..%%..%%..)(.+)', '%1%%%2')
-        -- local u_c = string.gsub(u_c, '^(%%..%%..%%..%%..%%..)(.+)', '%1%%%2')
-        -- local u_c = string.gsub(u_c, '^(..)(.?.?)(.?.?)(.?.?)(.?.?)(.?.?)$', '%%%1%%%2%%%3%%%4%%%5%%%6')
-        -- local u_c = string.gsub(u_c, '[%%]+$', '')
-        -- yield(Candidate("number", seg.start, seg._end, utf8_out(url_10), u_c ))
-        local cand_uci_s = Candidate("number", seg.start, seg._end, utf8_out(url_10), url_encode(utf8_out(url_10)) )
-        cand_uci_s.preedit = "'/e " .. uc_i
-        yield(cand_uci_s)
-      end
-      -- if url_10*10+10-1 < 1048575 then
-      --   for i = url_10*10, url_10*10+10-1 do
-      if url_10+16 < 1048575 then
-        for i = url_10+1, url_10+16 do
-          local cand_uci_m = Candidate("number", seg.start, seg._end, utf8_out(i), url_encode(utf8_out(i)) )
-          cand_uci_m.preedit = "'/e " .. uc_i
-          yield(cand_uci_m)
-        end
-      end
-      return
-    end
+    -- local url_c_input = string.match(input, "'/e([0-9a-z][0-9a-f]*)$")
+    -- if (url_c_input~=nil) then
+    --   local u_1 = string.match(url_c_input,"^([0-9a-f][0-9a-f][0-9a-f])$")
+    --   local u_2 = string.match(url_c_input,"^([0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f])$")
+    --   local u_3 = string.match(url_c_input,"^([0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f])$")
+    --   local u_4 = string.match(url_c_input,"^([0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f])$")
+    --   if (u_1 ~= nil) or (u_2 ~= nil) or (u_3 ~= nil) or (u_4 ~= nil) then
+    --     url_c_input = url_c_input .. '0'
+    --   end
+    --   local url_10 = url_decode(url_c_input)
+    --   local uc_i = string.upper(string.sub(input, 4, 5)) .. " " .. string.upper(string.sub(input, 6, 7)) .. " " .. string.upper(string.sub(input, 8, 9)) .. " " .. string.upper(string.sub(input, 10, 11)) .. " " .. string.upper(string.sub(input, 12, 13)) .. " " .. string.upper(string.sub(input, 14, 15))
+    --   local uc_i = string.gsub(uc_i, " +$", "" )
+    --   if string.match(url_10, "無此編碼") ~= nil then
+    --     yield(Candidate("number", seg.start, seg._end, url_10, '' ))
+    --   elseif string.match(url_c_input, "^[0-9a-z]$") ~= nil then
+    --     local cand_uci_a = Candidate("number", seg.start, seg._end, url_10, url_10 )
+    --     cand_uci_a.preedit = "'/e " .. uc_i
+    --     yield(cand_uci_a)
+    --   else
+    --     -- local u_c = string.upper(url_c_input)
+    --     -- local u_c = string.gsub(u_c, '^', '%%')
+    --     -- local u_c = string.gsub(u_c, '^(%%..)(..)', '%1%%%2')
+    --     -- local u_c = string.gsub(u_c, '^(%%..%%..)(.+)', '%1%%%2')
+    --     -- local u_c = string.gsub(u_c, '^(%%..%%..%%..)(.+)', '%1%%%2')
+    --     -- local u_c = string.gsub(u_c, '^(%%..%%..%%..%%..)(.+)', '%1%%%2')
+    --     -- local u_c = string.gsub(u_c, '^(%%..%%..%%..%%..%%..)(.+)', '%1%%%2')
+    --     -- local u_c = string.gsub(u_c, '^(..)(.?.?)(.?.?)(.?.?)(.?.?)(.?.?)$', '%%%1%%%2%%%3%%%4%%%5%%%6')
+    --     -- local u_c = string.gsub(u_c, '[%%]+$', '')
+    --     -- yield(Candidate("number", seg.start, seg._end, utf8_out(url_10), u_c ))
+    --     local cand_uci_s = Candidate("number", seg.start, seg._end, utf8_out(url_10), url_encode(utf8_out(url_10)) )
+    --     cand_uci_s.preedit = "'/e " .. uc_i
+    --     yield(cand_uci_s)
+    --   end
+    --   -- if url_10*10+10-1 < 1048575 then
+    --   --   for i = url_10*10, url_10*10+10-1 do
+    --   if tonumber(url_10)+16 < 1048575 then
+    --     for i = tonumber(url_10)+1, tonumber(url_10)+16 do
+    --       local cand_uci_m = Candidate("number", seg.start, seg._end, utf8_out(i), url_encode(utf8_out(i)) )
+    --       cand_uci_m.preedit = "'/e " .. uc_i
+    --       yield(cand_uci_m)
+    --     end
+    --   end
+    --   return
+    -- end
 
 
     local y, m, d = string.match(input, "'/(%d+)/(%d?%d)/(%d?%d)$")
@@ -7554,8 +7555,9 @@ function t2_translator(input, seg)
 
     -- local numberout = string.match(input, "'//?(%d+)$")
     local numberout, dot1, afterdot = string.match(input, "'/(%d+)(%.?)(%d*)$")
-    local nn = string.sub(numberout, 1)
-    if (numberout~=nil) and (tonumber(nn)~=nil) then
+    if (tonumber(numberout)~=nil) then
+    -- if (numberout~=nil) and (tonumber(nn)~=nil) then
+      local nn = string.sub(numberout, 1)
       --[[ 用 yield 產生一個候選項
       候選項的構造函數是 Candidate，它有五個參數：
       - type: 字符串，表示候選項的類型（可隨意取）
@@ -8121,7 +8123,7 @@ local 檔名 = require("檔名")
 
 
 
---- @@ 〈 translator 〉使用 lua 資料夾掛載
+-- --- @@ 〈 translator 〉使用 lua 資料夾掛載
 
 -- --- date/time translator
 -- -- 有些網上方案會掛載該項，如：liur。
