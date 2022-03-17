@@ -4155,18 +4155,18 @@ end
 -- -- print(url_decode('EAb080'))
 
 
--- --[[
--- 百分號編碼（英語：Percent-encoding），又稱：URL編碼（URL encoding）
--- 從文字到編碼
--- --]]
--- local function url_encode(str_e)
---   if (str_e) then
---     str_e = string.gsub (str_e, "\n", "\r\n")
---     str_e = string.gsub (str_e, "([^%w ])", function (c) return string.format ("%%%02X", string.byte(c)) end)
---     str_e = string.gsub (str_e, " ", "+")
---   end
---   return str_e
--- end
+--[[
+百分號編碼（英語：Percent-encoding），又稱：URL編碼（URL encoding）
+從文字到編碼
+--]]
+local function url_encode(str_e)
+  if (str_e) then
+    str_e = string.gsub (str_e, "\n", "\r\n")
+    str_e = string.gsub (str_e, "([^%w ])", function (c) return string.format ("%%%02X", string.byte(c)) end)
+    str_e = string.gsub (str_e, " ", "+")
+  end
+  return str_e
+end
 
 
 
@@ -5609,15 +5609,15 @@ function t_translator(input, seg)
       local utf_o = string.match(utf_input, "^o")
       local utf_c = string.match(utf_input, "^c")
       if ( utf_x ~= nil) then
-          -- local fmt = "U"..snd.."%"..(n_bit==16 and "X" or snd)
-        fmt = "U+".."%X"
+        -- local fmt = "U"..snd.."%"..(n_bit==16 and "X" or snd)
+        fmt = "  U+".."%X"
       elseif ( utf_o ~= nil) then
-        fmt = "0o".."%o"
+        fmt = "  0o".."%o"
       else
-        fmt = "&#".."%d"..";"
+        fmt = "  &#".."%d"..";"
       end
       -- 單獨查找
-      local cand_ui_s = Candidate("number", seg.start, seg._end, utf8_out(c), string.format(fmt, c) )
+      local cand_ui_s = Candidate("number", seg.start, seg._end, utf8_out(c), string.format(fmt, c) .. "  ( " .. url_encode(utf8_out(c)) .. " ）" )
       cand_ui_s.preedit = "`" .. snd .. " " .. string.upper(string.sub(input, 3))
       yield(cand_ui_s)
       -- 區間查找
@@ -5625,7 +5625,7 @@ function t_translator(input, seg)
       --   for i = c*n_bit, c*n_bit+n_bit-1 do
       if c+16 < 1048575 then
         for i = c+1, c+16 do
-          local cand_ui_m = Candidate("number", seg.start, seg._end, utf8_out(i), string.format(fmt, i) )
+          local cand_ui_m = Candidate("number", seg.start, seg._end, utf8_out(i), string.format(fmt, i) .. "  ( " .. url_encode(utf8_out(i)) .. " ）" )
           cand_ui_m.preedit = "`" .. snd .. " " .. string.upper(string.sub(input, 3))
           yield(cand_ui_m)
         end
@@ -7337,15 +7337,15 @@ function t2_translator(input, seg)
       local utf_o = string.match(utf_input, "^o")
       local utf_c = string.match(utf_input, "^c")
       if ( utf_x ~= nil) then
-          -- local fmt = "U"..snd.."%"..(n_bit==16 and "X" or snd)
-        fmt = "U+".."%X"
+        -- local fmt = "U"..snd.."%"..(n_bit==16 and "X" or snd)
+        fmt = "  U+".."%X"
       elseif ( utf_o ~= nil) then
-        fmt = "0o".."%o"
+        fmt = "  0o".."%o"
       else
-        fmt = "&#".."%d"..";"
+        fmt = "  &#".."%d"..";"
       end
       -- 單獨查找
-      local cand_ui_s = Candidate("number", seg.start, seg._end, utf8_out(c), string.format(fmt, c) )
+      local cand_ui_s = Candidate("number", seg.start, seg._end, utf8_out(c), string.format(fmt, c) .. "  ( " .. url_encode(utf8_out(c)) .. " ）" )
       cand_ui_s.preedit = "'/" .. snd .. " " .. string.upper(string.sub(input, 4))
       yield(cand_ui_s)
       -- 區間查找
@@ -7353,7 +7353,7 @@ function t2_translator(input, seg)
       --   for i = c*n_bit, c*n_bit+n_bit-1 do
       if c+16 < 1048575 then
         for i = c+1, c+16 do
-          local cand_ui_m = Candidate("number", seg.start, seg._end, utf8_out(i), string.format(fmt, i) )
+          local cand_ui_m = Candidate("number", seg.start, seg._end, utf8_out(i), string.format(fmt, i) .. "  ( " .. url_encode(utf8_out(i)) .. " ）" )
           cand_ui_m.preedit = "'/" .. snd .. " " .. string.upper(string.sub(input, 4))
           yield(cand_ui_m)
         end
@@ -8022,6 +8022,193 @@ end
 
 
 --[[
+！！！！！！！！！！！！！！以下通配符測試！！！！！！！！！！！！！！
+--]]
+-- function ww_translator( input, seg, env)
+--   local aadb = ReverseDb("build/onion-array30.extended.reverse.bin")
+--   -- local aadb = DictEntry("build/onion-array30.extended.reverse.bin")
+--   -- local aadb = dictLookup("build/onion-array30.extended.table.bin")
+--   -- local aadb = ReverseDb("build/onion-array30.extended.table.bin")
+--   -- local aadb = Translation("build/onion-array30.extended.table.bin")
+--   -- local aadb = Candidate("build/onion-array30.extended.table.bin")
+--   local kkk, qqq, rrr = string.match(input, "^([a-z]+)(%*)([a-z]*)$")
+--   if (kkk~=nil) then
+-- 		-- local tail = string.match(input,  '[^'.. '*' .. ']+$') or ''
+-- 		-- input = string.match(input, '^[^' ..'*' .. ']+')
+-- 		-- env.mem:dict_lookup(input,true, 100)  -- expand_search
+-- 		-- env.mem:dict_lookup(kkk,true, 100)  -- expand_search
+--   -- env.mem = Memory( env.engine, env.engine.schema)
+--    -- config = env.engine.schema.config
+-- --    namespace = 'expand_translator'
+-- --    env.wildcard = config:get_string(namespace .. '/wildcard')
+-- -- mem = Memory(env.ticket)
+-- 		-- input = string.match(input, '^[^' ..env.wildcard .. ']+')
+-- 		-- mem:dict_lookup('aa')  -- expand_search
+-- -- mem:dictLookup("onf",false)
+--     -- for dictentry in mem:iter_dict() do
+--   -- while (mem:dictResultExhausted()) do
+--   --      dict_entry = mem:dictPeek()
+-- yield(Candidate("type",seg.start,seg._end,dict_entry.text, ''))
+-- -- a23=env.wildcard
+-- 		-- for dictentry in env.mem:iter_dict()
+-- 		-- do
+-- -- ddd3 = push_input('a')
+
+--     -- for dictentry in kkk:raw_iter() do
+--     -- input = string.match(input, '^[^' ..'*' .. ']+')
+--     -- dictentry = env.mem:dict_lookup(input,true, 100)  -- expand_search
+--     -- for dictentry in env.mem:iter_dict() do
+--     -- dictentry = aadb:lookup('可')
+-- 		-- inp = string.match(inp, '^[^' ..env.wildcard .. ']+')
+-- 		-- aaaa3 = env.mem:dict_lookup('aa')  -- expand_search
+
+--     -- aaa = Dictionary('aa')
+--   -- env.mem = Memory(env.engine,env.engine.schema)
+-- -- Memory:lookup('aa',true, 100)
+-- -- for dictentry in env.memory:iter_dict() do
+
+--     -- dictentry = aadb:lookup('aa')
+--     -- dictentry = aadb:dictLookup('aa')
+--     -- dictentry = aadb:dict_lookup('als')
+--     -- ppppp = env.mem:dict_lookup(inp,true, 100)
+-- 		-- for dictentry in ppppp:iter_dict()
+-- 		-- do
+--      -- dictentry = aadb:dictLookup('als')
+--   -- for cdcc in aadb:lookup('a') do
+--   -- for ppppp in iter_dict("build/onion-array30.extended.table.bin"):lookup('a')
+-- -- env.memory:dict_lookup(kkk,true, 100)  -- expand_search
+-- -- for dictentry in env.memory:iter_dict() do
+-- -- env.memory:dictLookup(kkk)
+-- -- for dictentry in env.memory:iter_dict() do
+--     -- local array33 = {"王", "八", "蛋"}
+--     -- for i, dictentry in ipairs(array33) do
+--       -- yield(Candidate("number", seg.start, seg._end, a23, "〔帶圈中文數字〕"))
+--   return
+--     -- end
+--   end
+-- end
+
+-- function ww_translator( input, seg, env)
+--   local kkk, qqq = string.match(input, "^([a-z])(%*)$")
+--   if (kkk~=nil) then
+--     for word1 in env.dict:iter(kkk) do
+--       yield( Candidate('english' , seg.start,seg._end , word1.word , "[english]"))
+--     end
+--     -- return
+--   end
+-- end
+
+-- local function memoryCallback(memory, commit)
+-- 	for i,dictentry in ipairs(commit:get())
+-- 	do
+-- 		log.info(dictentry.text .. " " .. dictentry.weight .. " " .. dictentry.comment .. "")
+-- 		memory:update_userdict(dictentry,0,"") -- do nothing to userdict
+-- 		-- memory:update_userdict(dictentry,1,"") -- update entry to userdict
+-- 		-- memory:update_userdict(dictentry,1,"") -- delete entry to userdict
+-- 	end
+-- 	return true
+-- end
+
+-- local function init(env)
+--   env.mem = Memory(env.engine,env.engine.schema)
+--   env.mem:memorize(function(commit) memoryCallback(env.mem, commit) end)
+--   -- or use
+--   -- schema = Schema("cangjie5") -- schema_id
+--   -- env.mem = Memory(env.engine, schema, "translator")
+--    config = env.engine.schema.config
+--    namespace = 'expand_translator'
+--    env.wildcard = config:get_string(namespace .. '/wildcard')
+--    -- or try get config like this
+--    -- schema = Schema("cangjie5") -- schema_id
+--    -- config = schema.config
+--    log.info("expand_translator Initilized!")
+-- end
+
+
+-- local function translate(inp,seg,env)
+-- 	if string.match(inp,env.wildcard) then
+-- 		local tail = string.match(inp,  '[^'.. env.wildcard .. ']+$') or ''
+-- 		inp = string.match(inp, '^[^' ..env.wildcard .. ']+')
+-- 		env.mem:dict_lookup(inp,true, 100)  -- expand_search
+-- 		for dictentry in env.mem:iter_dict()
+-- 		do
+-- 			local codetail = string.match(dictentry.comment,tail .. '$') or ''
+-- 			if tail ~= nil and codetail == tail then	
+-- 				local code = env.mem:decode(dictentry.code)
+-- 				codeComment = table.concat(code, ",")
+-- 				local ph = Phrase(env.mem,"expand_translator", seg.start, seg._end, dictentry)
+-- 				ph.comment = codeComment
+-- 				yield(ph:toCandidate())
+-- 				-- you can also use Candidate Simply, but it cannot be recognized by memorize, memorize callback won't be called
+-- 				-- yield(Candidate("type",seg.start,seg.end,dictentry.text, codeComment	))
+-- 			end
+-- 		end
+-- 	end
+-- end	
+
+-- local function ww_translator(input,seg,env)
+--        -- local tab= wild_input( input)
+--        local tab= 'aa'
+--        for i,inp in ipairs(tab) do 
+--               local transltion= env.ww_translator(inp,seg,env)
+--                for cand in  iter(translation) do 
+--                           yield(cand)
+--                 end 
+--         end
+-- end
+
+-- require("Memory")()
+-- function ww_translator(inp,seg,env)
+-- 	-- if string.match(inp,env.wildcard) then
+--   local kkk, qqq, rrr = string.match(inp, "^([a-z]+)(%*)([a-z]*)$")
+--   if (kkk~=nil) then
+-- -- local mem = Memory(env.ticket)
+-- -- local ticket=Ticket(env.engine, "onion-array30")
+--   -- env.mem = Memory( env.engine, env.engine.schema)
+-- -- dddds=dictLookup('','aa')
+--    -- dd2 = Memory( env.engine, env.engine.schema)
+-- -- aa2=userLookup('aa')
+-- -- memory:update_userdict(dictentry,1,"")
+--   -- env.mem:memorize(function(commit) memoryCallback(env.mem, commit) end)
+--   -- or use
+--   -- schema = Schema("onion-array30") -- schema_id
+--   -- env.mem = Memory(env.engine.schema, "translator")
+--    config = env.engine.schema.config
+--    namespace = 'expand_translator'
+--    env.wildcard = config:get_string(namespace .. '/wildcard')
+--    -- log.info("ww_translator Initilized!")
+--    -- or try get config like this
+--    -- schema = Schema("cangjie5") -- schema_id
+--    -- config = schema.config
+--    -- log.info("expand_translator Initilized!")
+-- 		-- local tail = string.match(inp,  '[^'.. env.wildcard .. ']+$') or ''
+-- 		-- aa2 = string.match('aa', '^[^' ..env.wildcard .. ']+')
+-- 		-- aa2=table.concat(env.mem:dict_lookup(inp))  -- expand_search
+-- 		-- for dictentry in env.mem:iter_dict() do
+-- 			-- local codetail = string.match(dictentry.comment,tail .. '$') or ''
+-- 			-- if tail ~= nil and codetail == tail then
+-- 				-- local code = env.mem:decode(dictentry.code)
+-- 				-- codeComment = table.concat(code, ",")
+-- 				-- local ph = Phrase(env.mem,"expand_translator", seg.start, seg._end, dictentry)
+-- 				-- ph.comment = codeComment
+-- 				-- yield(ph:toCandidate())
+-- 				-- you can also use Candidate Simply, but it cannot be recognized by memorize, memorize callback won't be called
+-- 				yield(Candidate("type", seg.start, seg._end, env.wildcard .. 'aa2', '幹幹幹'))
+-- 				-- yield(Candidate("type", seg.start, seg._end, circled5_number(numberout), "〔帶圈中文數字〕"))
+-- 			-- end
+-- return
+-- 		-- end
+-- 	end
+-- end	
+
+--[[
+！！！！！！！！！！！！！！以上通配符測試！！！！！！！！！！！！！！
+--]]
+
+
+
+
+--[[
 掛接備註：
 
 如果 lua 資料夾檔案最後 return {table} ，掛接使用：
@@ -8123,7 +8310,7 @@ local 檔名 = require("檔名")
 
 
 
--- --- @@ 〈 translator 〉使用 lua 資料夾掛載
+--- @@ 〈 translator 〉使用 lua 資料夾掛載
 
 -- --- date/time translator
 -- -- 有些網上方案會掛載該項，如：liur。
