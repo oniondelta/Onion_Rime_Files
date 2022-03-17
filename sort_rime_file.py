@@ -291,8 +291,6 @@ shutil.copyfile("./allfiles/phrases.kr_more.dict.yaml", "./sort_rime/ocm/ocm_mix
 shutil.copyfile("./allfiles/phrases.kr.dict.yaml", "./sort_rime/ocm/ocm_mixin/phrases.kr.dict.yaml")
 shutil.copyfile("./allfiles/phrases.la_py_w.dict.yaml", "./sort_rime/ocm/ocm_mixin/phrases.la_py_w.dict.yaml")
 shutil.copyfile("./allfiles/phrases.ocmtc_essay_mc.dict.yaml", "./sort_rime/ocm/ocm_mixin/phrases.ocmtc_essay_mc.dict.yaml")
-shutil.copyfile("./allfiles/phrases.ocmtc_original.dict.yaml", "./sort_rime/ocm/ocm_mixin/phrases.ocmtc_original.dict.yaml")
-shutil.copyfile("./allfiles/phrases.ocmtc_terra.dict.yaml", "./sort_rime/ocm/ocm_mixin/phrases.ocmtc_terra.dict.yaml")
 
 shutil.copyfile("./allfiles/element_ocm.yaml", "./sort_rime/ocm/ocm_mixin/element_ocm.yaml")
 shutil.copyfile("./allfiles/punct_ocm.yaml", "./sort_rime/ocm/ocm_mixin/punct_ocm.yaml")
@@ -370,8 +368,6 @@ shutil.copyfile("./allfiles/phrases.jp_hk.dict.yaml", "./sort_rime/ocm/ocm_plus/
 shutil.copyfile("./allfiles/phrases.kr.dict.yaml", "./sort_rime/ocm/ocm_plus/phrases.kr.dict.yaml")
 shutil.copyfile("./allfiles/phrases.la_py_w.dict.yaml", "./sort_rime/ocm/ocm_plus/phrases.la_py_w.dict.yaml")
 shutil.copyfile("./allfiles/phrases.ocmtc_essay_mc.dict.yaml", "./sort_rime/ocm/ocm_plus/phrases.ocmtc_essay_mc.dict.yaml")
-shutil.copyfile("./allfiles/phrases.ocmtc_original.dict.yaml", "./sort_rime/ocm/ocm_plus/phrases.ocmtc_original.dict.yaml")
-shutil.copyfile("./allfiles/phrases.ocmtc_terra.dict.yaml", "./sort_rime/ocm/ocm_plus/phrases.ocmtc_terra.dict.yaml")
 
 shutil.copyfile("./allfiles/punct_ovff.dict.yaml", "./sort_rime/ocm/ocm_plus/punct_ovff.dict.yaml")
 shutil.copyfile("./allfiles/punct_ovff.schema.yaml", "./sort_rime/ocm/ocm_plus/punct_ovff.schema.yaml")
