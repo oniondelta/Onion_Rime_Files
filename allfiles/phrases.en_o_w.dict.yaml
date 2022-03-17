@@ -3139,7 +3139,7 @@ YO-YO
 YOU'RE
 YOU'VE
 ####### 20200923補充結束@ #######
-####### 20220310補充開始@ #######
+####### 20220317補充開始@ #######
 config
 Config
 CONFIG
@@ -3162,5 +3162,13 @@ ONEPIECE
 librime
 Librime
 LIBRIME
-####### 20220310補充結束@ #######
+CRLF
+crlf
+ibus
+iBus
+fcitx
+Fcitx
+jupyter
+Jupyter
+####### 20220317補充結束@ #######
 ####### 拉丁英語補充詞庫 結束 #######
