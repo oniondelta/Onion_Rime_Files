@@ -6,9 +6,9 @@
 # 包含中文、韓語、日語、拉丁+音標
 ---
 name: bo_mixin.extended
-version: "202102"
+version: "202203"
 sort: by_weight
-vocabulary: essay-zh-hant-onion
+vocabulary: essay-zh-hant-mc
 #use_preset_vocabulary: true
 import_tables:
   - terra_pinyin_onion
