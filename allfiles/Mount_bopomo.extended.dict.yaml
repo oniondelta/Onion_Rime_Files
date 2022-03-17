@@ -4,9 +4,9 @@
 # 『洋蔥』製作
 ---
 name: Mount_bopomo.extended
-version: "202102"
+version: "202203"
 sort: by_weight
-vocabulary: essay-zh-hant-onion
+vocabulary: essay-zh-hant-mc
 #use_preset_vocabulary: true
 max_phrase_length: 7
 min_phrase_weight: 100

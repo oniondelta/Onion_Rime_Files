@@ -17,11 +17,9 @@ use_preset_vocabulary: false
 #    - length_in_range: [4, 10]
 #      formula: "AaBaCaDaEaZa"
 import_tables:
-  - ocm_tc
+  - ocm_tc_mc
   - uniabcdword
-  - phrases.ocmtc_essay_new
-  # - phrases.ocmtc_terra
-  # - phrases.ocmtc_original
+  - phrases.ocmtc_essay_mc
 ...
 #-	-
 ‧	-@

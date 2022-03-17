@@ -8,14 +8,12 @@ version: "202203"
 sort: original
 use_preset_vocabulary: false
 import_tables:
-  - ocm_tc
+  - ocm_tc_mc
   - uniabcdword
   - ocm_mixin_jp
   - ocm_mixin_kr
   - ocm_mixin_la
-  - phrases.ocmtc_essay_new
-  # - phrases.ocmtc_terra
-  # - phrases.ocmtc_original
+  - phrases.ocmtc_essay_mc
   - phrases.cht_en_w
 ##  - phrases.jp_hk_more ##
 #  - phrases.jp_hk #

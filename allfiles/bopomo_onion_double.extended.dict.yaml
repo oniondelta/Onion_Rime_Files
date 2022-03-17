@@ -5,9 +5,9 @@
 # 中文字詞標註使用拼音
 ---
 name: bopomo_onion_double.extended
-version: "202102"
+version: "202203"
 sort: by_weight
-vocabulary: essay-zh-hant-onion
+vocabulary: essay-zh-hant-mc
 #use_preset_vocabulary: true
 #max_phrase_length: 7
 #min_phrase_weight: 100
