@@ -227,7 +227,7 @@ emoji_series:
   tips: "《emoji集》▶"
   closing_tips: "◀《emoji集》"
   preedit_format:
-    __include: symbols_double_bpmf.schema.yaml:/translator/preedit_format
+    __include: element_double_bopomo:/preedit_format
 ################################ 以下為使用ooo反查注音 #############################
 reverse2_lookup:
   tag: reverse2_lookup
