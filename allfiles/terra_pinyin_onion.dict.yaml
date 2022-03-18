@@ -2029,6 +2029,12 @@ min_phrase_weight: 100
 侭	jin4	0.1%
 盡	jin3	0.1%
 﨑	qi2	0.1%
+蝸	luo2	0%
+蝸	wa1	0%
+蝸	guo3	0%
+蜗	luo2	0%
+蜗	wa1	0%
+蜗	guo3	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -64149,6 +64155,7 @@ min_phrase_weight: 100
 吐火羅語	tu3 huo3 luo2 yu3
 吐瓦魯	tu3 wa3 lu3
 吐痰	tu3 tan2
+吐痰	tu4 tan2
 吐穗	tu3 sui4
 吐納	tu3 na4
 吐絮	tu3 xu4
@@ -111689,4 +111696,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 111692 #####
+##### @結束 END - 111699 #####
