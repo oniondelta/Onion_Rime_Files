@@ -5708,14 +5708,16 @@ function t_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, eng2_d_date(d).." "..eng2_m_date(m).." "..y, "〔英式日月年〕"))
       yield(Candidate("date", seg.start, seg._end, "the "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
       yield(Candidate("date", seg.start, seg._end, "The "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
-      -- if (tonumber(y) > 1989) then
+      if tonumber(y) > 1899 and tonumber(y) < 2101 then
         -- local chinese_date_input = to_chinese_cal_local(os.time({year = y, month = m, day = d, hour = 12}))
         local ll_1b, ll_2b = Date2LunarDate(y .. string.format("%02d", m) .. string.format("%02d", d))
         -- if(Date2LunarDate~=nil) then
-        if(ll_1b~=nil) then
+        if(ll_1b~=nil) and (ll_2b~=nil) then
           yield(Candidate("date", seg.start, seg._end, ll_1b, "〔西曆→農曆〕"))
           yield(Candidate("date", seg.start, seg._end, ll_2b, "〔西曆→農曆〕"))
         end
+      end
+      if tonumber(y) > 1901 and tonumber(y) < 2101 then
         local All_g2, Y_g2, M_g2, D_g2 = lunarJzl(y .. string.format("%02d", m) .. string.format("%02d", d) .. 12)
         if(All_g2~=nil) then
           yield(Candidate("date", seg.start, seg._end, Y_g2.."年"..M_g2.."月"..D_g2.."日", "〔西曆→農曆干支〕"))
@@ -5727,7 +5729,7 @@ function t_translator(input, seg)
           yield(Candidate("date", seg.start, seg._end, LDD2D, "〔農曆→西曆〕"))
           yield(Candidate("date", seg.start, seg._end, LDD2D_leap_year, "〔農曆(閏)→西曆〕"))
         end
-      -- end
+      end
       return
     end
 
@@ -5781,14 +5783,16 @@ function t_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, eng2_d_date(d).." "..eng2_m_date(m).." "..y, "〔英式日月年〕"))
       yield(Candidate("date", seg.start, seg._end, "the "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
       yield(Candidate("date", seg.start, seg._end, "The "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
-      -- if (tonumber(y) > 1989) then
+      if tonumber(y) > 1899 and tonumber(y) < 2101 then
         -- local chinese_date_input = to_chinese_cal_local(os.time({year = y, month = m, day = d, hour = 12}))
         local ll_1b, ll_2b = Date2LunarDate(y .. string.format("%02d", m) .. string.format("%02d", d))
         -- if(Date2LunarDate~=nil) then
-        if(ll_1b~=nil) then
+        if(ll_1b~=nil) and (ll_2b~=nil) then
           yield(Candidate("date", seg.start, seg._end, ll_1b, "〔西曆→農曆〕"))
           yield(Candidate("date", seg.start, seg._end, ll_2b, "〔西曆→農曆〕"))
         end
+      end
+      if tonumber(y) > 1901 and tonumber(y) < 2101 then
         local All_g2, Y_g2, M_g2, D_g2 = lunarJzl(y .. string.format("%02d", m) .. string.format("%02d", d) .. 12)
         if(All_g2~=nil) then
           yield(Candidate("date", seg.start, seg._end, Y_g2.."年"..M_g2.."月"..D_g2.."日", "〔西曆→農曆干支〕"))
@@ -5804,7 +5808,7 @@ function t_translator(input, seg)
         -- if(chinese_date_input2~=nil) then
         --   yield(Candidate("date", seg.start, seg._end, chinese_date_input2 .. " ", "〔農曆，可能有誤！〕"))
         -- end
-      -- end
+      end
       return
     end
 
@@ -7440,14 +7444,16 @@ function t2_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, eng2_d_date(d).." "..eng2_m_date(m).." "..y, "〔英式日月年〕"))
       yield(Candidate("date", seg.start, seg._end, "the "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
       yield(Candidate("date", seg.start, seg._end, "The "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
-      -- if (tonumber(y) > 1989) then
+      if tonumber(y) > 1899 and tonumber(y) < 2101 then
         -- local chinese_date_input = to_chinese_cal_local(os.time({year = y, month = m, day = d, hour = 12}))
         local ll_1b, ll_2b = Date2LunarDate(y .. string.format("%02d", m) .. string.format("%02d", d))
         -- if(Date2LunarDate~=nil) then
-        if(ll_1b~=nil) then
+        if(ll_1b~=nil) and (ll_2b~=nil) then
           yield(Candidate("date", seg.start, seg._end, ll_1b, "〔西曆→農曆〕"))
           yield(Candidate("date", seg.start, seg._end, ll_2b, "〔西曆→農曆〕"))
         end
+      end
+      if tonumber(y) > 1901 and tonumber(y) < 2101 then
         local All_g2, Y_g2, M_g2, D_g2 = lunarJzl(y .. string.format("%02d", m) .. string.format("%02d", d) .. 12)
         if(All_g2~=nil) then
           yield(Candidate("date", seg.start, seg._end, Y_g2.."年"..M_g2.."月"..D_g2.."日", "〔西曆→農曆干支〕"))
@@ -7459,7 +7465,7 @@ function t2_translator(input, seg)
           yield(Candidate("date", seg.start, seg._end, LDD2D, "〔農曆→西曆〕"))
           yield(Candidate("date", seg.start, seg._end, LDD2D_leap_year, "〔農曆(閏)→西曆〕"))
         end
-      -- end
+      end
       return
     end
 
@@ -7513,14 +7519,16 @@ function t2_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, eng2_d_date(d).." "..eng2_m_date(m).." "..y, "〔英式日月年〕"))
       yield(Candidate("date", seg.start, seg._end, "the "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
       yield(Candidate("date", seg.start, seg._end, "The "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
-      -- if (tonumber(y) > 1989) then
+      if tonumber(y) > 1899 and tonumber(y) < 2101 then
         -- local chinese_date_input = to_chinese_cal_local(os.time({year = y, month = m, day = d, hour = 12}))
         local ll_1b, ll_2b = Date2LunarDate(y .. string.format("%02d", m) .. string.format("%02d", d))
         -- if(Date2LunarDate~=nil) then
-        if(ll_1b~=nil) then
+        if(ll_1b~=nil) and (ll_2b~=nil) then
           yield(Candidate("date", seg.start, seg._end, ll_1b, "〔西曆→農曆〕"))
           yield(Candidate("date", seg.start, seg._end, ll_2b, "〔西曆→農曆〕"))
         end
+      end
+      if tonumber(y) > 1901 and tonumber(y) < 2101 then
         local All_g2, Y_g2, M_g2, D_g2 = lunarJzl(y .. string.format("%02d", m) .. string.format("%02d", d) .. 12)
         if(All_g2~=nil) then
           yield(Candidate("date", seg.start, seg._end, Y_g2.."年"..M_g2.."月"..D_g2.."日", "〔西曆→農曆干支〕"))
@@ -7536,7 +7544,7 @@ function t2_translator(input, seg)
         -- if(chinese_date_input2~=nil) then
         --   yield(Candidate("date", seg.start, seg._end, chinese_date_input2 .. " ", "〔農曆，可能有誤！〕"))
         -- end
-      -- end
+      end
       return
     end
 
