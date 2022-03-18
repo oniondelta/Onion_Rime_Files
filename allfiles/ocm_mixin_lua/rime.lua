@@ -5680,7 +5680,7 @@ function t_translator(input, seg)
 
 
     local y, m, d = string.match(input, "`(%d+)/(%d?%d)/(%d?%d)$")
-    if(y~=nil) then
+    if(y~=nil) and (tonumber(m)<13) and (tonumber(d)<32) then
       yield(Candidate("date", seg.start, seg._end, " "..y.." 年 "..m.." 月 "..d.." 日 " , "〔*日期*〕"))
       yield(Candidate("date", seg.start, seg._end, y.."年"..m.."月"..d.."日" , "〔日期〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(y).."年"..fullshape_number(m).."月"..fullshape_number(d).."日" , "〔全形日期〕"))
@@ -5708,29 +5708,31 @@ function t_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, eng2_d_date(d).." "..eng2_m_date(m).." "..y, "〔英式日月年〕"))
       yield(Candidate("date", seg.start, seg._end, "the "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
       yield(Candidate("date", seg.start, seg._end, "The "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
-      -- local chinese_date_input = to_chinese_cal_local(os.time({year = y, month = m, day = d, hour = 12}))
-      local ll_1b, ll_2b = Date2LunarDate(y .. string.format("%02d", m) .. string.format("%02d", d))
-      -- if(Date2LunarDate~=nil) then
-      if(ll_1b~=nil) then
-        yield(Candidate("date", seg.start, seg._end, ll_1b, "〔西曆→農曆〕"))
-        yield(Candidate("date", seg.start, seg._end, ll_2b, "〔西曆→農曆〕"))
-      end
-      local All_g2, Y_g2, M_g2, D_g2 = lunarJzl(y .. string.format("%02d", m) .. string.format("%02d", d) .. 12)
-      if(All_g2~=nil) then
-        yield(Candidate("date", seg.start, seg._end, Y_g2.."年"..M_g2.."月"..D_g2.."日", "〔西曆→農曆干支〕"))
-      end
-      local LDD2D = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 0 )
-      local LDD2D_leap_year  = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 1 )
-      -- if(Date2LunarDate~=nil) then
-      if(LDD2D~=nil) then
-        yield(Candidate("date", seg.start, seg._end, LDD2D, "〔農曆→西曆〕"))
-        yield(Candidate("date", seg.start, seg._end, LDD2D_leap_year, "〔農曆(閏)→西曆〕"))
-      end
+      -- if (tonumber(y) > 1989) then
+        -- local chinese_date_input = to_chinese_cal_local(os.time({year = y, month = m, day = d, hour = 12}))
+        local ll_1b, ll_2b = Date2LunarDate(y .. string.format("%02d", m) .. string.format("%02d", d))
+        -- if(Date2LunarDate~=nil) then
+        if(ll_1b~=nil) then
+          yield(Candidate("date", seg.start, seg._end, ll_1b, "〔西曆→農曆〕"))
+          yield(Candidate("date", seg.start, seg._end, ll_2b, "〔西曆→農曆〕"))
+        end
+        local All_g2, Y_g2, M_g2, D_g2 = lunarJzl(y .. string.format("%02d", m) .. string.format("%02d", d) .. 12)
+        if(All_g2~=nil) then
+          yield(Candidate("date", seg.start, seg._end, Y_g2.."年"..M_g2.."月"..D_g2.."日", "〔西曆→農曆干支〕"))
+        end
+        local LDD2D = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 0 )
+        local LDD2D_leap_year  = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 1 )
+        -- if(Date2LunarDate~=nil) then
+        if(LDD2D~=nil) then
+          yield(Candidate("date", seg.start, seg._end, LDD2D, "〔農曆→西曆〕"))
+          yield(Candidate("date", seg.start, seg._end, LDD2D_leap_year, "〔農曆(閏)→西曆〕"))
+        end
+      -- end
       return
     end
 
     local m, d = string.match(input, "`(%d?%d)/(%d?%d)$")
-    if(m~=nil) then
+    if(m~=nil) and (tonumber(m)<13) and (tonumber(d)<32) then
       yield(Candidate("date", seg.start, seg._end, " "..m.." 月 "..d.." 日 " , "〔*日期*〕"))
       yield(Candidate("date", seg.start, seg._end, m.."月"..d.."日" , "〔日期〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(m).."月"..fullshape_number(d).."日" , "〔全形日期〕"))
@@ -5751,7 +5753,7 @@ function t_translator(input, seg)
     end
 
     local y, m, d = string.match(input, "`(%d+)-(%d?%d)-(%d?%d)$")
-    if(y~=nil) then
+    if(y~=nil) and (tonumber(m)<13) and (tonumber(d)<32) then
       yield(Candidate("date", seg.start, seg._end, y.."年"..m.."月"..d.."日" , "〔日期〕"))
       yield(Candidate("date", seg.start, seg._end, " "..y.." 年 "..m.." 月 "..d.." 日 " , "〔*日期*〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(y).."年"..fullshape_number(m).."月"..fullshape_number(d).."日" , "〔全形日期〕"))
@@ -5779,33 +5781,35 @@ function t_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, eng2_d_date(d).." "..eng2_m_date(m).." "..y, "〔英式日月年〕"))
       yield(Candidate("date", seg.start, seg._end, "the "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
       yield(Candidate("date", seg.start, seg._end, "The "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
-      -- local chinese_date_input = to_chinese_cal_local(os.time({year = y, month = m, day = d, hour = 12}))
-      local ll_1b, ll_2b = Date2LunarDate(y .. string.format("%02d", m) .. string.format("%02d", d))
-      -- if(Date2LunarDate~=nil) then
-      if(ll_1b~=nil) then
-        yield(Candidate("date", seg.start, seg._end, ll_1b, "〔西曆→農曆〕"))
-        yield(Candidate("date", seg.start, seg._end, ll_2b, "〔西曆→農曆〕"))
-      end
-      local All_g2, Y_g2, M_g2, D_g2 = lunarJzl(y .. string.format("%02d", m) .. string.format("%02d", d) .. 12)
-      if(All_g2~=nil) then
-        yield(Candidate("date", seg.start, seg._end, Y_g2.."年"..M_g2.."月"..D_g2.."日", "〔西曆→農曆干支〕"))
-      end
-      local LDD2D = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 0 )
-      local LDD2D_leap_year  = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 1 )
-      -- if(Date2LunarDate~=nil) then
-      if(LDD2D~=nil) then
-        yield(Candidate("date", seg.start, seg._end, LDD2D, "〔農曆→西曆〕"))
-        yield(Candidate("date", seg.start, seg._end, LDD2D_leap_year, "〔農曆(閏)→西曆〕"))
-      end
-      -- local chinese_date_input2 = to_chinese_cal(y, m, d)
-      -- if(chinese_date_input2~=nil) then
-      --   yield(Candidate("date", seg.start, seg._end, chinese_date_input2 .. " ", "〔農曆，可能有誤！〕"))
+      -- if (tonumber(y) > 1989) then
+        -- local chinese_date_input = to_chinese_cal_local(os.time({year = y, month = m, day = d, hour = 12}))
+        local ll_1b, ll_2b = Date2LunarDate(y .. string.format("%02d", m) .. string.format("%02d", d))
+        -- if(Date2LunarDate~=nil) then
+        if(ll_1b~=nil) then
+          yield(Candidate("date", seg.start, seg._end, ll_1b, "〔西曆→農曆〕"))
+          yield(Candidate("date", seg.start, seg._end, ll_2b, "〔西曆→農曆〕"))
+        end
+        local All_g2, Y_g2, M_g2, D_g2 = lunarJzl(y .. string.format("%02d", m) .. string.format("%02d", d) .. 12)
+        if(All_g2~=nil) then
+          yield(Candidate("date", seg.start, seg._end, Y_g2.."年"..M_g2.."月"..D_g2.."日", "〔西曆→農曆干支〕"))
+        end
+        local LDD2D = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 0 )
+        local LDD2D_leap_year  = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 1 )
+        -- if(Date2LunarDate~=nil) then
+        if(LDD2D~=nil) then
+          yield(Candidate("date", seg.start, seg._end, LDD2D, "〔農曆→西曆〕"))
+          yield(Candidate("date", seg.start, seg._end, LDD2D_leap_year, "〔農曆(閏)→西曆〕"))
+        end
+        -- local chinese_date_input2 = to_chinese_cal(y, m, d)
+        -- if(chinese_date_input2~=nil) then
+        --   yield(Candidate("date", seg.start, seg._end, chinese_date_input2 .. " ", "〔農曆，可能有誤！〕"))
+        -- end
       -- end
       return
     end
 
     local m, d = string.match(input, "`(%d?%d)-(%d?%d)$")
-    if(m~=nil) then
+    if(m~=nil) and (tonumber(m)<13) and (tonumber(d)<32) then
       yield(Candidate("date", seg.start, seg._end, m.."月"..d.."日" , "〔日期〕"))
       yield(Candidate("date", seg.start, seg._end, " "..m.." 月 "..d.." 日 " , "〔*日期*〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(m).."月"..fullshape_number(d).."日" , "〔全形日期〕"))
@@ -7408,7 +7412,7 @@ function t2_translator(input, seg)
 
 
     local y, m, d = string.match(input, "'/(%d+)/(%d?%d)/(%d?%d)$")
-    if(y~=nil) then
+    if(y~=nil) and (tonumber(m)<13) and (tonumber(d)<32) then
       yield(Candidate("date", seg.start, seg._end, " "..y.." 年 "..m.." 月 "..d.." 日 " , "〔*日期*〕"))
       yield(Candidate("date", seg.start, seg._end, y.."年"..m.."月"..d.."日" , "〔日期〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(y).."年"..fullshape_number(m).."月"..fullshape_number(d).."日" , "〔全形日期〕"))
@@ -7436,29 +7440,31 @@ function t2_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, eng2_d_date(d).." "..eng2_m_date(m).." "..y, "〔英式日月年〕"))
       yield(Candidate("date", seg.start, seg._end, "the "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
       yield(Candidate("date", seg.start, seg._end, "The "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
-      -- local chinese_date_input = to_chinese_cal_local(os.time({year = y, month = m, day = d, hour = 12}))
-      local ll_1b, ll_2b = Date2LunarDate(y .. string.format("%02d", m) .. string.format("%02d", d))
-      -- if(Date2LunarDate~=nil) then
-      if(ll_1b~=nil) then
-        yield(Candidate("date", seg.start, seg._end, ll_1b, "〔西曆→農曆〕"))
-        yield(Candidate("date", seg.start, seg._end, ll_2b, "〔西曆→農曆〕"))
-      end
-      local All_g2, Y_g2, M_g2, D_g2 = lunarJzl(y .. string.format("%02d", m) .. string.format("%02d", d) .. 12)
-      if(All_g2~=nil) then
-        yield(Candidate("date", seg.start, seg._end, Y_g2.."年"..M_g2.."月"..D_g2.."日", "〔西曆→農曆干支〕"))
-      end
-      local LDD2D = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 0 )
-      local LDD2D_leap_year  = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 1 )
-      -- if(Date2LunarDate~=nil) then
-      if(LDD2D~=nil) then
-        yield(Candidate("date", seg.start, seg._end, LDD2D, "〔農曆→西曆〕"))
-        yield(Candidate("date", seg.start, seg._end, LDD2D_leap_year, "〔農曆(閏)→西曆〕"))
-      end
+      -- if (tonumber(y) > 1989) then
+        -- local chinese_date_input = to_chinese_cal_local(os.time({year = y, month = m, day = d, hour = 12}))
+        local ll_1b, ll_2b = Date2LunarDate(y .. string.format("%02d", m) .. string.format("%02d", d))
+        -- if(Date2LunarDate~=nil) then
+        if(ll_1b~=nil) then
+          yield(Candidate("date", seg.start, seg._end, ll_1b, "〔西曆→農曆〕"))
+          yield(Candidate("date", seg.start, seg._end, ll_2b, "〔西曆→農曆〕"))
+        end
+        local All_g2, Y_g2, M_g2, D_g2 = lunarJzl(y .. string.format("%02d", m) .. string.format("%02d", d) .. 12)
+        if(All_g2~=nil) then
+          yield(Candidate("date", seg.start, seg._end, Y_g2.."年"..M_g2.."月"..D_g2.."日", "〔西曆→農曆干支〕"))
+        end
+        local LDD2D = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 0 )
+        local LDD2D_leap_year  = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 1 )
+        -- if(Date2LunarDate~=nil) then
+        if(LDD2D~=nil) then
+          yield(Candidate("date", seg.start, seg._end, LDD2D, "〔農曆→西曆〕"))
+          yield(Candidate("date", seg.start, seg._end, LDD2D_leap_year, "〔農曆(閏)→西曆〕"))
+        end
+      -- end
       return
     end
 
     local m, d = string.match(input, "'/(%d?%d)/(%d?%d)$")
-    if(m~=nil) then
+    if(m~=nil) and (tonumber(m)<13) and (tonumber(d)<32) then
       yield(Candidate("date", seg.start, seg._end, " "..m.." 月 "..d.." 日 " , "〔*日期*〕"))
       yield(Candidate("date", seg.start, seg._end, m.."月"..d.."日" , "〔日期〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(m).."月"..fullshape_number(d).."日" , "〔全形日期〕"))
@@ -7479,7 +7485,7 @@ function t2_translator(input, seg)
     end
 
     local y, m, d = string.match(input, "'/(%d+)-(%d?%d)-(%d?%d)$")
-    if(y~=nil) then
+    if(y~=nil) and (tonumber(m)<13) and (tonumber(d)<32) then
       yield(Candidate("date", seg.start, seg._end, y.."年"..m.."月"..d.."日" , "〔日期〕"))
       yield(Candidate("date", seg.start, seg._end, " "..y.." 年 "..m.." 月 "..d.." 日 " , "〔*日期*〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(y).."年"..fullshape_number(m).."月"..fullshape_number(d).."日" , "〔全形日期〕"))
@@ -7507,33 +7513,35 @@ function t2_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, eng2_d_date(d).." "..eng2_m_date(m).." "..y, "〔英式日月年〕"))
       yield(Candidate("date", seg.start, seg._end, "the "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
       yield(Candidate("date", seg.start, seg._end, "The "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
-      -- local chinese_date_input = to_chinese_cal_local(os.time({year = y, month = m, day = d, hour = 12}))
-      local ll_1b, ll_2b = Date2LunarDate(y .. string.format("%02d", m) .. string.format("%02d", d))
-      -- if(Date2LunarDate~=nil) then
-      if(ll_1b~=nil) then
-        yield(Candidate("date", seg.start, seg._end, ll_1b, "〔西曆→農曆〕"))
-        yield(Candidate("date", seg.start, seg._end, ll_2b, "〔西曆→農曆〕"))
-      end
-      local All_g2, Y_g2, M_g2, D_g2 = lunarJzl(y .. string.format("%02d", m) .. string.format("%02d", d) .. 12)
-      if(All_g2~=nil) then
-        yield(Candidate("date", seg.start, seg._end, Y_g2.."年"..M_g2.."月"..D_g2.."日", "〔西曆→農曆干支〕"))
-      end
-      local LDD2D = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 0 )
-      local LDD2D_leap_year  = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 1 )
-      -- if(Date2LunarDate~=nil) then
-      if(LDD2D~=nil) then
-        yield(Candidate("date", seg.start, seg._end, LDD2D, "〔農曆→西曆〕"))
-        yield(Candidate("date", seg.start, seg._end, LDD2D_leap_year, "〔農曆(閏)→西曆〕"))
-      end
-      -- local chinese_date_input2 = to_chinese_cal(y, m, d)
-      -- if(chinese_date_input2~=nil) then
-      --   yield(Candidate("date", seg.start, seg._end, chinese_date_input2 .. " ", "〔農曆，可能有誤！〕"))
+      -- if (tonumber(y) > 1989) then
+        -- local chinese_date_input = to_chinese_cal_local(os.time({year = y, month = m, day = d, hour = 12}))
+        local ll_1b, ll_2b = Date2LunarDate(y .. string.format("%02d", m) .. string.format("%02d", d))
+        -- if(Date2LunarDate~=nil) then
+        if(ll_1b~=nil) then
+          yield(Candidate("date", seg.start, seg._end, ll_1b, "〔西曆→農曆〕"))
+          yield(Candidate("date", seg.start, seg._end, ll_2b, "〔西曆→農曆〕"))
+        end
+        local All_g2, Y_g2, M_g2, D_g2 = lunarJzl(y .. string.format("%02d", m) .. string.format("%02d", d) .. 12)
+        if(All_g2~=nil) then
+          yield(Candidate("date", seg.start, seg._end, Y_g2.."年"..M_g2.."月"..D_g2.."日", "〔西曆→農曆干支〕"))
+        end
+        local LDD2D = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 0 )
+        local LDD2D_leap_year  = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 1 )
+        -- if(Date2LunarDate~=nil) then
+        if(LDD2D~=nil) then
+          yield(Candidate("date", seg.start, seg._end, LDD2D, "〔農曆→西曆〕"))
+          yield(Candidate("date", seg.start, seg._end, LDD2D_leap_year, "〔農曆(閏)→西曆〕"))
+        end
+        -- local chinese_date_input2 = to_chinese_cal(y, m, d)
+        -- if(chinese_date_input2~=nil) then
+        --   yield(Candidate("date", seg.start, seg._end, chinese_date_input2 .. " ", "〔農曆，可能有誤！〕"))
+        -- end
       -- end
       return
     end
 
     local m, d = string.match(input, "'/(%d?%d)-(%d?%d)$")
-    if(m~=nil) then
+    if(m~=nil) and (tonumber(m)<13) and (tonumber(d)<32) then
       yield(Candidate("date", seg.start, seg._end, m.."月"..d.."日" , "〔日期〕"))
       yield(Candidate("date", seg.start, seg._end, " "..m.." 月 "..d.." 日 " , "〔*日期*〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(m).."月"..fullshape_number(d).."日" , "〔全形日期〕"))
