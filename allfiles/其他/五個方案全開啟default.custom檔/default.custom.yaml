@@ -7,12 +7,12 @@
 patch:
   schema_list:
 ######## 洋蔥注音/拼音 五個主方案 ########
-    - schema: bopomo_onionplus
-    - schema: bopomo_onionplus_space
+    - schema: bo_mixin4
     - schema: bo_mixin1
     - schema: bo_mixin2
     - schema: bo_mixin3
-    - schema: bo_mixin4
+    - schema: bopomo_onionplus
+    - schema: bopomo_onionplus_space
     - schema: bopomo_onion
     - schema: bopomo_onion_double
     - schema: terra_pinyin_onion
@@ -80,6 +80,9 @@ patch:
     - { when: always, accept: Control+period, toggle: full_shape }
     - { when: always, accept: Control+semicolon, toggle: simplification }
     - { when: always, accept: Control+slash, toggle: ascii_punct }
+# 只限直排專用：左右鍵翻頁（ Testing！ ）
+    - { accept: Left, send: Page_Up, when: paging } #直式選單用 #has_menu
+    - { accept: Right, send: Page_Down, when: paging } #直式選單用 #has_menu
 
 #  ascii_composer:
 #    good_old_caps_lock: false
