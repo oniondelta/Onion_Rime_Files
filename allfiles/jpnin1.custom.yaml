@@ -26,9 +26,9 @@ patch:
     - derive/ss([auoie].*;)$/qs$1/ #っさ
     - derive/tt([auoie].*;)$/qt$1/ #った
 #漢字無此拼音，且會干擾ん(なにぬねの)，有標注之假名無此發音#    - derive/nn([auoie].*;)$/qn$1/ #っな
-    - derive/hh([auoie].*;)$/qh$1/ #っは #漢字無此拼音#
-    - derive/ff([auoie].*;)$/qf$1/ #っふ #漢字無此拼音#
-    - derive/mm([auoie].*;)$/qm$1/ #っま #漢字無此拼音#
+    - derive/hh([auoie].*;)$/qh$1/ #っは #暫時打開測試
+    - derive/ff([auoie].*;)$/qf$1/ #っふ #暫時打開測試
+    - derive/mm([auoie].*;)$/qm$1/ #っま #暫時打開測試
     - derive/yy([auoie].*;)$/qy$1/ #っや #打開會衝突？？？ #暫時打開測試
     - derive/rr([auoie].*;)$/qr$1/ #っら #暫時打開測試
 #漢字無此拼音，有標注之假名無此發音#    - derive/ww([auoie].*;)$/qw$1/ #っわ #打開會衝突？？？
@@ -67,6 +67,7 @@ patch:
     - derive/ddy([auo])/zzy$1/
     - derive/ddy([auo])/jj$1/
 ### 承上補充漢字中間可能會有的特殊情況
+    - derive/c([,.;])chi/t$1ti/
     - derive/f([,.;])fu/h$1hu/
     - derive/j([,.;])ji/z$1zi/
     - derive/c([,.;])ch([auo])/t$1ty$2/
@@ -75,7 +76,7 @@ patch:
     - derive/d([,.;])dy([auo])/j$1j$2/
 ###
     - derive/(?<!s)shi/si/
-    - derive/(?<!c)chi/ti/
+    - derive/(?<!c|,|;)chi/ti/
     - derive/(?<!t)tsu/tu/
     - derive/(?<!f|,|;)fu/hu/
     - derive/(?<!j|,|;)ji/zi/
@@ -130,10 +131,12 @@ patch:
     - xform/^dvyu([,.])$/dyu$1/ #デュ #先設其他編碼，不被其他正則影響再轉回
 ##### 簡化和消除含促音字詞後綴 #####
     # - xform/^([kspt])[,.](.+)$/$1$2/
-    - xform/^([ksptgch])[,.]/$1/
+    - xform/^([ksptgchmyrwdbzf])[,.]/$1/
     # - xform/^([ksptgchmyrwdbz])[,.]/$1/ #「n」無法，會有bug
-    # - xform/;([ksptgch])/$1/
+    # - xform/^([a-z])[,.]([a-z])/$1$2/
+    # - xform/;([ksptgchmyrwdbzf])/$1/
     # - xform/;([ksptgchmyrwdbz])/$1/
+    # - xform/;([a-z])/$1/
 #舊版漢字中有分段才有用到#    - derive/^([a-z-]+)(;)([a-z-]+)(;)$/$1$3$4/ #漢字中含促音
 ##### 簡化漢字後綴（如需假名輸入漢字，打開；「關閉」選單中沒漢字） #####
 #關#    - derive/([a-z-]);/$1/
