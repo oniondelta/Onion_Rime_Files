@@ -56,19 +56,19 @@ Linux 上問題好似很多，使用前請注意！並自行解決！
 
 ### Demo：
 
-- 注音 洋蔥 mix-in 版
+- 注音（洋蔥 mix-in 版）
   
   > 集大成，多國語言和注音混打輸入 😃！
   
   #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/demo_mixin.gif)
   
-- 注音 洋蔥 plus 版
+- 注音（洋蔥 plus 版）
 
   > 功能多，除外語還有一堆功能和細節增加，輸入手感和純注音版一樣，即使沒用外語，也推薦使用！
   
   #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/demo_plus.gif)
   
-- 注音 洋蔥 純注音 版
+- 注音（洋蔥 純注音 版）
   
   > 精簡功能，給新手或測試使用
   
@@ -76,16 +76,16 @@ Linux 上問題好似很多，使用前請注意！並自行解決！
  
 ### Keys：
  
-- 洋蔥 雙拼注音 版 鍵位
+- 注音（洋蔥 雙拼 版）鍵位
   > 無加 custom 可簡拼，有 custom 為一般雙拼每字須鍵兩碼（聲調可省略）
 
   #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/allfiles/%E9%9B%99%E6%8B%BC%E6%B3%A8%E9%9F%B3%E9%8D%B5%E4%BD%8D%E8%AA%AA%E6%98%8E%E5%9C%96%E7%A4%BA/%E6%B4%8B%E8%94%A5%E9%9B%99%E6%8B%BC%E6%B3%A8%E9%9F%B3%E8%AA%AA%E6%98%8E.png)
 
-- 注音 洋蔥 plus 版 鍵位
+- 注音（洋蔥 plus 版）鍵位
 
   #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/bpmf_plus_keyboard.png)
 
-- 注音 洋蔥 mixin 版 鍵位
+- 注音（洋蔥 mixin 版）鍵位
 
   > 四個衍伸方案：「1」標準版、「2」只有後綴易懂、「3」語言分野最明避免撞碼、「4」集中下排手順最好
 
@@ -100,7 +100,7 @@ Linux 上問題好似很多，使用前請注意！並自行解決！
   
   #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/bpmf_mixin_4_keyboard.png)
   
-- 洋蔥注音選字鍵位
+- 注音洋蔥版選字鍵位
 
   #### ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/master/bpmf_select_keys_keyboard.png)
 
