@@ -60,19 +60,19 @@ Linux 上問題好似很多，使用前請注意！並自行解決！
   
   > 集大成，多國語言和注音混打輸入 😃！
   
-  #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/demo_mixin.gif)
+  #### ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/master/img/demo_bpmf_mixin.gif)
   
 - 注音（洋蔥 plus 版）
 
   > 功能多，除外語還有一堆功能和細節增加，輸入手感和純注音版一樣，即使沒用外語，也推薦使用！
   
-  #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/demo_plus.gif)
+  #### ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/master/img/demo_bpmf_plus.gif)
   
 - 注音（洋蔥 純注音 版）
   
   > 精簡功能，給新手或測試使用
   
-  #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/demo_pure.gif)
+  #### ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/master/img/demo_bpmf_pure.gif)
  
 ### Keys：
  
