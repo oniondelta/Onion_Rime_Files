@@ -17,14 +17,14 @@ import_tables:
   - bo_mixin_kr
   # - bo_mixin_kr_hnc  #韓文HNC羅馬字# 此項打開時，bo_mixin_kr 請關閉。
   - bo_mixin_la
-  # - bo_mixin_en  #英文26字母和符號# 此項打開時，bo_mixin_la 請關閉。
+  # - bo_mixin_en  #英文26字母和符號# 此項打開時，bo_mixin_la 和 phrases.la_py_w 請關閉。
   - phrases.cht_en_w
   - phrases.chtp
   # - phrases.cht  #未標注拼音之中文詞庫，不建議打開。
-  # - phrases.jp_hk_more #日語大詞庫，欲更精準 mapping，可打開並關閉小詞庫 phrases.jp_hk。
+  # - phrases.jp_hk_more  #日語大詞庫，欲更精準 mapping，可打開並關閉小詞庫 phrases.jp_hk。
   - phrases.jp_hk
   - phrases.jp_hkkreduce
-  # - phrases.kr_more #韓語大詞庫，欲更精準 mapping，可打開並關閉小詞庫 phrases.kr。
+  # - phrases.kr_more  #韓語大詞庫，欲更精準 mapping，可打開並關閉小詞庫 phrases.kr。
   - phrases.kr
   - phrases.en_o_w
   - phrases.la_py_w
