@@ -31,7 +31,7 @@
 Linux 上問題好似很多，使用前請注意！並自行解決！
 ```
 
-  > 《 Windows 用戶注意！！！》，注音洋蔥 plus 版和注音洋蔥 mix‧in 版掛接《Easy》，使用提示碼做英漢字典，但 Windows 輸入時，整頁提示碼太多會使程式崩潰！故以正則簡化提示碼！不過 Windows 可行程式碼在 Mac 會使《Easy》無法正常出字！提供 custom 檔給 Windows 用戶，防止程式崩潰（ Mac 用戶勿使用該 custom 檔）。分別在「plus注音_防崩潰：Win必加，Mac勿加」和「mixin注音_同顯2修改檔(Win)」資料夾內，Windows 用戶把資料夾內 custom.yaml 檔拖到上一層（和方案中其他文件同一層），按「重新部署」即可。
+  > 《 Windows 用戶注意！！！》，注音（洋蔥 plus 版）和注音（洋蔥 mix‧in 版）掛接《Easy》，使用提示碼做英漢字典，但 Windows 輸入時，整頁提示碼太多會使程式崩潰！故以正則簡化提示碼！不過 Windows 可行程式碼在 Mac 會使《Easy》無法正常出字！提供 custom 檔給 Windows 用戶，防止程式崩潰（ Mac 用戶勿使用該 custom 檔）。分別在「plus注音_防崩潰：Win必加，Mac勿加」和「mixin注音_同顯2修改檔(Win)」資料夾內，Windows 用戶把資料夾內 custom.yaml 檔拖到上一層（和方案中其他文件同一層），按「重新部署」即可。
 
   > 如果缺少檔案，會立即出錯無法執行！
   
@@ -41,17 +41,17 @@ Linux 上問題好似很多，使用前請注意！並自行解決！
 
 > 密碼：onionrime，請勿傳播密碼！
 
-- [電腦 RIME 輸入法『注音 洋蔥純注音版』](https://deltazone.pixnet.net/blog/post/264319309)
+- [電腦 RIME 輸入法『注音（洋蔥純注音版）』](https://deltazone.pixnet.net/blog/post/264319309)
 
-- [電腦 RIME 輸入法『注音 洋蔥plus版 』](https://deltazone.pixnet.net/blog/post/343650692)
+- [電腦 RIME 輸入法『注音（洋蔥plus版）』](https://deltazone.pixnet.net/blog/post/343650692)
 
-- [電腦 RIME 輸入法『注音 洋蔥mix‧in版 』](https://deltazone.pixnet.net/blog/post/347368709)
+- [電腦 RIME 輸入法『注音（洋蔥mix‧in版）』](https://deltazone.pixnet.net/blog/post/347368709)
 
-- [電腦 RIME 輸入法『注音 洋蔥雙拼版 』](https://deltazone.pixnet.net/blog/post/359775341)
+- [電腦 RIME 輸入法『注音（洋蔥雙拼版）』](https://deltazone.pixnet.net/blog/post/359775341)
 
-- [電腦 RIME 輸入法〖 地球拼音 洋蔥mix‧in多國語言-擴充版 〗](https://deltazone.pixnet.net/blog/post/353697089)
+- [電腦 RIME 輸入法〖 地球拼音（洋蔥mix‧in版）〗](https://deltazone.pixnet.net/blog/post/353697089)
 
-- [電腦 RIME 設定檔〖 洋蔥版 行列30 〗](https://deltazone.pixnet.net/blog/post/361766142)
+- [電腦 RIME 設定檔〖 行列 30（洋蔥版）〗](https://deltazone.pixnet.net/blog/post/361766142)
 
 
 ### Demo：
