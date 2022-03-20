@@ -41,15 +41,15 @@ Linux 上問題好似很多，使用前請注意！並自行解決！
 
 > 密碼：onionrime，請勿傳播密碼！
 
-- [電腦 RIME 輸入法『注音（洋蔥純注音版）』](https://deltazone.pixnet.net/blog/post/264319309)
+- [電腦 RIME 輸入法『注音（洋蔥 純注音 版）』](https://deltazone.pixnet.net/blog/post/264319309)
 
-- [電腦 RIME 輸入法『注音（洋蔥plus版）』](https://deltazone.pixnet.net/blog/post/343650692)
+- [電腦 RIME 輸入法『注音（洋蔥 plus 版）』](https://deltazone.pixnet.net/blog/post/343650692)
 
-- [電腦 RIME 輸入法『注音（洋蔥mix‧in版）』](https://deltazone.pixnet.net/blog/post/347368709)
+- [電腦 RIME 輸入法『注音（洋蔥 mix‧in 版）』](https://deltazone.pixnet.net/blog/post/347368709)
 
-- [電腦 RIME 輸入法『注音（洋蔥雙拼版）』](https://deltazone.pixnet.net/blog/post/359775341)
+- [電腦 RIME 輸入法『注音（洋蔥 雙拼 版）』](https://deltazone.pixnet.net/blog/post/359775341)
 
-- [電腦 RIME 輸入法〖 地球拼音（洋蔥mix‧in版）〗](https://deltazone.pixnet.net/blog/post/353697089)
+- [電腦 RIME 輸入法〖 地球拼音（洋蔥 mix‧in 版）〗](https://deltazone.pixnet.net/blog/post/353697089)
 
 - [電腦 RIME 設定檔〖 行列 30（洋蔥版）〗](https://deltazone.pixnet.net/blog/post/361766142)
 
