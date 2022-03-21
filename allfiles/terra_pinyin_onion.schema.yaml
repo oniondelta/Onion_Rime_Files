@@ -81,6 +81,16 @@ speller:
   algebra:
 ##### 非正確注音（補空碼或慣用發音）轉寫 #####
     - xform/[)(]//
+##### 韓文HNC轉寫開始 #####
+    - derive|^l([a-z]+)(\/\/?\!?)$|r$1$2|
+    - derive|^([a-z]+)l([a-z]*)(\/\/?\!?)$|$1r$2$3|
+    - derive|^x([a-z]+)(\/\/?\!?)$|ng$1$2|
+    - derive|^([a-z]+)x([a-z]*)(\/\/?\!?)$|$1ng$2$3|
+    - derive|^([a-z]*)i([a-z]*)(\/\/?\!?)$|$1y$2$3|
+    - derive|^([a-z]*)y([aueo])([a-z]*)(\/\/?\!?)$|$1i$2$3$4|
+    - derive|^p([a-z]*)(\/\/?\!?)$|f$1$2|
+    - derive|^([a-z]+)p(\/\/?\!?)$|$1f$2|
+##### 韓文HNC轉寫結束 #####
 ##### 日語 #####
 ## 符號
     - derive|^([eaovs]v),$|$1\.|
@@ -173,6 +183,18 @@ top_reverse_lookup:
   overwrite_comment: false
   dictionary: terra_pinyin_onion.extended
   comment_format:
+##### 韓文HNC轉寫開始 #####
+    - "xlit|/!|SV|"
+    - xform/(^| )l([a-z]+)(SS?V?)/$1l$2$3 r$2$3/
+    - xform/(^| )([a-z]+)l([a-z]*)(SS?V?)/$1$2l$3$4 $2r$3$4/
+    - xform/(^| )x([a-z]+)(SS?V?)/$1x$2$3 ng$2$3/
+    - xform/(^| )([a-z]+)x([a-z]*)(SS?V?)/$1$2x$3$4 $2ng$3$4/
+    - xform/(^| )([a-z]*)i([a-z]*)(SS?V?)/$1$2i$3$4 $2y$3$4/
+    - xform/(^| )([a-z]*)y([aueo])([a-z]*)(SS?V?)/$1$2y$3$4$5 $2i$3$4$5/
+    - xform/(^| )p([a-z]*)(SS?V?)/$1p$2 f$2/
+    - xform/(^| )([a-z]+)p(SS?V?)/$1$2p$3 $2f$3/
+    - "xlit|SV|/!|"
+##### 韓文HNC轉寫結束 #####
 ##### 日語 #####
 ## 符號
     - xform/(^| )([eaovs]v)(,)/$1$2$3 $2\./
@@ -217,10 +239,11 @@ top_reverse_lookup:
     - "xlit|';/!,.|ABCDEF|"
     - xform/^/  /
     - xform/BB([a-z]+)A/   $1BB/
-    - xform/^(.+)CCD/    $1ZZ`韓-HJ@/
-    - xform/CD/Z`韓-單@/
-    - xform/C/C`韓@/
+    - xform/^(.+)CCD$/    $1ZZ`韓-HJ@/
+    - xform/CD$/Z`韓-單@/
+    - xform/C$/C`韓@/
     - xform/Z/C/
+    - xform/D//
     - xform/`韓-單音@ / /
     - xform/`韓@ / /
     - xform/BB/X`拉-組@/
@@ -239,6 +262,7 @@ top_reverse_lookup:
     - xform/([avse]vF)/$1`日-符@/
     - xform/(evF)`日-符@( v)/$1$2/
     - "xlit|ABCDEF`@|';/!,.〔〕|"
+###################################
     - xform/([aeiou])(ng?|r)([1234])/$1$3$2/
     - xform/([aeo])([iuo])([1234])/$1$3$2/
     - xform/a1/ā/
