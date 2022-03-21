@@ -39,7 +39,7 @@ engine:
     - fallback_segmentor
   translators:
     - punct_translator
-    - table_translator@hangeul_phrase
+    - table_translator@hangeul_hnc_phrase
     # - reverse_lookup_translator
     - script_translator
 
@@ -48,9 +48,12 @@ menu:
   page_size: 10
 
 speller:
-  alphabet: "abcdefghijklmnopqrstuvwxyz"
-  delimiter: ";"
+  alphabet: "abcdefghijklmnopqrstuvwxyz;/"
+  # alphabet: "abcdefghijklmnopqrstuvwxyz" #
+  initials: "abcdefghijklmnoprstuwxyz"
+  delimiter: "'"  #";"
   algebra:
+    - derive/^\|$/ /  #
 ##### 韓文HNC正碼轉寫開始 #####
     - derive/^l/r/
     - derive/(.+)l/$1r/
@@ -63,7 +66,10 @@ speller:
 ##### 韓文HNC正碼轉寫結束 #####
     - abbrev/@//
     - xform|[@/]|q|
-    - xform|;|v|
+    - derive|q|/| #
+    # - xform|;|v| #
+    - derive|;|v| #
+    # - xform|;|v| #
 
 
 translator:
@@ -77,9 +83,11 @@ translator:
     - xform/QQ/‹ʜᴊ›/
     - xform/Q/‹ʜᴄᴊ›/
     - xform/V/‹漢›/
-    - xform/;/ /
+    - xform/;/‹漢›/  #
+    # - xform/;/ /  #
+    - xform/'/ /  #
 
-hangeul_phrase:
+hangeul_hnc_phrase:
   dictionary: ""
   user_dict: hangeul_hnc_phrase
   db_class: stabledb #tabledb
@@ -91,7 +99,7 @@ hangeul_phrase:
 #   dictionary: cangjie5
 #   enable_completion: false
 #   prefix: "="
-#   suffix: ";"
+#   suffix: "'"  #
 #   tips: 〔漢字反查〕
 #   preedit_format:
 #     - "xlit|abcdefghijklmnopqrstuvwxyz|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符|"
@@ -206,4 +214,4 @@ recognizer:
   patterns:
     email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
     url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$"
-    # reverse_lookup: "^=[a-z]*;?$"
+    # reverse_lookup: "^=[a-z]*'?$"  #
