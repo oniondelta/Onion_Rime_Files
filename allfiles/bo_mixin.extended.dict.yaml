@@ -14,8 +14,8 @@ import_tables:
   - terra_pinyin_onion
   - terra_pinyin_onion_add
   - bo_mixin_jp
-  - bo_mixin_kr
-  # - bo_mixin_kr_hnc  #韓文HNC羅馬字# 此項打開時，bo_mixin_kr 請關閉。
+  # - bo_mixin_kr  #韓文洋蔥形碼# 此項打開時，bo_mixin_kr_hnc 請關閉。
+  - bo_mixin_kr_hnc  #韓文HNC羅馬字# 此項打開時，bo_mixin_kr 請關閉。
   - bo_mixin_la
   # - bo_mixin_en  #英文26字母和符號# 此項打開時，bo_mixin_la 和 phrases.la_py_w 請關閉。
   - phrases.cht_en_w
