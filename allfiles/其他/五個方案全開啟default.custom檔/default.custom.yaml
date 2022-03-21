@@ -17,6 +17,7 @@ patch:
     - schema: bopomo_onion_double
     - schema: terra_pinyin_onion
     - schema: hangeul
+    - schema: hangeul_hnc
     - schema: jpnin1
     - schema: latinin1
     - schema: greek
