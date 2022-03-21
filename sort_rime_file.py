@@ -221,6 +221,7 @@ shutil.copyfile("./allfiles/cangjie5.dict.yaml", "./sort_rime/地球拼音洋蔥
 shutil.copyfile("./allfiles/cangjie5.schema.yaml", "./sort_rime/地球拼音洋蔥mix-in版/cangjie5.schema.yaml")
 shutil.copyfile("./allfiles/ocm_mixin_jp.dict.yaml", "./sort_rime/地球拼音洋蔥mix-in版/ocm_mixin_jp.dict.yaml")
 shutil.copyfile("./allfiles/ocm_mixin_kr.dict.yaml", "./sort_rime/地球拼音洋蔥mix-in版/ocm_mixin_kr.dict.yaml")
+shutil.copyfile("./allfiles/ocm_mixin_kr_hnc.dict.yaml", "./sort_rime/地球拼音洋蔥mix-in版/ocm_mixin_kr_hnc.dict.yaml")
 shutil.copyfile("./allfiles/ocm_mixin_la.dict.yaml", "./sort_rime/地球拼音洋蔥mix-in版/ocm_mixin_la.dict.yaml")
 
 shutil.copyfile("./allfiles/phrases.cht_en_w.dict.yaml", "./sort_rime/地球拼音洋蔥mix-in版/phrases.cht_en_w.dict.yaml")
