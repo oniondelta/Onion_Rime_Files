@@ -65,9 +65,9 @@ speller:
     - derive/p$/f/
 ##### 韓文HNC正碼轉寫結束 #####
     - abbrev/@//
-    - xform|[@/]|q|
+    # - 'xlit|@|/|' #
+    - 'xlit|/@|qq|'
     - derive|q|/| #
-    # - xform|;|v| #
     - derive|;|v| #
     # - xform|;|v| #
 
@@ -78,6 +78,9 @@ translator:
   enable_user_dict: true
   enable_sentence: false
   enable_completion: false
+  disable_user_dict_for_patterns:
+    - ^[a-z]+[/q]{1}$
+    - ^[a-z]+[/q]{2}$
   preedit_format:
     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
     - xform/QQ/‹ʜᴊ›/
