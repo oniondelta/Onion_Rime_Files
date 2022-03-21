@@ -1,0 +1,11716 @@
+# Rime dictionary
+# encoding: utf-8
+# 《韓語 HNC 鍵位碼表》
+#
+# 參考以下製作：
+# 正碼：https://mynb.wordpress.com/2010/11/10/hnc-romaja-%e8%bc%b8%e5%85%a5%e6%b3%95%ef%bc%9a%e9%9f%93%e8%8b%b1%e5%b0%8d%e7%85%a7/
+# 另外寫法：https://blog.xuite.net/ban.ryu/tureduregusa/62986282
+#
+# 另外寫法全已遮屏，不要開啟，mapping 韓文詞庫會使 table.bin 很龐大，改用 speller 轉寫。
+#
+#
+# 〈 HNC 鍵位 〉
+# ===========================================================================
+# 單母音：
+# ㅣ=i  ㅡ=w  ㅏ=a  ㅜ=u  ㅓ=e  ㅗ=o  ㅑ=ya  ㅠ=yu  ㅕ=ye  ㅛ=yo
+# ---------------------------------------------------------------------------
+# 雙母音：
+# ㅐ=ai  ㅔ=ei  ㅒ=yai  ㅖ=yei  ㅘ=oa  ㅙ=oai  ㅚ=oi  ㅝ=uo  ㅞ=uei  ㅟ=ui  ㅢ=wi
+# ---------------------------------------------------------------------------
+# 單子音:
+# ㄱ=g  ㅋ=k 	 ㄴ=n  ㄷ=d  ㅌ=t  ㄹ=l  ㅂ=b  ㅍ=p  ㅁ=m  ㅅ=s  ㅈ=j  ㅊ=c  ㅇ=x  ㅎ=h
+# ---------------------------------------------------------------------------
+# 雙子音:
+# ㄲ=gg  ㄸ=dd  ㅃ=bb  ㅆ=ss  ㅉ=jj
+# ---------------------------------------------------------------------------
+# 本碼表特別編碼:
+# ㅿ=z  ㆍ=er
+# ᄼ=sh  ᄽ=zh  ᄾ=sr  ᄿ=zr  ᅎ=ts  ᅏ=dz  ᅐ=tsr  ᅑ=dzr  ᅔ=tsh  ᅕ=tsrh
+# ===========================================================================
+#
+#
+# 『洋蔥』製作
+#
+#
+---
+name: hangeul_hnc
+version: "202203"
+sort: by_weight
+use_preset_vocabulary: false
+...
+####### 韓語總起始 #######
+##### @韓文現代使用單音 #####
+### Hangul Compatibility Jamo ###
+ㄱ	g@
+ㄲ	gg@
+ㄳ	gs@
+ㄴ	n@
+ㄵ	nj@
+ㄶ	nh@
+ㄷ	d@
+ㄸ	dd@
+ㄹ	l@
+ㄺ	lg@
+ㄻ	lm@
+ㄼ	lb@
+ㄽ	ls@
+ㄾ	lt@
+ㄿ	lp@
+ㅀ	lh@
+ㅁ	m@
+ㅂ	b@
+ㅃ	bb@
+ㅄ	bs@
+ㅅ	s@
+ㅆ	ss@
+ㅇ	x@
+ㅈ	j@
+ㅉ	jj@
+ㅊ	c@
+ㅋ	k@
+ㅌ	t@
+ㅍ	p@
+ㅎ	h@
+ㅏ	a@
+ㅐ	ai@
+ㅑ	ya@
+ㅒ	yai@
+ㅓ	e@
+ㅔ	ei@
+ㅕ	ye@
+ㅖ	yei@
+ㅗ	o@
+ㅘ	oa@
+ㅙ	oai@
+ㅚ	oi@
+ㅛ	yo@
+ㅜ	u@
+ㅝ	uo@
+ㅞ	uei@
+ㅟ	ui@
+ㅠ	yu@
+ㅡ	w@
+ㅢ	wi@
+ㅣ	i@
+## 其餘特殊
+ㅥ	nn/
+ㅦ	nd/
+ㅧ	ns/
+ㅨ	nz/
+ㅩ	lgs/
+ㅪ	ld/
+ㅫ	lbs/
+ㅬ	lz/
+ㅭ	lwx/
+ㅮ	mb/
+ㅯ	ms/
+ㅰ	mz/
+ㅱ	mx/
+ㅲ	bg/
+ㅳ	bd/
+ㅴ	bsg/
+ㅵ	bsd/
+ㅶ	bj/
+ㅷ	bt/
+ㅸ	bx/
+ㅹ	bbx/
+ㅺ	sg/
+ㅻ	sn/
+ㅼ	sd/
+ㅽ	sb/
+ㅾ	sj/
+ㅿ	z@
+ㆀ	xx/
+ㆁ	x/
+ㆂ	xs/
+ㆃ	xz/
+ㆄ	px/
+ㆅ	hh/
+ㆆ	wx/
+ㆇ	yoya/
+ㆈ	yoyai/
+ㆉ	yoi/
+ㆊ	yuye/
+ㆋ	yuyei/
+ㆌ	yui/
+ㆍ	er/
+ㆎ	eri/
+##### 韓文現代使用單音 結束 #####
+### @@HNC諺文正碼啟始 ###
+#2
+가	ga	1300
+각	gag	1300
+갂	gagg
+갃	gags
+간	gan	1300
+갅	ganj
+갆	ganh
+갇	gad	1300
+갈	gal	1300
+갉	galg	1300
+갊	galm	1300
+갋	galb
+갌	gals
+갍	galt
+갎	galp
+갏	galh
+감	gam	1300
+갑	gab	1300
+값	gabs	1300
+갓	gas	1300
+갔	gass	1300
+강	gax	1300
+갖	gaj	1300
+갗	gac	1300
+갘	gak
+같	gat	1300
+갚	gap	1300
+갛	gah	1300
+개	gai	1300
+객	gaig	1300
+갞	gaigg
+갟	gaigs
+갠	gain	1300
+갡	gainj
+갢	gainh
+갣	gaid
+갤	gail	1300
+갥	gailg
+갦	gailm
+갧	gailb
+갨	gails
+갩	gailt
+갪	gailp
+갫	gailh
+갬	gaim	1300
+갭	gaib	1300
+갮	gaibs
+갯	gais	1300
+갰	gaiss	1300
+갱	gaix	1300
+갲	gaij
+갳	gaic
+갴	gaik
+갵	gait
+갶	gaip
+갷	gaih
+갸	gya	1300
+갹	gyag	1300
+갺	gyagg
+갻	gyags
+갼	gyan	1300
+갽	gyanj
+갾	gyanh
+갿	gyad
+걀	gyal	1300
+걁	gyalg
+걂	gyalm
+걃	gyalb
+걄	gyals
+걅	gyalt
+걆	gyalp
+걇	gyalh
+걈	gyam
+걉	gyab
+걊	gyabs
+걋	gyas	1300
+걌	gyass
+걍	gyax	1300
+걎	gyaj
+걏	gyac
+걐	gyak
+걑	gyat
+걒	gyap
+걓	gyah
+걔	gyai	1300
+걕	gyaig
+걖	gyaigg
+걗	gyaigs
+걘	gyain	1300
+걙	gyainj
+걚	gyainh
+걛	gyaid
+걜	gyail	1300
+걝	gyailg
+걞	gyailm
+걟	gyailb
+걠	gyails
+걡	gyailt
+걢	gyailp
+걣	gyailh
+걤	gyaim
+걥	gyaib
+걦	gyaibs
+걧	gyais
+걨	gyaiss
+걩	gyaix
+걪	gyaij
+걫	gyaic
+걬	gyaik
+걭	gyait
+걮	gyaip
+걯	gyaih
+거	ge	1300
+걱	geg	1300
+걲	gegg
+걳	gegs
+건	gen	1300
+걵	genj
+걶	genh
+걷	ged	1300
+걸	gel	1300
+걹	gelg
+걺	gelm	1300
+걻	gelb
+걼	gels
+걽	gelt
+걾	gelp
+걿	gelh
+검	gem	1300
+겁	geb	1300
+겂	gebs
+것	ges	1300
+겄	gess	1300
+겅	gex	1300
+겆	gej	1300
+겇	gec
+겈	gek
+겉	get	1300
+겊	gep	1300
+겋	geh	1300
+게	gei	1300
+겍	geig
+겎	geigg
+겏	geigs
+겐	gein	1300
+겑	geinj
+겒	geinh
+겓	geid
+겔	geil	1300
+겕	geilg
+겖	geilm
+겗	geilb
+겘	geils
+겙	geilt
+겚	geilp
+겛	geilh
+겜	geim	1300
+겝	geib	1300
+겞	geibs
+겟	geis	1300
+겠	geiss	1300
+겡	geix	1300
+겢	geij
+겣	geic
+겤	geik
+겥	geit
+겦	geip
+겧	geih
+겨	gye	1300
+격	gyeg	1300
+겪	gyegg	1300
+겫	gyegs
+견	gyen	1300
+겭	gyenj
+겮	gyenh
+겯	gyed	1300
+결	gyel	1300
+겱	gyelg
+겲	gyelm
+겳	gyelb
+겴	gyels
+겵	gyelt
+겶	gyelp
+겷	gyelh
+겸	gyem	1300
+겹	gyeb	1300
+겺	gyebs
+겻	gyes	1300
+겼	gyess	1300
+경	gyex	1300
+겾	gyej
+겿	gyec
+곀	gyek
+곁	gyet	1300
+곂	gyep
+곃	gyeh
+계	gyei	1300
+곅	gyeig
+곆	gyeigg
+곇	gyeigs
+곈	gyein	1300
+곉	gyeinj
+곊	gyeinh
+곋	gyeid
+곌	gyeil	1300
+곍	gyeilg
+곎	gyeilm
+곏	gyeilb
+곐	gyeils
+곑	gyeilt
+곒	gyeilp
+곓	gyeilh
+곔	gyeim
+곕	gyeib	1300
+곖	gyeibs
+곗	gyeis	1300
+곘	gyeiss
+곙	gyeix
+곚	gyeij
+곛	gyeic
+곜	gyeik
+곝	gyeit
+곞	gyeip
+곟	gyeih
+고	go	1300
+곡	gog	1300
+곢	gogg
+곣	gogs
+곤	gon	1300
+곥	gonj
+곦	gonh
+곧	god	1300
+골	gol	1300
+곩	golg
+곪	golm	1300
+곫	golb
+곬	gols	1300
+곭	golt
+곮	golp
+곯	golh	1300
+곰	gom	1300
+곱	gob	1300
+곲	gobs
+곳	gos	1300
+곴	goss
+공	gox	1300
+곶	goj	1300
+곷	goc
+곸	gok
+곹	got
+곺	gop
+곻	goh
+과	goa	1300
+곽	goag	1300
+곾	goagg
+곿	goags
+#3
+관	goan	1300
+괁	goanj
+괂	goanh
+괃	goad
+괄	goal	1300
+괅	goalg
+괆	goalm	1300
+괇	goalb
+괈	goals
+괉	goalt
+괊	goalp
+괋	goalh
+괌	goam	1300
+괍	goab	1300
+괎	goabs
+괏	goas	1300
+괐	goass
+광	goax	1300
+괒	goaj
+괓	goac
+괔	goak
+괕	goat
+괖	goap
+괗	goah
+괘	goai	1300
+괙	goaig
+괚	goaigg
+괛	goaigs
+괜	goain	1300
+괝	goainj
+괞	goainh
+괟	goaid
+괠	goail	1300
+괡	goailg
+괢	goailm
+괣	goailb
+괤	goails
+괥	goailt
+괦	goailp
+괧	goailh
+괨	goaim
+괩	goaib	1300
+괪	goaibs
+괫	goais
+괬	goaiss	1300
+괭	goaix	1300
+괮	goaij
+괯	goaic
+괰	goaik
+괱	goait
+괲	goaip
+괳	goaih
+괴	goi	1300
+괵	goig	1300
+괶	goigg
+괷	goigs
+괸	goin	1300
+괹	goinj
+괺	goinh
+괻	goid
+괼	goil	1300
+괽	goilg
+괾	goilm
+괿	goilb
+굀	goils
+굁	goilt
+굂	goilp
+굃	goilh
+굄	goim	1300
+굅	goib	1300
+굆	goibs
+굇	gois	1300
+굈	goiss
+굉	goix	1300
+굊	goij
+굋	goic
+굌	goik
+굍	goit
+굎	goip
+굏	goih
+교	gyo	1300
+굑	gyog
+굒	gyogg
+굓	gyogs
+굔	gyon	1300
+굕	gyonj
+굖	gyonh
+굗	gyod
+굘	gyol	1300
+굙	gyolg
+굚	gyolm
+굛	gyolb
+굜	gyols
+굝	gyolt
+굞	gyolp
+굟	gyolh
+굠	gyom
+굡	gyob	1300
+굢	gyobs
+굣	gyos	1300
+굤	gyoss
+굥	gyox
+굦	gyoj
+굧	gyoc
+굨	gyok
+굩	gyot
+굪	gyop
+굫	gyoh
+구	gu	1300
+국	gug	1300
+굮	gugg
+굯	gugs
+군	gun	1300
+굱	gunj
+굲	gunh
+굳	gud	1300
+굴	gul	1300
+굵	gulg	1300
+굶	gulm	1300
+굷	gulb
+굸	guls
+굹	gult
+굺	gulp
+굻	gulh	1300
+굼	gum	1300
+굽	gub	1300
+굾	gubs
+굿	gus	1300
+궀	guss
+궁	gux	1300
+궂	guj	1300
+궃	guc
+궄	guk
+궅	gut
+궆	gup
+궇	guh
+궈	guo	1300
+궉	guog	1300
+궊	guogg
+궋	guogs
+권	guon	1300
+궍	guonj
+궎	guonh
+궏	guod
+궐	guol	1300
+궑	guolg
+궒	guolm
+궓	guolb
+궔	guols
+궕	guolt
+궖	guolp
+궗	guolh
+궘	guom
+궙	guob
+궚	guobs
+궛	guos
+궜	guoss	1300
+궝	guox	1300
+궞	guoj
+궟	guoc
+궠	guok
+궡	guot
+궢	guop
+궣	guoh
+궤	guei	1300
+궥	gueig
+궦	gueigg
+궧	gueigs
+궨	guein
+궩	gueinj
+궪	gueinh
+궫	gueid
+궬	gueil
+궭	gueilg
+궮	gueilm
+궯	gueilb
+궰	gueils
+궱	gueilt
+궲	gueilp
+궳	gueilh
+궴	gueim
+궵	gueib
+궶	gueibs
+궷	gueis	1300
+궸	gueiss
+궹	gueix
+궺	gueij
+궻	gueic
+궼	gueik
+궽	gueit
+궾	gueip
+궿	gueih
+귀	gui	1300
+귁	guig	1300
+귂	guigg
+귃	guigs
+귄	guin	1300
+귅	guinj
+귆	guinh
+귇	guid
+귈	guil	1300
+귉	guilg
+귊	guilm
+귋	guilb
+귌	guils
+귍	guilt
+귎	guilp
+귏	guilh
+귐	guim	1300
+귑	guib	1300
+귒	guibs
+귓	guis	1300
+귔	guiss
+귕	guix
+귖	guij
+귗	guic
+귘	guik
+귙	guit
+귚	guip
+귛	guih
+규	gyu	1300
+귝	gyug
+귞	gyugg
+귟	gyugs
+균	gyun	1300
+귡	gyunj
+귢	gyunh
+귣	gyud
+귤	gyul	1300
+귥	gyulg
+귦	gyulm
+귧	gyulb
+귨	gyuls
+귩	gyult
+귪	gyulp
+귫	gyulh
+귬	gyum
+귭	gyub
+귮	gyubs
+귯	gyus
+귰	gyuss
+귱	gyux
+귲	gyuj
+귳	gyuc
+귴	gyuk
+귵	gyut
+귶	gyup
+귷	gyuh
+그	gw	1300
+극	gwg	1300
+귺	gwgg
+귻	gwgs
+근	gwn	1300
+귽	gwnj
+귾	gwnh
+귿	gwd	1300
+#4
+글	gwl	1300
+긁	gwlg	1300
+긂	gwlm
+긃	gwlb
+긄	gwls
+긅	gwlt
+긆	gwlp
+긇	gwlh
+금	gwm	1300
+급	gwb	1300
+긊	gwbs
+긋	gws	1300
+긌	gwss
+긍	gwx	1300
+긎	gwj
+긏	gwc
+긐	gwk
+긑	gwt
+긒	gwp
+긓	gwh
+긔	gwi	1300
+긕	gwig
+긖	gwigg
+긗	gwigs
+긘	gwin
+긙	gwinj
+긚	gwinh
+긛	gwid
+긜	gwil
+긝	gwilg
+긞	gwilm
+긟	gwilb
+긠	gwils
+긡	gwilt
+긢	gwilp
+긣	gwilh
+긤	gwim
+긥	gwib
+긦	gwibs
+긧	gwis
+긨	gwiss
+긩	gwix
+긪	gwij
+긫	gwic
+긬	gwik
+긭	gwit
+긮	gwip
+긯	gwih
+기	gi	1300
+긱	gig	1300
+긲	gigg
+긳	gigs
+긴	gin	1300
+긵	ginj
+긶	ginh
+긷	gid	1300
+길	gil	1300
+긹	gilg
+긺	gilm	1300
+긻	gilb
+긼	gils
+긽	gilt
+긾	gilp
+긿	gilh
+김	gim	1300
+깁	gib	1300
+깂	gibs
+깃	gis	1300
+깄	giss
+깅	gix	1300
+깆	gij	1300
+깇	gic
+깈	gik
+깉	git
+깊	gip	1300
+깋	gih
+까	gga	1300
+깍	ggag	1300
+깎	ggagg	1300
+깏	ggags
+깐	ggan	1300
+깑	gganj
+깒	gganh
+깓	ggad
+깔	ggal	1300
+깕	ggalg
+깖	ggalm	1300
+깗	ggalb
+깘	ggals
+깙	ggalt
+깚	ggalp
+깛	ggalh
+깜	ggam	1300
+깝	ggab	1300
+깞	ggabs
+깟	ggas	1300
+깠	ggass	1300
+깡	ggax	1300
+깢	ggaj
+깣	ggac
+깤	ggak
+깥	ggat	1300
+깦	ggap
+깧	ggah
+깨	ggai	1300
+깩	ggaig	1300
+깪	ggaigg
+깫	ggaigs
+깬	ggain	1300
+깭	ggainj
+깮	ggainh
+깯	ggaid
+깰	ggail	1300
+깱	ggailg
+깲	ggailm
+깳	ggailb
+깴	ggails
+깵	ggailt
+깶	ggailp
+깷	ggailh
+깸	ggaim	1300
+깹	ggaib	1300
+깺	ggaibs
+깻	ggais	1300
+깼	ggaiss	1300
+깽	ggaix	1300
+깾	ggaij
+깿	ggaic
+꺀	ggaik
+꺁	ggait
+꺂	ggaip
+꺃	ggaih
+꺄	ggya	1300
+꺅	ggyag	1300
+꺆	ggyagg
+꺇	ggyags
+꺈	ggyan
+꺉	ggyanj
+꺊	ggyanh
+꺋	ggyad
+꺌	ggyal	1300
+꺍	ggyalg
+꺎	ggyalm
+꺏	ggyalb
+꺐	ggyals
+꺑	ggyalt
+꺒	ggyalp
+꺓	ggyalh
+꺔	ggyam
+꺕	ggyab
+꺖	ggyabs
+꺗	ggyas
+꺘	ggyass
+꺙	ggyax
+꺚	ggyaj
+꺛	ggyac
+꺜	ggyak
+꺝	ggyat
+꺞	ggyap
+꺟	ggyah
+꺠	ggyai
+꺡	ggyaig
+꺢	ggyaigg
+꺣	ggyaigs
+꺤	ggyain
+꺥	ggyainj
+꺦	ggyainh
+꺧	ggyaid
+꺨	ggyail
+꺩	ggyailg
+꺪	ggyailm
+꺫	ggyailb
+꺬	ggyails
+꺭	ggyailt
+꺮	ggyailp
+꺯	ggyailh
+꺰	ggyaim
+꺱	ggyaib
+꺲	ggyaibs
+꺳	ggyais
+꺴	ggyaiss
+꺵	ggyaix
+꺶	ggyaij
+꺷	ggyaic
+꺸	ggyaik
+꺹	ggyait
+꺺	ggyaip
+꺻	ggyaih
+꺼	gge	1300
+꺽	ggeg	1300
+꺾	ggegg	1300
+꺿	ggegs
+껀	ggen	1300
+껁	ggenj
+껂	ggenh
+껃	gged
+껄	ggel	1300
+껅	ggelg
+껆	ggelm
+껇	ggelb
+껈	ggels
+껉	ggelt
+껊	ggelp
+껋	ggelh
+껌	ggem	1300
+껍	ggeb	1300
+껎	ggebs
+껏	gges	1300
+껐	ggess	1300
+껑	ggex	1300
+껒	ggej
+껓	ggec
+껔	ggek
+껕	gget
+껖	ggep
+껗	ggeh
+께	ggei	1300
+껙	ggeig	1300
+껚	ggeigg
+껛	ggeigs
+껜	ggein	1300
+껝	ggeinj
+껞	ggeinh
+껟	ggeid
+껠	ggeil
+껡	ggeilg
+껢	ggeilm
+껣	ggeilb
+껤	ggeils
+껥	ggeilt
+껦	ggeilp
+껧	ggeilh
+껨	ggeim	1300
+껩	ggeib
+껪	ggeibs
+껫	ggeis	1300
+껬	ggeiss
+껭	ggeix	1300
+껮	ggeij
+껯	ggeic
+껰	ggeik
+껱	ggeit
+껲	ggeip
+껳	ggeih
+껴	ggye	1300
+껵	ggyeg
+껶	ggyegg
+껷	ggyegs
+껸	ggyen	1300
+껹	ggyenj
+껺	ggyenh
+껻	ggyed
+껼	ggyel	1300
+껽	ggyelg
+껾	ggyelm
+껿	ggyelb
+#5
+꼀	ggyels
+꼁	ggyelt
+꼂	ggyelp
+꼃	ggyelh
+꼄	ggyem
+꼅	ggyeb
+꼆	ggyebs
+꼇	ggyes	1300
+꼈	ggyess	1300
+꼉	ggyex
+꼊	ggyej
+꼋	ggyec
+꼌	ggyek
+꼍	ggyet	1300
+꼎	ggyep
+꼏	ggyeh
+꼐	ggyei	1300
+꼑	ggyeig
+꼒	ggyeigg
+꼓	ggyeigs
+꼔	ggyein
+꼕	ggyeinj
+꼖	ggyeinh
+꼗	ggyeid
+꼘	ggyeil
+꼙	ggyeilg
+꼚	ggyeilm
+꼛	ggyeilb
+꼜	ggyeils
+꼝	ggyeilt
+꼞	ggyeilp
+꼟	ggyeilh
+꼠	ggyeim
+꼡	ggyeib
+꼢	ggyeibs
+꼣	ggyeis
+꼤	ggyeiss
+꼥	ggyeix
+꼦	ggyeij
+꼧	ggyeic
+꼨	ggyeik
+꼩	ggyeit
+꼪	ggyeip
+꼫	ggyeih
+꼬	ggo	1300
+꼭	ggog	1300
+꼮	ggogg
+꼯	ggogs
+꼰	ggon	1300
+꼱	ggonj
+꼲	ggonh	1300
+꼳	ggod
+꼴	ggol	1300
+꼵	ggolg
+꼶	ggolm
+꼷	ggolb
+꼸	ggols
+꼹	ggolt
+꼺	ggolp
+꼻	ggolh
+꼼	ggom	1300
+꼽	ggob	1300
+꼾	ggobs
+꼿	ggos	1300
+꽀	ggoss
+꽁	ggox	1300
+꽂	ggoj	1300
+꽃	ggoc	1300
+꽄	ggok
+꽅	ggot
+꽆	ggop
+꽇	ggoh
+꽈	ggoa	1300
+꽉	ggoag	1300
+꽊	ggoagg
+꽋	ggoags
+꽌	ggoan
+꽍	ggoanj
+꽎	ggoanh
+꽏	ggoad
+꽐	ggoal	1300
+꽑	ggoalg
+꽒	ggoalm
+꽓	ggoalb
+꽔	ggoals
+꽕	ggoalt
+꽖	ggoalp
+꽗	ggoalh
+꽘	ggoam
+꽙	ggoab
+꽚	ggoabs
+꽛	ggoas
+꽜	ggoass	1300
+꽝	ggoax	1300
+꽞	ggoaj
+꽟	ggoac
+꽠	ggoak
+꽡	ggoat
+꽢	ggoap
+꽣	ggoah
+꽤	ggoai	1300
+꽥	ggoaig	1300
+꽦	ggoaigg
+꽧	ggoaigs
+꽨	ggoain
+꽩	ggoainj
+꽪	ggoainh
+꽫	ggoaid
+꽬	ggoail
+꽭	ggoailg
+꽮	ggoailm
+꽯	ggoailb
+꽰	ggoails
+꽱	ggoailt
+꽲	ggoailp
+꽳	ggoailh
+꽴	ggoaim
+꽵	ggoaib
+꽶	ggoaibs
+꽷	ggoais
+꽸	ggoaiss
+꽹	ggoaix	1300
+꽺	ggoaij
+꽻	ggoaic
+꽼	ggoaik
+꽽	ggoait
+꽾	ggoaip
+꽿	ggoaih
+꾀	ggoi	1300
+꾁	ggoig
+꾂	ggoigg
+꾃	ggoigs
+꾄	ggoin	1300
+꾅	ggoinj
+꾆	ggoinh
+꾇	ggoid
+꾈	ggoil	1300
+꾉	ggoilg
+꾊	ggoilm
+꾋	ggoilb
+꾌	ggoils
+꾍	ggoilt
+꾎	ggoilp
+꾏	ggoilh
+꾐	ggoim	1300
+꾑	ggoib	1300
+꾒	ggoibs
+꾓	ggois
+꾔	ggoiss
+꾕	ggoix	1300
+꾖	ggoij
+꾗	ggoic
+꾘	ggoik
+꾙	ggoit
+꾚	ggoip
+꾛	ggoih
+꾜	ggyo	1300
+꾝	ggyog
+꾞	ggyogg
+꾟	ggyogs
+꾠	ggyon
+꾡	ggyonj
+꾢	ggyonh
+꾣	ggyod
+꾤	ggyol
+꾥	ggyolg
+꾦	ggyolm
+꾧	ggyolb
+꾨	ggyols
+꾩	ggyolt
+꾪	ggyolp
+꾫	ggyolh
+꾬	ggyom
+꾭	ggyob
+꾮	ggyobs
+꾯	ggyos
+꾰	ggyoss
+꾱	ggyox
+꾲	ggyoj
+꾳	ggyoc
+꾴	ggyok
+꾵	ggyot
+꾶	ggyop
+꾷	ggyoh
+꾸	ggu	1300
+꾹	ggug	1300
+꾺	ggugg
+꾻	ggugs
+꾼	ggun	1300
+꾽	ggunj
+꾾	ggunh
+꾿	ggud
+꿀	ggul	1300
+꿁	ggulg
+꿂	ggulm
+꿃	ggulb
+꿄	gguls
+꿅	ggult
+꿆	ggulp
+꿇	ggulh	1300
+꿈	ggum	1300
+꿉	ggub	1300
+꿊	ggubs
+꿋	ggus	1300
+꿌	gguss
+꿍	ggux	1300
+꿎	gguj	1300
+꿏	gguc
+꿐	gguk
+꿑	ggut
+꿒	ggup
+꿓	gguh
+꿔	gguo	1300
+꿕	gguog
+꿖	gguogg
+꿗	gguogs
+꿘	gguon
+꿙	gguonj
+꿚	gguonh
+꿛	gguod
+꿜	gguol	1300
+꿝	gguolg
+꿞	gguolm
+꿟	gguolb
+꿠	gguols
+꿡	gguolt
+꿢	gguolp
+꿣	gguolh
+꿤	gguom
+꿥	gguob
+꿦	gguobs
+꿧	gguos
+꿨	gguoss	1300
+꿩	gguox	1300
+꿪	gguoj
+꿫	gguoc
+꿬	gguok
+꿭	gguot
+꿮	gguop
+꿯	gguoh
+꿰	gguei	1300
+꿱	ggueig	1300
+꿲	ggueigg
+꿳	ggueigs
+꿴	gguein	1300
+꿵	ggueinj
+꿶	ggueinh
+꿷	ggueid
+꿸	ggueil	1300
+꿹	ggueilg
+꿺	ggueilm
+꿻	ggueilb
+꿼	ggueils
+꿽	ggueilt
+꿾	ggueilp
+꿿	ggueilh
+#6
+뀀	ggueim	1300
+뀁	ggueib	1300
+뀂	ggueibs
+뀃	ggueis
+뀄	ggueiss	1300
+뀅	ggueix
+뀆	ggueij
+뀇	ggueic
+뀈	ggueik
+뀉	ggueit
+뀊	ggueip
+뀋	ggueih
+뀌	ggui	1300
+뀍	gguig
+뀎	gguigg
+뀏	gguigs
+뀐	gguin	1300
+뀑	gguinj
+뀒	gguinh
+뀓	gguid
+뀔	gguil	1300
+뀕	gguilg
+뀖	gguilm
+뀗	gguilb
+뀘	gguils
+뀙	gguilt
+뀚	gguilp
+뀛	gguilh
+뀜	gguim	1300
+뀝	gguib	1300
+뀞	gguibs
+뀟	gguis
+뀠	gguiss
+뀡	gguix
+뀢	gguij
+뀣	gguic
+뀤	gguik
+뀥	gguit
+뀦	gguip
+뀧	gguih
+뀨	ggyu	1300
+뀩	ggyug
+뀪	ggyugg
+뀫	ggyugs
+뀬	ggyun
+뀭	ggyunj
+뀮	ggyunh
+뀯	ggyud
+뀰	ggyul
+뀱	ggyulg
+뀲	ggyulm
+뀳	ggyulb
+뀴	ggyuls
+뀵	ggyult
+뀶	ggyulp
+뀷	ggyulh
+뀸	ggyum
+뀹	ggyub
+뀺	ggyubs
+뀻	ggyus
+뀼	ggyuss
+뀽	ggyux
+뀾	ggyuj
+뀿	ggyuc
+끀	ggyuk
+끁	ggyut
+끂	ggyup
+끃	ggyuh
+끄	ggw	1300
+끅	ggwg	1300
+끆	ggwgg
+끇	ggwgs
+끈	ggwn	1300
+끉	ggwnj
+끊	ggwnh	1300
+끋	ggwd
+끌	ggwl	1300
+끍	ggwlg
+끎	ggwlm	1300
+끏	ggwlb
+끐	ggwls
+끑	ggwlt
+끒	ggwlp
+끓	ggwlh	1300
+끔	ggwm	1300
+끕	ggwb	1300
+끖	ggwbs
+끗	ggws	1300
+끘	ggwss
+끙	ggwx	1300
+끚	ggwj
+끛	ggwc
+끜	ggwk
+끝	ggwt	1300
+끞	ggwp
+끟	ggwh
+끠	ggwi
+끡	ggwig
+끢	ggwigg
+끣	ggwigs
+끤	ggwin
+끥	ggwinj
+끦	ggwinh
+끧	ggwid
+끨	ggwil
+끩	ggwilg
+끪	ggwilm
+끫	ggwilb
+끬	ggwils
+끭	ggwilt
+끮	ggwilp
+끯	ggwilh
+끰	ggwim
+끱	ggwib
+끲	ggwibs
+끳	ggwis
+끴	ggwiss
+끵	ggwix
+끶	ggwij
+끷	ggwic
+끸	ggwik
+끹	ggwit
+끺	ggwip
+끻	ggwih
+끼	ggi	1300
+끽	ggig	1300
+끾	ggigg
+끿	ggigs
+낀	ggin	1300
+낁	gginj
+낂	gginh
+낃	ggid
+낄	ggil	1300
+낅	ggilg
+낆	ggilm
+낇	ggilb
+낈	ggils
+낉	ggilt
+낊	ggilp
+낋	ggilh
+낌	ggim	1300
+낍	ggib	1300
+낎	ggibs
+낏	ggis	1300
+낐	ggiss
+낑	ggix	1300
+낒	ggij
+낓	ggic
+낔	ggik
+낕	ggit
+낖	ggip
+낗	ggih
+나	na	1300
+낙	nag	1300
+낚	nagg	1300
+낛	nags
+난	nan	1300
+낝	nanj
+낞	nanh
+낟	nad	1300
+날	nal	1300
+낡	nalg	1300
+낢	nalm	1300
+낣	nalb
+낤	nals
+낥	nalt
+낦	nalp
+낧	nalh
+남	nam	1300
+납	nab	1300
+낪	nabs
+낫	nas	1300
+났	nass	1300
+낭	nax	1300
+낮	naj	1300
+낯	nac	1300
+낰	nak
+낱	nat	1300
+낲	nap
+낳	nah	1300
+내	nai	1300
+낵	naig	1300
+낶	naigg
+낷	naigs
+낸	nain	1300
+낹	nainj
+낺	nainh
+낻	naid
+낼	nail	1300
+낽	nailg
+낾	nailm
+낿	nailb
+냀	nails
+냁	nailt
+냂	nailp
+냃	nailh
+냄	naim	1300
+냅	naib	1300
+냆	naibs
+냇	nais	1300
+냈	naiss	1300
+냉	naix	1300
+냊	naij
+냋	naic
+냌	naik
+냍	nait
+냎	naip
+냏	naih
+냐	nya	1300
+냑	nyag	1300
+냒	nyagg
+냓	nyags
+냔	nyan	1300
+냕	nyanj
+냖	nyanh
+냗	nyad
+냘	nyal	1300
+냙	nyalg
+냚	nyalm
+냛	nyalb
+냜	nyals
+냝	nyalt
+냞	nyalp
+냟	nyalh
+냠	nyam	1300
+냡	nyab
+냢	nyabs
+냣	nyas
+냤	nyass
+냥	nyax	1300
+냦	nyaj
+냧	nyac
+냨	nyak
+냩	nyat
+냪	nyap
+냫	nyah
+냬	nyai
+냭	nyaig
+냮	nyaigg
+냯	nyaigs
+냰	nyain
+냱	nyainj
+냲	nyainh
+냳	nyaid
+냴	nyail
+냵	nyailg
+냶	nyailm
+냷	nyailb
+냸	nyails
+냹	nyailt
+냺	nyailp
+냻	nyailh
+냼	nyaim
+냽	nyaib
+냾	nyaibs
+냿	nyais
+#7
+넀	nyaiss
+넁	nyaix
+넂	nyaij
+넃	nyaic
+넄	nyaik
+넅	nyait
+넆	nyaip
+넇	nyaih
+너	ne	1300
+넉	neg	1300
+넊	negg
+넋	negs	1300
+넌	nen	1300
+넍	nenj
+넎	nenh
+넏	ned
+널	nel	1300
+넑	nelg
+넒	nelm	1300
+넓	nelb	1300
+넔	nels
+넕	nelt
+넖	nelp
+넗	nelh
+넘	nem	1300
+넙	neb	1300
+넚	nebs
+넛	nes	1300
+넜	ness	1300
+넝	nex	1300
+넞	nej
+넟	nec
+넠	nek
+넡	net
+넢	nep
+넣	neh	1300
+네	nei	1300
+넥	neig	1300
+넦	neigg
+넧	neigs
+넨	nein	1300
+넩	neinj
+넪	neinh
+넫	neid
+넬	neil	1300
+넭	neilg
+넮	neilm
+넯	neilb
+넰	neils
+넱	neilt
+넲	neilp
+넳	neilh
+넴	neim	1300
+넵	neib	1300
+넶	neibs
+넷	neis	1300
+넸	neiss	1300
+넹	neix	1300
+넺	neij
+넻	neic
+넼	neik
+넽	neit
+넾	neip
+넿	neih
+녀	nye	1300
+녁	nyeg	1300
+녂	nyegg
+녃	nyegs
+년	nyen	1300
+녅	nyenj
+녆	nyenh
+녇	nyed
+녈	nyel	1300
+녉	nyelg
+녊	nyelm
+녋	nyelb
+녌	nyels
+녍	nyelt
+녎	nyelp
+녏	nyelh
+념	nyem	1300
+녑	nyeb	1300
+녒	nyebs
+녓	nyes
+녔	nyess	1300
+녕	nyex	1300
+녖	nyej
+녗	nyec
+녘	nyek	1300
+녙	nyet
+녚	nyep
+녛	nyeh
+녜	nyei	1300
+녝	nyeig
+녞	nyeigg
+녟	nyeigs
+녠	nyein	1300
+녡	nyeinj
+녢	nyeinh
+녣	nyeid
+녤	nyeil
+녥	nyeilg
+녦	nyeilm
+녧	nyeilb
+녨	nyeils
+녩	nyeilt
+녪	nyeilp
+녫	nyeilh
+녬	nyeim
+녭	nyeib
+녮	nyeibs
+녯	nyeis
+녰	nyeiss
+녱	nyeix
+녲	nyeij
+녳	nyeic
+녴	nyeik
+녵	nyeit
+녶	nyeip
+녷	nyeih
+노	no	1300
+녹	nog	1300
+녺	nogg
+녻	nogs
+논	non	1300
+녽	nonj
+녾	nonh
+녿	nod
+놀	nol	1300
+놁	nolg
+놂	nolm	1300
+놃	nolb
+놄	nols
+놅	nolt
+놆	nolp
+놇	nolh
+놈	nom	1300
+놉	nob	1300
+놊	nobs
+놋	nos	1300
+놌	noss
+농	nox	1300
+놎	noj
+놏	noc
+놐	nok
+놑	not
+높	nop	1300
+놓	noh	1300
+놔	noa	1300
+놕	noag
+놖	noagg
+놗	noags
+놘	noan	1300
+놙	noanj
+놚	noanh
+놛	noad
+놜	noal	1300
+놝	noalg
+놞	noalm
+놟	noalb
+놠	noals
+놡	noalt
+놢	noalp
+놣	noalh
+놤	noam
+놥	noab
+놦	noabs
+놧	noas
+놨	noass	1300
+놩	noax
+놪	noaj
+놫	noac
+놬	noak
+놭	noat
+놮	noap
+놯	noah
+놰	noai
+놱	noaig
+놲	noaigg
+놳	noaigs
+놴	noain
+놵	noainj
+놶	noainh
+놷	noaid
+놸	noail
+놹	noailg
+놺	noailm
+놻	noailb
+놼	noails
+놽	noailt
+놾	noailp
+놿	noailh
+뇀	noaim
+뇁	noaib
+뇂	noaibs
+뇃	noais
+뇄	noaiss
+뇅	noaix
+뇆	noaij
+뇇	noaic
+뇈	noaik
+뇉	noait
+뇊	noaip
+뇋	noaih
+뇌	noi	1300
+뇍	noig
+뇎	noigg
+뇏	noigs
+뇐	noin	1300
+뇑	noinj
+뇒	noinh
+뇓	noid
+뇔	noil	1300
+뇕	noilg
+뇖	noilm
+뇗	noilb
+뇘	noils
+뇙	noilt
+뇚	noilp
+뇛	noilh
+뇜	noim	1300
+뇝	noib	1300
+뇞	noibs
+뇟	nois	1300
+뇠	noiss
+뇡	noix
+뇢	noij
+뇣	noic
+뇤	noik
+뇥	noit
+뇦	noip
+뇧	noih
+뇨	nyo	1300
+뇩	nyog	1300
+뇪	nyogg
+뇫	nyogs
+뇬	nyon	1300
+뇭	nyonj
+뇮	nyonh
+뇯	nyod
+뇰	nyol	1300
+뇱	nyolg
+뇲	nyolm
+뇳	nyolb
+뇴	nyols
+뇵	nyolt
+뇶	nyolp
+뇷	nyolh
+뇸	nyom
+뇹	nyob	1300
+뇺	nyobs
+뇻	nyos	1300
+뇼	nyoss
+뇽	nyox	1300
+뇾	nyoj
+뇿	nyoc
+#8
+눀	nyok
+눁	nyot
+눂	nyop
+눃	nyoh
+누	nu	1300
+눅	nug	1300
+눆	nugg
+눇	nugs
+눈	nun	1300
+눉	nunj
+눊	nunh
+눋	nud	1300
+눌	nul	1300
+눍	nulg
+눎	nulm
+눏	nulb
+눐	nuls
+눑	nult
+눒	nulp
+눓	nulh
+눔	num	1300
+눕	nub	1300
+눖	nubs
+눗	nus	1300
+눘	nuss
+눙	nux	1300
+눚	nuj
+눛	nuc
+눜	nuk
+눝	nut
+눞	nup
+눟	nuh
+눠	nuo	1300
+눡	nuog
+눢	nuogg
+눣	nuogs
+눤	nuon
+눥	nuonj
+눦	nuonh
+눧	nuod
+눨	nuol
+눩	nuolg
+눪	nuolm
+눫	nuolb
+눬	nuols
+눭	nuolt
+눮	nuolp
+눯	nuolh
+눰	nuom
+눱	nuob
+눲	nuobs
+눳	nuos
+눴	nuoss	1300
+눵	nuox
+눶	nuoj
+눷	nuoc
+눸	nuok
+눹	nuot
+눺	nuop
+눻	nuoh
+눼	nuei	1300
+눽	nueig
+눾	nueigg
+눿	nueigs
+뉀	nuein
+뉁	nueinj
+뉂	nueinh
+뉃	nueid
+뉄	nueil
+뉅	nueilg
+뉆	nueilm
+뉇	nueilb
+뉈	nueils
+뉉	nueilt
+뉊	nueilp
+뉋	nueilh
+뉌	nueim
+뉍	nueib
+뉎	nueibs
+뉏	nueis
+뉐	nueiss
+뉑	nueix
+뉒	nueij
+뉓	nueic
+뉔	nueik
+뉕	nueit
+뉖	nueip
+뉗	nueih
+뉘	nui	1300
+뉙	nuig
+뉚	nuigg
+뉛	nuigs
+뉜	nuin	1300
+뉝	nuinj
+뉞	nuinh
+뉟	nuid
+뉠	nuil	1300
+뉡	nuilg
+뉢	nuilm
+뉣	nuilb
+뉤	nuils
+뉥	nuilt
+뉦	nuilp
+뉧	nuilh
+뉨	nuim	1300
+뉩	nuib	1300
+뉪	nuibs
+뉫	nuis
+뉬	nuiss
+뉭	nuix
+뉮	nuij
+뉯	nuic
+뉰	nuik
+뉱	nuit
+뉲	nuip
+뉳	nuih
+뉴	nyu	1300
+뉵	nyug	1300
+뉶	nyugg
+뉷	nyugs
+뉸	nyun
+뉹	nyunj
+뉺	nyunh
+뉻	nyud
+뉼	nyul	1300
+뉽	nyulg
+뉾	nyulm
+뉿	nyulb
+늀	nyuls
+늁	nyult
+늂	nyulp
+늃	nyulh
+늄	nyum	1300
+늅	nyub	1300
+늆	nyubs
+늇	nyus
+늈	nyuss
+늉	nyux	1300
+늊	nyuj
+늋	nyuc
+늌	nyuk
+늍	nyut
+늎	nyup
+늏	nyuh
+느	nw	1300
+늑	nwg	1300
+늒	nwgg
+늓	nwgs
+는	nwn	1300
+늕	nwnj
+늖	nwnh
+늗	nwd
+늘	nwl	1300
+늙	nwlg	1300
+늚	nwlm	1300
+늛	nwlb
+늜	nwls
+늝	nwlt
+늞	nwlp
+늟	nwlh
+늠	nwm	1300
+늡	nwb	1300
+늢	nwbs
+늣	nws	1300
+늤	nwss
+능	nwx	1300
+늦	nwj	1300
+늧	nwc
+늨	nwk
+늩	nwt
+늪	nwp	1300
+늫	nwh
+늬	nwi	1300
+늭	nwig
+늮	nwigg
+늯	nwigs
+늰	nwin	1300
+늱	nwinj
+늲	nwinh
+늳	nwid
+늴	nwil	1300
+늵	nwilg
+늶	nwilm
+늷	nwilb
+늸	nwils
+늹	nwilt
+늺	nwilp
+늻	nwilh
+늼	nwim
+늽	nwib
+늾	nwibs
+늿	nwis
+닀	nwiss
+닁	nwix
+닂	nwij
+닃	nwic
+닄	nwik
+닅	nwit
+닆	nwip
+닇	nwih
+니	ni	1300
+닉	nig	1300
+닊	nigg
+닋	nigs
+닌	nin	1300
+닍	ninj
+닎	ninh
+닏	nid
+닐	nil	1300
+닑	nilg
+닒	nilm	1300
+닓	nilb
+닔	nils
+닕	nilt
+닖	nilp
+닗	nilh
+님	nim	1300
+닙	nib	1300
+닚	nibs
+닛	nis	1300
+닜	niss
+닝	nix	1300
+닞	nij
+닟	nic
+닠	nik
+닡	nit
+닢	nip	1300
+닣	nih
+다	da	1300
+닥	dag	1300
+닦	dagg	1300
+닧	dags
+단	dan	1300
+닩	danj
+닪	danh
+닫	dad	1300
+달	dal	1300
+닭	dalg	1300
+닮	dalm	1300
+닯	dalb	1300
+닰	dals
+닱	dalt
+닲	dalp
+닳	dalh	1300
+담	dam	1300
+답	dab	1300
+닶	dabs
+닷	das	1300
+닸	dass	1300
+당	dax	1300
+닺	daj	1300
+닻	dac	1300
+닼	dak
+닽	dat
+닾	dap
+닿	dah	1300
+#9
+대	dai	1300
+댁	daig	1300
+댂	daigg
+댃	daigs
+댄	dain	1300
+댅	dainj
+댆	dainh
+댇	daid
+댈	dail	1300
+댉	dailg
+댊	dailm
+댋	dailb
+댌	dails
+댍	dailt
+댎	dailp
+댏	dailh
+댐	daim	1300
+댑	daib	1300
+댒	daibs
+댓	dais	1300
+댔	daiss	1300
+댕	daix	1300
+댖	daij
+댗	daic
+댘	daik
+댙	dait
+댚	daip
+댛	daih
+댜	dya	1300
+댝	dyag
+댞	dyagg
+댟	dyags
+댠	dyan
+댡	dyanj
+댢	dyanh
+댣	dyad
+댤	dyal
+댥	dyalg
+댦	dyalm
+댧	dyalb
+댨	dyals
+댩	dyalt
+댪	dyalp
+댫	dyalh
+댬	dyam
+댭	dyab
+댮	dyabs
+댯	dyas
+댰	dyass
+댱	dyax
+댲	dyaj
+댳	dyac
+댴	dyak
+댵	dyat
+댶	dyap
+댷	dyah
+댸	dyai
+댹	dyaig
+댺	dyaigg
+댻	dyaigs
+댼	dyain
+댽	dyainj
+댾	dyainh
+댿	dyaid
+덀	dyail
+덁	dyailg
+덂	dyailm
+덃	dyailb
+덄	dyails
+덅	dyailt
+덆	dyailp
+덇	dyailh
+덈	dyaim
+덉	dyaib
+덊	dyaibs
+덋	dyais
+덌	dyaiss
+덍	dyaix
+덎	dyaij
+덏	dyaic
+덐	dyaik
+덑	dyait
+덒	dyaip
+덓	dyaih
+더	de	1300
+덕	deg	1300
+덖	degg	1300
+덗	degs
+던	den	1300
+덙	denj
+덚	denh
+덛	ded	1300
+덜	del	1300
+덝	delg
+덞	delm	1300
+덟	delb	1300
+덠	dels
+덡	delt
+덢	delp
+덣	delh
+덤	dem	1300
+덥	deb	1300
+덦	debs
+덧	des	1300
+덨	dess
+덩	dex	1300
+덪	dej
+덫	dec	1300
+덬	dek
+덭	det
+덮	dep	1300
+덯	deh
+데	dei	1300
+덱	deig	1300
+덲	deigg
+덳	deigs
+덴	dein	1300
+덵	deinj
+덶	deinh
+덷	deid
+델	deil	1300
+덹	deilg
+덺	deilm
+덻	deilb
+덼	deils
+덽	deilt
+덾	deilp
+덿	deilh
+뎀	deim	1300
+뎁	deib	1300
+뎂	deibs
+뎃	deis	1300
+뎄	deiss	1300
+뎅	deix	1300
+뎆	deij
+뎇	deic
+뎈	deik
+뎉	deit
+뎊	deip
+뎋	deih
+뎌	dye	1300
+뎍	dyeg
+뎎	dyegg
+뎏	dyegs
+뎐	dyen	1300
+뎑	dyenj
+뎒	dyenh
+뎓	dyed
+뎔	dyel	1300
+뎕	dyelg
+뎖	dyelm
+뎗	dyelb
+뎘	dyels
+뎙	dyelt
+뎚	dyelp
+뎛	dyelh
+뎜	dyem
+뎝	dyeb
+뎞	dyebs
+뎟	dyes
+뎠	dyess	1300
+뎡	dyex	1300
+뎢	dyej
+뎣	dyec
+뎤	dyek
+뎥	dyet
+뎦	dyep
+뎧	dyeh
+뎨	dyei	1300
+뎩	dyeig
+뎪	dyeigg
+뎫	dyeigs
+뎬	dyein	1300
+뎭	dyeinj
+뎮	dyeinh
+뎯	dyeid
+뎰	dyeil
+뎱	dyeilg
+뎲	dyeilm
+뎳	dyeilb
+뎴	dyeils
+뎵	dyeilt
+뎶	dyeilp
+뎷	dyeilh
+뎸	dyeim
+뎹	dyeib
+뎺	dyeibs
+뎻	dyeis
+뎼	dyeiss
+뎽	dyeix
+뎾	dyeij
+뎿	dyeic
+돀	dyeik
+돁	dyeit
+돂	dyeip
+돃	dyeih
+도	do	1300
+독	dog	1300
+돆	dogg
+돇	dogs
+돈	don	1300
+돉	donj
+돊	donh
+돋	dod	1300
+돌	dol	1300
+돍	dolg
+돎	dolm	1300
+돏	dolb
+돐	dols	1300
+돑	dolt
+돒	dolp
+돓	dolh
+돔	dom	1300
+돕	dob	1300
+돖	dobs
+돗	dos	1300
+돘	doss
+동	dox	1300
+돚	doj
+돛	doc	1300
+돜	dok
+돝	dot	1300
+돞	dop
+돟	doh
+돠	doa	1300
+돡	doag
+돢	doagg
+돣	doags
+돤	doan	1300
+돥	doanj
+돦	doanh
+돧	doad
+돨	doal	1300
+돩	doalg
+돪	doalm
+돫	doalb
+돬	doals
+돭	doalt
+돮	doalp
+돯	doalh
+돰	doam
+돱	doab
+돲	doabs
+돳	doas
+돴	doass
+돵	doax
+돶	doaj
+돷	doac
+돸	doak
+돹	doat
+돺	doap
+돻	doah
+돼	doai	1300
+돽	doaig
+돾	doaigg
+돿	doaigs
+#10
+됀	doain
+됁	doainj
+됂	doainh
+됃	doaid
+됄	doail
+됅	doailg
+됆	doailm
+됇	doailb
+됈	doails
+됉	doailt
+됊	doailp
+됋	doailh
+됌	doaim
+됍	doaib
+됎	doaibs
+됏	doais
+됐	doaiss	1300
+됑	doaix
+됒	doaij
+됓	doaic
+됔	doaik
+됕	doait
+됖	doaip
+됗	doaih
+되	doi	1300
+됙	doig
+됚	doigg
+됛	doigs
+된	doin	1300
+됝	doinj
+됞	doinh
+됟	doid
+될	doil	1300
+됡	doilg
+됢	doilm
+됣	doilb
+됤	doils
+됥	doilt
+됦	doilp
+됧	doilh
+됨	doim	1300
+됩	doib	1300
+됪	doibs
+됫	dois	1300
+됬	doiss
+됭	doix
+됮	doij
+됯	doic
+됰	doik
+됱	doit
+됲	doip
+됳	doih
+됴	dyo	1300
+됵	dyog
+됶	dyogg
+됷	dyogs
+됸	dyon
+됹	dyonj
+됺	dyonh
+됻	dyod
+됼	dyol
+됽	dyolg
+됾	dyolm
+됿	dyolb
+둀	dyols
+둁	dyolt
+둂	dyolp
+둃	dyolh
+둄	dyom
+둅	dyob
+둆	dyobs
+둇	dyos
+둈	dyoss
+둉	dyox
+둊	dyoj
+둋	dyoc
+둌	dyok
+둍	dyot
+둎	dyop
+둏	dyoh
+두	du	1300
+둑	dug	1300
+둒	dugg
+둓	dugs
+둔	dun	1300
+둕	dunj
+둖	dunh
+둗	dud
+둘	dul	1300
+둙	dulg
+둚	dulm
+둛	dulb
+둜	duls
+둝	dult
+둞	dulp
+둟	dulh
+둠	dum	1300
+둡	dub	1300
+둢	dubs
+둣	dus	1300
+둤	duss
+둥	dux	1300
+둦	duj
+둧	duc
+둨	duk
+둩	dut
+둪	dup
+둫	duh
+둬	duo	1300
+둭	duog
+둮	duogg
+둯	duogs
+둰	duon
+둱	duonj
+둲	duonh
+둳	duod
+둴	duol
+둵	duolg
+둶	duolm
+둷	duolb
+둸	duols
+둹	duolt
+둺	duolp
+둻	duolh
+둼	duom
+둽	duob
+둾	duobs
+둿	duos
+뒀	duoss	1300
+뒁	duox
+뒂	duoj
+뒃	duoc
+뒄	duok
+뒅	duot
+뒆	duop
+뒇	duoh
+뒈	duei	1300
+뒉	dueig
+뒊	dueigg
+뒋	dueigs
+뒌	duein
+뒍	dueinj
+뒎	dueinh
+뒏	dueid
+뒐	dueil
+뒑	dueilg
+뒒	dueilm
+뒓	dueilb
+뒔	dueils
+뒕	dueilt
+뒖	dueilp
+뒗	dueilh
+뒘	dueim
+뒙	dueib
+뒚	dueibs
+뒛	dueis
+뒜	dueiss
+뒝	dueix	1300
+뒞	dueij
+뒟	dueic
+뒠	dueik
+뒡	dueit
+뒢	dueip
+뒣	dueih
+뒤	dui	1300
+뒥	duig
+뒦	duigg
+뒧	duigs
+뒨	duin	1300
+뒩	duinj
+뒪	duinh
+뒫	duid
+뒬	duil	1300
+뒭	duilg
+뒮	duilm
+뒯	duilb
+뒰	duils
+뒱	duilt
+뒲	duilp
+뒳	duilh
+뒴	duim
+뒵	duib	1300
+뒶	duibs
+뒷	duis	1300
+뒸	duiss
+뒹	duix	1300
+뒺	duij
+뒻	duic
+뒼	duik
+뒽	duit
+뒾	duip
+뒿	duih
+듀	dyu	1300
+듁	dyug
+듂	dyugg
+듃	dyugs
+듄	dyun	1300
+듅	dyunj
+듆	dyunh
+듇	dyud
+듈	dyul	1300
+듉	dyulg
+듊	dyulm
+듋	dyulb
+듌	dyuls
+듍	dyult
+듎	dyulp
+듏	dyulh
+듐	dyum	1300
+듑	dyub
+듒	dyubs
+듓	dyus
+듔	dyuss
+듕	dyux	1300
+듖	dyuj
+듗	dyuc
+듘	dyuk
+듙	dyut
+듚	dyup
+듛	dyuh
+드	dw	1300
+득	dwg	1300
+듞	dwgg
+듟	dwgs
+든	dwn	1300
+듡	dwnj
+듢	dwnh
+듣	dwd	1300
+들	dwl	1300
+듥	dwlg
+듦	dwlm	1300
+듧	dwlb
+듨	dwls
+듩	dwlt
+듪	dwlp
+듫	dwlh
+듬	dwm	1300
+듭	dwb	1300
+듮	dwbs
+듯	dws	1300
+듰	dwss
+등	dwx	1300
+듲	dwj
+듳	dwc
+듴	dwk
+듵	dwt
+듶	dwp
+듷	dwh
+듸	dwi	1300
+듹	dwig
+듺	dwigg
+듻	dwigs
+듼	dwin
+듽	dwinj
+듾	dwinh
+듿	dwid
+#11
+딀	dwil
+딁	dwilg
+딂	dwilm
+딃	dwilb
+딄	dwils
+딅	dwilt
+딆	dwilp
+딇	dwilh
+딈	dwim
+딉	dwib
+딊	dwibs
+딋	dwis
+딌	dwiss
+딍	dwix
+딎	dwij
+딏	dwic
+딐	dwik
+딑	dwit
+딒	dwip
+딓	dwih
+디	di	1300
+딕	dig	1300
+딖	digg
+딗	digs
+딘	din	1300
+딙	dinj
+딚	dinh
+딛	did	1300
+딜	dil	1300
+딝	dilg
+딞	dilm
+딟	dilb
+딠	dils
+딡	dilt
+딢	dilp
+딣	dilh
+딤	dim	1300
+딥	dib	1300
+딦	dibs
+딧	dis	1300
+딨	diss	1300
+딩	dix	1300
+딪	dij	1300
+딫	dic
+딬	dik
+딭	dit
+딮	dip
+딯	dih
+따	dda	1300
+딱	ddag	1300
+딲	ddagg
+딳	ddags
+딴	ddan	1300
+딵	ddanj
+딶	ddanh
+딷	ddad
+딸	ddal	1300
+딹	ddalg
+딺	ddalm
+딻	ddalb
+딼	ddals
+딽	ddalt
+딾	ddalp
+딿	ddalh
+땀	ddam	1300
+땁	ddab	1300
+땂	ddabs
+땃	ddas	1300
+땄	ddass	1300
+땅	ddax	1300
+땆	ddaj
+땇	ddac
+땈	ddak
+땉	ddat
+땊	ddap
+땋	ddah	1300
+때	ddai	1300
+땍	ddaig	1300
+땎	ddaigg
+땏	ddaigs
+땐	ddain	1300
+땑	ddainj
+땒	ddainh
+땓	ddaid
+땔	ddail	1300
+땕	ddailg
+땖	ddailm
+땗	ddailb
+땘	ddails
+땙	ddailt
+땚	ddailp
+땛	ddailh
+땜	ddaim	1300
+땝	ddaib	1300
+땞	ddaibs
+땟	ddais	1300
+땠	ddaiss	1300
+땡	ddaix	1300
+땢	ddaij
+땣	ddaic
+땤	ddaik
+땥	ddait
+땦	ddaip
+땧	ddaih
+땨	ddya
+땩	ddyag
+땪	ddyagg
+땫	ddyags
+땬	ddyan
+땭	ddyanj
+땮	ddyanh
+땯	ddyad
+땰	ddyal
+땱	ddyalg
+땲	ddyalm
+땳	ddyalb
+땴	ddyals
+땵	ddyalt
+땶	ddyalp
+땷	ddyalh
+땸	ddyam
+땹	ddyab
+땺	ddyabs
+땻	ddyas
+땼	ddyass
+땽	ddyax
+땾	ddyaj
+땿	ddyac
+떀	ddyak
+떁	ddyat
+떂	ddyap
+떃	ddyah
+떄	ddyai
+떅	ddyaig
+떆	ddyaigg
+떇	ddyaigs
+떈	ddyain
+떉	ddyainj
+떊	ddyainh
+떋	ddyaid
+떌	ddyail
+떍	ddyailg
+떎	ddyailm
+떏	ddyailb
+떐	ddyails
+떑	ddyailt
+떒	ddyailp
+떓	ddyailh
+떔	ddyaim
+떕	ddyaib
+떖	ddyaibs
+떗	ddyais
+떘	ddyaiss
+떙	ddyaix
+떚	ddyaij
+떛	ddyaic
+떜	ddyaik
+떝	ddyait
+떞	ddyaip
+떟	ddyaih
+떠	dde	1300
+떡	ddeg	1300
+떢	ddegg
+떣	ddegs
+떤	dden	1300
+떥	ddenj
+떦	ddenh
+떧	dded
+떨	ddel	1300
+떩	ddelg
+떪	ddelm	1300
+떫	ddelb	1300
+떬	ddels
+떭	ddelt
+떮	ddelp
+떯	ddelh
+떰	ddem	1300
+떱	ddeb	1300
+떲	ddebs
+떳	ddes	1300
+떴	ddess	1300
+떵	ddex	1300
+떶	ddej
+떷	ddec
+떸	ddek
+떹	ddet
+떺	ddep
+떻	ddeh	1300
+떼	ddei	1300
+떽	ddeig	1300
+떾	ddeigg
+떿	ddeigs
+뗀	ddein	1300
+뗁	ddeinj
+뗂	ddeinh
+뗃	ddeid
+뗄	ddeil	1300
+뗅	ddeilg
+뗆	ddeilm
+뗇	ddeilb
+뗈	ddeils
+뗉	ddeilt
+뗊	ddeilp
+뗋	ddeilh
+뗌	ddeim	1300
+뗍	ddeib	1300
+뗎	ddeibs
+뗏	ddeis	1300
+뗐	ddeiss	1300
+뗑	ddeix	1300
+뗒	ddeij
+뗓	ddeic
+뗔	ddeik
+뗕	ddeit
+뗖	ddeip
+뗗	ddeih
+뗘	ddye	1300
+뗙	ddyeg
+뗚	ddyegg
+뗛	ddyegs
+뗜	ddyen
+뗝	ddyenj
+뗞	ddyenh
+뗟	ddyed
+뗠	ddyel
+뗡	ddyelg
+뗢	ddyelm
+뗣	ddyelb
+뗤	ddyels
+뗥	ddyelt
+뗦	ddyelp
+뗧	ddyelh
+뗨	ddyem
+뗩	ddyeb
+뗪	ddyebs
+뗫	ddyes
+뗬	ddyess	1300
+뗭	ddyex
+뗮	ddyej
+뗯	ddyec
+뗰	ddyek
+뗱	ddyet
+뗲	ddyep
+뗳	ddyeh
+뗴	ddyei
+뗵	ddyeig
+뗶	ddyeigg
+뗷	ddyeigs
+뗸	ddyein
+뗹	ddyeinj
+뗺	ddyeinh
+뗻	ddyeid
+뗼	ddyeil
+뗽	ddyeilg
+뗾	ddyeilm
+뗿	ddyeilb
+#12
+똀	ddyeils
+똁	ddyeilt
+똂	ddyeilp
+똃	ddyeilh
+똄	ddyeim
+똅	ddyeib
+똆	ddyeibs
+똇	ddyeis
+똈	ddyeiss
+똉	ddyeix
+똊	ddyeij
+똋	ddyeic
+똌	ddyeik
+똍	ddyeit
+똎	ddyeip
+똏	ddyeih
+또	ddo	1300
+똑	ddog	1300
+똒	ddogg
+똓	ddogs
+똔	ddon	1300
+똕	ddonj
+똖	ddonh
+똗	ddod
+똘	ddol	1300
+똙	ddolg
+똚	ddolm
+똛	ddolb
+똜	ddols
+똝	ddolt
+똞	ddolp
+똟	ddolh
+똠	ddom
+똡	ddob
+똢	ddobs
+똣	ddos
+똤	ddoss
+똥	ddox	1300
+똦	ddoj
+똧	ddoc
+똨	ddok
+똩	ddot
+똪	ddop
+똫	ddoh
+똬	ddoa	1300
+똭	ddoag
+똮	ddoagg
+똯	ddoags
+똰	ddoan
+똱	ddoanj
+똲	ddoanh
+똳	ddoad
+똴	ddoal	1300
+똵	ddoalg
+똶	ddoalm
+똷	ddoalb
+똸	ddoals
+똹	ddoalt
+똺	ddoalp
+똻	ddoalh
+똼	ddoam
+똽	ddoab
+똾	ddoabs
+똿	ddoas
+뙀	ddoass
+뙁	ddoax
+뙂	ddoaj
+뙃	ddoac
+뙄	ddoak
+뙅	ddoat
+뙆	ddoap
+뙇	ddoah
+뙈	ddoai	1300
+뙉	ddoaig
+뙊	ddoaigg
+뙋	ddoaigs
+뙌	ddoain
+뙍	ddoainj
+뙎	ddoainh
+뙏	ddoaid
+뙐	ddoail
+뙑	ddoailg
+뙒	ddoailm
+뙓	ddoailb
+뙔	ddoails
+뙕	ddoailt
+뙖	ddoailp
+뙗	ddoailh
+뙘	ddoaim
+뙙	ddoaib
+뙚	ddoaibs
+뙛	ddoais
+뙜	ddoaiss
+뙝	ddoaix
+뙞	ddoaij
+뙟	ddoaic
+뙠	ddoaik
+뙡	ddoait
+뙢	ddoaip
+뙣	ddoaih
+뙤	ddoi	1300
+뙥	ddoig
+뙦	ddoigg
+뙧	ddoigo
+뙨	ddoin	1300
+뙩	ddoinj
+뙪	ddoinh
+뙫	ddoid
+뙬	ddoil
+뙭	ddoilg
+뙮	ddoilm
+뙯	ddoilb
+뙰	ddoils
+뙱	ddoilt
+뙲	ddoilp
+뙳	ddoilh
+뙴	ddoim
+뙵	ddoib
+뙶	ddoibs
+뙷	ddois
+뙸	ddoiss
+뙹	ddoix
+뙺	ddoij
+뙻	ddoic
+뙼	ddoik
+뙽	ddoit
+뙾	ddoip
+뙿	ddoih
+뚀	ddyo
+뚁	ddyog
+뚂	ddyogg
+뚃	ddyogs
+뚄	ddyon
+뚅	ddyonj
+뚆	ddyonh
+뚇	ddyod
+뚈	ddyol
+뚉	ddyolg
+뚊	ddyolm
+뚋	ddyolb
+뚌	ddyols
+뚍	ddyolt
+뚎	ddyolp
+뚏	ddyolh
+뚐	ddyom
+뚑	ddyob
+뚒	ddyobs
+뚓	ddyos
+뚔	ddyoss
+뚕	ddyox
+뚖	ddyoj
+뚗	ddyoc
+뚘	ddyok
+뚙	ddyot
+뚚	ddyop
+뚛	ddyoh
+뚜	ddu	1300
+뚝	ddug	1300
+뚞	ddugg
+뚟	ddugs
+뚠	ddun	1300
+뚡	ddunj
+뚢	ddunh
+뚣	ddud
+뚤	ddul	1300
+뚥	ddulg
+뚦	ddulm
+뚧	ddulb
+뚨	dduls
+뚩	ddult
+뚪	ddulp
+뚫	ddulh	1300
+뚬	ddum	1300
+뚭	ddub
+뚮	ddubs
+뚯	ddus
+뚰	dduss
+뚱	ddux	1300
+뚲	dduj
+뚳	dduc
+뚴	dduk
+뚵	ddut
+뚶	ddup
+뚷	dduh
+뚸	dduo
+뚹	dduog
+뚺	dduogg
+뚻	dduogs
+뚼	dduon
+뚽	dduonj
+뚾	dduonh
+뚿	dduod
+뛀	dduol
+뛁	dduolg
+뛂	dduolm
+뛃	dduolb
+뛄	dduols
+뛅	dduolt
+뛆	dduolp
+뛇	dduolh
+뛈	dduom
+뛉	dduob
+뛊	dduobs
+뛋	dduos
+뛌	dduoss
+뛍	dduox
+뛎	dduoj
+뛏	dduoc
+뛐	dduok
+뛑	dduot
+뛒	dduop
+뛓	dduoh
+뛔	dduei	1300
+뛕	ddueig
+뛖	ddueigg
+뛗	ddueigs
+뛘	dduein
+뛙	ddueinj
+뛚	ddueinh
+뛛	ddueid
+뛜	ddueil
+뛝	ddueilg
+뛞	ddueilm
+뛟	ddueilb
+뛠	ddueils
+뛡	ddueilt
+뛢	ddueilp
+뛣	ddueilh
+뛤	ddueim
+뛥	ddueib
+뛦	ddueibs
+뛧	ddueis
+뛨	ddueiss
+뛩	ddueix
+뛪	ddueij
+뛫	ddueic
+뛬	ddueik
+뛭	ddueit
+뛮	ddueip
+뛯	ddueih
+뛰	ddui	1300
+뛱	dduig
+뛲	dduigg
+뛳	dduigs
+뛴	dduin	1300
+뛵	dduinj
+뛶	dduinh
+뛷	dduid
+뛸	dduil	1300
+뛹	dduilg
+뛺	dduilm
+뛻	dduilb
+뛼	dduils
+뛽	dduilt
+뛾	dduilp
+뛿	dduilh
+#13
+뜀	dduim	1300
+뜁	dduib	1300
+뜂	dduibs
+뜃	dduis
+뜄	dduiss
+뜅	dduix	1300
+뜆	dduij
+뜇	dduic
+뜈	dduik
+뜉	dduit
+뜊	dduip
+뜋	dduih
+뜌	ddyu
+뜍	ddyug
+뜎	ddyugg
+뜏	ddyugs
+뜐	ddyun
+뜑	ddyunj
+뜒	ddyunh
+뜓	ddyud
+뜔	ddyul
+뜕	ddyulg
+뜖	ddyulm
+뜗	ddyulb
+뜘	ddyuls
+뜙	ddyult
+뜚	ddyulp
+뜛	ddyulh
+뜜	ddyum
+뜝	ddyub
+뜞	ddyubs
+뜟	ddyus
+뜠	ddyuss
+뜡	ddyux
+뜢	ddyuj
+뜣	ddyuc
+뜤	ddyuk
+뜥	ddyut
+뜦	ddyup
+뜧	ddyuh
+뜨	ddw	1300
+뜩	ddwg	1300
+뜪	ddwgg
+뜫	ddwgs
+뜬	ddwn	1300
+뜭	ddwnj
+뜮	ddwnh
+뜯	ddwd	1300
+뜰	ddwl	1300
+뜱	ddwlg
+뜲	ddwlm
+뜳	ddwlb
+뜴	ddwls
+뜵	ddwlt
+뜶	ddwlp
+뜷	ddwlh
+뜸	ddwm	1300
+뜹	ddwb	1300
+뜺	ddwbs
+뜻	ddws	1300
+뜼	ddwss
+뜽	ddwx
+뜾	ddwj
+뜿	ddwc
+띀	ddwk
+띁	ddwt
+띂	ddwp
+띃	ddwh
+띄	ddwi	1300
+띅	ddwig
+띆	ddwigg
+띇	ddwigs
+띈	ddwin	1300
+띉	ddwinj
+띊	ddwinh
+띋	ddwid
+띌	ddwil	1300
+띍	ddwilg
+띎	ddwilm
+띏	ddwilb
+띐	ddwils
+띑	ddwilt
+띒	ddwilp
+띓	ddwilh
+띔	ddwim	1300
+띕	ddwib	1300
+띖	ddwibs
+띗	ddwis
+띘	ddwiss
+띙	ddwix
+띚	ddwij
+띛	ddwic
+띜	ddwik
+띝	ddwit
+띞	ddwip
+띟	ddwih
+띠	ddi	1300
+띡	ddig
+띢	ddigg
+띣	ddigs
+띤	ddin	1300
+띥	ddinj
+띦	ddinh
+띧	ddid
+띨	ddil	1300
+띩	ddilg
+띪	ddilm
+띫	ddilb
+띬	ddils
+띭	ddilt
+띮	ddilp
+띯	ddilh
+띰	ddim	1300
+띱	ddib	1300
+띲	ddibs
+띳	ddis	1300
+띴	ddiss
+띵	ddix	1300
+띶	ddij
+띷	ddic
+띸	ddik
+띹	ddit
+띺	ddip
+띻	ddih
+라	la	1300
+락	lag	1300
+띾	lagg
+띿	lags
+란	lan	1300
+랁	lanj
+랂	lanh
+랃	lad
+랄	lal	1300
+랅	lalg
+랆	lalm
+랇	lalb
+랈	lals
+랉	lalt
+랊	lalp
+랋	lalh
+람	lam	1300
+랍	lab	1300
+랎	labs
+랏	las	1300
+랐	lass	1300
+랑	lax	1300
+랒	laj	1300
+랓	lac
+랔	lak
+랕	lat
+랖	lap	1300
+랗	lah	1300
+래	lai	1300
+랙	laig	1300
+랚	laigg
+랛	laigs
+랜	lain	1300
+랝	lainj
+랞	lainh
+랟	laid
+랠	lail	1300
+랡	lailg
+랢	lailm
+랣	lailb
+랤	lails
+랥	lailt
+랦	lailp
+랧	lailh
+램	laim	1300
+랩	laib	1300
+랪	laibs
+랫	lais	1300
+랬	laiss	1300
+랭	laix	1300
+랮	laij
+랯	laic
+랰	laik
+랱	lait
+랲	laip
+랳	laih
+랴	lya	1300
+략	lyag	1300
+랶	lyagg
+랷	lyags
+랸	lyan	1300
+랹	lyanj
+랺	lyanh
+랻	lyad
+랼	lyal
+랽	lyalg
+랾	lyalm
+랿	lyalb
+럀	lyals
+럁	lyalt
+럂	lyalp
+럃	lyalh
+럄	lyam
+럅	lyab
+럆	lyabs
+럇	lyas	1300
+럈	lyass
+량	lyax	1300
+럊	lyaj
+럋	lyac
+럌	lyak
+럍	lyat
+럎	lyap
+럏	lyah
+럐	lyai
+럑	lyaig
+럒	lyaigg
+럓	lyaigs
+럔	lyain
+럕	lyainj
+럖	lyainh
+럗	lyaid
+럘	lyail
+럙	lyailg
+럚	lyailm
+럛	lyailb
+럜	lyails
+럝	lyailt
+럞	lyailp
+럟	lyailh
+럠	lyaim
+럡	lyaib
+럢	lyaibs
+럣	lyais
+럤	lyaiss
+럥	lyaix
+럦	lyaij
+럧	lyaic
+럨	lyaik
+럩	lyait
+럪	lyaip
+럫	lyaih
+러	le	1300
+럭	leg	1300
+럮	legg
+럯	legs
+런	len	1300
+럱	lenj
+럲	lenh
+럳	led
+럴	lel	1300
+럵	lelg
+럶	lelm
+럷	lelb
+럸	lels
+럹	lelt
+럺	lelp
+럻	lelh
+럼	lem	1300
+럽	leb	1300
+럾	lebs
+럿	les	1300
+#14
+렀	less	1300
+렁	lex	1300
+렂	lej
+렃	lec
+렄	lek
+렅	let
+렆	lep
+렇	leh	1300
+레	lei	1300
+렉	leig	1300
+렊	leigg
+렋	leigs
+렌	lein	1300
+렍	leinj
+렎	leinh
+렏	leid
+렐	leil	1300
+렑	leilg
+렒	leilm
+렓	leilb
+렔	leils
+렕	leilt
+렖	leilp
+렗	leilh
+렘	leim	1300
+렙	leib	1300
+렚	leibs
+렛	leis	1300
+렜	leiss
+렝	leix	1300
+렞	leij
+렟	leic
+렠	leik
+렡	leit
+렢	leip
+렣	leih
+려	lye	1300
+력	lyeg	1300
+렦	lyegg
+렧	lyegs
+련	lyen	1300
+렩	lyenj
+렪	lyenh
+렫	lyed
+렬	lyel	1300
+렭	lyelg
+렮	lyelm
+렯	lyelb
+렰	lyels
+렱	lyelt
+렲	lyelp
+렳	lyelh
+렴	lyem	1300
+렵	lyeb	1300
+렶	lyebs
+렷	lyes	1300
+렸	lyess	1300
+령	lyex	1300
+렺	lyej
+렻	lyec
+렼	lyek
+렽	lyet
+렾	lyep
+렿	lyeh
+례	lyei	1300
+롁	lyeig
+롂	lyeigg
+롃	lyeigs
+롄	lyein	1300
+롅	lyeinj
+롆	lyeinh
+롇	lyeid
+롈	lyeil
+롉	lyeilg
+롊	lyeilm
+롋	lyeilb
+롌	lyeils
+롍	lyeilt
+롎	lyeilp
+롏	lyeilh
+롐	lyeim
+롑	lyeib	1300
+롒	lyeibs
+롓	lyeis	1300
+롔	lyeiss
+롕	lyeix
+롖	lyeij
+롗	lyeic
+롘	lyeik
+롙	lyeit
+롚	lyeip
+롛	lyeih
+로	lo	1300
+록	log	1300
+롞	logg
+롟	logs
+론	lon	1300
+롡	lonj
+롢	lonh
+롣	lod
+롤	lol	1300
+롥	lolg
+롦	lolm
+롧	lolb
+롨	lols
+롩	lolt
+롪	lolp
+롫	lolh
+롬	lom	1300
+롭	lob	1300
+롮	lobs
+롯	los	1300
+롰	loss
+롱	lox	1300
+롲	loj
+롳	loc
+롴	lok
+롵	lot
+롶	lop
+롷	loh
+롸	loa	1300
+롹	loag
+롺	loagg
+롻	loags
+롼	loan	1300
+롽	loanj
+롾	loanh
+롿	load
+뢀	loal
+뢁	loalg
+뢂	loalm
+뢃	loalb
+뢄	loals
+뢅	loalt
+뢆	loalp
+뢇	loalh
+뢈	loam
+뢉	loab
+뢊	loabs
+뢋	loas
+뢌	loass
+뢍	loax	1300
+뢎	loaj
+뢏	loac
+뢐	loak
+뢑	loat
+뢒	loap
+뢓	loah
+뢔	loai
+뢕	loaig
+뢖	loaigg
+뢗	loaigs
+뢘	loain
+뢙	loainj
+뢚	loainh
+뢛	loaid
+뢜	loail
+뢝	loailg
+뢞	loailm
+뢟	loailb
+뢠	loails
+뢡	loailt
+뢢	loailp
+뢣	loailh
+뢤	loaim
+뢥	loaib
+뢦	loaibs
+뢧	loais
+뢨	loaiss	1300
+뢩	loaix
+뢪	loaij
+뢫	loaic
+뢬	loaik
+뢭	loait
+뢮	loaip
+뢯	loaih
+뢰	loi	1300
+뢱	loig
+뢲	loigg
+뢳	loigs
+뢴	loin	1300
+뢵	loinj
+뢶	loinh
+뢷	loid
+뢸	loil	1300
+뢹	loilg
+뢺	loilm
+뢻	loilb
+뢼	loils
+뢽	loilt
+뢾	loilp
+뢿	loilh
+룀	loim	1300
+룁	loib	1300
+룂	loibs
+룃	lois	1300
+룄	loiss
+룅	loix	1300
+룆	loij
+룇	loic
+룈	loik
+룉	loit
+룊	loip
+룋	loih
+료	lyo	1300
+룍	lyog
+룎	lyogg
+룏	lyogs
+룐	lyon	1300
+룑	lyonj
+룒	lyonh
+룓	lyod
+룔	lyol	1300
+룕	lyolg
+룖	lyolm
+룗	lyolb
+룘	lyols
+룙	lyolt
+룚	lyolp
+룛	lyolh
+룜	lyom
+룝	lyob	1300
+룞	lyobs
+룟	lyos	1300
+룠	lyoss
+룡	lyox	1300
+룢	lyoj
+룣	lyoc
+룤	lyok
+룥	lyot
+룦	lyop
+룧	lyoh
+루	lu	1300
+룩	lug	1300
+룪	lugg
+룫	lugs
+룬	lun	1300
+룭	lunj
+룮	lunh
+룯	lud
+룰	lul	1300
+룱	lulg
+룲	lulm
+룳	lulb
+룴	luls
+룵	lult
+룶	lulp
+룷	lulh
+룸	lum	1300
+룹	lub	1300
+룺	lubs
+룻	lus	1300
+룼	luss
+룽	lux	1300
+룾	luj
+룿	luc
+#15
+뤀	luk
+뤁	lut
+뤂	lup
+뤃	luh
+뤄	luo	1300
+뤅	luog
+뤆	luogg
+뤇	luogs
+뤈	luon
+뤉	luonj
+뤊	luonh
+뤋	luod
+뤌	luol
+뤍	luolg
+뤎	luolm
+뤏	luolb
+뤐	luols
+뤑	luolt
+뤒	luolp
+뤓	luolh
+뤔	luom
+뤕	luob
+뤖	luobs
+뤗	luos
+뤘	luoss	1300
+뤙	luox
+뤚	luoj
+뤛	luoc
+뤜	luok
+뤝	luot
+뤞	luop
+뤟	luoh
+뤠	luei	1300
+뤡	lueig
+뤢	lueigg
+뤣	lueigs
+뤤	luein
+뤥	lueinj
+뤦	lueinh
+뤧	lueid
+뤨	lueil
+뤩	lueilg
+뤪	lueilm
+뤫	lueilb
+뤬	lueils
+뤭	lueilt
+뤮	lueilp
+뤯	lueilh
+뤰	lueim
+뤱	lueib
+뤲	lueibs
+뤳	lueis
+뤴	lueiss
+뤵	lueix
+뤶	lueij
+뤷	lueic
+뤸	lueik
+뤹	lueit
+뤺	lueip
+뤻	lueih
+뤼	lui	1300
+뤽	luig	1300
+뤾	luigg
+뤿	luigs
+륀	luin	1300
+륁	luinj
+륂	luinh
+륃	luid
+륄	luil	1300
+륅	luilg
+륆	luilm
+륇	luilb
+륈	luils
+륉	luilt
+륊	luilp
+륋	luilh
+륌	luim	1300
+륍	luib
+륎	luibs
+륏	luis	1300
+륐	luiss
+륑	luix	1300
+륒	luij
+륓	luic
+륔	luik
+륕	luit
+륖	luip
+륗	luih
+류	lyu	1300
+륙	lyug	1300
+륚	lyugg
+륛	lyugs
+륜	lyun	1300
+륝	lyunj
+륞	lyunh
+륟	lyud
+률	lyul	1300
+륡	lyulg
+륢	lyulm
+륣	lyulb
+륤	lyuls
+륥	lyult
+륦	lyulp
+륧	lyulh
+륨	lyum	1300
+륩	lyub	1300
+륪	lyubs
+륫	lyus	1300
+륬	lyuss
+륭	lyux	1300
+륮	lyuj
+륯	lyuc
+륰	lyuk
+륱	lyut
+륲	lyup
+륳	lyuh
+르	lw	1300
+륵	lwg	1300
+륶	lwgg
+륷	lwgs
+른	lwn	1300
+륹	lwnj
+륺	lwnh
+륻	lwd
+를	lwl	1300
+륽	lwlg
+륾	lwlm
+륿	lwlb
+릀	lwls
+릁	lwlt
+릂	lwlp
+릃	lwlh
+름	lwm	1300
+릅	lwb	1300
+릆	lwbs
+릇	lws	1300
+릈	lwss
+릉	lwx	1300
+릊	lwj	1300
+릋	lwc
+릌	lwk
+릍	lwt	1300
+릎	lwp	1300
+릏	lwh
+릐	lwi
+릑	lwig
+릒	lwigg
+릓	lwigs
+릔	lwin
+릕	lwinj
+릖	lwinh
+릗	lwid
+릘	lwil
+릙	lwilg
+릚	lwilm
+릛	lwilb
+릜	lwils
+릝	lwilt
+릞	lwilp
+릟	lwilh
+릠	lwim
+릡	lwib
+릢	lwibs
+릣	lwis
+릤	lwiss
+릥	lwix
+릦	lwij
+릧	lwic
+릨	lwik
+릩	lwit
+릪	lwip
+릫	lwih
+리	li	1300
+릭	lig	1300
+릮	ligg
+릯	ligs
+린	lin	1300
+릱	linj
+릲	linh
+릳	lid
+릴	lil	1300
+릵	lilg
+릶	lilm
+릷	lilb
+릸	lils
+릹	lilt
+릺	lilp
+릻	lilh
+림	lim	1300
+립	lib	1300
+릾	libs
+릿	lis	1300
+맀	liss
+링	lix	1300
+맂	lij
+맃	lic
+맄	lik
+맅	lit
+맆	lip
+맇	lih
+마	ma	1300
+막	mag	1300
+맊	magg
+맋	mags
+만	man	1300
+맍	manj
+많	manh	1300
+맏	mad	1300
+말	mal	1300
+맑	malg	1300
+맒	malm	1300
+맓	malb
+맔	mals
+맕	malt
+맖	malp
+맗	malh
+맘	mam	1300
+맙	mab	1300
+맚	mabs
+맛	mas	1300
+맜	mass
+망	max	1300
+맞	maj	1300
+맟	mac
+맠	mak
+맡	mat	1300
+맢	map
+맣	mah	1300
+매	mai	1300
+맥	maig	1300
+맦	maigg
+맧	maigs
+맨	main	1300
+맩	mainj
+맪	mainh
+맫	maid
+맬	mail	1300
+맭	mailg
+맮	mailm
+맯	maiab
+맰	mails
+맱	mailt
+맲	mailp
+맳	mailh
+맴	maim	1300
+맵	maib	1300
+맶	maibs
+맷	mais	1300
+맸	maiss	1300
+맹	maix	1300
+맺	maij	1300
+맻	maic
+맼	maik
+맽	mait
+맾	maip
+맿	maih
+#16
+먀	mya	1300
+먁	myag	1300
+먂	myagg
+먃	myags
+먄	myan
+먅	myanj
+먆	myanh
+먇	myad
+먈	myal	1300
+먉	myalg
+먊	myalm
+먋	myalb
+먌	myals
+먍	myalt
+먎	myalp
+먏	myalh
+먐	myam
+먑	myab
+먒	myabs
+먓	myas
+먔	myass
+먕	myax	1300
+먖	myaj
+먗	myac
+먘	myak
+먙	myat
+먚	myap
+먛	myah
+먜	myai
+먝	myaig
+먞	myaigg
+먟	myaigs
+먠	myain
+먡	myainj
+먢	myainh
+먣	myaid
+먤	myail
+먥	myailg
+먦	myailm
+먧	mailb
+먨	myails
+먩	myailt
+먪	myailp
+먫	myailh
+먬	myaim
+먭	myaib
+먮	myaibs
+먯	myais
+먰	myaiss
+먱	myaix
+먲	myaij
+먳	myaic
+먴	myaik
+먵	myait
+먶	myaip
+먷	myaih
+머	me	1300
+먹	meg	1300
+먺	megg
+먻	megs
+먼	men	1300
+먽	menj
+먾	menh
+먿	med
+멀	mel	1300
+멁	melg
+멂	melm	1300
+멃	melb
+멄	mels
+멅	melt
+멆	melp
+멇	melh
+멈	mem	1300
+멉	meb	1300
+멊	mebs
+멋	mes	1300
+멌	mess
+멍	mex	1300
+멎	mej	1300
+멏	mec
+멐	mek
+멑	met
+멒	mep
+멓	meh	1300
+메	mei	1300
+멕	meig	1300
+멖	meigg
+멗	meigs
+멘	mein	1300
+멙	meinj
+멚	meinh
+멛	meid
+멜	meil	1300
+멝	meilg
+멞	meilm
+멟	meilb
+멠	meils
+멡	meilt
+멢	meilp
+멣	meilh
+멤	meim	1300
+멥	meib	1300
+멦	meibs
+멧	meis	1300
+멨	meiss	1300
+멩	meix	1300
+멪	meij
+멫	meic
+멬	meik
+멭	meit
+멮	meip
+멯	meih
+며	mye	1300
+멱	myeg	1300
+멲	myegg
+멳	myegs
+면	myen	1300
+멵	myenj
+멶	myenh
+멷	myed
+멸	myel	1300
+멹	myelg
+멺	myelm
+멻	myelb
+멼	myels
+멽	myelt
+멾	myelp
+멿	myelh
+몀	myem
+몁	myeb
+몂	myebs
+몃	myes	1300
+몄	myess	1300
+명	myex	1300
+몆	myej
+몇	myec	1300
+몈	myek
+몉	myet
+몊	myep
+몋	myeh
+몌	myei	1300
+몍	myeig
+몎	myeigg
+몏	myeigs
+몐	myein
+몑	myeinj
+몒	myeinh
+몓	myeid
+몔	myeil
+몕	myeilg
+몖	myeilm
+몗	myeilb
+몘	myeils
+몙	myeilt
+몚	myeilp
+몛	myeilh
+몜	myeim
+몝	myeib
+몞	myeibs
+몟	myeis
+몠	myeiss
+몡	myeix
+몢	myeij
+몣	myeic
+몤	myeik
+몥	myeit
+몦	myeip
+몧	myeih
+모	mo	1300
+목	mog	1300
+몪	mogg
+몫	mogs	1300
+몬	mon	1300
+몭	monj
+몮	monh
+몯	mod
+몰	mol	1300
+몱	molg
+몲	molm	1300
+몳	molb
+몴	mols
+몵	molt
+몶	molp
+몷	molh
+몸	mom	1300
+몹	mob	1300
+몺	mobs
+못	mos	1300
+몼	moss
+몽	mox	1300
+몾	moj
+몿	moc
+뫀	mok
+뫁	mot
+뫂	mop
+뫃	moh
+뫄	moa	1300
+뫅	moag
+뫆	moagg
+뫇	moags
+뫈	moan	1300
+뫉	moanj
+뫊	moanh
+뫋	moad
+뫌	moal
+뫍	moalg
+뫎	moalm
+뫏	moalb
+뫐	moals
+뫑	moalt
+뫒	moalp
+뫓	moalh
+뫔	moam
+뫕	moab
+뫖	moabs
+뫗	moas
+뫘	moass	1300
+뫙	moax	1300
+뫚	moaj
+뫛	moac
+뫜	moak
+뫝	moat
+뫞	moap
+뫟	moah
+뫠	moai
+뫡	moaig
+뫢	moaigg
+뫣	moaigs
+뫤	moain
+뫥	moainj
+뫦	moainh
+뫧	moaid
+뫨	moail
+뫩	moailg
+뫪	moailm
+뫫	moailb
+뫬	moails
+뫭	moailt
+뫮	moailp
+뫯	moailh
+뫰	moaim
+뫱	moaib
+뫲	moaibs
+뫳	moais
+뫴	moaiss
+뫵	moaix
+뫶	moaij
+뫷	moaic
+뫸	moaik
+뫹	moait
+뫺	moaip
+뫻	moaih
+뫼	moi	1300
+뫽	moig
+뫾	moigg
+뫿	moigs
+#17
+묀	moin	1300
+묁	moinj
+묂	moinh
+묃	moid
+묄	moil	1300
+묅	moilg
+묆	moilm
+묇	moilb
+묈	moils
+묉	moilt
+묊	moilp
+묋	moilh
+묌	moim
+묍	moib	1300
+묎	moibs
+묏	mois	1300
+묐	moiss
+묑	moix	1300
+묒	moij
+묓	moic
+묔	moik
+묕	moit
+묖	moip
+묗	moih
+묘	myo	1300
+묙	myog
+묚	myogg
+묛	myogs
+묜	myon	1300
+묝	myonj
+묞	myonh
+묟	myod
+묠	myol	1300
+묡	myolg
+묢	myolm
+묣	myolb
+묤	myols
+묥	myolt
+묦	myolp
+묧	myolh
+묨	myom
+묩	myob	1300
+묪	myobs
+묫	myos	1300
+묬	myoss
+묭	myox
+묮	myoj
+묯	myoc
+묰	myok
+묱	myot
+묲	myop
+묳	myoh
+무	mu	1300
+묵	mug	1300
+묶	mugg	1300
+묷	mugs
+문	mun	1300
+묹	munj
+묺	munh
+묻	mud	1300
+물	mul	1300
+묽	mulg	1300
+묾	mulm	1300
+묿	mulb
+뭀	muls
+뭁	mult
+뭂	mulp
+뭃	mulh
+뭄	mum	1300
+뭅	mub	1300
+뭆	mubs
+뭇	mus	1300
+뭈	muss
+뭉	mux	1300
+뭊	muj
+뭋	muc
+뭌	muk
+뭍	mut	1300
+뭎	mup
+뭏	muh	1300
+뭐	muo	1300
+뭑	muog
+뭒	muogg
+뭓	muogs
+뭔	muon	1300
+뭕	muonj
+뭖	muonh
+뭗	muod
+뭘	muol	1300
+뭙	muolg
+뭚	muolm
+뭛	muolb
+뭜	muols
+뭝	muolt
+뭞	muolp
+뭟	muolh
+뭠	muom
+뭡	muob	1300
+뭢	muobs
+뭣	muos	1300
+뭤	muoss
+뭥	muox
+뭦	muoj
+뭧	muoc
+뭨	muok
+뭩	muot
+뭪	muop
+뭫	muoh
+뭬	muei	1300
+뭭	mueig
+뭮	mueigg
+뭯	mueigs
+뭰	muein
+뭱	mueinj
+뭲	mueinh
+뭳	mueid
+뭴	mueil
+뭵	mueilg
+뭶	mueilm
+뭷	mueilb
+뭸	mueils
+뭹	mueilt
+뭺	mueilp
+뭻	mueilh
+뭼	mueim
+뭽	mueib
+뭾	mueibs
+뭿	mueis
+뮀	mueiss
+뮁	mueix
+뮂	mueij
+뮃	mueic
+뮄	mueik
+뮅	mueit
+뮆	mueip
+뮇	mueih
+뮈	mui	1300
+뮉	muig
+뮊	muigg
+뮋	muigs
+뮌	muin	1300
+뮍	muinj
+뮎	muinh
+뮏	muid
+뮐	muil	1300
+뮑	muilg
+뮒	muilm
+뮓	muilb
+뮔	muils
+뮕	muilt
+뮖	muilp
+뮗	muilh
+뮘	muim
+뮙	muib
+뮚	muibs
+뮛	muis
+뮜	muiss
+뮝	muix
+뮞	muij
+뮟	muic
+뮠	muik
+뮡	muit
+뮢	muip
+뮣	muih
+뮤	myu	1300
+뮥	myug
+뮦	myugg
+뮧	myugs
+뮨	myun	1300
+뮩	myunj
+뮪	myunh
+뮫	myud
+뮬	myul	1300
+뮭	myulg
+뮮	myulm
+뮯	myulb
+뮰	myuls
+뮱	myult
+뮲	myulp
+뮳	myulh
+뮴	myum	1300
+뮵	myub
+뮶	myubs
+뮷	myus	1300
+뮸	myuss
+뮹	myux
+뮺	myuj
+뮻	myuc
+뮼	myuk
+뮽	myut
+뮾	myup
+뮿	myuh
+므	mw	1300
+믁	mwg
+믂	mwgg
+믃	mwgs
+믄	mwn	1300
+믅	mwnj
+믆	mwnh
+믇	mwd
+믈	mwl	1300
+믉	mwlg
+믊	mwlm
+믋	mwlb
+믌	mwls
+믍	mwlt
+믎	mwlp
+믏	mwlh
+믐	mwm	1300
+믑	mwb
+믒	mwbs
+믓	mws	1300
+믔	mwss
+믕	mwx
+믖	mwj
+믗	mwc
+믘	mwk
+믙	mwt
+믚	mwp
+믛	mwh
+믜	mwi
+믝	mwig
+믞	mwigg
+믟	mwigs
+믠	mwin
+믡	mwinj
+믢	mwinh
+믣	mwid
+믤	mwil
+믥	mwilg
+믦	mwilm
+믧	mwilb
+믨	mwils
+믩	mwilt
+믪	mwilp
+믫	mwilh
+믬	mwim
+믭	mwib
+믮	mwibs
+믯	mwis
+믰	mwiss
+믱	mwix
+믲	mwij
+믳	mwic
+믴	mwik
+믵	mwit
+믶	mwip
+믷	mwih
+미	mi	1300
+믹	mig	1300
+믺	migg
+믻	migs
+민	min	1300
+믽	minj
+믾	minh
+믿	mid	1300
+#18
+밀	mil	1300
+밁	milg
+밂	milm	1300
+밃	milb
+밄	mils
+밅	milt
+밆	milp
+밇	milh
+밈	mim	1300
+밉	mib	1300
+밊	mibs
+밋	mis	1300
+밌	miss	1300
+밍	mix	1300
+밎	mij
+및	mic	1300
+밐	mik
+밑	mit	1300
+밒	mip
+밓	mih
+바	ba	1300
+박	bag	1300
+밖	bagg	1300
+밗	bagk	1300
+반	ban	1300
+밙	banj
+밚	banh
+받	bad	1300
+발	bal	1300
+밝	balg	1300
+밞	balm	1300
+밟	balb	1300
+밠	bals
+밡	balt
+밢	balp
+밣	balh
+밤	bam	1300
+밥	bab	1300
+밦	babs
+밧	bas	1300
+밨	bass
+방	bax	1300
+밪	baj
+밫	bac
+밬	bak
+밭	bat	1300
+밮	bap
+밯	bah
+배	bai	1300
+백	baig	1300
+밲	baigg
+밳	baigs
+밴	bain	1300
+밵	bainj
+밶	bainh
+밷	baid
+밸	bail	1300
+밹	bailg
+밺	bailm
+밻	bailb
+밼	bails
+밽	bailt
+밾	bailp
+밿	bailh
+뱀	baim	1300
+뱁	baib	1300
+뱂	baibs
+뱃	bais	1300
+뱄	baiss	1300
+뱅	baix	1300
+뱆	baij
+뱇	baic
+뱈	baik
+뱉	bait	1300
+뱊	baip
+뱋	baih
+뱌	bya	1300
+뱍	byag	1300
+뱎	byagg
+뱏	byags
+뱐	byan	1300
+뱑	byanj
+뱒	byanh
+뱓	byad
+뱔	byal
+뱕	byalg
+뱖	byalm
+뱗	byalb
+뱘	byals
+뱙	byalt
+뱚	byalp
+뱛	byalh
+뱜	byam
+뱝	byab	1300
+뱞	byabs
+뱟	byas
+뱠	byass
+뱡	byax
+뱢	byaj
+뱣	byac
+뱤	byak
+뱥	byat
+뱦	byap
+뱧	byah
+뱨	byai
+뱩	byaig
+뱪	byaigg
+뱫	byaigs
+뱬	byain
+뱭	byainj
+뱮	byainh
+뱯	byaid
+뱰	byail
+뱱	byailg
+뱲	byailm
+뱳	byailb
+뱴	byails
+뱵	byailt
+뱶	byailp
+뱷	byailh
+뱸	byaim
+뱹	byaib
+뱺	byaibs
+뱻	byais
+뱼	byaiss
+뱽	byaix
+뱾	byaij
+뱿	byaic
+벀	byaik
+벁	byait
+벂	byaip
+벃	byaih
+버	be	1300
+벅	beg	1300
+벆	begg
+벇	begs
+번	ben	1300
+벉	benj
+벊	benh
+벋	bed	1300
+벌	bel	1300
+벍	belg
+벎	belm	1300
+벏	belb
+벐	bels
+벑	belt
+벒	belp
+벓	belh
+범	bem	1300
+법	beb	1300
+벖	bebs
+벗	bes	1300
+벘	bess
+벙	bex	1300
+벚	bej	1300
+벛	bec
+벜	bek
+벝	bet
+벞	bep
+벟	beh
+베	bei	1300
+벡	beig	1300
+벢	beigg
+벣	beigs
+벤	bein	1300
+벥	beinj
+벦	beinh
+벧	beid	1300
+벨	beil	1300
+벩	beilg
+벪	beilm
+벫	beilb
+벬	beils
+벭	beilt
+벮	beilp
+벯	beilh
+벰	beim	1300
+벱	beib	1300
+벲	beibs
+벳	beis	1300
+벴	beiss	1300
+벵	beix	1300
+벶	beij
+벷	beic
+벸	beik
+벹	beit
+벺	beip
+벻	beih
+벼	bye	1300
+벽	byeg	1300
+벾	byegg
+벿	byegs
+변	byen	1300
+볁	byenj
+볂	byenh
+볃	byed
+별	byel	1300
+볅	byelg
+볆	byelm
+볇	byelb
+볈	byels
+볉	byelt
+볊	byelp
+볋	byelh
+볌	byem
+볍	byeb	1300
+볎	byebs
+볏	byes	1300
+볐	byess	1300
+병	byex	1300
+볒	byej
+볓	byec
+볔	byek
+볕	byet	1300
+볖	byep
+볗	byeh
+볘	byei	1300
+볙	byeig
+볚	byeigg
+볛	byeigs
+볜	byein	1300
+볝	byeinj
+볞	byeinh
+볟	byeid
+볠	byeil
+볡	byeilg
+볢	byeilm
+볣	byeilb
+볤	byeils
+볥	byeilt
+볦	byeilp
+볧	byeilh
+볨	byeim
+볩	byeib
+볪	byeibs
+볫	byeis
+볬	byeiss
+볭	byeix
+볮	byeij
+볯	byeic
+볰	byeik
+볱	byeit
+볲	byeip
+볳	byeih
+보	bo	1300
+복	bog	1300
+볶	bogg	1300
+볷	bogs
+본	bon	1300
+볹	bonj
+볺	bonh
+볻	bod
+볼	bol	1300
+볽	bolg
+볾	bolm
+볿	bolb
+#19
+봀	bols
+봁	bolt
+봂	bolp
+봃	bolh
+봄	bom	1300
+봅	bob	1300
+봆	bobs
+봇	bos	1300
+봈	boss
+봉	box	1300
+봊	boj
+봋	boc
+봌	bok
+봍	bot
+봎	bop
+봏	boh
+봐	boa	1300
+봑	boag
+봒	boagg
+봓	boags
+봔	boan	1300
+봕	boanj
+봖	boanh
+봗	boad
+봘	boal
+봙	boalg
+봚	boalm
+봛	boalb
+봜	boals
+봝	boalt
+봞	boalp
+봟	boalh
+봠	boam
+봡	boab
+봢	boabs
+봣	boas
+봤	boass	1300
+봥	boax
+봦	boaj
+봧	boac
+봨	boak
+봩	boat
+봪	boap
+봫	boah
+봬	boai	1300
+봭	boaig
+봮	boaigg
+봯	boaigs
+봰	boain
+봱	boainj
+봲	boainh
+봳	boaid
+봴	boail
+봵	boailg
+봶	boailm
+봷	boailb
+봸	boails
+봹	boailt
+봺	boailp
+봻	boailh
+봼	boaim
+봽	boaib
+봾	boaibs
+봿	boais
+뵀	boaiss	1300
+뵁	boaix
+뵂	boaij
+뵃	boaic
+뵄	boaik
+뵅	boait
+뵆	boaip
+뵇	boaih
+뵈	boi	1300
+뵉	boig	1300
+뵊	boigg
+뵋	boigs
+뵌	boin	1300
+뵍	boinj
+뵎	boinh
+뵏	boid
+뵐	boil	1300
+뵑	boilg
+뵒	boilm
+뵓	boilb
+뵔	boils
+뵕	boilt
+뵖	boilp
+뵗	boilh
+뵘	boim	1300
+뵙	boib	1300
+뵚	boibs
+뵛	bois
+뵜	boiss
+뵝	boix
+뵞	boij
+뵟	boic
+뵠	boik
+뵡	boit
+뵢	boip
+뵣	boih
+뵤	byo	1300
+뵥	byog
+뵦	byogg
+뵧	byogs
+뵨	byon	1300
+뵩	byonj
+뵪	byonh
+뵫	byod
+뵬	byol
+뵭	byolg
+뵮	byolm
+뵯	byolb
+뵰	byols
+뵱	byolt
+뵲	byolp
+뵳	byolh
+뵴	byom
+뵵	byob
+뵶	byobs
+뵷	byos
+뵸	byoss
+뵹	byox
+뵺	byoj
+뵻	byoc
+뵼	byok
+뵽	byot
+뵾	byop
+뵿	byoh
+부	bu	1300
+북	bug	1300
+붂	bugg
+붃	bugs
+분	bun	1300
+붅	bunj
+붆	bunh
+붇	bud	1300
+불	bul	1300
+붉	bulg	1300
+붊	bulm	1300
+붋	bulb
+붌	buls
+붍	bult
+붎	bulp
+붏	bulh
+붐	bum	1300
+붑	bub	1300
+붒	bubs
+붓	bus	1300
+붔	buss
+붕	bux	1300
+붖	buj
+붗	buc
+붘	buk
+붙	but	1300
+붚	bup	1300
+붛	buh
+붜	buo	1300
+붝	buog
+붞	buogg
+붟	buogs
+붠	buon
+붡	buonc
+붢	buonh
+붣	buod
+붤	buol	1300
+붥	buolg
+붦	buolm
+붧	buolb
+붨	buols
+붩	buolt
+붪	buolp
+붫	buolh
+붬	buom
+붭	buob
+붮	buobs
+붯	buos
+붰	buoss	1300
+붱	buox
+붲	buoj
+붳	buoc
+붴	buok
+붵	buot
+붶	buop
+붷	buoh
+붸	buei	1300
+붹	bueig
+붺	bueigg
+붻	bueigs
+붼	buein
+붽	bueinj
+붾	bueinh
+붿	bueid
+뷀	bueil
+뷁	bueilg
+뷂	bueilm
+뷃	bueilb
+뷄	bueils
+뷅	bueilt
+뷆	bueilp
+뷇	bueilh
+뷈	bueim
+뷉	bueib
+뷊	bueibs
+뷋	bueis
+뷌	bueiss
+뷍	bueix
+뷎	bueij
+뷏	bueic
+뷐	bueik
+뷑	bueit
+뷒	bueip
+뷓	bueih
+뷔	bui	1300
+뷕	buig	1300
+뷖	buigg
+뷗	buigs
+뷘	buin	1300
+뷙	buinj
+뷚	buinh
+뷛	buid
+뷜	buil	1300
+뷝	builg
+뷞	builm
+뷟	builb
+뷠	buils
+뷡	built
+뷢	builp
+뷣	builh
+뷤	buim
+뷥	buib
+뷦	buibs
+뷧	buis
+뷨	buiss
+뷩	buix	1300
+뷪	buij
+뷫	buic
+뷬	buik
+뷭	buit
+뷮	buip
+뷯	buih
+뷰	byu	1300
+뷱	byug
+뷲	byugg
+뷳	byugs
+뷴	byun	1300
+뷵	byunj
+뷶	byunh
+뷷	byud
+뷸	byul	1300
+뷹	byulg
+뷺	byulm
+뷻	byulb
+뷼	byuls
+뷽	byult
+뷾	byulp
+뷿	byulh
+#20
+븀	byum	1300
+븁	byub
+븂	byubs
+븃	byus	1300
+븄	byuss
+븅	byux	1300
+븆	byuj
+븇	byuc
+븈	byuk
+븉	byut
+븊	byup
+븋	byuh
+브	bw	1300
+븍	bwg	1300
+븎	bwgg
+븏	bwgs
+븐	bwn	1300
+븑	bwnj
+븒	bwnh
+븓	bwd
+블	bwl	1300
+븕	bwlg
+븖	bwlm
+븗	bwlb
+븘	bwls
+븙	bwlt
+븚	bwlp
+븛	bwlh
+븜	bwm	1300
+븝	bwb	1300
+븞	bwbs
+븟	bws	1300
+븠	bwss
+븡	bwx
+븢	bwj
+븣	bwc
+븤	bwk
+븥	bwt
+븦	bwp
+븧	bwh
+븨	bwi
+븩	bwig
+븪	bwigg
+븫	bwigs
+븬	bwin
+븭	bwinj
+븮	bwinh
+븯	bwid
+븰	bwil
+븱	bwilg
+븲	bwilm
+븳	bwilb
+븴	bwils
+븵	bwilt
+븶	bwilp
+븷	bwilh
+븸	bwim
+븹	bwib
+븺	bwibs
+븻	bwis
+븼	bwiss
+븽	bwix
+븾	bwij
+븿	bwic
+빀	bwik
+빁	bwit
+빂	bwip
+빃	bwih
+비	bi	1300
+빅	big	1300
+빆	bigg
+빇	bigs
+빈	bin	1300
+빉	binj
+빊	binh
+빋	bid
+빌	bil	1300
+빍	bilg
+빎	bilm	1300
+빏	bilb
+빐	bils
+빑	bilt
+빒	bilp
+빓	bilh
+빔	bim	1300
+빕	bib	1300
+빖	bibs
+빗	bis	1300
+빘	biss
+빙	bix	1300
+빚	bij	1300
+빛	bic	1300
+빜	bik
+빝	bit
+빞	bip
+빟	bih
+빠	bba	1300
+빡	bbag	1300
+빢	bbagg
+빣	bbags
+빤	bban	1300
+빥	bbanj
+빦	bbanh
+빧	bbad
+빨	bbal	1300
+빩	bbalg
+빪	bbalm	1300
+빫	bbalb
+빬	bbals
+빭	bbalt
+빮	bbalp
+빯	bbalh
+빰	bbam	1300
+빱	bbab	1300
+빲	bbabs
+빳	bbas	1300
+빴	bbass	1300
+빵	bbax	1300
+빶	bbaj
+빷	bbac
+빸	bbak
+빹	bbat
+빺	bbap
+빻	bbah	1300
+빼	bbai	1300
+빽	bbaig	1300
+빾	bbaigg
+빿	bbaigs
+뺀	bbain	1300
+뺁	bbainj
+뺂	bbainh
+뺃	bbaid
+뺄	bbail	1300
+뺅	bbailg
+뺆	bbailm
+뺇	bbailb
+뺈	bbails
+뺉	bbailt
+뺊	bbailp
+뺋	bbailh
+뺌	bbaim	1300
+뺍	bbaib	1300
+뺎	bbaibs
+뺏	bbais	1300
+뺐	bbaiss	1300
+뺑	bbaix	1300
+뺒	bbaij
+뺓	bbaic
+뺔	bbaik
+뺕	bbait
+뺖	bbaip
+뺗	bbaih
+뺘	bbya	1300
+뺙	bbyag	1300
+뺚	bbyagg
+뺛	bbyags
+뺜	bbyan
+뺝	bbyanj
+뺞	bbyanh
+뺟	bbyad
+뺠	bbyal
+뺡	bbyalg
+뺢	bbyalm
+뺣	bbyalb
+뺤	bbyals
+뺥	bbyalt
+뺦	bbyalp
+뺧	bbyalh
+뺨	bbyam	1300
+뺩	bbyab
+뺪	bbyabs
+뺫	bbyas
+뺬	bbyass
+뺭	bbyax
+뺮	bbyaj
+뺯	bbyac
+뺰	bbyak
+뺱	bbyat
+뺲	bbyap
+뺳	bbyah
+뺴	wbai
+뺵	wbaig
+뺶	wbaigg
+뺷	wbaigs
+뺸	wbain
+뺹	wbainj
+뺺	wbainh
+뺻	wbaid
+뺼	wbail
+뺽	wbailg
+뺾	wbailm
+뺿	wbailb
+뻀	wbails
+뻁	wbailt
+뻂	wbailp
+뻃	wbailh
+뻄	wbaim
+뻅	wbaib
+뻆	wbaibs
+뻇	wbais
+뻈	wbaiss
+뻉	wbaix
+뻊	wbaij
+뻋	wbaic
+뻌	wbaik
+뻍	wbait
+뻎	wbaip
+뻏	wbaih
+뻐	bbe	1300
+뻑	bbeg	1300
+뻒	bbegg
+뻓	bbegs
+뻔	bben	1300
+뻕	bbenj
+뻖	bbenh
+뻗	bbed	1300
+뻘	bbel	1300
+뻙	bbelg
+뻚	bbelm
+뻛	bbelb
+뻜	bbels
+뻝	bbelt
+뻞	bbelp
+뻟	bbelh
+뻠	bbem	1300
+뻡	bbeb
+뻢	bbebs
+뻣	bbes	1300
+뻤	bbess	1300
+뻥	bbex	1300
+뻦	bbej
+뻧	bbec
+뻨	bbek
+뻩	bbet
+뻪	bbep
+뻫	bbeh
+뻬	bbei	1300
+뻭	bbeig
+뻮	bbeigg
+뻯	bbeigs
+뻰	bbein
+뻱	bbeinj
+뻲	bbeinh
+뻳	bbeid
+뻴	bbeil
+뻵	bbeilg
+뻶	bbeilm
+뻷	bbeilb
+뻸	bbeils
+뻹	bbeilt
+뻺	bbeilp
+뻻	bbeilh
+뻼	bbeim
+뻽	bbeib
+뻾	bbeibs
+뻿	bbeis
+#21
+뼀	bbeiss
+뼁	bbeix	1300
+뼂	bbeij
+뼃	bbeic
+뼄	bbeik
+뼅	bbeit
+뼆	bbeip
+뼇	bbeih
+뼈	bbye	1300
+뼉	bbyeg	1300
+뼊	bbyegg
+뼋	bbyegs
+뼌	bbyen
+뼍	bbyenj
+뼎	bbyenh
+뼏	bbyed
+뼐	bbyel
+뼑	bbyelg
+뼒	bbyelm
+뼓	bbyelb
+뼔	bbyels
+뼕	bbyelt
+뼖	bbyelp
+뼗	bbyelh
+뼘	bbyem	1300
+뼙	bbyeb	1300
+뼚	bbyebs
+뼛	bbyes	1300
+뼜	bbyess	1300
+뼝	bbyex	1300
+뼞	bbyej
+뼟	bbyec
+뼠	bbyek
+뼡	bbyet
+뼢	bbyep
+뼣	bbyeh
+뼤	wbei
+뼥	wbeig
+뼦	wbeigg
+뼧	wbeigs
+뼨	wbein
+뼩	wbeinj
+뼪	wbeinh
+뼫	wbeid
+뼬	wbeil
+뼭	wbeilg
+뼮	wbeilm
+뼯	wbeilb
+뼰	wbeils
+뼱	wbeilt
+뼲	wbeilp
+뼳	wbeilh
+뼴	wbeim
+뼵	wbeib
+뼶	wbeibs
+뼷	wbeis
+뼸	wbeiss
+뼹	wbeix
+뼺	wbeij
+뼻	wbeic
+뼼	wbeik
+뼽	wbeit
+뼾	wbeip
+뼿	wbeih
+뽀	bbo	1300
+뽁	bbog	1300
+뽂	bbogg
+뽃	bbogs
+뽄	bbon	1300
+뽅	bbonj
+뽆	bbonh
+뽇	bbod
+뽈	bbol	1300
+뽉	bbolg
+뽊	bbolm
+뽋	bbolb
+뽌	bbols
+뽍	bbolt
+뽎	bbolp
+뽏	bbolh
+뽐	bbom	1300
+뽑	bbob	1300
+뽒	bbobs
+뽓	bbos
+뽔	bboss
+뽕	bbox	1300
+뽖	bboj
+뽗	bboc
+뽘	bbok
+뽙	bbot
+뽚	bbop
+뽛	bboh
+뽜	bboa
+뽝	bboag
+뽞	bboagg
+뽟	bboags
+뽠	bboan
+뽡	bboanj
+뽢	bboanh
+뽣	bboad
+뽤	bboal
+뽥	bboalg
+뽦	bboalm
+뽧	bboalb
+뽨	bboals
+뽩	bboalt
+뽪	bboalp
+뽫	bboalh
+뽬	bboam
+뽭	bboab
+뽮	bboabs
+뽯	bboas
+뽰	bboass
+뽱	bboax
+뽲	bboaj
+뽳	bboac
+뽴	bboak
+뽵	bboat
+뽶	bboap
+뽷	bboah
+뽸	bboai
+뽹	bboaig
+뽺	bboaigg
+뽻	bboaigs
+뽼	bboain
+뽽	bboainj
+뽾	bboainh
+뽿	bboaid
+뾀	bboail
+뾁	bboailg
+뾂	bboailm
+뾃	bboailb
+뾄	bboails
+뾅	bboailt
+뾆	bboailp
+뾇	bboailh
+뾈	bboaim
+뾉	bboaib
+뾊	bboaibs
+뾋	bboais
+뾌	bboaiss
+뾍	bboaix
+뾎	bboaij
+뾏	bboaic
+뾐	bboaik
+뾑	bboait
+뾒	bboaip
+뾓	bboaih
+뾔	bboi	1300
+뾕	bboig
+뾖	bboigg
+뾗	bboigs
+뾘	bboin
+뾙	bboinj
+뾚	bboinh
+뾛	bboid
+뾜	bboil
+뾝	bboilg
+뾞	bboilm
+뾟	bboilb
+뾠	bboils
+뾡	bboilt
+뾢	bboilp
+뾣	bboilh
+뾤	bboim
+뾥	bboib
+뾦	bboibs
+뾧	bbois
+뾨	bboiss
+뾩	bboix
+뾪	bboij
+뾫	bboic
+뾬	bboik
+뾭	bboit
+뾮	bboip
+뾯	bboih
+뾰	bbyo	1300
+뾱	bbyog
+뾲	bbyogg
+뾳	bbyogs
+뾴	bbyon
+뾵	bbyonj
+뾶	bbyonh
+뾷	bbyod
+뾸	bbyol
+뾹	bbyolg
+뾺	bbyolm
+뾻	bbyolb
+뾼	bbyols
+뾽	bbyolt
+뾾	bbyolp
+뾿	bbyolh
+뿀	bbyom
+뿁	bbyob
+뿂	bbyobs
+뿃	bbyos
+뿄	bbyoss
+뿅	bbyox	1300
+뿆	bbyoj
+뿇	bbyoc
+뿈	bbyok
+뿉	bbyot
+뿊	bbyop
+뿋	bbyoh
+뿌	bbu	1300
+뿍	bbug	1300
+뿎	bbugg
+뿏	bbugs
+뿐	bbun	1300
+뿑	bbunj
+뿒	bbunh
+뿓	bbud
+뿔	bbul	1300
+뿕	bbulg
+뿖	bbulm
+뿗	bbulb
+뿘	bbuls
+뿙	bbult
+뿚	bbulp
+뿛	bbulh
+뿜	bbum	1300
+뿝	bbub
+뿞	bbubs
+뿟	bbus	1300
+뿠	bbuss
+뿡	bbux	1300
+뿢	bbuj
+뿣	bbuc
+뿤	bbuk
+뿥	bbut
+뿦	bbup
+뿧	bbuh
+뿨	bbuo
+뿩	bbuog
+뿪	bbuogg
+뿫	bbuogs
+뿬	bbuon
+뿭	bbuonj
+뿮	bbuonh
+뿯	bbuod
+뿰	bbuol
+뿱	bbuolg
+뿲	bbuolm
+뿳	bbuolb
+뿴	bbuols
+뿵	bbuolt
+뿶	bbuolp
+뿷	bbuolh
+뿸	bbuom
+뿹	bbuob
+뿺	bbuobs
+뿻	bbuos
+뿼	bbuoss
+뿽	bbuox
+뿾	bbuoj
+뿿	bbuoc
+#22
+쀀	bbuok
+쀁	bbuot
+쀂	bbuop
+쀃	bbuoh
+쀄	bbuei
+쀅	bbueig
+쀆	bbueigg
+쀇	bbueigs
+쀈	bbuein
+쀉	bbueinj
+쀊	bbueinh
+쀋	bbueid
+쀌	bbueil
+쀍	bbueilg
+쀎	bbueilm
+쀏	bbueilb
+쀐	bbueils
+쀑	bbueilt
+쀒	bbueilp
+쀓	bbueilh
+쀔	bbueim
+쀕	bbueib
+쀖	bbueibs
+쀗	bbueis
+쀘	bbueiss
+쀙	bbueix
+쀚	bbueij
+쀛	bbueic
+쀜	bbueik
+쀝	bbueit
+쀞	bbueip
+쀟	bbueih
+쀠	bbui
+쀡	bbuig
+쀢	bbuigg
+쀣	bbuigs
+쀤	bbuin
+쀥	bbuinj
+쀦	bbuinh
+쀧	bbuid
+쀨	bbuil
+쀩	bbuilg
+쀪	bbuilm
+쀫	bbuilb
+쀬	bbuils
+쀭	bbuilt
+쀮	bbuilp
+쀯	bbuilh
+쀰	bbuim
+쀱	bbuib
+쀲	bbuibs
+쀳	bbuis
+쀴	bbuiss
+쀵	bbuix
+쀶	bbuij
+쀷	bbuic
+쀸	bbuik
+쀹	bbuit
+쀺	bbuip
+쀻	bbuih
+쀼	bbyu	1300
+쀽	bbyug
+쀾	bbyugg
+쀿	bbyugs
+쁀	bbyun
+쁁	bbyunj
+쁂	bbyunh
+쁃	bbyud
+쁄	bbyul
+쁅	bbyulg
+쁆	bbyulm
+쁇	bbyulb
+쁈	bbyuls
+쁉	bbyult
+쁊	bbyulp
+쁋	bbyulh
+쁌	bbyum
+쁍	bbyub
+쁎	bbyubs
+쁏	bbyus
+쁐	bbyuss
+쁑	bbyux	1300
+쁒	bbyuj
+쁓	bbyuc
+쁔	bbyuk
+쁕	bbyut
+쁖	bbyup
+쁗	bbyuh
+쁘	bbw	1300
+쁙	bbwg
+쁚	bbwgg
+쁛	bbwgs
+쁜	bbwn	1300
+쁝	bbwnj
+쁞	bbwnh
+쁟	bbwd
+쁠	bbwl	1300
+쁡	bbwlg
+쁢	bbwlm
+쁣	bbwlb
+쁤	bbwls
+쁥	bbwlt
+쁦	bbwlp
+쁧	bbwlh
+쁨	bbwm	1300
+쁩	bbwb	1300
+쁪	bbwbs
+쁫	bbws
+쁬	bbwss
+쁭	bbwx
+쁮	bbwj
+쁯	bbwc
+쁰	bbwk
+쁱	bbwt
+쁲	bbwp
+쁳	bbwh
+쁴	bbwi
+쁵	bbwig
+쁶	bbwigg
+쁷	bbwigs
+쁸	bbwin
+쁹	bbwinj
+쁺	bbwinh
+쁻	bbwid
+쁼	bbwil
+쁽	bbwilg
+쁾	bbwilm
+쁿	bbwilb
+삀	bbwils
+삁	bbwilt
+삂	bbwilp
+삃	bbwilh
+삄	bbwim
+삅	bbwib
+삆	bbwibs
+삇	bbwis
+삈	bbwiss
+삉	bbwix
+삊	bbwij
+삋	bbwic
+삌	bbwik
+삍	bbwit
+삎	bbwip
+삏	bbwih
+삐	bbi	1300
+삑	bbig	1300
+삒	bbigg
+삓	bbigs
+삔	bbin	1300
+삕	bbinj
+삖	bbinh
+삗	bbid
+삘	bbil	1300
+삙	bbilg
+삚	bbilm
+삛	bbilb
+삜	bbils
+삝	bbilt
+삞	bbilp
+삟	bbilh
+삠	bbim	1300
+삡	bbib	1300
+삢	bbibs
+삣	bbis	1300
+삤	bbiss
+삥	bbix	1300
+삦	bbij
+삧	bbic
+삨	bbik
+삩	bbit
+삪	bbip
+삫	bbih
+사	sa	1300
+삭	sag	1300
+삮	sagg
+삯	sags	1300
+산	san	1300
+삱	sanj
+삲	sanh
+삳	sad	1300
+살	sal	1300
+삵	salg	1300
+삶	salm	1300
+삷	salb
+삸	sals
+삹	salt
+삺	salp
+삻	salh
+삼	sam	1300
+삽	sab	1300
+삾	sabs
+삿	sas	1300
+샀	sass	1300
+상	sax	1300
+샂	saj
+샃	sac
+샄	sak
+샅	sat	1300
+샆	sap
+샇	sah
+새	sai	1300
+색	saig	1300
+샊	saigg
+샋	saigs
+샌	sain	1300
+샍	sainj
+샎	sainh
+샏	said
+샐	sail	1300
+샑	sailg
+샒	sailm
+샓	sailb
+샔	sails
+샕	sailt
+샖	sailp
+샗	sailh
+샘	saim	1300
+샙	saib	1300
+샚	saibs
+샛	sais	1300
+샜	saiss	1300
+생	saix	1300
+샞	saij
+샟	saic
+샠	saik
+샡	sait
+샢	saip
+샣	saih
+샤	sya	1300
+샥	syag	1300
+샦	syagg
+샧	syags
+샨	syan	1300
+샩	syanj
+샪	syanh
+샫	syad
+샬	syal	1300
+샭	syalg
+샮	syalm
+샯	syalb
+샰	syals
+샱	syalt
+샲	syalp
+샳	syalh
+샴	syam	1300
+샵	syab	1300
+샶	syabs
+샷	syas	1300
+샸	syass
+샹	syax	1300
+샺	syaj
+샻	syac
+샼	syak
+샽	syat
+샾	syap
+샿	syah
+#23
+섀	syai	1300
+섁	syaig
+섂	syaigg
+섃	syaigs
+섄	syain	1300
+섅	syainj
+섆	syainh
+섇	syaid
+섈	syail	1300
+섉	syailg
+섊	syailm
+섋	syailb
+섌	syails
+섍	syailt
+섎	syailp
+섏	syailh
+섐	syaim	1300
+섑	syaib
+섒	syaibs
+섓	syais
+섔	syaiss
+섕	syaix	1300
+섖	syaij
+섗	syaic
+섘	syaik
+섙	syait
+섚	syaip
+섛	syaih
+서	se	1300
+석	seg	1300
+섞	segg	1300
+섟	segs	1300
+선	sen	1300
+섡	senj
+섢	senh
+섣	sed	1300
+설	sel	1300
+섥	selg
+섦	selm	1300
+섧	selb	1300
+섨	sels
+섩	selt
+섪	selp
+섫	selh
+섬	sem	1300
+섭	seb	1300
+섮	sebs
+섯	ses	1300
+섰	sess	1300
+성	sex	1300
+섲	sej
+섳	sec
+섴	sek
+섵	set
+섶	sep	1300
+섷	seh
+세	sei	1300
+섹	seig	1300
+섺	seigg
+섻	seigs
+센	sein	1300
+섽	seinj
+섾	seinh
+섿	seid
+셀	seil	1300
+셁	seilg
+셂	seilm
+셃	seilb
+셄	seils
+셅	seilt
+셆	seilp
+셇	seilh
+셈	seim	1300
+셉	seib	1300
+셊	seibs
+셋	seis	1300
+셌	seiss	1300
+셍	seix	1300
+셎	seij
+셏	seic
+셐	seik
+셑	seit
+셒	seip
+셓	seih
+셔	sye	1300
+셕	syeg	1300
+셖	syegg
+셗	syegs
+션	syen	1300
+셙	syenj
+셚	syenh
+셛	syed
+셜	syel	1300
+셝	syelg
+셞	syelm
+셟	syelb
+셠	syels
+셡	syelt
+셢	syelp
+셣	syelh
+셤	syem	1300
+셥	syeb	1300
+셦	syebs
+셧	syes	1300
+셨	syess	1300
+셩	syex	1300
+셪	syej
+셫	syec
+셬	syek
+셭	syet
+셮	syep
+셯	syeh
+셰	syei	1300
+셱	syeig
+셲	syeigg
+셳	syeigs
+셴	syein	1300
+셵	syeinj
+셶	syeinh
+셷	syeid
+셸	syeil	1300
+셹	syeilg
+셺	syeilm
+셻	syeilb
+셼	syeils
+셽	syeilt
+셾	syeilp
+셿	syeilh
+솀	syeim
+솁	syeib
+솂	syeibs
+솃	syeis
+솄	syeiss
+솅	syeix	1300
+솆	syeij
+솇	syeic
+솈	syeik
+솉	syeit
+솊	syeip
+솋	syeih
+소	so	1300
+속	sog	1300
+솎	sogg	1300
+솏	sogs
+손	son	1300
+솑	sonj
+솒	sonh
+솓	sod
+솔	sol	1300
+솕	solg
+솖	solm	1300
+솗	solb
+솘	sols
+솙	solt
+솚	solp
+솛	solh
+솜	som	1300
+솝	sob	1300
+솞	sobs
+솟	sos	1300
+솠	soss
+송	sox	1300
+솢	soj
+솣	soc
+솤	sok
+솥	sot	1300
+솦	sop
+솧	soh
+솨	soa	1300
+솩	soag	1300
+솪	soagg
+솫	soags
+솬	soan	1300
+솭	soanj
+솮	soanh
+솯	soad
+솰	soal	1300
+솱	soalg
+솲	soalm
+솳	soalb
+솴	soals
+솵	soalt
+솶	soalp
+솷	soalh
+솸	soam
+솹	soab
+솺	soabs
+솻	soas
+솼	soass
+솽	soax	1300
+솾	soaj
+솿	soac
+쇀	soak
+쇁	soat
+쇂	soap
+쇃	soah
+쇄	soai	1300
+쇅	soaig
+쇆	soaigg
+쇇	soaigs
+쇈	soain	1300
+쇉	soainj
+쇊	soainh
+쇋	soaid
+쇌	soail	1300
+쇍	soailg
+쇎	soailm
+쇏	soailb
+쇐	soails
+쇑	soailt
+쇒	soailp
+쇓	soailh
+쇔	soaim	1300
+쇕	soaib
+쇖	soaibs
+쇗	soais	1300
+쇘	soaiss	1300
+쇙	soaix
+쇚	soaij
+쇛	soaic
+쇜	soaik
+쇝	soait
+쇞	soaip
+쇟	soaih
+쇠	soi	1300
+쇡	soig
+쇢	soigg
+쇣	soigs
+쇤	soin	1300
+쇥	soinj
+쇦	soinh
+쇧	soid
+쇨	soil	1300
+쇩	soilg
+쇪	soilm
+쇫	soilb
+쇬	soils
+쇭	soilt
+쇮	soilp
+쇯	soilh
+쇰	soim	1300
+쇱	soib	1300
+쇲	soibs
+쇳	sois	1300
+쇴	soiss
+쇵	soix
+쇶	soij
+쇷	soic
+쇸	soik
+쇹	soit
+쇺	soip
+쇻	soih
+쇼	syo	1300
+쇽	syog	1300
+쇾	syogg
+쇿	syogs
+#24
+숀	syon	1300
+숁	syonj
+숂	syonh
+숃	syod
+숄	syol	1300
+숅	syolg
+숆	syolm
+숇	syolb
+숈	syols
+숉	syolt
+숊	syolp
+숋	syolh
+숌	syom	1300
+숍	syob	1300
+숎	syobs
+숏	syos	1300
+숐	syoss
+숑	syox	1300
+숒	syoj
+숓	syoc
+숔	syok
+숕	syot
+숖	syop
+숗	syoh
+수	su	1300
+숙	sug	1300
+숚	sugg
+숛	sugs
+순	sun	1300
+숝	sunj
+숞	sunh
+숟	sud	1300
+술	sul	1300
+숡	sulg
+숢	sulm
+숣	sulb
+숤	suls
+숥	sult
+숦	sulp
+숧	sulh
+숨	sum	1300
+숩	sub	1300
+숪	subs
+숫	sus	1300
+숬	suss
+숭	sux	1300
+숮	suj
+숯	suc	1300
+숰	suk
+숱	sut	1300
+숲	sup	1300
+숳	suh
+숴	suo	1300
+숵	suog
+숶	suogg
+숷	suogs
+숸	suon
+숹	suonj
+숺	suonh
+숻	suod
+숼	suol
+숽	suolg
+숾	suolm
+숿	suolb
+쉀	suols
+쉁	suolt
+쉂	suolp
+쉃	suolh
+쉄	suom
+쉅	suob
+쉆	suobs
+쉇	suos
+쉈	suoss	1300
+쉉	suox
+쉊	suoj
+쉋	suoc
+쉌	suok
+쉍	suot
+쉎	suop
+쉏	suoh
+쉐	suei	1300
+쉑	sueig	1300
+쉒	sueigg
+쉓	sueigs
+쉔	suein	1300
+쉕	sueinj
+쉖	sueinh
+쉗	sueid
+쉘	sueil	1300
+쉙	sueilg
+쉚	sueilm
+쉛	sueilb
+쉜	sueils
+쉝	sueilt
+쉞	sueilp
+쉟	sueilh
+쉠	sueim	1300
+쉡	sueib
+쉢	sueibs
+쉣	sueis
+쉤	sueiss
+쉥	sueix	1300
+쉦	sueij
+쉧	sueic
+쉨	sueik
+쉩	sueit
+쉪	sueip
+쉫	sueih
+쉬	sui	1300
+쉭	suig	1300
+쉮	suigg
+쉯	suigs
+쉰	suin	1300
+쉱	suinj
+쉲	suinh
+쉳	suid
+쉴	suil	1300
+쉵	suilg
+쉶	suilm
+쉷	suilb
+쉸	suils
+쉹	suilt
+쉺	suilp
+쉻	suilh
+쉼	suim	1300
+쉽	suib	1300
+쉾	suibs
+쉿	suis	1300
+슀	suiss
+슁	suix	1300
+슂	suij
+슃	suic
+슄	suik
+슅	suit
+슆	suip
+슇	suih
+슈	syu	1300
+슉	syug	1300
+슊	syugg
+슋	syugs
+슌	syun
+슍	syunj
+슎	syunh
+슏	syud
+슐	syul	1300
+슑	syulg
+슒	syulm
+슓	syulb
+슔	syuls
+슕	syult
+슖	syulp
+슗	syulh
+슘	syum	1300
+슙	syub
+슚	syubs
+슛	syus	1300
+슜	syuss
+슝	syux	1300
+슞	syuj
+슟	syuc
+슠	syuk
+슡	syut
+슢	syup
+슣	syuh
+스	sw	1300
+슥	swg	1300
+슦	swgg
+슧	swgs
+슨	swn	1300
+슩	swnj
+슪	swnh
+슫	swd
+슬	swl	1300
+슭	swlg	1300
+슮	swlm
+슯	swlb
+슰	swls
+슱	swlt
+슲	swlp
+슳	swlh
+슴	swm	1300
+습	swb	1300
+슶	swbs
+슷	sws	1300
+슸	swss
+승	swx	1300
+슺	swj
+슻	swc
+슼	swk
+슽	swt
+슾	swp
+슿	swh
+싀	swi
+싁	swig
+싂	swigg
+싃	swigs
+싄	swin
+싅	swinj
+싆	swinh
+싇	swid
+싈	swil
+싉	swilg
+싊	swilm
+싋	swilb
+싌	swils
+싍	swilt
+싎	swilp
+싏	swilh
+싐	swim
+싑	swib
+싒	swibs
+싓	swis
+싔	swiss
+싕	swix
+싖	swij
+싗	swic
+싘	swik
+싙	swit
+싚	swip
+싛	swih
+시	si	1300
+식	sig	1300
+싞	sigg
+싟	sigs
+신	sin	1300
+싡	sinj
+싢	sinh
+싣	sid	1300
+실	sil	1300
+싥	silg
+싦	silm
+싧	silb
+싨	sils
+싩	silt
+싪	silp
+싫	silh	1300
+심	sim	1300
+십	sib	1300
+싮	sibs
+싯	sis	1300
+싰	siss
+싱	six	1300
+싲	sij
+싳	sic
+싴	sik
+싵	sit
+싶	sip	1300
+싷	sih
+싸	ssa	1300
+싹	ssag	1300
+싺	ssagg
+싻	ssags	1300
+싼	ssan	1300
+싽	ssanj
+싾	ssanh
+싿	ssad
+#25
+쌀	ssal	1300
+쌁	ssalg
+쌂	ssalm
+쌃	ssalb
+쌄	ssals
+쌅	ssalt
+쌆	ssalp
+쌇	ssalh
+쌈	ssam	1300
+쌉	ssab	1300
+쌊	ssabs
+쌋	ssas
+쌌	ssass	1300
+쌍	ssax	1300
+쌎	ssaj
+쌏	ssac
+쌐	ssak
+쌑	ssat
+쌒	ssap
+쌓	ssah	1300
+쌔	ssai	1300
+쌕	ssaig	1300
+쌖	ssaigg
+쌗	ssaigs
+쌘	ssain	1300
+쌙	ssainj
+쌚	ssainh
+쌛	ssaid
+쌜	ssail	1300
+쌝	ssailg
+쌞	ssailm
+쌟	ssailb
+쌠	ssails
+쌡	ssailt
+쌢	ssailp
+쌣	ssailh
+쌤	ssaim	1300
+쌥	ssaib	1300
+쌦	ssaibs
+쌧	ssais
+쌨	ssaiss	1300
+쌩	ssaix	1300
+쌪	ssaij
+쌫	ssaic
+쌬	ssaik
+쌭	ssait
+쌮	ssaip
+쌯	ssaih
+쌰	ssya
+쌱	ssyag
+쌲	ssyagg
+쌳	ssyags
+쌴	ssyan
+쌵	ssyanj
+쌶	ssyanh
+쌷	ssyad
+쌸	ssyal
+쌹	ssyalg
+쌺	ssyalm
+쌻	ssyalb
+쌼	ssyals
+쌽	ssyalt
+쌾	ssyalp
+쌿	ssyalh
+썀	ssyam
+썁	ssyab
+썂	ssyabs
+썃	ssyas
+썄	ssyass
+썅	ssyax	1300
+썆	ssyaj
+썇	ssyac
+썈	ssyak
+썉	ssyat
+썊	ssyap
+썋	ssyah
+썌	wsai
+썍	wsaig
+썎	wsaigg
+썏	wsaigs
+썐	wsain
+썑	wsainj
+썒	wsainh
+썓	wsaid
+썔	wsail
+썕	wsailg
+썖	wsailm
+썗	wsailb
+썘	wsails
+썙	wsailt
+썚	wsailp
+썛	wsailh
+썜	wsaim
+썝	wsaib
+썞	wsaibs
+썟	wsais
+썠	wsaiss
+썡	wsaix
+썢	wsaij
+썣	wsaic
+썤	wsaik
+썥	wsait
+썦	wsaip
+썧	wsaih
+써	sse	1300
+썩	sseg	1300
+썪	ssegg
+썫	ssegs
+썬	ssen	1300
+썭	ssenj
+썮	ssenh
+썯	ssed
+썰	ssel	1300
+썱	sselg
+썲	sselm	1300
+썳	sselb
+썴	ssels
+썵	sselt
+썶	sselp
+썷	sselh
+썸	ssem	1300
+썹	sseb	1300
+썺	ssebs
+썻	sses
+썼	ssess	1300
+썽	ssex	1300
+썾	ssej
+썿	ssec
+쎀	ssek
+쎁	sset
+쎂	ssep
+쎃	sseh
+쎄	ssei	1300
+쎅	sseig
+쎆	sseigg
+쎇	sseigs
+쎈	ssein	1300
+쎉	sseinj
+쎊	sseinh
+쎋	sseid
+쎌	sseil	1300
+쎍	sseilg
+쎎	sseilm
+쎏	sseilb
+쎐	sseils
+쎑	sseilt
+쎒	sseilp
+쎓	sseilh
+쎔	sseim
+쎕	sseib
+쎖	sseibs
+쎗	sseis
+쎘	sseiss
+쎙	sseix
+쎚	sseij
+쎛	sseic
+쎜	sseik
+쎝	sseit
+쎞	sseip
+쎟	sseih
+쎠	ssye
+쎡	ssyeg
+쎢	ssyegg
+쎣	ssyegs
+쎤	ssyen
+쎥	ssyenj
+쎦	ssyenh
+쎧	ssyed
+쎨	ssyel
+쎩	ssyelg
+쎪	ssyelm
+쎫	ssyelb
+쎬	ssyels
+쎭	ssyelt
+쎮	ssyelp
+쎯	ssyelh
+쎰	ssyem
+쎱	ssyeb
+쎲	ssyebs
+쎳	ssyes
+쎴	ssyess
+쎵	ssyex
+쎶	ssyej
+쎷	ssyec
+쎸	ssyek
+쎹	ssyet
+쎺	ssyep
+쎻	ssyeh
+쎼	wsei
+쎽	wseig
+쎾	wseigg
+쎿	wseigs
+쏀	wsein	1300
+쏁	wseinj
+쏂	wseinh
+쏃	wseid
+쏄	wseil
+쏅	wseilg
+쏆	wseilm
+쏇	wseilb
+쏈	wseils
+쏉	wseilt
+쏊	wseilp
+쏋	wseilh
+쏌	wseim
+쏍	wseib
+쏎	wseibs
+쏏	wseis
+쏐	wseiss
+쏑	wseix
+쏒	wseij
+쏓	wseic
+쏔	wseik
+쏕	wseit
+쏖	wseip
+쏗	wseih
+쏘	sso	1300
+쏙	ssog	1300
+쏚	ssogg
+쏛	ssogs
+쏜	sson	1300
+쏝	ssonj
+쏞	ssonh
+쏟	ssod	1300
+쏠	ssol	1300
+쏡	ssolg
+쏢	ssolm	1300
+쏣	ssolb
+쏤	ssols
+쏥	ssolt
+쏦	ssolp
+쏧	ssolh
+쏨	ssom	1300
+쏩	ssob	1300
+쏪	ssobs
+쏫	ssos
+쏬	ssoss
+쏭	ssox	1300
+쏮	ssoj
+쏯	ssoc
+쏰	ssok
+쏱	ssot
+쏲	ssop
+쏳	ssoh
+쏴	ssoa	1300
+쏵	ssoag	1300
+쏶	ssoagg
+쏷	ssoags
+쏸	ssoan	1300
+쏹	ssoanj
+쏺	ssoanh
+쏻	ssoad
+쏼	ssoal
+쏽	ssoalg
+쏾	ssoalm
+쏿	ssoalb
+#26
+쐀	ssoals
+쐁	ssoalt
+쐂	ssoalp
+쐃	ssoalh
+쐄	ssoam
+쐅	ssoab
+쐆	ssoabs
+쐇	ssoas
+쐈	ssoass	1300
+쐉	ssoax
+쐊	ssoaj
+쐋	ssoac
+쐌	ssoak
+쐍	ssoat
+쐎	ssoap
+쐏	ssoah
+쐐	ssoai	1300
+쐑	ssoaig
+쐒	ssoaigg
+쐓	ssoaigs
+쐔	ssoain
+쐕	ssoainj
+쐖	ssoainh
+쐗	ssoaid
+쐘	ssoail
+쐙	ssoailg
+쐚	ssoailm
+쐛	ssoailb
+쐜	ssoails
+쐝	ssoailt
+쐞	ssoailp
+쐟	ssoailh
+쐠	ssoaim
+쐡	ssoaib
+쐢	ssoaibs
+쐣	ssoais
+쐤	ssoaiss	1300
+쐥	ssoaix
+쐦	ssoaij
+쐧	ssoaic
+쐨	ssoaik
+쐩	ssoait
+쐪	ssoaip
+쐫	ssoaih
+쐬	ssoi	1300
+쐭	ssoig
+쐮	ssoigg
+쐯	ssoigs
+쐰	ssoin	1300
+쐱	ssoinj
+쐲	ssoinh
+쐳	ssoid
+쐴	ssoil	1300
+쐵	ssoilg
+쐶	ssoilm
+쐷	ssoilb
+쐸	ssoils
+쐹	ssoilt
+쐺	ssoilp
+쐻	ssoilh
+쐼	ssoim	1300
+쐽	ssoib	1300
+쐾	ssoibs
+쐿	ssois
+쑀	ssoiss
+쑁	ssoix
+쑂	ssoij
+쑃	ssoic
+쑄	ssoik
+쑅	ssoit
+쑆	ssoip
+쑇	ssoih
+쑈	ssyo	1300
+쑉	ssyog
+쑊	ssyogg
+쑋	ssyogs
+쑌	ssyon
+쑍	ssyonj
+쑎	ssyonh
+쑏	ssyod
+쑐	ssyol
+쑑	ssyolg
+쑒	ssyolm
+쑓	ssyolb
+쑔	ssyols
+쑕	ssyolt
+쑖	ssyolp
+쑗	ssyolh
+쑘	ssyom
+쑙	ssyob
+쑚	ssyobs
+쑛	ssyos
+쑜	ssyoss
+쑝	ssyox
+쑞	ssyoj
+쑟	ssyoc
+쑠	ssyok
+쑡	ssyot
+쑢	ssyop
+쑣	ssyoh
+쑤	ssu	1300
+쑥	ssug	1300
+쑦	ssugg
+쑧	ssugs
+쑨	ssun	1300
+쑩	ssunj
+쑪	ssunh
+쑫	ssud
+쑬	ssul	1300
+쑭	ssulg
+쑮	ssulm
+쑯	ssulb
+쑰	ssuls
+쑱	ssult
+쑲	ssulp
+쑳	ssulh
+쑴	ssum	1300
+쑵	ssub	1300
+쑶	ssubs
+쑷	ssus
+쑸	ssuss
+쑹	ssux	1300
+쑺	ssuj
+쑻	ssuc
+쑼	ssuk
+쑽	ssut
+쑾	ssup
+쑿	ssuh
+쒀	ssuo	1300
+쒁	ssuog
+쒂	ssuogg
+쒃	ssuogs
+쒄	ssuon
+쒅	ssuonj
+쒆	ssuonh
+쒇	ssuod
+쒈	ssuol
+쒉	ssuolg
+쒊	ssuolm
+쒋	ssuolb
+쒌	ssuols
+쒍	ssuolt
+쒎	ssuolp
+쒏	ssuolh
+쒐	ssuom
+쒑	ssuob
+쒒	ssuobs
+쒓	ssuos
+쒔	ssuoss	1300
+쒕	ssuox
+쒖	ssuoj
+쒗	ssuoc
+쒘	ssuok
+쒙	ssuot
+쒚	ssuop
+쒛	ssuoh
+쒜	ssuei	1300
+쒝	ssueig
+쒞	ssueigg
+쒟	ssueigs
+쒠	ssuein
+쒡	ssueinj
+쒢	ssueinh
+쒣	ssueid
+쒤	ssueil
+쒥	ssueilg
+쒦	ssueilm
+쒧	ssueilb
+쒨	ssueils
+쒩	ssueilt
+쒪	ssueilp
+쒫	ssueilh
+쒬	ssueim
+쒭	ssueib
+쒮	ssueibs
+쒯	ssueis
+쒰	ssueiss
+쒱	ssueix
+쒲	ssueij
+쒳	ssueic
+쒴	ssueik
+쒵	ssueit
+쒶	ssueip
+쒷	ssueih
+쒸	ssui	1300
+쒹	ssuig
+쒺	ssuigg
+쒻	ssuigs
+쒼	ssuin	1300
+쒽	ssuinj
+쒾	ssuinh
+쒿	ssuid
+쓀	ssuil
+쓁	ssuilg
+쓂	ssuilm
+쓃	ssuilb
+쓄	ssuils
+쓅	ssuilt
+쓆	ssuilp
+쓇	ssuilh
+쓈	ssuim
+쓉	ssuib
+쓊	ssuibs
+쓋	ssuis
+쓌	ssuiss
+쓍	ssuix
+쓎	ssuij
+쓏	ssuic
+쓐	ssuik
+쓑	ssuit
+쓒	ssuip
+쓓	ssuih
+쓔	ssyu
+쓕	ssyug
+쓖	ssyugg
+쓗	ssyugs
+쓘	ssyun
+쓙	ssyunj
+쓚	ssyunh
+쓛	ssyud
+쓜	ssyul
+쓝	ssyulg
+쓞	ssyulm
+쓟	ssyulb
+쓠	ssyuls
+쓡	ssyult
+쓢	ssyulp
+쓣	ssyulh
+쓤	ssyum
+쓥	ssyub
+쓦	ssyubs
+쓧	ssyus
+쓨	ssyuss
+쓩	ssyux	1300
+쓪	ssyuj
+쓫	ssyuc
+쓬	ssyuk
+쓭	ssyut
+쓮	ssyup
+쓯	ssyuh
+쓰	ssw	1300
+쓱	sswg	1300
+쓲	sswgg
+쓳	sswgs
+쓴	sswn	1300
+쓵	sswnj
+쓶	sswnh
+쓷	sswd
+쓸	sswl	1300
+쓹	sswlg
+쓺	sswlm	1300
+쓻	sswlb
+쓼	sswls
+쓽	sswlt
+쓾	sswlp
+쓿	sswlh	1300
+#27
+씀	sswm	1300
+씁	sswb	1300
+씂	sswbs
+씃	ssws
+씄	sswss
+씅	sswx
+씆	sswj
+씇	sswc
+씈	sswk
+씉	sswt
+씊	sswp
+씋	sswh
+씌	sswi	1300
+씍	sswig
+씎	sswigg
+씏	sswigs
+씐	sswin	1300
+씑	sswinj
+씒	sswinh
+씓	sswid
+씔	sswil	1300
+씕	sswilg
+씖	sswilm
+씗	sswilb
+씘	sswils
+씙	sswilt
+씚	sswilp
+씛	sswilh
+씜	sswim	1300
+씝	sswib
+씞	sswibs
+씟	sswis
+씠	sswiss
+씡	sswix
+씢	sswij
+씣	sswic
+씤	sswik
+씥	sswit
+씦	sswip
+씧	sswih
+씨	ssi	1300
+씩	ssig	1300
+씪	ssigg
+씫	ssigs
+씬	ssin	1300
+씭	ssinj
+씮	ssinh
+씯	ssid
+씰	ssil	1300
+씱	ssilg
+씲	ssilm
+씳	ssilb
+씴	ssils
+씵	ssilt
+씶	ssilp
+씷	ssilh
+씸	ssim	1300
+씹	ssib	1300
+씺	ssibs
+씻	ssis	1300
+씼	ssiss
+씽	ssix	1300
+씾	ssij
+씿	ssic
+앀	ssik
+앁	ssit
+앂	ssip
+앃	ssih
+아	xa	1300
+악	xag	1300
+앆	xagg
+앇	xags
+안	xan	1300
+앉	xanj	1300
+않	xanh	1300
+앋	xad
+알	xal	1300
+앍	xalg	1300
+앎	xalm	1300
+앏	xalb
+앐	xals
+앑	xalt
+앒	xalp
+앓	xalh	1300
+암	xam	1300
+압	xab	1300
+앖	xabs
+앗	xas	1300
+았	xass	1300
+앙	xax	1300
+앚	xaj
+앛	xac
+앜	xak
+앝	xat	1300
+앞	xap	1300
+앟	xah
+애	xai	1300
+액	xaig	1300
+앢	xaigg
+앣	xaigs
+앤	xain	1300
+앥	xainj
+앦	xainh
+앧	xaid
+앨	xail	1300
+앩	xailg
+앪	xailm
+앫	xailb
+앬	xails
+앭	xailt
+앮	xailp
+앯	xailh
+앰	xaim	1300
+앱	xaib	1300
+앲	xaibs
+앳	xais	1300
+앴	xaiss	1300
+앵	xaix	1300
+앶	xaij
+앷	xaic
+앸	xaik
+앹	xait
+앺	xaip
+앻	xaih
+야	xya	1300
+약	xyag	1300
+앾	xyagg
+앿	xyags
+얀	xyan	1300
+얁	xyanj
+얂	xyanh
+얃	xyad
+얄	xyal	1300
+얅	xyalg
+얆	xyalm
+얇	xyalb	1300
+얈	xyals
+얉	xyalt
+얊	xyalp
+얋	xyalh
+얌	xyam	1300
+얍	xyab	1300
+얎	xyabs
+얏	xyas	1300
+얐	xyass
+양	xyax	1300
+얒	xyaj
+얓	xyac
+얔	xyak
+얕	xyat	1300
+얖	xyap
+얗	xyah	1300
+얘	xyai	1300
+얙	xyaig
+얚	xyaigg
+얛	xyaigs
+얜	xyain	1300
+얝	xyainj
+얞	xyainh
+얟	xyaid
+얠	xyail	1300
+얡	xyailg
+얢	xyailm
+얣	xyailb
+얤	xyails
+얥	xyailt
+얦	xyailp
+얧	xyailh
+얨	xyaim
+얩	xyaib	1300
+얪	xyaibs
+얫	xyais
+얬	xyaiss
+얭	xyaix
+얮	xyaij
+얯	xyaic
+얰	xyaik
+얱	xyait
+얲	xyaip
+얳	xyaih
+어	xe	1300
+억	xeg	1300
+얶	xegg
+얷	xegs
+언	xen	1300
+얹	xenj	1300
+얺	xenh
+얻	xed	1300
+얼	xel	1300
+얽	xelg	1300
+얾	xelm	1300
+얿	xelb
+엀	xels
+엁	xelt
+엂	xelp
+엃	xelh
+엄	xem	1300
+업	xeb	1300
+없	xebs	1300
+엇	xes	1300
+었	xess	1300
+엉	xex	1300
+엊	xej	1300
+엋	xec
+엌	xek	1300
+엍	xet
+엎	xep	1300
+엏	xeh
+에	xei	1300
+엑	xeig	1300
+엒	xeigg
+엓	xeigs
+엔	xein	1300
+엕	xeinj
+엖	xeinh
+엗	xeid
+엘	xeil	1300
+엙	xeilg
+엚	xeilm
+엛	xeilb
+엜	xeils
+엝	xeilt
+엞	xeilp
+엟	xeilh
+엠	xeim	1300
+엡	xeib	1300
+엢	xeibs
+엣	xeis	1300
+엤	xeiss
+엥	xeix	1300
+엦	xeij
+엧	xeic
+엨	xeik
+엩	xeit
+엪	xeip
+엫	xeih
+여	xye	1300
+역	xyeg	1300
+엮	xyegg	1300
+엯	xyegs
+연	xyen	1300
+엱	xyenj
+엲	xyenh
+엳	xyed
+열	xyel	1300
+엵	xyelg
+엶	xyelm	1300
+엷	xyelb	1300
+엸	xyels
+엹	xyelt
+엺	xyelp
+엻	xyelh
+염	xyem	1300
+엽	xyeb	1300
+엾	xyebs	1300
+엿	xyes	1300
+#28
+였	xyess	1300
+영	xyex	1300
+옂	xyej
+옃	xyec
+옄	xyek
+옅	xyet	1300
+옆	xyep	1300
+옇	xyeh	1300
+예	xyei	1300
+옉	xyeig
+옊	xyeigg
+옋	xyeigs
+옌	xyein	1300
+옍	xyeinj
+옎	xyeinh
+옏	xyeid
+옐	xyeil	1300
+옑	xyeilg
+옒	xyeilm
+옓	xyeilb
+옔	xyeils
+옕	xyeilt
+옖	xyeilp
+옗	xyeilh
+옘	xyeim	1300
+옙	xyeib	1300
+옚	xyeibs
+옛	xyeis	1300
+옜	xyeiss	1300
+옝	xyeix
+옞	xyeij
+옟	xyeic
+옠	xyeik
+옡	xyeit
+옢	xyeip
+옣	xyeih
+오	xo	1300
+옥	xog	1300
+옦	xogg
+옧	xogs
+온	xon	1300
+옩	xonj
+옪	xonh
+옫	xod
+올	xol	1300
+옭	xolg	1300
+옮	xolm	1300
+옯	xolb
+옰	xols	1300
+옱	xolt
+옲	xolp
+옳	xolh	1300
+옴	xom	1300
+옵	xob	1300
+옶	xobs
+옷	xos	1300
+옸	xoss
+옹	xox	1300
+옺	xoj
+옻	xoc	1300
+옼	xok
+옽	xot
+옾	xop
+옿	xoh
+와	xoa	1300
+왁	xoag	1300
+왂	xoagg
+왃	xoags
+완	xoan	1300
+왅	xoanj
+왆	xoanh
+왇	xoad
+왈	xoal	1300
+왉	xoalg
+왊	xoalm
+왋	xoalb
+왌	xoals
+왍	xoalt
+왎	xoalp
+왏	xoalh
+왐	xoam	1300
+왑	xoab	1300
+왒	xoabs
+왓	xoas	1300
+왔	xoass	1300
+왕	xoax	1300
+왖	xoaj
+왗	xoac
+왘	xoak
+왙	xoat
+왚	xoap
+왛	xoah
+왜	xoai	1300
+왝	xoaig	1300
+왞	xoaigg
+왟	xoaigs
+왠	xoain	1300
+왡	xoainj
+왢	xoainh
+왣	xoaid
+왤	xoail
+왥	xoailg
+왦	xoailm
+왧	xoailb
+왨	xoails
+왩	xoailt
+왪	xoailp
+왫	xoailh
+왬	xoaim	1300
+왭	xoaib
+왮	xoaibs
+왯	xoais	1300
+왰	xoaiss
+왱	xoaix	1300
+왲	xoaij
+왳	xoaic
+왴	xoaik
+왵	xoait
+왶	xoaip
+왷	xoaih
+외	xoi	1300
+왹	xoig	1300
+왺	xoigg
+왻	xoigs
+왼	xoin	1300
+왽	xoinj
+왾	xoinh
+왿	xoid
+욀	xoil	1300
+욁	xoilg
+욂	xoilm
+욃	xoilb
+욄	xoils
+욅	xoilt
+욆	xoilp
+욇	xoilh
+욈	xoim	1300
+욉	xoib	1300
+욊	xoibs
+욋	xois	1300
+욌	xoiss
+욍	xoix	1300
+욎	xoij
+욏	xoic
+욐	xoik
+욑	xoit
+욒	xoip
+욓	xoih
+요	xyo	1300
+욕	xyog	1300
+욖	xyogg
+욗	xyogs
+욘	xyon	1300
+욙	xyonj
+욚	xyonh
+욛	xyod
+욜	xyol	1300
+욝	xyolg
+욞	xyolm
+욟	xyolb
+욠	xyols
+욡	xyolt
+욢	xyolp
+욣	xyolh
+욤	xyom	1300
+욥	xyob	1300
+욦	xyobs
+욧	xyos	1300
+욨	xyoss
+용	xyox	1300
+욪	xyoj
+욫	xyoc
+욬	xyok
+욭	xyot
+욮	xyop
+욯	xyoh
+우	xu	1300
+욱	xug	1300
+욲	xugg
+욳	xugs
+운	xun	1300
+욵	xunj
+욶	xunh
+욷	xud
+울	xul	1300
+욹	xulg	1300
+욺	xulm	1300
+욻	xulb
+욼	xuls
+욽	xult
+욾	xulp
+욿	xulh
+움	xum	1300
+웁	xub	1300
+웂	xubs
+웃	xus	1300
+웄	xuss
+웅	xux	1300
+웆	xuj
+웇	xuc
+웈	xuk
+웉	xut
+웊	xup
+웋	xuh
+워	xuo	1300
+웍	xuog	1300
+웎	xuogg
+웏	xuogs
+원	xuon	1300
+웑	xuonj
+웒	xuonh
+웓	xuod
+월	xuol	1300
+웕	xuolg
+웖	xuolm
+웗	xuolb
+웘	xuols
+웙	xuolt
+웚	xuolp
+웛	xuolh
+웜	xuom	1300
+웝	xuob	1300
+웞	xuobs
+웟	xuos
+웠	xuoss	1300
+웡	xuox	1300
+웢	xuoj
+웣	xuoc
+웤	xuok
+웥	xuot
+웦	xuop
+웧	xuoh
+웨	xuei	1300
+웩	xueig	1300
+웪	xueigg
+웫	xueigs
+웬	xuein	1300
+웭	xueinj
+웮	xueinh
+웯	xueid
+웰	xueil	1300
+웱	xueilg
+웲	xueilm
+웳	xueilb
+웴	xueils
+웵	xueilt
+웶	xueilp
+웷	xueilh
+웸	xueim	1300
+웹	xueib	1300
+웺	xueibs
+웻	xueis
+웼	xueiss
+웽	xueix	1300
+웾	xueij
+웿	xueic
+#29
+윀	xueik
+윁	xueit
+윂	xueip
+윃	xueih
+위	xui	1300
+윅	xuig	1300
+윆	xuigg
+윇	xuigs
+윈	xuin	1300
+윉	xuinj
+윊	xuinh
+윋	xuid
+윌	xuil	1300
+윍	xuilg
+윎	xuilm
+윏	xuilb
+윐	xuils
+윑	xuilt
+윒	xuilp
+윓	xuilh
+윔	xuim	1300
+윕	xuib	1300
+윖	xuibs
+윗	xuis	1300
+윘	xuiss
+윙	xuix	1300
+윚	xuij
+윛	xuic
+윜	xuik
+윝	xuit
+윞	xuip
+윟	xuih
+유	xyu	1300
+육	xyug	1300
+윢	xyugg
+윣	xyugs
+윤	xyun	1300
+윥	xyunj
+윦	xyunh
+윧	xyud
+율	xyul	1300
+윩	xyulg
+윪	xyulm
+윫	xyulb
+윬	xyuls
+윭	xyult
+윮	xyulp
+윯	xyulh
+윰	xyum	1300
+윱	xyub	1300
+윲	xyubs
+윳	xyus	1300
+윴	xyuss
+융	xyux	1300
+윶	xyuj
+윷	xyuc	1300
+윸	xyuk
+윹	xyut
+윺	xyup
+윻	xyuh
+으	xw	1300
+윽	xwg	1300
+윾	xwgg
+윿	xwgs
+은	xwn	1300
+읁	xwnj
+읂	xwnh
+읃	xwd
+을	xwl	1300
+읅	xwlg
+읆	xwlm
+읇	xwlb
+읈	xwls
+읉	xwlt
+읊	xwlp	1300
+읋	xwlh
+음	xwm	1300
+읍	xwb	1300
+읎	xwbs
+읏	xws	1300
+읐	xwss
+응	xwx	1300
+읒	xwj	1300
+읓	xwc	1300
+읔	xwk	1300
+읕	xwt	1300
+읖	xwp	1300
+읗	xwh	1300
+의	xwi	1300
+읙	xwig
+읚	xwigg
+읛	xwigs
+읜	xwin	1300
+읝	xwinj
+읞	xwinh
+읟	xwid
+읠	xwil	1300
+읡	xwilg
+읢	xwilm
+읣	xwilb
+읤	xwils
+읥	xwilt
+읦	xwilp
+읧	xwilh
+읨	xwim	1300
+읩	xwib
+읪	xwibs
+읫	xwis	1300
+읬	xwiss
+읭	xwix
+읮	xwij
+읯	xwic
+읰	xwik
+읱	xwit
+읲	xwip
+읳	xwih
+이	xi	1300
+익	xig	1300
+읶	xigg
+읷	xigs
+인	xin	1300
+읹	xinj
+읺	xinh
+읻	xid
+일	xil	1300
+읽	xilg	1300
+읾	xilm	1300
+읿	xilb
+잀	xils
+잁	xilt
+잂	xilp
+잃	xilh	1300
+임	xim	1300
+입	xib	1300
+잆	xibs
+잇	xis	1300
+있	xiss	1300
+잉	xix	1300
+잊	xij	1300
+잋	xic
+잌	xik
+잍	xit
+잎	xip	1300
+잏	xih
+자	ja	1300
+작	jag	1300
+잒	jagg
+잓	jags
+잔	jan	1300
+잕	janj
+잖	janh	1300
+잗	jad	1300
+잘	jal	1300
+잙	jalg
+잚	jalm	1300
+잛	jalb
+잜	jals
+잝	jalt
+잞	jalp
+잟	jalh
+잠	jam	1300
+잡	jab	1300
+잢	jabs
+잣	jas	1300
+잤	jass	1300
+장	jax	1300
+잦	jaj	1300
+잧	jac
+잨	jak
+잩	jat
+잪	jap
+잫	jah
+재	jai	1300
+잭	jaig	1300
+잮	jaigg
+잯	jaigs
+잰	jain	1300
+잱	jainj
+잲	jainh
+잳	jaid
+잴	jail	1300
+잵	jailg
+잶	jailm
+잷	jailb
+잸	jails
+잹	jailt
+잺	jailp
+잻	jailh
+잼	jaim	1300
+잽	jaib	1300
+잾	jaibs
+잿	jais	1300
+쟀	jaiss	1300
+쟁	jaix	1300
+쟂	jaij
+쟃	jaic
+쟄	jaik
+쟅	jait
+쟆	jaip
+쟇	jaih
+쟈	jya	1300
+쟉	jyag	1300
+쟊	jyagg
+쟋	jyags
+쟌	jyan	1300
+쟍	jyanj
+쟎	jyanh	1300
+쟏	jyad
+쟐	jyal	1300
+쟑	jyalg
+쟒	jyalm
+쟓	jyalb
+쟔	jyals
+쟕	jyalt
+쟖	jyalp
+쟗	jyalh
+쟘	jyam	1300
+쟙	jyab
+쟚	jyabs
+쟛	jyas
+쟜	jyass
+쟝	jyax	1300
+쟞	jyaj
+쟟	jyac
+쟠	jyak
+쟡	jyat
+쟢	jyap
+쟣	jyah
+쟤	jyai	1300
+쟥	jyaig
+쟦	jyaigg
+쟧	jyaigs
+쟨	jyain	1300
+쟩	jyainj
+쟪	jyainh
+쟫	jyaid
+쟬	jyail	1300
+쟭	jyailg
+쟮	jyailm
+쟯	jyailb
+쟰	jyails
+쟱	jyailt
+쟲	jyailp
+쟳	jyailh
+쟴	jyaim
+쟵	jyaib
+쟶	jyaibs
+쟷	jyais
+쟸	jyaiss
+쟹	jyaix
+쟺	jyaij
+쟻	jyaic
+쟼	jyaik
+쟽	jyait
+쟾	jyaip
+쟿	jyaih
+#30
+저	je	1300
+적	jeg	1300
+젂	jegg
+젃	jegs
+전	jen	1300
+젅	jenj
+젆	jenh
+젇	jed
+절	jel	1300
+젉	jelg
+젊	jelm	1300
+젋	jelb
+젌	jels
+젍	jelt
+젎	jelp
+젏	jelh
+점	jem	1300
+접	jeb	1300
+젒	jebs
+젓	jes	1300
+젔	jess
+정	jex	1300
+젖	jej	1300
+젗	jec
+젘	jek
+젙	jet
+젚	jep
+젛	jeh
+제	jei	1300
+젝	jeig	1300
+젞	jeigg
+젟	jeigs
+젠	jein	1300
+젡	jeinj
+젢	jeinh
+젣	jeid
+젤	jeil	1300
+젥	jeilg
+젦	jeilm
+젧	jeilb
+젨	jeils
+젩	jeilt
+젪	jeilp
+젫	jeilh
+젬	jeim	1300
+젭	jeib	1300
+젮	jeibs
+젯	jeis	1300
+젰	jeiss
+젱	jeix	1300
+젲	jeij
+젳	jeic
+젴	jeik
+젵	jeit
+젶	jeip
+젷	jeih
+져	jye	1300
+젹	jyeg
+젺	jyegg
+젻	jyegs
+젼	jyen	1300
+젽	jyenj
+젾	jyenh
+젿	jyed
+졀	jyel	1300
+졁	jyelg
+졂	jyelm
+졃	jyelb
+졄	jyels
+졅	jyelt
+졆	jyelp
+졇	jyelh
+졈	jyem	1300
+졉	jyeb	1300
+졊	jyebs
+졋	jyes
+졌	jyess	1300
+졍	jyex	1300
+졎	jyej
+졏	jyec
+졐	jyek
+졑	jyet
+졒	jyep
+졓	jyeh
+졔	jyei	1300
+졕	jyeig
+졖	jyeigg
+졗	jyeigs
+졘	jyein
+졙	jyeinj
+졚	jyeinh
+졛	jyeid
+졜	jyeil
+졝	jyeilg
+졞	jyeilm
+졟	jyeilb
+졠	jyeils
+졡	jyeilt
+졢	jyeilp
+졣	jyeilh
+졤	jyeim
+졥	jyeib
+졦	jyeibs
+졧	jyeis
+졨	jyeiss
+졩	jyeix
+졪	jyeij
+졫	jyeic
+졬	jyeik
+졭	jyeit
+졮	jyeip
+졯	jyeih
+조	jo	1300
+족	jog	1300
+졲	jogg
+졳	jogs
+존	jon	1300
+졵	jonj
+졶	jonh
+졷	jod
+졸	jol	1300
+졹	jolg
+졺	jolm	1300
+졻	jolb
+졼	jols
+졽	jolt
+졾	jolp
+졿	jolh
+좀	jom	1300
+좁	job	1300
+좂	jobs
+좃	jos	1300
+좄	joss
+종	jox	1300
+좆	joj	1300
+좇	joc	1300
+좈	jok
+좉	jot
+좊	jop
+좋	joh	1300
+좌	joa	1300
+좍	joag	1300
+좎	joagg
+좏	joags
+좐	joan
+좑	joanj
+좒	joanh
+좓	joad
+좔	joal	1300
+좕	joalg
+좖	joalm
+좗	joalb
+좘	joals
+좙	joalt
+좚	joalp
+좛	joalh
+좜	joam
+좝	joab	1300
+좞	joabs
+좟	joas	1300
+좠	joass
+좡	joax	1300
+좢	joaj
+좣	joac
+좤	joak
+좥	joat
+좦	joap
+좧	joah
+좨	joai	1300
+좩	joaig
+좪	joaigg
+좫	joaigs
+좬	joain
+좭	joainj
+좮	joainh
+좯	joaid
+좰	joail
+좱	joailg
+좲	joailm
+좳	joailb
+좴	joails
+좵	joailt
+좶	joailp
+좷	joailh
+좸	joaim
+좹	joaib
+좺	joaibs
+좻	joais
+좼	joaiss	1300
+좽	joaix	1300
+좾	joaij
+좿	joaic
+죀	joaik
+죁	joait
+죂	joaip
+죃	joaih
+죄	joi	1300
+죅	joig
+죆	joigg
+죇	joigs
+죈	join	1300
+죉	joinj
+죊	joinh
+죋	joid
+죌	joil	1300
+죍	joilg
+죎	joilm
+죏	joilb
+죐	joils
+죑	joilt
+죒	joilp
+죓	joilh
+죔	joim	1300
+죕	joib	1300
+죖	joibs
+죗	jois	1300
+죘	joiss
+죙	joix	1300
+죚	joij
+죛	joic
+죜	joik
+죝	joit
+죞	joip
+죟	joih
+죠	jyo	1300
+죡	jyog	1300
+죢	jyogg
+죣	jyogs
+죤	jyon	1300
+죥	jyonj
+죦	jyonh
+죧	jyod
+죨	jyol
+죩	jyolg
+죪	jyolm
+죫	jyolb
+죬	jyols
+죭	jyolt
+죮	jyolp
+죯	jyolh
+죰	jyom
+죱	jyob
+죲	jyobs
+죳	jyos
+죴	jyoss
+죵	jyox	1300
+죶	jyoj
+죷	jyoc
+죸	jyok
+죹	jyot
+죺	jyop
+죻	jyoh
+주	ju
+죽	jug	1300
+죾	jugg
+죿	jugs
+#31
+준	jun	1300
+줁	junj
+줂	junh
+줃	jud
+줄	jul	1300
+줅	julg	1300
+줆	julm	1300
+줇	julb
+줈	juls
+줉	jult
+줊	julp
+줋	julh
+줌	jum	1300
+줍	jub	1300
+줎	jubs
+줏	jus	1300
+줐	juss
+중	jux	1300
+줒	juj
+줓	juc
+줔	juk
+줕	jut
+줖	jup
+줗	juh
+줘	juo	1300
+줙	juog
+줚	juogg
+줛	juogs
+줜	juon
+줝	juonj
+줞	juonh
+줟	juod
+줠	juol
+줡	juolg
+줢	juolm
+줣	juolb
+줤	juols
+줥	juolt
+줦	juolp
+줧	juolh
+줨	juom
+줩	juob
+줪	juobs
+줫	juos
+줬	juoss	1300
+줭	juox
+줮	juoj
+줯	juoc
+줰	juok
+줱	juot
+줲	juop
+줳	juoh
+줴	juei	1300
+줵	jueig
+줶	jueigg
+줷	jueigs
+줸	juein
+줹	jueinj
+줺	jueinh
+줻	jueid
+줼	jueil
+줽	jueilg
+줾	jueilm
+줿	jueilb
+쥀	jueils
+쥁	jueilt
+쥂	jueilp
+쥃	jueilh
+쥄	jueim
+쥅	jueib
+쥆	jueibs
+쥇	jueis
+쥈	jueiss
+쥉	jueix
+쥊	jueij
+쥋	jueic
+쥌	jueik
+쥍	jueit
+쥎	jueip
+쥏	jueih
+쥐	jui	1300
+쥑	juig	1300
+쥒	juigg
+쥓	juigs
+쥔	juin	1300
+쥕	juinj
+쥖	juinh
+쥗	juid
+쥘	juil	1300
+쥙	juilg
+쥚	juilm
+쥛	juilb
+쥜	juils
+쥝	juilt
+쥞	juilp
+쥟	juilh
+쥠	juim	1300
+쥡	juib	1300
+쥢	juibs
+쥣	juis	1300
+쥤	juiss
+쥥	juix
+쥦	juij
+쥧	juic
+쥨	juik
+쥩	juit
+쥪	juip
+쥫	juih
+쥬	jyu	1300
+쥭	jyug
+쥮	jyugg
+쥯	jyugs
+쥰	jyun	1300
+쥱	jyunj
+쥲	jyunh
+쥳	jyud
+쥴	jyul	1300
+쥵	jyulg
+쥶	jyulm
+쥷	jyulb
+쥸	jyuls
+쥹	jyult
+쥺	jyulp
+쥻	jyulh
+쥼	jyum	1300
+쥽	jyub
+쥾	jyubs
+쥿	jyus
+즀	jyuss
+즁	jyux
+즂	jyuj
+즃	jyuc
+즄	jyuk
+즅	jyut
+즆	jyup
+즇	jyuh
+즈	jw	1300
+즉	jwg	1300
+즊	jwgg
+즋	jwgs
+즌	jwn	1300
+즍	jwnj
+즎	jwnh
+즏	jwd
+즐	jwl	1300
+즑	jwlg
+즒	jwlm
+즓	jwlb
+즔	jwls
+즕	jwlt
+즖	jwlp
+즗	jwlh
+즘	jwm	1300
+즙	jwb	1300
+즚	jwbs
+즛	jws	1300
+즜	jwss
+증	jwx	1300
+즞	jwj
+즟	jwc
+즠	jwk
+즡	jwt
+즢	jwp
+즣	jwh
+즤	jwi
+즥	jwig
+즦	jwigg
+즧	jwigs
+즨	jwin
+즩	jwinj
+즪	jwinh
+즫	jwid
+즬	jwil
+즭	jwilg
+즮	jwilm
+즯	jwilb
+즰	jwils
+즱	jwilt
+즲	jwilp
+즳	jwilh
+즴	jwim
+즵	jwib
+즶	jwibs
+즷	jwis
+즸	jwiss
+즹	jwix
+즺	jwij
+즻	jwic
+즼	jwik
+즽	jwit
+즾	jwip
+즿	jwih
+지	ji	1300
+직	jig	1300
+짂	jigg
+짃	jigs
+진	jin	1300
+짅	jinj
+짆	jinh
+짇	jid	1300
+질	jil	1300
+짉	jilg
+짊	jilm	1300
+짋	jilb
+짌	jils
+짍	jilt
+짎	jilp
+짏	jilh
+짐	jim	1300
+집	jib	1300
+짒	jibs
+짓	jis	1300
+짔	jiss
+징	jix	1300
+짖	jij	1300
+짗	jic
+짘	jik
+짙	jit	1300
+짚	jip	1300
+짛	jih
+짜	jja	1300
+짝	jjag	1300
+짞	jjagg
+짟	jjags
+짠	jjan	1300
+짡	jjanj
+짢	jjanh	1300
+짣	jjad
+짤	jjal	1300
+짥	jjalg
+짦	jjalm
+짧	jjalb	1300
+짨	jjals
+짩	jjalt
+짪	jjalp
+짫	jjalh
+짬	jjam	1300
+짭	jjab	1300
+짮	jjabs
+짯	jjas	1300
+짰	jjass	1300
+짱	jjax	1300
+짲	jjaj
+짳	jjac
+짴	jjak
+짵	jjat
+짶	jjap
+짷	jjah
+째	jjai	1300
+짹	jjaig	1300
+짺	jjaigg
+짻	jjaigs
+짼	jjain	1300
+짽	jjainj
+짾	jjainh
+짿	jjaid
+#32
+쨀	jjail	1300
+쨁	jjailg
+쨂	jjailm
+쨃	jjailb
+쨄	jjails
+쨅	jjailt
+쨆	jjailp
+쨇	jjailh
+쨈	jjaim	1300
+쨉	jjaib	1300
+쨊	jjaibs
+쨋	jjais	1300
+쨌	jjaiss	1300
+쨍	jjaix	1300
+쨎	jjaij
+쨏	jjaic
+쨐	jjaik
+쨑	jjait
+쨒	jjaip
+쨓	jjaih
+쨔	jjya	1300
+쨕	jjyag
+쨖	jjyagg
+쨗	jjyags
+쨘	jjyan	1300
+쨙	jjyanj
+쨚	jjyanh
+쨛	jjyad
+쨜	jjyal
+쨝	jjyalg
+쨞	jjyalm
+쨟	jjyalb
+쨠	jjyals
+쨡	jjyalt
+쨢	jjyalp
+쨣	jjyalh
+쨤	jjyam
+쨥	jjyab
+쨦	jjyabs
+쨧	jjyas
+쨨	jjyass
+쨩	jjyax	1300
+쨪	jjyaj
+쨫	jjyac
+쨬	jjyak
+쨭	jjyat
+쨮	jjyap
+쨯	jjyah
+쨰	wjai
+쨱	wjaig
+쨲	wjaigg
+쨳	wjaigs
+쨴	wjain
+쨵	wjainj
+쨶	wjainh
+쨷	wjaid
+쨸	wjail
+쨹	wjailg
+쨺	wjailm
+쨻	wjailb
+쨼	wjails
+쨽	wjailt
+쨾	wjailp
+쨿	wjailh
+쩀	wjaim
+쩁	wjaib
+쩂	wjaibs
+쩃	wjais
+쩄	wjaiss
+쩅	wjaix
+쩆	wjaij
+쩇	wjaic
+쩈	wjaik
+쩉	wjait
+쩊	wjaip
+쩋	wjaih
+쩌	jje	1300
+쩍	jjeg	1300
+쩎	jjegg
+쩏	jjegs
+쩐	jjen	1300
+쩑	jjenj
+쩒	jjenh
+쩓	jjed
+쩔	jjel	1300
+쩕	jjelg
+쩖	jjelm
+쩗	jjelb
+쩘	jjels
+쩙	jjelt
+쩚	jjelp
+쩛	jjelh
+쩜	jjem	1300
+쩝	jjeb	1300
+쩞	jjebs
+쩟	jjes	1300
+쩠	jjess	1300
+쩡	jjex	1300
+쩢	jjej
+쩣	jjec
+쩤	jjek
+쩥	jjet
+쩦	jjep
+쩧	jjeh
+쩨	jjei	1300
+쩩	jjeig
+쩪	jjeigg
+쩫	jjeigs
+쩬	jjein
+쩭	jjeinj
+쩮	jjeinh
+쩯	jjeid
+쩰	jjeil
+쩱	jjeilg
+쩲	jjeilm
+쩳	jjeilb
+쩴	jjeils
+쩵	jjeilt
+쩶	jjeilp
+쩷	jjeilh
+쩸	jjeim
+쩹	jjeib
+쩺	jjeibs
+쩻	jjeis
+쩼	jjeiss
+쩽	jjeix	1300
+쩾	jjeij
+쩿	jjeic
+쪀	jjeik
+쪁	jjeit
+쪂	jjeip
+쪃	jjeih
+쪄	jjye	1300
+쪅	jjyeg
+쪆	jjyegg
+쪇	jjyegs
+쪈	jjyen
+쪉	jjyenj
+쪊	jjyenh
+쪋	jjyed
+쪌	jjyel
+쪍	jjyelg
+쪎	jjyelm
+쪏	jjyelb
+쪐	jjyels
+쪑	jjyelt
+쪒	jjyelp
+쪓	jjyelh
+쪔	jjyem
+쪕	jjyeb
+쪖	jjyebs
+쪗	jjyes
+쪘	jjyess	1300
+쪙	jjyex
+쪚	jjyej
+쪛	jjyec
+쪜	jjyek
+쪝	jjyet
+쪞	jjyep
+쪟	jjyeh
+쪠	wjei
+쪡	wjeig
+쪢	wjeigg
+쪣	wjeigs
+쪤	wjein
+쪥	wjeinj
+쪦	wjeinh
+쪧	wjeid
+쪨	wjeil
+쪩	wjeilg
+쪪	wjeilm
+쪫	wjeilb
+쪬	wjeils
+쪭	wjeilt
+쪮	wjeilp
+쪯	wjeilh
+쪰	wjeim
+쪱	wjeib
+쪲	wjeibs
+쪳	wjeis
+쪴	wjeiss
+쪵	wjeix
+쪶	wjeij
+쪷	wjeic
+쪸	wjeik
+쪹	wjeit
+쪺	wjeip
+쪻	wjeih
+쪼	jjo	1300
+쪽	jjog	1300
+쪾	jjogg
+쪿	jjogs
+쫀	jjon	1300
+쫁	jjonj
+쫂	jjonh
+쫃	jjod
+쫄	jjol	1300
+쫅	jjolg
+쫆	jjolm
+쫇	jjolb
+쫈	jjols
+쫉	jjolt
+쫊	jjolp
+쫋	jjolh
+쫌	jjom	1300
+쫍	jjob	1300
+쫎	jjobs
+쫏	jjos	1300
+쫐	jjoss
+쫑	jjox	1300
+쫒	jjoj
+쫓	jjoc	1300
+쫔	jjok
+쫕	jjot
+쫖	jjop
+쫗	jjoh
+쫘	jjoa	1300
+쫙	jjoag	1300
+쫚	jjoagg
+쫛	jjoags
+쫜	jjoan
+쫝	jjoanj
+쫞	jjoanh
+쫟	jjoad
+쫠	jjoal	1300
+쫡	jjoalg
+쫢	jjoalm
+쫣	jjoalb
+쫤	jjoals
+쫥	jjoalt
+쫦	jjoalp
+쫧	jjoalh
+쫨	jjoam
+쫩	jjoab
+쫪	jjoabs
+쫫	jjoas
+쫬	jjoass	1300
+쫭	jjoax
+쫮	jjoaj
+쫯	jjoac
+쫰	jjoak
+쫱	jjoat
+쫲	jjoap
+쫳	jjoah
+쫴	jjoai	1300
+쫵	jjoaig
+쫶	jjoaigg
+쫷	jjoaigs
+쫸	jjoain
+쫹	jjoainj
+쫺	jjoainh
+쫻	jjoaid
+쫼	jjoail
+쫽	jjoailg
+쫾	jjoailm
+쫿	jjoailb
+#33
+쬀	jjoails
+쬁	jjoailt
+쬂	jjoailp
+쬃	jjoailh
+쬄	jjoaim
+쬅	jjoaib
+쬆	jjoaibs
+쬇	jjoais
+쬈	jjoaiss	1300
+쬉	jjoaix
+쬊	jjoaij
+쬋	jjoaic
+쬌	jjoaik
+쬍	jjoait
+쬎	jjoaip
+쬏	jjoaih
+쬐	jjoi	1300
+쬑	jjoig
+쬒	jjoigg
+쬓	jjoigs
+쬔	jjoin	1300
+쬕	jjoinj
+쬖	jjoinh
+쬗	jjoid
+쬘	jjoil	1300
+쬙	jjoilg
+쬚	jjoilm
+쬛	jjoilb
+쬜	jjoils
+쬝	jjoilt
+쬞	jjoilp
+쬟	jjoilh
+쬠	jjoim	1300
+쬡	jjoib	1300
+쬢	jjoibs
+쬣	jjois
+쬤	jjoiss
+쬥	jjoix
+쬦	jjoij
+쬧	jjoic
+쬨	jjoik
+쬩	jjoit
+쬪	jjoip
+쬫	jjoih
+쬬	jjyo
+쬭	jjyog
+쬮	jjyogg
+쬯	jjyogs
+쬰	jjyon
+쬱	jjyonj
+쬲	jjyonh
+쬳	jjyod
+쬴	jjyol
+쬵	jjyolg
+쬶	jjyolm
+쬷	jjyolb
+쬸	jjyols
+쬹	jjyolt
+쬺	jjyolp
+쬻	jjyolh
+쬼	jjyom
+쬽	jjyob
+쬾	jjyobs
+쬿	jjyos
+쭀	jjyoss
+쭁	jjyox	1300
+쭂	jjyoj
+쭃	jjyoc
+쭄	jjyok
+쭅	jjyot
+쭆	jjyop
+쭇	jjyoh
+쭈	jju	1300
+쭉	jjug	1300
+쭊	jjugg
+쭋	jjugs
+쭌	jjun	1300
+쭍	jjunj
+쭎	jjunh
+쭏	jjud
+쭐	jjul	1300
+쭑	jjulg
+쭒	jjulm
+쭓	jjulb
+쭔	jjuls
+쭕	jjult
+쭖	jjulp
+쭗	jjulh
+쭘	jjum	1300
+쭙	jjub	1300
+쭚	jjubs
+쭛	jjus
+쭜	jjuss
+쭝	jjux	1300
+쭞	jjuj
+쭟	jjuc
+쭠	jjuk
+쭡	jjut
+쭢	jjup
+쭣	jjuh
+쭤	jjuo	1300
+쭥	jjuog
+쭦	jjuogg
+쭧	jjuogs
+쭨	jjuon
+쭩	jjuonj
+쭪	jjuonh
+쭫	jjuod
+쭬	jjuol
+쭭	jjuolg
+쭮	jjuolm
+쭯	jjuolb
+쭰	jjuols
+쭱	jjuolt
+쭲	jjuolp
+쭳	jjuolh
+쭴	jjuom
+쭵	jjuob
+쭶	jjuobs
+쭷	jjuos
+쭸	jjuoss	1300
+쭹	jjuox	1300
+쭺	jjuoj
+쭻	jjuoc
+쭼	jjuok
+쭽	jjuot
+쭾	jjuop
+쭿	jjuoh
+쮀	jjuei
+쮁	jjueig
+쮂	jjueigg
+쮃	jjueigs
+쮄	jjuein
+쮅	jjueinj
+쮆	jjueinh
+쮇	jjueid
+쮈	jjueil
+쮉	jjueilg
+쮊	jjueilm
+쮋	jjueilb
+쮌	jjueils
+쮍	jjueilt
+쮎	jjueilp
+쮏	jjueilh
+쮐	jjueim
+쮑	jjueib
+쮒	jjueibs
+쮓	jjueis
+쮔	jjueiss
+쮕	jjueix
+쮖	jjueij
+쮗	jjueic
+쮘	jjueik
+쮙	jjueit
+쮚	jjueip
+쮛	jjueih
+쮜	jjui	1300
+쮝	jjuig
+쮞	jjuigg
+쮟	jjuigs
+쮠	jjuin
+쮡	jjuinj
+쮢	jjuinh
+쮣	jjuid
+쮤	jjuil
+쮥	jjuilg
+쮦	jjuilm
+쮧	jjuilb
+쮨	jjuils
+쮩	jjuilt
+쮪	jjuilp
+쮫	jjuilh
+쮬	jjuim
+쮭	jjuib
+쮮	jjuibs
+쮯	jjuis
+쮰	jjuiss
+쮱	jjuix
+쮲	jjuij
+쮳	jjuic
+쮴	jjuik
+쮵	jjuit
+쮶	jjuip
+쮷	jjuih
+쮸	jjyu	1300
+쮹	jjyug
+쮺	jjyugg
+쮻	jjyugs
+쮼	jjyun
+쮽	jjyunj
+쮾	jjyunh
+쮿	jjyud
+쯀	jjyul
+쯁	jjyulg
+쯂	jjyulm
+쯃	jjyulb
+쯄	jjyuls
+쯅	jjyult
+쯆	jjyulp
+쯇	jjyulh
+쯈	jjyum
+쯉	jjyub
+쯊	jjyubs
+쯋	jjyus
+쯌	jjyuss
+쯍	jjyux
+쯎	jjyuj
+쯏	jjyuc
+쯐	jjyuk
+쯑	jjyut
+쯒	jjyup
+쯓	jjyuh
+쯔	jjw	1300
+쯕	jjwg
+쯖	jjwgg
+쯗	jjwgs
+쯘	jjwn
+쯙	jjwnj
+쯚	jjwnh
+쯛	jjwd
+쯜	jjwl
+쯝	jjwlg
+쯞	jjwlm
+쯟	jjwlb
+쯠	jjwls
+쯡	jjwlt
+쯢	jjwlp
+쯣	jjwlh
+쯤	jjwm	1300
+쯥	jjwb
+쯦	jjwbs
+쯧	jjws	1300
+쯨	jjwss
+쯩	jjwx	1300
+쯪	jjwj
+쯫	jjwc
+쯬	jjwk
+쯭	jjwt
+쯮	jjwp
+쯯	jjwh
+쯰	jjwi
+쯱	jjwig
+쯲	jjwigg
+쯳	jjwigs
+쯴	jjwin
+쯵	jjwinj
+쯶	jjwinh
+쯷	jjwid
+쯸	jjwil
+쯹	jjwilg
+쯺	jjwilm
+쯻	jjwilb
+쯼	jjwils
+쯽	jjwilt
+쯾	jjwilp
+쯿	jjwilh
+#34
+찀	jjwim
+찁	jjwib
+찂	jjwibs
+찃	jjwis
+찄	jjwiss
+찅	jjwix
+찆	jjwij
+찇	jjwic
+찈	jjwik
+찉	jjwit
+찊	jjwip
+찋	jjwih
+찌	jji	1300
+찍	jjig	1300
+찎	jjigg
+찏	jjigs
+찐	jjin	1300
+찑	jjinj
+찒	jjinh
+찓	jjid
+찔	jjil	1300
+찕	jjilg
+찖	jjilm
+찗	jjilb
+찘	jjils
+찙	jjilt
+찚	jjilp
+찛	jjilh
+찜	jjim	1300
+찝	jjib	1300
+찞	jjibs
+찟	jjis
+찠	jjiss
+찡	jjix	1300
+찢	jjij	1300
+찣	jjic
+찤	jjik
+찥	jjit
+찦	jjip
+찧	jjih	1300
+차	ca	1300
+착	cag	1300
+찪	cagg
+찫	cags
+찬	can	1300
+찭	canj
+찮	canh	1300
+찯	cad
+찰	cal	1300
+찱	calg
+찲	calm
+찳	calb
+찴	cals
+찵	calt
+찶	calp
+찷	calh
+참	cam	1300
+찹	cab	1300
+찺	cabs
+찻	cas	1300
+찼	cass	1300
+창	cax	1300
+찾	caj	1300
+찿	cac
+챀	cak
+챁	cat
+챂	cap
+챃	cah
+채	cai	1300
+책	caig	1300
+챆	caigg
+챇	caigs
+챈	cain	1300
+챉	cainj
+챊	cainh
+챋	caid
+챌	cail	1300
+챍	cailg
+챎	cailm
+챏	cailb
+챐	cails
+챑	cailt
+챒	cailp
+챓	cailh
+챔	caim	1300
+챕	caib	1300
+챖	caibs
+챗	cais	1300
+챘	caiss	1300
+챙	caix	1300
+챚	caij
+챛	caic
+챜	caik
+챝	cait
+챞	caip
+챟	caih
+챠	cya	1300
+챡	cyag
+챢	cyagg
+챣	cyags
+챤	cyan	1300
+챥	cyanj
+챦	cyanh	1300
+챧	cyad
+챨	cyal	1300
+챩	cyalg
+챪	cyalm
+챫	cyalb
+챬	cyals
+챭	cyalt
+챮	cyalp
+챯	cyalh
+챰	cyam	1300
+챱	cyab
+챲	cyabs
+챳	cyas
+챴	cyass
+챵	cyax	1300
+챶	cyaj
+챷	cyac
+챸	cyak
+챹	cyat
+챺	cyap
+챻	cyah
+챼	cyai
+챽	cyaig
+챾	cyaigg
+챿	cyaigs
+첀	cyain
+첁	cyainj
+첂	cyainh
+첃	cyaid
+첄	cyail
+첅	cyailg
+첆	cyailm
+첇	cyailb
+첈	cyails
+첉	cyailt
+첊	cyailp
+첋	cyailh
+첌	cyaim
+첍	cyaib
+첎	cyaibs
+첏	cyais
+첐	cyaiss
+첑	cyaix
+첒	cyaij
+첓	cyaic
+첔	cyaik
+첕	cyait
+첖	cyaip
+첗	cyaih
+처	ce	1300
+척	ceg	1300
+첚	cegg
+첛	cegs
+천	cen	1300
+첝	cenj
+첞	cenh
+첟	ced
+철	cel	1300
+첡	celg
+첢	celm
+첣	celb
+첤	cels
+첥	celt
+첦	celp
+첧	celh
+첨	cem	1300
+첩	ceb	1300
+첪	cebs
+첫	ces	1300
+첬	cess	1300
+청	cex	1300
+첮	cej
+첯	cec
+첰	cek
+첱	cet
+첲	cep
+첳	ceh
+체	cei	1300
+첵	ceig	1300
+첶	ceigg
+첷	ceigs
+첸	cein	1300
+첹	ceinj
+첺	ceinh
+첻	ceid
+첼	ceil	1300
+첽	ceilg
+첾	ceilm
+첿	ceilb
+쳀	ceils
+쳁	ceilt
+쳂	ceilp
+쳃	ceilh
+쳄	ceim	1300
+쳅	ceib	1300
+쳆	ceibs
+쳇	ceis	1300
+쳈	ceiss
+쳉	ceix	1300
+쳊	ceij
+쳋	ceic
+쳌	ceik
+쳍	ceit
+쳎	ceip
+쳏	ceih
+쳐	cye	1300
+쳑	cyeg
+쳒	cyegg
+쳓	cyegs
+쳔	cyen	1300
+쳕	cyenj
+쳖	cyenh
+쳗	cyed
+쳘	cyel
+쳙	cyelg
+쳚	cyelm
+쳛	cyelb
+쳜	cyels
+쳝	cyelt
+쳞	cyelp
+쳟	cyelh
+쳠	cyem
+쳡	cyeb
+쳢	cyebs
+쳣	cyes
+쳤	cyess	1300
+쳥	cyex
+쳦	cyej
+쳧	cyec
+쳨	cyek
+쳩	cyet
+쳪	cyep
+쳫	cyeh
+쳬	cyei	1300
+쳭	cyeig
+쳮	cyeigg
+쳯	cyeigs
+쳰	cyein	1300
+쳱	cyeinj
+쳲	cyeinh
+쳳	cyeid
+쳴	cyeil
+쳵	cyeilg
+쳶	cyeilm
+쳷	cyeilb
+쳸	cyeils
+쳹	cyeilt
+쳺	cyeilp
+쳻	cyeilh
+쳼	cyeim
+쳽	cyeib
+쳾	cyeibs
+쳿	cyeis
+#35
+촀	cyeiss
+촁	cyeix	1300
+촂	cyeij
+촃	cyeic
+촄	cyeik
+촅	cyeit
+촆	cyeip
+촇	cyeih
+초	co	1300
+촉	cog	1300
+촊	cogg
+촋	cogs
+촌	con	1300
+촍	conj
+촎	conh
+촏	cod
+촐	col	1300
+촑	colg
+촒	colm
+촓	colb
+촔	cols
+촕	colt
+촖	colp
+촗	colh
+촘	com	1300
+촙	cob	1300
+촚	cobs
+촛	cos	1300
+촜	coss
+총	cox	1300
+촞	coj
+촟	coc
+촠	cok
+촡	cot
+촢	cop
+촣	coh
+촤	coa	1300
+촥	coag
+촦	coagg
+촧	coags
+촨	coan	1300
+촩	coanj
+촪	coanh
+촫	coad
+촬	coal	1300
+촭	coalg
+촮	coalm
+촯	coalb
+촰	coals
+촱	coalt
+촲	coalp
+촳	coalh
+촴	coam
+촵	coab
+촶	coabs
+촷	coas
+촸	coass
+촹	coax	1300
+촺	coaj
+촻	coac
+촼	coak
+촽	coat
+촾	coap
+촿	coah
+쵀	coai
+쵁	coaig
+쵂	coaigg
+쵃	coaigs
+쵄	coain
+쵅	coainj
+쵆	coainh
+쵇	coaid
+쵈	coail
+쵉	coailg
+쵊	coailm
+쵋	coailb
+쵌	coails
+쵍	coailt
+쵎	coailp
+쵏	coailh
+쵐	coaim
+쵑	coaib
+쵒	coaibs
+쵓	coais
+쵔	coaiss
+쵕	coaix
+쵖	coaij
+쵗	coaic
+쵘	coaik
+쵙	coait
+쵚	coaip
+쵛	coaih
+최	coi	1300
+쵝	coig
+쵞	coigg
+쵟	coigs
+쵠	coin	1300
+쵡	coinj
+쵢	coinh
+쵣	coid
+쵤	coil	1300
+쵥	coilg
+쵦	coilm
+쵧	coilb
+쵨	coils
+쵩	coilt
+쵪	coilp
+쵫	coilh
+쵬	coim	1300
+쵭	coib	1300
+쵮	coibs
+쵯	cois	1300
+쵰	coiss
+쵱	coix	1300
+쵲	coij
+쵳	coic
+쵴	coik
+쵵	coit
+쵶	coip
+쵷	coih
+쵸	cyo	1300
+쵹	cyog
+쵺	cyogg
+쵻	cyogs
+쵼	cyon
+쵽	cyonj
+쵾	cyonh
+쵿	cyod
+춀	cyol
+춁	cyolg
+춂	cyolm
+춃	cyolb
+춄	cyols
+춅	cyolt
+춆	cyolp
+춇	cyolh
+춈	cyom	1300
+춉	cyob
+춊	cyobs
+춋	cyos
+춌	cyoss
+춍	cyox
+춎	cyoj
+춏	cyoc
+춐	cyok
+춑	cyot
+춒	cyop
+춓	cyoh
+추	cu	1300
+축	cug	1300
+춖	cugg
+춗	cugs
+춘	cun	1300
+춙	cunj
+춚	cunh
+춛	cud
+출	cul	1300
+춝	culg
+춞	culm
+춟	culb
+춠	culs
+춡	cult
+춢	culp
+춣	culh
+춤	cum	1300
+춥	cub	1300
+춦	cubs
+춧	cus	1300
+춨	cuss
+충	cux	1300
+춪	cuj
+춫	cuc
+춬	cuk
+춭	cut
+춮	cup
+춯	cuh
+춰	cuo	1300
+춱	cuog
+춲	cuogg
+춳	cuogs
+춴	cuon
+춵	cuonj
+춶	cuonh
+춷	cuod
+춸	cuol
+춹	cuolg
+춺	cuolm
+춻	cuolb
+춼	cuols
+춽	cuolt
+춾	cuolp
+춿	cuolh
+췀	cuom
+췁	cuob
+췂	cuobs
+췃	cuos
+췄	cuoss	1300
+췅	cuox
+췆	cuoj
+췇	cuoc
+췈	cuok
+췉	cuot
+췊	cuop
+췋	cuoh
+췌	cuei	1300
+췍	cueig
+췎	cueigg
+췏	cueigs
+췐	cuein	1300
+췑	cueinj
+췒	cueinh
+췓	cueid
+췔	cueil
+췕	cueilg
+췖	cueilm
+췗	cueilb
+췘	cueils
+췙	cueilt
+췚	cueilp
+췛	cueilh
+췜	cueim
+췝	cueib
+췞	cueibs
+췟	cueis
+췠	cueiss
+췡	cueix
+췢	cueij
+췣	cueic
+췤	cueik
+췥	cueit
+췦	cueip
+췧	cueih
+취	cui	1300
+췩	cuig
+췪	cuigg
+췫	cuigs
+췬	cuin	1300
+췭	cuinj
+췮	cuinh
+췯	cuid
+췰	cuil	1300
+췱	cuilg
+췲	cuilm
+췳	cuilb
+췴	cuils
+췵	cuilt
+췶	cuilp
+췷	cuilh
+췸	cuim	1300
+췹	cuib	1300
+췺	cuibs
+췻	cuis	1300
+췼	cuiss
+췽	cuix	1300
+췾	cuij
+췿	cuic
+#36
+츀	cuik
+츁	cuit
+츂	cuip
+츃	cuih
+츄	cyu	1300
+츅	cyug
+츆	cyugg
+츇	cyugs
+츈	cyun	1300
+츉	cyunj
+츊	cyunh
+츋	cyud
+츌	cyul	1300
+츍	cyulg
+츎	cyulm
+츏	cyulb
+츐	cyuls
+츑	cyult
+츒	cyulp
+츓	cyulh
+츔	cyum	1300
+츕	cyub
+츖	cyubs
+츗	cyus
+츘	cyuss
+츙	cyux	1300
+츚	cyuj
+츛	cyuc
+츜	cyuk
+츝	cyut
+츞	cyup
+츟	cyuh
+츠	cw	1300
+측	cwg	1300
+츢	cwgg
+츣	cwgs
+츤	cwn	1300
+츥	cwnj
+츦	cwnh
+츧	cwd
+츨	cwl	1300
+츩	cwlg
+츪	cwlm
+츫	cwlb
+츬	cwls
+츭	cwlt
+츮	cwlp
+츯	cwlh
+츰	cwm	1300
+츱	cwb	1300
+츲	cwbs
+츳	cws	1300
+츴	cwss
+층	cwx	1300
+츶	cwj
+츷	cwc
+츸	cwk
+츹	cwt
+츺	cwp
+츻	cwh
+츼	cwi
+츽	cwig
+츾	cwigg
+츿	cwigs
+칀	cwin
+칁	cwinj
+칂	cwinh
+칃	cwid
+칄	cwil
+칅	cwilg
+칆	cwilm
+칇	cwilb
+칈	cwils
+칉	cwilt
+칊	cwilp
+칋	cwilh
+칌	cwim
+칍	cwib
+칎	cwibs
+칏	cwis
+칐	cwiss
+칑	cwix
+칒	cwij
+칓	cwic
+칔	cwik
+칕	cwit
+칖	cwip
+칗	cwih
+치	ci	1300
+칙	cig	1300
+칚	cigg
+칛	cigs
+친	cin	1300
+칝	cinj
+칞	cinh
+칟	cid	1300
+칠	cil	1300
+칡	cilg	1300
+칢	cilm
+칣	cilb
+칤	cils
+칥	cilt
+칦	cilp
+칧	cilh
+침	cim	1300
+칩	cib	1300
+칪	cibs
+칫	cis	1300
+칬	ciss
+칭	cix	1300
+칮	cij
+칯	cic
+칰	cik
+칱	cit
+칲	cip
+칳	cih
+카	ka	1300
+칵	kag	1300
+칶	kagg
+칷	kags
+칸	kan	1300
+칹	kanj
+칺	kanh
+칻	kad
+칼	kal	1300
+칽	kalg
+칾	kalm
+칿	kalb
+캀	kals
+캁	kalt
+캂	kalp
+캃	kalh
+캄	kam	1300
+캅	kab	1300
+캆	kabs
+캇	kas	1300
+캈	kass
+캉	kax	1300
+캊	kaj
+캋	kac
+캌	kak
+캍	kat
+캎	kap
+캏	kah
+캐	kai	1300
+캑	kaig	1300
+캒	kaigg
+캓	kaigs
+캔	kain	1300
+캕	kainj
+캖	kainh
+캗	kaid
+캘	kail	1300
+캙	kailg
+캚	kailm
+캛	kailb
+캜	kails
+캝	kailt
+캞	kailp
+캟	kailh
+캠	kaim	1300
+캡	kaib	1300
+캢	kaibs
+캣	kais	1300
+캤	kaiss	1300
+캥	kaix	1300
+캦	kaij
+캧	kaic
+캨	kaik
+캩	kait
+캪	kaip
+캫	kaih
+캬	kya	1300
+캭	kyag	1300
+캮	kyagg
+캯	kyags
+캰	kyan
+캱	kyanj
+캲	kyanh
+캳	kyad
+캴	kyal
+캵	kyalg
+캶	kyalm
+캷	kyalb
+캸	kyals
+캹	kyalt
+캺	kyalp
+캻	kyalh
+캼	kyam
+캽	kyab
+캾	kyabs
+캿	kyas
+컀	kyass
+컁	kyax	1300
+컂	kyaj
+컃	kyac
+컄	kyak
+컅	kyat
+컆	kyap
+컇	kyah
+컈	kyai
+컉	kyaig
+컊	kyaigg
+컋	kyaigs
+컌	kyain
+컍	kyainj
+컎	kyainh
+컏	kyaid
+컐	kyail
+컑	kyailg
+컒	kyailm
+컓	kyailb
+컔	kyails
+컕	kyailt
+컖	kyailp
+컗	kyailh
+컘	kyaim
+컙	kyaib
+컚	kyaibs
+컛	kyais
+컜	kyaiss
+컝	kyaix
+컞	kyaij
+컟	kyaic
+컠	kyaik
+컡	kyait
+컢	kyaip
+컣	kyaih
+커	ke	1300
+컥	keg	1300
+컦	kegg
+컧	kegs
+컨	ken	1300
+컩	kenj
+컪	kenh
+컫	ked	1300
+컬	kel	1300
+컭	kelg
+컮	kelm
+컯	kelb
+컰	kels
+컱	kelt
+컲	kelp
+컳	kelh
+컴	kem	1300
+컵	keb	1300
+컶	kebs
+컷	kes	1300
+컸	kess	1300
+컹	kex	1300
+컺	kej
+컻	kec
+컼	kek
+컽	ket
+컾	kep
+컿	keh
+#37
+케	kei	1300
+켁	keig	1300
+켂	keigg
+켃	keigs
+켄	kein	1300
+켅	keinj
+켆	keinh
+켇	keid
+켈	keil	1300
+켉	keilg
+켊	keilm
+켋	keilb
+켌	keils
+켍	keilt
+켎	keilp
+켏	keilh
+켐	keim	1300
+켑	keib	1300
+켒	keibs
+켓	keis	1300
+켔	keiss
+켕	keix	1300
+켖	keij
+켗	keic
+켘	keik
+켙	keit
+켚	keip
+켛	keih
+켜	kye	1300
+켝	kyeg
+켞	kyegg
+켟	kyegs
+켠	kyen	1300
+켡	kyenj
+켢	kyenh
+켣	kyed
+켤	kyel	1300
+켥	kyelg
+켦	kyelm
+켧	kyelb
+켨	kyels
+켩	kyelt
+켪	kyelp
+켫	kyelh
+켬	kyem	1300
+켭	kyeb	1300
+켮	kyebs
+켯	kyes	1300
+켰	kyess	1300
+켱	kyex	1300
+켲	kyej
+켳	kyec
+켴	kyek
+켵	kyet
+켶	kyep
+켷	kyeh
+켸	kyei	1300
+켹	kyeig
+켺	kyeigg
+켻	kyeigs
+켼	kyein
+켽	kyeinj
+켾	kyeinh
+켿	kyeid
+콀	kyeil
+콁	kyeilg
+콂	kyeilm
+콃	kyeilb
+콄	kyeils
+콅	kyeilt
+콆	kyeilp
+콇	kyeilh
+콈	kyeim
+콉	kyeib
+콊	kyeibs
+콋	kyeis
+콌	kyeiss
+콍	kyeix
+콎	kyeij
+콏	kyeic
+콐	kyeik
+콑	kyeit
+콒	kyeip
+콓	kyeih
+코	ko	1300
+콕	kog	1300
+콖	kogg
+콗	kogs
+콘	kon	1300
+콙	konj
+콚	konh
+콛	kod
+콜	kol	1300
+콝	kolg
+콞	kolm
+콟	kolb
+콠	kols
+콡	kolt
+콢	kolp
+콣	kolh
+콤	kom	1300
+콥	kob	1300
+콦	kobs
+콧	kos	1300
+콨	koss
+콩	kox	1300
+콪	koj
+콫	koc
+콬	kok
+콭	kot
+콮	kop
+콯	koh
+콰	koa	1300
+콱	koag	1300
+콲	koagg
+콳	koags
+콴	koan	1300
+콵	koanj
+콶	koanh
+콷	koad
+콸	koal	1300
+콹	koalg
+콺	koalm
+콻	koalb
+콼	koals
+콽	koalt
+콾	koalp
+콿	koalh
+쾀	koam	1300
+쾁	koab
+쾂	koabs
+쾃	koas
+쾄	koass
+쾅	koax	1300
+쾆	koaj
+쾇	koac
+쾈	koak
+쾉	koat
+쾊	koap
+쾋	koah
+쾌	koai	1300
+쾍	koaig
+쾎	koaigg
+쾏	koaigs
+쾐	koain
+쾑	koainj
+쾒	koainh
+쾓	koaid
+쾔	koail
+쾕	koailg
+쾖	koailm
+쾗	koailb
+쾘	koails
+쾙	koailt
+쾚	koailp
+쾛	koailh
+쾜	koaim
+쾝	koaib
+쾞	koaibs
+쾟	koais
+쾠	koaiss
+쾡	koaix	1300
+쾢	koaij
+쾣	koaic
+쾤	koaik
+쾥	koait
+쾦	koaip
+쾧	koaih
+쾨	koi	1300
+쾩	koig
+쾪	koigg
+쾫	koigs
+쾬	koin
+쾭	koinj
+쾮	koinh
+쾯	koid
+쾰	koil	1300
+쾱	koilg
+쾲	koilm
+쾳	koilb
+쾴	koils
+쾵	koilt
+쾶	koilp
+쾷	koilh
+쾸	koim
+쾹	koib
+쾺	koibs
+쾻	kois
+쾼	koiss
+쾽	koix
+쾾	koij
+쾿	koic
+쿀	koik
+쿁	koit
+쿂	koip
+쿃	koih
+쿄	kyo	1300
+쿅	kyog
+쿆	kyogg
+쿇	kyogs
+쿈	kyon
+쿉	kyonj
+쿊	kyonh
+쿋	kyod
+쿌	kyol
+쿍	kyolg
+쿎	kyolm
+쿏	kyolb
+쿐	kyols
+쿑	kyolt
+쿒	kyolp
+쿓	kyolh
+쿔	kyom
+쿕	kyob
+쿖	kyobs
+쿗	kyos
+쿘	kyoss
+쿙	kyox
+쿚	kyoj
+쿛	kyoc
+쿜	kyok
+쿝	kyot
+쿞	kyop
+쿟	kyoh
+쿠	ku	1300
+쿡	kug	1300
+쿢	kugg
+쿣	kugs
+쿤	kun	1300
+쿥	kunj
+쿦	kunh
+쿧	kud
+쿨	kul	1300
+쿩	kulg
+쿪	kulm
+쿫	kulb
+쿬	kuls
+쿭	kult
+쿮	kulp
+쿯	kulh
+쿰	kum	1300
+쿱	kub	1300
+쿲	kubs
+쿳	kus	1300
+쿴	kuss
+쿵	kux	1300
+쿶	kuj
+쿷	kuc
+쿸	kuk
+쿹	kut
+쿺	kup
+쿻	kuh
+쿼	kuo	1300
+쿽	kuog
+쿾	kuogg
+쿿	kuogs
+#38
+퀀	kuon	1300
+퀁	kuonj
+퀂	kuonh
+퀃	kuod
+퀄	kuol	1300
+퀅	kuolg
+퀆	kuolm
+퀇	kuolb
+퀈	kuols
+퀉	kuolt
+퀊	kuolp
+퀋	kuolh
+퀌	kuom
+퀍	kuob
+퀎	kuobs
+퀏	kuos
+퀐	kuoss
+퀑	kuox	1300
+퀒	kuoj
+퀓	kuoc
+퀔	kuok
+퀕	kuot
+퀖	kuop
+퀗	kuoh
+퀘	kuei	1300
+퀙	kueig
+퀚	kueigg
+퀛	kueigs
+퀜	kuein
+퀝	kueinj
+퀞	kueinh
+퀟	kueid
+퀠	kueil
+퀡	kueilg
+퀢	kueilm
+퀣	kueilb
+퀤	kueils
+퀥	kueilt
+퀦	kueilp
+퀧	kueilh
+퀨	kueim
+퀩	kueib
+퀪	kueibs
+퀫	kueis
+퀬	kueiss
+퀭	kueix	1300
+퀮	kueij
+퀯	kueic
+퀰	kueik
+퀱	kueit
+퀲	kueip
+퀳	kueih
+퀴	kui	1300
+퀵	kuig	1300
+퀶	kuigg
+퀷	kuigs
+퀸	kuin	1300
+퀹	kuinj
+퀺	kuinh
+퀻	kuid
+퀼	kuil	1300
+퀽	kuilg
+퀾	kuilm
+퀿	kuilb
+큀	kuils
+큁	kuilt
+큂	kuilp
+큃	kuilh
+큄	kuim	1300
+큅	kuib	1300
+큆	kuibs
+큇	kuis	1300
+큈	kuiss
+큉	kuix	1300
+큊	kuij
+큋	kuic
+큌	kuik
+큍	kuit
+큎	kuip
+큏	kuih
+큐	kyu	1300
+큑	kyug
+큒	kyugg
+큓	kyugs
+큔	kyun	1300
+큕	kyunj
+큖	kyunh
+큗	kyud
+큘	kyul	1300
+큙	kyulg
+큚	kyulm
+큛	kyulb
+큜	kyuls
+큝	kyult
+큞	kyulp
+큟	kyulh
+큠	kyum	1300
+큡	kyub
+큢	kyubs
+큣	kyus
+큤	kyuss
+큥	kyux
+큦	kyuj
+큧	kyuc
+큨	kyuk
+큩	kyut
+큪	kyup
+큫	kyuh
+크	kw	1300
+큭	kwg	1300
+큮	kwgg
+큯	kwgs
+큰	kwn	1300
+큱	kwnj
+큲	kwnh
+큳	kwd
+클	kwl	1300
+큵	kwlg
+큶	kwlm
+큷	kwlb
+큸	kwls
+큹	kwlt
+큺	kwlp
+큻	kwlh
+큼	kwm	1300
+큽	kwb	1300
+큾	kwbs
+큿	kws
+킀	kwss
+킁	kwx	1300
+킂	kwj
+킃	kwc
+킄	kwk
+킅	kwt
+킆	kwp
+킇	kwh
+킈	kwi
+킉	kwig
+킊	kwigg
+킋	kwigs
+킌	kwin
+킍	kwinj
+킎	kwinh
+킏	kwid
+킐	kwil
+킑	kwilg
+킒	kwilm
+킓	kwilb
+킔	kwils
+킕	kwilt
+킖	kwilp
+킗	kwilh
+킘	kwim
+킙	kwib
+킚	kwibs
+킛	kwis
+킜	kwiss
+킝	kwix
+킞	kwij
+킟	kwic
+킠	kwik
+킡	kwit
+킢	kwip
+킣	kwih
+키	ki	1300
+킥	kig	1300
+킦	kigg
+킧	kigs
+킨	kin	1300
+킩	kinj
+킪	kinh
+킫	kid
+킬	kil	1300
+킭	kilg
+킮	kilm
+킯	kilb
+킰	kils
+킱	kilt
+킲	kilp
+킳	kilh
+킴	kim	1300
+킵	kib	1300
+킶	kibs
+킷	kis	1300
+킸	kiss
+킹	kix	1300
+킺	kij
+킻	kic
+킼	kik
+킽	kit
+킾	kip
+킿	kih
+타	ta	1300
+탁	tag	1300
+탂	tagg
+탃	tags
+탄	tan	1300
+탅	tanj
+탆	tanh
+탇	tad
+탈	tal	1300
+탉	talg	1300
+탊	talm
+탋	talb
+탌	tals
+탍	talt
+탎	talp
+탏	talh
+탐	tam	1300
+탑	tab	1300
+탒	tabs
+탓	tas	1300
+탔	tass	1300
+탕	tax	1300
+탖	taj
+탗	tac
+탘	tak
+탙	tat
+탚	tap
+탛	tah
+태	tai	1300
+택	taig	1300
+탞	taigg
+탟	taigs
+탠	tain	1300
+탡	tainj
+탢	tainh
+탣	taid
+탤	tail	1300
+탥	tailg
+탦	tailm
+탧	tailb
+탨	tails
+탩	tailt
+탪	tailp
+탫	tailh
+탬	taim	1300
+탭	taib	1300
+탮	taibs
+탯	tais	1300
+탰	taiss	1300
+탱	taix	1300
+탲	taij
+탳	taic
+탴	taik
+탵	tait
+탶	taip
+탷	taih
+탸	tya	1300
+탹	tyag
+탺	tyagg
+탻	tyags
+탼	tyan
+탽	tyanj
+탾	tyanh
+탿	tyad
+#39
+턀	tyal
+턁	tyalg
+턂	tyalm
+턃	tyalb
+턄	tyals
+턅	tyalt
+턆	tyalp
+턇	tyalh
+턈	tyam
+턉	tyab
+턊	tyabs
+턋	tyas
+턌	tyass
+턍	tyax	1300
+턎	tyaj
+턏	tyac
+턐	tyak
+턑	tyat
+턒	tyap
+턓	tyah
+턔	tyai
+턕	tyaig
+턖	tyaigg
+턗	tyaigs
+턘	tyain
+턙	tyainj
+턚	tyainh
+턛	tyaid
+턜	tyail
+턝	tyailg
+턞	tyailm
+턟	tyailb
+턠	tyails
+턡	tyailt
+턢	tyailp
+턣	tyailh
+턤	tyaim
+턥	tyaib
+턦	tyaibs
+턧	tyais
+턨	tyaiss
+턩	tyaix
+턪	tyaij
+턫	tyaic
+턬	tyaik
+턭	tyait
+턮	tyaip
+턯	tyaih
+터	te	1300
+턱	teg	1300
+턲	tegg
+턳	tegs
+턴	ten	1300
+턵	tenj
+턶	tenh
+턷	ted
+털	tel	1300
+턹	telg
+턺	telm	1300
+턻	telb
+턼	tels
+턽	telt
+턾	telp
+턿	telh
+텀	tem	1300
+텁	teb	1300
+텂	tebs
+텃	tes	1300
+텄	tess	1300
+텅	tex	1300
+텆	tej
+텇	tec
+텈	tek
+텉	tet
+텊	tep
+텋	teh
+테	tei	1300
+텍	teig	1300
+텎	teigg
+텏	teigs
+텐	tein	1300
+텑	teinj
+텒	teinh
+텓	teid
+텔	teil	1300
+텕	teilg
+텖	teilm
+텗	teilb
+텘	teils
+텙	teilt
+텚	teilp
+텛	teilh
+템	teim	1300
+텝	teib	1300
+텞	teibs
+텟	teis	1300
+텠	teiss
+텡	teix	1300
+텢	teij
+텣	teic
+텤	teik
+텥	teit
+텦	teip
+텧	teih
+텨	tye	1300
+텩	tyeg
+텪	tyegg
+텫	tyegs
+텬	tyen	1300
+텭	tyenj
+텮	tyenh
+텯	tyed
+텰	tyel
+텱	tyelg
+텲	tyelm
+텳	tyelb
+텴	tyels
+텵	tyelt
+텶	tyelp
+텷	tyelh
+텸	tyem
+텹	tyeb
+텺	tyebs
+텻	tyes
+텼	tyess	1300
+텽	tyex
+텾	tyej
+텿	tyec
+톀	tyek
+톁	tyet
+톂	tyep
+톃	tyeh
+톄	tyei	1300
+톅	tyeig
+톆	tyeigg
+톇	tyeigs
+톈	tyein	1300
+톉	tyeinj
+톊	tyeinh
+톋	tyeid
+톌	tyeil
+톍	tyeilg
+톎	tyeilm
+톏	tyeilb
+톐	tyeils
+톑	tyeilt
+톒	tyeilp
+톓	tyeilh
+톔	tyeim
+톕	tyeib
+톖	tyeibs
+톗	tyeis
+톘	tyeiss
+톙	tyeix
+톚	tyeij
+톛	tyeic
+톜	tyeik
+톝	tyeit
+톞	tyeip
+톟	tyeih
+토	to	1300
+톡	tog	1300
+톢	togg
+톣	togs
+톤	ton	1300
+톥	tonj
+톦	tonh
+톧	tod
+톨	tol	1300
+톩	tolg
+톪	tolm
+톫	tolb
+톬	tols
+톭	tolt
+톮	tolp
+톯	tolh
+톰	tom	1300
+톱	tob	1300
+톲	tobs
+톳	tos	1300
+톴	toss
+통	tox	1300
+톶	toj
+톷	toc
+톸	tok
+톹	tot
+톺	top	1300
+톻	toh
+톼	toa	1300
+톽	toag
+톾	toagg
+톿	toags
+퇀	toan	1300
+퇁	toanj
+퇂	toanh
+퇃	toad
+퇄	toal
+퇅	toalg
+퇆	toalm
+퇇	toalb
+퇈	toals
+퇉	toalt
+퇊	toalp
+퇋	toalh
+퇌	toam
+퇍	toab
+퇎	toabs
+퇏	toas
+퇐	toass
+퇑	toax
+퇒	toaj
+퇓	toac
+퇔	toak
+퇕	toat
+퇖	toap
+퇗	toah
+퇘	toai	1300
+퇙	toaig
+퇚	toaigg
+퇛	toaigs
+퇜	toain
+퇝	toainj
+퇞	toainh
+퇟	toaid
+퇠	toail
+퇡	toailg
+퇢	toailm
+퇣	toailb
+퇤	toails
+퇥	toailt
+퇦	toailp
+퇧	toailh
+퇨	toaim
+퇩	toaib
+퇪	toaibs
+퇫	toais
+퇬	toaiss
+퇭	toaix
+퇮	toaij
+퇯	toaic
+퇰	toaik
+퇱	toait
+퇲	toaip
+퇳	toaih
+퇴	toi	1300
+퇵	toig
+퇶	toigg
+퇷	toigs
+퇸	toin	1300
+퇹	toinj
+퇺	toinh
+퇻	toid
+퇼	toil
+퇽	toilg
+퇾	toilm
+퇿	toilb
+#40
+툀	toils
+툁	toilt
+툂	toilp
+툃	toilh
+툄	toim
+툅	toib
+툆	toibs
+툇	tois	1300
+툈	toiss
+툉	toix	1300
+툊	toij
+툋	toic
+툌	toik
+툍	toit
+툎	toip
+툏	toih
+툐	tyo	1300
+툑	tyog
+툒	tyogg
+툓	tyogs
+툔	tyon
+툕	tyonj
+툖	tyonh
+툗	tyod
+툘	tyol
+툙	tyolg
+툚	tyolm
+툛	tyolb
+툜	tyols
+툝	tyolt
+툞	tyolp
+툟	tyolh
+툠	tyom
+툡	tyob
+툢	tyobs
+툣	tyos
+툤	tyoss
+툥	tyox
+툦	tyoj
+툧	tyoc
+툨	tyok
+툩	tyot
+툪	tyop
+툫	tyoh
+투	tu	1300
+툭	tug	1300
+툮	tugg
+툯	tugs
+툰	tun	1300
+툱	tunj
+툲	tunh
+툳	tud
+툴	tul	1300
+툵	tulg
+툶	tulm
+툷	tulb
+툸	tuls
+툹	tult
+툺	tulp
+툻	tulh
+툼	tum	1300
+툽	tub	1300
+툾	tubs
+툿	tus	1300
+퉀	tuss
+퉁	tux	1300
+퉂	tuj
+퉃	tuc
+퉄	tuk
+퉅	tut
+퉆	tup
+퉇	tuh
+퉈	tuo	1300
+퉉	tuog
+퉊	tuogg
+퉋	tuogs
+퉌	tuon
+퉍	tuonj
+퉎	tuonh
+퉏	tuod
+퉐	tuol
+퉑	tuolg
+퉒	tuolm
+퉓	tuolb
+퉔	tuols
+퉕	tuolt
+퉖	tuolp
+퉗	tuolh
+퉘	tuom
+퉙	tuob
+퉚	tuobs
+퉛	tuos
+퉜	tuoss	1300
+퉝	tuox
+퉞	tuoj
+퉟	tuoc
+퉠	tuok
+퉡	tuot
+퉢	tuop
+퉣	tuoh
+퉤	tuei	1300
+퉥	tueig
+퉦	tueigg
+퉧	tueigs
+퉨	tuein
+퉩	tueinj
+퉪	tueinh
+퉫	tueid
+퉬	tueil
+퉭	tueilg
+퉮	tueilm
+퉯	tueilb
+퉰	tueils
+퉱	tueilt
+퉲	tueilp
+퉳	tueilh
+퉴	tueim
+퉵	tueib
+퉶	tueibs
+퉷	tueis
+퉸	tueiss
+퉹	tueix
+퉺	tueij
+퉻	tueic
+퉼	tueik
+퉽	tueit
+퉾	tueip
+퉿	tueih
+튀	tui	1300
+튁	tuig	1300
+튂	tuigg
+튃	tuigs
+튄	tuin	1300
+튅	tuinj
+튆	tuinh
+튇	tuid
+튈	tuil	1300
+튉	tuilg
+튊	tuilm
+튋	tuilb
+튌	tuils
+튍	tuilt
+튎	tuilp
+튏	tuilh
+튐	tuim	1300
+튑	tuib	1300
+튒	tuibs
+튓	tuis
+튔	tuiss
+튕	tuix	1300
+튖	tuij
+튗	tuic
+튘	tuik
+튙	tuit
+튚	tuip
+튛	tuih
+튜	tyu	1300
+튝	tyug
+튞	tyugg
+튟	tyugs
+튠	tyun	1300
+튡	tyunj
+튢	tyunh
+튣	tyud
+튤	tyul	1300
+튥	tyulg
+튦	tyulm
+튧	tyulb
+튨	tyuls
+튩	tyult
+튪	tyulp
+튫	tyulh
+튬	tyum	1300
+튭	tyub
+튮	tyubs
+튯	tyus
+튰	tyuss
+튱	tyux	1300
+튲	tyuj
+튳	tyuc
+튴	tyuk
+튵	tyut
+튶	tyup
+튷	tyuh
+트	tw	1300
+특	twg	1300
+튺	twgg
+튻	twgs
+튼	twn	1300
+튽	twnj
+튾	twnh
+튿	twd	1300
+틀	twl	1300
+틁	twlg
+틂	twlm	1300
+틃	twlb
+틄	twls
+틅	twlt
+틆	twlp
+틇	twlh
+틈	twm	1300
+틉	twb	1300
+틊	twbs
+틋	tws	1300
+틌	twss
+틍	twx
+틎	twj
+틏	twc
+틐	twk
+틑	twt
+틒	twp
+틓	twh
+틔	twi	1300
+틕	twig
+틖	twigg
+틗	twigs
+틘	twin	1300
+틙	twinj
+틚	twinh
+틛	twid
+틜	twil	1300
+틝	twilg
+틞	twilm
+틟	twilb
+틠	twils
+틡	twilt
+틢	twilp
+틣	twilh
+틤	twim	1300
+틥	twib	1300
+틦	twibs
+틧	twis
+틨	twiss
+틩	twix
+틪	twij
+틫	twic
+틬	twik
+틭	twit
+틮	twip
+틯	twih
+티	ti	1300
+틱	tig	1300
+틲	tigg
+틳	tigs
+틴	tin	1300
+틵	tinj
+틶	tinh
+틷	tid
+틸	til	1300
+틹	tilg
+틺	tilm
+틻	tilb
+틼	tils
+틽	tilt
+틾	tilp
+틿	tilh
+#41
+팀	tim	1300
+팁	tib	1300
+팂	tibs
+팃	tis	1300
+팄	tiss
+팅	tix	1300
+팆	tij
+팇	tic
+팈	tik
+팉	tit
+팊	tip
+팋	tih
+파	pa	1300
+팍	pag	1300
+팎	pagg	1300
+팏	pags
+판	pan	1300
+팑	panj
+팒	panh
+팓	pad
+팔	pal	1300
+팕	palg
+팖	palm	1300
+팗	palb
+팘	pals
+팙	palt
+팚	palp
+팛	palh
+팜	pam	1300
+팝	pab	1300
+팞	pabs
+팟	pas	1300
+팠	pass	1300
+팡	pax	1300
+팢	paj
+팣	pac
+팤	pak
+팥	pat	1300
+팦	pap
+팧	pah
+패	pai	1300
+팩	paig	1300
+팪	paigg
+팫	paigs
+팬	pain	1300
+팭	painj
+팮	painh
+팯	paid
+팰	pail	1300
+팱	pailg
+팲	pailm
+팳	pailb
+팴	pails
+팵	pailt
+팶	pailp
+팷	pailh
+팸	paim	1300
+팹	paib	1300
+팺	paibs
+팻	pais	1300
+팼	paiss	1300
+팽	paix	1300
+팾	paij
+팿	paic
+퍀	paik
+퍁	pait
+퍂	paip
+퍃	paih
+퍄	pya	1300
+퍅	pyag	1300
+퍆	pyagg
+퍇	pyags
+퍈	pyan
+퍉	pyanj
+퍊	pyanh
+퍋	pyad
+퍌	pyal
+퍍	pyalg
+퍎	pyalm
+퍏	pyalb
+퍐	pyals
+퍑	pyalt
+퍒	pyalp
+퍓	pyalh
+퍔	pyam
+퍕	pyab
+퍖	pyabs
+퍗	pyas
+퍘	pyass
+퍙	pyax
+퍚	pyaj
+퍛	pyac
+퍜	pyak
+퍝	pyat
+퍞	pyap
+퍟	pyah
+퍠	pyai
+퍡	pyaig
+퍢	pyaigg
+퍣	pyaigs
+퍤	pyain
+퍥	pyainj
+퍦	pyainh
+퍧	pyaid
+퍨	pyail
+퍩	pyailg
+퍪	pyailm
+퍫	pyailb
+퍬	pyails
+퍭	pyailt
+퍮	pyailp
+퍯	pyailh
+퍰	pyaim
+퍱	pyaib
+퍲	pyaibs
+퍳	pyais
+퍴	pyaiss
+퍵	pyaix
+퍶	pyaij
+퍷	pyaic
+퍸	pyaik
+퍹	pyait
+퍺	pyaip
+퍻	pyaih
+퍼	pe	1300
+퍽	peg	1300
+퍾	pegg
+퍿	pegs
+펀	pen	1300
+펁	penj
+펂	penh
+펃	ped
+펄	pel	1300
+펅	pelg
+펆	pelm
+펇	pelb
+펈	pels
+펉	pelt
+펊	pelp
+펋	pelh
+펌	pem	1300
+펍	peb	1300
+펎	pebs
+펏	pes	1300
+펐	pess	1300
+펑	pex	1300
+펒	pej
+펓	pec
+펔	pek
+펕	pet
+펖	pep
+펗	peh
+페	pei	1300
+펙	peig	1300
+펚	peigg
+펛	peigs
+펜	pein	1300
+펝	peinj
+펞	peinh
+펟	peid
+펠	peil	1300
+펡	peilg
+펢	peilm
+펣	peilb
+펤	peils
+펥	peilt
+펦	peilp
+펧	peilh
+펨	peim	1300
+펩	peib	1300
+펪	peibs
+펫	peis	1300
+펬	peiss
+펭	peix	1300
+펮	peij
+펯	peic
+펰	peik
+펱	peit
+펲	peip
+펳	peih
+펴	pye	1300
+펵	pyeg
+펶	pyegg
+펷	pyegs
+편	pyen	1300
+펹	pyenj
+펺	pyenh
+펻	pyed
+펼	pyel	1300
+펽	pyelg
+펾	pyelm
+펿	pyelb
+폀	pyels
+폁	pyelt
+폂	pyelp
+폃	pyelh
+폄	pyem	1300
+폅	pyeb	1300
+폆	pyebs
+폇	pyes
+폈	pyess	1300
+평	pyex	1300
+폊	pyej
+폋	pyec
+폌	pyek
+폍	pyet
+폎	pyep
+폏	pyeh
+폐	pyei	1300
+폑	pyeig
+폒	pyeigg
+폓	pyeigs
+폔	pyein
+폕	pyeinj
+폖	pyeinh
+폗	pyeid
+폘	pyeil	1300
+폙	pyeilg
+폚	pyeilm
+폛	pyeilb
+폜	pyeils
+폝	pyeilt
+폞	pyeilp
+폟	pyeilh
+폠	pyeim
+폡	pyeib	1300
+폢	pyeibs
+폣	pyeis	1300
+폤	pyeiss
+폥	pyeix
+폦	pyeij
+폧	pyeic
+폨	pyeik
+폩	pyeit
+폪	pyeip
+폫	pyeih
+포	po	1300
+폭	pog	1300
+폮	pogg
+폯	pogs
+#42
+폰	pon	1300
+폱	ponj
+폲	ponh
+폳	pod
+폴	pol	1300
+폵	polg
+폶	polm
+폷	polb
+폸	pols
+폹	polt
+폺	polp
+폻	polh
+폼	pom	1300
+폽	pob	1300
+폾	pobs
+폿	pos	1300
+퐀	poss
+퐁	pox	1300
+퐂	poj
+퐃	poc
+퐄	pok
+퐅	pot
+퐆	pop
+퐇	poh
+퐈	poa	1300
+퐉	poag
+퐊	poagg
+퐋	poags
+퐌	poan
+퐍	poanj
+퐎	poanh
+퐏	poad
+퐐	poal
+퐑	poalg
+퐒	poalm
+퐓	poalb
+퐔	poals
+퐕	poalt
+퐖	poalp
+퐗	poalh
+퐘	poam
+퐙	poab
+퐚	poabs
+퐛	poas
+퐜	poass
+퐝	poax	1300
+퐞	poaj
+퐟	poac
+퐠	poak
+퐡	poat
+퐢	poap
+퐣	poah
+퐤	poai
+퐥	poaig
+퐦	poaigg
+퐧	poaigs
+퐨	poain
+퐩	poainj
+퐪	poainh
+퐫	poaid
+퐬	poail
+퐭	poailg
+퐮	poailm
+퐯	poailb
+퐰	poails
+퐱	poailt
+퐲	poailp
+퐳	poailh
+퐴	poaim
+퐵	poaib
+퐶	poaibs
+퐷	poais
+퐸	poaiss
+퐹	poaix
+퐺	poaij
+퐻	poaic
+퐼	poaik
+퐽	poait
+퐾	poaip
+퐿	poaih
+푀	poi	1300
+푁	poig
+푂	poigg
+푃	poigs
+푄	poin	1300
+푅	poinj
+푆	poinh
+푇	poid
+푈	poil
+푉	poilg
+푊	poilm
+푋	poilb
+푌	poils
+푍	poilt
+푎	poilp
+푏	poilh
+푐	poim
+푑	poib
+푒	poibs
+푓	pois
+푔	poiss
+푕	poix
+푖	poij
+푗	poic
+푘	poik
+푙	poit
+푚	poip
+푛	poih
+표	pyo	1300
+푝	pyog
+푞	pyogg
+푟	pyogs
+푠	pyon	1300
+푡	pyonj
+푢	pyonh
+푣	pyod
+푤	pyol	1300
+푥	pyolg
+푦	pyolm
+푧	pyolb
+푨	pyols
+푩	pyolt
+푪	pyolp
+푫	pyolh
+푬	pyom
+푭	pyob	1300
+푮	pyobs
+푯	pyos	1300
+푰	pyoss
+푱	pyox
+푲	pyoj
+푳	pyoc
+푴	pyok
+푵	pyot
+푶	pyop
+푷	pyoh
+푸	pu	1300
+푹	pug	1300
+푺	pugg
+푻	pugs
+푼	pun	1300
+푽	punj
+푾	punh
+푿	pud	1300
+풀	pul	1300
+풁	pulg
+풂	pulm	1300
+풃	pulb
+풄	puls
+풅	pult
+풆	pulp
+풇	pulh
+품	pum	1300
+풉	pub	1300
+풊	pubs
+풋	pus	1300
+풌	puss
+풍	pux	1300
+풎	puj
+풏	puc
+풐	puk
+풑	put
+풒	pup
+풓	puh
+풔	puo	1300
+풕	puog
+풖	puogg
+풗	puogs
+풘	puon
+풙	puonj
+풚	puonh
+풛	puod
+풜	puol
+풝	puolg
+풞	puolm
+풟	puolb
+풠	puols
+풡	puolt
+풢	puolp
+풣	puolh
+풤	puom
+풥	puob
+풦	puobs
+풧	puos
+풨	puoss
+풩	puox	1300
+풪	puoj
+풫	puoc
+풬	puok
+풭	puot
+풮	puop
+풯	puoh
+풰	puei
+풱	pueig
+풲	pueigg
+풳	pueigs
+풴	puein
+풵	pueinj
+풶	pueinh
+풷	pueid
+풸	pueil
+풹	pueilg
+풺	pueilm
+풻	pueilb
+풼	pueils
+풽	pueilt
+풾	pueilp
+풿	pueilh
+퓀	pueim
+퓁	pueib
+퓂	pueibs
+퓃	pueis
+퓄	pueiss
+퓅	pueix
+퓆	pueij
+퓇	pueic
+퓈	pueik
+퓉	pueit
+퓊	pueip
+퓋	pueih
+퓌	pui	1300
+퓍	puig
+퓎	puigg
+퓏	puigs
+퓐	puin	1300
+퓑	puinj
+퓒	puinh
+퓓	puid
+퓔	puil	1300
+퓕	puilg
+퓖	puilm
+퓗	puilb
+퓘	puils
+퓙	puilt
+퓚	puilp
+퓛	puilh
+퓜	puim	1300
+퓝	puib
+퓞	puibs
+퓟	puis	1300
+#43
+퓠	puiss
+퓡	puix
+퓢	puij
+퓣	puic
+퓤	puik
+퓥	puit
+퓦	puip
+퓧	puih
+퓨	pyu	1300
+퓩	pyug
+퓪	pyugg
+퓫	pyugs
+퓬	pyun	1300
+퓭	pyunj
+퓮	pyunh
+퓯	pyud
+퓰	pyul	1300
+퓱	pyulg
+퓲	pyulm
+퓳	pyulb
+퓴	pyuls
+퓵	pyult
+퓶	pyulp
+퓷	pyulh
+퓸	pyum	1300
+퓹	pyub
+퓺	pyubs
+퓻	pyus	1300
+퓼	pyuss
+퓽	pyux	1300
+퓾	pyuj
+퓿	pyuc
+픀	pyuk
+픁	pyut
+픂	pyup
+픃	pyuh
+프	pw	1300
+픅	pwg
+픆	pwgg
+픇	pwgs
+픈	pwn	1300
+픉	pwnj
+픊	pwnh
+픋	pwd
+플	pwl	1300
+픍	pwlg
+픎	pwlm
+픏	pwlb
+픐	pwls
+픑	pwlt
+픒	pwlp
+픓	pwlh
+픔	pwm	1300
+픕	pwb	1300
+픖	pwbs
+픗	pws	1300
+픘	pwss
+픙	pwx
+픚	pwj
+픛	pwc
+픜	pwk
+픝	pwt
+픞	pwp
+픟	pwh
+픠	pwi
+픡	pwig
+픢	pwigg
+픣	pwigs
+픤	pwin
+픥	pwinj
+픦	pwinh
+픧	pwid
+픨	pwil
+픩	pwilg
+픪	pwilm
+픫	pwilb
+픬	pwils
+픭	pwilt
+픮	pwilp
+픯	pwilh
+픰	pwim
+픱	pwib
+픲	pwibs
+픳	pwis
+픴	pwiss
+픵	pwix
+픶	pwij
+픷	pwic
+픸	pwik
+픹	pwit
+픺	pwip
+픻	pwih
+피	pi	1300
+픽	pig	1300
+픾	pigg
+픿	pigs
+핀	pin	1300
+핁	pinj
+핂	pinh
+핃	pid
+필	pil	1300
+핅	pilg
+핆	pilm
+핇	pilb
+핈	pils
+핉	pilt
+핊	pilp
+핋	pilh
+핌	pim	1300
+핍	pib	1300
+핎	pibs
+핏	pis	1300
+핐	piss
+핑	pix	1300
+핒	pij
+핓	pic
+핔	pik
+핕	pit
+핖	pip
+핗	pih
+하	ha	1300
+학	hag	1300
+핚	hagg
+핛	hags
+한	han	1300
+핝	hanj
+핞	hanh
+핟	had
+할	hal	1300
+핡	halg
+핢	halm
+핣	halb
+핤	hals
+핥	halt	1300
+핦	halp
+핧	halh
+함	ham	1300
+합	hab	1300
+핪	habs
+핫	has	1300
+핬	hass
+항	hax	1300
+핮	haj
+핯	hac
+핰	hak
+핱	hat
+핲	hap
+핳	hah
+해	hai	1300
+핵	haig	1300
+핶	haigg
+핷	haigs
+핸	hain	1300
+핹	hainj
+핺	hainh
+핻	haid
+핼	hail	1300
+핽	hailg
+핾	hailm
+핿	hailb
+햀	hails
+햁	hailt
+햂	hailp
+햃	hailh
+햄	haim	1300
+햅	haib	1300
+햆	haibs
+햇	hais	1300
+했	haiss	1300
+행	haix	1300
+햊	haij
+햋	haic
+햌	haik
+햍	hait
+햎	haip
+햏	haih
+햐	hya	1300
+햑	hyag
+햒	hyagg
+햓	hyags
+햔	hyan
+햕	hyanj
+햖	hyanh
+햗	hyad
+햘	hyal
+햙	hyalg
+햚	hyalm
+햛	hyalb
+햜	hyals
+햝	hyalt
+햞	hyalp
+햟	hyalh
+햠	hyam
+햡	hyab
+햢	hyabs
+햣	hyas
+햤	hyass
+향	hyax	1300
+햦	hyaj
+햧	hyac
+햨	hyak
+햩	hyat
+햪	hyap
+햫	hyah
+햬	hyai
+햭	hyaig
+햮	hyaigg
+햯	hyaigs
+햰	hyain
+햱	hyainj
+햲	hyainh
+햳	hyaid
+햴	hyail
+햵	hyailg
+햶	hyailm
+햷	hyailb
+햸	hyails
+햹	hyailt
+햺	hyailp
+햻	hyailh
+햼	hyaim
+햽	hyaib
+햾	hyaibs
+햿	hyais
+헀	hyaiss
+헁	hyaix
+헂	hyaij
+헃	hyaic
+헄	hyaik
+헅	hyait
+헆	hyaip
+헇	hyaih
+허	he	1300
+헉	heg	1300
+헊	hegg
+헋	hegs
+헌	hen	1300
+헍	henj
+헎	henh
+헏	hed
+#44
+헐	hel	1300
+헑	helg
+헒	helm	1300
+헓	helb
+헔	hels
+헕	helt
+헖	help
+헗	helh
+험	hem	1300
+헙	heb	1300
+헚	hebs
+헛	hes	1300
+헜	hess
+헝	hex	1300
+헞	hej
+헟	hec
+헠	hek
+헡	het
+헢	hep
+헣	heh
+헤	hei	1300
+헥	heig	1300
+헦	heigg
+헧	heigs
+헨	hein	1300
+헩	heinj
+헪	heinh
+헫	heid
+헬	heil	1300
+헭	heilg
+헮	heilm
+헯	heilb
+헰	heils
+헱	heilt
+헲	heilp
+헳	heilh
+헴	heim	1300
+헵	heib	1300
+헶	heibs
+헷	heis	1300
+헸	heiss
+헹	heix	1300
+헺	heij
+헻	heic
+헼	heik
+헽	heit
+헾	heip
+헿	heih
+혀	hye	1300
+혁	hyeg	1300
+혂	hyegg
+혃	hyegs
+현	hyen	1300
+혅	hyenj
+혆	hyenh
+혇	hyed
+혈	hyel	1300
+혉	hyelg
+혊	hyelm
+혋	hyelb
+혌	hyels
+혍	hyelt
+혎	hyelp
+혏	hyelh
+혐	hyem	1300
+협	hyeb	1300
+혒	hyebs
+혓	hyes	1300
+혔	hyess	1300
+형	hyex	1300
+혖	hyej
+혗	hyec
+혘	hyek
+혙	hyet
+혚	hyep
+혛	hyeh
+혜	hyei	1300
+혝	hyeig
+혞	hyeigg
+혟	hyeigs
+혠	hyein	1300
+혡	hyeinj
+혢	hyeinh
+혣	hyeid
+혤	hyeil	1300
+혥	hyeilg
+혦	hyeilm
+혧	hyeilb
+혨	hyeils
+혩	hyeilt
+혪	hyeilp
+혫	hyeilh
+혬	hyeim
+혭	hyeib	1300
+혮	hyeibs
+혯	hyeis
+혰	hyeiss
+혱	hyeix
+혲	hyeij
+혳	hyeic
+혴	hyeik
+혵	hyeit
+혶	hyeip
+혷	hyeih
+호	ho	1300
+혹	hog	1300
+혺	hogg
+혻	hogs
+혼	hon	1300
+혽	honj
+혾	honh
+혿	hod
+홀	hol	1300
+홁	holg
+홂	holm
+홃	holb
+홄	hols
+홅	holt	1300
+홆	holp
+홇	holh
+홈	hom	1300
+홉	hob	1300
+홊	hobs
+홋	hos	1300
+홌	hoss
+홍	hox	1300
+홎	hoj
+홏	hoc
+홐	hok
+홑	hot	1300
+홒	hop
+홓	hoh
+화	hoa	1300
+확	hoag	1300
+홖	hoagg
+홗	hoags
+환	hoan	1300
+홙	hoanj
+홚	hoanh
+홛	hoad
+활	hoal	1300
+홝	hoalg
+홞	hoalm
+홟	hoalb
+홠	hoals
+홡	hoalt
+홢	hoalp
+홣	hoalh
+홤	hoam
+홥	hoab
+홦	hoabs
+홧	hoas	1300
+홨	hoass
+황	hoax	1300
+홪	hoaj
+홫	hoac
+홬	hoak
+홭	hoat
+홮	hoap
+홯	hoah
+홰	hoai	1300
+홱	hoaig	1300
+홲	hoaigg
+홳	hoaigs
+홴	hoain	1300
+홵	hoainj
+홶	hoainh
+홷	hoaid
+홸	hoail
+홹	hoailg
+홺	hoailm
+홻	hoailb
+홼	hoails
+홽	hoailt
+홾	hoailp
+홿	hoailh
+횀	hoaim
+횁	hoaib
+횂	hoaibs
+횃	hoais	1300
+횄	hoaiss
+횅	hoaix	1300
+횆	hoaij
+횇	hoaic
+횈	hoaik
+횉	hoait
+횊	hoaip
+횋	hoaih
+회	hoi	1300
+획	hoig	1300
+횎	hoigg
+횏	hoigs
+횐	hoin	1300
+횑	hoinj
+횒	hoinh
+횓	hoid
+횔	hoil	1300
+횕	hoilg
+횖	hoilm
+횗	hoilb
+횘	hoils
+횙	hoilt
+횚	hoilp
+횛	hoilh
+횜	hoim
+횝	hoib	1300
+횞	hoibs
+횟	hois	1300
+횠	hoiss
+횡	hoix	1300
+횢	hoij
+횣	hoic
+횤	hoik
+횥	hoit
+횦	hoip
+횧	hoih
+효	hyo	1300
+횩	hyog
+횪	hyogg
+횫	hyogs
+횬	hyon	1300
+횭	hyonj
+횮	hyonh
+횯	hyod
+횰	hyol	1300
+횱	hyolg
+횲	hyolm
+횳	hyolb
+횴	hyols
+횵	hyolt
+횶	hyolp
+횷	hyolh
+횸	hyom
+횹	hyob	1300
+횺	hyobs
+횻	hyos	1300
+횼	hyoss
+횽	hyox
+횾	hyoj
+횿	hyoc
+#45
+훀	hyok
+훁	hyot
+훂	hyop
+훃	hyoh
+후	hu	1300
+훅	hug	1300
+훆	hugg
+훇	hugs
+훈	hun	1300
+훉	hunj
+훊	hunh
+훋	hud
+훌	hul	1300
+훍	hulg
+훎	hulm
+훏	hulb
+훐	huls
+훑	hult	1300
+훒	hulp
+훓	hulh
+훔	hum	1300
+훕	hub
+훖	hubs
+훗	hus	1300
+훘	huss
+훙	hux	1300
+훚	huj
+훛	huc
+훜	huk
+훝	hut
+훞	hup
+훟	huh
+훠	huo	1300
+훡	huog
+훢	huogg
+훣	huogs
+훤	huon	1300
+훥	huonj
+훦	huonh
+훧	huod
+훨	huol	1300
+훩	huolg
+훪	huolm
+훫	huolb
+훬	huols
+훭	huolt
+훮	huolp
+훯	huolh
+훰	huom	1300
+훱	huob
+훲	huobs
+훳	huos
+훴	huoss
+훵	huox	1300
+훶	huoj
+훷	huoc
+훸	huok
+훹	huot
+훺	huop
+훻	huoh
+훼	huei	1300
+훽	hueig	1300
+훾	hueigg
+훿	hueigs
+휀	huein	1300
+휁	hueinj
+휂	hueinh
+휃	hueid
+휄	hueil	1300
+휅	hueilg
+휆	hueilm
+휇	hueilb
+휈	hueils
+휉	hueilt
+휊	hueilp
+휋	hueilh
+휌	hueim
+휍	hueib
+휎	hueibs
+휏	hueis
+휐	hueiss
+휑	hueix	1300
+휒	hueij
+휓	hueic
+휔	hueik
+휕	hueit
+휖	hueip
+휗	hueih
+휘	hui	1300
+휙	huig	1300
+휚	huigg
+휛	huigs
+휜	huin	1300
+휝	huinj
+휞	huinh
+휟	huid
+휠	huil	1300
+휡	huilg
+휢	huilm
+휣	huilb
+휤	huils
+휥	huilt
+휦	huilp
+휧	huilh
+휨	huim	1300
+휩	huib	1300
+휪	huibs
+휫	huis	1300
+휬	huiss
+휭	huix	1300
+휮	huij
+휯	huic
+휰	huik
+휱	huit
+휲	huip
+휳	huih
+휴	hyu	1300
+휵	hyug	1300
+휶	hyugg
+휷	hyugs
+휸	hyun	1300
+휹	hyunj
+휺	hyunh
+휻	hyud
+휼	hyul	1300
+휽	hyulg
+휾	hyulm
+휿	hyulb
+흀	hyuls
+흁	hyult
+흂	hyulp
+흃	hyulh
+흄	hyum	1300
+흅	hyub
+흆	hyubs
+흇	hyus	1300
+흈	hyuss
+흉	hyux	1300
+흊	hyuj
+흋	hyuc
+흌	hyuk
+흍	hyut
+흎	hyup
+흏	hyuh
+흐	hw	1300
+흑	hwg	1300
+흒	hwgg
+흓	hwgs
+흔	hwn	1300
+흕	hwnj
+흖	hwnh	1300
+흗	hwd	1300
+흘	hwl	1300
+흙	hwlg	1300
+흚	hwlm
+흛	hwlb
+흜	hwls
+흝	hwlt
+흞	hwlp
+흟	hwlh
+흠	hwm	1300
+흡	hwb	1300
+흢	hwbs
+흣	hws	1300
+흤	hwss
+흥	hwx	1300
+흦	hwj
+흧	hwc
+흨	hwk
+흩	hwt	1300
+흪	hwp
+흫	hwh
+희	hwi	1300
+흭	hwig
+흮	hwigg
+흯	hwigs
+흰	hwin	1300
+흱	hwinj
+흲	hwinh
+흳	hwid
+흴	hwil	1300
+흵	hwilg
+흶	hwilm
+흷	hwilb
+흸	hwils
+흹	hwilt
+흺	hwilp
+흻	hwilh
+흼	hwim	1300
+흽	hwib	1300
+흾	hwibs
+흿	hwis
+힀	hwiss
+힁	hwix	1300
+힂	hwij
+힃	hwic
+힄	hwik
+힅	hwit
+힆	hwip
+힇	hwih
+히	hi	1300
+힉	hig	1300
+힊	higg
+힋	higs
+힌	hin	1300
+힍	hinj
+힎	hinh
+힏	hid
+힐	hil	1300
+힑	hilg
+힒	hilm
+힓	hilb
+힔	hils
+힕	hilt
+힖	hilp
+힗	hilh
+힘	him	1300
+힙	hib	1300
+힚	hibs
+힛	his	1300
+힜	hiss
+힝	hix	1300
+힞	hij
+힟	hic
+힠	hik
+힡	hit
+힢	hip
+힣	hih
+### @@HNC諺文正碼結束 ###
+##### 韓文單音補充 (韓文古代使用字母-注意有些字母會自動合併) #####
+### Hangul Jamo 開始 ###
+## U111A~U1112
+ᄀ	g//
+ᄁ	gg//
+ᄂ	n//
+ᄃ	d//
+ᄄ	dd//
+ᄅ	l//
+ᄆ	m//
+ᄇ	b//
+ᄈ	bb//
+ᄉ	s//
+ᄊ	ss//
+ᄋ	x//
+ᄌ	j//
+ᄍ	jj//
+ᄎ	c//
+ᄏ	k//
+ᄐ	t//
+ᄑ	p//
+ᄒ	h//
+## U1113~U1159
+ᄓ	ng//
+ᄔ	nn//
+ᄕ	nd//
+ᄖ	nb//
+ᄗ	dg//
+ᄘ	ln//
+ᄙ	ll//
+ᄚ	lh//
+ᄛ	lx//
+ᄜ	mb//
+ᄝ	mx//
+ᄞ	bg//
+ᄟ	bn//
+ᄠ	bd//
+ᄡ	bs//
+ᄢ	bsg//
+ᄣ	bsd//
+ᄤ	bsb//
+ᄥ	bss//
+ᄦ	bsj//
+ᄧ	bj//
+ᄨ	bc//
+ᄩ	bt//
+ᄪ	bp//
+ᄫ	bx//
+ᄬ	bbx//
+ᄭ	sg//
+ᄮ	sn//
+ᄯ	sd//
+ᄰ	sl//
+ᄱ	sm//
+ᄲ	sb//
+ᄳ	sbg//
+ᄴ	sss//
+ᄵ	sx//
+ᄶ	sj//
+ᄷ	sh//
+ᄸ	sk//
+ᄹ	st//
+ᄺ	sp//
+ᄻ	sh//
+ᄼ	sh//
+ᄽ	zh//
+ᄾ	sr//
+ᄿ	zr//
+ᅀ	z//
+ᅁ	xg//
+ᅂ	xd//
+ᅃ	xm//
+ᅄ	xb//
+ᅅ	xs//
+ᅆ	xz//
+ᅇ	xx//
+ᅈ	xj//
+ᅉ	xc//
+ᅊ	xt//
+ᅋ	xp//
+ᅌ	x//
+ᅍ	jx//
+ᅎ	ts//
+ᅏ	dz//
+ᅐ	tsr//
+ᅑ	dzr//
+ᅒ	ck//
+ᅓ	ch//
+ᅔ	tsh//
+ᅕ	tsrh//
+ᅖ	pb//
+ᅗ	px//
+ᅘ	hh//
+ᅙ	wx//
+## U1161~U1175
+ᅡ	a//
+ᅢ	ai//
+ᅣ	ya//
+ᅤ	yai//
+ᅥ	e//
+ᅦ	ei//
+ᅧ	ye//
+ᅨ	yei//
+ᅩ	o//
+ᅪ	oa//
+ᅫ	oai//
+ᅬ	oi//
+ᅭ	yo//
+ᅮ	u//
+ᅯ	uo//
+ᅰ	uei//
+ᅱ	ui//
+ᅲ	yu//
+ᅳ	w//
+ᅴ	wi//
+ᅵ	i//
+## U1176~U11A2
+ᅶ	ao//
+ᅷ	au//
+ᅸ	yao//
+ᅹ	yayo//
+ᅺ	eo//
+ᅻ	eu//
+ᅼ	ew//
+ᅽ	yeo//
+ᅾ	yeu//
+ᅿ	oe//
+ᆀ	oei//
+ᆁ	oyei//
+ᆂ	oo//
+ᆃ	ou//
+ᆄ	yoye//
+ᆅ	yoyai//
+ᆆ	yoye//
+ᆇ	yoo//
+ᆈ	yoi//
+ᆉ	ua//
+ᆊ	uyai//
+ᆋ	uew//
+ᆌ	uyei//
+ᆍ	uu//
+ᆎ	yua//
+ᆏ	yui//
+ᆐ	yuei//
+ᆑ	yuye//
+ᆒ	yuyei//
+ᆓ	yuu//
+ᆔ	yui//
+ᆕ	wu//
+ᆖ	ww//
+ᆗ	wiu//
+ᆘ	ia//
+ᆙ	iya//
+ᆚ	io//
+ᆛ	iu//
+ᆜ	iw//
+ᆝ	ier//
+ᆞ	er//
+ᆟ	eer//
+ᆠ	eru//
+ᆡ	eri//
+ᆢ	erer//
+## U11A8~U11C2
+ᆨ	g//
+ᆩ	gg//
+ᆪ	gs//
+ᆫ	n//
+ᆬ	nj//
+ᆭ	nh//
+ᆮ	d//
+ᆯ	l//
+ᆰ	lg//
+ᆱ	lm//
+ᆲ	lb//
+ᆳ	ls//
+ᆴ	lt//
+ᆵ	lp//
+ᆶ	lh//
+ᆷ	m//
+ᆸ	b//
+ᆹ	bs//
+ᆺ	s//
+ᆻ	ss//
+ᆼ	x//
+ᆽ	j//
+ᆾ	c//
+ᆿ	k//
+ᇀ	t//
+ᇁ	p//
+ᇂ	h//
+## U11C3~U11FF
+ᇃ	gl//
+ᇄ	gsg//
+ᇅ	ng//
+ᇆ	nd//
+ᇇ	ns//
+ᇈ	nz//
+ᇉ	nt//
+ᇊ	dg//
+ᇋ	dl//
+ᇌ	lgs//
+ᇍ	ln//
+ᇎ	ld//
+ᇏ	ldh//
+ᇐ	ll//
+ᇑ	lmg//
+ᇒ	lms//
+ᇓ	lbs//
+ᇔ	lbh//
+ᇕ	lbx//
+ᇖ	lss//
+ᇗ	lz//
+ᇘ	lk//
+ᇙ	lwx//
+ᇚ	mg//
+ᇛ	ml//
+ᇜ	mb//
+ᇝ	ms//
+ᇞ	mss//
+ᇟ	mz//
+ᇠ	mc//
+ᇡ	mh//
+ᇢ	mx//
+ᇣ	bl//
+ᇤ	bp//
+ᇥ	bh//
+ᇦ	bx//
+ᇧ	sg//
+ᇨ	sd//
+ᇩ	sl//
+ᇪ	sb//
+ᇫ	z//
+ᇬ	xg//
+ᇭ	xgg//
+ᇮ	x//
+ᇯ	xk//
+ᇰ	x//
+ᇱ	xs//
+ᇲ	xz//
+ᇳ	pb//
+ᇴ	px//
+ᇵ	hn//
+ᇶ	hl//
+ᇷ	hm//
+ᇸ	hb//
+ᇹ	wx//
+ᇺ	gn//
+ᇻ	gb//
+ᇼ	gc//
+ᇽ	gk//
+ᇾ	gh//
+ᇿ	nn//
+### Hangul Jamo 結束 ###
+### Hangul Jamo Extended-A 開始 ###
+ꥠ	dm//
+ꥡ	db//
+ꥢ	ds//
+ꥣ	dj//
+ꥤ	lg//
+ꥥ	lgg//
+ꥦ	ld//
+ꥧ	ldd//
+ꥨ	lm//
+ꥩ	lb//
+ꥪ	lbb//
+ꥫ	lbx//
+ꥬ	ls//
+ꥭ	lj//
+ꥮ	lk//
+ꥯ	mg//
+ꥰ	md//
+ꥱ	ms//
+ꥲ	bst//
+ꥳ	bk//
+ꥴ	bh//
+ꥵ	ssb//
+ꥶ	xl//
+ꥷ	xh//
+ꥸ	jjh//
+ꥹ	tt//
+ꥺ	ph//
+ꥻ	hs//
+ꥼ	wxwx//
+### Hangul Jamo Extended-A 結束 ###
+### Hangul Jamo Extended-B 開始 ###
+ힰ	oye//
+ힱ	ooi//
+ힲ	yoa//
+ힳ	yoai//
+ힴ	yoe//
+ힵ	ue//
+ힶ	uii//
+ힷ	yuai//
+ힸ	yuo//
+ힹ	wa//
+ힺ	we//
+ힻ	wei//
+ힼ	wo//
+ힽ	iyao//
+ힾ	iyai//
+ힿ	iye//
+ퟀ	yaii//
+ퟁ	ioi//
+ퟂ	iyo//
+ퟃ	iyu//
+ퟄ	ii//
+ퟅ	era//
+ퟆ	erei//
+ퟋ	nl//
+ퟌ	nc//
+ퟍ	dd//
+ퟎ	ddb//
+ퟏ	db//
+ퟐ	ds//
+ퟑ	dsg//
+ퟒ	dj//
+ퟓ	dc//
+ퟔ	dt//
+ퟕ	lgg//
+ퟖ	lgh//
+ퟗ	llk//
+ퟘ	lmh//
+ퟙ	lbd//
+ퟚ	lbp//
+ퟛ	lx//
+ퟜ	lwxh//
+ퟝ	lx//
+ퟞ	mn//
+ퟟ	mnn//
+ퟠ	mm//
+ퟡ	mbs//
+ퟢ	mj//
+ퟣ	bd//
+ퟤ	blp//
+ퟥ	bm//
+ퟦ	bb//
+ퟧ	bsd//
+ퟨ	bj//
+ퟩ	bc//
+ퟪ	sm//
+ퟫ	sbx//
+ퟬ	ssg//
+ퟭ	ssd//
+ퟮ	sz//
+ퟯ	sj//
+ퟰ	sc//
+ퟱ	st//
+ퟲ	sh//
+ퟳ	zb//
+ퟴ	zbx//
+ퟵ	xm//
+ퟶ	xh//
+ퟷ	jb//
+ퟸ	jbb//
+ퟹ	jj//
+ퟺ	ps//
+ퟻ	pt//
+### Hangul Jamo Extended-B 結束 ###
+##### 韓文單音補充結束 ######
+####### 韓語總結束 #######

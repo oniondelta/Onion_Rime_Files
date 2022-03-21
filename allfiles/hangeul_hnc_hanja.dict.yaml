@@ -1,0 +1,7937 @@
+# Rime dictionary
+# encoding: utf-8
+# 《韓語 HNC 鍵位碼表》
+#
+# 參考以下製作：
+# 正碼：https://mynb.wordpress.com/2010/11/10/hnc-romaja-%e8%bc%b8%e5%85%a5%e6%b3%95%ef%bc%9a%e9%9f%93%e8%8b%b1%e5%b0%8d%e7%85%a7/
+# 另外寫法：https://blog.xuite.net/ban.ryu/tureduregusa/62986282
+#
+# 另外寫法全已遮屏，不要開啟，mapping 韓文詞庫會使 table.bin 很龐大，改用 speller 轉寫。
+#
+#
+# 〈 HNC 鍵位 〉
+# ===========================================================================
+# 單母音：
+# ㅣ=i  ㅡ=w  ㅏ=a  ㅜ=u  ㅓ=e  ㅗ=o  ㅑ=ya  ㅠ=yu  ㅕ=ye  ㅛ=yo
+# ---------------------------------------------------------------------------
+# 雙母音：
+# ㅐ=ai  ㅔ=ei  ㅒ=yai  ㅖ=yei  ㅘ=oa  ㅙ=oai  ㅚ=oi  ㅝ=uo  ㅞ=uei  ㅟ=ui  ㅢ=wi
+# ---------------------------------------------------------------------------
+# 單子音:
+# ㄱ=g  ㅋ=k 	 ㄴ=n  ㄷ=d  ㅌ=t  ㄹ=l  ㅂ=b  ㅍ=p  ㅁ=m  ㅅ=s  ㅈ=j  ㅊ=c  ㅇ=x  ㅎ=h
+# ---------------------------------------------------------------------------
+# 雙子音:
+# ㄲ=gg  ㄸ=dd  ㅃ=bb  ㅆ=ss  ㅉ=jj
+# ---------------------------------------------------------------------------
+# 本碼表特別編碼:
+# ㅿ=z  ㆍ=er
+# ᄼ=sh  ᄽ=zh  ᄾ=sr  ᄿ=zr  ᅎ=ts  ᅏ=dz  ᅐ=tsr  ᅑ=dzr  ᅔ=tsh  ᅕ=tsrh
+# ===========================================================================
+#
+#
+# 『洋蔥』製作
+#
+#
+---
+name: hangeul_hnc_hanja
+version: "202203"
+sort: by_weight
+use_preset_vocabulary: false
+...
+##### 韓文漢字對映開始 #####
+### unihan korean ###
+耞	ga;
+檟	ga;
+斝	ga;
+宊	ga;
+坷	ga;
+咖	ga;
+傢	ga;
+哿	ga;
+軻	ga;
+跏	ga;
+賈	ga;
+謌	ga;
+訶	ga;
+葭	ga;
+舸	ga;
+笳	ga;
+痂	ga;
+珈	ga;
+柯	ga;
+枷	ga;
+哥	ga;
+呵	ga;
+價	ga;	2754
+假	ga;	2760
+袈	ga;
+街	ga;	2164
+駕	ga;
+迦	ga;
+茄	ga;
+苛	ga;
+稼	ga;
+珂	ga;
+歌	ga;	2382
+架	ga;
+暇	ga;
+家	ga;	2583
+嫁	ga;
+嘉	ga;
+可	ga;	2678
+加	ga;	2715
+佳	ga;
+伽	ga;
+仮	ga;
+榎	ga;
+珏	gag;
+搉	gag;
+慤	gag;
+覺	gag;
+殼	gag;
+桷	gag;
+擱	gag;
+恪	gag;
+埆	gag;
+咯	gag;
+卻	gag;
+刻	gag;
+脚	gag;
+却	gag;
+閣	gag;
+角	gag;	2154
+各	gag;	2675
+迀	gan;
+衎	gan;
+茛	gan;
+秆	gan;
+磵	gan;
+癎	gan;
+玕	gan;
+榦	gan;
+暕	gan;
+偘	gan;
+赶	gan;
+齦	gan;
+諫	gan;
+艱	gan;
+稈	gan;
+桿	gan;
+栞	gan;
+柬	gan;
+杆	gan;
+揀	gan;
+慳	gan;
+奸	gan;
+艮	gan;
+懇	gan;
+墾	gan;
+間	gan;	2055
+肝	gan;
+簡	gan;
+竿	gan;
+看	gan;	2279
+澗	gan;
+幹	gan;
+干	gan;
+姦	gan;
+刊	gan;
+侃	gan;
+鶡	gal;
+秸	gal;
+渴	gal;
+楬	gal;
+噶	gal;
+乫	gal;
+鞨	gal;
+蠍	gal;
+蝎	gal;
+羯	gal;
+竭	gal;
+碣	gal;
+曷	gal;
+褐	gal;
+葛	gal;
+喝	gal;
+鹼	gam;
+鹻	gam;
+矙	gam;
+澉	gam;
+泔	gam;
+欿	gam;
+憨	gam;
+弇	gam;
+嵁	gam;
+埳	gam;
+龕	gam;
+鑒	gam;
+酣	gam;
+邯	gam;
+轗	gam;
+瞰	gam;
+疳	gam;
+淦	gam;
+歛	gam;
+橄	gam;
+撼	gam;
+戡	gam;
+嵌	gam;
+坩	gam;
+坎	gam;
+紺	gam;
+減	gam;	2336
+鑑	gam;
+監	gam;
+甘	gam;	2309
+柑	gam;
+敢	gam;	2451
+憾	gam;
+感	gam;	2491
+堪	gam;
+勘	gam;
+韐	gab;
+鉀	gab;
+閘	gab;
+胛	gab;
+匣	gab;
+岬	gab;
+甲	gab;
+韁	gax;
+豇	gax;
+茳	gax;
+舡	gax;
+羫	gax;
+羗	gax;
+罡	gax;
+繈	gax;
+穅	gax;
+畺	gax;
+殭	gax;
+忼	gax;
+强	gax;
+壃	gax;
+堈	gax;
+傋	gax;
+鱇	gax;
+襁	gax;
+薑	gax;
+羌	gax;
+絳	gax;
+矼	gax;
+疆	gax;
+杠	gax;
+扛	gax;
+慷	gax;
+崗	gax;
+姜	gax;
+僵	gax;
+剛	gax;
+降	gax;	2052
+鋼	gax;
+講	gax;	2130
+腔	gax;
+綱	gax;
+糠	gax;
+江	gax;	2362
+康	gax;
+彊	gax;
+強	gax;	2529
+橿	gax;
+岡	gax;
+闓	gai;
+磕	gai;
+玠	gai;
+槪	gai;
+槩	gai;
+塏	gai;
+匃	gai;
+愷	gai;
+豈	gai;
+盖	gai;
+疥	gai;
+漑	gai;
+揩	gai;
+愾	gai;
+剴	gai;
+价	gai;
+個	gai;	2762
+鎧	gai;
+蓋	gai;
+慨	gai;
+凱	gai;
+開	gai;	2057
+芥	gai;
+皆	gai;	2289
+改	gai;	2459
+介	gai;
+箇	gai;
+喀	gaig;
+客	gaig;	2586
+賡	gaix;
+硜	gaix;
+鏗	gaix;
+羹	gaix;
+粳	gaix;
+更	gaix;	2419
+坑	gaix;
+醵	gyag;
+駏	ge;
+袪	ge;
+蘧	ge;
+蕖	ge;
+莒	ge;
+腒	ge;
+胠	ge;
+籧	ge;
+祛	ge;
+昛	ge;
+呿	ge;
+鉅	ge;
+遽	ge;
+踞	ge;
+苣	ge;
+筥	ge;
+秬	ge;
+炬	ge;
+舉	ge;	2194
+擧	ge;
+據	ge;
+倨	ge;
+裾	ge;
+据	ge;
+車	ge;	2101
+鋸	ge;
+距	ge;
+渠	ge;
+拒	ge;
+巨	ge;	2553
+居	ge;	2562
+去	ge;	2689
+鞬	gen;
+褰	gen;
+睷	gen;
+犍	gen;
+楗	gen;
+揵	gen;
+騫	gen;
+蹇	gen;
+謇	gen;
+虔	gen;
+腱	gen;
+愆	gen;
+鍵	gen;
+建	gen;	2535
+健	gen;
+件	gen;
+巾	gen;
+乾	gen;
+榤	gel;
+朅	gel;
+乬	gel;
+桀	gel;
+杰	gel;
+乞	gel;
+傑	gel;
+芡	gem;
+撿	gem;
+鈐	gem;
+黔	gem;
+瞼	gem;
+檢	gem;
+劒	gem;
+劍	gem;
+儉	gem;
+迲	geb;
+刦	geb;
+刧	geb;
+劫	geb;
+怯	geb;
+揭	gei;
+偈	gei;
+憩	gei;
+毄	gyeg;
+擊	gyeg;
+鴃	gyeg;
+鬲	gyeg;
+骼	gyeg;
+闃	gyeg;
+覡	gyeg;
+膈	gyeg;
+檄	gyeg;
+挌	gyeg;
+激	gyeg;
+隔	gyeg;
+格	gyeg;
+蠲	gyen;
+繾	gyen;
+縳	gyen;
+畎	gyen;
+鵑	gyen;
+譴	gyen;
+羂	gyen;
+筧	gyen;
+甄	gyen;
+狷	gyen;
+繭	gyen;
+遣	gyen;
+見	gyen;	2158
+肩	gyen;
+絹	gyen;
+犬	gyen;	2316
+牽	gyen;
+堅	gyen;	2633
+鰹	gyen;
+樫	gyen;
+闋	gyel;
+觖	gyel;
+玦	gyel;
+缺	gyel;
+抉	gyel;
+訣	gyel;
+結	gyel;	2228
+潔	gyel;	2330
+決	gyel;	2361
+鼸	gyem;
+黚	gyem;
+縑	gyem;
+岒	gyem;
+嗛	gyem;
+傔	gyem;
+鉗	gyem;
+蒹	gyem;
+箝	gyem;
+歉	gyem;
+拑	gyem;
+慊	gyem;
+謙	gyem;
+兼	gyem;
+鎌	gyem;
+鯁	gyex;
+駉	gyex;
+顈	gyex;
+褧	gyex;
+罄	gyex;
+綆	gyex;
+璥	gyex;
+熲	gyex;
+焭	gyex;
+暻	gyex;
+扃	gyex;
+憼	gyex;
+惸	gyex;
+坰	gyex;
+儆	gyex;
+俓	gyex;
+璟	gyex;
+炅	gyex;
+涇	gyex;
+擎	gyex;
+倞	gyex;
+黥	gyex;
+頸	gyex;
+竟	gyex;
+逕	gyex;
+輕	gyex;	2099
+謦	gyex;
+莖	gyex;
+脛	gyex;
+耿	gyex;
+經	gyex;	2224
+絅	gyex;
+磬	gyex;
+痙	gyex;
+畊	gyex;
+瓊	gyex;
+煢	gyex;
+烱	gyex;
+檠	gyex;
+憬	gyex;
+徑	gyex;
+哽	gyex;
+勍	gyex;
+勁	gyex;
+剄	gyex;
+冏	gyex;
+竸	gyex;
+頃	gyex;
+耕	gyex;	2211
+硬	gyex;
+梗	gyex;
+更	gyex;	2419
+庚	gyex;
+鯨	gyex;
+頚	gyex;
+警	gyex;
+景	gyex;	2427
+敬	gyex;	2449
+慶	gyex;	2489
+傾	gyex;
+驚	gyex;	2014
+鏡	gyex;
+境	gyex;
+卿	gyex;
+競	gyex;	2246
+京	gyex;	2790
+雞	gyei;
+葪	gyei;
+罽	gyei;
+繫	gyei;
+縘	gyei;
+筓	gyei;
+磎	gyei;
+瘈	gyei;
+烓	gyei;
+棨	gyei;
+堦	gyei;
+鷄	gyei;
+髻	gyei;
+谿	gyei;
+誡	gyei;
+薊	gyei;
+繼	gyei;
+綮	gyei;
+禊	gyei;
+癸	gyei;
+溪	gyei;
+悸	gyei;
+屆	gyei;
+堺	gyei;
+計	gyei;	2151
+系	gyei;
+稽	gyei;
+桂	gyei;
+契	gyei;
+啓	gyei;
+係	gyei;
+季	gyei;	2598
+階	gyei;
+界	gyei;	2301
+械	gyei;
+戒	gyei;
+鷱	go;
+酤	go;
+郜	go;
+苽	go;
+翺	go;
+羖	go;
+糕	go;
+篙	go;
+稁	go;
+盬	go;
+牯	go;
+櫜	go;
+槀	go;
+暠	go;
+鴣	go;
+靠	go;
+錮	go;
+辜	go;
+賈	go;
+誥	go;
+詁	go;
+觚	go;
+蠱	go;
+胯	go;
+羔	go;
+罟	go;
+箍	go;
+瞽	go;
+睾	go;
+皋	go;
+痼	go;
+沽	go;
+槹	go;
+槁	go;
+栲	go;
+杲	go;
+敲	go;
+攷	go;
+呱	go;
+刳	go;
+凅	go;
+估	go;
+藁	go;
+塙	go;
+叩	go;
+尻	go;
+皐	go;
+告	go;	2666
+拷	go;
+高	go;	2011
+膏	go;
+考	go;	2213
+稿	go;
+鼓	go;
+顧	go;
+雇	go;
+鈷	go;
+菰	go;
+股	go;
+袴	go;
+枯	go;
+故	go;	2456
+庫	go;
+孤	go;
+姑	go;
+固	go;	2647
+古	go;	2680
+苦	go;	2184
+觳	gog;
+縠	gog;
+嚳	gog;
+轂	gog;
+槲	gog;
+梏	gog;
+斛	gog;
+哭	gog;
+谷	gog;	2254
+鵠	gog;
+穀	gog;
+曲	gog;	2420
+齫	gon;
+鵾	gon;
+髡	gon;
+閫	gon;
+錕	gon;
+裍	gon;
+衮	gon;
+緄	gon;
+琨	gon;
+捆	gon;
+崐	gon;
+堃	gon;
+鶤	gon;
+鯤	gon;
+褌	gon;
+袞	gon;
+滾	gon;
+棍	gon;
+悃	gon;
+崑	gon;
+梱	gon;
+昆	gon;
+坤	gon;
+困	gon;	2648
+矻	gol;
+搰	gol;
+鶻	gol;
+汨	gol;
+榾	gol;
+骨	gol;	2013
+滑	gol;
+龔	gox;
+贛	gox;
+珙	gox;
+栱	gox;
+悾	gox;
+崆	gox;
+釭	gox;
+鞏	gox;
+跫	gox;
+蛬	gox;
+蛩	gox;
+蚣	gox;
+箜	gox;
+槓	gox;
+拱	gox;
+倥	gox;
+貢	gox;
+攻	gox;
+控	gox;
+工	gox;	2555
+孔	gox;
+功	gox;	2716
+公	gox;	2739
+空	gox;	2252
+恭	gox;
+恐	gox;
+共	gox;	2737
+供	gox;
+串	goj;
+騍	goa;
+銙	goa;
+窠	goa;
+稞	goa;
+猓	goa;
+撾	goa;
+侉	goa;
+顆	goa;
+踝	goa;
+裹	goa;
+蝌	goa;
+戈	goa;
+夸	goa;
+夥	goa;
+堝	goa;
+鍋	goa;
+跨	goa;
+誇	goa;
+過	goa;	2082
+課	goa;	2136
+菓	goa;
+果	goa;	2399
+科	goa;	2258
+寡	goa;
+瓜	goa;
+鞹	goag;
+躩	goag;
+藿	goag;
+霍	goag;
+癨	goag;
+槨	goag;
+椁	goag;
+郭	goag;
+廓	goag;
+髖	goan;
+雚	goan;
+錧	goan;
+輨	goan;
+筦	goan;
+窾	goan;
+祼	goan;
+瓘	goan;
+琯	goan;
+爟	goan;
+涫	goan;
+寬	goan;
+鸛	goan;
+顴	goan;
+關	goan;	2054
+鑵	goan;
+觀	goan;	2155
+罐	goan;
+綰	goan;
+盥	goan;
+灌	goan;
+丱	goan;
+菅	goan;
+串	goan;
+館	goan;
+貫	goan;
+管	goan;
+款	goan;
+棺	goan;
+慣	goan;
+官	goan;	2589
+冠	goan;
+鴰	goal;
+髺	goal;
+适	goal;
+栝	goal;
+佸	goal;
+恝	goal;
+聒	goal;
+刮	goal;
+筈	goal;
+括	goal;
+誆	goax;
+茪	goax;
+磺	goax;
+爌	goax;
+炚	goax;
+恇	goax;
+珖	goax;
+獷	goax;
+桄	goax;
+侊	goax;
+纊	goax;
+鑛	goax;
+誑	goax;
+胱	goax;
+絖	goax;
+筐	goax;
+洸	goax;
+框	goax;
+曠	goax;
+廣	goax;	2536
+壙	goax;
+光	goax;	2747
+狂	goax;
+匡	goax;
+詿	goai;
+罣	goai;
+挂	goai;
+咼	goai;
+罫	goai;
+卦	goai;
+掛	goai;
+襘	goi;
+蒯	goi;
+璝	goi;
+廥	goi;
+媿	goi;
+瑰	goi;
+槐	goi;
+愧	goi;
+恠	goi;
+壞	goi;
+傀	goi;
+乖	goi;
+魁	goi;
+拐	goi;
+怪	goi;
+塊	goi;
+虢	goig;
+馘	goig;
+閎	goix;
+訇	goix;
+觥	goix;
+浤	goix;
+轟	goix;
+肱	goix;
+紘	goix;
+宏	goix;
+齩	gyo;
+骹	gyo;
+蹻	gyo;
+趫	gyo;
+榷	gyo;
+暞	gyo;
+晈	gyo;
+撟	gyo;
+憍	gyo;
+嶠	gyo;
+姣	gyo;
+嚙	gyo;
+噭	gyo;
+嘐	gyo;
+嘄	gyo;
+鉸	gyo;
+敎	gyo;
+鵁	gyo;
+驕	gyo;
+餃	gyo;
+轎	gyo;
+蛟	gyo;
+膠	gyo;
+翹	gyo;
+窖	gyo;
+磽	gyo;
+皎	gyo;
+狡	gyo;
+攪	gyo;
+嬌	gyo;
+咬	gyo;
+鮫	gyo;
+郊	gyo;
+絞	gyo;
+校	gyo;	2396
+巧	gyo;
+佼	gyo;
+交	gyo;	2791
+蕎	gyo;
+矯	gyo;
+橋	gyo;	2386
+教	gyo;	2452
+喬	gyo;
+僑	gyo;
+較	gyo;
+鸜	gu;
+鷗	gu;
+鷇	gu;
+韝	gu;
+銶	gu;
+軀	gu;
+胊	gu;
+耉	gu;
+絿	gu;
+糗	gu;
+窛	gu;
+癯	gu;
+痀	gu;
+璆	gu;
+漚	gu;
+昫	gu;
+摳	gu;
+捄	gu;
+戵	gu;
+彀	gu;
+岣	gu;
+屨	gu;
+姤	gu;
+坸	gu;
+坵	gu;
+叴	gu;
+厹	gu;
+匶	gu;
+俱	gu;
+俅	gu;
+佉	gu;
+榘	gu;
+龜	gu;
+鬮	gu;
+驅	gu;
+颶	gu;
+韭	gu;
+鉤	gu;
+邱	gu;
+遘	gu;
+逑	gu;
+謳	gu;
+詬	gu;
+覯	gu;
+裘	gu;
+衢	gu;
+蚯	gu;
+蒟	gu;
+苟	gu;
+舊	gu;	2193
+舅	gu;
+篝	gu;
+窶	gu;
+瞿	gu;
+疚	gu;
+甌	gu;
+毬	gu;
+毆	gu;
+歐	gu;
+枸	gu;
+柩	gu;
+搆	gu;
+扣	gu;
+懼	gu;
+廐	gu;
+嶇	gu;
+寇	gu;
+嫗	gu;
+媾	gu;
+嘔	gu;
+咎	gu;
+區	gu;	2702
+劬	gu;
+冓	gu;
+傴	gu;
+佝	gu;
+釦	gu;
+鳩	gu;
+韮	gu;
+購	gu;
+溝	gu;
+構	gu;
+拘	gu;
+垢	gu;
+口	gu;	2681
+勾	gu;
+具	gu;
+駒	gu;
+駈	gu;
+矩	gu;
+玖	gu;
+狗	gu;
+句	gu;	2679
+九	gu;	2797
+究	gu;	2253
+球	gu;	2311
+灸	gu;
+求	gu;
+救	gu;	2454
+仇	gu;
+久	gu;	2799
+丘	gu;
+臼	gu;
+麴	gug;
+麯	gug;
+匊	gug;
+跼	gug;
+鞫	gug;
+國	gug;	2646
+局	gug;	2563
+鞠	gug;
+菊	gug;
+掬	gug;
+珺	gun;
+捃	gun;
+裙	gun;
+羣	gun;
+窘	gun;
+皸	gun;
+桾	gun;
+郡	gun;
+軍	gun;	2100
+群	gun;
+君	gun;	2669
+詘	gul;
+淈	gul;
+崛	gul;
+倔	gul;
+堀	gul;
+窟	gul;
+掘	gul;
+屈	gul;
+躳	gux;
+芎	gux;
+躬	gux;
+穹	gux;
+窮	gux;
+弓	gux;	2533
+宮	gux;
+睠	guen;
+淃	guen;
+棬	guen;
+勌	guen;
+蜷	guen;
+綣	guen;
+眷	guen;
+權	guen;	2385
+惓	guen;
+圈	guen;
+卷	guen;	2692
+勸	guen;	2705
+捲	guen;
+拳	guen;
+券	guen;
+倦	guen;
+闕	guel;
+蹶	guel;
+獗	guel;
+厥	guel;
+蕨	guel;
+麂	guei;
+闠	guei;
+繢	guei;
+簋	guei;
+篑	guei;
+樻	guei;
+撅	guei;
+憒	guei;
+劂	guei;
+佹	guei;
+氿	guei;
+饋	guei;
+餽	guei;
+跪	guei;
+詭	guei;
+櫃	guei;
+匱	guei;
+几	guei;
+潰	guei;
+軌	guei;
+机	guei;
+晷	gui;
+龜	gui;
+歸	gui;	2374
+句	gui;	2679
+鬼	gui;
+貴	gui;	2114
+頍	gyu;
+闚	gyu;
+邽	gyu;
+跬	gyu;
+虯	gyu;
+虬	gyu;
+睽	gyu;
+潙	gyu;
+楏	gyu;
+暌	gyu;
+巋	gyu;
+嬀	gyu;
+嫢	gyu;
+呌	gyu;
+刲	gyu;
+馗	gyu;
+閨	gyu;
+逵	gyu;
+赳	gyu;
+糺	gyu;
+竅	gyu;
+硅	gyu;
+樛	gyu;
+揆	gyu;
+奎	gyu;
+槻	gyu;
+珪	gyu;
+圭	gyu;
+叫	gyu;
+糾	gyu;
+規	gyu;
+窺	gyu;
+葵	gyu;
+麏	gyun;
+筠	gyun;
+畇	gyun;
+囷	gyun;
+勻	gyun;
+龜	gyun;
+鈞	gyun;
+菌	gyun;
+均	gyun;	2638
+橘	gyul;
+郄	gwg;
+郤	gwg;
+棘	gwg;
+屐	gwg;
+尅	gwg;
+剋	gwg;
+亟	gwg;
+克	gwg;
+隙	gwg;
+戟	gwg;
+劇	gwg;
+極	gwg;	2390
+靳	gwn;
+觔	gwn;
+漌	gwn;
+廑	gwn;
+巹	gwn;
+墐	gwn;
+厪	gwn;
+卺	gwn;
+劤	gwn;
+饉	gwn;
+釿	gwn;
+跟	gwn;
+覲	gwn;
+菫	gwn;
+瑾	gwn;
+槿	gwn;
+懃	gwn;
+根	gwn;	2395
+近	gwn;	2095
+謹	gwn;
+芹	gwn;
+筋	gwn;
+斤	gwn;
+勤	gwn;	2706
+僅	gwn;
+契	gwl;
+黅	gwm;
+芩	gwm;
+笒	gwm;
+昑	gwm;
+嶔	gwm;
+妗	gwm;
+唫	gwm;
+衾	gwm;
+擒	gwm;
+噤	gwm;
+今	gwm;	2787
+檎	gwm;
+金	gwm;	2066
+襟	gwm;
+衿	gwm;
+禽	gwm;
+禁	gwm;	2264
+琴	gwm;
+錦	gwm;
+芨	gwb;
+礏	gwb;
+圾	gwb;
+伋	gwb;
+皀	gwb;
+岌	gwb;
+給	gwb;	2226
+級	gwb;
+笈	gwb;
+汲	gwb;
+急	gwb;	2507
+及	gwb;	2686
+扱	gwb;
+殑	gwx;
+矜	gwx;
+兢	gwx;
+亘	gwx;
+亙	gwx;
+肯	gwx;
+黖	gi;
+鬐	gi;
+頎	gi;
+隑	gi;
+錤	gi;
+覉	gi;
+蟣	gi;
+蜝	gi;
+虁	gi;
+蘄	gi;
+芰	gi;
+芪	gi;
+肵	gi;
+耭	gi;
+綦	gi;
+綥	gi;
+禨	gi;
+璣	gi;
+璂	gi;
+玘	gi;
+猉	gi;
+炁	gi;
+歧	gi;
+暣	gi;
+旣	gi;
+旂	gi;
+攲	gi;
+愭	gi;
+忮	gi;
+庋	gi;
+屺	gi;
+夔	gi;
+墍	gi;
+僛	gi;
+錡	gi;
+琪	gi;
+琦	gi;
+麒	gi;
+驥	gi;
+騏	gi;
+饑	gi;
+跂	gi;
+豈	gi;
+譏	gi;
+覬	gi;
+耆	gi;
+羇	gi;
+羈	gi;
+綺	gi;
+祺	gi;
+畸	gi;
+淇	gi;
+沂	gi;
+氣	gi;	2365
+棊	gi;
+杞	gi;
+朞	gi;
+曁	gi;
+掎	gi;
+弃	gi;
+圻	gi;
+嗜	gi;
+剞	gi;
+冀	gi;
+箕	gi;
+鰭	gi;
+肌	gi;
+其	gi;
+埼	gi;
+崎	gi;
+碁	gi;
+己	gi;	2552
+祁	gi;
+祇	gi;
+欺	gi;
+技	gi;	2475
+妓	gi;
+騎	gi;
+飢	gi;
+起	gi;	2105
+記	gi;	2149
+紀	gi;
+祈	gi;
+畿	gi;
+汽	gi;
+機	gi;
+棄	gi;
+棋	gi;
+期	gi;	2410
+旗	gi;
+忌	gi;
+幾	gi;
+岐	gi;
+寄	gi;
+奇	gi;
+基	gi;	2635
+器	gi;
+伎	gi;
+企	gi;
+磯	gi;
+緊	gin;
+蛣	gil;
+姞	gil;
+拮	gil;
+佶	gil;
+桔	gil;
+吉	gil;	2673
+金	gim;	2066
+喫	ggig;
+糥	na;
+挪	na;
+挐	na;
+糯	na;
+煖	na;
+梛	na;
+拿	na;
+拏	na;
+懦	na;
+娜	na;
+儺	na;
+那	na;
+奈	na;
+諾	nag;
+餪	nan;
+煗	nan;
+偄	nan;
+赧	nan;
+難	nan;	2044
+暖	nan;	2424
+捏	nal;
+捺	nal;
+湳	nam;
+柟	nam;
+枏	nam;
+娚	nam;
+喃	nam;
+楠	nam;
+南	nam;	2695
+男	nam;	2302
+衲	nab;
+納	nab;
+囊	nax;
+曩	nax;
+娘	nax;
+鼐	nai;
+柰	nai;
+嬭	nai;
+奶	nai;
+內	nai;	2743
+迺	nai;
+乃	nai;
+匂	nai;
+奈	nai;
+耐	nai;
+女	nye;	2614
+惄	nyeg;
+秊	nyen;
+碾	nyen;
+撚	nyen;
+年	nyen;	2543
+拈	nyem;
+恬	nyem;
+捻	nyem;
+念	nyem;	2510
+寗	nyex;
+儜	nyex;
+濘	nyex;
+佞	nyex;
+嚀	nyex;
+寧	nyex;
+笯	no;
+猱	no;
+峱	no;
+駑	no;
+臑	no;
+瑙	no;
+弩	no;
+孥	no;
+呶	no;
+怒	no;	2509
+奴	no;
+努	no;
+醲	nox;
+穠	nox;
+噥	nox;
+儂	nox;
+農	nox;	2097
+膿	nox;
+濃	nox;
+餒	noi;
+腦	noi;
+惱	noi;
+裊	nyo;
+磠	nyo;
+淖	nyo;
+鐃	nyo;
+嬲	nyo;
+嫋	nyo;
+尿	nyo;
+溺	nyo;
+啂	nu;
+耨	nu;
+嫩	nun;
+訥	nul;
+肭	nul;
+吶	nul;
+杻	nyu;
+忸	nyu;
+紐	nyu;
+靵	nyu;
+衄	nyug;
+能	nwx;	2202
+柅	ni;
+呢	ni;
+你	ni;
+膩	ni;
+怩	ni;
+祢	ni;
+禰	ni;
+尼	ni;
+泥	ni;
+匿	nig;
+溺	nig;
+暱	nil;
+昵	nil;
+爹	da;
+茶	da;	2182
+多	da;	2623
+腶	dan;
+耑	dan;
+簞	dan;
+癉	dan;
+漙	dan;
+坍	dan;
+鄲	dan;
+袒	dan;
+蜑	dan;
+緞	dan;
+湍	dan;
+斷	dan;
+慱	dan;
+彖	dan;
+團	dan;	2642
+單	dan;	2653
+亶	dan;
+椴	dan;
+段	dan;
+檀	dan;
+壇	dan;
+鍛	dan;
+蛋	dan;
+胆	dan;
+端	dan;	2247
+短	dan;	2273
+旦	dan;
+担	dan;
+丹	dan;
+但	dan;
+澾	dal;
+韃	dal;
+靼	dal;
+闥	dal;
+疸	dal;
+獺	dal;
+撻	dal;
+怛	dal;
+妲	dal;
+達	dal;	2080
+黵	dam;
+黮	dam;
+錟	dam;
+郯	dam;
+薝	dam;
+聃	dam;
+禫	dam;
+墰	dam;
+噉	dam;
+儋	dam;
+譚	dam;
+覃	dam;
+蕁	dam;
+膽	dam;
+罎	dam;
+痰	dam;
+澹	dam;
+潭	dam;
+毯	dam;
+擔	dam;
+憺	dam;
+壜	dam;
+啗	dam;
+啖	dam;
+曇	dam;
+談	dam;	2134
+湛	dam;
+淡	dam;
+龘	dab;
+遝	dab;
+畓	dab;
+踏	dab;
+答	dab;	2240
+沓	dab;
+餹	dax;
+餳	dax;
+鏜	dax;
+讜	dax;
+璫	dax;
+瑭	dax;
+檔	dax;
+搪	dax;
+戇	dax;
+倘	dax;
+黨	dax;
+鐺	dax;
+襠	dax;
+蟷	dax;
+螳	dax;
+礑	dax;
+瞠	dax;
+當	dax;	2296
+溏	dax;
+棠	dax;
+幢	dax;
+儻	dax;
+撞	dax;
+堂	dax;	2634
+糖	dax;
+塘	dax;
+唐	dax;
+汏	dai;
+旲	dai;
+懟	dai;
+坮	dai;
+儓	dai;
+鐓	dai;
+臺	dai;
+玳	dai;
+擡	dai;
+帶	dai;
+對	dai;	2569
+垈	dai;
+大	dai;	2621
+代	dai;	2784
+黛	dai;
+隊	dai;
+貸	dai;
+袋	dai;
+戴	dai;
+待	dai;	2525
+岱	dai;
+碓	dai;
+宅	daig;	2595
+德	daig;	2519
+悳	daig;
+鼗	do;
+鞱	do;
+鞀	do;
+酴	do;
+稌	do;
+禱	do;
+涂	do;
+洮	do;
+搯	do;
+慆	do;
+忉	do;
+弢	do;
+壔	do;
+燾	do;
+饕	do;
+韜	do;
+闍	do;
+蹈	do;
+覩	do;
+稻	do;
+睹	do;
+滔	do;
+濤	do;
+盜	do;
+櫂	do;
+棹	do;
+檮	do;
+擣	do;
+搗	do;
+掉	do;
+掏	do;
+圖	do;	2643
+叨	do;
+道	do;	2081
+萄	do;
+導	do;
+陶	do;
+逃	do;
+到	do;	2720
+淘	do;
+桃	do;
+悼	do;
+嶋	do;
+島	do;	2558
+刀	do;	2728
+倒	do;
+度	do;	2538
+鍍	do;
+都	do;	2074
+途	do;
+賭	do;
+菟	do;
+渡	do;
+徒	do;	2522
+屠	do;
+塗	do;
+堵	do;
+跳	do;
+挑	do;
+瀆	dog;
+櫝	dog;
+黷	dog;
+讀	dog;	2125
+纛	dog;
+獨	dog;	2315
+犢	dog;
+牘	dog;
+毒	dog;
+篤	dog;
+禿	dog;
+督	dog;
+躉	don;
+焞	don;
+潡	don;
+旽	don;
+墩	don;
+弴	don;
+燉	don;
+暾	don;
+頓	don;
+豚	don;
+沌	don;
+敦	don;
+惇	don;
+堗	dol;
+乭	dol;
+咄	dol;
+突	dol;
+蝀	dox;
+茼	dox;
+涷	dox;
+朣	dox;
+彤	dox;
+峒	dox;
+垌	dox;
+哃	dox;
+侗	dox;
+蕫	dox;
+鮗	dox;
+苳	dox;
+艟	dox;
+疼	dox;
+潼	dox;
+橦	dox;
+僮	dox;
+錬	dox;
+銅	dox;
+胴	dox;
+童	dox;	2248
+瞳	dox;
+洞	dox;
+憧	dox;
+同	dox;	2672
+動	dox;	2711
+働	dox;
+董	dox;
+棟	dox;
+東	dox;	2402
+凍	dox;
+冬	dox;	2732
+桐	dox;
+仝	dox;
+陡	du;
+脰	du;
+枓	du;
+斁	du;
+讀	du;	2125
+蠹	du;
+蚪	du;
+荳	du;
+肚	du;
+竇	du;
+抖	du;
+頭	du;	2027
+豆	du;	2122
+痘	du;
+杜	du;
+斗	du;
+逗	du;
+兜	du;
+迍	dun;
+芚	dun;
+窀	dun;
+遯	dun;
+臀	dun;
+鈍	dun;
+遁	dun;
+屯	dun;
+乧	dul;
+得	dwg;	2521
+螣	dwx;
+墱	dwx;
+凳	dwx;
+鄧	dwx;
+縢	dwx;
+籐	dwx;
+磴	dwx;
+滕	dwx;
+橙	dwx;
+嶝	dwx;
+騰	dwx;
+鐙	dwx;
+謄	dwx;
+藤	dwx;
+等	dwx;	2241
+燈	dwx;	2323
+登	dwx;	2294
+驘	la;
+臝	la;
+砢	la;
+曪	la;
+囉	la;
+倮	la;
+騾	la;
+鑼	la;
+邏	la;
+蘿	la;
+癩	la;
+瘰	la;
+懶	la;
+喇	la;
+裸	la;
+螺	la;
+羅	la;
+嗠	lag;
+駱	lag;
+珞	lag;
+犖	lag;
+烙	lag;
+樂	lag;	2388
+酪	lag;
+落	lag;	2177
+絡	lag;
+洛	lag;
+灓	lan;
+攔	lan;
+幱	lan;
+鸞	lan;
+闌	lan;
+鑾	lan;
+襴	lan;
+爛	lan;
+瀾	lan;
+欒	lan;
+嬾	lan;
+亂	lan;
+蘭	lan;
+欄	lan;
+卵	lan;
+辢	lal;
+辣	lal;
+埒	lal;
+剌	lal;
+擥	lam;
+惏	lam;
+覽	lam;
+襤	lam;
+纜	lam;
+籃	lam;
+欖	lam;
+攬	lam;
+婪	lam;
+藍	lam;
+濫	lam;
+嵐	lam;
+蠟	lab;
+啦	lab;
+鑞	lab;
+臘	lab;
+拉	lab;
+閬	lax;
+蜋	lax;
+稂	lax;
+硠	lax;
+郞	lax;
+螂	lax;
+莨	lax;
+瑯	lax;
+琅	lax;
+郎	lax;
+狼	lax;
+浪	lax;	2347
+榔	lax;
+朗	lax;
+廊	lax;
+騋	lai;
+萊	lai;
+淶	lai;
+崍	lai;
+徠	lai;
+來	lai;	2770
+冷	laix;	2730
+畧	lyag;
+略	lyag;
+掠	lyag;
+樑	lyax;
+悢	lyax;
+魎	lyax;
+輛	lyax;
+踉	lyax;
+粮	lyax;
+粱	lyax;
+喨	lyax;
+凉	lyax;
+兩	lyax;	2741
+倆	lyax;
+量	lyax;	2067
+諒	lyax;
+良	lyax;	2188
+糧	lyax;
+涼	lyax;	2342
+梁	lyax;
+亮	lyax;
+椋	lyax;
+邌	lye;
+戾	lye;
+儢	lye;
+厲	lye;
+黎	lye;
+驪	lye;
+驢	lye;
+閭	lye;
+鑢	lye;
+蠡	lye;
+蠣	lye;
+藜	lye;
+臚	lye;
+膂	lye;
+糲	lye;
+礪	lye;
+癘	lye;
+濾	lye;
+櫚	lye;
+梠	lye;
+廬	lye;
+唳	lye;
+勵	lye;
+儷	lye;
+呂	lye;
+麗	lye;
+旅	lye;	2441
+慮	lye;
+侶	lye;
+酈	lyeg;
+歷	lyeg;	2375
+曆	lyeg;
+攊	lyeg;
+靂	lyeg;
+轣	lyeg;
+轢	lyeg;
+礫	lyeg;
+癧	lyeg;
+瀝	lyeg;
+櫪	lyeg;
+櫟	lyeg;
+力	lyeg;	2717
+湅	lyen;
+孌	lyen;
+璉	lyen;
+楝	lyen;
+攣	lyen;
+戀	lyen;
+連	lyen;	2087
+蓮	lyen;
+聯	lyen;
+練	lyen;	2221
+煉	lyen;
+漣	lyen;
+憐	lyen;
+鍊	lyen;
+颲	lyel;
+挒	lyel;
+洌	lyel;
+捩	lyel;
+冽	lyel;
+裂	lyel;
+烈	lyel;	2328
+劣	lyel;
+列	lyel;	2725
+磏	lyem;
+殮	lyem;
+瀲	lyem;
+濂	lyem;
+斂	lyem;
+奩	lyem;
+簾	lyem;
+廉	lyem;
+躐	lyeb;
+鬣	lyeb;
+獵	lyeb;
+鹷	lyex;
+軨	lyex;
+翎	lyex;
+笭	lyex;
+秢	lyex;
+泠	lyex;
+欞	lyex;
+岭	lyex;
+姈	lyex;
+呤	lyex;
+另	lyex;
+昤	lyex;
+岺	lyex;
+齡	lyex;
+鴒	lyex;
+靈	lyex;
+逞	lyex;
+蛉	lyex;
+聆	lyex;
+羚	lyex;
+囹	lyex;
+零	lyex;
+鈴	lyex;
+苓	lyex;
+玲	lyex;
+怜	lyex;
+嶺	lyex;
+伶	lyex;
+令	lyex;	2783
+領	lyex;	2028
+澧	lyei;
+鱧	lyei;
+隸	lyei;
+醴	lyei;
+禮	lyei;	2262
+隷	lyei;
+例	lyei;	2769
+鸕	lo;
+髗	lo;
+鐪	lo;
+窂	lo;
+玈	lo;
+潞	lo;
+擄	lo;
+壚	lo;
+塷	lo;
+鹵	lo;
+鱸	lo;
+顱	lo;
+鑪	lo;
+轤	lo;
+輅	lo;
+蘆	lo;
+艫	lo;
+艪	lo;
+盧	lo;
+癆	lo;
+爐	lo;
+瀘	lo;
+滷	lo;
+撈	lo;
+勞	lo;	2708
+老	lo;	2214
+露	lo;	2039
+路	lo;	2103
+櫓	lo;
+魯	lo;
+虜	lo;
+鷺	lo;
+騄	log;
+錄	log;
+菉	log;
+簏	log;
+淥	log;
+彔	log;
+圥	log;
+綠	log;	2223
+轆	log;
+祿	log;
+碌	log;
+麓	log;
+鹿	log;
+漉	log;
+論	lon;	2132
+龎	lox;
+礱	lox;
+曨	lox;
+攏	lox;
+儱	lox;
+隴	lox;
+蘢	lox;
+籠	lox;
+瓏	lox;
+朧	lox;
+壟	lox;
+聾	lox;
+弄	lox;
+瀧	lox;
+顂	loi;
+酹	loi;
+纇	loi;
+礧	loi;
+礌	loi;
+攂	loi;
+賴	loi;
+瀨	loi;
+賚	loi;
+誄	loi;
+蕾	loi;
+耒	loi;
+罍	loi;
+籟	loi;
+磊	loi;
+儡	loi;
+牢	loi;
+賂	loi;
+雷	loi;
+飉	lyo;
+飂	lyo;
+膋	lyo;
+獠	lyo;
+漻	lyo;
+嫽	lyo;
+嘹	lyo;
+鬧	lyo;
+鐐	lyo;
+醪	lyo;
+蓼	lyo;
+聊	lyo;
+繚	lyo;
+燎	lyo;
+潦	lyo;
+暸	lyo;
+撩	lyo;
+廖	lyo;
+遼	lyo;
+瞭	lyo;
+療	lyo;
+料	lyo;	2445
+寮	lyo;
+僚	lyo;
+了	lyo;
+龒	lyox;
+龍	lyox;
+蔞	lu;
+耬	lu;
+淚	lu;
+慺	lu;
+嶁	lu;
+屢	lu;
+嘍	lu;
+髏	lu;
+陋	lu;
+鏤	lu;
+褸	lu;
+螻	lu;
+縷	lu;
+瘻	lu;
+樓	lu;
+壘	lu;
+僂	lu;
+漏	lu;
+婁	lu;
+累	lu;
+鶹	lyu;
+遛	lyu;
+纍	lyu;
+橊	lyu;
+縲	lyu;
+瘤	lyu;
+瀏	lyu;
+榴	lyu;
+旒	lyu;
+類	lyu;
+瑠	lyu;
+硫	lyu;
+留	lyu;	2300
+琉	lyu;
+溜	lyu;
+流	lyu;	2348
+劉	lyu;
+柳	lyu;
+謬	lyu;
+僇	lyug;
+戮	lyug;
+勠	lyug;
+六	lyug;	2738
+陸	lyug;	2048
+掄	lyun;
+綸	lyun;
+淪	lyun;
+崙	lyun;
+侖	lyun;
+輪	lyun;
+倫	lyun;
+溧	lyul;
+嵂	lyul;
+慄	lyul;
+律	lyul;	2524
+栗	lyul;
+癃	lyux;
+窿	lyux;
+隆	lyux;
+泐	lwg;
+勒	lwg;
+肋	lwg;
+澟	lwm;
+凜	lwm;
+廩	lwm;
+凛	lwm;
+倰	lwx;
+蔆	lwx;
+楞	lwx;
+陵	lwx;
+稜	lwx;
+凌	lwx;
+菱	lwx;
+綾	lwx;
+邐	li;
+螭	li;
+离	li;
+嫠	li;
+娌	li;
+唎	li;
+剺	li;
+涖	li;
+黐	li;
+魑	li;
+釐	li;
+貍	li;
+蜊	li;
+莉	li;
+莅	li;
+羸	li;
+籬	li;
+犁	li;
+漓	li;
+罹	li;
+悧	li;
+俐	li;
+俚	li;
+厘	li;
+離	li;
+里	li;	2070
+裡	li;
+裏	li;
+痢	li;
+璃	li;
+理	li;	2310
+梨	li;
+李	li;
+履	li;
+吏	li;
+利	li;	2721
+哩	li;
+狸	li;
+鯉	li;
+浬	li;
+鏻	lin;
+轔	lin;
+繗	lin;
+粦	lin;
+磷	lin;
+璘	lin;
+獜	lin;
+潾	lin;
+嶙	lin;
+驎	lin;
+躪	lin;
+躙	lin;
+藺	lin;
+麟	lin;
+鱗	lin;
+隣	lin;
+燐	lin;
+粼	lim;
+霖	lim;
+鄰	lim;
+痳	lim;
+悋	lim;
+吝	lim;
+臨	lim;
+琳	lim;
+淋	lim;
+林	lim;	2400
+砬	lib;
+岦	lib;
+粒	lib;
+立	lib;	2250
+笠	lib;
+麽	ma;
+螞	ma;
+劘	ma;
+蟇	ma;
+碼	ma;
+痲	ma;
+瑪	ma;
+麼	ma;
+媽	ma;
+麿	ma;
+麻	ma;
+魔	ma;
+磨	ma;
+摩	ma;
+馬	ma;	2015
+鏌	mag;
+邈	mag;
+瞙	mag;
+寞	mag;
+膜	mag;
+幕	mag;
+莫	mag;
+漠	mag;
+鏋	man;
+晚	man;	2429
+嫚	man;
+墁	man;
+鬘	man;
+饅	man;
+鏝	man;
+輓	man;
+蹣	man;
+謾	man;
+蠻	man;
+萬	man;	2178
+縵	man;
+瞞	man;
+灣	man;
+滿	man;	2333
+彎	man;
+幔	man;
+巒	man;
+曼	man;
+卍	man;
+蔓	man;
+漫	man;
+慢	man;
+万	man;
+娩	man;
+晩	man;
+挽	man;
+鰻	man;
+帕	mal;
+唜	mal;
+靺	mal;
+襪	mal;
+茉	mal;
+秣	mal;
+沫	mal;
+末	mal;	2407
+抹	mal;
+邙	max;
+輞	max;
+莾	max;
+漭	max;
+汒	max;
+魍	max;
+蟒	max;
+莽	max;
+茫	max;
+芒	max;
+罔	max;
+惘	max;
+網	max;
+妄	max;
+望	max;	2412
+忙	max;	2513
+忘	max;	2514
+亡	max;	2792
+霉	mai;
+酶	mai;
+玫	mai;
+沬	mai;
+每	mai;	2370
+怰	mai;
+邁	mai;
+賣	mai;	2109
+莓	mai;
+苺	mai;
+眛	mai;
+寐	mai;
+魅	mai;
+枚	mai;
+昧	mai;
+妹	mai;	2610
+埋	mai;
+呆	mai;
+買	mai;	2113
+煤	mai;
+楳	mai;
+梅	mai;
+媒	mai;
+罵	mai;
+貃	maig;
+麥	maig;	2006
+驀	maig;
+陌	maig;
+貘	maig;
+貊	maig;
+脉	maig;
+脈	maig;
+甿	maix;
+甍	maix;
+氓	maix;
+儚	maix;
+盲	maix;
+猛	maix;
+孟	maix;
+盟	maix;
+萌	maix;
+虻	maix;
+覓	myeg;
+幎	myeg;
+冪	myeg;
+糸	myeg;
+麵	myen;
+糆	myen;
+沔	myen;
+麪	myen;
+緜	myen;
+眄	myen;
+湎	myen;
+冕	myen;
+俛	myen;
+面	myen;	2035
+緬	myen;
+綿	myen;
+棉	myen;
+免	myen;	2746
+眠	myen;	2277
+勉	myen;	2712
+衊	myel;
+篾	myel;
+滅	myel;
+蔑	myel;
+蓂	myex;
+洺	myex;
+椧	myex;
+酩	myex;
+螟	myex;
+茗	myex;
+瞑	myex;
+溟	myex;
+暝	myex;
+鳴	myex;	2007
+銘	myex;
+明	myex;	2437
+命	myex;	2663
+名	myex;	2671
+冥	myex;
+皿	myex;
+袂	myei;
+##@@@@@@@@@@@@檢查點，下方未檢查#
+麰	mo;
+蟊	mo;
+蝥	mo;
+芼	mo;
+眊	mo;
+摹	mo;
+恈	mo;
+嫫	mo;
+媢	mo;
+侔	mo;
+髦	mo;
+謨	mo;
+耄	mo;
+糢	mo;
+眸	mo;
+皃	mo;
+瑁	mo;
+旄	mo;
+姆	mo;
+耗	mo;
+毛	mo;	2368
+模	mo;
+摸	mo;
+矛	mo;
+牟	mo;
+粍	mo;
+鉾	mo;
+貌	mo;
+謀	mo;
+冒	mo;
+某	mo;
+帽	mo;
+母	mo;	2371
+暮	mo;	2422
+慕	mo;
+募	mo;
+侮	mo;
+茅	mo;
+牡	mo;
+姥	mo;
+坶	mog;
+鶩	mog;
+苜	mog;
+沐	mog;
+凩	mog;
+目	mog;	2283
+木	mog;	2409
+穆	mog;
+睦	mog;
+牧	mog;
+沒	mol;
+歿	mol;
+鸏	mox;
+雺	mox;
+瞢	mox;
+溕	mox;
+懞	mox;
+幪	mox;
+艨	mox;
+矇	mox;
+濛	mox;
+朦	mox;
+曚	mox;
+蒙	mox;
+夢	mox;
+貓	myo;
+竗	myo;
+淼	myo;
+藐	myo;
+眇	myo;
+渺	myo;
+昴	myo;
+杳	myo;
+妙	myo;	2611
+墓	myo;
+錨	myo;
+苗	myo;
+描	myo;
+廟	myo;
+猫	myo;
+卯	myo;
+騖	mu;
+膴	mu;
+珷	mu;
+儛	mu;
+誣	mu;
+繆	mu;
+毋	mu;
+楙	mu;
+无	mu;
+拇	mu;
+懋	mu;
+憮	mu;
+廡	mu;
+巫	mu;
+嘸	mu;
+茂	mu;
+鵡	mu;
+霧	mu;
+無	mu;	2327
+務	mu;	2710
+貿	mu;
+戊	mu;
+蕪	mu;
+舞	mu;	2190
+武	mu;	2377
+撫	mu;
+畝	mu;
+嘿	mug;
+默	mug;
+墨	mug;
+雯	mun;
+璊	mun;
+炆	mun;
+汶	mun;
+抆	mun;
+紊	mun;
+捫	mun;
+懣	mun;
+悗	mun;
+刎	mun;
+們	mun;
+匁	mun;
+門	mun;	2059
+紋	mun;
+問	mun;	2657
+聞	mun;	2208
+文	mun;	2446
+吻	mun;
+蚊	mun;
+沕	mul;
+勿	mul;
+物	mul;	2318
+蘼	mi;
+苿	mi;
+獼	mi;
+湄	mi;
+洣	mi;
+楣	mi;
+敉	mi;
+媺	mi;
+媄	mi;
+娓	mi;
+亹	mi;
+渼	mi;
+黴	mi;
+靡	mi;
+麋	mi;
+薇	mi;
+縻	mi;
+糜	mi;
+瀰	mi;
+彌	mi;
+弭	mi;
+嵋	mi;
+媚	mi;
+弥	mi;
+迷	mi;
+未	mi;	2408
+味	mi;	2665
+米	mi;	2237
+美	mi;	2217
+眉	mi;
+微	mi;
+尾	mi;	2564
+謎	mi;
+梶	mi;
+鰵	min;
+閩	min;
+苠	min;
+緍	min;
+玟	min;
+湣	min;
+暋	min;
+旼	min;
+敃	min;
+慜	min;
+忟	min;
+珉	min;
+忞	min;
+黽	min;
+閔	min;
+罠	min;
+緡	min;
+泯	min;
+旻	min;
+憫	min;
+愍	min;
+岷	min;
+悶	min;
+民	min;	2366
+敏	min;
+滵	mil;
+謐	mil;
+樒	mil;
+蜜	mil;
+密	mil;	2580
+髆	bag;
+鎛	bag;
+牔	bag;
+欂	bag;
+剝	bag;
+駮	bag;
+雹	bag;
+膊	bag;
+璞	bag;
+珀	bag;
+樸	bag;
+搏	bag;
+亳	bag;
+朴	bag;
+撲	bag;
+駁	bag;
+縛	bag;
+迫	bag;
+薄	bag;
+舶	bag;
+粕	bag;
+箔	bag;
+泊	bag;
+拍	bag;
+博	bag;
+頖	ban;
+螌	ban;
+磻	ban;
+盼	ban;
+泮	ban;
+朌	ban;
+攽	ban;
+搫	ban;
+扳	ban;
+媻	ban;
+蟠	ban;
+胖	ban;
+絆	ban;
+礬	ban;
+瘢	ban;
+潘	ban;
+槃	ban;
+攀	ban;
+拌	ban;
+返	ban;
+磐	ban;
+盤	ban;
+飯	ban;	2021
+頒	ban;
+般	ban;
+畔	ban;
+班	ban;
+斑	ban;
+搬	ban;
+叛	ban;
+反	ban;	2684
+半	ban;	2698
+伴	ban;
+鵓	bal;
+鈸	bal;
+醱	bal;
+脖	bal;
+潑	bal;
+浡	bal;
+哱	bal;
+魃	bal;
+髮	bal;
+跋	bal;
+發	bal;	2293
+渤	bal;
+撥	bal;
+拔	bal;
+勃	bal;
+鉢	bal;
+龐	bax;
+鎊	bax;
+螃	bax;
+舽	bax;
+牓	bax;
+梆	bax;
+旊	bax;
+搒	bax;
+徬	bax;
+幫	bax;
+仿	bax;
+昉	bax;
+魴	bax;
+髣	bax;
+謗	bax;
+蚌	bax;
+蒡	bax;
+舫	bax;
+膀	bax;
+磅	bax;
+滂	bax;
+榜	bax;
+枋	bax;
+旁	bax;
+彷	bax;
+幇	bax;
+尨	bax;
+厖	bax;
+防	bax;	2053
+肪	bax;
+紡	bax;
+房	bax;
+妨	bax;
+坊	bax;
+傍	bax;
+邦	bax;
+訪	bax;	2148
+芳	bax;
+方	bax;	2443
+放	bax;	2458
+倣	bax;
+褙	bai;
+蓓	bai;
+扒	bai;
+坯	bai;
+裵	bai;
+裴	bai;
+胚	bai;
+琲	bai;
+焙	bai;
+湃	bai;
+拜	bai;	2471
+徘	bai;
+坏	bai;
+北	bai;	2703
+陪	bai;
+賠	bai;
+培	bai;
+倍	bai;
+配	bai;
+輩	bai;
+背	bai;
+盃	bai;
+杯	bai;
+排	bai;
+俳	bai;
+魄	baig;
+粨	baig;
+帛	baig;
+佰	baig;
+百	baig;	2291
+白	baig;	2292
+柏	baig;
+伯	baig;
+栢	baig;
+蘩	ben;
+袢	ben;
+膰	ben;
+飜	ben;
+繙	ben;
+燔	ben;
+樊	ben;
+翻	ben;
+蕃	ben;
+番	ben;	2299
+煩	ben;
+藩	ben;
+繁	ben;
+幡	ben;
+橃	bel;
+罸	bel;
+閥	bel;
+筏	bel;
+罰	bel;
+伐	bel;	2779
+颿	bem;
+釩	bem;
+訉	bem;
+范	bem;
+笵	bem;
+泛	bem;
+梵	bem;
+凡	bem;
+範	bem;
+犯	bem;
+汎	bem;
+氾	bem;
+帆	bem;
+琺	beb;
+法	beb;	2356
+鼊	byeg;
+鷿	byeg;
+疈	byeg;
+擗	byeg;
+霹	byeg;
+闢	byeg;
+襞	byeg;
+甓	byeg;
+璧	byeg;
+蘗	byeg;
+檗	byeg;
+擘	byeg;
+劈	byeg;
+碧	byeg;
+癖	byeg;
+壁	byeg;
+僻	byeg;
+鴘	byen;
+骿	byen;
+賆	byen;
+腁	byen;
+籩	byen;
+忭	byen;
+駢	byen;
+邊	byen;
+辯	byen;
+辮	byen;
+變	byen;	2124
+抃	byen;
+卞	byen;
+辨	byen;
+弁	byen;
+便	byen;	2767
+鷩	byel;
+鱉	byel;
+彆	byel;
+鼈	byel;
+瞥	byel;
+別	byel;	2722
+騈	byex;
+鉼	byex;
+鈵	byex;
+輧	byex;
+缾	byex;
+棅	byex;
+昺	byex;
+拼	byex;
+幷	byex;
+屛	byex;
+倂	byex;
+甁	byex;
+昞	byex;
+餠	byex;
+迸	byex;
+絣	byex;
+竝	byex;
+秉	byex;
+炳	byex;
+並	byex;
+柄	byex;
+塀	byex;
+兵	byex;	2736
+丙	byex;
+鋲	byex;
+病	byex;	2295
+靌	bo;
+簠	bo;
+盙	bo;
+珤	bo;
+潽	bo;
+湺	bo;
+洑	bo;
+步	bo;	2378
+俌	bo;
+黼	bo;
+褓	bo;
+葆	bo;
+寶	bo;
+堡	bo;
+報	bo;	2632
+菩	bo;
+輔	bo;
+補	bo;
+甫	bo;
+保	bo;	2765
+譜	bo;
+普	bo;
+鴇	bo;
+鵩	bog;
+菔	bog;
+扑	bog;
+幞	bog;
+宓	bog;
+墣	bog;
+鰒	bog;
+馥	bog;
+輹	bog;
+輻	bog;
+蝮	bog;
+蝠	bog;
+蔔	bog;
+茯	bog;
+箙	bog;
+濮	bog;
+匐	bog;
+卜	bog;
+僕	bog;
+覆	bog;
+複	bog;
+腹	bog;
+福	bog;	2263
+服	bog;	2413
+復	bog;
+伏	bog;	2780
+本	bon;	2406
+乶	bol;
+鴌	box;
+綘	box;
+琫	box;
+熢	box;
+夆	box;
+丰	box;
+菶	box;
+篷	box;
+烽	box;
+棒	box;
+鳳	box;
+鋒	box;
+蜂	box;
+蓬	box;
+縫	box;
+捧	box;
+峯	box;
+峰	box;
+奉	box;	2615
+俸	box;
+封	box;
+逢	box;
+駙	bu;
+頫	bu;
+鈇	bu;
+跗	bu;
+裒	bu;
+袝	bu;
+蚨	bu;
+莩	bu;
+芣	bu;
+胕	bu;
+罦	bu;
+筟	bu;
+祔	bu;
+玞	bu;
+涪	bu;
+掊	bu;
+媍	bu;
+麩	bu;
+鳧	bu;
+趺	bu;
+賻	bu;
+訃	bu;
+蜉	bu;
+苻	bu;
+艀	bu;
+腑	bu;
+罘	bu;
+溥	bu;
+榑	bu;
+桴	bu;
+拊	bu;
+抔	bu;
+孵	bu;
+孚	bu;
+咐	bu;
+傅	bu;
+俯	bu;
+俘	bu;
+仆	bu;
+剖	bu;
+簿	bu;
+鮒	bu;
+覆	bu;
+復	bu;
+副	bu;
+部	bu;	2075
+附	bu;
+阜	bu;
+赴	bu;
+賦	bu;
+負	bu;
+芙	bu;
+膚	bu;
+腐	bu;
+符	bu;
+父	bu;	2321
+浮	bu;	2346
+斧	bu;
+敷	bu;
+扶	bu;	2477
+府	bu;
+富	bu;	2579
+婦	bu;	2603
+夫	bu;	2618
+埠	bu;
+付	bu;
+不	bu;	2803
+否	bu;	2668
+蔀	bu;
+缶	bu;
+釜	bu;
+北	bug;	2703
+鼢	bun;
+黺	bun;
+轒	bun;
+蕡	bun;
+膹	bun;
+肦	bun;
+砏	bun;
+湓	bun;
+棼	bun;
+棻	bun;
+昐	bun;
+帉	bun;
+坌	bun;
+賁	bun;
+芬	bun;
+笨	bun;
+畚	bun;
+犇	bun;
+濆	bun;
+汾	bun;
+氛	bun;
+枌	bun;
+忿	bun;
+吩	bun;
+盆	bun;
+奔	bun;
+雰	bun;
+紛	bun;
+糞	bun;
+粉	bun;
+奮	bun;
+焚	bun;
+扮	bun;
+憤	bun;
+墳	bun;
+噴	bun;
+分	bun;	2727
+体	bun;
+韍	bul;
+茀	bul;
+艴	bul;
+紱	bul;
+岪	bul;
+黻	bul;
+髴	bul;
+祓	bul;
+拂	bul;
+彿	bul;
+佛	bul;	2773
+弗	bul;
+不	bul;	2803
+鬅	bux;
+漰	bux;
+繃	bux;
+硼	bux;
+堋	bux;
+鵬	bux;
+朋	bux;
+崩	bux;
+棚	bux;
+鼙	bi;
+騛	bi;
+騑	bi;
+陴	bi;
+閟	bi;
+郫	bi;
+邳	bi;
+蚍	bi;
+萆	bi;
+芾	bi;
+芘	bi;
+痹	bi;
+狉	bi;
+濞	bi;
+淠	bi;
+淝	bi;
+沘	bi;
+毗	bi;
+椑	bi;
+棐	bi;
+悱	bi;
+庳	bi;
+埤	bi;
+圮	bi;
+剕	bi;
+仳	bi;
+毖	bi;
+髀	bi;
+鞴	bi;
+霏	bi;
+鄙	bi;
+贔	bi;
+貔	bi;
+譬	bi;
+裨	bi;
+蜚	bi;
+蓖	bi;
+菲	bi;
+臂	bi;
+腓	bi;
+脾	bi;
+翡	bi;
+羆	bi;
+紕	bi;
+粃	bi;
+篦	bi;
+秕	bi;
+祕	bi;
+砒	bi;
+睥	bi;
+痺	bi;
+痞	bi;
+狒	bi;
+榧	bi;
+憊	bi;
+屁	bi;
+婢	bi;
+妣	bi;
+匕	bi;
+俾	bi;
+丕	bi;
+沸	bi;
+鼻	bi;	2002
+琵	bi;
+毘	bi;
+枇	bi;
+備	bi;	2757
+飛	bi;	2023
+非	bi;	2036
+費	bi;
+誹	bi;
+肥	bi;
+緋	bi;
+秘	bi;
+碑	bi;
+泌	bi;
+比	bi;	2369
+斐	bi;
+批	bi;
+扉	bi;
+悲	bi;	2500
+庇	bi;
+妃	bi;
+卑	bi;
+匪	bi;
+轡	bi;
+鬂	bin;
+霦	bin;
+鑌	bin;
+邠	bin;
+豳	bin;
+臏	bin;
+矉	bin;
+玭	bin;
+嚬	bin;
+儐	bin;
+份	bin;
+鬢	bin;
+顰	bin;
+蘋	bin;
+繽	bin;
+濱	bin;
+殯	bin;
+檳	bin;
+擯	bin;
+嬪	bin;
+牝	bin;
+頻	bin;
+賓	bin;
+貧	bin;	2118
+瀕	bin;
+浜	bin;
+斌	bin;
+彬	bin;
+靐	bix;
+凴	bix;
+騁	bix;
+聘	bix;
+憑	bix;
+娉	bix;
+凭	bix;
+冰	bix;	2731
+氷	bix;
+魦	sa;
+蜡	sa;
+缷	sa;
+皶	sa;
+痧	sa;
+榭	sa;
+楂	sa;
+柶	sa;
+姒	sa;
+剚	sa;
+僿	sa;
+傞	sa;
+汜	sa;
+麝	sa;
+鰤	sa;
+鯊	sa;
+駛	sa;
+駟	sa;
+辭	sa;
+莎	sa;
+舍	sa;	2191
+肆	sa;
+耜	sa;
+絲	sa;
+篩	sa;
+竢	sa;
+祠	sa;
+祀	sa;
+瀉	sa;
+渣	sa;
+泗	sa;
+梭	sa;
+徙	sa;
+寫	sa;	2575
+娑	sa;
+奢	sa;
+俟	sa;
+蓑	sa;
+巳	sa;
+覗	sa;
+乍	sa;
+笥	sa;
+邪	sa;
+蛇	sa;
+謝	sa;	2129
+紗	sa;
+社	sa;
+斜	sa;
+赦	sa;
+捨	sa;
+射	sa;	2572
+寺	sa;	2573
+似	sa;
+事	sa;	2796
+飼	sa;
+賜	sa;
+詞	sa;
+私	sa;	2260
+獅	sa;
+死	sa;	2373
+斯	sa;
+思	sa;	2508
+師	sa;	2547
+士	sa;	2629
+四	sa;	2651
+嗣	sa;
+史	sa;	2677
+司	sa;
+使	sa;	2771
+伺	sa;
+仕	sa;
+咋	sa;
+裟	sa;
+詐	sa;
+砂	sa;
+沙	sa;
+査	sa;
+唆	sa;
+些	sa;
+卸	sa;
+蒴	sag;
+鑠	sag;
+爍	sag;
+槊	sag;
+數	sag;	2447
+索	sag;
+朔	sag;
+削	sag;
+鏟	san;
+訕	san;
+狻	san;
+澘	san;
+毿	san;
+橵	san;
+孿	san;
+姍	san;
+剷	san;
+霰	san;
+閊	san;
+繖	san;
+疝	san;
+潸	san;
+汕	san;
+刪	san;
+蒜	san;
+酸	san;
+算	san;	2239
+産	san;
+珊	san;
+散	san;	2450
+山	san;	2559
+傘	san;
+煞	sal;
+乷	sal;
+撒	sal;
+薩	sal;
+殺	sal;	2372
+鬖	sam;
+糝	sam;
+渗	sam;
+釤	sam;
+衫	sam;
+蔘	sam;
+芟	sam;
+參	sam;	2688
+杉	sam;
+森	sam;
+三	sam;	2806
+霅	sab;
+鍤	sab;
+鈒	sab;
+翣	sab;
+揷	sab;
+唼	sab;
+颯	sab;
+霎	sab;
+澁	sab;
+歃	sab;
+卅	sab;
+鬺	sax;
+顙	sax;
+鎟	sax;
+緗	sax;
+狀	sax;
+晌	sax;
+徜	sax;
+尙	sax;
+塽	sax;
+觴	sax;
+翔	sax;
+甞	sax;
+牀	sax;
+殤	sax;
+廂	sax;
+庠	sax;
+孀	sax;
+箱	sax;
+橡	sax;
+峠	sax;
+像	sax;
+霜	sax;
+相	sax;	2281
+想	sax;	2495
+爽	sax;
+喪	sax;	2654
+常	sax;	2545
+上	sax;	2805
+賞	sax;	2111
+象	sax;
+詳	sax;
+裳	sax;
+祥	sax;
+湘	sax;
+床	sax;
+嘗	sax;
+商	sax;	2658
+償	sax;
+傷	sax;	2755
+桑	sax;
+鰓	sai;
+賽	sai;
+璽	sai;
+塞	sai;
+瀒	saig;
+濇	saig;
+穡	saig;
+槭	saig;
+嗇	saig;
+色	saig;	2187
+索	saig;
+塞	saig;
+眚	saix;
+鉎	saix;
+笙	saix;
+生	saix;	2308
+牲	saix;
+省	saix;	2280
+甥	saix;
+鉏	se;
+諝	se;
+芧	se;
+紓	se;
+澨	se;
+湑	se;
+揟	se;
+捿	se;
+緖	se;
+胥	se;
+耡	se;
+絮	se;
+筮	se;
+敍	se;
+撕	se;
+抒	se;
+嶼	se;
+壻	se;
+墅	se;
+噬	se;
+舒	se;
+婿	se;
+鼠	se;
+逝	se;
+誓	se;
+西	se;	2160
+栖	se;
+棲	se;
+瑞	se;
+鋤	se;
+恕	se;
+徐	se;
+序	se;	2540
+薯	se;
+書	se;	2418
+署	se;
+庶	se;
+曙	se;
+暑	se;	2425
+犀	se;
+黍	se;
+鼫	seg;
+舃	seg;
+腊	seg;
+矽	seg;
+奭	seg;
+晳	seg;
+鉐	seg;
+釋	seg;
+蜥	seg;
+蓆	seg;
+淅	seg;
+晰	seg;
+夕	seg;	2625
+碩	seg;
+石	seg;	2272
+析	seg;
+昔	seg;	2435
+惜	seg;	2498
+席	seg;	2546
+錫	seg;
+汐	seg;
+潟	seg;
+鱻	sen;
+鱓	sen;
+騸	sen;
+饍	sen;
+鐥	sen;
+鏇	sen;
+譔	sen;
+詵	sen;
+蟬	sen;
+璿	sen;
+璇	sen;
+瑄	sen;
+琁	sen;
+熯	sen;
+渲	sen;
+歚	sen;
+敾	sen;
+屳	sen;
+尟	sen;
+嫙	sen;
+墡	sen;
+跣	sen;
+蘚	sen;
+譱	sen;
+綫	sen;
+筅	sen;
+禪	sen;
+癬	sen;
+愃	sen;
+尠	sen;
+嬋	sen;
+僊	sen;
+膳	sen;
+繕	sen;
+善	sen;	2656
+鮮	sen;	2009
+銑	sen;
+選	sen;	2077
+船	sen;	2189
+腺	sen;
+羨	sen;
+線	sen;	2222
+旋	sen;
+煽	sen;
+扇	sen;
+宣	sen;
+先	sen;	2748
+仙	sen;	2785
+說	sel;	2138
+稧	sel;
+碟	sel;
+爇	sel;
+暬	sel;
+揲	sel;
+媟	sel;
+卨	sel;
+偰	sel;
+齧	sel;
+褻	sel;
+薛	sel;
+紲	sel;
+渫	sel;
+泄	sel;
+楔	sel;
+舌	sel;	2192
+雪	sel;	2042
+設	sel;	2147
+屑	sel;
+洩	sel;
+韱	sem;
+睒	sem;
+摻	sem;
+憸	sem;
+剡	sem;
+陝	sem;
+銛	sem;
+贍	sem;
+譫	sem;
+蟾	sem;
+纖	sem;
+殲	sem;
+暹	sem;
+孅	sem;
+閃	sem;
+灄	seb;
+涉	seb;
+顳	seb;
+鑷	seb;
+躡	seb;
+聶	seb;
+攝	seb;
+懾	seb;
+囁	seb;
+燮	seb;
+葉	seb;	2176
+騂	sex;
+瑆	sex;
+珹	sex;
+宬	sex;
+腥	sex;
+聲	sex;	2207
+筬	sex;
+猩	sex;
+晟	sex;
+惺	sex;
+醒	sex;
+誠	sex;	2140
+聖	sex;	2209
+盛	sex;	2285
+星	sex;	2434
+成	sex;	2485
+性	sex;	2506
+姓	sex;	2606
+城	sex;	2637
+省	sex;	2280
+說	sei;	2138
+繐	sei;
+稅	sei;	2256
+歲	sei;	2376
+帨	sei;
+蛻	sei;
+洒	sei;
+貰	sei;
+洗	sei;	2350
+勢	sei;	2707
+世	sei;	2802
+笹	sei;
+細	sei;	2230
+魈	so;
+膆	so;
+翛	so;
+繅	so;
+箾	so;
+瘙	so;
+炤	so;
+搔	so;
+捎	so;
+巢	so;
+塐	so;
+埽	so;
+嗉	so;
+俏	so;
+佋	so;
+卲	so;
+鰺	so;
+鮹	so;
+騷	so;
+韶	so;
+霄	so;
+銷	so;
+酥	so;
+邵	so;
+逍	so;
+踈	so;
+蕭	so;
+蔬	so;
+艘	so;
+簫	so;
+筱	so;
+甦	so;
+燒	so;
+瀟	so;
+溯	so;
+泝	so;
+樔	so;
+梳	so;
+愬	so;
+嘯	so;
+蛸	so;
+掃	so;
+遡	so;
+訴	so;
+蘇	so;
+素	so;	2231
+疎	so;
+疏	so;
+塑	so;
+紹	so;
+笑	so;	2244
+消	so;	2343
+沼	so;
+昭	so;
+少	so;	2567
+小	so;	2568
+宵	so;
+召	so;
+所	so;	2481
+篠	so;
+遬	saig;
+涑	saig;
+洬	saig;
+贖	saig;
+謖	saig;
+續	saig;	2220
+屬	saig;
+俗	saig;	2766
+速	saig;	2089
+束	saig;
+粟	saig;
+飱	son;
+飧	son;
+飡	son;
+蓀	son;
+巽	son;
+遜	son;
+損	son;
+孫	son;	2597
+窣	sol;
+蟀	sol;
+率	sol;
+柗	sox;
+鬆	sox;
+頌	sox;
+誦	sox;
+竦	sox;
+淞	sox;
+悚	sox;
+送	sox;	2092
+宋	sox;
+訟	sox;
+松	sox;	2401
+曬	soai;
+惢	soai;
+碎	soai;
+瑣	soai;
+灑	soai;
+刷	soai;
+鎖	soai;
+釗	soi;
+衰	soi;
+饈	su;
+颼	su;
+膄	su;
+脺	su;
+繡	su;
+瞍	su;
+睢	su;
+睟	su;
+瘦	su;
+璲	su;
+濉	su;
+晬	su;
+廋	su;
+峀	su;
+琇	su;
+鬚	su;
+髓	su;
+隧	su;
+陲	su;
+銹	su;
+銖	su;
+隨	su;
+豎	su;
+讎	su;
+雖	su;
+藪	su;
+蓚	su;
+茱	su;
+膸	su;
+隋	su;
+脩	su;
+羞	su;
+綏	su;
+粹	su;
+籔	su;
+邃	su;
+穗	su;
+祟	su;
+獸	su;
+燧	su;
+漱	su;
+溲	su;
+洙	su;
+泅	su;
+殳	su;
+數	su;	2447
+收	su;	2460
+搜	su;
+戍	su;
+岫	su;
+嫂	su;
+壽	su;	2627
+嗽	su;
+售	su;
+叟	su;
+輸	su;
+誰	su;	2137
+竪	su;
+袖	su;
+遂	su;
+睡	su;
+水	su;	2364
+帥	su;
+垂	su;
+須	su;	2029
+酬	su;
+讐	su;
+蒐	su;
+秀	su;	2261
+愁	su;	2494
+修	su;	2763
+囚	su;
+需	su;
+綬	su;
+樹	su;	2387
+授	su;	2467
+受	su;	2682
+首	su;	2017
+狩	su;
+殊	su;
+手	su;	2480
+守	su;	2593
+鷫	sug;
+驌	sug;
+璹	sug;
+琡	sug;
+潚	sug;
+橚	sug;
+婌	sug;
+儵	sug;
+菽	sug;
+肅	sug;
+倏	sug;
+孰	sug;
+俶	sug;
+熟	sug;
+塾	sug;
+淑	sug;
+宿	sug;	2581
+夙	sug;
+叔	sug;
+鬊	sun;
+駨	sun;
+肫	sun;
+紃	sun;
+眴	sun;
+盹	sun;
+狥	sun;
+橓	sun;
+栒	sun;
+錞	sun;
+珣	sun;
+侚	sun;
+鶉	sun;
+諄	sun;
+詢	sun;
+蕣	sun;
+蓴	sun;
+荀	sun;
+脣	sun;
+筍	sun;
+洵	sun;
+恂	sun;
+徇	sun;
+馴	sun;
+順	sun;	2030
+醇	sun;
+巡	sun;
+純	sun;	2233
+盾	sun;
+淳	sun;
+殉	sun;
+楯	sun;
+旬	sun;
+循	sun;
+舜	sun;
+瞬	sun;
+鉥	sul;
+絉	sul;
+戌	sul;
+述	sul;
+術	sul;
+崧	sux;
+菘	sux;
+嵩	sux;
+崇	sux;	2557
+焠	sui;
+淬	sui;
+倅	sui;
+蝨	swl;
+虱	swl;
+瑟	swl;
+膝	swl;
+熠	swb;
+隰	swb;
+褶	swb;
+濕	swb;
+慴	swb;
+襲	swb;
+習	swb;	2215
+拾	swb;	2470
+鬙	swx;
+塍	swx;
+陞	swx;
+蠅	swx;
+繩	swx;
+乘	swx;	2798
+僧	swx;
+丞	swx;
+昇	swx;
+承	swx;	2476
+升	swx;
+勝	swx;	2709
+鍉	si;
+釃	si;
+豉	si;
+諰	si;
+翤	si;
+緦	si;
+澌	si;
+柹	si;
+枾	si;
+枲	si;
+媤	si;
+兕	si;
+諟	si;
+顋	si;
+豺	si;
+豕	si;
+諡	si;
+蓍	si;
+翅	si;
+猜	si;
+恃	si;
+弑	si;
+廝	si;
+屎	si;
+尸	si;
+塒	si;
+嘶	si;
+啻	si;
+厮	si;
+矢	si;
+是	si;	2431
+柴	si;
+偲	si;
+蒔	si;
+示	si;	2269
+時	si;	2430
+侍	si;
+試	si;	2145
+詩	si;	2144
+視	si;	2157
+施	si;	2442
+市	si;	2550
+屍	si;
+始	si;	2607
+匙	si;
+篒	sig;
+栻	sig;
+媳	sig;
+湜	sig;
+軾	sig;
+熄	sig;
+寔	sig;
+息	sig;
+蝕	sig;
+食	sig;	2022
+殖	sig;
+植	sig;	2392
+拭	sig;
+飾	sig;
+埴	sig;
+識	sig;	2127
+式	sig;	2534
+喰	sig;
+駪	sin;
+頣	sin;
+藎	sin;
+莘	sin;
+脤	sin;
+汛	sin;
+姺	sin;
+囟	sin;
+侁	sin;
+贐	sin;
+蜃	sin;
+燼	sin;
+晨	sin;
+愼	sin;
+宸	sin;
+哂	sin;
+呻	sin;
+噺	sin;
+矧	sin;
+辰	sin;
+迅	sin;
+訊	sin;
+腎	sin;
+辛	sin;	2098
+身	sin;	2102
+薪	sin;
+臣	sin;	2200
+紳	sin;
+神	sin;	2266
+申	sin;	2303
+新	sin;	2444
+娠	sin;
+信	sin;	2764
+伸	sin;
+飋	sil;
+蟋	sil;
+實	sil;	2576
+悉	sil;
+室	sil;	2585
+失	sil;	2616
+鱏	sim;
+葚	sim;
+燖	sim;
+梣	sim;
+諶	sim;
+鐔	sim;
+瀋	sim;
+潯	sim;
+沁	sim;
+沈	sim;
+甚	sim;
+尋	sim;
+芯	sim;
+深	sim;	2340
+心	sim;	2518
+審	sim;
+辻	sib;
+十	sib;	2701
+什	sib;
+拾	sib;	2470
+雙	ssax;
+氏	ssi;	2367
+迓	xa;
+笌	xa;
+砑	xa;
+疴	xa;
+娿	xa;
+啞	xa;
+丫	xa;
+鵞	xa;
+鵝	xa;
+鴉	xa;
+錏	xa;
+訝	xa;
+衙	xa;
+莪	xa;
+峩	xa;
+婀	xa;
+娥	xa;
+哦	xa;
+兒	xa;	2745
+亞	xa;
+餓	xa;
+雅	xa;
+蛾	xa;
+芽	xa;
+牙	xa;
+我	xa;	2484
+峨	xa;
+俄	xa;
+阿	xa;
+覨	xag;
+腭	xag;
+噩	xag;
+喔	xag;
+卾	xag;
+偓	xag;
+齶	xag;
+齷	xag;
+鶚	xag;
+鄂	xag;
+諤	xag;
+萼	xag;
+樂	xag;	2388
+愕	xag;
+惡	xag;	2496
+幄	xag;
+嶽	xag;
+堊	xag;
+咢	xag;
+鰐	xag;
+鍔	xag;
+顎	xag;
+岳	xag;
+渥	xag;
+握	xag;
+犴	xan;
+桉	xan;
+鴈	xan;
+鮟	xan;
+晏	xan;
+顔	xan;
+雁	xan;
+贋	xan;
+眼	xan;	2276
+岸	xan;
+鞍	xan;
+案	xan;	2393
+按	xan;
+安	xan;	2592
+鴶	xal;
+頞	xal;
+穵	xal;
+揠	xal;
+嘎	xal;
+閼	xal;
+遏	xal;
+軋	xal;
+訐	xal;
+戞	xal;
+謁	xal;
+斡	xal;
+馣	xam;
+蓭	xam;
+葊	xam;
+腤	xam;
+晻	xam;
+媕	xam;
+啽	xam;
+唵	xam;
+嵓	xam;
+黯	xam;
+頷	xam;
+諳	xam;
+菴	xam;
+巖	xam;
+岩	xam;
+癌	xam;
+闇	xam;
+暗	xam;	2423
+庵	xam;
+狎	xab;
+壓	xab;
+鴨	xab;
+押	xab;
+盎	xax;
+坱	xax;
+卬	xax;
+昻	xax;
+鴦	xax;
+鞅	xax;
+秧	xax;
+泱	xax;
+殃	xax;
+怏	xax;
+仰	xax;	2781
+央	xax;	2617
+騃	xai;
+薆	xai;
+獃	xai;
+漄	xai;
+捱	xai;
+娭	xai;
+噯	xai;
+唉	xai;
+僾	xai;
+厓	xai;
+靉	xai;
+靄	xai;
+隘	xai;
+藹	xai;
+艾	xai;
+礙	xai;
+磑	xai;
+瞹	xai;
+睚	xai;
+皚	xai;
+欸	xai;
+曖	xai;
+崕	xai;
+埃	xai;
+啀	xai;
+碍	xai;
+涯	xai;
+崖	xai;
+挨	xai;
+愛	xai;	2492
+哀	xai;	2661
+搤	xaig;
+戹	xaig;
+呝	xaig;
+阨	xaig;
+腋	xaig;
+縊	xaig;
+掖	xaig;
+扼	xaig;
+厄	xaig;
+額	xaig;
+液	xaig;
+鷪	xaix;
+罃	xaix;
+嫈	xaix;
+鸚	xaix;
+鶯	xaix;
+罌	xaix;
+櫻	xaix;
+嚶	xaix;
+倻	xya;
+椰	xya;
+揶	xya;
+野	xya;	2068
+耶	xya;
+爺	xya;
+夜	xya;	2622
+冶	xya;
+也	xya;
+埜	xya;
+惹	xya;
+若	xya;	2185
+篛	xyag;
+禴	xyag;
+爚	xyag;
+龠	xyag;
+鶸	xyag;
+鑰	xyag;
+藥	xyag;	2173
+蒻	xyag;
+葯	xyag;
+籥	xyag;
+躍	xyag;
+約	xyag;	2235
+弱	xyag;	2530
+若	xyag;	2185
+鰯	xyag;
+颺	xyax;
+鑲	xyax;
+輰	xyax;
+蘘	xyax;
+眻	xyax;
+烊	xyax;
+瀼	xyax;
+敭	xyax;
+徉	xyax;
+驤	xyax;
+釀	xyax;
+讓	xyax;	2123
+襄	xyax;
+穰	xyax;
+禳	xyax;
+癢	xyax;
+瘍	xyax;
+痒	xyax;
+煬	xyax;
+瀁	xyax;
+漾	xyax;
+樣	xyax;
+暘	xyax;
+攘	xyax;
+恙	xyax;
+孃	xyax;
+壤	xyax;
+佯	xyax;
+養	xyax;	2019
+陽	xyax;	2047
+羊	xyax;	2218
+洋	xyax;	2351
+楊	xyax;
+揚	xyax;	2462
+瘀	xe;
+敔	xe;
+齬	xe;
+馭	xe;
+飫	xe;
+淤	xe;
+圉	xe;
+圄	xe;
+語	xe;	2141
+御	xe;
+魚	xe;	2010
+禦	xe;
+漁	xe;	2332
+於	xe;
+繶	xeg;
+檍	xeg;
+抑	xeg;
+臆	xeg;
+憶	xeg;	2487
+億	xeg;	2753
+鼹	xen;
+鼴	xen;
+鄢	xen;
+讞	xen;
+匽	xen;
+傿	xen;
+焉	xen;
+嫣	xen;
+偃	xen;
+彦	xen;
+諺	xen;
+言	xen;	2152
+堰	xen;
+臬	xel;
+孼	xel;
+蘖	xel;
+醃	xem;
+曮	xem;
+崦	xem;
+閹	xem;
+罨	xem;
+淹	xem;
+广	xem;
+嚴	xem;	2652
+儼	xem;
+俺	xem;
+掩	xem;
+奄	xem;
+鄴	xeb;
+嶫	xeb;
+嶪	xeb;
+業	xeb;	2391
+曀	xei;
+恚	xei;
+円	xein;
+轝	xye;
+艅	xye;
+礖	xye;
+璵	xye;
+餘	xye;	2018
+茹	xye;
+與	xye;	2196
+舁	xye;
+歟	xye;
+輿	xye;
+余	xye;
+予	xye;
+如	xye;	2612
+汝	xye;
+女	xye;	2614
+淢	xyeg;
+嶧	xyeg;
+驛	xyeg;
+閾	xyeg;
+譯	xyeg;
+繹	xyeg;
+懌	xyeg;
+役	xyeg;
+亦	xyeg;
+逆	xyeg;	2091
+疫	xyeg;
+域	xyeg;
+易	xyeg;	2436
+鷰	xyen;
+輭	xyen;
+蜵	xyen;
+縯	xyen;
+緣	xyen;
+硏	xyen;	2270
+渷	xyen;
+沇	xyen;
+曣	xyen;
+挻	xyen;
+嬿	xyen;
+姸	xyen;
+堧	xyen;
+埏	xyen;
+囦	xyen;
+兗	xyen;
+讌	xyen;
+蠕	xyen;
+莚	xyen;
+臙	xyen;
+筵	xyen;
+烟	xyen;
+涎	xyen;
+涓	xyen;
+衍	xyen;
+櫞	xyen;
+椽	xyen;
+掾	xyen;
+捐	xyen;
+悁	xyen;
+娟	xyen;
+嚥	xyen;
+淵	xyen;
+燃	xyen;
+軟	xyen;
+鳶	xyen;
+然	xyen;	2326
+硯	xyen;
+鉛	xyen;
+燕	xyen;
+煙	xyen;	2325
+演	xyen;
+沿	xyen;
+延	xyen;
+宴	xyen;
+閱	xyel;
+說	xyel;	2138
+悅	xyel;
+涅	xyel;
+噎	xyel;
+熱	xyel;	2324
+咽	xyel;
+髥	xyem;
+饜	xyem;
+釅	xyem;
+琰	xyem;
+焰	xyem;
+灩	xyem;
+灎	xyem;
+檿	xyem;
+檶	xyem;
+扊	xyem;
+懕	xyem;
+黶	xyem;
+鹽	xyem;
+魘	xyem;
+閻	xyem;
+苒	xyem;
+冉	xyem;
+染	xyem;
+塩	xyem;
+艶	xyem;
+炎	xyem;
+厭	xyem;
+爗	xyeb;
+熀	xyeb;
+曅	xyeb;
+燁	xyeb;
+靨	xyeb;
+曄	xyeb;
+葉	xyeb;	2176
+韺	xyex;
+縈	xyex;
+碤	xyex;
+癭	xyex;
+煐	xyex;
+瀯	xyex;
+濴	xyex;
+濚	xyex;
+渶	xyex;
+浧	xyex;
+嬴	xyex;
+嶸	xyex;
+鍈	xyex;
+霙	xyex;
+郢	xyex;
+贏	xyex;
+蠑	xyex;
+纓	xyex;
+瓔	xyex;
+瑩	xyex;
+獰	xyex;
+瀛	xyex;
+潁	xyex;
+榮	xyex;	2389
+楹	xyex;
+暎	xyex;
+塋	xyex;
+營	xyex;
+咏	xyex;
+迎	xyex;	2096
+詠	xyex;
+英	xyex;	2183
+穎	xyex;
+盈	xyex;
+瑛	xyex;
+泳	xyex;
+永	xyex;	2363
+映	xyex;
+影	xyex;
+嬰	xyex;
+鷖	xyei;
+銳	xyei;
+蜺	xyei;
+薉	xyei;
+芮	xyei;
+繄	xyei;
+瞖	xyei;
+獩	xyei;
+濊	xyei;
+汭	xyei;
+枘	xyei;
+掜	xyei;
+拽	xyei;
+嫛	xyei;
+麑	xyei;
+鯢	xyei;
+霓	xyei;
+譽	xyei;
+裔	xyei;
+蚋	xyei;
+藝	xyei;	2174
+蕋	xyei;
+蘂	xyei;
+翳	xyei;
+穢	xyei;
+睿	xyei;
+睨	xyei;
+猊	xyei;
+囈	xyei;
+倪	xyei;
+豫	xyei;
+乂	xyei;
+預	xyei;
+蕊	xyei;
+詣	xyei;
+苅	xyei;
+刈	xyei;
+曳	xyei;
+叡	xyei;
+鼯	xo;
+驁	xo;
+隩	xo;
+鏊	xo;
+迕	xo;
+迃	xo;
+謷	xo;
+聱	xo;
+筽	xo;
+窹	xo;
+獒	xo;
+汙	xo;
+旿	xo;
+捂	xo;
+慠	xo;
+嫯	xo;
+媪	xo;
+娛	xo;
+圬	xo;
+噁	xo;
+吳	xo;
+仵	xo;
+俉	xo;
+鼇	xo;
+鰲	xo;
+鏖	xo;
+遨	xo;
+蜈	xo;
+茣	xo;
+熬	xo;
+澳	xo;
+晤	xo;
+敖	xo;
+懊	xo;
+惡	xo;	2496
+忤	xo;
+寤	xo;
+奧	xo;
+墺	xo;
+塢	xo;
+嗷	xo;
+嗚	xo;
+唔	xo;
+傲	xo;
+俣	xo;
+誤	xo;	2139
+梧	xo;
+悟	xo;	2502
+吾	xo;
+午	xo;	2699
+伍	xo;
+五	xo;	2794
+襖	xo;
+汚	xo;
+烏	xo;
+鈺	xog;
+沃	xog;
+獄	xog;
+玉	xog;	2314
+屋	xog;	2561
+韞	xon;
+醞	xon;
+轀	xon;
+縕	xon;
+瑥	xon;
+熅	xon;
+溫	xon;	2334
+氳	xon;
+昷	xon;
+鰮	xon;
+饂	xon;
+蘊	xon;
+薀	xon;
+穩	xon;
+瘟	xon;
+慍	xon;
+媼	xon;
+嗢	xol;
+膃	xol;
+兀	xol;
+饔	xox;
+顒	xox;
+雝	xox;
+邕	xox;
+罋	xox;
+癕	xox;
+滃	xox;
+喁	xox;
+雍	xox;
+蓊	xox;
+禺	xox;
+癰	xox;
+甕	xox;
+瓮	xox;
+廱	xox;
+壅	xox;
+擁	xox;
+翁	xox;
+窊	xoa;
+猧	xoa;
+洼	xoa;
+枙	xoa;
+婐	xoa;
+譌	xoa;
+訛	xoa;
+蝸	xoa;
+萵	xoa;
+窩	xoa;
+囮	xoa;
+哇	xoa;
+窪	xoa;
+瓦	xoa;
+蛙	xoa;
+臥	xoa;
+渦	xoa;
+脘	xoan;
+盌	xoan;
+琬	xoan;
+琓	xoan;
+涴	xoan;
+梡	xoan;
+惋	xoan;
+忨	xoan;
+岏	xoan;
+妧	xoan;
+垸	xoan;
+刓	xoan;
+阮	xoan;
+豌	xoan;
+浣	xoan;
+婉	xoan;
+腕	xoan;
+碗	xoan;
+椀	xoan;
+頑	xoan;
+翫	xoan;
+玩	xoan;
+莞	xoan;
+緩	xoan;
+完	xoan;	2591
+宛	xoan;
+曰	xoal;
+迬	xoax;
+尫	xoax;
+瀇	xoax;
+汪	xoax;
+枉	xoax;
+王	xoax;	2313
+旺	xoax;
+往	xoax;	2526
+媧	xoai;
+矮	xoai;
+歪	xoai;
+倭	xoai;
+娃	xoai;
+聵	xoi;
+磈	xoi;
+碨	xoi;
+煨	xoi;
+渨	xoi;
+嵔	xoi;
+崴	xoi;
+偎	xoi;
+隗	xoi;
+猥	xoi;
+巍	xoi;
+嵬	xoi;
+外	xoi;	2624
+畏	xoi;
+繇	xyo;
+窅	xyo;
+穾	xyo;
+祅	xyo;
+嬈	xyo;
+墝	xyo;
+坳	xyo;
+喓	xyo;
+偠	xyo;
+瑤	xyo;
+遙	xyo;
+堯	xyo;
+鷂	xyo;
+饒	xyo;
+邀	xyo;
+遶	xyo;
+謠	xyo;
+蟯	xyo;
+蕘	xyo;
+繞	xyo;
+窈	xyo;
+燿	xyo;
+澆	xyo;
+殀	xyo;
+橈	xyo;
+樂	xyo;	2388
+撓	xyo;
+搖	xyo;
+拗	xyo;
+徼	xyo;
+徭	xyo;
+幺	xyo;
+嶢	xyo;
+寥	xyo;
+姚	xyo;
+夭	xyo;
+僥	xyo;
+要	xyo;	2159
+耀	xyo;
+窯	xyo;
+曜	xyo;
+妖	xyo;
+擾	xyo;
+腰	xyo;
+凹	xyo;
+褥	xyog;
+蓐	xyog;
+縟	xyog;
+溽	xyog;
+浴	xyog;	2345
+欲	xyog;	2383
+慾	xyog;
+辱	xyog;
+硧	xyox;
+槦	xyox;
+憃	xyox;
+嵱	xyox;
+宂	xyox;
+墉	xyox;
+傛	xyox;
+鏞	xyox;
+瑢	xyox;
+埇	xyox;
+鎔	xyox;
+踴	xyox;
+蛹	xyox;
+舂	xyox;
+聳	xyox;
+甬	xyox;
+榕	xyox;
+慵	xyox;
+慂	xyox;
+俑	xyox;
+踊	xyox;
+蓉	xyox;
+用	xyox;	2306
+熔	xyox;
+溶	xyox;
+庸	xyox;
+容	xyox;	2582
+傭	xyox;
+涌	xyox;
+湧	xyox;
+勇	xyox;	2713
+茸	xyox;
+冗	xyox;
+麀	xu;
+雩	xu;
+鍝	xu;
+釪	xu;
+踽	xu;
+謣	xu;
+耰	xu;
+耦	xu;
+竽	xu;
+禑	xu;
+盱	xu;
+瑀	xu;
+玗	xu;
+杅	xu;
+旴	xu;
+庽	xu;
+堣	xu;
+偊	xu;
+俁	xu;
+亴	xu;
+亏	xu;
+齲	xu;
+麌	xu;
+藕	xu;
+紆	xu;
+禹	xu;
+盂	xu;
+疣	xu;
+嵎	xu;
+吁	xu;
+于	xu;
+郵	xu;
+祐	xu;
+憂	xu;	2488
+友	xu;	2685
+優	xu;
+佑	xu;
+尤	xu;
+又	xu;	2687
+隅	xu;
+遇	xu;	2085
+寓	xu;
+偶	xu;
+虞	xu;
+愚	xu;
+牛	xu;	2319
+雨	xu;	2043
+迂	xu;
+羽	xu;
+宇	xu;	2594
+右	xu;	2676
+芋	xu;
+頊	xug;
+稶	xug;
+栯	xug;
+勖	xug;
+煜	xug;
+彧	xug;
+昱	xug;
+燠	xug;
+郁	xug;
+旭	xug;
+霣	xun;
+篔	xun;
+熉	xun;
+澐	xun;
+沄	xun;
+橒	xun;
+蕓	xun;
+惲	xun;
+韵	xun;
+隕	xun;
+耘	xun;
+紜	xun;
+殞	xun;
+暈	xun;
+芸	xun;
+雲	xun;	2041
+運	xun;	2083
+云	xun;
+韻	xun;
+亐	xul;
+鬱	xul;
+蔚	xul;
+雄	xux;	2046
+熊	xux;
+黿	xuen;
+鵷	xuen;
+騵	xuen;
+謜	xuen;
+綩	xuen;
+瑗	xuen;
+猨	xuen;
+洹	xuen;
+沅	xuen;
+楥	xuen;
+杬	xuen;
+嫄	xuen;
+阮	xuen;
+鋺	xuen;
+轅	xuen;
+袁	xuen;
+蜿	xuen;
+芫	xuen;
+爰	xuen;
+湲	xuen;
+愿	xuen;
+寃	xuen;
+圜	xuen;
+圓	xuen;	2644
+冤	xuen;
+媛	xuen;
+源	xuen;
+原	xuen;	2690
+元	xuen;	2752
+願	xuen;	2025
+垣	xuen;
+鴛	xuen;
+遠	xuen;	2079
+薗	xuen;
+苑	xuen;
+猿	xuen;
+援	xuen;
+怨	xuen;	2505
+園	xuen;	2645
+院	xuen;
+員	xuen;
+粵	xuel;
+刖	xuel;
+鉞	xuel;
+粤	xuel;
+月	xuel;	2415
+越	xuel;
+骪	xui;
+韡	xui;
+韙	xui;
+闈	xui;
+諉	xui;
+褘	xui;
+蔿	xui;
+葳	xui;
+瑋	xui;
+煒	xui;
+暐	xui;
+餧	xui;
+魏	xui;
+韋	xui;
+逶	xui;
+衞	xui;
+蝟	xui;
+痿	xui;
+爲	xui;
+熨	xui;
+渭	xui;
+幃	xui;
+圍	xui;
+喟	xui;
+僞	xui;
+危	xui;	2693
+衛	xui;
+違	xui;
+謂	xui;
+萎	xui;
+胃	xui;
+緯	xui;
+慰	xui;
+尉	xui;
+威	xui;	2605
+委	xui;
+偉	xui;	2759
+位	xui;	2777
+葦	xui;
+龥	xyu;
+逌	xyu;
+讉	xyu;
+褕	xyu;
+蝤	xyu;
+蚴	xyu;
+蕤	xyu;
+緌	xyu;
+籲	xyu;
+窳	xyu;
+窬	xyu;
+瘐	xyu;
+牖	xyu;
+洧	xyu;
+泑	xyu;
+斿	xyu;
+庾	xyu;
+壝	xyu;
+呦	xyu;
+冘	xyu;
+鼬	xyu;
+黝	xyu;
+鞣	xyu;
+鍮	xyu;
+釉	xyu;
+逾	xyu;
+踰	xyu;
+蹂	xyu;
+諛	xyu;
+蚰	xyu;
+蕕	xyu;
+萸	xyu;
+莠	xyu;
+臾	xyu;
+腴	xyu;
+糅	xyu;
+瘉	xyu;
+瑜	xyu;
+游	xyu;	2084
+楡	xyu;
+攸	xyu;
+揄	xyu;
+揉	xyu;
+帷	xyu;
+孺	xyu;
+囿	xyu;
+喩	xyu;
+兪	xyu;
+侑	xyu;
+幼	xyu;	2541
+遊	xyu;
+誘	xyu;
+裕	xyu;
+由	xyu;	2304
+猷	xyu;
+猶	xyu;
+柚	xyu;
+有	xyu;	2414
+悠	xyu;
+幽	xyu;
+宥	xyu;
+唯	xyu;
+諭	xyu;
+癒	xyu;
+油	xyu;	2359
+愈	xyu;
+愉	xyu;
+鮪	xyu;
+濡	xyu;
+乳	xyu;
+楢	xyu;
+酉	xyu;
+柔	xyu;	2397
+儒	xyu;
+遺	xyu;	2076
+維	xyu;
+惟	xyu;
+堉	xyug;
+儥	xyug;
+毓	xyug;
+肉	xyug;	2205
+育	xyug;	2204
+鋆	xyun;
+鈗	xyun;
+玧	xyun;
+奫	xyun;
+昀	xyun;
+贇	xyun;
+尹	xyun;
+潤	xyun;
+閏	xyun;
+胤	xyun;
+允	xyun;
+矞	xyul;
+潏	xyul;
+聿	xyul;
+狨	xyux;
+瀜	xyux;
+絨	xyux;
+融	xyux;
+戎	xyux;
+齗	xwn;
+鄞	xwn;
+訔	xwn;
+癮	xwn;
+珢	xwn;
+狺	xwn;
+溵	xwn;
+檼	xwn;
+垽	xwn;
+圁	xwn;
+嚚	xwn;
+嗯	xwn;
+誾	xwn;
+隱	xwn;
+殷	xwn;
+憖	xwn;
+慇	xwn;
+垠	xwn;
+听	xwn;
+銀	xwn;	2064
+恩	xwn;	2503
+鳦	xwl;
+乙	xwl;
+愔	xwm;
+廕	xwm;
+喑	xwm;
+霪	xwm;
+飮	xwm;
+崟	xwm;
+吟	xwm;
+音	xwm;	2032
+陰	xwm;	2049
+蔭	xwm;
+淫	xwm;
+浥	xwb;
+挹	xwb;
+悒	xwb;
+邑	xwb;
+揖	xwb;
+泣	xwb;	2354
+膺	xwx;
+應	xwx;	2486
+鷹	xwx;
+凝	xwx;
+螘	xwi;
+薏	xwi;
+漪	xwi;
+劓	xwi;
+凒	xwi;
+儗	xwi;
+饐	xwi;
+醫	xwi;	2071
+艤	xwi;
+礒	xwi;
+矣	xwi;
+猗	xwi;
+欹	xwi;
+懿	xwi;
+嶷	xwi;
+倚	xwi;
+議	xwi;	2126
+誼	xwi;
+蟻	xwi;
+義	xwi;	2216
+疑	xwi;
+擬	xwi;
+宜	xwi;
+儀	xwi;
+毅	xwi;
+衣	xwi;	2163
+椅	xwi;
+意	xwi;	2493
+依	xwi;	2768
+迤	xi;
+訑	xi;
+荑	xi;
+珆	xi;
+栮	xi;
+彛	xi;
+尔	xi;
+坨	xi;
+咿	xi;
+隶	xi;
+邇	xi;
+貳	xi;
+貽	xi;
+苡	xi;
+肄	xi;
+痍	xi;
+珥	xi;
+洟	xi;
+怡	xi;
+彝	xi;
+已	xi;	2551
+姨	xi;
+二	xi;	2795
+弛	xi;
+詑	xi;
+耳	xi;	2210
+而	xi;
+爾	xi;
+餌	xi;
+移	xi;	2257
+異	xi;	2297
+易	xi;	2436
+夷	xi;
+伊	xi;
+以	xi;	2782
+飴	xi;
+熤	xig;
+瀷	xig;
+鷁	xig;
+謚	xig;
+翊	xig;
+弋	xig;
+翼	xig;
+翌	xig;
+益	xig;	2286
+靷	xin;
+裀	xin;
+芢	xin;
+絪	xin;
+禋	xin;
+洇	xin;
+婣	xin;
+夤	xin;
+蚓	xin;
+茵	xin;
+湮	xin;
+氤	xin;
+扨	xin;
+堙	xin;
+仞	xin;
+籾	xin;
+認	xin;	2142
+忍	xin;	2516
+寅	xin;
+靭	xin;
+刃	xin;
+仁	xin;	2788
+人	xin;	2789
+引	xin;	2532
+姻	xin;
+因	xin;	2649
+咽	xin;
+印	xin;	2694
+馹	xil;
+泆	xil;
+佾	xil;
+鎰	xil;
+軼	xil;
+壹	xil;
+佚	xil;
+日	xil;	2439
+逸	xil;
+溢	xil;
+一	xil;	2808
+飪	xim;
+銋	xim;
+絍	xim;
+媵	xim;
+衽	xim;
+恁	xim;
+姙	xim;
+稔	xim;
+妊	xim;
+任	xim;
+賃	xim;
+壬	xim;
+荏	xim;
+卄	xib;
+入	xib;	2744
+廿	xib;
+芿	xix;
+孕	xix;
+剩	xix;
+仍	xix;
+鶿	ja;
+頿	ja;
+鎡	ja;
+訾	ja;
+虸	ja;
+莿	ja;
+茈	ja;
+胾	ja;
+耔	ja;
+玆	ja;
+牸	ja;
+孶	ja;
+嬨	ja;
+泚	ja;
+孖	ja;
+鷓	ja;
+鮓	ja;
+赭	ja;
+貲	ja;
+觜	ja;
+藉	ja;
+蔗	ja;
+茲	ja;
+粢	ja;
+眦	ja;
+眥	ja;
+疵	ja;
+瓷	ja;
+炙	ja;
+恣	ja;
+咨	ja;
+呰	ja;
+髭	ja;
+柘	ja;
+者	ja;	2212
+煮	ja;
+自	ja;	2199
+磁	ja;
+滋	ja;
+慈	ja;	2490
+字	ja;	2601
+雌	ja;
+資	ja;
+諮	ja;
+紫	ja;
+孜	ja;
+子	ja;	2602
+姿	ja;
+姉	ja;
+刺	ja;
+仔	ja;
+茨	ja;
+碏	jag;
+犳	jag;
+焯	jag;
+汋	jag;
+斱	jag;
+怍	jag;
+岝	jag;
+鵲	jag;
+芍	jag;
+綽	jag;
+炸	jag;
+柞	jag;
+斫	jag;
+嚼	jag;
+雀	jag;
+酌	jag;
+爵	jag;
+灼	jag;
+勺	jag;
+昨	jag;	2432
+作	jag;	2772
+驏	jan;
+剗	jan;
+盞	jan;
+潺	jan;
+殘	jan;
+棧	jan;
+戔	jan;
+孱	jan;
+涔	jam;
+蠶	jam;
+簪	jam;
+箴	jam;
+濳	jam;
+潛	jam;
+岑	jam;
+潜	jam;
+暫	jam;
+磼	jab;
+眨	jab;
+卡	jab;
+雜	jab;
+襍	jab;
+囃	jab;
+麞	jax;
+餦	jax;
+醬	jax;
+鄣	jax;
+賬	jax;
+蔣	jax;
+羘	jax;
+糚	jax;
+獐	jax;
+牂	jax;
+漳	jax;
+欌	jax;
+戕	jax;
+廧	jax;
+嬙	jax;
+傽	jax;
+暲	jax;
+鏘	jax;
+贓	jax;
+裝	jax;
+藏	jax;
+薔	jax;
+萇	jax;
+莊	jax;
+臧	jax;
+臟	jax;
+瘴	jax;
+璋	jax;
+牆	jax;
+漿	jax;
+檣	jax;
+嶂	jax;
+將	jax;	2571
+妝	jax;
+奬	jax;
+奘	jax;
+壯	jax;	2628
+墻	jax;
+仗	jax;
+長	jax;	2060
+腸	jax;
+張	jax;
+帳	jax;
+装	jax;
+葬	jax;
+杖	jax;
+場	jax;	2631
+丈	jax;
+障	jax;
+粧	jax;
+章	jax;	2249
+樟	jax;
+掌	jax;
+庄	jax;
+匠	jax;
+灾	jai;
+渽	jai;
+榟	jai;
+扗	jai;
+崽	jai;
+夈	jai;
+齎	jai;
+纔	jai;
+縡	jai;
+齋	jai;
+滓	jai;
+財	jai;	2119
+材	jai;	2404
+在	jai;	2640
+載	jai;
+裁	jai;
+災	jai;
+栽	jai;	2394
+才	jai;	2479
+宰	jai;
+哉	jai;
+再	jai;	2733
+梓	jai;
+琤	jaix;
+猙	jaix;
+錚	jaix;
+諍	jaix;
+箏	jaix;
+爭	jaix;	2322
+崢	jaix;
+鎗	jaix;
+陼	je;
+褚	je;
+袛	je;
+菹	je;
+罝	je;
+氐	je;
+宁	je;
+齟	je;
+雎	je;
+躇	je;
+豬	je;
+詆	je;
+詛	je;
+觝	je;
+蛆	je;
+苴	je;
+羝	je;
+紵	je;
+疽	je;
+牴	je;
+潴	je;
+沮	je;
+楮	je;
+柢	je;
+杼	je;
+咀	je;
+佇	je;
+儲	je;
+箸	je;
+這	je;
+邸	je;
+抵	je;
+底	je;
+低	je;	2776
+貯	je;	2115
+著	je;	2175
+苧	je;
+猪	je;
+瀦	je;
+樗	je;
+狙	je;
+岨	je;
+藷	je;
+渚	je;
+杵	je;
+姐	je;
+馰	jeg;
+菂	jeg;
+翟	jeg;
+樀	jeg;
+逖	jeg;
+迹	jeg;
+迪	jeg;
+謫	jeg;
+覿	jeg;
+糴	jeg;
+磧	jeg;
+狄	jeg;
+勣	jeg;
+鏑	jeg;
+適	jeg;	2078
+笛	jeg;
+的	jeg;	2290
+滴	jeg;
+敵	jeg;	2448
+摘	jeg;
+吊	jeg;
+嫡	jeg;
+賊	jeg;
+蹟	jeg;
+跡	jeg;
+赤	jeg;	2107
+績	jeg;
+籍	jeg;
+積	jeg;
+寂	jeg;
+荻	jeg;
+鸇	jen;
+鱣	jen;
+鬋	jen;
+餰	jen;
+飦	jen;
+顚	jen;
+顓	jen;
+靛	jen;
+錪	jen;
+鋑	jen;
+鄽	jen;
+邅	jen;
+輇	jen;
+荃	jen;
+膞	jen;
+籛	jen;
+瑱	jen;
+琠	jen;
+澶	jen;
+湔	jen;
+戩	jen;
+屇	jen;
+嫥	jen;
+塼	jen;
+塡	jen;
+佺	jen;
+槇	jen;
+餞	jen;
+顫	jen;
+靦	jen;
+鐫	jen;
+錢	jen;	2063
+銓	jen;
+鈿	jen;
+轉	jen;
+輾	jen;
+躔	jen;
+腆	jen;
+翦	jen;
+羶	jen;
+篆	jen;
+箋	jen;
+筌	jen;
+磚	jen;
+癲	jen;
+癜	jen;
+痊	jen;
+甎	jen;
+牋	jen;
+氈	jen;
+旃	jen;
+畋	jen;
+戰	jen;	2483
+悛	jen;
+廛	jen;
+巓	jen;
+專	jen;
+奠	jen;
+囀	jen;
+吮	jen;
+甸	jen;
+剪	jen;
+傳	jen;	2756
+畠	jen;
+畑	jen;
+電	jen;	2040
+田	jen;	2305
+澱	jen;
+殿	jen;
+纏	jen;
+展	jen;	2560
+典	jen;	2735
+佃	jen;
+揃	jen;
+全	jen;	2742
+前	jen;	2718
+詮	jen;
+箭	jen;
+煎	jen;
+栴	jen;
+栓	jen;
+癤	jel;
+岊	jel;
+竊	jel;
+浙	jel;
+晢	jel;
+截	jel;
+絶	jel;
+節	jel;	2238
+窃	jel;
+折	jel;
+切	jel;
+颭	jem;
+蛅	jem;
+蔪	jem;
+玷	jem;
+墊	jem;
+佔	jem;
+點	jem;	2003
+黏	jem;
+霑	jem;
+覘	jem;
+簟	jem;
+笘	jem;
+岾	jem;
+粘	jem;
+苫	jem;
+点	jem;
+店	jem;	2539
+漸	jem;
+占	jem;
+鮎	jem;
+蹀	jeb;
+跕	jeb;
+蜨	jeb;
+鰈	jeb;
+楪	jeb;
+椄	jeb;
+蝶	jeb;
+接	jeb;	2464
+摺	jeb;
+靚	jex;
+鋥	jex;
+鋌	jex;
+諪	jex;
+莛	jex;
+綎	jex;
+筳	jex;
+珽	jex;
+玎	jex;
+炡	jex;
+湞	jex;
+檉	jex;
+棖	jex;
+桯	jex;
+晸	jex;
+怔	jex;
+婷	jex;
+婧	jex;
+姃	jex;
+佂	jex;
+珵	jex;
+楨	jex;
+靜	jex;	2037
+霆	jex;
+酲	jex;
+酊	jex;
+遉	jex;
+穽	jex;
+睛	jex;
+疔	jex;
+渟	jex;
+淨	jex;	2341
+梃	jex;
+旌	jex;
+掟	jex;
+幀	jex;
+叮	jex;
+淀	jex;
+靖	jex;
+柾	jex;
+瀞	jex;
+灯	jex;
+鼎	jex;
+釘	jex;
+鄭	jex;
+訂	jex;
+艇	jex;
+程	jex;
+禎	jex;
+碇	jex;
+汀	jex;
+挺	jex;
+廷	jex;
+庭	jex;	2537
+定	jex;	2587
+呈	jex;
+貞	jex;
+偵	jex;
+停	jex;	2758
+亭	jex;
+頂	jex;	2031
+町	jex;
+丁	jex;
+精	jex;	2236
+正	jex;	2379
+整	jex;
+政	jex;	2457
+征	jex;
+錠	jex;
+情	jex;	2499
+鉦	jex;
+証	jex;
+晶	jex;
+井	jex;	2793
+鯷	jei;
+鮧	jei;
+隄	jei;
+蹏	jei;
+踶	jei;
+緹	jei;
+稊	jei;
+瑅	jei;
+猘	jei;
+娣	jei;
+鍗	jei;
+禔	jei;
+齊	jei;
+韲	jei;
+霽	jei;
+躋	jei;
+薺	jei;
+臍	jei;
+睇	jei;
+濟	jei;
+擠	jei;
+啼	jei;
+劑	jei;
+儕	jei;
+蹄	jei;
+梯	jei;
+提	jei;
+悌	jei;
+弟	jei;	2531
+帝	jei;
+堤	jei;
+題	jei;	2026
+醍	jei;
+第	jei;	2243
+製	jei;
+制	jei;	2161
+除	jei;	2050
+諸	jei;	2131
+際	jei;
+祭	jei;	2265
+鼂	jo;
+鋽	jo;
+鈟	jo;
+臊	jo;
+絩	jo;
+糙	jo;
+祧	jo;
+皁	jo;
+璪	jo;
+琱	jo;
+殂	jo;
+嬥	jo;
+嘈	jo;
+厝	jo;
+刁	jo;
+傮	jo;
+鵰	jo;
+曺	jo;
+雕	jo;
+躁	jo;
+趙	jo;
+譟	jo;
+誂	jo;
+蜩	jo;
+艚	jo;
+胙	jo;
+絛	jo;
+糶	jo;
+笊	jo;
+竈	jo;
+窕	jo;
+稠	jo;
+祚	jo;
+澡	jo;
+棗	jo;
+條	jo;
+晁	jo;
+找	jo;
+懆	jo;
+徂	jo;
+噪	jo;
+嘲	jo;
+俎	jo;
+佻	jo;
+肇	jo;
+蚤	jo;
+釣	jo;
+爪	jo;
+蔦	jo;
+鳥	jo;	2008
+銚	jo;
+調	jo;	2135
+眺	jo;
+潮	jo;
+朝	jo;	2411
+彫	jo;
+弔	jo;
+凋	jo;
+兆	jo;	2749
+鯛	jo;
+造	jo;	2088
+遭	jo;
+走	jo;	2106
+藻	jo;
+糟	jo;
+燥	jo;
+漕	jo;
+槽	jo;
+曹	jo;
+早	jo;	2438
+操	jo;
+阻	jo;
+組	jo;
+粗	jo;
+租	jo;
+祖	jo;	2268
+措	jo;
+詔	jo;
+照	jo;
+助	jo;	2714
+繰	jo;
+瘯	jog;
+鏃	jog;
+簇	jog;
+族	jog;	2440
+足	jog;	2104
+拵	jon;
+尊	jon;	2570
+存	jon;	2600
+猝	jol;
+卒	jol;	2697
+拙	jol;
+瘇	jox;
+瑽	jox;
+慒	jox;
+悰	jox;
+倧	jox;
+琮	jox;
+伀	jox;
+踪	jox;
+蹤	jox;
+踵	jox;
+螽	jox;
+縱	jox;
+粽	jox;
+淙	jox;
+樅	jox;
+椶	jox;
+棕	jox;
+慫	jox;
+從	jox;	2520
+柊	jox;
+綜	jox;
+鐘	jox;
+鍾	jox;	2062
+終	jox;	2229
+宗	jox;	2590
+腫	jox;
+種	jox;	2255
+髽	joa;
+莝	joa;
+痤	joa;
+剉	joa;
+挫	joa;
+座	joa;
+坐	joa;
+左	joa;	2554
+佐	joa;
+罪	joi;	2219
+鼄	ju;
+霔	ju;
+霌	ju;
+鉒	ju;
+輈	ju;
+趎	ju;
+賙	ju;
+詋	ju;
+裯	ju;
+蛀	ju;
+腠	ju;
+籒	ju;
+硃	ju;
+炷	ju;
+澍	ju;
+拄	ju;
+幬	ju;
+尌	ju;
+姝	ju;
+侜	ju;
+丟	ju;
+鑄	ju;
+遒	ju;
+輳	ju;
+躊	ju;
+誅	ju;
+蛛	ju;
+蔟	ju;
+胄	ju;
+綢	ju;
+紂	ju;
+籌	ju;
+疇	ju;
+晝	ju;	2428
+廚	ju;
+嗾	ju;
+儔	ju;
+做	ju;
+侏	ju;
+湊	ju;
+肘	ju;
+紬	ju;
+駐	ju;
+酎	ju;
+註	ju;
+注	ju;	2353
+柱	ju;
+宙	ju;	2588
+奏	ju;
+住	ju;	2775
+週	ju;
+舟	ju;
+洲	ju;
+州	ju;
+周	ju;
+呪	ju;
+酒	ju;	2072
+珠	ju;
+朱	ju;	2405
+主	ju;	2800
+株	ju;
+竹	jug;	2245
+粥	jug;
+鵔	jun;
+餕	jun;
+鐏	jun;
+踆	jun;
+綧	jun;
+焌	jun;
+撙	jun;
+寯	jun;
+埻	jun;
+茁	jun;
+罇	jun;
+畯	jun;
+晙	jun;
+埈	jun;
+雋	jun;
+逡	jun;
+蹲	jun;
+蠢	jun;
+皴	jun;
+濬	jun;
+浚	jun;
+惷	jun;
+墫	jun;
+儁	jun;
+鱒	jun;
+隼	jun;
+樽	jun;
+遵	jun;
+準	jun;
+准	jun;
+駿	jun;
+竣	jun;
+峻	jun;
+俊	jun;
+噂	jun;
+乼	jul;
+眾	jux;	2166
+仲	jux;
+中	jux;	2801
+重	jux;	2069
+衆	jux;
+卽	jwg;
+喞	jwg;
+即	jwg;
+騭	jwl;
+櫛	jwl;
+蕺	jwb;
+檝	jwb;
+楫	jwb;
+葺	jwb;
+汁	jwb;
+罾	jwx;
+矰	jwx;
+嶒	jwx;
+繒	jwx;
+增	jwx;	2630
+證	jwx;	2128
+烝	jwx;
+拯	jwx;
+贈	jwx;
+憎	jwx;
+曾	jwx;
+蒸	jwx;
+症	jwx;
+甑	jwx;
+軹	ji;
+芷	ji;
+篪	ji;
+秪	ji;
+泜	ji;
+榰	ji;
+扺	ji;
+墀	ji;
+坻	ji;
+鷙	ji;
+鮨	ji;
+阯	ji;
+遲	ji;
+躓	ji;
+踟	ji;
+趾	ji;
+贄	ji;
+舐	ji;
+祗	ji;
+痣	ji;
+沚	ji;
+枳	ji;
+摯	ji;
+址	ji;
+咫	ji;
+之	ji;
+砥	ji;
+漬	ji;
+蜘	ji;
+池	ji;
+智	ji;
+地	ji;	2639
+知	ji;	2274
+只	ji;
+芝	ji;
+識	ji;	2127
+持	ji;	2469
+誌	ji;
+至	ji;	2198
+脂	ji;
+肢	ji;
+紙	ji;	2232
+祉	ji;
+止	ji;	2380
+枝	ji;	2398
+旨	ji;
+支	ji;	2461
+指	ji;	2468
+志	ji;	2515
+稷	jig;
+稙	jig;
+禝	jig;
+直	jig;	2282
+職	jig;
+織	jig;
+鬒	jin;
+鉁	jin;
+螴	jin;
+蔯	jin;
+縝	jin;
+稹	jin;
+璡	jin;
+瑨	jin;
+溱	jin;
+桭	jin;
+搢	jin;
+侲	jin;
+珒	jin;
+鎭	jin;
+軫	jin;
+趁	jin;
+袗	jin;
+蓁	jin;
+臻	jin;
+縉	jin;
+瞋	jin;
+眞	jin;
+盡	jin;	2284
+畛	jin;
+殄	jin;
+晉	jin;
+嗔	jin;
+儘	jin;
+賑	jin;
+津	jin;
+陳	jin;
+珍	jin;
+辰	jin;
+陣	jin;
+塵	jin;
+震	jin;
+進	jin;	2086
+診	jin;
+秦	jin;
+疹	jin;
+榛	jin;
+晋	jin;
+振	jin;
+唇	jin;
+鑕	jil;
+郅	jil;
+蒺	jil;
+絰	jil;
+瓆	jil;
+侄	jil;
+跌	jil;
+膣	jil;
+桎	jil;
+帙	jil;
+垤	jil;
+姪	jil;
+蛭	jil;
+迭	jil;
+窒	jil;
+秩	jil;
+質	jil;	2108
+疾	jil;
+嫉	jil;
+叱	jil;
+鴆	jim;
+斟	jim;
+朕	jim;
+鏶	jib;
+潗	jib;
+戢	jib;
+咠	jib;
+緝	jib;
+什	jib;
+集	jib;	2045
+輯	jib;
+執	jib;	2636
+瞪	jix;
+癥	jix;
+瀓	jix;
+徵	jix;
+澂	jix;
+懲	jix;
+澄	jix;
+硨	ca;
+徣	ca;
+佽	ca;
+奓	ca;
+蹉	ca;
+箚	ca;
+磋	ca;
+槎	ca;
+岔	ca;
+嗟	ca;
+偖	ca;
+侘	ca;
+茶	ca;	2182
+借	ca;	2761
+遮	ca;
+車	ca;	2101
+次	ca;	2384
+瑳	ca;
+差	ca;
+嵯	ca;
+叉	ca;
+此	ca;
+且	ca;
+辶	cag;
+斲	cag;
+擉	cag;
+齪	cag;
+鑿	cag;
+戳	cag;
+着	cag;
+捉	cag;
+錯	cag;
+窄	cag;
+搾	cag;
+趲	can;
+纘	can;
+瓚	can;
+璨	can;
+澯	can;
+欑	can;
+攢	can;
+巑	can;
+劗	can;
+儹	can;
+儧	can;
+饌	can;
+鑽	can;
+贊	can;
+讚	can;
+粲	can;
+竄	can;
+爨	can;
+簒	can;
+撰	can;
+餐	can;
+纂	can;
+燦	can;
+紮	cal;
+扎	cal;
+刹	cal;
+札	cal;
+擦	cal;
+拶	cal;
+察	cal;	2577
+黲	cam;
+饞	cam;
+鑱	cam;
+毚	cam;
+欃	cam;
+攙	cam;
+憯	cam;
+叅	cam;
+儳	cam;
+驂	cam;
+鏨	cam;
+讖	cam;
+讒	cam;
+譖	cam;
+站	cam;
+槧	cam;
+懺	cam;
+慚	cam;
+慙	cam;
+慘	cam;
+巉	cam;
+嶄	cam;
+塹	cam;
+參	cam;	2688
+僭	cam;
+斬	cam;
+鶬	cax;
+閶	cax;
+窻	cax;
+瑲	cax;
+氅	cax;
+戧	cax;
+惝	cax;
+刱	cax;
+凔	cax;
+傖	cax;
+倀	cax;
+鋹	cax;
+鬯	cax;
+蹌	cax;
+艙	cax;
+窗	cax;	2251
+瘡	cax;
+猖	cax;
+漲	cax;
+滄	cax;
+昶	cax;
+敞	cax;
+搶	cax;
+愴	cax;
+悵	cax;
+倡	cax;
+脹	cax;
+暢	cax;
+蒼	cax;
+窓	cax;
+槍	cax;
+倉	cax;
+創	cax;
+椙	cax;
+菖	cax;
+昌	cax;
+彰	cax;
+廠	cax;
+娼	cax;
+唱	cax;	2659
+錆	cax;
+茝	cai;
+棌	cai;
+埰	cai;
+寀	cai;
+釵	cai;
+蔡	cai;
+綵	cai;
+寨	cai;
+責	cai;	2116
+菜	cai;	2180
+砦	cai;
+采	cai;	2466
+採	cai;
+彩	cai;
+債	cai;
+蚱	caig;
+笧	caig;
+幘	caig;
+簀	caig;
+磔	caig;
+嘖	caig;
+責	caig;	2116
+冊	caig;	2734
+策	caig;
+柵	caig;
+郪	ce;
+覷	ce;
+褄	ce;
+萋	ce;
+淒	ce;
+悽	ce;
+處	ce;	2171
+凄	ce;
+妻	ce;	2609
+摭	ceg;
+慽	ceg;
+塉	ceg;
+坧	ceg;
+倜	ceg;
+惕	ceg;
+陟	ceg;
+躑	ceg;
+蹠	ceg;
+跖	ceg;
+蜴	ceg;
+瘠	ceg;
+滌	ceg;
+擲	ceg;
+呎	ceg;
+剔	ceg;
+捗	ceg;
+拓	ceg;
+脊	ceg;
+斥	ceg;
+戚	ceg;
+隻	ceg;
+尺	ceg;	2565
+刺	ceg;
+靝	cen;
+蕆	cen;
+蒨	cen;
+芊	cen;
+臶	cen;
+祆	cen;
+玔	cen;
+洊	cen;
+儃	cen;
+僢	cen;
+俴	cen;
+韆	cen;
+阡	cen;
+闡	cen;
+踐	cen;
+賤	cen;
+荐	cen;
+瓩	cen;
+濺	cen;
+淺	cen;	2338
+擅	cen;
+喘	cen;
+倩	cen;
+仟	cen;
+天	cen;	2620
+辿	cen;
+遷	cen;
+薦	cen;
+舛	cen;
+穿	cen;
+泉	cen;	2357
+川	cen;	2556
+千	cen;	2700
+蚕	cen;
+釧	cen;
+串	cen;
+粁	cen;
+茜	cen;
+飻	cel;
+歠	cel;
+掇	cel;
+惙	cel;
+埑	cel;
+剟	cel;
+澈	cel;
+喆	cel;
+餮	cel;
+鐵	cel;	2061
+錣	cel;
+銕	cel;
+輟	cel;
+屮	cel;
+啜	cel;
+凸	cel;
+轍	cel;
+撤	cel;
+徹	cel;
+哲	cel;
+綴	cel;
+襜	cem;
+甛	cem;
+瀸	cem;
+櫼	cem;
+惉	cem;
+幨	cem;
+詹	cem;
+諂	cem;
+籤	cem;
+簽	cem;
+簷	cem;
+瞻	cem;
+沾	cem;
+檐	cem;
+忝	cem;
+僉	cem;
+添	cem;
+尖	cem;
+褺	ceb;
+怗	ceb;
+堞	ceb;
+呫	ceb;
+倢	ceb;
+輒	ceb;
+睫	ceb;
+疊	ceb;
+貼	ceb;
+諜	ceb;
+牒	ceb;
+帖	ceb;
+喋	ceb;
+捷	ceb;
+妾	ceb;
+鶄	cex;
+圊	cex;
+凊	cex;
+靑	cex;
+淸	cex;
+蜻	cex;
+菁	cex;
+聽	cex;	2206
+廳	cex;
+青	cex;	2038
+請	cex;	2133
+晴	cex;	2426
+鯖	cex;
+髰	cei;
+蕞	cei;
+殢	cei;
+彘	cei;
+體	cei;	2012
+靆	cei;
+遞	cei;
+軆	cei;
+蔕	cei;
+蒂	cei;
+砌	cei;
+滯	cei;
+涕	cei;
+棣	cei;
+嚏	cei;
+諦	cei;
+締	cei;
+剃	cei;
+逮	cei;
+替	cei;
+切	cei;
+顦	co;
+鍫	co;
+醮	co;
+軺	co;
+趠	co;
+譙	co;
+苕	co;
+耖	co;
+綃	co;
+燋	co;
+怊	co;
+嶕	co;
+岧	co;
+嫶	co;
+噍	co;
+僬	co;
+偢	co;
+齠	co;
+鷦	co;
+髫	co;
+鈔	co;
+醋	co;
+迢	co;
+貂	co;
+誚	co;
+艸	co;
+稍	co;
+炒	co;
+椒	co;
+杪	co;
+憔	co;
+愀	co;
+悄	co;
+峭	co;
+屮	co;
+勦	co;
+劭	co;
+剿	co;
+秒	co;
+超	co;
+草	co;	2181
+礎	co;
+楚	co;
+酢	co;
+鞘	co;
+蕉	co;
+肖	co;
+礁	co;
+硝	co;
+焦	co;
+樵	co;
+梢	co;
+招	co;	2472
+抄	co;
+哨	co;
+初	co;	2724
+鍬	co;
+薥	cog;
+爥	cog;
+曯	cog;
+髑	cog;
+躅	cog;
+觸	cog;
+蜀	cog;
+矚	cog;
+矗	cog;
+囑	cog;
+促	cog;
+燭	cog;
+邨	con;
+忖	con;
+村	con;	2403
+寸	con;	2574
+吋	con;
+驄	cox;
+騘	cox;
+鏦	cox;
+蔥	cox;
+蓯	cox;
+憁	cox;
+悤	cox;
+摠	cox;
+聰	cox;
+總	cox;
+葱	cox;
+塚	cox;
+寵	cox;
+叢	cox;
+銃	cox;
+撮	coal;
+脧	coi;
+縗	coi;
+磪	coi;
+璀	coi;
+漼	coi;
+嘬	coi;
+榱	coi;
+摧	coi;
+崔	coi;
+最	coi;	2417
+催	coi;
+麤	cu;
+麄	cu;
+鶵	cu;
+鶖	cu;
+鵻	cu;
+魋	cu;
+騶	cu;
+縐	cu;
+簉	cu;
+箠	cu;
+瘳	cu;
+搥	cu;
+揫	cu;
+僦	cu;
+鰌	cu;
+騅	cu;
+鞦	cu;
+隹	cu;
+陬	cu;
+鄒	cu;
+蒭	cu;
+芻	cu;
+縋	cu;
+箒	cu;
+龝	cu;
+皺	cu;
+甃	cu;
+湫	cu;
+樞	cu;
+楸	cu;
+捶	cu;
+惆	cu;
+帚	cu;
+娵	cu;
+啾	cu;
+萩	cu;
+鎚	cu;
+追	cu;	2094
+椎	cu;
+墜	cu;
+抽	cu;
+雛	cu;
+趨	cu;
+錘	cu;
+錐	cu;
+推	cu;	2463
+諏	cu;
+醜	cu;
+酋	cu;
+秋	cu;	2259
+鰍	cu;
+鼀	cug;
+蹜	cug;
+豖	cug;
+妯	cug;
+蹙	cug;
+舳	cug;
+逐	cug;
+蓄	cug;
+筑	cug;
+畜	cug;
+築	cug;
+縮	cug;
+祝	cug;	2267
+蹴	cug;
+軸	cug;
+竺	cug;
+丑	cug;
+瑃	cun;
+椿	cun;
+春	cun;	2433
+秫	cul;
+黜	cul;
+朮	cul;
+出	cul;	2729
+珫	cux;
+忡	cux;
+蟲	cux;	2168
+冲	cux;
+衷	cux;
+忠	cux;	2512
+衝	cux;
+充	cux;	2750
+沖	cux;
+顇	cuei;
+疩	cuei;
+贅	cuei;
+萃	cuei;
+膵	cuei;
+瘁	cuei;
+揣	cuei;
+惴	cuei;
+悴	cuei;
+冣	cui;
+驟	cui;
+醉	cui;
+聚	cui;
+毳	cui;
+橇	cui;
+娶	cui;
+嘴	cui;
+鷲	cui;
+脆	cui;
+翠	cui;
+炊	cui;
+吹	cui;	2667
+臭	cui;
+就	cui;	2566
+趣	cui;
+取	cui;	2683
+昃	cwg;
+惻	cwg;
+廁	cwg;
+厠	cwg;
+仄	cwg;
+測	cwg;
+側	cwg;
+層	cwx;
+鴙	ci;
+阤	ci;
+跱	ci;
+菑	ci;
+絺	ci;
+痓	ci;
+淄	ci;
+哆	ci;
+寘	ci;
+齒	ci;	2001
+鵄	ci;
+鴟	ci;
+鯔	ci;
+雉	ci;
+錙	ci;
+輜	ci;
+豸	ci;
+褫	ci;
+蚩	ci;
+緻	ci;
+緇	ci;
+穉	ci;
+癡	ci;
+畤	ci;
+熾	ci;
+梔	ci;
+幟	ci;
+巵	ci;
+峙	ci;
+嗤	ci;
+卮	ci;
+侈	ci;
+薙	ci;
+馳	ci;
+致	ci;	2197
+置	ci;
+稚	ci;
+痴	ci;
+恥	ci;
+値	ci;
+痔	ci;
+治	ci;	2358
+敕	cig;
+飭	cig;
+勅	cig;
+則	cig;	2719
+藽	cin;
+櫬	cin;
+齔	cin;
+襯	cin;
+親	cin;	2156
+柒	cil;
+漆	cil;
+七	cil;	2807
+鋟	cim;
+郴	cim;
+琛	cim;
+沉	cim;
+寖	cim;
+駸	cim;
+鍼	cim;
+椹	cim;
+忱	cim;
+寢	cim;
+枕	cim;
+沈	cim;
+針	cim;	2065
+浸	cim;
+侵	cim;
+砧	cim;
+蟄	cib;
+噲	cix;
+稱	cix;
+夬	cix;
+秤	cix;
+快	koai;	2511
+鼉	ta;
+鮀	ta;
+駞	ta;
+馱	ta;
+跎	ta;
+拖	ta;
+拕	ta;
+垞	ta;
+鴕	ta;
+駝	ta;
+躱	ta;
+沱	ta;
+橢	ta;
+朶	ta;
+墮	ta;
+咤	ta;
+佗	ta;
+詫	ta;
+陀	ta;
+楕	ta;
+舵	ta;
+柁	ta;
+打	ta;	2478
+惰	ta;
+妥	ta;
+唾	ta;
+他	ta;	2786
+逴	tag;
+踔	tag;
+蘀	tag;
+籜	tag;
+矺	tag;
+琸	tag;
+涿	tag;
+沰	tag;
+橐	tag;
+晫	tag;
+坼	tag;
+柝	tag;
+拆	tag;
+倬	tag;
+度	tag;	2538
+擢	tag;
+濁	tag;
+鐸	tag;
+託	tag;
+琢	tag;
+濯	tag;
+拓	tag;
+托	tag;
+啄	tag;
+卓	tag;
+驒	tan;
+癱	tan;
+憻	tan;
+殫	tan;
+攤	tan;
+憚	tan;
+彈	tan;
+灘	tan;
+呑	tan;
+誕	tan;
+綻	tan;
+炭	tan;
+歎	tan;
+坦	tan;
+嘆	tan;
+脫	tal;	2201
+侻	tal;
+奪	tal;
+忐	tam;
+嗿	tam;
+酖	tam;
+貪	tam;
+眈	tam;
+耽	tam;
+探	tam;	2465
+塌	tab;
+傝	tab;
+榻	tab;
+搨	tab;
+搭	tab;
+塔	tab;
+碭	tax;
+燙	tax;
+蘯	tax;
+盪	tax;
+帑	tax;
+蕩	tax;
+糖	tax;
+湯	tax;
+宕	tax;
+邰	tai;
+迨	tai;
+跆	tai;
+孡	tai;
+娧	tai;
+埭	tai;
+駘	tai;
+颱	tai;
+笞	tai;
+抬	tai;
+兌	tai;
+殆	tai;
+台	tai;
+苔	tai;
+胎	tai;
+泰	tai;	2352
+態	tai;
+怠	tai;
+駄	tai;
+汰	tai;
+太	tai;	2619
+澤	taig;
+擇	taig;
+宅	taig;	2595
+牚	taix;
+撑	taix;
+撐	taix;
+攄	te;
+討	to;
+土	to;	2641
+吐	to;
+兎	to;
+噋	ton;
+瓲	ton;
+噸	ton;
+筩	tox;
+慟	tox;
+恫	tox;
+樋	tox;
+洞	tox;
+統	tox;	2225
+筒	tox;
+通	tox;	2090
+痛	tox;
+桶	tox;
+頹	toi;
+隤	toi;
+褪	toi;
+槌	toi;
+退	toi;	2093
+腿	toi;
+堆	toi;
+妒	tu;
+鬪	tu;
+骰	tu;
+渝	tu;
+偸	tu;
+透	tu;
+投	tu;	2474
+套	tu;
+妬	tu;
+佟	tux;
+忒	twg;
+慝	twg;
+特	twg;	2317
+闖	twm;
+鄱	pa;
+皤	pa;
+爸	pa;
+灞	pa;
+岥	pa;
+妑	pa;
+吧	pa;
+叵	pa;
+跛	pa;
+葩	pa;
+菠	pa;
+耙	pa;
+笆	pa;
+玻	pa;
+爬	pa;
+擺	pa;
+怕	pa;
+坡	pa;
+簸	pa;
+罷	pa;
+芭	pa;
+婆	pa;
+破	pa;	2271
+琶	pa;
+派	pa;
+波	pa;	2355
+杷	pa;
+播	pa;
+把	pa;
+巴	pa;
+頗	pa;
+辦	pan;
+汴	pan;
+鈑	pan;
+瓣	pan;
+販	pan;
+版	pan;
+板	pan;
+判	pan;	2723
+阪	pan;
+坂	pan;
+汃	pal;
+朳	pal;
+叭	pal;
+八	pal;	2740
+捌	pal;
+浿	pai;
+霈	pai;
+珮	pai;
+沛	pai;
+霸	pai;
+旆	pai;
+悖	pai;
+孛	pai;
+佩	pai;
+稗	pai;
+狽	pai;
+牌	pai;
+敗	pai;	2453
+覇	pai;
+貝	pai;	2120
+唄	pai;
+蟛	paix;
+蟚	paix;
+祊	paix;
+砰	paix;
+澎	paix;
+彭	paix;
+膨	paix;
+烹	paix;
+愎	pyag;
+萹	pyen;
+艑	pyen;
+緶	pyen;
+惼	pyen;
+徧	pyen;
+匾	pyen;
+騙	pyen;
+諞	pyen;
+褊	pyen;
+蝙	pyen;
+翩	pyen;
+扁	pyen;
+鞭	pyen;
+便	pyen;	2767
+遍	pyen;
+編	pyen;
+篇	pyen;
+片	pyen;	2320
+偏	pyen;
+窆	pyem;
+砭	pyem;
+貶	pyem;
+蓱	pyex;
+枰	pyex;
+抨	pyex;
+鮃	pyex;
+萍	pyex;
+苹	pyex;
+泙	pyex;
+怦	pyex;
+平	pyex;	2544
+評	pyex;
+坪	pyex;
+獘	pyei;
+狴	pyei;
+癈	pyei;
+斃	pyei;
+敝	pyei;
+廢	pyei;
+嬖	pyei;
+吠	pyei;
+陛	pyei;
+閉	pyei;	2058
+蔽	pyei;
+弊	pyei;
+幣	pyei;
+肺	pyei;
+炰	po;
+曓	po;
+晡	po;
+儤	po;
+佈	po;
+誧	po;
+鯆	po;
+鮑	po;
+餔	po;
+鉋	po;
+逋	po;
+袍	po;
+苞	po;
+舖	po;
+脯	po;
+疱	po;
+炮	po;
+抛	po;
+哺	po;
+咆	po;
+匏	po;
+匍	po;
+暴	po;	2421
+飽	po;
+褒	po;
+胞	po;
+砲	po;
+泡	po;
+抱	po;	2473
+庖	po;
+包	po;
+捕	po;
+圃	po;
+鋪	po;
+葡	po;
+怖	po;
+布	po;	2549
+蒲	po;
+鞄	po;
+浦	po;
+輻	pog;
+瀑	pog;
+暴	pog;	2421
+幅	pog;
+爆	pog;
+曝	pog;
+飇	pyo;
+鑣	pyo;
+鏢	pyo;
+裱	pyo;
+熛	pyo;
+摽	pyo;
+嘌	pyo;
+勡	pyo;
+僄	pyo;
+鰾	pyo;
+髟	pyo;
+驃	pyo;
+飄	pyo;
+縹	pyo;
+殍	pyo;
+慓	pyo;
+嫖	pyo;
+剽	pyo;
+豹	pyo;
+表	pyo;	2162
+票	pyo;
+瓢	pyo;
+漂	pyo;
+標	pyo;
+彪	pyo;
+俵	pyo;
+杓	pyo;
+禀	pum;
+稟	pum;
+品	pum;	2660
+葑	pux;
+馮	pux;
+諷	pux;
+瘋	pux;
+豊	pux;
+風	pux;	2024
+楓	pux;
+髲	pi;
+詖	pi;
+鞁	pi;
+陂	pi;
+辟	pi;
+避	pi;
+被	pi;
+皮	pi;	2287
+疲	pi;
+披	pi;
+彼	pi;	2527
+腷	pig;
+駜	pil;
+馝	pil;
+韠	pil;
+鞸	pil;
+觱	pil;
+蓽	pil;
+苾	pil;
+罼	pil;
+珌	pil;
+滭	pil;
+咇	pil;
+佖	pil;
+鵯	pil;
+蹕	pil;
+篳	pil;
+筆	pil;	2242
+畢	pil;
+必	pil;	2517
+弼	pil;
+疋	pil;
+匹	pil;
+泌	pil;
+偪	pib;
+乏	pib;
+逼	pib;
+瘕	ha;
+昰	ha;
+懗	ha;
+岈	ha;
+煆	ha;
+鰕	ha;
+鍜	ha;
+遐	ha;
+罅	ha;
+瑕	ha;
+廈	ha;
+呀	ha;
+厦	ha;
+嚇	ha;
+賀	ha;	2112
+霞	ha;
+蝦	ha;
+荷	ha;
+河	ha;	2360
+夏	ha;	2626
+何	ha;	2774
+下	ha;	2804
+郝	hag;
+确	hag;
+皬	hag;
+嗀	hag;
+鷽	hag;
+謔	hag;
+瘧	hag;
+狢	hag;
+涸	hag;
+學	hag;	2596
+壑	hag;
+鶴	hag;
+虐	hag;
+鷳	hag;
+閈	hag;
+暵	hag;
+僩	hag;
+閒	hag;	2056
+鼾	hag;
+駻	hag;
+罕	hag;
+瀚	hag;
+澣	hag;
+旱	hag;
+捍	hag;
+悍	hag;
+嫻	hag;
+嫺	hag;
+恨	hag;	2504
+限	hag;	2051
+韓	hag;	2033
+閑	hag;
+翰	hag;
+漢	hag;	2331
+汗	hag;
+寒	hag;	2578
+瞎	hal;
+轄	hal;
+割	hal;
+闞	ham;
+轞	ham;
+諴	ham;
+菡	ham;
+鹹	ham;
+陷	ham;
+銜	ham;
+莟	ham;
+緘	ham;
+涵	ham;
+檻	ham;
+喊	ham;
+啣	ham;
+咸	ham;
+函	ham;
+含	ham;
+艦	ham;
+郃	hab;
+榼	hab;
+柙	hab;
+嗑	hab;
+匌	hab;
+陜	hab;
+闔	hab;
+盒	hab;
+盍	hab;
+溘	hab;
+哈	hab;
+蛤	hab;
+合	hab;	2674
+閤	hab;
+缿	hax;
+炕	hax;
+姮	hax;
+夯	hax;
+沆	hax;
+頏	hax;
+肛	hax;
+缸	hax;
+恆	hax;
+嫦	hax;
+伉	hax;
+亢	hax;
+項	hax;
+降	hax;	2052
+行	hax;	2165
+航	hax;
+港	hax;
+杭	hax;
+抗	hax;
+恒	hax;
+巷	hax;
+桁	hax;
+頦	hai;
+痎	hai;
+瑎	hai;
+獬	hai;
+瀣	hai;
+欬	hai;
+嶰	hai;
+咍	hai;
+駭	hai;
+醢	hai;
+邂	hai;
+諧	hai;
+薤	hai;
+楷	hai;
+懈	hai;
+廨	hai;
+孩	hai;
+奚	hai;
+垓	hai;
+偕	hai;
+鮭	hai;
+骸	hai;
+該	hai;
+害	hai;	2584
+咳	hai;
+蟹	hai;
+海	hai;	2344
+解	hai;	2153
+亥	hai;
+翮	haig;
+覈	haig;
+核	haig;
+劾	haig;
+荇	haix;
+悻	haix;
+行	haix;	2165
+幸	haix;	2542
+倖	haix;
+杏	haix;
+鄉	hyax;	2073
+薌	hyax;
+珦	hyax;
+鄕	hyax;
+餉	hyax;
+嚮	hyax;
+香	hyax;	2016
+向	hyax;	2670
+饗	hyax;
+響	hyax;
+享	hyax;
+虛	he;	2170
+噓	he;
+歔	he;
+墟	he;
+許	he;	2146
+櫶	hen;
+攇	hen;
+幰	hen;
+巚	hen;
+獻	hen;
+軒	hen;
+憲	hen;
+歇	hel;
+玁	hem;
+獫	hem;
+驗	hem;
+險	hem;
+嶮	hem;
+爀	hyeg;
+焱	hyeg;
+弈	hyeg;
+鬩	hyeg;
+洫	hyeg;
+奕	hyeg;
+革	hyeg;	2034
+赫	hyeg;
+駽	hyen;
+誢	hyen;
+翾	hyen;
+繯	hyen;
+睍	hyen;
+琄	hyen;
+玹	hyen;
+泫	hyen;
+晛	hyen;
+昡	hyen;
+峴	hyen;
+嬛	hyen;
+儇	hyen;
+鋗	hyen;
+炫	hyen;
+顯	hyen;
+鉉	hyen;
+衒	hyen;
+蜆	hyen;
+縣	hyen;
+眩	hyen;
+痃	hyen;
+俔	hyen;
+舷	hyen;
+絃	hyen;
+現	hyen;	2312
+玄	hyen;
+弦	hyen;
+賢	hyen;	2110
+見	hyen;	2158
+県	hyen;
+懸	hyen;
+絢	hyen;
+趐	hyel;
+絜	hyel;
+孑	hyel;
+頁	hyel;
+血	hyel;	2167
+穴	hyel;
+嫌	hyem;
+頰	hyeb;
+愜	hyeb;
+悏	hyeb;
+埉	hyeb;
+匧	hyeb;
+俠	hyeb;
+鋏	hyeb;
+莢	hyeb;
+篋	hyeb;
+狹	hyeb;
+浹	hyeb;
+挾	hyeb;
+恊	hyeb;
+峽	hyeb;
+夾	hyeb;
+脇	hyeb;
+脅	hyeb;
+協	hyeb;	2696
+叶	hyeb;
+陘	hyex;
+鎣	hyex;
+邢	hyex;
+逈	hyex;
+詗	hyex;
+珩	hyex;
+熒	hyex;
+灐	hyex;
+滎	hyex;
+泂	hyex;
+娙	hyex;
+瀅	hyex;
+迥	hyex;
+螢	hyex;
+瑩	hyex;
+炯	hyex;
+夐	hyex;
+衡	hyex;
+荊	hyex;
+形	hyex;	2528
+型	hyex;
+兄	hyex;	2751
+刑	hyex;	2726
+亨	hyex;
+馨	hyex;
+謑	hyei;
+槥	hyei;
+暳	hyei;
+徯	hyei;
+寭	hyei;
+嘒	hyei;
+傒	hyei;
+譿	hyei;
+蕙	hyei;
+鞋	hyei;
+醯	hyei;
+蹊	hyei;
+盻	hyei;
+惠	hyei;	2497
+彗	hyei;
+兮	hyei;
+慧	hyei;
+鬍	ho;
+頀	ho;
+聕	ho;
+箎	ho;
+祜	ho;
+猢	ho;
+灝	ho;
+濩	ho;
+澔	ho;
+滈	ho;
+戶	ho;	2482
+岵	ho;
+嫮	ho;
+嫭	ho;
+嘷	ho;
+儫	ho;
+顥	ho;
+皞	ho;
+皜	ho;
+淏	ho;
+餬	ho;
+鎬	ho;
+扈	ho;
+蝴	ho;
+號	ho;	2169
+蒿	ho;
+葫	ho;
+皓	ho;
+瓠	ho;
+琥	ho;
+犒	ho;
+滸	ho;
+滬	ho;
+沍	ho;
+毫	ho;
+晧	ho;
+昊	ho;
+怙	ho;
+壺	ho;
+冱	ho;
+縞	ho;
+豪	ho;
+濠	ho;
+壕	ho;
+浩	ho;
+好	ho;	2613
+醐	ho;
+護	ho;
+瑚	ho;
+互	ho;
+虎	ho;	2172
+胡	ho;
+糊	ho;
+狐	ho;
+湖	ho;	2335
+弧	ho;
+呼	ho;	2664
+乎	ho;
+芦	ho;
+惑	hog;
+酷	hog;
+或	hog;
+閽	hon;
+惛	hon;
+圂	hon;
+琿	hon;
+焜	hon;
+溷	hon;
+渾	hon;
+魂	hon;
+混	hon;	2339
+昏	hon;
+婚	hon;	2604
+囫	hol;
+笏	hol;
+惚	hol;
+忽	hol;
+篊	hox;
+烘	hox;
+澒	hox;
+晎	hox;
+鉷	hox;
+鬨	hox;
+訌	hox;
+泓	hox;
+汞	hox;
+哄	hox;
+虹	hox;
+鴻	hox;
+紅	hox;	2234
+洪	hox;
+弘	hox;
+龢	hoa;
+驊	hoa;
+畵	hoa;
+擭	hoa;
+嬅	hoa;
+婲	hoa;
+俰	hoa;
+譁	hoa;
+畫	hoa;	2298
+話	hoa;	2143
+和	hoa;	2662
+靴	hoa;
+樺	hoa;
+貨	hoa;	2117
+嘩	hoa;
+華	hoa;	2179
+花	hoa;	2186
+禾	hoa;
+禍	hoa;
+火	hoa;	2329
+化	hoa;	2704
+鑊	hoag;
+礭	hoag;
+碻	hoag;
+矡	hoag;
+矍	hoag;
+攫	hoag;
+擴	hoag;
+穫	hoag;
+確	hoag;
+廓	hoag;
+轘	hoan;
+絙	hoan;
+紈	hoan;
+瓛	hoan;
+擐	hoan;
+鍰	hoan;
+睆	hoan;
+晥	hoan;
+鰥	hoan;
+鬟	hoan;
+驩	hoan;
+鐶	hoan;
+豢	hoan;
+皖	hoan;
+煥	hoan;
+渙	hoan;
+歡	hoan;	2381
+懽	hoan;
+寰	hoan;
+宦	hoan;
+奐	hoan;
+幻	hoan;
+丸	hoan;
+還	hoan;
+環	hoan;
+桓	hoan;
+換	hoan;
+患	hoan;	2501
+喚	hoan;
+闊	hoal;
+豁	hoal;
+蛞	hoal;
+猾	hoal;
+滑	hoal;
+活	hoal;	2349
+黃	hoax;	2005
+貺	hoax;
+璜	hoax;
+瑝	hoax;
+潢	hoax;
+榥	hoax;
+怳	hoax;
+媓	hoax;
+喤	hoax;
+鎤	hoax;
+愰	hoax;
+隍	hoax;
+遑	hoax;
+蝗	hoax;
+肓	hoax;
+簧	hoax;
+篁	hoax;
+煌	hoax;
+滉	hoax;
+湟	hoax;
+晄	hoax;
+惶	hoax;
+恍	hoax;
+徨	hoax;
+凰	hoax;
+幌	hoax;
+荒	hoax;
+皇	hoax;	2288
+晃	hoax;
+慌	hoax;
+況	hoax;
+噦	hoai;
+頮	hoi;
+盔	hoi;
+澮	hoi;
+滙	hoi;
+佪	hoi;
+洄	hoi;
+鱠	hoi;
+迴	hoi;
+誨	hoi;
+詼	hoi;
+蛔	hoi;
+茴	hoi;
+膾	hoi;
+繪	hoi;
+獪	hoi;
+淮	hoi;
+檜	hoi;
+懷	hoi;
+徊	hoi;
+匯	hoi;
+會	hoi;	2416
+賄	hoi;
+栃	hoi;
+灰	hoi;
+晦	hoi;
+恢	hoi;
+悔	hoi;
+廻	hoi;
+回	hoi;	2650
+嚄	hoig;
+獲	hoig;
+劃	hoig;
+鐄	hoix;
+鈜	hoix;
+澋	hoix;
+宖	hoix;
+橫	hoix;
+黌	hoix;
+餚	hyo;
+虓	hyo;
+熇	hyo;
+涍	hyo;
+殽	hyo;
+斅	hyo;
+崤	hyo;
+皛	hyo;
+驍	hyo;
+爻	hyo;
+淆	hyo;
+梟	hyo;
+曉	hyo;
+效	hyo;	2455
+囂	hyo;
+嚆	hyo;
+哮	hyo;
+傚	hyo;
+肴	hyo;
+酵	hyo;
+孝	hyo;	2599
+餱	hu;
+酗	hu;
+譃	hu;
+詡	hu;
+珝	hu;
+帿	hu;
+堠	hu;
+垕	hu;
+喣	hu;
+逅	hu;
+篌	hu;
+猴	hu;
+煦	hu;
+嗅	hu;
+吼	hu;
+吽	hu;
+喉	hu;
+后	hu;
+厚	hu;	2691
+候	hu;
+侯	hu;
+後	hu;	2523
+朽	hu;
+鑂	hun;
+纁	hun;
+獯	hun;
+爋	hun;
+欻	hun;
+曛	hun;
+壎	hun;
+塤	hun;
+薰	hun;
+焄	hun;
+勛	hun;
+葷	hun;
+燻	hun;
+熏	hun;
+暈	hun;
+勳	hun;
+訓	hun;	2150
+薨	hux;
+諼	huen;
+芔	huen;
+煊	huen;
+烜	huen;
+毁	huen;
+楦	huen;
+諠	huen;
+燬	huen;
+暄	huen;
+喧	huen;
+萱	huen;
+虺	huei;
+喙	huei;
+卉	huei;
+虫	huei;
+翬	hui;
+煇	hui;
+撝	hui;
+諱	hui;
+麾	hui;
+暉	hui;
+彙	hui;
+輝	hui;
+徽	hui;
+揮	hui;
+鵂	hyu;
+髹	hyu;
+隳	hyu;
+擕	hyu;
+咻	hyu;
+虧	hyu;
+烋	hyu;
+畦	hyu;
+携	hyu;
+休	hyu;	2778
+卹	hyul;
+鷸	hyul;
+譎	hyul;
+恤	hyul;
+胷	hyux;
+洶	hyux;
+恟	hyux;
+匈	hyux;
+胸	hyux;	2203
+凶	hyux;
+兇	hyux;
+黑	hwg;	2004
+訢	hwn;
+焮	hwn;
+炘	hwn;
+昕	hwn;
+釁	hwn;
+掀	hwn;
+忻	hwn;
+很	hwn;
+痕	hwn;
+欣	hwn;
+齕	hwl;
+紇	hwl;
+疙	hwl;
+汔	hwl;
+仡	hwl;
+訖	hwl;
+屹	hwl;
+迄	hwl;
+吃	hwl;
+歆	hwm;
+廞	hwm;
+欠	hwm;
+欽	hwm;
+翖	hwb;
+潝	hwb;
+噏	hwb;
+翕	hwb;
+洽	hwb;
+歙	hwb;
+吸	hwb;
+恰	hwb;
+興	hwx;	2195
+餼	hwi;
+豨	hwi;
+爔	hwi;
+熺	hwi;
+戱	hwi;
+悕	hwi;
+姬	hwi;
+囍	hwi;
+嘻	hwi;
+凞	hwi;
+暿	hwi;
+憘	hwi;
+熙	hwi;
+羲	hwi;
+禧	hwi;
+犧	hwi;
+燹	hwi;
+熹	hwi;
+欷	hwi;
+曦	hwi;
+晞	hwi;
+戲	hwi;
+憙	hwi;
+噫	hwi;
+唏	hwi;
+咥	hwi;
+僖	hwi;
+稀	hwi;
+希	hwi;	2548
+嬉	hwi;
+喜	hwi;	2655
+犵	hil;
+黠	hil;
+頡	hil;
+襭	hil;
+纈	hil;
+詰	hil;
+臵	gag;
+猑	gon;
+德	deg;	2519
+悳	deg;
+遬	sog;
+涑	sog;
+洬	sog;
+贖	sog;
+謖	sog;
+續	sog;	2220
+屬	sog;
+俗	sog;	2766
+速	sog;	2089
+束	sog;
+粟	sog;
+鷳	han;
+閈	han;
+暵	han;
+僩	han;
+閒	han;	2056
+鼾	han;
+駻	han;
+罕	han;
+瀚	han;
+澣	han;
+旱	han;
+捍	han;
+悍	han;
+嫻	han;
+嫺	han;
+恨	han;	2504
+限	han;	2051
+韓	han;	2033
+閑	han;
+翰	han;
+漢	han;	2331
+汗	han;
+寒	han;	2578
+### 異讀及頭音規則等 ###
+秊	xyen;
+撚	xyen;
+年	xyen;	2543
+捻	xyem;
+念	xyem;	2510
+寧	lyex;
+寧	xyex;
+紐	xyu;
+杻	xyu;
+泥	xi;
+溺	xig;
+匿	xig;
+懶	na;
+喇	na;
+裸	na;
+螺	na;
+蘿	na;
+羅	na;
+癩	na;
+邏	na;
+諾	lag;
+落	nag;	2177
+珞	nag;
+烙	nag;
+洛	nag;
+駱	nag;
+酪	nag;
+蘭	nan;
+爛	nan;
+欄	nan;
+卵	nan;
+亂	nan;
+鸞	nan;
+襤	nam;
+藍	nam;
+濫	nam;
+嵐	nam;
+蠟	nab;
+臘	nab;
+拉	nab;
+狼	nax;
+浪	nax;	2347
+朗	nax;
+廊	nax;
+來	nai;	2770
+冷	naix;	2730
+略	xyag;
+掠	xyag;
+量	xyax;	2067
+諒	xyax;
+良	xyax;	2188
+糧	xyax;
+梁	xyax;
+凉	xyax;
+兩	xyax;	2741
+亮	xyax;
+黎	xye;
+麗	xye;
+驪	xye;
+閭	xye;
+礪	xye;
+濾	xye;
+旅	xye;	2441
+廬	xye;
+呂	xye;
+勵	xye;
+轢	xyeg;
+歷	xyeg;	2375
+曆	xyeg;
+力	xyeg;	2717
+鍊	xyen;
+連	xyen;	2087
+輦	xyen;
+蓮	xyen;
+聯	xyen;
+練	xyen;	2221
+璉	xyen;
+煉	xyen;
+漣	xyen;
+戀	xyen;
+憐	xyen;
+裂	xyel;
+烈	xyel;	2328
+劣	xyel;
+列	xyel;	2725
+簾	xyem;
+殮	xyem;
+廉	xyem;
+獵	xyeb;
+領	xyex;	2028
+靈	xyex;
+零	xyex;
+鈴	xyex;
+聆	xyex;
+羚	xyex;
+玲	xyex;
+怜	xyex;
+嶺	xyex;
+囹	xyex;
+令	xyex;	2783
+醴	xyei;
+禮	xyei;	2262
+例	xyei;	2769
+路	no;	2103
+虜	no;
+蘆	no;
+老	no;	2214
+盧	no;
+爐	no;
+櫓	no;
+擄	no;
+#怒	no; # unihan korean 已有相同
+勞	no;	2708
+鷺	no;
+魯	no;
+露	no;	2039
+菉	nog;
+綠	nog;	2223
+祿	nog;
+碌	nog;
+鹿	nog;
+錄	nog;
+論	non;	2132
+聾	nox;
+籠	nox;
+弄	nox;
+壟	nox;
+賂	noi;
+磊	noi;
+牢	noi;
+雷	noi;
+遼	xyo;
+蓼	xyo;
+療	xyo;
+燎	xyo;
+料	xyo;	2445
+寮	xyo;
+僚	xyo;
+了	xyo;
+龍	xyox;
+縷	nu;
+累	nu;
+漏	nu;
+淚	nu;
+樓	nu;
+屢	nu;
+壘	nu;
+陋	nu;
+類	xyu;
+硫	xyu;
+留	xyu;	2300
+琉	xyu;
+溜	xyu;
+流	xyu;	2348
+柳	xyu;
+劉	xyu;
+陸	xyug;	2048
+戮	xyug;
+六	xyug;	2738
+輪	xyun;
+淪	xyun;
+崙	xyun;
+倫	xyun;
+栗	xyul;
+慄	xyul;
+律	xyul;	2524
+隆	xyux;
+肋	nwg;
+勒	nwg;
+凜	nwm;
+菱	nwm;
+綾	nwm;
+稜	nwm;
+凌	nwm;
+陵	nwm;
+離	xi;
+里	xi;	2070
+裡	xi;
+裏	xi;
+罹	xi;
+痢	xi;
+異	li;	2297
+理	xi;	2310
+梨	xi;
+李	xi;
+履	xi;
+吏	xi;
+利	xi;	2721
+麟	xin;
+鱗	xin;
+隣	xin;
+藺	xin;
+璘	xin;
+燐	xin;
+吝	xin;
+臨	xim;
+淋	xim;
+林	xim;	2400
+粒	xib;
+笠	xib;
+立	xib;	2250
+尿	xyo;
+丹	lan;
+怒	lo;	2509
+菱	nwx;
+綾	nwx;
+稜	nwx;
+凌	nwx;
+陵	nwx;
+### 推導漢字音 ###
+#嗯	xwn; # unihan korean 已有相同
+#啦	lab; # unihan korean 已有相同
+#吧	pa; # unihan korean 已有相同
+孬	no;
+掹	maix;
+孬	xoai;
+啥	sa;
+臵	gyeg;
+喏	xya;
+嘛	ma;
+嗎	ma;
+哋	ji;
+啲	jeg;
+仨	sab;
+仨	sam;
+呸	bi;
+哪	na;
+嘿	hwg;
+焊	han;
+晗	ham;
+咊	hoa;
+唅	ham;
+擋	dax;
+閂	san;
+涮	soai;
+唰	sal;
+唰	sel;
+蔊	han;
+獁	ma;
+喵	myo;
+瞄	myo;
+嬤	ma;
+蟆	ma;
+啐	coai;
+傻	sa;
+囧	gyex;
+冂	gyex;
+吖	xa;
+腌	xem;
+壩	pai;
+壩	pa;
+疤	pa;
+粑	pa;
+靶	pa;
+画	hoa;
+画	hoig;
+㓰	hoig;
+䃮	dal;
+䥑	maig;
+叻	lyeg;
+荔	lye;
+詈	li;
+哎	xai;
+嬡	xai;
+嗌	xig;
+璦	xai;
+氨	xan;
+胺	xal;
+鵪	xam;
+摁	xwn;
+骯	hax;
+洱	xi;
+鴯	xi;
+咦	xi;
+頤	xi;
+胰	xi;
+羿	xyei;
+##### 韓文漢字對映結束 #####
