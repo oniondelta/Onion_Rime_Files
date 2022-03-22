@@ -27,7 +27,7 @@ switches:
   - name: simplification
     states: [ 漢字, 汉字 ]
   - name: back_mark
-    reset: 1
+    reset: 0
     states: [ 無, 註 ]
 
 engine:
