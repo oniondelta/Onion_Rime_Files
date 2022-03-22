@@ -95,7 +95,7 @@ Linux 上反饋問題很多，一看其 Rime 核心 librime 過舊，librime-lua
 
   > 四個衍伸方案：「1」標準版、「2」只有後綴易懂、「3」語言分野最明減少撞碼、「4」集中下排手順最好
 
-  > 本人最常使用「4」，也推薦「3」
+  > 本人多使用「4」，也推薦「3」
 
   #### ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/master/img/bpmf_mixin_1_keyboard.png)
   
