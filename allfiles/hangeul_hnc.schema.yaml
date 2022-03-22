@@ -79,8 +79,7 @@ translator:
   enable_sentence: false
   enable_completion: false
   disable_user_dict_for_patterns:
-    - ^[a-z]+[/q]{1}$
-    - ^[a-z]+[/q]{2}$
+    - ^[a-z]+[/]?[/abcdefghijklmnopqrstuwxyz]$
   preedit_format:
     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
     - xform/QQ/‹ʜᴊ›/

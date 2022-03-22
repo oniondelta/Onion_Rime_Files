@@ -321,6 +321,8 @@ korea:
   suffix: " "
   tips: "《韓》▶"
   closing_tips: "◀《韓》"
+  disable_user_dict_for_patterns:
+    - ^[a-z]+[/]?[/abcdefghijklmnopqrstuwxyz]$
   preedit_format:
     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
     - xform/QQ/‹ʜᴊ›/
