@@ -40,6 +40,10 @@
 #     例：汀間	texima;    汀間	thima;    （後改不補 汀間	tima;）
 #     例：友寄	toxumushi;    友寄	twumushi;    （後改不補 友寄	tumushi;）
 #
+# 詞彙中漢字和外語之間，定義須分節
+#     例：α米	arufa; mai;    百Ω	hyaku; o-mu;
+#
+#
 # 定義：じ=ji，zi用正則轉。
 # 定義：づヅ=du、ずズ=zu。
 # 定義：ぢゅ=dyu，zy、j用正則轉。
@@ -52,7 +56,7 @@
 #===================================
 ---
 name: jpnin1
-version: "202202"
+version: "202203"
 sort: by_weight #original
 use_preset_vocabulary: false
 columns:
