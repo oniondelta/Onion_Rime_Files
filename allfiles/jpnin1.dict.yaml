@@ -40,8 +40,19 @@
 #     例：汀間	texima;    汀間	thima;    （後改不補 汀間	tima;）
 #     例：友寄	toxumushi;    友寄	twumushi;    （後改不補 友寄	tumushi;）
 #
+#
 # 詞彙中漢字和外語之間，定義須分節
 #     例：α米	arufa; mai;    百Ω	hyaku; o-mu;
+#
+#
+# 字詞彙(漢字裡)有「ny」：其假名實為拗音「にゅ」「にゃ」「にょ」等，「ny」前面標注「`ny」；其假名實為「んゆ」「んや」「んよ」等，「ny」中標注「n`y」。
+#     例：若	`nyaku;
+#     例：蒟	gon`nya;
+#     例：入手	`nyuushu;
+#     例：転用	ten`you;
+#     例：金曜日	kin`youbi;
+#
+# 字詞彙(漢字裡)並無發現「っな」「っに」「っぬ」「っね」「っの」，正則也沒轉換，但還是先把「nn」標注為「n`n」。
 #
 #
 # 定義：じ=ji，zi用正則轉。
@@ -4054,7 +4065,7 @@ columns:
 釋	shaku;
 爵	shaku;
 若	jaku;
-若	nyaku;
+若	`nyaku;
 若い	waka; i,	71759
 若しくは	mo; shi, ku, ha,	54594
 若	waka;	16110
@@ -4220,7 +4231,7 @@ columns:
 住まう	su; ma, u,	46965
 住	su;
 柔	juu;
-柔	nyuu;
+柔	`nyuu;
 柔らか	yawa; ra, ka,	48098
 柔らかい	yawa; ra, ka, i,	64246
 柔	yawa;	24614
@@ -4356,12 +4367,12 @@ columns:
 諸	sho;	73345
 諸	sho;
 女	jo;	28648
-女	nyo;
-女	nyou;
-女	onna;	42569
+女	`nyo;
+女	`nyou;
+女	on`na;	42569
 女	me;
 如	jo;
-如	nyo;
+如	`nyo;
 助	jo;	55946
 助ける	tasu; ke, ru,	48723
 助かる	tasu; ka, ru,	46366
@@ -6254,16 +6265,16 @@ columns:
 日	jitsu;
 日	hi;	37538
 日	ka;	43229
-入	nyuu;	70613
+入	`nyuu;	70613
 入る	i; ru,	41011
 入れる	i; re, ru,	51877
 入る	hai; ru,	72653
 入	i;	0
 入	hai;	0
-乳	nyuu;
+乳	`nyuu;
 乳	chichi;	29154
 乳	chi;
-尿	nyou;	30216
+尿	`nyou;	30216
 任	nin;	19761
 任せる	maka; se, ru,	43850
 任す	maka; su,	23465
@@ -8829,7 +8840,7 @@ columns:
 湮	in;
 鸚	in;
 吋	inchi;	9496
-因	inno;
+因	in`no;
 #右	u;
 烏	u;
 #羽	u;
@@ -9405,7 +9416,7 @@ columns:
 豌	en;
 焰	en;
 槐	enju;	11032
-役	enno;
+役	en`no;
 #悪	o;
 #汚	o;
 #緒	o;
@@ -9882,7 +9893,7 @@ columns:
 諺	on;
 雄	on;
 隱	on;
-#女	onna;
+#女	on`na;
 #渦	ka;
 #下	ka;
 #化	ka;
@@ -10902,9 +10913,9 @@ columns:
 釵	kanzashi;
 簪	kanzashi;	20488
 梶	kando;
-覡	kannagi;
-閂	kannuki;	9516
-甲	kanno;
+覡	kan`nagi;
+閂	kan`nuki;	9516
+甲	kan`no;
 #芳	kanba;
 樺	kanba;
 #冠	kanmuri;
@@ -12311,8 +12322,8 @@ columns:
 麕	kun;
 燻	kun;
 葷	kun;
-薫	kunne;
-薰	kunne;
+薫	kun`ne;
+薰	kun`ne;
 姑	ku-;
 #具	gu;
 #愚	gu;
@@ -13871,7 +13882,7 @@ columns:
 魂	gon;
 儼	gon;
 蒟	gon;
-蒟	gonnya;
+蒟	gon`nya;
 #佐	sa;
 #唆	sa;
 #左	sa;
@@ -16969,8 +16980,8 @@ columns:
 甅	senchiguramu;
 糎	senchime-toru;	19181
 竰	senchirittoru;
-仙	senno;
-千	senno;
+仙	sen`no;
+千	sen`no;
 #是	ze;
 世	ze;
 瀬	ze;
@@ -17662,7 +17673,7 @@ columns:
 寳	takara;	26395
 貲	takara;
 財	takara;	5137
-笋	takanna;	17137
+笋	takan`na;	17137
 #互	taga;
 箍	taga;	7339
 靠	taga;
@@ -18049,7 +18060,7 @@ columns:
 站	tan;
 譚	tan;	44199
 靼	tan;
-淡	tanno;
+淡	tan`no;
 重	ta-;
 #蛇	da;
 #唾	da;
@@ -20097,7 +20108,7 @@ columns:
 曷	nanzo;
 瑕	nanzo;
 遐	nanzo;
-埀	nannanto;
+埀	nan`nanto;
 #荷	ni;
 #児	ni;
 #仁	ni;
@@ -20183,54 +20194,54 @@ columns:
 二	nino;
 似	nino;
 #鈍	nibu;
-若	nya;
-#若	nyaku;
-蒻	nyaku;
-娘	nyan;
-壬	nyu;
-丹	nyu;
-二	nyu;
-#柔	nyuu;
-#乳	nyuu;
-#入	nyuu;
-孺	nyuu;
-揉	nyuu;
-狃	nyuu;
-糅	nyuu;
-襦	nyuu;
-蹂	nyuu;
-鈕	nyuu;
-鞣	nyuu;
-敷	nyuu;
-涌	nyuu;
-#女	nyo;
-#如	nyo;
-洳	nyo;
-茹	nyo;
-#女	nyou;
-#尿	nyou;
-仍	nyou;
-囁	nyou;
-佞	nyou;
-侫	nyou;
-嫋	nyou;
-橈	nyou;
-檸	nyou;
-濘	nyou;
-禳	nyou;
-穰	nyou;
-聶	nyou;
-聹	nyou;
-蕘	nyou;
-躡	nyou;
-遶	nyou;
-鐃	nyou;
-鑷	nyou;
-閙	nyou;
-顳	nyou;
-鬧	nyou;
-如	nyou;
-寧	nyon;
+若	`nya;
+#若	`nyaku;
+蒻	`nyaku;
+娘	`nyan;
+壬	`nyu;
+丹	`nyu;
+二	`nyu;
+#柔	`nyuu;
+#乳	`nyuu;
+#入	`nyuu;
+孺	`nyuu;
+揉	`nyuu;
+狃	`nyuu;
+糅	`nyuu;
+襦	`nyuu;
+蹂	`nyuu;
+鈕	`nyuu;
+鞣	`nyuu;
+敷	`nyuu;
+涌	`nyuu;
+#女	`nyo;
+#如	`nyo;
+洳	`nyo;
+茹	`nyo;
+#女	`nyou;
+#尿	`nyou;
+仍	`nyou;
+囁	`nyou;
+佞	`nyou;
+侫	`nyou;
+嫋	`nyou;
+橈	`nyou;
+檸	`nyou;
+濘	`nyou;
+禳	`nyou;
+穰	`nyou;
+聶	`nyou;
+聹	`nyou;
+蕘	`nyou;
+躡	`nyou;
+遶	`nyou;
+鐃	`nyou;
+鑷	`nyou;
+閙	`nyou;
+顳	`nyou;
+鬧	`nyou;
+如	`nyou;
+寧	`nyon;
 薤	nira;
 韮	nira;	12043
 盻	nira;
@@ -22206,7 +22217,7 @@ columns:
 #舟	funa;
 #船	funa;
 舩	funa;
-舟	funyu;
+舟	fu`nyu;
 #舟	fune;
 #船	fune;
 舸	fune;
@@ -26568,8 +26579,8 @@ columns:
 難	niku;	108619
 #日	nit;
 #日	niq;
-繞	nyou;	5898
-饒	nyou;	27453
+繞	`nyou;	5898
+饒	`nyou;	27453
 俄	niwaka;	12458
 緯	nuki;	10578
 錬	ne;	0
@@ -26946,7 +26957,7 @@ columns:
 造	miyatsuko;	5724
 雅	miyabi;	22624
 見	miru;	25847
-皆	minna;	88608
+皆	min`na;	88608
 迎	mukai;	31175
 向	mukae;	24192
 尨	muku;	1104
@@ -27260,7 +27271,7 @@ columns:
 姜	kan;	5813
 槓	kan;	7663
 霞	kan;	24322
-鉋	kanna;	17649
+鉋	kan`na;	17649
 顔	kanbase;	49660
 何	ka-;	21931
 剛	gan;	14358
@@ -28572,7 +28583,7 @@ columns:
 嘴	hashi;
 觜	hashi;
 囃	hayashi;
-巫	kannagi;
+巫	kan`nagi;
 桴	bachi;
 昴	sumaru;
 昴	bou;
@@ -28734,7 +28745,7 @@ columns:
 曝	sarashi;
 銀	shirokane;
 比	tagui;
-筍	takanna;
+筍	takan`na;
 筍	takamuna;
 笋	takamuna;
 筍	takouna;
@@ -28742,8 +28753,8 @@ columns:
 確	tashika;
 適	tamatama;
 鰩	tobiuo;
-蒜	ninniku;
-葫	ninniku;
+蒜	nin`niku;
+葫	nin`niku;
 喉	nondo;
 吭	nondo;
 喉	nomito;
@@ -28827,12 +28838,12 @@ columns:
 尸	kabane;
 尸	shi;
 起	okori;
-辶	shinnyou;
-辵	shinnyou;
-⻌	shinnyou;
-辶	shinnyuu;
-辵	shinnyuu;
-⻌	shinnyuu;
+辶	shin`nyou;
+辵	shin`nyou;
+⻌	shin`nyou;
+辶	shin`nyuu;
+辵	shin`nyuu;
+⻌	shin`nyuu;
 擅	hoshiimama;
 肆	hoshiimama;
 橡	tochinoki;
@@ -29165,7 +29176,7 @@ columns:
 節	yo;
 鮞	hararago;
 胎	hara;
-妾	onname;
+妾	on`name;
 許	bakashi;
 許	bakkashi;
 鐸	nurite;
@@ -29545,7 +29556,7 @@ columns:
 柞	isunoki;
 柞	yusunoki;
 柞	yushinoki;
-柞	hyonnoki;
+柞	hyon`noki;
 竽	u;
 当	hata;
 籡	shinshi;
@@ -29598,7 +29609,7 @@ columns:
 〒	yuubin;
 ㍼	shouwa;
 ㍽	taishou;
-～	nyoro;
+～	`nyoro;
 Α	arufa;
 α	arufa;
 Ｓ	esu;
@@ -29678,8 +29689,8 @@ columns:
 κ	kappa-;
 Μ	myu-;
 μ	myu-;
-Ν	nyu-;
-ν	nyu-;
+Ν	`nyu-;
+ν	`nyu-;
 Ο	omikuron;
 ο	omikuron;
 Ξ	kusai;
