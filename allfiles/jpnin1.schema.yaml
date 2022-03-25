@@ -249,6 +249,9 @@ c_reverse_lookup:
   tags: [ kanji_input ]
   dictionary: jpnin1.extended
   # spelling_hints: 10
+  comment_format:
+    - "xlit|`|'|"
+    - xform/q/xtsu/
 
 punctuator:
   full_shape:
