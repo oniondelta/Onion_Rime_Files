@@ -161,7 +161,8 @@ speller:
     - derive|^(xx)[.]$|$1,|
     - derive|^xx([.,])$|shime$1|
     - derive|^xx([.])$|kigou$1| #只片假名
-    - xform/q(?![yw][aeiou][,.])/xtu/ #っッ
+    # - derive/q(?![yw][aeiou][,.])/xtu/ #っッ #可擴充讓「q」能輸出「っ」「ッ」
+    - xform/q(?![yw][aeiou][,.])/xtu/ #っッ #完全轉走，不能用「q」輸出「っ」「ッ」
     - derive/xtu/ltu/ #っッ
     - derive/xtu/xtsu/ #っッ
     - derive/xtu/ltsu/ #っッ
