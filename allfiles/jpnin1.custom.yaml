@@ -1,8 +1,8 @@
 # .custom.yaml
 patch:
   speller/algebra:
-##### 字詞彙中的漢字，拼音轉寫 #####
-# ### 漢字中的促音 ###
+##### 字詞彙中的漢字，拼音轉寫開始（以下到結束可遮屏，節省部屬時間） #####
+### 漢字中的促音 ###
 #     - derive/cchi(.*;)$/qchi$1/ #っち
 #     - derive/sshi(.*;)$/qshi$1/ #っし
 #     - derive/ffu(.*;)$/qfu$1/ #っふ #漢字無此拼音#
@@ -38,7 +38,7 @@ patch:
 #     - derive/dd([auoie].*;)$/qd$1/ #っだ #暫時打開測試
 #     - derive/bb([auoie].*;)$/qb$1/ #っば #暫時打開測試
 #     - derive/pp([auoie].*;)$/qp$1/ #っぱ
-# ### 漢字中的拗音 ### @ 太影響效能，暫時關閉@
+# ### 漢字中的拗音 ### @此轉寫太影響效能，折衷可只遮屏此處@
 #     - derive/ky([auo].*;)$/kixy$1/ #きゃ
 #     - derive/gy([auoie].*;)$/gixy$1/ #ぎゃ
 #     - derive/sh([auo].*;)$/shixy$1/ #しゃ
@@ -51,6 +51,7 @@ patch:
 #     - derive/py([auoie].*;)$/pixy$1/ #ぴゃ
 #     - derive/my([auoie].*;)$/mixy$1/ #みゃ
 #     - derive/ry([auoie].*;)$/rixy$1/ #りゃ
+##### 字詞彙中的漢字，拼音轉寫結束（以上到開頭可遮屏，節省部屬時間） #####
 ### 漢字中的其他 ###
     - derive/ty(e.*;)$/chix$1/ #ちぇ
 ##### 單字或詞彙中的假名和漢字，拼音轉寫 #####
@@ -109,7 +110,8 @@ patch:
     - derive|^(xx)[.]$|$1,|
     - derive|^xx([.,])$|shime$1|
     - derive|^xx([.])$|kigou$1| #只片假名
-    - xform/q(?![yw][aeiou][,.])/xtu/ #っッ
+    # - derive/q(?![yw][aeiou][,.])/xtu/ #っッ #可擴充讓「q」能輸出「っ」「ッ」
+    - xform/q(?![yw][aeiou][,.])/xtu/ #っッ #完全轉走，不能用「q」輸出「っ」「ッ」
     - derive/xtu/ltu/ #っッ
     - derive/xtu/xtsu/ #っッ
     - derive/xtu/ltsu/ #っッ
@@ -136,7 +138,7 @@ patch:
     - xform/^([ksptgchmyrwdbzf])[,.]/$1/
     # - xform/^([ksptgchmyrwdbz])[,.]/$1/ #「n」無法，會有bug
     # - xform/^([a-z])[,.]([a-z])/$1$2/
-    # - xform/;([ksptgchmyrwdbzf])/$1/
+    # - xform/;([ksptgchmyrwdbzf])/$1/ #解放漢字，不用輸入「;」即會顯示
     # - xform/;([ksptgchmyrwdbz])/$1/
     # - xform/;([a-z])/$1/
 #舊版漢字中有分段才有用到#    - derive/^([a-z-]+)(;)([a-z-]+)(;)$/$1$3$4/ #漢字中含促音
