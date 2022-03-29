@@ -254,13 +254,15 @@ top_reverse_lookup:
     - xform/`拉-組@   / /
     - xform/`拉-大@ / /
     - xform/`拉-小@ / /
-    - xform/E/E`日-平@/
-    - xform/F/F`日-片@/
+    - xform/E(?!E)/E`日-平@/
+    - xform/F(?!F)/F`日-片@/
     - xform/`日-平@ / /
     - xform/`日-片@ / /
     - xform/([svc]F)`日-片@/$1/
     - xform/([avse]vF)/$1`日-符@/
     - xform/(evF)`日-符@( v)/$1$2/
+    - xform/(FF)`日-片@/$1`日-組@/ #日語濁点(組合)
+    - xform/(F)`日-片@/$1`日-濁@/ #日語濁点
     - "xlit|ABCDEF`@|';/!,.〔〕|"
 ###################################
     - xform/([aeiou])(ng?|r)([1234])/$1$3$2/

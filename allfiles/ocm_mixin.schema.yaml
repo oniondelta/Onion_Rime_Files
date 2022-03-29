@@ -364,13 +364,15 @@ top_reverse_lookup:
     - xform/`拉-組@   / /
     - xform/`拉-大@ / /
     - xform/`拉-小@ / /
-    - xform/E/E`日-平@/
-    - xform/F/F`日-片@/
+    - xform/E(?!E)/E`日-平@/
+    - xform/F(?!F)/F`日-片@/
     - xform/`日-平@ / /
     - xform/`日-片@ / /
     - xform/([svc]F)`日-片@/$1/
     - xform/([avse]vF)/$1`日-符@/
     - xform/(evF)`日-符@( v)/$1$2/ #日語符號
+    - xform/(FF)`日-片@/$1`日-組@/ #日語濁点(組合)
+    - xform/(F)`日-片@/$1`日-濁@/ #日語濁点
     - xform/( ryBB)$/$1`拉-小@/ #修正錯漏
     - xform/( wyBB)$/$1`拉-小@/ #修正錯漏
     - "xlit|ABCDEF`@|';/!,.〔〕|"

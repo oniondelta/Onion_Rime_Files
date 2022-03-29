@@ -4,7 +4,7 @@
 # 『洋蔥』製作
 ---
 name: ocm_mixin_jp
-version: "202202"
+version: "202203"
 sort: original
 use_preset_vocabulary: false
 #max_phrase_length: 7
@@ -270,6 +270,27 @@ use_preset_vocabulary: false
 #ー	@ee#更動排序
 #ー	@ee#更動排序
 ### 『符號遮屏』（保留參考）結束 ###
+### 濁点和半濁点開始 ###
+゜	handakuten,
+゛	dakuten,
+゜	ten,
+゛	ten,
+゜	handakuten.
+゛	dakuten.
+゜	ten.
+゛	ten.
+### 組合字符
+゚	handakuten,,
+゙	dakuten,,
+゚	ten,,
+゙	ten,,
+゚	handakuten..
+゙	dakuten..
+゚	ten..
+゙	ten..
+# ゚	o@
+# ゙	b@
+### 濁点和半濁点結束 ###
 ##### 『符號』結束 #####
 ##### 『基本平假名』開始 #####
 あ	a,

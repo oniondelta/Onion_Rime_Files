@@ -262,6 +262,8 @@ jphi_lookup:
     - ^-{1,2},$
   preedit_format:
     - "xlit|,.|AB|"
+    - xform/AA/ (組)/
+    - xform/BB/ (組)/
     - xform/A/ (平)/
     - xform/B/ (片)/
     - xform/\|/ /
@@ -289,6 +291,8 @@ jpka_lookup:
     - ^-{1,2}[.]$
   preedit_format:
     - "xlit|.,|AB|"
+    - xform/AA/ (組)/
+    - xform/BB/ (組)/
     - xform/A/ (片)/
     - xform/B/ (平)/
     - xform/\|/ /
