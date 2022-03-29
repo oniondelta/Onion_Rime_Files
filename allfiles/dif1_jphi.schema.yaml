@@ -5,7 +5,7 @@
 schema:
   schema_id: dif1_jphi
   name: ✹新日語平假名_dif1✹
-  version: "202109"
+  version: "202203"
   author:
     - 『洋蔥』
   description: |
@@ -48,7 +48,7 @@ speller:
   algebra:
 ##### 日語 #####
 ## 符號
-    - derive|^([eaovs]v),$|$1\.|
+    - derive|^([eaovsb]v),$|$1\.|
     - derive|^(eev),$|$1\.|
     - derive|^ev([,.])$|-$1|
     - derive|^eev([,.])$|--$1|

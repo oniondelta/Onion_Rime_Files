@@ -340,21 +340,27 @@ columns:
 ゛	dakuten,
 ゜	ten,
 ゛	ten,
+゜	ov,
+゛	bv,
 ゜	handakuten.
 ゛	dakuten.
 ゜	ten.
 ゛	ten.
+゜	ov.
+゛	bv.
 ### 組合字符
 ゚	handakuten,,
 ゙	dakuten,,
 ゚	ten,,
 ゙	ten,,
+゚	ov,,
+゙	bv,,
 ゚	handakuten..
 ゙	dakuten..
 ゚	ten..
 ゙	ten..
-# ゚	o@
-# ゙	b@
+゚	ov..
+゙	bv..
 ### 濁点和半濁点結束 ###
 ##### 『符號』結束 #####
 ##### 『基本平假名』開始 #####

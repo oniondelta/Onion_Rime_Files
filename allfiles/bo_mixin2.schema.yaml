@@ -127,7 +127,7 @@ back_mark:
   opencc_config: back_mark.json
   option_name: back_mark
   show_in_comment: true
-  tags: [ abc, emoji_series, fs2 ]
+  tags: [ abc, emoji_series, fs2, japan ]
   tips: char #all
   comment_format:
     - xform/^/  /
