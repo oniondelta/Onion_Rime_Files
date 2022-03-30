@@ -83,9 +83,9 @@ translator:
   preedit_format:
     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
     - xform/QQ/‹ʜᴊ›/
-    - xform|\/\/|‹ʜᴊ›|
+    - xform|[/][/]|‹ʜᴊ›|
     - xform/Q/‹ʜᴄᴊ›/
-    - xform|\/|‹ʜᴄᴊ›|
+    - xform|[/]|‹ʜᴄᴊ›|
     - xform/V/‹漢›/
     - xform/;/‹漢›/  #
     # - xform/;/ /  #
