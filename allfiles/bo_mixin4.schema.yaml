@@ -237,7 +237,7 @@ speller:
     - derive/^(!!!?)tsu$/$1tu/
     - derive/^(!!!?)fu$/$1hu/
     - derive/^(!!!?)ji$/$1zi/
-    - derive/^(!!!?)u$/$1wu/
+    # - derive/^(!!!?)u$/$1wu/  #少用精簡
 ## 特殊
     - xform/^(!!!?)dvyu$/$1dyu/ # デュ #特殊片假名被其他正則不轉寫。
 ##### 日文轉寫結束 #####

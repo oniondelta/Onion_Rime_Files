@@ -98,7 +98,7 @@ speller:
     - derive/^tsu([,.])$/tu$1/
     - derive/^fu([,.])$/hu$1/
     - derive/^ji([,.])$/zi$1/
-    - derive/^u([,.])$/wu$1/
+    # - derive/^u([,.])$/wu$1/  #少用精簡
 ## 特殊
     - xform/^dvyu([,.])$/dyu$1/ # デュ #特殊片假名被其他正則不轉寫。
 ##### 其他 #####
