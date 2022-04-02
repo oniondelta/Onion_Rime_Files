@@ -10,7 +10,7 @@ patch:
     - schema: bopomo_onionplus
     - schema: bopomo_onionplus_space
     - schema: hangeul_hnc
-    - schema: hangeul
+    # - schema: hangeul
     - schema: jpnin1
     - schema: latinin1
     - schema: greek
