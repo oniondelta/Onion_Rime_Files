@@ -43,7 +43,7 @@ Linux 上反饋問題很多，一看其 Rime 核心 librime 過舊，librime-lua
 
 ### Rime 初入門：
 
-> https://github.com/oniondelta/Onion_Rime_Files/wiki/Rime-%E5%88%9D%E5%85%A5%E9%96%80
+- https://github.com/oniondelta/Onion_Rime_Files/wiki/Rime-%E5%88%9D%E5%85%A5%E9%96%80
 
 ### 各方案說明：
 
