@@ -22,8 +22,8 @@
 - 選取想要的方案，把內含文件通通放入『 Rime 』用戶設定資料夾，如已有 opencc 資料夾，移動 opencc 裡面檔案到 opencc 資料夾內，沒有的話，整個 opencc 移過去，按「重新部署」即可使用。
 
 ```
-~/Library/Rime  ( Mac OS 鼠鬚管 )
 %APPDATA%\Rime  ( Windows 小狼毫 )
+~/Library/Rime  ( Mac OS 鼠鬚管 )
 ~/.config/ibus/rime  ( Linux 中州韻 )
 ~/.config/fcitx/rime  ( Linux )
 
@@ -40,6 +40,10 @@ Linux 上反饋問題很多，一看其 Rime 核心 librime 過舊，librime-lua
   > 如果缺少檔案，會立即出錯無法執行！
   
   > 用 Visual Studio Code 等非 Python 原生程式執行 sort_rime_file.py 會出錯（需另設定），使用 Python 原生程式執行即可。
+
+### Rime 初入門：
+
+> https://github.com/oniondelta/Onion_Rime_Files/wiki/Rime-%E5%88%9D%E5%85%A5%E9%96%80
 
 ### 各方案說明：
 
