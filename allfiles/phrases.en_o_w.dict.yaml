@@ -4,7 +4,7 @@
 # 『洋蔥』
 ---
 name: phrases.en_o_w
-version: "202203"
+version: "202204"
 sort: by_weight
 use_preset_vocabulary: false
 columns:
@@ -258,6 +258,7 @@ Engadget
 tsmc
 TSMC
 ASML
+asml
 LinkedIn
 GitHub	100
 github
@@ -3140,7 +3141,7 @@ YO-YO
 YOU'RE
 YOU'VE
 ####### 20200923補充結束@ #######
-####### 20220327補充開始@ #######
+####### 20220405補充開始@ #######
 config
 Config
 CONFIG
@@ -3183,5 +3184,9 @@ vtuber
 Vtuber
 VTuber
 VTUBER
-####### 20220327補充結束@ #######
+EUV
+euv
+DUV
+duv
+####### 20220405補充結束@ #######
 ####### 拉丁英語補充詞庫 結束 #######
