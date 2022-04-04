@@ -4,7 +4,7 @@
 schema:
   schema_id: onion-array30
   name: "▦ 行列３０（洋蔥版）"
-  version: "202112"
+  version: "202204"
   author:
     - 洋蔥 <deltazonetw@gmail.com>
   description: |
@@ -399,7 +399,8 @@ key_binder:
 ### Return/Enter鍵 ###
     - {accept: Return, send: KP_Space, when: paging} #選字時 Return/Enter 鍵同空白鍵上屏中文
     # - {accept: Return, send: space, when: has_menu} #有選單時 Return/Enter 鍵同空白鍵上屏中文
-    # - {accept: Shift+Return, send: Return, when: has_menu} #上兩例開啟可開啟補充。
+    # - {accept: KP_Enter, send: space, when: has_menu} #有選單時右側小鍵盤 Return/Enter 鍵同空白鍵上屏中文
+    # - {accept: Shift+Return, send: Return, when: has_menu} #上三例開啟可開啟補充。
 
 
 ##### 按鍵綁定 #####
