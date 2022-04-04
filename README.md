@@ -47,8 +47,6 @@ Linux 上反饋問題很多，一看其 Rime 核心 librime 過舊，librime-lua
 
 ### 各方案說明：
 
-> 密碼：onionrime，請勿傳播密碼！
-
 > 202203 韓文改成 HNC 羅馬字輸入方式。
 
 - [電腦 RIME 輸入法『注音（洋蔥 純注音 版）』](https://deltazone.pixnet.net/blog/post/264319309)
