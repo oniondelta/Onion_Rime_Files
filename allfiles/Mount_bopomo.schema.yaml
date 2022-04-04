@@ -4,7 +4,7 @@
 schema:
   schema_id: Mount_bopomo
   name: "☆注音(反查專用)☆"
-  version: "202108"
+  version: "202204"
   author:
     - Onion
   description: |
@@ -196,6 +196,7 @@ key_binder:
     - {accept: Left, send: Page_Up, when: paging} #直式選單用
     - {accept: Right, send: Page_Down, when: paging} #直式選單用
     - {accept: Return, send: space, when: has_menu} #return,enter直出
+    - {accept: KP_Enter, send: space, when: has_menu}
 
 recognizer:
   patterns:

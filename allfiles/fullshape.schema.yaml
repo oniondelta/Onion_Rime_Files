@@ -4,7 +4,7 @@
 schema:
   schema_id: fullshape
   name: ❃全形輸出❃
-  version: "202109"
+  version: "202204"
   author:
     - 『洋蔥』
   description: |
@@ -73,6 +73,7 @@ key_binder:
     - {accept: equal, send: equal, when: has_menu}
     - {accept: equal, send: equal, when: paging}
     - {accept: Return, send: space, when: has_menu}
+    - {accept: KP_Enter, send: space, when: has_menu}
 
 punctuator:
   import_preset: default

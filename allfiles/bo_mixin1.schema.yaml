@@ -4,7 +4,7 @@
 schema:
   schema_id: bo_mixin1
   name: "☆注音(洋蔥mix-in版 1 )☆〔拉日 ˇ  ˋ 韓〕"
-  version: "202203"
+  version: "202204"
   author:
     - 『洋蔥』
   description: |
@@ -621,12 +621,7 @@ key_binder:
 
 editor:
   bindings:
-    Return: confirm #使用 express_editor 時開啟 #commit_composition
-    Shift+Return: commit_raw_input # 上屏原始輸入
-    Control+Return: commit_script_text # 上屏變換後輸入
-#    space: commit_composition #使用 fluency_editor 時開啟
-#    space: toggle_selection
-#    space: noop
+    __include: element_bopomo:/editor
 ########################## 正則調出各種功能 ##############################
 recognizer:
   patterns:

@@ -4,7 +4,7 @@
 schema:
   schema_id: jpnin1 # 注意此ID與文件名裏 .schema.yaml 之前的部分相同
   name: ❃日語 in 1❃
-  version: "202203"
+  version: "202204"
   author:
     - 『洋蔥』
   description: |
@@ -354,6 +354,7 @@ key_binder:
     - {accept: Tab, send: Shift+Left, when: paging}
 ######################
     - {accept: Return, send: space, when: has_menu} #return,enter直出
+    - {accept: KP_Enter, send: space, when: has_menu}
 ##    - {accept: space, send: space, when: has_menu} # 非空碼時，空白還是空白
 ##    - {accept: space, send: Escape, when: composing} # 空碼時，按空格清除
 

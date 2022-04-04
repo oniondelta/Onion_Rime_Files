@@ -110,6 +110,16 @@ key_binder:
     # - {accept: apostrophe, send: backslash, when: has_menu}
 
 
+editor:
+    Return: confirm #使用 express_editor 時開啟 #commit_composition
+    KP_Enter: confirm #使用 express_editor 時開啟 #commit_composition
+    Shift+Return: commit_raw_input # 上屏原始輸入
+    Control+Return: commit_script_text # 上屏變換後輸入
+#    space: commit_composition #使用 fluency_editor 時開啟
+#    space: toggle_selection
+#    space: noop
+
+
 emoji_series:
 ##### 以下四字 #####
     - xform/^m2sm/【運動ㄋㄩ(女)】/
