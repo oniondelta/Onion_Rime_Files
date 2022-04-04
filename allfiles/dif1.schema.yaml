@@ -8,7 +8,7 @@ schema:
 
   name: "❖分別調出蝦米(plus)❖"
   schema_id: dif1
-  version: "202203"
+  version: "202204"
   dependencies:
     - punct_ovff
     - dif1_jphi
@@ -562,10 +562,7 @@ key_binder:
 
 editor:
   bindings:
-    Return: confirm #使用 express_editor 時開啟 #commit_composition
-    Shift+Return: commit_raw_input
-#    Control+Return: commit_script_text
-#    Shift+Return: commit_script_text
+    __include: element_ocm:/editor
 #################################### 用正則調出各種功能 ############################################
 recognizer:
   patterns:

@@ -9,7 +9,7 @@ schema:
 
   name: "❖超級混合蝦米(mix-in)❖"
   schema_id: ocm_mixin
-  version: "202203"
+  version: "202204"
   dependencies:
     - punct_ovff
     - symbols_ocm
@@ -666,10 +666,7 @@ key_binder:
 
 editor:
   bindings:
-    Return: confirm #使用 express_editor 時開啟 #commit_composition
-    Shift+Return: commit_raw_input
-#    Control+Return: commit_script_text
-#    Shift+Return: commit_script_text
+    __include: element_ocm:/editor
 #################################### 用正則調出各種功能 ############################################
 recognizer:
   patterns:
