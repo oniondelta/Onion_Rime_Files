@@ -457,6 +457,8 @@ shutil.copyfile("./allfiles/onion-array30-shortcode.dict.yaml", "./sort_rime/洋
 shutil.copyfile("./allfiles/onion-array30-phrases.dict.yaml", "./sort_rime/洋蔥行列30/onion-array30-phrases.dict.yaml")
 shutil.copyfile("./allfiles/onion-array30-generally.dict.yaml", "./sort_rime/洋蔥行列30/onion-array30-generally.dict.yaml")
 
+shutil.copytree("./allfiles/onion-array30可用Return上屏custom/", "./sort_rime/洋蔥行列30/onion-array30可用Return上屏custom/")
+
 shutil.copyfile("./allfiles/rime.lua", "./sort_rime/洋蔥行列30/rime.lua")
 
 shutil.copyfile("./allfiles/各方案default.custom/洋蔥行列30_custom/default.custom.yaml", "./sort_rime/洋蔥行列30/default.custom.yaml")
