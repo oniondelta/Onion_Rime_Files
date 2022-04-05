@@ -12,7 +12,7 @@
 #     尾綴「@@」：空格，為首選，但含有非首選的空格編碼，功能需求，特此標註
 ---
 name: onion-array30-special
-version: "202107"
+version: "202204"
 sort: original
 use_preset_vocabulary: false
 #max_phrase_length: 7
@@ -51,7 +51,7 @@ use_preset_vocabulary: false
 祇	hs@
 突	nh@
 耐	aj@
-虐	qa@
+虐	qa@@
 倚	zd@
 倒	xe@
 俱	uk@
