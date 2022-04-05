@@ -5,8 +5,7 @@ patch:
     __append:
       - {accept: Return, send: space, when: has_menu} #有選單時 Return/Enter 鍵同空白鍵上屏中文
       - {accept: Return, send: Escape, when: composing} #空碼清屏用
-      - {accept: KP_Enter, send: KP_Space, when: paging} #選字時右側小鍵盤 Return/Enter 鍵同空白鍵上屏中文
       - {accept: KP_Enter, send: space, when: has_menu} #有選單時右側小鍵盤 Return/Enter 鍵同空白鍵上屏中文
       - {accept: KP_Enter, send: Escape, when: composing} #空碼清屏用
-      - {accept: Shift+Return, send: Return, when: has_menu} #上方五個開啟時補充用。
+      - {accept: Shift+Return, send: Return, when: has_menu} #上方四個開啟時補充用。
 
