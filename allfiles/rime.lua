@@ -663,11 +663,13 @@ function mix30_nil_comment_up_filter(input, env)
             yield(cand)
           -- elseif (string.find(find_prefix, "^www%..*$")) then
           --   yield(cand)
-          elseif (string.find(find_prefix, "^[a-z.,/;][a-z.,/;]?[a-z.,/;']?[a-z.,/;']?[i']?$" )) or (string.find(find_prefix, "^a[k,] $" )) or (string.find(find_prefix, "^lr $" )) or (string.find(find_prefix, "^ol $" )) or (string.find(find_prefix, "^qk $" )) or (string.find(find_prefix, "^%.b $" )) or (string.find(find_prefix, "^/%. $" )) or (string.find(find_prefix, "^pe $" )) then
+          elseif (string.find(find_prefix, "^[a-z.,/;][a-z.,/;]?[a-z.,/;']?[a-z.,/;']?[i']?$" )) or (string.find(find_prefix, "^a[k,] $" )) or (string.find(find_prefix, "^lr $" )) or (string.find(find_prefix, "^ol $" )) or (string.find(find_prefix, "^q[ka] $" )) or (string.find(find_prefix, "^%.b $" )) or (string.find(find_prefix, "^/%. $" )) or (string.find(find_prefix, "^pe $" )) then
             yield(cand)
           elseif (string.find(find_prefix, "^sf $" )) and (string.find(cand.text, '毋' )) then
             yield(cand)
           elseif (string.find(find_prefix, "^lb $" )) and (string.find(cand.text, '及' )) then
+            yield(cand)
+          elseif (string.find(find_prefix, "^ou $" )) and (string.find(cand.text, '○' )) then
             yield(cand)
           -- elseif (string.find(find_prefix, "`.*$" )) or (string.find(find_prefix, "^w[0-9]$" ))  or (string.find(find_prefix, "^[a-z][-_.0-9a-z]*@.*$" )) or (string.find(find_prefix, "^(www[.]|https?:|ftp:|mailto:|file:).*$" )) then
           --   yield(cand)
@@ -692,13 +694,16 @@ function mix30_nil_comment_up_filter(input, env)
             yield(cand)
           -- elseif (string.find(find_prefix, "^www%..*$")) then
           --   yield(cand)
-          elseif (string.find(find_prefix, "^[a-z.,/;][a-z.,/;]?[a-z.,/;']?[a-z.,/;']?[i']?$" )) or (string.find(find_prefix, "^a[k,] $" )) or (string.find(find_prefix, "^lr $" )) or (string.find(find_prefix, "^ol $" )) or (string.find(find_prefix, "^qk $" )) or (string.find(find_prefix, "^%.b $" )) or (string.find(find_prefix, "^/%. $" )) or (string.find(find_prefix, "^pe $" )) then
+          elseif (string.find(find_prefix, "^[a-z.,/;][a-z.,/;]?[a-z.,/;']?[a-z.,/;']?[i']?$" )) or (string.find(find_prefix, "^a[k,] $" )) or (string.find(find_prefix, "^lr $" )) or (string.find(find_prefix, "^ol $" )) or (string.find(find_prefix, "^q[ka] $" )) or (string.find(find_prefix, "^%.b $" )) or (string.find(find_prefix, "^/%. $" )) or (string.find(find_prefix, "^pe $" )) then
             cand:get_genuine().comment = ""
             yield(cand)
           elseif (string.find(find_prefix, "^sf $" )) and (string.find(cand.text, '毋' )) then
             cand:get_genuine().comment = ""
             yield(cand)
           elseif (string.find(find_prefix, "^lb $" )) and (string.find(cand.text, '及' )) then
+            cand:get_genuine().comment = ""
+            yield(cand)
+          elseif (string.find(find_prefix, "^ou $" )) and (string.find(cand.text, '○' )) then
             cand:get_genuine().comment = ""
             yield(cand)
           -- elseif (string.find(find_prefix, "`.*$" )) or (string.find(find_prefix, "^w[0-9]$" ))  or (string.find(find_prefix, "^[a-z][-_.0-9a-z]*@.*$" )) or (string.find(find_prefix, "^(www[.]|https?:|ftp:|mailto:|file:).*$" )) then
