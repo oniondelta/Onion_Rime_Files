@@ -39,6 +39,7 @@
 #  2021-07-23 新增支援 CJK Ext-G，並補足中日韓統一表意文字非屬於      #（本碼表略）
 #             Ext-A 至 Ext-G 之部分。(0.90)                           #
 #  2021-08-03 刪除部分有重複收編的漢字。(0.91-0.93)                   #
+#  2022-03-17 增補遺漏的「𫊖」字。(0.94)                              #
 #######################################################################
 # 『洋蔥』製作
 #
@@ -49,7 +50,7 @@
 #     前面「#」為重碼，為將來比對方便？故先只遮屏。
 ---
 name: onion-array30-generally
-version: "202107"
+version: "202204"
 sort: original
 use_preset_vocabulary: false
 #max_phrase_length: 7
@@ -83723,6 +83724,7 @@ use_preset_vocabulary: false
 𫊔	frl,i
 𫊕	ffkxi
 𫊕	flaxi
+𫊖	fuyei
 𫊗	fqdui
 𫊘	fpfdi
 𫊙	fizhi
