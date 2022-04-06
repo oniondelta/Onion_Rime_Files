@@ -128,7 +128,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "202203"
+version: "202204"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -2037,6 +2037,7 @@ min_phrase_weight: 100
 蜗	guo3	0%
 浜	beng3	0%
 賣	yu4	0%
+枬	zhan1
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -21405,7 +21406,7 @@ min_phrase_weight: 100
 枩	song1
 枪	qiang1
 枫	feng1
-枬	nan2
+# 枬	nan2
 枭	xiao1
 枮	xian1
 枮	zhen1
