@@ -7,7 +7,7 @@
 # 本詞庫刪除純「假名」之詞彙。純「假名」詞庫為「phrases.jp_hk」。
 ---
 name: phrases.jp_hkkreduce
-version: "202203"
+version: "202204"
 sort: by_weight #original
 use_preset_vocabulary: false
 columns:
@@ -27613,15 +27613,11 @@ columns:
 狂わ
 狂乱
 狂体
-狂信
 狂句
-狂女
 狂恋
 狂死
 狂気
-狂犬
 狂的
-狂者
 狂騒
 狎れ
 狐だ
