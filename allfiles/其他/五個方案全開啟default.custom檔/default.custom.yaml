@@ -24,8 +24,9 @@ patch:
     - schema: cyrillic
     - schema: allbpm
     - schema: fullshape
-    - schema: easy_en_b
-    - schema: easy_en_comment
+#     - schema: easy_en_b
+#     - schema: easy_en_comment
+    - schema: easy_en_super
     - schema: symbols_bpmf
     - schema: symbols_double_bpmf
     - schema: cangjie5
