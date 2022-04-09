@@ -20,7 +20,8 @@ schema:
     - dif1_fs
     - Mount_bopomo
     - allbpm
-    - easy_en_b
+    # - easy_en_b
+    - easy_en_super
     - symbols_ocm
 
 switches:
@@ -392,7 +393,7 @@ fs_lookup:
 ######################調出其他語言之翻譯器(開頭符號調出各國語言輸入)################
 easy_en:
   tag: easy_en
-  dictionary: easy_en_b
+  dictionary: easy_en_super #easy_en_b
   enable_completion: true
   enable_sentence: true #false
   enable_user_dict: false #true
@@ -404,13 +405,15 @@ easy_en:
     - xform/》'/》' /
     - xform|》[/]|》/ |
   comment_format:
-    - xform|[~a-z;/.'-]*||
+    - xform|[~a-z;/.'-]+||
 
 e_reverse_lookup:
   tags: [ easy_en ]
   overwrite_comment: true
-  dictionary: easy_en_comment
+  dictionary: easy_en_super #easy_en_comment
   comment_format:
+    - xform/^.+⌗// #easy_en_super用
+    - xform|^[ a-z;/.'-]+|| #easy_en_super用
     - xform/@@/\n          /
     - xform/@/ /
 

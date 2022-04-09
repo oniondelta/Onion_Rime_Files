@@ -13,7 +13,8 @@ schema:
   dependencies:
     - symbols_bpmf
     - cangjie5
-    - easy_en_b
+    # - easy_en_b
+    - easy_en_super
     - fullshape
     - greek
     - cyrillic
@@ -418,7 +419,7 @@ translator:
 ################################### 調出 Easy 英語 ######################################
 easy_en:
   tag: easy_en
-  dictionary: easy_en_b
+  dictionary: easy_en_super #easy_en_b
   enable_completion: true
   # sentence_over_completion: true
   enable_sentence: true #false
@@ -434,13 +435,15 @@ easy_en:
     - xform|》'|》' |
     - 'xform/\\/ /'
   comment_format:
-    - xform|[~a-z;/.'-]*||
+    - xform|[~a-z;/.'-]+||
 
 e_reverse_lookup:
   tags: [ easy_en ]
   overwrite_comment: true
-  dictionary: easy_en_comment
+  dictionary: easy_en_super #easy_en_comment
   comment_format:
+    - xform/^.+⌗// #easy_en_super用
+    - xform|^[ a-z;/.'-]+|| #easy_en_super用
     - xform/@@/\n          /
     - xform/@/ /
 ################################『日語假名輸入漢字』##################################
