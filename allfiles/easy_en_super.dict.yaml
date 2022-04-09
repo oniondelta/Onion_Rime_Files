@@ -1,0 +1,19 @@
+﻿# Rime dictionary
+# mim: set ts=8 sw=8 noet:
+# encoding: utf-8
+#
+#
+# 《英文單字》
+#
+# 因檔案太大不便上傳，故把easy_en_super分割成兩個字典
+#
+---
+name: easy_en_super
+version: "202204"
+sort: original #by_weight
+import_tables:
+  - easy_en_super_one
+  - easy_en_super_two
+...
+##### 以下一個為空格轉寫,@使掛載語言能空格後繼續輸入！！！ #####
+ 	|

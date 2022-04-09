@@ -1,0 +1,93 @@
+﻿# Rime schema settings
+# encoding: utf-8
+
+schema:
+  schema_id: easy_en_super
+  name: Easy English（英漢字典）
+  version: "202204"
+  author:
+    - 洋蔥
+  description:
+    Easy English Super
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ On, Off ]
+
+engine:
+  processors:
+    - ascii_composer
+    - key_binder
+    - speller
+    - recognizer
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - matcher
+    - ascii_segmentor
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+#    - echo_translator #不要用，會把分號和/上屏
+    - table_translator
+    - punct_translator
+  filters:
+    - reverse_lookup_filter@e_reverse_lookup
+    - uniquifier
+
+speller:
+  alphabet: "zyxwvutsrqponmlkjihgfedcba-.;/'"
+  initials: "zyxwvutsrqponmlkjihgfedcba-./'"
+  delimiter: " "
+  algebra:
+    - derive/^\|$/ /
+    - xform/⌗.*$//
+    - derive/(.)[;']$/$1/
+    # - derive/^(.+)([;'])$/$2$1/
+
+translator:
+  dictionary: easy_en_super
+  enable_encoder: false
+  encode_commit_history: false
+  enable_completion: true
+  # sentence_over_completion: true
+  enable_sentence: true #false
+  enable_user_dict: false #true
+#  spelling_hints: 9
+  comment_format:
+    - xform|[~a-z;/.'-]+||
+
+e_reverse_lookup:
+  tags: [ abc ]
+  overwrite_comment: true
+  dictionary: easy_en_super
+  comment_format:
+    - xform/^.+⌗//
+    - xform|^[ a-z;/.'-]+||
+    - xform/@@/\n          /
+    - xform/@/ /
+
+key_binder:
+  import_preset: default
+  bindings:
+    - {accept: comma, send: comma, when: has_menu}
+    - {accept: comma, send: comma, when: paging}
+    - {accept: period, send: period, when: has_menu}
+    - {accept: period, send: period, when: paging}
+    - {accept: minus, send: minus, when: has_menu}
+    - {accept: minus, send: minus, when: paging}
+    - {accept: equal, send: equal, when: has_menu}
+    - {accept: equal, send: equal, when: paging}
+### 選字翻頁 ###
+    - {accept: Left, send: Page_Up, when: paging} #直式選單用 #has_menu
+    - {accept: Right, send: Page_Down, when: paging} #直式選單用 #has_menu
+
+# punctuator:
+  # import_preset: default
+
+recognizer:
+  import_preset: default
