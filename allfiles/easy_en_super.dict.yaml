@@ -1,11 +1,10 @@
 ﻿# Rime dictionary
-# mim: set ts=8 sw=8 noet:
 # encoding: utf-8
 #
 #
-# 《英文單字》
+# 《英文單字翻譯注釋-集合》
 #
-# 因檔案太大不便上傳，故把easy_en_super分割成兩個字典
+# 因檔案太大不便上傳，故把 easy_en_super 分割成兩個字典
 #
 ---
 name: easy_en_super
