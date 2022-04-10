@@ -1,15 +1,16 @@
 # Rime schema settings
 # encoding: utf-8
-# 《手機 韓語（洋蔥形碼鍵位）設定頁》
+# 《韓語（洋蔥形碼鍵位）設定頁》
 schema:
   schema_id: hangeul # 注意此ID與文件名裏 .schema.yaml 之前的部分相同
   name: ❃韓語形碼❃
-  version: "202203"
+  version: "202204"
   author:
     - 『洋蔥』
   description: |
     韓文形碼
   dependencies:
+    - cangjie5
 
 switches:
   - name: ascii_mode
@@ -37,33 +38,85 @@ engine:
     - fallback_segmentor
   translators:
     - punct_translator
+    - table_translator@hangeul_phrase
+    - reverse_lookup_translator
     - script_translator
 
 menu:
-  page_size: 5
+  alternative_select_keys: "1234567890"
+  page_size: 10
 
 speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz;/"
+  initials: "abcdefghijklmnopqrstuvwxyz"
   delimiter: "'"
+  algebra:
+    - derive/^\|$/ /
 
 translator:
   dictionary: hangeul.extended
-#  prism: hangeul
   enable_user_dict: true
   enable_sentence: false
   enable_completion: false
   preedit_format:
-    - "xform/'/ /"
+    - "xlit|abcdefghijklmnopqrstuvwxyz'|ABCDEFGHIJKLMNOPQRSTUVWXYZ |"
   comment_format:
-    - "xform/'/ /"
+    - "xlit|abcdefghijklmnopqrstuvwxyz'|ABCDEFGHIJKLMNOPQRSTUVWXYZ |"
   disable_user_dict_for_patterns:
     - ^[a-z]{1,3}$
+
+hangeul_phrase:
+  dictionary: ""
+  user_dict: hangeul_phrase
+  db_class: stabledb #tabledb
+  enable_completion: false
+  enable_sentence: false
+  initial_quality: "0"
+
+reverse_lookup:
+  dictionary: cangjie5
+  enable_completion: false
+  prefix: "="
+  suffix: "'"
+  tips: 〔漢字反查〕
+  preedit_format:
+    - "xlit|abcdefghijklmnopqrstuvwxyz|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符|"
 
 punctuator:
 #  import_preset: default
   use_space: true
+  full_shape:
+    # " " : { commit: "　" }
+    "<" : { commit: "，" }
+    ">" : { commit: "。" }
+    "?" : [ ？, ／, ÷ ]
+    ":" : [ ：, ； ]
+    "'" : { pair: [ "‘", "’" ] }
+    "\"" : { pair: [ "“", "”" ] }
+    "\\" : [ 、, ＼ ]
+    "|" : [ ·, ｜, "§", "¦" ]
+    "`" : ｀
+    "~" : ～
+    "!" : { commit: ！ }
+    "@" : [ ＠, ☯ ]
+    "#" : [ ＃, ⌘ ]
+    "%" : [ ％, "°", "℃" ]
+    "$" : [ ￥, "$", "€", "£", "¥", "¢", "¤" ]
+    "^" : { commit: …… }
+    "&" : ＆
+    "*" : [ ＊, ·, ・, ×, ※, ❂ ]
+    "(" : （
+    ")" : ）
+    "_" : [ ——, － ]
+    "+" : ＋
+    "=" : ＝
+    "[" : [ 「, 【, 《, 〔, ［ ]
+    "]" : [ 」, 】, 》, 〕, ］ ]
+    "{" : [ 『, 〖, 〈, ｛ ]
+    "}" : [ 』, 〗, 〉, ｝ ]
   half_shape:
     " ": " "
+    "`" : { commit: "₩" }
     "$" : [ "$", "₩", "＄", "¥", "￥", "€", "£", "￡", "₤", "¢", "￠", "₵", "₡", "¤", "৳", "฿", "₠", "₢", "₣", "₥", "₦", "₧", "₪", "₫", "₭", "₮", "₯", "₰", "₱", "₲", "₳", "₴", "₶", "₷", "₸", "₹", "₺", "₨", "﷼" ]
     "%" : [ "%", "％", "‰", "‱", "°", "℃", "℉", "Å", "㏃", "㏆", "㎈", "㏄", "㏅", "㎝", "㎠", "㎤", "㏈", "㎗", "㎙", "㎓", "㎬", "㏉", "㏊", "㏋", "㎐", "㏌", "㎄", "㎅", "㎉", "㎏", "㎑", "㏍", "㎘", "㎞", "㏎", "㎢", "㎦", "㎪", "㏏", "㎸", "㎾", "㏀", "㏐", "㏓", "㎧", "㎨", "㎡", "㎥", "㎃", "㏔", "㎆", "㎎", "㎒", "㏕", "㎖", "㎜", "㎟", "㎣", "㏖", "㎫", "㎳", "㎷", "㎹", "㎽", "㎿", "㏁", "㎁", "㎋", "㎚", "㎱", "㎵", "㎻", "㏘", "㎩", "㎀", "㎊", "㏗", "㏙", "㏚", "㎰", "㎴", "㎺", "㎭", "㎮", "㎯", "㏛", "㏜", "㎔", "㏝", "㎂", "㎌", "㎍", "㎕", "㎛", "㎲", "㎶", "㎼" ]
     "&" : [ "&", "＆", "＃", "＠", ⅟, ½, ↉, ⅓, ⅔, ¼, ¾, ⅕, ⅖, ⅗, ⅘, ⅙, ⅚, ⅐, ⅛, ⅜, ⅝, ⅞, ⅑, ⅒ ]
@@ -80,7 +133,6 @@ punctuator:
 key_binder:
   import_preset: default
   bindings:
-### 避 RIME 原設定鍵位衝突 ###
     - {accept: comma, send: comma, when: has_menu}
     - {accept: comma, send: comma, when: paging}
     - {accept: period, send: period, when: has_menu}
@@ -89,26 +141,28 @@ key_binder:
     - {accept: minus, send: minus, when: paging}
     - {accept: equal, send: equal, when: has_menu}
     - {accept: equal, send: equal, when: paging}
-######################
+    - {accept: Up, send: KP_Left, when: composing} #左移一個注音
+    - {accept: Up, send: Up, when: paging} #修正上條目出現的bug
+    - {accept: Right, send: Shift+Right, when: composing} #右移一整個字
+    - {accept: Shift+Right, send: Right, when: composing} #右移一個注音
+    - {accept: Shift+Left, send: KP_Left, when: composing} #左移一個注音
     - {accept: Left, send: Page_Up, when: paging}
     - {accept: Right, send: Page_Down, when: paging}
-######################
-    - {accept: Tab, send: Shift+Right, when: composing}
-######################
+    - {accept: Tab, send: Shift+Left, when: paging}
+    - {accept: Shift+space, send: Page_Down, when: has_menu}
+    - {accept: Shift+Tab, send: Page_Up, when: paging}
     - {accept: space, send: Return, when: paging}
     # - {accept: Return, send: space, when: composing}
     # - {accept: Return, send: Return, when: paging}
-######################
-#    - {accept: space, send: Escape, when: composing} # 空碼時，按空格清除
-#    - {accept: space, send: space, when: has_menu} # 非空碼時，空白還是空白
 
 editor:
   bindings:
     Return: confirm
+    KP_Enter: confirm
     Shift+Return: commit_raw_input
 
 recognizer:
   patterns:
-#    uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
     email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
     url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$"
+    reverse_lookup: "^=[a-z]*'?$"
