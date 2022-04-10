@@ -1,14 +1,14 @@
 # Rime schema settings
 # encoding: utf-8
-# 《手機 韓語（洋蔥形碼鍵位）設定頁》
+# 《手機 韓語HNC鍵位設定頁》
 schema:
-  schema_id: hangeul # 注意此ID與文件名裏 .schema.yaml 之前的部分相同
-  name: ❃韓語形碼❃
-  version: "202203"
+  schema_id: hangeul_hnc_m # 注意此ID與文件名裏 .schema.yaml 之前的部分相同
+  name: ❃韓語HNC❃
+  version: "202204"
   author:
     - 『洋蔥』
   description: |
-    韓文形碼
+    韓文HNC
   dependencies:
 
 switches:
@@ -44,20 +44,44 @@ menu:
 
 speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz;/"
+  initials: "abcdefghijklmnoprstuwxyz"
   delimiter: "'"
+  algebra:
+##### 韓文HNC正碼轉寫開始 #####
+    - derive/^l/r/
+    - derive/(.+)l/$1r/
+    - derive/^x/ng/
+    - derive/(.+)x/$1ng/
+    - derive/i/y/
+    - derive/y([aueo])/i$1/
+    - derive/^p/f/
+    - derive/p$/f/
+##### 韓文HNC正碼轉寫結束 #####
+    - abbrev/@//
+    # - 'xlit|@|/|' #
+    - 'xlit|/@|qq|'
+    - derive|q|/| #
+    - derive|;|v| #
+    # - xform|;|v| #
 
 translator:
-  dictionary: hangeul.extended
-#  prism: hangeul
+  dictionary: hangeul_hnc_m.extended
+  # prism: hangeul_hnc_m
   enable_user_dict: true
   enable_sentence: false
   enable_completion: false
-  preedit_format:
-    - "xform/'/ /"
-  comment_format:
-    - "xform/'/ /"
   disable_user_dict_for_patterns:
-    - ^[a-z]{1,3}$
+    - ^[a-z]+[/]?[/abcdefghijklmnopqrstuwxyz]$
+  preedit_format:
+    - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
+    - xform/QQ/‹ʜᴊ›/
+    - xform|[/][/]|‹ʜᴊ›|
+    - xform/Q/‹ʜᴄᴊ›/
+    - xform|[/]|‹ʜᴄᴊ›|
+    - xform/V/‹漢›/
+    - xform/;/‹漢›/  #
+    # - xform/;/ /  #
+    - xform/'/ /  #
 
 punctuator:
 #  import_preset: default
