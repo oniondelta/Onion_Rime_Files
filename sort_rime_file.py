@@ -78,7 +78,6 @@ shutil.copyfile("./allfiles/easy_en_super.dict.yaml", "./sort_rime/注音洋蔥m
 shutil.copyfile("./allfiles/easy_en_super_one.dict.yaml", "./sort_rime/注音洋蔥mixin版/easy_en_super_one.dict.yaml")
 shutil.copyfile("./allfiles/easy_en_super_two.dict.yaml", "./sort_rime/注音洋蔥mixin版/easy_en_super_two.dict.yaml")
 shutil.copyfile("./allfiles/easy_en_super.schema.yaml", "./sort_rime/注音洋蔥mixin版/easy_en_super.schema.yaml")
-shutil.copytree('./allfiles/easy_en_super_防崩潰：Win必加，Mac勿加/', './sort_rime/注音洋蔥mixin版/easy_en_super_防崩潰：Win必加，Mac勿加/')
 
 shutil.copyfile("./allfiles/element_bopomo.yaml", "./sort_rime/注音洋蔥mixin版/element_bopomo.yaml")
 shutil.copyfile("./allfiles/fullshape.extended.dict.yaml", "./sort_rime/注音洋蔥mixin版/fullshape.extended.dict.yaml")
@@ -137,7 +136,8 @@ shutil.copytree('./allfiles/mixin注音_同顯1修改檔(Mac)/', './sort_rime/�
 shutil.copytree('./allfiles/mixin注音_同顯2修改檔(Mac)/', './sort_rime/注音洋蔥mixin版/mixin注音_同顯2修改檔(Mac)/')
 shutil.copytree('./allfiles/mixin注音_同顯1修改檔(Win)/', './sort_rime/注音洋蔥mixin版/mixin注音_同顯1修改檔(Win)/')
 shutil.copytree('./allfiles/mixin注音_同顯2修改檔(Win)/', './sort_rime/注音洋蔥mixin版/mixin注音_同顯2修改檔(Win)/')
-
+shutil.copyfile("./allfiles/easy_en_super_防崩潰：Win必加，Mac勿加/easy_en_super.custom.yaml", "./sort_rime/注音洋蔥mixin版/mixin注音_同顯1修改檔(Win)/easy_en_super.custom.yaml")
+shutil.copyfile("./allfiles/easy_en_super_防崩潰：Win必加，Mac勿加/easy_en_super.custom.yaml", "./sort_rime/注音洋蔥mixin版/mixin注音_同顯2修改檔(Win)/easy_en_super.custom.yaml")
 
 #複製檔案(注音洋蔥plus版)
 shutil.copyfile("./allfiles/essay-zh-hant-mc.txt", "./sort_rime/注音洋蔥plus版/essay-zh-hant-mc.txt")
@@ -162,7 +162,6 @@ shutil.copyfile("./allfiles/easy_en_super.dict.yaml", "./sort_rime/注音洋蔥p
 shutil.copyfile("./allfiles/easy_en_super_one.dict.yaml", "./sort_rime/注音洋蔥plus版/easy_en_super_one.dict.yaml")
 shutil.copyfile("./allfiles/easy_en_super_two.dict.yaml", "./sort_rime/注音洋蔥plus版/easy_en_super_two.dict.yaml")
 shutil.copyfile("./allfiles/easy_en_super.schema.yaml", "./sort_rime/注音洋蔥plus版/easy_en_super.schema.yaml")
-shutil.copytree('./allfiles/easy_en_super_防崩潰：Win必加，Mac勿加/', './sort_rime/注音洋蔥plus版/easy_en_super_防崩潰：Win必加，Mac勿加/')
 
 shutil.copyfile("./allfiles/element_bopomo.yaml", "./sort_rime/注音洋蔥plus版/element_bopomo.yaml")
 shutil.copyfile("./allfiles/fullshape.extended.dict.yaml", "./sort_rime/注音洋蔥plus版/fullshape.extended.dict.yaml")
@@ -226,6 +225,7 @@ shutil.copyfile("./allfiles/opencc/punct_mark.json", "./sort_rime/注音洋蔥pl
 shutil.copyfile("./allfiles/opencc/punct_mark.txt", "./sort_rime/注音洋蔥plus版/opencc/punct_mark.txt")
 
 shutil.copytree('./allfiles/plus注音_防崩潰：Win必加，Mac勿加/', './sort_rime/注音洋蔥plus版/plus注音_防崩潰：Win必加，Mac勿加/')
+shutil.copyfile("./allfiles/easy_en_super_防崩潰：Win必加，Mac勿加/easy_en_super.custom.yaml", "./sort_rime/注音洋蔥plus版/plus注音_防崩潰：Win必加，Mac勿加/easy_en_super.custom.yaml")
 shutil.copytree('./allfiles/jpnin1只出假名custom/', './sort_rime/注音洋蔥plus版/jpnin1只出假名custom/')
 shutil.copytree('./allfiles/jpnin1完整轉寫custom/', './sort_rime/注音洋蔥plus版/jpnin1完整轉寫custom/')
 
@@ -276,7 +276,6 @@ shutil.copyfile("./allfiles/easy_en_super.dict.yaml", "./sort_rime/ocm/ocm_mixin
 shutil.copyfile("./allfiles/easy_en_super_one.dict.yaml", "./sort_rime/ocm/ocm_mixin/easy_en_super_one.dict.yaml")
 shutil.copyfile("./allfiles/easy_en_super_two.dict.yaml", "./sort_rime/ocm/ocm_mixin/easy_en_super_two.dict.yaml")
 shutil.copyfile("./allfiles/easy_en_super.schema.yaml", "./sort_rime/ocm/ocm_mixin/easy_en_super.schema.yaml")
-shutil.copytree('./allfiles/easy_en_super_防崩潰：Win必加，Mac勿加/', './sort_rime/ocm/ocm_mixin/easy_en_super_防崩潰：Win必加，Mac勿加/')
 
 shutil.copyfile("./allfiles/fullshape.extended.dict.yaml", "./sort_rime/ocm/ocm_mixin/fullshape.extended.dict.yaml")
 shutil.copyfile("./allfiles/fullshape.dict.yaml", "./sort_rime/ocm/ocm_mixin/fullshape.dict.yaml")
@@ -369,7 +368,6 @@ shutil.copyfile("./allfiles/easy_en_super.dict.yaml", "./sort_rime/ocm/ocm_plus/
 shutil.copyfile("./allfiles/easy_en_super_one.dict.yaml", "./sort_rime/ocm/ocm_plus/easy_en_super_one.dict.yaml")
 shutil.copyfile("./allfiles/easy_en_super_two.dict.yaml", "./sort_rime/ocm/ocm_plus/easy_en_super_two.dict.yaml")
 shutil.copyfile("./allfiles/easy_en_super.schema.yaml", "./sort_rime/ocm/ocm_plus/easy_en_super.schema.yaml")
-shutil.copytree('./allfiles/easy_en_super_防崩潰：Win必加，Mac勿加/', './sort_rime/ocm/ocm_plus/easy_en_super_防崩潰：Win必加，Mac勿加/')
 
 shutil.copyfile("./allfiles/fullshape.extended.dict.yaml", "./sort_rime/ocm/ocm_plus/fullshape.extended.dict.yaml")
 shutil.copyfile("./allfiles/fullshape.dict.yaml", "./sort_rime/ocm/ocm_plus/fullshape.dict.yaml")
@@ -497,7 +495,7 @@ shutil.copytree('./allfiles/其他/', './sort_rime/其他/')
 
 shutil.copytree('./allfiles/其他/OpenCC_ocd_64位元/', './sort_rime/ocm/OpenCC_ocd_64位元/')
 shutil.copytree('./allfiles/ocm_防崩潰：Win必加，Mac勿加/', './sort_rime/ocm/ocm_防崩潰：Win必加，Mac勿加/')
-
+shutil.copyfile("./allfiles/easy_en_super_防崩潰：Win必加，Mac勿加/easy_en_super.custom.yaml", "./sort_rime/ocm/ocm_防崩潰：Win必加，Mac勿加/easy_en_super.custom.yaml")
 
 #主程式
 shutil.copytree('./allfiles/主程式/', './sort_rime/主程式/')
