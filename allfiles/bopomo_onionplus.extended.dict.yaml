@@ -1,0 +1,20 @@
+# Rime dictionary
+# encoding: utf-8
+# 《洋蔥 plus 注音 字詞庫匯入頁》
+# 『洋蔥』製作
+# 中文字詞標註使用拼音
+---
+name: bopomo_onionplus.extended
+version: "202203"
+sort: by_weight
+vocabulary: essay-zh-hant-mc
+#use_preset_vocabulary: true
+import_tables:
+  - terra_pinyin_onion
+  - terra_pinyin_onion_add
+  - phrases.chtp
+#  - phrases.cht
+...
+##### 測試調用 #####
+ 	|
+##### 以下可自行添加詞句 #####
