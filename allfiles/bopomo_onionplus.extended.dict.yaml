@@ -1,6 +1,6 @@
 # Rime dictionary
 # encoding: utf-8
-# 《洋蔥 純注音 字詞庫匯入頁》
+# 《洋蔥 plus 注音 字詞庫匯入頁》
 # 『洋蔥』製作
 # 中文字詞標註使用拼音
 ---
@@ -8,11 +8,16 @@ name: bopomo_onionplus.extended
 version: "202203"
 sort: by_weight
 vocabulary: essay-zh-hant-mc
+# vocabulary: essay-zh-hant-onion
 #use_preset_vocabulary: true
+#max_phrase_length: 7
+#min_phrase_weight: 100
 import_tables:
   - terra_pinyin_onion
   - terra_pinyin_onion_add
   - phrases.chtp
+#  - phrases.chtpp
+#  - phrases.chtpv
 #  - phrases.cht
 ...
 ##### 測試字（測試是否少掉台灣以外的用字） #####
@@ -20,4 +25,6 @@ import_tables:
 #高峯	gao1 feng1
 ##### 測試調用 #####
  	|
+# 	@
+# 	kong5
 ##### 以下可自行添加詞句 #####
