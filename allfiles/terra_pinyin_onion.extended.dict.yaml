@@ -6,7 +6,7 @@
 # 包含中文、韓語、日語、拉丁+音標
 ---
 name: terra_pinyin_onion.extended
-version: "202203"
+version: "202204"
 sort: by_weight
 vocabulary: essay-zh-hant-mc
 # use_preset_vocabulary: true
@@ -27,5 +27,6 @@ import_tables:
   - phrases.la_py_w
   - phrases.en_l_w
   - phrases.en_u_w
+  - phrases.la_eu_w
 ...
 ##### 以下可自行添加詞句 #####

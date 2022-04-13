@@ -3,7 +3,7 @@
 # 《字庫匯入設定頁》
 ---
 name: dif1_la.extended
-version: "201908"
+version: "202204"
 sort: original
 use_preset_vocabulary: false
 import_tables:
@@ -12,4 +12,5 @@ import_tables:
   - phrases.la_py_w
   - phrases.en_l_w
   - phrases.en_u_w
+  - phrases.la_eu_w
 ...

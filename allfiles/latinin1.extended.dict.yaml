@@ -4,7 +4,7 @@
 # 『洋蔥』製作
 ---
 name: latinin1.extended
-version: "202001"
+version: "202204"
 sort: by_weight
 use_preset_vocabulary: false
 import_tables:
@@ -13,6 +13,7 @@ import_tables:
   - phrases.la_py_w
   - phrases.en_l_w
   - phrases.en_u_w
+  - phrases.la_eu_w
 ...
 ##### 以下一個為空格轉寫，使掛載語言能空格後繼續輸入！！！ #####
  	|
