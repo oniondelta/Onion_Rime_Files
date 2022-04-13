@@ -86,8 +86,76 @@ key_binder:
     - {accept: Left, send: Page_Up, when: paging} #直式選單用 #has_menu
     - {accept: Right, send: Page_Down, when: paging} #直式選單用 #has_menu
 
-# punctuator:
+punctuator:
   # import_preset: default
+  full_shape:
+    " " : { commit: "　" }
+    ',' : { commit: "，" }
+    # '.' : { commit: "．" }
+    '<' : { commit: "＜" }
+    '>' : { commit: "＞" }
+    '?' : { commit: "？" }
+    # '/' : { commit: "／" }
+    ':' : { commit: "：" }
+    ';' : { commit: "；" }
+    # "'" : { commit: "＇" }
+    '"' : { commit: '＂' }
+    '\\' : { commit: "＼" }
+    '|' : { commit: "｜" }
+    '`' : { commit: "｀" }
+    '~' : { commit: '～' }
+    '!' : { commit: '！' }
+    '@' : { commit: '＠' }
+    '#' : { commit: '＃' }
+    '%' : { commit: '％' }
+    '$' : { commit: '＄' }
+    '^' : { commit: '＾' }
+    '&' : { commit: '＆' }
+    '*' : { commit: '＊' }
+    '(' : { commit: '（' }
+    ')' : { commit: '）' }
+    '_' : { commit: '＿' }
+    # '-' : { commit: '－' }
+    '+' : { commit: '＋' }
+    '=' : { commit: '＝' }
+    '[' : { commit: '［' }
+    ']' : { commit: '］' }
+    '{' : { commit: '｛' }
+    '}' : { commit: '｝' }
+  half_shape:
+    # ' ' : { commit: ' ' }
+    ',' : { commit: "," }
+    # '.' : { commit: "." }
+    '<' : { commit: "<" }
+    '>' : { commit: ">" }
+    '?' : { commit: "?" }
+    # '/' : { commit: "/" }
+    ':' : { commit: ":" }
+    ';' : { commit: ";" }
+    # "'" : { commit: "'" }
+    '"' : { commit: '"' }
+    '\\' : { commit: "\\" }
+    '|' : { commit: "|" }
+    '`' : { commit: "`" }
+    '~' : { commit: '~' }
+    '!' : { commit: '!' }
+    '@' : { commit: '@' }
+    '#' : { commit: '#' }
+    '%' : { commit: '%' }
+    '$' : { commit: '$' }
+    '^' : { commit: '^' }
+    '&' : { commit: '&' }
+    '*' : { commit: '*' }
+    '(' : { commit: '(' }
+    ')' : { commit: ')' }
+    '_' : { commit: '_' }
+    # '-' : { commit: '-' }
+    '+' : { commit: '+' }
+    '=' : { commit: '=' }
+    '[' : { commit: '[' }
+    ']' : { commit: ']' }
+    '{' : { commit: '{' }
+    '}' : { commit: '}' }
 
 recognizer:
   import_preset: default
