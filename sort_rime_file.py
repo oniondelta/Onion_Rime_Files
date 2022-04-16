@@ -113,6 +113,7 @@ shutil.copyfile("./allfiles/terra_pinyin_onion.dict.yaml", "./sort_rime/注音�
 
 shutil.copyfile("./allfiles/jpnin1_phrase.txt", "./sort_rime/注音洋蔥mixin版/jpnin1_phrase.txt")
 shutil.copyfile("./allfiles/jpnin1.dict.yaml", "./sort_rime/注音洋蔥mixin版/jpnin1.dict.yaml")
+shutil.copyfile("./allfiles/jpnin1_hw.dict.yaml", "./sort_rime/注音洋蔥mixin版/jpnin1_hw.dict.yaml")
 shutil.copyfile("./allfiles/jpnin1.extended.dict.yaml", "./sort_rime/注音洋蔥mixin版/jpnin1.extended.dict.yaml")
 shutil.copyfile("./allfiles/jpnin1.schema.yaml", "./sort_rime/注音洋蔥mixin版/jpnin1.schema.yaml")
 shutil.copyfile("./allfiles/phrases.jp_hkk.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.jp_hkk.dict.yaml")
@@ -183,6 +184,7 @@ shutil.copyfile("./allfiles/hangeul_hnc_hanja.dict.yaml", "./sort_rime/注音洋
 shutil.copyfile("./allfiles/hangeul_hnc_phrase.txt", "./sort_rime/注音洋蔥plus版/hangeul_hnc_phrase.txt")
 shutil.copyfile("./allfiles/jpnin1_phrase.txt", "./sort_rime/注音洋蔥plus版/jpnin1_phrase.txt")
 shutil.copyfile("./allfiles/jpnin1.dict.yaml", "./sort_rime/注音洋蔥plus版/jpnin1.dict.yaml")
+shutil.copyfile("./allfiles/jpnin1_hw.dict.yaml", "./sort_rime/注音洋蔥plus版/jpnin1_hw.dict.yaml")
 shutil.copyfile("./allfiles/jpnin1.extended.dict.yaml", "./sort_rime/注音洋蔥plus版/jpnin1.extended.dict.yaml")
 shutil.copyfile("./allfiles/jpnin1.schema.yaml", "./sort_rime/注音洋蔥plus版/jpnin1.schema.yaml")
 shutil.copyfile("./allfiles/latinin1.dict.yaml", "./sort_rime/注音洋蔥plus版/latinin1.dict.yaml")
@@ -345,6 +347,7 @@ shutil.copyfile("./allfiles/opencc/punct_mark.txt", "./sort_rime/ocm/ocm_mixin/o
 
 shutil.copyfile("./allfiles/jpnin1_phrase.txt", "./sort_rime/ocm/ocm_mixin/jpnin1_phrase.txt")
 shutil.copyfile("./allfiles/jpnin1.dict.yaml", "./sort_rime/ocm/ocm_mixin/jpnin1.dict.yaml")
+shutil.copyfile("./allfiles/jpnin1_hw.dict.yaml", "./sort_rime/ocm/ocm_mixin/jpnin1_hw.dict.yaml")
 shutil.copyfile("./allfiles/jpnin1.extended.dict.yaml", "./sort_rime/ocm/ocm_mixin/jpnin1.extended.dict.yaml")
 shutil.copyfile("./allfiles/jpnin1.schema.yaml", "./sort_rime/ocm/ocm_mixin/jpnin1.schema.yaml")
 shutil.copyfile("./allfiles/essay-jp-onion.txt", "./sort_rime/ocm/ocm_mixin/essay-jp-onion.txt")
@@ -439,6 +442,7 @@ shutil.copyfile("./allfiles/opencc/punct_mark.txt", "./sort_rime/ocm/ocm_plus/op
 
 shutil.copyfile("./allfiles/jpnin1_phrase.txt", "./sort_rime/ocm/ocm_plus/jpnin1_phrase.txt")
 shutil.copyfile("./allfiles/jpnin1.dict.yaml", "./sort_rime/ocm/ocm_plus/jpnin1.dict.yaml")
+shutil.copyfile("./allfiles/jpnin1_hw.dict.yaml", "./sort_rime/ocm/ocm_plus/jpnin1_hw.dict.yaml")
 shutil.copyfile("./allfiles/jpnin1.extended.dict.yaml", "./sort_rime/ocm/ocm_plus/jpnin1.extended.dict.yaml")
 shutil.copyfile("./allfiles/jpnin1.schema.yaml", "./sort_rime/ocm/ocm_plus/jpnin1.schema.yaml")
 shutil.copyfile("./allfiles/essay-jp-onion.txt", "./sort_rime/ocm/ocm_plus/essay-jp-onion.txt")
