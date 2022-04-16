@@ -1,10 +1,10 @@
 # Rime dictionary
 # encoding: utf-8
-# 《日語（平假名+片假名）字詞庫匯入頁》
+# 《日語（平假名+片假名+漢字+半形假名）字詞庫匯入頁》
 # 『洋蔥』製作
 ---
 name: jpnin1.extended
-version: "202105"
+version: "202204"
 sort: by_weight
 vocabulary: essay-jp-onion
 #use_preset_vocabulary: false
@@ -12,12 +12,11 @@ vocabulary: essay-jp-onion
 #min_phrase_weight: 100
 import_tables:
   - jpnin1
+  - jpnin1_hw
 #  - phrases.jp_hk
-#  - phrases.jp_hkup_w #for phrases.jp_hk 漢字和假名混打時可打開
   - phrases.jp_hk_more
-#  - phrases.jp_hkmoreup_w #for phrases.jp_hk_more 漢字和假名混打時可打開
   - phrases.jp_hkkseg
-#  - phrases.jp_hkk
+#  - phrases.jp_hkk #不要開，大量mapping，速度會減慢
 ...
 ##### 以下一個為空格轉寫，使掛載語言能空格後繼續輸入！！！ #####
  	|
