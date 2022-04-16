@@ -118,8 +118,8 @@ shutil.copyfile("./allfiles/jpnin1.extended.dict.yaml", "./sort_rime/注音洋�
 shutil.copyfile("./allfiles/jpnin1.schema.yaml", "./sort_rime/注音洋蔥mixin版/jpnin1.schema.yaml")
 shutil.copyfile("./allfiles/phrases.jp_hkk.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.jp_hkk.dict.yaml")
 shutil.copyfile("./allfiles/phrases.jp_hkkseg.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.jp_hkkseg.dict.yaml")
-shutil.copyfile("./allfiles/phrases.jp_hkup_w.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.jp_hkup_w.dict.yaml")
-shutil.copyfile("./allfiles/phrases.jp_hkmoreup_w.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.jp_hkmoreup_w.dict.yaml")
+# shutil.copyfile("./allfiles/phrases.jp_hkup_w.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.jp_hkup_w.dict.yaml")
+# shutil.copyfile("./allfiles/phrases.jp_hkmoreup_w.dict.yaml", "./sort_rime/注音洋蔥mixin版/phrases.jp_hkmoreup_w.dict.yaml")
 
 shutil.copyfile("./allfiles/各方案default.custom/注音洋蔥mixin版_custom/default.custom.yaml", "./sort_rime/注音洋蔥mixin版/default.custom.yaml")
 
@@ -203,8 +203,8 @@ shutil.copyfile("./allfiles/phrases.jp_hk.dict.yaml", "./sort_rime/注音洋蔥p
 shutil.copyfile("./allfiles/phrases.jp_hk_more.dict.yaml", "./sort_rime/注音洋蔥plus版/phrases.jp_hk_more.dict.yaml")
 shutil.copyfile("./allfiles/phrases.jp_hkk.dict.yaml", "./sort_rime/注音洋蔥plus版/phrases.jp_hkk.dict.yaml")
 shutil.copyfile("./allfiles/phrases.jp_hkkseg.dict.yaml", "./sort_rime/注音洋蔥plus版/phrases.jp_hkkseg.dict.yaml")
-shutil.copyfile("./allfiles/phrases.jp_hkup_w.dict.yaml", "./sort_rime/注音洋蔥plus版/phrases.jp_hkup_w.dict.yaml")
-shutil.copyfile("./allfiles/phrases.jp_hkmoreup_w.dict.yaml", "./sort_rime/注音洋蔥plus版/phrases.jp_hkmoreup_w.dict.yaml")
+# shutil.copyfile("./allfiles/phrases.jp_hkup_w.dict.yaml", "./sort_rime/注音洋蔥plus版/phrases.jp_hkup_w.dict.yaml")
+# shutil.copyfile("./allfiles/phrases.jp_hkmoreup_w.dict.yaml", "./sort_rime/注音洋蔥plus版/phrases.jp_hkmoreup_w.dict.yaml")
 shutil.copyfile("./allfiles/phrases.kr_more.dict.yaml", "./sort_rime/注音洋蔥plus版/phrases.kr_more.dict.yaml")
 shutil.copyfile("./allfiles/phrases.la_py_w.dict.yaml", "./sort_rime/注音洋蔥plus版/phrases.la_py_w.dict.yaml")
 shutil.copyfile("./allfiles/phrases.la_eu_w.dict.yaml", "./sort_rime/注音洋蔥plus版/phrases.la_eu_w.dict.yaml")
@@ -353,8 +353,8 @@ shutil.copyfile("./allfiles/jpnin1.schema.yaml", "./sort_rime/ocm/ocm_mixin/jpni
 shutil.copyfile("./allfiles/essay-jp-onion.txt", "./sort_rime/ocm/ocm_mixin/essay-jp-onion.txt")
 shutil.copyfile("./allfiles/phrases.jp_hkk.dict.yaml", "./sort_rime/ocm/ocm_mixin/phrases.jp_hkk.dict.yaml")
 shutil.copyfile("./allfiles/phrases.jp_hkkseg.dict.yaml", "./sort_rime/ocm/ocm_mixin/phrases.jp_hkkseg.dict.yaml")
-shutil.copyfile("./allfiles/phrases.jp_hkup_w.dict.yaml", "./sort_rime/ocm/ocm_mixin/phrases.jp_hkup_w.dict.yaml")
-shutil.copyfile("./allfiles/phrases.jp_hkmoreup_w.dict.yaml", "./sort_rime/ocm/ocm_mixin/phrases.jp_hkmoreup_w.dict.yaml")
+# shutil.copyfile("./allfiles/phrases.jp_hkup_w.dict.yaml", "./sort_rime/ocm/ocm_mixin/phrases.jp_hkup_w.dict.yaml")
+# shutil.copyfile("./allfiles/phrases.jp_hkmoreup_w.dict.yaml", "./sort_rime/ocm/ocm_mixin/phrases.jp_hkmoreup_w.dict.yaml")
 shutil.copyfile("./allfiles/cangjie5.dict.yaml", "./sort_rime/ocm/ocm_mixin/cangjie5.dict.yaml")
 shutil.copyfile("./allfiles/cangjie5.schema.yaml", "./sort_rime/ocm/ocm_mixin/cangjie5.schema.yaml")
 
@@ -448,8 +448,8 @@ shutil.copyfile("./allfiles/jpnin1.schema.yaml", "./sort_rime/ocm/ocm_plus/jpnin
 shutil.copyfile("./allfiles/essay-jp-onion.txt", "./sort_rime/ocm/ocm_plus/essay-jp-onion.txt")
 shutil.copyfile("./allfiles/phrases.jp_hkk.dict.yaml", "./sort_rime/ocm/ocm_plus/phrases.jp_hkk.dict.yaml")
 shutil.copyfile("./allfiles/phrases.jp_hkkseg.dict.yaml", "./sort_rime/ocm/ocm_plus/phrases.jp_hkkseg.dict.yaml")
-shutil.copyfile("./allfiles/phrases.jp_hkup_w.dict.yaml", "./sort_rime/ocm/ocm_plus/phrases.jp_hkup_w.dict.yaml")
-shutil.copyfile("./allfiles/phrases.jp_hkmoreup_w.dict.yaml", "./sort_rime/ocm/ocm_plus/phrases.jp_hkmoreup_w.dict.yaml")
+# shutil.copyfile("./allfiles/phrases.jp_hkup_w.dict.yaml", "./sort_rime/ocm/ocm_plus/phrases.jp_hkup_w.dict.yaml")
+# shutil.copyfile("./allfiles/phrases.jp_hkmoreup_w.dict.yaml", "./sort_rime/ocm/ocm_plus/phrases.jp_hkmoreup_w.dict.yaml")
 shutil.copyfile("./allfiles/cangjie5.dict.yaml", "./sort_rime/ocm/ocm_plus/cangjie5.dict.yaml")
 shutil.copyfile("./allfiles/cangjie5.schema.yaml", "./sort_rime/ocm/ocm_plus/cangjie5.schema.yaml")
 
