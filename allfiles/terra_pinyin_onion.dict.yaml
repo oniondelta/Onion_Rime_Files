@@ -2040,6 +2040,7 @@ min_phrase_weight: 100
 枬	zhan1
 咩	mi3	0%
 胺	e4	0%
+徙	si1	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -20377,7 +20378,7 @@ min_phrase_weight: 100
 搳	qia1
 搳	xia2
 搴	qian1
-搵	wen3	50%
+#搵	wen3	50%
 搵	wen4	50%
 搶	qiang1	1%
 搶	qiang3	99%
@@ -111702,4 +111703,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 111705 #####
+##### @結束 END - 111706 #####
