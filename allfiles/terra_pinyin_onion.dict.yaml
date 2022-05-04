@@ -128,7 +128,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "202204"
+version: "202205"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -64524,6 +64524,7 @@ min_phrase_weight: 100
 呼號	hu1 hao4
 呼蛇容易遣蛇難	hu1 she2 rong2 yi4 qian3 she2 nan2
 命中	ming4 zhong4
+命中	ming4 zhong1
 命中率	ming4 zhong4 lv4
 命乖運拙	ming4 guai1 yun4 zhuo2
 命分	ming4 fen4
@@ -111704,4 +111705,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 111707 #####
+##### @結束 END - 111708 #####

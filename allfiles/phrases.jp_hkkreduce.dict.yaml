@@ -7,7 +7,7 @@
 # 本詞庫刪除純「假名」之詞彙。純「假名」詞庫為「phrases.jp_hk」。
 ---
 name: phrases.jp_hkkreduce
-version: "202204"
+version: "202205"
 sort: by_weight #original
 use_preset_vocabulary: false
 columns:
@@ -35324,7 +35324,6 @@ columns:
 藍碧
 藤だ
 藤二
-藤井
 藤代
 藤倉
 藤六
