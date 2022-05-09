@@ -16480,7 +16480,8 @@ min_phrase_weight: 100
 坢	ban4
 坢	pan3
 坢	pan4
-坣	tang1
+# 坣	tang1
+坣	tang2
 坤	kun1
 坥	ju4
 坥	qu1
@@ -111705,4 +111706,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 111708 #####
+##### @結束 END - 111709 #####
