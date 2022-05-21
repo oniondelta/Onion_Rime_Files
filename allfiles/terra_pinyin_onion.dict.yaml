@@ -106,6 +106,7 @@
 #    詞句中，「夕」臺灣字典發音和習慣發音為「xi4」，大陸發音為「xi1」，斟酌後全改成臺灣發音「xi4」。
 #    詞句中，「關係」其「係」臺灣字典發音為「xi4」，但日常常發「xi1」，故「關係」其「係」都補上「xi1」該發音。
 #    詞句中，「地」於句尾當結構助詞時，意思同「的」時，不標註「di4」，標註「de5」「di5」。
+#    詞句中，「嚓」臺灣字典只有發音「ca1」，不標為「cha1」，因為為形聲，故另標「ca5」，故全都補齊「ca1」「ca5」。
 #    預計比對「輕聲和一聲」變音。
 #
 #  〈2020修改字詞彙發音〉：
@@ -64841,7 +64842,8 @@ min_phrase_weight: 100
 咎繇	gao1 yao2
 咎陶	gao1 yao2
 咔噠聲	ka3 da1 sheng1
-咔嚓	ka1 cha1
+咔嚓	ka1 ca1
+咔嚓	ka5 ca5	80%
 咕唧	gu1 ji1
 咕唧	gu1 ji2
 咕嘟	gu1 du1
@@ -64925,7 +64927,8 @@ min_phrase_weight: 100
 咯噔	ge1 deng1
 咯噠	ge1 da1
 咯噹	ge1 dang1
-咯嚓	ge1 cha1
+咯嚓	ge1 ca1
+咯嚓	ge5 ca5	80%
 咯血	ka3 xie3
 咯血	luo4 xue4
 咯血	luo4 xie3
@@ -65358,6 +65361,7 @@ min_phrase_weight: 100
 啪啦	pa1 la1
 啪嗒	pa1 da1
 啪嚓	pa1 ca1
+啪嚓	pa5 ca5	80%
 啫哩	zhe3 li1
 啲咑	di1 da1
 啴啴	tan1 tan1
@@ -66042,6 +66046,7 @@ min_phrase_weight: 100
 嚏噴	ti4 fen4
 嚏噴	ti4 pen1
 嚓嚓	ca1 ca1
+嚓嚓	ca5 ca5	80%
 嚕囌	lu1 su1
 嚜嚜	mo4 mo4
 嚭嚭地	pi3 pi3 de5
@@ -111707,4 +111712,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 111710 #####
+##### @結束 END - 111715 #####
