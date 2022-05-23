@@ -18,7 +18,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion_add
-version: "202204"
+version: "202205"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7
@@ -234,6 +234,7 @@ min_phrase_weight: 100
 遢	(ta1)	10%
 鵜	(ti4)	10%
 鹈	(ti4)	10%
+菡	(han2)	50%
 ### @補充為《一聲》，通俗慣用或方便輸入，『非正確發音』！！！ ###
 腓	(fei1)	1%
 琲	(fei1)	1%
