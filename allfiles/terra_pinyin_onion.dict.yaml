@@ -70992,9 +70992,12 @@ min_phrase_weight: 100
 小菜碟兒	xiao3 cai4 die2 er5	80%
 小菜碟兒	xiao3 cai4 die2 er2
 小蘇打粉	xiao3 su1 da2 fen3
+小蘿蔔頭	xiao3 luo2 bo5 tou2
+小蘿蔔頭	xiao3 luo2 bo1 tou2
+小蘿蔔頭	xiao3 luo2 bo2 tou2
 小蘿蔔頭	xiao3 luo2 bo5 tou5
 小蘿蔔頭	xiao3 luo2 bo1 tou5
-小蘿蔔頭	xiao3 luo2 bo2 tou2
+小蘿蔔頭	xiao3 luo2 bo2 tou5
 小處著手	xiao3 chu4 zhuo2 shou3
 小行	xiao3 xing2
 小行星	xiao3 xing2 xing1
@@ -73941,6 +73944,7 @@ min_phrase_weight: 100
 心裡癢癢	xin1 li3 yang3 yang3
 心裡美蘿蔔	xin1 li3 mei3 luo2 bo5
 心裡美蘿蔔	xin1 li3 mei3 luo2 bo2
+心裡美蘿蔔	xin1 li3 mei3 luo2 bo1
 心裡話	xin1 li3 hua4
 心跡	xin1 ji1
 心跡	xin1 ji4
@@ -76654,6 +76658,8 @@ min_phrase_weight: 100
 拓銷	tuo4 xiao1
 拔不出腿來	ba2 bu4 chu1 tui3 lai2
 拔了蘿蔔地皮寬	ba2 le5 luo2 bo5 di4 pi2 kuan1
+拔了蘿蔔地皮寬	ba2 le5 luo2 bo2 di4 pi2 kuan1
+拔了蘿蔔地皮寬	ba2 le5 luo2 bo1 di4 pi2 kuan1
 拔刀相助	ba2 dao1 xiang1 zhu4
 拔刀相濟	ba2 dao1 xiang1 ji4
 拔剌	ba2 la4
@@ -81874,6 +81880,7 @@ min_phrase_weight: 100
 杠轂	gang1 gu3
 杭子	hang2 zi5
 杭州蘿蔔紹興種	hang2 zhou1 luo2 bo5 shao4 xing1 zhong4
+杭州蘿蔔紹興種	hang2 zhou1 luo2 bo2 shao4 xing1 zhong3
 杭州蘿蔔紹興種	hang2 zhou1 luo2 bo1 shao4 xing1 zhong3
 杯和	bei1 he2
 杯圈	bei1 quan1
@@ -92819,6 +92826,7 @@ min_phrase_weight: 100
 空心菜	kong1 xin1 cai4
 空心蘿蔔	kong1 xin1 luo2 bo5
 空心蘿蔔	kong1 xin1 luo2 bo2
+空心蘿蔔	kong1 xin1 luo2 bo1
 空怒	kong1 nu4
 空想	kong1 xiang3
 空想社會主義	kong1 xiang3 she4 hui4 zhu3 yi4
@@ -99289,8 +99297,8 @@ min_phrase_weight: 100
 蘭鄭長管道	lan2 zheng4 chang2 guan3 dao4
 蘮蒘	ji4 ru2
 蘿蔔乾	luo2 bo5 gan1
-蘿蔔乾	luo2 bo1 gan1
 蘿蔔乾	luo2 bo2 gan1
+蘿蔔乾	luo2 bo1 gan1
 虎不拉	hu3 bu4 la1
 虎不拉	hu4 bu4 la3
 虎刺	hu3 ci4
@@ -111712,4 +111720,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 111715 #####
+##### @結束 END - 111723 #####
