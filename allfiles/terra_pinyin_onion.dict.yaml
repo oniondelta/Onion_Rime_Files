@@ -110,6 +110,7 @@
 #    詞句中，「嚓」臺灣字典只有發音「ca1」，不標為「cha1」，因為為形聲，故另標「ca5」，故全都補齊「ca1」「ca5」。
 #    詞句中，「睪」臺灣字典只有發音「gao1」，但日常常發「gao3」，故全都補齊「gao1」「gao3」。
 #    詞句中，「蘿蔔」中的「蔔」，「bo2」為讀音，「bo5」為語音，「bo1」常出現在日常發音中，故全都補齊「bo2」「bo5」「bo1」。
+#    詞句中，「舞蹈」中的「蹈」，臺灣字典發音為「dao4」，但日常常發「dao3」，故全都補齊「dao4」「dao3」。
 #    預計比對「輕聲和一聲」變音。
 #
 #  〈2020修改字詞彙發音〉：
@@ -63590,6 +63591,7 @@ min_phrase_weight: 100
 古公亶父	gu3 gong1 dan3 fu3
 古典樂	gu3 dian3 yue4
 古典舞蹈	gu3 dian3 wu3 dao4
+古典舞蹈	gu3 dian3 wu3 dao3
 古典音樂	gu3 dian3 yin1 yue4
 古剌水	gu3 la4 shui3
 古剎	gu3 cha4
@@ -81278,6 +81280,7 @@ min_phrase_weight: 100
 有機玻璃	you3 ji1 bo1 li2
 有毛的蠻子	you3 mao2 de5 man2 zi5
 有氧舞蹈	you3 yang3 wu3 dao4
+有氧舞蹈	you3 yang3 wu3 dao3
 有求必應	you3 qiu2 bi4 ying4
 有求斯應	you3 qiu2 si1 ying4
 有無相生	you3 wu2 xiang1 sheng1
@@ -84221,6 +84224,7 @@ min_phrase_weight: 100
 民間習俗	min2 jian1 xi2 su2
 民間舞	min2 jian1 wu3
 民間舞蹈	min2 jian1 wu3 dao3
+民間舞蹈	min2 jian1 wu3 dao4
 民間藝術	min2 jian1 yi4 shu4
 民間音樂	min2 jian1 yin1 yue4
 氓隸	mang2 li4
@@ -97398,8 +97402,11 @@ min_phrase_weight: 100
 舞蹈家	wu3 dao4 jia1
 舞蹈家	wu3 dao3 jia1
 舞蹈治療	wu3 dao4 zhi4 liao2
+舞蹈治療	wu3 dao3 zhi4 liao2
 舞蹈病	wu3 dao4 bing4
+舞蹈病	wu3 dao3 bing4
 舞蹈症	wu3 dao4 zheng4
+舞蹈症	wu3 dao3 zheng4
 舟曲	zhou1 qu3
 舟曲縣	zhou1 qu3 xian4
 航模	hang2 mo2
@@ -100712,6 +100719,7 @@ min_phrase_weight: 100
 西燕	xi1 yan1
 西片	xi1 pian4
 西班牙舞蹈	xi1 ban1 ya2 wu3 dao4
+西班牙舞蹈	xi1 ban1 ya2 wu3 dao3
 西班牙音樂	xi1 ban1 ya2 yin1 yue4
 西突厥史料	xi1 tu2 jue2 shi3 liao4
 西突厥史料	xi1 tu1 jue2 shi3 liao4
@@ -111722,4 +111730,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 111725 #####
+##### @結束 END - 111733 #####
