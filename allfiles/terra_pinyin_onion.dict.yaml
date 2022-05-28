@@ -2046,6 +2046,7 @@ min_phrase_weight: 100
 胺	e4	0%
 徙	si1	0%
 諭	tou3	0%
+粩	lao3	70%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -53691,7 +53692,7 @@ min_phrase_weight: 100
 𬌗	he2
 𫛸	ti2
 
-##### @@以下為「詞組」 #####
+##### @@@以下為「詞組」 #####
 㓦劃	bo4 hua4
 㕷啦	pa1 la1
 㕷噠	pa1 da2
@@ -85486,6 +85487,7 @@ min_phrase_weight: 100
 活埋	huo2 mai2
 活埋人	huo2 mai2 ren2
 活塞	huo2 sai1
+活塞	huo2 sai4
 活字印刷	huo2 zi4 yin4 shua1
 活字版印刷	huo2 zi4 ban3 yin4 shua1
 活寶貝	huo2 bao3 bei4
@@ -111730,4 +111732,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 111733 #####
+##### @結束 END - 111735 #####
