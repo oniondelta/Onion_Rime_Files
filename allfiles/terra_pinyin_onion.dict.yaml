@@ -81236,6 +81236,7 @@ min_phrase_weight: 100
 有年頭	you3 nian2 tou5
 有彈性	you3 tan2 xing4
 有待	you3 dai4
+有待	you3 dai1
 有得	you3 de2
 有得有失	you3 de2 you3 shi1
 有德行	you3 de2 xing2
@@ -84793,6 +84794,7 @@ min_phrase_weight: 100
 沒身不忘	mo4 shen1 bu2 wang4
 沒輕沒重	mei2 qing1 mei2 zhong4
 沒轍	mei2 zhe2
+沒轍	mei2 che4
 沒造化	mei2 zao4 hua4
 沒造化的	mei2 zao4 hua4 de5
 沒造化的種子	mei2 zao4 hua4 de5 zhong3 zi3
@@ -84809,6 +84811,7 @@ min_phrase_weight: 100
 沒關係	mei2 guan1 xi4
 沒雕當	mei2 diao1 dang4
 沒頂	mo4 ding3
+沒頂	mei2 ding3
 沒頭帖子	mei2 tou2 tie3 zi5
 沒頭案子	mei2 tou2 an4 zi5
 沒頭沒腦	mei2 tou2 mei2 nao3
@@ -87252,6 +87255,7 @@ min_phrase_weight: 100
 無緣對面不相逢	wu2 yuan2 dui4 mian4 bu4 xiang1 feng2
 無縛雞之力	wu2 fu2 ji1 zhi1 li4
 無縫	wu2 feng4
+無縫	wu2 feng2
 無縫連接	wu2 feng4 lian2 jie1
 無置錐地	wu2 zhi4 zhui1 di4
 無聲無息	wu2 sheng1 wu2 xi2
@@ -111732,4 +111736,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 111735 #####
+##### @結束 END - 111739 #####
