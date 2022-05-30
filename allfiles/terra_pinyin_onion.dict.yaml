@@ -112,6 +112,7 @@
 #    詞句中，「蘿蔔」中的「蔔」，「bo2」為讀音，「bo5」為語音，「bo1」常出現在日常發音中，故全都補齊「bo2」「bo5」「bo1」。
 #    詞句中，「舞蹈」中的「蹈」，臺灣字典發音為「dao4」，但日常常發「dao3」，故全都補齊「dao4」「dao3」。
 #    詞句中，「框」臺灣字典只有發音「kuang1」，沒有「kuang4」發音，故只保留「kuang1」發音。
+#    詞句中，「紮」臺灣字典發音為「za1」和「zha2」，但對岸字典有「zha1」，由於發音相近，故「za1」和「zha1」相互補齊，「zha2」語意不同，故不補。
 #    預計比對「輕聲和一聲」變音。
 #
 #  〈2020修改字詞彙發音〉：
@@ -69863,6 +69864,7 @@ min_phrase_weight: 100
 安步當車	an1 bu4 dang4 che1
 安營紮寨	an1 ying2 zha2 zhai4
 安營紮寨	an1 ying2 zha1 zhai4
+安營紮寨	an1 ying2 za1 zhai4
 安瓿	an1 bu4
 安著	an1 zhuo2
 安碓磑	an1 dui4 wei4
@@ -94070,7 +94072,11 @@ min_phrase_weight: 100
 紙糊頭	zhi3 hu2 tou5
 紙糊頭	zhi3 hu2 tou2
 紙紮	zhi3 zha2
+紙紮	zhi3 zha1
+紙紮	zhi3 za1
 紙紮店	zhi3 zha2 dian4
+紙紮店	zhi3 zha1 dian4
+紙紮店	zhi3 za1 dian4
 紙葉子	zhi3 ye4 zi5
 紙馬兒	zhi3 ma3 er5	80%
 紙馬兒	zhi3 ma3 er2
@@ -94140,9 +94146,12 @@ min_phrase_weight: 100
 紮實推進	za1 shi2 tui1 jin4
 紮寨	zha2 zhai4
 紮寨	zha1 zhai4
+紮寨	za1 zhai4
 紮營	zha1 ying2
+紮營	za1 ying2
 紮營	zha2 ying2
 紮紮實實	za1 za1 shi2 shi2
+紮紮實實	zha1 zha1 shi2 shi2
 紮紮實實	zha2 zha2 shi2 shi2
 紮腳	zha2 jiao3
 紮裹	zha2 guo3
@@ -94406,6 +94415,7 @@ min_phrase_weight: 100
 結約	jie2 yue1
 結納	jie2 na4
 結紮	jie2 za1
+結紮	jie2 zha1
 結紮	jie2 zha2
 結結實實	jie1 jie1 shi2 shi2
 結結實實	jie2 jie2 shi2 shi2
@@ -94565,6 +94575,7 @@ min_phrase_weight: 100
 絳闕	jiang4 que4
 絹子	juan4 zi5
 綁紮	bang3 za1
+綁紮	bang3 zha1
 綁紮	bang3 zha2
 綁縛	bang3 fu2
 綁縛	bang3 fu4
@@ -110407,6 +110418,7 @@ min_phrase_weight: 100
 駐泊地	zhu4 bo2 di4
 駐留時間	zhu4 liu2 shi2 jian1
 駐紮	zhu4 zha1
+駐紮	zhu4 za1
 駐紮	zhu4 zha2
 駐華盛頓	zhu4 hua2 sheng4 dun4
 駐防地	zhu4 fang2 di4
@@ -111725,4 +111737,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 111728 #####
+##### @結束 END - 111740 #####
