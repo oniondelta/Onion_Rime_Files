@@ -111,6 +111,7 @@
 #    詞句中，「睪」臺灣字典只有發音「gao1」，但日常常發「gao3」，故全都補齊「gao1」「gao3」。
 #    詞句中，「蘿蔔」中的「蔔」，「bo2」為讀音，「bo5」為語音，「bo1」常出現在日常發音中，故全都補齊「bo2」「bo5」「bo1」。
 #    詞句中，「舞蹈」中的「蹈」，臺灣字典發音為「dao4」，但日常常發「dao3」，故全都補齊「dao4」「dao3」。
+#    詞句中，「框」臺灣字典只有發音「kuang1」，沒有「kuang4」發音，故只保留「kuang1」發音。
 #    預計比對「輕聲和一聲」變音。
 #
 #  〈2020修改字詞彙發音〉：
@@ -79992,9 +79993,7 @@ min_phrase_weight: 100
 方枘圜鑿	fang1 rui4 yuan2 zao2
 方枘圜鑿	fang1 rui4 yuan2 zuo4
 方框	fang1 kuang1
-方框	fang1 kuang4
 方框圖	fang1 kuang1 tu2
-方框圖	fang1 kuang4 tu2
 方正不阿	fang1 zheng4 bu4 e1
 方為人上人	fang1 wei2 ren2 shang4 ren2
 方相	fang1 xiang4
@@ -82484,13 +82483,9 @@ min_phrase_weight: 100
 桄子	guang4 zi5
 桄榔	guang1 lang2
 框圖	kuang1 tu2
-框圖	kuang4 tu2
 框子	kuang1 zi5
-框子	kuang4 zi5
 框架	kuang1 jia4
-框架	kuang4 jia4
 框框	kuang1 kuang1
-框框	kuang4 kuang4
 案卷	an4 juan4
 案子	an4 zi5
 案稱	an4 cheng4
@@ -82564,7 +82559,6 @@ min_phrase_weight: 100
 條播	tiao2 bo4
 條播	tiao2 bo1
 條條框框	tiao2 tiao2 kuang1 kuang1
-條條框框	tiao2 tiao2 kuang4 kuang4
 條理分明	tiao2 li3 fen1 ming2
 梟將	xiao1 jiang4
 梟騎	xiao1 ji4
@@ -89398,7 +89392,6 @@ min_phrase_weight: 100
 畫帖	hua4 tie3
 畫拉	hua4 la1
 畫框	hua4 kuang1
-畫框	hua4 kuang4
 畫法幾何	hua4 fa3 ji3 he2
 畫荻教子	hua4 di2 jiao4 zi3
 畫虎畫皮難畫骨	hua4 hu3 hua4 pi2 nan2 hua4 gu3
@@ -90793,7 +90786,6 @@ min_phrase_weight: 100
 相期	xiang1 qi2
 相架	xiang4 jia4
 相框	xiang4 kuang1
-相框	xiang4 kuang4
 相機	xiang4 ji1
 相機而動	xiang4 ji1 er2 dong4
 相機而言	xiang4 ji1 er2 yan2
@@ -101318,10 +101310,10 @@ min_phrase_weight: 100
 訊息	xun4 xi2
 訊息傳遞中介	xun4 xi2 chuan2 di4 zhong1 jie4
 訊息處理系統	xun4 xi2 chu3 li3 xi4 tong3
-訊框傳送	xun4 kuang4 chuan2 song4
-訊框傳送服務	xun4 kuang4 chuan2 song4 fu2 wu4
-訊框傳送網路	xun4 kuang4 chuan2 song4 wang3 lu4
-訊框傳送論壇	xun4 kuang4 chuan2 song4 lun4 tan2
+訊框傳送	xun4 kuang1 chuan2 song4
+訊框傳送服務	xun4 kuang1 chuan2 song4 fu2 wu4
+訊框傳送網路	xun4 kuang1 chuan2 song4 wang3 lu4
+訊框傳送論壇	xun4 kuang1 chuan2 song4 lun4 tan2
 訌亂	hong2 luan4
 訌阻	hong2 zu3
 討人喜歡	tao3 ren2 xi3 huan1
@@ -105115,7 +105107,6 @@ min_phrase_weight: 100
 邊度	bian1 du4
 邊張子	bian1 zhang1 zi5
 邊框	bian1 kuang1
-邊框	bian1 kuang4
 邊沿	bian1 yan2
 邊緣地區	bian1 yuan2 di4 qu1
 邊都沾不上	bian1 dou1 zhan1 bu2 shang4
@@ -106569,7 +106560,6 @@ min_phrase_weight: 100
 鏟子	chan3 zi5
 鏡子	jing4 zi5
 鏡框	jing4 kuang1
-鏡框	jing4 kuang4
 鏡片	jing4 pian4
 鏡破釵分	jing4 po4 chai1 fen1
 鏡面呢	jing4 mian4 ni2
@@ -107201,7 +107191,6 @@ min_phrase_weight: 100
 門擋	men2 dang3
 門桄	men2 guang1
 門框	men2 kuang1
-門框	men2 kuang4
 門樓子	men2 lou2 zi5
 門檻	men2 kan3
 門檻條款	men2 kan3 tiao2 kuan3
@@ -111736,4 +111725,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 111739 #####
+##### @結束 END - 111728 #####
