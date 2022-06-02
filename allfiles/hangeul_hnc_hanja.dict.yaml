@@ -15,7 +15,7 @@
 # ㅣ=i  ㅡ=w  ㅏ=a  ㅜ=u  ㅓ=e  ㅗ=o  ㅑ=ya  ㅠ=yu  ㅕ=ye  ㅛ=yo
 # ---------------------------------------------------------------------------
 # 雙母音：
-# ㅐ=ai  ㅔ=ei  ㅒ=yai  ㅖ=yei  ㅘ=oa  ㅙ=oai  ㅚ=oi  ㅝ=uo  ㅞ=uei  ㅟ=ui  ㅢ=wi
+# ㅐ=ai  ㅔ=ei  ㅒ=yai  ㅖ=yei  ㅘ=oa  ㅙ=oai  ㅚ=oi  ㅝ=ue  ㅞ=uei  ㅟ=ui  ㅢ=wi
 # ---------------------------------------------------------------------------
 # 單子音:
 # ㄱ=g  ㅋ=k 	 ㄴ=n  ㄷ=d  ㅌ=t  ㄹ=l  ㅂ=b  ㅍ=p  ㅁ=m  ㅅ=s  ㅈ=j  ㅊ=c  ㅇ=x  ㅎ=h
@@ -34,7 +34,7 @@
 #
 ---
 name: hangeul_hnc_hanja
-version: "202203"
+version: "202206"
 sort: by_weight
 use_preset_vocabulary: false
 ...

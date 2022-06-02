@@ -15,7 +15,7 @@
 # ㅣ=i  ㅡ=w  ㅏ=a  ㅜ=u  ㅓ=e  ㅗ=o  ㅑ=ya  ㅠ=yu  ㅕ=ye  ㅛ=yo
 # ---------------------------------------------------------------------------
 # 雙母音：
-# ㅐ=ai  ㅔ=ei  ㅒ=yai  ㅖ=yei  ㅘ=oa  ㅙ=oai  ㅚ=oi  ㅝ=uo  ㅞ=uei  ㅟ=ui  ㅢ=wi
+# ㅐ=ai  ㅔ=ei  ㅒ=yai  ㅖ=yei  ㅘ=oa  ㅙ=oai  ㅚ=oi  ㅝ=ue  ㅞ=uei  ㅟ=ui  ㅢ=wi
 # ---------------------------------------------------------------------------
 # 單子音:
 # ㄱ=g  ㅋ=k 	 ㄴ=n  ㄷ=d  ㅌ=t  ㄹ=l  ㅂ=b  ㅍ=p  ㅁ=m  ㅅ=s  ㅈ=j  ㅊ=c  ㅇ=x  ㅎ=h
@@ -34,7 +34,7 @@
 #
 ---
 name: hangeul_hnc
-version: "202203"
+version: "202206"
 sort: by_weight
 use_preset_vocabulary: false
 ...
@@ -85,7 +85,7 @@ use_preset_vocabulary: false
 ㅚ	oi@
 ㅛ	yo@
 ㅜ	u@
-ㅝ	uo@
+ㅝ	ue@
 ㅞ	uei@
 ㅟ	ui@
 ㅠ	yu@
@@ -531,34 +531,34 @@ use_preset_vocabulary: false
 궅	gut
 궆	gup
 궇	guh
-궈	guo	1800
-궉	guog	1800
-궊	guogg
-궋	guogs
-권	guon	1800
-궍	guonj
-궎	guonh
-궏	guod
-궐	guol	1800
-궑	guolg
-궒	guolm
-궓	guolb
-궔	guols
-궕	guolt
-궖	guolp
-궗	guolh
-궘	guom
-궙	guob
-궚	guobs
-궛	guos
-궜	guoss	1800
-궝	guox	1800
-궞	guoj
-궟	guoc
-궠	guok
-궡	guot
-궢	guop
-궣	guoh
+궈	gue	1800
+궉	gueg	1800
+궊	guegg
+궋	guegs
+권	guen	1800
+궍	guenj
+궎	guenh
+궏	gued
+궐	guel	1800
+궑	guelg
+궒	guelm
+궓	guelb
+궔	guels
+궕	guelt
+궖	guelp
+궗	guelh
+궘	guem
+궙	gueb
+궚	guebs
+궛	gues
+궜	guess	1800
+궝	guex	1800
+궞	guej
+궟	guec
+궠	guek
+궡	guet
+궢	guep
+궣	gueh
 궤	guei	1800
 궥	gueig
 궦	gueigg
@@ -1121,34 +1121,34 @@ use_preset_vocabulary: false
 꿑	ggut
 꿒	ggup
 꿓	gguh
-꿔	gguo	1800
-꿕	gguog
-꿖	gguogg
-꿗	gguogs
-꿘	gguon
-꿙	gguonj
-꿚	gguonh
-꿛	gguod
-꿜	gguol	1800
-꿝	gguolg
-꿞	gguolm
-꿟	gguolb
-꿠	gguols
-꿡	gguolt
-꿢	gguolp
-꿣	gguolh
-꿤	gguom
-꿥	gguob
-꿦	gguobs
-꿧	gguos
-꿨	gguoss	1800
-꿩	gguox	1800
-꿪	gguoj
-꿫	gguoc
-꿬	gguok
-꿭	gguot
-꿮	gguop
-꿯	gguoh
+꿔	ggue	1800
+꿕	ggueg
+꿖	gguegg
+꿗	gguegs
+꿘	gguen
+꿙	gguenj
+꿚	gguenh
+꿛	ggued
+꿜	gguel	1800
+꿝	gguelg
+꿞	gguelm
+꿟	gguelb
+꿠	gguels
+꿡	gguelt
+꿢	gguelp
+꿣	gguelh
+꿤	gguem
+꿥	ggueb
+꿦	gguebs
+꿧	ggues
+꿨	gguess	1800
+꿩	gguex	1800
+꿪	gguej
+꿫	gguec
+꿬	gguek
+꿭	gguet
+꿮	gguep
+꿯	ggueh
 꿰	gguei	1800
 꿱	ggueig	1800
 꿲	ggueigg
@@ -1712,34 +1712,34 @@ use_preset_vocabulary: false
 눝	nut
 눞	nup
 눟	nuh
-눠	nuo	1800
-눡	nuog
-눢	nuogg
-눣	nuogs
-눤	nuon
-눥	nuonj
-눦	nuonh
-눧	nuod
-눨	nuol
-눩	nuolg
-눪	nuolm
-눫	nuolb
-눬	nuols
-눭	nuolt
-눮	nuolp
-눯	nuolh
-눰	nuom
-눱	nuob
-눲	nuobs
-눳	nuos
-눴	nuoss	1800
-눵	nuox
-눶	nuoj
-눷	nuoc
-눸	nuok
-눹	nuot
-눺	nuop
-눻	nuoh
+눠	nue	1800
+눡	nueg
+눢	nuegg
+눣	nuegs
+눤	nuen
+눥	nuenj
+눦	nuenh
+눧	nued
+눨	nuel
+눩	nuelg
+눪	nuelm
+눫	nuelb
+눬	nuels
+눭	nuelt
+눮	nuelp
+눯	nuelh
+눰	nuem
+눱	nueb
+눲	nuebs
+눳	nues
+눴	nuess	1800
+눵	nuex
+눶	nuej
+눷	nuec
+눸	nuek
+눹	nuet
+눺	nuep
+눻	nueh
 눼	nuei	1800
 눽	nueig
 눾	nueigg
@@ -2302,34 +2302,34 @@ use_preset_vocabulary: false
 둩	dut
 둪	dup
 둫	duh
-둬	duo	1800
-둭	duog
-둮	duogg
-둯	duogs
-둰	duon
-둱	duonj
-둲	duonh
-둳	duod
-둴	duol
-둵	duolg
-둶	duolm
-둷	duolb
-둸	duols
-둹	duolt
-둺	duolp
-둻	duolh
-둼	duom
-둽	duob
-둾	duobs
-둿	duos
-뒀	duoss	1800
-뒁	duox
-뒂	duoj
-뒃	duoc
-뒄	duok
-뒅	duot
-뒆	duop
-뒇	duoh
+둬	due	1800
+둭	dueg
+둮	duegg
+둯	duegs
+둰	duen
+둱	duenj
+둲	duenh
+둳	dued
+둴	duel
+둵	duelg
+둶	duelm
+둷	duelb
+둸	duels
+둹	duelt
+둺	duelp
+둻	duelh
+둼	duem
+둽	dueb
+둾	duebs
+둿	dues
+뒀	duess	1800
+뒁	duex
+뒂	duej
+뒃	duec
+뒄	duek
+뒅	duet
+뒆	duep
+뒇	dueh
 뒈	duei	1800
 뒉	dueig
 뒊	dueigg
@@ -2892,34 +2892,34 @@ use_preset_vocabulary: false
 뚵	ddut
 뚶	ddup
 뚷	dduh
-뚸	dduo
-뚹	dduog
-뚺	dduogg
-뚻	dduogs
-뚼	dduon
-뚽	dduonj
-뚾	dduonh
-뚿	dduod
-뛀	dduol
-뛁	dduolg
-뛂	dduolm
-뛃	dduolb
-뛄	dduols
-뛅	dduolt
-뛆	dduolp
-뛇	dduolh
-뛈	dduom
-뛉	dduob
-뛊	dduobs
-뛋	dduos
-뛌	dduoss
-뛍	dduox
-뛎	dduoj
-뛏	dduoc
-뛐	dduok
-뛑	dduot
-뛒	dduop
-뛓	dduoh
+뚸	ddue
+뚹	ddueg
+뚺	dduegg
+뚻	dduegs
+뚼	dduen
+뚽	dduenj
+뚾	dduenh
+뚿	ddued
+뛀	dduel
+뛁	dduelg
+뛂	dduelm
+뛃	dduelb
+뛄	dduels
+뛅	dduelt
+뛆	dduelp
+뛇	dduelh
+뛈	dduem
+뛉	ddueb
+뛊	dduebs
+뛋	ddues
+뛌	dduess
+뛍	dduex
+뛎	dduej
+뛏	dduec
+뛐	dduek
+뛑	dduet
+뛒	dduep
+뛓	ddueh
 뛔	dduei	1800
 뛕	ddueig
 뛖	ddueigg
@@ -3483,34 +3483,34 @@ use_preset_vocabulary: false
 뤁	lut
 뤂	lup
 뤃	luh
-뤄	luo	1800
-뤅	luog
-뤆	luogg
-뤇	luogs
-뤈	luon
-뤉	luonj
-뤊	luonh
-뤋	luod
-뤌	luol
-뤍	luolg
-뤎	luolm
-뤏	luolb
-뤐	luols
-뤑	luolt
-뤒	luolp
-뤓	luolh
-뤔	luom
-뤕	luob
-뤖	luobs
-뤗	luos
-뤘	luoss	1800
-뤙	luox
-뤚	luoj
-뤛	luoc
-뤜	luok
-뤝	luot
-뤞	luop
-뤟	luoh
+뤄	lue	1800
+뤅	lueg
+뤆	luegg
+뤇	luegs
+뤈	luen
+뤉	luenj
+뤊	luenh
+뤋	lued
+뤌	luel
+뤍	luelg
+뤎	luelm
+뤏	luelb
+뤐	luels
+뤑	luelt
+뤒	luelp
+뤓	luelh
+뤔	luem
+뤕	lueb
+뤖	luebs
+뤗	lues
+뤘	luess	1800
+뤙	luex
+뤚	luej
+뤛	luec
+뤜	luek
+뤝	luet
+뤞	luep
+뤟	lueh
 뤠	luei	1800
 뤡	lueig
 뤢	lueigg
@@ -4073,34 +4073,34 @@ use_preset_vocabulary: false
 뭍	mut	1800
 뭎	mup
 뭏	muh	1800
-뭐	muo	1800
-뭑	muog
-뭒	muogg
-뭓	muogs
-뭔	muon	1800
-뭕	muonj
-뭖	muonh
-뭗	muod
-뭘	muol	1800
-뭙	muolg
-뭚	muolm
-뭛	muolb
-뭜	muols
-뭝	muolt
-뭞	muolp
-뭟	muolh
-뭠	muom
-뭡	muob	1800
-뭢	muobs
-뭣	muos	1800
-뭤	muoss
-뭥	muox
-뭦	muoj
-뭧	muoc
-뭨	muok
-뭩	muot
-뭪	muop
-뭫	muoh
+뭐	mue	1800
+뭑	mueg
+뭒	muegg
+뭓	muegs
+뭔	muen	1800
+뭕	muenj
+뭖	muenh
+뭗	mued
+뭘	muel	1800
+뭙	muelg
+뭚	muelm
+뭛	muelb
+뭜	muels
+뭝	muelt
+뭞	muelp
+뭟	muelh
+뭠	muem
+뭡	mueb	1800
+뭢	muebs
+뭣	mues	1800
+뭤	muess
+뭥	muex
+뭦	muej
+뭧	muec
+뭨	muek
+뭩	muet
+뭪	muep
+뭫	mueh
 뭬	muei	1800
 뭭	mueig
 뭮	mueigg
@@ -4663,34 +4663,34 @@ use_preset_vocabulary: false
 붙	but	1800
 붚	bup	1800
 붛	buh
-붜	buo	1800
-붝	buog
-붞	buogg
-붟	buogs
-붠	buon
-붡	buonc
-붢	buonh
-붣	buod
-붤	buol	1800
-붥	buolg
-붦	buolm
-붧	buolb
-붨	buols
-붩	buolt
-붪	buolp
-붫	buolh
-붬	buom
-붭	buob
-붮	buobs
-붯	buos
-붰	buoss	1800
-붱	buox
-붲	buoj
-붳	buoc
-붴	buok
-붵	buot
-붶	buop
-붷	buoh
+붜	bue	1800
+붝	bueg
+붞	buegg
+붟	buegs
+붠	buen
+붡	buenc
+붢	buenh
+붣	bued
+붤	buel	1800
+붥	buelg
+붦	buelm
+붧	buelb
+붨	buels
+붩	buelt
+붪	buelp
+붫	buelh
+붬	buem
+붭	bueb
+붮	buebs
+붯	bues
+붰	buess	1800
+붱	buex
+붲	buej
+붳	buec
+붴	buek
+붵	buet
+붶	buep
+붷	bueh
 붸	buei	1800
 붹	bueig
 붺	bueigg
@@ -5253,35 +5253,35 @@ use_preset_vocabulary: false
 뿥	bbut
 뿦	bbup
 뿧	bbuh
-뿨	bbuo
-뿩	bbuog
-뿪	bbuogg
-뿫	bbuogs
-뿬	bbuon
-뿭	bbuonj
-뿮	bbuonh
-뿯	bbuod
-뿰	bbuol
-뿱	bbuolg
-뿲	bbuolm
-뿳	bbuolb
-뿴	bbuols
-뿵	bbuolt
-뿶	bbuolp
-뿷	bbuolh
-뿸	bbuom
-뿹	bbuob
-뿺	bbuobs
-뿻	bbuos
-뿼	bbuoss
-뿽	bbuox
-뿾	bbuoj
-뿿	bbuoc
+뿨	bbue
+뿩	bbueg
+뿪	bbuegg
+뿫	bbuegs
+뿬	bbuen
+뿭	bbuenj
+뿮	bbuenh
+뿯	bbued
+뿰	bbuel
+뿱	bbuelg
+뿲	bbuelm
+뿳	bbuelb
+뿴	bbuels
+뿵	bbuelt
+뿶	bbuelp
+뿷	bbuelh
+뿸	bbuem
+뿹	bbueb
+뿺	bbuebs
+뿻	bbues
+뿼	bbuess
+뿽	bbuex
+뿾	bbuej
+뿿	bbuec
 #22
-쀀	bbuok
-쀁	bbuot
-쀂	bbuop
-쀃	bbuoh
+쀀	bbuek
+쀁	bbuet
+쀂	bbuep
+쀃	bbueh
 쀄	bbuei
 쀅	bbueig
 쀆	bbueigg
@@ -5844,34 +5844,34 @@ use_preset_vocabulary: false
 숱	sut	1800
 숲	sup	1800
 숳	suh
-숴	suo	1800
-숵	suog
-숶	suogg
-숷	suogs
-숸	suon
-숹	suonj
-숺	suonh
-숻	suod
-숼	suol
-숽	suolg
-숾	suolm
-숿	suolb
-쉀	suols
-쉁	suolt
-쉂	suolp
-쉃	suolh
-쉄	suom
-쉅	suob
-쉆	suobs
-쉇	suos
-쉈	suoss	1800
-쉉	suox
-쉊	suoj
-쉋	suoc
-쉌	suok
-쉍	suot
-쉎	suop
-쉏	suoh
+숴	sue	1800
+숵	sueg
+숶	suegg
+숷	suegs
+숸	suen
+숹	suenj
+숺	suenh
+숻	sued
+숼	suel
+숽	suelg
+숾	suelm
+숿	suelb
+쉀	suels
+쉁	suelt
+쉂	suelp
+쉃	suelh
+쉄	suem
+쉅	sueb
+쉆	suebs
+쉇	sues
+쉈	suess	1800
+쉉	suex
+쉊	suej
+쉋	suec
+쉌	suek
+쉍	suet
+쉎	suep
+쉏	sueh
 쉐	suei	1800
 쉑	sueig	1800
 쉒	sueigg
@@ -6434,34 +6434,34 @@ use_preset_vocabulary: false
 쑽	ssut
 쑾	ssup
 쑿	ssuh
-쒀	ssuo	1800
-쒁	ssuog
-쒂	ssuogg
-쒃	ssuogs
-쒄	ssuon
-쒅	ssuonj
-쒆	ssuonh
-쒇	ssuod
-쒈	ssuol
-쒉	ssuolg
-쒊	ssuolm
-쒋	ssuolb
-쒌	ssuols
-쒍	ssuolt
-쒎	ssuolp
-쒏	ssuolh
-쒐	ssuom
-쒑	ssuob
-쒒	ssuobs
-쒓	ssuos
-쒔	ssuoss	1800
-쒕	ssuox
-쒖	ssuoj
-쒗	ssuoc
-쒘	ssuok
-쒙	ssuot
-쒚	ssuop
-쒛	ssuoh
+쒀	ssue	1800
+쒁	ssueg
+쒂	ssuegg
+쒃	ssuegs
+쒄	ssuen
+쒅	ssuenj
+쒆	ssuenh
+쒇	ssued
+쒈	ssuel
+쒉	ssuelg
+쒊	ssuelm
+쒋	ssuelb
+쒌	ssuels
+쒍	ssuelt
+쒎	ssuelp
+쒏	ssuelh
+쒐	ssuem
+쒑	ssueb
+쒒	ssuebs
+쒓	ssues
+쒔	ssuess	1800
+쒕	ssuex
+쒖	ssuej
+쒗	ssuec
+쒘	ssuek
+쒙	ssuet
+쒚	ssuep
+쒛	ssueh
 쒜	ssuei	1800
 쒝	ssueig
 쒞	ssueigg
@@ -7024,34 +7024,34 @@ use_preset_vocabulary: false
 웉	xut
 웊	xup
 웋	xuh
-워	xuo	1800
-웍	xuog	1800
-웎	xuogg
-웏	xuogs
-원	xuon	1800
-웑	xuonj
-웒	xuonh
-웓	xuod
-월	xuol	1800
-웕	xuolg
-웖	xuolm
-웗	xuolb
-웘	xuols
-웙	xuolt
-웚	xuolp
-웛	xuolh
-웜	xuom	1800
-웝	xuob	1800
-웞	xuobs
-웟	xuos
-웠	xuoss	1800
-웡	xuox	1800
-웢	xuoj
-웣	xuoc
-웤	xuok
-웥	xuot
-웦	xuop
-웧	xuoh
+워	xue	1800
+웍	xueg	1800
+웎	xuegg
+웏	xuegs
+원	xuen	1800
+웑	xuenj
+웒	xuenh
+웓	xued
+월	xuel	1800
+웕	xuelg
+웖	xuelm
+웗	xuelb
+웘	xuels
+웙	xuelt
+웚	xuelp
+웛	xuelh
+웜	xuem	1800
+웝	xueb	1800
+웞	xuebs
+웟	xues
+웠	xuess	1800
+웡	xuex	1800
+웢	xuej
+웣	xuec
+웤	xuek
+웥	xuet
+웦	xuep
+웧	xueh
 웨	xuei	1800
 웩	xueig	1800
 웪	xueigg
@@ -7615,34 +7615,34 @@ use_preset_vocabulary: false
 줕	jut
 줖	jup
 줗	juh
-줘	juo	1800
-줙	juog
-줚	juogg
-줛	juogs
-줜	juon
-줝	juonj
-줞	juonh
-줟	juod
-줠	juol
-줡	juolg
-줢	juolm
-줣	juolb
-줤	juols
-줥	juolt
-줦	juolp
-줧	juolh
-줨	juom
-줩	juob
-줪	juobs
-줫	juos
-줬	juoss	1800
-줭	juox
-줮	juoj
-줯	juoc
-줰	juok
-줱	juot
-줲	juop
-줳	juoh
+줘	jue	1800
+줙	jueg
+줚	juegg
+줛	juegs
+줜	juen
+줝	juenj
+줞	juenh
+줟	jued
+줠	juel
+줡	juelg
+줢	juelm
+줣	juelb
+줤	juels
+줥	juelt
+줦	juelp
+줧	juelh
+줨	juem
+줩	jueb
+줪	juebs
+줫	jues
+줬	juess	1800
+줭	juex
+줮	juej
+줯	juec
+줰	juek
+줱	juet
+줲	juep
+줳	jueh
 줴	juei	1800
 줵	jueig
 줶	jueigg
@@ -8205,34 +8205,34 @@ use_preset_vocabulary: false
 쭡	jjut
 쭢	jjup
 쭣	jjuh
-쭤	jjuo	1800
-쭥	jjuog
-쭦	jjuogg
-쭧	jjuogs
-쭨	jjuon
-쭩	jjuonj
-쭪	jjuonh
-쭫	jjuod
-쭬	jjuol
-쭭	jjuolg
-쭮	jjuolm
-쭯	jjuolb
-쭰	jjuols
-쭱	jjuolt
-쭲	jjuolp
-쭳	jjuolh
-쭴	jjuom
-쭵	jjuob
-쭶	jjuobs
-쭷	jjuos
-쭸	jjuoss	1800
-쭹	jjuox	1800
-쭺	jjuoj
-쭻	jjuoc
-쭼	jjuok
-쭽	jjuot
-쭾	jjuop
-쭿	jjuoh
+쭤	jjue	1800
+쭥	jjueg
+쭦	jjuegg
+쭧	jjuegs
+쭨	jjuen
+쭩	jjuenj
+쭪	jjuenh
+쭫	jjued
+쭬	jjuel
+쭭	jjuelg
+쭮	jjuelm
+쭯	jjuelb
+쭰	jjuels
+쭱	jjuelt
+쭲	jjuelp
+쭳	jjuelh
+쭴	jjuem
+쭵	jjueb
+쭶	jjuebs
+쭷	jjues
+쭸	jjuess	1800
+쭹	jjuex	1800
+쭺	jjuej
+쭻	jjuec
+쭼	jjuek
+쭽	jjuet
+쭾	jjuep
+쭿	jjueh
 쮀	jjuei
 쮁	jjueig
 쮂	jjueigg
@@ -8795,34 +8795,34 @@ use_preset_vocabulary: false
 춭	cut
 춮	cup
 춯	cuh
-춰	cuo	1800
-춱	cuog
-춲	cuogg
-춳	cuogs
-춴	cuon
-춵	cuonj
-춶	cuonh
-춷	cuod
-춸	cuol
-춹	cuolg
-춺	cuolm
-춻	cuolb
-춼	cuols
-춽	cuolt
-춾	cuolp
-춿	cuolh
-췀	cuom
-췁	cuob
-췂	cuobs
-췃	cuos
-췄	cuoss	1800
-췅	cuox
-췆	cuoj
-췇	cuoc
-췈	cuok
-췉	cuot
-췊	cuop
-췋	cuoh
+춰	cue	1800
+춱	cueg
+춲	cuegg
+춳	cuegs
+춴	cuen
+춵	cuenj
+춶	cuenh
+춷	cued
+춸	cuel
+춹	cuelg
+춺	cuelm
+춻	cuelb
+춼	cuels
+춽	cuelt
+춾	cuelp
+춿	cuelh
+췀	cuem
+췁	cueb
+췂	cuebs
+췃	cues
+췄	cuess	1800
+췅	cuex
+췆	cuej
+췇	cuec
+췈	cuek
+췉	cuet
+췊	cuep
+췋	cueh
 췌	cuei	1800
 췍	cueig
 췎	cueigg
@@ -9385,35 +9385,35 @@ use_preset_vocabulary: false
 쿹	kut
 쿺	kup
 쿻	kuh
-쿼	kuo	1800
-쿽	kuog
-쿾	kuogg
-쿿	kuogs
+쿼	kue	1800
+쿽	kueg
+쿾	kuegg
+쿿	kuegs
 #38
-퀀	kuon	1800
-퀁	kuonj
-퀂	kuonh
-퀃	kuod
-퀄	kuol	1800
-퀅	kuolg
-퀆	kuolm
-퀇	kuolb
-퀈	kuols
-퀉	kuolt
-퀊	kuolp
-퀋	kuolh
-퀌	kuom
-퀍	kuob
-퀎	kuobs
-퀏	kuos
-퀐	kuoss
-퀑	kuox	1800
-퀒	kuoj
-퀓	kuoc
-퀔	kuok
-퀕	kuot
-퀖	kuop
-퀗	kuoh
+퀀	kuen	1800
+퀁	kuenj
+퀂	kuenh
+퀃	kued
+퀄	kuel	1800
+퀅	kuelg
+퀆	kuelm
+퀇	kuelb
+퀈	kuels
+퀉	kuelt
+퀊	kuelp
+퀋	kuelh
+퀌	kuem
+퀍	kueb
+퀎	kuebs
+퀏	kues
+퀐	kuess
+퀑	kuex	1800
+퀒	kuej
+퀓	kuec
+퀔	kuek
+퀕	kuet
+퀖	kuep
+퀗	kueh
 퀘	kuei	1800
 퀙	kueig
 퀚	kueigg
@@ -9976,34 +9976,34 @@ use_preset_vocabulary: false
 퉅	tut
 퉆	tup
 퉇	tuh
-퉈	tuo	1800
-퉉	tuog
-퉊	tuogg
-퉋	tuogs
-퉌	tuon
-퉍	tuonj
-퉎	tuonh
-퉏	tuod
-퉐	tuol
-퉑	tuolg
-퉒	tuolm
-퉓	tuolb
-퉔	tuols
-퉕	tuolt
-퉖	tuolp
-퉗	tuolh
-퉘	tuom
-퉙	tuob
-퉚	tuobs
-퉛	tuos
-퉜	tuoss	1800
-퉝	tuox
-퉞	tuoj
-퉟	tuoc
-퉠	tuok
-퉡	tuot
-퉢	tuop
-퉣	tuoh
+퉈	tue	1800
+퉉	tueg
+퉊	tuegg
+퉋	tuegs
+퉌	tuen
+퉍	tuenj
+퉎	tuenh
+퉏	tued
+퉐	tuel
+퉑	tuelg
+퉒	tuelm
+퉓	tuelb
+퉔	tuels
+퉕	tuelt
+퉖	tuelp
+퉗	tuelh
+퉘	tuem
+퉙	tueb
+퉚	tuebs
+퉛	tues
+퉜	tuess	1800
+퉝	tuex
+퉞	tuej
+퉟	tuec
+퉠	tuek
+퉡	tuet
+퉢	tuep
+퉣	tueh
 퉤	tuei	1800
 퉥	tueig
 퉦	tueigg
@@ -10566,34 +10566,34 @@ use_preset_vocabulary: false
 풑	put
 풒	pup
 풓	puh
-풔	puo	1800
-풕	puog
-풖	puogg
-풗	puogs
-풘	puon
-풙	puonj
-풚	puonh
-풛	puod
-풜	puol
-풝	puolg
-풞	puolm
-풟	puolb
-풠	puols
-풡	puolt
-풢	puolp
-풣	puolh
-풤	puom
-풥	puob
-풦	puobs
-풧	puos
-풨	puoss
-풩	puox	1800
-풪	puoj
-풫	puoc
-풬	puok
-풭	puot
-풮	puop
-풯	puoh
+풔	pue	1800
+풕	pueg
+풖	puegg
+풗	puegs
+풘	puen
+풙	puenj
+풚	puenh
+풛	pued
+풜	puel
+풝	puelg
+풞	puelm
+풟	puelb
+풠	puels
+풡	puelt
+풢	puelp
+풣	puelh
+풤	puem
+풥	pueb
+풦	puebs
+풧	pues
+풨	puess
+풩	puex	1800
+풪	puej
+풫	puec
+풬	puek
+풭	puet
+풮	puep
+풯	pueh
 풰	puei
 풱	pueig
 풲	pueigg
@@ -11157,34 +11157,34 @@ use_preset_vocabulary: false
 훝	hut
 훞	hup
 훟	huh
-훠	huo	1800
-훡	huog
-훢	huogg
-훣	huogs
-훤	huon	1800
-훥	huonj
-훦	huonh
-훧	huod
-훨	huol	1800
-훩	huolg
-훪	huolm
-훫	huolb
-훬	huols
-훭	huolt
-훮	huolp
-훯	huolh
-훰	huom	1800
-훱	huob
-훲	huobs
-훳	huos
-훴	huoss
-훵	huox	1800
-훶	huoj
-훷	huoc
-훸	huok
-훹	huot
-훺	huop
-훻	huoh
+훠	hue	1800
+훡	hueg
+훢	huegg
+훣	huegs
+훤	huen	1800
+훥	huenj
+훦	huenh
+훧	hued
+훨	huel	1800
+훩	huelg
+훪	huelm
+훫	huelb
+훬	huels
+훭	huelt
+훮	huelp
+훯	huelh
+훰	huem	1800
+훱	hueb
+훲	huebs
+훳	hues
+훴	huess
+훵	huex	1800
+훶	huej
+훷	huec
+훸	huek
+훹	huet
+훺	huep
+훻	hueh
 훼	huei	1800
 훽	hueig	1800
 훾	hueigg
@@ -11463,7 +11463,7 @@ use_preset_vocabulary: false
 ᅬ	oi//
 ᅭ	yo//
 ᅮ	u//
-ᅯ	uo//
+ᅯ	ue//
 ᅰ	uei//
 ᅱ	ui//
 ᅲ	yu//
