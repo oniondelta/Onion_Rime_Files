@@ -7,7 +7,7 @@
 # 本詞庫刪除純「假名」之詞彙。純「假名」詞庫為「phrases.jp_hk」。
 ---
 name: phrases.jp_hkkreduce
-version: "202205"
+version: "202206"
 sort: by_weight #original
 use_preset_vocabulary: false
 columns:
@@ -7759,10 +7759,7 @@ columns:
 再編
 再縁
 再考
-再訪
 再読
-再論
-再選
 冒さ
 冒し
 冒せ
@@ -11980,13 +11977,11 @@ columns:
 在宿
 在庁
 在府
-在庫
 在方
 在来
 在民
 在留
 在社
-在籍
 在米
 在郷
 在銘
