@@ -113,6 +113,7 @@
 #    詞句中，「舞蹈」中的「蹈」，臺灣字典發音為「dao4」，但日常常發「dao3」，故全都補齊「dao4」「dao3」。
 #    詞句中，「框」臺灣字典只有發音「kuang1」，沒有「kuang4」發音，故只保留「kuang1」發音。
 #    詞句中，「紮」臺灣字典發音為「za1」和「zha2」，但對岸字典有「zha1」，由於發音相近，故「za1」和「zha1」相互補齊，「zha2」語意不同，故不補。
+#    詞句中，「軋」除語意為狀聲詞「ga2」「ya4」或特殊語意等，皆補齊「ya4」「ga1」「ga2」「zha2」。
 #    預計比對「輕聲和一聲」變音。
 #
 #  〈2020修改字詞彙發音〉：
@@ -59333,7 +59334,13 @@ min_phrase_weight: 100
 傾覆重器	qing1 fu4 zhong4 qi4
 傾覆重器	qing3 fu4 zhong4 qi4
 傾軋	qing1 ya4
+傾軋	qing1 ga1	80%
+傾軋	qing1 ga2
+傾軋	qing1 zha2
 傾軋	qing3 ya4
+傾軋	qing3 ga1	80%
+傾軋	qing3 ga2
+傾軋	qing3 zha2
 僂人	lou2 ren2
 僂儸	lou2 luo2
 僂指	lou2 zhi3
@@ -60384,9 +60391,11 @@ min_phrase_weight: 100
 冷軋	leng3 zha2
 冷軋	leng3 ya4
 冷軋	leng3 ga1	80%
+冷軋	leng3 ga2
 冷軋鋼板	leng3 ya4 gang1 ban3
 冷軋鋼板	leng3 zha2 gang1 ban3
 冷軋鋼板	leng3 ga1 gang1 ban3	80%
+冷軋鋼板	leng3 ga2 gang1 ban3
 冷鋪	leng3 pu4
 冷顫	leng3 zhan4
 准假	zhun3 jia4
@@ -60467,7 +60476,13 @@ min_phrase_weight: 100
 凹凸有致	ao1 tu1 you3 zhi4
 凹凸有致	ao1 tu2 you3 zhi4
 凹凸軋花	ao1 tu1 ya4 hua1
+凹凸軋花	ao1 tu1 ga1 hua1	80%
+凹凸軋花	ao1 tu1 ga2 hua1
+凹凸軋花	ao1 tu1 zha2 hua1
 凹凸軋花	ao1 tu2 ya4 hua1
+凹凸軋花	ao1 tu2 ga1 hua1	80%
+凹凸軋花	ao1 tu2 ga2 hua1
+凹凸軋花	ao1 tu2 zha2 hua1
 凹地	ao1 di4
 凹度	ao1 du4
 凹版印刷	ao1 ban3 yin4 shua1
@@ -78776,6 +78791,9 @@ min_phrase_weight: 100
 擠落	ji3 luo4
 擠訛頭	ji3 e2 tou5
 擠軋	ji3 ya4
+擠軋	ji3 ga1	80%
+擠軋	ji3 ga2
+擠軋	ji3 zha2
 抬帖	tai2 tie3
 抬槓	tai2 gang4
 抬舉	tai2 ju3
@@ -103552,43 +103570,109 @@ min_phrase_weight: 100
 軋一腳	ga2 yi1 jiao3
 軋一腳	ya4 yi1 jiao3
 軋一腳	ya4 yi4 jiao3
+軋一腳	ga1 yi1 jiao3	80%
+軋一腳	ga1 yi4 jiao3	80%
+軋一腳	zha2 yi4 jiao3
+軋一腳	zha2 yi1 jiao3
 軋場	ya4 chang2	3%
 軋場	ya4 chang3
+軋場	ga1 chang3	80%
+軋場	ga2 chang3
 軋姘頭	ga2 pin1 tou5
 軋姘頭	ga2 pin1 tou2
 軋忽	ya4 hu1
 軋戲	ga2 xi4
+軋戲	ga1 xi4	80%
 軋支票	ga2 zhi1 piao4
+軋支票	ga1 zhi1 piao4	80%
 軋染	ya4 ran3
+軋染	ga2 ran3
+軋染	ga1 ran3	80%
+軋染	zha2 ran3
 軋染機	ya4 ran3 ji1
+軋染機	ga1 ran3 ji1	80%
+軋染機	ga2 ran3 ji1
+軋染機	zha2 ran3 ji1
 軋棉	ya4 mian2
+軋棉	ga1 mian2	80%
+軋棉	ga2 mian2
+軋棉	zha2 mian2
 軋機	zha2 ji1
 軋機	ya4 ji1
+軋機	ga1 ji1	80%
+軋機	ga2 ji1
 軋然	ga2 ran2
+軋然	ga1 ran2	80%
 軋著	ya4 zhao2
+軋著	ga1 zhao2	80%
+軋著	ga2 zhao2
+軋著	zha2 zhao2
 軋著	ya4 zhe5
+軋著	ga1 zhe5	80%
+軋著	ga2 zhe5
+軋著	zha2 zhe5
 軋紋	ya4 wen2
+軋紋	ga1 wen2	80%
+軋紋	ga2 wen2
+軋紋	zha2 wen2
 軋花機	ya4 hua1 ji1
+軋花機	ga1 hua1 ji1	80%
+軋花機	ga2 hua1 ji1
+軋花機	zha2 hua1 ji1
 軋製	ya4 zhi4
 軋製	zha2 zhi4
+軋製	ga1 zhi4	80%
+軋製	ga2 zhi4
 軋路機	ya4 lu4 ji1
+軋路機	ga1 lu4 ji1	80%
+軋路機	ga2 lu4 ji1
+軋路機	zha2 lu4 ji1
 軋軋	ya4 ya4
 軋軋	ga2 ga2
 軋輥	zha2 gun3
 軋輥	ya4 gun3
+軋輥	ga1 gun3	80%
+軋輥	ga2 gun3
 軋轢	ya4 li4
+軋轢	ga1 li4	80%
+軋轢	ga2 li4
+軋轢	zha2 li4
 軋進	ga2 jin4
+軋進	ga1 jin4	80%
+軋進	ya4 jin4
+軋進	zha2 jin4
 軋道機	ya4 dao4 ji1
+軋道機	ga1 dao4 ji1	80%
+軋道機	ga2 dao4 ji1
+軋道機	zha2 dao4 ji1
 軋道車	ya4 dao4 che1
+軋道車	ga1 dao4 che1	80%
+軋道車	ga2 dao4 che1
+軋道車	zha2 dao4 che1
 軋鋼	zha2 gang1
 軋鋼	ya4 gang1
+軋鋼	ga1 gang1	80%
+軋鋼	ga2 gang1
 軋鋼廠	zha2 gang1 chang3
+軋鋼廠	ga1 gang1 chang3	80%
+軋鋼廠	ga2 gang1 chang3
+軋鋼廠	ya4 gang1 chang3
 軋鋼條	zha2 gang1 tiao2
+軋鋼條	ga1 gang1 tiao2	80%
+軋鋼條	ga2 gang1 tiao2
+軋鋼條	ya4 gang1 tiao2
 軋鋼機	zha2 gang1 ji1
 軋鋼機	ya4 gang1 ji1
+軋鋼機	ga1 gang1 ji1	80%
+軋鋼機	ga2 gang1 ji1
 軋頭寸	ga2 tou2 cun4
 軋頭寸	ya4 tou2 cun4
+軋頭寸	ga1 tou2 cun4	80%
+軋頭寸	zha2 tou2 cun4
 軋馬路	ya4 ma3 lu4
+軋馬路	ga1 ma3 lu4	80%
+軋馬路	ga2 ma3 lu4
+軋馬路	zha2 ma3 lu4
 軌外行為	gui3 wai4 xing2 wei2
 軌度	gui3 du4
 軌模	gui3 mo2
@@ -103816,6 +103900,9 @@ min_phrase_weight: 100
 輣軋	peng2 ya4
 輥子	gun3 zi5
 輥軋	gun3 ya4
+輥軋	gun3 ga1	80%
+輥軋	gun3 ga2
+輥軋	gun3 zha2
 輦載	nian3 zai4
 輦轂	nian3 gu3
 輦轂下	nian3 gu3 xia4
@@ -103860,6 +103947,9 @@ min_phrase_weight: 100
 輻狀花冠	fu2 zhuang4 hua1 guan1
 輾側不寐	zhan3 ce4 bu2 mei4
 輾軋	zhan3 ya4
+輾軋	zhan3 ga1	80%
+輾軋	zhan3 ga2
+輾軋	zhan3 zha2
 輾轉	zhan3 zhuan3
 輾轉不寐	zhan3 zhuan3 bu2 mei4
 輾轉反側	zhan3 zhuan3 fan3 ce4
@@ -111741,4 +111831,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 111744 #####
+##### @結束 END - 111834 #####
