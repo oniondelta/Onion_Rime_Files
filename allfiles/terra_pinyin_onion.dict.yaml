@@ -135,7 +135,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "202205"
+version: "202206"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -60383,7 +60383,10 @@ min_phrase_weight: 100
 冷血動物	leng3 xue4 dong4 wu4
 冷軋	leng3 zha2
 冷軋	leng3 ya4
+冷軋	leng3 ga1	80%
 冷軋鋼板	leng3 ya4 gang1 ban3
+冷軋鋼板	leng3 zha2 gang1 ban3
+冷軋鋼板	leng3 ga1 gang1 ban3	80%
 冷鋪	leng3 pu4
 冷顫	leng3 zhan4
 准假	zhun3 jia4
@@ -111738,4 +111741,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 111741 #####
+##### @結束 END - 111744 #####
