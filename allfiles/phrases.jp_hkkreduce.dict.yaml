@@ -7,7 +7,7 @@
 # 本詞庫刪除純「假名」之詞彙。純「假名」詞庫為「phrases.jp_hk」。
 ---
 name: phrases.jp_hkkreduce
-version: "202206"
+version: "202207"
 sort: by_weight #original
 use_preset_vocabulary: false
 columns:
@@ -6829,7 +6829,6 @@ columns:
 償っ
 償わ
 償却
-償金
 優い
 優く
 優し
@@ -7024,8 +7023,6 @@ columns:
 光治
 光点
 光琳
-光生
-光秀
 光紀
 光紗
 光背
@@ -7034,10 +7031,8 @@ columns:
 光被
 光貞
 光起
-光陽
 光隆
 光雄
-光雲
 克た
 克ち
 克っ
