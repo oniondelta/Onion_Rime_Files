@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onionplus_space
   name: "☆注音(洋蔥plus版 space )☆〔空白不直出〕"
-  version: "202204"
+  version: "202207"
   author:
     - 『洋蔥』
   description: |
@@ -97,6 +97,7 @@ engine:
     - table_translator@emoji_series
     - script_translator@reverse2_lookup
     - table_translator@easy_en
+    - script_translator@easy_en
     - script_translator@european
     - script_translator@japan
     - script_translator@korea

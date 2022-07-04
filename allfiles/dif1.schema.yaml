@@ -8,7 +8,7 @@ schema:
 
   name: "❖分別調出蝦米(plus)❖"
   schema_id: dif1
-  version: "202204"
+  version: "202207"
   dependencies:
     - punct_ovff
     - dif1_jphi
@@ -95,6 +95,7 @@ engine:
     - affix_segmentor@pt
     - affix_segmentor@emoji_series
     - affix_segmentor@easy_en
+    - script_translator@easy_en
     - affix_segmentor@japan
     - affix_segmentor@reverse2_lookup
     - affix_segmentor@reverse3_lookup

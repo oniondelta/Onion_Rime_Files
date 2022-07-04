@@ -4,7 +4,7 @@
 schema:
   schema_id: easy_en_super
   name: Easy English（英漢字典）
-  version: "202204"
+  version: "202207"
   author:
     - 洋蔥
   description:
@@ -34,6 +34,7 @@ engine:
   translators:
 #    - echo_translator #不要用，會把分號和/上屏
     - table_translator
+    - script_translator
     - punct_translator
   filters:
     - reverse_lookup_filter@e_reverse_lookup
@@ -41,12 +42,12 @@ engine:
 
 speller:
   alphabet: "zyxwvutsrqponmlkjihgfedcba-.;/'"
-  initials: "zyxwvutsrqponmlkjihgfedcba-./'"
+  # initials: "zyxwvutsrqponmlkjihgfedcba-./'"
   delimiter: " "
   algebra:
     - derive/^\|$/ /
     - xform/⌗.*$//
-    - derive/(.)[;']$/$1/
+    # - derive/(.)[;']$/$1/
     # - derive/^(.+)([;'])$/$2$1/
 
 translator:

@@ -8,9 +8,11 @@
 #
 ---
 name: easy_en_super
-version: "202204"
+version: "202207"
 sort: original #by_weight
 import_tables:
-  - easy_en_super_one
-  - easy_en_super_two
+  - easy_en_super2_one
+  - easy_en_super2_two
+  # - easy_en_super_one
+  # - easy_en_super_two
 ...

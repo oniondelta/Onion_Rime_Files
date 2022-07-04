@@ -9,7 +9,7 @@ schema:
 
   name: "❖超級混合蝦米(mix-in)❖"
   schema_id: ocm_mixin
-  version: "202204"
+  version: "202207"
   dependencies:
     - punct_ovff
     - symbols_ocm
@@ -125,6 +125,7 @@ engine:
     - script_translator@reverse3_lookup_extra
     - script_translator@all_bpm
     - table_translator@easy_en
+    - script_translator@easy_en
     - script_translator@japan
     - script_translator@gr
     - script_translator@cyr

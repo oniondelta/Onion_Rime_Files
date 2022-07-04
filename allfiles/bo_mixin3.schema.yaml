@@ -4,7 +4,7 @@
 schema:
   schema_id: bo_mixin3
   name: "☆注音(洋蔥mix-in版 3 )☆〔  '  [  ]  →拉日韓〕"
-  version: "202204"
+  version: "202207"
   author:
     - 『洋蔥』
   description: |
@@ -96,6 +96,7 @@ engine:
     - table_translator@bo_mixin_phrase
     - table_translator@emoji_series
     - table_translator@easy_en
+    - script_translator@easy_en
     - script_translator@japan
     - script_translator@cyr2
     - script_translator@gr2
