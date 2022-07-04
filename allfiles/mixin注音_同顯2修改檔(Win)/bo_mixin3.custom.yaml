@@ -68,8 +68,9 @@ patch:
   e_reverse_lookup/comment_format:
     - xform/^.+⌗// #easy_en_super用
     - xform|^[ a-z;/.'-]+|| #easy_en_super用
-    - xform/^(﹝.+﹞)?\[[^@]+\]/$1/
+    # - xform/^(﹝.+﹞)?\[[^@]+\]/$1/
     - xform/([a-zA-Z0-9])@([a-zA-Z0-9])/$1 $2/
     - xform/@//
-    - xform/^([^﹝])/ $1/
+    # - xform/^([^﹝])/ $1/
+    - xform/^([^﹙])/ $1/
     - xform/^(.{50}).+$/$1 ……《略》/
