@@ -73,12 +73,12 @@ engine:
     - reverse_lookup_filter@pt_reverse_lookup
     - lua_filter@mix_cf2_cfp_filter  # 合併 charset_filter2 和 comment_filter_plus，兩個 lua filter 太耗效能。
     # - lua_filter@comment_filter_plus
+    - uniquifier
     - simplifier@back_mark
+    - simplifier@punct_mark
     - reverse_lookup_filter@ovff_reverse_lookup
     - reverse_lookup_filter@phonetic_reverse_lookup
     - reverse_lookup_filter@e_reverse_lookup
-    - simplifier@punct_mark
-    - uniquifier
   processors:
     - ascii_composer
     - recognizer
@@ -95,7 +95,7 @@ engine:
     - affix_segmentor@pt
     - affix_segmentor@emoji_series
     - affix_segmentor@easy_en
-    - script_translator@easy_en
+    - affix_segmentor@easy_en_script
     - affix_segmentor@japan
     - affix_segmentor@reverse2_lookup
     - affix_segmentor@reverse3_lookup
@@ -130,6 +130,7 @@ engine:
     - script_translator@reverse3_lookup_extra
     - script_translator@all_bpm
     - table_translator@easy_en
+    - script_translator@easy_en_script
     - script_translator@japan
     - lua_translator@t2_translator
     - lua_translator@email_urlw_translator
@@ -400,13 +401,25 @@ easy_en:
   enable_user_dict: false #true
   prefix: "'."
   tips: "《Easy英語》▶"
+  # initial_quality: 1000
+  extra_tags:
+    - easy_en_script
   preedit_format:
     - xform/^/《Easy英語》/
     - xform/》;/》; /
     - xform/》'/》' /
     - xform|》[/]|》/ |
+    - xform/\|/ /
   comment_format:
     - xform|[~a-z;/.'-]+||
+
+easy_en_script:
+  __include: /easy_en
+  tag: easy_en_script
+  enable_completion: false
+  enable_sentence: false
+  # initial_quality: 0
+  extra_tags: []
 
 e_reverse_lookup:
   tags: [ easy_en ]

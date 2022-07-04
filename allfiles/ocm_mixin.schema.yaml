@@ -77,15 +77,13 @@ engine:
     # - lua_filter@comment_filter_plus
     # - lua_filter@symbols_mark_filter
     # - simplifier@back_mark
-    
     - simplifier@emoji_switch
     - simplifier
-    
+    - uniquifier
+    - simplifier@punct_mark
     - reverse_lookup_filter@ovff_reverse_lookup
     - reverse_lookup_filter@phonetic_reverse_lookup
     - reverse_lookup_filter@e_reverse_lookup
-    - simplifier@punct_mark
-    - uniquifier
   processors:
     - ascii_composer
     - recognizer
@@ -103,6 +101,7 @@ engine:
     - affix_segmentor@pt
     - affix_segmentor@emoji_series
     - affix_segmentor@easy_en
+    - affix_segmentor@easy_en_script
     - affix_segmentor@japan
     - affix_segmentor@reverse2_lookup
     - affix_segmentor@reverse3_lookup
@@ -125,7 +124,7 @@ engine:
     - script_translator@reverse3_lookup_extra
     - script_translator@all_bpm
     - table_translator@easy_en
-    - script_translator@easy_en
+    - script_translator@easy_en_script
     - script_translator@japan
     - script_translator@gr
     - script_translator@cyr
@@ -177,7 +176,7 @@ punct_mark:
     - erase/^.+〔.*〕$/
 
 mix_cf2_cfp_smf_filter:
-  tags: [ abc, reverse2_lookup, reverse3_lookup, emoji_series, pt ]
+  tags: [ abc, reverse2_lookup, reverse3_lookup, emoji_series, pt, gr, cyr, fs ]
 ################################### 拼寫 ######################################
 speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz;,'./-`"
@@ -392,13 +391,25 @@ easy_en:
   enable_user_dict: false #true
   prefix: "'."
   tips:  "《Easy英語》▶"
+  # initial_quality: 1000
+  extra_tags:
+    - easy_en_script
   preedit_format:
     - xform/^/《Easy英語》/
     - xform/》;/》; /
     - xform/》'/》' /
     - xform|》[/]|》/ |
+    - xform/\|/ /
   comment_format:
     - xform|[~a-z;/.'-]+||
+
+easy_en_script:
+  __include: /easy_en
+  tag: easy_en_script
+  enable_completion: false
+  enable_sentence: false
+  # initial_quality: 0
+  extra_tags: []
 
 e_reverse_lookup:
   tags: [ easy_en ]

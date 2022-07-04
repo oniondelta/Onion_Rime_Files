@@ -53,8 +53,8 @@ engine:
     - script_translator
   filters:
     - simplifier
-    - simplifier@back_mark
     - uniquifier
+    - simplifier@back_mark
     - reverse_lookup_filter@top_reverse_lookup
 
 menu:

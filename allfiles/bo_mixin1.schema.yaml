@@ -59,11 +59,11 @@ engine:
     # - lua_filter@missing_mark_filter  #補上標點符號因直上和 opencc 衝突沒附註之選項
     - simplifier@emoji_switch
     - simplifier
+    - uniquifier
     - simplifier@back_mark
     - simplifier@punct_mark
     - reverse_lookup_filter@bpm_reverse_lookup
     - reverse_lookup_filter@e_reverse_lookup
-    - uniquifier
   processors:
     - lua_processor@mix_apc_s2rm  #合併 ascii_punct_change 和 s2r_most，增進效能。
     # - lua_processor@ascii_punct_change
@@ -83,6 +83,7 @@ engine:
     - abc_segmentor
     - affix_segmentor@emoji_series
     - affix_segmentor@easy_en
+    - affix_segmentor@easy_en_script
     - affix_segmentor@japan
     - affix_segmentor@cyr2
     - affix_segmentor@gr2
@@ -96,7 +97,7 @@ engine:
     - table_translator@bo_mixin_phrase
     - table_translator@emoji_series
     - table_translator@easy_en
-    - script_translator@easy_en
+    - script_translator@easy_en_script
     - script_translator@japan
     - script_translator@cyr2
     - script_translator@gr2
@@ -421,6 +422,9 @@ easy_en:
   suffix: " "
   tips: "《Easy》▶"
   closing_tips: "◀《Easy》"
+  # initial_quality: 1000
+  extra_tags:
+    - easy_en_script
   preedit_format:
     - xform/^/《Easy》/
     - xform/》;/》; /
@@ -429,6 +433,14 @@ easy_en:
     - 'xform/\\/ /'
   comment_format:
     - xform|[~a-z;/.'-]+||
+
+easy_en_script:
+  __include: /easy_en
+  tag: easy_en_script
+  enable_completion: false
+  enable_sentence: false
+  # initial_quality: 0
+  extra_tags: []
 
 e_reverse_lookup:
   tags: [ easy_en ]

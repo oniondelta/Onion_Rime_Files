@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onion
   name: "☆注音(洋蔥純注音版)☆"
-  version: "202204"
+  version: "202207"
   author:
     - 『洋蔥』
   description: |
@@ -38,8 +38,8 @@ engine:
 #     - charset_filter@big5
 #     - charset_filter@gbk
     - simplifier
-    - reverse_lookup_filter@bpm_reverse_lookup
     - uniquifier
+    - reverse_lookup_filter@bpm_reverse_lookup
   processors:
     - ascii_composer
     - recognizer

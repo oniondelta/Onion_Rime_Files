@@ -6,7 +6,7 @@
 schema:
   schema_id: Mount_ocm
   name: "❖蝦米(單出-反查專用)❖"
-  version: "202112"
+  version: "202207"
   author:
     - 洋蔥
   description: |
@@ -40,9 +40,9 @@ engine:
     - reverse_lookup_filter@tr_reverse_lookup
     - reverse_lookup_filter@tr2_reverse_lookup
     - lua_filter@comment_filter_plus
+    - uniquifier
     - reverse_lookup_filter@ovff_reverse_lookup
     - reverse_lookup_filter@phonetic_reverse_lookup
-    - uniquifier
   processors:
     - ascii_composer
     - recognizer

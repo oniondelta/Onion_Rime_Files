@@ -34,11 +34,11 @@ engine:
   translators:
 #    - echo_translator #不要用，會把分號和/上屏
     - table_translator
-    - script_translator
+    - script_translator@easy_en_script
     - punct_translator
   filters:
-    - reverse_lookup_filter@e_reverse_lookup
     - uniquifier
+    - reverse_lookup_filter@e_reverse_lookup
 
 speller:
   alphabet: "zyxwvutsrqponmlkjihgfedcba-.;/'"
@@ -59,8 +59,17 @@ translator:
   enable_sentence: true #false
   enable_user_dict: false #true
 #  spelling_hints: 9
+  # initial_quality: 1000
   comment_format:
     - xform|[~a-z;/.'-]+||
+
+easy_en_script:
+  __include: /translator
+  enable_completion: false
+  enable_sentence: false
+  # enable_user_dict: true
+  # strict_spelling: false #true
+  # initial_quality: 0
 
 e_reverse_lookup:
   tags: [ abc ]
