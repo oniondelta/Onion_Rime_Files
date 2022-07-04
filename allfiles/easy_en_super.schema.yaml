@@ -56,7 +56,7 @@ translator:
   encode_commit_history: false
   enable_completion: true
   # sentence_over_completion: true
-  enable_sentence: true #false
+  enable_sentence: false #true
   enable_user_dict: false #true
 #  spelling_hints: 9
   # initial_quality: 1000

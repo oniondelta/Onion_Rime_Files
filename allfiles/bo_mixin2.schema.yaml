@@ -424,7 +424,7 @@ easy_en:
   dictionary: easy_en_super #easy_en_b
   enable_completion: true
   # sentence_over_completion: true
-  enable_sentence: true #false
+  enable_sentence: false #true
   enable_user_dict: false #true
   prefix: "3"
   suffix: " "
