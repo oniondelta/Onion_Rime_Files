@@ -37,6 +37,7 @@ engine:
     - script_translator@easy_en_script
     - punct_translator
   filters:
+    - lua_filter@en_sort_filter
     - uniquifier
     - reverse_lookup_filter@e_reverse_lookup
 
@@ -56,19 +57,27 @@ translator:
   encode_commit_history: false
   enable_completion: true
   # sentence_over_completion: true
-  enable_sentence: false #true
-  enable_user_dict: false #true
-#  spelling_hints: 9
+  enable_sentence: false
+  enable_user_dict: false
+  # strict_spelling: false
+  # spelling_hints: 2
   # initial_quality: 1000
-  comment_format:
-    - xform|[~a-z;/.'-]+||
+  # comment_format:
+  #   # - xform/⌗$//
+  #   # - xform|[~a-z;/.'-]+||
+  #   # - xform|.+||
+  #   - xform/^.+⌗//
+  #   - xform|^[ a-z;/.'-]+||
+  #   - xform/@@/\n          /
+  #   - xform/@/ /
 
 easy_en_script:
   __include: /translator
+  # enable_encoder: true
   enable_completion: false
   enable_sentence: false
-  # enable_user_dict: true
-  # strict_spelling: false #true
+  enable_user_dict: false
+  # spelling_hints: 1
   # initial_quality: 0
 
 e_reverse_lookup:

@@ -79,6 +79,7 @@ engine:
     # - simplifier@back_mark
     - simplifier@emoji_switch
     - simplifier
+    - lua_filter@en_sort_filter
     - uniquifier
     - simplifier@punct_mark
     - reverse_lookup_filter@ovff_reverse_lookup
@@ -177,6 +178,9 @@ punct_mark:
 
 mix_cf2_cfp_smf_filter:
   tags: [ abc, reverse2_lookup, reverse3_lookup, emoji_series, pt, gr, cyr, fs ]
+
+en_sort_filter:
+  tags: [ easy_en ]
 ################################### 拼寫 ######################################
 speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz;,'./-`"
@@ -386,12 +390,18 @@ top_reverse_lookup:
 easy_en:
   tag: easy_en
   dictionary: easy_en_super #easy_en_b
+  enable_encoder: false
+  encode_commit_history: false
   enable_completion: true
-  enable_sentence: false #true
-  enable_user_dict: false #true
-  prefix: "'."
-  tips:  "《Easy英語》▶"
+  # sentence_over_completion: true
+  enable_sentence: false
+  enable_user_dict: false
+  # strict_spelling: false
+  # spelling_hints: 2
   # initial_quality: 1000
+  prefix: "'."
+  # suffix: " "
+  tips: "《Easy英語》▶"
   extra_tags:
     - easy_en_script
   preedit_format:
@@ -400,14 +410,22 @@ easy_en:
     - xform/》'/》' /
     - xform|》[/]|》/ |
     - xform/\|/ /
-  comment_format:
-    - xform|[~a-z;/.'-]+||
+  # comment_format:
+  #   # - xform|[~a-z;/.'-]+||
+  #   # - xform|.+||
+  #   - xform/^.+⌗// #easy_en_super用
+  #   - xform|^[ a-z;/.'-]+|| #easy_en_super用
+  #   - xform/@@/\n          /
+  #   - xform/@/ /
 
 easy_en_script:
   __include: /easy_en
   tag: easy_en_script
+  # enable_encoder: true
   enable_completion: false
   enable_sentence: false
+  enable_user_dict: false
+  # spelling_hints: 1
   # initial_quality: 0
   extra_tags: []
 

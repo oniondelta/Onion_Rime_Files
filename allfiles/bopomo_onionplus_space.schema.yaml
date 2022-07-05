@@ -59,6 +59,7 @@ engine:
     # - lua_filter@missing_mark_filter  #補上標點符號因直上和 opencc 衝突沒附註之選項
     - simplifier@emoji_switch
     - simplifier
+    - lua_filter@en_sort_filter
     - uniquifier
     - simplifier@back_mark
     - simplifier@punct_mark
@@ -150,6 +151,9 @@ punct_mark:
   comment_format:
     - erase/^.*〔.*〕.+$/
     - erase/^.+〔.*〕$/
+
+en_sort_filter:
+  tags: [ easy_en ]
 
 # mix_cf2_miss_filter:
 #   tags: [ punct, abc, reverse2_lookup ]
@@ -278,15 +282,19 @@ bpm_reverse_lookup:
 easy_en:
   tag: easy_en
   dictionary: easy_en_super #easy_en_b
+  enable_encoder: false
+  encode_commit_history: false
   enable_completion: true
   # sentence_over_completion: true
-  enable_sentence: false #true
-  enable_user_dict: false #true
+  enable_sentence: false
+  enable_user_dict: false
+  # strict_spelling: false
+  # spelling_hints: 2
+  # initial_quality: 1000
   prefix: "3"
   suffix: ","
   tips: "《Easy》▶"
   closing_tips: "◀《Easy》"
-  # initial_quality: 1000
   extra_tags:
     - easy_en_script
   preedit_format:
@@ -298,14 +306,22 @@ easy_en:
     - xform/\\([;'])/ $1/
     - xform/\\ / ␣/
     - xform/\\/ /
-  comment_format:
-    - xform|[~a-z;/.'-]+||
+  # comment_format:
+  #   # - xform|[~a-z;/.'-]+||
+  #   # - xform|.+||
+  #   - xform/^.+⌗// #easy_en_super用
+  #   - xform|^[ a-z;/.'-]+|| #easy_en_super用
+  #   - xform/@@/\n          /
+  #   - xform/@/ /
 
 easy_en_script:
   __include: /easy_en
   tag: easy_en_script
+  # enable_encoder: true
   enable_completion: false
   enable_sentence: false
+  enable_user_dict: false
+  # spelling_hints: 1
   # initial_quality: 0
   extra_tags: []
 
