@@ -46,6 +46,9 @@ switches:
   - name: punct_mark
     reset: 1
 #    states: [ 無, 註 ]
+  - name: en_sort
+    # reset: 1
+    states: [ 無, 序 ]
 
 engine:
   filters:

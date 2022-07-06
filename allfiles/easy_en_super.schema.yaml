@@ -14,6 +14,9 @@ switches:
   - name: ascii_mode
     reset: 0
     states: [ On, Off ]
+  - name: en_sort
+    # reset: 1
+    states: [ 無, 序 ]
 
 engine:
   processors:
