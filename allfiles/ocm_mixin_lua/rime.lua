@@ -750,7 +750,7 @@ function en_sort_filter(input, env)
       local start = env.engine.context:get_preedit().sel_start
       local _end = env.engine.context:get_preedit().sel_end
       local nnn = _end - start
-      if (string.len(cand.text) >= nnn) and (not string.find(input_in, ' ' )) then  --空格避免注音掛接出現 Bug
+      if (string.len(cand.text) >= nnn) and (not string.find(input_in, ' $' )) then  --空格避免注音掛接出現 Bug
         table.insert(cands, cand)
         -- table.insert(cands, {text = cand.text , comment = cand.comment, index = #cands})
         -- table.insert(cands, {text = preedit.t .. cand.comment:sub(2), comment = cand.text, index = #cands})
