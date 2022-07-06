@@ -86,6 +86,7 @@ key_binder:
     - {accept: Control+Shift+6, toggle: zh_tw, when: always} #誤按沒警示，避免誤按，可關閉！（開關台灣習慣用字）
     - {accept: Control+Shift+7, toggle: emoji_segestion, when: always} #誤按沒警示，避免誤按，可關閉！（開關跟隨的emoji）
     - {accept: Control+Shift+8, toggle: back_mark, when: always} #誤按沒警示，避免誤按，可關閉！（開關標註）
+    - {accept: Control+Shift+9, toggle: en_sort, when: always} #誤按沒警示，避免誤按，可關閉！(「排序Easy如同英漢字典」開關）
     # - {accept: Return, send: space, when: has_menu}
 ### 避聲調重複按 ###
     # - {accept: 3, send: Escape, when: composing}

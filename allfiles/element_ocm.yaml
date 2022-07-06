@@ -62,6 +62,7 @@ key_binder:
     - {accept: Control+Shift+7, toggle: emoji_segestion, when: always}
     - {accept: Control+Shift+8, toggle: back_mark, when: always}
     - {accept: Control+Shift+9, toggle: simplify_comment, when: always}
+    - {accept: Control+Shift+0, toggle: en_sort, when: always} #「排序Easy如同英漢字典」開關
 #    - {accept: Return, send: space, when: has_menu} #return,enter直出
 
 
