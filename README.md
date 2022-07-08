@@ -12,7 +12,7 @@
 
 - 為較好更新，不用同一檔案更新數次，allfiles 中檔案不先分方案。
 
-- 提供 sort_rime_file.py，分門別類所需 Rime 文件到各個方案資料夾。
+- 提供 sort_rime_file.py，把所需 Rime 文件放到各個方案資料夾。
 
 ## sort_rime_file.py 使用方法：
 - 於本倉庫 Onion_Rime_Files 按右上綠色 〔↓Code〕 ⇨ Download ZIP ⇨ 解壓縮 ZIP 進入資料夾 ⇨ 用 Python 執行 sort_rime_file.py ⇨ 產生『電腦RIME方案_{當天日期}』資料夾
