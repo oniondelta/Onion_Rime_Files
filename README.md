@@ -40,7 +40,7 @@
   
    > 使用 Windows 小狼毫官方最新封裝版本，如使用方案內有 rime.lua 該檔，建議更換最新官方封裝 librime 核心！早期 librime-lua 版本使用遍尋候選項會產生記憶體洩漏，更新版已解決。
 
-## Rime 初入門：
+## Rime 初入門需知：
 
 - https://github.com/oniondelta/Onion_Rime_Files/wiki/Rime-%E5%88%9D%E5%85%A5%E9%96%80
 
