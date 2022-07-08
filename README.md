@@ -26,7 +26,8 @@
 ~/Library/Rime  ( Mac OS 鼠鬚管 )
 ~/.config/ibus/rime  ( Linux 中州韻 )
 ~/.config/fcitx/rime  ( Linux )
-
+```
+```
 不要放錯資料夾，上方為正確路徑。
 反饋有好幾人放錯放到程式本身攜帶方案之預設資料夾 orz ！雖可使用，但某些功能會有問題。
 Linux 上反饋問題很多，一看其 Rime 核心 librime 過舊，librime-lua 掛件也缺失，使用前請注意！並自行解決！
