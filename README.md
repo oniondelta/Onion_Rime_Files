@@ -3,7 +3,7 @@
 ####  ※ 請勿使用於商業營利相關行為
 ####  ※ Commercial use is prohibited
 
-### 內容說明：
+## 內容說明：
 - allfiles 中包含九個主方案（三個注音、一個注音雙拼、一個拼音、三個形碼、一個行列30）和一眾掛接方案
 
 - 三個形碼方案無法使用，因已刪除碼表內容！
@@ -14,7 +14,7 @@
 
 - 提供 Python (sort_rime_file.py) 文件，把 Rime 文件分門別類到各個方案資料夾，使其易安裝部署
 
-### sort_rime_file.py 使用方法：
+## sort_rime_file.py 使用方法：
 - 於本倉庫 Onion_Rime_Files 中按右上綠色 〔↓Code〕 ⇨ Download ZIP ⇨ 解壓縮 ZIP ⇨ 進入解壓縮後的資料夾，確認 allfiles 資料夾 和 sort_rime_file.py 是在同一層 ⇨ 執行 sort_rime_file.py ⇨ 產生一個『電腦RIME方案_{當天日期}』資料夾
 
 - 產生的『電腦RIME方案_{當天日期}』該資料夾內，會把各方案所須文件，分別在該『方案名稱』資料夾內。
@@ -41,11 +41,11 @@ Linux 上反饋問題很多，一看其 Rime 核心 librime 過舊，librime-lua
   
   > 用 Visual Studio Code 等非 Python 原生程式執行 sort_rime_file.py 會出錯（需另設定），使用 Python 原生程式執行即可。
 
-### Rime 初入門：
+## Rime 初入門：
 
 - https://github.com/oniondelta/Onion_Rime_Files/wiki/Rime-%E5%88%9D%E5%85%A5%E9%96%80
 
-### 各方案說明：
+## 各方案說明：
 
 > 202203 韓文改成 HNC 羅馬字輸入方式。
 
@@ -61,8 +61,7 @@ Linux 上反饋問題很多，一看其 Rime 核心 librime 過舊，librime-lua
 
 - [電腦 RIME 設定檔〖 行列 30（洋蔥版）〗](https://deltazone.pixnet.net/blog/post/361766142)
 
-
-### Demo：
+## Demo：
 
 - 注音（洋蔥 mix-in 版）
   
@@ -82,12 +81,13 @@ Linux 上反饋問題很多，一看其 Rime 核心 librime 過舊，librime-lua
   
   #### ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/master/img/demo_bpmf_pure.gif)
  
-### Keys：
+## Keys：
  
 - 注音（洋蔥 雙拼 版）鍵位
   > 無加 custom 可簡拼，有 custom 為一般雙拼每字須鍵兩碼（聲調可省略）
 
-  #### ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/master/allfiles/%E9%9B%99%E6%8B%BC%E6%B3%A8%E9%9F%B3%E9%8D%B5%E4%BD%8D%E8%AA%AA%E6%98%8E%E5%9C%96%E7%A4%BA/%E6%B3%A8%E9%9F%B3%E6%B4%8B%E8%94%A5%E9%9B%99%E6%8B%BC%E8%AA%AA%E6%98%8E.png)
+  #### <img src="https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/master/allfiles/%E9%9B%99%E6%8B%BC%E6%B3%A8%E9%9F%B3%E9%8D%B5%E4%BD%8D%E8%AA%AA%E6%98%8E%E5%9C%96%E7%A4%BA/%E6%B3%A8%E9%9F%B3%E6%B4%8B%E8%94%A5%E9%9B%99%E6%8B%BC%E8%AA%AA%E6%98%8E.png" width = "598" height = "244.4" alt="image" align=left /><br/>
+
 
 - 注音（洋蔥 plus 版）鍵位
 
@@ -114,7 +114,7 @@ Linux 上反饋問題很多，一看其 Rime 核心 librime 過舊，librime-lua
 
   #### ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/master/img/bpmf_select_keys_keyboard.png)
 
-### 贊助 Donate：
+## 贊助 Donate：
 
   > 從第一個方案上傳已持續更新四年！方案從頭到尾大改、新創、新增非常多功能！且做了許多圖文說明！花了族繁不及備載的心力！
 
