@@ -17,9 +17,9 @@
 ## sort_rime_file.py 使用方法：
 - 於本倉庫 Onion_Rime_Files 中按右上綠色 〔↓Code〕 ⇨ Download ZIP ⇨ 解壓縮 ZIP 進入資料夾 ⇨ 用 Python 執行 sort_rime_file.py ⇨ 產生『電腦RIME方案_{當天日期}』資料夾
 
-- 『電腦RIME方案_{當天日期}』該資料夾內，會把各方案所須文件，分別在該『方案名稱』資料夾內。
+- 『電腦RIME方案_{當天日期}』該資料夾內，各個方案所須文件，分別放置於該『方案名稱』資料夾中。
 
-- 選取想要的方案，把內含文件通通放入『 Rime 』用戶設定資料夾，如已有 opencc 資料夾，移動 opencc 裡面檔案到 opencc 資料夾內，沒有的話，整個 opencc 移過去，按「重新部署」即可使用。
+- 選取欲使用的方案，內含文件通通放入『 Rime 』用戶設定資料夾，如已有 opencc 資料夾，移動 opencc 裡面檔案到 opencc 資料夾內，沒有則整個 opencc 移過去，按「重新部署」方可。
 
  > 《 Windows 用戶注意！》「注音（洋蔥 plus 版）」和「注音（洋蔥 mix‧in 版）」掛接《Easy》其使用提示碼做英漢字典，但 Windows 輸入時，整頁提示碼太多會使程式崩潰！故以正則簡化提示碼！不過 Windows 可行程式碼在 Mac 會使《Easy》無法正常出字！提供 custom 檔給 Windows 用戶，防止程式崩潰， Mac 用戶勿使用該 custom 檔。分別在「`plus注音_防崩潰：Win必加，Mac勿加`」和「`mixin注音_同顯2修改檔(Win)`」資料夾內，Windows 用戶把資料夾內 custom.yaml 檔拖到上一層，和方案中其他文件同一層，按「重新部署」即可。
 
