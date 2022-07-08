@@ -15,7 +15,7 @@
 - 提供 Python (sort_rime_file.py) 文件，把 Rime 文件分門別類到各個方案資料夾，使其易安裝部署
 
 ## sort_rime_file.py 使用方法：
-- 於本倉庫 Onion_Rime_Files 中按右上綠色 〔↓Code〕 ⇨ Download ZIP ⇨ 解壓縮 ZIP 進入資料夾 ⇨ 用 Python 執行 sort_rime_file.py ⇨ 產生『電腦RIME方案_{當天日期}』資料夾
+- 於本倉庫 Onion_Rime_Files 按右上綠色 〔↓Code〕 ⇨ Download ZIP ⇨ 解壓縮 ZIP 進入資料夾 ⇨ 用 Python 執行 sort_rime_file.py ⇨ 產生『電腦RIME方案_{當天日期}』資料夾
 
 - 『電腦RIME方案_{當天日期}』該資料夾內，各個方案所須文件，分別放置於該『方案名稱』資料夾中。
 
