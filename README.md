@@ -69,11 +69,15 @@ Linux 上反饋問題很多，一看其 Rime 核心 librime 過舊，librime-lua
   
   #### ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/master/img/demo_bpmf_mixin.gif)
   
+  <br>
+  
 - 注音（洋蔥 plus 版）
 
   > 功能多，除外語還有一堆功能和細節增加，輸入手感和純注音版一樣，即使沒用外語，也推薦使用！
   
   #### ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/master/img/demo_bpmf_plus.gif)
+  
+  <br>
   
 - 注音（洋蔥 純注音 版）
   
@@ -81,17 +85,22 @@ Linux 上反饋問題很多，一看其 Rime 核心 librime 過舊，librime-lua
   
   #### ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/master/img/demo_bpmf_pure.gif)
  
+ <br>
+ 
 ## Keys：
  
 - 注音（洋蔥 雙拼 版）鍵位
   > 無加 custom 可簡拼，有 custom 為一般雙拼每字須鍵兩碼（聲調可省略）
 
-  #### <img src="https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/master/allfiles/%E9%9B%99%E6%8B%BC%E6%B3%A8%E9%9F%B3%E9%8D%B5%E4%BD%8D%E8%AA%AA%E6%98%8E%E5%9C%96%E7%A4%BA/%E6%B3%A8%E9%9F%B3%E6%B4%8B%E8%94%A5%E9%9B%99%E6%8B%BC%E8%AA%AA%E6%98%8E.png" width = "598" height = "244.4" alt="image" align=left /><br/>
+  #### <img src="https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/master/allfiles/%E9%9B%99%E6%8B%BC%E6%B3%A8%E9%9F%B3%E9%8D%B5%E4%BD%8D%E8%AA%AA%E6%98%8E%E5%9C%96%E7%A4%BA/%E6%B3%A8%E9%9F%B3%E6%B4%8B%E8%94%A5%E9%9B%99%E6%8B%BC%E8%AA%AA%E6%98%8E.png" width = "595" alt="image" align=left />
 
+  <br><br><br><br><br><br><br><br><br><br><br>
 
 - 注音（洋蔥 plus 版）鍵位
 
   #### ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/master/img/bpmf_plus_keyboard.png)
+
+  <br>
 
 - 注音（洋蔥 mixin 版）鍵位
 
@@ -110,9 +119,13 @@ Linux 上反饋問題很多，一看其 Rime 核心 librime 過舊，librime-lua
   
   #### ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/master/img/bpmf_mixin_4_keyboard.png)
   
+  <br>
+  
 - 注音洋蔥版選字鍵位
 
-  #### ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/master/img/bpmf_select_keys_keyboard.png)
+  #### <img src="https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/master/img/bpmf_select_keys_keyboard.png" width = "595" alt="image" align=left />
+
+<br><br><br><br><br><br><br><br><br><br>
 
 ## 贊助 Donate：
 
