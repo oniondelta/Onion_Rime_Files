@@ -10,9 +10,9 @@
 
 - 掛接方案包含：拉丁字母（含音標）、希臘字母、西里爾（俄）字母、全形數字字母、Easy 英文（含註釋字典）、日文（含漢字）、兩個韓文（HNC和形碼，含單音含漢字）、 注音文、Emoji 顏文字符號系列集等。
 
-- allfiles 中的檔案不一個資料夾一個方案，因較好更新，不用同一個檔案更新數次。
+- 為較好更新，不用同一檔案更新數次，allfiles 中檔案不先分方案。
 
-- 提供 Python (sort_rime_file.py) 文件，把 Rime 文件分門別類到各個方案資料夾，使其易安裝部署
+- 提供 sort_rime_file.py，分門別類所需 Rime 文件到各個方案資料夾。
 
 ## sort_rime_file.py 使用方法：
 - 於本倉庫 Onion_Rime_Files 按右上綠色 〔↓Code〕 ⇨ Download ZIP ⇨ 解壓縮 ZIP 進入資料夾 ⇨ 用 Python 執行 sort_rime_file.py ⇨ 產生『電腦RIME方案_{當天日期}』資料夾
