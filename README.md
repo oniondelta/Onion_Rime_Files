@@ -21,7 +21,7 @@
 
 - 選取欲使用方案，內含文件通通放入『 Rime 』用戶設定資料夾，如已有 opencc 資料夾，移動 opencc 裡面檔案到 opencc 資料夾內，沒有則整個 opencc 移過去，「重新部署」方可。
 
- > 《 Windows 用戶注意！》「注音（洋蔥 plus 版）」和「注音（洋蔥 mix‧in 版）」掛接《Easy》，用提示碼作英漢字典，Windows 整頁提示碼太多程式會崩潰！提供 custom 檔給 Windows 用戶，以正則簡化提示碼，防程式崩潰， Mac 用戶勿使用。
+ > 《 Windows 用戶注意！》「注音（洋蔥 plus 版）」和「注音（洋蔥 mix‧in 版）」掛接《Easy》，用提示碼作英漢字典，Windows 整頁提示碼太多程式會崩潰！提供 custom 檔給 Windows 用戶，以正則簡化提示碼，防崩潰， Mac 用戶勿使用。
 
 > 承上，分別於「`plus注音_防崩潰：Win必加，Mac勿加`」和「`mixin注音_同顯2修改檔(Win)`」資料夾內，Windows 用戶把資料夾內 .custom.yaml 檔拖至上一層，與方案文件同一層，按「重新部署」方可。
 
