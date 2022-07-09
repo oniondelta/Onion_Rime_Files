@@ -38,7 +38,7 @@
   
    > Linux 反饋問題很多，一看其 Rime 核心 librime 過舊，librime-lua 掛件也缺失！不可能回退使功能打折去符合舊版核心寫法！方案皆以 Mac 鼠鬚管官方最新封裝版本為實作基礎。
   
-   > 使用 Windows 小狼毫官方最新封裝版本，如使用方案內有 rime.lua 該檔，建議更換最新官方封裝 librime 核心！早期 librime-lua 版本使用遍尋候選項會產生記憶體洩漏，更新版已解決。
+   > 使用 Windows 小狼毫官方最新封裝版本，方案內有 rime.lua 該檔，建議更換最新官方封裝 [librime 核心](https://github.com/rime/librime/releases)！早期 librime-lua 版本使用遍尋候選項會產生記憶體洩漏，更新版已解決。
 
 ## Rime 入門需知：
 
