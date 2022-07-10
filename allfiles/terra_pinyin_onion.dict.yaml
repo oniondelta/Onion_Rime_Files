@@ -136,7 +136,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "202206"
+version: "202207"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -76334,6 +76334,7 @@ min_phrase_weight: 100
 折紙	zhe2 zhi3
 折線	zhe2 xian4
 折縫	zhe2 feng2
+折縫	zhe2 feng4
 折罪	zhe2 zui4
 折罰	zhe2 fa2
 折翼	zhe2 yi4
@@ -86138,6 +86139,7 @@ min_phrase_weight: 100
 混雜	hun4 za2
 混雜物	hun4 za2 wu4
 混音	hun4 yin1
+混音	hun3 yin1
 混頭混腦	hun2 tou2 hun2 nao3
 混頭混腦	hun4 tou2 hun4 nao3
 混飯	hun4 fan4
@@ -111831,4 +111833,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 111834 #####
+##### @結束 END - 111836 #####
