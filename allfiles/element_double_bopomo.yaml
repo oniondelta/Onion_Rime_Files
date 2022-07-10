@@ -246,6 +246,7 @@ algebra:
     - xform/^cy$/hz!/ #【合字】(日語)
     - xform/^za$/fm!/ #【符碼】(單純符號)
     - xform/^2s$/dn!/ #【電腦】
+    - xform/^eu$/gi!/ #【工業】
     - xform/^vf$/xq!/ #【象棋／西洋棋】
     - xform/^ar$/mj!/ #【麻將】
     - xform/^gy$/az!/ #【骰子】
@@ -570,6 +571,7 @@ preedit_format:
     - xform/^hz$/【合字】(日語)/
     - xform/^fm$/【符碼】(單純符號)/
     - xform/^dn$/【電腦】/
+    - xform/^gi$/【工業】/
     - xform/^xq$/【象棋／西洋棋】/
     - xform/^mj$/【麻將】/
     - xform/^az$/【骰子】/
