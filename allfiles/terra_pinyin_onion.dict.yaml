@@ -2052,6 +2052,8 @@ min_phrase_weight: 100
 粩	lao3	70%
 撃	ji2
 柙	jia3	0%
+場	dang4	0%
+场	chang2	3%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -111836,4 +111838,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 111839 #####
+##### @結束 END - 111841 #####
