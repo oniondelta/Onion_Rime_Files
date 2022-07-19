@@ -114,6 +114,8 @@
 #    詞句中，「框」臺灣字典只有發音「kuang1」，沒有「kuang4」發音，故只保留「kuang1」發音。
 #    詞句中，「紮」臺灣字典發音為「za1」和「zha2」，但對岸字典有「zha1」，由於發音相近，故「za1」和「zha1」相互補齊，「zha2」語意不同，故不補。
 #    詞句中，「軋」除語意為狀聲詞「ga2」「ya4」或特殊語意等，皆補齊「ya4」「ga1」「ga2」「zha2」。
+#    詞句中，「伐」皆補齊「fa1」「fa2」。
+#    詞句中，「召」發音為「zhao4」「shao4」，兩岸皆無「zhao1」該發音，但日常常發，故標準為「zhao4」時補齊「zhao4」「zhao1」。
 #    預計比對「輕聲和一聲」變音。
 #
 #  〈2020修改字詞彙發音〉：
@@ -1545,7 +1547,6 @@ min_phrase_weight: 100
 贲	ban1	0.1%
 贲	lu4	0.1%
 贲	pan1	0.1%
-召	zhao1
 烊	yang4	0.2%
 扒	bie2	0.2%
 稜	leng1	1%
@@ -2059,6 +2060,9 @@ min_phrase_weight: 100
 祗	qi2	0%
 袛	zhi1	0%
 萩	jiao1	0%
+諚	bian4
+祓	fei4	0%
+伐	fa1
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -2110,7 +2114,6 @@ min_phrase_weight: 100
 皿	ming3	1%
 示	qi2	1%
 份	bin1	1%
-伐	fa1	1%
 休	xiu3	1%
 休	xu3	1%
 先	xian4	1%
@@ -57381,6 +57384,7 @@ min_phrase_weight: 100
 以和為貴	yi3 he2 wei2 gui4
 以和為貴	yi3 he2 wei4 gui4
 以夷伐夷	yi3 yi2 fa1 yi2
+以夷伐夷	yi3 yi2 fa2 yi2
 以字行	yi3 zi4 xing2
 以寡擊眾	yi3 gua3 ji2 zhong4
 以實相告	yi3 shi2 xiang1 gao4
@@ -57549,32 +57553,53 @@ min_phrase_weight: 100
 伏都教	fu2 du1 jiao4
 伏雌	fu2 ci1
 伐交	fa1 jiao1
+伐交	fa2 jiao1
 伐兵	fa1 bing1
+伐兵	fa2 bing1
 伐冰	fa1 bing1
+伐冰	fa2 bing1
 伐善	fa1 shan4
 伐善	fa2 shan4
 伐喪	fa1 sang1
+伐喪	fa2 sang1
 伐子都	fa1 zi3 du1
+伐子都	fa2 zi3 du1
 伐性	fa1 xing4
+伐性	fa2 xing4
 伐性之斧	fa1 xing4 zhi1 fu3
+伐性之斧	fa2 xing4 zhi1 fu3
 伐木	fa1 mu4
 伐木	fa2 mu4
 伐木場	fa2 mu4 chang3
 伐木場	fa2 mu4 chang2	3%
+伐木場	fa1 mu4 chang3
+伐木場	fa1 mu4 chang2	3%
 伐東吳	fa1 dong1 wu2
+伐東吳	fa2 dong1 wu2
 伐柯	fa1 ke1
 伐柯	fa2 ke1
 伐柯人	fa1 ke1 ren2
+伐柯人	fa2 ke1 ren2
 伐檀	fa1 tan2
+伐檀	fa2 tan2
 伐毛洗髓	fa1 mao2 xi3 sui3
+伐毛洗髓	fa2 mao2 xi3 sui3
 伐生	fa1 sheng1
+伐生	fa2 sheng1
 伐異黨同	fa1 yi4 dang3 tong2
+伐異黨同	fa2 yi4 dang3 tong2
 伐罪	fa1 zui4
+伐罪	fa2 zui4
 伐罪弔民	fa1 zui4 diao4 min2
+伐罪弔民	fa2 zui4 diao4 min2
 伐薪	fa1 xin1
+伐薪	fa2 xin1
 伐藝	fa1 yi4
+伐藝	fa2 yi4
 伐謀	fa1 mou2
+伐謀	fa2 mou2
 伐鼓	fa1 gu3
+伐鼓	fa2 gu3
 休來弄竹竿	xiu1 lai2 nong4 zhu2 gan1
 休假	xiu1 jia4
 休寧	xiu1 ning2
@@ -57790,6 +57815,7 @@ min_phrase_weight: 100
 佛馱	fo2 tuo2
 作不得主	zuo4 bu4 de2 zhu3
 作伐	zuo4 fa1
+作伐	zuo4 fa2
 作佛事	zuo4 fo2 shi4
 作倒了行市	zuo4 dao3 le5 hang2 shi4
 作假	zuo4 jia3
@@ -58843,6 +58869,7 @@ min_phrase_weight: 100
 假造	jia3 zao4
 假道	jia3 dao4
 假道伐虢	jia3 dao4 fa2 guo2
+假道伐虢	jia3 dao4 fa1 guo2
 假道學	jia3 dao4 xue2
 假釋	jia3 shi4
 假鈔	jia3 chao1
@@ -61653,6 +61680,7 @@ min_phrase_weight: 100
 剨然	huo4 ran2
 剩下	sheng4 xia4
 剪伐	jian3 fa1
+剪伐	jian3 fa2
 剪刀差	jian3 dao1 cha1
 剪切	jian3 qie1
 剪切力	jian3 qie1 li4
@@ -64030,6 +64058,7 @@ min_phrase_weight: 100
 吉藏	ji2 zang4
 吉里巴斯共和國	ji2 li3 ba1 si1 gong4 he2 guo2
 吊伐	diao4 fa1
+吊伐	diao4 fa2
 吊兒郎當	diao4 er5 lang2 dang1	80%
 吊兒郎當	diao4 er2 lang2 dang1
 吊卷	diao4 juan4
@@ -64348,6 +64377,7 @@ min_phrase_weight: 100
 吳下阿蒙	wu2 xia4 a1 meng2
 吳下阿蒙	wu2 xia4 a4 meng2
 吳剛伐桂	wu2 gang1 fa1 gui4
+吳剛伐桂	wu2 gang1 fa2 gui4
 吳堡	wu2 bu3
 吳堡縣	wu2 bu3 xian4
 吳宮教陣	wu2 gong1 jiao4 zhen4
@@ -67165,11 +67195,13 @@ min_phrase_weight: 100
 埳軻	kan3 ke1
 執事	zhi2 shi4
 執伐	zhi2 fa1
+執伐	zhi2 fa2
 執喪	zhi2 sang1
 執憑文帖	zhi2 ping2 wen2 tie3
 執教	zhi2 jiao4
 執旗將	zhi2 qi2 jiang4
 執柯作伐	zhi2 ke1 zuo4 fa1
+執柯作伐	zhi2 ke1 zuo4 fa2
 執法不阿	zhi2 fa3 bu4 e1
 執著	zhi2 zhuo2
 執結	zhi2 jie2
@@ -68619,6 +68651,7 @@ min_phrase_weight: 100
 夭邪	yao1 xia2
 夭閼	yao3 e4
 央人作伐	yang1 ren2 zuo4 fa1
+央人作伐	yang1 ren2 zuo4 fa2
 央告	yang1 gao4
 央央戧戧	yang1 yang1 qiang1 qiang1
 央戧	yang1 qiang1
@@ -68803,6 +68836,7 @@ min_phrase_weight: 100
 奉調	feng4 diao4
 奉轂後車	feng4 gu3 hou4 che1
 奉辭伐罪	feng4 ci2 fa1 zui4
+奉辭伐罪	feng4 ci2 fa2 zui4
 奉還	feng4 huan2
 奉養	feng4 yang4
 奉養	feng4 yang3
@@ -68915,6 +68949,7 @@ min_phrase_weight: 100
 奧斯卡金像獎	ao4 si1 ka3 jin1 xiang4 jiang3
 奧會模式	ao4 hui4 mo2 shi4
 奧杜伐峽谷	ao4 du4 fa1 xia2 gu3
+奧杜伐峽谷	ao4 du4 fa2 xia2 gu3
 奧林匹亞	ao4 lin2 pi3 ya3
 奧林匹亞	ao4 lin2 pi3 ya4
 奧林匹亞	ao4 lin2 pi1 ya3
@@ -75081,11 +75116,11 @@ min_phrase_weight: 100
 應卯吃糧	ying4 mao3 chi1 liang2
 應口	ying4 kou3
 應召	ying4 zhao4
-應召	ying4 zhao1
+應召	ying4 zhao1	80%
 應召女郎	ying4 zhao4 nv3 lang2
-應召女郎	ying4 zhao1 nv3 lang2
+應召女郎	ying4 zhao1 nv3 lang2	80%
 應召站	ying4 zhao4 zhan4
-應召站	ying4 zhao1 zhan4
+應召站	ying4 zhao1 zhan4	80%
 應名	ying4 ming2
 應名	ying1 ming2
 應名兒	ying1 ming2 er5	80%
@@ -77363,7 +77398,7 @@ min_phrase_weight: 100
 捶胸跌足	chui2 xiong1 die2 zu2
 捷克共和國	jie2 ke4 gong4 he2 guo2
 捷克暨斯洛伐克聯邦共和國	jie2 ke4 ji4 si1 luo4 fa2 ke4 lian2 bang1 gong4 he2 guo2
-# 捷克暨斯洛伐克聯邦共和國	jie2 ke4 ji4 si1 luo4 fa1 ke4 lian2 bang1 gong4 he2 guo2
+捷克暨斯洛伐克聯邦共和國	jie2 ke4 ji4 si1 luo4 fa1 ke4 lian2 bang1 gong4 he2 guo2
 捷報頻傳	jie2 bao4 pin2 chuan2
 捷給	jie2 ji3
 捷足先得	jie2 zu2 xian1 de2
@@ -78677,6 +78712,7 @@ min_phrase_weight: 100
 操持	cao1 chi2
 操控	cao1 kong4
 操斧伐柯	cao1 fu3 fa2 ke1
+操斧伐柯	cao1 fu3 fa1 ke1
 操暴	cao1 bao4
 操槍	cao1 qiang1
 操法	cao1 fa3
@@ -79361,6 +79397,7 @@ min_phrase_weight: 100
 教育	jiao4 yu4
 教育制度	jiao4 yu4 zhi4 du4
 教育召集	jiao4 yu4 zhao4 ji2
+教育召集	jiao4 yu4 zhao1 ji2	80%
 教育史	jiao4 yu4 shi3
 教育哲學	jiao4 yu4 zhe2 xue2
 教育商數	jiao4 yu4 shang1 shu4
@@ -79880,7 +79917,9 @@ min_phrase_weight: 100
 斫雕為樸	zhuo2 diao1 wei2 pu2
 斫鱠	zhuo2 kuai4
 斬伐	zhan3 fa1
+斬伐	zhan3 fa2
 斬刈殺伐	zhan3 yi4 sha1 fa1
+斬刈殺伐	zhan3 yi4 sha1 fa2
 斬將奪旗	zhan3 jiang4 duo2 qi2
 斬將搴旗	zhan3 jiang4 qian1 qi2
 斬木為兵	zhan3 mu4 wei2 bing1
@@ -79904,6 +79943,7 @@ min_phrase_weight: 100
 斯文委地	si1 wen2 wei3 di4
 斯文掃地	si1 wen2 sao3 di4
 斯洛伐克共和國	si1 luo4 fa1 ke4 gong4 he2 guo2
+斯洛伐克共和國	si1 luo4 fa2 ke4 gong4 he2 guo2
 斯洛文尼亞共和國	si1 luo4 wen2 ni2 ya3 gong4 he2 guo2
 斯洛文尼亞共和國	si1 luo4 wen2 ni2 ya4 gong4 he2 guo2
 斯瓦特谷地	si1 wa3 te4 gu3 di4
@@ -81667,6 +81707,7 @@ min_phrase_weight: 100
 期頤之壽	qi2 yi2 zhi1 shou4
 期頤偕老	qi2 yi2 xie2 lao3
 木伐	mu4 fa1
+木伐	mu4 fa2
 木作	mu4 zuo1
 木作	mu4 zuo4
 木偶影片	mu4 ou3 ying3 pian4
@@ -81996,6 +82037,7 @@ min_phrase_weight: 100
 東觀	dong1 guan4
 東觀之殃	dong1 guan4 zhi1 yang1
 東討西伐	dong1 tao3 xi1 fa1
+東討西伐	dong1 tao3 xi1 fa2
 東躲西藏	dong1 duo3 xi1 cang2
 東轉西晃	dong1 zhuan3 xi1 huang4
 東邊	dong1 bian1
@@ -83762,6 +83804,7 @@ min_phrase_weight: 100
 步伐	bu4 fa1
 步伐	bu4 fa2
 步伐異常	bu4 fa1 yi4 chang2
+步伐異常	bu4 fa2 yi4 chang2
 步兵學校	bu4 bing1 xue2 xiao4
 步兵校尉	bu4 bing1 xiao4 wei4
 步子	bu4 zi5
@@ -83964,6 +84007,7 @@ min_phrase_weight: 100
 殺伐	sha1 fa1
 殺伐	sha1 fa2
 殺伐決斷	sha1 fa1 jue2 duan4
+殺伐決斷	sha1 fa2 jue2 duan4
 殺出重圍	sha1 chu1 chong2 wei2
 殺妻求將	sha1 qi1 qiu2 jiang4
 殺家達子	sha1 jia1 da2 zi5
@@ -90612,6 +90656,7 @@ min_phrase_weight: 100
 直敪	zhi2 duo2
 直敪	zhi2 duo1
 直木必伐	zhi2 mu4 bi4 fa1
+直木必伐	zhi2 mu4 bi4 fa2
 直溜	zhi2 liu1
 直率	zhi2 shuai4
 直著身子	zhi2 zhe5 shen1 zi5
@@ -91506,8 +91551,11 @@ min_phrase_weight: 100
 矛盾	mao2 shun3
 矛盾相向	mao2 dun4 xiang1 xiang4
 矜伐	jin1 fa1
+矜伐	jin1 fa2
 矜功伐善	jin1 gong1 fa1 shan4
+矜功伐善	jin1 gong1 fa2 shan4
 矜功自伐	jin1 gong1 zi4 fa1
+矜功自伐	jin1 gong1 zi4 fa2
 矜寡孤獨	guan1 gua3 gu1 du2
 矜惜	jin1 xi2
 矜重	jin1 zhong4
@@ -98606,6 +98654,7 @@ min_phrase_weight: 100
 蒙一飯之恩	meng2 yi2 fan4 zhi1 en1
 蒙一飯之恩	meng2 yi1 fan4 zhi1 en1
 蒙主寵召	meng2 zhu3 chong3 zhao4
+蒙主寵召	meng2 zhu3 chong3 zhao1	80%
 蒙代爾	meng1 dai4 er3
 蒙代爾	meng2 dai4 er3
 蒙住	meng2 zhu4
@@ -98644,6 +98693,7 @@ min_phrase_weight: 100
 蒙古高原	meng2 gu3 gao1 yuan2
 蒙古高原	meng3 gu3 gao1 yuan2
 蒙召	meng2 zhao4
+蒙召	meng2 zhao1	80%
 蒙吏	meng2 li4
 蒙哄	meng2 hong3
 蒙哥	meng2 ge1
@@ -100814,6 +100864,7 @@ min_phrase_weight: 100
 要妙	yao1 miao4
 要子	yao4 zi5
 要寵召禍	yao1 chong3 zhao4 huo4
+要寵召禍	yao1 chong3 zhao1 huo4	80%
 要市	yao1 shi4
 要強	yao4 qiang2
 要得	yao4 de2
@@ -103447,6 +103498,7 @@ min_phrase_weight: 100
 蹶子	jue2 zi5
 蹶子	jue3 zi5
 蹶石伐木	jue2 shi2 fa1 mu4
+蹶石伐木	jue2 shi2 fa2 mu4
 蹶角	jue2 jue2
 蹺敧	qiao1 qi1
 蹺足以待	qiao1 zu2 yi3 dai4
@@ -104250,6 +104302,7 @@ min_phrase_weight: 100
 辟人之士	bi4 ren2 zhi1 shi4
 辟匿	pi4 ni4
 辟召	bi4 zhao4
+辟召	bi4 zhao1	80%
 辟君三舍	bi4 jun1 san1 she4
 辟命	bi4 ming4
 辟咡	pi4 er4
@@ -107718,8 +107771,11 @@ min_phrase_weight: 100
 阿伏伽德羅常數	a1 fu2 jia1 de2 luo2 chang2 shu4
 阿伏伽德羅數	a1 fu2 jia1 de2 luo2 shu4
 阿伐射線	a1 fa1 she4 xian4
+阿伐射線	a1 fa2 she4 xian4
 阿伐粒子	a1 fa1 li4 zi3
+阿伐粒子	a1 fa2 li4 zi3
 阿伐蛻變	a1 fa1 shui4 bian4
+阿伐蛻變	a1 fa2 shui4 bian4
 阿伯	a1 bo2
 阿伯丁	a1 bo2 ding1
 阿伽陀	a1 qie2 tuo2
@@ -111843,4 +111899,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 111846 #####
+##### @結束 END - 111903 #####
