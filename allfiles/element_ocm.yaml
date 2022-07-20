@@ -58,6 +58,7 @@ key_binder:
     - {accept: Control+apostrophe, toggle: zh_tw, when: always}
     - {accept: Control+minus, toggle: back_mark, when: always } #「國際音標和符號」提示碼開關
     - {accept: Control+equal, toggle: simplify_comment, when: always } #「蝦米碼」提示碼開關
+    - {accept: Control+bracketright, toggle: en_sort, when: always} #「easy」選單排序是否照英漢字典順序
     - {accept: Control+Shift+6, toggle: zh_tw, when: always}
     - {accept: Control+Shift+7, toggle: emoji_segestion, when: always}
     - {accept: Control+Shift+8, toggle: back_mark, when: always}

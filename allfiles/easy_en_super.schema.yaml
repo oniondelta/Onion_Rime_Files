@@ -107,6 +107,8 @@ key_binder:
 ### 選字翻頁 ###
     - {accept: Left, send: Page_Up, when: paging} #直式選單用 #has_menu
     - {accept: Right, send: Page_Down, when: paging} #直式選單用 #has_menu
+### 快捷鍵轉換排序 ###
+    - {accept: Control+bracketright, toggle: en_sort, when: always} #「easy」選單排序是否照英漢字典順序
 
 punctuator:
   # import_preset: default
