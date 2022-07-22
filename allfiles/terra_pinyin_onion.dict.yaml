@@ -116,6 +116,7 @@
 #    詞句中，「軋」除語意為狀聲詞「ga2」「ya4」或特殊語意等，皆補齊「ya4」「ga1」「ga2」「zha2」。
 #    詞句中，「伐」皆補齊「fa1」「fa2」。
 #    詞句中，「召」發音為「zhao4」「shao4」，兩岸皆無「zhao1」該發音，但日常常發，故標準為「zhao4」時補齊「zhao4」「zhao1」。
+#    詞句中，「血」皆補齊「xie3」「xue4」。
 #    預計比對「輕聲和一聲」變音。
 #
 #  〈2020修改字詞彙發音〉：
@@ -54147,6 +54148,8 @@ min_phrase_weight: 100
 一搖三晃	yi1 yao2 san1 huang4
 一摑一掌血	yi4 guo2 yi4 zhang3 xie3
 一摑一掌血	yi1 guo2 yi1 zhang3 xie3
+一摑一掌血	yi4 guo2 yi4 zhang3 xue4
+一摑一掌血	yi1 guo2 yi1 zhang3 xue4
 一撇	yi4 pie3
 一撇	yi1 pie3
 一撥兒	yi4 bo1 er5	80%
@@ -54677,6 +54680,8 @@ min_phrase_weight: 100
 一酬一酢	yi1 chou2 yi1 zuo4
 一針見血	yi4 zhen1 jian4 xie3
 一針見血	yi1 zhen1 jian4 xie3
+一針見血	yi4 zhen1 jian4 xue4
+一針見血	yi1 zhen1 jian4 xue4
 一錘子買賣	yi4 chui2 zi5 mai3 mai4
 一錘子買賣	yi1 chui2 zi5 mai3 mai4
 一錢不落虛空地	yi4 qian2 bu2 luo4 xu1 kong1 di4
@@ -54784,6 +54789,7 @@ min_phrase_weight: 100
 七和絃	qi1 he2 xian2
 七夕	qi1 xi4
 七孔流血	qi1 kong3 liu2 xie3
+七孔流血	qi1 kong3 liu2 xue4
 七折八扣	qi1 zhe2 ba1 kou4
 七橫八縱	qi1 heng2 ba1 zong1
 七橫八豎	qi1 heng2 ba1 shu4
@@ -56277,6 +56283,7 @@ min_phrase_weight: 100
 丹參	dan1 shen1
 丹干	dan1 gan1
 丹心碧血	dan1 xin1 bi4 xie3
+丹心碧血	dan1 xin1 bi4 xue4
 丹瑞大將	dan1 rui4 da4 jiang4
 丹瑞將軍	dan1 rui4 jiang1 jun1
 丹穴	dan1 xue4
@@ -56986,6 +56993,7 @@ min_phrase_weight: 100
 亡是公	wu2 shi4 gong1
 亡羊得牛	wang2 yang2 de2 niu2
 亡血家	wang2 xie3 jia1
+亡血家	wang2 xue4 jia1
 亡魂喪膽	wang2 hun2 sang4 dan3
 亡魂喪魄	wang2 hun2 sang4 po4
 交代	jiao1 dai4
@@ -57128,6 +57136,9 @@ min_phrase_weight: 100
 人尖兒	ren2 jian1 er5	80%
 人尖兒	ren2 jian1 er2
 人工血液	ren2 gong1 xie3 ye4
+人工血液	ren2 gong1 xue4 ye4
+人工血液	ren2 gong1 xie3 yi4
+人工血液	ren2 gong1 xue4 yi4
 人工閱卷	ren2 gong1 yue4 juan4
 人工降雨	ren2 gong1 jiang4 yu3
 人強馬壯	ren2 qiang2 ma3 zhuang4
@@ -58039,7 +58050,9 @@ min_phrase_weight: 100
 供花	gong4 hua1
 供茶	gong4 cha2
 供血	gong1 xue4
+供血	gong1 xie3
 供血者	gong1 xue4 zhe3
+供血者	gong1 xie3 zhe3
 供貨	gong1 huo4
 供貨商	gong1 huo4 shang1
 供述	gong1 shu4
@@ -58187,6 +58200,7 @@ min_phrase_weight: 100
 便罷	bian4 ba4
 便菜	bian4 cai4
 便血	bian4 xie3
+便血	bian4 xue4
 便衣	bian4 yi1
 便衣警察	bian4 yi1 jing3 cha2
 便袋	bian4 dai4
@@ -59737,6 +59751,7 @@ min_phrase_weight: 100
 免疫反應	mian3 yi4 fan3 ying4
 免疫應答	mian3 yi4 ying1 da2
 免疫血清	mian3 yi4 xie3 qing1
+免疫血清	mian3 yi4 xue4 qing1
 兒女情長	er2 nv3 qing2 chang2
 兒女英雄傳	er2 nv3 ying1 xiong2 zhuan4
 兒子	er2 zi3
@@ -59881,6 +59896,7 @@ min_phrase_weight: 100
 全稱	quan2 cheng1
 全職媽媽	quan2 zhi2 ma1 ma5
 全血輸血	quan2 xie3 shu1 xie3
+全血輸血	quan2 xue4 shu1 xue4
 全身遠害	quan2 shen1 yuan4 hai4
 全軍覆沒	quan2 jun1 fu4 mo4
 全都	quan2 dou1
@@ -60465,8 +60481,11 @@ min_phrase_weight: 100
 凝結作用	ning2 jie2 zuo4 yong4
 凝結反應	ning2 jie2 fan3 ying4
 凝血因子	ning2 xie3 yin1 zi3
+凝血因子	ning2 xue4 yin1 zi3
 凝血現象	ning2 xie3 xian4 xiang4
+凝血現象	ning2 xue4 xian4 xiang4
 凝血障礙	ning2 xie3 zhang4 ai4
+凝血障礙	ning2 xue4 zhang4 ai4
 凝視時間	ning2 shi4 shi2 jian1
 凝重	ning2 zhong4
 几几	ji3 ji3
@@ -60592,6 +60611,7 @@ min_phrase_weight: 100
 出血	chu1 xie3
 出血	chu1 xue4
 出血筒子	chu1 xie3 tong3 zi5
+出血筒子	chu1 xue4 tong3 zi5
 出行	chu1 xing2
 出謀劃策	chu1 mou2 hua4 ce4
 出豁	chu1 huo4
@@ -60614,6 +60634,7 @@ min_phrase_weight: 100
 函授學校	han2 shou4 xue2 xiao4
 函數	han2 shu4
 刀刀見血	dao1 dao1 jian4 xie3
+刀刀見血	dao1 dao1 jian4 xue4
 刀切斧砍	dao1 qie1 fu3 kan3
 刀切豆腐	dao1 qie1 dou4 fu3
 刀刺	dao1 ci4
@@ -60624,6 +60645,7 @@ min_phrase_weight: 100
 刀創藥	dao1 chuang1 yao4
 刀叉	dao1 cha1
 刀口上舔血	dao1 kou3 shang4 tian3 xie3
+刀口上舔血	dao1 kou3 shang4 tian3 xue4
 刀子	dao1 zi5
 刀子嘴	dao1 zi5 zui3
 刀子嘴巴	dao1 zi5 zui3 ba1
@@ -60636,6 +60658,7 @@ min_phrase_weight: 100
 刀鋸斧鉞	dao1 ju4 fu3 yue4
 刀鋸鼎鑊	dao1 ju4 ding3 huo4
 刀頭舔血	dao1 tou2 tian3 xie3
+刀頭舔血	dao1 tou2 tian3 xue4
 刁天厥地	diao1 tian1 jue2 di4
 刁天撅地	diao1 tian1 jue1 di4
 刁天決地	diao1 tian1 jue2 di4
@@ -62227,6 +62250,7 @@ min_phrase_weight: 100
 動脈粥樣硬化	dong4 mai4 zhou1 yang4 ying4 hua4
 動脈脂肪沉積	dong4 mai4 zhi1 fang2 chen2 ji1
 動脈輸血	dong4 mai4 shu1 xie3
+動脈輸血	dong4 mai4 shu1 xue4
 動興	dong4 xing4
 動詞結構	dong4 ci2 jie2 gou4
 動詞重疊	dong4 ci2 chong2 die2
@@ -64260,6 +64284,8 @@ min_phrase_weight: 100
 吐蕃王朝	tu3 bo1 wang2 chao2
 吐血	tu4 xie3
 吐血	tu3 xie3
+吐血	tu4 xue4
+吐血	tu3 xue4
 吐訴	tu3 su4
 吐谷渾	tu3 yu4 hun2
 吐賀	tu3 he4
@@ -64363,7 +64389,9 @@ min_phrase_weight: 100
 含苞待放	han2 bao1 dai4 fang4
 含蓼問疾	han2 liao3 wen4 ji2
 含血噀人	han2 xie3 xun4 ren2
+含血噀人	han2 xue4 xun4 ren2
 含血噴人	han2 xie3 pen1 ren2
+含血噴人	han2 xue4 pen1 ren2
 含量	han2 liang4
 含飴弄孫	han2 yi2 nong4 sun1
 含齒戴髮	han2 chi3 dai4 fa3
@@ -64411,8 +64439,11 @@ min_phrase_weight: 100
 吸著	xi1 zhuo2
 吸著	xi1 zhe5
 吸血	xi1 xie3
+吸血	xi1 xue4
 吸血蛭	xi1 xie3 zhi4
+吸血蛭	xi1 xue4 zhi4
 吸血蟲	xi1 xie3 chong2
+吸血蟲	xi1 xue4 chong2
 吸血鬼	xi1 xie3 gui3
 吸血鬼	xi1 xue4 gui3
 吸風飲露	xi1 feng1 yin3 lu4
@@ -65002,6 +65033,7 @@ min_phrase_weight: 100
 咯嚓	ge1 ca1
 咯嚓	ge5 ca5	80%
 咯血	ka3 xie3
+咯血	ka3 xue4
 咯血	luo4 xue4
 咯血	luo4 xie3
 咱倆	zan2 lia3
@@ -65021,6 +65053,8 @@ min_phrase_weight: 100
 咳聲歎氣	hai1 sheng1 tan4 qi4
 咳血	ka3 xie3
 咳血	ke2 xie3
+咳血	ka3 xue4
+咳血	ke2 xue4
 咸和	xian2 he2
 咸寧	xian2 ning2
 咸寧地區	xian2 ning2 di4 qu1
@@ -65365,6 +65399,7 @@ min_phrase_weight: 100
 問鼎輕重	wen4 ding3 qing1 zhong4
 啑喋	sha4 zha2
 啑血	jie2 xue4
+啑血	jie2 xie3
 啟動子	qi3 dong4 zi5
 啟德機場	qi3 de2 ji1 chang3
 啟德機場	qi3 de2 ji1 chang2	3%
@@ -65509,6 +65544,7 @@ min_phrase_weight: 100
 喀爾文教派	ka1 er3 wen2 jiao4 pai4
 喀爾文教派	ke4 er3 wen2 jiao4 pai4
 喀血	ke4 xie3
+喀血	ke4 xue4
 喀麥隆	ka4 mai4 long2
 喀麥隆	ka1 mai4 long2
 喀麥隆	ke4 mai4 long2
@@ -66666,6 +66702,7 @@ min_phrase_weight: 100
 地中海型貧血	di4 zhong1 hai3 xing2 pin2 xie3
 地中海形貧血	di4 zhong1 hai3 xing2 pin2 xue4
 地中海貧血	di4 zhong1 hai3 pin2 xue4
+地中海貧血	di4 zhong1 hai3 pin2 xie3
 地主	di4 zhu3
 地主之誼	di4 zhu3 zhi1 yi4
 地主之誼	di4 zhu3 zhi1 yi2
@@ -67687,6 +67724,7 @@ min_phrase_weight: 100
 外傳	wai4 chuan2
 外公切線	wai4 gong1 qie1 xian4
 外出血	wai4 chu1 xie3
+外出血	wai4 chu1 xue4
 外分泌	wai4 fen1 mi4
 外分泌腺	wai4 fen1 mi4 xian4
 外切多邊形	wai4 qie1 duo1 bian1 xing2
@@ -67947,6 +67985,7 @@ min_phrase_weight: 100
 大先生	da4 xian1 sheng1
 大出喪	da4 chu1 sang1
 大出血	da4 chu1 xie3
+大出血	da4 chu1 xue4
 大出鋒頭	da4 chu1 feng1 tou5
 大出鋒頭	da4 chu1 feng1 tou2
 大分	da4 fen4
@@ -68121,6 +68160,7 @@ min_phrase_weight: 100
 大排行	da4 pai2 hang2
 大排長龍	da4 pai2 chang2 long2
 大換血	da4 huan4 xie3
+大換血	da4 huan4 xue4
 大擋手的	da4 dang3 shou3 de5
 大抬其槓	da4 tai2 qi2 gang4
 大擺褶子	da4 bai3 xue2 zi5
@@ -68246,6 +68286,7 @@ min_phrase_weight: 100
 大脖子病	da4 bo2 zi5 bing4
 大腔當	da4 qiang1 dang4
 大腦出血性中風	da4 nao3 chu1 xie3 xing4 zhong4 feng1
+大腦出血性中風	da4 nao3 chu1 xue4 xing4 zhong4 feng1
 大腸息肉	da4 chang2 xi2 rou4
 大腸桿菌群	da4 chang2 gan3 jun4 qun2
 大腸菌	da4 chang2 jun4
@@ -69250,6 +69291,8 @@ min_phrase_weight: 100
 妄自菲薄	wang4 zi4 fei3 bo2
 妊娠毒血症	ren4 shen1 du2 xie3 zheng4
 妊娠毒血症	ren4 chen2 du2 xie3 zheng4
+妊娠毒血症	ren4 shen1 du2 xue4 zheng4
+妊娠毒血症	ren4 chen2 du2 xue4 zheng4
 妍倡	yan2 chang1
 妖妖調調	yao1 yao1 diao4 diao4
 妖氣	yao1 qi4
@@ -71382,6 +71425,7 @@ min_phrase_weight: 100
 屋漏更遭連夜雨	wu1 lou4 geng4 zao1 lian2 ye4 yu3
 屋裡人	wu1 li3 ren2
 屍山血海	shi1 shan1 xie3 hai3
+屍山血海	shi1 shan1 xue4 hai3
 屍橫遍野	shi1 heng2 bian4 ye3
 屍橫遍野	shi1 heng2 pian4 ye3
 屍首	shi1 shou3
@@ -72766,6 +72810,7 @@ min_phrase_weight: 100
 廣播電臺	guang3 bo1 dian4 tai2
 廣播電視事業處	guang3 bo4 dian4 shi4 shi4 ye4 chu4
 廣東住血吸蟲	guang3 dong1 zhu4 xie3 xi1 chong2
+廣東住血吸蟲	guang3 dong1 zhu4 xue4 xi1 chong2
 廣盛	guang3 sheng4
 廣結善緣	guang3 jie2 shan4 yuan2
 廣結良緣	guang3 jie2 liang2 yuan2
@@ -74720,6 +74765,7 @@ min_phrase_weight: 100
 惡性競爭	e4 xing4 jing4 zheng1
 惡性腫瘤	e4 xing4 zhong3 liu2
 惡性貧血	e4 xing4 pin2 xie3
+惡性貧血	e4 xing4 pin2 xue4
 惡性通貨膨脹	e4 xing4 tong1 huo4 peng2 zhang4
 惡恨	e4 hen4
 惡惡	wu4 e4
@@ -75953,6 +75999,7 @@ min_phrase_weight: 100
 打落	da3 luo4
 打落水狗	da3 luo4 shui3 gou3
 打落牙齒和血吞	da3 luo4 ya2 chi3 huo4 xie3 tun1
+打落牙齒和血吞	da3 luo4 ya2 chi3 huo4 xue4 tun1
 打虎不著	da3 hu3 bu4 zhao2
 打虎還得親兄弟	da3 hu3 hai2 dei3 qin1 xiong1 di4
 打衝鋒	da3 chong1 feng1
@@ -76295,6 +76342,7 @@ min_phrase_weight: 100
 抗利尿素	kang4 li4 niao4 su4
 抗戰歌曲	kang4 zhan4 ge1 qu3
 抗毒血清	kang4 du2 xie3 qing1
+抗毒血清	kang4 du2 xue4 qing1
 抗疏	kang4 shu4
 抗真菌	kang4 zhen1 jun1
 抗組織胺	kang4 zu3 zhi1 an1
@@ -76306,6 +76354,7 @@ min_phrase_weight: 100
 抗菌甲硝唑	kang4 jun1 jia3 xiao1 zuo4
 抗菌藥	kang4 jun1 yao4
 抗菌血清	kang4 jun4 xie3 qing1
+抗菌血清	kang4 jun4 xue4 qing1
 抗血清	kang4 xie3 qing1
 抗血清	kang4 xue4 qing1
 抗行	kang4 hang2
@@ -76616,6 +76665,7 @@ min_phrase_weight: 100
 拉卜楞寺	la1 bu3 leng2 si4
 拉卜楞寺	la1 bu3 leng4 si4
 拉口子要見血	la1 kou3 zi5 yao4 jian4 xie3
+拉口子要見血	la1 kou3 zi5 yao4 jian4 xue4
 拉合子	la1 he2 zi5
 拉名糧長	la1 ming2 liang2 zhang3
 拉場	la1 chang2	3%
@@ -77859,6 +77909,7 @@ min_phrase_weight: 100
 換湯不換藥	huan4 tang1 bu2 huan4 yao4
 換生不如守熟	huan4 sheng1 bu4 ru2 shou3 shu2
 換血	huan4 xie3
+換血	huan4 xue4
 換親	huan4 qin1
 揠苗助長	ya4 miao2 zhu4 zhang3
 握手言和	wo4 shou3 yan2 he2
@@ -79274,9 +79325,11 @@ min_phrase_weight: 100
 敗興	bai4 xing4
 敗落	bai4 luo4
 敗血性休克	bai4 xie3 xing4 xiu1 ke4
+敗血性休克	bai4 xue4 xing4 xiu1 ke4
 敗血症	bai4 xie3 zheng4
 敗血症	bai4 xue4 zheng4
 敗血膿毒症	bai4 xie3 nong2 du2 zheng4
+敗血膿毒症	bai4 xue4 nong2 du2 zheng4
 敗行	bai4 xing4
 敗軍之將	bai4 jun1 zhi1 jiang4
 敗軍折將	bai4 jun1 zhe2 jiang4
@@ -79556,6 +79609,7 @@ min_phrase_weight: 100
 散職	san3 zhi2
 散落	san4 luo4
 散血草	san4 xie3 cao3
+散血草	san4 xue4 cao3
 散衙	san4 ya2
 散裝	san3 zhuang1
 散裝貨	san3 zhuang1 huo4
@@ -80021,6 +80075,7 @@ min_phrase_weight: 100
 新興縣	xin1 xing1 xian4
 新藝綜合體	xin1 yi4 zong4 he2 ti3
 新血輪	xin1 xie3 lun2
+新血輪	xin1 xue4 lun2
 新親	xin1 qin1
 新都	xin1 du1
 新都區	xin1 du1 qu1
@@ -80107,6 +80162,7 @@ min_phrase_weight: 100
 旁午	bang4 wu3
 旁敲側擊	pang2 qiao1 ce4 ji2
 旁系血親	pang2 xi4 xie3 qin1
+旁系血親	pang2 xi4 xue4 qin1
 旁薄	pang2 bo2
 旁行	pang2 xing2
 旁行斜上	pang2 xing2 xie2 shang4
@@ -82132,6 +82188,7 @@ min_phrase_weight: 100
 枕戈待旦	zhen4 ge1 dai4 dan4
 枕戈汗馬	zhen4 ge1 han4 ma3
 枕戈泣血	zhen4 ge1 qi4 xue4
+枕戈泣血	zhen4 ge1 qi4 xie3
 枕戈飲膽	zhen4 ge1 yin3 dan3
 枕流漱石	zhen4 liu2 shu4 shi2
 枕石漱流	zhen4 shi2 shu4 liu2
@@ -82784,6 +82841,7 @@ min_phrase_weight: 100
 植物馴化	zhi2 wu4 xun2 hua4
 椎埋	zhui1 mai2
 椎心泣血	zhui1 xin1 qi4 xie3
+椎心泣血	zhui1 xin1 qi4 xue4
 椎拍輐斷	zhui1 pai1 wan4 duan4
 椎床倒枕	zhui1 chuang2 dao3 zhen3
 椎間盤	zhui1 jian1 pan2
@@ -82989,6 +83047,7 @@ min_phrase_weight: 100
 槭糖漿	qi1 tang2 jiang1
 槭糖漿	qi4 tang2 jiang1
 槭葉止血草	cu4 ye4 zhi3 xie3 cao3
+槭葉止血草	cu4 ye4 zhi3 xue4 cao3
 槮爽	san3 shuang3
 槽坊	cao2 fang1
 槽坊	cao2 fang2
@@ -83650,6 +83709,7 @@ min_phrase_weight: 100
 歃血為盟	sha4 xue4 wei2 meng2
 歃血為盟	sha4 xie3 wei2 meng2
 歃血為誓	sha4 xue4 wei2 shi4
+歃血為誓	sha4 xie3 wei2 shi4
 歇宿	xie1 su4
 歇宿	xie1 xiu3
 歇息	xie1 xi2
@@ -83725,9 +83785,13 @@ min_phrase_weight: 100
 止血	zhi3 xie3
 止血	zhi3 xue4
 止血劑	zhi3 xie3 ji4
+止血劑	zhi3 xue4 ji4
 止血帶	zhi3 xie3 dai4
+止血帶	zhi3 xue4 dai4
 止血法	zhi3 xie3 fa3
+止血法	zhi3 xue4 fa3
 止血點	zhi3 xie3 dian3
+止血點	zhi3 xue4 dian3
 止足之分	zhi3 zu2 zhi1 fen4
 正中下懷	zheng4 zhong4 xia4 huai2
 正中己懷	zheng4 zhong4 ji3 huai2
@@ -84009,9 +84073,11 @@ min_phrase_weight: 100
 殷都	yin1 du1
 殷都區	yin1 du1 qu1
 殺人不見血	sha1 ren2 bu2 jian4 xie3
+殺人不見血	sha1 ren2 bu2 jian4 xue4
 殺人不過頭點地	sha1 ren2 bu2 guo4 tou2 dian3 di4
 殺人滅跡	sha1 ren2 mie4 ji1
 殺人須見血	sha1 ren2 xu1 jian4 xie3
+殺人須見血	sha1 ren2 xu1 jian4 xue4
 殺伐	sha1 fa1
 殺伐	sha1 fa2
 殺伐決斷	sha1 fa1 jue2 duan4
@@ -84213,6 +84279,7 @@ min_phrase_weight: 100
 毛腳雞	mao2 jiao3 ji1
 毛茸茸	mao2 rong2 rong2
 毛血	mao2 xie3
+毛血	mao2 xue4
 毛酸漿	mao2 suan1 jiang1
 毛重	mao2 zhong4
 毛錐子	mao2 zhui1 zi5
@@ -84387,6 +84454,7 @@ min_phrase_weight: 100
 氫彈	qing1 dan4
 氫氰酸	qing1 qing1 suan1
 氮血症	dan4 xie3 zheng4
+氮血症	dan4 xue4 zheng4
 氯化銨	lv4 hua4 an1
 氯化銨	lv4 hua4 an3
 氯氣中毒	lv4 qi4 zhong4 du2
@@ -84539,6 +84607,7 @@ min_phrase_weight: 100
 汗珠子	han4 zhu1 zi5
 汗臭	han4 chou4
 汗血馬	han4 xie3 ma3
+汗血馬	han4 xue4 ma3
 汗褟兒	han4 ta1 er5	80%
 汗褟兒	han4 ta1 er2
 汗跡	han4 ji1
@@ -85141,6 +85210,7 @@ min_phrase_weight: 100
 法定準備率	fa3 ding4 zhun3 bei4 lv4
 法定空地	fa3 ding4 kong4 di4
 法定血親	fa3 ding4 xie3 qin1
+法定血親	fa3 ding4 xue4 qin1
 法家拂士	fa3 jia1 bi4 shi4
 法屬印度支那	fa3 shu3 yin4 du4 zhi1 na4
 法帖	fa3 tie4
@@ -85306,7 +85376,9 @@ min_phrase_weight: 100
 波髮藻	bo1 fa3 zao3
 波髮藻	po1 fa3 zao3
 泣血枕戈	qi4 xue4 zhen4 ge1
+泣血枕戈	qi4 xie3 zhen4 ge1
 泣血稽顙	qi4 xue4 qi3 sang3
+泣血稽顙	qi4 xie3 qi3 sang3
 泥中	ni2 zhong1
 泥中刺	ni2 zhong1 ci4
 泥中隱刺	ni2 zhong1 yin3 ci4
@@ -85595,6 +85667,7 @@ min_phrase_weight: 100
 活血	huo2 xie3
 活血	huo2 xue4
 活血化瘀	huo2 xie3 hua4 yu1
+活血化瘀	huo2 xue4 hua4 yu1
 活變	huo2 bian4
 活靶子	huo2 ba3 zi5
 活頁夾	huo2 ye4 jia2
@@ -85925,6 +85998,7 @@ min_phrase_weight: 100
 涼涼	liang2 liang2
 涼涼	liang4 liang2
 涼血	liang2 xie3
+涼血	liang2 xue4
 涿郡	zhuo2 jun4
 涿鹿	zhuo2 lu4
 涿鹿	zhuo1 lu4
@@ -86186,6 +86260,7 @@ min_phrase_weight: 100
 混血	hun4 xie3
 混血	hun4 xue4
 混血	hun3 xie3
+混血	hun3 xue4
 混血兒	hun4 xie3 er2
 混血兒	hun4 xue4 er2
 混行	hun2 xing2
@@ -86448,6 +86523,7 @@ min_phrase_weight: 100
 溝渠	gou1 qu2
 溢惡	yi4 e4
 溢血	yi4 xie3
+溢血	yi4 xue4
 溪壑	xi1 huo4
 溪壑	xi1 he4
 溫乎	wen1 hu1
@@ -86476,6 +86552,7 @@ min_phrase_weight: 100
 溫煦	wen1 xu3
 溫煦	wen1 xu4
 溫血動物	wen1 xie3 dong4 wu4
+溫血動物	wen1 xue4 dong4 wu4
 溫達共和國	wen1 da2 gong4 he2 guo2
 溫馴	wen1 xun2
 溫馴	wen1 xun4
@@ -86517,6 +86594,7 @@ min_phrase_weight: 100
 滅蟲寧	mie4 chong2 ning4
 滅跡	mie4 ji1
 滅門血案	mie4 men2 xie3 an4
+滅門血案	mie4 men2 xue4 an4
 滇藏	dian1 zang4
 滈汗	hao4 han4
 滈滈	hao4 hao4
@@ -86572,6 +86650,7 @@ min_phrase_weight: 100
 滴羞都蘇	di1 xiu1 du1 su1
 滴落	di1 luo4
 滴血	di1 xie3
+滴血	di1 xue4
 滴里嘟嚕	di1 li3 du1 lu1
 滴里搭拉	di1 li3 da1 la1
 滾出去	gun3 chu1 qu4
@@ -87032,6 +87111,7 @@ min_phrase_weight: 100
 瀕危物種	bin1 wei2 wu4 zhong3
 瀕危野生動植物種國際貿易公約	bin1 wei2 ye3 sheng1 dong4 zhi2 wu4 zhong3 guo2 ji4 mao4 yi4 gong1 yue1
 瀝血之仇	li4 xue4 zhi1 chou2
+瀝血之仇	li4 xie3 zhi1 chou2
 瀧夫	long2 fu1
 瀧岡	shuang1 gang1
 瀧水	shuang1 shui3
@@ -87052,6 +87132,7 @@ min_phrase_weight: 100
 灌腸	guan4 chang2
 灑掃	sa3 sao3
 灑狗血	sa3 gou3 xie3
+灑狗血	sa3 gou3 xue4
 灑脫	sa3 tuo1
 灑落	sa3 luo4
 灞陵呵夜	ba4 ling2 he1 ye4
@@ -87361,6 +87442,7 @@ min_phrase_weight: 100
 無處容身	wu2 chu4 rong2 shen1
 無虞匱乏	wu2 yu2 kui4 fa2
 無血戰爭	wu2 xie3 zhan4 zheng1
+無血戰爭	wu2 xue4 zhan4 zheng1
 無行	wu2 xing4
 無行	wu2 xing2
 無行止	wu2 xing4 zhi3
@@ -87649,6 +87731,7 @@ min_phrase_weight: 100
 熬審	ao2 shen3
 熬心	ao1 xin1
 熬心血	ao2 xin1 xue4
+熬心血	ao2 xin1 xie3
 熬惱	ao1 nao3
 熬惱	ao2 nao3
 熬枯受淡	ao2 ku1 shou4 dan4
@@ -88443,7 +88526,9 @@ min_phrase_weight: 100
 狗眼看人低	gou3 yan3 kan4 ren2 di1
 狗腿子	gou3 tui3 zi5
 狗血噴臉	gou3 xie3 pen1 lian3
+狗血噴臉	gou3 xue4 pen1 lian3
 狗血噴頭	gou3 xie3 pen1 tou2
+狗血噴頭	gou3 xue4 pen1 tou2
 狗血淋頭	gou3 xie3 lin2 tou2
 狗血淋頭	gou3 xue4 lin2 tou2
 狗行狼心	gou3 xing2 lang2 xin1
@@ -90133,6 +90218,7 @@ min_phrase_weight: 100
 白血球	bai2 xie3 qiu2
 白血球	bai2 xue4 qiu2
 白血球過多症	bai2 xie3 qiu2 guo4 duo1 zheng4
+白血球過多症	bai2 xue4 qiu2 guo4 duo1 zheng4
 白血病	bai2 xie3 bing4
 白血病	bai2 xue4 bing4
 白行簡	bai2 xing2 jian3
@@ -90140,6 +90226,7 @@ min_phrase_weight: 100
 白衣教練	bai2 yi1 jiao4 lian4
 白變種	bai2 bian4 zhong3
 白費心血	bai2 fei4 xin1 xie3
+白費心血	bai2 fei4 xin1 xue4
 白跑一趟	bai2 pao3 yi2 tang4
 白跑一趟	bai2 pao3 yi1 tang4
 白蹧蹋	bai2 zao1 ta4
@@ -90338,6 +90425,7 @@ min_phrase_weight: 100
 皓髮	hao4 fa3
 皖中盆地	wan3 zhong1 pen2 di4
 皮下出血	pi2 xia4 chu1 xie3
+皮下出血	pi2 xia4 chu1 xue4
 皮兒	pi2 er5	80%
 皮兒	pi2 er2
 皮內反應法	pi2 nei4 fan3 ying4 fa3
@@ -90361,6 +90449,7 @@ min_phrase_weight: 100
 皮相	pi2 xiang4
 皮相士	pi2 xiang4 shi4
 皮破血流	pi2 po4 xie3 liu2
+皮破血流	pi2 po4 xue4 liu2
 皮解庫	pi2 jie4 ku4
 皮諾切特	pi2 nuo4 qie1 te4
 皮重	pi2 zhong4
@@ -90671,7 +90760,9 @@ min_phrase_weight: 100
 直筒子	zhi2 tong3 zi5
 直節勁氣	zhi2 jie2 jing4 qi4
 直系血親	zhi2 xi4 xue4 qing4
+直系血親	zhi2 xi4 xie3 qing4
 直系血親	zhi2 xi4 xie3 qin1
+直系血親	zhi2 xi4 xue4 qin1
 直系親屬	zhi2 xi4 qin1 shu3
 直繫	zhi2 xi4
 直肚直腸	zhi2 du4 zhi2 chang2
@@ -92710,6 +92801,7 @@ min_phrase_weight: 100
 稽覈	ji1 he2
 稽遲	ji1 chi2
 稽顙泣血	qi3 sang3 qi4 xue4
+稽顙泣血	qi3 sang3 qi4 xie3
 稽顙肉袒	qi3 sang3 rou4 tan3
 稽首	qi3 shou3
 稿子	gao3 zi5
@@ -93931,6 +94023,7 @@ min_phrase_weight: 100
 精空	jing1 kong1
 精蟲衝腦	jing1 chong2 chong1 nao3
 精血	jing1 xie3
+精血	jing1 xue4
 精誠團結	jing1 cheng2 tuan2 jie2
 精誠團結	jing1 cheng2 tuan2 jie1
 精貫白日	jing1 guan4 bo2 ri4
@@ -94729,6 +94822,7 @@ min_phrase_weight: 100
 經脈	jing1 mo4
 經藏	jing1 zang4
 經血	jing1 xie3
+經血	jing1 xue4
 經行吐衄	jing1 xing2 tu4 nv4
 經銷處	jing1 xiao1 chu4
 經銷處	jing1 xiao1 chu3
@@ -96693,8 +96787,11 @@ min_phrase_weight: 100
 腦膜炎	nao3 mo4 yan2
 腦膜炎	nao3 mo2 yan2
 腦血管屏障	nao3 xue4 guan3 ping2 zhang4
+腦血管屏障	nao3 xie3 guan3 ping2 zhang4
 腦血管栓塞	nao3 xie3 guan3 shuan1 se4
+腦血管栓塞	nao3 xue4 guan3 shuan1 se4
 腦血管栓塞	nao3 xie3 guan3 shuan1 sai1
+腦血管栓塞	nao3 xue4 guan3 shuan1 sai1
 腦袋	nao3 dai4
 腦袋搬家	nao3 dai4 ban1 jia1
 腦袋瓜子	nao3 dai4 gua1 zi5
@@ -96854,7 +96951,9 @@ min_phrase_weight: 100
 膽驚心顫	dan3 jing1 xin1 zhan4
 膽驚心顫	dan3 jing1 xin1 chan4
 膿血	nong2 xie3
+膿血	nong2 xue4
 膿血債	nong2 xie3 zhai4
+膿血債	nong2 xue4 zhai4
 臀位分娩	tun2 wei4 fen1 mian3
 臀產式分娩	tun2 chan3 shi4 fen1 mian3
 臆度	yi4 duo4
@@ -97100,6 +97199,7 @@ min_phrase_weight: 100
 自量	zi4 liang4
 自食惡果	zi4 shi2 e4 guo3
 自體輸血	zi4 ti3 shu1 xie3
+自體輸血	zi4 ti3 shu1 xue4
 自鳴得意	zi4 ming2 de2 yi4
 臭不可當	chou4 bu4 ke3 dang1
 臭不可聞	chou4 bu4 ke3 wen2
@@ -97478,6 +97578,7 @@ min_phrase_weight: 100
 舒散	shu1 san4
 舒服	shu1 fu2
 舒筋活血	shu1 jin1 huo2 xie3
+舒筋活血	shu1 jin1 huo2 xue4
 舒舒服服	shu1 shu1 fu2 fu2
 舛錯	chuan3 cuo4
 舜華	shun4 hua1
@@ -98146,6 +98247,7 @@ min_phrase_weight: 100
 菌落	jun4 luo4
 菌蓋	jun4 gai4
 菌血症	jun4 xie3 zheng4
+菌血症	jun4 xue4 zheng4
 菌褶	jun4 zhe2
 菌質	jun4 zhi2
 菌質	jun4 zhi4
@@ -98831,6 +98933,7 @@ min_phrase_weight: 100
 蒼蠅掐了頭	cang1 ying2 qia1 le5 tou2
 蒼蠅紙	cang1 ying2 zhi3
 蒼蠅見血	cang1 ying2 jian4 xie3
+蒼蠅見血	cang1 ying2 jian4 xue4
 蓁椒	qin2 jiao1
 蓄勢待發	xu4 shi4 dai4 fa1
 蓄謀	xu4 mou2
@@ -99747,6 +99850,7 @@ min_phrase_weight: 100
 螞蚱	ma3 zha4
 螞蜂兒子	ma3 feng1 er2 zi5
 螞蝗見血	ma3 huang2 jian4 xie3
+螞蝗見血	ma3 huang2 jian4 xue4
 螞螂	ma1 lang2
 螞螂	ma3 lang2
 螞蟻啃骨頭	ma3 yi3 ken3 gu2 tou5
@@ -99872,7 +99976,9 @@ min_phrase_weight: 100
 血化為碧	xie3 hua4 wei2 bi4
 血化為碧	xue4 hua4 wei2 bi4
 血參	xie3 shen1
+血參	xue4 shen1
 血口子	xie3 kou3 zi5
+血口子	xue4 kou3 zi5
 血尿	xie3 niao4
 血尿	xue4 niao4
 血氣方盛	xie3 qi4 fang1 sheng4
@@ -99887,15 +99993,19 @@ min_phrase_weight: 100
 血海深仇	xue4 hai3 shen1 chou2
 血液	xie3 ye4
 血液	xie3 yi4
-血液	xue3 ye4
+血液	xue3 ye4	80%
 血液	xue4 ye4
 血液	xue4 yi4
 血液增強劑	xue4 ye4 zeng1 qiang2 ji4
+血液增強劑	xie3 ye4 zeng1 qiang2 ji4
 血滴子	xie3 di1 zi3
 血滴子	xie3 di1 zi5
+血滴子	xue4 di1 zi3
+血滴子	xue4 di1 zi5
 血肉橫飛	xie3 rou4 heng2 fei1
 血肉橫飛	xue4 rou4 heng2 fei1
 血量	xie3 liang4
+血量	xue4 liang4
 血鑽	xie3 zuan4
 血鑽	xue4 zuan4
 眾叛親離	zhong4 pan4 qin1 li2
@@ -100623,6 +100733,7 @@ min_phrase_weight: 100
 補數	bu3 shu4
 補校	bu3 xiao4
 補氣止血	bu3 qi4 zhi3 xie3
+補氣止血	bu3 qi4 zhi3 xue4
 補票處	bu3 piao4 chu4
 補種	bu3 zhong4
 補種	bu3 zhong3
@@ -100975,6 +101086,7 @@ min_phrase_weight: 100
 見背	jian4 bei1
 見背	jian4 bei4
 見血封喉	jian4 xie3 feng1 hou2
+見血封喉	jian4 xue4 feng1 hou2
 見證	jian4 zheng4
 見識	jian4 shi4
 見識淺	jian4 shi4 qian3
@@ -102549,6 +102661,7 @@ min_phrase_weight: 100
 貧血	pin2 xie3
 貧血	pin2 xue4
 貧血病	pin2 xie3 bing4
+貧血病	pin2 xue4 bing4
 貧難	pin2 nan2
 貧骨頭	pin2 gu2 tou5
 貧骨頭	pin2 gu3 tou2
@@ -102985,7 +103098,9 @@ min_phrase_weight: 100
 赤瓦不剌海	chi4 wa3 bu2 la4 hai3
 赤繩繫足	chi4 sheng2 xi4 zu2
 赤血丹心	chi4 xie3 dan1 xin1
+赤血丹心	chi4 xue4 dan1 xin1
 赤血鹽	chi4 xie3 yan2
+赤血鹽	chi4 xue4 yan2
 赤誠相待	chi4 cheng2 xiang1 dai4
 赤誠相見	chi4 cheng2 xiang4 jian4
 赤道幾內亞	chi4 dao4 ji1 nei4 ya3
@@ -106295,6 +106410,7 @@ min_phrase_weight: 100
 針線活兒	zhen1 xian4 huo2 er2
 針芥相投	zhen1 jie4 xiang1 tou2
 針針見血	zhen1 zhen1 jian4 xie3
+針針見血	zhen1 zhen1 jian4 xue4
 針鋒相對	zhen1 feng1 xiang1 dui4
 針鋒相投	zhen1 feng1 xiang1 tou2
 針頭	zhen1 tou5
@@ -107428,6 +107544,7 @@ min_phrase_weight: 100
 開喪	kai1 sang1
 開地	kai1 di4
 開堂歃血	kai1 tang2 sha4 xie3
+開堂歃血	kai1 tang2 sha4 xue4
 開場抽頭	kai1 chang2 chou1 tou2	3%
 開場抽頭	kai1 chang3 chou1 tou2
 開天避地	kai1 tian1 bi4 di4
@@ -108382,6 +108499,7 @@ min_phrase_weight: 100
 降血壓藥	jiang4 xue4 ya1 yao4
 降血壓藥	jiang4 xie3 ya1 yao4
 降血鈣素	jiang4 xue4 gai4 su4
+降血鈣素	jiang4 xie3 gai4 su4
 降表	xiang2 biao3
 降解	jiang4 jie3
 降詔	jiang4 zhao4
@@ -109083,6 +109201,7 @@ min_phrase_weight: 100
 雷厲風行	lei2 li4 feng1 xing2
 雷射唱片	lei2 she4 chang4 pian4
 雷射血管成形術	lei2 she4 xie3 guan3 cheng2 xing2 shu4
+雷射血管成形術	lei2 she4 xue4 guan3 cheng2 xing2 shu4
 雷扎耶湖	lei2 zha2 ye1 hu2
 雷打不動	lei2 da3 bu2 dong4
 雷擊	lei2 ji2
@@ -109416,7 +109535,10 @@ min_phrase_weight: 100
 靜脈瘤	jing4 mo4 liu2
 靜脈血	jing4 mai4 xie3
 靜脈血	jing4 mo4 xie3
+靜脈血	jing4 mai4 xue4
+靜脈血	jing4 mo4 xue4
 靜脈血栓症	jing4 mai4 xie3 shuan1 zheng4
+靜脈血栓症	jing4 mai4 xue4 shuan1 zheng4
 靜脈點滴	jing4 mai4 dian3 di1
 靜落落	jing4 luo4 luo4
 靜電感應	jing4 dian4 gan3 ying4
@@ -109448,6 +109570,7 @@ min_phrase_weight: 100
 非法行事	fei1 fa3 xing2 shi4
 非法行為	fei1 fa3 xing2 wei2
 非洲出血熱	fei1 zhou1 chu1 xie3 re4
+非洲出血熱	fei1 zhou1 chu1 xue4 re4
 非洲團結組織	fei1 zhou1 tuan2 jie2 zu3 zhi1
 非洲開發銀行	fei1 zhou1 kai1 fa1 yin2 hang2
 非營利組織	fei1 ying2 li4 zu3 zhi1
@@ -109499,6 +109622,7 @@ min_phrase_weight: 100
 面善心惡	mian4 shan4 xin1 e4
 面如冠玉	mian4 ru2 guan1 yu4
 面如噀血	mian4 ru2 xun4 xie3
+面如噀血	mian4 ru2 xun4 xue4
 面如重棗	mian4 ru2 zhong4 zao3
 面子	mian4 zi5
 面子上	mian4 zi5 shang4
@@ -109515,6 +109639,7 @@ min_phrase_weight: 100
 面朝黃土背朝天	mian4 chao2 huang2 tu3 bei4 chao2 tian1
 面沒羅	mian4 mo4 luo2
 面無血色	mian4 wu2 xie3 se4
+面無血色	mian4 wu2 xue4 se4
 面熟	mian4 shu2
 面熟	mian4 shou2
 面生不熟	mian4 sheng1 bu4 shu2
@@ -109801,9 +109926,11 @@ min_phrase_weight: 100
 頭癬	tou2 xian3
 頭癬	tou2 xuan3
 頭破血出	tou2 po4 xie3 chu1
+頭破血出	tou2 po4 xue4 chu1
 頭破血流	tou2 po4 xie3 liu2
 頭破血流	tou2 po4 xue4 liu2
 頭破血淋	tou2 po4 xie3 lin2
+頭破血淋	tou2 po4 xue4 lin2
 頭童齒豁	tou2 tong2 chi3 huo4
 頭箍兒	tou2 gu1 er5	80%
 頭箍兒	tou2 gu1 er2
@@ -109842,6 +109969,7 @@ min_phrase_weight: 100
 頸動脈竇	jing3 dong4 mai4 dou4
 頸圈	jing3 quan1
 頸血	jing3 xie3
+頸血	jing3 xue4
 頸靜脈	jing3 jing4 mai4
 頸靜脈	jing3 jing4 mo4
 頹喪	tui2 sang4
@@ -109978,6 +110106,7 @@ min_phrase_weight: 100
 顰有為顰	pin2 you3 wei2 pin2
 顱測量	lu2 ce4 liang2
 顱蓋內出血	lu2 gai4 nei4 chu1 xie3
+顱蓋內出血	lu2 gai4 nei4 chu1 xue4
 風世勵俗	feng4 shi4 li4 su2
 風乾	feng1 gan1
 風俗	feng1 su2
@@ -110878,6 +111007,7 @@ min_phrase_weight: 100
 高血壓	gao1 xie3 ya1
 高血壓	gao1 xue4 ya1
 高血糖症	gao1 xie3 tang2 zheng4
+高血糖症	gao1 xue4 tang2 zheng4
 高行	gao1 xing4
 高行	gao1 xing2
 高行健	gao1 xing2 jian4
@@ -111023,6 +111153,7 @@ min_phrase_weight: 100
 鬱悶	yu4 men1
 鬱結	yu4 jie2
 鬱血	yu4 xie3
+鬱血	yu4 xue4
 鬱鬱不樂	yu4 yu4 bu2 le4
 鬱鬱葱葱	yu4 yu4 cong1 cong1
 鬼使神差	gui3 shi3 shen2 chai1
@@ -111248,8 +111379,9 @@ min_phrase_weight: 100
 鴨綠江	ya1 lu4 jiang1
 鴨綠江	ya1 lv4 jiang1
 鴨蛋雖密也有縫	ya1 dan4 sui1 mi4 ye3 you3 feng4
-鴨血	ya1 xue3
+鴨血	ya1 xue3	80%
 鴨血	ya1 xie3
+鴨血	ya1 xue4
 鴨頭丸帖	ya1 tou2 wan2 tie4
 鴻案相莊	hong2 an4 xiang1 zhuang1
 鴻洞	hong2 tong2
@@ -111802,6 +111934,7 @@ min_phrase_weight: 100
 鼻牛兒	bi2 niu2 er2
 鼻窪子	bi2 wa1 zi5
 鼻血	bi2 xie3
+鼻血	bi2 xue4
 鼻觀	bi2 guan4
 鼻黏膜	bi2 nian2 mo4
 鼻黏膜	bi2 nian2 mo2
@@ -111907,4 +112040,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 111910 #####
+##### @結束 END - 112043 #####
