@@ -2073,6 +2073,17 @@ min_phrase_weight: 100
 狛	po4
 醂	lin2
 栉	jie2
+悛	xun2	0%
+削	shao4	0%
+削	qiao4	0%
+干	an4	0%
+崎	qi3	0%
+崎	yi1	0%
+嶮	yan3	0.1%
+崄	yan3	0.1%
+岨	ju3	0.1%
+岨	ju1	0%
+岨	zu3	0.1%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -112041,4 +112052,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 112044 #####
+##### @結束 END - 112055 #####
