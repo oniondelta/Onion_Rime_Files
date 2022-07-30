@@ -117,6 +117,7 @@
 #    詞句中，「伐」皆補齊「fa1」「fa2」。
 #    詞句中，「召」發音為「zhao4」「shao4」，兩岸皆無「zhao1」該發音，但日常常發，故標準為「zhao4」時補齊「zhao4」「zhao1」。
 #    詞句中，「血」皆補齊「xie3」「xue4」。
+#    詞句中，「町」發音「ding1」和「ting3」語意有差，但「ding1」日常常發，故皆補齊「ding1」「ting3」。
 #    預計比對「輕聲和一聲」變音。
 #
 #  〈2020修改字詞彙發音〉：
@@ -89473,6 +89474,7 @@ min_phrase_weight: 100
 男朋友	nan2 peng2 you3
 男校	nan2 xiao4
 甸甸	tian2 tian2
+町畦	ding1 xi1
 町畦	ting3 xi1
 界分	jie4 fen4
 畏強凌弱	wei4 qiang2 ling2 ruo4
@@ -89839,7 +89841,9 @@ min_phrase_weight: 100
 畸輕畸重	ji1 qing1 ji1 zhong4
 畸零地	ji1 ling2 di4
 畹町	wan3 ding1
+畹町	wan3 ting3
 畹町市	wan3 ding1 shi4
+畹町市	wan3 ting3 shi4
 疆徼	jiang1 jiao4
 疇昔	chou2 xi2
 疊矩重規	die2 ju3 chong2 gui1
@@ -112052,4 +112056,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 112055 #####
+##### @結束 END - 112059 #####
