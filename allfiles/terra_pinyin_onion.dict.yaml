@@ -90,7 +90,7 @@
 #    詞句中，「坊」臺灣字典發音有「fang1」和「fang2」，許多詞發音於各字典標註不一，且於詞尾慣用發音（變音）為「fang3」，如果於詞尾，補齊「fang1」「fang2」「fang3」。（待攷）
 #    詞句中，「鑿」發音補齊「zao2」和「zuo4」。
 #    詞句中，「一」發音標註為「yi1」，如非單純數字含義，另加註：「一」後接字聲調為「123聲」，則標註「yi4」；後接字聲調為「4聲」，則標註「yi2」。
-#    詞句中，「不」發音，後接字聲調為「123聲」，則標註「bu4」；後接字聲調為「4聲」，則標註「bu2」。
+#    詞句中，「不」發音，後接字聲調為「123聲」，則標註「bu4」；後接字聲調為「4聲」，則標註「bu2」。「5輕聲」兩者「bu2」「bu4」都標注。語意特例除外。
 #    詞句中，「個」發音，依臺灣字典於量詞時多標「ge5」，如：「一個」標註為「ge5」，「個人」「高個」等相關語義標「ge4」；少數例外「個」量詞時，在臺灣字典也標「ge4」，則依字典附加。
 #    詞句中，「扎」發音，依臺灣字典沒有「za1」該發音，故全修改為「zha1」。
 #    詞句中，「微」字典發音為「wei2」，「wei1」為又音且常用，故全都補齊「wei2」「wei1」。
@@ -54410,12 +54410,11 @@ min_phrase_weight: 100
 一狐之腋	yi1 hu2 zhi1 ye4
 一狐之腋	yi4 hu2 zhi1 yi4
 一狐之腋	yi1 hu2 zhi1 yi4
-一生吃著不盡	yi1 sheng1 chi1 zhuo2 bu4 jin4
 一生吃著不盡	yi4 sheng1 chi1 zhuo2 bu2 jin4
 一生吃著不盡	yi4 sheng1 chi1 zhe5 bu2 jin4
 一生吃著不盡	yi1 sheng1 chi1 zhe5 bu2 jin4
-一生喫著不盡	yi1 sheng1 chi1 zhuo2 bu4 jin4
 一生喫著不盡	yi4 sheng1 chi1 zhuo2 bu2 jin4
+一生喫著不盡	yi1 sheng1 chi1 zhuo2 bu2 jin4
 一畝三分地	yi4 mu3 san1 fen1 di4
 一畝三分地	yi1 mu3 san1 fen1 di4
 一瘸一簸	yi4 que2 yi4 bo3
@@ -54448,11 +54447,10 @@ min_phrase_weight: 100
 一著	yi4 zhuo2
 一著	yi1 zhao1
 一著	yi1 zhuo2
-一著不慎	yi1 zhuo2 bu4 shen4
 一著不慎	yi1 zhuo2 bu2 shen4
 一著不慎	yi4 zhuo2 bu2 shen4
-一著不慎	yi1 zhao1 bu4 shen4
 一著不慎	yi4 zhao1 bu2 shen4
+一著不慎	yi1 zhao1 bu2 shen4
 一著錯	yi4 zhuo2 cuo4
 一著錯	yi1 zhuo2 cuo4
 一瞬間	yi2 shun4 jian1
@@ -54711,7 +54709,6 @@ min_phrase_weight: 100
 一錘子買賣	yi1 chui2 zi5 mai3 mai4
 一錢不落虛空地	yi4 qian2 bu2 luo4 xu1 kong1 di4
 一錢不落虛空地	yi1 qian2 bu2 luo4 xu1 kong1 di4
-一錢不落虛空地	yi1 qian2 bu4 luo4 xu1 kong1 di4
 一鍬掘個井	yi4 qiao1 jue2 ge5 jing3
 一鍬掘個井	yi1 qiao1 jue2 ge5 jing3
 一鍬掘個井	yi4 qiu1 jue2 ge5 jing3	80%
@@ -55187,7 +55184,7 @@ min_phrase_weight: 100
 下頭	xia4 tou5
 下頭人	xia4 tou5 ren2
 不一會	bu4 yi1 hui3
-不一會	bu4 yi4 hui3
+不一會	bu2 yi4 hui3
 不上不落	bu2 shang4 bu2 luo4
 不中	bu2 zhong4
 不中	bu4 zhong1
@@ -55262,7 +55259,6 @@ min_phrase_weight: 100
 不入獸穴	bu2 ru4 shou4 xue4
 不入虎穴	bu2 ru4 hu3 xue4
 不入調	bu2 ru4 diao4
-不入調	bu4 ru4 diao4
 不共天地	bu2 gong4 tian1 di4
 不冠不帶	bu4 guan1 bu2 dai4
 不出惡聲	bu4 chu1 e4 sheng1
@@ -55277,7 +55273,6 @@ min_phrase_weight: 100
 不分彼此	bu4 fen1 bi3 ci3
 不分情由	bu4 fen1 qing2 you2
 不分晝夜	bu4 fen1 zhou4 ye4
-不分晝夜	bu2 fen1 zhou4 ye4
 不分曉	bu4 fen1 xiao3
 不分清紅皁白	bu4 fen1 qing1 hong2 zao4 bai2
 不分畛域	bu4 fen1 zhen3 yu4
@@ -55287,7 +55282,6 @@ min_phrase_weight: 100
 不分青紅皂白	bu4 fen1 qing1 hong2 zao4 bai2
 不分高下	bu4 fen1 gao1 xia4
 不切實際	bu2 qie4 shi2 ji4
-不切實際	bu4 qie4 shi2 ji4
 不列顛哥倫比亞	bu2 lie4 dian1 ge1 lun2 bi3 ya3
 不列顛哥倫比亞	bu2 lie4 dian1 ge1 lun2 bi3 ya4
 不列顛哥倫比亞省	bu2 lie4 dian1 ge1 lun2 bi3 ya3 sheng3
@@ -55297,7 +55291,6 @@ min_phrase_weight: 100
 不到長城非好漢	bu2 dao4 chang2 cheng2 fei1 hao3 han4
 不剌	bu2 la4
 不剌剌	bu2 la4 la4
-不剌剌	bu4 la4 la4
 不動聲色	bu2 dong4 sheng1 se4
 不務正業	bu2 wu4 zheng4 ye4
 不勝	bu2 sheng4
@@ -55427,9 +55420,7 @@ min_phrase_weight: 100
 不安分	bu4 an1 fen4
 不安本分	bu4 an1 ben3 fen4
 不完全給付	bu4 wan2 quan2 ji3 fu4
-不定冠詞	bu2 ding4 guan1 ci2
 不定冠詞	bu2 ding4 guan4 ci2
-不定冠詞	bu4 ding4 guan4 ci2
 不定積分	bu2 ding4 ji1 fen1
 不定量	bu2 ding4 liang4
 不客氣	bu2 ke4 qi4
@@ -55617,7 +55608,6 @@ min_phrase_weight: 100
 不為人知	bu4 wei2 ren2 zhi1
 不為利誘	bu4 wei2 li4 you4
 不為左右袒	bu2 wei4 zuo3 you4 tan3
-不為左右袒	bu4 wei4 zuo3 you4 tan3
 不為已甚	bu4 wei2 yi3 shen4
 不為所動	bu4 wei2 suo3 dong4
 不為所動	bu2 wei4 suo3 dong4
@@ -55819,7 +55809,6 @@ min_phrase_weight: 100
 不落空	bu2 luo4 kong1
 不落窠臼	bu2 luo4 ke1 jiu4
 不葷不素	bu4 hun1 bu2 su4
-不葷不素	bu4 hun1 bu4 su4
 不蔓不支	bu2 man4 bu4 zhi1
 不蔓不枝	bu2 man4 bu4 zhi1
 不薄	bu4 bo2
@@ -55915,7 +55904,7 @@ min_phrase_weight: 100
 不辨菽麥	bu2 bian4 shu2 mai4
 不辨菽麥	bu2 bian4 shu1 mai4
 不辱	bu2 ru4
-不辱	bu2 ru3
+不辱	bu4 ru3
 不辱使命	bu2 ru4 shi3 ming4
 不通痾癢	bu4 tong1 e1 yang3
 不逮	bu2 dai4
@@ -55941,9 +55930,7 @@ min_phrase_weight: 100
 不長眼睛	bu4 zhang3 yan3 jing1
 不長進	bu4 zhang3 jin4
 不間不架	bu4 jian1 bu2 jia4
-不間不架	bu4 jian1 bu4 jia4
 不間不界	bu4 jian1 bu2 jie4
-不間不界	bu4 jian1 bu4 jie4
 不關親	bu4 guan1 qin1
 不阿	bu4 e1
 不隄防	bu4 ti2 fang2
@@ -56770,7 +56757,7 @@ min_phrase_weight: 100
 事關重大	shi4 guan1 zhong4 da4
 事頭	shi4 tou5
 事頭	shi4 tou2
-二不愣	er4 bu4 leng4
+二不愣	er4 bu2 leng4
 二不稜登	er4 bu4 leng1 deng1
 二不棱登	er4 bu4 leng1 deng1
 二乘	er4 sheng4
@@ -58037,7 +58024,7 @@ min_phrase_weight: 100
 侗劇	dong4 ju4
 侗族	dong4 zu2
 侗語	dong4 yu3
-供不上	gong1 bu4 shang4
+供不上	gong1 bu2 shang4
 供不應求	gong1 bu2 ying4 qiu2
 供事	gong4 shi4
 供佛	gong4 fo2
@@ -67096,7 +67083,7 @@ min_phrase_weight: 100
 坎肩兒	kan3 jian1 er2
 坐下	zuo4 xia4
 坐不住	zuo4 bu2 zhu4
-坐不穩	zuo4 bu2 wen3
+坐不穩	zuo4 bu4 wen3
 坐以待斃	zuo4 yi3 dai4 bi4
 坐以待旦	zuo4 yi3 dai4 dan4
 坐便器	zuo4 bian4 qi4
@@ -67119,7 +67106,7 @@ min_phrase_weight: 100
 坐而待斃	zuo4 er2 dai4 bi4
 坐而待旦	zuo4 er2 dai4 dan4
 坐臥不寧	zuo4 wo4 bu4 ning2
-坐臥不寧	zuo4 wo4 bu4 ning4
+坐臥不寧	zuo4 wo4 bu2 ning4
 坐落	zuo4 luo4
 坐言起行	zuo4 yan2 qi3 xing2
 坐賈	zuo4 gu3
@@ -74390,7 +74377,7 @@ min_phrase_weight: 100
 怪著	guai4 zhe5
 怪腔怪調	guai4 qiang1 guai4 diao4
 怪處	guai4 chu4
-怫然不悅	fei4 ran2 bu4 yue4
+怫然不悅	fei4 ran2 bu2 yue4
 怫然變色	fei4 ran2 bian4 se4
 怫異	bei4 yi4
 怫鬱	fu2 yu4
@@ -84418,8 +84405,6 @@ min_phrase_weight: 100
 氟化物中毒	fu2 hua4 wu4 zhong4 du2
 氣不忿兒	qi4 bu2 fen4 er5	80%
 氣不忿兒	qi4 bu2 fen4 er2
-氣不忿兒	qi4 bu4 fen4 er5	80%
-氣不忿兒	qi4 bu4 fen4 er2
 氣不過	qi4 bu2 guo4
 氣候溫和	qi4 hou4 wen1 he2
 氣充文見	qi4 chong1 wen2 xian4
@@ -106839,7 +106824,6 @@ min_phrase_weight: 100
 鍍錫鐵	du4 xi2 tie3
 鍠聒	huang2 gua1
 鍥而不舍	qie4 er2 bu4 she3
-鍥而不舍	qie4 er2 bu4 she4
 鍥薄	qie4 bo2
 鍵盤樂器	jian4 pan2 yue4 qi4
 鍼芥相投	zhen1 jie4 xiang1 tou2
@@ -110052,7 +110036,7 @@ min_phrase_weight: 100
 願行	yuan4 xing4
 顙子	sang3 zi5
 顛三倒四	dian1 san1 dao3 si4
-顛不剌的	dian1 bu4 la4 de5
+顛不剌的	dian1 bu2 la4 de5
 顛不剌的	dian1 bu4 la2 de5
 顛之倒之	dian1 zhi1 dao3 zhi1
 顛乾倒坤	dian1 qian2 dao3 kun1
@@ -112080,4 +112064,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 112083 #####
+##### @結束 END - 112067 #####
