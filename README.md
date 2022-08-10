@@ -25,7 +25,13 @@
 
   > 承上，分別於「`plus注音_防崩潰：Win必加，Mac勿加`」和「`mixin注音_同顯2修改檔(Win)`」資料夾內，把資料夾內 .custom.yaml 檔拖至上一層，與方案文件同一層，按「重新部署」方可。
 
-  > 方案放置路徑：
+  > Linux 反饋問題很多，一看其 Rime 核心 librime 過舊，librime-lua 掛件也缺失！不可能回退使功能打折去符合舊版核心寫法！方案皆以 Mac 鼠鬚管官方最新封裝版本為實作基礎。
+  
+  > 使用 Windows 小狼毫官方最新封裝版本，方案內有 rime.lua 該檔，建議更換最新官方封裝 [librime 核心](https://github.com/rime/librime/releases)！早期 librime-lua 版本使用遍尋候選項會產生記憶體洩漏，更新版已解決。
+
+- 方案放置路徑：
+
+  > 別放錯資料夾，反饋有人放錯放到程式預設方案資料夾！雖可使用，但會產生 Bug。
 
 ```
 %APPDATA%\Rime  ( Windows 小狼毫 )
@@ -33,12 +39,6 @@
 ~/.config/ibus/rime  ( Linux 中州韻 )
 ~/.config/fcitx/rime  ( Linux )
 ```
-
-  > 別放錯資料夾，反饋有人放錯放到程式預設方案資料夾！雖可使用，但會產生 Bug。
-  
-  > Linux 反饋問題很多，一看其 Rime 核心 librime 過舊，librime-lua 掛件也缺失！不可能回退使功能打折去符合舊版核心寫法！方案皆以 Mac 鼠鬚管官方最新封裝版本為實作基礎。
-  
-  > 使用 Windows 小狼毫官方最新封裝版本，方案內有 rime.lua 該檔，建議更換最新官方封裝 [librime 核心](https://github.com/rime/librime/releases)！早期 librime-lua 版本使用遍尋候選項會產生記憶體洩漏，更新版已解決。
 
 ## Rime 入門需知：
 
