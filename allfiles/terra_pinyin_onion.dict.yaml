@@ -55232,6 +55232,7 @@ min_phrase_weight: 100
 不作為違警	bu2 zuo4 wei2 wei2 jing3
 不作興	bu2 zuo4 xing1
 不供	bu2 gong4
+不供	bu4 gong1
 不便	bu2 bian4
 不便宜	bu2 bian4 yi2
 不便宜	bu4 pian2 yi2
@@ -55461,6 +55462,7 @@ min_phrase_weight: 100
 不弟	bu2 ti4
 不強	bu4 qiang2
 不待	bu2 dai4
+不待	bu4 dai1
 不待蓍龜	bu2 dai4 shi1 gui1
 不待要	bu2 dai4 yao4
 不待說	bu2 dai4 shuo1
@@ -55594,6 +55596,7 @@ min_phrase_weight: 100
 不正確	bu2 zheng4 que4
 不正經	bu2 zheng4 jing1
 不殺	bu2 shai4
+不殺	bu4 sha1
 不毛之地	bu4 mao2 zhi1 di4
 不氣干	bu2 qi4 gan1
 不氣長	bu2 qi4 chang2
@@ -55669,6 +55672,7 @@ min_phrase_weight: 100
 不疑誣金	bu4 yi2 wu2 jin1
 不的	bu4 di2
 不相	bu4 xiang1
+不相	bu2 xiang4
 不相上下	bu4 xiang1 shang4 xia4
 不相來往	bu4 xiang1 lai2 wang3
 不相同	bu4 xiang1 tong2
@@ -55687,6 +55691,7 @@ min_phrase_weight: 100
 不相識	bu4 xiang1 shi4
 不相關	bu4 xiang1 guan1
 不省	bu4 xing3
+不省	bu4 sheng3
 不省事	bu4 xing3 shi4
 不省人事	bu4 xing3 ren2 shi4
 不省得	bu4 xing3 de5
@@ -55764,6 +55769,7 @@ min_phrase_weight: 100
 不結盟	bu4 jie2 meng2
 不結盟運動	bu4 jie2 meng2 yun4 dong4
 不給	bu4 ji3
+不給	bu4 gei3
 不經一番風霜苦	bu4 jing1 yi4 fan1 feng1 shuang1 ku3
 不經一番風霜苦	bu4 jing1 yi1 fan1 feng1 shuang1 ku3
 不經事少年	bu4 jing1 shi4 shao4 nian2
@@ -55804,6 +55810,7 @@ min_phrase_weight: 100
 不菲	bu4 fei3
 不菲	bu4 fei1
 不落	bu2 luo4
+不落	bu2 la4
 不落人後	bu2 luo4 ren2 hou4
 不落俗套	bu2 luo4 su2 tao4
 不落屋	bu2 luo4 wu1
@@ -55817,6 +55824,7 @@ min_phrase_weight: 100
 不蔓不枝	bu2 man4 bu4 zhi1
 不薄	bu4 bo2
 不處	bu4 chu3
+不處	bu2 chu4
 不虛此行	bu4 xu1 ci3 xing2
 不虞匱乏	bu4 yu2 kui4 fa2
 不行	bu4 xing2
@@ -55907,9 +55915,11 @@ min_phrase_weight: 100
 不辨菽麥	bu2 bian4 shu2 mai4
 不辨菽麥	bu2 bian4 shu1 mai4
 不辱	bu2 ru4
+不辱	bu2 ru3
 不辱使命	bu2 ru4 shi3 ming4
 不通痾癢	bu4 tong1 e1 yang3
 不逮	bu2 dai4
+不逮	bu4 dai3
 不逮人倫	bu2 dai4 ren2 lun2
 不逮捕特權	bu2 dai4 bu3 te4 quan2
 不遑寧處	bu4 huang2 ning2 chu3
@@ -55918,7 +55928,9 @@ min_phrase_weight: 100
 不適當	bu2 shi4 dang4
 不避彊禦	bu2 bi4 qiang2 yu4
 不還	bu4 huan2
+不還	bu4 hai2
 不重	bu2 zhong4
+不重	bu4 chong2
 不重要	bu2 zhong4 yao4
 不重視	bu2 zhong4 shi4
 不量	bu4 liang2
@@ -112068,4 +112080,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 112071 #####
+##### @結束 END - 112083 #####
