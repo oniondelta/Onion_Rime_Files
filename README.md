@@ -48,8 +48,6 @@
 
 ## Rime 方案安裝與修改：
 
-  > 於本頁下載，安裝前，先用 Python 執行 sort_rime_file.py 分類方案文件。
-
 - [Wiki 說明連結](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E6%B4%8B%E8%94%A5%E7%89%88%E9%9B%BB%E8%85%A6-Rime-%E6%96%B9%E6%A1%88%E5%AE%89%E8%A3%9D%E8%88%87%E4%BF%AE%E6%94%B9)
 
 ## 各方案說明：
