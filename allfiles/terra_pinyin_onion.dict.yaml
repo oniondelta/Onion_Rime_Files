@@ -2097,6 +2097,10 @@ min_phrase_weight: 100
 湛	chen3	0%
 湛	shen4	0%
 絃	xuan4	0%
+鎗	qiang4	0%
+槍	qiang3	0%
+枪	qiang3	0%
+枪	cheng1	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -112064,4 +112068,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 112067 #####
+##### @結束 END - 112071 #####
