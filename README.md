@@ -36,7 +36,7 @@
 ~/.config/fcitx/rime  ( Linux )
 ```
 
-- 注意：
+- Linux 和 Win 系統注意：
 
   > Linux 反饋問題很多，其 Rime 核心 librime 過舊，librime-lua 掛件缺失！不可能回退使功能打折去符合舊版核心寫法！方案皆以 Mac 鼠鬚管官方最新封裝版本為實作基礎。
   
