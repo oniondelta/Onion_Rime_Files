@@ -118,6 +118,7 @@
 #    詞句中，「召」發音為「zhao4」「shao4」，兩岸皆無「zhao1」該發音，但日常常發，故標準為「zhao4」時補齊「zhao4」「zhao1」。
 #    詞句中，「血」皆補齊「xie3」「xue4」。
 #    詞句中，「町」發音「ding1」和「ting3」語意有差，但「ding1」日常常發，故皆補齊「ding1」「ting3」。
+#    詞句中，「嵌」語意為嵌入時，臺灣字典發音為「qian1」，對岸為「qian4」，日常皆常用，且「kan3」也常誤發此音，故語意為嵌入時，補齊「qian1」「qian4」「kan3」。
 #    預計比對「輕聲和一聲」變音。
 #
 #  〈2020修改字詞彙發音〉：
@@ -301,7 +302,7 @@ min_phrase_weight: 100
 欸	ei3
 欸	ei4
 欸	ai1
-嵌	kan4	10%
+嵌	kan4	0%
 波	po1
 聘	ping4
 懾	zhe2
@@ -2101,6 +2102,9 @@ min_phrase_weight: 100
 槍	qiang3	0%
 枪	qiang3	0%
 枪	cheng1	0%
+予	zhu4	0%
+郭	guo2	0%
+嵌	han3	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -68056,6 +68060,7 @@ min_phrase_weight: 100
 大和民族	da4 he2 min2 zu2
 大和繪	da4 he2 hui4
 大品般若	da4 pin3 bo1 re3
+大品般若	da4 pin3 ban1 ruo4
 大哭一場	da4 ku1 yi4 chang2	3%
 大哭一場	da4 ku1 yi1 chang2	3%
 大哭一場	da4 ku1 yi4 chang3
@@ -71700,16 +71705,38 @@ min_phrase_weight: 100
 嵂崒	lv4 zu2
 嵇中散	ji1 zhong1 san3
 嵌埋法	qian1 mai2 fa3
+嵌埋法	qian4 mai2 fa3
+嵌埋法	kan3 mai2 fa3
 嵌版構造	qian1 ban3 gou4 zao4
+嵌版構造	qian4 ban3 gou4 zao4
+嵌版構造	kan3 ban3 gou4 zao4
 嵌玻璃	qian1 bo1 li2
+嵌玻璃	qian4 bo1 li2
+嵌玻璃	kan3 bo1 li2
 嵌瓷畫	qian1 ci2 hua4
+嵌瓷畫	qian4 ci2 hua4
+嵌瓷畫	kan3 ci2 hua4
 嵌畫	qian1 hua4
+嵌畫	qian4 hua4
+嵌畫	kan3 hua4
 嵌石	qian1 shi2
+嵌石	qian4 shi2
+嵌石	kan3 shi2
 嵌窞	qian1 dan4
+嵌窞	qian4 dan4
+嵌窞	kan3 dan4
 嵌造	qian1 zao4
+嵌造	qian4 zao4
+嵌造	kan3 zao4
 嵌金	qian1 jin1
+嵌金	qian4 jin1
+嵌金	kan3 jin1
 嵌鑲磚	qian1 xiang1 zhuan1
+嵌鑲磚	qian4 xiang1 zhuan1
+嵌鑲磚	kan3 xiang1 zhuan1
 嵌飾	qian1 shi4
+嵌飾	qian4 shi4
+嵌飾	kan3 shi4
 嵩少	song1 shao4
 嵩山三闕	song1 shan1 san1 que4
 嵩嶽降神	song1 yue4 jiang4 shen2
@@ -78312,6 +78339,8 @@ min_phrase_weight: 100
 撇嘴	pie3 zui3
 撇地	pie1 de5
 撇嵌	pie1 qian1
+撇嵌	pie1 qian4
+撇嵌	pie1 kan3
 撇弔	pie1 diao4
 撇強	pie1 qiang2
 撇打	pie1 da3
@@ -90330,6 +90359,8 @@ min_phrase_weight: 100
 百孔千創	bai3 kong3 qian1 chuang1
 百家樂	bai3 jia1 le4
 百寶嵌	bai3 bao3 qian1
+百寶嵌	bai3 bao3 qian4
+百寶嵌	bai3 bao3 kan3
 百將傳	bai3 jiang4 zhuan4
 百年偕老	bai3 nian2 xie2 lao3
 百幾個	bai3 ji3 ge5
@@ -91399,6 +91430,8 @@ min_phrase_weight: 100
 眼圈	yan3 quan1
 眼圈紅了	yan3 quan1 hong2 le5
 眼嵌縮腮	yan3 qian1 suo1 sai1
+眼嵌縮腮	yan3 qian4 suo1 sai1
+眼嵌縮腮	yan3 kan3 suo1 sai1
 眼底下	yan3 di3 xia4
 眼張失落	yan3 zhang1 shi1 luo4
 眼扎毛	yan3 zha2 mao2
@@ -97677,12 +97710,19 @@ min_phrase_weight: 100
 般礴	pan2 bo2
 般舟三昧	pan2 zhou1 san1 mei4
 般若	bo1 re3
+般若	ban1 ruo4
 般若波羅密	bo1 re3 bo1 luo2 mi4
 般若波羅密	bo1 re3 po1 luo2 mi4
+般若波羅密	ban1 ruo4 bo1 luo2 mi4
+般若波羅密	ban1 ruo4 po1 luo2 mi4
 般若波羅密多心經	bo1 re3 bo1 luo2 mi4 duo1 xin1 jing1
 般若波羅密多心經	bo1 re3 po1 luo2 mi4 duo1 xin1 jing1
+般若波羅密多心經	ban1 ruo4 bo1 luo2 mi4 duo1 xin1 jing1
+般若波羅密多心經	ban1 ruo4 po1 luo2 mi4 duo1 xin1 jing1
 般若湯	bo1 re3 tang1
+般若湯	ban1 ruo4 tang1
 般若經	bo1 re3 jing1
+般若經	ban1 ruo4 jing1
 般調	ban1 tiao2
 般遊	pan2 you2
 舳艫	zhou2 lu2
@@ -99533,6 +99573,7 @@ min_phrase_weight: 100
 蘭花煙	lan2 hua1 yan1
 蘭芷漸滫	lan2 zhi3 jian1 xiu3
 蘭若	lan2 re3
+蘭若	lan2 ruo4
 蘭茝	lan2 chai3
 蘭葉撇	lan2 ye4 pie3
 蘭鄭長成品油管道	lan2 zheng4 chang2 cheng2 pin3 you2 guan3 dao4
@@ -106406,6 +106447,8 @@ min_phrase_weight: 100
 金鑰匙	jin1 yao4 shi5
 金鑰匙	jin1 yao4 shi3
 金鑲玉嵌	jin1 xiang1 yu4 qian1
+金鑲玉嵌	jin1 xiang1 yu4 qian4
+金鑲玉嵌	jin1 xiang1 yu4 kan3
 金闕	jin1 que4
 金露花	jin1 lu4 hua1
 金風玉露	jin1 feng1 yu4 lu4
@@ -106959,8 +107002,13 @@ min_phrase_weight: 100
 鑰匙鏈	yao4 shi3 lian4
 鑲嵌	xiang1 qian1
 鑲嵌	xiang1 qian4
+鑲嵌	xiang1 kan3
 鑲嵌工藝	xiang1 qian1 gong1 yi4
+鑲嵌工藝	xiang1 qian4 gong1 yi4
+鑲嵌工藝	xiang1 kan3 gong1 yi4
 鑲嵌畫	xiang1 qian1 hua4
+鑲嵌畫	xiang1 qian4 hua4
+鑲嵌畫	xiang1 kan3 hua4
 鑷子	nie4 zi5
 鑹子	cuan1 zi5
 鑼鍋子	luo2 guo1 zi5
@@ -112068,4 +112116,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 112071 #####
+##### @結束 END - 112119 #####
