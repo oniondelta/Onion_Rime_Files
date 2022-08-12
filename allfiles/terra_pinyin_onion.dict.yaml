@@ -57195,6 +57195,7 @@ min_phrase_weight: 100
 人是地行仙	ren2 shi4 di4 xing2 xian1
 人是衣裳	ren2 shi4 yi1 shang1
 人是衣裳	ren2 shi4 yi1 chang2
+人是衣裳	ren2 shi4 yi1 shang5
 人有旦夕禍福	ren2 you3 dan4 xi4 huo4 fu2
 人格分裂	ren2 ge2 fen1 lie4
 人格教育	ren2 ge2 jiao4 yu4
@@ -71160,6 +71161,7 @@ min_phrase_weight: 100
 小衝突	xiao3 chong1 tu1
 小衣裳	xiao3 yi1 shang1
 小衣裳	xiao3 yi1 chang2
+小衣裳	xiao3 yi1 shang5
 小裡小氣	xiao3 li3 xiao3 qi4
 小見識	xiao3 jian4 shi4
 小調	xiao3 diao4
@@ -73404,6 +73406,7 @@ min_phrase_weight: 100
 彈球盤	tan2 qiu2 pan2
 彈琴	tan2 qin2
 彈琵琶	tan2 pi2 pa2
+彈琵琶	tan2 pi2 pa5
 彈痕	dan4 hen2
 彈痕分析	dan4 hen2 fen1 xi1
 彈痕纍纍	dan4 hen2 lei2 lei2
@@ -75143,6 +75146,7 @@ min_phrase_weight: 100
 慧眼識英雄	hui4 yan3 shi4 ying1 xiong2
 慧給	hui4 ji3
 慨然應允	kai3 ran2 ying4 yun3
+慨然應允	kai4 ran2 ying4 yun3
 慮周行果	lv4 zhou1 xing2 guo3
 慰勞	wei4 lao4
 慰勞	wei4 lao2
@@ -78195,6 +78199,7 @@ min_phrase_weight: 100
 摟溝子	lou1 gou1 zi5
 摟衣裳	lou1 yi1 shang1
 摟衣裳	lou1 yi1 chang2
+摟衣裳	lou1 yi1 shang5
 摟財	lou1 cai2
 摟貨	lou1 huo4
 摟錢	lou1 qian2
@@ -89129,8 +89134,11 @@ min_phrase_weight: 100
 琴瑟相調	qin2 se4 xiang1 tiao2
 琴瑟調和	qin2 se4 tiao2 he2
 琵琶	pi2 pa2
+琵琶	pi2 pa5
 琵琶行	pi2 pa2 xing2
+琵琶行	pi2 pa5 xing2
 琵琶調	pi2 pa2 diao4
+琵琶調	pi2 pa5 diao4
 瑕瑜互見	xia2 yu2 hu4 xian4
 瑕瑜互見	xia2 yu2 hu4 jian4
 瑜伽師地論	yu2 jia1 shi1 di4 lun4
@@ -100627,6 +100635,7 @@ min_phrase_weight: 100
 衣裳	yi1 chang2
 衣裳	yi1 shang1
 衣裳	yi1 shang3
+衣裳	yi1 shang5
 衣裳鉤兒	yi1 chang2 gou1 er5	80%
 衣裳鉤兒	yi1 chang2 gou1 er2
 衣裳鉤兒	yi1 shang1 gou1 er5	80%
@@ -104006,6 +104015,7 @@ min_phrase_weight: 100
 軟體銀行	ruan3 ti3 yin2 hang2
 軫惜	zhen3 xi2
 軫慨	zhen3 kai4
+軫慨	zhen3 kai3
 軸子	zhou2 zi5
 軸子	zhou4 zi5
 軸旋轉	zhou2 xuan2 zhuan3
@@ -108503,6 +108513,7 @@ min_phrase_weight: 100
 陂陀	po1 tuo2
 附加成分	fu4 jia1 cheng2 fen4
 附和	fu4 he4
+附和	fu4 he2
 附會假借	fu4 hui4 jia3 jie4
 附片	fu4 pian4
 附著	fu4 zhuo2
@@ -110098,6 +110109,7 @@ min_phrase_weight: 100
 顛倒是非	dian1 dao3 shi4 fei1
 顛倒而行	dian1 dao3 er2 xing2
 顛倒衣裳	dian1 dao3 yi1 chang2
+顛倒衣裳	dian1 dao3 yi1 shang5
 顛倒過來	dian1 dao3 guo4 lai2
 顛倒錯亂	dian1 dao3 cuo4 luan4
 顛倒陰陽	dian1 dao3 yin1 yang2
@@ -112116,4 +112128,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 112119 #####
+##### @結束 END - 112131 #####
