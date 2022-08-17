@@ -2107,6 +2107,8 @@ min_phrase_weight: 100
 嵌	han3	0%
 隰	xie4	0%
 禰	xian3	0%
+慊	xian2	0%
+慊	qian3	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -82793,6 +82795,7 @@ min_phrase_weight: 100
 梳櫳	shu1 long2
 梳辮子	shu1 bian4 zi5
 梵剎	fan4 cha4
+梵剎	fan2 cha4	80%
 梵唄	fan4 bai4
 梵啞鈴	fan4 ya3 ling2
 梵教	fan4 jiao4
@@ -112133,4 +112136,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 112136 #####
+##### @結束 END - 112139 #####
