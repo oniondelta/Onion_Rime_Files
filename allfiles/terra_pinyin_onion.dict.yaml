@@ -2112,6 +2112,9 @@ min_phrase_weight: 100
 袂	yi4	0%
 鉻	ge2	0%
 铬	ge2	0%
+枡	sheng1
+臈	ge2
+臘	lie4	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -112139,4 +112142,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 112142 #####
+##### @結束 END - 112145 #####
