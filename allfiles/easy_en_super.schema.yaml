@@ -4,7 +4,7 @@
 schema:
   schema_id: easy_en_super
   name: Easy English（英漢字典）
-  version: "202207"
+  version: "202208"
   author:
     - 洋蔥
   description:
@@ -41,8 +41,8 @@ engine:
     - punct_translator
   filters:
     - lua_filter@en_sort_filter
-    - uniquifier
     - reverse_lookup_filter@e_reverse_lookup
+    - uniquifier
 
 speller:
   alphabet: "zyxwvutsrqponmlkjihgfedcba-.;/'"
