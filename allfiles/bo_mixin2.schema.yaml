@@ -4,7 +4,7 @@
 schema:
   schema_id: bo_mixin2
   name: "☆注音(洋蔥mix-in版 2 )☆〔小大平片韓〕"
-  version: "202207"
+  version: "202208"
   author:
     - 『洋蔥』
   description: |
@@ -60,11 +60,11 @@ engine:
     - simplifier@emoji_switch
     - simplifier
     - lua_filter@en_sort_filter
-    - uniquifier
     - simplifier@back_mark
     - simplifier@punct_mark
     - reverse_lookup_filter@bpm_reverse_lookup
     - reverse_lookup_filter@e_reverse_lookup
+    - uniquifier
   processors:
     - lua_processor@mix_apc_s2rm  #合併 ascii_punct_change 和 s2r_most，增進效能。
     # - lua_processor@ascii_punct_change

@@ -9,7 +9,7 @@ schema:
 
   name: "❖超級混合蝦米(mix-in)❖"
   schema_id: ocm_mixin
-  version: "202207"
+  version: "202208"
   dependencies:
     - punct_ovff
     - symbols_ocm
@@ -83,11 +83,11 @@ engine:
     - simplifier@emoji_switch
     - simplifier
     - lua_filter@en_sort_filter
-    - uniquifier
     - simplifier@punct_mark
     - reverse_lookup_filter@ovff_reverse_lookup
     - reverse_lookup_filter@phonetic_reverse_lookup
     - reverse_lookup_filter@e_reverse_lookup
+    - uniquifier
   processors:
     - ascii_composer
     - recognizer

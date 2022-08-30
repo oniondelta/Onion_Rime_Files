@@ -8,7 +8,7 @@ schema:
 
   name: "❖分別調出蝦米(plus)❖"
   schema_id: dif1
-  version: "202207"
+  version: "202208"
   dependencies:
     - punct_ovff
     - dif1_jphi
@@ -77,12 +77,12 @@ engine:
     - lua_filter@mix_cf2_cfp_filter  # 合併 charset_filter2 和 comment_filter_plus，兩個 lua filter 太耗效能。
     # - lua_filter@comment_filter_plus
     - lua_filter@en_sort_filter
-    - uniquifier
     - simplifier@back_mark
     - simplifier@punct_mark
     - reverse_lookup_filter@ovff_reverse_lookup
     - reverse_lookup_filter@phonetic_reverse_lookup
     - reverse_lookup_filter@e_reverse_lookup
+    - uniquifier
   processors:
     - ascii_composer
     - recognizer
