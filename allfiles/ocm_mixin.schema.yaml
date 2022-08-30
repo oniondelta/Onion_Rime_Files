@@ -80,9 +80,9 @@ engine:
     # - lua_filter@comment_filter_plus
     # - lua_filter@symbols_mark_filter
     # - simplifier@back_mark
+    - lua_filter@en_sort_filter
     - simplifier@emoji_switch
     - simplifier
-    - lua_filter@en_sort_filter
     - simplifier@punct_mark
     - reverse_lookup_filter@ovff_reverse_lookup
     - reverse_lookup_filter@phonetic_reverse_lookup

@@ -67,9 +67,9 @@ engine:
     # - lua_filter@charset_filter2  #去除opencc轉換後留下的「᰼᰼」。
     # - lua_filter@charset_filter  #打開後中文只保留CJK（精簡），但外語不受影響。
     # - lua_filter@missing_mark_filter  #補上標點符號因直上和 opencc 衝突沒附註之選項
+    - lua_filter@en_sort_filter
     - simplifier@emoji_switch
     - simplifier
-    - lua_filter@en_sort_filter
     - simplifier@back_mark
     - simplifier@punct_mark
     - reverse_lookup_filter@bpm_reverse_lookup
