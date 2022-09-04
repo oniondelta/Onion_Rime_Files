@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onion_double
   name: "☆注音(洋蔥雙拼版)☆"
-  version: "202208"
+  version: "202209"
   author:
     - 『洋蔥』
   description: |
@@ -194,8 +194,8 @@ translator:
     - 'xform/([dtngkhwvarzcs]):ㄛ\|ㄨㄛ/$1:ㄨㄛ/'
     - 'xform/([bpmfdtnlgkhwvarzcsu]):ㄟ\|ㄝ/$1:ㄟ/' #v
     - 'xform/([yi]):ㄟ\|ㄝ/$1:ㄝ/'
-    - 'xform/([dtlgkhwvarzcs]):ㄩㄝ\|ㄨㄟ/$1:ㄨㄟ/'
-    - 'xform/([jqx]):ㄩㄝ\|ㄨㄟ/$1:ㄩㄝ/'
+    - 'xform/([dtgkhwvarzcs]):ㄩㄝ\|ㄨㄟ/$1:ㄨㄟ/'
+    - 'xform/([jqxl]):ㄩㄝ\|ㄨㄟ/$1:ㄩㄝ/'
     - 'xform/([pdnljqx]):ㄧㄚ\|ㄨㄚ/$1:ㄧㄚ/'
     - 'xform/([gkhavw]):ㄧㄚ\|ㄨㄚ/$1:ㄨㄚ/'
     - 'xform/([nljqx]):ㄧㄤ\|ㄨㄤ/$1:ㄧㄤ/'
