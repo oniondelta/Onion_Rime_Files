@@ -4,7 +4,7 @@
 schema:
   schema_id: easy_en_super
   name: Easy English（英漢字典）
-  version: "202208"
+  version: "202209"
   author:
     - 洋蔥
   description:
@@ -66,9 +66,9 @@ translator:
   # spelling_hints: 2
   # initial_quality: 1000
   # comment_format:
+  #   - xform|.+||  #刪除尚未輸入完整碼之提示 ~abc
   #   # - xform/⌗$//
   #   # - xform|[~a-z;/.'-]+||
-  #   # - xform|.+||
   #   - xform/^.+⌗//
   #   - xform|^[ a-z;/.'-]+||
   #   - xform/@@/\n          /
@@ -82,6 +82,7 @@ easy_en_script:
   enable_user_dict: false
   # spelling_hints: 1
   # initial_quality: 0
+  # comment_format: []
 
 e_reverse_lookup:
   tags: [ abc ]

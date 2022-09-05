@@ -8,7 +8,7 @@ schema:
 
   name: "❖分別調出蝦米(plus)❖"
   schema_id: dif1
-  version: "202208"
+  version: "202209"
   dependencies:
     - punct_ovff
     - dif1_jphi
@@ -424,8 +424,8 @@ easy_en:
     - xform|》[/]|》/ |
     - xform/\|/ /
   # comment_format:
+  #   - xform|.+||  #刪除尚未輸入完整碼之提示 ~abc
   #   # - xform|[~a-z;/.'-]+||
-  #   # - xform|.+||
   #   - xform/^.+⌗// #easy_en_super用
   #   - xform|^[ a-z;/.'-]+|| #easy_en_super用
   #   - xform/@@/\n          /
@@ -441,6 +441,7 @@ easy_en_script:
   # spelling_hints: 1
   # initial_quality: 0
   extra_tags: []
+  # comment_format: []
 
 e_reverse_lookup:
   tags: [ easy_en ]
