@@ -15,8 +15,6 @@ patch:
     - {schema: ocm_mixin_fullshape}
     - {schema: Mount_bopomo}
     - {schema: allbpm}
-#     - {schema: easy_en_b}
-#     - {schema: easy_en_comment}
     - {schema: easy_en_super}
     - {schema: symbols-mark}
     - {schema: punct_ovff}
