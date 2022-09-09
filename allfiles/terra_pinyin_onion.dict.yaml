@@ -56225,6 +56225,7 @@ min_phrase_weight: 100
 中看	zhong1 kan4
 中看不中吃	zhong4 kan4 bu2 zhong4 chi1
 中石油川東鑽探公司	zhong1 shi2 you2 chuan1 dong1 zuan4 tan4 gong1 si1
+中石油川東鑽探公司	zhong1 shi2 you2 chuan1 dong1 zuan1 tan4 gong1 si1
 中秋帖	zhong1 qiu1 tie4
 中空	zhong1 kong1
 中空玻璃	zhong1 kong1 bo1 li2
@@ -59708,6 +59709,8 @@ min_phrase_weight: 100
 光期性	guang1 qi2 xing4
 光木頭上鑽眼	guang1 mu4 tou5 shang4 zuan1 yan3
 光木頭上鑽眼	guang1 mu4 tou2 shang4 zuan1 yan3
+光木頭上鑽眼	guang1 mu4 tou5 shang4 zuan4 yan3
+光木頭上鑽眼	guang1 mu4 tou2 shang4 zuan4 yan3
 光棍	guang1 gun4
 光棍不吃眼前虧	guang1 gun4 bu4 chi1 yan3 qian2 kui1
 光棍兒	guang1 gun4 er5	80%
@@ -61511,6 +61514,7 @@ min_phrase_weight: 100
 刻期	ke4 qi2
 刻木為吏	ke4 mu4 wei2 li4
 刻苦鑽研	ke4 ku3 zuan1 yan2
+刻苦鑽研	ke4 ku3 zuan4 yan2
 刻薄	ke4 bo2
 刻薄	ke1 bao2
 刻薄	ke1 bo2
@@ -73066,6 +73070,7 @@ min_phrase_weight: 100
 弓弦兒	gong1 xian2 er5	80%
 弓弦兒	gong1 xian2 er2
 弓形鑽	gong1 xing2 zuan4
+弓形鑽	gong1 xing2 zuan1
 弓折矢盡	gong1 zhe2 shi3 jin4
 弓折箭盡	gong1 zhe2 jian4 jin4
 弓漿蟲	gong1 jiang1 chong2
@@ -75934,6 +75939,7 @@ min_phrase_weight: 100
 打夥子穿靴	da3 huo3 zi5 chuan1 xue1
 打夾帳	da3 jia2 zhang4
 打孔鑽	da3 kong3 zuan4
+打孔鑽	da3 kong3 zuan1
 打官司	da3 guan1 si1
 打官鋪	da3 guan1 pu4
 打寬轉	da3 kuan1 zhuan3
@@ -79731,6 +79737,7 @@ min_phrase_weight: 100
 敲邊鼓	qiao1 bian1 gu3
 敲金擊石	qiao1 jin1 ji2 shi2
 敲釘鑽腳	qiao1 ding1 zuan1 jiao3
+敲釘鑽腳	qiao1 ding1 zuan4 jiao3
 敲鑼擊鼓	qiao1 luo2 ji2 gu3
 整個	zheng3 ge5
 整個地球	zheng3 ge5 di4 qiu2
@@ -81005,6 +81012,7 @@ min_phrase_weight: 100
 曲柄	qu1 bing3
 曲柄笠	qu1 bing3 li4
 曲柄鑽	qu1 bing3 zuan4
+曲柄鑽	qu1 bing3 zuan1
 曲棍	qu1 gun4
 曲棍球	qu1 gun4 qiu2
 曲欄	qu1 lan2
@@ -84617,6 +84625,7 @@ min_phrase_weight: 100
 水都	shui3 du1
 水量	shui3 liang4
 水鑽	shui3 zuan4
+水鑽	shui3 zuan1
 水長船高	shui3 zhang3 chuan2 gao1
 水陸道場	shui3 lu4 dao4 chang2	3%
 水陸道場	shui3 lu4 dao4 chang3
@@ -85941,6 +85950,7 @@ min_phrase_weight: 100
 海底地震	hai3 di3 di4 zhen4
 海底摸月	hai3 di3 mo1 yue4
 海底鑽探器	hai3 di3 zuan1 tan4 qi4
+海底鑽探器	hai3 di3 zuan4 tan4 qi4
 海扇	hai3 shan4
 海曲	hai3 qu1
 海東地區	hai3 dong1 di4 qu1
@@ -87438,6 +87448,7 @@ min_phrase_weight: 100
 無妨	wu2 fang1
 無妨	wu2 fang2
 無孔不鑽	wu2 kong3 bu4 zuan1
+無孔不鑽	wu2 kong3 bu2 zuan4
 無家可奔	wu2 jia1 ke3 ben1
 無容身之地	wu2 rong2 shen1 zhi1 di4
 無寧	wu2 ning2
@@ -88363,6 +88374,7 @@ min_phrase_weight: 100
 牙縫高低	ya2 feng4 gao1 di1
 牙行	ya2 hang2
 牙鑽	ya2 zuan4
+牙鑽	ya2 zuan1
 牛不喝水強按頭	niu2 bu4 he1 shui3 qiang2 an4 tou2
 牛仔布	niu2 zi3 bu4
 牛仔布	niu2 zai3 bu4
@@ -89287,6 +89299,7 @@ min_phrase_weight: 100
 瓶塞	ping2 sai1
 瓶塞	ping2 se4
 瓶塞鑽	ping2 sai1 zuan4
+瓶塞鑽	ping2 sai1 zuan1
 瓶墜簪折	ping2 zhui4 zan1 zhe2
 瓶子	ping2 zi5
 瓶落水	ping2 luo4 shui3
@@ -99975,9 +99988,11 @@ min_phrase_weight: 100
 螺槳轂	luo2 jiang3 gu1
 螺模	luo2 mo2
 螺紋鑽	luo2 wen2 zuan4
+螺紋鑽	luo2 wen2 zuan1
 螺絲模	luo2 si1 mo2
 螺絲起子	luo2 si1 qi3 zi5
 螺絲鑽	luo2 si1 zuan4
+螺絲鑽	luo2 si1 zuan1
 螺線圈	luo2 xian4 quan1
 螺螄	luo2 si1
 螺鈿	luo2 dian4
@@ -101179,6 +101194,7 @@ min_phrase_weight: 100
 見糧	xian4 liang2
 見經識經	jian4 jing1 shi4 jing1
 見縫就鑽	jian4 feng4 jiu4 zuan1
+見縫就鑽	jian4 feng4 jiu4 zuan4
 見縫插針	jian4 feng4 cha1 zhen1
 見義不為	jian4 yi4 bu4 wei2
 見義勇為	jian4 yi4 yong3 wei2
@@ -107047,52 +107063,86 @@ min_phrase_weight: 100
 鑽井	zuan4 jing3
 鑽井	zuan1 jing3
 鑽井平台	zuan1 jing3 ping2 tai2
+鑽井平台	zuan4 jing3 ping2 tai2
 鑽井平臺	zuan1 jing3 ping2 tai2
+鑽井平臺	zuan4 jing3 ping2 tai2
 鑽仰	zuan1 yang3
+鑽仰	zuan4 yang3
 鑽冰取火	zuan1 bing1 qu3 huo3
+鑽冰取火	zuan4 bing1 qu3 huo3
 鑽冰求火	zuan1 bing1 qiu2 huo3
+鑽冰求火	zuan4 bing1 qiu2 huo3
 鑽冰求酥	zuan1 bing1 qiu2 su1
+鑽冰求酥	zuan4 bing1 qiu2 su1
 鑽刺	zuan1 ci4
+鑽刺	zuan4 ci4
 鑽勁	zuan1 jin4
+鑽勁	zuan4 jin4
 鑽勁兒	zuan1 jin4 er5	80%
 鑽勁兒	zuan1 jin4 er2
+鑽勁兒	zuan4 jin4 er5	80%
+鑽勁兒	zuan4 jin4 er2
 鑽卡	zuan1 qia3
 鑽卡	zuan4 qia3
+鑽卡	zuan4 ka3
 鑽圈	zuan1 quan1
+鑽圈	zuan4 quan1
 鑽壓	zuan1 ya1
 鑽壓	zuan4 ya1
 鑽天	zuan1 tian1
+鑽天	zuan4 tian1
 鑽天入地	zuan1 tian1 ru4 di4
+鑽天入地	zuan4 tian1 ru4 di4
 鑽天打洞	zuan1 tian1 da3 dong4
+鑽天打洞	zuan4 tian1 da3 dong4
 鑽子	zuan4 zi5
 鑽子	zuan1 zi5
 鑽孔	zuan1 kong3
+鑽孔	zuan4 kong3
 鑽心	zuan4 xin1
 鑽心	zuan1 xin1
 鑽心蟲	zuan1 xin1 chong2
 鑽懶幫閑	zuan1 lan3 bang1 xian2
 鑽戒	zuan4 jie4
 鑽探	zuan1 tan4
+鑽探	zuan4 tan4
 鑽探機	zuan1 tan4 ji1
+鑽探機	zuan4 tan4 ji1
 鑽故紙	zuan1 gu4 zhi3
+鑽故紙	zuan4 gu4 zhi3
 鑽故紙堆	zuan1 gu4 zhi3 dui1
+鑽故紙堆	zuan4 gu4 zhi3 dui1
 鑽木取火	zuan1 mu4 qu3 huo3
+鑽木取火	zuan4 mu4 qu3 huo3
 鑽機	zuan1 ji1
+鑽機	zuan4 ji1
 鑽洞	zuan1 dong4
+鑽洞	zuan4 dong4
 鑽火	zuan1 huo3
+鑽火	zuan4 huo3
 鑽火得冰	zuan1 huo3 de2 bing1
+鑽火得冰	zuan4 huo3 de2 bing1
 鑽灼	zuan1 zhuo2
+鑽灼	zuan4 zhuo2
 鑽營	zuan1 ying2
+鑽營	zuan4 ying2
 鑽燧	zuan1 sui4
+鑽燧	zuan4 sui4
 鑽床	zuan4 chuang2
+鑽床	zuan1 chuang2
 鑽版	zuan1 ban3
+鑽版	zuan4 ban3
 鑽牛犄角	zuan1 niu2 ji1 jiao3
+鑽牛犄角	zuan4 niu2 ji1 jiao3
 鑽牛角	zuan1 niu2 jiao3
+鑽牛角	zuan4 niu2 jiao3
 鑽牛角尖	zuan1 niu2 jiao3 jian1
+鑽牛角尖	zuan4 niu2 jiao3 jian1
 鑽狗洞	zuan1 gou3 dong4
 鑽疾	zuan1 ji2
 鑽皮出羽	zuan1 pi2 chu1 yu3
 鑽眼	zuan1 yan3
+鑽眼	zuan4 yan3
 鑽石	zuan4 shi2
 鑽石婚	zuan4 shi2 hun1
 鑽石王老五	zuan4 shi2 wang2 lao3 wu3
@@ -107101,11 +107151,14 @@ min_phrase_weight: 100
 鑽穴踰垣	zuan1 xue4 yu2 yuan2
 鑽穴踰牆	zuan1 xue4 yu2 qiang2
 鑽空子	zuan1 kong4 zi5
+鑽空子	zuan4 kong4 zi5
 鑽空子	zuan1 kong1 zi5
+鑽空子	zuan4 kong1 zi5
 鑽粉	zuan1 fen3
 鑽粉	zuan4 fen3
 鑽謀	zuan1 mou2
 鑽進	zuan1 jin4
+鑽進	zuan4 jin4
 鑽錢眼	zuan1 qian2 yan3
 鑽門路	zuan1 men2 lu4
 鑽隙踰牆	zuan1 xi4 yu2 qiang2
@@ -107707,6 +107760,7 @@ min_phrase_weight: 100
 開都河	kai1 du1 he2
 開鑼喝道	kai1 luo2 he4 dao4
 開鑽	kai1 zuan1
+開鑽	kai1 zuan4
 開間	kai1 jian1
 開高叉	kai1 gao1 cha1
 開齊合撮	kai1 qi2 he2 cuo4
@@ -112150,4 +112204,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 112153 #####
+##### @結束 END - 112207 #####
