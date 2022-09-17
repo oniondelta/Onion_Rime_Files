@@ -665,3 +665,9 @@ recognizer:
 
 style:
   inline_preedit: false
+
+__patch:
+  # 使用八股文語言模型
+  - grammar:/hant?
+  # 用家自選配置
+  - bo_mixin1.custom:/patch?
