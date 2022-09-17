@@ -513,8 +513,8 @@ recognizer:
     reverse2_lookup: "=[a-z]*$"
     lua: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$|(?<![=`])`[;/']?[a-z]*$|(?<![=`])`[0-9./-]*$|(?<![=`])`[xcoe][0-9a-z]+$"
 
-__patch:
-  # 使用八股文語言模型
-  - grammar:/hant?
-  # 用家自選配置
-  - bopomo_onion_double.custom:/patch?
+# __patch:
+#   # 使用八股文語言模型
+#   - grammar:/hant?
+#   # 用家自選配置
+#   - bopomo_onion_double.custom:/patch?
