@@ -4,7 +4,7 @@
 # 『洋蔥』
 ---
 name: phrases.en_o_w
-version: "202204"
+version: "202209"
 sort: by_weight
 use_preset_vocabulary: false
 columns:
@@ -20,30 +20,31 @@ Vod
 GTA
 gta
 lua
+Lua
 LUA
 dll
 DLL
 php
 PHP
-google	100
+google	10000
 Google
 GOOGLE
-instagram	100
+instagram	10000
 Instagram
 INSTAGRAM
-facebook	100
+facebook	10000
 Facebook
 FACEBOOK
-evernote	100
+evernote	10000
 Evernote
 EVERNOTE
-youtube	100
+youtube	10000
 YouTube
 YOUTUBE
-gmail	100
+gmail	10000
 Gmail
 GMAIL
-wikipedia	100
+wikipedia	10000
 Wikipedia
 WIKIPEDIA
 iTunes
@@ -59,54 +60,54 @@ iPad
 iPod
 AirPods
 Siri
-MacBook	100
+MacBook	10000
 macbook
 WiSpy
 FaceTime
-Skype	100
+Skype	10000
 skype
 SKYPE
-hotmail	100
+hotmail	10000
 Hotmail
 msn
-Msn	100
+Msn	10000
 MSN
 XP
 xp
-Xbox	100
+Xbox	10000
 XBOX
 xbox
-TorBrowser	100
+TorBrowser	10000
 MATLAB
-MatLab	100
+MatLab	10000
 matlab
-Minitab	100
+Minitab	10000
 minitab
-VirtualBox	100
+VirtualBox	10000
 VB
 vb
 MySQL
-Joomla	100
+Joomla	10000
 joomla
 ORCL
 orcl
 CVS
-Apps	100
+Apps	10000
 apps
 APPS
 ftp
 Ftp
 FTP
-Bluetooth	100
+Bluetooth	10000
 bluetooth
 NVIDIA
-nVIDIA	100
+nVIDIA	10000
 nvidia
 GeForce
 FAQ
-USB	100
+USB	10000
 usb
-WiFi	100
+WiFi	10000
 wifi
 WIFI
 agp
@@ -114,18 +115,18 @@ AGP
 xyz
 XYZ
 Xyz
-Photoshop	100
+Photoshop	10000
 photoshop
 PHOTOSHOP
-InDesign	100
+InDesign	10000
 indesign
 INDESIGN
-Linux	100
+Linux	10000
 linux
 Ubuntu
-Firefox	100
+Firefox	10000
 firefox
-Unicode	100
+Unicode	10000
 unicode
 UNICODE
 GPL
@@ -135,8 +136,8 @@ yaml
 html
 xml
 ppt
-PPT	100
-PDF	100
+PPT	10000
+PDF	10000
 pdf
 jpg
 JPG
@@ -194,11 +195,11 @@ NTFS
 exFAT
 HFS
 ReFS
-Bitcoin	100
+Bitcoin	10000
 bitcoin
 BITCOIN
 onLINE
-SanDisk	100
+SanDisk	10000
 sandisk
 vob
 VOB
@@ -206,7 +207,7 @@ PUBG
 VPN
 vpn
 HDMI
-PayPal	100
+PayPal	10000
 paypal
 eSHOP
 AppStore
@@ -239,20 +240,20 @@ OGV
 oga
 OGA
 HTC
-hTC	100
+hTC	10000
 htc
-ASUS	100
+ASUS	10000
 Asus
 asus
-Garmin	100
+Garmin	10000
 garmin
 GARMIN
-Wii	100
+Wii	10000
 wii
 WII
-Logitech	100
+Logitech	10000
 logitech
-PChome	100
+PChome	10000
 pchome
 Engadget
 tsmc
@@ -260,9 +261,9 @@ TSMC
 ASML
 asml
 LinkedIn
-GitHub	100
+GitHub	10000
 github
-Stellarium	100
+Stellarium	10000
 stellarium
 STELLARIUM
 DivX
@@ -279,32 +280,32 @@ OpenGL
 DirectX
 SDL
 OpenAL
-Playstation	100
+Playstation	10000
 PLAYSTATION
 playstation
-CorelDRAW	100
+CorelDRAW	10000
 coreldraw
 QuarkXPress
 QK
 qk
 Qk
-PageMaker	100
-AutoCAD	100
-Autodesk	100
+PageMaker	10000
+AutoCAD	10000
+Autodesk	10000
 autodesk
 AUTODESK
-SolidWorks	100
+SolidWorks	10000
 solidworks
 SOLIDWORKS
-PowerPoint	100
+PowerPoint	10000
 powerpoint
 POWERPOINT
-SketchUp	100
+SketchUp	10000
 sketchup
 SKETCHUP
-LMK	100
+LMK	10000
 lmk
-BRB	100
+BRB	10000
 brb
 TBA
 tba
@@ -314,7 +315,7 @@ FOMO
 fomo
 WTF
 wtf
-Lvl	100
+Lvl	10000
 lvl
 Dcard
 dcard
@@ -329,22 +330,22 @@ FWD
 BBA
 dict
 DICT
-GoPro	100
+GoPro	10000
 gopro
 GOPRO
 NAVER
 naver
 Naver
 synology
-Synology	100
+Synology	10000
 SYNOLOGY
 QNAP
-Qnap	100
+Qnap	10000
 qnap
-Login	100
+Login	10000
 login
 LOGIN
-DSM	100
+DSM	10000
 Dsm
 dsm
 Tenda
@@ -358,20 +359,20 @@ NETGEAR
 Netgear
 NetGear
 TOTOLINK
-ToToLink	100
+ToToLink	10000
 totolink
 Totolink
 TotoLink
 IEEE
 ieee
 mbps
-Mbps	100
+Mbps	10000
 gbps
-Gbps	100
+Gbps	10000
 kbps
-Kbps	100
+Kbps	10000
 tbps
-Tbps	100
+Tbps	10000
 mbs
 Mbs
 gbs
@@ -380,7 +381,7 @@ kbs
 Kbs
 PoE
 LINUX
-Realtek	100
+Realtek	10000
 realtek
 REALTEK
 GbE
@@ -388,30 +389,30 @@ Sonet
 SoNet
 sonet
 SONET
-HiNet	100
+HiNet	10000
 HINET
 hinet
-ADSL	100
+ADSL	10000
 adsl
 allin
 ALLIN
 AllIn
-LaTeX	100
+LaTeX	10000
 Emacs
-Netflix	100
+Netflix	10000
 netflix
 ##### 體育 #####
-MLB	100
+MLB	10000
 mlb
-BWF	100
+BWF	10000
 bwf
 ##### 補充（） #####
-KTV	100
+KTV	10000
 ktv
 TOEIC
 iBT
 IELTS
-LV	100
+LV	10000
 lv
 Lv
 UNIQLO
@@ -423,16 +424,16 @@ ESLITE
 Eslite
 VICTORINOX
 victorinox
-LoL	100
+LoL	10000
 LOL
 lol
-OMG	100
+OMG	10000
 omg
 THX
 thx
 QRcode
 QRCODE
-Cosplay	100
+Cosplay	10000
 COSPLAY
 cosplay
 HangTen
@@ -466,16 +467,16 @@ SOFTIMAGE
 Lightwave
 lightwave
 LIGHTWAVE
-AnimaTek	100
+AnimaTek	10000
 Animatek
 animatek
 ANIMATEK
 uniqlo
-Uniqlo	100
-CitiBank	100
-HSBC	100
+Uniqlo	10000
+CitiBank	10000
+HSBC	10000
 hsbc
-KHS	100
+KHS	10000
 Khs
 khs
 COLNAGO
@@ -595,7 +596,7 @@ maybach
 McLaren
 MercedesBenz
 MERCEDESBENZ
-Mitsuoka	100
+Mitsuoka	10000
 MITSUOKA
 mitsuoka
 Oldsmobile
@@ -687,19 +688,19 @@ Rokon
 rokon
 ##### 一般「品牌」#####
 HBO
-CocaCola	100
+CocaCola	10000
 cocacola
 COCACOLA
 CBD
 cbd
 Cbd
-Levis	100
+Levis	10000
 LEVIS
 levis
-Prada	100
+Prada	10000
 PRADA
 prada
-BVLGARI	100
+BVLGARI	10000
 Bvlgari
 bvlgari
 Fendi
@@ -708,7 +709,7 @@ fendi
 Gabbana
 GABBANA
 gabbana
-Montblanc	100
+Montblanc	10000
 MONTBLANC
 montblanc
 Kenzo
@@ -720,26 +721,26 @@ jil
 Celine
 CELINE
 celine
-Ferragamo	100
+Ferragamo	10000
 FERRAGAMO
 ferragamo
 BCBG
 Bcbg
 bcbg
 ##### 時尚「品牌」#####
-Azria	100
+Azria	10000
 AZRIA
 azria
-Moschino	100
+Moschino	10000
 MOSCHINO
 moschino
-Trussardi	100
+Trussardi	10000
 TRUSSARDI
 trussardi
 Agnesb
 AGNESB
 agnesb
-Emporio	100
+Emporio	10000
 EMPORIO
 emporio
 Veneta
@@ -1207,11 +1208,11 @@ EMOJI
 msg
 IDK
 idk
-Windows	100
-Xeon	100
+Windows	10000
+Xeon	10000
 QQ	1000
-Arduino	100
-ATI	100
+Arduino	10000
+ATI	10000
 vlog
 Vlog
 VLOG
@@ -1267,21 +1268,21 @@ weren't
 Weren't
 WEREN'T
 ##### 含有「.」 #####
-Agnes.b	100
+Agnes.b	10000
 AGNES.B
 agnes.b
 a.m.
-A.M.	100
+A.M.	10000
 al.
 AL.
-AM.	100
+AM.	10000
 am.
 C.C.
 c.c.
 CO.
-Co.	100
+Co.	10000
 co.
-Corp.	100
+Corp.	10000
 corp.
 dept.
 DEPT.
@@ -1306,31 +1307,31 @@ fwd.
 FWD.
 i.e.
 I.E.
-Inc.	100
+Inc.	10000
 inc.
 INC.
 Jr.
-Ltd.	100
+Ltd.	10000
 ltd.
 lv.
 MR.
-Mr.	100
+Mr.	10000
 MS.
-Ms.	100
-No.	100
+Ms.	10000
+No.	10000
 no.
 NO.
-P.K.	100
+P.K.	10000
 p.k.
 P.k.
 p.m.
-P.M.	100
+P.M.	10000
 P.S.
 p.s.
 PK.
 pk.
 Pk.
-PM.	100
+PM.	10000
 pm.
 r.i.p
 R.I.P.
@@ -1338,9 +1339,9 @@ re.
 RE.
 recd.
 RECD.
-U.S.	100
+U.S.	10000
 u.s.
-V.S.	100
+V.S.	10000
 v.s.
 V.s.
 VS.
@@ -1582,26 +1583,26 @@ www.
 .json
 ##### 含有「-」 #####
 G-SHOCK
-X-Plane	100
+X-Plane	10000
 X-PLANE
 D-Link
 TP-LINK
 tp-link
-Tp-Link	100
+Tp-Link	10000
 So-net
 so-net
 SO-NET
 Hi-Net
 HI-NET
 hi-net
-Full-Duplex	100
+Full-Duplex	10000
 ful-duplex
 FULL-DUPLEX
 GONG-CHA
 gong-cha
 Gong-Cha
 Gong-cha
-Mercedes-Benz	100
+Mercedes-Benz	10000
 MERCEDES-BENZ
 HARLEY-DAVIDSON
 Harley-Davidson
@@ -1631,33 +1632,33 @@ K-TOUCH
 UT-Starcom
 ut-starcom
 UT-STARCOM
-All-In	100
+All-In	10000
 ALL-in
 all-in
 ALL-IN
-T-Shirt	100
+T-Shirt	10000
 T-shirt
 t-shirt
 T-SHIRT
 S-Video
 PCI-E
-Wi-Fi	100
+Wi-Fi	10000
 wi-fi
-a-z	100
+a-z	10000
 A-Z
 ##### 含有「/」「:」「~」 #####
 B/C
 B/W
-C/P	100
+C/P	10000
 c/p
-i/o	100
-I/O	100
-N/A	100
+i/o	10000
+I/O	10000
+N/A	10000
 n/a
-Re:	100
-RE:	100
-re:	100
-a~z	100
+Re:	10000
+RE:	10000
+re:	10000
+a~z	10000
 A~Z
 ####### 20200923補充開始@ #######
 ##### 特殊大小寫混合@ #####
