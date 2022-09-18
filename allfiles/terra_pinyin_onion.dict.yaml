@@ -2119,6 +2119,9 @@ min_phrase_weight: 100
 埞	di1
 埞	ti2
 枉	kuang2	0%
+哩	mai3	0%
+衍	yan2	0%
+桅	gui3
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -60939,6 +60942,7 @@ min_phrase_weight: 100
 分派	fen1 pai4
 分流	fen1 liu2
 分流教學	fen1 liu2 jiao4 xue2
+分流教學	fen1 liu2 jiao1 xue2
 分淺緣慳	fen4 qian3 yuan2 qian1
 分淺緣薄	fen4 qian3 yuan2 bo2
 分清	fen1 qing1
@@ -61890,6 +61894,7 @@ min_phrase_weight: 100
 創造性	chuang4 zao4 xing4
 創造性思考	chuang4 zao4 xing4 si1 kao3
 創造性教學	chuang4 zao4 xing4 jiao4 xue2
+創造性教學	chuang4 zao4 xing4 jiao1 xue2
 創造者	chuang4 zao4 zhe3
 創造論	chuang4 zao4 lun4
 創鉅痛深	chuang1 ju4 tong4 shen1
@@ -65024,12 +65029,16 @@ min_phrase_weight: 100
 咖喱	ga1 li3
 咖喱	ka1 li3
 咖喱汁	ga1 li2 zhi1
+咖喱汁	ga1 li3 zhi1
 咖喱汁	ka1 li3 zhi1
 咖喱粉	ga1 li2 fen3
+咖喱粉	ga1 li3 fen3
 咖喱粉	ka1 li3 fen3
 咖喱雞	ga1 li2 ji1
+咖喱雞	ga1 li3 ji1
 咖喱雞	ka1 li3 ji1
 咖喱飯	ga1 li2 fan4
+咖喱飯	ga1 li3 fan4
 咖喱飯	ka1 li3 fan4
 咚咚	dong1 dong1
 咧咧	lie1 lie1
@@ -65456,6 +65465,7 @@ min_phrase_weight: 100
 啟德機場	qi3 de2 ji1 chang2	3%
 啟應祈禱	qi3 ying4 qi2 dao3
 啟發式教學法	qi3 fa1 shi4 jiao4 xue2 fa3
+啟發式教學法	qi3 fa1 shi4 jiao1 xue2 fa3
 啟白	qi3 bo2
 啟矇	qi3 meng2
 啟矇專制君主	qi3 meng2 zhuan1 zhi4 jun1 zhu3
@@ -65843,6 +65853,7 @@ min_phrase_weight: 100
 單個兒	dan1 ge4 er2
 單傳	dan1 chuan2
 單元教學法	dan1 yuan2 jiao4 xue2 fa3
+單元教學法	dan1 yuan2 jiao1 xue2 fa3
 單元頻率	dan1 yuan2 pin2 lv4
 單叢	dan1 cong1
 單口相聲	dan1 kou3 xiang4 sheng1
@@ -65852,6 +65863,7 @@ min_phrase_weight: 100
 單寧	dan1 ning2
 單寧酸	dan1 ning2 suan1
 單式教學	dan1 shi4 jiao4 xue2
+單式教學	dan1 shi4 jiao1 xue2
 單房差	dan1 fang2 cha1
 單拍子	dan1 pai1 zi5
 單挑	dan1 tiao1
@@ -73668,6 +73680,7 @@ min_phrase_weight: 100
 徇通	xun2 tong1
 律切	lv4 qie4
 律動教學	lv4 dong4 jiao4 xue2
+律動教學	lv4 dong4 jiao1 xue2
 律度	lv4 du4
 律藏	lv4 zang4
 後不為例	hou4 bu4 wei2 li4
@@ -79462,19 +79475,27 @@ min_phrase_weight: 100
 教學	jiao4 xue2
 教學	jiao1 xue2
 教學樓	jiao4 xue2 lou2
+教學樓	jiao1 xue2 lou2
 教學機構	jiao4 xue2 ji1 gou4
+教學機構	jiao1 xue2 ji1 gou4
 教學法	jiao4 xue2 fa3
 教學法	jiao1 xue2 fa3
 教學目標	jiao4 xue2 mu4 biao1
+教學目標	jiao1 xue2 mu4 biao1
 教學相長	jiao4 xue2 xiang1 zhang3
 教學相長	jiao1 xue2 xiang1 zhang3
 教學節目	jiao4 xue2 jie2 mu4
+教學節目	jiao1 xue2 jie2 mu4
 教學計劃	jiao4 xue2 ji4 hua4
 教學計劃	jiao1 xue2 ji4 hua4
 教學質量	jiao4 xue2 zhi2 liang4
+教學質量	jiao1 xue2 zhi2 liang4
 教學質量	jiao4 xue2 zhi4 liang4
+教學質量	jiao1 xue2 zhi4 liang4
 教學醫院	jiao4 xue2 yi1 yuan4
+教學醫院	jiao1 xue2 yi1 yuan4
 教學電視	jiao4 xue2 dian4 shi4
+教學電視	jiao1 xue2 dian4 shi4
 教安	jiao4 an1
 教宗	jiao4 zong1
 教官	jiao4 guan1
@@ -82946,10 +82967,13 @@ min_phrase_weight: 100
 椰子油	ye2 zi3 you2
 椰子油	ye1 zi3 you2
 椰殼	ye1 ke2
+椰殼	ye2 ke2
 椰胡	ye2 hu2
+椰胡	ye1 hu2
 椰菜	ye2 cai4
 椰菜	ye1 cai4
 椰雕	ye2 diao1
+椰雕	ye1 diao1
 椹質	zhen1 zhi2
 椹質	zhen1 zhi4
 椽子	chuan2 zi5
@@ -85578,6 +85602,7 @@ min_phrase_weight: 100
 泥鰻	ni2 man2
 泥龍	ni2 long2
 注入式教學法	zhu4 ru4 shi4 jiao4 xue2 fa3
+注入式教學法	zhu4 ru4 shi4 jiao1 xue2 fa3
 注子	zhu4 zi5
 注意將	zhu4 yi4 jiang4
 注意相	zhu4 yi4 xiang4
@@ -90844,6 +90869,7 @@ min_phrase_weight: 100
 直接了當	zhi2 jie1 liao3 dang4
 直接廣播	zhi2 jie1 guang3 bo4
 直接教學法	zhi2 jie1 jiao4 xue2 fa3
+直接教學法	zhi2 jie1 jiao1 xue2 fa3
 直接數據	zhi2 jie1 shu4 ju4
 直播	zhi2 bo4
 直播	zhi2 bo1
@@ -93027,6 +93053,7 @@ min_phrase_weight: 100
 空中少爺	kong1 zhong1 shao4 ye5	80%
 空中巴士	kong1 zhong1 ba1 shi4
 空中教學	kong1 zhong1 jiao4 xue2
+空中教學	kong1 zhong1 jiao1 xue2
 空中核爆炸	kong1 zhong1 he2 bao4 zha4
 空中格鬥	kong1 zhong1 ge2 dou4
 空中樓閣	kong1 zhong1 lou2 ge2
@@ -95028,6 +95055,7 @@ min_phrase_weight: 100
 網路拍賣廣場	wang3 lu4 pai1 mai4 guang3 chang2	3%
 網路拍賣廣場	wang3 lu4 pai1 mai4 guang3 chang3
 網路教學	wang3 lu4 jiao4 xue2
+網路教學	wang3 lu4 jiao1 xue2
 網路特務	wang3 lu4 te4 wu4
 網路虛擬空間	wang3 lu4 xu1 ni3 kong1 jian1
 網路行銷	wang3 lu4 xing2 xiao1
@@ -100846,6 +100874,7 @@ min_phrase_weight: 100
 補強	bu3 qiang2
 補掛朝珠	bu3 gua4 chao2 zhu1
 補救教學	bu3 jiu4 jiao4 xue2
+補救教學	bu3 jiu4 jiao1 xue2
 補數	bu3 shu4
 補校	bu3 xiao4
 補氣止血	bu3 qi4 zhi3 xie3
@@ -100925,6 +100954,7 @@ min_phrase_weight: 100
 複合量詞	fu4 he2 liang4 ci2
 複名數	fu4 ming2 shu4
 複式教學	fu4 shi4 jiao4 xue2
+複式教學	fu4 shi4 jiao1 xue2
 複拍子	fu4 pai1 zi5
 複數	fu4 shu4
 複數域	fu4 shu4 yu4
@@ -109430,6 +109460,7 @@ min_phrase_weight: 100
 電腦操作	dian4 nao3 cao1 zuo4
 電腦操作人員	dian4 nao3 cao1 zuo4 ren2 yuan2
 電腦教學	dian4 nao3 jiao4 xue2
+電腦教學	dian4 nao3 jiao1 xue2
 電腦斷層掃描	dian4 nao3 duan4 ceng2 sao3 miao2
 電腦看板	dian4 nao3 kan4 ban3
 電腦與電話系統整合	dian4 nao3 yu3 dian4 hua4 xi4 tong3 zheng3 he2
@@ -112206,4 +112237,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 112209 #####
+##### @結束 END - 112240 #####
