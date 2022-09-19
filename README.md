@@ -29,12 +29,12 @@
 
   > 別放錯資料夾，反饋有人放錯放到程式預設方案資料夾！雖可使用，但會產生 Bug。
 
-```
-%APPDATA%\Rime  ( Windows 小狼毫 )
-~/Library/Rime  ( Mac OS 鼠鬚管 )
-~/.config/ibus/rime  ( Linux 中州韻 )
-~/.config/fcitx/rime  ( Linux )
-```
+  > ```
+  > %APPDATA%\Rime  ( Windows 小狼毫 )
+  > ~/Library/Rime  ( Mac OS 鼠鬚管 )
+  > ~/.config/ibus/rime  ( Linux 中州韻 )
+  > ~/.config/fcitx/rime  ( Linux )
+  > ```
 
 - Linux 和 Win 系統注意：
 
