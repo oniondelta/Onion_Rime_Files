@@ -112,13 +112,14 @@
 #    詞句中，「蘿蔔」中的「蔔」，「bo2」為讀音，「bo5」為語音，「bo1」常出現在日常發音中，故全都補齊「bo2」「bo5」「bo1」。
 #    詞句中，「舞蹈」中的「蹈」，臺灣字典發音為「dao4」，但日常常發「dao3」，故全都補齊「dao4」「dao3」。
 #    詞句中，「框」臺灣字典只有發音「kuang1」，沒有「kuang4」發音，故只保留「kuang1」發音。
-#    詞句中，「紮」臺灣字典發音為「za1」和「zha2」，但對岸字典有「zha1」，由於發音相近，故「za1」和「zha1」相互補齊，「zha2」語意不同，故不補。
+#    詞句中，「紮」臺灣字典發音為「za1」和「zha2」，但大陸字典有「zha1」，由於發音相近，故「za1」和「zha1」相互補齊，「zha2」語意不同，故不補。
 #    詞句中，「軋」除語意為狀聲詞「ga2」「ya4」或特殊語意等，皆補齊「ya4」「ga1」「ga2」「zha2」。
 #    詞句中，「伐」皆補齊「fa1」「fa2」。
 #    詞句中，「召」發音為「zhao4」「shao4」，兩岸皆無「zhao1」該發音，但日常常發，故標準為「zhao4」時補齊「zhao4」「zhao1」。
 #    詞句中，「血」皆補齊「xie3」「xue4」。
 #    詞句中，「町」發音「ding1」和「ting3」語意有差，但「ding1」日常常發，故皆補齊「ding1」「ting3」。
 #    詞句中，「嵌」語意為嵌入時，臺灣字典發音為「qian1」，對岸為「qian4」，日常皆常用，且「kan3」也常誤發此音，故語意為嵌入時，補齊「qian1」「qian4」「kan3」。
+#    詞句中，「質」臺灣字典不同語意分別發音「zhi2」「zhi4」，但語意品質時發「zhi2」，大陸則為「zhi4」，日常易混，故皆補齊「zhi2」「zhi4」。
 #    預計比對「輕聲和一聲」變音。
 #
 #  〈2020修改字詞彙發音〉：
@@ -60319,6 +60320,7 @@ min_phrase_weight: 100
 典藏	dian3 cang2
 典藏本	dian3 cang2 ben3
 典質	dian3 zhi4
+典質	dian3 zhi2
 典鋪	dian3 pu4
 兼併與收購	jian1 bing4 yu3 shou1 gou4
 兼差	jian1 chai1
@@ -71308,6 +71310,7 @@ min_phrase_weight: 100
 少突膠質	shao3 tu1 jiao1 zhi2
 少突膠質	shao3 tu1 jiao1 zhi4
 少突膠質	shao3 tu2 jiao1 zhi2
+少突膠質	shao3 tu2 jiao1 zhi4
 少管閒事	shao3 guan3 xian2 shi4
 少艾	shao4 ai4
 少見	shao3 jian4
@@ -101167,6 +101170,7 @@ min_phrase_weight: 100
 要質	yao1 zhi2
 要質	yao1 zhi4
 要質	yao4 zhi2
+要質	yao4 zhi4
 要離	yao1 li2
 要雨得雨	yao4 yu3 de2 yu3
 要面子	yao4 mian4 zi5
@@ -103095,6 +103099,7 @@ min_phrase_weight: 100
 質和量	zhi2 he2 liang4
 質和量	zhi4 he2 liang4
 質和量	zhi2 han4 liang4
+質和量	zhi4 han4 liang4
 質因數	zhi2 yin1 shu4
 質因數	zhi4 yin1 shu4
 質地	zhi2 di4
@@ -103102,6 +103107,7 @@ min_phrase_weight: 100
 質子數	zhi2 zi3 shu4
 質子數	zhi4 zi3 shu4
 質庫	zhi4 ku4
+質庫	zhi2 ku4
 質押	zhi4 ya1
 質押	zhi2 ya1
 質數	zhi2 shu4
@@ -103112,12 +103118,15 @@ min_phrase_weight: 100
 質樸	zhi4 pu2
 質樸	zhi4 pu3
 質權	zhi4 quan2
+質權	zhi2 quan2
 質當	zhi4 dang4
+質當	zhi2 dang4
 質疑問難	zhi2 yi2 wen4 nan4
 質疑問難	zhi4 yi2 wen4 nan4
 質的	zhi2 di4
 質的	zhi4 di4
 質的	zhi2 de5
+質的	zhi4 de5
 質監	zhi2 jian1
 質監	zhi4 jian1
 質監局	zhi2 jian1 ju2
@@ -103171,6 +103180,7 @@ min_phrase_weight: 100
 質量關	zhi2 liang4 guan1
 質量關	zhi4 liang4 guan1
 質鋪	zhi4 pu4
+質鋪	zhi2 pu4
 質難	zhi2 nan4
 質難	zhi4 nan4
 賬房先生	zhang4 fang2 xian1 sheng1
@@ -112237,4 +112247,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 112240 #####
+##### @結束 END - 112250 #####
