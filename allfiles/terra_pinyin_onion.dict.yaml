@@ -2132,6 +2132,34 @@ min_phrase_weight: 100
 藨	pao1	0%
 苞	pao2	0%
 苞	biao1	0%
+杈	quan2	0%
+義	yi2	0%
+義	xi1	0%
+垃	la5	0%
+甬	yong1	0%
+甬	dong4	0%
+憲	xian3	0%
+宪	xian3	0%
+猎	xi2	0%
+吃	qi1	0%
+榜	beng1	0%
+榜	pang1	0%
+榜	peng2	0%
+牓	pang1	0%
+业	nie4	0%
+鄉	xiang3	0%
+乡	xiang3	0%
+乡	xiang4	0%
+冈	gang3	0%
+冈	tong2	0%
+冈	tong4	0%
+圾	jie2	0%
+漢	tan1	0%
+汉	tan1	0%
+胆	shan1	0%
+胆	tan4	0%
+郵	chui2	0%
+邮	chui2	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -4379,7 +4407,7 @@ min_phrase_weight: 100
 獱	bian1	0.3%
 琝	min2	0.3%
 琢	zuo2	0.3%
-甬	tong3	0.3%
+# 甬	tong3	0.3%
 畂	mu3	0.3%
 疸	da5	0.3%
 瘜	xi1	0.3%
@@ -13699,8 +13727,8 @@ min_phrase_weight: 100
 丗	shi4
 丘	qiu1
 丙	bing3
-业	qiu1
-业	ye4	0%
+# 业	qiu1
+业	ye4
 丛	cong2
 东	dong1
 丝	si1
@@ -13784,8 +13812,8 @@ min_phrase_weight: 100
 乞	qi3
 也	ye3
 习	xi2
-乡	xiang1	0%
-乡	yuan4
+乡	xiang1
+# 乡	yuan4
 乢	gai4
 乣	jiu3
 书	shu1
@@ -13872,10 +13900,10 @@ min_phrase_weight: 100
 亯	xiang3
 亰	jing1
 亱	ye4
-亲	qin1	0%
-亲	qing1	0%
+亲	qin1
+# 亲	qing1	0%
 亲	xin1	10%
-亲	zhen1	90%
+# 亲	zhen1	90%
 亳	bo2
 亴	you4
 亵	xie4
@@ -13890,7 +13918,7 @@ min_phrase_weight: 100
 亽	ji2
 亾	wang2
 亿	yi4
-什	she2	0%
+什	she2
 什	shen2	1%
 什	shi2	99%
 仁	ren2
@@ -17872,10 +17900,10 @@ min_phrase_weight: 100
 宧	yi2
 宨	tiao3
 宩	shi3
-宪	hun4	33%
-宪	mao4	33%
-宪	xian4	0%
-宪	xiong4	34%
+# 宪	hun4	33%
+# 宪	mao4	33%
+宪	xian4
+# 宪	xiong4	34%
 宫	gong1
 宬	cheng2
 宭	qun2
@@ -22086,7 +22114,7 @@ min_phrase_weight: 100
 榛	zhen1
 榜	bang3	99%
 榜	bang4	1%
-榜	peng4	0%
+# 榜	peng4	0%
 榝	sha1
 榝	xie4
 榞	yuan2
@@ -22898,8 +22926,8 @@ min_phrase_weight: 100
 汆	cuan1
 汇	hui4
 汈	diao1
-汉	han4	0%
-汉	nv4
+汉	han4
+# 汉	nv4
 汊	cha4
 汋	zhuo2
 汌	chuan4
@@ -24884,7 +24912,7 @@ min_phrase_weight: 100
 猋	biao1
 猌	yin4
 猍	lai2
-猎	ji2	30%
+# 猎	ji2	30%
 猎	lie4	0%
 猎	que4	35%
 猎	xi1	35%
@@ -28840,7 +28868,7 @@ min_phrase_weight: 100
 胆	dan3	1%
 胆	dan4
 胆	tan2
-胆	tan3
+# 胆	tan3
 胇	bi4
 胇	fei3
 胇	fei4
@@ -29636,8 +29664,8 @@ min_phrase_weight: 100
 荠	ji4
 荡	dang4
 荢	zi4
-荣	ce4
-荣	rong2	0%
+# 荣	ce4
+荣	rong2
 荤	hun1
 荥	xing2
 荦	luo4
@@ -33577,8 +33605,8 @@ min_phrase_weight: 100
 邫	bang1
 邬	wu1
 邭	ju4
-邮	di2
-邮	you2	0%
+# 邮	di2
+邮	you2
 邯	han2
 邰	tai2
 邱	qiu1
@@ -112257,4 +112285,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 112260 #####
+##### @結束 END - 112288 #####
