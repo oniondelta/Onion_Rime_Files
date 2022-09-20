@@ -2150,6 +2150,10 @@ min_phrase_weight: 100
 鄉	xiang3	0%
 乡	xiang3	0%
 乡	xiang4	0%
+郷	xiang3	0%
+郷	xiang4	0%
+鄕	xiang3	0%
+鄕	xiang4	0%
 冈	gang3	0%
 冈	tong2	0%
 冈	tong4	0%
@@ -112285,4 +112289,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 112288 #####
+##### @結束 END - 112292 #####
