@@ -18,7 +18,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion_add
-version: "202207"
+version: "202209"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7
@@ -114,7 +114,6 @@ min_phrase_weight: 100
 腩	(nan2)	0.1%
 撂	(lao4)	0.1%
 吮	(yun3)	0.1%
-沌	(tun2)	0.01%
 摃	(gang4)	0.001%
 囹	(ling4)	0%
 圄	(wu2)	0%

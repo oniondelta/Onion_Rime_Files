@@ -2123,6 +2123,9 @@ min_phrase_weight: 100
 哩	mai3	0%
 衍	yan2	0%
 桅	gui3
+閪	xi1
+沌	tun2	0%
+沌	chun2	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -79849,6 +79852,7 @@ min_phrase_weight: 100
 數奇	shu4 ji1
 數奇命蹇	shu4 ji1 ming4 jian3
 數字	shu4 zi4
+數字	shu3 zi4
 數字係數	shu4 zi4 xi4 shu4
 數字信號	shu4 zi4 xin4 hao4
 數字分頻	shu4 zi4 fen1 pin2
@@ -112247,4 +112251,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 112250 #####
+##### @結束 END - 112254 #####
