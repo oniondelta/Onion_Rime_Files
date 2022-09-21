@@ -4373,9 +4373,10 @@ function t_translator(input, seg)
     --   return
     -- end
 
-    if (input == "`u") then
+    if (input == "`z") then
       -- local tz, tzd = timezone_out1()
-      yield(Candidate("time", seg.start, seg._end, timezone_out1()[1], timezone_out1()[2]))
+      yield(Candidate("time", seg.start, seg._end, timezone_out1()[1], ""))
+      yield(Candidate("time", seg.start, seg._end, timezone_out1()[2], ""))
       return
     end
 
@@ -4636,6 +4637,7 @@ function t_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, os.date("%Y/%m/%d %H:%M"), "〔年月日 時:分〕 ~s"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d %H:%M"), "〔年月日 時:分〕 ~m"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y_%m_%d %H:%M"), "〔年月日 時:分〕 ~u"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%dT%H:%M+08:00"), "〔ISO 8601/RFC 3339〕 ~i"))
       yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%Y年%m月%d日 %H點%M分"), "([^%d])0", "%1"), "〔年月日 時:分〕 ~c"))
       yield(Candidate("date", seg.start, seg._end, rqzdx1().." "..ch_h_date(os.date("%H")).."點"..ch_minsec_date(os.date("%M")).."分", "〔年月日 時:分〕 ~z"))
       yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日 "..os.date("%H點%M分"), "([^%d])0", "%1"), "〔民國〕 ~h"))
@@ -4647,6 +4649,18 @@ function t_translator(input, seg)
       -- local chinese_time = time_description_chinese(os.time())
       local ll_1, ll_2 = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, ll_1 .." ".. time_description_chinese(os.time()), "〔農曆〕 ~l"))
+      return
+    end
+
+    if (input == "`fni") then
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%dT%H:%M+08:00"), "〔當地時  ISO 8601/RFC 3339〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y%m%dT%H%M+08"), "〔當地時  ISO 8601/RFC 3339〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d-%H-%M ") .. timezone_out1()[1], "〔當地時  時區〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d-%H-%M ") .. timezone_out1()[2], "〔當地時  時區〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("!%Y-%m-%dT%H:%MZ"), "〔世界時  ISO 8601/RFC 3339〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("!%Y%m%dT%H%MZ"), "〔世界時  ISO 8601/RFC 3339〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("!%Y-%m-%d-%H-%M UTC"), "〔世界時  時區〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("!%Y-%m-%d-%H-%M GMT"), "〔世界時  時區〕"))
       return
     end
 
@@ -4756,6 +4770,7 @@ function t_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, os.date("%Y/%m/%d %H:%M:%S"), "〔年月日 時:分:秒〕 ~s"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d %H:%M:%S"), "〔年月日 時:分:秒〕 ~m"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y_%m_%d %H:%M:%S"), "〔年月日 時:分:秒〕 ~u"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%dT%H:%M:%S+08:00"), "〔ISO 8601/RFC 3339〕 ~i"))
       yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%Y年%m月%d日 %H點%M分%S秒"), "([^%d])0", "%1"), "〔年月日 時:分:秒〕 ~c"))
       yield(Candidate("date", seg.start, seg._end, rqzdx1().." "..ch_h_date(os.date("%H")).."點"..ch_minsec_date(os.date("%M")).."分"..ch_minsec_date(os.date("%S")).."秒", "〔年月日 時:分:秒〕 ~z"))
       yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日 "..os.date("%H點%M分%S秒"), "([^%d])0", "%1"), "〔年月日 時:分:秒〕 ~h"))
@@ -4763,6 +4778,18 @@ function t_translator(input, seg)
       -- yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..os.date("%H")..":"..os.date("%M")..":"..os.date("%S"), "〔年月日 時:分:秒〕 ~j"))
       local jpymd, jp_y = jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))
       yield(Candidate("date", seg.start, seg._end, string.gsub(jpymd, "([^%d])0", "%1").." "..os.date("%H:%M:%S"), "〔日本元号〕 ~j"))
+      return
+    end
+
+    if (input == "`fti") then
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%dT%H:%M:%S+08:00"), "〔當地時  ISO 8601/RFC 3339〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y%m%dT%H%M%S+08"), "〔當地時  ISO 8601/RFC 3339〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d-%H-%M-%S ") .. timezone_out1()[1], "〔當地時  時區〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d-%H-%M-%S ") .. timezone_out1()[2], "〔當地時  時區〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("!%Y-%m-%dT%H:%M:%SZ"), "〔世界時  ISO 8601/RFC 3339〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("!%Y%m%dT%H%M%SZ"), "〔世界時  ISO 8601/RFC 3339〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("!%Y-%m-%d-%H-%M-%S UTC"), "〔世界時  時區〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("!%Y-%m-%d-%H-%M-%S GMT"), "〔世界時  時區〕"))
       return
     end
 
@@ -5583,7 +5610,7 @@ function t_translator(input, seg)
       , { '  n〔時:分〕  t〔時:分:秒〕', '②' }
       , { '  fw〔年月日週〕  mdw〔月日週〕', '③' }
       , { '  fn〔年月日 時:分〕  ft〔年月日 時:分:秒〕', '④' }
-      , { '  p〔程式格式〕  u〔時區〕  s〔節氣〕  l〔月相〕', '⑤' }
+      , { '  p〔程式格式〕  z〔時區〕  s〔節氣〕  l〔月相〕', '⑤' }
       , { '  ○○○〔數字〕', '⑥' }
       , { '  ○/○/○〔 ○ 年 ○ 月 ○ 日〕  ○/○〔 ○ 月 ○ 日〕', '⑦' }
       , { '  ○-○-○〔○年○月○日〕  ○-○〔○月○日〕', '⑧' }
@@ -6116,9 +6143,10 @@ function t2_translator(input, seg)
     --   return
     -- end
 
-    if (input == "'/u") then
+    if (input == "'/z") then
       -- local tz, tzd = timezone_out1()
-      yield(Candidate("time", seg.start, seg._end, timezone_out1()[1], timezone_out1()[2]))
+      yield(Candidate("time", seg.start, seg._end, timezone_out1()[1], ""))
+      yield(Candidate("time", seg.start, seg._end, timezone_out1()[2], ""))
       return
     end
 
@@ -6379,6 +6407,7 @@ function t2_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, os.date("%Y/%m/%d %H:%M"), "〔年月日 時:分〕 ~s"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d %H:%M"), "〔年月日 時:分〕 ~m"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y_%m_%d %H:%M"), "〔年月日 時:分〕 ~u"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%dT%H:%M+08:00"), "〔ISO 8601/RFC 3339〕 ~i"))
       yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%Y年%m月%d日 %H點%M分"), "([^%d])0", "%1"), "〔年月日 時:分〕 ~c"))
       yield(Candidate("date", seg.start, seg._end, rqzdx1().." "..ch_h_date(os.date("%H")).."點"..ch_minsec_date(os.date("%M")).."分", "〔年月日 時:分〕 ~z"))
       yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日 "..os.date("%H點%M分"), "([^%d])0", "%1"), "〔民國〕 ~h"))
@@ -6390,6 +6419,18 @@ function t2_translator(input, seg)
       -- local chinese_time = time_description_chinese(os.time())
       local ll_1, ll_2 = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, ll_1 .." ".. time_description_chinese(os.time()), "〔農曆〕 ~l"))
+      return
+    end
+
+    if (input == "'/fni") then
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%dT%H:%M+08:00"), "〔當地時  ISO 8601/RFC 3339〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y%m%dT%H%M+08"), "〔當地時  ISO 8601/RFC 3339〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d-%H-%M ") .. timezone_out1()[1], "〔當地時  時區〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d-%H-%M ") .. timezone_out1()[2], "〔當地時  時區〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("!%Y-%m-%dT%H:%MZ"), "〔世界時  ISO 8601/RFC 3339〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("!%Y%m%dT%H%MZ"), "〔世界時  ISO 8601/RFC 3339〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("!%Y-%m-%d-%H-%M UTC"), "〔世界時  時區〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("!%Y-%m-%d-%H-%M GMT"), "〔世界時  時區〕"))
       return
     end
 
@@ -6499,6 +6540,7 @@ function t2_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, os.date("%Y/%m/%d %H:%M:%S"), "〔年月日 時:分:秒〕 ~s"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d %H:%M:%S"), "〔年月日 時:分:秒〕 ~m"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y_%m_%d %H:%M:%S"), "〔年月日 時:分:秒〕 ~u"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%dT%H:%M:%S+08:00"), "〔ISO 8601/RFC 3339〕 ~i"))
       yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%Y年%m月%d日 %H點%M分%S秒"), "([^%d])0", "%1"), "〔年月日 時:分:秒〕 ~c"))
       yield(Candidate("date", seg.start, seg._end, rqzdx1().." "..ch_h_date(os.date("%H")).."點"..ch_minsec_date(os.date("%M")).."分"..ch_minsec_date(os.date("%S")).."秒", "〔年月日 時:分:秒〕 ~z"))
       yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日 "..os.date("%H點%M分%S秒"), "([^%d])0", "%1"), "〔年月日 時:分:秒〕 ~h"))
@@ -6506,6 +6548,18 @@ function t2_translator(input, seg)
       -- yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..os.date("%H")..":"..os.date("%M")..":"..os.date("%S"), "〔年月日 時:分:秒〕 ~j"))
       local jpymd, jp_y = jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))
       yield(Candidate("date", seg.start, seg._end, string.gsub(jpymd, "([^%d])0", "%1").." "..os.date("%H:%M:%S"), "〔日本元号〕 ~j"))
+      return
+    end
+
+    if (input == "'/fti") then
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%dT%H:%M:%S+08:00"), "〔當地時  ISO 8601/RFC 3339〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y%m%dT%H%M%S+08"), "〔當地時  ISO 8601/RFC 3339〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d-%H-%M-%S ") .. timezone_out1()[1], "〔當地時  時區〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d-%H-%M-%S ") .. timezone_out1()[2], "〔當地時  時區〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("!%Y-%m-%dT%H:%M:%SZ"), "〔世界時  ISO 8601/RFC 3339〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("!%Y%m%dT%H%M%SZ"), "〔世界時  ISO 8601/RFC 3339〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("!%Y-%m-%d-%H-%M-%S UTC"), "〔世界時  時區〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("!%Y-%m-%d-%H-%M-%S GMT"), "〔世界時  時區〕"))
       return
     end
 
@@ -7325,7 +7379,7 @@ function t2_translator(input, seg)
       , { '  n〔時:分〕  t〔時:分:秒〕', '②' }
       , { '  fw〔年月日週〕  mdw〔月日週〕', '③' }
       , { '  fn〔年月日 時:分〕  ft〔年月日 時:分:秒〕', '④' }
-      , { '  p〔程式格式〕  u〔時區〕  s〔節氣〕  l〔月相〕', '⑤' }
+      , { '  p〔程式格式〕  z〔時區〕  s〔節氣〕  l〔月相〕', '⑤' }
       , { '  ○○○〔數字〕', '⑥' }
       , { '  ○/○/○〔 ○ 年 ○ 月 ○ 日〕  ○/○〔 ○ 月 ○ 日〕', '⑦' }
       , { '  ○-○-○〔○年○月○日〕  ○-○〔○月○日〕', '⑧' }
