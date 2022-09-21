@@ -3701,10 +3701,10 @@ local function utc_timezone(unformated)
     sign = "+"
   end
   local timezone = sign .. tostring(fraction_hours)
-  timezone1 = "UTC" .. string.gsub(timezone, "%.?0+$", "")
-  timezone2 = sign .. hours .. ":" .. minutes
-  timezone3 = sign .. hours
-  timezone4 = "GMT" .. string.gsub(timezone, "%.?0+$", "")
+  local timezone1 = "UTC" .. string.gsub(timezone, "%.?0+$", "")
+  local timezone2 = sign .. hours .. ":" .. minutes
+  local timezone3 = sign .. hours
+  local timezone4 = "GMT" .. string.gsub(timezone, "%.?0+$", "")
   return timezone1, timezone2, timezone3, timezone4
 end
 
