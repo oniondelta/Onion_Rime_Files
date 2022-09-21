@@ -4653,10 +4653,10 @@ function t_translator(input, seg)
     end
 
     if (input == "`fni") then
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%dT%H:%M+08:00"), "〔當地時  ISO 8601/RFC 3339〕"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y%m%dT%H%M+08"), "〔當地時  ISO 8601/RFC 3339〕"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d-%H-%M ") .. timezone_out1()[1], "〔當地時  時區〕"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d-%H-%M ") .. timezone_out1()[2], "〔當地時  時區〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%dT%H:%M+08:00"), "〔本地時  ISO 8601/RFC 3339〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y%m%dT%H%M+08"), "〔本地時  ISO 8601/RFC 3339〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d-%H-%M ") .. timezone_out1()[1], "〔本地時  時區〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d-%H-%M ") .. timezone_out1()[2], "〔本地時  時區〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("!%Y-%m-%dT%H:%MZ"), "〔世界時  ISO 8601/RFC 3339〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("!%Y%m%dT%H%MZ"), "〔世界時  ISO 8601/RFC 3339〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("!%Y-%m-%d-%H-%M UTC"), "〔世界時  時區〕"))
@@ -4782,10 +4782,10 @@ function t_translator(input, seg)
     end
 
     if (input == "`fti") then
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%dT%H:%M:%S+08:00"), "〔當地時  ISO 8601/RFC 3339〕"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y%m%dT%H%M%S+08"), "〔當地時  ISO 8601/RFC 3339〕"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d-%H-%M-%S ") .. timezone_out1()[1], "〔當地時  時區〕"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d-%H-%M-%S ") .. timezone_out1()[2], "〔當地時  時區〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%dT%H:%M:%S+08:00"), "〔本地時  ISO 8601/RFC 3339〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y%m%dT%H%M%S+08"), "〔本地時  ISO 8601/RFC 3339〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d-%H-%M-%S ") .. timezone_out1()[1], "〔本地時  時區〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d-%H-%M-%S ") .. timezone_out1()[2], "〔本地時  時區〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("!%Y-%m-%dT%H:%M:%SZ"), "〔世界時  ISO 8601/RFC 3339〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("!%Y%m%dT%H%M%SZ"), "〔世界時  ISO 8601/RFC 3339〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("!%Y-%m-%d-%H-%M-%S UTC"), "〔世界時  時區〕"))
@@ -6423,10 +6423,10 @@ function t2_translator(input, seg)
     end
 
     if (input == "'/fni") then
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%dT%H:%M+08:00"), "〔當地時  ISO 8601/RFC 3339〕"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y%m%dT%H%M+08"), "〔當地時  ISO 8601/RFC 3339〕"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d-%H-%M ") .. timezone_out1()[1], "〔當地時  時區〕"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d-%H-%M ") .. timezone_out1()[2], "〔當地時  時區〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%dT%H:%M+08:00"), "〔本地時  ISO 8601/RFC 3339〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y%m%dT%H%M+08"), "〔本地時  ISO 8601/RFC 3339〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d-%H-%M ") .. timezone_out1()[1], "〔本地時  時區〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d-%H-%M ") .. timezone_out1()[2], "〔本地時  時區〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("!%Y-%m-%dT%H:%MZ"), "〔世界時  ISO 8601/RFC 3339〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("!%Y%m%dT%H%MZ"), "〔世界時  ISO 8601/RFC 3339〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("!%Y-%m-%d-%H-%M UTC"), "〔世界時  時區〕"))
@@ -6552,10 +6552,10 @@ function t2_translator(input, seg)
     end
 
     if (input == "'/fti") then
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%dT%H:%M:%S+08:00"), "〔當地時  ISO 8601/RFC 3339〕"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y%m%dT%H%M%S+08"), "〔當地時  ISO 8601/RFC 3339〕"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d-%H-%M-%S ") .. timezone_out1()[1], "〔當地時  時區〕"))
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d-%H-%M-%S ") .. timezone_out1()[2], "〔當地時  時區〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%dT%H:%M:%S+08:00"), "〔本地時  ISO 8601/RFC 3339〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y%m%dT%H%M%S+08"), "〔本地時  ISO 8601/RFC 3339〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d-%H-%M-%S ") .. timezone_out1()[1], "〔本地時  時區〕"))
+      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d-%H-%M-%S ") .. timezone_out1()[2], "〔本地時  時區〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("!%Y-%m-%dT%H:%M:%SZ"), "〔世界時  ISO 8601/RFC 3339〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("!%Y%m%dT%H%M%SZ"), "〔世界時  ISO 8601/RFC 3339〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("!%Y-%m-%d-%H-%M-%S UTC"), "〔世界時  時區〕"))
