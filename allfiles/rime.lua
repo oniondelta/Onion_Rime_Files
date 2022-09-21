@@ -4317,7 +4317,7 @@ function t_translator(input, seg)
 
     if (input == "`ts") then
       -- local a, b, aptime_c3, aptime_c4 = time_out2()
-      yield(Candidate("time", seg.start, seg._end, string.gsub(time_out2()[7], "0([%d])", "%1"), "〔時:分:秒〕"))
+      yield(Candidate("time", seg.start, seg._end, string.gsub(time_out2()[7], " 0([%d])", " %1"), "〔時:分:秒〕"))
       yield(Candidate("time", seg.start, seg._end, time_out2()[5].." "..fullshape_number(string.gsub(os.date("%I"), "^0", "")).."："..fullshape_number(os.date("%M")).."："..fullshape_number(os.date("%S")), "〔時:分:秒〕"))
       yield(Candidate("time", seg.start, seg._end, time_out2()[7], "〔時:分:秒〕"))
       yield(Candidate("time", seg.start, seg._end, time_out2()[5].." "..fullshape_number(os.date("%I")).."："..fullshape_number(os.date("%M")).."："..fullshape_number(os.date("%S")), "〔時:分:秒〕"))
@@ -4419,7 +4419,7 @@ function t_translator(input, seg)
 
     if (input == "`ns") then
       -- local aptime_c1, aptime_c2 = time_out2()
-      yield(Candidate("time", seg.start, seg._end, string.gsub(time_out2()[6], "0([%d])", "%1"), "〔時:分〕"))
+      yield(Candidate("time", seg.start, seg._end, string.gsub(time_out2()[6], " 0([%d])", " %1"), "〔時:分〕"))
       yield(Candidate("time", seg.start, seg._end, time_out2()[5].." "..fullshape_number(string.gsub(os.date("%I"), "^0", "")).."："..fullshape_number(os.date("%M")), "〔時:分〕"))
       yield(Candidate("time", seg.start, seg._end, time_out2()[6], "〔時:分〕"))
       yield(Candidate("time", seg.start, seg._end, time_out2()[5].." "..fullshape_number(os.date("%I")).."："..fullshape_number(os.date("%M")), "〔時:分〕"))
@@ -6110,7 +6110,7 @@ function t2_translator(input, seg)
 
     if (input == "'/ts") then
       -- local a, b, aptime_c3, aptime_c4 = time_out2()
-      yield(Candidate("time", seg.start, seg._end, string.gsub(time_out2()[7], "0([%d])", "%1"), "〔時:分:秒〕"))
+      yield(Candidate("time", seg.start, seg._end, string.gsub(time_out2()[7], " 0([%d])", " %1"), "〔時:分:秒〕"))
       yield(Candidate("time", seg.start, seg._end, time_out2()[5].." "..fullshape_number(string.gsub(os.date("%I"), "^0", "")).."："..fullshape_number(os.date("%M")).."："..fullshape_number(os.date("%S")), "〔時:分:秒〕"))
       yield(Candidate("time", seg.start, seg._end, time_out2()[7], "〔時:分:秒〕"))
       yield(Candidate("time", seg.start, seg._end, time_out2()[5].." "..fullshape_number(os.date("%I")).."："..fullshape_number(os.date("%M")).."："..fullshape_number(os.date("%S")), "〔時:分:秒〕"))
@@ -6212,7 +6212,7 @@ function t2_translator(input, seg)
 
     if (input == "'/ns") then
       -- local aptime_c1, aptime_c2 = time_out2()
-      yield(Candidate("time", seg.start, seg._end, string.gsub(time_out2()[6], "0([%d])", "%1"), "〔時:分〕"))
+      yield(Candidate("time", seg.start, seg._end, string.gsub(time_out2()[6], " 0([%d])", " %1"), "〔時:分〕"))
       yield(Candidate("time", seg.start, seg._end, time_out2()[5].." "..fullshape_number(string.gsub(os.date("%I"), "^0", "")).."："..fullshape_number(os.date("%M")), "〔時:分〕"))
       yield(Candidate("time", seg.start, seg._end, time_out2()[6], "〔時:分〕"))
       yield(Candidate("time", seg.start, seg._end, time_out2()[5].." "..fullshape_number(os.date("%I")).."："..fullshape_number(os.date("%M")), "〔時:分〕"))
