@@ -36,6 +36,7 @@ shutil.copyfile("./allfiles/bopomo_onion_double.schema.yaml", "./sort_rime/注�
 shutil.copyfile("./allfiles/cangjie5.dict.yaml", "./sort_rime/注音洋蔥雙拼版/cangjie5.dict.yaml")
 shutil.copyfile("./allfiles/cangjie5.schema.yaml", "./sort_rime/注音洋蔥雙拼版/cangjie5.schema.yaml")
 shutil.copyfile("./allfiles/rime.lua", "./sort_rime/注音洋蔥雙拼版/rime.lua")
+shutil.copytree("./allfiles/lua/", "./sort_rime/注音洋蔥雙拼版/lua/")
 shutil.copyfile("./allfiles/terra_pinyin_onion_add.dict.yaml", "./sort_rime/注音洋蔥雙拼版/terra_pinyin_onion_add.dict.yaml")
 shutil.copyfile("./allfiles/terra_pinyin_onion.dict.yaml", "./sort_rime/注音洋蔥雙拼版/terra_pinyin_onion.dict.yaml")
 shutil.copyfile("./allfiles/symbols_bpmf.dict.yaml", "./sort_rime/注音洋蔥雙拼版/symbols_bpmf.dict.yaml")
@@ -101,6 +102,7 @@ shutil.copyfile("./allfiles/phrases.la_eu_w.dict.yaml", "./sort_rime/注音洋�
 
 shutil.copyfile("./allfiles/punct_bopomo.yaml", "./sort_rime/注音洋蔥mixin版/punct_bopomo.yaml")
 shutil.copyfile("./allfiles/rime.lua", "./sort_rime/注音洋蔥mixin版/rime.lua")
+shutil.copytree('./allfiles/lua/', './sort_rime/注音洋蔥mixin版/lua/')
 shutil.copyfile("./allfiles/symbols_bpmf.dict.yaml", "./sort_rime/注音洋蔥mixin版/symbols_bpmf.dict.yaml")
 shutil.copyfile("./allfiles/symbols_bpmf.schema.yaml", "./sort_rime/注音洋蔥mixin版/symbols_bpmf.schema.yaml")
 shutil.copyfile("./allfiles/terra_pinyin_onion_add.dict.yaml", "./sort_rime/注音洋蔥mixin版/terra_pinyin_onion_add.dict.yaml")
@@ -133,6 +135,7 @@ shutil.copytree('./allfiles/mixin注音_同顯1修改檔(Mac)/', './sort_rime/�
 shutil.copytree('./allfiles/mixin注音_同顯2修改檔(Mac)/', './sort_rime/注音洋蔥mixin版/mixin注音_同顯2修改檔(Mac)/')
 shutil.copytree('./allfiles/mixin注音_同顯1修改檔(Win)/', './sort_rime/注音洋蔥mixin版/mixin注音_同顯1修改檔(Win)/')
 shutil.copytree('./allfiles/mixin注音_同顯2修改檔(Win)/', './sort_rime/注音洋蔥mixin版/mixin注音_同顯2修改檔(Win)/')
+
 shutil.copyfile("./allfiles/easy_en_super_防崩潰：Win必加，Mac勿加/easy_en_super.custom.yaml", "./sort_rime/注音洋蔥mixin版/mixin注音_同顯1修改檔(Win)/easy_en_super.custom.yaml")
 shutil.copyfile("./allfiles/easy_en_super_防崩潰：Win必加，Mac勿加/easy_en_super.custom.yaml", "./sort_rime/注音洋蔥mixin版/mixin注音_同顯2修改檔(Win)/easy_en_super.custom.yaml")
 
@@ -201,6 +204,7 @@ shutil.copyfile("./allfiles/phrases.la_eu_w.dict.yaml", "./sort_rime/注音洋�
 
 shutil.copyfile("./allfiles/punct_bopomo.yaml", "./sort_rime/注音洋蔥plus版/punct_bopomo.yaml")
 shutil.copyfile("./allfiles/rime.lua", "./sort_rime/注音洋蔥plus版/rime.lua")
+shutil.copytree('./allfiles/lua/', './sort_rime/注音洋蔥plus版/lua/')
 shutil.copyfile("./allfiles/symbols_bpmf.dict.yaml", "./sort_rime/注音洋蔥plus版/symbols_bpmf.dict.yaml")
 shutil.copyfile("./allfiles/symbols_bpmf.schema.yaml", "./sort_rime/注音洋蔥plus版/symbols_bpmf.schema.yaml")
 shutil.copyfile("./allfiles/terra_pinyin_onion_add.dict.yaml", "./sort_rime/注音洋蔥plus版/terra_pinyin_onion_add.dict.yaml")
@@ -317,7 +321,7 @@ shutil.copyfile("./allfiles/phrases.ocmtc_essay_mc.dict.yaml", "./sort_rime/ocm/
 shutil.copyfile("./allfiles/element_ocm.yaml", "./sort_rime/ocm/ocm_mixin/element_ocm.yaml")
 shutil.copyfile("./allfiles/punct_ocm.yaml", "./sort_rime/ocm/ocm_mixin/punct_ocm.yaml")
 shutil.copyfile("./allfiles/ocm_mixin_lua/rime.lua", "./sort_rime/ocm/ocm_mixin/rime.lua")
-shutil.copytree("./allfiles/ocm_mixin_lua/lua/", "./sort_rime/ocm/ocm_mixin/lua/")
+shutil.copytree("./allfiles/lua/", "./sort_rime/ocm/ocm_mixin/lua/")
 
 shutil.copyfile("./allfiles/各方案default.custom/ocm_mixin_custom/default.custom.yaml", "./sort_rime/ocm/ocm_mixin/default.custom.yaml")
 
@@ -408,6 +412,7 @@ shutil.copyfile("./allfiles/uniabcdword.dict.yaml", "./sort_rime/ocm/ocm_plus/un
 shutil.copyfile("./allfiles/element_ocm.yaml", "./sort_rime/ocm/ocm_plus/element_ocm.yaml")
 shutil.copyfile("./allfiles/punct_ocm.yaml", "./sort_rime/ocm/ocm_plus/punct_ocm.yaml")
 shutil.copyfile("./allfiles/rime.lua", "./sort_rime/ocm/ocm_plus/rime.lua")
+shutil.copytree("./allfiles/lua", "./sort_rime/ocm/ocm_plus/lua")
 
 shutil.copyfile("./allfiles/各方案default.custom/ocm_plus_custom/default.custom.yaml", "./sort_rime/ocm/ocm_plus/default.custom.yaml")
 
@@ -455,6 +460,7 @@ shutil.copyfile("./allfiles/uniabcdword.dict.yaml", "./sort_rime/ocm/ocm_mount/u
 shutil.copyfile("./allfiles/kanaword.dict.yaml", "./sort_rime/ocm/ocm_mount/kanaword.dict.yaml")
 
 shutil.copyfile("./allfiles/rime.lua", "./sort_rime/ocm/ocm_mount/rime.lua")
+shutil.copytree("./allfiles/lua", "./sort_rime/ocm/ocm_mount/lua")
 
 shutil.copyfile("./allfiles/各方案default.custom/ocm_mount_custom/default.custom.yaml", "./sort_rime/ocm/ocm_mount/default.custom.yaml")
 
@@ -478,6 +484,7 @@ shutil.copyfile("./allfiles/onion-array30-generally.dict.yaml", "./sort_rime/洋
 shutil.copytree("./allfiles/onion-array30可用Return上屏custom/", "./sort_rime/洋蔥行列30/onion-array30可用Return上屏custom/")
 
 shutil.copyfile("./allfiles/rime.lua", "./sort_rime/洋蔥行列30/rime.lua")
+shutil.copytree("./allfiles/lua", "./sort_rime/洋蔥行列30/lua")
 
 shutil.copyfile("./allfiles/各方案default.custom/洋蔥行列30_custom/default.custom.yaml", "./sort_rime/洋蔥行列30/default.custom.yaml")
 

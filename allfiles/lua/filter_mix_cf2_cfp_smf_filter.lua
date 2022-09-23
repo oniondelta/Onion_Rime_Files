@@ -3,6 +3,7 @@
 （關，但 mix_cf2_cfp_smf_filter 有用到某元件，部分開啟）
 候選項註釋符號、音標等屬性之提示碼(comment)（用 opencc 可實現，但無法合併其他提示碼(comment)，改用 Lua 來實現）
 --]]
+
 local ocmdb = ReverseDb("build/symbols-mark.reverse.bin")
 
 local function xform_mark(inp)
