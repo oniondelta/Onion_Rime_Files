@@ -1,20 +1,20 @@
 --[[
-從 tools 資料夾匯入兩個農曆相關函數集合
+從 lunar_calendar 資料夾匯入兩個農曆相關函數集合
 --]]
 local lc_1 = require("lunar_calendar/lunar_calendar_1")
-Dec2bin = lc_1.Dec2bin
-Date2LunarDate = lc_1.Date2LunarDate
-LunarDate2Date = lc_1.LunarDate2Date
-GetNextJQ = lc_1.GetNextJQ
-GetNowTimeJq = lc_1.GetNowTimeJq
-lunarJzl = lc_1.lunarJzl
+local Dec2bin = lc_1.Dec2bin
+local Date2LunarDate = lc_1.Date2LunarDate
+local LunarDate2Date = lc_1.LunarDate2Date
+local GetNextJQ = lc_1.GetNextJQ
+local GetNowTimeJq = lc_1.GetNowTimeJq
+local lunarJzl = lc_1.lunarJzl
 
 
 local lc_2 = require("lunar_calendar/lunar_calendar_2")
-time_description_chinese = lc_2.time_description_chinese
-Moonphase_out1 = lc_2.Moonphase_out1
-Moonphase_out2 = lc_2.Moonphase_out2
-jieqi_out1 = lc_2.jieqi_out1
+local time_description_chinese = lc_2.time_description_chinese
+local Moonphase_out1 = lc_2.Moonphase_out1
+local Moonphase_out2 = lc_2.Moonphase_out2
+local jieqi_out1 = lc_2.jieqi_out1
 
 
 
