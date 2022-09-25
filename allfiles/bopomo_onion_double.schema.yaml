@@ -204,7 +204,7 @@ translator:
     - 'xform/([jqx]):ㄨㄣ\|ㄩㄣ/$1:ㄩㄣ/'
     - 'xform/([dtnlgkhwvarzcs]):ㄨㄥ\|ㄩㄥ/$1:ㄨㄥ/'
     - 'xform/([jqx]):ㄨㄥ\|ㄩㄥ/$1:ㄩㄥ/'
-    - 'xform/([dtngkhwvarzcs]):ㄨㄢ\|ㄩㄢ/$1:ㄨㄢ/'
+    - 'xform/([dtngkhwvarzcs]):ㄨㄢ\|ㄩㄢ/$1:ㄨㄢ/' #l
     - 'xform/([jqx]):ㄨㄢ\|ㄩㄢ/$1:ㄩㄢ/'
     - 'xform/([bpmdtnljqx]):ㄧㄢ\|ㄨㄞ/$1:ㄧㄢ/'
     - 'xform/([gkhwva]):ㄧㄢ\|ㄨㄞ/$1:ㄨㄞ/'

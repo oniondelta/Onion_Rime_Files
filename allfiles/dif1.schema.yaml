@@ -445,7 +445,7 @@ easy_en_script:
 e_reverse_lookup:
   tags: [ easy_en ]
   overwrite_comment: true
-  dictionary: easy_en_super #easy_en_comment
+  dictionary: easy_en_super
   comment_format:
     - xform/^.+⌗// #easy_en_super用
     - xform|^[ a-z;/.'-]+|| #easy_en_super用

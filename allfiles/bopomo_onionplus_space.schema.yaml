@@ -1,6 +1,6 @@
 # Rime schema settings
 # encoding: utf-8
-# 《洋蔥注音 plus2版 設定頁》
+# 《洋蔥注音 plus space 版 設定頁》
 schema:
   schema_id: bopomo_onionplus_space
   name: "☆注音(洋蔥plus版 space )☆〔空白不直出〕"
@@ -331,7 +331,7 @@ easy_en_script:
 e_reverse_lookup:
   tags: [ easy_en ]
   overwrite_comment: true
-  dictionary: easy_en_super #easy_en_comment
+  dictionary: easy_en_super
   comment_format:
     - xform/^.+⌗// #easy_en_super用
     - xform|^[ a-z;/.'-]+|| #easy_en_super用
