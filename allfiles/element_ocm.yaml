@@ -55,11 +55,11 @@ key_binder:
     - {accept: backslash, send: Shift+Return, when: has_menu} #「\」鍵位上屏英文。
 #關#    - {accept: backslash, send: bar, when: has_menu} #「\」鍵位切分。
 ### 功能快捷鍵 ###
-    - {accept: Control+apostrophe, toggle: zh_tw, when: always}
+    - {accept: Control+apostrophe, toggle: character_range_bhjm, when: always}
     - {accept: Control+minus, toggle: back_mark, when: always } #「國際音標和符號」提示碼開關
     - {accept: Control+equal, toggle: simplify_comment, when: always } #「蝦米碼」提示碼開關
     - {accept: Control+bracketright, toggle: en_sort, when: always} #「easy」選單排序是否照英漢字典順序
-    - {accept: Control+Shift+6, toggle: zh_tw, when: always}
+    - {accept: Control+Shift+6, toggle: character_range_bhjm, when: always}
     - {accept: Control+Shift+7, toggle: emoji_segestion, when: always}
     - {accept: Control+Shift+8, toggle: back_mark, when: always}
     - {accept: Control+Shift+9, toggle: simplify_comment, when: always}

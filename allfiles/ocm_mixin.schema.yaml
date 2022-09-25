@@ -35,7 +35,7 @@ switches:
   - name: simplification
     reset: 0
     states: ["原體", "简体"]
-  - name: zh_tw
+  - name: character_range_bhjm
     reset: 0
     states: ["完整", "精簡"]
 #   - options: [ utf8, big5, gbk, gb2312]
@@ -63,7 +63,7 @@ switches:
 
 engine:
   filters:
-    - simplifier@zh_tw
+    - simplifier@character_range_bhjm
     # - lua_filter@charset_filter2  #去除opencc轉換後留下的「᰼᰼」。
 #    - charset_filter@big5
 #    - charset_filter@gbk
@@ -145,9 +145,9 @@ simplifier:
   opencc_config: tw2s.json
   tips: all
 
-zh_tw:
+character_range_bhjm:
   opencc_config: ocm_moedict_big5e_hkscs_jis.json #s2tw.json #t2tw.json
-  option_name: zh_tw
+  option_name: character_range_bhjm
   tags: [ abc, reverse2_lookup, reverse3_lookup ]
 #  tips: all
 

@@ -37,7 +37,7 @@ switches:
   - name: simplification
     reset: 0
     states: ["原體", "简体"]
-  - name: zh_tw
+  - name: character_range_bhjm
     reset: 1
     states: ["完整", "精簡"]
   - name: emoji_segestion
@@ -55,7 +55,7 @@ switches:
 
 engine:
   filters:
-    - simplifier@zh_tw
+    - simplifier@character_range_bhjm
     - lua_filter@mix_cf2_miss_filter  #合併 charset_filter2 和 missing_mark_filter，兩個 lua filter 太耗效能。
     # - lua_filter@charset_filter2  #去除opencc轉換後留下的「᰼᰼」。
     # - lua_filter@charset_cjk_filter  #打開後中文只保留CJK（精簡），但外語不受影響。
@@ -124,9 +124,9 @@ simplifier:
   opencc_config: tw2s.json
   tips: all
 
-zh_tw:
+character_range_bhjm:
   opencc_config: ocm_moedict_big5e_hkscs_jis.json #s2tw.json #t2tw.json
-  option_name: zh_tw
+  option_name: character_range_bhjm
   tags: [ abc, reverse2_lookup ]
 
 emoji_switch:

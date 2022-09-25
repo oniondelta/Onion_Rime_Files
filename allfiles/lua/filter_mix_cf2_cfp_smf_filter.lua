@@ -38,7 +38,7 @@ end
 沒用到 ocm_mixin 方案時，ReverseDb("build/symbols-mark.reverse.bin")會找不到。
 --]]
 local function mix_cf2_cfp_smf_filter(input, env)
-  local c_f2_s = env.engine.context:get_option("zh_tw")
+  local c_f2_s = env.engine.context:get_option("character_range_bhjm")
   local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
   local b_k = env.engine.context:get_option("back_mark")
   -- local find_prefix = env.engine.context.input

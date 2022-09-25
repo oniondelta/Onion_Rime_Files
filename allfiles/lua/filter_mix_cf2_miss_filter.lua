@@ -4,7 +4,7 @@
 合併 charset_filter2 和 missing_mark_filter，兩個 lua filter 太耗效能。
 --]]
 local function mix_cf2_miss_filter(input, env)
-  local c_f2_s = env.engine.context:get_option("zh_tw")
+  local c_f2_s = env.engine.context:get_option("character_range_bhjm")
   local p_key = env.engine.context.input
   local addcomment1 = string.find(p_key, '=%.$')
   local addcomment2 = string.find(p_key, '[][]$')

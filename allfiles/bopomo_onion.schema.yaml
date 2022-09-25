@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onion
   name: "☆注音(洋蔥純注音版)☆"
-  version: "202208"
+  version: "202209"
   author:
     - 『洋蔥』
   description: |
@@ -323,8 +323,8 @@ key_binder:
     - {accept: Shift+P, send: BackSpace, when: composing}
 ### 功能快捷鍵 ###
     # - {accept: Control+minus, toggle: back_mark, when: always } #「國際音標和符號」提示碼開關
-#關#    - {accept: Control+apostrophe, toggle: zh_tw, when: always} #accept: Control+semicolon
-#關#    - {accept: Control+Shift+6, toggle: zh_tw, when: always} #誤按沒警示，避免誤按，可關閉！（開關台灣習慣用字）
+#關#    - {accept: Control+apostrophe, toggle: character_range_bhjm, when: always} #accept: Control+semicolon
+#關#    - {accept: Control+Shift+6, toggle: character_range_bhjm, when: always} #誤按沒警示，避免誤按，可關閉！（開關台灣習慣用字）
 #關#    - {accept: Control+Shift+7, toggle: emoji_segestion, when: always} #誤按沒警示，避免誤按，可關閉！（開關跟隨的emoji）
 #關#    - {accept: Control+Shift+8, toggle: back_mark, when: always} #誤按沒警示，避免誤按，可關閉！（開關標註）
     # - {accept: Return, send: space, when: has_menu}
