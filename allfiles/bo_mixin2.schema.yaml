@@ -13,7 +13,6 @@ schema:
   dependencies:
     - symbols_bpmf
     - cangjie5
-    # - easy_en_b
     - easy_en_super
     - fullshape
     - greek
@@ -428,7 +427,7 @@ translator:
 ################################### 調出 Easy 英語 ######################################
 easy_en:
   tag: easy_en
-  dictionary: easy_en_super #easy_en_b
+  dictionary: easy_en_super
   enable_encoder: false
   encode_commit_history: false
   enable_completion: true

@@ -13,7 +13,6 @@ schema:
   dependencies:
     - symbols_bpmf
     - cangjie5
-    # - easy_en_b
     - easy_en_super
     - latinin1
     - jpnin1
@@ -278,8 +277,8 @@ bpm_reverse_lookup:
 ################################『外掛其他語言』##################################
 easy_en:
   tag: easy_en
-  dictionary: easy_en_super #easy_en_b #english
-  #prism: english #raw #sdadonkey_english
+  dictionary: easy_en_super
+  #prism: easy_en_super
   enable_encoder: false
   encode_commit_history: false
   enable_completion: true

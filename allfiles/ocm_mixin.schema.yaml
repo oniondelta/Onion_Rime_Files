@@ -13,7 +13,6 @@ schema:
   dependencies:
     - punct_ovff
     - symbols_ocm
-    # - easy_en_b
     - easy_en_super
     - ocm_mixin_greek
     - ocm_mixin_cyrillic
@@ -392,7 +391,7 @@ top_reverse_lookup:
 ######################調出其他語言之翻譯器(開頭符號調出各國語言輸入)################
 easy_en:
   tag: easy_en
-  dictionary: easy_en_super #easy_en_b
+  dictionary: easy_en_super
   enable_encoder: false
   encode_commit_history: false
   enable_completion: true
