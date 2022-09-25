@@ -4,7 +4,7 @@
 ~~~~轉換農曆函數~~~~
 --]]
 --十進制轉二進制
-function Dec2bin(n)
+local function Dec2bin(n)
 	local t,t1,t2
 	local tables={""}
 	t=tonumber(n)
@@ -321,7 +321,7 @@ end
 --========角度變換===============
 local rad = 180*3600/math.pi --每弧度的角秒數
 local RAD = 180/math.pi      --每弧度的角度數
-function int2(v) --取整數部分
+local function int2(v) --取整數部分
 	v=math.floor(v)
 	if v<0 then return v+1
 	else return v
@@ -514,7 +514,7 @@ local GXC_e={0.016708634, -0.000042037,-0.0000001267} --離心率
 local GXC_p={102.93735/RAD,1.71946/RAD, 0.00046/RAD}  --近點
 local GXC_l={280.4664567/RAD,36000.76982779/RAD,0.0003032028/RAD,1/49931000/RAD,-1/153000000/RAD} --太平黃經
 local GXC_k=20.49552/rad --光行差常數
-function addGxc(t,zb)--恆星週年光行差計算(黃道坐標中)
+local function addGxc(t,zb)--恆星週年光行差計算(黃道坐標中)
 	local t1=t/36525
 	local t2=t1*t1
 	local t3=t2*t1
