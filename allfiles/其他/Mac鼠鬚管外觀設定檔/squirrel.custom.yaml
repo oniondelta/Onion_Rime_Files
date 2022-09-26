@@ -3,27 +3,36 @@
 
 patch:
   style/color_scheme: lost_temple                      # 主題樣式 #apathy #psionics #mac_white #mac_white2
-  style/horizontal: false                              # 候選橫排
+
+  style/horizontal: false                              # 候選橫排 （新版已經無效，改以 candidate_list_layout 設定）
+  style/candidate_list_layout: stacked                 # 候選框樣式 （linear者爲線型，各候選首尾相連成一串，stacked者各候選皆另起一行，呈堆疊狀。）（默認stacked）
+  style/text_orientation: horizontal                   # 候選框文字方向 （horizontal者橫排自左至右，vertical者豎排自右至左。）（默認horizontal）
   style/inline_preedit: false                          # 內嵌輸入碼
+  style/inline_candidate: false                        # 選中詞顯示位置
+
   style/font_face: 'TimesNewRomanPSMT,PingFangTC-Light,AppleColorEmoji' #,HanaMinA,HanaMinB
-  style/font_point: 20 #19 #21                         # 備選字和輸入碼字體大小
+  style/font_point: 20                                 # 備選字和輸入碼字體大小
+  style/comment_font_face: 'PingFangTC-Light'          # 提示碼字體
+  style/comment_font_point: 17                         # 提示碼字體大小
   style/label_font_face: 'Andale Mono'                 # 前標號字體
-  style/label_font_point: 14 #12 #18                   # 前標號字體大小
+  style/label_font_point: 14                           # 前標號字體大小
 
-  style/corner_radius: 4 #10                           # 整個窗口圓角
-  # style/border_height: 0 #30                           # 窗口邊界高度，大於圓角半徑才有效果
-  # style/border_width: 0 #10                            # 窗口邊界寬度，大於圓角半徑才有效果
-  style/line_spacing: 1 #4 #6                          # 候選字間隙大小
-  style/spacing: 3 #4 #5 #10                           # space between preedit and candidates in non-inline mode
-  style/candidate_format: '%c. %@'                     # 選字欄格式
+  style/candidate_format: '%c. %@'                     # 選字欄格式 （%c爲序號，%@爲詞）
+  # style/base_offset: 2                                 # 文字垂直方向位置調整 （正數向上（右），負數向下（左））
+
+  style/corner_radius: 4                               # 整個窗口圓角
+  # style/border_height: 0                               # 窗口邊界高度 （大於圓角半徑才有效果）
+  # style/border_width: 0                                # 窗口邊界寬度 （大於圓角半徑才有效果）
   # style/hilited_corner_radius: 5                       # 候選條圓角
+  # style/surrounding_extra_expansion: 5                 # 非高亮候選項背景框大小縮放
+  style/line_spacing: 1                                # 候選字間隙大小
+  style/spacing: 3                                     # 鍵入碼區與候選項區間距
 
-  style/base_offset: 2 #-5
-  style/candidate_list_layout: stacked #linear
-  style/text_orientation: horizontal #vertical
+  # style/alpha: 0.8                                   # 候選框整體透明度 （0-1範圍）（默認1）
+  # style/translucency: true                           # 毛玻璃背景 （當背景色呈半透明時可見）（默認false）
 
 ###################################################
-  preset_color_schemes/liveon:
+  preset_color_schemes/Fashion:
     name: 時尚雜誌
     author: onion
     back_color: 0xF4F4F4
@@ -45,10 +54,10 @@ patch:
     text_color: 0xAEB3BA #0xCCDEDB #0x7BDEF4 #0x6DCBF2
     hilited_text_color: 0xDBE2EB #0x6DCBF2 #0x7BDEF4
     hilited_back_color: 0x313843
-    hilited_candidate_text_color: 0x6DCBF2
+    hilited_candidate_text_color: 0xD4EDFF #0x6DCBF2 #0xC3DAEB
     hilited_candidate_back_color: 0x487492
-    hilited_candidate_label_color: 0x6DCBF2
-    hilited_comment_text_color: 0x94DFFF #0x7BDEF4
+    hilited_candidate_label_color: 0xD4EDFF #0x6DCBF2 #0xC3DAEB
+    hilited_comment_text_color: 0xC3DAEB #0x94DFFF #0x7BDEF4 #0xB8CEDE
     candidate_text_color: 0x6DCBF2
     label_color: 0x6DCBF2
     comment_text_color: 0x94DFFF #0x7BDEF4
@@ -90,6 +99,19 @@ patch:
     hilited_comment_text_color: 0xD5D6BF #0x96a8a7
 
 ###################################################
+  preset_color_schemes/gruvbox:
+    name: 扶風/Gruvbox
+    author: ASC_8384 <ASC_8384@foxmail.com>
+    back_color: 0x282828
+    border_color: 0x21201D
+    text_color: 0x8499A8
+    hilited_text_color: 0xB4D1E6 #0x8499A8 #0x282828
+    hilited_back_color: 0x282828 #0x8499A8
+    hilited_candidate_text_color: 0xC7F1FB
+    hilited_candidate_back_color: 0x454950
+    candidate_text_color: 0xB2DBEB
+    comment_text_color: 0x748392
+
   preset_color_schemes/ayaya:
     name: "文文／Ayaya"
     author: "Lufs <lufs@isteed.cc>"
@@ -265,10 +287,10 @@ patch:
     name: 純粹的本質／Purity of Essence
     author: 佛振
     text_color: 0xB0B0B0 #0x2c2ccc
-    back_color: 0xfafafa
+    back_color: 0xfafafa #透明：0xF2fafafa
     candidate_text_color: 0x000000
     hilited_text_color: 0x000000
-    hilited_back_color: 0xfafafa
+    hilited_back_color: 0xfafafa #透明：0xF2fafafa
     hilited_candidate_text_color: 0xeeeeee
     hilited_candidate_back_color: 0x7A5F47 #0x444444
     comment_text_color: 0x808080
