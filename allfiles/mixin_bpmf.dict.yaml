@@ -21,64 +21,64 @@ sort: by_weight
 use_preset_vocabulary: false
 ...
 #####@ 一般單個ㄅㄆㄇ開始 #####
-ㄅ	＊b	80
-ㄆ	＊p	80
-ㄇ	＊m	80
-ㄈ	＊f	80
-ㄉ	＊d	80
-ㄊ	＊t	80
-ㄋ	＊n	80
-ㄌ	＊l	80
-ㄍ	＊g	80
-ㄎ	＊k	80
-ㄏ	＊h	80
-ㄐ	＊j	80
-ㄑ	＊q	80
-ㄒ	＊x	80
+ㄅ	＊b	2
+ㄆ	＊p	2
+ㄇ	＊m	2
+ㄈ	＊f	2
+ㄉ	＊d	2
+ㄊ	＊t	2
+ㄋ	＊n	2
+ㄌ	＊l	2
+ㄍ	＊g	2
+ㄎ	＊k	2
+ㄏ	＊h	2
+ㄐ	＊j	2
+ㄑ	＊q	2
+ㄒ	＊x	2
 ###
-ㄓ	＊zhi	80
-ㄔ	＊chi	80
-ㄕ	＊shi	80
-ㄖ	＊ri	80
-ㄗ	＊zi	80
-ㄘ	＊ci	80
-ㄙ	＊si	80
-ㄧ	＊yi	80
-ㄨ	＊wu	80
-ㄩ	＊yu	80
-ㄚ	＊a	80
-ㄛ	＊o	80
-ㄜ	＊e	80
-ㄝ	＊eh	80
-ㄞ	＊ai	80
-ㄟ	＊ei	80
-ㄠ	＊ao	80
-ㄡ	＊ou	80
-ㄢ	＊an	80
-ㄣ	＊en	80
-ㄤ	＊ang	80
-ㄥ	＊eng	80
-ㄦ	＊er	80
+ㄓ	＊zhi	2
+ㄔ	＊chi	2
+ㄕ	＊shi	2
+ㄖ	＊ri	2
+ㄗ	＊zi	2
+ㄘ	＊ci	2
+ㄙ	＊si	2
+ㄧ	＊yi	2
+ㄨ	＊wu	2
+ㄩ	＊yu	2
+ㄚ	＊a	2
+ㄛ	＊o	2
+ㄜ	＊e	2
+ㄝ	＊eh	2
+ㄞ	＊ai	2
+ㄟ	＊ei	2
+ㄠ	＊ao	2
+ㄡ	＊ou	2
+ㄢ	＊an	2
+ㄣ	＊en	2
+ㄤ	＊ang	2
+ㄥ	＊eng	2
+ㄦ	＊er	2
 ### 聲調 ###
-ˉ	＊1	10
-ˊ	＊2	10
-ˇ	＊3	10
-ˋ	＊4	10
-˙	＊5	10
+ˉ	＊1	1
+ˊ	＊2	1
+ˇ	＊3	1
+ˋ	＊4	1
+˙	＊5	1
 ##### 一般單個ㄅㄆㄇ結束 #####
 #####@ ㄅㄆㄇ常用組合開始 #####
-ㄏㄏ	＊h ＊h	80
-ㄏㄏㄏ	＊h ＊h ＊h	80
-ㄏㄏㄏㄏ	＊h ＊h ＊h ＊h	80
-ㄏㄚㄏㄚ	＊h ＊a ＊h ＊a	80
-ㄎㄎ	＊k ＊k	80
-ㄋㄋ	＊n ＊n	80
-ㄋㄇㄉ	＊n ＊m ＊d	80
-ㄊㄇㄉ	＊t ＊m ＊d	80
-ㄣㄣ	＊en ＊en	80
-ㄇㄇㄆ	＊m ＊m ＊p	80
-ㄎㄜㄎㄜ	＊k ＊e ＊k ＊e	80
-# ㄎㄜㄎㄜ	＊ke ＊ke	80
+ㄏㄏ	＊h ＊h	2
+ㄏㄏㄏ	＊h ＊h ＊h	2
+ㄏㄏㄏㄏ	＊h ＊h ＊h ＊h	2
+ㄏㄚㄏㄚ	＊h ＊a ＊h ＊a	2
+ㄎㄎ	＊k ＊k	2
+ㄋㄋ	＊n ＊n	2
+ㄋㄇㄉ	＊n ＊m ＊d	2
+ㄊㄇㄉ	＊t ＊m ＊d	2
+ㄣㄣ	＊en ＊en	2
+ㄇㄇㄆ	＊m ＊m ＊p	2
+ㄎㄜㄎㄜ	＊k ＊e ＊k ＊e	2
+# ㄎㄜㄎㄜ	＊ke ＊ke	2
 ##### ㄅㄆㄇ常用組合結束 #####
 #####@ ㄅㄆㄇ中文所有拼法（省略聲調）開始 #####
 # ㄅㄚ
@@ -488,818 +488,818 @@ use_preset_vocabulary: false
 # ㄌㄛ
 #####@ ㄅㄆㄇ中文所有拼法（省略聲調）結束 #####
 #####@ ㄅㄆㄇ中文所有拼法（省略聲調）（分開拼法）開始 #####
-ㄅㄚ	＊b ＊a	30
-ㄅㄛ	＊b ＊o	30
-ㄅㄞ	＊b ＊ai	30
-ㄅㄟ	＊b ＊ei	30
-ㄅㄠ	＊b ＊ao	30
-ㄅㄢ	＊b ＊an	30
-ㄅㄣ	＊b ＊en	30
-ㄅㄤ	＊b ＊ang	30
-ㄅㄥ	＊b ＊eng	30
-ㄅㄧ	＊b ＊yi	30
-ㄅㄧㄝ	＊b ＊yi ＊eh	30
-ㄅㄧㄠ	＊b ＊yi ＊ao	30
-ㄅㄧㄢ	＊b ＊yi ＊an	30
-ㄅㄧㄣ	＊b ＊yi ＊en	30
-ㄅㄧㄥ	＊b ＊yi ＊eng	30
-ㄅㄨ	＊b ＊wu	30
-ㄆㄚ	＊p ＊a	30
-ㄆㄛ	＊p ＊o	30
-ㄆㄞ	＊p ＊ai	30
-ㄆㄟ	＊p ＊ei	30
-ㄆㄠ	＊p ＊ao	30
-ㄆㄡ	＊p ＊ou	30
-ㄆㄢ	＊p ＊an	30
-ㄆㄣ	＊p ＊en	30
-ㄆㄤ	＊p ＊ang	30
-ㄆㄥ	＊p ＊eng	30
-ㄆㄧ	＊p ＊yi	30
-ㄆㄧㄝ	＊p ＊yi ＊eh	30
-ㄆㄧㄚ	＊p ＊yi ＊a	30
-ㄆㄧㄠ	＊p ＊yi ＊ao	30
-ㄆㄧㄢ	＊p ＊yi ＊an	30
-ㄆㄧㄣ	＊p ＊yi ＊en	30
-ㄆㄧㄥ	＊p ＊yi ＊eng	30
-ㄆㄨ	＊p ＊wu	30
-ㄆㄨㄛ	＊p ＊wu ＊o	30
-ㄇㄚ	＊m ＊a	30
-ㄇㄛ	＊m ＊o	30
-ㄇㄜ	＊m ＊e	30
-ㄇㄠ	＊m ＊ao	30
-ㄇㄡ	＊m ＊ou	30
-ㄇㄢ	＊m ＊an	30
-ㄇㄣ	＊m ＊en	30
-ㄇㄤ	＊m ＊ang	30
-ㄇㄥ	＊m ＊eng	30
-ㄇㄧ	＊m ＊yi	30
-ㄇㄧㄝ	＊m ＊yi ＊eh	30
-ㄇㄧㄠ	＊m ＊yi ＊ao	30
-ㄈㄚ	＊f ＊a	30
-ㄈㄟ	＊f ＊ei	30
-ㄈㄡ	＊f ＊ou	30
-ㄈㄢ	＊f ＊an	30
-ㄈㄣ	＊f ＊en	30
-ㄈㄤ	＊f ＊ang	30
-ㄈㄥ	＊f ＊eng	30
-ㄈㄨ	＊f ＊wu	30
-ㄉㄚ	＊d ＊a	30
-ㄉㄜ	＊d ＊e	30
-ㄉㄞ	＊d ＊ai	30
-ㄉㄟ	＊d ＊ei	30
-ㄉㄠ	＊d ＊ao	30
-ㄉㄡ	＊d ＊ou	30
-ㄉㄢ	＊d ＊an	30
-ㄉㄤ	＊d ＊ang	30
-ㄉㄥ	＊d ＊eng	30
-ㄉㄧ	＊d ＊yi	30
-ㄉㄧㄝ	＊d ＊yi ＊eh	30
-ㄉㄧㄠ	＊d ＊yi ＊ao	30
-ㄉㄧㄡ	＊d ＊yi ＊ou	30
-ㄉㄧㄢ	＊d ＊yi ＊an	30
-ㄉㄧㄤ	＊d ＊yi ＊ang	30
-ㄉㄧㄥ	＊d ＊yi ＊eng	30
-ㄉㄧㄚ	＊d ＊yi ＊a	30
-ㄉㄨ	＊d ＊wu	30
-ㄉㄨㄛ	＊d ＊wu ＊o	30
-ㄉㄨㄟ	＊d ＊wu ＊ei	30
-ㄉㄨㄢ	＊d ＊wu ＊an	30
-ㄉㄨㄣ	＊d ＊wu ＊en	30
-ㄉㄨㄥ	＊d ＊wu ＊eng	30
-ㄊㄚ	＊t ＊a	30
-ㄊㄟ	＊t ＊ei	30
-ㄊㄞ	＊t ＊ai	30
-ㄊㄠ	＊t ＊ao	30
-ㄊㄡ	＊t ＊ou	30
-ㄊㄢ	＊t ＊an	30
-ㄊㄤ	＊t ＊ang	30
-ㄊㄥ	＊t ＊eng	30
-ㄊㄧ	＊t ＊yi	30
-ㄊㄧㄝ	＊t ＊yi ＊eh	30
-ㄊㄧㄠ	＊t ＊yi ＊ao	30
-ㄊㄧㄢ	＊t ＊yi ＊an	30
-ㄊㄧㄥ	＊t ＊yi ＊eng	30
-ㄊㄨ	＊t ＊wu	30
-ㄊㄨㄛ	＊t ＊wu ＊o	30
-ㄊㄨㄟ	＊t ＊wu ＊ei	30
-ㄊㄨㄢ	＊t ＊wu ＊an	30
-ㄊㄨㄣ	＊t ＊wu ＊en	30
-ㄊㄨㄥ	＊t ＊wu ＊eng	30
-ㄋㄚ	＊n ＊a	30
-ㄋㄜ	＊n ＊e	30
-ㄋㄠ	＊n ＊ao	30
-ㄋㄢ	＊n ＊an	30
-ㄋㄤ	＊n ＊ang	30
-ㄋㄧ	＊n ＊yi	30
-ㄋㄧㄚ	＊n ＊yi ＊a	30
-ㄋㄧㄝ	＊n ＊yi ＊eh	30
-ㄋㄧㄡ	＊n ＊yi ＊ou	30
-ㄋㄧㄢ	＊n ＊yi ＊an	30
-ㄌㄚ	＊l ＊a	30
-ㄌㄜ	＊l ＊e	30
-ㄌㄟ	＊l ＊ei	30
-ㄌㄠ	＊l ＊ao	30
-ㄌㄡ	＊l ＊ou	30
-ㄌㄤ	＊l ＊ang	30
-ㄌㄥ	＊l ＊eng	30
-ㄌㄧ	＊l ＊yi	30
-ㄌㄧㄝ	＊l ＊yi ＊eh	30
-ㄌㄧㄠ	＊l ＊yi ＊ao	30
-ㄌㄧㄡ	＊l ＊yi ＊ou	30
-ㄌㄧㄣ	＊l ＊yi ＊en	30
-ㄌㄧㄥ	＊l ＊yi ＊eng	30
-ㄌㄨ	＊l ＊wu	30
-ㄌㄨㄛ	＊l ＊wu ＊o	30
-ㄌㄨㄣ	＊l ＊wu ＊en	30
-ㄌㄨㄥ	＊l ＊wu ＊eng	30
-ㄍㄚ	＊g ＊a	30
-ㄍㄜ	＊g ＊e	30
-ㄍㄞ	＊g ＊ai	30
-ㄍㄠ	＊g ＊ao	30
-ㄍㄡ	＊g ＊ou	30
-ㄍㄢ	＊g ＊an	30
-ㄍㄣ	＊g ＊en	30
-ㄍㄤ	＊g ＊ang	30
-ㄍㄥ	＊g ＊eng	30
-ㄍㄨ	＊g ＊wu	30
-ㄍㄨㄚ	＊g ＊wu ＊a	30
-ㄍㄨㄛ	＊g ＊wu ＊o	30
-ㄍㄨㄞ	＊g ＊wu ＊ai	30
-ㄍㄨㄟ	＊g ＊wu ＊ei	30
-ㄍㄨㄢ	＊g ＊wu ＊an	30
-ㄍㄨㄣ	＊g ＊wu ＊en	30
-ㄍㄨㄤ	＊g ＊wu ＊ang	30
-ㄍㄨㄥ	＊g ＊wu ＊eng	30
-ㄎㄚ	＊k ＊a	30
-ㄎㄜ	＊k ＊e	30
-ㄎㄟ	＊k ＊ei	30
-ㄎㄞ	＊k ＊ai	30
-ㄎㄠ	＊k ＊ao	30
-ㄎㄡ	＊k ＊ou	30
-ㄎㄢ	＊k ＊an	30
-ㄎㄣ	＊k ＊en	30
-ㄎㄤ	＊k ＊ang	30
-ㄎㄥ	＊k ＊eng	30
-ㄎㄧㄤ	＊k ＊yi ＊ang	30
-ㄎㄨ	＊k ＊wu	30
-ㄎㄨㄚ	＊k ＊wu ＊a	30
-ㄎㄨㄞ	＊k ＊wu ＊ai	30
-ㄎㄨㄟ	＊k ＊wu ＊ei	30
-ㄎㄨㄢ	＊k ＊wu ＊an	30
-ㄎㄨㄣ	＊k ＊wu ＊en	30
-ㄎㄨㄤ	＊k ＊wu ＊ang	30
-ㄎㄨㄥ	＊k ＊wu ＊eng	30
-ㄏㄚ	＊h ＊a	30
-ㄏㄜ	＊h ＊e	30
-ㄏㄞ	＊h ＊ai	30
-ㄏㄟ	＊h ＊ei	30
-ㄏㄠ	＊h ＊ao	30
-ㄏㄡ	＊h ＊ou	30
-ㄏㄢ	＊h ＊an	30
-ㄏㄣ	＊h ＊en	30
-ㄏㄤ	＊h ＊ang	30
-ㄏㄥ	＊h ＊eng	30
-ㄏㄨ	＊h ＊wu	30
-ㄏㄨㄚ	＊h ＊wu ＊a	30
-ㄏㄨㄛ	＊h ＊wu ＊o	30
-ㄏㄨㄟ	＊h ＊wu ＊ei	30
-ㄏㄨㄢ	＊h ＊wu ＊an	30
-ㄏㄨㄣ	＊h ＊wu ＊en	30
-ㄏㄨㄤ	＊h ＊wu ＊ang	30
-ㄏㄨㄥ	＊h ＊wu ＊eng	30
-ㄐㄧ	＊j ＊yi	30
-ㄐㄧㄚ	＊j ＊yi ＊a	30
-ㄐㄧㄝ	＊j ＊yi ＊eh	30
-ㄐㄧㄠ	＊j ＊yi ＊ao	30
-ㄐㄧㄡ	＊j ＊yi ＊ou	30
-ㄐㄧㄢ	＊j ＊yi ＊an	30
-ㄐㄧㄣ	＊j ＊yi ＊en	30
-ㄐㄧㄤ	＊j ＊yi ＊ang	30
-ㄐㄧㄥ	＊j ＊yi ＊eng	30
-ㄐㄩ	＊j ＊yu	30
-ㄐㄩㄝ	＊j ＊yu ＊eh	30
-ㄐㄩㄢ	＊j ＊yu ＊an	30
-ㄐㄩㄣ	＊j ＊yu ＊en	30
-ㄐㄩㄥ	＊j ＊yu ＊eng	30
-ㄑㄧ	＊q ＊yi	30
-ㄑㄧㄚ	＊q ＊yi ＊a	30
-ㄑㄧㄝ	＊q ＊yi ＊eh	30
-ㄑㄧㄠ	＊q ＊yi ＊ao	30
-ㄑㄧㄡ	＊q ＊yi ＊ou	30
-ㄑㄧㄢ	＊q ＊yi ＊an	30
-ㄑㄧㄣ	＊q ＊yi ＊en	30
-ㄑㄧㄤ	＊q ＊yi ＊ang	30
-ㄑㄧㄥ	＊q ＊yi ＊eng	30
-ㄑㄩ	＊q ＊yu	30
-ㄑㄩㄝ	＊q ＊yu ＊eh	30
-ㄑㄩㄢ	＊q ＊yu ＊an	30
-ㄑㄩㄣ	＊q ＊yu ＊en	30
-ㄑㄩㄥ	＊q ＊yu ＊eng	30
-ㄒㄧ	＊x ＊yi	30
-ㄒㄧㄚ	＊x ＊yi ＊a	30
-ㄒㄧㄝ	＊x ＊yi ＊eh	30
-ㄒㄧㄠ	＊x ＊yi ＊ao	30
-ㄒㄧㄡ	＊x ＊yi ＊ou	30
-ㄒㄧㄢ	＊x ＊yi ＊an	30
-ㄒㄧㄣ	＊x ＊yi ＊en	30
-ㄒㄧㄤ	＊x ＊yi ＊ang	30
-ㄒㄧㄥ	＊x ＊yi ＊eng	30
-ㄒㄩ	＊x ＊yu	30
-ㄒㄩㄝ	＊x ＊yu ＊eh	30
-ㄒㄩㄢ	＊x ＊yu ＊an	30
-ㄒㄩㄣ	＊x ＊yu ＊en	30
-ㄒㄩㄥ	＊x ＊yu ＊eng	30
-ㄓㄚ	＊zhi ＊a	30
-ㄓㄜ	＊zhi ＊e	30
-ㄓㄞ	＊zhi ＊ai	30
-ㄓㄠ	＊zhi ＊ao	30
-ㄓㄡ	＊zhi ＊ou	30
-ㄓㄢ	＊zhi ＊an	30
-ㄓㄣ	＊zhi ＊en	30
-ㄓㄤ	＊zhi ＊ang	30
-ㄓㄥ	＊zhi ＊eng	30
-ㄓㄨ	＊zhi ＊wu	30
-ㄓㄨㄚ	＊zhi ＊wu ＊a	30
-ㄓㄨㄛ	＊zhi ＊wu ＊o	30
-ㄓㄨㄞ	＊zhi ＊wu ＊ai	30
-ㄓㄨㄟ	＊zhi ＊wu ＊ei	30
-ㄓㄨㄢ	＊zhi ＊wu ＊an	30
-ㄓㄨㄣ	＊zhi ＊wu ＊en	30
-ㄓㄨㄤ	＊zhi ＊wu ＊ang	30
-ㄓㄨㄥ	＊zhi ＊wu ＊eng	30
-ㄔㄚ	＊chi ＊a	30
-ㄔㄜ	＊chi ＊e	30
-ㄔㄞ	＊chi ＊ai	30
-ㄔㄠ	＊chi ＊ao	30
-ㄔㄡ	＊chi ＊ou	30
-ㄔㄢ	＊chi ＊an	30
-ㄔㄣ	＊chi ＊en	30
-ㄔㄤ	＊chi ＊ang	30
-ㄔㄥ	＊chi ＊eng	30
-ㄔㄨ	＊chi ＊wu	30
-ㄔㄨㄚ	＊chi ＊wu ＊a	30
-ㄔㄨㄛ	＊chi ＊wu ＊o	30
-ㄔㄨㄞ	＊chi ＊wu ＊ai	30
-ㄔㄨㄟ	＊chi ＊wu ＊ei	30
-ㄔㄨㄢ	＊chi ＊wu ＊an	30
-ㄔㄨㄣ	＊chi ＊wu ＊en	30
-ㄔㄨㄤ	＊chi ＊wu ＊ang	30
-ㄔㄨㄥ	＊chi ＊wu ＊eng	30
-ㄕㄚ	＊shi ＊a	30
-ㄕㄜ	＊shi ＊e	30
-ㄕㄞ	＊shi ＊ai	30
-ㄕㄠ	＊shi ＊ao	30
-ㄕㄡ	＊shi ＊ou	30
-ㄕㄢ	＊shi ＊an	30
-ㄕㄣ	＊shi ＊en	30
-ㄕㄤ	＊shi ＊ang	30
-ㄕㄥ	＊shi ＊eng	30
-ㄕㄨ	＊shi ＊wu	30
-ㄕㄨㄚ	＊shi ＊wu ＊a	30
-ㄕㄨㄛ	＊shi ＊wu ＊o	30
-ㄕㄨㄞ	＊shi ＊wu ＊ai	30
-ㄕㄨㄢ	＊shi ＊wu ＊an	30
-ㄕㄨㄤ	＊shi ＊wu ＊ang	30
-ㄖㄚ	＊ri ＊a	30
-ㄖㄤ	＊ri ＊ang	30
-ㄖㄥ	＊ri ＊eng	30
-ㄖㄨ	＊ri ＊wu	30
-ㄗㄚ	＊zi ＊a	30
-ㄗㄞ	＊zi ＊ai	30
-ㄗㄠ	＊zi ＊ao	30
-ㄗㄡ	＊zi ＊ou	30
-ㄗㄢ	＊zi ＊an	30
-ㄗㄣ	＊zi ＊en	30
-ㄗㄤ	＊zi ＊ang	30
-ㄗㄥ	＊zi ＊eng	30
-ㄗㄨ	＊zi ＊wu	30
-ㄗㄨㄛ	＊zi ＊wu ＊o	30
-ㄗㄨㄟ	＊zi ＊wu ＊ei	30
-ㄗㄨㄢ	＊zi ＊wu ＊an	30
-ㄗㄨㄣ	＊zi ＊wu ＊en	30
-ㄗㄨㄥ	＊zi ＊wu ＊eng	30
-ㄘㄚ	＊ci ＊a	30
-ㄘㄞ	＊ci ＊ai	30
-ㄘㄠ	＊ci ＊ao	30
-ㄘㄡ	＊ci ＊ou	30
-ㄘㄢ	＊ci ＊an	30
-ㄘㄣ	＊ci ＊en	30
-ㄘㄤ	＊ci ＊ang	30
-ㄘㄥ	＊ci ＊eng	30
-ㄘㄨ	＊ci ＊wu	30
-ㄘㄨㄛ	＊ci ＊wu ＊o	30
-ㄘㄨㄟ	＊ci ＊wu ＊ei	30
-ㄘㄨㄢ	＊ci ＊wu ＊an	30
-ㄘㄨㄣ	＊ci ＊wu ＊en	30
-ㄘㄨㄥ	＊ci ＊wu ＊eng	30
-ㄙㄚ	＊si ＊a	30
-ㄙㄜ	＊si ＊e	30
-ㄙㄞ	＊si ＊ai	30
-ㄙㄟ	＊si ＊ei	30
-ㄙㄠ	＊si ＊ao	30
-ㄙㄡ	＊si ＊ou	30
-ㄙㄢ	＊si ＊an	30
-ㄙㄣ	＊si ＊en	30
-ㄙㄤ	＊si ＊ang	30
-ㄙㄥ	＊si ＊eng	30
-ㄙㄨ	＊si ＊wu	30
-ㄙㄨㄛ	＊si ＊wu ＊o	30
-ㄙㄨㄟ	＊si ＊wu ＊ei	30
-ㄙㄨㄢ	＊si ＊wu ＊an	30
-ㄙㄨㄣ	＊si ＊wu ＊en	30
-ㄙㄨㄥ	＊si ＊wu ＊eng	30
-ㄧㄚ	＊yi ＊a	30
-ㄧㄛ	＊yi ＊o	30
-ㄧㄝ	＊yi ＊eh	30
-ㄧㄠ	＊yi ＊ao	30
-ㄧㄡ	＊yi ＊ou	30
-ㄧㄢ	＊yi ＊an	30
-ㄧㄣ	＊yi ＊en	30
-ㄧㄤ	＊yi ＊ang	30
-ㄧㄥ	＊yi ＊eng	30
-ㄨㄚ	＊wu ＊a	30
-ㄨㄛ	＊wu ＊o	30
-ㄨㄞ	＊wu ＊ai	30
-ㄨㄟ	＊wu ＊ei	30
-ㄨㄢ	＊wu ＊an	30
-ㄨㄣ	＊wu ＊en	30
-ㄨㄤ	＊wu ＊ang	30
-ㄨㄥ	＊wu ＊eng	30
-ㄩㄝ	＊yu ＊eh	30
-ㄩㄢ	＊yu ＊an	30
-ㄩㄣ	＊yu ＊en	30
-ㄩㄥ	＊yu ＊eng	30
-ㄇㄞ	＊m ＊ai	30
-ㄇㄟ	＊m ＊ei	30
-ㄇㄧㄢ	＊m ＊yi ＊an	30
-ㄇㄧㄣ	＊m ＊yi ＊en	30
-ㄇㄧㄥ	＊m ＊yi ＊eng	30
-ㄇㄨ	＊m ＊wu	30
-ㄈㄛ	＊f ＊o	30
-ㄋㄞ	＊n ＊ai	30
-ㄋㄟ	＊n ＊ei	30
-ㄋㄡ	＊n ＊ou	30
-ㄋㄥ	＊n ＊eng	30
-ㄋㄧㄣ	＊n ＊yi ＊en	30
-ㄋㄧㄤ	＊n ＊yi ＊ang	30
-ㄋㄧㄥ	＊n ＊yi ＊eng	30
-ㄋㄨ	＊n ＊wu	30
-ㄋㄨㄚ	＊n ＊wu ＊a	30
-ㄋㄨㄛ	＊n ＊wu ＊o	30
-ㄋㄨㄢ	＊n ＊wu ＊an	30
-ㄋㄨㄣ	＊n ＊wu ＊en	30
-ㄋㄨㄥ	＊n ＊wu ＊eng	30
-ㄋㄩ	＊n ＊yu	30
-ㄌㄞ	＊l ＊ai	30
-ㄌㄢ	＊l ＊an	30
-ㄌㄧㄢ	＊l ＊yi ＊an	30
-ㄌㄧㄤ	＊l ＊yi ＊ang	30
-ㄌㄨㄢ	＊l ＊wu ＊an	30
-ㄌㄩ	＊l ＊yu	30
-ㄌㄩㄢ	＊l ＊yu ＊an	30
-ㄏㄨㄞ	＊h ＊wu ＊ai	30
-ㄕㄟ	＊shi ＊ei	30
-ㄕㄨㄟ	＊shi ＊wu ＊ei	30
-ㄖㄜ	＊ri ＊e	30
-ㄖㄠ	＊ri ＊ao	30
-ㄖㄡ	＊ri ＊ou	30
-ㄖㄢ	＊ri ＊an	30
-ㄖㄣ	＊ri ＊en	30
-ㄖㄨㄛ	＊ri ＊wu ＊o	30
-ㄖㄨㄟ	＊ri ＊wu ＊ei	30
-ㄖㄨㄚ	＊ri ＊wu ＊a	30
-ㄖㄨㄢ	＊ri ＊wu ＊an	30
-ㄖㄨㄣ	＊ri ＊wu ＊en	30
-ㄖㄨㄥ	＊ri ＊wu ＊eng	30
-ㄗㄜ	＊zi ＊e	30
-ㄗㄟ	＊zi ＊ei	30
-ㄧㄞ	＊yi ＊ai	30
-ㄇㄧㄡ	＊m ＊yi ＊ou	30
-ㄋㄧㄠ	＊n ＊yi ＊ao	30
-ㄌㄧㄚ	＊l ＊yi ＊a	30
-ㄌㄩㄝ	＊l ＊yu ＊eh	30
-ㄍㄟ	＊g ＊ei	30
-ㄕㄨㄣ	＊shi ＊wu ＊en	30
-ㄙㄨㄚ	＊si ＊wu ＊a	30
-ㄈㄧㄠ	＊f ＊yi ＊ao	30
-ㄉㄣ	＊d ＊en	30
-ㄉㄧㄣ	＊d ＊yi ＊en	30
-ㄊㄜ	＊t ＊e	30
-ㄊㄧㄣ	＊t ＊yi ＊en	30
-ㄋㄣ	＊n ＊en	30
-ㄋㄩㄝ	＊n ＊yu ＊eh	30
-ㄎㄨㄛ	＊k ＊wu ＊o	30
-ㄓㄟ	＊zhi ＊ei	30
-ㄘㄜ	＊ci ＊e	30
-ㄘㄟ	＊ci ＊ei	30
-ㄌㄛ	＊l ＊o	30
+ㄅㄚ	＊b ＊a	2
+ㄅㄛ	＊b ＊o	2
+ㄅㄞ	＊b ＊ai	2
+ㄅㄟ	＊b ＊ei	2
+ㄅㄠ	＊b ＊ao	2
+ㄅㄢ	＊b ＊an	2
+ㄅㄣ	＊b ＊en	2
+ㄅㄤ	＊b ＊ang	2
+ㄅㄥ	＊b ＊eng	2
+ㄅㄧ	＊b ＊yi	2
+ㄅㄧㄝ	＊b ＊yi ＊eh	2
+ㄅㄧㄠ	＊b ＊yi ＊ao	2
+ㄅㄧㄢ	＊b ＊yi ＊an	2
+ㄅㄧㄣ	＊b ＊yi ＊en	2
+ㄅㄧㄥ	＊b ＊yi ＊eng	2
+ㄅㄨ	＊b ＊wu	2
+ㄆㄚ	＊p ＊a	2
+ㄆㄛ	＊p ＊o	2
+ㄆㄞ	＊p ＊ai	2
+ㄆㄟ	＊p ＊ei	2
+ㄆㄠ	＊p ＊ao	2
+ㄆㄡ	＊p ＊ou	2
+ㄆㄢ	＊p ＊an	2
+ㄆㄣ	＊p ＊en	2
+ㄆㄤ	＊p ＊ang	2
+ㄆㄥ	＊p ＊eng	2
+ㄆㄧ	＊p ＊yi	2
+ㄆㄧㄝ	＊p ＊yi ＊eh	2
+ㄆㄧㄚ	＊p ＊yi ＊a	2
+ㄆㄧㄠ	＊p ＊yi ＊ao	2
+ㄆㄧㄢ	＊p ＊yi ＊an	2
+ㄆㄧㄣ	＊p ＊yi ＊en	2
+ㄆㄧㄥ	＊p ＊yi ＊eng	2
+ㄆㄨ	＊p ＊wu	2
+ㄆㄨㄛ	＊p ＊wu ＊o	2
+ㄇㄚ	＊m ＊a	2
+ㄇㄛ	＊m ＊o	2
+ㄇㄜ	＊m ＊e	2
+ㄇㄠ	＊m ＊ao	2
+ㄇㄡ	＊m ＊ou	2
+ㄇㄢ	＊m ＊an	2
+ㄇㄣ	＊m ＊en	2
+ㄇㄤ	＊m ＊ang	2
+ㄇㄥ	＊m ＊eng	2
+ㄇㄧ	＊m ＊yi	2
+ㄇㄧㄝ	＊m ＊yi ＊eh	2
+ㄇㄧㄠ	＊m ＊yi ＊ao	2
+ㄈㄚ	＊f ＊a	2
+ㄈㄟ	＊f ＊ei	2
+ㄈㄡ	＊f ＊ou	2
+ㄈㄢ	＊f ＊an	2
+ㄈㄣ	＊f ＊en	2
+ㄈㄤ	＊f ＊ang	2
+ㄈㄥ	＊f ＊eng	2
+ㄈㄨ	＊f ＊wu	2
+ㄉㄚ	＊d ＊a	2
+ㄉㄜ	＊d ＊e	2
+ㄉㄞ	＊d ＊ai	2
+ㄉㄟ	＊d ＊ei	2
+ㄉㄠ	＊d ＊ao	2
+ㄉㄡ	＊d ＊ou	2
+ㄉㄢ	＊d ＊an	2
+ㄉㄤ	＊d ＊ang	2
+ㄉㄥ	＊d ＊eng	2
+ㄉㄧ	＊d ＊yi	2
+ㄉㄧㄝ	＊d ＊yi ＊eh	2
+ㄉㄧㄠ	＊d ＊yi ＊ao	2
+ㄉㄧㄡ	＊d ＊yi ＊ou	2
+ㄉㄧㄢ	＊d ＊yi ＊an	2
+ㄉㄧㄤ	＊d ＊yi ＊ang	2
+ㄉㄧㄥ	＊d ＊yi ＊eng	2
+ㄉㄧㄚ	＊d ＊yi ＊a	2
+ㄉㄨ	＊d ＊wu	2
+ㄉㄨㄛ	＊d ＊wu ＊o	2
+ㄉㄨㄟ	＊d ＊wu ＊ei	2
+ㄉㄨㄢ	＊d ＊wu ＊an	2
+ㄉㄨㄣ	＊d ＊wu ＊en	2
+ㄉㄨㄥ	＊d ＊wu ＊eng	2
+ㄊㄚ	＊t ＊a	2
+ㄊㄟ	＊t ＊ei	2
+ㄊㄞ	＊t ＊ai	2
+ㄊㄠ	＊t ＊ao	2
+ㄊㄡ	＊t ＊ou	2
+ㄊㄢ	＊t ＊an	2
+ㄊㄤ	＊t ＊ang	2
+ㄊㄥ	＊t ＊eng	2
+ㄊㄧ	＊t ＊yi	2
+ㄊㄧㄝ	＊t ＊yi ＊eh	2
+ㄊㄧㄠ	＊t ＊yi ＊ao	2
+ㄊㄧㄢ	＊t ＊yi ＊an	2
+ㄊㄧㄥ	＊t ＊yi ＊eng	2
+ㄊㄨ	＊t ＊wu	2
+ㄊㄨㄛ	＊t ＊wu ＊o	2
+ㄊㄨㄟ	＊t ＊wu ＊ei	2
+ㄊㄨㄢ	＊t ＊wu ＊an	2
+ㄊㄨㄣ	＊t ＊wu ＊en	2
+ㄊㄨㄥ	＊t ＊wu ＊eng	2
+ㄋㄚ	＊n ＊a	2
+ㄋㄜ	＊n ＊e	2
+ㄋㄠ	＊n ＊ao	2
+ㄋㄢ	＊n ＊an	2
+ㄋㄤ	＊n ＊ang	2
+ㄋㄧ	＊n ＊yi	2
+ㄋㄧㄚ	＊n ＊yi ＊a	2
+ㄋㄧㄝ	＊n ＊yi ＊eh	2
+ㄋㄧㄡ	＊n ＊yi ＊ou	2
+ㄋㄧㄢ	＊n ＊yi ＊an	2
+ㄌㄚ	＊l ＊a	2
+ㄌㄜ	＊l ＊e	2
+ㄌㄟ	＊l ＊ei	2
+ㄌㄠ	＊l ＊ao	2
+ㄌㄡ	＊l ＊ou	2
+ㄌㄤ	＊l ＊ang	2
+ㄌㄥ	＊l ＊eng	2
+ㄌㄧ	＊l ＊yi	2
+ㄌㄧㄝ	＊l ＊yi ＊eh	2
+ㄌㄧㄠ	＊l ＊yi ＊ao	2
+ㄌㄧㄡ	＊l ＊yi ＊ou	2
+ㄌㄧㄣ	＊l ＊yi ＊en	2
+ㄌㄧㄥ	＊l ＊yi ＊eng	2
+ㄌㄨ	＊l ＊wu	2
+ㄌㄨㄛ	＊l ＊wu ＊o	2
+ㄌㄨㄣ	＊l ＊wu ＊en	2
+ㄌㄨㄥ	＊l ＊wu ＊eng	2
+ㄍㄚ	＊g ＊a	2
+ㄍㄜ	＊g ＊e	2
+ㄍㄞ	＊g ＊ai	2
+ㄍㄠ	＊g ＊ao	2
+ㄍㄡ	＊g ＊ou	2
+ㄍㄢ	＊g ＊an	2
+ㄍㄣ	＊g ＊en	2
+ㄍㄤ	＊g ＊ang	2
+ㄍㄥ	＊g ＊eng	2
+ㄍㄨ	＊g ＊wu	2
+ㄍㄨㄚ	＊g ＊wu ＊a	2
+ㄍㄨㄛ	＊g ＊wu ＊o	2
+ㄍㄨㄞ	＊g ＊wu ＊ai	2
+ㄍㄨㄟ	＊g ＊wu ＊ei	2
+ㄍㄨㄢ	＊g ＊wu ＊an	2
+ㄍㄨㄣ	＊g ＊wu ＊en	2
+ㄍㄨㄤ	＊g ＊wu ＊ang	2
+ㄍㄨㄥ	＊g ＊wu ＊eng	2
+ㄎㄚ	＊k ＊a	2
+ㄎㄜ	＊k ＊e	2
+ㄎㄟ	＊k ＊ei	2
+ㄎㄞ	＊k ＊ai	2
+ㄎㄠ	＊k ＊ao	2
+ㄎㄡ	＊k ＊ou	2
+ㄎㄢ	＊k ＊an	2
+ㄎㄣ	＊k ＊en	2
+ㄎㄤ	＊k ＊ang	2
+ㄎㄥ	＊k ＊eng	2
+ㄎㄧㄤ	＊k ＊yi ＊ang	2
+ㄎㄨ	＊k ＊wu	2
+ㄎㄨㄚ	＊k ＊wu ＊a	2
+ㄎㄨㄞ	＊k ＊wu ＊ai	2
+ㄎㄨㄟ	＊k ＊wu ＊ei	2
+ㄎㄨㄢ	＊k ＊wu ＊an	2
+ㄎㄨㄣ	＊k ＊wu ＊en	2
+ㄎㄨㄤ	＊k ＊wu ＊ang	2
+ㄎㄨㄥ	＊k ＊wu ＊eng	2
+ㄏㄚ	＊h ＊a	2
+ㄏㄜ	＊h ＊e	2
+ㄏㄞ	＊h ＊ai	2
+ㄏㄟ	＊h ＊ei	2
+ㄏㄠ	＊h ＊ao	2
+ㄏㄡ	＊h ＊ou	2
+ㄏㄢ	＊h ＊an	2
+ㄏㄣ	＊h ＊en	2
+ㄏㄤ	＊h ＊ang	2
+ㄏㄥ	＊h ＊eng	2
+ㄏㄨ	＊h ＊wu	2
+ㄏㄨㄚ	＊h ＊wu ＊a	2
+ㄏㄨㄛ	＊h ＊wu ＊o	2
+ㄏㄨㄟ	＊h ＊wu ＊ei	2
+ㄏㄨㄢ	＊h ＊wu ＊an	2
+ㄏㄨㄣ	＊h ＊wu ＊en	2
+ㄏㄨㄤ	＊h ＊wu ＊ang	2
+ㄏㄨㄥ	＊h ＊wu ＊eng	2
+ㄐㄧ	＊j ＊yi	2
+ㄐㄧㄚ	＊j ＊yi ＊a	2
+ㄐㄧㄝ	＊j ＊yi ＊eh	2
+ㄐㄧㄠ	＊j ＊yi ＊ao	2
+ㄐㄧㄡ	＊j ＊yi ＊ou	2
+ㄐㄧㄢ	＊j ＊yi ＊an	2
+ㄐㄧㄣ	＊j ＊yi ＊en	2
+ㄐㄧㄤ	＊j ＊yi ＊ang	2
+ㄐㄧㄥ	＊j ＊yi ＊eng	2
+ㄐㄩ	＊j ＊yu	2
+ㄐㄩㄝ	＊j ＊yu ＊eh	2
+ㄐㄩㄢ	＊j ＊yu ＊an	2
+ㄐㄩㄣ	＊j ＊yu ＊en	2
+ㄐㄩㄥ	＊j ＊yu ＊eng	2
+ㄑㄧ	＊q ＊yi	2
+ㄑㄧㄚ	＊q ＊yi ＊a	2
+ㄑㄧㄝ	＊q ＊yi ＊eh	2
+ㄑㄧㄠ	＊q ＊yi ＊ao	2
+ㄑㄧㄡ	＊q ＊yi ＊ou	2
+ㄑㄧㄢ	＊q ＊yi ＊an	2
+ㄑㄧㄣ	＊q ＊yi ＊en	2
+ㄑㄧㄤ	＊q ＊yi ＊ang	2
+ㄑㄧㄥ	＊q ＊yi ＊eng	2
+ㄑㄩ	＊q ＊yu	2
+ㄑㄩㄝ	＊q ＊yu ＊eh	2
+ㄑㄩㄢ	＊q ＊yu ＊an	2
+ㄑㄩㄣ	＊q ＊yu ＊en	2
+ㄑㄩㄥ	＊q ＊yu ＊eng	2
+ㄒㄧ	＊x ＊yi	2
+ㄒㄧㄚ	＊x ＊yi ＊a	2
+ㄒㄧㄝ	＊x ＊yi ＊eh	2
+ㄒㄧㄠ	＊x ＊yi ＊ao	2
+ㄒㄧㄡ	＊x ＊yi ＊ou	2
+ㄒㄧㄢ	＊x ＊yi ＊an	2
+ㄒㄧㄣ	＊x ＊yi ＊en	2
+ㄒㄧㄤ	＊x ＊yi ＊ang	2
+ㄒㄧㄥ	＊x ＊yi ＊eng	2
+ㄒㄩ	＊x ＊yu	2
+ㄒㄩㄝ	＊x ＊yu ＊eh	2
+ㄒㄩㄢ	＊x ＊yu ＊an	2
+ㄒㄩㄣ	＊x ＊yu ＊en	2
+ㄒㄩㄥ	＊x ＊yu ＊eng	2
+ㄓㄚ	＊zhi ＊a	2
+ㄓㄜ	＊zhi ＊e	2
+ㄓㄞ	＊zhi ＊ai	2
+ㄓㄠ	＊zhi ＊ao	2
+ㄓㄡ	＊zhi ＊ou	2
+ㄓㄢ	＊zhi ＊an	2
+ㄓㄣ	＊zhi ＊en	2
+ㄓㄤ	＊zhi ＊ang	2
+ㄓㄥ	＊zhi ＊eng	2
+ㄓㄨ	＊zhi ＊wu	2
+ㄓㄨㄚ	＊zhi ＊wu ＊a	2
+ㄓㄨㄛ	＊zhi ＊wu ＊o	2
+ㄓㄨㄞ	＊zhi ＊wu ＊ai	2
+ㄓㄨㄟ	＊zhi ＊wu ＊ei	2
+ㄓㄨㄢ	＊zhi ＊wu ＊an	2
+ㄓㄨㄣ	＊zhi ＊wu ＊en	2
+ㄓㄨㄤ	＊zhi ＊wu ＊ang	2
+ㄓㄨㄥ	＊zhi ＊wu ＊eng	2
+ㄔㄚ	＊chi ＊a	2
+ㄔㄜ	＊chi ＊e	2
+ㄔㄞ	＊chi ＊ai	2
+ㄔㄠ	＊chi ＊ao	2
+ㄔㄡ	＊chi ＊ou	2
+ㄔㄢ	＊chi ＊an	2
+ㄔㄣ	＊chi ＊en	2
+ㄔㄤ	＊chi ＊ang	2
+ㄔㄥ	＊chi ＊eng	2
+ㄔㄨ	＊chi ＊wu	2
+ㄔㄨㄚ	＊chi ＊wu ＊a	2
+ㄔㄨㄛ	＊chi ＊wu ＊o	2
+ㄔㄨㄞ	＊chi ＊wu ＊ai	2
+ㄔㄨㄟ	＊chi ＊wu ＊ei	2
+ㄔㄨㄢ	＊chi ＊wu ＊an	2
+ㄔㄨㄣ	＊chi ＊wu ＊en	2
+ㄔㄨㄤ	＊chi ＊wu ＊ang	2
+ㄔㄨㄥ	＊chi ＊wu ＊eng	2
+ㄕㄚ	＊shi ＊a	2
+ㄕㄜ	＊shi ＊e	2
+ㄕㄞ	＊shi ＊ai	2
+ㄕㄠ	＊shi ＊ao	2
+ㄕㄡ	＊shi ＊ou	2
+ㄕㄢ	＊shi ＊an	2
+ㄕㄣ	＊shi ＊en	2
+ㄕㄤ	＊shi ＊ang	2
+ㄕㄥ	＊shi ＊eng	2
+ㄕㄨ	＊shi ＊wu	2
+ㄕㄨㄚ	＊shi ＊wu ＊a	2
+ㄕㄨㄛ	＊shi ＊wu ＊o	2
+ㄕㄨㄞ	＊shi ＊wu ＊ai	2
+ㄕㄨㄢ	＊shi ＊wu ＊an	2
+ㄕㄨㄤ	＊shi ＊wu ＊ang	2
+ㄖㄚ	＊ri ＊a	2
+ㄖㄤ	＊ri ＊ang	2
+ㄖㄥ	＊ri ＊eng	2
+ㄖㄨ	＊ri ＊wu	2
+ㄗㄚ	＊zi ＊a	2
+ㄗㄞ	＊zi ＊ai	2
+ㄗㄠ	＊zi ＊ao	2
+ㄗㄡ	＊zi ＊ou	2
+ㄗㄢ	＊zi ＊an	2
+ㄗㄣ	＊zi ＊en	2
+ㄗㄤ	＊zi ＊ang	2
+ㄗㄥ	＊zi ＊eng	2
+ㄗㄨ	＊zi ＊wu	2
+ㄗㄨㄛ	＊zi ＊wu ＊o	2
+ㄗㄨㄟ	＊zi ＊wu ＊ei	2
+ㄗㄨㄢ	＊zi ＊wu ＊an	2
+ㄗㄨㄣ	＊zi ＊wu ＊en	2
+ㄗㄨㄥ	＊zi ＊wu ＊eng	2
+ㄘㄚ	＊ci ＊a	2
+ㄘㄞ	＊ci ＊ai	2
+ㄘㄠ	＊ci ＊ao	2
+ㄘㄡ	＊ci ＊ou	2
+ㄘㄢ	＊ci ＊an	2
+ㄘㄣ	＊ci ＊en	2
+ㄘㄤ	＊ci ＊ang	2
+ㄘㄥ	＊ci ＊eng	2
+ㄘㄨ	＊ci ＊wu	2
+ㄘㄨㄛ	＊ci ＊wu ＊o	2
+ㄘㄨㄟ	＊ci ＊wu ＊ei	2
+ㄘㄨㄢ	＊ci ＊wu ＊an	2
+ㄘㄨㄣ	＊ci ＊wu ＊en	2
+ㄘㄨㄥ	＊ci ＊wu ＊eng	2
+ㄙㄚ	＊si ＊a	2
+ㄙㄜ	＊si ＊e	2
+ㄙㄞ	＊si ＊ai	2
+ㄙㄟ	＊si ＊ei	2
+ㄙㄠ	＊si ＊ao	2
+ㄙㄡ	＊si ＊ou	2
+ㄙㄢ	＊si ＊an	2
+ㄙㄣ	＊si ＊en	2
+ㄙㄤ	＊si ＊ang	2
+ㄙㄥ	＊si ＊eng	2
+ㄙㄨ	＊si ＊wu	2
+ㄙㄨㄛ	＊si ＊wu ＊o	2
+ㄙㄨㄟ	＊si ＊wu ＊ei	2
+ㄙㄨㄢ	＊si ＊wu ＊an	2
+ㄙㄨㄣ	＊si ＊wu ＊en	2
+ㄙㄨㄥ	＊si ＊wu ＊eng	2
+ㄧㄚ	＊yi ＊a	2
+ㄧㄛ	＊yi ＊o	2
+ㄧㄝ	＊yi ＊eh	2
+ㄧㄠ	＊yi ＊ao	2
+ㄧㄡ	＊yi ＊ou	2
+ㄧㄢ	＊yi ＊an	2
+ㄧㄣ	＊yi ＊en	2
+ㄧㄤ	＊yi ＊ang	2
+ㄧㄥ	＊yi ＊eng	2
+ㄨㄚ	＊wu ＊a	2
+ㄨㄛ	＊wu ＊o	2
+ㄨㄞ	＊wu ＊ai	2
+ㄨㄟ	＊wu ＊ei	2
+ㄨㄢ	＊wu ＊an	2
+ㄨㄣ	＊wu ＊en	2
+ㄨㄤ	＊wu ＊ang	2
+ㄨㄥ	＊wu ＊eng	2
+ㄩㄝ	＊yu ＊eh	2
+ㄩㄢ	＊yu ＊an	2
+ㄩㄣ	＊yu ＊en	2
+ㄩㄥ	＊yu ＊eng	2
+ㄇㄞ	＊m ＊ai	2
+ㄇㄟ	＊m ＊ei	2
+ㄇㄧㄢ	＊m ＊yi ＊an	2
+ㄇㄧㄣ	＊m ＊yi ＊en	2
+ㄇㄧㄥ	＊m ＊yi ＊eng	2
+ㄇㄨ	＊m ＊wu	2
+ㄈㄛ	＊f ＊o	2
+ㄋㄞ	＊n ＊ai	2
+ㄋㄟ	＊n ＊ei	2
+ㄋㄡ	＊n ＊ou	2
+ㄋㄥ	＊n ＊eng	2
+ㄋㄧㄣ	＊n ＊yi ＊en	2
+ㄋㄧㄤ	＊n ＊yi ＊ang	2
+ㄋㄧㄥ	＊n ＊yi ＊eng	2
+ㄋㄨ	＊n ＊wu	2
+ㄋㄨㄚ	＊n ＊wu ＊a	2
+ㄋㄨㄛ	＊n ＊wu ＊o	2
+ㄋㄨㄢ	＊n ＊wu ＊an	2
+ㄋㄨㄣ	＊n ＊wu ＊en	2
+ㄋㄨㄥ	＊n ＊wu ＊eng	2
+ㄋㄩ	＊n ＊yu	2
+ㄌㄞ	＊l ＊ai	2
+ㄌㄢ	＊l ＊an	2
+ㄌㄧㄢ	＊l ＊yi ＊an	2
+ㄌㄧㄤ	＊l ＊yi ＊ang	2
+ㄌㄨㄢ	＊l ＊wu ＊an	2
+ㄌㄩ	＊l ＊yu	2
+ㄌㄩㄢ	＊l ＊yu ＊an	2
+ㄏㄨㄞ	＊h ＊wu ＊ai	2
+ㄕㄟ	＊shi ＊ei	2
+ㄕㄨㄟ	＊shi ＊wu ＊ei	2
+ㄖㄜ	＊ri ＊e	2
+ㄖㄠ	＊ri ＊ao	2
+ㄖㄡ	＊ri ＊ou	2
+ㄖㄢ	＊ri ＊an	2
+ㄖㄣ	＊ri ＊en	2
+ㄖㄨㄛ	＊ri ＊wu ＊o	2
+ㄖㄨㄟ	＊ri ＊wu ＊ei	2
+ㄖㄨㄚ	＊ri ＊wu ＊a	2
+ㄖㄨㄢ	＊ri ＊wu ＊an	2
+ㄖㄨㄣ	＊ri ＊wu ＊en	2
+ㄖㄨㄥ	＊ri ＊wu ＊eng	2
+ㄗㄜ	＊zi ＊e	2
+ㄗㄟ	＊zi ＊ei	2
+ㄧㄞ	＊yi ＊ai	2
+ㄇㄧㄡ	＊m ＊yi ＊ou	2
+ㄋㄧㄠ	＊n ＊yi ＊ao	2
+ㄌㄧㄚ	＊l ＊yi ＊a	2
+ㄌㄩㄝ	＊l ＊yu ＊eh	2
+ㄍㄟ	＊g ＊ei	2
+ㄕㄨㄣ	＊shi ＊wu ＊en	2
+ㄙㄨㄚ	＊si ＊wu ＊a	2
+ㄈㄧㄠ	＊f ＊yi ＊ao	2
+ㄉㄣ	＊d ＊en	2
+ㄉㄧㄣ	＊d ＊yi ＊en	2
+ㄊㄜ	＊t ＊e	2
+ㄊㄧㄣ	＊t ＊yi ＊en	2
+ㄋㄣ	＊n ＊en	2
+ㄋㄩㄝ	＊n ＊yu ＊eh	2
+ㄎㄨㄛ	＊k ＊wu ＊o	2
+ㄓㄟ	＊zhi ＊ei	2
+ㄘㄜ	＊ci ＊e	2
+ㄘㄟ	＊ci ＊ei	2
+ㄌㄛ	＊l ＊o	2
 #####@ ㄅㄆㄇ中文所有拼法（省略聲調）（分開拼法）結束 #####
 #####@ ㄅㄆㄇ中文所有拼法（省略聲調）（合併拼法）開始 #####
-# ㄅㄚ	＊ba	30
-# ㄅㄛ	＊bo	30
-# ㄅㄞ	＊bai	30
-# ㄅㄟ	＊bei	30
-# ㄅㄠ	＊bao	30
-# ㄅㄢ	＊ban	30
-# ㄅㄣ	＊ben	30
-# ㄅㄤ	＊bang	30
-# ㄅㄥ	＊beng	30
-# ㄅㄧ	＊bi	30
-# ㄅㄧㄝ	＊bie	30
-# ㄅㄧㄠ	＊biao	30
-# ㄅㄧㄢ	＊bian	30
-# ㄅㄧㄣ	＊bin	30
-# ㄅㄧㄥ	＊bing	30
-# ㄅㄨ	＊bu	30
-# ㄆㄚ	＊pa	30
-# ㄆㄛ	＊po	30
-# ㄆㄞ	＊pai	30
-# ㄆㄟ	＊pei	30
-# ㄆㄠ	＊pao	30
-# ㄆㄡ	＊pou	30
-# ㄆㄢ	＊pan	30
-# ㄆㄣ	＊pen	30
-# ㄆㄤ	＊pang	30
-# ㄆㄥ	＊peng	30
-# ㄆㄧ	＊pi	30
-# ㄆㄧㄝ	＊pie	30
-# ㄆㄧㄚ	＊pia	30
-# ㄆㄧㄠ	＊piao	30
-# ㄆㄧㄢ	＊pian	30
-# ㄆㄧㄣ	＊pin	30
-# ㄆㄧㄥ	＊ping	30
-# ㄆㄨ	＊pu	30
-# ㄆㄨㄛ	＊puo	30
-# ㄇㄚ	＊ma	30
-# ㄇㄛ	＊mo	30
-# ㄇㄜ	＊me	30
-# ㄇㄠ	＊mao	30
-# ㄇㄡ	＊mou	30
-# ㄇㄢ	＊man	30
-# ㄇㄣ	＊men	30
-# ㄇㄤ	＊mang	30
-# ㄇㄥ	＊meng	30
-# ㄇㄧ	＊mi	30
-# ㄇㄧㄝ	＊mie	30
-# ㄇㄧㄠ	＊miao	30
-# ㄈㄚ	＊fa	30
-# ㄈㄟ	＊fei	30
-# ㄈㄡ	＊fou	30
-# ㄈㄢ	＊fan	30
-# ㄈㄣ	＊fen	30
-# ㄈㄤ	＊fang	30
-# ㄈㄥ	＊feng	30
-# ㄈㄨ	＊fu	30
-# ㄉㄚ	＊da	30
-# ㄉㄜ	＊de	30
-# ㄉㄞ	＊dai	30
-# ㄉㄟ	＊dei	30
-# ㄉㄠ	＊dao	30
-# ㄉㄡ	＊dou	30
-# ㄉㄢ	＊dan	30
-# ㄉㄤ	＊dang	30
-# ㄉㄥ	＊deng	30
-# ㄉㄧ	＊di	30
-# ㄉㄧㄝ	＊die	30
-# ㄉㄧㄠ	＊diao	30
-# ㄉㄧㄡ	＊diu	30
-# ㄉㄧㄢ	＊dian	30
-# ㄉㄧㄤ	＊diang	30
-# ㄉㄧㄥ	＊ding	30
-# ㄉㄧㄚ	＊dia	30
-# ㄉㄨ	＊du	30
-# ㄉㄨㄛ	＊duo	30
-# ㄉㄨㄟ	＊dui	30
-# ㄉㄨㄢ	＊duan	30
-# ㄉㄨㄣ	＊dun	30
-# ㄉㄨㄥ	＊dong	30
-# ㄊㄚ	＊ta	30
-# ㄊㄟ	＊tei	30
-# ㄊㄞ	＊tai	30
-# ㄊㄠ	＊tao	30
-# ㄊㄡ	＊tou	30
-# ㄊㄢ	＊tan	30
-# ㄊㄤ	＊tang	30
-# ㄊㄥ	＊teng	30
-# ㄊㄧ	＊ti	30
-# ㄊㄧㄝ	＊tie	30
-# ㄊㄧㄠ	＊tiao	30
-# ㄊㄧㄢ	＊tian	30
-# ㄊㄧㄥ	＊ting	30
-# ㄊㄨ	＊tu	30
-# ㄊㄨㄛ	＊tuo	30
-# ㄊㄨㄟ	＊tui	30
-# ㄊㄨㄢ	＊tuan	30
-# ㄊㄨㄣ	＊tun	30
-# ㄊㄨㄥ	＊tong	30
-# ㄋㄚ	＊na	30
-# ㄋㄜ	＊ne	30
-# ㄋㄠ	＊nao	30
-# ㄋㄢ	＊nan	30
-# ㄋㄤ	＊nang	30
-# ㄋㄧ	＊ni	30
-# ㄋㄧㄚ	＊nia	30
-# ㄋㄧㄝ	＊nie	30
-# ㄋㄧㄡ	＊niu	30
-# ㄋㄧㄢ	＊nian	30
-# ㄌㄚ	＊la	30
-# ㄌㄜ	＊le	30
-# ㄌㄟ	＊lei	30
-# ㄌㄠ	＊lao	30
-# ㄌㄡ	＊lou	30
-# ㄌㄤ	＊lang	30
-# ㄌㄥ	＊leng	30
-# ㄌㄧ	＊li	30
-# ㄌㄧㄝ	＊lie	30
-# ㄌㄧㄠ	＊liao	30
-# ㄌㄧㄡ	＊liu	30
-# ㄌㄧㄣ	＊lin	30
-# ㄌㄧㄥ	＊ling	30
-# ㄌㄨ	＊lu	30
-# ㄌㄨㄛ	＊luo	30
-# ㄌㄨㄣ	＊lun	30
-# ㄌㄨㄥ	＊long	30
-# ㄍㄚ	＊ga	30
-# ㄍㄜ	＊ge	30
-# ㄍㄞ	＊gai	30
-# ㄍㄠ	＊gao	30
-# ㄍㄡ	＊gou	30
-# ㄍㄢ	＊gan	30
-# ㄍㄣ	＊gen	30
-# ㄍㄤ	＊gang	30
-# ㄍㄥ	＊geng	30
-# ㄍㄨ	＊gu	30
-# ㄍㄨㄚ	＊gua	30
-# ㄍㄨㄛ	＊guo	30
-# ㄍㄨㄞ	＊guai	30
-# ㄍㄨㄟ	＊gui	30
-# ㄍㄨㄢ	＊guan	30
-# ㄍㄨㄣ	＊gun	30
-# ㄍㄨㄤ	＊guang	30
-# ㄍㄨㄥ	＊gong	30
-# ㄎㄚ	＊ka	30
-# ㄎㄜ	＊ke	30
-# ㄎㄟ	＊kei	30
-# ㄎㄞ	＊kai	30
-# ㄎㄠ	＊kao	30
-# ㄎㄡ	＊kou	30
-# ㄎㄢ	＊kan	30
-# ㄎㄣ	＊ken	30
-# ㄎㄤ	＊kang	30
-# ㄎㄥ	＊keng	30
-# ㄎㄧㄤ	＊kiang	30
-# ㄎㄨ	＊ku	30
-# ㄎㄨㄚ	＊kua	30
-# ㄎㄨㄞ	＊kuai	30
-# ㄎㄨㄟ	＊kui	30
-# ㄎㄨㄢ	＊kuan	30
-# ㄎㄨㄣ	＊kun	30
-# ㄎㄨㄤ	＊kuang	30
-# ㄎㄨㄥ	＊kong	30
-# ㄏㄚ	＊ha	30
-# ㄏㄜ	＊he	30
-# ㄏㄞ	＊hai	30
-# ㄏㄟ	＊hei	30
-# ㄏㄠ	＊hao	30
-# ㄏㄡ	＊hou	30
-# ㄏㄢ	＊han	30
-# ㄏㄣ	＊hen	30
-# ㄏㄤ	＊hang	30
-# ㄏㄥ	＊heng	30
-# ㄏㄨ	＊hu	30
-# ㄏㄨㄚ	＊hua	30
-# ㄏㄨㄛ	＊huo	30
-# ㄏㄨㄟ	＊hui	30
-# ㄏㄨㄢ	＊huan	30
-# ㄏㄨㄣ	＊hun	30
-# ㄏㄨㄤ	＊huang	30
-# ㄏㄨㄥ	＊hong	30
-# ㄐㄧ	＊ji	30
-# ㄐㄧㄚ	＊jia	30
-# ㄐㄧㄝ	＊jie	30
-# ㄐㄧㄠ	＊jiao	30
-# ㄐㄧㄡ	＊jiu	30
-# ㄐㄧㄢ	＊jian	30
-# ㄐㄧㄣ	＊jin	30
-# ㄐㄧㄤ	＊jiang	30
-# ㄐㄧㄥ	＊jing	30
-# ㄐㄩ	＊ju	30
-# ㄐㄩㄝ	＊jue	30
-# ㄐㄩㄢ	＊juan	30
-# ㄐㄩㄣ	＊jun	30
-# ㄐㄩㄥ	＊jiong	30
-# ㄑㄧ	＊qi	30
-# ㄑㄧㄚ	＊qia	30
-# ㄑㄧㄝ	＊qie	30
-# ㄑㄧㄠ	＊qiao	30
-# ㄑㄧㄡ	＊qiu	30
-# ㄑㄧㄢ	＊qian	30
-# ㄑㄧㄣ	＊qin	30
-# ㄑㄧㄤ	＊qiang	30
-# ㄑㄧㄥ	＊qing	30
-# ㄑㄩ	＊qu	30
-# ㄑㄩㄝ	＊que	30
-# ㄑㄩㄢ	＊quan	30
-# ㄑㄩㄣ	＊qun	30
-# ㄑㄩㄥ	＊qiong	30
-# ㄒㄧ	＊xi	30
-# ㄒㄧㄚ	＊xia	30
-# ㄒㄧㄝ	＊xie	30
-# ㄒㄧㄠ	＊xiao	30
-# ㄒㄧㄡ	＊xiu	30
-# ㄒㄧㄢ	＊xian	30
-# ㄒㄧㄣ	＊xin	30
-# ㄒㄧㄤ	＊xiang	30
-# ㄒㄧㄥ	＊xing	30
-# ㄒㄩ	＊xu	30
-# ㄒㄩㄝ	＊xue	30
-# ㄒㄩㄢ	＊xuan	30
-# ㄒㄩㄣ	＊xun	30
-# ㄒㄩㄥ	＊xiong	30
-# ㄓㄚ	＊zha	30
-# ㄓㄜ	＊zhe	30
-# ㄓㄞ	＊zhai	30
-# ㄓㄠ	＊zhao	30
-# ㄓㄡ	＊zhou	30
-# ㄓㄢ	＊zhan	30
-# ㄓㄣ	＊zhen	30
-# ㄓㄤ	＊zhang	30
-# ㄓㄥ	＊zheng	30
-# ㄓㄨ	＊zhu	30
-# ㄓㄨㄚ	＊zhua	30
-# ㄓㄨㄛ	＊zhuo	30
-# ㄓㄨㄞ	＊zhuai	30
-# ㄓㄨㄟ	＊zhui	30
-# ㄓㄨㄢ	＊zhuan	30
-# ㄓㄨㄣ	＊zhun	30
-# ㄓㄨㄤ	＊zhuang	30
-# ㄓㄨㄥ	＊zhong	30
-# ㄔㄚ	＊cha	30
-# ㄔㄜ	＊che	30
-# ㄔㄞ	＊chai	30
-# ㄔㄠ	＊chao	30
-# ㄔㄡ	＊chou	30
-# ㄔㄢ	＊chan	30
-# ㄔㄣ	＊chen	30
-# ㄔㄤ	＊chang	30
-# ㄔㄥ	＊cheng	30
-# ㄔㄨ	＊chu	30
-# ㄔㄨㄚ	＊chua	30
-# ㄔㄨㄛ	＊chuo	30
-# ㄔㄨㄞ	＊chuai	30
-# ㄔㄨㄟ	＊chui	30
-# ㄔㄨㄢ	＊chuan	30
-# ㄔㄨㄣ	＊chun	30
-# ㄔㄨㄤ	＊chuang	30
-# ㄔㄨㄥ	＊chong	30
-# ㄕㄚ	＊sha	30
-# ㄕㄜ	＊she	30
-# ㄕㄞ	＊shai	30
-# ㄕㄠ	＊shao	30
-# ㄕㄡ	＊shou	30
-# ㄕㄢ	＊shan	30
-# ㄕㄣ	＊shen	30
-# ㄕㄤ	＊shang	30
-# ㄕㄥ	＊sheng	30
-# ㄕㄨ	＊shu	30
-# ㄕㄨㄚ	＊shua	30
-# ㄕㄨㄛ	＊shuo	30
-# ㄕㄨㄞ	＊shuai	30
-# ㄕㄨㄢ	＊shuan	30
-# ㄕㄨㄤ	＊shuang	30
-# ㄖㄚ	＊ra	30
-# ㄖㄤ	＊rang	30
-# ㄖㄥ	＊reng	30
-# ㄖㄨ	＊ru	30
-# ㄗㄚ	＊za	30
-# ㄗㄞ	＊zai	30
-# ㄗㄠ	＊zao	30
-# ㄗㄡ	＊zou	30
-# ㄗㄢ	＊zan	30
-# ㄗㄣ	＊zen	30
-# ㄗㄤ	＊zang	30
-# ㄗㄥ	＊zeng	30
-# ㄗㄨ	＊zu	30
-# ㄗㄨㄛ	＊zuo	30
-# ㄗㄨㄟ	＊zui	30
-# ㄗㄨㄢ	＊zuan	30
-# ㄗㄨㄣ	＊zun	30
-# ㄗㄨㄥ	＊zong	30
-# ㄘㄚ	＊ca	30
-# ㄘㄞ	＊cai	30
-# ㄘㄠ	＊cao	30
-# ㄘㄡ	＊cou	30
-# ㄘㄢ	＊can	30
-# ㄘㄣ	＊cen	30
-# ㄘㄤ	＊cang	30
-# ㄘㄥ	＊ceng	30
-# ㄘㄨ	＊cu	30
-# ㄘㄨㄛ	＊cuo	30
-# ㄘㄨㄟ	＊cui	30
-# ㄘㄨㄢ	＊cuan	30
-# ㄘㄨㄣ	＊cun	30
-# ㄘㄨㄥ	＊cong	30
-# ㄙㄚ	＊sa	30
-# ㄙㄜ	＊se	30
-# ㄙㄞ	＊sai	30
-# ㄙㄟ	＊sei	30
-# ㄙㄠ	＊sao	30
-# ㄙㄡ	＊sou	30
-# ㄙㄢ	＊san	30
-# ㄙㄣ	＊sen	30
-# ㄙㄤ	＊sang	30
-# ㄙㄥ	＊seng	30
-# ㄙㄨ	＊su	30
-# ㄙㄨㄛ	＊suo	30
-# ㄙㄨㄟ	＊sui	30
-# ㄙㄨㄢ	＊suan	30
-# ㄙㄨㄣ	＊sun	30
-# ㄙㄨㄥ	＊song	30
-# ㄧㄚ	＊ya	30
-# ㄧㄛ	＊yo	30
-# ㄧㄝ	＊ye	30
-# ㄧㄠ	＊yao	30
-# ㄧㄡ	＊you	30
-# ㄧㄢ	＊yan	30
-# ㄧㄣ	＊yin	30
-# ㄧㄤ	＊yang	30
-# ㄧㄥ	＊ying	30
-# ㄨㄚ	＊wa	30
-# ㄨㄛ	＊wo	30
-# ㄨㄞ	＊wai	30
-# ㄨㄟ	＊wei	30
-# ㄨㄢ	＊wan	30
-# ㄨㄣ	＊wen	30
-# ㄨㄤ	＊wang	30
-# ㄨㄥ	＊weng	30
-# ㄩㄝ	＊yue	30
-# ㄩㄢ	＊yuan	30
-# ㄩㄣ	＊yun	30
-# ㄩㄥ	＊yong	30
-# ㄇㄞ	＊mai	30
-# ㄇㄟ	＊mei	30
-# ㄇㄧㄢ	＊mian	30
-# ㄇㄧㄣ	＊min	30
-# ㄇㄧㄥ	＊ming	30
-# ㄇㄨ	＊mu	30
-# ㄈㄛ	＊fo	30
-# ㄋㄞ	＊nai	30
-# ㄋㄟ	＊nei	30
-# ㄋㄡ	＊nou	30
-# ㄋㄥ	＊neng	30
-# ㄋㄧㄣ	＊nin	30
-# ㄋㄧㄤ	＊niang	30
-# ㄋㄧㄥ	＊ning	30
-# ㄋㄨ	＊nu	30
-# ㄋㄨㄚ	＊nua	30
-# ㄋㄨㄛ	＊nuo	30
-# ㄋㄨㄢ	＊nuan	30
-# ㄋㄨㄣ	＊nun	30
-# ㄋㄨㄥ	＊nong	30
-# ㄋㄩ	＊nv	30
-# ㄌㄞ	＊lai	30
-# ㄌㄢ	＊lan	30
-# ㄌㄧㄢ	＊lian	30
-# ㄌㄧㄤ	＊liang	30
-# ㄌㄨㄢ	＊luan	30
-# ㄌㄩ	＊lv	30
-# ㄌㄩㄢ	＊lvan	30
-# ㄏㄨㄞ	＊huai	30
-# ㄕㄟ	＊shei	30
-# ㄕㄨㄟ	＊shui	30
-# ㄖㄜ	＊re	30
-# ㄖㄠ	＊rao	30
-# ㄖㄡ	＊rou	30
-# ㄖㄢ	＊ran	30
-# ㄖㄣ	＊ren	30
-# ㄖㄨㄛ	＊ruo	30
-# ㄖㄨㄟ	＊rui	30
-# ㄖㄨㄚ	＊rua	30
-# ㄖㄨㄢ	＊ruan	30
-# ㄖㄨㄣ	＊run	30
-# ㄖㄨㄥ	＊rong	30
-# ㄗㄜ	＊ze	30
-# ㄗㄟ	＊zei	30
-# ㄧㄞ	＊yai	30
-# ㄇㄧㄡ	＊miu	30
-# ㄋㄧㄠ	＊niao	30
-# ㄌㄧㄚ	＊lia	30
-# ㄌㄩㄝ	＊lve	30
-# ㄍㄟ	＊gei	30
-# ㄕㄨㄣ	＊shun	30
-# ㄙㄨㄚ	＊sua	30
-# ㄈㄧㄠ	＊fiao	30
-# ㄉㄣ	＊den	30
-# ㄉㄧㄣ	＊din	30
-# ㄊㄜ	＊te	30
-# ㄊㄧㄣ	＊tin	30
-# ㄋㄣ	＊nen	30
-# ㄋㄩㄝ	＊nve	30
-# ㄎㄨㄛ	＊kuo	30
-# ㄓㄟ	＊zhei	30
-# ㄘㄜ	＊ce	30
-# ㄘㄟ	＊cei	30
-# ㄌㄛ	＊lo	30
+# ㄅㄚ	＊ba	2
+# ㄅㄛ	＊bo	2
+# ㄅㄞ	＊bai	2
+# ㄅㄟ	＊bei	2
+# ㄅㄠ	＊bao	2
+# ㄅㄢ	＊ban	2
+# ㄅㄣ	＊ben	2
+# ㄅㄤ	＊bang	2
+# ㄅㄥ	＊beng	2
+# ㄅㄧ	＊bi	2
+# ㄅㄧㄝ	＊bie	2
+# ㄅㄧㄠ	＊biao	2
+# ㄅㄧㄢ	＊bian	2
+# ㄅㄧㄣ	＊bin	2
+# ㄅㄧㄥ	＊bing	2
+# ㄅㄨ	＊bu	2
+# ㄆㄚ	＊pa	2
+# ㄆㄛ	＊po	2
+# ㄆㄞ	＊pai	2
+# ㄆㄟ	＊pei	2
+# ㄆㄠ	＊pao	2
+# ㄆㄡ	＊pou	2
+# ㄆㄢ	＊pan	2
+# ㄆㄣ	＊pen	2
+# ㄆㄤ	＊pang	2
+# ㄆㄥ	＊peng	2
+# ㄆㄧ	＊pi	2
+# ㄆㄧㄝ	＊pie	2
+# ㄆㄧㄚ	＊pia	2
+# ㄆㄧㄠ	＊piao	2
+# ㄆㄧㄢ	＊pian	2
+# ㄆㄧㄣ	＊pin	2
+# ㄆㄧㄥ	＊ping	2
+# ㄆㄨ	＊pu	2
+# ㄆㄨㄛ	＊puo	2
+# ㄇㄚ	＊ma	2
+# ㄇㄛ	＊mo	2
+# ㄇㄜ	＊me	2
+# ㄇㄠ	＊mao	2
+# ㄇㄡ	＊mou	2
+# ㄇㄢ	＊man	2
+# ㄇㄣ	＊men	2
+# ㄇㄤ	＊mang	2
+# ㄇㄥ	＊meng	2
+# ㄇㄧ	＊mi	2
+# ㄇㄧㄝ	＊mie	2
+# ㄇㄧㄠ	＊miao	2
+# ㄈㄚ	＊fa	2
+# ㄈㄟ	＊fei	2
+# ㄈㄡ	＊fou	2
+# ㄈㄢ	＊fan	2
+# ㄈㄣ	＊fen	2
+# ㄈㄤ	＊fang	2
+# ㄈㄥ	＊feng	2
+# ㄈㄨ	＊fu	2
+# ㄉㄚ	＊da	2
+# ㄉㄜ	＊de	2
+# ㄉㄞ	＊dai	2
+# ㄉㄟ	＊dei	2
+# ㄉㄠ	＊dao	2
+# ㄉㄡ	＊dou	2
+# ㄉㄢ	＊dan	2
+# ㄉㄤ	＊dang	2
+# ㄉㄥ	＊deng	2
+# ㄉㄧ	＊di	2
+# ㄉㄧㄝ	＊die	2
+# ㄉㄧㄠ	＊diao	2
+# ㄉㄧㄡ	＊diu	2
+# ㄉㄧㄢ	＊dian	2
+# ㄉㄧㄤ	＊diang	2
+# ㄉㄧㄥ	＊ding	2
+# ㄉㄧㄚ	＊dia	2
+# ㄉㄨ	＊du	2
+# ㄉㄨㄛ	＊duo	2
+# ㄉㄨㄟ	＊dui	2
+# ㄉㄨㄢ	＊duan	2
+# ㄉㄨㄣ	＊dun	2
+# ㄉㄨㄥ	＊dong	2
+# ㄊㄚ	＊ta	2
+# ㄊㄟ	＊tei	2
+# ㄊㄞ	＊tai	2
+# ㄊㄠ	＊tao	2
+# ㄊㄡ	＊tou	2
+# ㄊㄢ	＊tan	2
+# ㄊㄤ	＊tang	2
+# ㄊㄥ	＊teng	2
+# ㄊㄧ	＊ti	2
+# ㄊㄧㄝ	＊tie	2
+# ㄊㄧㄠ	＊tiao	2
+# ㄊㄧㄢ	＊tian	2
+# ㄊㄧㄥ	＊ting	2
+# ㄊㄨ	＊tu	2
+# ㄊㄨㄛ	＊tuo	2
+# ㄊㄨㄟ	＊tui	2
+# ㄊㄨㄢ	＊tuan	2
+# ㄊㄨㄣ	＊tun	2
+# ㄊㄨㄥ	＊tong	2
+# ㄋㄚ	＊na	2
+# ㄋㄜ	＊ne	2
+# ㄋㄠ	＊nao	2
+# ㄋㄢ	＊nan	2
+# ㄋㄤ	＊nang	2
+# ㄋㄧ	＊ni	2
+# ㄋㄧㄚ	＊nia	2
+# ㄋㄧㄝ	＊nie	2
+# ㄋㄧㄡ	＊niu	2
+# ㄋㄧㄢ	＊nian	2
+# ㄌㄚ	＊la	2
+# ㄌㄜ	＊le	2
+# ㄌㄟ	＊lei	2
+# ㄌㄠ	＊lao	2
+# ㄌㄡ	＊lou	2
+# ㄌㄤ	＊lang	2
+# ㄌㄥ	＊leng	2
+# ㄌㄧ	＊li	2
+# ㄌㄧㄝ	＊lie	2
+# ㄌㄧㄠ	＊liao	2
+# ㄌㄧㄡ	＊liu	2
+# ㄌㄧㄣ	＊lin	2
+# ㄌㄧㄥ	＊ling	2
+# ㄌㄨ	＊lu	2
+# ㄌㄨㄛ	＊luo	2
+# ㄌㄨㄣ	＊lun	2
+# ㄌㄨㄥ	＊long	2
+# ㄍㄚ	＊ga	2
+# ㄍㄜ	＊ge	2
+# ㄍㄞ	＊gai	2
+# ㄍㄠ	＊gao	2
+# ㄍㄡ	＊gou	2
+# ㄍㄢ	＊gan	2
+# ㄍㄣ	＊gen	2
+# ㄍㄤ	＊gang	2
+# ㄍㄥ	＊geng	2
+# ㄍㄨ	＊gu	2
+# ㄍㄨㄚ	＊gua	2
+# ㄍㄨㄛ	＊guo	2
+# ㄍㄨㄞ	＊guai	2
+# ㄍㄨㄟ	＊gui	2
+# ㄍㄨㄢ	＊guan	2
+# ㄍㄨㄣ	＊gun	2
+# ㄍㄨㄤ	＊guang	2
+# ㄍㄨㄥ	＊gong	2
+# ㄎㄚ	＊ka	2
+# ㄎㄜ	＊ke	2
+# ㄎㄟ	＊kei	2
+# ㄎㄞ	＊kai	2
+# ㄎㄠ	＊kao	2
+# ㄎㄡ	＊kou	2
+# ㄎㄢ	＊kan	2
+# ㄎㄣ	＊ken	2
+# ㄎㄤ	＊kang	2
+# ㄎㄥ	＊keng	2
+# ㄎㄧㄤ	＊kiang	2
+# ㄎㄨ	＊ku	2
+# ㄎㄨㄚ	＊kua	2
+# ㄎㄨㄞ	＊kuai	2
+# ㄎㄨㄟ	＊kui	2
+# ㄎㄨㄢ	＊kuan	2
+# ㄎㄨㄣ	＊kun	2
+# ㄎㄨㄤ	＊kuang	2
+# ㄎㄨㄥ	＊kong	2
+# ㄏㄚ	＊ha	2
+# ㄏㄜ	＊he	2
+# ㄏㄞ	＊hai	2
+# ㄏㄟ	＊hei	2
+# ㄏㄠ	＊hao	2
+# ㄏㄡ	＊hou	2
+# ㄏㄢ	＊han	2
+# ㄏㄣ	＊hen	2
+# ㄏㄤ	＊hang	2
+# ㄏㄥ	＊heng	2
+# ㄏㄨ	＊hu	2
+# ㄏㄨㄚ	＊hua	2
+# ㄏㄨㄛ	＊huo	2
+# ㄏㄨㄟ	＊hui	2
+# ㄏㄨㄢ	＊huan	2
+# ㄏㄨㄣ	＊hun	2
+# ㄏㄨㄤ	＊huang	2
+# ㄏㄨㄥ	＊hong	2
+# ㄐㄧ	＊ji	2
+# ㄐㄧㄚ	＊jia	2
+# ㄐㄧㄝ	＊jie	2
+# ㄐㄧㄠ	＊jiao	2
+# ㄐㄧㄡ	＊jiu	2
+# ㄐㄧㄢ	＊jian	2
+# ㄐㄧㄣ	＊jin	2
+# ㄐㄧㄤ	＊jiang	2
+# ㄐㄧㄥ	＊jing	2
+# ㄐㄩ	＊ju	2
+# ㄐㄩㄝ	＊jue	2
+# ㄐㄩㄢ	＊juan	2
+# ㄐㄩㄣ	＊jun	2
+# ㄐㄩㄥ	＊jiong	2
+# ㄑㄧ	＊qi	2
+# ㄑㄧㄚ	＊qia	2
+# ㄑㄧㄝ	＊qie	2
+# ㄑㄧㄠ	＊qiao	2
+# ㄑㄧㄡ	＊qiu	2
+# ㄑㄧㄢ	＊qian	2
+# ㄑㄧㄣ	＊qin	2
+# ㄑㄧㄤ	＊qiang	2
+# ㄑㄧㄥ	＊qing	2
+# ㄑㄩ	＊qu	2
+# ㄑㄩㄝ	＊que	2
+# ㄑㄩㄢ	＊quan	2
+# ㄑㄩㄣ	＊qun	2
+# ㄑㄩㄥ	＊qiong	2
+# ㄒㄧ	＊xi	2
+# ㄒㄧㄚ	＊xia	2
+# ㄒㄧㄝ	＊xie	2
+# ㄒㄧㄠ	＊xiao	2
+# ㄒㄧㄡ	＊xiu	2
+# ㄒㄧㄢ	＊xian	2
+# ㄒㄧㄣ	＊xin	2
+# ㄒㄧㄤ	＊xiang	2
+# ㄒㄧㄥ	＊xing	2
+# ㄒㄩ	＊xu	2
+# ㄒㄩㄝ	＊xue	2
+# ㄒㄩㄢ	＊xuan	2
+# ㄒㄩㄣ	＊xun	2
+# ㄒㄩㄥ	＊xiong	2
+# ㄓㄚ	＊zha	2
+# ㄓㄜ	＊zhe	2
+# ㄓㄞ	＊zhai	2
+# ㄓㄠ	＊zhao	2
+# ㄓㄡ	＊zhou	2
+# ㄓㄢ	＊zhan	2
+# ㄓㄣ	＊zhen	2
+# ㄓㄤ	＊zhang	2
+# ㄓㄥ	＊zheng	2
+# ㄓㄨ	＊zhu	2
+# ㄓㄨㄚ	＊zhua	2
+# ㄓㄨㄛ	＊zhuo	2
+# ㄓㄨㄞ	＊zhuai	2
+# ㄓㄨㄟ	＊zhui	2
+# ㄓㄨㄢ	＊zhuan	2
+# ㄓㄨㄣ	＊zhun	2
+# ㄓㄨㄤ	＊zhuang	2
+# ㄓㄨㄥ	＊zhong	2
+# ㄔㄚ	＊cha	2
+# ㄔㄜ	＊che	2
+# ㄔㄞ	＊chai	2
+# ㄔㄠ	＊chao	2
+# ㄔㄡ	＊chou	2
+# ㄔㄢ	＊chan	2
+# ㄔㄣ	＊chen	2
+# ㄔㄤ	＊chang	2
+# ㄔㄥ	＊cheng	2
+# ㄔㄨ	＊chu	2
+# ㄔㄨㄚ	＊chua	2
+# ㄔㄨㄛ	＊chuo	2
+# ㄔㄨㄞ	＊chuai	2
+# ㄔㄨㄟ	＊chui	2
+# ㄔㄨㄢ	＊chuan	2
+# ㄔㄨㄣ	＊chun	2
+# ㄔㄨㄤ	＊chuang	2
+# ㄔㄨㄥ	＊chong	2
+# ㄕㄚ	＊sha	2
+# ㄕㄜ	＊she	2
+# ㄕㄞ	＊shai	2
+# ㄕㄠ	＊shao	2
+# ㄕㄡ	＊shou	2
+# ㄕㄢ	＊shan	2
+# ㄕㄣ	＊shen	2
+# ㄕㄤ	＊shang	2
+# ㄕㄥ	＊sheng	2
+# ㄕㄨ	＊shu	2
+# ㄕㄨㄚ	＊shua	2
+# ㄕㄨㄛ	＊shuo	2
+# ㄕㄨㄞ	＊shuai	2
+# ㄕㄨㄢ	＊shuan	2
+# ㄕㄨㄤ	＊shuang	2
+# ㄖㄚ	＊ra	2
+# ㄖㄤ	＊rang	2
+# ㄖㄥ	＊reng	2
+# ㄖㄨ	＊ru	2
+# ㄗㄚ	＊za	2
+# ㄗㄞ	＊zai	2
+# ㄗㄠ	＊zao	2
+# ㄗㄡ	＊zou	2
+# ㄗㄢ	＊zan	2
+# ㄗㄣ	＊zen	2
+# ㄗㄤ	＊zang	2
+# ㄗㄥ	＊zeng	2
+# ㄗㄨ	＊zu	2
+# ㄗㄨㄛ	＊zuo	2
+# ㄗㄨㄟ	＊zui	2
+# ㄗㄨㄢ	＊zuan	2
+# ㄗㄨㄣ	＊zun	2
+# ㄗㄨㄥ	＊zong	2
+# ㄘㄚ	＊ca	2
+# ㄘㄞ	＊cai	2
+# ㄘㄠ	＊cao	2
+# ㄘㄡ	＊cou	2
+# ㄘㄢ	＊can	2
+# ㄘㄣ	＊cen	2
+# ㄘㄤ	＊cang	2
+# ㄘㄥ	＊ceng	2
+# ㄘㄨ	＊cu	2
+# ㄘㄨㄛ	＊cuo	2
+# ㄘㄨㄟ	＊cui	2
+# ㄘㄨㄢ	＊cuan	2
+# ㄘㄨㄣ	＊cun	2
+# ㄘㄨㄥ	＊cong	2
+# ㄙㄚ	＊sa	2
+# ㄙㄜ	＊se	2
+# ㄙㄞ	＊sai	2
+# ㄙㄟ	＊sei	2
+# ㄙㄠ	＊sao	2
+# ㄙㄡ	＊sou	2
+# ㄙㄢ	＊san	2
+# ㄙㄣ	＊sen	2
+# ㄙㄤ	＊sang	2
+# ㄙㄥ	＊seng	2
+# ㄙㄨ	＊su	2
+# ㄙㄨㄛ	＊suo	2
+# ㄙㄨㄟ	＊sui	2
+# ㄙㄨㄢ	＊suan	2
+# ㄙㄨㄣ	＊sun	2
+# ㄙㄨㄥ	＊song	2
+# ㄧㄚ	＊ya	2
+# ㄧㄛ	＊yo	2
+# ㄧㄝ	＊ye	2
+# ㄧㄠ	＊yao	2
+# ㄧㄡ	＊you	2
+# ㄧㄢ	＊yan	2
+# ㄧㄣ	＊yin	2
+# ㄧㄤ	＊yang	2
+# ㄧㄥ	＊ying	2
+# ㄨㄚ	＊wa	2
+# ㄨㄛ	＊wo	2
+# ㄨㄞ	＊wai	2
+# ㄨㄟ	＊wei	2
+# ㄨㄢ	＊wan	2
+# ㄨㄣ	＊wen	2
+# ㄨㄤ	＊wang	2
+# ㄨㄥ	＊weng	2
+# ㄩㄝ	＊yue	2
+# ㄩㄢ	＊yuan	2
+# ㄩㄣ	＊yun	2
+# ㄩㄥ	＊yong	2
+# ㄇㄞ	＊mai	2
+# ㄇㄟ	＊mei	2
+# ㄇㄧㄢ	＊mian	2
+# ㄇㄧㄣ	＊min	2
+# ㄇㄧㄥ	＊ming	2
+# ㄇㄨ	＊mu	2
+# ㄈㄛ	＊fo	2
+# ㄋㄞ	＊nai	2
+# ㄋㄟ	＊nei	2
+# ㄋㄡ	＊nou	2
+# ㄋㄥ	＊neng	2
+# ㄋㄧㄣ	＊nin	2
+# ㄋㄧㄤ	＊niang	2
+# ㄋㄧㄥ	＊ning	2
+# ㄋㄨ	＊nu	2
+# ㄋㄨㄚ	＊nua	2
+# ㄋㄨㄛ	＊nuo	2
+# ㄋㄨㄢ	＊nuan	2
+# ㄋㄨㄣ	＊nun	2
+# ㄋㄨㄥ	＊nong	2
+# ㄋㄩ	＊nv	2
+# ㄌㄞ	＊lai	2
+# ㄌㄢ	＊lan	2
+# ㄌㄧㄢ	＊lian	2
+# ㄌㄧㄤ	＊liang	2
+# ㄌㄨㄢ	＊luan	2
+# ㄌㄩ	＊lv	2
+# ㄌㄩㄢ	＊lvan	2
+# ㄏㄨㄞ	＊huai	2
+# ㄕㄟ	＊shei	2
+# ㄕㄨㄟ	＊shui	2
+# ㄖㄜ	＊re	2
+# ㄖㄠ	＊rao	2
+# ㄖㄡ	＊rou	2
+# ㄖㄢ	＊ran	2
+# ㄖㄣ	＊ren	2
+# ㄖㄨㄛ	＊ruo	2
+# ㄖㄨㄟ	＊rui	2
+# ㄖㄨㄚ	＊rua	2
+# ㄖㄨㄢ	＊ruan	2
+# ㄖㄨㄣ	＊run	2
+# ㄖㄨㄥ	＊rong	2
+# ㄗㄜ	＊ze	2
+# ㄗㄟ	＊zei	2
+# ㄧㄞ	＊yai	2
+# ㄇㄧㄡ	＊miu	2
+# ㄋㄧㄠ	＊niao	2
+# ㄌㄧㄚ	＊lia	2
+# ㄌㄩㄝ	＊lve	2
+# ㄍㄟ	＊gei	2
+# ㄕㄨㄣ	＊shun	2
+# ㄙㄨㄚ	＊sua	2
+# ㄈㄧㄠ	＊fiao	2
+# ㄉㄣ	＊den	2
+# ㄉㄧㄣ	＊din	2
+# ㄊㄜ	＊te	2
+# ㄊㄧㄣ	＊tin	2
+# ㄋㄣ	＊nen	2
+# ㄋㄩㄝ	＊nve	2
+# ㄎㄨㄛ	＊kuo	2
+# ㄓㄟ	＊zhei	2
+# ㄘㄜ	＊ce	2
+# ㄘㄟ	＊cei	2
+# ㄌㄛ	＊lo	2
 #####@ ㄅㄆㄇ中文所有拼法（省略聲調）（附加拼法）結束 #####
 #####@ ㄅㄆㄇ中文所有拼法（帶聲調）開始 #####
 ### 特殊 ###
@@ -1369,13 +1369,13 @@ use_preset_vocabulary: false
 ㄆㄥˉ	＊＊peng1	1
 ㄆㄧˉ	＊＊pi1	1
 ㄆㄧㄝˉ	＊＊pie1	1
-ㄆㄧㄚˉ	＊＊pia1	10
+ㄆㄧㄚˉ	＊＊pia1	0
 ㄆㄧㄠˉ	＊＊piao1	1
 ㄆㄧㄢˉ	＊＊pian1	1
 ㄆㄧㄣˉ	＊＊pin1	1
 ㄆㄧㄥˉ	＊＊ping1	1
 ㄆㄨˉ	＊＊pu1	1
-ㄆㄨㄛˉ	＊＊puo1	10
+ㄆㄨㄛˉ	＊＊puo1	0
 ㄇㄚˉ	＊＊ma1	1
 ㄇㄛˉ	＊＊mo1	1
 ㄇㄜˉ	＊＊me1	1
@@ -1421,7 +1421,7 @@ use_preset_vocabulary: false
 ㄉㄧㄢˉ	＊＊dian1	1
 ㄉㄧㄤˉ	＊＊diang1	1
 ㄉㄧㄥˉ	＊＊ding1	1
-ㄉㄧㄚˉ	＊＊dia1	10
+ㄉㄧㄚˉ	＊＊dia1	0
 ㄉㄨˉ	＊＊du1	1
 ㄉㄨㄛˉ	＊＊duo1	1
 ㄉㄨㄟˉ	＊＊dui1	1
@@ -1430,7 +1430,7 @@ use_preset_vocabulary: false
 ㄉㄨㄥˉ	＊＊dong1	1
 ㄊㄚˉ	＊＊ta1	1
 # ㄊㄜˉ	＊＊te1	0
-ㄊㄟˉ	＊＊tei1	10
+ㄊㄟˉ	＊＊tei1	0
 ㄊㄞˉ	＊＊tai1	1
 ㄊㄠˉ	＊＊tao1	1
 ㄊㄡˉ	＊＊tou1	1
@@ -1522,7 +1522,7 @@ use_preset_vocabulary: false
 ㄍㄨㄥˉ	＊＊gong1	1
 ㄎㄚˉ	＊＊ka1	1
 ㄎㄜˉ	＊＊ke1	1
-ㄎㄟˉ	＊＊kei1	10
+ㄎㄟˉ	＊＊kei1	0
 ㄎㄞˉ	＊＊kai1	1
 ㄎㄠˉ	＊＊kao1	1
 ㄎㄡˉ	＊＊kou1	1
@@ -1530,7 +1530,7 @@ use_preset_vocabulary: false
 ㄎㄣˉ	＊＊ken1	1
 ㄎㄤˉ	＊＊kang1	1
 ㄎㄥˉ	＊＊keng1	1
-ㄎㄧㄤˉ	＊＊kiang1	10
+ㄎㄧㄤˉ	＊＊kiang1	0
 ㄎㄨˉ	＊＊ku1	1
 ㄎㄨㄚˉ	＊＊kua1	1
 # ㄎㄨㄛˉ	＊＊kuo1	0
@@ -1657,7 +1657,7 @@ use_preset_vocabulary: false
 # ㄕㄨㄣˉ	＊＊shun1	0
 ㄕㄨㄤˉ	＊＊shuang1	1
 # ㄕㄨㄥˉ	＊＊shong1	0
-ㄖㄚˉ	＊＊ra1	10
+ㄖㄚˉ	＊＊ra1	0
 # ㄖㄜˉ	＊＊re1	0
 # ㄖㄠˉ	＊＊rao1	0
 # ㄖㄡˉ	＊＊rou1	0
@@ -1887,7 +1887,7 @@ use_preset_vocabulary: false
 ㄋㄧㄤˊ	＊＊niang2	1
 ㄋㄧㄥˊ	＊＊ning2	1
 ㄋㄨˊ	＊＊nu2	1
-ㄋㄨㄚˊ	＊＊nui2	10
+ㄋㄨㄚˊ	＊＊nui2	0
 ㄋㄨㄛˊ	＊＊nuo2	1
 ㄋㄨㄢˊ	＊＊nuan2	1
 ㄋㄨㄣˊ	＊＊nun2	1
@@ -2085,7 +2085,7 @@ use_preset_vocabulary: false
 ㄖㄨˊ	＊＊ru2	1
 ㄖㄨㄛˊ	＊＊ruo2	1
 ㄖㄨㄟˊ	＊＊rui2	1
-ㄖㄨㄚˊ	＊＊rua2	10
+ㄖㄨㄚˊ	＊＊rua2	0
 ㄖㄨㄢˊ	＊＊ruan2	1
 ㄖㄨㄣˊ	＊＊run2	1
 ㄖㄨㄥˊ	＊＊rong2	1
@@ -2215,7 +2215,7 @@ use_preset_vocabulary: false
 ㄆㄧㄣˇ	＊＊pin3	1
 ㄆㄧㄥˇ	＊＊ping3	1
 ㄆㄨˇ	＊＊pu3	1
-ㄆㄨㄛˇ	＊＊puo3	10
+ㄆㄨㄛˇ	＊＊puo3	0
 ㄇㄚˇ	＊＊ma3	1
 ㄇㄛˇ	＊＊mo3	1
 # ㄇㄜˇ	＊＊me3	0
@@ -2257,7 +2257,7 @@ use_preset_vocabulary: false
 ㄉㄧˇ	＊＊di3	1
 ㄉㄧㄝˇ	＊＊die3	1
 ㄉㄧㄠˇ	＊＊diao3	1
-ㄉㄧㄚˇ	＊＊dia3	10
+ㄉㄧㄚˇ	＊＊dia3	0
 # ㄉㄧㄡˇ	＊＊diu3	0
 ㄉㄧㄢˇ	＊＊dian3	1
 # ㄉㄧㄤˇ	＊＊diang3	0
@@ -2551,7 +2551,7 @@ use_preset_vocabulary: false
 ㄙㄨˇ	＊＊su3	1
 ㄙㄨㄛˇ	＊＊suo3	1
 ㄙㄨㄟˇ	＊＊sui3	1
-ㄙㄨㄚˇ	＊＊sua3	10
+ㄙㄨㄚˇ	＊＊sua3	0
 ㄙㄨㄢˇ	＊＊suan3	1
 ㄙㄨㄣˇ	＊＊sun3	1
 ㄙㄨㄥˇ	＊＊song3	1
@@ -2633,7 +2633,7 @@ use_preset_vocabulary: false
 ㄆㄧㄣˋ	＊＊pin4	1
 ㄆㄧㄥˋ	＊＊ping4	1
 ㄆㄨˋ	＊＊pu4	1
-ㄆㄨㄛˋ	＊＊puo4	10
+ㄆㄨㄛˋ	＊＊puo4	0
 ㄇㄚˋ	＊＊ma4	1
 ㄇㄛˋ	＊＊mo4	1
 ㄇㄜˋ	＊＊me4	1
@@ -2661,7 +2661,7 @@ use_preset_vocabulary: false
 ㄈㄣˋ	＊＊fen4	1
 ㄈㄤˋ	＊＊fang4	1
 ㄈㄥˋ	＊＊feng4	1
-ㄈㄧㄠˋ	＊＊fiao4	10
+ㄈㄧㄠˋ	＊＊fiao4	0
 ㄈㄨˋ	＊＊fu4	1
 ㄉㄚˋ	＊＊da4	1
 # ㄉㄜˋ	＊＊de4	0
@@ -2679,7 +2679,7 @@ use_preset_vocabulary: false
 # ㄉㄧㄡˋ	＊＊diu4	0
 ㄉㄧㄢˋ	＊＊dian4	1
 # ㄉㄧㄤˋ	＊＊diang4	0
-ㄉㄧㄣˋ	＊＊din4	10
+ㄉㄧㄣˋ	＊＊din4	0
 ㄉㄧㄥˋ	＊＊ding4	1
 ㄉㄨˋ	＊＊du4	1
 ㄉㄨㄛˋ	＊＊duo4	1
@@ -2699,7 +2699,7 @@ use_preset_vocabulary: false
 ㄊㄧㄝˋ	＊＊tie4	1
 ㄊㄧㄠˋ	＊＊tiao4	1
 ㄊㄧㄢˋ	＊＊tian4	1
-ㄊㄧㄣˋ	＊＊tin4	10
+ㄊㄧㄣˋ	＊＊tin4	0
 ㄊㄧㄥˋ	＊＊ting4	1
 ㄊㄨˋ	＊＊tu4	1
 ㄊㄨㄛˋ	＊＊tuo4	1
@@ -2945,7 +2945,7 @@ use_preset_vocabulary: false
 ㄗㄨㄥˋ	＊＊zong4	1
 ㄘㄚˋ	＊＊ca4	1
 ㄘㄜˋ	＊＊ce4	1
-ㄘㄟˋ	＊＊cei4	10
+ㄘㄟˋ	＊＊cei4	0
 ㄘㄞˋ	＊＊cai4	1
 ㄘㄠˋ	＊＊cao4	1
 ㄘㄡˋ	＊＊cou4	1
@@ -3051,7 +3051,7 @@ use_preset_vocabulary: false
 ㄆㄧ˙	＊＊pi5	1
 # ㄆㄧㄝ˙	＊＊pie5	0
 # ㄆㄧㄠ˙	＊＊piao5	0
-ㄆㄧㄚ˙	＊＊pia5	10
+ㄆㄧㄚ˙	＊＊pia5	0
 ㄆㄧㄢ˙	＊＊pian5	1
 ㄆㄧㄣ˙	＊＊pin5	1
 ㄆㄧㄥ˙	＊＊ping5	1
@@ -3098,7 +3098,7 @@ use_preset_vocabulary: false
 ㄉㄧㄝ˙	＊＊die5	1
 ㄉㄧㄠ˙	＊＊diao5	1
 ㄉㄧㄡ˙	＊＊diu5	1
-ㄉㄧㄚ˙	＊＊dia5	10
+ㄉㄧㄚ˙	＊＊dia5	0
 ㄉㄧㄢ˙	＊＊dian5	1
 # ㄉㄧㄤ˙	＊＊diang5	0
 ㄉㄧㄥ˙	＊＊ding5	1
