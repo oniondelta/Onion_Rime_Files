@@ -5,13 +5,14 @@
 # 中文字詞標註使用拼音
 ---
 name: bopomo_onionplus.extended
-version: "202203"
+version: "202209"
 sort: by_weight
 vocabulary: essay-zh-hant-mc
 #use_preset_vocabulary: true
 import_tables:
   - terra_pinyin_onion
   - terra_pinyin_onion_add
+  - mixin_bpmf  #內嵌注音文，混打。
   - phrases.chtp
 #  - phrases.cht
 ...

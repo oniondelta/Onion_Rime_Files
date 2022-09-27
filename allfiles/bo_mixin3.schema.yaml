@@ -313,6 +313,15 @@ speller:
 #    - abbrev/^([bpmfdtnlgkhjqxZCSrzcsiuv]).+(\d)$/$1$2/ #使得ㄎˇㄈˇ（可否）可以打的出來 #新增iuv，使得ㄧˊㄉˊ（贏得）可以打出
 #    - abbrev/^([bpmfdtnlgkhjqxZCSrzcs]).+(\d)$/$1$2/ #同上，但少了ㄧㄨㄩ
     - abbrev/^([bpmfdtnlgkhjqx]).+(\d)$/$1$2/ #同上，但再少了ㄓㄔㄕㄖㄗㄘㄙ
+##### 內嵌注音文 #####
+    - xform|^＊([12345])$|r$1| #聲調，「ㄖ」「聲調」打出聲調不被省略
+    - abbrev|^＊([bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR]+)$|$1|
+    - abbrev|^＊([bpmfdtnlgkhjqx])$|$1\x31| #\x31=數字1
+    - xform|^＊([ZCSrzcsiuvaoeEAIOUMNKGR])$|$1\x31|
+    # - erase|^＊[^＊]+$| #消除不含聲調注音（不消除也不影響）
+    # - abbrev|^＊＊([bpmfdtnlgkhjqx]1)$|$1|
+    # - erase|^＊＊([bpmfdtnlgkhjqx]1)$|
+    - xform|^＊＊|| #開頭「＊」使注音文不被前面縮略，該正則回復
 ##### 注音聲韻母亂序 #####
     - derive/^([bpmfdtnlgkhjqxZCSrzcs])([iuv])/$2$1/
     - derive/^([iuv])([aoeEAIOUMNKGR])/$2$1/

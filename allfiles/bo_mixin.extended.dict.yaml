@@ -6,13 +6,14 @@
 # 包含中文、韓語、日語、拉丁+音標
 ---
 name: bo_mixin.extended
-version: "202204"
+version: "202209"
 sort: by_weight
 vocabulary: essay-zh-hant-mc
 #use_preset_vocabulary: true
 import_tables:
   - terra_pinyin_onion
   - terra_pinyin_onion_add
+  - mixin_bpmf  #內嵌注音文，混打。
   - bo_mixin_jp
   # - bo_mixin_kr  #《韓文洋蔥形碼》  #此項打開時，bo_mixin_kr_hnc 請關閉。
   - bo_mixin_kr_hnc  #《韓文HNC羅馬字》  #此項打開時，bo_mixin_kr 請關閉。
