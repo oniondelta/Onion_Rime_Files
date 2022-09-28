@@ -437,7 +437,7 @@ use_preset_vocabulary: false
 # ㄋㄧㄤ
 # ㄋㄧㄥ
 # ㄋㄨ
-# ㄋㄨㄚ
+# ㄋㄨㄟ
 # ㄋㄨㄛ
 # ㄋㄨㄢ
 # ㄋㄨㄣ
@@ -844,7 +844,7 @@ use_preset_vocabulary: false
 ㄋㄧㄤ	＊n ＊yi ＊ang	2
 ㄋㄧㄥ	＊n ＊yi ＊eng	2
 ㄋㄨ	＊n ＊wu	2
-ㄋㄨㄚ	＊n ＊wu ＊a	2
+ㄋㄨㄟ	＊n ＊wu ＊ei	2
 ㄋㄨㄛ	＊n ＊wu ＊o	2
 ㄋㄨㄢ	＊n ＊wu ＊an	2
 ㄋㄨㄣ	＊n ＊wu ＊en	2
@@ -1251,7 +1251,7 @@ use_preset_vocabulary: false
 # ㄋㄧㄤ	＊niang	2
 # ㄋㄧㄥ	＊ning	2
 # ㄋㄨ	＊nu	2
-# ㄋㄨㄚ	＊nua	2
+# ㄋㄨㄟ	＊nui	2
 # ㄋㄨㄛ	＊nuo	2
 # ㄋㄨㄢ	＊nuan	2
 # ㄋㄨㄣ	＊nun	2
@@ -1887,7 +1887,7 @@ use_preset_vocabulary: false
 ㄋㄧㄤˊ	＊＊niang2	1
 ㄋㄧㄥˊ	＊＊ning2	1
 ㄋㄨˊ	＊＊nu2	1
-ㄋㄨㄚˊ	＊＊nui2	0
+ㄋㄨㄟˊ	＊＊nui2	0
 ㄋㄨㄛˊ	＊＊nuo2	1
 ㄋㄨㄢˊ	＊＊nuan2	1
 ㄋㄨㄣˊ	＊＊nun2	1
