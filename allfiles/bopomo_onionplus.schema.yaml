@@ -172,8 +172,8 @@ speller:
 ##### 非正確注音（補空碼或慣用發音）轉寫 #####
     - xform/[)(]//
 ########################################
-    - xform/iu/iou/
-    - xform/ui/uei/
+    - xform/iu/iU/ #iou
+    - xform/ui/uI/ #uei
     - xform/ong/ung/
     - xform/yi?/i/
     - xform/wu?/u/
@@ -258,8 +258,8 @@ bpm_reverse_lookup:
   overwrite_comment: true
   dictionary: bopomo_onionplus.extended
   comment_format:
-    - xform/iu/iou/
-    - xform/ui/uei/
+    - xform/iu/iU/ #iou
+    - xform/ui/uI/ #uei
     - xform/ong/ung/
     - xform/yi?/i/
     - xform/wu?/u/

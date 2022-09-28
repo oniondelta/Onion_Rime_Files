@@ -4,7 +4,7 @@
 schema:
   schema_id: onion-array30
   name: "▦ 行列３０（洋蔥版）"
-  version: "202204"
+  version: "202209"
   author:
     - 洋蔥 <deltazonetw@gmail.com>
   description: |
@@ -299,8 +299,8 @@ bpmf_reverse_lookup:
   dictionary: "Mount_bopomo.extended"
   overwrite_comment: true
   comment_format:
-    - xform/iu/iou/
-    - xform/ui/uei/
+    - xform/iu/iU/ #iou
+    - xform/ui/uI/ #uei
     - xform/ong/ung/
     - xform/yi?/i/
     - xform/wu?/u/

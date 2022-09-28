@@ -525,8 +525,8 @@ phonetic_reverse_lookup:
   dictionary: "Mount_bopomo.extended"
   overwrite_comment: true
   comment_format:
-    - xform/iu/iou/
-    - xform/ui/uei/
+    - xform/iu/iU/ #iou
+    - xform/ui/uI/ #uei
     - xform/ong/ung/
     - xform/yi?/i/
     - xform/wu?/u/
