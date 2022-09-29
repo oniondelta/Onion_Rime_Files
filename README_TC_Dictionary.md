@@ -58,10 +58,10 @@
 
 - 主要：
 
+    * 〈[萌典](https://www.moedict.tw/)〉
+
     * 〈[教育部異體字字典](https://dict.variants.moe.edu.tw/variants/rbt/home.do)〉
        
-    * 〈[萌典](https://www.moedict.tw/)〉
-    
     * 〈[古今文字集成](http://www.ccamc.co/)〉
     
     * 〈[漢語大字典(白雲深處人家)](https://homeinmists.ilotus.org/hd/hydzd.php)〉
