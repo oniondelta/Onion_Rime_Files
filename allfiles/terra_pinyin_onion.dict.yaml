@@ -58185,6 +58185,8 @@ min_phrase_weight: 100
 侮弄	wu3 nong4
 侮辱	wu3 ru4
 侮辱	wu3 ru3
+侮辱	wu1 ru4	80%
+侮辱	wu1 ru3	80%
 侲子	zhen4 zi3
 侵削	qin1 xue4
 侵占	qin1 zhan4
@@ -60188,6 +60190,8 @@ min_phrase_weight: 100
 公法上職務關係	gong1 fa3 shang4 zhi2 wu4 guan1 xi1	80%
 公然侮辱	gong1 ran2 wu3 ru4
 公然侮辱	gong1 ran2 wu3 ru3
+公然侮辱	gong1 ran2 wu1 ru4	80%
+公然侮辱	gong1 ran2 wu1 ru3	80%
 公營企業	gong1 ying2 qi4 ye4
 公爺	gong1 ye5	80%
 公爺	gong1 ye2
@@ -112291,4 +112295,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 112294 #####
+##### @結束 END - 112298 #####
