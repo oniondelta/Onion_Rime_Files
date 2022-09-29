@@ -1,6 +1,20 @@
-#（檔案文件說明
+# 檔案文件說明
+
 
 ```
+「設定檔」：方案主要設定檔，不是附加掛載之方案
+
+「引入檔」：設定檔中可用語法引入該檔內程式碼，多個檔案同樣設定可用，方便修改
+
+主「字詞典」：設定檔中連結的字詞典，該檔內可連結引入其他字詞典
+
+「字典」：只有單字、「詞典」：只有詞句、「字詞典」：有單字也有詞句（官方並無如此區分，都是引入字詞的 .dict.yaml 檔，只是習慣把單字和詞句分開放置）
+
+「用戶短語」：添加字詞彙用。可無視設定檔設置內容，硬性添加也不產生其它問題，新手愛用，但不推薦。因為在輸入時可以被快捷鍵刪除，曾誤刪過。
+
+「 lua 程式碼檔」：lua 程式碼寫於此，也可用它引入 lua 資料夾中的 lua 文件
+
+
 ├─ Mount_bopomo.extended.dict.yaml            〈掛載用 注音方案〉主「字詞典」
 ├─ Mount_bopomo.schema.yaml                   〈掛載用 注音方案〉「設定檔」
 ├─ Mount_ocm.extended.dict.yaml               
@@ -124,7 +138,7 @@
 ├─ punct_ocm.yaml                             
 ├─ punct_ovff.dict.yaml                       
 ├─ punct_ovff.schema.yaml                     
-├─ rime.lua                                   Lua 程式碼  （引入用，主要程式文件在 Lua 資料夾中）
+├─ rime.lua                                   「 lua 程式碼檔」  （引入用，主要程式文件在 lua 資料夾中）
 ├─ symbols-mark.dict.yaml                     
 ├─ symbols-mark.schema.yaml                   
 ├─ symbols_bpmf.dict.yaml                     〈掛載用 系列符號（注音） 方案〉主「字詞典」  （注音方案掛載）
