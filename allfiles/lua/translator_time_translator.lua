@@ -51,10 +51,10 @@ local function Version()
 end
 
 local function Ver_info_frontend()
-  return string.format("%s %s %s",
-  rime_api.get_distribution_name(),
+  return string.format("%s %s  (%s)",
   rime_api.get_distribution_code_name(),
-  rime_api.get_distribution_version())
+  rime_api.get_distribution_version(),
+  rime_api.get_distribution_name())
 end
 
 local function Ver_info_librime()
