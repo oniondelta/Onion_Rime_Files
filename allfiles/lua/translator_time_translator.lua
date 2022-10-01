@@ -21,7 +21,7 @@ local jieqi_out1 = lc_2.jieqi_out1
 
 ----------------------------------------------------------------------------------------
 --[[
-檢查版本
+檢查各種組件版本
 --]]
 local function Version()
   local ver
@@ -50,25 +50,16 @@ local function Version()
   end
 end
 
-local function Ver_info_frontend()
-  return string.format("%s %s  (%s)",
+local function Ver_info()
+  distribution_v = string.format("%s %s  (%s)",
   rime_api.get_distribution_code_name(),
   rime_api.get_distribution_version(),
   rime_api.get_distribution_name())
-end
-
-local function Ver_info_librime()
-  return string.format("librime %s",
-  rime_api.get_rime_version())
-end
-
-local function Ver_info_lua()
-  return string.format("librime-lua %s    %s",
-  Version() ,_VERSION )
-end
-
-local function Ver_info_id()
-  return string.format("%s", rime_api.get_user_id())
+  librime_v = string.format("librime %s", rime_api.get_rime_version())
+  librime_lua_v = string.format("librime-lua %s", Version())
+  lua_v = string.format("%s", _VERSION)
+  i_id = string.format("%s", rime_api.get_user_id())
+  return {distribution_v, librime_v, librime_lua_v, lua_v, i_id}
 end
 
 
@@ -1357,10 +1348,11 @@ local function t_translator(input, seg)
 
     -- 版本資訊
     if(input=="`v") then
-      yield(Candidate("version_info", seg.start, seg._end, Ver_info_frontend(), "〔版本〕"))
-      yield(Candidate("version_info", seg.start, seg._end, Ver_info_librime(), "〔版本〕"))
-      yield(Candidate("version_info", seg.start, seg._end, Ver_info_lua(), "〔版本〕"))
-      yield(Candidate("version_info", seg.start, seg._end, Ver_info_id(), "〔 id 〕"))
+      yield(Candidate("version_info", seg.start, seg._end, Ver_info()[1], "〔 distribution_version 〕"))
+      yield(Candidate("version_info", seg.start, seg._end, Ver_info()[2], "〔 rime_version 〕"))
+      yield(Candidate("version_info", seg.start, seg._end, Ver_info()[3], "〔 librime-lua_version 〕"))
+      yield(Candidate("version_info", seg.start, seg._end, Ver_info()[4], "〔 lua_version 〕"))
+      yield(Candidate("version_info", seg.start, seg._end, Ver_info()[5], "〔 installation_id 〕"))
       return
     end
 
@@ -3170,10 +3162,11 @@ local function t2_translator(input, seg)
 
     -- 版本資訊
     if(input=="'/v") then
-      yield(Candidate("version_info", seg.start, seg._end, Ver_info_frontend(), "〔版本〕"))
-      yield(Candidate("version_info", seg.start, seg._end, Ver_info_librime(), "〔版本〕"))
-      yield(Candidate("version_info", seg.start, seg._end, Ver_info_lua(), "〔版本〕"))
-      yield(Candidate("version_info", seg.start, seg._end, Ver_info_id(), "〔 id 〕"))
+      yield(Candidate("version_info", seg.start, seg._end, Ver_info()[1], "〔 distribution_version 〕"))
+      yield(Candidate("version_info", seg.start, seg._end, Ver_info()[2], "〔 rime_version 〕"))
+      yield(Candidate("version_info", seg.start, seg._end, Ver_info()[3], "〔 librime-lua_version 〕"))
+      yield(Candidate("version_info", seg.start, seg._end, Ver_info()[4], "〔 lua_version 〕"))
+      yield(Candidate("version_info", seg.start, seg._end, Ver_info()[5], "〔 installation_id 〕"))
       return
     end
 
