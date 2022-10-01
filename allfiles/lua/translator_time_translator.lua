@@ -21,6 +21,60 @@ local jieqi_out1 = lc_2.jieqi_out1
 
 ----------------------------------------------------------------------------------------
 --[[
+檢查版本
+--]]
+local function Version()
+  local ver
+  if rime_api.get_distribution_name then
+    return 185
+  elseif LevelDb then
+    return 177
+  elseif Opencc then
+    return 147
+  elseif KeySequence and KeySequence().repr then
+    return 139
+  elseif  ConfigMap and ConfigMap().keys then
+    return 127
+  elseif Projection then
+    return 102
+  elseif KeyEvent then
+    return 100
+  elseif Memory then
+    return 80
+  elseif rime_api.get_user_data_dir then
+    return 9
+  elseif log then
+    return 9
+  else
+    return 0
+  end
+end
+
+local function Ver_info_frontend()
+  return string.format("%s %s %s",
+  rime_api.get_distribution_name(),
+  rime_api.get_distribution_code_name(),
+  rime_api.get_distribution_version())
+end
+
+local function Ver_info_librime()
+  return string.format("librime %s",
+  rime_api.get_rime_version())
+end
+
+local function Ver_info_lua()
+  return string.format("librime-lua %s    %s",
+  Version() ,_VERSION )
+end
+
+local function Ver_info_id()
+  return string.format("%s", rime_api.get_user_id())
+end
+
+
+
+
+--[[
 數字日期字母各種轉寫
 --]]
 -- 日期轉大寫1
@@ -1300,6 +1354,15 @@ local function t_translator(input, seg)
     -- local ll_1, ll_2, ly_1, ly_2, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
     -- local aptime1, aptime2, aptime3, aptime4, aptime5, aptime6, aptime7, aptime8, aptime0_1, aptime0_2, aptime0_3, aptime0_4, aptime00_1, aptime00_2,  aptime00_3, aptime00_4 = time_out1()
     -- local aptime_c1, aptime_c2, aptime_c3, aptime_c4, ap_5 = time_out2()
+
+    -- 版本資訊
+    if(input=="`v") then
+      yield(Candidate("version_info", seg.start, seg._end, Ver_info_frontend(), "〔版本〕"))
+      yield(Candidate("version_info", seg.start, seg._end, Ver_info_librime(), "〔版本〕"))
+      yield(Candidate("version_info", seg.start, seg._end, Ver_info_lua(), "〔版本〕"))
+      yield(Candidate("version_info", seg.start, seg._end, Ver_info_id(), "〔 id 〕"))
+      return
+    end
 
     -- lua 程式原生時間
     if (input == "`p") then
@@ -2672,8 +2735,8 @@ local function t_translator(input, seg)
       , { '  c [0-9]+〔內碼十進制 Dec〕', '⑬' }
       , { '  o [0-7]+〔內碼八進制 Oct〕', '⑭' }
       -- , { '  e [0-9a-f]+〔Percent/URL encoding〕', '⑮' }
-      , { '======= 結束 =======', '⑮' }
-      , { '', '⑯' }
+      , { '  v〔版本資訊〕', '⑮' }
+      , { '======= 結束 =======', '⑯' }
       , { '', '⑰' }
       , { '', '⑱' }
       , { '', '⑲' }
@@ -3104,6 +3167,15 @@ local function t2_translator(input, seg)
     -- local ll_1, ll_2, ly_1, ly_2, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
     -- local aptime1, aptime2, aptime3, aptime4, aptime5, aptime6, aptime7, aptime8, aptime0_1, aptime0_2, aptime0_3, aptime0_4, aptime00_1, aptime00_2,  aptime00_3, aptime00_4 = time_out1()
     -- local aptime_c1, aptime_c2, aptime_c3, aptime_c4, ap_5 = time_out2()
+
+    -- 版本資訊
+    if(input=="'/v") then
+      yield(Candidate("version_info", seg.start, seg._end, Ver_info_frontend(), "〔版本〕"))
+      yield(Candidate("version_info", seg.start, seg._end, Ver_info_librime(), "〔版本〕"))
+      yield(Candidate("version_info", seg.start, seg._end, Ver_info_lua(), "〔版本〕"))
+      yield(Candidate("version_info", seg.start, seg._end, Ver_info_id(), "〔 id 〕"))
+      return
+    end
 
     -- lua 程式原生時間
     if (input == "'/p") then
@@ -4475,8 +4547,8 @@ local function t2_translator(input, seg)
       , { '  c [0-9]+〔內碼十進制 Dec〕', '⑬' }
       , { '  o [0-7]+〔內碼八進制 Oct〕', '⑭' }
       -- , { '  e [0-9a-f]+〔Percent/URL encoding〕', '⑮' }
-      , { '======= 結束 =======', '⑮' }
-      , { '', '⑯' }
+      , { '  v〔版本資訊〕', '⑮' }
+      , { '======= 結束 =======', '⑯' }
       , { '', '⑰' }
       , { '', '⑱' }
       , { '', '⑲' }
