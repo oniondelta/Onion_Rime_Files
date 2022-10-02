@@ -143,7 +143,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "202209"
+version: "202210"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -58652,6 +58652,7 @@ min_phrase_weight: 100
 倒替	dao3 ti4
 倒會	dao3 hui4
 倒板	dao3 ban3
+倒板	dao4 ban3
 倒枕捶床	dao3 zhen3 chui2 chuang2
 倒枕搥床	dao3 zhen3 chui2 chuang2
 倒果為因	dao4 guo3 wei2 yin1
@@ -112291,4 +112292,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 112294 #####
+##### @結束 END - 112295 #####
