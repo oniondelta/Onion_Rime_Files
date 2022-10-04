@@ -68,8 +68,8 @@ local function kr_2set_0m(key,env)
     return 1
 
   --- 增加一般韓文輸入法操作，空格上屏自動末端空一格。
-  elseif context:get_option('space_mode') then
-    if key:repr() == 'space' and (context:is_composing()) and (not context:has_menu()) and string.find(context.input, '^[a-zQWERTOP]+$') then  --只有韓文，不含漢字。如果漢字如此出字會不能記憶。
+  elseif context:get_option('space_mode') and key:repr() == 'space' then
+    if (context:is_composing()) and (not context:has_menu()) and string.find(context.input, '^[a-zQWERTOP]+$') then  --只有韓文，不含漢字。如果漢字如此出字會不能記憶。
     -- if key:repr() == 'space' and (context:is_composing()) and (not context:has_menu()) then
     -- if key:repr() == 'space' and (context:is_composing()) and (not context:has_menu()) and (not string.find(hangul, "[%a%c%s]")) and (caret_pos == context.input:len()) then
       engine:commit_text(hangul .. " ")
