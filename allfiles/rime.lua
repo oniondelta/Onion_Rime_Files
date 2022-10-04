@@ -131,6 +131,9 @@ mix30_nil_comment_up_filter =  require("filter_mix30_nil_comment_up_filter")
 en_sort_filter =  require("filter_en_sort_filter")
 
 
+--- kr_hnc_1m_filter （hangeul_hnc）
+-- 韓語遮屏只剩一個選項。開關（kr_1m）
+kr_hnc_1m_filter =  require("filter_kr_hnc_1m_filter")
 
 
 -- --- mix_cf2_cfp_smf_filter （ocm_mixin）
@@ -183,6 +186,11 @@ mix_apc_s2rm_3 = require("processor_mix_apc_s2rm_3")
 -- 使初始空白可以直接上屏
 -- 於注音方案改變在非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
 mix_apc_pluss = require("processor_mix_apc_pluss")
+
+
+-- --- kr_2set_0m （hangeul2set_zeromenu）
+-- -- 韓語遮屏成零選項。
+-- kr_2set_0m = require("processor_kr_2set_0m")
 
 
 

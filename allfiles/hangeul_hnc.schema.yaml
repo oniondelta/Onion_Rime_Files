@@ -4,7 +4,7 @@
 schema:
   schema_id: hangeul_hnc # 注意此ID與文件名裏 .schema.yaml 之前的部分相同
   name: ❃韓語HNC❃
-  version: "202204"
+  version: "202210"
   author:
     - 『洋蔥』
   description: |
@@ -16,11 +16,19 @@ schema:
 switches:
   - name: ascii_mode
     reset: 0
-    states: [ "韓文", "英文" ] 
+    states: [ "韓文", "英文" ]
   - name: full_shape
     states: [ "半形", "全形" ]
+  - name: ascii_punct
+    reset: 0
+    states: [ "。，", "．，" ]
+  - name: kr_1m
+    reset: 1
+    states: [ "１０選", "１選" ]
 
 engine:
+  filters:
+    - lua_filter@kr_hnc_1m_filter
   processors:
     - ascii_composer
     - recognizer
@@ -42,6 +50,9 @@ engine:
     - table_translator@hangeul_hnc_phrase
     # - reverse_lookup_translator
     - script_translator
+
+kr_hnc_1m_filter:
+  tags: [ abc ]
 
 menu:
   alternative_select_keys: "1234567890"
@@ -207,6 +218,8 @@ key_binder:
     - {accept: space, send: Return, when: paging}
     # - {accept: Return, send: space, when: composing}
     # - {accept: Return, send: Return, when: paging}
+######################
+    - {accept: Control+semicolon, toggle: kr_1m, when: always}
 ######################
 
 editor:
