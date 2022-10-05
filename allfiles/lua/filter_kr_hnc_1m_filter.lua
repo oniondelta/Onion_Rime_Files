@@ -38,8 +38,10 @@ local function kr_hnc_1m_filter(input, env)
     end
   end
 
-  if (kr_1m) and (not special_key_v) and (not special_key_qq) and (not special_key_slash) then
-    yield(cands[1])
+  if (kr_1m) and cands[1]~=nil then
+    if (not special_key_v) and (not special_key_qq) and (not special_key_slash) then
+      yield(cands[1])
+    end
   end
 
 end
