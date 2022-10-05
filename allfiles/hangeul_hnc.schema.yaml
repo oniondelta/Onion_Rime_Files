@@ -24,7 +24,7 @@ switches:
     states: [ "。，", "．，" ]
   - name: kr_1m
     reset: 1
-    states: [ "展開", "１選" ]
+    states: [ "展開", "單選" ]
 
 engine:
   filters:

@@ -39,6 +39,7 @@
 --      - lua_filter@array30_nil_filter           --（引lua資料夾）（onion-array30） 行列30空碼'⎔'轉成不輸出任何符號，符合原生。後來移至「=」「=」反查用。
 --      - lua_filter@array30_spaceup_filter       --（關） 行列30開關一二碼按空格後，是否直上或可能有選單。
 --      - lua_filter@en_sort_filter               --（引lua資料夾）（easy_en_super和其掛接）如同英漢字典一樣排序，候選項重新排序。開關（en_sort）
+--      - lua_filter@kr_hnc_1m_filter             --（引lua資料夾）（hangeul_hnc）韓語遮屏只剩一個選項。開關（kr_1m）
 --
 --      - ＊合併兩個以上函數：
 --      - lua_filter@mix30_nil_comment_filter     --（關） 合併 array30_nil_filter 和 array30_comment_filter，兩個 lua filter 太耗效能。
@@ -62,6 +63,8 @@
 --      - lua_processor@s2r_most                  --（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin(1,2,4)和 plus 用，精簡寫法）
 --      - lua_processor@s2r_mixin3                --（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin3 (特殊正則)專用）
 --      - lua_processor@mobile_bpmf               --（引lua資料夾）（手機注音專用） 使 email_url_translator 功能按空白都能直接上屏
+--      - lua_processor@kr_2set_0m _choice        --（引lua資料夾）（hangeul2set_zeromenu）韓語成零選項。開關（space_mode）、開關（kr_0m）
+--      - lua_processor@kr_2set_0m                --（關）（hangeul2set_zeromenu）韓語成零選項。開關（space_mode）
 --
 --      - ＊合併兩個以上函數：
 --      - lua_processor@array30up_mix             --（引lua資料夾）（onion-array30） 合併 array30up 和 array30up_zy，增進效能。
@@ -188,9 +191,14 @@ mix_apc_s2rm_3 = require("processor_mix_apc_s2rm_3")
 mix_apc_pluss = require("processor_mix_apc_pluss")
 
 
+-- --- kr_2set_0m _choice（hangeul2set_zeromenu）
+-- -- 韓語成零選項。開關（space_mode）、開關（kr_0m）
+-- kr_2set_0m_choice = require("processor_kr_2set_0m_choice")
+
+
 -- --- kr_2set_0m （hangeul2set_zeromenu）
--- -- 韓語遮屏成零選項。
--- kr_2set_0m = require("processor_kr_2set_0m")
+-- -- 韓語成零選項。開關（space_mode）
+--  kr_2set_0m = require("processor_kr_2set_0m")
 
 
 
