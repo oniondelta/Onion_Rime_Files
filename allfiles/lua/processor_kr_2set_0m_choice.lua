@@ -97,15 +97,13 @@ local function kr_2set_0m_choice(key,env)
   elseif not context:get_option('kr_0m') then
 
     --- 不在輸入狀態略過處理
-    if (not context:is_composing()) then
+    if (not context:is_composing()) or (not context:get_option('space_mode')) or key:repr() ~= 'space' then
       return 2
 
-    elseif context:get_option('space_mode') and key:repr() == 'space' then
-      if string.find(context.input, '^[a-zQWERTOP]+$') and (not string.find(hangul, "[%a%c%s]")) and (caret_pos == context.input:len()) then
-        engine:commit_text(hangul .. " ")
-        context:clear()
-        return 1
-      end
+    elseif string.find(context.input, '^[a-zQWERTOP]+$') and (not string.find(hangul, "[%a%c%s]")) and (caret_pos == context.input:len()) then
+      engine:commit_text(hangul .. " ")
+      context:clear()
+      return 1
 
     end
 
