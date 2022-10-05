@@ -18,10 +18,13 @@ local function kr_hnc_1m_filter(input, env)
 
   local cands = {}
   for cand in input:iter() do
-    local kr_preedit = cand.preedit
-    local special_key = string.find(kr_preedit, '[›]$')
+    -- local kr_preedit = cand.preedit
+    -- local special_key = string.find(kr_preedit, '[›]$')
     -- local han_key = string.find(kr_preedit, '；$')
-    if (kr_1m) and (not special_key) then
+    local special_key_v = string.find(env.engine.context.input, '[v;]$')
+    local special_key_qq = string.find(env.engine.context.input, 'qq$')
+    local special_key_slash = string.find(env.engine.context.input, '//$')
+    if (kr_1m) and (not special_key_v) and (not special_key_qq) and (not special_key_slash) then
       table.insert(cands, cand)
       -- yield(cands[1])
   -- elseif (kr_1m) then
@@ -35,7 +38,7 @@ local function kr_hnc_1m_filter(input, env)
     end
   end
 
-  if (kr_1m) and (not special_key) then
+  if (kr_1m) and (not special_key_v) and (not special_key_qq) and (not special_key_slash) then
     yield(cands[1])
   end
 
