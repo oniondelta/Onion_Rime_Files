@@ -1167,6 +1167,12 @@ end
 內碼輸入法，收入 unicode 碼得出該碼字元
 --]]
 local function utf8_out(cp)
+
+  if cp > 1114111 then  -- 後來新增避免 error
+    cp=0
+    return cp
+  end
+
   local string_char = string.char
   if cp < 128 then
     return string_char(cp)
