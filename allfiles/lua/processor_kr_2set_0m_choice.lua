@@ -8,6 +8,7 @@
 --]]
 
 
+-- local set_char = Set {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}  --> {a=true,b=true...}
 local set_char = Set {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" , "Q", "W", "E", "R", "T" ,"O" ,"P"}  --> {a=true,b=true...}
 local set_number = Set {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"}
 
@@ -17,6 +18,27 @@ local function kr_2set_0m_choice(key,env)
   local context = engine.context
   local hangul = context:get_commit_text()
   local caret_pos = context.caret_pos
+
+
+  -- local function check_qwertop()
+  --   if key:eq(KeyEvent("Shift+Q")) then
+  --     return true
+  --   elseif key:eq(KeyEvent("Shift+W")) then
+  --     return true
+  --   elseif key:eq(KeyEvent("Shift+E")) then
+  --     return true
+  --   elseif key:eq(KeyEvent("Shift+R")) then
+  --     return true
+  --   elseif key:eq(KeyEvent("Shift+T")) then
+  --     return true
+  --   elseif key:eq(KeyEvent("Shift+O")) then
+  --     return true
+  --   elseif key:eq(KeyEvent("Shift+P")) then
+  --     return true
+  --   else
+  --     return false
+  --   end
+  -- end
 
 
   --- pass ascii_mode
@@ -49,13 +71,48 @@ local function kr_2set_0m_choice(key,env)
 
   elseif context:get_option('kr_0m') then
 
+    --------------------------------------------
+    --- 函數格式 ascii(key, 'a-zQWERTOP')，function ascii(key,pat) 該函數需打開
+
+    --- return char(0x20~0x7f) or ""
+    local function ascii(key,pat)
+      local pat = pat and ('^[%s]$'):format(pat) or "^.$"
+      local code = key.keycode
+      return key.modifier <=1 and
+             code >=0x20 and code <=0x7f and
+             string.char(code):match(pat) or ""
+    end
+
     --- 《最主要部分》使 [a-zQWERTOP] 組字且半上屏
-    -- local asciikeys = string.char(key.keycode)
-    if set_char[string.char(key.keycode)] then
+    if set_char[ascii(key, 'a-zQWERTOP')] then
       context:reopen_previous_segment()
-      context.input = context.input .. string.char(key.keycode)
+      context.input = context.input .. ascii(key, 'a-zQWERTOP')
       context:confirm_current_selection()
       return 1
+
+    --------------------------------------------
+    -- ---- 功能正常，但輸入時，錯誤日誌會報錯 char 超出範圍
+
+    -- --- 《最主要部分》使 [a-zQWERTOP] 組字且半上屏
+    -- -- local asciikeys = string.char(key.keycode)  -- char 沒限定範圍會報錯
+    -- if set_char[string.char(key.keycode)] then  -- char 沒限定範圍會報錯
+    --   context:reopen_previous_segment()
+    --   context.input = context.input .. string.char(key.keycode)  -- char 沒限定範圍會報錯
+    --   context:confirm_current_selection()
+    --   return 1
+
+    --------------------------------------------
+    -- ---- 最初方法，function check_qwertop() 該函數需打開
+
+    -- --- 《最主要部分》使 [a-zQWERTOP] 組字且半上屏
+    -- if set_char[key:repr()] or check_qwertop() then
+    --   local lastword = string.gsub(key:repr(), 'Shift%+', '')
+    --   context:reopen_previous_segment()
+    --   context.input = context.input .. lastword
+    --   context:confirm_current_selection()
+    --   return 1
+
+    --------------------------------------------
 
     --- 不在輸入狀態或是有選單時略過處理
     elseif (not context:is_composing()) or (context:has_menu()) then
