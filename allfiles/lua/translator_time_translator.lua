@@ -1167,12 +1167,12 @@ end
 內碼輸入法，收入 unicode 碼得出該碼字元
 --]]
 local function utf8_out(cp)
-
-  if cp > 1114111 then  -- 後來新增避免 error
-    cp=0
+  --- 新增避免 error！
+  if cp > 1048575 then
+    cp = 0
     return cp
   end
-
+  --- 以下為原碼開始
   local string_char = string.char
   if cp < 128 then
     return string_char(cp)
@@ -2863,6 +2863,10 @@ local function t_translator(input, seg)
       -- 單獨查找
       local cand_ui_s = Candidate("number", seg.start, seg._end, utf8_out(c), string.format(fmt, c) .. "  ( " .. url_encode(utf8_out(c)) .. " ）" )
       cand_ui_s.preedit = "`" .. snd .. " " .. string.upper(string.sub(input, 3))
+      -- 排除數字太大超出範圍。正常範圍輸出已 string_char，故 0 直接可以限定。
+      if (utf8_out(c) == 0) then
+        cand_ui_s = Candidate("number", seg.start, seg._end, "〈超出範圍〉", "" )
+      end
       yield(cand_ui_s)
       -- 區間查找
       -- if c*n_bit+n_bit-1 < 1048575 then
@@ -4676,6 +4680,10 @@ local function t2_translator(input, seg)
       -- 單獨查找
       local cand_ui_s = Candidate("number", seg.start, seg._end, utf8_out(c), string.format(fmt, c) .. "  ( " .. url_encode(utf8_out(c)) .. " ）" )
       cand_ui_s.preedit = "'/" .. snd .. " " .. string.upper(string.sub(input, 4))
+      -- 排除數字太大超出範圍。正常範圍輸出已 string_char，故 0 直接可以限定。
+      if (utf8_out(c) == 0) then
+        cand_ui_s = Candidate("number", seg.start, seg._end, "〈超出範圍〉", "" )
+      end
       yield(cand_ui_s)
       -- 區間查找
       -- if c*n_bit+n_bit-1 < 1048575 then
