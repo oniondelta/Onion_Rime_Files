@@ -124,12 +124,12 @@ local function kr_2set_0m_choice(key,env)
       context.input = context.input .. ';'
       return 1
 
-    -- --- 使「'」可分節
-    -- elseif key:repr() == 'apostrophe' then
-    --   context:reopen_previous_segment()
-    --   context.input = context.input .. "'"
-    --   context:confirm_current_selection()
-    --   return 1
+    --- 使「\\」可分節
+    elseif key:repr() == 'backslash' then
+      context:reopen_previous_segment()
+      context.input = context.input .. "\\"
+      context:confirm_current_selection()
+      return 1
 
     --- 修正組字時，按「向下」鍵輸入消失問題
     elseif key:eq(KeyEvent("Down")) and string.find(context.input, '[^0-9]$') then
