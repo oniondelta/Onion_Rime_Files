@@ -3082,8 +3082,16 @@ local function t_translator(input, seg)
     end
 
     -- local numberout = string.match(input, "'//?(%d+)$")
-    local numberout, dot1, afterdot = string.match(input, "`(%d+)(%.?)(%d*)$")
+    local dot0 ,numberout, dot1, afterdot = string.match(input, "`(%.?)(%d+)(%.?)(%d*)$")
     if (tonumber(numberout)~=nil) then
+      if (dot0=='.') and (dot1=='.') then
+        yield(Candidate("number", seg.start, seg._end, "" , "〔不能兩個小數點〕"))
+        return
+      elseif (dot0=='.') then
+        afterdot = numberout
+        dot1 = dot0
+        numberout = '0'
+      end
     -- if (numberout~=nil) and (tonumber(nn)~=nil) then
       local nn = string.sub(numberout, 1)
       --[[ 用 yield 產生一個候選項
@@ -3144,7 +3152,9 @@ local function t_translator(input, seg)
         yield(Candidate("number", seg.start, seg._end, string.format("%o",numberout), "〔八進位〕"))
         yield(Candidate("number", seg.start, seg._end, string.format("%X",numberout), "〔十六進位〕"))
         yield(Candidate("number", seg.start, seg._end, string.format("%x",numberout), "〔十六進位〕"))
-      elseif (dot1=='.') then
+      elseif (dot0=='.') then
+        yield(Candidate("number", seg.start, seg._end, military_number(dot1..afterdot), "〔軍中數字〕"))
+      elseif (dot0~='.') and (dot1=='.') then
         yield(Candidate("number", seg.start, seg._end, military_number(numberout..dot1..afterdot), "〔軍中數字〕"))
       end
       return
@@ -4899,8 +4909,16 @@ local function t2_translator(input, seg)
     end
 
     -- local numberout = string.match(input, "'//?(%d+)$")
-    local numberout, dot1, afterdot = string.match(input, "'/(%d+)(%.?)(%d*)$")
+    local dot0 ,numberout, dot1, afterdot = string.match(input, "'/(%.?)(%d+)(%.?)(%d*)$")
     if (tonumber(numberout)~=nil) then
+      if (dot0=='.') and (dot1=='.') then
+        yield(Candidate("number", seg.start, seg._end, "" , "〔不能兩個小數點〕"))
+        return
+      elseif (dot0=='.') then
+        afterdot = numberout
+        dot1 = dot0
+        numberout = '0'
+      end
     -- if (numberout~=nil) and (tonumber(nn)~=nil) then
       local nn = string.sub(numberout, 1)
       --[[ 用 yield 產生一個候選項
@@ -4961,7 +4979,9 @@ local function t2_translator(input, seg)
         yield(Candidate("number", seg.start, seg._end, string.format("%o",numberout), "〔八進位〕"))
         yield(Candidate("number", seg.start, seg._end, string.format("%X",numberout), "〔十六進位〕"))
         yield(Candidate("number", seg.start, seg._end, string.format("%x",numberout), "〔十六進位〕"))
-      elseif (dot1=='.') then
+      elseif (dot0=='.') then
+        yield(Candidate("number", seg.start, seg._end, military_number(dot1..afterdot), "〔軍中數字〕"))
+      elseif (dot0~='.') and (dot1=='.') then
         yield(Candidate("number", seg.start, seg._end, military_number(numberout..dot1..afterdot), "〔軍中數字〕"))
       end
       return
