@@ -20,27 +20,6 @@ local function kr_2set_0m_choice(key,env)
   local caret_pos = context.caret_pos
 
 
-  -- local function check_qwertop()
-  --   if key:eq(KeyEvent("Shift+Q")) then
-  --     return true
-  --   elseif key:eq(KeyEvent("Shift+W")) then
-  --     return true
-  --   elseif key:eq(KeyEvent("Shift+E")) then
-  --     return true
-  --   elseif key:eq(KeyEvent("Shift+R")) then
-  --     return true
-  --   elseif key:eq(KeyEvent("Shift+T")) then
-  --     return true
-  --   elseif key:eq(KeyEvent("Shift+O")) then
-  --     return true
-  --   elseif key:eq(KeyEvent("Shift+P")) then
-  --     return true
-  --   else
-  --     return false
-  --   end
-  -- end
-
-
   --- pass ascii_mode
   if context:get_option('ascii_mode') then
     return 2
@@ -71,6 +50,26 @@ local function kr_2set_0m_choice(key,env)
 
   elseif context:get_option('kr_0m') then
 
+    -- local function check_qwertop()
+    --   if key:eq(KeyEvent("Shift+Q")) then
+    --     return true
+    --   elseif key:eq(KeyEvent("Shift+W")) then
+    --     return true
+    --   elseif key:eq(KeyEvent("Shift+E")) then
+    --     return true
+    --   elseif key:eq(KeyEvent("Shift+R")) then
+    --     return true
+    --   elseif key:eq(KeyEvent("Shift+T")) then
+    --     return true
+    --   elseif key:eq(KeyEvent("Shift+O")) then
+    --     return true
+    --   elseif key:eq(KeyEvent("Shift+P")) then
+    --     return true
+    --   else
+    --     return false
+    --   end
+    -- end
+
     --------------------------------------------
     --- 函數格式 ascii(key, 'a-zQWERTOP')，function ascii(key,pat) 該函數需打開
 
@@ -84,9 +83,9 @@ local function kr_2set_0m_choice(key,env)
     end
 
     --- 《最主要部分》使 [a-zQWERTOP] 組字且半上屏
-    if set_char[ascii(key, 'a-zQWERTOP')] then
+    if set_char[ascii(key, "a-zQWERTOP")] then
       context:reopen_previous_segment()
-      context.input = context.input .. ascii(key, 'a-zQWERTOP')
+      context.input = context.input .. ascii(key, "a-zQWERTOP")
       context:confirm_current_selection()
       return 1
 
@@ -124,6 +123,13 @@ local function kr_2set_0m_choice(key,env)
       context:reopen_previous_segment()
       context.input = context.input .. ';'
       return 1
+
+    -- --- 使「'」可分節
+    -- elseif key:repr() == 'apostrophe' then
+    --   context:reopen_previous_segment()
+    --   context.input = context.input .. "'"
+    --   context:confirm_current_selection()
+    --   return 1
 
     --- 修正組字時，按「向下」鍵輸入消失問題
     elseif key:eq(KeyEvent("Down")) and string.find(context.input, '[^0-9]$') then
