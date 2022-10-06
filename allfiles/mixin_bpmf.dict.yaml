@@ -16,7 +16,7 @@
 #
 ---
 name: mixin_bpmf
-version: "202209"
+version: "202210"
 sort: by_weight
 use_preset_vocabulary: false
 ...
@@ -3019,7 +3019,7 @@ use_preset_vocabulary: false
 ㄢ˙	＊＊an5	1
 ㄣ˙	＊＊en5	1
 ㄤ˙	＊＊ang5	1
-ㄥ˙	＊＊eng5	1
+# ㄥ˙	＊＊eng5	1
 ㄦ˙	＊＊er5	1
 ㄦˋ	＊＊er4	1
 ㄅㄚ˙	＊＊ba5	1
