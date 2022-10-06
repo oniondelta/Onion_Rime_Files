@@ -107,6 +107,7 @@ local function kr_2set_0m_choice(key,env)
     -- --- 《最主要部分》使 [a-zQWERTOP] 組字且半上屏
     -- if set_char[key:repr()] or check_qwertop() then
     --   local lastword = string.gsub(key:repr(), 'Shift%+', '')
+    --   -- local lastword = key:repr():match("^[a-z]$") or ''
     --   context:reopen_previous_segment()
     --   context.input = context.input .. lastword
     --   context:confirm_current_selection()
