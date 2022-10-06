@@ -10,7 +10,7 @@ schema:
   description: |
     韓文HNC
   dependencies:
-    # - cangjie5
+    - cangjie5
 
 
 switches:
@@ -48,7 +48,7 @@ engine:
   translators:
     - punct_translator
     - table_translator@hangeul_hnc_phrase
-    # - reverse_lookup_translator
+    - reverse_lookup_translator
     - script_translator
 
 kr_hnc_1m_filter:
@@ -110,17 +110,17 @@ hangeul_hnc_phrase:
   enable_sentence: false
   initial_quality: "1"
 
-# reverse_lookup:
-#   dictionary: cangjie5
-#   enable_completion: false
-#   prefix: "="
-#   suffix: "'"  #
-#   tips: 〔漢字反查〕
-#   preedit_format:
-#     - "xlit|abcdefghijklmnopqrstuvwxyz|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符|"
-#   comment_format:
-#     - "xlit|abcdefghijklmnopqrstuvwxyz;|ABCDEFGHIJKLMNOPQRSTUVWXYZV|"
-#     - xform/V/‹ᴠ›/
+reverse_lookup:
+  dictionary: cangjie5
+  enable_completion: false
+  prefix: "="
+  suffix: "'"
+  tips: 〔漢字反查〕
+  preedit_format:
+    - "xlit|abcdefghijklmnopqrstuvwxyz|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符|"
+  comment_format:
+    - "xlit|abcdefghijklmnopqrstuvwxyz;|ABCDEFGHIJKLMNOPQRSTUVWXYZV|"
+    - xform/V/‹ᴠ›/
 
 punctuator:
   use_space: true
@@ -141,7 +141,7 @@ punctuator:
     "_" : { commit: "＿" }
     "-" : { commit: "－" }
     "+" : { commit: "＋" }
-    "=" : [ "＝" ]
+    # "=" : [ "＝" ]
     "[" : { commit: "［" }
     "]" : { commit: "］" }
     "{" : { commit: "｛" }
@@ -172,7 +172,7 @@ punctuator:
     "_" : { commit: "_" }
     "-" : { commit: "-" }
     "+" : { commit: "+" }
-    "=" : [ "=" ]
+    # "=" : [ "=" ]
     "[" : { commit: "[" }
     "]" : { commit: "]" }
     "{" : { commit: "{" }
@@ -232,4 +232,4 @@ recognizer:
   patterns:
     email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
     url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$"
-    # reverse_lookup: "^=[a-z]*'?$"  #
+    reverse_lookup: "^=[a-z]*'?$"
