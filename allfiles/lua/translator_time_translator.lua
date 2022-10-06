@@ -2865,7 +2865,7 @@ local function t_translator(input, seg)
       cand_ui_s.preedit = "`" .. snd .. " " .. string.upper(string.sub(input, 3))
       -- 排除數字太大超出範圍。正常範圍輸出已 string_char，故 0 直接可以限定。
       if (utf8_out(c) == 0) then
-        cand_ui_s = Candidate("number", seg.start, seg._end, "〈超出範圍〉", "" )
+        cand_ui_s = Candidate("number", seg.start, seg._end, "", "〈超出範圍〉" )
       end
       yield(cand_ui_s)
       -- 區間查找
@@ -4682,7 +4682,7 @@ local function t2_translator(input, seg)
       cand_ui_s.preedit = "'/" .. snd .. " " .. string.upper(string.sub(input, 4))
       -- 排除數字太大超出範圍。正常範圍輸出已 string_char，故 0 直接可以限定。
       if (utf8_out(c) == 0) then
-        cand_ui_s = Candidate("number", seg.start, seg._end, "〈超出範圍〉", "" )
+        cand_ui_s = Candidate("number", seg.start, seg._end, "", "〈超出範圍〉" )
       end
       yield(cand_ui_s)
       -- 區間查找
