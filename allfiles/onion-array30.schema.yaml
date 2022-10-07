@@ -4,7 +4,7 @@
 schema:
   schema_id: onion-array30
   name: "▦ 行列３０（洋蔥版）"
-  version: "202209"
+  version: "202210"
   author:
     - 洋蔥 <deltazonetw@gmail.com>
   description: |
@@ -228,7 +228,7 @@ translator:
     - xform|;|0-|
     - xform|,|8⇣|
     - xform/^/ /
-    - xform/ /  /
+    - xform/ /    /
     - xform/@@/▫/
     - xform/@~/▪/ #該則不要隨意更動，欲動必須改動 Lua 相應程式碼，否則會有 Bug。
     - xform/@/▫/
