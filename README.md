@@ -70,7 +70,7 @@
 
 - 注音（洋蔥 mix-in 版）
   
-  > 集大成，多國語言和注音混打輸入 😃！
+  > 集大成，多國語言和注音一次性混打輸入 😃！
   
   #### ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/master/img/demo_bpmf_mixin.gif)
   
