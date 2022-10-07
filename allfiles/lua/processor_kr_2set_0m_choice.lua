@@ -50,26 +50,6 @@ local function kr_2set_0m_choice(key,env)
 
   elseif context:get_option('kr_0m') then
 
-    -- local function check_qwertop()
-    --   if key:eq(KeyEvent("Shift+Q")) then
-    --     return true
-    --   elseif key:eq(KeyEvent("Shift+W")) then
-    --     return true
-    --   elseif key:eq(KeyEvent("Shift+E")) then
-    --     return true
-    --   elseif key:eq(KeyEvent("Shift+R")) then
-    --     return true
-    --   elseif key:eq(KeyEvent("Shift+T")) then
-    --     return true
-    --   elseif key:eq(KeyEvent("Shift+O")) then
-    --     return true
-    --   elseif key:eq(KeyEvent("Shift+P")) then
-    --     return true
-    --   else
-    --     return false
-    --   end
-    -- end
-
     --------------------------------------------
     --- 函數格式 ascii(key, 'a-zQWERTOP')，function ascii(key,pat) 該函數需打開
 
@@ -102,6 +82,26 @@ local function kr_2set_0m_choice(key,env)
 
     --------------------------------------------
     -- ---- 最初方法，function check_qwertop() 該函數需打開
+
+    -- local function check_qwertop()
+    --   if key:eq(KeyEvent("Shift+Q")) then
+    --     return true
+    --   elseif key:eq(KeyEvent("Shift+W")) then
+    --     return true
+    --   elseif key:eq(KeyEvent("Shift+E")) then
+    --     return true
+    --   elseif key:eq(KeyEvent("Shift+R")) then
+    --     return true
+    --   elseif key:eq(KeyEvent("Shift+T")) then
+    --     return true
+    --   elseif key:eq(KeyEvent("Shift+O")) then
+    --     return true
+    --   elseif key:eq(KeyEvent("Shift+P")) then
+    --     return true
+    --   else
+    --     return false
+    --   end
+    -- end
 
     -- --- 《最主要部分》使 [a-zQWERTOP] 組字且半上屏
     -- if set_char[key:repr()] or check_qwertop() then
