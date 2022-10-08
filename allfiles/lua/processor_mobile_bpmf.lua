@@ -8,7 +8,11 @@ local function mobile_bpmf(key, env)
   local context = engine.context
   local input_m = context.input
   local orig_m = context:get_commit_text()
-  if (key:repr() == "space") and (context:is_composing()) then
+  if context:get_option('ascii_mode') then
+    return 2
+  elseif (not key:repr() == "space") then
+    return 2
+  elseif (context:is_composing()) then
     -- local input_m = context.input
     if (string.find(input_m, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(input_m, "^https?:.*$")) or (string.find(input_m, "^ftp:.*$")) or (string.find(input_m, "^mailto:.*$")) or (string.find(input_m, "^file:.*$")) then
     -- if ( string.find(input_m, "[@:]")) then

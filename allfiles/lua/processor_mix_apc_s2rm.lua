@@ -9,8 +9,11 @@ local function mix_apc_s2rm(key, env)
   local input_124 = context.input
   local orig_124 = context:get_commit_text()
   local c_b_d = context:get_option("ascii_punct")
-  local en_m = context:get_option("ascii_mode")
-  if (c_b_d) and (not en_m) then
+  -- local en_m = context:get_option("ascii_mode")
+  if context:get_option('ascii_mode') then
+    return 2
+  elseif (c_b_d) then
+  -- elseif (c_b_d) and (not en_m) then
     if (key:repr() == 'Shift+less') then
       if (context:is_composing()) then
         -- local orig_124 = context:get_commit_text()
@@ -42,7 +45,8 @@ local function mix_apc_s2rm(key, env)
         return 1 -- kAccepted
       end
     end
-  elseif (not c_b_d) and (not en_m) then
+  elseif (not c_b_d) then
+  -- elseif (not c_b_d) and (not en_m) then
     if (key:repr() == "space") and (context:is_composing()) then
     -- if (key:repr() == "space") and (context:has_menu()) then
     -- if (key:repr() == "space") then
