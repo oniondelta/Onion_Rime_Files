@@ -10,11 +10,11 @@ local function mix_apc_pluss(key, env)
   local context = engine.context
   local caret_pos_ps = context.caret_pos
   local orig_ps = context:get_commit_text()
-  local c_b_d = context:get_option("ascii_punct")
+  -- local c_b_d = context:get_option("ascii_punct")
   -- local en_m = context:get_option("ascii_mode")
-  if context:get_option('ascii_mode') then
+  if (context:get_option('ascii_mode')) then
     return 2
-  elseif (c_b_d) then
+  elseif (context:get_option("ascii_punct")) then
   -- if (c_b_d) and (not en_m) then
     -- local caret_pos_ps = context.caret_pos
     if (key:repr() == 'Shift+less') then
@@ -41,7 +41,7 @@ local function mix_apc_pluss(key, env)
       context:clear()
       return 1 -- kAccepted
     end
-  elseif (not c_b_d) then
+  elseif (not context:get_option("ascii_punct")) then
   -- elseif (not c_b_d) and (not en_m) then
     -- local caret_pos_ps = context.caret_pos
     if (key:repr() == "space") and (caret_pos_ps == 0) then

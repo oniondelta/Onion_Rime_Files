@@ -7,11 +7,11 @@ local function ascii_punct_change(key, env)
   local engine = env.engine
   local context = engine.context
   local orig_p23 = context:get_commit_text()
-  local c_b_d = context:get_option("ascii_punct")
+  -- local c_b_d = context:get_option("ascii_punct")
   -- local en_m = context:get_option("ascii_mode")
-  if context:get_option('ascii_mode') then
+  if (context:get_option('ascii_mode')) then
     return 2
-  elseif (c_b_d) then
+  elseif (context:get_option("ascii_punct")) then
   -- if (c_b_d) and (not en_m) then
     -- local orig_p23 = context:get_commit_text()
     if (key:repr() == 'Shift+less') then
