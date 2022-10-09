@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onion
   name: "☆注音(洋蔥純注音版)☆"
-  version: "202209"
+  version: "202210"
   author:
     - 『洋蔥』
   description: |
@@ -120,8 +120,8 @@ speller:
 ##############內嵌注音文############
     - xform|^＊([12345])$|r$1| #聲調，「ㄖ」「聲調」打出聲調不被省略
     - abbrev|^＊([bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR]+)$|$1|
-    - abbrev|^＊([bpmfdtnlgkhjqx])$|$1\x31| #\x31=數字1
-    - xform|^＊([ZCSrzcsiuvaoeEAIOUMNKGR])$|$1\x31|
+    - abbrev|^＊([bpmfdtnlgkhjqx])$|$1 | #\x31=數字1
+    - xform|^＊([ZCSrzcsiuvaoeEAIOUMNKGR])$|$1 |
     # - erase|^＊[^＊]+$| #消除不含聲調注音（不消除也不影響）
     # - abbrev|^＊＊([bpmfdtnlgkhjqx]1)$|$1|
     # - erase|^＊＊([bpmfdtnlgkhjqx]1)$|
