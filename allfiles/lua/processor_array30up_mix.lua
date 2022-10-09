@@ -9,11 +9,11 @@ local function array30up_mix(key, env)
   local context = engine.context
   local input_array = context.input
   local orig_array = context:get_commit_text()
-  if context:get_option('ascii_mode') then
-    return 2
+  -- if context:get_option('ascii_mode') then
+  --   return 2
   -- elseif (not context:has_menu()) then
   --   return 2
-  elseif (key:repr() == "space") and (context:has_menu()) then
+  if (key:repr() == "space") and (context:has_menu()) then
   -- if (key:repr() == "space") then
   -- if (key:repr() == "space") and (context:is_composing()) then
     -- local input_array = context.input
