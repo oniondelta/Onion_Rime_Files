@@ -36,7 +36,7 @@ local function kr_2set_0m_choice(key,env)
     context:clear()
     return 1
 
-  --- pass reverse_lookup prefix （使反查鍵可展示全部選項）(直接 commit_composition 上屏，可以不用)
+  --- pass reverse_lookup prefix （使反查鍵可展示全部選項）(沒開，即使 commit_composition 上屏，還是無法顯示選單)
   elseif string.find(context.input, '=[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?$') then
     return 2
 
