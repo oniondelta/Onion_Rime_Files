@@ -7,14 +7,14 @@ local function ascii_punct_change(key, env)
   local engine = env.engine
   local context = engine.context
   local orig_p23 = context:get_commit_text()
-  -- local c_b_d = context:get_option("ascii_punct")
-  -- local en_m = context:get_option("ascii_mode")
-  -- if (context:get_option('ascii_mode')) then
+  local o_ascii_punct = context:get_option("ascii_punct")
+  local o_ascii_mode = context:get_option("ascii_mode")
+  -- if (context:get_option("ascii_mode")) then
   --   return 2
-  if (context:get_option("ascii_punct")) and (not context:get_option('ascii_mode')) then
-  -- if (c_b_d) and (not en_m) then
+  if (o_ascii_punct) and (not o_ascii_mode) then
+  -- if (context:get_option("ascii_punct")) and (not context:get_option("ascii_mode")) then
     -- local orig_p23 = context:get_commit_text()
-    if (key:repr() == 'Shift+less') then
+    if (key:repr() == "Shift+less") then
       if (context:is_composing()) then
         -- local orig_p23 = context:get_commit_text()
         engine:commit_text( orig_p23 .. "," )
@@ -24,7 +24,7 @@ local function ascii_punct_change(key, env)
       context:clear()
       return 1 -- kAccepted
     -- end
-    elseif (key:repr() == 'Shift+greater') then
+    elseif (key:repr() == "Shift+greater") then
       if (context:is_composing()) then
         -- local orig_p23 = context:get_commit_text()
         engine:commit_text( orig_p23 .. "." )

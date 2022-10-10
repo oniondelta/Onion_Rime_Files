@@ -8,13 +8,13 @@ local function mix_apc_s2rm_3(key, env)
   local context = engine.context
   local input_3 = context.input
   local orig_3 = context:get_commit_text()
-  -- local c_b_d = context:get_option("ascii_punct")
-  -- local en_m = context:get_option("ascii_mode")
-  -- if (context:get_option('ascii_mode')) then
+  local o_ascii_punct = context:get_option("ascii_punct")
+  local o_ascii_mode = context:get_option("ascii_mode")
+  -- if (context:get_option("ascii_mode")) then
   --   return 2
-  if (context:get_option("ascii_punct")) and (not context:get_option('ascii_mode')) then
-  -- if (c_b_d) and (not en_m) then
-    if (key:repr() == 'Shift+less') then
+  if (o_ascii_punct) and (not o_ascii_mode) then
+  -- if (context:get_option("ascii_punct")) and (not context:get_option("ascii_mode")) then
+    if (key:repr() == "Shift+less") then
       if (context:is_composing()) then
         -- local orig_3 = context:get_commit_text()
         engine:commit_text( orig_3 .. "," )
@@ -23,7 +23,7 @@ local function mix_apc_s2rm_3(key, env)
       end
       context:clear()
       return 1 -- kAccepted
-    elseif (key:repr() == 'Shift+greater') then
+    elseif (key:repr() == "Shift+greater") then
       if (context:is_composing()) then
         -- local orig_3 = context:get_commit_text()
         engine:commit_text( orig_3 .. "." )
@@ -44,8 +44,8 @@ local function mix_apc_s2rm_3(key, env)
         return 1 -- kAccepted
       end
     end
-  elseif (not context:get_option("ascii_punct")) and (not context:get_option('ascii_mode')) then
-  -- elseif (not c_b_d) and (not en_m) then
+  elseif (not o_ascii_punct) and (not o_ascii_mode) then
+  -- elseif (not context:get_option("ascii_punct")) and (not context:get_option('ascii_mode')) then
     if (key:repr() == "space") and (context:is_composing()) then
     -- if (key:repr() == "space") and (context:has_menu()) then
       -- local input_3 = context.input

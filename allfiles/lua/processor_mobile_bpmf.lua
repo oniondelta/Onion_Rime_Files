@@ -8,7 +8,7 @@ local function mobile_bpmf(key, env)
   local context = engine.context
   local input_m = context.input
   local orig_m = context:get_commit_text()
-  -- if context:get_option('ascii_mode') then
+  -- if context:get_option("ascii_mode") then
   --   return 2
   -- elseif (not context:is_composing()) then
   --   return 2

@@ -9,7 +9,7 @@ local function array30up_mix(key, env)
   local context = engine.context
   local input_array = context.input
   local orig_array = context:get_commit_text()
-  -- if context:get_option('ascii_mode') then
+  -- if context:get_option("ascii_mode") then
   --   return 2
   -- elseif (not context:has_menu()) then
   --   return 2
