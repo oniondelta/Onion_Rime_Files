@@ -3,8 +3,8 @@ patch:
 ####### 非正確注音（補空碼或慣用發音）轉寫 #####
     - xform/[)(]//
 #######
-    - xform/iu/iou/
-    - xform/ui/uei/
+    - xform/iU/iou/ #iou
+    - xform/uI/uei/ #uei
     - xform/ong/ung/
     - xform/yi?/i/
     - xform/wu?/u/
@@ -66,7 +66,7 @@ patch:
     - xform|([A-Z])'|$1＇|
     - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ|"
 #######
-    - 'xform/([a-z])([a-z])e/$2$1☯/'
+    # - 'xform/([a-z])([a-z])e/$2$1☯/'
 #######
     - 'xform/([a-z])([a-z])/$1\U$2\E/'
     - "xlit|ASDFGHJYUIEW|ㄚㄤㄡㄣㄥㄢㄞㄩㄨㄧㄜㄠ|"
