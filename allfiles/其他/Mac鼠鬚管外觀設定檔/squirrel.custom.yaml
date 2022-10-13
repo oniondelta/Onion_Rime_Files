@@ -32,9 +32,42 @@ patch:
   # style/translucency: true                           # 毛玻璃背景 （當背景色呈半透明時可見）（默認false）
 
 ###################################################
+  preset_color_schemes/lost_temple_border:
+    name: "孤寺(邊)／Lost Temple (br)"
+    author: "佛振 <chen.sst@gmail.com>, based on ir_black"
+    back_color: 0xfe303030 #0xee303030
+    text_color: 0x599C87 #0xe8f3f6
+    candidate_text_color: 0xe8f3f6
+    comment_text_color: 0xbbDEDEDE #0xbb82e6ca
+    hilited_candidate_back_color: 0x82e6ca
+    hilited_candidate_text_color: 0x000000
+    hilited_comment_text_color: 0xbb203d34
+    hilited_text_color: 0x82e6ca
+    border_color: 0x5fe8f3f6 #0xeee8f3f6
+    border_height: 1
+    border_width: 1
+
+  preset_color_schemes/cyberpunk_onion:
+    name: "賽博龐克(Onion)／Cyberpunk(Onion)"
+    author: "onion"
+    back_color: 0xdc510014
+    text_color: 0xF66316 #0xFCECC0 #0xFF3BB7 #0x630065 #0x96F536CD #0xF91875
+    hilited_text_color: 0xBB6EF5 #0xe6F536CD #0xc8F3F5C6 #0xFF3BB7 #0xF536CD #0xe60BFACB #0x45C4F5
+    # hilited_back_color: 0xdc510014
+    hilited_candidate_text_color: 0xFCDD62
+    hilited_candidate_back_color: 0xe6F536CD
+    hilited_candidate_label_color: 0x0BFACB #0x630065
+    hilited_comment_text_color: 0x510014 #0x630065 #0xFF0034 #0xD1002B
+    candidate_text_color: 0xee0BFACB #0xee0BFACB #0xFF3BB7
+    label_color: 0xF5C445 #0xF3F5C6
+    comment_text_color: 0xFF3BB7 #0xF66316
+    border_color: 0xc8F91875 #0xc8F3F5C6
+    border_height: 1
+    border_width: 1
+
   preset_color_schemes/Fashion:
-    name: 時尚雜誌
-    author: onion
+    name: "時尚雜誌"
+    author: "onion"
     back_color: 0xF4F4F4
     text_color: 0xB5C3CF
     hilited_text_color: 0x373737
@@ -48,8 +81,8 @@ patch:
     comment_text_color: 0xC0D0DC
 
   preset_color_schemes/Louis:
-    name: 名牌LV
-    author: onion
+    name: "名牌LV"
+    author: "onion"
     back_color: 0x313843
     text_color: 0xAEB3BA #0xCCDEDB #0x7BDEF4 #0x6DCBF2
     hilited_text_color: 0xDBE2EB #0x6DCBF2 #0x7BDEF4
@@ -63,8 +96,8 @@ patch:
     comment_text_color: 0x94DFFF #0x7BDEF4
 
   preset_color_schemes/mac_white:
-    name: 蘋果白／Mac White
-    author: onion
+    name: "蘋果白／Mac White"
+    author: "onion"
     candidate_format: ' %c %@ '
     # alpha: 1
     # horizontal: true
@@ -81,8 +114,8 @@ patch:
     hilited_comment_text_color: 0x96a8a7
 
   preset_color_schemes/mac_white2:
-    name: 蘋果白 2／Mac White 2
-    author: onion
+    name: "蘋果白 2／Mac White 2"
+    author: "onion"
     candidate_format: ' %c %@ '
     # alpha: 1
     # horizontal: true
@@ -100,8 +133,8 @@ patch:
 
 ###################################################
   preset_color_schemes/gruvbox:
-    name: 扶風/Gruvbox
-    author: ASC_8384 <ASC_8384@foxmail.com>
+    name: "扶風/Gruvbox"
+    author: "ASC_8384 <ASC_8384@foxmail.com>"
     back_color: 0x282828
     border_color: 0x21201D
     text_color: 0x8499A8
@@ -188,8 +221,8 @@ patch:
     label_color: 0x888888                          # 普通標籤的顏色(非第一候選字)，也就是候選字數字
 
   preset_color_schemes/solarized_light:
-    name: 曬經・日／Solarized Light
-    author: 雪齋 <lyc20041@gmail.com>
+    name: "曬經・日／Solarized Light"
+    author: "雪齋 <lyc20041@gmail.com>"
     # color_space: display_p3                        # Only available on macOS 10.12+
     back_color: 0xf0E5F6FB                         # Lab 97, 0, 10
     border_color: 0xf0EDFFFF                       # Lab 100, 0, 10
@@ -206,8 +239,8 @@ patch:
     hilited_text_color: 0xBE706D                   # Lab 50, 15, -45
 
   preset_color_schemes/solarized_dark:
-    name: 曬經・月／Solarized Dark
-    author: 雪齋 <lyc20041@gmail.com>
+    name: "曬經・月／Solarized Dark"
+    author: "雪齋 <lyc20041@gmail.com>"
     # color_space: display_p3                        # Only available on macOS 10.12+
     back_color: 0xf0352A0A                         # Lab 15, -12, -12
     border_color: 0xf02A1F00                       # Lab 10, -12, -12
@@ -257,8 +290,8 @@ patch:
     hilited_label_color: 0xffffff
 
   preset_color_schemes/purity_of_form:
-    name: 純粹的形式／Purity of Form
-    author: 雨過之後、佛振
+    name: "純粹的形式／Purity of Form"
+    author: "雨過之後、佛振"
     text_color: 0xc2c2c2
     back_color: 0x444444
     candidate_text_color: 0xeeeeee
@@ -269,8 +302,8 @@ patch:
     comment_text_color: 0x808080
 
   preset_color_schemes/purity_of_form2:
-    name: 純粹的形式2／Purity of Form 2
-    author: 雨過之後、佛振、iDvel
+    name: "純粹的形式2／Purity of Form 2"
+    author: "雨過之後、佛振、iDvel"
     # font_face: "PingFangSC"
     # font_point: 18
     # label_font_point: 13
@@ -284,8 +317,8 @@ patch:
     comment_text_color: 0x808080
 
   preset_color_schemes/purity_of_essence:
-    name: 純粹的本質／Purity of Essence
-    author: 佛振
+    name: "純粹的本質／Purity of Essence"
+    author: "佛振"
     text_color: 0xB0B0B0 #0x2c2ccc
     back_color: 0xfafafa #透明：0xF2fafafa
     candidate_text_color: 0x000000
@@ -297,8 +330,8 @@ patch:
     hilited_comment_text_color: 0xD6D5D5 #C9C8C5 #C9C9BF #註解文字高亮
 
   preset_color_schemes/apathy:
-    name: 冷漠／Apathy
-    author: LIANG Hai
+    name: "冷漠／Apathy"
+    author: "LIANG Hai"
     # horizontal: true                                # 水平排列
     # inline_preedit: true                            # 單行顯示，false雙行顯示
     # font_face: "PingFangSC-Regular,HanaMinB"        # 候選詞字體
@@ -316,8 +349,8 @@ patch:
     comment_text_color: 0x999999                    # 拼音等提示文字顏色
 
   preset_color_schemes/dust:
-    name: 浮塵／Dust
-    author: Superoutman <asticosmo@gmail.com>
+    name: "浮塵／Dust"
+    author: "Superoutman <asticosmo@gmail.com>"
     # horizontal: true                                # 水平排列
     # inline_preedit: true                            # 單行顯示，false雙行顯示
     # font_face: "HYQiHei-55S Book,HanaMinA Regular"  # 候選詞字體
@@ -342,8 +375,8 @@ patch:
     hilited_comment_text_color: 0x9e9e9e            # 註解文字高亮
 
   preset_color_schemes/mritd_dark:
-    name: 漠然／mritd dark
-    author: mritd <mritd1234@gmail.com>
+    name: "漠然／mritd dark"
+    author: "mritd <mritd1234@gmail.com>"
     # horizontal: true                                # 水平排列
     # inline_preedit: true                            # 單行顯示，false雙行顯示
     # font_face: "PingFangSC"                         # 候選詞字體
