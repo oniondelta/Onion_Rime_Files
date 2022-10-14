@@ -2,7 +2,8 @@
 # 用法：想要哪項生效，就刪去該行行首的「#」字符，但注意保留用於縮進的空格
 
 patch:
-  style/color_scheme: lost_temple                      # 主題樣式 #apathy #psionics #mac_white #mac_white2
+  style/color_scheme: mac_lamb                             # 主題樣式 #apathy #psionics #mac_white #mac_white2
+  style/color_scheme_dark: mac_dark                        # 同上，暗主題下
 
   style/horizontal: false                              # 候選橫排 （新版已經無效，改以 candidate_list_layout 設定）
   style/candidate_list_layout: stacked                 # 候選框樣式 （linear者爲線型，各候選首尾相連成一串，stacked者各候選皆另起一行，呈堆疊狀。）（默認stacked）
