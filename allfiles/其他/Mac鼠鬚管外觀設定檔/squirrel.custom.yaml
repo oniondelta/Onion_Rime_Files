@@ -137,6 +137,33 @@ patch:
     comment_text_color: 0x96a8a7
     hilited_comment_text_color: 0xD5D6BF #0x96a8a7
 
+  preset_color_schemes/mac_dark:
+    name: "蘋果深色模式"
+    author: "onion"
+    # horizontal: true
+    # inline_preedit: true
+    # font_face: PingFangSC
+    # font_point: 16
+    # label_font_point: 12
+    spacing: 0
+    back_color: 0x212121
+    corner_radius: 5
+    # border_height: 4
+    # border_width: 4
+    # border_color: 0xffffff #0x9f62e8
+    # border_color_width: 0
+    candidate_format: "%c %@  "
+    candidate_text_color: 0xffffff #0x333333
+    text_color: 0x999999 #0x888888 #0x7B7B7B #0x333333
+    hilited_text_color: 0xDFDFDF #0x333333 #0x888888
+    hilited_candidate_label_color: 0xffffff
+    hilited_candidate_text_color: 0xffffff
+    hilited_candidate_back_color: 0xD05B21
+    hilited_comment_text_color: 0xffffff
+    hilited_corner_radius: 4.5
+    label_color: 0x888888 #0x7B7B7B
+    comment_text_color: 0x999999 #0x888888 #0xDFDFDF
+
 ###################################################
   preset_color_schemes/gruvbox:
     name: "扶風/Gruvbox"
@@ -222,7 +249,7 @@ patch:
     # border_color_width: 0                          # 查無名稱  # 輸入條邊框寬度
     candidate_format: "%c %@  "                    # 設置每個候選詞之間的間隔距離，%c代表備選的數字，%@代表候選字，可以通過輸入空格的形式來調整每個候選字之間的間隔距離
     candidate_text_color: 0x333333                 # 候選字顏色
-    text_color: 0x888888 #0x333333                 # 普通候選字的顏色，非第一候選字
+    text_color: 0xA1A1A1 #0x888888 #0x333333                 # 普通候選字的顏色，非第一候選字
     hilited_text_color: 0x333333 #0x888888         # 高亮（選中）鍵入碼字色
     hilited_candidate_label_color: 0xffffff        # 第一候選字標籤顏色，也就是數字1
     hilited_candidate_text_color: 0xffffff         # 第一候選字顏色
@@ -230,6 +257,7 @@ patch:
     hilited_comment_text_color: 0xffffff           # 高亮（選中）候選詞注疏字色
     hilited_corner_radius: 4.5                     # 第一候選字高亮顏色的圓角，當不設置時就是一整塊的顏色，設置了圓角之後就帶有圓角效果了
     label_color: 0x888888                          # 普通標籤的顏色(非第一候選字)，也就是候選字數字
+    comment_text_color: 0x828282 #0x888888
 
   preset_color_schemes/solarized_light:
     name: "曬經・日／Solarized Light"
