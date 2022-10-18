@@ -25,7 +25,11 @@ local jieqi_out1 = lc_2.jieqi_out1
 --]]
 local function Version()
   local ver
-  if rime_api.get_distribution_name then
+  if Opencc and Opencc('s2t.json').convert_word then
+    return 200
+  elseif rime_api.regex_match then
+    return 197
+  elseif rime_api.get_distribution_name then
     return 185
   elseif LevelDb then
     return 177
