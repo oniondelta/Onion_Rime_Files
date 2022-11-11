@@ -121,6 +121,7 @@
 #    詞句中，「嵌」語意為嵌入時，臺灣字典發音為「qian1」，對岸為「qian4」，日常皆常用，且「kan3」也常誤發此音，故語意為嵌入時，補齊「qian1」「qian4」「kan3」。
 #    詞句中，「質」臺灣字典不同語意分別發音「zhi2」「zhi4」，但語意品質時發「zhi2」，大陸則為「zhi4」，日常易混，故皆補齊「zhi2」「zhi4」。
 #    詞句中，「艘」「sou1」「sao1」兩者日常皆常用，發音補齊「sou1」「sao1」。
+#    詞句中，「頜」臺灣字典發音為「ge2」，又音偽「han4」，對岸為「he2」，因取形，故皆補齊「ge2」「han4」「he2」。
 #    預計比對「輕聲和一聲」變音。
 #
 #  〈2020修改字詞彙發音〉：
@@ -66028,8 +66029,18 @@ min_phrase_weight: 100
 嗷嗷待哺	ao2 ao2 dai4 bu3
 嗼寂	mo4 ji2
 嘀咕	di2 gu1
+嘀咕	di1 gu1
+嘀咕	di5 gu5	80%
+嘀咕	di2 gu5	80%
 嘀嗒	di1 da1
+嘀嗒	di2 da1
+嘀嗒	di2 da5	80%
+嘀嗒	di5 da5	80%
 嘀嘀咕咕	di2 di2 gu1 gu1
+嘀嘀咕咕	di1 di1 gu1 gu1
+嘀嘀咕咕	di2 di2 gu5 gu5	80%
+嘀嘀咕咕	di5 di5 gu5 gu5	80%
+嘀嘀咕咕	di2 di5 gu1 gu1	80%
 嘀裡嘟嚕	di1 li3 du1 lu1
 嘀裡嘟嚕	di2 li3 du1 lu1
 嘁哩喀喳	qi1 li5 ka1 cha1
@@ -112304,4 +112315,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 112307 #####
+##### @結束 END - 112318 #####
