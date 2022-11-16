@@ -89093,8 +89093,11 @@ min_phrase_weight: 100
 玩賞	wan4 shang3
 玩賞	wan2 shang3
 玫瑰	mei2 gui1
+玫瑰	mei2 gui4	80%
 玫瑰紅	mei2 gui1 hong2
+玫瑰紅	mei2 gui4 hong2	80%
 玫瑰花	mei2 gui1 hua1
+玫瑰花	mei2 gui4 hua1	80%
 玳瑁	dai4 mei4
 玳瑁	dai4 mao4
 玳瑁梁	dai4 mei4 liang2
@@ -104831,6 +104834,7 @@ min_phrase_weight: 100
 迴轉儀	hui2 zhuan3 yi2
 迷住	mi2 zhu4
 迷你玫瑰	mi2 ni3 mei2 gui1
+迷你玫瑰	mi2 ni3 mei2 gui4	80%
 迷倒	mi2 dao3
 迷惑	mi2 huo4
 迷惑龍	mi2 huo4 long2
@@ -112320,4 +112324,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 112323 #####
+##### @結束 END - 112327 #####
