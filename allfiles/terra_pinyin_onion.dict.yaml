@@ -54398,7 +54398,7 @@ min_phrase_weight: 100
 一沐三捉髮	yi1 mu4 san1 zhuo1 fa3
 一沐三握髮	yi2 mu4 san1 wo4 fa3
 一沐三握髮	yi1 mu4 san1 wo4 fa3
-一沖性子	yi2 chong1 xing4 zi5
+一沖性子	yi4 chong1 xing4 zi5
 一沖性子	yi1 chong1 xing4 zi5
 一泡子	yi2 pao4 zi5
 一泡子	yi1 pao4 zi5
@@ -87580,6 +87580,7 @@ min_phrase_weight: 100
 無毒不丈夫	wu2 du2 bu2 zhang4 fu1
 無添和	wu2 tian1 he2
 無為	wu2 wei2
+無為	wu2 wei4
 無為牛後	wu2 wei2 niu2 hou4
 無為縣	wu2 wei2 xian4
 無為而治	wu2 wei2 er2 zhi4
@@ -105245,8 +105246,8 @@ min_phrase_weight: 100
 遍地開花	bian4 di4 kai1 hua1
 遍處	bian4 chu4
 遍行	bian4 xing2
-過一會兒	guo4 yi2 hui3 er5	80%
-過一會兒	guo4 yi2 hui3 er2
+過一會兒	guo4 yi4 hui3 er5	80%
+過一會兒	guo4 yi4 hui3 er2
 過一會兒	guo4 yi1 hui3 er5	80%
 過一會兒	guo4 yi1 hui3 er2
 過一過	guo4 yi2 guo4
@@ -112319,4 +112320,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 112322 #####
+##### @結束 END - 112323 #####
