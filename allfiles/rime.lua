@@ -110,33 +110,33 @@ charset_cjk_filter_plus = charset_cjk.charset_cjk_filter_plus
 
 --- comment_filter_plus （Mount_ocm）
 -- 去除後面編碼註釋
-comment_filter_plus =  require("filter_comment_filter_plus")
+comment_filter_plus = require("filter_comment_filter_plus")
 
 
 --- array30_nil_filter （onion-array30）
 -- 後來移至「=」「=」反查用。行列30空碼'⎔'轉成不輸出任何符號，符合原生
-array30_nil_filter =  require("filter_array30_nil_filter")
+array30_nil_filter = require("filter_array30_nil_filter")
 
 
 --- mix_cf2_miss_filter （bopomo_onionplus 和 bo_mixin 全系列）
 -- 合併 charset_filter2 和 missing_mark_filter，兩個 lua filter 太耗效能。
-mix_cf2_miss_filter =  require("filter_mix_cf2_miss_filter")
+mix_cf2_miss_filter = require("filter_mix_cf2_miss_filter")
 
 
 --- mix_cf2_cfp_filter （dif1）
 -- 合併 charset_filter2 和 comment_filter_plus，兩個 lua filter 太耗效能。
-mix_cf2_cfp_filter =  require("filter_mix_cf2_cfp_filter")
-mix30_nil_comment_up_filter =  require("filter_mix30_nil_comment_up_filter")
+mix_cf2_cfp_filter = require("filter_mix_cf2_cfp_filter")
+mix30_nil_comment_up_filter = require("filter_mix30_nil_comment_up_filter")
 
 
 --- en_sort_filter （easy_en_super）
 -- 如同英漢字典一樣排序，候選項重新排序。開關（en_sort）
-en_sort_filter =  require("filter_en_sort_filter")
+en_sort_filter = require("filter_en_sort_filter")
 
 
 --- kr_hnc_1m_filter （hangeul_hnc）
 -- 韓語遮屏只剩一個選項。開關（kr_1m）
-kr_hnc_1m_filter =  require("filter_kr_hnc_1m_filter")
+kr_hnc_1m_filter = require("filter_kr_hnc_1m_filter")
 
 
 -- --- mix_cf2_cfp_smf_filter （ocm_mixin）
@@ -198,7 +198,7 @@ mix_apc_pluss = require("processor_mix_apc_pluss")
 
 -- --- kr_2set_0m （hangeul2set_zeromenu）
 -- -- 韓語成零選項。開關（space_mode）
---  kr_2set_0m = require("processor_kr_2set_0m")
+-- kr_2set_0m = require("processor_kr_2set_0m")
 
 
 
