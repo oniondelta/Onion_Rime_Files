@@ -4,7 +4,7 @@
 schema:
   schema_id: easy_en_super
   name: Easy English（英漢字典）
-  version: "202209"
+  version: "202211"
   author:
     - 洋蔥
   description:
@@ -16,7 +16,7 @@ switches:
     states: [ On, Off ]
   - name: en_sort
     # reset: 1
-    states: [ 無, 序 ]
+    states: [ 無排, 序排 ]
 
 engine:
   processors:

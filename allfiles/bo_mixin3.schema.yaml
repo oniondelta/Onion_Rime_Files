@@ -4,7 +4,7 @@
 schema:
   schema_id: bo_mixin3
   name: "☆注音(洋蔥mix-in版 3 )☆〔  '  [  ]  →拉日韓〕"
-  version: "202210"
+  version: "202211"
   author:
     - 『洋蔥』
   description: |
@@ -44,13 +44,13 @@ switches:
     states: [ 🈚️, 🈶️ ]
   - name: back_mark
     reset: 1
-    states: [ 無, 註 ]
+    states: [ 無註, 註釋 ]
   - name: punct_mark
     reset: 1
 #    states: [ 無, 註 ]
   - name: en_sort
     # reset: 1
-    states: [ 無, 序 ]
+    states: [ 無排, 序排 ]
 
 engine:
   filters:

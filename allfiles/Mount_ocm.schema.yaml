@@ -6,7 +6,7 @@
 schema:
   schema_id: Mount_ocm
   name: "❖蝦米(單出-反查專用)❖"
-  version: "202208"
+  version: "202211"
   author:
     - 洋蔥
   description: |
@@ -32,7 +32,7 @@ switches:
     states: [ "常用", "增廣" ]
   - name: simplify_comment
     # reset: 0
-    states: [ 碼, 無 ]
+    states: [ 編碼, 無編 ]
 
 engine:
   filters:

@@ -9,7 +9,7 @@ schema:
 
   name: "❖超級混合蝦米(mix-in)❖"
   schema_id: ocm_mixin
-  version: "202209"
+  version: "202211"
   dependencies:
     - punct_ovff
     - symbols_ocm
@@ -49,16 +49,16 @@ switches:
     states: [ 🈚️, 🈶️ ]
   - name: back_mark
     reset: 1
-    states: [ 無, 註 ]
+    states: [ 無註, 註釋 ]
   - name: punct_mark
     reset: 1
 #    states: [ 無, 註 ]
   - name: simplify_comment
     # reset: 0
-    states: [ 碼, 無 ]
+    states: [ 編碼, 無編 ]
   - name: en_sort
     # reset: 1
-    states: [ 無, 序 ]
+    states: [ 無排, 序排 ]
 
 engine:
   filters:
