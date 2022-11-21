@@ -56,13 +56,13 @@ key_binder:
 #關#    - {accept: backslash, send: bar, when: has_menu} #「\」鍵位切分。
 ### 功能快捷鍵 ###
     - {accept: Control+apostrophe, toggle: character_range_bhjm, when: always}
-    - {accept: Control+minus, toggle: back_mark, when: always } #「國際音標和符號」提示碼開關
-    - {accept: Control+equal, toggle: simplify_comment, when: always } #「蝦米碼」提示碼開關
+    - {accept: Control+minus, toggle: simplify_comment, when: always } #「蝦米碼」提示碼開關
+    - {accept: Control+equal, toggle: back_mark, when: always } #「國際音標和符號」提示碼開關
     - {accept: Control+bracketright, toggle: en_sort, when: always} #「easy」選單排序是否照英漢字典順序
     - {accept: Control+Shift+6, toggle: character_range_bhjm, when: always}
     - {accept: Control+Shift+7, toggle: emoji_segestion, when: always}
-    - {accept: Control+Shift+8, toggle: back_mark, when: always}
-    - {accept: Control+Shift+9, toggle: simplify_comment, when: always}
+    - {accept: Control+Shift+8, toggle: simplify_comment, when: always}
+    - {accept: Control+Shift+9, toggle: back_mark, when: always}
     - {accept: Control+Shift+0, toggle: en_sort, when: always} #「排序Easy如同英漢字典」開關
 #    - {accept: Return, send: space, when: has_menu} #return,enter直出
 

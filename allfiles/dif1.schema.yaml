@@ -49,15 +49,15 @@ switches:
   - name: emoji_segestion
     reset: 1
     states: [ 🈚️, 🈶️ ]
+  - name: simplify_comment
+    # reset: 0
+    states: [ 編碼, 無編 ]
   - name: back_mark
     reset: 1
     states: [ 無註, 註釋 ]
   - name: punct_mark
     reset: 1
 #    states: [ 無, 註 ]
-  - name: simplify_comment
-    # reset: 0
-    states: [ 編碼, 無編 ]
   - name: en_sort
     # reset: 1
     states: [ 無排, 序排 ]

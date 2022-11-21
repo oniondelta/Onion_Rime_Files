@@ -4,7 +4,7 @@
 schema:
   schema_id: onion-array30
   name: "▦ 行列３０（洋蔥版）"
-  version: "202210"
+  version: "202211"
   author:
     - 洋蔥 <deltazonetw@gmail.com>
   description: |
@@ -28,12 +28,12 @@ switches:
   - name: extended_charset
     reset: 1
     states: [ "常用", "增廣" ]
-  - name: 1_2_straight_up
-    reset: 1
-    states: [ 香草, 直上 ]
   - name: simplify_comment
     # reset: 1
     states: [ 編碼, 無編 ]
+  - name: 1_2_straight_up
+    reset: 1
+    states: [ 香草, 直上 ]
 
 
 engine:
@@ -394,8 +394,10 @@ key_binder:
 #    - { accept: Control+Shift+slash, toggle: simplification, when: always } #新增！
     - { accept: Control+slash, toggle: ascii_punct, when: always } #新增！
     - { accept: Control+apostrophe, toggle: extended_charset, when: always } #增廣常用字符過濾，新增開關
-    - { accept: Control+equal, toggle: simplify_comment, when: always } #編碼提示開關
-    - { accept: Control+minus, toggle: 1_2_straight_up, when: always } #空白直上開關
+    - { accept: Control+minus, toggle: simplify_comment, when: always } #編碼提示開關
+    - { accept: Control+equal, toggle: 1_2_straight_up, when: always } #空白直上開關
+    - { accept: Control+Shift+7, toggle: simplify_comment, when: always } #編碼提示開關
+    - { accept: Control+Shift+8, toggle: 1_2_straight_up, when: always } #空白直上開關
 ### Return/Enter鍵 ###
     - {accept: Return, send: KP_Space, when: paging} #選字時 Return/Enter 鍵同空白鍵上屏中文
     - {accept: KP_Enter, send: KP_Space, when: paging} #選字時右側小鍵盤 Return/Enter 鍵同空白鍵上屏中文
