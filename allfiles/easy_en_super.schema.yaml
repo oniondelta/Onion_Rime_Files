@@ -65,8 +65,8 @@ translator:
   # strict_spelling: false
   # spelling_hints: 2
   # initial_quality: 1000
-  # comment_format:
-  #   - xform|.+||  #刪除尚未輸入完整碼之提示 ~abc
+  comment_format:
+    - xform/.+//  #刪除尚未輸入完整碼之提示 ~abc
   #   # - xform/⌗$//
   #   # - xform|[~a-z;/.'-]+||
   #   - xform/^.+⌗//

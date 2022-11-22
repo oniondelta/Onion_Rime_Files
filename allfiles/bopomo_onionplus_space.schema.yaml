@@ -309,14 +309,14 @@ easy_en:
   preedit_format:
     - 'xform/  / ␣/'
     - xform/^/《Easy》/
-    - xform/》;/》; /
-    - xform|》[/]|》/ |
-    - xform|》'|》' |
+    # - xform/》;/》; /
+    # - xform|》[/]|》/ |
+    # - xform|》'|》' |
     - xform/\\([;'])/ $1/
     - xform/\\ / ␣/
     - xform/\\/ /
-  # comment_format:
-  #   - xform|.+||  #刪除尚未輸入完整碼之提示 ~abc
+  comment_format:
+    - xform/.+//  #刪除尚未輸入完整碼之提示 ~abc
   #   # - xform|[~a-z;/.'-]+||
   #   - xform/^.+⌗// #easy_en_super用
   #   - xform|^[ a-z;/.'-]+|| #easy_en_super用
