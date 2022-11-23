@@ -34,11 +34,12 @@ local function kr_2set_0m_choice(key,env)
     return 2
 
 
-  -- --- 修正「Shift+Return」commit_raw_input 設定失效問題
-  -- elseif key:eq(KeyEvent("Shift+Return")) and (context:is_composing()) then
-  --   engine:commit_text(context.input)
-  --   context:clear()
-  --   return 1
+  --- 修正「Shift+Return」commit_raw_input 設定失效問題
+  elseif key:repr() == "Shift+Return" and (context:is_composing()) then
+  -- elseif key:eq(KeyEvent("Shift+Return")) and (context:is_composing()) then  -- KeyEvent 在官版小狼毫中會有問題
+    engine:commit_text(context.input)
+    context:clear()
+    return 1
 
   --- pass reverse_lookup prefix （使反查鍵可展示全部選項）(沒開，即使 commit_composition 上屏，還是無法顯示選單)
   elseif string.find(context.input, "=[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?$") then
