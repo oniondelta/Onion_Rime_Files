@@ -2178,6 +2178,9 @@ min_phrase_weight: 100
 鸠	qiu2	0%
 鳩	zhi4	0%
 鸠	zhi4	0%
+苫	shan4	0%
+苫	tian1	0%
+苫	chan1	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -71432,6 +71435,7 @@ min_phrase_weight: 100
 尪仔標	wang1 zai3 biao1
 就便	jiu4 bian4
 就和	jiu4 he2
+就和	jiu4 han4
 就地	jiu4 di4
 就地取材	jiu4 di4 qu3 cai2
 就地正法	jiu4 di4 zheng4 fa3
@@ -80228,6 +80232,7 @@ min_phrase_weight: 100
 新廈	xin1 xia4
 新式拚法	xin1 shi4 pin1 fa3
 新教	xin1 jiao4
+新教	xin1 jiao1
 新教徒	xin1 jiao4 tu2
 新晃	xin1 huang3
 新晃侗族自治縣	xin1 huang3 dong4 zu2 zi4 zhi4 xian4
@@ -112329,4 +112334,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 112332 #####
+##### @結束 END - 112337 #####
