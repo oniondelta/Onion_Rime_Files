@@ -55,14 +55,22 @@ local function Version()
 end
 
 local function Ver_info()
-  distribution_v = string.format("%s %s  (%s)",
-  rime_api.get_distribution_code_name(),
-  rime_api.get_distribution_version(),
-  rime_api.get_distribution_name())
-  librime_v = string.format("librime %s", rime_api.get_rime_version())
-  librime_lua_v = string.format("librime-lua %s", Version())
-  lua_v = string.format("%s", _VERSION)
-  i_id = string.format("%s", rime_api.get_user_id())
+  if Version() > 184 then
+    distribution_v = string.format("%s %s  (%s)",
+    rime_api.get_distribution_code_name(),
+    rime_api.get_distribution_version(),
+    rime_api.get_distribution_name())
+    librime_v = string.format("librime %s", rime_api.get_rime_version())
+    librime_lua_v = string.format("librime-lua %s", Version())
+    lua_v = string.format("%s", _VERSION)
+    i_id = string.format("%s", rime_api.get_user_id())
+  else
+    distribution_v = "Lua 版本小於 185，無函數判定"
+    librime_v = "Lua 版本小於 185，無函數判定"
+    librime_lua_v = "Lua 版本小於 185，無函數判定"
+    lua_v = "Lua 版本小於 185，無函數判定"
+    i_id = "Lua 版本小於 185，無函數判定"
+  end
   return {distribution_v, librime_v, librime_lua_v, lua_v, i_id}
 end
 
