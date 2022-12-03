@@ -7,14 +7,16 @@ charset_comment_filter: 為候選項加上其所屬字符集的註釋
 --]]
 -- 幫助函數（可跳過）
 local charset = {
-  ["CJK"] = { first = 0x4E00, last = 0x9FFF },
-  ["ExtA"] = { first = 0x3400, last = 0x4DBF },
-  ["ExtB"] = { first = 0x20000, last = 0x2A6DF },
-  ["ExtC"] = { first = 0x2A700, last = 0x2B73F },
-  ["ExtD"] = { first = 0x2B740, last = 0x2B81F },
-  ["ExtE"] = { first = 0x2B820, last = 0x2CEAF },
-  ["ExtF"] = { first = 0x2CEB0, last = 0x2EBEF },
-  ["Compat"] = { first = 0x2F800, last = 0x2FA1F } }
+  ["CJK"] = { first = 0x4E00, last = 0x9FFF },     -- CJK Unified Ideographs - https://unicode.org/charts/PDF/U4E00.pdf
+  ["ExtA"] = { first = 0x3400, last = 0x4DBF },    -- CJK Unified Ideographs Extension A - https://unicode.org/charts/PDF/U3400.pdf
+  ["ExtB"] = { first = 0x20000, last = 0x2A6DF },  -- CJK Unified Ideographs Extension B - https://unicode.org/charts/PDF/U20000.pdf
+  ["ExtC"] = { first = 0x2A700, last = 0x2B73F },  -- CJK Unified Ideographs Extension C - https://unicode.org/charts/PDF/U2A700.pdf
+  ["ExtD"] = { first = 0x2B740, last = 0x2B81F },  -- CJK Unified Ideographs Extension D - https://unicode.org/charts/PDF/U2B740.pdf
+  ["ExtE"] = { first = 0x2B820, last = 0x2CEAF },  -- CJK Unified Ideographs Extension E - https://unicode.org/charts/PDF/U2B820.pdf
+  ["ExtF"] = { first = 0x2CEB0, last = 0x2EBEF },  -- CJK Unified Ideographs Extension F - https://unicode.org/charts/PDF/U2CEB0.pdf
+  ["ExtG"] = { first = 0x30000, last = 0x3134A },  -- CJK Unified Ideographs Extension G - https://unicode.org/charts/PDF/U30000.pdf
+  ["Compat"] = { first = 0x2F800, last = 0x2FA1F } -- CJK Compatibility Ideographs Supplement - https://unicode.org/charts/PDF/U2F800.pdf
+  }
 
 local function exists(single_filter, text)
   for i in utf8.codes(text) do
@@ -36,7 +38,7 @@ local function is_cjk_ext(c)
   return is_charset("ExtA")(c) or is_charset("ExtB")(c) or
     is_charset("ExtC")(c) or is_charset("ExtD")(c) or
     is_charset("ExtE")(c) or is_charset("ExtF")(c) or
-    is_charset("Compat")(c)
+    is_charset("ExtG")(c) or is_charset("Compat")(c)
 end
 
 
