@@ -54,7 +54,7 @@
 
   > 202203 韓文改成 HNC 羅馬字輸入方式。
   
-  > 說明暫時關閉。
+  > Blog 說明關閉。
 
 - [電腦 RIME 輸入法『注音（洋蔥 純注音 版）』](https://deltazone.pixnet.net/blog/post/264319309)
 
