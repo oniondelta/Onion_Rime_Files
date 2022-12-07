@@ -4,7 +4,7 @@
 schema:
   schema_id: Mount_bopomo
   name: "☆注音(反查專用)☆"
-  version: "202204"
+  version: "202212"
   author:
     - Onion
   description: |
@@ -202,5 +202,5 @@ recognizer:
   patterns:
     uppercase: "^[A-Z][-_+.'0-9A-Za-z]*$"
     email: "^[a-z][-_.0-9a-z]*@.*$"
-    url: "^(www[.]|https?:|ftp:|mailto:).*$"
+    url: "^(https?:|ftp:|mailto:|file:).*$"
 #    reverse_lookup: "`[a-z;]*'?$"
