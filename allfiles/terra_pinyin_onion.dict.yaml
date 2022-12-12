@@ -2184,6 +2184,10 @@ min_phrase_weight: 100
 苫	tian1	0%
 苫	chan1	0%
 鵏	bu4
+掕	ling4
+掕	leng2
+撅	jue4	0%
+撅	gui4	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -54146,6 +54150,8 @@ min_phrase_weight: 100
 一展長才	yi1 zhan3 chang2 cai2
 一差二誤	yi4 cha1 er4 wu4
 一差二誤	yi1 cha1 er4 wu4
+一差二誤	yi1 cha4 er4 wu4
+一差二誤	yi2 cha4 er4 wu4
 一差二錯	yi4 cha1 er4 cuo4
 一差二錯	yi1 cha1 er4 cuo4
 一差半錯	yi4 cha1 ban4 cuo4
@@ -112398,4 +112404,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 112401 #####
+##### @結束 END - 112407 #####
