@@ -55112,6 +55112,7 @@ min_phrase_weight: 100
 上了歲數	shang4 le5 sui4 shu4
 上來	shang4 lai2
 上供	shang4 gong4
+上供	shang4 gong1
 上傳	shang4 chuan2
 上傳	shang3 chuan2
 上僂	shang4 lou2
@@ -58121,73 +58122,119 @@ min_phrase_weight: 100
 侗族	dong4 zu2
 侗語	dong4 yu3
 供不上	gong1 bu2 shang4
+供不上	gong4 bu2 shang4
 供不應求	gong1 bu2 ying4 qiu2
+供不應求	gong4 bu2 ying4 qiu2
 供事	gong4 shi4
+供事	gong1 shi4
 供佛	gong4 fo2
 供佛	gong1 fo2
 供佛花	gong4 fo2 hua1
+供佛花	gong1 fo2 hua1
 供吐	gong1 tu3
 供品	gong4 pin3
 供品	gong1 pin3
 供大於求	gong1 da4 yu2 qiu2
+供大於求	gong4 da4 yu2 qiu2
 供奉	gong4 feng4
 供奉	gong1 feng4
 供奠	gong4 dian4
+供奠	gong1 dian4
 供客	gong4 ke4
+供客	gong1 ke4
 供尖	gong4 jian1
 供張	gong1 zhang1
 供應	gong1 ying4
 供應	gong4 ying4
 供應品	gong1 ying4 pin3
+供應品	gong4 ying4 pin3
 供應商	gong1 ying4 shang1
+供應商	gong4 ying4 shang1
 供應室	gong1 ying4 shi4
+供應室	gong4 ying4 shi4
 供應者	gong1 ying4 zhe3
-供應鏈	gong1 ying1 lian4
+供應者	gong4 ying4 zhe3
 供應鏈	gong1 ying4 lian4
+供應鏈	gong4 ying4 lian4
 供房	gong1 fang2
+供房	gong4 fang2
 供承	gong1 cheng2
+供承	gong4 cheng2
 供招	gong1 zhao1
 供攀	gong1 pan1
 供果	gong4 guo3
+供果	gong1 guo3
 供桌	gong4 zhuo1
+供桌	gong1 zhuo1
 供水	gong1 shui3
+供水	gong4 shui3
 供求	gong1 qiu2
+供求	gong4 qiu2
 供油系統	gong1 you2 xi4 tong3
+供油系統	gong4 you2 xi4 tong3
 供熱	gong1 re4
+供熱	gong4 re4
 供燃氣	gong1 ran2 qi4
+供燃氣	gong4 ran2 qi4
 供床	gong4 chuang2
+供床	gong1 chuang2
 供物	gong4 wu4
+供物	gong1 wu4
 供狀	gong1 zhuang4
 供狀	gong4 zhuang4
 供用	gong1 yong4
 供碗	gong4 wan3
+供碗	gong1 wan3
 供稱	gong1 cheng1
 供稱	gong4 cheng1
 供給	gong1 ji3
 供給	gong1 gei3
 供職	gong4 zhi2
+供職	gong1 zhi2
 供膳甘肥	gong1 shan4 gan1 fei2
+供膳甘肥	gong4 shan4 gan1 fei2
 供花	gong4 hua1
+供花	gong1 hua1
 供茶	gong4 cha2
+供茶	gong1 cha2
 供血	gong1 xue4
 供血	gong1 xie3
+供血	gong4 xue4
+供血	gong4 xie3
 供血者	gong1 xue4 zhe3
 供血者	gong1 xie3 zhe3
+供血者	gong4 xue4 zhe3
+供血者	gong4 xie3 zhe3
 供貨	gong1 huo4
+供貨	gong4 huo4
 供貨商	gong1 huo4 shang1
+供貨商	gong4 huo4 shang1
 供述	gong1 shu4
+供述	gong4 shu4
 供過	gong1 guo4
+供過	gong4 guo4
 供過於求	gong1 guo4 yu2 qiu2
+供過於求	gong4 guo4 yu2 qiu2
 供銷	gong1 xiao1
+供銷	gong4 xiao1
 供銷合作社	gong1 xiao1 he2 zuo4 she4
+供銷合作社	gong4 xiao1 he2 zuo4 she4
 供銷員	gong1 xiao1 yuan2
+供銷員	gong4 xiao1 yuan2
 供銷商	gong1 xiao1 shang1
+供銷商	gong4 xiao1 shang1
 供電	gong1 dian4
+供電	gong4 dian4
 供電系統	gong1 dian4 xi4 tong3
+供電系統	gong4 dian4 xi4 tong3
 供需	gong1 xu1
+供需	gong4 xu1
 供需失衡	gong1 xu1 shi1 heng2
+供需失衡	gong4 xu1 shi1 heng2
 供需失調	gong1 xu1 shi1 tiao2
+供需失調	gong4 xu1 shi1 tiao2
 供食	gong1 shi2
+供食	gong4 shi2
 供養	gong4 yang3
 供養	gong1 yang3
 供養	gong4 yang4
@@ -59527,7 +59574,9 @@ min_phrase_weight: 100
 僂指	lou2 zhi3
 僂行	lou2 xing2
 僅供	jin3 gong1
+僅供	jin3 gong4
 僅供參考	jin3 gong1 can1 kao3
+僅供參考	jin3 gong4 can1 kao3
 僅容旋馬	jin3 rong2 xuan2 ma3
 僆子	lian4 zi3
 像模像樣	xiang4 mo2 xiang4 yang4
@@ -60130,7 +60179,7 @@ min_phrase_weight: 100
 八旗都統	ba1 qi2 du1 tong3
 八更	ba1 geng1
 八會穴	ba1 hui4 xue4
-八會穴	ba1 hui4 xue2
+八會穴	ba1 hui4 xue2	3%
 八棍子撂不著	ba1 gun4 zi5 liao4 bu4 zhao2
 八正道	ba1 zheng4 dao4
 八步周行	ba1 bu4 zhou1 xing2
@@ -62681,7 +62730,7 @@ min_phrase_weight: 100
 匣子	xia2 zi5
 匪朝伊夕	fei3 zhao1 yi1 xi4
 匪穴	fei3 xue4
-匪穴	fei3 xue2
+匪穴	fei3 xue2	3%
 匪躬之操	fei3 gong1 zhi1 cao1
 匪難	fei3 nan2
 匯出行	hui4 chu1 hang2
@@ -63948,6 +63997,7 @@ min_phrase_weight: 100
 可以燎原	ke3 yi3 liao4 yuan2
 可以為錯	ke3 yi3 wei2 cuo4
 可供軍用	ke3 gong1 jun1 yong4
+可供軍用	ke3 gong4 jun1 yong4
 可便	ke3 bian4
 可信度	ke3 xin4 du4
 可共患難	ke3 gong4 huan4 nan4
@@ -65589,7 +65639,8 @@ min_phrase_weight: 100
 啞然無生	ya3 ran2 wu2 sheng1
 啞然無言	e4 ran2 wu2 yan2
 啞然無言	ya3 ran2 wu2 yan2
-啞穴	ya3 xue2
+啞穴	ya3 xue4
+啞穴	ya3 xue2	3%
 啞終端	ya1 zhong1 duan1
 啞聲	ya3 sheng1
 啞謎	ya3 mi2
@@ -66504,6 +66555,7 @@ min_phrase_weight: 100
 因此上	yin1 ci3 shang4
 因為	yin1 wei4
 因特網提供商	yin1 te4 wang3 ti2 gong1 shang1
+因特網提供商	yin1 te4 wang3 ti2 gong4 shang1
 因禍得福	yin1 huo4 de2 fu2
 因禍為福	yin1 huo4 wei2 fu2
 因變數	yin1 bian4 shu4
@@ -67708,7 +67760,7 @@ min_phrase_weight: 100
 墓地	mu4 di4
 墓生兒子	mu4 sheng1 er2 zi5
 墓穴	mu4 xue4
-墓穴	mu4 xue2
+墓穴	mu4 xue2	3%
 墜地	zhui4 di4
 墜子	zhui4 zi5
 墜子戲	zhui4 zi5 xi4
@@ -68822,7 +68874,7 @@ min_phrase_weight: 100
 太陽照在桑乾河上	tai4 yang2 zhao4 zai4 sang1 gan1 he2 shang4
 太陽神計劃	tai4 yang2 shen2 ji4 hua4
 太陽穴	tai4 yang2 xue4
-太陽穴	tai4 yang2 xue2
+太陽穴	tai4 yang2 xue2	3%
 太陽自轉	tai4 yang2 zi4 zhuan4
 夫人	fu1 ren2
 夫妻無隔宿之仇	fu1 qi1 wu2 ge2 su4 zhi1 chou2
@@ -69165,6 +69217,7 @@ min_phrase_weight: 100
 奧維耶多	ao4 wei2 ye1 duo1
 奧西娜斯	ao4 xi1 nuo2 si1
 奧運供貨商	ao4 yun4 gong1 huo4 shang1
+奧運供貨商	ao4 yun4 gong4 huo4 shang1
 奪冠	duo2 guan4
 奪得	duo2 de2
 奪得	duo2 de5
@@ -69820,7 +69873,7 @@ min_phrase_weight: 100
 孔父嘉	kong3 fu3 jia1
 孔版印刷	kong3 ban3 yin4 shua1
 孔穴	kong3 xue4
-孔穴	kong3 xue2
+孔穴	kong3 xue2	3%
 孔雀王朝	kong3 que4 wang2 chao2
 孔雀開屏	kong3 que4 kai1 ping2
 孔鯉過庭	kong3 li3 guo4 ting2
@@ -70317,6 +70370,7 @@ min_phrase_weight: 100
 宣父	xuan1 fu3
 宣稱	xuan1 cheng1
 宣誓供詞證明	xuan1 shi4 gong4 ci2 zheng4 ming2
+宣誓供詞證明	xuan1 shi4 gong1 ci2 zheng4 ming2
 宣騰	xuan1 teng2
 室內樂	shi4 nei4 yue4
 宮中太監	gong1 zhong1 tai4 jian4
@@ -71920,7 +71974,7 @@ min_phrase_weight: 100
 巢湖地區	chao2 hu2 di4 qu1
 巢父	chao2 fu3
 巢穴	chao2 xue4
-巢穴	chao2 xue2
+巢穴	chao2 xue2	3%
 工作分析	gong1 zuo4 fen1 xi1
 工作時間	gong1 zuo4 shi2 jian1
 工作過度	gong1 zuo4 guo4 du4
@@ -78029,8 +78083,12 @@ min_phrase_weight: 100
 提供	ti2 gong4
 提供優質服務	ti2 gong1 you1 zhi2 fu2 wu4
 提供優質服務	ti2 gong1 you1 zhi4 fu2 wu4	3%
+提供優質服務	ti2 gong4 you1 zhi2 fu2 wu4
+提供優質服務	ti2 gong4 you1 zhi4 fu2 wu4	3%
 提供商	ti2 gong1 shang1
+提供商	ti2 gong4 shang1
 提供者	ti2 gong1 zhe3
+提供者	ti2 gong4 zhe3
 提傀儡上戲場	ti2 kui3 lei3 shang4 xi4 chang2	3%
 提傀儡上戲場	ti2 kui3 lei3 shang4 xi4 chang3
 提刀弄斧	ti2 dao1 nong4 fu3
@@ -79163,6 +79221,7 @@ min_phrase_weight: 100
 擷取	jie2 qu3
 擷取	xie2 qu3
 擺供	bai3 gong4
+擺供	bai3 gong1
 擺劃	bai3 hua4
 擺地攤	bai3 di4 tan1
 擺子	bai3 zi3
@@ -81144,7 +81203,8 @@ min_phrase_weight: 100
 曲江宴	qu1 jiang1 yan4
 曲江池	qu1 jiang1 chi2
 曲江縣	qu1 jiang1 xian4
-曲池穴	qu1 chi2 xue2
+曲池穴	qu1 chi2 xue4
+曲池穴	qu1 chi2 xue2	3%
 曲沃	qu3 wo4
 曲沃縣	qu3 wo4 xian4
 曲流	qu1 liu2
@@ -81712,7 +81772,9 @@ min_phrase_weight: 100
 服低捋	fu2 di1 le4
 服侍	fu2 shi4
 服務提供商	fu2 wu4 ti2 gong1 shang1
+服務提供商	fu2 wu4 ti2 gong4 shang1
 服務提供者	fu2 wu4 ti2 gong1 zhe3
+服務提供者	fu2 wu4 ti2 gong4 zhe3
 服務處	fu2 wu4 chu4
 服務質量	fu2 wu4 zhi2 liang4
 服務質量	fu2 wu4 zhi4 liang4	3%
@@ -84806,6 +84868,7 @@ min_phrase_weight: 100
 求親	qiu2 qin1
 求親告友	qiu2 qin1 gao4 you3
 求過於供	qiu2 guo4 yu2 gong1
+求過於供	qiu2 guo4 yu2 gong4
 汆丸子湯	cuan1 wan2 zi5 tang1
 汆子	cuan1 zi5
 汊子	cha4 zi5
@@ -85818,7 +85881,7 @@ min_phrase_weight: 100
 洞察一切	dong4 cha2 yi1 qie4
 洞悉真相	dong4 xi1 zhen1 xiang4
 洞穴	dong4 xue4
-洞穴	dong4 xue2
+洞穴	dong4 xue2	3%
 洞見癥結	dong4 jian4 zheng1 jie2
 津津樂道	jin1 jin1 le4 dao4
 津貼制度	jin1 tie1 zhi4 du4
@@ -87167,7 +87230,7 @@ min_phrase_weight: 100
 潮汐	chao2 xi1
 潮汐預報	chao2 xi4 yu4 bao4
 潮間帶	chao2 jian1 dai4
-潰於蟻穴	kui4 yu2 yi3 xue2
+潰於蟻穴	kui4 yu2 yi3 xue2	3%
 潰於蟻穴	kui4 yu2 yi3 xue4
 澀剌剌的	se4 la4 la4 de5
 澀脈	se4 mai4
@@ -87741,6 +87804,7 @@ min_phrase_weight: 100
 煙袋鍋子	yan1 dai4 guo1 zi5
 煙視媚行	yan1 shi4 mei4 xing2
 煙雲供養	yan1 yun2 gong4 yang3
+煙雲供養	yan1 yun2 gong1 yang3
 煙霏露結	yan1 fei1 lu4 jie2
 煙飛星散	yan1 fei1 xing1 san4
 煞住	sha1 zhu4
@@ -88579,6 +88643,7 @@ min_phrase_weight: 100
 物種起源	wu4 zhong3 qi3 yuan2
 物累	wu4 lei3
 物資供應	wu4 zi1 gong1 ying4
+物資供應	wu4 zi1 gong4 ying4
 物質不滅	wu4 zhi2 bu2 mie4
 物質不滅	wu4 zhi4 bu2 mie4	3%
 物質不滅定律	wu4 zhi2 bu2 mie4 ding4 lv4
@@ -89589,6 +89654,7 @@ min_phrase_weight: 100
 產仔	chan3 zi3
 產仔	chan3 zai3
 產供銷	chan3 gong1 xiao1
+產供銷	chan3 gong4 xiao1
 產假	chan3 jia4
 產品結構	chan3 pin3 jie2 gou4
 產品質量	chan3 pin3 zhi2 liang4
@@ -92522,6 +92588,7 @@ min_phrase_weight: 100
 社會意識	she4 hui4 yi4 shi4
 社會教育	she4 hui4 jiao4 yu4
 社會總供給	she4 hui4 zong3 gong1 ji3
+社會總供給	she4 hui4 zong3 gong4 ji3
 社會行動	she4 hui4 xing2 dong4
 社會行為	she4 hui4 xing2 wei2
 社會角色	she4 hui4 jue2 se4
@@ -93120,11 +93187,12 @@ min_phrase_weight: 100
 穰穰	rang2 rang2
 穰穰	rang3 rang3
 穴居	xue4 ju1
-穴居	xue2 ju1
+穴居	xue2 ju1	3%
 穴居知雨	xue4 ju1 zhi1 yu3
 穴居野處	xue4 ju1 ye3 chu3
 穴施	xue4 shi1
-穴脈	xue2 mai4
+穴脈	xue2 mai4	3%
+穴脈	xue4 mai4
 穴處之徒	xue4 chu3 zhi1 tu2
 穴處知雨	xue4 chu3 zhi1 yu3
 穴見	xue4 jian4
@@ -93350,11 +93418,12 @@ min_phrase_weight: 100
 空盪盪	kong1 dang4 dang4
 空相	kong1 xiang4
 空著手	kong1 zhe5 shou3
-空穴	kong4 xue2
+空穴	kong4 xue2	3%
 空穴	kong1 xue4
-空穴來風	kong1 xue2 lai2 feng1
+空穴來風	kong1 xue2 lai2 feng1	3%
 空穴來風	kong1 xue4 lai2 feng1
-空穴來風未必無因	kong4 xue2 lai2 feng1 wei4 bi4 wu2 yin1
+空穴來風未必無因	kong4 xue2 lai2 feng1 wei4 bi4 wu2 yin1	3%
+空穴來風未必無因	kong4 xue4 lai2 feng1 wei4 bi4 wu2 yin1
 空空	kong1 kong1
 空空兒	kong1 kong1 er2
 空空兒	kong1 kong1 er5	80%
@@ -95436,6 +95505,7 @@ min_phrase_weight: 100
 總丱	zong3 guan4
 總主教	zong3 zhu3 jiao4
 總供給	zong3 gong1 ji3
+總供給	zong3 gong4 ji3
 總分	zong3 fen1
 總參謀長	zong3 can1 mou2 zhang3
 總和	zong3 he2
@@ -97333,6 +97403,7 @@ min_phrase_weight: 100
 自作自受	zi4 zuo4 zi4 shou4
 自作自用	zi4 zuo1 zi4 yong4
 自供狀	zi4 gong1 zhuang4
+自供狀	zi4 gong4 zhuang4
 自便	zi4 bian4
 自個	zi4 ge3
 自個	zi4 ge5
@@ -100069,6 +100140,7 @@ min_phrase_weight: 100
 蜚鳥盡	fei1 niao3 jin4
 蜜丸子	mi4 wan2 zi5
 蜜供	mi4 gong4
+蜜供	mi4 gong1
 蜜月假期	mi4 yue4 jia4 qi2
 蜜月期	mi4 yue4 qi2
 蜜筒	mi4 tong2
@@ -101822,6 +101894,7 @@ min_phrase_weight: 100
 計量單位	ji4 liang4 dan1 wei4
 計量棒	ji4 liang4 bang4
 訊供	xun4 gong1
+訊供	xun4 gong4
 訊息	xun4 xi2
 訊息傳遞中介	xun4 xi2 chuan2 di4 zhong1 jie4
 訊息處理系統	xun4 xi2 chu3 li3 xi4 tong3
@@ -102971,7 +103044,9 @@ min_phrase_weight: 100
 貨商場	huo4 shang1 chang2	3%
 貨幣乘數	huo4 bi4 cheng2 shu4
 貨幣供應量	huo4 bi4 gong1 ying4 liang4
+貨幣供應量	huo4 bi4 gong4 ying4 liang4
 貨幣供給額	huo4 bi4 gong1 ji3 e2
+貨幣供給額	huo4 bi4 gong4 ji3 e2
 貨販子	huo4 fan4 zi5
 貨賂公行	huo4 lu4 gong1 xing2
 貨賄公行	huo4 hui4 gong1 xing2
@@ -108517,7 +108592,7 @@ min_phrase_weight: 100
 阿明	a1 ming2
 阿昔洛韋	a1 xi1 luo4 wei2
 阿是穴	e1 shi4 xue4
-阿是穴	a1 shi4 xue2
+阿是穴	a1 shi4 xue2	3%
 阿普吐龍	a1 pu3 tu3 long2
 阿普爾頓	a1 pu3 er3 dun4
 阿曼	a1 man4
@@ -109537,6 +109612,7 @@ min_phrase_weight: 100
 雲階月地	yun2 jie1 yue4 di4
 雲麾將軍碑	yun2 hui1 jiang1 jun1 bei1
 零件供貨商	ling2 jian4 gong1 huo4 shang1
+零件供貨商	ling2 jian4 gong4 huo4 shang1
 零係數	ling2 xi4 shu4
 零功率堆	ling2 gong1 lv4 dui1
 零和	ling2 he2
@@ -109577,6 +109653,7 @@ min_phrase_weight: 100
 雺晦	meng2 hui4
 雺淞	meng2 song1
 電信服務供應商	dian4 xin4 fu2 wu4 gong1 ying4 shang1
+電信服務供應商	dian4 xin4 fu2 wu4 gong4 ying4 shang1
 電傳	dian4 chuan2
 電傳會議	dian4 chuan2 hui4 yi4
 電傳視訊	dian4 chuan2 shi4 xun4
@@ -109615,6 +109692,7 @@ min_phrase_weight: 100
 電氣行	dian4 qi4 hang2
 電流強度	dian4 liu2 qiang2 du4
 電源供應機	dian4 yuan2 gong1 ying4 ji1
+電源供應機	dian4 yuan2 gong4 ying4 ji1
 電熨斗	dian4 yun4 dou3
 電磁干擾	dian4 ci2 gan1 rao3
 電磁感應	dian4 ci2 gan3 ying4
@@ -110534,7 +110612,7 @@ min_phrase_weight: 100
 風磨	feng1 mo4
 風示	feng4 shi4
 風穴	feng1 xue4
-風穴	feng1 xue2
+風穴	feng1 xue2	3%
 風胡子	feng1 hu2 zi5
 風興雲蒸	feng1 xing1 yun2 zheng1
 風萍浪跡	feng1 ping2 lang4 ji1
@@ -110909,6 +110987,7 @@ min_phrase_weight: 100
 香羊肚	xiang1 yang2 du4
 香胰子	xiang1 yi2 zi5
 香花供養	xiang1 hua1 gong4 yang4
+香花供養	xiang1 hua1 gong1 yang4
 香荷包	xiang1 he2 bao1
 香菌	xiang1 jun4
 香蓼	xiang1 liao3
@@ -112404,4 +112483,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 112407 #####
+##### @結束 END - 112486 #####
