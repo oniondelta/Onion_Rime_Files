@@ -27,7 +27,7 @@
 
 - 方案放置路徑：
 
-  > 別放錯資料夾，反饋有人放錯放到程式預設方案資料夾！雖可使用，但會產生 Bug。
+  > 別放錯資料夾，反饋有人放錯放到程式預設方案資料夾！有些方案會因 lua 無法執行，會產生 Bug。
 
   > ```
   > %APPDATA%\Rime  ( Windows 小狼毫 )
@@ -51,10 +51,8 @@
 - [Wiki 說明連結](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E6%B4%8B%E8%94%A5%E7%89%88%E9%9B%BB%E8%85%A6-Rime-%E6%96%B9%E6%A1%88%E5%AE%89%E8%A3%9D%E8%88%87%E4%BF%AE%E6%94%B9)
 
 ## 各方案說明：
-
-  > 202203 韓文改成 HNC 羅馬字輸入方式。
   
-  > 以下 Blog 說明關閉。
+  > 以下 Blog 說明已關閉。
 
 - [電腦 RIME 輸入法『注音（洋蔥 純注音 版）』](https://deltazone.pixnet.net/blog/post/264319309)
 
