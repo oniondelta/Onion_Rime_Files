@@ -52,7 +52,7 @@
 
 ## 各方案說明：
   
-  > 以下 Blog 說明已關閉。
+以下 Blog 說明已關閉。
 
 - [電腦 RIME 輸入法『注音（洋蔥 純注音 版）』](https://deltazone.pixnet.net/blog/post/264319309)
 
