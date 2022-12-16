@@ -18,7 +18,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion_add
-version: "202211"
+version: "202212"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7
@@ -237,6 +237,7 @@ min_phrase_weight: 100
 蔔	(bo1)	50%
 召	(zhao1)
 噹	(diang1)
+噹	(diang5)
 瑰	(gui4)	10%
 鸝	(li4)	10%
 ### @補充為《一聲》，通俗慣用或方便輸入，『非正確發音』！！！ ###
