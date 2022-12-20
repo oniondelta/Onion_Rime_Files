@@ -1,0 +1,67 @@
+# Weasel settings
+# encoding: utf-8
+
+patch:
+  "style/color_scheme": lost_temple_2 #lost_temple #ink #aqua
+#  "style/horizontal": true
+  "style/color_font": false #true #emoji用彩色字型
+  "style/font_face": Noto Sans CJK TC DemiLight #Noto Sans Mono CJK TC #Noto Sans CJK TC Light #HanaMinA #Regular
+  "style/font_point": 14 #13 #16
+  "style/label_font_face": Noto Sans Mono CJK TC #Noto Sans CJK TC Light #HanaMinA #Regular
+  "style/label_font_point": 11
+  "style/label_format": "\u2005%s " #\2002 是en space的寬度 \u2004是1/3 em \u2005 是1/4 em \u2006 是1/6 em \u2007 是圖形空間的寬度 \u2008 是標點符號的寬度
+  "style/comment_font_face": Noto Sans CJK TC DemiLight #Microsoft YaHei
+  "style/comment_font_point": 13
+  "style/capture_type": none #highlighted #candidates #提交前截圖類型，none, highlighted, candidates
+  "style/preedit_type": composition #preedit類型，composition, preview, preview_all, preview_all為新增選項，配合隱藏窗口使用效果尤佳
+  "style/mark_text": "" #高亮標記符號
+
+  "style/layout/align_type": center #bottom #文字偏置，主要影響label和comment居上/居中/居下布置，尤其是label和comment字體比候選字小的时候，bottom/center/top
+  "style/layout/max_width": 0
+  "style/layout/min_width": 160
+  "style/layout/min_height": 10
+  "style/layout/border_width": 3 #0 #邊框寬度，同border #窗口邊界寬度，大於圓角半徑才有效果
+  # "style/layout/border": 2 #0 #外邊框寬 #邊框寬度，同border_width，擇一即可，故遮屏
+  "style/layout/margin_x": 2 #3 #0 #5 #候選字左右邊距 #當為0時，round_corner不會作用
+  "style/layout/margin_y": 3 #5 #候選字上下邊距
+  "style/layout/spacing": 10 #5 #輸入碼與第一個候選項之間距離
+  "style/layout/candidate_spacing": 3 #各候選項間距
+  "style/layout/hilite_spacing": 4 #label與候選字距離
+  "style/layout/hilite_padding": 2 #3 #1 #候選字與候選框距離
+  "style/layout/round_corner": 3 #0 #别名 hilited_corner_radius #候選、編碼背景色塊圓角
+  "style/layout/corner_radius": 7 #5 #4 #窗口圓角半徑
+  "style/layout/shadow_radius": 5 #7 #4 #全局陰影模糊半徑，如果為0則全局禁用陰影
+  "style/layout/shadow_offset_x": 4 #3
+  "style/layout/shadow_offset_y": 4 #3
+
+
+  preset_color_schemes/lost_temple_2:
+    author: "佛振 <chen.sst@gmail.com>, based on ir_black"
+    back_color: 0x444444
+    border_color: 0x444444
+    #hilited_back_color: 0x222222
+    hilited_candidate_back_color: 0x82e6ca
+    hilited_candidate_text_color: 0x000000
+    hilited_text_color: 0x82e6ca
+    name: "孤寺／Lost Temple"
+    text_color: 0xe8f3f6
+    shadow_color: 0x000000 #候選窗陰影色
+
+# preset_color_schemes/metro:
+#    back_color: 0xffffff
+#    border_color: 0x444444
+#    hilited_back_color: 0xffffff
+#    hilited_candidate_back_color: 0x444444
+#    hilited_candidate_text_color: 0xffffff
+#    hilited_text_color: 0x000000
+#    name: "metro"
+#    text_color: 0x000000
+#  style/layout/border: 2
+#  style/layout/margin_x: 15
+#  style/layout/margin_y: 15
+#  style/layout/hilite_padding: 15
+#  style/layout/hilite_spacing: 15
+#  style/layout/spacing: 15
+#  style/layout/candidate_spacing: 30
+#  style/layout/round_corner: 0
+#  style/corner_radius: 0
