@@ -76,8 +76,8 @@ patch:
   ascii_composer/switch_key:
     Shift_L: noop
     Shift_R: noop
-    Caps_Lock: commit_text
-    Eisu_toggle: clear
-    Control_L: noop
-    Control_R: noop
+#    Caps_Lock: commit_text
+#    Eisu_toggle: clear
+#    Control_L: noop
+#    Control_R: noop
 

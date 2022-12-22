@@ -62,9 +62,9 @@ patch:
 
 #  ascii_composer:
 #    good_old_caps_lock: false
-#  ascii_composer/switch_key:
-#    Shift_L: noop
-#    Shift_R: noop
+  ascii_composer/switch_key:
+    Shift_L: noop
+    Shift_R: noop
 #    Caps_Lock: clear
 #    Eisu_toggle: clear
 #    Control_L: noop
