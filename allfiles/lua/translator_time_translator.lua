@@ -59,16 +59,16 @@ local function Ver_info()
     distribution_v = string.format("%s %s  (%s)",
     rime_api.get_distribution_code_name(),
     rime_api.get_distribution_version(),
-    rime_api.get_distribution_name())
-    librime_v = string.format("librime %s", rime_api.get_rime_version())
-    librime_lua_v = string.format("librime-lua %s", Version())
-    lua_v = string.format("%s", _VERSION)
-    i_id = string.format("%s", rime_api.get_user_id())
+    rime_api.get_distribution_name()) or ""
+    librime_v = string.format("librime %s", rime_api.get_rime_version()) or ""
+    librime_lua_v = string.format("librime-lua %s", Version()) or ""
+    lua_v = string.format("%s", _VERSION) or ""
+    i_id = string.format("%s", rime_api.get_user_id()) or ""
   elseif Version() >= 9 then
     distribution_v = "librime-lua 小於 185，無判定函數"
-    librime_v = string.format("librime %s", rime_api.get_rime_version())
-    librime_lua_v = string.format("librime-lua %s", Version())
-    lua_v = string.format("%s", _VERSION)
+    librime_v = string.format("librime %s", rime_api.get_rime_version()) or ""
+    librime_lua_v = string.format("librime-lua %s", Version()) or ""
+    lua_v = string.format("%s", _VERSION) or ""
     i_id = "librime-lua 小於 185，無判定 id 函數"
   else
     distribution_v = "librime-lua 小於 9，皆無法判定"
