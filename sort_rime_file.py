@@ -329,8 +329,10 @@ shutil.copytree("./allfiles/lua/", "./sort_rime/ocm/ocm_mixin/lua/")
 
 shutil.copyfile("./allfiles/各方案default.custom/ocm_mixin_custom/default.custom.yaml", "./sort_rime/ocm/ocm_mixin/default.custom.yaml")
 
-shutil.copyfile("./allfiles/opencc/back_mark_ocm.json", "./sort_rime/ocm/ocm_mixin/opencc/back_mark_ocm.json")
-shutil.copyfile("./allfiles/opencc/back_mark_ocm.txt", "./sort_rime/ocm/ocm_mixin/opencc/back_mark_ocm.txt")
+shutil.copyfile("./allfiles/opencc/back_mark.json", "./sort_rime/ocm/ocm_mixin/opencc/back_mark.json")
+shutil.copyfile("./allfiles/opencc/back_mark.txt", "./sort_rime/ocm/ocm_mixin/opencc/back_mark.txt")
+# shutil.copyfile("./allfiles/opencc/back_mark_ocm.json", "./sort_rime/ocm/ocm_mixin/opencc/back_mark_ocm.json")
+# shutil.copyfile("./allfiles/opencc/back_mark_ocm.txt", "./sort_rime/ocm/ocm_mixin/opencc/back_mark_ocm.txt")
 shutil.copyfile("./allfiles/opencc/emoji_2021t.json", "./sort_rime/ocm/ocm_mixin/opencc/emoji_2021t.json")
 shutil.copyfile("./allfiles/opencc/emoji_2021t.txt", "./sort_rime/ocm/ocm_mixin/opencc/emoji_2021t.txt")
 shutil.copyfile("./allfiles/opencc/ocm_moedict_big5e_hkscs_jis.json", "./sort_rime/ocm/ocm_mixin/opencc/ocm_moedict_big5e_hkscs_jis.json")
