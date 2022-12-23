@@ -13,6 +13,16 @@ local set_char = Set {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l"
 local set_number = Set {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"}
 
 
+-- --- return char(0x20~0x7f) or ""
+-- local function ascii_c(key,pat)
+--   local pat = pat and ('^[%s]$'):format(pat) or "^.$"
+--   local code = key.keycode
+--   return key.modifier <=1 and
+--          code >=0x20 and code <=0x7f and
+--          string.char(code):match(pat) or ""
+-- end
+
+
 local function kr_2set_0m_choice(key,env)
   local engine = env.engine
   local context = engine.context
@@ -57,10 +67,10 @@ local function kr_2set_0m_choice(key,env)
   -- elseif context:get_option("kr_0m") then
 
     --------------------------------------------
-    --- 函數格式 ascii(key, "a-zQWERTOP")，function ascii(key,pat) 該函數需打開
+    --- 函數格式 ascii_c(key, "a-zQWERTOP")，function ascii_c(key,pat) 該函數需打開
 
     --- return char(0x20~0x7f) or ""
-    local function ascii(key,pat)
+    local function ascii_c(key,pat)
       local pat = pat and ('^[%s]$'):format(pat) or "^.$"
       local code = key.keycode
       return key.modifier <=1 and
@@ -69,9 +79,9 @@ local function kr_2set_0m_choice(key,env)
     end
 
     --- 《最主要部分》使 [a-zQWERTOP] 組字且半上屏
-    if set_char[ascii(key, "a-zQWERTOP")] then
+    if set_char[ascii_c(key, "a-zQWERTOP")] then
       context:reopen_previous_segment()
-      context.input = context.input .. ascii(key, "a-zQWERTOP")
+      context.input = context.input .. ascii_c(key, "a-zQWERTOP")
       context:confirm_current_selection()
       return 1
 
@@ -103,6 +113,27 @@ local function kr_2set_0m_choice(key,env)
     --   elseif key:eq(KeyEvent("Shift+O")) then
     --     return true
     --   elseif key:eq(KeyEvent("Shift+P")) then
+    --     return true
+    --   else
+    --     return false
+    --   end
+    -- end
+
+    -- ---- 與上例函數一樣，只是用向下相容寫法
+    -- local function check_qwertop()
+    --   if key:repr() == "Shift+Q" then
+    --     return true
+    --   elseif key:repr() == "Shift+W" then
+    --     return true
+    --   elseif key:repr() == "Shift+E" then
+    --     return true
+    --   elseif key:repr() == "Shift+R" then
+    --     return true
+    --   elseif key:repr() == "Shift+T" then
+    --     return true
+    --   elseif key:repr() == "Shift+O" then
+    --     return true
+    --   elseif key:repr() == "Shift+P" then
     --     return true
     --   else
     --     return false
@@ -141,8 +172,9 @@ local function kr_2set_0m_choice(key,env)
     -- elseif key:eq(KeyEvent("Down")) and string.find(context.input, "[^0-9]$") then
     --   context:reopen_previous_segment()
     --   -- context:confirm_current_selection()
-    --   -- key:repr("Release+Right")
-    --   -- engine:process_key("Right")  #輸入法會崩潰
+    --   -- key:repr("Release+Right")  -- 無法作用
+    --   -- engine:process_key("Right")  -- 輸入法會崩潰
+    --   -- engine:process_key(KeyEvent("Right"))  -- 測試OK!
     --   return 1
 
     --- 修正輸入途中插入「數字」，無法半上屏，需按2次 enter 之問題，改直上屏
