@@ -64,7 +64,7 @@
 --      - lua_processor@s2r_most                  --（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin(1,2,4)和 plus 用，精簡寫法）
 --      - lua_processor@s2r_mixin3                --（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin3 (特殊正則)專用）
 --      - lua_processor@mobile_bpmf               --（引lua資料夾）（手機注音專用） 使 email_url_translator 功能按空白都能直接上屏
---      - lua_processor@kr_2set_0m _choice        --（引lua資料夾）（hangeul2set_zeromenu）韓語成零選項。開關（space_mode）、開關（kr_0m）
+--      - lua_processor@kr_2set_0m_choice         --（引lua資料夾）（hangeul2set_zeromenu）韓語成零選項。開關（space_mode）、開關（kr_0m）
 --      - lua_processor@kr_2set_0m                --（關）（hangeul2set_zeromenu）韓語成零選項。開關（space_mode）
 --
 --      - ＊合併兩個以上函數：
@@ -166,7 +166,7 @@ kr_hnc_1m_filter = require("filter_kr_hnc_1m_filter")
 -- mix_cf2_cfp_smf_filter = filter_mix_cf2_cfp_smf_filter.mix_cf2_cfp_smf_filter
 
 
---- ocm_mixin_filter（ocm_mixin）
+--- ocm_mixin_filter （ocm_mixin）
 --- 同上條目，但附加 comment 不用 ReverseDb 方式，改用新版 lua 的 opencc 引入方式。
 local filter_ocm_mixin = require("filter_ocm_mixin")
 ocm_mixin_filter = filter_ocm_mixin.ocm_mixin_filter
@@ -217,7 +217,7 @@ mix_apc_s2rm_3 = require("processor_mix_apc_s2rm_3")
 mix_apc_pluss = require("processor_mix_apc_pluss")
 
 
--- --- kr_2set_0m _choice（hangeul2set_zeromenu）
+-- --- kr_2set_0m_choice （hangeul2set_zeromenu）
 -- -- 韓語成零選項。開關（space_mode）、開關（kr_0m）
 -- kr_2set_0m_choice = require("processor_kr_2set_0m_choice")
 
@@ -229,7 +229,7 @@ mix_apc_pluss = require("processor_mix_apc_pluss")
 
 
 
--- --- mobile_bpmf（手機注音用）
+-- --- mobile_bpmf （手機注音用）
 -- --- 使 email_url_translator 功能按空白都能直接上屏
 -- mobile_bpmf = require("processor_mobile_bpmf")
 
