@@ -46,7 +46,8 @@
 --      - lua_filter@mix30_nil_comment_up_filter  --（引lua資料夾）（onion-array30） 合併 array30_nil_filter 和 array30_comment_filter 和 array30_spaceup_filter，三個 lua filter 太耗效能。
 --      - lua_filter@mix_cf2_miss_filter          --（引lua資料夾）（bopomo_onionplus 和 bo_mixin 全系列） 合併 charset_filter2 和 missing_mark_filter，兩個 lua filter 太耗效能。
 --      - lua_filter@mix_cf2_cfp_filter           --（引lua資料夾）（dif1） 合併 charset_filter2 和 comment_filter_plus，兩個 lua filter 太耗效能。
---      - lua_filter@mix_cf2_cfp_smf_filter       --（引lua資料夾）（ocm_mixin） 合併 charset_filter2 和 comment_filter_plus 和 symbols_mark_filter，三個 lua filter 太耗效能。
+--      - lua_filter@mix_cf2_cfp_smf_filter       --（關）（ocm_mixin） 合併 charset_filter2 和 comment_filter_plus 和 symbols_mark_filter，三個 lua filter 太耗效能。
+--      - lua_filter@ocm_mixin_filter             --（引lua資料夾）（ocm_mixin）同上條目，comment 附加改用 opencc 方式。
 --
 --
 --      《 ＊ 以下「處理」注意在 processors 中的順序，基本放在最前面 》
@@ -86,6 +87,24 @@ local 檔名 = require("檔名")
 如果 lua 資料夾檔案最後 return 函數名 ，掛接使用：
 函數名 = require("檔名")
 --]]
+
+
+
+
+-- --[[
+-- 以下防 opencc 記憶體問題
+-- 但開啟後 lua 的 opencc 函數無法正常作用
+-- memory leak issue
+-- --]]
+-- -- bypass
+-- Opencc=function(fs)
+--   return  {
+--     convert= function(self,text) return text end,
+--     convert_text = function(self,text) return text end,
+--     convert_word= function(self,text) return end,
+--     random_convert_text = function(self,text) return text end,
+--   }
+-- end
 
 
 
@@ -141,16 +160,23 @@ kr_hnc_1m_filter = require("filter_kr_hnc_1m_filter")
 
 -- --- mix_cf2_cfp_smf_filter （ocm_mixin）
 -- --- 沒用到 ocm_mixin 方案時，ReverseDb("build/symbols-mark.reverse.bin")會找不到。
+-- --- 故改用下條目 opencc 應用。
 -- -- mix_cf2_cfp_smf_filter = require("filter_mix_cf2_cfp_smf_filter") --無效
 -- local filter_mix_cf2_cfp_smf_filter = require("filter_mix_cf2_cfp_smf_filter")
 -- mix_cf2_cfp_smf_filter = filter_mix_cf2_cfp_smf_filter.mix_cf2_cfp_smf_filter
 
 
--- --- charset_filter2 （ocm_onionmix）（手機全方案會用到）
--- --- 把 opencc 轉換成「᰼」(或某個符號)，再用 lua 功能去除「᰼」
--- -- charset_filter2 = require("filter_charset_filter2")
--- local filter_charset_filter2 = require("filter_charset_filter2")
--- charset_filter2 = filter_charset_filter2.charset_filter2
+--- ocm_mixin_filter（ocm_mixin）
+--- 同上條目，但附加 comment 不用 ReverseDb 方式，改用新版 lua 的 opencc 引入方式。
+local filter_ocm_mixin = require("filter_ocm_mixin")
+ocm_mixin_filter = filter_ocm_mixin.ocm_mixin_filter
+
+
+--- charset_filter2 （ocm_onionmix）（手機全方案會用到）
+--- 把 opencc 轉換成「᰼」(或某個符號)，再用 lua 功能去除「᰼」
+-- charset_filter2 = require("filter_charset_filter2")
+local filter_charset_filter2 = require("filter_charset_filter2")
+charset_filter2 = filter_charset_filter2.charset_filter2
 
 
 

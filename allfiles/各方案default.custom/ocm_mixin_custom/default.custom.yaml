@@ -16,7 +16,7 @@ patch:
     - {schema: Mount_bopomo}
     - {schema: allbpm}
     - {schema: easy_en_super}
-    - {schema: symbols-mark}
+    # - {schema: symbols-mark}
     - {schema: punct_ovff}
     - {schema: symbols_ocm}
     - {schema: cangjie5}
