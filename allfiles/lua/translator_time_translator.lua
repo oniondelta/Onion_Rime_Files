@@ -2747,13 +2747,13 @@ local function t_translator(input, seg)
       , { '  / [a-z]+〔小寫字母〕', '⑨' }
       , { '  ; [a-z]+〔大寫字母〕', '⑩' }
       , { '  \' [a-z]+〔開頭大寫字母〕', '⑪' }
-      , { '  x [0-9a-f]+〔內碼十六進制 Hex〕', '⑫' }
-      , { '  c [0-9]+〔內碼十進制 Dec〕', '⑬' }
-      , { '  o [0-7]+〔內碼八進制 Oct〕', '⑭' }
+      , { '  x [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)', '⑫' }
+      , { '  u [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)', '⑬' }
+      , { '  c [0-9]+〔內碼十進制 Dec〕', '⑭' }
       -- , { '  e [0-9a-f]+〔Percent/URL encoding〕', '⑮' }
-      , { '  v〔版本資訊〕', '⑮' }
-      , { '======= 結束 =======', '⑯' }
-      , { '', '⑰' }
+      , { '  o [0-7]+〔內碼八進制 Oct〕', '⑮' }
+      , { '  v〔版本資訊〕', '⑯' }
+      , { '===========  結束  ===========', '⑰' }
       , { '', '⑱' }
       , { '', '⑲' }
       , { '', '⑳' }
@@ -2790,7 +2790,14 @@ local function t_translator(input, seg)
     end
 
     if(input=="`x") then
-      local cand2 = Candidate("letter", seg.start, seg._end, " " , "  [0-9a-f]+〔內碼十六進制 Hex〕")
+      local cand2 = Candidate("letter", seg.start, seg._end, " " , "  [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)")
+      cand2.preedit = input .. '\t《內碼十六進制》▶'
+      yield(cand2)
+      return
+    end
+
+    if(input=="`u") then
+      local cand2 = Candidate("letter", seg.start, seg._end, " " , "  [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)")
       cand2.preedit = input .. '\t《內碼十六進制》▶'
       yield(cand2)
       return
@@ -2857,10 +2864,10 @@ local function t_translator(input, seg)
       return
     end
 
-    local utf_input = string.match(input, "`([xco][0-9a-f]+)$")
+    local utf_input = string.match(input, "`([xuco][0-9a-f]+)$")
     if (utf_input~=nil) then
       -- if string.sub(input, 1, 2) ~= "'/" then return end
-      local dict = { c=10, x=16, o=8 } --{ u=16 } --{ d=10, u=16, e=8 }
+      local dict = { c=10, x=16, u=16, o=8 } --{ u=16 } --{ d=10, u=16, e=8 }
       local snd = string.sub(utf_input, 1, 1)
       local n_bit = dict[snd]
       if n_bit == nil then return end
@@ -2868,10 +2875,13 @@ local function t_translator(input, seg)
       local c = tonumber(str, n_bit)
       if c == nil then return end
       local utf_x = string.match(utf_input, "^x")
+      local utf_u = string.match(utf_input, "^u")
       local utf_o = string.match(utf_input, "^o")
       local utf_c = string.match(utf_input, "^c")
       if ( utf_x ~= nil) then
         -- local fmt = "U"..snd.."%"..(n_bit==16 and "X" or snd)
+        fmt = "  U+".."%X"
+      elseif ( utf_u ~= nil) then
         fmt = "  U+".."%X"
       elseif ( utf_o ~= nil) then
         fmt = "  0o".."%o"
@@ -4574,13 +4584,13 @@ local function t2_translator(input, seg)
       , { '  / [a-z]+〔小寫字母〕', '⑨' }
       , { '  ; [a-z]+〔大寫字母〕', '⑩' }
       , { '  \' [a-z]+〔開頭大寫字母〕', '⑪' }
-      , { '  x [0-9a-f]+〔內碼十六進制 Hex〕', '⑫' }
-      , { '  c [0-9]+〔內碼十進制 Dec〕', '⑬' }
-      , { '  o [0-7]+〔內碼八進制 Oct〕', '⑭' }
+      , { '  x [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)', '⑫' }
+      , { '  u [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)', '⑬' }
+      , { '  c [0-9]+〔內碼十進制 Dec〕', '⑭' }
       -- , { '  e [0-9a-f]+〔Percent/URL encoding〕', '⑮' }
-      , { '  v〔版本資訊〕', '⑮' }
-      , { '======= 結束 =======', '⑯' }
-      , { '', '⑰' }
+      , { '  o [0-7]+〔內碼八進制 Oct〕', '⑮' }
+      , { '  v〔版本資訊〕', '⑯' }
+      , { '===========  結束  ===========', '⑰' }
       , { '', '⑱' }
       , { '', '⑲' }
       , { '', '⑳' }
@@ -4617,7 +4627,14 @@ local function t2_translator(input, seg)
     end
 
     if(input=="'/x") then
-      local cand2 = Candidate("letter", seg.start, seg._end, " " , "  [0-9a-f]+〔內碼十六進制 Hex〕")
+      local cand2 = Candidate("letter", seg.start, seg._end, " " , "  [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)")
+      cand2.preedit = input .. '\t《內碼十六進制》▶'
+      yield(cand2)
+      return
+    end
+
+    if(input=="'/u") then
+      local cand2 = Candidate("letter", seg.start, seg._end, " " , "  [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)")
       cand2.preedit = input .. '\t《內碼十六進制》▶'
       yield(cand2)
       return
@@ -4684,10 +4701,10 @@ local function t2_translator(input, seg)
       return
     end
 
-    local utf_input = string.match(input, "'/([xco][0-9a-f]+)$")
+    local utf_input = string.match(input, "'/([xuco][0-9a-f]+)$")
     if (utf_input~=nil) then
       -- if string.sub(input, 1, 2) ~= "'/" then return end
-      local dict = { c=10, x=16, o=8 } --{ u=16 } --{ d=10, u=16, e=8 }
+      local dict = { c=10, x=16, u=16, o=8 } --{ u=16 } --{ d=10, u=16, e=8 }
       local snd = string.sub(utf_input, 1, 1)
       local n_bit = dict[snd]
       if n_bit == nil then return end
@@ -4695,10 +4712,13 @@ local function t2_translator(input, seg)
       local c = tonumber(str, n_bit)
       if c == nil then return end
       local utf_x = string.match(utf_input, "^x")
+      local utf_u = string.match(utf_input, "^u")
       local utf_o = string.match(utf_input, "^o")
       local utf_c = string.match(utf_input, "^c")
       if ( utf_x ~= nil) then
         -- local fmt = "U"..snd.."%"..(n_bit==16 and "X" or snd)
+        fmt = "  U+".."%X"
+      elseif ( utf_u ~= nil) then
         fmt = "  U+".."%X"
       elseif ( utf_o ~= nil) then
         fmt = "  0o".."%o"
