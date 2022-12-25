@@ -22,6 +22,7 @@ local jieqi_out1 = lc_2.jieqi_out1
 ----------------------------------------------------------------------------------------
 --[[
 檢查各種組件版本
+執行時記憶體會暴增
 --]]
 local function Version()
   local ver
@@ -78,6 +79,26 @@ local function Ver_info()
     i_id = "librime-lua 小於 9，皆無法判定"
   end
   return {distribution_v, librime_v, librime_lua_v, lua_v, i_id}
+end
+
+
+
+
+--[[
+網友 shewer 提供依照 Unicode 字符縮減 comment 碼
+直接增加 utf8.sub() -- 用法同 strnig.sub(str,si,ei)
+--]]
+local function utf8_sub(str,si,ei)
+  local function index(ustr,i)
+    return i>=0 and ( utf8.offset(ustr,i) or ustr:len() +1 )
+    or ( utf8.offset(ustr,i) or 1 )
+  end
+
+  local u_si= index(str,si)
+  ei = ei or utf8.len(str)
+  ei = ei >=0 and ei +1 or ei
+  local u_ei= index(str, ei ) -1
+  return str:sub(u_si,u_ei)
 end
 
 
@@ -1213,6 +1234,120 @@ local function utf8_out(cp)
 end
 
 
+--[[
+百分號編碼（英語：Percent-encoding），又稱：URL編碼（URL encoding）
+從編碼到文字。
+--]]
+local function url_decode(url_str)
+-- 不能為的輸入「字符」和「奇數」個數。
+  local tail_single = false
+  local error_mark = "E38088E8BCB8E585A5E98CAFE8AAA4E38089"  --〈輸入錯誤〉
+  if not string.match(url_str, "^[0-9a-fA-F]+$") then
+    url_str = error_mark
+  elseif #url_str%2 == 1 then
+    url_str = string.gsub(url_str, ".$", "")
+    tail_single = true
+  end
+-- 轉成二進制並補齊「0」成八位數，例：「00101111」，以利接下來判別：輸入途中錯誤。
+  local binary_check = string.gsub(url_str, "(%x%x)", function(h) return "_" .. string.format("%08d",Dec2bin(tonumber(h, 16))) end)
+  print(binary_check)
+-- 絕對不為開頭或兩個組合。
+  if string.match(binary_check, "^_10") then
+    url_str = error_mark
+  elseif string.match(binary_check, "_11......_11") then
+    url_str = error_mark
+  elseif string.match(binary_check, "_11......_0") then
+    url_str = error_mark
+  elseif string.match(binary_check, "_0......._10") then
+    url_str = error_mark
+-- 開頭 n 個「1」，後面 n-1 個「10」，不能多也不能少。中間有「_11」則錯誤。
+  elseif string.match(binary_check, "_1111110._10......_10......_10......_10......_11") then
+    url_str = error_mark
+  elseif string.match(binary_check, "_1111110._10......_10......_10......_11") then
+    url_str = error_mark
+  elseif string.match(binary_check, "_111110.._10......_10......_10......_11") then
+    url_str = error_mark
+  elseif string.match(binary_check, "_1111110._10......_10......_11") then
+    url_str = error_mark
+  elseif string.match(binary_check, "_111110.._10......_10......_11") then
+    url_str = error_mark
+  elseif string.match(binary_check, "_11110..._10......_10......_11") then
+    url_str = error_mark
+  elseif string.match(binary_check, "_1111110._10......_11") then
+    url_str = error_mark
+  elseif string.match(binary_check, "_111110.._10......_11") then
+    url_str = error_mark
+  elseif string.match(binary_check, "_11110..._10......_11") then
+    url_str = error_mark
+  elseif string.match(binary_check, "_1110...._10......_11") then
+    url_str = error_mark
+-- 開頭 n 個「1」，後面 n-1 個「10」，不能多也不能少。中間有「_0」則錯誤。
+  elseif string.match(binary_check, "_1111110._10......_10......_10......_10......_0") then
+    url_str = error_mark
+  elseif string.match(binary_check, "_1111110._10......_10......_10......_0") then
+    url_str = error_mark
+  elseif string.match(binary_check, "_111110.._10......_10......_10......_0") then
+    url_str = error_mark
+  elseif string.match(binary_check, "_1111110._10......_10......_0") then
+    url_str = error_mark
+  elseif string.match(binary_check, "_111110.._10......_10......_0") then
+    url_str = error_mark
+  elseif string.match(binary_check, "_11110..._10......_10......_0") then
+    url_str = error_mark
+  elseif string.match(binary_check, "_1111110._10......_0") then
+    url_str = error_mark
+  elseif string.match(binary_check, "_111110.._10......_0") then
+    url_str = error_mark
+  elseif string.match(binary_check, "_11110..._10......_0") then
+    url_str = error_mark
+  elseif string.match(binary_check, "_1110...._10......_0") then
+    url_str = error_mark
+-- 開頭 n 個「1」，後面 n-1 個「10」，不能多也不能少。後面多出「_10」則錯誤，且「_10」不為開頭。
+  elseif string.match(binary_check, "_1111110._10......_10......_10......_10......_10......_10") then
+    url_str = error_mark
+  elseif string.match(binary_check, "_111110.._10......_10......_10......_10......_10") then
+    url_str = error_mark
+  elseif string.match(binary_check, "_11110..._10......_10......_10......_10") then
+    url_str = error_mark
+  elseif string.match(binary_check, "_1110...._10......_10......_10") then
+    url_str = error_mark
+  elseif string.match(binary_check, "_110....._10......_10") then
+    url_str = error_mark
+-- 待輸入補齊狀況，開頭 n 個「1」，後面 n-1 個「10」。「_11」需接後續。
+  elseif string.match(binary_check, "11......$") then
+    url_str = string.gsub(url_str, "..$", " …… ")
+-- 待輸入補齊狀況，開頭 n 個「1」，後面 n-1 個「10」。「_10」還未補齊。
+  elseif string.match(binary_check, "_1111110._10......_10......_10......_10......$") then
+    url_str = string.gsub(url_str, "..........$", " …… ")
+  elseif string.match(binary_check, "_1111110._10......_10......_10......$") then
+    url_str = string.gsub(url_str, "........$", " …… ")
+  elseif string.match(binary_check, "_111110.._10......_10......_10......$") then
+    url_str = string.gsub(url_str, "........$", " …… ")
+  elseif string.match(binary_check, "_1111110._10......_10......$") then
+    url_str = string.gsub(url_str, "......$", " …… ")
+  elseif string.match(binary_check, "_111110.._10......_10......$") then
+    url_str = string.gsub(url_str, "......$", " …… ")
+  elseif string.match(binary_check, "_11110..._10......_10......$") then
+    url_str = string.gsub(url_str, "......$", " …… ")
+  elseif string.match(binary_check, "_1111110._10......$") then
+    url_str = string.gsub(url_str, "....$", " …… ")
+  elseif string.match(binary_check, "_111110.._10......$") then
+    url_str = string.gsub(url_str, "....$", " …… ")
+  elseif string.match(binary_check, "_11110..._10......$") then
+    url_str = string.gsub(url_str, "....$", " …… ")
+  elseif string.match(binary_check, "_1110...._10......$") then
+    url_str = string.gsub(url_str, "....$", " …… ")
+  end
+-- 前方檢驗沒問題，才開始轉換成「URL encoding」，不然後錯誤。
+  local url_str = string.gsub (url_str, "(%x%x)", function(h) return string.char(tonumber(h,16)) end)
+-- 已檢驗出錯誤，就不補「 … 」尾碼待補判別。
+  if tail_single == true and url_str ~= "〈輸入錯誤〉"then
+    url_str = string.gsub(url_str, "$", " … ")
+  end
+  return url_str
+end
+
+--- 舊寫，錯誤
 -- --[[
 -- 百分號編碼（英語：Percent-encoding），又稱：URL編碼（URL encoding）
 -- 從編碼到文字。
@@ -2747,14 +2882,13 @@ local function t_translator(input, seg)
       , { '  / [a-z]+〔小寫字母〕', '⑨' }
       , { '  ; [a-z]+〔大寫字母〕', '⑩' }
       , { '  \' [a-z]+〔開頭大寫字母〕', '⑪' }
-      , { '  x [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)', '⑫' }
+      , { '  e [0-9a-f]+〔Percent/URL encoding〕', '⑫' }
       , { '  u [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)', '⑬' }
-      , { '  c [0-9]+〔內碼十進制 Dec〕', '⑭' }
-      -- , { '  e [0-9a-f]+〔Percent/URL encoding〕', '⑮' }
-      , { '  o [0-7]+〔內碼八進制 Oct〕', '⑮' }
-      , { '  v〔版本資訊〕', '⑯' }
-      , { '===========  結束  ===========    ', '⑰' }
-      , { '', '⑱' }
+      , { '  x [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)', '⑭' }
+      , { '  c [0-9]+〔內碼十進制 Dec〕', '⑮' }
+      , { '  o [0-7]+〔內碼八進制 Oct〕', '⑯' }
+      , { '  v〔版本資訊〕', '⑰' }
+      , { '===========  結束  ===========    ', '⑱' }
       , { '', '⑲' }
       , { '', '⑳' }
 
@@ -2817,12 +2951,12 @@ local function t_translator(input, seg)
       return
     end
 
-    -- if(input=="`e") then
-    --   local cand2 = Candidate("letter", seg.start, seg._end, " " , "  [0-9a-f]+〔Percent/URL encoding〕")
-    --   cand2.preedit = input .. '\t《Percent/URL encoding》▶'
-    --   yield(cand2)
-    --   return
-    -- end
+    if(input=="`e") then
+      local cand2 = Candidate("letter", seg.start, seg._end, " " , "  [0-9a-f]+〔Percent/URL encoding〕")
+      cand2.preedit = input .. '\t《Percent/URL encoding》▶'
+      yield(cand2)
+      return
+    end
 
     local englishout1 = string.match(input, "`/(%l+)$")
     if (englishout1~=nil) then
@@ -2864,9 +2998,9 @@ local function t_translator(input, seg)
       return
     end
 
-    local utf_input = string.match(input, "`([xuco][0-9a-f]+)$")
+    local utf_prefix, utf_input = string.match(input, "(`)([xuco][0-9a-f]+)$")
     if (utf_input~=nil) then
-      -- if string.sub(input, 1, 2) ~= "'/" then return end
+      -- if string.sub(input, 1, 2) ~= utf_prefix then return end
       local dict = { c=10, x=16, u=16, o=8 } --{ u=16 } --{ d=10, u=16, e=8 }
       local snd = string.sub(utf_input, 1, 1)
       local n_bit = dict[snd]
@@ -2890,11 +3024,11 @@ local function t_translator(input, seg)
       end
       -- 單獨查找
       local cand_ui_s = Candidate("number", seg.start, seg._end, utf8_out(c), string.format(fmt, c) .. "  ( " .. url_encode(utf8_out(c)) .. " ）" )
-      cand_ui_s.preedit = "`" .. snd .. " " .. string.upper(string.sub(input, 3))
       -- 排除數字太大超出範圍。正常範圍輸出已 string_char，故 0 直接可以限定。
       if (utf8_out(c) == 0) then
-        cand_ui_s = Candidate("number", seg.start, seg._end, "", "〈超出範圍〉" )
+        cand_ui_s = Candidate("number", seg.start, seg._end, "", "〈超出範圍〉" )  --字符過濾可能會過濾掉""整個選項。
       end
+      cand_ui_s.preedit = utf_prefix .. snd .. " " .. string.upper(string.sub(utf_input, 2))
       yield(cand_ui_s)
       -- 區間查找
       -- if c*n_bit+n_bit-1 < 1048575 then
@@ -2902,12 +3036,52 @@ local function t_translator(input, seg)
       if c+16 < 1048575 then
         for i = c+1, c+16 do
           local cand_ui_m = Candidate("number", seg.start, seg._end, utf8_out(i), string.format(fmt, i) .. "  ( " .. url_encode(utf8_out(i)) .. " ）" )
-          cand_ui_m.preedit = "`" .. snd .. " " .. string.upper(string.sub(input, 3))
+          cand_ui_m.preedit = utf_prefix .. snd .. " " .. string.upper(string.sub(utf_input, 2))
           yield(cand_ui_m)
         end
       end
     end
 
+
+    local url_e_prefix, url_e_input = string.match(input, "(`e)([0-9a-z][0-9a-f]*)$")
+    if (url_e_input~=nil) then
+      local preedit_url_e = string.gsub(url_e_input, "(%x%x)", "%%%1")
+      local preedit_url_e = string.gsub(preedit_url_e, "(%x%x)(%x)$", "%1%%%2")
+      local preedit_url_e = string.gsub(preedit_url_e, "^(%x)$", "%%%1")
+      local url_e_cand = url_decode(url_e_input)
+
+      if string.match(url_e_cand, "… $") then
+        judge_unfinished = "〈輸入未完〉"
+      else
+        judge_unfinished = ""
+      end
+
+      local cand_url_e_error = Candidate("number", seg.start, seg._end, "", url_e_cand)  --字符過濾可能會過濾掉""整個選項。
+      cand_url_e_error.preedit = url_e_prefix .. " " .. string.upper(preedit_url_e)
+
+      local cand_url_e_sentence = Candidate("number", seg.start, seg._end, url_e_cand, judge_unfinished)
+      cand_url_e_sentence.preedit = url_e_prefix .. " " .. string.upper(preedit_url_e)
+
+      local url_first_word = utf8_sub(url_e_cand,1,1)
+      local url_first_word_dec = utf8.codepoint(url_first_word)
+      local cand_url_e_single = Candidate("number", seg.start, seg._end, url_first_word, string.format("  U+".."%X" ,url_first_word_dec) .. judge_unfinished)
+      cand_url_e_single.preedit = url_e_prefix .. " " .. string.upper(preedit_url_e)
+
+      local cand_url_e_code = Candidate("number", seg.start, seg._end, string.upper(preedit_url_e), "〔URL編碼〕")
+      cand_url_e_code.preedit = url_e_prefix .. " " .. string.upper(preedit_url_e)
+
+      if url_e_cand == "〈輸入錯誤〉" then
+        yield(cand_url_e_error)
+      elseif url_e_cand == url_first_word then
+        yield(cand_url_e_single)
+      -- elseif string.match(url_e_cand, "^ …") then
+      --   yield(cand_url_e_sentence)
+      else
+        yield(cand_url_e_sentence)
+        -- yield(cand_url_e_single)
+      end
+      yield(cand_url_e_code)
+    end
 
     -- local url_c_input = string.match(input, "`e([0-9a-z][0-9a-f]*)$")
     -- if (url_c_input~=nil) then
@@ -3113,7 +3287,7 @@ local function t_translator(input, seg)
     local dot0 ,numberout, dot1, afterdot = string.match(input, "`(%.?)(%d+)(%.?)(%d*)$")
     if (tonumber(numberout)~=nil) then
       if (dot0=='.') and (dot1=='.') then
-        yield(Candidate("number", seg.start, seg._end, "" , "〔不能兩個小數點〕"))
+        yield(Candidate("number", seg.start, seg._end, "" , "〔不能兩個小數點〕"))  --字符過濾可能會過濾掉""整個選項。
         return
       elseif (dot0=='.') then
         afterdot = numberout
@@ -4584,14 +4758,13 @@ local function t2_translator(input, seg)
       , { '  / [a-z]+〔小寫字母〕', '⑨' }
       , { '  ; [a-z]+〔大寫字母〕', '⑩' }
       , { '  \' [a-z]+〔開頭大寫字母〕', '⑪' }
-      , { '  x [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)', '⑫' }
+      , { '  e [0-9a-f]+〔Percent/URL encoding〕', '⑫' }
       , { '  u [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)', '⑬' }
-      , { '  c [0-9]+〔內碼十進制 Dec〕', '⑭' }
-      -- , { '  e [0-9a-f]+〔Percent/URL encoding〕', '⑮' }
-      , { '  o [0-7]+〔內碼八進制 Oct〕', '⑮' }
-      , { '  v〔版本資訊〕', '⑯' }
-      , { '===========  結束  ===========    ', '⑰' }
-      , { '', '⑱' }
+      , { '  x [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)', '⑭' }
+      , { '  c [0-9]+〔內碼十進制 Dec〕', '⑮' }
+      , { '  o [0-7]+〔內碼八進制 Oct〕', '⑯' }
+      , { '  v〔版本資訊〕', '⑰' }
+      , { '===========  結束  ===========    ', '⑱' }
       , { '', '⑲' }
       , { '', '⑳' }
 
@@ -4654,12 +4827,12 @@ local function t2_translator(input, seg)
       return
     end
 
-    -- if(input=="'/e") then
-    --   local cand2 = Candidate("letter", seg.start, seg._end, " " , "  [0-9a-f]+〔Percent/URL encoding〕")
-    --   cand2.preedit = input .. '\t《Percent/URL encoding》▶'
-    --   yield(cand2)
-    --   return
-    -- end
+    if(input=="'/e") then
+      local cand2 = Candidate("letter", seg.start, seg._end, " " , "  [0-9a-f]+〔Percent/URL encoding〕")
+      cand2.preedit = input .. '\t《Percent/URL encoding》▶'
+      yield(cand2)
+      return
+    end
 
     local englishout1 = string.match(input, "'//(%l+)$")
     if (englishout1~=nil) then
@@ -4701,9 +4874,9 @@ local function t2_translator(input, seg)
       return
     end
 
-    local utf_input = string.match(input, "'/([xuco][0-9a-f]+)$")
+    local utf_prefix, utf_input = string.match(input, "('/)([xuco][0-9a-f]+)$")
     if (utf_input~=nil) then
-      -- if string.sub(input, 1, 2) ~= "'/" then return end
+      -- if string.sub(input, 1, 2) ~= utf_prefix then return end
       local dict = { c=10, x=16, u=16, o=8 } --{ u=16 } --{ d=10, u=16, e=8 }
       local snd = string.sub(utf_input, 1, 1)
       local n_bit = dict[snd]
@@ -4727,11 +4900,11 @@ local function t2_translator(input, seg)
       end
       -- 單獨查找
       local cand_ui_s = Candidate("number", seg.start, seg._end, utf8_out(c), string.format(fmt, c) .. "  ( " .. url_encode(utf8_out(c)) .. " ）" )
-      cand_ui_s.preedit = "'/" .. snd .. " " .. string.upper(string.sub(input, 4))
       -- 排除數字太大超出範圍。正常範圍輸出已 string_char，故 0 直接可以限定。
       if (utf8_out(c) == 0) then
-        cand_ui_s = Candidate("number", seg.start, seg._end, "", "〈超出範圍〉" )
+        cand_ui_s = Candidate("number", seg.start, seg._end, "", "〈超出範圍〉" )  --字符過濾可能會過濾掉""整個選項。
       end
+      cand_ui_s.preedit = utf_prefix .. snd .. " " .. string.upper(string.sub(utf_input, 2))
       yield(cand_ui_s)
       -- 區間查找
       -- if c*n_bit+n_bit-1 < 1048575 then
@@ -4739,12 +4912,52 @@ local function t2_translator(input, seg)
       if c+16 < 1048575 then
         for i = c+1, c+16 do
           local cand_ui_m = Candidate("number", seg.start, seg._end, utf8_out(i), string.format(fmt, i) .. "  ( " .. url_encode(utf8_out(i)) .. " ）" )
-          cand_ui_m.preedit = "'/" .. snd .. " " .. string.upper(string.sub(input, 4))
+          cand_ui_m.preedit = utf_prefix .. snd .. " " .. string.upper(string.sub(utf_input, 2))
           yield(cand_ui_m)
         end
       end
     end
 
+
+    local url_e_prefix, url_e_input = string.match(input, "('/e)([0-9a-z][0-9a-f]*)$")
+    if (url_e_input~=nil) then
+      local preedit_url_e = string.gsub(url_e_input, "(%x%x)", "%%%1")
+      local preedit_url_e = string.gsub(preedit_url_e, "(%x%x)(%x)$", "%1%%%2")
+      local preedit_url_e = string.gsub(preedit_url_e, "^(%x)$", "%%%1")
+      local url_e_cand = url_decode(url_e_input)
+
+      if string.match(url_e_cand, "… $") then
+        judge_unfinished = "〈輸入未完〉"
+      else
+        judge_unfinished = ""
+      end
+
+      local cand_url_e_error = Candidate("number", seg.start, seg._end, "", url_e_cand)  --字符過濾可能會過濾掉""整個選項。
+      cand_url_e_error.preedit = url_e_prefix .. " " .. string.upper(preedit_url_e)
+
+      local cand_url_e_sentence = Candidate("number", seg.start, seg._end, url_e_cand, judge_unfinished)
+      cand_url_e_sentence.preedit = url_e_prefix .. " " .. string.upper(preedit_url_e)
+
+      local url_first_word = utf8_sub(url_e_cand,1,1)
+      local url_first_word_dec = utf8.codepoint(url_first_word)
+      local cand_url_e_single = Candidate("number", seg.start, seg._end, url_first_word, string.format("  U+".."%X" ,url_first_word_dec) .. judge_unfinished)
+      cand_url_e_single.preedit = url_e_prefix .. " " .. string.upper(preedit_url_e)
+
+      local cand_url_e_code = Candidate("number", seg.start, seg._end, string.upper(preedit_url_e), "〔URL編碼〕")
+      cand_url_e_code.preedit = url_e_prefix .. " " .. string.upper(preedit_url_e)
+
+      if url_e_cand == "〈輸入錯誤〉" then
+        yield(cand_url_e_error)
+      elseif url_e_cand == url_first_word then
+        yield(cand_url_e_single)
+      -- elseif string.match(url_e_cand, "^ …") then
+      --   yield(cand_url_e_sentence)
+      else
+        yield(cand_url_e_sentence)
+        -- yield(cand_url_e_single)
+      end
+      yield(cand_url_e_code)
+    end
 
     -- local url_c_input = string.match(input, "'/e([0-9a-z][0-9a-f]*)$")
     -- if (url_c_input~=nil) then
@@ -4950,7 +5163,7 @@ local function t2_translator(input, seg)
     local dot0 ,numberout, dot1, afterdot = string.match(input, "'/(%.?)(%d+)(%.?)(%d*)$")
     if (tonumber(numberout)~=nil) then
       if (dot0=='.') and (dot1=='.') then
-        yield(Candidate("number", seg.start, seg._end, "" , "〔不能兩個小數點〕"))
+        yield(Candidate("number", seg.start, seg._end, "" , "〔不能兩個小數點〕"))  --字符過濾可能會過濾掉""整個選項。
         return
       elseif (dot0=='.') then
         afterdot = numberout
