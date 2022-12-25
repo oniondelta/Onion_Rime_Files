@@ -1250,7 +1250,7 @@ local function url_decode(url_str)
   end
 -- 轉成二進制並補齊「0」成八位數，例：「00101111」，以利接下來判別：輸入途中錯誤。
   local binary_check = string.gsub(url_str, "(%x%x)", function(h) return "_" .. string.format("%08d",Dec2bin(tonumber(h, 16))) end)
-  print(binary_check)
+  -- print(binary_check)
 -- 絕對不為開頭或兩個組合。
   if string.match(binary_check, "^_10") then
     url_str = error_mark
