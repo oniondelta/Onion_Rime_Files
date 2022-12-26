@@ -1248,6 +1248,25 @@ local function url_decode(url_str)
     url_str = string.gsub(url_str, ".$", "")
     tail_single = true
   end
+-- 排除 ASCII 控制字元，避免錯誤
+  local ascii_ccheck = {}
+  for match_two in string.gmatch(url_str, "(%x%x)") do
+    table.insert(ascii_ccheck, tonumber(match_two,16))
+  end
+  for i = 1, #ascii_ccheck do
+    if ascii_ccheck[i] < 32 or ascii_ccheck[i] == 127 then  --32為十進位，十六進位為20；127為十進位，十六進位為7f。為ASCII控制字元。
+      url_str = error_mark .. '21'  --「21」為「!」
+    end
+  end
+  -- 列印 table 表
+  -- for i = 1,#ascii_ccheck do
+  --     print(ascii_ccheck[i])
+  -- end
+  -- local zero_check = string.gsub(url_str, "(%x%x)", function(h) return "_" .. string.format("%02d",tonumber(h, 16)) end)
+  -- if string.match(zero_check, "_0") then
+  --   url_str = error_mark
+  -- end
+  -- print(zero_check)
 -- 轉成二進制並補齊「0」成八位數，例：「00101111」，以利接下來判別：輸入途中錯誤。
   local binary_check = string.gsub(url_str, "(%x%x)", function(h) return "_" .. string.format("%08d",Dec2bin(tonumber(h, 16))) end)
   -- print(binary_check)
