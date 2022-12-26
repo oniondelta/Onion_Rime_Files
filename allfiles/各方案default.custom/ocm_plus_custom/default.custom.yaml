@@ -72,6 +72,9 @@ patch:
     - { when: always, accept: Control+period, toggle: full_shape }
     - { when: always, accept: Control+semicolon, toggle: simplification }
     - { when: always, accept: Control+slash, toggle: ascii_punct }
+# 只限直排專用：左右鍵翻頁（ Testing！ ）
+    # - { accept: Left, send: Page_Up, when: paging } #直式選單用 #has_menu
+    # - { accept: Right, send: Page_Down, when: paging } #直式選單用 #has_menu
 
 #  ascii_composer:
 #    good_old_caps_lock: false

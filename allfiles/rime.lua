@@ -217,9 +217,9 @@ mix_apc_s2rm_3 = require("processor_mix_apc_s2rm_3")
 mix_apc_pluss = require("processor_mix_apc_pluss")
 
 
--- --- kr_2set_0m_choice （hangeul2set_zeromenu）
--- -- 韓語成零選項。開關（space_mode）、開關（kr_0m）
--- kr_2set_0m_choice = require("processor_kr_2set_0m_choice")
+--- kr_2set_0m_choice （hangeul2set_zeromenu）
+-- 韓語成零選項。開關（space_mode）、開關（kr_0m）
+kr_2set_0m_choice = require("processor_kr_2set_0m_choice")
 
 
 -- --- kr_2set_0m （hangeul2set_zeromenu）
