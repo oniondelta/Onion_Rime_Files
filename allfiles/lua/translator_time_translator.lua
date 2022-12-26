@@ -1203,7 +1203,7 @@ end
 
 
 --[[
-內碼輸入法，收入 unicode 碼得出該碼字元
+內碼輸入法，輸入 unicode 碼得出該碼字元
 --]]
 local function utf8_out(cp)
   --- 新增避免 error！
