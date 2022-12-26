@@ -1256,6 +1256,7 @@ local function url_decode(url_str)
   end
   for i = 1, #ascii_ccheck do
     if ascii_ccheck[i] < 32 or ascii_ccheck[i] == 127 then  --32為十進位，十六進位為20；127為十進位，十六進位為7f。為ASCII控制字元。
+      -- url_str = error_mark
       url_str = error_mark .. '21'  --「21」為「!」
     end
   end
@@ -3091,7 +3092,8 @@ local function t_translator(input, seg)
       local cand_url_e_code = Candidate("number", seg.start, seg._end, string.upper(preedit_url_e), "〔URL編碼〕")
       cand_url_e_code.preedit = url_e_prefix .. " " .. string.upper(preedit_url_e)
 
-      if url_e_cand == "〈輸入錯誤〉" then
+      if string.match(url_e_cand, "^〈輸入錯誤〉") then
+      -- if url_e_cand == "〈輸入錯誤〉" then
         yield(cand_url_e_error)
       elseif url_e_cand == url_first_word then
         yield(cand_url_e_single)
@@ -4967,7 +4969,8 @@ local function t2_translator(input, seg)
       local cand_url_e_code = Candidate("number", seg.start, seg._end, string.upper(preedit_url_e), "〔URL編碼〕")
       cand_url_e_code.preedit = url_e_prefix .. " " .. string.upper(preedit_url_e)
 
-      if url_e_cand == "〈輸入錯誤〉" then
+      if string.match(url_e_cand, "^〈輸入錯誤〉") then
+      -- if url_e_cand == "〈輸入錯誤〉" then
         yield(cand_url_e_error)
       elseif url_e_cand == url_first_word then
         yield(cand_url_e_single)
