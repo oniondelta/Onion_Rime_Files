@@ -1240,8 +1240,9 @@ end
 --]]
 local function url_decode(url_str)
 -- 不能為的輸入「字符」和「奇數」個數。
-  local tail_single = false
   local error_mark = "E38088E8BCB8E585A5E98CAFE8AAA4E38089"  --〈輸入錯誤〉
+  local tail_mark = "20E280A6E280A620"  --未完成碼標示：「 …… 」
+  local tail_single = false
   if not string.match(url_str, "^[0-9a-fA-F]+$") then
     url_str = error_mark
   elseif #url_str%2 == 1 then
@@ -1334,33 +1335,34 @@ local function url_decode(url_str)
     url_str = error_mark
 -- 待輸入補齊狀況，開頭 n 個「1」，後面 n-1 個「10」。「_11」需接後續。
   elseif string.match(binary_check, "11......$") then
-    url_str = string.gsub(url_str, "..$", " …… ")
+    url_str = string.gsub(url_str, "..$", tail_mark)
 -- 待輸入補齊狀況，開頭 n 個「1」，後面 n-1 個「10」。「_10」還未補齊。
   elseif string.match(binary_check, "_1111110._10......_10......_10......_10......$") then
-    url_str = string.gsub(url_str, "..........$", " …… ")
+    url_str = string.gsub(url_str, "..........$", tail_mark)
   elseif string.match(binary_check, "_1111110._10......_10......_10......$") then
-    url_str = string.gsub(url_str, "........$", " …… ")
+    url_str = string.gsub(url_str, "........$", tail_mark)
   elseif string.match(binary_check, "_111110.._10......_10......_10......$") then
-    url_str = string.gsub(url_str, "........$", " …… ")
+    url_str = string.gsub(url_str, "........$", tail_mark)
   elseif string.match(binary_check, "_1111110._10......_10......$") then
-    url_str = string.gsub(url_str, "......$", " …… ")
+    url_str = string.gsub(url_str, "......$", tail_mark)
   elseif string.match(binary_check, "_111110.._10......_10......$") then
-    url_str = string.gsub(url_str, "......$", " …… ")
+    url_str = string.gsub(url_str, "......$", tail_mark)
   elseif string.match(binary_check, "_11110..._10......_10......$") then
-    url_str = string.gsub(url_str, "......$", " …… ")
+    url_str = string.gsub(url_str, "......$", tail_mark)
   elseif string.match(binary_check, "_1111110._10......$") then
-    url_str = string.gsub(url_str, "....$", " …… ")
+    url_str = string.gsub(url_str, "....$", tail_mark)
   elseif string.match(binary_check, "_111110.._10......$") then
-    url_str = string.gsub(url_str, "....$", " …… ")
+    url_str = string.gsub(url_str, "....$", tail_mark)
   elseif string.match(binary_check, "_11110..._10......$") then
-    url_str = string.gsub(url_str, "....$", " …… ")
+    url_str = string.gsub(url_str, "....$", tail_mark)
   elseif string.match(binary_check, "_1110...._10......$") then
-    url_str = string.gsub(url_str, "....$", " …… ")
+    url_str = string.gsub(url_str, "....$", tail_mark)
   end
--- 前方檢驗沒問題，才開始轉換成「URL encoding」，不然後錯誤。
+-- 前方檢驗沒問題，才開始轉換成「URL encoding」，不然會有許多錯誤。
   local url_str = string.gsub (url_str, "(%x%x)", function(h) return string.char(tonumber(h,16)) end)
 -- 已檢驗出錯誤，就不補「 … 」尾碼待補判別。
-  if tail_single == true and url_str ~= "〈輸入錯誤〉"then
+  -- if tail_single == true and url_str ~= "〈輸入錯誤〉"then
+  if tail_single == true and not string.match(url_str, "〈輸入錯誤〉")then
     url_str = string.gsub(url_str, "$", " … ")
   end
   return url_str
