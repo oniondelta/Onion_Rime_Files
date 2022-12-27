@@ -68,6 +68,20 @@
 
 - [電腦 RIME 設定檔〖 行列 30（洋蔥版）〗](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E6%B4%8B%E8%94%A5%E7%89%88-%E8%A1%8C%E5%88%9730-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E)
 
+## 注音系列功能說明：
+
+- [標點符號](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%94%E6%B4%8B%E8%94%A5%E6%B3%A8%E9%9F%B3%E7%B3%BB%E5%88%97%E3%80%95%EF%BC%9A%E6%A8%99%E9%BB%9E%E7%AC%A6%E8%99%9F)
+
+- [功能鍵和快捷鍵](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%94%E6%B4%8B%E8%94%A5%E6%B3%A8%E9%9F%B3%E7%B3%BB%E5%88%97%E3%80%95%EF%BC%9A%E5%8A%9F%E8%83%BD%E9%8D%B5%E5%92%8C%E5%BF%AB%E6%8D%B7%E9%8D%B5)
+
+- [簡體與字符範圍](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%94%E6%B4%8B%E8%94%A5%E6%B3%A8%E9%9F%B3%E7%B3%BB%E5%88%97%E3%80%95%EF%BC%9A%E7%B0%A1%E9%AB%94%E8%88%87%E5%AD%97%E7%AC%A6%E7%AF%84%E5%9C%8D)
+
+- [注音文](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%94%E6%B4%8B%E8%94%A5%E6%B3%A8%E9%9F%B3%E7%B3%BB%E5%88%97%E3%80%95%EF%BC%9A%E6%B3%A8%E9%9F%B3%E6%96%87)
+
+- [系列符號與 Emoji](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%94%E6%B4%8B%E8%94%A5%E6%B3%A8%E9%9F%B3%E7%B3%BB%E5%88%97%E3%80%95%EF%BC%9A%E7%B3%BB%E5%88%97%E7%AC%A6%E8%99%9F%E8%88%87-Emoji)
+
+- [librime lua功能](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%94%E6%B4%8B%E8%94%A5%E6%B3%A8%E9%9F%B3%E7%B3%BB%E5%88%97%E3%80%95%EF%BC%9Alibrime-lua%E5%8A%9F%E8%83%BD)
+
 ## Demo：
 
 - 注音（洋蔥 mix-in 版）
