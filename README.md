@@ -68,6 +68,10 @@
 
 - [電腦 RIME 設定檔〖 行列 30（洋蔥版）〗](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E6%B4%8B%E8%94%A5%E7%89%88-%E8%A1%8C%E5%88%9730-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E)
 
+- [電腦 RIME 設定檔〖 形碼（洋蔥 plus 版）〗](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E6%B4%8B%E8%94%A5%E7%89%88-%E5%BD%A2%E7%A2%BC-plus-%E7%89%88-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E)
+
+- [電腦 RIME 設定檔〖 形碼（洋蔥 mix‧in 版）〗](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E6%B4%8B%E8%94%A5%E7%89%88-%E5%BD%A2%E7%A2%BC-mixin-%E7%89%88-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E)
+
 ## 注音系列功能說明
 
 - [標點符號](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%94%E6%B4%8B%E8%94%A5%E6%B3%A8%E9%9F%B3%E7%B3%BB%E5%88%97%E3%80%95%EF%BC%9A%E6%A8%99%E9%BB%9E%E7%AC%A6%E8%99%9F)
