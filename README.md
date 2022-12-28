@@ -3,7 +3,7 @@
 ####  ※ 請勿使用於商業營利相關行為
 ####  ※ Commercial use is prohibited
 
-## 內容說明：
+## 內容說明
 - allfiles 包含九個主方案（三個注音、一個注音雙拼、一個拼音、三個形碼、一個行列30）和一眾掛接方案
 
 - 三個形碼方案已刪除碼表內容，無法使用！
@@ -14,7 +14,7 @@
 
 - 提供 sort_rime_file.py，把所需 Rime 文件放到各個方案資料夾。
 
-## sort_rime_file.py 使用方法：
+## sort_rime_file.py 使用方法
 - 本倉庫 Onion_Rime_Files 按右上綠色 〔↓Code〕 ⇨ Download ZIP ⇨ 解壓縮 ZIP 進入資料夾 ⇨ Python 執行 sort_rime_file.py ⇨ 產生『電腦RIME方案_{當天日期}』資料夾
 
 - 『電腦RIME方案_{當天日期}』，各個方案所需文件，分別放置於下層『方案名稱』資料夾。
@@ -42,19 +42,19 @@
   
   > 使用 Windows 小狼毫官方最新封裝版本，方案內有 rime.lua 該檔，建議更換最新官方封裝 [librime 核心](https://github.com/rime/librime/releases)！早期 librime-lua 版本使用遍尋候選項會產生記憶體洩漏，更新版已解決。
 
-## Rime 入門需知：
+## Rime 入門需知
 
 - [Wiki 說明連結](https://github.com/oniondelta/Onion_Rime_Files/wiki/Rime-%E5%85%A5%E9%96%80%E9%9C%80%E7%9F%A5)
 
-## 推薦 Rime 主程式安裝之版本和方法：
+## 推薦 Rime 主程式安裝之版本和方法
 
 - [Wiki 說明連結](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E6%8E%A8%E8%96%A6-Rime-%E4%B8%BB%E7%A8%8B%E5%BC%8F%E5%AE%89%E8%A3%9D%E4%B9%8B%E7%89%88%E6%9C%AC%E5%92%8C%E6%96%B9%E6%B3%95)
 
-## Rime 方案安裝與修改：
+## Rime 方案安裝與修改
 
 - [Wiki 說明連結](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E6%B4%8B%E8%94%A5%E7%89%88%E9%9B%BB%E8%85%A6-Rime-%E6%96%B9%E6%A1%88%E5%AE%89%E8%A3%9D%E8%88%87%E4%BF%AE%E6%94%B9)
 
-## 各方案說明：
+## 各方案說明
 
 - [電腦 RIME 輸入法『注音（洋蔥 純注音 版）』](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E6%B3%A8%E9%9F%B3-%E6%B4%8B%E8%94%A5-%E7%B4%94%E6%B3%A8%E9%9F%B3-%E7%89%88-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E)
 
@@ -68,7 +68,7 @@
 
 - [電腦 RIME 設定檔〖 行列 30（洋蔥版）〗](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E6%B4%8B%E8%94%A5%E7%89%88-%E8%A1%8C%E5%88%9730-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E)
 
-## 注音系列功能說明：
+## 注音系列功能說明
 
 - [標點符號](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%94%E6%B4%8B%E8%94%A5%E6%B3%A8%E9%9F%B3%E7%B3%BB%E5%88%97%E3%80%95%EF%BC%9A%E6%A8%99%E9%BB%9E%E7%AC%A6%E8%99%9F)
 
@@ -82,7 +82,7 @@
 
 - [Lua 特殊功能](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%94%E6%B4%8B%E8%94%A5%E6%B3%A8%E9%9F%B3%E7%B3%BB%E5%88%97%E3%80%95%EF%BC%9ALua-%E7%89%B9%E6%AE%8A%E5%8A%9F%E8%83%BD)
 
-## Demo：
+## Demo
 
 - 注音（洋蔥 mix-in 版）
   
@@ -102,7 +102,7 @@
   
   #### ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/img/demo_bpmf_pure.gif)
  
-## Keys：
+## Keys
  
 - 注音（洋蔥 雙拼 版）鍵位
   > 無加 custom 可簡拼，有 custom 為一般雙拼每字須鍵兩碼（聲調可省略）
@@ -135,7 +135,7 @@
 
 <br><br><br><br><br><br><br><br><br>
 
-## 贊助 Donate：
+## 贊助 Donate
 
 方案已持續更新五年以上！大改、新創、新增非常多功能！做了許多圖文說明！花了族繁不及備載的心力！
 
