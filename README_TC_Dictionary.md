@@ -3,11 +3,11 @@
 ####  ※ 請勿使用於商業營利相關行為
 ####  ※ Commercial use is prohibited
 
-### 部落格方案
+## 部落格方案
 - 部落格四個注音方案：http://deltazone.pixnet.net/blog/category/11823230
 - 部落格一個拼音方案：http://deltazone.pixnet.net/blog/post/353697089
 
-### 字詞庫說明
+## 字詞庫說明
 - essay-zh-hant-onion.txt 《八股文》修改貼近台灣習慣用字，並修改詞頻，follow 官方更新。202102 八股文改用掛接。
 - terra_pinyin_onion.dict.yaml 《字庫&詞庫》原地球拼音增修，補充各字典「字」發音，「詞」改台灣習慣用字和發音，「詞」移動各種變音、該詞單個字發音在字典中查無、錯誤發音到 phrases.chtpp.dict.yaml 該檔；非臺灣慣用字形之詞彙移到 phrases.chtpv.dict.yaml 該檔。
 - terra_pinyin_onion_add.dict.yaml 《字庫》補充慣用但非正確之發音，且增加避免空碼產生問題刻意附加之發音。
@@ -16,13 +16,13 @@
 - phrases.chtpp.dict.yaml 《詞庫，未上傳》只含有各種變音、該詞單個字發音在字典中查無和大陸發音、錯誤發音。
 - phrases.chtpv.dict.yaml 《詞庫，未上傳》只含有各種非臺灣慣用字形之詞彙。
 
-### 原則
+## 原則
 
 - 「字」以兩岸字典有的發音都收錄為目標。
 
 - 「詞」的發音和用字原則上以臺灣為主。
 
-### 問題紀錄
+## 問題紀錄
 
 許多 Rime 詞庫為不帶拼音（編碼），好處是容易 mapping ，不好之處是如破音字會出現在不該為此發音之選單中，整理四十萬多字帶拼音和聲調之詞庫 phrases.chtp.dict.yaml，但其中（包含 terra_pinyin_onion.dict.yaml 該檔）還有許多錯誤、待考、待釐清之處。
 
@@ -54,7 +54,7 @@
 
 - 比對詞彙單個字的發音，修正為方案字典中單字有的發音，符合一般輸入法習慣，故詞彙發音可能與某些詞典中的發音不同，例：〈[萌典](https://www.moedict.tw/)〉和〈[教育部重編國語辭典](http://dict.revised.moe.edu.tw/cbdic/)〉就有大量該類詞彙。換句話說，詞句中變調等之發音不收錄，改為字典中單個字有的發音，原變調或錯誤之發音等詞彙轉到 phrases.chtpp.dict.yaml 該檔；如詞彙中單個字的發音在以下比對之字典有的，但方案字典沒有，則補上。
 
-### 比對參考字典
+## 比對參考字典
 
 - 主要：
 
