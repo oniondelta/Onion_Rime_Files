@@ -4,15 +4,19 @@
 ####  ※ Commercial use is prohibited
 
 ## 部落格方案
+部落格內容已移至 GitHub，故關閉先前方案文章。以下連結已失效。
+
 - 部落格四個注音方案：http://deltazone.pixnet.net/blog/category/11823230
 - 部落格一個拼音方案：http://deltazone.pixnet.net/blog/post/353697089
 
+## 字詞頻庫《八股文》說明
+- essay-zh-hant-onion.txt 《八股文》引用 [Rime 官方 essay](https://github.com/rime/rime-essay) 文件，比對修改貼近台灣習慣用字，並修改字詞頻，follow 官方更新。202102 八股文改用掛接。
+- essay-zh-hant-mc.txt 《八股文》引用[小麥注音](https://github.com/openvanilla/McBopomofo)文件，比對修改錯字和變更字詞頻符合方案，比 essay-zh-hant-onion.txt 字詞條數精簡許多，部屬較快速。
 ## 字詞庫說明
-- essay-zh-hant-onion.txt 《八股文》修改貼近台灣習慣用字，並修改詞頻，follow 官方更新。202102 八股文改用掛接。
-- terra_pinyin_onion.dict.yaml 《字庫&詞庫》原地球拼音增修，補充各字典「字」發音，「詞」改台灣習慣用字和發音，「詞」移動各種變音、該詞單個字發音在字典中查無、錯誤發音到 phrases.chtpp.dict.yaml 該檔；非臺灣慣用字形之詞彙移到 phrases.chtpv.dict.yaml 該檔。
+- terra_pinyin_onion.dict.yaml 《字庫&詞庫》原[地球拼音](https://github.com/rime/rime-terra-pinyin)增修，補充各字典「字」發音，「詞」改台灣習慣用字和發音，「詞」移動各種變音、該詞單個字發音在字典中查無、錯誤發音到 phrases.chtpp.dict.yaml 該檔；非臺灣慣用字形之詞彙移到 phrases.chtpv.dict.yaml 該檔。
 - terra_pinyin_onion_add.dict.yaml 《字庫》補充慣用但非正確之發音，且增加避免空碼產生問題刻意附加之發音。
 - phrases.chtp.dict.yaml 《詞庫》附加帶調拼音。
-- phrases.cht.dict.yaml 《詞庫》無附加拼音。
+- phrases.cht.dict.yaml 《詞庫》無附加拼音。陸續手動附加拼音移至 phrases.chtp.dict.yaml。
 - phrases.chtpp.dict.yaml 《詞庫，未上傳》只含有各種變音、該詞單個字發音在字典中查無和大陸發音、錯誤發音。
 - phrases.chtpv.dict.yaml 《詞庫，未上傳》只含有各種非臺灣慣用字形之詞彙。
 
