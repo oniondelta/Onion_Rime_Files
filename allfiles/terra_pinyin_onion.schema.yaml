@@ -4,7 +4,7 @@
 schema:
   schema_id: terra_pinyin_onion
   name: "★地球拼音(洋蔥mix-in版)★"
-  version: "202211"
+  version: "202212"
   author:
     - 佛振 <chen.sst@gmail.com>
     - 『洋蔥』
@@ -291,10 +291,15 @@ top_reverse_lookup:
     - xform/v2/ǘ/
     - xform/v3/ǚ/
     - xform/v4/ǜ/
+    # - xform/([nljqxy])v/$1ü/
+    - xform/v/ü/ #新增
+    # - xform/eh[0-5]/ê/
     - xform/eh1/ê̄/
+    - xform/eh2/ế/ #新增
+    - xform/eh3/ê̌/ #新增
     - xform/eh4/ề/
     - xform/eh5/ê/
-#    - xform/eh[0-5]/ê/
+    # - xform/([a-z]+)[0-5]/$1/
     - xform/([a-z]+)5/$1/
 
 custom_phrase:
@@ -343,10 +348,15 @@ reverse_lookup:
     - xform/v2/ǘ/
     - xform/v3/ǚ/
     - xform/v4/ǜ/
+    # - xform/([nljqxy])v/$1ü/
+    - xform/v/ü/ #新增
+    # - xform/eh[0-5]/ê/
     - xform/eh1/ê̄/
+    - xform/eh2/ế/ #新增
+    - xform/eh3/ê̌/ #新增
     - xform/eh4/ề/
     - xform/eh5/ê/
-#    - xform/eh[0-5]/ê/
+    # - xform/([a-z]+)[0-5]/$1/
     - xform/([a-z]+)5/$1/
 
 punctuator:
