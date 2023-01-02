@@ -12,66 +12,69 @@
 --      - lua_filter@lua_function2
 --    可掛接作用功能:
 --      ...
---      - lua_translator@t_translator             --（引lua資料夾）「`」開頭打出時間日期
---      - lua_translator@t2_translator            --（引lua資料夾）「'/」開頭打出時間日期
---      - lua_translator@date_translator          --（引lua資料夾）（liur）「``」開頭打出時間日期
---      - lua_translator@mytranslator             --（關）（有缺函數，參考勿用，暫關閉）
---      - lua_translator@instruction_dbpmf        --（引lua資料夾）選項中顯示洋蔥雙拼各種說明
---      - lua_translator@instruction_grave_bpmf   --（引lua資料夾）選項中顯示洋蔥注音各種說明
---      - lua_translator@instruction_ocm          --（引lua資料夾）選項中顯示洋蔥蝦米各種說明
---      - lua_translator@email_url_translator     --（引lua資料夾）輸入email、網址
---      - lua_translator@email_urlw_translator    --（引lua資料夾）輸入email、網址（多了www.）
+--      - lua_translator@t_translator                --（引lua資料夾）「`」開頭打出時間日期
+--      - lua_translator@t2_translator               --（引lua資料夾）「'/」開頭打出時間日期
+--      - lua_translator@date_translator             --（引lua資料夾）（liur）「``」開頭打出時間日期
+--      - lua_translator@mytranslator                --（關）（有缺函數，參考勿用，暫關閉）
+--      - lua_translator@instruction_dbpmf           --（引lua資料夾）選項中顯示洋蔥雙拼各種說明
+--      - lua_translator@instruction_grave_bpmf      --（引lua資料夾）選項中顯示洋蔥注音各種說明
+--      - lua_translator@instruction_ocm             --（引lua資料夾）選項中顯示洋蔥蝦米各種說明
+--      - lua_translator@email_url_translator        --（引lua資料夾）輸入email、網址
+--      - lua_translator@email_urlw_translator       --（引lua資料夾）輸入email、網址（多了www.）
+--      - lua_translator@convert_japan_translator    --（引lua資料夾）日文出羅馬字、全形羅馬字、半形片假名、全片假名、全平假名。
+--      - lua_translator@p_convert_japan_translator  --（引lua資料夾）同 convert_japan_translator，掛接方案用。
 --
 --
 --      《 ＊ 以下「濾鏡」注意在 filters 中的順序，關係到作用效果 》
---      - lua_filter@charset_cjk_filter           --（引lua資料夾）遮屏含 CJK 擴展漢字的候選項
---      - lua_filter@charset_cjk_filter_plus      --（引lua資料夾）（bopomo_onion_double） 遮屏含 CJK 擴展漢字的候選項，開關（only_cjk_filter）
---      - lua_filter@charset_comment_filter       --（引lua資料夾）候選項註釋其所屬字符集，如：CJK、ExtA
---      - lua_filter@single_char_filter           --（引lua資料夾）候選項重排序，使單字優先
---      - lua_filter@reverse_lookup_filter        --（關）依地球拼音為候選項加上帶調拼音的註釋
---      - lua_filter@myfilter                     --（關）把 charset_comment_filter 和 reverse_lookup_filter 註釋串在一起，如：CJK(hǎo)
+--      - lua_filter@charset_cjk_filter              --（引lua資料夾）遮屏含 CJK 擴展漢字的候選項
+--      - lua_filter@charset_cjk_filter_plus         --（引lua資料夾）（bopomo_onion_double） 遮屏含 CJK 擴展漢字的候選項，開關（only_cjk_filter）
+--      - lua_filter@charset_comment_filter          --（引lua資料夾）候選項註釋其所屬字符集，如：CJK、ExtA
+--      - lua_filter@single_char_filter              --（引lua資料夾）候選項重排序，使單字優先
+--      - lua_filter@reverse_lookup_filter           --（關）依地球拼音為候選項加上帶調拼音的註釋
+--      - lua_filter@myfilter                        --（關）把 charset_comment_filter 和 reverse_lookup_filter 註釋串在一起，如：CJK(hǎo)
 --
---      - lua_filter@charset_filter2              --（引lua資料夾）（ocm_onionmix）（手機全方案會用到） 遮屏選含「᰼᰼」候選項
---      - lua_filter@comment_filter_plus          --（引lua資料夾）（Mount_ocm） 遮屏提示碼，開關（simplify_comment）（遇到「'/」不遮屏）。
---      - lua_filter@symbols_mark_filter          --（關，但 mix_cf2_cfp_smf_filter 有用到某元件，部分開啟） 候選項註釋符號、音標等屬性之提示碼(comment)（用 opencc 可實現，但無法合併其他提示碼(comment)，改用 Lua 來實現）
---      - lua_filter@missing_mark_filter          --（關） 補上標點符號因直上和 opencc 衝突沒附註之選項
---      - lua_filter@array30_comment_filter       --（關） 遮屏提示碼，開關（simplify_comment）（遇到「`」不遮屏）
---      - lua_filter@array30_nil_filter           --（引lua資料夾）（onion-array30） 行列30空碼'⎔'轉成不輸出任何符號，符合原生。後來移至「=」「=」反查用。
---      - lua_filter@array30_spaceup_filter       --（關） 行列30開關一二碼按空格後，是否直上或可能有選單。
---      - lua_filter@en_sort_filter               --（引lua資料夾）（easy_en_super和其掛接）如同英漢字典一樣排序，候選項重新排序。開關（en_sort）
---      - lua_filter@kr_hnc_1m_filter             --（引lua資料夾）（hangeul_hnc）韓語遮屏只剩一個選項。開關（kr_1m）
+--      - lua_filter@charset_filter2                 --（引lua資料夾）（ocm_onionmix）（手機全方案會用到） 遮屏選含「᰼᰼」候選項
+--      - lua_filter@comment_filter_plus             --（引lua資料夾）（Mount_ocm） 遮屏提示碼，開關（simplify_comment）（遇到「'/」不遮屏）。
+--      - lua_filter@symbols_mark_filter             --（關，但 mix_cf2_cfp_smf_filter 有用到某元件，部分開啟） 候選項註釋符號、音標等屬性之提示碼(comment)（用 opencc 可實現，但無法合併其他提示碼(comment)，改用 Lua 來實現）
+--      - lua_filter@missing_mark_filter             --（關） 補上標點符號因直上和 opencc 衝突沒附註之選項
+--      - lua_filter@array30_comment_filter          --（關） 遮屏提示碼，開關（simplify_comment）（遇到「`」不遮屏）
+--      - lua_filter@array30_nil_filter              --（引lua資料夾）（onion-array30） 行列30空碼'⎔'轉成不輸出任何符號，符合原生。後來移至「=」「=」反查用。
+--      - lua_filter@array30_spaceup_filter          --（關） 行列30開關一二碼按空格後，是否直上或可能有選單。
+--      - lua_filter@en_sort_filter                  --（引lua資料夾）（easy_en_super和其掛接）如同英漢字典一樣排序，候選項重新排序。開關（en_sort）
+--      - lua_filter@kr_hnc_1m_filter                --（引lua資料夾）（hangeul_hnc）韓語遮屏只剩一個選項。開關（kr_1m）
+--      - lua_filter@halfwidth_katakana_filter       --（關）（jpnin1）片假名後附加半形片假名。選單顯示太雜亂，故不用。
 --
 --      - ＊合併兩個以上函數：
---      - lua_filter@mix30_nil_comment_filter     --（關） 合併 array30_nil_filter 和 array30_comment_filter，兩個 lua filter 太耗效能。
---      - lua_filter@mix30_nil_comment_up_filter  --（引lua資料夾）（onion-array30） 合併 array30_nil_filter 和 array30_comment_filter 和 array30_spaceup_filter，三個 lua filter 太耗效能。
---      - lua_filter@mix_cf2_miss_filter          --（引lua資料夾）（bopomo_onionplus 和 bo_mixin 全系列） 合併 charset_filter2 和 missing_mark_filter，兩個 lua filter 太耗效能。
---      - lua_filter@mix_cf2_cfp_filter           --（引lua資料夾）（dif1） 合併 charset_filter2 和 comment_filter_plus，兩個 lua filter 太耗效能。
---      - lua_filter@mix_cf2_cfp_smf_filter       --（關）（ocm_mixin） 合併 charset_filter2 和 comment_filter_plus 和 symbols_mark_filter，三個 lua filter 太耗效能。
---      - lua_filter@ocm_mixin_filter             --（引lua資料夾）（ocm_mixin）同上條目，comment 附加改用 opencc 方式。
+--      - lua_filter@mix30_nil_comment_filter        --（關） 合併 array30_nil_filter 和 array30_comment_filter，兩個 lua filter 太耗效能。
+--      - lua_filter@mix30_nil_comment_up_filter     --（引lua資料夾）（onion-array30） 合併 array30_nil_filter 和 array30_comment_filter 和 array30_spaceup_filter，三個 lua filter 太耗效能。
+--      - lua_filter@mix_cf2_miss_filter             --（引lua資料夾）（bopomo_onionplus 和 bo_mixin 全系列） 合併 charset_filter2 和 missing_mark_filter，兩個 lua filter 太耗效能。
+--      - lua_filter@mix_cf2_cfp_filter              --（引lua資料夾）（dif1） 合併 charset_filter2 和 comment_filter_plus，兩個 lua filter 太耗效能。
+--      - lua_filter@mix_cf2_cfp_smf_filter          --（關）（ocm_mixin） 合併 charset_filter2 和 comment_filter_plus 和 symbols_mark_filter，三個 lua filter 太耗效能。
+--      - lua_filter@ocm_mixin_filter                --（引lua資料夾）（ocm_mixin）同上條目，comment 附加改用 opencc 方式。
 --
 --
 --      《 ＊ 以下「處理」注意在 processors 中的順序，基本放在最前面 》
---      - lua_processor@endspace                  --（關） （hangeul 和 hangeul2set） 韓語（非英語等）空格鍵後添加" "（該方式無法記錄到用戶詞典，故使用原生程式另外方式達成該項功能）
---      - lua_processor@ascii_punct_change        --（引lua資料夾）（bopomo_onionplus_2和3） 注音非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
---      - lua_processor@array30up                 --（關） 行列30三四碼字按空格直接上屏
---      - lua_processor@array30up_zy              --（關） 行列30注音反查 Return 和 space 上屏修正
+--      - lua_processor@endspace                     --（關） （hangeul 和 hangeul2set） 韓語（非英語等）空格鍵後添加" "（該方式無法記錄到用戶詞典，故使用原生程式另外方式達成該項功能）
+--      - lua_processor@ascii_punct_change           --（引lua資料夾）（bopomo_onionplus_2和3） 注音非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
+--      - lua_processor@array30up                    --（關） 行列30三四碼字按空格直接上屏
+--      - lua_processor@array30up_zy                 --（關） 行列30注音反查 Return 和 space 上屏修正
 --
 --      = 以下針對「編碼有用到空白鍵」方案，如：注音一聲，去除空白上屏產生莫名之空格 =
---      - lua_processor@s2r_ss                    --（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（只有開頭 ^'/ 才作用，比下條目更精簡，少了 is_composing 限定）
---      - lua_processor@s2r_s                     --（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（只有開頭 ^'/ 才作用）
---      - lua_processor@s2r                       --（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin(1,2,4)和 plus 用）
---      - lua_processor@s2r_e_u                   --（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（只針對 email 和 url ）
---      - lua_processor@s2r_most                  --（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin(1,2,4)和 plus 用，精簡寫法）
---      - lua_processor@s2r_mixin3                --（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin3 (特殊正則)專用）
---      - lua_processor@mobile_bpmf               --（引lua資料夾）（手機注音專用） 使 email_url_translator 功能按空白都能直接上屏
---      - lua_processor@kr_2set_0m_choice         --（引lua資料夾）（hangeul2set_zeromenu）韓語成零選項。開關（space_mode）、開關（kr_0m）
---      - lua_processor@kr_2set_0m                --（關）（hangeul2set_zeromenu）韓語成零選項。開關（space_mode）
+--      - lua_processor@s2r_ss                       --（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（只有開頭 ^'/ 才作用，比下條目更精簡，少了 is_composing 限定）
+--      - lua_processor@s2r_s                        --（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（只有開頭 ^'/ 才作用）
+--      - lua_processor@s2r                          --（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin(1,2,4)和 plus 用）
+--      - lua_processor@s2r_e_u                      --（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（只針對 email 和 url ）
+--      - lua_processor@s2r_most                     --（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin(1,2,4)和 plus 用，精簡寫法）
+--      - lua_processor@s2r_mixin3                   --（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（ mixin3 (特殊正則)專用）
+--      - lua_processor@mobile_bpmf                  --（引lua資料夾）（手機注音專用） 使 email_url_translator 功能按空白都能直接上屏
+--      - lua_processor@kr_2set_0m_choice            --（引lua資料夾）（hangeul2set_zeromenu）韓語成零選項。開關（space_mode）、開關（kr_0m）
+--      - lua_processor@kr_2set_0m                   --（關）（hangeul2set_zeromenu）韓語成零選項。開關（space_mode）
 --
 --      - ＊合併兩個以上函數：
---      - lua_processor@array30up_mix             --（引lua資料夾）（onion-array30） 合併 array30up 和 array30up_zy，增進效能。
---      - lua_processor@mix_apc_s2rm              --（引lua資料夾）（bo_mixin 1、2、4；bopomo_onionplus） 注音掛接，合併 ascii_punct_change 和 s2r_most，增進效能。
---      - lua_processor@mix_apc_s2rm_3            --（引lua資料夾）（bo_mixin3） 注音掛接，合併 ascii_punct_change 和 s2r_mixin3，增進效能。
---      - lua_processor@mix_apc_pluss             --（引lua資料夾）（bopomo_onionplus_space） 以原 ascii_punct_change 增加功能，使初始空白可以直接上屏
+--      - lua_processor@array30up_mix                --（引lua資料夾）（onion-array30） 合併 array30up 和 array30up_zy，增進效能。
+--      - lua_processor@mix_apc_s2rm                 --（引lua資料夾）（bo_mixin 1、2、4；bopomo_onionplus） 注音掛接，合併 ascii_punct_change 和 s2r_most，增進效能。
+--      - lua_processor@mix_apc_s2rm_3               --（引lua資料夾）（bo_mixin3） 注音掛接，合併 ascii_punct_change 和 s2r_mixin3，增進效能。
+--      - lua_processor@mix_apc_pluss                --（引lua資料夾）（bopomo_onionplus_space） 以原 ascii_punct_change 增加功能，使初始空白可以直接上屏
 --      ...
 
 
@@ -274,6 +277,14 @@ instruction_ocm = require("translator_instruction_ocm")
 local time_translator = require("translator_time_translator")
 t_translator = time_translator.t_translator
 t2_translator = time_translator.t2_translator
+
+
+--- 日文出羅馬字、全形羅馬字、半形片假名、全片假名、全平假名。
+-- convert_japan_translator：主方案用。
+-- p_convert_japan_translator：掛接方案用，方案名稱：「japan」。
+local c_j_translator = require("translator_convert_japan_translator")
+convert_japan_translator = c_j_translator.convert_japan_translator
+p_convert_japan_translator = c_j_translator.p_convert_japan_translator
 
 
 

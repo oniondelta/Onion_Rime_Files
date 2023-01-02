@@ -4,19 +4,19 @@
 # 『洋蔥』製作
 ---
 name: jpnin1.extended
-version: "202204"
+version: "202301"
 sort: by_weight
 vocabulary: essay-jp-onion
-#use_preset_vocabulary: false
-#max_phrase_length: 7
-#min_phrase_weight: 100
+# use_preset_vocabulary: false
+# max_phrase_length: 7
+# min_phrase_weight: 100
 import_tables:
   - jpnin1
-  - jpnin1_hw
-#  - phrases.jp_hk
+  # - jpnin1_hw
+  # - phrases.jp_hk
   - phrases.jp_hk_more
   - phrases.jp_hkkseg
-#  - phrases.jp_hkk #不要開，大量mapping，速度會減慢
+##  - phrases.jp_hkk #不要開，大量mapping，速度會減慢
 ...
 ##### 以下一個為空格轉寫，使掛載語言能空格後繼續輸入！！！ #####
  	|

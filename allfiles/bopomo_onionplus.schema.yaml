@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onionplus
   name: "☆注音(洋蔥plus版)☆"
-  version: "202212"
+  version: "202301"
   author:
     - 『洋蔥』
   description: |
@@ -114,6 +114,7 @@ engine:
     - lua_translator@t2_translator
     - lua_translator@email_url_translator
     - lua_translator@instruction_grave_bpmf
+    - lua_translator@p_convert_japan_translator
     - script_translator
 
 menu:

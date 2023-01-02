@@ -67,7 +67,7 @@
 #===================================
 ---
 name: jpnin1_hw
-version: "202204"
+version: "202301"
 sort: by_weight #original
 use_preset_vocabulary: false
 columns:

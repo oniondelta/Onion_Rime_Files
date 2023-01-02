@@ -4,7 +4,7 @@
 schema:
   schema_id: bo_mixin2
   name: "☆注音(洋蔥mix-in版 2 )☆〔小大平片韓〕"
-  version: "202211"
+  version: "202301"
   author:
     - 『洋蔥』
   description: |
@@ -107,6 +107,7 @@ engine:
     - lua_translator@t2_translator
     - lua_translator@email_url_translator
     - lua_translator@instruction_grave_bpmf
+    - lua_translator@p_convert_japan_translator
     - script_translator
 ################################### 選單 ################################################
 menu:

@@ -4,7 +4,7 @@
 schema:
   schema_id: jpnin1 # 注意此ID與文件名裏 .schema.yaml 之前的部分相同
   name: ❃日語 in 1❃
-  version: "202204"
+  version: "202301"
   author:
     - 『洋蔥』
   description: |
@@ -22,6 +22,7 @@ switches:
 engine:
   filters:
     - reverse_lookup_filter@c_reverse_lookup
+    - uniquifier
   processors:
     - ascii_composer
     - recognizer
@@ -44,6 +45,7 @@ engine:
     - table_translator@jpnin1_phrase
     - script_translator@kanji_input
     - script_translator
+    - lua_translator@convert_japan_translator
 
 menu:
   alternative_select_keys: "1234567890"
@@ -200,7 +202,7 @@ speller:
     # - derive/([a-z-]);/$1/ #關#
 ##### 簡化假名後綴 #####
     # - derive/(?<=[a-z-])[,.]$// #若只出假名要打開
-    - derive/(?<=[a-z-])[.][,]// #半形假名後綴簡化
+#關閉改用lua實現#    - derive/(?<=[a-z-])[.][,]// #半形假名後綴簡化
 ##### 同時簡化漢字和假名後綴 #####
     - derive/(?<=[a-z-])[,.;]$// #
 ##### 其他方案掛接時，後綴'['調出 #####
@@ -325,8 +327,8 @@ punctuator:
     "\\" : { commit: "￥" }
     "|" : { commit: "｜" }
 #    "'" : [ "", "", "" ]
-    "," : [ "、" ]
-    "." : [ "。" ]
+    "," : [ "、", "､" ]
+    "." : [ "。", "｡" ]
 
 key_binder:
   import_preset: default
