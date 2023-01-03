@@ -52,7 +52,7 @@ menu:
 
 speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz,-.;/"
-  delimiter: " "
+  delimiter: " '"
   algebra:
     # - xform/n(?![nyaeiou])/nn/
     # - xform/^nng/ng/
@@ -250,8 +250,10 @@ kanji_input:
   dictionary: cangjie5
   enable_user_dict: true
   prefix: "`"
+  suffix: "'"
   tips: 〔漢字反查〕
   preedit_format:
+    - xform/^/〔漢字反查〕/
     # - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
     - "xlit|abcdefghijklmnopqrstuvwxyz|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符|"
 
@@ -375,5 +377,5 @@ recognizer:
     uppercase: "[A-Z].*$"
     email: "^[a-z][-_.0-9a-z]*@.*$"
     url: "^(https?:|ftp:|mailto:|file:).*$" #|^[a-z]+[.].+$
-    kanji_input: "^`[a-z]*$"
+    kanji_input: "^`[a-z]*'?$"
 
