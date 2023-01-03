@@ -22,7 +22,8 @@ switches:
 engine:
   filters:
     - reverse_lookup_filter@c_reverse_lookup
-    - uniquifier
+    - lua_filter@convert_japan_filter
+    # - uniquifier
   processors:
     - ascii_composer
     - recognizer
@@ -45,7 +46,10 @@ engine:
     - table_translator@jpnin1_phrase
     - script_translator@kanji_input
     - script_translator
-    - lua_translator@convert_japan_translator
+    # - lua_translator@convert_japan_translator
+
+convert_japan_filter:
+  tags: [ abc ]
 
 menu:
   alternative_select_keys: "1234567890"

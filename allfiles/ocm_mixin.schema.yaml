@@ -81,6 +81,7 @@ engine:
     # - lua_filter@symbols_mark_filter
     # - simplifier@back_mark
     - lua_filter@en_sort_filter
+    - lua_filter@p_convert_japan_filter
     - simplifier@emoji_switch
     - simplifier
     - simplifier@punct_mark
@@ -136,7 +137,7 @@ engine:
     - lua_translator@t2_translator
     - lua_translator@email_urlw_translator
     - lua_translator@instruction_ocm
-    - lua_translator@p_convert_japan_translator
+    # - lua_translator@p_convert_japan_translator
 ################################### 選單 ################################################
 menu:
   alternative_select_keys: '0123456789'
@@ -188,6 +189,9 @@ ocm_mixin_filter:
 
 en_sort_filter:
   tags: [ easy_en ]
+
+p_convert_japan_filter:
+  tags: [ japan ]
 ################################### 拼寫 ######################################
 speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz;,'./-`"

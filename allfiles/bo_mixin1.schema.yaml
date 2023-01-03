@@ -60,6 +60,7 @@ engine:
     # - lua_filter@charset_filter  #打開後中文只保留CJK（精簡），但外語不受影響。
     # - lua_filter@missing_mark_filter  #補上標點符號因直上和 opencc 衝突沒附註之選項
     - lua_filter@en_sort_filter
+    - lua_filter@p_convert_japan_filter
     - simplifier@emoji_switch
     - simplifier
     - simplifier@back_mark
@@ -110,7 +111,7 @@ engine:
     - lua_translator@t2_translator
     - lua_translator@email_url_translator
     - lua_translator@instruction_grave_bpmf
-    - lua_translator@p_convert_japan_translator
+    # - lua_translator@p_convert_japan_translator
     - script_translator
 ################################### 選單 ################################################
 menu:
@@ -155,6 +156,9 @@ punct_mark:
 
 en_sort_filter:
   tags: [ easy_en ]
+
+p_convert_japan_filter:
+  tags: [ japan ]
 
 # mix_cf2_miss_filter:
 #   tags: [ punct, abc, reverse2_lookup ]

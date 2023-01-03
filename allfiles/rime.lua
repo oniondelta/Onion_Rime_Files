@@ -21,8 +21,8 @@
 --      - lua_translator@instruction_ocm             --（引lua資料夾）選項中顯示洋蔥蝦米各種說明
 --      - lua_translator@email_url_translator        --（引lua資料夾）輸入email、網址
 --      - lua_translator@email_urlw_translator       --（引lua資料夾）輸入email、網址（多了www.）
---      - lua_translator@convert_japan_translator    --（引lua資料夾）日文出羅馬字、全形羅馬字、半形片假名、全片假名、全平假名。
---      - lua_translator@p_convert_japan_translator  --（引lua資料夾）同 convert_japan_translator，掛接方案用。
+--      - lua_translator@convert_japan_translator    --（關）（效能不佳）日文出羅馬字、全形羅馬字、半形片假名、全片假名、全平假名。
+--      - lua_translator@p_convert_japan_translator  --（關）（效能不佳）同 convert_japan_translator，掛接方案用。
 --
 --
 --      《 ＊ 以下「濾鏡」注意在 filters 中的順序，關係到作用效果 》
@@ -42,6 +42,8 @@
 --      - lua_filter@array30_spaceup_filter          --（關） 行列30開關一二碼按空格後，是否直上或可能有選單。
 --      - lua_filter@en_sort_filter                  --（引lua資料夾）（easy_en_super和其掛接）如同英漢字典一樣排序，候選項重新排序。開關（en_sort）
 --      - lua_filter@kr_hnc_1m_filter                --（引lua資料夾）（hangeul_hnc）韓語遮屏只剩一個選項。開關（kr_1m）
+--      - lua_filter@convert_japan_filter            --（引lua資料夾）日文出羅馬字、全形羅馬字、半形片假名、全片假名、全平假名。
+--      - lua_filter@p_convert_japan_filter          --（引lua資料夾）同 convert_japan_filter，掛接方案用。
 --      - lua_filter@halfwidth_katakana_filter       --（關）（jpnin1）片假名後附加半形片假名。選單顯示太雜亂，故不用。
 --
 --      - ＊合併兩個以上函數：
@@ -162,24 +164,41 @@ kr_hnc_1m_filter = require("filter_kr_hnc_1m_filter")
 
 
 -- --- mix_cf2_cfp_smf_filter （ocm_mixin）
--- --- 沒用到 ocm_mixin 方案時，ReverseDb("build/symbols-mark.reverse.bin")會找不到。
--- --- 故改用下條目 opencc 應用。
+-- -- 沒用到 ocm_mixin 方案時，ReverseDb("build/symbols-mark.reverse.bin")會找不到。
+-- -- 故改用下條目 opencc 應用。
 -- -- mix_cf2_cfp_smf_filter = require("filter_mix_cf2_cfp_smf_filter") --無效
 -- local filter_mix_cf2_cfp_smf_filter = require("filter_mix_cf2_cfp_smf_filter")
 -- mix_cf2_cfp_smf_filter = filter_mix_cf2_cfp_smf_filter.mix_cf2_cfp_smf_filter
 
 
 --- ocm_mixin_filter （ocm_mixin）
---- 同上條目，但附加 comment 不用 ReverseDb 方式，改用新版 lua 的 opencc 引入方式。
+-- 同上條目，但附加 comment 不用 ReverseDb 方式，改用新版 lua 的 opencc 引入方式。
 local filter_ocm_mixin = require("filter_ocm_mixin")
 ocm_mixin_filter = filter_ocm_mixin.ocm_mixin_filter
 
 
 --- charset_filter2 （ocm_onionmix）（手機全方案會用到）
---- 把 opencc 轉換成「᰼」(或某個符號)，再用 lua 功能去除「᰼」
+-- 把 opencc 轉換成「᰼」(或某個符號)，再用 lua 功能去除「᰼」
 -- charset_filter2 = require("filter_charset_filter2")
 local filter_charset_filter2 = require("filter_charset_filter2")
 charset_filter2 = filter_charset_filter2.charset_filter2
+
+
+--- 日文出羅馬字、全形羅馬字、半形片假名、全片假名、全平假名。
+-- convert_japan_filter：主方案用。
+-- p_convert_japan_filter：掛接方案用，方案名稱：「japan」。
+-- 用 filter 方式。
+local c_j_filter = require("filter_convert_japan_filter")
+convert_japan_filter = c_j_filter.convert_japan_filter
+p_convert_japan_filter = c_j_filter.p_convert_japan_filter
+
+
+-- --- halfwidth_katakana_filter (jpnin1)
+-- -- 片假名後附加半形片假名。
+-- -- 選單顯示太雜亂，故不用。
+-- -- 改用 convert_japan_translator 出半形片假名。
+-- local filter_halfwidth_katakana_filter = require("filter_halfwidth_katakana_filter")
+-- halfwidth_katakana_filter = filter_halfwidth_katakana_filter.halfwidth_katakana_filter
 
 
 
@@ -233,7 +252,7 @@ kr_2set_0m_choice = require("processor_kr_2set_0m_choice")
 
 
 -- --- mobile_bpmf （手機注音用）
--- --- 使 email_url_translator 功能按空白都能直接上屏
+-- -- 使 email_url_translator 功能按空白都能直接上屏
 -- mobile_bpmf = require("processor_mobile_bpmf")
 
 
@@ -279,12 +298,13 @@ t_translator = time_translator.t_translator
 t2_translator = time_translator.t2_translator
 
 
---- 日文出羅馬字、全形羅馬字、半形片假名、全片假名、全平假名。
--- convert_japan_translator：主方案用。
--- p_convert_japan_translator：掛接方案用，方案名稱：「japan」。
-local c_j_translator = require("translator_convert_japan_translator")
-convert_japan_translator = c_j_translator.convert_japan_translator
-p_convert_japan_translator = c_j_translator.p_convert_japan_translator
+-- --- 日文出羅馬字、全形羅馬字、半形片假名、全片假名、全平假名。
+-- -- （關）（效能不佳）用 translator 方式。
+-- -- convert_japan_translator：主方案用。
+-- -- p_convert_japan_translator：掛接方案用，方案名稱：「japan」。
+-- local c_j_translator = require("translator_convert_japan_translator")
+-- convert_japan_translator = c_j_translator.convert_japan_translator
+-- p_convert_japan_translator = c_j_translator.p_convert_japan_translator
 
 
 
