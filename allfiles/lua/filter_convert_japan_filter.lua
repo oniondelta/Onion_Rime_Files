@@ -37,6 +37,8 @@ local function convert_japan_filter(input, env)
       yield(Candidate("jp", start, _end, hw, "〔半形片假名〕"))
       yield(Candidate("jp", start, _end, kata_t(hw), "〔片假名〕"))
       yield(Candidate("jp", start, _end, hira_t(hw), "〔平假名〕"))
+    else
+      yield(Candidate("jp", start, _end, "", "〔該拼寫無假名〕"))
     end
 
   else
@@ -81,6 +83,10 @@ local function p_convert_japan_filter(input, env)
       yield(hwkata)
       yield(kata)
       yield(hira)
+    else
+      local no_kana = Candidate("jp", start, _end, "", "〔該拼寫無假名〕")
+      no_kana.preedit = tips_jp .. c .. s
+      yield(no_kana)
     end
 
   else
