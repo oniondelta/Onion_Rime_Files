@@ -18,7 +18,10 @@ patch:
     - {schema: dif1_fs}
     - {schema: Mount_bopomo}
     - {schema: allbpm}
-    - {schema: easy_en_super}
+    - {schema: easy_en_lcomment}
+    - {schema: easy_en_lower}
+    - {schema: easy_en_upper}
+    # - {schema: easy_en_super}
     - {schema: punct_ovff}
     - {schema: symbols_ocm}
     - {schema: cangjie5}

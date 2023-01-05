@@ -1,0 +1,68 @@
+# Rime schema settings
+# encoding: utf-8
+# 《反查掛載專用 英翻中 設定頁》
+schema:
+  schema_id: easy_en_lcomment
+  name: "提示碼_英翻中"
+  version: "202301"
+  author:
+    - Onion
+  description: |
+    只在反查掛載作用
+
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 中文, 英文 ]
+
+engine:
+  filters:
+    # - uniquifier
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+#    - fluency_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - echo_translator
+    - table_translator
+
+speller:
+  alphabet: 'zyxwvutsrqponmlkjihgfedcba'
+  delimiter: " "
+  algebra:
+    - xform/^(.).*(.)$/$1$2/  #縮小 prism 檔用
+    # - erase/^.+$/
+
+translator:
+  dictionary: easy_en_lcomment
+  prism: easy_en_lcomment
+  sentence_over_completion: false
+  enable_sentence: false
+  enable_encoder: false
+  encode_commit_history: false
+  enable_completion: false
+  enable_user_dict: false
+
+punctuator:
+  import_preset: default
+
+key_binder:
+  import_preset: default
+
+recognizer:
+  import_preset: default
+

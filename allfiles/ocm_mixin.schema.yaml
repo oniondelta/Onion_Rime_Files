@@ -13,7 +13,9 @@ schema:
   dependencies:
     - punct_ovff
     - symbols_ocm
-    - easy_en_super
+    - easy_en_lower
+    - easy_en_upper
+    # - easy_en_super
     - ocm_mixin_greek
     - ocm_mixin_cyrillic
     - ocm_mixin_fullshape
@@ -106,7 +108,8 @@ engine:
     - affix_segmentor@pt
     - affix_segmentor@emoji_series
     - affix_segmentor@easy_en
-    - affix_segmentor@easy_en_script
+    - affix_segmentor@easy_en_upper
+    # - affix_segmentor@easy_en_script
     - affix_segmentor@japan
     - affix_segmentor@reverse2_lookup
     - affix_segmentor@reverse3_lookup
@@ -129,7 +132,8 @@ engine:
     - script_translator@reverse3_lookup_extra
     - script_translator@all_bpm
     - table_translator@easy_en
-    - script_translator@easy_en_script
+    - table_translator@easy_en_upper
+    # - script_translator@easy_en_script
     - script_translator@japan
     - script_translator@gr
     - script_translator@cyr
@@ -400,11 +404,11 @@ top_reverse_lookup:
 ######################調出其他語言之翻譯器(開頭符號調出各國語言輸入)################
 easy_en:
   tag: easy_en
-  dictionary: easy_en_super
+  dictionary: easy_en_lower #easy_en_super
   enable_encoder: false
   encode_commit_history: false
   enable_completion: true
-  # sentence_over_completion: true
+  sentence_over_completion: false
   enable_sentence: false
   enable_user_dict: false
   # strict_spelling: false
@@ -414,7 +418,8 @@ easy_en:
   # suffix: " "
   tips: "《Easy英語》▶"
   extra_tags:
-    - easy_en_script
+    - easy_en_upper
+    # - easy_en_script
   preedit_format:
     - xform/^/《Easy英語》/
     # - xform/》;/》; /
@@ -429,25 +434,38 @@ easy_en:
   #   - xform/@@/\n          /
   #   - xform/@/ /
 
-easy_en_script:
-  __include: /easy_en
-  tag: easy_en_script
-  # enable_encoder: true
+# easy_en_script:
+#   __include: /easy_en
+#   tag: easy_en_script
+#   # enable_encoder: true
+#   enable_completion: false
+#   enable_sentence: false
+#   enable_user_dict: false
+#   # spelling_hints: 1
+#   # initial_quality: 0
+#   extra_tags: []
+#   # comment_format: []
+
+easy_en_upper:
+  tag: easy_en_upper
+  dictionary: easy_en_upper
+  enable_encoder: false
+  encode_commit_history: false
   enable_completion: false
-  enable_sentence: false
+  sentence_over_completion: false
+  enable_sentence: true
   enable_user_dict: false
-  # spelling_hints: 1
-  # initial_quality: 0
-  extra_tags: []
-  # comment_format: []
+  preedit_format:
+    - xform/^/《Easy》/
+    - xform/\\/ /
 
 e_reverse_lookup:
   tags: [ easy_en ]
   overwrite_comment: true
-  dictionary: easy_en_super
+  dictionary: easy_en_lcomment #easy_en_super
   comment_format:
-    - xform/^.+⌗// #easy_en_super用
-    - xform|^[ a-z;/.'-]+|| #easy_en_super用
+    # - xform/^.+⌗// #easy_en_super用
+    # - xform|^[ a-z;/.'-]+|| #easy_en_super用
     - xform/@@/\n          /
     - xform/@/ /
 
