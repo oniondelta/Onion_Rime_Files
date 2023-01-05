@@ -44,7 +44,7 @@ speller:
   # finals: ";"
   delimiter: " "
   algebra:
-    - derive/^\|$/ /
+    # - derive/^\|$/ /
     - derive/^([a-z];)$/$1;/
     # - derive/^([a-z]);$/$1/ #會透到小寫
     # - abbrev/^([a-z]);$/$1/ #無法透出組字

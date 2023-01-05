@@ -494,7 +494,7 @@ easy_en_upper:
   encode_commit_history: false
   enable_completion: false
   sentence_over_completion: false
-  enable_sentence: true
+  enable_sentence: false
   enable_user_dict: false
   preedit_format:
     - xform/^/《Easy》/
