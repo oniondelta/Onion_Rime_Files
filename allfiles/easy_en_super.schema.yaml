@@ -15,7 +15,7 @@ switches:
     reset: 0
     states: [ On, Off ]
   - name: en_sort
-    # reset: 1
+    reset: 0
     states: [ 無排, 序排 ]
 
 engine:
