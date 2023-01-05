@@ -40,9 +40,9 @@ local function mix_apc_s2rm(key, env)
     -- elseif (key:repr() == "space") and (context:has_menu()) then
     -- elseif (key:repr() == "space") then
       -- local input_124 = context.input
-      if ( string.find(input_124, "[@:]") or string.find(input_124, "'/") or string.find(input_124, "=[-125890;,./]$") or string.find(input_124, "=[-;,./][-;,./]$") or string.find(input_124, "==[90]$") ) then  --or string.find(input_124, "==[,.]{2}$")
-      -- if ( string.find(input_124, "[@:]") or string.find(input_124, "'/") or string.find(input_124, "=[-125890;,./]$") or string.find(input_124, "=[-;,./][-;,./]$") or string.find(input_124, "==[90]$") or string.find(input_124, "==[,][,]?$") or string.find(input_124, "==[.][.]?$") ) then
-      --「全，非精簡」 if ( string.find(input_124, "[@:]") or string.find(input_124, "'/") or string.find(input_124, "=[-125890;,./]$") or string.find(input_124, "=[-][-]$") or string.find(input_124, "=[;][;]$") or string.find(input_124, "=[,][,]$") or string.find(input_124, "=[.][.]$") or string.find(input_124, "=[/][/]$") or string.find(input_124, "==[90]$") or string.find(input_124, "==[,][,]?$") or string.find(input_124, "==[.][.]?$") ) then
+      if ( string.match(input_124, "[@:]") or string.match(input_124, "'/") or string.match(input_124, "=[-125890;,./]$") or string.match(input_124, "=[-;,./][-;,./]$") or string.match(input_124, "==[90]$") ) then  --or string.match(input_124, "==[,.]{2}$")
+      -- if ( string.match(input_124, "[@:]") or string.match(input_124, "'/") or string.match(input_124, "=[-125890;,./]$") or string.match(input_124, "=[-;,./][-;,./]$") or string.match(input_124, "==[90]$") or string.match(input_124, "==[,][,]?$") or string.match(input_124, "==[.][.]?$") ) then
+      --「全，非精簡」 if ( string.match(input_124, "[@:]") or string.match(input_124, "'/") or string.match(input_124, "=[-125890;,./]$") or string.match(input_124, "=[-][-]$") or string.match(input_124, "=[;][;]$") or string.match(input_124, "=[,][,]$") or string.match(input_124, "=[.][.]$") or string.match(input_124, "=[/][/]$") or string.match(input_124, "==[90]$") or string.match(input_124, "==[,][,]?$") or string.match(input_124, "==[.][.]?$") ) then
         -- local orig_124 = context:get_commit_text()
         engine:commit_text(orig_124)
         context:clear()
@@ -56,9 +56,9 @@ local function mix_apc_s2rm(key, env)
     -- if (key:repr() == "space") and (context:has_menu()) then
     -- if (key:repr() == "space") then
       -- local input_124 = context.input
-      if ( string.find(input_124, "[@:]") or string.find(input_124, "'/") or string.find(input_124, "=[-125890;,./]$") or string.find(input_124, "=[-;,./][-;,./]$") or string.find(input_124, "==[90]$") ) then  --or string.find(input_124, "==[,.]{2}$")
-      -- if ( string.find(input_124, "[@:]") or string.find(input_124, "'/") or string.find(input_124, "=[-125890;,./]$") or string.find(input_124, "=[-;,./][-;,./]$") or string.find(input_124, "==[90]$") or string.find(input_124, "==[,][,]?$") or string.find(input_124, "==[.][.]?$") ) then
-      --「全，非精簡」 if ( string.find(input_124, "[@:]") or string.find(input_124, "'/") or string.find(input_124, "=[-125890;,./]$") or string.find(input_124, "=[-][-]$") or string.find(input_124, "=[;][;]$") or string.find(input_124, "=[,][,]$") or string.find(input_124, "=[.][.]$") or string.find(input_124, "=[/][/]$") or string.find(input_124, "==[90]$") or string.find(input_124, "==[,][,]?$") or string.find(input_124, "==[.][.]?$") ) then
+      if ( string.match(input_124, "[@:]") or string.match(input_124, "'/") or string.match(input_124, "=[-125890;,./]$") or string.match(input_124, "=[-;,./][-;,./]$") or string.match(input_124, "==[90]$") ) then  --or string.match(input_124, "==[,.]{2}$")
+      -- if ( string.match(input_124, "[@:]") or string.match(input_124, "'/") or string.match(input_124, "=[-125890;,./]$") or string.match(input_124, "=[-;,./][-;,./]$") or string.match(input_124, "==[90]$") or string.match(input_124, "==[,][,]?$") or string.match(input_124, "==[.][.]?$") ) then
+      --「全，非精簡」 if ( string.match(input_124, "[@:]") or string.match(input_124, "'/") or string.match(input_124, "=[-125890;,./]$") or string.match(input_124, "=[-][-]$") or string.match(input_124, "=[;][;]$") or string.match(input_124, "=[,][,]$") or string.match(input_124, "=[.][.]$") or string.match(input_124, "=[/][/]$") or string.match(input_124, "==[90]$") or string.match(input_124, "==[,][,]?$") or string.match(input_124, "==[.][.]?$") ) then
         -- local orig_124 = context:get_commit_text()
         engine:commit_text(orig_124)
         context:clear()

@@ -14,8 +14,8 @@ local function mobile_bpmf(key, env)
   --   return 2
   if (key:repr() == "space") and (context:is_composing()) then
     -- local input_m = context.input
-    if (string.find(input_m, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(input_m, "^https?:.*$")) or (string.find(input_m, "^ftp:.*$")) or (string.find(input_m, "^mailto:.*$")) or (string.find(input_m, "^file:.*$")) then
-    -- if ( string.find(input_m, "[@:]")) then
+    if (string.match(input_m, "^[a-z][-_.0-9a-z]*@.*$")) or (string.match(input_m, "^https?:.*$")) or (string.match(input_m, "^ftp:.*$")) or (string.match(input_m, "^mailto:.*$")) or (string.match(input_m, "^file:.*$")) then
+    -- if ( string.match(input_m, "[@:]")) then
       -- local orig_m = context:get_commit_text()
       engine:commit_text(orig_m)
       context:clear()

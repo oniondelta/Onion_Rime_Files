@@ -45,11 +45,11 @@
 
 local function array30_nil_filter(input, env)
   local p_key = env.engine.context.input
-  local array30_r = string.find(p_key, '^==')
+  local array30_r = string.match(p_key, '^==')
   -- local array30_input = env.engine.context.input  -- 原始未轉換輸入碼
   if (array30_r) then
     for cand in input:iter() do
-      if (string.find(cand.text, '^⎔%d$' )) then
+      if (string.match(cand.text, '^⎔%d$' )) then
         -- local cccc = string.gsub(cand.text, "^⎔2$", "⎔")
         -- cand.text = '⎔'
         -- cand:get_genuine().text = '@'

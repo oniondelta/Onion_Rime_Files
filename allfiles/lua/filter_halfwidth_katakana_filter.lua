@@ -146,14 +146,14 @@ local function halfwidth_katakana_filter(input, env)
   for cand in input:iter() do
     local start = context:get_preedit().sel_start
     local _end = context:get_preedit().sel_end
-    -- if (string.find(o_input, "%.,$")) and (string.find(cand.text, "^[。、・ヲァィゥェォャュョッーアイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワン゛゜]+$")) then
-    -- if (string.find(o_input, "%.,$")) and (string.gmatch(cand.text, "^[\x30a1-\x30ab\x30ad\x30af\x30b1\x30b3\x30b5\x30b7\x30b9\x30bb\x30bd\x30bf\x30c1\x30c3\x30c4\x30c6\x30c8\x30ca-\x30cf\x30d2\x30d5\x30d8\x30db\x30de-\x30ed\x30ef\x30f2\x30f3\x30fb\x30fc\x3001\x3002\x309b\x309c]+$")) then
-    -- if (not string.find(o_input, "%.$")) then
+    -- if (string.match(o_input, "%.,$")) and (string.match(cand.text, "^[。、・ヲァィゥェォャュョッーアイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワン゛゜]+$")) then
+    -- if (string.match(o_input, "%.,$")) and (string.gmatch(cand.text, "^[\x30a1-\x30ab\x30ad\x30af\x30b1\x30b3\x30b5\x30b7\x30b9\x30bb\x30bd\x30bf\x30c1\x30c3\x30c4\x30c6\x30c8\x30ca-\x30cf\x30d2\x30d5\x30d8\x30db\x30de-\x30ed\x30ef\x30f2\x30f3\x30fb\x30fc\x3001\x3002\x309b\x309c]+$")) then
+    -- if (not string.match(o_input, "%.$")) then
  -- and (string.match(cand.text, "^[ナ]+$"))
       -- if (string.gmatch(cand.text, "^[\x30a1-\x30ab\x30ad\x30af\x30b1\x30b3\x30b5\x30b7\x30b9\x30bb\x30bd\x30bf\x30c1\x30c3\x30c4\x30c6\x30c8\x30ca-\x30cf\x30d2\x30d5\x30d8\x30db\x30de-\x30ed\x30ef\x30f2\x30f3\x30fb\x30fc\x3001\x3002\x309b\x309c]+$")) then
       -- if (string.gmatch(cand.text, "^[\x30a1-\x30f3]+$")) then
       -- if (exists(is_katakana, cand.text)) then
-      -- if (string.find(cand.text, "^[。、・ヲァィゥェォャュョッーアイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワン゛゜]+$")) then
+      -- if (string.match(cand.text, "^[。、・ヲァィゥェォャュョッーアイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワン゛゜]+$")) then
     local kana = Candidate("halfwidth_katakana", start, _end, halfwidth_katakana(cand.text), "〔ｶﾀｶﾅ〕")
       -- local kana = Candidate("halfwidth_katakana", 0, string.len(o_input), halfwidth_katakana(cand.text), " ｶﾀｶﾅ")
       -- local kana = Candidate("halfwidth_katakana", context:get_preedit().sel_start, context:get_preedit().sel_end, halfwidth_katakana(cand.text), " ﹙ｶﾀｶﾅ﹚")
@@ -172,7 +172,7 @@ local function halfwidth_katakana_filter(input, env)
       -- local c_pattern = "[\x4e00-\x9fa5]"
 
 
-    -- if (string.find(cand.text, k_pattern )) then
+    -- if (string.match(cand.text, k_pattern )) then
     -- if (string.match(cand.text, k_pattern )) then
     --   -- local kana = Candidate("halfwidth_katakana", context:get_preedit().sel_start, context:get_preedit().sel_end, halfwidth_katakana(cand.text), " ﹙ｶﾀｶﾅ﹚")
     --   yield(cand)
@@ -180,7 +180,7 @@ local function halfwidth_katakana_filter(input, env)
     -- else
     -- -- if (not string.gmatch(cand.text, k_pattern ) or string.gmatch(cand.text, c_pattern )) then
     -- -- if (string.gmatch(cand.text, k_pattern) or string.gmatch(cand.text, c_pattern) ) then
-    -- -- if (not string.find(cand.text, "[ヲァィゥェォャュョッーアイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワン゛゜。、・]")) then
+    -- -- if (not string.match(cand.text, "[ヲァィゥェォャュョッーアイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワン゛゜。、・]")) then
     --   yield(cand)
     --   -- end
     -- -- end

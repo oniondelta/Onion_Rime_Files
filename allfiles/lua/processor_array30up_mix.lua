@@ -18,8 +18,8 @@ local function array30up_mix(key, env)
   -- if (key:repr() == "space") and (context:is_composing()) then
     -- local input_array = context.input
 
-    if (string.find(input_array, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(input_array, "^==[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(input_array, "`.+$")) or (string.find(input_array, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(input_array, "^https?:.*$")) or (string.find(input_array, "^ftp:.*$")) or (string.find(input_array, "^mailto:.*$")) or (string.find(input_array, "^file:.*$")) or (string.find(input_array, "^=[a-z0-9,.;/-]+$")) then
-    -- if (string.find(input_array, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(input_array, "^==[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.find(input_array, "`.+$")) or (string.find(input_array, "^[a-z][-_.0-9a-z]*@.*$")) or (string.find(input_array, "^https?:.*$")) or (string.find(input_array, "^ftp:.*$")) or (string.find(input_array, "^mailto:.*$")) or (string.find(input_array, "^file:.*$")) or (string.find(input_array, "^www%..+$")) or (string.find(input_array, "^=[a-z0-9,.;/-]+$")) then
+    if (string.match(input_array, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.match(input_array, "^==[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.match(input_array, "`.+$")) or (string.match(input_array, "^[a-z][-_.0-9a-z]*@.*$")) or (string.match(input_array, "^https?:.*$")) or (string.match(input_array, "^ftp:.*$")) or (string.match(input_array, "^mailto:.*$")) or (string.match(input_array, "^file:.*$")) or (string.match(input_array, "^=[a-z0-9,.;/-]+$")) then
+    -- if (string.match(input_array, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.match(input_array, "^==[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.match(input_array, "`.+$")) or (string.match(input_array, "^[a-z][-_.0-9a-z]*@.*$")) or (string.match(input_array, "^https?:.*$")) or (string.match(input_array, "^ftp:.*$")) or (string.match(input_array, "^mailto:.*$")) or (string.match(input_array, "^file:.*$")) or (string.match(input_array, "^www%..+$")) or (string.match(input_array, "^=[a-z0-9,.;/-]+$")) then
       -- local orig_array = context:get_commit_text()
       engine:commit_text(orig_array)
       context:clear()
@@ -27,7 +27,7 @@ local function array30up_mix(key, env)
 
     -- --- 使 w[0-9] 輸入符號時：空白鍵同某些行列 30 一樣為翻頁。
     -- --- KeyEvent 函數在舊版 librime-lua 中不支持，故遮屏。
-    -- elseif (string.find(input_array, "^w[0-9]$")) then
+    -- elseif (string.match(input_array, "^w[0-9]$")) then
     --   engine:process_key(KeyEvent("Page_Down"))
     --   return 1 -- kAccepted
 
@@ -37,7 +37,7 @@ local function array30up_mix(key, env)
   -- elseif (key:repr() == "Return") and (context:is_composing()) then
     -- local input_array = context.input
 
-    if (string.find(input_array, "^=[a-z0-9,.;/-]+$")) then
+    if (string.match(input_array, "^=[a-z0-9,.;/-]+$")) then
       -- local orig_array = context:get_commit_text()
       engine:commit_text(orig_array)
       context:clear()
@@ -46,7 +46,7 @@ local function array30up_mix(key, env)
     -- --- 使 w[0-9] 輸入符號時：
     -- --- 搭配前面「空白鍵同某些行列 30 一樣為翻頁」，並且用 custom 檔設「return 上屏候選字」，校正 Return 能上屏候選項！
     -- --- KeyEvent 函數在舊版 librime-lua 中不支持，故遮屏。
-    -- elseif (string.find(input_array, "^w[0-9]$")) then
+    -- elseif (string.match(input_array, "^w[0-9]$")) then
     --   engine:commit_text(orig_array)
     --   context:clear()
     --   return 1 -- kAccepted

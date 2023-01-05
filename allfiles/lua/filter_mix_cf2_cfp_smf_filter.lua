@@ -42,19 +42,19 @@ local function mix_cf2_cfp_smf_filter(input, env)
   local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
   local b_k = env.engine.context:get_option("back_mark")
   -- local find_prefix = env.engine.context.input
-  -- local pun1 = string.find(find_prefix, "^'/" )
-  -- local pun2 = string.find(find_prefix, "==?[]`0-9-=';,./[]*$" )
-  -- local pun3 = string.find(find_prefix, "[]\\[]+$" )
-  -- local pun4 = string.find(find_prefix, "^[;|][;]?$" )
+  -- local pun1 = string.match(find_prefix, "^'/" )
+  -- local pun2 = string.match(find_prefix, "==?[]`0-9-=';,./[]*$" )
+  -- local pun3 = string.match(find_prefix, "[]\\[]+$" )
+  -- local pun4 = string.match(find_prefix, "^[;|][;]?$" )
   if (c_f2_s) and (b_k) then
     for cand in input:iter() do
-      if (not string.find(cand.text, '᰼᰼' )) and (not s_c_f_p_s) then
-      -- if (not string.find(cand.text, '᰼᰼' )) and (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
+      if (not string.match(cand.text, '᰼᰼' )) and (not s_c_f_p_s) then
+      -- if (not string.match(cand.text, '᰼᰼' )) and (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
         cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
         -- cand:get_genuine().comment = cand.comment .. ocmdb:lookup(cand.text)
         yield(cand)
-      elseif (not string.find(cand.text, '᰼᰼' )) and (s_c_f_p_s) then
-      -- elseif (not string.find(cand.text, '᰼᰼' )) and (s_c_f_p_s) and (not pun1) and (not pun2) and (not pun3) and (not pun4) then
+      elseif (not string.match(cand.text, '᰼᰼' )) and (s_c_f_p_s) then
+      -- elseif (not string.match(cand.text, '᰼᰼' )) and (s_c_f_p_s) and (not pun1) and (not pun2) and (not pun3) and (not pun4) then
         cand:get_genuine().comment = ""
         cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
         -- cand:get_genuine().comment = cand.comment .. ocmdb:lookup(cand.text)
@@ -79,11 +79,11 @@ local function mix_cf2_cfp_smf_filter(input, env)
     end
   elseif (c_f2_s) and (not b_k) then
     for cand in input:iter() do
-      if (not string.find(cand.text, '᰼᰼' )) and (not s_c_f_p_s) then
-      -- if (not string.find(cand.text, '᰼᰼' )) and (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
+      if (not string.match(cand.text, '᰼᰼' )) and (not s_c_f_p_s) then
+      -- if (not string.match(cand.text, '᰼᰼' )) and (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
         yield(cand)
-      elseif (not string.find(cand.text, '᰼᰼' )) and (s_c_f_p_s) then
-      -- elseif (not string.find(cand.text, '᰼᰼' )) and (s_c_f_p_s) and (not pun1) and (not pun2) and (not pun3) and (not pun4) then
+      elseif (not string.match(cand.text, '᰼᰼' )) and (s_c_f_p_s) then
+      -- elseif (not string.match(cand.text, '᰼᰼' )) and (s_c_f_p_s) and (not pun1) and (not pun2) and (not pun3) and (not pun4) then
         cand:get_genuine().comment = ""
         yield(cand)
       end

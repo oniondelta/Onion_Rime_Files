@@ -26,20 +26,20 @@ local function en_sort_filter(input, env)
       local start = env.engine.context:get_preedit().sel_start
       local _end = env.engine.context:get_preedit().sel_end
       local nnn = _end - start
-      if ((string.len(cand.text) >= nnn) and (not string.find(input_in, ' $' ))) then  --空格避免注音掛接出現 Bug
-      -- if (string.find(cand.text, '%u' )) or ((string.len(cand.text) >= nnn) and (not string.find(input_in, ' $' ))) then  --空格避免注音掛接出現 Bug
+      if ((string.len(cand.text) >= nnn) and (not string.match(input_in, ' $' ))) then  --空格避免注音掛接出現 Bug
+      -- if (string.match(cand.text, '%u' )) or ((string.len(cand.text) >= nnn) and (not string.match(input_in, ' $' ))) then  --空格避免注音掛接出現 Bug
         table.insert(cands, cand)
         -- table.insert(cands, {text = cand.text , comment = cand.comment, index = #cands})
         -- table.insert(cands, {text = preedit.t .. cand.comment:sub(2), comment = cand.text, index = #cands})
         -- table.insert(cands, {text = cand.text , comment = cand.comment})
 
-      elseif (string.find(cand.text, '%u' )) then
-      -- elseif (string.find(cand.text, '%u' )) or (string.find(input_in, "'" )) then
+      elseif (string.match(cand.text, '%u' )) then
+      -- elseif (string.match(cand.text, '%u' )) or (string.match(input_in, "'" )) then
         table.insert(u, cand)
 
-      -- elseif (string.find(en_preedit, " " )) then  --放在注音掛接，可能會衝突？
+      -- elseif (string.match(en_preedit, " " )) then  --放在注音掛接，可能會衝突？
       --   table.insert(u, cand)
-      -- elseif (string.find(en_preedit, " [;']" )) then
+      -- elseif (string.match(en_preedit, " [;']" )) then
       --   table.insert(u, cand)
       -- else
       --   table.insert(l, cand)

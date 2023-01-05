@@ -52,7 +52,7 @@ local function kr_2set_0m_choice(key,env)
     return 1
 
   --- pass reverse_lookup prefix （使反查鍵可展示全部選項）(沒開，即使 commit_composition 上屏，還是無法顯示選單)
-  elseif string.find(context.input, "=[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?$") then
+  elseif string.match(context.input, "=[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?$") then
     return 2
 
 
@@ -169,7 +169,7 @@ local function kr_2set_0m_choice(key,env)
       return 1
 
     -- --- 修正組字時，按「向下」鍵輸入消失問題（ schema 內可設定，故關閉）
-    -- elseif key:eq(KeyEvent("Down")) and string.find(context.input, "[^0-9]$") then
+    -- elseif key:eq(KeyEvent("Down")) and string.match(context.input, "[^0-9]$") then
     --   context:reopen_previous_segment()
     --   -- context:confirm_current_selection()
     --   -- key:repr("Release+Right")  -- 無法作用
@@ -186,9 +186,9 @@ local function kr_2set_0m_choice(key,env)
       return 1
 
     --- 增加一般韓文輸入法操作，空格上屏自動末端空一格。
-    elseif (o_space_mode) and key:repr() == "space" and string.find(context.input, "^[a-zQWERTOP]+$") then  --只有韓文，不含漢字。如果漢字如此出字會不能記憶？
+    elseif (o_space_mode) and key:repr() == "space" and string.match(context.input, "^[a-zQWERTOP]+$") then  --只有韓文，不含漢字。如果漢字如此出字會不能記憶？
       -- if key:repr() == "space" and (context:is_composing()) and (not context:has_menu()) then
-      -- if key:repr() == "space" and (context:is_composing()) and (not context:has_menu()) and (not string.find(hangul, "[%a%c%s]")) and (caret_pos == context.input:len()) then
+      -- if key:repr() == "space" and (context:is_composing()) and (not context:has_menu()) and (not string.match(hangul, "[%a%c%s]")) and (caret_pos == context.input:len()) then
       engine:commit_text(hangul .. " ")
       context:clear()
       return 1
@@ -203,7 +203,7 @@ local function kr_2set_0m_choice(key,env)
     if (not context:is_composing()) or (not o_space_mode) or key:repr() ~= "space" then
       return 2
 
-    elseif string.find(context.input, "^[a-zQWERTOP]+$") and (not string.find(hangul, "[%a%c%s]")) and (caret_pos == context.input:len()) then
+    elseif string.match(context.input, "^[a-zQWERTOP]+$") and (not string.match(hangul, "[%a%c%s]")) and (caret_pos == context.input:len()) then
       engine:commit_text(hangul .. " ")
       context:clear()
       return 1
