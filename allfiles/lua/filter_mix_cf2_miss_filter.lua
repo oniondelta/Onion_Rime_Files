@@ -21,7 +21,7 @@ local function mix_cf2_miss_filter(input, env)
       elseif (addcomment1) or (addcomment2) then
       -- elseif (not dnch) and (addcomment1) or (addcomment2) then
       -- elseif (not string.match(cand.text, '᰼᰼' )) and (addcomment1) or (addcomment2) then
-        if string.match(cand.text, '^。$') then
+        if string.match(cand.text, '。') then
         -- if (dotend) then
         -- if (cand.text == '。') then
           cand:get_genuine().comment = "〔句點〕"
@@ -44,7 +44,7 @@ local function mix_cf2_miss_filter(input, env)
         -- local dotend = string.match(cand.text, '。')
         -- local bracket1 = string.match(cand.text, '〔')
         -- local bracket2 = string.match(cand.text, '〕')
-        if string.match(cand.text, '^。$') then
+        if string.match(cand.text, '。') then
         -- if (dotend) then
         -- if (cand.text == '。') then
           cand:get_genuine().comment = "〔句點〕"
