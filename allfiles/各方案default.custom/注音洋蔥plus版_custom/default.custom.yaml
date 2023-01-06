@@ -17,12 +17,12 @@ patch:
     - schema: cyrillic
     - schema: allbpm
     - schema: fullshape
-    - schema: easy_en_lcomment
+    - schema: cangjie5
+    # - schema: easy_en_super
     - schema: easy_en_lower
     - schema: easy_en_upper
-    # - schema: easy_en_super
+    - schema: easy_en_lcomment
     - schema: symbols_bpmf
-    - schema: cangjie5
 ###############################
 
   switcher/fix_schema_list_order: true #固定方案選單順序
