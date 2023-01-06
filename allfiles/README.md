@@ -61,7 +61,13 @@
 ├─ dif1_la.extended.dict.yaml                 
 ├─ dif1_la.schema.yaml                        
 ├─ dif1_phrase.txt                            
-├─ easy_en_super.dict.yaml                    〈掛載用 英漢字典 方案〉「主字詞典」
+├─ easy_en_lower.dict.yaml                    〈掛載用 英漢字典 方案〉「主字詞典」（小寫）
+├─ easy_en_lower.schema.yaml                  〈掛載用 英漢字典 方案〉「設定檔」（小寫）
+├─ easy_en_upper.dict.yaml                    〈掛載用 英漢字典 方案〉「主字詞典」（大寫或大小寫混合）
+├─ easy_en_upper.schema.yaml                  〈掛載用 英漢字典 方案〉「設定檔」（大寫或大小寫混合）
+├─ easy_en_lcomment.dict.yaml                 〈掛載用 英漢字典 方案〉「主字詞典」（單純 Comment 濾鏡用）
+├─ easy_en_lcomment.schema.yaml               〈掛載用 英漢字典 方案〉「設定檔」（單純 Comment 濾鏡用）
+├─ easy_en_super.dict.yaml                    〈掛載用 英漢字典 方案〉「主字詞典」（因 Comment 合一，使排序有問題）
 ├─ easy_en_super.schema.yaml                  〈掛載用 英漢字典 方案〉「設定檔」
 ├─ easy_en_super_original.dict.yaml           （未引用）〈掛載用 英漢字典 方案〉「字詞典」  （未排序前之 easy_en_super.dict.yaml 原始檔）
 ├─ element_bopomo.yaml                        〈注音 mixin 和 plus 方案〉程式碼「引入檔」
