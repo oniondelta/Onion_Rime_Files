@@ -293,9 +293,8 @@ instruction_ocm = require("translator_instruction_ocm")
 
 
 --- t_translator 系列
-local time_translator = require("translator_time_translator")
-t_translator = time_translator.t_translator
-t2_translator = time_translator.t2_translator
+t_translator = require("translator_time_translator")
+t2_translator = require("translator_time2_translator")
 
 
 -- --- 日文出羅馬字、全形羅馬字、半形片假名、全片假名、全平假名。

@@ -114,12 +114,12 @@ local url_decode = require("f_components/f_url_decode")
 ----------------------------------------------------------------------------------------
 
 ----------------------------------------------------------------------------------------
---- @@ date/t translator
+--- @@ date/t2 translator
 --[[
-掛載 t_translator 函數開始
+掛載 t2_translator 函數開始
 --]]
-local function t_translator(input, seg)
-  if (string.match(input, "`")~=nil) then
+local function t2_translator(input, seg)
+  if (string.match(input, "'/")~=nil) then
     -- local jpymd, jp_y = jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))
     -- local chinese_time = time_description_chinese(os.time())
     -- local All_g, Y_g, M_g, D_g, H_g = lunarJzl(os.date("%Y%m%d%H"))
@@ -128,7 +128,7 @@ local function t_translator(input, seg)
     -- local aptime_c1, aptime_c2, aptime_c3, aptime_c4, ap_5 = time_out2()
 
     -- 版本資訊
-    if(input=="`v") then
+    if(input=="'/v") then
       yield(Candidate("version_info", seg.start, seg._end, Ver_info()[1], "〔 distribution_version 〕"))
       yield(Candidate("version_info", seg.start, seg._end, Ver_info()[2], "〔 rime_version 〕"))
       yield(Candidate("version_info", seg.start, seg._end, Ver_info()[3], "〔 librime-lua_version 〕"))
@@ -138,14 +138,14 @@ local function t_translator(input, seg)
     end
 
     -- lua 程式原生時間
-    if (input == "`p") then
+    if (input == "'/p") then
       yield(Candidate("time", seg.start, seg._end, os.date(), "〔 os.date() 〕"))
       yield(Candidate("time", seg.start, seg._end, os.time(), "〔 os.time()，當前距 1970.1.1.08:00 秒數〕"))
       return
     end
 
     -- Candidate(type, start, end, text, comment)
-    if (input == "`t") then
+    if (input == "'/t") then
       -- yield(Candidate("time", seg.start, seg._end, os.date("%H:%M"), "〔時:分〕 ~m"))
       -- yield(Candidate("time", seg.start, seg._end, os.date("%H:%M:%S"), "〔時:分:秒〕 ~d"))
       yield(Candidate("time", seg.start, seg._end, string.gsub(os.date("%H:%M:%S"), "^0", ""), "〔時:分:秒〕 ~d"))
@@ -160,7 +160,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`ts") then
+    if (input == "'/ts") then
       -- local a, b, aptime_c3, aptime_c4 = time_out2()
       yield(Candidate("time", seg.start, seg._end, string.gsub(time_out2()[7], " 0([%d])", " %1"), "〔時:分:秒〕"))
       yield(Candidate("time", seg.start, seg._end, time_out2()[5].." "..fullshape_number(string.gsub(os.date("%I"), "^0", "")).."："..fullshape_number(os.date("%M")).."："..fullshape_number(os.date("%S")), "〔時:分:秒〕"))
@@ -169,7 +169,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`tw") then
+    if (input == "'/tw") then
       -- local a, b, aptime_c3, aptime_c4 = time_out2()
       yield(Candidate("time", seg.start, seg._end, string.gsub(time_out2()[3], "0([%d])", "%1"), "〔時:分:秒〕"))
       yield(Candidate("time", seg.start, seg._end, string.gsub(time_out2()[4], "0([%d])", "%1"), "〔時:分:秒〕"))
@@ -182,7 +182,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`tu") then
+    if (input == "'/tu") then
       -- local a, b, aptime_c3, aptime_c4, ap_5 = time_out2()
       yield(Candidate("time", seg.start, seg._end, time_out2()[5].." "..ch_h_date(os.date("%I")).."時"..ch_minsec_date(os.date("%M")).."分"..ch_minsec_date(os.date("%S")).."秒", "〔時:分:秒〕"))
       yield(Candidate("time", seg.start, seg._end, time_out2()[5].." "..ch_h_date(os.date("%I")).."點"..ch_minsec_date(os.date("%M")).."分"..ch_minsec_date(os.date("%S")).."秒", "〔時:分:秒〕"))
@@ -191,7 +191,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`td") then
+    if (input == "'/td") then
       yield(Candidate("time", seg.start, seg._end, string.gsub(os.date("%H:%M:%S"), "^0", ""), "〔時:分:秒〕"))
       yield(Candidate("time", seg.start, seg._end, fullshape_number(string.gsub(os.date("%H"), "^0", "")).."："..fullshape_number(os.date("%M")).."："..fullshape_number(os.date("%S")), "〔時:分:秒〕"))
       yield(Candidate("time", seg.start, seg._end, os.date("%H:%M:%S"), "〔時:分:秒〕"))
@@ -199,7 +199,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`tm") then
+    if (input == "'/tm") then
       -- local a, b, c, d, aptime5, aptime6, aptime7, aptime8, e, f, g, h, aptime00_1, aptime00_2,  aptime00_3, aptime00_4 = time_out1()
       yield(Candidate("time", seg.start, seg._end, time_out1()[6] , "〔時:分:秒〕"))
       yield(Candidate("time", seg.start, seg._end, time_out1()[8] , "〔時:分:秒〕"))
@@ -212,7 +212,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`tc") then
+    if (input == "'/tc") then
       yield(Candidate("time", seg.start, seg._end, string.gsub(os.date("%H時%M分%S秒"), "0([%d])", "%1"), "〔時:分:秒〕"))
       yield(Candidate("time", seg.start, seg._end, string.gsub(os.date("%H點%M分%S秒"), "0([%d])", "%1"), "〔時:分:秒〕"))
       yield(Candidate("time", seg.start, seg._end, fullshape_number(string.gsub(os.date("%H時%M分%S秒"), "0([%d])", "%1")), "〔時:分:秒〕"))
@@ -224,7 +224,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`tz") then
+    if (input == "'/tz") then
       yield(Candidate("time", seg.start, seg._end, ch_h_date(os.date("%H")).."時"..ch_minsec_date(os.date("%M")).."分"..ch_minsec_date(os.date("%S")).."秒", "〔時:分:秒〕"))
       yield(Candidate("time", seg.start, seg._end, ch_h_date(os.date("%H")).."點"..ch_minsec_date(os.date("%M")).."分"..ch_minsec_date(os.date("%S")).."秒", "〔時:分:秒〕"))
       yield(Candidate("time", seg.start, seg._end, chb_h_date(os.date("%H")).."時"..chb_minsec_date(os.date("%M")).."分"..chb_minsec_date(os.date("%S")).."秒", "〔時:分:秒〕"))
@@ -232,12 +232,12 @@ local function t_translator(input, seg)
       return
     end
 
-    -- if (input == "`tm") then
+    -- if (input == "'/tm") then
     --   yield(Candidate("time", seg.start, seg._end, os.date("%H:%M"), "〔時:分〕"))
     --   return
     -- end
 
-    if (input == "`z") then
+    if (input == "'/z") then
       -- local tz, tzd = timezone_out()
       yield(Candidate("time", seg.start, seg._end, timezone_out()[1], "〔世界協調時間〕"))
       yield(Candidate("time", seg.start, seg._end, timezone_out()[5], "〔格林威治標準時間〕"))
@@ -245,7 +245,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`n") then
+    if (input == "'/n") then
       -- yield(Candidate("time", seg.start, seg._end, os.date("%H:%M:%S"), "〔時:分:秒〕 ~s"))
       -- yield(Candidate("time", seg.start, seg._end, os.date("%H:%M"), "〔時:分〕 ~d"))
       yield(Candidate("time", seg.start, seg._end, string.gsub(os.date("%H:%M"), "^0", ""), "〔時:分〕 ~d"))
@@ -262,7 +262,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`ns") then
+    if (input == "'/ns") then
       -- local aptime_c1, aptime_c2 = time_out2()
       yield(Candidate("time", seg.start, seg._end, string.gsub(time_out2()[6], " 0([%d])", " %1"), "〔時:分〕"))
       yield(Candidate("time", seg.start, seg._end, time_out2()[5].." "..fullshape_number(string.gsub(os.date("%I"), "^0", "")).."："..fullshape_number(os.date("%M")), "〔時:分〕"))
@@ -271,7 +271,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`nw") then
+    if (input == "'/nw") then
       -- local aptime_c1, aptime_c2 = time_out2()
       yield(Candidate("time", seg.start, seg._end, string.gsub(time_out2()[1], "0([%d])", "%1"), "〔時:分〕"))
       yield(Candidate("time", seg.start, seg._end, string.gsub(time_out2()[2], "0([%d])", "%1"), "〔時:分〕"))
@@ -284,7 +284,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`nu") then
+    if (input == "'/nu") then
       -- local a, b, c, d, ap_5 = time_out2()
       yield(Candidate("time", seg.start, seg._end, time_out2()[5].." "..ch_h_date(os.date("%I")).."時"..ch_minsec_date(os.date("%M")).."分", "〔時:分〕"))
       yield(Candidate("time", seg.start, seg._end, time_out2()[5].." "..ch_h_date(os.date("%I")).."點"..ch_minsec_date(os.date("%M")).."分", "〔時:分〕"))
@@ -293,7 +293,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`nd") then
+    if (input == "'/nd") then
       yield(Candidate("time", seg.start, seg._end, string.gsub(os.date("%H:%M"), "^0", ""), "〔時:分〕"))
       yield(Candidate("time", seg.start, seg._end, fullshape_number(string.gsub(os.date("%H"), "^0", "")).."："..fullshape_number(os.date("%M")), "〔時:分〕"))
       yield(Candidate("time", seg.start, seg._end, os.date("%H:%M"), "〔時:分〕"))
@@ -301,7 +301,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`nm") then
+    if (input == "'/nm") then
       -- local aptime1, aptime2, aptime3, aptime4 , a, b, c, d, aptime0_1, aptime0_2,  aptime0_3, aptime0_4 = time_out1()
       yield(Candidate("time", seg.start, seg._end, time_out1()[2], "〔時:分〕"))
       yield(Candidate("time", seg.start, seg._end, time_out1()[4], "〔時:分〕"))
@@ -314,7 +314,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`nc") then
+    if (input == "'/nc") then
       yield(Candidate("time", seg.start, seg._end, string.gsub(os.date("%H時%M分"), "0([%d])", "%1"), "〔時:分〕"))
       yield(Candidate("time", seg.start, seg._end, string.gsub(os.date("%H點%M分"), "0([%d])", "%1"), "〔時:分〕"))
       yield(Candidate("time", seg.start, seg._end, fullshape_number(string.gsub(os.date("%H時%M分"), "0([%d])", "%1")), "〔時:分〕"))
@@ -326,7 +326,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`nz") then
+    if (input == "'/nz") then
       yield(Candidate("time", seg.start, seg._end, ch_h_date(os.date("%H")).."時"..ch_minsec_date(os.date("%M")).."分", "〔時:分〕"))
       yield(Candidate("time", seg.start, seg._end, ch_h_date(os.date("%H")).."點"..ch_minsec_date(os.date("%M")).."分", "〔時:分〕"))
       yield(Candidate("time", seg.start, seg._end, chb_h_date(os.date("%H")).."時"..chb_minsec_date(os.date("%M")).."分", "〔時:分〕"))
@@ -334,7 +334,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`nl") then
+    if (input == "'/nl") then
       -- local chinese_time = time_description_chinese(os.time())
       yield(Candidate("time", seg.start, seg._end, time_description_chinese(os.time()), "〔農曆〕"))
       local All_g, Y_g, M_g, D_g, H_g = lunarJzl(os.date("%Y%m%d%H"))
@@ -342,12 +342,12 @@ local function t_translator(input, seg)
       return
     end
 
-    -- if (input == "`ns") then
+    -- if (input == "'/ns") then
     --   yield(Candidate("time", seg.start, seg._end, os.date("%H:%M:%S"), "〔時:分:秒〕"))
     --   return
     -- end
 
-    if (input == "`l") then
+    if (input == "'/l") then
       -- local Moonshape, Moonangle = Moonphase_out1()
       yield(Candidate("date", seg.start, seg._end, Moonphase_out1()[1], Moonphase_out1()[2]))
       -- local p, d = Moonphase_out2()
@@ -355,7 +355,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`s") then
+    if (input == "'/s") then
       local jq_1, jq_2, jq_3 ,jq_4 = jieqi_out1()
       yield(Candidate("date", seg.start, seg._end, jq_1, jq_2))
       yield(Candidate("date", seg.start, seg._end, jq_3, jq_4))
@@ -368,7 +368,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`f") then
+    if (input == "'/f") then
       yield(Candidate("date", seg.start, seg._end, os.date("%Y%m%d"), "〔年月日〕 ~d"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y.%m.%d"), "〔年月日〕 ~p"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y/%m/%d"), "〔年月日〕 ~s"))
@@ -389,7 +389,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`fj") then
+    if (input == "'/fj") then
       local jpymd, jp_y = jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))
       yield(Candidate("date", seg.start, seg._end, string.gsub(jpymd, "([^%d])0", "%1"), "〔日本元号〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jpymd, "([^%d])0", "%1")), "〔日本元号〕"))
@@ -397,12 +397,12 @@ local function t_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, fullshape_number(jpymd), "〔日本元号〕"))
       return
     end
-    -- if (input == "`fj") then
+    -- if (input == "'/fj") then
     --   yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")), "〔年月日〕"))
     --   return
     -- end
 
-    if (input == "`fh") then
+    if (input == "'/fh") then
       yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日", "([^%d])0", "%1"), "〔民國〕"))
       yield(Candidate("date", seg.start, seg._end, string.gsub("民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日", "([^%d])0", "%1"), "〔民國*〕"))
       yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")), "〔民國〕"))
@@ -412,14 +412,14 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`fg") then
+    if (input == "'/fg") then
       yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(23), "〔民國中數〕"))
       yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[1], min_guo(os.date("%Y"))).."年"..rqzdx1(23), "〔民國中數〕"))
       yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[2], min_guo(os.date("%Y"))).."年"..rqzdx2(23), "〔民國中數〕"))
       return
     end
 
-    if (input == "`fl") then
+    if (input == "'/fl") then
       -- local chinese_date = to_chinese_cal_local(os.time())
       local ll_1, ll_2 = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, ll_1, "〔農曆〕"))
@@ -429,7 +429,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`fa") then
+    if (input == "'/fa") then
       yield(Candidate("date", seg.start, seg._end, eng1_m_date(os.date("%m")).." "..eng2_d_date(os.date("%d"))..", "..os.date("%Y"), "〔月日年〕"))
       yield(Candidate("date", seg.start, seg._end, eng1_m_date(os.date("%m")).." "..eng3_d_date(os.date("%d"))..", "..os.date("%Y"), "〔月日年〕"))
       yield(Candidate("date", seg.start, seg._end, eng2_m_date(os.date("%m")).." "..eng3_d_date(os.date("%d"))..", "..os.date("%Y"), "〔月日年〕"))
@@ -438,7 +438,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`fe") then
+    if (input == "'/fe") then
       yield(Candidate("date", seg.start, seg._end, eng2_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")).." "..os.date("%Y"), "〔日月年〕"))
       yield(Candidate("date", seg.start, seg._end, eng3_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")).." "..os.date("%Y"), "〔日月年〕"))
       yield(Candidate("date", seg.start, seg._end, eng2_d_date(os.date("%d")).." "..eng2_m_date(os.date("%m")).." "..os.date("%Y"), "〔日月年〕"))
@@ -447,7 +447,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`fc") then
+    if (input == "'/fc") then
       yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%Y年%m月%d日"), "([^%d])0", "%1"), "〔年月日〕"))
       yield(Candidate("date", seg.start, seg._end, string.gsub(os.date(" %Y 年 %m 月 %d 日 "), "([^%d])0", "%1"), "〔*年月日*〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%Y年%m月%d日"), "([^%d])0", "%1")), "〔年月日〕"))
@@ -457,7 +457,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`fd") then
+    if (input == "'/fd") then
       yield(Candidate("date", seg.start, seg._end, os.date("%Y%m%d"), "〔年月日〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y"))..fullshape_number(os.date("%m"))..fullshape_number(os.date("%d")), "〔年月日〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("%d%m%Y"), "〔日月年〕"))
@@ -465,7 +465,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`fm") then
+    if (input == "'/fm") then
       yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d"), "〔年月日〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y")).."－"..fullshape_number(os.date("%m")).."－"..fullshape_number(os.date("%d")), "〔年月日〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("%d-%m-%Y"), "〔日月年〕"))
@@ -473,7 +473,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`fs") then
+    if (input == "'/fs") then
       yield(Candidate("date", seg.start, seg._end, os.date("%Y/%m/%d"), "〔年月日〕"))
       -- yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y")).."/"..fullshape_number(os.date("%m")).."/"..fullshape_number(os.date("%d")), "〔年月日〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y")).."／"..fullshape_number(os.date("%m")).."／"..fullshape_number(os.date("%d")), "〔年月日〕"))
@@ -482,7 +482,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`fu") then
+    if (input == "'/fu") then
       yield(Candidate("date", seg.start, seg._end, os.date("%Y_%m_%d"), "〔年月日〕"))
       -- yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y")).."_"..fullshape_number(os.date("%m")).."_"..fullshape_number(os.date("%d")), "〔年月日〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y")).."＿"..fullshape_number(os.date("%m")).."＿"..fullshape_number(os.date("%d")), "〔年月日〕"))
@@ -491,7 +491,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`fp") then
+    if (input == "'/fp") then
       yield(Candidate("date", seg.start, seg._end, os.date("%Y.%m.%d"), "〔年月日〕"))
       -- yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y")).."."..fullshape_number(os.date("%m")).."."..fullshape_number(os.date("%d")), "〔年月日〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y")).."．"..fullshape_number(os.date("%m")).."．"..fullshape_number(os.date("%d")), "〔年月日〕"))
@@ -500,13 +500,13 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`fz") then
+    if (input == "'/fz") then
       yield(Candidate("date", seg.start, seg._end, rqzdx1(), "〔中數〕"))
       yield(Candidate("date", seg.start, seg._end, rqzdx2(), "〔中數〕"))
       return
     end
 
-    if (input == "`fn") then
+    if (input == "'/fn") then
       yield(Candidate("date", seg.start, seg._end, os.date("%Y%m%d %H:%M"), "〔年月日 時:分〕 ~d"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y.%m.%d %H:%M"), "〔年月日 時:分〕 ~p"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y/%m/%d %H:%M"), "〔年月日 時:分〕 ~s"))
@@ -528,7 +528,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`fni") then
+    if (input == "'/fni") then
       yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d-%H-%M ") .. timezone_out()[1], "〔本地時  時區〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d-%H-%M ") .. timezone_out()[5], "〔本地時  時區〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d-%H-%M ") .. timezone_out()[2], "〔本地時  時區〕"))
@@ -537,7 +537,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`fnr") then
+    if (input == "'/fnr") then
       yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%dT%H:%M") .. timezone_out()[3], "〔本地時  RFC 3339/ISO 8601〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y%m%dT%H%M") .. timezone_out()[4], "〔本地時  RFC 3339/ISO 8601〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("!%Y-%m-%dT%H:%MZ"), "〔世界時  RFC 3339/ISO 8601〕"))
@@ -545,7 +545,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`fnj") then
+    if (input == "'/fnj") then
       local jpymd, jp_y = jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))
       yield(Candidate("date", seg.start, seg._end, string.gsub(jpymd, "([^%d])0", "%1").." "..os.date("%H:%M"), "〔日本元号〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jpymd, "([^%d])0", "%1")).." "..os.date("%H:%M"), "〔日本元号〕"))
@@ -553,12 +553,12 @@ local function t_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, fullshape_number(jpymd.." "..os.date("%H:%M")), "〔日本元号〕"))
       return
     end
-    -- if (input == "`fnj") then
+    -- if (input == "'/fnj") then
     --   yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..os.date("%H")..":"..os.date("%M"), "〔年月日 時:分〕"))
     --   return
     -- end
 
-    if (input == "`fnh") then
+    if (input == "'/fnh") then
       yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日 "..os.date("%H點%M分"), "([^%d])0", "%1"), "〔民國〕"))
       yield(Candidate("date", seg.start, seg._end, string.gsub("民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日 "..os.date("%H 點 %M 分"), "([^%d])0", "%1"), "〔民國*〕"))
       yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(string.gsub(os.date("%m月%d日%H點%M分"), "0([%d])", "%1")), "〔民國〕"))
@@ -568,14 +568,14 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`fng") then
+    if (input == "'/fng") then
       yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(23).." "..ch_h_date(os.date("%H")).."點"..ch_minsec_date(os.date("%M")).."分", "〔民國中數〕"))
       yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[1], min_guo(os.date("%Y"))).."年"..rqzdx1(23).." "..ch_h_date(os.date("%H")).."點"..ch_minsec_date(os.date("%M")).."分", "〔民國中數〕"))
       yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[2], min_guo(os.date("%Y"))).."年"..rqzdx2(23).." "..chb_h_date(os.date("%H")).."點"..chb_minsec_date(os.date("%M")).."分", "〔民國中數〕"))
       return
     end
 
-    if (input == "`fnl") then
+    if (input == "'/fnl") then
       -- local chinese_date = to_chinese_cal_local(os.time())
       -- local chinese_time = time_description_chinese(os.time())
       local ll_1, ll_2 = Date2LunarDate(os.date("%Y%m%d"))
@@ -586,7 +586,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`fnc") then
+    if (input == "'/fnc") then
       yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%Y年%m月%d日 %H點%M分"), "([^%d])0", "%1"), "〔年月日 時:分〕"))
       yield(Candidate("date", seg.start, seg._end, string.gsub(os.date(" %Y 年 %m 月 %d 日 %H 點 %M 分 "), "([^%d])0", "%1"), "〔*年月日 時:分*〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%Y年%m月%d日　%H點%M分"), "([^%d])0", "%1")), "〔年月日 時:分〕"))
@@ -596,7 +596,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`fnd") then
+    if (input == "'/fnd") then
       yield(Candidate("date", seg.start, seg._end, os.date("%Y%m%d %H:%M"), "〔年月日 時:分〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y"))..fullshape_number(os.date("%m"))..fullshape_number(os.date("%d")).."　"..fullshape_number(os.date("%H")).."："..fullshape_number(os.date("%M")), "〔年月日 時:分〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("%d%m%Y %H:%M"), "〔日月年 時:分〕"))
@@ -604,7 +604,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`fns") then
+    if (input == "'/fns") then
       yield(Candidate("date", seg.start, seg._end, os.date("%Y/%m/%d %H:%M"), "〔年月日 時:分〕"))
       -- yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y")).."/"..fullshape_number(os.date("%m")).."/"..fullshape_number(os.date("%d")).." "..fullshape_number(os.date("%H"))..":"..fullshape_number(os.date("%M")), "〔年月日 時:分〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y")).."／"..fullshape_number(os.date("%m")).."／"..fullshape_number(os.date("%d")).."　"..fullshape_number(os.date("%H")).."："..fullshape_number(os.date("%M")), "〔年月日 時:分〕"))
@@ -613,7 +613,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`fnm") then
+    if (input == "'/fnm") then
       yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d %H:%M"), "〔年月日 時:分〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y")).."－"..fullshape_number(os.date("%m")).."－"..fullshape_number(os.date("%d")).."　"..fullshape_number(os.date("%H")).."："..fullshape_number(os.date("%M")), "〔年月日 時:分〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("%d-%m-%Y %H:%M"), "〔日月年 時:分〕"))
@@ -621,7 +621,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`fnu") then
+    if (input == "'/fnu") then
       yield(Candidate("date", seg.start, seg._end, os.date("%Y_%m_%d %H:%M"), "〔年月日 時:分〕"))
       -- yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y")).."_"..fullshape_number(os.date("%m")).."_"..fullshape_number(os.date("%d")).." "..fullshape_number(os.date("%H"))..":"..fullshape_number(os.date("%M")), "〔年月日 時:分〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y")).."＿"..fullshape_number(os.date("%m")).."＿"..fullshape_number(os.date("%d")).."　"..fullshape_number(os.date("%H")).."："..fullshape_number(os.date("%M")), "〔年月日 時:分〕"))
@@ -630,7 +630,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`fnp") then
+    if (input == "'/fnp") then
       yield(Candidate("date", seg.start, seg._end, os.date("%Y.%m.%d %H:%M"), "〔年月日 時:分〕"))
       -- yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y")).."."..fullshape_number(os.date("%m")).."."..fullshape_number(os.date("%d")).." "..fullshape_number(os.date("%H"))..":"..fullshape_number(os.date("%M")), "〔年月日 時:分〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y")).."．"..fullshape_number(os.date("%m")).."．"..fullshape_number(os.date("%d")).."　"..fullshape_number(os.date("%H")).."："..fullshape_number(os.date("%M")), "〔年月日 時:分〕"))
@@ -639,13 +639,13 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`fnz") then
+    if (input == "'/fnz") then
       yield(Candidate("date", seg.start, seg._end, rqzdx1().." "..ch_h_date(os.date("%H")).."點"..ch_minsec_date(os.date("%M")).."分", "〔中數〕"))
       yield(Candidate("date", seg.start, seg._end, rqzdx2().." "..chb_h_date(os.date("%H")).."點"..chb_minsec_date(os.date("%M")).."分", "〔中數〕"))
       return
     end
 
-    if (input == "`ft") then
+    if (input == "'/ft") then
       yield(Candidate("date", seg.start, seg._end, os.date("%Y%m%d %H:%M:%S"), "〔年月日 時:分:秒〕 ~d"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y.%m.%d %H:%M:%S"), "〔年月日 時:分:秒〕 ~p"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y/%m/%d %H:%M:%S"), "〔年月日 時:分:秒〕 ~s"))
@@ -663,7 +663,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`fti") then
+    if (input == "'/fti") then
       yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d-%H-%M-%S ") .. timezone_out()[1], "〔本地時  時區〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d-%H-%M-%S ") .. timezone_out()[5], "〔本地時  時區〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d-%H-%M-%S ") .. timezone_out()[2], "〔本地時  時區〕"))
@@ -672,7 +672,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`ftr") then
+    if (input == "'/ftr") then
       yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%dT%H:%M:%S") .. timezone_out()[3], "〔本地時  RFC 3339/ISO 8601〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y%m%dT%H%M%S") .. timezone_out()[4], "〔本地時  RFC 3339/ISO 8601〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("!%Y-%m-%dT%H:%M:%SZ"), "〔世界時  RFC 3339/ISO 8601〕"))
@@ -680,7 +680,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`ftj") then
+    if (input == "'/ftj") then
       local jpymd, jp_y = jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))
       yield(Candidate("date", seg.start, seg._end, string.gsub(jpymd, "([^%d])0", "%1").." "..os.date("%H:%M:%S"), "〔日本元号〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(jpymd, "([^%d])0", "%1")).." "..os.date("%H:%M:%S"), "〔日本元号〕"))
@@ -688,12 +688,12 @@ local function t_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, fullshape_number(jpymd.." "..os.date("%H:%M:%S")), "〔日本元号〕"))
       return
     end
-    -- if (input == "`ftj") then
+    -- if (input == "'/ftj") then
     --   yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..os.date("%H")..":"..os.date("%M")..":"..os.date("%S"), "〔年月日 時:分:秒〕"))
     --   return
     -- end
 
-    if (input == "`fth") then
+    if (input == "'/fth") then
       yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日 "..os.date("%H點%M分%S秒"), "([^%d])0", "%1"), "〔民國〕"))
       yield(Candidate("date", seg.start, seg._end, string.gsub("民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日 "..os.date("%H 點 %M 分 %S 秒"), "([^%d])0", "%1"), "〔民國*〕"))
       yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(string.gsub(os.date("%m月%d日%H點%M分%S秒"), "0([%d])", "%1")), "〔民國〕"))
@@ -703,14 +703,14 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`ftg") then
+    if (input == "'/ftg") then
       yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(23).." "..ch_h_date(os.date("%H")).."點"..ch_minsec_date(os.date("%M")).."分"..ch_minsec_date(os.date("%S")).."秒", "〔民國中數〕"))
       yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[1], min_guo(os.date("%Y"))).."年"..rqzdx1(23).." "..ch_h_date(os.date("%H")).."點"..ch_minsec_date(os.date("%M")).."分"..ch_minsec_date(os.date("%S")).."秒", "〔民國中數〕"))
       yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[2], min_guo(os.date("%Y"))).."年"..rqzdx2(23).." "..chb_h_date(os.date("%H")).."點"..chb_minsec_date(os.date("%M")).."分"..chb_minsec_date(os.date("%S")).."秒", "〔民國中數〕"))
       return
     end
 
-    if (input == "`ftc") then
+    if (input == "'/ftc") then
       yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%Y年%m月%d日 %H點%M分%S秒"), "([^%d])0", "%1"), "〔年月日 時:分:秒〕"))
       yield(Candidate("date", seg.start, seg._end, string.gsub(os.date(" %Y 年 %m 月 %d 日 %H 點 %M 分 %S 秒 "), "([^%d])0", "%1"), "〔*年月日 時:分:秒*〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%Y年%m月%d日　%H點%M分%S秒"), "([^%d])0", "%1")), "〔年月日 時:分:秒〕"))
@@ -720,7 +720,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`ftd") then
+    if (input == "'/ftd") then
       yield(Candidate("date", seg.start, seg._end, os.date("%Y%m%d %H:%M:%S"), "〔年月日 時:分:秒〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y"))..fullshape_number(os.date("%m"))..fullshape_number(os.date("%d")).."　"..fullshape_number(os.date("%H")).."："..fullshape_number(os.date("%M")).."："..fullshape_number(os.date("%S")), "〔年月日 時:分:秒〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("%d%m%Y %H:%M:%S"), "〔日月年 時:分:秒〕"))
@@ -728,7 +728,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`fts") then
+    if (input == "'/fts") then
       yield(Candidate("date", seg.start, seg._end, os.date("%Y/%m/%d %H:%M:%S"), "〔年月日 時:分:秒〕"))
       -- yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y")).."/"..fullshape_number(os.date("%m")).."/"..fullshape_number(os.date("%d")).." "..fullshape_number(os.date("%H"))..":"..fullshape_number(os.date("%M"))..":"..fullshape_number(os.date("%S")), "〔年月日 時:分:秒〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y")).."／"..fullshape_number(os.date("%m")).."／"..fullshape_number(os.date("%d")).."　"..fullshape_number(os.date("%H")).."："..fullshape_number(os.date("%M")).."："..fullshape_number(os.date("%S")), "〔年月日 時:分:秒〕"))
@@ -737,7 +737,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`ftm") then
+    if (input == "'/ftm") then
       yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d %H:%M:%S"), "〔年月日 時:分:秒〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y")).."－"..fullshape_number(os.date("%m")).."－"..fullshape_number(os.date("%d")).."　"..fullshape_number(os.date("%H")).."："..fullshape_number(os.date("%M")).."："..fullshape_number(os.date("%S")), "〔年月日 時:分:秒〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("%d-%m-%Y %H:%M:%S"), "〔日月年 時:分:秒〕"))
@@ -745,7 +745,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`ftu") then
+    if (input == "'/ftu") then
       yield(Candidate("date", seg.start, seg._end, os.date("%Y_%m_%d %H:%M:%S"), "〔年月日 時:分:秒〕"))
       -- yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y")).."_"..fullshape_number(os.date("%m")).."_"..fullshape_number(os.date("%d")).." "..fullshape_number(os.date("%H"))..":"..fullshape_number(os.date("%M"))..":"..fullshape_number(os.date("%S")), "〔年月日 時:分:秒〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y")).."＿"..fullshape_number(os.date("%m")).."＿"..fullshape_number(os.date("%d")).."　"..fullshape_number(os.date("%H")).."："..fullshape_number(os.date("%M")).."："..fullshape_number(os.date("%S")), "〔年月日 時:分:秒〕"))
@@ -754,7 +754,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`ftp") then
+    if (input == "'/ftp") then
       yield(Candidate("date", seg.start, seg._end, os.date("%Y.%m.%d %H:%M:%S"), "〔年月日 時:分:秒〕"))
       -- yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y")).."."..fullshape_number(os.date("%m")).."."..fullshape_number(os.date("%d")).." "..fullshape_number(os.date("%H"))..":"..fullshape_number(os.date("%M"))..":"..fullshape_number(os.date("%S")), "〔年月日 時:分:秒〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y")).."．"..fullshape_number(os.date("%m")).."．"..fullshape_number(os.date("%d")).."　"..fullshape_number(os.date("%H")).."："..fullshape_number(os.date("%M")).."："..fullshape_number(os.date("%S")), "〔年月日 時:分:秒〕"))
@@ -763,13 +763,13 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`ftz") then
+    if (input == "'/ftz") then
       yield(Candidate("date", seg.start, seg._end, rqzdx1().." "..ch_h_date(os.date("%H")).."點"..ch_minsec_date(os.date("%M")).."分"..ch_minsec_date(os.date("%S")).."秒", "〔中數〕"))
       yield(Candidate("date", seg.start, seg._end, rqzdx2().." "..chb_h_date(os.date("%H")).."點"..chb_minsec_date(os.date("%M")).."分"..chb_minsec_date(os.date("%S")).."秒", "〔中數〕"))
       return
     end
 
-    if (input == "`y") then
+    if (input == "'/y") then
       yield(Candidate("date", seg.start, seg._end, os.date("%Y"), "〔年〕 ~d"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y年"), "〔年〕 ~c"))
       yield(Candidate("date", seg.start, seg._end, rqzdx1(1), "〔中數〕 ~z"))
@@ -784,28 +784,28 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`yj") then
+    if (input == "'/yj") then
       local jpymd, jp_y = jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))
       yield(Candidate("date", seg.start, seg._end, jp_y, "〔日本元号〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(jp_y), "〔日本元号〕"))
       return
     end
 
-    if (input == "`yh") then
+    if (input == "'/yh") then
       yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(os.date("%Y")).."年", "〔民國〕"))
       yield(Candidate("date", seg.start, seg._end, "民國 "..min_guo(os.date("%Y")).." 年", "〔民國*〕"))
       yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年", "〔民國〕"))
       return
     end
 
-    if (input == "`yg") then
+    if (input == "'/yg") then
       yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年", "〔民國中數〕"))
       yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[1], min_guo(os.date("%Y"))).."年", "〔民國中數〕"))
       yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[2], min_guo(os.date("%Y"))).."年", "〔民國中數〕"))
       return
     end
 
-    if (input == "`yl") then
+    if (input == "'/yl") then
       -- local a, b, chinese_y = to_chinese_cal_local(os.time())
       local a, b, ly_1, ly_2, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, ly_1, "〔農曆〕"))
@@ -815,26 +815,26 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`yc") then
+    if (input == "'/yc") then
       yield(Candidate("date", seg.start, seg._end, os.date("%Y年"), "〔年〕"))
       yield(Candidate("date", seg.start, seg._end, os.date(" %Y 年"), "〔*年〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y")).."年", "〔年〕"))
       return
     end
 
-    if (input == "`yd") then
+    if (input == "'/yd") then
       yield(Candidate("date", seg.start, seg._end, os.date("%Y"), "〔年〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y")), "〔年〕"))
       return
     end
 
-    if (input == "`yz") then
+    if (input == "'/yz") then
       yield(Candidate("date", seg.start, seg._end, rqzdx1(1), "〔中數〕"))
       yield(Candidate("date", seg.start, seg._end, rqzdx2(1), "〔中數〕"))
       return
     end
 
-    if (input == "`m") then
+    if (input == "'/m") then
       yield(Candidate("date", seg.start, seg._end, os.date("%m"), "〔月〕 ~m"))
       yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月"), "^0", ""), "〔月〕 ~c"))
       yield(Candidate("date", seg.start, seg._end, rqzdx1(2), "〔中數〕 ~z"))
@@ -848,7 +848,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`ml") then
+    if (input == "'/ml") then
       -- local a, b, y, chinese_m = to_chinese_cal_local(os.time())
       local a, b, c, d, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, lm, "〔農曆〕"))
@@ -857,13 +857,13 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`ma") then
+    if (input == "'/ma") then
       yield(Candidate("date", seg.start, seg._end, eng1_m_date(os.date("%m")), "〔月〕"))
       yield(Candidate("date", seg.start, seg._end, " "..eng1_m_date(os.date("%m")).." ", "〔*月*〕"))
       return
     end
 
-    if (input == "`me") then
+    if (input == "'/me") then
       yield(Candidate("date", seg.start, seg._end, eng2_m_date(os.date("%m")), "〔月〕"))
       yield(Candidate("date", seg.start, seg._end, " "..eng2_m_date(os.date("%m")).." ", "〔*月*〕"))
       yield(Candidate("date", seg.start, seg._end, eng3_m_date(os.date("%m")), "〔月〕"))
@@ -871,12 +871,12 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`mj") then
+    if (input == "'/mj") then
       yield(Candidate("date", seg.start, seg._end, jp_m_date(os.date("%m")), "〔日本格式〕"))
       return
     end
 
-    if (input == "`mc") then
+    if (input == "'/mc") then
       yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月"), "^0", ""), "〔月〕"))
       yield(Candidate("date", seg.start, seg._end, string.gsub(os.date(" %m 月"), "([ ])0", "%1"), "〔*月〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%m月"), "^0", "")), "〔月〕"))
@@ -886,19 +886,19 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`mm") then
+    if (input == "'/mm") then
       yield(Candidate("date", seg.start, seg._end, os.date("%m"), "〔月〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%m")), "〔月〕"))
       return
     end
 
-    if (input == "`mz") then
+    if (input == "'/mz") then
       yield(Candidate("date", seg.start, seg._end, rqzdx1(2), "〔中數〕"))
       yield(Candidate("date", seg.start, seg._end, rqzdx2(2), "〔中數〕"))
       return
     end
 
-    if (input == "`d") then
+    if (input == "'/d") then
       yield(Candidate("date", seg.start, seg._end, os.date("%d"), "〔日〕 ~d"))
       yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%d日"), "^0", ""), "〔日〕 ~c"))
       yield(Candidate("date", seg.start, seg._end, rqzdx1(3), "〔中數〕 ~z"))
@@ -912,7 +912,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`dl") then
+    if (input == "'/dl") then
       -- local a, b, y, m, chinese_d = to_chinese_cal_local(os.time())
       local a, b, c, d, e, ld = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, ld, "〔農曆〕"))
@@ -921,7 +921,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`da") then
+    if (input == "'/da") then
       yield(Candidate("date", seg.start, seg._end, "the "..eng1_d_date(os.date("%d")), "〔日〕"))
       yield(Candidate("date", seg.start, seg._end, " the "..eng1_d_date(os.date("%d")).." ", "〔*日*〕"))
       yield(Candidate("date", seg.start, seg._end, "The "..eng1_d_date(os.date("%d")), "〔日〕"))
@@ -929,7 +929,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`de") then
+    if (input == "'/de") then
       yield(Candidate("date", seg.start, seg._end, eng2_d_date(os.date("%d")), "〔日〕"))
       yield(Candidate("date", seg.start, seg._end, " "..eng2_d_date(os.date("%d")).." ", "〔*日*〕"))
       yield(Candidate("date", seg.start, seg._end, eng4_d_date(os.date("%d")), "〔日〕"))
@@ -938,12 +938,12 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`dj") then
+    if (input == "'/dj") then
       yield(Candidate("date", seg.start, seg._end, jp_d_date(os.date("%d")), "〔日本格式〕"))
       return
     end
 
-    if (input == "`dc") then
+    if (input == "'/dc") then
       yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%d日"), "^0", ""), "〔日〕"))
       yield(Candidate("date", seg.start, seg._end, string.gsub(os.date(" %d 日"), "([ ])0", "%1"), "〔*日〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%d日"), "^0", "")), "〔日〕"))
@@ -953,19 +953,19 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`dd") then
+    if (input == "'/dd") then
       yield(Candidate("date", seg.start, seg._end, os.date("%d"), "〔日〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%d")), "〔日〕"))
       return
     end
 
-    if (input == "`dz") then
+    if (input == "'/dz") then
       yield(Candidate("date", seg.start, seg._end, rqzdx1(3), "〔中數〕"))
       yield(Candidate("date", seg.start, seg._end, rqzdx2(3), "〔中數〕"))
       return
     end
 
-    if (input == "`md") then
+    if (input == "'/md") then
       yield(Candidate("date", seg.start, seg._end, os.date("%m%d"), "〔月日〕 ~d"))
       yield(Candidate("date", seg.start, seg._end, os.date("%m.%d"), "〔月日〕 ~p"))
       yield(Candidate("date", seg.start, seg._end, os.date("%m/%d"), "〔月日〕 ~s"))
@@ -982,7 +982,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`mdl") then
+    if (input == "'/mdl") then
       -- local a, b, y, chinese_m, chinese_d = to_chinese_cal_local(os.time())
       local a, b, c, d, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, lm..ld, "〔農曆〕"))
@@ -991,7 +991,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`mda") then
+    if (input == "'/mda") then
       yield(Candidate("date", seg.start, seg._end, eng1_m_date(os.date("%m")).." "..eng2_d_date(os.date("%d")), "〔月日〕"))
       yield(Candidate("date", seg.start, seg._end, eng1_m_date(os.date("%m")).." "..eng3_d_date(os.date("%d")), "〔月日〕"))
       yield(Candidate("date", seg.start, seg._end, eng2_m_date(os.date("%m")).." "..eng3_d_date(os.date("%d")), "〔月日〕"))
@@ -1000,7 +1000,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`mde") then
+    if (input == "'/mde") then
       yield(Candidate("date", seg.start, seg._end, eng2_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")), "〔日月〕"))
       yield(Candidate("date", seg.start, seg._end, eng3_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")), "〔日月〕"))
       yield(Candidate("date", seg.start, seg._end, eng2_d_date(os.date("%d")).." "..eng2_m_date(os.date("%m")), "〔日月〕"))
@@ -1009,12 +1009,12 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`mdj") then
+    if (input == "'/mdj") then
       yield(Candidate("date", seg.start, seg._end, jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")), "〔日本格式〕"))
       return
     end
 
-    if (input == "`mdc") then
+    if (input == "'/mdc") then
       yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1"), "〔月日〕"))
       yield(Candidate("date", seg.start, seg._end, string.gsub(os.date(" %m 月 %d 日 "), "([ ])0", "%1"), "〔*月日*〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")), "〔月日〕"))
@@ -1024,14 +1024,14 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`mdd") then
+    if (input == "'/mdd") then
       yield(Candidate("date", seg.start, seg._end, os.date("%m%d"), "〔月日〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%m"))..fullshape_number(os.date("%d")), "〔月日〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("%d%m"), "〔日月〕"))
       return
     end
 
-    if (input == "`mds") then
+    if (input == "'/mds") then
       yield(Candidate("date", seg.start, seg._end, os.date("%m/%d"), "〔月日〕"))
       -- yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%m")).."/"..fullshape_number(os.date("%d")), "〔月日〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%m")).."／"..fullshape_number(os.date("%d")), "〔月日〕"))
@@ -1039,14 +1039,14 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`mdm") then
+    if (input == "'/mdm") then
       yield(Candidate("date", seg.start, seg._end, os.date("%m-%d"), "〔月日〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%m")).."－"..fullshape_number(os.date("%d")), "〔月日〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("%d-%m"), "〔日月〕"))
       return
     end
 
-    if (input == "`mdu") then
+    if (input == "'/mdu") then
       yield(Candidate("date", seg.start, seg._end, os.date("%m_%d"), "〔月日〕"))
       -- yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%m")).."_"..fullshape_number(os.date("%d")), "〔月日〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%m")).."＿"..fullshape_number(os.date("%d")), "〔月日〕"))
@@ -1054,7 +1054,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`mdp") then
+    if (input == "'/mdp") then
       yield(Candidate("date", seg.start, seg._end, os.date("%m.%d"), "〔月日〕"))
       -- yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%m")).."."..fullshape_number(os.date("%d")), "〔月日〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%m")).."．"..fullshape_number(os.date("%d")), "〔月日〕"))
@@ -1062,13 +1062,13 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`mdz") then
+    if (input == "'/mdz") then
       yield(Candidate("date", seg.start, seg._end, rqzdx1(23), "〔中數〕"))
       yield(Candidate("date", seg.start, seg._end, rqzdx2(23), "〔中數〕"))
       return
     end
 
-    if (input == "`mdw") then
+    if (input == "'/mdw") then
       yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1").." ".."星期"..weekstyle()[1].." ", "〔月日週〕 ~c"))
       -- yield(Candidate("date", seg.start, seg._end, jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." ".."星期"..weekstyle()[1].." ", "〔月日週〕"))
       yield(Candidate("date", seg.start, seg._end, rqzdx1(23).." ".."星期"..weekstyle()[1].." ", "〔中數〕 ~z"))
@@ -1082,7 +1082,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`mdwl") then
+    if (input == "'/mdwl") then
       -- local a, b, y, chinese_m, chinese_d = to_chinese_cal_local(os.time())
       local a, b, c, d, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, lm..ld.." "..weekstyle()[5].." ", "〔農曆〕"))
@@ -1091,7 +1091,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`mdwa") then
+    if (input == "'/mdwa") then
       yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng1_m_date(os.date("%m")).." "..eng2_d_date(os.date("%d")), "〔週月日〕"))
       yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng1_m_date(os.date("%m")).." "..eng3_d_date(os.date("%d")), "〔週月日〕"))
       yield(Candidate("date", seg.start, seg._end, weekstyle()[7]..", "..eng2_m_date(os.date("%m")).." "..eng3_d_date(os.date("%d")), "〔週月日〕"))
@@ -1100,7 +1100,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`mdwe") then
+    if (input == "'/mdwe") then
       yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng2_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")), "〔週日月〕"))
       yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng3_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")), "〔週日月〕"))
       yield(Candidate("date", seg.start, seg._end, weekstyle()[7]..", "..eng2_d_date(os.date("%d")).." "..eng2_m_date(os.date("%m")), "〔週日月〕"))
@@ -1109,7 +1109,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`mdwc") then
+    if (input == "'/mdwc") then
       yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1").." ".."星期"..weekstyle()[1].." ", "〔月日週〕"))
       yield(Candidate("date", seg.start, seg._end, string.gsub(os.date(" %m 月 %d 日"), "([ ])0", "%1").." ".."星期"..weekstyle()[1].." ", "〔*月日週*〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).." ".."星期"..weekstyle()[1].." ", "〔月日週〕"))
@@ -1119,7 +1119,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`mdwj") then
+    if (input == "'/mdwj") then
       yield(Candidate("date", seg.start, seg._end, jp_m_date(os.date("%m"))..jp_d_date(os.date("%d"))..weekstyle()[3], "〔日本格式〕"))
       yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1")..weekstyle()[3], "〔日本格式〕"))
       yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%m月%d日"), "0([%d])", "%1").." "..weekstyle()[5].."曜日 ", "〔日本格式〕"))
@@ -1140,13 +1140,13 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`mdwz") then
+    if (input == "'/mdwz") then
       yield(Candidate("date", seg.start, seg._end, rqzdx1(23).." ".."星期"..weekstyle()[1].." ", "〔中數〕"))
       yield(Candidate("date", seg.start, seg._end, rqzdx2(23).." ".."星期"..weekstyle()[2].." ", "〔中數〕"))
       return
     end
 
-    if (input == "`ym") then
+    if (input == "'/ym") then
       yield(Candidate("date", seg.start, seg._end, os.date("%Y%m"), "〔年月〕 ~d"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y.%m"), "〔年月〕 ~p"))
       yield(Candidate("date", seg.start, seg._end, os.date("%Y/%m"), "〔年月〕 ~s"))
@@ -1167,7 +1167,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`ymj") then
+    if (input == "'/ymj") then
       local jpymd, jp_y = jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))
       yield(Candidate("date", seg.start, seg._end, jp_y..string.gsub(os.date("%m").."月", "([^%d])0", "%1"), "〔日本元号〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(jp_y..string.gsub(os.date("%m").."月", "([^%d])0", "%1")), "〔日本元号〕"))
@@ -1175,12 +1175,12 @@ local function t_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, fullshape_number(jp_y..os.date("%m").."月"), "〔日本元号〕"))
       return
     end
-    -- if (input == "`ymj") then
+    -- if (input == "'/ymj") then
     --   yield(Candidate("date", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m")), "〔年月〕"))
     --   return
     -- end
 
-    if (input == "`ymh") then
+    if (input == "'/ymh") then
       yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月", "([^%d])0", "%1"), "〔民國〕"))
       yield(Candidate("date", seg.start, seg._end, string.gsub("民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月", "([^%d])0", "%1"), "〔民國*〕"))
       yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(string.gsub(os.date("%m"), "0([%d])", "%1")).."月", "〔民國〕"))
@@ -1190,14 +1190,14 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`ymg") then
+    if (input == "'/ymg") then
       yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(2), "〔民國中數〕"))
       yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[1], min_guo(os.date("%Y"))).."年"..rqzdx1(2), "〔民國中數〕"))
       yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[2], min_guo(os.date("%Y"))).."年"..rqzdx2(2), "〔民國中數〕"))
       return
     end
 
-    if (input == "`yml") then
+    if (input == "'/yml") then
       -- local a, b, chinese_y, chinese_m = to_chinese_cal_local(os.time())
       local a, b, ly_1, ly_2, lm = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("date", seg.start, seg._end, ly_1..lm, "〔農曆〕"))
@@ -1207,20 +1207,20 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`yma") then
+    if (input == "'/yma") then
       yield(Candidate("date", seg.start, seg._end, eng1_m_date(os.date("%m"))..", "..os.date("%Y"), "〔月年〕"))
       yield(Candidate("date", seg.start, seg._end, eng2_m_date(os.date("%m"))..", "..os.date("%Y"), "〔月年〕"))
       return
     end
 
-    if (input == "`yme") then
+    if (input == "'/yme") then
       yield(Candidate("date", seg.start, seg._end, eng1_m_date(os.date("%m")).." "..os.date("%Y"), "〔月年〕"))
       yield(Candidate("date", seg.start, seg._end, eng2_m_date(os.date("%m")).." "..os.date("%Y"), "〔月年〕"))
       yield(Candidate("date", seg.start, seg._end, eng3_m_date(os.date("%m")).." "..os.date("%Y"), "〔月年〕"))
       return
     end
 
-    if (input == "`ymc") then
+    if (input == "'/ymc") then
       yield(Candidate("date", seg.start, seg._end, string.gsub(os.date("%Y年%m月"), "([^%d])0", "%1"), "〔年月〕"))
       yield(Candidate("date", seg.start, seg._end, string.gsub(os.date(" %Y 年 %m 月 "), "([^%d])0", "%1"), "〔*年月*〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(string.gsub(os.date("%Y年%m月"), "([^%d])0", "%1")), "〔年月〕"))
@@ -1230,14 +1230,14 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`ymd") then
+    if (input == "'/ymd") then
       yield(Candidate("date", seg.start, seg._end, os.date("%Y%m"), "〔年月〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y"))..fullshape_number(os.date("%m")), "〔年月〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("%m%Y"), "〔月年〕"))
       return
     end
 
-    if (input == "`yms") then
+    if (input == "'/yms") then
       yield(Candidate("date", seg.start, seg._end, os.date("%Y/%m"), "〔年月〕"))
       -- yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y")).."/"..fullshape_number(os.date("%m")), "〔年月〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y")).."／"..fullshape_number(os.date("%m")), "〔年月〕"))
@@ -1245,14 +1245,14 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`ymm") then
+    if (input == "'/ymm") then
       yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m"), "〔年月〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y")).."－"..fullshape_number(os.date("%m")), "〔年月〕"))
       yield(Candidate("date", seg.start, seg._end, os.date("%m-%Y"), "〔月年〕"))
       return
     end
 
-    if (input == "`ymu") then
+    if (input == "'/ymu") then
       yield(Candidate("date", seg.start, seg._end, os.date("%Y_%m"), "〔年月〕"))
       -- yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y")).."_"..fullshape_number(os.date("%m")), "〔年月〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y")).."＿"..fullshape_number(os.date("%m")), "〔年月〕"))
@@ -1260,7 +1260,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`ymp") then
+    if (input == "'/ymp") then
       yield(Candidate("date", seg.start, seg._end, os.date("%Y.%m"), "〔年月〕"))
       -- yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y")).."."..fullshape_number(os.date("%m")), "〔年月〕"))
       yield(Candidate("date", seg.start, seg._end, fullshape_number(os.date("%Y")).."．"..fullshape_number(os.date("%m")), "〔年月〕"))
@@ -1268,14 +1268,14 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`ymz") then
+    if (input == "'/ymz") then
       yield(Candidate("date", seg.start, seg._end, rqzdx1(12), "〔中數〕"))
       yield(Candidate("date", seg.start, seg._end, rqzdx2(12), "〔中數〕"))
       return
     end
 
 -- function week_translator0(input, seg)
-    if (input == "`w") then
+    if (input == "'/w") then
       yield(Candidate("qsj", seg.start, seg._end, "星期"..weekstyle()[1], "〔週〕 ~c"))
       yield(Candidate("qsj", seg.start, seg._end, "週"..weekstyle()[1], "〔週〕 ~z"))
       yield(Candidate("qsj", seg.start, seg._end, weekstyle()[5].."曜日", "〔週〕 ~j"))
@@ -1284,13 +1284,13 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`wa") then
+    if (input == "'/wa") then
       yield(Candidate("qsj", seg.start, seg._end, weekstyle()[6], "〔週〕"))
       yield(Candidate("qsj", seg.start, seg._end, " "..weekstyle()[6].." ", "〔*週*〕"))
       return
     end
 
-    if (input == "`we") then
+    if (input == "'/we") then
       yield(Candidate("qsj", seg.start, seg._end, weekstyle()[7], "〔週〕"))
       yield(Candidate("qsj", seg.start, seg._end, " "..weekstyle()[7].." ", "〔*週*〕"))
       yield(Candidate("qsj", seg.start, seg._end, weekstyle()[8], "〔週〕"))
@@ -1298,7 +1298,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`wc") then
+    if (input == "'/wc") then
       yield(Candidate("qsj", seg.start, seg._end, "星期"..weekstyle()[1], "〔週〕"))
       yield(Candidate("qsj", seg.start, seg._end, " ".."星期"..weekstyle()[1].." ", "〔*週*〕"))
       yield(Candidate("qsj", seg.start, seg._end, "(".."星期"..weekstyle()[1]..")", "〔週〕"))
@@ -1307,7 +1307,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`wz") then
+    if (input == "'/wz") then
       yield(Candidate("qsj", seg.start, seg._end, " ".."週"..weekstyle()[1].." ", "〔*週*〕"))
       yield(Candidate("qsj", seg.start, seg._end, "週"..weekstyle()[1], "〔週〕"))
       yield(Candidate("qsj", seg.start, seg._end, "(".."週"..weekstyle()[1]..")", "〔週〕"))
@@ -1316,7 +1316,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`wj") then
+    if (input == "'/wj") then
       yield(Candidate("qsj", seg.start, seg._end, " "..weekstyle()[5].."曜日 ", "〔*週*〕"))
       yield(Candidate("qsj", seg.start, seg._end, weekstyle()[5].."曜日", "〔週〕"))
       yield(Candidate("qsj", seg.start, seg._end, "("..weekstyle()[5].."曜日)", "〔週〕"))
@@ -1327,7 +1327,7 @@ local function t_translator(input, seg)
     end
 
 -- function week_translator1(input, seg)
-    if (input == "`fw") then
+    if (input == "'/fw") then
       yield(Candidate("qsj", seg.start, seg._end, string.gsub(os.date("%Y年%m月%d日"), "([^%d])0", "%1").." ".."星期"..weekstyle()[1].." ", "〔年月日週〕 ~c"))
       yield(Candidate("qsj", seg.start, seg._end, rqzdx1().." ".."星期"..weekstyle()[1].." ", "〔中數〕 ~z"))
       -- yield(Candidate("qsj", seg.start, seg._end, rqzdx2().." ".."星期"..weekstyle()[1].." ", "〔年月日週〕"))
@@ -1344,7 +1344,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`fwj") then
+    if (input == "'/fwj") then
       local jpymd, jp_y = jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))
       yield(Candidate("date", seg.start, seg._end, string.gsub(jpymd, "([^%d])0", "%1")..weekstyle()[3], "〔日本元号〕"))
       yield(Candidate("date", seg.start, seg._end, string.gsub(jpymd, "([^%d])0", "%1").." "..weekstyle()[5].."曜日 ", "〔日本元号〕"))
@@ -1364,7 +1364,7 @@ local function t_translator(input, seg)
       yield(Candidate("date", seg.start, seg._end, fullshape_number(jpymd.."（"..weekstyle()[5].."曜日）"), "〔日本元号〕"))
       return
     end
-    -- if (input == "`fwj") then
+    -- if (input == "'/fwj") then
     --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." "..weekstyle()[3].." ", "〔年月日週〕"))
     --   -- yield(Candidate("qsj", seg.start, seg._end, os.date("%Y").."年 "..jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." ".."星期"..weekstyle()[1].." ", "〔年月日週〕"))
     --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." "..weekstyle()[5].."曜日 ", "〔年月日週〕"))
@@ -1373,7 +1373,7 @@ local function t_translator(input, seg)
     --   return
     -- end
 
-    if (input == "`fwh") then
+    if (input == "'/fwh") then
       yield(Candidate("date", seg.start, seg._end, string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日", "([^%d])0", "%1").." ".."星期"..weekstyle()[1].." ", "〔民國〕"))
       yield(Candidate("date", seg.start, seg._end, string.gsub("民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日", "([^%d])0", "%1").." ".."星期"..weekstyle()[1].." ", "〔民國*〕"))
       yield(Candidate("date", seg.start, seg._end, "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).." ".."星期"..weekstyle()[1].." ", "〔民國〕"))
@@ -1383,14 +1383,14 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`fwg") then
+    if (input == "'/fwg") then
       yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(23).." ".."星期"..weekstyle()[1].." ", "〔民國中數〕"))
       yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[1], min_guo(os.date("%Y"))).."年"..rqzdx1(23).." ".."星期"..weekstyle()[1].." ", "〔民國中數〕"))
       yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[2], min_guo(os.date("%Y"))).."年"..rqzdx2(23).." ".."星期"..weekstyle()[2].." ", "〔民國中數〕"))
       return
     end
 
-    if (input == "`fwl") then
+    if (input == "'/fwl") then
       -- local chinese_date = to_chinese_cal_local(os.time())
       local ll_1, ll_2 = Date2LunarDate(os.date("%Y%m%d"))
       yield(Candidate("qsj", seg.start, seg._end, ll_1.." "..weekstyle()[5].." ", "〔農曆〕"))
@@ -1400,7 +1400,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`fwa") then
+    if (input == "'/fwa") then
       yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng1_m_date(os.date("%m")).." "..eng2_d_date(os.date("%d"))..", "..os.date("%Y"), "〔週月日年〕"))
       yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng1_m_date(os.date("%m")).." "..eng3_d_date(os.date("%d"))..", "..os.date("%Y"), "〔週月日年〕"))
       yield(Candidate("date", seg.start, seg._end, weekstyle()[7]..", "..eng2_m_date(os.date("%m")).." "..eng3_d_date(os.date("%d"))..", "..os.date("%Y"), "〔週月日年〕"))
@@ -1409,7 +1409,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`fwe") then
+    if (input == "'/fwe") then
       yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng2_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")).." "..os.date("%Y"), "〔週日月年〕"))
       yield(Candidate("date", seg.start, seg._end, weekstyle()[6]..", "..eng3_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")).." "..os.date("%Y"), "〔週日月年〕"))
       yield(Candidate("date", seg.start, seg._end, weekstyle()[7]..", "..eng2_d_date(os.date("%d")).." "..eng2_m_date(os.date("%m")).." "..os.date("%Y"), "〔週日月年〕"))
@@ -1418,7 +1418,7 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`fwc") then
+    if (input == "'/fwc") then
       yield(Candidate("qsj", seg.start, seg._end, string.gsub(os.date("%Y年%m月%d日"), "([^%d])0", "%1").." ".."星期"..weekstyle()[1].." ", "〔年月日週〕"))
       yield(Candidate("qsj", seg.start, seg._end, string.gsub(os.date(" %Y 年 %m 月 %d 日"), "([^%d])0", "%1").." ".."星期"..weekstyle()[1].." ", "〔*年月日週*〕"))
       yield(Candidate("qsj", seg.start, seg._end, fullshape_number(string.gsub(os.date("%Y年%m月%d日"), "([^%d])0", "%1")).." 星期"..weekstyle()[1].." ", "〔年月日週〕"))
@@ -1428,14 +1428,14 @@ local function t_translator(input, seg)
       return
     end
 
-    if (input == "`fwz") then
+    if (input == "'/fwz") then
       yield(Candidate("qsj", seg.start, seg._end, rqzdx1().." ".."星期"..weekstyle()[1].." ", "〔中數〕"))
       yield(Candidate("qsj", seg.start, seg._end, rqzdx2().." ".."星期"..weekstyle()[2].." ", "〔中數〕"))
       return
     end
 
 -- function week_translator2(input, seg)
-    -- if (input == "`fwt") then
+    -- if (input == "'/fwt") then
     --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." ".."星期"..weekstyle()[1].." "..os.date("%H:%M:%S"), "〔年月日週 時:分:秒〕"))
     --   yield(Candidate("qsj", seg.start, seg._end, os.date(" %Y 年 %m 月 %d 日").." ".."星期"..weekstyle()[1].." "..os.date("%H:%M:%S"), "〔*年月日週 時:分:秒〕"))
     --   yield(Candidate("qsj", seg.start, seg._end, fullshape_number(os.date("%Y")).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日 ".."星期"..weekstyle()[1].." "..fullshape_number(os.date("%H")).."："..fullshape_number(os.date("%M")).."："..fullshape_number(os.date("%S")), "〔年月日週 時:分:秒〕"))
@@ -1447,13 +1447,13 @@ local function t_translator(input, seg)
     --   return
     -- end
 
-    -- if (input == "`fwtz") then
+    -- if (input == "'/fwtz") then
     --   yield(Candidate("qsj", seg.start, seg._end, rqzdx1().." ".."星期"..weekstyle()[1].." "..os.date("%H:%M:%S"), "〔年月日週 時:分:秒〕"))
     --   yield(Candidate("qsj", seg.start, seg._end, rqzdx2().." ".."星期"..weekstyle()[1].." "..os.date("%H:%M:%S"), "〔年月日週 時:分:秒〕"))
     --   return
     -- end
 -- function week_translator3(input, seg)
-    -- if (input == "`fwn") then
+    -- if (input == "'/fwn") then
     --   yield(Candidate("qsj", seg.start, seg._end, os.date("%Y年%m月%d日").." ".."星期"..weekstyle()[1].." "..os.date("%H:%M"), "〔年月日週 時:分〕"))
     --   yield(Candidate("qsj", seg.start, seg._end, os.date(" %Y 年 %m 月 %d 日").." ".."星期"..weekstyle()[1].." "..os.date("%H:%M"), "〔*年月日週 時:分〕"))
     --   yield(Candidate("qsj", seg.start, seg._end, fullshape_number(os.date("%Y")).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日 ".."星期"..weekstyle()[1].." "..fullshape_number(os.date("%H")).."："..fullshape_number(os.date("%M")), "〔年月日週 時:分〕"))
@@ -1465,15 +1465,15 @@ local function t_translator(input, seg)
     --   return
     -- end
 
-    -- if (input == "`fwnz") then
+    -- if (input == "'/fwnz") then
     --   yield(Candidate("qsj", seg.start, seg._end, rqzdx1().." ".."星期"..weekstyle()[1].." "..os.date("%H:%M"), "〔年月日週 時:分〕"))
     --   yield(Candidate("qsj", seg.start, seg._end, rqzdx2().." ".."星期"..weekstyle()[1].." "..os.date("%H:%M"), "〔年月日週 時:分〕"))
     --   return
     -- end
 
 --- 擴充模式 \r\n    日期 (年月日) ~d \r\n    年 ~y  月 ~m  日 ~day \r\n    年月 ~ym  月日 ~md \r\n    時間 (時分) ~n   (時分秒) ~t \r\n    日期時間 (年月日時分) ~dn\r\n    日期時間 (年月日時分秒) ~dt
-    if(input=="`") then
-    -- if input:find('^`$') then
+    if(input=="'/") then
+    -- if input:find("^'/$") then
       -- yield(Candidate("date", seg.start, seg._end, "" , "擴充模式"))
       -- yield(Candidate("date", seg.start, seg._end, "║　d〔年月日〕┃   ym〔年月〕┃　md〔月日〕║" , ""))
       -- yield(Candidate("date", seg.start, seg._end, "║　　y〔年〕　┃　　m〔月〕 ┃　　dy〔日〕 ║" , ""))
@@ -1524,63 +1524,63 @@ local function t_translator(input, seg)
       return
     end
 
-    if(input=="`/") then
+    if(input=="'//") then
       local cand2 = Candidate("letter", seg.start, seg._end, " " , "  [a-z]+〔小寫字母〕")
       cand2.preedit = input .. '\t《小寫字母》▶'
       yield(cand2)
       return
     end
 
-    if(input=="`;") then
+    if(input=="'/;") then
       local cand2 = Candidate("letter", seg.start, seg._end, " " , "  [a-z]+〔大寫字母〕")
       cand2.preedit = input .. '\t《大寫字母》▶'
       yield(cand2)
       return
     end
 
-    if(input=="`'") then
+    if(input=="'/'") then
       local cand2 = Candidate("letter", seg.start, seg._end, " " , "  [a-z]+〔開頭大寫字母〕")
       cand2.preedit = input .. '\t《開頭大寫字母》▶'
       yield(cand2)
       return
     end
 
-    if(input=="`x") then
+    if(input=="'/x") then
       local cand2 = Candidate("letter", seg.start, seg._end, " " , "  [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)")
       cand2.preedit = input .. '\t《內碼十六進制》▶'
       yield(cand2)
       return
     end
 
-    if(input=="`u") then
+    if(input=="'/u") then
       local cand2 = Candidate("letter", seg.start, seg._end, " " , "  [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)")
       cand2.preedit = input .. '\t《內碼十六進制》▶'
       yield(cand2)
       return
     end
 
-    if(input=="`c") then
+    if(input=="'/c") then
       local cand2 = Candidate("letter", seg.start, seg._end, " " , "  [0-9]+〔內碼十進制 Dec〕")
       cand2.preedit = input .. '\t《內碼十進制》▶'
       yield(cand2)
       return
     end
 
-    if(input=="`o") then
+    if(input=="'/o") then
       local cand2 = Candidate("letter", seg.start, seg._end, " " , "  [0-7]+〔內碼八進制 Oct〕")
       cand2.preedit = input .. '\t《內碼八進制》▶'
       yield(cand2)
       return
     end
 
-    if(input=="`e") then
+    if(input=="'/e") then
       local cand2 = Candidate("letter", seg.start, seg._end, " " , "  [0-9a-f]+〔Percent/URL encoding〕")
       cand2.preedit = input .. '\t《Percent/URL encoding》▶'
       yield(cand2)
       return
     end
 
-    local englishout1 = string.match(input, "`/(%l+)$")
+    local englishout1 = string.match(input, "'//(%l+)$")
     if (englishout1~=nil) then
       yield(Candidate("englishtype", seg.start, seg._end, englishout1 , "〔一般字母小寫〕"))
       yield(Candidate("englishtype", seg.start, seg._end, english_f_l(englishout1) , "〔全形字母小寫〕"))
@@ -1596,7 +1596,7 @@ local function t_translator(input, seg)
       return
     end
 
-    local englishout2 = string.match(input, "`'(%l+)$")
+    local englishout2 = string.match(input, "'/'(%l+)$")
     if (englishout2~=nil) then
       yield(Candidate("englishtype", seg.start, seg._end, string.upper(string.sub(englishout2,1,1)) .. string.sub(englishout2,2,-1) , "〔一般字母開頭大寫〕"))
       yield(Candidate("englishtype", seg.start, seg._end, english_f_ul(englishout2) , "〔全形字母開頭大寫〕"))
@@ -1606,7 +1606,7 @@ local function t_translator(input, seg)
       return
     end
 
-    local englishout3 = string.match(input, "`;(%l+)$")
+    local englishout3 = string.match(input, "'/;(%l+)$")
     if (englishout3~=nil) then
       yield(Candidate("englishtype", seg.start, seg._end, string.upper(englishout3) , "〔一般字母大寫〕"))
       yield(Candidate("englishtype", seg.start, seg._end, english_f_u(englishout3) , "〔全形字母大寫〕"))
@@ -1620,7 +1620,7 @@ local function t_translator(input, seg)
       return
     end
 
-    local utf_prefix, utf_input = string.match(input, "(`)([xuco][0-9a-f]+)$")
+    local utf_prefix, utf_input = string.match(input, "('/)([xuco][0-9a-f]+)$")
     if (utf_input~=nil) then
       -- if string.sub(input, 1, 2) ~= utf_prefix then return end
       local dict = { c=10, x=16, u=16, o=8 } --{ u=16 } --{ d=10, u=16, e=8 }
@@ -1665,7 +1665,7 @@ local function t_translator(input, seg)
     end
 
 
-    local url_e_prefix, url_e_input = string.match(input, "(`e)([0-9a-z][0-9a-f]*)$")
+    local url_e_prefix, url_e_input = string.match(input, "('/e)([0-9a-z][0-9a-f]*)$")
     if (url_e_input~=nil) then
       local preedit_url_e = string.gsub(url_e_input, "(%x%x)", "%%%1")
       local preedit_url_e = string.gsub(preedit_url_e, "(%x%x)(%x)$", "%1%%%2")
@@ -1706,7 +1706,7 @@ local function t_translator(input, seg)
       yield(cand_url_e_code)
     end
 
-    -- local url_c_input = string.match(input, "`e([0-9a-z][0-9a-f]*)$")
+    -- local url_c_input = string.match(input, "'/e([0-9a-z][0-9a-f]*)$")
     -- if (url_c_input~=nil) then
     --   local u_1 = string.match(url_c_input,"^([0-9a-f][0-9a-f][0-9a-f])$")
     --   local u_2 = string.match(url_c_input,"^([0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f])$")
@@ -1716,13 +1716,13 @@ local function t_translator(input, seg)
     --     url_c_input = url_c_input .. '0'
     --   end
     --   local url_10 = url_decode(url_c_input)
-    --   local uc_i = string.upper(string.sub(input, 3, 4)) .. " " .. string.upper(string.sub(input, 5, 6)) .. " " .. string.upper(string.sub(input, 7, 8)) .. " " .. string.upper(string.sub(input, 9, 10)) .. " " .. string.upper(string.sub(input, 11, 12)) .. " " .. string.upper(string.sub(input, 13, 14))
+    --   local uc_i = string.upper(string.sub(input, 4, 5)) .. " " .. string.upper(string.sub(input, 6, 7)) .. " " .. string.upper(string.sub(input, 8, 9)) .. " " .. string.upper(string.sub(input, 10, 11)) .. " " .. string.upper(string.sub(input, 12, 13)) .. " " .. string.upper(string.sub(input, 14, 15))
     --   local uc_i = string.gsub(uc_i, " +$", "" )
     --   if string.match(url_10, "無此編碼") ~= nil then
     --     yield(Candidate("number", seg.start, seg._end, url_10, '' ))
     --   elseif string.match(url_c_input, "^[0-9a-z]$") ~= nil then
     --     local cand_uci_a = Candidate("number", seg.start, seg._end, url_10, url_10 )
-    --     cand_uci_a.preedit = "`e " .. uc_i
+    --     cand_uci_a.preedit = "'/e " .. uc_i
     --     yield(cand_uci_a)
     --   else
     --     -- local u_c = string.upper(url_c_input)
@@ -1736,7 +1736,7 @@ local function t_translator(input, seg)
     --     -- local u_c = string.gsub(u_c, '[%%]+$', '')
     --     -- yield(Candidate("number", seg.start, seg._end, utf8_out(url_10), u_c ))
     --     local cand_uci_s = Candidate("number", seg.start, seg._end, utf8_out(url_10), url_encode(utf8_out(url_10)) )
-    --     cand_uci_s.preedit = "`e " .. uc_i
+    --     cand_uci_s.preedit = "'/e " .. uc_i
     --     yield(cand_uci_s)
     --   end
     --   -- if url_10*10+10-1 < 1048575 then
@@ -1744,7 +1744,7 @@ local function t_translator(input, seg)
     --   if tonumber(url_10)+16 < 1048575 then
     --     for i = tonumber(url_10)+1, tonumber(url_10)+16 do
     --       local cand_uci_m = Candidate("number", seg.start, seg._end, utf8_out(i), url_encode(utf8_out(i)) )
-    --       cand_uci_m.preedit = "`e " .. uc_i
+    --       cand_uci_m.preedit = "'/e " .. uc_i
     --       yield(cand_uci_m)
     --     end
     --   end
@@ -1752,7 +1752,7 @@ local function t_translator(input, seg)
     -- end
 
 
-    local y, m, d = string.match(input, "`(%d+)/(%d?%d)/(%d?%d)$")
+    local y, m, d = string.match(input, "'/(%d+)/(%d?%d)/(%d?%d)$")
     if(y~=nil) and (tonumber(m)<13) and (tonumber(d)<32) then
       yield(Candidate("date", seg.start, seg._end, " "..y.." 年 "..m.." 月 "..d.." 日 " , "〔*日期*〕"))
       yield(Candidate("date", seg.start, seg._end, y.."年"..m.."月"..d.."日" , "〔日期〕"))
@@ -1806,7 +1806,7 @@ local function t_translator(input, seg)
       return
     end
 
-    local m, d = string.match(input, "`(%d?%d)/(%d?%d)$")
+    local m, d = string.match(input, "'/(%d?%d)/(%d?%d)$")
     if(m~=nil) and (tonumber(m)<13) and (tonumber(d)<32) then
       yield(Candidate("date", seg.start, seg._end, " "..m.." 月 "..d.." 日 " , "〔*日期*〕"))
       yield(Candidate("date", seg.start, seg._end, m.."月"..d.."日" , "〔日期〕"))
@@ -1827,7 +1827,7 @@ local function t_translator(input, seg)
       return
     end
 
-    local y, m, d = string.match(input, "`(%d+)-(%d?%d)-(%d?%d)$")
+    local y, m, d = string.match(input, "'/(%d+)-(%d?%d)-(%d?%d)$")
     if(y~=nil) and (tonumber(m)<13) and (tonumber(d)<32) then
       yield(Candidate("date", seg.start, seg._end, y.."年"..m.."月"..d.."日" , "〔日期〕"))
       yield(Candidate("date", seg.start, seg._end, " "..y.." 年 "..m.." 月 "..d.." 日 " , "〔*日期*〕"))
@@ -1885,7 +1885,7 @@ local function t_translator(input, seg)
       return
     end
 
-    local m, d = string.match(input, "`(%d?%d)-(%d?%d)$")
+    local m, d = string.match(input, "'/(%d?%d)-(%d?%d)$")
     if(m~=nil) and (tonumber(m)<13) and (tonumber(d)<32) then
       yield(Candidate("date", seg.start, seg._end, m.."月"..d.."日" , "〔日期〕"))
       yield(Candidate("date", seg.start, seg._end, " "..m.." 月 "..d.." 日 " , "〔*日期*〕"))
@@ -1907,7 +1907,7 @@ local function t_translator(input, seg)
     end
 
     -- local numberout = string.match(input, "'//?(%d+)$")
-    local dot0 ,numberout, dot1, afterdot = string.match(input, "`(%.?)(%d+)(%.?)(%d*)$")
+    local dot0 ,numberout, dot1, afterdot = string.match(input, "'/(%.?)(%d+)(%.?)(%d*)$")
     if (tonumber(numberout)~=nil) then
       if (dot0=='.') and (dot1=='.') then
         yield(Candidate("number", seg.start, seg._end, "" , "〔不能兩個小數點〕"))  --字符過濾可能會過濾掉""整個選項。
@@ -1985,8 +1985,26 @@ local function t_translator(input, seg)
       return
     end
 
+    -- -- 測試空白不上屏在 translator 中直接處理！
+    -- -- local engine = env.engine
+    -- -- local context = engine.context
+    -- -- local kkk = string.match(o_input, "'/")
+    -- -- local engine = env.engine
+    -- -- local context = engine.context
+    -- -- local o_input = context.input
+    -- local kkk = string.match(input, "( )$")
+    -- -- local page_size = engine.schema.page_size
+    -- if (kkk~=nil) then --and (context:is_composing())
+    --   -- local s_orig = context:get_commit_text()
+    --   -- local o_input = context.input
+    --   -- engine:commit_text(s_orig .. "a")
+    --   -- context:clear()
+    --   -- yield(Candidate("number", seg.start, seg._end, "nnnnnm", "〔千分位數字〕"))
+    --   return 1 -- kAccepted
+    -- end
+
   end
 end
 
 
-return t_translator
+return t2_translator
