@@ -13,37 +13,7 @@ local set_char = Set {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l"
 local set_number = Set {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"}
 
 
---- return char(0x20~0x7f) or ""
-local function ascii_c(key,pat)
-  local pat = pat and ('^[%s]$'):format(pat) or "^.$"
-  local code = key.keycode
-  return key.modifier <=1 and
-         code >=0x20 and code <=0x7f and
-         string.char(code):match(pat) or ""
-end
 
-local function is_koreapart(c)
-  return 4352 <= c and c <= 4607    -- Hangul Jamo
-     or 12592 <= c and c <= 12687   -- Hangul Compatibility Jamo
-     or 43360 <= c and c <= 43391   -- Hangul Jamo Extended-A
-     or 44032 <= c and c <= 55295   -- 合併以下兩個
-     -- or 44032 <= c and c <= 55215   -- Hangul Syllables
-     -- or 55216 <= c and c <= 55295   -- Hangul Jamo Extended-B
-     or 65441 <= c and c <= 65500   -- Halfwidth Jamo
-end
-
-local function check_korea(text)
-  local checkkorea = true
-  -- for _, c in utf8.codes(text) do
-  for i in utf8.codes(text) do
-    local c = utf8.codepoint(text, i)
-    if not is_koreapart(c) then
-      checkkorea = false
-      return checkkorea
-    end
-  end
-  return checkkorea
-end
 
 
 local function kr_2set_0m_choice(key,env)
@@ -56,6 +26,39 @@ local function kr_2set_0m_choice(key,env)
   local o_space_mode = context:get_option("space_mode")
 
   local hangul_b = string.sub(hangul,-6,-4) or ''  -- 確認倒數第二字是否為諺文用
+
+
+  --- return char(0x20~0x7f) or ""
+  local function ascii_c(key,pat)
+    local pat = pat and ('^[%s]$'):format(pat) or "^.$"
+    local code = key.keycode
+    return key.modifier <=1 and
+           code >=0x20 and code <=0x7f and
+           string.char(code):match(pat) or ""
+  end
+
+  local function is_koreapart(c)
+    return 4352 <= c and c <= 4607    -- Hangul Jamo
+       or 12592 <= c and c <= 12687   -- Hangul Compatibility Jamo
+       or 43360 <= c and c <= 43391   -- Hangul Jamo Extended-A
+       or 44032 <= c and c <= 55295   -- 合併以下兩個
+       -- or 44032 <= c and c <= 55215   -- Hangul Syllables
+       -- or 55216 <= c and c <= 55295   -- Hangul Jamo Extended-B
+       or 65441 <= c and c <= 65500   -- Halfwidth Jamo
+  end
+
+  local function check_korea(text)
+    local checkkorea = true
+    -- for _, c in utf8.codes(text) do
+    for i in utf8.codes(text) do
+      local c = utf8.codepoint(text, i)
+      if not is_koreapart(c) then
+        checkkorea = false
+        return checkkorea
+      end
+    end
+    return checkkorea
+  end
 
 
   --- pass ascii_mode
@@ -89,7 +92,12 @@ local function kr_2set_0m_choice(key,env)
     return 1
 
 
-  elseif (o_kr_0m) and (caret_pos == context.input:len()) then  --第二個條件避免中途插入變到最後
+  --- 避免中途插入碼變到最後
+  elseif caret_pos ~= context.input:len() then
+    return 2
+
+
+  elseif (o_kr_0m) then  -- 提到前面限定 and (caret_pos == context.input:len())
   -- elseif context:get_option("kr_0m") then
 
     --------------------------------------------
@@ -120,6 +128,7 @@ local function kr_2set_0m_choice(key,env)
         context:select(0)  -- 也可以使用
         return 1
       end
+
 
     --------------------------------------------
     -- ---- 功能正常，但輸入時，錯誤日誌會報錯 char 超出範圍
@@ -187,6 +196,7 @@ local function kr_2set_0m_choice(key,env)
 
     --------------------------------------------
 
+
     -- --- 漢字選字直接上屏，有 bug，會影響諺文選字。
     -- elseif set_number[key:repr()] and (context:has_menu()) then
     -- -- elseif set_number[ascii_c(key, "0-9")] and (context:has_menu()) then
@@ -216,7 +226,7 @@ local function kr_2set_0m_choice(key,env)
     elseif key:repr() == "semicolon" then
       -- local cxtil = string.len(hangul) - caret_pos
       --- 開頭防止漢字不 reopen 去組字。
-      if string.len(hangul) == 3 then  -- 3等同一個諺文單位的字符長度 -- and (caret_pos == context.input:len())
+      if string.len(hangul) == 3 then  -- 3等同一個諺文單位的字符長度
       -- if string.match(context.input, "^..$") then
         context:reopen_previous_segment()
         context.input = context.input .. ";"
@@ -259,6 +269,7 @@ local function kr_2set_0m_choice(key,env)
       context:confirm_current_selection()
       return 1
 
+
     -- --- 修正組字時，按「向下」鍵輸入消失問題（ schema 內可設定，故關閉）
     -- elseif key:eq(KeyEvent("Down")) and string.match(context.input, "[^0-9]$") then
     --   context:reopen_previous_segment()
@@ -268,6 +279,7 @@ local function kr_2set_0m_choice(key,env)
     --   -- engine:process_key(KeyEvent("Right"))  -- 測試OK!
     --   return 1
 
+
     --- 修正輸入途中插入「數字」，無法半上屏，需按2次 enter 之問題，改直上屏
     elseif set_number[key:repr()] then
     -- elseif set_number[ascii_c(key, "0-9")] then
@@ -276,6 +288,7 @@ local function kr_2set_0m_choice(key,env)
       engine:commit_text(hangul .. key:repr())
       context:clear()
       return 1
+
 
     --- 增加一般韓文輸入法操作，空格上屏自動末端空一格。
     elseif (o_space_mode) and key:repr() == "space" and string.match(context.input, "^[a-zQWERTOP]+$") then  --只有韓文，不含漢字。如果漢字如此出字會不能記憶？
@@ -295,7 +308,7 @@ local function kr_2set_0m_choice(key,env)
     if (not context:is_composing()) or (not o_space_mode) or key:repr() ~= "space" then
       return 2
 
-    elseif string.match(context.input, "^[a-zQWERTOP]+$") and (not string.match(hangul, "[%a%c%s]")) and (caret_pos == context.input:len()) then
+    elseif string.match(context.input, "^[a-zQWERTOP]+$") and (not string.match(hangul, "[%a%c%s]")) then  -- 提到前面限定 and (caret_pos == context.input:len())
       engine:commit_text(hangul .. " ")
       context:clear()
       return 1
