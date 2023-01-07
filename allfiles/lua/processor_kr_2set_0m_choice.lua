@@ -12,6 +12,37 @@
 local set_char = Set {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" , "Q", "W", "E", "R", "T" ,"O" ,"P"}  --> {a=true,b=true...}
 local set_number = Set {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"}
 
+--- return char(0x20~0x7f) or ""
+local function ascii_c(key,pat)
+  local pat = pat and ('^[%s]$'):format(pat) or "^.$"
+  local code = key.keycode
+  return key.modifier <=1 and
+         code >=0x20 and code <=0x7f and
+         string.char(code):match(pat) or ""
+end
+
+local function is_koreapart(c)
+  return 4352 <= c and c <= 4607    -- Hangul Jamo
+     or 12592 <= c and c <= 12687   -- Hangul Compatibility Jamo
+     or 43360 <= c and c <= 43391   -- Hangul Jamo Extended-A
+     or 44032 <= c and c <= 55295   -- 合併以下兩個
+     -- or 44032 <= c and c <= 55215   -- Hangul Syllables
+     -- or 55216 <= c and c <= 55295   -- Hangul Jamo Extended-B
+     or 65441 <= c and c <= 65500   -- Halfwidth Jamo
+end
+
+local function check_korea(text)
+  local checkkorea = true
+  -- for _, c in utf8.codes(text) do
+  for i in utf8.codes(text) do
+    local c = utf8.codepoint(text, i)
+    if not is_koreapart(c) then
+      checkkorea = false
+      return checkkorea
+    end
+  end
+  return checkkorea
+end
 
 
 
@@ -25,40 +56,7 @@ local function kr_2set_0m_choice(key,env)
   local o_kr_0m = context:get_option("kr_0m")
   local o_space_mode = context:get_option("space_mode")
 
-  local hangul_b = string.sub(hangul,-6,-4) or ''  -- 確認倒數第二字是否為諺文用
-
-
-  --- return char(0x20~0x7f) or ""
-  local function ascii_c(key,pat)
-    local pat = pat and ('^[%s]$'):format(pat) or "^.$"
-    local code = key.keycode
-    return key.modifier <=1 and
-           code >=0x20 and code <=0x7f and
-           string.char(code):match(pat) or ""
-  end
-
-  local function is_koreapart(c)
-    return 4352 <= c and c <= 4607    -- Hangul Jamo
-       or 12592 <= c and c <= 12687   -- Hangul Compatibility Jamo
-       or 43360 <= c and c <= 43391   -- Hangul Jamo Extended-A
-       or 44032 <= c and c <= 55295   -- 合併以下兩個
-       -- or 44032 <= c and c <= 55215   -- Hangul Syllables
-       -- or 55216 <= c and c <= 55295   -- Hangul Jamo Extended-B
-       or 65441 <= c and c <= 65500   -- Halfwidth Jamo
-  end
-
-  local function check_korea(text)
-    local checkkorea = true
-    -- for _, c in utf8.codes(text) do
-    for i in utf8.codes(text) do
-      local c = utf8.codepoint(text, i)
-      if not is_koreapart(c) then
-        checkkorea = false
-        return checkkorea
-      end
-    end
-    return checkkorea
-  end
+  local hangul_b = string.sub(hangul,-6,-4) or ""  -- 確認倒數第二字是否為諺文用
 
 
   --- pass ascii_mode
@@ -100,19 +98,10 @@ local function kr_2set_0m_choice(key,env)
   elseif (o_kr_0m) then  -- 提到前面限定 and (caret_pos == context.input:len())
   -- elseif context:get_option("kr_0m") then
 
+
     --------------------------------------------
-    --- 函數格式 ascii_c(key, "a-zQWERTOP")，function ascii_c(key,pat) 該函數需打開
-
-    -- --- return char(0x20~0x7f) or ""
-    -- local function ascii_c(key,pat)
-    --   local pat = pat and ('^[%s]$'):format(pat) or "^.$"
-    --   local code = key.keycode
-    --   return key.modifier <=1 and
-    --          code >=0x20 and code <=0x7f and
-    --          string.char(code):match(pat) or ""
-    -- end
-
     --- 《最主要部分》使 [a-zQWERTOP] 組字且半上屏
+    --- 函數格式 ascii_c(key, "a-zQWERTOP")，function ascii_c(key,pat) 該函數需打開
     if set_char[ascii_c(key, "a-zQWERTOP")] then
       --- 避開頭，和使一般諺文減少漢字亂跳（還是會）
       if string.match(context.input, "^$") or string.match(context.input, ";$") then
@@ -198,6 +187,7 @@ local function kr_2set_0m_choice(key,env)
 
 
     -- --- 漢字選字直接上屏，有 bug，會影響諺文選字。
+    -- --- 且詞語不能共同記憶組合出字。
     -- elseif set_number[key:repr()] and (context:has_menu()) then
     -- -- elseif set_number[ascii_c(key, "0-9")] and (context:has_menu()) then
     --   -- local in_number = string.char(key.keycode)
