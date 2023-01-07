@@ -13,14 +13,37 @@ local set_char = Set {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l"
 local set_number = Set {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"}
 
 
--- --- return char(0x20~0x7f) or ""
--- local function ascii_c(key,pat)
---   local pat = pat and ('^[%s]$'):format(pat) or "^.$"
---   local code = key.keycode
---   return key.modifier <=1 and
---          code >=0x20 and code <=0x7f and
---          string.char(code):match(pat) or ""
--- end
+--- return char(0x20~0x7f) or ""
+local function ascii_c(key,pat)
+  local pat = pat and ('^[%s]$'):format(pat) or "^.$"
+  local code = key.keycode
+  return key.modifier <=1 and
+         code >=0x20 and code <=0x7f and
+         string.char(code):match(pat) or ""
+end
+
+local function is_koreapart(c)
+  return 4352 <= c and c <= 4607    -- Hangul Jamo
+     or 12592 <= c and c <= 12687   -- Hangul Compatibility Jamo
+     or 43360 <= c and c <= 43391   -- Hangul Jamo Extended-A
+     or 44032 <= c and c <= 55295   -- 合併以下兩個
+     -- or 44032 <= c and c <= 55215   -- Hangul Syllables
+     -- or 55216 <= c and c <= 55295   -- Hangul Jamo Extended-B
+     or 65441 <= c and c <= 65500   -- Halfwidth Jamo
+end
+
+local function check_korea(text)
+  local checkkorea = true
+  -- for _, c in utf8.codes(text) do
+  for i in utf8.codes(text) do
+    local c = utf8.codepoint(text, i)
+    if not is_koreapart(c) then
+      checkkorea = false
+      return checkkorea
+    end
+  end
+  return checkkorea
+end
 
 
 local function kr_2set_0m_choice(key,env)
@@ -31,6 +54,8 @@ local function kr_2set_0m_choice(key,env)
   local o_ascii_mode = context:get_option("ascii_mode")
   local o_kr_0m = context:get_option("kr_0m")
   local o_space_mode = context:get_option("space_mode")
+
+  local hangul_b = string.sub(hangul,-6,-4) or ''  -- 確認倒數第二字是否為諺文用
 
 
   --- pass ascii_mode
@@ -64,20 +89,20 @@ local function kr_2set_0m_choice(key,env)
     return 1
 
 
-  elseif (o_kr_0m) then
+  elseif (o_kr_0m) and (caret_pos == context.input:len()) then  --第二個條件避免中途插入變到最後
   -- elseif context:get_option("kr_0m") then
 
     --------------------------------------------
     --- 函數格式 ascii_c(key, "a-zQWERTOP")，function ascii_c(key,pat) 該函數需打開
 
-    --- return char(0x20~0x7f) or ""
-    local function ascii_c(key,pat)
-      local pat = pat and ('^[%s]$'):format(pat) or "^.$"
-      local code = key.keycode
-      return key.modifier <=1 and
-             code >=0x20 and code <=0x7f and
-             string.char(code):match(pat) or ""
-    end
+    -- --- return char(0x20~0x7f) or ""
+    -- local function ascii_c(key,pat)
+    --   local pat = pat and ('^[%s]$'):format(pat) or "^.$"
+    --   local code = key.keycode
+    --   return key.modifier <=1 and
+    --          code >=0x20 and code <=0x7f and
+    --          string.char(code):match(pat) or ""
+    -- end
 
     --- 《最主要部分》使 [a-zQWERTOP] 組字且半上屏
     if set_char[ascii_c(key, "a-zQWERTOP")] then
@@ -190,24 +215,33 @@ local function kr_2set_0m_choice(key,env)
     --- 修正尾綴「;」出漢字，使其可展示選單
     elseif key:repr() == "semicolon" then
       -- local cxtil = string.len(hangul) - caret_pos
-      --- 開頭防止不 reopen 去組字
+      --- 開頭防止漢字不 reopen 去組字。
       if string.len(hangul) == 3 then  -- 3等同一個諺文單位的字符長度 -- and (caret_pos == context.input:len())
       -- if string.match(context.input, "^..$") then
         context:reopen_previous_segment()
         context.input = context.input .. ";"
         return 1
-      --- 防止前面選字後，後面不 reopen 去組字
+      --- 檢視倒數第二個字是否為諺文，如果是讓選單只選漢字，避免還要從諺文開始選。
+      elseif check_korea(hangul_b) == true then
+        context:reopen_previous_segment()
+        engine:process_key( KeyEvent("Shift+Tab") )
+        -- context:confirm_current_selection()
+        context:select(0)  -- 也可以使用
+        context.input = context.input .. ";"
+        return 1
+      --- 防止前面選字後，後面不 reopen 去組字；並且一系列漢字可一同選，非拆開。
       elseif string.match(context.input, ";[a-zQWERTOP]+$") then
       -- elseif cxtil == 1 then
         context:reopen_previous_segment()
         context.input = context.input .. ";"
         -- 測試用 engine:commit_text(caret_pos .. " ".. context.input:len()..' '..string.len(hangul))
         return 1
-      --- 防止前面為一般諺文，後面漢字不組字，並且選單只選漢字，避免還要從諺文開始選。
+      --- 防止前面為一般諺文，後面漢字不組字，並且讓選單只選漢字，避免還要從諺文開始選。
       else
         context:reopen_previous_segment()
         engine:process_key( KeyEvent("Shift+Tab") )
-        context:confirm_current_selection()
+        -- context:confirm_current_selection()
+        context:select(0)  -- 也可以使用
         context.input = context.input .. ";"
         -- 測試用 engine:commit_text(caret_pos .. " ".. context.input:len()..' '..string.len(hangul))
         return 1
