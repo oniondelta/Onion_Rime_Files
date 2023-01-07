@@ -58,6 +58,7 @@ local function kr_2set_0m_choice(key,env)
 
   --- 修正開頭輸入「數字」，不能直接上屏問題
   elseif set_number[key:repr()] and (not context:is_composing()) then
+  -- elseif set_number[ascii_c(key, "0-9")] and (not context:is_composing()) then
     engine:commit_text(key:repr())
     -- context:clear()
     return 1
@@ -80,10 +81,20 @@ local function kr_2set_0m_choice(key,env)
 
     --- 《最主要部分》使 [a-zQWERTOP] 組字且半上屏
     if set_char[ascii_c(key, "a-zQWERTOP")] then
-      context:reopen_previous_segment()
-      context.input = context.input .. ascii_c(key, "a-zQWERTOP")
-      context:confirm_current_selection()
-      return 1
+      --- 避開頭，和使一般諺文減少漢字亂跳（還是會）
+      if string.match(context.input, "^$") or string.match(context.input, ";$") then
+        -- context:select(0)  --打開，漢字會一個一個分開，不連動變換
+        context.input = context.input .. ascii_c(key, "a-zQWERTOP")
+        context:confirm_current_selection()
+        return 1
+      --- 以下為原本，上方補充漢字「;」接後續輸入，前面選字亂跑問題
+      else
+        context:reopen_previous_segment()
+        context.input = context.input .. ascii_c(key, "a-zQWERTOP")
+        -- context:confirm_current_selection()
+        context:select(0)  -- 也可以使用
+        return 1
+      end
 
     --------------------------------------------
     -- ---- 功能正常，但輸入時，錯誤日誌會報錯 char 超出範圍
@@ -151,15 +162,61 @@ local function kr_2set_0m_choice(key,env)
 
     --------------------------------------------
 
+    -- --- 漢字選字直接上屏，有 bug，會影響諺文選字。
+    -- elseif set_number[key:repr()] and (context:has_menu()) then
+    -- -- elseif set_number[ascii_c(key, "0-9")] and (context:has_menu()) then
+    --   -- local in_number = string.char(key.keycode)
+    --   local in_number = ascii_c(key, "0-9") or 1
+    --   if in_number == '0' then
+    --     in_number = 9
+    --   else
+    --     in_number = in_number - 1
+    --   end
+    --   context:select(in_number)
+    --   context:commit()
+    --   -- context.input:push('space')
+    --   -- context.input = context.input .. "\\"
+    --   -- context:confirm_previous_selection()
+    --   -- context:confirm_current_selection()
+    --   -- context:clear()
+    --   return 1
+
+
     --- 不在輸入狀態或是有選單時略過處理
     elseif (not context:is_composing()) or (context:has_menu()) then
       return 2
 
+
     --- 修正尾綴「;」出漢字，使其可展示選單
     elseif key:repr() == "semicolon" then
-      context:reopen_previous_segment()
-      context.input = context.input .. ";"
-      return 1
+      -- local cxtil = string.len(hangul) - caret_pos
+      --- 開頭防止不 reopen 去組字
+      if string.len(hangul) == 3 then  -- 3等同一個諺文單位的字符長度 -- and (caret_pos == context.input:len())
+      -- if string.match(context.input, "^..$") then
+        context:reopen_previous_segment()
+        context.input = context.input .. ";"
+        return 1
+      --- 防止前面選字後，後面不 reopen 去組字
+      elseif string.match(context.input, ";[a-zQWERTOP]+$") then
+      -- elseif cxtil == 1 then
+        context:reopen_previous_segment()
+        context.input = context.input .. ";"
+        -- 測試用 engine:commit_text(caret_pos .. " ".. context.input:len()..' '..string.len(hangul))
+        return 1
+      --- 防止前面為一般諺文，後面漢字不組字，並且選單只選漢字，避免還要從諺文開始選。
+      else
+        context:reopen_previous_segment()
+        engine:process_key( KeyEvent("Shift+Tab") )
+        context:confirm_current_selection()
+        context.input = context.input .. ";"
+        -- 測試用 engine:commit_text(caret_pos .. " ".. context.input:len()..' '..string.len(hangul))
+        return 1
+      end
+      -- --- 以下原本設定，由於各種狀況都 reopen，漢字容易亂跳
+      -- context:reopen_previous_segment()
+      -- context.input = context.input .. ";"
+      -- return 1
+
 
     --- 使「\\」可分節
     elseif key:repr() == 'backslash' then
@@ -179,6 +236,7 @@ local function kr_2set_0m_choice(key,env)
 
     --- 修正輸入途中插入「數字」，無法半上屏，需按2次 enter 之問題，改直上屏
     elseif set_number[key:repr()] then
+    -- elseif set_number[ascii_c(key, "0-9")] then
       -- context.input = context.input .. key:repr()
       -- context:confirm_current_selection()
       engine:commit_text(hangul .. key:repr())
