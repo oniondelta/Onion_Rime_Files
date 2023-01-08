@@ -40,9 +40,9 @@
 
 - Linux 和 Win 系統注意：
 
-  > Linux 反饋問題很多，其 Rime 核心 librime 過舊，librime-lua 掛件缺失！不可能回退使功能打折去符合舊版核心寫法！方案盡可能以 Mac 鼠鬚管官方最新封裝版本為實作基礎。有二個非注音方案更是使用最新 librime-lua 函數去達成某些功能，需自行更換含最新版 librime-lua 的核心才能完整運行。
+  > Linux 反饋問題很多，其 Rime 核心 librime 過舊，librime-lua 掛件缺失！不可能回退使功能打折去符合舊版核心寫法！方案盡可能以 Mac 鼠鬚管官方最新封裝版本為實作基礎。有二個非注音方案更是使用最新 librime-lua 函數去達成某些功能，需自行更換或編譯含最新版 librime-lua 的核心才能完整運行。
   
-  > 使用 Windows 小狼毫官方最新封裝版本，方案內有 rime.lua 該檔，建議更換新版 librime 核心，更換方法請見[相關說明](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E6%8E%A8%E8%96%A6-Rime-%E4%B8%BB%E7%A8%8B%E5%BC%8F%E5%AE%89%E8%A3%9D%E4%B9%8B%E7%89%88%E6%9C%AC%E5%92%8C%E6%96%B9%E6%B3%95)！早期 librime-lua 版本使用遍尋候選項會產生記憶體洩漏，更新版已解決。
+  > 使用 Windows 小狼毫官方最新封裝版本，方案內有 rime.lua 該檔，建議更換或編譯含最新版 librime-lua 的核心，更換方法請見[相關說明](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E6%8E%A8%E8%96%A6-Rime-%E4%B8%BB%E7%A8%8B%E5%BC%8F%E5%AE%89%E8%A3%9D%E4%B9%8B%E7%89%88%E6%9C%AC%E5%92%8C%E6%96%B9%E6%B3%95)！早期 librime-lua 版本使用遍尋候選項會產生記憶體洩漏，更新版已解決。
 
 ## Rime 入門需知
 
