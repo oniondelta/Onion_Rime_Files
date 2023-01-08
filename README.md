@@ -94,32 +94,30 @@
   
   > 集大成，多國語言和注音一次性混打輸入 😃！
   
-  #### ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/img/demo_bpmf_mixin.gif)
+    ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/img/demo_bpmf_mixin.gif)
   
 - 注音（洋蔥 plus 版）
 
   > 功能多，除外語還有一堆功能和細節增加，輸入手感和純注音版一樣，即使沒用外語，也推薦使用！
   
-  #### ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/img/demo_bpmf_plus.gif)
+    ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/img/demo_bpmf_plus.gif)
   
 - 注音（洋蔥 純注音 版）
   
   > 精簡功能，給新手或測試使用
   
-  #### ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/img/demo_bpmf_pure.gif)
+    ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/img/demo_bpmf_pure.gif)
  
 ## Keys
  
 - 注音（洋蔥 雙拼 版）鍵位
   > 無加 custom 可簡拼，有 custom 為一般雙拼每字須鍵兩碼（聲調可省略）
 
-  #### <img src="https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/allfiles/%E9%9B%99%E6%8B%BC%E6%B3%A8%E9%9F%B3%E9%8D%B5%E4%BD%8D%E8%AA%AA%E6%98%8E%E5%9C%96%E7%A4%BA/%E6%B3%A8%E9%9F%B3%E6%B4%8B%E8%94%A5%E9%9B%99%E6%8B%BC%E8%AA%AA%E6%98%8E.png" width = "595" alt="image" align=left />
-
-  <br><br><br><br><br><br><br><br><br><br>
+    <img src="https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/allfiles/%E9%9B%99%E6%8B%BC%E6%B3%A8%E9%9F%B3%E9%8D%B5%E4%BD%8D%E8%AA%AA%E6%98%8E%E5%9C%96%E7%A4%BA/%E6%B3%A8%E9%9F%B3%E6%B4%8B%E8%94%A5%E9%9B%99%E6%8B%BC%E8%AA%AA%E6%98%8E.png" width = "595" alt="image" /><br>
 
 - 注音（洋蔥 plus 版）鍵位
 
-  #### ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/img/bpmf_plus_keyboard.png)
+    ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/img/bpmf_plus_keyboard.png)
 
 - 注音（洋蔥 mixin 版）鍵位
 
@@ -127,19 +125,18 @@
 
   > 本人多使用「4」，因較喜歡鍵盤下排之手順，也推薦「3」
 
-  #### ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/img/bpmf_mixin_1_keyboard.png)
+    ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/img/bpmf_mixin_1_keyboard.png)
   
-  #### ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/img/bpmf_mixin_2_keyboard.png)
+    ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/img/bpmf_mixin_2_keyboard.png)
   
-  #### ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/img/bpmf_mixin_3_keyboard.png)
+    ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/img/bpmf_mixin_3_keyboard.png)
   
-  #### ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/img/bpmf_mixin_4_keyboard.png)
+    ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/img/bpmf_mixin_4_keyboard.png)
   
 - 注音洋蔥版選字鍵位
 
-  #### <img src="https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/img/bpmf_select_keys_keyboard.png" width = "595" alt="image" align=left />
+    <img src="https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/img/bpmf_select_keys_keyboard.png" width = "595" alt="image" /><br>
 
-<br><br><br><br><br><br><br><br><br>
 
 ## 贊助 Donate
 
