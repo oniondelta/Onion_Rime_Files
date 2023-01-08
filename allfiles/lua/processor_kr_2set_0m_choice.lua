@@ -8,9 +8,9 @@
 --]]
 
 
--- local set_char = Set {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}  --> {a=true,b=true...}
 local set_char = Set {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" , "Q", "W", "E", "R", "T" ,"O" ,"P"}  --> {a=true,b=true...}
-local set_number = Set {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"}
+-- local set_char = Set {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}  --> {a=true,b=true...}
+-- local set_number = Set {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"}
 
 --- return char(0x20~0x7f) or ""
 local function ascii_c(key,pat)
@@ -82,12 +82,12 @@ local function kr_2set_0m_choice(key,env)
     return 2
 
 
-  --- 修正開頭輸入「數字」，不能直接上屏問題
-  elseif set_number[key:repr()] and (not context:is_composing()) then
-  -- elseif set_number[ascii_c(key, "0-9")] and (not context:is_composing()) then
-    engine:commit_text(key:repr())
-    -- context:clear()
-    return 1
+  -- --- 修正開頭輸入「數字」，不能直接上屏問題（ schema 內可設定，故關閉）
+  -- elseif set_number[key:repr()] and (not context:is_composing()) then
+  -- -- elseif set_number[ascii_c(key, "0-9")] and (not context:is_composing()) then
+  --   engine:commit_text(key:repr())
+  --   -- context:clear()
+  --   return 1
 
 
   --- 避免中途插入碼變到最後
@@ -270,14 +270,14 @@ local function kr_2set_0m_choice(key,env)
     --   return 1
 
 
-    --- 修正輸入途中插入「數字」，無法半上屏，需按2次 enter 之問題，改直上屏
-    elseif set_number[key:repr()] then
-    -- elseif set_number[ascii_c(key, "0-9")] then
-      -- context.input = context.input .. key:repr()
-      -- context:confirm_current_selection()
-      engine:commit_text(hangul .. key:repr())
-      context:clear()
-      return 1
+    -- --- 修正輸入途中插入「數字」，無法半上屏，需按2次 enter 之問題，改直上屏（ schema 內可設定，故關閉）
+    -- elseif set_number[key:repr()] then
+    -- -- elseif set_number[ascii_c(key, "0-9")] then
+    --   -- context.input = context.input .. key:repr()
+    --   -- context:confirm_current_selection()
+    --   engine:commit_text(hangul .. key:repr())
+    --   context:clear()
+    --   return 1
 
 
     --- 增加一般韓文輸入法操作，空格上屏自動末端空一格。
