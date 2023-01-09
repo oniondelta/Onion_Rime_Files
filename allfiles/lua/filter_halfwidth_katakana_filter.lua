@@ -78,16 +78,18 @@ local function is_katapart(c)
 end
 
 local function check_kata(text)
-  local checkkata = true
+  -- local checkkata = true
   -- for _, c in utf8.codes(text) do
   for i in utf8.codes(text) do
     local c = utf8.codepoint(text, i)
     if not is_katapart(c) then
-      checkkata = false
-      return checkkata
+      -- checkkata = false
+      -- return checkkata
+      return false
     end
   end
-  return checkkata
+  -- return checkkata
+  return true
 end
 
 

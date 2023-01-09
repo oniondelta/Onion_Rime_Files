@@ -32,16 +32,14 @@ local function is_koreapart(c)
 end
 
 local function check_korea(text)
-  local checkkorea = true
   -- for _, c in utf8.codes(text) do
   for i in utf8.codes(text) do
     local c = utf8.codepoint(text, i)
     if not is_koreapart(c) then
-      checkkorea = false
-      return checkkorea
+      return false
     end
   end
-  return checkkorea
+  return true
 end
 
 
