@@ -26,7 +26,8 @@ local function en_sort_filter(input, env)
       -- local start = env.engine.context:get_preedit().sel_start
       -- local _end = env.engine.context:get_preedit().sel_end
       -- local nnn = _end - start
-      if (not string.match(input_in, ' $' )) and (not string.match(cand.text, ' ' )) then  --空格避免注音掛接出現 Bug
+      -- if (not string.match(input_in, ' $' )) then  --空格避免注音掛接出現 Bug
+      -- if (not string.match(input_in, ' $' )) and (not string.match(cand.text, ' ' )) then  --空格避免注音掛接出現 Bug
       -- if ((string.len(cand.text) >= nnn) and (not string.match(input_in, ' $' ))) then  --空格避免注音掛接出現 Bug
       -- if (string.match(cand.text, '%u' )) or ((string.len(cand.text) >= nnn) and (not string.match(input_in, ' $' ))) then  --空格避免注音掛接出現 Bug
         table.insert(cands, cand)
@@ -44,7 +45,7 @@ local function en_sort_filter(input, env)
       --   table.insert(u, cand)
       -- else
       --   table.insert(l, cand)
-      end
+      -- end
     end
 
     if #cands ~=0 then

@@ -39,13 +39,13 @@ engine:
     - punct_translator
 
 speller:
-  alphabet: "abcdefghijklmnopqrstuvwxyz-.;/'"
+  alphabet: "abcdefghijklmnopqrstuvwxyz-.;/',"
   # initials: "abcdefghijklmnopqrstuvwxyz-./'"
   # finals: ";"
   delimiter: " "
-  algebra:
+  # algebra:
     # - derive/^\|$/ /
-    - derive/^([a-z];)$/$1;/
+    # - derive/^([a-z];)$/$1;/
     # - derive/^([a-z]);$/$1/ #會透到小寫
     # - abbrev/^([a-z]);$/$1/ #無法透出組字
     # - fuzz/^([a-z]);$/$1/ #無法實現

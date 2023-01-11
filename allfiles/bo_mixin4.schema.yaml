@@ -70,6 +70,7 @@ engine:
     # - lua_filter@missing_mark_filter  #補上標點符號因直上和 opencc 衝突沒附註之選項
     - lua_filter@en_sort_filter
     - lua_filter@p_convert_japan_filter
+    - lua_filter@p_convert_english_filter
     - simplifier@emoji_switch
     - simplifier
     - simplifier@back_mark
@@ -170,6 +171,9 @@ en_sort_filter:
 
 p_convert_japan_filter:
   tags: [ japan ]
+
+p_convert_english_filter:
+  tags: [ easy_en ]
 
 # mix_cf2_miss_filter:
 #   tags: [ punct, abc, reverse2_lookup ]

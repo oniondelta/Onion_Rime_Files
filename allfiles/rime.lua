@@ -42,6 +42,8 @@
 --      - lua_filter@array30_spaceup_filter          --（關） 行列30開關一二碼按空格後，是否直上或可能有選單。
 --      - lua_filter@en_sort_filter                  --（引lua資料夾）（easy_en_super和其掛接）如同英漢字典一樣排序，候選項重新排序。開關（en_sort）
 --      - lua_filter@kr_hnc_1m_filter                --（引lua資料夾）（hangeul_hnc）韓語遮屏只剩一個選項。開關（kr_1m）
+--      - lua_filter@convert_english_filter          --（引lua資料夾）easy 英文尾綴「;」或「;;」生成全大寫或首字母大寫。
+--      - lua_filter@p_convert_english_filter        --（引lua資料夾）同 convert_english_filter，掛接方案用。
 --      - lua_filter@convert_japan_filter            --（引lua資料夾）日文出羅馬字、全形羅馬字、半形片假名、全片假名、全平假名。
 --      - lua_filter@p_convert_japan_filter          --（引lua資料夾）同 convert_japan_filter，掛接方案用。
 --      - lua_filter@halfwidth_katakana_filter       --（關）（jpnin1）片假名後附加半形片假名。選單顯示太雜亂，故不用。
@@ -191,6 +193,15 @@ charset_filter2 = filter_charset_filter2.charset_filter2
 local c_j_filter = require("filter_convert_japan_filter")
 convert_japan_filter = c_j_filter.convert_japan_filter
 p_convert_japan_filter = c_j_filter.p_convert_japan_filter
+
+
+--- easy 英文尾綴「;」或「;;」生成全大寫或首字母大寫。
+-- convert_english_filter：主方案用。
+-- p_convert_english_filter：掛接方案用。
+-- 用 filter 方式。
+local c_e_filter = require("filter_convert_english_filter")
+convert_english_filter = c_e_filter.convert_english_filter
+p_convert_english_filter = c_e_filter.p_convert_english_filter
 
 
 -- --- halfwidth_katakana_filter (jpnin1)

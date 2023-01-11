@@ -24,6 +24,7 @@ switches:
 engine:
   filters:
     - lua_filter@en_sort_filter  #lua_filter 一定要放在 uniquifier 之前，因某些計算會先算，如抓取候選條，會去重不到。
+    - lua_filter@convert_english_filter
     - reverse_lookup_filter@e_reverse_lookup
     - uniquifier  #需放在 filters 最後，否則有些選項無法去重。
   processors:
@@ -53,12 +54,15 @@ engine:
 en_sort_filter:
   tags: [ abc ]
 
+convert_english_filter:
+  tags: [ abc ]
+
 abc_segmentor:  #不「tag」可直接附加在「abc」上
   extra_tags:
     - easy_en_upper
 
 speller:
-  alphabet: "abcdefghijklmnopqrstuvwxyz-.;/'"
+  alphabet: "abcdefghijklmnopqrstuvwxyz-.;/',"
   # initials: "abcdefghijklmnopqrstuvwxyz-./'"
   delimiter: " "
   algebra:
