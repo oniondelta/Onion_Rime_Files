@@ -17,25 +17,26 @@ local function en_sort_filter(input, env)
     --   prefix_n = 0
     -- end
     local cands = {}
-    local u = {}
+    -- local u = {}
     -- local l = {}
     for cand in input:iter() do
       -- local en_preedit = cand.preedit  -- 轉換後輸入碼，如：ㄅㄆㄇㄈ、1-2⇡9⇡
       -- local nnn = cand._end - cand.start
       -- local nnn = caret_pos - prefix_n
-      local start = env.engine.context:get_preedit().sel_start
-      local _end = env.engine.context:get_preedit().sel_end
-      local nnn = _end - start
-      if ((string.len(cand.text) >= nnn) and (not string.match(input_in, ' $' ))) then  --空格避免注音掛接出現 Bug
+      -- local start = env.engine.context:get_preedit().sel_start
+      -- local _end = env.engine.context:get_preedit().sel_end
+      -- local nnn = _end - start
+      if (not string.match(input_in, ' $' )) and (not string.match(cand.text, ' ' )) then  --空格避免注音掛接出現 Bug
+      -- if ((string.len(cand.text) >= nnn) and (not string.match(input_in, ' $' ))) then  --空格避免注音掛接出現 Bug
       -- if (string.match(cand.text, '%u' )) or ((string.len(cand.text) >= nnn) and (not string.match(input_in, ' $' ))) then  --空格避免注音掛接出現 Bug
         table.insert(cands, cand)
         -- table.insert(cands, {text = cand.text , comment = cand.comment, index = #cands})
         -- table.insert(cands, {text = preedit.t .. cand.comment:sub(2), comment = cand.text, index = #cands})
         -- table.insert(cands, {text = cand.text , comment = cand.comment})
 
-      elseif (string.match(cand.text, '%u' )) then
-      -- elseif (string.match(cand.text, '%u' )) or (string.match(input_in, "'" )) then
-        table.insert(u, cand)
+      -- elseif (string.match(cand.text, '%u' )) then
+      -- -- elseif (string.match(cand.text, '%u' )) or (string.match(input_in, "'" )) then
+      --   table.insert(u, cand)
 
       -- elseif (string.match(en_preedit, " " )) then  --放在注音掛接，可能會衝突？
       --   table.insert(u, cand)
@@ -47,7 +48,7 @@ local function en_sort_filter(input, env)
     end
 
     if #cands ~=0 then
-      table.sort(cands, function (a, b) return a.text == b.text and string.len(a.text) < string.len(b.text) or a.text < b.text end )
+      table.sort(cands, function (a, b) return a.text == b.text and string.len(a.text) < string.len(b.text) or a.text < b.text end)
       -- table.sort(cands, function (a, b) return a.text:lower() == b.text:lower() and string.len(a.text:lower()) < string.len(b.text:lower()) or a.text:lower() < b.text:lower() end )
       -- table.sort(cands, function (a, b) return a.text:lower() == b.text:lower() and utf8.len(a.text) > utf8.len(b.text) or a.text:lower() < b.text:lower() end )
       -- table.sort(cands, function (a, b) return a.text:byte > b.text:byte end )
@@ -73,9 +74,9 @@ local function en_sort_filter(input, env)
     --   yield(Candidate("word", cand.start, cand._end, cand.text .. " ", cand.comment))
     -- end
 
-    for _, cand in ipairs(u) do
-      yield(cand)
-    end
+    -- for _, cand in ipairs(u) do
+    --   yield(cand)
+    -- end
 
     -- for _, cand in ipairs(l) do
     --   yield(cand)
