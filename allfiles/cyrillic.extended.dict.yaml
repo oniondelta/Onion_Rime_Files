@@ -4,7 +4,7 @@
 # 『洋蔥』製作
 ---
 name: cyrillic.extended
-version: "201903"
+version: "202301"
 sort: by_weight
 use_preset_vocabulary: false
 #max_phrase_length: 7
@@ -12,6 +12,5 @@ use_preset_vocabulary: false
 import_tables:
   - cyrillic
   - phrases.cyr_all
+  - space  #空格，特殊方案用
 ...
-##### 以下一個為空格轉寫，使掛載語言能空格後繼續輸入！！！ #####
- 	|

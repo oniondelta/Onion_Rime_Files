@@ -5,7 +5,7 @@
 # 中文字詞標註使用拼音
 ---
 name: bopomo_onionplus.extended
-version: "202209"
+version: "202301"
 sort: by_weight
 vocabulary: essay-zh-hant-mc
 #use_preset_vocabulary: true
@@ -15,7 +15,6 @@ import_tables:
   - mixin_bpmf  #內嵌注音文，混打。
   - phrases.chtp
 #  - phrases.cht
+  - space  #空格，特殊方案用
 ...
-##### 測試調用 #####
- 	|
 ##### 以下可自行添加詞句 #####

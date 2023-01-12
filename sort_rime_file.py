@@ -71,6 +71,8 @@ shutil.copyfile("./allfiles/cangjie5.schema.yaml", "./sort_rime/注音洋蔥mixi
 shutil.copyfile("./allfiles/cyrillic.dict.yaml", "./sort_rime/注音洋蔥mixin版/cyrillic.dict.yaml")
 shutil.copyfile("./allfiles/cyrillic.extended.dict.yaml", "./sort_rime/注音洋蔥mixin版/cyrillic.extended.dict.yaml")
 shutil.copyfile("./allfiles/cyrillic.schema.yaml", "./sort_rime/注音洋蔥mixin版/cyrillic.schema.yaml")
+shutil.copyfile("./allfiles/space.dict.yaml", "./sort_rime/注音洋蔥mixin版/space.dict.yaml")
+shutil.copyfile("./allfiles/space_f.dict.yaml", "./sort_rime/注音洋蔥mixin版/space_f.dict.yaml")
 
 # shutil.copyfile("./allfiles/easy_en_super.dict.yaml", "./sort_rime/注音洋蔥mixin版/easy_en_super.dict.yaml")
 # shutil.copyfile("./allfiles/easy_en_super_original.dict.yaml", "./sort_rime/注音洋蔥mixin版/easy_en_super_original.dict.yaml")
@@ -199,6 +201,8 @@ shutil.copyfile("./allfiles/jpnin1.schema.yaml", "./sort_rime/注音洋蔥plus�
 shutil.copyfile("./allfiles/latinin1.dict.yaml", "./sort_rime/注音洋蔥plus版/latinin1.dict.yaml")
 shutil.copyfile("./allfiles/latinin1.extended.dict.yaml", "./sort_rime/注音洋蔥plus版/latinin1.extended.dict.yaml")
 shutil.copyfile("./allfiles/latinin1.schema.yaml", "./sort_rime/注音洋蔥plus版/latinin1.schema.yaml")
+shutil.copyfile("./allfiles/space.dict.yaml", "./sort_rime/注音洋蔥plus版/space.dict.yaml")
+shutil.copyfile("./allfiles/space_f.dict.yaml", "./sort_rime/注音洋蔥plus版/space_f.dict.yaml")
 
 shutil.copyfile("./allfiles/phrases.cht.dict.yaml", "./sort_rime/注音洋蔥plus版/phrases.cht.dict.yaml")
 shutil.copyfile("./allfiles/phrases.chtp.dict.yaml", "./sort_rime/注音洋蔥plus版/phrases.chtp.dict.yaml")
@@ -304,6 +308,7 @@ shutil.copyfile("./allfiles/Mount_bopomo.extended.dict.yaml", "./sort_rime/ocm/o
 shutil.copyfile("./allfiles/Mount_bopomo.schema.yaml", "./sort_rime/ocm/ocm_mixin/Mount_bopomo.schema.yaml")
 shutil.copyfile("./allfiles/Mount_ocm.extended.dict.yaml", "./sort_rime/ocm/ocm_mixin/Mount_ocm.extended.dict.yaml")
 shutil.copyfile("./allfiles/Mount_ocm.schema.yaml", "./sort_rime/ocm/ocm_mixin/Mount_ocm.schema.yaml")
+shutil.copyfile("./allfiles/space_f.dict.yaml", "./sort_rime/ocm/ocm_mixin/space_f.dict.yaml")
 
 shutil.copyfile("./allfiles/ocm_mixin_cyrillic.schema.yaml", "./sort_rime/ocm/ocm_mixin/ocm_mixin_cyrillic.schema.yaml")
 shutil.copyfile("./allfiles/ocm_mixin_fullshape.schema.yaml", "./sort_rime/ocm/ocm_mixin/ocm_mixin_fullshape.schema.yaml")
@@ -373,6 +378,7 @@ shutil.copyfile("./allfiles/phrases.jp_hkkseg.dict.yaml", "./sort_rime/ocm/ocm_m
 # shutil.copyfile("./allfiles/phrases.jp_hkmoreup_w.dict.yaml", "./sort_rime/ocm/ocm_mixin/phrases.jp_hkmoreup_w.dict.yaml")
 shutil.copyfile("./allfiles/cangjie5.dict.yaml", "./sort_rime/ocm/ocm_mixin/cangjie5.dict.yaml")
 shutil.copyfile("./allfiles/cangjie5.schema.yaml", "./sort_rime/ocm/ocm_mixin/cangjie5.schema.yaml")
+shutil.copyfile("./allfiles/space.dict.yaml", "./sort_rime/ocm/ocm_mixin/space.dict.yaml")
 
 shutil.copyfile("./allfiles/symbols-mark.dict.yaml", "./sort_rime/ocm/ocm_mixin/symbols-mark.dict.yaml")
 shutil.copyfile("./allfiles/symbols-mark.schema.yaml", "./sort_rime/ocm/ocm_mixin/symbols-mark.schema.yaml")
@@ -404,6 +410,7 @@ shutil.copyfile("./allfiles/Mount_bopomo.schema.yaml", "./sort_rime/ocm/ocm_plus
 shutil.copyfile("./allfiles/ocm_mixin_jp.dict.yaml", "./sort_rime/ocm/ocm_plus/ocm_mixin_jp.dict.yaml")
 shutil.copyfile("./allfiles/ocm_mixin_kr.dict.yaml", "./sort_rime/ocm/ocm_plus/ocm_mixin_kr.dict.yaml")
 shutil.copyfile("./allfiles/ocm_mixin_la.dict.yaml", "./sort_rime/ocm/ocm_plus/ocm_mixin_la.dict.yaml")
+shutil.copyfile("./allfiles/space_f.dict.yaml", "./sort_rime/ocm/ocm_plus/space_f.dict.yaml")
 
 shutil.copyfile("./allfiles/dif1_cy.schema.yaml", "./sort_rime/ocm/ocm_plus/dif1_cy.schema.yaml")
 shutil.copyfile("./allfiles/dif1_fs.schema.yaml", "./sort_rime/ocm/ocm_plus/dif1_fs.schema.yaml")
@@ -470,6 +477,7 @@ shutil.copyfile("./allfiles/phrases.jp_hkkseg.dict.yaml", "./sort_rime/ocm/ocm_p
 # shutil.copyfile("./allfiles/phrases.jp_hkmoreup_w.dict.yaml", "./sort_rime/ocm/ocm_plus/phrases.jp_hkmoreup_w.dict.yaml")
 shutil.copyfile("./allfiles/cangjie5.dict.yaml", "./sort_rime/ocm/ocm_plus/cangjie5.dict.yaml")
 shutil.copyfile("./allfiles/cangjie5.schema.yaml", "./sort_rime/ocm/ocm_plus/cangjie5.schema.yaml")
+shutil.copyfile("./allfiles/space.dict.yaml", "./sort_rime/ocm/ocm_plus/space.dict.yaml")
 
 
 #複製檔案(ocm_mount)

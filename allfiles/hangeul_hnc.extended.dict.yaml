@@ -4,7 +4,7 @@
 # 『洋蔥』製作
 ---
 name: hangeul_hnc.extended
-version: "202203"
+version: "202301"
 sort: by_weight #original
 use_preset_vocabulary: false
 # max_phrase_length: 7
@@ -12,7 +12,9 @@ use_preset_vocabulary: false
 import_tables:
   - hangeul_hnc
   - hangeul_hnc_hanja
+  - space  #空格，特殊方案用
 ...
+##### 補充標點 #####
 ,	,
 .	.
- 	|
+##################
