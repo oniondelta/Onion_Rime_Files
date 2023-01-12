@@ -5,54 +5,31 @@ easy 英文尾綴「;」或「;;」生成全大寫或首字母大寫。
 
 local function english_s(en)
   if en == "" then return "" end
-  en = string.gsub(en, ",", " ")
-  return en
-end
-
-local function english_2(en)
-  if string.match(en, "^[/.'-][a-z]") then
-    en = string.upper(string.sub(en,1,2)) .. string.sub(en,3)
-  end
-  return en
+  return string.gsub(en, ",", " ")
 end
 
 local function english_u1(en)
   if en == "" then return "" end
-  en = string.upper(string.sub(en,1,1)) .. string.sub(english_2(english_s(en)),2)
+  -- en = string.upper(string.sub(en,1,1)) .. string.sub(english_2(english_s(en)),2)
+  en = english_s(en)
+  return en:gsub("^%l",string.upper)
+end
+
+local function english_2(en)
+  if en == "" then return "" end
+  -- if string.match(en, "^[/.'-][a-z]") then
+  --   en = string.upper(string.sub(en,1,2)) .. string.sub(en,3)
+  -- end
+  en = en:gsub("[/-]%l",string.upper)
+  en = en:gsub("^['.]%l",string.upper)
   return en
 end
 
 local function english_s2u(en)
   if en == "" then return "" end
   en = english_u1(en)
-  en = string.gsub(en, " a", " A")
-  en = string.gsub(en, " b", " B")
-  en = string.gsub(en, " c", " C")
-  en = string.gsub(en, " d", " D")
-  en = string.gsub(en, " e", " E")
-  en = string.gsub(en, " f", " F")
-  en = string.gsub(en, " g", " G")
-  en = string.gsub(en, " h", " H")
-  en = string.gsub(en, " i", " I")
-  en = string.gsub(en, " j", " J")
-  en = string.gsub(en, " k", " K")
-  en = string.gsub(en, " l", " L")
-  en = string.gsub(en, " m", " M")
-  en = string.gsub(en, " n", " N")
-  en = string.gsub(en, " o", " O")
-  en = string.gsub(en, " p", " P")
-  en = string.gsub(en, " q", " Q")
-  en = string.gsub(en, " r", " R")
-  en = string.gsub(en, " s", " S")
-  en = string.gsub(en, " t", " T")
-  en = string.gsub(en, " u", " U")
-  en = string.gsub(en, " v", " V")
-  en = string.gsub(en, " w", " W")
-  en = string.gsub(en, " x", " X")
-  en = string.gsub(en, " y", " Y")
-  en = string.gsub(en, " z", " Z")
-  en = string.gsub(en, ",", " ")
-  return en
+  en = english_2(en)
+  return en:gsub(" %l",string.upper)
 end
 
 ----------------------------------------------------------------------------------------
