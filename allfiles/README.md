@@ -145,8 +145,10 @@
 ├─ punct_ovff.dict.yaml                       
 ├─ punct_ovff.schema.yaml                     
 ├─ rime.lua                                   「 lua 程式碼檔」  （引入用，主要程式文件在 lua 資料夾中）
-├─ symbols-mark.dict.yaml                     
-├─ symbols-mark.schema.yaml                   
+├─ space.dict.yaml                            一些掛載方案需有空格編碼，使主方案〈注音 plus space 方案〉可出空格，獨立字典檔好開關。對其他方案在某些操作下，掛載方案上屏可少一鍵。
+├─ space_f.dict.yaml                          同上，但為全形空白，針對〈掛載用 全形字母 方案〉。
+├─ symbols-mark.dict.yaml                     （未引用）
+├─ symbols-mark.schema.yaml                   （未引用）
 ├─ symbols_bpmf.dict.yaml                     〈掛載用 系列符號（注音） 方案〉「主字詞典」  （注音方案掛載）
 ├─ symbols_bpmf.schema.yaml                   〈掛載用 系列符號（注音） 方案〉「設定檔」  （注音方案掛載）
 ├─ symbols_double_bpmf.schema.yaml            〈掛載用 系列符號（雙拼注音） 方案〉「設定檔」  （雙拼注音方案掛載）
