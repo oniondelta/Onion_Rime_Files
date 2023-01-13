@@ -64,7 +64,7 @@ local function p_convert_english_filter(input, env)
   local c2 , s2 = string.match(o_input, "[.3]([-/a-z.,']+)(; ?)$")
   local c3 , s3 = string.match(o_input, "[.3]([-/a-z.,']+)(;/ ?)$")
   local c4 , s4 = string.match(o_input, "[.3]([-/a-z.,']+)(;' ?)$")
-  local c5 = string.match(o_input, "[.3]([-/a-z.,']+)$")
+  local c5 = string.match(o_input, "[.3]([-/a-z.,']+) ?$")
 
   for cand in input:iter() do
     yield(cand)
