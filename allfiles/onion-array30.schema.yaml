@@ -4,7 +4,7 @@
 schema:
   schema_id: onion-array30
   name: "▦ 行列３０（洋蔥版）"
-  version: "202212"
+  version: "202301"
   author:
     - 洋蔥 <deltazonetw@gmail.com>
   description: |
@@ -421,7 +421,7 @@ recognizer:
     wsymbols: "^w[0-9]$" #（可用 symbols 更簡單實現，但沒有開頭提示）
     reverse2_lookup: "^=[-.,;/0-9a-z]*'?$"
     reverse3_lookup: "^==[a-z,./; ]*'?$"
-    lua: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$|`[';/]?[a-z]*$|`[0-9./-]*$|`[xucoe][0-9a-z]+$"
+    lua: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$|`[a-z]*$|`[';/][a-z,./'-]*$|`[0-9./-]*$|`[xucoe][0-9a-z]+$"
     # lua: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|`[';/]?[a-z]*$|`[0-9./-]*$|`[xcoe][0-9a-z]+$"
     # lua: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|`[';a-z0-9./-]*$"
     # email: "^[a-z][-_.0-9a-z]*@.*$"

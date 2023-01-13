@@ -3,34 +3,10 @@
 easy 英文尾綴「;」或「;;」生成全大寫或首字母大寫。
 --]]
 
-local function english_s(en)
-  if en == "" then return "" end
-  return string.gsub(en, ",", " ")
-end
-
-local function english_u1(en)
-  if en == "" then return "" end
-  -- en = string.upper(string.sub(en,1,1)) .. string.sub(english_2(english_s(en)),2)
-  en = english_s(en)
-  return en:gsub("^%l",string.upper)
-end
-
-local function english_2(en)
-  if en == "" then return "" end
-  -- if string.match(en, "^[/.'-][a-z]") then
-  --   en = string.upper(string.sub(en,1,2)) .. string.sub(en,3)
-  -- end
-  en = en:gsub("[/-]%l",string.upper)
-  en = en:gsub("^['.]%l",string.upper)
-  return en
-end
-
-local function english_s2u(en)
-  if en == "" then return "" end
-  en = english_u1(en)
-  en = english_2(en)
-  return en:gsub(" %l",string.upper)
-end
+local f_e_s = require("f_components/f_english_style")
+local english_s = f_e_s.english_s
+local english_u1 = f_e_s.english_u1
+local english_s2u = f_e_s.english_s2u
 
 ----------------------------------------------------------------------------------------
 -- 主方案用
@@ -46,6 +22,7 @@ local function convert_english_filter(input, env)
   local c2 = string.match(o_input, "^([-/a-z.,']+);$")
   local c3 = string.match(o_input, "^([-/a-z.,']+);/$")
   local c4 = string.match(o_input, "^([-/a-z.,']+);'$")
+  local c5 = string.match(o_input, "^([-/a-z.,']+)$")
 
   for cand in input:iter() do
     yield(cand)
@@ -54,18 +31,20 @@ local function convert_english_filter(input, env)
   if caret_pos == #o_input and (c1~=nil) then
     -- local es = _end - start - 1  --減一為扣掉「;」一個尾綴
     -- local c1 = string.sub(c1, -es)
-    yield(Candidate("en", start, _end, string.upper(english_s(c1)), ""))
+    yield(Candidate("en", start, _end, string.upper(english_s(c1)), "〔全大寫〕"))
   elseif caret_pos == #o_input and (c2~=nil) then
     -- local es = _end - start - 1  --減二為扣掉「;;」兩個尾綴
     -- local c2 = string.sub(c2, -es)
-    yield(Candidate("en", start, _end, english_u1(c2), ""))
+    yield(Candidate("en", start, _end, english_u1(c2), "〔開頭大寫〕"))
   elseif caret_pos == #o_input and (c3~=nil) then
     -- local es = _end - start - 1  --減二為扣掉「;;」兩個尾綴
     -- local c3 = string.sub(c3, -es)
-    yield(Candidate("en", start, _end, english_s(c3), ""))
+    yield(Candidate("en", start, _end, english_s(c3), "〔全小寫〕"))
     -- yield(Candidate("en", start, _end, '字串總數：'..#o_input..' 開始：'..start..' 末尾數：'.._end..' 游標數：'..caret_pos, "〔測試〕"))  --測試用
   elseif caret_pos == #o_input and (c4~=nil) then
-    yield(Candidate("en", start, _end, english_s2u(c4), ""))
+    yield(Candidate("en", start, _end, english_s2u(c4), "〔間隔後大寫〕"))
+  elseif caret_pos == #o_input and (c5~=nil) and (not context:has_menu()) then
+    yield(Candidate("en", start, _end, english_s(c5), "〔補空〕"))
   end
 
 end
@@ -85,28 +64,33 @@ local function p_convert_english_filter(input, env)
   local c2 , s2 = string.match(o_input, "[.3]([-/a-z.,']+)(; ?)$")
   local c3 , s3 = string.match(o_input, "[.3]([-/a-z.,']+)(;/ ?)$")
   local c4 , s4 = string.match(o_input, "[.3]([-/a-z.,']+)(;' ?)$")
+  local c5 = string.match(o_input, "[.3]([-/a-z.,']+)$")
 
   for cand in input:iter() do
     yield(cand)
   end
 
   if caret_pos == #o_input and (c1~=nil) then
-    local english = Candidate("en", start, _end, string.upper(english_s(c1)), "")
+    local english = Candidate("en", start, _end, string.upper(english_s(c1)), "〔全大寫〕")
     english.preedit = tips_en .. c1 .. s1
     yield(english)
   elseif caret_pos == #o_input and (c2~=nil) then
-    local english = Candidate("en", start, _end, english_u1(c2), "")
+    local english = Candidate("en", start, _end, english_u1(c2), "〔開頭大寫〕")
     english.preedit = tips_en .. c2 .. s2
     yield(english)
   elseif caret_pos == #o_input and (c3~=nil) then
-    local english = Candidate("en", start, _end, english_s(c3), "")
+    local english = Candidate("en", start, _end, english_s(c3), "〔全小寫〕")
     english.preedit = tips_en .. c3 .. s3
     yield(english)
   elseif caret_pos == #o_input and (c4~=nil) then
-    local english = Candidate("en", start, _end, english_s2u(c4), "")
+    local english = Candidate("en", start, _end, english_s2u(c4), "〔間隔後大寫〕")
     english.preedit = tips_en .. c4 .. s4
     yield(english)
     -- local english = Candidate("en", start, _end, '字串總數：'..#o_input..' 開始：'..start..' 末尾數加一：'.._end..' 游標數：'..caret_pos, "〔測試〕")  --測試用
+  elseif caret_pos == #o_input and (c5~=nil) and (not context:has_menu()) then
+    local english = Candidate("en", start, _end, english_s(c5), "〔補空〕")
+    english.preedit = tips_en .. c5
+    yield(english)
   end
 
 end

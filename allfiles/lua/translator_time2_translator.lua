@@ -99,6 +99,8 @@ local english_1_2 = f_e_s.english_1_2
 local english_3_4 = f_e_s.english_3_4
 local english_5_6 = f_e_s.english_5_6
 local english_f_ul = f_e_s.english_f_ul
+local english_s = f_e_s.english_s
+local english_s2u = f_e_s.english_s2u
 
 ----------------------------------------------------------------------------------------
 --- Unicode 等各種字符編碼轉換
@@ -1491,30 +1493,30 @@ local function t2_translator(input, seg)
       -- -- yield(Candidate("date", seg.start, seg._end, "┃ ○○○〔數字〕" , ""))
 
       local date_table = {
-        -- { '〔半角〕', '`' }
-        { '  f〔年月日〕  ym〔年月〕  md〔月日〕', '⓪' }
-      , { '  y〔年〕  m〔月〕  d〔日〕  w〔週〕', '①' }
-      , { '  n〔時:分〕  t〔時:分:秒〕', '②' }
-      , { '  fw〔年月日週〕  mdw〔月日週〕', '③' }
-      , { '  fn〔年月日 時:分〕  ft〔年月日 時:分:秒〕', '④' }
-      , { '  p〔程式格式〕  z〔時區〕  s〔節氣〕  l〔月相〕', '⑤' }
-      , { '  ○○○〔數字〕', '⑥' }
-      , { '  ○/○/○〔 ○ 年 ○ 月 ○ 日〕  ○/○〔 ○ 月 ○ 日〕', '⑦' }
-      , { '  ○-○-○〔○年○月○日〕  ○-○〔○月○日〕', '⑧' }
-      , { '  / [a-z]+〔小寫字母〕', '⑨' }
-      , { '  ; [a-z]+〔大寫字母〕', '⑩' }
-      , { '  \' [a-z]+〔開頭大寫字母〕', '⑪' }
-      , { '  e [0-9a-f]+〔Percent/URL encoding〕', '⑫' }
-      , { '  u [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)', '⑬' }
-      , { '  x [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)', '⑭' }
-      , { '  c [0-9]+〔內碼十進制 Dec〕', '⑮' }
-      , { '  o [0-7]+〔內碼八進制 Oct〕', '⑯' }
-      , { '  v〔版本資訊〕', '⑰' }
-      , { '===========  結束  ===========    ', '⑱' }
-      , { '', '⑲' }
-      , { '', '⑳' }
+        -- { "〔半角〕", "`" }
+        { "  f〔年月日〕  ym〔年月〕  md〔月日〕", "⓪" }
+      , { "  y〔年〕  m〔月〕  d〔日〕  w〔週〕", "①" }
+      , { "  n〔時:分〕  t〔時:分:秒〕", "②" }
+      , { "  fw〔年月日週〕  mdw〔月日週〕", "③" }
+      , { "  fn〔年月日 時:分〕  ft〔年月日 時:分:秒〕", "④" }
+      , { "  p〔程式格式〕  z〔時區〕  s〔節氣〕  l〔月相〕", "⑤" }
+      , { "  ○○○〔數字〕", "⑥" }
+      , { "  ○/○/○〔 ○ 年 ○ 月 ○ 日〕  ○/○〔 ○ 月 ○ 日〕", "⑦" }
+      , { "  ○-○-○〔○年○月○日〕  ○-○〔○月○日〕", "⑧" }
+      , { "  / [a-z ' , . / - ]+〔小寫字母〕", "⑨" }
+      , { "  ; [a-z ' , . / - ]+〔大寫字母〕", "⑩" }
+      , { "  \' [a-z ' , . / - ]+〔開頭大寫字母〕", "⑪" }
+      , { "  e [0-9a-f]+〔Percent/URL encoding〕", "⑫" }
+      , { "  u [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)", "⑬" }
+      , { "  x [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)", "⑭" }
+      , { "  c [0-9]+〔內碼十進制 Dec〕", "⑮" }
+      , { "  o [0-7]+〔內碼八進制 Oct〕", "⑯" }
+      , { "  v〔版本資訊〕", "⑰" }
+      , { "===========  結束  ===========    ", "⑱" }
+      , { "", "⑲" }
+      , { "", "⑳" }
 
-      -- , { '〔夜思‧李白〕', '床前明月光，疑是地上霜。\r舉頭望明月，低頭思故鄉。' }
+      -- , { "〔夜思‧李白〕", "床前明月光，疑是地上霜。\r舉頭望明月，低頭思故鄉。" }
       }
       for k, v in ipairs(date_table) do
         local cand = Candidate('date', seg.start, seg._end, v[2], ' ' .. v[1])
@@ -1580,9 +1582,9 @@ local function t2_translator(input, seg)
       return
     end
 
-    local englishout1 = string.match(input, "'//(%l+)$")
+    local englishout1 = string.match(input, "'//([%l.,/'-]+)$")
     if (englishout1~=nil) then
-      yield(Candidate("englishtype", seg.start, seg._end, englishout1 , "〔一般字母小寫〕"))
+      yield(Candidate("englishtype", seg.start, seg._end, english_s(englishout1) , "〔一般字母小寫〕"))
       yield(Candidate("englishtype", seg.start, seg._end, english_f_l(englishout1) , "〔全形字母小寫〕"))
       -- yield(Candidate("englishtype", seg.start, seg._end, english_1(englishout1) , "〔數學字母大寫〕"))
       yield(Candidate("englishtype", seg.start, seg._end, english_2(englishout1) , "〔數學字母小寫〕"))
@@ -1596,19 +1598,21 @@ local function t2_translator(input, seg)
       return
     end
 
-    local englishout2 = string.match(input, "'/'(%l+)$")
+    local englishout2 = string.match(input, "'/'([%l.,/'-]+)$")
     if (englishout2~=nil) then
-      yield(Candidate("englishtype", seg.start, seg._end, string.upper(string.sub(englishout2,1,1)) .. string.sub(englishout2,2,-1) , "〔一般字母開頭大寫〕"))
+      -- yield(Candidate("englishtype", seg.start, seg._end, string.upper(string.sub(englishout2,1,1)) .. string.sub(englishout2,2,-1) , "〔一般字母開頭大寫〕"))
+      yield(Candidate("englishtype", seg.start, seg._end, english_s2u(englishout2) , "〔一般字母開頭大寫〕"))
       yield(Candidate("englishtype", seg.start, seg._end, english_f_ul(englishout2) , "〔全形字母開頭大寫〕"))
       yield(Candidate("englishtype", seg.start, seg._end, english_1_2(englishout2) , "〔數學字母開頭大寫〕"))
-      yield(Candidate("englishtype", seg.start, seg._end, english_3_4(englishout2) , "〔數學字母開頭大寫〕"))
-      yield(Candidate("englishtype", seg.start, seg._end, english_5_6(englishout2) , "〔帶圈字母開頭大寫〕"))
+      yield(Candidate("englishtype", seg.start, seg._end, english_3_4(englishout2) , "〔帶圈字母開頭大寫〕"))
+      yield(Candidate("englishtype", seg.start, seg._end, english_5_6(englishout2) , "〔括號字母大寫〕"))
       return
     end
 
-    local englishout3 = string.match(input, "'/;(%l+)$")
+    local englishout3 = string.match(input, "'/;([%l.,/'-]+)$")
     if (englishout3~=nil) then
-      yield(Candidate("englishtype", seg.start, seg._end, string.upper(englishout3) , "〔一般字母大寫〕"))
+      local englishout3 = string.upper(englishout3)
+      yield(Candidate("englishtype", seg.start, seg._end, english_s(englishout3) , "〔一般字母大寫〕"))
       yield(Candidate("englishtype", seg.start, seg._end, english_f_u(englishout3) , "〔全形字母大寫〕"))
       yield(Candidate("englishtype", seg.start, seg._end, english_1(englishout3) , "〔數學字母大寫〕"))
       yield(Candidate("englishtype", seg.start, seg._end, english_3(englishout3) , "〔帶圈字母大寫〕"))
