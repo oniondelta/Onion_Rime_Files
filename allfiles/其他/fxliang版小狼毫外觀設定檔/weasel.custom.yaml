@@ -5,6 +5,7 @@ patch:
   "style/color_scheme": lost_temple_shadow #lost_temple #purity_of_essence #purity_of_form #mac_lamb_for_win #ink #aqua
 #  "style/horizontal": true
   "style/color_font": false #true #emoji用彩色字型
+  "style/blur_window": true #使字較模糊看起來較柔順。
   "style/font_face": Noto Sans CJK TC DemiLight #Noto Sans Mono CJK TC #Noto Sans CJK TC Light #HanaMinA #Regular
   "style/font_point": 14 #13 #16
   "style/label_font_face": Noto Sans Mono CJK TC #Noto Sans CJK TC Light #HanaMinA #Regular
