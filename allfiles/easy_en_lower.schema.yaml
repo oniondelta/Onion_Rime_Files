@@ -67,6 +67,8 @@ speller:
   delimiter: " "
   algebra:
     - derive/^\|$/ /
+    - xform|@|\.\/|
+
     # - derive/$/;/
     # - xform|^([-.'/])$|$1@|
     # - derive/(?<=[^@])$/;/

@@ -6,7 +6,7 @@ number_translator: 將 `'/` + 阿拉伯數字 和 英文字母 各種轉譯
 
 local function english_s(en)
   if en == "" then return "" end
-  return string.gsub(en, ",", " ")
+  return string.gsub(en, "%./", " ")
 end
 
 local function english_u1(en)
@@ -63,7 +63,7 @@ local function english_1(en)
   en = string.gsub(en, "X", "𝕏")
   en = string.gsub(en, "Y", "𝕐")
   en = string.gsub(en, "Z", "ℤ")
-  en = string.gsub(en, ",", " ")
+  en = string.gsub(en, "%./", " ")
   return en
 end
 
@@ -95,7 +95,7 @@ local function english_2(en)
   en = string.gsub(en, "x", "𝕩")
   en = string.gsub(en, "y", "𝕪")
   en = string.gsub(en, "z", "𝕫")
-  en = string.gsub(en, ",", " ")
+  en = string.gsub(en, "%./", " ")
   return en
 end
 
@@ -127,7 +127,8 @@ local function english_3(en)
   en = string.gsub(en, "X", "Ⓧ")
   en = string.gsub(en, "Y", "Ⓨ")
   en = string.gsub(en, "Z", "Ⓩ")
-  en = string.gsub(en, ",", " ")
+  en = string.gsub(en, "%./", "　")
+  en = string.gsub(en, " ", "　")
   return en
 end
 
@@ -159,7 +160,8 @@ local function english_4(en)
   en = string.gsub(en, "x", "ⓧ")
   en = string.gsub(en, "y", "ⓨ")
   en = string.gsub(en, "z", "ⓩ")
-  en = string.gsub(en, ",", " ")
+  en = string.gsub(en, "%./", "　")
+  en = string.gsub(en, " ", "　")
   return en
 end
 
@@ -191,7 +193,8 @@ local function english_5(en)
   en = string.gsub(en, "X", "🄧")
   en = string.gsub(en, "Y", "🄨")
   en = string.gsub(en, "Z", "🄩")
-  en = string.gsub(en, ",", " ")
+  en = string.gsub(en, "%./", "　")
+  en = string.gsub(en, " ", "　")
   return en
 end
 
@@ -223,7 +226,8 @@ local function english_6(en)
   en = string.gsub(en, "x", "⒳")
   en = string.gsub(en, "y", "⒴")
   en = string.gsub(en, "z", "⒵")
-  en = string.gsub(en, ",", " ")
+  en = string.gsub(en, "%./", "　")
+  en = string.gsub(en, " ", "　")
   return en
 end
 
@@ -255,7 +259,7 @@ local function english_7(en)
   en = string.gsub(en, "X", "🅇")
   en = string.gsub(en, "Y", "🅈")
   en = string.gsub(en, "Z", "🅉")
-  en = string.gsub(en, ",", " ")
+  en = string.gsub(en, "%./", "　")
   return en
 end
 
@@ -287,7 +291,7 @@ local function english_8(en)
   en = string.gsub(en, "X", "🅧")
   en = string.gsub(en, "Y", "🅨")
   en = string.gsub(en, "Z", "🅩")
-  en = string.gsub(en, ",", " ")
+  en = string.gsub(en, "%./", "　")
   return en
 end
 
@@ -319,7 +323,7 @@ local function english_9(en)
   en = string.gsub(en, "X", "🆇")
   en = string.gsub(en, "Y", "🆈")
   en = string.gsub(en, "Z", "🆉")
-  en = string.gsub(en, ",", " ")
+  en = string.gsub(en, "%./", "　")
   return en
 end
 
@@ -351,7 +355,9 @@ local function english_f_u(en)
   en = string.gsub(en, "X", "Ｘ")
   en = string.gsub(en, "Y", "Ｙ")
   en = string.gsub(en, "Z", "Ｚ")
-  en = string.gsub(en, ",", "　")
+  en = string.gsub(en, "%./", "　")
+  en = string.gsub(en, " ", "　")
+  en = string.gsub(en, ",", "，")
   en = string.gsub(en, "%.", "．")
   en = string.gsub(en, "-", "－")
   en = string.gsub(en, "/", "／")
@@ -387,7 +393,9 @@ local function english_f_l(en)
   en = string.gsub(en, "x", "ｘ")
   en = string.gsub(en, "y", "ｙ")
   en = string.gsub(en, "z", "ｚ")
-  en = string.gsub(en, ",", "　")
+  en = string.gsub(en, "%./", "　")
+  en = string.gsub(en, " ", "　")
+  en = string.gsub(en, ",", "，")
   en = string.gsub(en, "%.", "．")
   en = string.gsub(en, "-", "－")
   en = string.gsub(en, "/", "／")
@@ -423,7 +431,7 @@ local function english_s_u(en)
   en = string.gsub(en, "X", "x")
   en = string.gsub(en, "Y", "ʏ")
   en = string.gsub(en, "Z", "ᴢ")
-  en = string.gsub(en, ",", " ")
+  en = string.gsub(en, "%./", " ")
   return en
 end
 
