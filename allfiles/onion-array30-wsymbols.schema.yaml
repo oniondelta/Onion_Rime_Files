@@ -54,7 +54,7 @@ speller:
 translator:
   dictionary: onion-array30-wsymbols
   prism: onion-array30-wsymbols
-  enable_charset_filter: false #true
+  enable_charset_filter: true
   enable_user_dict: false #true
   enable_sentence: false #true ##此為自動造句，為打詞時，使用全拼。
   enable_encoder: false #true ##打詞時，可使用簡略打法，簡略打法的規則在字典中設定。
