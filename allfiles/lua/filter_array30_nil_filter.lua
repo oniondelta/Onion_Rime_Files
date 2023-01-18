@@ -47,6 +47,10 @@ local function array30_nil_filter(input, env)
   local p_key = env.engine.context.input
   local array30_r = string.match(p_key, '^==')
   -- local array30_input = env.engine.context.input  -- 原始未轉換輸入碼
+  local _end2 = env.engine.context:get_preedit().sel_end + 2
+  local array30_nil_cand = Candidate("array30nil", 0, _end2, "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
+  -- local array30_nil_cand = Candidate("array30nil", 0, string.len(array30_input) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
+  -- local array30_nil_cand = Candidate("array30nil", 0, string.len(commit) , "", "⎔")  -- 選擇空碼"⎔"效果為卡住，但 preedit 顯示會有問題
   if (array30_r) then
     for cand in input:iter() do
       if (string.match(cand.text, '^⎔%d$' )) then
@@ -67,15 +71,12 @@ local function array30_nil_filter(input, env)
         -- local text = cand.text  -- 原版樣式
         -- yield(Candidate("cap", 0, string.len(commit) , text, cand.comment))  -- 原版樣式
   --]]
-        local _end2 = env.engine.context:get_preedit().sel_end + 2
         -- local array30_nil_preedit = cand:get_genuine().preedit  -- 效用同下，獲取原 preedit
-        local array30_preedit = cand.preedit  -- 轉換後輸入碼，如：ㄅㄆㄇㄈ、1-2⇡9⇡
+        -- local array30_preedit = cand.preedit  -- 轉換後輸入碼，如：ㄅㄆㄇㄈ、1-2⇡9⇡
         -- local array30_input = env.engine.context.input  -- 原始未轉換輸入碼
-        local array30_nil_cand = Candidate("array30nil", 0, _end2, "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
-        -- local array30_nil_cand = Candidate("array30nil", 0, string.len(array30_input) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
-        -- local array30_nil_cand = Candidate("array30nil", 0, string.len(commit) , "", "⎔")  -- 選擇空碼"⎔"效果為卡住，但 preedit 顯示會有問題
-        array30_nil_cand.preedit = array30_preedit
+        -- array30_nil_cand.preedit = array30_preedit
         -- array30_nil_cand.preedit = xform_array30_input(array30_input)  -- 使用 gsub 函數轉換，上列為不使用 gsub 轉換更精簡寫法
+        array30_nil_cand.preedit = cand.preedit
         yield(array30_nil_cand)
       else
         yield(cand)
