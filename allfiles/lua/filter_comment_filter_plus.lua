@@ -9,6 +9,26 @@
 --   return cf
 -- end
 
+----------------
+
+local change_comment = require("filter_cand/change_comment")
+
+----------------
+local function comment_filter_plus(inp,env)
+  local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
+  for cand in inp:iter() do
+    --  s_c_f_p_s true 時 清除 comment
+    yield( s_c_f_p_s and change_comment(cand,"") or cand )
+  end
+end
+----------------
+return comment_filter_plus
+----------------
+
+
+
+--- 以下舊的寫法（備份參考）
+--[[
 local function comment_filter_plus(input, env)
   local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
   -- local find_prefix = env.engine.context.input
@@ -35,3 +55,4 @@ local function comment_filter_plus(input, env)
 end
 
 return comment_filter_plus
+--]]

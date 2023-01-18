@@ -5,6 +5,25 @@
 --]]
 
 
+----------------
+
+local drop_cand = require("filter_cand/drop_cand")
+
+----------------
+local function charset_filter2(inp, env)
+  local c_f2_s = env.engine.context:get_option("character_range_bhjm")
+  local tran = c_f2_s and Translation(drop_cand, inp, '᰼᰼') or inp
+  for cand in tran:iter() do
+    yield(cand)
+  end
+end
+----------------
+return { charset_filter2 = charset_filter2 }
+----------------
+
+
+
+
 -- charset2 = {
 --  ["Deletesymbol"] = { first = 0x1C3C } }
 
@@ -40,6 +59,8 @@
 
 
 
+--- 以下舊的寫法（備份參考）
+--[[
 local function charset_filter2(input, env)
 -- local function filter2(input, env)
   local c_f2_s = env.engine.context:get_option("character_range_bhjm")
@@ -63,3 +84,4 @@ end
 
 return { charset_filter2 = charset_filter2 }
 -- return filter2
+--]]

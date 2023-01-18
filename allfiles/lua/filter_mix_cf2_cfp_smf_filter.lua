@@ -37,6 +37,44 @@ end
 合併 charset_filter2 和 comment_filter_plus 和 symbols_mark_filter，三個 lua filter 太耗效能。
 沒用到 ocm_mixin 方案時，ReverseDb("build/symbols-mark.reverse.bin")會找不到。
 --]]
+
+----------------
+
+local drop_cand = require("filter_cand/drop_cand")
+local change_comment = require("filter_cand/change_comment")
+
+----------------
+local function mix_cf2_cfp_smf_filter(inp, env)
+  local c_f2_s = env.engine.context:get_option("character_range_bhjm")
+  local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
+  local b_k = env.engine.context:get_option("back_mark")
+  local tran = c_f2_s and Translation(drop_cand, inp, '᰼᰼') or inp
+  for cand in tran:iter() do
+    yield( not s_c_f_p_s and b_k and change_comment( cand, cand.comment .. xform_mark(ocmdb:lookup(cand.text)) )
+        or s_c_f_p_s and b_k and change_comment( cand, xform_mark(ocmdb:lookup(cand.text)) )
+        or s_c_f_p_s and not b_k and change_comment( cand, "" )
+        -- or not s_c_f_p_s and not b_k and cand  --效果同下，省略
+        or cand )
+  end
+end
+----------------
+return { mix_cf2_cfp_smf_filter = mix_cf2_cfp_smf_filter }
+-- return { filter = charset_filter } --可變更名稱
+-- return mix_cf2_cfp_smf_filter -- 無法
+
+--[[ 導出帶環境初始化的組件。
+需要兩個屬性：
+ - init: 指向初始化函數
+ - func: 指向實際函數
+--]]
+-- return { init = init, func = filter }
+----------------
+
+
+
+
+--- 以下舊的寫法（備份參考）
+--[[
 local function mix_cf2_cfp_smf_filter(input, env)
   local c_f2_s = env.engine.context:get_option("character_range_bhjm")
   local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
@@ -104,12 +142,4 @@ local function mix_cf2_cfp_smf_filter(input, env)
 end
 
 return { mix_cf2_cfp_smf_filter = mix_cf2_cfp_smf_filter }
--- return { filter = charset_filter } --可變更名稱
--- return mix_cf2_cfp_smf_filter -- 無法
-
---[[ 導出帶環境初始化的組件。
-需要兩個屬性：
- - init: 指向初始化函數
- - func: 指向實際函數
 --]]
--- return { init = init, func = filter }

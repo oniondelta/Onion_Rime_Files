@@ -3,6 +3,39 @@
 （bopomo_onionplus 和 bo_mixin 全系列）
 合併 charset_filter2 和 missing_mark_filter，兩個 lua filter 太耗效能。
 --]]
+
+----------------
+
+local drop_cand = require("filter_cand/drop_cand")
+local change_comment = require("filter_cand/change_comment")
+
+----------------
+local function mix_cf2_miss_filter(inp, env)
+  local c_f2_s = env.engine.context:get_option("character_range_bhjm")
+  local p_key = env.engine.context.input
+  local addcomment1 = string.match(p_key, '=%.$')
+  local addcomment2 = string.match(p_key, '[][]$')
+  local tran = c_f2_s and Translation(drop_cand, inp, '᰼᰼') or inp
+  for cand in tran:iter() do
+    if (addcomment1) then
+      yield( string.match(cand.text, '^。$') and change_comment(cand,"〔句點〕") or cand )
+    elseif (addcomment2) then
+      yield( string.match(cand.text, '^〔$') and change_comment(cand,"〔六角括號〕")
+          or string.match(cand.text, '^〕$') and change_comment(cand,"〔六角括號〕")
+          or cand )
+    else
+      yield(cand)
+    end
+  end
+end
+----------------
+return mix_cf2_miss_filter
+----------------
+
+
+
+--- 以下舊的寫法（備份參考）
+--[[
 local function mix_cf2_miss_filter(input, env)
   local c_f2_s = env.engine.context:get_option("character_range_bhjm")
   local p_key = env.engine.context.input
@@ -68,3 +101,4 @@ local function mix_cf2_miss_filter(input, env)
 end
 
 return mix_cf2_miss_filter
+--]]

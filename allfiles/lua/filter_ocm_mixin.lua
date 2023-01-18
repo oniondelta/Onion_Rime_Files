@@ -6,14 +6,54 @@
 故改用新版 lua 之引入 opencc 方法。
 --]]
 
+----------------
+
+local drop_cand = require("filter_cand/drop_cand")
+local change_comment = require("filter_cand/change_comment")
+
+----------------
 local function xform_mark(inp)
   if inp == "" then return "" end
   inp = string.gsub(inp, "@@+", "") --@@@@
   inp = string.gsub(inp, "@", " ")
   return inp
 end
+----------------
+local function ocm_mixin_filter(inp, env)
+  local c_f2_s = env.engine.context:get_option("character_range_bhjm")
+  local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
+  local b_k = env.engine.context:get_option("back_mark")
+  local tran = c_f2_s and Translation(drop_cand, inp, '᰼᰼') or inp
+  -- local bm_opencc = {}
+  local bm_opencc = Opencc("back_mark.json") or {''}
+  for cand in tran:iter() do
+    -- local b_mark = {}
+    local b_mark = bm_opencc:convert_word(cand.text) or {''}
+    yield( not s_c_f_p_s and b_k and change_comment(cand, cand.comment .. xform_mark(b_mark[1]))
+        or s_c_f_p_s and b_k and change_comment(cand, xform_mark(b_mark[1]))
+        or s_c_f_p_s and not b_k and change_comment(cand, "")
+        -- or not s_c_f_p_s and not b_k and cand  --效果同下，省略
+        or cand )
+  end
+end
+----------------
+return { ocm_mixin_filter = ocm_mixin_filter }
+-- return { filter = charset_filter } --可變更名稱
+-- return mix_cf2_cfp_smf_filter -- 無法
+
+--[[ 導出帶環境初始化的組件。
+需要兩個屬性：
+ - init: 指向初始化函數
+ - func: 指向實際函數
+--]]
+-- return { init = init, func = filter }
+----------------
 
 
+
+
+--- 以下舊的寫法（備份參考）
+--[[
 local function ocm_mixin_filter(input, env)
   local c_f2_s = env.engine.context:get_option("character_range_bhjm")
   local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
@@ -89,12 +129,4 @@ local function ocm_mixin_filter(input, env)
 end
 
 return { ocm_mixin_filter = ocm_mixin_filter }
--- return { filter = charset_filter } --可變更名稱
--- return mix_cf2_cfp_smf_filter -- 無法
-
---[[ 導出帶環境初始化的組件。
-需要兩個屬性：
- - init: 指向初始化函數
- - func: 指向實際函數
 --]]
--- return { init = init, func = filter }
