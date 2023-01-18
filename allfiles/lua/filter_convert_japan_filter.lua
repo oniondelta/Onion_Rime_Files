@@ -14,7 +14,7 @@ local halfwidth_kata_t = c_k.halfwidth_kata_t
 local kata_t = c_k.kata_t
 local hira_t = c_k.hira_t
 
-local change_preedit = require("filter_cand/change_preedit")
+-- local change_preedit = require("filter_cand/change_preedit")
 
 ----------------------------------------------------------------------------------------
 -- 主方案用
@@ -72,8 +72,12 @@ local function p_convert_japan_filter(input, env)
     local roma_f = Candidate("jp", start, _end, fullshape_t(c), "〔全形羅馬字〕")
     -- roma.preedit = tips_jp .. c .. s
     -- roma_f.preedit = tips_jp .. c .. s
-    yield( change_preedit(roma, jp_p) )
-    yield( change_preedit(roma_f, jp_p) )
+    -- yield( change_preedit(roma, jp_p) )
+    -- yield( change_preedit(roma_f, jp_p) )
+    roma.preedit = jp_p
+    roma_f.preedit = jp_p
+    yield(roma)
+    yield(roma_f)
     local hw = halfwidth_kata_t(c)
     if not string.match(hw, "%l") then
       local hwkata = Candidate("jp", start, _end, hw, "〔半形片假名〕")
@@ -82,13 +86,21 @@ local function p_convert_japan_filter(input, env)
       -- hwkata.preedit = tips_jp .. c .. s
       -- kata.preedit = tips_jp .. c .. s
       -- hira.preedit = tips_jp .. c .. s
-      yield( change_preedit(hwkata, jp_p) )
-      yield( change_preedit(kata, jp_p) )
-      yield( change_preedit(hira, jp_p) )
+      -- yield( change_preedit(hwkata, jp_p) )
+      -- yield( change_preedit(kata, jp_p) )
+      -- yield( change_preedit(hira, jp_p) )
+      hwkata.preedit = jp_p
+      kata.preedit = jp_p
+      hira.preedit = jp_p
+      yield(hwkata)
+      yield(kata)
+      yield(hira)
     else
       local no_kana = Candidate("jp", start, _end, "", "〔該拼寫無假名〕")
       -- no_kana.preedit = tips_jp .. c .. s
-      yield( change_preedit(no_kana, jp_p) )
+      -- yield( change_preedit(no_kana, jp_p) )
+      no_kana.preedit = jp_p
+      yield(no_kana)
     end
 
   else

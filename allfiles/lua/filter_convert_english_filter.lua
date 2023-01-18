@@ -8,7 +8,7 @@ local english_s = f_e_s.english_s
 local english_u1 = f_e_s.english_u1
 local english_s2u = f_e_s.english_s2u
 
-local change_preedit = require("filter_cand/change_preedit")
+-- local change_preedit = require("filter_cand/change_preedit")
 
 ----------------------------------------------------------------------------------------
 -- 主方案用
@@ -76,25 +76,30 @@ local function p_convert_english_filter(input, env)
   if caret_pos ~= #o_input then
   elseif (c1~=nil) then
     local english = Candidate("en", start, _end, string.upper(english_s(c1)), "〔全大寫〕")
-    -- english.preedit = tips_en .. c1 .. s1
-    yield( change_preedit(english, tips_en .. c1 .. s1) )
+    english.preedit = tips_en .. c1 .. s1
+    yield(english)
+    -- yield( change_preedit(english, tips_en .. c1 .. s1) )
   elseif (c2~=nil) then
     local english = Candidate("en", start, _end, english_u1(c2), "〔開頭大寫〕")
-    -- english.preedit = tips_en .. c2 .. s2
-    yield( change_preedit(english, tips_en .. c2 .. s2) )
+    english.preedit = tips_en .. c2 .. s2
+    yield(english)
+    -- yield( change_preedit(english, tips_en .. c2 .. s2) )
   elseif (c3~=nil) then
     local english = Candidate("en", start, _end, english_s(c3), "〔全小寫〕")
-    -- english.preedit = tips_en .. c3 .. s3
-    yield( change_preedit(english, tips_en .. c3 .. s3) )
+    english.preedit = tips_en .. c3 .. s3
+    yield(english)
+    -- yield( change_preedit(english, tips_en .. c3 .. s3) )
   elseif (c4~=nil) then
     local english = Candidate("en", start, _end, english_s2u(c4), "〔間隔後大寫〕")
-    -- english.preedit = tips_en .. c4 .. s4
-    yield( change_preedit(english, tips_en .. c4 .. s4) )
+    english.preedit = tips_en .. c4 .. s4
+    yield(english)
+    -- yield( change_preedit(english, tips_en .. c4 .. s4) )
     -- local english = Candidate("en", start, _end, '字串總數：'..#o_input..' 開始：'..start..' 末尾數加一：'.._end..' 游標數：'..caret_pos, "〔測試〕")  --測試用
   elseif (c5~=nil) and (not context:has_menu()) then
     local english = Candidate("en", start, _end, english_s(c5), "〔補空〕")
-    -- english.preedit = tips_en .. c5 .. s5
-    yield( change_preedit(english, tips_en .. c5 .. s5) )
+    english.preedit = tips_en .. c5 .. s5
+    yield(english)
+    -- yield( change_preedit(english, tips_en .. c5 .. s5) )
   end
 
 end
