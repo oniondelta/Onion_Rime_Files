@@ -45,8 +45,8 @@ end
    end
  end
 -----------
-local function clear_comment(cand)
-  cand:get_genuine().comment = ""
+local function clear_comment(cand,comment)
+  cand:get_genuine().comment = comment
   return cand
 end
 
@@ -58,7 +58,8 @@ local mix_cf2_cfp_filter(inp,env)
   
   for cand in tran:iter() do
     --  s_c_f_p_s true 時 清除 comment
-    yield( s_c_f_p_s and clear_comment(cand) or cand )
+    yield( s_c_f_p_s and clear_comment(cand,"") or cand )
   end
 end
+
 return mix_cf2_cfp_filter
