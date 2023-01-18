@@ -36,5 +36,29 @@ local function mix_cf2_cfp_filter(input, env)
     end
   end
 end
+-----
+ local function dorp_cand(tran,mstr)
+   for cand in tran:iter() do
+     if not cand.text:match(mstr) then
+       yield(cand)
+     end
+   end
+ end
+-----------
+local function clear_comment(cand)
+  cand:get_genuine().comment = ""
+  return cand
+end
 
+local mix_cf2_cfp_filter(inp,env)
+  local c_f2_s = env.engine.context:get_option("character_range_bhjm")
+  local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
+  -- 當 c_f2_s true  去掉 cand.text 有'᰼᰼' 的cand
+  local tran =  c_f2_s and Translation(drop_cand, inp, '᰼᰼') or inp
+  
+  for cand in tran:iter() do
+    --  s_c_f_p_s true 時 清除 comment
+    yield( s_c_f_p_s and clear_comment(cand) or cand )
+  end
+end
 return mix_cf2_cfp_filter
