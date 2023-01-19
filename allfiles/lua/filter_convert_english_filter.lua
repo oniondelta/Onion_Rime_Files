@@ -99,7 +99,8 @@ local function p_convert_english_filter(input, env)
     local mstr , cp = o_input:match("[.3]([-/a-z.,']+)([;/']*) ?$")  -- 取代 s1~ s5
     local cp_tab= english_pattern[cp]
     if cp_tab then
-      yield( Candidate("en", start, _end, cp_tab.func(mstr) , cp.tab.comment) )
+      local e_cand = Candidate("en", start, _end, cp_tab.func(mstr) , cp.tab.comment)
+      yield( chang_preedit(e_cand, tips_en .. mstr .. cp) )
     end
   end
 --[[
