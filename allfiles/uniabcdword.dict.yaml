@@ -4,7 +4,7 @@
 # 201707把前面有「,」的打井字號！
 ---
 name: uniabcdword
-version: "202312"
+version: "202407"
 sort: original
 use_preset_vocabulary: false
 #max_phrase_length: 7
@@ -40,6 +40,7 @@ use_preset_vocabulary: false
 棜	tuvb
 淤	wfvb
 淤	wuvb
+柺	tod
 ### 補非 CJK 缺碼 ###
 㸜	gnri
 㸜	gnbi
