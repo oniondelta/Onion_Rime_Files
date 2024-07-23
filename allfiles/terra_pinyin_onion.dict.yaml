@@ -37,7 +37,8 @@
 #              「擡(抬)」←《前者已在日常不用，一般字典也少收含此字之詞彙，使用後者》
 #              「唸(念)」「棱(稜)」「泄(洩)」←《 字典中存有兩者之詞彙，待攷 》
 #              「痹(痺)」「鍼(針)」←《 中醫常用前者，且字典中存有兩者之詞彙 》（“痺”改設權重比高）
-#              「脣(唇)」←《 前者為標準字，但後者太常用，把“脣”詞彙增補“唇” 》（“唇”改設權重比高）
+#              「脣(唇)」←《 前者為標準字，但後者太常用，把“脣”和“唇”詞彙互相增補 》（“唇”改設權重比高）
+#              「晒(曬)」←《 前者為標準字，但後者太常用，把“晒”和“曬”詞彙互相增補 》（“曬”設權重比高）
 #              「涌(湧)」←《 地名和字典中有的保留前者，其餘使用後者 》
 #              「鮎(鯰)」←《 日語有用到前者，有方案包含日文 》
 #              「喫(吃)」「鉢(缽)」←《 主要選擇用後者，但前者偶會在特殊名詞或外國名用到 》
@@ -132,6 +133,7 @@
 #    詞句中，「懲」日常發音常會誤發為「cheng3」，故皆補齊「cheng2」「cheng3」。
 #    詞句中，「痙」日常發音常會誤發為「jing1」，臺灣標準為「jing4」，故皆補齊「jing1」「jing4」。
 #    詞句中，「孿」臺灣字典發音為「luan2」，又音為「lvan2」，故皆補齊「luan2」「lvan2」。
+#    詞句中，「脂」臺灣日常慣用語音為「zhi3」，臺灣標準為「zhi1」，除「胭脂」「脂粉」兩詞只標註「zhi1」外，其他皆補齊「zhi1」「zhi3」。
 #    預計比對「輕聲和一聲」變音。
 #
 #  〈2020修改字詞彙發音〉：
@@ -2318,6 +2320,8 @@ min_phrase_weight: 100
 咁	han2	0%
 咁	gan4	0%
 菍	cong1	0%
+菹	ju4	0%
+擸	la4	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -56279,6 +56283,7 @@ min_phrase_weight: 100
 不食人間煙火	bu4 shi2 ren2 jian1 yan1 huo3
 不飽和	bu4 bao3 he2
 不飽和脂肪酸	bu4 bao3 he2 zhi1 fang2 suan1
+不飽和脂肪酸	bu4 bao3 he2 zhi3 fang2 suan1
 不騰騰	bu4 teng2 teng2
 不高的東西	bu4 gao1 de5 dong1 xi1
 不高興	bu4 gao1 xing4
@@ -62706,6 +62711,7 @@ min_phrase_weight: 100
 動脈硬化	dong4 mo4 ying4 hua4
 動脈粥樣硬化	dong4 mai4 zhou1 yang4 ying4 hua4
 動脈脂肪沉積	dong4 mai4 zhi1 fang2 chen2 ji1
+動脈脂肪沉積	dong4 mai4 zhi3 fang2 chen2 ji1
 動脈輸血	dong4 mai4 shu1 xie3
 動脈輸血	dong4 mai4 shu1 xue4
 動興	dong4 xing4
@@ -67989,6 +67995,7 @@ min_phrase_weight: 100
 塗漿檯	tu2 jiang4 tai2
 塗潦	tu2 lao4
 塗脂抹粉	tu2 zhi1 mo3 fen3
+塗脂抹粉	tu2 zhi3 mo3 fen3
 塘坳	tang2 ao1
 塞上曲	sai4 shang4 qu3
 塞下曲	sai4 xia4 qu3
@@ -68352,6 +68359,7 @@ min_phrase_weight: 100
 多個	duo1 ge5
 多值函數	duo1 zhi2 han2 shu4
 多元不飽和脂肪酸	duo1 yuan2 bu4 bao3 he2 zhi1 fang2 suan1
+多元不飽和脂肪酸	duo1 yuan2 bu4 bao3 he2 zhi3 fang2 suan1
 多凶少吉	duo1 xiong1 shao3 ji2
 多共少	duo1 gong4 shao3
 多分	duo1 fen4
@@ -77339,6 +77347,7 @@ min_phrase_weight: 100
 抹牌道字	mo3 pai2 dao4 zi4
 抹稀泥	mo3 xi1 ni2
 抹粉施脂	mo3 fen3 shi1 zhi1
+抹粉施脂	mo3 fen3 shi1 zhi3
 抹胸	mo4 xiong1
 抹胸	mo3 xiong1
 抹脖子	mo3 bo2 zi5
@@ -78933,6 +78942,7 @@ min_phrase_weight: 100
 搽灰抹土	cha2 hui1 mo3 tu3
 搽灰抹粉	cha2 hui1 mo3 fen3
 搽脂抹粉	cha2 zhi1 mo3 fen3
+搽脂抹粉	cha2 zhi3 mo3 fen3
 摀蓋	wu3 gai4
 摀蓋	wu1 gai4	80%
 摁釘兒	en4 ding1 er5	80%
@@ -79867,6 +79877,7 @@ min_phrase_weight: 100
 擦拳磨掌	ca1 quan2 mo2 zhang3
 擦掌磨拳	ca1 zhang3 mo2 quan2
 擦脂抹粉	ca1 zhi1 mo3 fen3
+擦脂抹粉	ca1 zhi3 mo3 fen3
 擦面子	ca1 mian4 zi5
 擦黑兒	ca1 hei1 er5	80%
 擦黑兒	ca1 hei1 er2
@@ -89158,6 +89169,7 @@ min_phrase_weight: 100
 燕翼	yan4 yi4
 燕翼詒謀	yan4 yi4 yi2 mou2
 燕脂	yan1 zhi1
+燕脂	yan1 zhi3
 燕台	yan1 tai2
 燕臺	yan1 tai2
 燕舞鶯啼	yan4 wu3 ying1 ti2
@@ -97975,6 +97987,7 @@ min_phrase_weight: 100
 能量守恆	neng2 liang4 shou3 heng2
 能量守恆定律	neng2 liang4 shou3 heng2 ding4 lv4
 脂麻	zhi1 ma2
+脂麻	zhi3 ma2
 脅從	xie2 zong4
 脅從	xie2 cong2
 脅息	xie2 xi2
@@ -98051,14 +98064,18 @@ min_phrase_weight: 100
 脣似抹硃	chun2 si4 mo3 zhu1
 脣腐齒落	chun2 fu3 chi3 luo4
 脣若塗脂	chun2 ruo4 tu2 zhi3
+脣若塗脂	chun2 ruo4 tu2 zhi1
 脣若抹硃	chun2 ruo4 mo3 zhu1
 脣若施脂	chun2 ruo4 shi1 zhi3
+脣若施脂	chun2 ruo4 shi1 zhi1
 脣齒相依	chun2 chi3 xiang1 yi1
 唇似抹硃	chun2 si4 mo3 zhu1
 唇腐齒落	chun2 fu3 chi3 luo4
 唇若塗脂	chun2 ruo4 tu2 zhi3
+唇若塗脂	chun2 ruo4 tu2 zhi1
 唇若抹硃	chun2 ruo4 mo3 zhu1
 唇若施脂	chun2 ruo4 shi1 zhi3
+唇若施脂	chun2 ruo4 shi1 zhi1
 脩脯	xiu1 fu3
 脫不了身	tuo1 bu4 liao3 shen1
 脫帽露頂	tuo1 mao4 lu4 ding3
@@ -111937,6 +111954,7 @@ min_phrase_weight: 100
 飽和狀態	bao3 he2 zhuang4 tai4
 飽和空氣	bao3 he2 kong1 qi4
 飽和脂肪	bao3 he2 zhi1 fang2
+飽和脂肪	bao3 he2 zhi3 fang2
 飽和脂肪酸	bao3 he2 zhi1 fang2 suan1
 飽和脂肪酸	bao3 he2 zhi3 fang2 suan1
 飽和蒸汽	bao3 he2 zheng1 qi4
@@ -113661,4 +113679,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 113664 #####
+##### @結束 END - 113682 #####
