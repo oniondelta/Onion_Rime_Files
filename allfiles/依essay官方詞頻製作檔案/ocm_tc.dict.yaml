@@ -4,7 +4,7 @@
 # 字碼有少部分重複，但勿用excel去刪除重複的，因會把相通的字給一並刪除，如：aduu->[朗]和[朗]會給一並的刪除！
 ---
 name: ocm_tc
-version: "202302"
+version: "202407"
 sort: original
 use_preset_vocabulary: false
 #max_phrase_length: 7
@@ -324,6 +324,7 @@ use_preset_vocabulary: false
 鍰	aegu	508
 鏽	aeh	680
 釽	aei	323
+鐞	aeia	474
 銉	aej	406
 鋹	aek	415
 鈍	ael	900
@@ -404,7 +405,7 @@ use_preset_vocabulary: false
 鉳	affr	18
 鑅	afft	261
 錟	affv	526
-鐞	afia	474
+#錯碼# 鐞	afia	474
 鈣	afk	1954
 鋠	afk
 鎒	afka	231
