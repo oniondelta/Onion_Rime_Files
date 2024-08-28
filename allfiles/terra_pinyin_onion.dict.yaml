@@ -2341,6 +2341,9 @@ min_phrase_weight: 100
 擘	bai1	0%
 糶	diao4	0%
 粜	diao4	0%
+冼	xi3	0%
+率	lve	0%
+樘	cheng1	50%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -22392,7 +22395,7 @@ min_phrase_weight: 100
 樕	su4
 樖	ke1
 樗	chu1
-樘	cheng3	50%
+# 樘	cheng3	50%
 樘	tang2	50%
 標	biao1
 樚	du2
@@ -57864,6 +57867,7 @@ min_phrase_weight: 100
 任你好漢沒處躲	ren4 ni3 hao3 han4 mei2 chu4 duo3
 任便	ren4 bian4
 任公	ren2 gong1
+任公	ren4 gong1
 任務	ren4 wu4
 任囂	ren2 xiao1
 任性妄為	ren4 xing4 wang4 wei2
@@ -61719,6 +61723,7 @@ min_phrase_weight: 100
 判若雲泥	pan4 ruo4 yun2 ni2
 判處	pan4 chu3
 判酩酊	pan4 ming2 ding3
+判酩酊	pan4 ming2 ding1
 別傳	bie2 zhuan4
 別創新格	bie2 chuang4 xin1 ge2
 別勁	bie2 jin4
@@ -113712,4 +113717,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 113715 #####
+##### @結束 END - 113720 #####
