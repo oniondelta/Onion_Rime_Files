@@ -151,6 +151,6 @@ patch:
 
 
 ##### 新版詞條自動補全 enable_completion 和 enable_word_completion 修正 #####
-  translator/enable_completion: true  #次新版該條為長詞補全，最新版改於下方控制，最新版於 script_translator 下該條只補全單字音節。
+  translator/enable_completion: true  #次新版該條目為詞條自動補全，最新版改於下方條目控制，最新版於 script_translator 時，該條目只補全單字音節。
   translator/enable_word_completion: false  # 大於 4 音節的詞條自動補全，librime > 1.11.2
 ############################
