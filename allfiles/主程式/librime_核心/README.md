@@ -6,9 +6,9 @@
 
 ### Version Info
 
-- librime 1.11.2 9fa2bbc
+- librime 1.11.2  (9fa2bbc)
 
-- librime-lua #287
+- librime-lua #287  (fa6563c)
 
 ### plugins
 
