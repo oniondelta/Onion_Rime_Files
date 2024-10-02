@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onion_double
   name: "☆注音(洋蔥雙拼版)☆"
-  version: "202405"
+  version: "202410"
   author:
     - 『洋蔥』
   description: |
@@ -379,105 +379,11 @@ punctuator:
 key_binder:
   import_preset: default
   bindings:
-### 避 RIME 原設定鍵位衝突 ###
-    - {accept: comma, send: comma, when: has_menu}
-    - {accept: comma, send: comma, when: paging}
-    - {accept: period, send: period, when: has_menu}
-    - {accept: period, send: period, when: paging}
-    - {accept: minus, send: minus, when: has_menu}
-    - {accept: minus, send: minus, when: paging}
-    - {accept: equal, send: equal, when: has_menu}
-    - {accept: equal, send: equal, when: paging}
-### 切分移位 ###
-#    - {accept: Up, send: KP_Left, when: composing} #左移一個注音
-    - {accept: Up, send: Left, when: composing} #左移一整個字
-    - {accept: Up, send: Up, when: paging} #修正上條目出現的bug
-##
-    - {accept: Left, send: KP_Left, when: composing} #左移一個注音
-#    - {accept: Right, send: Shift+Right, when: composing} #右移一整個字
-#    - {accept: Shift+Right, send: Right, when: composing} #右移一個注音
-#    - {accept: Shift+Left, send: KP_Left, when: composing} #左移一個注音
-#關#    - {accept: Shift+space, send: Shift+Right, when: composing} #首節
-#    - {accept: Shift+space, send: KP_Left, when: composing} #左移一個注音
-#    - {accept: Left, send: KP_Left, when: composing} #左移一個注音
-##
-#    - {accept: Shift+Tab, send: Right, when: composing} #右移一個注音
-#    - {accept: Tab, send: KP_Left, when: composing} #左移一個注音
-### 選字翻頁 ###
-    - {accept: Left, send: Page_Up, when: paging} #直式選單用 #has_menu
-    - {accept: Right, send: Page_Down, when: paging} #直式選單用 #has_menu
-#    - {accept: Up, send: Page_Up, when: paging} #橫式選單用
-#    - {accept: Down, send: Page_Down, when: paging} #橫式選單用
-#    - {accept: Left, send: Left, when: has_menu} #橫式選單用 #send: Shift+Up
-#    - {accept: Right, send: Right, when: has_menu} #橫式選單用 #send: Shift+Down
-    - {accept: Shift+Down, send: Page_Down, when: has_menu} #選字時「Shift」+「下」翻頁。
-    - {accept: Shift+Up, send: Page_Up, when: paging} #選字時「Shift」+「上」翻頁。
-#關#    - {accept: Tab, send: Page_Down, when: has_menu} #「tab」翻頁。
-    - {accept: Shift+Tab, send: Page_Up, when: paging} #選字時「Shift」+「tab」翻頁。
-    - {accept: Shift+space, send: Page_Down, when: has_menu} #選字時「Shift」+「空白鍵」翻頁。 #send: Right #send: Down
-##回復到 composing 狀態：
-#關#    - {accept: Shift+space, send: Shift+Left, when: paging} #於選單列選字時，回復到輸入列（避免有時回復不了，故增加）。
-    - {accept: Tab, send: Shift+Left, when: paging} #於選單列選字時，回復到輸入列（避免有時回復不了，故增加）。
-### 空白鍵 ###
-#    - {accept: space, send: Return, when: paging} #方向鍵選字時，space直接上屏（避免被一聲空格影響）
-#    - {accept: space, send: Page_Down, when: paging} #方向鍵選字時，space翻頁（上條遮屏需開啟，否則「=」+「符號」會誤按）
-##    - {accept: space, send: Down, when: has_menu}
-##    - {accept: space, send: Down, when: paging}
-##    - {accept: space, send: space, when: composing}
-    # - {accept: space, send: Escape, when: composing} #空碼時，按空格清除
-    - {accept: space, send_sequence: "{Escape}{space}", when: composing} #空碼時，按空格清除（測試，如：輸入heart，前面碼有候選項，後面碼無候選項，還是可上屏前面）
-    - {accept: space, send: space, when: has_menu} #非空碼時，空白還是空白
-### 刪除鍵 ###
-#    - {accept: BackSpace, send: Control+BackSpace, when: has_menu} #〔關〕刪除前一個拼音字符〔開〕：刪除整組拼音字符（一個字）
-#    - {accept: Shift+BackSpace, send: BackSpace, when: has_menu}
-#    - {accept: backslash, send: BackSpace, when: has_menu} #「\」鍵位刪除一個拼音字符。
-#略#    - {accept: backslash, send: Shift+BackSpace, when: has_menu} #「\」鍵位刪除整組拼音字符（一個字）。
-#    - {accept: backslash, send: Shift+Return, when: has_menu} #「\」鍵位上屏英文。
-### 功能快捷鍵 ###
-    # - {accept: Control+apostrophe, toggle: only_cjk_filter, when: always}
-## 上排切換(Mac)
-    - {accept: Control+Shift+6, toggle: only_cjk_filter, when: always}
-    - {accept: Control+Shift+7, toggle: emoji_segestion, when: always}
-    - {accept: Control+Shift+8, toggle: unicode_comment, when: always}
-    - {accept: Control+Shift+9, toggle: return_mode, when: always}
-## 上排切換(Win)
-    - {accept: Control+Shift+asciicircum, toggle: only_cjk_filter, when: always}
-    - {accept: Control+Shift+ampersand, toggle: emoji_segestion, when: always}
-    - {accept: Control+Shift+asterisk, toggle: unicode_comment, when: always}
-    - {accept: Control+Shift+parenleft, toggle: return_mode, when: always}
-## 切換樣態
-    - {accept: Control+apostrophe, unset_option: only_cjk_filter, when: always}
-    - {accept: Control+bracketleft, unset_option: emoji_segestion, when: always}
-    - {accept: Control+minus, set_option: unicode_comment, when: always}
-    - {accept: Control+equal, set_option: return_mode, when: always}
-## 初始樣態(Mac)
-    - {accept: Control+Shift+apostrophe, set_option: only_cjk_filter, when: always}
-    - {accept: Control+Shift+bracketleft, set_option: emoji_segestion, when: always}
-    - {accept: Control+Shift+minus, unset_option: unicode_comment, when: always}
-    - {accept: Control+Shift+equal, unset_option: return_mode, when: always}
-## 初始樣態(Win)
-    - {accept: Control+Shift+quotedbl, set_option: only_cjk_filter, when: always}
-    - {accept: Control+Shift+braceleft, set_option: emoji_segestion, when: always}
-    - {accept: Control+Shift+underscore, unset_option: unicode_comment, when: always}
-    - {accept: Control+Shift+plus, unset_option: return_mode, when: always}
-### Return/Enter鍵上屏(取代 editor/bindings 使可空碼清屏) ###
-    # - {accept: Return, send: Escape, when: composing} #空碼清屏用
-    - {accept: Return, send_sequence: "{Escape}{space}", when: composing} #空碼清屏用（測試，如：輸入heart，前面碼有候選項，後面碼無候選項，還是可上屏前面）
-    - {accept: Return, send: space, when: has_menu} #有選單時 Return/Enter 鍵同空白鍵上屏中文
-    - {accept: Return, send: space, when: paging} #選字時 Return/Enter 鍵同空白鍵上屏中文
-    # - {accept: KP_Enter, send: Escape, when: composing} #空碼清屏用
-    - {accept: KP_Enter, send_sequence: "{Escape}{space}", when: composing} #空碼清屏用（測試，如：輸入heart，前面碼有候選項，後面碼無候選項，還是可上屏前面）
-    - {accept: KP_Enter, send: space, when: has_menu} #有選單時右側小鍵盤 Return/Enter 鍵同空白鍵上屏中文
-    - {accept: KP_Enter, send: space, when: paging} #選字時右側小鍵盤 Return/Enter 鍵同空白鍵上屏中文
+    __include: element_bopomo_double:/key_binder
 
 editor:
   bindings:
-#    space: commit_composition #使用 fluency_editor 時開啟(直接上屏)
-#    space: toggle_selection #使用 fluency_editor 時開啟(不直接上屏)
-    # Return: confirm #使用 express_editor 時開啟 #commit_composition
-    # KP_Enter: confirm #使用 express_editor 時開啟 #commit_composition
-    Shift+Return: commit_raw_input # 上屏原始輸入
-    Control+Return: commit_script_text # 上屏變換後輸入
+    __include: element_bopomo_double:/editor
 ########################## 用正則調出各種功能 ##############################
 recognizer:
   patterns:

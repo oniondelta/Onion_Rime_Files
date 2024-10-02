@@ -107,22 +107,22 @@ key_binder:
     # - {accept: Control+bracketleft, set_option: extended_charset, when: always} #特例：增廣字符快捷鍵
     - {accept: Control+bracketleft, set_option: simplify_comment, when: always} #「蝦米碼」提示碼開關
     - {accept: Control+bracketright, unset_option: back_mark, when: always} #「國際音標和符號」提示碼開關
-    - {accept: Control+minus, set_option: unicode_comment, when: always}
-    - {accept: Control+equal, set_option: en_sort, when: always} #「easy」選單排序是否照英漢字典順序
+#win易快捷鍵衝突，mac可打開#    - {accept: Control+minus, set_option: unicode_comment, when: always}
+#win易快捷鍵衝突，mac可打開#    - {accept: Control+equal, set_option: en_sort, when: always} #「easy」選單排序是否照英漢字典順序
 ## 初始樣態(Mac)
     - {accept: Control+Shift+apostrophe, unset_option: character_range_bhjm, when: always}
     # - {accept: Control+Shift+bracketleft, unset_option: extended_charset, when: always} #特例：增廣字符快捷鍵
     - {accept: Control+Shift+bracketleft, unset_option: simplify_comment, when: always} #「蝦米碼」提示碼開關
     - {accept: Control+Shift+bracketright, set_option: back_mark, when: always} #「國際音標和符號」提示碼開關
-    - {accept: Control+Shift+minus, unset_option: unicode_comment, when: always}
-    - {accept: Control+Shift+equal, unset_option: en_sort, when: always} #「easy」選單排序是否照英漢字典順序
+#win易快捷鍵衝突，mac可打開#    - {accept: Control+Shift+minus, unset_option: unicode_comment, when: always}
+#win易快捷鍵衝突，mac可打開#    - {accept: Control+Shift+equal, unset_option: en_sort, when: always} #「easy」選單排序是否照英漢字典順序
 ## 初始樣態(Win)
     - {accept: Control+Shift+quotedbl, unset_option: character_range_bhjm, when: always}
     # - {accept: Control+Shift+braceleft, unset_option: extended_charset, when: always} #特例：增廣字符快捷鍵
     - {accept: Control+Shift+braceleft, unset_option: simplify_comment, when: always} #「蝦米碼」提示碼開關
     - {accept: Control+Shift+braceright, set_option: back_mark, when: always} #「國際音標和符號」提示碼開關
-    - {accept: Control+Shift+underscore, unset_option: unicode_comment, when: always}
-    - {accept: Control+Shift+plus, unset_option: en_sort, when: always} #「easy」選單排序是否照英漢字典順序
+#win易快捷鍵衝突，mac可打開#    - {accept: Control+Shift+underscore, unset_option: unicode_comment, when: always}
+#win易快捷鍵衝突，mac可打開#    - {accept: Control+Shift+plus, unset_option: en_sort, when: always} #「easy」選單排序是否照英漢字典順序
 
 
 editor:

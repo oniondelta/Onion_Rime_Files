@@ -135,8 +135,8 @@ key_binder:
     - { accept: Control+bracketleft, unset_option: emoji_segestion, when: always }
     - { accept: Control+bracketright, unset_option: back_mark, when: always } #「國際音標和符號」提示碼開關
     - { accept: Control+apostrophe, unset_option: character_range_bhjm, when: always } #accept: Control+semicolon
-    - { accept: Control+minus, set_option: unicode_comment, when: always }
-    - { accept: Control+equal, set_option: en_sort, when: always } #「easy」選單排序是否照英漢字典順序
+#win易快捷鍵衝突，mac可打開#    - { accept: Control+minus, set_option: unicode_comment, when: always }
+#win易快捷鍵衝突，mac可打開#    - { accept: Control+equal, set_option: en_sort, when: always } #「easy」選單排序是否照英漢字典順序
 ## 初始樣態(Mac)
     # - { accept: Control+Shift+comma, unset_option: ascii_mode, when: always }
     # - { accept: Control+Shift+period, unset_option: full_shape, when: always }
@@ -145,8 +145,8 @@ key_binder:
     - { accept: Control+Shift+bracketleft, set_option: emoji_segestion, when: always }
     - { accept: Control+Shift+bracketright, set_option: back_mark, when: always } #「國際音標和符號」提示碼開關
     - { accept: Control+Shift+apostrophe, set_option: character_range_bhjm, when: always } #accept: Control+semicolon
-    - { accept: Control+Shift+minus, unset_option: unicode_comment, when: always }
-    - { accept: Control+Shift+equal, unset_option: en_sort, when: always } #「easy」選單排序是否照英漢字典順序
+#win易快捷鍵衝突，mac可打開#    - { accept: Control+Shift+minus, unset_option: unicode_comment, when: always }
+#win易快捷鍵衝突，mac可打開#    - { accept: Control+Shift+equal, unset_option: en_sort, when: always } #「easy」選單排序是否照英漢字典順序
 ## 初始樣態(Win)
     # - { accept: Control+Shift+less, unset_option: ascii_mode, when: always }
     # - { accept: Control+Shift+greater, unset_option: full_shape, when: always }
@@ -155,8 +155,8 @@ key_binder:
     - { accept: Control+Shift+braceleft, set_option: emoji_segestion, when: always }
     - { accept: Control+Shift+braceright, set_option: back_mark, when: always } #「國際音標和符號」提示碼開關
     - { accept: Control+Shift+quotedbl, set_option: character_range_bhjm, when: always } #accept: Control+semicolon
-    - { accept: Control+Shift+underscore, unset_option: unicode_comment, when: always }
-    - { accept: Control+Shift+plus, unset_option: en_sort, when: always } #「easy」選單排序是否照英漢字典順序
+#win易快捷鍵衝突，mac可打開#    - { accept: Control+Shift+underscore, unset_option: unicode_comment, when: always }
+#win易快捷鍵衝突，mac可打開#    - { accept: Control+Shift+plus, unset_option: en_sort, when: always } #「easy」選單排序是否照英漢字典順序
 ### 避聲調重複按 ###
     # - {accept: 3, send: Escape, when: composing}
     # - {accept: 3, send: 3, when: has_menu}
