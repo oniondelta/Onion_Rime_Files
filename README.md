@@ -99,6 +99,8 @@
 
 - [短語](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%94%E6%B4%8B%E8%94%A5%E6%B3%A8%E9%9F%B3%E7%B3%BB%E5%88%97%E3%80%95%EF%BC%9A%E7%9F%AD%E8%AA%9E)
 
+- [反查](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%94%E6%B4%8B%E8%94%A5%E6%B3%A8%E9%9F%B3%E7%B3%BB%E5%88%97%E3%80%95%EF%BC%9A%E5%8F%8D%E6%9F%A5)
+
 ## Demo
 
 - 注音（洋蔥 mix-in 版）
