@@ -1,0 +1,21 @@
+# Rime dictionary
+# encoding: utf-8
+# 《日語（平假名+片假名+漢字+半形假名）字詞庫匯入頁》
+# 『洋蔥』製作
+---
+name: jpnin1.extended
+version: "202301"
+sort: by_weight
+vocabulary: essay-jp-onion
+# use_preset_vocabulary: false
+# max_phrase_length: 7
+# min_phrase_weight: 100
+import_tables:
+  - jpnin1
+  # - jpnin1_hw
+  # - phrases.jp_hk
+  - phrases.jp_hk_more
+  - phrases.jp_hkkseg
+##  - phrases.jp_hkk #不要開，大量mapping，速度會減慢
+  - space  #空格，特殊方案用
+...

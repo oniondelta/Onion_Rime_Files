@@ -1,0 +1,18 @@
+# Rime dictionary
+# encoding: utf-8
+# 《拉丁+音標字母（洋蔥形碼鍵位）字詞庫匯入頁》
+# 『洋蔥』製作
+---
+name: latinin1.extended
+version: "202301"
+sort: by_weight
+use_preset_vocabulary: false
+import_tables:
+  - latinin1
+  - phrases.en_o_w
+  - phrases.la_py_w
+  - phrases.en_l_w
+  - phrases.en_u_w
+  - phrases.la_eu_w
+  - space  #空格，特殊方案用
+...

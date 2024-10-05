@@ -1,0 +1,186 @@
+﻿# Rime schema settings
+# encoding: utf-8
+
+schema:
+  schema_id: easy_en_super
+  name: Easy English（英漢字典）
+  version: "202211"
+  author:
+    - 洋蔥
+  description:
+    Easy English Super
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ On, Off ]
+  - name: en_sort
+    reset: 0
+    states: [ 個排, 序排 ]
+
+engine:
+  processors:
+    - ascii_composer
+    - key_binder
+    - speller
+    - recognizer
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - matcher
+    - ascii_segmentor
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+#    - echo_translator #不要用，會把分號和/上屏
+    - table_translator
+    - script_translator@easy_en_script
+    - punct_translator
+  filters:
+    - lua_filter@en_sort_filter
+    - reverse_lookup_filter@e_reverse_lookup
+    - uniquifier
+
+speller:
+  alphabet: "zyxwvutsrqponmlkjihgfedcba-.;/'"
+  # initials: "zyxwvutsrqponmlkjihgfedcba-./'"
+  delimiter: " "
+  algebra:
+    - derive/^\|$/ /
+    - xform/⌗.*$//
+    # - derive/(.)[;']$/$1/
+    # - derive/^(.+)([;'])$/$2$1/
+
+translator:
+  dictionary: easy_en_super
+  enable_encoder: false
+  encode_commit_history: false
+  enable_completion: true
+  # sentence_over_completion: true
+  enable_sentence: false
+  enable_user_dict: false
+  # strict_spelling: false
+  # spelling_hints: 2
+  # initial_quality: 1000
+  comment_format:
+    - xform/.+//  #刪除尚未輸入完整碼之提示 ~abc
+  #   # - xform/⌗$//
+  #   # - xform|[~a-z;/.'-]+||
+  #   - xform/^.+⌗//
+  #   - xform|^[ a-z;/.'-]+||
+  #   - xform/@@/\n          /
+  #   - xform/@/ /
+
+easy_en_script:
+  __include: /translator
+  # enable_encoder: true
+  enable_completion: false
+  enable_sentence: false
+  enable_user_dict: false
+  # spelling_hints: 1
+  # initial_quality: 0
+  # comment_format: []
+
+e_reverse_lookup:
+  tags: [ abc ]
+  overwrite_comment: true
+  dictionary: easy_en_super
+  comment_format:
+    - xform/^.+⌗//
+    - xform|^[ a-z;/.'-]+||
+    - xform/@@/\n          /
+    - xform/@/ /
+
+key_binder:
+  import_preset: default
+  bindings:
+    - {accept: comma, send: comma, when: has_menu}
+    - {accept: comma, send: comma, when: paging}
+    - {accept: period, send: period, when: has_menu}
+    - {accept: period, send: period, when: paging}
+    - {accept: minus, send: minus, when: has_menu}
+    - {accept: minus, send: minus, when: paging}
+    - {accept: equal, send: equal, when: has_menu}
+    - {accept: equal, send: equal, when: paging}
+### 選字翻頁 ###
+    - {accept: Left, send: Page_Up, when: paging} #直式選單用 #has_menu
+    - {accept: Right, send: Page_Down, when: paging} #直式選單用 #has_menu
+### 快捷鍵轉換排序 ###
+    - {accept: Control+bracketright, toggle: en_sort, when: always} #「easy」選單排序是否照英漢字典順序
+
+punctuator:
+  # import_preset: default
+  full_shape:
+    " " : { commit: "　" }
+    ',' : { commit: "，" }
+    # '.' : { commit: "．" }
+    '<' : { commit: "＜" }
+    '>' : { commit: "＞" }
+    '?' : { commit: "？" }
+    # '/' : { commit: "／" }
+    ':' : { commit: "：" }
+    ';' : { commit: "；" }
+    # "'" : { commit: "＇" }
+    '"' : { commit: '＂' }
+    '\\' : { commit: "＼" }
+    '|' : { commit: "｜" }
+    '`' : { commit: "｀" }
+    '~' : { commit: '～' }
+    '!' : { commit: '！' }
+    '@' : { commit: '＠' }
+    '#' : { commit: '＃' }
+    '%' : { commit: '％' }
+    '$' : { commit: '＄' }
+    '^' : { commit: '＾' }
+    '&' : { commit: '＆' }
+    '*' : { commit: '＊' }
+    '(' : { commit: '（' }
+    ')' : { commit: '）' }
+    '_' : { commit: '＿' }
+    # '-' : { commit: '－' }
+    '+' : { commit: '＋' }
+    '=' : { commit: '＝' }
+    '[' : { commit: '［' }
+    ']' : { commit: '］' }
+    '{' : { commit: '｛' }
+    '}' : { commit: '｝' }
+  half_shape:
+    # ' ' : { commit: ' ' }
+    ',' : { commit: "," }
+    # '.' : { commit: "." }
+    '<' : { commit: "<" }
+    '>' : { commit: ">" }
+    '?' : { commit: "?" }
+    # '/' : { commit: "/" }
+    ':' : { commit: ":" }
+    ';' : { commit: ";" }
+    # "'" : { commit: "'" }
+    '"' : { commit: '"' }
+    '\\' : { commit: "\\" }
+    '|' : { commit: "|" }
+    '`' : { commit: "`" }
+    '~' : { commit: '~' }
+    '!' : { commit: '!' }
+    '@' : { commit: '@' }
+    '#' : { commit: '#' }
+    '%' : { commit: '%' }
+    '$' : { commit: '$' }
+    '^' : { commit: '^' }
+    '&' : { commit: '&' }
+    '*' : { commit: '*' }
+    '(' : { commit: '(' }
+    ')' : { commit: ')' }
+    '_' : { commit: '_' }
+    # '-' : { commit: '-' }
+    '+' : { commit: '+' }
+    '=' : { commit: '=' }
+    '[' : { commit: '[' }
+    ']' : { commit: ']' }
+    '{' : { commit: '{' }
+    '}' : { commit: '}' }
+
+recognizer:
+  import_preset: default

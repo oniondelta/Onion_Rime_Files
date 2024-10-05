@@ -1,0 +1,21 @@
+# Rime dictionary
+# encoding: utf-8
+# 《詞庫》
+# 『洋蔥』
+---
+name: phrases.la_eu_w
+version: "202204"
+sort: by_weight
+use_preset_vocabulary: false
+columns:
+  - text
+  - weight
+...
+####### 歐洲帶調開始 #######
+rosé
+Rosé
+ROSÉ
+café
+Café
+CAFÉ
+####### 歐洲帶調結束 #######

@@ -1,0 +1,857 @@
+# Rime dictionary
+# encoding: utf-8
+# 《希臘字母（洋蔥形碼鍵位）碼表_增補》
+# 『洋蔥』製作
+---
+name: greek
+version: "202001"
+sort: by_weight
+use_preset_vocabulary: false
+...
+##### 空格 #####
+ 	jj	10000
+ 	jj[	10000
+##### 基礎希臘字母（Greek and Coptic） #####
+### Greek and Coptic 小寫 ###
+ͱ	ih
+ͳ	ti
+ͷ	ni
+ΐ	ipb
+ά	ap
+έ	ep
+ή	hp
+##
+ή	nyp
+ί	ip
+ΰ	ypb
+α	a	3000
+β	b	3000
+γ	g	3000
+δ	d	3000
+ε	e	3000
+ζ	z	3000
+η	h	3000
+##
+η	ny
+θ	q	3000
+ι	i	3000
+κ	k	3000
+λ	l	3000
+μ	m	3000
+ν	n	3000
+## 以下201611新增容錯碼
+ν	v	3000
+ν	vi
+ξ	j	3000
+ο	o	3000
+π	r	3000
+ρ	p	3000
+ς	c	3000
+##
+#ς	si
+σ	s	3000
+τ	t	3000
+υ	y	3000
+φ	f	3000
+χ	x	3000
+ψ	u	3000
+ω	w	3000
+ϊ	ib
+ϋ	yb
+ό	op
+ύ	yp
+ώ	wp
+ϖ	ws
+ϗ	kfj
+ϙ	oy
+ϛ	ci
+##
+#ϛ	si
+ϝ	fi
+##
+ϝ	fr
+#ϟ	nf
+##
+ϟ	kf
+##
+ϟ	kw
+ϡ	zf
+ϣ	wj
+ϥ	qf
+ϧ	gf
+##
+ϧ	bf
+##
+ϧ	igj
+##
+ϧ	ig
+ϩ	sk
+ϫ	dy
+##
+#ϫ	yd
+ϭ	si
+ϯ	tfj
+##
+ϯ	tf
+##
+ϯ	tfjr
+##
+ϯ	tfrj
+ϰ	kf
+ϱ	pf
+##
+ϱ	oc
+##
+ϱ	sk
+ϲ	ci
+ϳ	ji
+ͻ	jf
+##
+ͻ	ck
+ͼ	cma
+ͽ	jfma
+##
+ͽ	ckma
+ϸ	lf
+##
+ϸ	bhp
+##
+ϸ	iho
+##
+ϸ	lho
+ϻ	mi
+##
+ϻ	mf
+##
+ϻ	myc
+##
+ϻ	my
+### Greek and Coptic 大寫 ###
+Ͱ	ih[
+Ͳ	ti[
+Ͷ	ni[
+Ά	ap[
+Ϳ	ji[
+Έ	ep[
+Ή	hp[
+Ί	ip[
+Ό	op[
+Ύ	yp[
+Ώ	wp[
+Α	a[	1000
+Β	b[	1000
+Γ	g[	1000
+Δ	d[	1000
+Ε	e[	1000
+Ζ	z[	1000
+Η	h[	1000
+Θ	q[	1000
+Ι	i[	1000
+Κ	k[	1000
+Λ	l[	1000
+Μ	m[	1000
+Ν	n[	1000
+Ξ	j[	1000
+Ο	o[	1000
+Π	r[	1000
+Ρ	p[	1000
+Σ	s[	1000
+Τ	t[	1000
+Υ	y[	1000
+Φ	f[	1000
+Χ	x[	1000
+Ψ	u[	1000
+Ω	w[	1000
+Ϊ	ib[
+Ϋ	yb[
+Ϗ	ky[
+##
+Ϗ	kj[
+ϒ	yi[
+ϓ	yp[
+ϔ	yb[
+ϕ	fi[
+Ϙ	oy[
+Ϛ	ci[
+##
+Ϛ	cfy[
+##
+Ϛ	cy[
+##
+Ϛ	cfk[
+Ϝ	fi[
+#Ϟ	nf[
+##
+Ϟ	kf[
+##
+Ϟ	kw[
+Ϡ	zf[
+Ϣ	wj[
+Ϥ	qf[
+Ϧ	bf[
+##
+Ϧ	gf[
+##
+Ϧ	igj[
+##
+Ϧ	ig[
+Ϩ	sk[
+Ϫ	dy[
+##
+#Ϫ	yd[
+Ϭ	si[
+Ϯ	tf[
+##
+Ϯ	it[
+Ͻ	jf[
+##
+Ͻ	ck[
+Ͼ	cma[
+Ͽ	jfma[
+##
+Ͽ	ckma[
+Ϸ	lf[
+##
+Ϸ	bhp[
+##
+Ϸ	iho[
+##
+Ϸ	lho[
+Ϲ	ci[
+Ϻ	mi[
+##
+Ϻ	mf[
+##
+Ϻ	myc[
+##
+Ϻ	my[
+### Greek and Coptic 其他 ###
+## u0374
+ʹ	pw
+͵	dpw
+ͺ	dcw
+##
+ͺ	ch
+## u037e
+;	awdw
+΄	pw
+΅	pwbw
+## u0387
+·	aw
+ϐ	bi
+ϑ	gf
+ϴ	qi
+ϵ	qk
+϶	qi
+ϼ	pt
+##### Greek Extended #####
+ἀ	ad
+ἁ	aq
+ἂ	adn
+ἃ	aqn
+ἄ	adp
+ἅ	aqp
+ἆ	asd
+##
+ἆ	amd
+ἇ	asq
+##
+ἇ	amq
+Ἀ	ad[
+Ἁ	aq[
+Ἂ	adn[
+Ἃ	aqn[
+Ἄ	adp[
+Ἅ	aqp[
+Ἆ	asd[
+##
+Ἆ	amd[
+Ἇ	asq[
+##
+Ἇ	amq[
+ἐ	ed
+ἑ	eq
+ἒ	edn
+ἓ	eqn
+ἔ	edp
+ἕ	eqp
+Ἐ	ed[
+Ἑ	eq[
+Ἒ	edn[
+Ἓ	eqn[
+Ἔ	edp[
+Ἕ	eqp[
+ἠ	hd
+##
+ἠ	nyd
+ἡ	hq
+##
+ἡ	nyq
+ἢ	hdn
+##
+ἢ	nydn
+ἣ	hqn
+##
+ἣ	nyqn
+ἤ	hdp
+##
+ἤ	nydp
+ἥ	hqp
+##
+ἥ	nyqp
+ἦ	hsd
+##
+ἦ	nysd
+##
+ἦ	hmd
+##
+ἦ	nymd
+ἧ	hsq
+##
+ἧ	nysq
+##
+ἧ	hmq
+##
+ἧ	nymq
+Ἠ	hd[
+Ἡ	hq[
+Ἢ	hdn[
+Ἣ	hqn[
+Ἤ	hdp[
+Ἥ	hqp[
+Ἦ	hsd[
+##
+Ἦ	hmd[
+Ἧ	hsq[
+##
+Ἧ	hmq[
+ἰ	id
+ἱ	iq
+ἲ	idn
+ἳ	iqn
+ἴ	idp
+ἵ	iqp
+ἶ	isd
+##
+ἶ	imd
+ἷ	isq
+##
+ἷ	imq
+Ἰ	id[
+Ἱ	iq[
+Ἲ	idn[
+Ἳ	iqn[
+Ἴ	idp[
+Ἵ	iqp[
+Ἶ	isd[
+##
+Ἶ	imd[
+Ἷ	isq[
+##
+Ἷ	imq[
+ὀ	od
+ὁ	oq
+ὂ	odn
+ὃ	oqn
+ὄ	odp
+ὅ	oqp
+Ὀ	od[
+Ὁ	oq[
+Ὂ	odn[
+Ὃ	oqn[
+Ὄ	odp[
+Ὅ	oqp[
+ὐ	yd
+ὑ	yq
+ὒ	ydn
+ὓ	yqn
+ὔ	ydp
+ὕ	yqp
+ὖ	ysd
+##
+ὖ	ymd
+ὗ	ysq
+##
+ὗ	ymq
+Ὑ	yq[
+Ὓ	yqn[
+Ὕ	yqp[
+Ὗ	ysq[
+##
+Ὗ	ymq[
+ὠ	wd
+ὡ	wq
+ὢ	wdn
+ὣ	wqn
+ὤ	wdp
+ὥ	wqp
+ὦ	wsd
+##
+ὦ	wmd
+ὧ	wsq
+##
+ὧ	wmq
+Ὠ	wd[
+Ὡ	wq[
+Ὢ	wdn[
+Ὣ	wqn[
+Ὤ	wdp[
+Ὥ	wqp[
+Ὦ	wsd[
+##
+Ὦ	wmd[
+Ὧ	wsq[
+##
+Ὧ	wmq[
+ὰ	an
+## u1f71
+ά	ap
+ὲ	en
+## u1f73
+έ	ep
+ὴ	hn
+##
+ὴ	nyn
+## u1f75
+ή	hp
+##
+ή	nyp
+ὶ	in
+## u1f77
+ί	ip
+ὸ	on
+## u1f79
+ό	op
+ὺ	yn
+## u1f7b
+ύ	yp
+ὼ	wn
+## u1f7d
+ώ	wp
+ᾀ	acd
+##
+ᾀ	adc
+ᾁ	aqc
+##
+ᾁ	acq
+ᾂ	acdn
+##
+ᾂ	adnc
+ᾃ	acqn
+##
+ᾃ	aqnc
+ᾄ	acdp
+##
+ᾄ	adpc
+ᾅ	acqp
+##
+ᾅ	aqpc
+ᾆ	acsd
+##
+ᾆ	asdc
+##
+ᾆ	acmd
+##
+ᾆ	amdc
+ᾇ	acsq
+##
+ᾇ	asqc
+##
+ᾇ	acmq
+##
+ᾇ	amqc
+ᾈ	acd[
+##
+ᾈ	adc[
+ᾉ	acq[
+##
+ᾉ	aqc[
+ᾊ	acdn[
+##
+ᾊ	adnc[
+ᾋ	acqn[
+##
+ᾋ	aqnc[
+ᾌ	acdp[
+##
+ᾌ	adpc[
+ᾍ	acqp[
+##
+ᾍ	aqpc[
+ᾎ	acsd[
+##
+ᾎ	asdc[
+##
+ᾎ	acmd[
+##
+ᾎ	amdc[
+ᾏ	acsq[
+##
+ᾏ	asqc[
+##
+ᾏ	acmq[
+##
+ᾏ	amqc[
+ᾐ	hcd
+##
+ᾐ	hdc
+##
+ᾐ	nycd
+##
+ᾐ	ncyd
+##
+ᾐ	nydc
+ᾑ	hcq
+##
+ᾑ	hqc
+##
+ᾑ	nycq
+##
+ᾑ	ncyq
+##
+ᾑ	nyqc
+ᾒ	hcdn
+##
+ᾒ	hdnc
+##
+ᾒ	nycdn
+##
+ᾒ	ncydn
+##
+ᾒ	nydnc
+ᾓ	hcqn
+##
+ᾓ	hqnc
+##
+ᾓ	nycqn
+##
+ᾓ	ncyqn
+##
+ᾓ	nyqnc
+ᾔ	hcdp
+##
+ᾔ	hdpc
+##
+ᾔ	nycdp
+##
+ᾔ	ncydp
+##
+ᾔ	nydpc
+ᾕ	hcqp
+##
+ᾕ	hqpc
+##
+ᾕ	nycqp
+##
+ᾕ	ncyqp
+##
+ᾕ	nyqpc
+ᾖ	hcsd
+##
+ᾖ	hsdc
+##
+ᾖ	nycsd
+##
+ᾖ	ncysd
+##
+ᾖ	nysdc
+##
+ᾖ	hcmd
+##
+ᾖ	hmdc
+##
+ᾖ	nycmd
+##
+ᾖ	ncymd
+##
+ᾖ	nymdc
+ᾗ	hcsq
+##
+ᾗ	hsqc
+##
+ᾗ	nycsq
+##
+ᾗ	ncysq
+##
+ᾗ	nysqc
+##
+ᾗ	hcmq
+##
+ᾗ	hmqc
+##
+ᾗ	nycmq
+##
+ᾗ	ncymq
+##
+ᾗ	nymqc
+ᾘ	hcd[
+##
+ᾘ	hdc[
+ᾙ	hcq[
+##
+ᾙ	hqc[
+ᾚ	hcdn[
+##
+ᾚ	hdnc[
+ᾛ	hcqn[
+##
+ᾛ	hqnc[
+ᾜ	hcdp[
+##
+ᾜ	hdpc[
+ᾝ	hcqp[
+##
+ᾝ	hqpc[
+ᾞ	hcsd[
+##
+ᾞ	hsdc[
+##
+ᾞ	hcmd[
+##
+ᾞ	hmdc[
+ᾟ	hcsq[
+##
+ᾟ	hsqc[
+##
+ᾟ	hcmq[
+##
+ᾟ	hmqc[
+ᾠ	wcd
+##
+ᾠ	wdc
+ᾡ	wcq
+##
+ᾡ	wqc
+ᾢ	wcdn
+##
+ᾢ	wdnc
+ᾣ	wcqn
+##
+ᾣ	wqnc
+ᾤ	wcdp
+##
+ᾤ	wdpc
+ᾥ	wcqp
+##
+ᾥ	wqpc
+ᾦ	wcsd
+##
+ᾦ	wsdc
+##
+ᾦ	wcmd
+##
+ᾦ	wmdc
+ᾧ	wcsq
+##
+ᾧ	wsqc
+##
+ᾧ	wcmq
+##
+ᾧ	wmqc
+ᾨ	wcd[
+##
+ᾨ	wdc[
+ᾩ	wcq[
+##
+ᾩ	wqc[
+ᾪ	wcdn[
+##
+ᾪ	wdnc[
+ᾫ	wcqn[
+##
+ᾫ	wqnc[
+ᾬ	wcdp[
+##
+ᾬ	wdpc[
+ᾭ	wcqp[
+##
+ᾭ	wqpc[
+ᾮ	wcsd[
+##
+ᾮ	wsdc[
+##
+ᾮ	wcmd[
+##
+ᾮ	wmdc[
+ᾯ	wcsq[
+##
+ᾯ	wsqc[
+##
+ᾯ	wcmq[
+##
+ᾯ	wmqc[
+ᾰ	au
+ᾱ	ae
+ᾲ	acn
+##
+ᾲ	anc
+ᾳ	ac
+ᾴ	acp
+##
+ᾴ	apc
+ᾶ	as
+##
+ᾶ	am
+ᾷ	acs
+##
+ᾷ	asc
+##
+ᾷ	acm
+##
+ᾷ	amc
+Ᾰ	au[
+Ᾱ	ae[
+Ὰ	an[
+Ά	ap[
+ᾼ	ac[
+᾽	dw
+## u1FBE
+#ι	c
+##
+#ι	i
+##
+ι	dcw
+##
+ι	cw
+##
+ι	ih
+##
+ι	ii
+᾿	dw
+῀	sw
+##
+῀	mw
+῁	swbw
+##
+῁	mwbw
+ῂ	hcn
+##
+ῂ	hnc
+##
+ῂ	nycn
+##
+ῂ	ncyn
+##
+ῂ	nync
+ῃ	hc
+##
+ῃ	nyc
+##
+ῃ	ncy
+ῄ	hcp
+##
+ῄ	hpc
+##
+ῄ	nycp
+##
+ῄ	ncyp
+##
+ῄ	nypc
+ῆ	hs
+##
+ῆ	nys
+##
+ῆ	hm
+##
+ῆ	nym
+ῇ	hcs
+##
+ῇ	hsc
+##
+ῇ	nycs
+##
+ῇ	ncys
+##
+ῇ	nysc
+##
+ῇ	hcm
+##
+ῇ	hmc
+##
+ῇ	nycm
+##
+ῇ	ncym
+##
+ῇ	nymc
+Ὲ	en[
+## u1fc9
+Έ	ep[
+Ὴ	hn[
+## u1fcb
+Ή	hp[
+ῌ	hc[
+῍	dwnw
+῎	dwpw
+῏	swdw
+##
+῏	mwdw
+ῐ	iu
+ῑ	ie
+ῒ	inb
+## u1fd3
+ΐ	ipb
+ῖ	is
+##
+ῖ	im
+ῗ	isb
+##
+ῗ	imb
+Ῐ	iu[
+Ῑ	ie[
+Ὶ	in[
+## u1fdb
+Ί	ip[
+῝	qwnw
+῞	qwpw
+῟	swqw
+##
+῟	mwqw
+ῠ	yu
+ῡ	ye
+ῢ	ynb
+## u1fe3
+ΰ	ypb
+ῤ	pd
+ῥ	pq
+ῦ	ys
+##
+ῦ	ym
+ῧ	ysb
+##
+ῧ	ymb
+Ῠ	yu[
+Ῡ	ye[
+Ὺ	yn[
+## u1feb
+Ύ	yp[
+Ῥ	pq[
+῭	nwbw
+## u1fee
+΅	pwbw
+`	nw
+ῲ	wcn
+##
+ῲ	wnc
+ῳ	wc
+ῴ	wcp
+##
+ῴ	wpc
+ῶ	ws
+##
+ῶ	wm
+ῷ	wcs
+##
+ῷ	wsc
+##
+ῷ	wcm
+##
+ῷ	wmc
+Ὸ	on[
+## u1ff9
+Ό	op[
+Ὼ	wn[
+Ώ	wp[
+ῼ	wc[
+## u1ffd
+´	pw
+##### 結束 #####

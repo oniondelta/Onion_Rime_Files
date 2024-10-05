@@ -1,0 +1,73 @@
+# Rime schema settings
+# encoding: utf-8
+
+schema:
+  schema_id: onion-array30-wsymbols
+  name: "行列３０（洋蔥版）- W符號掛接"
+  version: "202405"
+  author:
+    - 洋蔥
+  description: |
+    行列
+  dependencies:
+
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 中文, 英文 ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor #一定要放在「affix_segmentor」前
+#    - affix_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - table_translator
+    # - script_translator
+  filters:
+    # - uniquifier
+
+menu:
+  # alternative_select_keys: "1234567890"
+  page_size: 10
+
+speller:
+  alphabet: "w1234567890"
+  initials: "w"
+  finals: "1234567890"
+  delimiter: "\\"
+
+translator:
+  dictionary: onion-array30-wsymbols
+  prism: onion-array30-wsymbols
+  # enable_charset_filter: false #true
+  # enable_encoder: false #true ##打詞時，可使用簡略打法，簡略打法的規則在字典中設定。
+  # encode_commit_history: false #true
+  enable_sentence: false #true ##此為自動造句，為打詞時，使用全拼。
+  enable_completion: false #逐碼提示  db_class: tabledb #userdb
+  # sentence_over_completion: false
+  enable_user_dict: false #true
+  # max_phrase_length: 7 #4 #7
+
+punctuator:
+  import_preset: default
+
+key_binder:
+  import_preset: default
+
+recognizer:
+  import_preset: default

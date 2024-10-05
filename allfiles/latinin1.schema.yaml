@@ -1,0 +1,182 @@
+# Rime schema settings
+# encoding: utf-8
+# 《拉丁+音標字母（洋蔥形碼鍵位）設定頁》
+schema:
+  schema_id: latinin1
+  name: ❃拉丁 in 1❃
+  version: "202405"
+  author:
+    - 『洋蔥』
+  description: |
+    拉丁字母
+  dependencies:
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ "西文", "英文" ]
+  - name: full_shape
+    reset: 0
+    states: [ "半形", "全形" ]
+  - name: back_mark
+    reset: 1
+    states: [ 無, 註 ]
+
+engine:
+  filters:
+    - simplifier@back_mark
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+#    - fluency_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - script_translator
+
+back_mark:
+  opencc_config: back_mark.json
+  option_name: back_mark
+  show_in_comment: true
+  tags: [ abc ]
+  tips: char
+  comment_format:
+    - xform/^/  /
+    - xform/@/ /
+
+menu:
+  alternative_select_keys: "1234567890"
+
+speller:
+  alphabet: "abcdefghijklmnopqrstuvwxyz,.-;/"
+  delimiter: " "
+  algebra:
+    - derive|^([a-z]+)[;/]$|$1| #精簡尾綴「;」「/」
+    - derive/^\|$/ /
+
+translator:
+  dictionary: latinin1.extended
+  # enable_charset_filter: false
+  enable_completion: false
+  enable_user_dict: true
+  disable_user_dict_for_patterns:
+    - ^[a-z]$
+  preedit_format:
+    - 'xform/\|/ /'
+
+punctuator:
+  full_shape:
+    " " : { commit: "　" }
+    # ',' : { commit: "，" }
+    # '.' : { commit: "．" }
+    '<' : { commit: "＜" }
+    '>' : { commit: "＞" }
+    '?' : { commit: "？" }
+    '/' : [ '／' ]  #{ commit: "／" }
+    ':' : { commit: "：" }
+    ';' : [ ';' ]  #{ commit: "；" }
+    "'" : { commit: "＇" } #[ "＇" ]
+    '"' : { commit: '＂' }
+    '\\' : { commit: "＼" }
+    '|' : { commit: "｜" }
+    '`' : { commit: "｀" }
+    '~' : { commit: '～' }
+    '!' : { commit: '！' }
+    '@' : { commit: '＠' }
+    '#' : { commit: '＃' }
+    '%' : { commit: '％' }
+    '$' : { commit: '＄' }
+    '^' : { commit: '＾' }
+    '&' : { commit: '＆' }
+    '*' : { commit: '＊' }
+    '(' : { commit: '（' }
+    ')' : { commit: '）' }
+    '_' : { commit: '＿' }
+    # '-' : { commit: '－' }
+    '+' : { commit: '＋' }
+    '=' : { commit: '＝' }
+    '[' : { commit: '［' }
+    ']' : { commit: '］' }
+    '{' : { commit: '｛' }
+    '}' : { commit: '｝' }
+  half_shape:
+    # ' ' : { commit: ' ' }
+    # ',' : { commit: "," }
+    # '.' : { commit: "." }
+    '<' : { commit: "<" }
+    '>' : { commit: ">" }
+    '?' : { commit: "?" }
+    '/' : [ '/' ]  #{ commit: "/" }
+    ':' : { commit: ":" }
+    ';' : [ ';' ]  #{ commit: ";" }
+    "'" : { commit: "'" }  #[ "'" ]
+    '"' : { commit: '"' }
+    '\\' : { commit: "\\" }
+    '|' : { commit: "|" }
+    '`' : { commit: "`" }
+    '~' : { commit: '~' }
+    '!' : { commit: '!' }
+    '@' : { commit: '@' }
+    '#' : { commit: '#' }
+    '%' : { commit: '%' }
+    '$' : { commit: '$' }
+    '^' : { commit: '^' }
+    '&' : { commit: '&' }
+    '*' : { commit: '*' }
+    '(' : { commit: '(' }
+    ')' : { commit: ')' }
+    '_' : { commit: '_' }
+    # '-' : { commit: '-' }
+    '+' : { commit: '+' }
+    '=' : { commit: '=' }
+    '[' : { commit: '[' }
+    ']' : { commit: ']' }
+    '{' : { commit: '{' }
+    '}' : { commit: '}' }
+
+key_binder:
+  import_preset: default
+  bindings:
+### 避 RIME 原設定鍵位衝突 ###
+    - {accept: comma, send: comma, when: has_menu}
+    - {accept: comma, send: comma, when: paging}
+    - {accept: period, send: period, when: has_menu}
+    - {accept: period, send: period, when: paging}
+    - {accept: minus, send: minus, when: has_menu}
+    - {accept: minus, send: minus, when: paging}
+    - {accept: equal, send: equal, when: has_menu}
+    - {accept: equal, send: equal, when: paging}
+######################
+    - {accept: Left, send: Page_Up, when: paging}
+    - {accept: Right, send: Page_Down, when: paging}
+######################
+    - {accept: Shift+Tab, send: Page_Up, when: paging}
+    - {accept: Shift+space, send: Page_Down, when: has_menu}
+######################
+    - {accept: Tab, send: Shift+Left, when: paging}
+######################
+    - {accept: Return, send: space, when: has_menu} #return,enter直出
+    - {accept: KP_Enter, send: space, when: has_menu}
+#    - {accept: space, send: space, when: has_menu} # 非空碼時，空白還是空白
+#    - {accept: space, send: Escape, when: composing} # 空碼時，按空格清除
+
+editor:
+  bindings:
+    Shift+Return: commit_raw_input
+
+recognizer:
+  patterns:
+    uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
+    email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
+    url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"

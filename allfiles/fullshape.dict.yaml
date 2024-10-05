@@ -1,0 +1,215 @@
+# Rime dictionary
+# encoding: utf-8
+# 《英數全形（洋蔥形碼鍵位）碼表_增補》
+# 『洋蔥』製作
+# 相同先前 fsword.dict.yaml 檔案
+---
+name: fullshape
+version: "202108"
+sort: by_weight #original
+use_preset_vocabulary: false
+#max_phrase_length: 7
+#min_phrase_weight: 100
+columns:
+  - text #第一列字／詞
+  - code #第二列碼
+  - weight #第三列字／詞頻
+...
+####### 《全形》一般鍵盤標點符號 #######
+##### 全形空格 #####
+　	./	50000
+#　	./;	50000
+　	jj	50000
+　	jj"	50000
+##### 符號輸出標點 #####
+### 分號區隔 ###
+#－	-;
+#．	.;
+#，	,;
+／	/;
+#？	,.;
+#！	/.;
+#；	.,;
+#：	..;
+#～	,,;
+#＇	,/;
+#＂	,,/;
+### 一般和組合輸出 ###
+－	-
+．	.
+，	,
+#／	/
+？	,.
+！	/.
+；	.,
+：	..
+～	,,
+＇	,/
+＂	,,/
+##### 字母輸出標點 #####
+－	ew
+##
+#－	iq
+．	daw
+##
+．	aw
+，	ddw
+##
+，	dw
+／	pw
+／	xw
+？	jfda
+##
+#？	jyda
+##
+？	jfyda
+##
+？	jfkda
+！	ida
+##
+！	ik
+！	ifk
+；	awdw
+##
+；	awddw
+#；	add
+：	awaw
+##
+：	bwq
+#：	aha
+：	awdaw
+～	sw
+＇	pw
+##
+#＇	ih
+##
+#＇	if
+＂	pwpw
+##
+#＂	ii
+####### 《全形》基本 26 英文字母開始 #######
+##### 小寫 #####
+ａ	a
+ｂ	b
+ｃ	c
+ｄ	d
+ｅ	e
+ｆ	f
+ｇ	g
+ｈ	h
+ｉ	i
+ｊ	j
+ｋ	k
+ｌ	l
+ｍ	m
+ｎ	n
+ｏ	o
+ｐ	p
+ｑ	q
+ｒ	r
+ｓ	s
+ｔ	t
+ｕ	u
+ｖ	v
+ｗ	w
+ｘ	x
+ｙ	y
+ｚ	z
+##### 大寫 #####
+Ａ	a"
+Ｂ	b"
+Ｃ	c"
+Ｄ	d"
+Ｅ	e"
+Ｆ	f"
+Ｇ	g"
+Ｈ	h"
+Ｉ	i"
+Ｊ	j"
+Ｋ	k"
+Ｌ	l"
+Ｍ	m"
+Ｎ	n"
+Ｏ	o"
+Ｐ	p"
+Ｑ	q"
+Ｒ	r"
+Ｓ	s"
+Ｔ	t"
+Ｕ	u"
+Ｖ	v"
+Ｗ	w"
+Ｘ	x"
+Ｙ	y"
+Ｚ	z"
+##### 《全形》數字 #####
+１	1
+２	2
+３	3
+４	4
+５	5
+６	6
+７	7
+８	8
+９	9
+０	0
+##### 《全形》其他符號和字母 #####
+￠	cx
+##
+￠	ci
+##
+￠	cf
+￡	lft
+￢	gwk
+##
+#￢	lq
+##
+#￢	gwq
+￣	ew
+￤	iwiw
+##
+#￤	lwlw
+##
+#￤	lwhlw
+##
+#￤	lhl
+￥	ytt
+￦	wt
+＠	at
+##
+＠	ao
+##
+＠	aho
+##
+＠	amo
+＾	lw
+##
+#＾	lh
+｀	nw
+＿	dew
+#＃	'
+＄	si
+％	owpwow
+##
+％	owxwow
+##
+％	opwo
+##
+％	oxwo
+##
+％	oxo
+##
+％	opo
+＆	af
+##
+#＆	bfk
+##
+#＆	bf
+##
+#＆	et
+##
+#＆	and
+＊	jw
+＜	vwq
+＞	vwq
+####### 《全形》結束 #######

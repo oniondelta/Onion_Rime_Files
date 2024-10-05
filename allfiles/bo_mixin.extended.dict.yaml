@@ -1,0 +1,36 @@
+# Rime dictionary
+# encoding: utf-8
+# 《洋蔥注音 mixin版 字詞庫匯入頁》
+# 『洋蔥』製作
+# 中文字詞標註使用拼音
+# 包含中文、韓語、日語、拉丁+音標
+---
+name: bo_mixin.extended
+version: "202301"
+sort: by_weight
+vocabulary: essay-zh-hant-mc-mixin
+#use_preset_vocabulary: true
+import_tables:
+  - terra_pinyin_onion
+  - terra_pinyin_onion_add
+  - mixin_bpmf  #內嵌注音文，混打。
+  - bo_mixin_la
+  # - bo_mixin_en  #《英文26字母和符號》  #此項打開時，bo_mixin_la 和 phrases.la_py_w 請關閉。
+  - bo_mixin_jp
+  # - bo_mixin_kr  #《韓文洋蔥形碼》  #此項打開時，bo_mixin_kr_hnc 請關閉。
+  - bo_mixin_kr_hnc  #《韓文HNC羅馬字》  #此項打開時，bo_mixin_kr 請關閉。
+  - phrases.cht_en_w
+  - phrases.chtp
+  # - phrases.cht  #《未標注拼音之中文詞庫》  #不建議打開。
+  - phrases.en_o_w
+  - phrases.la_py_w
+  - phrases.en_l_w
+  - phrases.en_u_w
+  - phrases.la_eu_w
+  # - phrases.jp_hk_more  #《日語大詞庫》  #欲更精準 mapping，可打開並關閉小詞庫 phrases.jp_hk。
+  - phrases.jp_hk
+  - phrases.jp_hkkreduce
+  # - phrases.kr_more  #《韓語大詞庫》  #欲更精準 mapping，可打開並關閉小詞庫 phrases.kr。
+  - phrases.kr
+...
+##### 以下可自行添加詞句 #####

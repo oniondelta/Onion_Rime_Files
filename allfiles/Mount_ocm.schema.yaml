@@ -1,0 +1,410 @@
+# Rime schema settings
+# encoding: utf-8
+# 《設定頁》
+
+schema:
+  schema_id: Mount_ocm
+  name: "❖蝦米(單出-反查專用)❖"
+  version: "202405"
+  author:
+    - 洋蔥
+  description: |
+    用戶字典蝦米
+  dependencies:
+    - Mount_bopomo
+    - punct_ovff
+    - symbols_ocm
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ "中文", "英文" ]
+  - name: full_shape
+    reset: 0
+    states: [ "半形", "全形" ]
+  - name: ascii_punct
+    reset: 0
+    states: [ "。，", "．，" ]
+  - name: simplification
+    reset: 0
+    states: [ "繁體", "简体" ]
+  - name: extended_charset
+    reset: 1
+    states: [ "常用", "增廣" ]
+  - name: simplify_comment
+    # reset: 0
+    states: [ 編碼, 無編 ]
+
+engine:
+  filters:
+    - simplifier@zh_cn
+    - reverse_lookup_filter@tr_reverse_lookup
+    - reverse_lookup_filter@tr2_reverse_lookup
+    - lua_filter@comment_filter_plus
+    - reverse_lookup_filter@ovff_reverse_lookup
+    - reverse_lookup_filter@phonetic_reverse_lookup
+    - uniquifier
+  processors:
+    - lua_processor@zhuyin_space
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - affix_segmentor@pt
+    - affix_segmentor@emoji_series
+    - affix_segmentor@reverse2_lookup
+    - affix_segmentor@reverse3_lookup
+    # - affix_segmentor@reverse3_lookup_extra
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - table_translator
+    - table_translator@pt
+    - table_translator@emoji_series
+    - script_translator@reverse2_lookup
+    - table_translator@reverse3_lookup
+    - script_translator@reverse3_lookup_extra
+
+zh_cn:
+  opencc_config: tw2s.json
+  tips: all
+  tags: [ abc ]
+
+comment_filter_plus:
+  tags: [ abc, pt ]
+
+menu:
+  alternative_select_keys: "0123456789"
+  page_size: 9
+
+speller:
+  alphabet: "abcdefghijklmnopqrstuvwxyz;,."
+  delimiter: "|"
+  max_code_length: 5
+  auto_select: false #自動上屛
+  # auto_clear: max_length # auto：空碼自動清屏| manual：空碼按下一鍵確認清屏| max_length：達到最長碼時確認清屏
+  algebra:
+    - derive/^([a-z]+)$/$1`/
+
+translator:
+  dictionary: Mount_ocm.extended
+  enable_charset_filter: true
+  # enable_encoder: false
+  # encode_commit_history: false
+  enable_sentence: false
+  enable_completion: false
+  # sentence_over_completion: false
+  enable_user_dict: false
+  preedit_format:
+    - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
+    - xform/\|/  /
+    - xform/`/  /
+
+tr_reverse_lookup:
+  tags: [ abc ]
+  overwrite_comment: true
+  dictionary: Mount_ocm.extended
+  comment_format:
+    - xform/ /  /
+    - xform/^/  /
+    - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
+
+pt:
+  tag: pt
+  dictionary: punct_ovff
+  # enable_charset_filter: false
+  # enable_encoder: false
+  # encode_commit_history: false
+  enable_sentence: false
+  enable_completion: false
+  # sentence_over_completion: false
+  enable_user_dict: false
+  preedit_format:
+    - xform/^/〔蝦符〕/
+
+tr2_reverse_lookup:
+  tags: [ pt ]
+  overwrite_comment: true
+  dictionary: punct_ovff
+  comment_format:
+    - xform/ /   /
+    - xform/^/  /
+    - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
+
+reverse2_lookup:
+  tag: reverse2_lookup
+  dictionary: "Mount_bopomo.extended"
+  # enable_charset_filter: false
+  enable_completion: false
+  enable_user_dict: true
+  prefix: "';"
+  suffix: "'"
+  tips: "《注音反查》▶"
+  closing_tips: "◀《注音反查》"
+  preedit_format:
+    - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 6347|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˉˊˇˋ˙|"
+    - xform/^/《注音反查》/
+    - xform/\|/  /
+    - xform/`/  /
+
+ovff_reverse_lookup:
+  tags: [ reverse2_lookup ]
+  overwrite_comment: true
+  dictionary: Mount_ocm.extended
+  comment_format:
+    - xform/ /  /
+    - xform/^/  /
+    - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
+
+reverse3_lookup:
+  # __include: /translator  # user_dict 詞彙會混到 abc 中，有可能不顯示，也可能顯示影響。
+  tag: reverse3_lookup
+  dictionary: Mount_ocm.extended
+  # enable_charset_filter: false #true
+  # enable_encoder: false
+  # encode_commit_history: false
+  enable_sentence: false
+  enable_completion: false
+  # sentence_over_completion: false
+  enable_user_dict: false
+  prefix: ";'"
+  suffix: "'"
+  tips: "《查注音》▶"
+  closing_tips: "◀《查注音》"
+  initial_quality: 1000
+  extra_tags:
+    - reverse3_lookup_extra
+  preedit_format:
+    - xform/^/《查注音》/
+    - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
+    - xform/\|/  /
+    - xform/`/  /
+
+reverse3_lookup_extra:
+  # __include: /translator  # user_dict 詞彙會混到 abc 中，有可能不顯示，也可能顯示影響。
+  __include: /reverse3_lookup  # 使用此條目，選字時才不會出現 bug！不然會 reverse3_lookup 和 reverse3_lookup_extra 會被認定分開狀態。
+  # tag: reverse3_lookup_extra
+  # dictionary: Mount_ocm.extended
+  # enable_charset_filter: false #true
+  # enable_encoder: false
+  # encode_commit_history: false
+  # enable_sentence: false
+  # enable_completion: false
+  enable_user_dict: true
+  # strict_spelling: false #true
+  initial_quality: 1
+  preedit_format:
+    - xform/^/《查注音》/
+    - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
+    - xform/\|/  /
+    - xform/`/  /
+
+phonetic_reverse_lookup:
+  tags: [ reverse3_lookup ]
+  dictionary: "Mount_bopomo.extended"
+  overwrite_comment: true
+  comment_format:
+    - xform/iu/iU/ #iou
+    - xform/ui/uI/ #uei
+    - xform/ong/ung/
+    - xform/yi?/i/
+    - xform/wu?/u/
+    - xform/iu/v/
+    - xform/([jqx])u/$1v/
+    - xform/([iuv])n/$1en/
+    - xform/zhi?/Z/
+    - xform/chi?/C/
+    - xform/shi?/S/
+    - xform/([zcsr])i/$1/
+    - xform/ai/A/
+    - xform/ei/I/
+    - xform/ao/O/
+    - xform/ou/U/
+    - xform/ang/K/
+    - xform/eng/G/
+    - xform/an/M/
+    - xform/en/N/
+    - xform/er/R/
+    - xform/eh/E/
+    - xform/([iv])e/$1E/
+    - "xlit|bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR12345|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˉˊˇˋ˙|"
+    - xform/^/ /
+    - xform/ /  /
+
+emoji_series:
+  tag: emoji_series
+  dictionary: symbols_ocm
+  # enable_charset_filter: false
+  # enable_encoder: false
+  # encode_commit_history: false
+  enable_sentence: false
+  enable_completion: false
+  # sentence_over_completion: false
+  enable_user_dict: true
+  prefix: ";"
+  suffix: "'" #注意開啟會干擾「;'」開頭之掛載，需特別設定
+#  suffix: '"'
+  tips: "《EMOJI集》▶"
+  closing_tips: "◀《EMOJI集》"
+  preedit_format:
+    __include: element_ocm:/emoji_series
+
+key_binder:
+  import_preset: default
+  bindings:
+### 避 RIME 原設定鍵位衝突 ###
+    - {accept: comma, send: comma, when: has_menu}
+    - {accept: comma, send: comma, when: paging}
+    - {accept: period, send: period, when: has_menu}
+    - {accept: period, send: period, when: paging}
+    - {accept: minus, send: minus, when: has_menu}
+    - {accept: minus, send: minus, when: paging}
+    - {accept: equal, send: equal, when: has_menu}
+    - {accept: equal, send: equal, when: paging}
+### 翻頁時，回復到 composing 狀態 ###
+    # - {accept: Tab, send: Shift+Left, when: paging}
+### 切分移位 ###
+    - {accept: Up, send: Left, when: composing} #左移一整個字
+    - {accept: Up, send: Up, when: paging} #修正上條目出現的bug
+    - {accept: Left, send: KP_Left, when: composing} #左移一個注音
+#######################################
+    - {accept: Left, send: Page_Up, when: paging}
+    - {accept: Right, send: Page_Down, when: paging}
+    # - {accept: Up, send: Page_Up, when: paging} #橫式選單用
+    # - {accept: Down, send: Page_Down, when: paging} #橫式選單用
+    # - {accept: Left, send: Left, when: has_menu} #橫式選單用 #send: Shift+Up
+    # - {accept: Right, send: Right, when: has_menu} #橫式選單用 #send: Shift+Down #send: Right
+    - {accept: Shift+Up, send: Page_Up, when: paging} #選字時「Shift」+「上」翻頁。
+    # - {accept: Shift+Up, send: Page_Up, when: has_menu} #選字時「Shift」+「上」翻頁。
+    - {accept: Shift+Down, send: Page_Down, when: has_menu} #選字時「Shift」+「下」翻頁。
+    # - {accept: Shift+C, send: Page_Up, when: paging}
+    - {accept: Shift+Tab, send: Page_Up, when: has_menu} #選字時可用「Shift」+「tab」翻頁。
+    - {accept: Shift+space, send: Page_Down, when: has_menu} #選字時可用「Shift」+「空白鍵」翻頁。 #send: Right #send: Down
+    - {accept: Tab, send: Page_Down, when: has_menu} #「tab」翻頁。
+#######################################
+    # - {accept: Return, send: space, when: has_menu} #return直出
+    # - {accept: KP_Enter, send: space, when: has_menu} #KP_Enter直出
+    - {accept: KP_Enter, send: Return, when: always}
+    - {accept: space, send: Escape, when: composing} #空碼清屏用
+    - {accept: space, send: space, when: has_menu} #補上一條產生之bug
+############## 小鍵盤選字修正 ###########
+    - {accept: KP_0, send: Control+1, when: has_menu}
+    - {accept: KP_1, send: Control+2, when: has_menu}
+    - {accept: KP_2, send: Control+3, when: has_menu}
+    - {accept: KP_3, send: Control+4, when: has_menu}
+    - {accept: KP_4, send: Control+5, when: has_menu}
+    - {accept: KP_5, send: Control+6, when: has_menu}
+    - {accept: KP_6, send: Control+7, when: has_menu}
+    - {accept: KP_7, send: Control+8, when: has_menu}
+    - {accept: KP_8, send: Control+9, when: has_menu}
+############# control 選字修正 ###########
+    - {accept: Control+0, send: Control+1, when: has_menu}
+    - {accept: Control+1, send: Control+2, when: has_menu}
+    - {accept: Control+2, send: Control+3, when: has_menu}
+    - {accept: Control+3, send: Control+4, when: has_menu}
+    - {accept: Control+4, send: Control+5, when: has_menu}
+    - {accept: Control+5, send: Control+6, when: has_menu}
+    - {accept: Control+6, send: Control+7, when: has_menu}
+    - {accept: Control+7, send: Control+8, when: has_menu}
+    - {accept: Control+8, send: Control+9, when: has_menu}
+#######################################
+    # - {accept: Control+apostrophe, toggle: extended_charset, when: always } #增廣常用字符過濾，新增開關
+    # - {accept: Control+bracketleft, toggle: simplify_comment, when: always } #提示碼開關
+## 上排切換
+    - {accept: Control+Shift+7, toggle: simplify_comment, when: always}
+## 切換樣態
+    - {accept: Control+apostrophe, unset_option: extended_charset, when: always } #增廣常用字符過濾，新增開關
+    - {accept: Control+bracketleft, set_option: simplify_comment, when: always } #提示碼開關
+## 初始樣態
+    - {accept: Control+Shift+apostrophe, set_option: extended_charset, when: always } #增廣常用字符過濾，新增開關
+    - {accept: Control+Shift+bracketleft, unset_option: simplify_comment, when: always } #提示碼開關
+
+punctuator:
+  # import_preset: default #symbols_ovff
+  full_shape:
+    ";": ["；"] #["；", "："]
+    # ";" : { commit: "；" }
+    "`" : { commit: "｀" }
+    "~" : { commit: "～" }
+    "!" : { commit: "！" }
+    "@" : { commit: "＠" }
+    "#" : { commit: "＃" }
+    "$" : { commit: "＄" }
+    "%" : { commit: "％" }
+    "^" : { commit: "＾" }
+    "&" : { commit: "＆" }
+    "*" : { commit: "＊" }
+    "(" : { commit: "（" }
+    ")" : { commit: "）" }
+    "_" : { commit: "＿" }
+    "-" : { commit: "－" }
+    "+" : { commit: "＋" }
+    "=" : { commit: "＝" }
+    # "[" : { commit: "［" }
+    # "]" : { commit: "］" }
+    "{" : { commit: "｛" }
+    "}" : { commit: "｝" }
+    "\\" : { commit: "＼" }
+    "|" : { commit: "｜" }
+    ":" : { commit: "：" }
+    # "'" : { commit: "＇" }
+    '"' : { commit: '＂' }
+    # "," : { commit: "，" }
+    # "." : { commit: "．" }
+    "<" : { commit: "＜" }
+    ">" : { commit: "＞" }
+    "/" : { commit: "／" }
+    "?" : { commit: "？" }
+  half_shape:
+    ";": [";"]
+    # ";" : { commit: ";" }
+    "`" : { commit: "`" }
+    "~" : { commit: "~" }
+    "!" : { commit: "!" }
+    "@" : { commit: "@" }
+    "#" : { commit: "#" }
+    "$" : { commit: "$" }
+    "%" : { commit: "%" }
+    "^" : { commit: "^" }
+    "&" : { commit: "&" }
+    "*" : { commit: "*" }
+    "(" : { commit: "(" }
+    ")" : { commit: ")" }
+    "_" : { commit: "_" }
+    "-" : { commit: "-" }
+    "+" : { commit: "+" }
+    "=" : { commit: "=" }
+    # "[" : { commit: "[" }
+    # "]" : { commit: "]" }
+    "{" : { commit: "{" }
+    "}" : { commit: "}" }
+    "\\" : { commit: "\\" }
+    "|" : { commit: "|" }
+    ":" : { commit: ":" }
+    # "'" : { commit: "'" }
+    '"' : { commit: '"' }
+    # "," : { commit: "," }
+    # "." : { commit: "." }
+    "<" : { commit: "<" }
+    ">" : { commit: ">" }
+    "/" : { commit: "/" }
+    "?" : { commit: "?" }
+
+recognizer:
+#  import_preset: default
+  patterns:
+    # punct: "^;([a-z]+|[0-9]0?)$"
+    pt: "^[,.][,.'a-z]*$|^'['a-z]*$|^,[][]+[a-z]*$|^,v[][]+$|^v[][]+v?$|^[][]+[a-z]*$"
+    emoji_series: "^;$|^;[a-z]+'?$|^;;[-0-9a-z]'?$|^;[0-9]'?$|^;[0-9]-[0-9]?'?$"
+    # emoji_series: "^;[a-z]*$|^;;[-0-9a-z]$|^;[0-9]$|^;[0-9]-[0-9]?$"
+    reverse2_lookup: "^';[-.,;/0-9a-z |]*'?$"
+    reverse3_lookup: "^;'[a-z`|]*'?$"

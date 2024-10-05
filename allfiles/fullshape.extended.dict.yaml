@@ -1,0 +1,14 @@
+# Rime dictionary
+# encoding: utf-8
+# 《英數全形（洋蔥形碼鍵位）字詞庫匯入頁》
+# 『洋蔥』製作
+---
+name: fullshape.extended
+version: "202301"
+sort: by_weight #original
+use_preset_vocabulary: false
+import_tables:
+  - fullshape
+  - phrases.fs_all
+  - space_f  #全形空格，特殊方案用
+...

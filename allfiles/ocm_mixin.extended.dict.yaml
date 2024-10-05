@@ -1,0 +1,31 @@
+# Rime dictionary
+# encoding: utf-8
+# 《超級混合蝦米 字詞庫匯入頁》
+# 『洋蔥』製作
+---
+name: ocm_mixin.extended
+version: "202204"
+sort: original
+use_preset_vocabulary: false
+import_tables:
+  - ocm_tc_mc
+  - uniabcdword
+  - ocm_mixin_jp
+  - ocm_mixin_kr
+  - ocm_mixin_la
+  - phrases.ocmtc_essay_mc
+  - phrases.cht_en_w
+##  - phrases.jp_hk_more ##
+#  - phrases.jp_hk #
+#  - phrases.jp_hkk #
+##  - phrases.kr_more ##
+#  - phrases.kr #
+  - phrases.en_o_w
+  - phrases.la_py_w
+  - phrases.en_l_w
+  - phrases.en_u_w
+  - phrases.la_eu_w
+## 上方掛載詞庫在 Mac 可全打開（前方有 #）
+## Win 不知哪邊出問題？！需遮屏幾個詞庫或 uniabcdword（罕見字），或精簡詞庫，否則無法部屬。可測試並視需求打開或關閉（於前方加 # 或刪除 #）。
+...
+‧	-`

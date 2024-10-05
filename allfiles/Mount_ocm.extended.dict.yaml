@@ -1,0 +1,15 @@
+# Rime dictionary
+# encoding: utf-8
+# 《字庫匯入設定頁》
+---
+name: Mount_ocm.extended
+version: "202203"
+sort: original
+use_preset_vocabulary: false
+import_tables:
+#   - punct_ovff
+  - ocm_tc_mc
+  - kanaword
+  - uniabcdword
+...
+ 	|

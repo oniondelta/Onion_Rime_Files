@@ -1,0 +1,116 @@
+# default.custom.yaml
+# save it to: 
+#   ~/.config/ibus/rime  (linux)
+#   ~/Library/Rime       (macos)
+#   %APPDATA%\Rime       (windows)
+
+patch:
+  schema_list:
+######## 洋蔥注音/拼音 五個主方案 ########
+    - schema: bo_mixin4
+    - schema: bo_mixin1
+    - schema: bo_mixin2
+    - schema: bo_mixin3
+    - schema: bopomo_onionplus
+    - schema: bopomo_onionplus_space
+    - schema: bopomo_onion
+    - schema: bopomo_onion_double
+    - schema: terra_pinyin_onion
+    - schema: hangeul
+    - schema: hangeul_hnc
+    - schema: jpnin1
+    - schema: latinin1
+    - schema: greek
+    - schema: cyrillic
+    - schema: allbpm
+    - schema: fullshape
+    - schema: cangjie5
+    # - schema: easy_en_super
+    - schema: easy_en_lower
+    - schema: easy_en_upper
+    - schema: easy_en_lcomment
+    - schema: symbols_bpmf
+    - schema: symbols_bpmf_double
+###############################
+
+  switcher/fix_schema_list_order: true #固定方案選單順序
+  switcher/hotkeys:
+    - Control+grave
+    - Control+Shift+grave
+    - F4
+
+  menu/page_size: 9
+
+  key_binder/bindings:
+    - { when: composing, accept: Control+p, send: Up }
+    - { when: composing, accept: Control+n, send: Down }
+    - { when: composing, accept: Control+b, send: Left }
+    - { when: composing, accept: Control+f, send: Right }
+    - { when: composing, accept: Control+a, send: Home }
+    - { when: composing, accept: Control+e, send: End }
+    - { when: composing, accept: Control+d, send: Delete }
+    - { when: composing, accept: Control+k, send: Shift+Delete }
+    - { when: composing, accept: Control+h, send: BackSpace }
+    - { when: composing, accept: Control+g, send: Escape }
+    # - { when: composing, accept: Control+bracketleft, send: Escape }
+    - { when: composing, accept: Alt+v, send: Page_Up }
+    - { when: composing, accept: Control+v, send: Page_Down }
+    # move by word
+    - { when: composing, accept: ISO_Left_Tab, send: Shift+Left }
+    - { when: composing, accept: Shift+Tab, send: Shift+Left }
+    - { when: composing, accept: Tab, send: Shift+Right }
+    # flip page
+    - { when: has_menu, accept: minus, send: Page_Up }
+    - { when: has_menu, accept: equal, send: Page_Down }
+    - { when: paging, accept: comma, send: Page_Up }
+    - { when: has_menu, accept: period, send: Page_Down }
+    # hotkey switch(Mac)
+    - { when: always, accept: Control+Shift+1, select: .next }
+    - { when: always, accept: Control+Shift+2, toggle: ascii_mode }
+    - { when: always, accept: Control+Shift+3, toggle: full_shape }
+    - { when: always, accept: Control+Shift+4, toggle: ascii_punct } #新增！
+    - { when: always, accept: Control+Shift+5, toggle: simplification } #Control+Shift+4
+    - { when: always, accept: Control+Shift+6, toggle: extended_charset } #Control+Shift+5
+    # hotkey switch(Win)
+    - { when: always, accept: Control+Shift+exclam, select: .next }
+    - { when: always, accept: Control+Shift+at, toggle: ascii_mode }
+    - { when: always, accept: Control+Shift+numbersign, toggle: full_shape }
+    - { when: always, accept: Control+Shift+dollar, toggle: ascii_punct }
+    - { when: always, accept: Control+Shift+percent, toggle: simplification }
+    - { when: always, accept: Control+Shift+asciicircum, toggle: extended_charset }
+    # 新增下排功能快捷鍵
+    - { when: always, accept: Shift+space, toggle: ascii_mode }
+    # - { when: always, accept: Control+comma, toggle: ascii_mode }
+    # - { when: always, accept: Control+period, toggle: full_shape }
+    # - { when: always, accept: Control+semicolon, toggle: simplification }
+    # - { when: always, accept: Control+slash, toggle: ascii_punct }
+    # 切換樣態
+    - { accept: Control+comma, set_option: ascii_mode, when: always }
+    - { accept: Control+period, set_option: full_shape, when: always }
+    - { accept: Control+semicolon, set_option: simplification, when: always }
+    - { accept: Control+slash, set_option: ascii_punct, when: always }
+    # 初始樣態(Mac)
+    - { accept: Control+Shift+comma, unset_option: ascii_mode, when: always }
+    - { accept: Control+Shift+period, unset_option: full_shape, when: always }
+    - { accept: Control+Shift+semicolon, unset_option: simplification, when: always }
+    - { accept: Control+Shift+slash, unset_option: ascii_punct, when: always }
+    # 初始樣態(Win)
+    - { accept: Control+Shift+less, unset_option: ascii_mode, when: always }
+    - { accept: Control+Shift+greater, unset_option: full_shape, when: always }
+    - { accept: Control+Shift+colon, unset_option: simplification, when: always }
+    - { accept: Control+Shift+question, unset_option: ascii_punct, when: always }
+    # 只限直排專用：左右鍵翻頁（ Testing！ ）
+    - { accept: Left, send: Page_Up, when: paging } #直式選單用 #has_menu
+    - { accept: Right, send: Page_Down, when: paging } #直式選單用 #has_menu
+    - { accept: KP_Enter, send: Return, when: always } #使小鍵盤Enter可選擇
+
+#  ascii_composer:
+#    good_old_caps_lock: false
+  ascii_composer/switch_key:
+    Shift_L: noop
+    Shift_R: noop
+#    Caps_Lock: clear
+#    Eisu_toggle: clear
+#    Control_L: noop
+#    Control_R: noop
+

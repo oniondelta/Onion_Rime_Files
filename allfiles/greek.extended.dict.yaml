@@ -1,0 +1,15 @@
+# Rime dictionary
+# encoding: utf-8
+# 《希臘字母（洋蔥形碼鍵位）字詞庫匯入頁》
+# 『洋蔥』製作
+---
+name: greek.extended
+version: "202301"
+sort: by_weight
+use_preset_vocabulary: false
+import_tables:
+  - greek
+  - phrases.gr_all
+  - space  #空格，特殊方案用
+...
+

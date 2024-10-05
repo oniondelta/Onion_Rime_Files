@@ -1,0 +1,16 @@
+# Rime dictionary
+# encoding: utf-8
+# 《西里爾字母（洋蔥形碼鍵位）字詞庫匯入頁》
+# 『洋蔥』製作
+---
+name: cyrillic.extended
+version: "202301"
+sort: by_weight
+use_preset_vocabulary: false
+#max_phrase_length: 7
+#min_phrase_weight: 100
+import_tables:
+  - cyrillic
+  - phrases.cyr_all
+  - space  #空格，特殊方案用
+...

@@ -1,0 +1,1064 @@
+# Rime dictionary
+# encoding: utf-8
+# 《西里爾字母（洋蔥形碼鍵位）碼表_增補》
+# 『洋蔥』製作
+---
+name: cyrillic
+version: "202001"
+sort: by_weight
+use_preset_vocabulary: false
+...
+##### 空格 #####
+ 	jj	10000
+ 	jj]	10000
+##### Cyrillic 基本 #####
+### Cyrillic 基本小寫 ###
+а	a	3000
+б	s	3000
+в	b	3000
+г	g	3000
+д	d	3000
+е	e	3000
+ж	j	3000
+з	z	3000
+и	n	3000
+##
+и	nk
+й	nu	3000
+##
+й	nku
+к	k	3000
+л	l	3000
+##
+л	jhi
+м	m	3000
+н	h	3000
+о	o	3000
+п	r	3000
+р	p	3000
+с	c	3000
+т	t	3000
+у	y	3000
+ф	f	3000
+х	x	3000
+ц	v	3000
+ч	u	3000
+##
+ч	hq
+ш	w	3000
+щ	wy	3000
+ъ	br	3000
+ы	bi	3000
+##
+ы	bhi	3000
+ь	bf	3000
+##
+#ь	bi
+э	q	3000
+ю	i	3000
+##
+ю	iho
+##
+#ю	io
+я	rk	3000
+ѐ	en
+ё	eb	3000
+ђ	htj
+##
+ђ	hjt
+##
+ђ	tfg
+##
+ђ	lgt
+##
+ђ	ltg
+##
+ђ	igt
+##
+ђ	itg
+##
+ђ	tg
+ѓ	gp
+є	qk
+ѕ	si
+і	ii
+ї	ib
+ј	ji
+љ	lhb
+##
+љ	jhb
+##
+#љ	lb #201611太常撞碼，容錯碼去除
+њ	hhb
+##
+њ	ihb
+##
+њ	hb
+ћ	ht
+##
+ћ	thh
+##
+ћ	thn
+ќ	kp
+ѝ	nn
+##
+ѝ	nkn
+ў	yu
+џ	yf
+##
+џ	rky
+ѡ	wi
+ѣ	bt
+##
+ѣ	bft
+ѥ	ihqk
+##
+ѥ	iqk
+##
+ѥ	ihc
+ѧ	af
+##
+#ѧ	ai
+ѩ	ihaf
+##
+ѩ	iaf
+##
+#ѩ	ihai
+##
+#ѩ	iai
+ѫ	vf
+ѭ	ihvf
+##
+ѭ	ivf
+#ѯ	zf
+##
+#ѯ	zsy
+##
+#ѯ	zys
+##
+ѯ	zfy
+##
+ѯ	zfv
+##
+ѯ	zcy
+##
+ѯ	zcv
+##
+ѯ	zyc
+##
+ѯ	zvc
+ѱ	ui
+ѳ	qi
+##
+ѳ	oz
+ѵ	vr
+ѷ	vrnn
+ѹ	ohy
+ѻ	of
+ѽ	wmd
+ѿ	wt
+ҁ	cfy
+##
+ҁ	cy
+##
+ҁ	cfk
+ҋ	nyu
+##
+ҋ	nkyu
+ҍ	bt
+##
+ҍ	bft
+ҏ	px
+ґ	gr
+ғ	gt
+ҕ	gg
+җ	jy
+ҙ	zj
+қ	ky
+ҝ	ki
+ҟ	kt
+ҡ	kr
+ң	hy
+ҥ	hr
+ҧ	rg
+ҩ	ff
+ҫ	cj
+ҭ	ty
+ү	yi
+ұ	yt
+ҳ	xy
+ҵ	thv
+##
+ҵ	vht
+ҷ	uy
+##
+ҷ	hqy
+ҹ	ui
+##
+ҹ	hqi
+һ	hi
+ҽ	ek
+ҿ	eky
+##
+ҿ	eyk
+ӂ	ju
+ӄ	kj
+ӆ	ly
+##
+ӆ	jiy
+##
+ӆ	jhiy
+ӈ	hj
+##
+ӈ	ihj
+ӊ	hy
+ӌ	uy
+##
+ӌ	hqy
+ӎ	my
+ӏ	ii
+ӑ	au
+ӓ	ab
+ӕ	ahe
+##
+#ӕ	ae
+ӗ	eu
+ә	eq
+ӛ	eqb
+ӝ	jb
+ӟ	zb
+#ӡ	zg
+##
+#ӡ	zfg
+##
+ӡ	zf
+ӣ	ne
+##
+ӣ	nke
+ӥ	nb
+##
+ӥ	nkb
+ӧ	ob
+ө	qi
+ӫ	qb
+ӭ	qb
+ӯ	ye
+ӱ	yb
+ӳ	ypp
+ӵ	ub
+##
+ӵ	hqb
+ӷ	gy
+ӹ	bib
+##
+ӹ	bhib
+ӻ	gtj
+##
+ӻ	gjt
+ӽ	xj
+ӿ	xt
+### Cyrillic 基本大寫 ###
+Ѐ	en]
+Ё	eb]	1000
+Ђ	tg]
+Ѓ	gp]
+Є	qk]
+Ѕ	si]
+І	ii]
+Ї	ib]
+Ј	ji]
+Љ	lhb]
+##
+#Љ	lb] #201611太常撞碼，容錯碼去除
+##
+Љ	jhb]
+Њ	hhb]
+##
+#Њ	hb]
+##
+Њ	ihb]
+Ћ	thh]
+##
+Ћ	thn]
+##
+Ћ	ht]
+Ќ	kp]
+Ѝ	nn]
+##
+Ѝ	nkn]
+Ў	yu]
+Џ	yf]
+##
+Џ	rky]
+А	a]	1000
+Б	s]	1000
+В	b]	1000
+Г	g]	1000
+Д	d]	1000
+Е	e]	1000
+Ж	j]	1000
+З	z]	1000
+И	n]	1000
+##
+И	nk]	1000
+Й	nu]	1000
+##
+Й	nku]
+К	k]	1000
+Л	l]	1000
+##
+Л	jhi]	1000
+М	m]	1000
+Н	h]	1000
+О	o]	1000
+П	r]	1000
+Р	p]	1000
+С	c]	1000
+Т	t]	1000
+У	y]	1000
+Ф	f]	1000
+Х	x]	1000
+Ц	v]	1000
+Ч	u]	1000
+##
+Ч	hq]
+Ш	w]	1000
+Щ	wy]	1000
+Ъ	br]	1000
+Ы	bi]	1000
+##
+Ы	bhi]	1000
+Ь	bf]	1000
+##
+#Ь	bi]
+Э	q]	1000
+Ю	i]	1000
+##
+Ю	iho]
+##
+#Ю	io]
+Я	rk]	1000
+Ѡ	wi]
+Ѣ	bt]
+##
+Ѣ	bft]
+Ѥ	ihqk]
+##
+Ѥ	iqk]
+##
+Ѥ	ihc]
+Ѧ	af]
+##
+#Ѧ	ai]
+Ѩ	ihaf]
+##
+Ѩ	iaf]
+##
+#Ѩ	ihai]
+##
+#Ѩ	iai]
+Ѫ	vf]
+Ѭ	ihvf]
+##
+Ѭ	ivf]
+#Ѯ	zf]
+##
+#Ѯ	zsy]
+##
+#Ѯ	zys]
+##
+Ѯ	zfy]
+##
+Ѯ	zfv]
+##
+Ѯ	zcy]
+##
+Ѯ	zcv]
+##
+Ѯ	zyc]
+##
+Ѯ	zvc]
+Ѱ	ui]
+Ѳ	qi]
+##
+Ѳ	oz]
+Ѵ	vr]
+Ѷ	vrnn]
+Ѹ	ohy]
+Ѻ	of]
+Ѽ	wmd]
+Ѿ	wt]
+Ҁ	cfy]
+##
+Ҁ	cy]
+##
+Ҁ	cfk]
+Ҋ	nyu]
+##
+Ҋ	nkyu]
+Ҍ	bt]
+##
+Ҍ	bft]
+Ҏ	px]
+Ґ	gr]
+Ғ	gt]
+Ҕ	gg]
+Җ	jy]
+Ҙ	zj]
+Қ	ky]
+Ҝ	ki]
+Ҟ	kt]
+Ҡ	kr]
+Ң	hy]
+Ҥ	hr]
+Ҧ	rg]
+Ҩ	ff]
+Ҫ	cj]
+Ҭ	ty]
+Ү	yi]
+Ұ	yt]
+Ҳ	xy]
+Ҵ	thv]
+##
+Ҵ	vht]
+Ҷ	uy]
+##
+Ҷ	hqy]
+Ҹ	ui]
+##
+Ҹ	hqi]
+Һ	hi]
+Ҽ	ek]
+Ҿ	eky]
+##
+Ҿ	eyk]
+Ӂ	ju]
+Ӄ	kj]
+Ӆ	ly]
+##
+Ӆ	jiy]
+##
+Ӆ	jhiy]
+Ӈ	hj]
+##
+Ӈ	ihj]
+Ӊ	hy]
+Ӌ	uy]
+##
+Ӌ	hqy]
+Ӎ	my]
+Ӏ	ii]
+Ӑ	au]
+Ӓ	ab]
+Ӕ	ahe]
+##
+#Ӕ	ae]
+Ӗ	eu]
+Ә	eq]
+Ӛ	eqb]
+Ӝ	jb]
+Ӟ	zb]
+#Ӡ	zg]
+##
+#Ӡ	zfg]
+##
+Ӡ	zf]
+Ӣ	ne]
+##
+Ӣ	nke]
+Ӥ	nb]
+##
+Ӥ	nkb]
+Ӧ	ob]
+Ө	qi]
+Ӫ	qb]
+Ӭ	qb]
+Ӯ	ye]
+Ӱ	yb]
+Ӳ	ypp]
+Ӵ	ub]
+##
+Ӵ	hqb]
+Ӷ	gy]
+Ӹ	bib]
+##
+Ӹ	bhib]
+Ӻ	gtj]
+##
+Ӻ	gjt]
+Ӽ	xj]
+Ӿ	xt]
+### Cyrillic 基本其他 ###
+҂	nf
+## u0483
+҃	;;s
+## u0484
+҄	;;m
+## u0485
+҅	;;q
+##
+҅	;;tq
+##
+҅	;;c
+##
+҅	;;ch
+##
+҅	;;cfh
+##
+҅	;;cf
+## u0486
+҆	;;d
+##
+҆	;;tq
+##
+҆	;;j
+##
+҆	;;jfh
+##
+҆	;;jf
+## u0487
+҇	;;m
+## u0488
+҈	;;mmmmmmmm
+## u0489
+҉	;;wwwwwwww
+##### Cyrillic Supplement #####
+### Cyrillic Supplement 小寫 ###
+ԁ	di
+ԃ	du
+ԅ	rfu
+ԇ	rfy
+ԉ	lu
+##
+ԉ	jiu
+ԋ	hu
+ԍ	gi
+ԏ	tu
+ԑ	ei
+ԓ	lj
+##
+ԓ	jhj
+ԕ	jhx
+ԗ	phx
+##
+ԗ	phk
+ԙ	rkhe
+##
+ԙ	rke
+ԛ	qi
+ԝ	wi
+ԟ	kx
+ԡ	lg
+##
+ԡ	jig
+##
+ԡ	jhig
+ԣ	hg
+ԥ	ry
+ԧ	hy
+ԩ	hj
+ԫ	dhk
+ԭ	uhd
+##
+ԭ	dhu
+##
+ԭ	hqhd
+##
+ԭ	dhhq
+##
+ԭ	hqd
+##
+ԭ	dhq
+ԯ	ly
+##
+ԯ	jiy
+##
+ԯ	jhiy
+### Cyrillic Supplement 大寫 ###
+Ԁ	di]
+Ԃ	du]
+Ԅ	rfu]
+Ԇ	rfy]
+Ԉ	lu]
+##
+Ԉ	jiu]
+Ԋ	hu]
+Ԍ	gi]
+Ԏ	tu]
+Ԑ	ei]
+Ԓ	lj]
+##
+Ԓ	jhj]
+Ԕ	jhx]
+Ԗ	phx]
+##
+Ԗ	phk]
+Ԙ	rkhe]
+##
+Ԙ	rke]
+Ԛ	qi]
+Ԝ	wi]
+Ԟ	kx]
+Ԡ	lg]
+##
+Ԡ	jig]
+##
+Ԡ	jhig]
+Ԣ	hg]
+Ԥ	ry]
+Ԧ	hy]
+Ԩ	hj]
+Ԫ	dhk]
+Ԭ	uhd]
+##
+Ԭ	dhu]
+##
+Ԭ	hqhd]
+##
+Ԭ	dhhq]
+##
+Ԭ	hqd]
+##
+Ԭ	dhq]
+Ԯ	ly]
+##
+Ԯ	jiy]
+##
+Ԯ	jhiy]
+##### Cyrillic Extended-A #####
+### Cyrillic Extended-A無法顯示（後面有補完） ###
+##### Cyrillic Extended-B #####
+### Cyrillic Extended-B 小寫 ###
+ꙁ	zj
+ꙃ	ztj
+##
+ꙃ	zjt
+ꙅ	sk
+ꙇ	ic
+##
+ꙇ	ii
+ꙉ	ykt
+##
+ꙉ	yft
+##
+ꙉ	nft
+ꙍ	wi
+ꙏ	br
+ꙑ	bri
+##
+ꙑ	brhi
+ꙓ	rhbt
+##
+ꙓ	rbt
+##
+ꙓ	ibt
+##
+ꙓ	ihbt
+ꙕ	ohi
+ꙗ	iha
+ꙙ	ade
+ꙛ	wf
+##
+#ꙛ	xf
+ꙝ	ihade
+##
+ꙝ	iade
+ꙟ	lf
+##
+#ꙟ	ly
+ꙡ	vk
+ꙣ	dr
+ꙥ	lr
+##
+ꙥ	jir
+##
+ꙥ	jhir
+##
+ꙥ	jht
+ꙧ	mr
+ꙩ	oma
+ꙫ	omb
+ꙭ	rf
+##
+ꙭ	ohomb
+##
+ꙭ	oomb
+ꚁ	df	2
+ꚃ	sf	1
+ꚅ	zhk
+ꚇ	xf
+#ꚇ	wf
+##
+ꚇ	wy
+##
+ꚇ	whi
+##
+ꚇ	mqy
+##
+ꚇ	mrq
+##
+#ꚇ	mqhi
+##
+#ꚇ	mqi
+##
+ꚇ	uhu
+ꚉ	dj
+##
+ꚉ	dfj
+ꚋ	tg
+ꚍ	ti
+##
+ꚍ	tc
+ꚏ	rkj
+ꚑ	tc
+ꚓ	uht
+##
+ꚓ	thu
+##
+ꚓ	hqht
+##
+ꚓ	hqt
+##
+ꚓ	thhq
+##
+ꚓ	thq
+ꚕ	hr
+ꚗ	wj
+ꚙ	oho
+ꚛ	otf
+##
+ꚛ	omt
+### Cyrillic Extended-B 大寫 ###
+Ꙁ	zj]
+Ꙃ	ztj]
+##
+Ꙃ	zjt]
+Ꙅ	sk]
+Ꙇ	ic]
+##
+Ꙇ	ii]
+Ꙉ	ykt]
+##
+Ꙉ	yft]
+##
+Ꙉ	nft]
+Ꙍ	wi]
+Ꙏ	br]
+Ꙑ	bri]
+##
+Ꙑ	brhi]
+Ꙓ	rhbt]
+##
+Ꙓ	ibt]
+##
+Ꙓ	rbt]
+##
+Ꙓ	ihbt]
+Ꙕ	ohi]
+Ꙗ	iha]
+Ꙙ	ade]
+Ꙛ	wf]
+##
+#Ꙛ	xf]
+Ꙝ	ihade]
+##
+Ꙝ	iade]
+Ꙟ	lf]
+##
+#Ꙟ	ly]
+Ꙡ	vk]
+Ꙣ	dr]
+Ꙥ	lr]
+##
+Ꙥ	jir]
+##
+Ꙥ	jhir]
+##
+Ꙥ	jht]
+Ꙧ	mr]
+Ꙩ	oma]
+Ꙫ	omb]
+Ꙭ	rf]
+##
+Ꙭ	ohomb]
+##
+Ꙭ	oomb]
+Ꚁ	df]	1
+Ꚃ	si]
+Ꚅ	zhk]
+Ꚇ	xf]
+##
+#Ꚇ	wf]
+##
+Ꚇ	wy]
+##
+Ꚇ	whi]
+##
+Ꚇ	mqy]
+##
+Ꚇ	mrq]
+##
+#Ꚇ	mqhi]
+##
+#Ꚇ	mqi]
+##
+Ꚇ	uhu]
+Ꚉ	dj]
+##
+Ꚉ	dfj]
+Ꚋ	tg]
+Ꚍ	ti]
+##
+Ꚍ	tc]
+Ꚏ	rkj]
+Ꚑ	tc]
+Ꚓ	uht]
+##
+Ꚓ	thu]
+##
+Ꚓ	hqht]
+##
+Ꚓ	hqt]
+##
+Ꚓ	thhq]
+##
+Ꚓ	thq]
+Ꚕ	hr]
+Ꚗ	wj]
+Ꚙ	oho]
+Ꚛ	otf]
+##
+Ꚛ	omt]
+### Cyrillic Extended-B 其他 ###
+Ꙋ	qf
+##
+Ꙋ	voc
+##
+Ꙋ	vco
+ꙋ	uho
+##
+ꙋ	vo
+##
+ꙋ	yo
+##
+ꙋ	no
+ꙮ	hf
+## ua66f
+꙯	;;e
+##
+꙯	;;n
+##
+꙯	;;t
+##
+꙯	;;r
+## ua670
+꙰	;;xxxxxxxx
+## ua671
+꙱	;;ee
+##
+꙱	;;nnk
+##
+꙱	;;ttk
+##
+꙱	;;rrk
+##
+꙱	;;ede
+##
+꙱	;;ndnk
+##
+꙱	;;tdtk
+##
+꙱	;;rdrk
+## ua672
+꙲	;;tjjjq
+꙳	jf
+##
+꙳	jfh
+## ua674
+ꙴ	;;qkh
+##
+ꙴ	;;qk
+## ua675
+ꙵ	;;nh
+## ua676
+ꙶ	;;ibh
+##
+ꙶ	;;ib
+## ua677
+ꙷ	;;yh
+## ua678
+ꙸ	;;brh
+##
+ꙸ	;;br
+## ua679
+ꙹ	;;bih
+##
+ꙹ	;;bhih
+##
+ꙹ	;;bi
+##
+ꙹ	;;bhi
+## ua67a
+ꙺ	;;bh
+##
+ꙺ	;;bfh
+##
+ꙺ	;;bf
+## ua67b
+ꙻ	;;wh
+## ua67c
+꙼	;;u
+## ua67d
+꙽	;;uh
+##
+꙽	;;hqh
+##
+꙽	;;hq
+꙾	uf
+##
+꙾	uw
+##
+꙾	uh
+ꙿ	uh
+##
+ꙿ	hqh
+##
+#ꙿ	ui
+ꚜ	brh
+ꚝ	bfh
+##
+ꚝ	bh
+## ua69e
+ꚞ	;;fh
+## ua69f
+ꚟ	;;ihqkh
+##
+ꚟ	;;iqkh
+##
+ꚟ	;;ihch
+##
+ꚟ	;;ihqk
+##
+ꚟ	;;iqk
+##
+ꚟ	;;ihc
+##### Cyrillic Extended-A (all combine) #####
+ⷠ	;;sh
+ⷡ	;;bh
+ⷢ	;;gh
+ⷣ	;;dh
+ⷤ	;;jh
+ⷥ	;;zh
+ⷦ	;;kh
+ⷧ	;;lh
+##
+ⷧ	;;jhih
+##
+ⷧ	;;jih
+##
+ⷧ	;;jhi
+##
+ⷧ	;;ji
+ⷨ	;;mh
+ⷩ	;;hh
+ⷪ	;;oh
+ⷫ	;;rh
+ⷬ	;;ph
+ⷭ	;;ch
+##
+# ⷭ	;;cfh
+##
+# ⷭ	;;cf
+ⷮ	;;th
+ⷯ	;;xh
+ⷰ	;;vh
+ⷱ	;;uh
+##
+ⷱ	;;hqh
+##
+ⷱ	;;hq
+ⷲ	;;wh
+ⷳ	;;wyh
+##
+ⷳ	;;wy
+ⷴ	;;qh
+##
+ⷴ	;;ozh
+##
+ⷴ	;;oz
+ⷵ	;;chth
+##
+ⷵ	;;cth
+##
+ⷵ	;;cht
+##
+ⷵ	;;ct
+ⷶ	;;ah
+ⷷ	;;eh
+ⷸ	;;ykth
+##
+ⷸ	;;yfth
+##
+ⷸ	;;nfth
+##
+ⷸ	;;ykt
+##
+ⷸ	;;yft
+##
+ⷸ	;;nft
+ⷹ	;;uhoh
+##
+ⷹ	;;uoh
+##
+ⷹ	;;voh
+##
+ⷹ	;;yoh
+##
+ⷹ	;;noh
+##
+ⷹ	;;uho
+##
+ⷹ	;;uo
+##
+ⷹ	;;vo
+##
+ⷹ	;;yo
+##
+ⷹ	;;no
+ⷺ	;;bth
+##
+ⷺ	;;bfth
+##
+ⷺ	;;bt
+##
+ⷺ	;;bft
+ⷻ	;;ih
+##
+ⷻ	;;ihoh
+##
+ⷻ	;;ioh
+##
+ⷻ	;;iho
+##
+ⷻ	;;io
+ⷼ	;;ihah
+##
+ⷼ	;;iah
+##
+ⷼ	;;iha
+##
+ⷼ	;;ia
+ⷽ	;;afh
+##
+ⷽ	;;af
+ⷾ	;;vfh
+##
+ⷾ	;;vf
+ⷿ	;;ivfh
+##
+ⷿ	;;ihvfh
+##
+ⷿ	;;ivf
+##
+ⷿ	;;ihvf
+##### 結束 #####

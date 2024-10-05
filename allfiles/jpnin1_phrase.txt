@@ -1,0 +1,6 @@
+# Rime table
+#@/db_name	jpnin1_phrase.txt
+#@/db_type	tabledb
+#@/rime_version	1.2.9
+#@/tick	2
+🌏【 ✦ 洋蔥‧日語 ✦ 】📡	zz	10

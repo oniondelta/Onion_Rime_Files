@@ -1,0 +1,1079 @@
+# Rime key bindings
+# encoding: utf-8
+# 『洋蔥』製作
+
+menu:
+  # alternative_select_keys: "QAZWSXEDCRFV"
+  # alternative_select_keys: "QAZWSXEDCV"
+  # alternative_select_keys: "YHNUJMIKOL"
+  # alternative_select_keys: "YUIOPHJKLNM"
+  # alternative_select_labels: [ 甲, 乙, 丙, 丁, 戊, 己, 庚, 辛, 壬, 癸 ]
+  # alternative_select_labels: [ ①, ②, ③, ④, ⑤, ⑥, ⑦, ⑧, ⑨ ]  # 修改候選標籤
+  # alternative_select_labels: [ 'QY', 'AH', 'ZN', 'WU', 'SJ', 'XM', 'EI' ,'DK', 'CO' ]
+  # alternative_select_labels: [ 'QY', 'AH', 'ZN', 'WU', 'SJ', 'XM' ]
+  # alternative_select_labels: [ 1QY, 2AH, 3ZN, 4WU, 5SJ, 6XM ]
+  # alternative_select_labels: [ ₁QY, ₂AH, ₃ZN, ₄WU, ₅SJ, ₆XM ]
+  alternative_select_labels: [ QY, AH, ZN, WU, SJ, XM ]
+  page_size: 6
+
+
+key_binder:
+### 避 RIME 原設定鍵位衝突 ###
+    - {accept: comma, send: comma, when: has_menu}
+    - {accept: comma, send: comma, when: paging}
+    - {accept: period, send: period, when: has_menu}
+    - {accept: period, send: period, when: paging}
+    - {accept: minus, send: minus, when: has_menu}
+    - {accept: minus, send: minus, when: paging}
+    - {accept: equal, send: equal, when: has_menu}
+    - {accept: equal, send: equal, when: paging}
+########################## 方向鍵：切分移位 和 翻頁 ##########################
+### 翻頁時，回復到 composing 狀態 ###
+#關#    - {accept: Shift+space, send: Shift+Left, when: paging} #於選單列選字時，回復到輸入列（避免有時回復不了，故增加）。
+    - {accept: Tab, send: Shift+Left, when: paging} #於選單列選字時，回復到輸入列（避免有時回復不了，故增加）。
+### 切分移位 ###
+    - {accept: Up, send: KP_Left, when: composing} #左移一個注音
+    - {accept: Up, send: Up, when: paging} #修正上條目出現的bug
+##
+    - {accept: Right, send: Shift+Right, when: composing} #右移一整個字
+    - {accept: Shift+Right, send: Right, when: composing} #右移一個注音
+    - {accept: Shift+Left, send: KP_Left, when: composing} #左移一個注音
+#關#    - {accept: Shift+space, send: Shift+Right, when: composing} #首節
+    # - {accept: Shift+space, send: KP_Left, when: composing} #左移一個注音
+    # - {accept: Left, send: KP_Left, when: composing} #左移一個注音
+##
+    # - {accept: Shift+Tab, send: Right, when: composing} #右移一個注音
+    # - {accept: Tab, send: KP_Left, when: composing} #左移一個注音
+### 選字翻頁 ###
+## 直式選單（stacked-horizontal） ##
+#不符合#    - {accept: Right, send: Page_Down, when: has_menu}
+    - {accept: Left, send: Page_Up, when: paging} #has_menu
+    - {accept: Right, send: Page_Down, when: paging} #has_menu
+## 橫式選單（linear-horizontal） ##
+#可不用#    - {accept: Up, send: Page_Up, when: paging}
+#可不用#    - {accept: Down, send: Page_Down, when: paging}
+#可不用#    - {accept: Left, send: Left, when: has_menu}
+    # - {accept: Right, send: Right, when: has_menu} #校正前面
+    # - {accept: Shift+Right, send: Shift+Right, when: composing} #校正前面
+    # - {accept: Left, send: Left, when: paging} #send: Shift+Up
+    # - {accept: Right, send: Right, when: paging} #send: Shift+Down
+##########################################################################
+#其他快捷鍵翻頁
+    - {accept: Shift+Up, send: Page_Up, when: paging} #選字時「Shift」+「上」翻頁。
+    - {accept: Shift+Down, send: Page_Down, when: has_menu} #選字時「Shift」+「下」翻頁。
+#關#    - {accept: Shift+Tab, send: Page_Up, when: paging} #選字時「Shift」+「tab」翻頁。
+#關#    - {accept: Tab, send: Page_Down, when: has_menu} #「tab」翻頁。
+    - {accept: Shift+C, send: Page_Up, when: has_menu}
+    - {accept: Shift+space, send: Page_Down, when: has_menu} #選字時「Shift」+「空白鍵」翻頁。 #send: Right #send: Down
+    - {accept: Shift+I, send: Page_Up, when: has_menu}
+    - {accept: Shift+K, send: Page_Down, when: has_menu}
+#左邊選字
+    - {accept: Shift+Y, send: Control+1, when: has_menu}
+    - {accept: Shift+H, send: Control+2, when: has_menu}
+    - {accept: Shift+N, send: Control+3, when: has_menu}
+    - {accept: Shift+U, send: Control+4, when: has_menu}
+    - {accept: Shift+J, send: Control+5, when: has_menu}
+    - {accept: Shift+M, send: Control+6, when: has_menu}
+#右邊選字
+    - {accept: Shift+Q, send: Control+1, when: has_menu}
+    - {accept: Shift+A, send: Control+2, when: has_menu}
+    - {accept: Shift+Z, send: Control+3, when: has_menu}
+    - {accept: Shift+W, send: Control+4, when: has_menu}
+    - {accept: Shift+S, send: Control+5, when: has_menu}
+    - {accept: Shift+X, send: Control+6, when: has_menu}
+### 空白鍵 ###
+    - {accept: space, send: Return, when: paging} #方向鍵選字時，space直接上屏（避免被一聲空格影響）
+    # - {accept: space, send: Page_Down, when: paging} #方向鍵選字時，space翻頁（上條遮屏需開啟，否則「=」+「符號」會誤按）
+    # - {accept: space, send: Down, when: has_menu}
+    # - {accept: space, send: Down, when: paging}
+    # - {accept: space, send: space, when: composing}
+#關#    - {accept: space, send: Escape, when: composing} #空碼時，按空格清除
+#關#    - {accept: space, send: space, when: has_menu} #非空碼時，空白還是空白
+### 補一聲和上屏 raw_input （ paging 時，空白鍵無法輸出一聲 ） ###
+    - {accept: Shift+D, send: space, when: has_menu}
+    - {accept: Shift+L, send: space, when: has_menu}
+    - {accept: Shift+E, send: Shift+Return, when: composing}
+    - {accept: Shift+O, send: Shift+Return, when: composing}
+### 上屏 preedit（注音文）編碼 ###
+    - {accept: Shift+F, send: Control+Return, when: has_menu}
+### 刪除鍵 ###
+    - {accept: BackSpace, send: Control+BackSpace, when: has_menu} #〔關〕刪除前一個拼音字符〔開〕：刪除整組拼音字符（一個字）
+    - {accept: Shift+BackSpace, send: BackSpace, when: has_menu}
+    - {accept: backslash, send: BackSpace, when: has_menu} #「\」鍵位刪除一個拼音字符。
+    # - {accept: backslash, send: Shift+BackSpace, when: has_menu} #「\」鍵位刪除整組拼音字符（一個字）。
+#關#    - {accept: backslash, send: Shift+Return, when: has_menu} #「\」鍵位上屏英文。
+### 另設快捷刪除鍵 ###
+    - {accept: Shift+R, send: BackSpace, when: composing}
+    - {accept: Shift+P, send: BackSpace, when: composing}
+    - {accept: Shift+T, send: Delete, when: composing}
+    - {accept: Shift+G, send: Escape, when: composing}
+### 另設快捷鍵 ###
+    - {accept: Shift+V, send: Home, when: composing}
+    - {accept: Shift+B, send: End, when: composing}
+### 功能快捷鍵 ###
+    # - {accept: Return, send: space, when: has_menu}
+    # - {accept: Control+bracketright, toggle: back_mark, when: always } #「國際音標和符號」提示碼開關
+    # - {accept: Control+apostrophe, toggle: character_range_bhjm, when: always} #accept: Control+semicolon
+    # - {accept: Control+equal, toggle: en_sort, when: always} #「easy」選單排序是否照英漢字典順序
+## 上排切換(Mac)
+    - {accept: Control+Shift+6, toggle: character_range_bhjm, when: always} #誤按沒警示，避免誤按，可關閉！（開關台灣習慣用字）
+    - {accept: Control+Shift+7, toggle: emoji_segestion, when: always} #誤按沒警示，避免誤按，可關閉！（開關跟隨的emoji）
+    - {accept: Control+Shift+8, toggle: back_mark, when: always} #誤按沒警示，避免誤按，可關閉！（開關標註）
+    - {accept: Control+Shift+9, toggle: unicode_comment, when: always}
+    - {accept: Control+Shift+0, toggle: en_sort, when: always} #誤按沒警示，避免誤按，可關閉！(「排序Easy如同英漢字典」開關）
+## 上排切換(Win)
+    - {accept: Control+Shift+asciicircum, toggle: character_range_bhjm, when: always} #誤按沒警示，避免誤按，可關閉！（開關台灣習慣用字）
+    - {accept: Control+Shift+ampersand, toggle: emoji_segestion, when: always} #誤按沒警示，避免誤按，可關閉！（開關跟隨的emoji）
+    - {accept: Control+Shift+asterisk, toggle: back_mark, when: always} #誤按沒警示，避免誤按，可關閉！（開關標註）
+    - {accept: Control+Shift+parenleft, toggle: unicode_comment, when: always}
+    - {accept: Control+Shift+parenright, toggle: en_sort, when: always} #誤按沒警示，避免誤按，可關閉！(「排序Easy如同英漢字典」開關）
+## 切換樣態
+    # - { accept: Control+comma, set_option: ascii_mode, when: always }
+    # - { accept: Control+period, set_option: full_shape, when: always }
+    # - { accept: Control+semicolon, set_option: simplification, when: always }
+    # - { accept: Control+slash, set_option: ascii_punct, when: always }
+    - { accept: Control+bracketleft, unset_option: emoji_segestion, when: always }
+    - { accept: Control+bracketright, unset_option: back_mark, when: always } #「國際音標和符號」提示碼開關
+    - { accept: Control+apostrophe, unset_option: character_range_bhjm, when: always } #accept: Control+semicolon
+#win易快捷鍵衝突，mac可打開#    - { accept: Control+minus, set_option: unicode_comment, when: always }
+#win易快捷鍵衝突，mac可打開#    - { accept: Control+equal, set_option: en_sort, when: always } #「easy」選單排序是否照英漢字典順序
+## 初始樣態(Mac)
+    # - { accept: Control+Shift+comma, unset_option: ascii_mode, when: always }
+    # - { accept: Control+Shift+period, unset_option: full_shape, when: always }
+    # - { accept: Control+Shift+semicolon, unset_option: simplification, when: always }
+    # - { accept: Control+Shift+slash, unset_option: ascii_punct, when: always }
+    - { accept: Control+Shift+bracketleft, set_option: emoji_segestion, when: always }
+    - { accept: Control+Shift+bracketright, set_option: back_mark, when: always } #「國際音標和符號」提示碼開關
+    - { accept: Control+Shift+apostrophe, set_option: character_range_bhjm, when: always } #accept: Control+semicolon
+#win易快捷鍵衝突，mac可打開#    - { accept: Control+Shift+minus, unset_option: unicode_comment, when: always }
+#win易快捷鍵衝突，mac可打開#    - { accept: Control+Shift+equal, unset_option: en_sort, when: always } #「easy」選單排序是否照英漢字典順序
+## 初始樣態(Win)
+    # - { accept: Control+Shift+less, unset_option: ascii_mode, when: always }
+    # - { accept: Control+Shift+greater, unset_option: full_shape, when: always }
+    # - { accept: Control+Shift+colon, unset_option: simplification, when: always }
+    # - { accept: Control+Shift+question, unset_option: ascii_punct, when: always }
+    - { accept: Control+Shift+braceleft, set_option: emoji_segestion, when: always }
+    - { accept: Control+Shift+braceright, set_option: back_mark, when: always } #「國際音標和符號」提示碼開關
+    - { accept: Control+Shift+quotedbl, set_option: character_range_bhjm, when: always } #accept: Control+semicolon
+#win易快捷鍵衝突，mac可打開#    - { accept: Control+Shift+underscore, unset_option: unicode_comment, when: always }
+#win易快捷鍵衝突，mac可打開#    - { accept: Control+Shift+plus, unset_option: en_sort, when: always } #「easy」選單排序是否照英漢字典順序
+### 避聲調重複按 ###
+    # - {accept: 3, send: Escape, when: composing}
+    # - {accept: 3, send: 3, when: has_menu}
+    # - {accept: 4, send: Escape, when: composing}
+    # - {accept: 4, send: 4, when: has_menu}
+    # - {accept: 6, send: Escape, when: composing}
+    # - {accept: 6, send: 6, when: has_menu}
+    # - {accept: 7, send: Escape, when: composing}
+    # - {accept: 7, send: 7, when: has_menu}
+### ctrl 打出標點 ###
+#關#    - {accept: "Control+comma", send: "less", when: always} #「逗號」#接受「Contol」+「,」直出「<」
+#關#    - {accept: "Control+period", send: "greater", when: always} #「句號」#接受「Contol」+「.」直出「>」
+#關#    - {accept: "Control+slash", send: "question", when: always} #「問號」#接受「Contol」+「/」直出「？」
+#關#    - {accept: "Control+apostrophe", send: "quotedbl", when: always} #「頓號」#接受「Contol」+「'」直出「"」
+### 空白鍵不上屏設置 ###
+    # - {accept: space, send: bar, when: composing}
+    # - {accept: space, send: space, when: has_menu}
+### 切分\\不能在 recognizer 正則使用，嘗試用轉寫 ###
+    # - {accept: backslash, send: bar, when: has_menu} #可以，反過來不可以
+    # - {accept: bar, send: backslash, when: has_menu} #不能，反過來可以？！
+    # - {accept: apostrophe, send: backslash, when: has_menu}
+
+
+editor:
+    Return: confirm #使用 express_editor 時開啟 #commit_composition
+    KP_Enter: confirm #使用 express_editor 時開啟 #commit_composition
+    Shift+Return: commit_raw_input # 上屏原始輸入
+    Control+Return: commit_script_text # 上屏變換後輸入
+#    space: commit_composition #使用 fluency_editor 時開啟
+#    space: toggle_selection
+#    space: noop
+
+
+emoji_series:
+##### 以下四字 #####
+    - xform/^m2sm/【運動ㄋㄩ(女)】/
+    - xform/^m2s0/【運動ㄋㄢ(男)】/
+    - xform/^resm/【精怪ㄋㄩ(女)】/
+    - xform/^res0/【精怪ㄋㄢ(男)】/
+    - xform/^eemg/【公共運輸／公交】(公共交通)/
+    - xform/^bgxx/【日式料理／日本料理／日本菜】/
+    - xform/^b1xx/【日本料理／日式料理／日本菜】/
+    - xform/^b1vf/【日本星期】/
+    - xform/^xgnea/【六十四卦名／易經卦名】/
+    - xform/^xagy2/【羅馬數字大】/
+    - xform/^xgne/【六十四卦／易經】/
+    - xform/^urea/【易經卦名／六十四卦名】/
+    - xform/^g-gv/【十二生肖／生肖圖】(生肖)/
+    - xform/^yacf/【字母黑圈／字母圈黑】(字母帶圓圈)/
+    - xform/^yafc/【字母圈黑／字母黑圈】(字母帶圓圈)/
+    - xform/^yacz/【字母黑方／字母方黑／字母框黑／字母黑框】(字母帶圓角方框)/
+    - xform/^yazc/【字母方黑／字母黑方／字母框黑／字母黑框】(字母帶圓角方框)/
+    - xform/^yadc/【字母框黑／字母黑框／字母黑方／字母方黑】(字母帶圓角方框)/
+    - xform/^yacd/【字母黑框／字母框黑／字母黑方／字母方黑】(字母帶圓角方框)/
+    - xform/^rwer/【交通工具／交通圖】(交通)/
+    - xform/^cy1f/【猴子表情／猴子頭】/
+    - xform/^gyfc/【數字圈黑／數字黑圈】/
+    - xform/^gycf/【數字黑圈／數字圈黑】/
+    - xform/^yaf2/【字母圈大】/
+    - xform/^yae2/【字母括大】/
+    - xform/^xagy/【羅馬數字】/
+    - xform/^ug2j/【野生動物】/
+##### 以下三字 #####
+    - xform/^txw/【蟲類圖／蟲圖】/
+    - xform/^2aw/【多媒體】/
+    - xform/^vvw/【血型圖／血液】/
+    - xform/^bmq/【日用品／日用】/
+    - xform/^ndv/【色塊心】/
+    - xform/^ndm/【色塊圓】/
+    - xform/^ndz/【色塊方】/
+    - xform/^2fw/【電器圖】(電器)/
+    - xform/^erw/【工具圖】(工具)/
+    - xform/^urw/【眼鏡圖】(眼鏡)/
+    - xform/^b1s/【日本年】/
+    - xform/^8x1/【阿拉伯】/
+    - xform/^c5b/【黃種人／亞裔】/
+    - xform/^xau/【拉美裔／拉丁裔／棕色人】/
+    - xform/^ynb/【棕色人／拉美裔／拉丁裔】/
+    - xform/^x2u/【拉丁裔／拉美裔／棕色人】/
+    - xform/^15b/【白種人／白人】/
+    - xform/^ym2/【做運動】/
+    - xform/^2jx/【動物臉／獸面】/
+    - xform/^gjr/【食物捲】/
+    - xform/^b1h/【日本菜／日本料理／日式料理】/
+    - xform/^2yb/【大自然】/
+    - xform/^uxm/【遊樂園】/
+    - xform/^zvf/【飛行器】/
+    - xform/^vyw/【鞋子圖】(鞋子)/
+    - xform/^rew/【精怪圖】(精怪)/
+    - xform/^mvw/【月相圖】(月相)/
+    - xform/^wgw/【甜食圖／甜點】(甜食)/
+    - xform/^rfw/【家禽圖／禽類】(家禽)/
+    - xform/^hrw/【餐具圖】(餐具)/
+    - xform/^mxw/【魚類圖／魚圖】(魚類)/
+    - xform/^wnd/【填色塊／填色】/
+    - xform/^2vd/【單線框】/
+    - xform/^gvd/【雙線框】/
+    - xform/^rvc/【警消護】/
+    - xform/^1eg/【辦公室】/
+    - xform/^rww/【交通圖／交通工具】(交通)/
+    - xform/^gyr/【十字架】/ #(宗教)
+    - xform/^xa2/【羅馬大】/
+    - xform/^2jw/【動物圖】(動物)/
+    - xform/^gvw/【生肖圖／十二生肖】(生肖)/
+    - xform/^gbz/【輸入法】/
+    - xform/^rcw/【幾何圖】(幾何2)/
+    - xform/^cyd/【漢字框】/
+    - xform/^xyv/【咧嘴笑】/
+    - xform/^cyw/【猴子頭／猴子表情】/
+    - xform/^gy1/【數字標】/ #(數字)
+    - xform/^yaz/【字母方／字母框】(字母帶方框)/
+    - xform/^yad/【字母框／字母方】(字母帶方框)/
+    - xform/^vuf/【西洋棋／象棋】/
+    - xform/^qdq/【撲克牌／撲克】/
+    - xform/^wvr/【太玄經】/
+    - xform/^vya/【星座名】/
+    - xform/^g-e/【十二宮】/
+    - xform/^gyf/【數字圈】/
+    - xform/^gye/【數字括】/
+    - xform/^gy2/【數字點】/
+    - xform/^yaf/【字母圈】/
+    - xform/^yae/【字母括】/
+    - xform/^n5a/【蘇州碼】/
+    - xform/^vx2/【希臘大】/
+    - xform/^km2/【俄語大】/
+    - xform/^125/【標點直】/
+    - xform/^cyf/【漢字圈】/
+    - xform/^cye/【漢字括】/
+    - xform/^iro/【 IRO 】(いろは順)/
+    - xform/^kra/【 k 假名】/
+    - xform/^gra/【 g 假名】/
+    - xform/^sra/【 s 假名】/
+    - xform/^zra/【 z 假名】/
+    - xform/^tra/【 t 假名】/
+    - xform/^dra/【 d 假名】/
+    - xform/^nra/【 n 假名】/
+    - xform/^hra/【 h 假名】/
+    - xform/^bra/【 b 假名】/
+    - xform/^pra/【 p 假名】/
+    - xform/^mra/【 m 假名】/
+    - xform/^yra/【 y 假名】/
+    - xform/^rra/【 r 假名】/
+    - xform/^wra/【 w 假名】/
+    - xform/^ara/【 a 假名】/
+    - xform/^ira/【 i 假名】/
+    - xform/^ura/【 u 假名】/
+    - xform/^era/【 e 假名】/
+    - xform/^ora/【 o 假名】/
+    - xform/^raf/【假名圈】/
+    - xform/^ra1/【假名半(形)】/
+    - xform/^qra/【片假名】/
+    - xform/^cjf/【韓文圈】/
+    - xform/^cje/【韓文括】/
+    - xform/^rwn/【箭頭色(塊)】/
+    - xform/^gyn/【數字色(塊)】/
+    - xform/^cyn/【漢字色(塊)】/
+    - xform/^ra/【(平)假名】/
+##### 以下二字 #####
+    - xform/^wn/【填色／填色塊】/
+    - xform/^cg/【回收】/
+    - xform/^dy/【褲子】/
+    - xform/^zn/【膚色】/
+    - xform/^nd/【色塊】/
+    - xform/^2y/【電子】/
+    - xform/^jf/【武器】/
+    - xform/^wz/【頭髮】/
+    - xform/^ay/【帽子】/
+    - xform/^5c/【中華】/
+    - xform/^aw/【貓頭】/
+    - xform/^5h/【中餐】(中華料理)/
+    - xform/^5z/【正飯】(正餐)/
+    - xform/^vh/【西餐】/
+    - xform/^tj/【串物】/
+    - xform/^mf/【樂器】/
+    - xform/^uu/【亞裔／黃種人】/
+    - xform/^1b/【白人／白種人】/
+    - xform/^cb/【黑人／非裔】/
+    - xform/^zu/【非裔／黑人】/
+    - xform/^jh/【午餐】/
+    - xform/^yh/【早餐／早點】/
+    - xform/^y2/【早點／早餐】/
+    - xform/^rj/【捲物】/
+    - xform/^uy/【葉子】/
+    - xform/^ag/【名勝／景點】/
+    - xform/^r2/【景點／名勝】/
+    - xform/^er/【公交／公共運輸】(公共交通)/
+    - xform/^te/【城軌／捷運】/
+    - xform/^rm/【捷運／城軌】/
+    - xform/^ct/【火車】/
+    - xform/^tq/【鈔票／紙鈔／紙幣】/
+    - xform/^5t/【紙鈔／紙幣／鈔票】/
+    - xform/^51/【紙幣／紙鈔／鈔票】/
+    - xform/^ud/【夜空】/
+    - xform/^rv/【獎項／獎牌】/
+    - xform/^rq/【獎牌／獎項】/
+    - xform/^dh/【快餐／速食】/
+    - xform/^ng/【速食／快餐】/
+    - xform/^ej/【怪物】/
+    - xform/^uc/【有害】/
+    - xform/^ft/【汽車／車輛】/
+    - xform/^tx/【車輛／汽車】/
+    - xform/^bu/【熱飲】/
+    - xform/^gt/【牲畜／畜牲】/
+    - xform/^tg/【畜牲／牲畜】/
+    - xform/^fr/【球具】/
+    - xform/^w2/【甜點／甜食圖】(甜食)/
+    - xform/^fx/【禽類／家禽圖】(家禽)/
+    - xform/^hx/【粗糧】/
+    - xform/^bx/【肉類／肉品】/
+    - xform/^bq/【肉品／肉類】/
+    - xform/^dv/【科學】/
+    - xform/^t5/【船隻】/
+    - xform/^cc/【花卉】/
+    - xform/^gh/【蔬菜】/
+    - xform/^rr/【酒精／酒類】/
+    - xform/^rx/【酒類／酒精】/
+    - xform/^vv/【下雪】/
+    - xform/^xg/【零食】/
+    - xform/^a1/【麵包】/
+    - xform/^zr/【飛機】/
+    - xform/^az/【米飯】/
+    - xform/^sx/【鳥類／鳥圖】/
+    - xform/^mw/【魚圖／魚類圖】(魚類)/
+    - xform/^sw/【鳥圖／鳥類】/
+    - xform/^cj/【韓文】/
+    - xform/^1f/【表情】(符號表)/
+    - xform/^yb/【自然】(符號表)/
+    - xform/^ug/【飲食】(符號表)/
+    - xform/^c2/【活動】(符號表)/
+    - xform/^xu/【旅遊】(符號表)/
+    - xform/^jq/【物品】(符號表)/
+    - xform/^ef/【國旗】(符號表)/
+    - xform/^zc/【符號】(符號表)/
+    - xform/^rn/【景色】/
+    - xform/^2f/【地球】/
+    - xform/^ww/【天體】/
+    - xform/^5j/【植物】/
+    - xform/^ge/【水果】/
+    - xform/^gj/【食物】/
+    - xform/^ux/【飲料】/
+    - xform/^rb/【節日】/
+    - xform/^mx/【娛樂】/
+    - xform/^uv/【遊戲】/
+    - xform/^m2/【運動】/
+    - xform/^r5/【建築】/
+    - xform/^ga/【獸面／動物臉】/
+    - xform/^je/【五官】/
+    - xform/^gg/【手勢】/
+    - xform/^uj/【衣物／服裝】/
+    - xform/^z5/【服裝／衣物】/
+    - xform/^uz/【衣服】/
+    - xform/^11/【包包】/
+    - xform/^2w/【大頭】(頭像)/
+    - xform/^bj/【人物】/
+    - xform/^c5/【化妝】/
+    - xform/^9f/【愛情】/
+    - xform/^9v/【愛心】/
+    - xform/^ve/【效果】/
+    - xform/^wv/【通訊】/
+    - xform/^fh/【錢財】(金錢)/
+    - xform/^wg/【圖示】(符號)/
+    - xform/^w1/【圖標】(介面)/
+    - xform/^r1/【箭標／指示】/ #(箭頭)
+    - xform/^5g/【指示／箭標】/ #(箭頭)
+    - xform/^yr/【宗教】/
+    - xform/^g5/【時鐘】/
+    - xform/^b1/【日本】/
+    - xform/^ae/【美國】/
+    - xform/^ze/【法國】/
+    - xform/^jv/【微笑】/
+    - xform/^2v/【大笑】/
+    - xform/^wu/【討厭】(厭惡)/
+    - xform/^js/【無奈】(嘆氣)/
+    - xform/^df/【哭泣】/
+    - xform/^x2/【冷淡】/
+    - xform/^v9/【喜愛】(喜歡)/
+    - xform/^ru/【驚訝】/
+    - xform/^gf/【生氣】/
+    - xform/^cu/【懷疑／冒汗】/
+    - xform/^ac/【冒汗／懷疑】/
+    - xform/^15/【標誌】(公共標誌、號誌)/
+    - xform/^cy/【合字】(日語)/
+    - xform/^za/【符碼】(單純符號)/
+    - xform/^2s/【電腦】/
+    - xform/^eu/【工業】/
+    - xform/^vf/【象棋／西洋棋】/
+    - xform/^ar/【麻將】/
+    - xform/^gy/【骰子】/
+    - xform/^wy/【骰子】/
+    - xform/^qd/【撲克／撲克牌】/
+    - xform/^wf/【天氣】/
+    - xform/^um/【音樂】/
+    - xform/^xv/【兩性】/
+    - xform/^1e/【八卦】/
+    - xform/^ea/【卦名】/
+    - xform/^vc/【星號】/
+    - xform/^zd/【方塊】/
+    - xform/^rc/【幾何】/
+    - xform/^rw/【箭頭】/
+    - xform/^gv/【數學】/
+    - xform/^5v/【占星】/ #(天體)
+    - xform/^vy/【星座】/
+    - xform/^zg/【分數】/
+    - xform/^xa/【羅馬】/
+    - xform/^g1/【上標】/
+    - xform/^v1/【下標】/
+    - xform/^vx/【希臘】/
+    - xform/^mz/【月份】/
+    - xform/^bf/【日期】/
+    - xform/^ub/【曜日】/
+    - xform/^gr/【時間】/
+    - xform/^we/【天干】/
+    - xform/^25/【地支】/
+    - xform/^e5/【干支】/
+    - xform/^rf/【節氣】/
+    - xform/^2j/【單位】/
+    - xform/^c1/【貨幣】(符號)/
+    - xform/^re/【結構／倉頡】/
+    - xform/^hr/【倉頡／結構】/
+    - xform/^qq/【偏旁】/
+    - xform/^1g/【部首】(康熙)/
+    - xform/^1c/【筆畫】/
+    - xform/^12/【標點】/
+    - xform/^km/【俄語】/
+    - xform/^qu/【拼音】/
+    - xform/^5u/【注音】/
+    - xform/^g2/【聲調】/
+    - xform/^ur/【易經／六十四卦】/
+    - xform/^jc/【文化】/
+    - xform/^v2/【線段】/
+    - xform/^mv/【圓形】/
+    - xform/^nr/【三角】/
+    - xform/^2e/【打勾】/
+    - xform/^bm/【日用／日用品】/
+    - xform/^vu/【血液／血型圖】/
+    - xform/^fe/【器官】/
+    - xform/^tw/【蟲圖／蟲類圖】/
+    - xform/^`1/〖 1  開心〗(顏文字)/
+    - xform/^`2/〖 2  喜歡〗(顏文字)/
+    - xform/^`3/〖 3  傷心〗(顏文字)/
+    - xform/^`4/〖 4  生氣〗(顏文字)/
+    - xform/^`5/〖 5  驚訝〗(顏文字)/
+    - xform/^`6/〖 6  無奈〗(顏文字)/
+    - xform/^`7/〖 7  喜〗(顏文字)/
+    - xform/^`8/〖 8  樂〗(顏文字)/
+    - xform/^`9/〖 9  怒〗(顏文字)/
+    - xform/^`0/〖 0  指示和圖示〗(顏文字)/
+    - xform/^`-/〖 -  回話〗(顏文字)/
+    - xform/^1-?0$/【10／1-0】/
+    - xform/^([0-9]-?[0-9]?)$/【 $1 】/
+    - xform/^ab$/【 AB 】/
+    - xform/^([a-z])$/【 \U$1\E 】/
+    - xform/^`([a-z])$/〖 \U$1\E  變化〗/
+    - xform//Mac/
+##### 結束 #####
+
+
+patterns_mixin_1_2_4:
+    # uppercase: "^[A-Z][-_+.'0-9A-Za-z]*$"
+    # url: "^(https?:|ftp:|mailto:|file:).*$" #|[-0-9][-0-9]+$
+    # email: "^[a-z][-_.0-9a-z]*@.*$"
+##### 符號 和 系列 emoji 符號 #####
+    punct: "^'$|``$|[[][[]'?$|[]][]]'?$|[][]'$|[[][]]$|[[][[][]][]]$|[[]'[]]'$|[[][[]'[]][]]'$|'''?$|===?$|=``?$|=''?$|=''?=''?$|=[][][][]?$|=[][][][]?=[][][][]?$|=[-,./;][-,./;]?$|=,,=[.][.]$|=[0-9]$|=9=0$|==[].,90'[]+$"
+    emoji_series: "(?<![=`])`[-/0-9a-z]*'?$|(?<![=`])``[-/0-9a-z]+'?$"
+##### 反查 #####
+    reverse2_lookup: "=[a-z]*'?$"  #"=(?![;])[a-z;]*'?$"
+##### easy #####
+    easy_en: "^3[a-z;/.,'-]*$|(?<=')3[a-z;/.,'-]*$|(?<=[=][-0-9,.;=`])3[a-z;/.,'-]*$|(?<=[=][-,.;=`][-,.;=`])3[a-z;/.,'-]*$|(?<=(?<![]])[][])3[a-z;/.,'-]*$|(?<=[]][]])3[a-z;/.,'-]*$|(?<=(?<!'/)(?<!')(?<![][])(?<![][][^\\\\s]{1})(?<![][][^\\\\s]{2})(?<![][][^\\\\s]{3})(?<![][][^\\\\s]{4})(?<![][][^\\\\s]{5})(?<![][][^\\\\s]{6})(?<![][][^\\\\s]{7})(?<![][][^\\\\s]{8})(?<![][][^\\\\s]{9})(?<![][][^\\\\s]{10})(?<![][][^\\\\s]{11})(?<![][][^\\\\s]{12})(?<![][][^\\\\s]{13})(?<!'/[^\\\\s]{1})(?<!'/[^\\\\s]{2})(?<!'/[^\\\\s]{3})(?<!'/[^\\\\s]{4})(?<!'/[^\\\\s]{5})(?<!'/[^\\\\s]{6})(?<!'/[^\\\\s]{7})(?<!'/[^\\\\s]{8})(?<!'/[^\\\\s]{9})(?<!'/[^\\\\s]{10})(?<!'/[^\\\\s]{11})(?<!'/[^\\\\s]{12})(?<!'/[^\\\\s]{13})[-,./;a-z125890][3467 ])3[a-z;/.,'-]*$"
+##### 全日文掛載 #####
+    japan: "^4[-a-z,.;/]*'?$|(?<=')4[-a-z,.;/]*'?$|(?<=[=][-0-9,.;=`])4[-a-z,.;/]*'?$|(?<=[=][-,.;=`][-,.;=`])4[-a-z,.;/]*'?$|(?<=(?<![]])[][])4[-a-z,.;/]*'?$|(?<=[]][]])4[-a-z,.;/]*'?$|(?<=(?<!'/)(?<!')(?<![][])(?<![][][^\\\\s]{1})(?<![][][^\\\\s]{2})(?<![][][^\\\\s]{3})(?<![][][^\\\\s]{4})(?<![][][^\\\\s]{5})(?<![][][^\\\\s]{6})(?<![][][^\\\\s]{7})(?<![][][^\\\\s]{8})(?<![][][^\\\\s]{9})(?<![][][^\\\\s]{10})(?<![][][^\\\\s]{11})(?<![][][^\\\\s]{12})(?<![][][^\\\\s]{13})(?<!'/[^\\\\s]{1})(?<!'/[^\\\\s]{2})(?<!'/[^\\\\s]{3})(?<!'/[^\\\\s]{4})(?<!'/[^\\\\s]{5})(?<!'/[^\\\\s]{6})(?<!'/[^\\\\s]{7})(?<!'/[^\\\\s]{8})(?<!'/[^\\\\s]{9})(?<!'/[^\\\\s]{10})(?<!'/[^\\\\s]{11})(?<!'/[^\\\\s]{12})(?<!'/[^\\\\s]{13})[-,./;a-z125890][3467 ])4[-a-z,.;/]*'?$"
+##### 西里爾 #####
+    cyr2: "^6[a-z;/]*'?$|(?<=')6[a-z;/]*'?$|(?<=[=][-0-9,.;=`])6[a-z;/]*'?$|(?<=[=][-,.;=`][-,.;=`])6[a-z;/]*'?$|(?<=(?<![]])[][])6[a-z;/]*'?$|(?<=[]][]])6[a-z;/]*'?$|(?<=(?<!'/)(?<!')(?<![][])(?<![][][^\\\\s]{1})(?<![][][^\\\\s]{2})(?<![][][^\\\\s]{3})(?<![][][^\\\\s]{4})(?<![][][^\\\\s]{5})(?<![][][^\\\\s]{6})(?<![][][^\\\\s]{7})(?<![][][^\\\\s]{8})(?<![][][^\\\\s]{9})(?<![][][^\\\\s]{10})(?<![][][^\\\\s]{11})(?<![][][^\\\\s]{12})(?<![][][^\\\\s]{13})(?<!'/[^\\\\s]{1})(?<!'/[^\\\\s]{2})(?<!'/[^\\\\s]{3})(?<!'/[^\\\\s]{4})(?<!'/[^\\\\s]{5})(?<!'/[^\\\\s]{6})(?<!'/[^\\\\s]{7})(?<!'/[^\\\\s]{8})(?<!'/[^\\\\s]{9})(?<!'/[^\\\\s]{10})(?<!'/[^\\\\s]{11})(?<!'/[^\\\\s]{12})(?<!'/[^\\\\s]{13})[-,./;a-z125890][3467 ])6[a-z;/]*'?$"
+##### 希臘 #####
+    gr2: "^7[a-z;/]*'?$|(?<=')7[a-z;/]*'?$|(?<=[=][-0-9,.;=`])7[a-z;/]*'?$|(?<=[=][-,.;=`][-,.;=`])7[a-z;/]*'?$|(?<=(?<![]])[][])7[a-z;/]*'?$|(?<=[]][]])7[a-z;/]*'?$|(?<=(?<!'/)(?<!')(?<![][])(?<![][][^\\\\s]{1})(?<![][][^\\\\s]{2})(?<![][][^\\\\s]{3})(?<![][][^\\\\s]{4})(?<![][][^\\\\s]{5})(?<![][][^\\\\s]{6})(?<![][][^\\\\s]{7})(?<![][][^\\\\s]{8})(?<![][][^\\\\s]{9})(?<![][][^\\\\s]{10})(?<![][][^\\\\s]{11})(?<![][][^\\\\s]{12})(?<![][][^\\\\s]{13})(?<!'/[^\\\\s]{1})(?<!'/[^\\\\s]{2})(?<!'/[^\\\\s]{3})(?<!'/[^\\\\s]{4})(?<!'/[^\\\\s]{5})(?<!'/[^\\\\s]{6})(?<!'/[^\\\\s]{7})(?<!'/[^\\\\s]{8})(?<!'/[^\\\\s]{9})(?<!'/[^\\\\s]{10})(?<!'/[^\\\\s]{11})(?<!'/[^\\\\s]{12})(?<!'/[^\\\\s]{13})[-,./;a-z125890][3467 ])7[a-z;/]*'?$"
+##### 全形 #####
+    fs2: "[]][[][-,./a-z;0-9]*'?$"
+##### ㄅㄆㄇ注音文 #####
+    all_bpm: "';[-a-z0-9.,/; ]*'?$|^[-a-z0-9.,/; ]+';'$"
+##### Lua掛載 #####
+    # lua: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$|'/[-+*^/.,'();0-9a-z]*$"
+    #舊# lua: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$|'/[';/]?[a-z]*$|'/[0-9./-]*$|'/[xucoi][0-9a-z]+$" #"'/[';]?[a-z0-9./-]*$"
+##### Lua分開掛載 #####
+    # instruction_grave_bpmf: "[^=]``?$"  #不要開啟，開啟反而耗效能，且可能有bug，需要再調整。
+    email_url_translator: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$"
+    mf_translator: "'/[-+*^/.,'();0-9a-z]*$"
+##### 《 patterns_mixin_1_2_4 END 》 #####
+
+
+patterns_mixin_3:
+    # uppercase: "^[A-Z][-_+.'0-9A-Za-z]*$"
+    # url: "^(https?:|ftp:|mailto:|file:).*$" #|[-0-9][-0-9]+$
+    # email: "^[a-z][-_.0-9a-z]*@.*$"
+##### 符號 和 系列 emoji 符號 #####
+    punct: "^'$|``$|^[[][[]'?$|^[]][]]'?$|^[][]'$|^[[][[]?'?[]][]]?'?$|(?<=[125890a-z;,./-][] 3467'[])[][][][]?'?[][]?[][]?'?$|^'''?$|(?<=[125890a-z;,./-][] 3467'[])'''?$|===?$|=''?$|=''?=''?$|=[[][[]?$|=[]][]]?$|=[]][]]?=[[][[]?$|=[[][[]?=[]][]]?$|=``?$|=[-,./;][-,./;]?$|=,,=[.][.]$|=[0-9]$|=9=0$|==[90]$|==[,][,]?$|==[.][.]?$|==['][']?$|==[[][[]?$|==[]][]]?$"
+    # punct: "^'$|``$|^[[][[]'?$|^[]][]]'?$|^[][]'$|^[[][]]$|^[[][[][]][]]$|^[[]'[]]'$|^[[][[]'[]][]]'$|(?<=[125890a-z;,./-][] 3467'[])[][][][]?'?[][]?[][]?'?$|^'''?$|(?<=[125890a-z;,./-][] 3467'[])'''?$|===?$|=''?$|=''?=''?$|=[[][[]?$|=[]][]]?$|=[]][]]?=[[][[]?$|=[[][[]?=[]][]]?$|=``?$|=[-,./;][-,./;]?$|=,,=[.][.]$|=[0-9]$|=9=0$|==[90]$|==[,][,]?$|==[.][.]?$|==['][']?$|==[[][[]?$|==[]][]]?$"
+    # punct: "^'$|``$|^[[][[]'?$|^[]][]]'?$|^[][]'$|^[[][[]'?$|^[]][]]'?$|^[[][[]?'?[]][]]?'?$|(?<=[125890a-z;,./-][] 3467'[])[][][][]?'?[][]?[][]?'?$|^'''?$|(?<=[125890a-z;,./-][] 3467'[])'''?$|===?$|=''?$|=''?=''?$|=[[][[]?$|=[]][]]?$|=[]][]]?=[[][[]?$|=[[][[]?=[]][]]?$|=``?$|=[-,./;][-,./;]?$|=,,=[.][.]$|=[0-9]$|=9=0$|==[90]$|==[,][,]?$|==[.][.]?$|==['][']?$|==[[][[]?$|==[]][]]?$"
+    # punct: "``$|^[[][[]'?$|^[]][]]'?$|^[][]'$|^[[][[]'?$|^[]][]]'?$|^[[][[]?'?[]][]]?'?$|(?<=[125890a-z;,./-][] 3467'[])[][][][]?'?[][]?[][]?'?$|^'''?$|(?<=[125890a-z;,./-][] 3467'[])'''?$|===?$|=''?$|=''?=''?$|=[][][][]?$|=[][][][]?=[][][][]?$|=``?$|=[-,./;][-,./;]?$|=,,=[.][.]$|=[0-9]$|=9=0$|==[].,90'[]+$"
+    emoji_series: "(?<![=`])`[-/0-9a-z]*'?$|(?<![=`])``[-/0-9a-z]+'?$"
+##### 反查 #####
+    reverse2_lookup: "=[a-z]*'?$"  #"=(?![;])[a-z;]*'?$"
+##### easy #####
+    easy_en: "^3[a-z;/.,'-]*$|(?<=')3[a-z;/.,'-]*$|(?<=[=][-0-9,.;=`])3[a-z;/.,'-]*$|(?<=[=][-,.;=`][-,.;=`])3[a-z;/.,'-]*$|(?<=(?<![]])[][])3[a-z;/.,'-]*$|(?<=[]][]])3[a-z;/.,'-]*$|(?<=(?<!'/)(?<!')(?<![][])(?<![][][^\\\\s]{1})(?<![][][^\\\\s]{2})(?<![][][^\\\\s]{3})(?<![][][^\\\\s]{4})(?<![][][^\\\\s]{5})(?<![][][^\\\\s]{6})(?<![][][^\\\\s]{7})(?<![][][^\\\\s]{8})(?<![][][^\\\\s]{9})(?<![][][^\\\\s]{10})(?<![][][^\\\\s]{11})(?<![][][^\\\\s]{12})(?<![][][^\\\\s]{13})(?<!'/[^\\\\s]{1})(?<!'/[^\\\\s]{2})(?<!'/[^\\\\s]{3})(?<!'/[^\\\\s]{4})(?<!'/[^\\\\s]{5})(?<!'/[^\\\\s]{6})(?<!'/[^\\\\s]{7})(?<!'/[^\\\\s]{8})(?<!'/[^\\\\s]{9})(?<!'/[^\\\\s]{10})(?<!'/[^\\\\s]{11})(?<!'/[^\\\\s]{12})(?<!'/[^\\\\s]{13})[-,./;a-z125890][][3467 '])3[a-z;/.,'-]*$"
+##### 全日文掛載 #####
+    japan: "^4[-a-z,.;/]*'?$|(?<=')4[-a-z,.;/]*'?$|(?<=[=][-0-9,.;=`])4[-a-z,.;/]*'?$|(?<=[=][-,.;=`][-,.;=`])4[-a-z,.;/]*'?$|(?<=(?<![]])[][])4[-a-z,.;/]*'?$|(?<=[]][]])4[-a-z,.;/]*'?$|(?<=(?<!'/)(?<!')(?<![][])(?<![][][^\\\\s]{1})(?<![][][^\\\\s]{2})(?<![][][^\\\\s]{3})(?<![][][^\\\\s]{4})(?<![][][^\\\\s]{5})(?<![][][^\\\\s]{6})(?<![][][^\\\\s]{7})(?<![][][^\\\\s]{8})(?<![][][^\\\\s]{9})(?<![][][^\\\\s]{10})(?<![][][^\\\\s]{11})(?<![][][^\\\\s]{12})(?<![][][^\\\\s]{13})(?<!'/[^\\\\s]{1})(?<!'/[^\\\\s]{2})(?<!'/[^\\\\s]{3})(?<!'/[^\\\\s]{4})(?<!'/[^\\\\s]{5})(?<!'/[^\\\\s]{6})(?<!'/[^\\\\s]{7})(?<!'/[^\\\\s]{8})(?<!'/[^\\\\s]{9})(?<!'/[^\\\\s]{10})(?<!'/[^\\\\s]{11})(?<!'/[^\\\\s]{12})(?<!'/[^\\\\s]{13})[-,./;a-z125890][][3467 '])4[-a-z,.;/]*'?$"
+##### 西里爾 #####
+    cyr2: "^6[a-z;/]*'?$|(?<=')6[a-z;/]*'?$|(?<=[=][-0-9,.;=`])6[a-z;/]*'?$|(?<=[=][-,.;=`][-,.;=`])6[a-z;/]*'?$|(?<=(?<![]])[][])6[a-z;/]*'?$|(?<=[]][]])6[a-z;/]*'?$|(?<=(?<!'/)(?<!')(?<![][])(?<![][][^\\\\s]{1})(?<![][][^\\\\s]{2})(?<![][][^\\\\s]{3})(?<![][][^\\\\s]{4})(?<![][][^\\\\s]{5})(?<![][][^\\\\s]{6})(?<![][][^\\\\s]{7})(?<![][][^\\\\s]{8})(?<![][][^\\\\s]{9})(?<![][][^\\\\s]{10})(?<![][][^\\\\s]{11})(?<![][][^\\\\s]{12})(?<![][][^\\\\s]{13})(?<!'/[^\\\\s]{1})(?<!'/[^\\\\s]{2})(?<!'/[^\\\\s]{3})(?<!'/[^\\\\s]{4})(?<!'/[^\\\\s]{5})(?<!'/[^\\\\s]{6})(?<!'/[^\\\\s]{7})(?<!'/[^\\\\s]{8})(?<!'/[^\\\\s]{9})(?<!'/[^\\\\s]{10})(?<!'/[^\\\\s]{11})(?<!'/[^\\\\s]{12})(?<!'/[^\\\\s]{13})[-,./;a-z125890][][3467 '])6[a-z;/]*'?$"
+##### 希臘 #####
+    gr2: "^7[a-z;/]*'?$|(?<=')7[a-z;/]*'?$|(?<=[=][-0-9,.;=`])7[a-z;/]*'?$|(?<=[=][-,.;=`][-,.;=`])7[a-z;/]*'?$|(?<=(?<![]])[][])7[a-z;/]*'?$|(?<=[]][]])7[a-z;/]*'?$|(?<=(?<!'/)(?<!')(?<![][])(?<![][][^\\\\s]{1})(?<![][][^\\\\s]{2})(?<![][][^\\\\s]{3})(?<![][][^\\\\s]{4})(?<![][][^\\\\s]{5})(?<![][][^\\\\s]{6})(?<![][][^\\\\s]{7})(?<![][][^\\\\s]{8})(?<![][][^\\\\s]{9})(?<![][][^\\\\s]{10})(?<![][][^\\\\s]{11})(?<![][][^\\\\s]{12})(?<![][][^\\\\s]{13})(?<!'/[^\\\\s]{1})(?<!'/[^\\\\s]{2})(?<!'/[^\\\\s]{3})(?<!'/[^\\\\s]{4})(?<!'/[^\\\\s]{5})(?<!'/[^\\\\s]{6})(?<!'/[^\\\\s]{7})(?<!'/[^\\\\s]{8})(?<!'/[^\\\\s]{9})(?<!'/[^\\\\s]{10})(?<!'/[^\\\\s]{11})(?<!'/[^\\\\s]{12})(?<!'/[^\\\\s]{13})[-,./;a-z125890][][3467 '])7[a-z;/]*'?$"
+##### 全形 #####
+    fs2: "^[]][[][-,./a-z;0-9]*'?$|(?<=[-,./;a-z125890][][3467 '])[]][[][-,./a-z;0-9]*'?$|(?<=[=][0-9])[]][[][-,./a-z;0-9]*'?$|(?<=[=][][])[]][[][-,./a-z;0-9]*'?$|(?<=[=][][][][])[]][[][-,./a-z;0-9]*'?$|(?<=[=][-,.;=`])[]][[][-,./a-z;0-9]*'?$|(?<=[=][-,.;'=`][-,.;'=`])[]][[][-,./a-z;0-9]*'?$"
+    #無效#|(?<=')'[[][-a-z,.;/]* ?$
+##### ㄅㄆㄇ注音文 #####
+    all_bpm: "^';[-a-z0-9.,/; ]*'?$|(?<=[-,./;a-z125890][][3467 '])';[-a-z0-9.,/; ]*'?$|(?<=[=][0-9])';[-a-z0-9.,/; ]*'?$|(?<=[=][][])';[-a-z0-9.,/; ]*'?$|(?<=[=][][][][])';[-a-z0-9.,/; ]*'?$|(?<=[=][-,.;=`])';[-a-z0-9.,/; ]*'?$|(?<=[=][-,.;'=`][-,.;'=`])';[-a-z0-9.,/; ]*'?$|^[-a-z0-9.,/; ]+';'$"
+    #無效#|(?<=')';[-a-z0-9.,/; ]*'?$
+##### Lua掛載 #####
+    # lua: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$|^'/[-+*^/.,'();0-9a-z]*$|(?<=[-,./;a-z125890][][3467 '])'/[-+*^/.,'();0-9a-z]*$|(?<=[=][0-9])'/[-+*^/.,'();0-9a-z]*$|(?<=[=][][])'/[-+*^/.,'();0-9a-z]*$|(?<=[=][][][][])'/[-+*^/.,'();0-9a-z]*$|(?<=[=][-,.;=`])'/[-+*^/.,'();0-9a-z]*$|(?<=[=][-,.;'=`][-,.;'=`])'/[-+*^/.,'();0-9a-z]*$"
+    #無效#|(?<=')'/[';a-z0-9.,/-]*$
+    #舊# lua: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$|^'/[';/]?[a-z0-9./-]*$|(?<=[-,./;a-z125890][][3467 ])'/[';/]?[a-z0-9./-]*$|(?<=')'/[';/]?[a-z0-9./-]*$|(?<=[=][0-9])'/[';/]?[a-z0-9./-]*$|(?<=[=][][])'/[';/]?[a-z0-9./-]*$|(?<=[=][][][][])'/[';/]?[a-z0-9./-]*$|(?<=[=][-,.;=`])'/[';/]?[a-z0-9./-]*$|(?<=[=][-,.;'=`][-,.;'=`])'/[';/]?[a-z0-9./-]*$"
+##### Lua分開掛載 #####
+    # instruction_grave_bpmf: "[^=]``?$"  #不要開啟，開啟反而耗效能，且可能有bug，需要再調整。
+    email_url_translator: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$"
+    mf_translator: "^'/[-+*^/.,'();0-9a-z]*$|(?<=[-,./;a-z125890][][3467 '])'/[-+*^/.,'();0-9a-z]*$|(?<=[=][0-9])'/[-+*^/.,'();0-9a-z]*$|(?<=[=][][])'/[-+*^/.,'();0-9a-z]*$|(?<=[=][][][][])'/[-+*^/.,'();0-9a-z]*$|(?<=[=][-,.;=`])'/[-+*^/.,'();0-9a-z]*$|(?<=[=][-,.;'=`][-,.;'=`])'/[-+*^/.,'();0-9a-z]*$"
+##### 《 patterns_mixin_3 END 》 #####
+
+
+preedit_b_1_2_4:
+### Back 樣式 ###
+    - xform|,|a@|
+    - xform|[.]|b@|
+    - xform|/|c@|
+    - xform|-|d@|
+    - xform|;|e@|
+    - xform| |f@|
+    - xform/1/g@/
+    - xform/2/h@/
+    - xform/3/i@/
+    - xform/4/j@/
+    - xform/5/k@/
+    - xform/6/l@/
+    - xform/7/m@/
+    - xform/8/n@/
+    - xform/9/p@/
+    - xform/0/q@/
+    - xform/^([a-z@\\]+)$/$1　\U$1\E/
+    - xform/a@/ㄝ/
+    - xform/b@/ㄡ/
+    - xform/c@/ㄥ/
+    - xform/d@/ㄦ/
+    - xform/e@/ㄤ/
+    - xform/f@/ˉ/
+    - xform/g@/ㄅ/
+    - xform/h@/ㄉ/
+    - xform/i@/ˇ/
+    - xform/j@/ˋ/
+    - xform/k@/ㄓ/
+    - xform/l@/ˊ/
+    - xform/m@/˙/
+    - xform/n@/ㄚ/
+    - xform/p@/ㄞ/
+    - xform/q@/ㄢ/
+    - "xlit|qazwsxedcrfvtgbyhnujmikolp|ㄆㄇㄈㄊㄋㄌㄍㄎㄏㄐㄑㄒㄔㄕㄖㄗㄘㄙㄧㄨㄩㄛㄜㄟㄠㄣ|"
+    - xform|A@|a|
+    - xform|B@|b|
+    - xform|C@|c|
+    - xform|D@|d|
+    - xform|E@|e|
+    - xform|F@|f| #ˉ拉
+    - xform/G@/1/
+    - xform/H@/2/
+    - xform/I@/3/ #3ˇ
+    - xform/J@/4/ #4ˋ
+    - xform/K@/5/
+    - xform/L@/6/ #6ˊ日
+    - xform/M@/7/ #7˙韓
+    - xform/N@/8/
+    - xform/P@/9/
+    - xform/Q@/0/
+    - xform/([0-9A-Zabcdef])\\/$1 /
+    ## 以上英文數字符號不先轉成最終顯示，方便下面作轉換。
+    - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZabcdef1234567890|ᴀʙcᴅᴇꜰɢʜɪᴊᴋʟᴍɴoᴘǫʀsᴛᴜᴠᴡxʏz,.⸝-;⸋₁₂³⁴₅⁶⁷₈₉₀|"
+    - 'xform/\\/⁞/'
+
+
+preedit_b_3:
+### Back 樣式 ###
+    - xform|,|a@|
+    - xform|[.]|b@|
+    - xform|/|c@|
+    - xform|-|d@|
+    - xform|;|e@|
+    - xform| |f@|
+    - xform/1/g@/
+    - xform/2/h@/
+    - xform/3/i@/
+    - xform/4/j@/
+    - xform/5/k@/
+    - xform/6/l@/
+    - xform/7/m@/
+    - xform/8/n@/
+    - xform/9/p@/
+    - xform/0/q@/
+    - xform|[]]|`````|
+    - xform|[[]|````|
+    - xform|=|```|
+    - xform|'|``|
+    - xform/^([a-z@`\\]+)$/$1　\U$1\E/
+    - xform/a@/ㄝ/
+    - xform/b@/ㄡ/
+    - xform/c@/ㄥ/
+    - xform/d@/ㄦ/
+    - xform/e@/ㄤ/
+    - xform/f@/ˉ/
+    - xform/g@/ㄅ/
+    - xform/h@/ㄉ/
+    - xform/i@/ˇ/
+    - xform/j@/ˋ/
+    - xform/k@/ㄓ/
+    - xform/l@/ˊ/
+    - xform/m@/˙/
+    - xform/n@/ㄚ/
+    - xform/p@/ㄞ/
+    - xform/q@/ㄢ/
+    - "xlit|qazwsxedcrfvtgbyhnujmikolp|ㄆㄇㄈㄊㄋㄌㄍㄎㄏㄐㄑㄒㄔㄕㄖㄗㄘㄙㄧㄨㄩㄛㄜㄟㄠㄣ|"
+    - xform|A@|a|
+    - xform|B@|b|
+    - xform|C@|c|
+    - xform|D@|d|
+    - xform|E@|e|
+    - xform|F@|f|
+    - xform/G@/1/
+    - xform/H@/2/
+    - xform/I@/3/
+    - xform/J@/4/ #4
+    - xform/K@/5/
+    - xform/L@/6/ #6
+    - xform/M@/7/ #7
+    - xform/N@/8/
+    - xform/P@/9/
+    - xform/Q@/0/
+    - xform|`````|g| #]韓
+    - xform|````|h| #[日
+    - xform|```|i| #=
+    - xform|``|j| #'拉
+    - xform/([0-9A-Zabcdefghij])\\/$1 /
+    ## 以上英文數字符號不先轉成最終顯示，方便下面作轉換。
+    - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghij1234567890|ᴀʙcᴅᴇꜰɢʜɪᴊᴋʟᴍɴoᴘǫʀsᴛᴜᴠᴡxʏz,.⸝-;⸋˺˹⁼'₁₂³⁴₅⁶⁷₈₉₀|"
+    - 'xform/\\/⁞/'
+
+
+preedit_s_1_2_4:
+### Separate 樣式 ###
+    - xform|,|a@|
+    - xform|[.]|b@|
+    - xform|/|c@|
+    - xform|-|d@|
+    - xform|;|e@|
+    - xform| |f@|
+    - xform/1/g@/
+    - xform/2/h@/
+    - xform/3/i@/
+    - xform/4/j@/
+    - xform/5/k@/
+    - xform/6/l@/
+    - xform/7/m@/
+    - xform/8/n@/
+    - xform/9/p@/
+    - xform/0/q@/
+    - xform/^([a-z@\\]+)$/$1\t（ \U$1\E ）/
+    - xform/a@/ㄝ/
+    - xform/b@/ㄡ/
+    - xform/c@/ㄥ/
+    - xform/d@/ㄦ/
+    - xform/e@/ㄤ/
+    - xform/f@/ˉ/
+    - xform/g@/ㄅ/
+    - xform/h@/ㄉ/
+    - xform/i@/ˇ/
+    - xform/j@/ˋ/
+    - xform/k@/ㄓ/
+    - xform/l@/ˊ/
+    - xform/m@/˙/
+    - xform/n@/ㄚ/
+    - xform/p@/ㄞ/
+    - xform/q@/ㄢ/
+    - "xlit|qazwsxedcrfvtgbyhnujmikolp|ㄆㄇㄈㄊㄋㄌㄍㄎㄏㄐㄑㄒㄔㄕㄖㄗㄘㄙㄧㄨㄩㄛㄜㄟㄠㄣ|"
+    - xform|A@|a|
+    - xform|B@|b|
+    - xform|C@|c|
+    - xform|D@|d|
+    - xform|E@|e|
+    - xform|F@|f| #ˉ拉
+    - xform/G@/1/
+    - xform/H@/2/
+    - xform/I@/3/ #3ˇ
+    - xform/J@/4/ #4ˋ
+    - xform/K@/5/
+    - xform/L@/6/ #6ˊ日
+    - xform/M@/7/ #7˙韓
+    - xform/N@/8/
+    - xform/P@/9/
+    - xform/Q@/0/
+    - xform/([0-9A-Zabcdef])\\/$1 /
+    ## 以上英文數字符號不先轉成最終顯示，方便下面作轉換。
+    - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZabcdef1234567890|ᴀʙcᴅᴇꜰɢʜɪᴊᴋʟᴍɴoᴘǫʀsᴛᴜᴠᴡxʏz,.⸝-;⸋₁₂³⁴₅⁶⁷₈₉₀|"
+    - 'xform/\\/⁞/'
+
+
+preedit_s_3:
+### Separate 樣式 ###
+    - xform|,|a@|
+    - xform|[.]|b@|
+    - xform|/|c@|
+    - xform|-|d@|
+    - xform|;|e@|
+    - xform| |f@|
+    - xform/1/g@/
+    - xform/2/h@/
+    - xform/3/i@/
+    - xform/4/j@/
+    - xform/5/k@/
+    - xform/6/l@/
+    - xform/7/m@/
+    - xform/8/n@/
+    - xform/9/p@/
+    - xform/0/q@/
+    - xform|[]]|`````|
+    - xform|[[]|````|
+    - xform|=|```|
+    - xform|'|``|
+    - xform/^([a-z@`\\]+)$/$1\t（ \U$1\E ）/
+    - xform/a@/ㄝ/
+    - xform/b@/ㄡ/
+    - xform/c@/ㄥ/
+    - xform/d@/ㄦ/
+    - xform/e@/ㄤ/
+    - xform/f@/ˉ/
+    - xform/g@/ㄅ/
+    - xform/h@/ㄉ/
+    - xform/i@/ˇ/
+    - xform/j@/ˋ/
+    - xform/k@/ㄓ/
+    - xform/l@/ˊ/
+    - xform/m@/˙/
+    - xform/n@/ㄚ/
+    - xform/p@/ㄞ/
+    - xform/q@/ㄢ/
+    - "xlit|qazwsxedcrfvtgbyhnujmikolp|ㄆㄇㄈㄊㄋㄌㄍㄎㄏㄐㄑㄒㄔㄕㄖㄗㄘㄙㄧㄨㄩㄛㄜㄟㄠㄣ|"
+    - xform|A@|a|
+    - xform|B@|b|
+    - xform|C@|c|
+    - xform|D@|d|
+    - xform|E@|e|
+    - xform|F@|f|
+    - xform/G@/1/
+    - xform/H@/2/
+    - xform/I@/3/
+    - xform/J@/4/ #4
+    - xform/K@/5/
+    - xform/L@/6/ #6
+    - xform/M@/7/ #7
+    - xform/N@/8/
+    - xform/P@/9/
+    - xform/Q@/0/
+    - xform|`````|g| #]韓
+    - xform|````|h| #[日
+    - xform|```|i| #=
+    - xform|``|j| #'拉
+    - xform/([0-9A-Zabcdefghij])\\/$1 /
+    ## 以上英文數字符號不先轉成最終顯示，方便下面作轉換。
+    - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghij1234567890|ᴀʙcᴅᴇꜰɢʜɪᴊᴋʟᴍɴoᴘǫʀsᴛᴜᴠᴡxʏz,.⸝-;⸋˺˹⁼'₁₂³⁴₅⁶⁷₈₉₀|"
+    - 'xform/\\/⁞/'
+
+
+preedit_i_1_2_4:
+### Insert 樣式 ###
+    - xform|,|a@|
+    - xform|[.]|b@|
+    - xform|/|c@|
+    - xform|-|d@|
+    - xform|;|e@|
+    - xform| |f@|
+    - xform/1/g@/
+    - xform/2/h@/
+    - xform/3/i@/
+    - xform/4/j@/
+    - xform/5/k@/
+    - xform/6/l@/
+    - xform/7/m@/
+    - xform/8/n@/
+    - xform/9/p@/
+    - xform/0/q@/
+    - xform|([a-z@0-9 ]+)|$1(\U$1\E)|
+    - xform/a@/ㄝ/
+    - xform/b@/ㄡ/
+    - xform/c@/ㄥ/
+    - xform/d@/ㄦ/
+    - xform/e@/ㄤ/
+    - xform/f@/ˉ/
+    - xform/g@/ㄅ/
+    - xform/h@/ㄉ/
+    - xform/i@/ˇ/
+    - xform/j@/ˋ/
+    - xform/k@/ㄓ/
+    - xform/l@/ˊ/
+    - xform/m@/˙/
+    - xform/n@/ㄚ/
+    - xform/p@/ㄞ/
+    - xform/q@/ㄢ/
+    - "xlit|qazwsxedcrfvtgbyhnujmikolp|ㄆㄇㄈㄊㄋㄌㄍㄎㄏㄐㄑㄒㄔㄕㄖㄗㄘㄙㄧㄨㄩㄛㄜㄟㄠㄣ|"
+    - xform|A@|a|
+    - xform|B@|b|
+    - xform|C@|c|
+    - xform|D@|d|
+    - xform|E@|e|
+    - xform|F@|f| #ˉ拉
+    - xform/G@/1/
+    - xform/H@/2/
+    - xform/I@/3/ #3ˇ
+    - xform/J@/4/ #4ˋ
+    - xform/K@/5/
+    - xform/L@/6/ #6ˊ日
+    - xform/M@/7/ #7˙韓
+    - xform/N@/8/
+    - xform/P@/9/
+    - xform/Q@/0/
+    ## 以上英文數字符號不先轉成最終顯示，方便下面作轉換。
+    - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890)(abcdef|ᴀʙcᴅᴇꜰɢʜɪᴊᴋʟᴍɴoᴘǫʀsᴛᴜᴠᴡxʏz₁₂³⁴₅⁶⁷₈₉₀›‹,.⸝-;⸋|"
+    - 'xform/\\//'
+    - 'xform/›/› /'
+
+
+preedit_i_3:
+### Insert 樣式 ###
+    - xform|,|a@|
+    - xform|[.]|b@|
+    - xform|/|c@|
+    - xform|-|d@|
+    - xform|;|e@|
+    - xform| |f@|
+    - xform/1/g@/
+    - xform/2/h@/
+    - xform/3/i@/
+    - xform/4/j@/
+    - xform/5/k@/
+    - xform/6/l@/
+    - xform/7/m@/
+    - xform/8/n@/
+    - xform/9/p@/
+    - xform/0/q@/
+    - xform|[]]|`````|
+    - xform|[[]|````|
+    - xform|=|```|
+    - xform|'|``|
+    - xform|([a-z@`0-9 ]+)|$1(\U$1\E)|
+    - xform/a@/ㄝ/
+    - xform/b@/ㄡ/
+    - xform/c@/ㄥ/
+    - xform/d@/ㄦ/
+    - xform/e@/ㄤ/
+    - xform/f@/ˉ/
+    - xform/g@/ㄅ/
+    - xform/h@/ㄉ/
+    - xform/i@/ˇ/
+    - xform/j@/ˋ/
+    - xform/k@/ㄓ/
+    - xform/l@/ˊ/
+    - xform/m@/˙/
+    - xform/n@/ㄚ/
+    - xform/p@/ㄞ/
+    - xform/q@/ㄢ/
+    - "xlit|qazwsxedcrfvtgbyhnujmikolp|ㄆㄇㄈㄊㄋㄌㄍㄎㄏㄐㄑㄒㄔㄕㄖㄗㄘㄙㄧㄨㄩㄛㄜㄟㄠㄣ|"
+    - xform|A@|a|
+    - xform|B@|b|
+    - xform|C@|c|
+    - xform|D@|d|
+    - xform|E@|e|
+    - xform|F@|f| #ˉ
+    - xform/G@/1/
+    - xform/H@/2/
+    - xform/I@/3/ #3ˇ
+    - xform/J@/4/ #4ˋ
+    - xform/K@/5/
+    - xform/L@/6/ #6ˊ
+    - xform/M@/7/ #7˙
+    - xform/N@/8/
+    - xform/P@/9/
+    - xform/Q@/0/
+    - xform|`````|g| #]韓
+    - xform|````|h| #[日
+    - xform|```|i| #=
+    - xform|``|j| #'拉
+    ## 以上英文數字符號不先轉成最終顯示，方便下面作轉換。
+    - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890)(abcdefghij|ᴀʙcᴅᴇꜰɢʜɪᴊᴋʟᴍɴoᴘǫʀsᴛᴜᴠᴡxʏz₁₂³⁴₅⁶⁷₈₉₀›‹,.⸝-;⸋˺˹⁼'|"
+    - 'xform/\\//'
+    - 'xform/›/› /'
+
+
+preedit_p_1_2_4:
+### Paragraph 樣式 ###
+    - xform|,|a@|
+    - xform|[.]|b@|
+    - xform|/|c@|
+    - xform|-|d@|
+    - xform|;|e@|
+    - xform| |f@|
+    - xform/1/g@/
+    - xform/2/h@/
+    - xform/3/i@/
+    - xform/4/j@/
+    - xform/5/k@/
+    - xform/6/l@/
+    - xform/7/m@/
+    - xform/8/n@/
+    - xform/9/p@/
+    - xform/0/q@/
+    - xform/^([a-z@\\]+)$/\U$1\E　\n$1/
+    - xform/a@/ㄝ/
+    - xform/b@/ㄡ/
+    - xform/c@/ㄥ/
+    - xform/d@/ㄦ/
+    - xform/e@/ㄤ/
+    - xform/f@/ˉ/
+    - xform/g@/ㄅ/
+    - xform/h@/ㄉ/
+    - xform/i@/ˇ/
+    - xform/j@/ˋ/
+    - xform/k@/ㄓ/
+    - xform/l@/ˊ/
+    - xform/m@/˙/
+    - xform/n@/ㄚ/
+    - xform/p@/ㄞ/
+    - xform/q@/ㄢ/
+    - "xlit|qazwsxedcrfvtgbyhnujmikolp|ㄆㄇㄈㄊㄋㄌㄍㄎㄏㄐㄑㄒㄔㄕㄖㄗㄘㄙㄧㄨㄩㄛㄜㄟㄠㄣ|"
+    - xform|A@|a|
+    - xform|B@|b|
+    - xform|C@|c|
+    - xform|D@|d|
+    - xform|E@|e|
+    - xform|F@|f| #ˉ拉
+    - xform/G@/1/
+    - xform/H@/2/
+    - xform/I@/3/ #3ˇ
+    - xform/J@/4/ #4ˋ
+    - xform/K@/5/
+    - xform/L@/6/ #6ˊ日
+    - xform/M@/7/ #7˙韓
+    - xform/N@/8/
+    - xform/P@/9/
+    - xform/Q@/0/
+    - xform/([0-9A-Zabcdef])\\/$1　/
+    ## 以上英文數字符號不先轉成最終顯示，方便下面作轉換。
+    - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcdef|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ₁₂³⁴₅⁶⁷₈₉₀,.⸝-;⸋|"
+    - 'xform/\\/⁞/'
+
+
+preedit_p_3:
+### Paragraph 樣式 ###
+    - xform|,|a@|
+    - xform|[.]|b@|
+    - xform|/|c@|
+    - xform|-|d@|
+    - xform|;|e@|
+    - xform| |f@|
+    - xform/1/g@/
+    - xform/2/h@/
+    - xform/3/i@/
+    - xform/4/j@/
+    - xform/5/k@/
+    - xform/6/l@/
+    - xform/7/m@/
+    - xform/8/n@/
+    - xform/9/p@/
+    - xform/0/q@/
+    - xform|[]]|`````|
+    - xform|[[]|````|
+    - xform|=|```|
+    - xform|'|``|
+    - xform/^([a-z@`\\]+)$/\U$1\E　\n$1/
+    - xform/a@/ㄝ/
+    - xform/b@/ㄡ/
+    - xform/c@/ㄥ/
+    - xform/d@/ㄦ/
+    - xform/e@/ㄤ/
+    - xform/f@/ˉ/
+    - xform/g@/ㄅ/
+    - xform/h@/ㄉ/
+    - xform/i@/ˇ/
+    - xform/j@/ˋ/
+    - xform/k@/ㄓ/
+    - xform/l@/ˊ/
+    - xform/m@/˙/
+    - xform/n@/ㄚ/
+    - xform/p@/ㄞ/
+    - xform/q@/ㄢ/
+    - "xlit|qazwsxedcrfvtgbyhnujmikolp|ㄆㄇㄈㄊㄋㄌㄍㄎㄏㄐㄑㄒㄔㄕㄖㄗㄘㄙㄧㄨㄩㄛㄜㄟㄠㄣ|"
+    - xform|A@|a|
+    - xform|B@|b|
+    - xform|C@|c|
+    - xform|D@|d|
+    - xform|E@|e|
+    - xform|F@|f|
+    - xform/G@/1/
+    - xform/H@/2/
+    - xform/I@/3/ #3ˇ
+    - xform/J@/4/ #4ˋ
+    - xform/K@/5/
+    - xform/L@/6/ #6ˊ
+    - xform/M@/7/ #7˙
+    - xform/N@/8/
+    - xform/P@/9/
+    - xform/Q@/0/
+    - xform|`````|g| #]韓
+    - xform|````|h| #[日
+    - xform|```|i| #=
+    - xform|``|j| #'拉
+    - xform/([0-9A-Zabcdefghij])\\/$1　/
+    ## 以上英文數字符號不先轉成最終顯示，方便下面作轉換。
+    - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcdefghij|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ₁₂³⁴₅⁶⁷₈₉₀,.⸝-;⸋˺˹⁼'|"
+    - 'xform/\\/⁞/'
+    - 'xform/　([ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦ])/⁞$1/'

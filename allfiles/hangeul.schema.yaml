@@ -1,0 +1,203 @@
+# Rime schema settings
+# encoding: utf-8
+# 《韓語（洋蔥形碼鍵位）設定頁》
+schema:
+  schema_id: hangeul # 注意此ID與文件名裏 .schema.yaml 之前的部分相同
+  name: ❃韓語形碼❃
+  version: "202405"
+  author:
+    - 『洋蔥』
+  description: |
+    韓文形碼
+  dependencies:
+    - cangjie5
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ "韓文", "英文" ]
+  - name: full_shape
+    reset: 0
+    states: [ "半形", "全形" ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+#    - fluency_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    # - table_translator@custom_phrase
+    - reverse_lookup_translator
+    - script_translator
+
+menu:
+  alternative_select_keys: "1234567890"
+  page_size: 10
+
+speller:
+  alphabet: "abcdefghijklmnopqrstuvwxyz;/"
+  initials: "abcdefghijklmnopqrstuvwxyz"
+  delimiter: "'"
+  algebra:
+    - derive/^\|$/ /
+
+translator:
+  dictionary: hangeul.extended
+  # enable_charset_filter: false
+  enable_completion: false
+  enable_user_dict: true
+  preedit_format:
+    - "xlit|abcdefghijklmnopqrstuvwxyz'|ABCDEFGHIJKLMNOPQRSTUVWXYZ |"
+  comment_format:
+    - "xlit|abcdefghijklmnopqrstuvwxyz'|ABCDEFGHIJKLMNOPQRSTUVWXYZ |"
+  disable_user_dict_for_patterns:
+    - ^[a-z]{1,3}$
+
+# custom_phrase:
+#   dictionary: ""
+#   user_dict: hangeul_phrase
+#   db_class: stabledb #tabledb
+#   enable_completion: false
+#   enable_sentence: false
+#   initial_quality: 1
+
+reverse_lookup:
+  dictionary: cangjie5
+  # enable_charset_filter: false
+  # enable_encoder: false
+  # encode_commit_history: false
+  # enable_sentence: false
+  enable_completion: false
+  # sentence_over_completion: false
+  enable_user_dict: true
+  prefix: "="
+  suffix: "'"
+  tips: 〔漢字反查〕
+  preedit_format:
+    - "xlit|abcdefghijklmnopqrstuvwxyz|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符|"
+
+punctuator:
+#  import_preset: default
+  use_space: true
+  full_shape:
+    # " " : { commit: "　" }
+    #####################
+    "`" : { commit: "￦" }
+    "~" : { commit: "～" }
+    "!" : { commit: "！" }
+    "@" : { commit: "＠" }
+    "#" : { commit: "＃" }
+    "$" : { commit: "＄" }
+    "%" : { commit: "％" }
+    "^" : { commit: "＾" }
+    "&" : { commit: "＆" }
+    "*" : { commit: "＊" }
+    "(" : { commit: "（" }
+    ")" : { commit: "）" }
+    "-" : { commit: "－" }
+    "_" : { commit: "＿" }
+    "=" : [ "＝" ]
+    "+" : { commit: "＋" }
+    "[" : { commit: "［" }
+    "{" : { commit: "｛" }
+    "]" : { commit: "］" }
+    "}" : { commit: "｝" }
+    "\\" : { commit: "＼" }
+    "|" : { commit: "｜" }
+    ";" : { commit: "；" }
+    ":" : { commit: "：" }
+    "'" : { commit: "＇" }
+    "\"" : { commit: "＂" }
+    "," : { commit: "，" }
+    "<" : { commit: "＜" }
+    "." : { commit: "．" }
+    ">" : { commit: "＞" }
+    "/" : { commit: "／" }
+    "?" : { commit: "？" }
+    #####################
+  half_shape:
+    " ": " "
+    #####################
+    "`" : { commit: "₩" }
+    "~" : { commit: "~" }
+    "!" : { commit: "!" }
+    "@" : { commit: "@" }
+    "#" : { commit: "#" }
+    "$" : { commit: "$" }
+    "%" : { commit: "%" }
+    "^" : { commit: "^" }
+    "&" : { commit: "&" }
+    "*" : { commit: "*" }
+    "(" : { commit: "(" }
+    ")" : { commit: ")" }
+    "-" : { commit: "-" }
+    "_" : { commit: "_" }
+    "=" : [ "=" ]
+    "+" : { commit: "+" }
+    "[" : { commit: "[" }
+    "{" : { commit: "{" }
+    "]" : { commit: "]" }
+    "}" : { commit: "}" }
+    "\\" : { commit: "\\" }
+    "|" : { commit: "|" }
+    ";" : { commit: ";" }
+    ":" : { commit: ":" }
+    "'" : { commit: "'" }
+    "\"" : { commit: "\"" }
+    "," : { commit: "," }
+    "<" : { commit: "<" }
+    "." : { commit: "." }
+    ">" : { commit: ">" }
+    "/" : { commit: "/" }
+    "?" : { commit: "?" }
+    #####################
+
+key_binder:
+  import_preset: default
+  bindings:
+    - {accept: comma, send: comma, when: has_menu}
+    - {accept: comma, send: comma, when: paging}
+    - {accept: period, send: period, when: has_menu}
+    - {accept: period, send: period, when: paging}
+    - {accept: minus, send: minus, when: has_menu}
+    - {accept: minus, send: minus, when: paging}
+    - {accept: equal, send: equal, when: has_menu}
+    - {accept: equal, send: equal, when: paging}
+    - {accept: Up, send: KP_Left, when: composing} #左移一個注音
+    - {accept: Up, send: Up, when: paging} #修正上條目出現的bug
+    - {accept: Right, send: Shift+Right, when: composing} #右移一整個字
+    - {accept: Shift+Right, send: Right, when: composing} #右移一個注音
+    - {accept: Shift+Left, send: KP_Left, when: composing} #左移一個注音
+    - {accept: Left, send: Page_Up, when: paging}
+    - {accept: Right, send: Page_Down, when: paging}
+    - {accept: Tab, send: Shift+Left, when: paging}
+    - {accept: Shift+space, send: Page_Down, when: has_menu}
+    - {accept: Shift+Tab, send: Page_Up, when: paging}
+    - {accept: space, send: Return, when: paging}
+    # - {accept: Return, send: space, when: composing}
+    # - {accept: Return, send: Return, when: paging}
+
+editor:
+  bindings:
+    Return: confirm
+    KP_Enter: confirm
+    Shift+Return: commit_raw_input
+
+recognizer:
+  patterns:
+    email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
+    url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$"
+    reverse_lookup: "=[a-z]*'?$"

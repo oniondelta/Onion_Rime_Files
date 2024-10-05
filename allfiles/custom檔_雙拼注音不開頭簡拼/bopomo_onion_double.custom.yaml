@@ -1,0 +1,156 @@
+patch:
+  speller/algebra:
+####### 非正確注音（補空碼或慣用發音）轉寫 #####
+    - xform/[)(]//
+#######
+    - xform/iu/iU/ #iou
+    - xform/ui/uI/ #uei
+    - xform/ong/ung/
+    - xform/yi?/i/
+    - xform/wu?/u/
+    - xform/iu/v/
+    - xform/([jqx])u/$1v/
+    - xform/([iuv])n/$1en/
+    - xform/zhi?/Z/
+    - xform/chi?/C/
+    - xform/shi?/S/
+    - xform/([zcsr])i/$1/
+    - xform/ai/A/
+    - xform/ei/I/
+    - xform/ao/O/
+    - xform/ou/U/
+    - xform/ang/K/
+    - xform/eng/G/
+    - xform/an/M/
+    - xform/en/N/
+    - xform/er/R/
+    - xform/eh/E/
+    - xform/([iv])e/$1E/
+##### 內嵌注音文 #####（應該要移到後面，但注音雙拼單已有調出單注音方式，故這裡不再輸出單注音）
+    - erase|^＊([bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR12345])$|| #消除單個注音
+    # - xform|^＊＊|| #開頭「＊＊」使注音文不被前面縮略，該正則回復。
+    - xform|^＊＊(.+)$|$1~|  #開頭「＊＊」轉成末尾「~」，使注音文不被後面簡化給縮略。
+#######
+    - xform/^([bpmfdtnlgkhjqxZCSrzcs])v(\d~?)$/$1y$2/
+    - xform/^v/y/
+    - xform/^([bpmfdtnlgkhjqxZCSrzcs])iO/$1q/
+    - xform/^([bpmfdtnlgkhjqxZCSrzcs])iU/$1c/
+    - xform/^([bpmfdtnlgkhjqxZCSrzcs])(uA|iM)/$1m/
+    - xform/^([bpmfdtnlgkhjqxZCSrzcs])uo/$1o/
+    - xform/^([bpmfdtnlgkhjqxZCSrzcs])iE/$1p/
+    - xform/^([bpmfdtnlgkhjqxZCSrzcs])[vu]N/$1v/
+    - xform/^([bpmfdtnlgkhjqxZCSrzcs])[vu]G/$1b/
+    - xform/^([bpmfdtnlgkhjqxZCSrzcs])(vE|uI)/$1l/
+    - xform/^([bpmfdtnlgkhjqxZCSrzcs])[ui]a/$1z/
+    - xform/^([bpmfdtnlgkhjqxZCSrzcs])[ui]K/$1x/
+    - xform/^([bpmfdtnlgkhjqxZCSrzcs])[vu]M/$1n/
+    - xform/^([bpmfdtnlgkhjqxZCSrzcs])iN/$1r/
+    - xform/^([bpmfdtnlgkhjqxZCSrzcs])iG/$1t/
+    - xform/^([aoeEAIOUMNKGR]\d~?)$/o$1/
+    - xform/^([rZSCzscyui])(\d~?)$/$1i$2/
+    - derive/^([yui])i(\d~?)$/$1e$2/
+    - 'xlit|ORUAKMNGEIZSC|wrdjshfgkkwav|'
+##### 容錯碼 #####
+## （可放前面，放後面，用兩碼加聲調下，改寫較直覺容易）
+## （只有兩碼兩碼輸出才設容錯碼，雙拼可簡化版則沒有）
+    - derive/^([jqx])y/$1u/  #「ㄐㄑㄒ」+「ㄩ」→「ㄐㄑㄒ」+「ㄨ」
+    - derive/^([bpmdt])i/$1y/  #「ㄅㄆㄇㄉㄊ」+「ㄧ」→「「ㄅㄆㄇㄉㄊ」」+「ㄩ」
+    - derive/^([fgkh])u/$1y/  #「ㄈㄍㄎㄏ」+「ㄨ」→「「ㄈㄍㄎㄏ」」+「ㄩ」
+    - derive/^([fgkh])u/$1i/  #「ㄈㄍㄎㄏ」+「ㄨ」→「「ㄈㄍㄎㄏ」」+「ㄧ」
+    - derive/^([rwavzsc])i/$1y/  #「ㄖㄓㄔㄕㄖㄗㄘㄙ」+「ㄧ」→「「ㄖㄓㄔㄕㄖㄗㄘㄙ」」+「ㄩ」
+#######
+    - abbrev/^([a-z][a-z])\d$/$1/
+    - abbrev/^([yui])i\d$/$1/
+    - abbrev/^([yui])i(\d)$/$1$2/
+    - abbrev/^([abcdfghjklmnopqrstvwxz])[a-z](\d)$/$1$2/
+#######
+    - xform|~||  #開頭「＊＊」轉成末尾「~」，使注音文不被前面簡化給縮略。此條回復。
+    #之前聲調# - "xlit|12345|;/.,'|"
+    - "xlit|12345|;/,'.|"
+##### 內嵌單注音 #####
+    - "xlit|１２３４５ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ|;/,'.abcdefghijklmnopqrstuvwxyz|"
+###########################
+  translator/preedit_format:
+########
+    - xform/\\/ /
+    - xform|^([a-z ,./';]+)$|\U$1\E\t（$1）|
+    - xform|([A-Z]),|$1，|
+    - xform|([A-Z])[.]|$1．|
+    - xform|([A-Z])[/]|$1／|
+    - xform|([A-Z]);|$1；|
+    - xform|([A-Z])'|$1＇|
+    - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ|"
+#######
+    # - 'xform/([a-z])([a-z])e/$2$1☯/'
+##### 容錯碼備註 #####
+    - 'xform|([jqx])([u])|$1y!|'  #「ㄐㄑㄒ」+「ㄩ」→「ㄐㄑㄒ」+「ㄨ」
+    - 'xform|([bpmdt])([y])|$1i!|'  #「ㄅㄆㄇㄉㄊ」+「ㄧ」→「「ㄅㄆㄇㄉㄊ」」+「ㄩ」
+    - 'xform|([fgkh])([y])|$1u!|'  #「ㄈㄍㄎㄏ」+「ㄨ」→「「ㄈㄍㄎㄏ」」+「ㄩ」
+    - 'xform|([fgkh])([i])|$1u!|'  #「ㄈㄍㄎㄏ」+「ㄨ」→「「ㄈㄍㄎㄏ」」+「ㄧ」
+    - 'xform|([rwvazsc])([y])|$1i!|'  #「ㄖㄓㄔㄕㄖㄗㄘㄙ」+「ㄧ」→「「ㄖㄓㄔㄕㄖㄗㄘㄙ」」+「ㄩ」
+#######
+    - 'xform/([a-z])([a-z])/$1\U$2\E/'
+    - "xlit|ASDFGHJYUIEW|ㄚㄤㄡㄣㄥㄢㄞㄩㄨㄧㄜㄠ|"
+    - 'xform/([wraszcviuy])ㄧ/$1ㄭ/' #iuy
+    - 'xform/([iuy])ㄜ/$1ㄭ/'
+    - 'xform/Q/:ㄧㄠ/'
+    - 'xform/R/:ㄧㄣ\|ㄦ/'
+    - 'xform/T/:ㄧㄥ/'
+    - 'xform/O/:ㄛ\|ㄨㄛ/'
+    - 'xform/P/:ㄧㄝ/'
+    - 'xform/K/:ㄟ\|ㄝ/'
+    - 'xform/L/:ㄩㄝ\|ㄨㄟ/'
+    - 'xform/Z/:ㄧㄚ\|ㄨㄚ/'
+    - 'xform/X/:ㄧㄤ\|ㄨㄤ/'
+    - 'xform/C/:ㄧㄡ/'
+    - 'xform/V/:ㄨㄣ\|ㄩㄣ/'
+    - 'xform/B/:ㄨㄥ\|ㄩㄥ/'
+    - 'xform/N/:ㄨㄢ\|ㄩㄢ/'
+    - 'xform/M/:ㄧㄢ\|ㄨㄞ/'
+#######
+    - 'xform/(o):ㄧㄣ\|ㄦ/$1:ㄦ/'
+    - 'xform/([bpmdtnljqx]):ㄧㄣ\|ㄦ/$1:ㄧㄣ/'
+    - 'xform/([bmfiuo]):ㄛ\|ㄨㄛ/$1:ㄛ/'
+    - 'xform/([dtngkhwvarzcs]):ㄛ\|ㄨㄛ/$1:ㄨㄛ/'
+    - 'xform/([bpmfdtnlgkhwvarzcsu]):ㄟ\|ㄝ/$1:ㄟ/' #v
+    - 'xform/([yi]):ㄟ\|ㄝ/$1:ㄝ/'
+    - 'xform/([dtgkhwvarzcs]):ㄩㄝ\|ㄨㄟ/$1:ㄨㄟ/'
+    - 'xform/([jqxl]):ㄩㄝ\|ㄨㄟ/$1:ㄩㄝ/'
+    - 'xform/([pdnljqx]):ㄧㄚ\|ㄨㄚ/$1:ㄧㄚ/'
+    - 'xform/([gkhavw]):ㄧㄚ\|ㄨㄚ/$1:ㄨㄚ/'
+    - 'xform/([dnljqx]):ㄧㄤ\|ㄨㄤ/$1:ㄧㄤ/'
+    - 'xform/([ghavw]):ㄧㄤ\|ㄨㄤ/$1:ㄨㄤ/' #[gkhavw]ㄎㄧㄤ
+    - 'xform/([k]):ㄧㄤ\|ㄨㄤ/$1:ㄨㄤ\|ㄧㄤ/' #校正：ㄎㄧㄤ少用，ㄎㄨㄤ較常用
+    - xform ([k]):ㄨㄤ\|ㄧㄤ([',./]) $1:ㄨㄤ$2
+    - 'xform/([dtnlgkhwvarzcs]):ㄨㄣ\|ㄩㄣ/$1:ㄨㄣ/'
+    - 'xform/([jqx]):ㄨㄣ\|ㄩㄣ/$1:ㄩㄣ/'
+    - 'xform/([dtnlgkhwvarzcs]):ㄨㄥ\|ㄩㄥ/$1:ㄨㄥ/'
+    - 'xform/([jqx]):ㄨㄥ\|ㄩㄥ/$1:ㄩㄥ/'
+    - 'xform/([dtngkhwvarzcs]):ㄨㄢ\|ㄩㄢ/$1:ㄨㄢ/' #l
+    - 'xform/([jqx]):ㄨㄢ\|ㄩㄢ/$1:ㄩㄢ/'
+    - 'xform/([bpmdtnljqx]):ㄧㄢ\|ㄨㄞ/$1:ㄧㄢ/'
+    - 'xform/([gkhwva]):ㄧㄢ\|ㄨㄞ/$1:ㄨㄞ/'
+#######
+    - "xform|([（ ][abcdfghjklmnopqrstvwxz])([;/,'.])|$1⁎$2|"  #只有聲母加聲調時，其可能省略韻母之提示。
+    - "xform|([（ ][yui])([;/,'.])|$1₊$2|"  #只有ㄧㄨㄩ加聲調時，其可能省略韻母之提示。
+    #之前聲調# - "xlit|bpmfdtnlgkhjqxrzcsiuywvao;/.,'|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄖㄗㄘㄙㄧㄨㄩㄓㄔㄕ◌ˉˊˇˋ˙|"
+    - "xlit|bpmfdtnlgkhjqxrzcsiuywvao;/,'.|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄖㄗㄘㄙㄧㄨㄩㄓㄔㄕ◌ˉˊˇˋ˙|"
+##### 內嵌單注音修正 #####
+    - 'xform|e[^ ）]+([ ）])|注$1|'
+    - 'xform|e([ ）])|空$1|'
+    - 'xform|\t（空）$|\t《雙拼注音鍵位說明》|'
+#####
+    # - 'xform|e[^ ）]+([ ）])|㊟$1|'
+    # - 'xform|e([ ）])|∅$1|'
+    # - 'xform|\t（∅）$|\t《雙拼注音鍵位說明》|'
+############################
+    - "xlit|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ，．／；＇|abcdefghijklmnopqrstuvwxyz,./;'|"
+    # - "xlit|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ，．／；＇|ABCDEFGHIJKLMNOPQRSTUVWXYZ,./;'|"
+    - 'xform/://'
+############################
+
+
+##### 新版詞條自動補全 enable_completion 和 enable_word_completion 修正 #####
+  translator/enable_completion: true  #次新版該條目為詞條自動補全，最新版改於下方條目控制，最新版於 script_translator 時，該條目只補全單字音節。
+  translator/enable_word_completion: false  # 大於 4 音節的詞條自動補全，librime > 1.11.2
+############################

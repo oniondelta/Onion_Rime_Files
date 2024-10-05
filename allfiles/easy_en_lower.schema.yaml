@@ -1,0 +1,203 @@
+﻿# Rime schema settings
+# encoding: utf-8
+
+schema:
+  schema_id: easy_en_lower
+  name: Easy English（英漢字典）-Lower
+  version: "202405"
+  author:
+    - 洋蔥
+  description:
+    Easy English Lower
+
+  dependencies:
+    - easy_en_upper
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ On, Off ]
+  - name: en_sort
+    reset: 0
+    states: [ 個排, 序排 ]
+
+engine:
+  filters:
+    - reverse_lookup_filter@e_reverse_lookup
+    - lua_filter@en_sort_filter  #lua_filter 一定要放在 uniquifier 之前，因某些計算會先算，如抓取候選條，會去重不到。
+    - lua_filter@convert_english_filter
+    # - reverse_lookup_filter@e_reverse_lookup
+    - uniquifier  #需放在 filters 最後，否則有些選項無法去重。
+  processors:
+    - ascii_composer
+    - key_binder
+    - speller
+    - recognizer
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - matcher
+    - ascii_segmentor
+    - abc_segmentor
+    # - affix_segmentor@easy_en_upper  #不「tag」可直接附加在「abc」上  #單純只附在「abc」上不調出，可不用affix_segmentor。
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    # - echo_translator
+    # - script_translator@easy_en_upper
+    - table_translator@easy_en_upper
+    - table_translator
+    # - script_translator
+    - punct_translator
+
+en_sort_filter:
+  tags: [ abc ]
+
+convert_english_filter:
+  tags: [ abc ]
+
+abc_segmentor:  #不「tag」可直接附加在「abc」上
+  extra_tags:
+    - easy_en_upper
+
+speller:
+  alphabet: "abcdefghijklmnopqrstuvwxyz-.;/',"
+  # initials: "abcdefghijklmnopqrstuvwxyz-./'"
+  delimiter: " "
+  algebra:
+    - derive/^\|$/ /
+    - derive|@|\.\/|
+    - xform|@| |
+
+    # - derive/$/;/
+    # - xform|^([-.'/])$|$1@|
+    # - derive/(?<=[^@])$/;/
+    # - derive/(?<=[^;@])$/'/
+    # - xform|@||
+
+translator:
+  dictionary: easy_en_lower
+  # enable_encoder: false
+  # encode_commit_history: false
+  enable_sentence: false
+  enable_completion: true
+  # sentence_over_completion: false
+  enable_user_dict: false
+  # strict_spelling: false
+  # spelling_hints: 2
+  # max_phrase_length: 10
+  # initial_quality: 1000
+  comment_format:
+    - xform/.+//  #刪除尚未輸入完整碼之提示 ~abc
+
+easy_en_upper:
+  tag: easy_en_upper  #不「tag」可直接附加在「abc」上
+  dictionary: easy_en_upper
+  # enable_encoder: false
+  # encode_commit_history: false
+  enable_sentence: false
+  enable_completion: false
+  # sentence_over_completion: false
+  enable_user_dict: false
+
+e_reverse_lookup:
+  tags: [ abc ]
+  overwrite_comment: true
+  dictionary: easy_en_lcomment
+  comment_format:
+    - xform/@@/\n          /
+    - xform/@/ /
+
+
+key_binder:
+  import_preset: default
+  bindings:
+    - {accept: comma, send: comma, when: has_menu}
+    - {accept: comma, send: comma, when: paging}
+    - {accept: period, send: period, when: has_menu}
+    - {accept: period, send: period, when: paging}
+    - {accept: minus, send: minus, when: has_menu}
+    - {accept: minus, send: minus, when: paging}
+    - {accept: equal, send: equal, when: has_menu}
+    - {accept: equal, send: equal, when: paging}
+### 選字翻頁 ###
+    - {accept: Left, send: Page_Up, when: paging} #直式選單用 #has_menu
+    - {accept: Right, send: Page_Down, when: paging} #直式選單用 #has_menu
+### 快捷鍵轉換排序 ###
+    - {accept: Control+equal, toggle: en_sort, when: always} #「easy」選單排序是否照英漢字典順序
+
+punctuator:
+  # import_preset: default
+  full_shape:
+    " " : { commit: "　" }
+    ',' : { commit: "，" }
+    # '.' : { commit: "．" }
+    '<' : { commit: "＜" }
+    '>' : { commit: "＞" }
+    '?' : { commit: "？" }
+    # '/' : { commit: "／" }
+    ':' : { commit: "：" }
+    ';' : { commit: "；" }
+    # "'" : { commit: "＇" }
+    '"' : { commit: '＂' }
+    '\\' : { commit: "＼" }
+    '|' : { commit: "｜" }
+    '`' : { commit: "｀" }
+    '~' : { commit: '～' }
+    '!' : { commit: '！' }
+    '@' : { commit: '＠' }
+    '#' : { commit: '＃' }
+    '%' : { commit: '％' }
+    '$' : { commit: '＄' }
+    '^' : { commit: '＾' }
+    '&' : { commit: '＆' }
+    '*' : { commit: '＊' }
+    '(' : { commit: '（' }
+    ')' : { commit: '）' }
+    '_' : { commit: '＿' }
+    # '-' : { commit: '－' }
+    '+' : { commit: '＋' }
+    '=' : { commit: '＝' }
+    '[' : { commit: '［' }
+    ']' : { commit: '］' }
+    '{' : { commit: '｛' }
+    '}' : { commit: '｝' }
+  half_shape:
+    # ' ' : { commit: ' ' }
+    ',' : { commit: "," }
+    # '.' : { commit: "." }
+    '<' : { commit: "<" }
+    '>' : { commit: ">" }
+    '?' : { commit: "?" }
+    # '/' : { commit: "/" }
+    ':' : { commit: ":" }
+    ';' : { commit: ";" }
+    # "'" : { commit: "'" }
+    '"' : { commit: '"' }
+    '\\' : { commit: "\\" }
+    '|' : { commit: "|" }
+    '`' : { commit: "`" }
+    '~' : { commit: '~' }
+    '!' : { commit: '!' }
+    '@' : { commit: '@' }
+    '#' : { commit: '#' }
+    '%' : { commit: '%' }
+    '$' : { commit: '$' }
+    '^' : { commit: '^' }
+    '&' : { commit: '&' }
+    '*' : { commit: '*' }
+    '(' : { commit: '(' }
+    ')' : { commit: ')' }
+    '_' : { commit: '_' }
+    # '-' : { commit: '-' }
+    '+' : { commit: '+' }
+    '=' : { commit: '=' }
+    '[' : { commit: '[' }
+    ']' : { commit: ']' }
+    '{' : { commit: '{' }
+    '}' : { commit: '}' }
+
+recognizer:
+  import_preset: default

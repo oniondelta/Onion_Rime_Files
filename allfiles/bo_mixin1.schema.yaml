@@ -1,0 +1,691 @@
+# Rime schema settings
+# encoding: utf-8
+# 《洋蔥注音 mix-in 1 版 設定頁》
+schema:
+  schema_id: bo_mixin1
+  name: "☆注音(洋蔥mix-in版 1 )☆〔拉日 ˇ  ˋ 韓〕"
+  version: "202405"
+  author:
+    - 『洋蔥』
+  description: |
+    注音符號輸入，採用「大千式」鍵盤排列。
+    聲調尾綴語言補碼只出拉丁小寫和平假名！
+    簡化輸出（不加聲調）大小寫平片假名都可輸出！
+    保留「/」輸出小寫和「,」輸出平假名
+
+  dependencies:
+    - symbols_bpmf
+    - cangjie5
+    - easy_en_lower
+    - easy_en_upper
+    # - easy_en_super
+    - fullshape
+    - greek
+    - cyrillic
+    - allbpm
+    - jpnin1
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: ["中文", "英文"]
+  - name: full_shape
+    reset: 0
+    states: ["半形", "全形"]
+  - name: ascii_punct
+    reset: 0
+    states: ["。，", "．，"]
+  - name: simplification
+    reset: 0
+    states: ["原體", "简体"]
+  - name: character_range_bhjm
+    reset: 1
+    states: ["完整", "精簡"]
+  - name: emoji_segestion
+    reset: 1
+    states: [ 🈚️, 🈶️ ]
+  - name: back_mark
+    reset: 1
+    states: [ 無註, 註釋 ]
+  - name: punct_mark
+    reset: 1
+#    states: [ 無, 註 ]
+  - name: unicode_comment
+    reset: 0
+    states: [ '🄽', '🅄' ]
+    # states: [ 'nil', 'Unicode(URL)' ]
+  # - name: debug_comment
+  #   reset: 0
+    # states: [ 'Ⓝ', 'Ⓓ' ]
+    # states: [ 'normal', 'Debug' ]
+  - name: en_sort
+    reset: 0
+    states: [ 個排, 序排 ]
+  # - options: [ preedit_1, preedit_2, preedit_3, preedit_4 ]
+  #   reset: 0
+  #   states:
+  #     - "Back 樣式"
+  #     - "Separate 樣式"
+  #     - "Insert 樣式"
+  #     - "Paragraph 樣式（Mac專用）"
+
+engine:
+  filters:
+    - simplifier@character_range_bhjm
+    - lua_filter@mix_cf2_miss_filter  #合併 charset_filter2 和 missing_mark_filter，兩個 lua filter 太耗效能。
+    # - lua_filter@charset_filter2  #去除opencc轉換後留下的「᰼᰼」。
+    # - lua_filter@charset_filter  #打開後中文只保留CJK（精簡），但外語不受影響。
+    # - lua_filter@missing_mark_filter  #補上標點符號因直上和 opencc 衝突沒附註之選項
+    # - lua_filter@preedit_model_charset_filter2_filter
+    # - lua_filter@preedit_model_filter
+    - reverse_lookup_filter@e_reverse_lookup
+    - lua_filter@en_sort_filter
+    - lua_filter@convert_english_filter
+    - lua_filter@convert_japan_filter
+    - simplifier@emoji_switch
+    - simplifier@zh_cn
+    - simplifier@back_mark
+    - simplifier@punct_mark
+    - reverse_lookup_filter@bpm_reverse_lookup
+    - uniquifier
+    - lua_filter@comment_filter_unicode  # unicode 和 debug 分開，同時開啟無法記憶
+    # - lua_filter@comment_filter_debug  # unicode 和 debug 分開，同時開啟無法記憶
+    # - lua_filter@comment_filter_unicode_debug
+  processors:
+    - lua_processor@mix_apc_s2rm_ltk
+    # - lua_processor@ascii_punct_change
+    # - lua_processor@s2r_most
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+#    - fluency_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - affix_segmentor@emoji_series
+    - affix_segmentor@easy_en
+    # - affix_segmentor@easy_en_upper
+    # - affix_segmentor@easy_en_script
+    - affix_segmentor@japan
+    - affix_segmentor@cyr2
+    - affix_segmentor@gr2
+    - affix_segmentor@fs2
+    - affix_segmentor@all_bpm
+    - affix_segmentor@reverse2_lookup
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - lua_translator@lua_custom_phrase
+    # - table_translator@custom_phrase
+    - table_translator@emoji_series
+    - table_translator@easy_en
+    - table_translator@easy_en_upper
+    # - script_translator@easy_en_script
+    - script_translator@japan
+    - script_translator@cyr2
+    - script_translator@gr2
+    - script_translator@fs2
+    - script_translator@all_bpm
+    - script_translator@reverse2_lookup
+    - lua_translator@mf_translator
+    # - lua_translator@t2_translator
+    - lua_translator@email_url_translator
+    - lua_translator@instruction_grave_bpmf
+    # - lua_translator@p_convert_japan_translator
+    - script_translator
+################################# lua 引用 ####################################
+mf_translator:
+  prefix: "'/"
+
+lua_custom_phrase:
+  user_dict: "bo_mixin_phrase"
+  # user_dict: "lua_custom_phrase"
+################################### 濾鏡 ######################################
+zh_cn:
+  opencc_config: tw2s.json
+  tips: all
+  tags: [ abc ]
+
+character_range_bhjm:
+  opencc_config: ocm_moedict_big5e_hkscs_jis.json #s2tw.json #t2tw.json
+  option_name: character_range_bhjm
+  tags: [ abc, reverse2_lookup ]
+
+emoji_switch:
+  opencc_config: emoji_t.json
+  option_name: emoji_segestion
+  tags: [ abc ]
+#  tips: all
+
+back_mark:
+  opencc_config: back_mark.json
+  option_name: back_mark
+  show_in_comment: true
+  tags: [ abc, emoji_series, fs2, japan ]
+  tips: char #all
+  comment_format:
+    - xform/^/  /
+    - xform/@/ /
+
+punct_mark:
+  opencc_config: punct_mark.json
+  option_name: punct_mark
+  show_in_comment: true
+  tags: [ punct ]
+  tips: all
+  comment_format:
+    - erase/^.*〔.*〕.+$/
+    - erase/^.+〔.*〕$/
+
+en_sort_filter:
+  tags: [ easy_en ]
+
+convert_english_filter:
+  tags: [ easy_en ]
+
+convert_japan_filter:
+  tags: [ japan ]
+
+# preedit_model_charset_filter2_filter:
+#   tags: [ abc ]
+
+# mix_cf2_miss_filter:
+#   tags: [ punct, reverse2_lookup ]
+#   # tags: [ punct, abc, reverse2_lookup ]
+################################### 選單 ######################################
+menu:
+  __include: element_bopomo:/menu
+################################### 拼寫 ######################################
+speller:
+  alphabet: "1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 3467"
+  initials: "1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-"
+  finals: " 6347"
+  delimiter: "\\"
+  use_space: true
+  algebra:
+##### 非正確注音（補空碼或慣用發音）轉寫 #####
+    - xform/[)(]//
+##### 韓文HNC轉寫開始 #####
+    - derive/^(!)l/$1r/
+    - derive/^(![^!]+)l/$1r/
+    - derive/^(!)x/$1ng/
+    - derive/^(![^!]+)x/$1ng/
+    - derive/^(![^!]*)i/$1y/
+    - derive/^(![^!]*)y([aueo])/$1i$2/
+    - derive/^(!)p/$1f/
+    - derive/^(![^!]+)p$/$1f/
+##### 韓文HNC轉寫結束 #####
+##### 日文轉寫開始 #####
+## 符號
+    - derive|^(!!)-$|$1ev|
+    - derive|^(!!)[/]$|$1av|
+    - derive|^(!!),,$|$1sv|
+    - derive|^(!!)[.];$|$1ov|
+    - derive|^(!!),;$|$1vv|
+    - derive|^(!!)--$|$1eev|
+    - derive|^(!!)-$|$1!ev|
+    - derive|^(!!)[/]$|$1!av|
+    - derive|^(!!),,$|$1!sv|
+    - derive|^(!!)[.];$|$1!ov|
+    - derive|^(!!),;$|$1!vv|
+    - derive|^(!!)--$|$1!eev|
+    - derive/^(!!)xx$/$1shime/
+    - derive/^(!!)xx$/$1sime/
+    - derive/^(!!)(xx)$/$1!$2/
+    - derive/^(!!)(shime)$/$1!$2/
+    - derive/^(!!)(sime)$/$1!$2/
+    - derive/^(!!)noma$/$1dou/
+    - derive/^(!!)dou$/$1onaji/
+    - derive/^(!!)dou$/$1onazi/
+    - derive/^(!!)dou$/$1odoriji/
+    - derive/^(!!)dou$/$1odorizi/
+## 小字
+    - derive/^(!!!?)xtu$/$1ltu/
+    - derive/^(!!!?)xtu$/$1xtsu/
+    - derive/^(!!!?)xtu$/$1ltsu/
+    - derive/^(!!!?)x([aeiou])/$1l$2/
+    - derive/^(!!!?)x(y[auo]|wa)$/$1l$2/
+    - derive/^(!!!?)xke$/$1lke/
+    - derive/^(!!)xke$/$1ke/
+    - derive/^(!!!?)xka$/$1lka/
+    - derive/^(!!)xka$/$1ka/
+## 促音+拗音
+    - derive/^(!!!?)ssh([auo])$/$1ssy$2/
+    - derive/^(!!!?)cch([auo])$/$1ccy$2/
+    - derive/^(!!!?)cch([auo])$/$1tty$2/
+    - derive/^(!!!?)jj([auo])$/$1zzy$2/ #っじゃ
+    - derive/^(!!!?)jj([auo])$/$1jjy$2/ #っじゃ
+    - derive/^(!!!?)ddy([auo])$/$1zzy$2/ #っぢゃ
+    - derive/^(!!!?)ddy([auo])$/$1jj$2/ #っぢゃ
+## 促音
+    - derive/^(!!!?)cchi$/$1tti/
+    - derive/^(!!!?)sshi$/$1ssi/
+    - derive/^(!!!?)ffu$/$1hhu/
+    - derive/^(!!!?)ttsu$/$1ttu/
+    - derive/^(!!!?)jji$/$1zzi/
+## 拗音
+    - derive/^(!!!?)sh([auo])$/$1sy$2/
+    - derive/^(!!!?)ch([auo])$/$1cy$2/
+    - derive/^(!!!?)ch([auo])$/$1ty$2/
+    - derive/^(!!!?)j([auo])$/$1jy$2/
+    - derive/^(!!!?)j([auo])$/$1zy$2/
+    - derive/^(!!!?)dy([auo])$/$1j$2/
+    - derive/^(!!!?)dy([auo])$/$1zy$2/
+## 一般
+    - derive/^(!!!?)shi$/$1si/
+    - derive/^(!!!?)chi$/$1ti/
+    - derive/^(!!!?)tsu$/$1tu/
+    - derive/^(!!!?)fu$/$1hu/
+    - derive/^(!!!?)ji$/$1zi/
+    # - derive/^(!!!?)u$/$1wu/  #少用精簡
+## 特殊
+    - xform/^(!!!?)dvyu$/$1dyu/ # デュ #特殊片假名被其他正則不轉寫。
+##### 日文轉寫結束 #####
+### 日文特殊符號轉平假名尾綴也可輸入
+    # - derive/^\!\!(noma|dou|onaji|onazi|odoriji|odorizi)$/\!\!\!$1/
+##### 把外語言轉大寫或帶符號，不被注音正則影響 #####
+    - 'xlit|/;,.-|%"<>_|' #注音佔用到的五個符號鍵位 #A|
+    # - 'xlit|/;,.-"|斜分逗點橫分|'
+### 各語言標點、組合字符先行轉寫（標點適應方案，多轉其他編碼） ###
+#    - derive/^([@])([逗點橫])$/$1分$2/ #拉丁三個標點「,.-」前加分號
+#    - derive/^([!][!][!])([逗點橫])$/$1分$2/ #日語二個標點「・ー」前加分號
+#############################################
+### 拉丁 ###
+    - xform/^@("")([a-z]+)$/\U$2\E$1 / #轉換「拉丁組合字符」前雙分號到後面
+    - derive/^@([a-z]+)$/\U$1\E% / #拉丁小寫尾綴「/」#######
+    - xform/^@([a-z]*)([%"<>_]*)$/\U$1\E$2 / #拉丁尾綴
+### 日語 ###
+    - xform/^!!!!([a-z]+)$/\U$1\E<<[/ #日語(濁点與半濁点)
+    - derive/^([A-Z]+)<<([[])$/$1>>$2/ #日語(濁点與半濁点)
+    - xform/^!!([%"<>_]+)$/$1[/ #日語標點
+    - xform/^!!([a-z]+)$/\U$1\E>[/ #片假名尾綴
+    - xform/^!!!([a-z]+)$/\U$1\E<[/ #平假名尾綴
+### 韓語 ###
+    - xform/^!([a-z]+)(%*)$/\U$1\E$2~/ #韓語尾綴
+###########
+    - xform/Z/`Q/
+    - xform/C/`W/
+    - xform/S/`T/
+    - xform/E/`Y/
+    - xform/A/`P/
+    - xform/I/`D/
+    - xform/O/`F/
+    - xform/U/`H/
+    - xform/M/`J/
+    - xform/N/`L/
+    - xform/K/`X/
+    - xform/G/`V/
+    - xform/R/`B/
+##### 拼音轉注音 #####
+    - xform/iu/iU/ #iou
+    - xform/ui/uI/ #uei
+    - xform/ong/ung/
+    - xform/yi?/i/
+    - xform/wu?/u/
+    - xform/iu/v/
+    - xform/([jqx])u/$1v/
+    - xform/([iuv])n/$1en/
+    - xform/zhi?/Z/
+    - xform/chi?/C/
+    - xform/shi?/S/
+    - xform/([zcsr])i/$1/
+    - xform/ai/A/
+    - xform/ei/I/
+    - xform/ao/O/
+    - xform/ou/U/
+    - xform/ang/K/
+    - xform/eng/G/
+    - xform/an/M/
+    - xform/en/N/
+    - xform/er/R/
+    - xform/eh/E/
+    - xform/([iv])e/$1E/
+##### 注音字母簡化 #####
+    - abbrev/^([bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR]).+$/$1/
+    - abbrev/^([bpmfdtnlgkhjqxZCSrzcsiuv])([iuvaoeEAIOUMNKG])\d$/$1$2/ #[R]
+    - abbrev/^([bpmfdtnlgkhjqxZCSrzcs])([iuv])([aoeEAIOUMNKG])\d$/$1$2$3/ #[R]
+##    - abbrev/^([bpmfdtnlgkhjqxZCSrzcsiuv]).+$/$1/ #derive
+##    - abbrev/^([bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR]+)\d$/$1/ #derive
+#    - abbrev/^([bpmfdtnlgkhjqxZCSrzcsiuv]).+(\d)$/$1$2/ #使得ㄎˇㄈˇ（可否）可以打的出來 #新增iuv，使得ㄧˊㄉˊ（贏得）可以打出
+#    - abbrev/^([bpmfdtnlgkhjqxZCSrzcs]).+(\d)$/$1$2/ #同上，但少了ㄧㄨㄩ
+#    - abbrev/^([bpmfdtnlgkhjqx]).+(\d)$/$1$2/ #同上，但再少了ㄓㄔㄕㄖㄗㄘㄙ
+    - derive/^([bpmfdtnlgkhjqx]).+(\d)$/$1$2/
+##### 內嵌注音文 #####
+    - xform|^＊([12345])$|r$1| #聲調，「ㄖ」「聲調」打出聲調不被省略
+    - abbrev|^＊([bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR])$|$1|
+    - xform|^＊([bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR])$|$1 | #下兩則 xform 合併處理 #\x31=數字1
+    # - xform|^＊([bpmfdtnlgkhjqx])$|$1 | #\x31=數字1
+    # - erase|^＊([bpmfdtnlgkhjqx])$|| #消除不含聲調注音（不消除也不影響） #如果上一則為 abbrev 才需要，xform 不需要
+    # - xform|^＊([ZCSrzcsiuvaoeEAIOUMNKGR])$|$1 | #\x31=數字1
+    - xform|^＊＊|| #開頭「＊＊」使注音文不被前面縮略，該正則回復
+##### 注音聲韻母亂序 #####
+    - derive/^([bpmfdtnlgkhjqxZCSrzcs])([iuv])/$2$1/
+    - derive/^([iuv])([aoeEAIOUMNKG])/$2$1/ #[R]
+    - derive/^([bpmfdtnlgkhjqxZCSrzcs])([aoeEAIOUMNKG])/$2$1/ #[R]
+    - derive/^([bpmfdtnlgkhjqxZCSrzcs])([iuv])([aoeEAIOUMNKG])/$3$2$1/ #[R]
+    - derive/^([bpmfdtnlgkhjqxZCSrzcs])([iuv])([aoeEAIOUMNKG])/$3$1$2/ #[R]
+    - derive/^([bpmfdtnlgkhjqxZCSrzcs])([iuv])([aoeEAIOUMNKG])/$2$3$1/ #[R]
+    - derive/^([bpmfdtnlgkhjqxZCSrzcs])([iuv])([aoeEAIOUMNKG])/$1$3$2/ #[R]
+    - 'xlit|bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR12345|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 6347|'
+##### 多國語言轉回正常 #####
+    - xform/`Q/Z/
+    - xform/`W/C/
+    - xform/`T/S/
+    - xform/`Y/E/
+    - xform/`P/A/
+    - xform/`D/I/
+    - xform/`F/O/
+    - xform/`H/U/
+    - xform/`J/M/
+    - xform/`L/N/
+    - xform/`X/K/
+    - xform/`V/G/
+    - xform/`B/R/
+    - xform/~/7/ #韓語尾綴
+    - xform/[[]/6/ #日語尾綴
+######################
+### 日語 ###
+    - derive/^([A-Z]+)<(6)$/$1$2/ #平假名轉可不使用〔次後綴〕
+    - abbrev/^([A-Z]+)>6$/$1/ #片假名簡化〔次後綴+語言補碼〕
+### 拉丁 ###
+    - abbrev/^([A-Z]+)" $/$1/ #拉丁字母大寫簡化〔次後綴+語言補碼〕
+    # - abbrev/^([橫A-Z]+)分[ ]$/$1/ #拉丁字母大寫簡化〔次後綴+語言補碼〕
+##### 多國語言簡化 #####
+    - abbrev/^([%"<>_A-Z]+)[ 3467]$/$1/ #外語全部簡化〔語言補碼〕，但保留大小寫平片假名〔次後綴〕
+##########################################################
+    - xform/([A-Z]+)/\L$1\E/
+    # - xform|>|\.| #點號
+    # - xform|<|,| #逗號
+    # - xform|"|;| #分號
+    # - xform|%|/| #斜線
+    # - xform|_|-| #連字號
+    - 'xlit|><"%_|.,;/-|' #整合以上五個項目
+################################### 主注音引擎 ######################################
+translator:
+  dictionary: bo_mixin.extended
+  prism: bo_mixin1
+  # enable_charset_filter: false
+  enable_completion: false #新版有長詞補全，用此關閉
+  enable_user_dict: true
+  # initial_quality: 1
+  preedit_format:
+    __include: element_bopomo:/preedit_b_1_2_4
+################################### 調出 Easy 英語 ######################################
+easy_en:
+  tag: easy_en
+  dictionary: easy_en_lower #easy_en_super
+  # enable_encoder: false
+  # encode_commit_history: false
+  enable_sentence: false
+  enable_completion: true
+  # sentence_over_completion: false
+  enable_user_dict: false
+  # strict_spelling: false
+  # spelling_hints: 2
+  # initial_quality: 1000
+  prefix: "3"
+  # suffix: " "
+  tips: "《Easy》▶"
+  closing_tips: "◀《Easy》"
+  extra_tags:
+    - easy_en_upper
+    # - easy_en_script
+  preedit_format:
+    - xform/^/《Easy》/
+    # - xform/》;/》; /
+    # - xform|》[/]|》/ |
+    # - xform|》'|》' |
+    - 'xform/\\/ /'
+  comment_format:
+    - xform/.+//  #刪除尚未輸入完整碼之提示 ~abc
+  #   # - xform|[~a-z;/.'-]+||
+  #   - xform/^.+⌗// #easy_en_super用
+  #   - xform|^[ a-z;/.'-]+|| #easy_en_super用
+  #   - xform/@@/\n          /
+  #   - xform/@/ /
+
+# easy_en_script:
+#   __include: /easy_en
+#   tag: easy_en_script
+#   # enable_encoder: true
+#   enable_completion: false
+#   enable_sentence: false
+#   enable_user_dict: false
+#   # spelling_hints: 1
+#   # initial_quality: 0
+#   extra_tags: []
+#   # comment_format: []
+
+easy_en_upper:
+  tag: easy_en_upper
+  dictionary: easy_en_upper
+  # enable_encoder: false
+  # encode_commit_history: false
+  enable_sentence: false
+  enable_completion: false
+  # sentence_over_completion: false
+  enable_user_dict: false
+  preedit_format:
+    - xform/^/《Easy》/
+    - xform/\\/ /
+
+e_reverse_lookup:
+  tags: [ easy_en ]
+  overwrite_comment: true
+  dictionary: easy_en_lcomment #easy_en_super
+  comment_format:
+    # - xform/^.+⌗// #easy_en_super用
+    # - xform|^[ a-z;/.'-]+|| #easy_en_super用
+    - xform/@@/\n          /
+    - xform/@/ /
+################################『日語假名輸入漢字』##################################
+japan:
+  tag: japan
+  dictionary: jpnin1.extended
+  # enable_charset_filter: false
+  enable_completion: false
+  enable_user_dict: true
+  prefix: "4"
+  suffix: "'"
+  tips: "《純日語》▶"
+  closing_tips: "◀《純日語》"
+  disable_user_dict_for_patterns:
+    - ^-{1,2}$
+    # - ^[.]$
+    # - ^[aiueohn]$
+    # - ^[kstnhmrgzdbp][aiueo]$
+    # - ^[sc]hi$
+    # - ^tsu$
+    # - ^fu$
+    # - ^y[auo]$
+    # - ^w[ao]$
+    # - ^n$
+    # - ^[kgsztnhbpmr]y[auo]$
+    # - ^[sc]h[auo]$
+    # - ^j[auo]$
+  preedit_format:
+    - xform/'[[]'?/A/
+    - xform/^/《純日語》/
+    - xform/^《純日語》(.+)A$/$1《純日語》/
+    - xform/A//
+    - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
+    - 'xform/\\/ /'
+########################### 西里爾字母 ###################################
+cyr2:
+  tag: cyr2
+  dictionary: cyrillic.extended
+  # enable_charset_filter: false
+  enable_completion: false
+  enable_user_dict: true
+  prefix: "6"
+  suffix: "'"
+  tips: "《俄》▶"
+  closing_tips: "◀《俄》"
+  disable_user_dict_for_patterns:
+    - ^[a-z]{1}[;/]?$
+    - ^b[fir][;/]?$
+    - ^eb[;/]?$
+    - ^nu[;/]?$
+    - ^rk[;/]?$
+    - ^wy[;/]?$
+    - ^[a-z]+;;$
+  preedit_format:
+    - xform/^/《俄》/
+    - 'xform/\\/ /'
+############################# 希臘字母 #################################
+gr2:
+  tag: gr2
+  dictionary: greek.extended
+  # enable_charset_filter: false
+  enable_completion: false
+  enable_user_dict: true
+  prefix: "7"
+  suffix: "'"
+  tips: "《希》▶"
+  closing_tips: "◀《希》"
+  disable_user_dict_for_patterns:
+    - ^[a-z]{1}[;/]?$
+  preedit_format:
+    - xform/^/《希》/
+    - 'xform/\\/ /'
+################################### 全形 ######################################
+fs2:
+  tag: fs2
+  dictionary: fullshape.extended
+  prism: fullshape
+  # enable_charset_filter: false
+  enable_completion: false
+  enable_user_dict: true
+  prefix: "]["
+  suffix: "'"
+  tips: "《全》▶"
+  closing_tips: "◀《全》"
+  disable_user_dict_for_patterns:
+    - ^[-a-z,./]{1}[;/]?$
+  preedit_format:
+    - xform/^/《全》/
+    - 'xform/\\/ /'
+################################『ㄅㄆㄇ注音文』##################################
+all_bpm:
+  tag: all_bpm
+  dictionary: allbpm
+  # enable_charset_filter: false
+  enable_completion: false
+  enable_user_dict: false
+  prefix: "';"
+  suffix: "'"
+  tips: "《注音文》▶"
+  closing_tips: "◀《注音文》"
+  preedit_format:
+    - xform/';'?/A/
+    - xform/^/《注音文》/
+    - xform/^《注音文》(.+)A$/$1《注音文》/
+    - xform/A//
+    - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-6347 |ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙ˉ|"
+    - 'xform/\\//'
+################################### 短語 ######################################
+# custom_phrase:
+#   dictionary: ""
+#   user_dict: bo_mixin_phrase
+#   db_class: stabledb
+#   enable_completion: false
+#   enable_sentence: false
+#   initial_quality: 2
+############################# 反查注音 ###################################
+reverse2_lookup:
+  tag: reverse2_lookup
+  dictionary: cangjie5
+  # enable_charset_filter: false
+  enable_completion: false
+  enable_user_dict: true
+  prefix: "="
+  suffix: "'"
+  tips: "《查》▶"
+  closing_tips: "◀《查》"
+  preedit_format:
+#    - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
+    - "xlit|abcdefghijklmnopqrstuvwxyz|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符|"
+    - xform/^/《查》/
+    - 'xform/\\/ /'
+
+bpm_reverse_lookup:
+  tags: [ reverse2_lookup ]
+  overwrite_comment: true
+  dictionary: bo_mixin.extended
+  comment_format:
+    - xform/@[a-z]+ ?//
+    - xform/!!!?[a-z]+ ?//
+    - xform/iu/iU/ #iou
+    - xform/ui/uI/ #uei
+    - xform/ong/ung/
+    - xform/yi?/i/
+    - xform/wu?/u/
+    - xform/iu/v/
+    - xform/([jqx])u/$1v/
+    - xform/([iuv])n/$1en/
+    - xform/zhi?/Z/
+    - xform/chi?/C/
+    - xform/shi?/S/
+    - xform/([zcsr])i/$1/
+    - xform/ai/A/
+    - xform/ei/I/
+    - xform/ao/O/
+    - xform/ou/U/
+    - xform/ang/K/
+    - xform/eng/G/
+    - xform/an/M/
+    - xform/en/N/
+    - xform/er/R/
+    - xform/eh/E/
+    - xform/([iv])e/$1E/
+    - xform/1//
+    - 'xlit|bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR2345|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙|'
+################################### 系列符號 ######################################
+emoji_series:
+  tag: emoji_series
+  dictionary: symbols_bpmf
+  # enable_charset_filter: false
+  # enable_encoder: false
+  # encode_commit_history: false
+  enable_sentence: false
+  enable_completion: false
+  # sentence_over_completion: false
+  enable_user_dict: true
+  prefix: "`"
+  suffix: "'"
+  tips: "《emoji集》▶"
+  closing_tips: "◀《emoji集》"
+  preedit_format:
+    __include: element_bopomo:/emoji_series
+################################### 符號處理 ######################################
+punctuator:
+  import_preset: punct_bopomo
+################################ 按鍵處理 ###################################
+key_binder:
+  import_preset: default
+  bindings:
+    __include: element_bopomo:/key_binder
+
+editor:
+  bindings:
+    __include: element_bopomo:/editor
+########################## 正則調出各種功能 ##############################
+recognizer:
+  patterns:
+    __include: element_bopomo:/patterns_mixin_1_2_4
+
+style:
+  inline_preedit: false
+
+# __patch:
+#   # 使用八股文語言模型
+#   - grammar:/hant?
+#   # 用家自選配置
+#   - bo_mixin1.custom:/patch?

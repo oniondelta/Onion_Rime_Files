@@ -1,0 +1,16 @@
+# Rime dictionary
+# encoding: utf-8
+# 《字庫匯入設定頁》
+---
+name: dif1_la.extended
+version: "202204"
+sort: original
+use_preset_vocabulary: false
+import_tables:
+  - ocm_mixin_la
+  - phrases.en_o_w
+  - phrases.la_py_w
+  - phrases.en_l_w
+  - phrases.en_u_w
+  - phrases.la_eu_w
+...

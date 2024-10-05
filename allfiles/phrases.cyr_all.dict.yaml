@@ -1,0 +1,38 @@
+# Rime dictionary
+# encoding: utf-8
+# 《詞庫》
+#『洋蔥』
+---
+name: phrases.cyr_all
+version: "202011"
+sort: original
+use_preset_vocabulary: false
+columns:
+  - text
+  - weight
+...
+##### 西里爾詞庫 #####
+#учитель	yuntelbf
+учитель
+РФ
+ддл
+повар
+один
+##### 補單字母碼 與 基本字母 重疊 #####
+вф
+ВФ
+вю
+ВЮ
+вп
+ВП
+ев
+ев
+ич
+ич
+пк
+ПК
+шу
+ШУ
+юно
+ЮНО
+##### 結束 #####

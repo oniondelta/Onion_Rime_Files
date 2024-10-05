@@ -1,0 +1,140 @@
+# Rime schema settings
+# encoding: utf-8
+# 《設定頁》
+
+__include: Mount_ocm.schema:/
+
+
+schema:
+  schema_id: Mount_ocm_encoder
+  name: "❖蝦米(單出-造詞)❖"
+  version: "202405"
+
+# switches/+:
+#   - name: debug_comment
+#     reset: 1 #0
+#     states: [ 'normal', 'Debug' ]
+
+engine:
+  # filters/+:
+  #   - lua_filter@*filter_comment_filter_debug  #不用於 rime.lua 開通
+  #   - lua_filter@comment_filter_debug  #需要於 rime.lua 開通
+  #   - single_char_filter
+  # segmentors:
+  #   - ascii_segmentor
+  #   - matcher
+  #   - abc_segmentor
+  #   - affix_segmentor@pt
+  #   - affix_segmentor@emoji_series
+  #   - affix_segmentor@reverse2_lookup
+  #   - affix_segmentor@reverse3_lookup
+  #   # - affix_segmentor@reverse3_lookup_extra
+  #   # - affix_segmentor@makephrase
+  #   - affix_segmentor@ocm_phrases
+  #   - punct_segmentor
+  #   - fallback_segmentor
+  # translators/+:
+  #   # - table_translator@makephrase
+  #   - table_translator@phrase_up
+  translators:
+    - punct_translator
+    - table_translator@top_fixed
+    - table_translator
+    # - lua_translator@*translator_ocm_phrases@ocm_phrases
+    - table_translator@pt
+    - table_translator@emoji_series
+    - script_translator@reverse2_lookup
+    - table_translator@reverse3_lookup
+    - script_translator@reverse3_lookup_extra
+    # - table_translator@makephrase  #某些太多重碼的字，某些情況造不出
+    # - table_translator@phrase_up  #某些太多重碼的字，某些情況造不出
+
+# comment_filter_plus:
+#   tags: [ pt, makephrase ]
+
+abc_segmentor:
+  extra_tags:
+    - top_fixed
+    # - phrase_up
+
+speller:
+  max_code_length: ""
+  # algebra:
+  ############
+    # #為了加強造詞準確性，在字典中，以「~」前綴標記非標準拆字，再透過拼寫語法去除「~」後，送入辭典查詢
+    # - xform/^~(.*)$/$1/
+    # - derive/^([a-z]+)$/$1`/
+  ############
+    # - xform/^(.*)$/`$1/
+    # - derive/^`(.*)$/$1;/
+    # - xform/^(.*)$/$1@/
+    # - abbrev/^(.*)@$/$1;/
+    # - derive/^(.*)@$/$1;/
+    # - xform/^(.*)$/$1;/
+  ############
+    # - fuzz/^(.*)$/$1;/
+  ############
+
+translator:
+  dictionary: Mount_ocm_encoder.extended
+  enable_encoder: true
+  enable_user_dict: true
+
+# ocm_phrases:
+#   __include: Mount_ocm.schema:/translator
+#   # tag: ocm_phrases
+#   dictionary: Mount_ocm_encoder.extended
+#   enable_encoder: true
+#   enable_user_dict: true
+
+top_fixed:  # 固定單字順序
+  __include: Mount_ocm.schema:/translator
+  initial_quality: 1000
+
+tr_reverse_lookup:
+  dictionary: Mount_ocm_encoder.extended
+  # tags: [ makephrase ] #掛在這個tag所對應的翻譯器上
+
+# makephrase:
+#   # __include: Mount_ocm.schema:/translator
+#   dictionary: Mount_ocm_encoder.extended
+#   tag: makephrase
+#   # initial_quality: 10 #1
+#   # enable_charset_filter: true
+#   # enable_encoder: false
+#   # encode_commit_history: false
+#   enable_sentence: true
+#   enable_completion: false
+#   # sentence_over_completion: false
+#   # enable_user_dict: false
+#   # max_phrase_length: 4
+#   # strict_spelling: false #true
+#   prefix: ";';" #'`'
+#   suffix: "'"
+#   tips: "《查碼&造詞》▶"
+#   closing_tips: "◀《查碼&造詞》"
+#   preedit_format:
+#     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
+#     - xform/^/《查碼&造詞》/
+#     - xform/\|/  /
+#     - xform/`/  /
+
+# phrase_up: # 使造詞能出現在一般輸入中
+#   # __include: Mount_ocm.schema:/translator
+#   dictionary: Mount_ocm_encoder.extended
+#   # initial_quality: 10
+#   # enable_charset_filter: true
+#   enable_encoder: true
+#   # encode_commit_history: false
+#   enable_sentence: false
+#   enable_completion: false
+#   # sentence_over_completion: false
+#   enable_user_dict: true
+#   # max_phrase_length: 10  #輸入十個字以下，可用造詞打出，超過不作用！
+#   disable_user_dict_for_patterns:
+#     - "^.*;;?$"
+#     - "^[]',.[]].*$"
+
+# recognizer:
+#   patterns/+:
+#     makephrase: "^;';[.,a-z;`|]*'?$"

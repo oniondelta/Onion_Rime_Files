@@ -1,0 +1,25 @@
+# Rime dictionary
+# encoding: utf-8
+# 《多蝦米詞庫匯入設定頁》
+---
+name: dif1.extended
+version: "202203"
+sort: original
+use_preset_vocabulary: false
+#encoder:
+#  exclude_patterns:
+##    - '^z.*$'
+#  rules:
+#    - length_equal: 2
+#      formula: "AaAbBaBb"
+#    - length_equal: 3
+#      formula: "AaAbBaBbCaCb"
+#    - length_in_range: [4, 10]
+#      formula: "AaBaCaDaEaZa"
+import_tables:
+  - ocm_tc_mc
+  - uniabcdword
+  - phrases.ocmtc_essay_mc
+...
+#-	-
+‧	-@

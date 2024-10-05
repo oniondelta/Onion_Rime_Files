@@ -1,0 +1,20 @@
+# Rime dictionary
+# encoding: utf-8
+# 《洋蔥 純注音 字詞庫匯入頁》
+# 『洋蔥』製作
+# 中文字詞標註使用拼音
+---
+name: bopomo_onion.extended
+version: "202209"
+sort: by_weight
+vocabulary: essay-zh-hant-mc
+#use_preset_vocabulary: true
+import_tables:
+  - terra_pinyin_onion
+  - terra_pinyin_onion_add
+  - mixin_bpmf  #內嵌注音文，混打。
+...
+##### 測試字（測試是否少掉台灣以外的用字） #####
+#裏面	li3 mian4
+#高峯	gao1 feng1
+##### 以下可自行添加詞句 #####

@@ -1,0 +1,90 @@
+# Rime dictionary
+# encoding: utf-8
+# 《洋蔥 雙拼 注音 字詞庫匯入頁》
+# 『洋蔥』製作
+# 中文字詞標註使用拼音
+---
+name: bopomo_onion_double.extended
+version: "202404"
+sort: by_weight
+vocabulary: essay-zh-hant-mc
+#use_preset_vocabulary: true
+#max_phrase_length: 7
+#min_phrase_weight: 100
+import_tables:
+  - terra_pinyin_onion
+  - terra_pinyin_onion_add
+  - mixin_bpmf  #內嵌注音文，混打。
+  - phrases.chtp
+...
+##### 雙拼注音_內嵌單注音起始（以下編碼使用全形避轉換） #####
+ 	ｅ
+ˉ	ｅ１
+ˊ	ｅ２
+ˇ	ｅ３
+ˋ	ｅ４
+˙	ｅ５
+ㄅ	ｅｂ
+ㄆ	ｅｐ
+ㄇ	ｅｍ
+ㄈ	ｅｆ
+ㄉ	ｅｄ
+ㄊ	ｅｔ
+ㄋ	ｅｎ
+ㄌ	ｅｌ　
+ㄍ	ｅｇ
+ㄎ	ｅｋ
+ㄏ	ｅｈ
+ㄐ	ｅｊ
+ㄑ	ｅｑ
+ㄒ	ｅｘ
+ㄓ	ｅｗ
+ㄔ	ｅｖ
+ㄕ	ｅａ
+ㄖ	ｅｒ
+ㄗ	ｅｚ
+ㄘ	ｅｃ
+ㄙ	ｅｓ
+ㄧ	ｅｉ
+ㄨ	ｅｕ
+ㄩ	ｅｙ
+ㄚ	ｅａ
+ㄛ	ｅｏ
+ㄜ	ｅｅ
+ㄝ	ｅｋ
+ㄞ	ｅｊ
+ㄟ	ｅｋ
+ㄠ	ｅｗ
+ㄡ	ｅｄ
+ㄢ	ｅｈ
+ㄣ	ｅｆ
+ㄤ	ｅｓ
+ㄥ	ｅｇ
+ㄦ	ｅｒ
+#####
+ㄭ	ｅｉ
+ㄭ	ｅｅ
+◌	ｅｏ
+#####
+ㄨㄥ	ｅｂ
+ㄩㄥ	ｅｂ
+ㄧㄝ	ｅｐ
+ㄧㄢ	ｅｍ
+ㄨㄞ	ｅｍ
+ㄧㄥ	ｅｔ
+ㄨㄢ	ｅｎ
+ㄩㄢ	ｅｎ
+ㄨㄟ	ｅｌ
+ㄩㄝ	ｅｌ
+ㄧㄠ	ｅｑ
+ㄧㄤ	ｅｘ
+ㄨㄤ	ｅｘ
+ㄨㄣ	ｅｖ
+ㄩㄣ	ｅｖ
+ㄧㄣ	ｅｒ
+ㄧㄚ	ｅｚ
+ㄨㄚ	ｅｚ
+ㄧㄡ	ｅｃ
+ㄨㄛ	ｅｏ
+##### 內嵌單注音結束 #####
+##### 以下可自行添加詞句 #####

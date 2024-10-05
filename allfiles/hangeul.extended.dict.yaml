@@ -1,0 +1,18 @@
+# Rime dictionary
+# encoding: utf-8
+# 《韓語洋蔥形碼鍵位 字詞庫匯入頁》
+# 『洋蔥』製作
+---
+name: hangeul.extended
+version: "202304"
+sort: by_weight #original
+vocabulary: essay-kr-hanja
+# use_preset_vocabulary: false
+# max_phrase_length: 7
+# min_phrase_weight: 100
+import_tables:
+  - hangeul
+  - hangeul_hanja
+  - phrases.kr_more
+  # - space  #空格，特殊方案用
+...
