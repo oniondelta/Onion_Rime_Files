@@ -71,7 +71,7 @@ local function hotkeys(n)
       , { "　　［control］+［shift］+［  4  ］變換標點全半形", "➒" }
       , { "　［control］+［shift］+［  5  ］變換繁簡體", "➊🄌" }
       , { "　［control］+［shift］+［  6  ］變換中文字符範圍", "➊➊" }
-      , { "　［control］+［shift］+［  7  ］變換附加 Emoji 有無", "➊➋" }
+      , { "　［control］+［shift］+［  7  ］變換隨附 Emoji 有無", "➊➋" }
       , { "　［control］+［shift］+［  8  ］變換外語和符號注釋有無", "➊➌" }
       , { "　［control］+［shift］+［  9  ］變換 Unicode 編碼注釋有無", "➊➍" }
       , { "　［control］+［shift］+［  0  ］變換《Easy》英文排序", "➊➎" }
@@ -82,7 +82,7 @@ local function hotkeys(n)
       , { "　［control］+［  /  ］切換標點半形", "➋🄌" }
       , { "　［control］+［  ;  ］切換簡體轉換", "➋➊" }
       , { "　［control］+［  '  ］切換中文字符範圍為完整，不精簡", "➋➋" }
-      , { "　［control］+［  [  ］切換附加 Emoji 為無", "➋➌" }
+      , { "　［control］+［  [  ］切換隨附 Emoji 為無", "➋➌" }
       , { "　［control］+［  ]  ］切換外語和符號注釋為無", "➋➍" }
       , { "　（↑ 直按標點和「  =  」「符號」注釋無法關閉）", "➋➎" }
       , { "　［control］+［  -  ］切換 Unicode 編碼注釋為有", "➋➏" }
@@ -94,12 +94,14 @@ local function hotkeys(n)
       , { "　［control］+［shift］+［  /  ］切換標點全形（原注音形式）", "➌➋" }
       , { "　［control］+［shift］+［  ;  ］切換不轉換簡體", "➌➌" }
       , { "　［control］+［shift］+［  '  ］切換中文其字符範圍為精簡", "➌➍" }
-      , { "　［control］+［shift］+［  [  ］切換附加 Emoji為有", "➌➎" }
+      , { "　［control］+［shift］+［  [  ］切換隨附 Emoji為有", "➌➎" }
       , { "　［control］+［shift］+［  ]  ］切換外語和符號注釋為有", "➌➏" }
       , { "　［control］+［shift］+［  -  ］切換 Unicode 編碼注釋為無", "➌➐" }
       , { "　［control］+［shift］+［  =  ］切換《Easy》英文排序為個排", "➌➑" }
       , { "　────────────  ", "➌➒" }
-      , { "　※ 以上某些鍵位須用內附的 default.custom.yaml 檔", "➍🄌" }
+      , { "　※ 某些鍵位須用內附的 default.custom.yaml 檔", "➍🄌" }
+      , { "　※ ［control］+［  -  or  =  ］於 Win 易衝突，或關閉", "➍➊" }
+      , { "　※ ［control］+［shift］+［  -  or  =  ］於 Win 易衝突，或關閉", "➍➋" }
       }
     -- , { "　＊基本功能鍵", "🄋" }
     -- , { "＊洋蔥版功能鍵", "➀➇" }
@@ -179,7 +181,7 @@ local function hotkeys(n)
       , { "　　［control］+［shift］+［  4  ］變換標點全半形", "➒" }
       , { "　［control］+［shift］+［  5  ］變換繁簡體", "➊🄌" }
       , { "　［control］+［shift］+［  6  ］變換中文字符範圍（CJK）", "➊➊" }
-      , { "　［control］+［shift］+［  7  ］變換附加 Emoji 有無", "➊➋" }
+      , { "　［control］+［shift］+［  7  ］變換隨附 Emoji 有無", "➊➋" }
       , { "　［control］+［shift］+［  8  ］變換 Unicode 編碼注釋有無", "➊➌" }
       , { "　［control］+［shift］+［  9  ］變換 Enter 上屏中文或原始輸入", "➊➍" }
       , { "『 快捷鍵（下排/指定）』（初始設定 +［shift］）", "➊➎" }
@@ -189,7 +191,7 @@ local function hotkeys(n)
       , { "　［control］+［  /  ］切換標點半形", "➊➒" }
       , { "　［control］+［  ;  ］切換簡體轉換", "➋🄌" }
       , { "　［control］+［  '  ］切換中文字符範圍為完整，不精簡", "➋➊" }
-      , { "　［control］+［  [  ］切換附加 Emoji 為無", "➋➋" }
+      , { "　［control］+［  [  ］切換隨附 Emoji 為無", "➋➋" }
       , { "　［control］+［  -  ］切換 Unicode 編碼注釋為有", "➋➌" }
       , { "　［control］+［  =  ］切換 Enter 上屏原始輸入", "➋➍" }
       , { " • 初始設定", "➋➎" }
@@ -198,11 +200,13 @@ local function hotkeys(n)
       , { "　［control］+［shift］+［  /  ］切換標點全形", "➋➑" }
       , { "　［control］+［shift］+［  ;  ］切換不轉換簡體", "➋➒" }
       , { "　［control］+［shift］+［  '  ］切換中文其字符範圍為精簡（CJK）", "➌🄌" }
-      , { "　［control］+［shift］+［  [  ］切換附加 Emoji為有", "➌➊" }
+      , { "　［control］+［shift］+［  [  ］切換隨附 Emoji為有", "➌➊" }
       , { "　［control］+［shift］+［  -  ］切換 Unicode 編碼注釋為無", "➌➋" }
       , { "　［control］+［shift］+［  =  ］切換 Enter 上屏中文", "➌➌" }
       , { "　────────────  ", "➌➍" }
-      , { "　※ 以上某些鍵位須用內附的 default.custom.yaml 檔", "➌➎" }
+      , { "　※ 某些鍵位須用內附的 default.custom.yaml 檔", "➌➎" }
+      , { "　※ ［control］+［  -  or  =  ］於 Win 易衝突，或關閉", "➌➏" }
+      , { "　※ ［control］+［shift］+［  -  or  =  ］於 Win 易衝突，或關閉", "➌➐" }
       }
 
   elseif s_4 then
@@ -277,7 +281,9 @@ local function hotkeys(n)
       , { "　［control］+［shift］+［  -  ］切換 w 符號 space 為上屏", "➌➏" }
       , { "　［control］+［shift］+［  =  ］切換 Enter 上屏原始輸入", "➌➐" }
       , { "　────────────  ", "➌➑" }
-      , { "　※ 以上某些鍵位須用內附的 default.custom.yaml 檔", "➌➒" }
+      , { "　※ 某些鍵位須用內附的 default.custom.yaml 檔", "➌➒" }
+      , { "　※ ［control］+［  -  or  =  ］於 Win 易衝突，或關閉", "➍🄌" }
+      , { "　※ ［control］+［shift］+［  -  or  =  ］於 Win 易衝突，或關閉", "➍➊" }
       }
       -- , { "　［shift］+［BackSpace］刪除一個輸入碼", "➀➀" }
       -- , { " • 游標移位", "➀➅" }
@@ -346,7 +352,7 @@ local function hotkeys(n)
       , { "　　［control］+［shift］+［  4  ］變換標點全半形", "➒" }
       , { "　［control］+［shift］+［  5  ］變換繁簡體", "➊🄌" }
       , { "　［control］+［shift］+［  6  ］變換中文字符範圍", "➊➊" }
-      , { "　［control］+［shift］+［  7  ］變換附加 Emoji 有無", "➊➋" }
+      , { "　［control］+［shift］+［  7  ］變換隨附 Emoji 有無", "➊➋" }
       , { "　［control］+［shift］+［  8  ］變換編碼標注有無", "➊➌" }
       , { "　［control］+［shift］+［  9  ］變換外語和符號注釋有無", "➊➍" }
       , { "　［control］+［shift］+［  0  ］變換 Unicode 編碼注釋有無", "➊➎" }
@@ -377,7 +383,9 @@ local function hotkeys(n)
       , { "　［control］+［shift］+［  -  ］切換 Unicode 編碼注釋為無", "➌➒" }
       , { "　［control］+［shift］+［  =  ］切換《Easy》英文排序為個排", "➍🄌" }
       , { "　────────────  ", "➍➊" }
-      , { "　※ 以上某些鍵位須用內附的 default.custom.yaml 檔", "➍➋" }
+      , { "　※ 某些鍵位須用內附的 default.custom.yaml 檔", "➍➋" }
+      , { "　※ ［control］+［  -  or  =  ］於 Win 易衝突，或關閉", "➍➌" }
+      , { "　※ ［control］+［shift］+［  -  or  =  ］於 Win 易衝突，或關閉", "➍➍" }
       }
 
   else
