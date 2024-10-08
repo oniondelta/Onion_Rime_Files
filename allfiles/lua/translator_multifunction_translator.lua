@@ -619,8 +619,11 @@ local function translate(input, seg, env)
     -- local a, b, aptime_c3, aptime_c4 = time_out2()
     yield_c( string.gsub(time_out2()[7], " 0([%d])", " %1"), "", preedittext)
     yield_c( time_out2()[5].." "..fullshape_number(string.gsub(os.date("%I"), "^0", "")).."："..fullshape_number(os.date("%M")).."："..fullshape_number(os.date("%S")), "", preedittext)
-    yield_c( time_out2()[7], "", preedittext)
-    yield_c( time_out2()[5].." "..fullshape_number(os.date("%I")).."："..fullshape_number(os.date("%M")).."："..fullshape_number(os.date("%S")), "", preedittext)
+    local check_number_format = string.match(os.date("%I"), "^0")
+    if check_number_format then
+      yield_c( time_out2()[7], "", preedittext)
+      yield_c( time_out2()[5].." "..fullshape_number(os.date("%I")).."："..fullshape_number(os.date("%M")).."："..fullshape_number(os.date("%S")), "", preedittext)
+    end
     return
   end
 
@@ -631,10 +634,13 @@ local function translate(input, seg, env)
     yield_c( string.gsub(time_out2()[4], "0([%d])", "%1"), "", preedittext)
     yield_c( fullshape_number(string.gsub(time_out2()[3], "0([%d])", "%1")), "", preedittext)
     yield_c( fullshape_number(string.gsub(time_out2()[4], "0([%d])", "%1")), "", preedittext)
-    yield_c( time_out2()[3], "", preedittext)
-    yield_c( time_out2()[4], "", preedittext)
-    yield_c( fullshape_number(time_out2()[3]), "", preedittext)
-    yield_c( fullshape_number(time_out2()[4]), "", preedittext)
+    local check_number_format = string.match(os.date("%I"), "^0") or string.match(os.date("%M"), "^0") or string.match(os.date("%S"), "^0")
+    if check_number_format then
+      yield_c( time_out2()[3], "", preedittext)
+      yield_c( time_out2()[4], "", preedittext)
+      yield_c( fullshape_number(time_out2()[3]), "", preedittext)
+      yield_c( fullshape_number(time_out2()[4]), "", preedittext)
+    end
     return
   end
 
@@ -652,8 +658,11 @@ local function translate(input, seg, env)
     local preedittext = input .. "\t 【現時：時分秒】"  --〔時:分:秒〕
     yield_c( string.gsub(os.date("%H:%M:%S"), "^0", ""), "", preedittext)
     yield_c( fullshape_number(string.gsub(os.date("%H"), "^0", "")).."："..fullshape_number(os.date("%M")).."："..fullshape_number(os.date("%S")), "", preedittext)
-    yield_c( os.date("%H:%M:%S"), "", preedittext)
-    yield_c( fullshape_number(os.date("%H")).."："..fullshape_number(os.date("%M")).."："..fullshape_number(os.date("%S")), "", preedittext)
+    local check_number_format = string.match(os.date("%H"), "^0")
+    if check_number_format then
+      yield_c( os.date("%H:%M:%S"), "", preedittext)
+      yield_c( fullshape_number(os.date("%H")).."："..fullshape_number(os.date("%M")).."："..fullshape_number(os.date("%S")), "", preedittext)
+    end
     return
   end
 
@@ -664,10 +673,13 @@ local function translate(input, seg, env)
     yield_c( time_out1()[8], "", preedittext)
     yield_c( time_out1()[7], "", preedittext)
     yield_c( time_out1()[5], "", preedittext)
-    yield_c( time_out1()[14], "", preedittext)
-    yield_c( time_out1()[16], "", preedittext)
-    yield_c( time_out1()[15], "", preedittext)
-    yield_c( time_out1()[13], "", preedittext)
+    local check_number_format = string.match(os.date("%I"), "^0")
+    if check_number_format then
+      yield_c( time_out1()[14], "", preedittext)
+      yield_c( time_out1()[16], "", preedittext)
+      yield_c( time_out1()[15], "", preedittext)
+      yield_c( time_out1()[13], "", preedittext)
+    end
     return
   end
 
@@ -677,10 +689,13 @@ local function translate(input, seg, env)
     yield_c( string.gsub(os.date("%H點%M分%S秒"), "0([%d])", "%1"), "", preedittext)
     yield_c( fullshape_number(string.gsub(os.date("%H時%M分%S秒"), "0([%d])", "%1")), "", preedittext)
     yield_c( fullshape_number(string.gsub(os.date("%H點%M分%S秒"), "0([%d])", "%1")), "", preedittext)
-    yield_c( os.date("%H時%M分%S秒"), "", preedittext)
-    yield_c( os.date("%H點%M分%S秒"), "", preedittext)
-    yield_c( fullshape_number(os.date("%H時%M分%S秒")), "", preedittext)
-    yield_c( fullshape_number(os.date("%H點%M分%S秒")), "", preedittext)
+    local check_number_format = string.match(os.date("%H"), "^0") or string.match(os.date("%M"), "^0") or string.match(os.date("%S"), "^0")
+    if check_number_format then
+      yield_c( os.date("%H時%M分%S秒"), "", preedittext)
+      yield_c( os.date("%H點%M分%S秒"), "", preedittext)
+      yield_c( fullshape_number(os.date("%H時%M分%S秒")), "", preedittext)
+      yield_c( fullshape_number(os.date("%H點%M分%S秒")), "", preedittext)
+    end
     return
   end
 
@@ -730,8 +745,11 @@ local function translate(input, seg, env)
     -- local aptime_c1, aptime_c2 = time_out2()
     yield_c( string.gsub(time_out2()[6], " 0([%d])", " %1"), "", preedittext)
     yield_c( time_out2()[5].." "..fullshape_number(string.gsub(os.date("%I"), "^0", "")).."："..fullshape_number(os.date("%M")), "", preedittext)
-    yield_c( time_out2()[6], "", preedittext)
-    yield_c( time_out2()[5].." "..fullshape_number(os.date("%I")).."："..fullshape_number(os.date("%M")), "", preedittext)
+    local check_number_format = string.match(os.date("%I"), "^0")
+    if check_number_format then
+      yield_c( time_out2()[6], "", preedittext)
+      yield_c( time_out2()[5].." "..fullshape_number(os.date("%I")).."："..fullshape_number(os.date("%M")), "", preedittext)
+    end
     return
   end
 
@@ -742,10 +760,13 @@ local function translate(input, seg, env)
     yield_c( string.gsub(time_out2()[2], "0([%d])", "%1"), "", preedittext)
     yield_c( fullshape_number(string.gsub(time_out2()[1], "0([%d])", "%1")), "", preedittext)
     yield_c( fullshape_number(string.gsub(time_out2()[2], "0([%d])", "%1")), "", preedittext)
-    yield_c( time_out2()[1], "", preedittext)
-    yield_c( time_out2()[2], "", preedittext)
-    yield_c( fullshape_number(time_out2()[1]), "", preedittext)
-    yield_c( fullshape_number(time_out2()[2]), "", preedittext)
+    local check_number_format = string.match(os.date("%I"), "^0") or string.match(os.date("%M"), "^0")
+    if check_number_format then
+      yield_c( time_out2()[1], "", preedittext)
+      yield_c( time_out2()[2], "", preedittext)
+      yield_c( fullshape_number(time_out2()[1]), "", preedittext)
+      yield_c( fullshape_number(time_out2()[2]), "", preedittext)
+    end
     return
   end
 
@@ -763,8 +784,11 @@ local function translate(input, seg, env)
     local preedittext = input .. "\t 【現時：時分】"  --〔時:分〕
     yield_c( string.gsub(os.date("%H:%M"), "^0", ""), "", preedittext)
     yield_c( fullshape_number(string.gsub(os.date("%H"), "^0", "")).."："..fullshape_number(os.date("%M")), "", preedittext)
-    yield_c( os.date("%H:%M"), "", preedittext)
-    yield_c( fullshape_number(os.date("%H")).."："..fullshape_number(os.date("%M")), "", preedittext)
+    local check_number_format = string.match(os.date("%H"), "^0")
+    if check_number_format then
+      yield_c( os.date("%H:%M"), "", preedittext)
+      yield_c( fullshape_number(os.date("%H")).."："..fullshape_number(os.date("%M")), "", preedittext)
+    end
     return
   end
 
@@ -775,10 +799,13 @@ local function translate(input, seg, env)
     yield_c( time_out1()[4], "", preedittext)
     yield_c( time_out1()[3], "", preedittext)
     yield_c( time_out1()[1], "", preedittext)
-    yield_c( time_out1()[10], "", preedittext)
-    yield_c( time_out1()[12], "", preedittext)
-    yield_c( time_out1()[11], "", preedittext)
-    yield_c( time_out1()[9], "", preedittext)
+    local check_number_format = string.match(os.date("%I"), "^0")
+    if check_number_format then
+      yield_c( time_out1()[10], "", preedittext)
+      yield_c( time_out1()[12], "", preedittext)
+      yield_c( time_out1()[11], "", preedittext)
+      yield_c( time_out1()[9], "", preedittext)
+    end
     return
   end
 
@@ -788,10 +815,13 @@ local function translate(input, seg, env)
     yield_c( string.gsub(os.date("%H點%M分"), "0([%d])", "%1"), "", preedittext)
     yield_c( fullshape_number(string.gsub(os.date("%H時%M分"), "0([%d])", "%1")), "", preedittext)
     yield_c( fullshape_number(string.gsub(os.date("%H點%M分"), "0([%d])", "%1")), "", preedittext)
-    yield_c( os.date("%H時%M分"), "", preedittext)
-    yield_c( os.date("%H點%M分"), "", preedittext)
-    yield_c( fullshape_number(os.date("%H時%M分")), "", preedittext)
-    yield_c( fullshape_number(os.date("%H點%M分")), "", preedittext)
+    local check_number_format = string.match(os.date("%H"), "^0") or string.match(os.date("%M"), "^0")
+    if check_number_format then
+      yield_c( os.date("%H時%M分"), "", preedittext)
+      yield_c( os.date("%H點%M分"), "", preedittext)
+      yield_c( fullshape_number(os.date("%H時%M分")), "", preedittext)
+      yield_c( fullshape_number(os.date("%H點%M分")), "", preedittext)
+    end
     return
   end
 
@@ -869,8 +899,11 @@ local function translate(input, seg, env)
     local jpymd, jp_y = jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))
     yield_c( string.gsub(jpymd, "([^%d])0", "%1"), "〔日本元号〕", preedittext)
     yield_c( fullshape_number(string.gsub(jpymd, "([^%d])0", "%1")), "〔日本元号〕", preedittext)
-    yield_c( jpymd, "〔日本元号〕", preedittext)
-    yield_c( fullshape_number(jpymd), "〔日本元号〕", preedittext)
+    local check_number_format = string.match(os.date("%m"), "^0") or string.match(os.date("%d"), "^0")
+    if check_number_format then
+      yield_c( jpymd, "〔日本元号〕", preedittext)
+      yield_c( fullshape_number(jpymd), "〔日本元号〕", preedittext)
+    end
     return
   end
   -- if (input == env.prefix .. "fj") then
@@ -883,9 +916,12 @@ local function translate(input, seg, env)
     yield_c( string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日", "([^%d])0", "%1"), "〔民國〕", preedittext)
     yield_c( string.gsub("民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日", "([^%d])0", "%1"), "〔民國*〕", preedittext)
     yield_c( "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")), "〔民國〕", preedittext)
-    yield_c( "民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日", "〔民國〕", preedittext)
-    yield_c( "民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日", "〔民國*〕", preedittext)
-    yield_c( "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日", "〔民國〕", preedittext)
+    local check_number_format = string.match(os.date("%m"), "^0") or string.match(os.date("%d"), "^0")
+    if check_number_format then
+      yield_c( "民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日", "〔民國〕", preedittext)
+      yield_c( "民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日", "〔民國*〕", preedittext)
+      yield_c( "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日", "〔民國〕", preedittext)
+    end
     return
   end
 
@@ -933,9 +969,12 @@ local function translate(input, seg, env)
     yield_c( string.gsub(os.date("%Y年%m月%d日"), "([^%d])0", "%1"), "〔日期〕", preedittext)
     yield_c( string.gsub(os.date(" %Y 年 %m 月 %d 日 "), "([^%d])0", "%1"), "〔*日期*〕", preedittext)
     yield_c( fullshape_number(string.gsub(os.date("%Y年%m月%d日"), "([^%d])0", "%1")), "〔日期〕", preedittext)
-    yield_c( os.date("%Y年%m月%d日"), "〔日期〕", preedittext)
-    yield_c( os.date(" %Y 年 %m 月 %d 日 "), "〔*日期*〕", preedittext)
-    yield_c( fullshape_number(os.date("%Y")).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日", "〔日期〕", preedittext)
+    local check_number_format = string.match(os.date("%m"), "^0") or string.match(os.date("%d"), "^0")
+    if check_number_format then
+      yield_c( os.date("%Y年%m月%d日"), "〔日期〕", preedittext)
+      yield_c( os.date(" %Y 年 %m 月 %d 日 "), "〔*日期*〕", preedittext)
+      yield_c( fullshape_number(os.date("%Y")).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日", "〔日期〕", preedittext)
+    end
     return
   end
 
@@ -1041,8 +1080,11 @@ local function translate(input, seg, env)
     local jpymd, jp_y = jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))
     yield_c( string.gsub(jpymd, "([^%d])0", "%1").." "..os.date("%H:%M"), "〔日本元号〕", preedittext)
     yield_c( fullshape_number(string.gsub(jpymd, "([^%d])0", "%1")).." "..os.date("%H:%M"), "〔日本元号〕", preedittext)
-    yield_c( jpymd.." "..os.date("%H:%M"), "〔日本元号〕", preedittext)
-    yield_c( fullshape_number(jpymd.." "..os.date("%H:%M")), "〔日本元号〕", preedittext)
+    local check_number_format = string.match(os.date("%m"), "^0") or string.match(os.date("%d"), "^0")
+    if check_number_format then
+      yield_c( jpymd.." "..os.date("%H:%M"), "〔日本元号〕", preedittext)
+      yield_c( fullshape_number(jpymd.." "..os.date("%H:%M")), "〔日本元号〕", preedittext)
+    end
     return
   end
   -- if (input == env.prefix .. "fnj") then
@@ -1055,9 +1097,12 @@ local function translate(input, seg, env)
     yield_c( string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日 "..os.date("%H點%M分"), "([^%d])0", "%1"), "〔民國〕", preedittext)
     yield_c( string.gsub("民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日 "..os.date("%H 點 %M 分"), "([^%d])0", "%1"), "〔民國*〕", preedittext)
     yield_c( "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(string.gsub(os.date("%m月%d日%H點%M分"), "0([%d])", "%1")), "〔民國〕", preedittext)
-    yield_c( "民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日"..os.date("%H點%M分"), "〔民國〕", preedittext)
-    yield_c( "民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日 "..os.date("%H 點 %M 分"), "〔民國*〕", preedittext)
-    yield_c( "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日"..fullshape_number(os.date("%H點%M分")), "〔民國〕", preedittext)
+    local check_number_format = string.match(os.date("%m"), "^0") or string.match(os.date("%d"), "^0") or string.match(os.date("%H"), "^0") or string.match(os.date("%M"), "^0")
+    if check_number_format then
+      yield_c( "民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日"..os.date("%H點%M分"), "〔民國〕", preedittext)
+      yield_c( "民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日 "..os.date("%H 點 %M 分"), "〔民國*〕", preedittext)
+      yield_c( "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日"..fullshape_number(os.date("%H點%M分")), "〔民國〕", preedittext)
+    end
     return
   end
 
@@ -1086,9 +1131,12 @@ local function translate(input, seg, env)
     yield_c( string.gsub(os.date("%Y年%m月%d日 %H點%M分"), "([^%d])0", "%1"), "〔日期〕", preedittext)
     yield_c( string.gsub(os.date(" %Y 年 %m 月 %d 日 %H 點 %M 分 "), "([^%d])0", "%1"), "〔*日期*〕", preedittext)
     yield_c( fullshape_number(string.gsub(os.date("%Y年%m月%d日　%H點%M分"), "([^%d])0", "%1")), "〔日期〕", preedittext)
-    yield_c( os.date("%Y年%m月%d日 %H點%M分"), "〔日期〕", preedittext)
-    yield_c( os.date(" %Y 年 %m 月 %d 日 %H 點 %M 分 "), "〔*日期*〕", preedittext)
-    yield_c( fullshape_number(os.date("%Y")).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日　"..fullshape_number(os.date("%H")).."點"..fullshape_number(os.date("%M")).."分", "〔日期〕", preedittext)
+    local check_number_format = string.match(os.date("%m"), "^0") or string.match(os.date("%d"), "^0") or string.match(os.date("%H"), "^0") or string.match(os.date("%M"), "^0")
+    if check_number_format then
+      yield_c( os.date("%Y年%m月%d日 %H點%M分"), "〔日期〕", preedittext)
+      yield_c( os.date(" %Y 年 %m 月 %d 日 %H 點 %M 分 "), "〔*日期*〕", preedittext)
+      yield_c( fullshape_number(os.date("%Y")).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日　"..fullshape_number(os.date("%H")).."點"..fullshape_number(os.date("%M")).."分", "〔日期〕", preedittext)
+    end
     return
   end
 
@@ -1190,8 +1238,11 @@ local function translate(input, seg, env)
     local jpymd, jp_y = jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))
     yield_c( string.gsub(jpymd, "([^%d])0", "%1").." "..os.date("%H:%M:%S"), "〔日本元号〕", preedittext)
     yield_c( fullshape_number(string.gsub(jpymd, "([^%d])0", "%1")).." "..os.date("%H:%M:%S"), "〔日本元号〕", preedittext)
-    yield_c( jpymd.." "..os.date("%H:%M:%S"), "〔日本元号〕", preedittext)
-    yield_c( fullshape_number(jpymd.." "..os.date("%H:%M:%S")), "〔日本元号〕", preedittext)
+    local check_number_format = string.match(os.date("%m"), "^0") or string.match(os.date("%d"), "^0")
+    if check_number_format then
+      yield_c( jpymd.." "..os.date("%H:%M:%S"), "〔日本元号〕", preedittext)
+      yield_c( fullshape_number(jpymd.." "..os.date("%H:%M:%S")), "〔日本元号〕", preedittext)
+    end
     return
   end
   -- if (input == env.prefix .. "ftj") then
@@ -1204,9 +1255,12 @@ local function translate(input, seg, env)
     yield_c( string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日 "..os.date("%H點%M分%S秒"), "([^%d])0", "%1"), "〔民國〕", preedittext)
     yield_c( string.gsub("民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日 "..os.date("%H 點 %M 分 %S 秒"), "([^%d])0", "%1"), "〔民國*〕", preedittext)
     yield_c( "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(string.gsub(os.date("%m月%d日%H點%M分%S秒"), "0([%d])", "%1")), "〔民國〕", preedittext)
-    yield_c( "民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日"..os.date("%H點%M分%S秒"), "〔民國〕", preedittext)
-    yield_c( "民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日 "..os.date("%H 點 %M 分 %S 秒"), "〔民國*〕", preedittext)
-    yield_c( "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日"..fullshape_number(os.date("%H點%M分%S秒")), "〔民國〕", preedittext)
+    local check_number_format = string.match(os.date("%m"), "^0") or string.match(os.date("%d"), "^0") or string.match(os.date("%H"), "^0") or string.match(os.date("%M"), "^0") or string.match(os.date("%S"), "^0")
+    if check_number_format then
+      yield_c( "民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日"..os.date("%H點%M分%S秒"), "〔民國〕", preedittext)
+      yield_c( "民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日 "..os.date("%H 點 %M 分 %S 秒"), "〔民國*〕", preedittext)
+      yield_c( "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日"..fullshape_number(os.date("%H點%M分%S秒")), "〔民國〕", preedittext)
+    end
     return
   end
 
@@ -1223,9 +1277,12 @@ local function translate(input, seg, env)
     yield_c( string.gsub(os.date("%Y年%m月%d日 %H點%M分%S秒"), "([^%d])0", "%1"), "〔日期〕", preedittext)
     yield_c( string.gsub(os.date(" %Y 年 %m 月 %d 日 %H 點 %M 分 %S 秒 "), "([^%d])0", "%1"), "〔*日期*〕", preedittext)
     yield_c( fullshape_number(string.gsub(os.date("%Y年%m月%d日　%H點%M分%S秒"), "([^%d])0", "%1")), "〔日期〕", preedittext)
-    yield_c( os.date("%Y年%m月%d日 %H點%M分%S秒"), "〔日期〕", preedittext)
-    yield_c( os.date(" %Y 年 %m 月 %d 日 %H 點 %M 分 %S 秒 "), "〔*日期*〕", preedittext)
-    yield_c( fullshape_number(os.date("%Y")).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日　"..fullshape_number(os.date("%H")).."點"..fullshape_number(os.date("%M")).."分"..fullshape_number(os.date("%S")).."秒", "〔日期〕", preedittext)
+    local check_number_format = string.match(os.date("%m"), "^0") or string.match(os.date("%d"), "^0") or string.match(os.date("%H"), "^0") or string.match(os.date("%M"), "^0") or string.match(os.date("%S"), "^0")
+    if check_number_format then
+      yield_c( os.date("%Y年%m月%d日 %H點%M分%S秒"), "〔日期〕", preedittext)
+      yield_c( os.date(" %Y 年 %m 月 %d 日 %H 點 %M 分 %S 秒 "), "〔*日期*〕", preedittext)
+      yield_c( fullshape_number(os.date("%Y")).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日　"..fullshape_number(os.date("%H")).."點"..fullshape_number(os.date("%M")).."分"..fullshape_number(os.date("%S")).."秒", "〔日期〕", preedittext)
+    end
     return
   end
 
@@ -1409,9 +1466,12 @@ local function translate(input, seg, env)
     yield_c( string.gsub(os.date("%m月"), "^0", ""), "〔日期〕", preedittext)
     yield_c( string.gsub(os.date(" %m 月"), "([ ])0", "%1"), "〔*日期〕", preedittext)
     yield_c( fullshape_number(string.gsub(os.date("%m月"), "^0", "")), "〔日期〕", preedittext)
-    yield_c( os.date("%m月"), "〔日期〕", preedittext)
-    yield_c( os.date(" %m 月"), "〔*日期〕", preedittext)
-    yield_c( fullshape_number(os.date("%m")).."月", "〔日期〕", preedittext)
+    local check_number_format = string.match(os.date("%m"), "^0")
+    if check_number_format then
+      yield_c( os.date("%m月"), "〔日期〕", preedittext)
+      yield_c( os.date(" %m 月"), "〔*日期〕", preedittext)
+      yield_c( fullshape_number(os.date("%m")).."月", "〔日期〕", preedittext)
+    end
     return
   end
 
@@ -1484,9 +1544,12 @@ local function translate(input, seg, env)
     yield_c( string.gsub(os.date("%d日"), "^0", ""), "〔日期〕", preedittext)
     yield_c( string.gsub(os.date(" %d 日"), "([ ])0", "%1"), "〔*日期〕", preedittext)
     yield_c( fullshape_number(string.gsub(os.date("%d日"), "^0", "")), "〔日期〕", preedittext)
-    yield_c( os.date("%d日"), "〔日期〕", preedittext)
-    yield_c( os.date(" %d 日"), "〔*日期〕", preedittext)
-    yield_c( fullshape_number(os.date("%d")).."日", "〔日期〕", preedittext)
+    local check_number_format = string.match(os.date("%d"), "^0")
+    if check_number_format then
+      yield_c( os.date("%d日"), "〔日期〕", preedittext)
+      yield_c( os.date(" %d 日"), "〔*日期〕", preedittext)
+      yield_c( fullshape_number(os.date("%d")).."日", "〔日期〕", preedittext)
+    end
     return
   end
 
@@ -1563,9 +1626,12 @@ local function translate(input, seg, env)
     yield_c( string.gsub(os.date("%m月%d日"), "0([%d])", "%1"), "〔日期〕", preedittext)
     yield_c( string.gsub(os.date(" %m 月 %d 日 "), "([ ])0", "%1"), "〔*日期*〕", preedittext)
     yield_c( fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")), "〔日期〕", preedittext)
-    yield_c( os.date("%m月%d日"), "〔日期〕", preedittext)
-    yield_c( os.date(" %m 月 %d 日 "), "〔*日期*〕", preedittext)
-    yield_c( fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日", "〔日期〕", preedittext)
+    local check_number_format = string.match(os.date("%m"), "^0") or string.match(os.date("%d"), "^0")
+    if check_number_format then
+      yield_c( os.date("%m月%d日"), "〔日期〕", preedittext)
+      yield_c( os.date(" %m 月 %d 日 "), "〔*日期*〕", preedittext)
+      yield_c( fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日", "〔日期〕", preedittext)
+    end
     return
   end
 
@@ -1679,15 +1745,18 @@ local function translate(input, seg, env)
     yield_c( fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).." ".."星期"..weekstyle()[1].." ", "〔日期〕", preedittext)
     yield_c( fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).." (".."星期"..weekstyle()[1]..") ", "〔日期〕", preedittext)
     yield_c( fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).."（".."星期"..weekstyle()[1].."）", "〔日期〕", preedittext)
-    yield_c( os.date("%m月%d日").." ".."星期"..weekstyle()[1].." ", "〔日期〕", preedittext)
-    yield_c( os.date("%m月%d日").." (".."星期"..weekstyle()[1]..") ", "〔日期〕", preedittext)
-    yield_c( os.date("%m月%d日").."（".."星期"..weekstyle()[1].."）", "〔日期〕", preedittext)
-    yield_c( os.date(" %m 月 %d 日").." ".."星期"..weekstyle()[1].." ", "〔*日期*〕", preedittext)
-    yield_c( os.date(" %m 月 %d 日").." (".."星期"..weekstyle()[1]..") ", "〔*日期*〕", preedittext)
-    yield_c( os.date(" %m 月 %d 日").."（".."星期"..weekstyle()[1].."）", "〔*日期*〕", preedittext)
-    yield_c( fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日".." ".."星期"..weekstyle()[1].." ", "〔日期〕", preedittext)
-    yield_c( fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日".." (".."星期"..weekstyle()[1]..") ", "〔日期〕", preedittext)
-    yield_c( fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日".."（".."星期"..weekstyle()[1].."）", "〔日期〕", preedittext)
+    local check_number_format = string.match(os.date("%m"), "^0") or string.match(os.date("%d"), "^0")
+    if check_number_format then
+      yield_c( os.date("%m月%d日").." ".."星期"..weekstyle()[1].." ", "〔日期〕", preedittext)
+      yield_c( os.date("%m月%d日").." (".."星期"..weekstyle()[1]..") ", "〔日期〕", preedittext)
+      yield_c( os.date("%m月%d日").."（".."星期"..weekstyle()[1].."）", "〔日期〕", preedittext)
+      yield_c( os.date(" %m 月 %d 日").." ".."星期"..weekstyle()[1].." ", "〔*日期*〕", preedittext)
+      yield_c( os.date(" %m 月 %d 日").." (".."星期"..weekstyle()[1]..") ", "〔*日期*〕", preedittext)
+      yield_c( os.date(" %m 月 %d 日").."（".."星期"..weekstyle()[1].."）", "〔*日期*〕", preedittext)
+      yield_c( fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日".." ".."星期"..weekstyle()[1].." ", "〔日期〕", preedittext)
+      yield_c( fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日".." (".."星期"..weekstyle()[1]..") ", "〔日期〕", preedittext)
+      yield_c( fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日".."（".."星期"..weekstyle()[1].."）", "〔日期〕", preedittext)
+    end
     return
   end
 
@@ -1702,14 +1771,17 @@ local function translate(input, seg, env)
     yield_c( fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).." "..weekstyle()[5].."曜日 ", "〔日本格式〕", preedittext)
     yield_c( fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).."("..weekstyle()[5].."曜日)", "〔日本格式〕", preedittext)
     yield_c( fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).."（"..weekstyle()[5].."曜日）", "〔日本格式〕", preedittext)
-    yield_c( os.date("%m月%d日")..weekstyle()[3], "〔日本格式〕", preedittext)
-    yield_c( os.date("%m月%d日").." "..weekstyle()[5].."曜日 ", "〔日本格式〕", preedittext)
-    yield_c( os.date("%m月%d日").."("..weekstyle()[5].."曜日)", "〔日本格式〕", preedittext)
-    yield_c( os.date("%m月%d日").."（"..weekstyle()[5].."曜日）", "〔日本格式〕", preedittext)
-    yield_c( fullshape_number(os.date("%m月%d日")..weekstyle()[3]), "〔日本格式〕", preedittext)
-    yield_c( fullshape_number(os.date("%m月%d日").." "..weekstyle()[5].."曜日 "), "〔日本格式〕", preedittext)
-    yield_c( fullshape_number(os.date("%m月%d日").."("..weekstyle()[5].."曜日)"), "〔日本格式〕", preedittext)
-    yield_c( fullshape_number(os.date("%m月%d日").."（"..weekstyle()[5].."曜日）"), "〔日本格式〕", preedittext)
+    local check_number_format = string.match(os.date("%m"), "^0") or string.match(os.date("%d"), "^0")
+    if check_number_format then
+      yield_c( os.date("%m月%d日")..weekstyle()[3], "〔日本格式〕", preedittext)
+      yield_c( os.date("%m月%d日").." "..weekstyle()[5].."曜日 ", "〔日本格式〕", preedittext)
+      yield_c( os.date("%m月%d日").."("..weekstyle()[5].."曜日)", "〔日本格式〕", preedittext)
+      yield_c( os.date("%m月%d日").."（"..weekstyle()[5].."曜日）", "〔日本格式〕", preedittext)
+      yield_c( fullshape_number(os.date("%m月%d日")..weekstyle()[3]), "〔日本格式〕", preedittext)
+      yield_c( fullshape_number(os.date("%m月%d日").." "..weekstyle()[5].."曜日 "), "〔日本格式〕", preedittext)
+      yield_c( fullshape_number(os.date("%m月%d日").."("..weekstyle()[5].."曜日)"), "〔日本格式〕", preedittext)
+      yield_c( fullshape_number(os.date("%m月%d日").."（"..weekstyle()[5].."曜日）"), "〔日本格式〕", preedittext)
+    end
     return
   end
 
@@ -1750,8 +1822,11 @@ local function translate(input, seg, env)
     local jpymd, jp_y = jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))
     yield_c( jp_y..string.gsub(os.date("%m").."月", "([^%d])0", "%1"), "〔日本元号〕", preedittext)
     yield_c( fullshape_number(jp_y..string.gsub(os.date("%m").."月", "([^%d])0", "%1")), "〔日本元号〕", preedittext)
-    yield_c( jp_y..os.date("%m").."月", "〔日本元号〕", preedittext)
-    yield_c( fullshape_number(jp_y..os.date("%m").."月"), "〔日本元号〕", preedittext)
+    local check_number_format = string.match(os.date("%m"), "^0")
+    if check_number_format then
+      yield_c( jp_y..os.date("%m").."月", "〔日本元号〕", preedittext)
+      yield_c( fullshape_number(jp_y..os.date("%m").."月"), "〔日本元号〕", preedittext)
+    end
     return
   end
   -- if (input == env.prefix .. "ymj") then
@@ -1764,9 +1839,12 @@ local function translate(input, seg, env)
     yield_c( string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月", "([^%d])0", "%1"), "〔民國〕", preedittext)
     yield_c( string.gsub("民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月", "([^%d])0", "%1"), "〔民國*〕", preedittext)
     yield_c( "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(string.gsub(os.date("%m"), "0([%d])", "%1")).."月", "〔民國〕", preedittext)
-    yield_c( "民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月", "〔民國〕", preedittext)
-    yield_c( "民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月", "〔民國*〕", preedittext)
-    yield_c( "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(os.date("%m")).."月", "〔民國〕", preedittext)
+    local check_number_format = string.match(os.date("%m"), "^0")
+    if check_number_format then
+      yield_c( "民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月", "〔民國〕", preedittext)
+      yield_c( "民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月", "〔民國*〕", preedittext)
+      yield_c( "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(os.date("%m")).."月", "〔民國〕", preedittext)
+    end
     return
   end
 
@@ -1809,9 +1887,12 @@ local function translate(input, seg, env)
     yield_c( string.gsub(os.date("%Y年%m月"), "([^%d])0", "%1"), "〔日期〕", preedittext)
     yield_c( string.gsub(os.date(" %Y 年 %m 月 "), "([^%d])0", "%1"), "〔*日期*〕", preedittext)
     yield_c( fullshape_number(string.gsub(os.date("%Y年%m月"), "([^%d])0", "%1")), "〔日期〕", preedittext)
-    yield_c( os.date("%Y年%m月"), "〔日期〕", preedittext)
-    yield_c( os.date(" %Y 年 %m 月 "), "〔*日期*〕", preedittext)
-    yield_c( fullshape_number(os.date("%Y")).."年"..fullshape_number(os.date("%m")).."月", "〔日期〕", preedittext)
+    local check_number_format = string.match(os.date("%m"), "^0")
+    if check_number_format then
+      yield_c( os.date("%Y年%m月"), "〔日期〕", preedittext)
+      yield_c( os.date(" %Y 年 %m 月 "), "〔*日期*〕", preedittext)
+      yield_c( fullshape_number(os.date("%Y")).."年"..fullshape_number(os.date("%m")).."月", "〔日期〕", preedittext)
+    end
     return
   end
 
@@ -1956,14 +2037,17 @@ local function translate(input, seg, env)
     yield_c( fullshape_number(string.gsub(jpymd, "([^%d])0", "%1").." "..weekstyle()[5].."曜日 "), "〔日本元号〕", preedittext)
     yield_c( fullshape_number(string.gsub(jpymd, "([^%d])0", "%1").."("..weekstyle()[5].."曜日)"), "〔日本元号〕", preedittext)
     yield_c( fullshape_number(string.gsub(jpymd, "([^%d])0", "%1").."（"..weekstyle()[5].."曜日）"), "〔日本元号〕", preedittext)
-    yield_c( jpymd..weekstyle()[3], "〔日本元号〕", preedittext)
-    yield_c( jpymd.." "..weekstyle()[5].."曜日 ", "〔日本元号〕", preedittext)
-    yield_c( jpymd.."("..weekstyle()[5].."曜日)", "〔日本元号〕", preedittext)
-    yield_c( jpymd.."（"..weekstyle()[5].."曜日）", "〔日本元号〕", preedittext)
-    yield_c( fullshape_number(jpymd..weekstyle()[3]), "〔日本元号〕", preedittext)
-    yield_c( fullshape_number(jpymd.." "..weekstyle()[5].."曜日 "), "〔日本元号〕", preedittext)
-    yield_c( fullshape_number(jpymd.."("..weekstyle()[5].."曜日)"), "〔日本元号〕", preedittext)
-    yield_c( fullshape_number(jpymd.."（"..weekstyle()[5].."曜日）"), "〔日本元号〕", preedittext)
+    local check_number_format = string.match(os.date("%m"), "^0") or string.match(os.date("%d"), "^0")
+    if check_number_format then
+      yield_c( jpymd..weekstyle()[3], "〔日本元号〕", preedittext)
+      yield_c( jpymd.." "..weekstyle()[5].."曜日 ", "〔日本元号〕", preedittext)
+      yield_c( jpymd.."("..weekstyle()[5].."曜日)", "〔日本元号〕", preedittext)
+      yield_c( jpymd.."（"..weekstyle()[5].."曜日）", "〔日本元号〕", preedittext)
+      yield_c( fullshape_number(jpymd..weekstyle()[3]), "〔日本元号〕", preedittext)
+      yield_c( fullshape_number(jpymd.." "..weekstyle()[5].."曜日 "), "〔日本元号〕", preedittext)
+      yield_c( fullshape_number(jpymd.."("..weekstyle()[5].."曜日)"), "〔日本元号〕", preedittext)
+      yield_c( fullshape_number(jpymd.."（"..weekstyle()[5].."曜日）"), "〔日本元号〕", preedittext)
+    end
     return
   end
   -- if (input == env.prefix .. "fwj") then
@@ -1986,15 +2070,18 @@ local function translate(input, seg, env)
     yield_c( "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).." ".."星期"..weekstyle()[1].." ", "〔民國〕", preedittext)
     yield_c( "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).." (".."星期"..weekstyle()[1]..") ", "〔民國〕", preedittext)
     yield_c( "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).."（".."星期"..weekstyle()[1].."）", "〔民國〕", preedittext)
-    yield_c( "民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日".." ".."星期"..weekstyle()[1].." ", "〔民國〕", preedittext)
-    yield_c( "民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日".." (".."星期"..weekstyle()[1]..") ", "〔民國〕", preedittext)
-    yield_c( "民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日".."（".."星期"..weekstyle()[1].."）", "〔民國〕", preedittext)
-    yield_c( "民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日".." ".."星期"..weekstyle()[1].." ", "〔民國*〕", preedittext)
-    yield_c( "民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日".." (".."星期"..weekstyle()[1]..") ", "〔民國*〕", preedittext)
-    yield_c( "民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日".."（".."星期"..weekstyle()[1].."）", "〔民國*〕", preedittext)
-    yield_c( "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日".." ".."星期"..weekstyle()[1].." ", "〔民國〕", preedittext)
-    yield_c( "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日".." (".."星期"..weekstyle()[1]..") ", "〔民國〕", preedittext)
-    yield_c( "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日".."（".."星期"..weekstyle()[1].."）", "〔民國〕", preedittext)
+    local check_number_format = string.match(os.date("%m"), "^0") or string.match(os.date("%d"), "^0")
+    if check_number_format then
+      yield_c( "民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日".." ".."星期"..weekstyle()[1].." ", "〔民國〕", preedittext)
+      yield_c( "民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日".." (".."星期"..weekstyle()[1]..") ", "〔民國〕", preedittext)
+      yield_c( "民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日".."（".."星期"..weekstyle()[1].."）", "〔民國〕", preedittext)
+      yield_c( "民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日".." ".."星期"..weekstyle()[1].." ", "〔民國*〕", preedittext)
+      yield_c( "民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日".." (".."星期"..weekstyle()[1]..") ", "〔民國*〕", preedittext)
+      yield_c( "民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日".."（".."星期"..weekstyle()[1].."）", "〔民國*〕", preedittext)
+      yield_c( "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日".." ".."星期"..weekstyle()[1].." ", "〔民國〕", preedittext)
+      yield_c( "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日".." (".."星期"..weekstyle()[1]..") ", "〔民國〕", preedittext)
+      yield_c( "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日".."（".."星期"..weekstyle()[1].."）", "〔民國〕", preedittext)
+    end
     return
   end
 
@@ -2059,15 +2146,18 @@ local function translate(input, seg, env)
     yield_c( fullshape_number(string.gsub(os.date("%Y年%m月%d日"), "([^%d])0", "%1")).." ".."星期"..weekstyle()[1].." ", "〔日期〕", preedittext)
     yield_c( fullshape_number(string.gsub(os.date("%Y年%m月%d日"), "([^%d])0", "%1")).." (".."星期"..weekstyle()[1]..") ", "〔日期〕", preedittext)
     yield_c( fullshape_number(string.gsub(os.date("%Y年%m月%d日"), "([^%d])0", "%1")).."（".."星期"..weekstyle()[1].."）", "〔日期〕", preedittext)
-    yield_c( os.date("%Y年%m月%d日").." ".."星期"..weekstyle()[1].." ", "〔日期〕", preedittext)
-    yield_c( os.date("%Y年%m月%d日").." (".."星期"..weekstyle()[1]..") ", "〔日期〕", preedittext)
-    yield_c( os.date("%Y年%m月%d日").."（".."星期"..weekstyle()[1].."）", "〔日期〕", preedittext)
-    yield_c( os.date(" %Y 年 %m 月 %d 日").." ".."星期"..weekstyle()[1].." ", "〔*日期*〕", preedittext)
-    yield_c( os.date(" %Y 年 %m 月 %d 日").." (".."星期"..weekstyle()[1]..") ", "〔*日期*〕", preedittext)
-    yield_c( os.date(" %Y 年 %m 月 %d 日").."（".."星期"..weekstyle()[1].."）", "〔*日期*〕", preedittext)
-    yield_c( fullshape_number(os.date("%Y")).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日".." ".."星期"..weekstyle()[1].." ", "〔日期〕", preedittext)
-    yield_c( fullshape_number(os.date("%Y")).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日".." (".."星期"..weekstyle()[1]..") ", "〔日期〕", preedittext)
-    yield_c( fullshape_number(os.date("%Y")).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日".."（".."星期"..weekstyle()[1].."）", "〔日期〕", preedittext)
+    local check_number_format = string.match(os.date("%m"), "^0") or string.match(os.date("%d"), "^0")
+    if check_number_format then
+      yield_c( os.date("%Y年%m月%d日").." ".."星期"..weekstyle()[1].." ", "〔日期〕", preedittext)
+      yield_c( os.date("%Y年%m月%d日").." (".."星期"..weekstyle()[1]..") ", "〔日期〕", preedittext)
+      yield_c( os.date("%Y年%m月%d日").."（".."星期"..weekstyle()[1].."）", "〔日期〕", preedittext)
+      yield_c( os.date(" %Y 年 %m 月 %d 日").." ".."星期"..weekstyle()[1].." ", "〔*日期*〕", preedittext)
+      yield_c( os.date(" %Y 年 %m 月 %d 日").." (".."星期"..weekstyle()[1]..") ", "〔*日期*〕", preedittext)
+      yield_c( os.date(" %Y 年 %m 月 %d 日").."（".."星期"..weekstyle()[1].."）", "〔*日期*〕", preedittext)
+      yield_c( fullshape_number(os.date("%Y")).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日".." ".."星期"..weekstyle()[1].." ", "〔日期〕", preedittext)
+      yield_c( fullshape_number(os.date("%Y")).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日".." (".."星期"..weekstyle()[1]..") ", "〔日期〕", preedittext)
+      yield_c( fullshape_number(os.date("%Y")).."年"..fullshape_number(os.date("%m")).."月"..fullshape_number(os.date("%d")).."日".."（".."星期"..weekstyle()[1].."）", "〔日期〕", preedittext)
+    end
     return
   end
 
