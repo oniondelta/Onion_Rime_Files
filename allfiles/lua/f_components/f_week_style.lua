@@ -5,7 +5,7 @@ local function weekstyle()
   local l_w = { "日", "一", "二", "三", "四", "五", "六" }
   local l_w_c = { "日", "壹", "貳", "參", "肆", "伍", "陸" }
   local l_w_jp1 = { "㈰", "㈪", "㈫", "㈬", "㈭", "㈮", "㈯" }
-  local l_w_jp2 = { "㈰", "㈪", "㈫", "㈬", "㈭", "㈮", "㊏" }
+  local l_w_jp2 = { "㊐", "㊊", "㊋", "㊌", "㊍", "㊎", "㊏" }
   local l_w_jp3 = { "日", "月", "火", "水", "木", "金", "土" }
   local l_w_eng1 = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" }
   local l_w_eng2 = { "Sun.", "Mon.", "Tues.", "Wed.", "Thur.", "Fri.", "Sat." }
