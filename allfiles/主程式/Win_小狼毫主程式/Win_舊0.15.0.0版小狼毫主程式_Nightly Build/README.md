@@ -6,7 +6,7 @@
 
 ### Version Info
 
-- Github Releases：[c7bd093 Nightly Build](https://github.com/rime/weasel/releases/tag/latest)
+- Github Releases：c7bd093 Nightly Build (連結失效)
 
 - Weasel 0.15.0
 
