@@ -6,7 +6,7 @@
 
 ### Version Info
 
-- Github Releases：[b110a83](https://github.com/rime/squirrel/releases/tag/latest)
+- Github Releases：[b110a83 Nightly build](https://github.com/rime/squirrel/releases/tag/latest)
 
 - Squirrel 1.0.2_Nightly_build
 
