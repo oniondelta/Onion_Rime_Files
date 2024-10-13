@@ -1,4 +1,4 @@
-# Mac_鼠鬚管主程式
+# Mac_新1.0.2版鼠鬚管主程式_Nightly Build
 
 ### Source File
 
