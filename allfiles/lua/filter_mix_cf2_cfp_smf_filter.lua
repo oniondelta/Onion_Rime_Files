@@ -60,9 +60,10 @@ local change_comment = require("filter_cand/change_comment")
 
 ----------------
 -- local M={}
-local function init(input,env)
+local function init(env)
 -- function M.init(env)
   env.ocmdb = ReverseDb("build/symbols-mark.reverse.bin")
+  -- env.ocmdb = ReverseLookup("symbols-mark")  -- 較新函數，較省記憶體？
 end
 
 -- function M.fini(env)
