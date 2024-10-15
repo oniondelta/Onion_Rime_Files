@@ -46,6 +46,7 @@ local function init(env)
   --   ["Decimal"] = ".",
   --  }
   -- env.set_char_bpmf = Set {"ㄅ", "ㄆ", "ㄇ", "ㄈ", "ㄉ", "ㄊ", "ㄋ", "ㄌ", "ㄍ", "ㄎ", "ㄏ", "ㄐ", "ㄑ", "ㄒ", "ㄓ", "ㄔ", "ㄕ", "ㄖ", "ㄗ", "ㄘ", "ㄙ", "ㄧ", "ㄨ", "ㄩ", "ㄚ", "ㄛ", "ㄜ", "ㄝ", "ㄞ", "ㄟ", "ㄠ", "ㄡ", "ㄢ", "ㄣ", "ㄤ", "ㄥ", "ㄦ", "ˉ", "ˊ", "ˇ", "ˋ", "˙", "ㄪ", "ㄫ", "ㄫ", "ㄬ", "ㄭ", "ㄮ", "ㄮ", "ㄯ", "ㄯ", "ㆠ", "ㆡ", "ㆢ", "ㆣ", "ㆤ", "ㆥ", "ㆦ", "ㆧ", "ㆨ", "ㆩ", "ㆪ", "ㆫ", "ㆬ", "ㆭ", "ㆭ", "ㆮ", "ㆯ", "ㆰ", "ㆰ", "ㆱ", "ㆱ", "ㆲ", "ㆲ", "ㆳ", "ㆴ", "ㆵ", "ㆶ", "ㆷ", "ㆸ", "ㆹ", "ㆺ"}
+  env.n = 0  -- wsymbols計數用
 end
 
 local kp_pattern = {
@@ -66,6 +67,13 @@ local kp_pattern = {
   ["Decimal"] = ".",
  }
 
+local k4_pattern = {
+  ["comma"] = ",",
+  ["period"] = ".",
+  ["slash"] = "/",
+  ["semicolon"] = ";",
+ }
+
 -- local set_char_bpmf = Set {"ㄅ", "ㄆ", "ㄇ", "ㄈ", "ㄉ", "ㄊ", "ㄋ", "ㄌ", "ㄍ", "ㄎ", "ㄏ", "ㄐ", "ㄑ", "ㄒ", "ㄓ", "ㄔ", "ㄕ", "ㄖ", "ㄗ", "ㄘ", "ㄙ", "ㄧ", "ㄨ", "ㄩ", "ㄚ", "ㄛ", "ㄜ", "ㄝ", "ㄞ", "ㄟ", "ㄠ", "ㄡ", "ㄢ", "ㄣ", "ㄤ", "ㄥ", "ㄦ", "ˉ", "ˊ", "ˇ", "ˋ", "˙", "ㄪ", "ㄫ", "ㄫ", "ㄬ", "ㄭ", "ㄮ", "ㄮ", "ㄯ", "ㄯ", "ㆠ", "ㆡ", "ㆢ", "ㆣ", "ㆤ", "ㆥ", "ㆦ", "ㆧ", "ㆨ", "ㆩ", "ㆪ", "ㆫ", "ㆬ", "ㆭ", "ㆭ", "ㆮ", "ㆯ", "ㆰ", "ㆰ", "ㆱ", "ㆱ", "ㆲ", "ㆲ", "ㆳ", "ㆴ", "ㆵ", "ㆶ", "ㆷ", "ㆸ", "ㆹ", "ㆺ"}
 
 -- local function array30up_mix(key, env)
@@ -82,9 +90,15 @@ local function processor(key, env)
   local o_ascii_mode = context:get_option("ascii_mode")
   local a_s_wp = context:get_option("array30_space_wp")
   local a_r_abc = context:get_option("array30_return_abc")
+  local s_up = context:get_option("1_2_straight_up")
   local key_num = key:repr():match("KP_([0-9])") or key:repr():match("Control%+([0-9])")
 
-  local check_i1 = string.match(c_input, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")
+  -- local key_abc = key:repr():match("^([%l])$") or k4_pattern[key:repr()]
+  -- local check_word_space = string.match(c_input, "^[a-z.,/;][a-z.,/;]? $")
+  local check_word_space = string.match(c_input, "[a-z.,/;] $")  -- 符號w[0-9]後才可作用
+
+  -- local check_i1 = string.match(c_input, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")
+  local check_i1 = string.match(c_input, "[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")  -- 符號w[0-9]後才可作用
   local check_i2 = string.match(c_input, "^==[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")
   -- local check_i3 = string.match(c_input, "`.+$")
   -- local check_i4 = string.match(c_input, "^[a-z][-_.0-9a-z]*@.*$")
@@ -178,8 +192,26 @@ local function processor(key, env)
 
 -----------------------------------------------------------------------------
 
-  --- pass not space Return KP_Enter key_num
+  --- 香草模式下空格後接字碼，不會變成全部英文，而是前面直接上屏中文，後面續輸入。
+  elseif not s_up and check_word_space and ( key:repr():match("^[%l]$") or k4_pattern[key:repr()] ) then
+    if (seg:has_tag("abc") or seg:has_tag("reverse3_lookup")) then
+      local k_r = k4_pattern[key:repr()] or key:repr()
+      engine:commit_text(g_c_t)
+      context.input = k_r
+      return 1
+    else
+      return 2
+    end
+  -- elseif not s_up and seg:has_tag("abc") and check_word_space and key_abc then
+  --   engine:commit_text(g_c_t)
+  --   context.input = key_abc
+  --   return 1
+
+-----------------------------------------------------------------------------
+
+  --- pass not space Return KP_Enter key_num ( Shift+space ?)
   elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" and not key_num then
+  -- elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" and key:repr() ~= "Shift+space" and not key_num then
     return 2
 
 -----------------------------------------------------------------------------
@@ -290,9 +322,24 @@ KeyEvent 函數在舊版 librime-lua 中不支持。
 
   elseif seg:has_tag("wsymbols") then
     if a_s_wp then
+      -- if key:repr() == "space" or key:repr() == "Shift+space" then
       if key:repr() == "space" then
-        engine:process_key(KeyEvent("Page_Down"))
-        return 1 -- kAccepted
+        --- 以下可循環翻頁！
+        local loaded_candidate_count = seg.menu:candidate_count()    -- 獲得（已加載）候選詞數量
+        -- local page_n = 10 * (seg.selected_index // 10)    -- 先確定在第幾頁，「//」為整除運算符。
+        -- engine:commit_text(loaded_candidate_count)  -- 測試用
+        if env.n == loaded_candidate_count and env.n > 10 then
+          context:refresh_non_confirmed_composition()
+          return 1 -- kAccepted
+        else
+          env.n = loaded_candidate_count
+          engine:process_key(KeyEvent("Page_Down"))
+          return 1 -- kAccepted
+        end
+      -- elseif key:repr() == "Shift+space" then
+      --   env.n = 0
+      --   engine:process_key(KeyEvent("Page_Up"))
+      --   return 1 -- kAccepted
       --- 修正 w[0-9] 空白鍵 設翻頁時，無上屏鍵問題。
       --- 搭配前面「空白鍵同某些行列 30 一樣為翻頁」，並且用 custom 檔設「return 上屏候選字」，校正 Return 能上屏候選項！
       elseif key:repr() == "Return" or key:repr() == "KP_Enter" then

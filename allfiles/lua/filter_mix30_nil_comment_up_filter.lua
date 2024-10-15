@@ -54,29 +54,47 @@ local function filter(inp, env)
   local check_wu = string.match(c_input, "^sf $" )
   local check_ji = string.match(c_input, "^lb $" )
   local check_kong = string.match(c_input, "^ou $" )
-  local check_www = string.match(c_input, "^www[.]" )  -- 直接判別 comment 即可
+  -- local check_www = string.match(c_input, "^www[.]" )  -- 直接判別 comment 即可
 
   for cand in inp:iter() do
 
-    if #c_input<3 then
-      if string.match(cand.text, "^⎔%d$" ) then
-        yield(change_preedit(array30_nil_cand, cand.preedit))
+    if string.match(cand.text, "^⎔%d$" ) then
+      yield(change_preedit(array30_nil_cand, cand.preedit))
+      goto nil_label
+    -- elseif check_www then
+    elseif #c_input>3 then
+      if cand.comment == "〔URL〕" then
+        yield(cand)
+        -- yield(change_comment(cand,"測試用"))
         goto nil_label
       else
         goto normal_label
       end
-    elseif #c_input>3 then
-      if check_www then
-        if cand.comment == "〔URL〕" then
-          yield(cand)
-          goto nil_label
-        else
-          goto normal_label
-        end
-      else
-        goto normal_label
-      end
+    else
+      goto normal_label
     end
+
+    -- ---- 以下先以輸入字數評判來處理，但在符號 w[0-9] 後接行列30字碼，"^⎔%d$"會無法作用。
+    -- if #c_input<3 then
+    --   if string.match(cand.text, "^⎔%d$" ) then
+    --     yield(change_preedit(array30_nil_cand, cand.preedit))
+    --     goto nil_label
+    --   else
+    --     goto normal_label
+    --   end
+    -- elseif #c_input>3 then
+    --   if check_www then
+    --     if cand.comment == "〔URL〕" then
+    --       yield(cand)
+    --       goto nil_label
+    --     else
+    --       goto normal_label
+    --     end
+    --   else
+    --     goto normal_label
+    --   end
+    -- end
+
     -- if #c_input<3 and string.match(cand.text, "^⎔%d$" ) then
     --   yield(change_preedit(array30_nil_cand, cand.preedit))
     -- -- if string.match(cand.text, "^⎔%d$" ) then
