@@ -94,12 +94,16 @@ local function processor(key, env)
   local key_num = key:repr():match("KP_([0-9])") or key:repr():match("Control%+([0-9])")
 
   -- local key_abc = key:repr():match("^([%l])$") or k4_pattern[key:repr()]
-  -- local check_word_space = string.match(c_input, "^[a-z.,/;][a-z.,/;]? $")
-  local check_word_space = string.match(c_input, "[a-z.,/;] $")  -- 符號w[0-9]後才可作用
+  -- local check_word_point = string.match(c_input, "^[a-z,./;][a-z,./;]? $")
+  -- local check_word_point = string.match(c_input, "[a-z,./;][ ']$") or string.match(c_input, "w%d$")
+  local check_word_point = string.match(c_input, "[ '%d]$")
 
-  -- local check_i1 = string.match(c_input, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")
-  local check_i1 = string.match(c_input, "[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")  -- 符號w[0-9]後才可作用
-  local check_i2 = string.match(c_input, "^==[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")
+  -- local check_i1 = string.match(c_input, "^[a-z,./;][a-z,./;][a-z,./;][a-z,./;]?i?$")
+  local check_i1 = string.match(c_input, "[a-z,./;][a-z,./;][a-z,./;][a-z,./;]?i?$")  -- mf_translator 在前，不用擔心影響到。
+  -- local check_i2 = string.match(c_input, "^==[a-z,./;][a-z,./;][a-z,./;][a-z,./;]?i?$")  -- 因上條目已涵蓋，故遮屏。
+  local check_i_2_reverse_space = string.match(c_input, "^==[a-z,./;][a-z,./;]?$")
+  local check_i_2_phrases_space = string.match(c_input, "^[a-z,./;][a-z,./;]?$")  -- mf_translator 在前，不用擔心影響到。
+
   -- local check_i3 = string.match(c_input, "`.+$")
   -- local check_i4 = string.match(c_input, "^[a-z][-_.0-9a-z]*@.*$")
   -- local check_i5 = string.match(c_input, "^https?:.*$")
@@ -192,9 +196,11 @@ local function processor(key, env)
 
 -----------------------------------------------------------------------------
 
-  --- 香草模式下空格後接字碼，不會變成全部英文，而是前面直接上屏中文，後面續輸入。
-  elseif not s_up and check_word_space and ( key:repr():match("^[%l]$") or k4_pattern[key:repr()] ) then
-    if (seg:has_tag("abc") or seg:has_tag("reverse3_lookup")) then
+  --- 香草模式下碰到[ '%d]後接字碼，不會變成全部英文，而是前面直接上屏中文，後面續輸入。
+  -- elseif not s_up and check_word_point and ( key:repr():match("^[%l]$") or k4_pattern[key:repr()] ) then
+  --- 不管是否為香草模式，碰到[ '%d]後接字碼，前面直接上屏，後面續輸入。
+  elseif check_word_point and ( key:repr():match("^[%l]$") or k4_pattern[key:repr()] ) then
+    if ( seg:has_tag("abc") or seg:has_tag("reverse3_lookup") or seg:has_tag("wsymbols") ) then
       local k_r = k4_pattern[key:repr()] or key:repr()
       engine:commit_text(g_c_t)
       context.input = k_r
@@ -202,7 +208,7 @@ local function processor(key, env)
     else
       return 2
     end
-  -- elseif not s_up and seg:has_tag("abc") and check_word_space and key_abc then
+  -- elseif not s_up and seg:has_tag("abc") and check_word_point and key_abc then
   --   engine:commit_text(g_c_t)
   --   context.input = key_abc
   --   return 1
@@ -282,14 +288,74 @@ local function processor(key, env)
   -- elseif not context:is_composing() then  -- 無法空碼清屏
     return 2
 
-  elseif check_i1 or check_i2 or seg:has_tag("mf_translator") or seg:has_tag("email_url_translator") then
-  -- elseif check_i1 or check_i2 or check_i3 or check_i4 then
-  -- elseif check_i1 or check_i2 or check_i3 or check_i4 or check_i5 or check_i6 or check_i7 or check_i8 then
+  -- elseif check_i1 or check_i2 or seg:has_tag("mf_translator") or seg:has_tag("email_url_translator") then
+  -- -- elseif check_i1 or check_i2 or check_i3 or check_i4 then
+  -- -- elseif check_i1 or check_i2 or check_i3 or check_i4 or check_i5 or check_i6 or check_i7 or check_i8 then
+  --   if key:repr() == "space" then
+  --     -- local g_c_t = context:get_commit_text()
+  --     engine:commit_text(g_c_t)
+  --     context:clear()
+  --     return 1 -- kAccepted
+  --   else
+  --     return 2
+  --   end
+
+  elseif seg:has_tag("mf_translator") or seg:has_tag("email_url_translator") then
     if key:repr() == "space" then
       -- local g_c_t = context:get_commit_text()
       engine:commit_text(g_c_t)
       context:clear()
       return 1 -- kAccepted
+    else
+      return 2
+    end
+
+  --- 行列30反查注音，不能直接上屏。
+  elseif check_i_2_reverse_space then
+    if key:repr() == "space" then
+      context:push_input( " " )
+      return 1
+    else
+      return 2
+    end
+
+  --- 三碼以上，「直上模式」時直上。
+  elseif check_i1 then  -- mf_translator 在前，不用擔心影響到。
+    if key:repr() == "space" then
+      if s_up then
+        -- local g_c_t = context:get_commit_text()
+        engine:commit_text(g_c_t)
+        context:clear()
+        return 1 -- kAccepted
+      -- elseif not s_up then
+      --   local loaded_candidate_count = seg.menu:candidate_count()
+      --   if loaded_candidate_count == 1 then
+      --     engine:commit_text(g_c_t)
+      --     context:clear()
+      --     return 1 -- kAccepted
+      --   else
+      --     return 2
+      --   end
+      else
+        return 2
+      end
+    else
+      return 2
+    end
+
+  --- 二碼以下「詞句」加空格，「直上模式」時忽略。
+  elseif check_i_2_phrases_space then  -- mf_translator 在前，不用擔心影響到。
+    if key:repr() == "space" then
+      if s_up then
+        context:push_input( " " )
+        -- engine:commit_text("test")
+        -- context:refresh_non_confirmed_composition()
+        engine:commit_text(context:get_commit_text())  --不能用 g_c_t
+        context:clear()
+        return 1 -- kAccepted
+      else
+        return 2
+      end
     else
       return 2
     end

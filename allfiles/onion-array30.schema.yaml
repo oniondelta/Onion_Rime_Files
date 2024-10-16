@@ -81,7 +81,7 @@ engine:
     - selector
     - navigator
     - express_editor
-#    - fluency_editor
+    # - fluency_editor
   segmentors:
     - ascii_segmentor
     - matcher
@@ -141,15 +141,21 @@ speller:
   delimiter: "|"
   use_space: true
   auto_select: true
-  auto_select_pattern: '^[a-z,./;]{1,2} $' #'^[wtasfhlxv] $|^[a-z,./;]{2} $' #|[a-z,./;]{3} |[a-z,./;]{4} |[a-z,./;]{4}i ' #三、四、五碼會有非獨碼，故用 Lua 實現空白鍵直上。
+  # auto_select_pattern: '^[a-z,./;]{1,2} $' #'^[wtasfhlxv] $|^[a-z,./;]{2} $' #|[a-z,./;]{3} |[a-z,./;]{4} |[a-z,./;]{4}i ' #三、四、五碼會有非獨碼，故用 Lua 實現空白鍵直上。
+  # auto_select_pattern: '^[a-z,./;]{1,5} $'
+  auto_select_pattern: '^[a-z,./;]{1,4}i? $'
   algebra:
     - xform/@@/ /
     - xform/@/ /
     - xform/ ~/ /
-    - derive|^([a-z,./;]+)'$|$1| #詞庫
     # - derive|^([a-z,./;]{3})$|$1 |
     # - derive|^([a-z,./;]{4})$|$1 |
     # - derive|^([a-z,./;]{4}i)$|$1 |
+    - derive|^([a-z,./;]{3,4}i?)$|$1 |
+    - derive|^([a-z,./;]+)'$|$1| #詞庫 #原設定
+    - derive|^([a-z,./;]+)'$|$1 | #詞庫
+    # - derive|^([a-z,./;]+)'$|$1 '| #詞庫 #會有問題！
+    # - derive|^([a-z,./;]{3,4})'$|$1 | #詞庫
 
     # "?"萬用字元（部署不了!）
     # - derive/^(.).$/$1\?/               # .?
@@ -226,6 +232,9 @@ translator:
     # - xform/\|/  /
   comment_format:
     - 'xform|^.{100}.+||'
+    # - xform| [a-z,./;]{3,5}@||
+    - xform|([a-z,./;]{3,4}i?)|$1◪|  # ▫ ▪ ⚀ ◽︎ 🞕
+    - xform|◪'|'|
     - xform/a/1-/
     - xform/b/5⇣/
     - xform/c/3⇣/
@@ -258,9 +267,9 @@ translator:
     - xform|,|8⇣|
     - xform/^/ /
     - xform/ /    /
-    - xform/@@/▫/
-    - xform/@~/▪/ #該則不要隨意更動，欲動必須改動 Lua 相應程式碼，否則會有 Bug。
-    - xform/@/▫/
+    - xform/@@/▫/  # □
+    - xform/@~/▪/  # ■ #該則不要隨意更動，欲動必須改動 Lua 相應程式碼，否則會有 Bug。
+    - xform/@/▫/  # □
 
 
 array30_reverse_lookup:
@@ -274,7 +283,7 @@ array30_reverse_lookup:
 ##### 掛接行列30符號 #####（可用 symbols 更簡單實現，但沒有開頭提示）
 wsymbols:
   tag: wsymbols
-  dictionary: onion-array30-wsymbols
+  dictionary: onion-array30-wsymbols  # onion-array30-wsymbols_20230211
   # enable_charset_filter: false
   # enable_encoder: false
   # encode_commit_history: false
@@ -410,7 +419,9 @@ key_binder:
     - {accept: Shift+Down, send: Page_Down, when: has_menu} #選字時「Shift」+「下」翻頁。
     - {accept: Shift+Tab, send: Page_Up, when: has_menu} #選字時「Shift」+「tab」翻頁。
     - {accept: Shift+space, send: Page_Down, when: has_menu} #選字時「Shift」+「空白鍵」翻頁。 #send: Right #send: Down
-    - {accept: Tab, send: Page_Down, when: has_menu} #「tab」翻頁。
+    # - {accept: Tab, send: Page_Down, when: has_menu} #「tab」翻頁。
+    # - {accept: Tab, send: Shift+Left, when: paging}
+    - {accept: Tab, send_sequence: "{Shift+Left}{Shift+Left}", when: paging} #回到「空白鍵」非選擇上屏。
 ### 空白鍵 ###
     - {accept: space, send: Escape, when: composing} #空碼清屏用
     - {accept: space, send: space, when: has_menu} #補上一條產生之bug
@@ -478,13 +489,14 @@ key_binder:
     - {accept: Return, send: Escape, when: composing} #空碼清屏用
     - {accept: KP_Enter, send: space, when: has_menu} #有選單時右側小鍵盤 Return/Enter 鍵同空白鍵上屏中文
     - {accept: KP_Enter, send: Escape, when: composing} #空碼清屏用
-    - {accept: Shift+Return, send: Return, when: composing} #上方四個開啟時補充用。
+    # - {accept: Shift+Return, send: Return, when: composing} #上方四個開啟時補充用（改用 editor/bindings 實現）。
 
 
 ##### 按鍵綁定 #####
 editor:
   bindings:
     KP_Space: confirm
+    Shift+Return: commit_raw_input
 
 
 ##### 段落識別器 #####

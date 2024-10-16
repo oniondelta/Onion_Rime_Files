@@ -35,8 +35,9 @@ local function filter(inp, env)
   local _end = context:get_preedit().sel_end
   local array30_nil_cand = Candidate("simp_mix30nil", 0, _end, "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len("⎔")等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
   -- local array30_nil_cand = Candidate("simp_mix30nil", 0, string.len(c_input) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len("⎔")等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
-  local check_ns = string.match(c_input, "^[a-z.,/;][a-z.,/;]?[a-z.,/;']?[a-z.,/;']?[i']?$" )
+  local check_ns = string.match(c_input, "^[a-z,./;][a-z,./;]?[a-z,./;']?[a-z,./;']?[i']?$" )
   local check_s1 = string.match(c_input, "^[a-z,./;][a-z,./;]? $" )
+  local check_word_point = string.match(c_input, "[a-z,./;][ ']$")
   -- local check_s2 = string.match(c_input, "^a[k,] $" )
   -- local check_s3 = string.match(c_input, "^lr $" )
   -- local check_s4 = string.match(c_input, "^ol $" )
@@ -115,7 +116,7 @@ local function filter(inp, env)
       if check_ns then  -- 不含空格
         yield( s_c_f_p_s and change_comment(cand,"") or cand )
       else  -- 最後有空格
-        local cand_filtr = check_s1 and not string.match(cand.comment, "▪" ) and cand or
+        local cand_filtr = check_s1 and not string.match(cand.comment, "▪" ) and cand or  -- "■"
                            -- (check_s2 or check_s3 or check_s4 or check_s5 or check_s6 or check_s7 or check_s8) and cand or
                            check_s2 and cand or
                            check_wu and string.match(cand.text, "毋" ) and cand or
@@ -147,7 +148,12 @@ local function filter(inp, env)
       -- end
 
     elseif not s_up then
-      yield( s_c_f_p_s and change_comment(cand,"") or cand )
+      if check_word_point then
+        local cand = change_preedit(cand, cand.text)
+        yield( s_c_f_p_s and change_comment(cand,"") or cand )
+      else
+        yield( s_c_f_p_s and change_comment(cand,"") or cand )
+      end
     end
 
     ::nil_label::
@@ -174,7 +180,7 @@ local function mix30_nil_comment_up_filter(input, env)
   local c_input = env.engine.context.input  -- 原始未轉換輸入碼
   local _end = env.engine.context:get_preedit().sel_end
   local array30_nil_cand = Candidate("simp_mix30nil", 0, _end, "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
-  local check_ns = string.match(c_input, "^[a-z.,/;][a-z.,/;]?[a-z.,/;']?[a-z.,/;']?[i']?$" )
+  local check_ns = string.match(c_input, "^[a-z,./;][a-z,./;]?[a-z,./;']?[a-z,./;']?[i']?$" )
   local check_s1 = string.match(c_input, "^[a-z,./;][a-z,./;]? $" )
   local check_s2 = string.match(c_input, "^a[k,] $" ) or
                    string.match(c_input, "^lr $" ) or
