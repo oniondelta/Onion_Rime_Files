@@ -37,7 +37,8 @@ local function filter(inp, env)
   -- local array30_nil_cand = Candidate("simp_mix30nil", 0, string.len(c_input) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len("⎔")等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
   local check_ns = string.match(c_input, "^[a-z,./;][a-z,./;]?[a-z,./;']?[a-z,./;']?[i']?$" )
   local check_s1 = string.match(c_input, "^[a-z,./;][a-z,./;]? $" )
-  local check_word_point = string.match(c_input, "[a-z,./;][ ']$")
+  local check_i_end = string.match(c_input, "[ ']$")  -- 已在方案用 tags: [ abc ] 限定，不會影響其他掛載方案。
+  -- local check_i_end = string.match(c_input, "[a-z,./;][ ']$")
   -- local check_s2 = string.match(c_input, "^a[k,] $" )
   -- local check_s3 = string.match(c_input, "^lr $" )
   -- local check_s4 = string.match(c_input, "^ol $" )
@@ -52,18 +53,21 @@ local function filter(inp, env)
                    string.match(c_input, "^%.b $" ) or
                    string.match(c_input, "^/%. $" ) or
                    string.match(c_input, "^pe $" )
-  local check_wu = string.match(c_input, "^sf $" )
-  local check_ji = string.match(c_input, "^lb $" )
-  local check_kong = string.match(c_input, "^ou $" )
-  -- local check_www = string.match(c_input, "^www[.]" )  -- 直接判別 comment 即可
+  -- local check_wu = string.match(c_input, "^sf $" )
+  -- local check_ji = string.match(c_input, "^lb $" )
+  -- local check_kong = string.match(c_input, "^ou $" )
+  local check_wu_ji_kong = string.match(c_input, "^sf $" ) or
+                           string.match(c_input, "^lb $" ) or
+                           string.match(c_input, "^ou $" )
+  local check_www = string.match(c_input, "^www[.]" )  -- 直接判別 comment 即可
 
   for cand in inp:iter() do
 
     if string.match(cand.text, "^⎔%d$" ) then
       yield(change_preedit(array30_nil_cand, cand.preedit))
       goto nil_label
-    -- elseif check_www then
-    elseif #c_input>3 then
+    elseif check_www then
+    -- elseif #c_input>3 then
       if cand.comment == "〔URL〕" then
         yield(cand)
         -- yield(change_comment(cand,"測試用"))
@@ -119,9 +123,10 @@ local function filter(inp, env)
         local cand_filtr = check_s1 and not string.match(cand.comment, "▪" ) and cand or  -- "■"
                            -- (check_s2 or check_s3 or check_s4 or check_s5 or check_s6 or check_s7 or check_s8) and cand or
                            check_s2 and cand or
-                           check_wu and string.match(cand.text, "毋" ) and cand or
-                           check_ji and string.match(cand.text, "及" ) and cand or
-                           check_kong and string.match(cand.text, "○" ) and cand
+                           -- check_wu and string.match(cand.text, "毋" ) and cand or
+                           -- check_ji and string.match(cand.text, "及" ) and cand or
+                           -- check_kong and string.match(cand.text, "○" ) and cand
+                          check_wu_ji_kong and ( cand.text == "毋" or cand.text == "及" or cand.text == "○") and cand
         if cand_filtr then
           yield(cand_filtr)  -- yield(nil)不能為空，否則報錯。
         end
@@ -148,7 +153,7 @@ local function filter(inp, env)
       -- end
 
     elseif not s_up then
-      if check_word_point then
+      if check_i_end then
         local cand = change_preedit(cand, cand.text)
         yield( s_c_f_p_s and change_comment(cand,"") or cand )
       else
