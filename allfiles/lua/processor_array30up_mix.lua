@@ -409,7 +409,7 @@ KeyEvent 函數在舊版 librime-lua 中不支持。
       engine:commit_text(g_c_t)
       context:clear()
       return 1
-    elseif not a_s_wp and key:repr() == "Shift+space" then
+    elseif key:repr() == "Shift+space" then
       --- 以下可循環翻頁！
       local loaded_candidate_count = seg.menu:candidate_count()    -- 獲得（已加載）候選詞數量
       if env.n == loaded_candidate_count and env.n > 10 then
