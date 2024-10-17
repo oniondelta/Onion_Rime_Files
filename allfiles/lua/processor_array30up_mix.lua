@@ -194,8 +194,10 @@ local function processor(key, env)
     -- end
 
 -----------------------------------------------------------------------------
+--[[
+仿香草模式，但不管是否為香草模式，碰到[ '%d]後接字碼，前面直接上屏，後面續輸入。
+--]]
 
-  --- 不管是否為香草模式，碰到[ '%d]後接字碼，前面直接上屏，後面續輸入。
   elseif check_i_end and key_abc then
     if ( seg:has_tag("abc") or seg:has_tag("reverse3_lookup") or seg:has_tag("wsymbols") ) then
       engine:commit_text(g_c_t)
@@ -205,9 +207,9 @@ local function processor(key, env)
       return 2
     end
 
-  -- -- --- 香草模式下碰到[ '%d]後接字碼，不會變成全部英文，而是前面直接上屏中文，後面續輸入。
+  -- --- 限定香草模式下
   -- -- elseif not s_up and check_i_end and ( key:repr():match("^[%l]$") or k4_pattern[key:repr()] ) then
-
+  -- --- 非限定香草模式下
   -- elseif check_i_end and ( key:repr():match("^[%l]$") or k4_pattern[key:repr()] ) then
   --   if ( seg:has_tag("abc") or seg:has_tag("reverse3_lookup") or seg:has_tag("wsymbols") ) then
   --     local k_r = k4_pattern[key:repr()] or key:repr()
@@ -218,16 +220,29 @@ local function processor(key, env)
   --     return 2
   --   end
 
-  -- elseif not s_up and seg:has_tag("abc") and check_i_end and key_abc then
-  --   engine:commit_text(g_c_t)
-  --   context.input = key_abc
-  --   return 1
+-----------------------------------------------------------------------------
+--[[
+使「Shift+space」可循環翻頁
+--]]
+
+  elseif key:repr() == "Shift+space" then
+    --- 以下可循環翻頁！
+    local loaded_candidate_count = seg.menu:candidate_count()    -- 獲得（已加載）候選詞數量
+    if env.n == loaded_candidate_count and env.n > 10 then
+      context:refresh_non_confirmed_composition()
+      return 1
+    else
+      env.n = loaded_candidate_count
+      -- engine:process_key(KeyEvent("Page_Down"))  -- 方案內已皆設置翻頁。
+      -- return 1
+      return 2
+    end
 
 -----------------------------------------------------------------------------
 
   --- pass not space Return KP_Enter key_num ( Shift+space ?)
-  -- elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" and not key_num then
-  elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" and key:repr() ~= "Shift+space" and not key_num then
+  elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" and not key_num then
+  -- elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" and key:repr() ~= "Shift+space" and not key_num then
     return 2
 
 -----------------------------------------------------------------------------
@@ -386,8 +401,8 @@ KeyEvent 函數在舊版 librime-lua 中不支持。
   --   return 1
 
   elseif seg:has_tag("wsymbols") then
+    --- 以下設置可循環翻頁！
     if a_s_wp and key:repr() == "space" then
-      --- 以下可循環翻頁！
       local loaded_candidate_count = seg.menu:candidate_count()    -- 獲得（已加載）候選詞數量
       -- local page_n = 10 * (seg.selected_index // 10)    -- 先確定在第幾頁，「//」為整除運算符。
       if env.n == loaded_candidate_count and env.n > 10 then
@@ -402,24 +417,25 @@ KeyEvent 函數在舊版 librime-lua 中不支持。
     -- elseif a_s_wp and key:repr() == "Shift+space" then
     --   env.n = 0
     --   engine:process_key(KeyEvent("Page_Up"))
-    --   return 1 -- kAccepted
+    --   return 1
     --- 修正 w[0-9] 空白鍵 設翻頁時，無上屏鍵問題。
     --- 搭配前面「空白鍵同某些行列 30 一樣為翻頁」，並且用 custom 檔設「return 上屏候選字」，校正 Return 能上屏候選項！
     elseif  a_s_wp and (key:repr() == "Return" or key:repr() == "KP_Enter") then
       engine:commit_text(g_c_t)
       context:clear()
       return 1
-    elseif key:repr() == "Shift+space" then
-      --- 以下可循環翻頁！
-      local loaded_candidate_count = seg.menu:candidate_count()    -- 獲得（已加載）候選詞數量
-      if env.n == loaded_candidate_count and env.n > 10 then
-        context:refresh_non_confirmed_composition()
-        return 1
-      else
-        env.n = loaded_candidate_count
-        engine:process_key(KeyEvent("Page_Down"))
-        return 1
-      end
+    -- --- 以下設置可循環翻頁！
+    -- elseif key:repr() == "Shift+space" then
+    --   local loaded_candidate_count = seg.menu:candidate_count()    -- 獲得（已加載）候選詞數量
+    --   if env.n == loaded_candidate_count and env.n > 10 then
+    --     context:refresh_non_confirmed_composition()
+    --     return 1
+    --   else
+    --     env.n = loaded_candidate_count
+    --     -- engine:process_key(KeyEvent("Page_Down"))  -- 方案內已皆設置翻頁。
+    --     -- return 1
+    --     return 2
+    --   end
     --- 修正 Return 都上屏英文時， w[0-9] 空白鍵為上屏鍵，Return 還是上屏候選項問題。
     elseif a_r_abc and (key:repr() == "Return" or key:repr() == "KP_Enter") then
     -- elseif not a_s_wp and a_r_abc then
