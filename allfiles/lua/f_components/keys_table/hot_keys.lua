@@ -269,7 +269,7 @@ local function hotkeys(n)
       , { "　［control］+［  '  ］切換中文字符範圍為完整（增廣），不精簡", "➋➌" }
       , { "　［control］+［  [  ］切換編碼標注為無", "➋➍" }
       , { "　［control］+［  ]  ］切換上屏簡碼(多個)為直上", "➋➎" }
-      , { "　［control］+［  -  ］切換 w 符號 space 為上屏", "➋➏" }
+      , { "　［control］+［  -  ］切換 w 符號 space 為翻頁", "➋➏" }
       , { "　［control］+［  =  ］切換 Enter 上屏中文", "➋➐" }
       , { " • 初始設定", "➋➑" }
       , { "　［control］+［shift］+［  ,  ］切換中文", "➋➒" }
@@ -279,7 +279,7 @@ local function hotkeys(n)
       , { "　［control］+［shift］+［  '  ］切換中文其字符範圍為精簡（CJK）", "➌➌" }
       , { "　［control］+［shift］+［  [  ］切換編碼標注為有", "➌➍" }
       , { "　［control］+［shift］+［  ]  ］切換上屏簡碼(多個)為香草模式", "➌➎" }
-      , { "　［control］+［shift］+［  -  ］切換 w 符號 space 為翻頁", "➌➏" }
+      , { "　［control］+［shift］+［  -  ］切換 w 符號 space 為上屏", "➌➏" }
       , { "　［control］+［shift］+［  =  ］切換 Enter 上屏原始輸入", "➌➐" }
       , { "　────────────  ", "➌➑" }
       , { "　※ 某些鍵位須用內附的 default.custom.yaml 檔", "➌➒" }

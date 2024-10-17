@@ -39,6 +39,7 @@ local function filter(inp, env)
   local check_s1 = string.match(c_input, "^[a-z,./;][a-z,./;]? $" )
   local check_i_end = string.match(c_input, "[ ']$")  -- 已在方案用 tags: [ abc ] 限定，不會影響其他掛載方案。
   -- local check_i_end = string.match(c_input, "[a-z,./;][ ']$")
+  local check_www = string.match(c_input, "^www[.]" )  -- 直接判別 comment 即可
   -- local check_s2 = string.match(c_input, "^a[k,] $" )
   -- local check_s3 = string.match(c_input, "^lr $" )
   -- local check_s4 = string.match(c_input, "^ol $" )
@@ -46,20 +47,31 @@ local function filter(inp, env)
   -- local check_s6 = string.match(c_input, "^%.b $" )
   -- local check_s7 = string.match(c_input, "^/%. $" )
   -- local check_s8 = string.match(c_input, "^pe $" )
-  local check_s2 = string.match(c_input, "^a[k,] $" ) or
-                   string.match(c_input, "^lr $" ) or
-                   string.match(c_input, "^ol $" ) or
-                   string.match(c_input, "^q[ka] $" ) or
-                   string.match(c_input, "^%.b $" ) or
-                   string.match(c_input, "^/%. $" ) or
-                   string.match(c_input, "^pe $" )
+  -- local check_s2 = string.match(c_input, "^a[k,] $" ) or
+  --                  string.match(c_input, "^lr $" ) or
+  --                  string.match(c_input, "^ol $" ) or
+  --                  string.match(c_input, "^q[ka] $" ) or
+  --                  string.match(c_input, "^%.b $" ) or
+  --                  string.match(c_input, "^/%. $" ) or
+  --                  string.match(c_input, "^pe $" )
+  local check_s2 = c_input == "ak " or
+                   c_input == "a, " or
+                   c_input == "lr " or
+                   c_input == "ol " or
+                   c_input == "qk " or
+                   c_input == "qa " or
+                   c_input == ".b " or
+                   c_input == "/. " or
+                   c_input == "pe "
   -- local check_wu = string.match(c_input, "^sf $" )
   -- local check_ji = string.match(c_input, "^lb $" )
   -- local check_kong = string.match(c_input, "^ou $" )
-  local check_wu_ji_kong = string.match(c_input, "^sf $" ) or
-                           string.match(c_input, "^lb $" ) or
-                           string.match(c_input, "^ou $" )
-  local check_www = string.match(c_input, "^www[.]" )  -- 直接判別 comment 即可
+  -- local check_wu_ji_kong = string.match(c_input, "^sf $" ) or
+  --                          string.match(c_input, "^lb $" ) or
+  --                          string.match(c_input, "^ou $" )
+  local check_wu_ji_kong = c_input == "sf " or
+                           c_input == "lb " or
+                           c_input == "ou "
 
   for cand in inp:iter() do
 
@@ -121,12 +133,12 @@ local function filter(inp, env)
         yield( s_c_f_p_s and change_comment(cand,"") or cand )
       else  -- 最後有空格
         local cand_filtr = check_s1 and not string.match(cand.comment, "▪" ) and cand or  -- "■"
-                           -- (check_s2 or check_s3 or check_s4 or check_s5 or check_s6 or check_s7 or check_s8) and cand or
                            check_s2 and cand or
+                           check_wu_ji_kong and ( cand.text == "毋" or cand.text == "及" or cand.text == "○") and cand
                            -- check_wu and string.match(cand.text, "毋" ) and cand or
                            -- check_ji and string.match(cand.text, "及" ) and cand or
                            -- check_kong and string.match(cand.text, "○" ) and cand
-                          check_wu_ji_kong and ( cand.text == "毋" or cand.text == "及" or cand.text == "○") and cand
+                           -- (check_s2 or check_s3 or check_s4 or check_s5 or check_s6 or check_s7 or check_s8) and cand or
         if cand_filtr then
           yield(cand_filtr)  -- yield(nil)不能為空，否則報錯。
         end
