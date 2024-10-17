@@ -114,6 +114,27 @@ local function little2_number(t)
   return proj:apply(t)
 end
 
+-- local function arabic_indic_number(t)
+--   if t == "" then return "" end
+--   local format1 = "xlit|0123456789.|٠١٢٣٤٥٦٧٨٩٫|"
+--   local proj = convert_format(format1)
+--   return proj:apply(t)
+-- end
+
+-- local function extened_arabic_indic_number(t)
+--   if t == "" then return "" end
+--   local format1 = "xlit|0123456789|۰۱۲۳۴۵۶۷۸۹|"
+--   local proj = convert_format(format1)
+--   return proj:apply(t)
+-- end
+
+-- local function devanagari_number(t)
+--   if t == "" then return "" end
+--   local format1 = "xlit|0123456789|०१२३४५६७८९|"
+--   local proj = convert_format(format1)
+--   return proj:apply(t)
+-- end
+
 local function braille_c_number(t)
   if t == "" then return "" end
   local format1 = "xlit|0123456789.|⠴⠂⠆⠒⠲⠢⠖⠶⠦⠔⠨|"
@@ -349,4 +370,7 @@ return {
         braille_c_number = braille_c_number,
         braille_u_number = braille_u_number,
         keycap_number = keycap_number,
+        -- arabic_indic_number = arabic_indic_number,
+        -- extened_arabic_indic_number = extened_arabic_indic_number,
+        -- devanagari_number = devanagari_number,
         }

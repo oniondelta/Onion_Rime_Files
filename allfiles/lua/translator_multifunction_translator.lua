@@ -86,6 +86,9 @@ local little2_number = f_n_s.little2_number
 local braille_c_number = f_n_s.braille_c_number
 local braille_u_number = f_n_s.braille_u_number
 local keycap_number = f_n_s.keycap_number
+-- local arabic_indic_number = f_n_s.arabic_indic_number
+-- local extened_arabic_indic_number = f_n_s.extened_arabic_indic_number
+-- local devanagari_number = f_n_s.devanagari_number
 
 local f_c_n = require("f_components/f_chinese_number")
 local read_number = f_c_n.read_number
@@ -93,8 +96,6 @@ local read_number_bank = f_c_n.read_number_bank
 local confs = f_c_n.confs
 
 local f_e_s = require("f_components/f_english_style")
-local english_1 = f_e_s.english_1
-local english_2 = f_e_s.english_2
 local english_3 = f_e_s.english_3
 local english_4 = f_e_s.english_4
 local english_5 = f_e_s.english_5
@@ -105,10 +106,48 @@ local english_9 = f_e_s.english_9
 local english_f_u = f_e_s.english_f_u
 local english_f_l = f_e_s.english_f_l
 local english_s_u = f_e_s.english_s_u
-local english_1_2 = f_e_s.english_1_2
+local english_mds_u = f_e_s.english_mds_u
+local english_mds_l = f_e_s.english_mds_l
+local english_ms_u = f_e_s.english_ms_u
+local english_ms_l = f_e_s.english_ms_l
+local english_mf_u = f_e_s.english_mf_u
+local english_mf_l = f_e_s.english_mf_l
+local english_mss_u = f_e_s.english_mss_u
+local english_mss_l = f_e_s.english_mss_l
+local english_mssi_u = f_e_s.english_mssi_u
+local english_mssi_l = f_e_s.english_mssi_l
+local english_mssb_u = f_e_s.english_mssb_u
+local english_mssb_l = f_e_s.english_mssb_l
+local english_mssbi_u = f_e_s.english_mssbi_u
+local english_mssbi_l = f_e_s.english_mssbi_l
+local english_mi_u = f_e_s.english_mi_u
+local english_mi_l = f_e_s.english_mi_l
+local english_mm_u = f_e_s.english_mm_u
+local english_mm_l = f_e_s.english_mm_l
+local english_mb_u = f_e_s.english_mb_u
+local english_mb_l = f_e_s.english_mb_l
+local english_mbi_u = f_e_s.english_mbi_u
+local english_mbi_l = f_e_s.english_mbi_l
+local english_mbs_u = f_e_s.english_mbs_u
+local english_mbs_l = f_e_s.english_mbs_l
+local english_mbf_u = f_e_s.english_mbf_u
+local english_mbf_l = f_e_s.english_mbf_l
 local english_3_4 = f_e_s.english_3_4
 local english_5_6 = f_e_s.english_5_6
 local english_f_ul = f_e_s.english_f_ul
+local english_mds_ul = f_e_s.english_mds_ul
+local english_ms_ul = f_e_s.english_ms_ul
+local english_mf_ul = f_e_s.english_mf_ul
+local english_mss_ul = f_e_s.english_mss_ul
+local english_mssi_ul = f_e_s.english_mssi_ul
+local english_mssb_ul = f_e_s.english_mssb_ul
+local english_mssbi_ul = f_e_s.english_mssbi_ul
+local english_mi_ul = f_e_s.english_mi_ul
+local english_mm_ul = f_e_s.english_mm_ul
+local english_mb_ul = f_e_s.english_mb_ul
+local english_mbi_ul = f_e_s.english_mbi_ul
+local english_mbs_ul = f_e_s.english_mbs_ul
+local english_mbf_ul = f_e_s.english_mbf_ul
 local english_s = f_e_s.english_s
 local english_s2u = f_e_s.english_s2u
 local english_braille_c_u = f_e_s.english_braille_c_u
@@ -2485,8 +2524,20 @@ local function translate(input, seg, env)
     local preedittext = env.prefix .. "/ " .. englishout1 .. "\t 【小寫字母】"
     yield_c( english_s(englishout1), "〔一般〕", preedittext)
     yield_c( english_f_l(englishout1), "〔全形〕", preedittext)
-    -- yield_c( english_1(englishout1), "〔數學字母大寫〕", preedittext)
-    yield_c( english_2(englishout1), "〔數學〕", preedittext)
+    -- yield_c( english_mds_u(englishout1), "〔數學字母大寫〕", preedittext)
+    yield_c( english_mds_l(englishout1), "〔雙線體〕", preedittext)
+    yield_c( english_mi_l(englishout1), "〔斜體〕", preedittext)
+    yield_c( english_mb_l(englishout1), "〔粗體〕", preedittext)
+    yield_c( english_mbi_l(englishout1), "〔粗斜體〕", preedittext)
+    yield_c( english_mss_l(englishout1), "〔無襯線體〕", preedittext)
+    yield_c( english_mssi_l(englishout1), "〔無襯線斜體〕", preedittext)
+    yield_c( english_mssb_l(englishout1), "〔無襯線粗體〕", preedittext)
+    yield_c( english_mssbi_l(englishout1), "〔無襯線粗斜體〕", preedittext)
+    yield_c( english_mm_l(englishout1), "〔等寬〕", preedittext)
+    yield_c( english_ms_l(englishout1), "〔手稿〕", preedittext)
+    yield_c( english_mbs_l(englishout1), "〔手稿粗體〕", preedittext)
+    yield_c( english_mf_l(englishout1), "〔尖角體〕", preedittext)
+    yield_c( english_mbf_l(englishout1), "〔尖角體粗體〕", preedittext)
     -- yield_c( english_3(englishout1), "〔帶圈字母大寫〕", preedittext)
     yield_c( english_4(englishout1), "〔帶圈〕", preedittext)
     -- yield_c( english_5(englishout1), "〔括號字母大寫〕", preedittext)
@@ -2509,7 +2560,19 @@ local function translate(input, seg, env)
     -- yield_c( string.upper(string.sub(englishout2,1,1)) .. string.sub(englishout2,2,-1) , "〔一般字母開頭大寫〕", preedittext)
     yield_c( english_s2u(englishout2), "〔一般〕", preedittext)
     yield_c( english_f_ul(englishout2), "〔全形〕", preedittext)
-    yield_c( english_1_2(englishout2), "〔數學〕", preedittext)
+    yield_c( english_mds_ul(englishout2), "〔雙線體〕", preedittext)
+    yield_c( english_mi_ul(englishout2), "〔斜體〕", preedittext)
+    yield_c( english_mb_ul(englishout2), "〔粗體〕", preedittext)
+    yield_c( english_mbi_ul(englishout2), "〔粗斜體〕", preedittext)
+    yield_c( english_mss_ul(englishout2), "〔無襯線體〕", preedittext)
+    yield_c( english_mssi_ul(englishout2), "〔無襯線斜體〕", preedittext)
+    yield_c( english_mssb_ul(englishout2), "〔無襯線粗體〕", preedittext)
+    yield_c( english_mssbi_ul(englishout2), "〔無襯線粗斜體〕", preedittext)
+    yield_c( english_mm_ul(englishout2), "〔等寬〕", preedittext)
+    yield_c( english_ms_ul(englishout2), "〔手稿〕", preedittext)
+    yield_c( english_mbs_ul(englishout2), "〔手稿粗體〕", preedittext)
+    yield_c( english_mf_ul(englishout2), "〔尖角體〕", preedittext)
+    yield_c( english_mbf_ul(englishout2), "〔尖角體粗體〕", preedittext)
     yield_c( english_3_4(englishout2), "〔帶圈〕", preedittext)
     yield_c( english_5_6(englishout2), "〔括號〕", preedittext)
     if english_braille_c_ul(englishout2) ~= english_braille_u_ul(englishout2) then
@@ -2527,7 +2590,19 @@ local function translate(input, seg, env)
     local englishout3 = string.upper(englishout3)
     yield_c( english_s(englishout3), "〔一般〕", preedittext)
     yield_c( english_f_u(englishout3), "〔全形〕", preedittext)
-    yield_c( english_1(englishout3), "〔數學〕", preedittext)
+    yield_c( english_mds_u(englishout3), "〔雙線體〕", preedittext)
+    yield_c( english_mi_u(englishout3), "〔斜體〕", preedittext)
+    yield_c( english_mb_u(englishout3), "〔粗體〕", preedittext)
+    yield_c( english_mbi_u(englishout3), "〔粗斜體〕", preedittext)
+    yield_c( english_mss_u(englishout3), "〔無襯線體〕", preedittext)
+    yield_c( english_mssi_u(englishout3), "〔無襯線斜體〕", preedittext)
+    yield_c( english_mssb_u(englishout3), "〔無襯線粗體〕", preedittext)
+    yield_c( english_mssbi_u(englishout3), "〔無襯線粗斜體〕", preedittext)
+    yield_c( english_mm_u(englishout3), "〔等寬〕", preedittext)
+    yield_c( english_ms_u(englishout3), "〔手稿〕", preedittext)
+    yield_c( english_mbs_u(englishout3), "〔手稿粗體〕", preedittext)
+    yield_c( english_mf_u(englishout3), "〔尖角體〕", preedittext)
+    yield_c( english_mbf_u(englishout3), "〔尖角體粗體〕", preedittext)
     yield_c( english_3(englishout3), "〔帶圈〕", preedittext)
     yield_c( english_5(englishout3), "〔括號〕", preedittext)
     yield_c( english_7(englishout3), "〔方框〕", preedittext)
