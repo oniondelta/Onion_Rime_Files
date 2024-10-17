@@ -86,9 +86,12 @@ local little2_number = f_n_s.little2_number
 local braille_c_number = f_n_s.braille_c_number
 local braille_u_number = f_n_s.braille_u_number
 local keycap_number = f_n_s.keycap_number
--- local arabic_indic_number = f_n_s.arabic_indic_number
--- local extened_arabic_indic_number = f_n_s.extened_arabic_indic_number
--- local devanagari_number = f_n_s.devanagari_number
+local mss_number = f_n_s.mss_number
+local mssb_number = f_n_s.mssb_number
+local mm_number = f_n_s.mm_number
+local arabic_indic_number = f_n_s.arabic_indic_number
+local extended_arabic_indic_number = f_n_s.extended_arabic_indic_number
+local devanagari_number = f_n_s.devanagari_number
 
 local f_c_n = require("f_components/f_chinese_number")
 local read_number = f_c_n.read_number
@@ -2990,6 +2993,7 @@ local function translate(input, seg, env)
     -- yield_c( "點", "〔軍中小數點〕", num_preedit)
     yield_c( "⠨", "〔點字〕(computer)", num_preedit)
     yield_c( "⠲", "〔點字〕(unified)", num_preedit)
+    yield_c( "٫", "〔阿拉伯文〕", num_preedit)
     return
   end
 
@@ -3086,9 +3090,12 @@ local function translate(input, seg, env)
     --   yield_c( neg_n .. " " .. math1_number(numberout) .. dot1 .. math1_number(afterdot), "〔數學粗體數字〕", num_preedit)
     --   yield_c( neg_n .. " " .. math2_number(numberout) .. dot1 .. math2_number(afterdot), "〔數學空心數字〕", num_preedit)
     -- end
-    yield_c( neg_n_m .. math1_number(numberout) .. dot1 .. math1_number(afterdot), "〔數學粗體〕", num_preedit)
-    yield_c( neg_n_m .. math2_number(numberout) .. dot1 .. math2_number(afterdot), "〔數學空心〕", num_preedit)
     yield_c( neg_n_f .. fullshape_number(numberout) .. dot1 .. fullshape_number(afterdot), "〔全形〕", num_preedit)
+    yield_c( neg_n_m .. mm_number(numberout) .. dot1 .. mm_number(afterdot), "〔等寬體〕", num_preedit)
+    yield_c( neg_n_m .. math2_number(numberout) .. dot1 .. math2_number(afterdot), "〔雙線體〕", num_preedit)
+    yield_c( neg_n_m .. math1_number(numberout) .. dot1 .. math1_number(afterdot), "〔粗體〕", num_preedit)
+    yield_c( neg_n_m .. mss_number(numberout) .. dot1 .. mss_number(afterdot), "〔無襯線體〕", num_preedit)
+    yield_c( neg_n_m .. mssb_number(numberout) .. dot1 .. mssb_number(afterdot), "〔無襯線粗體〕", num_preedit)
     yield_c( neg_n_h .. little1_number(numberout..dot1..afterdot), "〔上標〕", num_preedit)
     yield_c( neg_n_l .. little2_number(numberout..dot1..afterdot), "〔下標〕", num_preedit)
     --- 超過「1000垓」則不顯示中文數字
@@ -3133,6 +3140,11 @@ local function translate(input, seg, env)
       yield_c( neg_n_b .. braille_c_number(numberout), "〔點字〕(computer)", num_preedit)
       -- yield_c( neg_n_b .. "⠼" .. braille_c_number(numberout), "〔點字(一般)〕", num_preedit)
       yield_c( neg_n_b .. "⠼" .. braille_u_number(numberout), "〔點字〕(unified)", num_preedit)
+      if neg_n=="" then
+        yield_c( arabic_indic_number(numberout), "〔阿拉伯文〕", num_preedit)
+        yield_c( extended_arabic_indic_number(numberout), "〔東阿拉伯文〕", num_preedit)
+        yield_c( devanagari_number(numberout), "〔天城文〕", num_preedit)
+      end
 
       if (neg_n=="") then
         if tonumber(numberout)==1 or tonumber(numberout)==0 then
@@ -3170,6 +3182,10 @@ local function translate(input, seg, env)
       yield_c( neg_n_b .. braille_c_number(dot1..afterdot), "〔點字〕(computer)", num_preedit)
       -- yield_c( neg_n_b .. "⠼" .. braille_c_number(dot1..afterdot), "〔點字(一般)〕", num_preedit)
       yield_c( neg_n_b .. "⠼" .. braille_u_number(dot1..afterdot), "〔點字〕(unified)", num_preedit)
+      if neg_n=="" then
+        yield_c( "٠" .. arabic_indic_number(dot1..afterdot), "〔阿拉伯文〕", num_preedit)
+        yield_c( "۰" .. extended_arabic_indic_number(dot1..afterdot), "〔東阿拉伯文〕", num_preedit)
+      end
       return
     elseif dot0=="" and dot1~="" then
       if (string.len(numberout) < 2) then
@@ -3181,6 +3197,10 @@ local function translate(input, seg, env)
       yield_c( neg_n_b .. braille_c_number(numberout..dot1..afterdot), "〔點字〕(computer)", num_preedit)
       -- yield_c( neg_n_b .. "⠼" .. braille_c_number(numberout..dot1..afterdot), "〔點字(一般)〕", num_preedit)
       yield_c( neg_n_b .. "⠼" .. braille_u_number(numberout..dot1..afterdot), "〔點字〕(unified)", num_preedit)
+      if neg_n=="" then
+        yield_c( arabic_indic_number(numberout..dot1..afterdot), "〔阿拉伯文〕", num_preedit)
+        yield_c( extended_arabic_indic_number(numberout..dot1..afterdot), "〔東阿拉伯文〕", num_preedit)
+      end
       return
     end
 

@@ -114,26 +114,47 @@ local function little2_number(t)
   return proj:apply(t)
 end
 
--- local function arabic_indic_number(t)
---   if t == "" then return "" end
---   local format1 = "xlit|0123456789.|٠١٢٣٤٥٦٧٨٩٫|"
---   local proj = convert_format(format1)
---   return proj:apply(t)
--- end
+local function mss_number(t)
+  if t == "" then return "" end
+  local format1 = "xlit|0123456789.|𝟢𝟣𝟤𝟥𝟦𝟧𝟨𝟩𝟪𝟫.|"
+  local proj = convert_format(format1)
+  return proj:apply(t)
+end
 
--- local function extened_arabic_indic_number(t)
---   if t == "" then return "" end
---   local format1 = "xlit|0123456789|۰۱۲۳۴۵۶۷۸۹|"
---   local proj = convert_format(format1)
---   return proj:apply(t)
--- end
+local function mssb_number(t)
+  if t == "" then return "" end
+  local format1 = "xlit|0123456789.|𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵.|"
+  local proj = convert_format(format1)
+  return proj:apply(t)
+end
 
--- local function devanagari_number(t)
---   if t == "" then return "" end
---   local format1 = "xlit|0123456789|०१२३४५६७८९|"
---   local proj = convert_format(format1)
---   return proj:apply(t)
--- end
+local function mm_number(t)
+  if t == "" then return "" end
+  local format1 = "xlit|0123456789.|𝟶𝟷𝟸𝟹𝟺𝟻𝟼𝟽𝟾𝟿.|"
+  local proj = convert_format(format1)
+  return proj:apply(t)
+end
+
+local function arabic_indic_number(t)
+  if t == "" then return "" end
+  local format1 = "xlit|0123456789.|٠١٢٣٤٥٦٧٨٩٫|"
+  local proj = convert_format(format1)
+  return proj:apply(t)
+end
+
+local function extended_arabic_indic_number(t)
+  if t == "" then return "" end
+  local format1 = "xlit|0123456789.|۰۱۲۳۴۵۶۷۸۹٫|"
+  local proj = convert_format(format1)
+  return proj:apply(t)
+end
+
+local function devanagari_number(t)
+  if t == "" then return "" end
+  local format1 = "xlit|0123456789|०१२३४५६७८९|"
+  local proj = convert_format(format1)
+  return proj:apply(t)
+end
 
 local function braille_c_number(t)
   if t == "" then return "" end
@@ -370,7 +391,10 @@ return {
         braille_c_number = braille_c_number,
         braille_u_number = braille_u_number,
         keycap_number = keycap_number,
-        -- arabic_indic_number = arabic_indic_number,
-        -- extened_arabic_indic_number = extened_arabic_indic_number,
-        -- devanagari_number = devanagari_number,
+        mss_number = mss_number,
+        mssb_number = mssb_number,
+        mm_number = mm_number,
+        arabic_indic_number = arabic_indic_number,
+        extended_arabic_indic_number = extended_arabic_indic_number,
+        devanagari_number = devanagari_number,
         }
