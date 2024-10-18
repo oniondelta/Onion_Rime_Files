@@ -84,6 +84,7 @@ local function processor(key, env)
   local caret_pos = context.caret_pos
   local comp = context.composition
   local seg = comp:back()
+  local loaded_candidate_count = seg.menu:candidate_count()    -- 獲得（已加載）候選詞數量
   -- local g_s_t = context:get_script_text()
   local g_c_t = context:get_commit_text()
   -- local page_size = engine.schema.page_size
@@ -200,9 +201,16 @@ local function processor(key, env)
 
   elseif check_i_end and key_abc then
     if ( seg:has_tag("abc") or seg:has_tag("reverse3_lookup") or seg:has_tag("wsymbols") ) then
-      engine:commit_text(g_c_t)
-      context.input = key_abc
-      return 1
+      -- local loaded_candidate_count = seg.menu:candidate_count()    -- 獲得（已加載）候選詞數量
+      -- if string.match(g_c_t, "'$") then  -- 輸入「'」後詞庫沒有對應詞，接續輸入，清前面字碼。
+      if loaded_candidate_count == 0 then  -- 輸入「'」後詞庫沒有對應詞，接續輸入，清前面字碼。
+        context.input = key_abc
+        return 1
+      else
+        engine:commit_text(g_c_t)
+        context.input = key_abc
+        return 1
+      end
     else
       return 2
     end
@@ -227,7 +235,7 @@ local function processor(key, env)
 
   elseif key:repr() == "Shift+space" then
     --- 以下可循環翻頁！
-    local loaded_candidate_count = seg.menu:candidate_count()    -- 獲得（已加載）候選詞數量
+    -- local loaded_candidate_count = seg.menu:candidate_count()    -- 獲得（已加載）候選詞數量
     if env.n == loaded_candidate_count and env.n > 10 then
       context:refresh_non_confirmed_composition()
       return 1
@@ -352,7 +360,7 @@ local function processor(key, env)
       context:clear()
       return 1 -- kAccepted
     -- elseif not s_up then
-    --   local loaded_candidate_count = seg.menu:candidate_count()
+    --   -- local loaded_candidate_count = seg.menu:candidate_count()
     --   if loaded_candidate_count == 1 then
     --     engine:commit_text(g_c_t)
     --     context:clear()
@@ -403,7 +411,7 @@ KeyEvent 函數在舊版 librime-lua 中不支持。
   elseif seg:has_tag("wsymbols") then
     --- 以下設置可循環翻頁！
     if a_s_wp and key:repr() == "space" then
-      local loaded_candidate_count = seg.menu:candidate_count()    -- 獲得（已加載）候選詞數量
+      -- local loaded_candidate_count = seg.menu:candidate_count()    -- 獲得（已加載）候選詞數量
       -- local page_n = 10 * (seg.selected_index // 10)    -- 先確定在第幾頁，「//」為整除運算符。
       if env.n == loaded_candidate_count and env.n > 10 then
         context:refresh_non_confirmed_composition()
@@ -424,9 +432,9 @@ KeyEvent 函數在舊版 librime-lua 中不支持。
       engine:commit_text(g_c_t)
       context:clear()
       return 1
-    -- --- 以下設置可循環翻頁！
+    --- 以下設置可循環翻頁！
     -- elseif key:repr() == "Shift+space" then
-    --   local loaded_candidate_count = seg.menu:candidate_count()    -- 獲得（已加載）候選詞數量
+    --   -- local loaded_candidate_count = seg.menu:candidate_count()    -- 獲得（已加載）候選詞數量
     --   if env.n == loaded_candidate_count and env.n > 10 then
     --     context:refresh_non_confirmed_composition()
     --     return 1
