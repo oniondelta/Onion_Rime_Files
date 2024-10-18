@@ -98,7 +98,7 @@ local function processor(key, env)
   -- local check_i_end = string.match(c_input, "[a-z,./;][ ']$") or string.match(c_input, "w%d$")
   local check_i_end = string.match(c_input, "[ '%d]$")
   local check_i_reverse_space = string.match(c_input, "^==[a-z,./;][a-z,./;]?$")
-  local check_i_phrases_space = string.match(c_input, "^[a-z,./;][a-z,./;]?$")  -- mf_translator 在前，不影響到。
+  -- local check_i_phrases_space = string.match(c_input, "^[a-z,./;][a-z,./;]?$")  -- mf_translator 在前，不影響到。
   local check_i_3_or_more = string.match(c_input, "[a-z,./;][a-z,./;][a-z,./;][a-z,./;]?i?$")  -- mf_translator 在前，不影響到。
   -- local check_i1 = string.match(c_input, "^[a-z,./;][a-z,./;][a-z,./;][a-z,./;]?i?$")  -- 因 check_i_3_or_more 已涵蓋，故遮屏。
   -- local check_i2 = string.match(c_input, "^==[a-z,./;][a-z,./;][a-z,./;][a-z,./;]?i?$")  -- 因 check_i_3_or_more 已涵蓋，故遮屏。
@@ -361,18 +361,18 @@ local function processor(key, env)
       return 2
     end
 
-  --- 二碼以下「詞句」加空格，「直上模式」時忽略。
-  elseif s_up and check_i_phrases_space then  -- mf_translator 在前，不用擔心影響到。
-    if key:repr() == "space" then
-      context:push_input(" ")
-      -- engine:commit_text("test")
-      -- context:refresh_non_confirmed_composition()
-      engine:commit_text(context:get_commit_text())  --不能用 g_c_t
-      context:clear()
-      return 1 -- kAccepted
-    else
-      return 2
-    end
+  -- --- 二碼以下「詞句」加空格，「直上模式」時忽略。
+  -- elseif s_up and check_i_phrases_space then  -- mf_translator 在前，不用擔心影響到。
+  --   if key:repr() == "space" then
+  --     context:push_input(" ")
+  --     -- engine:commit_text("test")
+  --     -- context:refresh_non_confirmed_composition()
+  --     engine:commit_text(context:get_commit_text())  --不能用 g_c_t
+  --     context:clear()
+  --     return 1 -- kAccepted
+  --   else
+  --     return 2
+  --   end
 
 -----------------------------------------------------------------------------
 --[[
