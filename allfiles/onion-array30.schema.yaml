@@ -481,7 +481,7 @@ key_binder:
     - { accept: Control+Shift+braceleft, unset_option: simplify_comment, when: always } #編碼提示開關
     - { accept: Control+Shift+braceright, unset_option: 1_2_straight_up, when: always } #空白直上開關
 #win易快捷鍵衝突，mac可打開#    - { accept: Control+Shift+underscore, set_option: array30_space_wp, when: always } #空白為翻頁或上屏開關
-#win易快捷鍵衝突，mac可打開#    - { accept: Control+Shift+plus, set_option: array30_return_abc, when: always } # return 上屏候選字或 abc 開關
+#win易快捷鍵衝突，mac可打開#    # - { accept: Control+Shift+plus, set_option: array30_return_abc, when: always } # return 上屏候選字或 abc 開關
 ### Return/Enter鍵 ###
     - {accept: Return, send: KP_Space, when: paging} #選字時 Return/Enter 鍵同空白鍵上屏中文
     - {accept: KP_Enter, send: KP_Space, when: paging} #選字時右側小鍵盤 Return/Enter 鍵同空白鍵上屏中文
