@@ -89,9 +89,9 @@ local function processor(key, env)
   local g_c_t = context:get_commit_text()
   -- local page_size = engine.schema.page_size
   local o_ascii_mode = context:get_option("ascii_mode")
-  local a_s_wp = context:get_option("array30_space_wp")
-  local a_r_abc = context:get_option("array30_return_abc")
   local s_up = context:get_option("1_2_straight_up")
+  local a_s_wp = context:get_option("array30_space_wp")
+  -- local a_r_abc = context:get_option("array30_return_abc")
   local key_num = key:repr():match("KP_([0-9])") or key:repr():match("Control%+([0-9])")
   local key_abc = key:repr():match("^([%l])$") or k4_pattern[key:repr()]
 
@@ -144,7 +144,7 @@ local function processor(key, env)
 以下開始使得純數字和計算機時，於小鍵盤可輸入數字和運算符
 --]]
 
-  elseif seg:has_tag("mf_translator") and key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" then
+  elseif seg:has_tag("mf_translator") and key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" and key:repr() ~= "Shift+space" then
   -- elseif seg:has_tag("lua") and key:repr() ~= "space" then
   -- elseif seg:has_tag("lua") and kp_p ~= nil then
 
@@ -258,18 +258,24 @@ local function processor(key, env)
 以下 return 上屏候選字或英文，設開關
 --]]
 
-  --- 以下 abc 非英文，而是中文主 segmentor
-  elseif (a_r_abc) and (seg:has_tag("abc") or seg:has_tag("mf_translator")) and (key:repr() == "Return" or key:repr() == "KP_Enter") then
-  -- elseif a_r_abc and check_abc and key:repr() == "Return" or key:repr() == "KP_Enter" then
+  -- --- 以下 abc 非英文，而是中文主 segmentor
+  -- elseif (a_r_abc) and (seg:has_tag("abc") or seg:has_tag("mf_translator")) and (key:repr() == "Return" or key:repr() == "KP_Enter") then
+  -- -- elseif a_r_abc and check_abc and key:repr() == "Return" or key:repr() == "KP_Enter" then
 
-    -- --- 選字時 Return 上屏選項
-    -- if not seg:has_tag("paging") then
-    --   engine:commit_text(c_input)
-    --   context:clear()
-    --   return 1
-    -- end
+  --   -- --- 選字時 Return 上屏選項
+  --   -- if not seg:has_tag("paging") then
+  --   --   engine:commit_text(c_input)
+  --   --   context:clear()
+  --   --   return 1
+  --   -- end
 
-    --- 全狀態（開關符號以 space 翻頁時除外） Return 都上屏英文
+  --   --- 全狀態（開關符號以 space 翻頁時除外） Return 都上屏英文
+  --   engine:commit_text(c_input)
+  --   context:clear()
+  --   return 1
+
+  --- 改用「a_s_wp」連動控制
+  elseif not a_s_wp and not seg:has_tag("reverse2_lookup") and (key:repr() == "Return" or key:repr() == "KP_Enter") then
     engine:commit_text(c_input)
     context:clear()
     return 1
@@ -314,7 +320,7 @@ local function processor(key, env)
 
 -----------------------------------------------------------------------------
 --[[
-以下特殊時 space 直上屏
+以下特殊時 space 直上屏或其他作用
 --]]
 
   elseif not context:has_menu() then
@@ -333,12 +339,27 @@ local function processor(key, env)
   --     return 2
   --   end
 
+  --- 「mf_translator」空白鍵相關切換
   elseif seg:has_tag("mf_translator") or seg:has_tag("email_url_translator") then
-    if key:repr() == "space" then
+    if not a_s_wp and key:repr() == "space" then
       -- local g_c_t = context:get_commit_text()
       engine:commit_text(g_c_t)
       context:clear()
       return 1 -- kAccepted
+    elseif a_s_wp and key:repr() == "space" then
+      if env.n == loaded_candidate_count and env.n > 10 then
+        context:refresh_non_confirmed_composition()
+        return 1
+      else
+        env.n = loaded_candidate_count
+        engine:process_key(KeyEvent("Page_Down"))
+        local g_c_t_update = context:get_commit_text()
+        if env.n < 11 and g_c_t == g_c_t_update then
+          engine:commit_text(g_c_t_update)
+          context:clear()
+        end
+        return 1
+      end
     else
       return 2
     end
@@ -384,75 +405,108 @@ local function processor(key, env)
 
 -----------------------------------------------------------------------------
 --[[
+使「空白鍵」在"[ '%d]$"後變為翻頁（非輸入空白碼），可循環翻頁。
+KeyEvent 函數在舊版 librime-lua 中不支持。
+--]]
+
+  elseif a_s_wp and check_i_end and not seg:has_tag("reverse2_lookup") and key:repr() == "space" then
+    -- local loaded_candidate_count = seg.menu:candidate_count()    -- 獲得（已加載）候選詞數量
+    -- local page_n = 10 * (seg.selected_index // 10)    -- 先確定在第幾頁，「//」為整除運算符。
+    if env.n == loaded_candidate_count and env.n > 10 then
+      -- engine:commit_text(loaded_candidate_count)  -- 測試用
+      context:refresh_non_confirmed_composition()
+      return 1
+    else
+      -- local check_text = g_c_t
+      -- engine:commit_text(loaded_candidate_count)  -- 測試用
+      env.n = loaded_candidate_count
+      engine:process_key(KeyEvent("Page_Down"))
+      local g_c_t_update = context:get_commit_text()
+      if env.n < 11 and g_c_t == g_c_t_update then
+        engine:commit_text(g_c_t_update)
+        context:clear()
+      end
+      return 1
+    end
+
+  --- 補在「a_s_wp」時，翻頁時，空格還是直上。
+  elseif a_s_wp and seg:has_tag("paging") and seg:has_tag("abc") and key:repr() == "space" then
+    -- engine:process_key(KeyEvent("space"))  -- 會跳到「KP_Space」=>「confirm」。
+    context:push_input(" ")
+    return 1
+
+-----------------------------------------------------------------------------
+--[[
 使 w[0-9] 輸入符號時：空白鍵同某些行列 30 一樣為翻頁。
 KeyEvent 函數在舊版 librime-lua 中不支持。
 增設開關。
+以下遮屏，因改用「a_s_wp」連動切換，故用上條目，不限「wsymbols」，以「全局」（排除「注音反查」）作用。
 --]]
 
-  -- elseif a_s_wp and seg:has_tag("wsymbols") then
-  -- -- elseif a_s_wp and check_w then
-  --   if key:repr() == "space" then
-  --     engine:process_key(KeyEvent("Page_Down"))
-  --     return 1 -- kAccepted
+  -- -- elseif a_s_wp and seg:has_tag("wsymbols") then
+  -- -- -- elseif a_s_wp and check_w then
+  -- --   if key:repr() == "space" then
+  -- --     engine:process_key(KeyEvent("Page_Down"))
+  -- --     return 1 -- kAccepted
+  -- --   --- 修正 w[0-9] 空白鍵 設翻頁時，無上屏鍵問題。
+  -- --   --- 搭配前面「空白鍵同某些行列 30 一樣為翻頁」，並且用 custom 檔設「return 上屏候選字」，校正 Return 能上屏候選項！
+  -- --   elseif key:repr() == "Return" or key:repr() == "KP_Enter" then
+  -- --     engine:commit_text(g_c_t)
+  -- --     context:clear()
+  -- --     return 1 -- kAccepted
+  -- --   end
+
+  -- -- --- 修正 Return 都上屏英文時， w[0-9] 空白鍵為上屏鍵，Return 還是上屏候選項問題。
+  -- -- elseif (a_r_abc) and (not a_s_wp) and (seg:has_tag("wsymbols")) and (key:repr() == "Return" or key:repr() == "KP_Enter") then
+  -- --   engine:commit_text(c_input)
+  -- --   context:clear()
+  -- --   return 1
+
+  -- elseif seg:has_tag("wsymbols") then
+  --   --- 以下設置可循環翻頁！
+  --   if a_s_wp and key:repr() == "space" then
+  --     -- local loaded_candidate_count = seg.menu:candidate_count()    -- 獲得（已加載）候選詞數量
+  --     -- local page_n = 10 * (seg.selected_index // 10)    -- 先確定在第幾頁，「//」為整除運算符。
+  --     if env.n == loaded_candidate_count and env.n > 10 then
+  --       context:refresh_non_confirmed_composition()
+  --       return 1
+  --     else
+  --       -- engine:commit_text(loaded_candidate_count)  -- 測試用
+  --       env.n = loaded_candidate_count
+  --       engine:process_key(KeyEvent("Page_Down"))
+  --       return 1
+  --     end
+  --   -- elseif a_s_wp and key:repr() == "Shift+space" then
+  --   --   env.n = 0
+  --   --   engine:process_key(KeyEvent("Page_Up"))
+  --   --   return 1
   --   --- 修正 w[0-9] 空白鍵 設翻頁時，無上屏鍵問題。
   --   --- 搭配前面「空白鍵同某些行列 30 一樣為翻頁」，並且用 custom 檔設「return 上屏候選字」，校正 Return 能上屏候選項！
-  --   elseif key:repr() == "Return" or key:repr() == "KP_Enter" then
+  --   elseif a_s_wp and (key:repr() == "Return" or key:repr() == "KP_Enter") then
   --     engine:commit_text(g_c_t)
   --     context:clear()
-  --     return 1 -- kAccepted
+  --     return 1
+  --   -- --- 以下設置可循環翻頁！
+  --   -- elseif key:repr() == "Shift+space" then
+  --   --   -- local loaded_candidate_count = seg.menu:candidate_count()    -- 獲得（已加載）候選詞數量
+  --   --   if env.n == loaded_candidate_count and env.n > 10 then
+  --   --     context:refresh_non_confirmed_composition()
+  --   --     return 1
+  --   --   else
+  --   --     env.n = loaded_candidate_count
+  --   --     -- engine:process_key(KeyEvent("Page_Down"))  -- 方案內已皆設置翻頁。
+  --   --     -- return 1
+  --   --     return 2
+  --   --   end
+  --   --- 修正 Return 都上屏英文時， w[0-9] 空白鍵為上屏鍵，Return 還是上屏候選項問題。
+  --   elseif a_r_abc and (key:repr() == "Return" or key:repr() == "KP_Enter") then
+  --   -- elseif not a_s_wp and a_r_abc then
+  --     engine:commit_text(c_input)
+  --     context:clear()
+  --     return 1
+  --   else
+  --     return 2
   --   end
-
-  -- --- 修正 Return 都上屏英文時， w[0-9] 空白鍵為上屏鍵，Return 還是上屏候選項問題。
-  -- elseif (a_r_abc) and (not a_s_wp) and (seg:has_tag("wsymbols")) and (key:repr() == "Return" or key:repr() == "KP_Enter") then
-  --   engine:commit_text(c_input)
-  --   context:clear()
-  --   return 1
-
-  elseif seg:has_tag("wsymbols") then
-    --- 以下設置可循環翻頁！
-    if a_s_wp and key:repr() == "space" then
-      -- local loaded_candidate_count = seg.menu:candidate_count()    -- 獲得（已加載）候選詞數量
-      -- local page_n = 10 * (seg.selected_index // 10)    -- 先確定在第幾頁，「//」為整除運算符。
-      if env.n == loaded_candidate_count and env.n > 10 then
-        context:refresh_non_confirmed_composition()
-        return 1
-      else
-        -- engine:commit_text(loaded_candidate_count)  -- 測試用
-        env.n = loaded_candidate_count
-        engine:process_key(KeyEvent("Page_Down"))
-        return 1
-      end
-    -- elseif a_s_wp and key:repr() == "Shift+space" then
-    --   env.n = 0
-    --   engine:process_key(KeyEvent("Page_Up"))
-    --   return 1
-    --- 修正 w[0-9] 空白鍵 設翻頁時，無上屏鍵問題。
-    --- 搭配前面「空白鍵同某些行列 30 一樣為翻頁」，並且用 custom 檔設「return 上屏候選字」，校正 Return 能上屏候選項！
-    elseif  a_s_wp and (key:repr() == "Return" or key:repr() == "KP_Enter") then
-      engine:commit_text(g_c_t)
-      context:clear()
-      return 1
-    -- --- 以下設置可循環翻頁！
-    -- elseif key:repr() == "Shift+space" then
-    --   -- local loaded_candidate_count = seg.menu:candidate_count()    -- 獲得（已加載）候選詞數量
-    --   if env.n == loaded_candidate_count and env.n > 10 then
-    --     context:refresh_non_confirmed_composition()
-    --     return 1
-    --   else
-    --     env.n = loaded_candidate_count
-    --     -- engine:process_key(KeyEvent("Page_Down"))  -- 方案內已皆設置翻頁。
-    --     -- return 1
-    --     return 2
-    --   end
-    --- 修正 Return 都上屏英文時， w[0-9] 空白鍵為上屏鍵，Return 還是上屏候選項問題。
-    elseif a_r_abc and (key:repr() == "Return" or key:repr() == "KP_Enter") then
-    -- elseif not a_s_wp and a_r_abc then
-      engine:commit_text(c_input)
-      context:clear()
-      return 1
-    else
-      return 2
-    end
 
 ---------------------------------------------------------------------------
 --[[
