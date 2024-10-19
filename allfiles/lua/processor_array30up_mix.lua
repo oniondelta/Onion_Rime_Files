@@ -85,9 +85,9 @@ local function processor(key, env)
   local comp = context.composition
   local seg = comp:back()
   local loaded_candidate_count = seg.menu:candidate_count()    -- 獲得（已加載）候選詞數量
+  -- local page_size = engine.schema.page_size    -- 每頁最大候選詞數
   -- local g_s_t = context:get_script_text()
   local g_c_t = context:get_commit_text()
-  -- local page_size = engine.schema.page_size
   local o_ascii_mode = context:get_option("ascii_mode")
   local s_up = context:get_option("1_2_straight_up")
   local a_s_wp = context:get_option("array30_space_wp")
@@ -339,29 +339,27 @@ local function processor(key, env)
   --     return 2
   --   end
 
-  --- 「mf_translator」空白鍵相關切換
-  elseif seg:has_tag("mf_translator") or seg:has_tag("email_url_translator") then
-    if not a_s_wp and key:repr() == "space" then
-      -- local g_c_t = context:get_commit_text()
-      engine:commit_text(g_c_t)
-      context:clear()
-      return 1 -- kAccepted
-    elseif a_s_wp and key:repr() == "space" then
-      if env.n == loaded_candidate_count and env.n > 10 then
-        context:refresh_non_confirmed_composition()
-        return 1
-      else
-        env.n = loaded_candidate_count
-        engine:process_key(KeyEvent("Page_Down"))
-        local g_c_t_update = context:get_commit_text()
-        if env.n < 11 and g_c_t == g_c_t_update then
-          engine:commit_text(g_c_t_update)
-          context:clear()
-        end
-        return 1
-      end
+  --- 「mf_translator」確認模式：空白鍵相關切換（與下條目分開，減少層數效能較好？）
+  elseif ((not a_s_wp and seg:has_tag("mf_translator")) or seg:has_tag("email_url_translator")) and key:repr() == "space" then
+    -- local g_c_t = context:get_commit_text()
+    engine:commit_text(g_c_t)
+    context:clear()
+    return 1
+
+  --- 「mf_translator」翻頁模式：空白鍵相關切換（與上條目分開，減少層數效能較好？）
+  elseif a_s_wp and seg:has_tag("mf_translator") and key:repr() == "space" then
+    if env.n == loaded_candidate_count and env.n > 10 then
+      context:refresh_non_confirmed_composition()
+      return 1
     else
-      return 2
+      env.n = loaded_candidate_count
+      engine:process_key(KeyEvent("Page_Down"))
+      local g_c_t_update = context:get_commit_text()
+      if env.n < 11 and g_c_t == g_c_t_update then
+        engine:commit_text(g_c_t)
+        context:clear()
+      end
+      return 1
     end
 
   --- 行列30反查注音，不能直接上屏。
@@ -423,7 +421,7 @@ KeyEvent 函數在舊版 librime-lua 中不支持。
       engine:process_key(KeyEvent("Page_Down"))
       local g_c_t_update = context:get_commit_text()
       if env.n < 11 and g_c_t == g_c_t_update then
-        engine:commit_text(g_c_t_update)
+        engine:commit_text(g_c_t)
         context:clear()
       end
       return 1
