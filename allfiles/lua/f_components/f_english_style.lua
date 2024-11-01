@@ -13,6 +13,12 @@ local function english_s(en)
   return string.gsub(en, "%./", " ")
 end
 
+local function english_u_all(en)
+  if en == "" then return "" end
+  en = english_s(en)
+  return string.gsub(en, "%l", string.upper)
+end
+
 local function english_u2(en)
   if en == "" then return "" end
   -- if string.match(en, "^[/.'-][a-z]") then
@@ -981,6 +987,7 @@ end
 
 return {
         english_s = english_s,
+        english_u_all = english_u_all,
         english_u1 = english_u1,
         -- english_u2 = english_u2,
         english_s2u = english_s2u,

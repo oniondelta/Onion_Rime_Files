@@ -8,6 +8,7 @@ easy 英文尾綴「;」或「;;」生成全大寫或首字母大寫。
 --]]
 local f_e_s = require("f_components/f_english_style")
 local english_s = f_e_s.english_s
+local english_u_all = f_e_s.english_u_all
 local english_u1 = f_e_s.english_u1
 local english_s2u = f_e_s.english_s2u
 
@@ -48,7 +49,8 @@ local function init(env)
   env.tips_en = "《Easy》"
 
   env.english_pattern = {
-    [";;"] = {comment = "〔全大寫〕", func = string.upper},
+    -- [";;"] = {comment = "〔全大寫〕", func = string.upper},
+    [";;"] = {comment = "〔全大寫〕", func = english_u_all},
     [";/"] = {comment = "〔全小寫〕", func = english_s},
     [";'"] = {comment = "〔間隔後大寫〕", func = english_s2u},
     [";"] = {comment = "〔開頭大寫〕", func = english_u1},

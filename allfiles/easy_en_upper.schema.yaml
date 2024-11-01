@@ -4,7 +4,7 @@
 schema:
   schema_id: easy_en_upper
   name: Easy English（英漢字典）-Upper
-  version: "202405"
+  version: "202411"
   author:
     - 洋蔥
   description:
@@ -45,7 +45,10 @@ speller:
   delimiter: " "
   algebra:
     # - derive/^\|$/ /
-    - xform|@|\.\/|
+    # - xform|@|\.\/|
+    - derive/@/\|/
+    - derive|@|\.\/|
+    - xform|@| |
 
     # - derive/^([a-z];)$/$1;/
     # - derive/^([a-z]);$/$1/ #會透到小寫

@@ -4,7 +4,7 @@
 schema:
   schema_id: bo_mixin4
   name: "☆注音(洋蔥mix-in版 4 )☆〔全 ˊ ˇ ˋ ˙ 〕"
-  version: "202405"
+  version: "202411"
   author:
     - 『洋蔥』
   description: |
@@ -104,6 +104,7 @@ engine:
     # - lua_processor@s2r_most
     - ascii_composer
     - recognizer
+    - recognizer@recognizer_priority
     - key_binder
     - speller
     - punctuator
@@ -114,6 +115,7 @@ engine:
   segmentors:
     - ascii_segmentor
     - matcher
+    - matcher@recognizer_priority
     - abc_segmentor
     - affix_segmentor@emoji_series
     - affix_segmentor@easy_en
@@ -700,7 +702,12 @@ editor:
 ########################## 正則調出各種功能 ##############################
 recognizer:
   patterns:
-    __include: element_bopomo:/patterns_mixin_1_2_4
+    __include: element_bopomo:/r_patterns_mixin_1_2_4
+    # __include: element_bopomo:/patterns_mixin_1_2_4
+
+recognizer_priority:
+  patterns:
+    __include: element_bopomo:/rp_patterns_mixin_1_2_4
 
 style:
   inline_preedit: false
