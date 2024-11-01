@@ -86,7 +86,7 @@ engine:
     - lua_processor@mix_apc_ltk_pluss
     - ascii_composer
     - recognizer
-    - recognizer@recognizer_priority
+    - recognizer@recognizer2
     - key_binder
     - speller
     - punctuator
@@ -97,7 +97,7 @@ engine:
   segmentors:
     - ascii_segmentor
     - matcher
-    - matcher@recognizer_priority
+    - matcher@recognizer2
     - abc_segmentor
     - affix_segmentor@emoji_series
     - affix_segmentor@reverse2_lookup
@@ -626,9 +626,9 @@ recognizer:
 #     mf_translator: "'/[-+*^/.,'();0-9a-z]*$"
 #     #舊# lua: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$|'/[';/]?[a-z]*$|'/[0-9./-]*$|'/[xucoi][0-9a-z]+$"
 
-recognizer_priority:
+recognizer2:
   patterns:
-    __include: element_bopomo:/rp_patterns_plus_space
+    __include: element_bopomo:/r2_patterns_plus_space
 
 # __patch:
 #   # 使用八股文語言模型

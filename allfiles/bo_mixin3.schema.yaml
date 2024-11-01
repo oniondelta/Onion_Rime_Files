@@ -97,7 +97,7 @@ engine:
     # - lua_processor@s2r_mixin3
     - ascii_composer
     - recognizer
-    - recognizer@recognizer_priority
+    - recognizer@recognizer2
     - key_binder
     - speller
     - punctuator
@@ -108,7 +108,7 @@ engine:
   segmentors:
     - ascii_segmentor
     - matcher
-    - matcher@recognizer_priority
+    - matcher@recognizer2
     - abc_segmentor
     - affix_segmentor@emoji_series
     - affix_segmentor@easy_en
@@ -704,9 +704,9 @@ recognizer:
     __include: element_bopomo:/r_patterns_mixin_3
     # __include: element_bopomo:/patterns_mixin_3
 
-recognizer_priority:
+recognizer2:
   patterns:
-    __include: element_bopomo:/rp_patterns_mixin_3
+    __include: element_bopomo:/r2_patterns_mixin_3
 
 style:
   inline_preedit: false
