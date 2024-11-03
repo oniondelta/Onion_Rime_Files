@@ -51,7 +51,7 @@
   
   > 先前 Windows 小狼毫官方多年未更新，核心和 librime-lua 版本陳舊，推薦使用網友修改封裝版：[fxliang](https://github.com/fxliang/weasel)；近期官方 [小狼毫](https://github.com/rime/weasel) 更新，也可使用。
   
-  > 總結：20230130 目前方案編輯使用的版本：librime 1.8.3、librime-lua 200。由於 Rime 官方、librime-lua 官方、本方案皆不斷更新，需注意版本，才好相容。
+  > 總結：20241103 目前方案編輯使用的版本：librime 1.11.2、librime-lua #287。由於 Rime 官方、librime-lua 官方、本方案皆不斷更新，需注意版本，才好相容。
 
 ## Rime 入門需知
 
