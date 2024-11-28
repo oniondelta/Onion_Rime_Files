@@ -88,8 +88,8 @@ engine:
     # - lua_processor@s2r_most
     - ascii_composer
     - recognizer
-    - recognizer@recognizer2
     - key_binder
+    - recognizer@recognizer2  #順序超過 key_binder 會有 Bug（輸入ㄡˇㄩ會跑出ㄡˇㄡㄩ）？待釐清！
     - speller
     - punctuator
     - selector
