@@ -8,7 +8,7 @@ __include: Mount_ocm.schema:/
 schema:
   schema_id: Mount_ocm_encoder
   name: "❖蝦米(單出-造詞)❖"
-  version: "202405"
+  version: "202412"
 
 # switches/+:
 #   - name: debug_comment
@@ -94,6 +94,9 @@ top_fixed:  # 固定單字順序
 tr_reverse_lookup:
   dictionary: Mount_ocm_encoder.extended
   # tags: [ makephrase ] #掛在這個tag所對應的翻譯器上
+
+ovff_reverse_lookup:
+  dictionary: Mount_ocm_encoder.extended
 
 # makephrase:
 #   # __include: Mount_ocm.schema:/translator
