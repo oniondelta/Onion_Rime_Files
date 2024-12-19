@@ -4,7 +4,7 @@
 # 刪除單字
 ---
 name: phrases.ocmtc_essay_mc
-version: "202407"
+version: "202412"
 sort: original #by_weight
 use_preset_vocabulary: false
 # max_phrase_length: 7 #20
@@ -20450,7 +20450,7 @@ columns:
 封緘	1
 封號	28
 封蠟	1
-封装	1
+封裝	1
 封裡	4
 封贈	3
 封起	8
