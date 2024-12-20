@@ -156,7 +156,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "202410"
+version: "202412"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -2342,7 +2342,7 @@ min_phrase_weight: 100
 糶	diao4	0%
 粜	diao4	0%
 冼	xi3	0%
-率	lve	0%
+率	lve4	0%
 樘	cheng1	50%
 煨	yu4	0%
 哺	bu1	0%

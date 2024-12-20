@@ -38,6 +38,8 @@ local function filter(inp, env)
   for cand in inp:iter() do
     --  s_c_f_p_s true 時 清除 comment
     yield( s_c_f_p_s and change_comment(cand,"") or cand )
+    -- 下列判斷「☯」於 Mount_ocm_encoder.schema.yaml 可用到
+    -- yield( s_c_f_p_s and not cand.comment:find("☯") and change_comment(cand,"") or cand )
   end
 end
 ----------------

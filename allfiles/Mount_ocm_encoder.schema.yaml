@@ -4,6 +4,16 @@
 
 __include: Mount_ocm.schema:/
 
+__patch:
+  - switches/@5/reset: 1  #初始時，abc 和 pt 時，編碼是否顯示 (0為有編碼，1為無編碼)
+  - key_binder/bindings/@41:
+    {accept: Control+bracketleft, unset_option: simplify_comment, when: always } #提示碼開關
+  - key_binder/bindings/@43:
+    {accept: Control+Shift+bracketleft, set_option: simplify_comment, when: always } #提示碼開關
+  - key_binder/bindings/@45:
+    {accept: Control+Shift+braceleft, set_option: simplify_comment, when: always } #提示碼開關
+  - Mount_ocm_encoder.custom:/patch?  #如有 custom 檔來修正，有此條目才可作用。
+
 
 schema:
   schema_id: Mount_ocm_encoder
@@ -20,19 +30,19 @@ engine:
   #   - lua_filter@*filter_comment_filter_debug  #不用於 rime.lua 開通
   #   - lua_filter@comment_filter_debug  #需要於 rime.lua 開通
   #   - single_char_filter
-  # segmentors:
-  #   - ascii_segmentor
-  #   - matcher
-  #   - abc_segmentor
-  #   - affix_segmentor@pt
-  #   - affix_segmentor@emoji_series
-  #   - affix_segmentor@reverse2_lookup
-  #   - affix_segmentor@reverse3_lookup
-  #   # - affix_segmentor@reverse3_lookup_extra
-  #   # - affix_segmentor@makephrase
-  #   - affix_segmentor@ocm_phrases
-  #   - punct_segmentor
-  #   - fallback_segmentor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - affix_segmentor@pt
+    - affix_segmentor@emoji_series
+    - affix_segmentor@reverse2_lookup
+    - affix_segmentor@reverse3_lookup
+    # - affix_segmentor@reverse3_lookup_extra
+    - affix_segmentor@makephrase
+    # - affix_segmentor@ocm_phrases
+    - punct_segmentor
+    - fallback_segmentor
   # translators/+:
   #   # - table_translator@makephrase
   #   - table_translator@phrase_up
@@ -46,11 +56,12 @@ engine:
     - script_translator@reverse2_lookup
     - table_translator@reverse3_lookup
     - script_translator@reverse3_lookup_extra
-    # - table_translator@makephrase  #某些太多重碼的字，某些情況造不出
-    # - table_translator@phrase_up  #某些太多重碼的字，某些情況造不出
+    - table_translator@makephrase  #某些太多重碼的字，某些情況造不出？
+    # - table_translator@phrase_up  #某些太多重碼的字，某些情況造不出？ #使造詞能出現在一般輸入中（可省略，會自動增加到「方案名稱」的用戶詞典中）
 
-# comment_filter_plus:
-#   tags: [ pt, makephrase ]
+# comment_filter_plus:  # 只過濾[ abc, pt ]，[ makephrase ]不過濾。
+#   tags: [ abc, pt, makephrase ]
+#   # tags: [ pt, makephrase ]
 
 abc_segmentor:
   extra_tags:
@@ -93,36 +104,37 @@ top_fixed:  # 固定單字順序
 
 tr_reverse_lookup:
   dictionary: Mount_ocm_encoder.extended
+  tags: [ abc, makephrase ] #掛在這個tag所對應的翻譯器上
   # tags: [ makephrase ] #掛在這個tag所對應的翻譯器上
 
 ovff_reverse_lookup:
   dictionary: Mount_ocm_encoder.extended
 
-# makephrase:
-#   # __include: Mount_ocm.schema:/translator
-#   dictionary: Mount_ocm_encoder.extended
-#   tag: makephrase
-#   # initial_quality: 10 #1
-#   # enable_charset_filter: true
-#   # enable_encoder: false
-#   # encode_commit_history: false
-#   enable_sentence: true
-#   enable_completion: false
-#   # sentence_over_completion: false
-#   # enable_user_dict: false
-#   # max_phrase_length: 4
-#   # strict_spelling: false #true
-#   prefix: ";';" #'`'
-#   suffix: "'"
-#   tips: "《查碼&造詞》▶"
-#   closing_tips: "◀《查碼&造詞》"
-#   preedit_format:
-#     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
-#     - xform/^/《查碼&造詞》/
-#     - xform/\|/  /
-#     - xform/`/  /
+makephrase:
+  # __include: Mount_ocm.schema:/translator
+  dictionary: Mount_ocm_encoder.extended
+  tag: makephrase
+  # initial_quality: 10 #1
+  # enable_charset_filter: true
+  # enable_encoder: false
+  # encode_commit_history: false
+  enable_sentence: true
+  enable_completion: false
+  # sentence_over_completion: false
+  # enable_user_dict: false
+  # max_phrase_length: 4
+  # strict_spelling: false #true
+  prefix: ";';" #'`'
+  suffix: "'"
+  tips: "《查碼&造詞》▶"
+  closing_tips: "◀《查碼&造詞》"
+  preedit_format:
+    - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
+    - xform/^/《查碼&造詞》/
+    - xform/\|/  /
+    - xform/`/  /
 
-# phrase_up: # 使造詞能出現在一般輸入中
+# phrase_up: # 使造詞能出現在一般輸入中（可省略，會自動增加到「方案名稱」的用戶詞典中）
 #   # __include: Mount_ocm.schema:/translator
 #   dictionary: Mount_ocm_encoder.extended
 #   # initial_quality: 10
@@ -138,6 +150,6 @@ ovff_reverse_lookup:
 #     - "^.*;;?$"
 #     - "^[]',.[]].*$"
 
-# recognizer:
-#   patterns/+:
-#     makephrase: "^;';[.,a-z;`|]*'?$"
+recognizer:
+  patterns/+:
+    makephrase: "^;';[.,a-z;`|]*'?$"

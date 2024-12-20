@@ -5,7 +5,7 @@
 schema:
   schema_id: Mount_ocm
   name: "❖蝦米(單出-反查專用)❖"
-  version: "202405"
+  version: "202412"
   author:
     - 洋蔥
   description: |
@@ -324,9 +324,13 @@ key_binder:
 ## 切換樣態
     - {accept: Control+apostrophe, unset_option: extended_charset, when: always } #增廣常用字符過濾，新增開關
     - {accept: Control+bracketleft, set_option: simplify_comment, when: always } #提示碼開關
-## 初始樣態
+## 初始樣態(Mac)
     - {accept: Control+Shift+apostrophe, set_option: extended_charset, when: always } #增廣常用字符過濾，新增開關
     - {accept: Control+Shift+bracketleft, unset_option: simplify_comment, when: always } #提示碼開關
+## 初始樣態(Win)
+    - {accept: Control+Shift+quotedbl, set_option: extended_charset, when: always } #增廣常用字符過濾，新增開關
+    - {accept: Control+Shift+braceleft, unset_option: simplify_comment, when: always } #提示碼開關
+
 
 punctuator:
   # import_preset: default #symbols_ovff
