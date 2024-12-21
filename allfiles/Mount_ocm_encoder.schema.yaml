@@ -105,7 +105,7 @@ speller:
 translator:
   dictionary: Mount_ocm_encoder.extended
   initial_quality: 100
-  enable_encoder: true
+  # enable_encoder: true  #和 enable_user_dict 連動配合開啟。
   # enable_user_dict: true  #可改變「詞條」順序，引用端為 false，故遮屏。
 
 # ocm_phrases:
@@ -133,7 +133,7 @@ makephrase:
   tag: makephrase
   # initial_quality: 0  #3000 #10 #1
   # enable_charset_filter: true
-  # enable_encoder: false
+  # enable_encoder: true #false  #和 enable_user_dict: true 配合打開。
   # encode_commit_history: false
   enable_sentence: true
   enable_completion: false
