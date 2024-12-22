@@ -509,6 +509,7 @@ shutil.copyfile("./allfiles/Mount_ocm.extended.dict.yaml", "./sort_rime/ocm/ocm_
 shutil.copyfile("./allfiles/Mount_ocm.schema.yaml", "./sort_rime/ocm/ocm_mount/Mount_ocm.schema.yaml")
 shutil.copyfile("./allfiles/Mount_ocm_encoder.extended.dict.yaml", "./sort_rime/ocm/ocm_mount/Mount_ocm_encoder.extended.dict.yaml")
 shutil.copyfile("./allfiles/Mount_ocm_encoder.schema.yaml", "./sort_rime/ocm/ocm_mount/Mount_ocm_encoder.schema.yaml")
+shutil.copyfile("./allfiles/Mount_ocm_encoder.custom.yaml", "./sort_rime/ocm/ocm_mount/Mount_ocm_encoder.custom.yaml")
 shutil.copyfile("./allfiles/element_ocm.yaml", "./sort_rime/ocm/ocm_mount/element_ocm.yaml")
 
 shutil.copyfile("./allfiles/punct_ovff.dict.yaml", "./sort_rime/ocm/ocm_mount/punct_ovff.dict.yaml")

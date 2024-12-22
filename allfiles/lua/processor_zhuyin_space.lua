@@ -1,6 +1,6 @@
 --- @@ zhuyin_space
 --[[
-（Mount_ocm）
+（Mount_ocm、Mount_ocm_encoder）
 注音反查 Return 和 space 和 小鍵盤數字鍵 上屏修正
 尚有bug待處理
 --]]

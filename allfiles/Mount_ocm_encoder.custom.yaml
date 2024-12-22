@@ -1,0 +1,5 @@
+patch:
+  engine/translators/+:  #以下可轉寫為# [table_translator@phrase_up]
+    - table_translator@phrase_up
+  translator/enable_encoder: false  #和 enable_user_dict 連動配合開啟。
+  translator/enable_user_dict: false  #可改變「詞條」順序。

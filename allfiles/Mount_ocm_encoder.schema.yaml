@@ -14,11 +14,11 @@ __patch:
 ########################################################################
   - switches/@5/reset: 1  #初始時，abc 和 pt 時，編碼是否顯示 (0為有編碼，1為無編碼)
   - key_binder/bindings/@41:
-    {accept: Control+bracketleft, unset_option: simplify_comment, when: always } #提示碼開關
+    {accept: Control+bracketleft, unset_option: simplify_comment, when: always} #提示碼開關
   - key_binder/bindings/@43:
-    {accept: Control+Shift+bracketleft, set_option: simplify_comment, when: always } #提示碼開關
+    {accept: Control+Shift+bracketleft, set_option: simplify_comment, when: always} #提示碼開關
   - key_binder/bindings/@45:
-    {accept: Control+Shift+braceleft, set_option: simplify_comment, when: always } #提示碼開關
+    {accept: Control+Shift+braceleft, set_option: simplify_comment, when: always} #提示碼開關
   - Mount_ocm_encoder.custom:/patch?  #如有 custom 檔來修正，有此條目才可作用。
 
 
@@ -73,7 +73,7 @@ engine:
     - table_translator@reverse3_lookup
     - script_translator@reverse3_lookup_extra
     - table_translator@makephrase  #某些太多重碼的字，某些情況造不出？
-    - table_translator@phrase_up  #某些太多重碼的字，某些情況造不出？  #使造詞能出現在一般輸入中（可省略，會自動增加到「方案名稱」的用戶詞典中，除非要於 abc 中固定「詞」的順序）
+    # - table_translator@phrase_up  #某些太多重碼的字，某些情況造不出？  #使造詞能出現在一般輸入中（可省略，會自動增加到「方案名稱」的用戶詞典中，除非要於 abc 中固定「詞」的順序）
 
 # comment_filter_plus:  # 只過濾[ abc, pt ]，[ makephrase ]不過濾。
 #   tags: [ abc, pt, makephrase ]
@@ -105,8 +105,8 @@ speller:
 translator:
   dictionary: Mount_ocm_encoder.extended
   initial_quality: 100
-  # enable_encoder: true  #和 enable_user_dict 連動配合開啟。
-  # enable_user_dict: true  #可改變「詞條」順序，引用端為 false，故遮屏。
+  enable_encoder: true  #和 enable_user_dict 連動配合開啟。
+  enable_user_dict: true  #可改變「詞條」順序，引用端為 false。
 
 # ocm_phrases:
 #   __include: Mount_ocm.schema:/translator

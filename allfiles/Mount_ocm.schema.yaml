@@ -317,19 +317,19 @@ key_binder:
     - {accept: Control+7, send: Control+8, when: has_menu}
     - {accept: Control+8, send: Control+9, when: has_menu}
 #######################################
-    # - {accept: Control+apostrophe, toggle: extended_charset, when: always } #增廣常用字符過濾，新增開關
-    # - {accept: Control+bracketleft, toggle: simplify_comment, when: always } #提示碼開關
+    # - {accept: Control+apostrophe, toggle: extended_charset, when: always} #增廣常用字符過濾，新增開關
+    # - {accept: Control+bracketleft, toggle: simplify_comment, when: always} #提示碼開關
 ## 上排切換
     - {accept: Control+Shift+7, toggle: simplify_comment, when: always}
 ## 切換樣態
-    - {accept: Control+apostrophe, unset_option: extended_charset, when: always } #增廣常用字符過濾，新增開關
-    - {accept: Control+bracketleft, set_option: simplify_comment, when: always } #提示碼開關
+    - {accept: Control+apostrophe, unset_option: extended_charset, when: always} #增廣常用字符過濾，新增開關
+    - {accept: Control+bracketleft, set_option: simplify_comment, when: always} #提示碼開關
 ## 初始樣態(Mac)
-    - {accept: Control+Shift+apostrophe, set_option: extended_charset, when: always } #增廣常用字符過濾，新增開關
-    - {accept: Control+Shift+bracketleft, unset_option: simplify_comment, when: always } #提示碼開關
+    - {accept: Control+Shift+apostrophe, set_option: extended_charset, when: always} #增廣常用字符過濾，新增開關
+    - {accept: Control+Shift+bracketleft, unset_option: simplify_comment, when: always} #提示碼開關
 ## 初始樣態(Win)
-    - {accept: Control+Shift+quotedbl, set_option: extended_charset, when: always } #增廣常用字符過濾，新增開關
-    - {accept: Control+Shift+braceleft, unset_option: simplify_comment, when: always } #提示碼開關
+    - {accept: Control+Shift+quotedbl, set_option: extended_charset, when: always} #增廣常用字符過濾，新增開關
+    - {accept: Control+Shift+braceleft, unset_option: simplify_comment, when: always} #提示碼開關
 
 
 punctuator:
