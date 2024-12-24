@@ -197,6 +197,8 @@ min_phrase_weight: 100
 嗧	jia1 lun2	10%
 甅	li2 wa3	10%
 𣄽	xing1 qi2 yi1	10%
+啢	ying1 liang3	10%
+唡	ying1 liang3	10%
 ##### @補充『官方字典』正確發音（不論是「讀音」、「語音」、「又音」），包含「台灣」和「大陸」發音 #####
 麼	ma5	1%
 眭	gui4
@@ -2377,6 +2379,13 @@ min_phrase_weight: 100
 頻	bin1	0%
 频	bin1	0%
 矉	bin1	0%
+眰	zhi2	0%
+詑	yi1	0%
+𫍡	yi1	0%
+眊	mei4	0%
+堆	zui1	0%
+塠	chui1	0%
+磓	chui1	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -113751,4 +113760,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 113754 #####
+##### @結束 END - 113761 #####
