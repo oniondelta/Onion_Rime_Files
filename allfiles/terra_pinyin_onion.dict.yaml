@@ -2386,6 +2386,9 @@ min_phrase_weight: 100
 堆	zui1	0%
 塠	chui1	0%
 磓	chui1	0%
+濒	pin2	1%
+阿	a5	0%
+諕	huo4	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -113760,4 +113763,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 113763 #####
+##### @結束 END - 113766 #####
