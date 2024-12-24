@@ -4,7 +4,7 @@
 # 201707把前面有「,」的打井字號！
 ---
 name: uniabcdword
-version: "202407"
+version: "202412"
 sort: original
 use_preset_vocabulary: false
 #max_phrase_length: 7
@@ -41,6 +41,13 @@ use_preset_vocabulary: false
 淤	wfvb
 淤	wuvb
 柺	tod
+柭	taxu
+沷	waxu
+犮	axu
+鼥	gsau
+黻	febu
+黻	frau
+蛂	caxu
 ### 補非 CJK 缺碼 ###
 㸜	gnri
 㸜	gnbi
@@ -78,6 +85,7 @@ use_preset_vocabulary: false
 𣃶	ubbb
 𣃶	fvbb
 𣃶	uvbb
+𤝜	qaxu
 ### 擴充區E時加入，但被歸類為基本多文種平面 ###
 鿍	yps
 鿎	lodw

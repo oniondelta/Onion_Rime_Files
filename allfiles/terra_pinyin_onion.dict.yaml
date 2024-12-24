@@ -2358,6 +2358,25 @@ min_phrase_weight: 100
 啉	lan4	0%
 沍	he2	0%
 沍	hao4	0%
+谊	yi2
+劲	jing4
+畊	jing1	0%
+樂	luo4	0%
+樂	liao2	0%
+楽	luo4	0%
+楽	liao2	0%
+乐	luo4	0%
+乐	liao2	0%
+伯	mo4	0%
+液	shi4	0%
+波	bi4	0%
+着	chu2	0%
+亞	e4	0%
+亜	e4	0%
+亚	e4	0%
+頻	bin1	0%
+频	bin1	0%
+矉	bin1	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -113732,4 +113751,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 113735 #####
+##### @結束 END - 113754 #####
