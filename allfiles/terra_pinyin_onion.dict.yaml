@@ -2389,6 +2389,46 @@ min_phrase_weight: 100
 濒	pin2	1%
 阿	a5	0%
 諕	huo4	0%
+㼇	wei4	0%
+㼇	wei3	0%
+瓊	xuan2	0%
+琼	xuan2	0%
+峞	wei3	0%
+礐	xue2	0%
+鹘	hu2
+祢	ni3
+祢	xian3	0%
+寗	ning4
+疟	yao4	0%
+孞	shen1
+攢	zuan4	0%
+攢	zuan1	0%
+攢	zan4	0%
+攒	cuan2	50%
+攒	zuan4	0%
+攒	zuan1	0%
+攒	zan4	0%
+硈	jia2	0%
+垩	ya4	0%
+垭	e4	0%
+垭	wu3	0%
+垭	wu4	0%
+垭	ya4	0%
+彣	wen4
+嫞	yong2
+溦	wei2
+皛	xiao4	0%
+皛	pai1	0%
+碣	ya4	0%
+碣	ke3	0%
+礍	jie2
+礍	ya4	0%
+鷈	si1	0%
+鷉	ti2
+䴘	ti2
+䴘	si1	0%
+槭	se4	0%
+槭	zu2	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -4070,12 +4110,12 @@ min_phrase_weight: 100
 袸	cun2	0.5%
 矠	jue2	0.5%
 矠	ce4	0.5%
-喿	shen1	0.5%
-喿	qiao1	0.5%
-喿	zao4	0.5%
-喿	san1	0.5%
-喿	can1	0.5%
-喿	cen1	0.5%
+喿	shen1	0%
+喿	qiao1	0%
+喿	zao4
+喿	san1	0%
+喿	can1	0%
+喿	cen1	0%
 埁	cen2	0.5%
 陓	wu1	0.5%
 浻	weng3	0.5%
@@ -4083,7 +4123,7 @@ min_phrase_weight: 100
 睌	mian3	0.5%
 睌	wan3	0.5%
 葂	wan3	0.5%
-仴	e4	0.5%
+# 仴	e4	0.5%
 嵨	wu3	0.5%
 堊	ya4	0.5%
 埡	wu3	0.5%
@@ -4465,7 +4505,6 @@ min_phrase_weight: 100
 夎	zuo4	0.5%
 砟	zuo2	0.5%
 葃	zuo2	0.5%
-# 堆	zui1	0.5%
 嶉	wei3	0.5%
 嶵	zui4	0.5%
 墫	dun1	0.5%
@@ -113763,4 +113802,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 113766 #####
+##### @結束 END - 113805 #####

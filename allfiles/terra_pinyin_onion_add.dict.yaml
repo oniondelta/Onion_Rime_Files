@@ -209,6 +209,7 @@ min_phrase_weight: 100
 氙	(shan1)	50%
 菠	(po1)	50%
 鍬	(qiu1)	1%
+锹	(qiu1)	1%
 樁	(chun1)	1%
 砧	(zhan1)	50%
 碪	(zhan1)	10%
@@ -267,6 +268,7 @@ min_phrase_weight: 100
 学	(xiao2)	10%
 螅	(xi2)	10%
 髯	(ran3)	10%
+啪	(pai1)	0%
 ### @補充為《一聲》，通俗慣用或方便輸入，『非正確發音』！！！ ###
 腓	(fei1)	1%
 琲	(fei1)	1%
@@ -597,6 +599,8 @@ min_phrase_weight: 100
 呶	(nao5)	0%
 喃	(nan5)	0%
 𠹌	(neng5)	0%
+噥	(nang5)	0%
+哝	(nang5)	0%
 嚦	(li5)	1%
 呖	(li5)	1%
 唳	(li5)	0%
