@@ -30,7 +30,7 @@ local change_comment = require("filter_cand/change_comment")
 -- local M={}
 local function init(env)
 -- function M.init(env)
-  env.bm_opencc = Opencc("back_mark.json") or {''}
+  env.bm_opencc = Opencc("back_mark_series.json") or {''}
 end
 
 -- function M.fini(env)
@@ -46,7 +46,7 @@ local function filter(inp, env)
   local b_k = context:get_option("back_mark")
   local tran = c_f2_s and Translation(drop_cand, inp, "᰼᰼") or inp
   -- local bm_opencc = {}
-  -- local bm_opencc = Opencc("back_mark.json") or {''}
+  -- local bm_opencc = Opencc("back_mark_series.json") or {''}
   for cand in tran:iter() do
     -- local b_mark = {}
     local b_mark = env.bm_opencc:convert_word(cand.text) or {''}
@@ -92,7 +92,7 @@ local function ocm_mixin_filter(input, env)
   -- local pun4 = string.match(c_input, "^[;|][;]?$" )
   if (c_f2_s) and (b_k) then
     -- local bm_opencc = {}
-    local bm_opencc = Opencc("back_mark.json") or {''}
+    local bm_opencc = Opencc("back_mark_series.json") or {''}
     for cand in input:iter() do
       -- local b_mark = {}
       local b_mark = bm_opencc:convert_word(cand.text) or {''}
@@ -110,7 +110,7 @@ local function ocm_mixin_filter(input, env)
     end
   elseif (not c_f2_s) and (b_k) then
     -- local bm_opencc = {}
-    local bm_opencc = Opencc("back_mark.json") or {''}
+    local bm_opencc = Opencc("back_mark_series.json") or {''}
     if (not s_c_f_p_s) then
     -- if (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
       for cand in input:iter() do

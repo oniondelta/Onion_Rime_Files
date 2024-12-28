@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onionplus
   name: "☆注音(洋蔥plus版)☆"
-  version: "202411"
+  version: "202412"
   author:
     - 『洋蔥』
   description: |
@@ -47,9 +47,12 @@ switches:
   - name: back_mark
     reset: 1
     states: [ 無註, 註釋 ]
+  - name: back_mark_series
+    reset: 1
+    # states: [ 無註, 註釋 ]
   - name: punct_mark
     reset: 1
-#    states: [ 無, 註 ]
+    # states: [ 無, 註 ]
   - name: unicode_comment
     reset: 0
     states: [ '🄽', '🅄' ]
@@ -76,6 +79,7 @@ engine:
     - simplifier@emoji_switch
     - simplifier@zh_cn
     - simplifier@back_mark
+    - simplifier@back_mark_series
     - simplifier@punct_mark
     - reverse_lookup_filter@bpm_reverse_lookup
     - uniquifier
@@ -161,12 +165,23 @@ emoji_switch:
   tags: [ abc ]
 #  tips: all
 
+back_mark_series:
+  opencc_config: back_mark_series.json
+  option_name: back_mark_series
+  show_in_comment: true
+  tags: [ emoji_series ]
+  tips: all #char #none
+  comment_format:
+    - xform/^/  /
+    - xform/@/ /
+    - xform/^.*〕.+$//  #去除一個條目有多個轉換。
+
 back_mark:
   opencc_config: back_mark.json
   option_name: back_mark
   show_in_comment: true
-  tags: [ abc, japan, european, korea, fs2, emoji_series ]
-  tips: char #all
+  tags: [ abc, japan, european, korea, fs2 ]
+  tips: char #all #none
   comment_format:
     - xform/^/  /
     - xform/@/ /

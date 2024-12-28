@@ -1,5 +1,5 @@
 {
-  "name": "後方標註_一般針對單個「字符」用",
+  "name": "後方標註_emoji集專用",
   "segmentation": {
     "type": "mmseg",
     "dict": {
@@ -13,6 +13,9 @@
       "dicts": [{
         "type": "text",
         "file": "back_mark_script.txt"
+      }, {
+        "type": "text",
+        "file": "back_mark_table.txt"
       }]
     }
   }]
