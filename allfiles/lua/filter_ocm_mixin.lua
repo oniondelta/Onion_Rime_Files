@@ -51,12 +51,18 @@ local function filter(inp, env)
   -- local bm_opencc = {}
   -- local bm_opencc = Opencc("back_mark.json") or {''}
   for cand in tran:iter() do
-    -- local b_mark = {}
+    -- -- local b_mark = {}
+    -- local b_mark = env.bm_opencc:convert_word(cand.text) or {''}
+    -- yield( not s_c_f_p_s and b_k and change_comment(cand, cand.comment .. xform_mark(b_mark[1]))
+    --     or s_c_f_p_s and b_k and change_comment(cand, xform_mark(b_mark[1]))
+    --     or s_c_f_p_s and not b_k and change_comment(cand, "")
+    --     -- or not s_c_f_p_s and not b_k and cand  --效果同下，省略
+    --     or cand )
     local b_mark = env.bm_opencc:convert_word(cand.text) or {''}
-    yield( not s_c_f_p_s and b_k and change_comment(cand, cand.comment .. xform_mark(b_mark[1]))
-        or s_c_f_p_s and b_k and change_comment(cand, xform_mark(b_mark[1]))
-        or s_c_f_p_s and not b_k and change_comment(cand, "")
-        -- or not s_c_f_p_s and not b_k and cand  --效果同下，省略
+    local b_mark_1 = b_mark[1] or ""
+    yield( not s_c_f_p_s and b_k and b_mark_1 ~= "" and change_comment(cand, cand.comment .. xform_mark(b_mark_1))
+        or s_c_f_p_s and b_k and b_mark_1 ~= "" and change_comment(cand, xform_mark(b_mark_1))
+        or s_c_f_p_s and change_comment(cand, "")  -- b_k and not b_k
         or cand )
   end
 end

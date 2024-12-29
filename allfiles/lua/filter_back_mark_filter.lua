@@ -54,12 +54,18 @@ local function filter(inp, env)
   local b_k = context:get_option("back_mark")
   for cand in inp:iter() do
     local b_mark = env.bm_opencc:convert_word(cand.text) or {''}
+    local b_mark_1 = b_mark[1] or ""
     -- yield( cand )
     -- yield( change_comment(cand, cand.comment .. xform_mark(b_mark[1])) )
-    yield( b_k and change_comment(cand, cand.comment .. xform_mark(b_mark[1]))
-        or cand )
+    -- yield( b_k and change_comment(cand, cand.comment .. xform_mark(b_mark[1]))
+    --     or cand )
     -- yield( b_k and change_comment(cand, xform_mark(b_mark[1]))
     --     or cand )
+    -- yield( b_k and (cand.comment ~= "" or b_mark == "") and cand
+    --     or b_k and change_comment(cand, xform_mark(b_mark))
+    --     or cand )
+    yield( b_k and b_mark_1 ~= "" and change_comment(cand, xform_mark(b_mark_1))
+        or cand )
   end
 end
 
