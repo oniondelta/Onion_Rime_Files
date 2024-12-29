@@ -51,6 +51,7 @@
 --      - lua_filter@lua_custom_phrase_filter        --（關）取代原先 table_translator@custom_phrase。接續掛接方案後，有 bug，上不了屏，改用 translator 實現。
 --      - lua_filter@preedit_model_filter            --（關）（bo_mixin 全系列）切換 preedit 樣式。
 --      - lua_filter@punct_preedit_revise_filter     --（引lua資料夾）（bopomo_onion_double 和 onion-array30）punct 下，附加 preedit 後面 prompt 缺漏之標示。另修正 ascii_punct 下，分號(;)和冒號(:)無法變半形問題。
+--      - lua_filter@back_mark_filter                --（引lua資料夾）（dif、1bopomo_onion_double、bopomo_onionplus 和 bo_mixin 全系列）不直接用 opencc 去 comment，改 lua 間接 comment，防「兩個字符」以上無法標注，和一個字串被多個標注。
 --      - lua_filter@comment_filter_unicode          --（關）註釋 Unicode 編碼。
 --      - lua_filter@comment_filter_debug            --（關）註釋 debug 訊息。
 --
@@ -218,6 +219,11 @@ ocm_mixin_filter = require("filter_ocm_mixin")
 -- local filter_charset_filter2 = require("filter_charset_filter2")
 -- charset_filter2 = filter_charset_filter2.charset_filter2
 charset_filter2 = require("filter_charset_filter2")
+
+
+--- back_mark_filter （dif、1bopomo_onion_double、bopomo_onionplus 和 bo_mixin 全系列）
+-- 不直接用 opencc 去 comment，改 lua 間接 comment，防「兩個字符」以上無法標注，和一個字串被多個標注。
+back_mark_filter = require("filter_back_mark_filter")
 
 
 --- 日文出羅馬字、全形羅馬字、半形片假名、全片假名、全平假名。

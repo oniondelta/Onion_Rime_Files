@@ -9,7 +9,7 @@ schema:
 
   name: "❖超級混合蝦米(mix-in)❖"
   schema_id: ocm_mixin
-  version: "202405"
+  version: "202412"
   dependencies:
     - punct_ovff
     - symbols_ocm
@@ -84,6 +84,7 @@ engine:
     - reverse_lookup_filter@gr_reverse_lookup
     - reverse_lookup_filter@cyr_reverse_lookup
     - reverse_lookup_filter@fs_reverse_lookup
+    - lua_filter@back_mark_filter@back_mark_series
     - lua_filter@ocm_mixin_filter
 #    - lua_filter@mix_cf2_cfp_smf_filter  #合併 charset_filter2 和 comment_filter_plus 和 symbols_mark_filter，三個 lua filter 太耗效能。
     # - lua_filter@mix_cf2_cfp_filter  # 合併 charset_filter2 和 comment_filter_plus，兩個 lua filter 太耗效能。
@@ -211,7 +212,12 @@ punct_mark:
 #   tags: [ abc, reverse2_lookup, reverse3_lookup, emoji_series, pt, gr, cyr, fs ]
 
 ocm_mixin_filter:
-  tags: [ abc, reverse2_lookup, reverse3_lookup, emoji_series, pt, gr, cyr, fs ]
+  tags: [ abc, reverse2_lookup, reverse3_lookup, pt, gr, cyr, fs ]
+  # tags: [ abc, reverse2_lookup, reverse3_lookup, emoji_series, pt, gr, cyr, fs ]
+
+back_mark_series:
+  opencc_config: back_mark_series.json
+  tags: [ emoji_series ]
 
 en_sort_filter:
   tags: [ easy_en ]
