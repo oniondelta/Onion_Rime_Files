@@ -171,10 +171,12 @@ emoji_switch:
 
 back_mark_series:
   opencc_config: back_mark_series.json
+  option_name: back_mark
   tags: [ emoji_series ]
 
 back_mark:
   opencc_config: back_mark.json
+  option_name: back_mark
   tags: [ abc, fs2, japan ]
 
 # back_mark_series:

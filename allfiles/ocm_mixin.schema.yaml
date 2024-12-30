@@ -217,6 +217,7 @@ ocm_mixin_filter:
 
 back_mark_series:
   opencc_config: back_mark_series.json
+  option_name: back_mark
   tags: [ emoji_series ]
 
 en_sort_filter:

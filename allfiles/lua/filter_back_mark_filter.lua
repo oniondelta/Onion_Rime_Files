@@ -27,7 +27,8 @@ local function init(env)
   local engine = env.engine
   local schema = engine.schema
   local config = schema.config
-  local opencc_js = config:get_string(env.name_space .. "/opencc_config")
+  local opencc_js = config:get_string(env.name_space .. "/opencc_config") or "back_mark.json"
+  env.option_n = config:get_string(env.name_space .. "/option_name") or "back_mark"
   -- env.bm_opencc = Opencc("back_mark.json") or {''}
   env.bm_opencc = Opencc(opencc_js) or {''}
 end
@@ -51,7 +52,7 @@ local function filter(inp, env)
 -- function M.func(inp,env)
   local engine = env.engine
   local context = engine.context
-  local b_k = context:get_option("back_mark")
+  local b_k = context:get_option(env.option_n)
   for cand in inp:iter() do
     local b_mark = env.bm_opencc:convert_word(cand.text) or {''}
     local b_mark_1 = b_mark[1] or ""
