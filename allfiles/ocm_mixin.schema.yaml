@@ -195,7 +195,9 @@ emoji_switch:
 #   tags: [ abc, emoji_series ] #, fs
 #   tips: char #all
 #   comment_format:
-#     - xform/^/  /
+#     # - erase/^.*〕.+$/  #去除一個條目有多個轉換。
+#     # - erase/^.+〔.*$/  #去除一個條目有多個轉換。
+#     - xform/^/  /  #沒 comment 的條目不會因此多兩空白。
 #     - xform/@/ /
 
 punct_mark:

@@ -186,9 +186,10 @@ back_mark:
 #   tags: [ emoji_series ]
 #   tips: all #char #none
 #   comment_format:
-#     - xform/^/  /
+#     - erase/^.*〕.+$/  #去除一個條目有多個轉換。
+#     - erase/^.+〔.*$/  #去除一個條目有多個轉換。
+#     - xform/^/  /  #沒 comment 的條目不會因此多兩空白。
 #     - xform/@/ /
-#     - xform/^.*〕.+$//  #去除一個條目有多個轉換。
 
 # back_mark:
 #   opencc_config: back_mark.json
@@ -197,7 +198,9 @@ back_mark:
 #   tags: [ abc, fs2, japan ]
 #   tips: char #all #none
 #   comment_format:
-#     - xform/^/  /
+#     # - erase/^.*〕.+$/  #去除一個條目有多個轉換。
+#     # - erase/^.+〔.*$/  #去除一個條目有多個轉換。
+#     - xform/^/  /  #沒 comment 的條目不會因此多兩空白。
 #     - xform/@/ /
 
 punct_mark:
