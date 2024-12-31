@@ -24,7 +24,7 @@
 
 - 「字」以兩岸字典有的發音都收錄為目標。
 
-  - 「字」的收錄標準，以三部線上字典為主：〈[萌典](https://www.moedict.tw/)〉〈[教育部異體字字典](https://dict.variants.moe.edu.tw/variants/rbt/home.do)〉〈[古今文字集成](http://www.ccamc.co/)〉
+  - 「字」的收錄標準，以三部線上字典為主：〈[萌典](https://www.moedict.tw/)〉〈[教育部異體字字典](https://dict.variants.moe.edu.tw/)〉〈[古今文字集成](http://www.ccamc.co/)〉
 
   - 「字」的收錄標準，承〈[古今文字集成](http://www.ccamc.co/)〉衍伸兩部查詢：〈[漢語大字典(白雲深處人家)](https://homeinmists.ilotus.org/hd/hydzd.php)〉〈[漢語大詞典](http://www.kaom.net/book_hanyudacidian.php)〉
 
@@ -68,7 +68,7 @@
 
     * 〈[萌典](https://www.moedict.tw/)〉
 
-    * 〈[教育部異體字字典](https://dict.variants.moe.edu.tw/variants/rbt/home.do)〉
+    * 〈[教育部異體字字典](https://dict.variants.moe.edu.tw/)〉
        
     * 〈[古今文字集成](http://www.ccamc.co/)〉
     
