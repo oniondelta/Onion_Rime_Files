@@ -5,7 +5,7 @@
 ┌─ back_mark.json                    符號、音標、西歐字母、韓文、注音等註解 1  （例：æ〔KK, DJ, IPA〕）（轉換字典：一般）
 ├─ back_mark_series.json             符號、音標、西歐字母、韓文、注音等註解 2  （例：æ〔KK, DJ, IPA〕）（轉換字典：一般+系列符）
 ├─ back_mark_script.txt              轉換字典：一般（一般中文、外語掛接所含符號）
-├─ back_mark_table.txt               轉換字典；系列符（排除一般，emoji集所含符號）
+├─ back_mark_table.txt               轉換字典；系列符（排除一般，剩下 emoji 集所含符號）
 │
 ├─ back_mark_ocm.json                符號、音標、西歐字母、韓文、注音等註解 3  （附拼法，例：æ  ᴀʜᴇ'〔拉-小: KK, DJ, IPA〕）（拼法為內建拉丁字母形碼）
 ├─ back_mark_ocm.txt                 轉換字典
