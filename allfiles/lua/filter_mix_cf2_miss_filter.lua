@@ -108,7 +108,7 @@ local function filter(inp, env)
       local cand_text = cand.text
       yield(cand_text == "。" and change_comment(cand,"〔句點〕") or
             (cand_text == "〔" or cand_text == "〕") and change_comment(cand,"〔六角括號〕") or
-            o_ascii_punct and c_input == "'" and Candidate("simp_apostrophe", 0, 1, "'", "") or
+            o_ascii_punct and c_input == "'" and Candidate("simp_apostrophe", 0, 1, "'", "〔半角〕") or
             cand )
     end
   end
