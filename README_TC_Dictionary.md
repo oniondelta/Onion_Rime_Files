@@ -75,7 +75,9 @@
     * 〈[叶典](http://yedict.com/)〉
     
     * 〈[漢典](https://www.zdic.net/)〉
-    
+
+    * 〈[漢語大詞典](http://www.kaom.net/book_hanyudacidian.php)〉
+
     * 〈[文學網-在線新華字典](https://zd.hwxnet.com/)〉
     
     * 〈[漢語大字典(ivantsoi)](https://ivantsoi.ddns.net/hydzd/search.html)〉（失效）
