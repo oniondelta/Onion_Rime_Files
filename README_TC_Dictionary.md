@@ -66,9 +66,7 @@
 
 - 主要：
 
-    * 〈[萌典](https://www.moedict.tw/)〉
- 
-    * 〈[教育部重編國語辭典](https://dict.revised.moe.edu.tw/)〉
+    * 〈[萌典](https://www.moedict.tw/)〉〈[教育部重編國語辭典](https://dict.revised.moe.edu.tw/)〉
 
     * 〈[教育部異體字字典](https://dict.variants.moe.edu.tw/)〉
        
