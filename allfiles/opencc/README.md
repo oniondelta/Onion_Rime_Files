@@ -13,9 +13,6 @@
 ├─ bpm_moedict_big5e_hkscs_jis.json  遮屏非 萌典、Big5e、Hkscs、JIS 之中文  （限 terra_pinyin_onion.dict.yaml 之字符，其他不遮屏）（把欲遮屏字符轉換成「᰼᰼」，再用 lua 遮屏「᰼᰼」，可自由決定遮屏範圍）
 ├─ bpm_moedict_big5e_hkscs_jis.txt   轉換字典
 │
-├─ emoji_2021.json                   表情符號  （新版）（簡繁體皆轉換）
-├─ emoji_2021.txt                    轉換字典
-│
 ├─ emoji_2021t.json                  表情符號  （新版）（只針對繁體轉換）（切換簡體 filter 時，簡體也會附加 Emoji，方案實際使用）
 ├─ emoji_2021t.txt                   轉換字典
 │
