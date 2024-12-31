@@ -2,10 +2,12 @@
 
 
 ```
-┌─ back_mark.json                    符號、音標、西歐字母、韓文、注音等註解 1  （例：æ〔KK, DJ, IPA〕）
-├─ back_mark.txt                     轉換字典
+┌─ back_mark.json                    符號、音標、西歐字母、韓文、注音等註解 1  （例：æ〔KK, DJ, IPA〕）（轉換字典：一般）
+├─ back_mark_series.json             符號、音標、西歐字母、韓文、注音等註解 2  （例：æ〔KK, DJ, IPA〕）（轉換字典：一般+系列符）
+├─ back_mark_script.txt              轉換字典：一般（一般中文、外語掛接所含符號）
+├─ back_mark_table.txt               轉換字典；系列符（排除一般，emoji集所含符號）
 │
-├─ back_mark_ocm.json                符號、音標、西歐字母、韓文、注音等註解 2  （附拼法，例：æ  ᴀʜᴇ'〔拉-小: KK, DJ, IPA〕）（拼法為內建拉丁字母形碼）
+├─ back_mark_ocm.json                符號、音標、西歐字母、韓文、注音等註解 3  （附拼法，例：æ  ᴀʜᴇ'〔拉-小: KK, DJ, IPA〕）（拼法為內建拉丁字母形碼）
 ├─ back_mark_ocm.txt                 轉換字典
 │
 ├─ bpm_moedict_big5e_hkscs_jis.json  遮屏非 萌典、Big5e、Hkscs、JIS 之中文  （限 terra_pinyin_onion.dict.yaml 之字符，其他不遮屏）（把欲遮屏字符轉換成「᰼᰼」，再用 lua 遮屏「᰼᰼」，可自由決定遮屏範圍）
