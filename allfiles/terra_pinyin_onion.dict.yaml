@@ -135,6 +135,7 @@
 #    詞句中，「孿」臺灣字典發音為「luan2」，又音為「lvan2」，故皆補齊「luan2」「lvan2」。
 #    詞句中，「脂」臺灣日常慣用語音為「zhi3」，臺灣標準為「zhi1」，除「胭脂」「脂粉」兩詞只標註「zhi1」外，其他皆補齊「zhi1」「zhi3」。
 #    詞句中，「冴」日常發音常會誤發為「ya2」，標準為「hu4」，故日文人名中皆補齊「ya2」「hu4」，前者詞頻設為3%。
+#    詞句中，「姑娘」補齊「gu1 niang2」和「gu1 niang5」，後者詞頻設為80%。
 #    預計比對「輕聲和一聲」變音。
 #
 #  〈2020修改字詞彙發音〉：
@@ -157,7 +158,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "202412"
+version: "202501"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -57229,6 +57230,7 @@ min_phrase_weight: 100
 二夾脖子	er4 jia2 bo2 zi5
 二夾脖子	er4 jia1 bo2 zi5
 二姑娘頑老雕	er4 gu1 niang2 wan2 lao3 diao1
+二姑娘頑老雕	er4 gu1 niang5 wan2 lao3 diao1	80%
 二娘子	er4 niang2 zi5
 二娘子	er4 niang2 zi3
 二尕子	er4 ga3 zi5
@@ -67952,6 +67954,7 @@ min_phrase_weight: 100
 堀堁	ku1 ke3
 堂‧吉河德	tang2 eng5 ji2 he2 de2
 堂分姑娘	tang2 fen4 gu1 niang2
+堂分姑娘	tang2 fen4 gu1 niang5	80%
 堂堂之陳	tang2 tang2 zhi1 zhen4
 堂姊	tang2 jie3
 堂姊	tang2 zi3
@@ -68766,7 +68769,9 @@ min_phrase_weight: 100
 大姐姐	da4 jie3 jie5
 大姐姐	da4 jie3 jie3
 大姑娘	da4 gu1 niang2
+大姑娘	da4 gu1 niang5	80%
 大姑娘坐花轎	da4 gu1 niang2 zuo4 hua1 jiao4
+大姑娘坐花轎	da4 gu1 niang5 zuo4 hua1 jiao4	80%
 大姑子	da4 gu1 zi5
 大姨子	da4 yi2 zi5
 大娘子	da4 niang2 zi5
@@ -70109,8 +70114,11 @@ min_phrase_weight: 100
 姑姥姥	gu1 lao3 lao5
 姑姥姥	gu1 lao3 lao3
 姑娘	gu1 niang2
+姑娘	gu1 niang5	80%
 姑娘家	gu1 niang2 jia1
+姑娘家	gu1 niang5 jia1	80%
 姑娘氣	gu1 niang2 qi4
+姑娘氣	gu1 niang5 qi4	80%
 姑子	gu1 zi5
 姑子死和尚	gu1 zi5 si3 he2 shang4
 姑射神人	gu1 ye4 shen2 ren2
@@ -71770,6 +71778,7 @@ min_phrase_weight: 100
 小姐	xiao3 jie3
 小姐	xiao3 jie5
 小姑娘	xiao3 gu1 niang2
+小姑娘	xiao3 gu1 niang5	80%
 小姑子	xiao3 gu1 zi5
 小姑獨處	xiao3 gu1 du2 chu3
 小姨子	xiao3 yi2 zi5
@@ -88550,6 +88559,7 @@ min_phrase_weight: 100
 火齊	huo3 ji4
 灰不喇唧	hui1 bu4 la3 ji1
 灰姑娘	hui1 gu1 niang2
+灰姑娘	hui1 gu1 niang5	80%
 灰度等級	hui1 du4 deng3 ji2
 灰心喪意	hui1 xin1 sang4 yi4
 灰心喪氣	hui1 xin1 sang4 qi4
@@ -95586,6 +95596,7 @@ min_phrase_weight: 100
 紅女	gong1 nv3
 紅女	hong2 nv3
 紅姑娘	hong2 gu1 niang2
+紅姑娘	hong2 gu1 niang5	80%
 紅寡婦鳥	hong2 gua3 fu4 niao3
 紅將軍	hong2 jiang1 jun1
 紅彤彤	hong2 tong2 tong2
@@ -97260,6 +97271,7 @@ min_phrase_weight: 100
 老奶奶	lao3 nai3 nai5
 老奶奶	lao3 nai3 nai3
 老姑娘	lao3 gu1 niang2
+老姑娘	lao3 gu1 niang5	80%
 老姥	lao3 mu3
 老娘	lao3 niang2
 老婆	lao3 po2
@@ -113802,4 +113814,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 113805 #####
+##### @結束 END - 113817 #####
