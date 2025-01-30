@@ -2432,6 +2432,9 @@ min_phrase_weight: 100
 槭	zu2	0%
 添	tian4	0%
 薀	wen1	0%
+叴	rou2	0%
+㕤	rou2	0%
+𠮫	qiu2	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -64442,6 +64445,9 @@ min_phrase_weight: 100
 可望不可親	ke3 wang4 bu4 ke3 qin1
 可樂	ke3 le4
 可汗	ke4 han2
+可汗	ke4 han4	80%
+可汗	ke3 han2	80%
+可汗	ke3 han4	80%
 可決率	ke3 jue2 lv4
 可煞	ke3 sha4
 可煞作怪	ke3 sha4 zuo4 guai4
@@ -69123,6 +69129,9 @@ min_phrase_weight: 100
 天剋地衝	tian1 ke4 di4 chong1
 天南地北	tian1 nan2 di4 bei3
 天可汗	tian1 ke4 han2
+天可汗	tian1 ke4 han4	80%
+天可汗	tian1 ke3 han2	80%
+天可汗	tian1 ke3 han4	80%
 天和	tian1 he2
 天哪	tian1 na3
 天哪	tian1 na5
@@ -113816,4 +113825,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 113819 #####
+##### @結束 END - 113828 #####

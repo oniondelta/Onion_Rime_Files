@@ -18,7 +18,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion_add
-version: "202412"
+version: "202501"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7
@@ -1122,6 +1122,7 @@ min_phrase_weight: 100
 𠹍	(rong5)	0%
 喏	(re5)	0%
 㖻	(rou5)	0%
+㕤	(rou5)	0%
 嘫	(ran5)	0%
 呥	(ran5)	0%
 𠱞	(ran5)	0%
