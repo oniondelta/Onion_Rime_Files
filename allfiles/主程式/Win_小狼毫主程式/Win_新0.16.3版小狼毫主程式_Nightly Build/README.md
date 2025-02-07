@@ -6,11 +6,11 @@
 
 ### Version Info
 
-- Github Releases：[0ef3154](https://github.com/rime/weasel/releases/tag/latest)
+- Github Releases：[2dc4e19](https://github.com/rime/weasel/releases/tag/latest)
 
 - Weasel 0.16.3
 
-- librime 1.11.0
+- librime 1.13.0
 
 - librime-lua #287
 
