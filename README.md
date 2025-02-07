@@ -43,7 +43,11 @@
 
   > Linux 反饋問題很多，其 Rime 核心 librime 過舊，librime-lua 掛件缺失！不可能回退使功能打折去符合舊版核心寫法！
 
-  > 20241103，Mac 和 Win 用官方發布（release）的主程式，需置換最新 [Oct 14, 2024 之後的 librime 核心](https://github.com/rime/librime/releases) ！
+  > Mac 建議使用 [squirrel 1.0.3](https://github.com/rime/squirrel/releases) 以上版本。
+
+  > macOS 12.0 以下無法安裝新版，只可安裝 [Squirrel 0.16.2](https://github.com/rime/squirrel/releases/tag/0.16.2) 以下版本，需置換最新 [Oct 14, 2024 之後的 librime 核心](https://github.com/rime/librime/releases) ！
+
+  > Win 用官方發布（release）的 [weasel 0.16.3](https://github.com/rime/weasel/releases/tag/0.16.3) 主程式，需置換最新 [Oct 14, 2024 之後的 librime 核心](https://github.com/rime/librime/releases) ！
 
   > 以下為各版本，其組件版本不一造成不相容時之說明：
 
