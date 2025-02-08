@@ -158,7 +158,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "202501"
+version: "202502"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -65020,7 +65020,11 @@ min_phrase_weight: 100
 吳剛伐桂	wu2 gang1 fa1 gui4
 吳剛伐桂	wu2 gang1 fa2 gui4
 吳堡	wu2 bu3
+吳堡	wu2 pu4
+吳堡	wu2 bao3
 吳堡縣	wu2 bu3 xian4
+吳堡縣	wu2 pu4 xian4
+吳堡縣	wu2 bao3 xian4
 吳宮教陣	wu2 gong1 jiao4 zhen4
 吳昌碩	wu2 chang1 shi2
 吳澄	wu2 cheng2
@@ -65613,9 +65617,9 @@ min_phrase_weight: 100
 咬文嚼字	yao3 wen2 jue2 zi4
 咬牙切齒	yao3 ya2 qie4 chi3
 咬群的騾子	yao3 qun2 de5 luo2 zi5
-咬耳朵	yao3 er3 duo1
+咬耳朵	yao3 er3 duo1	80%
 咬耳朵	yao3 er3 duo3
-咬耳朵	yao3 er3 duo5
+咬耳朵	yao3 er3 duo5	80%
 咬舌子	yao3 she2 zi5
 咬舌頭	yao3 she2 tou5
 咬舌頭	yao3 she2 tou2
@@ -68962,9 +68966,9 @@ min_phrase_weight: 100
 大老婆	da4 lao3 po2
 大老婆	da4 lao3 po5
 大而無當	da4 er2 wu2 dang4
-大耳朵	da4 er3 duo1
+大耳朵	da4 er3 duo1	80%
 大耳朵	da4 er3 duo3
-大耳朵	da4 er3 duo5
+大耳朵	da4 er3 duo5	80%
 大聲吆喝	da4 sheng1 yao1 he4
 大肆抨擊	da4 si4 peng1 ji2
 大肚	da4 du4
@@ -71880,9 +71884,9 @@ min_phrase_weight: 100
 小老婆	xiao3 lao3 po2
 小老婆子	xiao3 lao3 po5 zi5
 小老婆子	xiao3 lao3 po2 zi5
-小耳朵	xiao3 er3 duo1
+小耳朵	xiao3 er3 duo1	80%
 小耳朵	xiao3 er3 duo3
-小耳朵	xiao3 er3 duo5
+小耳朵	xiao3 er3 duo5	80%
 小聰明	xiao3 cong1 ming2
 小肚雞腸	xiao3 du4 ji1 chang2
 小舅子	xiao3 jiu4 zi5
@@ -76518,8 +76522,8 @@ min_phrase_weight: 100
 扇面對	shan4 mian4 dui4
 扇面琴	shan1 mian4 qin2
 扇風耳朵	shan1 feng1 er3 duo3
-扇風耳朵	shan1 feng1 er3 duo1
-扇風耳朵	shan1 feng1 er3 duo5
+扇風耳朵	shan1 feng1 er3 duo1	80%
+扇風耳朵	shan1 feng1 er3 duo5	80%
 扇馬	shan4 ma3
 扇骨子	shan4 gu3 zi5
 扈從	hu4 zong4
@@ -76645,9 +76649,9 @@ min_phrase_weight: 100
 扎筏子	zha1 fa2 zi5
 扎縛	zha2 fu2
 扎罰子	zha1 fa2 zi5
-扎耳朵	zha1 er3 duo1
+扎耳朵	zha1 er3 duo1	80%
 扎耳朵	zha1 er3 duo3
-扎耳朵	zha1 er3 duo5
+扎耳朵	zha1 er3 duo5	80%
 扎腳	zha2 jiao3
 扎花	zha1 hua1
 扎草	zha1 cao3
@@ -77644,9 +77648,9 @@ min_phrase_weight: 100
 拉鎖子	la1 suo3 zi5
 拉長	la1 chang2
 拉長線	la1 chang2 xian4
-拉長耳朵聽	la1 chang2 er3 duo1 ting1
+拉長耳朵聽	la1 chang2 er3 duo1 ting1	80%
 拉長耳朵聽	la1 chang2 er3 duo3 ting1
-拉長耳朵聽	la1 chang2 er3 duo5 ting1
+拉長耳朵聽	la1 chang2 er3 duo5 ting1	80%
 拉長臉	la1 chang2 lian3
 拉開	la1 kai1
 拉飢荒	la1 ji1 huang1
@@ -83921,9 +83925,9 @@ min_phrase_weight: 100
 棉花	mian2 hua1
 棉花店著火	mian2 hua1 dian4 zhao2 huo3
 棉花糖	mian2 hua1 tang2
-棉花耳朵	mian2 hua1 er3 duo1
+棉花耳朵	mian2 hua1 er3 duo1	80%
 棉花耳朵	mian2 hua1 er3 duo3
-棉花耳朵	mian2 hua1 er3 duo5
+棉花耳朵	mian2 hua1 er3 duo5	80%
 棉薄之力	mian2 bo2 zhi1 li4
 棉都	mian2 du1
 棋高一著	qi2 gao1 yi4 zhuo2
@@ -86242,8 +86246,10 @@ min_phrase_weight: 100
 河裡孩兒岸上娘	he2 li3 hai2 er2 an4 shang4 niang2
 河西堡	he2 xi1 pu4
 河西堡	he2 xi1 bu3
+河西堡	he2 xi1 bao3
 河西堡鎮	he2 xi1 pu4 zhen4
 河西堡鎮	he2 xi1 bu3 zhen4
+河西堡鎮	he2 xi1 bao3 zhen4
 河間市	he2 jian1 shi4
 河間獻王	he2 jian1 xian4 wang2
 河間縣	he2 jian1 xian4
@@ -91892,9 +91898,9 @@ min_phrase_weight: 100
 盆地	pen2 di4
 盆子	pen2 zi5
 盆成括	pen2 cheng2 gua1
-盆罐都有耳朵	pen2 guan4 dou1 you3 er3 duo1
+盆罐都有耳朵	pen2 guan4 dou1 you3 er3 duo1	80%
 盆罐都有耳朵	pen2 guan4 dou1 you3 er3 duo3
-盆罐都有耳朵	pen2 guan4 dou1 you3 er3 duo5
+盆罐都有耳朵	pen2 guan4 dou1 you3 er3 duo5	80%
 盈千累百	ying2 qian1 lei3 bai3
 盈千累萬	ying2 qian1 lei3 wan4
 盈尺之地	ying2 chi3 zhi1 di4
@@ -97507,27 +97513,27 @@ min_phrase_weight: 100
 耳挖子	er3 wa1 zi5
 耳挖子	er3 wa2 zi5
 耳摑子	er3 guo2 zi5
-耳朵	er3 duo1
+耳朵	er3 duo1	80%
 耳朵	er3 duo3
-耳朵	er3 duo5
-耳朵尖	er3 duo1 jian1
+耳朵	er3 duo5	80%
+耳朵尖	er3 duo1 jian1	80%
 耳朵尖	er3 duo3 jian1
-耳朵尖	er3 duo5 jian1
-耳朵帽	er3 duo1 mao4
+耳朵尖	er3 duo5 jian1	80%
+耳朵帽	er3 duo1 mao4	80%
 耳朵帽	er3 duo3 mao4
-耳朵帽	er3 duo5 mao4
-耳朵底子	er3 duo1 di3 zi5
+耳朵帽	er3 duo5 mao4	80%
+耳朵底子	er3 duo1 di3 zi5	80%
 耳朵底子	er3 duo3 di3 zi5
-耳朵底子	er3 duo5 di3 zi5
-耳朵裡冒出腳來	er3 duo1 li3 mao4 chu1 jiao3 lai2
+耳朵底子	er3 duo5 di3 zi5	80%
+耳朵裡冒出腳來	er3 duo1 li3 mao4 chu1 jiao3 lai2	80%
 耳朵裡冒出腳來	er3 duo3 li3 mao4 chu1 jiao3 lai2
-耳朵裡冒出腳來	er3 duo5 li3 mao4 chu1 jiao3 lai2
-耳朵裡響	er3 duo1 li3 xiang3
+耳朵裡冒出腳來	er3 duo5 li3 mao4 chu1 jiao3 lai2	80%
+耳朵裡響	er3 duo1 li3 xiang3	80%
 耳朵裡響	er3 duo3 li3 xiang3
-耳朵裡響	er3 duo5 li3 xiang3
-耳朵軟	er3 duo1 ruan3
+耳朵裡響	er3 duo5 li3 xiang3	80%
+耳朵軟	er3 duo1 ruan3	80%
 耳朵軟	er3 duo3 ruan3
-耳朵軟	er3 duo5 ruan3
+耳朵軟	er3 duo5 ruan3	80%
 耳根子	er3 gen1 zi5
 耳殼	er3 ke2
 耳消耳息	er3 xiao1 er3 xi2
@@ -104089,8 +104095,9 @@ min_phrase_weight: 100
 豎挑眼	shu4 tiao1 yan3
 豎褐	shu4 he2
 豎起	shu4 qi3
-豎起耳朵	shu4 qi3 er3 duo1
-豎起耳朵	shu4 qi3 er3 duo5
+豎起耳朵	shu4 qi3 er3 duo1	80%
+豎起耳朵	shu4 qi3 er3 duo5	80%
+豎起耳朵	shu4 qi3 er3 duo3
 豐功偉績	feng1 gong1 wei3 ji1
 豐功偉績	feng1 gong1 wei3 ji4
 豐功盛烈	feng1 gong1 sheng4 lie4
@@ -104174,9 +104181,9 @@ min_phrase_weight: 100
 貓溺	mao1 niao4
 貓眼兒	mao1 yan3 er5	80%
 貓眼兒	mao1 yan3 er2
-貓耳朵	mao1 er3 duo1
+貓耳朵	mao1 er3 duo1	80%
 貓耳朵	mao1 er3 duo3
-貓耳朵	mao1 er3 duo5
+貓耳朵	mao1 er3 duo5	80%
 貔子	pi2 zi5
 貝‧布托	bei4 eng5 bu4 tuo1
 貝他係數	bei4 ta1 xi4 shu4
@@ -105555,8 +105562,8 @@ min_phrase_weight: 100
 軟罐頭	ruan3 guan4 tou5
 軟罐頭	ruan3 guan4 tou2
 軟耳朵	ruan3 er3 duo3
-軟耳朵	ruan3 er3 duo1
-軟耳朵	ruan3 er3 duo5
+軟耳朵	ruan3 er3 duo1	80%
+軟耳朵	ruan3 er3 duo5	80%
 軟調脾	ruan3 tiao2 pi2
 軟釘子	ruan3 ding1 zi5
 軟骨頭	ruan3 gu2 tou5
@@ -113825,4 +113832,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 113828 #####
+##### @結束 END - 113835 #####
