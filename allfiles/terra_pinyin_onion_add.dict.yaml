@@ -18,7 +18,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion_add
-version: "202501"
+version: "202502"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7
@@ -154,6 +154,7 @@ min_phrase_weight: 100
 塌	(ta4)	10%
 桔	(ji2)	10%
 潛	(qian3)	1%
+潜	(qian3)	1%
 嫉	(ji4)	1%
 沏	(qi4)	1%
 煽	(shan4)	1%
@@ -1304,6 +1305,7 @@ min_phrase_weight: 100
 呜	(wu5)	0%
 呒	(wu5)	0%
 呱	(wa5)	0%
+哌	(wa5)	0%
 嗗	(wa5)	0%
 啘	(wa5)	0%
 咓	(wa5)	0%

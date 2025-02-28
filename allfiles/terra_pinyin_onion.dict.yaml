@@ -2435,6 +2435,7 @@ min_phrase_weight: 100
 叴	rou2	0%
 㕤	rou2	0%
 𠮫	qiu2	0%
+璹	shou4
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -57540,6 +57541,8 @@ min_phrase_weight: 100
 京都	jing1 du1
 京都府	jing1 du1 fu3
 京都念慈菴枇杷膏	jing1 du1 nian4 ci2 an1 pi2 pa2 gao1
+京都念慈菴枇杷膏	jing1 du1 nian4 ci2 an1 pi2 pa5 gao1
+京都念慈菴枇杷膏	jing1 du1 nian4 ci2 an1 pi2 ba5 gao1
 京闕	jing1 que4
 亭午夜分	ting2 wu3 ye4 fen1
 亭場	ting2 chang2	3%
@@ -83336,8 +83339,10 @@ min_phrase_weight: 100
 构肆	gou1 si4
 枇杷	pi2 pa5
 枇杷	pi2 pa2
+枇杷	pi2 ba5
 枇杷膏	pi2 pa5 gao1
 枇杷膏	pi2 pa2 gao1
+枇杷膏	pi2 ba5 gao1
 枉擔虛名	wang3 dan1 xu1 ming2
 枉橈	wang3 nao2
 枉突徙薪	wang3 tu2 xi3 xin1
@@ -113832,4 +113837,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 113835 #####
+##### @結束 END - 113840 #####
