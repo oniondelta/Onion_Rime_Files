@@ -18,7 +18,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion_add
-version: "202502"
+version: "202503"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7
@@ -58,7 +58,6 @@ min_phrase_weight: 100
 裳	(shang3)
 縛	(fo4)
 缚	(fo4)
-房	(pang2)	5%
 綺	(qi2)
 绮	(qi2)
 躍	(yao4)
