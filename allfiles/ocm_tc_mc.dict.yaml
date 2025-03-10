@@ -4,7 +4,7 @@
 # 字碼有少部分重複，但勿用excel去刪除重複的，因會把相通的字給一並刪除，如：aduu->[朗]和[朗]會給一並的刪除！
 ---
 name: ocm_tc_mc
-version: "202407"
+version: "202503"
 sort: original
 use_preset_vocabulary: false
 #max_phrase_length: 7
@@ -19970,7 +19970,7 @@ use_preset_vocabulary: false
 囂	ooto	101
 嚻	ooto
 嚻	ootov
-槑	oott
+槑	oott	1
 回	oov	17710
 囘	oov
 囬	oov
@@ -20253,7 +20253,7 @@ use_preset_vocabulary: false
 呵	oto	311
 啊	oto
 喕	otoh	1
-槑	otot
+槑	otot	1
 啊	otov	6537
 哽	otqx	22
 噉	otrp	2
@@ -22930,7 +22930,7 @@ use_preset_vocabulary: false
 畊	qjj
 鷝	qjjf	1
 畢	qjjq	2731
-畊	qjjv
+畊	qjjv	1
 狾	qjk	1
 犻	qjn
 狜	qjo	1
@@ -25401,7 +25401,7 @@ use_preset_vocabulary: false
 葤	rsa
 禣	rsaa
 禬	rsad	1
-葤	rsaf
+葤	rsaf	1
 禴	rsam	2
 祫	rsao	1
 祴	rsar	1
@@ -25547,7 +25547,7 @@ use_preset_vocabulary: false
 祪	rsnp
 祪	rsnpv	1
 祹	rsnr	1
-祢	rsns
+祢	rsns	1
 祹	rsnu	1
 禂	rsnv	1
 虌	rsnx	2
@@ -25634,7 +25634,7 @@ use_preset_vocabulary: false
 蔬	rsv	319
 祚	rsvf	18
 祣	rsvk	1
-祢	rsvs
+祢	rsvs	1
 禕	rsw	6
 禨	rswb	1
 禕	rsws	6
@@ -30470,7 +30470,7 @@ use_preset_vocabulary: false
 鵬	uunf	304
 鷂	uunf
 鷂	uunfv	10
-脉	uunv
+脉	uunv	1
 胎	uuo	826
 繇	uups	4
 霾	uuqq	65
@@ -35965,7 +35965,7 @@ use_preset_vocabulary: false
 慮	zh	3041
 慮	zha	3041
 孞	zha
-孞	zhav
+孞	zhav	1
 簃	zhcc	1
 篍	zhf
 歑	zhi	1
