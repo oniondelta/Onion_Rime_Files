@@ -2441,6 +2441,19 @@ min_phrase_weight: 100
 彍	kuo4	0%
 垠	ken4	0%
 髃	ou3
+㸧	yin2
+㸧	ken3	0%
+㸧	qian3	0%
+齦	qian3	0%
+龈	yin2
+龈	qian3	0%
+齦	kun3	0%
+龈	kun3	0%
+齳	yuan3	0%
+𪘩	yuan3	0%
+齫	yuan3	0%
+齫	yun3	0%
+龅	pao2	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -114588,4 +114601,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 114591 #####
+##### @結束 END - 114604 #####
