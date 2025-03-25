@@ -136,6 +136,7 @@
 #    詞句中，「脂」臺灣日常慣用語音為「zhi3」，臺灣標準為「zhi1」，除「胭脂」「脂粉」兩詞只標註「zhi1」外，其他皆補齊「zhi1」「zhi3」。
 #    詞句中，「冴」日常發音常會誤發為「ya2」，標準為「hu4」，故日文人名中皆補齊「ya2」「hu4」，前者詞頻設為3%。
 #    詞句中，「蝸」臺灣字典發音為「gua1」，大陸發音為「wo1」，日常易混，故皆補齊「gua1」「wo」。
+#    詞句中，「萎」於某些詞，臺灣日常慣用語音為「wei3」，臺灣標準為「wei1」，故皆補齊「wei1」和「wei3」。
 #    詞句中，「姑娘」補齊「gu1 niang2」和「gu1 niang5」，後者詞頻設為80%。
 #    預計比對「輕聲和一聲」變音。
 #
@@ -61131,6 +61132,7 @@ min_phrase_weight: 100
 准將	zhun3 jiang4
 准折	zhun3 zhe2
 凋萎	diao1 wei1
+凋萎	diao1 wei3
 凋落	diao1 luo4
 凌空	ling2 kong1
 凌藉	ling2 ji2
@@ -83873,6 +83875,7 @@ min_phrase_weight: 100
 枯草桿菌	ku1 cao3 gan3 jun1
 枯草桿菌	ku1 cao3 gan3 jun4
 枯萎病	ku1 wei3 bing4
+枯萎病	ku1 wei1 bing4
 枯魚涸轍	ku1 yu2 he2 che4
 枯魚涸轍	ku1 yu2 he2 zhe2
 枳椇	ji3 ju3
@@ -90485,6 +90488,7 @@ min_phrase_weight: 100
 猗嗟	yi1 jie1
 猗猗靡靡	yi1 yi1 mi3 mi3
 猗萎	yi1 wei3
+猗萎	yi1 wei1
 猗靡	yi1 mi3
 猗頓	yi1 dun4
 猗頓	yi3 dun4
@@ -98466,6 +98470,7 @@ min_phrase_weight: 100
 肋骨	lei4 gu3
 肋骨舉肌	le4 gu3 ju3 ji1
 肌肉萎縮症	ji1 rou4 wei1 suo1 zheng4
+肌肉萎縮症	ji1 rou4 wei3 suo1 zheng4
 肌膚之親	ji1 fu1 zhi1 qin1
 肌膜	ji1 mo4	3%
 肌膜	ji1 mo2
@@ -100529,8 +100534,11 @@ min_phrase_weight: 100
 萍蹤靡定	ping2 zong1 mi3 ding4
 萍飄蓬轉	ping2 piao1 peng2 zhuan3
 萎葉	wei3 ye4
+萎葉	wei1 ye4
 萎蕤	wei3 rui2
+萎蕤	wei1 rui2	0%
 萎謝	wei1 xie4
+萎謝	wei3 xie4
 萎靡	wei1 mi3
 萎靡	wei3 mi3
 萎靡	wei1 mi2
@@ -100606,6 +100614,7 @@ min_phrase_weight: 100
 萯陽	bei4 yang2
 萱花椿樹	xuan1 hua1 chun1 shu4
 萱萎北堂	xuan1 wei1 bei3 tang2
+萱萎北堂	xuan1 wei3 bei3 tang2
 萹豆	bian3 dou4
 萼片	e4 pian4
 落下	la4 xia4
@@ -102936,6 +102945,7 @@ min_phrase_weight: 100
 裘葛之遺	qiu2 ge2 zhi1 yi2
 裘褐	qiu2 he2
 裘馨氏肌肉萎縮症	qiu2 xin1 shi4 ji1 rou4 wei1 suo1 zheng4
+裘馨氏肌肉萎縮症	qiu2 xin1 shi4 ji1 rou4 wei3 suo1 zheng4
 裙子	qun2 zi5
 裙屐少年	qun2 ji1 shao4 nian2
 裙帶親	qun2 dai4 qin1
@@ -112506,6 +112516,7 @@ min_phrase_weight: 100
 頸靜脈	jing3 jing4 mo4
 頹喪	tui2 sang4
 頹萎	tui2 wei3
+頹萎	tui2 wei1
 頹落	tui2 luo4
 頹靡不振	tui2 mi3 bu2 zhen4
 頻傳	pin2 chuan2
@@ -114619,4 +114630,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 114622 #####
+##### @結束 END - 114633 #####
