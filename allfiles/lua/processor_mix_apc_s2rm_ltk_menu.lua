@@ -246,9 +246,9 @@ local function processor(key, env)
     --   return 2
 
     -- elseif #c_input == caret_pos and key:repr() == "space" then
-    elseif #c_input == caret_pos then
-      context:confirm_current_selection()  -- 可記憶
-      -- engine:process_key( KeyEvent("Return") )  -- 可能會報錯
+    elseif #c_input == caret_pos then  -- 輸入「中文」接「外掛方案」或「mf_translator」時，空白鍵可直接上屏，且不被下段程式碼影響。
+      -- context:confirm_current_selection()  -- 可記憶（輸入中文兩字以上，游標移中再選字，然後按「esc」消去後面編碼，此時 seg:has_tag("abc") 為 false 時，會無法上屏！）
+      engine:process_key( KeyEvent("Return") )  -- 可記憶，可能會報錯
       -- engine:commit_text(g_c_t)  -- 不會記憶
       -- context:clear()
       return 1 -- kAccepted
