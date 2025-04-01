@@ -13,7 +13,7 @@
 # ===============================
 ---
 name: phrases.cht
-version: "202503"
+version: "202504"
 sort: by_weight #original
 use_preset_vocabulary: false
 max_phrase_length: 7 #20
