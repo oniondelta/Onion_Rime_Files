@@ -208,7 +208,8 @@ local function processor(key, env)
 
     --- 某些方案輸入 Return 出英文，該條限定注音 Return 一律直上中文。
     elseif key:repr() == "Return" or key:repr() == "KP_Enter" then
-      context:confirm_current_selection()  -- 可記憶
+      context:commit()  -- 可記憶
+      -- context:confirm_current_selection()  -- 可記憶
       -- engine:process_key( KeyEvent("Return") )  -- 可能會報錯
       -- engine:commit_text(g_c_t)  -- 不會記憶
       -- context:clear()
