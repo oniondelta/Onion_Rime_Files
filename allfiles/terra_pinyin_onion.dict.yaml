@@ -138,6 +138,7 @@
 #    詞句中，「蝸」臺灣字典發音為「gua1」，大陸發音為「wo1」，日常易混，故皆補齊「gua1」「wo」。
 #    詞句中，「萎」於某些詞，臺灣日常慣用語音為「wei3」，臺灣標準為「wei1」，故皆補齊「wei1」和「wei3」。
 #    詞句中，「鰾」日常發音常會誤發為「biao1」，臺灣標準為「biao4」，故皆補齊「biao4」「biao1」，後者詞頻設為80%。
+#    詞句中，「鷲」日常發音常會誤發為「jiu1」，臺灣標準為「jiu4」，故皆補齊「jiu4」「jiu1」，後者詞頻設為80%。
 #    詞句中，「姑娘」補齊「gu1 niang2」和「gu1 niang5」，後者詞頻設為80%。
 #    預計比對「輕聲和一聲」變音。
 #
@@ -114051,6 +114052,7 @@ min_phrase_weight: 100
 鷗鳥忘機	ou1 niao3 wang2 ji1
 鷗鷺忘機	ou1 lu4 wang2 ji1
 鷲峰山脈	jiu4 feng1 shan1 mai4
+鷲峰山脈	jiu1 feng1 shan1 mai4	80%
 鷸冠	yu4 guan1
 鷸蚌相持	yu4 bang4 xiang1 chi2
 鷸蚌相爭	yu4 bang4 xiang1 zheng1
@@ -114643,4 +114645,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 114646 #####
+##### @結束 END - 114648 #####
