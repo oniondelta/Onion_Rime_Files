@@ -180,7 +180,6 @@ local simple_calculator = require("f_components/f_simple_calculator")
 --- 按鍵說明
 
 local hotkeys = require("f_components/keys_table/hot_keys")
-local numberkeys = require("f_components/keys_table/number_keys")
 local kh_table = require("f_components/keys_table/kh_table")
 local ks_table = require("f_components/keys_table/ks_table")
 local kj_table = require("f_components/keys_table/kj_table")
@@ -189,6 +188,7 @@ local kp_table = require("f_components/keys_table/kp_table")
 local ky_table = require("f_components/keys_table/ky_table")
 local kg_table = require("f_components/keys_table/kg_table")
 local kc_table = require("f_components/keys_table/kc_table")
+local numberkeys = require("f_components/keys_table/number_keys")
 
 ----------------------------------------------------------------------------------------
 --- 快捷開啟
