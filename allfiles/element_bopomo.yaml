@@ -9,10 +9,15 @@ menu:
   # alternative_select_keys: "YUIOPHJKLNM"
   # alternative_select_labels: [ 甲, 乙, 丙, 丁, 戊, 己, 庚, 辛, 壬, 癸 ]
   # alternative_select_labels: [ ①, ②, ③, ④, ⑤, ⑥, ⑦, ⑧, ⑨ ]  # 修改候選標籤
+  # alternative_select_labels: [ 1, 2, 3, 4, 5, 6 ]
   # alternative_select_labels: [ 'QY', 'AH', 'ZN', 'WU', 'SJ', 'XM', 'EI' ,'DK', 'CO' ]
   # alternative_select_labels: [ 'QY', 'AH', 'ZN', 'WU', 'SJ', 'XM' ]
   # alternative_select_labels: [ 1QY, 2AH, 3ZN, 4WU, 5SJ, 6XM ]
+  # alternative_select_labels: [ ¹QY, ²AH, ³ZN, ⁴WU, ⁵SJ, ⁶XM ]
   # alternative_select_labels: [ ₁QY, ₂AH, ₃ZN, ₄WU, ₅SJ, ₆XM ]
+  # alternative_select_labels: [ QY1, AH2, ZN3, WU4, SJ5, XM6 ]
+  # alternative_select_labels: [ QY¹, AH², ZN³, WU⁴, SJ⁵, XM⁶ ]
+  # alternative_select_labels: [ QY₁, AH₂, ZN₃, WU₄, SJ₅, XM₆ ]
   alternative_select_labels: [ QY, AH, ZN, WU, SJ, XM ]
   page_size: 6
 
