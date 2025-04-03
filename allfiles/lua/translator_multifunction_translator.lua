@@ -180,6 +180,7 @@ local simple_calculator = require("f_components/f_simple_calculator")
 --- 按鍵說明
 
 local hotkeys = require("f_components/keys_table/hot_keys")
+local numberkeys = require("f_components/keys_table/number_keys")
 local kh_table = require("f_components/keys_table/kh_table")
 local ks_table = require("f_components/keys_table/ks_table")
 local kj_table = require("f_components/keys_table/kj_table")
@@ -256,12 +257,12 @@ local function init(env)
       , { "　k y〔拉丁 洋蔥形碼 中文拼音 編碼〕", "㉟" }
       , { "　k g〔希臘 洋蔥形碼 編碼〕", "㊱" }
       , { "　k c〔西里爾 洋蔥形碼 編碼〕", "㊲" }
-      , { "〖版本和記憶體〗", "㊳" }
-      , { "　v〔版本資訊〕", "㊴" }
+      , { "　k n〔便捷數字符號 鍵位〕", "㊳" }
+      , { "〖記憶體和版本〗", "㊴" }
       , { "　g〔Lua 所佔記憶體〕(Garbage)", "㊵" }
       , { "　gc〔垃圾回收〕(Garbage Collection)", "㊶" }
-      , { "═══  結束  ═══  ", "㊷" }
-      , { "", "㊸" }
+      , { "　v〔版本資訊〕", "㊷" }
+      , { "═══  結束  ═══  ", "㊸" }
       , { "", "㊹" }
       , { "", "㊺" }
       , { "", "㊻" }
@@ -408,6 +409,7 @@ local function translate(input, seg, env)
       , { "  ~y 〔拉丁 洋蔥形碼 中文拼音 編碼〕", "⓼" }
       , { "  ~g 〔希臘 洋蔥形碼 編碼〕", "⓽" }
       , { "  ~c 〔西里爾 洋蔥形碼 編碼〕", "⓾" }
+      , { "  ~n 〔便捷數字符號 鍵位〕", "⑪" }
       , { "　═══  結束  ═══  ", "" }
       -- , { "===========  結束  ===========    ", "⓼" }
       }
@@ -506,6 +508,15 @@ local function translate(input, seg, env)
     local keys_table = kc_table
     for k, v in ipairs(keys_table) do
       yield_c( v[2], " " .. v[1], env.prefix .. "k C" .. "\t 【西里爾 洋蔥形碼 編碼】")
+    end
+    return
+  end
+
+  if (input == env.prefix .. "kn") then
+    -- local keys_table = numberkeys(env.schema_id)
+    -- for k, v in ipairs(keys_table) do
+    for k, v in ipairs(numberkeys(env.schema_id)) do
+      yield_c( v[2], " " .. v[1], env.prefix .. "k N" .. "\t 【便捷數字符號 鍵位】")
     end
     return
   end
