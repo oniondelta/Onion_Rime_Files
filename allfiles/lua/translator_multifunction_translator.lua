@@ -78,6 +78,7 @@ local circled2_number = f_n_s.circled2_number
 local circled3_number = f_n_s.circled3_number
 local circled4_number = f_n_s.circled4_number
 local circled5_number = f_n_s.circled5_number
+local brackets_number = f_n_s.brackets_number
 local purech_number = f_n_s.purech_number
 local purebigch_number = f_n_s.purebigch_number
 local military_number = f_n_s.military_number
@@ -2988,6 +2989,7 @@ local function translate(input, seg, env)
     yield_c( "−⃝", "〔帶圈負號〕", num_preedit)  -- ㊀ -⃝ −︎⃝ ⊝ ⊖
     yield_c( "⛔︎", "〔反白帶圈負號〕", num_preedit)
     yield_c( "負⃝", "〔帶圈中文負號〕", num_preedit)  -- 負︎⃝
+    yield_c( "(負)", "〔帶括中文負號〕", num_preedit)
     yield_c( "⛔", "〔鍵帽負號〕", num_preedit)  -- ➖ -⃣ −⃣
     yield_c( "➖", "〔加粗的減號〕", num_preedit)
     yield_c( "⠤", "〔點字〕(computer/unified)", num_preedit)
@@ -3068,6 +3070,7 @@ local function translate(input, seg, env)
     local neg_n_q = string.gsub(neg_n, "-", "−⃝")  -- ㊀ -⃝ −︎⃝ ⊝ ⊖
     local neg_n_a = string.gsub(neg_n, "-", "⛔︎")
     local neg_n_z = string.gsub(neg_n, "-", "負⃝")  -- 負︎⃝
+    local neg_n_p = string.gsub(neg_n, "-", "(負)")
     local neg_n_k = string.gsub(neg_n, "-", "⛔")  -- ➖ -⃣ −⃣
     local neg_n_b = string.gsub(neg_n, "-", "⠤")
 
@@ -3146,6 +3149,7 @@ local function translate(input, seg, env)
       yield_c( neg_n_a .. circled3_number(numberout), "〔反白帶圈〕", num_preedit)
       yield_c( neg_n_a .. circled4_number(numberout), "〔反白帶圈無襯線〕", num_preedit)
       yield_c( neg_n_z .. circled5_number(numberout), "〔帶圈中文〕", num_preedit)
+      yield_c( neg_n_p .. brackets_number(numberout), "〔帶括中文〕", num_preedit)
 
       yield_c( neg_n_k .. keycap_number(numberout), "〔鍵帽〕", num_preedit)
       yield_c( neg_n_b .. braille_c_number(numberout), "〔點字〕(computer)", num_preedit)

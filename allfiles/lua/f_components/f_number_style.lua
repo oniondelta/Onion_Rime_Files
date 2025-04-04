@@ -74,7 +74,14 @@ end
 
 local function circled5_number(t)
   if t == "" then return "" end
-  local format1 = "xlit|0123456789|Ⓞ㊀㊁㊂㊃㊄㊅㊆㊇㊈|"
+  local format1 = "xlit|0123456789|Ⓞ㊀㊁㊂㊃㊄㊅㊆㊇㊈|"  --小寫「o」：ⓞ
+  local proj = convert_format(format1)
+  return proj:apply(t)
+end
+
+local function brackets_number(t)
+  if t == "" then return "" end
+  local format1 = "xlit|0123456789|⒪㈠㈡㈢㈣㈤㈥㈦㈧㈨|"  --大寫「o」：🄞
   local proj = convert_format(format1)
   return proj:apply(t)
 end
@@ -383,6 +390,7 @@ return {
         circled3_number = circled3_number,
         circled4_number = circled4_number,
         circled5_number = circled5_number,
+        brackets_number = brackets_number,
         purech_number = purech_number,
         purebigch_number = purebigch_number,
         military_number = military_number,
