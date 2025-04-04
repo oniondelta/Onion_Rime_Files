@@ -78,7 +78,7 @@ local circled2_number = f_n_s.circled2_number
 local circled3_number = f_n_s.circled3_number
 local circled4_number = f_n_s.circled4_number
 local circled5_number = f_n_s.circled5_number
-local brackets_number = f_n_s.brackets_number
+local paren_number = f_n_s.paren_number
 local purech_number = f_n_s.purech_number
 local purebigch_number = f_n_s.purebigch_number
 local military_number = f_n_s.military_number
@@ -3149,7 +3149,7 @@ local function translate(input, seg, env)
       yield_c( neg_n_a .. circled3_number(numberout), "〔反白帶圈〕", num_preedit)
       yield_c( neg_n_a .. circled4_number(numberout), "〔反白帶圈無襯線〕", num_preedit)
       yield_c( neg_n_z .. circled5_number(numberout), "〔帶圈中文〕", num_preedit)
-      yield_c( neg_n_p .. brackets_number(numberout), "〔帶括中文〕", num_preedit)
+      yield_c( neg_n_p .. paren_number(numberout), "〔帶括中文〕", num_preedit)
 
       yield_c( neg_n_k .. keycap_number(numberout), "〔鍵帽〕", num_preedit)
       yield_c( neg_n_b .. braille_c_number(numberout), "〔點字〕(computer)", num_preedit)
