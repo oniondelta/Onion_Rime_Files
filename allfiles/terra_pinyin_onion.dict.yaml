@@ -63425,6 +63425,7 @@ min_phrase_weight: 100
 匹馬單鎗	pi1 ma3 dan1 qiang1
 匹馬隻輪	pi1 ma3 zhi1 lun2
 匼匝	an3 za1
+匼匝	an3 za2	80%
 匽廁	yan3 ci4
 匾扎	bian3 zha2
 匾擔	bian3 dan1
@@ -64778,7 +64779,9 @@ min_phrase_weight: 100
 吃人一個蛋	chi1 ren2 yi4 ge5 dan4
 吃人不吐骨	chi1 ren2 bu4 tu3 gu3
 吃人不吐骨頭	chi1 ren2 bu4 tu3 gu2 tou5
+吃人不吐骨頭	chi1 ren2 bu4 tu3 gu2 tou2
 吃人不吐骨頭	chi1 ren2 bu4 tu3 gu3 tou2
+吃人不吐骨頭	chi1 ren2 bu4 tu3 gu3 tou5
 吃勁	chi1 jin4
 吃勁	chi1 jing4
 吃口令	ji2 kou3 ling4
@@ -65236,6 +65239,9 @@ min_phrase_weight: 100
 含混	han2 hun2
 含片	han2 pian4
 含著骨頭露著肉	han2 zhe5 gu2 tou5 lou4 zhe5 rou4
+含著骨頭露著肉	han2 zhe5 gu2 tou2 lou4 zhe5 rou4
+含著骨頭露著肉	han2 zhe5 gu3 tou5 lou4 zhe5 rou4
+含著骨頭露著肉	han2 zhe5 gu3 tou2 lou4 zhe5 rou4
 含笑入地	han2 xiao4 ru4 di4
 含糊	han2 hu2
 含糊不清	han2 hu2 bu4 qing1
@@ -66256,6 +66262,8 @@ min_phrase_weight: 100
 啁噍	zhou1 jiu1
 啃骨頭	ken3 gu2 tou5
 啃骨頭	ken3 gu2 tou2
+啃骨頭	ken3 gu3 tou5
+啃骨頭	ken3 gu3 tou2
 啅啅	zhuo2 zhuo2
 啅噪	zhuo2 zao4
 商丘地區	shang1 qiu1 di4 qu1
@@ -70674,6 +70682,9 @@ min_phrase_weight: 100
 嫦娥奔月	chang2 e2 ben1 yue4
 嫩江地區	nen4 jiang1 di4 qu1
 嫩骨頭	nen4 gu2 tou5
+嫩骨頭	nen4 gu3 tou5
+嫩骨頭	nen4 gu2 tou2
+嫩骨頭	nen4 gu3 tou2
 嫶妍	qiao2 yan2
 嫻淑	xian2 shu2
 嫻熟	xian2 shu2
@@ -71483,6 +71494,7 @@ min_phrase_weight: 100
 密地	mi4 di4
 密密切切	mi4 mi4 qie4 qie4
 密密匝匝	mi4 mi4 za1 za1
+密密匝匝	mi4 mi4 za2 za2	80%
 密密實實	mi4 mi4 shi2 shi2
 密密層層	mi4 mi4 ceng2 ceng2
 密密扎扎	mi4 mi4 zha1 zha1
@@ -83103,6 +83115,8 @@ min_phrase_weight: 100
 有難同當	you3 nan4 tong2 dang1
 有骨頭	you3 gu2 tou5
 有骨頭	you3 gu3 tou2
+有骨頭	you3 gu2 tou2
+有骨頭	you3 gu3 tou5
 有髮頭陀寺	you3 fa3 tou2 tuo2 si4
 有魂沒識	you3 hun2 mei2 shi4
 有點兒	you3 dian3 er5	80%
@@ -86682,6 +86696,7 @@ min_phrase_weight: 100
 沒骨頭	mei2 gu2 tou5
 沒骨頭	mei2 gu3 tou2
 沒骨頭	mei2 gu3 tou5
+沒骨頭	mei2 gu2 tou2
 沒魂少智	mei2 hun2 shao3 zhi4
 沒齒	mo4 chi3
 沒齒不忘	mo4 chi3 bu2 wang4
@@ -88713,6 +88728,7 @@ min_phrase_weight: 100
 漫地漫天	man4 di4 man4 tian1
 漫地風雪	man4 di4 feng1 xue3
 漫天匝地	man4 tian1 za1 di4
+漫天匝地	man4 tian1 za2 di4	80%
 漫天塞地	man4 tian1 sai1 di4
 漫天徹地	man4 tian1 che4 di4
 漫天漫地	man4 tian1 man4 di4
@@ -90468,7 +90484,9 @@ min_phrase_weight: 100
 狗雜種	gou3 za2 zhong3
 狗顛屁股	gou3 dian1 pi4 gu3
 狗骨頭	gou3 gu2 tou5
+狗骨頭	gou3 gu2 tou2
 狗骨頭	gou3 gu3 tou2
+狗骨頭	gou3 gu3 tou5
 狙伺	ju1 si4
 狙刺	ju1 ci4
 狙擊	ju1 ji2
@@ -94045,6 +94063,8 @@ min_phrase_weight: 100
 硬語盤空	ying4 yu3 pan2 kong1
 硬骨頭	ying4 gu2 tou5
 硬骨頭	ying4 gu3 tou2
+硬骨頭	ying4 gu3 tou5
+硬骨頭	ying4 gu2 tou2
 硯水壺兒	yan4 shui3 hu2 er5	80%
 硯水壺兒	yan4 shui3 hu2 er2
 硯台	yan4 tai2
@@ -95490,6 +95510,8 @@ min_phrase_weight: 100
 窮途落魄	qiong2 tu2 luo4 tuo4
 窮骨頭	qiong2 gu2 tou5
 窮骨頭	qiong2 gu3 tou2
+窮骨頭	qiong2 gu3 tou5
+窮骨頭	qiong2 gu2 tou2
 窮髮	qiong2 fa3
 窯場	yao2 chang3
 窯場	yao2 chang2	3%
@@ -95630,6 +95652,7 @@ min_phrase_weight: 100
 笑裡藏刀	xiao4 li3 cang2 dao1
 笑面夜叉	xiao4 mian4 ye4 cha1
 笙歌匝地	sheng1 ge1 za1 di4
+笙歌匝地	sheng1 ge1 za2 di4	80%
 笛卡兒	di2 ka3 er2
 笛卡兒座標制	di2 ka3 er2 zuo4 biao1 zhi4
 笛卡爾	di2 ka3 er3
@@ -98068,6 +98091,7 @@ min_phrase_weight: 100
 老骨頭	lao3 gu2 tou5
 老骨頭	lao3 gu3 tou2
 老骨頭	lao3 gu3 tou5
+老骨頭	lao3 gu2 tou2
 老鴰	lao3 gua1
 老鴰窩裡出鳳凰	lao3 gua1 wo1 li3 chu1 feng4 huang2
 老鼠尾巴	lao3 shu3 wei3 ba1
@@ -98110,6 +98134,8 @@ min_phrase_weight: 100
 耍臉子	shua3 lian3 zi5
 耍骨頭	shua3 gu2 tou5
 耍骨頭	shua3 gu3 tou2
+耍骨頭	shua3 gu3 tou5
+耍骨頭	shua3 gu2 tou2
 耐儲大蒜	nai4 chu2 da4 suan4
 耐看	nai4 kan4
 耐著性子	nai4 zhe5 xing4 zi5
@@ -102070,6 +102096,7 @@ min_phrase_weight: 100
 螞蟻啃骨頭	ma3 yi3 ken3 gu2 tou5
 螞蟻啃骨頭	ma3 yi3 ken3 gu3 tou2
 螞蟻啃骨頭	ma3 yi3 ken3 gu3 tou5
+螞蟻啃骨頭	ma3 yi3 ken3 gu2 tou2
 螲蟷	die2 dang1
 螳臂當車	tang2 bi4 dang1 che1
 螳臂當車	tang2 bi4 dang1 ju1
@@ -104961,6 +104988,8 @@ min_phrase_weight: 100
 貧難	pin2 nan2
 貧骨頭	pin2 gu2 tou5
 貧骨頭	pin2 gu3 tou2
+貧骨頭	pin2 gu3 tou5
+貧骨頭	pin2 gu2 tou2
 貨商場	huo4 shang1 chang3
 貨商場	huo4 shang1 chang2	3%
 貨幣乘數	huo4 bi4 cheng2 shu4
@@ -105144,6 +105173,7 @@ min_phrase_weight: 100
 賊骨頭	zei2 gu2 tou5
 賊骨頭	zei2 gu3 tou2
 賊骨頭	zei2 gu3 tou5
+賊骨頭	zei2 gu2 tou2
 賊鬼	zei2 gui3
 賑給	zhen4 ji3
 賓夕法尼亞州	bin1 xi4 fa3 ni2 ya3 zhou1
@@ -105267,6 +105297,7 @@ min_phrase_weight: 100
 賤骨頭	jian4 gu2 tou5
 賤骨頭	jian4 gu3 tou5
 賤骨頭	jian4 gu3 tou2
+賤骨頭	jian4 gu2 tou2
 賦得	fu4 de2
 賦斂	fu4 lian4
 賦格曲	fu4 ge2 qu3
@@ -106442,6 +106473,8 @@ min_phrase_weight: 100
 輕騎	qing1 qi2
 輕骨頭	qing1 gu2 tou5
 輕骨頭	qing1 gu3 tou2
+輕骨頭	qing1 gu3 tou5
+輕骨頭	qing1 gu2 tou2
 輘轢	ling2 li4
 輜重	zi1 zhong4
 輝銻礦	hui1 ti4 kuang4
@@ -111509,6 +111542,7 @@ min_phrase_weight: 100
 雞蛋裡挑骨頭	ji1 dan4 li3 tiao1 gu2 tou5
 雞蛋裡挑骨頭	ji1 dan4 li3 tiao1 gu3 tou2
 雞蛋裡挑骨頭	ji1 dan4 li3 tiao1 gu3 tou5
+雞蛋裡挑骨頭	ji1 dan4 li3 tiao1 gu2 tou2
 雞蟲得失	ji1 chong2 de2 shi1
 雞血石	ji1 xie3 shi2
 雞血石	ji1 xue4 shi2
@@ -113449,12 +113483,23 @@ min_phrase_weight: 100
 骨頭架子	gu2 tou5 jia4 zi5
 骨頭架子	gu3 tou5 jia4 zi5
 骨頭架子	gu3 tou2 jia4 zi5
+骨頭架子	gu2 tou2 jia4 zi5
 骨頭硬	gu2 tou5 ying4
 骨頭硬	gu3 tou2 ying4
+骨頭硬	gu3 tou5 ying4
+骨頭硬	gu2 tou2 ying4
 骨頭節兒	gu3 tou5 jie2 er5	80%
 骨頭節兒	gu3 tou5 jie2 er2
+骨頭節兒	gu3 tou2 jie2 er5	80%
+骨頭節兒	gu3 tou2 jie2 er2
+骨頭節兒	gu2 tou5 jie2 er5	80%
+骨頭節兒	gu2 tou5 jie2 er2
+骨頭節兒	gu2 tou2 jie2 er5	80%
+骨頭節兒	gu2 tou2 jie2 er2
 骨頭骨腦	gu2 tou5 gu2 nao3
+骨頭骨腦	gu2 tou2 gu2 nao3
 骨頭骨腦	gu3 tou2 gu3 nao3
+骨頭骨腦	gu3 tou5 gu3 nao3
 骨顫肉驚	gu3 zhan4 rou4 jing1
 骫骳	wei3 bi4
 骯髒	ang1 zang1
@@ -114645,4 +114690,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 114648 #####
+##### @結束 END - 114693 #####
