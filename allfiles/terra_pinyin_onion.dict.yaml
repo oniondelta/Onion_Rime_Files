@@ -140,6 +140,7 @@
 #    詞句中，「鰾」日常發音常會誤發為「biao1」，臺灣標準為「biao4」，故皆補齊「biao4」「biao1」，後者詞頻設為80%。
 #    詞句中，「鷲」日常發音常會誤發為「jiu1」，臺灣標準為「jiu4」，故皆補齊「jiu4」「jiu1」，後者詞頻設為80%。
 #    詞句中，「姑娘」補齊「gu1 niang2」和「gu1 niang5」，後者詞頻設為80%。
+#    詞句中，「拓撲」臺灣字典發音為「tuo4 pu1」，日常發音常會誤發為「tuo4 bu3」和「tuo4 pu3」，故皆補齊「tuo4 pu1」「tuo4 bu3」「tuo4 pu3」，最後者「tuo4 pu3」詞頻設為80%。
 #    預計比對「輕聲和一聲」變音。
 #
 #  〈2020修改字詞彙發音〉：
@@ -2486,6 +2487,9 @@ min_phrase_weight: 100
 鳔	piao4	0%
 氽	qiu2	0%
 坺	fa2	0%
+扑	bo2	0%
+扑	bu3	0%
+擈	bu3	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -57923,6 +57927,7 @@ min_phrase_weight: 100
 代數式	dai4 shu4 shi4
 代數拓撲	dai4 shu4 tuo4 pu1
 代數拓撲	dai4 shu4 tuo4 bu3
+代數拓撲	dai4 shu4 tuo4 pu3	80%
 代數數域	dai4 shu4 shu4 yu4
 代數方程	dai4 shu4 fang1 cheng2
 代數方程式	dai4 shu4 fang1 cheng2 shi4
@@ -73747,8 +73752,10 @@ min_phrase_weight: 100
 幾何學	ji3 he2 xue2
 幾何拓撲	ji3 he2 tuo4 pu1
 幾何拓撲	ji3 he2 tuo4 bu3
+幾何拓撲	ji3 he2 tuo4 pu3	80%
 幾何拓撲學	ji3 he2 tuo4 pu1 xue2
 幾何拓撲學	ji3 he2 tuo4 bu3 xue2
+幾何拓撲學	ji3 he2 tuo4 pu3 xue2	80%
 幾何級數	ji3 he2 ji2 shu4
 幾何線	ji3 he2 xian4
 幾何量	ji3 he2 liang4
@@ -78133,12 +78140,16 @@ min_phrase_weight: 100
 拓拔	tuo4 ba2
 拓撲	tuo4 pu1
 拓撲	tuo4 bu3
+拓撲	tuo4 pu3	80%
 拓撲學	tuo4 pu1 xue2
 拓撲學	tuo4 bu3 xue2
+拓撲學	tuo4 pu3 xue2	80%
 拓撲空間	tuo4 pu1 kong1 jian1
 拓撲空間	tuo4 bu3 kong1 jian1
+拓撲空間	tuo4 pu3 kong1 jian1	80%
 拓撲結構	tuo4 pu1 jie2 gou4
 拓撲結構	tuo4 bu3 jie2 gou4
+拓撲結構	tuo4 pu3 jie2 gou4	80%
 拓本	ta4 ben3
 拓本	tuo4 ben3
 拓殖	tuo4 zhi2
@@ -114691,4 +114702,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 114694 #####
+##### @結束 END - 114705 #####
