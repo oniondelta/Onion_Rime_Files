@@ -56,6 +56,7 @@
 #              「雞(鷄)」←《 “鷄”非標準字，但該字形日常太常見，故常用詞增補“鷄” 》
 #              「螢(熒)」←《 熒光和熒幕之類詞義，補齊台灣慣用“螢” 》
 #              「枴(柺)」←《 不採用“柺”該異體字 》
+#              「繃(綳)」←《 不採用“綳”該異體字 》
 #              詞句中，「咨詢」和「咨謀」「咨商」為簡體，臺灣字典中說明「咨」又通「諮」，標準又為「諮詢」「諮謀」「諮商」，「咨」少用到，故保留「咨詢」和「咨謀」「咨商」三詞，其他詞句遮屏。
 #              承上，詞句中，臺灣字典標準字訂為「咨文」「咨呈」「咨咨」「咨嗟」「咨牙倈嘴」「咨訪」「咨請」「嚌咨」「怨咨」「疇咨之憂」，其中「咨」皆不通「諮」，故以「咨」為標準，其餘遮屏。
 #              詞句中，「注冊」為簡體，臺灣字典中說明「注」又同「註」，標準又為「註冊」，「注冊」少用到，故只保留「注冊」一詞，其他詞句遮屏。
@@ -139,6 +140,8 @@
 #    詞句中，「萎」於某些詞，臺灣日常慣用語音為「wei3」，臺灣標準為「wei1」，故皆補齊「wei1」和「wei3」。
 #    詞句中，「鰾」日常發音常會誤發為「biao1」，臺灣標準為「biao4」，故皆補齊「biao4」「biao1」，後者詞頻設為80%。
 #    詞句中，「鷲」日常發音常會誤發為「jiu1」，臺灣標準為「jiu4」，故皆補齊「jiu4」「jiu1」，後者詞頻設為80%。
+#    詞句中，「縛」臺灣標準為「fu2」，大陸標準為「fu4」，兩者易混淆，故皆補齊「fu2」「fu4」。
+#    詞句中，「綺」臺灣標準為「qi3」，日常發音常會誤發為「qi2」，故皆補齊「qi3」「qi2」，後者詞頻設為80%。
 #    詞句中，「姑娘」補齊「gu1 niang2」和「gu1 niang5」，後者詞頻設為80%。
 #    詞句中，「拓撲」臺灣字典發音為「tuo4 pu1」，日常發音常會誤發為「tuo4 bu3」和「tuo4 pu3」，故皆補齊「tuo4 pu1」「tuo4 bu3」「tuo4 pu3」，最後者「tuo4 pu3」詞頻設為80%。
 #    預計比對「輕聲和一聲」變音。
@@ -58362,6 +58365,7 @@ min_phrase_weight: 100
 低靡	di1 mi3
 低音喇叭	di1 yin1 la3 ba1
 低頭受縛	di1 tou2 shou4 fu2
+低頭受縛	di1 tou2 shou4 fu4
 低頭喪氣	di1 tou2 sang4 qi4
 低頻率	di1 pin2 lv4
 住地	zhu4 di4
@@ -59001,6 +59005,7 @@ min_phrase_weight: 100
 俯看	fu3 kan4
 俯衝	fu3 chong1
 俯首就縛	fu3 shou3 jiu4 fu2
+俯首就縛	fu3 shou3 jiu4 fu4
 俯首帖耳	fu3 shou3 tie1 er3
 俯首稱臣	fu3 shou3 cheng1 chen2
 俱樂部	ju4 le4 bu4
@@ -64444,6 +64449,7 @@ min_phrase_weight: 100
 受看	shou4 kan4
 受禪	shou4 shan4
 受縛	shou4 fu2
+受縛	shou4 fu4
 受辱	shou4 ru4
 受辱	shou4 ru3
 受降	shou4 xiang2
@@ -77071,6 +77077,9 @@ min_phrase_weight: 100
 扎窩子	zha1 wo1 zi5
 扎筏子	zha1 fa2 zi5
 扎縛	zha2 fu2
+扎縛	zha2 fu4
+扎縛	zha1 fu2
+扎縛	zha1 fu4
 扎罰子	zha1 fa2 zi5
 扎耳朵	zha1 er3 duo1	80%
 扎耳朵	zha1 er3 duo3
@@ -78388,6 +78397,7 @@ min_phrase_weight: 100
 拴娃娃	shuan1 wa2 wa1
 拴娃娃	shuan1 wa2 wa2
 拴縛	shuan1 fu2
+拴縛	shuan1 fu4
 拶子	zan3 zi5
 拶滿	za2 man3
 拶逼	za2 bi1
@@ -80374,6 +80384,7 @@ min_phrase_weight: 100
 擒奸摘伏	qin2 jian1 ti4 fu2
 擒姦擿伏	qin2 jian1 ti4 fu2
 擒龍縛虎	qin2 long2 fu2 hu3
+擒龍縛虎	qin2 long2 fu4 hu3
 擔不是	dan1 bu2 shi4
 擔不起	dan1 bu4 qi3
 擔人情	dan1 ren2 qing2
@@ -83657,6 +83668,7 @@ min_phrase_weight: 100
 杜門晦跡	du4 men2 hui4 ji1
 束帶頂冠	shu4 dai4 ding3 guan1
 束手就縛	shu4 shou3 jiu4 fu2
+束手就縛	shu4 shou3 jiu4 fu4
 束手待斃	shu4 shou3 dai4 bi4
 束手待死	shu4 shou3 dai4 si3
 束矢難折	shu4 shi3 nan2 zhe2
@@ -83665,6 +83677,7 @@ min_phrase_weight: 100
 束縛	shu4 fu4
 束身修行	shu4 shen1 xiu1 xing2
 束身就縛	shu4 shen1 jiu4 fu2
+束身就縛	shu4 shen1 jiu4 fu4
 束髮	shu4 fa3
 束髮封帛	shu4 fa3 feng1 bo2
 束髮金冠	shu4 fa3 jin1 guan1
@@ -89354,6 +89367,7 @@ min_phrase_weight: 100
 無線電傳真	wu2 xian4 dian4 chuan2 zhen1
 無緣對面不相逢	wu2 yuan2 dui4 mian4 bu4 xiang1 feng2
 無縛雞之力	wu2 fu2 ji1 zhi1 li4
+無縛雞之力	wu2 fu4 ji1 zhi1 li4
 無縫	wu2 feng4
 無縫	wu2 feng2
 無縫連接	wu2 feng4 lian2 jie1
@@ -97097,7 +97111,9 @@ min_phrase_weight: 100
 綸巾	guan1 jin1
 綸巾	lun2 jin1
 綺想曲	qi3 xiang3 qu3
+綺想曲	qi2 xiang3 qu3	80%
 綺靡	qi3 mi3
+綺靡	qi2 mi3	80%
 綻縫	zhan4 feng4
 綻露	zhan4 lu4
 綽子	chuo4 zi5
@@ -97222,12 +97238,19 @@ min_phrase_weight: 100
 縕袍	yun4 pao2
 縕袍	yun1 pao2
 縛住	fu2 zhu4
+縛住	fu4 zhu4
 縛手縛腳	fu2 shou3 fu2 jiao3
+縛手縛腳	fu4 shou3 fu4 jiao3
 縛束	fu2 shu4
+縛束	fu4 shu4
 縛稿為人	fu2 gao3 wei2 ren2
+縛稿為人	fu4 gao3 wei2 ren2
 縛緊	fu2 jin3
+縛緊	fu4 jin3
 縛虎手	fu2 hu3 shou3
+縛虎手	fu4 hu3 shou3
 縛雞之力	fu2 ji1 zhi1 li4
+縛雞之力	fu4 ji1 zhi1 li4
 縞冠	gao3 guan1
 縣圃	xuan2 pu3
 縣地	xian4 di4
@@ -97473,6 +97496,7 @@ min_phrase_weight: 100
 繫爪	xi4 zhao3
 繫獄	xi4 yu4
 繫縛	xi4 fu2
+繫縛	xi4 fu4
 繫而不食	xi4 er2 bu4 shi2
 繫腰	xi4 yao1
 繫臂之寵	xi4 bi4 zhi1 chong3
@@ -97500,6 +97524,7 @@ min_phrase_weight: 100
 纏累	chan2 lei3
 纏結	chan2 jie2
 纏縛	chan2 fu2
+纏縛	chan2 fu4
 纓冠	ying1 guan1
 纓子	ying1 zi5
 纔子	cai2 zi5
@@ -98505,6 +98530,7 @@ min_phrase_weight: 100
 肉畜	rou4 chu4
 肉脯	rou4 fu3
 肉袒面縛	rou4 tan3 mian4 fu2
+肉袒面縛	rou4 tan3 mian4 fu4
 肉重千斤	rou4 zhong4 qian1 jin1
 肉頭	rou4 tou5
 肉頭	rou4 tou2
@@ -99373,6 +99399,7 @@ min_phrase_weight: 100
 自給	zi4 ji3
 自給自足	zi4 ji3 zi4 zu2
 自縛	zi4 fu2
+自縛	zi4 fu4
 自繇自在	zi4 you2 zi4 zai4
 自花傳粉	zi4 hua1 chuan2 fen3
 自處	zi4 chu3
@@ -103708,6 +103735,7 @@ min_phrase_weight: 100
 解發	jie4 fa1
 解答	jie3 da2
 解縛	jie3 fu2
+解縛	jie3 fu4
 解縣	xie4 xian4
 解褐	jie3 he2
 解訟息爭	jie3 song4 xi2 zheng1
@@ -112237,8 +112265,11 @@ min_phrase_weight: 100
 面相	mian4 xiang4
 面糊盆	mian4 hu2 pen2
 面縛	mian4 fu2
+面縛	mian4 fu4
 面縛輿櫬	mian4 fu2 yu2 chen4
+面縛輿櫬	mian4 fu4 yu2 chen4
 面縛銜璧	mian4 fu2 xian2 bi4
+面縛銜璧	mian4 fu4 xian2 bi4
 面臨困難	mian4 lin2 kun4 nan2
 面般	mian4 pan2
 面薄腰纖	mian4 bo2 yao1 xian1
@@ -114702,4 +114733,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 114705 #####
+##### @結束 END - 114736 #####

@@ -48,6 +48,8 @@ min_phrase_weight: 100
 # 鰾	(piao1)	0%
 # 鳔	(piao1)	0%
 # 擈	(pu3)	10%
+# 縛	(fo4)
+# 缚	(fo4)
 蒲	(pu3)
 逾	(yu4)	90%
 蛤	(ge3)
@@ -59,8 +61,6 @@ min_phrase_weight: 100
 涯	(yai2)
 剖	(puo3)
 裳	(shang3)
-縛	(fo4)
-缚	(fo4)
 綺	(qi2)
 绮	(qi2)
 躍	(yao4)
