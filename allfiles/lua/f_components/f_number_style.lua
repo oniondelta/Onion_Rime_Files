@@ -195,6 +195,23 @@ local function keycap_number(dn)
 end
 
 ------------------------------------
+
+local function keycap_ns_number(dn)
+  if dn == "" then return "" end
+  dn = string.gsub(dn, "0", "0⃣")
+  dn = string.gsub(dn, "1", "1⃣")
+  dn = string.gsub(dn, "2", "2⃣")
+  dn = string.gsub(dn, "3", "3⃣")
+  dn = string.gsub(dn, "4", "4⃣")
+  dn = string.gsub(dn, "5", "5⃣")
+  dn = string.gsub(dn, "6", "6⃣")
+  dn = string.gsub(dn, "7", "7⃣")
+  dn = string.gsub(dn, "8", "8⃣")
+  dn = string.gsub(dn, "9", "9⃣")
+  return dn
+end
+
+------------------------------------
 --- 以下舊的寫法（備份參考）
 --[[
 local function fullshape_number(dn)
@@ -399,6 +416,7 @@ return {
         braille_c_number = braille_c_number,
         braille_u_number = braille_u_number,
         keycap_number = keycap_number,
+        keycap_ns_number = keycap_ns_number,
         mss_number = mss_number,
         mssb_number = mssb_number,
         mm_number = mm_number,

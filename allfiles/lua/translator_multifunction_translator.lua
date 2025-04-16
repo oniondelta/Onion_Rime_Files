@@ -87,6 +87,7 @@ local little2_number = f_n_s.little2_number
 local braille_c_number = f_n_s.braille_c_number
 local braille_u_number = f_n_s.braille_u_number
 local keycap_number = f_n_s.keycap_number
+local keycap_ns_number = f_n_s.keycap_ns_number
 local mss_number = f_n_s.mss_number
 local mssb_number = f_n_s.mssb_number
 local mm_number = f_n_s.mm_number
@@ -2991,6 +2992,7 @@ local function translate(input, seg, env)
     yield_c( "負⃝", "〔帶圈中文負號〕", num_preedit)  -- 負︎⃝
     yield_c( "(負)", "〔帶括中文負號〕", num_preedit)
     yield_c( "⛔", "〔鍵帽負號〕", num_preedit)  -- ➖ -⃣ −⃣
+    yield_c( "-⃣", "〔鍵帽負號〕(非標準)", num_preedit)
     yield_c( "➖", "〔加粗的減號〕", num_preedit)
     yield_c( "⠤", "〔點字〕(computer/unified)", num_preedit)
     return
@@ -3072,6 +3074,7 @@ local function translate(input, seg, env)
     local neg_n_z = string.gsub(neg_n, "-", "負⃝")  -- 負︎⃝
     local neg_n_p = string.gsub(neg_n, "-", "(負)")
     local neg_n_k = string.gsub(neg_n, "-", "⛔")  -- ➖ -⃣ −⃣
+    local neg_n_k_ns = string.gsub(neg_n, "-", "-⃣")
     local neg_n_b = string.gsub(neg_n, "-", "⠤")
 
   -- if numberout~=nil and tonumber(nn)~=nil then
@@ -3152,6 +3155,7 @@ local function translate(input, seg, env)
       yield_c( neg_n_p .. paren_number(numberout), "〔帶括中文〕", num_preedit)
 
       yield_c( neg_n_k .. keycap_number(numberout), "〔鍵帽〕", num_preedit)
+      yield_c( neg_n_k_ns .. keycap_ns_number(numberout), "〔鍵帽〕(非標準)", num_preedit)
       yield_c( neg_n_b .. braille_c_number(numberout), "〔點字〕(computer)", num_preedit)
       -- yield_c( neg_n_b .. "⠼" .. braille_c_number(numberout), "〔點字(一般)〕", num_preedit)
       yield_c( neg_n_b .. "⠼" .. braille_u_number(numberout), "〔點字〕(unified)", num_preedit)
