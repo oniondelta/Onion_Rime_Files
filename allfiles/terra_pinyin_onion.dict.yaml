@@ -2499,6 +2499,19 @@ min_phrase_weight: 100
 淿	bo2
 淿	po1	20%
 淿	po4	60%
+鉉	xuan2	0%
+铉	xuan2	0%
+泫	xuan2	50%
+泫	juan1	0%
+眩	huan4	0%
+眩	juan4	0%
+㹡	xuan4	0%
+㹡	juan4	0%
+胖	pan4	0%
+胖	pang1	0%
+眫	pang4	0%
+𦚓	pan2	0%
+𦚓	pang4	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -88408,6 +88421,8 @@ min_phrase_weight: 100
 湖廣熟	hu2 guang3 shu2
 湖泊	hu2 bo2
 湖泊	hu2 po1
+湖泊	hu2 puo1	80%
+湖泊	hu2 puo4	80%
 湖濱散記	hu2 bin1 san3 ji4
 湘潭地區	xiang1 tan2 di4 qu1
 湛寂	zhan4 ji2
@@ -114743,4 +114758,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 114746 #####
+##### @結束 END - 114761 #####
