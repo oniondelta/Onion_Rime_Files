@@ -2991,9 +2991,9 @@ local function translate(input, seg, env)
     yield_c( "⛔︎", "〔反白帶圈負號〕", num_preedit)
     yield_c( "負⃝", "〔帶圈中文負號〕", num_preedit)  -- 負︎⃝
     yield_c( "(負)", "〔帶括中文負號〕", num_preedit)
-    yield_c( "⛔", "〔鍵帽負號〕", num_preedit)  -- ➖ -⃣ −⃣
-    yield_c( "-⃣", "〔鍵帽負號〕(非標準)", num_preedit)
-    yield_c( "➖", "〔加粗的減號〕", num_preedit)
+    yield_c( "➖", "〔鍵帽負號/加粗減號〕", num_preedit)  -- 〔加粗的減號〕
+    -- yield_c( "⛔", "〔鍵帽負號〕", num_preedit)  -- ➖
+    yield_c( "-⃣", "〔鍵帽負號〕(非標準)", num_preedit)  -- -⃣ −⃣
     yield_c( "⠤", "〔點字〕(computer/unified)", num_preedit)
     return
   end
@@ -3073,8 +3073,8 @@ local function translate(input, seg, env)
     local neg_n_a = string.gsub(neg_n, "-", "⛔︎")
     local neg_n_z = string.gsub(neg_n, "-", "負⃝")  -- 負︎⃝
     local neg_n_p = string.gsub(neg_n, "-", "(負)")
-    local neg_n_k = string.gsub(neg_n, "-", "⛔")  -- ➖ -⃣ −⃣
-    local neg_n_k_ns = string.gsub(neg_n, "-", "-⃣")
+    local neg_n_k = string.gsub(neg_n, "-", "➖")  -- ⛔
+    local neg_n_k_ns = string.gsub(neg_n, "-", "-⃣")  -- -⃣ −⃣
     local neg_n_b = string.gsub(neg_n, "-", "⠤")
 
   -- if numberout~=nil and tonumber(nn)~=nil then
