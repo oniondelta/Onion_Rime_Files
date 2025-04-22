@@ -2512,6 +2512,7 @@ min_phrase_weight: 100
 眫	pang4	0%
 𦚓	pan2	0%
 𦚓	pang4	0%
+炔	xue4	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -72340,6 +72341,7 @@ min_phrase_weight: 100
 少尉	shao4 wei4
 少小	shao4 xiao3
 少少	shao3 shao3
+少少	shao4 shao4
 少差	shao3 chai4
 少師	shao4 shi1
 少年	shao4 nian2
@@ -114758,4 +114760,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 114761 #####
+##### @結束 END - 114763 #####
