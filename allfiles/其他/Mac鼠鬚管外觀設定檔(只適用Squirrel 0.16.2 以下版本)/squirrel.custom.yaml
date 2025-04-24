@@ -1,8 +1,9 @@
 # 位置：~/Library/Rime/squirrel.custom.yaml
-# 用法：想要哪項生效，就刪去該行行首的「#」字符，但注意保留用於縮進的空格
+# 只適用Squirrel 0.16.2 以下版本
+# 用法：想要哪項生效，就刪去該行行首「#」字符，注意保留用於縮進的空格
 
 patch:
-  style/color_scheme: mac_lamb                             # 主題樣式 #apathy #psionics #mac_white #mac_white2
+  style/color_scheme: mac_lamb                             # 主題樣式 #lost_temple_border #apathy #psionics #mac_white #mac_white2
   style/color_scheme_dark: mac_dark                        # 同上，暗主題下
 
   style/horizontal: false                              # 候選橫排 （新版已經無效，改以 candidate_list_layout 設定）
@@ -31,6 +32,7 @@ patch:
   # memorize_size: false                                 # 選定線型候選框樣式時，當候選框末端接觸屏幕邊時，是否記住候選框長度，以選免首選項位置快速變
 
   # style/alpha: 0.8                                   # 候選框整體透明度 （0-1範圍）（默認1）
+  # style/mutual_exclusive: true                             # 候選區各背景色是否各自獨立，帶透明度的情況下互不浸染
   # style/translucency: true                           # 毛玻璃背景 （當背景色呈半透明時可見）（默認false）
 
 ###################################################
@@ -39,6 +41,7 @@ patch:
     author: "佛振 <chen.sst@gmail.com>, based on ir_black"
     back_color: 0xfe303030 #0xee303030
     text_color: 0x599C87 #0xe8f3f6
+    candidate_format: "%c\u3000%@  "
     candidate_text_color: 0xe8f3f6
     comment_text_color: 0xbbDEDEDE #0xbb82e6ca
     hilited_candidate_back_color: 0x82e6ca
@@ -46,8 +49,8 @@ patch:
     hilited_comment_text_color: 0xbb203d34
     hilited_text_color: 0x82e6ca
     border_color: 0x5fe8f3f6 #0xeee8f3f6
-    border_height: 1
-    border_width: 1
+    border_height: 4 #1
+    border_width: 4 #1
 
   preset_color_schemes/cyberpunk_onion:
     name: "賽博龐克(Onion)／Cyberpunk(Onion)"
