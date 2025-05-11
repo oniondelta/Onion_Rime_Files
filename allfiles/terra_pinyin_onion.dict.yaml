@@ -2553,6 +2553,12 @@ min_phrase_weight: 100
 汖	liu2	0%
 汖	pai4	0%
 𣎵	pai4	0%
+沿	yan3	0%
+沇	wei3	0%
+䜴	chi3	0%
+敊	chi3	0%
+敊	shi4	0%
+鳽	zhan1
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -37542,7 +37548,7 @@ min_phrase_weight: 100
 鳼	wen2
 鳽	jian1
 鳽	qian1
-鳽	zhan4
+# 鳽	zhan4
 鳾	shi1
 鳿	yu4
 鴀	fou3
@@ -87723,7 +87729,9 @@ min_phrase_weight: 100
 海相	hai3 xiang1
 海相	hai3 xiang4
 海相沉積	hai3 xiang4 chen2 ji1
+海相沉積	hai3 xiang1 chen2 ji1
 海相沉積物	hai3 xiang1 chen2 ji1 wu4
+海相沉積物	hai3 xiang4 chen2 ji1 wu4
 海空軍	hai3 kong1 jun1
 海空軍基地	hai3 kong1 jun1 ji1 di4
 海綿刷	hai3 mian2 shua1
@@ -114800,4 +114808,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 114803 #####
+##### @結束 END - 114811 #####
