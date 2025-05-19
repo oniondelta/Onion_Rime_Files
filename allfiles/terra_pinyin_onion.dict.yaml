@@ -2559,6 +2559,22 @@ min_phrase_weight: 100
 敊	chi3	0%
 敊	shi4	0%
 鳽	zhan1
+拘	ju3	0%
+拘	ju2	0%
+枸	qu2	0%
+膊	lie4	0%
+覽	lan4	0%
+览	lan4	0%
+姣	xiao2	0%
+培	pi1	0%
+敦	tuan2	0%
+敦	diao1	0%
+敦	dao4	0%
+敦	zhun3	0%
+敦	tun1	0%
+敦	tun2	0%
+淳	zhun1	0%
+淳	zhun3	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -65059,8 +65075,9 @@ min_phrase_weight: 100
 同心結	tong2 xin1 jie2
 同志天地	tong2 zhi4 tian1 di4
 同志酒吧	tong2 zhi4 jiu3 ba1
+同志酒吧	tong2 zhi4 jiu3 ba4	80%
 同性戀酒吧	tong2 xing4 lian4 jiu3 ba1
-同性戀酒吧	tong2 xing4 lian4 jiu3 ba5
+同性戀酒吧	tong2 xing4 lian4 jiu3 ba4	80%
 同惡相助	tong2 e4 xiang1 zhu4
 同惡相救	tong2 e4 xiang1 jiu4
 同惡相求	tong2 e4 xiang1 qiu2
@@ -108262,9 +108279,12 @@ min_phrase_weight: 100
 酒令兒	jiu3 ling4 er2
 酒刺	jiu3 ci4
 酒吧	jiu3 ba1
+酒吧	jiu3 ba4	80%
 酒吧	jiu3 ba5
 酒吧女	jiu3 ba1 nv3
+酒吧女	jiu3 ba4 nv3	80%
 酒吧間	jiu3 ba1 jian1
+酒吧間	jiu3 ba4 jian1	80%
 酒地花天	jiu3 di4 hua1 tian1
 酒娘子	jiu3 niang2 zi5
 酒娘子	jiu3 niang2 zi3
@@ -109248,6 +109268,7 @@ min_phrase_weight: 100
 鋼片琴	gang1 pian4 qin2
 鋼琴二重奏	gang1 qin2 er4 chong2 zou4
 鋼琴酒吧	gang1 qin2 jiu3 ba1
+鋼琴酒吧	gang1 qin2 jiu3 ba4	80%
 鋼種	gang1 zhong3
 鋼筋水泥	gang1 jin1 shui3 ni2
 鋼筋混凝土	gang1 jin1 hun4 ning2 tu3
@@ -114808,4 +114829,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 114811 #####
+##### @結束 END - 114832 #####
