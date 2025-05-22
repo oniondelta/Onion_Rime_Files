@@ -4,7 +4,7 @@
 # 『洋蔥』製作
 ---
 name: symbols_bpmf
-version: "202504"
+version: "202505"
 sort: original
 use_preset_vocabulary: false
 ...
@@ -1738,7 +1738,7 @@ use_preset_vocabulary: false
 🕥	zc
 🕦	zc
 🕧	zc
-##### 新增補充（截取字bpmf_emoji） #####
+##### 新增補充(截取字bpmf_emoji) #####
 ### 景色 ###
 🌃	rn
 🌄	rn
@@ -1755,7 +1755,7 @@ use_preset_vocabulary: false
 🌏	2f
 🌐	2f
 🗺	2f
-### 天體（原本的「天體改」成「占星」） ###
+### 天體(原本的「天體改」成「占星」) ###
 🌑	ww
 🌒	ww
 🌓	ww
@@ -2041,7 +2041,7 @@ use_preset_vocabulary: false
 🦚	2jw
 🦙	2jw
 🦛	2jw
-### 生肖圖（生肖） ###
+### 生肖圖【十二生肖】(生肖) ###
 🐭	gvw
 🐮	gvw
 🐯	gvw
@@ -2079,7 +2079,7 @@ use_preset_vocabulary: false
 🐕‍🦺	gvw
 🐖	gvw
 🐗	gvw
-### 十二生肖（生肖） ###
+### 十二生肖【生肖圖】(生肖) ###
 🐭	g-gv
 🐮	g-gv
 🐯	g-gv
@@ -2117,7 +2117,7 @@ use_preset_vocabulary: false
 🐕‍🦺	g-gv
 🐖	g-gv
 🐗	g-gv
-### 獸面(動物臉) ###
+### 獸面【動物臉】 ###
 🐶	ga
 🐱	ga
 🐭	ga
@@ -2144,7 +2144,7 @@ use_preset_vocabulary: false
 🐧	ga
 🦄	ga
 🐾	ga
-### 動物臉(獸面) ###
+### 動物臉【獸面】 ###
 🐶	2jx
 🐱	2jx
 🐭	2jx
@@ -2211,7 +2211,7 @@ use_preset_vocabulary: false
 🖕	gg
 ✍️	gg
 🙏	gg
-### 衣物（服裝） ###
+### 衣物【服裝】 ###
 👑	uj
 👒	uj
 🧢	uj
@@ -2250,7 +2250,7 @@ use_preset_vocabulary: false
 🩰	uj
 🧦	uj
 👣	uj
-### 服裝（衣物） ###
+### 服裝【衣物】 ###
 👑	z5
 👒	z5
 🧢	z5
@@ -2389,7 +2389,7 @@ use_preset_vocabulary: false
 💫	ve
 💬	ve
 💭	ve
-### 錢財(金錢) ###
+### 錢財(金錢)(錢) ###
 💰	fh
 💱	fh
 💲	fh
@@ -2400,7 +2400,7 @@ use_preset_vocabulary: false
 💷	fh
 💸	fh
 💹	fh
-### 圖示（符號） ###
+### 圖示(符號) ###
 💺	wg
 💻	wg
 💼	wg
@@ -2510,7 +2510,7 @@ use_preset_vocabulary: false
 🆒	w1
 🎦	w1
 📶	w1
-### 箭標(箭頭) ###
+### 箭標【指示】(箭頭) ###
 🔙	r1
 🔚	r1
 🔛	r1
@@ -2528,7 +2528,7 @@ use_preset_vocabulary: false
 ▶	r1
 ⏪	r1
 ⏩	r1
-### 指示（箭頭） ###
+### 指示【箭標】(箭頭) ###
 🔙	5g
 🔚	5g
 🔛	5g
@@ -2550,7 +2550,7 @@ use_preset_vocabulary: false
 🔯	gbz
 🔰	gbz
 🔱	gbz
-### 幾何圖（幾何） ###
+### 幾何圖(幾何) ###
 🔲	rcw
 🔳	rcw
 ⚫︎	rcw
@@ -2582,7 +2582,7 @@ use_preset_vocabulary: false
 🛕	yr
 📿	yr
 🕯	yr
-### 十字架（宗教） ###
+### 十字架(宗教) ###
 🕀	gyr
 🕁	gyr
 🕂	gyr
@@ -2640,7 +2640,7 @@ use_preset_vocabulary: false
 😋	2v
 😸	2v
 😹	2v
-### 討厭（厭惡） ###
+### 討厭(厭惡) ###
 😱	wu
 😲	wu
 🥴	wu
@@ -2652,7 +2652,7 @@ use_preset_vocabulary: false
 😴	wu
 😵	wu
 🙀	wu
-### 無奈（嘆氣） ###
+### 無奈(嘆氣) ###
 😣	js
 😥	js
 😪	js
@@ -2672,7 +2672,7 @@ use_preset_vocabulary: false
 😑	x2
 😕	x2
 😶	x2
-### 喜愛（喜歡） ###
+### 喜愛(喜歡) ###
 😍	v9
 😘	v9
 🥰	v9
@@ -2715,22 +2715,22 @@ use_preset_vocabulary: false
 😿	cu
 🥵	cu
 🥶	cu
-### 冒汗（懷疑） ###
+### 冒汗(懷疑) ###
 😢	ac
 😓	ac
 😰	ac
 😿	ac
 🥵	ac
 🥶	ac
-### 猴子表情 ###
+### 猴子表情【猴子頭】 ###
 🙈	cy1f
 🙉	cy1f
 🙊	cy1f
-### 猴子頭（猴子表情） ###
+### 猴子頭【猴子表情】 ###
 🙈	cyw
 🙉	cyw
 🙊	cyw
-### 交通工具（交通） ###
+### 交通工具【交通圖】(交通) ###
 🚀	rwer
 🚁	rwer
 🚂	rwer
@@ -2768,7 +2768,7 @@ use_preset_vocabulary: false
 🚢	rwer
 🚣	rwer
 🚤	rwer
-### 交通圖（交通） ###
+### 交通圖【交通工具】(交通) ###
 🚀	rww
 🚁	rww
 🚂	rww
@@ -2906,7 +2906,7 @@ use_preset_vocabulary: false
 🛃	15
 🛄	15
 🛅	15
-### 數字標（數字） ###
+### 數字標(數字) ###
 1⃣	gy1
 2⃣	gy1
 3⃣	gy1
@@ -2935,7 +2935,7 @@ use_preset_vocabulary: false
 🄉	gy1
 🄊	gy1
 🄁	gy1
-### 漢字框（漢字） ###
+### 漢字框(漢字) ###
 🈵	cyd
 🈳	cyd
 🉐	cyd
@@ -2982,7 +2982,7 @@ use_preset_vocabulary: false
 🈂	cyd
 🈁	cyd
 🈓	cyd
-### 字母方（字母帶方框） ###
+### 字母方【字母框】(字母帶方框) ###
 🄰	yaz
 🄱	yaz
 🄲	yaz
@@ -3009,7 +3009,7 @@ use_preset_vocabulary: false
 🅇	yaz
 🅈	yaz
 🅉	yaz
-### 字母框（字母帶方框） ###
+### 字母框【字母方】(字母帶方框) ###
 🄰	yad
 🄱	yad
 🄲	yad
@@ -3036,7 +3036,7 @@ use_preset_vocabulary: false
 🅇	yad
 🅈	yad
 🅉	yad
-### 字母黑圈（字母帶圓圈） ###
+### 字母黑圈【字母圈黑】(字母帶圓圈) ###
 🅐	yacf
 🅑	yacf
 🅒	yacf
@@ -3063,7 +3063,7 @@ use_preset_vocabulary: false
 🅧	yacf
 🅨	yacf
 🅩	yacf
-### 字母圈黑（字母帶圓圈） ###
+### 字母圈黑【字母黑圈】(字母帶圓圈) ###
 🅐	yafc
 🅑	yafc
 🅒	yafc
@@ -3090,7 +3090,7 @@ use_preset_vocabulary: false
 🅧	yafc
 🅨	yafc
 🅩	yafc
-### 字母黑方（字母帶圓角方框） ###
+### 字母黑方【字母方黑】【字母框黑】【字母黑框】(字母帶圓角方框) ###
 🅰	yacz
 🅱	yacz
 🅲	yacz
@@ -3118,7 +3118,7 @@ use_preset_vocabulary: false
 🆈	yacz
 🆉	yacz
 🆎	yacz
-### 字母方黑（字母帶圓角方框） ###
+### 字母方黑【字母黑方】【字母框黑】【字母黑框】(字母帶圓角方框) ###
 🅰	yazc
 🅱	yazc
 🅲	yazc
@@ -3146,7 +3146,7 @@ use_preset_vocabulary: false
 🆈	yazc
 🆉	yazc
 🆎	yazc
-### 字母框黑（字母帶圓角方框） ###
+### 字母框黑【字母黑框】【字母方黑】【字母黑方】(字母帶圓角方框) ###
 🅰	yadc
 🅱	yadc
 🅲	yadc
@@ -3174,7 +3174,7 @@ use_preset_vocabulary: false
 🆈	yadc
 🆉	yadc
 🆎	yadc
-### 字母黑框（字母帶圓角方框） ###
+### 字母黑框【字母框黑】【字母方黑】【字母黑方】(字母帶圓角方框) ###
 🅰	yacd
 🅱	yacd
 🅲	yacd
@@ -3647,7 +3647,7 @@ use_preset_vocabulary: false
 ⌶	eu
 ⏙	eu
 ⏘	eu
-### 象棋 ###
+### 象棋【西洋棋】 ###
 ♔	vf
 ♕	vf
 ♖	vf
@@ -3660,7 +3660,7 @@ use_preset_vocabulary: false
 ♝	vf
 ♞	vf
 ♟	vf
-### 西洋棋 ###
+### 西洋棋【象棋】 ###
 ♔	vuf
 ♕	vuf
 ♖	vuf
@@ -3732,7 +3732,7 @@ use_preset_vocabulary: false
 ⚃	wy
 ⚄	wy
 ⚅	wy
-### 撲克 ###
+### 撲克【撲克牌】 ###
 ♠	qd
 ♥	qd
 ♣	qd
@@ -3823,7 +3823,7 @@ use_preset_vocabulary: false
 🃳	qd
 🃴	qd
 🃵	qd
-### 撲克牌（撲克） ###
+### 撲克牌【撲克】 ###
 ♠	qdq
 ♥	qdq
 ♣	qdq
@@ -3997,7 +3997,7 @@ use_preset_vocabulary: false
 坎	ea
 艮	ea
 坤	ea
-### 六十四卦 ###
+### 六十四卦【易經】 ###
 ䷀	xgne
 ䷁	xgne
 ䷂	xgne
@@ -4062,7 +4062,7 @@ use_preset_vocabulary: false
 ䷽	xgne
 ䷾	xgne
 ䷿	xgne
-### 易經(六十四卦) ###
+### 易經【六十四卦】 ###
 ䷀	ur
 ䷁	ur
 ䷂	ur
@@ -4127,7 +4127,7 @@ use_preset_vocabulary: false
 ䷽	ur
 ䷾	ur
 ䷿	ur
-### 六十四卦名 ###
+### 六十四卦名【易經卦名】 ###
 乾	xgnea
 坤	xgnea
 屯	xgnea
@@ -4192,7 +4192,7 @@ use_preset_vocabulary: false
 小過	xgnea
 既濟	xgnea
 未濟	xgnea
-### 易經卦名(六十四卦名) ###
+### 易經卦名【六十四卦名】 ###
 乾	urea
 坤	urea
 屯	urea
@@ -4351,7 +4351,7 @@ use_preset_vocabulary: false
 𝍔	wvr
 𝍕	wvr
 𝍖	wvr
-### 占星（原為「天體」） ###
+### 占星(原為「天體」) ###
 ☄	5v
 ☼	5v
 ☽	5v
@@ -4921,7 +4921,7 @@ use_preset_vocabulary: false
 ⓲	gyf
 ⓳	gyf
 ⓴	gyf
-### 數字圈黑 ###
+### 數字圈黑【數字黑圈】 ###
 ⓿	gyfc
 ❶	gyfc
 ❷	gyfc
@@ -4943,7 +4943,7 @@ use_preset_vocabulary: false
 ⓲	gyfc
 ⓳	gyfc
 ⓴	gyfc
-### 數字黑圈 ###
+### 數字黑圈【數字圈黑】 ###
 ⓿	gycf
 ❶	gycf
 ❷	gycf
@@ -5150,7 +5150,7 @@ use_preset_vocabulary: false
 〸	n5a
 〹	n5a
 〺	n5a
-### 羅馬 ###
+### 羅馬【羅馬數字】 ###
 ⅰ	xa
 ⅱ	xa
 ⅲ	xa
@@ -5167,7 +5167,7 @@ use_preset_vocabulary: false
 ⅽ	xa
 ⅾ	xa
 ⅿ	xa
-### 羅馬數字 ###
+### 羅馬數字【羅馬】 ###
 ⅰ	xagy
 ⅱ	xagy
 ⅲ	xagy
@@ -5184,7 +5184,7 @@ use_preset_vocabulary: false
 ⅽ	xagy
 ⅾ	xagy
 ⅿ	xagy
-### 羅馬大 ###
+### 羅馬大【羅馬數字大】 ###
 Ⅰ	xa2
 Ⅱ	xa2
 Ⅲ	xa2
@@ -5201,7 +5201,7 @@ use_preset_vocabulary: false
 Ⅽ	xa2
 Ⅾ	xa2
 Ⅿ	xa2
-### 羅馬數字大 ###
+### 羅馬數字大【羅馬大】 ###
 Ⅰ	xagy2
 Ⅱ	xagy2
 Ⅲ	xagy2
@@ -5885,7 +5885,7 @@ $	c1
 ₺	c1
 ₨	c1
 ﷼	c1
-### 結構 ###
+### 結構【倉頡】 ###
 ⿰	re
 ⿱	re
 ⿲	re
@@ -5899,7 +5899,7 @@ $	c1
 ⿺	re
 ⿻	re
 〾	re
-### 倉頡（結構） ###
+### 倉頡【結構】 ###
 ⿰	hr
 ⿱	hr
 ⿲	hr
@@ -7383,7 +7383,7 @@ $	12
 ㈝	cje
 ㈞	cje
 ##### 一般符號加載 #####
-## 預訂補充（未完成）
+## 預訂補充(未完成)
 ### 文化 ###
 ☯	jc
 ✚	jc
@@ -7638,6 +7638,17 @@ $	12
 🏃	m2
 🏆	m2
 🏁	m2
+### 樂器 ###
+🎻	mf
+🎸	mf
+🎹	mf
+🎷	mf
+🎺	mf
+📯️	mf
+🥁	mf
+🪕	mf
+🪘	mf
+🪗	mf
 ### 中餐 ###
 🍜	5h
 🍚	5h
@@ -7647,15 +7658,6 @@ $	12
 🥠	5h
 🥡	5h
 🥢	5h
-### 正飯 ###
-🥘	5z
-🍜	5z
-🍲	5z
-🍛	5z
-🍝	5z
-🍱	5z
-🍚	5z
-🥗	5z
 ### 西餐 ###
 🍕	vh
 🥓	vh
@@ -7674,21 +7676,94 @@ $	12
 🥯	vh
 🧇	vh
 🫕	vh
+### 日式料理【日本料理】【日本菜】 ###
+🍥	bgxx
+🍣	bgxx
+🍱	bgxx
+🍙	bgxx
+🍘	bgxx
+### 日本料理【日式料理】【日本菜】 ###
+🍥	b1xx
+🍣	b1xx
+🍱	b1xx
+🍙	b1xx
+🍘	b1xx
+### 日本菜【日式料理】【日本料理】 ###
+🍥	b1h
+🍣	b1h
+🍱	b1h
+🍙	b1h
+🍘	b1h
+### 快餐【速食】 ###
+🍔	dh
+🌭	dh
+🍟	dh
+🥞	dh
+🥡	dh
+🥫	dh
+### 速食【快餐】 ###
+🍔	ng
+🌭	ng
+🍟	ng
+🥞	ng
+🥡	ng
+🥫	ng
+### 正飯 ###
+🥘	5z
+🍜	5z
+🍲	5z
+🍛	5z
+🍝	5z
+🍱	5z
+🍚	5z
+🥗	5z
+### 午餐 ###
+🥘	jh
+🍜	jh
+🍲	jh
+🍛	jh
+🍝	jh
+🍱	jh
+🍚	jh
+🥗	jh
+### 早餐【早點】 ###
+🍳	yh
+🥚	yh
+🧀	yh
+🥖	yh
+🥛	yh
+🍯	yh
+🥪	yh
+🥫	yh
+🥯	yh
+🧇	yh
+🫓	yh
+### 早點【早餐】 ###
+🍳	y2
+🥚	y2
+🧀	y2
+🥖	y2
+🥛	y2
+🍯	y2
+🥪	y2
+🥫	y2
+🥯	y2
+🧇	y2
+🫓	y2
+### 捲物【食物捲】 ###
+🥙	rj
+🌮	rj
+🌯	rj
+🫔	rj
+### 食物捲【捲物】 ###
+🥙	gjr
+🌮	gjr
+🌯	gjr
+🫔	gjr
 ### 串物 ###
 🍢	tj
 🍡	tj
-### 樂器 ###
-🎻	mf
-🎸	mf
-🎹	mf
-🎷	mf
-🎺	mf
-📯️	mf
-🥁	mf
-🪕	mf
-🪘	mf
-🪗	mf
-### 亞裔 ###
+### 亞裔【黃種人】 ###
 👨🏻	uu
 👩🏻	uu
 👴🏻	uu
@@ -7699,7 +7774,7 @@ $	12
 🧓🏻	uu
 🧑🏻	uu
 🧒🏻	uu
-### 黃種人 ###
+### 黃種人【亞裔】 ###
 👨🏻	c5b
 👩🏻	c5b
 👴🏻	c5b
@@ -7710,7 +7785,7 @@ $	12
 🧓🏻	c5b
 🧑🏻	c5b
 🧒🏻	c5b
-### 拉美裔 ###
+### 拉美裔【拉丁裔】【棕色人】 ###
 👨🏽	xau
 👩🏽	xau
 👴🏽	xau
@@ -7721,7 +7796,7 @@ $	12
 🧓🏽	xau
 🧑🏽	xau
 🧒🏽	xau
-### 拉丁裔 ###
+### 拉丁裔【拉美裔】【棕色人】 ###
 👨🏽	x2u
 👩🏽	x2u
 👴🏽	x2u
@@ -7732,7 +7807,7 @@ $	12
 🧓🏽	x2u
 🧑🏽	x2u
 🧒🏽	x2u
-### 棕色人 ###
+### 棕色人【拉美裔】【拉丁裔】 ###
 👨🏽	ynb
 👩🏽	ynb
 👴🏽	ynb
@@ -7743,7 +7818,7 @@ $	12
 🧓🏽	ynb
 🧑🏽	ynb
 🧒🏽	ynb
-### 白種人 ###
+### 白種人【白人】 ###
 👨🏼	15b
 👩🏼	15b
 👱🏼‍♀️	15b
@@ -7757,7 +7832,7 @@ $	12
 🧑🏼	15b
 👱🏼‍♂	15b
 🧒🏼	15b
-### 白人 ###
+### 白人【白種人】 ###
 👨🏼	1b
 👩🏼	1b
 👱🏼‍♀️	1b
@@ -7771,7 +7846,7 @@ $	12
 🧑🏼	1b
 👱🏼‍♂	1b
 🧒🏼	1b
-### 黑人 ###
+### 黑人【非裔】 ###
 👨🏿	cb
 👩🏿	cb
 👴🏿	cb
@@ -7782,7 +7857,7 @@ $	12
 🧓🏿	cb
 🧑🏿	cb
 🧒🏿	cb
-### 非裔 ###
+### 非裔【黑人】 ###
 👨🏿	zu
 👩🏿	zu
 👴🏿	zu
@@ -7850,49 +7925,6 @@ $	12
 🚵🏻‍♂️	m2s0
 🧗🏻‍♂️	m2s0
 🤹🏻‍♂️	m2s0
-### 午餐 ###
-🥘	jh
-🍜	jh
-🍲	jh
-🍛	jh
-🍝	jh
-🍱	jh
-🍚	jh
-🥗	jh
-### 早餐 ###
-🍳	yh
-🥚	yh
-🧀	yh
-🥖	yh
-🥛	yh
-🍯	yh
-🥪	yh
-🥫	yh
-🥯	yh
-🧇	yh
-🫓	yh
-### 早點 ###
-🍳	y2
-🥚	y2
-🧀	y2
-🥖	y2
-🥛	y2
-🍯	y2
-🥪	y2
-🥫	y2
-🥯	y2
-🧇	y2
-🫓	y2
-### 捲物 ###
-🥙	rj
-🌮	rj
-🌯	rj
-🫔	rj
-### 食物捲 ###
-🥙	gjr
-🌮	gjr
-🌯	gjr
-🫔	gjr
 ### 葉子 ###
 🍃	uy
 🍂	uy
@@ -7900,7 +7932,7 @@ $	12
 🌱	uy
 🌿	uy
 🥬	uy
-### 名勝 ###
+### 名勝【景點】 ###
 🗽	ag
 🏰	ag
 🗼	ag
@@ -7917,7 +7949,7 @@ $	12
 🌁	ag
 🌉	ag
 🏞	ag
-### 景點 ###
+### 景點【名勝】 ###
 🗽	r2
 🏰	r2
 🗼	r2
@@ -7934,7 +7966,7 @@ $	12
 🌁	r2
 🌉	r2
 🏞	r2
-### 公交(公共交通) ###
+### 公交【公共運輸】(公共交通) ###
 🚌	er
 🚎	er
 🚍	er
@@ -7945,23 +7977,7 @@ $	12
 🚋	er
 🚃	er
 🚟	er
-### 城軌 ###
-🚈	te
-🚇	te
-🚊	te
-🚞	te
-🚋	te
-🚃	te
-🚟	te
-### 捷運 ###
-🚈	rm
-🚇	rm
-🚊	rm
-🚞	rm
-🚋	rm
-🚃	rm
-🚟	rm
-### 公共運輸 ###
+### 公共運輸【公交】(公共交通) ###
 🚌	eemg
 🚎	eemg
 🚍	eemg
@@ -7972,6 +7988,22 @@ $	12
 🚋	eemg
 🚃	eemg
 🚟	eemg
+### 城軌【捷運】 ###
+🚈	te
+🚇	te
+🚊	te
+🚞	te
+🚋	te
+🚃	te
+🚟	te
+### 捷運【城軌】 ###
+🚈	rm
+🚇	rm
+🚊	rm
+🚞	rm
+🚋	rm
+🚃	rm
+🚟	rm
 ### 火車 ###
 🚄	ct
 🚅	ct
@@ -7979,17 +8011,17 @@ $	12
 🚆	ct
 🚂	ct
 🚉	ct
-### 鈔票 ###
+### 鈔票【紙鈔】【紙幣】 ###
 💵	tq
 💶	tq
 💷	tq
 💴	tq
-### 紙鈔 ###
+### 紙鈔【鈔票】【紙幣】 ###
 💵	5t
 💶	5t
 💷	5t
 💴	5t
-### 紙幣 ###
+### 紙幣【鈔票】【紙鈔】 ###
 💵	51
 💶	51
 💷	51
@@ -8024,14 +8056,14 @@ $	12
 🌊	2yb
 🧊	2yb
 🪨	2yb
-### 獎項(獎牌) ###
+### 獎項【獎牌】 ###
 🏅	rv
 🎖	rv
 🥇	rv
 🥈	rv
 🥉	rv
 🏆	rv
-### 獎牌(獎項) ###
+### 獎牌【獎項】 ###
 🏅	rq
 🎖	rq
 🥇	rq
@@ -8065,44 +8097,12 @@ $	12
 🧜🏻	rew
 🧚🏻	rew
 🦹🏻	rew
-### 快餐 ###
-🍔	dh
-🌭	dh
-🍟	dh
-🥞	dh
-🥡	dh
-🥫	dh
-### 速食 ###
-🍔	ng
-🌭	ng
-🍟	ng
-🥞	ng
-🥡	ng
-🥫	ng
 ### 怪物 ###
 🦄	ej
 🤖	ej
 👾	ej
 👹	ej
 👺	ej
-### 日式料理 ###
-🍥	bgxx
-🍣	bgxx
-🍱	bgxx
-🍙	bgxx
-🍘	bgxx
-### 日本料理 ###
-🍥	b1xx
-🍣	b1xx
-🍱	b1xx
-🍙	b1xx
-🍘	b1xx
-### 日本菜 ###
-🍥	b1h
-🍣	b1h
-🍱	b1h
-🍙	b1h
-🍘	b1h
 ### 月相圖(月相) ###
 🌕	mvw
 🌖	mvw
@@ -8127,7 +8127,7 @@ $	12
 🆘	uc
 🚫	uc
 ❌	uc
-### 汽車 ###
+### 汽車【車輛】 ###
 🚗	ft
 🚕	ft
 🚙	ft
@@ -8147,6 +8147,26 @@ $	12
 🚘	ft
 🚖	ft
 🛺	ft
+### 車輛【汽車】 ###
+🚗	tx
+🚕	tx
+🚙	tx
+🚌	tx
+🚎	tx
+🏎	tx
+🚓	tx
+🚑	tx
+🚒	tx
+🚐	tx
+🚚	tx
+🚛	tx
+🎢	tx
+🛻	tx
+🚔	tx
+🚍	tx
+🚘	tx
+🚖	tx
+🛺	tx
 ### 遊樂園 ###
 🏟	uxm
 🎡	uxm
@@ -8156,7 +8176,7 @@ $	12
 ### 熱飲 ###
 ☕️	bu
 🍵	bu
-### 牲畜 ###
+### 牲畜【畜牲】 ###
 🐄	gt
 🐃	gt
 🐂	gt
@@ -8171,7 +8191,7 @@ $	12
 🐩	gt
 🐈	gt
 🐈‍⬛️	gt
-### 畜牲 ###
+### 畜牲【牲畜】 ###
 🐄	tg
 🐃	tg
 🐂	tg
@@ -8204,7 +8224,7 @@ $	12
 🏏	fr
 🥍	fr
 🎳	fr
-### 甜食圖(甜食) ###
+### 甜食圖【甜點】(甜食) ###
 🍯	wgw
 🍭	wgw
 🍧	wgw
@@ -8220,7 +8240,7 @@ $	12
 🧁	wgw
 🧇	wgw
 🧆	wgw
-### 甜點 ###
+### 甜點【甜食圖】(甜食) ###
 🍯	w2
 🍭	w2
 🍧	w2
@@ -8236,7 +8256,7 @@ $	12
 🧁	w2
 🧇	w2
 🧆	w2
-### 家禽圖(家禽) ###
+### 家禽圖【禽類】(家禽) ###
 🦆	rfw
 🐓	rfw
 🦃	rfw
@@ -8245,7 +8265,7 @@ $	12
 🐣	rfw
 🐥	rfw
 🦚	rfx
-### 禽類 ###
+### 禽類【家禽圖】(家禽) ###
 🦆	fx
 🐓	fx
 🦃	fx
@@ -8273,13 +8293,13 @@ $	12
 🍠	hx
 🥜	hx
 🌰	hx
-### 肉類 ###
+### 肉類【肉品】 ###
 🥩	bx
 🥓	bx
 🍗	bx
 🍖	bx
 🍤	bx
-### 肉品 ###
+### 肉品【肉類】 ###
 🥩	bq
 🥓	bq
 🍗	bq
@@ -8316,27 +8336,7 @@ $	12
 🫒	gh
 🫑	gh
 🫘	gh
-### 車輛 ###
-🚗	tx
-🚕	tx
-🚙	tx
-🚌	tx
-🚎	tx
-🏎	tx
-🚓	tx
-🚑	tx
-🚒	tx
-🚐	tx
-🚚	tx
-🚛	tx
-🎢	tx
-🛻	tx
-🚔	tx
-🚍	tx
-🚘	tx
-🚖	tx
-🛺	tx
-### 酒精 ###
+### 酒精【酒類】 ###
 🍷	rr
 🥃	rr
 🍺	rr
@@ -8345,7 +8345,7 @@ $	12
 🍸	rr
 🍻	rr
 🥂	rr
-### 酒類 ###
+### 酒類【酒精】 ###
 🍷	rx
 🥃	rx
 🍺	rx
@@ -8375,13 +8375,13 @@ $	12
 🥯	a1
 🍩	a1
 🥮	a1
-### 飛機 ###
+### 飛機【飛行器】 ###
 🛩	zr
 ✈️	zr
 🚁	zr
 🚀	zr
 🛸	zr
-### 飛行器 ###
+### 飛行器【飛機】 ###
 🛩	zvf
 ✈️	zvf
 🚁	zvf
@@ -8406,7 +8406,7 @@ $	12
 🥣	hrw
 🥢	hrw
 🫖	hrw
-### 魚類圖(魚類) ###
+### 魚類圖【魚圖】(魚)(魚類) ###
 🐠	mxw
 🐟	mxw
 🐡	mxw
@@ -8414,7 +8414,7 @@ $	12
 🐳	mxw
 🐋	mxw
 🦈	mxw
-### 魚圖(魚) ###
+### 魚圖【魚類圖】(魚)(魚類) ###
 🐠	mw
 🐟	mw
 🐡	mw
@@ -8422,7 +8422,7 @@ $	12
 🐳	mw
 🐋	mw
 🦈	mw
-### 鳥類 ###
+### 鳥類【鳥圖】(鳥) ###
 🦆	sx
 🦅	sx
 🦉	sx
@@ -8436,7 +8436,7 @@ $	12
 🦜	sx
 🦩	sx
 🦤	sx
-### 鳥圖(鳥) ###
+### 鳥圖【鳥類】(鳥) ###
 🦆	sw
 🦅	sw
 🦉	sw
@@ -8750,7 +8750,7 @@ $	12
  🏽	zn
  🏾	zn
  🏿	zn
-### 日用品 ###
+### 日用品【日用】 ###
 🧴	bmq
 🧼	bmq
 🧻	bmq
@@ -8761,7 +8761,7 @@ $	12
 ☂️	bmq
 🪥	bmq
 🪣	bmq
-### 日用（日用品） ###
+### 日用【日用品】 ###
 🧴	bm
 🧼	bm
 🧻	bm
@@ -8789,7 +8789,7 @@ $	12
 ☠	cg
 🚮️	cg
 🗑️	cg
-### 填色(塊) ###
+### 填色【填色塊】 ###
 ＿	wn
 ˍ	wn
 ▁	wn
@@ -8811,7 +8811,7 @@ $	12
 ◣	wn
 ◥	wn
 ◤	wn
-### 填色塊(填色) ###
+### 填色塊【填色】 ###
 ＿	wnd
 ˍ	wnd
 ▁	wnd
@@ -8884,12 +8884,12 @@ $	12
 ╘	gvd
 ╧	gvd
 ╛	gvd
-### 血液（血型） ###
+### 血液【血型圖】(血型) ###
 🅰️	vu
 🅱️	vu
 🅾️	vu
 🆎️	vu
-### 血型圖（血液） ###
+### 血型圖【血液】(血型) ###
 🅰️	vvw
 🅱️	vvw
 🅾️	vvw
@@ -8914,7 +8914,7 @@ $	12
 📷	2aw
 🎙	2aw
 📡	2aw
-### 蟲圖 ###
+### 蟲圖【蟲類圖】 ###
 🐛	tw
 🪱	tw
 🐞	tw
@@ -8926,7 +8926,7 @@ $	12
 🪰	tw
 🐌	tw
 🐝	tw
-### 蟲類圖（蟲圖） ###
+### 蟲類圖【蟲圖】 ###
 🐛	txw
 🪱	txw
 🐞	txw
@@ -9846,7 +9846,7 @@ l	5-0
 伍拾	5-0
 五十	5-0
 ㉌	5-0
-##### 標記字母，等號在前（取消等號在前） #####
+##### 標記字母，等號在前(取消等號在前) #####
 ### a ###
 Ⓐ	a
 ⓐ	a
