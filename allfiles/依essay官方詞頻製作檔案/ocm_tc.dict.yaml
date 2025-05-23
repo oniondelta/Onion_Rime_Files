@@ -4,7 +4,7 @@
 # 字碼有少部分重複，但勿用excel去刪除重複的，因會把相通的字給一並刪除，如：aduu->[朗]和[朗]會給一並的刪除！
 ---
 name: ocm_tc
-version: "202407"
+version: "202505"
 sort: original
 use_preset_vocabulary: false
 #max_phrase_length: 7
@@ -36714,7 +36714,7 @@ use_preset_vocabulary: false
 孨	zzz
 孴	zzzd	289
 孨	zzzv	394
-##### 網友補充VRSF 結束 #####36716
+##### 網友補充VRSF 結束 @36717 #####
 ##### 日文漢字 和 簡體字 開始 #####
 ## 舊的rime碼表，含有日文漢字
 对	a
@@ -45473,7 +45473,7 @@ use_preset_vocabulary: false
 笂	zzj
 笂	zzx
 ##### 日文漢字 和 簡體字 結束 #####
-##### 注音符號起始 #####
+##### 注音符號起始(注音與電腦的方案上的「尾綴」和「順序」不同) #####
 ### 漢語拼音注音符號 ###
 ㄅ	b;
 ㄆ	p;

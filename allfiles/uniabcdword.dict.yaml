@@ -11,7 +11,6 @@ use_preset_vocabulary: false
 #min_phrase_weight: 100
 ...
 ### 補 CJK 缺碼或修正碼 ###
-鐞	aeia
 覅	vnm
 稆	hopo
 𢙲	hoo
