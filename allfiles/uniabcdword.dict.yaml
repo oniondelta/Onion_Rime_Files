@@ -4,13 +4,14 @@
 # 201707把前面有「,」的打井字號！
 ---
 name: uniabcdword
-version: "202412"
+version: "202505"
 sort: original
 use_preset_vocabulary: false
 #max_phrase_length: 7
 #min_phrase_weight: 100
 ...
 ### 補 CJK 缺碼或修正碼 ###
+鐞	aeia
 覅	vnm
 稆	hopo
 𢙲	hoo
@@ -18,6 +19,7 @@ use_preset_vocabulary: false
 捑	jdld
 戠	laqd
 諯	ier
+垇	yue
 垇	yuo
 垇	yuov
 踭	ozee
