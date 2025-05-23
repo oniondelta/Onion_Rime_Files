@@ -2578,6 +2578,10 @@ min_phrase_weight: 100
 淳	zhun3	0%
 厸	miao3	0%
 彡	xian1	0%
+攵	wen2	0%
+攵	wen4	0%
+夂	zhong1	0%
+夂	sui1	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -114832,4 +114836,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 114835 #####
+##### @結束 END - 114839 #####
