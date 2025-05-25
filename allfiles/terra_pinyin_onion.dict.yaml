@@ -2583,6 +2583,9 @@ min_phrase_weight: 100
 夂	zhong1	0%
 夂	sui1	0%
 夂	cui1	0%
+玹	xian2	0%
+玹	xuan4	0%
+芮	ruo4	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -105071,6 +105074,7 @@ min_phrase_weight: 100
 貞觀之治	zhen1 guan4 zhi1 zhi4
 貞觀之治	zhen1 guan1 zhi1 zhi4
 貞觀政要	zhen1 guan4 zheng4 yao4
+貞觀政要	zhen1 guan1 zheng4 yao4
 負乘致寇	fu4 sheng4 zhi4 kou4
 負債累累	fu4 zhai4 lei3 lei3
 負分	fu4 fen1
@@ -114837,4 +114841,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 114840 #####
+##### @結束 END - 114844 #####
