@@ -699,6 +699,7 @@ min_phrase_weight: 100
 嘠	(ga5)	1%
 咖	(ga5)	0%
 噶	(ga5)	0%
+噶	(ge5)	0%
 咯	(ge5)	0.1%
 嗰	(ga5)	0%
 𠮶	(ga5)	0%
@@ -855,6 +856,7 @@ min_phrase_weight: 100
 嚌	(ji5)	0%
 哜	(ji5)	0%
 卟	(ji5)	0%
+唶	(ji5)	0%
 呷	(jia5)	0%
 咖	(jia5)	0%
 唊	(jia5)	0%
@@ -1176,6 +1178,7 @@ min_phrase_weight: 100
 嘖	(ze5)	100%
 啧	(ze5)	1%
 㖽	(ze5)	0%
+唶	(ze5)	0%
 噪	(zao5)	0%
 唣	(zao5)	0%
 唕	(zao5)	0%
