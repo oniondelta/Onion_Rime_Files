@@ -1,4 +1,4 @@
-# Win_舊0.15.0.0版小狼毫主程式_Nightly Build
+# Win_舊0.15.0版小狼毫主程式_Nightly Build
 
 ### Source File
 
