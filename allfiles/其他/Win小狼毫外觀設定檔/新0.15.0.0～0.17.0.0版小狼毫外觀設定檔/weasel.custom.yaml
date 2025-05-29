@@ -1,0 +1,141 @@
+# Weasel settings
+# encoding: utf-8
+# 20231115 for Commit CI #161
+
+patch:
+  app_options:
+    sublime_text.exe: {ascii_mode: true}
+
+  style:
+    color_scheme: lost_temple_shadow #lost_temple #purity_of_essence #purity_of_form #mac_lamb_for_win #ink #aqua
+    inline_preedit: false    #是否在行內顯示預編輯區
+    preedit_type: composition ##composition（編碼）；preview（高亮候選）；preview_all（全部候選，為新增選項，配合隱藏窗口使用效果尤佳）    #預編輯區顯示內容（preedit類型）
+    fullscreen: false    #是否全屏顯示窗口
+    horizontal: false    #是否橫向顯示窗口
+    vertical_text: false    #豎排佈局
+    # vertical_text_left_to_right: false    #從左到右豎排
+    # vertical_text_with_wrap: false    #豎排自動換行
+    # vertical_auto_reverse: false    #豎排輸入窗口在上方時倒序排列
+
+    font_face: "Segoe UI Emoji:21:40, Segoe UI Emoji:2600, Noto Sans CJK TC DemiLight" #"Segoe UI Emoji:80, Noto Sans CJK TC DemiLight" #Segoe UI Symbol（黑白圖案） #Noto Sans Mono CJK TC #Noto Sans CJK TC Light #HanaMinA #Regular    #全局字體
+    font_point: 14 #13 #16    #全局字號
+    label_font_face: Noto Sans Mono CJK TC #Noto Sans CJK TC Light #HanaMinA #Regular    #標籤字體
+    label_font_point: 11    #標籤字號
+    label_format: "\u2005%s " ## \2002 是en space的寬度； \u2004 是1/3 em； \u2005 是1/4 em； \u2006 是1/6 em； \u2007 是圖形空間的寬度； \u2008 是標點符號的寬度    #標籤格式
+    comment_font_face: Noto Sans CJK TC DemiLight #Microsoft YaHei    #註釋字體
+    comment_font_point: 13    #註釋字號
+
+    mark_text: ""    #高亮標記符號，顯示在選中的候選標籤前 【需設置hilited_mark_color才會作用】
+    ascii_tip_follow_cursor: false    #切換ASCII模式時，提示圖標跟隨光標
+    enhanced_position: false    #無法定位候選框時，在窗口左上角顯示候選框
+    display_tray_icon: false    #本為托盤顯示獨立於語言欄的額外圖標，後來改為於語言欄另增額外圖標。
+    antialias_mode: default ##default；force_dword；cleartype；grayscale；aliased    #次像素反鋸齒設定
+
+    layout:
+      type: vertical ##horizontal（橫向）；vertical（豎直）；vertical_text（文本豎直）；vertical+fullscreen（豎向全屏）；horizontal+fullscreen（橫向全拼）    #佈局類型，功能近似style下的窗口控制選項
+      align_type: center ##top；center；bottom    #對齊規則（文字偏置）（主要影響label和comment居上/居中/居下布置，尤其是label和comment字體比候選字小的时候，bottom/center/top）
+      max_width: 0    #候選框最大寬度。超過設定值會嘗試自動摺疊 【set 0 to disable max width】
+      max_height: 0    #候選框最大高度。超過設定值會嘗試自動摺疊 【set 0 to disable max height】
+      min_width: 160    #候選框最小寬度
+      min_height: 10    #候選框最小高度
+      border_width: 2 #3 #0    #邊框寬度，別名border 【窗口邊界寬度，大於圓角半徑才有效果？】
+      # border: 3 #0    #邊框寬度（外邊框寬），同border_width，擇一即可，故遮屏
+
+      margin_x: 2 #3 #0 #5    #元素偏離候選邊框X軸的距離（候選字左右邊距） 【當為0時，round_corner不會作用】
+      margin_y: 3 #5    #元素偏離候選邊框Y軸的距離（候選字上下邊距）
+      spacing: 10 #5    #預編輯區域和候選區域的間隔（輸入碼與第一個候選項之間距離）
+      candidate_spacing: 3    #候選項之間的間隔（各候選項間距）
+      hilite_spacing: 4    #候選和標籤的間隔（label與候選字距離）
+      hilite_padding: 2 #3 #1    #高亮區域和邊框的間隔（候選字與候選框距離）
+      shadow_offset_x: 4 #3    #陰影繪製的偏離距離
+      shadow_offset_y: 4 #3    #陰影繪製的偏離距離
+      shadow_radius: 0 #5 #7 #4    #陰影大小（全局陰影模糊半徑） 【如果為0則全局禁用陰影】
+      corner_radius: 7 #5 #4    #窗口圓角半徑
+      round_corner: 3 #0    #高亮區域圓角（候選、編碼背景色塊圓角），别名 hilited_corner_radius
+      ### 當 hilite_padding 的值 ≥ margin_x 和 margin_y 的值時，高亮顏色會覆蓋整個選中的候選區域，呈現「天圓地方」的效果。
+
+
+  preset_color_schemes:
+    lost_temple_shadow:
+      author: "佛振 <chen.sst@gmail.com>, based on ir_black"
+      back_color: 0x444444
+      border_color: 0x787878 #0x444444 #0xDDDDDD
+      #hilited_back_color: 0x222222
+      hilited_candidate_back_color: 0x82e6ca
+      hilited_candidate_text_color: 0x000000
+      hilited_text_color: 0x82e6ca
+      name: "孤寺影／Lost Temple Shadow"
+      text_color: 0xe8f3f6
+      shadow_color: 0x000000 #候選窗陰影色
+
+    mac_lamb_for_win:
+      name: "lamb"
+      author: "lamb"
+      # horizontal: true                               # 設置水平還是竪直模式
+      # inline_preedit: true                           # 設置是否雙行顯示
+      # font_face: PingFangSC                          # 字體
+      # font_point: 16                                 # 字體大小
+      # label_font_point: 12                           # 普通標籤的字體大小
+      ##spacing: 0                                     # 鍵入碼區與候選項區間距 （可帶小數，可爲負。默認0）
+      back_color: 0xffffff                           # 設置輸入條的背景色，色值是按照BGR的形式16進制填寫
+      ##corner_radius: 5                               # 設置輸入條的圓角效果
+      # border_height: 4                               # 設置輸入條上下寬度
+      # border_width: 4                                # 設置輸入條左右寬度
+      # border_color: 0xffffff #0x9f62e8               # 輸入條邊框顏色，似乎在橫向模式下不起作用
+      # border_color_width: 0                          # 查無名稱  # 輸入條邊框寬度
+      ##candidate_format: "%c %@  "                    # 設置每個候選詞之間的間隔距離，%c代表備選的數字，%@代表候選字，可以通過輸入空格的形式來調整每個候選字之間的間隔距離
+      candidate_text_color: 0x333333                 # 候選字顏色
+      text_color: 0xA1A1A1 #0x888888 #0x333333                 # 普通候選字的顏色，非第一候選字
+      hilited_text_color: 0x333333 #0x888888         # 高亮（選中）鍵入碼字色
+      hilited_candidate_label_color: 0xffffff        # 第一候選字標籤顏色，也就是數字1
+      hilited_candidate_text_color: 0xffffff         # 第一候選字顏色
+      hilited_candidate_back_color: 0xD05B21         # 第一候選字高亮顏色（背景色）
+      hilited_comment_text_color: 0xffffff           # 高亮（選中）候選詞注疏字色
+      ##hilited_corner_radius: 4.5                     # 第一候選字高亮顏色的圓角，當不設置時就是一整塊的顏色，設置了圓角之後就帶有圓角效果了
+      label_color: 0x888888                          # 普通標籤的顏色(非第一候選字)，也就是候選字數字
+      comment_text_color: 0x828282 #0x888888
+
+    purity_of_form:
+      name: "純粹的形式／Purity of Form"
+      author: "雨過之後、佛振"
+      text_color: 0xc2c2c2
+      back_color: 0x444444
+      candidate_text_color: 0xeeeeee
+      hilited_text_color: 0xeeeeee
+      # hilited_back_color: 0x444444
+      hilited_candidate_text_color: 0x000000
+      hilited_candidate_back_color: 0xfafafa
+      comment_text_color: 0x808080
+
+    purity_of_essence:
+      name: "純粹的本質／Purity of Essence"
+      author: "佛振"
+      text_color: 0xB0B0B0 #0x2c2ccc
+      back_color: 0xfafafa #透明：0xF2fafafa
+      candidate_text_color: 0x000000
+      hilited_text_color: 0x000000
+      # hilited_back_color: 0xfafafa #透明：0xF2fafafa
+      hilited_candidate_text_color: 0xeeeeee
+      hilited_candidate_back_color: 0x7A5F47 #0x444444
+      comment_text_color: 0x808080
+      hilited_comment_text_color: 0xD6D5D5 #C9C8C5 #C9C9BF #註解文字高亮
+
+
+# preset_color_schemes/metro:
+#    back_color: 0xffffff
+#    border_color: 0x444444
+#    hilited_back_color: 0xffffff
+#    hilited_candidate_back_color: 0x444444
+#    hilited_candidate_text_color: 0xffffff
+#    hilited_text_color: 0x000000
+#    name: "metro"
+#    text_color: 0x000000
+#  style/layout/border: 2
+#  style/layout/margin_x: 15
+#  style/layout/margin_y: 15
+#  style/layout/hilite_padding: 15
+#  style/layout/hilite_spacing: 15
+#  style/layout/spacing: 15
+#  style/layout/candidate_spacing: 30
+#  style/layout/round_corner: 0
+#  style/corner_radius: 0

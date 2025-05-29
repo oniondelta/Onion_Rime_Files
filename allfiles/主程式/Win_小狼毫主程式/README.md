@@ -2,7 +2,9 @@
 
 ### Source Files
 
-- 「Win_新0.16.3版小狼毫主程式_Nightly Build」：https://github.com/rime/weasel/releases
+- 「Win_新0.17.0版小狼毫主程式」：https://github.com/rime/weasel/releases
+
+- 「Win_舊0.16.3版小狼毫主程式_Nightly Build」：https://github.com/rime/weasel/releases
 
 - 「Win_舊0.15.0.0版小狼毫主程式_Nightly Build」：https://github.com/rime/weasel/releases
 
@@ -10,11 +12,11 @@
 
 ### 版本說明
 
-- 推薦安裝「Win_新0.16.3版小狼毫主程式_Nightly Build」。
+- 推薦安裝「Win_新0.17.0版小狼毫主程式」。
 
 - 建議置換最新 librime 核心！
 
-- 「Win_新0.16.3版小狼毫主程式_Nightly Build」可為 64 位元，安裝在 Program Files 底下。如 CPU 不支援 64 位元則安裝 32 位元，安裝在 Program Files(x86) 底下。
+- 「Win_舊0.16.3版小狼毫主程式_Nightly Build」之後的版本可為 64 位元，安裝在 Program Files 底下。如 CPU 不支援 64 位元則安裝 32 位元，安裝在 Program Files(x86) 底下。
 
 - 「Win_舊0.15.0.0版小狼毫主程式_Nightly Build」可為 64 位元，因安裝檔為 32 位元關係，還是安裝在 Program Files(x86) 底下。如 CPU 不支援 64 位元則安裝 32 位元。
 
