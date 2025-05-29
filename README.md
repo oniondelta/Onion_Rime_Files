@@ -47,7 +47,7 @@
 
   > Win 用官方發布（release）的 [weasel 0.16.3](https://github.com/rime/weasel/releases/tag/0.16.3) 主程式，使用此版，需置換最新 [Oct 14, 2024 之後的 librime 核心](https://github.com/rime/librime/releases) ！[weasel 0.16.3](https://github.com/rime/weasel/releases/tag/0.16.3) 之後的 Nightly Build 或正式版，不用置換 librime 核心。
 
-  > Win 建議使用 [weasel 0.17.0](https://github.com/rime/weasel/releases/tag/0.17.0) 版本。[weasel 0.17.3](https://github.com/rime/weasel/releases) 以上的正式版和 Nightly Build 測試，遇過方案部屬不起來無法使用之問題！
+  > Win 建議使用 [weasel 0.17.0](https://github.com/rime/weasel/releases/tag/0.17.0) 版本。測試 [weasel 0.17.3](https://github.com/rime/weasel/releases) 正式版和 Nightly Build，遇過方案部屬失敗無法使用之問題！
 
 - 以下為各版本，其組件版本不一造成不相容時之說明：
 
