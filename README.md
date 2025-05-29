@@ -47,6 +47,8 @@
 
   > Win 用官方發布（release）的 [weasel 0.16.3](https://github.com/rime/weasel/releases/tag/0.16.3) 主程式，使用此版，需置換最新 [Oct 14, 2024 之後的 librime 核心](https://github.com/rime/librime/releases) ！[weasel 0.16.3](https://github.com/rime/weasel/releases/tag/0.16.3) 之後的 Nightly Build 或正式版，不用置換 librime 核心。
 
+  > Win 建議使用 [weasel 0.17.0](https://github.com/rime/weasel/releases/tag/0.17.0) 版本。[weasel 0.17.3](https://github.com/rime/squirrel/releases) 以上版本測試，遇到方案部屬不起來無法使用之問題！
+
 - 以下為各版本，其組件版本不一造成不相容時之說明：
 
   > 原先方案以 Mac 鼠鬚管官方最新編譯版本為實作基礎，後來放飛使用新版 librime 核心和 librime-lua 掛件的新功能、新函數。如不符合，則需更換或編譯含最新版 librime-lua 的 librime 核心才能確保完整運行所有功能。[核心更換方法](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E6%8E%A8%E8%96%A6-Rime-%E4%B8%BB%E7%A8%8B%E5%BC%8F%E5%AE%89%E8%A3%9D%E4%B9%8B%E7%89%88%E6%9C%AC%E5%92%8C%E6%96%B9%E6%B3%95)。
