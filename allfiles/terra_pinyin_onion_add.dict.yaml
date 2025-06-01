@@ -18,7 +18,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion_add
-version: "202505"
+version: "202506"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7
@@ -281,6 +281,7 @@ min_phrase_weight: 100
 撲	(pu3)	10%
 扑	(pu3)	10%
 禹	(yu2)	0%
+蓓	(pei2)	0%
 ### @補充為《一聲》，通俗慣用或方便輸入，『非正確發音』！！！ ###
 腓	(fei1)	1%
 琲	(fei1)	1%

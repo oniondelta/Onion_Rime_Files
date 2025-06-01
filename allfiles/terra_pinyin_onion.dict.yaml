@@ -166,7 +166,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "202505"
+version: "202506"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -2594,6 +2594,26 @@ min_phrase_weight: 100
 雋	zui4	0%
 隽	zui4	0%
 镗	tang2	0%
+汪	wang3	0%
+汪	hong2	0%
+骶	di4
+墅	ye3	0%
+蔡	ca1	0%
+韜	tao4	0%
+韬	tao4	0%
+奏	cou4	0%
+齊	ji1	0%
+齊	jian3	0%
+齐	ji4	0%
+齐	zhai1	0%
+齐	zi1	0%
+齐	ji1	0%
+齐	jian3	0%
+斉	ji4	0%
+斉	zhai1	0%
+斉	zi1	0%
+斉	ji1	0%
+斉	jian3	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -114849,4 +114869,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 114852 #####
+##### @結束 END - 114872 #####
