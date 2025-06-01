@@ -2614,6 +2614,20 @@ min_phrase_weight: 100
 斉	zi1	0%
 斉	ji1	0%
 斉	jian3	0%
+斊	ji4	0%
+斊	zhai1	0%
+斊	zi1	0%
+斊	ji1	0%
+斊	jian3	0%
+亝	ji4	0%
+亝	zi1	0%
+亝	ji1	0%
+亝	jian3	0%
+䄢	ji4	0%
+䄢	zhai1	0%
+䄢	zi1	0%
+䄢	ji1	0%
+䄢	jian3	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -114869,4 +114883,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 114872 #####
+##### @結束 END - 114886 #####
