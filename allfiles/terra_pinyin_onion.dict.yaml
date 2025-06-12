@@ -2632,6 +2632,19 @@ min_phrase_weight: 100
 咑	da5	0%
 繮	gang1	0%
 磕	ke3	0%
+桡	nao2
+蝰	kui1
+汾	pen2	0%
+汾	fen1	0%
+嘯	chi4	0%
+啸	chi4	0%
+嘨	chi4	0%
+姐	ju4	0%
+姐	xu4	0%
+姐	zu1	0%
+陬	zhe2	0%
+澨	cuo2	0%
+厓	ai2	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -62902,7 +62915,7 @@ min_phrase_weight: 100
 劈頭子	pi1 tou2 zi5
 劈頭蓋臉	pi1 tou2 gai4 lian3
 劉姥姥進大觀園	liu2 lao3 lao3 jin4 da4 guan1 yuan2
-劉姥姥進大觀園	liu2 lao3 lao5 jin4 da4 guan1 yuan2
+劉姥姥進大觀園	liu2 lao3 lao5 jin4 da4 guan1 yuan2	80%
 劉少奇	liu2 shao4 qi2
 劉彥和	liu2 yan4 he2
 劉猛將軍	liu2 meng3 jiang1 jun1
@@ -65766,7 +65779,9 @@ min_phrase_weight: 100
 和好如初	he2 hao3 ru2 chu1
 和好相處	he2 hao3 xiang1 chu3
 和姐姐	han4 jie3 jie3
+和姐姐	han4 jie3 jie5	80%
 和姐姐	he2 jie3 jie3
+和姐姐	he2 jie3 jie5	80%
 和姦	he2 jian1
 和婉	he2 wan3
 和室	he2 shi4
@@ -69255,7 +69270,7 @@ min_phrase_weight: 100
 大姆子	da4 mu3 zi5
 大姊	da4 jie3
 大姊頭	da4 jie3 tou2
-大姐姐	da4 jie3 jie5
+大姐姐	da4 jie3 jie5	80%
 大姐姐	da4 jie3 jie3
 大姑娘	da4 gu1 niang2
 大姑娘	da4 gu1 niang5	80%
@@ -70589,15 +70604,15 @@ min_phrase_weight: 100
 姊妹盟	zi3 mei4 meng2
 姊妹行	jie3 mei4 hang2
 姊妹行	zi3 mei4 hang2
-姊姊	jie3 jie5
+姊姊	jie3 jie5	80%
 姊姊	jie3 jie3
-姊姊	zi3 zi5
+姊姊	zi3 zi5	80%
 姊姊	zi3 zi3
 始創	shi3 chuang4
 始興	shi3 xing1
 始興縣	shi3 xing1 xian4
 姐夫	jie3 fu1
-姐姐	jie3 jie5
+姐姐	jie3 jie5	80%
 姐姐	jie3 jie3
 姑丈人	gu1 zhang4 ren2
 姑太太	gu1 tai4 tai4
@@ -70609,7 +70624,7 @@ min_phrase_weight: 100
 姑姊	gu1 zi3
 姑姑	gu1 gu5
 姑姑	gu1 gu1
-姑姥姥	gu1 lao3 lao5
+姑姥姥	gu1 lao3 lao5	80%
 姑姥姥	gu1 lao3 lao3
 姑娘	gu1 niang2
 姑娘	gu1 niang5	80%
@@ -70656,19 +70671,19 @@ min_phrase_weight: 100
 姣美	jiao3 mei3
 姣美	jiao1 mei3
 姣麗	jiao3 li4
-姥姥	lao3 lao5
+姥姥	lao3 lao5	80%
 姥姥	lao3 lao3
-姥姥不疼	lao3 lao5 bu4 teng2
+姥姥不疼	lao3 lao5 bu4 teng2	80%
 姥姥不疼	lao3 lao3 bu4 teng2
 姥娘	lao3 niang2
 姥爺	lao3 ye5	80%
 姥爺	lao3 ye2
 姨太太	yi2 tai4 tai4
-姨太太	yi2 tai4 tai5
+姨太太	yi2 tai4 tai5	80%
 姨夫	yi2 fu1
-姨奶奶	yi2 nai3 nai5
+姨奶奶	yi2 nai3 nai5	80%
 姨奶奶	yi2 nai3 nai3
-姨姥姥	yi2 lao3 lao5
+姨姥姥	yi2 lao3 lao5	80%
 姨姥姥	yi2 lao3 lao3
 姨父	yi2 fu4
 姨甥男女	yi2 sheng1 nan2 nv3
@@ -72881,7 +72896,9 @@ min_phrase_weight: 100
 山暈	shan1 yun4
 山東梆子	shan1 dong1 bang1 zi5
 山楂	shan1 zha1
+山楂	shan1 cha2
 山楂糕	shan1 zha1 gao1
+山楂糕	shan1 cha2 gao1
 山泥傾瀉	shan1 ni2 qing1 xie4
 山泥傾瀉	shan1 ni2 qing3 xie4
 山溜穿石	shan1 liu4 chuan1 shi2
@@ -97257,6 +97274,7 @@ min_phrase_weight: 100
 網卡	wang3 ka3
 網吧	wang3 ba5
 網吧	wang3 ba1
+網吧	wang3 ba4	80%
 網圈	wang3 quan1
 網子	wang3 zi5
 網屏	wang3 ping2
@@ -114946,4 +114964,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 114949 #####
+##### @結束 END - 114967 #####
