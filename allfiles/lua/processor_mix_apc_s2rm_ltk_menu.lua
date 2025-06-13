@@ -224,6 +224,7 @@ local function processor(key, env)
         return 1
       elseif run_in ~= nil then
         -- engine:commit_text(run_in)  -- 測試用
+        -- engine:commit_text( generic_open(run_in.open) )  -- 測試用
         generic_open(run_in.open)  -- 要確定 run_in 不為 nil，才能加.open
         context:clear()
         return 1

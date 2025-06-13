@@ -68,6 +68,7 @@ local function processor(key, env)
         return 1
       elseif kp_p ~= nil then
         -- engine:commit_text(kp_p)  -- 測試用
+        -- engine:commit_text( generic_open(run_in.open) )  -- 測試用
         generic_open(kp_p)
         context:clear()
         return 1
