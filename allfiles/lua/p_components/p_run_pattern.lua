@@ -7,6 +7,7 @@
 - 多個同編碼的「開啟碼」，以後面條目為用。
 - Win 中 open = "路徑"，其路徑名稱包含「中文（非ASCII編碼）」可能無法開啟。
 - s = "數字"，為「前綴」「j」提示選單中的順序，如相同以「開啟碼」排序。
+- open = "路徑"，其中路徑開頭標記「-removeopen 」為特此標示，去移除開頭之「open和start等」，有些指令不能有開頭command！
 
 - 修改後需「重新部署」才可生效。
 --]]
@@ -43,6 +44,9 @@ local run_pattern = {
   -- ["ft"] = { s = 16, name = "TEST", open = "-a '/Applications/CotEditor.app' /Users/使用者名稱/test.txt" },         -- mac 專用：指定程式開啟
   -- ["ft"] = { s = 17, name = "TEST", open = "-a '/Applications/Sublime Text.app' /Users/使用者名稱/test' '1.txt" },  -- mac 專用：指定程式開啟（此處前方路徑名稱空格不用更動，後方路徑空格需補「' '」或「\\ 」）
 --------------------------------------------------------------------------
+  -- ["d"] = { s = 18, name = "重新部屬", open = "-removeopen '/Library/Input Methods/Squirrel.app/Contents/MacOS/Squirrel' --reload" },   -- 「-removeopen 」為特此標示，去移除開頭之「open和start等」，有些指令不能有開頭command！
+  -- ["s"] = { s = 19, name = "同步用戶資料", open = "-removeopen '/Library/Input Methods/Squirrel.app/Contents/MacOS/Squirrel' --sync" },  -- 「-removeopen 」為特此標示，去移除開頭之「open和start等」，有些指令不能有開頭command！
+--------------------------------------------------------------------------
 -- Win：
 --------------------------------------------------------------------------
   -- ["r"] = { s = 1, name = "Rime 官方 GitHub Ⓕ", open = [["C:\Program Files (x86)\Mozilla Firefox\firefox.exe" https://github.com/rime]] },                                                     -- win 專用：指定程式開啟
@@ -61,7 +65,8 @@ local run_pattern = {
   -- ["ft"] = { s = 11, name = "TEST", open = [["C:\Program Files\Notepad++\notepad++.exe" C:\Users\使用者名稱\AppData\Roaming\Rime\rime.lua]] },         -- win 專用：指定程式開啟
   -- ["ft"] = { s = 12, name = "TEST", open = [["C:\Program Files\Sublime Text\sublime_text.exe"]].." "..[["C:\Users\使用者名稱\Desktop\test 1.txt"]] },  -- win 專用：指定程式開啟（此處前方路徑名稱空格不用更動，後方路徑空格需用特殊格式）
 --------------------------------------------------------------------------
-  -- ["rd"] = { s = 13, name = "重新部屬", open = [["C:\Program Files\Rime\weasel-0.17.4\WeaselDeployer.exe" /deploy]] },
+  -- ["d"] = { s = 13, name = "重新部屬", open = [["C:\Program Files\Rime\weasel-*.*.*\WeaselDeployer.exe" /deploy]] },
+  -- ["s"] = { s = 14, name = "同步用戶資料", open = [["C:\Program Files\Rime\weasel-*.*.*\WeaselDeployer.exe" /sync]] },
 --------------------------------------------------------------------------
 -- 測試用：
 --------------------------------------------------------------------------
