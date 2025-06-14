@@ -61,6 +61,8 @@ local run_pattern = {
   -- ["ft"] = { s = 11, name = "TEST", open = [["C:\Program Files\Notepad++\notepad++.exe" C:\Users\使用者名稱\AppData\Roaming\Rime\rime.lua]] },         -- win 專用：指定程式開啟
   -- ["ft"] = { s = 12, name = "TEST", open = [["C:\Program Files\Sublime Text\sublime_text.exe"]].." "..[["C:\Users\使用者名稱\Desktop\test 1.txt"]] },  -- win 專用：指定程式開啟（此處前方路徑名稱空格不用更動，後方路徑空格需用特殊格式）
 --------------------------------------------------------------------------
+  -- ["rd"] = { s = 13, name = "重新部屬", open = [["C:\Program Files\Rime\weasel-0.17.4\WeaselDeployer.exe" /deploy]] },
+--------------------------------------------------------------------------
 -- 測試用：
 --------------------------------------------------------------------------
   -- ["rt"] = "https://github.com/rime",
