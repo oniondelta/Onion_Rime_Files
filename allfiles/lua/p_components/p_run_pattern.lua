@@ -46,9 +46,10 @@ local run_pattern = {
 --------------------------------------------------------------------------
   -- ["f"] = { s = 18, name = "下載項目(資料夾)", open = "~/Downloads" },
   -- ["h"] = { s = 19, name = "Home(資料夾)", open = "~/" },
+  -- ["u"] = { s = 20, name = "用戶設定(資料夾)", open = "~/Library/Rime" },
 --------------------------------------------------------------------------
-  -- ["d"] = { s = 20, name = "重新部屬(指令)", open = "-removeopen '/Library/Input Methods/Squirrel.app/Contents/MacOS/Squirrel' --reload" },   -- 「-removeopen 」為特此標示，去移除開頭之「open和start等」，有些指令不能有開頭command！
-  -- ["s"] = { s = 21, name = "同步用戶資料(指令)", open = "-removeopen '/Library/Input Methods/Squirrel.app/Contents/MacOS/Squirrel' --sync" },  -- 「-removeopen 」為特此標示，去移除開頭之「open和start等」，有些指令不能有開頭command！
+  -- ["d"] = { s = 21, name = "重新部屬(指令)", open = "-removeopen '/Library/Input Methods/Squirrel.app/Contents/MacOS/Squirrel' --reload" },   -- 「-removeopen 」為特此標示，去移除開頭之「open和start等」，有些指令不能有開頭command！
+  -- ["s"] = { s = 22, name = "同步用戶資料(指令)", open = "-removeopen '/Library/Input Methods/Squirrel.app/Contents/MacOS/Squirrel' --sync" },  -- 「-removeopen 」為特此標示，去移除開頭之「open和start等」，有些指令不能有開頭command！
 --------------------------------------------------------------------------
 -- Win：
 --------------------------------------------------------------------------
@@ -70,9 +71,10 @@ local run_pattern = {
 --------------------------------------------------------------------------
   -- ["f"] = { s = 13, name = "下載(資料夾)", open = [["%UserProfile%\Downloads"]] },
   -- ["h"] = { s = 14, name = "使用者資料夾(資料夾)", open = [["%UserProfile%"]] },
+  -- ["u"] = { s = 15, name = "用戶文件夾(資料夾)", open = [["%APPDATA%\Rime"]] },
 --------------------------------------------------------------------------
-  -- ["d"] = { s = 15, name = "重新部屬(指令)", open = [["C:\Program Files\Rime\weasel-0.17.4\WeaselDeployer.exe" /deploy]] },
-  -- ["s"] = { s = 16, name = "同步用戶資料(指令)", open = [["C:\Program Files\Rime\weasel-0.17.4\WeaselDeployer.exe" /sync]] },
+  -- ["d"] = { s = 16, name = "重新部屬(指令)", open = [["C:\Program Files\Rime\weasel-0.17.4\WeaselDeployer.exe" /deploy]] },
+  -- ["s"] = { s = 17, name = "同步用戶資料(指令)", open = [["C:\Program Files\Rime\weasel-0.17.4\WeaselDeployer.exe" /sync]] },
 --------------------------------------------------------------------------
 -- 測試用：
 --------------------------------------------------------------------------

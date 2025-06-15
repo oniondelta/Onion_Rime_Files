@@ -108,7 +108,7 @@ local oscmd = d_c_name:find("Weasel") and 'start "" ' or  -- weasel
               d_c_name:find("Squirrel") and 'open ' or  -- squirrel
               d_c_name:find("macos") and 'open ' or  -- fcitx5-macos
               d_c_name:find("ibus") and 'xdg-open ' or  -- ibus-rime
-              -- package.config:sub(1,1) == '\\' and 'start "" ' or  -- 怕名稱有疏漏，且避免小狼毫問題當機！於此判定是否為 windows！（會拖慢呼叫程式檔案速度）
+              package.config:sub(1,1) == '\\' and 'start "" ' or  -- 怕名稱有疏漏，且避免小狼毫問題當機！於此判定是否為 windows！（拖慢呼叫速度？）
               'xdg-open '
 local function generic_open(dest)
   if oscmd ~= nil and not dest:match("^-removeopen ") then
