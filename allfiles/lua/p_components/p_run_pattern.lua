@@ -44,8 +44,11 @@ local run_pattern = {
   -- ["ft"] = { s = 16, name = "TEST", open = "-a '/Applications/CotEditor.app' /Users/使用者名稱/test.txt" },         -- mac 專用：指定程式開啟
   -- ["ft"] = { s = 17, name = "TEST", open = "-a '/Applications/Sublime Text.app' /Users/使用者名稱/test' '1.txt" },  -- mac 專用：指定程式開啟（此處前方路徑名稱空格不用更動，後方路徑空格需補「' '」或「\\ 」）
 --------------------------------------------------------------------------
-  -- ["d"] = { s = 18, name = "重新部屬", open = "-removeopen '/Library/Input Methods/Squirrel.app/Contents/MacOS/Squirrel' --reload" },   -- 「-removeopen 」為特此標示，去移除開頭之「open和start等」，有些指令不能有開頭command！
-  -- ["s"] = { s = 19, name = "同步用戶資料", open = "-removeopen '/Library/Input Methods/Squirrel.app/Contents/MacOS/Squirrel' --sync" },  -- 「-removeopen 」為特此標示，去移除開頭之「open和start等」，有些指令不能有開頭command！
+  -- ["f"] = { s = 18, name = "下載項目(資料夾)", open = "~/Downloads" },
+  -- ["h"] = { s = 19, name = "Home(資料夾)", open = "~/" },
+--------------------------------------------------------------------------
+  -- ["d"] = { s = 20, name = "重新部屬(指令)", open = "-removeopen '/Library/Input Methods/Squirrel.app/Contents/MacOS/Squirrel' --reload" },   -- 「-removeopen 」為特此標示，去移除開頭之「open和start等」，有些指令不能有開頭command！
+  -- ["s"] = { s = 21, name = "同步用戶資料(指令)", open = "-removeopen '/Library/Input Methods/Squirrel.app/Contents/MacOS/Squirrel' --sync" },  -- 「-removeopen 」為特此標示，去移除開頭之「open和start等」，有些指令不能有開頭command！
 --------------------------------------------------------------------------
 -- Win：
 --------------------------------------------------------------------------
@@ -65,8 +68,11 @@ local run_pattern = {
   -- ["ft"] = { s = 11, name = "TEST", open = [["C:\Program Files\Notepad++\notepad++.exe" C:\Users\使用者名稱\AppData\Roaming\Rime\rime.lua]] },         -- win 專用：指定程式開啟
   -- ["ft"] = { s = 12, name = "TEST", open = [["C:\Program Files\Sublime Text\sublime_text.exe"]].." "..[["C:\Users\使用者名稱\Desktop\test 1.txt"]] },  -- win 專用：指定程式開啟（此處前方路徑名稱空格不用更動，後方路徑空格需用特殊格式）
 --------------------------------------------------------------------------
-  -- ["d"] = { s = 13, name = "重新部屬", open = [["C:\Program Files\Rime\weasel-0.17.4\WeaselDeployer.exe" /deploy]] },
-  -- ["s"] = { s = 14, name = "同步用戶資料", open = [["C:\Program Files\Rime\weasel-0.17.4\WeaselDeployer.exe" /sync]] },
+  -- ["f"] = { s = 13, name = "下載(資料夾)", open = [["%UserProfile%\Downloads"]] },
+  -- ["h"] = { s = 14, name = "使用者資料夾(資料夾)", open = [["%UserProfile%"]] },
+--------------------------------------------------------------------------
+  -- ["d"] = { s = 15, name = "重新部屬(指令)", open = [["C:\Program Files\Rime\weasel-0.17.4\WeaselDeployer.exe" /deploy]] },
+  -- ["s"] = { s = 16, name = "同步用戶資料(指令)", open = [["C:\Program Files\Rime\weasel-0.17.4\WeaselDeployer.exe" /sync]] },
 --------------------------------------------------------------------------
 -- 測試用：
 --------------------------------------------------------------------------
