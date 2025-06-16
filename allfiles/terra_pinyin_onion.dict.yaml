@@ -147,6 +147,7 @@
 #    詞句中，「縛」臺灣標準為「fu2」，大陸標準為「fu4」，兩者易混淆，故皆補齊「fu2」「fu4」。
 #    詞句中，「綺」臺灣標準為「qi3」，日常發音常會誤發為「qi2」，故皆補齊「qi3」「qi2」，後者詞頻設為80%。
 #    詞句中，「焙」臺灣標準為「bei4」，日常發音常會誤發為「pei2」，故皆補齊「bei4」「pei2」，後者詞頻設為80%。
+#    詞句中，「諷」臺灣標準為「feng4」，又音為「feng1」，大陸和臺灣日常慣用語音為「feng3」，故皆補齊「feng4」「feng3」「feng1」。
 #    詞句中，「擁」皆補齊「yong3」「yong1」。
 #    詞句中，「熟」皆補齊「shou2」「shu2」。
 #    詞句中，「姑娘」補齊「gu1 niang2」和「gu1 niang5」，後者詞頻設為80%。
@@ -58247,6 +58248,7 @@ min_phrase_weight: 100
 仿行	fang3 xing2
 仿諷	fang3 feng4
 仿諷	fang3 feng3
+仿諷	fang1 feng3
 企佇	qi4 zhu4
 企劃	qi4 hua4
 企及	qi4 ji2
@@ -59540,6 +59542,7 @@ min_phrase_weight: 100
 借交報仇	jie4 jiao1 bao4 chou2
 借古諷今	jie4 gu3 feng4 jin1
 借古諷今	jie4 gu3 feng3 jin1
+借古諷今	jie4 gu3 feng1 jin1
 借單兒	jie4 dan1 er5	80%
 借單兒	jie4 dan1 er2
 借字兒	jie4 zi4 er5	80%
@@ -60123,6 +60126,8 @@ min_phrase_weight: 100
 傳說	chuan2 shuo1
 傳諭	chuan2 yu4
 傳諷	chuan2 feng4
+傳諷	chuan2 feng3
+傳諷	chuan2 feng1
 傳講	chuan2 jiang3
 傳謠	chuan2 yao2
 傳譯	chuan2 yi4
@@ -61286,6 +61291,7 @@ min_phrase_weight: 100
 冷呵呵	leng3 he1 he1
 冷嘲熱諷	leng3 chao2 re4 feng3
 冷嘲熱諷	leng3 chao2 re4 feng4
+冷嘲熱諷	leng3 chao2 re4 feng1
 冷地裡	leng3 di4 li3
 冷子	leng3 zi5
 冷寂	leng3 ji2
@@ -63341,6 +63347,8 @@ min_phrase_weight: 100
 勸善黜惡	quan4 shan4 chu4 e4
 勸教	quan4 jiao4
 勸百諷一	quan4 bai3 feng4 yi1
+勸百諷一	quan4 bai3 feng3 yi1
+勸百諷一	quan4 bai3 feng1 yi1
 勸降	quan4 xiang2
 勸降	quan4 jiang4
 勺子	shao2 zi5
@@ -64535,8 +64543,8 @@ min_phrase_weight: 100
 反衝力	fan3 chong1 li4
 反親疏	fan3 qin1 shu1
 反諷	fan3 feng4
-反諷	fan3 feng1
 反諷	fan3 feng3
+反諷	fan3 feng1
 反賓為主	fan3 bin1 wei2 zhu3
 反躬自省	fan3 gong1 zi4 xing3
 反輸一帖	fan3 shu1 yi4 tie3
@@ -67165,8 +67173,10 @@ min_phrase_weight: 100
 嘲弄	chao2 long4
 嘲諷	chao2 feng4
 嘲諷	chao2 feng3
-嘲諷	zhao1 feng4
+嘲諷	chao2 feng1
 嘲諷漫罵	chao2 feng4 man4 ma4
+嘲諷漫罵	chao2 feng3 man4 ma4
+嘲諷漫罵	chao2 feng1 man4 ma4
 嘲謔	chao2 nve4
 嘲謔	chao2 xue4
 嘲風弄月	chao2 feng1 nong4 yue4
@@ -76012,6 +76022,8 @@ min_phrase_weight: 100
 悲不自勝	bei1 bu2 zi4 sheng4
 悲切	bei1 qie4
 悲劇反諷	bei1 ju4 fan3 feng4
+悲劇反諷	bei1 ju4 fan3 feng3
+悲劇反諷	bei1 ju4 fan3 feng1
 悲吒	bei1 zha4
 悲咽	bei1 ye4
 悲喜交切	bei1 xi3 jiao1 qie4
@@ -103665,6 +103677,8 @@ min_phrase_weight: 100
 規行矩止	gui1 xing2 ju3 zhi3
 規行矩步	gui1 xing2 ju3 bu4
 規諷	gui1 feng4
+規諷	gui1 feng3
+規諷	gui1 feng1
 規重矩疊	gui1 chong2 ju3 die2
 覓食行為	mi4 shi2 xing2 wei2
 視如寇仇	shi4 ru2 kou4 chou2
@@ -104120,6 +104134,8 @@ min_phrase_weight: 100
 託物寓興	tuo1 wu4 yu4 xing4
 託管地	tuo1 guan3 di4
 託諷	tuo1 feng4
+託諷	tuo1 feng3
+託諷	tuo1 feng1
 託跡	tuo1 ji1
 記不住	ji4 bu2 zhu4
 記仇	ji4 chou2
@@ -104745,20 +104761,44 @@ min_phrase_weight: 100
 諱過稱善	hui4 guo4 cheng1 shan4
 諳分	an1 fen4
 諷一勸百	feng4 yi1 quan4 bo2
+諷一勸百	feng3 yi1 quan4 bo2
+諷一勸百	feng1 yi1 quan4 bo2
 諷刺	feng3 ci4
 諷刺	feng4 ci4
+諷刺	feng1 ci4
 諷刺劇	feng4 ci4 ju4
+諷刺劇	feng3 ci4 ju4
+諷刺劇	feng1 ci4 ju4
 諷刺文字	feng4 ci4 wen2 zi4
+諷刺文字	feng3 ci4 wen2 zi4
+諷刺文字	feng1 ci4 wen2 zi4
 諷刺畫	feng4 ci4 hua4
+諷刺畫	feng3 ci4 hua4
+諷刺畫	feng1 ci4 hua4
 諷味	feng4 wei4
+諷味	feng3 wei4
+諷味	feng1 wei4
 諷經	feng4 jing1
+諷經	feng3 jing1
+諷經	feng1 jing1
 諷詞	feng4 ci2
+諷詞	feng3 ci2
+諷詞	feng1 ci2
 諷誦	feng4 song4
+諷誦	feng3 song4
+諷誦	feng1 song4
 諷諫	feng4 jian4
 諷諫	feng3 jian4
+諷諫	feng1 jian4
 諷諭	feng4 yu4
+諷諭	feng3 yu4
+諷諭	feng1 yu4
 諷諭詩	feng4 yu4 shi1
+諷諭詩	feng3 yu4 shi1
+諷諭詩	feng1 yu4 shi1
 諷讀	feng4 du2
+諷讀	feng3 du2
+諷讀	feng1 du2
 諸子百家	zhu1 zi3 bai3 jia1
 諸子百家	zhu1 zi3 bo2 jia1
 諸宮調	zhu1 gong1 diao4
@@ -104846,6 +104886,7 @@ min_phrase_weight: 100
 譏呵	ji1 he1
 譏諷	ji1 feng4
 譏諷	ji1 feng3
+譏諷	ji1 feng1
 識丁	shi4 ding1
 識別	shi4 bie2
 識別信號	shi4 bie2 xin4 hao4
@@ -111280,6 +111321,8 @@ min_phrase_weight: 100
 降格	jiang4 ge2
 降格以求	jiang4 ge2 yi3 qiu2
 降格仿諷	jiang4 ge2 fang3 feng4
+降格仿諷	jiang4 ge2 fang3 feng3
+降格仿諷	jiang4 ge2 fang3 feng1
 降水	jiang4 shui3
 降水量	jiang4 shui3 liang4
 降溫	jiang4 wen1
@@ -114966,4 +115009,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 114969 #####
+##### @結束 END - 115012 #####
