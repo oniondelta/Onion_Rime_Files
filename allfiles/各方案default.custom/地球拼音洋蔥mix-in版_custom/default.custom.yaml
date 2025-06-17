@@ -85,7 +85,7 @@ patch:
   ascii_composer/switch_key:
     Shift_L: noop
     Shift_R: noop
-#    Caps_Lock: clear
+    Caps_Lock: commit_text  #clear  #「commit_text」「clear」兩者皆可，但不能沒有，否則「大寫caps_lock」標點可能會是中文全形！
 #    Eisu_toggle: clear
 #    Control_L: noop
 #    Control_R: noop
