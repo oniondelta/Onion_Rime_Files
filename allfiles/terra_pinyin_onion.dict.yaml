@@ -2648,6 +2648,7 @@ min_phrase_weight: 100
 厓	ai2	0%
 揭	he2	0%
 掲	he2	0%
+忒	tui1	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -58248,7 +58249,7 @@ min_phrase_weight: 100
 仿行	fang3 xing2
 仿諷	fang3 feng4
 仿諷	fang3 feng3
-仿諷	fang1 feng3
+仿諷	fang3 feng1
 企佇	qi4 zhu4
 企劃	qi4 hua4
 企及	qi4 ji2
@@ -83257,6 +83258,7 @@ min_phrase_weight: 100
 有種	you3 zhong3
 有空	you3 kong4
 有粘性	you3 nian2 xing4
+有粘性	you3 zhan1 xing4
 有結果	you3 jie2 guo3
 有給職	you3 ji3 zhi2
 有絲分裂	you3 si1 fen1 lie4
@@ -87018,6 +87020,7 @@ min_phrase_weight: 100
 沾染程度檢查儀	zhan1 ran3 cheng2 du4 jian3 cha2 yi2
 沾洽	zhan1 xia2
 沾粘	zhan1 nian2
+沾粘	zhan1 zhan1
 沾親	zhan1 qin1
 沾親帶故	zhan1 qin1 dai4 gu4
 沾親帶骨	zhan1 qin1 dai4 gu3
@@ -96307,47 +96310,74 @@ min_phrase_weight: 100
 粗衣惡食	cu1 yi1 e4 shi2
 粗重	cu1 zhong4
 粘合	zhan1 he2
+粘合	nian2 he2
 粘合劑	nian2 he2 ji4
+粘合劑	zhan1 he2 ji4
 粘土	nian2 tu3
 粘度	nian2 du4
+粘度	zhan1 du4
 粘性	nian2 xing4
+粘性	zhan1 xing4
 粘性力	nian2 xing4 li4
+粘性力	zhan1 xing4 li4
 粘木	zhan1 mu4
+粘木	nian2 mu4
 粘板岩	nian2 ban3 yan2
+粘板岩	zhan1 ban3 yan2
 粘涎	zhan1 xian2
+粘涎	nian2 xian2
 粘液	nian2 ye4
 粘液	nian2 yi4
 粘滑	nian2 hua2
+粘滑	zhan1 hua2
 粘滯	nian2 zhi4
+粘滯	zhan1 zhi4
 粘滯性	nian2 zhi4 xing4
+粘滯性	zhan1 zhi4 xing4
 粘皮帶骨	nian2 pi2 dai4 gu3
+粘皮帶骨	zhan1 pi2 dai4 gu3
 粘皮著骨	nian2 pi2 zhuo2 gu3
+粘皮著骨	zhan1 pi2 zhuo2 gu3
 粘著	nian2 zhe5
 粘著	nian2 zhuo2
+粘著	zhan1 zhe5
+粘著	zhan1 zhuo2
 粘著力	zhan1 zhuo2 li4
+粘著力	nian2 zhuo2 li4
 粘著性	zhan1 zhuo2 xing4
+粘著性	nian2 zhuo2 xing4
 粘稠	nian2 chou2
+粘稠	zhan1 chou2
 粘竿	nian2 gan1
 粘米	nian2 mi3
 粘粘	nian2 nian2
 粘糊	nian2 hu2
+粘糊	zhan1 hu2
 粘結	nian2 jie2
+粘結	zhan1 jie2
 粘纏	nian2 chan2
+粘纏	zhan1 chan2
 粘聚	nian2 ju4
+粘聚	zhan1 ju4
 粘膜	nian2 mo2
 粘膜	nian2 mo4	3%
 粘膠	nian2 jiao1
+粘膠	zhan1 jiao1
 粘膠液	nian2 jiao1 ye4
 粘膠液	nian2 jiao1 yi4
+粘膠液	zhan1 jiao1 ye4
+粘膠液	zhan1 jiao1 yi4
 粘花惹絮	nian2 hua1 re3 xu4
 粘花惹草	nian2 hua1 re3 cao3
 粘菌	nian2 jun1
 粘菌	nian2 jun4
 粘蟲	nian2 chong2
 粘補	nian2 bu3
+粘補	zhan1 bu3
 粘連	nian2 lian2
 粘連	zhan1 lian2
 粘附	nian2 fu4
+粘附	zhan1 fu4
 粢盛	zi1 cheng2
 粥少僧多	zhou1 shao3 seng1 duo1
 粥粥	zhu4 zhu4
@@ -99312,6 +99342,7 @@ min_phrase_weight: 100
 腸仔	chang2 zi3
 腸子	chang2 zi5
 腸粘連	chang2 nian2 lian2
+腸粘連	chang2 zhan1 lian2
 腸結核	chang2 jie2 he2
 腸繫膜	chang2 xi4 mo4	3%
 腸繫膜	chang2 xi4 mo2
@@ -99385,7 +99416,9 @@ min_phrase_weight: 100
 膠著	jiao1 zhuo2
 膠著狀態	jiao1 zhuo2 zhuang4 tai4
 膠粘	jiao1 nian2
+膠粘	jiao1 zhan1
 膠粘劑	jiao1 nian2 ji4
+膠粘劑	jiao1 zhan1 ji4
 膠結	jiao1 jie2
 膠萊谷地	jiao1 lai2 gu3 di4
 膠葛	jiao1 ge2
@@ -115009,4 +115042,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 115012 #####
+##### @結束 END - 115045 #####
