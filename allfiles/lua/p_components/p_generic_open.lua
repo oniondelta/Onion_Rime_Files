@@ -90,6 +90,7 @@
 
 
 ---- 新的寫法(以 os 判斷)
+---------------------------------------------------------------
 -- --- 用外部模塊判斷 os
 -- local get_os_name = require("f_components/f_get_os_name")
 -- local os_name = get_os_name() or ""
@@ -101,15 +102,27 @@
 --                 ["Solaris"] = 'xdg-open ',
 --                }
 -- local oscmd = os_cmd[os_name]
---- 用 Rime 名稱判斷 os（會有不知名 Rime 輸入法軟體無法辨識的問題）
-local d_c_name = rime_api.get_distribution_code_name() or "none"
-local oscmd = d_c_name:find("Weasel") and 'start "" ' or  -- weasel
-              d_c_name:find("windows") and 'start "" ' or  -- fcitx5-windows
-              d_c_name:find("Squirrel") and 'open ' or  -- squirrel
-              d_c_name:find("macos") and 'open ' or  -- fcitx5-macos
-              d_c_name:find("ibus") and 'xdg-open ' or  -- ibus-rime
-              package.config:sub(1,1) == '\\' and 'start "" ' or  -- 怕名稱有疏漏，且避免小狼毫問題當機！於此判定是否為 windows！（拖慢呼叫速度？）
+---------------------------------------------------------------
+-- --- 用 Rime 名稱判斷 os（會有不知名 Rime 輸入法軟體無法辨識的問題）
+-- local d_c_name = rime_api.get_distribution_code_name() or "none"
+-- local oscmd = d_c_name:find("Weasel") and 'start "" ' or  -- weasel
+--               d_c_name:find("windows") and 'start "" ' or  -- fcitx5-windows
+--               d_c_name:find("Squirrel") and 'open ' or  -- squirrel
+--               d_c_name:find("macos") and 'open ' or  -- fcitx5-macos
+--               d_c_name:find("ibus") and 'xdg-open ' or  -- ibus-rime
+--               (os.getenv('OS')):lower():match("windows") and 'start "" ' or  -- 防名稱有疏漏，且避免小狼毫問題當機！於此判定是否為 windows！
+--               (os.getenv('OS')):lower():match("^mingw") and 'start "" ' or
+--               (os.getenv('OS')):lower():match("^cygwin") and 'start "" ' or
+--               -- package.config:sub(1,1) == '\\' and 'start "" ' or  -- 防名稱有疏漏，且避免小狼毫問題當機！於此判定是否為 windows！（會拖慢呼叫速度？！）
+--               'xdg-open '
+---------------------------------------------------------------
+--- 用 os.getenv 參數判斷 os
+local oscmd = os.getenv("USERPROFILE") and 'start "" ' or  -- Windows（os.getenv("USERPROFILE")只有在 Win 不為 nil）
+              os.getenv("HOME") and os.getenv("HOME"):sub(1,7) == '/Users/' and 'open ' or  -- Mac （os.getenv()可能為 nil，不可直接「:sub()」，會報錯！）
+              os.getenv("HOME") and os.getenv("HOME"):sub(1,6) == '/home/' and 'xdg-open ' or  -- Linux （os.getenv()可能為 nil，不可直接「:sub()」，會報錯！）
+              -- 測試 Windows 之 os.getenv("HOME") 為 nil，但網路資訊說明某些 Win 版本不為 nil，有資訊？
               'xdg-open '
+---------------------------------------------------------------
 local function generic_open(dest)
   if oscmd ~= nil and not dest:match("^-removeopen ") then
     -- local f = io.popen( oscmd .. dest)
