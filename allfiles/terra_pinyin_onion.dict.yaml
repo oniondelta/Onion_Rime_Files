@@ -2649,6 +2649,15 @@ min_phrase_weight: 100
 揭	he2	0%
 掲	he2	0%
 忒	tui1	0%
+咣	gong1	0%
+罷	pi4	0%
+罷	bi3	0%
+罷	bai3	0%
+罢	ba5	0%
+罢	pi2	0%
+罢	pi4	0%
+罢	bi3	0%
+罢	bai3	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -55081,6 +55090,8 @@ min_phrase_weight: 100
 一目十行	yi1 mu4 shi2 hang2
 一目瞭然	yi2 mu4 liao3 ran2
 一目瞭然	yi1 mu4 liao3 ran2
+一目瞭然	yi2 mu4 liao2 ran2	80%
+一目瞭然	yi1 mu4 liao2 ran2	80%
 一相情願	yi4 xiang1 qing2 yuan4
 一相情願	yi1 xiang1 qing2 yuan4
 一眼看破	yi4 yan3 kan4 po4
@@ -65409,7 +65420,7 @@ min_phrase_weight: 100
 吧嗒	ba1 da1
 吧女	ba1 nv3
 吧托	ba1 tuo1
-吧托	ba5 tuo1
+吧托	ba4 tuo1	80%
 吧托女	ba1 tuo1 nv3
 吧枱	ba1 tai2
 吧檯	ba1 tai2
@@ -82199,7 +82210,7 @@ min_phrase_weight: 100
 明白人	ming2 bai2 ren2
 明盛	ming2 sheng4
 明瞭	ming2 liao3
-明膫	ming2 liao2
+明瞭	ming2 liao2	80%
 明處	ming2 chu4
 明調	ming2 diao4
 明鋪夜蓋	ming2 pu1 ye4 gai4
@@ -93715,8 +93726,8 @@ min_phrase_weight: 100
 眼空無物	yan3 kong1 wu2 wu4
 眼色	yan3 se4
 眼花撩亂	yan3 hua1 liao2 luan4
-眼花瞭亂	yan3 hua1 liao2 luan4
 眼花瞭亂	yan3 hua1 liao3 luan4
+眼花瞭亂	yan3 hua1 liao2 luan4	80%
 眼裡不揉沙子	yan3 li3 bu4 rou2 sha1 zi5
 眼裡揉不下沙子	yan3 li3 rou2 bu2 xia4 sha1 zi5
 眼見得	yan3 jian4 de5
@@ -93909,19 +93920,33 @@ min_phrase_weight: 100
 瞬間目標	shun4 jian1 mu4 biao1
 瞬間轉移	shun4 jian1 zhuan3 yi2
 瞭亮	liao3 liang4
+瞭亮	liao2 liang4	80%
 瞭哨	liao4 shao4
+瞭哨	liao3 shao4
+瞭哨	liao2 shao4	80%
 瞭如指掌	liao3 ru2 zhi3 zhang3
+瞭如指掌	liao2 ru2 zhi3 zhang3	80%
 瞭望	liao4 wang4
 瞭望	liao3 wang4
+瞭望	liao2 wang4	80%
 瞭望哨	liao4 wang4 shao4
+瞭望哨	liao3 wang4 shao4
+瞭望哨	liao2 wang4 shao4	80%
 瞭望山	liao4 wang4 shan1
+瞭望山	liao3 wang4 shan1
+瞭望山	liao2 wang4 shan1	80%
 瞭望台	liao4 wang4 tai2
 瞭望台	liao3 wang4 tai2
+瞭望台	liao2 wang4 tai2	80%
 瞭望臺	liao4 wang4 tai2
+瞭望臺	liao3 wang4 tai2
+瞭望臺	liao2 wang4 tai2	80%
 瞭然	liao3 ran2
+瞭然	liao2 ran2	80%
 瞭若指掌	liao3 ruo4 zhi3 zhang3
+瞭若指掌	liao2 ruo4 zhi3 zhang3	80%
 瞭解	liao3 jie3
-瞭解	liao2 jie3
+瞭解	liao2 jie3	80%
 瞳矇	tong2 meng2
 瞵視昂藏	lin2 shi4 ang2 cang2
 瞶瞶	kui4 kui4
@@ -96209,6 +96234,7 @@ min_phrase_weight: 100
 簡單地說	jian3 dan1 de5 shuo1
 簡單地說	jian3 dan1 di5 shuo1	80%
 簡單明瞭	jian3 dan1 ming2 liao3
+簡單明瞭	jian3 dan1 ming2 liao2	80%
 簡子	jian3 zi3
 簡子	jian3 zi5
 簡帖	jian3 tie3
@@ -106212,6 +106238,8 @@ min_phrase_weight: 100
 踅摸	xue2 mo1
 踅轉	xue2 zhuan3
 踅門瞭戶	xue2 men2 liao4 hu4
+踅門瞭戶	xue2 men2 liao3 hu4
+踅門瞭戶	xue2 men2 liao2 hu4	80%
 踉踉蹌蹌	liang4 liang4 qiang4 qiang4
 踉踉蹌蹌	liang2 liang2 qiang1 qiang1
 踉踉蹡蹡	liang4 liang4 qiang4 qiang4
@@ -115042,4 +115070,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 115045 #####
+##### @結束 END - 115073 #####
