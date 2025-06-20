@@ -299,16 +299,20 @@ local function processor(key, env)
         generic_open(env.run_pattern)
         context:clear()
         return 1
-      elseif run_in ~= nil and g_c_t == "" then  -- 「g_c_t == ""」防未知觸發。如果「run_pattern」條目缺「name」，「g_c_t」會是「preedit」，不為""。
+      elseif run_in ~= nil and context:get_selected_candidate() ~= nil then  -- 後面判斷防未知觸發。
+      -- elseif run_in ~= nil and g_c_t == "" then  -- 後面判斷防未知觸發。如果「run_pattern」條目缺「name」，「g_c_t」會是「preedit」，不為""。
         -- engine:commit_text(run_in)  -- 測試用
         -- engine:commit_text( generic_open(run_in.open) )  -- 測試用
-        generic_open(run_in.open)  -- 要確定 run_in 不為 nil，才能加.open
+        if run_in.open then
+          generic_open(run_in.open)  -- 要確定 run_in 不為 nil，才能加.open
+        -- else
+        --   engine:commit_text("沒﹛open﹦﹜⚠️")  -- 測試用
+        end
         context:clear()
         return 1
       -- elseif env.textdict == "" then
       --   return 2
       -- elseif op_code == "c" then
-      --   -- io.popen("env.custom_phrase")  -- 無效！
       --   generic_open(env.custom_phrase)
       --   context:clear()
       --   return 1

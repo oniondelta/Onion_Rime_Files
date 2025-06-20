@@ -78,11 +78,13 @@ local run_pattern = {
 --------------------------------------------------------------------------
 -- 測試用：
 --------------------------------------------------------------------------
-  -- ["na"] = "https://github.com/rime",
-  -- ["nso"] = { name = "缺漏測試：沒﹛s﹦﹜﹛open﹦﹜" },
-  -- ["ns"] = { name = "缺漏測試：沒﹛s﹦﹜", open = "https://www.youtube.com/" },
-  -- ["nsn"] = { open = "https://www.youtube.com/" },
-  -- ["nn"] = { s = 100, open = "https://www.youtube.com/" },
+  -- ["nt"] = "https://www.google.com/",
+  -- ["nso"] = { name = "缺誤測試：沒﹛s﹦⋯, open﹦⋯﹜⚠️" },
+  -- ["ns"] = { name = "缺誤測試：沒﹛s﹦﹜⚠️", open = "https://www.google.com/" },
+  -- ["nsn"] = { open = "https://www.google.com/" },
+  -- ["nn"] = { s = 99, open = "https://www.google.com/" },
+  -- ["no"] = { s = 99, name = "缺誤測試：沒﹛open﹦﹜⚠️" },
+  -- ["ncs"] = { s = "ABC", name = "缺誤測試：﹛s﹦“ABC”, name﹦⋯, open﹦⋯﹜⚠️" ,open = "https://www.google.com/" },
 --------------------------------------------------------------------------
  }
 

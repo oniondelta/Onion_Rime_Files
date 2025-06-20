@@ -30,8 +30,8 @@ local function run_menu(pattern)
 
   local insert_table = {}
   for i, v in pairs(pattern) do
-    local name = v.name or "NONAME"  -- 防疏漏
-    local s = v.s or 100  -- 防疏漏
+    local name = v.name or "NONAME：無法開啟 🛑"  -- 防疏漏
+    local s = tonumber(v.s) and v.s or 100  -- 防疏漏
     insert_table[#insert_table + 1] = {i, name, s}
   end
   -- i (開啟碼)排序：a[1]<b[1]； v.name (名稱)排序：a[2]<b[2]； v.s (指定)排序：a[3]<b[3]。
