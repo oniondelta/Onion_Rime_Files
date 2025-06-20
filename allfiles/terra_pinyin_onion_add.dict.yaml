@@ -28,6 +28,7 @@ min_phrase_weight: 100
 ○	(kong1)	1000
 □	(que1)	1000
 ### @補充「通俗慣用發音」，『非正確發音』！！！ ###
+# 呷	(jia3)
 # 厘	(li3)
 # 釐	(li3)
 # 割	(gua4)	0%
@@ -96,7 +97,6 @@ min_phrase_weight: 100
 毗	(pi4)	50%
 毘	(pi4)	50%
 焙	(pei2)
-呷	(jia3)
 楔	(qi4)
 櫤	(jian4)
 㖿	(ye3)
@@ -553,6 +553,7 @@ min_phrase_weight: 100
 𠯈	(dai5)	0%
 𠰺	(dai5)	0%
 𠷂	(dai5)	0%
+嘚	(dai5)	0%
 叨	(dao5)	1%
 嘄	(dao5)	0%
 𠴼	(dao5)	0%

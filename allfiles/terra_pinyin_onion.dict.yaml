@@ -2667,6 +2667,16 @@ min_phrase_weight: 100
 鱅	rong2	0%
 鳙	rong2	0%
 髂	ge2	0%
+嘚	de2	0%
+嘚	dai1	0%
+覘	dan1	0%
+覘	ji1	0%
+觇	zhan1
+觇	dan1	0%
+觇	ji1	0%
+蜕	shui4	0%
+呷	ga1	0%
+呷	jia3
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -115300,4 +115310,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 115303 #####
+##### @結束 END - 115313 #####
