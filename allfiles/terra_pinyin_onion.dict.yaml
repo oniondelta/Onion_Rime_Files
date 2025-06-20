@@ -148,8 +148,11 @@
 #    詞句中，「綺」臺灣標準為「qi3」，日常發音常會誤發為「qi2」，故皆補齊「qi3」「qi2」，後者詞頻設為80%。
 #    詞句中，「焙」臺灣標準為「bei4」，日常發音常會誤發為「pei2」，故皆補齊「bei4」「pei2」，後者詞頻設為80%。
 #    詞句中，「諷」臺灣標準為「feng4」，又音為「feng1」，大陸和臺灣日常慣用語音為「feng3」，故皆補齊「feng4」「feng3」「feng1」。
+#    詞句中，「菌」臺灣標準為「jun4」，大陸標準為「jun1」，日常易混，故皆補齊「jun4」「jun1」。
+#    詞句中，「肘」臺灣標準為「zhou3」，日常發音常會誤發為「zhou2」，故皆補齊「zhou3」「zhou2」，後者詞頻設為80%。。
 #    詞句中，「擁」皆補齊「yong3」「yong1」。
 #    詞句中，「熟」皆補齊「shou2」「shu2」。
+#    詞句中，「處理」補齊「chu3 li3」和「chu4 li3」。
 #    詞句中，「姑娘」補齊「gu1 niang2」和「gu1 niang5」，後者詞頻設為80%。
 #    詞句中，「拓撲」臺灣字典發音為「tuo4 pu1」，日常發音常會誤發為「tuo4 bu3」和「tuo4 pu3」，故皆補齊「tuo4 pu1」「tuo4 bu3」「tuo4 pu3」，最後者「tuo4 pu3」詞頻設為80%。
 #    預計比對「輕聲和一聲」變音。
@@ -2659,6 +2662,10 @@ min_phrase_weight: 100
 罢	bi3	0%
 罢	bai3	0%
 批	pi2	0%
+鳙	yong2
+鱅	rong2	0%
+鳙	rong2	0%
+髂	ge2	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -56091,6 +56098,7 @@ min_phrase_weight: 100
 不如退而結網	bu4 ru2 tui4 er2 jie2 wang3
 不婚媽媽	bu4 hun1 ma1 ma5
 不孕真菌	bu2 yun4 zhen1 jun4
+不孕真菌	bu2 yun4 zhen1 jun1
 不學亡術	bu4 xue2 wu2 shu4
 不學長俊	bu4 xue2 zhang3 jun4
 不守本分	bu4 shou3 ben3 fen4
@@ -56835,6 +56843,7 @@ min_phrase_weight: 100
 中央研究院	zhong1 yang1 yan2 jiu1 yuan4
 中央空調系統	zhong1 yang1 kong1 tiao2 xi4 tong3
 中央處理機	zhong1 yang1 chu3 li3 ji1
+中央處理機	zhong1 yang1 chu4 li3 ji1
 中央警官學校	zhong1 yang1 jing3 guan1 xue2 xiao4
 中央銀行	zhong1 yang1 yin2 hang2
 中央音樂學院	zhong1 yang1 yin1 yue4 xue2 yuan4
@@ -56993,6 +57002,7 @@ min_phrase_weight: 100
 串場	chuan4 chang3
 串子	chuan4 zi5
 串處理	chuan4 chu3 li3
+串處理	chuan4 chu4 li3
 串行口	chuan4 xing2 kou3
 串行點陣打印機	chuan4 xing2 dian3 zhen4 da3 yin4 ji1
 串親戚	chuan4 qin1 qi4
@@ -57836,7 +57846,9 @@ min_phrase_weight: 100
 亮相	liang4 xiang4
 亮相	liang4 xiang1
 亮色調	liang4 se4 diao4
+亮菌	liang4 jun4
 亮菌	liang4 jun1
+亮菌甲素	liang4 jun4 jia3 su4
 亮菌甲素	liang4 jun1 jia3 su4
 亮陰	liang2 an1
 亹亹	wei3 wei3
@@ -58533,6 +58545,7 @@ min_phrase_weight: 100
 低徊	di1 hui2
 低徊不已	di1 hui2 bu4 yi3
 低溫殺菌	di1 wen1 sha1 jun4
+低溫殺菌	di1 wen1 sha1 jun1
 低空	di1 kong1
 低緯度	di1 wei3 du4
 低落	di1 luo4
@@ -59777,7 +59790,9 @@ min_phrase_weight: 100
 偏微分方程	pian1 wei2 fen1 fang1 cheng2
 偏心率	pian1 xin1 lv4
 偏性寄生菌	pian1 xing4 ji4 sheng1 jun4
+偏性寄生菌	pian1 xing4 ji4 sheng1 jun1
 偏性腐生菌	pian1 xing4 fu3 sheng1 jun4
+偏性腐生菌	pian1 xing4 fu3 sheng1 jun1
 偏相關係數	pian1 xiang1 guan1 xi4 shu4
 偏處	pian1 chu4
 偏處	pian1 chu3
@@ -59961,8 +59976,8 @@ min_phrase_weight: 100
 傒落	xi1 luo4
 傔從	qian4 zong4
 傖父	cang1 fu3
-傘菌	san3 jun1
 傘菌	san3 jun4
+傘菌	san3 jun1
 傘降	san3 jiang4
 傢伙	jia1 huo3
 傢伙	jia1 huo1
@@ -60203,6 +60218,7 @@ min_phrase_weight: 100
 傷亡枕藉	shang1 wang2 zhen4 jie4
 傷和氣	shang1 he2 qi4
 傷嗟	shang1 jie1
+傷寒沙門氏菌	shang1 han2 sha1 men2 shi4 jun4
 傷寒沙門氏菌	shang1 han2 sha1 men2 shi4 jun1
 傷痕累累	shang1 hen2 lei3 lei3
 傷耗	shang1 hao4
@@ -60507,6 +60523,7 @@ min_phrase_weight: 100
 光功率	guang1 gong1 lv4
 光反應	guang1 fan3 ying4
 光合細菌	guang1 he2 xi4 jun4
+光合細菌	guang1 he2 xi4 jun1
 光周期	guang1 zhou1 qi2
 光和	guang1 he2
 光圈	guang1 quan1
@@ -60604,6 +60621,7 @@ min_phrase_weight: 100
 克難	ke4 nan2
 克難	ke4 nan4
 克難運動	ke4 nan2 yun4 dong4
+克雷伯氏菌屬	ke4 lei2 bo2 shi4 jun4 shu3
 克雷伯氏菌屬	ke4 lei2 bo2 shi4 jun1 shu3
 兌子	dui4 zi5
 兌換率	dui4 huan4 lv4
@@ -61165,6 +61183,7 @@ min_phrase_weight: 100
 再犯率	zai4 fan4 lv4
 再發見	zai4 fa1 xian4
 再處理	zai4 chu3 li3
+再處理	zai4 chu4 li3
 再轉復	zai4 zhuan3 fu4
 再長爹娘	zai4 zhang3 die1 niang2
 冒名行騙	mao4 ming2 xing2 pian4
@@ -61329,6 +61348,7 @@ min_phrase_weight: 100
 冷藏車	leng3 cang2 che1
 冷藏間	leng3 cang2 jian1
 冷處理	leng3 chu3 li3
+冷處理	leng3 chu4 li3
 冷血	leng3 xie3
 冷血	leng3 xue4
 冷血動物	leng3 xie3 dong4 wu4
@@ -61742,6 +61762,7 @@ min_phrase_weight: 100
 分析法	fen1 xi1 fa3
 分析研究	fen1 xi1 yan2 jiu1
 分析處理	fen1 xi1 chu3 li3
+分析處理	fen1 xi1 chu4 li3
 分析語	fen1 xi1 yu3
 分枝	fen1 zhi1
 分枝	fen1 qi2
@@ -64386,8 +64407,11 @@ min_phrase_weight: 100
 厭惡	yan4 e4
 厭氣	yan4 qi4
 厭氣菌	yan4 qi4 jun4
+厭氣菌	yan4 qi4 jun1
 厭煩	yan4 fan2
 厭薄	yan4 bo2
+厭酷球孢子菌	yan4 ku4 qiu2 bao1 zi3 jun4
+厭酷球孢子菌	yan4 ku4 qiu2 bao1 zi5 jun4
 厭酷球孢子菌	yan4 ku4 qiu2 bao1 zi3 jun1
 厭酷球孢子菌	yan4 ku4 qiu2 bao1 zi5 jun1
 厭難折衝	yan4 nan2 zhe2 chong1
@@ -64476,6 +64500,7 @@ min_phrase_weight: 100
 叉麻雀	cha1 ma2 que4
 及冠	ji2 guan4
 及時處理	ji2 shi2 chu3 li3
+及時處理	ji2 shi2 chu4 li3
 及時行樂	ji2 shi2 xing2 le4
 及期	ji2 qi2
 友誼地久天長	you3 yi4 di4 jiu3 tian1 chang2
@@ -67007,8 +67032,11 @@ min_phrase_weight: 100
 嗛嗛	qian3 qian3
 嗛志	qian1 zhi4
 嗜好	shi4 hao4
-嗜血桿菌	shi4 xue4 gan3 jun1
+嗜血桿菌	shi4 xue4 gan3 jun4
 嗜血桿菌	shi4 xie3 gan3 jun4
+嗜血桿菌	shi4 xue4 gan3 jun1
+嗜血桿菌	shi4 xie3 gan3 jun1
+嗜酸乳干菌	shi4 suan1 ru3 gan1 jun4
 嗜酸乳干菌	shi4 suan1 ru3 gan1 jun1
 嗟乎	jie1 hu1
 嗟來之食	jie1 lai2 zhi1 shi2
@@ -67256,6 +67284,7 @@ min_phrase_weight: 100
 噪音音樂	zao4 yin1 yin1 yue4
 噫吁戲	yi1 xu1 xi4
 噬人菌	shi4 ren2 jun4
+噬人菌	shi4 ren2 jun1
 噭應	jiao4 ying4
 噯呀	ai4 ya1
 噯呀	ai4 ya5
@@ -67563,6 +67592,7 @@ min_phrase_weight: 100
 固定匯率	gu4 ding4 hui4 lv4
 固定重音	gu4 ding4 zhong4 yin1
 固氮菌	gu4 dan4 jun4
+固氮菌	gu4 dan4 jun1
 固結	gu4 jie2
 圃畦	pu3 xi1
 圈內	quan1 nei4
@@ -67781,6 +67811,7 @@ min_phrase_weight: 100
 土墼	tu3 ji2
 土庫曼共和國	tu3 ku4 man4 gong4 he2 guo2
 土房子	tu3 fang2 zi5
+土拉弗氏菌	tu3 la1 fu2 shi4 jun4
 土拉弗氏菌	tu3 la1 fu2 shi4 jun1
 土榻	tu3 ta1
 土泥	tu3 ni2
@@ -68896,6 +68927,7 @@ min_phrase_weight: 100
 夏王朝	xia4 wang2 chao2
 夏畦	xia4 xi1
 夏蟲朝菌	xia4 chong2 zhao1 jun4
+夏蟲朝菌	xia4 chong2 zhao1 jun1
 夏鑪冬扇	xia4 lu2 dong1 shan4
 夏長	xia4 zhang3
 夏雨雨人	xia4 yu3 yu4 ren2
@@ -69503,8 +69535,11 @@ min_phrase_weight: 100
 大腦出血性中風	da4 nao3 chu1 xue4 xing4 zhong4 feng1
 大腸息肉	da4 chang2 xi2 rou4
 大腸桿菌群	da4 chang2 gan3 jun4 qun2
+大腸桿菌群	da4 chang2 gan3 jun1 qun2
 大腸菌	da4 chang2 jun4
+大腸菌	da4 chang2 jun1
 大腸菌類	da4 chang2 jun4 lei4
+大腸菌類	da4 chang2 jun1 lei4
 大腹便便	da4 fu4 pian2 pian2
 大腹賈	da4 fu4 gu3
 大膽妄為	da4 dan3 wang4 wei2
@@ -71682,6 +71717,7 @@ min_phrase_weight: 100
 寄宿學校	ji4 su4 xue2 xiao4
 寄宿生	ji4 su4 sheng1
 寄生菌	ji4 sheng1 jun4
+寄生菌	ji4 sheng1 jun1
 寄監	ji4 jian1
 寄興	ji4 xing4
 寄跡	ji4 ji1
@@ -73314,6 +73350,7 @@ min_phrase_weight: 100
 巴塞羅那	ba1 sai4 luo2 na4
 巴塞隆納	ba1 sai4 long2 na4
 巴士低溫殺菌法	ba1 shi4 di1 wen1 sha1 jun4 fa3
+巴士低溫殺菌法	ba1 shi4 di1 wen1 sha1 jun1 fa3
 巴士噶語言	ba1 shi4 ge2 yu3 yan2
 巴士底監獄	ba1 shi4 di3 jian1 yu4
 巴子	ba1 zi5
@@ -73337,10 +73374,13 @@ min_phrase_weight: 100
 巴斯卡加法器	ba1 si1 ka3 jia1 fa3 qi4
 巴斯噶	ba1 si1 ge2
 巴斯德菌症	ba1 si1 de2 jun4 zheng4
+巴斯德菌症	ba1 si1 de2 jun1 zheng4
 巴曼得海峽	ba1 man4 de2 hai3 xia2
 巴枯寧主義	ba1 ku1 ning2 zhu3 yi4
 巴比倫空中花園	ba1 bi3 lun2 kong1 zhong1 hua1 yuan2
 巴氏桿菌	ba1 shi4 gan3 jun4
+巴氏桿菌	ba1 shi4 gan3 jun1
+巴氏殺菌法	ba1 shi4 sha1 jun4 fa3
 巴氏殺菌法	ba1 shi4 sha1 jun1 fa3
 巴爾喀什湖	ba1 er3 ka4 shi2 hu2
 巴爾喀什湖	ba1 er3 ka1 shi2 hu2
@@ -73447,6 +73487,8 @@ min_phrase_weight: 100
 布朗寧	bu4 lang3 ning2
 布林代數	bu4 lin2 dai4 shu4
 布氏桿菌	bu4 shi4 gan3 jun4
+布氏桿菌	bu4 shi4 gan3 jun1
+布氏菌苗	bu4 shi4 jun4 miao2
 布氏菌苗	bu4 shi4 jun1 miao2
 布爾代數	bu4 er3 dai4 shu4
 布累爾	bu4 lei2 er3
@@ -73470,6 +73512,8 @@ min_phrase_weight: 100
 布魯塞爾	bu4 lu3 se4 er3
 布魯奈勒斯基	bu4 lu3 nai4 le4 si1 ji1
 布魯氏菌	bu4 lu3 shi4 jun4
+布魯氏菌	bu4 lu3 shi4 jun1
+布魯氏菌病	bu4 lu3 shi4 jun4 bing4
 布魯氏菌病	bu4 lu3 shi4 jun1 bing4
 帆布袋	fan2 bu4 dai4
 帆布袋	fan1 bu4 dai4
@@ -73595,6 +73639,7 @@ min_phrase_weight: 100
 帶著希望去旅行	dai4 zhe5 xi1 wang4 qu4 lv3 xing2
 帶肚子	dai4 du4 zi5
 帶菌	dai4 jun4
+帶菌	dai4 jun1
 帶菌者	dai4 jun4 zhe3
 帶菌者	dai4 jun1 zhe3
 帶薪休假	dai4 xin1 xiu1 jia4
@@ -74471,6 +74516,7 @@ min_phrase_weight: 100
 弧度	hu2 du4
 弧線長	hu2 xian4 chang2
 弧菌	hu2 jun4
+弧菌	hu2 jun1
 弧長	hu2 chang2
 弧長參數	hu2 chang2 can1 shu4
 弭棹	mi3 zhao4
@@ -74875,7 +74921,9 @@ min_phrase_weight: 100
 彰露	zhang1 lu4
 影像捕捉卡	ying3 xiang4 bu3 zhuo1 ka3
 影像處理	ying3 xiang4 chu3 li3
+影像處理	ying3 xiang4 chu4 li3
 影像處理系統	ying3 xiang4 chu3 li3 xi4 tong3
+影像處理系統	ying3 xiang4 chu4 li3 xi4 tong3
 影像解壓縮卡	ying3 xiang4 jie3 ya1 suo1 ka3
 影兒	ying3 er5	80%
 影兒	ying3 er2
@@ -77747,6 +77795,7 @@ min_phrase_weight: 100
 批子	pi1 zi5
 批抹	pi1 mo3
 批次處理	pi1 ci4 chu3 li3
+批次處理	pi1 ci4 chu4 li3
 批發市場	pi1 fa1 shi4 chang2	3%
 批發市場	pi1 fa1 shi4 chang3
 批答	pi1 da2
@@ -77918,17 +77967,23 @@ min_phrase_weight: 100
 抗毒血清	kang4 du2 xie3 qing1
 抗毒血清	kang4 du2 xue4 qing1
 抗疏	kang4 shu4
+抗真菌	kang4 zhen1 jun4
 抗真菌	kang4 zhen1 jun1
 抗組織胺	kang4 zu3 zhi1 an1
 抗組織胺	kang4 zu3 zhi1 an4
 抗美援朝	kang4 mei3 yuan2 chao2
+抗耐甲氧西林金葡菌	kang4 nai4 jia3 yang3 xi1 lin2 jin1 pu2 jun4
 抗耐甲氧西林金葡菌	kang4 nai4 jia3 yang3 xi1 lin2 jin1 pu2 jun1
-抗菌	kang4 jun1
 抗菌	kang4 jun4
+抗菌	kang4 jun1
+抗菌甲硝唑	kang4 jun4 jia3 xiao1 zuo4
 抗菌甲硝唑	kang4 jun1 jia3 xiao1 zuo4
+抗菌藥	kang4 jun4 yao4
 抗菌藥	kang4 jun1 yao4
 抗菌血清	kang4 jun4 xie3 qing1
 抗菌血清	kang4 jun4 xue4 qing1
+抗菌血清	kang4 jun1 xie3 qing1
+抗菌血清	kang4 jun1 xue4 qing1
 抗血清	kang4 xie3 qing1
 抗血清	kang4 xue4 qing1
 抗行	kang4 hang2
@@ -78060,6 +78115,7 @@ min_phrase_weight: 100
 披散	pi1 san3
 披玩	pi1 wan4
 披衣菌	pi1 yi1 jun4
+披衣菌	pi1 yi1 jun1
 披豁	pi1 huo4
 披霜冒露	pi1 shuang1 mao4 lu4
 披露	pi1 lu4
@@ -78970,8 +79026,12 @@ min_phrase_weight: 100
 捉虎容易放虎難	zhuo1 hu3 rong2 yi4 fang4 hu3 nan2
 捉襟肘見	zhuo1 jin1 zhou3 xian4
 捉襟肘見	zhuo1 jin1 zhou3 jian4
+捉襟肘見	zhuo1 jin1 zhou2 xian4	80%
+捉襟肘見	zhuo1 jin1 zhou2 jian4	80%
 捉襟見肘	zhuo1 jin1 xian4 zhou3
 捉襟見肘	zhuo1 jin1 jian4 zhou3
+捉襟見肘	zhuo1 jin1 xian4 zhou2	80%
+捉襟見肘	zhuo1 jin1 jian4 zhou2	80%
 捉迷藏	zhuo1 mi2 cang2
 捉顫	zhuo1 chan4
 捉顫	zhuo1 zhan4
@@ -79343,12 +79403,15 @@ min_phrase_weight: 100
 探驪得珠	tan4 li2 de2 zhu1
 掣曳	che4 yi4
 掣襟肘見	che4 jin1 zhou3 xian4
+掣襟肘見	che4 jin1 zhou2 xian4	80%
 掣襟露肘	che4 jin1 lu4 zhou3
+掣襟露肘	che4 jin1 lu4 zhou2	80%
 掤扒	bing1 ba1
 掤扒	bing1 pa2
 掤扒吊栲	bing1 ba1 diao4 kao3
 掤扒吊栲	bing1 pa2 diao4 kao3
 接口模塊	jie1 kou3 mo2 kuai4
+接合菌綱	jie1 he2 jun4 gang1
 接合菌綱	jie1 he2 jun1 gang1
 接地	jie1 di4
 接地線	jie1 di4 xian4
@@ -80577,6 +80640,7 @@ min_phrase_weight: 100
 擔夫	dan1 fu1
 擔子	dan4 zi5
 擔子菌	dan4 zi3 jun4
+擔子菌	dan4 zi3 jun1
 擔孤受寡	dan1 gu1 shou4 gua3
 擔帶	dan1 dai4
 擔干係	dan1 gan1 xi4
@@ -81662,6 +81726,7 @@ min_phrase_weight: 100
 文姬入塞	wen2 ji1 ru4 sai4
 文字傳播	wen2 zi4 chuan2 bo4
 文字處理機	wen2 zi4 chu3 li3 ji1
+文字處理機	wen2 zi4 chu4 li3 ji1
 文教	wen2 jiao4
 文星和合	wen2 xing1 he2 he2
 文曲星	wen2 qu1 xing1
@@ -82290,6 +82355,7 @@ min_phrase_weight: 100
 春分	chun1 fen1
 春分點	chun1 fen1 dian3
 春化處理	chun1 hua4 chu3 li3
+春化處理	chun1 hua4 chu4 li3
 春和景明	chun1 he2 jing3 ming2
 春回大地	chun1 hui2 da4 di4
 春夢一場	chun1 meng4 yi4 chang2	3%
@@ -83489,6 +83555,7 @@ min_phrase_weight: 100
 朝聞道	zhao1 wen2 dao4
 朝臣	chao2 chen2
 朝菌	zhao1 jun4
+朝菌	zhao1 jun1
 朝虀暮鹽	zhao1 ji1 mu4 yan2
 朝行夕改	zhao1 xing2 xi4 gai3
 朝衣	chao2 yi1
@@ -83680,6 +83747,7 @@ min_phrase_weight: 100
 未結束	wei4 jie2 shu4
 未艾方興	wei4 ai4 fang1 xing1
 未處理	wei4 chu3 li3
+未處理	wei4 chu4 li3
 未識一丁	wei4 shi4 yi4 ding1
 未識一丁	wei4 shi4 yi1 ding1
 未足為道	wei4 zu2 wei2 dao4
@@ -83800,8 +83868,11 @@ min_phrase_weight: 100
 李少君	li3 shao4 jun1
 李廣難封	li3 guang3 nan2 feng1
 李悝	li3 kui1
+李斯特氏桿菌	li3 si1 te4 shi4 gan3 jun4
 李斯特氏桿菌	li3 si1 te4 shi4 gan3 jun1
+李斯特氏菌	li3 si1 te4 shi4 jun4
 李斯特氏菌	li3 si1 te4 shi4 jun1
+李斯特菌	li3 si1 te4 jun4
 李斯特菌	li3 si1 te4 jun1
 李昌鎬	li3 chang1 hao4
 李朝威	li3 chao2 wei1
@@ -83893,6 +83964,7 @@ min_phrase_weight: 100
 東印度公司	dong1 yin4 du4 gong1 si1
 東印度群島	dong1 yin4 du4 qun2 dao3
 東坡肘子	dong1 po1 zhou3 zi5
+東坡肘子	dong1 po1 zhou2 zi5	80%
 東塗西抹	dong1 tu2 xi1 mo3
 東奔西向	dong1 ben1 xi1 xiang4
 東奔西撞	dong1 ben1 xi1 zhuang4
@@ -83984,6 +84056,7 @@ min_phrase_weight: 100
 松皮癬	song1 pi2 xuan3	3%
 松筠之操	song1 yun2 zhi1 cao1
 松菌	song1 jun4
+松菌	song1 jun1
 松贊干布	song1 zan4 gan1 bu4
 松贊干布陵	song1 zan4 gan1 bu4 ling2
 松露	song1 lu4
@@ -84106,8 +84179,8 @@ min_phrase_weight: 100
 枯楊生華	ku1 yang2 sheng1 hua1
 枯樹生華	ku1 shu4 sheng1 hua1
 枯水期	ku1 shui3 qi2
-枯草桿菌	ku1 cao3 gan3 jun1
 枯草桿菌	ku1 cao3 gan3 jun4
+枯草桿菌	ku1 cao3 gan3 jun1
 枯萎病	ku1 wei3 bing4
 枯萎病	ku1 wei1 bing4
 枯魚涸轍	ku1 yu2 he2 che4
@@ -84411,6 +84484,7 @@ min_phrase_weight: 100
 根椽片瓦	gen1 chuan2 pian4 wa3
 根生土長	gen1 sheng1 tu3 zhang3
 根瘤菌	gen1 liu2 jun4
+根瘤菌	gen1 liu2 jun1
 根究	gen1 jiu4
 根蘗繁殖	gen1 bo4 fan2 zhi2
 根頭	gen1 tou5
@@ -84622,6 +84696,7 @@ min_phrase_weight: 100
 棒打薄情郎	bang4 da3 bo2 qing2 lang2
 棒旋星系	bang4 xuan2 xing1 xi4
 棒狀桿菌	bang4 zhuang4 gan3 jun4
+棒狀桿菌	bang4 zhuang4 gan3 jun1
 棒球卡	bang4 qiu2 ka3
 棒球場	bang4 qiu2 chang3
 棒球場	bang4 qiu2 chang2	3%
@@ -85483,6 +85558,7 @@ min_phrase_weight: 100
 檳榔攤	bin1 lang2 tan1
 檵木	ji4 mu4
 檵花	ji4 hua1
+檸檬浮黴狀菌	ning2 meng2 fu2 mei2 zhuang4 jun4
 檸檬浮黴狀菌	ning2 meng2 fu2 mei2 zhuang4 jun1
 檸檬片	ning2 meng2 pian4
 檻檻	jian4 jian4
@@ -85716,7 +85792,9 @@ min_phrase_weight: 100
 正當防衛行為	zheng4 dang4 fang2 wei4 xing2 wei2
 正著	zheng4 zhao2
 正確處理	zheng4 que4 chu3 li3
+正確處理	zheng4 que4 chu4 li3
 正確處理人民內部矛盾	zheng4 que4 chu3 li3 ren2 min2 nei4 bu4 mao2 dun4
+正確處理人民內部矛盾	zheng4 que4 chu4 li3 ren2 min2 nei4 bu4 mao2 dun4
 正經	zheng4 jing1
 正經八百	zheng4 jing1 ba1 bai3
 正色危言	zheng4 se4 wei2 yan2
@@ -85970,9 +86048,10 @@ min_phrase_weight: 100
 殺熟	sha1 shu2
 殺熟	sha1 shou2
 殺生與奪	sha1 sheng1 yu3 duo2
+殺真菌	sha1 zhen1 jun4
 殺真菌	sha1 zhen1 jun1
-殺菌作用	sha1 jun1 zuo4 yong4
 殺菌作用	sha1 jun4 zuo4 yong4
+殺菌作用	sha1 jun1 zuo4 yong4
 殺菌劑	sha1 jun4 ji4
 殺菌劑	sha1 jun1 ji4
 殺衣縮食	shai4 yi1 su4 shi2
@@ -86339,9 +86418,11 @@ min_phrase_weight: 100
 氯化銨	lv4 hua4 an3
 氯氣中毒	lv4 qi4 zhong4 du2
 氯絲菌素	lv4 si1 jun4 su4
+氯絲菌素	lv4 si1 jun1 su4
 氰中毒	qing1 zhong4 du2
 氰化物	qing1 hua4 wu4
 氰化物	qing2 hua4 wu4
+氰基細菌	qing2 ji1 xi4 jun4
 氰基細菌	qing2 ji1 xi4 jun1
 水上漚	shui3 shang4 ou1
 水下核爆炸	shui3 xia4 he2 bao4 zha4
@@ -86531,7 +86612,9 @@ min_phrase_weight: 100
 汙水	wu1 shui3
 汙水	yu2 shui3
 污水處理	wu1 shui3 chu3 li3
+污水處理	wu1 shui3 chu4 li3
 污水處理廠	wu1 shui3 chu3 li3 chang3
+污水處理廠	wu1 shui3 chu4 li3 chang3
 污泥	wu1 ni2
 # 污膺	wa1 ying1
 汙膺	wa1 ying1
@@ -86936,8 +87019,10 @@ min_phrase_weight: 100
 沙特阿拉伯	sha1 te4 a1 la1 bo2
 沙特阿拉伯人	sha1 te4 a1 la1 bo2 ren2
 沙門氏桿菌	sha1 men2 shi4 gan3 jun4
-沙門氏菌	sha1 men2 shi4 jun1
+沙門氏桿菌	sha1 men2 shi4 gan3 jun1
 沙門氏菌	sha1 men2 shi4 jun4
+沙門氏菌	sha1 men2 shi4 jun1
+沙門菌	sha1 men2 jun4
 沙門菌	sha1 men2 jun1
 沙雞	sha1 ji1
 沮喪	ju3 sang4
@@ -87593,7 +87678,9 @@ min_phrase_weight: 100
 活局子	huo2 ju2 zi5
 活度	huo2 du4
 活性污泥菌	huo2 xing4 wu1 ni2 jun4
+活性污泥菌	huo2 xing4 wu1 ni2 jun1
 活性菌	huo2 xing4 jun4
+活性菌	huo2 xing4 jun1
 活支剌	huo2 zhi1 la4
 活教材	huo2 jiao4 cai2
 活期	huo2 qi2
@@ -87603,6 +87690,7 @@ min_phrase_weight: 100
 活潑	huo2 po1
 活版印刷	huo2 ban3 yin4 shua1
 活物寄生菌	huo2 wu4 ji4 sheng1 jun4
+活物寄生菌	huo2 wu4 ji4 sheng1 jun1
 活著	huo2 zhao1
 活著	huo2 zhe5
 活結	huo2 jie2
@@ -87986,10 +88074,11 @@ min_phrase_weight: 100
 淋漓	lin2 li2
 淋漓痛快	lin2 li2 tong4 kuai4
 淋漓盡致	lin2 li2 jin4 zhi4
+淋球菌	lin2 qiu2 jun4
 淋球菌	lin2 qiu2 jun1
-淋球菌	lin4 qiu2 jun1
 淋病	lin2 bing4
 淋菌	lin2 jun4
+淋菌	lin2 jun1
 淋證	lin2 zheng4
 淋鈴	lin2 ling2
 淋雨	lin2 yu3
@@ -89360,7 +89449,9 @@ min_phrase_weight: 100
 炕頭子貨	kang4 tou2 zi5 huo4
 炙地臥	zhi4 di4 wo4
 炭墼	tan4 ji2
+炭疽桿菌	tan4 ju1 gan3 jun4
 炭疽桿菌	tan4 ju1 gan3 jun1
+炭疽菌苗	tan4 ju1 jun4 miao2
 炭疽菌苗	tan4 ju1 jun1 miao2
 炭簍子	tan4 lou3 zi5
 炮仗	pao4 zhang4
@@ -89576,12 +89667,15 @@ min_phrase_weight: 100
 無菌	wu2 jun4
 無菌	wu2 jun1
 無菌室	wu2 jun4 shi4
-無菌性	wu2 jun1 xing4
+無菌室	wu2 jun1 shi4
 無菌性	wu2 jun4 xing4
+無菌性	wu2 jun1 xing4
 無菌性腦膜炎	wu2 jun4 xing4 nao3 mo2 yan2
 無菌性腦膜炎	wu2 jun4 xing4 nao3 mo4 yan2	3%
-無菌的	wu2 jun1 de5
+無菌性腦膜炎	wu2 jun1 xing4 nao3 mo2 yan2
+無菌性腦膜炎	wu2 jun1 xing4 nao3 mo4 yan2	3%
 無菌的	wu2 jun4 de5
+無菌的	wu2 jun1 de5
 無處	wu2 chu4
 無處不在	wu2 chu4 bu2 zai4
 無處可尋	wu2 chu4 ke3 xun2
@@ -89953,6 +90047,7 @@ min_phrase_weight: 100
 熬頭	ao2 tou2
 熬鷹	ao2 ying1
 熯天熾地	han4 tian1 chi4 di4
+熯天熾地	han4 tian1 zhi4 di4	80%
 熱乾麵	re4 gan1 mian4
 熱傳導	re4 chuan2 dao3
 熱切	re4 qie4
@@ -89987,8 +90082,10 @@ min_phrase_weight: 100
 熱發光劑量計	re4 fa1 guang1 ji4 liang4 ji4
 熱脈衝	re4 mai4 chong1
 熱處理	re4 chu3 li3
+熱處理	re4 chu4 li3
 熱血	re4 xie3
 熱血	re4 xue4
+熱連球菌	re4 lian2 qiu2 jun4
 熱連球菌	re4 lian2 qiu2 jun1
 熱量	re4 liang4
 熱量單位	re4 liang4 dan1 wei4
@@ -89997,8 +90094,11 @@ min_phrase_weight: 100
 熱鬧	re4 nao4
 熱鬧哄哄	re4 nao4 hong1 hong1
 熾盛	chi4 sheng4
+熾盛	zhi4 sheng4	80%
 熾結	chi4 jie2
+熾結	zhi4 jie2	80%
 燃料處理廠	ran2 liao4 chu4 li3 chang3
+燃料處理廠	ran2 liao4 chu3 li3 chang3
 燃燒彈	ran2 shao1 dan4
 燃犀溫嶠	ran2 xi1 wen1 qiao2
 燃犀溫嶠	ran2 xi1 wen1 jiao4
@@ -91256,6 +91356,8 @@ min_phrase_weight: 100
 球僮	qiu2 tong2
 球場會館	qiu2 chang3 hui4 guan3
 球場會館	qiu2 chang2 hui4 guan3	3%
+球孢子菌病	qiu2 bao1 zi3 jun4 bing4
+球孢子菌病	qiu2 bao1 zi5 jun4 bing4
 球孢子菌病	qiu2 bao1 zi3 jun1 bing4
 球孢子菌病	qiu2 bao1 zi5 jun1 bing4
 球差	qiu2 cha1
@@ -91414,6 +91516,7 @@ min_phrase_weight: 100
 瓢帽子	piao2 mao4 zi5
 瓢把子	piao2 ba3 zi5
 瓢菌素	piao2 jun4 su4
+瓢菌素	piao2 jun1 su4
 瓣膜	ban4 mo4	3%
 瓣膜	ban4 mo2
 瓤兒	rang2 er5	80%
@@ -91609,6 +91712,7 @@ min_phrase_weight: 100
 生育率	sheng1 yu4 lv4
 生苔	sheng1 tai2
 生菌	sheng1 jun4
+生菌	sheng1 jun1
 生虎子	sheng1 hu3 zi5
 生詞卡	sheng1 ci2 ka3
 生還	sheng1 huan2
@@ -92248,6 +92352,7 @@ min_phrase_weight: 100
 痞子	pi3 zi5
 痢疾	li4 ji2
 痢疾桿菌	li4 ji2 gan3 jun4
+痢疾桿菌	li4 ji2 gan3 jun1
 痦子	wu4 zi5
 痧子	sha1 zi5
 痰盂兒	tan2 yu2 er5	80%
@@ -92431,6 +92536,7 @@ min_phrase_weight: 100
 白刺	bai2 ci4
 白卷	bai2 juan4
 白叨光	bai2 tao1 guang1
+白喉桿菌	bai2 hou2 gan3 jun4
 白喉桿菌	bai2 hou2 gan3 jun1
 白嘩嘩	bai2 hua1 hua1
 白嚼人	bai2 jue2 ren2
@@ -92499,6 +92605,7 @@ min_phrase_weight: 100
 白舌入地	bo2 she2 ru4 di4
 白色人種	bai2 se4 ren2 zhong3
 白色念珠菌病	bai2 se4 nian4 zhu1 jun4 bing4
+白色念珠菌病	bai2 se4 nian4 zhu1 jun1 bing4
 白芝麻	bai2 zhi1 ma2
 白花花	bai2 hua1 hua1
 白荷蘭翹搖	bai2 he2 lan2 qiao4 yao2
@@ -93672,6 +93779,7 @@ min_phrase_weight: 100
 真空包裝	zhen1 kong1 bao1 zhuang1
 真空泵	zhen1 kong1 beng4
 真空管	zhen1 kong1 guan3
+真菌綱	zhen1 jun4 gang1
 真菌綱	zhen1 jun1 gang1
 真誠相見	zhen1 cheng2 xiang1 jian4
 真跡	zhen1 ji1
@@ -94286,6 +94394,7 @@ min_phrase_weight: 100
 破不剌	po4 bu2 la4
 破丟不落	po4 diu1 bu2 luo4
 破傷風桿菌	po4 shang1 feng1 gan3 jun4
+破傷風桿菌	po4 shang1 feng1 gan3 jun1
 破嗓子	po4 sang3 zi5
 破壁燎火	po4 bi4 liao4 huo3
 破壞射擊	po4 huai4 she4 ji2
@@ -94748,6 +94857,9 @@ min_phrase_weight: 100
 禍必重來	huo4 bi4 chong2 lai2
 禍為福先	huo4 wei2 fu2 xian1
 禍生肘腋	huo4 sheng1 zhou3 yi4
+禍生肘腋	huo4 sheng1 zhou3 ye4
+禍生肘腋	huo4 sheng1 zhou2 yi4	80%
+禍生肘腋	huo4 sheng1 zhou2 ye4	80%
 禍盈惡稔	huo4 ying2 e4 ren3
 禍福相倚	huo4 fu2 xiang1 yi3
 禍福相生	huo4 fu2 xiang1 sheng1
@@ -96319,6 +96431,7 @@ min_phrase_weight: 100
 米苔目	mi3 tai2 mu4
 米釐米突	mi3 li2 mi3 tu2
 米釐米突	mi3 li2 mi3 tu1
+米麴菌	mi3 qu2 jun4
 米麴菌	mi3 qu2 jun1
 粉刷	fen3 shua1
 粉刺	fen3 ci4
@@ -96396,8 +96509,8 @@ min_phrase_weight: 100
 粘膠液	zhan1 jiao1 yi4
 粘花惹絮	nian2 hua1 re3 xu4
 粘花惹草	nian2 hua1 re3 cao3
-粘菌	nian2 jun1
 粘菌	nian2 jun4
+粘菌	nian2 jun1
 粘蟲	nian2 chong2
 粘補	nian2 bu3
 粘補	zhan1 bu3
@@ -96643,6 +96756,7 @@ min_phrase_weight: 100
 納米比亞共和國	na4 mi3 bi3 ya3 gong4 he2 guo2
 納米比亞共和國	na4 mi3 bi3 ya4 gong4 he2 guo2
 納粹主義	na4 cui4 zhu3 yi4
+納豆菌	na4 dou4 jun4
 納豆菌	na4 dou4 jun1
 納貢稱臣	na4 gong4 cheng1 chen2
 納還	na4 huan2
@@ -96854,11 +96968,16 @@ min_phrase_weight: 100
 細胞遺傳學	xi4 bao1 yi2 chuan2 xue2
 細胞銀行	xi4 bao1 yin2 hang2
 細菌學	xi4 jun4 xue2
+細菌學	xi4 jun1 xue2
 細菌性心內膜炎	xi4 jun4 xing4 xin1 nei4 mo2 yan2
 細菌性心內膜炎	xi4 jun4 xing4 xin1 nei4 mo4 yan2	3%
-細菌戰	xi4 jun1 zhan4
+細菌性心內膜炎	xi4 jun1 xing4 xin1 nei4 mo2 yan2
+細菌性心內膜炎	xi4 jun1 xing4 xin1 nei4 mo4 yan2	3%
 細菌戰	xi4 jun4 zhan4
+細菌戰	xi4 jun1 zhan4
+細菌病毒	xi4 jun4 bing4 du2
 細菌病毒	xi4 jun1 bing4 du2
+細菌群	xi4 jun4 qun2
 細菌群	xi4 jun1 qun2
 細葉脈	xi4 ye4 mai4
 細行	xi4 xing4
@@ -96902,7 +97021,9 @@ min_phrase_weight: 100
 組成部分	zu3 cheng2 bu4 fen4
 組曲	zu3 qu3
 組立式建築	zu3 li4 shi4 jian4 zhu2
+組織漿黴菌病	zu3 zhi1 jiang1 mei2 jun4 bing4
 組織漿黴菌病	zu3 zhi1 jiang1 mei2 jun1 bing4
+組織胞漿菌病	zu3 zhi1 bao1 jiang1 jun4 bing4
 組織胞漿菌病	zu3 zhi1 bao1 jiang1 jun1 bing4
 組織胺	zu3 zhi1 an1
 組織胺	zu3 zhi1 an4
@@ -96999,12 +97120,13 @@ min_phrase_weight: 100
 結果收因	jie2 guo3 shou1 yin1
 結果論	jie2 guo3 lun4
 結核	jie2 he2
-結核桿菌	jie2 he2 gan3 jun1
 結核桿菌	jie2 he2 gan3 jun4
+結核桿菌	jie2 he2 gan3 jun1
 結核病	jie2 he2 bing4
 結核菌	jie2 he2 jun4
-結核菌素	jie2 he2 jun1 su4
+結核菌	jie2 he2 jun1
 結核菌素	jie2 he2 jun4 su4
+結核菌素	jie2 he2 jun1 su4
 結根	jie2 gen1
 結案	jie2 an4
 結梁子	jie2 liang2 zi5
@@ -97342,6 +97464,7 @@ min_phrase_weight: 100
 綰髮	wan3 fa3
 綱常掃地	gang1 chang2 sao3 di4
 網傘菌	wang3 san3 jun4
+網傘菌	wang3 san3 jun1
 網卡	wang3 ka3
 網吧	wang3 ba5
 網吧	wang3 ba1
@@ -98696,6 +98819,7 @@ min_phrase_weight: 100
 聯播	lian2 bo4
 聯播	lian2 bo1
 聯機分析處理	lian2 ji1 fen1 xi1 chu3 li3
+聯機分析處理	lian2 ji1 fen1 xi1 chu4 li3
 聯結	lian2 jie2
 聯結主義	lian2 jie2 zhu3 yi4
 聯結車	lian2 jie2 che1
@@ -98816,7 +98940,9 @@ min_phrase_weight: 100
 肉包子打狗	rou4 bao1 zi5 da3 gou3
 肉山脯林	rou4 shan1 fu3 lin2
 肉彈	rou4 dan4
+肉毒桿菌毒素	rou4 du2 gan3 jun4 du2 su4
 肉毒桿菌毒素	rou4 du2 gan3 jun1 du2 su4
+肉毒梭狀芽孢桿菌	rou4 du2 suo1 zhuang4 ya2 bao1 gan3 jun4
 肉毒梭狀芽孢桿菌	rou4 du2 suo1 zhuang4 ya2 bao1 gan3 jun1
 肉燥	rou4 sao4
 肉燥	rou4 zao4
@@ -98853,15 +98979,27 @@ min_phrase_weight: 100
 肐膊上走的馬	ge1 bo5 shang4 zou3 de5 ma3
 肐膊肘子	ge1 bo2 zhou3 zi5
 肐膊肘子	ge1 bo5 zhou3 zi5
+肐膊肘子	ge1 bo2 zhou2 zi5	80%
+肐膊肘子	ge1 bo5 zhou2 zi5	80%
 肐膊腕子	ge1 bo2 wan4 zi5
 肐膊腕子	ge1 bo5 wan4 zi5
 肖翹	xiao4 qiao2
 肘子	zhou3 zi5
+肘子	zhou2 zi5	80%
 肘腋	zhou3 yi4
 肘腋	zhou3 ye4
+肘腋	zhou2 yi4	80%
+肘腋	zhou2 ye4	80%
 肘腋之患	zhou3 yi4 zhi1 huan4
+肘腋之患	zhou3 ye4 zhi1 huan4
+肘腋之患	zhou2 yi4 zhi1 huan4	80%
+肘腋之患	zhou2 ye4 zhi1 huan4	80%
 肘腋之憂	zhou3 yi4 zhi1 you1
+肘腋之憂	zhou3 ye4 zhi1 you1
+肘腋之憂	zhou2 yi4 zhi1 you1	80%
+肘腋之憂	zhou2 ye4 zhi1 you1	80%
 肘頭霍散腦	zhou3 tou2 huo4 san4 nao3
+肘頭霍散腦	zhou2 tou2 huo4 san4 nao3	80%
 肚兒	du3 er5	80%
 肚兒	du4 er2
 肚兜	du4 dou1
@@ -98946,8 +99084,11 @@ min_phrase_weight: 100
 肺動脈	fei4 dong4 mo4
 肺塵矽症	fei4 chen2 xi4 zheng4
 肺活量	fei4 huo2 liang4
+肺炎克雷伯氏菌	fei4 yan2 ke4 lei2 bo2 shi4 jun4
 肺炎克雷伯氏菌	fei4 yan2 ke4 lei2 bo2 shi4 jun1
+肺炎雙球菌	fei4 yan2 shuang1 qiu2 jun4
 肺炎雙球菌	fei4 yan2 shuang1 qiu2 jun1
+肺炎黴漿菌	fei4 yan2 mei2 jiang1 jun4
 肺炎黴漿菌	fei4 yan2 mei2 jiang1 jun1
 肺結核	fei4 jie2 he2
 肺結核	fei4 jie1 he2
@@ -99083,16 +99224,30 @@ min_phrase_weight: 100
 胳膊	ge1 bo5
 胳膊肘	ge1 bo2 zhou3
 胳膊肘	ge1 bo5 zhou3
+胳膊肘	ge1 bo2 zhou2	80%
+胳膊肘	ge1 bo5 zhou2	80%
 胳膊肘子	ge1 bo2 zhou3 zi5
 胳膊肘子	ge1 bo5 zhou3 zi5
+胳膊肘子	ge1 bo2 zhou2 zi5	80%
+胳膊肘子	ge1 bo5 zhou2 zi5	80%
 胳膊肘朝外拐	ge1 bo2 zhou3 chao2 wai4 guai3
 胳膊肘朝外拐	ge1 bo5 zhou3 chao2 wai4 guai3
+胳膊肘朝外拐	ge1 bo2 zhou2 chao2 wai4 guai3	80%
+胳膊肘朝外拐	ge1 bo5 zhou2 chao2 wai4 guai3	80%
 胳臂	ge1 bei4
 胳臂	ge1 bi4
 胳臂箍兒	ge1 bei4 gu1 er5	80%
 胳臂箍兒	ge1 bei4 gu1 er2
+胳臂箍兒	ge1 bi4 gu1 er5	80%
+胳臂箍兒	ge1 bi4 gu1 er2
 胳臂肘兒	ge1 bei4 zhou3 er5	80%
 胳臂肘兒	ge1 bei4 zhou3 er2
+胳臂肘兒	ge1 bi4 zhou3 er5	80%
+胳臂肘兒	ge1 bi4 zhou3 er2
+胳臂肘兒	ge1 bei4 zhou2 er5	80%
+胳臂肘兒	ge1 bei4 zhou2 er2	80%
+胳臂肘兒	ge1 bi4 zhou2 er5	80%
+胳臂肘兒	ge1 bi4 zhou2 er2	80%
 胸中有數	xiong1 zhong1 you3 shu4
 胸中無數	xiong1 zhong1 wu2 shu4
 胸廓切開術	xiong1 kuo4 qie1 kai1 shu4
@@ -99428,6 +99583,7 @@ min_phrase_weight: 100
 膝蓋骨	xi1 gai4 gu3
 膝行	xi1 xing2
 膝行肘步	xi1 xing2 zhou3 bu4
+膝行肘步	xi1 xing2 zhou2 bu4	80%
 膠卷	jiao1 juan3
 膠圈	jiao1 quan1
 膠柱調瑟	jiao1 zhu4 tiao2 se4
@@ -99795,6 +99951,7 @@ min_phrase_weight: 100
 至誠	zhi4 cheng2
 至關重要	zhi4 guan1 zhong4 yao4
 致死劑量	zhi4 si3 ji4 liang4
+致病菌	zhi4 bing4 jun4
 致病菌	zhi4 bing4 jun1
 致遠任重	zhi4 yuan3 ren4 zhong4
 臷國	zhi4 guo2
@@ -100317,6 +100474,7 @@ min_phrase_weight: 100
 花剌子模	hua1 la4 zi3 mo2
 花剌子模	hua1 la2 zi3 mo2
 花卉冷藏處理	hua1 hui4 leng3 cang2 chu3 li3
+花卉冷藏處理	hua1 hui4 leng3 cang2 chu4 li3
 花呢	hua1 ni2
 花和尚	hua1 he2 shang4
 花哄	hua1 hong1
@@ -100722,6 +100880,8 @@ min_phrase_weight: 100
 莠民	you3 min2
 莠狗尾草	you4 gou3 wei3 cao3
 莠言	you4 yan2
+莢膜組織胞漿菌	jia2 mo2 zu3 zhi1 bao1 jiang1 jun4
+莢膜組織胞漿菌	jia2 mo4 zu3 zhi1 bao1 jiang1 jun4	3%
 莢膜組織胞漿菌	jia2 mo2 zu3 zhi1 bao1 jiang1 jun1
 莢膜組織胞漿菌	jia2 mo4 zu3 zhi1 bao1 jiang1 jun1	3%
 莨綢	liang2 chou2
@@ -100769,33 +100929,55 @@ min_phrase_weight: 100
 菊老荷枯	ju2 lao3 he2 ku1
 菊花與劍	ju2 hua1 yu3 jian4
 菌傘	jun4 san3
+菌傘	jun1 san3
 菌原體	jun4 yuan2 ti3
+菌原體	jun1 yuan2 ti3
 菌子	jun4 zi5
+菌子	jun1 zi5
 菌幕	jun4 mu4
+菌幕	jun1 mu4
+菌托	jun4 tuo1
 菌托	jun1 tuo1
 菌柄	jun4 bing3
+菌柄	jun1 bing3
 菌核	jun4 he2
+菌核	jun1 he2
 菌根	jun4 gen1
+菌根	jun1 gen1
 菌桂	jun4 gui4
+菌桂	jun1 gui4
+菌界	jun4 jie4
 菌界	jun1 jie4
 菌絲	jun4 si1
 菌絲	jun1 si1
 菌絲體	jun4 si1 ti3
+菌絲體	jun1 si1 ti3
+菌肥	jun4 fei2
 菌肥	jun1 fei2
+菌膠團	jun4 jiao1 tuan2
 菌膠團	jun1 jiao1 tuan2
-菌苗	jun1 miao2
 菌苗	jun4 miao2
-菌落	jun1 luo4
+菌苗	jun1 miao2
 菌落	jun4 luo4
+菌落	jun1 luo4
 菌蓋	jun4 gai4
+菌蓋	jun1 gai4
 菌血症	jun4 xie3 zheng4
 菌血症	jun4 xue4 zheng4
+菌血症	jun1 xie3 zheng4
+菌血症	jun1 xue4 zheng4
 菌褶	jun4 zhe2
+菌褶	jun1 zhe2
 菌質	jun4 zhi2
 菌質	jun4 zhi4	3%
+菌質	jun1 zhi2
+菌質	jun1 zhi4	3%
+菌陳蒿	jun4 chen2 hao1
 菌陳蒿	jun1 chen2 hao1
 菌類培養液	jun4 lei4 pei2 yang3 ye4
 菌類培養液	jun4 lei4 pei2 yang3 yi4
+菌類培養液	jun1 lei4 pei2 yang3 ye4
+菌類培養液	jun1 lei4 pei2 yang3 yi4
 菑畬	zi1 yu2
 菖鮋	chang1 you2
 菜包子	cai4 bao1 zi5
@@ -101265,11 +101447,14 @@ min_phrase_weight: 100
 葡萄乾兒	pu2 tao2 gan1 er2
 葡萄炸彈	pu2 tao2 zha4 dan4
 葡萄牙共和國	pu2 tao2 ya2 gong4 he2 guo2
-葡萄球菌	pu2 tao2 qiu2 jun1
 葡萄球菌	pu2 tao2 qiu2 jun4
+葡萄球菌	pu2 tao5 qiu2 jun4
+葡萄球菌	pu2 tao2 qiu2 jun1
 葡萄球菌	pu2 tao5 qiu2 jun1
-葡萄球菌腸毒素	pu2 tao2 qiu2 jun1 chang2 du2 su4
 葡萄球菌腸毒素	pu2 tao2 qiu2 jun4 chang2 du2 su4
+葡萄球菌腸毒素	pu2 tao5 qiu2 jun4 chang2 du2 su4
+葡萄球菌腸毒素	pu2 tao2 qiu2 jun1 chang2 du2 su4
+葡萄球菌腸毒素	pu2 tao5 qiu2 jun1 chang2 du2 su4
 葡萄糖	pu2 tao2 tang2
 葡萄糖	pu2 tao5 tang2
 葡萄糖胺	pu2 tao2 tang2 an1
@@ -101860,10 +102045,13 @@ min_phrase_weight: 100
 藍屏死機	lan2 ping2 si3 ji1
 藍月亮	lan2 yue4 liang4
 藍田種玉	lan2 tian2 zhong4 yu4
+藍細菌	lan2 xi4 jun4
+藍綠菌	lan2 lv4 jun4
 藍細菌	lan2 xi4 jun1
 藍綠菌	lan2 lv4 jun1
-藍菌	lan2 jun1
 藍菌	lan2 jun4
+藍菌	lan2 jun1
+藍菌門	lan2 jun4 men2
 藍菌門	lan2 jun1 men2
 藍調	lan2 diao4
 藍采和	lan2 cai3 he2
@@ -101994,6 +102182,7 @@ min_phrase_weight: 100
 藺相如	lin4 xiang1 ru2
 藺相如	lin4 xiang4 ru2
 藻菌植物	zao3 jun4 zhi2 wu4
+藻菌植物	zao3 jun1 zhi2 wu4
 蘇丹共和國	su1 dan1 gong4 he2 guo2
 蘇俄在中國	su1 e4 zai4 zhong1 guo2
 蘇俄在中國	su1 e2 zai4 zhong1 guo2
@@ -102156,8 +102345,11 @@ min_phrase_weight: 100
 處理	chu3 li3
 處理	chu4 li3
 處理品	chu3 li3 pin3
+處理品	chu4 li3 pin3
 處理器	chu3 li3 qi4
+處理器	chu4 li3 qi4
 處理能力	chu3 li3 neng2 li4
+處理能力	chu4 li3 neng2 li4
 處男	chu3 nan2
 處男	chu4 nan2
 處窩子	chu3 wo1 zi5
@@ -102446,6 +102638,7 @@ min_phrase_weight: 100
 螺旋槳	luo2 xuan2 jiang3
 螺旋狀	luo2 xuan2 zhuang4
 螺旋菌	luo2 xuan2 jun4
+螺旋菌	luo2 xuan2 jun1
 螺旋藻	luo2 xuan2 zao3
 螺旋鉗	luo2 xuan2 qian2
 螺旋面	luo2 xuan2 mian4
@@ -103124,6 +103317,7 @@ min_phrase_weight: 100
 衣冠輻湊	yi1 guan1 fu2 cou4
 衣冠雲集	yi1 guan1 yun2 ji2
 衣冠齊楚	yi1 guan1 qi2 chu3
+衣原菌	yi1 yuan2 jun4
 衣原菌	yi1 yuan2 jun1
 衣單食薄	yi1 dan1 shi2 bo2
 衣帛食肉	yi4 bo2 shi2 rou4
@@ -103284,6 +103478,7 @@ min_phrase_weight: 100
 裂冠毀冕	lie4 guan1 hui3 mian3
 裂土分茅	lie4 tu3 fen1 mao2
 裂地	lie4 di4
+裂殖菌綱	lie4 zhi2 jun4 gang1
 裂殖菌綱	lie4 zhi2 jun1 gang1
 裂片	lie4 pian4
 裂片生殖	lie4 pian4 sheng1 zhi2
@@ -104154,6 +104349,7 @@ min_phrase_weight: 100
 訊息	xun4 xi2
 訊息傳遞中介	xun4 xi2 chuan2 di4 zhong1 jie4
 訊息處理系統	xun4 xi2 chu3 li3 xi4 tong3
+訊息處理系統	xun4 xi2 chu4 li3 xi4 tong3
 訊框傳送	xun4 kuang1 chuan2 song4
 訊框傳送服務	xun4 kuang1 chuan2 song4 fu2 wu4
 訊框傳送網路	xun4 kuang1 chuan2 song4 wang3 lu4
@@ -105070,6 +105266,8 @@ min_phrase_weight: 100
 變調	bian4 diao4
 變質處理	bian4 zhi2 chu3 li3
 變質處理	bian4 zhi4 chu3 li3	3%
+變質處理	bian4 zhi2 chu4 li3
+變質處理	bian4 zhi4 chu4 li3	3%
 變跡埋名	bian4 ji1 mai2 ming2
 變速傳動	bian4 su4 chuan2 dong4
 變量	bian4 liang4
@@ -105233,7 +105431,9 @@ min_phrase_weight: 100
 豬肉乾	zhu1 rou4 gan1
 豬肚	zhu1 du3
 豬肚	zhu1 du4
+豬鏈球菌	zhu1 lian4 qiu2 jun4
 豬鏈球菌	zhu1 lian4 qiu2 jun1
+豬鏈球菌病	zhu1 lian4 qiu2 jun4 bing4
 豬鏈球菌病	zhu1 lian4 qiu2 jun1 bing4
 豹子	bao4 zi5
 豺狼塞路	chai2 lang2 sai1 lu4
@@ -105506,6 +105706,7 @@ min_phrase_weight: 100
 資料傳輸	zi1 liao4 chuan2 shu1
 資料傳送服務	zi1 liao4 chuan2 song4 fu2 wu4
 資料處理	zi1 liao4 chu3 li3
+資料處理	zi1 liao4 chu4 li3
 資料量	zi1 liao4 liang4
 資料鏈結層	zi1 liao4 lian4 jie2 ceng2
 資淺齒少	zi1 qian3 chi3 shao4
@@ -105990,6 +106191,7 @@ min_phrase_weight: 100
 超重	chao1 zhong4
 超重氫	chao1 zhong4 qing1
 超高溫滅菌法	chao1 gao1 wen1 mie4 jun4 fa3
+超高溫滅菌法	chao1 gao1 wen1 mie4 jun1 fa3
 越南共和國	yue4 nan2 gong4 he2 guo2
 越南刺鰟鮍	yue4 nan2 ci4 pang2 pi2
 越桔	yue4 ju2
@@ -106287,6 +106489,7 @@ min_phrase_weight: 100
 踳落	chun3 luo4
 踳駁	chun3 bo2
 踵決肘見	zhong3 jue2 zhou3 xian4
+踵決肘見	zhong3 jue2 zhou2 xian4	80%
 踶跂	di4 zhi1
 踶跂	zhi4 qi2
 踸踔	chen3 zhuo2
@@ -106623,8 +106826,11 @@ min_phrase_weight: 100
 軍來將敵	jun1 lai2 jiang4 di2
 軍公教	jun1 gong1 jiao4
 軍分區	jun1 fen1 qu1
+軍團桿菌	jun1 tuan2 gan3 jun4
 軍團桿菌	jun1 tuan2 gan3 jun1
+軍團菌	jun1 tuan2 jun4
 軍團菌	jun1 tuan2 jun1
+軍團菌病	jun1 tuan2 jun4 bing4
 軍團菌病	jun1 tuan2 jun1 bing4
 軍多將廣	jun1 duo1 jiang4 guang3
 軍官學校	jun1 guan1 xue2 xiao4
@@ -106897,6 +107103,7 @@ min_phrase_weight: 100
 輻射散射	fu2 she4 san4 she4
 輻射散熱作用	fu2 she4 san4 re4 zuo4 yong4
 輻射滅菌	fu2 she4 mie4 jun4
+輻射滅菌	fu2 she4 mie4 jun1
 輻射直接效應	fu2 she4 zhi2 jie1 xiao4 ying4
 輻射落塵	fu2 she4 luo4 chen2
 輻狀花冠	fu2 zhuang4 hua1 guan1
@@ -108570,8 +108777,10 @@ min_phrase_weight: 100
 酬載	chou2 zai4
 酬載	chou2 zai3
 酬酢	chou2 zuo4
-酵母菌	jiao4 mu3 jun1
+酵母菌	jiao4 mu3 jun4
 酵母菌	xiao4 mu3 jun4
+酵母菌	jiao4 mu3 jun1
+酵母菌	xiao4 mu3 jun1
 酷刑折磨	ku4 xing2 zhe2 mo2
 酷好	ku4 hao4
 酸不溜丟	suan1 bu4 liu1 diu1
@@ -108627,8 +108836,10 @@ min_phrase_weight: 100
 醫藥分離	yi1 yao4 fen1 li2
 醬糊缸	jiang4 hu2 gang1
 醬肘子	jiang4 zhou3 zi5
+醬肘子	jiang4 zhou2 zi5	80%
 醬豆腐	jiang4 dou4 fu3
 醯胺類	xi1 an1 lei4
+釀母菌	niang4 mu3 jun4
 釀母菌	niang4 mu3 jun1
 釁惡	xin4 e4
 采光剖璞	cai3 guang1 pou3 pu2
@@ -111722,6 +111933,7 @@ min_phrase_weight: 100
 雅魯藏布大峽谷	ya3 lu3 zang4 bu4 da4 xia2 gu3
 雅魯藏布江	ya3 lu3 zang4 bu4 jiang1
 集中資料處理	ji2 zhong1 zi1 liao4 chu3 li3
+集中資料處理	ji2 zhong1 zi1 liao4 chu4 li3
 集團結婚	ji2 tuan2 jie2 hun1
 集子	ji2 zi5
 集寧	ji2 ning2
@@ -112217,6 +112429,7 @@ min_phrase_weight: 100
 電腦看板	dian4 nao3 kan4 ban3
 電腦與電話系統整合	dian4 nao3 yu3 dian4 hua4 xi4 tong3 zheng3 he2
 電腦語音處理	dian4 nao3 yu3 yin1 chu3 li3
+電腦語音處理	dian4 nao3 yu3 yin1 chu4 li3
 電腦語音辨識	dian4 nao3 yu3 yin1 bian4 shi4
 電腦讀卡機	dian4 nao3 du2 ka3 ji1
 電腦輔助教學	dian4 nao3 fu3 zhu4 jiao4 xue2
@@ -112274,7 +112487,10 @@ min_phrase_weight: 100
 霉頭	mei2 tou5
 霉頭	mei2 tou2
 霍亂弧菌	huo4 luan4 hu2 jun4
+霍亂弧菌	huo4 luan4 hu2 jun1
+霍亂桿菌	huo4 luan4 gan3 jun4
 霍亂桿菌	huo4 luan4 gan3 jun1
+霍亂菌苗	huo4 luan4 jun4 miao2
 霍亂菌苗	huo4 luan4 jun1 miao2
 霍加狓	huo4 jia1 pi1
 霍地	huo4 di4
@@ -112528,6 +112744,7 @@ min_phrase_weight: 100
 非洲開發銀行	fei1 zhou1 kai1 fa1 yin2 hang2
 非營利組織	fei1 ying2 li4 zu3 zhi1
 非病原菌	fei1 bing4 yuan2 jun4
+非病原菌	fei1 bing4 yuan2 jun1
 非相對論性	fei1 xiang1 dui4 lun4 xing4
 非空	fei1 kong1
 非親非故	fei1 qin1 fei1 gu4
@@ -112881,7 +113098,9 @@ min_phrase_weight: 100
 頭場	tou2 chang2	3%
 頭場	tou2 chang3
 頭子	tou2 zi5
+頭孢菌	tou2 bao1 jun4
 頭孢菌	tou2 bao1 jun1
+頭孢菌素	tou2 bao1 jun4 su4
 頭孢菌素	tou2 bao1 jun1 su4
 頭巾弔在水裡	tou2 jin1 diao4 zai4 shui3 li3
 頭廳相	tou2 ting1 xiang4
@@ -112903,6 +113122,7 @@ min_phrase_weight: 100
 頭箍兒	tou2 gu1 er5	80%
 頭箍兒	tou2 gu1 er2
 頭肘子	tou2 zhou3 zi5
+頭肘子	tou2 zhou2 zi5	80%
 頭腦清楚	tou2 nao3 qing1 chu3
 頭腦體操	tou2 nao3 ti3 cao1
 頭臉兒	tou2 lian3 er5	80%
@@ -113532,6 +113752,7 @@ min_phrase_weight: 100
 香花供養	xiang1 hua1 gong1 yang3
 香荷包	xiang1 he2 bao1
 香菌	xiang1 jun4
+香菌	xiang1 jun1
 香蓼	xiang1 liao3
 香薄荷	xiang1 bo4 he2
 香蠟鋪	xiang1 la4 pu4
@@ -114766,6 +114987,7 @@ min_phrase_weight: 100
 黏結	nian2 jie2
 黏膜	nian2 mo4	3%
 黏膜	nian2 mo2
+黏菌	nian2 jun4
 黏菌	nian2 jun1
 黑下	hei1 xia4
 黑不溜丟	hei1 bu4 liu1 diu1
@@ -114828,6 +115050,7 @@ min_phrase_weight: 100
 黑魆魆	hei1 xu4 xu4
 黑黝黝	hei1 you3 you3
 黑黴菌	hei1 mei2 jun4
+黑黴菌	hei1 mei2 jun1
 黑黶子	hei1 yan3 zi5
 黔東南苗族侗族自治州	qian2 dong1 nan2 miao2 zu2 dong4 zu2 zi4 zhi4 zhou1
 黔突暖席	qian2 tu2 nuan3 xi2
@@ -114883,11 +115106,14 @@ min_phrase_weight: 100
 黳珀	yi1 po4
 黳石	yi1 shi2
 黳黑	yi1 hei1
+黴漿菌肺炎	mei2 jiang1 jun4 fei4 yan2
 黴漿菌肺炎	mei2 jiang1 jun1 fei4 yan2
-黴菌	mei2 jun1
 黴菌	mei2 jun4
+黴菌	mei2 jun1
+黴菌毒素	mei2 jun4 du2 su4
 黴菌毒素	mei2 jun1 du2 su4
 黴菌病	mei2 jun4 bing4
+黴菌病	mei2 jun1 bing4
 黶子	yan3 zi5
 黿鳴鱉應	yuan2 ming2 bie1 ying4
 鼂錯	chao2 cuo4
@@ -114927,7 +115153,9 @@ min_phrase_weight: 100
 鼓鼓囊囊	gu3 gu3 nang2 nang2
 鼠得克	shu3 de2 ke4
 鼠攛狼奔	shu3 cuan1 lang2 ben1
+鼠疫桿菌	shu3 yi4 gan3 jun4
 鼠疫桿菌	shu3 yi4 gan3 jun1
+鼠疫菌苗	shu3 yi4 jun4 miao2
 鼠疫菌苗	shu3 yi4 jun1 miao2
 鼠竄狼奔	shu3 cuan4 lang2 ben1
 鼠肚雞腸	shu3 du4 ji1 chang2
@@ -115071,4 +115299,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 115074 #####
+##### @結束 END - 115302 #####
