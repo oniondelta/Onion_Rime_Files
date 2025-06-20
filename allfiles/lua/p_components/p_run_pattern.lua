@@ -79,9 +79,10 @@ local run_pattern = {
 -- 測試用：
 --------------------------------------------------------------------------
   -- ["na"] = "https://github.com/rime",
-  -- ["nso"] = { name = "缺省測試" },
-  -- ["ns"] = { name = "油管", open = "https://www.youtube.com/" },
+  -- ["nso"] = { name = "缺漏測試：沒﹛s﹦﹜﹛open﹦﹜" },
+  -- ["ns"] = { name = "缺漏測試：沒﹛s﹦﹜", open = "https://www.youtube.com/" },
   -- ["nsn"] = { open = "https://www.youtube.com/" },
+  -- ["nn"] = { s = 100, open = "https://www.youtube.com/" },
 --------------------------------------------------------------------------
  }
 
