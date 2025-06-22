@@ -7,7 +7,7 @@ local function get_os_name()
     -- Windows
     local env_OS = os.getenv('OS')
     if env_OS then
-        raw_os_name = env_OS
+      raw_os_name = env_OS
     end
   else
     -- other platform, assume uname support and popen support
@@ -31,8 +31,8 @@ local function get_os_name()
   local os_name = 'unknown'
   for pattern, name in pairs(os_patterns) do
     if raw_os_name:match(pattern) then
-        os_name = name
-        break
+      os_name = name
+      break
     end
   end
 
