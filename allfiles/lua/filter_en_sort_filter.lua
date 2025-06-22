@@ -10,7 +10,8 @@
 
 -- local change_comment = require("filter_cand/change_comment")
 
-local get_os_name = require("f_components/f_get_os_name")
+-- local get_os_name = require("f_components/f_get_os_name")
+local get_os_name = require("f_components/f_get_os_name_simple")  -- 判斷 os 簡化版
 
 local revise_comment_by_os = require("filter_cand/revise_comment_by_os")
 
