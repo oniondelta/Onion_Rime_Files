@@ -1,19 +1,17 @@
 --- 獲得 os 系統名稱（簡化版）
---[[
-（用 os.getenv('OS') 和 uname 判斷 os）
-（用當前用戶的家目錄路徑判斷 os）
---]]
 
 
 local function get_os_name_simple()
-
+--------------------------------------------------------
+-- 用 os.getenv('OS') 和 uname 判斷 os 系統名稱
 --------------------------------------------------------
 
   -- local raw_os_name = ""
   -- if os.getenv("USERPROFILE") then
   --   -- Windows
-  --   if os.getenv('OS') then
-  --     raw_os_name = os.getenv('OS') or ""
+  --   local env_OS = os.getenv('OS')
+  --   if env_OS then
+  --     raw_os_name = env_OS
   --   end
   -- else
   --   -- other platform, assume uname support and popen support
@@ -45,6 +43,7 @@ local function get_os_name_simple()
   -- end
 
 --------------------------------------------------------
+-- 用當前用戶的家目錄路徑判斷 os 系統名稱
 --------------------------------------------------------
   local os_name = os.getenv("USERPROFILE") and "Windows" or
                   os.getenv("HOME") and os.getenv("HOME"):sub(1,7) == "/Users/" and "Mac" or
