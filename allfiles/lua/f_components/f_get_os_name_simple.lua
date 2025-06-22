@@ -67,7 +67,7 @@ local function get_os_name_simple()
 --------------------------------------------------------
 --------------------------------------------------------
 
-  return os_name -- or "unknown"
+  return os_name
 end
 
 

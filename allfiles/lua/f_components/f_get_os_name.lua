@@ -36,7 +36,7 @@ local function get_os_name()
     end
   end
 
-  return os_name or '' -- os_name
+  return os_name
 end
 
 -- print(get_os_name())
