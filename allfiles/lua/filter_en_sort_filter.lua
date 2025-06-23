@@ -32,10 +32,15 @@ local revise_comment_by_os = require("filter_cand/revise_comment_by_os")
 local function init(env)
 -- function M.init(env)
   local os_name = get_os_name() or ""
-  env.os_name = os_name == "Mac" and 1
-             or os_name == "Windows" and 2
-             or os_name == "Linux" and 3
-             or 4
+  env.os_name = os_name == "Mac" and 1 or
+                os_name == "Windows" and 2 or
+                os_name == "Linux" and 3 or
+                4
+  if env.os_name == 2 then
+    local d_ver = rime_api.get_distribution_version() or "unknown"
+    local d_ver = d_ver:gsub("%.", "")
+    env.os_name = d_ver ~= "unknown" and tonumber(d_ver) >= 170 and 170 or 2
+  end
 end
 
 
