@@ -1,4 +1,4 @@
---- 過長 comment 換行
+--- comment 含有分號「;」且過長轉換為多行（換行）
 
 ----------------------------------------------------------------------------------------
 -- local utf8_sub = require("f_components/f_utf8_sub")
@@ -11,16 +11,18 @@ local function split_semicolon(text, length)
     local front_part = b and text:sub(1, b) or ""
     local back_part = b and text:sub(b+1, -1) or ""
     -- n = a and b-a or 0
-    -- if n > length then
-    if utf8.len(front_part) > length then
+    n = b and utf8.len(front_part:sub(a+1, b)) or 0  --utf8.len(front_part:sub(a+1, -1))
+    if n == 0 then
+      break
+    elseif n > length then
       text = front_part:gsub(";$", "@\n") .. back_part
     else
       text = front_part:gsub(";$", "@") .. back_part
     end
-    if i > 9 then  -- 防無限迴圈崩潰！
+    i = i + 1
+    if i > 7 then  -- 防無限迴圈崩潰！（可處理 x+1 次分號）
       break
     end
-    i = i + 1
   end
   -- local text = i ~= 0 and text:gsub("@",";") or text -- .. "TEST@@"  -- 測試用。
 
@@ -29,10 +31,10 @@ end
 
 
 local function linebreak_comment(comment)
-  local MAX_LENGTH = 60 --50
-  local MAX_SEMICOLON_LENGTH = 20  --18
+  local MAX_LENGTH = 50  -- 多少個 comment 總字數（含：Unicode字、字母、空格）始執行「;」分段。
+  local MAX_SEMICOLON_LENGTH = 10  -- 每行「\n」到「;」間多少個字（含：Unicode字、字母、空格）始執行「;」分段。
 ----------------------------------------------------------------
-  -- -- 原 comment 為「\n」，測試不需根據 os 轉換「\n」和「\r」？
+  -- -- 引入原 comment 為「\n」，測試不需根據 os 轉換「\n」和「\r」？
   -- local gsub_fmt = package.config:sub(1,1) == "/" and "\n" or "\r"
   -- local gsub_fmt = os_name == 2 and "\n" or
   --                  os_name == 170 and "\n" or
