@@ -178,8 +178,8 @@ local function processor(key, env)
         generic_open(env.run_pattern)
         context:clear()
         return 1
-      elseif run_in ~= nil and context:get_selected_candidate() ~= nil then  -- 後面判斷防未知觸發。
-      -- elseif run_in ~= nil and g_c_t == "" then  -- 後面判斷防未知觸發。如果「run_pattern」條目缺「name」，「g_c_t」會是「preedit」，不為""。
+      -- elseif run_in ~= nil and context:get_selected_candidate() ~= nil then  -- 後面判斷防未知觸發。
+      elseif run_in ~= nil and g_c_t == "" then  -- 後面判斷防未知觸發。如果「run_pattern」條目缺「name」，「g_c_t」會是「preedit」，不為""。
         -- engine:commit_text(run_in)  -- 測試用
         -- engine:commit_text( generic_open(run_in.open) )  -- 測試用
         if run_in.open then
