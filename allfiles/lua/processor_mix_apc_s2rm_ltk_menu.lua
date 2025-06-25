@@ -195,9 +195,11 @@ local function processor(key, env)
         generic_open(env.run_pattern)
         context:clear()
         return 1
-      elseif run_in ~= nil and run_in.name and selected_candidate_index ~= 4 then
+      elseif run_in ~= nil and selected_candidate_index ~= 4 then
         -- engine:commit_text(run_in)  -- 測試用
-        generic_open(run_in.open)  -- 要確定 run_in 不為 nil，才能加.open
+        if run_in.name then  -- 要確定 run_in 不為 nil，才能加.name
+          generic_open(run_in.open)  -- 要確定 run_in 不為 nil，才能加.open
+        end
         context:clear()
         return 1
       elseif env.textdict == "" then
