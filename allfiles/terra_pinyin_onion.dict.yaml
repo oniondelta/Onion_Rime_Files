@@ -153,6 +153,10 @@
 #    詞句中，「肘」臺灣標準為「zhou3」，日常發音常會誤發為「zhou2」，故皆補齊「zhou3」「zhou2」，後者詞頻設為80%。。
 #    詞句中，「擁」皆補齊「yong3」「yong1」。
 #    詞句中，「熟」皆補齊「shou2」「shu2」。
+#    詞句中，「暫」皆補齊「zhan4」「zan4」。
+#    詞句中，「婭」皆補齊「ya4」「ya3」。
+#    詞句中，「妮」臺灣標準為「ni2」，大陸標準為「ni1」，只保留「ni2」發音。
+#    詞句中，「期」臺灣標準為「qi2」，又音為「qi1」，為「qi1」的詞句易有其他相同發音的詞句，斟酌後只標註「qi2」。
 #    詞句中，「處理」補齊「chu3 li3」和「chu4 li3」。
 #    詞句中，「姑娘」補齊「gu1 niang2」和「gu1 niang5」，後者詞頻設為80%。
 #    詞句中，「拓撲」臺灣字典發音為「tuo4 pu1」，日常發音常會誤發為「tuo4 bu3」和「tuo4 pu3」，故皆補齊「tuo4 pu1」「tuo4 bu3」「tuo4 pu3」，最後者「tuo4 pu3」詞頻設為80%。
@@ -57720,6 +57724,8 @@ min_phrase_weight: 100
 亞歐大陸腹地	ya4 ou1 da4 lu4 fu4 di4
 亞歷山大‧杜布切克	ya3 li4 shan1 da4 eng5 du4 bu4 qie1 ke4
 亞歷山大‧杜布切克	ya4 li4 shan1 da4 eng5 du4 bu4 qie1 ke4
+亞歷山大‧杜布切克	ya3 li4 shan1 da4 eng5 du4 bu4 qie4 ke4
+亞歷山大‧杜布切克	ya4 li4 shan1 da4 eng5 du4 bu4 qie4 ke4
 亞洲太平洋地區	ya3 zhou1 tai4 ping2 yang2 di4 qu1
 亞洲太平洋地區	ya4 zhou1 tai4 ping2 yang2 di4 qu1
 亞洲與太平洋	ya3 zhou1 yu3 tai4 ping2 yang2
@@ -61014,6 +61020,7 @@ min_phrase_weight: 100
 公羊傳	gong1 yang2 zhuan4
 公眾傳播	gong1 zhong4 chuan2 bo4
 公眾參與	gong1 zhong4 can1 yu4
+公眾參與	gong1 zhong4 can1 yu3
 公許碼頭	gong1 xu3 ma3 tou5
 公許碼頭	gong1 xu3 ma3 tou2
 公諸同好	gong1 zhu1 tong2 hao4
@@ -63489,6 +63496,7 @@ min_phrase_weight: 100
 包待制	bao1 dai4 zhi4
 包扎	bao1 zha1
 包括內置配重	bao1 kuo4 nei4 zhi4 pei4 zhong4
+包括內置配重	bao1 gua1 nei4 zhi4 pei4 zhong4
 包晶反應	bao1 jing1 fan3 ying4
 包析反應	bao1 xi1 fan3 ying4
 包柔氏螺旋體	bao1 rou2 shi4 luo2 xuan2 ti3
@@ -65794,6 +65802,7 @@ min_phrase_weight: 100
 咆哮山莊	pao2 xiao1 shan1 zhuang1
 咋呼	ze2 hu1
 咋呼	zha1 hu1
+咋呼	za3 hu1
 咋唶	zha4 jie4
 咋舌	ze2 she2
 咋舌	zha4 she2
@@ -68388,6 +68397,7 @@ min_phrase_weight: 100
 埂子	geng3 zi5
 埃佛勒斯峰	ai1 fo2 le4 si1 feng1
 埃克托‧柏遼茲	ai1 ke4 tuo1 eng5 bo2 liao2 zi1
+埃克托‧柏遼茲	ai1 ke4 tuo1 eng5 bo2 liao2 ci2
 埃及阿拉伯共和國	ai1 ji2 a1 la1 bo2 gong4 he2 guo2
 埃塞俄比亞	ai1 sai4 e2 bi3 ya3
 埃塞俄比亞	ai1 sai4 e2 bi3 ya4
@@ -70643,8 +70653,7 @@ min_phrase_weight: 100
 妥洽	tuo3 xia2
 妥當	tuo3 dang4
 妥當人	tuo3 dang4 ren2
-妮可‧基德曼	ni1 ke3 eng5 ji1 de2 man4
-妮子	ni1 zi5
+妮可‧基德曼	ni2 ke3 eng5 ji1 de2 man4
 妮子	ni2 zi5
 妯娌	zhou2 li3
 妹夫	mei4 fu1
@@ -70872,6 +70881,7 @@ min_phrase_weight: 100
 婦道人家	fu4 dao4 ren2 jia1
 婦道家	fu4 dao4 jia1
 婭嬛	ya4 huan2
+婭嬛	ya3 huan2
 婼羌	ruo4 qiang1
 媒人	mei2 ren2
 媒人口	mei2 ren2 kou3
@@ -72662,6 +72672,7 @@ min_phrase_weight: 100
 尜尜	ga2 ga2
 尤侗	you2 tong2
 尤利婭‧季莫申科	you2 li4 ya4 eng5 ji4 mo4 shen1 ke1
+尤利婭‧季莫申科	you2 li4 ya3 eng5 ji4 mo4 shen1 ke1
 尤卡坦	you2 ka3 tan3
 尤卡坦半島	you2 ka3 tan3 ban4 dao3
 尤為	you2 wei2
@@ -73505,10 +73516,10 @@ min_phrase_weight: 100
 布累爾	bu4 lei2 er3
 布署	bu4 shu4
 布署	bu4 shu3
-布萊特妮‧墨菲	bu4 lai2 te4 ni1 eng5 mo4 fei1
+布萊特妮‧墨菲	bu4 lai2 te4 ni2 eng5 mo4 fei1
 布萊雅特蒙古	bu4 lai2 ya3 te4 meng2 gu3
 布萊雅特蒙古	bu4 lai2 ya3 te4 meng3 gu3
-布蘭妮‧斯皮爾斯	bu4 lan2 ni1 eng5 si1 pi2 er3 si1
+布蘭妮‧斯皮爾斯	bu4 lan2 ni2 eng5 si1 pi2 er3 si1
 布衣卿相	bu4 yi1 qing1 xiang4
 布袋和尚	bu4 dai4 he2 shang4
 布褐	bu4 he2
@@ -84823,7 +84834,6 @@ min_phrase_weight: 100
 楊四將軍	yang2 si4 jiang1 jun1
 楊家將	yang2 jia1 jiang4
 楊振寧	yang2 zhen4 ning2
-楊采妮	yang2 cai3 ni1
 楊采妮	yang2 cai3 ni2
 楊氏係數	yang2 shi4 xi4 shu4
 楊泗將軍	yang2 si4 jiang1 jun1
@@ -90083,6 +90093,7 @@ min_phrase_weight: 100
 熱比亞‧卡德爾	re4 bi3 ya3 eng5 ka3 de2 er3
 熱比亞‧卡德爾	re4 bi3 ya4 eng5 ka3 de2 er3
 熱比婭‧卡德爾	re4 bi3 ya4 eng5 ka3 de2 er3
+熱比婭‧卡德爾	re4 bi3 ya3 eng5 ka3 de2 er3
 熱淚盈眶	re4 lei4 ying2 kuang1
 熱淚盈眶	re4 lei4 ying2 kuang4
 熱爪哇	re4 zhao3 wa1
@@ -92688,7 +92699,9 @@ min_phrase_weight: 100
 白鼻子	bai2 bi2 zi3
 白𣎴	bai2 dun3
 百不咋	bai3 bu4 za3
-百不咋	bai3 bu2 zha4
+百不咋	bai3 bu4 ze2
+百不咋	bai3 bu2 za5	80%
+百不咋	bai3 bu4 za5	80%
 百不當一	bai3 bu4 dang1 yi1
 百不雜	bai3 bu4 za2
 百世不磨	bai3 shi4 bu4 mo2
@@ -95607,6 +95620,7 @@ min_phrase_weight: 100
 空竹	kong1 zhu2
 空等	kong1 deng3
 空缺	kong4 que1
+空缺	kong1 que1
 空置	kong1 zhi4
 空群	kong1 qun2
 空翻多	kong1 fan1 duo1
@@ -98701,8 +98715,8 @@ min_phrase_weight: 100
 耶穌會士	ye1 su1 hui4 shi4
 耶穌降臨節	ye1 su1 jiang4 lin2 jie2
 耶耶	ye2 ye2
-耶萊娜‧揚科維奇	ye2 lai2 nuo2 eng5 yang2 ke1 wei2 qi2
 耶萊娜‧揚科維奇	ye2 lai2 na4 eng5 yang2 ke1 wei2 qi2
+耶萊娜‧揚科維奇	ye1 lai2 na4 eng5 yang2 ke1 wei2 qi2
 耶西	ye1 xi1
 耶誕卡	ye1 dan4 ka3
 耶誕夜	ye1 dan4 ye4
@@ -99202,7 +99216,7 @@ min_phrase_weight: 100
 胡混	hu2 hun4
 胡混	hu2 hun3
 胡混	hu2 hun2
-胡燕妮	hu2 yan1 ni1
+胡燕妮	hu2 yan1 ni2
 胡為	hu2 wei2
 胡琴	hu2 qin2
 胡琴兒	hu2 qin2 er5	80%
@@ -105480,6 +105494,7 @@ min_phrase_weight: 100
 貝卡谷地	bei4 ka3 gu3 di4
 貝娜齊爾‧布托	bei4 na4 qi2 er3 eng5 bu4 tuo1
 貝婭特麗克絲	bei4 ya4 te4 li2 ke4 si1
+貝婭特麗克絲	bei4 ya3 te4 li2 ke4 si1
 貝子	bei4 zi3
 貝子	bei4 zi5
 貝寧	bei4 ning2
@@ -108146,7 +108161,7 @@ min_phrase_weight: 100
 達喀爾	da2 ke4 er3
 達姆達姆彈	da2 mu3 da2 mu3 dan4
 達子	da2 zi5
-達科塔‧芬妮	da2 ke1 ta3 eng5 fen1 ni1
+達科塔‧芬妮	da2 ke1 ta3 eng5 fen1 ni2
 達累斯薩拉姆	da2 lei4 si1 sa4 la1 mu3
 達荷美	da2 he2 mei3
 達識	da2 shi4
@@ -115310,4 +115325,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 115313 #####
+##### @結束 END - 115328 #####
