@@ -3,9 +3,11 @@
 （bo_mixin 1、2、4；bopomo_onionplus）
 合併 ascii_punct_change、s2r_most、lua_tran_kp，增進效能。
 新增快捷鍵開啟檔案/程式/網站
+（選單選擇就直開，搭配「p_run_menu_s.lua」施行，尚有問題，實驗性質！）
 --]]
 
 ----------------------------------------------------------------------------------------
+local run_open = require("p_components/p_run_open")
 local generic_open = require("p_components/p_generic_open")
 local run_pattern = require("p_components/p_run_pattern")
 -- local op_pattern = require("p_components/p_op_pattern")
@@ -193,7 +195,7 @@ local function processor(key, env)
         generic_open(env.run_pattern)
         context:clear()
         return 1
-      elseif run_in ~= nil and selected_candidate_index ~= 4 then
+      elseif run_in ~= nil and run_in.name and selected_candidate_index ~= 4 then
         -- engine:commit_text(run_in)  -- 測試用
         generic_open(run_in.open)  -- 要確定 run_in 不為 nil，才能加.open
         context:clear()
@@ -210,40 +212,7 @@ local function processor(key, env)
         return 1
       end
     elseif seg:has_tag("mf_translator") and op_code_check then  -- 開頭
-      local run_in = run_pattern[ op_code ] -- 此處不能「.open」，如 op_code 不符合會報錯！
-      if not op_code then
-        return 1
-      elseif #c_input ~= caret_pos then
-        -- context:clear()
-        return 1
-      -- elseif #c_input == caret_pos then
-      elseif op_code == "t" then
-        -- engine:commit_text( "TEST！！！" )  -- 測試用
-        generic_open(env.run_pattern)
-        context:clear()
-        return 1
-      -- elseif run_in ~= nil and context:get_selected_candidate() ~= nil then  -- 後面判斷防未知觸發。
-      elseif run_in ~= nil and g_c_t == "" then  -- 後面判斷防未知觸發。如果「run_pattern」條目缺「name」，「g_c_t」會是「preedit」，不為""。
-        -- engine:commit_text(run_in)  -- 測試用
-        -- engine:commit_text( generic_open(run_in.open) )  -- 測試用
-        if run_in.open then
-          generic_open(run_in.open)  -- 要確定 run_in 不為 nil，才能加.open
-        -- else
-        --   engine:commit_text("沒﹛open﹦﹜⚠️")  -- 測試用
-        end
-        context:clear()
-        return 1
-      elseif env.textdict == "" then
-        return 2
-      elseif op_code == "c" then
-        generic_open(env.custom_phrase)
-        context:clear()
-        return 1
-      else  -- 沒有該碼，空白鍵清空
-        -- context:confirm_current_selection()
-        context:clear()
-        return 1
-      end
+      return run_open(context, c_input, caret_pos, op_code, env.run_pattern, env.textdict, env.custom_phrase)
 
     elseif seg:has_tag("paging") and #c_input == caret_pos then  -- 加限定防止游標移中時，不能翻頁選字。
       return 2

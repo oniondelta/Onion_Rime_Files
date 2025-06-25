@@ -66,7 +66,9 @@ local function run_menu(pattern)
     local n_all = 22  -- 總條目數
     for k, v in ipairs(insert_table) do
       if k > n_empty then
-        local comment = "  ~" .. v[1] .. "  〔 " .. v[2] .. " 〕"
+        local comment = v[1]== "t" and "  ~" .. v[1] .. "  〔 撞碼預設：編輯 快捷開啟 table ⚠️ 〕" or
+                        v[1]== "c" and "  ~" .. v[1] .. "  〔 撞碼預設：編輯 custom 短語 ⚠️ 〕" or
+                                       "  ~" .. v[1] .. "  〔 " .. v[2] .. " 〕"
         table.insert(keys_table, {comment, n_all-1})
        -- keys_table[n_all] = {comment, n_all-1}
         n_all=n_all+1

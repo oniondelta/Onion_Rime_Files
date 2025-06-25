@@ -583,7 +583,11 @@ local function translate(input, seg, env)
   elseif op_check and seg.start == 0 then
     local run_in = run_pattern[ op_check ]
     if run_in ~= nil then
-      yield_c( "", "〘 " .. run_in.name .. " 〙", env.prefix .. "j " .. string.upper(op_check) .. "\t 【快捷開啟】")  -- or〔錯誤〕
+      if run_in.name ~= nil then
+        yield_c( "", "〘 " .. run_in.name .. " 〙", env.prefix .. "j " .. string.upper(op_check) .. "\t 【快捷開啟】")  -- or〔錯誤〕
+      else
+        yield_c( "", "〔 NONAME：無法開啟 🛑 〕", env.prefix .. "j " .. string.upper(op_check) .. "\t 【快捷開啟】")  -- or〔錯誤〕
+      end
       return
     elseif run_in == nil then
       yield_c( "", "〔無〕", env.prefix .. "j " .. string.upper(op_check) .. "\t 【快捷開啟】")  -- 〔無此開啟碼〕or〔錯誤〕
