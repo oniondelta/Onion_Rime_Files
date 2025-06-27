@@ -24,9 +24,9 @@ local function split_semicolon(text, length)
       break
     end
   end
-  -- local text = i ~= 0 and text:gsub("@",";") or text -- .. "TEST@@"  -- 測試用。
+  -- local text = i ~= 0 and text:gsub("@", ";") or text -- .. "TEST@@"  -- 測試用。
 
-  return i == 0 and text or text:gsub("@",";")
+  return i == 0 and text or text:gsub("@", ";")
 end
 
 

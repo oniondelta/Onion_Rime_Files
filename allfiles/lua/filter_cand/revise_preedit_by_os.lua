@@ -9,7 +9,7 @@ local change_preedit = require("filter_cand/change_preedit")
 
 ----------------------------------------------------------------------------------------
 
-local function revise_preedit_by_os(os_name, model, cand, preedit)
+local function to_revise_preedit_by_os(os_name, model, cand, preedit)
 
   --- 使用 init(env) 可定住參數，不用一直跑，故遮屏。
   -- local os_name = get_os_name() or ""
@@ -59,7 +59,7 @@ end
 
 local function output(os_name, g_op, tran)
   for cand in tran:iter() do
-    local cand = revise_preedit_by_os(os_name, g_op, cand, cand.preedit)
+    local cand = to_revise_preedit_by_os(os_name, g_op, cand, cand.preedit)
     yield(cand)
   end
 end
