@@ -38,7 +38,7 @@ local function init(env)
                 4
   if env.os_name == 2 then
     local d_ver = rime_api.get_distribution_version() or "unknown"
-    local d_ver = d_ver:gsub("%.", "")
+    local d_ver = string.gsub(d_ver, "%.", "")
     env.os_name = d_ver ~= "unknown" and tonumber(d_ver) >= 170 and 170 or 2
   end
 end
