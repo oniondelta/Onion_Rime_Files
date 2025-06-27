@@ -43,7 +43,7 @@ local function linebreak_comment(comment)
 ----------------------------------------------------------------
   -- if #comment > MAX_LENGTH then
   if utf8.len(comment) > MAX_LENGTH then
-    -- comment = string.gsub(comment, ";", ";" .. "\n" )  -- 碰到「;」就直接換行。
+    -- comment = string.gsub(comment, ";", ";\n" )  -- 碰到「;」就直接換行。
     comment = split_semicolon(comment, MAX_SEMICOLON_LENGTH)
   end
   return comment
