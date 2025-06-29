@@ -11,6 +11,10 @@
 
 - 掛接方案：拉丁字母（含音標）、希臘字母、西里爾（俄）字母、全形數字字母、Easy 英文（英漢字典）、日文（含漢字）、兩個韓文（HNC和形碼，含單音和漢字）、 注音文、Emoji 顏文字符號系列集等。
 
+- 雖為電腦之方案，Rime 注音輸入邏輯不同一般電腦注音（如：微軟新注音），較接近手機注音！
+
+- 承上，Rime 架構下，怎麼設定皆無法如同一般電腦注音（如：微軟新注音），不要想一模一樣複刻！
+
 - 為易更新，不用同一檔案更新數次，allfiles 裡文件不以方案區分。
 
 - 提供 sort_rime_file.py，把所需 Rime 文件放到各個方案資料夾。
@@ -36,7 +40,7 @@
   > ~/Library/Rime  ( Mac OS 鼠鬚管 )
   > ~/.config/ibus/rime  ( Linux 中州韻 )
   > ~/.config/fcitx/rime  ( Linux )
-  > ~/.local/share/fcitx5/rime ( Linux )
+  > ~/.local/share/fcitx5/rime  ( Linux )
   > ```
 
 - Linux、Win、Mac 皆需注意核心 librime 版本問題：
