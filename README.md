@@ -19,15 +19,19 @@
 
 - 承上，提供 sort_rime_file.py，把所需 Rime 文件放到各個方案資料夾。
 
-## 下載方案（三擇一即可）
+## 下載方案（三擇一）
 
 - Download ZIP，使用 sort_rime_file.py 分類各方案。
 
   > 本倉庫 Onion_Rime_Files 按右上綠色 〔↓Code〕 ⇨ Download ZIP ⇨ 解壓縮 ZIP 進入資料夾 ⇨ Python 執行 sort_rime_file.py ⇨ 產生『電腦RIME方案_{當天日期}』資料夾
 
-- 本倉庫 Releases 中，有分好方案之 ZIP 檔。（不一定更到最新）
+- 本倉庫 Releases 中，有分好方案之 ZIP 檔。
 
-- 本倉庫 Actions 中，其 sort_rime_output 裡 artifact 有已跑 sort_rime_file.py 分好方案之 ZIP 檔。（不一定更到最新，需登錄 GitHub 帳號）
+  > 不一定更到最新。
+
+- 本倉庫 Actions 中，其 sort_rime_output 裡 artifact 有已跑 sort_rime_file.py 分好方案之 ZIP 檔。
+
+  > 不一定更到最新，需登錄 GitHub 帳號。
 
 ## 安裝方案
 
