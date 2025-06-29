@@ -17,17 +17,21 @@
 
 - 為易更新，不用同一檔案更新數次，allfiles 裡文件不以方案區分。
 
-- 提供 sort_rime_file.py，把所需 Rime 文件放到各個方案資料夾。
+- 承上，提供 sort_rime_file.py，把所需 Rime 文件放到各個方案資料夾。
 
-- 本倉庫 Releases 中，有分類好之檔案。（不一定更到最新）
+## 下載（擇一即可）
 
-- 本倉庫 Actions 中，其 sort_rime_output 裡 artifact 有已跑好 sort_rime_file.py 分類之檔案！（不一定更到最新，需登錄 GitHub 帳號）
+- Download ZIP，使用 sort_rime_file.py 分類各方案。
 
-## sort_rime_file.py 使用方法
+  > 本倉庫 Onion_Rime_Files 按右上綠色 〔↓Code〕 ⇨ Download ZIP ⇨ 解壓縮 ZIP 進入資料夾 ⇨ Python 執行 sort_rime_file.py ⇨ 產生『電腦RIME方案_{當天日期}』資料夾
 
-- 本倉庫 Onion_Rime_Files 按右上綠色 〔↓Code〕 ⇨ Download ZIP ⇨ 解壓縮 ZIP 進入資料夾 ⇨ Python 執行 sort_rime_file.py ⇨ 產生『電腦RIME方案_{當天日期}』資料夾
+- 本倉庫 Releases 中，有分好方案之 ZIP 檔。（不一定更到最新）
 
-- 『電腦RIME方案_{當天日期}』，各個方案所需文件，分別放置於下層『方案名稱』資料夾。
+- 本倉庫 Actions 中，其 sort_rime_output 裡 artifact 有已跑 sort_rime_file.py 分好方案之 ZIP 檔！（不一定更到最新，需登錄 GitHub 帳號）
+
+## 安裝方案
+
+- 『電腦RIME方案_{日期}』，各個方案所需文件，分別放置於下層『方案名稱』資料夾。
 
 - 選取欲使用方案，內含文件通通放入『 Rime 』用戶設定資料夾，如已有 opencc 資料夾，移動 opencc 裡面檔案到 opencc 資料夾內，沒有則整個 opencc 移過去，「重新部署」方可。
 
@@ -42,6 +46,8 @@
   > ~/.config/fcitx/rime  ( Linux )
   > ~/.local/share/fcitx5/rime  ( Linux )
   > ```
+
+## 主程式核心和掛件問題
 
 - Linux、Win、Mac 皆需注意核心 librime 版本問題：
 
