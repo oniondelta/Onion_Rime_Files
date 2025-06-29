@@ -19,7 +19,7 @@
 
 - 承上，提供 sort_rime_file.py，把所需 Rime 文件放到各個方案資料夾。
 
-## 下載（三擇一即可）
+## 下載方案（三擇一即可）
 
 - Download ZIP，使用 sort_rime_file.py 分類各方案。
 
