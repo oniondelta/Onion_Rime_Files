@@ -3,7 +3,7 @@
 ####  ※ 請勿使用於商業營利相關行為
 ####  ※ Commercial use is prohibited
 
-## 內容說明
+## 內容
 
 - allfiles 包含九個主方案和一眾掛接方案。
 
