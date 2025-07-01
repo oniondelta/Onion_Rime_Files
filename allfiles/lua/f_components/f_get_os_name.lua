@@ -3,7 +3,7 @@
 local function get_os_name()
 
   local raw_os_name = ''
-  if package.config:sub(1,1) == '\\' then
+  if string.sub(package.config, 1,1) == '\\' then
     -- Windows
     local env_OS = os.getenv('OS')
     if env_OS then
@@ -14,7 +14,7 @@ local function get_os_name()
     raw_os_name = io.popen('uname -s','r'):read('*l')
   end
 
-  local raw_os_name = (raw_os_name):lower()
+  local raw_os_name = string.lower(raw_os_name)
 
   local os_patterns = {
       ['windows']     = 'Windows',
@@ -30,7 +30,7 @@ local function get_os_name()
 
   local os_name = 'unknown'
   for pattern, name in pairs(os_patterns) do
-    if raw_os_name:match(pattern) then
+    if string.match(raw_os_name, pattern) then
       os_name = name
       break
     end

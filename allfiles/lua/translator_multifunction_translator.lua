@@ -3260,7 +3260,7 @@ local function translate(input, seg, env)
     local s_output = simple_calculator(input_exp)[3]
 
     local preedittext = env.prefix .. " " .. c_preedit .. "\t 【計算機】"
-    if (c_output:sub(1,1)=="E" or c_output:sub(1,1)=="W") then
+    if (string.sub(c_output, 1,1)=="E" or string.sub(c_output, 1,1)=="W") then
       yield_c( "", c_output.."〔結果〕", preedittext)  -- yield(cc_out_error)
       yield_c( s_output, "〔 Waring 結果〕", preedittext)  -- yield(cc_out_shadow)
       yield_c( output_exp .. "=" .. s_output, "〔 Waring 規格化算式〕", preedittext)  -- yield(cc_exp_error)

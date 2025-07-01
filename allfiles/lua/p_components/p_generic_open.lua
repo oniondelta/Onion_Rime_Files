@@ -59,8 +59,8 @@
 -- ---- 新的寫法(「三種 os 跑法」全跑一遍)
 -- local function generic_open(dest)
 --   -- 以下處理「-removeopen 」，為特此標示去移除開頭之「open和start等」，有些指令不能有開頭command！
---   if dest:match("^-removeopen ") then
---     local dest = dest:gsub("^-removeopen ", "")
+--   if string.match(dest, "^-removeopen ") then
+--     local dest = string.gsub(dest, "^-removeopen ", "")
 --     -- local f = io.popen(dest)
 --     -- f = nil
 --     return io.popen(dest) and true or false
@@ -125,38 +125,38 @@ local oscmd = cmd_table[os_name]
 ---------------------------------------------------------------
 -- --- 用 Rime 名稱判斷 os（會有不知名 Rime 輸入法軟體無法辨識的問題）
 -- local d_c_name = rime_api.get_distribution_code_name() or "none"
--- local oscmd = d_c_name:find("Weasel") and 'start "" ' or  -- weasel
---               d_c_name:find("windows") and 'start "" ' or  -- fcitx5-windows
---               d_c_name:find("Squirrel") and 'open ' or  -- squirrel
---               d_c_name:find("macos") and 'open ' or  -- fcitx5-macos
---               d_c_name:find("ibus") and 'xdg-open ' or  -- ibus-rime
+-- local oscmd = string.find(d_c_name, "Weasel") and 'start "" ' or  -- weasel
+--               string.find(d_c_name, "windows") and 'start "" ' or  -- fcitx5-windows
+--               string.find(d_c_name, "Squirrel") and 'open ' or  -- squirrel
+--               string.find(d_c_name, "macos") and 'open ' or  -- fcitx5-macos
+--               string.find(d_c_name, "ibus") and 'xdg-open ' or  -- ibus-rime
 --               -- -- 以下防名稱有疏漏，且避免小狼毫問題當機！於此判定是否為 windows！
---               -- -- os.getenv()可能為 nil，不可直接lower「:lower()」，會報錯！
---               os.getenv('OS') and os.getenv('OS'):lower():match("windows") and 'start "" ' or
---               os.getenv('OS') and os.getenv('OS'):lower():match("^mingw") and 'start "" ' or
---               os.getenv('OS') and os.getenv('OS'):lower():match("^cygwin") and 'start "" ' or
---               -- package.config:sub(1,1) == '\\' and 'start "" ' or  -- 該條目會拖慢呼叫速度！！！
+--               -- -- os.getenv()可能為 nil，不可直接「sub()」或「lower()」，會報錯！
+--               os.getenv('OS') and string.match(string.lower(os.getenv('OS')), "windows") and 'start "" ' or
+--               os.getenv('OS') and string.match(string.lower(os.getenv('OS')), "^mingw") and 'start "" ' or
+--               os.getenv('OS') and string.match(string.lower(os.getenv('OS')), "^cygwin") and 'start "" ' or
+--               -- string.sub(package.config, 1,1) == '\\' and 'start "" ' or  -- 該條目會拖慢呼叫速度！！！
 --               'xdg-open '
 ---------------------------------------------------------------
 -- --- 用 os.getenv 參數判斷 os
 -- local oscmd = os.getenv("USERPROFILE") and 'start "" ' or  -- Windows
---               os.getenv("HOME") and os.getenv("HOME"):sub(1,7) == '/Users/' and 'open ' or  -- Mac
---               os.getenv("HOME") and os.getenv("HOME"):sub(1,6) == '/home/' and 'xdg-open ' or  -- Linux
+--               os.getenv("HOME") and string.sub(os.getenv("HOME"), 1,7) == '/Users/' and 'open ' or  -- Mac
+--               os.getenv("HOME") and string.sub(os.getenv("HOME"), 1,6) == '/home/' and 'xdg-open ' or  -- Linux
 --               'xdg-open '
 --               -- nil  -- 設 nil 可使無法判斷之 os 不亂跑無效執行！
 -- -- 測試 Windows 之 os.getenv("HOME") 為 nil，但網路資訊說明某些 Win 版本不為 nil？
 -- -- os.getenv("USERPROFILE")只在 Win 不為 nil。
--- -- os.getenv()可能為 nil，不可直接「:sub()」或「lower()」，會報錯！
+-- -- os.getenv()可能為 nil，不可直接「sub()」或「lower()」，會報錯！
 ---------------------------------------------------------------
 local function generic_open(dest)
-  if oscmd ~= nil and not dest:match("^-removeopen ") then
-    -- local f = io.popen( oscmd .. dest)
+  if oscmd ~= nil and not string.match(dest, "^-removeopen ") then
+    -- local f = io.popen( oscmd .. dest )
     -- f:close()  -- 不能使用，於 0.17.0 以上之小狼毫會當機崩潰
     -- f = nil
-    return io.popen( oscmd .. dest) and true or false
+    return io.popen( oscmd .. dest ) and true or false
   -- 以下處理「-removeopen 」，為特此標示去移除開頭之「open和start等」，有些指令不能有開頭command！
   elseif oscmd ~= nil then
-    local dest = dest:gsub("^-removeopen ", "")
+    local dest = string.gsub(dest, "^-removeopen ", "")
     -- local f = io.popen(dest)
     -- f:close()  -- 不能使用，於 0.17.0 以上之小狼毫會當機崩潰
     -- f = nil
