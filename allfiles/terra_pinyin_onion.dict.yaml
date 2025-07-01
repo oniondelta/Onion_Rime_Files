@@ -188,7 +188,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "202506"
+version: "202507"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -75821,6 +75821,7 @@ min_phrase_weight: 100
 性傳播	xing4 chuan2 bo1
 性分	xing4 fen4
 性別角色	xing4 bie2 jue2 se4
+性別角色	xing4 bie2 jiao3 se4
 性地	xing4 di4
 性子	xing4 zi5
 性情	xing4 qing2
@@ -94776,6 +94777,7 @@ min_phrase_weight: 100
 社會行動	she4 hui4 xing2 dong4
 社會行為	she4 hui4 xing2 wei2
 社會角色	she4 hui4 jue2 se4
+社會角色	she4 hui4 jiao3 se4
 社會調查	she4 hui4 diao4 cha2
 社會調適	she4 hui4 tiao2 shi4
 社稷為墟	she4 ji4 wei2 xu1
@@ -104194,6 +104196,7 @@ min_phrase_weight: 100
 角色	jiao3 se4
 角色	jue2 se4
 角色扮演遊戲	jue2 se4 ban4 yan3 you2 xi4
+角色扮演遊戲	jiao3 se4 ban4 yan3 you2 xi4
 角色衝突	jiao3 se4 chong1 tu2
 角色衝突	jue2 se4 chong1 tu2
 角落	jiao3 luo4
@@ -115338,4 +115341,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 115341 #####
+##### @結束 END - 115344 #####
