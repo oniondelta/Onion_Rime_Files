@@ -113,6 +113,7 @@
 #    詞句中，「傾」臺灣字典發音為「qing1」但日常生活發音太常使用「qing3」，故全都補齊「qing1」「qing3」。
 #    詞句中，「危」臺灣字典發音和習慣發音為「wei2」，大陸發音為「wei1」，斟酌後全改成臺灣發音「wei2」。
 #    詞句中，「夕」臺灣字典發音和習慣發音為「xi4」，大陸發音為「xi1」，斟酌後全改成臺灣發音「xi4」。
+#    詞句中，「息」臺灣字典發音和習慣發音為「xi2」，大陸發音為「xi1」，斟酌後全改成臺灣發音「xi2」。
 #    詞句中，「關係」其「係」臺灣字典發音為「xi4」，但日常常發「xi1」，故「關係」其「係」都補上「xi1」該發音。
 #    詞句中，「地」於句尾當結構助詞時，意思同「的」時，不標註「di4」，標註「de5」「di5」。
 #    詞句中，「嚓」臺灣字典只有發音「ca1」，不標為「cha1」，因為為形聲，故另標「ca5」，故全都補齊「ca1」「ca5」。
@@ -151,12 +152,16 @@
 #    詞句中，「菌」臺灣標準為「jun4」，大陸標準為「jun1」，日常易混，故皆補齊「jun4」「jun1」。
 #    詞句中，「拎」臺灣標準為「ling1」，大陸標準為「lin1」，日常易混，故皆補齊「ling1」「lin1」。
 #    詞句中，「肘」臺灣標準為「zhou3」，日常發音常會誤發為「zhou2」，故皆補齊「zhou3」「zhou2」，後者詞頻設為80%。。
+#    詞句中，「播」臺灣標準為「bo4」，日常發音常會發「bo1」，故皆補齊「bo4」「bo1」。
+#    詞句中，「綜」臺灣標準為「zong4」，日常發音常會發「zong1」，故皆補齊「zong4」「zong1」。
 #    詞句中，「究」臺灣標準為「jiu4」，又音為「jiu1」，日常易混，故皆補齊「jiu4」「jiu1」。
 #    詞句中，「肯」臺灣標準為「ken3」，又音為「keng3」，日常易混，故皆補齊「ken3」「keng3」。
 #    詞句中，「擁」皆補齊「yong3」「yong1」。
 #    詞句中，「熟」皆補齊「shou2」「shu2」。
 #    詞句中，「暫」皆補齊「zhan4」「zan4」。
 #    詞句中，「婭」皆補齊「ya4」「ya3」。
+#    詞句中，「頗」皆補齊「po3」「po1」。
+#    詞句中，「咱」皆補齊「zan2」「za2」。
 #    詞句中，「績」「蹟」「跡」「迹」臺灣標準為「ji1」，大陸標準為「ji4」，只保留「ji1」發音。
 #    詞句中，「寂」臺灣標準為「ji2」，大陸標準為「ji4」，只保留「ji2」發音。
 #    詞句中，「妮」臺灣標準為「ni2」，大陸標準為「ni1」，只保留「ni2」發音。
@@ -164,7 +169,9 @@
 #    詞句中，「模糊」定為「mo2 hu2」。
 #    詞句中，「參與」補齊「can1 yu4」和「can1 yu3」。
 #    詞句中，「處理」補齊「chu3 li3」和「chu4 li3」。
+#    詞句中，「阻塞」補齊「zu3 se4」和「zu3 sai1」。
 #    詞句中，「姑娘」補齊「gu1 niang2」和「gu1 niang5」，後者詞頻設為80%。
+#    詞句中，「親戚」補齊「qin1 qi1」和「qin1 qi4」，後者詞頻設為80%。
 #    詞句中，「拓撲」臺灣字典發音為「tuo4 pu1」，日常發音常會誤發為「tuo4 bu3」和「tuo4 pu3」，故皆補齊「tuo4 pu1」「tuo4 bu3」「tuo4 pu3」，最後者「tuo4 pu3」詞頻設為80%。
 #    預計比對「輕聲和一聲」變音。
 #
@@ -2689,6 +2696,14 @@ min_phrase_weight: 100
 呷	jia3
 磣	ca4	0%
 碜	ca4	0%
+呆	bao3	0%
+播	bo3	0%
+桃	tiao1	0%
+桃	zhao4	0%
+頗	po4	0%
+頗	pi2	0%
+颇	po4	0%
+颇	pi2	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -55213,6 +55228,8 @@ min_phrase_weight: 100
 一紙空文	yi1 zhi3 kong1 wen2
 一級傳播	yi4 ji2 chuan2 bo4
 一級傳播	yi1 ji2 chuan2 bo4
+一級傳播	yi4 ji2 chuan2 bo1
+一級傳播	yi1 ji2 chuan2 bo1
 一索得男	yi1 suo3 de2 nan2
 一索得男	yi4 suo3 de2 nan2
 一網打盡	yi4 wang3 da3 jin4
@@ -57037,8 +57054,8 @@ min_phrase_weight: 100
 串處理	chuan4 chu4 li3
 串行口	chuan4 xing2 kou3
 串行點陣打印機	chuan4 xing2 dian3 zhen4 da3 yin4 ji1
-串親戚	chuan4 qin1 qi4
 串親戚	chuan4 qin1 qi1
+串親戚	chuan4 qin1 qi4	80%
 串親訪友	chuan4 qin1 fang3 you3
 串門兒	chuan4 men2 er5	80%
 串門兒	chuan4 men2 er2
@@ -57149,7 +57166,9 @@ min_phrase_weight: 100
 乘興	cheng2 xing4
 乘興而來	cheng2 xing4 er2 lai2
 乘輿播越	cheng2 yu2 bo4 yue4
+乘輿播越	cheng2 yu2 bo1 yue4
 乘輿播遷	cheng2 yu2 bo4 qian1
+乘輿播遷	cheng2 yu2 bo1 qian1
 乘長風破萬里浪	cheng2 chang2 feng1 po4 wan4 li3 lang4
 乘間	cheng2 jian4
 乘間投隙	cheng2 jian4 tou2 xi4
@@ -57562,6 +57581,7 @@ min_phrase_weight: 100
 二愣	er4 leng4
 二愣子	er4 leng4 zi5
 二手傳播	er4 shou3 chuan2 bo4
+二手傳播	er4 shou3 chuan2 bo1
 二把手車子	er4 ba3 shou3 che1 zi5
 二拉八當	er4 la1 ba1 dang4
 二更	er4 geng1
@@ -58046,6 +58066,7 @@ min_phrase_weight: 100
 人間煙火	ren2 jian1 yan1 huo3
 人間詞話	ren2 jian1 ci2 hua4
 人際傳播	ren2 ji4 chuan2 bo4
+人際傳播	ren2 ji4 chuan2 bo1
 人離家散	ren2 li2 jia1 san4
 人難度	ren2 nan2 du4
 人頭畜鳴	ren2 tou2 chu4 ming2
@@ -58723,6 +58744,7 @@ min_phrase_weight: 100
 你和	ni3 han4
 你和	ni3 he2
 你咱	ni3 zan2
+你咱	ni3 za2
 你長我短	ni3 chang2 wo3 duan3
 佣鈿	yong4 dian4
 佣錢	yong4 qian2
@@ -59242,6 +59264,7 @@ min_phrase_weight: 100
 俵散	biao3 san4
 俸給	feng4 ji3
 俺咱	an3 za2
+俺咱	an3 zan2
 俺每	an3 mei3
 俾乂	bi4 yi4
 俾倪	bi4 ni4
@@ -60091,14 +60114,19 @@ min_phrase_weight: 100
 傳播	chuan2 bo1
 傳播	chuan2 bo4
 傳播功能	chuan2 bo4 gong1 neng2
+傳播功能	chuan2 bo1 gong1 neng2
 傳播四方	chuan2 bo1 si4 fang1
+傳播四方	chuan2 bo4 si4 fang1
 傳播媒體	chuan2 bo4 mei2 ti3
 傳播媒體	chuan2 bo1 mei2 ti3
 傳播學	chuan2 bo4 xue2
 傳播學	chuan2 bo1 xue2
 傳播界	chuan2 bo4 jie4
+傳播界	chuan2 bo1 jie4
 傳播者	chuan2 bo4 zhe3
+傳播者	chuan2 bo1 zhe3
 傳播衛星	chuan2 bo4 wei4 xing1
+傳播衛星	chuan2 bo1 wei4 xing1
 傳教	chuan2 jiao4
 傳教團	chuan2 jiao4 tuan2
 傳教士	chuan2 jiao4 shi4
@@ -61037,6 +61065,7 @@ min_phrase_weight: 100
 公約數	gong1 yue1 shu4
 公羊傳	gong1 yang2 zhuan4
 公眾傳播	gong1 zhong4 chuan2 bo4
+公眾傳播	gong1 zhong4 chuan2 bo1
 公眾參與	gong1 zhong4 can1 yu4
 公眾參與	gong1 zhong4 can1 yu3
 公許碼頭	gong1 xu3 ma3 tou5
@@ -64486,6 +64515,7 @@ min_phrase_weight: 100
 參湯	shen1 tang1
 參看	can1 kan4
 參綜	can1 zong4
+參綜	can1 zong1
 參與	can1 yu4
 參與	can1 yu3
 參與者	can1 yu4 zhe3
@@ -64693,6 +64723,7 @@ min_phrase_weight: 100
 受怕擔憂	shou4 pa4 dan1 you1
 受悶氣	shou4 men4 qi4
 受播者	shou4 bo4 zhe3
+受播者	shou4 bo1 zhe3
 受教	shou4 jiao4
 受災地區	shou4 zai1 di4 qu1
 受用	shou4 yong4
@@ -64768,6 +64799,7 @@ min_phrase_weight: 100
 口誅筆伐	kou3 zhu1 bi3 fa1
 口誅筆伐	kou3 zhu1 bi3 fa2
 口語傳播	kou3 yu3 chuan2 bo4
+口語傳播	kou3 yu3 chuan2 bo1
 口重	kou3 zhong4
 口音	kou3 yin1
 口頭	kou3 tou2
@@ -66187,11 +66219,14 @@ min_phrase_weight: 100
 咯血	luo4 xie3
 咱倆	zan2 lia3
 咱倆	zan2 liang3
+咱倆	za2 lia3
+咱倆	za2 liang3
 咱們	zan2 men5
 咱們	za2 men5
 咱們	zan2 men2
 咱們	za2 men2
 咱每	zan2 mei3
+咱每	za2 mei3
 咳唾	ke2 tuo4
 咳唾成珠	ke2 tuo4 cheng2 zhu1
 咳嗽	ke2 sou4
@@ -67780,6 +67815,7 @@ min_phrase_weight: 100
 圖形加速卡	tu2 xing2 jia1 su4 ka3
 圖形卡	tu2 xing2 ka3
 圖文傳播	tu2 wen2 chuan2 bo4
+圖文傳播	tu2 wen2 chuan2 bo1
 圖書分類	tu2 shu1 fen1 lei4
 圖書分類法	tu2 shu1 fen1 lei4 fa3
 圖為不軌	tu2 wei2 bu4 gui3
@@ -69906,6 +69942,7 @@ min_phrase_weight: 100
 太空	tai4 kong1
 太空人	tai4 kong1 ren2
 太空傳播	tai4 kong1 chuan2 bo4
+太空傳播	tai4 kong1 chuan2 bo1
 太空劇場	tai4 kong1 ju4 chang3
 太空劇場	tai4 kong1 ju4 chang2	3%
 太空城	tai4 kong1 cheng2
@@ -74272,15 +74309,22 @@ min_phrase_weight: 100
 廣播劇	guang3 bo1 ju4
 廣播和未知服務器	guang3 bo1 han4 wei4 zhi1 fu2 wu4 qi4
 廣播和未知服務器	guang3 bo1 he2 wei4 zhi1 fu2 wu4 qi4
+廣播和未知服務器	guang3 bo4 han4 wei4 zhi1 fu2 wu4 qi4
+廣播和未知服務器	guang3 bo4 he2 wei4 zhi1 fu2 wu4 qi4
 廣播地址	guang3 bo1 di4 zhi3
+廣播地址	guang3 bo4 di4 zhi3
 廣播歌仔戲	guang3 bo4 ge1 zi3 xi4
+廣播歌仔戲	guang3 bo1 ge1 zi3 xi4
 廣播段	guang3 bo4 duan4
+廣播段	guang3 bo1 duan4
 廣播界	guang3 bo4 jie4
 廣播界	guang3 bo1 jie4
 廣播節	guang3 bo4 jie2
+廣播節	guang3 bo1 jie2
 廣播節目	guang3 bo4 jie2 mu4
 廣播節目	guang3 bo1 jie2 mu4
 廣播系統	guang3 bo4 xi4 tong3
+廣播系統	guang3 bo1 xi4 tong3
 廣播網	guang3 bo4 wang3
 廣播網	guang3 bo1 wang3
 廣播電台	guang3 bo4 dian4 tai2
@@ -74288,6 +74332,7 @@ min_phrase_weight: 100
 廣播電臺	guang3 bo4 dian4 tai2
 廣播電臺	guang3 bo1 dian4 tai2
 廣播電視事業處	guang3 bo4 dian4 shi4 shi4 ye4 chu4
+廣播電視事業處	guang3 bo1 dian4 shi4 shi4 ye4 chu4
 廣東住血吸蟲	guang3 dong1 zhu4 xie3 xi1 chong2
 廣東住血吸蟲	guang3 dong1 zhu4 xue4 xi1 chong2
 廣盛	guang3 sheng4
@@ -75819,6 +75864,7 @@ min_phrase_weight: 100
 急難	ji2 nan4
 性偏好	xing4 pian1 hao4
 性傳播	xing4 chuan2 bo1
+性傳播	xing4 chuan2 bo4
 性分	xing4 fen4
 性別角色	xing4 bie2 jue2 se4
 性別角色	xing4 bie2 jiao3 se4
@@ -79170,6 +79216,7 @@ min_phrase_weight: 100
 掀天斡地	xian1 tian1 wo4 di4
 掀露	xian1 lu4
 掀風播浪	xian1 feng1 bo4 lang4
+掀風播浪	xian1 feng1 bo1 lang4
 掀騰	xian1 teng2
 掂倈	dian1 lai2
 掂折	dian1 zhe2
@@ -79773,6 +79820,7 @@ min_phrase_weight: 100
 搬弄是非	ban1 nong4 shi4 fei1
 搬挑	ban1 tiao3
 搬斤播兩	ban1 jin1 bo4 liang3
+搬斤播兩	ban1 jin1 bo1 liang3
 搬石頭砸自己的腳	ban1 shi2 tou5 za2 zi4 ji3 de5 jiao3
 搬石頭砸自己的腳	ban1 shi2 tou2 za2 zi4 ji3 de5 jiao3
 搬脣弄舌	ban1 chun2 long4 she2
@@ -80170,6 +80218,8 @@ min_phrase_weight: 100
 撒播	sa1 bo4
 撒播機	sa3 bo4 ji1
 撒播機	sa1 bo4 ji1
+撒播機	sa3 bo1 ji1
+撒播機	sa1 bo1 ji1
 撒放	sa1 fang4
 撒放	sa3 fang4
 撒施	sa3 shi1
@@ -80387,41 +80437,67 @@ min_phrase_weight: 100
 撫綏	fu3 sui2
 撬槓	qiao4 gang4
 播亂	bo4 luan4
+播亂	bo1 luan4
 播出	bo4 chu1
 播出	bo1 chu1
 播出頻道	bo4 chu1 pin2 dao4
+播出頻道	bo1 chu1 pin2 dao4
 播名天下	bo4 ming2 tian1 xia4
+播名天下	bo1 ming2 tian1 xia4
 播土揚塵	bo4 tu3 yang2 chen2
+播土揚塵	bo1 tu3 yang2 chen2
 播報	bo4 bao4
 播報	bo1 bao4
 播報員	bo4 bao4 yuan2
 播報員	bo1 bao4 yuan2
 播州	bo4 zhou1
+播州	bo1 zhou1
 播幅	bo4 fu2
+播幅	bo1 fu2
 播弄	bo1 nong4
 播弄	bo4 nong4
 播惡遺臭	bo4 e4 yi2 chou4
+播惡遺臭	bo1 e4 yi2 chou4
 播揚	bo4 yang2
+播揚	bo1 yang2
 播放	bo4 fang4
 播放	bo1 fang4
 播散	bo4 san4
+播散	bo1 san4
+播散	bo4 san3
+播散	bo1 san3
 播敷	bo4 fu1
+播敷	bo1 fu1
 播映	bo4 ying4
 播映	bo1 ying4
 播棄	bo4 qi4
+播棄	bo1 qi4
 播流	bo4 liu2
+播流	bo1 liu2
 播發	bo4 fa1
+播發	bo1 fa1
 播種	bo1 zhong3
 播種	bo4 zhong3
+播種	bo1 zhong4
+播種	bo4 zhong4
 播種機	bo4 zhong3 ji1
+播種機	bo1 zhong3 ji1
+播種機	bo4 zhong4 ji1
+播種機	bo1 zhong4 ji1
 播糠眯目	bo4 kang1 mi3 mu4
+播糠眯目	bo1 kang1 mi3 mu4
 播蕩	bo4 dang4
+播蕩	bo1 dang4
 播越	bo4 yue4
+播越	bo1 yue4
 播越失據	bo4 yue4 shi1 ju4
+播越失據	bo1 yue4 shi1 ju4
 播送	bo4 song4
 播送	bo1 song4
 播遷	bo4 qian1
+播遷	bo1 qian1
 播郎鼓	bo4 lang2 gu3
+播郎鼓	bo1 lang2 gu3
 播音	bo4 yin1
 播音	bo1 yin1
 播音員	bo4 yin1 yuan2
@@ -81525,6 +81601,7 @@ min_phrase_weight: 100
 整個地球	zheng3 ge5 di4 qiu2
 整倍數	zheng3 bei4 shu4
 整合行銷傳播	zheng3 he2 xing2 xiao1 chuan2 bo4
+整合行銷傳播	zheng3 he2 xing2 xiao1 chuan2 bo1
 整地	zheng3 di4
 整年累月	zheng3 nian2 lei3 yue4
 整數	zheng3 shu4
@@ -81753,6 +81830,7 @@ min_phrase_weight: 100
 文場	wen2 chang3
 文姬入塞	wen2 ji1 ru4 sai4
 文字傳播	wen2 zi4 chuan2 bo4
+文字傳播	wen2 zi4 chuan2 bo1
 文字處理機	wen2 zi4 chu3 li3 ji1
 文字處理機	wen2 zi4 chu4 li3 ji1
 文教	wen2 jiao4
@@ -84187,6 +84265,7 @@ min_phrase_weight: 100
 果子鋪	guo3 zi5 pu4
 果子露	guo3 zi5 lu4
 果實散播	guo3 shi2 san4 bo1
+果實散播	guo3 shi2 san4 bo4
 果實累累	guo3 shi2 lei3 lei3
 果擲行車	guo3 zhi2 xing2 che1
 果料兒	guo3 liao4 er5	80%
@@ -91360,6 +91439,8 @@ min_phrase_weight: 100
 現場會議	xian4 chang2 hui4 yi4	3%
 現場直播	xian4 chang3 zhi2 bo1
 現場直播	xian4 chang2 zhi2 bo1	3%
+現場直播	xian4 chang3 zhi2 bo4
+現場直播	xian4 chang2 zhi2 bo4	3%
 現場節目	xian4 chang2 jie2 mu4	3%
 現場節目	xian4 chang3 jie2 mu4
 現場視察	xian4 chang3 shi4 cha2
@@ -93191,13 +93272,16 @@ min_phrase_weight: 100
 直捷了當	zhi2 jie2 liao3 dang4
 直接了當	zhi2 jie1 liao3 dang4
 直接廣播	zhi2 jie1 guang3 bo4
+直接廣播	zhi2 jie1 guang3 bo1
 直接教學法	zhi2 jie1 jiao4 xue2 fa3
 直接教學法	zhi2 jie1 jiao1 xue2 fa3
 直接數據	zhi2 jie1 shu4 ju4
 直播	zhi2 bo4
 直播	zhi2 bo1
 直播衛星	zhi2 bo4 wei4 xing1
+直播衛星	zhi2 bo1 wei4 xing1
 直播電視	zhi2 bo4 dian4 shi4
+直播電視	zhi2 bo1 dian4 shi4
 直效行銷	zhi2 xiao4 xing2 xiao1
 直教	zhi2 jiao4
 直敪	zhi2 duo2
@@ -94219,6 +94303,8 @@ min_phrase_weight: 100
 短期投資	duan3 qi2 tou2 zi1
 短波廣播	duan3 bo1 guang3 bo4
 短波廣播	duan3 po1 guang3 bo4
+短波廣播	duan3 bo1 guang3 bo1
+短波廣播	duan3 po1 guang3 bo1
 短波長	duan3 bo1 chang2
 短波長	duan3 po1 chang2
 短片	duan3 pian4
@@ -96015,6 +96101,7 @@ min_phrase_weight: 100
 立體地圖	li4 ti3 di4 tu2
 立體幾何	li4 ti3 ji3 he2
 立體廣播	li4 ti3 guang3 bo4
+立體廣播	li4 ti3 guang3 bo1
 立體影片	li4 ti3 ying3 pian4
 立體照片	li4 ti3 zhao4 pian4
 立體照相機	li4 ti3 zhao4 xiang4 ji1
@@ -97449,10 +97536,15 @@ min_phrase_weight: 100
 綜合銀行	zong4 he2 yin2 hang2
 綜合銀行	zong1 he2 yin2 hang2
 綜括	zong4 gua1
+綜括	zong1 gua1
+綜括	zong4 kuo4
 綜括	zong1 kuo4
 綜攬	zong4 lan3
+綜攬	zong1 lan3
 綜核	zong4 he2
+綜核	zong1 he2
 綜核名實	zong4 he2 ming2 shi2
+綜核名實	zong1 he2 ming2 shi2
 綜理	zong4 li3
 綜理	zong1 li3
 綜藝團	zong4 yi4 tuan2
@@ -97462,6 +97554,7 @@ min_phrase_weight: 100
 綜觀	zong4 guan1
 綜觀	zong1 guan1
 綜論	zong4 lun4
+綜論	zong1 lun4
 綜述	zong4 shu4
 綜述	zong1 shu4
 綝纚	lin2 shi3
@@ -97535,6 +97628,7 @@ min_phrase_weight: 100
 網路商場	wang3 lu4 shang1 chang2	3%
 網路商場	wang3 lu4 shang1 chang3
 網路廣播頻道	wang3 lu4 guang3 bo4 pin2 dao4
+網路廣播頻道	wang3 lu4 guang3 bo1 pin2 dao4
 網路應用	wang3 lu4 ying4 yong4
 網路拍賣廣場	wang3 lu4 pai1 mai4 guang3 chang2	3%
 網路拍賣廣場	wang3 lu4 pai1 mai4 guang3 chang3
@@ -97913,6 +98007,7 @@ min_phrase_weight: 100
 織田信長	zhi1 tian2 xin4 zhang3
 織當訪婢	zhi1 dang1 fang3 bi4
 織綜	zhi1 zong4
+織綜	zhi1 zong1
 繚轉	liao2 zhuan3
 繞圈子	rao4 quan1 zi5
 繞地	rao4 di4
@@ -98652,6 +98747,7 @@ min_phrase_weight: 100
 耙子	pa2 zi5
 耙子	ba4 zi5
 耬播	lou2 bo4
+耬播	lou2 bo1
 耳刮子	er3 gua1 zi5
 耳咽管	er3 yan1 guan3
 耳塞	er3 sai1
@@ -98875,6 +98971,7 @@ min_phrase_weight: 100
 聲叫聲應	sheng1 jiao4 sheng1 ying4
 聲名狼藉	sheng1 ming2 lang2 ji2
 聲名遠播	sheng1 ming2 yuan3 bo4
+聲名遠播	sheng1 ming2 yuan3 bo1
 聲吶	sheng1 na4
 聲帶小結	sheng1 dai4 xiao3 jie2
 聲息	sheng1 xi2
@@ -99577,6 +99674,7 @@ min_phrase_weight: 100
 腸肥腦滿	chang2 fei2 nao3 man3
 腸肥滿腦	chang2 fei2 man3 nao3
 腸阻塞	chang2 zu3 se4
+腸阻塞	chang2 zu3 sai1
 腹便便	fu4 pian2 pian2
 腹地	fu4 di4
 腹笥便便	fu4 si4 pian2 pian2
@@ -102565,6 +102663,7 @@ min_phrase_weight: 100
 蛤蟆蹲	ha2 ma2 dun1
 蛤蟹	ha2 xie4
 蛤蠣	ge2 li4
+蛤蠣	ge3 li4	80%
 蛻變	shui4 bian4
 蛻變	tui4 bian4
 蛾子	e2 zi5
@@ -103270,6 +103369,7 @@ min_phrase_weight: 100
 衛從	wei4 zong4
 衛從	wei4 cong2
 衛星轉播	wei4 xing1 zhuan3 bo4
+衛星轉播	wei4 xing1 zhuan3 bo1
 衛星都市	wei4 xing1 du1 shi4
 衛氏朝鮮	wei4 shi4 chao2 xian3
 衛滿朝鮮	wei4 man3 chao2 xian3
@@ -103663,6 +103763,7 @@ min_phrase_weight: 100
 複稱	fu4 cheng1
 複穴	fu4 xue4
 複綜語	fu4 zong4 yu3
+複綜語	fu4 zong1 yu3
 複變函數	fu4 bian4 han2 shu4
 複變函數論	fu4 bian4 han2 shu4 lun4
 複雜度	fu4 za2 du4
@@ -103991,6 +104092,7 @@ min_phrase_weight: 100
 視網膜	shi4 wang3 mo2
 視而不見	shi4 er2 bu2 jian4
 視聽傳播	shi4 ting1 chuan2 bo4
+視聽傳播	shi4 ting1 chuan2 bo1
 視聽教育	shi4 ting1 jiao4 yu4
 視覺空間	shi4 jue2 kong1 jian1
 視覺適應	shi4 jue2 shi4 ying4
@@ -104518,6 +104620,7 @@ min_phrase_weight: 100
 詞素結構	ci2 su4 jie2 gou4
 詞素通達模型	ci2 su4 tong1 da2 mo2 xing2
 詞綜	ci2 zong4
+詞綜	ci2 zong1
 詞綴	ci2 zhui4
 詞綴剝除	ci2 zhui4 bo1 chu2
 詞調	ci2 diao4
@@ -104810,6 +104913,7 @@ min_phrase_weight: 100
 調差	diao4 chai1
 調幅	tiao2 fu2
 調幅廣播	tiao2 fu2 guang3 bo4
+調幅廣播	tiao2 fu2 guang3 bo1
 調幹	diao4 gan4
 調度	diao4 du4
 調度場	diao4 du4 chang2	3%
@@ -104961,6 +105065,7 @@ min_phrase_weight: 100
 調頭寸	tiao2 tou2 cun4
 調頻	tiao2 pin2
 調頻廣播	tiao2 pin2 guang3 bo4
+調頻廣播	tiao2 pin2 guang3 bo1
 調類	diao4 lei4
 調風弄月	tiao2 feng1 nong4 yue4
 調風月	tiao2 feng1 yue4
@@ -106139,6 +106244,7 @@ min_phrase_weight: 100
 走背字兒	zou3 bei4 zi4 er2
 走親	zou3 qin1
 走親戚	zou3 qin1 qi1
+走親戚	zou3 qin1 qi4	80%
 走親訪友	zou3 qin1 fang3 you3
 走調	zou3 diao4
 走走	zou3 zou3
@@ -107699,6 +107805,7 @@ min_phrase_weight: 100
 逆轉錄病毒	ni4 zhuan3 lu4 bing4 du2
 逆轉錄酶	ni4 zhuan3 lu4 mei2
 逋播	bu1 bo4
+逋播	bu1 bo1
 逋髮	bu1 fa3
 逍遙自在	xiao1 yao2 zi4 zai4
 逍遙自得	xiao1 yao2 zi4 de2
@@ -107748,6 +107855,7 @@ min_phrase_weight: 100
 這和	zhe4 han4
 這和	zhe4 he2
 這咱	zhe4 zan2
+這咱	zhe4 za2
 這家子	zhe4 jia1 zi5
 這幾天	zhe4 ji3 tian1
 這早晚兒	zhe4 zao3 wan3 er5	80%
@@ -108213,6 +108321,7 @@ min_phrase_weight: 100
 遠惡	yuan3 e4
 遠打週折	yuan3 da3 zhou1 zhe2
 遠播	yuan3 bo4
+遠播	yuan3 bo1
 遠期外匯	yuan3 qi2 wai4 hui4
 遠期支票	yuan3 qi2 zhi1 piao4
 遠水救不了近火	yuan3 shui3 jiu4 bu4 liao3 jin4 huo3
@@ -108284,6 +108393,7 @@ min_phrase_weight: 100
 選場	xuan3 chang2	3%
 選場	xuan3 chang3
 選播	xuan3 bo4
+選播	xuan3 bo1
 選民參加率	xuan3 min2 can1 jia1 lv4
 選民投票登記卡	xuan3 min2 tou2 piao4 deng1 ji4 ka3
 選種	xuan3 zhong3
@@ -108752,6 +108862,7 @@ min_phrase_weight: 100
 配給票	pei4 ji3 piao4
 配線系統接地	pei4 xian4 xi4 tong3 jie1 di4
 配置廣播	pei4 zhi4 guang3 bo4
+配置廣播	pei4 zhi4 guang3 bo1
 配角	pei4 jiao3
 配角	pei4 jue2
 配載	pei4 zai4
@@ -108867,6 +108978,7 @@ min_phrase_weight: 100
 醜態畢露	chou3 tai4 bi4 lu4
 醜相	chou3 xiang4
 醜聲遠播	chou3 sheng1 yuan3 bo4
+醜聲遠播	chou3 sheng1 yuan3 bo1
 醜行	chou3 xing2
 醜行	chou3 xing4
 醜類惡物	chou3 lei4 e4 wu4
@@ -111033,6 +111145,7 @@ min_phrase_weight: 100
 防鎖死煞車系統	fang2 suo3 si3 sha1 che1 xi4 tong3
 防長	fang2 zhang3
 阻塞	zu3 se4
+阻塞	zu3 sai1
 阻抗匹配	zu3 kang4 pi3 pei4
 阻抗匹配	zu3 kang4 pi1 pei4
 阻擊	zu3 ji2
@@ -112493,7 +112606,9 @@ min_phrase_weight: 100
 電視系列片	dian4 shi4 xi4 lie4 pian1
 電視興奮症	dian4 shi4 xing1 fen4 zheng4
 電視轉播	dian4 shi4 zhuan3 bo1
+電視轉播	dian4 shi4 zhuan3 bo4
 電視轉播車	dian4 shi4 zhuan3 bo4 che1
+電視轉播車	dian4 shi4 zhuan3 bo1 che1
 電視遊樂器	dian4 shi4 you2 le4 qi4
 電話傳真	dian4 hua4 chuan2 zhen1
 電話卡	dian4 hua4 ka3
@@ -112791,6 +112906,7 @@ min_phrase_weight: 100
 非親非故	fei1 qin1 fei1 gu4
 非詞重複測驗	fei1 ci2 chong2 fu4 ce4 yan4
 非語文傳播	fei1 yu3 wen2 chuan2 bo4
+非語文傳播	fei1 yu3 wen2 chuan2 bo1
 非負數	fei1 fu4 shu4
 非貿易創匯	fei1 mao4 yi4 chuang4 hui4
 非遺傳多型性	fei1 yi2 chuan2 duo1 xing2 xing4
@@ -113093,17 +113209,29 @@ min_phrase_weight: 100
 頓牟	dun4 mou2
 頓開茅塞	dun4 kai1 mao2 se4
 頗不以為然	po3 bu4 yi3 wei2 ran2
+頗不以為然	po1 bu4 yi3 wei2 ran2
 頗佳	po3 jia1
+頗佳	po1 jia1
 頗可	po3 ke3
+頗可	po1 ke3
 頗奈	po3 nai4
+頗奈	po1 nai4
 頗我	po3 wo3
+頗我	po1 wo3
 頗有	po3 you3
+頗有	po1 you3
 頗為	po1 wei2
 頗為	po3 wei2
+頗為	po1 wei4
+頗為	po3 wei4
 頗為可觀	po3 wei2 ke3 guan1
+頗為可觀	po1 wei2 ke3 guan1
 頗耐	po3 nai4
+頗耐	po1 nai4
 頗頗	po3 po3
+頗頗	po1 po1
 頗黎	po3 li2
+頗黎	po1 li2
 領先反應法則	ling3 xian1 fan3 ying4 fa3 ze2
 領先地位	ling3 xian1 di4 wei4
 領圈	ling3 quan1
@@ -113261,6 +113389,7 @@ min_phrase_weight: 100
 顛兒面	dian1 er5 mian4	80%
 顛兒面	dian1 er2 mian4
 顛播	dian1 bo4
+顛播	dian1 bo1
 顛簸	dian1 bo3
 顛簸不破	dian1 bo3 bu2 po4
 顛而倒之	dian1 er2 dao3 zhi1
@@ -113473,6 +113602,7 @@ min_phrase_weight: 100
 飛彈	fei1 dan4
 飛彈快艇	fei1 dan4 kuai4 ting3
 飛播	fei1 bo4
+飛播	fei1 bo1
 飛散	fei1 san4
 飛書傳羽	fei1 shu1 chuan2 yu3
 飛棹	fei1 zhao4
@@ -115341,4 +115471,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 115344 #####
+##### @結束 END - 115474 #####
