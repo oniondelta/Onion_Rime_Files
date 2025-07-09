@@ -5,7 +5,7 @@
 
 ## 內容
 
-- allfiles 包含九個主方案和一眾掛接方案。
+- rimefiles 包含九個主方案和一眾掛接方案。
 
   > 主方案：三個注音、一個注音雙拼、一個拼音、三個形碼、一個行列30。
 
@@ -15,7 +15,7 @@
 
   > Rime 架構下，怎麼設置皆無法相同一般電腦注音（如：微軟新注音），一些功能和操作無法照搬！
 
-- 為易更新，不用同一檔案更新數次，allfiles 裡文件不以方案區分。
+- 為易更新，不用同一檔案更新數次，rimefiles 裡文件不以方案區分。
 
   > 提供 sort_rime_file.py，把所需 Rime 文件放到各個方案資料夾。
 
@@ -147,7 +147,7 @@
 - 注音（洋蔥 雙拼 版）鍵位
   > 無加 custom 可簡拼，有 custom 為一般雙拼每字須鍵兩碼（聲調可省略）
 
-  #### <img src="https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/allfiles/%E9%9B%99%E6%8B%BC%E6%B3%A8%E9%9F%B3%E9%8D%B5%E4%BD%8D%E8%AA%AA%E6%98%8E%E5%9C%96%E7%A4%BA/%E6%B3%A8%E9%9F%B3%E6%B4%8B%E8%94%A5%E9%9B%99%E6%8B%BC%E8%AA%AA%E6%98%8E.png" width = "595" alt="image" /><br>
+  #### <img src="https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/rimefiles/%E9%9B%99%E6%8B%BC%E6%B3%A8%E9%9F%B3%E9%8D%B5%E4%BD%8D%E8%AA%AA%E6%98%8E%E5%9C%96%E7%A4%BA/%E6%B3%A8%E9%9F%B3%E6%B4%8B%E8%94%A5%E9%9B%99%E6%8B%BC%E8%AA%AA%E6%98%8E.png" width = "595" alt="image" /><br>
 
 - 注音（洋蔥 plus 版）鍵位
 
