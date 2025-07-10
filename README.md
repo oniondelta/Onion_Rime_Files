@@ -11,7 +11,7 @@
   > |音碼類|形碼類|
   > |:---:|:---:|
   > |注音（[純注音](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E6%B3%A8%E9%9F%B3-%E6%B4%8B%E8%94%A5-%E7%B4%94%E6%B3%A8%E9%9F%B3-%E7%89%88-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E)、[plus](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E6%B3%A8%E9%9F%B3-%E6%B4%8B%E8%94%A5-plus-%E7%89%88-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E)、[mix-in](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E6%B3%A8%E9%9F%B3-%E6%B4%8B%E8%94%A5-mixin-%E7%89%88-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E)）|形碼（單出、[plus](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E6%B4%8B%E8%94%A5%E7%89%88-%E5%BD%A2%E7%A2%BC-plus-%E7%89%88-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E)、[mix-in](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E6%B4%8B%E8%94%A5%E7%89%88-%E5%BD%A2%E7%A2%BC-mixin-%E7%89%88-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E)）|
-  > |雙拼（[洋蔥雙拼](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E6%B3%A8%E9%9F%B3-%E6%B4%8B%E8%94%A5-%E9%9B%99%E6%8B%BC-%E7%89%88-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E)）|[行列30](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E6%B4%8B%E8%94%A5%E7%89%88-%E8%A1%8C%E5%88%9730-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E)|
+  > |雙拼（[洋蔥雙拼](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E6%B3%A8%E9%9F%B3-%E6%B4%8B%E8%94%A5-%E9%9B%99%E6%8B%BC-%E7%89%88-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E)）|行列30（[洋蔥版](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E6%B4%8B%E8%94%A5%E7%89%88-%E8%A1%8C%E5%88%9730-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E)）|
   > |拼音（[mix-in](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E5%9C%B0%E7%90%83%E6%8B%BC%E9%9F%B3-%E6%B4%8B%E8%94%A5-mixin-%E7%89%88-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E)）||
   > 
   > 掛接方案：
@@ -96,6 +96,7 @@
 
 - [Wiki 說明連結](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E6%B4%8B%E8%94%A5%E7%89%88%E9%9B%BB%E8%85%A6-Rime-%E6%96%B9%E6%A1%88%E5%AE%89%E8%A3%9D%E8%88%87%E4%BF%AE%E6%94%B9)
 
+<!-- 
 ## 各方案說明
 
 - [電腦 RIME 輸入法『注音（洋蔥 純注音 版）』](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E6%B3%A8%E9%9F%B3-%E6%B4%8B%E8%94%A5-%E7%B4%94%E6%B3%A8%E9%9F%B3-%E7%89%88-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E)
@@ -113,6 +114,7 @@
 - [電腦 RIME 設定檔〖 形碼（洋蔥 plus 版）〗](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E6%B4%8B%E8%94%A5%E7%89%88-%E5%BD%A2%E7%A2%BC-plus-%E7%89%88-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E)
 
 - [電腦 RIME 設定檔〖 形碼（洋蔥 mix‧in 版）〗](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E6%B4%8B%E8%94%A5%E7%89%88-%E5%BD%A2%E7%A2%BC-mixin-%E7%89%88-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E)
+-->
 
 ## 注音系列功能說明
 
