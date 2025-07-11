@@ -1462,7 +1462,7 @@ min_phrase_weight: 100
 僪	jue2	50%
 倪	ni4	1%
 櫱	e4	0.2%
-櫱	bo4	0.2%
+# 櫱	bo4	0.2%
 蘖	e4	0.2%
 叉	cha4	0.2%
 拉	la2	0.2%
@@ -2710,6 +2710,10 @@ min_phrase_weight: 100
 偻	lv3	50%
 僂	liu3	0%
 偻	liu3	0%
+薜	bo2	0%
+薜	bai4	0%
+薜	pi4	0%
+枿	e4	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -3167,7 +3171,7 @@ min_phrase_weight: 100
 御	ya4	1%
 悷	li4	1%
 悾	kong3	1%
-惋	wan4	100%
+惋	wan4
 惏	lan2	1%
 惔	tan2	1%
 惛	men4	1%
@@ -4003,7 +4007,7 @@ min_phrase_weight: 100
 爚	yao4	1%
 瓓	lan2	1%
 籔	shu4	1%
-蘗	bo4	1%
+蘗	bo4
 蘞	lian2	1%
 蘞	lian4	1%
 蘪	mi2	1%
@@ -31027,7 +31031,7 @@ min_phrase_weight: 100
 蘕	peng2
 蘖	bo4
 蘖	nie4
-蘗	nie4
+# 蘗	nie4
 蘘	rang2
 蘙	yi4
 蘚	xian3
@@ -61366,7 +61370,6 @@ min_phrase_weight: 100
 冰散瓦解	bing1 san4 wa3 jie3
 冰棍兒	bing1 gun4 er5	80%
 冰棍兒	bing1 gun4 er2
-冰櫱	bing1 bo4
 冰櫱	bing1 nie4
 冰櫱	bing1 e4
 冰河時期	bing1 he2 shi2 qi2
@@ -61846,7 +61849,6 @@ min_phrase_weight: 100
 分機	fen1 ji1
 分櫱	fen1 nie4
 分櫱	fen1 e4
-分櫱	fen1 bo4
 分權	fen1 quan2
 分權制衡	fen1 quan2 zhi4 heng2
 分步驟	fen1 bu4 zhou4
@@ -108922,7 +108924,6 @@ min_phrase_weight: 100
 酒逢知己千鍾少	jiu3 feng2 zhi1 ji3 qian1 zhong1 shao3
 酒醴麯櫱	jiu3 li3 qu2 nie4
 酒醴麯櫱	jiu3 li3 qu2 e4
-酒醴麯櫱	jiu3 li3 qu2 bo4
 酒量	jiu3 liang4
 酒鋪	jiu3 pu4
 酒錢	jiu3 qian2
@@ -115493,4 +115494,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 115496 #####
+##### @結束 END - 115497 #####
