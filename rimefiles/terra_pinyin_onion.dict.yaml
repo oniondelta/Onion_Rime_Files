@@ -112,6 +112,7 @@
 #    詞句中，「兒」臺灣字典發音為「er2」，慣用發音為「er5」。但為兒化音時，臺灣字典中會標註「ㄦ」，但拼音為單獨「r」，可理解為「er5」。兩岸字典中對單獨「兒」皆沒有「er1」「er5」之發音標註，故兒化音時選擇標註「er2」「er5」，不標註「er1」。
 #    詞句中，「傾」臺灣字典發音為「qing1」但日常生活發音太常使用「qing3」，故全都補齊「qing1」「qing3」。
 #    詞句中，「危」臺灣字典發音和習慣發音為「wei2」，大陸發音為「wei1」，斟酌後全改成臺灣發音「wei2」。
+#    詞句中，「擊」臺灣字典發音和習慣發音為「ji2」，大陸發音為「ji1」，斟酌後全改成臺灣發音「ji2」。
 #    詞句中，「夕」臺灣字典發音和習慣發音為「xi4」，大陸發音為「xi1」，斟酌後全改成臺灣發音「xi4」。
 #    詞句中，「息」臺灣字典發音和習慣發音為「xi2」，大陸發音為「xi1」，斟酌後全改成臺灣發音「xi2」。
 #    詞句中，「關係」其「係」臺灣字典發音為「xi4」，但日常常發「xi1」，故「關係」其「係」都補上「xi1」該發音。
@@ -151,6 +152,7 @@
 #    詞句中，「諷」臺灣標準為「feng4」，又音為「feng1」，大陸和臺灣日常慣用語音為「feng3」，故皆補齊「feng4」「feng3」「feng1」。
 #    詞句中，「菌」臺灣標準為「jun4」，大陸標準為「jun1」，日常易混，故皆補齊「jun4」「jun1」。
 #    詞句中，「拎」臺灣標準為「ling1」，大陸標準為「lin1」，日常易混，故皆補齊「ling1」「lin1」。
+#    詞句中，「惋」臺灣標準為「wan4」，大陸標準為「wan3」，日常易混，故皆補齊「wan4」「wan3」。
 #    詞句中，「肘」臺灣標準為「zhou3」，日常發音常會誤發為「zhou2」，故皆補齊「zhou3」「zhou2」，後者詞頻設為80%。。
 #    詞句中，「播」臺灣標準為「bo4」，日常發音常會發「bo1」，故皆補齊「bo4」「bo1」。
 #    詞句中，「綜」臺灣標準為「zong4」，日常發音常會發「zong1」，故皆補齊「zong4」「zong1」。
@@ -2704,6 +2706,10 @@ min_phrase_weight: 100
 頗	pi2	0%
 颇	po4	0%
 颇	pi2	0%
+佝	ju1	0%
+偻	lv3	50%
+僂	liu3	0%
+偻	liu3	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -3161,7 +3167,7 @@ min_phrase_weight: 100
 御	ya4	1%
 悷	li4	1%
 悾	kong3	1%
-惋	wan4	1%
+惋	wan4	100%
 惏	lan2	1%
 惔	tan2	1%
 惛	men4	1%
@@ -61361,6 +61367,8 @@ min_phrase_weight: 100
 冰棍兒	bing1 gun4 er5	80%
 冰棍兒	bing1 gun4 er2
 冰櫱	bing1 bo4
+冰櫱	bing1 nie4
+冰櫱	bing1 e4
 冰河時期	bing1 he2 shi2 qi2
 冰淇淋	bing1 qi2 lin2
 冰炭不相入	bing1 tan4 bu4 xiang1 ru4
@@ -61837,6 +61845,8 @@ min_phrase_weight: 100
 分桃	fen1 tao2
 分機	fen1 ji1
 分櫱	fen1 nie4
+分櫱	fen1 e4
+分櫱	fen1 bo4
 分權	fen1 quan2
 分權制衡	fen1 quan2 zhi4 heng2
 分步驟	fen1 bu4 zhou4
@@ -76178,6 +76188,7 @@ min_phrase_weight: 100
 悲號	bei1 hao2
 悴薄	cui4 bo2
 悵惋	chang4 wan4
+悵惋	chang4 wan3
 悵惜	chang4 xi2
 悶不作聲	men1 bu2 zuo4 sheng1
 悶不作聲	men4 bu2 zuo4 sheng1
@@ -76272,11 +76283,17 @@ min_phrase_weight: 100
 情非得已	qing2 fei1 de2 yi3
 情面	qing2 mian4
 惆惋	chou2 wan4
+惆惋	chou2 wan3
 惋傷	wan4 shang1
+惋傷	wan3 shang1
 惋嘆	wan4 tan4
+惋嘆	wan3 tan4
 惋惜	wan4 xi2
+惋惜	wan3 xi2
 惋愕	wan4 e4
+惋愕	wan3 e4
 惋愴	wan4 chuang4
+惋愴	wan3 chuang4
 惏悷	lin2 li4
 惑突	huo4 tu2
 惑突	huo4 tu1
@@ -76739,6 +76756,7 @@ min_phrase_weight: 100
 憤怒痙攣	fen4 nu4 jing4 luan2
 憤怒痙攣	fen4 nu4 jing1 luan2	80%
 憤惋	fen4 wan4
+憤惋	fen4 wan3
 憤薄	fen4 bo2
 憨厚	han1 hou4
 憨子	han1 zi5
@@ -85789,6 +85807,7 @@ min_phrase_weight: 100
 歎嗟	tan4 jie1
 歎息	tan4 xi2
 歎惋	tan4 wan4
+歎惋	tan4 wan3
 歎惜	tan4 xi2
 歎為觀止	tan4 wei2 guan1 zhi3
 歎老嗟卑	tan4 lao3 jie1 bei1
@@ -108902,6 +108921,8 @@ min_phrase_weight: 100
 酒興	jiu3 xing4
 酒逢知己千鍾少	jiu3 feng2 zhi1 ji3 qian1 zhong1 shao3
 酒醴麯櫱	jiu3 li3 qu2 nie4
+酒醴麯櫱	jiu3 li3 qu2 e4
+酒醴麯櫱	jiu3 li3 qu2 bo4
 酒量	jiu3 liang4
 酒鋪	jiu3 pu4
 酒錢	jiu3 qian2
@@ -114194,6 +114215,7 @@ min_phrase_weight: 100
 驚天地	jing1 tian1 di4
 驚恐萬分	jing1 kong3 wan4 fen1
 驚惋	jing1 wan4
+驚惋	jing1 wan3
 驚濤拍岸	jing1 tao2 pai1 an4
 驚濤拍岸	jing1 tao1 pai1 an4
 驚濤駭浪	jing1 tao2 hai4 lang4
@@ -115471,4 +115493,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 115474 #####
+##### @結束 END - 115496 #####
