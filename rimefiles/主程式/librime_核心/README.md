@@ -6,13 +6,13 @@
 
 ### Version Info
 
-- librime 1.13.1 (2c24811)
+- librime 1.13.1 (3c1d6e7)
 
-- librime-lua #287 (e3912a4)
+- librime-lua #287 (68f9c36)
 
 ### plugins
 
-- librime-lua (e3912a4)
+- librime-lua (68f9c36)
 
 - librime-octagram (dfcc151)
 
