@@ -1462,7 +1462,7 @@ min_phrase_weight: 100
 僪	jue2	50%
 倪	ni4	1%
 櫱	e4	0.2%
-# 櫱	bo4	0.2%
+櫱	bo4	0%
 蘖	e4	0.2%
 叉	cha4	0.2%
 拉	la2	0.2%
@@ -61370,6 +61370,7 @@ min_phrase_weight: 100
 冰散瓦解	bing1 san4 wa3 jie3
 冰棍兒	bing1 gun4 er5	80%
 冰棍兒	bing1 gun4 er2
+冰櫱	bing1 bo4
 冰櫱	bing1 nie4
 冰櫱	bing1 e4
 冰河時期	bing1 he2 shi2 qi2
@@ -115494,4 +115495,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 115497 #####
+##### @結束 END - 115498 #####
