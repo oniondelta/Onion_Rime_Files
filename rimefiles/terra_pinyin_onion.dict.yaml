@@ -115,6 +115,7 @@
 #    詞句中，「擊」臺灣字典發音和習慣發音為「ji2」，大陸發音為「ji1」，斟酌後全改成臺灣發音「ji2」。
 #    詞句中，「夕」臺灣字典發音和習慣發音為「xi4」，大陸發音為「xi1」，斟酌後全改成臺灣發音「xi4」。
 #    詞句中，「息」臺灣字典發音和習慣發音為「xi2」，大陸發音為「xi1」，斟酌後全改成臺灣發音「xi2」。
+#    詞句中，「跌」臺灣字典發音和習慣發音為「die2」，大陸發音為「die1」，斟酌後全改成臺灣發音「die2」。
 #    詞句中，「關係」其「係」臺灣字典發音為「xi4」，但日常常發「xi1」，故「關係」其「係」都補上「xi1」該發音。
 #    詞句中，「地」於句尾當結構助詞時，意思同「的」時，不標註「di4」，標註「de5」「di5」。
 #    詞句中，「嚓」臺灣字典只有發音「ca1」，不標為「cha1」，因為為形聲，故另標「ca5」，故全都補齊「ca1」「ca5」。
@@ -147,6 +148,7 @@
 #    詞句中，「鰾」日常發音常會誤發為「biao1」，臺灣標準為「biao4」，故皆補齊「biao4」「biao1」，後者詞頻設為80%。
 #    詞句中，「鷲」日常發音常會誤發為「jiu1」，臺灣標準為「jiu4」，故皆補齊「jiu4」「jiu1」，後者詞頻設為80%。
 #    詞句中，「縛」臺灣標準為「fu2」，大陸標準為「fu4」，兩者易混淆，故皆補齊「fu2」「fu4」。
+#    詞句中，「擬」臺灣標準為「ni3」，日常發音常會誤發為「ni2」，故皆補齊「ni3」「ni2」，後者詞頻設為80%。
 #    詞句中，「綺」臺灣標準為「qi3」，日常發音常會誤發為「qi2」，故皆補齊「qi3」「qi2」，後者詞頻設為80%。
 #    詞句中，「焙」臺灣標準為「bei4」，日常發音常會誤發為「pei2」，故皆補齊「bei4」「pei2」，後者詞頻設為80%。
 #    詞句中，「諷」臺灣標準為「feng4」，又音為「feng1」，大陸和臺灣日常慣用語音為「feng3」，故皆補齊「feng4」「feng3」「feng1」。
@@ -169,6 +171,7 @@
 #    詞句中，「妮」臺灣標準為「ni2」，大陸標準為「ni1」，只保留「ni2」發音。
 #    詞句中，「期」臺灣標準為「qi2」，又音為「qi1」，為「qi1」的詞句易有其他相同發音的詞句，斟酌後只標註「qi2」。
 #    詞句中，「模糊」定為「mo2 hu2」。
+#    詞句中，「諸葛」補齊「zhu1 ge2」和「zhu1 ge3」。
 #    詞句中，「參與」補齊「can1 yu4」和「can1 yu3」。
 #    詞句中，「處理」補齊「chu3 li3」和「chu4 li3」。
 #    詞句中，「阻塞」補齊「zu3 se4」和「zu3 sai1」。
@@ -2714,6 +2717,7 @@ min_phrase_weight: 100
 薜	bai4	0%
 薜	pi4	0%
 枿	e4	0%
+跌	tu2	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -33328,7 +33332,7 @@ min_phrase_weight: 100
 跉	ling2
 跊	mei4
 跋	ba2
-跌	die1
+跌	die1	50%
 跌	die2
 跍	ku1
 跎	tuo2
@@ -55902,7 +55906,6 @@ min_phrase_weight: 100
 下調	xia4 diao4
 下調	xia4 tiao2
 下跌	xia4 die2
-下跌	xia4 die1
 下載	xia4 zai3
 下載	xia4 zai4
 下輩子	xia4 bei4 zi5
@@ -63384,6 +63387,7 @@ min_phrase_weight: 100
 勝衣	sheng1 yi1
 勝跡	sheng4 ji1
 勝過諸葛亮	sheng4 guo4 zhu1 ge2 liang4
+勝過諸葛亮	sheng4 guo4 zhu1 ge3 liang4
 勞什子	lao2 shi2 zi5
 勞什骨子	lao2 shi2 gu2 zi5
 勞什骨子	lao2 shi2 gu3 zi5
@@ -65195,6 +65199,9 @@ min_phrase_weight: 100
 合得來	he2 de2 lai2
 合得著	he2 de5 zhao2
 合從	he2 zong1
+合成一個諸葛亮	he2 cheng2 yi2 ge5 zhu1 ge2 liang4
+合成一個諸葛亮	he2 cheng2 yi1 ge5 zhu1 ge2 liang4
+合成一個諸葛亮	he2 cheng2 yi4 ge5 zhu1 ge2 liang4
 合成一個諸葛亮	he2 cheng2 yi2 ge5 zhu1 ge3 liang4
 合成一個諸葛亮	he2 cheng2 yi1 ge5 zhu1 ge3 liang4
 合成一個諸葛亮	he2 cheng2 yi4 ge5 zhu1 ge3 liang4
@@ -67622,7 +67629,6 @@ min_phrase_weight: 100
 回船轉舵	hui2 chuan2 zhuan3 duo4
 回落	hui2 luo4
 回跌	hui2 die2
-回跌	hui2 die1
 回轉	hui2 zhuan3
 回轉壽司	hui2 zhuan3 shou4 si1
 回還	hui2 huan2
@@ -80864,6 +80870,7 @@ min_phrase_weight: 100
 擩嚌	ru4 ji4
 擫息	ye4 xi2
 擬阿拖品藥物	ni3 a1 tuo1 pin3 yao4 wu4
+擬阿拖品藥物	ni2 a1 tuo1 pin3 yao4 wu4	80%
 擯相	bin4 xiang4
 擯落	bin4 luo4
 擰乾	ning2 gan1
@@ -82830,7 +82837,6 @@ min_phrase_weight: 100
 暴行	pu4 xing2
 暴起暴落	bao4 qi3 bao4 luo4
 暴跌	bao4 die2
-暴跌	bao4 die1
 暴醃	pu4 yan1
 暴露	bao4 lu4
 暴露	bao4 lou4
@@ -82964,6 +82970,8 @@ min_phrase_weight: 100
 曲線圖	qu3 xian4 tu2
 曲線擬合	qu1 xian4 ni3 he2
 曲線擬合	qu3 xian4 ni3 he2
+曲線擬合	qu1 xian4 ni2 he2	80%
+曲線擬合	qu3 xian4 ni2 he2	80%
 曲線板	qu1 xian4 ban3
 曲線板	qu3 xian4 ban3
 曲線美	qu1 xian4 mei3
@@ -85348,12 +85356,19 @@ min_phrase_weight: 100
 模態	mo2 tai4
 模態理則學	mo2 tai4 li3 ze2 xue2
 模擬	mo2 ni3
+模擬	mo2 ni2	80%
 模擬信號	mo2 ni3 xin4 hao4
+模擬信號	mo2 ni2 xin4 hao4	80%
 模擬器	mo2 ni3 qi4
+模擬器	mo2 ni2 qi4	80%
 模擬投票	mo2 ni3 tou2 piao4
+模擬投票	mo2 ni2 tou2 piao4	80%
 模擬放大器	mo2 ni3 fang4 da4 qi4
+模擬放大器	mo2 ni2 fang4 da4 qi4	80%
 模擬演習	mo2 ni3 yan3 xi2
+模擬演習	mo2 ni2 yan3 xi2	80%
 模擬考試	mo2 ni3 kao3 shi4
+模擬考試	mo2 ni2 kao3 shi4	80%
 模效	mo2 xiao4
 模書	mo2 shu1
 模本	mo2 ben3
@@ -86114,6 +86129,7 @@ min_phrase_weight: 100
 死胡同	si3 hu2 tong2
 死胡同	si3 hu2 tong4
 死諸葛走生仲達	si3 zhu1 ge2 zou3 sheng1 zhong4 da2
+死諸葛走生仲達	si3 zhu1 ge3 zou3 sheng1 zhong4 da2
 死重泰山	si3 zhong4 tai4 shan1
 死難者	si3 nan2 zhe3
 死難者	si3 nan4 zhe3
@@ -89199,10 +89215,9 @@ min_phrase_weight: 100
 漲紅	zhang4 hong2
 漲紅	zhang3 hong2
 漲落	zhang3 luo4
-漲跌	zhang3 die1
 漲跌	zhang3 die2
-漲跌停盤指數	zhang3 die1 ting2 pan2 zhi3 shu4
-漲跌幅限制	zhang3 die1 fu2 xian4 zhi4
+漲跌停盤指數	zhang3 die2 ting2 pan2 zhi3 shu4
+漲跌幅限制	zhang3 die2 fu2 xian4 zhi4
 漲錢	zhang3 qian2
 漲風	zhang3 feng1
 漸入佳境	jian4 ru4 jia1 jing4
@@ -90921,7 +90936,6 @@ min_phrase_weight: 100
 狂相	kuang2 xiang4
 狂華	kuang2 hua1
 狂跌	kuang2 die2
-狂跌	kuang2 die1
 狂轟濫炸	kuang2 hong1 lan4 zha4
 狄奧多‧阿多諾	di2 ao4 duo1 eng5 a1 duo1 nuo4
 狄斯奈樂園	di2 si1 nai4 le4 yuan2
@@ -91053,7 +91067,6 @@ min_phrase_weight: 100
 猛著祖鞭	meng3 zhuo2 zu3 bian1
 猛衝	meng3 chong1
 猛跌	meng3 die2
-猛跌	meng3 die1
 猜不著	cai1 bu4 zhao2
 猜不透	cai1 bu2 tou4
 猜中	cai1 zhong4
@@ -97658,6 +97671,7 @@ min_phrase_weight: 100
 網路教學	wang3 lu4 jiao1 xue2
 網路特務	wang3 lu4 te4 wu4
 網路虛擬空間	wang3 lu4 xu1 ni3 kong1 jian1
+網路虛擬空間	wang3 lu4 xu1 ni2 kong1 jian1	80%
 網路行銷	wang3 lu4 xing2 xiao1
 網路行銷活動	wang3 lu4 xing2 xiao1 huo2 dong4
 網路賀卡	wang3 lu4 he4 ka3
@@ -102543,6 +102557,7 @@ min_phrase_weight: 100
 虛情假意	xu1 qing2 jia3 yi4
 虛應故事	xu1 ying4 gu4 shi4
 虛擬空間	xu1 ni3 kong1 jian1
+虛擬空間	xu1 ni2 kong1 jian1	80%
 虛擲	xu1 zhi2
 虛數	xu1 shu4
 虛晃一招	xu1 huang3 yi4 zhao1
@@ -104504,6 +104519,7 @@ min_phrase_weight: 100
 計算數學	ji4 suan4 shu4 xue2
 計算機模式	ji4 suan4 ji1 mo2 shi4
 計算機模擬	ji4 suan4 ji1 mo2 ni3
+計算機模擬	ji4 suan4 ji1 mo2 ni2	80%
 計結	ji4 jie2
 計行慮義	ji4 xing2 lv4 yi4
 計都	ji4 du1
@@ -105230,10 +105246,13 @@ min_phrase_weight: 100
 諸宮調	zhu1 gong1 diao4
 諸將	zhu1 jiang4
 諸葛亮借東風	zhu1 ge2 liang4 jie4 dong1 feng1
+諸葛亮借東風	zhu1 ge3 liang4 jie4 dong1 feng1
 諸葛四郎	zhu1 ge2 si4 lang2
 諸葛四郎	zhu1 ge3 si4 lang2
 諸葛巾	zhu1 ge2 jin1
+諸葛巾	zhu1 ge3 jin1
 諸葛燈	zhu1 ge2 deng1
+諸葛燈	zhu1 ge3 deng1
 諾們罕	nuo4 men2 han3
 諾塞斯	nuo4 sai1 si1
 諾姆‧喬姆斯基	nuo4 mu3 eng5 qiao2 mu3 si1 ji1
@@ -106169,8 +106188,13 @@ min_phrase_weight: 100
 賽車場	sai4 che1 chang2	3%
 賽車場賽	sai4 che1 chang3 sai4
 賽車場賽	sai4 che1 chang2 sai4	3%
+賽過一個諸葛亮	sai4 guo4 yi2 ge5 zhu1 ge2 liang4
+賽過一個諸葛亮	sai4 guo4 yi1 ge5 zhu1 ge2 liang4
+賽過一個諸葛亮	sai4 guo4 yi4 ge5 zhu1 ge2 liang4
 賽過一個諸葛亮	sai4 guo4 yi2 ge5 zhu1 ge3 liang4
 賽過一個諸葛亮	sai4 guo4 yi1 ge5 zhu1 ge3 liang4
+賽過一個諸葛亮	sai4 guo4 yi4 ge5 zhu1 ge3 liang4
+賽過諸葛亮	sai4 guo4 zhu1 ge2 liang4
 賽過諸葛亮	sai4 guo4 zhu1 ge3 liang4
 賽馬場	sai4 ma3 chang3
 賽馬場	sai4 ma3 chang2	3%
@@ -106451,52 +106475,38 @@ min_phrase_weight: 100
 跂蹻	qi2 jue2
 跌了彈的斑鳩	die2 le5 dan4 de5 ban1 jiu1
 跌交	die2 jiao1
-跌交	die1 jiao1
-跌倒	die1 dao3
 跌倒	die2 dao3
 跌停板	die2 ting2 ban3
-跌停板	die1 ting2 ban3
 跌價	die2 jia4
-跌價	die1 jia4
 跌四平	die2 si4 ping2
 跌宕	die2 dang4
-跌宕	die1 dang4
 跌宕不羈	die2 dang4 bu4 ji1
 跌宕不群	die2 dang4 bu4 qun2
 跌宕昭彰	die2 dang4 zhao1 zhang1
-跌宕昭彰	die1 dang4 zhao1 zhang1
 跌宕遒麗	die2 dang4 qiu2 li4
 跌幅	die2 fu2
-跌幅	die1 fu2
 跌得重	die2 de5 zhong4
 跌扑	die2 pu1
 跌打	die2 da3
 跌打損傷	die2 da3 sun3 shang1
-跌打損傷	die1 da3 sun3 shang1
 跌根頭	die2 gen1 tou5
 跌根頭	die2 gen1 tou2
 跌破	die2 po4
 跌破眼鏡	die2 po4 yan3 jing4
-跌破眼鏡	die1 po4 yan3 jing4
 跌磕	die2 ke1
 跌窨	die2 yin4
 跌腳	die2 jiao3
 跌腳搥胸	die2 jiao3 chui2 xiong1
 跌腳絆手	die2 jiao3 ban4 shou3
 跌至谷底	die2 zhi4 gu3 di3
-跌至谷底	die1 zhi4 gu3 di3
-跌落	die1 luo4
 跌落	die2 luo4
 跌蕩	die2 dang4
-跌蕩	die1 dang4
 跌蕩不羈	die2 dang4 bu4 ji1
 跌蕩放言	die2 dang4 fang4 yan2
 跌足	die2 zu2
-跌足	die1 zu2
 跌跌撞撞	die2 die2 zhuang4 zhuang4
-跌跌蹌蹌	die1 die1 qiang4 qiang4
+跌跌蹌蹌	die2 die2 qiang4 qiang4
 跌跤	die2 jiao1
-跌跤	die1 jiao1
 跑不了	pao3 bu4 liao3
 跑不了寺	pao3 bu4 liao3 si4
 跑不了廟	pao3 bu4 liao3 miao4
@@ -113142,6 +113152,7 @@ min_phrase_weight: 100
 響葫蘆	xiang3 hu2 lu2
 響遏行雲	xiang3 e4 xing2 yun2
 頁數	ye4 shu4
+頂個諸葛亮	ding3 ge5 zhu1 ge2 liang4
 頂個諸葛亮	ding3 ge5 zhu1 ge3 liang4
 頂呱呱	ding3 gua1 gua1
 頂呱呱	ding3 wa1 wa1
@@ -115495,4 +115506,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 115498 #####
+##### @結束 END - 115509 #####
