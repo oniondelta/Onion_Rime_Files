@@ -18,7 +18,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion_add
-version: "202506"
+version: "202507"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7
@@ -64,8 +64,8 @@ min_phrase_weight: 100
 裳	(shang3)
 綺	(qi2)
 绮	(qi2)
-躍	(yao4)
-跃	(yao4)
+躍	(yao4)	5%
+跃	(yao4)	5%
 蹚	(tang3)
 携	(xi4)	60%
 攜	(xi4)	30%
@@ -283,6 +283,8 @@ min_phrase_weight: 100
 禹	(yu2)	0%
 蓓	(pei3)	0%
 肘	(zhou2)	0%
+嘚	(de4)	0%
+櫱	(bo4)	0%
 ### @補充為《一聲》，通俗慣用或方便輸入，『非正確發音』！！！ ###
 腓	(fei1)	1%
 琲	(fei1)	1%
@@ -403,6 +405,8 @@ min_phrase_weight: 100
 思	(si5)	0%
 係	(xi5)	0%
 西	(xi5)	0%
+弄	(nong5)	0%
+弄	(long5)	0%
 ### @補充以下，使注音（非輕聲時）的某些鍵位不會變空碼，『非正確發音』！！！ ###
 # 誒	(eh2)	0%
 # 欸	(eh2)	0%
@@ -610,6 +614,7 @@ min_phrase_weight: 100
 咛	(ning5)	0%
 噥	(nong5)	0%
 哝	(nong5)	0%
+咔	(nong5)	0%
 呐	(ne5)	0%
 呶	(nao5)	0%
 喃	(nan5)	0%

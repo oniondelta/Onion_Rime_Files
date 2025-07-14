@@ -171,6 +171,7 @@
 #    詞句中，「妮」臺灣標準為「ni2」，大陸標準為「ni1」，只保留「ni2」發音。
 #    詞句中，「期」臺灣標準為「qi2」，又音為「qi1」，為「qi1」的詞句易有其他相同發音的詞句，斟酌後只標註「qi2」。
 #    詞句中，「模糊」定為「mo2 hu2」。
+#    詞句中，「垃圾」補齊「le4 se4」和「la1 ji1」。
 #    詞句中，「諸葛」補齊「zhu1 ge2」和「zhu1 ge3」。
 #    詞句中，「參與」補齊「can1 yu4」和「can1 yu3」。
 #    詞句中，「處理」補齊「chu3 li3」和「chu4 li3」。
@@ -1465,7 +1466,7 @@ min_phrase_weight: 100
 僪	jue2	50%
 倪	ni4	1%
 櫱	e4	0.2%
-櫱	bo4	0%
+# 櫱	bo4	0%
 蘖	e4	0.2%
 叉	cha4	0.2%
 拉	la2	0.2%
@@ -2718,6 +2719,8 @@ min_phrase_weight: 100
 薜	pi4	0%
 枿	e4	0%
 跌	tu2	0%
+咔	nong4	0%
+盯	cheng2	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -3979,7 +3982,7 @@ min_phrase_weight: 100
 礩	zhi2	1%
 繻	ru2	1%
 翿	tao2	1%
-耀	yue4	1%
+耀	yue4	5%
 蘁	e4	1%
 蠕	ruan3	1%
 蠖	wo4	1%
@@ -22757,7 +22760,8 @@ min_phrase_weight: 100
 樈	qing2
 樉	shuang3
 樊	fan2
-樋	tong3
+# 樋	tong3
+樋	tong1
 樌	guan4
 樍	ze2
 樎	su4
@@ -61373,7 +61377,7 @@ min_phrase_weight: 100
 冰散瓦解	bing1 san4 wa3 jie3
 冰棍兒	bing1 gun4 er5	80%
 冰棍兒	bing1 gun4 er2
-冰櫱	bing1 bo4
+冰櫱	bing1 bo4	80%
 冰櫱	bing1 nie4
 冰櫱	bing1 e4
 冰河時期	bing1 he2 shi2 qi2
@@ -75824,6 +75828,8 @@ min_phrase_weight: 100
 怔營	zheng1 ying2
 怔神兒	zheng1 shen2 er5	80%
 怔神兒	zheng1 shen2 er2
+怔神兒	leng4 shen2 er5	80%
+怔神兒	leng4 shen2 er2
 怕不	pa4 bu2
 怕不	pa4 bu4
 怕不待	pa4 bu2 dai4
@@ -82607,6 +82613,9 @@ min_phrase_weight: 100
 晃晃蕩蕩	huang4 huang4 dang4 dang4
 晃朗	huang3 lang3
 晃耀	huang3 yao4
+晃耀	huang3 yue4
+晃耀	huang4 yao4
+晃耀	huang4 yue4
 晃腦	huang4 nao3
 晃蕩	huang4 dang4
 晉乘楚杌	jin4 sheng4 chu3 wu4
@@ -85322,6 +85331,7 @@ min_phrase_weight: 100
 標致	biao1 zhi4
 標行	biao1 hang2
 標識	biao1 zhi4
+標識	biao1 shi4
 標量	biao1 liang4
 標間	biao1 jian1
 標題音樂	biao1 ti2 yin1 yue4
@@ -93266,6 +93276,7 @@ min_phrase_weight: 100
 目前還不清楚	mu4 qian2 hai2 bu4 qing1 chu3
 目子錢	mu4 zi5 qian2
 目怔口呆	mu4 zheng1 kou3 dai1
+目怔口呆	mu4 leng4 kou3 dai1
 目挑心招	mu4 tiao3 xin1 zhao1
 目擊	mu4 ji2
 目擊者	mu4 ji2 zhe3
@@ -96747,8 +96758,28 @@ min_phrase_weight: 100
 糊塗賬	hu2 tu2 zhang4
 糊弄	hu2 nong4
 糊弄	hu4 nong4
+糊弄	hu1 nong4
+糊弄	hu2 nong5	80%
+糊弄	hu4 nong5	80%
+糊弄	hu1 nong5	80%
+糊弄	hu2 long4
+糊弄	hu4 long4
+糊弄	hu1 long4
+糊弄	hu2 long5	80%
+糊弄	hu4 long5	80%
+糊弄	hu1 long5	80%
 糊弄局	hu4 nong4 ju2
 糊弄局	hu2 nong4 ju2
+糊弄局	hu1 nong4 ju2
+糊弄局	hu4 nong5 ju2	80%
+糊弄局	hu2 nong5 ju2	80%
+糊弄局	hu1 nong5 ju2	80%
+糊弄局	hu4 long4 ju2
+糊弄局	hu2 long4 ju2
+糊弄局	hu1 long4 ju2
+糊弄局	hu4 long5 ju2	80%
+糊弄局	hu2 long5 ju2	80%
+糊弄局	hu1 long5 ju2	80%
 糊突	hu2 tu2
 糊突	hu2 tu1
 糊突神	hu2 tu2 shen2
@@ -99351,6 +99382,7 @@ min_phrase_weight: 100
 胡廝哄	hu2 si1 hong1
 胡廝混	hu2 si1 hun4
 胡弄局	hu2 nong4 ju2
+胡弄局	hu2 long4 ju2
 胡志強	hu2 zhi4 qiang2
 胡思亂量	hu2 si1 luan4 liang2
 胡掄	hu2 lun1
@@ -100508,6 +100540,7 @@ min_phrase_weight: 100
 航行安全書	hang2 xing2 an1 quan2 shu1
 航行燈	hang2 xing2 deng1
 航路標識	hang2 lu4 biao1 zhi4
+航路標識	hang2 lu4 biao1 shi4
 般倕	ban1 chui2
 般弄	ban1 nong4
 般桓	pan2 huan2
@@ -115506,4 +115539,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 115509 #####
+##### @結束 END - 115542 #####
