@@ -12,7 +12,7 @@
 
 - librime 1.13.1
 
-- librime-lua #287
+- librime-lua #366
 
 ### plugins
 
