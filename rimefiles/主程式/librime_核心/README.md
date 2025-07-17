@@ -6,9 +6,9 @@
 
 ### Version Info
 
-- librime 1.13.1 (cfa7f01)
+- librime 1.13.1 (1a1fbbe)
 
-- librime-lua #287 (68f9c36)
+- librime-lua #409 (68f9c36)
 
 ### plugins
 
