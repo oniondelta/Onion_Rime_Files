@@ -68,14 +68,14 @@ local function Ver_info(env)
     lua_v = string.format("%s", _VERSION) or ""
     i_id = string.format("%s", rime_api.get_user_id()) or ""
   elseif version_n >= 9 then
-    local unknown = "⚠️ librime-lua 小於 185，無判定"
+    local unknown = "⚠️ librime-lua 小於 #185，無判定"
     distribution_v = unknown .. " ver 函數"
     librime_v = string.format("librime %s", rime_api.get_rime_version()) or ""
     librime_lua_v = string.format("librime-lua #%s", version_n) or ""
     lua_v = string.format("%s", _VERSION) or ""
     i_id = unknown .. " id 函數"
   else
-    local unknown = "⚠️ librime-lua 小於 9，皆無法判定"
+    local unknown = "⚠️ librime-lua 小於 #9，皆無法判定"
     distribution_v = unknown
     librime_v = unknown
     librime_lua_v = unknown
