@@ -621,6 +621,7 @@ min_phrase_weight: 100
 𠹌	(neng5)	0%
 噥	(nang5)	0%
 哝	(nang5)	0%
+嚯	(nve5)	0%
 嚦	(li5)	1%
 呖	(li5)	1%
 唳	(li5)	0%
@@ -679,7 +680,7 @@ min_phrase_weight: 100
 哴	(lang5)	0%
 啷	(lang5)	0%
 𠺘	(lang5)	0%
-咕	(gu5)	100%
+# 咕	(gu5)	100%
 呱	(gu5)	0%
 唂	(gu5)	0%
 哌	(gu5)	0%
@@ -1033,6 +1034,7 @@ min_phrase_weight: 100
 啄	(zhuo5)	0%
 噣	(zhuo5)	0%
 啅	(zhuo5)	0%
+啜	(zhuo5)	0%
 㗓	(zhui5)	0%
 囀	(zhuan5)	0%
 啭	(zhuan5)	0%
@@ -1071,9 +1073,11 @@ min_phrase_weight: 100
 吷	(chuo5)	0%
 啜	(chuo5)	0%
 嚽	(chuo5)	0%
+哾	(chuo5)	0%
 吹	(chui5)	0%
 𠷕	(chui5)	0%
 嘬	(chuai5)	0%
+啜	(chuai5)	0%
 𠯀	(chuan5)	0%
 喘	(chuan5)	0%
 𠸸	(chun5)	0%
