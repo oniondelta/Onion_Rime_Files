@@ -3,6 +3,7 @@
 執行時記憶體會暴增
 --]]
 local function Version(env)
+  -- local ver
   if rime_api.get_time_ms then
     return 409
   elseif Spans then
@@ -26,7 +27,6 @@ local function Version(env)
       return 215
     end
   end
-  local ver
   if Opencc and Opencc('s2t.json').convert_word then
     return 200
   elseif rime_api.regex_match then
