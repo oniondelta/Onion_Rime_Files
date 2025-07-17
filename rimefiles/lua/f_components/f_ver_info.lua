@@ -3,10 +3,18 @@
 執行時記憶體會暴增
 --]]
 local function Version(env)
-
-  -- if KeyEvent(0x41,0):repr() == "A" then  -- 如果非該版，會報錯！
-  if KeyEvent("A",1):repr() == "Shift+A" then
+  if rime_api.get_time_ms then
+    return 409
+  elseif Spans then
+    return Spans().clear and 366 or 361
+  elseif Segment(0, 3).active_text then
+    return 329
+  elseif ConfigValue(3).element.get_obj then
+    return 323
+  elseif KeyEvent(("A"):byte(), 1):eq(KeyEvent("Shift+A")) then
     return 321
+  elseif ShadowCandidate then
+    return 296
   elseif Component and Component.TableTranslator then
     return 287
   elseif UserDb and TableDb then
