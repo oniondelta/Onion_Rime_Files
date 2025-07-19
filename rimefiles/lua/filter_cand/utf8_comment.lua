@@ -10,7 +10,7 @@ local url_encode = require("f_components/f_url_encode")
 --     local unicode_d = utf8.codepoint(char)
 --     local unicode_h = string.format('%X', unicode_d)
 --     local urlcode = url_encode(char)
---     comment = "  U+" .. unicode_h .. " (" .. urlcode .. "）" or ""
+--     comment = "  U+" .. unicode_h .. "（ " .. urlcode .. " ）" or ""
 --   else
 --     comment = ""
 --   end
@@ -21,7 +21,7 @@ local url_encode = require("f_components/f_url_encode")
 ---- 寫法二
 
 -- local function utf8_comment(char)
---   local comment = utf8.len(char) == 1 and "  U+" .. string.format("%X",utf8.codepoint(char)) .. "  ( " .. url_encode(char) .. " ）" or ""
+--   local comment = utf8.len(char) == 1 and "  U+" .. string.format("%X", utf8.codepoint(char)) .. "（ " .. url_encode(char) .. " ）" or ""
 --   return comment
 -- end
 
@@ -29,7 +29,7 @@ local url_encode = require("f_components/f_url_encode")
 ---- 寫法三
 
 -- local function utf8_comment(char)
---   return utf8.len(char) == 1 and "  U+" .. string.format("%X",utf8.codepoint(char)) .. "  ( " .. url_encode(char) .. " ）" or ""
+--   return utf8.len(char) == 1 and "  U+" .. string.format("%X", utf8.codepoint(char)) .. "（ " .. url_encode(char) .. " ）" or ""
 -- end
 
 ----------------------------------------------------------------------------------------
@@ -39,7 +39,7 @@ local url_encode = require("f_components/f_url_encode")
 --   local unicode_d = utf8.codepoint(char)
 --   local unicode_h = string.format('%X', unicode_d)
 --   local urlcode = url_encode(char)
---   return "  U+" .. unicode_h .. " (" .. urlcode .. "）" or ""
+--   return "  U+" .. unicode_h .. "（ " .. urlcode .. " ）" or ""
 -- end
 
 ----------------------------------------------------------------------------------------
@@ -47,8 +47,8 @@ local url_encode = require("f_components/f_url_encode")
 
 local function utf8_comment(char)
   -- local char = char ~= "" and char or "0空碼"  --如 char 為""空碼，下方會出錯！
-  return "  U+" .. string.format("%X",utf8.codepoint(char)) .. " (" .. url_encode(char) .. "）"
-  -- return char ~= "" and "  U+" .. string.format("%X",utf8.codepoint(char)) .. " (" .. url_encode(char) .. "）" or "  U+0000(空碼)"
+  return "  U+" .. string.format("%X", utf8.codepoint(char)) .. "（ " .. url_encode(char) .. " ）"
+  -- return char ~= "" and "  U+" .. string.format("%X", utf8.codepoint(char)) .. "（ " .. url_encode(char) .. " ）" or "  U+0000(空碼)"
 end
 
 ----------------------------------------------------------------------------------------

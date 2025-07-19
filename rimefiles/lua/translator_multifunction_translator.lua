@@ -2669,7 +2669,7 @@ local function translate(input, seg, env)
       preedittext = preedittext .. "\t 【內碼十進制】"  --【內碼十進制 Dec】
     end
     -- 單獨查找(改用下面迴圈執行)
-    -- local cand_ui_s = Candidate("simp_mf_utf", seg.start, seg._end, utf8_out(c), string.format(fmt, c) .. "  ( " .. url_encode(utf8_out(c)) .. " ）" )
+    -- local cand_ui_s = Candidate("simp_mf_utf", seg.start, seg._end, utf8_out(c), string.format(fmt, c) .. "（ " .. url_encode(utf8_out(c)) .. " ）" )
     -- 排除數字太大超出範圍。正常範圍輸出已 string_char，故 0 直接可以限定。
     if (utf8_out(c) == 0) then
       yield_c( "", "〈超出範圍〉", preedittext)  --字符過濾可能會過濾掉""整個選項。
@@ -2681,13 +2681,13 @@ local function translate(input, seg, env)
     if (c+16 <= 1048575) then  -- 補後面 16 碼，如：x8d70 為「走」，補 x8d7[0+16] 到 x8d80。
       for i = c, c+16 do
       -- for i = c+1, c+16 do
-        yield_c( utf8_out(i), string.format(fmt, i) .. "  ( " .. url_encode(utf8_out(i)) .. " ）", preedittext)
+        yield_c( utf8_out(i), string.format(fmt, i) .. "（ " .. url_encode(utf8_out(i)) .. " ）", preedittext)
       end
       return
     -- elseif c <= 1048575 and c+16 > 1048575 then  -- Unicode 編碼末尾。
     elseif (c <= 1048575) then  -- Unicode 編碼末尾。
       for i = c, 1048575 do
-        yield_c( utf8_out(i), string.format(fmt, i) .. "  ( " .. url_encode(utf8_out(i)) .. " ）", preedittext)
+        yield_c( utf8_out(i), string.format(fmt, i) .. "（ " .. url_encode(utf8_out(i)) .. " ）", preedittext)
       end
       return
     end
