@@ -116,6 +116,7 @@
 #    詞句中，「夕」臺灣字典發音和習慣發音為「xi4」，大陸發音為「xi1」，斟酌後全改成臺灣發音「xi4」。
 #    詞句中，「息」臺灣字典發音和習慣發音為「xi2」，大陸發音為「xi1」，斟酌後全改成臺灣發音「xi2」。
 #    詞句中，「跌」臺灣字典發音和習慣發音為「die2」，大陸發音為「die1」，斟酌後全改成臺灣發音「die2」。
+#    詞句中，「擲」臺灣字典發音和習慣發音為「zhi2」，大陸發音為「zhi4」，斟酌後全改成臺灣發音「zhi2」。
 #    詞句中，「關係」其「係」臺灣字典發音為「xi4」，但日常常發「xi1」，故「關係」其「係」都補上「xi1」該發音。
 #    詞句中，「地」於句尾當結構助詞時，意思同「的」時，不標註「di4」，標註「de5」「di5」。
 #    詞句中，「嚓」臺灣字典只有發音「ca1」，不標為「cha1」，因為為形聲，故另標「ca5」，故全都補齊「ca1」「ca5」。
@@ -154,8 +155,11 @@
 #    詞句中，「諷」臺灣標準為「feng4」，又音為「feng1」，大陸和臺灣日常慣用語音為「feng3」，故皆補齊「feng4」「feng3」「feng1」。
 #    詞句中，「菌」臺灣標準為「jun4」，大陸標準為「jun1」，日常易混，故皆補齊「jun4」「jun1」。
 #    詞句中，「拎」臺灣標準為「ling1」，大陸標準為「lin1」，日常易混，故皆補齊「ling1」「lin1」。
+#    詞句中，「樸」臺灣標準為「pu2」，大陸標準為「pu3」，日常易混，故皆補齊「pu2」「pu3」。
 #    詞句中，「惋」臺灣標準為「wan4」，大陸標準為「wan3」，日常易混，故皆補齊「wan4」「wan3」。
 #    詞句中，「肘」臺灣標準為「zhou3」，日常發音常會誤發為「zhou2」，故皆補齊「zhou3」「zhou2」，後者詞頻設為80%。。
+#    詞句中，「炔」臺灣標準為「que1」，日常發音常會發「jue2」，故皆補齊「que1」「jue2」。
+#    詞句中，「悄」臺灣標準為「qiao3」，日常發音常會發「qiao1」，故皆補齊「qiao3」「qiao1」。
 #    詞句中，「播」臺灣標準為「bo4」，日常發音常會發「bo1」，故皆補齊「bo4」「bo1」。
 #    詞句中，「綜」臺灣標準為「zong4」，日常發音常會發「zong1」，故皆補齊「zong4」「zong1」。
 #    詞句中，「究」臺灣標準為「jiu4」，又音為「jiu1」，日常易混，故皆補齊「jiu4」「jiu1」。
@@ -166,6 +170,7 @@
 #    詞句中，「婭」皆補齊「ya4」「ya3」。
 #    詞句中，「頗」皆補齊「po3」「po1」。
 #    詞句中，「咱」皆補齊「zan2」「za2」。
+#    詞句中，「羧」皆補齊「zui1」「suo1」。
 #    詞句中，「績」「蹟」「跡」「迹」臺灣標準為「ji1」，大陸標準為「ji4」，只保留「ji1」發音。
 #    詞句中，「寂」臺灣標準為「ji2」，大陸標準為「ji4」，只保留「ji2」發音。
 #    詞句中，「妮」臺灣標準為「ni2」，大陸標準為「ni1」，只保留「ni2」發音。
@@ -180,6 +185,11 @@
 #    詞句中，「姑娘」補齊「gu1 niang2」和「gu1 niang5」，後者詞頻設為80%。
 #    詞句中，「親戚」補齊「qin1 qi1」和「qin1 qi4」，後者詞頻設為80%。
 #    詞句中，「拓撲」臺灣字典發音為「tuo4 pu1」，日常發音常會誤發為「tuo4 bu3」和「tuo4 pu3」，故皆補齊「tuo4 pu1」「tuo4 bu3」「tuo4 pu3」，最後者「tuo4 pu3」詞頻設為80%。
+#    詞句中，「給予」臺灣字典發音為「ji3 yu3」，日常發音常發，故皆補齊「ji3 yu3」「ji3 yu2」「gei3 yu3」「gei3 yu2」。
+#    詞句中，「骨頭」臺灣字典發音為「gu2 tou5」，日常發音常發，故皆補齊「gu2 tou5」「gu2 tou2」「gu3 tou5」「gu3 tou2」。
+#    詞句中，「胳膊」臺灣字典發音為「ge1 bo5」，日常發音常發「ge1 bo2」，故皆補齊「ge1 bo5」「ge1 bo2」。
+#    詞句中，「部署」臺灣字典發音為「bu4 shu4」，日常發音常發「bu4 shu3」，故皆補齊「bu4 shu4」「bu4 shu3」。
+#    詞句中，「相片」「照片」「影片」「碟片」「唱片」「畫片」，其「片」發音，皆補齊「pian4」和「pian1」。
 #    預計比對「輕聲和一聲」變音。
 #
 #  〈2020修改字詞彙發音〉：
@@ -2740,6 +2750,7 @@ min_phrase_weight: 100
 餟	chuo4	0%
 捅	song3	0%
 咕	gu5
+悄	qiao4	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -3985,7 +3996,7 @@ min_phrase_weight: 100
 鯖	zheng1	1%
 鯡	fei4	1%
 鵲	qiao3	1%
-麴	qu2	1%
+麴	qu2
 齗	yin2	1%
 㘔	sai1	1%
 㘔	sai2	1%
@@ -38214,7 +38225,7 @@ min_phrase_weight: 100
 麲	xian4
 麲	yan4
 麳	lai2
-麴	qu1
+麴	qu1	10%
 麵	mian4
 麶	chi1
 麶	li2
@@ -56841,6 +56852,9 @@ min_phrase_weight: 100
 丫頭	ya1 tou5
 丫頭	ya1 tou2
 丫頭片子	ya1 tou5 pian4 zi5
+丫頭片子	ya1 tou2 pian4 zi5
+丫頭片子	ya1 tou5 pian1 zi5
+丫頭片子	ya1 tou2 pian1 zi5
 丫鬟	ya1 huan2
 中伏	zhong1 fu2
 中伏	zhong4 fu2
@@ -57211,6 +57225,7 @@ min_phrase_weight: 100
 乘馬	cheng2 ma3
 乘馬	sheng4 ma3
 乙炔	yi3 que1
+乙炔	yi3 jue2
 乙狀結腸	yi3 zhuang4 jie2 chang2
 乙種	yi3 zhong3
 乙種促效劑	yi3 zhong3 cu4 xiao4 ji4
@@ -60461,6 +60476,7 @@ min_phrase_weight: 100
 儉以防匱	jian3 yi3 fang2 kui4
 儉朴	jian3 pu3
 儉樸	jian3 pu2
+儉樸	jian3 pu3
 儉薄	jian3 bo2
 儋石	dan1 dan4
 儋石之畜	dan1 dan4 zhi1 xu4
@@ -63007,6 +63023,7 @@ min_phrase_weight: 100
 劄子	zha2 zi5
 劇地	ju4 di4
 劇情影片	ju4 qing2 ying3 pian4
+劇情影片	ju4 qing2 ying3 pian1
 劇曲	ju4 qu3
 劇校	ju4 xiao4
 劇種	ju4 zhong3
@@ -64663,6 +64680,7 @@ min_phrase_weight: 100
 反景	fan3 ying3
 反本還原	fan3 ben3 huan2 yuan2
 反樸	fan3 pu2
+反樸	fan3 pu3
 反正一樣	fan3 zheng4 yi2 yang4
 反正一樣	fan3 zheng4 yi1 yang4
 反氣旋	fan3 qi4 xuan2
@@ -66577,6 +66595,7 @@ min_phrase_weight: 100
 唱哩嗹	chang4 li1 lian2
 唱洋梆子	chang4 yang2 bang1 zi5
 唱片	chang4 pian4
+唱片	chang4 pian1
 唱空城計	chang4 kong1 cheng2 ji4
 唱籌量沙	chang4 chou2 liang2 sha1
 唱賺	chang4 zhuan4
@@ -66616,6 +66635,7 @@ min_phrase_weight: 100
 商數	shang1 shu4
 商朝	shang1 chao2
 商業影片	shang1 ye4 ying3 pian4
+商業影片	shang1 ye4 ying3 pian1
 商業應用	shang1 ye4 ying4 yong4
 商業模式	shang1 ye4 mo2 shi4
 商業行為	shang1 ye4 xing2 wei2
@@ -66712,6 +66732,7 @@ min_phrase_weight: 100
 啞酒	ya3 jiu3
 啞鈴	ya3 ling2
 啞默悄靜	ya3 mo4 qiao3 jing4
+啞默悄靜	ya3 mo4 qiao1 jing4
 啞點	ya3 dian3
 啞鼓	ya3 gu3
 啥子	sha2 zi5
@@ -67087,6 +67108,7 @@ min_phrase_weight: 100
 單縣	shan4 xian4
 單腳鞋銀行	dan1 jiao3 xie2 yin2 hang2
 單色照片	dan1 se4 zhao4 pian4
+單色照片	dan1 se4 zhao4 pian1
 單葉雙曲面	dan1 ye4 shuang1 qu1 mian4
 單葉雙曲面	dan1 ye4 shuang1 qu3 mian4
 單薄	dan1 bo2
@@ -71863,6 +71885,7 @@ min_phrase_weight: 100
 密親	mi4 qin1
 密跡金剛	mi4 ji1 jin1 gang1
 密集部署	mi4 ji2 bu4 shu4
+密集部署	mi4 ji2 bu4 shu3
 密點地圖	mi4 dian3 di4 tu2
 寇仇	kou4 chou2
 富商大賈	fu4 shang1 da4 gu3
@@ -72135,6 +72158,7 @@ min_phrase_weight: 100
 寬度	kuan1 du4
 寬廣度	kuan1 guang3 du4
 寬影片	kuan1 ying3 pian4
+寬影片	kuan1 ying3 pian1
 寬待	kuan1 dai4
 寬心丸兒	kuan1 xin1 wan2 er5	80%
 寬心丸兒	kuan1 xin1 wan2 er2
@@ -73619,6 +73643,7 @@ min_phrase_weight: 100
 布隆伯格	bu4 long1 bo2 ge2
 布雷克磨	bu4 lei2 ke4 mo2
 布面相片	bu4 mian4 xiang4 pian1
+布面相片	bu4 mian4 xiang4 pian4
 布魯勒	bu4 lu3 le4
 布魯塞爾	bu4 lu3 sai4 er3
 布魯塞爾	bu4 lu3 se4 er3
@@ -75053,6 +75078,7 @@ min_phrase_weight: 100
 影子政府	ying3 zi5 zheng4 fu3
 影子花	ying3 zi5 hua1
 影片	ying3 pian4
+影片	ying3 pian1
 影視卡	ying3 shi4 ka3
 影調	ying3 diao4
 影調劇	ying3 diao4 ju4
@@ -76164,12 +76190,12 @@ min_phrase_weight: 100
 悁悁	juan1 juan1
 悁想	juan1 xiang3
 悁邑	juan1 yi4
-悄悄	qiao1 qiao1
 悄悄	qiao3 qiao3
+悄悄	qiao1 qiao1
 悄悄話	qiao3 qiao3 hua4
 悄悄話	qiao1 qiao1 hua4
-悄無聲息	qiao1 wu2 sheng1 xi2
 悄無聲息	qiao3 wu2 sheng1 xi2
+悄無聲息	qiao1 wu2 sheng1 xi2
 悅樂	yue4 le4
 悉數	xi1 shu3
 悉數	xi1 shu4
@@ -78059,6 +78085,7 @@ min_phrase_weight: 100
 投影幾何	tou2 ying3 ji3 he2
 投影幾何學	tou2 ying3 ji3 he2 xue2
 投影片	tou2 ying3 pian4
+投影片	tou2 ying3 pian1
 投手防禦率	tou2 shou3 fang2 yu4 lv4
 投擲	tou2 zhi2
 投擲	tou2 zhi4
@@ -78264,7 +78291,9 @@ min_phrase_weight: 100
 抱朴	bao4 pu2
 抱朴子	bao4 pu2 zi3
 抱樸	bao4 pu2
+抱樸	bao4 pu3
 抱素懷樸	bao4 su4 huai2 pu2
+抱素懷樸	bao4 su4 huai2 pu3
 抱肚	bao4 du4
 抱蔓摘瓜	bao4 man4 zhai1 gua1
 抱關擊柝	bao4 guan1 ji2 tuo4
@@ -79165,6 +79194,7 @@ min_phrase_weight: 100
 捉髮	zhuo1 fa3
 捊治	pou2 zhi4
 捋胳膊	le4 ge1 bo2
+捋胳膊	le4 ge1 bo5
 捋胳膊	luo1 ge1 bo2
 捋胳膊	luo1 ge1 bo5
 捋臂將拳	luo1 bi4 jiang1 quan2
@@ -79232,6 +79262,7 @@ min_phrase_weight: 100
 捲土重來	juan3 tu3 chong2 lai2
 捲子	juan3 zi5
 捲煙畫片	juan3 yan1 hua4 pian4
+捲煙畫片	juan3 yan1 hua4 pian1
 捲甲重來	juan3 jia3 chong2 lai2
 捲鋪蓋	juan3 pu1 gai4
 捲髮	juan3 fa3
@@ -81623,6 +81654,7 @@ min_phrase_weight: 100
 散齋	san4 zhai1
 敦槃	dui4 pan2
 敦樸	dun1 pu2
+敦樸	dun1 pu3
 敦煌曲子	dun1 huang2 qu3 zi5
 敦葫蘆	dun1 hu2 lu2
 敦親睦鄰	dun1 qin1 mu4 lin2
@@ -81708,6 +81740,7 @@ min_phrase_weight: 100
 數位化	shu3 wei4 hua4
 數位化錄音帶	shu4 wei4 hua4 lu4 yin1 dai4
 數位唱片	shu4 wei4 chang4 pian4
+數位唱片	shu4 wei4 chang4 pian1
 數位影像	shu4 wei4 ying3 xiang4
 數位影碟	shu4 wei4 ying3 die2
 數位控制	shu4 wei4 kong4 zhi4
@@ -81744,6 +81777,7 @@ min_phrase_weight: 100
 數字化	shu4 zi4 hua4
 數字命理學	shu4 zi4 ming4 li3 xue2
 數字唱片	shu4 zi4 chang4 pian4
+數字唱片	shu4 zi4 chang4 pian1
 數字導覽設施	shu4 zi4 dao3 lan3 she4 shi1
 數字時鐘	shu4 zi4 shi2 zhong1
 數字版權管理	shu4 zi4 ban3 quan2 guan3 li3
@@ -81977,6 +82011,7 @@ min_phrase_weight: 100
 斫畬	zhuo2 yu2
 斫蜋	zhuo2 lang2
 斫雕為樸	zhuo2 diao1 wei2 pu2
+斫雕為樸	zhuo2 diao1 wei2 pu3
 斫鱠	zhuo2 kuai4
 斬伐	zhan3 fa1
 斬伐	zhan3 fa2
@@ -82093,7 +82128,9 @@ min_phrase_weight: 100
 斲喪	zhuo2 sang4
 斲方為圓	zhuo2 fang1 wei2 yuan2
 斲琱為樸	zhuo2 diao1 wei2 pu2
+斲琱為樸	zhuo2 diao1 wei2 pu3
 斲雕為樸	zhuo2 diao1 wei2 pu2
+斲雕為樸	zhuo2 diao1 wei2 pu3
 斷喝	duan4 he4
 斷層掃描	duan4 ceng2 sao3 miao2
 斷根絕種	duan4 gen1 jue2 zhong3
@@ -83273,6 +83310,7 @@ min_phrase_weight: 100
 最低限度	zui4 di1 xian4 du4
 最低限度理論	zui4 di1 xian4 du4 li3 lun4
 最佳影片	zui4 jia1 ying3 pian4
+最佳影片	zui4 jia1 ying3 pian1
 最大公約數	zui4 da4 gong1 yue1 shu4
 最大速率	zui4 da4 su4 lv4
 最小公倍數	zui4 xiao3 gong1 bei4 shu4
@@ -83840,6 +83878,7 @@ min_phrase_weight: 100
 木作	mu4 zuo1
 木作	mu4 zuo4
 木偶影片	mu4 ou3 ying3 pian4
+木偶影片	mu4 ou3 ying3 pian1
 木刻	mu4 ke1
 木刻	mu4 ke4
 木刻水印	mu4 ke1 shui3 yin4
@@ -84889,6 +84928,7 @@ min_phrase_weight: 100
 棧橋式碼頭	zhan4 qiao2 shi4 ma3 tou5
 棧橋式碼頭	zhan4 qiao2 shi4 ma3 tou2
 棫樸	yu4 pu2
+棫樸	yu4 pu3
 森林遊樂區	sen1 lin2 you2 le4 qu1
 森海塞爾	sen1 hai3 se4 er3
 稜子	leng2 zi5
@@ -85438,31 +85478,53 @@ min_phrase_weight: 100
 樣本調查	yang4 ben3 diao4 cha2
 樣條函數	yang4 tiao2 han2 shu4
 樸厚	pu2 hou4
+樸厚	pu3 hou4
 樸學	pu2 xue2
+樸學	pu3 xue2
 樸實	pu2 shi2
 樸實	pu3 shi2
 樸實無華	pu2 shi2 wu2 hua2
+樸實無華	pu3 shi2 wu2 hua2
 樸實頭	pu2 shi2 tou2
+樸實頭	pu3 shi2 tou2
 樸拙	pu2 zhuo2
+樸拙	pu3 zhuo2
 樸樕	pu2 su4
+樸樕	pu3 su4
 樸父	pu2 fu4
+樸父	pu3 fu4
 樸直	pu2 zhi2
+樸直	pu3 zhi2
 樸素	pu2 su4
 樸素	pu3 su4
 樸素無華	pu2 su4 wu2 hua2
+樸素無華	pu3 su4 wu2 hua2
 樸訥	pu2 na4
+樸訥	pu3 na4
 樸訥誠篤	pu2 na4 cheng2 du3
+樸訥誠篤	pu3 na4 cheng2 du3
 樸質	pu2 zhi2
 樸質	pu2 zhi4	3%
+樸質	pu3 zhi2
+樸質	pu3 zhi4	3%
 樸質無華	pu2 zhi2 wu2 hua2
 樸質無華	pu2 zhi4 wu2 hua2	3%
+樸質無華	pu3 zhi2 wu2 hua2
+樸質無華	pu3 zhi4 wu2 hua2	3%
 樸鄙	pu2 bi3
+樸鄙	pu3 bi3
 樸重	pu2 zhong4
+樸重	pu3 zhong4
 樸野	pu2 ye3
+樸野	pu3 ye3
 樸鈍	pu2 dun4
+樸鈍	pu3 dun4
 樸陋	pu2 lou4
+樸陋	pu3 lou4
 樸馬	pu2 ma3
+樸馬	pu3 ma3
 樸魯	pu2 lu3
+樸魯	pu3 lu3
 樹倒根摧	shu4 dao3 gen1 cui1
 樹倒猢猻散	shu4 dao3 hu2 sun1 san4
 樹冠	shu4 guan1
@@ -86577,12 +86639,17 @@ min_phrase_weight: 100
 氣體溫度計	qi4 ti3 wen1 du4 ji4
 氣鳴樂器	qi4 ming2 yue4 qi4
 氧乙炔	yang3 yi3 que1
+氧乙炔	yang3 yi3 jue2
 氧乙炔炬	yang3 yi3 que1 ju4
+氧乙炔炬	yang3 yi3 jue2 ju4
 氧乙炔焊	yang3 yi3 que1 han4
+氧乙炔焊	yang3 yi3 jue2 han4
 氧乙炔焊炬	yang3 yi3 que1 han4 ju4
+氧乙炔焊炬	yang3 yi3 jue2 han4 ju4
 氧吧	yang3 ba1
 氧效應	yang3 xiao4 ying4
 氧炔吹管	yang3 que1 chui1 guan3
+氧炔吹管	yang3 jue2 chui1 guan3
 氨基葡萄糖	an1 ji1 pu2 tao5 tang2
 氨基葡萄糖	an1 ji1 pu2 tao2 tang2
 氫彈	qing1 dan4
@@ -86612,6 +86679,7 @@ min_phrase_weight: 100
 水和	shui3 he2
 水圈	shui3 quan1
 水墨動畫影片	shui3 mo4 dong4 hua4 ying3 pian4
+水墨動畫影片	shui3 mo4 dong4 hua4 ying3 pian1
 水天一色	shui3 tian1 yi2 se4
 水天一色	shui3 tian1 yi1 se4
 水宿	shui3 xiu4
@@ -87773,6 +87841,7 @@ min_phrase_weight: 100
 洗濯	xi3 zhuo2
 洗然	xian3 ran2
 洗照片	xi3 zhao4 pian4
+洗照片	xi3 zhao4 pian1
 洗盞更酌	xi3 zhan3 geng1 zhuo2
 洗馬	xian3 ma3
 洗馬	xi3 ma3
@@ -88816,7 +88885,9 @@ min_phrase_weight: 100
 渾小子	hun2 xiao3 zi5
 渾敦	hun4 dun1
 渾樸	hun2 pu2
+渾樸	hun2 pu3
 渾樸自然	hun2 pu2 zi4 ran2
+渾樸自然	hun2 pu3 zi4 ran2
 渾殽	hun4 yao2
 渾水摸魚	hun2 shui3 mo1 yu2
 渾水摸魚	hun4 shui3 mo1 yu2
@@ -89405,6 +89476,7 @@ min_phrase_weight: 100
 澹蕩	dan4 dang4
 澹話	dan4 hua4
 激光唱片	ji1 guang1 chang4 pian4
+激光唱片	ji1 guang1 chang4 pian1
 激切	ji1 qie4
 激刺	ji1 ci4
 激將	ji1 jiang4
@@ -89520,6 +89592,7 @@ min_phrase_weight: 100
 瀾漫	lan4 man4
 灂灂	zhuo2 zhuo2
 灌唱片	guan4 chang4 pian4
+灌唱片	guan4 chang4 pian1
 灌渠	guan4 qu2
 灌溉渠	guan4 gai4 qu2
 灌漿	guan4 jiang1
@@ -89976,8 +90049,11 @@ min_phrase_weight: 100
 照明射擊	zhao4 ming2 she4 ji2
 照明彈	zhao4 ming2 dan4
 照片	zhao4 pian4
+照片	zhao4 pian1
 照片子	zhao4 pian4 zi5
+照片子	zhao4 pian1 zi5
 照片底版	zhao4 pian4 di3 ban3
+照片底版	zhao4 pian1 di3 ban3
 照相	zhao4 xiang4
 照相凸版	zhao4 xiang4 tu1 ban3
 照相凸版	zhao4 xiang4 tu2 ban3
@@ -93597,6 +93673,7 @@ min_phrase_weight: 100
 相片	xiang4 pian4
 相片	xiang1 pian4
 相片光碟	xiang4 pian4 guang1 die2
+相片光碟	xiang4 pian1 guang1 die2
 相狎	xiang1 xia2
 相率	xiang1 shuai4
 相王	xiang4 wang2
@@ -94675,9 +94752,11 @@ min_phrase_weight: 100
 碟式煞車	die2 shi4 sha1 che1
 碟式相機	die2 shi4 xiang4 ji1
 碟影片	die2 ying3 pian4
+碟影片	die2 ying3 pian1
 碟煞	die2 sha1
 碟煞	die2 sha4
 碟片	die2 pian4
+碟片	die2 pian1
 碧澄澄	bi4 cheng2 cheng2
 碧眼金髮	bi4 yan3 jin1 fa3
 碧空	bi4 kong1
@@ -94718,13 +94797,16 @@ min_phrase_weight: 100
 碾子山	nian3 zi5 shan1
 碾子山區	nian3 zi5 shan1 qu1
 磁光型光碟片	ci2 guang1 xing2 guang1 die2 pian4
+磁光型光碟片	ci2 guang1 xing2 guang1 die2 pian1
 磁卡	ci2 ka3
 磁卡閱讀機	ci2 ka3 yue4 du2 ji1
 磁感應	ci2 gan3 ying4
 磁感應強度	ci2 gan3 ying4 qiang2 du4
 磁氣圈	ci2 qi4 quan1
 磁片	ci2 pian4
+磁片	ci2 pian1
 磁碟片	ci2 die2 pian4
+磁碟片	ci2 die2 pian1
 磁通量	ci2 tong1 liang4
 磁通量	ci2 tong1 liang2
 磅硠	pang1 lang2
@@ -96168,7 +96250,9 @@ min_phrase_weight: 100
 立體廣播	li4 ti3 guang3 bo4
 立體廣播	li4 ti3 guang3 bo1
 立體影片	li4 ti3 ying3 pian4
+立體影片	li4 ti3 ying3 pian1
 立體照片	li4 ti3 zhao4 pian4
+立體照片	li4 ti3 zhao4 pian1
 立體照相機	li4 ti3 zhao4 xiang4 ji1
 站不住腳	zhan4 bu2 zhu4 jiao3
 站得住	zhan4 de5 zhu4
@@ -97483,6 +97567,7 @@ min_phrase_weight: 100
 絣扒	beng1 ba1
 絣扒吊拷	beng1 ba1 diao4 kao3
 給予	ji3 yu3
+給予	ji3 yu2
 給予	gei3 yu2
 給予	gei3 yu3
 給事中	ji3 shi4 zhong1
@@ -99415,6 +99500,7 @@ min_phrase_weight: 100
 胡椒薄荷	hu2 jiao1 bo4 he2
 胡樂	hu2 yue4
 胡樸安	hu2 pu2 an1
+胡樸安	hu2 pu3 an1
 胡歌野調	hu2 ge1 ye3 diao4
 胡混	hu2 hun4
 胡混	hu2 hun3
@@ -102129,7 +102215,10 @@ min_phrase_weight: 100
 薄熙來	bo2 xi1 lai2
 薄片	bao2 pian4
 薄片	bo2 pian4
+薄片	bao2 pian1
+薄片	bo2 pian1
 薄片子	bo2 pian4 zi5
+薄片子	bo2 pian1 zi5
 薄片子嘴	bo2 pian4 zi5 zui3
 薄物細故	bo2 wu4 xi4 gu4
 薄瑞光	bo2 rui4 guang1
@@ -106815,6 +106904,7 @@ min_phrase_weight: 100
 躉售市場	dun3 shou4 shi4 chang3
 躉當	dun3 dang4
 躋躋蹌蹌	ji1 ji1 qiang4 qiang4
+躡悄悄	nie4 qiao3 qiao3
 躡悄悄	nie4 qiao1 qiao1
 躡景	nie4 ying3
 躡景追飛	nie4 ying3 zhui1 fei1
@@ -108590,7 +108680,9 @@ min_phrase_weight: 100
 還沒有	hai2 mei2 you3
 還治其人之身	huan2 zhi4 qi2 ren2 zhi1 shen1
 還淳反樸	huan2 chun2 fan3 pu2
+還淳反樸	huan2 chun2 fan3 pu3
 還淳返樸	huan2 chun2 fan3 pu2
+還淳返樸	huan2 chun2 fan3 pu3
 還清	huan2 qing1
 還珠合浦	huan2 zhu1 he2 pu3
 還珠返璧	huan2 zhu1 fan3 bi4
@@ -108777,6 +108869,7 @@ min_phrase_weight: 100
 邾婁	zhu1 lv2
 邾婁	zhu1 lv3
 郁樸	yu4 pu2
+郁樸	yu4 pu3
 郁郁青青	yu4 yu4 jing1 jing1
 郃陽縣	ge2 yang2 xian4
 郎世寧	lang2 shi4 ning2
@@ -110142,6 +110235,7 @@ min_phrase_weight: 100
 鐫譙	juan1 qiao2
 鐲子	zhuo2 zi5
 鐳射唱片	lei2 she4 chang4 pian4
+鐳射唱片	lei2 she4 chang4 pian1
 鐵匠	tie3 jiang4
 鐵將軍把門	tie3 jiang1 jun1 ba3 men2
 鐵嶺地區	tie3 ling3 di4 qu1
@@ -112596,6 +112690,7 @@ min_phrase_weight: 100
 雷劈	lei2 pi1
 雷厲風行	lei2 li4 feng1 xing2
 雷射唱片	lei2 she4 chang4 pian4
+雷射唱片	lei2 she4 chang4 pian1
 雷射血管成形術	lei2 she4 xie3 guan3 cheng2 xing2 shu4
 雷射血管成形術	lei2 she4 xue4 guan3 cheng2 xing2 shu4
 雷扎耶湖	lei2 zha2 ye1 hu2
@@ -113488,6 +113583,7 @@ min_phrase_weight: 100
 類地行星	lei4 di4 xing2 xing1
 類木行星	lei4 mu4 xing2 xing1
 類比唱片	lei4 bi3 chang4 pian4
+類比唱片	lei4 bi3 chang4 pian1
 類頻數	lei4 pin2 shu4
 顢裡顢頇	man2 li3 man2 han1
 顢裡顢頇	man1 li3 man1 han1
@@ -114503,6 +114599,7 @@ min_phrase_weight: 100
 高行健	gao1 xing2 jian4
 高見遠識	gao1 jian4 yuan3 shi4
 高調照片	gao1 diao4 zhao4 pian4
+高調照片	gao1 diao4 zhao4 pian1
 高識遠度	gao1 shi4 yuan3 du4
 高識遠見	gao1 shi4 yuan3 jian4
 高質量	gao1 zhi2 liang4
@@ -115559,4 +115656,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 115562 #####
+##### @結束 END - 115659 #####
