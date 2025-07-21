@@ -8,11 +8,14 @@ local function Version(env)
     return 409
   elseif Spans then
     return Spans().clear and 366 or 361
-  elseif Segment(0, 3).active_text then
+  elseif pcall(Segment, 0, 3) and Segment(0, 3).active_text then
     return 329
-  elseif ConfigValue(3).element.get_obj then
+  elseif pcall(ConfigValue, 3) and ConfigValue(3).element.get_obj then
     return 323
-  elseif KeyEvent(("A"):byte(), 1):eq(KeyEvent("Shift+A")) then
+  elseif pcall(KeyEvent, 65, 1) and pcall(KeyEvent, "Shift+A") and KeyEvent(65, 1):eq(KeyEvent("Shift+A")) then    -- 65 == string.byte("A") == ("A"):byte()
+  -- elseif pcall(KeyEvent, string.byte("A"), 1) and pcall(KeyEvent, "Shift+A") and KeyEvent(string.byte("A"), 1):eq(KeyEvent("Shift+A")) then
+  -- elseif pcall(KeyEvent, ("A"):byte(), 1) and pcall(KeyEvent, "Shift+A") and KeyEvent(("A"):byte(), 1):eq(KeyEvent("Shift+A")) then
+  -- elseif pcall(KeyEvent, 0x41, 0) and KeyEvent(0x41, 0):repr() == "A" then    -- 0x41 == 65 (十六進位 vs 十進位)
     return 321
   elseif ShadowCandidate then
     return 296
@@ -27,7 +30,7 @@ local function Version(env)
       return 215
     end
   end
-  if Opencc and Opencc('s2t.json').convert_word then
+  if Opencc and Opencc('s2t.json') and Opencc('s2t.json').convert_word then
     return 200
   elseif rime_api.regex_match then
     return 197
