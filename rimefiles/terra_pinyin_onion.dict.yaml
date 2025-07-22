@@ -164,6 +164,7 @@
 #    詞句中，「綜」臺灣標準為「zong4」，日常發音常會發「zong1」，故皆補齊「zong4」「zong1」。
 #    詞句中，「究」臺灣標準為「jiu4」，又音為「jiu1」，日常易混，故皆補齊「jiu4」「jiu1」。
 #    詞句中，「肯」臺灣標準為「ken3」，又音為「keng3」，日常易混，故皆補齊「ken3」「keng3」。
+#    詞句中，「削」臺灣標準讀音為「xue4」，語音為「xiao1」，大陸標準為「xue1」，日常易混，故皆補齊「xue4」「xiao1」「xue1」。有些詞發音如此標註會奇怪，待攷！
 #    詞句中，「擁」皆補齊「yong3」「yong1」。
 #    詞句中，「熟」皆補齊「shou2」「shu2」。
 #    詞句中，「暫」皆補齊「zhan4」「zan4」。
@@ -189,6 +190,7 @@
 #    詞句中，「骨頭」臺灣字典發音為「gu2 tou5」，日常發音常發，故皆補齊「gu2 tou5」「gu2 tou2」「gu3 tou5」「gu3 tou2」。
 #    詞句中，「胳膊」臺灣字典發音為「ge1 bo5」，日常發音常發「ge1 bo2」，故皆補齊「ge1 bo5」「ge1 bo2」。
 #    詞句中，「部署」臺灣字典發音為「bu4 shu4」，日常發音常發「bu4 shu3」，故皆補齊「bu4 shu4」「bu4 shu3」。
+#    詞句中，「擂臺」「擂台」臺灣字典發音為「lei4 tai2」，日常發音常發「lei2 tai2」，故皆補齊「lei2 tai4」「lei2 tai2」。
 #    詞句中，「相片」「照片」「影片」「碟片」「唱片」「畫片」，其「片」發音，皆補齊「pian4」和「pian1」。
 #    預計比對「輕聲和一聲」變音。
 #
@@ -55914,6 +55916,8 @@ min_phrase_weight: 100
 下操	xia4 cao1
 下旋	xia4 xuan2
 下旋削球	xia4 xuan2 xiao1 qiu2
+下旋削球	xia4 xuan2 xue4 qiu2
+下旋削球	xia4 xuan2 xue1 qiu2
 下梆子	xia4 bang1 zi5
 下檻	xia4 kan3
 下死勁	xia4 si3 jin4
@@ -59051,6 +59055,8 @@ min_phrase_weight: 100
 侮辱	wu3 ru3
 侲子	zhen4 zi3
 侵削	qin1 xue4
+侵削	qin1 xue1
+侵削	qin1 xiao1
 侵占	qin1 zhan4
 侵占	qin1 zhan1
 侵占罪	qin1 zhan4 zui4
@@ -60328,7 +60334,6 @@ min_phrase_weight: 100
 債多了不愁	zhai4 duo1 le5 bu4 chou2
 債台高築	zhai4 tai2 gao1 zhu2
 債臺高築	zhai4 tai2 gao1 zhu2
-債臺高築	zhai4 tai2 gao1 zhu4
 傷亡枕藉	shang1 wang2 zhen4 jie4
 傷和氣	shang1 he2 qi4
 傷嗟	shang1 jie1
@@ -61667,7 +61672,11 @@ min_phrase_weight: 100
 刀刺	dao1 ci4
 刀刺性痛	dao1 ci4 xing4 tong4
 刀削冰	dao1 xiao1 bing1
+刀削冰	dao1 xue4 bing1
+刀削冰	dao1 xue1 bing1
 刀削麵	dao1 xiao1 mian4
+刀削麵	dao1 xue4 mian4
+刀削麵	dao1 xue1 mian4
 刀割針扎	dao1 ge1 zhen1 zha1
 刀創藥	dao1 chuang1 yao4
 刀叉	dao1 cha1
@@ -62127,6 +62136,7 @@ min_phrase_weight: 100
 切切私語	qie1 qie1 si1 yu3
 切削	qie1 xiao1
 切削	qie1 xue4
+切削	qie1 xue1
 切割	qie1 ge1
 切勿	qie4 wu4
 切合	qie4 he2
@@ -62352,6 +62362,7 @@ min_phrase_weight: 100
 刮刮樂	gua1 gua1 le4
 刮削	gua1 xiao1
 刮削	gua1 xue4
+刮削	gua1 xue1
 刮剌	gua1 la2
 刮剌	gua1 la4
 刮剌剌	gua1 la4 la4
@@ -62492,8 +62503,10 @@ min_phrase_weight: 100
 刺齒	ci4 chi3
 刻削	ke4 xue4
 刻削	ke4 xiao1
+刻削	ke4 xue1
 刻削	ke1 xue4
 刻削	ke1 xiao1
+刻削	ke1 xue1
 刻劃	ke4 hua4
 刻劃	ke1 hua4
 刻度	ke4 du4
@@ -62531,55 +62544,101 @@ min_phrase_weight: 100
 削價	xue1 jia4
 削價	xue4 jia4
 削地	xue4 di4
+削地	xiao1 di4
+削地	xue1 di4
 削壁	xue4 bi4
+削壁	xiao1 bi4
+削壁	xue1 bi4
 削奪	xue4 duo2
+削奪	xiao1 duo2
+削奪	xue1 duo2
 削平	xiao1 ping2
 削平	xue4 ping2
+削平	xue1 ping2
 削弱	xue1 ruo4
 削弱	xue4 ruo4
 削弱	xiao1 ruo4
 削成	xue4 cheng2
 削成	xiao1 cheng2
+削成	xue1 cheng2
 削方為圓	xue4 fang1 wei2 yuan2
+削方為圓	xiao1 fang1 wei2 yuan2
+削方為圓	xue1 fang1 wei2 yuan2
 削木為吏	xue4 mu4 wei2 li4
+削木為吏	xiao1 mu4 wei2 li4
+削木為吏	xue1 mu4 wei2 li4
 削正	xue4 zheng4
+削正	xiao1 zheng4
+削正	xue1 zheng4
 削減	xue1 jian3
 削減	xue4 jian3
 削減	xiao1 jian3
 削牘	xue4 du2
+削牘	xiao1 du2
+削牘	xue1 du2
 削球	xiao1 qiu2
 削球	xue4 qiu2
+削球	xue1 qiu2
 削瘦	xiao1 shou4
+削瘦	xue4 shou4
+削瘦	xue1 shou4
 削著	xiao1 zhao2
 削著	xiao1 zhe5
 削著	xue1 zhao2
 削著	xue1 zhe5
 削著	xue4 zhe5
+削著	xue4 zhao2
 削職	xue1 zhi2
 削職	xue4 zhi2
 削職	xiao1 zhi2
 削職為民	xue1 zhi2 wei2 min2
+削職為民	xiao1 zhi2 wei2 min2
+削職為民	xue4 zhi2 wei2 min2
 削肩	xue4 jian1
+削肩	xiao1 jian1
+削肩	xue1 jian1
 削色	xue4 se4
+削色	xiao1 se4
+削色	xue1 se4
 削草	xue4 cao3
+削草	xiao1 cao3
+削草	xue1 cao3
 削蔥	xue4 cong1
+削蔥	xiao1 cong1
+削蔥	xue1 cong1
 削觚為圓	xue4 gu1 wei2 yuan2
+削觚為圓	xiao1 gu1 wei2 yuan2
+削觚為圓	xue1 gu1 wei2 yuan2
 削足就履	xue4 zu2 jiu4 lv3
+削足就履	xiao1 zu2 jiu4 lv3
+削足就履	xue1 zu2 jiu4 lv3
 削足適履	xue1 zu2 shi4 lv3
 削足適履	xue4 zu2 shi4 lv3
 削足適履	xiao1 zu2 shi4 lv3
 削趾適屨	xue4 zhi3 shi4 ju4
+削趾適屨	xiao1 zhi3 shi4 ju4
+削趾適屨	xue1 zhi3 shi4 ju4
 削跡	xue4 ji1
+削跡	xiao1 ji1
+削跡	xue1 ji1
 削鐵如泥	xue4 tie3 ru2 ni2
+削鐵如泥	xiao1 tie3 ru2 ni2
+削鐵如泥	xue1 tie3 ru2 ni2
 削除	xue4 chu2
 削除	xiao1 chu2
 削除	xue1 chu2
 削髮	xue4 fa3
 削髮	xiao1 fa3
+削髮	xue1 fa3
 削髮披緇	xue4 fa3 pi1 zi1
+削髮披緇	xiao1 fa3 pi1 zi1
+削髮披緇	xue1 fa3 pi1 zi1
 削髮為僧	xue4 fa3 wei2 seng1
 削髮為僧	xiao1 fa3 wei2 seng1
+削髮為僧	xue1 fa3 wei2 seng1
 削麵	xiao1 mian4
+削麵	xue4 mian4
+削麵	xue1 mian4
 剋期	ke4 qi2
 剋落	ke4 luo4
 剌剌	la4 la4
@@ -62783,6 +62842,8 @@ min_phrase_weight: 100
 剖面圖	puo3 mian4 tu2	80%
 剗刷	chan3 shua1
 剗削	chan3 xue4
+剗削	chan3 xiao1
+剗削	chan3 xue1
 剗卻	chan3 que4
 剗地	chan3 di4
 剗子箭	chan3 zi5 jian4
@@ -62818,10 +62879,14 @@ min_phrase_weight: 100
 剝削	bo1 xue4
 剝削	bo1 xiao1
 剝削小民	bo1 xue4 xiao3 min2
+剝削小民	bo1 xiao1 xiao3 min2
+剝削小民	bo1 xue1 xiao3 min2
 剝削者	bo1 xue1 zhe3
 剝削者	bo1 xue4 zhe3
+剝削者	bo1 xiao1 zhe3
 剝削階級	bo1 xue1 jie1 ji2
 剝削階級	bo1 xue4 jie1 ji2
+剝削階級	bo1 xiao1 jie1 ji2
 剝剝啄啄	bo1 bo1 zhuo2 zhuo2
 剝落	bo1 luo4
 剝落斑殘	bo1 luo4 ban1 can2
@@ -63351,8 +63416,9 @@ min_phrase_weight: 100
 勒石	le4 shi2
 勒碑	le4 bei1
 勒索	le4 suo3
-勒索	le1 suo3
+勒索	le1 suo3	80%
 勒索罪	le4 suo3 zui4
+勒索罪	le1 suo3 zui4	80%
 勒維夫	le4 wei2 fu1
 勒維納斯	le4 wei2 na4 si1
 勒緊	lei1 jin3
@@ -64992,6 +65058,8 @@ min_phrase_weight: 100
 叫號	jiao4 hao4
 叫頭	jiao4 tou5
 召南	shao4 nan2
+召南	zhao4 nan2
+召南	zhao1 nan2	80%
 召棠	shao4 tang2
 召父杜母	shao4 fu4 du4 mu3
 召陵	shao4 ling2
@@ -65072,6 +65140,7 @@ min_phrase_weight: 100
 可轉讓證券	ke3 zhuan3 rang4 zheng4 quan4
 可逆反應	ke3 ni4 fan3 ying4
 台州地區	tai2 zhou1 di4 qu1
+台州地區	tai1 zhou1 di4 qu1
 叱吒	chi4 zha4
 叱吒風雲	chi4 zha4 feng1 yun2
 叱呵	chi4 he1
@@ -70261,6 +70330,8 @@ min_phrase_weight: 100
 夾角	jia1 jiao3
 夾起尾巴	jia1 qi3 wei3 ba1
 夾起尾巴	jia2 qi3 wei3 ba1
+夾起尾巴	jia1 qi3 yi3 ba1
+夾起尾巴	jia2 qi3 yi3 ba1
 夾路	jia2 lu4
 夾路	jia1 lu4
 夾輔	jia2 fu3
@@ -70331,6 +70402,8 @@ min_phrase_weight: 100
 奉養	feng4 yang3
 奎寧	kui2 ning2
 奏削	zou4 xue4
+奏削	zou4 xue1
+奏削	zou4 xiao1
 奏樂	zou4 yue4
 奏鳴曲	zou4 ming2 qu3
 奏鳴曲式	zou4 ming2 qu3 shi4
@@ -71486,6 +71559,8 @@ min_phrase_weight: 100
 宋應星	song4 ying4 xing1
 宋教仁	song4 jiao4 ren2
 宋斤魯削	song4 jin1 lu3 xue4
+宋斤魯削	song4 jin1 lu3 xiao1
+宋斤魯削	song4 jin1 lu3 xue1
 完了	wan2 le5
 完了	wan2 liao3
 完全懂得	wan2 quan2 dong3 de5
@@ -76185,6 +76260,7 @@ min_phrase_weight: 100
 恰如其分	qia4 ru2 qi2 fen4
 恰如其分	qia4 ru2 qi2 fen1
 恰當	qia4 dang4
+恰當	qia4 dang1
 悁忿	juan1 fen4
 悁急	juan4 ji2
 悁悁	juan1 juan1
@@ -77118,6 +77194,8 @@ min_phrase_weight: 100
 戇頭戇腦	gang4 tou2 gang4 nao3
 戈蘭高地	ge1 lan2 gao1 di4
 戌削	xu1 xiao1
+戌削	xu1 xue4
+戌削	xu1 xue1
 戎事倥傯	rong2 shi4 kong3 zong3
 戎行	rong2 hang2
 戎馬倥傯	rong2 ma3 kong3 zong3
@@ -77666,6 +77744,7 @@ min_phrase_weight: 100
 打擂台	da3 lei4 tai2
 打擂台	da3 lei2 tai2
 打擂臺	da3 lei4 tai2
+打擂臺	da3 lei2 tai2
 打擊	da3 ji2
 打擊手	da3 ji2 shou3
 打擊樂	da3 ji2 yue4
@@ -77942,6 +78021,8 @@ min_phrase_weight: 100
 扶顛持危	fu2 dian1 chi2 wei2
 批假	pi1 jia4
 批削	pi1 xue4
+批削	pi1 xiao1
+批削	pi1 xue1
 批哩啪啦	pi1 li5 pa1 la5
 批哩啪啦	pi1 li1 pa1 la1
 批哩啪啦	pi1 li5 pa1 la1
@@ -80981,7 +81062,9 @@ min_phrase_weight: 100
 擺子	bai3 zi5
 擺弄	bai3 nong4
 擺擂台	bai3 lei4 tai2
+擺擂台	bai3 lei2 tai2
 擺擂臺	bai3 lei4 tai2
+擺擂臺	bai3 lei2 tai2
 擺攤子	bai3 tan1 zi5
 擺架子	bai3 jia4 zi5
 擺樣子	bai3 yang4 zi5
@@ -81195,6 +81278,8 @@ min_phrase_weight: 100
 收軍點將	shou1 jun1 dian3 jiang4
 攸斁	you1 du4
 改削	gai3 xue4
+改削	gai3 xiao1
+改削	gai3 xue1
 改善關係	gai3 shan4 guan1 xi4
 改善關係	gai3 shan4 guan1 xi1	80%
 改天換地	gai3 tian1 huan4 di4
@@ -81676,7 +81761,9 @@ min_phrase_weight: 100
 敲擊音樂	qiao1 ji2 yin1 yue4
 敲竹槓	qiao1 zhu2 gang4
 敲詐勒索	qiao1 zha4 le4 suo3
+敲詐勒索	qiao1 zha4 le1 suo3	80%
 敲詐勒索罪	qiao1 zha4 le4 suo3 zui4
+敲詐勒索罪	qiao1 zha4 le1 suo3 zui4	80%
 敲邊鼓	qiao1 bian1 gu3
 敲金擊石	qiao1 jin1 ji2 shi2
 敲釘鑽腳	qiao1 ding1 zuan1 jiao3
@@ -81998,6 +82085,8 @@ min_phrase_weight: 100
 斥騎	chi4 ji4
 斥騎	chi4 qi2
 斧削	fu3 xue4
+斧削	fu3 xue1
+斧削	fu3 xiao1
 斧子	fu3 zi5
 斧鑿	fu3 zao2
 斧鑿	fu3 zuo4
@@ -82125,6 +82214,8 @@ min_phrase_weight: 100
 新鮮事	xin1 xian1 shi4
 新鮮人	xin1 xian1 ren2
 斲削	zhuo2 xue4
+斲削	zhuo2 xiao1
+斲削	zhuo2 xue1
 斲喪	zhuo2 sang4
 斲方為圓	zhuo2 fang1 wei2 yuan2
 斲琱為樸	zhuo2 diao1 wei2 pu2
@@ -82320,6 +82411,8 @@ min_phrase_weight: 100
 日光節約時間	ri4 guang1 jie2 yue1 shi2 jian1
 日入而息	ri4 ru4 er2 xi2
 日削月朘	ri4 xue4 yue4 juan1
+日削月朘	ri4 xiao1 yue4 juan1
+日削月朘	ri4 xue1 yue4 juan1
 日喀則	ri4 ka4 ze2
 日喀則	ri4 ka1 ze2
 日喀則	ri4 ke4 ze2
@@ -82344,6 +82437,8 @@ min_phrase_weight: 100
 日月暈	ri4 yue4 yun4
 日月重光	ri4 yue4 chong2 guang1
 日朘月削	ri4 juan1 yue4 xue4
+日朘月削	ri4 juan1 yue4 xiao1
+日朘月削	ri4 juan1 yue4 xue1
 日朝	ri4 chao2
 日期	ri4 qi2
 日本航空	ri4 ben3 hang2 kong1
@@ -82570,6 +82665,8 @@ min_phrase_weight: 100
 春秋左氏傳	chun1 qiu1 zuo3 shi4 zhuan4
 春秋幾何	chun1 qiu1 ji3 he2
 春秋筆削	chun1 qiu1 bi3 xue4
+春秋筆削	chun1 qiu1 bi3 xiao1
+春秋筆削	chun1 qiu1 bi3 xue1
 春秋繁露	chun1 qiu1 fan2 lu4
 春秋鼎盛	chun1 qiu1 ding3 sheng4
 春興	chun1 xing4
@@ -83625,6 +83722,8 @@ min_phrase_weight: 100
 朔時空	shuo4 shi2 kong1
 朗誦調	lang3 song4 diao4
 朘削	juan1 xue4
+朘削	juan1 xiao1
+朘削	juan1 xue1
 望子	wang4 zi5
 望子	wang4 zi3
 望山走倒馬	wang4 shan1 zou3 dao3 ma3
@@ -87832,6 +87931,8 @@ min_phrase_weight: 100
 洒然	xian3 ran2
 洗刷	xi3 shua1
 洗削更革	xi3 xue4 geng1 ge2
+洗削更革	xi3 xiao1 geng1 ge2
+洗削更革	xi3 xue1 geng1 ge2
 洗手間	xi3 shou3 jian1
 洗泥	xi3 ni2
 洗消場	xi3 xiao1 chang3
@@ -88191,6 +88292,7 @@ min_phrase_weight: 100
 海蜇皮	hai3 zhe2 pi2
 海蜇皮	hai3 zhe1 pi2
 海蝕台地	hai3 shi2 tai2 di4
+海蝕臺地	hai3 shi2 tai2 di4
 海螵蛸	hai3 piao1 xiao1
 海行	hai3 xing2
 海西蒙古族藏族自治州	hai3 xi1 meng3 gu3 zu2 zang4 zu2 zi4 zhi4 zhou1
@@ -88792,6 +88894,8 @@ min_phrase_weight: 100
 渙散	huan4 san4
 減低速度	jian3 di1 su4 du4
 減削	jian3 xue4
+減削	jian3 xiao1
+減削	jian3 xue1
 減壓時間表	jian3 ya1 shi2 jian1 biao3
 減少	jian3 shao3
 減數	jian3 shu4
@@ -91074,6 +91178,8 @@ min_phrase_weight: 100
 狗嘴裡還有象牙	gou3 zui3 li3 hai2 you3 xiang4 ya2
 狗子夾尾巴	gou3 zi5 jia2 wei3 ba1
 狗子夾尾巴	gou3 zi5 jia1 wei3 ba1
+狗子夾尾巴	gou3 zi5 jia2 yi3 ba1
+狗子夾尾巴	gou3 zi5 jia1 yi3 ba1
 狗屁倒灶	gou3 pi4 dao3 zao4
 狗心狗行	gou3 xin1 gou3 xing4
 狗拿耗子	gou3 na2 hao4 zi5
@@ -92641,6 +92747,7 @@ min_phrase_weight: 100
 瘤子	liu2 zi5
 瘦削	shou4 xue1
 瘦削	shou4 xue4
+瘦削	shou4 xiao1
 瘦子	shou4 zi5
 瘦小枯乾	shou4 xiao3 ku1 gan1
 瘦括括	shou4 gua1 gua1
@@ -94849,6 +94956,7 @@ min_phrase_weight: 100
 磨刻	mo2 ke4
 磨削	mo2 xue4
 磨削	mo2 xiao1
+磨削	mo2 xue1
 磨功夫	mo2 gong1 fu1
 磨功夫	mo2 gong1 fu5	80%
 磨勒	mo2 le4
@@ -96383,6 +96491,8 @@ min_phrase_weight: 100
 筆下功夫	bi3 xia4 gong1 fu1
 筆下功夫	bi3 xia4 gong1 fu5	80%
 筆削	bi3 xue4
+筆削	bi3 xiao1
+筆削	bi3 xue1
 筆劃	bi3 hua4
 筆劃檢字表	bi3 hua4 jian3 zi4 biao3
 筆勝於刀文比武強	bi3 sheng4 yu2 dao1 wen2 bi3 wu3 qiang2
@@ -97916,6 +98026,8 @@ min_phrase_weight: 100
 緣椿象	yuan2 chun1 xiang4
 緣法	yuan2 fa3
 編削	bian1 xue4
+編削	bian1 xiao1
+編削	bian1 xue1
 編曲	bian1 qu3
 編曲	bian1 qu1
 編氓	bian1 meng2
@@ -102855,6 +102967,8 @@ min_phrase_weight: 100
 蜂房不容鵠卵	feng1 fang2 bu4 rong2 hu2 luan3
 蜂王漿	feng1 wang2 jiang1
 蜂腰削背	feng1 yao1 xue4 bei4
+蜂腰削背	feng1 yao1 xiao1 bei4
+蜂腰削背	feng1 yao1 xue1 bei4
 蜂蒙	feng1 meng2
 蜂蜜梳子	feng1 mi4 shu1 zi5
 蜃蛤	shen4 ge2
@@ -103045,6 +103159,8 @@ min_phrase_weight: 100
 蠨蛸滿堂	xiao1 shao1 man3 tang2
 蠨蛸滿室	xiao1 shao1 man3 shi4
 蠲削	juan1 xue4
+蠲削	juan1 xiao1
+蠲削	juan1 xue1
 蠶寶寶	can2 bao3 bao3
 蠶寶寶	can2 bao3 bao5	80%
 蠶種	can2 zhong3
@@ -103745,6 +103861,8 @@ min_phrase_weight: 100
 袞闕	gun3 que4
 被乘數	bei4 cheng2 shu4
 被剝削者	bei4 bo1 xue1 zhe3
+被剝削者	bei4 bo1 xiao1 zhe3
+被剝削者	bei4 bo1 xue4 zhe3
 被加數	bei4 jia1 shu4
 被和諧	bei4 he2 xie2
 被堅執銳	pi1 jian1 zhi2 rui4
@@ -104907,6 +105025,7 @@ min_phrase_weight: 100
 誘掖後進	you4 yi4 hou4 jin4
 誘降	you4 xiang2
 語塞	yu3 se4
+語塞	yu3 sai1
 語境效應	yu3 jing4 xiao4 ying4
 語意區分量表	yu3 yi4 qu1 fen1 liang2 biao3
 語意差別量表	yu3 yi4 cha1 bie2 liang2 biao3
@@ -109813,6 +109932,8 @@ min_phrase_weight: 100
 鉅細靡遺	ju4 xi4 mi3 yi2
 鉅細靡遺	ju4 xi4 mi2 yi2
 鉋削	bao4 xue4
+鉋削	bao4 xiao1
+鉋削	bao4 xue1
 鉋子	bao4 zi5
 鉗且	qian2 ju1
 鉗口撟舌	qian2 kou3 jiao4 she2
@@ -109914,6 +110035,8 @@ min_phrase_weight: 100
 銷行	xiao1 xing2
 銷量	xiao1 liang4
 銼削	cuo4 xiao1
+銼削	cuo4 xue4
+銼削	cuo4 xue1
 鋃鐺	lang2 dang1
 鋃鐺入獄	lang2 dang1 ru4 yu4
 鋌而走險	ting3 er2 zou3 xian3
@@ -111983,6 +112106,8 @@ min_phrase_weight: 100
 陟罰臧否	zhi4 fa2 zang1 pi3
 陟降	zhi4 jiang4
 陡削	dou3 xiao1
+陡削	dou3 xue4
+陡削	dou3 xue1
 陡度	dou3 du4
 陡然間	dou3 ran2 jian1
 陡長	dou3 zhang3
@@ -113543,7 +113668,7 @@ min_phrase_weight: 100
 額頭	e2 tou5
 額頭	e2 tou2
 顏色	yan2 se4
-顏色	yan2 shai3
+顏色	yan2 shai3	3%
 顏闔鑿培	yan2 he2 zuo4 pei2
 顏闔鑿培	yan2 he2 zao2 pei2
 顏面掃地	yan2 mian4 sao3 di4
@@ -115656,4 +115781,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 115659 #####
+##### @結束 END - 115784 #####
