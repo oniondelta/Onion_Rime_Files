@@ -10,7 +10,7 @@ local function Version(env)
     return Spans().clear and 366 or 361
   elseif pcall(Segment, 0, 3) and Segment(0, 3).active_text then
     return 329
-  elseif pcall(ConfigValue, 3) and ConfigValue(3).element.get_obj then
+  elseif pcall(ConfigValue, 3) and ConfigValue(3).element and ConfigValue(3).element.get_obj then
     return 323
   elseif pcall(KeyEvent, 65, 1) and pcall(KeyEvent, "Shift+A") and KeyEvent(65, 1):eq(KeyEvent("Shift+A")) then    -- 65 == string.byte("A") == ("A"):byte()
   -- elseif pcall(KeyEvent, string.byte("A"), 1) and pcall(KeyEvent, "Shift+A") and KeyEvent(string.byte("A"), 1):eq(KeyEvent("Shift+A")) then
