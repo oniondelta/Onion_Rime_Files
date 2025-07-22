@@ -6,7 +6,7 @@
 
 ### Version Info
 
-- Github Releases：[ea6720a](https://github.com/rime/squirrel/releases/tag/1.0.3)
+- Github Releases：[6137702](https://github.com/rime/squirrel/releases)
 
 - Squirrel 1.0.3
 
