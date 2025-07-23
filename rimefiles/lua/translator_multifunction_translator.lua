@@ -260,13 +260,13 @@ local function init(env)
       , { "　k g〔希臘 洋蔥形碼 編碼〕", "㊱" }
       , { "　k c〔西里爾 洋蔥形碼 編碼〕", "㊲" }
       , { "　k n〔數符選項 鍵位〕", "㊳" }
-      , { "〖記憶體和版本〗", "㊴" }
+      , { "〖記憶體〗", "㊴" }
       , { "　g〔Lua 所佔記憶體〕(Garbage)", "㊵" }
       , { "　gc〔垃圾回收〕(Garbage Collection)", "㊶" }
-      , { "　v〔版本資訊〕", "㊷" }
-      , { "═══  結束  ═══  ", "㊸" }
-      , { "", "㊹" }
-      , { "", "㊺" }
+      , { "〖版本和路徑〗", "㊷" }
+      , { "　v〔版本資訊〕", "㊸" }
+      , { "　vf〔資料夾路徑〕", "㊹" }
+      , { "═══  結束  ═══  ", "㊺" }
       , { "", "㊻" }
       , { "", "㊼" }
       , { "", "㊽" }
@@ -623,14 +623,24 @@ local function translate(input, seg, env)
   -- 版本資訊
   if (input == env.prefix .. "v") then
     local preedittext = input .. "\t 【版本資訊】"
-    yield_c( Ver_info(env)[1], "〔 distribution_version 〕", preedittext)
-    yield_c( Ver_info(env)[2], "〔 rime_version 〕", preedittext)
-    yield_c( Ver_info(env)[3], "〔 librime-lua_version 〕", preedittext)
-    yield_c( Ver_info(env)[4], "〔 lua_version 〕", preedittext)
-    yield_c( Ver_info(env)[5], "〔 installation_id 〕", preedittext)
+    yield_c( Ver_info(env)[1], "〔 介面 名稱和版本 〕", preedittext)  -- 〔 distribution_version 〕
+    yield_c( Ver_info(env)[2], "〔 librime / rime 版本 〕", preedittext)  -- 〔 rime_version 〕
+    yield_c( Ver_info(env)[3], "〔 librime-lua 版本 〕", preedittext)  -- 〔 librime-lua_version 〕
+    yield_c( Ver_info(env)[4], "〔 lua 版本 〕", preedittext)  -- 〔 lua_version 〕
+    yield_c( Ver_info(env)[5], "〔 ID 〕", preedittext)  -- 〔 installation_id 〕
     --- 記憶體回收，上方可能讓記憶暴漲，故增 collectgarbage。
     -- collectgarbage()  -- 強制進行垃圾回收
     -- collectgarbage("collect")  -- 做一次完整的垃圾收集循環
+    return
+  end
+
+  -- 資料夾路徑
+  if (input == env.prefix .. "vf") then
+    local preedittext = input .. "\t 【資料夾路徑】"
+    -- yield_c( "", " ═════ 資料夾 ═════  ", preedittext)
+    yield_c( Ver_info(env)[6], "〔 用戶資料夾 〕", preedittext)  -- 〔user_data_dir〕
+    yield_c( Ver_info(env)[7], "〔 同步資料夾 〕", preedittext)  -- 〔sync_dir〕
+    yield_c( Ver_info(env)[8], "〔 程序資料夾 〕", preedittext)  -- 〔shared_data_dir〕
     return
   end
 
