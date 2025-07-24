@@ -172,6 +172,7 @@
 #    詞句中，「頗」皆補齊「po3」「po1」。
 #    詞句中，「咱」皆補齊「zan2」「za2」。
 #    詞句中，「羧」皆補齊「zui1」「suo1」。
+#    詞句中，「酵」皆補齊「xiao4」「jiao4」。
 #    詞句中，「績」「蹟」「跡」「迹」臺灣標準為「ji1」，大陸標準為「ji4」，只保留「ji1」發音。
 #    詞句中，「寂」臺灣標準為「ji2」，大陸標準為「ji4」，只保留「ji2」發音。
 #    詞句中，「妮」臺灣標準為「ni2」，大陸標準為「ni1」，只保留「ni2」發音。
@@ -185,6 +186,7 @@
 #    詞句中，「阻塞」補齊「zu3 se4」和「zu3 sai1」。
 #    詞句中，「姑娘」補齊「gu1 niang2」和「gu1 niang5」，後者詞頻設為80%。
 #    詞句中，「親戚」補齊「qin1 qi1」和「qin1 qi4」，後者詞頻設為80%。
+#    詞句中，「衚衕」臺灣字典發音為「hu2 tong4」，日常發音常會誤發為「hu2 tong2」，故皆補齊「hu2 tong4」「hu2 tong2」。
 #    詞句中，「拓撲」臺灣字典發音為「tuo4 pu1」，日常發音常會誤發為「tuo4 bu3」和「tuo4 pu3」，故皆補齊「tuo4 pu1」「tuo4 bu3」「tuo4 pu3」，最後者「tuo4 pu3」詞頻設為80%。
 #    詞句中，「給予」臺灣字典發音為「ji3 yu3」，日常發音常發，故皆補齊「ji3 yu3」「ji3 yu2」「gei3 yu3」「gei3 yu2」。
 #    詞句中，「骨頭」臺灣字典發音為「gu2 tou5」，日常發音常發，故皆補齊「gu2 tou5」「gu2 tou2」「gu3 tou5」「gu3 tou2」。
@@ -83005,6 +83007,9 @@ min_phrase_weight: 100
 暴露	pu4 lu4
 暴露	pu4 lou4
 暴露狂	pu4 lu4 kuang2
+暴露狂	bao4 lu4 kuang2
+暴露狂	pu4 lou4 kuang2
+暴露狂	bao4 lou4 kuang2
 暴面	pu4 mian4
 暴風圈	bao4 feng1 quan1
 暴骨	pu4 gu3
@@ -91296,6 +91301,9 @@ min_phrase_weight: 100
 猢猻散	hu2 sun1 san4
 猥當大任	wei3 dang1 da4 ren4
 猥褻性暴露	wei3 xie4 xing4 bao4 lu4
+猥褻性暴露	wei3 xie4 xing4 pu4 lu4
+猥褻性暴露	wei3 xie4 xing4 bao4 lou4
+猥褻性暴露	wei3 xie4 xing4 pu4 lou4
 猩猩	xing1 xing1
 猰貐	ya4 yu3
 猴子	hou2 zi5
@@ -93491,8 +93499,9 @@ min_phrase_weight: 100
 目標市場	mu4 biao1 shi4 chang3
 目標市場	mu4 biao1 shi4 chang2	3%
 目無尊長	mu4 wu2 zun1 zhang3
-目犍連	mu4 jian4 lian2
+目犍連	mu4 jian4 lian2	80%
 目犍連	mu4 jian1 lian2
+目犍連	mu4 qian2 lian2
 目的	mu4 di4
 目的地	mu4 di4 di4
 目的物	mu4 di4 wu4
@@ -95955,6 +95964,7 @@ min_phrase_weight: 100
 空白	kong4 bai2
 空白	kong1 bai2
 空白點	kong4 bai2 dian3
+空白點	kong1 bai2 dian3
 空盪盪	kong1 dang4 dang4
 空相	kong1 xiang4
 空著手	kong1 zhe5 shou3
@@ -100960,6 +100970,7 @@ min_phrase_weight: 100
 花藜胡哨	hua1 li2 hu2 shao4
 花蛤	hua1 ge2
 花衚衕	hua1 hu2 tong4
+花衚衕	hua1 hu2 tong2
 花裡胡哨	hua1 li3 hu2 shao4
 花費	hua1 fei4
 花輪子	hua1 lun2 zi5
@@ -103661,6 +103672,7 @@ min_phrase_weight: 100
 街里街坊	jie1 li3 jie1 fang2
 衙門	ya2 men2
 衚衕	hu2 tong4
+衚衕	hu2 tong2
 衛從	wei4 zong4
 衛從	wei4 cong2
 衛星轉播	wei4 xing1 zhuan3 bo4
@@ -110211,6 +110223,7 @@ min_phrase_weight: 100
 錦片	jin3 pian4
 錦片前程	jin3 pian4 qian2 cheng2
 錦衚衕	jin3 hu2 tong4
+錦衚衕	jin3 hu2 tong2
 錦衣夜行	jin3 yi1 ye4 xing2
 錦還	jin3 huan2
 錨地	mao2 di4
@@ -111661,8 +111674,8 @@ min_phrase_weight: 100
 阿拉伯	a1 la1 bo2
 阿拉伯世界	a1 la1 bo2 shi4 jie4
 阿拉伯人	a1 la1 bo2 ren2
-阿拉伯共衕市場	a1 la1 bo2 gong4 tong2 shi4 chang3
-阿拉伯共衕市場	a1 la1 bo2 gong4 tong2 shi4 chang2	3%
+阿拉伯共同市場	a1 la1 bo2 gong4 tong2 shi4 chang3
+阿拉伯共同市場	a1 la1 bo2 gong4 tong2 shi4 chang2	3%
 阿拉伯勞倫斯	a1 la1 bo2 lao2 lun2 si1
 阿拉伯半島	a1 la1 bo2 ban4 dao3
 阿拉伯國家聯盟	a1 la1 bo2 guo2 jia1 lian2 meng2
@@ -115781,4 +115794,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 115784 #####
+##### @結束 END - 115797 #####
