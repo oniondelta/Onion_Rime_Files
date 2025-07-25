@@ -4,7 +4,7 @@
 # 刪除單字
 ---
 name: phrases.ocmtc_essay_mc
-version: "202506"
+version: "202507"
 sort: original #by_weight
 use_preset_vocabulary: false
 # max_phrase_length: 7 #20
@@ -33739,7 +33739,6 @@ columns:
 暴風	55
 暴飲	10
 暴龍	15
-暸解	3
 暹羅	3
 暹邏	2
 曆書	1

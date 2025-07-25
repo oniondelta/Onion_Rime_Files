@@ -148,6 +148,7 @@
 #    詞句中，「萎」於某些詞，臺灣日常慣用語音為「wei3」，臺灣標準為「wei1」，故皆補齊「wei1」和「wei3」。
 #    詞句中，「鰾」日常發音常會誤發為「biao1」，臺灣標準為「biao4」，故皆補齊「biao4」「biao1」，後者詞頻設為80%。
 #    詞句中，「鷲」日常發音常會誤發為「jiu1」，臺灣標準為「jiu4」，故皆補齊「jiu4」「jiu1」，後者詞頻設為80%。
+#    詞句中，「驟」臺灣標準為「zou4」，大陸標準為「zhou4」，兩者易混淆，故皆補齊「zou4」「zhou4」。
 #    詞句中，「縛」臺灣標準為「fu2」，大陸標準為「fu4」，兩者易混淆，故皆補齊「fu2」「fu4」。
 #    詞句中，「擬」臺灣標準為「ni3」，日常發音常會誤發為「ni2」，故皆補齊「ni3」「ni2」，後者詞頻設為80%。
 #    詞句中，「綺」臺灣標準為「qi3」，日常發音常會誤發為「qi2」，故皆補齊「qi3」「qi2」，後者詞頻設為80%。
@@ -164,6 +165,7 @@
 #    詞句中，「綜」臺灣標準為「zong4」，日常發音常會發「zong1」，故皆補齊「zong4」「zong1」。
 #    詞句中，「究」臺灣標準為「jiu4」，又音為「jiu1」，日常易混，故皆補齊「jiu4」「jiu1」。
 #    詞句中，「肯」臺灣標準為「ken3」，又音為「keng3」，日常易混，故皆補齊「ken3」「keng3」。
+#    詞句中，「誼」臺灣標準為「yi4」，又音為「yi2」，日常易混，故皆補齊「yi4」「yi2」。
 #    詞句中，「削」臺灣標準讀音為「xue4」，語音為「xiao1」，大陸標準為「xue1」，日常易混，故皆補齊「xue4」「xiao1」「xue1」。有些詞發音如此標註會奇怪，待攷！
 #    詞句中，「擁」皆補齊「yong3」「yong1」。
 #    詞句中，「熟」皆補齊「shou2」「shu2」。
@@ -61356,12 +61358,15 @@ min_phrase_weight: 100
 冠服	guan1 fu2
 冠毛	guan1 mao2
 冠狀	guan1 zhuang4
+冠狀	guan4 zhuang4
 冠狀動脈	guan1 zhuang4 dong4 mai4
-冠狀動脈	guan1 zhuang4 dong4 mo4
 冠狀動脈	guan4 zhuang4 dong4 mai4
 冠狀動脈旁路移殖手術	guan1 zhuang4 dong4 mai4 pang2 lu4 yi2 zhi2 shou3 shu4
+冠狀動脈旁路移殖手術	guan4 zhuang4 dong4 mai4 pang2 lu4 yi2 zhi2 shou3 shu4
 冠狀動脈旁通手術	guan1 zhuang4 dong4 mai4 pang2 tong1 shou3 shu4
+冠狀動脈旁通手術	guan4 zhuang4 dong4 mai4 pang2 tong1 shou3 shu4
 冠狀動脈硬化症	guan1 zhuang4 dong4 mai4 ying4 hua4 zheng4
+冠狀動脈硬化症	guan4 zhuang4 dong4 mai4 ying4 hua4 zheng4
 冠玉	guan1 yu4
 冠禮	guan4 li3
 冠禮	guan1 li3
@@ -64694,7 +64699,9 @@ min_phrase_weight: 100
 及時行樂	ji2 shi2 xing2 le4
 及期	ji2 qi2
 友誼地久天長	you3 yi4 di4 jiu3 tian1 chang2
+友誼地久天長	you3 yi2 di4 jiu3 tian1 chang2
 友誼天長地久	you3 yi4 tian1 chang2 di4 jiu3
+友誼天長地久	you3 yi2 tian1 chang2 di4 jiu3
 反人道罪行	fan3 ren2 dao4 zui4 xing2
 反倒	fan3 dao4
 反倒	fan3 dao3
@@ -64936,6 +64943,7 @@ min_phrase_weight: 100
 古井重波	gu3 jing3 chong2 po1
 古人影子	gu3 ren2 ying3 zi5
 古今多少事	gu3 jin1 duo1 shao3 shi4
+古今多少事	gu3 jin1 duo2 shao3 shi4
 古今少有	gu3 jin1 shao3 you3
 古公亶父	gu3 gong1 dan3 fu3
 古典樂	gu3 dian3 yue4
@@ -69253,7 +69261,9 @@ min_phrase_weight: 100
 多媒體卡	duo1 mei2 ti3 ka3
 多嫌	duo1 xian2
 多少	duo1 shao3
+多少	duo2 shao3
 多少是好	duo1 shao3 shi4 hao3
+多少是好	duo2 shao3 shi4 hao3
 多少錢	duo1 shao3 qian2
 多少錢	duo2 shao3 qian2
 多層大廈	duo1 ceng2 da4 sha4
@@ -78382,6 +78392,7 @@ min_phrase_weight: 100
 抱關擊柝	bao4 guan1 ji2 tuo4
 抵不過	di3 bu2 guo4
 抵多少	di3 duo1 shao3
+抵多少	di3 duo2 shao3
 抵得	di3 de2
 抵擋	di3 dang3
 抵死漫生	di3 si3 man2 sheng1
@@ -86734,6 +86745,7 @@ min_phrase_weight: 100
 氣衝霄漢	qi4 chong1 xiao1 han4
 氣褥子	qi4 ru4 zi5
 氣誼相投	qi4 yi4 xiang1 tou2
+氣誼相投	qi4 yi2 xiang1 tou2
 氣貫長虹	qi4 guan4 chang2 hong2
 氣量	qi4 liang4
 氣鑽	qi4 zuan1
@@ -87126,6 +87138,7 @@ min_phrase_weight: 100
 沒地裡巡檢	mei2 di4 li3 xun2 jian3
 沒地里	mei2 de5 li3
 沒多少	mei2 duo1 shao3
+沒多少	mei2 duo2 shao3
 沒奈何	mo4 nai4 he2
 沒奈何	mei2 nai4 he2
 沒奔一頭處	mei2 ben1 yi4 tou2 chu4
@@ -97911,6 +97924,7 @@ min_phrase_weight: 100
 網膜剝離	wang3 mo4 bo1 li2	3%
 網膜剝離	wang3 mo2 bo1 li2
 網路交流聯誼	wang3 lu4 jiao1 liu2 lian2 yi2
+網路交流聯誼	wang3 lu4 jiao1 liu2 lian2 yi4
 網路伺服器	wang3 lu4 si4 fu2 qi4
 網路傳真	wang3 lu4 chuan2 zhen1
 網路卡	wang3 lu4 ka3
@@ -115794,4 +115808,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 115797 #####
+##### @結束 END - 115811 #####
