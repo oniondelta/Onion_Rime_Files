@@ -1,4 +1,4 @@
-name: sort_rime_output
+name: sort_and_output_artifact
 
 on:
   workflow_dispatch:
