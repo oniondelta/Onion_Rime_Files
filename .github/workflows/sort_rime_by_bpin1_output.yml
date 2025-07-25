@@ -1,4 +1,4 @@
-name: sort_rime_output
+name: sort_rime_by_bpin1_output
 
 on:
   workflow_dispatch:
