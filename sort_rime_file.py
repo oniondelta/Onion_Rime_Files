@@ -4,15 +4,15 @@ import shutil
 import time
 
 #※新增資料夾(多層目錄, 如前一層data資料夾不存在, 將自動新增)※
-os.makedirs('./sort_rime/注音洋蔥純注音版/', exist_ok=True)
-os.makedirs('./sort_rime/注音洋蔥雙拼版/opencc/', exist_ok=True)
-os.makedirs('./sort_rime/注音洋蔥mixin版/opencc/', exist_ok=True)
-os.makedirs('./sort_rime/注音洋蔥plus版/opencc/', exist_ok=True)
-os.makedirs('./sort_rime/地球拼音洋蔥mix-in版/opencc/', exist_ok=True)
-os.makedirs('./sort_rime/ocm/ocm_mixin/opencc/', exist_ok=True)
-os.makedirs('./sort_rime/ocm/ocm_plus/opencc/', exist_ok=True)
-os.makedirs('./sort_rime/ocm/ocm_mount/', exist_ok=True)
-os.makedirs('./sort_rime/洋蔥行列30/', exist_ok=True)
+os.makedirs("./sort_rime/注音洋蔥純注音版/", exist_ok=True)
+os.makedirs("./sort_rime/注音洋蔥雙拼版/opencc/", exist_ok=True)
+os.makedirs("./sort_rime/注音洋蔥mixin版/opencc/", exist_ok=True)
+os.makedirs("./sort_rime/注音洋蔥plus版/opencc/", exist_ok=True)
+os.makedirs("./sort_rime/地球拼音洋蔥mix-in版/opencc/", exist_ok=True)
+os.makedirs("./sort_rime/ocm/ocm_mixin/opencc/", exist_ok=True)
+os.makedirs("./sort_rime/ocm/ocm_plus/opencc/", exist_ok=True)
+os.makedirs("./sort_rime/ocm/ocm_mount/", exist_ok=True)
+os.makedirs("./sort_rime/洋蔥行列30/", exist_ok=True)
 
 
 #複製檔案(注音洋蔥純注音版)
@@ -60,8 +60,8 @@ shutil.copyfile("./rimefiles/opencc/emoji_t.txt", "./sort_rime/注音洋蔥雙�
 
 shutil.copyfile("./rimefiles/各方案default.custom/注音洋蔥雙拼版_custom/default.custom.yaml", "./sort_rime/注音洋蔥雙拼版/default.custom.yaml")
 
-shutil.copytree('./rimefiles/custom檔_雙拼注音不開頭簡拼/', './sort_rime/注音洋蔥雙拼版/custom檔_雙拼注音不開頭簡拼/')
-shutil.copytree('./rimefiles/雙拼注音鍵位說明圖示/', './sort_rime/注音洋蔥雙拼版/雙拼注音鍵位說明圖示/')
+shutil.copytree("./rimefiles/custom檔_雙拼注音不開頭簡拼/", "./sort_rime/注音洋蔥雙拼版/custom檔_雙拼注音不開頭簡拼/")
+shutil.copytree("./rimefiles/雙拼注音鍵位說明圖示/", "./sort_rime/注音洋蔥雙拼版/雙拼注音鍵位說明圖示/")
 
 
 #複製檔案(注音洋蔥mixin版)
@@ -126,7 +126,7 @@ shutil.copyfile("./rimefiles/phrases.la_eu_w.dict.yaml", "./sort_rime/注音洋�
 
 shutil.copyfile("./rimefiles/punct_bopomo.yaml", "./sort_rime/注音洋蔥mixin版/punct_bopomo.yaml")
 shutil.copyfile("./rimefiles/rime.lua", "./sort_rime/注音洋蔥mixin版/rime.lua")
-shutil.copytree('./rimefiles/lua/', './sort_rime/注音洋蔥mixin版/lua/')
+shutil.copytree("./rimefiles/lua/", "./sort_rime/注音洋蔥mixin版/lua/")
 shutil.copyfile("./rimefiles/symbols_bpmf.dict.yaml", "./sort_rime/注音洋蔥mixin版/symbols_bpmf.dict.yaml")
 shutil.copyfile("./rimefiles/symbols_bpmf.schema.yaml", "./sort_rime/注音洋蔥mixin版/symbols_bpmf.schema.yaml")
 shutil.copyfile("./rimefiles/terra_pinyin_onion_add.dict.yaml", "./sort_rime/注音洋蔥mixin版/terra_pinyin_onion_add.dict.yaml")
@@ -158,12 +158,12 @@ shutil.copyfile("./rimefiles/opencc/ocm_moedict_big5e_hkscs_jis.txt", "./sort_ri
 shutil.copyfile("./rimefiles/opencc/punct_mark.json", "./sort_rime/注音洋蔥mixin版/opencc/punct_mark.json")
 shutil.copyfile("./rimefiles/opencc/punct_mark.txt", "./sort_rime/注音洋蔥mixin版/opencc/punct_mark.txt")
 
-shutil.copytree('./rimefiles/custom檔_注音mixin版兩行同顯/', './sort_rime/注音洋蔥mixin版/custom檔_注音mixin版兩行同顯/')
+shutil.copytree("./rimefiles/custom檔_注音mixin版兩行同顯/", "./sort_rime/注音洋蔥mixin版/custom檔_注音mixin版兩行同顯/")
 
-# shutil.copytree('./rimefiles/custom檔_注音mixin版舊版同顯/mixin注音_同顯1修改檔(Mac)(fcitx5-rime)/', './sort_rime/注音洋蔥mixin版/mixin注音_同顯1修改檔(Mac)(fcitx5-rime)/')
-# shutil.copytree('./rimefiles/custom檔_注音mixin版舊版同顯/mixin注音_同顯2修改檔(Mac)(fcitx5-rime)/', './sort_rime/注音洋蔥mixin版/mixin注音_同顯2修改檔(Mac)(fcitx5-rime)/')
-# shutil.copytree('./rimefiles/custom檔_注音mixin版舊版同顯/mixin注音_同顯1修改檔(Win)/', './sort_rime/注音洋蔥mixin版/mixin注音_同顯1修改檔(Win)/')
-# shutil.copytree('./rimefiles/custom檔_注音mixin版舊版同顯/mixin注音_同顯2修改檔(Win)/', './sort_rime/注音洋蔥mixin版/mixin注音_同顯2修改檔(Win)/')
+# shutil.copytree("./rimefiles/custom檔_注音mixin版舊版同顯/mixin注音_同顯1修改檔(Mac)(fcitx5-rime)/", "./sort_rime/注音洋蔥mixin版/mixin注音_同顯1修改檔(Mac)(fcitx5-rime)/")
+# shutil.copytree("./rimefiles/custom檔_注音mixin版舊版同顯/mixin注音_同顯2修改檔(Mac)(fcitx5-rime)/", "./sort_rime/注音洋蔥mixin版/mixin注音_同顯2修改檔(Mac)(fcitx5-rime)/")
+# shutil.copytree("./rimefiles/custom檔_注音mixin版舊版同顯/mixin注音_同顯1修改檔(Win)/", "./sort_rime/注音洋蔥mixin版/mixin注音_同顯1修改檔(Win)/")
+# shutil.copytree("./rimefiles/custom檔_注音mixin版舊版同顯/mixin注音_同顯2修改檔(Win)/", "./sort_rime/注音洋蔥mixin版/mixin注音_同顯2修改檔(Win)/")
 
 # shutil.copyfile("./rimefiles/custom檔_舊版防崩潰/easy_en_super_防崩潰：Win必加，Mac勿加/easy_en_super.custom.yaml", "./sort_rime/注音洋蔥mixin版/mixin注音_同顯1修改檔(Win)/easy_en_super.custom.yaml")
 # shutil.copyfile("./rimefiles/custom檔_舊版防崩潰/easy_en_super_防崩潰：Win必加，Mac勿加/easy_en_super.custom.yaml", "./sort_rime/注音洋蔥mixin版/mixin注音_同顯2修改檔(Win)/easy_en_super.custom.yaml")
@@ -246,7 +246,7 @@ shutil.copyfile("./rimefiles/phrases.la_eu_w.dict.yaml", "./sort_rime/注音洋�
 
 shutil.copyfile("./rimefiles/punct_bopomo.yaml", "./sort_rime/注音洋蔥plus版/punct_bopomo.yaml")
 shutil.copyfile("./rimefiles/rime.lua", "./sort_rime/注音洋蔥plus版/rime.lua")
-shutil.copytree('./rimefiles/lua/', './sort_rime/注音洋蔥plus版/lua/')
+shutil.copytree("./rimefiles/lua/", "./sort_rime/注音洋蔥plus版/lua/")
 shutil.copyfile("./rimefiles/symbols_bpmf.dict.yaml", "./sort_rime/注音洋蔥plus版/symbols_bpmf.dict.yaml")
 shutil.copyfile("./rimefiles/symbols_bpmf.schema.yaml", "./sort_rime/注音洋蔥plus版/symbols_bpmf.schema.yaml")
 shutil.copyfile("./rimefiles/terra_pinyin_onion_add.dict.yaml", "./sort_rime/注音洋蔥plus版/terra_pinyin_onion_add.dict.yaml")
@@ -268,11 +268,11 @@ shutil.copyfile("./rimefiles/opencc/ocm_moedict_big5e_hkscs_jis.txt", "./sort_ri
 shutil.copyfile("./rimefiles/opencc/punct_mark.json", "./sort_rime/注音洋蔥plus版/opencc/punct_mark.json")
 shutil.copyfile("./rimefiles/opencc/punct_mark.txt", "./sort_rime/注音洋蔥plus版/opencc/punct_mark.txt")
 
-# shutil.copytree('./rimefiles/custom檔_舊版防崩潰/plus注音_防崩潰：Win必加，Mac勿加/', './sort_rime/注音洋蔥plus版/plus注音_防崩潰：Win必加，Mac勿加/')
+# shutil.copytree("./rimefiles/custom檔_舊版防崩潰/plus注音_防崩潰：Win必加，Mac勿加/", "./sort_rime/注音洋蔥plus版/plus注音_防崩潰：Win必加，Mac勿加/")
 # shutil.copyfile("./rimefiles/custom檔_舊版防崩潰/easy_en_super_防崩潰：Win必加，Mac勿加/easy_en_super.custom.yaml", "./sort_rime/注音洋蔥plus版/plus注音_防崩潰：Win必加，Mac勿加/easy_en_super.custom.yaml")
 # shutil.copyfile("./rimefiles/custom檔_舊版防崩潰/easy_en_lower_防崩潰：Win必加，Mac勿加/easy_en_lower.custom.yaml", "./sort_rime/注音洋蔥plus版/plus注音_防崩潰：Win必加，Mac勿加/easy_en_lower.custom.yaml")
-shutil.copytree('./rimefiles/custom檔_日語jpnin1精簡/jpnin1只出假名修改檔/', './sort_rime/注音洋蔥plus版/jpnin1只出假名修改檔/')
-shutil.copytree('./rimefiles/custom檔_日語jpnin1精簡/jpnin1精簡轉寫修改檔/', './sort_rime/注音洋蔥plus版/jpnin1精簡轉寫修改檔/')
+shutil.copytree("./rimefiles/custom檔_日語jpnin1精簡/jpnin1只出假名修改檔/", "./sort_rime/注音洋蔥plus版/jpnin1只出假名修改檔/")
+shutil.copytree("./rimefiles/custom檔_日語jpnin1精簡/jpnin1精簡轉寫修改檔/", "./sort_rime/注音洋蔥plus版/jpnin1精簡轉寫修改檔/")
 
 
 #複製檔案(地球拼音洋蔥mix-in版)
@@ -399,7 +399,6 @@ shutil.copyfile("./rimefiles/jpnin1_hw.dict.yaml", "./sort_rime/ocm/ocm_mixin/jp
 shutil.copyfile("./rimefiles/jpnin1.extended.dict.yaml", "./sort_rime/ocm/ocm_mixin/jpnin1.extended.dict.yaml")
 shutil.copyfile("./rimefiles/jpnin1.schema.yaml", "./sort_rime/ocm/ocm_mixin/jpnin1.schema.yaml")
 shutil.copyfile("./rimefiles/essay-jp-onion.txt", "./sort_rime/ocm/ocm_mixin/essay-jp-onion.txt")
-shutil.copyfile("./rimefiles/phrases.jp_hkk.dict.yaml", "./sort_rime/ocm/ocm_mixin/phrases.jp_hkk.dict.yaml")
 shutil.copyfile("./rimefiles/phrases.jp_hkkseg.dict.yaml", "./sort_rime/ocm/ocm_mixin/phrases.jp_hkkseg.dict.yaml")
 # shutil.copyfile("./rimefiles/phrases.jp_hkup_w.dict.yaml", "./sort_rime/ocm/ocm_mixin/phrases.jp_hkup_w.dict.yaml")
 # shutil.copyfile("./rimefiles/phrases.jp_hkmoreup_w.dict.yaml", "./sort_rime/ocm/ocm_mixin/phrases.jp_hkmoreup_w.dict.yaml")
@@ -480,7 +479,7 @@ shutil.copyfile("./rimefiles/uniabcdword.dict.yaml", "./sort_rime/ocm/ocm_plus/u
 shutil.copyfile("./rimefiles/element_ocm.yaml", "./sort_rime/ocm/ocm_plus/element_ocm.yaml")
 shutil.copyfile("./rimefiles/punct_ocm.yaml", "./sort_rime/ocm/ocm_plus/punct_ocm.yaml")
 shutil.copyfile("./rimefiles/rime.lua", "./sort_rime/ocm/ocm_plus/rime.lua")
-shutil.copytree("./rimefiles/lua", "./sort_rime/ocm/ocm_plus/lua")
+shutil.copytree("./rimefiles/lua/", "./sort_rime/ocm/ocm_plus/lua/")
 
 shutil.copyfile("./rimefiles/各方案default.custom/ocm_plus_custom/default.custom.yaml", "./sort_rime/ocm/ocm_plus/default.custom.yaml")
 
@@ -535,7 +534,7 @@ shutil.copyfile("./rimefiles/kanaword.dict.yaml", "./sort_rime/ocm/ocm_mount/kan
 shutil.copyfile("./rimefiles/phrases.ocmtc_essay_mc.dict.yaml", "./sort_rime/ocm/ocm_mount/phrases.ocmtc_essay_mc.dict.yaml")
 
 shutil.copyfile("./rimefiles/rime.lua", "./sort_rime/ocm/ocm_mount/rime.lua")
-shutil.copytree("./rimefiles/lua", "./sort_rime/ocm/ocm_mount/lua")
+shutil.copytree("./rimefiles/lua/", "./sort_rime/ocm/ocm_mount/lua/")
 
 shutil.copyfile("./rimefiles/各方案default.custom/ocm_mount_custom/default.custom.yaml", "./sort_rime/ocm/ocm_mount/default.custom.yaml")
 
@@ -557,42 +556,42 @@ shutil.copyfile("./rimefiles/onion-array30-phrases.dict.yaml", "./sort_rime/洋�
 shutil.copyfile("./rimefiles/onion-array30-generally.dict.yaml", "./sort_rime/洋蔥行列30/onion-array30-generally.dict.yaml")
 
 shutil.copyfile("./rimefiles/rime.lua", "./sort_rime/洋蔥行列30/rime.lua")
-shutil.copytree("./rimefiles/lua", "./sort_rime/洋蔥行列30/lua")
+shutil.copytree("./rimefiles/lua/", "./sort_rime/洋蔥行列30/lua/")
 
-shutil.copytree("./rimefiles/行列30碼表_20230211版", "./sort_rime/洋蔥行列30/行列30碼表_20230211版")
+shutil.copytree("./rimefiles/行列30碼表_20230211版/", "./sort_rime/洋蔥行列30/行列30碼表_20230211版/")
 
 shutil.copyfile("./rimefiles/各方案default.custom/洋蔥行列30_custom/default.custom.yaml", "./sort_rime/洋蔥行列30/default.custom.yaml")
 
 
 #其他
-shutil.copytree('./rimefiles/其他/', './sort_rime/其他/')
+shutil.copytree("./rimefiles/其他/", "./sort_rime/其他/")
 
-# shutil.copytree('./rimefiles/其他/OpenCC_ocd_64位元/', './sort_rime/ocm/OpenCC_ocd_64位元/')
-# shutil.copytree('./rimefiles/custom檔_舊版防崩潰/ocm_防崩潰：Win必加，Mac勿加/', './sort_rime/ocm/ocm_防崩潰：Win必加，Mac勿加/')
+# shutil.copytree("./rimefiles/其他/OpenCC_ocd_64位元/", "./sort_rime/ocm/OpenCC_ocd_64位元/")
+# shutil.copytree("./rimefiles/custom檔_舊版防崩潰/ocm_防崩潰：Win必加，Mac勿加/", "./sort_rime/ocm/ocm_防崩潰：Win必加，Mac勿加/")
 # shutil.copyfile("./rimefiles/custom檔_舊版防崩潰/easy_en_super_防崩潰：Win必加，Mac勿加/easy_en_super.custom.yaml", "./sort_rime/ocm/ocm_防崩潰：Win必加，Mac勿加/easy_en_super.custom.yaml")
 # shutil.copyfile("./rimefiles/custom檔_舊版防崩潰/easy_en_lower_防崩潰：Win必加，Mac勿加/easy_en_lower.custom.yaml", "./sort_rime/ocm/ocm_防崩潰：Win必加，Mac勿加/easy_en_lower.custom.yaml")
 
 
 #主程式
-shutil.copytree('./rimefiles/主程式/', './sort_rime/主程式/')
+shutil.copytree("./rimefiles/主程式/", "./sort_rime/主程式/")
 
 
 #增加日期
 localtime=time.strftime("%Y%m%d", time.localtime())
 
-os.rename('./sort_rime/地球拼音洋蔥mix-in版/', './sort_rime/地球拼音洋蔥mix-in版_'+localtime)
-os.rename('./sort_rime/注音洋蔥純注音版/', './sort_rime/注音洋蔥純注音版_'+localtime)
-os.rename('./sort_rime/注音洋蔥雙拼版/', './sort_rime/注音洋蔥雙拼版_'+localtime)
-os.rename('./sort_rime/注音洋蔥mixin版/', './sort_rime/注音洋蔥mixin版_'+localtime)
-os.rename('./sort_rime/注音洋蔥plus版/', './sort_rime/注音洋蔥plus版_'+localtime)
+os.rename("./sort_rime/地球拼音洋蔥mix-in版/", "./sort_rime/地球拼音洋蔥mix-in版_"+localtime)
+os.rename("./sort_rime/注音洋蔥純注音版/", "./sort_rime/注音洋蔥純注音版_"+localtime)
+os.rename("./sort_rime/注音洋蔥雙拼版/", "./sort_rime/注音洋蔥雙拼版_"+localtime)
+os.rename("./sort_rime/注音洋蔥mixin版/", "./sort_rime/注音洋蔥mixin版_"+localtime)
+os.rename("./sort_rime/注音洋蔥plus版/", "./sort_rime/注音洋蔥plus版_"+localtime)
 
-os.rename('./sort_rime/ocm/ocm_mixin/', './sort_rime/ocm/ocm_mixin_'+localtime)
-os.rename('./sort_rime/ocm/ocm_plus/', './sort_rime/ocm/ocm_plus_'+localtime)
-os.rename('./sort_rime/ocm/ocm_mount/', './sort_rime/ocm/ocm_mount_'+localtime)
-os.rename('./sort_rime/ocm/', './sort_rime/ocm_'+localtime)
+os.rename("./sort_rime/ocm/ocm_mixin/", "./sort_rime/ocm/ocm_mixin_"+localtime)
+os.rename("./sort_rime/ocm/ocm_plus/", "./sort_rime/ocm/ocm_plus_"+localtime)
+os.rename("./sort_rime/ocm/ocm_mount/", "./sort_rime/ocm/ocm_mount_"+localtime)
+os.rename("./sort_rime/ocm/", "./sort_rime/ocm_"+localtime)
 
-os.rename('./sort_rime/洋蔥行列30/', './sort_rime/洋蔥行列30_'+localtime)
+os.rename("./sort_rime/洋蔥行列30/", "./sort_rime/洋蔥行列30_"+localtime)
 
-os.rename('./sort_rime/', './電腦RIME方案_'+localtime)
+os.rename("./sort_rime/", "./電腦RIME方案_"+localtime)
 
 
