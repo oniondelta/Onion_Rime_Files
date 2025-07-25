@@ -41,7 +41,7 @@
 
   > 不一定更到最新。
 
-- 本倉庫 Actions 中，其 sort_rime_output 裡 artifact 有已跑 sort_rime_file.py 分好方案之 ZIP 檔。
+- 本倉庫 Actions 中，其 sort_and_output_artifact 裡 artifact 有已跑 sort_rime_file.py 分好方案之 ZIP 檔。
 
   > 不一定更到最新，需登錄 GitHub 帳號。
 
