@@ -1,4 +1,4 @@
-name: sort_and_output_artifact
+name: sort_and_output
 
 on:
   workflow_dispatch:
