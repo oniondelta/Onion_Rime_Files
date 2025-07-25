@@ -1,4 +1,4 @@
-name: sort_by_bpin1_and_output
+name: sort_rime_output
 
 on:
   workflow_dispatch:
@@ -18,7 +18,7 @@ jobs:
         with:
           python-version: '3.10' 
       - run: |
-          python sort_rime_file_by_bpin1.py
+          python sort_rime_file.py
           BASEDIR=`pwd`
           FOLDER=`find ${BASEDIR} -name "電腦RIME*" -type d`
           OUTPUT="${BASEDIR}/output"
@@ -48,7 +48,7 @@ jobs:
 
           # create_zip "電腦RIME*" "電腦RIME.zip"
           # copy "電腦RIME*" "注音洋蔥純注音版*"
-          # remove_dir "ocm_20*"
+          remove_dir "ocm_20*"
           copy_dir "電腦RIME*"
 
       - name: Upload artifacts
