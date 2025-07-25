@@ -1,4 +1,4 @@
-name: sort_and_output_artifact_by_bpin1
+name: sort_by_bpin1_and_output_artifact
 
 on:
   workflow_dispatch:
