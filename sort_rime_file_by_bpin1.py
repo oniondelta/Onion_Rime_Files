@@ -4,7 +4,6 @@ import shutil
 import time
 
 #※新增資料夾(多層目錄, 如前一層data資料夾不存在, 將自動新增)※
-os.makedirs("./sort_rime_bpx5/rime﹤bpin1﹥/", exist_ok=True)
 os.makedirs("./sort_rime_bpx5/rime﹤bpin1﹥/opencc/", exist_ok=True)
 
 
