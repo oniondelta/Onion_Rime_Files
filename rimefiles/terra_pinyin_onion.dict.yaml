@@ -188,6 +188,7 @@
 #    詞句中，「阻塞」補齊「zu3 se4」和「zu3 sai1」。
 #    詞句中，「姑娘」補齊「gu1 niang2」和「gu1 niang5」，後者詞頻設為80%。
 #    詞句中，「親戚」補齊「qin1 qi1」和「qin1 qi4」，後者詞頻設為80%。
+#    詞句中，「坎坷」臺灣字典發音為「kan3 ke3」，日常發音常會誤發為「kan3 ke1」，故皆補齊「kan3 ke3」「kan3 ke1」。
 #    詞句中，「衚衕」臺灣字典發音為「hu2 tong4」，日常發音常會誤發為「hu2 tong2」，故皆補齊「hu2 tong4」「hu2 tong2」。
 #    詞句中，「拓撲」臺灣字典發音為「tuo4 pu1」，日常發音常會誤發為「tuo4 bu3」和「tuo4 pu3」，故皆補齊「tuo4 pu1」「tuo4 bu3」「tuo4 pu3」，最後者「tuo4 pu3」詞頻設為80%。
 #    詞句中，「給予」臺灣字典發音為「ji3 yu3」，日常發音常發，故皆補齊「ji3 yu3」「ji3 yu2」「gei3 yu3」「gei3 yu2」。
@@ -4997,7 +4998,7 @@ min_phrase_weight: 100
 犮	quan3	0.3%
 獱	bian1	0.3%
 琝	min2	0.3%
-琢	zuo2	0.3%
+琢	zuo2	3%
 # 甬	tong3	0.3%
 畂	mu3	0.3%
 疸	da5	0.3%
@@ -58040,6 +58041,7 @@ min_phrase_weight: 100
 人是衣裳	ren2 shi4 yi1 shang1
 人是衣裳	ren2 shi4 yi1 chang2
 人是衣裳	ren2 shi4 yi1 shang5
+人是衣裳	ren2 shi4 yi1 shang3	80%
 人有旦夕禍福	ren2 you3 dan4 xi4 huo4 fu2
 人格分裂	ren2 ge2 fen1 lie4
 人格教育	ren2 ge2 jiao4 yu4
@@ -61341,6 +61343,9 @@ min_phrase_weight: 100
 冠冕堂皇	guan1 mian3 tang2 huang2
 冠冕堂皇	guan4 mian3 tang2 huang2
 冠冕衣裳	guan1 mian3 yi1 chang2
+冠冕衣裳	guan1 mian3 yi1 shang5
+冠冕衣裳	guan1 mian3 yi1 shang1
+冠冕衣裳	guan1 mian3 yi1 shang3	80%
 冠子	guan1 zi5
 冠子	guan4 zi3
 冠子蟲	guan1 zi5 chong2
@@ -62191,6 +62196,9 @@ min_phrase_weight: 100
 切碎	qie1 sui4
 切磋	qie1 cuo1
 切磋琢磨	qie1 cuo1 zhuo2 mo2
+切磋琢磨	qie1 cuo1 zhuo2 mo4
+切磋琢磨	qie1 cuo1 zuo2 mo2
+切磋琢磨	qie1 cuo1 zuo2 mo4
 切空間	qie1 kong1 jian1
 切結	qie4 jie2
 切結書	qie4 jie2 shu1
@@ -67546,8 +67554,8 @@ min_phrase_weight: 100
 嚄唶	huo4 ze4
 嚄嚄	huo4 huo4
 嚇倒	xia4 dao3
-嚇唬	he4 hu3
 嚇唬	xia4 hu3
+嚇唬	xia4 hu5	80%
 嚇嚇	he4 he4
 嚇嚇	xia4 xia4
 嚇得發抖	xia4 de2 fa1 dou3
@@ -72713,6 +72721,7 @@ min_phrase_weight: 100
 小衣裳	xiao3 yi1 shang1
 小衣裳	xiao3 yi1 chang2
 小衣裳	xiao3 yi1 shang5
+小衣裳	xiao3 yi1 shang3	80%
 小裡小氣	xiao3 li3 xiao3 qi4
 小見識	xiao3 jian4 shi4
 小調	xiao3 diao4
@@ -80095,6 +80104,7 @@ min_phrase_weight: 100
 摟衣裳	lou1 yi1 shang1
 摟衣裳	lou1 yi1 chang2
 摟衣裳	lou1 yi1 shang5
+摟衣裳	lou1 yi1 shang3	80%
 摟財	lou1 cai2
 摟貨	lou1 huo4
 摟錢	lou1 qian2
@@ -84404,6 +84414,7 @@ min_phrase_weight: 100
 枇杷膏	pi2 ba5 gao1
 枉擔虛名	wang3 dan1 xu1 ming2
 枉橈	wang3 nao2
+枉橈	wang3 rao2
 枉突徙薪	wang3 tu2 xi3 xin1
 枉突徙薪	wang3 tu1 xi3 xin1
 枋子	fang1 zi5
@@ -85653,7 +85664,9 @@ min_phrase_weight: 100
 樹行子	shu4 hang4 zi5
 樿傍	zhan3 pang2
 橈動脈	nao2 dong4 mai4
+橈動脈	rao2 dong4 mai4
 橈敗	nao2 bai4
+橈敗	rao2 bai4
 橈骨	nao2 gu3
 橈骨	rao2 gu3
 橘化為枳	ju2 hua4 wei2 zhi3
@@ -91775,7 +91788,9 @@ min_phrase_weight: 100
 理鬍子	li3 hu2 zi5
 琉璃喇叭	liu2 li2 la3 ba1
 琢磨	zhuo2 mo2
+琢磨	zhuo2 mo4
 琢磨	zuo2 mo2
+琢磨	zuo2 mo4
 琦行	qi2 xing4
 琳‧戴維斯	lin2 eng5 dai4 wei2 si1
 琴心相挑	qin2 xin1 xiang1 tiao3
@@ -100020,6 +100035,7 @@ min_phrase_weight: 100
 膚如刻畫	fu1 ru2 ke1 hua4
 膚如刻畫	fu1 ru2 ke4 hua4
 膚橈目逃	fu1 nao2 mu4 tao2
+膚橈目逃	fu1 rao2 mu4 tao2
 膛炸	tang2 zha4
 膜外	mo4 wai4	3%
 膜外	mo2 wai4
@@ -102710,6 +102726,7 @@ min_phrase_weight: 100
 蘭摧玉折	lan2 cui1 yu4 zhe2
 蘭摧蕙折	lan2 cui1 hui4 zhe2
 蘭橈	lan2 nao2
+蘭橈	lan2 rao2
 蘭臭	lan2 xiu4
 蘭花煙	lan2 hua1 yan1
 蘭芷漸滫	lan2 zhi3 jian1 xiu3
@@ -103806,12 +103823,16 @@ min_phrase_weight: 100
 衣被	yi4 bei4
 衣裳	yi1 chang2
 衣裳	yi1 shang1
-衣裳	yi1 shang3
+衣裳	yi1 shang3	80%
 衣裳	yi1 shang5
 衣裳鉤兒	yi1 chang2 gou1 er5	80%
 衣裳鉤兒	yi1 chang2 gou1 er2
 衣裳鉤兒	yi1 shang1 gou1 er5	80%
 衣裳鉤兒	yi1 shang1 gou1 er2
+衣裳鉤兒	yi1 shang5 gou1 er5	80%
+衣裳鉤兒	yi1 shang5 gou1 er2
+衣裳鉤兒	yi1 shang3 gou1 er5	80%
+衣裳鉤兒	yi1 shang3 gou1 er2	80%
 衣褐懷寶	yi4 he2 huai2 bao3
 衣車	yi1 ju1
 衣鉤兒	yi1 gou1 er5	80%
@@ -108157,6 +108178,7 @@ min_phrase_weight: 100
 逗悶子	dou4 men4 zi5
 逗樂	dou4 le4
 逗橈	dou4 nao2
+逗橈	dou4 rao2
 逗笑兒	dou4 xiao4 er5	80%
 逗笑兒	dou4 xiao4 er2
 逗趣兒	dou4 qu4 er5	80%
@@ -113716,6 +113738,8 @@ min_phrase_weight: 100
 顛倒而行	dian1 dao3 er2 xing2
 顛倒衣裳	dian1 dao3 yi1 chang2
 顛倒衣裳	dian1 dao3 yi1 shang5
+顛倒衣裳	dian1 dao3 yi1 shang1
+顛倒衣裳	dian1 dao3 yi1 shang3	80%
 顛倒過來	dian1 dao3 guo4 lai2
 顛倒錯亂	dian1 dao3 cuo4 luan4
 顛倒陰陽	dian1 dao3 yin1 yang2
@@ -115808,4 +115832,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 115811 #####
+##### @結束 END - 115835 #####
