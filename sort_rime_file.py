@@ -612,3 +612,4 @@ os.rename("./"+sort_rime+"/"+rime_files_9+"/", "./"+sort_rime+"/"+rime_files_9+"
 os.rename("./"+sort_rime+"/", "./"+the_name+"_"+localtime)
 
 
+
