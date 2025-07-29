@@ -197,7 +197,7 @@
 #    詞句中，「部署」臺灣字典發音為「bu4 shu4」，日常發音常發「bu4 shu3」，故皆補齊「bu4 shu4」「bu4 shu3」。
 #    詞句中，「擂臺」「擂台」臺灣字典發音為「lei4 tai2」，日常發音常發「lei2 tai2」，故皆補齊「lei2 tai4」「lei2 tai2」。
 #    詞句中，「相片」「照片」「影片」「碟片」「唱片」「畫片」，其「片」發音，皆補齊「pian4」和「pian1」。
-#    詞句中，「傍晚」臺灣字典發音為「bang1 wan3」，大陸標準為「bang4 wan3」，斟酌後全改成臺灣發音「bang1 wan3」。
+#    詞句中，「傍晚」臺灣字典發音為「bang1 wan3」，大陸標準為「bang4 wan3」，易誤按，且無相似發音詞彙，故皆補齊「bang1 wan3」「bang4 wan3」。
 #    預計比對「輕聲和一聲」變音。
 #
 #  〈2020修改字詞彙發音〉：
@@ -60079,6 +60079,7 @@ min_phrase_weight: 100
 傍排	pang2 pai2
 傍晌	bang1 shang3
 傍晚	bang1 wan3
+傍晚	bang4 wan3
 傍牌	pang2 pai2
 傍生	pang2 sheng1
 傍若無人	pang2 ruo4 wu2 ren2
@@ -115842,4 +115843,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 115845 #####
+##### @結束 END - 115846 #####
