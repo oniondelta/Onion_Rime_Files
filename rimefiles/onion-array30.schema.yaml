@@ -4,7 +4,7 @@
 schema:
   schema_id: onion-array30
   name: "▦ 行列３０（洋蔥版）"
-  version: "202410"
+  version: "202507"
   author:
     - 洋蔥 <deltazonetw@gmail.com>
   description: |
@@ -41,9 +41,9 @@ switches:
   #   reset: 0
     # states: [ 'Ⓝ', 'Ⓓ' ]
     # states: [ 'normal', 'Debug' ]
-  - name: 1_2_straight_up
-    reset: 0
-    states: [ 香草, 直上 ]
+  # - name: 1_2_straight_up
+  #   reset: 0
+  #   states: [ 香草, 直上 ]
   - name: array30_space_wp
     reset: 1
     states: [ 確認, 翻頁 ]
@@ -58,7 +58,8 @@ engine:
     - simplifier@zh_cn
     - reverse_lookup_filter@array30_reverse_lookup
     - lua_filter@punct_preedit_revise_filter
-    - lua_filter@mix30_nil_comment_up_filter
+    # - lua_filter@mix30_nil_comment_up_filter
+    - lua_filter@mix30_nil_comment_new_filter
     # - lua_filter@mix30_nil_comment_filter
     # - lua_filter@array30_spaceup_filter
     # - lua_filter@array30_comment_filter #後面註解開關濾鏡。
@@ -71,7 +72,8 @@ engine:
     # - lua_filter@comment_filter_unicode_debug
     # - single_char_filter
   processors:
-    - lua_processor@array30up_mix
+    # - lua_processor@array30up_mix
+    - lua_processor@array30new_mix
     # - lua_processor@array30up #三、四、五碼空白鍵直上屏
     # - lua_processor@array30up_zy #注音反查 Return 和 space 上屏修正。 #架構關係，反查輸入法使用鍵位大於主輸入法，仍會產生 Bug。
     - ascii_composer
@@ -444,13 +446,15 @@ key_binder:
 # #    - { accept: Control+equal, toggle: array30_return_abc, when: always } # return 上屏候選字或 abc 開關
 ## 上排切換(Mac)
     - { accept: Control+Shift+7, toggle: simplify_comment, when: always } #編碼提示開關
-    - { accept: Control+Shift+8, toggle: 1_2_straight_up, when: always } #空白直上開關
-    - { accept: Control+Shift+9, toggle: array30_space_wp, when: always } #空白為翻頁或上屏開關
+    - { accept: Control+Shift+8, toggle: array30_space_wp, when: always } #空白為翻頁或上屏開關
+    # - { accept: Control+Shift+8, toggle: 1_2_straight_up, when: always } #空白直上開關
+    # - { accept: Control+Shift+9, toggle: array30_space_wp, when: always } #空白為翻頁或上屏開關
     # - { accept: Control+Shift+0, toggle: array30_return_abc, when: always } # return 上屏候選字或 abc 開關
 ## 上排切換(Win)
     - { accept: Control+Shift+ampersand, toggle: simplify_comment, when: always } #編碼提示開關
-    - { accept: Control+Shift+asterisk, toggle: 1_2_straight_up, when: always } #空白直上開關
-    - { accept: Control+Shift+parenleft, toggle: array30_space_wp, when: always } #空白為翻頁或上屏開關
+    - { accept: Control+Shift+asterisk, toggle: array30_space_wp, when: always } #空白為翻頁或上屏開關
+    # - { accept: Control+Shift+asterisk, toggle: 1_2_straight_up, when: always } #空白直上開關
+    # - { accept: Control+Shift+parenleft, toggle: array30_space_wp, when: always } #空白為翻頁或上屏開關
     # - { accept: Control+Shift+parenright, toggle: array30_return_abc, when: always } # return 上屏候選字或 abc 開關
 ## 切換樣態
     - { accept: Control+comma, set_option: ascii_mode, when: always } #新增！
@@ -459,8 +463,9 @@ key_binder:
     - { accept: Control+slash, set_option: ascii_punct, when: always } #新增！
     - { accept: Control+apostrophe, unset_option: extended_charset, when: always } #增廣常用字符過濾，新增開關
     - { accept: Control+bracketleft, set_option: simplify_comment, when: always } #編碼提示開關
-    - { accept: Control+bracketright, set_option: 1_2_straight_up, when: always } #空白直上開關
-#win易快捷鍵衝突，mac可打開#    - { accept: Control+minus, unset_option: array30_space_wp, when: always } #空白為翻頁或上屏開關
+    - { accept: Control+bracketright, unset_option: array30_space_wp, when: always } #空白為翻頁或上屏開關
+    # - { accept: Control+bracketright, set_option: 1_2_straight_up, when: always } #空白直上開關
+#win易快捷鍵衝突，mac可打開#    # - { accept: Control+minus, unset_option: array30_space_wp, when: always } #空白為翻頁或上屏開關
 #win易快捷鍵衝突，mac可打開#    # - { accept: Control+equal, unset_option: array30_return_abc, when: always } # return 上屏候選字或 abc 開關
 ## 初始樣態(Mac)
     - { accept: Control+Shift+comma, unset_option: ascii_mode, when: always } #新增！
@@ -469,8 +474,9 @@ key_binder:
     - { accept: Control+Shift+slash, unset_option: ascii_punct, when: always } #新增！
     - { accept: Control+Shift+apostrophe, set_option: extended_charset, when: always } #增廣常用字符過濾，新增開關
     - { accept: Control+Shift+bracketleft, unset_option: simplify_comment, when: always } #編碼提示開關
-    - { accept: Control+Shift+bracketright, unset_option: 1_2_straight_up, when: always } #空白直上開關
-#win易快捷鍵衝突，mac可打開#    - { accept: Control+Shift+minus, set_option: array30_space_wp, when: always } #空白為翻頁或上屏開關
+    - { accept: Control+Shift+bracketright, set_option: array30_space_wp, when: always } #空白為翻頁或上屏開關
+    # - { accept: Control+Shift+bracketright, unset_option: 1_2_straight_up, when: always } #空白直上開關
+#win易快捷鍵衝突，mac可打開#    # - { accept: Control+Shift+minus, set_option: array30_space_wp, when: always } #空白為翻頁或上屏開關
 #win易快捷鍵衝突，mac可打開#    # - { accept: Control+Shift+equal, set_option: array30_return_abc, when: always } # return 上屏候選字或 abc 開關
 ## 初始樣態(Win)
     - { accept: Control+Shift+less, unset_option: ascii_mode, when: always } #新增！
@@ -479,8 +485,9 @@ key_binder:
     - { accept: Control+Shift+question, unset_option: ascii_punct, when: always } #新增！
     - { accept: Control+Shift+quotedbl, set_option: extended_charset, when: always } #增廣常用字符過濾，新增開關
     - { accept: Control+Shift+braceleft, unset_option: simplify_comment, when: always } #編碼提示開關
-    - { accept: Control+Shift+braceright, unset_option: 1_2_straight_up, when: always } #空白直上開關
-#win易快捷鍵衝突，mac可打開#    - { accept: Control+Shift+underscore, set_option: array30_space_wp, when: always } #空白為翻頁或上屏開關
+    - { accept: Control+Shift+braceright, set_option: array30_space_wp, when: always } #空白為翻頁或上屏開關
+    # - { accept: Control+Shift+braceright, unset_option: 1_2_straight_up, when: always } #空白直上開關
+#win易快捷鍵衝突，mac可打開#    # - { accept: Control+Shift+underscore, set_option: array30_space_wp, when: always } #空白為翻頁或上屏開關
 #win易快捷鍵衝突，mac可打開#    # - { accept: Control+Shift+plus, set_option: array30_return_abc, when: always } # return 上屏候選字或 abc 開關
 ### Return/Enter鍵 ###
     - {accept: Return, send: KP_Space, when: paging} #選字時 Return/Enter 鍵同空白鍵上屏中文

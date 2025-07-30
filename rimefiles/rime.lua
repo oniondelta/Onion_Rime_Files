@@ -57,7 +57,8 @@
 --
 --      - ＊合併兩個以上函數：
 --      - lua_filter@mix30_nil_comment_filter        --（關） 合併 array30_nil_filter 和 array30_comment_filter，兩個 lua filter 太耗效能。
---      - lua_filter@mix30_nil_comment_up_filter     --（引lua資料夾）（onion-array30） 合併 array30_nil_filter 和 array30_comment_filter 和 array30_spaceup_filter，三個 lua filter 太耗效能。
+--      - lua_filter@mix30_nil_comment_up_filter     --（關）（onion-array30） 合併 array30_nil_filter 和 array30_comment_filter 和 array30_spaceup_filter，三個 lua filter 太耗效能。
+--      - lua_filter@mix30_nil_comment_new_filter    --（引lua資料夾）（onion-array30） 合併 array30_nil_filter 和 array30_comment_filter，兩個 lua filter 太耗效能。
 --      - lua_filter@mix_cf2_miss_filter             --（引lua資料夾）（bopomo_onionplus 和 bo_mixin 全系列） 合併 charset_filter2 和 missing_mark_filter，兩個 lua filter 太耗效能。
 --      - lua_filter@mix_cf2_cfp_filter              --（引lua資料夾）（dif1） 合併 charset_filter2 和 comment_filter_plus，兩個 lua filter 太耗效能。
 --      - lua_filter@mix_cf2_cfp_smf_filter          --（關）（ocm_mixin） 合併 charset_filter2 和 comment_filter_plus 和 symbols_mark_filter，三個 lua filter 太耗效能。
@@ -86,7 +87,8 @@
 --      - lua_processor@lua_tran_kp                  --（關）（bopomo_onion_double）使 lua 之 mf_translator 數字和計算機功能可用小鍵盤輸入。
 --
 --      - ＊合併兩個以上函數：
---      - lua_processor@array30up_mix                --（引lua資料夾）（onion-array30） 合併 array30up 和 array30up_zy，增進效能。
+--      - lua_processor@array30up_mix                --（關）（onion-array30） 合併 array30up 和 array30up_zy，增進效能。
+--      - lua_processor@array30new_mix               --（引lua資料夾）（onion-array30） 合併 array30up 和 array30up_zy，增進效能。
 --      - lua_processor@mix_apc_s2rm_ltk             --（引lua資料夾）（bo_mixin 1、2、4；bopomo_onionplus） 合併 ascii_punct_change、s2r_most、lua_tran_kp，增進效能。
 --      - lua_processor@mix_apc_s2rm_ltk_3           --（引lua資料夾）（bo_mixin3） 合併 ascii_punct_change、s2r_mixin3、lua_tran_kp，增進效能。
 --      - lua_processor@mix_apc_ltk_pluss            --（引lua資料夾）（bopomo_onionplus_space） 以原 ascii_punct_change 增加功能，使初始空白可以直接上屏。
@@ -172,7 +174,15 @@ mix_cf2_miss_filter = require("filter_mix_cf2_miss_filter")
 --- mix_cf2_cfp_filter （dif1）
 -- 合併 charset_filter2 和 comment_filter_plus，兩個 lua filter 太耗效能。
 mix_cf2_cfp_filter = require("filter_mix_cf2_cfp_filter")
-mix30_nil_comment_up_filter = require("filter_mix30_nil_comment_up_filter")
+
+
+-- --- mix30_nil_comment_up_filter （array30）
+-- -- 合併 array30_nil_filter 和 array30_comment_filter 和 array30_spaceup_filter，三個 lua filter
+-- mix30_nil_comment_up_filter = require("array30_straight_up.filter_mix30_nil_comment_up_filter")
+
+--- mix30_nil_comment_new_filter （array30）
+-- 合併 array30_nil_filter 和 array30_comment_filter 兩個 lua filter
+mix30_nil_comment_new_filter = require("filter_mix30_nil_comment_new_filter")
 
 
 --- preedit_model_filter （bo_mixin 全系列）
@@ -277,11 +287,16 @@ convert_english_filter = require("filter_convert_english_filter")
 ascii_punct_change = require("processor_ascii_punct_change")
 
 
---- array30up_mix （onion-array30）
--- 合併 array30up 和 array30up_zy
--- 行列30三四碼字按空格直接上屏
+-- --- array30up_mix （onion-array30）
+-- -- 合併 array30up 和 array30up_zy
+-- -- 行列30三四碼字按空格直接上屏
+-- -- 行列30注音反查 Return 和 space 上屏修正
+-- array30up_mix = require("array30_straight_up.processor_array30up_mix")
+
+--- array30up_new （onion-array30）
+-- 合併 array30up_zy 等
 -- 行列30注音反查 Return 和 space 上屏修正
-array30up_mix = require("processor_array30up_mix")
+array30new_mix = require("processor_array30new_mix")
 
 
 --- mix_apc_s2rm_ltk （bo_mixin 1、2、4；bopomo_onionplus）

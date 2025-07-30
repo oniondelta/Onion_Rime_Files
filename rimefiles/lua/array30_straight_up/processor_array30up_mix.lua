@@ -235,16 +235,26 @@ local function processor(key, env)
 --]]
 
   elseif key:repr() == "Shift+space" then
-    --- 以下可循環翻頁！
-    -- local loaded_candidate_count = seg.menu:candidate_count()    -- 獲得（已加載）候選詞數量
-    if env.n == loaded_candidate_count and env.n > 10 then
+    -- --- 以下可循環翻頁！(末頁會停頓！有提示效果！)
+    -- -- local loaded_candidate_count = seg.menu:candidate_count()    -- 獲得（已加載）候選詞數量
+    -- if env.n == loaded_candidate_count and env.n > 10 then
+    --   context:refresh_non_confirmed_composition()
+    --   return 1
+    -- else
+    --   env.n = loaded_candidate_count
+    --   -- engine:process_key(KeyEvent("Page_Down"))  -- 方案內已皆設置翻頁。
+    --   -- return 1
+    --   return 2
+    -- end
+    --- 以下可循環翻頁！(末頁不會停頓！)
+    engine:process_key(KeyEvent("Page_Down"))  --會執行
+    local g_c_t_update = context:get_commit_text()
+    if loaded_candidate_count > 10 and g_c_t == g_c_t_update then
+      -- engine:commit_text("test1「r」！")
       context:refresh_non_confirmed_composition()
       return 1
     else
-      env.n = loaded_candidate_count
-      -- engine:process_key(KeyEvent("Page_Down"))  -- 方案內已皆設置翻頁。
-      -- return 1
-      return 2
+      return 1  -- 不能為「2」，會兩次「Page_Down」
     end
 
 -----------------------------------------------------------------------------
@@ -322,14 +332,29 @@ local function processor(key, env)
 
   --- 「mf_translator」翻頁模式：空白鍵相關切換（與上條目分開，減少層數效能較好？）
   elseif a_s_wp and seg:has_tag("mf_translator") and key:repr() == "space" then
-    if env.n == loaded_candidate_count and env.n > 10 then
+    -- --- 以下可循環翻頁！(末頁會停頓！有提示效果！)
+    -- if env.n == loaded_candidate_count and env.n > 10 then
+    --   context:refresh_non_confirmed_composition()
+    --   return 1
+    -- else
+    --   env.n = loaded_candidate_count
+    --   engine:process_key(KeyEvent("Page_Down"))
+    --   local g_c_t_update = context:get_commit_text()
+    --   if env.n < 11 and g_c_t == g_c_t_update then
+    --     engine:commit_text(g_c_t)
+    --     context:clear()
+    --   end
+    --   return 1
+    -- end
+    --- 以下可循環翻頁！(末頁不會停頓！)
+    engine:process_key(KeyEvent("Page_Down"))  --會執行
+    local g_c_t_update = context:get_commit_text()
+    if loaded_candidate_count > 10 and g_c_t == g_c_t_update then
+      -- engine:commit_text("test1「r」！")
       context:refresh_non_confirmed_composition()
       return 1
     else
-      env.n = loaded_candidate_count
-      engine:process_key(KeyEvent("Page_Down"))
-      local g_c_t_update = context:get_commit_text()
-      if env.n < 11 and g_c_t == g_c_t_update then
+      if g_c_t == g_c_t_update then
         engine:commit_text(g_c_t)
         context:clear()
       end
@@ -382,19 +407,34 @@ KeyEvent 函數在舊版 librime-lua 中不支持。
 --]]
 
   elseif a_s_wp and check_i_end and not seg:has_tag("reverse2_lookup") and key:repr() == "space" then
-    -- local loaded_candidate_count = seg.menu:candidate_count()    -- 獲得（已加載）候選詞數量
-    -- local page_n = 10 * (seg.selected_index // 10)    -- 先確定在第幾頁，「//」為整除運算符。
-    if env.n == loaded_candidate_count and env.n > 10 then
-      -- engine:commit_text(loaded_candidate_count)  -- 測試用
+    -- --- 以下可循環翻頁！(末頁會停頓！有提示效果！)
+    -- -- local loaded_candidate_count = seg.menu:candidate_count()    -- 獲得（已加載）候選詞數量
+    -- -- local page_n = 10 * (seg.selected_index // 10)    -- 先確定在第幾頁，「//」為整除運算符。
+    -- if env.n == loaded_candidate_count and env.n > 10 then
+    --   -- engine:commit_text(loaded_candidate_count)  -- 測試用
+    --   context:refresh_non_confirmed_composition()
+    --   return 1
+    -- else
+    --   -- local check_text = g_c_t
+    --   -- engine:commit_text(loaded_candidate_count)  -- 測試用
+    --   env.n = loaded_candidate_count
+    --   engine:process_key(KeyEvent("Page_Down"))
+    --   local g_c_t_update = context:get_commit_text()
+    --   if env.n < 11 and g_c_t == g_c_t_update then
+    --     engine:commit_text(g_c_t)
+    --     context:clear()
+    --   end
+    --   return 1
+    -- end
+    --- 以下可循環翻頁！(末頁不會停頓！)
+    engine:process_key(KeyEvent("Page_Down"))  --會執行
+    local g_c_t_update = context:get_commit_text()
+    if loaded_candidate_count > 10 and g_c_t == g_c_t_update then
+      -- engine:commit_text("test1「r」！")
       context:refresh_non_confirmed_composition()
       return 1
     else
-      -- local check_text = g_c_t
-      -- engine:commit_text(loaded_candidate_count)  -- 測試用
-      env.n = loaded_candidate_count
-      engine:process_key(KeyEvent("Page_Down"))
-      local g_c_t_update = context:get_commit_text()
-      if env.n < 11 and g_c_t == g_c_t_update then
+      if g_c_t == g_c_t_update then
         engine:commit_text(g_c_t)
         context:clear()
       end
