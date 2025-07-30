@@ -46,7 +46,7 @@ switches:
   #   states: [ 香草, 直上 ]
   - name: array30_space_wp
     reset: 1
-    states: [ 確認, 翻頁 ]
+    states: [ 上屏, 翻頁 ]  #[ 確認, 翻頁 ]
     # states: [ "Confirm", "Paging" ]
   # - name: array30_return_abc  --改用「array30_space_wp」連動作用
   #   reset: 1
@@ -118,7 +118,8 @@ zh_cn:
 punct_preedit_revise_filter:
   tags: [ punct ]
 
-mix30_nil_comment_up_filter:
+# mix30_nil_comment_up_filter:
+mix30_nil_comment_new_filter:
   tags: [ abc ]
 
 array30_nil_filter:
