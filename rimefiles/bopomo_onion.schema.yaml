@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onion
   name: "☆注音(洋蔥純注音版)☆"
-  version: "202405"
+  version: "202407"
   author:
     - 『洋蔥』
   description: |
@@ -26,12 +26,15 @@ switches:
   - name: simplification
     reset: 0
     states: ["原體", "简体"]
-#   - options: [ utf8, big5, gbk ]
-# #    reset: 0
-#     states:
-#       - UTF-8
-#       - BIG5
-#       - GBK
+  # - options: [ utf8, big5, gbk ]
+  #   # reset: 0
+  #   states:
+  #     - UTF-8
+  #     - BIG5
+  #     - GBK
+  # - name: prediction
+  #   reset: 1
+  #   states: [ 關閉預測, 開啓預測 ]
 
 engine:
   filters:
@@ -41,6 +44,7 @@ engine:
     - reverse_lookup_filter@bpm_reverse_lookup
     - uniquifier
   processors:
+    # - predictor
     - ascii_composer
     - recognizer
     - key_binder
@@ -58,6 +62,7 @@ engine:
     - punct_segmentor
     - fallback_segmentor
   translators:
+    # - predict_translator
     - punct_translator
     # - table_translator@custom_phrase
     - script_translator@reverse2_lookup
@@ -379,6 +384,11 @@ recognizer:
     punct: "(?<![=`])``?[-,;/0-9a-z]*$|[[][[]?'?$|[]][]]?'?$|[[][]]$|[[][[][]][]]$|[[]'[]]'$|[[][[]'[]][]]'$|'''?$|===?$|=``?$|=''?$|=''?=''?$|=[][][][]?$|=[][][][]?=[][][][]?$|=[-,./;][-,./;]? ?$|=,,=[.][.] ?$|=[0-9] ?$|=9=0 ?$|==[].,90'[]+ ?$"
     reverse2_lookup: "=[a-z]* ?$"
 #    lua: "^'/[';]?[a-z0-9./-]*$"
+
+# predictor:
+#   db: predict_office.db  #predict.db  #文件名，predict db file in user directory/shared directory
+#   max_candidates: 0  #5  #每次預測的最大候選項數量，0表示全部候選項
+#   max_iterations: 0  #1  #最大預測次數，0表示不限制
 
 # __patch:
 #   # 使用八股文語言模型
