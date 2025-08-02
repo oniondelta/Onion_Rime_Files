@@ -218,62 +218,62 @@ local function init(env)
   env.schema_id = config:get_string("schema/schema_id")
   env.menu_table = {
         -- { "〔半角〕", "`" }
-        { "〖日期和時間〗", "⓪" }
-      , { "　f〔年月日〕  ym〔年月〕  md〔月日〕", "①" }
-      , { "　y〔年〕  m〔月〕  d〔日〕  w〔週〕", "②" }
-      , { "　n〔時:分〕  t〔時:分:秒〕", "③" }
-      , { "　fw〔年月日週〕  mdw〔月日週〕", "④" }
-      , { "　fn〔年月日 時:分〕  ft〔年月日 時:分:秒〕", "⑤" }
-      , { "　p〔程式格式〕  z〔時區〕  s〔節氣〕  l〔月相〕", "⑥" }
-      -- , { "  ○/○/○〔 ○ 年 ○ 月 ○ 日〕  ○/○〔 ○ 月 ○ 日〕", "⑥" }
-      -- , { "  ○-○-○〔○年○月○日〕  ○-○〔○月○日〕", "⑦" }
-      , { "　○ y ○ m ○ d〔○年○月○日〕", "⑦" }
-      , { "　○ y ○ m〔○年○月〕    ○ m ○ d〔○月○日〕", "⑧" }
-      , { "　○ y〔○年〕    ○ m〔○月〕    ○ d〔○日〕", "⑨" }
-      , { "〖數字和計算機〗", "⑩" }
-      -- , { "  ○○○〔數字〕", "⑨" }
-      , { "　[-.0-9]+〔數字〕", "⑪" }
-      , { "　[-.0-9]+[ + - * / ^ ( ) ]...〔計算機〕", "⑫" }
-      , { "　※ 算符： ‹+ a›   ‹- r›   ‹* x›   ‹/ v›   ‹^ s›   ‹ ( q›   ‹ ) w›　", "⑬" }
-      , { "〖字母〗", "⑭" }
-      , { "　/ [a-z , . - \' / ]+〔小寫字母〕", "⑮" }
-      , { "　; [a-z , . - \' / ]+〔大寫字母〕", "⑯" }
-      , { "　\' [a-z , . - \' / ]+〔開頭大寫字母〕", "⑰" }
-      , { "〖Unicode 內碼〗", "⑱" }
-      , { "　i [0-9a-f]+〔Percent/URL encoding〕", "⑲" }
-      , { "　u [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)", "⑳" }
-      , { "　x [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)", "㉑" }
-      , { "　c [0-9]+〔內碼十進制 Dec〕", "㉒" }
-      , { "　o [0-7]+〔內碼八進制 Oct〕", "㉓" }
-      , { "〖快捷功能〗", "㉔" }
-      , { "　j [a-z]+〔快捷開啟〕", "㉕" }
-      , { "　a 或 , 〔短語總列表〕", "㉖" }
-      , { "〖鍵位和編碼〗", "㉗" }
-      , { "　k k〔快捷鍵 說明〕", "㉘" }
-      , { "　k o〔操作鍵 說明〕", "㉙" }
-      , { "　k j〔日文 羅馬字 編碼〕", "㉚" }
-      , { "　k h〔韓文 HNC 編碼〕(注音系列)", "㉛" }
-      , { "　k s〔韓文 洋蔥形碼 編碼〕(形碼系列)", "㉜" }
-      , { "　k i〔拉丁 洋蔥形碼 IPA國際音標 編碼〕", "㉝" }
-      , { "　k p〔拉丁 洋蔥形碼 KK/DJ/IPA音標 編碼〕", "㉞" }
-      , { "　k y〔拉丁 洋蔥形碼 中文拼音 編碼〕", "㉟" }
-      , { "　k g〔希臘 洋蔥形碼 編碼〕", "㊱" }
-      , { "　k c〔西里爾 洋蔥形碼 編碼〕", "㊲" }
-      , { "　k n〔數符選項 鍵位〕", "㊳" }
-      , { "〖記憶體〗", "㊴" }
-      , { "　g〔Lua 所佔記憶體〕(Garbage)", "㊵" }
-      , { "　gc〔垃圾回收〕(Garbage Collection)", "㊶" }
-      , { "〖版本和路徑〗", "㊷" }
-      , { "　v〔版本資訊〕", "㊸" }
-      , { "　vf〔資料夾路徑〕", "㊹" }
-      , { "═══  結束  ═══  ", "㊺" }
-      , { "", "㊻" }
-      , { "", "㊼" }
-      , { "", "㊽" }
-      , { "", "㊾" }
-      , { "", "㊿" }
-      -- , { "===========  結束  ===========    ", "㉛" }
-      -- , { "〔夜思‧李白〕", "床前明月光，疑是地上霜。\r舉頭望明月，低頭思故鄉。" }
+        { "⓪", "〖日期和時間〗" }
+      , { "①", "　f〔年月日〕  ym〔年月〕  md〔月日〕" }
+      , { "②", "　y〔年〕  m〔月〕  d〔日〕  w〔週〕" }
+      , { "③", "　n〔時:分〕  t〔時:分:秒〕" }
+      , { "④", "　fw〔年月日週〕  mdw〔月日週〕" }
+      , { "⑤", "　fn〔年月日 時:分〕  ft〔年月日 時:分:秒〕" }
+      , { "⑥", "　p〔程式格式〕  z〔時區〕  s〔節氣〕  l〔月相〕" }
+      -- , { "⑥", "  ○/○/○〔 ○ 年 ○ 月 ○ 日〕  ○/○〔 ○ 月 ○ 日〕" }
+      -- , { "⑦", "  ○-○-○〔○年○月○日〕  ○-○〔○月○日〕" }
+      , { "⑦", "　○ y ○ m ○ d〔○年○月○日〕" }
+      , { "⑧", "　○ y ○ m〔○年○月〕    ○ m ○ d〔○月○日〕" }
+      , { "⑨", "　○ y〔○年〕    ○ m〔○月〕    ○ d〔○日〕" }
+      , { "⑩", "〖數字和計算機〗" }
+      -- , { "⑨", "  ○○○〔數字〕" }
+      , { "⑪", "　[ - . 0-9 ]+〔數字〕" }
+      , { "⑫", "　[ - . 0-9 ]+[ + - * / ^ ( ) ]...〔計算機〕" }
+      , { "⑬", "　※ 算符： ‹+ a›   ‹- r›   ‹* x›   ‹/ v›   ‹^ s›   ‹ ( q›   ‹ ) w›　" }
+      , { "⑭", "〖字母〗" }
+      , { "⑮", "　/ [ a-z , . - \' / ]+〔小寫字母〕" }
+      , { "⑯", "　; [ a-z , . - \' / ]+〔大寫字母〕" }
+      , { "⑰", "　\' [ a-z , . - \' / ]+〔開頭大寫字母〕" }
+      , { "⑱", "〖Unicode 內碼〗" }
+      , { "⑲", "　i [ 0-9 a-f ]+〔 Percent/URL encoding 〕" }
+      , { "⑳", "　u [ 0-9 a-f ]+〔內碼十六進制 Hex 〕(Unicode)" }
+      , { "㉑", "　x [ 0-9 a-f ]+〔內碼十六進制 Hex 〕(Unicode)" }
+      , { "㉒", "　c [ 0-9 ]+〔內碼十進制 Dec 〕" }
+      , { "㉓", "　o [ 0-7 ]+〔內碼八進制 Oct 〕" }
+      , { "㉔", "〖快捷功能〗" }
+      , { "㉕", "　j [ a-z ]+〔快捷開啟〕" }
+      , { "㉖", "　a 或 , 〔短語總列表〕" }
+      , { "㉗", "〖鍵位和編碼〗" }
+      , { "㉘", "　k k〔快捷鍵 說明〕" }
+      , { "㉙", "　k o〔操作鍵 說明〕" }
+      , { "㉚", "　k j〔日文 羅馬字 編碼〕" }
+      , { "㉛", "　k h〔韓文 HNC 編碼〕(注音系列)" }
+      , { "㉜", "　k s〔韓文 洋蔥形碼 編碼〕(形碼系列)" }
+      , { "㉝", "　k i〔拉丁 洋蔥形碼 IPA 國際音標 編碼〕" }
+      , { "㉞", "　k p〔拉丁 洋蔥形碼 KK/DJ/IPA 音標 編碼〕" }
+      , { "㉟", "　k y〔拉丁 洋蔥形碼 中文拼音 編碼〕" }
+      , { "㊱", "　k g〔希臘 洋蔥形碼 編碼〕" }
+      , { "㊲", "　k c〔西里爾 洋蔥形碼 編碼〕" }
+      , { "㊳", "　k n〔數符選項 鍵位〕" }
+      , { "㊴", "〖記憶體〗" }
+      , { "㊵", "　g〔 Lua 所佔記憶體〕(Garbage)" }
+      , { "㊶", "　gc〔垃圾回收〕(Garbage Collection)" }
+      , { "㊷", "〖版本和路徑〗" }
+      , { "㊸", "　v〔版本資訊〕" }
+      , { "㊹", "　vf〔資料夾路徑〕" }
+      , { "㊺", "═══  結束  ═══  " }
+      , { "㊻", "" }
+      , { "㊼", "" }
+      , { "㊽", "" }
+      , { "㊾", "" }
+      , { "㊿", "" }
+      -- , { "㉛", "===========  結束  ===========    " }
+      -- , { "床前明月光，疑是地上霜。\r舉頭望明月，低頭思故鄉。", "〔夜思‧李白〕" }
       }
   env.run_menu_table = run_menu(run_pattern)
   -- log.info("mf_translator Initilized!")
@@ -351,8 +351,8 @@ local function translate(input, seg, env)
     -- -- yield_c( "┃ ○○○〔數字〕" , "")
 
     for k, v in ipairs(env.menu_table) do
-      -- yield_c( v[2], " " .. v[1], input .. "\t《時間日期數字字母》▶")
-      yield_c( v[2], " " .. v[1], input .. "\t《特殊功能集》▶")
+      -- yield_c( v[1], " " .. v[2], input .. "\t《時間日期數字字母》▶")
+      yield_c( v[1], " " .. v[2], input .. "\t《特殊功能集》▶")
     end
     return
   end
@@ -401,22 +401,22 @@ local function translate(input, seg, env)
   -- 鍵位編碼說明
   if (input == env.prefix .. "k") then
     local keys_table = {
-        { "  ~k 〔快捷鍵 說明〕", "⓵" }
-      , { "  ~o 〔操作鍵 說明〕", "⓶" }
-      , { "  ~j 〔日文 羅馬字 編碼〕", "⓷" }
-      , { "  ~h 〔韓文 HNC 編碼〕(注音系列)", "⓸" }
-      , { "  ~s 〔韓文 洋蔥形碼 編碼〕(形碼系列)", "⓹" }
-      , { "  ~i 〔拉丁 洋蔥形碼 IPA國際音標 編碼〕", "⓺" }
-      , { "  ~p 〔拉丁 洋蔥形碼 KK/DJ/IPA音標 編碼〕", "⓻" }
-      , { "  ~y 〔拉丁 洋蔥形碼 中文拼音 編碼〕", "⓼" }
-      , { "  ~g 〔希臘 洋蔥形碼 編碼〕", "⓽" }
-      , { "  ~c 〔西里爾 洋蔥形碼 編碼〕", "⓾" }
-      , { "  ~n 〔數符選項 鍵位〕", "⑪" }
-      , { "　═══  結束  ═══  ", "" }
-      -- , { "===========  結束  ===========    ", "⓼" }
+        { "⓵", "  ~k 〔快捷鍵 說明〕" }
+      , { "⓶", "  ~o 〔操作鍵 說明〕" }
+      , { "⓷", "  ~j 〔日文 羅馬字 編碼〕" }
+      , { "⓸", "  ~h 〔韓文 HNC 編碼〕(注音系列)" }
+      , { "⓹", "  ~s 〔韓文 洋蔥形碼 編碼〕(形碼系列)" }
+      , { "⓺", "  ~i 〔拉丁 洋蔥形碼 IPA國際音標 編碼〕" }
+      , { "⓻", "  ~p 〔拉丁 洋蔥形碼 KK/DJ/IPA音標 編碼〕" }
+      , { "⓼", "  ~y 〔拉丁 洋蔥形碼 中文拼音 編碼〕" }
+      , { "⓽", "  ~g 〔希臘 洋蔥形碼 編碼〕" }
+      , { "⓾", "  ~c 〔西里爾 洋蔥形碼 編碼〕" }
+      , { "⑪", "  ~n 〔數符選項 鍵位〕" }
+      , { "", "　═══  結束  ═══  " }
+      -- , { "⓼", "===========  結束  ===========    " }
       }
     for k, v in ipairs(keys_table) do
-      yield_c( v[2], " " .. v[1], input .. "\t 【鍵位和編碼】▶")
+      yield_c( v[1], " " .. v[2], input .. "\t 【鍵位和編碼】▶")
     end
     return
   end
@@ -425,7 +425,7 @@ local function translate(input, seg, env)
     -- local keys_table = hotkeys(env.schema_id)[1]
     -- for k, v in ipairs(keys_table) do
     for k, v in ipairs(hotkeys(env.schema_id)[1]) do
-      yield_c( v[2], " " .. v[1], env.prefix .. "k O" .. "\t 【操作鍵 說明】")
+      yield_c( v[1], " " .. v[2], env.prefix .. "k O" .. "\t 【操作鍵 說明】")
     end
     return
   end
@@ -434,7 +434,7 @@ local function translate(input, seg, env)
     -- local keys_table = hotkeys(env.schema_id)[2]
     -- for k, v in ipairs(keys_table) do
     for k, v in ipairs(hotkeys(env.schema_id)[2]) do
-      yield_c( v[2], " " .. v[1], env.prefix .. "k K" .. "\t 【快捷鍵 說明】")
+      yield_c( v[1], " " .. v[2], env.prefix .. "k K" .. "\t 【快捷鍵 說明】")
     end
     return
   end
@@ -445,7 +445,7 @@ local function translate(input, seg, env)
   --     , { "  s〔韓文 洋蔥形碼 鍵位〕", "¹" }
   --     }
   --   for k, v in ipairs(keys_table) do
-  --     yield_c( v[2], " " .. v[1], input .. "\t 【韓文鍵位】▶")
+  --     yield_c( v[1], " " .. v[2], input .. "\t 【韓文鍵位】▶")
   --   end
   --   return
   -- end
@@ -453,7 +453,7 @@ local function translate(input, seg, env)
   if (input == env.prefix .. "kh") then
     local keys_table = kh_table
     for k, v in ipairs(keys_table) do
-      yield_c( v[2], " " .. v[1], env.prefix .. "k H" .. "\t 【韓文 HNC 編碼】" )
+      yield_c( v[1], " " .. v[2], env.prefix .. "k H" .. "\t 【韓文 HNC 編碼】" )
     end
     return
   end
@@ -461,7 +461,7 @@ local function translate(input, seg, env)
   if (input == env.prefix .. "ks") then
     local keys_table = ks_table
     for k, v in ipairs(keys_table) do
-      yield_c( v[2], " " .. v[1], env.prefix .. "k S" .. "\t 【韓文 洋蔥形碼 編碼】")
+      yield_c( v[1], " " .. v[2], env.prefix .. "k S" .. "\t 【韓文 洋蔥形碼 編碼】")
     end
     return
   end
@@ -469,7 +469,7 @@ local function translate(input, seg, env)
   if (input == env.prefix .. "kj") then
     local keys_table = kj_table
     for k, v in ipairs(keys_table) do
-      yield_c( v[2], " " .. v[1], env.prefix .. "k J" .. "\t 【日文 羅馬字 編碼】" )
+      yield_c( v[1], " " .. v[2], env.prefix .. "k J" .. "\t 【日文 羅馬字 編碼】" )
     end
     return
   end
@@ -477,7 +477,7 @@ local function translate(input, seg, env)
   if (input == env.prefix .. "ki") then
     local keys_table = ki_table
     for k, v in ipairs(keys_table) do
-      yield_c( v[2], " " .. v[1], env.prefix .. "k I" .. "\t 【拉丁 洋蔥形碼 IPA國際音標 編碼】")
+      yield_c( v[1], " " .. v[2], env.prefix .. "k I" .. "\t 【拉丁 洋蔥形碼 IPA國際音標 編碼】")
     end
     return
   end
@@ -485,7 +485,7 @@ local function translate(input, seg, env)
   if (input == env.prefix .. "kp") then
     local keys_table = kp_table
     for k, v in ipairs(keys_table) do
-      yield_c( v[2], " " .. v[1], env.prefix .. "k P" .. "\t 【拉丁 洋蔥形碼 KK/DJ/IPA音標 編碼】")
+      yield_c( v[1], " " .. v[2], env.prefix .. "k P" .. "\t 【拉丁 洋蔥形碼 KK/DJ/IPA音標 編碼】")
     end
     return
   end
@@ -493,7 +493,7 @@ local function translate(input, seg, env)
   if (input == env.prefix .. "ky") then
     local keys_table = ky_table
     for k, v in ipairs(keys_table) do
-      yield_c( v[2], " " .. v[1], env.prefix .. "k Y" .. "\t 【拉丁 洋蔥形碼 中文拼音 編碼】")
+      yield_c( v[1], " " .. v[2], env.prefix .. "k Y" .. "\t 【拉丁 洋蔥形碼 中文拼音 編碼】")
     end
     return
   end
@@ -501,7 +501,7 @@ local function translate(input, seg, env)
   if (input == env.prefix .. "kg") then
     local keys_table = kg_table
     for k, v in ipairs(keys_table) do
-      yield_c( v[2], " " .. v[1], env.prefix .. "k G" .. "\t 【希臘 洋蔥形碼 編碼】")
+      yield_c( v[1], " " .. v[2], env.prefix .. "k G" .. "\t 【希臘 洋蔥形碼 編碼】")
     end
     return
   end
@@ -509,7 +509,7 @@ local function translate(input, seg, env)
   if (input == env.prefix .. "kc") then
     local keys_table = kc_table
     for k, v in ipairs(keys_table) do
-      yield_c( v[2], " " .. v[1], env.prefix .. "k C" .. "\t 【西里爾 洋蔥形碼 編碼】")
+      yield_c( v[1], " " .. v[2], env.prefix .. "k C" .. "\t 【西里爾 洋蔥形碼 編碼】")
     end
     return
   end
@@ -518,7 +518,7 @@ local function translate(input, seg, env)
     -- local keys_table = numberkeys(env.schema_id)
     -- for k, v in ipairs(keys_table) do
     for k, v in ipairs(numberkeys(env.schema_id)) do
-      yield_c( v[2], " " .. v[1], env.prefix .. "k N" .. "\t 【數符選項 鍵位】")
+      yield_c( v[1], " " .. v[2], env.prefix .. "k N" .. "\t 【數符選項 鍵位】")
     end
     return
   end
@@ -527,33 +527,33 @@ local function translate(input, seg, env)
   -- 快捷開啟（開啟檔案/程式/網站）
   if (input == env.prefix .. "j") then
     -- local keys_table = {
-    --     { "※ 限起始輸入，限英文 [a-z]+  ", "⓿" }  -- ≤ 2
-    --   , { "※ 編輯後須「重新部署」生效  ", "❶" }  --  "────────────  "
-    --   , { "  ~t   〔 編輯 快捷開啟 table 〕", "❷" }
-    --   , { "  ~c   〔 編輯 custom 短語 〕", "❸" }
-    --   , { "  ~r   〔 Rime 官方 GitHub 〕", "❹" }
-    --   , { "  ~rw 〔 Rime 詳解 〕", "❺" }
-    --   , { "  ~l   〔 librime-lua 官方 GitHub 〕", "❻" }
-    --   , { "  ~lw 〔 librime-lua 腳本開發指南 〕", "❼" }
-    --   , { "  ~o   〔 Onion 洋蔥 GitHub 〕", "❽" }
-    --   , { "  ~ow 〔 Onion 洋蔥 GitHub Wiki 〕", "❾" }
-    --   , { "═══  結束  ═══  ", "❿" }
-    --   , { "", "⓫" }
-    --   , { "", "⓬" }
-    --   , { "", "⓭" }
-    --   , { "", "⓮" }
-    --   , { "", "⓯" }
-    --   , { "", "⓰" }
-    --   , { "", "⓱" }
-    --   , { "", "⓲" }
-    --   , { "", "⓳" }
-    --   , { "", "⓴" }
+    --     { "⓿", "※ 限起始輸入，限英文 [a-z]+  " }  -- ≤ 2
+    --   , { "❶", "※ 編輯後須「重新部署」生效  " }  --  "────────────  "
+    --   , { "❷", "  ~t   〔 編輯 快捷開啟 table 〕" }
+    --   , { "❸", "  ~c   〔 編輯 custom 短語 〕" }
+    --   , { "❹", "  ~r   〔 Rime 官方 GitHub 〕" }
+    --   , { "❺", "  ~rw 〔 Rime 詳解 〕" }
+    --   , { "❻", "  ~l   〔 librime-lua 官方 GitHub 〕" }
+    --   , { "❼", "  ~lw 〔 librime-lua 腳本開發指南 〕" }
+    --   , { "❽", "  ~o   〔 Onion 洋蔥 GitHub 〕" }
+    --   , { "❾", "  ~ow 〔 Onion 洋蔥 GitHub Wiki 〕" }
+    --   , { "❿", "═══  結束  ═══  " }
+    --   , { "⓫", "" }
+    --   , { "⓬", "" }
+    --   , { "⓭", "" }
+    --   , { "⓮", "" }
+    --   , { "⓯", "" }
+    --   , { "⓰", "" }
+    --   , { "⓱", "" }
+    --   , { "⓲", "" }
+    --   , { "⓳", "" }
+    --   , { "⓴", "" }
     --   }
 
     -- local keys_table = run_menu(run_pattern)  -- 不用 init 引入，直接引入
     -- for k, v in ipairs(keys_table) do
     for k, v in ipairs(env.run_menu_table) do -- init 引入
-      yield_c( v[2], " " .. v[1], input .. "\t 【快捷開啟】▶")
+      yield_c( v[1], " " .. v[2], input .. "\t 【快捷開啟】▶")
     end
     return
   end
