@@ -6,8 +6,8 @@ import time
 
 #名稱(取出來較好變換)
 sort_rime="sort_rime_allx9"
-rime_files="rime﹤allin1﹥"
-the_name="電腦RIME方案﹤allin1﹥"
+rime_files="rime＜allin1＞"
+the_name="電腦RIME方案＜allin1＞"
 
 
 #※新增資料夾(多層目錄, 如前一層data資料夾不存在, 將自動新增)※
