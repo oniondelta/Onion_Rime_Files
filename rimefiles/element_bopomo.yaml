@@ -72,14 +72,14 @@ key_binder:
     - {accept: Shift+space, send: Page_Down, when: has_menu} #選字時「Shift」+「空白鍵」翻頁。 #send: Right #send: Down
     - {accept: Shift+I, send: Page_Up, when: has_menu}
     - {accept: Shift+K, send: Page_Down, when: has_menu}
-#左邊選字
+#右邊選字
     - {accept: Shift+Y, send: Control+1, when: has_menu}
     - {accept: Shift+H, send: Control+2, when: has_menu}
     - {accept: Shift+N, send: Control+3, when: has_menu}
     - {accept: Shift+U, send: Control+4, when: has_menu}
     - {accept: Shift+J, send: Control+5, when: has_menu}
     - {accept: Shift+M, send: Control+6, when: has_menu}
-#右邊選字
+#左邊選字
     - {accept: Shift+Q, send: Control+1, when: has_menu}
     - {accept: Shift+A, send: Control+2, when: has_menu}
     - {accept: Shift+Z, send: Control+3, when: has_menu}
