@@ -1,0 +1,532 @@
+# Rime schema settings
+# encoding: utf-8
+
+schema:
+  schema_id: onion-array30
+  name: "▦ 行列３０（洋蔥版）"
+  version: "202507"
+  author:
+    - 洋蔥
+  description: |
+    行列30
+  dependencies:
+    - onion-array30-wsymbols #（可用 symbols 更簡單實現，但沒有開頭提示）
+    - Mount_bopomo
+
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 中文, 英文 ]
+  - name: full_shape
+    reset: 0
+    states: [ 半形, 全形 ]
+  - name: ascii_punct
+    reset: 0
+    states: [ "。，", "．，" ]
+  - name: simplification
+    reset: 0
+    states: [ 繁體, 简体 ]
+  - name: extended_charset
+    reset: 1
+    states: [ "常用", "增廣" ]
+  - name: simplify_comment
+    # reset: 1
+    states: [ 編碼, 無編 ]
+  # - name: unicode_comment
+  #   reset: 0
+  #   states: [ '🄽', '🅄' ]
+    # states: [ 'nil', 'Unicode(URL)' ]
+  # - name: debug_comment
+  #   reset: 0
+    # states: [ 'Ⓝ', 'Ⓓ' ]
+    # states: [ 'normal', 'Debug' ]
+  # - name: 1_2_straight_up
+  #   reset: 0
+  #   states: [ 香草, 直上 ]
+  - name: array30_space_wp
+    reset: 1
+    states: [ 上屏, 翻頁 ]  #[ 確認, 翻頁 ]
+    # states: [ "Confirm", "Paging" ]
+  # - name: array30_return_abc  --改用「array30_space_wp」連動作用
+  #   reset: 1
+  #   states: [ "Return & Space", "Space" ]
+
+
+engine:
+  filters:
+    - simplifier@zh_cn
+    - reverse_lookup_filter@array30_reverse_lookup
+    - lua_filter@punct_preedit_revise_filter
+    # - lua_filter@mix30_nil_comment_up_filter
+    - lua_filter@mix30_nil_comment_new_filter
+    # - lua_filter@mix30_nil_comment_filter
+    # - lua_filter@array30_spaceup_filter
+    # - lua_filter@array30_comment_filter #後面註解開關濾鏡。
+    - lua_filter@array30_nil_filter #把選字單中空碼符號轉換為""，且不會上屏。「=」「=」反查用。
+    - reverse_lookup_filter@array30-zy_reverse_lookup
+    - reverse_lookup_filter@bpmf_reverse_lookup
+    # - uniquifier
+    # - lua_filter@comment_filter_unicode  # unicode 和 debug 分開，同時開啟無法記憶
+    # - lua_filter@comment_filter_debug  # unicode 和 debug 分開，同時開啟無法記憶
+    # - lua_filter@comment_filter_unicode_debug
+    # - single_char_filter
+  processors:
+    # - lua_processor@array30up_mix
+    - lua_processor@array30new_mix
+    # - lua_processor@array30up #三、四、五碼空白鍵直上屏
+    # - lua_processor@array30up_zy #注音反查 Return 和 space 上屏修正。 #架構關係，反查輸入法使用鍵位大於主輸入法，仍會產生 Bug。
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+    # - fluency_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor #一定要放在「affix_segmentor」前
+    - affix_segmentor@wsymbols #（可用 symbols 更簡單實現，但沒有開頭提示）
+    - affix_segmentor@reverse2_lookup
+    - affix_segmentor@reverse3_lookup
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    # - script_translator
+    - table_translator
+    - table_translator@wsymbols #（可用 symbols 更簡單實現，但沒有開頭提示）
+    - script_translator@reverse2_lookup
+    - table_translator@reverse3_lookup
+    - lua_translator@mf_translator
+    # - lua_translator@t_translator
+    - lua_translator@email_url_translator
+
+
+mf_translator:
+  prefix: "`"
+
+
+zh_cn:
+  opencc_config: tw2s.json
+  tips: all
+  tags: [ abc ]
+
+punct_preedit_revise_filter:
+  tags: [ punct ]
+
+# mix30_nil_comment_up_filter:
+mix30_nil_comment_new_filter:
+  tags: [ abc ]
+
+array30_nil_filter:
+  tags: [ reverse3_lookup ]
+
+# mix30_nil_comment_filter:
+#   tags: [ reverse3_lookup ]
+
+# array30_spaceup_filter:
+#   tags: [ abc ]
+
+
+menu:
+  alternative_select_keys: "1234567890"
+  page_size: 10
+
+
+##### 拼寫處理器 #####
+speller:
+  alphabet: "abcdefghijklmnopqrstuvwxyz,./; '"
+  initials: "abcdefghijklmnopqrstuvwxyz,./;"
+  finals: " '"
+  delimiter: "|"
+  use_space: true
+  auto_select: true
+  # auto_select_pattern: '^[a-z,./;]{1,2} $' #'^[wtasfhlxv] $|^[a-z,./;]{2} $' #|[a-z,./;]{3} |[a-z,./;]{4} |[a-z,./;]{4}i ' #三、四、五碼會有非獨碼，故用 Lua 實現空白鍵直上。
+  # auto_select_pattern: '^[a-z,./;]{1,5} $'
+  auto_select_pattern: '^[a-z,./;]{1,4}i? $'
+  algebra:
+    - xform/@@/ /
+    - xform/@/ /
+    - xform/ ~/ /
+    # - derive|^([a-z,./;]{3})$|$1 |
+    # - derive|^([a-z,./;]{4})$|$1 |
+    # - derive|^([a-z,./;]{4}i)$|$1 |
+    - derive|^([a-z,./;]{3,4}i?)$|$1 |
+    # - derive|^([a-z,./;]+)'$|$1| #詞庫 #原設定
+    # - derive|^([a-z,./;]+)'$|$1 | #詞庫
+    # - derive|^([a-z,./;]+)'$|$1 '| #詞庫 #會有問題！
+    # - derive|^([a-z,./;]{3,4})'$|$1 | #詞庫
+
+    # "?"萬用字元（部署不了!）
+    # - derive/^(.).$/$1\?/               # .?
+    # - derive/^.(.)$/\?$1/               # ?.
+    # - derive/^(.)(.).$/$1$2\?/          # ..?
+    # - derive/^(.).(.)$/$1\?$2/          # .?.
+    # - derive/^(.)..$/$1\?\?/            # .??
+    # - derive/^.(.)(.)$/\?$1$2/          # ?..
+    # - derive/^.(.).$/\?$1\?/            # ?.?
+    # - derive/^..(.)$/\?\?$1/            # ??.
+    # - derive/^(.)(.)(.).$/$1$2$3\?/     # ...?
+    # - derive/^(.)(.).(.)$/$1$2\?$3/     # ..?.
+    # - derive/^(.)(.)..$/$1$2\?\?/       # ..??
+    # - derive/^(.).(.)(.)$/$1\?$2$3/     # .?..
+    # - derive/^(.).(.).$/$1\?$2\?/       # .?.?
+    # - derive/^(.)..(.)$/$1\?\?$2/       # .??.
+    # - derive/^(.)...$/$1\?\?\?/         # .???
+    # - derive/^.(.)(.)(.)$/\?$1$2$3/     # ?...
+    # - derive/^.(.)(.).$/\?$1$2\?/       # ?..?
+    # - derive/^.(.).(.)$/\?$1\?$2/       # ?.?.
+    # - derive/^.(.)..$/\?$1\?\?/         # ?.??
+    # - derive/^..(.)(.)$/\?\?$1$2/       # ??..
+    # - derive/^..(.).$/\?\?$1\?/         # ??.?
+    # - derive/^...(.)$/\?\?\?$1/         # ???.
+
+
+##### 行列30主翻譯器 #####
+translator:
+  dictionary: onion-array30.extended
+  prism: onion-array30
+  enable_charset_filter: true
+  # enable_encoder: false #true ##打詞時，可使用簡略打法，簡略打法的規則在字典中設定。
+  # encode_commit_history: false #true
+  enable_sentence: false #true ##此為自動造句，為打詞時，使用全拼。
+  enable_completion: false #逐碼提示
+  # sentence_over_completion: false
+  enable_user_dict: false #true
+  # strict_spelling: true #false #配合speller中的fuzz規則，僅以畧拼碼組詞〔僅table_translator有效？〕實際好像script_translator才有效？
+  # max_phrase_length: 7 #4
+  # initial_quality: 1000
+  # db_class: tabledb #userdb
+  preedit_format:
+    - xform/a/1-/
+    - xform/b/5⇣/
+    - xform/c/3⇣/
+    - xform/d/3-/
+    - xform/e/3⇡/
+    - xform/f/4-/
+    - xform/g/5-/
+    - xform/h/6-/
+    - xform/i/8⇡/
+    - xform/j/7-/
+    - xform/k/8-/
+    - xform/l/9-/
+    - xform/m/7⇣/
+    - xform/n/6⇣/
+    - xform/o/9⇡/
+    - xform/p/0⇡/
+    - xform/q/1⇡/
+    - xform/r/4⇡/
+    - xform/s/2-/
+    - xform/t/5⇡/
+    - xform/u/7⇡/
+    - xform/v/4⇣/
+    - xform/w/2⇡/
+    - xform/x/2⇣/
+    - xform/y/6⇡/
+    - xform/z/1⇣/
+    - xform|\.|9⇣|
+    - xform|[/]|0⇣|
+    - xform|;|0-|
+    - xform|,|8⇣|
+    - xform/ /▫/
+    # - xform/\|/  /
+  comment_format:
+    - 'xform|^.{100}.+||'
+    # - xform| [a-z,./;]{3,5}@||
+    - xform|([a-z,./;]{3,4}i?)|$1⊡|  # ▫ ▪ ⚀ ◽︎ 🞕 〼 ◪ ⊡ ⊠ ⊟ ⊞ ⧄ ⧅ ⧆ ⧇ ⧈ ⧠ ⧮ ⧯
+    - xform|⊡'|'|
+    - xform/a/1-/
+    - xform/b/5⇣/
+    - xform/c/3⇣/
+    - xform/d/3-/
+    - xform/e/3⇡/
+    - xform/f/4-/
+    - xform/g/5-/
+    - xform/h/6-/
+    - xform/i/8⇡/
+    - xform/j/7-/
+    - xform/k/8-/
+    - xform/l/9-/
+    - xform/m/7⇣/
+    - xform/n/6⇣/
+    - xform/o/9⇡/
+    - xform/p/0⇡/
+    - xform/q/1⇡/
+    - xform/r/4⇡/
+    - xform/s/2-/
+    - xform/t/5⇡/
+    - xform/u/7⇡/
+    - xform/v/4⇣/
+    - xform/w/2⇡/
+    - xform/x/2⇣/
+    - xform/y/6⇡/
+    - xform/z/1⇣/
+    - xform|\.|9⇣|
+    - xform|[/]|0⇣|
+    - xform|;|0-|
+    - xform|,|8⇣|
+    - xform/^/ /
+    - xform/ /    /
+    - xform/@@/▫/  # □
+    - xform/@~/▪/  # ■ #該則不要隨意更動，欲動必須改動 Lua 相應程式碼，否則會有 Bug。
+    - xform/@/▫/  # □
+
+
+array30_reverse_lookup:
+  tags: [ abc ]
+  overwrite_comment: true #false
+  dictionary: onion-array30.extended
+  comment_format:
+    __include: translator/comment_format
+
+
+##### 掛接行列30符號 #####（可用 symbols 更簡單實現，但沒有開頭提示）
+wsymbols:
+  tag: wsymbols
+  dictionary: onion-array30-wsymbols  # onion-array30-wsymbols_20230211
+  # enable_charset_filter: false
+  # enable_encoder: false
+  # encode_commit_history: false
+  enable_sentence: false
+  enable_completion: false
+  # sentence_over_completion: false
+  enable_user_dict: false
+  preedit_format:
+    - xform/^/〔符〕/
+    - xform/w/2⇡/
+
+
+##### 使用注音反查行列30碼 #####
+reverse2_lookup:
+  tag: reverse2_lookup
+  dictionary: "Mount_bopomo.extended"
+  # prism: "Mount_bopomo.extended"
+  # enable_charset_filter: false #true
+  enable_completion: false
+  enable_user_dict: true
+  prefix: "="
+  suffix: "'"
+  tips: "《注音反查》▶"
+  closing_tips: "◀《注音反查》"
+  preedit_format:
+    - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 6347|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˉˊˇˋ˙|"
+    - xform/^/《注音反查》/
+    - xform/\|/  /
+
+
+array30-zy_reverse_lookup:
+  tags: [ reverse2_lookup ]
+  overwrite_comment: false
+  dictionary: onion-array30.extended
+  comment_format:
+    __include: translator/comment_format
+
+
+##### 使用行列30反查注音碼 #####
+reverse3_lookup:
+  __include: /translator
+  tag: reverse3_lookup
+  prefix: "=="
+  suffix: "'"
+  tips: "《查注音》▶"
+  closing_tips: "◀《查注音》"
+  preedit_format:
+    __include: translator/preedit_format
+    __append:
+    - xform/^/《查注音》/
+
+
+bpmf_reverse_lookup:
+  tags: [ reverse3_lookup ]
+  dictionary: "Mount_bopomo.extended"
+  overwrite_comment: true
+  comment_format:
+    - xform/iu/iU/ #iou
+    - xform/ui/uI/ #uei
+    - xform/ong/ung/
+    - xform/yi?/i/
+    - xform/wu?/u/
+    - xform/iu/v/
+    - xform/([jqx])u/$1v/
+    - xform/([iuv])n/$1en/
+    - xform/zhi?/Z/
+    - xform/chi?/C/
+    - xform/shi?/S/
+    - xform/([zcsr])i/$1/
+    - xform/ai/A/
+    - xform/ei/I/
+    - xform/ao/O/
+    - xform/ou/U/
+    - xform/ang/K/
+    - xform/eng/G/
+    - xform/an/M/
+    - xform/en/N/
+    - xform/er/R/
+    - xform/eh/E/
+    - xform/([iv])e/$1E/
+    - "xlit|bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR12345|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˉˊˇˋ˙|"
+    - xform/^/ /
+    - xform/ /  /
+#    - xform/ /] [/
+#    - xform/^/  [/
+#    - xform/$/]/
+
+
+##### 標點符號 #####
+punctuator:
+  # import_preset: default
+  full_shape:
+    "`" : [ "｀" ]
+    "=" : [ "＝" ]
+  half_shape:
+    "`" : [ "`" ]
+    "=" : [ "=" ]
+  # symbols:
+  #   "w1" : [ "，", "、", "。", "．", "‧", "；", "：", "？", "！", "︰", "…", "‥", "﹐", "﹑", "﹒", "·", "﹔", "﹕", "﹖", "﹗", "｜", "–", "︱", "—", "︳", "╴", "︴", "﹏" ]
+  #   "w2" : [ "（", "）", "︵", "︶", "｛", "｝", "︷", "︸", "〔", "〕", "︹", "︺", "【", "】", "︻", "︼", "《", "》", "︽", "︾", "〈", "〉", "︿", "﹀", "「", "」", "﹁", "﹂", "『", "』", "﹃", "﹄", "﹙", "﹚", "﹛", "﹜", "﹝", "﹞", "‘", "’", "“", "”", "〝", "〞", "‵", "′" ]
+  #   "w3" : [ "＃", "＆", "＊", "※", "§", "〃", "○", "●", "△", "▲", "◎", "☆", "★", "◇", "◆", "□", "■", "▽", "▼", "㊣", "℅", "¯", "￣", "＿", "ˍ", "﹉", "﹊", "﹍", "﹎", "﹋", "﹌", "﹟", "﹠", "﹡" ]
+  #   "w4" : [ "＋", "－", "×", "÷", "±", "√", "＜", "＞", "＝", "≦", "≧", "≠", "∞", "≒", "≡", "﹢", "﹣", "﹤", "﹥", "﹦", "～", "∩", "∪", "⊥", "∠", "∟", "⊿", "㏒", "㏑", "∫", "∮", "∵", "∴" ]
+  #   "w5" : [ "♀", "♂", "⊕", "⊙", "↑", "↓", "←", "→", "↖", "↗", "↙", "↘", "∥", "∣", "／", "＼", "∕", "﹨" ]
+  #   "w6" : [ "＄", "￥", "〒", "￠", "￡", "％", "＠", "℃", "℉", "﹩", "﹪", "﹫", "㏕", "㎜", "㎝", "㎞", "㏎", "㎡", "㎎", "㎏", "㏄", "°", "兙", "兛", "兞", "兝", "兡", "兣", "嗧", "瓩", "糎" ]
+  #   "w7" : [ "▁", "▂", "▃", "▄", "▅", "▆", "▇", "█", "▏", "▎", "▍", "▌", "▋", "▊", "▉", "┼", "┴", "┬", "┤", "├", "▔", "─", "│", "▕", "┌", "┐", "└", "┘", "╭", "╮", "╰", "╯", "═", "╞", "╪", "╡", "◢", "◣", "◥", "◤", "╱", "╲", "╳", "╔", "╦", "╗", "╠", "╬", "╣", "╚", "╩", "╝", "╒", "╤", "╕", "╞", "╪", "╡", "╘", "╧", "╛", "╓", "╥", "╖", "╟", "╫", "╢", "╙", "╨", "╜", "║", "═", "╭", "╮", "╰", "╯", "▓" ]
+  #   "w8" : [ "①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨", "⑩", "⑴", "⑵", "⑶", "⑷", "⑸", "⑹", "⑺", "⑻", "⑼", "⑽", "ⅰ", "ⅱ", "ⅲ", "ⅳ", "ⅴ", "ⅵ", "ⅶ", "ⅷ", "ⅸ", "ⅹ", "Ⅰ", "Ⅱ", "Ⅲ", "Ⅳ", "Ⅴ", "Ⅵ", "Ⅶ", "Ⅷ", "Ⅸ", "Ⅹ", "〡", "〢", "〣", "〤", "〥", "〦", "〧", "〨", "〩", "〸", "〹", "〺" ]
+  #   "w9" : [ "Α", "Β", "Γ", "Δ", "Ε", "Ζ", "Η", "Θ", "Ι", "Κ", "Λ", "Μ", "Ν", "Ξ", "Ο", "Π", "Ρ", "Σ", "Τ", "Υ", "Φ", "Χ", "Ψ", "Ω", "α", "β", "γ", "δ", "ε", "ζ", "η", "θ", "ι", "κ", "λ", "μ", "ν", "ξ", "ο", "π", "ρ", "σ", "τ", "υ", "φ", "χ", "ψ", "ω" ]
+  #   "w0" : [ "ㄅ", "ㄆ", "ㄇ", "ㄈ", "ㄉ", "ㄊ", "ㄋ", "ㄌ", "ㄍ", "ㄎ", "ㄏ", "ㄐ", "ㄑ", "ㄒ", "ㄓ", "ㄔ", "ㄕ", "ㄖ", "ㄗ", "ㄘ", "ㄙ", "ㄚ", "ㄛ", "ㄜ", "ㄝ", "ㄞ", "ㄟ", "ㄠ", "ㄡ", "ㄢ", "ㄣ", "ㄤ", "ㄥ", "ㄦ", "ㄧ", "ㄨ", "ㄩ", "˙", "ˉ", "ˊ", "ˇ", "ˋ" ]
+
+
+##### 按鍵設定 #####
+key_binder:
+  import_preset: default
+  bindings:
+### 避 RIME 原設定鍵位衝突 ###
+    - {accept: comma, send: comma, when: has_menu}
+    - {accept: comma, send: comma, when: paging}
+    - {accept: period, send: period, when: has_menu}
+    - {accept: period, send: period, when: paging}
+    - {accept: minus, send: minus, when: has_menu}
+    - {accept: minus, send: minus, when: paging}
+    - {accept: equal, send: equal, when: has_menu}
+    - {accept: equal, send: equal, when: paging}
+#    - {accept: equal, send: equal, when: always}
+### 選字翻頁 ###
+    - {accept: Left, send: Page_Up, when: paging}
+    - {accept: Right, send: Page_Down, when: paging}
+#    - {accept: Up, send: Page_Up, when: paging} #橫式選單用
+#    - {accept: Down, send: Page_Down, when: paging} #橫式選單用
+#    - {accept: Left, send: Left, when: has_menu} #橫式選單用 #send: Shift+Up
+#    - {accept: Right, send: Right, when: has_menu} #橫式選單用 #send: Shift+Down #send: Right
+    - {accept: Shift+Up, send: Page_Up, when: has_menu} #選字時「Shift」+「上」翻頁。
+    - {accept: Shift+Down, send: Page_Down, when: has_menu} #選字時「Shift」+「下」翻頁。
+    - {accept: Shift+Tab, send: Page_Up, when: has_menu} #選字時「Shift」+「tab」翻頁。
+    - {accept: Shift+space, send: Page_Down, when: has_menu} #選字時「Shift」+「空白鍵」翻頁。 #send: Right #send: Down
+    # - {accept: Tab, send: Page_Down, when: has_menu} #「tab」翻頁。
+    # - {accept: Tab, send: Shift+Left, when: paging}
+    - {accept: Tab, send_sequence: "{Shift+Left}{Shift+Left}", when: paging} #回到「空白鍵」非選擇上屏。
+### 空白鍵 ###
+    - {accept: space, send: Escape, when: composing} #空碼清屏用
+    - {accept: space, send: space, when: has_menu} #補上一條產生之bug
+    - {accept: space, send: KP_Space, when: paging} #方向鍵選字時，space直接上屏（避免被空格影響）
+###  功能快捷鍵 ###
+#     # - { accept: Shift+space, toggle: ascii_mode, when: always }
+#     - { accept: Control+comma, toggle: ascii_mode, when: always } #新增！
+# #    - { accept: Control+Shift+space, toggle: ascii_mode, when: always } #新增！
+# #    - { accept: Control+Shift+comma, toggle: ascii_mode, when: always } #新增！
+#     - { accept: Control+period, toggle: full_shape, when: always } #新增！
+# #    - { accept: Control+Shift+period, toggle: full_shape, when: always } #新增！
+#     - { accept: Control+semicolon, toggle: simplification, when: always } #新增！
+# #    - { accept: Control+Shift+slash, toggle: simplification, when: always } #新增！
+#     - { accept: Control+slash, toggle: ascii_punct, when: always } #新增！
+#     - { accept: Control+apostrophe, toggle: extended_charset, when: always } #增廣常用字符過濾，新增開關
+#     - { accept: Control+bracketleft, toggle: simplify_comment, when: always } #編碼提示開關
+#     - { accept: Control+bracketright, toggle: 1_2_straight_up, when: always } #空白直上開關
+#     - { accept: Control+minus, toggle: array30_space_wp, when: always } #空白為翻頁或上屏開關
+# #    - { accept: Control+equal, toggle: array30_return_abc, when: always } # return 上屏候選字或 abc 開關
+## 上排切換(Mac)
+    - { accept: Control+Shift+7, toggle: simplify_comment, when: always } #編碼提示開關
+    - { accept: Control+Shift+8, toggle: array30_space_wp, when: always } #空白為翻頁或上屏開關
+    # - { accept: Control+Shift+8, toggle: 1_2_straight_up, when: always } #空白直上開關
+    # - { accept: Control+Shift+9, toggle: array30_space_wp, when: always } #空白為翻頁或上屏開關
+    # - { accept: Control+Shift+0, toggle: array30_return_abc, when: always } # return 上屏候選字或 abc 開關
+## 上排切換(Win)
+    - { accept: Control+Shift+ampersand, toggle: simplify_comment, when: always } #編碼提示開關
+    - { accept: Control+Shift+asterisk, toggle: array30_space_wp, when: always } #空白為翻頁或上屏開關
+    # - { accept: Control+Shift+asterisk, toggle: 1_2_straight_up, when: always } #空白直上開關
+    # - { accept: Control+Shift+parenleft, toggle: array30_space_wp, when: always } #空白為翻頁或上屏開關
+    # - { accept: Control+Shift+parenright, toggle: array30_return_abc, when: always } # return 上屏候選字或 abc 開關
+## 切換樣態
+    - { accept: Control+comma, set_option: ascii_mode, when: always } #新增！
+    - { accept: Control+period, set_option: full_shape, when: always } #新增！
+    - { accept: Control+semicolon, set_option: simplification, when: always } #新增！
+    - { accept: Control+slash, set_option: ascii_punct, when: always } #新增！
+    - { accept: Control+apostrophe, unset_option: extended_charset, when: always } #增廣常用字符過濾，新增開關
+    - { accept: Control+bracketleft, set_option: simplify_comment, when: always } #編碼提示開關
+    - { accept: Control+bracketright, unset_option: array30_space_wp, when: always } #空白為翻頁或上屏開關
+    # - { accept: Control+bracketright, set_option: 1_2_straight_up, when: always } #空白直上開關
+#win易快捷鍵衝突，mac可打開#    # - { accept: Control+minus, unset_option: array30_space_wp, when: always } #空白為翻頁或上屏開關
+#win易快捷鍵衝突，mac可打開#    # - { accept: Control+equal, unset_option: array30_return_abc, when: always } # return 上屏候選字或 abc 開關
+## 初始樣態(Mac)
+    - { accept: Control+Shift+comma, unset_option: ascii_mode, when: always } #新增！
+    - { accept: Control+Shift+period, unset_option: full_shape, when: always } #新增！
+    - { accept: Control+Shift+semicolon, unset_option: simplification, when: always } #新增！
+    - { accept: Control+Shift+slash, unset_option: ascii_punct, when: always } #新增！
+    - { accept: Control+Shift+apostrophe, set_option: extended_charset, when: always } #增廣常用字符過濾，新增開關
+    - { accept: Control+Shift+bracketleft, unset_option: simplify_comment, when: always } #編碼提示開關
+    - { accept: Control+Shift+bracketright, set_option: array30_space_wp, when: always } #空白為翻頁或上屏開關
+    # - { accept: Control+Shift+bracketright, unset_option: 1_2_straight_up, when: always } #空白直上開關
+#win易快捷鍵衝突，mac可打開#    # - { accept: Control+Shift+minus, set_option: array30_space_wp, when: always } #空白為翻頁或上屏開關
+#win易快捷鍵衝突，mac可打開#    # - { accept: Control+Shift+equal, set_option: array30_return_abc, when: always } # return 上屏候選字或 abc 開關
+## 初始樣態(Win)
+    - { accept: Control+Shift+less, unset_option: ascii_mode, when: always } #新增！
+    - { accept: Control+Shift+greater, unset_option: full_shape, when: always } #新增！
+    - { accept: Control+Shift+colon, unset_option: simplification, when: always } #新增！
+    - { accept: Control+Shift+question, unset_option: ascii_punct, when: always } #新增！
+    - { accept: Control+Shift+quotedbl, set_option: extended_charset, when: always } #增廣常用字符過濾，新增開關
+    - { accept: Control+Shift+braceleft, unset_option: simplify_comment, when: always } #編碼提示開關
+    - { accept: Control+Shift+braceright, set_option: array30_space_wp, when: always } #空白為翻頁或上屏開關
+    # - { accept: Control+Shift+braceright, unset_option: 1_2_straight_up, when: always } #空白直上開關
+#win易快捷鍵衝突，mac可打開#    # - { accept: Control+Shift+underscore, set_option: array30_space_wp, when: always } #空白為翻頁或上屏開關
+#win易快捷鍵衝突，mac可打開#    # - { accept: Control+Shift+plus, set_option: array30_return_abc, when: always } # return 上屏候選字或 abc 開關
+### Return/Enter鍵 ###
+    - {accept: Return, send: KP_Space, when: paging} #選字時 Return/Enter 鍵同空白鍵上屏中文
+    - {accept: KP_Enter, send: KP_Space, when: paging} #選字時右側小鍵盤 Return/Enter 鍵同空白鍵上屏中文
+### Return/Enter鍵上屏（原為custom檔） ###
+    # - {accept: Return, send: space, when: has_menu} #有選單時 Return/Enter 鍵同空白鍵上屏中文
+    - {accept: Return, send: KP_Space, when: has_menu} #有選單時 Return/Enter 鍵直接上屏現下中文
+    - {accept: Return, send: Escape, when: composing} #空碼清屏用
+    # - {accept: KP_Enter, send: space, when: has_menu} #有選單時右側小鍵盤 Return/Enter 鍵同空白鍵上屏中文
+    - {accept: KP_Enter, send: KP_Space, when: has_menu} #有選單時右側小鍵盤 Return/Enter 鍵直接上屏現下中文
+    - {accept: KP_Enter, send: Escape, when: composing} #空碼清屏用
+    # - {accept: Shift+Return, send: Return, when: composing} #上方四個開啟時補充用（改用 editor/bindings 實現）。
+
+
+##### 按鍵綁定 #####
+editor:
+  bindings:
+    KP_Space: confirm
+    Shift+Return: commit_raw_input
+
+
+##### 段落識別器 #####
+recognizer:
+  patterns:
+    # punct: "^w[0-9]$"
+    wsymbols: "^w[0-9]$" #（可用 symbols 更簡單實現，但沒有開頭提示）
+    reverse2_lookup: "^=[-.,;/0-9a-z ]*'?$"
+    reverse3_lookup: "^==[a-z,./; ]*'?$"
+    # lua: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$|`[a-z]*$|`[;/'][a-z.,/'-]*$|`[rq0-9.-][asrvxqwymd0-9.,/()^*+-]*$|`[xucoi][0-9a-f]+$"
+    email_url_translator: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$"
+    mf_translator: "`[a-z,]*$|`[;/'][a-z.,/'-]*$|`[rq0-9.-][asrvxqwymd0-9.,/()^*+-]*$|`[xucoi][0-9a-f]+$"
+    # lua: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|`[';/]?[a-z]*$|`[0-9./-]*$|`[xucoi][0-9a-z]+$"
+    # lua: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|`[';a-z0-9./-]*$"
+    # email: "^[a-z][-_.0-9a-z]*@.*$"
+    # url: "^(www[.]|https?:|ftp:|mailto:).*$"
+
+
+style:
+  inline_preedit: true
+  candidate_list_layout: stacked #linear #stacked
+  horizontal: false
