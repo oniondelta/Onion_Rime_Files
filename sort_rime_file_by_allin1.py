@@ -229,6 +229,16 @@ shutil.copyfile("./rimefiles/onion-array30-generally.dict.yaml", "./"+sort_rime+
 shutil.copytree("./rimefiles/行列30碼表_20230211版/", "./"+sort_rime+"/"+rime_files+"/行列30碼表_20230211版/")
 
 
+#複製檔案(洋蔥行列10)
+shutil.copyfile("./rimefiles/onion-array10.schema.yaml", "./"+sort_rime+"/"+rime_files+"/onion-array10.schema.yaml")
+shutil.copyfile("./rimefiles/onion-array10.extended.dict.yaml", "./"+sort_rime+"/"+rime_files+"/onion-array10.extended.dict.yaml")
+shutil.copyfile("./rimefiles/onion-array10-symbols.dict.yaml", "./"+sort_rime+"/"+rime_files+"/onion-array10-symbols.dict.yaml")
+shutil.copyfile("./rimefiles/onion-array10-symbols-prefix.dict.yaml", "./"+sort_rime+"/"+rime_files+"/onion-array10-symbols-prefix.dict.yaml")
+shutil.copyfile("./rimefiles/onion-array10-generally-a.dict.yaml", "./"+sort_rime+"/"+rime_files+"/onion-array10-generally-a.dict.yaml")
+shutil.copyfile("./rimefiles/onion-array10-generally-b.dict.yaml", "./"+sort_rime+"/"+rime_files+"/onion-array10-generally-b.dict.yaml")
+shutil.copyfile("./rimefiles/onion-array10-generally-c.dict.yaml", "./"+sort_rime+"/"+rime_files+"/onion-array10-generally-c.dict.yaml")
+
+
 #全部方案開啟default.custom檔
 shutil.copyfile("./rimefiles/其他/全部方案開啟default.custom檔/default.custom.yaml", "./"+sort_rime+"/"+rime_files+"/default.custom.yaml")
 
@@ -241,6 +251,7 @@ shutil.copytree("./rimefiles/各方案default.custom/注音洋蔥純注音版_cu
 shutil.copytree("./rimefiles/各方案default.custom/注音洋蔥雙拼版_custom/", "./"+sort_rime+"/其他/各方案default.custom/注音洋蔥雙拼版_custom/")
 
 shutil.copytree("./rimefiles/各方案default.custom/洋蔥行列30_custom/", "./"+sort_rime+"/其他/各方案default.custom/洋蔥行列30_custom/")
+shutil.copytree("./rimefiles/各方案default.custom/洋蔥行列10_custom/", "./"+sort_rime+"/其他/各方案default.custom/洋蔥行列10_custom/")
 
 shutil.copytree("./rimefiles/各方案default.custom/ocm_mixin_custom/", "./"+sort_rime+"/其他/各方案default.custom/ocm_mixin_custom/")
 shutil.copytree("./rimefiles/各方案default.custom/ocm_mount_custom/", "./"+sort_rime+"/其他/各方案default.custom/ocm_mount_custom/")

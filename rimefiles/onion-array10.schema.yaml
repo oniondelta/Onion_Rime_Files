@@ -1,0 +1,507 @@
+# Rime schema settings
+# encoding: utf-8
+
+
+schema:
+  schema_id: onion-array10
+  name: "▦ 行列１０（洋蔥版）"
+  version: "202508"
+  author:
+    - 洋蔥
+  description: |
+    行列10
+  dependencies:
+    - Mount_bopomo
+
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 中文, 英文 ]
+  - name: full_shape
+    reset: 0
+    states: [ 半形, 全形 ]
+  - name: ascii_punct
+    reset: 0
+    states: [ "。，", "．，" ]
+  - name: simplification
+    reset: 0
+    states: [ 繁體, 简体 ]
+  - name: extended_charset
+    # reset: 1
+    states: [ "常用", "增廣" ]
+  - name: simplify_comment
+    # reset: 1
+    states: [ 編碼, 無編 ]
+  # - name: unicode_comment
+  #   reset: 0
+  #   states: [ '🄽', '🅄' ]
+  #   # states: [ 'nil', 'Unicode(URL)' ]
+  # - name: debug_comment
+  #   reset: 0
+  #   states: [ 'Ⓝ', 'Ⓓ' ]
+  #   # states: [ 'normal', 'Debug' ]
+  - name: switch_key_board
+    reset: 0
+    states: [ "雙邊", "數鍵" ]
+  # - name: switch_key_binder
+  #   # reset: 1
+  #   states: [ "左邊", "皆可" ]
+  # - options: [ model_both, model_abc, model_num ]
+  #   # reset: 1
+  #   states:
+  #     - "兩邊都可"
+  #     - "左邊鍵盤"
+  #     - "數字鍵盤"
+
+
+engine:
+  processors:
+    - lua_processor@array10_mix
+    - ascii_composer
+    - recognizer
+    # - lua_processor@key_binder@key1  # 某些軟體中作用，某些軟體缺失！
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+    # - fluency_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor  #一定要放在「affix_segmentor」前
+    - affix_segmentor@shadow_top
+    - affix_segmentor@second_phrases  #不標註直接掛在「abc」下，附註可掛接到其他「translator」下。
+    - affix_segmentor@reverse2_lookup
+    - affix_segmentor@reverse3_lookup
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - table_translator
+    - table_translator@shadow_top
+    - script_translator@second_phrases
+    - script_translator@reverse2_lookup
+    - script_translator@reverse3_lookup
+  filters:
+    # - cjk_minifier  #失效？無法對script_translator產生影響
+    - simplifier@zh_cn
+    - reverse_lookup_filter@array10_reverse_lookup
+    - reverse_lookup_filter@bpmf_reverse_lookup
+    - lua_filter@punct_preedit_revise_filter
+    - lua_filter@comment_filter_plus
+    # - lua_filter@*filter_comment_filter_array10@comment_filter_array10
+    # - lua_filter@*filter_comment_filter_array10  #一定要再「@」才能用「tags:」限定。
+    - uniquifier
+    # - lua_filter@comment_filter_unicode  # unicode 和 debug 分開，同時開啟無法記憶
+    # - lua_filter@comment_filter_debug  # unicode 和 debug 分開，同時開啟無法記憶
+    # - lua_filter@comment_filter_unicode_debug
+    # - single_char_filter  #官方文件是放在uniquifier後
+
+
+##### 選單 #####
+menu:
+  # alternative_select_labels: [ Q, A, Z, W, S, X, E, D, C, R ]
+  alternative_select_keys: "1234567890"
+  page_size: 10
+
+
+##### 拼寫處理器 #####
+speller:
+  # alphabet: ""
+  alphabet: "zxcasdqwefv"
+  # alphabet: "zxcasdqwefvZXCASDQWEFV"
+  # alphabet: "1234567890-zxcasdqwefv"
+  # initials: "1234567890-zxcasdqwefv"
+  # finals: " '"
+  delimiter: "|"
+  use_space: false
+  auto_select: false
+  # auto_select_pattern: '^[a-z,./;]{1,4}i? $'
+  algebra:
+## 前綴尾綴處理
+    # - derive/^([0-9]+@)$/$1./  # 一般中文字
+    # - derive/^(@[0-9]+)$/.$1/  # 符號
+    - derive/@/./
+    - xform/@$//
+## 鍵盤對映(直接使用數字，則無法用數字選字)
+    # - derive/1/Z/
+    # - derive/2/X/
+    # - derive/3/C/
+    # - derive/4/A/
+    # - derive/5/S/
+    # - derive/6/D/
+    # - derive/7/Q/
+    # - derive/8/W/
+    # - derive/9/E/
+    # - derive/0/F/
+    # - derive/[.]/V/
+    - "xlit|1234567890.|zxcasdqwefv|"
+
+
+##### 行列10主翻譯器-順序固定不變 #####
+translator:
+  dictionary: onion-array10.extended
+  prism: onion-array10
+  initial_quality: 1000
+  enable_charset_filter: true
+  # enable_encoder: false #true ##打詞時，可使用簡略打法，簡略打法的規則在字典中設定。
+  # encode_commit_history: false #true
+  # max_phrase_length: 7 #4
+  enable_sentence: false #true ##此為自動造句，為打詞時，使用全拼。
+  enable_completion: true  #false #逐碼提示
+  # sentence_over_completion: false
+  # strict_spelling: true #false #配合speller中的fuzz規則，僅以畧拼碼組詞〔僅table_translator有效？〕實際好像script_translator才有效？
+  enable_user_dict: false  #true
+  # db_class: tabledb #userdb
+  # disable_user_dict_for_patterns:
+  #   # - "^.$" # 單碼不調頻
+  preedit_format:
+    - "xlit|zxcasdqwefv|１２３４５６７８９０.|"
+    - "xlit|ZXCASDQWEFV|１２３４５６７８９０.|"
+    - xform/\|/⁞/
+  comment_format:
+    # - xform/@/./
+    - xform/@//
+    # - xform/~/~ /
+    # - xform/~/～/
+    - "xlit|1234567890|１２３４５６７８９０|"
+
+abc_segmentor:
+  extra_tags:
+    - second_phrases
+
+
+##### 行列10副翻譯器-輸出長詞用 #####
+second_phrases:
+  __include: /translator  #onion-array10.schema.yaml:/translator
+  tag: second_phrases
+  initial_quality: 0
+  # enable_encoder: false
+  # encode_commit_history: false
+  # enable_sentence: false
+  # sentence_over_completion: false
+  enable_completion: false
+  enable_user_dict: true
+  # disable_user_dict_for_patterns:
+  #   # - "^.$" # 單碼不調頻
+
+
+##### 行列10影子翻譯器 #####
+shadow_top:
+  __include: /translator
+  tag: shadow_top
+  prefix: "```"
+  # suffix: "'"
+  tips: "《影》▶"
+  # closing_tips: "◀《影》"
+  extra_tags:
+    - second_phrases
+
+
+##### 使用注音反查行列10碼 #####
+reverse2_lookup:
+  tag: reverse2_lookup
+  dictionary: "Mount_bopomo.extended"
+  # prism: "Mount_bopomo.extended"
+  # enable_charset_filter: false #true
+  enable_completion: false
+  enable_user_dict: true
+  prefix: "`"
+  suffix: "'"
+  tips: "《注音反查》▶"
+  closing_tips: "◀《注音反查》"
+  preedit_format:
+    - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 6347|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˉˊˇˋ˙|"
+    - xform/^/《注音反查》/
+    - xform/\|/  /
+
+
+##### 使用行列10反查注音碼 #####
+reverse3_lookup:
+  __include: /second_phrases #/translator
+  tag: reverse3_lookup
+  prefix: "``"
+  suffix: "'"
+  tips: "《查注音》▶"
+  closing_tips: "◀《查注音》"
+  preedit_format:
+    __include: translator/preedit_format
+    __append:
+    - xform/^/《查注音》/
+
+
+##### 濾鏡：簡體轉換 #####
+zh_cn:
+  opencc_config: tw2s.json
+  # tips: all  #不標註轉換前「字符」
+  tags: [ abc, shadow_top ]
+
+
+##### 濾鏡：標註該字行列10編碼 #####
+array10_reverse_lookup:
+  tags: [ abc, shadow_top, reverse2_lookup ]  # second_phrases
+  overwrite_comment: false #true
+  dictionary: onion-array10.extended
+  comment_format:
+    - xform/@/./
+    - xform/([.\d]+)/〔$1〕/
+    - xform/[.]〕/〕/
+    - xform/ //
+    # - "xlit|1234567890|１２３４５６７８９０|"
+
+
+##### 濾鏡：標註該字注音 #####
+bpmf_reverse_lookup:
+  tags: [ reverse3_lookup ]
+  dictionary: "Mount_bopomo.extended"
+  overwrite_comment: true
+  comment_format:
+    - xform/iu/iU/ #iou
+    - xform/ui/uI/ #uei
+    - xform/ong/ung/
+    - xform/yi?/i/
+    - xform/wu?/u/
+    - xform/iu/v/
+    - xform/([jqx])u/$1v/
+    - xform/([iuv])n/$1en/
+    - xform/zhi?/Z/
+    - xform/chi?/C/
+    - xform/shi?/S/
+    - xform/([zcsr])i/$1/
+    - xform/ai/A/
+    - xform/ei/I/
+    - xform/ao/O/
+    - xform/ou/U/
+    - xform/ang/K/
+    - xform/eng/G/
+    - xform/an/M/
+    - xform/en/N/
+    - xform/er/R/
+    - xform/eh/E/
+    - xform/([iv])e/$1E/
+    - "xlit|bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR12345|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˉˊˇˋ˙|"
+    - xform/^/ /
+    - xform/ /  /
+#    - xform/ /] [/
+#    - xform/^/  [/
+#    - xform/$/]/
+
+
+##### 濾鏡：缺漏補 #####
+punct_preedit_revise_filter:
+  tags: [ punct ]
+
+
+##### 濾鏡：comment 遮屏 #####
+# comment_filter_array10:
+# filter_comment_filter_array10:  #一定要再「@」才能用「tags:」限定。
+comment_filter_plus:
+  tags: [ abc, shadow_top ]  #second_phrases
+
+
+##### 標點符號 #####
+punctuator:
+  # import_preset: default
+  full_shape:
+    "`" : [ "｀" ]
+  half_shape:
+    "`" : [ "`" ]
+  symbols:
+    "``" : [ "``" ]
+    "```" : [ "```" ]
+
+
+##### 按鍵設定 #####
+key_binder:
+  import_preset: default
+  bindings:
+### 避 RIME 原設定鍵位衝突 ###
+    - {accept: comma, send: comma, when: has_menu}
+    - {accept: comma, send: comma, when: paging}
+    - {accept: period, send: period, when: has_menu}
+    - {accept: period, send: period, when: paging}
+    - {accept: minus, send: minus, when: has_menu}
+    - {accept: minus, send: minus, when: paging}
+    - {accept: equal, send: equal, when: has_menu}
+    - {accept: equal, send: equal, when: paging}
+#    - {accept: equal, send: equal, when: always}
+### 切分移位 ###
+    - {accept: Up, send: Shift+Left, when: composing} #左移一整個字
+    - {accept: Up, send: Up, when: paging} #修正上條目出現的bug
+    - {accept: Left, send: KP_Left, when: composing} #左移一個字母
+##
+    # - {accept: Shift+Right, send: Right, when: composing} #右移一個字母
+    # - {accept: Shift+Left, send: KP_Left, when: composing} #左移一個字母
+### 選字翻頁 ###
+    - {accept: Left, send: Page_Up, when: paging}
+    - {accept: Right, send: Page_Down, when: paging}
+#    - {accept: Up, send: Page_Up, when: paging} #橫式選單用
+#    - {accept: Down, send: Page_Down, when: paging} #橫式選單用
+#    - {accept: Left, send: Left, when: has_menu} #橫式選單用 #send: Shift+Up
+#    - {accept: Right, send: Right, when: has_menu} #橫式選單用 #send: Shift+Down #send: Right
+    - {accept: Shift+Up, send: Page_Up, when: has_menu} #選字時「Shift」+「上」翻頁。
+    - {accept: Shift+Down, send: Page_Down, when: has_menu} #選字時「Shift」+「下」翻頁。
+    - {accept: Shift+Tab, send: Page_Up, when: has_menu} #選字時「Shift」+「tab」翻頁。
+    - {accept: Shift+space, send: Page_Down, when: has_menu} #選字時「Shift」+「空白鍵」翻頁。 #send: Right #send: Down
+    # - {accept: Tab, send: Page_Down, when: has_menu} #「tab」翻頁。
+    # - {accept: Tab, send: Shift+Left, when: paging}
+    # - {accept: Tab, send_sequence: "{Shift+Left}{Shift+Left}", when: paging} #回到「空白鍵」非選擇上屏。
+### 空白鍵 ###
+    # - {accept: space, send: Escape, when: composing} #空碼清屏用
+    # - {accept: space, send: space, when: has_menu} #補上一條產生之bug
+    # - {accept: space, send: Return, when: paging} #方向鍵選字時，space直接上屏（避免被空格影響）
+##
+    # - {accept: KP_Space, send: Escape, when: composing} #空碼清屏用
+    # - {accept: KP_Space, send: space, when: has_menu} #補上一條產生之bug
+    # - {accept: KP_Space, send: KP_Space, when: has_menu} #補上一條產生之bug
+### 左邊選字 ### 
+    # - {accept: Shift+Q, send: Control+1, when: has_menu}
+    # - {accept: Shift+A, send: Control+2, when: has_menu}
+    # - {accept: Shift+Z, send: Control+3, when: has_menu}
+    # - {accept: Shift+W, send: Control+4, when: has_menu}
+    # - {accept: Shift+S, send: Control+5, when: has_menu}
+    # - {accept: Shift+X, send: Control+6, when: has_menu}
+    # - {accept: Shift+E, send: Control+7, when: has_menu}
+    # - {accept: Shift+D, send: Control+8, when: has_menu}
+    # - {accept: Shift+C, send: Control+9, when: has_menu}
+    # - {accept: Shift+R, send: Control+0, when: has_menu}
+###  功能快捷鍵 ###
+    - { accept: Shift+space, toggle: ascii_mode, when: always }
+    # # - { accept: Control+Shift+space, toggle: ascii_mode, when: always }
+## 下排舊的循環切換
+    # - { accept: Control+comma, toggle: ascii_mode, when: always }
+    # # - { accept: Control+Shift+comma, toggle: ascii_mode, when: always }
+    # - { accept: Control+period, toggle: full_shape, when: always }
+    # # - { accept: Control+Shift+period, toggle: full_shape, when: always }
+    # - { accept: Control+semicolon, toggle: simplification, when: always }
+    # # - { accept: Control+Shift+slash, toggle: simplification, when: always }
+    # - { accept: Control+slash, toggle: ascii_punct, when: always }
+    # - { accept: Control+apostrophe, toggle: extended_charset, when: always }
+    # - { accept: Control+bracketleft, toggle: simplify_comment, when: always } #編碼提示開關
+## 上排切換(Mac)
+    - { accept: Control+Shift+7, toggle: simplify_comment, when: always } #編碼提示開關
+    - { accept: Control+Shift+8, toggle: switch_key_board, when: always }
+## 上排切換(Win)
+    - { accept: Control+Shift+ampersand, toggle: simplify_comment, when: always } #編碼提示開關
+    - { accept: Control+Shift+asterisk, toggle: switch_key_board, when: always }
+## 切換樣態
+    - { accept: Control+comma, set_option: ascii_mode, when: always }
+    - { accept: Control+period, set_option: full_shape, when: always }
+    - { accept: Control+semicolon, set_option: simplification, when: always }
+    - { accept: Control+slash, set_option: ascii_punct, when: always }
+    - { accept: Control+apostrophe, unset_option: extended_charset, when: always }
+    - { accept: Control+bracketleft, set_option: simplify_comment, when: always } #編碼提示開關
+    - { accept: Control+bracketright, set_option: switch_key_board, when: always }
+## 初始樣態(Mac)
+    - { accept: Control+Shift+comma, unset_option: ascii_mode, when: always }
+    - { accept: Control+Shift+period, unset_option: full_shape, when: always }
+    - { accept: Control+Shift+semicolon, unset_option: simplification, when: always }
+    - { accept: Control+Shift+slash, unset_option: ascii_punct, when: always }
+    - { accept: Control+Shift+apostrophe, set_option: extended_charset, when: always }
+    - { accept: Control+Shift+bracketleft, unset_option: simplify_comment, when: always } #編碼提示開關
+    - { accept: Control+Shift+bracketright, unset_option: switch_key_board, when: always }
+## 初始樣態(Win)
+    - { accept: Control+Shift+less, unset_option: ascii_mode, when: always }
+    - { accept: Control+Shift+greater, unset_option: full_shape, when: always }
+    - { accept: Control+Shift+colon, unset_option: simplification, when: always }
+    - { accept: Control+Shift+question, unset_option: ascii_punct, when: always }
+    - { accept: Control+Shift+quotedbl, set_option: extended_charset, when: always }
+    - { accept: Control+Shift+braceleft, unset_option: simplify_comment, when: always } #編碼提示開關
+    - { accept: Control+Shift+braceright, unset_option: switch_key_board, when: always }
+# ### Return/Enter鍵 ###
+#     - {accept: Return, send: KP_Space, when: paging} #選字時 Return/Enter 鍵同空白鍵上屏中文
+#     - {accept: KP_Enter, send: KP_Space, when: paging} #選字時右側小鍵盤 Return/Enter 鍵同空白鍵上屏中文
+# ### Return/Enter鍵上屏（原為custom檔） ###
+#     # - {accept: Return, send: space, when: has_menu} #有選單時 Return/Enter 鍵同空白鍵上屏中文
+#     - {accept: Return, send: KP_Space, when: has_menu} #有選單時 Return/Enter 鍵直接上屏現下中文
+#     - {accept: Return, send: Escape, when: composing} #空碼清屏用
+#     # - {accept: KP_Enter, send: space, when: has_menu} #有選單時右側小鍵盤 Return/Enter 鍵同空白鍵上屏中文
+#     - {accept: KP_Enter, send: KP_Space, when: has_menu} #有選單時右側小鍵盤 Return/Enter 鍵直接上屏現下中文
+#     - {accept: KP_Enter, send: Escape, when: composing} #空碼清屏用
+#     # - {accept: Shift+Return, send: Return, when: composing} #上方四個開啟時補充用（改用 editor/bindings 實現）。
+### 測試用 ###
+    # - {accept: Control+minus, toggle: ascii_mode, when: always}
+### END ###
+
+# key1:
+#   bindings:
+    # __include: /key_binder/bindings
+    # __append:
+### 轉換小鍵盤（初始） ###
+    - {accept: KP_1, send_sequence: "{grave}{grave}{grave}{a}", when: always}
+    - {accept: KP_2, send_sequence: "{grave}{grave}{grave}{x}", when: always}
+    - {accept: KP_3, send_sequence: "{grave}{grave}{grave}{c}", when: always}
+    - {accept: KP_4, send_sequence: "{grave}{grave}{grave}{a}", when: always}
+    - {accept: KP_5, send_sequence: "{grave}{grave}{grave}{s}", when: always}
+    - {accept: KP_6, send_sequence: "{grave}{grave}{grave}{d}", when: always}
+    - {accept: KP_7, send_sequence: "{grave}{grave}{grave}{q}", when: always}
+    - {accept: KP_8, send_sequence: "{grave}{grave}{grave}{w}", when: always}
+    - {accept: KP_9, send_sequence: "{grave}{grave}{grave}{e}", when: always}
+    - {accept: KP_0, send_sequence: "{grave}{grave}{grave}{f}", when: always}
+    - {accept: KP_Decimal, send_sequence: "{grave}{grave}{grave}{v}", when: always}
+### 轉換小鍵盤（有開頭後） ###
+    - {accept: KP_1, send: z, when: composing}
+    - {accept: KP_2, send: x, when: composing}
+    - {accept: KP_3, send: c, when: composing}
+    - {accept: KP_4, send: a, when: composing}
+    - {accept: KP_5, send: s, when: composing}
+    - {accept: KP_6, send: d, when: composing}
+    - {accept: KP_7, send: q, when: composing}
+    - {accept: KP_8, send: w, when: composing}
+    - {accept: KP_9, send: e, when: composing}
+    - {accept: KP_0, send: f, when: composing}
+    - {accept: KP_Decimal, send: v, when: composing}
+## 以下不要設成：{ when: always }
+    - {accept: KP_Subtract, send: BackSpace, when: has_menu}
+    - {accept: KP_Divide, send: Page_Up, when: has_menu}
+    - {accept: KP_Multiply, send: Page_Down, when: composing}
+    - {accept: KP_Add, send: r , when: composing}
+    # - {accept: KP_Add, send: Shift+Return , when: has_menu}
+    # - {accept: KP_Add, send: Escape , when: has_menu}
+    # - {accept: KP_Add, send_sequence: "{grave}{grave}" , when: always}
+# ### 以下無作用：設成發送為空按鍵，無作用 ###
+#     - {accept: KP_1, send: Shift+Z, when: always}
+#     - {accept: KP_2, send: Shift+X, when: always}
+#     - {accept: KP_3, send: Shift+C, when: always}
+#     - {accept: KP_4, send: Shift+A, when: always}
+#     - {accept: KP_5, send: Shift+S, when: always}
+#     - {accept: KP_6, send: Shift+D, when: always}
+#     - {accept: KP_7, send: Shift+Q, when: always}
+#     - {accept: KP_8, send: Shift+W, when: always}
+#     - {accept: KP_9, send: Shift+E, when: always}
+#     - {accept: KP_0, send: Shift+F, when: always}
+#     - {accept: KP_Decimal, send: Shift+V, when: always}
+### 測試用 ###
+    # - {accept: Control+minus, toggle: simplify_comment, when: always}
+### END ###
+
+
+##### 按鍵綁定 #####
+editor:
+  bindings:
+    # space: toggle_selection
+    # space: commit_composition
+    KP_Space: confirm
+    Return: confirm #使用 express_editor 時開啟 #commit_composition
+    KP_Enter: confirm #使用 express_editor 時開啟 #commit_composition
+    Shift+Return: commit_raw_input # 上屏原始輸入
+
+
+##### 段落識別器 #####
+recognizer:
+  patterns:
+    punct: "(?<!`)``$|```$"
+    shadow_top: "```[zxcasdqwevf]*$"  #"^=[zxcasdqwevf]*'?$"
+    reverse2_lookup: "(?<!`)`[-.,;/0-9a-z ]*'?$"
+    reverse3_lookup: "(?<!`)``[zxcasdqwevfA-Z]*'?$"
+
+
+#### 個別方案特別指定樣式（不使用預設值） #####
+style:
+  inline_preedit: true
+  candidate_list_layout: stacked #linear #stacked
+  horizontal: false
+

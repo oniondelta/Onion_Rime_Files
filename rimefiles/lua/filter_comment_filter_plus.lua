@@ -1,6 +1,6 @@
 --- @@ comment_filter_plus
 --[[
-（Mount_ocm、Mount_ocm_encoder）
+（Mount_ocm、Mount_ocm_encoder、onion-array10）
 去除後面編碼註釋
 --]]
 
@@ -37,10 +37,10 @@ local function filter(inp, env)
   local s_c_f_p_s = context:get_option("simplify_comment")
   for cand in inp:iter() do
     ---  s_c_f_p_s true 時 清除 comment。
-    -- yield( s_c_f_p_s and change_comment(cand,"") or cand )
+    -- yield( s_c_f_p_s and change_comment(cand, "") or cand )
     --- 下列判斷「☯」於 Mount_ocm_encoder.schema.yaml 可用到。
-    -- yield( s_c_f_p_s and not cand.comment:find("☯") and change_comment(cand,"") or cand )
-    yield( s_c_f_p_s and cand.comment ~= " ☯ " and change_comment(cand,"") or cand )
+    -- yield( s_c_f_p_s and not cand.comment:find("☯") and change_comment(cand, "") or cand )
+    yield( s_c_f_p_s and cand.comment ~= " ☯ " and not string.find(cand.comment, "^~") and change_comment(cand, "") or cand )
   end
 end
 ----------------

@@ -6,63 +6,16 @@
 
 patch:
   schema_list:
-######## 洋蔥全部方案（除形碼方案關閉） ########
-    - schema: bo_mixin4
-    - schema: bo_mixin1
-    - schema: bo_mixin2
-    - schema: bo_mixin3
-    - schema: bopomo_onionplus
-    - schema: bopomo_onionplus_space
-    - schema: bopomo_onion
-    - schema: bopomo_onion_double
-    - schema: terra_pinyin_onion
-    - schema: onion-array30
+######## 洋蔥行列10 ########
     - schema: onion-array10
-    # - schema: ocm_mixin
-    # - schema: dif1
-###########################
-    - schema: cangjie5
     - schema: Mount_bopomo
-    # - schema: Mount_ocm
-    # - schema: Mount_ocm_encoder
-###########################
-    - schema: hangeul
-    - schema: hangeul_hnc
-    - schema: jpnin1
-    - schema: latinin1
-    - schema: greek
-    - schema: cyrillic
-    - schema: allbpm
-    - schema: fullshape
-    # - schema: ocm_mixin_greek
-    # - schema: ocm_mixin_cyrillic
-    # - schema: ocm_mixin_fullshape
-    # - schema: dif1_jphi
-    # - schema: dif1_jpka
-    # - schema: dif1_kr
-    # - schema: dif1_la
-    # - schema: dif1_gr
-    # - schema: dif1_cy
-    # - schema: dif1_fs
-    - schema: easy_en_lower
-    - schema: easy_en_upper
-    - schema: easy_en_lcomment
-###########################
-    - schema: symbols_bpmf
-    - schema: symbols_bpmf_double
-    # - schema: symbols_ocm
-###########################
-    - schema: onion-array30-wsymbols
-    # - schema: punct_ovff
-###############################
+##############################
 
   switcher/fix_schema_list_order: true #固定方案選單順序
   switcher/hotkeys:
     - Control+grave
     - Control+Shift+grave
     - F4
-
-  menu/page_size: 9
 
   key_binder/bindings:
     - { when: composing, accept: Control+p, send: Up }
@@ -123,9 +76,9 @@ patch:
     - { accept: Control+Shift+colon, unset_option: simplification, when: always }
     - { accept: Control+Shift+question, unset_option: ascii_punct, when: always }
     # 只限直排專用：左右鍵翻頁（ Testing！ ）
-    - { accept: Left, send: Page_Up, when: paging } #直式選單用 #has_menu
-    - { accept: Right, send: Page_Down, when: paging } #直式選單用 #has_menu
-    - { accept: KP_Enter, send: Return, when: always } #使小鍵盤Enter可選擇
+    # - { accept: Left, send: Page_Up, when: paging } #直式選單用 #has_menu
+    # - { accept: Right, send: Page_Down, when: paging } #直式選單用 #has_menu
+    # - { accept: KP_Enter, send: Return, when: always } #使小鍵盤Enter可選擇
 
 #  ascii_composer:
 #    good_old_caps_lock: false

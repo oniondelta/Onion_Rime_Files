@@ -1,6 +1,6 @@
 --- @@ punct_preedit_revise_filter
 --[[
-（ bopomo_onion_double 和 onion-array30 ）
+（ bopomo_onion_double 和 onion-array30 和 onion-array10 ）
 punct 下，附加 preedit 後面 prompt 缺漏之標示。
 另修正 ascii_punct 下，分號(;)和冒號(:)無法變半形問題。
 --]]
@@ -19,16 +19,29 @@ local function init(env)
   local config = schema.config
   local schema_id = config:get_string("schema/schema_id")
   local bd = string.match(schema_id, "^bo")  --^bopomo_onion_double
-  -- local ar = string.match(schema_id, "^on")  --^onion%-array30
+  local ar30 = string.match(schema_id, "array30$")  --^on  -- ^onion%-array30
+  local ar10 = string.match(schema_id, "array10$")  --^on  -- ^onion%-array10
   -- env.bd = string.match(schema_id, "^bo")  --^bopomo_onion_double
-  -- env.ar = string.match(schema_id, "^on")  --^onion%-array30
+  -- env.ar30 = string.match(schema_id, "^onion%-array30")  --^on
+  -- env.ar30 = string.match(schema_id, "^onion%-array10")  --^on
   if bd then
     function env.c1(n) c = (string.match(n, "^`$") or string.match(n, "[^=`]`$")) return c end
+    function env.c2(n) return false end
     function env.c3(n) c = (string.match(n, "^;$") or string.match(n, "[^=];$")) return c end
     function env.c4(n) c = (string.match(n, "^;;$") or string.match(n, "[^=];;$")) return c end
-  -- elseif ar then
-  else
+  elseif ar30 then
     function env.c1(n) c = string.match(n, "`$") return c end
+    function env.c2(n) return false end
+    function env.c3(n) return false end
+    function env.c4(n) return false end
+  elseif ar10 then
+    function env.c1(n) return false end
+    function env.c2(n) c = string.match(n, "``$") return c end
+    function env.c3(n) return false end
+    function env.c4(n) return false end
+  else
+    function env.c1(n) return false end
+    function env.c2(n) return false end
     function env.c3(n) return false end
     function env.c4(n) return false end
   end
@@ -80,6 +93,7 @@ local function filter(inp, env)
   -- local promp = composition:get_prompt()  -- 都為""空碼？
 
   local check_1 = env.c1(c_input)
+  local check_2 = env.c2(c_input)
   local check_3 = o_ascii_punct and env.c3(c_input)
   local check_4 = o_ascii_punct and env.c4(c_input)
   -- local check_1 = env.bd and (string.match(c_input, "^`$") or string.match(c_input, "[^=`]`$")) or  -- 雙拼
@@ -99,7 +113,8 @@ local function filter(inp, env)
   local cand_colon = Candidate("simp_colon", 0, 2, ":", "〔半角〕")
   for cand in inp:iter() do
     local cand_text = cand.text
-    yield(check_1 and cand_text == "`" and change_preedit(cand, cand.preedit .."\t《特殊功能集》▶") or
+    yield(check_1 and cand_text == "`" and change_preedit(cand, cand.preedit .. "\t《特殊功能集》▶") or
+          check_2 and cand_text == "``" and change_preedit(cand, cand.preedit .. "``\t《查注音》▶") or
           -- check_2 and change_preedit(cand, "《查詢鍵位注音》" .. string.upper(check_2) ) or
           -- -- check_2 and change_preedit(cand, "《查詢鍵位注音》" .. c_preedit_text ) or
           -- -- check_2 and change_preedit(cand, "e " .. string.upper(check_2) .. "\t《查詢鍵位注音》") or

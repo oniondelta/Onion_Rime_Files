@@ -1,0 +1,23 @@
+﻿# Rime dictionary
+# encoding: utf-8
+---
+name: onion-array10.extended
+version: "202508"
+sort: by_weight  #original
+use_preset_vocabulary: false
+#max_phrase_length: 7
+#min_phrase_weight: 100
+# columns:
+#   - text
+#   - code
+#   - weight
+
+import_tables:
+  - onion-array10-symbols-prefix
+  - onion-array10-symbols
+  - onion-array10-generally-a
+  # - onion-array10-generally-b
+  # - onion-array10-generally-c
+  - phrases.ocmtc_essay_mc
+...
+

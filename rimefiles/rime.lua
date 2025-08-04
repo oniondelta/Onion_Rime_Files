@@ -35,7 +35,7 @@
 --      - lua_filter@myfilter                        --（關）把 charset_comment_filter 和 reverse_lookup_filter 註釋串在一起，如：CJK(hǎo)
 --
 --      - lua_filter@charset_filter2                 --（引lua資料夾）（ocm_onionmix）（手機全方案會用到） 遮屏選含「᰼᰼」候選項
---      - lua_filter@comment_filter_plus             --（引lua資料夾）（Mount_ocm） 遮屏提示碼，開關（simplify_comment）（遇到「'/」不遮屏）。
+--      - lua_filter@comment_filter_plus             --（引lua資料夾）（Mount_ocm、onion-array10） 遮屏提示碼，開關（simplify_comment）（遇到「'/」不遮屏）。
 --      - lua_filter@symbols_mark_filter             --（關，但 mix_cf2_cfp_smf_filter 有用到某元件，部分開啟） 候選項註釋符號、音標等屬性之提示碼(comment)（用 opencc 可實現，但無法合併其他提示碼(comment)，改用 Lua 來實現）
 --      - lua_filter@missing_mark_filter             --（關） 補上標點符號因直上和 opencc 衝突沒附註之選項
 --      - lua_filter@array30_comment_filter          --（關） 遮屏提示碼，開關（simplify_comment）（遇到「`」不遮屏）
@@ -50,7 +50,7 @@
 --      - lua_filter@halfwidth_katakana_filter       --（關）（jpnin1）片假名後附加半形片假名。選單顯示太雜亂，故不用。
 --      - lua_filter@lua_custom_phrase_filter        --（關）取代原先 table_translator@custom_phrase。接續掛接方案後，有 bug，上不了屏，改用 translator 實現。
 --      - lua_filter@preedit_model_filter            --（關）（bo_mixin 全系列）切換 preedit 樣式。
---      - lua_filter@punct_preedit_revise_filter     --（引lua資料夾）（bopomo_onion_double 和 onion-array30）punct 下，附加 preedit 後面 prompt 缺漏之標示。另修正 ascii_punct 下，分號(;)和冒號(:)無法變半形問題。
+--      - lua_filter@punct_preedit_revise_filter     --（引lua資料夾）（bopomo_onion_double 和 onion-array30 和 onion-array10）punct 下，附加 preedit 後面 prompt 缺漏之標示。另修正 ascii_punct 下，分號(;)和冒號(:)無法變半形問題。
 --      - lua_filter@back_mark_filter                --（引lua資料夾）（dif、1bopomo_onion_double、bopomo_onionplus 和 bo_mixin 全系列）不直接用 opencc 去 comment，改 lua 間接 comment，防「兩個字符」以上無法標注，和一個字串被多個標注。
 --      - lua_filter@comment_filter_unicode          --（關）註釋 Unicode 編碼。
 --      - lua_filter@comment_filter_debug            --（關）註釋 debug 訊息。
@@ -85,10 +85,12 @@
 --      - lua_processor@kr_2set_0m                   --（關）（hangeul2set_zeromenu）韓語成零選項。開關（space_mode）
 --      - lua_processor@zhuyin_space                 --（引lua資料夾）（Mount_ocm）補注音反查無法使用空白鍵和選字後跳掉之 bug。
 --      - lua_processor@lua_tran_kp                  --（關）（bopomo_onion_double）使 lua 之 mf_translator 數字和計算機功能可用小鍵盤輸入。
+--      - lua_processor@key_binder                   --（引lua資料夾）（onion-array10）切換兩個 key_binder，尚有問題，暫無掛載。
 --
 --      - ＊合併兩個以上函數：
 --      - lua_processor@array30up_mix                --（關）（onion-array30） 合併 array30up 和 array30up_zy，增進效能。
 --      - lua_processor@array30new_mix               --（引lua資料夾）（onion-array30） 合併 array30up 和 array30up_zy，增進效能。
+--      - lua_processor@array10_mix                  --（引lua資料夾）（onion-array10）以掛接注音修改為基礎增修。
 --      - lua_processor@mix_apc_s2rm_ltk             --（引lua資料夾）（bo_mixin 1、2、4；bopomo_onionplus） 合併 ascii_punct_change、s2r_most、lua_tran_kp，增進效能。
 --      - lua_processor@mix_apc_s2rm_ltk_3           --（引lua資料夾）（bo_mixin3） 合併 ascii_punct_change、s2r_mixin3、lua_tran_kp，增進效能。
 --      - lua_processor@mix_apc_ltk_pluss            --（引lua資料夾）（bopomo_onionplus_space） 以原 ascii_punct_change 增加功能，使初始空白可以直接上屏。
@@ -149,7 +151,7 @@ charset_comment_filter = charset_cjk.charset_comment_filter
 charset_cjk_filter_plus = charset_cjk.charset_cjk_filter_plus
 
 
---- comment_filter_plus （Mount_ocm）
+--- comment_filter_plus （Mount_ocm、onion-array10）
 -- 去除後面編碼註釋
 comment_filter_plus = require("filter_comment_filter_plus")
 
@@ -191,7 +193,7 @@ mix30_nil_comment_new_filter = require("filter_mix30_nil_comment_new_filter")
 -- preedit_model_charset_filter2_filter = require("filter_preedit_model_charset_filter2_filter")
 
 
---- punct_preedit_revise_filter （bopomo_onion_double 和 onion-array30）
+--- punct_preedit_revise_filter （bopomo_onion_double 和 onion-array30 和 onion-array10）
 -- punct 下，附加 preedit 後面 prompt 缺漏之標示。
 -- 另修正 ascii_punct 下，分號(;)和冒號(:)無法變半形問題。
 punct_preedit_revise_filter = require("filter_punct_preedit_revise_filter")
@@ -297,6 +299,17 @@ ascii_punct_change = require("processor_ascii_punct_change")
 -- 合併 array30up_zy 等
 -- 行列30注音反查 Return 和 space 上屏修正
 array30new_mix = require("processor_array30new_mix")
+
+
+--- array10_mix （onion-array10）
+-- 各種細節操控
+-- 行列30注音反查 Return 和 space 上屏修正
+array10_mix = require("processor_array10_mix")
+
+
+--- key_binder （onion-array10）
+-- 切換兩個 key_binder，尚有問題，暫無掛載。
+key_binder = require("key_binder")
 
 
 --- mix_apc_s2rm_ltk （bo_mixin 1、2、4；bopomo_onionplus）
