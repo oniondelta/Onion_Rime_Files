@@ -237,6 +237,7 @@ shutil.copyfile("./rimefiles/onion-array10-symbols-prefix.dict.yaml", "./"+sort_
 shutil.copyfile("./rimefiles/onion-array10-generally-a.dict.yaml", "./"+sort_rime+"/"+rime_files+"/onion-array10-generally-a.dict.yaml")
 shutil.copyfile("./rimefiles/onion-array10-generally-b.dict.yaml", "./"+sort_rime+"/"+rime_files+"/onion-array10-generally-b.dict.yaml")
 shutil.copyfile("./rimefiles/onion-array10-generally-c.dict.yaml", "./"+sort_rime+"/"+rime_files+"/onion-array10-generally-c.dict.yaml")
+shutil.copyfile("./rimefiles/onion-array10-and-bpmf.schema.yaml", "./"+sort_rime+"/"+rime_files+"/onion-array10-and-bpmf.schema.yaml")
 
 
 #全部方案開啟default.custom檔

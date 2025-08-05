@@ -8,6 +8,9 @@ patch:
   schema_list:
 ######## 洋蔥行列10 ########
     - schema: onion-array10
+    - schema: onion-array10-and-bpmf
+    - schema: bopomo_onion
+    - schema: cangjie5
     - schema: Mount_bopomo
 ##############################
 
