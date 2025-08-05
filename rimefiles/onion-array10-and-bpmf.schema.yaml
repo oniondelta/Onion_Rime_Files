@@ -69,7 +69,8 @@ translator:
 ##### 行列10影子翻譯器 #####（功用：轉給右邊數字鍵盤使用）
 shadow_top:
   __include: onion-array10.schema:/shadow_top
-
+  __append:
+    suffix: " "
 
 ##### 行列10副翻譯器-輸出長詞用 #####
 second_phrases:
@@ -81,6 +82,7 @@ reverse3_lookup:
   __include: onion-array10.schema:/reverse3_lookup
   __append:
     prefix: "=="
+    suffix: " "
 
 ##### 濾鏡：簡體轉換 #####
 zh_cn:
@@ -166,8 +168,8 @@ key_binder:
 ##### 段落識別器 #####
 recognizer:
   patterns/+:
-    shadow_top: "```[zxcasdqwevf]*$"
-    reverse3_lookup: "==[zxcasdqwevfA-Z]*'?$"
+    shadow_top: "```[zxcasdqwevf]* ?$"
+    reverse3_lookup: "==[zxcasdqwevfA-Z]* ?$"
     # shadow_top: "```[zxcasdqwevf ]*$"  #多一個空格！掛載在注音下用，但會跳回完整碼單字，故不用。
 
 # recognizer:

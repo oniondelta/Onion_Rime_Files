@@ -197,7 +197,7 @@ shadow_top:
   prefix: "```"
   # suffix: "'"
   tips: "《影》▶"
-  # closing_tips: "◀《影》"
+  closing_tips: "◀《影》"
   extra_tags:
     - second_phrases
 
