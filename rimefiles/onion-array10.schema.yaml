@@ -189,7 +189,7 @@ second_phrases:
   #   # - "^.$" # 單碼不調頻
 
 
-##### 行列10影子翻譯器 #####
+##### 行列10影子翻譯器 #####（功用：轉給右邊數字鍵盤使用）
 shadow_top:
   __include: /translator
   tag: shadow_top
@@ -311,7 +311,7 @@ punctuator:
     "`" : [ "`" ]
   symbols:
     "``" : [ "``" ]
-    "```" : [ "```" ]
+    # "```" : [ "```" ]
 
 
 ##### 按鍵設定 #####
@@ -431,7 +431,7 @@ key_binder:
     # __include: /key_binder/bindings
     # __append:
 ### 轉換小鍵盤（初始） ###
-    - {accept: KP_1, send_sequence: "{grave}{grave}{grave}{a}", when: always}
+    - {accept: KP_1, send_sequence: "{grave}{grave}{grave}{z}", when: always}
     - {accept: KP_2, send_sequence: "{grave}{grave}{grave}{x}", when: always}
     - {accept: KP_3, send_sequence: "{grave}{grave}{grave}{c}", when: always}
     - {accept: KP_4, send_sequence: "{grave}{grave}{grave}{a}", when: always}
@@ -493,7 +493,7 @@ editor:
 ##### 段落識別器 #####
 recognizer:
   patterns:
-    punct: "(?<!`)``$|```$"
+    punct: "(?<!`)``$"  #"(?<!`)``$|```"$
     shadow_top: "```[zxcasdqwevf]*$"  #"^=[zxcasdqwevf]*'?$"
     reverse2_lookup: "(?<!`)`[-.,;/0-9a-z ]*'?$"
     reverse3_lookup: "(?<!`)``[zxcasdqwevfA-Z]*'?$"
