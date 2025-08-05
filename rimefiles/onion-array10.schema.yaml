@@ -125,6 +125,7 @@ speller:
     # - derive/^([0-9]+@)$/$1./  # 一般中文字
     # - derive/^(@[0-9]+)$/.$1/  # 符號
     - derive/@/./
+    # - derive/@/ /  #掛載在注音下用，但會跳回完整碼單字，故不用。
     - xform/@$//
 ## 鍵盤對映(直接使用數字，則無法用數字選字)
     # - derive/1/Z/
@@ -462,9 +463,6 @@ key_binder:
     - {accept: KP_Divide, send: Page_Up, when: has_menu}
     - {accept: KP_Multiply, send: Page_Down, when: composing}
     - {accept: KP_Add, send: r , when: composing}
-    # - {accept: KP_Add, send: Shift+Return , when: has_menu}
-    # - {accept: KP_Add, send: Escape , when: has_menu}
-    # - {accept: KP_Add, send_sequence: "{grave}{grave}" , when: always}
 # ### 以下無作用：設成發送為空按鍵，無作用 ###
 #     - {accept: KP_1, send: Shift+Z, when: always}
 #     - {accept: KP_2, send: Shift+X, when: always}

@@ -1,0 +1,180 @@
+# Rime schema settings
+# encoding: utf-8
+
+__include: bopomo_onion.schema:/
+__patch:
+
+
+schema:
+  schema_id: onion-array10-and-bpmf
+  name: "▦ 行列１０＆注音（洋蔥版）"
+  version: "20250805"
+  dependencies:
+    - cangjie5
+    - onion-array10
+
+
+switches/+:
+  - name: simplify_comment
+    # reset: 1
+    states: [ 編碼, 無編 ]
+
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+#    - fluency_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor #一定要放在「affix_segmentor」前
+    - affix_segmentor@shadow_top
+    - affix_segmentor@second_phrases
+    - affix_segmentor@reverse2_lookup
+    - affix_segmentor@reverse3_lookup
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - script_translator@reverse2_lookup
+    - script_translator@reverse3_lookup
+    - script_translator
+    - table_translator@shadow_top
+    - script_translator@second_phrases
+  filters:
+    - simplifier@zh_cn
+    - reverse_lookup_filter@bpm_reverse_lookup
+    - reverse_lookup_filter@array10_reverse_lookup
+    - lua_filter@comment_filter_plus
+    - uniquifier
+
+
+speller:
+  delimiter: "|\\"
+
+
+translator:
+  preedit_format:
+    - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 6347|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˉˊˇˋ˙|"
+    - xform/\|/ /
+
+
+##### 行列10影子翻譯器 #####（功用：轉給右邊數字鍵盤使用）
+shadow_top:
+  __include: onion-array10.schema:/shadow_top
+
+
+##### 行列10副翻譯器-輸出長詞用 #####
+second_phrases:
+  __include: onion-array10.schema:/second_phrases
+
+
+##### 使用行列10反查注音碼 #####
+reverse3_lookup:
+  __include: onion-array10.schema:/reverse3_lookup
+  __append:
+    prefix: "=="
+
+##### 濾鏡：簡體轉換 #####
+zh_cn:
+  tips: none  #不標註轉換前「字符」
+  tags: [ abc, shadow_top ]
+
+
+##### 濾鏡：comment 遮屏 #####
+comment_filter_plus:
+  tags: [ abc, shadow_top ]
+
+
+##### 濾鏡：標註該字行列10編碼 #####
+array10_reverse_lookup:
+  tags: [ abc, shadow_top ]  # second_phrases, reverse2_lookup
+  overwrite_comment: false #true
+  dictionary: onion-array10.extended
+  comment_format:
+    - xform/@/./
+    - xform/([.\d]+)/〔$1〕/
+    - xform/[.]〕/〕/
+    - xform/ //
+    # - "xlit|1234567890|１２３４５６７８９０|"
+
+
+##### 濾鏡：標註該字注音 #####
+## （用純注音方案中的濾鏡，非 array10 方案內的「bpmf_reverse_lookup」）
+bpm_reverse_lookup:
+  tags: [ reverse2_lookup, reverse3_lookup ]
+
+
+##### 按鍵設定 #####
+key_binder:
+  import_preset: default
+  bindings:
+    __include: bopomo_onion.schema:/key_binder/bindings
+    __append:
+###  功能快捷鍵 ###
+## 下排舊的循環切換
+    # - { accept: Control+apostrophe, toggle: simplify_comment, when: always }
+## 上排切換(Mac)
+    - { accept: Control+Shift+6, toggle: simplify_comment, when: always }
+## 上排切換(Win)
+    - { accept: Control+Shift+asciicircum, toggle: simplify_comment, when: always }
+## 切換樣態
+    - { accept: Control+apostrophe, set_option: simplify_comment, when: always }
+## 初始樣態(Mac)
+    - { accept: Control+Shift+apostrophe, unset_option: simplify_comment, when: always }
+## 初始樣態(Win)
+    - { accept: Control+Shift+quotedbl, unset_option: simplify_comment, when: always }
+### 轉換小鍵盤（初始） ###
+    - {accept: KP_1, send_sequence: "{grave}{grave}{grave}{z}", when: always}
+    - {accept: KP_2, send_sequence: "{grave}{grave}{grave}{x}", when: always}
+    - {accept: KP_3, send_sequence: "{grave}{grave}{grave}{c}", when: always}
+    - {accept: KP_4, send_sequence: "{grave}{grave}{grave}{a}", when: always}
+    - {accept: KP_5, send_sequence: "{grave}{grave}{grave}{s}", when: always}
+    - {accept: KP_6, send_sequence: "{grave}{grave}{grave}{d}", when: always}
+    - {accept: KP_7, send_sequence: "{grave}{grave}{grave}{q}", when: always}
+    - {accept: KP_8, send_sequence: "{grave}{grave}{grave}{w}", when: always}
+    - {accept: KP_9, send_sequence: "{grave}{grave}{grave}{e}", when: always}
+    - {accept: KP_0, send_sequence: "{grave}{grave}{grave}{f}", when: always}
+    - {accept: KP_Decimal, send_sequence: "{grave}{grave}{grave}{v}", when: always}
+### 轉換小鍵盤（有開頭後） ###
+    - {accept: KP_1, send: z, when: composing}
+    - {accept: KP_2, send: x, when: composing}
+    - {accept: KP_3, send: c, when: composing}
+    - {accept: KP_4, send: a, when: composing}
+    - {accept: KP_5, send: s, when: composing}
+    - {accept: KP_6, send: d, when: composing}
+    - {accept: KP_7, send: q, when: composing}
+    - {accept: KP_8, send: w, when: composing}
+    - {accept: KP_9, send: e, when: composing}
+    - {accept: KP_0, send: f, when: composing}
+    - {accept: KP_Decimal, send: v, when: composing}
+## 以下不要設成：{ when: always }
+    - {accept: KP_Subtract, send: BackSpace, when: has_menu}
+    - {accept: KP_Divide, send: Page_Up, when: has_menu}
+    - {accept: KP_Multiply, send: Page_Down, when: composing}
+    - {accept: KP_Add, send: r , when: composing}
+### END ###
+
+
+##### 段落識別器 #####
+recognizer:
+  patterns/+:
+    shadow_top: "```[zxcasdqwevf]*$"
+    reverse3_lookup: "==[zxcasdqwevfA-Z]*'?$"
+    # shadow_top: "```[zxcasdqwevf ]*$"  #多一個空格！掛載在注音下用，但會跳回完整碼單字，故不用。
+
+# recognizer:
+#   patterns:
+#     url: "^(https?:|ftp:|mailto:|file:).*$"
+#     email: "^[a-z][-_.0-9a-z]*@.*$"
+#     punct: "(?<![=`])``?[-,;/0-9a-z]*$|[[][[]?'?$|[]][]]?'?$|[[][]]$|[[][[][]][]]$|[[]'[]]'$|[[][[]'[]][]]'$|'''?$|===?$|=``?$|=''?$|=''?=''?$|=[][][][]?$|=[][][][]?=[][][][]?$|=[-,./;][-,./;]? ?$|=,,=[.][.] ?$|=[0-9] ?$|=9=0 ?$|==[].,90'[]+ ?$"   #|==[].,90'[][].,'[]? ?$
+#     shadow_top: "```[zxcasdqwevf]*$"
+#     reverse2_lookup: "=[a-z]* ?$"
+
