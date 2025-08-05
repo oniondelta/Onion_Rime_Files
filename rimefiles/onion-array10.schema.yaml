@@ -349,6 +349,11 @@ key_binder:
     # - {accept: Tab, send: Page_Down, when: has_menu} #「tab」翻頁。
     # - {accept: Tab, send: Shift+Left, when: paging}
     # - {accept: Tab, send_sequence: "{Shift+Left}{Shift+Left}", when: paging} #回到「空白鍵」非選擇上屏。
+##
+    - {accept: g, send: Page_Up, when: always}
+    - {accept: b, send: Page_Down, when: always}
+### 刪除 ###
+    - {accept: t, send: BackSpace, when: always}
 ### 空白鍵 ###
     # - {accept: space, send: Escape, when: composing} #空碼清屏用
     # - {accept: space, send: space, when: has_menu} #補上一條產生之bug
@@ -370,17 +375,15 @@ key_binder:
     # - {accept: Shift+R, send: Control+0, when: has_menu}
 ###  功能快捷鍵 ###
     - { accept: Shift+space, toggle: ascii_mode, when: always }
-    # # - { accept: Control+Shift+space, toggle: ascii_mode, when: always }
+    # - { accept: Control+Shift+space, toggle: ascii_mode, when: always }
 ## 下排舊的循環切換
     # - { accept: Control+comma, toggle: ascii_mode, when: always }
-    # # - { accept: Control+Shift+comma, toggle: ascii_mode, when: always }
     # - { accept: Control+period, toggle: full_shape, when: always }
-    # # - { accept: Control+Shift+period, toggle: full_shape, when: always }
     # - { accept: Control+semicolon, toggle: simplification, when: always }
-    # # - { accept: Control+Shift+slash, toggle: simplification, when: always }
     # - { accept: Control+slash, toggle: ascii_punct, when: always }
     # - { accept: Control+apostrophe, toggle: extended_charset, when: always }
     # - { accept: Control+bracketleft, toggle: simplify_comment, when: always } #編碼提示開關
+    # - { accept: Control+bracketright, toggle: switch_key_board, when: always }
 ## 上排切換(Mac)
     - { accept: Control+Shift+7, toggle: simplify_comment, when: always } #編碼提示開關
     - { accept: Control+Shift+8, toggle: switch_key_board, when: always }

@@ -74,7 +74,7 @@ local function processor(key, env)
   -- local page_size = engine.schema.page_size
   local o_ascii_mode = context:get_option("ascii_mode")
   local o_switch_key_board = context:get_option("switch_key_board")
-  local key_abc = key:repr():match("^([zxcasdqwefv])$")
+  local key_abc = key:repr():match("^([zxcasdqwefvtgb])$")
   local key_num = key:repr():match("KP_([0-9])") or key:repr():match("Control%+([0-9])")
   -- local key_num_array10 = key:repr():match("KP_([0-9])") or key:repr():match("KP_(Decimal)")
   local shadow_top_b = string.match(c_input, "```[zxcasdqwefv]$")
