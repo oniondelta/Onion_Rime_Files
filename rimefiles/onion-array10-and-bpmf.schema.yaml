@@ -159,7 +159,7 @@ key_binder:
     - {accept: KP_Subtract, send: BackSpace, when: has_menu}
     - {accept: KP_Divide, send: Page_Up, when: has_menu}
     - {accept: KP_Multiply, send: Page_Down, when: composing}
-    - {accept: KP_Add, send: r , when: composing}
+    # - {accept: KP_Add, send: r , when: composing}
 ### END ###
 
 
