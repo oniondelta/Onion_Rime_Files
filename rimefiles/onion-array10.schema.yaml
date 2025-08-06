@@ -84,7 +84,7 @@ engine:
     - table_translator@shadow_top
     - script_translator@second_phrases
     - script_translator@reverse2_lookup
-    - script_translator@reverse3_lookup
+    - table_translator@reverse3_lookup
   filters:
     # - cjk_minifier  #失效？無法對script_translator產生影響
     - simplifier@zh_cn
@@ -111,35 +111,31 @@ menu:
 ##### 拼寫處理器 #####
 speller:
   # alphabet: ""
+  #### 編碼為[zxcasdqwef]+時
   alphabet: "zxcasdqwefv"
-  # alphabet: "zxcasdqwefvZXCASDQWEFV"
-  # alphabet: "1234567890-zxcasdqwefv"
-  # initials: "1234567890-zxcasdqwefv"
-  # finals: " '"
+  # initials: "zxcasdqwefv"
+  # finals: "v"
+  #### 編碼為[0-9]+時
+  # alphabet: "1234567890-"
+  # # initials: "1234567890-"
+  # # finals: "-"
   delimiter: "|"
   use_space: false
   auto_select: false
   # auto_select_pattern: '^[a-z,./;]{1,4}i? $'
   algebra:
-## 前綴尾綴處理
-    # - derive/^([0-9]+@)$/$1./  # 一般中文字
-    # - derive/^(@[0-9]+)$/.$1/  # 符號
-    - derive/@/./
-    # - derive/@/ /  #掛載在注音下用，但會跳回完整碼單字，故不用。
-    - xform/@$//
-## 鍵盤對映(直接使用數字，則無法用數字選字)
-    # - derive/1/Z/
-    # - derive/2/X/
-    # - derive/3/C/
-    # - derive/4/A/
-    # - derive/5/S/
-    # - derive/6/D/
-    # - derive/7/Q/
-    # - derive/8/W/
-    # - derive/9/E/
-    # - derive/0/F/
-    # - derive/[.]/V/
-    - "xlit|1234567890.|zxcasdqwefv|"
+    #### 編碼為[zxcasdqwef]+時
+    ## 前綴尾綴處理
+    - derive/^([zxcasdqwef]+)$/$1v/  # 一般中文字
+    #### 編碼為[0-9]+時
+    # ## 前綴尾綴處理
+    # # - derive/^([0-9]+@)$/$1./  # 一般中文字
+    # # - derive/^(@[0-9]+)$/.$1/  # 符號
+    # - derive/@/./
+    # # - derive/@/ /  # 掛載在注音下用，但會跳回完整碼單字，故不用。
+    # - xform/@$//
+    # ## 鍵盤對映（編碼為[0-9]+時）(直接使用數字，則無法用數字選字)
+    # - "xlit|1234567890.|zxcasdqwefv|"
 
 
 ##### 行列10主翻譯器-順序固定不變 #####
@@ -148,27 +144,30 @@ translator:
   prism: onion-array10
   initial_quality: 1000
   enable_charset_filter: true
-  # enable_encoder: false #true ##打詞時，可使用簡略打法，簡略打法的規則在字典中設定。
-  # encode_commit_history: false #true
-  # max_phrase_length: 7 #4
-  enable_sentence: false #true ##此為自動造句，為打詞時，使用全拼。
-  enable_completion: true  #false #逐碼提示
-  # sentence_over_completion: false
-  # strict_spelling: true #false #配合speller中的fuzz規則，僅以畧拼碼組詞〔僅table_translator有效？〕實際好像script_translator才有效？
-  enable_user_dict: false  #true
-  # db_class: tabledb #userdb
+  # enable_encoder: false  #true  # 打詞時，可使用簡略打法，簡略打法的規則在字典中設定。
+  # encode_commit_history: false  #true
+  # max_phrase_length: 7  #4
+  enable_sentence: false  #true   # 此為自動造句，為打詞時，使用全拼。
+  enable_completion: true  #false  # 逐碼提示
+  sentence_over_completion: false
+  # strict_spelling: true  #false  # 配合speller中的fuzz規則，僅以畧拼碼組詞〔僅table_translator有效？〕實際好像script_translator才有效？
+  enable_user_dict: true  #false
+  # db_class: tabledb  #userdb
   # disable_user_dict_for_patterns:
-  #   # - "^.$" # 單碼不調頻
+  #   # - "^.$"  # 單碼不調頻
   preedit_format:
-    - "xlit|zxcasdqwefv|１２３４５６７８９０.|"
-    - "xlit|ZXCASDQWEFV|１２３４５６７８９０.|"
+    - "xlit|zxcasdqwefv|１２３４５６７８９０．|"
     - xform/\|/⁞/
   comment_format:
-    # - xform/@/./
-    - xform/@//
-    # - xform/~/~ /
-    # - xform/~/～/
-    - "xlit|1234567890|１２３４５６７８９０|"
+    #### 編碼為[zxcasdqwef]+時
+    - xform/v//
+    - "xlit|zxcasdqwefv|１２３４５６７８９０.|"
+    #### 編碼為[0-9]+時
+    # # - xform/@/./
+    # - xform/@//
+    # # - xform/~/~ /
+    # # - xform/~/～/
+    # - "xlit|1234567890|１２３４５６７８９０|"
 
 abc_segmentor:
   extra_tags:
@@ -207,7 +206,7 @@ reverse2_lookup:
   tag: reverse2_lookup
   dictionary: "Mount_bopomo.extended"
   # prism: "Mount_bopomo.extended"
-  # enable_charset_filter: false #true
+  # enable_charset_filter: false  #true
   enable_completion: false
   enable_user_dict: true
   prefix: "`"
@@ -222,8 +221,9 @@ reverse2_lookup:
 
 ##### 使用行列10反查注音碼 #####
 reverse3_lookup:
-  __include: /second_phrases #/translator
+  __include: /translator  #/second_phrases
   tag: reverse3_lookup
+  enable_user_dict: false  #true
   prefix: "``"
   suffix: "'"
   tips: "《查注音》▶"
@@ -247,11 +247,16 @@ array10_reverse_lookup:
   overwrite_comment: false #true
   dictionary: onion-array10.extended
   comment_format:
-    - xform/@/./
-    - xform/([.\d]+)/〔$1〕/
-    - xform/[.]〕/〕/
-    - xform/ //
-    # - "xlit|1234567890|１２３４５６７８９０|"
+    #### 編碼為[zxcasdqwef]+時
+    - xform/([zxcasdqwefv]+)/〔$1〕/
+    - "xlit|zxcasdqwefv|1234567890.|"
+    - xform/[.]/ . /
+    #### 編碼為[0-9]+時
+    # - xform/@/./
+    # - xform/([.\d]+)/〔$1〕/
+    # - xform/[.]〕/〕/
+    # - xform/ //
+    # # - "xlit|1234567890|１２３４５６７８９０|"
 
 
 ##### 濾鏡：標註該字注音 #####
@@ -495,9 +500,9 @@ editor:
 recognizer:
   patterns:
     punct: "(?<!`)``$"  #"(?<!`)``$|```"$
-    shadow_top: "```[zxcasdqwevf]*$"  #"^=[zxcasdqwevf]*'?$"
+    shadow_top: "```[zxcasdqwefv]*$"
     reverse2_lookup: "(?<!`)`[-.,;/0-9a-z ]*'?$"
-    reverse3_lookup: "(?<!`)``[zxcasdqwevfA-Z]*'?$"
+    reverse3_lookup: "(?<!`)``[zxcasdqwefv]*'?$"
 
 
 #### 個別方案特別指定樣式（不使用預設值） #####

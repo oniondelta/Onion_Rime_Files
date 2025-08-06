@@ -44,7 +44,7 @@ engine:
   translators:
     - punct_translator
     - script_translator@reverse2_lookup
-    - script_translator@reverse3_lookup
+    - table_translator@reverse3_lookup
     - script_translator
     - table_translator@shadow_top
     - script_translator@second_phrases
@@ -98,14 +98,6 @@ comment_filter_plus:
 ##### 濾鏡：標註該字行列10編碼 #####
 array10_reverse_lookup:
   tags: [ abc, shadow_top ]  # second_phrases, reverse2_lookup
-  overwrite_comment: false #true
-  dictionary: onion-array10.extended
-  comment_format:
-    - xform/@/./
-    - xform/([.\d]+)/〔$1〕/
-    - xform/[.]〕/〕/
-    - xform/ //
-    # - "xlit|1234567890|１２３４５６７８９０|"
 
 
 ##### 濾鏡：標註該字注音 #####
@@ -168,15 +160,15 @@ key_binder:
 ##### 段落識別器 #####
 recognizer:
   patterns/+:
-    shadow_top: "```[zxcasdqwevf]* ?$"
-    reverse3_lookup: "==[zxcasdqwevfA-Z]* ?$"
-    # shadow_top: "```[zxcasdqwevf ]*$"  #多一個空格！掛載在注音下用，但會跳回完整碼單字，故不用。
+    shadow_top: "```[zxcasdqwefv]* ?$"
+    # shadow_top: "```[zxcasdqwefv ]*$"  #多一個空格！掛載在注音下用，但會跳回完整碼單字，故不用。
+    reverse3_lookup: "==[zxcasdqwefv]* ?$"
 
 # recognizer:
 #   patterns:
 #     url: "^(https?:|ftp:|mailto:|file:).*$"
 #     email: "^[a-z][-_.0-9a-z]*@.*$"
 #     punct: "(?<![=`])``?[-,;/0-9a-z]*$|[[][[]?'?$|[]][]]?'?$|[[][]]$|[[][[][]][]]$|[[]'[]]'$|[[][[]'[]][]]'$|'''?$|===?$|=``?$|=''?$|=''?=''?$|=[][][][]?$|=[][][][]?=[][][][]?$|=[-,./;][-,./;]? ?$|=,,=[.][.] ?$|=[0-9] ?$|=9=0 ?$|==[].,90'[]+ ?$"   #|==[].,90'[][].,'[]? ?$
-#     shadow_top: "```[zxcasdqwevf]*$"
+#     shadow_top: "```[zxcasdqwefv]*$"
 #     reverse2_lookup: "=[a-z]* ?$"
-
+#     reverse3_lookup: "==[zxcasdqwefv]* ?$"
