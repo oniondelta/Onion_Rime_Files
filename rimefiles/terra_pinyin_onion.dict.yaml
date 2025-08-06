@@ -175,6 +175,7 @@
 #    詞句中，「咱」皆補齊「zan2」「za2」。
 #    詞句中，「羧」皆補齊「zui1」「suo1」。
 #    詞句中，「酵」皆補齊「xiao4」「jiao4」。
+#    詞句中，「捱」皆補齊「ai2」「ai1」。
 #    詞句中，「績」「蹟」「跡」「迹」臺灣標準為「ji1」，大陸標準為「ji4」，只保留「ji1」發音。
 #    詞句中，「寂」臺灣標準為「ji2」，大陸標準為「ji4」，只保留「ji2」發音。
 #    詞句中，「妮」臺灣標準為「ni2」，大陸標準為「ni1」，只保留「ni2」發音。
@@ -220,7 +221,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "202507"
+version: "202508"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -2764,6 +2765,10 @@ min_phrase_weight: 100
 朾	cheng1	0%
 捼	wo1	0%
 淑	chu4	0%
+庇	pi2	0%
+庇	pi3	0%
+揣	duo3	0%
+捱	ai1
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -59491,6 +59496,7 @@ min_phrase_weight: 100
 倒懸之急	dao4 xuan2 zhi1 ji2
 倒懸之苦	dao4 xuan2 zhi1 ku3
 倒懸捱命	dao4 xuan2 ai2 ming4
+倒懸捱命	dao4 xuan2 ai1 ming4
 倒戈	dao3 ge1
 倒戈	dao4 ge1
 倒扁	dao3 bian3
@@ -73502,6 +73508,8 @@ min_phrase_weight: 100
 差委	chai1 wei3
 差官	chai1 guan1
 差序	ci1 xu4
+差序	cha1 xu4
+差序	cha4 xu4
 差強人意	cha1 qiang2 ren2 yi4
 差役	cha1 yi4
 差役	chai1 yi4
@@ -79368,9 +79376,13 @@ min_phrase_weight: 100
 捯線	dao3 xian4
 捯飭	dao2 chi4
 捱日子	ai2 ri4 zi5
+捱日子	ai1 ri4 zi5
 捱時間	ai2 shi2 jian1
+捱時間	ai1 shi2 jian1
 捱磨	ai2 mo2
+捱磨	ai1 mo2
 捱風緝縫	ai2 feng1 qi4 feng4
+捱風緝縫	ai1 feng1 qi4 feng4
 捲入漩渦	juan3 ru4 xuan2 wo1
 捲土重來	juan3 tu3 chong2 lai2
 捲子	juan3 zi5
@@ -82953,8 +82965,12 @@ min_phrase_weight: 100
 暑期	shu3 qi2
 暑期學校	shu3 qi2 xue2 xiao4
 暖和	nuan3 huo5
+暖和	nuan3 huo4
 暖和	nuan3 huo2
+暖和	nuan3 he2
 暖和和	nuan3 huo5 huo5
+暖和和	nuan3 huo2 huo2
+暖和和	nuan3 huo4 huo4
 暖和和	nuan3 he2 he2
 暖姝	xuan1 shu1
 暖暖	xuan1 xuan1
@@ -94966,7 +94982,6 @@ min_phrase_weight: 100
 磁通量	ci2 tong1 liang2
 磅硠	pang1 lang2
 磅礴	pang1 bo2
-磅礴	pang2 bo2
 磅薄	pang1 bo2
 磈磊	kui3 lei3
 磊磊落落	lei3 lei3 luo4 luo4
@@ -112734,6 +112749,7 @@ min_phrase_weight: 100
 難捨難分	nan2 she3 nan2 fen1
 難捨難離	nan2 she3 nan2 li2
 難捱	nan2 ai2
+難捱	nan2 ai1
 難控制	nan2 kong4 zhi4
 難掩	nan2 yan3
 難敵	nan2 di2
@@ -115843,4 +115859,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 115846 #####
+##### @結束 END - 115862 #####
