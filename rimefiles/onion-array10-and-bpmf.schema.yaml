@@ -97,11 +97,13 @@ comment_filter_plus:
 
 ##### 濾鏡：標註該字行列10編碼 #####
 array10_reverse_lookup:
-  tags: [ abc, shadow_top ]  # second_phrases, reverse2_lookup
+  __include: onion-array10.schema:/array10_reverse_lookup
+  __append:
+    tags: [ abc, shadow_top ]  # second_phrases, reverse2_lookup
 
 
 ##### 濾鏡：標註該字注音 #####
-## （用純注音方案中的濾鏡，非 array10 方案內的「bpmf_reverse_lookup」）
+## 用純注音方案中的濾鏡，非 array10 方案內的「bpmf_reverse_lookup」！
 bpm_reverse_lookup:
   tags: [ reverse2_lookup, reverse3_lookup ]
 
@@ -161,7 +163,7 @@ key_binder:
 recognizer:
   patterns/+:
     shadow_top: "```[zxcasdqwefv]* ?$"
-    # shadow_top: "```[zxcasdqwefv ]*$"  #多一個空格！掛載在注音下用，但會跳回完整碼單字，故不用。
+    # shadow_top: "```[zxcasdqwefv ]*$"  # 多一個空格！掛載在注音下用，但會跳回完整碼單字，故不用。
     reverse3_lookup: "==[zxcasdqwefv]* ?$"
 
 # recognizer:
