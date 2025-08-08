@@ -54,6 +54,7 @@ engine:
     - reverse_lookup_filter@array10_reverse_lookup
     - lua_filter@comment_filter_plus
     - uniquifier
+    - single_char_filter  # 作者說明其作用是單字優先，文檔的說法有誤。  # 只針對「table_translator」作用，官方文件是放在「uniquifier」後。
 
 
 speller:

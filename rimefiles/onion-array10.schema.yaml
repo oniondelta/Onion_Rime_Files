@@ -95,7 +95,7 @@ engine:
     # - lua_filter@*filter_comment_filter_array10@comment_filter_array10
     # - lua_filter@*filter_comment_filter_array10  # 一定要再「@」才能用「tags:」限定。
     - uniquifier
-    - single_char_filter  # 作者說明其作用是單字優先，文檔的說法有誤。  # 官方文件是放在uniquifier後
+    - single_char_filter  # 作者說明其作用是單字優先，文檔的說法有誤。  # 只針對「table_translator」作用，官方文件是放在「uniquifier」後。
     # - lua_filter@comment_filter_unicode  # unicode 和 debug 分開，同時開啟無法記憶
     # - lua_filter@comment_filter_debug  # unicode 和 debug 分開，同時開啟無法記憶
     # - lua_filter@comment_filter_unicode_debug
