@@ -1,6 +1,8 @@
 --- @@ processor_array10_mix
 --[[
 （onion-array10）
+array10 數字和英文相互轉換。
+「BackSpace」和「Escape」於 array10 狀態，不用按多次，可一次就刪除。
 注音反查 Return 和 space 和 小鍵盤數字鍵 上屏修正
 尚有bug待處理
 --]]
@@ -30,16 +32,17 @@ local array10_to_abc = array10_conversion.to_abc
 --   local schema = engine.schema
 --   local config = schema.config
 --   -- env.kp_change_pattern = {
---   --   ["0"] = "F",
---   --   ["1"] = "Z",
---   --   ["2"] = "X",
---   --   ["3"] = "C",
---   --   ["4"] = "A",
---   --   ["5"] = "S",
---   --   ["6"] = "D",
---   --   ["7"] = "Q",
---   --   ["8"] = "W",
---   --   ["9"] = "E",
+--   --   ["0"] = "Z",
+--   --   ["1"] = "X",
+--   --   ["2"] = "C",
+--   --   ["3"] = "V",
+--   --   ["4"] = "S",
+--   --   ["5"] = "D",
+--   --   ["6"] = "F",
+--   --   ["7"] = "W",
+--   --   ["8"] = "E",
+--   --   ["9"] = "R",
+--   --   ["Add"] = "A",
 --   --   -- ["Add"] = "+",
 --   --   -- ["Subtract"] = "-",
 --   --   -- ["Multiply"] = "*",
@@ -74,12 +77,12 @@ local function processor(key, env)
   -- local page_size = engine.schema.page_size
   local o_ascii_mode = context:get_option("ascii_mode")
   local o_switch_key_board = context:get_option("switch_key_board")
-  local key_abc = key:repr():match("^([zxcasdqwefvtgb])$")
+  local key_abc = key:repr():match("^([zxcvsdfweratgb])$")
   local key_num = key:repr():match("KP_([0-9])") or key:repr():match("Control%+([0-9])")
   -- local key_num_array10 = key:repr():match("KP_([0-9])") or key:repr():match("KP_(Decimal)")
-  local shadow_top_b = string.match(c_input, "```[zxcasdqwefv]$")
-  local shadow_top_e = string.match(c_input, "(```[zxcasdqwefv]+)$")
-  local abc_words = string.match(c_input, "([zxcasdqwefv]+)$")
+  local shadow_top_b = string.match(c_input, "```[zxcvsdfwera]$")
+  local shadow_top_e = string.match(c_input, "(```[zxcvsdfwera]+)$")
+  local abc_words = string.match(c_input, "([zxcvsdfwera]+)$")
   local num_words = string.match(c_input, "([0-9.]+)$")
   local lookup_end = string.match(c_input, "[']$")
 
@@ -137,7 +140,7 @@ local function processor(key, env)
 
 ---------------------------------------------------------------------------
 --[[
-以下針對 seg:has_tag("shadow_top") 時，刪除最後「```[zxcasdqwefv]」之修正
+以下針對 seg:has_tag("shadow_top") 時，刪除最後「```[zxcvsdfwera]」之修正
 --]]
 
   elseif key:repr() == "BackSpace" and seg:has_tag("shadow_top") and shadow_top_b then
@@ -172,7 +175,7 @@ local function processor(key, env)
 以下針對功能：「轉換對映數字」！
 --]]
 
-  elseif key:repr() == "r" and abc_words and (seg:has_tag("shadow_top") or seg:has_tag("abc") or seg:has_tag("reverse3_lookup")) then
+  elseif key:repr() == "q" and abc_words and (seg:has_tag("shadow_top") or seg:has_tag("abc") or seg:has_tag("reverse3_lookup")) then
     local atn = array10_to_num(abc_words) or ""
     local n = #atn
     context:pop_input(n)
@@ -181,7 +184,7 @@ local function processor(key, env)
     -- context:clear()
     return 1
 
-  elseif key:repr() == "r" and num_words and not seg:has_tag("reverse2_lookup") and not context:has_menu() then  -- and context:is_composing()
+  elseif key:repr() == "q" and num_words and not seg:has_tag("reverse2_lookup") and not context:has_menu() then  -- and context:is_composing()
     local ata = array10_to_abc(num_words) or ""
     local n = #ata
     context:pop_input(n)

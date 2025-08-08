@@ -90,7 +90,8 @@
 --      - ＊合併兩個以上函數：
 --      - lua_processor@array30up_mix                --（關）（onion-array30） 合併 array30up 和 array30up_zy，增進效能。
 --      - lua_processor@array30new_mix               --（引lua資料夾）（onion-array30） 合併 array30up 和 array30up_zy，增進效能。
---      - lua_processor@array10_mix                  --（引lua資料夾）（onion-array10）以掛接注音修改為基礎增修。
+--      - lua_processor@array10_mix                  --（引lua資料夾）（onion-array10） 以掛接注音修改為基礎增修。
+--      - lua_processor@array10_and_bpmf_mix         --（引lua資料夾）（onion-array10_and_bpmf_mix） 主要為array10 數字和英文相互轉換。
 --      - lua_processor@mix_apc_s2rm_ltk             --（引lua資料夾）（bo_mixin 1、2、4；bopomo_onionplus） 合併 ascii_punct_change、s2r_most、lua_tran_kp，增進效能。
 --      - lua_processor@mix_apc_s2rm_ltk_3           --（引lua資料夾）（bo_mixin3） 合併 ascii_punct_change、s2r_mixin3、lua_tran_kp，增進效能。
 --      - lua_processor@mix_apc_ltk_pluss            --（引lua資料夾）（bopomo_onionplus_space） 以原 ascii_punct_change 增加功能，使初始空白可以直接上屏。
@@ -305,6 +306,11 @@ array30new_mix = require("processor_array30new_mix")
 -- 各種細節操控
 -- 行列30注音反查 Return 和 space 上屏修正
 array10_mix = require("processor_array10_mix")
+
+
+--- array10_and_bpmf_mix （onion-array10_and_bpmf）
+-- 主要為array10 數字和英文相互轉換。
+array10_and_bpmf_mix = require("processor_array10_and_bpmf_mix")
 
 
 --- key_binder （onion-array10）

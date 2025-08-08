@@ -111,10 +111,10 @@ menu:
 ##### 拼寫處理器 #####
 speller:
   # alphabet: ""
-  #### 編碼為[zxcasdqwef]+時
-  alphabet: "zxcasdqwefv"
-  # initials: "zxcasdqwefv"
-  # finals: "v"
+  #### 編碼為[zxcvsdfwer]+時
+  alphabet: "zxcvsdfwera"
+  # initials: "zxcvsdfwera"
+  # finals: "a"
   #### 編碼為[0-9]+時
   # alphabet: "1234567890-"
   # # initials: "1234567890-"
@@ -124,9 +124,9 @@ speller:
   auto_select: false
   # auto_select_pattern: '^[a-z,./;]{1,4}i? $'
   algebra:
-    #### 編碼為[zxcasdqwef]+時
+    #### 編碼為[zxcvsdfwer]+時
     ## 前綴尾綴處理
-    - derive/^([zxcasdqwef]+)$/$1v/  # 一般中文字
+    - derive/^([zxcvsdfwer]+)$/$1a/  # 一般中文字
     #### 編碼為[0-9]+時
     # ## 前綴尾綴處理
     # # - derive/^([0-9]+@)$/$1./  # 一般中文字
@@ -135,7 +135,7 @@ speller:
     # # - derive/@/ /  # 掛載在注音下用，但會跳回完整碼單字，故不用。
     # - xform/@$//
     # ## 鍵盤對映（編碼為[0-9]+時）(直接使用數字，則無法用數字選字)
-    # - "xlit|1234567890.|zxcasdqwefv|"
+    # - "xlit|1234567890.|zxcvsdfwera|"
 
 
 ##### 行列10主翻譯器-順序固定不變 #####
@@ -154,21 +154,21 @@ translator:
   enable_user_dict: true
   # db_class: tabledb  #userdb
   disable_user_dict_for_patterns:
-    - "^v.+$"  # 符號前綴開頭不調頻
+    - "^a.+$"  # 符號前綴開頭不調頻
     # - "^.$"  # 單碼不調頻
   preedit_format:
-    - "xlit|zxcasdqwefv|１２３４５６７８９０．|"
+    - "xlit|zxcvsdfwera|０１２３４５６７８９．|"
     - xform/\|/⁞/
   comment_format:
-    #### 編碼為[zxcasdqwef]+時
+    #### 編碼為[zxcvsdfwer]+時
     - xform/v//
-    - "xlit|zxcasdqwefv|１２３４５６７８９０.|"
+    - "xlit|zxcvsdfwera|０１２３４５６７８９.|"
     #### 編碼為[0-9]+時
     # # - xform/@/./
     # - xform/@//
     # # - xform/~/~ /
     # # - xform/~/～/
-    # - "xlit|1234567890|１２３４５６７８９０|"
+    # - "xlit|0123456789|０１２３４５６７８９|"
 
 # abc_segmentor:
 #   extra_tags:
@@ -208,7 +208,7 @@ second_phrases:
   enable_completion: false
   enable_user_dict: false  #true
   disable_user_dict_for_patterns:
-    - "^v.+$"  # 符號前綴開頭不調頻
+    - "^a.+$"  # 符號前綴開頭不調頻
     # - "^.$"  # 單碼不調頻
 
 
@@ -270,16 +270,16 @@ array10_reverse_lookup:
   overwrite_comment: false #true
   dictionary: onion-array10.extended
   comment_format:
-    #### 編碼為[zxcasdqwef]+時
-    - xform/([zxcasdqwefv]+)/〔$1〕/
-    - "xlit|zxcasdqwefv|1234567890.|"
+    #### 編碼為[zxcvsdfwer]+時
+    - xform/([zxcvsdfwera]+)/〔$1〕/
+    - "xlit|zxcvsdfwera|0123456789.|"
     - xform/[.]/ . /
     #### 編碼為[0-9]+時
     # - xform/@/./
     # - xform/([.\d]+)/〔$1〕/
     # - xform/[.]〕/〕/
     # - xform/ //
-    # # - "xlit|1234567890|１２３４５６７８９０|"
+    # # - "xlit|0123456789|０１２３４５６７８９|"
 
 
 ##### 濾鏡：標註該字注音 #####
@@ -465,46 +465,46 @@ key_binder:
     # __include: /key_binder/bindings
     # __append:
 ### 轉換小鍵盤（初始） ###
-    - {accept: KP_1, send_sequence: "{grave}{grave}{grave}{z}", when: always}
-    - {accept: KP_2, send_sequence: "{grave}{grave}{grave}{x}", when: always}
-    - {accept: KP_3, send_sequence: "{grave}{grave}{grave}{c}", when: always}
-    - {accept: KP_4, send_sequence: "{grave}{grave}{grave}{a}", when: always}
-    - {accept: KP_5, send_sequence: "{grave}{grave}{grave}{s}", when: always}
-    - {accept: KP_6, send_sequence: "{grave}{grave}{grave}{d}", when: always}
-    - {accept: KP_7, send_sequence: "{grave}{grave}{grave}{q}", when: always}
-    - {accept: KP_8, send_sequence: "{grave}{grave}{grave}{w}", when: always}
-    - {accept: KP_9, send_sequence: "{grave}{grave}{grave}{e}", when: always}
-    - {accept: KP_0, send_sequence: "{grave}{grave}{grave}{f}", when: always}
-    - {accept: KP_Decimal, send_sequence: "{grave}{grave}{grave}{v}", when: always}
+    - {accept: KP_0, send_sequence: "{grave}{grave}{grave}{z}", when: always}
+    - {accept: KP_1, send_sequence: "{grave}{grave}{grave}{x}", when: always}
+    - {accept: KP_2, send_sequence: "{grave}{grave}{grave}{c}", when: always}
+    - {accept: KP_3, send_sequence: "{grave}{grave}{grave}{v}", when: always}
+    - {accept: KP_4, send_sequence: "{grave}{grave}{grave}{s}", when: always}
+    - {accept: KP_5, send_sequence: "{grave}{grave}{grave}{d}", when: always}
+    - {accept: KP_6, send_sequence: "{grave}{grave}{grave}{f}", when: always}
+    - {accept: KP_7, send_sequence: "{grave}{grave}{grave}{w}", when: always}
+    - {accept: KP_8, send_sequence: "{grave}{grave}{grave}{e}", when: always}
+    - {accept: KP_9, send_sequence: "{grave}{grave}{grave}{r}", when: always}
+    - {accept: KP_Decimal, send_sequence: "{grave}{grave}{grave}{a}", when: always}
 ### 轉換小鍵盤（有開頭後） ###
-    - {accept: KP_1, send: z, when: composing}
-    - {accept: KP_2, send: x, when: composing}
-    - {accept: KP_3, send: c, when: composing}
-    - {accept: KP_4, send: a, when: composing}
-    - {accept: KP_5, send: s, when: composing}
-    - {accept: KP_6, send: d, when: composing}
-    - {accept: KP_7, send: q, when: composing}
-    - {accept: KP_8, send: w, when: composing}
-    - {accept: KP_9, send: e, when: composing}
-    - {accept: KP_0, send: f, when: composing}
-    - {accept: KP_Decimal, send: v, when: composing}
+    - {accept: KP_0, send: z, when: composing}
+    - {accept: KP_1, send: x, when: composing}
+    - {accept: KP_2, send: c, when: composing}
+    - {accept: KP_3, send: v, when: composing}
+    - {accept: KP_4, send: s, when: composing}
+    - {accept: KP_5, send: d, when: composing}
+    - {accept: KP_6, send: f, when: composing}
+    - {accept: KP_7, send: w, when: composing}
+    - {accept: KP_8, send: e, when: composing}
+    - {accept: KP_9, send: r, when: composing}
+    - {accept: KP_Decimal, send: a, when: composing}
 ## 以下不要設成：{ when: always }
     - {accept: KP_Subtract, send: BackSpace, when: has_menu}
     - {accept: KP_Divide, send: Page_Up, when: has_menu}
     - {accept: KP_Multiply, send: Page_Down, when: composing}
-    - {accept: KP_Add, send: r , when: composing}
+    - {accept: KP_Add, send: q , when: composing}
 # ### 以下無作用：設成發送為空按鍵，無作用 ###
-#     - {accept: KP_1, send: Shift+Z, when: always}
-#     - {accept: KP_2, send: Shift+X, when: always}
-#     - {accept: KP_3, send: Shift+C, when: always}
-#     - {accept: KP_4, send: Shift+A, when: always}
-#     - {accept: KP_5, send: Shift+S, when: always}
-#     - {accept: KP_6, send: Shift+D, when: always}
-#     - {accept: KP_7, send: Shift+Q, when: always}
-#     - {accept: KP_8, send: Shift+W, when: always}
-#     - {accept: KP_9, send: Shift+E, when: always}
-#     - {accept: KP_0, send: Shift+F, when: always}
-#     - {accept: KP_Decimal, send: Shift+V, when: always}
+#     - {accept: KP_0, send: Shift+Z, when: always}
+#     - {accept: KP_1, send: Shift+X, when: always}
+#     - {accept: KP_2, send: Shift+C, when: always}
+#     - {accept: KP_3, send: Shift+V, when: always}
+#     - {accept: KP_4, send: Shift+S, when: always}
+#     - {accept: KP_5, send: Shift+D, when: always}
+#     - {accept: KP_6, send: Shift+F, when: always}
+#     - {accept: KP_7, send: Shift+W, when: always}
+#     - {accept: KP_8, send: Shift+E, when: always}
+#     - {accept: KP_9, send: Shift+R, when: always}
+#     - {accept: KP_Decimal, send: Shift+A, when: always}
 ### 測試用 ###
     # - {accept: Control+minus, toggle: simplify_comment, when: always}
 ### END ###
@@ -525,9 +525,9 @@ editor:
 recognizer:
   patterns:
     punct: "(?<!`)``$"  #"(?<!`)``$|```"$
-    shadow_top: "```[zxcasdqwefv]*$"
+    shadow_top: "```[zxcvsdfwera]*$"
     reverse2_lookup: "(?<!`)`[-.,;/0-9a-z ]*'?$"
-    reverse3_lookup: "(?<!`)``[zxcasdqwefv]*'?$"
+    reverse3_lookup: "(?<!`)``[zxcvsdfwera]*'?$"
 
 
 #### 個別方案特別指定樣式（不使用預設值） #####

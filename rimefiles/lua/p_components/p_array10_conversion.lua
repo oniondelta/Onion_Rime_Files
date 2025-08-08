@@ -8,7 +8,7 @@ local convert_format = require("filter_cand/convert_format")
 
 local function to_num(t)
   if t == "" then return "" end
-  local format1 = "xlit|zxcasdqwefv|1234567890.|"
+  local format1 = "xlit|zxcvsdfwera|0123456789.|"
   -- local format2 = ""
   -- local proj = convert_format(format1,format2)
   local proj = convert_format(format1)
@@ -18,7 +18,7 @@ end
 
 local function to_abc(t)
   if t == "" then return "" end
-  local format1 = "xlit|1234567890.|zxcasdqwefv|"
+  local format1 = "xlit|0123456789.|zxcvsdfwera|"
   -- local format2 = ""
   -- local proj = convert_format(format1,format2)
   local proj = convert_format(format1)
