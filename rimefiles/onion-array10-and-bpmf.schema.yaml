@@ -30,13 +30,13 @@ engine:
     - selector
     - navigator
     - express_editor
-#    - fluency_editor
+    # - fluency_editor
   segmentors:
     - ascii_segmentor
     - matcher
-    - abc_segmentor #一定要放在「affix_segmentor」前
+    - abc_segmentor  # 一定要放在「affix_segmentor」前
     - affix_segmentor@shadow_top
-    - affix_segmentor@second_phrases
+    # - affix_segmentor@second_phrases
     - affix_segmentor@reverse2_lookup
     - affix_segmentor@reverse3_lookup
     - punct_segmentor
@@ -47,7 +47,7 @@ engine:
     - table_translator@reverse3_lookup
     - script_translator
     - table_translator@shadow_top
-    - script_translator@second_phrases
+    # - script_translator@second_phrases
   filters:
     - simplifier@zh_cn
     - reverse_lookup_filter@bpm_reverse_lookup
@@ -72,9 +72,10 @@ shadow_top:
   __append:
     suffix: " "
 
+
 ##### 行列10副翻譯器-輸出長詞用 #####
-second_phrases:
-  __include: onion-array10.schema:/second_phrases
+# second_phrases:
+#   __include: onion-array10.schema:/second_phrases
 
 
 ##### 使用行列10反查注音碼 #####
@@ -84,14 +85,10 @@ reverse3_lookup:
     prefix: "=="
     suffix: " "
 
+
 ##### 濾鏡：簡體轉換 #####
 zh_cn:
-  tips: none  #不標註轉換前「字符」
-  tags: [ abc, shadow_top ]
-
-
-##### 濾鏡：comment 遮屏 #####
-comment_filter_plus:
+  tips: none  # 不標註轉換前「字符」
   tags: [ abc, shadow_top ]
 
 
@@ -99,13 +96,18 @@ comment_filter_plus:
 array10_reverse_lookup:
   __include: onion-array10.schema:/array10_reverse_lookup
   __append:
-    tags: [ abc, shadow_top ]  # second_phrases, reverse2_lookup
+    tags: [ abc, shadow_top ]  #second_phrases, reverse2_lookup
 
 
 ##### 濾鏡：標註該字注音 #####
 ## 用純注音方案中的濾鏡，非 array10 方案內的「bpmf_reverse_lookup」！
 bpm_reverse_lookup:
   tags: [ reverse2_lookup, reverse3_lookup ]
+
+
+##### 濾鏡：comment 遮屏 #####
+comment_filter_plus:
+  tags: [ abc, shadow_top ]
 
 
 ##### 按鍵設定 #####

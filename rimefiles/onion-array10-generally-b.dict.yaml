@@ -27,13 +27,18 @@
 # 2018/08/31 修正「鬥」字根碼 (33) 錯植為 (31) 的問題；受影響的字有「鬥鬪鬦䰗䰘鬨鬩鬫鬧鬭鬬鬮」計 12 字。
 # 2010/12/20 首次釋出。
 #######################################################################
+### 本字典編修說明
+# 原本無權重，後加入高權重之符號：「，。：；」。
+# 承上四個符號，多增加符號前綴「.→v」編碼。
+# 編碼對應：「1→z」「2→x」「3→c」「4→a」「5→s」「6→d」「7→q」「8→w」「9→e」「0→f」。
+# 特殊編碼對應（中文尾綴和符號前綴）：「.→v」。
 ---
 name: onion-array10-generally-b
 version: "202508"
 sort: by_weight  #original
 use_preset_vocabulary: false
-#max_phrase_length: 7
-#min_phrase_weight: 100
+# max_phrase_length: 7
+# min_phrase_weight: 100
 # columns:
 #   - text
 #   - code
