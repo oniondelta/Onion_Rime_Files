@@ -48,8 +48,8 @@ local function processor(key, env)
   local key_num_array10 = key:repr():match("KP_([0-9])") or key:repr():match("KP_(Decimal)")
   -- local key_bpmf = set_char[ascii_c(key, "a-z")]
   --------
+  -- local seg_punct = seg:has_tag("punct")
   local seg_abc = seg:has_tag("abc")
-  local seg_punct = seg:has_tag("punct")
   local seg_shadow_top = seg:has_tag("shadow_top")
   local seg_reverse2_lookup = seg:has_tag("reverse2_lookup")
   local seg_reverse3_lookup = seg:has_tag("reverse3_lookup")
@@ -128,7 +128,8 @@ local function processor(key, env)
 以下針對功能：使英文鍵盤和數字鍵盤兩邊輸入會轉換，不互相影響。
 --]]
 
-  elseif key_num_array10 and (seg_abc or seg_punct or seg_reverse2_lookup) then
+  -- elseif key_num_array10 and (seg_abc or seg_punct or seg_reverse2_lookup) then
+  elseif key_num_array10 and not seg_shadow_top and context:is_composing() then
     context:push_input("```")
     return 2
 
