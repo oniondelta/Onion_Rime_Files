@@ -207,8 +207,9 @@ second_phrases:
   sentence_over_completion: false
   enable_completion: false
   enable_user_dict: false  #true
-  # disable_user_dict_for_patterns:
-  #   - "^.$"  # 單碼不調頻
+  disable_user_dict_for_patterns:
+    - "^v.+$"  # 符號前綴開頭不調頻
+    # - "^.$"  # 單碼不調頻
 
 
 ##### 行列10影子翻譯器 #####（功用：轉給右邊數字鍵盤使用）
