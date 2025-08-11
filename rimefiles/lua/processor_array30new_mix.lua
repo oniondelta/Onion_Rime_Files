@@ -92,7 +92,7 @@ local function processor(key, env)
   -- local s_up = context:get_option("1_2_straight_up")
   local a_s_wp = context:get_option("array30_space_wp")
   -- local a_r_abc = context:get_option("array30_return_abc")
-  local key_num = key:repr():match("KP_([0-9])") or key:repr():match("Control%+([0-9])")
+  local key_select_keys = key:repr():match("^KP_([0-9])$") or key:repr():match("^Control%+([0-9])$")
   local key_abc = key:repr():match("^([%l])$") or k4_pattern[key:repr()]
 
   -- local check_i_end = string.match(c_input, "^[a-z,./;][a-z,./;]?[ ']$") or string.match(c_input, "^w%d$")
@@ -261,9 +261,9 @@ local function processor(key, env)
 
 -----------------------------------------------------------------------------
 
-  --- pass not space Return KP_Enter key_num ( Shift+space ?)
-  elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" and not key_num then
-  -- elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" and key:repr() ~= "Shift+space" and not key_num then
+  --- pass not space Return KP_Enter key_select_keys ( Shift+space ?)
+  elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" and not key_select_keys then
+  -- elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" and key:repr() ~= "Shift+space" and not key_select_keys then
     return 2
 
 -----------------------------------------------------------------------------
@@ -533,30 +533,30 @@ KeyEvent 函數在舊版 librime-lua 中不支持。
 -----------------------
 
   --- 以下修正：附加方案鍵盤範圍大於主方案時，小板數字鍵選擇出現之 bug。
-  elseif key_num then
+  elseif key_select_keys then
     --- 確定選項編號
     -- 以下針對選字編碼為：1234567890
     local page_n = 10 * (seg.selected_index // 10)    -- 先確定在第幾頁
-    local key_num2 = tonumber(key_num)
-    if key_num2 > 0 then
-      key_num2 = key_num2 - 1 + page_n
-    elseif key_num2 == 0 then
-      key_num2 = key_num2 - 1 + page_n + 10
+    local ksk_n = tonumber(key_select_keys)
+    if ksk_n > 0 then
+      ksk_n = ksk_n - 1 + page_n
+    elseif ksk_n == 0 then
+      ksk_n = ksk_n - 1 + page_n + 10
     end
 
     ---------------
     --- 新的寫法（不直上）
 
-    local cand = seg:get_candidate_at(key_num2)
+    local cand = seg:get_candidate_at(ksk_n)
     local miss_number = caret_pos - cand._end  -- miss_number 為「光標位置」和「選項碼數」不匹配時之差數。
     local retain_number = #c_input - cand._end  -- 刪除中文編碼後，計算字數。
     local back_input = string.sub(c_input, cand._end + 1, caret_pos)
     local new_c_input = string.sub(c_input, -retain_number)
 
     if retain_number == 0 then
-      context:select(key_num2)
+      context:select(ksk_n)
     elseif miss_number ~= 0 then
-      context:select(key_num2)
+      context:select(ksk_n)
       context:pop_input(miss_number)
       context:push_input(s_prefix .. back_input)
       context.caret_pos = #c_input + #s_prefix
@@ -564,7 +564,7 @@ KeyEvent 函數在舊版 librime-lua 中不支持。
       context.input = cand.text .. s_prefix .. new_c_input
       context.caret_pos = #c_input + #s_prefix
     else
-      context:select(key_num2)
+      context:select(ksk_n)
     end
     -- engine:commit_text("測試")
 
@@ -575,7 +575,7 @@ KeyEvent 函數在舊版 librime-lua 中不支持。
 
     -- --- 上屏選擇選項。
     -- -- local cand = context:get_selected_candidate()  -- 只是當前位置
-    -- local cand = seg:get_candidate_at(key_num2)
+    -- local cand = seg:get_candidate_at(ksk_n)
     -- -- local up_number = #g_c_t + cand._end - caret_pos
     -- -- local f_cand = string.sub(g_c_t, 1, up_number)
     -- -- engine:commit_text(f_cand)  -- 數字鍵選字時會消失
@@ -598,13 +598,13 @@ KeyEvent 函數在舊版 librime-lua 中不支持。
     ---------------
     -- --- 更舊的寫法
 
-    -- context:select(key_num)
+    -- context:select(key_select_keys)
     -- context:confirm_current_selection()
     -- local s_index = seg.selected_index
     -- engine:commit_text(s_index)
     -- engine:commit_text(g_s_t)
     -- engine:commit_text(g_c_t)
-    -- engine:commit_text(key_num2)
+    -- engine:commit_text(ksk_n)
 
     -- --- 刪除已上屏字詞的前頭字元
     -- -- local cand_len = #cand.text // 3
@@ -640,7 +640,7 @@ KeyEvent 函數在舊版 librime-lua 中不支持。
 
   --- 以下修正：附加方案鍵盤範圍大於主方案時，選字時出現的 bug。
   -- elseif key:repr() == "space" or key:repr() == "Return" or key:repr() == "KP_Enter" then
-  -- elseif not key_num then
+  -- elseif not key_select_keys then
   else
 
     ---------------

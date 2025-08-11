@@ -78,8 +78,8 @@ local function processor(key, env)
   local o_ascii_mode = context:get_option("ascii_mode")
   local o_switch_key_board = context:get_option("switch_key_board")
   local key_abc = key:repr():match("^([zxcvsdfweratgb])$")
-  local key_num = key:repr():match("KP_([0-9])") or key:repr():match("Control%+([0-9])")
-  -- local key_num_array10 = key:repr():match("KP_([0-9])") or key:repr():match("KP_(Decimal)")
+  local key_select_keys = key:repr():match("^KP_([0-9])$") or key:repr():match("^Control%+([0-9])$")
+  -- local key_num_array10 = key:repr():match("^KP_([0-9])$") or key:repr():match("^KP_(Decimal)$")
   local shadow_top_b = string.match(c_input, "```[zxcvsdfwera]$")
   local shadow_top_e = string.match(c_input, "(```[zxcvsdfwera]+)$")
   local abc_words = string.match(c_input, "([zxcvsdfwera]+)$")
@@ -207,37 +207,37 @@ local function processor(key, env)
   -- elseif not context:is_composing() then  --無法空碼清屏
     return 2
 
-  --- pass not space Return KP_Enter key_num
-  elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" and not key_num then
+  --- pass not space Return KP_Enter key_select_keys
+  elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" and not key_select_keys then
     return 2
 
 -----------------------
 
   --- 以下修正：附加方案鍵盤範圍大於主方案時，小板數字鍵選擇出現之 bug。
-  elseif key_num then
+  elseif key_select_keys then
     --- 確定選項編號
     -- 以下針對選字編碼為：1234567890
     local page_n = 10 * (seg.selected_index // 10)    -- 先確定在第幾頁
-    local key_num2 = tonumber(key_num)
-    if key_num2 > 0 then
-      key_num2 = key_num2 - 1 + page_n
-    elseif key_num2 == 0 then
-      key_num2 = key_num2 - 1 + page_n + 10
+    local ksk_n = tonumber(key_select_keys)
+    if ksk_n > 0 then
+      ksk_n = ksk_n - 1 + page_n
+    elseif ksk_n == 0 then
+      ksk_n = ksk_n - 1 + page_n + 10
     end
 
     ---------------
     --- 新的寫法（不直上）
 
-    local cand = seg:get_candidate_at(key_num2)
+    local cand = seg:get_candidate_at(ksk_n)
     local miss_number = caret_pos - cand._end  -- miss_number 為「光標位置」和「選項碼數」不匹配時之差數。
     local retain_number = #c_input - cand._end  -- 刪除中文編碼後，計算字數。
     local back_input = string.sub(c_input, cand._end + 1, caret_pos)
     local new_c_input = string.sub(c_input, -retain_number)
 
     if retain_number == 0 then
-      context:select(key_num2)
+      context:select(ksk_n)
     elseif miss_number ~= 0 then
-      context:select(key_num2)
+      context:select(ksk_n)
       context:pop_input(miss_number)
       context:push_input(s_prefix .. back_input)
       context.caret_pos = #c_input + #s_prefix
@@ -245,7 +245,7 @@ local function processor(key, env)
       context.input = cand.text .. s_prefix .. new_c_input
       context.caret_pos = #c_input + #s_prefix
     else
-      context:select(key_num2)
+      context:select(ksk_n)
     end
     -- engine:commit_text("測試")
 
@@ -256,7 +256,7 @@ local function processor(key, env)
 
     -- --- 上屏選擇選項。
     -- -- local cand = context:get_selected_candidate()  -- 只是當前位置
-    -- local cand = seg:get_candidate_at(key_num2)
+    -- local cand = seg:get_candidate_at(ksk_n)
     -- -- local up_number = #g_c_t + cand._end - caret_pos
     -- -- local f_cand = string.sub(g_c_t, 1, up_number)
     -- -- engine:commit_text(f_cand)  -- 數字鍵選字時會消失
@@ -330,7 +330,7 @@ local function processor(key, env)
 
   --- 以下修正：附加方案鍵盤範圍大於主方案時，選字時出現的 bug。
   -- elseif key:repr() == "space" or key:repr() == "Return" or key:repr() == "KP_Enter" then
-  -- elseif not key_num then
+  -- elseif not key_select_keys then
   else
 
     ---------------
