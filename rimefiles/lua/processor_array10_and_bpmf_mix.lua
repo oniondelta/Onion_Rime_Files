@@ -41,7 +41,7 @@ local function processor(key, env)
   local comp = context.composition
   local seg = comp:back()
   -- local g_s_t = context:get_script_text()
-  local g_c_t = context:get_commit_text()
+  -- local g_c_t = context:get_commit_text()
   -- local page_size = engine.schema.page_size
   local o_ascii_mode = context:get_option("ascii_mode")
   --------
@@ -80,13 +80,13 @@ local function processor(key, env)
 以下針對 seg:has_tag("shadow_top") 時，刪除最後「```[zxcvsdfwera]」之修正
 --]]
 
-  elseif key:repr() == "BackSpace" and seg_shadow_top and shadow_top_b then
+  elseif key:repr() == "BackSpace" and seg_shadow_top and shadow_top_b and #c_input == caret_pos then
     -- engine:process_key(KeyEvent("Escape"))
     -- engine:process_key(KeyEvent("Escape"))
     context:pop_input(4)  -- 回刪（刪到「0」時會有狀況？！）
     -- context:clear()  -- 前面有接其他「seg」，會全部消失
     return 1
-  elseif key:repr() == "Escape" and seg_shadow_top and shadow_top_e then
+  elseif key:repr() == "Escape" and seg_shadow_top and shadow_top_e and #c_input == caret_pos then
     -- engine:process_key(KeyEvent("Escape"))
     -- engine:process_key(KeyEvent("Escape"))
     n = #shadow_top_e
@@ -136,6 +136,49 @@ local function processor(key, env)
   -- elseif shadow_top_abc and seg_shadow_top and not key_num_array10 then
   --   context:push_input(" ")
   --   return 2
+
+---------------------------------------------------------------------------
+--[[
+以下針對《影》掛接上屏 Bug 作修正
+--]]
+
+  elseif not seg_shadow_top then  -- and not seg:has_tag("abc")
+    return 2
+
+  elseif not context:has_menu() then
+  -- elseif not context:is_composing() then  --無法空碼清屏
+    return 2
+
+  --- pass not space Return KP_Enter key_num
+  elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" then
+    return 2
+
+-----------------------
+
+  -- elseif seg:has_tag("paging") or #c_input ~= caret_pos then
+  elseif #c_input ~= caret_pos then
+    local cand = context:get_selected_candidate()
+    local miss_number = caret_pos - cand._end  -- miss_number 為「光標位置」和「選項碼數」不匹配時之差數。
+    local back_input = string.sub(c_input, cand._end + 1, caret_pos)
+    if miss_number ~= 0 then
+      -- context:confirm_current_selection()  -- 開啟會有 bug！
+      context:pop_input(miss_number)
+      context:push_input("```" .. back_input)
+      context.caret_pos = #c_input + 3
+      -- engine:commit_text("測試")
+      return 1
+    else
+      -- context:confirm_current_selection()  -- 開啟會有 bug！
+      context:push_input("```" .. back_input)
+      context.caret_pos = #c_input + 3
+      -- engine:commit_text("測試")
+      return 1
+    end
+
+  elseif key:repr() == "space" and #c_input == caret_pos then
+  --   context:commit()  -- 會有 bug！
+    context:confirm_current_selection()
+    return 1
 
 ---------------------------------------------------------------------------
 

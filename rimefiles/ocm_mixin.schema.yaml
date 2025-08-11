@@ -9,7 +9,7 @@ schema:
 
   name: "❖超級混合蝦米(mix-in)❖"
   schema_id: ocm_mixin
-  version: "202412"
+  version: "202508"
   dependencies:
     - punct_ovff
     - symbols_ocm
@@ -799,7 +799,7 @@ recognizer:
     # email: "^[a-z][-_.0-9a-z]*@.*$"
     punct: "===?$|=''?=?'?'?$|=?[][][][]?'?$|=?[[][[]?'?=?[]]?[]]?'?$|=``?$|=[-,./;][-,./;]?$|=,,?=[.][.]?$|=[0-9]$|=9=0$|==[].,90'[]+$"
     pt: "^[,.][,.'a-z]*$|^'['a-z]*$|^,[][]+[a-z]*$|^,v[][]+$" #|^v[][]+v?$|^[][]+[a-z]*$"
-    reverse2_lookup: "^';[-.,;/0-9a-z |]*'?$"
+    reverse2_lookup: "';[-.,;/0-9a-z |]*'?$"  # 去除開頭「^」限定，使其接續不跳掉。
     reverse3_lookup: "^;'[a-z`|]*'?$"
     easy_en: "^'[.][a-z;/.,'-]*$"
     japan: "^',[-a-z,.;/|]*'?$"
@@ -808,7 +808,7 @@ recognizer:
     gr: "^'[[][a-z';]*$"
     cyr: "^'[]][a-z';]*$"
     fs: "^'=[-a-z';]*$"
-    all_bpm: "^';'[-a-z0-9.,/; ]*'?$"
+    all_bpm: "';'[-a-z0-9.,/; ]*'?$"  # 去除開頭「^」限定，使其接續不跳掉。
     # lua: "^;;$|^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|^'/[a-z]*$|^'/[;/'][a-z.,/'-]*$|^'/[rq0-9.-][asrvxqwymd0-9.,/()^*+-]*$|^'/[xucoi][0-9a-f]+$"
     instruction_ocm: "^;;?$"  #不開起，「;;」會顯示不了。
     email_url_translator: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$"

@@ -87,7 +87,7 @@ local function processor(key, env)
                         string.match(c_input, "'/[-.rq(]?[%d.]+[-+*/^asrvxqw()][-+*/^asrvxqw().%d]*$")
   -- local key_kp = key:repr():match("KP_([%d%a]+)")  -- KP_([ASDM%d][%a]*)
   -- local kp_p = env.kp_pattern[key_kp]
-
+  local s_prefix = seg:has_tag("reverse2_lookup") and "';" or seg:has_tag("all_bpm") and "';'" or ""
 -----------------------------------------------------------------------------
 
   if o_ascii_mode then
@@ -194,47 +194,82 @@ local function processor(key, env)
       key_num2 = key_num2 + page_n
     end
 
-    --- 上屏選擇選項。
+    ---------------
+    --- 新的寫法（不直上）
+
     local cand = seg:get_candidate_at(key_num2)
-    -- local up_number = #g_c_t + cand._end - caret_pos
-    -- local f_cand = string.sub(g_c_t, 1, up_number)
-    -- engine:commit_text(f_cand)  -- 數字鍵選字時會消失
-    engine:commit_text(cand.text)  -- 一般abc輸入後接掛接，一般輸入會消失
-
-    --- 刪除已上屏字詞的前頭字元
+    local miss_number = caret_pos - cand._end  -- miss_number 為「光標位置」和「選項碼數」不匹配時之差數。
     local retain_number = #c_input - cand._end  -- 刪除中文編碼後，計算字數。
-    local ci_cut = string.sub(c_input, -retain_number)
+    local back_input = string.sub(c_input, cand._end + 1, caret_pos)
+    local new_c_input = string.sub(c_input, -retain_number)
 
-    --- 補前綴，導入未上屏編碼，避免跳回主方案
     if retain_number == 0 then
-      context:clear()
-    elseif seg:has_tag("reverse2_lookup") then
-      context.input = "';" .. ci_cut
-    elseif seg:has_tag("all_bpm") then
-      context.input = "';'" .. ci_cut
+      context:select(key_num2)
+    elseif miss_number ~= 0 then
+      context:select(key_num2)
+      context:pop_input(miss_number)
+      context:push_input(s_prefix .. back_input)
+      context.caret_pos = #c_input + #s_prefix
+    elseif miss_number == 0 and #c_input ~= caret_pos then
+      context.input = cand.text .. s_prefix .. new_c_input
+      context.caret_pos = #c_input + #s_prefix
+    else
+      context:select(key_num2)
     end
+    -- engine:commit_text("測試")
+
+    return 1
+
+    ---------------
+    -- --- 舊的寫法（直上）
+
+    -- --- 上屏選擇選項。
+    -- -- local cand = context:get_selected_candidate()  -- 只是當前位置
+    -- local cand = seg:get_candidate_at(key_num2)
+    -- -- local up_number = #g_c_t + cand._end - caret_pos
+    -- -- local f_cand = string.sub(g_c_t, 1, up_number)
+    -- -- engine:commit_text(f_cand)  -- 數字鍵選字時會消失
+    -- engine:commit_text(cand.text)  -- 一般abc輸入後接掛接，一般輸入會消失
+
+    -- --- 刪除已上屏字詞的前頭字元
+    -- local retain_number = #c_input - cand._end  -- 刪除中文編碼後，計算字數。
+    -- local ci_cut = string.sub(c_input, -retain_number)
+
+    -- --- 補前綴，導入未上屏編碼，避免跳回主方案
+    -- if retain_number == 0 then
+    --   context:clear()
+    -- elseif seg:has_tag("reverse2_lookup") then
+    --   context.input = "';" .. ci_cut
+    -- elseif seg:has_tag("all_bpm") then
+    --   context.input = "';'" .. ci_cut
+    -- end
+
+    -- return 1
+
+    ---------------
+    -- --- 更舊的寫法
 
     -- --- 判別掛載方案，依不同方案分別處理：
     -- --- 刪除已上屏字詞的前頭字元。
     -- if seg:has_tag("reverse2_lookup") then
 
-    -- --   local cand_len = utf8.len(cand.text)
-    -- --   local ci_cut = string.gsub(c_input, "^';", "")
-    -- --   -- 上屏詞彙為單個注音
-    -- --   if set_char_bpmf[cand.text] then
-    -- --     ci_cut = string.gsub(ci_cut, "^[.,;/ %w-]", "")
-    -- --   -- 上屏詞彙為兩個注音
-    -- --   elseif (cand_len == 2) and set_char_bpmf[utf8_sub(cand.text, 1, 1)] and set_char_bpmf[utf8_sub(cand.text, 2, 2)] then
-    -- --     ci_cut = string.gsub(ci_cut, "^[.,;/ %w-][.,;/ %w-]", "")
-    -- --   -- 上屏詞彙為三個注音
-    -- --   elseif (cand_len == 3) and set_char_bpmf[utf8_sub(cand.text, 1, 1)] and set_char_bpmf[utf8_sub(cand.text, 2, 2)] and set_char_bpmf[utf8_sub(cand.text, 3, 3)] then
-    -- --     ci_cut = string.gsub(ci_cut, "^[.,;/ %w-][.,;/ %w-][.,;/ %w-]", "")
-    -- --   -- 上屏詞彙為全中文不含注音，但有狀況會缺漏出現 bug
-    -- --   else
-    -- --     for i = 1, cand_len do
-    -- --       ci_cut = string.gsub(ci_cut, "^[.,;/a-z125890-][.,;/a-z125890-]?[.,;/a-z125890-]?[ 3467]", "")
-    -- --     end
-    -- --   end
+    --   -- local cand_len = utf8.len(cand.text)
+    --   -- local ci_cut = string.gsub(c_input, "^';", "")
+    --   -- -- 上屏詞彙為單個注音
+    --   -- if set_char_bpmf[cand.text] then
+    --   --   ci_cut = string.gsub(ci_cut, "^[.,;/ %w-]", "")
+    --   -- -- 上屏詞彙為兩個注音
+    --   -- elseif (cand_len == 2) and set_char_bpmf[utf8_sub(cand.text, 1, 1)] and set_char_bpmf[utf8_sub(cand.text, 2, 2)] then
+    --   --   ci_cut = string.gsub(ci_cut, "^[.,;/ %w-][.,;/ %w-]", "")
+    --   -- -- 上屏詞彙為三個注音
+    --   -- elseif (cand_len == 3) and set_char_bpmf[utf8_sub(cand.text, 1, 1)] and set_char_bpmf[utf8_sub(cand.text, 2, 2)] and set_char_bpmf[utf8_sub(cand.text, 3, 3)] then
+    --   --   ci_cut = string.gsub(ci_cut, "^[.,;/ %w-][.,;/ %w-][.,;/ %w-]", "")
+    --   -- -- 上屏詞彙為全中文不含注音，但有狀況會缺漏出現 bug
+    --   -- else
+    --   --   for i = 1, cand_len do
+    --   --     ci_cut = string.gsub(ci_cut, "^[.,;/a-z125890-][.,;/a-z125890-]?[.,;/a-z125890-]?[ 3467]", "")
+    --   --   end
+    --   -- end
 
     --   --- 補前綴 "';"，導入未上屏編碼，避免跳回主方案
     --   -- if #ci_cut == 0 then
@@ -250,6 +285,7 @@ local function processor(key, env)
     --   -- for i = 1, cand_len do
     --   --   ci_cut = string.gsub(ci_cut, "^[.,;/ %w-]", "")
     --   -- end
+
     --   --- 補前綴 "';'"，導入未上屏編碼，避免跳回主方案
     --   -- if #ci_cut == 0 then
     --   if retain_number == 0 then
@@ -259,7 +295,7 @@ local function processor(key, env)
     --   end
     -- end
 
-    return 1
+    -- return 1
 
 -----------------------
 
@@ -268,55 +304,100 @@ local function processor(key, env)
   -- elseif not key_num then
   else
 
+    ---------------
+    -- --- 新的寫法（不直上）
+
+    local cand = context:get_selected_candidate()
+    local miss_number = caret_pos - cand._end  -- miss_number 為「光標位置」和「選項碼數」不匹配時之差數。
+    local retain_number = #c_input - cand._end  -- 刪除中文編碼後，計算字數。
+    local f_c_input = string.sub(c_input, 1, caret_pos)
+    local back_input = string.sub(c_input, cand._end + 1, caret_pos)
+    local new_c_input = string.sub(c_input, -retain_number)
+
+    --- 中途插入空白（一聲）不會直上屏
+    if key:repr() == "space" and #c_input ~= caret_pos and not seg:has_tag("paging") and not string.match(f_c_input, "[ 3467]$") then
+      local b_c_input = string.sub(c_input, caret_pos - #c_input)
+      context.input = f_c_input .. " " .. b_c_input
+      return 1
+
     --- paging 時和游標不在尾端時，需分割上屏之處理
-    if seg:has_tag("paging") or #c_input ~= caret_pos then
+    elseif seg:has_tag("paging") or #c_input ~= caret_pos then  --miss_number ~= 0
       --- 先上屏 paging 時選擇的選項
       -- local selected_candidate_index = seg.selected_index
       -- context:select(selected_candidate_index)
 
-      --- 中途插入空白（一聲）不會直上屏
-      local f_c_input = string.sub(c_input, 1, caret_pos)
-      if key:repr() == "space" and #c_input ~= caret_pos and not seg:has_tag("paging") and not string.match(f_c_input, "[ 3467]$") then
-        local b_c_input = string.sub(c_input, caret_pos - #c_input)
-        context.input = f_c_input .. " " .. b_c_input
-
-      else
-        --- 上屏選擇選項。
-        local cand = context:get_selected_candidate()
-        local up_number = #g_c_t + cand._end - caret_pos
-        local f_cand = string.sub(g_c_t, 1, up_number)
-        engine:commit_text(f_cand)
-        -- engine:commit_text(cand.text)  -- 一般abc輸入後接掛接，一般輸入會消失
-        -- engine:commit_text(cand.text..start.." ".._end.." "..#c_input.." "..caret_pos )  --測試各個位置數值用
-
-        --- 計算末尾殘留的非中文字元數（未被選擇的 cand.input 字元數）
-        local retain_number = #c_input - cand._end  -- 刪除中文編碼後，計算字數。
-        local new_c_input = string.sub(c_input, -retain_number)
-        -- local retain_number = #string.gsub(g_c_t, "[^.,;/ %w-]", "")  -- 刪除中文編碼後，計算字數。
-        -- context:confirm_current_selection()
-        -- context:refresh_non_confirmed_composition()
-
-        --- 補前綴 "';" 或 "';'"，導入未上屏編碼，避免跳回主方案
-        if retain_number == 0 then
-          context:clear()
-        elseif seg:has_tag("reverse2_lookup") then
-          context.input = "';" .. new_c_input
-        elseif seg:has_tag("all_bpm") then
-          context.input = "';'" .. new_c_input
-        end
+      --- 以下不管是否在 paging 時
+      if retain_number == 0 then
+        context:confirm_current_selection()
+      elseif miss_number ~= 0 then
+        context:confirm_current_selection()  -- 一定要有，不然只會上屏第一個選項或記憶？
+        context:pop_input(miss_number)
+        context:push_input(s_prefix .. back_input)
+        context.caret_pos = #c_input + #s_prefix
+      elseif miss_number == 0 and #c_input ~= caret_pos then
+        context.input = cand.text .. s_prefix .. new_c_input
+        context.caret_pos = #c_input + #s_prefix
+      else  -- else 部分效果等同「retain_number == 0」，兩者擇一可遮屏，留「retain_number == 0」去提前判斷省下面複雜判斷，留 else 防萬一。
+        context:confirm_current_selection()
       end
+      -- engine:commit_text("測試")
+      -- engine:commit_text(cand.text)
       return 1
+
+    ---------------
+    -- --- 舊的寫法（直上）
+
+    -- --- paging 時和游標不在尾端時，需分割上屏之處理
+    -- if seg:has_tag("paging") or #c_input ~= caret_pos then
+    --   --- 先上屏 paging 時選擇的選項
+    --   -- local selected_candidate_index = seg.selected_index
+    --   -- context:select(selected_candidate_index)
+
+    --   --- 中途插入空白（一聲）不會直上屏
+    --   local f_c_input = string.sub(c_input, 1, caret_pos)
+    --   if key:repr() == "space" and #c_input ~= caret_pos and not seg:has_tag("paging") and not string.match(f_c_input, "[ 3467]$") then
+    --     local b_c_input = string.sub(c_input, caret_pos - #c_input)
+    --     context.input = f_c_input .. " " .. b_c_input
+
+    --   else
+    --     --- 上屏選擇選項。
+    --     local cand = context:get_selected_candidate()
+    --     local up_number = #g_c_t + cand._end - caret_pos
+    --     local f_cand = string.sub(g_c_t, 1, up_number)
+    --     engine:commit_text(f_cand)  -- 數字鍵選字時會消失
+    --     -- engine:commit_text(cand.text)  -- 一般abc輸入後接掛接，一般輸入會消失
+    --     -- engine:commit_text(cand.text..start.." ".._end.." "..#c_input.." "..caret_pos )  --測試各個位置數值用
+
+    --     --- 計算末尾殘留的非中文字元數（未被選擇的 cand.input 字元數）
+    --     local retain_number = #c_input - cand._end  -- 刪除中文編碼後，計算字數。
+    --     local new_c_input = string.sub(c_input, -retain_number)
+    --     -- local retain_number = #string.gsub(g_c_t, "[^.,;/ %w-]", "")  -- 刪除中文編碼後，計算字數。
+    --     -- context:confirm_current_selection()
+    --     -- context:refresh_non_confirmed_composition()
+
+    --     --- 補前綴 "';" 或 "';'"，導入未上屏編碼，避免跳回主方案
+    --     if retain_number == 0 then
+    --       context:clear()
+    --     elseif seg:has_tag("reverse2_lookup") then
+    --       context.input = "';" .. new_c_input
+    --     elseif seg:has_tag("all_bpm") then
+    --       context.input = "';'" .. new_c_input
+    --     end
+    --   end
+    --   return 1
+
+      ---------------
 
 
     --- 某些方案輸入 Return 出英文，該條限定注音 Return 一律直上中文。
     elseif key:repr() == "Return" or key:repr() == "KP_Enter" then
+      context:confirm_current_selection()  -- 可記憶
       -- context:commit()  -- 可記憶
-      -- context:confirm_current_selection()  -- 可記憶
       -- engine:process_key( KeyEvent("Return") )  -- 可能會報錯
       -- engine:commit_text(g_c_t)  -- 不會記憶
       -- context:clear()
-      -- return 1
-      return 2
+      return 1
+      -- return 2
 
     --- 如果末尾為聲調則跳掉，按空白鍵，則 Rime 上屏，非 lua 作用。
     elseif string.match(c_input, "[ 3467]$") then
@@ -328,7 +409,7 @@ local function processor(key, env)
     -- elseif key:repr() == "space" and context:has_menu() then
       -- engine:commit_text(c_input .. "_")
       -- context.input = c_input .. " "
-      context:push_input( " " )
+      context:push_input(" ")
       -- context:clear()
       return 1
 

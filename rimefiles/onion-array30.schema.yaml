@@ -4,7 +4,7 @@
 schema:
   schema_id: onion-array30
   name: "▦ 行列３０（洋蔥版）"
-  version: "202507"
+  version: "202508"
   author:
     - 洋蔥
   description: |
@@ -515,7 +515,7 @@ recognizer:
   patterns:
     # punct: "^w[0-9]$"
     wsymbols: "^w[0-9]$" #（可用 symbols 更簡單實現，但沒有開頭提示）
-    reverse2_lookup: "^=[-.,;/0-9a-z ]*'?$"
+    reverse2_lookup: "(?<!=)=[-.,;/0-9a-z ]*'?$"  # 去除開頭「^」限定，使其接續不跳掉。
     reverse3_lookup: "^==[a-z,./; ]*'?$"
     # lua: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$|`[a-z]*$|`[;/'][a-z.,/'-]*$|`[rq0-9.-][asrvxqwymd0-9.,/()^*+-]*$|`[xucoi][0-9a-f]+$"
     email_url_translator: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$"
