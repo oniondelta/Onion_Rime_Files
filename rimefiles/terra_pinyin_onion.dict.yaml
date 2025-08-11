@@ -176,6 +176,7 @@
 #    詞句中，「羧」皆補齊「zui1」「suo1」。
 #    詞句中，「酵」皆補齊「xiao4」「jiao4」。
 #    詞句中，「捱」皆補齊「ai2」「ai1」。
+#    詞句中，「恣」臺灣標準為「zi4」「ci1」，前者又音為「zi1」，日常「zi4」和「zi1」易混，故互相補齊。「恣睢」等發音為「ci1」不補。
 #    詞句中，「績」「蹟」「跡」「迹」臺灣標準為「ji1」，大陸標準為「ji4」，只保留「ji1」發音。
 #    詞句中，「寂」臺灣標準為「ji2」，大陸標準為「ji4」，只保留「ji2」發音。
 #    詞句中，「妮」臺灣標準為「ni2」，大陸標準為「ni1」，只保留「ni2」發音。
@@ -2769,6 +2770,8 @@ min_phrase_weight: 100
 庇	pi3	0%
 揣	duo3	0%
 捱	ai1
+靨	yan3
+靥	yan3
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -3125,7 +3128,7 @@ min_phrase_weight: 100
 庫	she4	1%
 庬	mang2	1%
 庬	meng3	1%
-恣	zi1	1%
+恣	zi1	80%
 恣	ci1	1%
 悗	men3	1%
 悚	song2	1%
@@ -76189,11 +76192,15 @@ min_phrase_weight: 100
 恢廓大度	hui1 kuo4 da4 du4
 恢恑	hui1 gui3
 恣意妄為	zi4 yi4 wang4 wei2
+恣意妄為	zi1 yi4 wang4 wei2
 恣意妄行	zi4 yi4 wang4 xing2
+恣意妄行	zi1 yi4 wang4 xing2
 恣意行樂	zi4 yi4 xing2 le4
+恣意行樂	zi1 yi4 xing2 le4
 恣睢	ci1 sui1
 恣睢無忌	ci1 sui1 wu2 ji4
 恣行無忌	zi4 xing2 wu2 ji4
+恣行無忌	zi1 xing2 wu2 ji4
 恤匱	xu4 kui4
 恥辱	chi3 ru4
 恥辱	chi3 ru3
@@ -83032,7 +83039,6 @@ min_phrase_weight: 100
 暴師	pu4 shi1
 暴恣	bao4 ci1
 暴戾恣睢	bao4 li4 ci1 sui1
-暴戾恣睢	bao4 li4 zi4 sui1
 暴揚	pu4 yang2
 暴斂橫徵	bao4 lian4 heng2 zheng1
 暴桑	pu4 sang1
@@ -85771,6 +85777,8 @@ min_phrase_weight: 100
 橫心	heng2 xin1
 橫恣	heng4 zi4
 橫恣	heng2 zi4
+橫恣	heng4 zi1
+橫恣	heng2 zi1
 橫截	heng2 jie2
 橫截線	heng2 jie2 xian4
 橫截面	heng2 jie2 mian4
@@ -100009,6 +100017,7 @@ min_phrase_weight: 100
 腳踏倒鹽	jiao3 ta4 dao4 yan2
 腳踏兩來舡	jiao3 ta4 liang3 lai2 xiang1
 腳踏實地	jiao3 ta4 shi2 di4
+腳踏實地	jiao3 ta1 shi2 di4
 腳鐐	jiao3 liao2
 腳鐐	jiao3 liao4
 腳鐐手銬	jiao3 liao2 shou3 kao4
@@ -103064,7 +103073,9 @@ min_phrase_weight: 100
 蜿蜒	wan3 yan2
 蜿蜒	wan1 yan2
 蜿蜿	wan3 wan3
+蜿蜿	wan1 wan1
 蜿蟺	wan3 shan4
+蜿蟺	wan1 shan4
 蝌子	ke1 zi5
 蝍蛆	ji2 ju1
 蝍蛆鉗帶	ji2 ju1 qian2 dai4
@@ -106968,6 +106979,7 @@ min_phrase_weight: 100
 踏場	ta4 chang2	3%
 踏場	ta4 chang3
 踏實	ta4 shi2
+踏實	ta1 shi2
 踏燕奔馬	ta4 yan4 ben1 ma3
 踏猛子	ta4 meng3 zi5
 踏看	ta4 kan4
@@ -107039,6 +107051,7 @@ min_phrase_weight: 100
 蹈隙	dao4 xi4
 蹉跌	cuo1 die2
 蹊蹺	qi1 qiao1
+蹊蹺	qi1 qiao4
 蹊蹺	xi1 qiao1
 蹊蹺	xi1 qiao4
 蹋鞠	ta4 ju2
@@ -115859,4 +115872,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 115862 #####
+##### @結束 END - 115875 #####
