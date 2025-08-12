@@ -555,13 +555,16 @@ KeyEvent 函數在舊版 librime-lua 中不支持。
 
     if retain_number == 0 then
       context:select(ksk_n)
+    elseif #c_input ~= caret_pos then
+      engine:commit_text(cand.text)  -- 數字鍵選字時會消失？
+      context.input = s_prefix .. new_c_input
+      -- --- 以下切分兩次以上，前面輸入會跳掉！
+      -- context.input = cand.text .. s_prefix .. new_c_input
+      -- context.caret_pos = #c_input + #s_prefix
     elseif miss_number ~= 0 then
       context:select(ksk_n)
       context:pop_input(miss_number)
       context:push_input(s_prefix .. back_input)
-      context.caret_pos = #c_input + #s_prefix
-    elseif miss_number == 0 and #c_input ~= caret_pos then
-      context.input = cand.text .. s_prefix .. new_c_input
       context.caret_pos = #c_input + #s_prefix
     else
       context:select(ksk_n)
@@ -668,13 +671,16 @@ KeyEvent 函數在舊版 librime-lua 中不支持。
       --- 以下不管是否在 paging 時
       if retain_number == 0 then
         context:confirm_current_selection()
+      elseif #c_input ~= caret_pos then
+        engine:commit_text(cand.text)  -- 數字鍵選字時會消失？
+        context.input = s_prefix .. new_c_input
+        -- --- 以下切分兩次以上，前面輸入會跳掉！
+        -- context.input = cand.text .. s_prefix .. new_c_input
+        -- context.caret_pos = #c_input + #s_prefix
       elseif miss_number ~= 0 then
         context:confirm_current_selection()  -- 一定要有，不然只會上屏第一個選項或記憶？
         context:pop_input(miss_number)
         context:push_input(s_prefix .. back_input)
-        context.caret_pos = #c_input + #s_prefix
-      elseif miss_number == 0 and #c_input ~= caret_pos then
-        context.input = cand.text .. s_prefix .. new_c_input
         context.caret_pos = #c_input + #s_prefix
       else  -- else 部分效果等同「retain_number == 0」，兩者擇一可遮屏，留「retain_number == 0」去提前判斷省下面複雜判斷，留 else 防萬一。
         context:confirm_current_selection()

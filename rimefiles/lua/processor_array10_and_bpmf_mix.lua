@@ -31,6 +31,7 @@ local array10_to_abc = array10_conversion.to_abc
 --          string.char(code):match(pat) or ""
 -- end
 
+local sk_table = {["Q"]=1, ["A"]=2, ["Z"]=3, ["W"]=4, ["S"]=5, ["X"]=6, ["Y"]=1, ["H"]=2, ["N"]=3, ["U"]=4, ["J"]=5, ["M"]=6 }
 
 -- local function processor_array10_and_bpmf_mix(key,env)
 local function processor(key, env)
@@ -46,7 +47,7 @@ local function processor(key, env)
   local o_ascii_mode = context:get_option("ascii_mode")
   --------
   local key_num_array10 = key:repr():match("^KP_([0-9])$") or key:repr():match("^KP_(Decimal)$")
-  -- local key_select_keys = key:repr():match("^Shift%+[QAZWSXYHNUJM]$") or key:repr():match("^Control%+([1-6])$")
+  local key_select_keys = key:repr():match("^Shift%+[QAZWSXYHNUJM]$") or key:repr():match("^Control%+([1-6])$")
   -- local key_select_keys = key:repr():match("^Control%+([1-6])$")
   -- local key_bpmf = set_char[ascii_c(key, "a-z")]
   --------
@@ -152,8 +153,8 @@ local function processor(key, env)
     return 2
 
   --- pass not space Return KP_Enter key_select_keys
-  elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" then  --and not key_select_keys
-  -- elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" and not key_select_keys then
+  -- elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" then
+  elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" and not key_select_keys then
     return 2
 
 -----------------------
@@ -165,56 +166,85 @@ local function processor(key, env)
   --   return 1
 
 -----------------------
-  -- --- 以下修正：小板數字鍵選擇出現之 bug。
+  --- 以下修正：小板數字鍵選擇出現之 bug。
 
-  -- elseif key_select_keys then
-  --   local ksk_n = tonumber(key_select_keys)
-  --   local cand = seg:get_candidate_at(ksk_n)
-  --   local miss_number = caret_pos - cand._end  -- miss_number 為「光標位置」和「選項碼數」不匹配時之差數。
-  --   local retain_number = #c_input - cand._end  -- 刪除中文編碼後，計算字數。
-  --   local back_input = string.sub(c_input, cand._end + 1, caret_pos)
-  --   local new_c_input = string.sub(c_input, -retain_number)
+  elseif key_select_keys then
+    --- 確定選項編號
+    -- 以下針對選字編碼為：123456
+    local ksk_n = sk_table[key_select_keys] or key_select_keys:match("^[1-6]$") and key_select_keys or 1
+    local ksk_n = tonumber(key_select_keys)  -- 序號「0」開始，還需減一。
+    local page_n = 6 * (seg.selected_index // 6)    -- 先確定在第幾頁
+    if ksk_n > 0 then
+      ksk_n = ksk_n - 1 + page_n
+    elseif ksk_n == 0 then
+      ksk_n = ksk_n - 1 + page_n + 6
+    end
 
-  --   if retain_number == 0 then
-  --     context:select(ksk_n)
-  --   elseif miss_number ~= 0 then
-  --     context:select(ksk_n)
-  --     context:pop_input(miss_number)
-  --     context:push_input("```" .. back_input)
-  --     context.caret_pos = #c_input + 3
-  --   elseif miss_number == 0 and #c_input ~= caret_pos then
-  --     context.input = cand.text .. "```" .. new_c_input
-  --     context.caret_pos = #c_input + 3
-  --   else
-  --     context:select(ksk_n)
-  --   end
-  --   -- engine:commit_text("測試")
+    ---------------
 
-  --   return 1
+    local cand = seg:get_candidate_at(ksk_n)  -- 序號「0」開始。
+    -- local miss_number = caret_pos - cand._end  -- miss_number 為「光標位置」和「選項碼數」不匹配時之差數。
+    local retain_number = #c_input - cand._end  -- 刪除中文編碼後，計算字數。
+    -- local back_input = string.sub(c_input, cand._end + 1, caret_pos)
+    local new_c_input = string.sub(c_input, -retain_number)
+
+    if #c_input ~= caret_pos then
+      engine:commit_text(cand.text)  -- 數字鍵選字時會消失？
+      context.input = "```" .. new_c_input
+      return 1
+    else
+      return 2
+    end
+
+    -- --- 以下切分兩次以上，前面輸入會跳掉！
+    -- if retain_number == 0 then
+    --   context:select(ksk_n)
+    -- elseif miss_number ~= 0 then
+    --   context:select(ksk_n)
+    --   context:pop_input(miss_number)
+    --   context:push_input("```" .. back_input)
+    --   context.caret_pos = #c_input + 3
+    -- elseif miss_number == 0 and #c_input ~= caret_pos then
+    --   context.input = cand.text .. "```" .. new_c_input
+    --   context.caret_pos = #c_input + 3
+    -- else
+    --   context:select(ksk_n)
+    -- end
+    -- -- engine:commit_text("測試")
+    -- return 1
 
 -----------------------
+  --- 以下修正：上屏和選字詞出現之 bug。
 
   -- elseif seg:has_tag("paging") or #c_input ~= caret_pos then
   elseif #c_input ~= caret_pos then
-    -- local ksk_n = tonumber(key_select_keys)
-    -- local cand = seg:get_candidate_at(ksk_n)
     local cand = context:get_selected_candidate()
-    local miss_number = caret_pos - cand._end  -- miss_number 為「光標位置」和「選項碼數」不匹配時之差數。
-    local back_input = string.sub(c_input, cand._end + 1, caret_pos)
+    -- local miss_number = caret_pos - cand._end  -- miss_number 為「光標位置」和「選項碼數」不匹配時之差數。
+    local retain_number = #c_input - cand._end  -- 刪除中文編碼後，計算字數。
+    -- local back_input = string.sub(c_input, cand._end + 1, caret_pos)
+    local new_c_input = string.sub(c_input, -retain_number)
 
-    if miss_number ~= 0 then
-      -- context:confirm_current_selection()  -- 開啟會有 bug！「切分」時「space」上屏，有問題。
-      context:pop_input(miss_number)
-      context:push_input("```" .. back_input)
-      context.caret_pos = #c_input + 3
-      -- engine:commit_text("測試")
-    else
-      -- context:confirm_current_selection()  -- 開啟會有 bug！「切分」時「space」上屏，有問題。
-      context:push_input("```" .. back_input)
-      context.caret_pos = #c_input + 3
-      -- engine:commit_text("測試")
-    end
+    engine:commit_text(cand.text)  -- 數字鍵選字時會消失？
+    context.input = "```" .. new_c_input
     return 1
+
+    -- --- 以下切分兩次以上，前面輸入會跳掉！
+    -- if miss_number ~= 0 then
+    --   -- context:confirm_current_selection()  -- 開啟會有 bug！「切分」時「space」上屏，有問題。
+    --   context:pop_input(miss_number)
+    --   context:push_input("```" .. back_input)
+    --   context.caret_pos = #c_input + 3
+    --   -- engine:commit_text("測試")
+    -- else
+    --   -- context:confirm_current_selection()  -- 開啟會有 bug！「切分」時「space」上屏，有問題。
+    --   context:push_input("```" .. back_input)
+    --   context.caret_pos = #c_input + 3
+    --   -- engine:commit_text("測試")
+    -- end
+    -- return 1
+
+-----------------------
+  --- 以下修正：注音「空格」一聲影響行列10上屏。
 
   elseif key:repr() == "space" and #c_input == caret_pos then
   --   context:commit()  -- 會有 bug！
