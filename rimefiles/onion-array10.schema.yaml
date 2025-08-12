@@ -161,7 +161,7 @@ translator:
     - xform/\|/⁞/
   comment_format:
     #### 編碼為[zxcvsdfwer]+時
-    - xform/v//
+    # - xform/a//
     - "xlit|zxcvsdfwera|０１２３４５６７８９.|"
     #### 編碼為[0-9]+時
     # # - xform/@/./
