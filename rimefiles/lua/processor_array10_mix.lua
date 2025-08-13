@@ -27,29 +27,35 @@ local array10_to_num = array10_conversion.to_num
 local array10_to_abc = array10_conversion.to_abc
 ----------------------------------------------------------------------------------------
 
--- local function init(env)
---   local engine = env.engine
---   local schema = engine.schema
---   local config = schema.config
---   -- env.kp_change_pattern = {
---   --   ["0"] = "Z",
---   --   ["1"] = "X",
---   --   ["2"] = "C",
---   --   ["3"] = "V",
---   --   ["4"] = "S",
---   --   ["5"] = "D",
---   --   ["6"] = "F",
---   --   ["7"] = "W",
---   --   ["8"] = "E",
---   --   ["9"] = "R",
---   --   ["Add"] = "A",
---   --   -- ["Add"] = "+",
---   --   -- ["Subtract"] = "-",
---   --   -- ["Multiply"] = "*",
---   --   -- ["Divide"] = "/",
---   --   -- ["Decimal"] = ".",
---   --  }
--- end
+local function init(env)
+  -- local engine = env.engine
+  -- local schema = engine.schema
+  -- local config = schema.config
+  -- -- env.kp_change_pattern = {
+  -- --   ["0"] = "Z",
+  -- --   ["1"] = "X",
+  -- --   ["2"] = "C",
+  -- --   ["3"] = "V",
+  -- --   ["4"] = "S",
+  -- --   ["5"] = "D",
+  -- --   ["6"] = "F",
+  -- --   ["7"] = "W",
+  -- --   ["8"] = "E",
+  -- --   ["9"] = "R",
+  -- --   ["Add"] = "A",
+  -- --   -- ["Add"] = "+",
+  -- --   -- ["Subtract"] = "-",
+  -- --   -- ["Multiply"] = "*",
+  -- --   -- ["Divide"] = "/",
+  -- --   -- ["Decimal"] = ".",
+  -- --  }
+  env.abc_pattern = {
+    ["comma"] = ",",
+    ["period"] = ".",
+    ["semicolon"] = ";",
+    ["slash"] = "/",
+   }
+end
 
 -- local set_char_bpmf = Set {"ㄅ", "ㄆ", "ㄇ", "ㄈ", "ㄉ", "ㄊ", "ㄋ", "ㄌ", "ㄍ", "ㄎ", "ㄏ", "ㄐ", "ㄑ", "ㄒ", "ㄓ", "ㄔ", "ㄕ", "ㄖ", "ㄗ", "ㄘ", "ㄙ", "ㄧ", "ㄨ", "ㄩ", "ㄚ", "ㄛ", "ㄜ", "ㄝ", "ㄞ", "ㄟ", "ㄠ", "ㄡ", "ㄢ", "ㄣ", "ㄤ", "ㄥ", "ㄦ", "ˉ", "ˊ", "ˇ", "ˋ", "˙", "ㄪ", "ㄫ", "ㄫ", "ㄬ", "ㄭ", "ㄮ", "ㄮ", "ㄯ", "ㄯ", "ㆠ", "ㆡ", "ㆢ", "ㆣ", "ㆤ", "ㆥ", "ㆦ", "ㆧ", "ㆨ", "ㆩ", "ㆪ", "ㆫ", "ㆬ", "ㆭ", "ㆭ", "ㆮ", "ㆯ", "ㆰ", "ㆰ", "ㆱ", "ㆱ", "ㆲ", "ㆲ", "ㆳ", "ㆴ", "ㆵ", "ㆶ", "ㆷ", "ㆸ", "ㆹ", "ㆺ"}
 
@@ -77,7 +83,9 @@ local function processor(key, env)
   -- local page_size = engine.schema.page_size
   local o_ascii_mode = context:get_option("ascii_mode")
   local o_switch_key_board = context:get_option("switch_key_board")
-  local key_abc = key:repr():match("^([zxcvsdfweratgb])$")
+  -- local key_abc = key:repr():match("^([zxcvsdfweratgb])$")
+  -- local key_abc = key:repr():match("^([zxcvsdfweratgb])$") or key:repr():match("^([nuiojklmyhp])$") or key:repr():match("^(comma)$") or key:repr():match("^(period)$") or key:repr():match("^(semicolon)$") or key:repr():match("^(slash)$")
+  local key_abc = key:repr():match("^([a-z])$") or key:repr():match("^(comma)$") or key:repr():match("^(period)$") or key:repr():match("^(semicolon)$") or key:repr():match("^(slash)$")
   local key_select_keys = key:repr():match("^KP_([0-9])$") or key:repr():match("^Control%+([0-9])$")
   -- local key_num_array10 = key:repr():match("^KP_([0-9])$") or key:repr():match("^KP_(Decimal)$")
   local shadow_top_b = string.match(c_input, "```[zxcvsdfwera]$")
@@ -107,8 +115,14 @@ local function processor(key, env)
 --]]
 
   elseif o_switch_key_board and comp:empty() and key_abc then
+    local key_abc = env.abc_pattern[key_abc] or key_abc
     engine:commit_text(key_abc)
     -- context:clear()
+    return 1
+
+  --- 以下修「.」多出字符之 bug！
+  elseif not o_switch_key_board and key:repr() == "period" and (comp:empty() or seg:has_tag("abc")) then
+    context:push_input("r")
     return 1
 
 ---------------------------------------------------------------------------
@@ -168,6 +182,7 @@ local function processor(key, env)
 --]]
 
   elseif o_switch_key_board and lookup_end and key_abc then
+    local key_abc = env.abc_pattern[key_abc] or key_abc
     context:commit()
     engine:commit_text(key_abc)
     return 1
@@ -456,5 +471,5 @@ end
 
 
 -- return processor_array10_mix
-return { func = processor }
--- return { init = init, func = processor }
+-- return { func = processor }
+return { init = init, func = processor }

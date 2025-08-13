@@ -111,9 +111,13 @@ menu:
 ##### 拼寫處理器 #####
 speller:
   # alphabet: ""
+  #### 編碼為[zxcvsdfwernuiojklm,.h]+時
+  # alphabet: "zxcvsdfweranuiojklm,.h"
+  # # initials: "zxcvsdfweranuiojklm,.h"
+  # # finals: "h"
   #### 編碼為[zxcvsdfwer]+時
-  alphabet: "zxcvsdfwera"
-  # initials: "zxcvsdfwera"
+  alphabet: "zxcvsdfwera."  #「.」為 lua 功能要用到之判別。
+  # initials: "zxcvsdfwera."  #「.」為 lua 功能要用到之判別。
   # finals: "a"
   #### 編碼為[0-9]+時
   # alphabet: "1234567890-"
@@ -197,19 +201,19 @@ translator:
 #   不能：選到較短編碼之字詞。
 #   不能：「全碼」+「全碼」+「全碼」+ ... 產生詞彙。
 #################################
-second_phrases:
-  __include: /translator  # onion-array10.schema.yaml:/translator
-  tag: second_phrases
-  initial_quality: 0  #1000
-  enable_encoder: false
-  encode_commit_history: false
-  enable_sentence: false
-  sentence_over_completion: false
-  enable_completion: false
-  enable_user_dict: false  #true
-  disable_user_dict_for_patterns:
-    - "^a.+$"  # 符號前綴開頭不調頻
-    # - "^.$"  # 單碼不調頻
+# second_phrases:
+#   __include: /translator  # onion-array10.schema.yaml:/translator
+#   tag: second_phrases
+#   initial_quality: 0  #1000
+#   enable_encoder: false
+#   encode_commit_history: false
+#   enable_sentence: false
+#   sentence_over_completion: false
+#   enable_completion: false
+#   enable_user_dict: false  #true
+#   disable_user_dict_for_patterns:
+#     - "^a.+$"  # 符號前綴開頭不調頻
+#     # - "^.$"  # 單碼不調頻
 
 
 ##### 行列10影子翻譯器 #####（功用：轉給右邊數字鍵盤使用）
@@ -334,6 +338,8 @@ comment_filter_plus:
 ##### 標點符號 #####
 punctuator:
   # import_preset: default
+  # digit_separator_action: commit
+  # digit_separators: ":"  #"."
   full_shape:
     "`" : [ "｀" ]
   half_shape:
@@ -492,7 +498,7 @@ key_binder:
     - {accept: KP_Subtract, send: BackSpace, when: has_menu}
     - {accept: KP_Divide, send: Page_Up, when: has_menu}
     - {accept: KP_Multiply, send: Page_Down, when: composing}
-    - {accept: KP_Add, send: q , when: composing}
+    - {accept: KP_Add, send: q, when: composing}
 # ### 以下無作用：設成發送為空按鍵，無作用 ###
 #     - {accept: KP_0, send: Shift+Z, when: always}
 #     - {accept: KP_1, send: Shift+X, when: always}
@@ -507,6 +513,50 @@ key_binder:
 #     - {accept: KP_Decimal, send: Shift+A, when: always}
 ### 測試用 ###
     # - {accept: Control+minus, toggle: simplify_comment, when: always}
+### END ###
+
+# key2:
+#   bindings:
+    # __include: /key_binder/bindings
+    # __append:
+### 轉換英文鍵盤右邊（初始） ###
+    - {accept: n, send: z, when: always}
+    - {accept: u, send: x, when: always}
+    - {accept: i, send: c, when: always}
+    - {accept: o, send: v, when: always}
+    - {accept: j, send: s, when: always}
+    - {accept: k, send: d, when: always}
+    - {accept: l, send: f, when: always}
+    - {accept: m, send: w, when: always}
+    - {accept: comma, send: e, when: always}
+    # - {accept: period, send: r, when: always}  # 開啟有 bug
+    - {accept: h, send: a, when: always}
+### 轉換英文鍵盤右邊（有開頭後） ###
+    - {accept: n, send: z, when: composing}
+    - {accept: u, send: x, when: composing}
+    - {accept: i, send: c, when: composing}
+    - {accept: o, send: v, when: composing}
+    - {accept: j, send: s, when: composing}
+    - {accept: k, send: d, when: composing}
+    - {accept: l, send: f, when: composing}
+    - {accept: m, send: w, when: composing}
+    - {accept: comma, send: e, when: composing}
+    - {accept: comma, send: e, when: has_menu}
+    - {accept: comma, send: e, when: paging}
+    # - {accept: period, send: r, when: composing}  # 開啟有 bug
+    # - {accept: period, send: r, when: has_menu}  # 開啟有 bug
+    # - {accept: period, send: r, when: paging}  # 開啟有 bug
+    - {accept: h, send: a, when: composing}
+### 英文鍵盤右邊：選字翻頁 ###
+    - {accept: semicolon, send: Page_Up, when: always}
+    - {accept: slash, send: Page_Down, when: always}
+### 英文鍵盤右邊：刪除 ###
+    - {accept: p, send: BackSpace, when: always}
+### 英文鍵盤右邊：轉換 ###
+    - {accept: y, send: q, when: composing}
+### 有碼才有作用，刻意初始無效化，防誤按 ###
+    - {accept: q, send: Shift_L, when: always}
+    - {accept: y, send: Shift_L, when: always}
 ### END ###
 
 
