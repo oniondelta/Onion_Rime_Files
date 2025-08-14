@@ -83,14 +83,14 @@ local function processor(key, env)
   -- local page_size = engine.schema.page_size
   local o_ascii_mode = context:get_option("ascii_mode")
   local o_switch_key_board = context:get_option("switch_key_board")
-  -- local key_abc = key:repr():match("^([zxcvsdfweratgb])$")
-  -- local key_abc = key:repr():match("^([zxcvsdfweratgb])$") or key:repr():match("^([nuiojklmyhp])$") or key:repr():match("^(comma)$") or key:repr():match("^(period)$") or key:repr():match("^(semicolon)$") or key:repr():match("^(slash)$")
+  -- local key_abc = key:repr():match("^([zxcvsdfwerbqat])$")
+  -- local key_abc = key:repr():match("^([zxcvsdfwerbqat])$") or key:repr():match("^([nuiojklmyhp])$") or key:repr():match("^(comma)$") or key:repr():match("^(period)$") or key:repr():match("^(semicolon)$") or key:repr():match("^(slash)$")
   local key_abc = key:repr():match("^([a-z])$") or key:repr():match("^(comma)$") or key:repr():match("^(period)$") or key:repr():match("^(semicolon)$") or key:repr():match("^(slash)$")
   local key_select_keys = key:repr():match("^KP_([0-9])$") or key:repr():match("^Control%+([0-9])$")
   -- local key_num_array10 = key:repr():match("^KP_([0-9])$") or key:repr():match("^KP_(Decimal)$")
-  local shadow_top_b = string.match(c_input, "```[zxcvsdfwera]$")
-  local shadow_top_e = string.match(c_input, "(```[zxcvsdfwera]+)$")
-  local abc_words = string.match(c_input, "([zxcvsdfwera]+)$")
+  local shadow_top_b = string.match(c_input, "```[zxcvsdfwerb]$")
+  local shadow_top_e = string.match(c_input, "(```[zxcvsdfwerb]+)$")
+  local abc_words = string.match(c_input, "([zxcvsdfwerb]+)$")
   local num_words = string.match(c_input, "([0-9.]+)$")
   local lookup_end = string.match(c_input, "[']$")
   -- local s_prefix = seg:has_tag("reverse2_lookup") and "';" or seg:has_tag("all_bpm") and "';'" or ""
@@ -156,7 +156,7 @@ local function processor(key, env)
 
 ---------------------------------------------------------------------------
 --[[
-以下針對 seg:has_tag("shadow_top") 時，刪除最後「```[zxcvsdfwera]」之修正
+以下針對 seg:has_tag("shadow_top") 時，刪除最後「```[zxcvsdfwerb]」之修正
 --]]
 
   elseif key:repr() == "BackSpace" and seg:has_tag("shadow_top") and shadow_top_b and #c_input == caret_pos then
@@ -192,7 +192,7 @@ local function processor(key, env)
 以下針對功能：「轉換對映數字」！
 --]]
 
-  elseif key:repr() == "q" and abc_words and (seg:has_tag("shadow_top") or seg:has_tag("abc") or seg:has_tag("reverse3_lookup")) then
+  elseif key:repr() == "g" and abc_words and (seg:has_tag("shadow_top") or seg:has_tag("abc") or seg:has_tag("reverse3_lookup")) then
     local atn = array10_to_num(abc_words) or ""
     local n = #atn
     context:pop_input(n)
@@ -201,7 +201,7 @@ local function processor(key, env)
     -- context:clear()
     return 1
 
-  elseif key:repr() == "q" and num_words and not seg:has_tag("reverse2_lookup") and not context:has_menu() then  -- and context:is_composing()
+  elseif key:repr() == "g" and num_words and not seg:has_tag("reverse2_lookup") and not context:has_menu() then  -- and context:is_composing()
     local ata = array10_to_abc(num_words) or ""
     local n = #ata
     context:pop_input(n)

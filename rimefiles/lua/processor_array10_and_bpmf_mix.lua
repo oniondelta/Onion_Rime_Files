@@ -57,9 +57,9 @@ local function processor(key, env)
   local seg_reverse2_lookup = seg:has_tag("reverse2_lookup")
   local seg_reverse3_lookup = seg:has_tag("reverse3_lookup")
   --------
-  local shadow_top_b = string.match(c_input, "```[zxcvsdfwera]$")
-  local shadow_top_e = string.match(c_input, "(```[zxcvsdfwera]+)$")
-  local shadow_top_abc = string.match(c_input, "```([zxcvsdfwera]+)$")
+  local shadow_top_b = string.match(c_input, "```[zxcvsdfwerb]$")
+  local shadow_top_e = string.match(c_input, "(```[zxcvsdfwerb]+)$")
+  local shadow_top_abc = string.match(c_input, "```([zxcvsdfwerb]+)$")
   local shadow_top_num = string.match(c_input, "```([0-9.]+)$")
   --------
 
@@ -80,7 +80,7 @@ local function processor(key, env)
 
 ---------------------------------------------------------------------------
 --[[
-以下針對 seg:has_tag("shadow_top") 時，刪除最後「```[zxcvsdfwera]」之修正
+以下針對 seg:has_tag("shadow_top") 時，刪除最後「```[zxcvsdfwerb]」之修正
 --]]
 
   elseif key:repr() == "BackSpace" and seg_shadow_top and shadow_top_b and #c_input == caret_pos then
@@ -102,7 +102,7 @@ local function processor(key, env)
 以下針對功能：「轉換對映數字」！
 --]]
 
-  elseif key:repr() == "q" and shadow_top_abc and (seg_shadow_top or seg_reverse3_lookup) then
+  elseif key:repr() == "g" and shadow_top_abc and (seg_shadow_top or seg_reverse3_lookup) then
     local atn = array10_to_num(shadow_top_abc) or ""
     local n = #atn
     context:pop_input(n)
@@ -117,7 +117,7 @@ local function processor(key, env)
     ------------------------------
     return 1
 
-  elseif key:repr() == "q" and shadow_top_num and not seg_abc and not seg_reverse2_lookup and not context:has_menu() then  -- and context:is_composing()
+  elseif key:repr() == "g" and shadow_top_num and not seg_abc and not seg_reverse2_lookup and not context:has_menu() then  -- and context:is_composing()
     local ata = array10_to_abc(shadow_top_num) or ""
     local n = #ata
     context:pop_input(n)

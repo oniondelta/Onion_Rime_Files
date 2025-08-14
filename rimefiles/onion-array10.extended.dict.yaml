@@ -20,7 +20,7 @@ use_preset_vocabulary: false
 ########################
 encoder:
   exclude_patterns:
-    - "^a.*$"  # 前綴開頭之符號
+    - "^b.*$"  # 前綴開頭之符號
   rules:
     # - length_in_range: [4, 5] #對於四至五字詞
     #   formula: "AaBzCaYzZz" #取第一字首碼，第二字尾碼、第三字首碼、倒數第二字尾碼、最後一字尾碼
