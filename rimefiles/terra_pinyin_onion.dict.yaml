@@ -222,7 +222,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "202508"
+version: "202509"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -2775,6 +2775,14 @@ min_phrase_weight: 100
 諴	gan1	0%
 𫍯	xian2
 𫍯	gan1	0%
+畠	zai1	0%
+畠	zi1	0%
+謅	chou1	0%
+謅	chao3	0%
+诌	chou1	0%
+诌	chao3	0%
+謞	jiao1	0%
+謞	xiao4	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -3884,7 +3892,7 @@ min_phrase_weight: 100
 褶	die2	1%
 褶	xue2	1%
 褶	zhe2	1%
-謅	zou1	1%
+謅	zou1
 謈	bo2	1%
 謈	bao4	1%
 謈	po4	1%
@@ -32570,7 +32578,7 @@ min_phrase_weight: 100
 謂	wei4
 謃	xing1
 謄	teng2
-謅	zhou1
+謅	zhou1	50%
 謆	shan4
 謇	jian3
 謈	pao2
@@ -32605,7 +32613,7 @@ min_phrase_weight: 100
 謜	yuan2
 謝	xie4
 謞	he4
-謞	xiao1
+謞	xiao1	0%
 謟	tao1
 謠	yao2
 謡	yao2
@@ -56241,6 +56249,8 @@ min_phrase_weight: 100
 不對碴兒	bu2 dui4 cha2 er5	80%
 不對碴兒	bu2 dui4 cha2 er2
 不對稱	bu2 dui4 chen4
+不對稱	bu2 dui4 cheng4
+不對稱	bu2 dui4 cheng1
 不對頭	bu2 dui4 tou2
 不少	bu4 shao3
 不差	bu2 cha4
@@ -60605,8 +60615,11 @@ min_phrase_weight: 100
 充內行	chong1 nei4 hang2
 充其量	chong1 qi2 liang4
 充分	chong1 fen4
+充分	chong1 fen1
 充分就業	chong1 fen4 jiu4 ye4
+充分就業	chong1 fen1 jiu4 ye4
 充分考慮	chong1 fen4 kao3 lv4
+充分考慮	chong1 fen1 kao3 lv4
 充場面	chong1 chang2 mian4	3%
 充場面	chong1 chang3 mian4
 充塞	chong1 se4
@@ -60949,6 +60962,8 @@ min_phrase_weight: 100
 兩個或更多	liang3 ge5 huo4 geng4 duo1
 兩個肩膀扛張嘴	liang3 ge5 jian1 bang3 kang2 zhang1 zui3
 兩側對稱	liang3 ce4 dui4 chen4
+兩側對稱	liang3 ce4 dui4 cheng4
+兩側對稱	liang3 ce4 dui4 cheng1
 兩兩相比	liang3 liang3 xiang1 bi3
 兩分法	liang3 fen1 fa3
 兩口子	liang3 kou3 zi5
@@ -62998,8 +63013,11 @@ min_phrase_weight: 100
 創傷	chuang1 shang1
 創傷	chuang4 shang1
 創傷後	chuang1 shang1 hou4
+創傷後	chuang4 shang1 hou4
 創傷後壓力	chuang1 shang1 hou4 ya1 li4
+創傷後壓力	chuang4 shang1 hou4 ya1 li4
 創傷後壓力紊亂	chuang1 shang1 hou4 ya1 li4 wen3 luan4
+創傷後壓力紊亂	chuang4 shang1 hou4 ya1 li4 wen3 luan4
 創價學會	chuang4 jia4 xue2 hui4
 創優	chuang4 you1
 創刊	chuang4 kan1
@@ -63418,6 +63436,7 @@ min_phrase_weight: 100
 勇將	yong3 jiang4
 勉力而為	mian3 li4 er2 wei2
 勉勉強強	mian3 mian3 qiang3 qiang3
+勉勉強強	mian3 mian3 qiang2 qiang2
 勉強	mian3 qiang3
 勉強	mian3 qiang2
 勉為其難	mian3 wei2 qi2 nan2
@@ -72544,10 +72563,19 @@ min_phrase_weight: 100
 對著和尚罵賊禿	dui4 zhe5 he2 shang4 ma4 zei2 tu1
 對稱	dui4 chen4
 對稱	dui4 cheng4
+對稱	dui4 cheng1
 對稱性	dui4 chen4 xing4
+對稱性	dui4 cheng4 xing4
+對稱性	dui4 cheng1 xing4
 對稱破缺	dui4 chen4 po4 que1
+對稱破缺	dui4 cheng4 po4 que1
+對稱破缺	dui4 cheng1 po4 que1
 對稱空間	dui4 chen4 kong1 jian1
+對稱空間	dui4 cheng4 kong1 jian1
+對稱空間	dui4 cheng1 kong1 jian1
 對稱軸	dui4 chen4 zhou2
+對稱軸	dui4 cheng4 zhou2
+對稱軸	dui4 cheng1 zhou2
 對空射擊	dui4 kong1 she4 ji2
 對空火器	dui4 kong1 huo3 qi4
 對空策	dui4 kong1 ce4
@@ -94435,6 +94463,7 @@ min_phrase_weight: 100
 瞎扯臊	xia1 che3 sao4
 瞎攪	xia1 gao3
 瞎謅	xia1 zou1
+瞎謅	xia1 zhou1
 瞎點子	xia1 dian3 zi5
 瞑子裡	ming2 zi5 li3
 瞑目寧心	ming2 mu4 ning2 xin1
@@ -99664,6 +99693,7 @@ min_phrase_weight: 100
 胡同	hu2 tong4
 胡同	hu2 tong2
 胡吹亂謅	hu2 chui1 luan4 zou1
+胡吹亂謅	hu2 chui1 luan4 zhou1
 胡嚕	hu2 lu1
 胡塗	hu2 tu2
 胡塗蟲	hu2 tu2 chong2
@@ -100343,6 +100373,8 @@ min_phrase_weight: 100
 自留地	zi4 liu2 di4
 自當	zi4 dang1
 自發對稱破缺	zi4 fa1 dui4 chen4 po4 que1
+自發對稱破缺	zi4 fa1 dui4 cheng4 po4 que1
+自發對稱破缺	zi4 fa1 dui4 cheng1 po4 que1
 自白	zi4 bo2
 自白	zi4 bai2
 自白書	zi4 bo2 shu1
@@ -101907,6 +101939,7 @@ min_phrase_weight: 100
 葉門共和國	ye4 men2 gong4 he2 guo2
 葉面對稱	ye4 mian4 dui4 chen4
 葉面對稱	ye4 mian4 dui4 cheng4
+葉面對稱	ye4 mian4 dui4 cheng1
 葑菲	feng1 fei3
 葑菲之采	feng1 fei3 zhi1 cai3
 著稱	zhu4 cheng1
@@ -105617,6 +105650,7 @@ min_phrase_weight: 100
 謀臣猛將	mou2 chen2 meng3 jiang4
 謁刺	ye4 ci4
 謅札	zou1 zha2
+謅札	zhou1 zha2
 謈怨	po4 yuan4
 謊子	huang3 zi5
 謊稱	huang3 cheng1
@@ -106714,6 +106748,8 @@ min_phrase_weight: 100
 超今冠古	chao1 jin1 guan4 gu3
 超儲	chao1 chu2
 超對稱	chao1 dui4 chen4
+超對稱	chao1 dui4 cheng4
+超對稱	chao1 dui4 cheng1
 超度	chao1 du4
 超強	chao1 qiang2
 超敏反應	chao1 min3 fan3 ying4
@@ -107629,6 +107665,8 @@ min_phrase_weight: 100
 輻射場	fu2 she4 chang3
 輻射場	fu2 she4 chang2	3%
 輻射對稱	fu2 she4 dui4 chen4
+輻射對稱	fu2 she4 dui4 cheng4
+輻射對稱	fu2 she4 dui4 cheng1
 輻射強度	fu2 she4 qiang2 du4
 輻射散射	fu2 she4 san4 she4
 輻射散熱作用	fu2 she4 san4 re4 zuo4 yong4
@@ -113275,7 +113313,11 @@ min_phrase_weight: 100
 非同步傳輸模式	fei1 tong2 bu4 chuan2 shu1 mo2 shi4
 非宗教	fei1 zong1 jiao4
 非對稱	fei1 dui4 chen4
+非對稱	fei1 dui4 cheng4
+非對稱	fei1 dui4 cheng1
 非對稱式數據用戶線	fei1 dui4 chen4 shi4 shu4 ju4 yong4 hu4 xian4
+非對稱式數據用戶線	fei1 dui4 cheng4 shi4 shu4 ju4 yong4 hu4 xian4
+非對稱式數據用戶線	fei1 dui4 cheng1 shi4 shu4 ju4 yong4 hu4 xian4
 非常時期	fei1 chang2 shi2 qi2
 非得	fei1 dei3
 非得	fei1 de2
@@ -115876,4 +115918,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 115879 #####
+##### @結束 END - 115921 #####
