@@ -200,9 +200,9 @@
 
     [![donate1](https://payment.ecpay.com.tw/Upload/QRCode/202010/QRCode_170c287e-2db8-4b50-b87f-8d36500a3958.png)](https://p.ecpay.com.tw/D555162)
 
-- #### [以〈歐付寶〉贊助 Donate](https://qr.opay.tw/q1ql7)
+- #### [以〈歐付寶〉贊助 Donate](https://qr.opay.tw/Mx4LY)
 
-    [![donate2](https://payment.opay.tw/Upload/Broadcaster/2294343/QRcode/QRCode_7AC0FA1CAD39F0B66CFD5513A2173D1A.png)](https://qr.opay.tw/q1ql7)
+    [![donate2](https://payment.opay.tw/Upload/Broadcaster/2294343/QRcode/QRCode_7AC0FA1CAD39F0B66CFD5513A2173D1A.png)](https://qr.opay.tw/Mx4LY)
 
 - #### [以〈TWQR〉贊助 Donate](https://qr.opay.tw/N6RTD)
 
