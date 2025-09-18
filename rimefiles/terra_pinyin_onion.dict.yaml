@@ -754,7 +754,7 @@ min_phrase_weight: 100
 睪	ze2	0.2%
 睾	yi4	1%
 # 皋	yao2	1%
-皋	hao2	0.2%
+皋	hao2	0%
 禧	xi1
 痴	chi2
 癡	chi2	1%
@@ -1338,7 +1338,7 @@ min_phrase_weight: 100
 芈	mie1	0.2%
 # 𦒎	guan4	0.2%
 趼	yan4	0.2%
-臯	hao2	0.2%
+臯	hao2	0%
 爓	xun2	0.2%
 爓	xian2	0.2%
 囡	ni4	0.2%
@@ -2789,6 +2789,7 @@ min_phrase_weight: 100
 皐	hao2	0%
 皐	gu1	0%
 臯	gu1	0%
+# 臯	yao2	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -115954,4 +115955,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 115957 #####
+##### @結束 END - 115958 #####
