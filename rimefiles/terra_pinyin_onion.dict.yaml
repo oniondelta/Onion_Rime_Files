@@ -444,7 +444,7 @@ min_phrase_weight: 100
 嗟	jie4	0.2%
 嘎	ga1
 嘎	ga3	10%
-扳	ban3
+# 扳	ban3
 阿	a4
 宊	tu1	10%
 堗	tu2	10%
@@ -753,7 +753,7 @@ min_phrase_weight: 100
 睪	gao1	50%
 睪	ze2	0.2%
 睾	yi4	1%
-皋	yao2	1%
+# 皋	yao2	1%
 皋	hao2	0.2%
 禧	xi1
 痴	chi2
@@ -2783,6 +2783,12 @@ min_phrase_weight: 100
 诌	chao3	0%
 謞	jiao1	0%
 謞	xiao4	0%
+陶	dao4	0%
+皋	gu1	0%
+# 皐	yao2	0%
+皐	hao2	0%
+皐	gu1	0%
+臯	gu1	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -63183,6 +63189,7 @@ min_phrase_weight: 100
 劈著	pi1 zhao2
 劈空	pi1 kong1
 劈空扳害	pi1 kong1 ban1 hai4
+劈空扳害	pi1 kong1 ban3 hai4	80%
 劈胸	pi1 xiong1
 劈腦後	pi1 nao3 hou4
 劈腳跟	pi1 jiao3 gen1
@@ -77534,6 +77541,7 @@ min_phrase_weight: 100
 手扒雞	shou3 pa2 ji1
 手扒雞	shou3 ba1 ji1
 手扳葫蘆	shou3 ban1 hu2 lu2
+手扳葫蘆	shou3 ban3 hu2 lu2	80%
 手把子	shou3 ba3 zi5
 手拉葫蘆	shou3 la1 hu2 lu2
 手指頭	shou3 zhi3 tou5
@@ -78040,43 +78048,67 @@ min_phrase_weight: 100
 扯開嗓子	che3 kai1 sang3 zi5
 扳不倒兒	ban1 bu4 dao3 er5	80%
 扳不倒兒	ban1 bu4 dao3 er2
+扳不倒兒	ban3 bu4 dao3 er5	80%
+扳不倒兒	ban3 bu4 dao3 er2	80%
 扳倒	ban1 dao3
+扳倒	ban3 dao3	80%
 扳價	ban1 jia4
+扳價	ban3 jia4	80%
 扳動	ban1 dong4
+扳動	ban3 dong4	80%
 扳厚	pan1 hou4
 扳回	ban1 hui2
+扳回	ban3 hui2	80%
 扳回一城	ban1 hui2 yi4 cheng2
 扳回一城	ban1 hui2 yi1 cheng2
+扳回一城	ban3 hui2 yi4 cheng2	80%
+扳回一城	ban3 hui2 yi1 cheng2	80%
 扳壺	ban1 hu2
+扳壺	ban3 hu2	80%
 扳子	ban1 zi5
+扳子	ban3 zi5	80%
 扳害	ban1 hai4
 扳岔子	ban1 cha4 zi5
 扳差頭	ban1 cuo1 tou2
 扳平	ban1 ping2
+扳平	ban3 ping2	80%
 扳手	ban1 shou3
-扳手	ban3 shou3
+扳手	ban3 shou3	80%
 扳扯	ban1 che3
+扳扯	ban3 che3	80%
 扳指	ban1 zhi3
+扳指	ban3 zhi3	80%
 扳指兒	ban1 zhi3 er5	80%
 扳指兒	ban1 zhi3 er2
+扳指兒	ban3 zhi3 er5	80%
+扳指兒	ban3 zhi3 er2	80%
 扳搭饊子	ban1 da1 san3 zi5
 扳本	ban1 ben3
 扳本兒	ban1 ben3 er5	80%
 扳本兒	ban1 ben3 er2
 扳機	ban1 ji1
+扳機	ban3 ji1	80%
 扳留	pan1 liu2
 扳纏不清	ban1 chan2 bu4 qing1
 扳罾	ban1 zeng1
 扳翻	ban1 fan1
+扳翻	ban3 fan1	80%
 扳藤附葛	pan1 teng2 fu4 ge2
+扳藤附葛	ban1 teng2 fu4 ge2
 扳話	pan1 hua4
 扳談	pan1 tan2
 扳道	ban1 dao4
+扳道	ban3 dao4
 扳道員	ban1 dao4 yuan2
+扳道員	ban3 dao4 yuan2
 扳道岔	ban1 dao4 cha4
+扳道岔	ban3 dao4 cha4
 扳鉗	ban1 qian2
+扳鉗	ban3 qian2	80%
 扳障	ban1 zhang4
+扳障	ban3 zhang4	80%
 扳龍附鳳	ban1 long2 fu4 feng4
+扳龍附鳳	pan1 long2 fu4 feng4
 扶危	fu2 wei2
 扶危定亂	fu2 wei2 ding4 luan4
 扶危定傾	fu2 wei2 ding4 qing1
@@ -84873,6 +84905,7 @@ min_phrase_weight: 100
 核門檻	he2 men2 jian4
 核電磁脈衝	he2 dian4 ci2 mai4 chong1
 核電荷數	he2 dian4 he4 shu4
+核電荷數	he2 dian4 he2 shu4
 根刷	gen1 shua1
 根子	gen1 zi5
 根指數	gen1 zhi3 shu4
@@ -88107,6 +88140,7 @@ min_phrase_weight: 100
 活動分子	huo2 dong4 fen4 zi5
 活動卡通	huo2 dong4 ka3 tong1
 活動扳手	huo2 dong4 ban1 shou3
+活動扳手	huo2 dong4 ban3 shou3	80%
 活動曲尺	huo2 dong4 qu1 chi3
 活動曲尺	huo2 dong4 qu3 chi3
 活動看板	huo2 dong4 kan4 ban3
@@ -91176,6 +91210,7 @@ min_phrase_weight: 100
 牽著鼻子走	qian1 zhe5 bi2 zi3 zou3
 牽累	qian1 lei4
 牽絲扳藤	qian1 si1 ban1 teng2
+牽絲扳藤	qian1 si1 pan1 teng2
 牽羊擔酒	qian1 yang2 dan1 jiu3
 牽肚掛腸	qian1 du4 gua4 chang2
 牽腸割肚	qian1 chang2 ge1 du4
@@ -96755,6 +96790,7 @@ min_phrase_weight: 100
 管弦樂隊	guan3 xian2 yue4 dui4
 管待	guan3 dai4
 管扳手	guan3 ban1 shou3
+管扳手	guan3 ban3 shou3	80%
 管教	guan3 jiao4
 管教無方	guan3 jiao4 wu2 fang1
 管樂	guan3 yue4
@@ -115918,4 +115954,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 115921 #####
+##### @結束 END - 115957 #####
