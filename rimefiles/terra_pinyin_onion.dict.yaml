@@ -166,6 +166,7 @@
 #    詞句中，「究」臺灣標準為「jiu4」，又音為「jiu1」，日常易混，故皆補齊「jiu4」「jiu1」。
 #    詞句中，「肯」臺灣標準為「ken3」，又音為「keng3」，日常易混，故皆補齊「ken3」「keng3」。
 #    詞句中，「誼」臺灣標準為「yi4」，又音為「yi2」，日常易混，故皆補齊「yi4」「yi2」。
+#    詞句中，「檔」臺灣標準為「dang3」，又音為「dang4」，日常易混，故皆補齊「dang3」「dang4」。
 #    詞句中，「削」臺灣標準讀音為「xue4」，語音為「xiao1」，大陸標準為「xue1」，日常易混，故皆補齊「xue4」「xiao1」「xue1」。有些詞發音如此標註會奇怪，待攷！
 #    詞句中，「擁」皆補齊「yong3」「yong1」。
 #    詞句中，「熟」皆補齊「shou2」「shu2」。
@@ -190,6 +191,7 @@
 #    詞句中，「阻塞」補齊「zu3 se4」和「zu3 sai1」。
 #    詞句中，「姑娘」補齊「gu1 niang2」和「gu1 niang5」，後者詞頻設為80%。
 #    詞句中，「親戚」補齊「qin1 qi1」和「qin1 qi4」，後者詞頻設為80%。
+#    詞句中，「證券」和「証券」臺灣字典發音為「zheng4 quan4」，日常發音常會誤發為「zheng4 juan4」，故皆補齊「zheng4 quan4」「zheng4 juan4」，後者詞頻設為80%。
 #    詞句中，「坎坷」臺灣字典發音為「kan3 ke3」，日常發音常會誤發為「kan3 ke1」，故皆補齊「kan3 ke3」「kan3 ke1」。
 #    詞句中，「衚衕」臺灣字典發音為「hu2 tong4」，日常發音常會誤發為「hu2 tong2」，故皆補齊「hu2 tong4」「hu2 tong2」。
 #    詞句中，「拓撲」臺灣字典發音為「tuo4 pu1」，日常發音常會誤發為「tuo4 bu3」和「tuo4 pu3」，故皆補齊「tuo4 pu1」「tuo4 bu3」「tuo4 pu3」，最後者「tuo4 pu3」詞頻設為80%。
@@ -2790,6 +2792,8 @@ min_phrase_weight: 100
 皐	gu1	0%
 臯	gu1	0%
 # 臯	yao2	0%
+洁	jie2
+樗	hua4	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -55860,7 +55864,8 @@ min_phrase_weight: 100
 上浣	shang4 huan4
 上海文廣新聞傳媒集團	shang4 hai3 wen2 guang3 xin1 wen2 chuan2 mei2 ji2 tuan2
 上海浦東發展銀行	shang4 hai3 pu3 dong1 fa1 zhan3 yin2 hang2
-上海證卷交易所	shang4 hai3 zheng4 juan4 jiao1 yi4 suo3
+上海證券交易所	shang4 hai3 zheng4 quan4 jiao1 yi4 suo3
+上海證券交易所	shang4 hai3 zheng4 juan4 jiao1 yi4 suo3	80%
 上海音樂學院	shang4 hai3 yin1 yue4 xue2 yuan4
 上海體育場	shang4 hai3 ti3 yu4 chang3
 上海體育場	shang4 hai3 ti3 yu4 chang2	3%
@@ -56958,6 +56963,7 @@ min_phrase_weight: 100
 中國航空運輸協會	zhong1 guo2 hang2 kong1 yun4 shu1 xie2 hui4
 中國船舶重工集團公司	zhong1 guo2 chuan2 bo2 zhong4 gong1 ji2 tuan2 gong1 si1
 中國證券監督管理委員會	zhong1 guo2 zheng4 quan4 jian1 du1 guan3 li3 wei3 yuan2 hui4
+中國證券監督管理委員會	zhong1 guo2 zheng4 juan4 jian1 du1 guan3 li3 wei3 yuan2 hui4	80%
 中國證監會	zhong1 guo2 zheng4 jian1 hui4
 中國農業銀行	zhong1 guo2 nong2 ye4 yin2 hang2
 中國進出口銀行	zhong1 guo2 jin4 chu1 kou3 yin2 hang2
@@ -60375,6 +60381,7 @@ min_phrase_weight: 100
 傳鼓	chuan2 gu3
 傴僂	yu3 lou2
 債務擔保證券	zhai4 wu4 dan1 bao3 zheng4 quan4
+債務擔保證券	zhai4 wu4 dan1 bao3 zheng4 juan4	80%
 債多了不愁	zhai4 duo1 le5 bu4 chou2
 債台高築	zhai4 tai2 gao1 zhu2
 債臺高築	zhai4 tai2 gao1 zhu2
@@ -65206,6 +65213,7 @@ min_phrase_weight: 100
 可轉換同位素	ke3 zhuan3 huan4 tong2 wei4 su4
 可轉讓	ke3 zhuan3 rang4
 可轉讓證券	ke3 zhuan3 rang4 zheng4 quan4
+可轉讓證券	ke3 zhuan3 rang4 zheng4 juan4	80%
 可逆反應	ke3 ni4 fan3 ying4
 台州地區	tai2 zhou1 di4 qu1
 台州地區	tai1 zhou1 di4 qu1
@@ -66609,6 +66617,7 @@ min_phrase_weight: 100
 哪兒	na3 er5	80%
 哪兒	na3 er2
 哪吒	nuo2 zha4
+哪吒	ne2 zha4
 哪壺不開提哪壺	na3 hu2 bu4 kai1 ti2 na3 hu2
 哪怕	na3 pa4
 哪知	na3 zhi1
@@ -103622,6 +103631,7 @@ min_phrase_weight: 100
 行樂	xing2 le4
 行樂圖	xing2 le4 tu2
 行檔	hang2 dang3
+行檔	hang2 dang4
 行檢	xing2 jian3
 行權	xing2 quan2
 行權立斷	xing2 quan2 li4 duan4
@@ -105040,6 +105050,7 @@ min_phrase_weight: 100
 註生娘娘	zhu4 sheng1 niang2 niang2
 註生娘娘	zhu4 sheng1 niang2 niang5	80%
 證券化率	zheng4 quan4 hua4 lv4
+證券化率	zheng4 juan4 hua4 lv4	80%
 證監會	zheng4 jian1 hui4
 訾厲	zi3 li4
 訾病	zi3 bing4
@@ -105746,8 +105757,10 @@ min_phrase_weight: 100
 謾舞	man4 wu3
 謾語	man4 yu3
 謾道	man4 dao4
-證卷	zheng4 juan4
-證卷交易所	zheng4 juan4 jiao1 yi4 suo3
+證券	zheng4 quan4
+證券	zheng4 juan4	80%
+證券交易所	zheng4 quan4 jiao1 yi4 suo3
+證券交易所	zheng4 juan4 jiao1 yi4 suo3	80%
 譏刺	ji1 ci4
 譏呵	ji1 he1
 譏諷	ji1 feng4
@@ -106321,6 +106334,7 @@ min_phrase_weight: 100
 資料鏈結層	zi1 liao4 lian4 jie2 ceng2
 資淺齒少	zi1 qian3 chi3 shao4
 資產擔保證券	zi1 chan3 dan1 bao3 zheng4 quan4
+資產擔保證券	zi1 chan3 dan1 bao3 zheng4 juan4	80%
 資產重估	zi1 chan3 chong2 gu1
 資興	zi1 xing1
 資興市	zi1 xing1 shi4
@@ -115955,4 +115969,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 115958 #####
+##### @結束 END - 115972 #####
