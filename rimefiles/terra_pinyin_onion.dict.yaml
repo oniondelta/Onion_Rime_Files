@@ -2796,6 +2796,11 @@ min_phrase_weight: 100
 # 臯	yao2	0%
 洁	jie2
 樗	hua4	0%
+佻	tiao4	0%
+佻	diao3	0%
+佻	yao2	0%
+佻	dao4	0%
+佻	zhao4	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -29546,7 +29551,7 @@ min_phrase_weight: 100
 胪	lu2
 胫	jing4
 胬	nu3
-胬	nv3
+# 胬	nv3
 胭	yan1
 胮	pang1
 胯	kua4
@@ -60946,6 +60951,7 @@ min_phrase_weight: 100
 全場一致	quan2 chang2 yi2 zhi4	3%
 全場一致	quan2 chang2 yi1 zhi4	3%
 全局模塊	quan2 ju2 mo2 kuai4
+全局模塊	quan2 ju2 mu2 kuai4
 全帖	quan2 tie3
 全度音	quan2 du4 yin1
 全彩乾式印表機	quan2 cai3 gan1 shi4 yin4 biao3 ji1
@@ -63296,6 +63302,7 @@ min_phrase_weight: 100
 功績制	gong1 ji1 zhi4
 功能團	gong1 neng2 tuan2
 功能模塊	gong1 neng2 mo2 kuai4
+功能模塊	gong1 neng2 mu2 kuai4
 功行圓滿	gong1 xing2 yuan2 man3
 功過相酬	gong1 guo4 xiang1 chou2
 功高德重	gong1 gao1 de2 zhong4
@@ -69365,6 +69372,7 @@ min_phrase_weight: 100
 多模光纖	duo1 mo2 guang1 xian1
 多模光纖	duo1 mo2 guang1 qian1	80%
 多模塊	duo1 mo2 kuai4
+多模塊	duo1 mu2 kuai4
 多水分	duo1 shui3 fen4
 多災多難	duo1 zai1 duo1 nan4
 多特蒙德	duo1 te4 meng2 de2
@@ -74463,6 +74471,7 @@ min_phrase_weight: 100
 庫勒山	ku4 le4 shan1
 庫木吐拉千佛洞	ku4 mu4 tu3 la1 qian1 fo2 dong4
 庫模塊	ku4 mo2 kuai4
+庫模塊	ku4 mu2 kuai4
 庫爾勒	ku4 er3 le4
 庫爾勒市	ku4 er3 le4 shi4
 庫爾特‧瓦爾德海姆	ku4 er3 te4 eng5 wa3 er3 de2 hai3 mu3
@@ -79784,6 +79793,7 @@ min_phrase_weight: 100
 掤扒吊栲	bing1 ba1 diao4 kao3
 掤扒吊栲	bing1 pa2 diao4 kao3
 接口模塊	jie1 kou3 mo2 kuai4
+接口模塊	jie1 kou3 mu2 kuai4
 接合菌綱	jie1 he2 jun4 gang1
 接合菌綱	jie1 he2 jun1 gang1
 接地	jie1 di4
@@ -85650,11 +85660,17 @@ min_phrase_weight: 100
 模型玩具	mo2 xing2 wan2 ju4
 模型飛機	mo2 xing2 fei1 ji1
 模塊	mo2 kuai4
+模塊	mu2 kuai4
 模塊化	mo2 kuai4 hua4
+模塊化	mu2 kuai4 hua4
 模塊化理論	mo2 kuai4 hua4 li3 lun4
+模塊化理論	mu2 kuai4 hua4 li3 lun4
 模塊單元	mo2 kuai4 dan1 yuan2
+模塊單元	mu2 kuai4 dan1 yuan2
 模塊式	mo2 kuai4 shi4
+模塊式	mu2 kuai4 shi4
 模塊板	mo2 kuai4 ban3
+模塊板	mu2 kuai4 ban3
 模塑成形	mo2 su4 cheng2 xing2
 模塑成形	mo2 shuo4 cheng2 xing2	80%
 模子	mu2 zi5
@@ -115972,4 +115988,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 115975 #####
+##### @結束 END - 115991 #####
