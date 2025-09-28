@@ -111,6 +111,8 @@
 #    詞句中，「剔」臺灣字典發音為「ti1」，故皆標註為「ti1」。但「挑剔」「剔透」等詞之「剔」一般慣發音為「ti4」，故全都補齊「ti1」「ti4」。
 #    詞句中，「兒」臺灣字典發音為「er2」，慣用發音為「er5」。但為兒化音時，臺灣字典中會標註「ㄦ」，但拼音為單獨「r」，可理解為「er5」。兩岸字典中對單獨「兒」皆沒有「er1」「er5」之發音標註，故兒化音時選擇標註「er2」「er5」，不標註「er1」。
 #    詞句中，「傾」臺灣字典發音為「qing1」但日常生活發音太常使用「qing3」，故全都補齊「qing1」「qing3」。
+#    詞句中，「胺」臺灣字典發音和習慣發音為「an1」，大陸發音為「an4」，斟酌後全改成臺灣發音「an1」。
+#    詞句中，「氰」臺灣字典發音和習慣發音為「qing1」，大陸發音為「qing2」，斟酌後全改成臺灣發音「qing1」。
 #    詞句中，「危」臺灣字典發音和習慣發音為「wei2」，大陸發音為「wei1」，斟酌後全改成臺灣發音「wei2」。
 #    詞句中，「擊」臺灣字典發音和習慣發音為「ji2」，大陸發音為「ji1」，斟酌後全改成臺灣發音「ji2」。
 #    詞句中，「夕」臺灣字典發音和習慣發音為「xi4」，大陸發音為「xi1」，斟酌後全改成臺灣發音「xi4」。
@@ -3391,7 +3393,7 @@ min_phrase_weight: 100
 欻	xu4	1%
 毲	duo2	1%
 氯	lu4	1%
-氰	qing1	1%
+氰	qing1
 渣	zha3	1%
 渴	he2	1%
 渴	jie2	1%
@@ -23488,7 +23490,7 @@ min_phrase_weight: 100
 氭	dong1
 氮	dan4
 氯	lv4
-氰	qing2
+氰	qing2	1%
 氱	yang3
 氲	yun1
 氲	yun2
@@ -57285,8 +57287,8 @@ min_phrase_weight: 100
 乙種國民兵役	yi3 zhong3 guo2 min2 bing1 yi4
 乙種射線	yi3 zhong3 she4 xian4
 乙種粒子	yi3 zhong3 li4 zi3
-乙醯胺吡咯烷酮	yi3 xi1 an4 bi3 luo4 wan2 tong2
-乙醯胺吡咯烷酮	yi3 xi1 an4 bi3 luo4 wan3 tong2	80%
+乙醯胺吡咯烷酮	yi3 xi1 an1 bi3 luo4 wan2 tong2
+乙醯胺吡咯烷酮	yi3 xi1 an1 bi3 luo4 wan3 tong2	80%
 乜乜踅踅	mie1 mie1 xue2 xue2
 乜斜	mie1 xie2
 乜斜眼	mie1 xie2 yan3
@@ -65696,7 +65698,6 @@ min_phrase_weight: 100
 吞聲屏氣	tun1 sheng1 bing3 qi4
 吞雲吐霧	tun1 yun2 tu3 wu4
 吟哦	yin2 e2
-吟哦	yin2 o2
 吡吡	bi4 bi4
 吡啶	bi4 ding4
 吡啶	bi3 ding4
@@ -66588,8 +66589,15 @@ min_phrase_weight: 100
 哥子	ge1 zi5
 哥斯大黎加共和國	ge1 si1 da4 li2 jia1 gong4 he2 guo2
 哦呀	o2 ya1
+哦呀	o5 ya1
+哦呀	o2 ya5
+哦呀	o5 ya5
 哦呵	o2 he1
+哦呵	o5 he1
 哦喲	o2 yao1
+哦喲	o5 yao1
+哦喲	o2 yao5	80%
+哦喲	o5 yao5	80%
 哦詩	e2 shi1
 哨卡	shao4 qia3
 哨子	shao4 zi5
@@ -78325,7 +78333,6 @@ min_phrase_weight: 100
 抗真菌	kang4 zhen1 jun4
 抗真菌	kang4 zhen1 jun1
 抗組織胺	kang4 zu3 zhi1 an1
-抗組織胺	kang4 zu3 zhi1 an4
 抗美援朝	kang4 mei3 yuan2 chao2
 抗耐甲氧西林金葡菌	kang4 nai4 jia3 yang3 xi1 lin2 jin1 pu2 jun4
 抗耐甲氧西林金葡菌	kang4 nai4 jia3 yang3 xi1 lin2 jin1 pu2 jun1
@@ -86903,9 +86910,8 @@ min_phrase_weight: 100
 氯絲菌素	lv4 si1 jun1 su4
 氰中毒	qing1 zhong4 du2
 氰化物	qing1 hua4 wu4
-氰化物	qing2 hua4 wu4
-氰基細菌	qing2 ji1 xi4 jun4
-氰基細菌	qing2 ji1 xi4 jun1
+氰基細菌	qing1 ji1 xi4 jun4
+氰基細菌	qing1 ji1 xi4 jun1
 水上漚	shui3 shang4 ou1
 水下核爆炸	shui3 xia4 he2 bao4 zha4
 水中毒	shui3 zhong4 du2
@@ -94958,7 +94964,6 @@ min_phrase_weight: 100
 硅酸鹽水泥	gui1 suan1 yan2 shui3 ni2
 硝煙彈雨	xiao1 yan1 dan4 yu3
 硫胺素	liu2 an1 su4
-硫胺素	liu2 an4 su4
 硬度	ying4 du4
 硬弩強弓	ying4 nu3 qiang2 gong1
 硬打軟熟和	ying4 da3 ruan3 shou2 he2
@@ -97586,9 +97591,7 @@ min_phrase_weight: 100
 組織胞漿菌病	zu3 zhi1 bao1 jiang1 jun4 bing4
 組織胞漿菌病	zu3 zhi1 bao1 jiang1 jun1 bing4
 組織胺	zu3 zhi1 an1
-組織胺	zu3 zhi1 an4
 組胺	zu3 an1
-組胺	zu3 an4
 組長	zu3 zhang3
 絆倒	ban4 dao3
 絆跌	ban4 die2
@@ -99843,7 +99846,6 @@ min_phrase_weight: 100
 胸膜炎	xiong1 mo4 yan2	3%
 胸膜炎	xiong1 mo2 yan2
 胺基酸	an1 ji1 suan1
-胺基酸	an4 ji1 suan1
 胼胚種	pian2 pei1 zhong3
 能力分班	neng2 li4 fen1 ban1
 能勾	neng2 gou4
@@ -111433,6 +111435,7 @@ min_phrase_weight: 100
 間深裡	jian4 shen1 li3
 間繞式彈簧	jian4 rao4 shi4 tan2 huang2
 間胺黃	jian4 an1 huang2
+間胺黃	jian1 an1 huang2
 間腦	jian1 nao3
 間色	jian4 se4
 間苗	jian4 miao2
@@ -115969,4 +115972,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 115972 #####
+##### @結束 END - 115975 #####
