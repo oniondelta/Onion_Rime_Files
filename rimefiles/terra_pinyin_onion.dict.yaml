@@ -140,6 +140,7 @@
 #    詞句中，「質」臺灣字典不同語意分別發音「zhi2」「zhi4」，但語意品質時發「zhi2」，大陸則為「zhi4」，日常易混，故皆補齊「zhi2」「zhi4」，語意為品質等「zhi4」詞頻設為3%。
 #    詞句中，「塑」日常發音常會誤發為「shuo4」，故皆補齊「su4」「shuo4」，後者詞頻設為80%。
 #    詞句中，「遍」皆補齊「bian4」「pian4」。
+#    詞句中，「緋」日常發音常會誤發為「fei3」，故皆補齊「fei1」「fei3」，後者詞頻設為80%。
 #    詞句中，「韋」日常發音常會誤發為「wei3」，故皆補齊「wei2」「wei3」，後者詞頻設為80%。
 #    詞句中，「懲」日常發音常會誤發為「cheng3」，故皆補齊「cheng2」「cheng3」。
 #    詞句中，「痙」日常發音常會誤發為「jing1」，臺灣標準為「jing4」，故皆補齊「jing1」「jing4」。
@@ -169,7 +170,9 @@
 #    詞句中，「肯」臺灣標準為「ken3」，又音為「keng3」，日常易混，故皆補齊「ken3」「keng3」。
 #    詞句中，「誼」臺灣標準為「yi4」，又音為「yi2」，日常易混，故皆補齊「yi4」「yi2」。
 #    詞句中，「檔」臺灣標準為「dang3」，又音為「dang4」，日常易混，故皆補齊「dang3」「dang4」。
+#    詞句中，「綏」臺灣標準為「sui1」，又音為「sui2」，大陸標準為「sui2」，日常易混，故皆補齊「sui1」「sui2」。
 #    詞句中，「削」臺灣標準讀音為「xue4」，語音為「xiao1」，大陸標準為「xue1」，日常易混，故皆補齊「xue4」「xiao1」「xue1」。有些詞發音如此標註會奇怪，待攷！
+#    詞句中，「坯」皆補齊「pei1」「pi1」。
 #    詞句中，「擁」皆補齊「yong3」「yong1」。
 #    詞句中，「熟」皆補齊「shou2」「shu2」。
 #    詞句中，「暫」皆補齊「zhan4」「zan4」。
@@ -194,6 +197,8 @@
 #    詞句中，「姑娘」補齊「gu1 niang2」和「gu1 niang5」，後者詞頻設為80%。
 #    詞句中，「親戚」補齊「qin1 qi1」和「qin1 qi4」，後者詞頻設為80%。
 #    詞句中，「證券」和「証券」臺灣字典發音為「zheng4 quan4」，日常發音常會誤發為「zheng4 juan4」，故皆補齊「zheng4 quan4」「zheng4 juan4」，後者詞頻設為80%。
+#    詞句中，「氣氛」臺灣字典發音為「qi4 fen1」，日常發音常會誤發為「qi4 fen4」，故皆補齊「qi4 fen1」「qi4 fen4」。
+#    詞句中，「氛圍」臺灣字典發音為「fen1 wei2」，日常發音常會誤發為「fen4 wei2」，故皆補齊「fen1 wei2」「fen4 wei2」。
 #    詞句中，「坎坷」臺灣字典發音為「kan3 ke3」，日常發音常會誤發為「kan3 ke1」，故皆補齊「kan3 ke3」「kan3 ke1」。
 #    詞句中，「衚衕」臺灣字典發音為「hu2 tong4」，日常發音常會誤發為「hu2 tong2」，故皆補齊「hu2 tong4」「hu2 tong2」。
 #    詞句中，「拓撲」臺灣字典發音為「tuo4 pu1」，日常發音常會誤發為「tuo4 bu3」和「tuo4 pu3」，故皆補齊「tuo4 pu1」「tuo4 bu3」「tuo4 pu3」，最後者「tuo4 pu3」詞頻設為80%。
@@ -2801,6 +2806,16 @@ min_phrase_weight: 100
 佻	yao2	0%
 佻	dao4	0%
 佻	zhao4	0%
+綏	duo4	0%
+綏	shuai1	0%
+綏	rui2	0%
+綏	tuo3	0%
+绥	duo4	0%
+绥	shuai1	0%
+绥	rui2	0%
+绥	tuo3	0%
+窕	tiao1	0%
+窕	yao2	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -57955,6 +57970,7 @@ min_phrase_weight: 100
 交相輝映	jiao1 xiang1 hui1 ying4
 交結	jiao1 jie2
 交綏	jiao1 sui1
+交綏	jiao1 sui2
 交與	jiao1 yu3
 交通卡	jiao1 tong1 ka3
 交通堵塞	jiao1 tong1 du3 se4
@@ -72342,6 +72358,7 @@ min_phrase_weight: 100
 寮人民民主共和國	liao2 ren2 min2 min2 zhu3 gong4 he2 guo2
 寮寀	liao2 cai3
 寵綏	chong3 sui1
+寵綏	chong3 sui2
 寵辱不驚	chong3 ru4 bu4 jing1
 寵辱不驚	chong3 ru3 bu4 jing1
 寵辱無驚	chong3 ru4 wu2 jing1
@@ -74164,6 +74181,7 @@ min_phrase_weight: 100
 平章百姓	pian2 zhang1 bo2 xing4
 平等的法律地位	ping2 deng3 de5 fa3 lv4 di4 wei4
 平綏鐵路	ping2 sui1 tie3 lu4
+平綏鐵路	ping2 sui2 tie3 lu4
 平脈	ping2 mai4
 平台式掃描器	ping2 tai2 shi4 sao3 miao2 qi4
 平臺式掃描器	ping2 tai2 shi4 sao3 miao2 qi4
@@ -76574,6 +76592,7 @@ min_phrase_weight: 100
 惠施五車	hui4 shi1 wu3 ju1
 惠更斯	hui4 geng1 si1
 惠綏	hui4 sui1
+惠綏	hui4 sui2
 惠賜	hui4 si4
 惠賜	hui4 ci4
 惠陽地區	hui4 yang2 di4 qu1
@@ -86419,6 +86438,7 @@ min_phrase_weight: 100
 歸綏	gui1 sui1
 歸綏	gui1 sui2
 歸綏市	gui1 sui1 shi4
+歸綏市	gui1 sui2 shi4
 歸藏	gui1 cang2
 歸遺細君	gui1 wei4 xi4 jun1
 歸遺細君	gui1 yi2 xi4 jun1
@@ -93673,6 +93693,7 @@ min_phrase_weight: 100
 目空一切	mu4 kong1 yi1 qie4
 目空四海	mu4 kong1 si4 hai3
 目窕心與	mu4 tiao3 xin1 yu3
+目窕心與	mu4 tiao2 xin1 yu3	80%
 目錄卡	mu4 lu4 ka3
 盲人摸象	mang2 ren2 mo1 xiang4
 盲婚啞嫁	mang2 hun1 ya3 jia4
@@ -95426,6 +95447,7 @@ min_phrase_weight: 100
 福壽綿長	fu2 shou4 mian2 chang2
 福將	fu2 jiang4
 福履增綏	fu2 lv3 zeng1 sui1
+福履增綏	fu2 lv3 zeng1 sui2
 福業相牽	fu2 ye4 xiang1 qian1
 福氣	fu2 qi4
 福無重受日	fu2 wu2 chong2 shou4 ri4
@@ -96383,7 +96405,9 @@ min_phrase_weight: 100
 窄巴	zhai3 ba1
 窄縫	zhai3 feng4
 窈娜	yao3 nuo2
+窈娜	yao2 nuo2	80%
 窈窕淑女	yao3 tiao3 shu2 nv3
+窈窕淑女	yao2 tiao2 shu2 nv3	80%
 窒塞	zhi4 se4
 窒息	zhi4 xi2
 窒礙難行	zhi4 ai4 nan2 xing2
@@ -97903,14 +97927,21 @@ min_phrase_weight: 100
 綈袍之賜	ti2 pao2 zhi1 si4
 綈袍之賜	ti2 pao2 zhi1 ci4
 綏來縣	sui1 lai2 xian4
+綏來縣	sui2 lai2 xian4
 綏化地區	sui2 hua4 di4 qu1
+綏化地區	sui1 hua4 di4 qu1
 綏定	sui1 ding4
+綏定	sui2 ding4
 綏寧	sui1 ning2
 綏寧	sui2 ning2
 綏寧縣	sui2 ning2 xian4
+綏寧縣	sui1 ning2 xian4
 綏撫	sui1 fu3
+綏撫	sui2 fu3
 綏服	sui1 fu2
+綏服	sui2 fu2
 綏綏	sui1 sui1
+綏綏	sui2 sui2
 綏芬河	sui1 fen1 he2
 綏芬河	sui2 fen1 he2
 綏遠	sui1 yuan3
@@ -113340,6 +113371,7 @@ min_phrase_weight: 100
 靖康之難	jing4 kang1 zhi1 nan4
 靖康傳信錄	jing4 kang1 chuan2 xin4 lu4
 靖綏	jing4 sui1
+靖綏	jing4 sui2
 靖難	jing4 nan4
 靖難之役	jing4 nan2 zhi1 yi4
 靖難之變	jing4 nan4 zhi1 bian4
@@ -115988,4 +116020,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 115991 #####
+##### @結束 END - 116023 #####
