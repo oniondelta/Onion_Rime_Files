@@ -206,6 +206,7 @@
 #    詞句中，「骨頭」臺灣字典發音為「gu2 tou5」，日常發音常發，故皆補齊「gu2 tou5」「gu2 tou2」「gu3 tou5」「gu3 tou2」。
 #    詞句中，「胳膊」臺灣字典發音為「ge1 bo5」，日常發音常發「ge1 bo2」，故皆補齊「ge1 bo5」「ge1 bo2」。
 #    詞句中，「部署」臺灣字典發音為「bu4 shu4」，日常發音常發「bu4 shu3」，故皆補齊「bu4 shu4」「bu4 shu3」。
+#    詞句中，「交叉」臺灣字典發音為「jiao1 cha1」，日常發音常發「jiao1 cha4」，故皆補齊「jiao1 cha1」「jiao1 cha4」。
 #    詞句中，「擂臺」「擂台」臺灣字典發音為「lei4 tai2」，日常發音常發「lei2 tai2」，故皆補齊「lei2 tai4」「lei2 tai2」。
 #    詞句中，「相片」「照片」「影片」「碟片」「唱片」「畫片」，其「片」發音，皆補齊「pian4」和「pian1」。
 #    詞句中，「傍晚」臺灣字典發音為「bang1 wan3」，大陸標準為「bang4 wan3」，易誤按，且無相似發音詞彙，故皆補齊「bang1 wan3」「bang4 wan3」。
@@ -231,7 +232,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "202509"
+version: "202510"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -2816,6 +2817,8 @@ min_phrase_weight: 100
 绥	tuo3	0%
 窕	tiao1	0%
 窕	yao2	0%
+鵙	jue2
+扠	chai1	80%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -57939,15 +57942,25 @@ min_phrase_weight: 100
 交匯處	jiao1 hui4 chu4
 交卷	jiao1 juan4
 交叉	jiao1 cha1
+交叉	jiao1 cha4
 交叉口	jiao1 cha1 kou3
+交叉口	jiao1 cha4 kou3
 交叉學科	jiao1 cha1 xue2 ke1
+交叉學科	jiao1 cha4 xue2 ke1
 交叉感染	jiao1 cha1 gan3 ran3
+交叉感染	jiao1 cha4 gan3 ran3
 交叉火力	jiao1 cha1 huo3 li4
+交叉火力	jiao1 cha4 huo3 li4
 交叉線	jiao1 cha1 xian4
+交叉線	jiao1 cha4 xian4
 交叉耐藥性	jiao1 cha1 nai4 yao4 xing4
+交叉耐藥性	jiao1 cha4 nai4 yao4 xing4
 交叉運球	jiao1 cha1 yun4 qiu2
+交叉運球	jiao1 cha4 yun4 qiu2
 交叉陰影線	jiao1 cha1 yin1 ying3 xian4
+交叉陰影線	jiao1 cha4 yin1 ying3 xian4
 交叉點	jiao1 cha1 dian3
+交叉點	jiao1 cha4 dian3
 交口稱譽	jiao1 kou3 cheng1 yu4
 交口稱贊	jiao1 kou3 cheng1 zan4
 交子	jiao1 zi5
@@ -96545,6 +96558,7 @@ min_phrase_weight: 100
 立陶宛共和國	li4 tao2 wan3 gong4 he2 guo2
 立馬蓋橋	li4 ma3 gai4 qiao2
 立體交叉	li4 ti3 jiao1 cha1
+立體交叉	li4 ti3 jiao1 cha4
 立體停車場	li4 ti3 ting2 che1 chang2	3%
 立體停車場	li4 ti3 ting2 che1 chang3
 立體印刷	li4 ti3 yin4 shua1
@@ -111140,6 +111154,7 @@ min_phrase_weight: 100
 長臂猿	chang2 bi4 yuan2
 長臂猿	chang2 bei4 yuan2
 長臂蝦	chang2 bi4 xia1
+長臂蝦	chang2 bei4 xia1
 長至	chang2 zhi4
 長至	zhang3 zhi4
 長興	chang2 xing1
@@ -115714,6 +115729,9 @@ min_phrase_weight: 100
 黑不溜丟	hei1 bu4 liu1 diu1
 黑人音樂	hei1 ren2 yin1 yue4
 黑冠長臂猿	hei1 guan1 chang2 bi4 yuan2
+黑冠長臂猿	hei1 guan1 chang2 bei4 yuan2
+黑冠長臂猿	hei1 guan4 chang2 bi4 yuan2
+黑冠長臂猿	hei1 guan4 chang2 bei4 yuan2
 黑冠麻鷺	hei1 guan1 ma2 lu4
 黑冠麻鷺	hei1 guan4 ma2 lu4
 黑匣子	hei1 xia2 zi5
@@ -116020,4 +116038,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 116023 #####
+##### @結束 END - 116041 #####
