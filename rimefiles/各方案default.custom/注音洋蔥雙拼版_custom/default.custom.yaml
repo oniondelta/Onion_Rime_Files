@@ -8,6 +8,7 @@ patch:
   schema_list:
 ######## 洋蔥注音 雙拼 版 ########
     - schema: bopomo_onion_double
+    - schema: bopomo_onion_double_t2
     - schema: cangjie5
     - schema: symbols_bpmf_double
 ##############################

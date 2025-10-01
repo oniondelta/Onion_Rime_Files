@@ -264,6 +264,7 @@ shutil.copytree("./rimefiles/custom檔_注音mixin版兩行同顯/", "./"+sort_r
 shutil.copyfile("./rimefiles/essay-zh-hant-mc.txt", "./"+sort_rime+"/"+rime_files_4+"/essay-zh-hant-mc.txt")
 shutil.copyfile("./rimefiles/bopomo_onion_double.extended.dict.yaml", "./"+sort_rime+"/"+rime_files_4+"/bopomo_onion_double.extended.dict.yaml")
 shutil.copyfile("./rimefiles/bopomo_onion_double.schema.yaml", "./"+sort_rime+"/"+rime_files_4+"/bopomo_onion_double.schema.yaml")
+shutil.copyfile("./rimefiles/bopomo_onion_double_t2.schema.yaml", "./"+sort_rime+"/"+rime_files_4+"/bopomo_onion_double_t2.schema.yaml")
 shutil.copyfile("./rimefiles/bopomo_onion_double_phrase.txt", "./"+sort_rime+"/"+rime_files_4+"/bopomo_onion_double_phrase.txt")
 shutil.copyfile("./rimefiles/cangjie5.dict.yaml", "./"+sort_rime+"/"+rime_files_4+"/cangjie5.dict.yaml")
 shutil.copyfile("./rimefiles/cangjie5.schema.yaml", "./"+sort_rime+"/"+rime_files_4+"/cangjie5.schema.yaml")
@@ -290,7 +291,7 @@ shutil.copyfile("./rimefiles/opencc/emoji_t.txt", "./"+sort_rime+"/"+rime_files_
 
 shutil.copyfile("./rimefiles/各方案default.custom/注音洋蔥雙拼版_custom/default.custom.yaml", "./"+sort_rime+"/"+rime_files_4+"/default.custom.yaml")
 
-shutil.copytree("./rimefiles/custom檔_雙拼注音不開頭簡拼/", "./"+sort_rime+"/"+rime_files_4+"/custom檔_雙拼注音不開頭簡拼/")
+# shutil.copytree("./rimefiles/custom檔_雙拼注音不開頭簡拼/", "./"+sort_rime+"/"+rime_files_4+"/custom檔_雙拼注音不開頭簡拼/")
 shutil.copytree("./rimefiles/雙拼注音鍵位說明圖示/", "./"+sort_rime+"/"+rime_files_4+"/雙拼注音鍵位說明圖示/")
 
 

@@ -148,11 +148,12 @@ shutil.copytree("./rimefiles/custom檔_注音mixin版兩行同顯/", "./"+sort_r
 #複製檔案(注音洋蔥雙拼版)
 shutil.copyfile("./rimefiles/bopomo_onion_double.extended.dict.yaml", "./"+sort_rime+"/"+rime_files+"/bopomo_onion_double.extended.dict.yaml")
 shutil.copyfile("./rimefiles/bopomo_onion_double.schema.yaml", "./"+sort_rime+"/"+rime_files+"/bopomo_onion_double.schema.yaml")
+shutil.copyfile("./rimefiles/bopomo_onion_double_t2.schema.yaml", "./"+sort_rime+"/"+rime_files+"/bopomo_onion_double_t2.schema.yaml")
 shutil.copyfile("./rimefiles/bopomo_onion_double_phrase.txt", "./"+sort_rime+"/"+rime_files+"/bopomo_onion_double_phrase.txt")
 shutil.copyfile("./rimefiles/symbols_bpmf_double.schema.yaml", "./"+sort_rime+"/"+rime_files+"/symbols_bpmf_double.schema.yaml")
 shutil.copyfile("./rimefiles/element_bopomo_double.yaml", "./"+sort_rime+"/"+rime_files+"/element_bopomo_double.yaml")
 shutil.copyfile("./rimefiles/punct_bopomo_double.yaml", "./"+sort_rime+"/"+rime_files+"/punct_bopomo_double.yaml")
-shutil.copytree("./rimefiles/custom檔_雙拼注音不開頭簡拼/", "./"+sort_rime+"/"+rime_files+"/custom檔_雙拼注音不開頭簡拼/")
+# shutil.copytree("./rimefiles/custom檔_雙拼注音不開頭簡拼/", "./"+sort_rime+"/"+rime_files+"/custom檔_雙拼注音不開頭簡拼/")
 shutil.copytree("./rimefiles/雙拼注音鍵位說明圖示/", "./"+sort_rime+"/其他/雙拼注音鍵位說明圖示/")
 
 

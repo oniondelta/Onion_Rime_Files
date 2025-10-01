@@ -13,8 +13,9 @@ patch:
     - schema: bo_mixin3
     - schema: bopomo_onionplus
     - schema: bopomo_onionplus_space
-    - schema: bopomo_onion
     - schema: bopomo_onion_double
+    - schema: bopomo_onion_double_t2
+    - schema: bopomo_onion
     - schema: terra_pinyin_onion
     - schema: hangeul
     - schema: hangeul_hnc
