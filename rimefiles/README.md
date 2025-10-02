@@ -176,9 +176,9 @@
 ├── symbols_bpmf_double.schema.yaml            〈掛載用 系列符號（雙拼注音） 方案〉「設定檔」：雙拼注音方案掛載。
 ├── symbols_ocm.dict.yaml                      
 ├── symbols_ocm.schema.yaml                    
-├── terra_pinyin_onion.dict.yaml               〈注音相關方案〉「字詞典」：中文拼音。以兩岸字典有的發音為標準。注音相關方案和拼音等眾多方案皆有引用。原官方 terra_pinyin.dict.yaml 改寫，但已修改眾多，單個中文字發音補足兩岸詞典皆有發音，詞句用字以台灣標準為主。
+├── terra_pinyin_onion.dict.yaml               〈注音拼音相關方案〉「字詞典」：中文拼音。以兩岸字典有的發音為標準。注音相關方案和拼音等眾多方案皆有引用。原官方 terra_pinyin.dict.yaml 改寫，但已修改眾多，單個中文字發音補足兩岸詞典皆有發音，詞句用字以台灣標準為主。
 ├── terra_pinyin_onion.extended.dict.yaml      〈泰瑞拼音 mixin 方案〉「主字詞典」
 ├── terra_pinyin_onion.schema.yaml             〈泰瑞拼音 mixin 方案〉「設定檔」
-├── terra_pinyin_onion_add.dict.yaml           〈注音相關方案〉「字典」：中文拼音。補充常用發音，但兩岸字典皆沒有該發音。補充針對 terra_pinyin_onion.dict.yaml。注音相關方案和拼音等眾多方案皆有引用。
+├── terra_pinyin_onion_add.dict.yaml           〈注音拼音相關方案〉「字典」：中文拼音。補充常用發音，但兩岸字典皆沒有該發音。補充針對 terra_pinyin_onion.dict.yaml。注音相關方案和拼音等眾多方案皆有引用。
 └── uniabcdword.dict.yaml                      
 ```
