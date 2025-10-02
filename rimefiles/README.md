@@ -120,14 +120,14 @@
 ├── ocm_mixin_la.dict.yaml                     
 ├── ocm_mixin_phrase.txt                       
 ├── ocm_tc_mc.dict.yaml                        
-├── onion-array10-and-bpmf.schema.yaml        〈行列 10 方案〉「設定檔」  （大鍵盤：注音、數字鍵盤：行列10）
-├── onion-array10-generally-a.dict.yaml       〈行列 10 方案〉「字典」
-├── onion-array10-generally-b.dict.yaml       〈行列 10 方案〉「字典」
-├── onion-array10-generally-c.dict.yaml       〈行列 10 方案〉「字典」
-├── onion-array10-symbols-prefix.dict.yaml    〈行列 10 方案〉須輸入前綴之符號「字典」
-├── onion-array10-symbols.dict.yaml           〈行列 10 方案〉直出之符號「字典」
-├── onion-array10.extended.dict.yaml          〈行列 10 方案〉「主字詞典」
-├── onion-array10.schema.yaml                 〈行列 10 方案〉「設定檔」  （純行列10）
+├── onion-array10-and-bpmf.schema.yaml         〈行列 10 方案〉「設定檔」  （大鍵盤：注音、數字鍵盤：行列10）
+├── onion-array10-generally-a.dict.yaml        〈行列 10 方案〉「字典」
+├── onion-array10-generally-b.dict.yaml        〈行列 10 方案〉「字典」
+├── onion-array10-generally-c.dict.yaml        〈行列 10 方案〉「字典」
+├── onion-array10-symbols-prefix.dict.yaml     〈行列 10 方案〉須輸入前綴之符號「字典」
+├── onion-array10-symbols.dict.yaml            〈行列 10 方案〉直出之符號「字典」
+├── onion-array10.extended.dict.yaml           〈行列 10 方案〉「主字詞典」
+├── onion-array10.schema.yaml                  〈行列 10 方案〉「設定檔」  （純行列10）
 ├── onion-array30-generally.dict.yaml          〈行列 30 方案〉「字典」
 ├── onion-array30-phrases.dict.yaml            〈行列 30 方案〉多字詞句「詞典」
 ├── onion-array30-shortcode.dict.yaml          〈行列 30 方案〉簡碼「字典」
