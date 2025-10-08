@@ -153,6 +153,7 @@
 #    詞句中，「鷲」日常發音常會誤發為「jiu1」，臺灣標準為「jiu4」，故皆補齊「jiu4」「jiu1」，後者詞頻設為80%。
 #    詞句中，「驟」臺灣標準為「zou4」，大陸標準為「zhou4」，兩者易混淆，故皆補齊「zou4」「zhou4」。
 #    詞句中，「縛」臺灣標準為「fu2」，大陸標準為「fu4」，兩者易混淆，故皆補齊「fu2」「fu4」。
+#    詞句中，「潛」臺灣標準為「qian2」，日常發音常會誤發為「qian3」，故皆補齊「qian2」「qian3」，後者詞頻設為80%。
 #    詞句中，「擬」臺灣標準為「ni3」，日常發音常會誤發為「ni2」，故皆補齊「ni3」「ni2」，後者詞頻設為80%。
 #    詞句中，「綺」臺灣標準為「qi3」，日常發音常會誤發為「qi2」，故皆補齊「qi3」「qi2」，後者詞頻設為80%。
 #    詞句中，「焙」臺灣標準為「bei4」，日常發音常會誤發為「pei2」，故皆補齊「bei4」「pei2」，後者詞頻設為80%。
@@ -168,8 +169,10 @@
 #    詞句中，「綜」臺灣標準為「zong4」，日常發音常會發「zong1」，故皆補齊「zong4」「zong1」。
 #    詞句中，「究」臺灣標準為「jiu4」，又音為「jiu1」，日常易混，故皆補齊「jiu4」「jiu1」。
 #    詞句中，「肯」臺灣標準為「ken3」，又音為「keng3」，日常易混，故皆補齊「ken3」「keng3」。
+#    詞句中，「亙」臺灣標準為「gen4」，又音為「geng4」，日常易混，故皆補齊「gen4」「geng4」。
 #    詞句中，「誼」臺灣標準為「yi4」，又音為「yi2」，日常易混，故皆補齊「yi4」「yi2」。
 #    詞句中，「檔」臺灣標準為「dang3」，又音為「dang4」，日常易混，故皆補齊「dang3」「dang4」。
+#    詞句中，「肋」臺灣標準為「le4」，又音為「lei4」，日常易混，故皆補齊「le4」「lei4」。
 #    詞句中，「綏」臺灣標準為「sui1」，又音為「sui2」，大陸標準為「sui2」，日常易混，故皆補齊「sui1」「sui2」。
 #    詞句中，「削」臺灣標準讀音為「xue4」，語音為「xiao1」，大陸標準為「xue1」，日常易混，故皆補齊「xue4」「xiao1」「xue1」。有些詞發音如此標註會奇怪，待攷！
 #    詞句中，「坯」皆補齊「pei1」「pi1」。
@@ -2821,6 +2824,8 @@ min_phrase_weight: 100
 扠	chai1	80%
 䔰	fu2
 # 葍	fu4	0%
+厝	ji2	0%
+肋	jin1	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -61629,6 +61634,8 @@ min_phrase_weight: 100
 凱子	kai3 zi5
 凱撒肋雅	kai3 sa1 lei4 ya3
 凱撒肋雅	kai3 sa4 lei4 ya3	80%
+凱撒肋雅	kai3 sa1 le4 ya3
+凱撒肋雅	kai3 sa4 le4 ya3	80%
 凱撒醬	kai3 sa1 jiang4
 凱撒醬	kai3 sa4 jiang4	80%
 凱旋	kai3 xuan2
@@ -63954,6 +63961,7 @@ min_phrase_weight: 100
 匿影藏形	ni4 ying3 cang2 xing2
 匿跡	ni4 ji1
 匿跡潛形	ni4 ji1 qian2 xing2
+匿跡潛形	ni4 ji1 qian3 xing2	80%
 匿跡銷聲	ni4 ji1 xiao1 sheng1
 匿跡隱形	ni4 ji1 yin3 xing2
 區分	qu1 fen1
@@ -65995,6 +66003,7 @@ min_phrase_weight: 100
 味噌湯	wei4 ceng1 tang1
 味噌湯	wei4 zeng1 tang1
 味如雞肋	wei4 ru2 ji1 le4
+味如雞肋	wei4 ru2 ji1 lei4
 味道	wei4 dao4
 呴呴	xu3 xu3
 呴喻	xu3 yu2
@@ -72666,8 +72675,10 @@ min_phrase_weight: 100
 導引胎息	dao3 yin3 tai1 xi2
 導彈	dao3 dan4
 導彈核潛艇	dao3 dan4 he2 qian2 ting3
+導彈核潛艇	dao3 dan4 he2 qian3 ting3	80%
 導彈武器技術控制制度	dao3 dan4 wu3 qi4 ji4 shu4 kong4 zhi4 zhi4 du4
 導彈潛艇	dao3 dan4 qian2 ting3
+導彈潛艇	dao3 dan4 qian3 ting3	80%
 導播	dao3 bo4
 導播	dao3 bo1
 導數	dao3 shu4
@@ -75224,6 +75235,7 @@ min_phrase_weight: 100
 彌勒縣	mi2 le4 xian4
 彌勒菩薩	mi2 le4 pu2 sa4
 彌天亙地	mi2 tian1 gen4 di4
+彌天亙地	mi2 tian1 geng4 di4
 彌撒	mi2 sa1
 彌撒	mi2 sa4	80%
 彌撒曲	mi2 sa1 qu3
@@ -81731,6 +81743,7 @@ min_phrase_weight: 100
 教科文組織	jiao4 ke1 wen2 zu3 zhi1
 教科書	jiao4 ke1 shu1
 教程	jiao4 cheng2
+教程	jiao1 cheng2
 教練	jiao4 lian4
 教練員	jiao4 lian4 yuan2
 教練團	jiao4 lian4 tuan2
@@ -85873,6 +85886,7 @@ min_phrase_weight: 100
 橫了心	heng2 le5 xin1
 橫事	heng4 shi4
 橫亙	heng2 gen4
+橫亙	heng2 geng4
 橫亡	heng4 wang2
 橫刀奪愛	heng2 dao1 duo2 ai4
 橫切	heng2 qie1
@@ -89682,18 +89696,29 @@ min_phrase_weight: 100
 潘岳白髮	pan1 yue4 bai2 fa3
 溈仰宗	gui1 yang3 zong1
 潛伏期	qian2 fu2 qi2
-潛伏期	qian3 fu2 qi2
+潛伏期	qian3 fu2 qi2	80%
 潛在危機	qian2 zai4 wei2 ji1
+潛在危機	qian3 zai4 wei2 ji1	80%
 潛在危險度	qian2 zai4 wei2 xian3 du4
+潛在危險度	qian3 zai4 wei2 xian3 du4	80%
 潛形匿跡	qian2 xing2 ni4 ji1
+潛形匿跡	qian3 xing2 ni4 ji1	80%
 潛意識	qian2 yi4 shi4
+潛意識	qian3 yi4 shi4	80%
 潛意識歷程	qian2 yi4 shi4 li4 cheng2
+潛意識歷程	qian3 yi4 shi4 li4 cheng2	80%
 潛水炸彈	qian2 shui3 zha4 dan4
+潛水炸彈	qian3 shui3 zha4 dan4	80%
 潛沒	qian2 mo4
+潛沒	qian3 mo4	80%
 潛藏	qian2 cang2
+潛藏	qian3 cang2	80%
 潛行	qian2 xing2
+潛行	qian3 xing2	80%
 潛蹤隱跡	qian2 zong1 yin3 ji1
+潛蹤隱跡	qian3 zong1 yin3 ji1	80%
 潛身遠跡	qian2 shen1 yuan3 ji1
+潛身遠跡	qian3 shen1 yuan3 ji1	80%
 潝潝	xi4 xi4
 潞涿君	lu4 zhuo2 jun1
 潢池弄兵	huang2 chi2 nong4 bing1
@@ -93226,6 +93251,7 @@ min_phrase_weight: 100
 白髮蒼蒼	bai2 fa3 cang1 cang1
 白髮蒼顏	bai2 fa3 cang1 yan2
 白髮郎潛	bai2 fa3 lang2 qian2
+白髮郎潛	bai2 fa3 lang2 qian3	80%
 白髮銀鬚	bai2 fa3 yin2 xu1
 白髮青衫	bai2 fa3 qing1 shan1
 白髮齊眉	bai2 fa3 qi2 mei2
@@ -97047,6 +97073,7 @@ min_phrase_weight: 100
 粗樂	cu1 yue4
 粗率	cu1 shuai4
 粗肋草	cu1 le4 cao3
+粗肋草	cu1 lei4 cao3
 粗脖子紅臉	cu1 bo2 zi5 hong2 lian3
 粗衣惡食	cu1 yi1 e4 shi2
 粗重	cu1 zhong4
@@ -99594,16 +99621,23 @@ min_phrase_weight: 100
 肉顫心驚	rou4 chan4 xin1 jing1
 肉顫心驚	rou4 zhan4 xin1 jing1
 肋筋	le4 jin1
+肋筋	lei4 jin1
 肋膜	le4 mo4	3%
 肋膜	le4 mo2
+肋膜	lei4 mo4	3%
+肋膜	lei4 mo2
 肋膜炎	le4 mo4 yan2	3%
 肋膜炎	le4 mo2 yan2
+肋膜炎	lei4 mo4 yan2	3%
+肋膜炎	lei4 mo2 yan2
 肋部	le4 bu4
+肋部	lei4 bu4
 肋間肌	le4 jian1 ji1
 肋間肌	lei4 jian4 ji1
 肋骨	le4 gu3
 肋骨	lei4 gu3
 肋骨舉肌	le4 gu3 ju3 ji1
+肋骨舉肌	lei4 gu3 ju3 ji1
 肌肉萎縮症	ji1 rou4 wei1 suo1 zheng4
 肌肉萎縮症	ji1 rou4 wei3 suo1 zheng4
 肌膚之親	ji1 fu1 zhi1 qin1
@@ -108629,6 +108663,7 @@ min_phrase_weight: 100
 遁藏	dun4 cang2
 遁跡	dun4 ji1
 遁跡潛形	dun4 ji1 qian2 xing2
+遁跡潛形	dun4 ji1 qian3 xing2	80%
 遁跡銷聲	dun4 ji1 xiao1 sheng1
 遂寧	sui4 ning2
 遂寧市	sui4 ning2 shi4
@@ -108711,6 +108746,7 @@ min_phrase_weight: 100
 過五關斬六將	guo4 wu3 guan1 zhan3 liu4 jiang4
 過來	guo4 lai2
 過分	guo4 fen4
+過分	guo4 fen1
 過半數	guo4 ban4 shu4
 過去	guo4 qu4
 過去分詞	guo4 qu4 fen1 ci2
@@ -109096,16 +109132,22 @@ min_phrase_weight: 100
 邊騎	bian1 qi2
 邋裡邋遢	la2 li3 la2 ta4
 邋裡邋遢	la2 li3 la2 ta1	80%
+邋裡邋遢	la2 li3 la2 ta5	80%
 邋裡邋遢	la1 li3 la1 ta4
 邋裡邋遢	la1 li3 la1 ta1	80%
+邋裡邋遢	la1 li3 la1 ta5	80%
 邋遢	la2 ta4
 邋遢	la2 ta1	80%
+邋遢	la2 ta5	80%
 邋遢	la1 ta4
 邋遢	la1 ta1	80%
+邋遢	la1 ta5	80%
 邋遢本	la2 ta4 ben3
 邋遢本	la2 ta1 ben3	80%
+邋遢本	la2 ta5 ben3	80%
 邋遢本	la1 ta4 ben3
 邋遢本	la1 ta1 ben3	80%
+邋遢本	la1 ta5 ben3	80%
 邋邋	lie4 lie4
 邏輯	luo2 ji2
 邏輯代數	luo2 ji2 dai4 shu4
@@ -109239,6 +109281,7 @@ min_phrase_weight: 100
 郎世寧	lang2 shi4 ning2
 郎個	lang2 ge5
 郎潛白髮	lang2 qian2 bo2 fa3
+郎潛白髮	lang2 qian3 bo2 fa3	80%
 郎當	lang2 dang1
 郘鐘	lv3 zhong1
 郢書燕說	ying3 shu1 yan1 shuo1
@@ -109597,6 +109640,7 @@ min_phrase_weight: 100
 重利	zhong4 li4
 重利盤剝	zhong4 li4 pan2 bo1
 重創	chong2 chuang1
+重創	chong2 chuang4
 重創	zhong4 chuang1
 重創	zhong4 chuang4
 重劃	chong2 hua4
@@ -110240,6 +110284,7 @@ min_phrase_weight: 100
 銅模	tong2 mo2
 銅盆撞了鐵掃帚	tong2 pen2 zhuang4 le5 tie3 sao4 zhou3
 銅筋鐵肋	tong2 jin1 tie3 le4
+銅筋鐵肋	tong2 jin1 tie3 lei4
 銅管樂器	tong2 guan3 yue4 qi4
 銅管樂隊	tong2 guan3 yue4 dui4
 銅臭	tong2 xiu4
@@ -112830,6 +112875,7 @@ min_phrase_weight: 100
 雞肋	ji1 le4
 雞肋	ji1 lei4
 雞肋尊拳	ji1 le4 zun1 quan2
+雞肋尊拳	ji1 lei4 zun1 quan2
 雞膚鶴髮	ji1 fu1 he4 fa3
 雞蛋殼兒	ji1 dan4 ke2 er5	80%
 雞蛋殼兒	ji1 dan4 ke2 er2
@@ -115990,7 +116036,8 @@ min_phrase_weight: 100
 龍山落帽	long2 shan1 luo4 mao4
 龍巖地區	long2 yan2 di4 qu1
 龍柏	long2 bo2
-龍潛	long2 qian3
+龍潛	long2 qian2
+龍潛	long2 qian3	80%
 龍潭虎穴	long2 tan2 hu3 xue4
 龍無雲而不行	long2 wu2 yun2 er2 bu4 xing2
 龍爪	long2 zhao3
@@ -116040,4 +116087,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 116043 #####
+##### @結束 END - 116090 #####
