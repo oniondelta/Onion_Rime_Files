@@ -1836,8 +1836,8 @@ min_phrase_weight: 100
 撅	jue2	50%
 済	ji3	0.2%
 济	ji3	0.2%
-鏤	lv2	0.2%
-镂	lv2	0.2%
+鏤	lv2	0%
+镂	lv2	0%
 煖	xuan1	0.2%
 # 散	san1	0.1%
 # 散	san5	0.1%
@@ -2826,6 +2826,9 @@ min_phrase_weight: 100
 # 葍	fu4	0%
 厝	ji2	0%
 肋	jin1	0%
+# 㵢	lei3	0%
+侗	tong3	0%
+侗	tong1	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -54670,6 +54673,9 @@ min_phrase_weight: 100
 一個饅頭	yi2 ge5 man2 tou5
 一個饅頭	yi1 ge5 man2 tou5
 一個饅頭	yi4 ge5 man2 tou5
+一個饅頭	yi2 ge5 man2 tou2
+一個饅頭	yi1 ge5 man2 tou2
+一個饅頭	yi4 ge5 man2 tou2
 一個鼻孔出氣	yi2 ge5 bi2 kong3 chu1 qi4
 一個鼻孔出氣	yi1 ge5 bi2 kong3 chu1 qi4
 一個鼻孔出氣	yi4 ge5 bi2 kong3 chu1 qi4
@@ -62292,6 +62298,7 @@ min_phrase_weight: 100
 切碎	qie1 sui4
 切磋	qie1 cuo1
 切磋琢磨	qie1 cuo1 zhuo2 mo2
+切磋琢磨	qie1 cuo1 zhuo2 mo4
 切磋琢磨	qie1 cuo1 zuo2 mo2
 切磋琢磨	qie1 cuo1 zuo2 mo4
 切空間	qie1 kong1 jian1
@@ -68171,6 +68178,7 @@ min_phrase_weight: 100
 土豆泥	tu3 dou4 ni2
 土長根生	tu3 zhang3 gen1 sheng1
 土饅頭	tu3 man2 tou5
+土饅頭	tu3 man2 tou2
 在不夷不惠之間	zai4 bu4 yi2 bu2 hui4 zhi1 jian1
 在乎	zai4 hu1
 在傳輸過程中	zai4 chuan2 shu1 guo4 cheng2 zhong1
@@ -70148,6 +70156,7 @@ min_phrase_weight: 100
 天荊地棘	tian1 jing1 di4 ji2
 天荒地老	tian1 huang1 di4 lao3
 天落饅頭狗造化	tian1 luo4 man2 tou5 gou3 zao4 hua4
+天落饅頭狗造化	tian1 luo4 man2 tou2 gou3 zao4 hua4
 天行	tian1 xing2
 天行健	tian1 xing2 jian4
 天行時氣	tian1 xing2 shi2 qi4
@@ -77049,6 +77058,8 @@ min_phrase_weight: 100
 憤怒痙攣	fen4 nu4 jing1 lvan2	80%
 憤怒痙攣	fen4 nu4 jing4 luan2
 憤怒痙攣	fen4 nu4 jing1 luan2	80%
+憤怒痙攣	fen4 nu4 jing4 lian4
+憤怒痙攣	fen4 nu4 jing1 lian4	80%
 憤惋	fen4 wan4
 憤惋	fen4 wan3
 憤薄	fen4 bo2
@@ -78932,10 +78943,16 @@ min_phrase_weight: 100
 拘拘縮縮	ju1 ju1 suo1 suo1
 拘攣	ju1 lvan2
 拘攣	ju1 luan2
+拘攣	ju1 lian4
 拘攣兒	ju1 luan2 er5	80%
+拘攣兒	ju1 luan2 er2
+拘攣兒	ju1 lvan2 er5	80%
 拘攣兒	ju1 lvan2 er2
+拘攣兒	ju1 lian4 er5	80%
+拘攣兒	ju1 lian4 er2
 拘攣補衲	ju1 lvan2 bu3 na4
 拘攣補衲	ju1 luan2 bu3 na4
+拘攣補衲	ju1 lian4 bu3 na4
 拘神遣將	ju1 shen2 qian3 jiang4
 拘繫	ju1 xi4
 拘頭	ju1 tou5
@@ -79065,6 +79082,7 @@ min_phrase_weight: 100
 拳擊	quan2 ji2
 拳攣	quan2 lvan2
 拳攣	quan2 luan2
+拳攣	quan2 lian4
 拳曲	quan2 qu1
 拳頭	quan2 tou5
 拳頭	quan2 tou2
@@ -81381,12 +81399,16 @@ min_phrase_weight: 100
 攢露	cuan2 lou4
 攣弱	lvan2 ruo4
 攣弱	luan2 ruo4
+攣弱	lian4 ruo4
 攣攣	lvan2 lvan2
 攣攣	luan2 luan2
+攣攣	lian4 lian4
 攣踠	lvan2 wan3
 攣踠	luan2 wan3
+攣踠	lian4 wan3
 攣躄	lvan2 bi4
 攣躄	luan2 bi4
+攣躄	lian4 bi4
 攤分	tan1 fen1
 攤場	tan1 chang2	3%
 攤場	tan1 chang3
@@ -82232,6 +82254,7 @@ min_phrase_weight: 100
 斗儲	dou3 chu2
 斗大的手卷	dou3 da4 de5 shou3 juan4
 斗大的饅頭	dou3 da4 de5 man2 tou5
+斗大的饅頭	dou3 da4 de5 man2 tou2
 斗子	dou3 zi5
 斗杓	dou3 biao1
 斗杓東指	dou3 biao1 dong1 zhi3
@@ -90656,6 +90679,8 @@ min_phrase_weight: 100
 熱痙攣	re4 jing1 lvan2	80%
 熱痙攣	re4 jing4 luan2
 熱痙攣	re4 jing1 luan2	80%
+熱痙攣	re4 jing4 lian4
+熱痙攣	re4 jing1 lian4	80%
 熱發光劑量計	re4 fa1 guang1 ji4 liang4 ji4
 熱脈衝	re4 mai4 chong1
 熱處理	re4 chu3 li3
@@ -91983,6 +92008,7 @@ min_phrase_weight: 100
 理鬍子	li3 hu2 zi5
 琉璃喇叭	liu2 li2 la3 ba1
 琢磨	zhuo2 mo2
+琢磨	zhuo2 mo4
 琢磨	zuo2 mo2
 琢磨	zuo2 mo4
 琦行	qi2 xing4
@@ -92910,13 +92936,17 @@ min_phrase_weight: 100
 痘疹娘娘	dou4 zhen3 niang2 niang2
 痘疹娘娘	dou4 zhen3 niang2 niang5	80%
 痙攣	jing4 lvan2
-痙攣	jing1 luan2	80%
-痙攣	jing4 luan2
 痙攣	jing1 lvan2	80%
+痙攣	jing4 luan2
+痙攣	jing1 luan2	80%
+痙攣	jing4 lian4
+痙攣	jing1 lian4	80%
 痙攣派	jing4 lvan2 pai4
 痙攣派	jing1 lvan2 pai4	80%
 痙攣派	jing4 luan2 pai4
 痙攣派	jing1 luan2 pai4	80%
+痙攣派	jing4 lian4 pai4
+痙攣派	jing1 lian4 pai4	80%
 痛切	tong4 qie4
 痛切心骨	tong4 qie4 xin1 gu3
 痛喝	tong4 he1
@@ -100200,6 +100230,7 @@ min_phrase_weight: 100
 腳鐐	jiao3 liao2
 腳鐐	jiao3 liao4
 腳鐐手銬	jiao3 liao2 shou3 kao4
+腳鐐手銬	jiao3 liao4 shou3 kao4
 腳鴨子	jiao3 ya1 zi5
 腸仔	chang2 zi3
 腸子	chang2 zi5
@@ -110136,7 +110167,8 @@ min_phrase_weight: 100
 金鈿	jin1 dian4
 金鋪	jin1 pu4
 金鎦子	jin1 liu4 zi5
-金鏤玉衣	jin1 lv3 yu4 yi1
+金鏤玉衣	jin1 lv3 yu4 yi1	80%
+金鏤玉衣	jin1 lou4 yu4 yi1
 金鑰匙	jin1 yao4 shi5
 金鑰匙	jin1 yao4 shi3	80%
 金鑰匙	jin1 yao4 shi2	80%
@@ -110635,6 +110667,7 @@ min_phrase_weight: 100
 鏡破釵分	jing4 po4 chai1 fen1
 鏡面呢	jing4 mian4 ni2
 鏤空	lou4 kong1
+鏤空	lou3 kong1	80%
 鏨子	zan4 zi5
 鏹水	qiang1 shui3
 鐃吹	nao2 chui4
@@ -114439,6 +114472,7 @@ min_phrase_weight: 100
 饅頭	man2 tou2
 饅頭	man2 tou5
 饅頭不吃惹身羶	man2 tou5 bu4 chi1 re3 shen1 shan1
+饅頭不吃惹身羶	man2 tou2 bu4 chi1 re3 shen1 shan1
 饅頭果	man2 tou5 guo3
 饅頭果	man2 tou2 guo3
 饊子	san3 zi5
@@ -116087,4 +116121,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 116090 #####
+##### @結束 END - 116124 #####
