@@ -5039,7 +5039,7 @@ min_phrase_weight: 100
 払	fan3	0.3%
 扽	den4	0.3%
 抝	ao4	0.3%
-拽	zhuai3	10%
+# 拽	zhuai3	0.3%
 挱	suo1	0.3%
 挵	nong4	0.3%
 捙	ye4	0.3%
@@ -20718,7 +20718,7 @@ min_phrase_weight: 100
 拻	hui1
 拼	pin1
 拽	ye4	5%
-拽	zhuai1	30%
+拽	zhuai1	5%
 拽	zhuai4	90%
 拾	shi2
 拿	na2
@@ -63736,7 +63736,7 @@ min_phrase_weight: 100
 勾拳	gou1 quan2
 勾拽	gou1 zhuai4
 勾拽	gou1 zhuai1
-勾拽	gou1 zhuai3
+勾拽	gou1 zhuai3	80%
 勾拽	gou1 ye4
 勾捉	gou1 zhuo1
 勾提	gou1 ti2
@@ -73748,7 +73748,7 @@ min_phrase_weight: 100
 巴拉拉卡琴	ba1 la1 la1 ka3 qin2
 巴拽	ba1 zhuai4
 巴拽	ba1 zhuai1
-巴拽	ba1 zhuai3
+巴拽	ba1 zhuai3	80%
 巴拽	ba1 ye4
 巴拿馬共和國	ba1 na2 ma3 gong4 he2 guo2
 巴拿馬地峽	ba1 na2 ma3 di4 xia2
@@ -78141,7 +78141,7 @@ min_phrase_weight: 100
 扯扯拽拽	che3 che3 ye4 ye4
 扯扯拽拽	che3 che3 zhuai4 zhuai4
 扯扯拽拽	che3 che3 zhuai1 zhuai1
-扯扯拽拽	che3 che3 zhuai3 zhuai3
+扯扯拽拽	che3 che3 zhuai3 zhuai3	80%
 扯撮	che3 cuo4
 扯曳	che3 yi4
 扯架子	che3 jia4 zi5
@@ -78933,7 +78933,7 @@ min_phrase_weight: 100
 拖拽	tuo1 ye4
 拖拽	tuo1 zhuai4
 拖拽	tuo1 zhuai1
-拖拽	tuo1 zhuai3
+拖拽	tuo1 zhuai3	80%
 拖泥帶水	tuo1 ni2 dai4 shui3
 拖男挾女	tuo1 nan2 xie2 nv3
 拖磨	tuo1 mo2
@@ -78941,11 +78941,11 @@ min_phrase_weight: 100
 拖鎗拽棒	tuo1 qiang1 ye4 bang4
 拖鎗拽棒	tuo1 qiang1 zhuai4 bang4
 拖鎗拽棒	tuo1 qiang1 zhuai1 bang4
-拖鎗拽棒	tuo1 qiang1 zhuai3 bang4
+拖鎗拽棒	tuo1 qiang1 zhuai3 bang4	80%
 拖長	tuo1 chang2
 拖麻拽布	tuo1 ma2 zhuai4 bu4
 拖麻拽布	tuo1 ma2 zhuai1 bu4
-拖麻拽布	tuo1 ma2 zhuai3 bu4
+拖麻拽布	tuo1 ma2 zhuai3 bu4	80%
 拖麻拽布	tuo1 ma2 ye4 bu4
 拗不登	ao4 bu4 deng1
 拗不過	ao4 bu2 guo4
@@ -79150,51 +79150,51 @@ min_phrase_weight: 100
 拼起來	pin1 qi3 lai2
 拽塌	zhuai4 ta1
 拽塌	zhuai1 ta1
-拽塌	zhuai3 ta1
+拽塌	zhuai3 ta1	80%
 拽塌	ye4 ta1
 拽大拳	zhuai1 da4 quan2
-拽大拳	zhuai3 da4 quan2
+拽大拳	zhuai3 da4 quan2	80%
 拽大拳	zhuai4 da4 quan2
 拽大拳	ye4 da4 quan2
 拽巷攞街	zhuai4 xiang4 luo2 jie1
 拽巷攞街	zhuai1 xiang4 luo2 jie1
-拽巷攞街	zhuai3 xiang4 luo2 jie1
+拽巷攞街	zhuai3 xiang4 luo2 jie1	80%
 拽巷攞街	ye4 xiang4 luo2 jie1
 拽巷邏街	zhuai4 xiang4 luo2 jie1
 拽巷邏街	zhuai1 xiang4 luo2 jie1
-拽巷邏街	zhuai3 xiang4 luo2 jie1
+拽巷邏街	zhuai3 xiang4 luo2 jie1	80%
 拽巷邏街	ye4 xiang4 luo2 jie1
 拽布披麻	zhuai4 bu4 pi1 ma2
 拽布披麻	zhuai1 bu4 pi1 ma2
-拽布披麻	zhuai3 bu4 pi1 ma2
+拽布披麻	zhuai3 bu4 pi1 ma2	80%
 拽布披麻	ye4 bu4 pi1 ma2
 拽布拖麻	zhuai4 bu4 tuo1 ma2
 拽布拖麻	zhuai1 bu4 tuo1 ma2
-拽布拖麻	zhuai3 bu4 tuo1 ma2
+拽布拖麻	zhuai3 bu4 tuo1 ma2	80%
 拽布拖麻	ye4 bu4 tuo1 ma2
 拽扎	zhuai4 zha1
 拽扎	zhuai1 zha1
-拽扎	zhuai3 zha1
+拽扎	zhuai3 zha1	80%
 拽扎	ye4 zha1
 拽欛扶犁	zhuai4 ba4 fu2 li2
 拽欛扶犁	zhuai1 ba4 fu2 li2
-拽欛扶犁	zhuai3 ba4 fu2 li2
+拽欛扶犁	zhuai3 ba4 fu2 li2	80%
 拽欛扶犁	ye4 ba4 fu2 li2
 拽步	zhuai4 bu4
 拽步	zhuai1 bu4
-拽步	zhuai3 bu4
+拽步	zhuai3 bu4	80%
 拽步	ye4 bu4
 拽滿	zhuai4 man3
 拽滿	zhuai1 man3
-拽滿	zhuai3 man3
+拽滿	zhuai3 man3	80%
 拽滿	ye4 man3
 拽耙扶犁	zhuai4 pa2 fu2 li2
 拽耙扶犁	zhuai1 pa2 fu2 li2
-拽耙扶犁	zhuai3 pa2 fu2 li2
+拽耙扶犁	zhuai3 pa2 fu2 li2	80%
 拽耙扶犁	ye4 pa2 fu2 li2
 拽象拖犀	zhuai4 xiang4 tuo1 xi1
 拽象拖犀	zhuai1 xiang4 tuo1 xi1
-拽象拖犀	zhuai3 xiang4 tuo1 xi1
+拽象拖犀	zhuai3 xiang4 tuo1 xi1	80%
 拽象拖犀	ye4 xiang4 tuo1 xi1
 拾得	shi2 de2
 拾掇	shi2 duo1
@@ -84586,7 +84586,7 @@ min_phrase_weight: 100
 東干	dong1 gan1
 東扯西拽	dong1 che3 xi1 zhuai4
 東扯西拽	dong1 che3 xi1 zhuai1
-東扯西拽	dong1 che3 xi1 zhuai3
+東扯西拽	dong1 che3 xi1 zhuai3	80%
 東扯西拽	dong1 che3 xi1 ye4
 東扶西倒	dong1 fu2 xi1 dao3
 東折西繞	dong1 zhe2 xi1 rao4
@@ -86042,7 +86042,7 @@ min_phrase_weight: 100
 橫披	heng2 pi1
 橫拖倒拽	heng2 tuo1 dao4 zhuai4
 橫拖倒拽	heng2 tuo1 dao4 zhuai1
-橫拖倒拽	heng2 tuo1 dao4 zhuai3
+橫拖倒拽	heng2 tuo1 dao4 zhuai3	80%
 橫拖倒拽	heng2 tuo1 dao4 ye4
 橫挑鼻子	heng2 tiao1 bi2 zi5
 橫挑鼻子	heng2 tiao1 bi2 zi3
@@ -86620,7 +86620,7 @@ min_phrase_weight: 100
 死性	si3 xing4
 死拉活拽	si3 la1 huo2 zhuai4
 死拉活拽	si3 la1 huo2 zhuai1
-死拉活拽	si3 la1 huo2 zhuai3
+死拉活拽	si3 la1 huo2 zhuai3	80%
 死拉活拽	si3 la1 huo2 ye4
 死於安樂	si3 yu2 an1 le4
 死有處	si3 you3 chu4
@@ -92367,11 +92367,11 @@ min_phrase_weight: 100
 生態結構	sheng1 tai4 jie2 gou4
 生拉硬拽	sheng1 la1 ying4 zhuai4
 生拉硬拽	sheng1 la1 ying4 zhuai1
-生拉硬拽	sheng1 la1 ying4 zhuai3
+生拉硬拽	sheng1 la1 ying4 zhuai3	80%
 生拉硬拽	sheng1 la1 ying4 ye4
 生拖死拽	sheng1 tuo1 si3 zhuai4
 生拖死拽	sheng1 tuo1 si3 zhuai1
-生拖死拽	sheng1 tuo1 si3 zhuai3
+生拖死拽	sheng1 tuo1 si3 zhuai3	80%
 生拖死拽	sheng1 tuo1 si3 ye4
 生日卡	sheng1 ri4 ka3
 生日快樂	sheng1 ri4 kuai4 le4
@@ -98645,7 +98645,7 @@ min_phrase_weight: 100
 繃扒弔拷	beng4 pa2 diao4 kao3
 繃拽	beng1 zhuai4
 繃拽	beng1 zhuai1
-繃拽	beng1 zhuai3
+繃拽	beng1 zhuai3	80%
 繃拽	beng1 ye4
 繃接	beng1 jie1
 繃爬吊拷	beng1 pa2 diao4 kao3
@@ -98658,7 +98658,7 @@ min_phrase_weight: 100
 繃線	beng1 xian4
 繃繃拽拽	beng1 beng1 zhuai4 zhuai4
 繃繃拽拽	beng1 beng1 zhuai1 zhuai1
-繃繃拽拽	beng1 beng1 zhuai3 zhuai3
+繃繃拽拽	beng1 beng1 zhuai3 zhuai3	80%
 繃繃拽拽	beng1 beng1 ye4 ye4
 繃臉	beng3 lian3
 繃臉	beng1 lian3
@@ -101474,7 +101474,7 @@ min_phrase_weight: 100
 苦累	ku3 lei4
 苦繃苦拽	ku3 beng1 ku3 zhuai4
 苦繃苦拽	ku3 beng1 ku3 zhuai1
-苦繃苦拽	ku3 beng1 ku3 zhuai3
+苦繃苦拽	ku3 beng1 ku3 zhuai3	80%
 苦繃苦拽	ku3 beng1 ku3 ye4
 苦腦子	ku3 nao3 zi5
 苦苣苔	ku3 ju4 tai2
@@ -107972,7 +107972,7 @@ min_phrase_weight: 100
 輪鎗拽步	lun2 qiang1 ye4 bu4
 輪鎗拽步	lun2 qiang1 zhuai4 bu4
 輪鎗拽步	lun2 qiang1 zhuai1 bu4
-輪鎗拽步	lun2 qiang1 zhuai3 bu4
+輪鎗拽步	lun2 qiang1 zhuai3 bu4	80%
 輸寫	shu1 xie4
 輸將	shu1 jiang1
 輸尿管	shu1 niao4 guan3
@@ -108736,7 +108736,7 @@ min_phrase_weight: 100
 連扯跟頭	lian2 che3 gen1 tou2
 連拖帶拽	lian2 tuo1 dai4 zhuai4
 連拖帶拽	lian2 tuo1 dai4 zhuai1
-連拖帶拽	lian2 tuo1 dai4 zhuai3
+連拖帶拽	lian2 tuo1 dai4 zhuai3	80%
 連拖帶拽	lian2 tuo1 dai4 ye4
 連擊	lian2 ji2
 連更徹夜	lian2 geng1 che4 ye4
