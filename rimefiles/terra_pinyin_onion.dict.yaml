@@ -151,9 +151,11 @@
 #    詞句中，「萎」於某些詞，臺灣日常慣用語音為「wei3」，臺灣標準為「wei1」，故皆補齊「wei1」和「wei3」。
 #    詞句中，「鰾」日常發音常會誤發為「biao1」，臺灣標準為「biao4」，故皆補齊「biao4」「biao1」，後者詞頻設為80%。
 #    詞句中，「鷲」日常發音常會誤發為「jiu1」，臺灣標準為「jiu4」，故皆補齊「jiu4」「jiu1」，後者詞頻設為80%。
+#    詞句中，「蹬」臺灣標準為「deng4」，大陸標準為「deng1」，兩者易混淆，故皆補齊「deng4」「deng1」。
 #    詞句中，「褐」臺灣標準為「he2」，大陸標準為「he4」，兩者易混淆，故皆補齊「he2」「he4」。
 #    詞句中，「驟」臺灣標準為「zou4」，大陸標準為「zhou4」，兩者易混淆，故皆補齊「zou4」「zhou4」。
 #    詞句中，「縛」臺灣標準為「fu2」，大陸標準為「fu4」，兩者易混淆，故皆補齊「fu2」「fu4」。
+#    詞句中，「壑」臺灣標準為「huo4」，大陸標準為「he4」，兩者易混淆，故皆補齊「huo4」「he4」。
 #    詞句中，「潛」臺灣標準為「qian2」，日常發音常會誤發為「qian3」，故皆補齊「qian2」「qian3」，後者詞頻設為80%。
 #    詞句中，「擬」臺灣標準為「ni3」，日常發音常會誤發為「ni2」，故皆補齊「ni3」「ni2」，後者詞頻設為80%。
 #    詞句中，「綺」臺灣標準為「qi3」，日常發音常會誤發為「qi2」，故皆補齊「qi3」「qi2」，後者詞頻設為80%。
@@ -176,6 +178,7 @@
 #    詞句中，「肋」臺灣標準為「le4」，又音為「lei4」，日常易混，故皆補齊「le4」「lei4」。
 #    詞句中，「綏」臺灣標準為「sui1」，又音為「sui2」，大陸標準為「sui2」，日常易混，故皆補齊「sui1」「sui2」。
 #    詞句中，「削」臺灣標準讀音為「xue4」，語音為「xiao1」，大陸標準為「xue1」，日常易混，故皆補齊「xue4」「xiao1」「xue1」。有些詞發音如此標註會奇怪，待攷！
+#    詞句中，「穹」皆補齊「qiong1」「qiong2」。
 #    詞句中，「懾」皆補齊「zhe2」「she4」。
 #    詞句中，「怯」皆補齊「que4」「qie4」。
 #    詞句中，「坯」皆補齊「pei1」「pi1」。
@@ -188,12 +191,14 @@
 #    詞句中，「羧」皆補齊「zui1」「suo1」。
 #    詞句中，「酵」皆補齊「xiao4」「jiao4」。
 #    詞句中，「捱」皆補齊「ai2」「ai1」。
+#    詞句中，「脘」皆補齊「wan3」「guan3」。
 #    詞句中，「恣」臺灣標準為「zi4」「ci1」，前者又音為「zi1」，日常「zi4」和「zi1」易混，故互相補齊。「恣睢」等發音為「ci1」不補。
 #    詞句中，「績」「蹟」「跡」「迹」臺灣標準為「ji1」，大陸標準為「ji4」，只保留「ji1」發音。
 #    詞句中，「寂」臺灣標準為「ji2」，大陸標準為「ji4」，只保留「ji2」發音。
 #    詞句中，「妮」臺灣標準為「ni2」，大陸標準為「ni1」，只保留「ni2」發音。
 #    詞句中，「期」臺灣標準為「qi2」，又音為「qi1」，為「qi1」的詞句易有其他相同發音的詞句，斟酌後只標註「qi2」。
 #    詞句中，「耶」除「耶律」只標「ye1 lv4」，其餘補齊「ye1」和「ye2」。
+#    詞句中，「蒙古」「內蒙」「蒙牛」，其「蒙」字，臺灣標準為「meng2」，大陸標準為「meng3」，日常易混，補齊「meng2」「meng3」。
 #    詞句中，「模糊」定為「mo2 hu2」。
 #    詞句中，「垃圾」補齊「le4 se4」和「la1 ji1」。
 #    詞句中，「諸葛」補齊「zhu1 ge2」和「zhu1 ge3」。
@@ -2833,6 +2838,12 @@ min_phrase_weight: 100
 侗	tong3	0%
 侗	tong1	0%
 魄	bo2	0%
+慜	min2	0%
+愍	min2	0%
+愍	fen1	0%
+婁	lei2	0%
+娄	lei2	0%
+遢	ta1	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -3033,7 +3044,7 @@ min_phrase_weight: 100
 知	zhi4	1%
 矼	qiang1	1%
 穸	xi4	1%
-穹	qiong1	1%
+穹	qiong1	100%
 糾	jiu3	1%
 羋	mie1	1%
 耵	ding3	1%
@@ -3346,7 +3357,7 @@ min_phrase_weight: 100
 紬	chou1	1%
 紮	zha2	1%
 累	lei2	1%
-脘	wan3	1%
+脘	wan3	100%
 脟	luan3	1%
 脧	zui1	1%
 舺	jia3	1%
@@ -3758,7 +3769,7 @@ min_phrase_weight: 100
 獝	xu4	1%
 瑾	jin4	1%
 璉	lian3	1%
-瘙	sao1	1%
+瘙	sao1	100%
 瞑	mian2	1%
 瞑	mian4	1%
 瞑	ming3	1%
@@ -26426,7 +26437,7 @@ min_phrase_weight: 100
 瘖	yin1
 瘗	yi4
 瘘	lou4
-瘙	sao4
+瘙	sao4	50%
 瘚	jue2
 瘛	chi4
 瘜	xi2
@@ -54579,6 +54590,8 @@ min_phrase_weight: 100
 一不拗眾	yi4 bu2 niu4 zhong4
 一丘一壑	yi4 qiu1 yi2 huo4
 一丘一壑	yi1 qiu1 yi1 huo4
+一丘一壑	yi4 qiu1 yi2 he4
+一丘一壑	yi1 qiu1 yi1 he4
 一丘之貉	yi4 qiu1 zhi1 he2
 一丘之貉	yi1 qiu1 zhi1 he2
 一中一台	yi4 zhong1 yi4 tai2
@@ -56369,6 +56382,7 @@ min_phrase_weight: 100
 不必要	bu2 bi4 yao4
 不忒	bu2 te4
 不忘溝壑	bu2 wang4 gou1 huo4
+不忘溝壑	bu2 wang4 gou1 he4
 不念舊惡	bu2 nian4 jiu4 e4
 不念荷戈	bu2 nian4 he4 ge1
 不怕不識貨	bu2 pa4 bu2 shi4 huo4
@@ -57703,6 +57717,8 @@ min_phrase_weight: 100
 二千石	er4 qian1 dan4
 二半破子	er4 ban4 po4 zi5
 二叉樹	er4 cha1 shu4
+二叉樹	er4 cha3 shu4
+二叉樹	er4 cha4 shu4
 二和藥	er4 huo4 yao4
 二噁英	er4 e3 ying1
 二四六分明	er4 si4 liu4 fen1 ming2
@@ -61820,6 +61836,7 @@ min_phrase_weight: 100
 刁藩都	diao1 fan1 dou1
 刁藩都方程	diao1 fan1 dou1 fang1 cheng2
 刁蹬用強	diao1 deng4 yong4 qiang2
+刁蹬用強	diao1 deng1 yong4 qiang2
 刁鑽	diao1 zuan1
 刁鑽古怪	diao1 zuan1 gu3 guai4
 分一杯羹	fen1 yi4 bei1 geng1
@@ -64058,8 +64075,10 @@ min_phrase_weight: 100
 千妥萬當	qian1 tuo3 wan4 dang4
 千山山脈	qian1 shan1 shan1 mai4
 千山萬壑	qian1 shan1 wan4 huo4
+千山萬壑	qian1 shan1 wan4 he4
 千岐萬轍	qian1 qi2 wan4 che4
 千巖萬壑	qian1 yan2 wan4 huo4
+千巖萬壑	qian1 yan2 wan4 he4
 千差萬別	qian1 cha1 wan4 bie2
 千差萬差	qian1 cha1 wan4 cha1
 千年田地八百主	qian1 nian2 tian2 di4 ba1 bai3 zhu3
@@ -65155,6 +65174,7 @@ min_phrase_weight: 100
 叨貼	tao1 tie1
 叨賴	tao1 lai4
 叨蹬	dao1 deng4
+叨蹬	dao1 deng1
 叨陪	tao1 pei2
 叨餂	tao1 tian3
 叩應	kou4 ying4
@@ -66896,7 +66916,9 @@ min_phrase_weight: 100
 啟發式教學法	qi3 fa1 shi4 jiao1 xue2 fa3
 啟白	qi3 bo2
 啟矇	qi3 meng2
+啟矇	qi3 meng1
 啟矇專制君主	qi3 meng2 zhuan1 zhi4 jun1 zhu3
+啟矇專制君主	qi3 meng1 zhuan1 zhi4 jun1 zhu3
 啟蒙	qi3 meng2
 啟蒙哲學	qi3 meng2 zhe2 xue2
 啟蒙時代	qi3 meng2 shi2 dai4
@@ -69115,6 +69137,7 @@ min_phrase_weight: 100
 填海新生地	tian2 hai3 xin1 sheng1 di4
 填海造地	tian2 hai3 zao4 di4
 填溝壑	tian2 gou1 huo4
+填溝壑	tian2 gou1 he4
 填空	tian2 kong4
 填空	tian2 kong1
 填窟窿	tian2 ku1 long1
@@ -69669,6 +69692,7 @@ min_phrase_weight: 100
 大場鶇	da4 chang3 dong1
 大場鶇	da4 chang2 dong1	3%
 大壑	da4 huo4
+大壑	da4 he4
 大多數	da4 duo1 shu4
 大多數人	da4 duo1 shu4 ren2
 大大咧咧	da4 da4 lie1 lie1
@@ -73586,6 +73610,7 @@ min_phrase_weight: 100
 巧詐不如拙誠	qiao3 zha4 bu4 ru2 zhuo2 cheng2
 巧詐不如拙誠	qiao3 zha4 bu4 ru2 zhuo1 cheng2
 巨壑	ju4 huo4
+巨壑	ju4 he4
 巨闕	ju4 que4
 差一點	cha4 yi4 dian3
 差一點	cha1 yi1 dian3
@@ -75269,6 +75294,7 @@ min_phrase_weight: 100
 彌撒經書	mi2 sa4 jing1 shu1	80%
 彌散	mi2 san4
 彌矇	mi2 meng2
+彌矇	mi2 meng1
 彌縫	mi2 feng2
 彎奔	wan1 ben1
 彎子	wan1 zi5
@@ -76105,6 +76131,9 @@ min_phrase_weight: 100
 怒濤	nu4 tao2
 怒濤	nu4 tao1
 怒濤排壑	nu4 tao2 pai2 huo4
+怒濤排壑	nu4 tao2 pai2 he4
+怒濤排壑	nu4 tao1 pai2 huo4
+怒濤排壑	nu4 tao1 pai2 he4
 怒目切齒	nu4 mu4 qie4 chi3
 怒目攢眉	nu4 mu4 cuan2 mei2
 怒目橫眉	nu4 mu4 heng2 mei2
@@ -76899,6 +76928,7 @@ min_phrase_weight: 100
 愚氓	yu2 meng2
 愚氣	yu2 qi4
 愚矇	yu2 meng2
+愚矇	yu2 meng1
 愚蒙	yu2 meng2
 愛人	ai4 ren2
 愛人好士	ai4 ren2 hao4 shi4
@@ -83332,6 +83362,7 @@ min_phrase_weight: 100
 曠度	kuang4 du4
 曠日長久	kuang4 ri4 chang2 jiu3
 曠若發矇	kuang4 ruo4 fa1 meng2
+曠若發矇	kuang4 ruo4 fa1 meng1
 曠若發蒙	kuang4 ruo4 fa1 meng2
 曩昔	nang3 xi2
 曬乾	shai4 gan1
@@ -83922,6 +83953,7 @@ min_phrase_weight: 100
 有理數域	you3 li3 shu4 yu4
 有理數集	you3 li3 shu4 ji2
 有瓜葛	you3 gua1 ge3
+有瓜葛	you3 gua1 ge2
 有的放矢	you3 di4 fang4 shi3
 有益處	you3 yi4 chu4
 有眉目	you3 mei2 mu4
@@ -86270,10 +86302,13 @@ min_phrase_weight: 100
 欲取固與	yu4 qu3 gu4 yu3
 欲取姑與	yu4 qu3 gu1 yu3
 欲壑難填	yu4 huo4 nan2 tian2
+欲壑難填	yu4 he4 nan2 tian2
 欲壑難飽	yu4 huo4 nan2 bao3
+欲壑難飽	yu4 he4 nan2 bao3
 欲就還推	yu4 jiu4 huan2 tui1
 欲待	yu4 dai4
 欲深谿壑	yu4 shen1 xi1 huo4
+欲深谿壑	yu4 shen1 xi1 he4
 欲蓋彌彰	yu4 gai4 mi2 zhang1
 欲語還休	yu4 yu3 huan2 xiu1
 欲說還休	yu4 shuo1 huan2 xiu1
@@ -86287,6 +86322,7 @@ min_phrase_weight: 100
 欺瞞夾帳	qi1 man2 jia2 zhang4
 欺瞞夾帳	qi1 man2 jia1 zhang4
 欺矇	qi1 meng2
+欺矇	qi1 meng1
 欺行霸市	qi1 hang2 ba4 shi4
 欺誣	qi1 wu2
 欺謾	qi1 man2
@@ -88300,6 +88336,7 @@ min_phrase_weight: 100
 洞中肯綮	dong4 zhong4 ken3 qing4
 洞中肯綮	dong4 zhong4 keng3 qing4
 洞壑	dong4 huo4
+洞壑	dong4 he4
 洞天福地	dong4 tian1 fu2 di4
 洞察一切	dong4 cha2 yi2 qie4
 洞察一切	dong4 cha2 yi1 qie4
@@ -88802,6 +88839,7 @@ min_phrase_weight: 100
 淚珠盈眶	lei4 zhu1 ying2 kuang1
 淚盤如露	lei4 pan2 ru2 lu4
 淚眼矇矓	lei4 yan3 meng2 long2
+淚眼矇矓	lei4 yan3 meng1 long2
 淜滂	peng1 pang1
 淡不剌	dan4 bu2 la4
 淡冷處	dan4 leng3 chu4
@@ -89097,6 +89135,9 @@ min_phrase_weight: 100
 混矇	hun4 meng1
 混矇	hun3 meng1
 混矇	hun2 meng1
+混矇	hun4 meng2
+混矇	hun3 meng2
+混矇	hun2 meng2
 混種	hun4 zhong3
 混種	hun3 zhong3
 混種	hun2 zhong3
@@ -92210,6 +92251,7 @@ min_phrase_weight: 100
 瓜葛	gua1 ge2
 瓜葛	gua1 ge3
 瓜葛之親	gua1 ge2 zhi1 qin1
+瓜葛之親	gua1 ge3 zhi1 qin1
 瓜蔓抄	gua1 man4 chao1
 瓜達卡納爾島	gua1 da2 ka3 na4 er3 dao3
 瓜達卡納爾戰役	gua1 da2 ka3 na4 er3 zhan4 yi4
@@ -93209,6 +93251,7 @@ min_phrase_weight: 100
 發病率	fa1 bing4 lv4
 發監	fa1 jian1
 發矇振聵	fa1 meng2 zhen4 kui4
+發矇振聵	fa1 meng1 zhen4 kui4
 發祥地	fa1 xiang2 di4
 發脾氣	fa1 pi2 qi4
 發臭	fa1 chou4
@@ -94712,6 +94755,7 @@ min_phrase_weight: 100
 瞅不起	chou3 bu4 qi3
 瞇縫	mi1 feng4
 瞈矇	weng3 meng2
+瞈矇	weng3 meng1
 瞋目切齒	chen1 mu4 qie4 chi3
 瞎子	xia1 zi5
 瞎子吃湯圓	xia1 zi5 chi1 tang1 yuan2
@@ -94786,6 +94830,7 @@ min_phrase_weight: 100
 瞭解	liao3 jie3
 瞭解	liao2 jie3	80%
 瞳矇	tong2 meng2
+瞳矇	tong2 meng1
 瞵視昂藏	lin2 shi4 ang2 cang2
 瞶瞶	kui4 kui4
 瞻卬	zhan1 yang3
@@ -94799,34 +94844,59 @@ min_phrase_weight: 100
 瞿然	ju4 ran2
 瞿秋白	qu1 qiu1 bai2
 矇事	meng1 shi4
+矇事	meng2 shi4
 矇住	meng1 zhu4
 矇住	meng2 zhu4
 矇在鼓裡	meng2 zai4 gu3 li3
+矇在鼓裡	meng1 zai4 gu3 li3
 矇巴頓	meng2 ba1 dun4
+矇巴頓	meng1 ba1 dun4
 矇昧	meng2 mei4
+矇昧	meng1 mei4
 矇松雨	meng1 song1 yu3
+矇松雨	meng2 song1 yu3
 矇混	meng1 hun4
 矇混	meng2 hun4
 矇混	meng1 hun3
 矇混	meng2 hun3
+矇混	meng1 hun2
+矇混	meng2 hun2
 矇混過關	meng2 hun4 guo4 guan1
 矇混過關	meng2 hun3 guo4 guan1
+矇混過關	meng2 hun2 guo4 guan1
+矇混過關	meng1 hun4 guo4 guan1
+矇混過關	meng1 hun3 guo4 guan1
+矇混過關	meng1 hun2 guo4 guan1
 矇牛	meng2 niu2
+矇牛	meng1 niu2
 矇特卡洛法	meng2 te4 ka3 luo4 fa3
+矇特卡洛法	meng1 te4 ka3 luo4 fa3
 矇特卡羅方法	meng2 te4 ka3 luo2 fang1 fa3
+矇特卡羅方法	meng1 te4 ka3 luo2 fang1 fa3
 矇著	meng1 zhao2
 矇著	meng1 zhe5
+矇著	meng2 zhao2
+矇著	meng2 zhe5
 矇瞍	meng2 sou3
+矇瞍	meng1 sou3
 矇矇	meng2 meng2
+矇矇	meng1 meng1
 矇矇亮	meng1 meng1 liang4
+矇矇亮	meng2 meng2 liang4
 矇矇黑	meng1 meng1 hei1
+矇矇黑	meng2 meng2 hei1
 矇矓	meng2 long2
+矇矓	meng1 long2
 矇聵	meng2 kui4
+矇聵	meng1 kui4
 矇蔽	meng1 bi4
 矇蔽	meng2 bi4
 矇藥	meng1 yao4
+矇藥	meng2 yao4
 矇頭轉向	meng1 tou2 zhuan3 xiang4
 矇頭轉向	meng1 tou2 zhuan4 xiang4
+矇頭轉向	meng2 tou2 zhuan3 xiang4
+矇頭轉向	meng2 tou2 zhuan4 xiang4
 矇騙	meng1 pian4
 矇騙	meng2 pian4
 矎矎	xuan4 xuan4
@@ -96120,20 +96190,25 @@ min_phrase_weight: 100
 究辦	jiu4 ban4
 究辦	jiu1 ban4
 穹壤	qiong1 rang3
+穹壤	qiong2 rang3
 穹天	qiong1 tian1
 穹天	qiong2 tian1
 穹廬	qiong1 lu2
 穹廬	qiong2 lu2
 穹石	qiong1 shi2
+穹石	qiong2 shi2
 穹窒	qiong1 zhi4
+穹窒	qiong2 zhi4
 穹窿	qiong1 long2
 穹窿	qiong2 long2
 穹蒼	qiong1 cang1
 穹蒼	qiong2 cang1
 穹谷	qiong1 gu3
+穹谷	qiong2 gu3
 穹隆	qiong1 long2
 穹隆	qiong2 long2
 穹靈	qiong1 ling2
+穹靈	qiong2 ling2
 空中	kong1 zhong1
 空中交易	kong1 zhong1 jiao1 yi4
 空中交通管制	kong1 zhong1 jiao1 tong1 guan3 zhi4
@@ -98016,6 +98091,7 @@ min_phrase_weight: 100
 絕地天通	jue2 di4 tian1 tong1
 絕塞	jue2 sai4
 絕壑	jue2 huo4
+絕壑	jue2 he4
 絕大多數	jue2 da4 duo1 shu4
 絕大部份	jue2 da4 bu4 fen4
 絕對地址	jue2 dui4 di4 zhi3
@@ -98527,6 +98603,7 @@ min_phrase_weight: 100
 縱剖面	zong4 puo3 mian4	80%
 縱坐標	zong1 zuo4 biao1
 縱壑魚	zong4 huo4 yu2
+縱壑魚	zong4 he4 yu2
 縱斷面	zong1 duan4 mian4
 縱斷面	zong4 duan4 mian4
 縱曲枉直	zong4 qu1 wang3 zhi2
@@ -99269,6 +99346,7 @@ min_phrase_weight: 100
 老樣子	lao3 yang4 zi5
 老死不相往來	lao3 si3 bu4 xiang1 wang3 lai2
 老死溝壑	lao3 si3 gou1 huo4
+老死溝壑	lao3 si3 gou1 he4
 老毛子	lao3 mao2 zi5
 老氣橫秋	lao3 qi4 heng2 qiu1
 老江湖	lao3 jiang1 hu2
@@ -99667,6 +99745,7 @@ min_phrase_weight: 100
 聲跡彰露	sheng1 ji1 zhang1 lu4
 聲量	sheng1 liang4
 聳壑昂霄	song3 huo4 ang2 xiao1
+聳壑昂霄	song3 he4 ang2 xiao1
 職位分類	zhi2 wei4 fen1 lei4
 職分	zhi2 fen4
 職前教育	zhi2 qian2 jiao4 yu4
@@ -99918,6 +99997,7 @@ min_phrase_weight: 100
 肺靜脈	fei4 jing4 mai4
 肺靜脈	fei4 jing4 mo4
 胃脘	wei4 wan3
+胃脘	wei4 guan3
 背包	bei1 bao1
 背包	bei4 bao1
 背包客	bei1 bao1 ke4
@@ -101248,6 +101328,7 @@ min_phrase_weight: 100
 艾子	ai4 zi3
 艾安	yi4 an1
 艾德矇頓	ai4 de2 meng2 dun4
+艾德矇頓	ai4 de2 meng1 dun4
 艾格尼絲‧史沫特萊	ai4 ge2 ni2 si1 eng5 shi3 mo4 te4 lai2
 艾爾米塔奇	ai4 er3 mi3 ta3 ji1
 艾窩窩	ai4 wo1 wo1
@@ -101967,7 +102048,9 @@ min_phrase_weight: 100
 萬古長青	wan4 gu3 chang2 qing1
 萬境歸空	wan4 jing4 gui1 kong1
 萬壑	wan4 huo4
+萬壑	wan4 he4
 萬壑爭流	wan4 huo4 zheng1 liu2
+萬壑爭流	wan4 he4 zheng1 liu2
 萬夫不當	wan4 fu1 bu4 dang1
 萬夫莫當	wan4 fu1 mo4 dang1
 萬家樂	wan4 jia1 le4
@@ -106181,7 +106264,9 @@ min_phrase_weight: 100
 谷蠡	gu3 li2
 谷都	gu3 du1
 谿壑	xi1 huo4
+谿壑	xi1 he4
 谿壑無厭	xi1 huo4 wu2 yan4
+谿壑無厭	xi1 he4 wu2 yan4
 豁亮	he4 liang4
 豁亮	huo4 liang4
 豁免	huo4 mian3
@@ -107360,6 +107445,7 @@ min_phrase_weight: 100
 踢毽子	ti1 jian4 zi5
 踢踢躂躂	ti1 ti1 ta4 ta4
 踢蹬	ti1 deng4
+踢蹬	ti1 deng1
 踢躂	ti1 ta4
 踢躂舞	ti1 ta4 wu3
 踢躂舞	ti1 da1 wu3
@@ -108140,6 +108226,7 @@ min_phrase_weight: 100
 轉正	zhuan3 zheng4
 轉步	zhuan3 bu4
 轉死溝壑	zhuan3 si3 gou1 huo4
+轉死溝壑	zhuan3 si3 gou1 he4
 轉死溝渠	zhuan3 si3 gou1 qu2
 轉氨基酶	zhuan3 an1 ji1 mei2
 轉氨酶	zhuan3 an1 mei2
@@ -109446,6 +109533,7 @@ min_phrase_weight: 100
 邪道	xie2 dao4
 邯鄲地區	han2 dan1 di4 qu1
 邱壑	qiu1 huo4
+邱壑	qiu1 he4
 邳縣	pei2 xian4
 邳縣	pi1 xian4
 邳邳	pei2 pei2
@@ -110620,6 +110708,7 @@ min_phrase_weight: 100
 鋸架	ju4 jia4
 鋸條	ju4 tiao2
 鋸棕櫚	ju4 zong1 lv2
+鋸棕櫚	ju4 zong1 lv3	80%
 鋸床	ju4 chuang2
 鋸片	ju4 pian4
 鋸牙	ju4 ya2
@@ -111619,6 +111708,7 @@ min_phrase_weight: 100
 開盤匯率	kai1 pan2 hui4 lv4
 開盤子	kai1 pan2 zi5
 開矇	kai1 meng2
+開矇	kai1 meng1
 開碼頭	kai1 ma3 tou5
 開碼頭	kai1 ma3 tou2
 開花兒	kai1 hua1 er5	80%
@@ -111955,6 +112045,8 @@ min_phrase_weight: 100
 阿伐粒子	a1 fa2 li4 zi3
 阿伐蛻變	a1 fa1 shui4 bian4
 阿伐蛻變	a1 fa2 shui4 bian4
+阿伐蛻變	a1 fa1 tui4 bian4
+阿伐蛻變	a1 fa2 tui4 bian4
 阿伯	a1 bo2
 阿伯丁	a1 bo2 ding1
 阿伽陀	a1 qie2 tuo2
@@ -112711,6 +112803,7 @@ min_phrase_weight: 100
 隆河谷地	long2 he2 gu3 di4
 隆盛	long2 sheng4
 隆穹	long2 qiong1
+隆穹	long2 qiong2
 隆興	long2 xing1
 隆重	long2 zhong4
 隊伍行列	dui4 wu3 hang2 lie4
@@ -114233,6 +114326,7 @@ min_phrase_weight: 100
 顢頇	man2 han1
 顢頇	man1 han1
 顥穹	hao4 qiong1
+顥穹	hao4 qiong2
 顧不上	gu4 bu2 shang4
 顧不得	gu4 bu4 de2
 顧不得	gu4 bu4 de5
@@ -116304,4 +116398,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 116307 #####
+##### @結束 END - 116401 #####

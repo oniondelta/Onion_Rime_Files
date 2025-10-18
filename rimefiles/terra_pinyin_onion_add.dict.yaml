@@ -51,6 +51,7 @@ min_phrase_weight: 100
 # 擈	(pu3)	10%
 # 縛	(fo4)
 # 缚	(fo4)
+# 遢	(ta1)	10%
 蒲	(pu3)
 逾	(yu4)	90%
 蛤	(ge3)
@@ -234,7 +235,6 @@ min_phrase_weight: 100
 娲	(wo1)
 衰	(sui1)
 嗨	(hai4)	20%
-遢	(ta1)	10%
 鵜	(ti4)	10%
 鹈	(ti4)	10%
 菡	(han2)	50%
