@@ -2839,8 +2839,9 @@ min_phrase_weight: 100
 侗	tong1	0%
 魄	bo2	0%
 慜	min2	0%
-愍	min2	0%
+# 愍	min2	0%
 愍	fen1	0%
+敃	fen1	0%
 婁	lei2	0%
 娄	lei2	0%
 遢	ta1	0%
@@ -116398,4 +116399,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 116401 #####
+##### @結束 END - 116402 #####
