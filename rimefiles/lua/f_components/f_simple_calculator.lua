@@ -30,9 +30,9 @@ local function simple_calculator(input)
   -- local error_2oper = string.match(input, "[-+*/^][-+*/^]")
   local error_dot = string.match(input, "%.%d+%.%d") or
                     string.match(input, "%.%.")
-  local error_paren = string.match(input, "^[^(]+[)]") or
-                      string.match(input, "[-+*/^(][)]") or
-                      string.match(input, "[(][+*/^]")
+  local error_paren = string.match(input, "[(][+*/^]") or
+                      string.match(input, "[-+*/^(][)]")
+                      -- string.match(input, "^[^(]+[)]")
                       -- string.match(input, "[)]%d")
   -- local error_digits = tonumber(string.match(input, "%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d+")) or 0  --19位數以上檢查
 
@@ -60,6 +60,7 @@ local function simple_calculator(input)
   local input = string.gsub(input, "[(]+([-+*/^.%d]*%b()[-+*/^.%d]*%b()[-+*/^.%d]*)$", "(%1)")  -- 未完成前，前端有括號，末尾含有二個括號組，後端補括號
   local input = string.gsub(input, "[(]+([-+*/^.%d]*%b()[-+*/^.%d]*%b()[-+*/^.%d]*%b()[-+*/^.%d]*)$", "(%1)")  -- 未完成前，前端有括號，末尾含有三個括號組，後端補括號
   local input = string.gsub(input, "[(](%b())[)]", "%1")  -- 雙重括號，減為單一個
+  local input = string.gsub(input, "^([^(]+)[)]", "(%1)")  --前方無左括號，輸入右括號，自動於最前端補左括號
   -- print('轉換後：'..input)
 
   local ok, res = pcall(str_to_cal, input)
