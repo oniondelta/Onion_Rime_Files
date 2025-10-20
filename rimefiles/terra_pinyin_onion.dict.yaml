@@ -147,6 +147,7 @@
 #    詞句中，「懲」日常發音常會誤發為「cheng3」，故皆補齊「cheng2」「cheng3」。
 #    詞句中，「痙」日常發音常會誤發為「jing1」，臺灣標準為「jing4」，故皆補齊「jing1」「jing4」。
 #    詞句中，「孿」臺灣字典發音為「luan2」，又音為「lvan2」，故皆補齊「luan2」「lvan2」。
+#    詞句中，「癬」臺灣字典發音為「xian3」，又音為「xuan3」，故皆補齊「xian3」「xuan3」，後者詞頻設為3%。
 #    詞句中，「脂」臺灣日常慣用語音為「zhi3」，臺灣標準為「zhi1」，除「胭脂」「脂粉」兩詞只標註「zhi1」外，其他皆補齊「zhi1」「zhi3」。
 #    詞句中，「冴」日常發音常會誤發為「ya2」，標準為「hu4」，故日文人名中皆補齊「ya2」「hu4」，前者詞頻設為3%。
 #    詞句中，「蝸」臺灣字典發音為「gua1」，大陸發音為「wo1」，日常易混，故皆補齊「gua1」「wo」。
@@ -181,6 +182,7 @@
 #    詞句中，「綏」臺灣標準為「sui1」，又音為「sui2」，大陸標準為「sui2」，日常易混，故皆補齊「sui1」「sui2」。
 #    詞句中，「削」臺灣標準讀音為「xue4」，語音為「xiao1」，大陸標準為「xue1」，日常易混，故皆補齊「xue4」「xiao1」「xue1」。有些詞發音如此標註會奇怪，待攷！
 #    詞句中，「穹」皆補齊「qiong1」「qiong2」。
+#    詞句中，「辱」皆補齊「ru4」「ru3」。
 #    詞句中，「懾」皆補齊「zhe2」「she4」。
 #    詞句中，「怯」皆補齊「que4」「qie4」。
 #    詞句中，「坯」皆補齊「pei1」「pi1」。
@@ -220,6 +222,7 @@
 #    詞句中，「胳膊」臺灣字典發音為「ge1 bo5」，日常發音常發「ge1 bo2」，故皆補齊「ge1 bo5」「ge1 bo2」。
 #    詞句中，「部署」臺灣字典發音為「bu4 shu4」，日常發音常發「bu4 shu3」，故皆補齊「bu4 shu4」「bu4 shu3」。
 #    詞句中，「交叉」臺灣字典發音為「jiao1 cha1」，日常發音常發「jiao1 cha4」，故皆補齊「jiao1 cha1」「jiao1 cha4」。
+#    詞句中，「牛仔」臺灣字典發音為「niu2 zi3」，日常發音常發「niu2 zai3」，故皆補齊「niu2 zi3」「niu2 zai3」。
 #    詞句中，「擂臺」「擂台」臺灣字典發音為「lei4 tai2」，日常發音常發「lei2 tai2」，故皆補齊「lei2 tai4」「lei2 tai2」。
 #    詞句中，「相片」「照片」「影片」「碟片」「唱片」「畫片」，其「片」發音，皆補齊「pian4」和「pian1」。
 #    詞句中，「傍晚」臺灣字典發音為「bang1 wan3」，大陸標準為「bang4 wan3」，易誤按，且無相似發音詞彙，故皆補齊「bang1 wan3」「bang4 wan3」。
@@ -2847,6 +2850,7 @@ min_phrase_weight: 100
 婁	lei2	0%
 娄	lei2	0%
 遢	ta1	10%
+搁	ge2	1%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -56634,8 +56638,11 @@ min_phrase_weight: 100
 不禁技癢	bu4 jin1 ji4 yang3
 不稱	bu2 cheng4
 不稱	bu4 cheng1
+不稱	bu2 chen4
 不稱心	bu2 cheng4 xin1
+不稱心	bu2 chen4 xin1
 不稱職	bu2 cheng4 zhi2
+不稱職	bu2 chen4 zhi2
 不穩便	bu4 wen3 bian4
 不究	bu2 jiu4
 不究	bu4 jiu1
@@ -58964,6 +58971,7 @@ min_phrase_weight: 100
 使興奮	shi3 xing1 fen4
 使蔓延	shi3 man4 yan2
 使轉向	shi3 zhuan3 xiang4
+使轉向	shi3 zhuan4 xiang4
 使長	shi3 zhang3
 使高興	shi3 gao1 xing4
 侄媳婦	zhi2 xi2 fu4
@@ -116401,4 +116409,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 116404 #####
+##### @結束 END - 116412 #####
