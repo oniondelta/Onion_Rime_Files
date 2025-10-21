@@ -114,6 +114,8 @@
 #    詞句中，「擊」臺灣字典發音和習慣發音為「ji2」，大陸發音為「ji1」，斟酌後全改成臺灣發音「ji2」。
 #    詞句中，「夕」臺灣字典發音和習慣發音為「xi4」，大陸發音為「xi1」，斟酌後全改成臺灣發音「xi4」。
 #    詞句中，「息」臺灣字典發音和習慣發音為「xi2」，大陸發音為「xi1」，斟酌後全改成臺灣發音「xi2」。
+#    詞句中，「昔」臺灣字典發音和習慣發音為「xi2」，大陸發音為「xi1」，斟酌後全改成臺灣發音「xi2」。
+#    詞句中，「惜」臺灣字典發音和習慣發音為「xi2」，大陸發音為「xi1」，斟酌後全改成臺灣發音「xi2」。
 #    詞句中，「跌」臺灣字典發音和習慣發音為「die2」，大陸發音為「die1」，斟酌後全改成臺灣發音「die2」。
 #    詞句中，「擲」臺灣字典發音和習慣發音為「zhi2」，大陸發音為「zhi4」，斟酌後全改成臺灣發音「zhi2」。
 #    詞句中，「地」於句尾當結構助詞時，意思同「的」時，不標註「di4」，標註「de5」「di5」。
@@ -2897,6 +2899,8 @@ min_phrase_weight: 100
 蔿	e2	0%
 蔿	hua1	0%
 蔿	kui1	0%
+頃	kui3	0%
+顷	kui3	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -17766,7 +17770,7 @@ min_phrase_weight: 100
 夒	nao2
 夓	xia4
 夔	kui2
-夕	xi1
+夕	xi1	10%
 # 夕	xi2	0%
 外	wai4
 夗	yuan4
@@ -20125,7 +20129,7 @@ min_phrase_weight: 100
 惙	chuo4
 惚	hu1
 惛	hun1
-惜	xi1	0%
+惜	xi1	10%
 惜	xi2
 惝	chang3	50%
 惝	tang3	50%
@@ -21752,7 +21756,7 @@ min_phrase_weight: 100
 昑	qin3
 昒	hu1
 易	yi4
-昔	xi1
+昔	xi1	10%
 昕	xin1
 昖	yan2
 昗	ze4
@@ -58360,12 +58364,10 @@ min_phrase_weight: 100
 今夕	jin1 xi4
 今夕何夕	jin1 xi4 he2 xi4
 今昔	jin1 xi2
-今昔	jin1 xi1
 今昔之感	jin1 xi2 zhi1 gan3
 今朝	jin1 zhao1
 今朝有酒今朝醉	jin1 zhao1 you3 jiu3 jin1 zhao1 zui4
 今非昔比	jin1 fei1 xi2 bi3
-今非昔比	jin1 fei1 xi1 bi3
 介於兩難	jie4 yu2 liang3 nan2
 介殼蟲	jie4 ke2 chong2
 介電常數	jie4 dian4 chang2 shu4
@@ -64969,6 +64971,7 @@ min_phrase_weight: 100
 反彈導彈	fan3 dan4 dao3 dan4
 反彈琵琶	fan3 tan2 pi2 pa2
 反彈琵琶	fan3 tan2 pi2 pa5
+反彈琵琶	fan3 tan2 pi2 ba5
 反應	fan3 ying4
 反應堆	fan3 ying4 dui1
 反應堆燃料元件	fan3 ying4 dui1 ran2 liao4 yuan2 jian4
@@ -65194,7 +65197,6 @@ min_phrase_weight: 100
 古拙	gu3 zhuo2
 古斯塔夫‧多雷	gu3 si1 ta3 fu1 eng5 duo1 lei2
 古昔	gu3 xi2
-古昔	gu3 xi1
 古時候	gu3 shi2 hou4
 古根罕噴噴氣推進研究中心	gu3 gen1 han3 pen1 pen4 qi4 tui1 jin4 yan2 jiu4 zhong1 xin1
 古根罕噴噴氣推進研究中心	gu3 gen1 han3 pen1 pen4 qi4 tui1 jin4 yan2 jiu1 zhong1 xin1
@@ -70872,7 +70874,6 @@ min_phrase_weight: 100
 奶子	nai3 zi5
 奶子酒	nai3 zi5 jiu3
 奶昔	nai3 xi2
-奶昔	nai3 xi1
 奶牛場	nai3 niu2 chang3
 奶牛場	nai3 niu2 chang2	3%
 奶膀子	nai3 pang1 zi5
@@ -72132,7 +72133,6 @@ min_phrase_weight: 100
 宿憾	su4 han4
 宿敵	su4 di2
 宿料	su4 liao4
-宿昔	su4 xi1
 宿昔	su4 xi2
 宿望	su4 wang4
 宿松	su4 song1
@@ -75330,6 +75330,7 @@ min_phrase_weight: 100
 彈琴	tan2 qin2
 彈琵琶	tan2 pi2 pa2
 彈琵琶	tan2 pi2 pa5
+彈琵琶	tan2 pi2 ba5
 彈痕	dan4 hen2
 彈痕分析	dan4 hen2 fen1 xi1
 彈痕纍纍	dan4 hen2 lei2 lei2
@@ -75493,7 +75494,6 @@ min_phrase_weight: 100
 彼長我消	bi3 zhang3 wo3 xiao1
 往常間	wang3 chang2 jian1
 往昔	wang3 xi2
-往昔	wang3 xi1
 往泥裡踩	wang3 ni4 li3 cai3
 往臉上抹黑	wang3 lian3 shang4 mo3 hei1
 往還	wang3 huan2
@@ -83029,10 +83029,8 @@ min_phrase_weight: 100
 易轍	yi4 che4
 昔人	xi2 ren2
 昔年	xi2 nian2
-昔年	xi1 nian2
 昔得蘭群島	xi2 de2 lan2 qun2 dao3
 昔日	xi2 ri4
-昔日	xi1 ri4
 昔昔	xi2 xi2
 昔時	xi2 shi2
 昔酒	xi2 jiu3
@@ -92269,10 +92267,13 @@ min_phrase_weight: 100
 琴瑟調和	qin2 se4 tiao2 he2
 琵琶	pi2 pa2
 琵琶	pi2 pa5
+琵琶	pi2 ba5
 琵琶行	pi2 pa2 xing2
 琵琶行	pi2 pa5 xing2
+琵琶行	pi2 ba5 xing2
 琵琶調	pi2 pa2 diao4
 琵琶調	pi2 pa5 diao4
+琵琶調	pi2 ba5 diao4
 瑕瑜互見	xia2 yu2 hu4 xian4
 瑕瑜互見	xia2 yu2 hu4 jian4
 瑜伽師地論	yu2 jia1 shi1 di4 lun4
@@ -112440,8 +112441,8 @@ min_phrase_weight: 100
 阿昌	a1 chang1
 阿昌族	a1 chang1 zu2
 阿明	a1 ming2
-阿昔洛韋	a1 xi1 luo4 wei2
-阿昔洛韋	a1 xi1 luo4 wei3	80%
+阿昔洛韋	a1 xi2 luo4 wei2
+阿昔洛韋	a1 xi2 luo4 wei3	80%
 阿是穴	e1 shi4 xue4
 阿是穴	a1 shi4 xue2	3%
 阿普吐龍	a1 pu3 tu3 long2
@@ -116546,4 +116547,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 116549 #####
+##### @結束 END - 116550 #####
