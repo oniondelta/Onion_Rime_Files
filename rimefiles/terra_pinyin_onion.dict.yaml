@@ -227,6 +227,7 @@
 #    詞句中，「氛圍」臺灣字典發音為「fen1 wei2」，日常發音常會誤發為「fen4 wei2」，故皆補齊「fen1 wei2」「fen4 wei2」。
 #    詞句中，「坎坷」臺灣字典發音為「kan3 ke3」，日常發音常會誤發為「kan3 ke1」，故皆補齊「kan3 ke3」「kan3 ke1」。
 #    詞句中，「衚衕」臺灣字典發音為「hu2 tong4」，日常發音常會誤發為「hu2 tong2」，故皆補齊「hu2 tong4」「hu2 tong2」。
+#    詞句中，「胡同」臺灣字典發音為「hu2 tong4」，日常發音常會誤發為「hu2 tong2」，故皆補齊「hu2 tong4」「hu2 tong2」。
 #    詞句中，「拓撲」臺灣字典發音為「tuo4 pu1」，日常發音常會誤發為「tuo4 bu3」和「tuo4 pu3」，故皆補齊「tuo4 pu1」「tuo4 bu3」「tuo4 pu3」，最後者「tuo4 pu3」詞頻設為80%。
 #    詞句中，「給予」臺灣字典發音為「ji3 yu3」，日常發音常發，故皆補齊「ji3 yu3」「ji3 yu2」「gei3 yu3」「gei3 yu2」。
 #    詞句中，「骨頭」臺灣字典發音為「gu2 tou5」，日常發音常發，故皆補齊「gu2 tou5」「gu2 tou2」「gu3 tou5」「gu3 tou2」。
@@ -389,7 +390,7 @@ min_phrase_weight: 100
 綸	guan1	90%
 纶	guan1	90%
 艾	yi4	15%
-掬	ju2	90%
+掬	ju2
 粷	ju1
 毱	ju1
 匊	ju1
@@ -656,8 +657,8 @@ min_phrase_weight: 100
 吽	ou1	0.2%
 㕭	bi4	0.2%
 吡	pi3	0.2%
-咧	lie5	0.2%
-咧	lie2	0.2%
+咧	lie5	0%
+咧	lie2	0%
 唋	tu3	0.2%
 唋	tu4	0.2%
 咯	ka3	0.2%
@@ -2901,6 +2902,27 @@ min_phrase_weight: 100
 蔿	kui1	0%
 頃	kui3	0%
 顷	kui3	0%
+梢	xiao1	0%
+梢	shao4	0%
+梢	shao3	0%
+艄	shao4	0%
+綃	shao1	0%
+绡	shao1	0%
+盒	an1	0%
+郗	xi1
+逾	yu4	90%
+逾	yao2	0%
+逾	tou2	0%
+# 逾	tou1	0%
+# 逾	dou4	0%
+踰	yao2	0%
+踰	chu1	0%
+粢	ci1	0%
+磷	lin3	0%
+磷	ling2
+啫	shi4	0%
+咧	lie4	0%
+硌	li4	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -2985,7 +3007,7 @@ min_phrase_weight: 100
 佛	bi4	1%
 佛	fu2	1%
 免	wen4	1%
-吡	bi4	1%
+吡	bi4	80%
 含	han4	1%
 吹	chui4	1%
 吽	ou2	1%
@@ -3426,7 +3448,7 @@ min_phrase_weight: 100
 莨	lang2	1%
 莨	liang2	1%
 莫	mu4	1%
-蚴	you3	1%
+蚴	you3	100%
 蚺	tian4	1%
 蛆	ju1	1%
 術	sui4	1%
@@ -4176,7 +4198,7 @@ min_phrase_weight: 100
 闟	ta4	1%
 闟	xi4	1%
 韽	an4	1%
-顢	man2	1%
+顢	man2	100%
 顣	cu4	1%
 饎	xi1	1%
 騫	jian3	1%
@@ -57411,6 +57433,8 @@ min_phrase_weight: 100
 乙種粒子	yi3 zhong3 li4 zi3
 乙醯胺吡咯烷酮	yi3 xi1 an1 bi3 luo4 wan2 tong2
 乙醯胺吡咯烷酮	yi3 xi1 an1 bi3 luo4 wan3 tong2	80%
+乙醯胺吡咯烷酮	yi3 xi1 an1 bi4 luo4 wan2 tong2
+乙醯胺吡咯烷酮	yi3 xi1 an1 bi4 luo4 wan3 tong2	80%
 乜乜踅踅	mie1 mie1 xue2 xue2
 乜斜	mie1 xie2
 乜斜眼	mie1 xie2 yan3
@@ -57532,6 +57556,7 @@ min_phrase_weight: 100
 乾巴	gan1 ba1
 乾巴巴	gan1 ba1 ba1
 乾巴疵咧	gan1 ba1 ci1 lie1
+乾巴疵咧	gan1 ba1 ci1 lie5
 乾急	gan1 ji2
 乾打雷	gan1 da3 lei2
 乾折	gan1 zhe2
@@ -61203,6 +61228,7 @@ min_phrase_weight: 100
 八哥兒	ba1 ge1 er2
 八埏	ba1 yan2
 八大胡同	ba1 da4 hu2 tong2
+八大胡同	ba1 da4 hu2 tong4
 八字全帖	ba1 zi4 quan2 tie3
 八字帖	ba1 zi4 tie3
 八字沒一撇	ba1 zi4 mei2 yi4 pie3
@@ -65872,6 +65898,7 @@ min_phrase_weight: 100
 吞雲吐霧	tun1 yun2 tu3 wu4
 吟哦	yin2 e2
 吡吡	bi4 bi4
+吡吡	bi3 bi3
 吡啶	bi4 ding4
 吡啶	bi3 ding4
 否剝	pi3 bo1
@@ -66121,6 +66148,8 @@ min_phrase_weight: 100
 呱噪	gua1 zao4
 呲牙	ci1 ya2
 呲牙咧嘴	zi1 ya2 lie3 zui3
+呲牙咧嘴	zi1 ya2 lie1 zui3
+呲牙咧嘴	zi1 ya2 lie2 zui3
 呲牙裂嘴	ci1 ya2 lie4 zui3
 味兒	wei4 er5	80%
 味兒	wei4 er2
@@ -66547,9 +66576,17 @@ min_phrase_weight: 100
 咧咧	lie1 lie1
 咧咧	lie2 lie2
 咧咧	lie3 lie3
+咧咧	lie1 lie5
+咧咧	lie2 lie5
+咧咧	lie3 lie5
+咧咧	lie5 lie5
 咧嘴	lie3 zui3
+咧嘴	lie1 zui3
+咧嘴	lie2 zui3
 咧子	lie1 zi5
 咧開嘴笑	lie3 kai1 zui3 xiao4
+咧開嘴笑	lie1 kai1 zui3 xiao4
+咧開嘴笑	lie2 kai1 zui3 xiao4
 咨嗟	zi1 jie1
 咨牙倈嘴	zi1 ya2 lai2 zui3
 咫尺之地	zhi3 chi3 zhi1 di4
@@ -66830,6 +66867,7 @@ min_phrase_weight: 100
 哮喘病	xiao1 chuan3 bing4
 哮闞	xiao1 han3
 哮鳴	xiao4 ming2
+哮鳴	xiao1 ming2
 哱囉	po4 luo2
 哱息	po4 xi2
 哲蚌寺	zhe2 bang4 si4
@@ -68326,6 +68364,7 @@ min_phrase_weight: 100
 在深處	zai4 shen1 chu4
 在真空中	zai4 zhen1 kong1 zhong1
 在罈子胡同	zai4 tan2 zi5 hu2 tong4
+在罈子胡同	zai4 tan2 zi5 hu2 tong2
 在職教育	zai4 zhi2 jiao4 yu4
 在行	zai4 hang2
 在訴訟期間	zai4 su4 song4 qi2 jian1
@@ -69790,6 +69829,10 @@ min_phrase_weight: 100
 大多數	da4 duo1 shu4
 大多數人	da4 duo1 shu4 ren2
 大大咧咧	da4 da4 lie1 lie1
+大大咧咧	da4 da4 lie1 lie5
+大大咧咧	da4 da4 lie2 lie2
+大大咧咧	da4 da4 lie2 lie5
+大大咧咧	da4 da4 lie5 lie5
 大大小小	da4 da4 xiao3 xiao3
 大大方方	da4 da4 fang1 fang1
 大大法法	da4 da4 fa3 fa3
@@ -71091,8 +71134,10 @@ min_phrase_weight: 100
 妄自菲薄	wang4 zi4 fei3 bo2
 妊娠毒血症	ren4 shen1 du2 xie3 zheng4
 妊娠毒血症	ren4 chen2 du2 xie3 zheng4
+妊娠毒血症	ren4 zhen4 du2 xie3 zheng4
 妊娠毒血症	ren4 shen1 du2 xue4 zheng4
 妊娠毒血症	ren4 chen2 du2 xue4 zheng4
+妊娠毒血症	ren4 zhen4 du2 xue4 zheng4
 妍倡	yan2 chang1
 妖妖調調	yao1 yao1 diao4 diao4
 妖氣	yao1 qi4
@@ -77215,6 +77260,7 @@ min_phrase_weight: 100
 憨厚	han1 hou4
 憨子	han1 zi5
 憨狀可掬	han1 zhuang4 ke3 ju2
+憨狀可掬	han1 zhuang4 ke3 ju1
 憨豆先生	han1 dou4 xian1 sheng1
 憩息	qi4 xi2
 憩息處	qi4 xi2 chu4
@@ -79745,6 +79791,7 @@ min_phrase_weight: 100
 捫摸	men2 mo1
 捭闔	bai3 he2
 捭闔縱橫	bai3 he2 zong1 heng2
+捭闔縱橫	bai3 he2 zong4 heng2
 捯氣	dao2 qi4
 捯線	dao2 xian4
 捯線	dao3 xian4
@@ -79932,6 +79979,7 @@ min_phrase_weight: 100
 排場	pai2 chang3
 排場	pai2 chang2	3%
 排奡縱橫	pai2 ao4 zong1 heng2
+排奡縱橫	pai2 ao4 zong4 heng2
 排子	pai2 zi5
 排子車	pai3 zi5 che1
 排尿	pai2 niao4
@@ -80142,6 +80190,7 @@ min_phrase_weight: 100
 措辭強硬	cuo4 ci2 qiang2 ying4
 措顏無地	cuo4 yan2 wu2 di4
 掬弄	ju2 nong4
+掬弄	ju1 nong4
 掬水	ju2 shui3
 掬水	ju1 shui3
 掬飲	ju2 yin3
@@ -83578,6 +83627,8 @@ min_phrase_weight: 100
 曲肱之樂	qu1 gong1 zhi1 le4
 曲肱而枕	qu1 gong1 er2 zhen3
 曲肱而枕	qu1 gong1 er2 zhen4
+曲肱而枕	qu3 gong1 er2 zhen3
+曲肱而枕	qu3 gong1 er2 zhen4
 曲背	qu1 bei4
 曲背	qu3 bei4
 曲致	qu1 zhi4
@@ -88839,6 +88890,7 @@ min_phrase_weight: 100
 涕泗縱橫	ti4 si4 zong1 heng2
 涕泗縱橫	ti4 si4 zong4 heng2
 涕淚縱橫	ti4 lei4 zong1 heng2
+涕淚縱橫	ti4 lei4 zong4 heng2
 涪陵地區	fu2 ling2 di4 qu1
 涮鍋子	shuan4 guo1 zi5
 涯分	ya2 fen4
@@ -93403,6 +93455,7 @@ min_phrase_weight: 100
 發顫	fa1 chan4
 發顫	fa1 zhan4
 白不呲咧	bai2 bu4 ci1 lie1
+白不呲咧	bai2 bu4 ci1 lie5
 白乾	bai2 gan1
 白乾兒	bai2 gan1 er5	80%
 白乾兒	bai2 gan1 er2
@@ -93766,6 +93819,7 @@ min_phrase_weight: 100
 盈千累萬	ying2 qian1 lei3 wan4
 盈尺之地	ying2 chi3 zhi1 di4
 盈掬	ying2 ju2
+盈掬	ying2 ju1
 盈眶	ying2 kuang1
 盈箱累篋	ying2 xiang1 lei3 qie4
 盈篇累牘	ying2 pian1 lei3 du2
@@ -98739,14 +98793,19 @@ min_phrase_weight: 100
 縱橫	zong1 heng2
 縱橫	zong4 heng2
 縱橫交貫	zong1 heng2 jiao1 guan4
+縱橫交貫	zong4 heng2 jiao1 guan4
 縱橫交錯	zong1 heng2 jiao1 cuo4
 縱橫交錯	zong4 heng2 jiao1 cuo4
 縱橫四海	zong1 heng2 si4 hai3
+縱橫四海	zong4 heng2 si4 hai3
 縱橫天下	zong1 heng2 tian1 xia4
+縱橫天下	zong4 heng2 tian1 xia4
 縱橫字謎	zong4 heng2 zi4 mi2
+縱橫字謎	zong1 heng2 zi4 mi2
 縱橫家	zong1 heng2 jia1
 縱橫家	zong4 heng2 jia1
 縱橫捭闔	zong1 heng2 bai3 he2
+縱橫捭闔	zong4 heng2 bai3 he2
 縱橫馳騁	zong1 heng2 chi2 cheng3
 縱橫馳騁	zong4 heng2 chi2 cheng3
 縱波	zong1 bo1
@@ -99031,6 +99090,10 @@ min_phrase_weight: 100
 署長	shu3 zhang3
 罵人不吐核	ma4 ren2 bu4 tu3 he2
 罵罵咧咧	ma4 ma4 lie1 lie1
+罵罵咧咧	ma4 ma4 lie1 lie5
+罵罵咧咧	ma4 ma4 lie2 lie2
+罵罵咧咧	ma4 ma4 lie2 lie5
+罵罵咧咧	ma4 ma4 lie5 lie5
 罵罵括括	ma4 ma4 gua1 gua1
 罵罵括括	ma4 ma4 kuo4 kuo4
 罷了	ba4 le5
@@ -116482,6 +116545,7 @@ min_phrase_weight: 100
 齗齗	yin2 yin2
 齜牙咧嘴	zi1 ya2 lie3 zui3
 齜牙咧嘴	zi1 ya2 lie1 zui3
+齜牙咧嘴	zi1 ya2 lie2 zui3
 齞脣	yan3 chun2
 齞唇	yan3 chun2
 齡期	ling2 qi2
@@ -116547,4 +116611,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 116550 #####
+##### @結束 END - 116614 #####

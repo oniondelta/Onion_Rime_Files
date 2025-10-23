@@ -52,8 +52,8 @@ min_phrase_weight: 100
 # 縛	(fo4)
 # 缚	(fo4)
 # 遢	(ta1)	10%
+# 逾	(yu4)	90%
 蒲	(pu3)
-逾	(yu4)	90%
 蛤	(ge3)
 樺	(hua2)
 緋	(fei3)	60%
@@ -347,6 +347,7 @@ min_phrase_weight: 100
 的	(de1)
 了	(le1)
 嗎	(ma1)
+吗	(ma1)
 克	(ke1)	5%
 剮	(gua1)
 剐	(gua1)
