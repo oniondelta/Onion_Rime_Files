@@ -15,6 +15,7 @@ use_preset_vocabulary: false
 #   - weight
 ...
 ####### 中文詞庫開始 #######
+#注冊用戶
 〇〇
 〇一
 〇七
@@ -241,6 +242,7 @@ use_preset_vocabulary: false
 一干
 一平
 一年
+一床
 一度
 一座
 一廂
@@ -448,7 +450,6 @@ use_preset_vocabulary: false
 一煮
 一熱
 一營
-一床
 一片
 一版
 一物
@@ -482,7 +483,7 @@ use_preset_vocabulary: false
 一看
 一眨
 一眼
-一著
+一眾
 一睹
 一瞄
 一瞥
@@ -581,12 +582,12 @@ use_preset_vocabulary: false
 一萬
 一落
 一葉
+一著
 一葦
 一蓋
 一藝
 一處
 一號
-一眾
 一行
 一街
 一衝
@@ -1425,7 +1426,6 @@ use_preset_vocabulary: false
 上山
 上岸
 上峰
-上峰
 上島
 上崗
 上工
@@ -1436,6 +1436,7 @@ use_preset_vocabulary: false
 上席
 上帳
 上年
+上床
 上庠
 上座
 上弔
@@ -1521,7 +1522,6 @@ use_preset_vocabulary: false
 上焦
 上照
 上燈
-上床
 上片
 上牌
 上猶
@@ -1541,7 +1541,6 @@ use_preset_vocabulary: false
 上看
 上真
 上眼
-上著
 上瞼
 上知
 上石
@@ -1601,6 +1600,7 @@ use_preset_vocabulary: false
 上萬
 上落
 上葉
+上著
 上蒼
 上蓋
 上蔡
@@ -1787,6 +1787,7 @@ use_preset_vocabulary: false
 下幣
 下平
 下年
+下床
 下店
 下座
 下廚
@@ -1873,10 +1874,9 @@ use_preset_vocabulary: false
 下澤
 下瀉
 下火
+下為
 下焦
 下營
-下為
-下床
 下片
 下牙
 下狀
@@ -1896,7 +1896,6 @@ use_preset_vocabulary: false
 下盤
 下直
 下相
-下著
 下石
 下碇
 下磐
@@ -1942,6 +1941,7 @@ use_preset_vocabulary: false
 下菜
 下落
 下葉
+下著
 下葬
 下藥
 下處
@@ -1950,8 +1950,8 @@ use_preset_vocabulary: false
 下行
 下衝
 下表
-下裡
 下裝
+下裡
 下襬
 下設
 下詔
@@ -2436,6 +2436,7 @@ use_preset_vocabulary: false
 不潤
 不澀
 不濟
+不為
 不無
 不然
 不煩
@@ -2443,7 +2444,6 @@ use_preset_vocabulary: false
 不熱
 不營
 不爭
-不為
 不爽
 不爾
 不牢
@@ -2475,7 +2475,6 @@ use_preset_vocabulary: false
 不省
 不看
 不真
-不著
 不睡
 不睦
 不睬
@@ -2567,6 +2566,7 @@ use_preset_vocabulary: false
 不若
 不菲
 不落
+不著
 不薄
 不處
 不虛
@@ -2965,9 +2965,9 @@ use_preset_vocabulary: false
 並派
 並流
 並激
+並為
 並無
 並然
-並為
 並用
 並由
 並當
@@ -3546,8 +3546,8 @@ use_preset_vocabulary: false
 主審
 主將
 主導
-主峰
 主峯
+主峰
 主帆
 主帥
 主席
@@ -3712,6 +3712,7 @@ use_preset_vocabulary: false
 久陪
 久雨
 久音
+么爺
 之一
 之上
 之下
@@ -3969,12 +3970,12 @@ use_preset_vocabulary: false
 乘流
 乘涼
 乘田
-乘著
 乘積
 乘空
 乘肩
 乘興
 乘船
+乘著
 乘虛
 乘號
 乘警
@@ -4268,8 +4269,8 @@ use_preset_vocabulary: false
 也比
 也沒
 也波
-也無
 也為
+也無
 也用
 也由
 也稱
@@ -4450,7 +4451,6 @@ use_preset_vocabulary: false
 乾白
 乾的
 乾眼
-乾著
 乾硬
 乾禮
 乾稿
@@ -4476,6 +4476,7 @@ use_preset_vocabulary: false
 乾草
 乾菜
 乾落
+乾著
 乾薑
 乾薪
 乾薹
@@ -4982,8 +4983,8 @@ use_preset_vocabulary: false
 云云
 云何
 云溪
-云然
 云為
+云然
 云爾
 互不
 互交
@@ -5020,8 +5021,8 @@ use_preset_vocabulary: false
 互派
 互添
 互溶
-互爭
 互為
+互爭
 互物
 互生
 互用
@@ -5156,6 +5157,7 @@ use_preset_vocabulary: false
 五常
 五幢
 五年
+五床
 五度
 五式
 五弟
@@ -5218,7 +5220,6 @@ use_preset_vocabulary: false
 五湖
 五營
 五爺
-五床
 五版
 五牲
 五班
@@ -5510,6 +5511,7 @@ use_preset_vocabulary: false
 交差
 交帳
 交年
+交床
 交底
 交引
 交彙
@@ -5548,7 +5550,6 @@ use_preset_vocabulary: false
 交火
 交煎
 交爭
-交床
 交班
 交由
 交界
@@ -5639,9 +5640,9 @@ use_preset_vocabulary: false
 亦會
 亦有
 亦比
+亦為
 亦無
 亦然
-亦為
 亦當
 亦稱
 亦經
@@ -5749,12 +5750,12 @@ use_preset_vocabulary: false
 亮直
 亮相
 亮眼
-亮著
 亮票
 亮節
 亮紗
 亮色
 亮菌
+亮著
 亮藍
 亮話
 亮起
@@ -5879,10 +5880,10 @@ use_preset_vocabulary: false
 人渣
 人滿
 人潮
+人為
 人無
 人煙
 人熊
-人為
 人爵
 人父
 人牆
@@ -5910,7 +5911,6 @@ use_preset_vocabulary: false
 人精
 人紀
 人緣
-人才
 人罵
 人群
 人聲
@@ -6120,8 +6120,8 @@ use_preset_vocabulary: false
 仍會
 仍有
 仍未
-仍然
 仍為
+仍然
 仍能
 仍舊
 仍要
@@ -6212,9 +6212,9 @@ use_preset_vocabulary: false
 仗托
 仗持
 仗火
-仗著
 仗義
 仗腰
+仗著
 仗衛
 仗賴
 付上
@@ -6244,11 +6244,11 @@ use_preset_vocabulary: false
 付清
 付現
 付畀
-付著
 付給
 付耳
 付能
 付與
+付著
 付訖
 付託
 付諸
@@ -6800,7 +6800,7 @@ use_preset_vocabulary: false
 伏獵
 伏生
 伏甲
-伏著
+伏眾
 伏礁
 伏祈
 伏禮
@@ -6815,9 +6815,9 @@ use_preset_vocabulary: false
 伏臥
 伏莽
 伏落
+伏著
 伏藏
 伏虎
-伏眾
 伏行
 伏襲
 伏見
@@ -7003,9 +7003,9 @@ use_preset_vocabulary: false
 伴熱
 伴生
 伴當
-伴著
 伴等
 伴舞
+伴著
 伴讀
 伴送
 伴遊
@@ -7047,11 +7047,11 @@ use_preset_vocabulary: false
 伸港
 伸直
 伸眉
-伸著
 伸縮
 伸腰
 伸腳
 伸腿
+伸著
 伸訴
 伸起
 伸進
@@ -7160,7 +7160,6 @@ use_preset_vocabulary: false
 佈建
 佈德
 佈慈
-佈扣
 佈擺
 佈政
 佈教
@@ -7180,7 +7179,6 @@ use_preset_vocabulary: false
 佈道
 佈防
 佈陣
-佈雪
 佈雷
 佉沙
 佌佌
@@ -7263,7 +7261,6 @@ use_preset_vocabulary: false
 低的
 低盪
 低眉
-低著
 低矮
 低穹
 低空
@@ -7281,6 +7278,7 @@ use_preset_vocabulary: false
 低脂
 低腰
 低落
+低著
 低薪
 低處
 低語
@@ -7338,11 +7336,11 @@ use_preset_vocabulary: false
 住校
 住民
 住的
-住著
 住紮
 住者
 住腳
 住舍
+住著
 住處
 住診
 住讀
@@ -7420,6 +7418,7 @@ use_preset_vocabulary: false
 佔居
 佔屋
 佔山
+佔床
 佔座
 佔後
 佔得
@@ -7436,13 +7435,11 @@ use_preset_vocabulary: false
 佔滿
 佔澳
 佔為
-佔床
 佔率
 佔用
 佔畢
 佔百
 佔盡
-佔著
 佔穩
 佔網
 佔線
@@ -7452,6 +7449,7 @@ use_preset_vocabulary: false
 佔耕
 佔臺
 佔英
+佔著
 佔葡
 佔蘇
 佔西
@@ -7514,8 +7512,8 @@ use_preset_vocabulary: false
 何消
 何潔
 何炅
-何焯
 何為
+何焯
 何物
 何獨
 何用
@@ -8093,9 +8091,9 @@ use_preset_vocabulary: false
 來源
 來潮
 來火
+來為
 來煞
 來照
-來為
 來牟
 來犯
 來玩
@@ -8104,7 +8102,6 @@ use_preset_vocabulary: false
 來發
 來的
 來看
-來著
 來福
 來稿
 來給
@@ -8118,6 +8115,7 @@ use_preset_vocabulary: false
 來茲
 來華
 來葉
+來著
 來蘇
 來處
 來複
@@ -8222,6 +8220,7 @@ use_preset_vocabulary: false
 供奠
 供客
 供尖
+供床
 供張
 供應
 供房
@@ -8236,7 +8235,6 @@ use_preset_vocabulary: false
 供水
 供求
 供熱
-供床
 供物
 供狀
 供獻
@@ -8294,11 +8292,11 @@ use_preset_vocabulary: false
 依然
 依照
 依物
-依著
 依稀
 依約
 依舊
 依般
+依著
 依蘭
 依託
 依賴
@@ -8477,8 +8475,8 @@ use_preset_vocabulary: false
 係扣
 係指
 係數
-係爭
 係為
+係爭
 係獲
 係累
 係臂
@@ -8828,6 +8826,7 @@ use_preset_vocabulary: false
 信物
 信用
 信皮
+信眾
 信石
 信票
 信禽
@@ -8845,7 +8844,6 @@ use_preset_vocabulary: false
 信腳
 信臣
 信號
-信眾
 信行
 信衣
 信託
@@ -8902,8 +8900,8 @@ use_preset_vocabulary: false
 修水
 修治
 修濬
-修煉
 修為
+修煉
 修版
 修理
 修的
@@ -9205,10 +9203,10 @@ use_preset_vocabulary: false
 倒滿
 倒瀉
 倒灌
+倒為
 倒煙
 倒煤
 倒熟
-倒為
 倒爺
 倒片
 倒牌
@@ -9404,12 +9402,12 @@ use_preset_vocabulary: false
 借用
 借的
 借看
-借著
 借穿
 借端
 借箸
 借約
 借給
+借著
 借託
 借詞
 借調
@@ -9750,7 +9748,6 @@ use_preset_vocabulary: false
 偏的
 偏盃
 偏盲
-偏著
 偏知
 偏短
 偏私
@@ -9765,6 +9762,7 @@ use_preset_vocabulary: false
 偏背
 偏至
 偏航
+偏著
 偏處
 偏蝕
 偏袒
@@ -9863,7 +9861,6 @@ use_preset_vocabulary: false
 做的
 做盡
 做眼
-做著
 做秀
 做空
 做答
@@ -9878,6 +9875,7 @@ use_preset_vocabulary: false
 做臉
 做莊
 做菜
+做著
 做處
 做親
 做詩
@@ -9910,6 +9908,7 @@ use_preset_vocabulary: false
 停完
 停屍
 停工
+停床
 停建
 停役
 停待
@@ -9940,7 +9939,6 @@ use_preset_vocabulary: false
 停滯
 停潦
 停火
-停床
 停版
 停牌
 停產
@@ -9949,7 +9947,6 @@ use_preset_vocabulary: false
 停當
 停發
 停盤
-停著
 停睇
 停站
 停筆
@@ -9960,6 +9957,7 @@ use_preset_vocabulary: false
 停職
 停航
 停船
+停著
 停薪
 停藥
 停表
@@ -10220,7 +10218,6 @@ use_preset_vocabulary: false
 偷盜
 偷看
 偷眼
-偷著
 偷睛
 偷睡
 偷砍
@@ -10234,6 +10231,7 @@ use_preset_vocabulary: false
 偷聽
 偷腥
 偷花
+偷著
 偷薄
 偷襲
 偷覷
@@ -10259,6 +10257,36 @@ use_preset_vocabulary: false
 偷香
 偷騎
 偺們
+偽作
+偽劣
+偽名
+偽命
+偽品
+偽善
+偽國
+偽基
+偽學
+偽幣
+偽書
+偽朝
+偽本
+偽滿
+偽經
+偽藥
+偽裝
+偽言
+偽託
+偽証
+偽誓
+偽謬
+偽證
+偽足
+偽跡
+偽軍
+偽造
+偽鈔
+偽頂
+偽飾
 傀偉
 傀儡
 傀然
@@ -10515,9 +10543,9 @@ use_preset_vocabulary: false
 傳檄
 傳法
 傳流
+傳為
 傳熱
 傳燈
-傳為
 傳球
 傳略
 傳疑
@@ -10525,7 +10553,6 @@ use_preset_vocabulary: false
 傳的
 傳看
 傳真
-傳著
 傳示
 傳神
 傳票
@@ -10829,36 +10856,6 @@ use_preset_vocabulary: false
 僚機
 僛僛
 僝僽
-偽作
-偽劣
-偽名
-偽命
-偽品
-偽善
-偽國
-偽基
-偽學
-偽幣
-偽書
-偽朝
-偽本
-偽滿
-偽經
-偽藥
-偽裝
-偽言
-偽託
-偽証
-偽誓
-偽謬
-偽證
-偽足
-偽跡
-偽軍
-偽造
-偽鈔
-偽頂
-偽飾
 僥倖
 僥傒
 僥幸
@@ -11077,10 +11074,10 @@ use_preset_vocabulary: false
 儘教
 儘數
 儘早
-儘著
 儘管
 儘自
 儘興
+儘著
 儘讓
 儘速
 儘量
@@ -11511,9 +11508,9 @@ use_preset_vocabulary: false
 先演
 先漢
 先澤
+先為
 先烈
 先照
-先為
 先父
 先猜
 先王
@@ -11688,7 +11685,6 @@ use_preset_vocabulary: false
 光的
 光盤
 光看
-光著
 光碟
 光磁
 光禿
@@ -11712,6 +11708,7 @@ use_preset_vocabulary: false
 光芒
 光苔
 光華
+光著
 光藻
 光蛋
 光表
@@ -11925,7 +11922,6 @@ use_preset_vocabulary: false
 兜搭
 兜攬
 兜的
-兜著
 兜答
 兜籠
 兜紗
@@ -11935,6 +11931,7 @@ use_preset_vocabulary: false
 兜胸
 兜膝
 兜臉
+兜著
 兜裡
 兜襠
 兜賣
@@ -12253,9 +12250,9 @@ use_preset_vocabulary: false
 內行
 內衣
 內袋
-內裡
 內裙
 內裝
+內裡
 內製
 內褲
 內襯
@@ -12398,10 +12395,10 @@ use_preset_vocabulary: false
 全活
 全清
 全港
+全為
 全無
 全然
 全熟
-全為
 全片
 全牛
 全班
@@ -13090,6 +13087,7 @@ use_preset_vocabulary: false
 公畝
 公益
 公相
+公眾
 公石
 公示
 公社
@@ -13116,7 +13114,6 @@ use_preset_vocabulary: false
 公船
 公虎
 公蟻
-公眾
 公衡
 公視
 公設
@@ -13821,10 +13818,10 @@ use_preset_vocabulary: false
 再添
 再滿
 再演
+再為
 再無
 再煎
 再燃
-再為
 再版
 再犯
 再現
@@ -13921,11 +13918,11 @@ use_preset_vocabulary: false
 冒牌
 冒犯
 冒用
-冒著
 冒禮
 冒稱
 冒突
 冒籍
+冒著
 冒號
 冒血
 冒被
@@ -14145,11 +14142,12 @@ use_preset_vocabulary: false
 冰屑
 冰山
 冰岩
-冰峰
 冰峯
+冰峰
 冰島
 冰川
 冰帽
+冰床
 冰店
 冰廠
 冰心
@@ -14193,7 +14191,6 @@ use_preset_vocabulary: false
 冰炭
 冰燈
 冰爪
-冰床
 冰片
 冰玉
 冰球
@@ -14290,6 +14287,7 @@ use_preset_vocabulary: false
 冷峻
 冷巷
 冷布
+冷床
 冷度
 冷庫
 冷徑
@@ -14323,7 +14321,6 @@ use_preset_vocabulary: false
 冷然
 冷熱
 冷燙
-冷床
 冷療
 冷的
 冷盆
@@ -14498,8 +14495,8 @@ use_preset_vocabulary: false
 凝注
 凝液
 凝滯
-凝然
 凝為
+凝然
 凝目
 凝眄
 凝眸
@@ -14557,8 +14554,8 @@ use_preset_vocabulary: false
 凡此
 凡民
 凡火
-凡無
 凡為
+凡無
 凡爾
 凡百
 凡目
@@ -14629,10 +14626,10 @@ use_preset_vocabulary: false
 凸版
 凸狀
 凸現
-凸著
 凸線
 凸緣
 凸耳
+凸著
 凸角
 凸起
 凸輪
@@ -14812,6 +14809,7 @@ use_preset_vocabulary: false
 出盡
 出監
 出盤
+出眾
 出示
 出神
 出票
@@ -14848,7 +14846,6 @@ use_preset_vocabulary: false
 出號
 出蟄
 出血
-出眾
 出行
 出言
 出記
@@ -15107,6 +15104,7 @@ use_preset_vocabulary: false
 分工
 分布
 分帳
+分床
 分店
 分度
 分庭
@@ -15179,10 +15177,9 @@ use_preset_vocabulary: false
 分清
 分潤
 分炊
+分為
 分爨
 分爭
-分為
-分床
 分片
 分牌
 分獲
@@ -15204,6 +15201,7 @@ use_preset_vocabulary: false
 分的
 分相
 分省
+分眾
 分破
 分社
 分神
@@ -15248,7 +15246,6 @@ use_preset_vocabulary: false
 分藩
 分蘗
 分號
-分眾
 分行
 分袂
 分被
@@ -15447,9 +15444,9 @@ use_preset_vocabulary: false
 刊用
 刊登
 刊發
-刊著
 刊石
 刊落
+刊著
 刊薙
 刊號
 刊行
@@ -15511,10 +15508,10 @@ use_preset_vocabulary: false
 划拳
 划槳
 划水
-划著
 划算
 划船
 划艇
+划著
 划行
 划走
 划起
@@ -15807,8 +15804,8 @@ use_preset_vocabulary: false
 別殿
 別法
 別派
-別無
 別為
+別無
 別班
 別現
 別理
@@ -15821,7 +15818,6 @@ use_preset_vocabulary: false
 別的
 別省
 別看
-別著
 別科
 別種
 別稱
@@ -15842,6 +15838,7 @@ use_preset_vocabulary: false
 別腳
 別致
 別莊
+別著
 別處
 別號
 別被
@@ -15897,8 +15894,8 @@ use_preset_vocabulary: false
 刨刀
 刨子
 刨工
-刨根
 刨床
+刨根
 刨程
 刨花
 刨蹴
@@ -16008,11 +16005,11 @@ use_preset_vocabulary: false
 刮痕
 刮痧
 刮的
-刮著
 刮研
 刮破
 刮臉
 刮舌
+刮著
 刮補
 刮言
 刮躁
@@ -16090,7 +16087,6 @@ use_preset_vocabulary: false
 制圖
 制定
 制導
-制幣
 制度
 制式
 制憲
@@ -16192,7 +16188,6 @@ use_preset_vocabulary: false
 刺癢
 刺目
 刺眼
-刺著
 刺破
 刺穿
 刺絲
@@ -16205,6 +16200,7 @@ use_preset_vocabulary: false
 刺船
 刺草
 刺莧
+刺著
 刺蔘
 刺蝟
 刺謁
@@ -16256,7 +16252,6 @@ use_preset_vocabulary: false
 刻畫
 刻痕
 刻盤
-刻著
 刻石
 刻符
 刻絲
@@ -16302,8 +16297,8 @@ use_preset_vocabulary: false
 則會
 則有
 則波
-則無
 則為
+則無
 則甚
 則用
 則由
@@ -16334,11 +16329,11 @@ use_preset_vocabulary: false
 削球
 削瘦
 削皮
-削著
 削職
 削肩
 削色
 削草
+削著
 削蔥
 削薄
 削跡
@@ -16465,10 +16460,10 @@ use_preset_vocabulary: false
 前清
 前滾
 前漢
+前為
 前烈
 前燈
 前燕
-前為
 前生
 前田
 前番
@@ -16551,8 +16546,8 @@ use_preset_vocabulary: false
 剔撥
 剔牙
 剔犀
-剔著
 剔紅
+剔著
 剔豎
 剔透
 剔開
@@ -16648,9 +16643,9 @@ use_preset_vocabulary: false
 剛毛
 剛溼
 剛灌
+剛為
 剛烈
 剛燒
-剛為
 剛玉
 剛玩
 剛盛
@@ -16658,7 +16653,6 @@ use_preset_vocabulary: false
 剛看
 剛石
 剛硬
-剛才
 剛背
 剛腸
 剛落
@@ -16745,6 +16739,7 @@ use_preset_vocabulary: false
 剪子
 剪字
 剪對
+剪床
 剪影
 剪徑
 剪得
@@ -16760,10 +16755,8 @@ use_preset_vocabulary: false
 剪毛
 剪法
 剪滅
-剪床
 剪片
 剪直
-剪著
 剪短
 剪票
 剪筒
@@ -16773,6 +16766,7 @@ use_preset_vocabulary: false
 剪綹
 剪線
 剪草
+剪著
 剪裁
 剪貼
 剪起
@@ -16865,7 +16859,6 @@ use_preset_vocabulary: false
 割法
 割烹
 割燒
-割著
 割破
 割磣
 割禮
@@ -16879,6 +16872,7 @@ use_preset_vocabulary: false
 割腕
 割膠
 割草
+割著
 割衿
 割裂
 割襟
@@ -17009,15 +17003,15 @@ use_preset_vocabulary: false
 劃歸
 劃法
 劃清
-劃然
 劃為
+劃然
 劃界
 劃痕
-劃著
 劃破
 劃策
 劃線
 劃花
+劃著
 劃設
 劃足
 劃轉
@@ -17088,11 +17082,11 @@ use_preset_vocabulary: false
 劈殺
 劈然
 劈理
-劈著
 劈空
 劈胸
 劈腿
 劈臉
+劈著
 劈蘭
 劈裂
 劈里
@@ -17440,9 +17434,9 @@ use_preset_vocabulary: false
 加演
 加漲
 加潑
+加為
 加煎
 加熱
-加為
 加班
 加甜
 加生
@@ -17695,8 +17689,8 @@ use_preset_vocabulary: false
 勇武
 勇氣
 勇決
-勇烈
 勇為
+勇烈
 勇猛
 勇略
 勇者
@@ -18246,7 +18240,6 @@ use_preset_vocabulary: false
 包產
 包用
 包皮
-包著
 包票
 包租
 包穀
@@ -18268,14 +18261,15 @@ use_preset_vocabulary: false
 包莊
 包莖
 包菜
+包著
 包藏
 包蘊
 包融
 包衣
 包被
 包袱
-包裡
 包裝
+包裡
 包裹
 包谷
 包賠
@@ -18535,6 +18529,7 @@ use_preset_vocabulary: false
 匡助
 匡合
 匡坐
+匡床
 匡復
 匡扶
 匡持
@@ -18542,14 +18537,13 @@ use_preset_vocabulary: false
 匡時
 匡正
 匡濟
-匡床
 匡當
 匡算
 匡衡
 匡謬
 匣子
-匣式
 匣床
+匣式
 匣鉢
 匪人
 匪偽
@@ -18798,6 +18792,7 @@ use_preset_vocabulary: false
 十干
 十年
 十幾
+十床
 十度
 十座
 十式
@@ -18850,7 +18845,6 @@ use_preset_vocabulary: false
 十炮
 十營
 十爺
-十床
 十片
 十版
 十獎
@@ -19735,6 +19729,7 @@ use_preset_vocabulary: false
 印子
 印尼
 印巴
+印床
 印度
 印式
 印張
@@ -19758,7 +19753,6 @@ use_preset_vocabulary: false
 印油
 印泥
 印滿
-印床
 印版
 印璽
 印痕
@@ -19766,7 +19760,6 @@ use_preset_vocabulary: false
 印的
 印盒
 印相
-印著
 印石
 印窠
 印章
@@ -19777,6 +19770,7 @@ use_preset_vocabulary: false
 印航
 印色
 印花
+印著
 印行
 印表
 印製
@@ -19975,6 +19969,7 @@ use_preset_vocabulary: false
 卻很
 卻後
 卻扇
+卻才
 卻把
 卻是
 卻會
@@ -19987,7 +19982,6 @@ use_preset_vocabulary: false
 卻略
 卻病
 卻立
-卻才
 卻老
 卻能
 卻行
@@ -20041,7 +20035,6 @@ use_preset_vocabulary: false
 厚生
 厚用
 厚的
-厚著
 厚祿
 厚禮
 厚秩
@@ -20049,6 +20042,7 @@ use_preset_vocabulary: false
 厚糈
 厚紙
 厚臉
+厚著
 厚葬
 厚薄
 厚薪
@@ -20133,10 +20127,10 @@ use_preset_vocabulary: false
 原汁
 原油
 原液
+原為
 原無
 原煤
 原爆
-原為
 原版
 原物
 原犯
@@ -20622,10 +20616,10 @@ use_preset_vocabulary: false
 反清
 反演
 反潛
+反為
 反無
 反煙
 反照
-反為
 反王
 反璞
 反璧
@@ -20857,7 +20851,7 @@ use_preset_vocabulary: false
 受益
 受盡
 受看
-受著
+受眾
 受知
 受禪
 受禮
@@ -20877,9 +20871,9 @@ use_preset_vocabulary: false
 受自
 受苦
 受茶
+受著
 受蘊
 受虐
-受眾
 受訓
 受託
 受訪
@@ -21420,9 +21414,9 @@ use_preset_vocabulary: false
 只消
 只漏
 只演
+只為
 只照
 只煮
-只為
 只猜
 只玩
 只甚
@@ -21561,6 +21555,7 @@ use_preset_vocabulary: false
 叫對
 叫局
 叫屈
+叫床
 叫座
 叫得
 叫急
@@ -21570,10 +21565,8 @@ use_preset_vocabulary: false
 叫板
 叫法
 叫渴
-叫床
 叫牌
 叫的
-叫著
 叫絕
 叫給
 叫罵
@@ -21581,6 +21574,7 @@ use_preset_vocabulary: false
 叫聲
 叫苦
 叫菜
+叫著
 叫號
 叫街
 叫賣
@@ -21761,11 +21755,11 @@ use_preset_vocabulary: false
 可沿
 可溶
 可演
+可為
 可無
 可煞
 可燃
 可爬
-可為
 可獲
 可用
 可由
@@ -21774,7 +21768,6 @@ use_preset_vocabulary: false
 可疑
 可看
 可真
-可著
 可矜
 可知
 可磣
@@ -21790,6 +21783,7 @@ use_preset_vocabulary: false
 可背
 可能
 可與
+可著
 可藏
 可行
 可被
@@ -22070,7 +22064,6 @@ use_preset_vocabulary: false
 吃癟
 吃盡
 吃相
-吃著
 吃硬
 吃碰
 吃私
@@ -22086,6 +22079,7 @@ use_preset_vocabulary: false
 吃苦
 吃茶
 吃草
+吃著
 吃薑
 吃藥
 吃虧
@@ -22196,6 +22190,7 @@ use_preset_vocabulary: false
 各帶
 各幫
 各年
+各床
 各廂
 各廠
 各廳
@@ -22266,7 +22261,6 @@ use_preset_vocabulary: false
 各演
 各潑
 各為
-各床
 各版
 各牽
 各玩
@@ -22284,6 +22278,7 @@ use_preset_vocabulary: false
 各盡
 各相
 各省
+各眾
 各睡
 各社
 各科
@@ -22310,7 +22305,6 @@ use_preset_vocabulary: false
 各色
 各處
 各號
-各眾
 各行
 各街
 各被
@@ -22470,9 +22464,9 @@ use_preset_vocabulary: false
 合溜
 合演
 合火
+合為
 合照
 合營
-合為
 合牽
 合獨
 合班
@@ -22485,7 +22479,7 @@ use_preset_vocabulary: false
 合當
 合發
 合眼
-合著
+合眾
 合租
 合稱
 合窆
@@ -22509,7 +22503,6 @@ use_preset_vocabulary: false
 合著
 合葬
 合蓋
-合眾
 合補
 合規
 合計
@@ -22632,6 +22625,7 @@ use_preset_vocabulary: false
 吊子
 吊審
 吊帶
+吊床
 吊得
 吊扇
 吊打
@@ -22649,18 +22643,17 @@ use_preset_vocabulary: false
 吊毛
 吊水
 吊燈
-吊床
 吊牌
 吊球
 吊環
 吊盤
-吊著
 吊稍
 吊窗
 吊索
 吊線
 吊繩
 吊腳
+吊著
 吊蘭
 吊裝
 吊褲
@@ -22743,6 +22736,7 @@ use_preset_vocabulary: false
 同左
 同席
 同年
+同床
 同庚
 同度
 同座
@@ -22803,10 +22797,9 @@ use_preset_vocabulary: false
 同源
 同溫
 同濟
-同爨
 同為
+同爨
 同父
-同床
 同班
 同理
 同生
@@ -22959,8 +22952,8 @@ use_preset_vocabulary: false
 名流
 名源
 名滿
-名煙
 名為
+名煙
 名爵
 名片
 名牌
@@ -23085,7 +23078,6 @@ use_preset_vocabulary: false
 吐火
 吐番
 吐痰
-吐著
 吐穗
 吐納
 吐絮
@@ -23095,6 +23087,7 @@ use_preset_vocabulary: false
 吐舌
 吐良
 吐芳
+吐著
 吐蕃
 吐血
 吐訴
@@ -23154,9 +23147,9 @@ use_preset_vocabulary: false
 向用
 向當
 向盤
-向著
 向秀
 向背
+向著
 向西
 向觸
 向量
@@ -23305,7 +23298,6 @@ use_preset_vocabulary: false
 含片
 含玉
 含生
-含著
 含碳
 含磷
 含秀
@@ -23319,6 +23311,7 @@ use_preset_vocabulary: false
 含苞
 含英
 含荼
+含著
 含葩
 含蓄
 含蘊
@@ -23450,7 +23443,6 @@ use_preset_vocabulary: false
 吸的
 吸盡
 吸盤
-吸著
 吸睛
 吸碳
 吸積
@@ -23461,6 +23453,7 @@ use_preset_vocabulary: false
 吸膠
 吸芽
 吸菸
+吸著
 吸蟲
 吸血
 吸走
@@ -23521,7 +23514,6 @@ use_preset_vocabulary: false
 吹牛
 吹的
 吹直
-吹著
 吹竹
 吹笛
 吹筒
@@ -23533,6 +23525,7 @@ use_preset_vocabulary: false
 吹脣
 吹腔
 吹臺
+吹著
 吹葭
 吹號
 吹襲
@@ -23565,8 +23558,8 @@ use_preset_vocabulary: false
 吼怒
 吼猴
 吼猿
-吼著
 吼聲
+吼著
 吼道
 吼鶴
 吽牙
@@ -23625,12 +23618,12 @@ use_preset_vocabulary: false
 呆漢
 呆瓜
 呆癡
-呆著
 呆立
 呆笑
 呆笨
 呆腦
 呆若
+呆著
 呆話
 呆貨
 呆賬
@@ -24048,7 +24041,6 @@ use_preset_vocabulary: false
 和璧
 和田
 和番
-和著
 和睦
 和碩
 和穆
@@ -24060,6 +24052,7 @@ use_preset_vocabulary: false
 和羹
 和聲
 和菜
+和著
 和藹
 和衣
 和衷
@@ -24168,13 +24161,13 @@ use_preset_vocabulary: false
 咬牙
 咬痕
 咬的
-咬著
 咬破
 咬碎
 咬秋
 咬緊
 咬群
 咬舌
+咬著
 咬起
 咬釘
 咬鉤
@@ -24573,7 +24566,6 @@ use_preset_vocabulary: false
 哭爸
 哭牆
 哭盡
-哭著
 哭窮
 哭竹
 哭聲
@@ -24581,6 +24573,7 @@ use_preset_vocabulary: false
 哭腫
 哭臉
 哭臨
+哭著
 哭號
 哭訴
 哭調
@@ -24628,8 +24621,8 @@ use_preset_vocabulary: false
 哼得
 哼歌
 哼的
-哼著
 哼聲
+哼著
 哼起
 哽住
 哽咽
@@ -24637,8 +24630,8 @@ use_preset_vocabulary: false
 哽噎
 哽在
 哽塞
-哽著
 哽結
+哽著
 唁信
 唁函
 唁勞
@@ -24785,13 +24778,13 @@ use_preset_vocabulary: false
 唱片
 唱的
 唱盤
-唱著
 唱破
 唱碟
 唱票
 唱籍
 唱腔
 唱臂
+唱著
 唱詞
 唱詩
 唱論
@@ -24820,8 +24813,8 @@ use_preset_vocabulary: false
 唸書
 唸白
 唸的
-唸著
 唸經
+唸著
 唸詩
 唸誦
 唸錯
@@ -25050,6 +25043,42 @@ use_preset_vocabulary: false
 啐飲
 啑喋
 啑血
+啖名
+啖噬
+啖蔗
+啖食
+啗飯
+啜哄
+啜持
+啜汁
+啜泣
+啜茗
+啜茶
+啜賺
+啜飲
+啞劇
+啞口
+啞吒
+啞吧
+啞咽
+啞啞
+啞嗓
+啞場
+啞子
+啞巴
+啞戲
+啞板
+啞火
+啞炮
+啞然
+啞穴
+啞聲
+啞語
+啞謎
+啞酒
+啞鈴
+啞點
+啞鼓
 啟乞
 啟事
 啟動
@@ -25088,42 +25117,6 @@ use_preset_vocabulary: false
 啟開
 啟顏
 啟齒
-啖名
-啖噬
-啖蔗
-啖食
-啗飯
-啜哄
-啜持
-啜汁
-啜泣
-啜茗
-啜茶
-啜賺
-啜飲
-啞劇
-啞口
-啞吒
-啞吧
-啞咽
-啞啞
-啞嗓
-啞場
-啞子
-啞巴
-啞戲
-啞板
-啞火
-啞炮
-啞然
-啞穴
-啞聲
-啞語
-啞謎
-啞酒
-啞鈴
-啞點
-啞鼓
 啡咖
 啣接
 啤酒
@@ -25277,10 +25270,10 @@ use_preset_vocabulary: false
 喊打
 喊救
 喊殺
-喊著
 喊破
 喊窮
 喊聲
+喊著
 喊話
 喊起
 喊進
@@ -25419,10 +25412,10 @@ use_preset_vocabulary: false
 喝湯
 喝的
 喝盡
-喝著
 喝禮
 喝粥
 喝茶
+喝著
 喝起
 喝進
 喝過
@@ -25738,9 +25731,9 @@ use_preset_vocabulary: false
 嗔斥
 嗔狂
 嗔目
-嗔著
 嗔睨
 嗔色
+嗔著
 嗔視
 嗔詬
 嗔責
@@ -26059,8 +26052,8 @@ use_preset_vocabulary: false
 噎住
 噎到
 噎嘔
-噎著
 噎膈
+噎著
 噎饑
 噏呷
 噏然
@@ -26178,11 +26171,11 @@ use_preset_vocabulary: false
 噴燈
 噴牙
 噴發
-噴著
 噴管
 噴糞
 噴繪
 噴花
+噴著
 噴薄
 噴血
 噴起
@@ -26237,10 +26230,10 @@ use_preset_vocabulary: false
 嚇死
 嚇瘋
 嚇的
-嚇著
 嚇破
 嚇老
 嚇聲
+嚇著
 嚇詐
 嚇走
 嚇跑
@@ -26279,8 +26272,8 @@ use_preset_vocabulary: false
 嚥到
 嚥唾
 嚥氣
-嚥著
 嚥肌
+嚥著
 嚥進
 嚦嚦
 嚨胡
@@ -26371,8 +26364,8 @@ use_preset_vocabulary: false
 嚷劈
 嚷叫
 嚷嚷
-嚷著
 嚷罵
+嚷著
 嚷鬧
 嚼勁
 嚼子
@@ -26432,7 +26425,6 @@ use_preset_vocabulary: false
 囑付
 囑令
 囑咐
-囑目
 囑託
 囒哰
 囒噸
@@ -26635,6 +26627,7 @@ use_preset_vocabulary: false
 四盞
 四相
 四眼
+四眾
 四知
 四碗
 四碼
@@ -26674,7 +26667,6 @@ use_preset_vocabulary: false
 四處
 四虛
 四號
-四眾
 四行
 四街
 四表
@@ -26856,7 +26848,6 @@ use_preset_vocabulary: false
 回目
 回看
 回眸
-回著
 回示
 回神
 回祿
@@ -26881,6 +26872,7 @@ use_preset_vocabulary: false
 回臺
 回航
 回落
+回著
 回補
 回覆
 回見
@@ -27049,9 +27041,9 @@ use_preset_vocabulary: false
 固本
 固氮
 固沙
+固為
 固無
 固然
-固為
 固疾
 固知
 固窮
@@ -27320,7 +27312,7 @@ use_preset_vocabulary: false
 圍子
 圍尺
 圍屏
-圍巖
+圍岩
 圍巾
 圍得
 圍成
@@ -27340,7 +27332,6 @@ use_preset_vocabulary: false
 圍獵
 圍的
 圍看
-圍著
 圍砌
 圍籬
 圍網
@@ -27348,6 +27339,7 @@ use_preset_vocabulary: false
 圍聚
 圍脖
 圍腰
+圍著
 圍裙
 圍視
 圍觀
@@ -27558,7 +27550,6 @@ use_preset_vocabulary: false
 團牌
 團狀
 團瓢
-團著
 團礦
 團社
 團空
@@ -27572,6 +27563,7 @@ use_preset_vocabulary: false
 團花
 團茶
 團荷
+團著
 團藻
 團行
 團裡
@@ -27673,7 +27665,6 @@ use_preset_vocabulary: false
 土產
 土番
 土目
-土著
 土石
 土砂
 土礫
@@ -27772,6 +27763,7 @@ use_preset_vocabulary: false
 在崗
 在席
 在幫
+在床
 在座
 在建
 在後
@@ -27804,9 +27796,8 @@ use_preset_vocabulary: false
 在泛
 在混
 在演
-在營
 在為
-在床
+在營
 在理
 在生
 在用
@@ -27972,7 +27963,6 @@ use_preset_vocabulary: false
 地皮
 地盤
 地目
-地著
 地磁
 地磅
 地磚
@@ -27999,6 +27989,7 @@ use_preset_vocabulary: false
 地膜
 地臺
 地荒
+地著
 地藏
 地處
 地蜜
@@ -28069,9 +28060,9 @@ use_preset_vocabulary: false
 均沾
 均派
 均溼
+均為
 均無
 均熱
-均為
 均田
 均由
 均相
@@ -28158,6 +28149,7 @@ use_preset_vocabulary: false
 坐席
 坐帳
 坐年
+坐床
 坐廁
 坐廳
 坐待
@@ -28177,12 +28169,10 @@ use_preset_vocabulary: false
 坐法
 坐浴
 坐滿
-坐床
 坐牢
 坐班
 坐的
 坐監
-坐著
 坐禪
 坐科
 坐立
@@ -28195,6 +28185,7 @@ use_preset_vocabulary: false
 坐草
 坐莊
 坐落
+坐著
 坐蓐
 坐藥
 坐蠟
@@ -28366,7 +28357,6 @@ use_preset_vocabulary: false
 垂白
 垂直
 垂盼
-垂著
 垂範
 垂簾
 垂絕
@@ -28378,6 +28368,7 @@ use_preset_vocabulary: false
 垂老
 垂聽
 垂落
+垂著
 垂詢
 垂足
 垂釣
@@ -28471,9 +28462,9 @@ use_preset_vocabulary: false
 埋沒
 埋照
 埋玉
-埋著
 埋線
 埋置
+埋著
 埋葬
 埋藏
 埋蠱
@@ -28595,13 +28586,13 @@ use_preset_vocabulary: false
 執照
 執爨
 執獄
-執著
 執禮
 執競
 執筆
 執籌
 執紼
 執結
+執著
 執行
 執訊
 執證
@@ -28634,6 +28625,7 @@ use_preset_vocabulary: false
 基層
 基岩
 基幹
+基床
 基底
 基座
 基建
@@ -28653,7 +28645,6 @@ use_preset_vocabulary: false
 基波
 基準
 基爾
-基床
 基甸
 基督
 基石
@@ -28780,7 +28771,6 @@ use_preset_vocabulary: false
 堆滿
 堆焊
 堆疊
-堆著
 堆砌
 堆積
 堆笑
@@ -28788,6 +28778,7 @@ use_preset_vocabulary: false
 堆置
 堆肥
 堆花
+堆著
 堆裡
 堆豗
 堆貨
@@ -29125,11 +29116,11 @@ use_preset_vocabulary: false
 塗潭
 塗澤
 塗炭
-塗著
 塗竄
 塗粉
 塗膠
 塗色
+塗著
 塗藥
 塗蠟
 塗裝
@@ -29218,9 +29209,9 @@ use_preset_vocabulary: false
 填然
 填發
 填的
-填著
 填空
 填篆
+填著
 填表
 填補
 填詞
@@ -29312,12 +29303,12 @@ use_preset_vocabulary: false
 墊片
 墊用
 墊發
-墊著
 墊紙
 墊股
 墊肩
 墊背
 墊腳
+墊著
 墊被
 墊補
 墊褥
@@ -29444,6 +29435,7 @@ use_preset_vocabulary: false
 墨客
 墨家
 墨寶
+墨床
 墨廚
 墨戲
 墨斗
@@ -29458,7 +29450,6 @@ use_preset_vocabulary: false
 墨漬
 墨瀋
 墨灣
-墨床
 墨版
 墨玉
 墨畫
@@ -29649,7 +29640,6 @@ use_preset_vocabulary: false
 壓痛
 壓的
 壓直
-壓著
 壓破
 壓碎
 壓秤
@@ -29661,6 +29651,7 @@ use_preset_vocabulary: false
 壓臺
 壓船
 壓花
+壓著
 壓蓋
 壓蔓
 壓製
@@ -30405,9 +30396,9 @@ use_preset_vocabulary: false
 多油
 多演
 多災
+多為
 多無
 多燒
-多為
 多爾
 多玩
 多班
@@ -30732,9 +30723,9 @@ use_preset_vocabulary: false
 夥友
 夥同
 夥夠
+夥眾
 夥種
 夥耕
-夥眾
 夥計
 夥辦
 夥頤
@@ -30974,6 +30965,7 @@ use_preset_vocabulary: false
 大幸
 大幹
 大庇
+大床
 大序
 大底
 大店
@@ -31157,6 +31149,7 @@ use_preset_vocabulary: false
 大災
 大炒
 大炮
+大為
 大烹
 大煙
 大煞
@@ -31164,12 +31157,10 @@ use_preset_vocabulary: false
 大熟
 大熱
 大燈
-大為
 大爵
 大父
 大爹
 大爺
-大床
 大牆
 大片
 大牌
@@ -31214,6 +31205,7 @@ use_preset_vocabulary: false
 大省
 大真
 大眼
+大眾
 大石
 大砲
 大破
@@ -31321,7 +31313,6 @@ use_preset_vocabulary: false
 大蜡
 大蝦
 大蟲
-大眾
 大行
 大街
 大衛
@@ -31908,10 +31899,10 @@ use_preset_vocabulary: false
 太清
 太湖
 太溼
+太為
 太熙
 太熱
 太爛
-太為
 太爺
 太牢
 太狠
@@ -32131,7 +32122,6 @@ use_preset_vocabulary: false
 失盜
 失真
 失眠
-失著
 失瞻
 失神
 失禁
@@ -32151,6 +32141,7 @@ use_preset_vocabulary: false
 失腳
 失色
 失落
+失著
 失血
 失衡
 失言
@@ -32271,7 +32262,6 @@ use_preset_vocabulary: false
 夾生
 夾界
 夾當
-夾著
 夾磨
 夾給
 夾緊
@@ -32279,6 +32269,7 @@ use_preset_vocabulary: false
 夾纈
 夾肝
 夾腦
+夾著
 夾衣
 夾袍
 夾被
@@ -32324,9 +32315,9 @@ use_preset_vocabulary: false
 奇奧
 奇妙
 奇字
+奇岩
 奇峰
 奇崛
-奇巖
 奇巧
 奇幻
 奇彩
@@ -32452,8 +32443,8 @@ use_preset_vocabulary: false
 奉此
 奉求
 奉派
-奉煩
 奉為
+奉煩
 奉牋
 奉獻
 奉現
@@ -32517,9 +32508,9 @@ use_preset_vocabulary: false
 奏樂
 奏琴
 奏疏
-奏著
 奏章
 奏草
+奏著
 奏表
 奏記
 奏請
@@ -32646,7 +32637,6 @@ use_preset_vocabulary: false
 套現
 套用
 套疊
-套著
 套票
 套種
 套筒
@@ -32658,6 +32648,7 @@ use_preset_vocabulary: false
 套繪
 套耕
 套色
+套著
 套衫
 套袋
 套袖
@@ -32882,6 +32873,7 @@ use_preset_vocabulary: false
 女市
 女師
 女帽
+女床
 女廁
 女廚
 女式
@@ -32902,7 +32894,6 @@ use_preset_vocabulary: false
 女歧
 女氣
 女流
-女床
 女牆
 女牢
 女犯
@@ -34140,9 +34131,7 @@ use_preset_vocabulary: false
 媟黷
 媢嫉
 媦婿
-媧杆
 媧皇
-媧輪
 媬姆
 媮惰
 媮食
@@ -34225,6 +34214,7 @@ use_preset_vocabulary: false
 嫖資
 嫖賭
 嫗伏
+嫗𡟥
 嫘祖
 嫘縈
 嫚嫚
@@ -34648,7 +34638,6 @@ use_preset_vocabulary: false
 存盤
 存省
 存眷
-存著
 存神
 存稿
 存立
@@ -34656,6 +34645,7 @@ use_preset_vocabulary: false
 存簿
 存糧
 存續
+存著
 存褶
 存視
 存記
@@ -35006,7 +34996,6 @@ use_preset_vocabulary: false
 學界
 學的
 學監
-學著
 學社
 學科
 學租
@@ -35024,6 +35013,7 @@ use_preset_vocabulary: false
 學舌
 學舍
 學苑
+學著
 學藝
 學號
 學行
@@ -35147,7 +35137,6 @@ use_preset_vocabulary: false
 守死
 守法
 守的
-守著
 守禦
 守節
 守紀
@@ -35155,6 +35144,7 @@ use_preset_vocabulary: false
 守職
 守舊
 守舍
+守著
 守藏
 守衛
 守要
@@ -35230,6 +35220,7 @@ use_preset_vocabulary: false
 安帝
 安席
 安平
+安床
 安度
 安座
 安康
@@ -35273,14 +35264,12 @@ use_preset_vocabulary: false
 安瀾
 安然
 安營
-安床
 安琪
 安瓿
 安生
 安產
 安監
 安眠
-安著
 安睡
 安神
 安祥
@@ -35299,6 +35288,7 @@ use_preset_vocabulary: false
 安舒
 安良
 安華
+安著
 安葬
 安處
 安裝
@@ -35739,8 +35729,8 @@ use_preset_vocabulary: false
 定海
 定準
 定溫
-定然
 定為
+定然
 定物
 定率
 定理
@@ -36099,10 +36089,10 @@ use_preset_vocabulary: false
 害病
 害發
 害眼
-害著
 害羞
 害臊
 害苦
+害著
 害處
 害蟲
 害起
@@ -36274,8 +36264,8 @@ use_preset_vocabulary: false
 家蠅
 家蠶
 家行
-家裡
 家裝
+家裡
 家規
 家親
 家計
@@ -36940,8 +36930,8 @@ use_preset_vocabulary: false
 實況
 實測
 實火
-實無
 實為
+實無
 實物
 實現
 實用
@@ -37109,9 +37099,9 @@ use_preset_vocabulary: false
 寫白
 寫的
 寫真
-寫著
 寫稿
 寫給
+寫著
 寫詩
 寫起
 寫進
@@ -37414,8 +37404,8 @@ use_preset_vocabulary: false
 封測
 封港
 封火
-封爐
 封為
+封爐
 封爵
 封牢
 封狐
@@ -37437,8 +37427,8 @@ use_preset_vocabulary: false
 封號
 封蠟
 封袋
-封裡
 封裝
+封裡
 封襲
 封誥
 封豕
@@ -37592,8 +37582,8 @@ use_preset_vocabulary: false
 將死
 將毋
 將比
-將無
 將為
+將無
 將牌
 將王
 將球
@@ -37692,8 +37682,8 @@ use_preset_vocabulary: false
 專殺
 專治
 專注
-專營
 專為
+專營
 專版
 專用
 專看
@@ -37960,7 +37950,6 @@ use_preset_vocabulary: false
 對的
 對看
 對眼
-對著
 對稱
 對空
 對立
@@ -37981,6 +37970,7 @@ use_preset_vocabulary: false
 對臺
 對茦
 對華
+對著
 對號
 對蝦
 對街
@@ -38249,6 +38239,7 @@ use_preset_vocabulary: false
 小幅
 小平
 小年
+小床
 小序
 小底
 小店
@@ -38391,7 +38382,6 @@ use_preset_vocabulary: false
 小熊
 小燕
 小爺
-小床
 小片
 小牌
 小牛
@@ -38423,6 +38413,7 @@ use_preset_vocabulary: false
 小盤
 小相
 小看
+小眾
 小睡
 小瞧
 小破
@@ -38512,7 +38503,6 @@ use_preset_vocabulary: false
 小蟲
 小蠹
 小蠻
-小眾
 小行
 小街
 小衣
@@ -38767,8 +38757,8 @@ use_preset_vocabulary: false
 尖山
 尖岬
 尖峭
-尖峰
 尖峯
+尖峰
 尖扎
 尖新
 尖椒
@@ -38806,9 +38796,9 @@ use_preset_vocabulary: false
 尚未
 尚武
 尚氣
+尚為
 尚無
 尚然
-尚為
 尚猶
 尚缺
 尚義
@@ -38948,7 +38938,6 @@ use_preset_vocabulary: false
 就由
 就當
 就看
-就著
 就禮
 就等
 就算
@@ -38960,6 +38949,7 @@ use_preset_vocabulary: false
 就聽
 就能
 就與
+就著
 就行
 就衰
 就被
@@ -39111,6 +39101,7 @@ use_preset_vocabulary: false
 尿尿
 尿崩
 尿布
+尿床
 尿急
 尿意
 尿斗
@@ -39124,7 +39115,6 @@ use_preset_vocabulary: false
 尿液
 尿溼
 尿炕
-尿床
 尿片
 尿素
 尿肥
@@ -39434,8 +39424,8 @@ use_preset_vocabulary: false
 層壓
 層子
 層層
-層峰
 層峯
+層峰
 層巒
 層巖
 層態
@@ -39577,8 +39567,8 @@ use_preset_vocabulary: false
 山岡
 山岩
 山岳
-山峰
 山峯
+山峰
 山峽
 山崎
 山崖
@@ -39758,6 +39748,7 @@ use_preset_vocabulary: false
 岣嶁
 岧岧
 岧嶢
+岩倉
 岩圈
 岩土
 岩基
@@ -39765,12 +39756,13 @@ use_preset_vocabulary: false
 岩屑
 岩層
 岩岸
+岩床
 岩心
 岩棉
 岩洞
 岩溶
 岩漿
-岩床
+岩畫
 岩石
 岩礁
 岩羊
@@ -39792,9 +39784,11 @@ use_preset_vocabulary: false
 岳廟
 岳母
 岳氏
+岳池
 岳父
 岳牧
 岳珂
+岳西
 岳陽
 岳雲
 岳飛
@@ -39837,19 +39831,19 @@ use_preset_vocabulary: false
 峭薄
 峭覈
 峭麗
+峯巒
+峯巖
 峰值
 峰峰
 峰巒
 峰巔
 峰巖
 峰會
+峰林
 峰線
 峰迴
 峰頂
 峰點
-峯巒
-峯巖
-峰林
 峴港
 島上
 島內
@@ -40122,9 +40116,7 @@ use_preset_vocabulary: false
 嶽塘
 嶽嶽
 嶽廟
-嶽池
 嶽立
-嶽西
 嶽麓
 嶾嶙
 巃嵷
@@ -40143,17 +40135,13 @@ use_preset_vocabulary: false
 巍然
 巍科
 巒嶂
-巔峰
 巔峯
+巔峰
 巔崖
 巔疾
 巔越
-巖倉
-巖壁
 巖壑
 巖居
-巖層
-巖岸
 巖巉
 巖巖
 巖徑
@@ -40162,7 +40150,6 @@ use_preset_vocabulary: false
 巖村
 巖洞
 巖流
-巖畫
 巖石
 巖穴
 巖邑
@@ -40677,9 +40664,9 @@ use_preset_vocabulary: false
 已決
 已滅
 已滿
+已為
 已無
 已然
-已為
 已獲
 已甚
 已由
@@ -40757,7 +40744,6 @@ use_preset_vocabulary: false
 巴特
 巴生
 巴登
-巴著
 巴答
 巴紐
 巴結
@@ -40767,6 +40753,7 @@ use_preset_vocabulary: false
 巴船
 巴莫
 巴菽
+巴著
 巴蒂
 巴蕾
 巴薩
@@ -40921,6 +40908,7 @@ use_preset_vocabulary: false
 布慈
 布憲
 布托
+布扣
 布拉
 布拖
 布控
@@ -41281,7 +41269,6 @@ use_preset_vocabulary: false
 帶病
 帶的
 帶眼
-帶著
 帶礪
 帶神
 帶笏
@@ -41292,6 +41279,7 @@ use_preset_vocabulary: false
 帶聲
 帶草
 帶菌
+帶著
 帶薪
 帶話
 帶調
@@ -41552,9 +41540,9 @@ use_preset_vocabulary: false
 幫浦
 幫湊
 幫班
-幫著
 幫腔
 幫興
+幫著
 幫補
 幫襯
 幫規
@@ -42265,6 +42253,7 @@ use_preset_vocabulary: false
 幾師
 幾幅
 幾年
+幾床
 幾度
 幾座
 幾弄
@@ -42321,7 +42310,6 @@ use_preset_vocabulary: false
 幾毛
 幾洞
 幾滴
-幾床
 幾片
 幾版
 幾班
@@ -42333,6 +42321,7 @@ use_preset_vocabulary: false
 幾盒
 幾盞
 幾眼
+幾眾
 幾碗
 幾社
 幾票
@@ -42370,7 +42359,6 @@ use_preset_vocabulary: false
 幾萬
 幾處
 幾號
-幾眾
 幾行
 幾街
 幾袋
@@ -42420,6 +42408,41 @@ use_preset_vocabulary: false
 庇身
 庇陰
 庉庉
+床上
+床下
+床位
+床側
+床前
+床單
+床墊
+床子
+床尾
+床帳
+床帷
+床幃
+床戲
+床板
+床架
+床柱
+床楞
+床榻
+床母
+床毯
+床沿
+床笠
+床笫
+床第
+床罩
+床腳
+床舖
+床蓆
+床蓋
+床蓐
+床蝨
+床褥
+床邊
+床鋪
+床頭
 庋藏
 序列
 序升
@@ -42598,9 +42621,9 @@ use_preset_vocabulary: false
 度歲
 度母
 度牒
-度著
 度籙
 度脫
+度著
 度角
 度詞
 度越
@@ -43042,6 +43065,7 @@ use_preset_vocabulary: false
 廣瘡
 廣發
 廣盛
+廣眾
 廣硯
 廣窯
 廣結
@@ -43049,7 +43073,6 @@ use_preset_vocabulary: false
 廣繡
 廣義
 廣耕
-廣眾
 廣衍
 廣袤
 廣裡
@@ -43394,11 +43417,11 @@ use_preset_vocabulary: false
 弓狀
 弓琴
 弓申
-弓著
 弓矢
 弓箭
 弓背
 弓腰
+弓著
 弓蛇
 弓裘
 弓足
@@ -43498,9 +43521,9 @@ use_preset_vocabulary: false
 引港
 引滿
 引火
+引為
 引燃
 引爆
-引為
 引牽
 引狼
 引理
@@ -43509,7 +43532,6 @@ use_preset_vocabulary: false
 引申
 引疾
 引發
-引著
 引磬
 引票
 引稅
@@ -43520,6 +43542,7 @@ use_preset_vocabulary: false
 引自
 引致
 引航
+引著
 引薦
 引號
 引袋
@@ -43750,7 +43773,6 @@ use_preset_vocabulary: false
 張皇
 張目
 張眼
-張著
 張磊
 張秋
 張穎
@@ -43967,7 +43989,6 @@ use_preset_vocabulary: false
 彈球
 彈琴
 彈痕
-彈著
 彈砲
 彈章
 彈簧
@@ -43975,6 +43996,7 @@ use_preset_vocabulary: false
 彈腿
 彈膛
 彈花
+彈著
 彈藥
 彈詞
 彈走
@@ -44033,10 +44055,10 @@ use_preset_vocabulary: false
 彎拐
 彎曲
 彎月
-彎著
 彎矩
 彎腰
 彎腳
+彎著
 彎角
 彎起
 彎跧
@@ -44420,12 +44442,12 @@ use_preset_vocabulary: false
 待物
 待產
 待發
-待著
 待續
 待罪
 待考
 待聘
 待茶
+待著
 待要
 待覈
 待見
@@ -44511,11 +44533,11 @@ use_preset_vocabulary: false
 很溼
 很濃
 很火
+很為
 很煩
 很熟
 很熱
 很爛
-很為
 很爽
 很狠
 很甜
@@ -44695,9 +44717,9 @@ use_preset_vocabulary: false
 後涼
 後港
 後漢
+後為
 後燈
 後燕
-後為
 後父
 後爹
 後王
@@ -44935,7 +44957,6 @@ use_preset_vocabulary: false
 得當
 得病
 得益
-得著
 得知
 得神
 得票
@@ -44949,6 +44970,7 @@ use_preset_vocabulary: false
 得臉
 得與
 得色
+得著
 得衷
 得見
 得解
@@ -45041,6 +45063,7 @@ use_preset_vocabulary: false
 從父
 從犯
 從略
+從眾
 從祀
 從簡
 從約
@@ -45052,7 +45075,6 @@ use_preset_vocabulary: false
 從而
 從良
 從藝
-從眾
 從衡
 從諗
 從軍
@@ -45205,9 +45227,9 @@ use_preset_vocabulary: false
 循流
 循理
 循環
-循著
 循線
 循良
+循著
 循陔
 循階
 循默
@@ -45742,9 +45764,9 @@ use_preset_vocabulary: false
 忍性
 忍恥
 忍痛
-忍著
 忍者
 忍耐
+忍著
 忍術
 忍讓
 忍辱
@@ -45847,8 +45869,8 @@ use_preset_vocabulary: false
 忙活
 忙熱
 忙的
-忙著
 忙碌
+忙著
 忙裡
 忙迫
 忙逼
@@ -45988,8 +46010,8 @@ use_preset_vocabulary: false
 快清
 快滾
 快炮
-快照
 快為
+快照
 快玩
 快班
 快由
@@ -46098,11 +46120,11 @@ use_preset_vocabulary: false
 念琛
 念生
 念白
-念著
 念秧
 念給
 念經
 念舊
+念著
 念誦
 念起
 念這
@@ -46362,7 +46384,6 @@ use_preset_vocabulary: false
 急症
 急相
 急眼
-急著
 急節
 急絃
 急缺
@@ -46370,6 +46391,7 @@ use_preset_vocabulary: false
 急聲
 急腳
 急茬
+急著
 急衝
 急裝
 急襲
@@ -46520,7 +46542,6 @@ use_preset_vocabulary: false
 怪病
 怪癖
 怪相
-怪著
 怪石
 怪祕
 怪笑
@@ -46528,6 +46549,7 @@ use_preset_vocabulary: false
 怪聲
 怪胎
 怪腳
+怪著
 怪處
 怪訝
 怪話
@@ -46553,12 +46575,12 @@ use_preset_vocabulary: false
 怯場
 怯夫
 怯子
+怯床
 怯弱
 怯怯
 怯意
 怯懦
 怯死
-怯床
 怯生
 怯疑
 怯症
@@ -46631,8 +46653,8 @@ use_preset_vocabulary: false
 恐懼
 恐是
 恐有
-恐無
 恐為
+恐無
 恐獸
 恐脅
 恐赫
@@ -46870,9 +46892,9 @@ use_preset_vocabulary: false
 恰如
 恰巧
 恰恰
+恰才
 恰正
 恰當
-恰才
 恰逢
 恰限
 恲恲
@@ -47131,9 +47153,9 @@ use_preset_vocabulary: false
 悶火
 悶熱
 悶燒
-悶著
 悶瞀
 悶聲
+悶著
 悶虧
 悶酒
 悶錶
@@ -47299,8 +47321,8 @@ use_preset_vocabulary: false
 惑志
 惑星
 惑溺
-惑突
 惑眾
+惑突
 惑術
 惓惓
 惕勵
@@ -47570,7 +47592,6 @@ use_preset_vocabulary: false
 想的
 想盡
 想看
-想著
 想睡
 想穿
 想笑
@@ -47578,6 +47599,7 @@ use_preset_vocabulary: false
 想給
 想編
 想聽
+想著
 想蘊
 想裝
 想要
@@ -47903,7 +47925,6 @@ use_preset_vocabulary: false
 愛用
 愛的
 愛看
-愛著
 愛睏
 愛知
 愛神
@@ -47915,6 +47936,7 @@ use_preset_vocabulary: false
 愛與
 愛苗
 愛華
+愛著
 愛裡
 愛說
 愛護
@@ -48002,8 +48024,8 @@ use_preset_vocabulary: false
 愣怔
 愣愣
 愣是
-愣著
 愣神
+愣著
 愣蔥
 愣話
 愣說
@@ -48228,9 +48250,9 @@ use_preset_vocabulary: false
 慢班
 慢用
 慢的
-慢著
 慢聲
 慢臉
+慢著
 慢行
 慢表
 慢詞
@@ -48269,8 +48291,8 @@ use_preset_vocabulary: false
 慣有
 慣洗
 慣派
-慣熟
 慣為
+慣熟
 慣犯
 慣用
 慣甲
@@ -48473,12 +48495,12 @@ use_preset_vocabulary: false
 憑準
 憑照
 憑眺
-憑著
 憑祥
 憑票
 憑空
 憑肩
 憑脈
+憑著
 憑藉
 憑虛
 憑証
@@ -48679,7 +48701,6 @@ use_preset_vocabulary: false
 應由
 應當
 應盡
-應著
 應稅
 應答
 應約
@@ -48689,6 +48710,7 @@ use_preset_vocabulary: false
 應聲
 應與
 應舉
+應著
 應訊
 應許
 應訴
@@ -48817,13 +48839,13 @@ use_preset_vocabulary: false
 懷璧
 懷生
 懷疑
-懷著
 懷祿
 懷空
 懷素
 懷耽
 懷胎
 懷舊
+懷著
 懷裡
 懷讓
 懷貳
@@ -48846,7 +48868,6 @@ use_preset_vocabulary: false
 懸岩
 懸峰
 懸崖
-懸巖
 懸弧
 懸心
 懸念
@@ -48875,7 +48896,6 @@ use_preset_vocabulary: false
 懸瀑
 懸疑
 懸癰
-懸著
 懸空
 懸絕
 懸缺
@@ -48884,6 +48904,7 @@ use_preset_vocabulary: false
 懸腕
 懸膽
 懸臂
+懸著
 懸蕩
 懸薄
 懸虛
@@ -49086,8 +49107,8 @@ use_preset_vocabulary: false
 成湯
 成漢
 成災
-成熟
 成為
+成熟
 成片
 成犬
 成田
@@ -49096,6 +49117,7 @@ use_preset_vocabulary: false
 成皋
 成真
 成眠
+成眾
 成福
 成禮
 成窯
@@ -49118,7 +49140,6 @@ use_preset_vocabulary: false
 成藥
 成蛹
 成蟲
-成眾
 成行
 成衣
 成見
@@ -49551,8 +49572,8 @@ use_preset_vocabulary: false
 戲行
 戲衣
 戲袍
-戲裡
 戲裝
+戲裡
 戲言
 戲評
 戲詞
@@ -49612,12 +49633,12 @@ use_preset_vocabulary: false
 戴白
 戴的
 戴目
-戴著
 戴禮
 戴笠
 戴維
 戴聖
 戴菊
+戴著
 戴蒙
 戴走
 戴起
@@ -49768,7 +49789,6 @@ use_preset_vocabulary: false
 所用
 所由
 所發
-所著
 所知
 所示
 所稱
@@ -50029,25 +50049,43 @@ use_preset_vocabulary: false
 手鼓
 才上
 才下
+才不
 才人
 才付
 才使
+才來
 才俊
+才信
+才像
 才具
+才再
+才出
 才分
+才到
+才則
+才剛
 才力
+才去
 才叫
+才可
 才名
 才向
 才器
+才回
+才在
 才士
+才多
+才夠
 才女
+才好
 才始
 才媛
 才子
 才學
 才守
 才定
+才將
+才對
 才帶
 才幹
 才得
@@ -50057,19 +50095,33 @@ use_preset_vocabulary: false
 才怪
 才悟
 才情
+才想
+才打
 才把
+才拿
 才排
+才敢
 才料
+才是
 才智
+才會
+才有
 才望
+才此
 才氣
-才然
+才沒
+才派
 才為
+才然
 才用
 才略
+才看
 才睡
 才知
 才筆
+才等
+才算
+才給
 才肯
 才能
 才色
@@ -50078,16 +50130,22 @@ use_preset_vocabulary: false
 才藻
 才行
 才被
+才要
 才訂
 才語
 才說
 才調
+才講
 才識
+才讀
 才讓
 才貌
+才買
 才資
 才走
+才跟
 才過
+才開
 才附
 才降
 才難
@@ -50390,7 +50448,6 @@ use_preset_vocabulary: false
 打盹
 打看
 打眼
-打著
 打睃
 打睡
 打瞎
@@ -50441,6 +50498,7 @@ use_preset_vocabulary: false
 打茶
 打菜
 打落
+打著
 打蔫
 打藥
 打虎
@@ -50669,7 +50727,6 @@ use_preset_vocabulary: false
 扣留
 扣發
 扣的
-扣著
 扣稅
 扣籃
 扣絆
@@ -50680,6 +50737,7 @@ use_preset_vocabulary: false
 扣肉
 扣舷
 扣船
+扣著
 扣薪
 扣表
 扣襻
@@ -50725,13 +50783,13 @@ use_preset_vocabulary: false
 扭擺
 扭斷
 扭曲
-扭著
 扭矩
 扭筋
 扭結
 扭緊
 扭腔
 扭腰
+扭著
 扭虧
 扭起
 扭身
@@ -50777,7 +50835,6 @@ use_preset_vocabulary: false
 扯白
 扯皮
 扯直
-扯著
 扯破
 扯碎
 扯票
@@ -50787,6 +50844,7 @@ use_preset_vocabulary: false
 扯腿
 扯臊
 扯落
+扯著
 扯蛋
 扯裂
 扯談
@@ -50842,6 +50900,7 @@ use_preset_vocabulary: false
 扶在
 扶好
 扶將
+扶床
 扶引
 扶手
 扶持
@@ -50860,12 +50919,10 @@ use_preset_vocabulary: false
 扶正
 扶溝
 扶為
-扶床
 扶犁
 扶疏
 扶病
 扶直
-扶著
 扶立
 扶竹
 扶筇
@@ -50877,6 +50934,7 @@ use_preset_vocabulary: false
 扶翼
 扶老
 扶腰
+扶著
 扶蘇
 扶貧
 扶起
@@ -50920,12 +50978,12 @@ use_preset_vocabulary: false
 批注
 批發
 批的
-批著
 批示
 批租
 批答
 批給
 批胸
+批著
 批蕩
 批薩
 批號
@@ -50996,11 +51054,11 @@ use_preset_vocabulary: false
 找牙
 找病
 找的
-找著
 找碴
 找空
 找絕
 找茬
+找著
 找補
 找誰
 找起
@@ -51142,12 +51200,12 @@ use_preset_vocabulary: false
 抄用
 抄發
 抄白
-抄著
 抄籍
 抄紙
 抄網
 抄胥
 抄臺
+抄著
 抄表
 抄襲
 抄賭
@@ -51223,7 +51281,6 @@ use_preset_vocabulary: false
 把玩
 把球
 把盞
-把著
 把穩
 把筆
 把素
@@ -51234,6 +51291,7 @@ use_preset_vocabulary: false
 把臉
 把舵
 把色
+把著
 把街
 把袂
 把話
@@ -51311,12 +51369,12 @@ use_preset_vocabulary: false
 抓狂
 抓獲
 抓癢
-抓著
 抓瞎
 抓破
 抓緊
 抓膘
 抓舉
+抓著
 抓藥
 抓賊
 抓賭
@@ -51526,7 +51584,6 @@ use_preset_vocabulary: false
 抗病
 抗癌
 抗直
-抗著
 抗禦
 抗禮
 抗稅
@@ -51535,6 +51592,7 @@ use_preset_vocabulary: false
 抗糧
 抗老
 抗菌
+抗著
 抗藥
 抗行
 抗衡
@@ -51673,7 +51731,6 @@ use_preset_vocabulary: false
 披玩
 披甲
 披的
-披著
 披砍
 披秉
 披秒
@@ -51681,6 +51738,7 @@ use_preset_vocabulary: false
 披索
 披緇
 披肩
+披著
 披蓋
 披薩
 披衣
@@ -51744,7 +51802,6 @@ use_preset_vocabulary: false
 抱璣
 抱瓢
 抱病
-抱著
 抱窩
 抱緊
 抱罪
@@ -51752,6 +51809,7 @@ use_preset_vocabulary: false
 抱肚
 抱腰
 抱腹
+抱著
 抱裙
 抱負
 抱走
@@ -51800,11 +51858,11 @@ use_preset_vocabulary: false
 抵用
 抵當
 抵盜
-抵著
 抵禦
 抵稅
 抵罪
 抵華
+抵著
 抵補
 抵觸
 抵諱
@@ -51867,7 +51925,7 @@ use_preset_vocabulary: false
 抹額
 抹颩
 抹黑
-抻面
+抻麵
 押付
 押出
 押匯
@@ -51880,6 +51938,7 @@ use_preset_vocabulary: false
 押尾
 押差
 押帳
+押床
 押店
 押抵
 押放
@@ -51887,17 +51946,16 @@ use_preset_vocabulary: false
 押櫃
 押款
 押注
-押床
 押牙
 押牢
 押番
 押當
-押著
 押票
 押租
 押給
 押船
 押花
+押著
 押衙
 押解
 押賬
@@ -51965,7 +52023,6 @@ use_preset_vocabulary: false
 抽的
 抽皺
 抽盡
-抽著
 抽砂
 抽稅
 抽穗
@@ -51983,6 +52040,7 @@ use_preset_vocabulary: false
 抽腳
 抽芽
 抽菸
+抽著
 抽血
 抽調
 抽豐
@@ -52150,6 +52208,7 @@ use_preset_vocabulary: false
 拉幅
 拉幫
 拉平
+拉床
 拉弄
 拉弓
 拉引
@@ -52177,7 +52236,6 @@ use_preset_vocabulary: false
 拉殺
 拉比
 拉沓
-拉床
 拉牽
 拉瑟
 拉環
@@ -52185,7 +52243,6 @@ use_preset_vocabulary: false
 拉的
 拉皮
 拉直
-拉著
 拉矢
 拉票
 拉秧
@@ -52205,6 +52262,7 @@ use_preset_vocabulary: false
 拉腳
 拉腿
 拉茶
+拉著
 拉蒙
 拉薩
 拉親
@@ -52299,8 +52357,8 @@ use_preset_vocabulary: false
 拌和
 拌嘴
 拌折
-拌著
 拌種
+拌著
 拌蒜
 拌飯
 拌麵
@@ -52347,12 +52405,12 @@ use_preset_vocabulary: false
 拍球
 拍發
 拍的
-拍著
 拍磚
 拍索
 拍脫
 拍腿
 拍花
+拍著
 拍號
 拍賣
 拍起
@@ -52391,13 +52449,14 @@ use_preset_vocabulary: false
 拐杖
 拐枕
 拐棍
+拐棒
 拐棗
 拐步
 拐盜
-拐著
 拐肘
 拐腳
 拐臂
+拐著
 拐角
 拐誘
 拐賣
@@ -52500,7 +52559,6 @@ use_preset_vocabulary: false
 拔牙
 拔用
 拔白
-拔著
 拔碇
 拔禾
 拔秧
@@ -52515,6 +52573,7 @@ use_preset_vocabulary: false
 拔腿
 拔草
 拔萃
+拔著
 拔葵
 拔薤
 拔親
@@ -52554,6 +52613,7 @@ use_preset_vocabulary: false
 拖宕
 拖布
 拖帶
+拖床
 拖延
 拖得
 拖慢
@@ -52575,9 +52635,7 @@ use_preset_vocabulary: false
 拖沓
 拖洗
 拖溼
-拖床
 拖班
-拖著
 拖磨
 拖稿
 拖累
@@ -52585,6 +52643,7 @@ use_preset_vocabulary: false
 拖翻
 拖腔
 拖船
+拖著
 拖走
 拖起
 拖車
@@ -52836,7 +52895,6 @@ use_preset_vocabulary: false
 拜登
 拜盟
 拜相
-拜著
 拜神
 拜票
 拜祭
@@ -52847,6 +52905,7 @@ use_preset_vocabulary: false
 拜義
 拜臺
 拜茶
+拜著
 拜表
 拜覆
 拜見
@@ -52920,11 +52979,11 @@ use_preset_vocabulary: false
 拱橋
 拱狀
 拱璧
-拱著
 拱立
 拱肩
 拱背
 拱花
+拱著
 拱衛
 拱護
 拱豬
@@ -52964,9 +53023,9 @@ use_preset_vocabulary: false
 拴住
 拴在
 拴束
-拴著
 拴縛
 拴繩
+拴著
 拴鎖
 拴馬
 拶刑
@@ -53019,10 +53078,10 @@ use_preset_vocabulary: false
 拼版
 拼的
 拼盤
-拼著
 拼組
 拼綴
 拼花
+拼著
 拼裝
 拼讀
 拼貼
@@ -53111,7 +53170,6 @@ use_preset_vocabulary: false
 拿班
 拿發
 拿的
-拿著
 拿矯
 拿秤
 拿穩
@@ -53124,6 +53182,7 @@ use_preset_vocabulary: false
 拿腰
 拿腳
 拿腿
+拿著
 拿藥
 拿話
 拿貨
@@ -53247,8 +53306,8 @@ use_preset_vocabulary: false
 指津
 指派
 指涉
-指爪
 指為
+指爪
 指物
 指猴
 指瑕
@@ -53259,13 +53318,13 @@ use_preset_vocabulary: false
 指痕
 指的
 指目
-指著
 指示
 指稱
 指端
 指紋
 指給
 指縫
+指著
 指螺
 指要
 指觸
@@ -53333,12 +53392,12 @@ use_preset_vocabulary: false
 按片
 按理
 按的
-按著
 按科
 按立
 按篇
 按納
 按脈
+按著
 按蚊
 按討
 按語
@@ -53400,13 +53459,13 @@ use_preset_vocabulary: false
 挑的
 挑盡
 挑眼
-挑著
 挑空
 挑簷
 挑腳
 挑臺
 挑舋
 挑花
+挑著
 挑試
 挑讀
 挑走
@@ -53487,10 +53546,10 @@ use_preset_vocabulary: false
 挨次
 挨滿
 挨的
-挨著
 挨磨
 挨罵
 挨肩
+挨著
 挨踢
 挨身
 挨近
@@ -53593,7 +53652,6 @@ use_preset_vocabulary: false
 挺爽
 挺生
 挺直
-挺著
 挺矛
 挺秀
 挺立
@@ -53604,6 +53662,7 @@ use_preset_vocabulary: false
 挺腰
 挺腳
 挺舉
+挺著
 挺解
 挺貴
 挺起
@@ -53641,9 +53700,9 @@ use_preset_vocabulary: false
 挾持
 挾擊
 挾殺
-挾著
 挾纊
 挾義
+挾著
 挾藏
 挾貴
 挾長
@@ -53666,11 +53725,11 @@ use_preset_vocabulary: false
 捆工
 捆得
 捆成
-捆著
 捆紮
 捆綁
 捆緊
 捆縛
+捆著
 捆起
 捉住
 捉刀
@@ -53735,12 +53794,12 @@ use_preset_vocabulary: false
 捏控
 捏握
 捏死
-捏著
 捏碎
 捏稱
 捏積
 捏膿
 捏舌
+捏著
 捏製
 捏訣
 捏詞
@@ -53815,10 +53874,10 @@ use_preset_vocabulary: false
 捧檄
 捧殺
 捧的
-捧著
 捧腹
 捧花
 捧茶
+捧著
 捧袂
 捧角
 捧託
@@ -54112,7 +54171,6 @@ use_preset_vocabulary: false
 掉球
 掉皮
 掉眼
-掉著
 掉秤
 掉線
 掉胎
@@ -54121,6 +54179,7 @@ use_preset_vocabulary: false
 掉舌
 掉色
 掉落
+掉著
 掉貨
 掉轉
 掉進
@@ -54197,10 +54256,10 @@ use_preset_vocabulary: false
 掐斷
 掐架
 掐死
-掐著
 掐算
 掐緊
 掐花
+掐著
 掐訣
 排上
 排下
@@ -54292,7 +54351,6 @@ use_preset_vocabulary: false
 排球
 排當
 排的
-排著
 排程
 排空
 排突
@@ -54308,6 +54366,7 @@ use_preset_vocabulary: false
 排練
 排舞
 排華
+排著
 排蕭
 排行
 排衙
@@ -54442,7 +54501,6 @@ use_preset_vocabulary: false
 掛瓢
 掛的
 掛眼
-掛著
 掛礙
 掛簾
 掛籃
@@ -54452,6 +54510,7 @@ use_preset_vocabulary: false
 掛線
 掛職
 掛花
+掛著
 掛蘭
 掛號
 掛衣
@@ -54528,8 +54587,8 @@ use_preset_vocabulary: false
 採氣
 採水
 採油
-採煤
 採為
+採煤
 採獲
 採獵
 採珠
@@ -54622,7 +54681,6 @@ use_preset_vocabulary: false
 探病
 探監
 探看
-探著
 探知
 探礦
 探祕
@@ -54738,7 +54796,6 @@ use_preset_vocabulary: false
 接界
 接的
 接盤
-接著
 接神
 接福
 接種
@@ -54761,6 +54818,7 @@ use_preset_vocabulary: false
 接膝
 接芽
 接茬
+接著
 接衫
 接見
 接親
@@ -54901,7 +54959,6 @@ use_preset_vocabulary: false
 推甄
 推病
 推的
-推著
 推知
 推磨
 推移
@@ -54915,6 +54972,7 @@ use_preset_vocabulary: false
 推翻
 推脫
 推舉
+推著
 推薦
 推行
 推衍
@@ -54967,9 +55025,9 @@ use_preset_vocabulary: false
 掩泣
 掩涕
 掩淚
-掩著
 掩瞞
 掩耳
+掩著
 掩蓋
 掩蔽
 掩藏
@@ -55033,9 +55091,9 @@ use_preset_vocabulary: false
 揉捻
 揉揉
 揉搓
-揉著
 揉碎
 揉磨
+揉著
 揉輪
 揉雜
 揉麵
@@ -55061,10 +55119,10 @@ use_preset_vocabulary: false
 描摸
 描摹
 描畫
-描著
 描紅
 描繪
 描花
+描著
 描補
 描賠
 描起
@@ -55153,7 +55211,6 @@ use_preset_vocabulary: false
 提留
 提盒
 提省
-提著
 提督
 提破
 提示
@@ -55173,6 +55230,7 @@ use_preset_vocabulary: false
 提腕
 提舉
 提花
+提著
 提薪
 提行
 提袋
@@ -55229,6 +55287,7 @@ use_preset_vocabulary: false
 插定
 插對
 插屏
+插床
 插座
 插戴
 插手
@@ -55246,12 +55305,10 @@ use_preset_vocabulary: false
 插梳
 插槽
 插標
-插床
 插犋
 插狀
 插班
 插畫
-插著
 插秧
 插穗
 插空
@@ -55263,6 +55320,7 @@ use_preset_vocabulary: false
 插舞
 插花
 插苗
+插著
 插袋
 插補
 插話
@@ -55413,8 +55471,8 @@ use_preset_vocabulary: false
 換湯
 換滿
 換炒
-換燈
 換為
+換燈
 換牙
 換班
 換球
@@ -55422,7 +55480,6 @@ use_preset_vocabulary: false
 換田
 換的
 換皮
-換著
 換票
 換租
 換稱
@@ -55448,6 +55505,7 @@ use_preset_vocabulary: false
 換臺
 換航
 換茬
+換著
 換藥
 換號
 換血
@@ -55498,10 +55556,10 @@ use_preset_vocabulary: false
 握有
 握權
 握的
-握著
 握筆
 握管
 握緊
+握著
 握髮
 揢人
 揣奪
@@ -55513,9 +55571,9 @@ use_preset_vocabulary: false
 揣摸
 揣摹
 揣測
-揣著
 揣知
 揣與
+揣著
 揣量
 揣骨
 揩乾
@@ -55608,10 +55666,10 @@ use_preset_vocabulary: false
 揮淚
 揮灑
 揮發
-揮著
 揮筆
 揮翰
 揮舞
+揮著
 揮袂
 揮觴
 揮起
@@ -55741,7 +55799,6 @@ use_preset_vocabulary: false
 搖琴
 搖的
 搖盪
-搖著
 搖筆
 搖籃
 搖耬
@@ -55750,6 +55807,7 @@ use_preset_vocabulary: false
 搖舌
 搖船
 搖落
+搖著
 搖蕩
 搖號
 搖蚊
@@ -55944,9 +56002,9 @@ use_preset_vocabulary: false
 搬用
 搬登
 搬的
-搬著
 搬移
 搬給
+搬著
 搬調
 搬請
 搬走
@@ -56105,12 +56163,12 @@ use_preset_vocabulary: false
 搶的
 搶盡
 搶眼
-搶著
 搶種
 搶答
 搶籬
 搶紅
 搶背
+搶著
 搶親
 搶購
 搶走
@@ -56125,8 +56183,8 @@ use_preset_vocabulary: false
 搶點
 搽匙
 搽旦
-搽著
 搽粉
+搽著
 搽藥
 搾取
 搾渣
@@ -56321,7 +56379,6 @@ use_preset_vocabulary: false
 摸熟
 摸營
 摸牌
-摸著
 摸瞎
 摸破
 摸秋
@@ -56329,6 +56386,7 @@ use_preset_vocabulary: false
 摸脈
 摸腳
 摸臉
+摸著
 摸觸
 摸象
 摸起
@@ -56442,8 +56500,8 @@ use_preset_vocabulary: false
 撈摸
 撈本
 撈梢
-撈著
 撈菱
+撈著
 撈起
 撈金
 撈鈴
@@ -56470,13 +56528,13 @@ use_preset_vocabulary: false
 撐持
 撐杆
 撐死
-撐著
 撐破
 撐竿
 撐篙
 撐腰
 撐臂
 撐船
+撐著
 撐起
 撐過
 撐達
@@ -56789,8 +56847,8 @@ use_preset_vocabulary: false
 撬壞
 撬棍
 撬槓
-撬著
 撬竊
+撬著
 撬起
 撬門
 撬開
@@ -56953,10 +57011,10 @@ use_preset_vocabulary: false
 擁旄
 擁書
 擁有
-擁著
 擁立
 擁篲
 擁腫
+擁著
 擁護
 擁躉
 擁軍
@@ -57077,8 +57135,8 @@ use_preset_vocabulary: false
 擋板
 擋泥
 擋眼
-擋著
 擋禦
+擋著
 擋路
 擋車
 擋過
@@ -57111,7 +57169,6 @@ use_preset_vocabulary: false
 操演
 操琴
 操盤
-操著
 操神
 操筆
 操練
@@ -57120,6 +57177,7 @@ use_preset_vocabulary: false
 操舟
 操航
 操舵
+操著
 操蛋
 操行
 操觚
@@ -57163,7 +57221,6 @@ use_preset_vocabulary: false
 擔架
 擔水
 擔當
-擔著
 擔石
 擔簦
 擔糞
@@ -57171,6 +57228,7 @@ use_preset_vocabulary: false
 擔肩
 擔腳
 擔荷
+擔著
 擔誤
 擔負
 擔起
@@ -57247,11 +57305,11 @@ use_preset_vocabulary: false
 擠痛
 擠的
 擠眼
-擠著
 擠破
 擠空
 擠緊
 擠落
+擠著
 擠足
 擠踏
 擠身
@@ -57279,12 +57337,12 @@ use_preset_vocabulary: false
 擡的
 擡盒
 擡眼
-擡著
 擡秤
 擡筐
 擡肩
 擡臉
 擡舉
+擡著
 擡貼
 擡走
 擡起
@@ -57341,12 +57399,12 @@ use_preset_vocabulary: false
 擦熱
 擦痕
 擦皮
-擦著
 擦破
 擦粉
 擦肩
 擦背
 擦臉
+擦著
 擦藥
 擦起
 擦身
@@ -57410,10 +57468,10 @@ use_preset_vocabulary: false
 擱延
 擱板
 擱淺
-擱著
 擱稻
 擱筆
 擱置
+擱著
 擱起
 擱車
 擱錢
@@ -57501,12 +57559,12 @@ use_preset_vocabulary: false
 擺番
 擺當
 擺盪
-擺著
 擺站
 擺線
 擺置
 擺脫
 擺落
+擺著
 擺設
 擺譜
 擺賣
@@ -57546,7 +57604,6 @@ use_preset_vocabulary: false
 攀升
 攀害
 攀岩
-攀巖
 攀戀
 攀扯
 攀折
@@ -57558,11 +57615,11 @@ use_preset_vocabulary: false
 攀爬
 攀留
 攀登
-攀著
 攀索
 攀緣
 攀纏
 攀胸
+攀著
 攀親
 攀話
 攀誣
@@ -57610,10 +57667,10 @@ use_preset_vocabulary: false
 攔擋
 攔櫃
 攔當
-攔著
 攔網
 攔縱
 攔腰
+攔著
 攔蓄
 攔詞
 攔路
@@ -57750,9 +57807,9 @@ use_preset_vocabulary: false
 攤檔
 攤派
 攤牌
-攤著
 攤破
 攤簧
+攤著
 攤薄
 攤認
 攤販
@@ -57871,7 +57928,6 @@ use_preset_vocabulary: false
 支理
 支用
 支當
-支著
 支破
 支票
 支節
@@ -57880,6 +57936,7 @@ use_preset_vocabulary: false
 支線
 支脈
 支菸
+支著
 支薪
 支行
 支襯
@@ -58006,7 +58063,6 @@ use_preset_vocabulary: false
 收監
 收盤
 收看
-收著
 收票
 收禮
 收秋
@@ -58028,6 +58084,7 @@ use_preset_vocabulary: false
 收聽
 收腳
 收自
+收著
 收藏
 收蟻
 收視
@@ -58169,9 +58226,9 @@ use_preset_vocabulary: false
 改歲
 改段
 改炒
+改為
 改煮
 改爭
-改為
 改版
 改產
 改用
@@ -58397,7 +58454,6 @@ use_preset_vocabulary: false
 放盤
 放目
 放眼
-放著
 放睡
 放矢
 放砲
@@ -58426,6 +58482,7 @@ use_preset_vocabulary: false
 放良
 放花
 放荒
+放著
 放蕩
 放號
 放血
@@ -58581,8 +58638,8 @@ use_preset_vocabulary: false
 故此
 故步
 故殺
-故無
 故為
+故無
 故物
 故犯
 故當
@@ -58870,7 +58927,6 @@ use_preset_vocabulary: false
 教的
 教皇
 教益
-教著
 教督
 教研
 教程
@@ -58882,6 +58938,7 @@ use_preset_vocabulary: false
 教習
 教職
 教育
+教著
 教規
 教訓
 教誡
@@ -58931,8 +58988,8 @@ use_preset_vocabulary: false
 敞快
 敞懷
 敞田
-敞著
 敞篷
+敞著
 敞蓬
 敞車
 敞開
@@ -58991,8 +59048,8 @@ use_preset_vocabulary: false
 敢死
 敢洗
 敢演
-敢爭
 敢為
+敢爭
 敢現
 敢留
 敢畫
@@ -59200,10 +59257,10 @@ use_preset_vocabulary: false
 敲棋
 敲榨
 敲的
-敲著
 敲破
 敲碎
 敲背
+敲著
 敲詐
 敲起
 敲過
@@ -59304,7 +59361,6 @@ use_preset_vocabulary: false
 整環
 整發
 整盒
-整著
 整碗
 整科
 整站
@@ -59324,6 +59380,7 @@ use_preset_vocabulary: false
 整臉
 整莊
 整葉
+整著
 整行
 整衣
 整補
@@ -59441,11 +59498,11 @@ use_preset_vocabulary: false
 敷治
 敷淺
 敷演
-敷著
 敷章
 敷粉
 敷腳
 敷臉
+敷著
 敷藥
 敷衍
 敷裹
@@ -59519,7 +59576,6 @@ use_preset_vocabulary: false
 數百
 數的
 數目
-數著
 數碼
 數秒
 數種
@@ -59531,6 +59587,7 @@ use_preset_vocabulary: false
 數萬
 數萱
 數落
+數著
 數術
 數表
 數詞
@@ -59551,9 +59608,9 @@ use_preset_vocabulary: false
 斂戢
 斂手
 斂步
-斂著
 斂縮
 斂色
+斂著
 斂藏
 斂衣
 斂衽
@@ -59880,11 +59937,11 @@ use_preset_vocabulary: false
 斜率
 斜的
 斜眼
-斜著
 斜睨
 斜紋
 斜線
 斜肌
+斜著
 斜視
 斜角
 斜谷
@@ -60430,8 +60487,8 @@ use_preset_vocabulary: false
 方毅
 方比
 方法
-方照
 方為
+方照
 方牧
 方物
 方略
@@ -60446,7 +60503,6 @@ use_preset_vocabulary: false
 方筆
 方策
 方糖
-方才
 方罫
 方聞
 方能
@@ -60710,6 +60766,7 @@ use_preset_vocabulary: false
 旋室
 旋宮
 旋工
+旋床
 旋律
 旋旋
 旋木
@@ -60718,7 +60775,6 @@ use_preset_vocabulary: false
 旋流
 旋淵
 旋渦
-旋床
 旋石
 旋筒
 旋繞
@@ -60767,8 +60823,8 @@ use_preset_vocabulary: false
 族繁
 族群
 族葬
-族裡
 族裔
+族裡
 族親
 族誅
 族譜
@@ -60941,8 +60997,8 @@ use_preset_vocabulary: false
 日薪
 日蝕
 日表
-日裡
 日裔
+日裡
 日製
 日見
 日規
@@ -61321,10 +61377,10 @@ use_preset_vocabulary: false
 明滅
 明澈
 明火
+明為
 明燈
 明燭
 明爭
-明為
 明牌
 明牧
 明王
@@ -62323,8 +62379,8 @@ use_preset_vocabulary: false
 晾晾
 晾曬
 晾書
-晾著
 晾臺
+晾著
 晾衣
 暄和
 暄妍
@@ -62585,8 +62641,8 @@ use_preset_vocabulary: false
 暫未
 暫歇
 暫止
-暫無
 暫為
+暫無
 暫牙
 暫用
 暫留
@@ -63151,8 +63207,8 @@ use_preset_vocabulary: false
 書蟲
 書蠹
 書衣
-書裡
 書裙
+書裡
 書角
 書訊
 書記
@@ -63323,9 +63379,9 @@ use_preset_vocabulary: false
 最深
 最渴
 最火
+最為
 最煩
 最熱
-最為
 最牛
 最甜
 最省
@@ -63495,7 +63551,7 @@ use_preset_vocabulary: false
 會盡
 會看
 會真
-會著
+會眾
 會社
 會種
 會稽
@@ -63517,8 +63573,8 @@ use_preset_vocabulary: false
 會腳
 會與
 會萃
+會著
 會葬
-會眾
 會被
 會裡
 會要
@@ -63846,9 +63902,9 @@ use_preset_vocabulary: false
 有源
 有準
 有漏
+有為
 有無
 有熊
-有為
 有片
 有狐
 有獎
@@ -63864,7 +63920,6 @@ use_preset_vocabulary: false
 有益
 有盼
 有看
-有著
 有瞽
 有碼
 有礙
@@ -63898,6 +63953,7 @@ use_preset_vocabulary: false
 有色
 有若
 有苦
+有著
 有角
 有解
 有言
@@ -64007,7 +64063,6 @@ use_preset_vocabulary: false
 服物
 服用
 服田
-服著
 服硬
 服秩
 服章
@@ -64019,6 +64074,7 @@ use_preset_vocabulary: false
 服膺
 服舍
 服色
+服著
 服藥
 服裝
 服貼
@@ -64109,13 +64165,13 @@ use_preset_vocabulary: false
 望氣
 望江
 望洋
-望著
 望祭
 望穿
 望竿
 望而
 望舒
 望花
+望著
 望見
 望診
 望謨
@@ -64175,13 +64231,13 @@ use_preset_vocabulary: false
 朝獻
 朝珠
 朝班
-朝著
 朝綱
 朝考
 朝聖
 朝聘
 朝臣
 朝菌
+朝著
 朝衣
 朝西
 朝見
@@ -64289,6 +64345,7 @@ use_preset_vocabulary: false
 木屑
 木履
 木工
+木床
 木廠
 木強
 木房
@@ -64346,7 +64403,6 @@ use_preset_vocabulary: false
 木漿
 木炭
 木然
-木床
 木片
 木版
 木牌
@@ -64570,7 +64626,6 @@ use_preset_vocabulary: false
 末班
 末異
 末疾
-末著
 末站
 末端
 末等
@@ -64580,6 +64635,7 @@ use_preset_vocabulary: false
 末臣
 末茶
 末葉
+末著
 末藝
 末藥
 末行
@@ -64732,7 +64788,6 @@ use_preset_vocabulary: false
 本病
 本相
 本省
-本著
 本社
 本票
 本科
@@ -64763,6 +64818,7 @@ use_preset_vocabulary: false
 本色
 本茨
 本草
+本著
 本薪
 本處
 本號
@@ -65208,7 +65264,6 @@ use_preset_vocabulary: false
 杯中
 杯乾
 杯了
-杯佈
 杯內
 杯具
 杯前
@@ -65219,6 +65274,7 @@ use_preset_vocabulary: false
 杯壁
 杯套
 杯子
+杯布
 杯底
 杯座
 杯後
@@ -65248,11 +65304,11 @@ use_preset_vocabulary: false
 杯蓋
 杯行
 杯裝
+杯裡
 杯託
 杯身
 杯酌
 杯酒
-杯里
 杯鍋
 杯麵
 杰倫
@@ -65308,6 +65364,7 @@ use_preset_vocabulary: false
 東市
 東干
 東平
+東床
 東廁
 東廂
 東廠
@@ -65346,9 +65403,8 @@ use_preset_vocabulary: false
 東漢
 東漸
 東瀛
-東營
 東為
-東床
+東營
 東牆
 東疆
 東皇
@@ -65600,10 +65656,10 @@ use_preset_vocabulary: false
 枕心
 枕木
 枕榻
-枕著
 枕箱
 枕腕
 枕葄
+枕著
 枕蓆
 枕藉
 枕資
@@ -65872,10 +65928,10 @@ use_preset_vocabulary: false
 架滿
 架為
 架田
-架著
 架空
 架站
 架落
+架著
 架設
 架走
 架起
@@ -66124,7 +66180,6 @@ use_preset_vocabulary: false
 查的
 查盤
 查看
-查著
 查票
 查禁
 查私
@@ -66133,6 +66188,7 @@ use_preset_vocabulary: false
 查經
 查緝
 查考
+查著
 查處
 查號
 查表
@@ -66264,10 +66320,6 @@ use_preset_vocabulary: false
 柵籬
 柵門
 柷敔
-柺子
-柺杖
-柺棍
-柺棒
 柿子
 柿漆
 柿糕
@@ -66797,8 +66849,8 @@ use_preset_vocabulary: false
 桶柑
 桶狀
 桶蓋
-桶裡
 桶裝
+桶裡
 桹桹
 桿兒
 桿刀
@@ -66915,8 +66967,8 @@ use_preset_vocabulary: false
 梗泛
 梗犬
 梗直
-梗著
 梗節
+梗著
 梗阻
 梜提
 條令
@@ -67041,9 +67093,9 @@ use_preset_vocabulary: false
 梳櫳
 梳洗
 梳理
-梳著
 梳篦
 梳粧
+梳著
 梳裹
 梳起
 梳過
@@ -67059,8 +67111,8 @@ use_preset_vocabulary: false
 梵文
 梵書
 梵本
-梵筴
 梵眾
+梵筴
 梵語
 梵谷
 梵音
@@ -67342,11 +67394,11 @@ use_preset_vocabulary: false
 植保
 植入
 植基
+植床
 植株
 植根
 植樹
 植民
-植床
 植牙
 植物
 植皮
@@ -67587,8 +67639,8 @@ use_preset_vocabulary: false
 極富
 極小
 極少
-極峰
 極峯
+極峰
 極左
 極差
 極帶
@@ -67690,9 +67742,9 @@ use_preset_vocabulary: false
 榛仁
 榛子
 榛實
-榛慄
 榛林
 榛果
+榛栗
 榛榛
 榛狉
 榛色
@@ -67725,9 +67777,9 @@ use_preset_vocabulary: false
 榧子
 榨乾
 榨取
+榨床
 榨汁
 榨油
-榨床
 榨菜
 榫子
 榫眼
@@ -67952,6 +68004,7 @@ use_preset_vocabulary: false
 樂工
 樂師
 樂平
+樂床
 樂府
 樂式
 樂律
@@ -67981,7 +68034,6 @@ use_preset_vocabulary: false
 樂池
 樂浪
 樂清
-樂床
 樂理
 樂的
 樂禍
@@ -68432,6 +68484,7 @@ use_preset_vocabulary: false
 機工
 機巧
 機師
+機床
 機座
 機庫
 機彀
@@ -68464,7 +68517,6 @@ use_preset_vocabulary: false
 機殼
 機油
 機灌
-機床
 機牙
 機率
 機理
@@ -68603,7 +68655,6 @@ use_preset_vocabulary: false
 橫眉
 橫看
 橫眼
-橫著
 橫禍
 橫秋
 橫空
@@ -68619,6 +68670,7 @@ use_preset_vocabulary: false
 橫膈
 橫臥
 橫舍
+橫著
 橫蠻
 橫行
 橫街
@@ -68897,11 +68949,11 @@ use_preset_vocabulary: false
 欠火
 欠產
 欠當
-欠著
 欠租
 欠稅
 欠繳
 欠缺
+欠著
 欠薪
 欠費
 欠資
@@ -68933,12 +68985,12 @@ use_preset_vocabulary: false
 次比
 次生
 次男
-次著
 次第
 次等
 次篆
 次級
 次經
+次著
 次要
 次貧
 次貨
@@ -69103,12 +69155,12 @@ use_preset_vocabulary: false
 歇泊
 歇涼
 歇班
-歇著
 歇肩
 歇腳
 歇腿
 歇艎
 歇菜
+歇著
 歇處
 歇足
 歇頂
@@ -69422,9 +69474,9 @@ use_preset_vocabulary: false
 正法
 正派
 正火
+正為
 正然
 正熱
-正為
 正片
 正版
 正牌
@@ -69435,7 +69487,6 @@ use_preset_vocabulary: false
 正當
 正直
 正眼
-正著
 正確
 正祖
 正章
@@ -69450,6 +69501,7 @@ use_preset_vocabulary: false
 正自
 正與
 正色
+正著
 正處
 正號
 正被
@@ -69730,8 +69782,8 @@ use_preset_vocabulary: false
 歪派
 歪理
 歪眼
-歪著
 歪纏
+歪著
 歪詩
 歪話
 歪路
@@ -69880,14 +69932,13 @@ use_preset_vocabulary: false
 歸正
 歸法
 歸流
+歸為
 歸煙
 歸煞
-歸為
 歸獄
 歸田
 歸省
 歸真
-歸著
 歸神
 歸福
 歸程
@@ -69903,6 +69954,7 @@ use_preset_vocabulary: false
 歸老
 歸耕
 歸航
+歸著
 歸葬
 歸藏
 歸號
@@ -70695,9 +70747,9 @@ use_preset_vocabulary: false
 比比
 比況
 比溼
+比為
 比照
 比熱
-比為
 比爾
 比物
 比特
@@ -70992,14 +71044,15 @@ use_preset_vocabulary: false
 民氣
 民治
 民法
-民營
 民為
+民營
 民牧
 民生
 民用
 民田
 民瘼
 民盟
+民眾
 民社
 民籍
 民粹
@@ -71007,7 +71060,6 @@ use_preset_vocabulary: false
 民航
 民船
 民蠹
-民眾
 民調
 民諺
 民謠
@@ -71133,7 +71185,6 @@ use_preset_vocabulary: false
 氣盛
 氣盡
 氣眼
-氣著
 氣短
 氣禁
 氣窗
@@ -71155,6 +71206,7 @@ use_preset_vocabulary: false
 氣艇
 氣色
 氣苦
+氣著
 氣虛
 氣蠱
 氣血
@@ -71306,6 +71358,7 @@ use_preset_vocabulary: false
 水工
 水師
 水平
+水床
 水底
 水府
 水庫
@@ -71401,7 +71454,6 @@ use_preset_vocabulary: false
 水煙
 水煮
 水燈
-水床
 水牌
 水牛
 水獺
@@ -71489,8 +71541,8 @@ use_preset_vocabulary: false
 水衣
 水表
 水袖
-水裡
 水裔
+水裡
 水解
 水谷
 水貂
@@ -71690,7 +71742,6 @@ use_preset_vocabulary: false
 求生
 求的
 求真
-求著
 求知
 求神
 求租
@@ -71698,6 +71749,7 @@ use_preset_vocabulary: false
 求索
 求聘
 求職
+求著
 求處
 求見
 求親
@@ -72085,7 +72137,6 @@ use_preset_vocabulary: false
 沈痛
 沈痼
 沈痾
-沈著
 沈睡
 沈積
 沈筒
@@ -72093,6 +72144,7 @@ use_preset_vocabulary: false
 沈腰
 沈船
 沈落
+沈著
 沈迷
 沈醉
 沈重
@@ -72139,7 +72191,6 @@ use_preset_vocabulary: false
 沉痼
 沉痾
 沉眠
-沉著
 沉睡
 沉積
 沉穩
@@ -72149,6 +72200,7 @@ use_preset_vocabulary: false
 沉脈
 沉船
 沉落
+沉著
 沉迷
 沉遠
 沉邃
@@ -72401,6 +72453,7 @@ use_preset_vocabulary: false
 沖天
 沖帳
 沖年
+沖床
 沖弱
 沖懷
 沖掉
@@ -72426,7 +72479,6 @@ use_preset_vocabulary: false
 沖澡
 沖激
 沖瀉
-沖床
 沖犯
 沖田
 沖稅
@@ -72592,6 +72644,7 @@ use_preset_vocabulary: false
 河工
 河市
 河干
+河床
 河底
 河廣
 河心
@@ -72632,7 +72685,6 @@ use_preset_vocabulary: false
 河灘
 河灣
 河燈
-河床
 河狸
 河畔
 河神
@@ -72854,11 +72906,11 @@ use_preset_vocabulary: false
 治瘉
 治療
 治癒
-治著
 治禮
 治第
 治績
 治罪
+治著
 治行
 治術
 治裝
@@ -72932,9 +72984,9 @@ use_preset_vocabulary: false
 沿海
 沿灘
 沿用
-沿著
 沿線
 沿習
+沿著
 沿街
 沿襲
 沿路
@@ -73228,7 +73280,6 @@ use_preset_vocabulary: false
 泛現
 泛白
 泛的
-泛著
 泛稱
 泛紅
 泛素
@@ -73238,6 +73289,7 @@ use_preset_vocabulary: false
 泛聲
 泛聽
 泛舟
+泛著
 泛藍
 泛覽
 泛談
@@ -73285,12 +73337,12 @@ use_preset_vocabulary: false
 泡狀
 泡疹
 泡的
-泡著
 泡綿
 泡腳
 泡芙
 泡茶
 泡菜
+泡著
 泡螺
 泡製
 泡貨
@@ -73310,8 +73362,8 @@ use_preset_vocabulary: false
 波密
 波導
 波峭
-波峰
 波峯
+波峰
 波希
 波幅
 波形
@@ -73739,7 +73791,6 @@ use_preset_vocabulary: false
 洗盤
 洗盪
 洗眼
-洗著
 洗石
 洗碗
 洗禮
@@ -73753,6 +73804,7 @@ use_preset_vocabulary: false
 洗腳
 洗腸
 洗臉
+洗著
 洗衣
 洗起
 洗車
@@ -73878,8 +73930,8 @@ use_preset_vocabulary: false
 洪大
 洪家
 洪山
-洪峰
 洪峯
+洪峰
 洪幫
 洪恩
 洪惟
@@ -74007,7 +74059,6 @@ use_preset_vocabulary: false
 活瓣
 活用
 活的
-活著
 活祭
 活禽
 活結
@@ -74016,6 +74067,7 @@ use_preset_vocabulary: false
 活脫
 活腳
 活茬
+活著
 活血
 活襯
 活計
@@ -74187,7 +74239,6 @@ use_preset_vocabulary: false
 流目
 流盼
 流眄
-流著
 流矢
 流砂
 流移
@@ -74202,6 +74253,7 @@ use_preset_vocabulary: false
 流膿
 流芳
 流落
+流著
 流蕩
 流蘇
 流螢
@@ -74414,7 +74466,6 @@ use_preset_vocabulary: false
 浮生
 浮白
 浮皮
-浮著
 浮石
 浮禮
 浮秤
@@ -74430,6 +74481,7 @@ use_preset_vocabulary: false
 浮花
 浮華
 浮萍
+浮著
 浮蕩
 浮薄
 浮蟻
@@ -74526,6 +74578,7 @@ use_preset_vocabulary: false
 海寶
 海專
 海山
+海岩
 海岬
 海岱
 海岸
@@ -74536,12 +74589,12 @@ use_preset_vocabulary: false
 海嶠
 海嶺
 海嶽
-海巖
 海州
 海巡
 海市
 海師
 海帶
+海床
 海底
 海康
 海德
@@ -74602,7 +74655,6 @@ use_preset_vocabulary: false
 海燈
 海燕
 海爾
-海床
 海牙
 海牛
 海狗
@@ -74824,13 +74876,13 @@ use_preset_vocabulary: false
 消災
 消炎
 消瘦
-消著
 消磁
 消磨
 消索
 消耗
 消聲
 消腫
+消著
 消蝕
 消融
 消解
@@ -75557,15 +75609,14 @@ use_preset_vocabulary: false
 混淪
 混混
 混濁
+混為
 混然
 混煉
 混熟
-混為
 混猜
 混球
 混用
 混的
-混著
 混矇
 混種
 混糖
@@ -75574,6 +75625,7 @@ use_preset_vocabulary: false
 混纏
 混芒
 混茫
+混著
 混蒙
 混號
 混蛋
@@ -75695,7 +75747,6 @@ use_preset_vocabulary: false
 添水
 添滿
 添盆
-添著
 添箱
 添綴
 添線
@@ -76082,6 +76133,7 @@ use_preset_vocabulary: false
 渦扇
 渦旋
 渦核
+渦桿
 渦槳
 渦河
 渦流
@@ -76199,9 +76251,9 @@ use_preset_vocabulary: false
 渴烏
 渴病
 渴盼
-渴著
 渴睡
 渴筆
+渴著
 渴葬
 渴賞
 渴雨
@@ -76471,13 +76523,13 @@ use_preset_vocabulary: false
 湯火
 湯瓶
 湯盤
-湯著
 湯碗
 湯糰
 湯網
 湯罐
 湯羊
 湯腳
+湯著
 湯藥
 湯鍋
 湯鑊
@@ -76585,6 +76637,7 @@ use_preset_vocabulary: false
 溝塹
 溝壑
 溝壘
+溝床
 溝底
 溝施
 溝槽
@@ -76595,7 +76648,6 @@ use_preset_vocabulary: false
 溝澗
 溝瀆
 溝灌
-溝床
 溝眼
 溝裡
 溝谷
@@ -76675,6 +76727,7 @@ use_preset_vocabulary: false
 溫州
 溫差
 溫帶
+溫床
 溫度
 溫情
 溫控
@@ -76698,7 +76751,6 @@ use_preset_vocabulary: false
 溫炕
 溫煦
 溫熱
-溫床
 溫純
 溫網
 溫縣
@@ -76768,13 +76820,13 @@ use_preset_vocabulary: false
 溺信
 溺器
 溺嬰
+溺床
 溺志
 溺愛
 溺斃
 溺於
 溺死
 溺水
-溺床
 溺職
 溺谷
 溺途
@@ -76936,7 +76988,6 @@ use_preset_vocabulary: false
 滑球
 滑環
 滑的
-滑著
 滑石
 滑移
 滑稽
@@ -76952,6 +77003,7 @@ use_preset_vocabulary: false
 滑航
 滑草
 滑落
+滑著
 滑蓋
 滑藉
 滑行
@@ -77126,12 +77178,12 @@ use_preset_vocabulary: false
 滾球
 滾白
 滾的
-滾著
 滾石
 滾筒
 滾翻
 滾肚
 滾落
+滾著
 滾蛋
 滾調
 滾走
@@ -77219,7 +77271,6 @@ use_preset_vocabulary: false
 滿盤
 滿目
 滿眼
-滿著
 滿破
 滿級
 滿纂
@@ -77229,6 +77280,7 @@ use_preset_vocabulary: false
 滿臉
 滿舵
 滿船
+滿著
 滿街
 滿裝
 滿話
@@ -77323,11 +77375,11 @@ use_preset_vocabulary: false
 漂然
 漂白
 漂盪
-漂著
 漂礫
 漂移
 漂絮
 漂萍
+漂著
 漂蕩
 漂行
 漂走
@@ -77404,7 +77456,6 @@ use_preset_vocabulary: false
 漏盆
 漏盡
 漏看
-漏著
 漏稅
 漏空
 漏窗
@@ -77417,6 +77468,7 @@ use_preset_vocabulary: false
 漏胎
 漏脫
 漏落
+漏著
 漏行
 漏誤
 漏蹄
@@ -77457,7 +77509,6 @@ use_preset_vocabulary: false
 演活
 演演
 演的
-演著
 演示
 演禮
 演禽
@@ -77466,6 +77517,7 @@ use_preset_vocabulary: false
 演繹
 演義
 演習
+演著
 演藝
 演說
 演講
@@ -77646,9 +77698,9 @@ use_preset_vocabulary: false
 漲滿
 漲漲
 漲潮
-漲著
 漲紅
 漲落
+漲著
 漲起
 漲跌
 漲過
@@ -78472,12 +78524,12 @@ use_preset_vocabulary: false
 灌漿
 灌濯
 灌灌
-灌著
 灌站
 灌籃
 灌縣
 灌腸
 灌膿
+灌著
 灌藥
 灌裝
 灌製
@@ -78736,7 +78788,7 @@ use_preset_vocabulary: false
 灰分
 灰土
 灰塵
-灰巖
+灰岩
 灰度
 灰心
 灰戶
@@ -78877,10 +78929,10 @@ use_preset_vocabulary: false
 炒炒
 炒熟
 炒熱
-炒著
 炒米
 炒股
 炒菜
+炒著
 炒蛋
 炒貨
 炒買
@@ -78892,13 +78944,13 @@ use_preset_vocabulary: false
 炒青
 炒飯
 炒麵
+炕床
 炕房
 炕暴
 炕桌
 炕梢
 炕沿
 炕洞
-炕床
 炕蓆
 炕陽
 炕頭
@@ -79029,6 +79081,110 @@ use_preset_vocabulary: false
 炸雞
 炸雷
 炸魚
+為一
+為中
+為主
+為之
+為亂
+為了
+為人
+為什
+為他
+為伍
+為伴
+為何
+為你
+為佳
+為使
+為例
+為偶
+為傲
+為兄
+為先
+為公
+為其
+為利
+為力
+為名
+為君
+為啥
+為善
+為國
+為圖
+為大
+為她
+為好
+為妙
+為妻
+為子
+為學
+為它
+為官
+為宜
+為害
+為家
+為對
+為己
+為師
+為幸
+為念
+為恥
+為患
+為您
+為情
+為惡
+為愛
+為憑
+為我
+為把
+為政
+為敵
+為數
+為文
+為時
+為期
+為本
+為校
+為業
+為榮
+為樂
+為權
+為止
+為此
+為母
+為每
+為民
+為求
+為準
+為父
+為王
+為甚
+為生
+為由
+為的
+為盼
+為禍
+為私
+為空
+為臨
+為荷
+為著
+為要
+為該
+為誰
+為證
+為輔
+為鄰
+為重
+為鑑
+為間
+為限
+為難
+為零
+為非
+為頭
+為題
+為首
 烈到
 烈味
 烈士
@@ -79237,10 +79393,10 @@ use_preset_vocabulary: false
 焊條
 焊槍
 焊燒
-焊著
 焊絲
 焊縫
 焊膏
+焊著
 焊過
 焊鉗
 焊錫
@@ -79404,10 +79560,10 @@ use_preset_vocabulary: false
 無涉
 無涯
 無淚
+無為
 無煙
 無照
 無爪
-無為
 無父
 無牌
 無牙
@@ -79431,7 +79587,6 @@ use_preset_vocabulary: false
 無盡
 無相
 無眠
-無著
 無知
 無碼
 無礙
@@ -79462,6 +79617,7 @@ use_preset_vocabulary: false
 無色
 無菌
 無華
+無著
 無蓋
 無藝
 無藥
@@ -79634,10 +79790,10 @@ use_preset_vocabulary: false
 煎煎
 煎煮
 煎熬
-煎著
 煎聒
 煎肉
 煎茶
+煎著
 煎藥
 煎蛋
 煎起
@@ -79870,7 +80026,6 @@ use_preset_vocabulary: false
 照相
 照看
 照眼
-照著
 照票
 照站
 照章
@@ -79885,6 +80040,7 @@ use_preset_vocabulary: false
 照自
 照臺
 照舊
+照著
 照表
 照袋
 照見
@@ -79971,7 +80127,6 @@ use_preset_vocabulary: false
 煮熟
 煮爛
 煮的
-煮著
 煮硬
 煮粥
 煮練
@@ -79979,6 +80134,7 @@ use_preset_vocabulary: false
 煮肉
 煮茗
 煮菜
+煮著
 煮蛋
 煮酒
 煮開
@@ -80411,9 +80567,9 @@ use_preset_vocabulary: false
 燉煮
 燉燉
 燉爛
-燉著
 燉肉
 燉菜
+燉著
 燉藥
 燉補
 燉鍋
@@ -80581,8 +80737,8 @@ use_preset_vocabulary: false
 燙燙
 燙的
 燙直
-燙著
 燙花
+燙著
 燙蠟
 燙衣
 燙過
@@ -80738,6 +80894,7 @@ use_preset_vocabulary: false
 爐具
 爐坑
 爐子
+爐床
 爐心
 爐房
 爐料
@@ -80749,7 +80906,6 @@ use_preset_vocabulary: false
 爐火
 爐灰
 爐炭
-爐床
 爐竈
 爐管
 爐膛
@@ -80838,11 +80994,11 @@ use_preset_vocabulary: false
 爬犁
 爬癢
 爬的
-爬著
 爬竿
 爬繩
 爬羅
 爬船
+爬著
 爬蟲
 爬行
 爬走
@@ -80891,11 +81047,11 @@ use_preset_vocabulary: false
 爭產
 爭當
 爭相
-爭著
 爭端
 爭競
 爭臉
 爭臣
+爭著
 爭衡
 爭訟
 爭論
@@ -80921,110 +81077,6 @@ use_preset_vocabulary: false
 爰書
 爰爰
 爰田
-為一
-為中
-為主
-為之
-為亂
-為了
-為人
-為什
-為他
-為伍
-為伴
-為何
-為你
-為佳
-為使
-為例
-為偶
-為傲
-為兄
-為先
-為公
-為其
-為利
-為力
-為名
-為君
-為啥
-為善
-為國
-為圖
-為大
-為她
-為好
-為妙
-為妻
-為子
-為學
-為它
-為官
-為宜
-為害
-為家
-為對
-為己
-為師
-為幸
-為念
-為恥
-為患
-為您
-為情
-為惡
-為愛
-為憑
-為我
-為把
-為政
-為敵
-為數
-為文
-為時
-為期
-為本
-為校
-為業
-為榮
-為樂
-為權
-為止
-為此
-為母
-為每
-為民
-為求
-為準
-為父
-為王
-為甚
-為生
-為由
-為的
-為盼
-為著
-為禍
-為私
-為空
-為臨
-為荷
-為要
-為該
-為誰
-為證
-為輔
-為鄰
-為重
-為鑑
-為間
-為限
-為難
-為零
-為非
-為頭
-為題
-為首
 爵主
 爵仇
 爵位
@@ -81115,41 +81167,6 @@ use_preset_vocabulary: false
 爾等
 爾迪
 爾雅
-床上
-床下
-床位
-床側
-床前
-床單
-床墊
-床子
-床尾
-床帳
-床帷
-床幃
-床戲
-床板
-床架
-床柱
-床楞
-床榻
-床母
-床毯
-床沿
-床笠
-床笫
-床第
-床罩
-床腳
-床舖
-床蓆
-床蓋
-床蓐
-床蝨
-床褥
-床邊
-床鋪
-床頭
 牂柯
 牂牁
 牂牂
@@ -81165,8 +81182,8 @@ use_preset_vocabulary: false
 牆紙
 牆腳
 牆衣
-牆裡
 牆裙
+牆裡
 牆角
 牆跟
 牆邊
@@ -81296,6 +81313,7 @@ use_preset_vocabulary: false
 牙官
 牙家
 牙將
+牙床
 牙慧
 牙推
 牙旗
@@ -81306,7 +81324,6 @@ use_preset_vocabulary: false
 牙機
 牙櫱
 牙爪
-牙床
 牙牌
 牙牙
 牙班
@@ -81618,8 +81635,8 @@ use_preset_vocabulary: false
 特此
 特殊
 特派
-特煞
 特為
+特煞
 特爾
 特特
 特獎
@@ -81706,7 +81723,6 @@ use_preset_vocabulary: false
 牽掣
 牽涉
 牽牛
-牽著
 牽累
 牽絆
 牽絲
@@ -81716,6 +81732,7 @@ use_preset_vocabulary: false
 牽繫
 牽纏
 牽罟
+牽著
 牽裳
 牽記
 牽走
@@ -82706,8 +82723,8 @@ use_preset_vocabulary: false
 率性
 率意
 率更
-率然
 率為
+率然
 率爾
 率率
 率由
@@ -82746,8 +82763,8 @@ use_preset_vocabulary: false
 玉屑
 玉展
 玉山
-玉峰
 玉峯
+玉峰
 玉川
 玉州
 玉工
@@ -83097,7 +83114,6 @@ use_preset_vocabulary: false
 玩玩
 玩球
 玩的
-玩著
 玩票
 玩笑
 玩索
@@ -83105,6 +83121,7 @@ use_preset_vocabulary: false
 玩者
 玩耍
 玩興
+玩著
 玩藝
 玩話
 玩賞
@@ -83748,7 +83765,6 @@ use_preset_vocabulary: false
 環球
 環環
 環生
-環著
 環礁
 環箍
 環節
@@ -83758,6 +83774,7 @@ use_preset_vocabulary: false
 環繞
 環翠
 環肌
+環著
 環蝕
 環行
 環衛
@@ -84171,9 +84188,9 @@ use_preset_vocabulary: false
 生澀
 生火
 生炭
+生為
 生煤
 生熱
-生為
 生父
 生物
 生狼
@@ -84193,7 +84210,6 @@ use_preset_vocabulary: false
 生皮
 生相
 生眼
-生著
 生知
 生硬
 生祠
@@ -84218,6 +84234,7 @@ use_preset_vocabulary: false
 生荒
 生菌
 生菜
+生著
 生薑
 生藥
 生蛋
@@ -84273,6 +84290,7 @@ use_preset_vocabulary: false
 產地
 產婆
 產婦
+產床
 產後
 產房
 產於
@@ -84281,7 +84299,6 @@ use_preset_vocabulary: false
 產檢
 產權
 產煤
-產床
 產物
 產狀
 產生
@@ -84371,7 +84388,6 @@ use_preset_vocabulary: false
 用畢
 用的
 用盡
-用著
 用筆
 用紙
 用腦
@@ -84379,6 +84395,7 @@ use_preset_vocabulary: false
 用膳
 用舊
 用茶
+用著
 用藥
 用處
 用計
@@ -84506,9 +84523,9 @@ use_preset_vocabulary: false
 由此
 由由
 由省
-由著
 由縣
 由美
+由著
 由衷
 由誰
 由跋
@@ -84785,7 +84802,6 @@ use_preset_vocabulary: false
 留用
 留留
 留白
-留著
 留神
 留種
 留空
@@ -84799,6 +84815,7 @@ use_preset_vocabulary: false
 留芳
 留英
 留落
+留著
 留言
 留話
 留起
@@ -85015,7 +85032,6 @@ use_preset_vocabulary: false
 畫省
 畫眉
 畫真
-畫著
 畫稿
 畫符
 畫筆
@@ -85028,6 +85044,7 @@ use_preset_vocabulary: false
 畫臉
 畫舫
 畫荻
+畫著
 畫行
 畫表
 畫角
@@ -85227,9 +85244,9 @@ use_preset_vocabulary: false
 當歸
 當準
 當災
+當為
 當然
 當爐
-當為
 當班
 當用
 當番
@@ -85238,7 +85255,7 @@ use_preset_vocabulary: false
 當直
 當真
 當眼
-當著
+當眾
 當票
 當空
 當紅
@@ -85247,7 +85264,7 @@ use_preset_vocabulary: false
 當腰
 當舖
 當花
-當眾
+當著
 當行
 當街
 當該
@@ -85315,13 +85332,13 @@ use_preset_vocabulary: false
 疊巘
 疊席
 疊平
+疊床
 疊彩
 疊成
 疊接
 疊映
 疊棋
 疊燮
-疊床
 疊疊
 疊被
 疊詞
@@ -85542,6 +85559,7 @@ use_preset_vocabulary: false
 病害
 病家
 病容
+病床
 病弱
 病後
 病得
@@ -85567,7 +85585,6 @@ use_preset_vocabulary: false
 病毒
 病況
 病源
-病床
 病牙
 病犬
 病狀
@@ -85578,7 +85595,6 @@ use_preset_vocabulary: false
 病瘉
 病癒
 病發
-病著
 病程
 病竈
 病童
@@ -85589,6 +85605,7 @@ use_preset_vocabulary: false
 病舍
 病苦
 病菌
+病著
 病號
 病蟲
 病變
@@ -86158,13 +86175,13 @@ use_preset_vocabulary: false
 發火
 發炎
 發炮
+發為
 發煙
 發煩
 發熱
 發燒
 發燙
 發燭
-發為
 發片
 發牌
 發牒
@@ -86193,7 +86210,6 @@ use_preset_vocabulary: false
 發監
 發直
 發眩
-發著
 發矇
 發矢
 發砲
@@ -86240,6 +86256,7 @@ use_preset_vocabulary: false
 發莊
 發落
 發葉
+發著
 發蒙
 發蔫
 發薪
@@ -86636,6 +86653,7 @@ use_preset_vocabulary: false
 白鼠
 白鼬
 白齋
+白𣎴
 百一
 百丈
 百下
@@ -86844,8 +86862,8 @@ use_preset_vocabulary: false
 皆是
 皆有
 皆準
-皆然
 皆為
+皆然
 皆用
 皆知
 皇上
@@ -87048,10 +87066,10 @@ use_preset_vocabulary: false
 皺摺
 皺痕
 皺眉
-皺著
 皺紋
 皺縮
 皺胃
+皺著
 皺褶
 皺襞
 皺起
@@ -87124,8 +87142,8 @@ use_preset_vocabulary: false
 盒子
 盒帶
 盒蓋
-盒裡
 盒裝
+盒裡
 盒飯
 盒餐
 盔子
@@ -87169,7 +87187,6 @@ use_preset_vocabulary: false
 盛況
 盛王
 盛產
-盛著
 盛稱
 盛筵
 盛舉
@@ -87550,8 +87567,8 @@ use_preset_vocabulary: false
 盯住
 盯市
 盯梢
-盯著
 盯緊
+盯著
 盯視
 盯防
 盱盱
@@ -87657,7 +87674,6 @@ use_preset_vocabulary: false
 直白
 直的
 直直
-直著
 直積
 直立
 直笛
@@ -87676,6 +87692,7 @@ use_preset_vocabulary: false
 直致
 直航
 直落
+直著
 直行
 直衝
 直裰
@@ -87850,10 +87867,10 @@ use_preset_vocabulary: false
 相減
 相激
 相濟
+相為
 相煩
 相熟
 相爭
-相為
 相父
 相爺
 相片
@@ -87864,7 +87881,6 @@ use_preset_vocabulary: false
 相異
 相當
 相看
-相著
 相知
 相碰
 相禮
@@ -87888,6 +87904,7 @@ use_preset_vocabulary: false
 相臺
 相與
 相若
+相著
 相處
 相術
 相衝
@@ -87955,8 +87972,8 @@ use_preset_vocabulary: false
 盼到
 盼望
 盼盼
-盼著
 盼睞
+盼著
 盼頭
 盾板
 盾牌
@@ -88169,7 +88186,6 @@ use_preset_vocabulary: false
 看盤
 看相
 看看
-看著
 看破
 看碟
 看空
@@ -88181,6 +88197,7 @@ use_preset_vocabulary: false
 看船
 看花
 看茶
+看著
 看見
 看視
 看覷
@@ -88223,9 +88240,9 @@ use_preset_vocabulary: false
 真似
 真個
 真假
+真偽
 真傳
 真像
-真偽
 真元
 真兇
 真刀
@@ -88287,10 +88304,10 @@ use_preset_vocabulary: false
 真氣
 真沒
 真清
+真為
 真烈
 真無
 真熟
-真為
 真爽
 真版
 真牛
@@ -88390,9 +88407,9 @@ use_preset_vocabulary: false
 眯了
 眯住
 眯眼
-眯著
 眯睎
 眯縫
+眯著
 眯起
 眳睛
 眴煥
@@ -88518,60 +88535,23 @@ use_preset_vocabulary: false
 眼高
 眼點
 眽眽
-著上
-著人
-著兒
-著力
-著即
-著呢
-著地
-著墨
-著實
-著己
-著志
-著忙
-著急
-著惱
-著想
-著意
-著慌
-著手
-著摸
-著數
-著棋
-著水
-著法
-著涼
-著火
-著然
-著床
-著甚
-著用
-著眼
-著著
-著筆
-著緊
-著肉
-著腳
-著臉
-著色
-著花
-著莫
-著落
-著處
-著衣
-著裝
-著跡
-著身
-著迷
-著道
-著邊
-著重
-著陸
-著雨
-著題
-著風
-著魔
+眾人
+眾位
+眾包
+眾多
+眾寡
+眾庶
+眾怒
+眾數
+眾望
+眾生
+眾神
+眾說
+眾論
+眾議
+眾軍
+眾院
+眾體
 睃巡
 睃眼
 睃趁
@@ -88625,8 +88605,8 @@ use_preset_vocabulary: false
 睡相
 睡眠
 睡眼
-睡著
 睡睡
+睡著
 睡蓮
 睡衣
 睡袋
@@ -88718,21 +88698,21 @@ use_preset_vocabulary: false
 瞄到
 瞄好
 瞄準
-瞄著
 瞄瞄
+瞄著
 瞅問
-瞅著
 瞅睬
 瞅瞅
 瞅緊
+瞅著
 瞅見
 瞇上
 瞇了
 瞇住
 瞇眼
-瞇著
 瞇睎
 瞇縫
+瞇著
 瞇起
 瞈矇
 瞈蒙
@@ -88816,10 +88796,10 @@ use_preset_vocabulary: false
 瞧了
 瞧出
 瞧病
-瞧著
 瞧瞧
 瞧科
 瞧縣
+瞧著
 瞧見
 瞧過
 瞧門
@@ -88829,9 +88809,9 @@ use_preset_vocabulary: false
 瞪的
 瞪目
 瞪眼
-瞪著
 瞪瞪
 瞪羚
+瞪著
 瞪視
 瞪起
 瞬即
@@ -88894,11 +88874,11 @@ use_preset_vocabulary: false
 矇昧
 矇混
 矇眼
-矇著
 矇瞍
 矇矇
 矇矓
 矇聵
+矇著
 矇蔽
 矇頭
 矇騙
@@ -88912,7 +88892,6 @@ use_preset_vocabulary: false
 矗立
 矚望
 矚目
-矚託
 矛柄
 矛盾
 矛頭
@@ -89214,11 +89193,13 @@ use_preset_vocabulary: false
 石崗
 石工
 石幢
+石床
 石庭
 石弓
 石弩
 石彈
 石徑
+石拐
 石拱
 石擔
 石文
@@ -89234,7 +89215,6 @@ use_preset_vocabulary: false
 石板
 石林
 石柱
-石柺
 石棉
 石棺
 石榴
@@ -89255,7 +89235,6 @@ use_preset_vocabulary: false
 石灰
 石炭
 石燕
-石床
 石牆
 石片
 石版
@@ -89411,8 +89390,8 @@ use_preset_vocabulary: false
 砍樹
 砍死
 砍殺
-砍著
 砍砍
+砍著
 砍走
 砍起
 砍進
@@ -89567,7 +89546,6 @@ use_preset_vocabulary: false
 破盤
 破相
 破眼
-破著
 破碎
 破空
 破竹
@@ -89585,6 +89563,7 @@ use_preset_vocabulary: false
 破船
 破草
 破落
+破著
 破蛹
 破裂
 破親
@@ -89720,7 +89699,6 @@ use_preset_vocabulary: false
 硬病
 硬皮
 硬盤
-硬著
 硬硬
 硬碟
 硬筆
@@ -89732,6 +89710,7 @@ use_preset_vocabulary: false
 硬腳
 硬膏
 硬臥
+硬著
 硬衝
 硬要
 硬話
@@ -89944,10 +89923,10 @@ use_preset_vocabulary: false
 碰杯
 碰牌
 碰的
-碰著
 碰碰
 碰磁
 碰翻
+碰著
 碰見
 碰觸
 碰過
@@ -90142,6 +90121,7 @@ use_preset_vocabulary: false
 磨對
 磨工
 磨平
+磨床
 磨得
 磨快
 磨成
@@ -90163,7 +90143,6 @@ use_preset_vocabulary: false
 磨滅
 磨煉
 磨煩
-磨床
 磨牙
 磨盤
 磨短
@@ -90264,6 +90243,7 @@ use_preset_vocabulary: false
 礦層
 礦山
 礦工
+礦床
 礦房
 礦柱
 礦業
@@ -90275,7 +90255,6 @@ use_preset_vocabulary: false
 礦源
 礦漿
 礦燈
-礦床
 礦物
 礦產
 礦石
@@ -90314,9 +90293,9 @@ use_preset_vocabulary: false
 示意
 示愛
 示疾
+示眾
 示知
 示範
-示眾
 示覆
 示警
 社中
@@ -91011,6 +90990,7 @@ use_preset_vocabulary: false
 禪寂
 禪寺
 禪師
+禪床
 禪心
 禪思
 禪悅
@@ -91020,7 +91000,6 @@ use_preset_vocabulary: false
 禪林
 禪椅
 禪機
-禪床
 禪理
 禪義
 禪號
@@ -91318,8 +91297,8 @@ use_preset_vocabulary: false
 秉正
 秉燭
 秉直
-秉著
 秉筆
+秉著
 秉賦
 秉鈞
 秉鉞
@@ -91758,8 +91737,8 @@ use_preset_vocabulary: false
 稍早
 稍有
 稍減
-稍熱
 稍為
+稍熱
 稍異
 稍稍
 稍等
@@ -91811,8 +91790,8 @@ use_preset_vocabulary: false
 稟氣
 稟牆
 稟白
-稟著
 稟能
+稟著
 稟覆
 稟見
 稟賦
@@ -92074,7 +92053,6 @@ use_preset_vocabulary: false
 積物
 積疊
 積痾
-積著
 積祖
 積福
 積穀
@@ -92252,6 +92230,7 @@ use_preset_vocabulary: false
 空山
 空巢
 空幻
+空床
 空座
 空廓
 空廬
@@ -92299,7 +92278,6 @@ use_preset_vocabulary: false
 空港
 空濛
 空無
-空床
 空王
 空瓶
 空當
@@ -92308,7 +92286,6 @@ use_preset_vocabulary: false
 空的
 空盤
 空相
-空著
 空碼
 空穴
 空空
@@ -92327,6 +92304,7 @@ use_preset_vocabulary: false
 空船
 空花
 空茫
+空著
 空蕩
 空虛
 空號
@@ -92411,7 +92389,6 @@ use_preset_vocabulary: false
 穿牆
 穿用
 穿的
-穿著
 穿破
 穿穿
 穿窬
@@ -92421,6 +92398,7 @@ use_preset_vocabulary: false
 穿線
 穿耳
 穿胸
+穿著
 穿行
 穿衣
 穿起
@@ -92459,11 +92437,11 @@ use_preset_vocabulary: false
 突發
 突的
 突眼
-突著
 突破
 突磨
 突禿
 突突
+突著
 突襲
 突見
 突觸
@@ -92602,8 +92580,8 @@ use_preset_vocabulary: false
 窩氣
 窩火
 窩盤
-窩著
 窩窩
+窩著
 窩藏
 窩裡
 窩贓
@@ -92748,9 +92726,9 @@ use_preset_vocabulary: false
 竈匠
 竈君
 竈地
+竈床
 竈房
 竈火
-竈床
 竈王
 竈眼
 竈神
@@ -92859,7 +92837,6 @@ use_preset_vocabulary: false
 立生
 立異
 立當
-立著
 立睜
 立碑
 立秋
@@ -92871,6 +92848,7 @@ use_preset_vocabulary: false
 立群
 立腳
 立草
+立著
 立號
 立見
 立言
@@ -92915,7 +92893,6 @@ use_preset_vocabulary: false
 站牌
 站班
 站直
-站著
 站票
 站穩
 站立
@@ -92923,6 +92900,7 @@ use_preset_vocabulary: false
 站籠
 站網
 站臺
+站著
 站街
 站赤
 站起
@@ -93076,7 +93054,6 @@ use_preset_vocabulary: false
 端的
 端盒
 端相
-端著
 端石
 端硯
 端站
@@ -93089,6 +93066,7 @@ use_preset_vocabulary: false
 端舉
 端莊
 端菜
+端著
 端視
 端詞
 端詳
@@ -93265,7 +93243,6 @@ use_preset_vocabulary: false
 笑渦
 笑看
 笑眼
-笑著
 笑破
 笑窩
 笑笑
@@ -93275,6 +93252,7 @@ use_preset_vocabulary: false
 笑耍
 笑聲
 笑臉
+笑著
 笑言
 笑話
 笑語
@@ -93399,6 +93377,7 @@ use_preset_vocabulary: false
 筆山
 筆岫
 筆帽
+筆床
 筆座
 筆形
 筆心
@@ -93422,7 +93401,6 @@ use_preset_vocabulary: false
 筆法
 筆洗
 筆海
-筆床
 筆畫
 筆癖
 筆盒
@@ -93501,13 +93479,13 @@ use_preset_vocabulary: false
 等比
 等溫
 等的
-等著
 等第
 等等
 等級
 等耐
 等腰
 等船
+等著
 等處
 等號
 等衰
@@ -93816,7 +93794,6 @@ use_preset_vocabulary: false
 管理
 管用
 管界
-管著
 管穴
 管窺
 管笛
@@ -93830,6 +93807,7 @@ use_preset_vocabulary: false
 管總
 管胞
 管自
+管著
 管蔡
 管見
 管訓
@@ -94308,11 +94286,11 @@ use_preset_vocabulary: false
 簽有
 簽為
 簽發
-簽著
 簽章
 簽約
 簽結
 簽署
+簽著
 簽訂
 簽註
 簽証
@@ -94697,7 +94675,6 @@ use_preset_vocabulary: false
 粘滑
 粘滯
 粘痰
-粘著
 粘稠
 粘竿
 粘米
@@ -94709,6 +94686,7 @@ use_preset_vocabulary: false
 粘膜
 粘膠
 粘菌
+粘著
 粘蟲
 粘補
 粘貼
@@ -94871,12 +94849,12 @@ use_preset_vocabulary: false
 糊成
 糊牆
 糊狀
-糊著
 糊突
 糊粘
 糊精
 糊糊
 糊紙
+糊著
 糊裱
 糌粑
 糍粑
@@ -95050,6 +95028,7 @@ use_preset_vocabulary: false
 糾察
 糾彈
 糾正
+糾眾
 糾糾
 糾紛
 糾結
@@ -95057,7 +95036,6 @@ use_preset_vocabulary: false
 糾纏
 糾舉
 糾葛
-糾眾
 糾錯
 糾集
 糾風
@@ -95244,7 +95222,6 @@ use_preset_vocabulary: false
 紅皮
 紅盤
 紅眼
-紅著
 紅砒
 紅磚
 紅磷
@@ -95275,6 +95252,7 @@ use_preset_vocabulary: false
 紅茸
 紅莓
 紅葉
+紅著
 紅蓮
 紅薯
 紅藥
@@ -96140,8 +96118,8 @@ use_preset_vocabulary: false
 組練
 組織
 組胺
-組裡
 組裝
+組裡
 組訓
 組詞
 組詩
@@ -96231,10 +96209,10 @@ use_preset_vocabulary: false
 結正
 結殼
 結清
+結為
 結焦
 結煞
 結營
-結為
 結狀
 結界
 結疤
@@ -96627,13 +96605,13 @@ use_preset_vocabulary: false
 綁樁
 綁標
 綁牢
-綁著
 綁票
 綁紮
 綁緊
 綁縛
 綁腳
 綁腿
+綁著
 綁走
 綁赴
 綁鬼
@@ -96666,11 +96644,11 @@ use_preset_vocabulary: false
 綑好
 綑得
 綑成
-綑著
 綑紮
 綑綁
 綑緊
 綑縛
+綑著
 綑起
 綑風
 經世
@@ -97149,7 +97127,6 @@ use_preset_vocabulary: false
 緊湊
 緊溜
 緊盯
-緊著
 緊等
 緊簇
 緊絀
@@ -97161,6 +97138,7 @@ use_preset_vocabulary: false
 緊繫
 緊缺
 緊自
+緊著
 緊裹
 緊襯
 緊要
@@ -97609,8 +97587,8 @@ use_preset_vocabulary: false
 縫線
 縫縫
 縫衣
-縫裡
 縫補
+縫裡
 縫製
 縫起
 縫針
@@ -97901,17 +97879,17 @@ use_preset_vocabulary: false
 繃子
 繃巴
 繃帶
+繃床
 繃弓
 繃扒
 繃拽
 繃接
-繃床
 繃瓷
-繃著
 繃簧
 繃緊
 繃線
 繃臉
+繃著
 繃裂
 繃針
 繃開
@@ -97981,11 +97959,11 @@ use_preset_vocabulary: false
 繞梁
 繞樑
 繞流
-繞著
 繞磨
 繞組
 繞繞
 繞膝
+繞著
 繞行
 繞起
 繞路
@@ -98003,6 +97981,7 @@ use_preset_vocabulary: false
 繡墩
 繡工
 繡帷
+繡床
 繡得
 繡戶
 繡房
@@ -98011,7 +97990,6 @@ use_preset_vocabulary: false
 繡架
 繡毯
 繡活
-繡床
 繡球
 繡畫
 繡的
@@ -98038,12 +98016,12 @@ use_preset_vocabulary: false
 繩套
 繩子
 繩尺
+繩床
 繩度
 繩文
 繩梯
 繩橋
 繩正
-繩床
 繩索
 繩結
 繩線
@@ -98083,7 +98061,6 @@ use_preset_vocabulary: false
 繫牢
 繫獄
 繫留
-繫著
 繫系
 繫累
 繫結
@@ -98092,6 +98069,7 @@ use_preset_vocabulary: false
 繫繩
 繫纜
 繫腰
+繫著
 繫裹
 繫趾
 繫辭
@@ -98226,7 +98204,6 @@ use_preset_vocabulary: false
 纏提
 纏擾
 纏牽
-纏著
 纏磨
 纏累
 纏結
@@ -98236,6 +98213,7 @@ use_preset_vocabulary: false
 纏繞
 纏繳
 纏腳
+纏著
 纏袋
 纏裹
 纏訟
@@ -98250,50 +98228,6 @@ use_preset_vocabulary: false
 纓帽
 纓簪
 纓絡
-才不
-才來
-才信
-才像
-才再
-才出
-才到
-才則
-才剛
-才去
-才可
-才回
-才在
-才多
-才夠
-才好
-才始
-才子
-才將
-才對
-才怪
-才想
-才打
-才拿
-才敢
-才料
-才是
-才會
-才有
-才此
-才沒
-才派
-才為
-才看
-才等
-才算
-才給
-才能
-才要
-才講
-才讀
-才買
-才跟
-才開
 纖人
 纖介
 纖兒
@@ -98529,11 +98463,11 @@ use_preset_vocabulary: false
 罰爵
 罰球
 罰的
-罰著
 罰科
 罰站
 罰約
 罰給
+罰著
 罰誓
 罰調
 罰贖
@@ -98977,6 +98911,7 @@ use_preset_vocabulary: false
 群氓
 群生
 群發
+群眾
 群籍
 群系
 群組
@@ -98991,7 +98926,6 @@ use_preset_vocabulary: false
 群英
 群落
 群號
-群眾
 群裡
 群論
 群賢
@@ -99337,9 +99271,9 @@ use_preset_vocabulary: false
 翹棱
 翹楚
 翹盼
-翹著
 翹硬
 翹翹
+翹著
 翹課
 翹起
 翹趣
@@ -99404,9 +99338,9 @@ use_preset_vocabulary: false
 翻滾
 翻漿
 翻炒
+翻為
 翻然
 翻照
-翻為
 翻牆
 翻版
 翻番
@@ -99415,7 +99349,6 @@ use_preset_vocabulary: false
 翻盤
 翻看
 翻眼
-翻著
 翻砂
 翻空
 翻紅
@@ -99428,6 +99361,7 @@ use_preset_vocabulary: false
 翻臉
 翻自
 翻船
+翻著
 翻蓋
 翻蔓
 翻覆
@@ -99824,7 +99758,6 @@ use_preset_vocabulary: false
 考生
 考異
 考的
-考著
 考研
 考種
 考究
@@ -99833,6 +99766,7 @@ use_preset_vocabulary: false
 考終
 考績
 考考
+考著
 考覈
 考訂
 考証
@@ -99938,8 +99872,8 @@ use_preset_vocabulary: false
 而沿
 而況
 而演
-而無
 而為
+而無
 而生
 而由
 而異
@@ -100063,11 +99997,11 @@ use_preset_vocabulary: false
 耗爆
 耗用
 耗盡
-耗著
 耗神
 耗竭
 耗羨
 耗能
+耗著
 耗費
 耗資
 耗電
@@ -100237,8 +100171,8 @@ use_preset_vocabulary: false
 聊敘
 聊法
 聊生
-聊著
 聊聊
+聊著
 聊表
 聊賴
 聊起
@@ -100366,7 +100300,7 @@ use_preset_vocabulary: false
 聚焦
 聚熱
 聚生
-聚著
+聚眾
 聚神
 聚積
 聚結
@@ -100374,9 +100308,9 @@ use_preset_vocabulary: false
 聚聚
 聚脂
 聚落
+聚著
 聚藻
 聚螢
-聚眾
 聚訟
 聚談
 聚議
@@ -100462,6 +100396,7 @@ use_preset_vocabulary: false
 聯產
 聯用
 聯盟
+聯眾
 聯社
 聯票
 聯立
@@ -100478,7 +100413,6 @@ use_preset_vocabulary: false
 聯航
 聯苯
 聯華
-聯眾
 聯袂
 聯襟
 聯親
@@ -100700,7 +100634,7 @@ use_preset_vocabulary: false
 聽獄
 聽用
 聽的
-聽著
+聽眾
 聽窗
 聽筒
 聽管
@@ -100712,7 +100646,7 @@ use_preset_vocabulary: false
 聽聽
 聽能
 聽膩
-聽眾
+聽著
 聽裝
 聽見
 聽覺
@@ -101237,7 +101171,6 @@ use_preset_vocabulary: false
 背的
 背盟
 背眼
-背著
 背筐
 背篼
 背簍
@@ -101250,6 +101183,7 @@ use_preset_vocabulary: false
 背臨
 背興
 背花
+背著
 背袋
 背褾
 背襯
@@ -101366,6 +101300,7 @@ use_preset_vocabulary: false
 胡姓
 胡子
 胡寧
+胡床
 胡思
 胡想
 胡戈
@@ -101392,7 +101327,6 @@ use_preset_vocabulary: false
 胡渰
 胡潤
 胡為
-胡床
 胡牌
 胡猜
 胡琴
@@ -101766,7 +101700,6 @@ use_preset_vocabulary: false
 脫皮
 脫盡
 脫盲
-脫著
 脫硝
 脫硫
 脫碳
@@ -101798,6 +101731,7 @@ use_preset_vocabulary: false
 脫臼
 脫色
 脫落
+脫著
 脫蛹
 脫蠟
 脫衣
@@ -102304,7 +102238,6 @@ use_preset_vocabulary: false
 膠瑟
 膠皮
 膠盔
-膠著
 膠筏
 膠管
 膠粒
@@ -102315,6 +102248,7 @@ use_preset_vocabulary: false
 膠羽
 膠膜
 膠膠
+膠著
 膠葛
 膠裝
 膠質
@@ -102341,10 +102275,10 @@ use_preset_vocabulary: false
 膩滑
 膩煩
 膩理
-膩著
 膩粉
 膩糊
 膩胃
+膩著
 膩雲
 膩香
 膳堂
@@ -102541,20 +102475,20 @@ use_preset_vocabulary: false
 臥姿
 臥室
 臥射
+臥床
 臥底
 臥式
 臥得
 臥房
 臥榻
 臥治
-臥床
 臥理
 臥病
 臥的
-臥著
 臥碑
 臥舖
 臥艙
+臥著
 臥虎
 臥蛋
 臥起
@@ -102588,6 +102522,7 @@ use_preset_vocabulary: false
 臨帖
 臨年
 臨幸
+臨床
 臨感
 臨戰
 臨摹
@@ -102633,7 +102568,6 @@ use_preset_vocabulary: false
 臨澤
 臨澧
 臨照
-臨床
 臨猗
 臨產
 臨界
@@ -102823,12 +102757,12 @@ use_preset_vocabulary: false
 自滿
 自演
 自瀆
+自為
 自焚
 自然
 自燃
 自營
 自爆
-自為
 自珍
 自理
 自甘
@@ -103356,9 +103290,9 @@ use_preset_vocabulary: false
 舉正
 舉步
 舉火
+舉為
 舉烽
 舉燭
-舉為
 舉王
 舉用
 舉發
@@ -103367,14 +103301,14 @@ use_preset_vocabulary: false
 舉目
 舉直
 舉眼
-舉著
+舉眾
 舉箸
 舉籍
 舉義
 舉翅
 舉荐
+舉著
 舉薦
-舉眾
 舉行
 舉要
 舉觴
@@ -103458,7 +103392,6 @@ use_preset_vocabulary: false
 舊病
 舊症
 舊的
-舊著
 舊知
 舊票
 舊稱
@@ -103564,9 +103497,9 @@ use_preset_vocabulary: false
 舔吮
 舔拭
 舔掉
-舔著
 舔舔
 舔舕
+舔著
 舔陰
 舔食
 舖下
@@ -104159,6 +104092,7 @@ use_preset_vocabulary: false
 花帳
 花帶
 花帽
+花床
 花序
 花店
 花廠
@@ -104227,7 +104161,6 @@ use_preset_vocabulary: false
 花炮
 花燈
 花燭
-花床
 花牆
 花片
 花牌
@@ -104494,6 +104427,7 @@ use_preset_vocabulary: false
 苗子
 苗寨
 苗嶺
+苗床
 苗情
 苗文
 苗族
@@ -104502,7 +104436,6 @@ use_preset_vocabulary: false
 苗栗
 苗條
 苗民
-苗床
 苗田
 苗疆
 苗種
@@ -104561,9 +104494,9 @@ use_preset_vocabulary: false
 苟政
 苟有
 苟活
+苟為
 苟然
 苟營
-苟為
 苟生
 苟祿
 苟簡
@@ -104595,9 +104528,9 @@ use_preset_vocabulary: false
 若果
 若榴
 若水
+若為
 若無
 若然
-若為
 若羌
 若翰
 若能
@@ -105284,10 +105217,10 @@ use_preset_vocabulary: false
 荷月
 荷槍
 荷澤
-荷著
 荷花
 荷荷
 荷葉
+荷著
 荷蓑
 荷蘭
 荷衣
@@ -105601,9 +105534,9 @@ use_preset_vocabulary: false
 華泰
 華源
 華潤
+華為
 華燈
 華燭
-華為
 華特
 華生
 華甸
@@ -105843,6 +105776,7 @@ use_preset_vocabulary: false
 萬用
 萬畝
 萬盛
+萬眾
 萬石
 萬福
 萬科
@@ -105863,7 +105797,6 @@ use_preset_vocabulary: false
 萬華
 萬萬
 萬葉
-萬眾
 萬言
 萬豐
 萬象
@@ -105966,7 +105899,6 @@ use_preset_vocabulary: false
 落照
 落生
 落盤
-落著
 落石
 落磐
 落礦
@@ -105993,6 +105925,7 @@ use_preset_vocabulary: false
 落莫
 落落
 落葉
+落著
 落葬
 落葵
 落薄
@@ -106078,16 +106011,70 @@ use_preset_vocabulary: false
 葉鞘
 葑田
 葑菲
+著上
+著人
 著作
+著兒
+著力
+著即
 著名
+著呢
+著地
+著墨
+著實
+著己
+著床
+著志
+著忙
+著急
+著惱
+著想
+著意
+著慌
+著手
+著摸
+著數
 著書
 著有
+著棋
+著水
+著法
+著涼
+著火
+著然
+著甚
+著用
+著眼
 著稱
+著筆
+著緊
 著績
 著者
+著肉
+著腳
+著臉
+著色
+著花
+著莫
+著落
+著著
+著處
+著衣
+著裝
 著論
+著跡
+著身
 著述
+著迷
+著道
+著邊
+著重
 著錄
+著陸
+著雨
+著題
+著風
+著魔
 葛優
 葛屨
 葛巾
@@ -106212,7 +106199,6 @@ use_preset_vocabulary: false
 蒙特
 蒙田
 蒙皮
-蒙著
 蒙稚
 蒙童
 蒙籠
@@ -106223,6 +106209,7 @@ use_preset_vocabulary: false
 蒙自
 蒙茸
 蒙莊
+蒙著
 蒙蒙
 蒙蓋
 蒙蔽
@@ -106480,7 +106467,6 @@ use_preset_vocabulary: false
 蓋率
 蓋瑞
 蓋瓦
-蓋著
 蓋碗
 蓋章
 蓋縣
@@ -106489,6 +106475,7 @@ use_preset_vocabulary: false
 蓋茨
 蓋茲
 蓋菜
+蓋著
 蓋藏
 蓋覆
 蓋起
@@ -106626,8 +106613,8 @@ use_preset_vocabulary: false
 蔚山
 蔚成
 蔚映
-蔚然
 蔚為
+蔚然
 蔚縣
 蔚色
 蔚蔚
@@ -106781,9 +106768,9 @@ use_preset_vocabulary: false
 蕩產
 蕩田
 蕩盡
-蕩著
 蕩舟
 蕩船
+蕩著
 蕩蕩
 蕩覆
 蕪俚
@@ -107053,8 +107040,8 @@ use_preset_vocabulary: false
 藉此
 藉甚
 藉由
-藉著
 藉端
+藉著
 藉藉
 藉詞
 藉讀
@@ -107142,11 +107129,11 @@ use_preset_vocabulary: false
 藏活
 藏獒
 藏獨
-藏著
 藏私
 藏經
 藏羚
 藏胞
+藏著
 藏藍
 藏藏
 藏詞
@@ -107182,9 +107169,9 @@ use_preset_vocabulary: false
 藕花
 藕荷
 藕覆
+藜床
 藜暴
 藜杖
-藜床
 藜科
 藜羹
 藜蕨
@@ -107598,6 +107585,7 @@ use_preset_vocabulary: false
 虎尾
 虎帳
 虎年
+虎床
 虎拜
 虎掌
 虎據
@@ -107609,7 +107597,6 @@ use_preset_vocabulary: false
 虎步
 虎氣
 虎爪
-虎床
 虎牌
 虎牙
 虎狼
@@ -107703,8 +107690,8 @@ use_preset_vocabulary: false
 虛下
 虛位
 虛假
-虛像
 虛偽
+虛像
 虛列
 虛力
 虛功
@@ -107843,8 +107830,8 @@ use_preset_vocabulary: false
 號段
 號泣
 號炮
-號燈
 號為
+號燈
 號牌
 號砲
 號碼
@@ -108293,9 +108280,9 @@ use_preset_vocabulary: false
 融泄
 融洽
 融液
+融為
 融然
 融爐
-融為
 融融
 融解
 融貫
@@ -108805,23 +108792,6 @@ use_preset_vocabulary: false
 血食
 血餘
 血鬱
-眾人
-眾位
-眾包
-眾多
-眾寡
-眾庶
-眾怒
-眾數
-眾望
-眾生
-眾神
-眾說
-眾論
-眾議
-眾軍
-眾院
-眾體
 行主
 行之
 行乞
@@ -108927,10 +108897,10 @@ use_preset_vocabulary: false
 行淫
 行潦
 行炙
+行為
 行照
 行燈
 行營
-行為
 行狀
 行獵
 行略
@@ -109153,6 +109123,7 @@ use_preset_vocabulary: false
 衝壓
 衝她
 衝子
+衝床
 衝心
 衝我
 衝打
@@ -109167,10 +109138,8 @@ use_preset_vocabulary: false
 衝浪
 衝激
 衝然
-衝床
 衝犯
 衝盹
-衝著
 衝破
 衝程
 衝穴
@@ -109179,6 +109148,7 @@ use_preset_vocabulary: false
 衝線
 衝脈
 衝至
+衝著
 衝要
 衝賬
 衝起
@@ -109240,12 +109210,12 @@ use_preset_vocabulary: false
 衣櫥
 衣物
 衣甲
-衣著
 衣箱
 衣篝
 衣簪
 衣缽
 衣胞
+衣著
 衣蛾
 衣衫
 衣衾
@@ -109436,8 +109406,8 @@ use_preset_vocabulary: false
 袋熊
 袋狀
 袋狼
-袋裡
 袋裝
+袋裡
 袋錶
 袋鼠
 袍仗
@@ -109653,39 +109623,6 @@ use_preset_vocabulary: false
 裊裊
 裋褐
 裌襖
-裡也
-裡去
-裡咽
-裡外
-裡子
-裡實
-裡就
-裡屋
-裡層
-裡帶
-裡廉
-裡弦
-裡急
-裡手
-裡放
-裡有
-裡海
-裡白
-裡皮
-裡看
-裡脊
-裡虛
-裡衣
-裡裡
-裡言
-裡說
-裡踢
-裡還
-裡邊
-裡都
-裡間
-裡面
-裡頭
 裒刻
 裒剋
 裒斂
@@ -109891,7 +109828,6 @@ use_preset_vocabulary: false
 裝瘋
 裝的
 裝相
-裝著
 裝睡
 裝笑
 裝箱
@@ -109901,6 +109837,7 @@ use_preset_vocabulary: false
 裝背
 裝胖
 裝船
+裝著
 裝蒜
 裝袋
 裝裱
@@ -109920,6 +109857,40 @@ use_preset_vocabulary: false
 裝闊
 裝飾
 裝點
+裡也
+裡去
+裡咽
+裡外
+裡子
+裡實
+裡就
+裡屋
+裡層
+裡帶
+裡廉
+裡弦
+裡急
+裡手
+裡扣
+裡放
+裡有
+裡海
+裡白
+裡皮
+裡看
+裡脊
+裡虛
+裡衣
+裡裡
+裡言
+裡說
+裡踢
+裡還
+裡邊
+裡都
+裡間
+裡面
+裡頭
 裨使
 裨助
 裨將
@@ -109992,13 +109963,13 @@ use_preset_vocabulary: false
 裹成
 裹抹
 裹挾
-裹著
 裹糧
 裹紮
 裹肚
 裹脅
 裹腳
 裹腿
+裹著
 裹角
 裹起
 裹足
@@ -110020,6 +109991,7 @@ use_preset_vocabulary: false
 製圖
 製坯
 製定
+製幣
 製得
 製成
 製播
@@ -110306,8 +110278,8 @@ use_preset_vocabulary: false
 襯線
 襯衣
 襯衫
-襯裡
 襯裙
+襯裡
 襯褲
 襯貼
 襯身
@@ -110456,9 +110428,9 @@ use_preset_vocabulary: false
 西漢
 西潮
 西澗
+西為
 西照
 西燕
-西為
 西牆
 西片
 西王
@@ -110746,10 +110718,10 @@ use_preset_vocabulary: false
 覆盂
 覆盆
 覆盤
-覆著
 覆育
 覆膜
 覆舟
+覆著
 覆蓋
 覆蔽
 覆被
@@ -110843,7 +110815,6 @@ use_preset_vocabulary: false
 見機
 見狀
 見疑
-見著
 見短
 見破
 見示
@@ -110858,6 +110829,7 @@ use_preset_vocabulary: false
 見老
 見聞
 見背
+見著
 見覆
 見見
 見解
@@ -111038,7 +111010,6 @@ use_preset_vocabulary: false
 親疏
 親眷
 親眼
-親著
 親睦
 親睹
 親知
@@ -111104,8 +111075,8 @@ use_preset_vocabulary: false
 覺王
 覺發
 覺的
-覺著
 覺知
+覺著
 覺覺
 覺道
 覺醒
@@ -111147,6 +111118,7 @@ use_preset_vocabulary: false
 觀獵
 觀省
 觀看
+觀眾
 觀瞻
 觀禮
 觀絕
@@ -111155,7 +111127,6 @@ use_preset_vocabulary: false
 觀者
 觀臺
 觀色
-觀眾
 觀行
 觀見
 觀覷
@@ -111626,12 +111597,12 @@ use_preset_vocabulary: false
 討氣
 討海
 討源
-討著
 討究
 討空
 討笤
 討米
 討索
+討著
 討薪
 討虜
 討要
@@ -111724,9 +111695,9 @@ use_preset_vocabulary: false
 託生
 託疾
 託病
-託著
 託福
 託管
+託著
 託言
 託詞
 託諷
@@ -111773,15 +111744,15 @@ use_preset_vocabulary: false
 記敘
 記數
 記法
-記熟
 記為
+記熟
 記牢
 記的
 記省
-記著
 記罣
 記者
 記色
+記著
 記號
 記要
 記言
@@ -112282,7 +112253,6 @@ use_preset_vocabulary: false
 試產
 試用
 試看
-試著
 試種
 試穿
 試算
@@ -112292,6 +112262,7 @@ use_preset_vocabulary: false
 試聽
 試腳
 試航
+試著
 試藥
 試行
 試衣
@@ -112561,7 +112532,6 @@ use_preset_vocabulary: false
 該當
 該病
 該省
-該著
 該禁
 該稱
 該究
@@ -112576,6 +112546,7 @@ use_preset_vocabulary: false
 該縣
 該股
 該自
+該著
 該處
 該號
 該行
@@ -112671,10 +112642,10 @@ use_preset_vocabulary: false
 誇得
 誇成
 誇獎
-誇著
 誇示
 誇稱
 誇耀
+誇著
 誇詡
 誇誇
 誇誕
@@ -112706,6 +112677,7 @@ use_preset_vocabulary: false
 認定
 認屍
 認帳
+認床
 認得
 認成
 認捐
@@ -112716,7 +112688,6 @@ use_preset_vocabulary: false
 認清
 認準
 認為
-認床
 認生
 認用
 認真
@@ -113007,7 +112978,6 @@ use_preset_vocabulary: false
 說白
 說的
 說盡
-說著
 說破
 說穿
 說笑
@@ -113019,6 +112989,7 @@ use_preset_vocabulary: false
 說舌
 說苑
 說落
+說著
 說處
 說要
 說親
@@ -113221,8 +113192,8 @@ use_preset_vocabulary: false
 調溫
 調演
 調漲
-調焦
 調為
+調焦
 調犯
 調班
 調理
@@ -113234,7 +113205,6 @@ use_preset_vocabulary: false
 調的
 調皮
 調相
-調著
 調研
 調移
 調笑
@@ -113248,6 +113218,7 @@ use_preset_vocabulary: false
 調職
 調至
 調色
+調著
 調薪
 調處
 調號
@@ -113349,10 +113320,10 @@ use_preset_vocabulary: false
 談法
 談玄
 談的
-談著
 談笑
 談羨
 談興
+談著
 談話
 談說
 談談
@@ -113848,7 +113819,6 @@ use_preset_vocabulary: false
 講演
 講理
 講的
-講著
 講稿
 講究
 講筵
@@ -113857,6 +113827,7 @@ use_preset_vocabulary: false
 講義
 講習
 講臺
+講著
 講解
 講評
 講詞
@@ -113986,8 +113957,8 @@ use_preset_vocabulary: false
 譁噪
 譁囂
 譁然
-譁笑
 譁眾
+譁笑
 譁變
 譁釦
 證人
@@ -113995,7 +113966,6 @@ use_preset_vocabulary: false
 證候
 證出
 證券
-證卷
 證嚴
 證婚
 證實
@@ -114083,9 +114053,9 @@ use_preset_vocabulary: false
 譜書
 譜氣
 譜牒
-譜著
 譜系
 譜線
+譜著
 譜號
 譜表
 譜錄
@@ -114129,6 +114099,7 @@ use_preset_vocabulary: false
 警犬
 警用
 警界
+警眾
 警示
 警種
 警笛
@@ -114138,7 +114109,6 @@ use_preset_vocabulary: false
 警署
 警花
 警號
-警眾
 警衛
 警覺
 警角
@@ -114269,7 +114239,6 @@ use_preset_vocabulary: false
 護盤
 護目
 護眼
-護著
 護短
 護符
 護罩
@@ -114284,6 +114253,7 @@ use_preset_vocabulary: false
 護臂
 護航
 護花
+護著
 護衛
 護襠
 護貝
@@ -114333,14 +114303,13 @@ use_preset_vocabulary: false
 讀會
 讀本
 讀法
-讀熟
 讀為
+讀熟
 讀物
 讀畢
 讀畫
 讀的
 讀盤
-讀著
 讀研
 讀破
 讀秒
@@ -114348,6 +114317,7 @@ use_preset_vocabulary: false
 讀經
 讀者
 讀若
+讀著
 讀譜
 讀讀
 讀起
@@ -114435,8 +114405,8 @@ use_preset_vocabulary: false
 變清
 變溫
 變滅
-變焦
 變為
+變焦
 變率
 變現
 變產
@@ -114444,7 +114414,6 @@ use_preset_vocabulary: false
 變白
 變的
 變相
-變著
 變短
 變硬
 變種
@@ -114460,6 +114429,7 @@ use_preset_vocabulary: false
 變臉
 變色
 變苦
+變著
 變薄
 變蛋
 變計
@@ -114626,9 +114596,9 @@ use_preset_vocabulary: false
 豁拳
 豁朗
 豁然
-豁著
 豁脫
 豁落
+豁著
 豁蕩
 豁達
 豁鄧
@@ -114717,11 +114687,11 @@ use_preset_vocabulary: false
 豎琴
 豎直
 豎眼
-豎著
 豎立
 豎笛
 豎筆
 豎線
+豎著
 豎褐
 豎起
 豎鉤
@@ -114836,6 +114806,7 @@ use_preset_vocabulary: false
 象外
 象山
 象州
+象床
 象度
 象形
 象徵
@@ -114851,7 +114822,6 @@ use_preset_vocabulary: false
 象棋
 象樣
 象櫛
-象床
 象牙
 象物
 象瑱
@@ -115583,7 +115553,6 @@ use_preset_vocabulary: false
 買爵
 買的
 買盤
-買著
 買票
 買空
 買笑
@@ -115593,6 +115562,7 @@ use_preset_vocabulary: false
 買船
 買菜
 買菸
+買著
 買藥
 買虛
 買買
@@ -115708,7 +115678,6 @@ use_preset_vocabulary: false
 貼生
 貼畫
 貼的
-貼著
 貼紙
 貼緊
 貼縫
@@ -115716,6 +115685,7 @@ use_preset_vocabulary: false
 貼背
 貼膜
 貼花
+貼著
 貼補
 貼譜
 貼起
@@ -116130,6 +116100,7 @@ use_preset_vocabulary: false
 賣惡
 賣房
 賣手
+賣拐
 賣掉
 賣撲
 賣放
@@ -116137,7 +116108,6 @@ use_preset_vocabulary: false
 賣斷
 賣方
 賣春
-賣柺
 賣法
 賣淫
 賣狂
@@ -116145,7 +116115,6 @@ use_preset_vocabulary: false
 賣的
 賣盤
 賣眼
-賣著
 賣票
 賣科
 賣空
@@ -116158,6 +116127,7 @@ use_preset_vocabulary: false
 賣舌
 賣花
 賣菜
+賣著
 賣蔥
 賣藝
 賣藥
@@ -116273,7 +116243,6 @@ use_preset_vocabulary: false
 賬本
 賬款
 賬目
-賬篷
 賬簿
 賬號
 賬載
@@ -116338,14 +116307,14 @@ use_preset_vocabulary: false
 賴學
 賴安
 賴帳
+賴床
 賴掉
 賴斯
 賴於
-賴床
 賴特
 賴皮
-賴著
 賴臉
+賴著
 賴詐
 賴賬
 賴過
@@ -116716,7 +116685,6 @@ use_preset_vocabulary: false
 走的
 走相
 走眼
-走著
 走神
 走票
 走禽
@@ -116735,6 +116703,7 @@ use_preset_vocabulary: false
 走船
 走色
 走莖
+走著
 走親
 走訪
 走話
@@ -116835,6 +116804,7 @@ use_preset_vocabulary: false
 起岸
 起工
 起席
+起床
 起得
 起復
 起急
@@ -116862,7 +116832,6 @@ use_preset_vocabulary: false
 起烘
 起煩
 起爆
-起床
 起獲
 起用
 起由
@@ -116870,7 +116839,6 @@ use_preset_vocabulary: false
 起疹
 起病
 起眼
-起著
 起碇
 起碼
 起磁
@@ -116895,6 +116863,7 @@ use_preset_vocabulary: false
 起色
 起草
 起落
+起著
 起薪
 起行
 起見
@@ -116943,9 +116912,9 @@ use_preset_vocabulary: false
 趁機
 趁熟
 趁熱
-趁著
 趁空
 趁船
+趁著
 趁逐
 趁錢
 趁韻
@@ -117166,7 +117135,6 @@ use_preset_vocabulary: false
 趕演
 趕熱
 趕牛
-趕著
 趕碌
 趕程
 趕稿
@@ -117177,6 +117145,7 @@ use_preset_vocabulary: false
 趕羊
 趕考
 趕腳
+趕著
 趕街
 趕製
 趕課
@@ -117321,8 +117290,8 @@ use_preset_vocabulary: false
 趴在
 趴得
 趴的
-趴著
 趴窩
+趴著
 趵趵
 趹踶
 趺坐
@@ -117422,12 +117391,12 @@ use_preset_vocabulary: false
 跑海
 跑片
 跑的
-跑著
 跑票
 跑程
 跑肚
 跑腿
 跑船
+跑著
 跑街
 跑表
 跑調
@@ -117507,10 +117476,10 @@ use_preset_vocabulary: false
 跟班
 跟的
 跟監
-跟著
 跟緊
 跟腱
 跟腳
+跟著
 跟誰
 跟貼
 跟起
@@ -117559,9 +117528,9 @@ use_preset_vocabulary: false
 跨湖
 跨牆
 跨省
-跨著
 跨竈
 跨腳
+跨著
 跨行
 跨起
 跨越
@@ -117595,8 +117564,8 @@ use_preset_vocabulary: false
 跪求
 跪池
 跪爬
-跪著
 跪禱
+跪著
 跪門
 跫然
 跫跫
@@ -117721,7 +117690,6 @@ use_preset_vocabulary: false
 跳班
 跳球
 跳的
-跳著
 跳神
 跳票
 跳空
@@ -117737,6 +117705,7 @@ use_preset_vocabulary: false
 跳臺
 跳舞
 跳船
+跳著
 跳蕩
 跳號
 跳蚤
@@ -117803,6 +117772,7 @@ use_preset_vocabulary: false
 踏實
 踏尋
 踏平
+踏床
 踏弩
 踏得
 踏春
@@ -117812,16 +117782,15 @@ use_preset_vocabulary: false
 踏歌
 踏步
 踏爨
-踏床
 踏的
 踏看
-踏著
 踏破
 踏碓
 踏空
 踏繩
 踏肩
 踏腳
+踏著
 踏訪
 踏足
 踏踏
@@ -117882,10 +117851,10 @@ use_preset_vocabulary: false
 踢毬
 踢爆
 踢球
-踢著
 踢脫
 踢腳
 踢腿
+踢著
 踢被
 踢豎
 踢走
@@ -117919,14 +117888,14 @@ use_preset_vocabulary: false
 踩死
 踩水
 踩的
-踩著
 踩線
+踩著
 踩踏
 踩踩
 踩道
 踩點
-踮著
 踮腳
+踮著
 踮起
 踰侈
 踰垣
@@ -118042,9 +118011,9 @@ use_preset_vocabulary: false
 蹦兒
 蹦出
 蹦子
+蹦床
 蹦掉
 蹦極
-蹦床
 蹦跳
 蹦躂
 蹦迪
@@ -118077,9 +118046,9 @@ use_preset_vocabulary: false
 蹲循
 蹲板
 蹲班
-蹲著
 蹲膘
 蹲苗
+蹲著
 蹲踞
 蹲蹲
 蹲點
@@ -118173,8 +118142,8 @@ use_preset_vocabulary: false
 躡景
 躡機
 躡登
-躡著
 躡腳
+躡著
 躡足
 躡跟
 躡蹀
@@ -118234,10 +118203,10 @@ use_preset_vocabulary: false
 身毒
 身法
 身為
-身著
 身穿
 身經
 身臨
+身著
 身處
 身見
 身識
@@ -118272,8 +118241,8 @@ use_preset_vocabulary: false
 躲得
 躲懶
 躲煞
-躲著
 躲窮
+躲著
 躲藏
 躲讓
 躲起
@@ -118301,9 +118270,9 @@ use_preset_vocabulary: false
 躺櫃
 躺的
 躺直
-躺著
 躺臥
 躺船
+躺著
 躺躺
 躺進
 躺過
@@ -118355,6 +118324,7 @@ use_preset_vocabulary: false
 車市
 車帶
 車帷
+車床
 車底
 車座
 車庫
@@ -118388,7 +118358,6 @@ use_preset_vocabulary: false
 車渠
 車照
 車燈
-車床
 車牌
 車班
 車用
@@ -118475,11 +118444,11 @@ use_preset_vocabulary: false
 軋死
 軋然
 軋片
-軋著
 軋碎
 軋票
 軋米
 軋紋
+軋著
 軋製
 軋起
 軋軋
@@ -118652,6 +118621,7 @@ use_preset_vocabulary: false
 軟壁
 軟尺
 軟席
+軟床
 軟座
 軟庫
 軟式
@@ -118670,7 +118640,6 @@ use_preset_vocabulary: false
 軟泥
 軟活
 軟熟
-軟床
 軟片
 軟玉
 軟瘤
@@ -118781,9 +118750,9 @@ use_preset_vocabulary: false
 較晚
 較比
 較深
+較為
 較然
 較熟
-較為
 較略
 較瘦
 較真
@@ -118822,12 +118791,12 @@ use_preset_vocabulary: false
 載滿
 載漪
 載灃
-載著
 載福
 載籍
 載舟
 載芟
 載荷
+載著
 載見
 載記
 載譽
@@ -119097,7 +119066,6 @@ use_preset_vocabulary: false
 輪番
 輪發
 輪盤
-輪著
 輪種
 輪空
 輪穿
@@ -119110,6 +119078,7 @@ use_preset_vocabulary: false
 輪腳
 輪臺
 輪船
+輪著
 輪蓋
 輪藻
 輪蟲
@@ -119186,11 +119155,11 @@ use_preset_vocabulary: false
 輸球
 輸理
 輸的
-輸著
 輸移
 輸精
 輸糧
 輸給
+輸著
 輸血
 輸誠
 輸贏
@@ -119242,9 +119211,9 @@ use_preset_vocabulary: false
 轄區
 轄地
 轄境
+轄床
 轄押
 轄治
-轄床
 轅固
 轅門
 轅馬
@@ -119349,10 +119318,10 @@ use_preset_vocabulary: false
 轉游
 轉漏
 轉漕
+轉為
 轉燈
 轉燭
 轉爐
-轉為
 轉生
 轉產
 轉用
@@ -119872,9 +119841,9 @@ use_preset_vocabulary: false
 迎江
 迎澤
 迎火
-迎著
 迎睇
 迎神
+迎著
 迎親
 迎角
 迎賓
@@ -120128,7 +120097,6 @@ use_preset_vocabulary: false
 迷漫
 迷濛
 迷眼
-迷著
 迷瞪
 迷糊
 迷網
@@ -120136,6 +120104,7 @@ use_preset_vocabulary: false
 迷胡
 迷航
 迷茫
+迷著
 迷藏
 迷藥
 迷蝶
@@ -120215,13 +120184,13 @@ use_preset_vocabulary: false
 追求
 追溯
 追漲
-追著
 追究
 追索
 追緝
 追繳
 追肥
 追胥
+追著
 追薦
 追補
 追討
@@ -120305,15 +120274,14 @@ use_preset_vocabulary: false
 退漿
 退潮
 退火
+退為
 退熱
 退燒
-退為
 退片
 退現
 退瓶
 退的
 退省
-退著
 退磁
 退票
 退租
@@ -120329,6 +120297,7 @@ use_preset_vocabulary: false
 退股
 退色
 退落
+退著
 退行
 退親
 退訂
@@ -120536,11 +120505,11 @@ use_preset_vocabulary: false
 逆溫
 逆溯
 逆產
-逆著
 逆睹
 逆知
 逆耳
 逆臣
+逆著
 逆號
 逆行
 逆訪
@@ -120598,9 +120567,9 @@ use_preset_vocabulary: false
 透漏
 透澈
 透熱
-透著
 透紅
 透脫
+透著
 透視
 透透
 透進
@@ -121056,10 +121025,10 @@ use_preset_vocabulary: false
 逞惡
 逞暴
 逞欲
-逞著
 逞縱
 逞能
 逞臉
+逞著
 速來
 速凍
 速勝
@@ -121274,7 +121243,6 @@ use_preset_vocabulary: false
 連發
 連皮
 連真
-連著
 連碰
 連種
 連空
@@ -121302,6 +121270,7 @@ use_preset_vocabulary: false
 連臺
 連花
 連莊
+連著
 連號
 連蜷
 連衡
@@ -121572,11 +121541,11 @@ use_preset_vocabulary: false
 逼殺
 逼直
 逼真
-逼著
 逼綽
 逼緊
 逼肖
 逼臨
+逼著
 逼視
 逼走
 逼起
@@ -121782,7 +121751,6 @@ use_preset_vocabulary: false
 運營
 運球
 運用
-運著
 運祚
 運神
 運程
@@ -121794,6 +121762,7 @@ use_preset_vocabulary: false
 運能
 運腕
 運腳
+運著
 運行
 運貨
 運費
@@ -121944,9 +121913,9 @@ use_preset_vocabulary: false
 過濃
 過濾
 過火
+過為
 過熟
 過熱
-過為
 過犯
 過獎
 過班
@@ -121960,7 +121929,6 @@ use_preset_vocabulary: false
 過的
 過目
 過眼
-過著
 過短
 過硬
 過磅
@@ -121986,6 +121954,7 @@ use_preset_vocabulary: false
 過舌
 過茶
 過萬
+過著
 過蒙
 過處
 過街
@@ -122139,7 +122108,6 @@ use_preset_vocabulary: false
 道生
 道白
 道盡
-道著
 道破
 道碴
 道禮
@@ -122155,6 +122123,7 @@ use_preset_vocabulary: false
 道考
 道者
 道菜
+道著
 道藏
 道藝
 道號
@@ -122685,8 +122654,8 @@ use_preset_vocabulary: false
 選段
 選民
 選派
-選煤
 選為
+選煤
 選用
 選登
 選礦
@@ -122861,12 +122830,12 @@ use_preset_vocabulary: false
 避惡
 避暑
 避煞
-避著
 避禍
 避秦
 避稅
 避縮
 避署
+避著
 避衰
 避諱
 避讀
@@ -123036,8 +123005,8 @@ use_preset_vocabulary: false
 還派
 還清
 還炒
-還無
 還為
+還無
 還猜
 還玩
 還用
@@ -123047,7 +123016,6 @@ use_preset_vocabulary: false
 還目
 還看
 還真
-還著
 還睡
 還硬
 還禮
@@ -123067,6 +123035,7 @@ use_preset_vocabulary: false
 還自
 還與
 還苦
+還著
 還行
 還衝
 還被
@@ -123558,11 +123527,11 @@ use_preset_vocabulary: false
 部會
 部照
 部發
+部眾
 部級
 部縣
 部署
 部落
-部眾
 部長
 部門
 部院
@@ -123699,8 +123668,8 @@ use_preset_vocabulary: false
 都未
 都比
 都沒
-都無
 都為
+都無
 都用
 都由
 都發
@@ -123905,12 +123874,12 @@ use_preset_vocabulary: false
 鄭瀾
 鄭燮
 鄭玄
+鄭眾
 鄭碼
 鄭箋
 鄭經
 鄭聲
 鄭虔
-鄭眾
 鄭重
 鄭鈞
 鄭音
@@ -124021,7 +123990,6 @@ use_preset_vocabulary: false
 配用
 配發
 配的
-配著
 配票
 配種
 配稱
@@ -124032,6 +124000,7 @@ use_preset_vocabulary: false
 配股
 配色
 配菜
+配著
 配藜
 配藥
 配裝
@@ -124431,9 +124400,9 @@ use_preset_vocabulary: false
 醒獅
 醒目
 醒眼
-醒著
 醒睡
 醒脾
+醒著
 醒覺
 醒豁
 醒酒
@@ -124665,7 +124634,6 @@ use_preset_vocabulary: false
 里巷
 里布
 里弄
-里扣
 里拉
 里斯
 里昂
@@ -124828,8 +124796,8 @@ use_preset_vocabulary: false
 重灌
 重災
 重炮
-重熙
 重為
+重熙
 重版
 重物
 重犯
@@ -125049,7 +125017,6 @@ use_preset_vocabulary: false
 量為
 量瓶
 量產
-量著
 量移
 量程
 量窄
@@ -125058,6 +125025,7 @@ use_preset_vocabulary: false
 量綱
 量能
 量腹
+量著
 量表
 量規
 量角
@@ -125336,15 +125304,15 @@ use_preset_vocabulary: false
 釘子
 釘尖
 釘帽
+釘床
 釘梢
 釘死
-釘床
 釘牢
 釘痕
-釘著
 釘緊
 釘耙
 釘腳
+釘著
 釘螺
 釘進
 釘過
@@ -125563,8 +125531,8 @@ use_preset_vocabulary: false
 鉋削
 鉋子
 鉋工
-鉋成
 鉋床
+鉋成
 鉋花
 鉏耘
 鉏麑
@@ -126075,6 +126043,7 @@ use_preset_vocabulary: false
 鋪展
 鋪席
 鋪平
+鋪床
 鋪底
 鋪張
 鋪得
@@ -126094,15 +126063,14 @@ use_preset_vocabulary: false
 鋪滿
 鋪灑
 鋪炕
-鋪床
 鋪牌
 鋪的
-鋪著
 鋪砌
 鋪程
 鋪紙
 鋪結
 鋪臥
+鋪著
 鋪蓋
 鋪行
 鋪衍
@@ -126136,13 +126104,13 @@ use_preset_vocabulary: false
 鋸子
 鋸屑
 鋸工
+鋸床
 鋸掉
 鋸斷
 鋸木
 鋸末
 鋸架
 鋸條
-鋸床
 鋸片
 鋸牙
 鋸琴
@@ -126250,8 +126218,8 @@ use_preset_vocabulary: false
 錄灌
 錄用
 錄的
-錄著
 錄科
+錄著
 錄製
 錄象
 錄起
@@ -126735,8 +126703,8 @@ use_preset_vocabulary: false
 鎳鋼
 鏇子
 鏇工
-鏇木
 鏇床
+鏇木
 鏇粉
 鏈套
 鏈子
@@ -126933,11 +126901,13 @@ use_preset_vocabulary: false
 鐵嶺
 鐵工
 鐵幕
+鐵床
 鐵廠
 鐵心
 鐵手
 鐵打
 鐵托
+鐵拐
 鐵拳
 鐵掀
 鐵搭
@@ -126948,7 +126918,6 @@ use_preset_vocabulary: false
 鐵杵
 鐵板
 鐵架
-鐵柺
 鐵案
 鐵桶
 鐵桿
@@ -126969,7 +126938,6 @@ use_preset_vocabulary: false
 鐵漿
 鐵灰
 鐵爐
-鐵床
 鐵片
 鐵牌
 鐵牛
@@ -127139,8 +127107,8 @@ use_preset_vocabulary: false
 鑲滾
 鑲滿
 鑲牙
-鑲著
 鑲花
+鑲著
 鑲邊
 鑲金
 鑷子
@@ -127165,6 +127133,7 @@ use_preset_vocabulary: false
 鑽子
 鑽孔
 鑽工
+鑽床
 鑽得
 鑽心
 鑽成
@@ -127178,7 +127147,6 @@ use_preset_vocabulary: false
 鑽灼
 鑽營
 鑽燧
-鑽床
 鑽版
 鑽疾
 鑽的
@@ -127206,7 +127174,7 @@ use_preset_vocabulary: false
 鑿子
 鑿孔
 鑿山
-鑿巖
+鑿岩
 鑿川
 鑿成
 鑿枘
@@ -127373,7 +127341,6 @@ use_preset_vocabulary: false
 長的
 長相
 長眠
-長著
 長矛
 長短
 長石
@@ -127405,6 +127372,7 @@ use_preset_vocabulary: false
 長至
 長興
 長舌
+長著
 長葛
 長處
 長號
@@ -127651,10 +127619,10 @@ use_preset_vocabulary: false
 閃現
 閃痛
 閃眼
-閃著
 閃石
 閃耀
 閃腰
+閃著
 閃語
 閃賺
 閃身
@@ -127692,10 +127660,10 @@ use_preset_vocabulary: false
 閉環
 閉目
 閉眼
-閉著
 閉結
 閉經
 閉聲
+閉著
 閉蟄
 閉起
 閉路
@@ -127897,7 +127865,6 @@ use_preset_vocabulary: false
 開盤
 開直
 開眼
-開著
 開砲
 開礦
 開示
@@ -127945,6 +127912,7 @@ use_preset_vocabulary: false
 開苞
 開荒
 開落
+開著
 開葷
 開蒙
 開藥
@@ -128092,13 +128060,13 @@ use_preset_vocabulary: false
 閒漢
 閒燕
 閒田
-閒著
 閒空
 閒章
 閒置
 閒聊
 閒職
 閒花
+閒著
 閒蕩
 閒行
 閒覷
@@ -128138,10 +128106,10 @@ use_preset_vocabulary: false
 間歇
 間歲
 間的
-間著
 間腦
 間色
 間苗
+間著
 間行
 間裂
 間諜
@@ -128492,7 +128460,6 @@ use_preset_vocabulary: false
 關白
 關的
 關目
-關著
 關礙
 關禁
 關稅
@@ -128509,6 +128476,7 @@ use_preset_vocabulary: false
 關聯
 關脈
 關臺
+關著
 關裡
 關西
 關親
@@ -128594,8 +128562,8 @@ use_preset_vocabulary: false
 防來
 防修
 防個
-防備
 防偽
+防備
 防冷
 防凌
 防凍
@@ -128652,7 +128620,6 @@ use_preset_vocabulary: false
 防癌
 防的
 防盜
-防著
 防磁
 防禦
 防秋
@@ -128664,6 +128631,7 @@ use_preset_vocabulary: false
 防腐
 防臭
 防艾
+防著
 防衛
 防諜
 防護
@@ -128921,7 +128889,6 @@ use_preset_vocabulary: false
 附獎
 附生
 附益
-附著
 附睾
 附筆
 附籍
@@ -128930,6 +128897,7 @@ use_preset_vocabulary: false
 附給
 附耳
 附肢
+附著
 附表
 附言
 附記
@@ -129018,7 +128986,6 @@ use_preset_vocabulary: false
 降災
 降為
 降生
-降著
 降祉
 降神
 降祥
@@ -129031,6 +128998,7 @@ use_preset_vocabulary: false
 降自
 降至
 降落
+降著
 降薪
 降號
 降表
@@ -129241,14 +129209,13 @@ use_preset_vocabulary: false
 陪嫁
 陪客
 陪審
+陪床
 陪弔
 陪從
 陪我
 陪房
 陪敦
 陪榜
-陪床
-陪著
 陪祀
 陪祭
 陪禮
@@ -129258,6 +129225,7 @@ use_preset_vocabulary: false
 陪罪
 陪考
 陪臣
+陪著
 陪葬
 陪裝
 陪襯
@@ -129847,10 +129815,10 @@ use_preset_vocabulary: false
 隔火
 隔熱
 隔牆
-隔著
 隔絕
 隔肢
 隔膜
+隔著
 隔行
 隔走
 隔起
@@ -129953,13 +129921,13 @@ use_preset_vocabulary: false
 隨波
 隨直
 隨眠
-隨著
 隨筆
 隨緣
 隨縣
 隨群
 隨聲
 隨興
+隨著
 隨葬
 隨處
 隨行
@@ -129987,8 +129955,8 @@ use_preset_vocabulary: false
 險地
 險塞
 險境
-險峰
 險峯
+險峰
 險峻
 險巇
 險工
@@ -130514,6 +130482,7 @@ use_preset_vocabulary: false
 雙扣
 雙扶
 雙抽
+雙拐
 雙拳
 雙拼
 雙掌
@@ -130532,7 +130501,6 @@ use_preset_vocabulary: false
 雙月
 雙杯
 雙柏
-雙柺
 雙核
 雙桅
 雙棲
@@ -130902,8 +130870,8 @@ use_preset_vocabulary: false
 難治
 難混
 難測
-難熬
 難為
+難熬
 難產
 難用
 難畫
@@ -131091,8 +131059,8 @@ use_preset_vocabulary: false
 雲層
 雲山
 雲岡
-雲峰
 雲峯
+雲峰
 雲崖
 雲嶺
 雲巖
@@ -131649,7 +131617,6 @@ use_preset_vocabulary: false
 露白
 露相
 露眼
-露著
 露空
 露章
 露背
@@ -131659,6 +131626,7 @@ use_preset_vocabulary: false
 露茜
 露草
 露華
+露著
 露葵
 露袒
 露西
@@ -131745,6 +131713,7 @@ use_preset_vocabulary: false
 靈巧
 靈幔
 靈幡
+靈床
 靈府
 靈座
 靈快
@@ -131774,7 +131743,6 @@ use_preset_vocabulary: false
 靈活
 靈液
 靈渠
-靈床
 靈牌
 靈物
 靈犀
@@ -132163,10 +132131,10 @@ use_preset_vocabulary: false
 靠港
 靠湖
 靠牆
-靠著
 靠窗
 靠背
 靠腰
+靠著
 靠行
 靠譜
 靠起
@@ -132246,7 +132214,6 @@ use_preset_vocabulary: false
 面板
 面染
 面桌
-面檔
 面水
 面泛
 面洽
@@ -132750,8 +132717,8 @@ use_preset_vocabulary: false
 頂子
 頂尖
 頂層
-頂峰
 頂峯
+頂峰
 頂崗
 頂戴
 頂技
@@ -132780,7 +132747,6 @@ use_preset_vocabulary: false
 頂癮
 頂盤
 頂真
-頂著
 頂禮
 頂端
 頂篷
@@ -132791,6 +132757,7 @@ use_preset_vocabulary: false
 頂老
 頂芽
 頂葉
+頂著
 頂蓋
 頂角
 頂謝
@@ -132893,12 +132860,12 @@ use_preset_vocabulary: false
 順當
 順發
 順眼
-順著
 順祝
 順義
 順耳
 順職
 順腳
+順著
 順行
 順袋
 順訪
@@ -133170,7 +133137,6 @@ use_preset_vocabulary: false
 領用
 領略
 領的
-領著
 領空
 領章
 領結
@@ -133179,6 +133145,7 @@ use_preset_vocabulary: false
 領舞
 領航
 領花
+領著
 領表
 領袖
 領解
@@ -133465,13 +133432,13 @@ use_preset_vocabulary: false
 題為
 題畫
 題目
-題著
 題破
 題筆
 題簽
 題結
 題署
 題花
+題著
 題號
 題補
 題親
@@ -133546,8 +133513,8 @@ use_preset_vocabulary: false
 顛仆
 顛倒
 顛兒
-顛峰
 顛峯
+顛峰
 顛播
 顛末
 顛毛
@@ -133625,12 +133592,12 @@ use_preset_vocabulary: false
 顧盻
 顧盼
 顧眄
-顧著
 顧睦
 顧笑
 顧繡
 顧臉
 顧菟
+顧著
 顧藉
 顧賣
 顧贍
@@ -133988,7 +133955,6 @@ use_preset_vocabulary: false
 飄畦
 飄疾
 飄眇
-飄著
 飄移
 飄紅
 飄絮
@@ -133996,6 +133962,7 @@ use_preset_vocabulary: false
 飄舉
 飄舞
 飄落
+飄著
 飄蓬
 飄蕩
 飄蕭
@@ -134514,7 +134481,6 @@ use_preset_vocabulary: false
 養的
 養真
 養眼
-養著
 養神
 養羊
 養老
@@ -134523,6 +134489,7 @@ use_preset_vocabulary: false
 養胖
 養膳
 養花
+養著
 養虎
 養蜂
 養蠶
@@ -134587,9 +134554,9 @@ use_preset_vocabulary: false
 餓漢
 餓狼
 餓瘦
-餓著
 餓紋
 餓莩
+餓著
 餓虎
 餓貓
 餓過
@@ -134698,6 +134665,7 @@ use_preset_vocabulary: false
 餘留
 餘畝
 餘皇
+餘眾
 餘碼
 餘種
 餘竅
@@ -134716,7 +134684,6 @@ use_preset_vocabulary: false
 餘萬
 餘蓄
 餘蔭
-餘眾
 餘裕
 餘角
 餘論
@@ -135019,6 +134986,7 @@ use_preset_vocabulary: false
 香亭
 香公
 香冢
+香几
 香分
 香包
 香印
@@ -135034,7 +135002,6 @@ use_preset_vocabulary: false
 香巢
 香市
 香帛
-香幾
 香房
 香扇
 香斗
@@ -135486,10 +135453,10 @@ use_preset_vocabulary: false
 駕校
 駕機
 駕照
-駕著
 駕臨
 駕船
 駕艇
+駕著
 駕說
 駕走
 駕起
@@ -135521,8 +135488,8 @@ use_preset_vocabulary: false
 駝員
 駝垛
 駝子
-駝峰
 駝峯
+駝峰
 駝絨
 駝背
 駝色
@@ -135630,9 +135597,9 @@ use_preset_vocabulary: false
 騎手
 騎樓
 騎牆
-騎著
 騎破
 騎縫
+騎著
 騎行
 騎術
 騎警
@@ -135678,9 +135645,9 @@ use_preset_vocabulary: false
 騙我
 騙拐
 騙案
-騙著
 騙線
 騙腿
+騙著
 騙術
 騙詞
 騙財
@@ -136287,8 +136254,8 @@ use_preset_vocabulary: false
 高岸
 高峙
 高峭
-高峰
 高峯
+高峰
 高峻
 高崖
 高崗
@@ -136701,11 +136668,11 @@ use_preset_vocabulary: false
 鬥狠
 鬥疊
 鬥眼
-鬥著
 鬥腳
 鬥艦
 鬥茶
 鬥草
+鬥著
 鬥話
 鬥豔
 鬥起
@@ -136744,12 +136711,12 @@ use_preset_vocabulary: false
 鬧炒
 鬧熱
 鬧病
-鬧著
 鬧窮
 鬧翻
 鬧聲
 鬧臺
 鬧荒
+鬧著
 鬧虛
 鬧裝
 鬧賊
@@ -138103,6 +138070,21 @@ use_preset_vocabulary: false
 麩皮
 麩素
 麩金
+麯塵
+麯生
+麯車
+麯錢
+麯院
+麯黴
+麴塵
+麴櫱
+麴生
+麴菌
+麴車
+麴酒
+麴錢
+麴院
+麴黴
 麵人
 麵價
 麵兒
@@ -138116,6 +138098,7 @@ use_preset_vocabulary: false
 麵攤
 麵杖
 麵條
+麵檔
 麵湯
 麵漿
 麵灰
@@ -138137,21 +138120,6 @@ use_preset_vocabulary: false
 麵餅
 麵館
 麵點
-麯塵
-麯生
-麯車
-麯錢
-麯院
-麯黴
-麴塵
-麴櫱
-麴生
-麴菌
-麴車
-麴酒
-麴錢
-麴院
-麴黴
 麻仁
 麻俐
 麻刀
@@ -138240,7 +138208,6 @@ use_preset_vocabulary: false
 麼弟
 麼樣
 麼波
-麼爺
 麼那
 麼陋
 麼麼
@@ -138494,7 +138461,6 @@ use_preset_vocabulary: false
 黏液
 黏滿
 黏痰
-黏著
 黏稠
 黏米
 黏糊
@@ -138503,6 +138469,7 @@ use_preset_vocabulary: false
 黏膠
 黏膩
 黏菌
+黏著
 黏貼
 黏質
 黏起
@@ -138803,7 +138770,6 @@ use_preset_vocabulary: false
 點發
 點的
 點眼
-點著
 點睛
 點砌
 點破
@@ -138826,10 +138792,11 @@ use_preset_vocabulary: false
 點茶
 點菜
 點菸
+點著
 點號
 點行
-點裡
 點補
+點裡
 點見
 點視
 點評
@@ -139019,6 +138986,7 @@ use_preset_vocabulary: false
 鼓室
 鼓山
 鼓師
+鼓床
 鼓惑
 鼓成
 鼓手
@@ -139034,14 +139002,12 @@ use_preset_vocabulary: false
 鼓樂
 鼓樓
 鼓滿
-鼓床
 鼓王
 鼓琴
 鼓瑟
 鼓皮
 鼓盆
 鼓盪
-鼓著
 鼓笛
 鼓篋
 鼓簧
@@ -139055,6 +139021,7 @@ use_preset_vocabulary: false
 鼓興
 鼓舌
 鼓舞
+鼓著
 鼓藻
 鼓號
 鼓裡
@@ -139386,6 +139353,7 @@ use_preset_vocabulary: false
 龍州
 龍巾
 龍年
+龍床
 龍心
 龍性
 龍恩
@@ -139417,7 +139385,6 @@ use_preset_vocabulary: false
 龍灣
 龍燈
 龍爪
-龍床
 龍牌
 龍牙
 龍王
@@ -139758,8 +139725,8 @@ use_preset_vocabulary: false
 一座座
 一弄兒
 一弦琴
-一張張
 一張床
+一張張
 一張紙
 一彆頭
 一彈指
@@ -139922,7 +139889,6 @@ use_preset_vocabulary: false
 一看出
 一看到
 一眨眼
-一著錯
 一瞬間
 一碗麵
 一碼子
@@ -139997,6 +139963,7 @@ use_preset_vocabulary: false
 一萬塊
 一落索
 一葉蘭
+一著錯
 一號線
 一行人
 一行行
@@ -140181,7 +140148,7 @@ use_preset_vocabulary: false
 七星區
 七星壇
 七星山
-七星巖
+七星岩
 七星板
 七星燈
 七月份
@@ -140574,9 +140541,9 @@ use_preset_vocabulary: false
 上一篇
 上一頁
 上上籤
+上下床
 上下文
 上下游
-上下床
 上下班
 上下級
 上不上
@@ -140789,6 +140756,7 @@ use_preset_vocabulary: false
 下巴顆
 下帖子
 下年度
+下床氣
 下廚房
 下弦月
 下得了
@@ -140821,13 +140789,10 @@ use_preset_vocabulary: false
 下澤車
 下焉者
 下營鄉
-下床氣
 下片時
 下畫線
 下眼皮
 下眼瞼
-下著雨
-下著雪
 下确界
 下等貨
 下箭頭
@@ -140846,6 +140811,8 @@ use_preset_vocabulary: false
 下至上
 下臺階
 下花園
+下著雨
+下著雪
 下蛋雞
 下行文
 下行星
@@ -141103,6 +141070,7 @@ use_preset_vocabulary: false
 不周山
 不周延
 不周風
+不唧𠺕
 不善於
 不喜歡
 不單是
@@ -141409,14 +141377,14 @@ use_preset_vocabulary: false
 不漏湯
 不濟事
 不灰木
+不為過
+不為難
 不然就
 不煩惱
 不燼木
 不爭多
 不爭得
 不爭氣
-不為過
-不為難
 不爽利
 不爽快
 不犯著
@@ -141428,6 +141396,7 @@ use_preset_vocabulary: false
 不甘心
 不甘於
 不生心
+不用填
 不用心
 不用忙
 不用愁
@@ -141474,17 +141443,6 @@ use_preset_vocabulary: false
 不省得
 不真切
 不眨眼
-不著人
-不著家
-不著忙
-不著急
-不著情
-不著意
-不著腳
-不著要
-不著親
-不著調
-不著陸
 不睡覺
 不睹事
 不睹是
@@ -141593,6 +141551,17 @@ use_preset_vocabulary: false
 不落屋
 不落眼
 不落空
+不著人
+不著家
+不著忙
+不著急
+不著情
+不著意
+不著腳
+不著要
+不著親
+不著調
+不著陸
 不虛發
 不行了
 不要做
@@ -141999,7 +141968,6 @@ use_preset_vocabulary: false
 中性人
 中性花
 中情局
-中成葯
 中成藥
 中括號
 中控臺
@@ -142551,7 +142519,6 @@ use_preset_vocabulary: false
 乾盛世
 乾眼病
 乾眼症
-乾著急
 乾瞪眼
 乾站著
 乾篾片
@@ -142566,6 +142533,7 @@ use_preset_vocabulary: false
 乾草機
 乾草粉
 乾落得
+乾著急
 乾血漿
 乾衣機
 乾親家
@@ -143259,8 +143227,8 @@ use_preset_vocabulary: false
 交節氣
 交糧本
 交織成
-交織著
 交織線
+交織著
 交誼廳
 交誼會
 交誼舞
@@ -143882,9 +143850,9 @@ use_preset_vocabulary: false
 估價單
 估價行
 估堆兒
-估著眼
 估稅員
 估算出
+估著眼
 估衣鋪
 估計值
 估計量
@@ -144001,11 +143969,11 @@ use_preset_vocabulary: false
 低產期
 低產田
 低產量
-低著頭
 低碳鋼
 低緯度
 低胸裝
 低能兒
+低著頭
 低血壓
 低血糖
 低費用
@@ -145287,12 +145255,12 @@ use_preset_vocabulary: false
 偷溜走
 偷漢子
 偷獵者
-偷著樂
 偷窺狂
 偷竊狂
 偷竊罪
 偷聽器
 偷花賊
+偷著樂
 偷起來
 偷車賊
 偷過來
@@ -145300,6 +145268,21 @@ use_preset_vocabulary: false
 偷開來
 偷開到
 偷開去
+偽代碼
+偽君子
+偽善者
+偽基人
+偽學者
+偽政府
+偽政權
+偽科學
+偽組織
+偽裝做
+偽裝品
+偽裝物
+偽證罪
+偽造品
+偽造者
 傀儡戲
 傅作義
 傅克斯
@@ -145352,12 +145335,12 @@ use_preset_vocabulary: false
 備註欄
 備身府
 傢俱行
+催乾劑
 催化劑
 催吐劑
 催告書
 催命符
 催命鬼
-催幹劑
 催明鳥
 催毀性
 催淚劑
@@ -145515,21 +145498,6 @@ use_preset_vocabulary: false
 僑居地
 僕射姑
 僗什子
-偽代碼
-偽君子
-偽善者
-偽基人
-偽學者
-偽政府
-偽政權
-偽科學
-偽組織
-偽裝做
-偽裝品
-偽裝物
-偽證罪
-偽造品
-偽造者
 僧不僧
 僧伽藍
 僧帽猴
@@ -145799,8 +145767,6 @@ use_preset_vocabulary: false
 光照度
 光燦燦
 光物理
-光著眼
-光著頭
 光碟機
 光碟櫃
 光碟片
@@ -145817,6 +145783,8 @@ use_preset_vocabulary: false
 光脊梁
 光脊樑
 光膀子
+光著眼
+光著頭
 光藝術
 光行差
 光衝量
@@ -145966,9 +145934,9 @@ use_preset_vocabulary: false
 兜率天
 兜率宮
 兜生意
-兜著走
 兜老底
 兜肚兒
+兜著走
 入伍生
 入侵者
 入出境
@@ -146264,7 +146232,6 @@ use_preset_vocabulary: false
 兩百塊
 兩百萬
 兩相好
-兩著兒
 兩瞪眼
 兩破三
 兩碗飯
@@ -146283,6 +146250,7 @@ use_preset_vocabulary: false
 兩萬個
 兩萬元
 兩萬塊
+兩著兒
 兩賴子
 兩路人
 兩輛車
@@ -146415,9 +146383,9 @@ use_preset_vocabulary: false
 八色鳥
 八萬多
 八行書
+八角床
 八角形
 八角楓
-八角床
 八角蓮
 八角街
 八角錢
@@ -146952,7 +146920,6 @@ use_preset_vocabulary: false
 冷呵呵
 冷噓噓
 冷地裡
-冷地里
 冷孤丁
 冷平流
 冷心腸
@@ -147561,9 +147528,9 @@ use_preset_vocabulary: false
 別提了
 別生氣
 別的人
-別著急
 別種的
 別苗頭
+別著急
 別說出
 別說到
 別說起
@@ -147837,12 +147804,12 @@ use_preset_vocabulary: false
 剛好是
 剛察縣
 剛成立
+剛才在
+剛才是
 剛果河
 剛果紅
 剛毫筆
 剛畢業
-剛才在
-剛才是
 剛過來
 剛過去
 剛開始
@@ -148002,9 +147969,9 @@ use_preset_vocabulary: false
 劃定為
 劃座位
 劃時代
-劃著走
 劃紋症
 劃線板
+劃著走
 劇中人
 劇作家
 劇務員
@@ -150015,7 +149982,7 @@ use_preset_vocabulary: false
 受精卵
 受精囊
 受約束
-受聘于
+受聘於
 受胎率
 受訓人
 受訓者
@@ -150129,7 +150096,6 @@ use_preset_vocabulary: false
 古書店
 古柯樹
 古柯葉
-古柯鹹
 古柯鹼
 古根罕
 古浪縣
@@ -150259,8 +150225,8 @@ use_preset_vocabulary: false
 只流到
 只漏出
 只漏到
-只照到
 只為了
+只照到
 只猜出
 只猜到
 只用到
@@ -150370,8 +150336,8 @@ use_preset_vocabulary: false
 叫回來
 叫回去
 叫字號
-叫條子
 叫床聲
+叫條子
 叫罵聲
 叫花子
 叫賣聲
@@ -150693,6 +150659,7 @@ use_preset_vocabulary: false
 吃寡酒
 吃寡醋
 吃小竈
+吃床腿
 吃得下
 吃得了
 吃得住
@@ -150722,7 +150689,6 @@ use_preset_vocabulary: false
 吃海鮮
 吃火鍋
 吃燒餅
-吃床腿
 吃牢飯
 吃犒勞
 吃獨食
@@ -150899,6 +150865,8 @@ use_preset_vocabulary: false
 合理化
 合理性
 合理標
+合眾國
+合眾社
 合稀釋
 合約人
 合約價
@@ -150912,8 +150880,6 @@ use_preset_vocabulary: false
 合胃口
 合色鞋
 合著者
-合眾國
-合眾社
 合訂本
 合計為
 合議制
@@ -151153,7 +151119,6 @@ use_preset_vocabulary: false
 名譽職
 名量詞
 名間鄉
-后北街
 后安路
 后平路
 后海灣
@@ -151461,11 +151426,11 @@ use_preset_vocabulary: false
 呆楞楞
 呆水位
 呆登登
-呆著臉
 呆答孩
 呆答答
 呆緻緻
 呆老漢
+呆著臉
 呆鄧鄧
 呆頭鵝
 呈現出
@@ -152071,6 +152036,8 @@ use_preset_vocabulary: false
 問起來
 問題劇
 問題是
+啞巴虧
+啞終端
 啟動區
 啟動器
 啟動子
@@ -152085,8 +152052,6 @@ use_preset_vocabulary: false
 啟發法
 啟示者
 啟示錄
-啞巴虧
-啞終端
 啤酒屋
 啤酒廠
 啤酒瓶
@@ -152162,8 +152127,8 @@ use_preset_vocabulary: false
 喜歌劇
 喜歡你
 喜歡吃
-喜歡著
 喜歡聽
+喜歡著
 喜歡錶
 喜歡鐘
 喜洋洋
@@ -152231,8 +152196,8 @@ use_preset_vocabulary: false
 單一稅
 單一體
 單交種
-單人房
 單人床
+單人房
 單人舞
 單人間
 單位元
@@ -152443,7 +152408,6 @@ use_preset_vocabulary: false
 噗碌碌
 噘嘴兒
 噝噝聲
-噢運會
 噤口痢
 噤聲令
 器世間
@@ -152454,7 +152418,6 @@ use_preset_vocabulary: false
 噪音量
 噫吁戲
 噬人菌
-噬箘體
 噬菌體
 噬食菌
 噯喲喲
@@ -152466,7 +152429,6 @@ use_preset_vocabulary: false
 噴出去
 噴出口
 噴出岩
-噴出巖
 噴嘴兒
 噴嘴式
 噴噴水
@@ -152492,11 +152454,11 @@ use_preset_vocabulary: false
 噴火器
 噴火山
 噴火龍
-噴著氣
-噴著水
 噴砂機
 噴粉器
 噴絲頭
+噴著氣
+噴著水
 噴赤河
 噴起來
 噴霧器
@@ -152829,9 +152791,9 @@ use_preset_vocabulary: false
 固安縣
 固定值
 固定制
+固定床
 固定性
 固定液
-固定床
 固定物
 固定術
 固定量
@@ -153212,6 +153174,7 @@ use_preset_vocabulary: false
 在家人
 在家修
 在幹嗎
+在床上
 在我心
 在我看
 在戶外
@@ -153225,7 +153188,6 @@ use_preset_vocabulary: false
 在此處
 在水裡
 在深處
-在床上
 在產品
 在百度
 在眼前
@@ -153334,7 +153296,7 @@ use_preset_vocabulary: false
 地瓜籤
 地瓜粉
 地瓜葉
-地瓜面
+地瓜麵
 地產商
 地產稅
 地產股
@@ -153460,10 +153422,10 @@ use_preset_vocabulary: false
 垂直舵
 垂直角
 垂直面
-垂著手
-垂著頭
 垂線足
 垂花門
+垂著手
+垂著頭
 垃圾堆
 垃圾場
 垃圾山
@@ -153551,9 +153513,9 @@ use_preset_vocabulary: false
 執旗將
 執法者
 執牛耳
-執著性
 執筆人
 執箕帚
+執著性
 執行人
 執行力
 執行官
@@ -153711,8 +153673,8 @@ use_preset_vocabulary: false
 場磁鐵
 場記板
 場面上
+場面人
 場面話
-場麵人
 堵塞費
 堵得慌
 堵起來
@@ -154669,7 +154631,6 @@ use_preset_vocabulary: false
 大岩桐
 大峽谷
 大嶼山
-大巖桐
 大巡行
 大工業
 大巫嫗
@@ -154918,6 +154879,9 @@ use_preset_vocabulary: false
 大眼睛
 大眼角
 大眼賊
+大眾化
+大眾語
+大眾部
 大睹是
 大瞧瞧
 大石橋
@@ -155033,9 +154997,6 @@ use_preset_vocabulary: false
 大蛇丸
 大融爐
 大蠑螈
-大眾化
-大眾語
-大眾部
 大行人
 大行星
 大行院
@@ -156312,7 +156273,6 @@ use_preset_vocabulary: false
 嫌疑人
 嫌疑犯
 嫖婊子
-嫗𡟥
 嫡堂姪
 嫡長子
 嫩江省
@@ -156647,6 +156607,7 @@ use_preset_vocabulary: false
 宇航員
 宇航局
 宇航服
+宇舶錶
 守中立
 守信用
 守備區
@@ -157723,7 +157684,6 @@ use_preset_vocabulary: false
 對準鐘
 對照組
 對照表
-對著幹
 對硫磷
 對稱性
 對稱軸
@@ -157738,6 +157698,7 @@ use_preset_vocabulary: false
 對臺戲
 對茌兒
 對茬兒
+對著幹
 對號車
 對號鎖
 對蝦科
@@ -157969,8 +157930,8 @@ use_preset_vocabulary: false
 小小說
 小屁孩
 小山詞
+小岩洞
 小島嶼
-小巖洞
 小工人
 小工具
 小工藝
@@ -158577,8 +158538,8 @@ use_preset_vocabulary: false
 屏山縣
 屏東市
 屏東縣
-屏蔽著
 屏蔽罐
+屏蔽著
 屏風後
 展子虔
 展弦比
@@ -158725,17 +158686,24 @@ use_preset_vocabulary: false
 岢嵐縣
 岣嶁碑
 岩土體
+岩手縣
+岩流圈
 岩漿岩
 岩漿流
 岩瀨健
 岩石圈
 岩石學
 岩石層
+岩薔薇
 岫巖縣
 岱山縣
 岱嶽區
+岳塘區
 岳家軍
+岳普湖
 岳武穆
+岳池縣
+岳西縣
 岳陽市
 岳陽樓
 岳陽縣
@@ -158807,16 +158775,9 @@ use_preset_vocabulary: false
 嶗山區
 嶧城區
 嶺東區
-嶽塘區
-嶽普湖
-嶽池縣
-嶽西縣
 嶽麓區
 嶽麓山
 巍山縣
-巖手縣
-巖流圈
-巖薔薇
 川匯區
 川埼症
 川崎症
@@ -159256,7 +159217,6 @@ use_preset_vocabulary: false
 布瑞尤
 布瑞特
 布瑞頓
-布用填
 布穀鳥
 布紋紙
 布累爾
@@ -159311,8 +159271,8 @@ use_preset_vocabulary: false
 布魯珊
 布魯諾
 帆布包
-帆布椅
 帆布床
+帆布椅
 帆布袋
 帆布鞋
 希伯來
@@ -159320,7 +159280,7 @@ use_preset_vocabulary: false
 希克斯
 希律王
 希思羅
-希拉剋
+希拉克
 希拉里
 希斯崙
 希格斯
@@ -159588,8 +159548,8 @@ use_preset_vocabulary: false
 平等權
 平羅縣
 平臥在
-平臥著
 平臥莖
+平臥著
 平臺數
 平舌音
 平行力
@@ -159858,6 +159818,8 @@ use_preset_vocabulary: false
 庇祐下
 庇護所
 庇護權
+床頭人
+床頭櫃
 序列化
 序列埠
 序列號
@@ -160200,10 +160162,10 @@ use_preset_vocabulary: false
 弓弩手
 弓形鑽
 弓漿蟲
-弓著腰
 弓硯緣
 弓箭手
 弓箭步
+弓著腰
 弓長嶺
 弓鰭魚
 弔客眉
@@ -160424,7 +160386,6 @@ use_preset_vocabulary: false
 強迫症
 弼馬溫
 彆口氣
-彆著急
 彈上來
 彈上去
 彈下來
@@ -160453,20 +160414,20 @@ use_preset_vocabulary: false
 彈珠檯
 彈球盤
 彈琵琶
-彈著點
 彈簧刀
-彈簧椅
 彈簧床
+彈簧椅
 彈簧秤
 彈簧鋼
 彈簧鎖
 彈簧門
+彈著點
 彈藥兵
 彈藥庫
 彈藥箱
 彈起來
-彈跳板
 彈跳床
+彈跳板
 彈過來
 彈過去
 彈道學
@@ -160493,9 +160454,9 @@ use_preset_vocabulary: false
 彎弓子
 彎曲度
 彎曲狀
-彎著腰
 彎管麵
 彎膝禮
+彎著腰
 彎起來
 彙報會
 彙總表
@@ -160709,6 +160670,7 @@ use_preset_vocabulary: false
 後勤區
 後勤學
 後勤部
+後北街
 後半世
 後半場
 後半夜
@@ -160867,7 +160829,6 @@ use_preset_vocabulary: false
 從業者
 從江縣
 從沒有
-御博表
 御史臺
 御史雨
 御夫座
@@ -161244,8 +161205,8 @@ use_preset_vocabulary: false
 怎麼玩
 怎麼用
 怎麼看
-怎麼著
 怎麼算
+怎麼著
 怎麼說
 怎麼講
 怎麼走
@@ -161527,8 +161488,8 @@ use_preset_vocabulary: false
 悶沌沌
 悶淹淹
 悶燒鍋
-悶著頭
 悶罐車
+悶著頭
 悶葫蘆
 悶騰騰
 悻悻然
@@ -161759,13 +161720,13 @@ use_preset_vocabulary: false
 愛生活
 愛用者
 愛的人
-愛著你
 愛知縣
 愛立信
 愛笑鬼
 愛羅斯
 愛自己
 愛莉絲
+愛著你
 愛詞霸
 愛說笑
 愛起來
@@ -162480,8 +162441,8 @@ use_preset_vocabulary: false
 手拉式
 手拉手
 手拉車
-手拿著
 手拿花
+手拿著
 手持著
 手指甲
 手指縫
@@ -162534,15 +162495,63 @@ use_preset_vocabulary: false
 手頭上
 手頭字
 手風琴
+才上來
+才上到
+才上去
+才下來
+才下去
+才不是
+才不會
+才不能
+才乾旱
+才乾杯
+才乾淨
+才乾透
+才來到
+才像是
+才出來
+才出去
+才可以
+才回來
+才回到
+才回去
 才外流
+才多出
+才夠來
+才夠去
 才子書
+才得到
+才打出
+才打到
+才拿出
+才拿到
 才明白
+才會到
+才會在
+才會有
+才沒有
+才沒能
+才派人
+才用到
 才發現
+才看出
+才看到
 才知道
+才等到
+才算是
 才能夠
+才能有
 才能讓
 才藝班
 才藝秀
+才讀到
+才起來
+才過來
+才過去
+才開出
+才開到
+才開始
+才鬆下
 扎上去
 扎下去
 扎伊爾
@@ -163046,8 +163055,8 @@ use_preset_vocabulary: false
 扭過去
 扭過頭
 扮故事
-扮演著
 扮演者
+扮演著
 扮白臉
 扮起來
 扮鬼臉
@@ -163281,7 +163290,7 @@ use_preset_vocabulary: false
 抓大頭
 抓子兒
 抓尖兒
-抓巖機
+抓岩機
 抓工夫
 抓撓兒
 抓破臉
@@ -163476,13 +163485,13 @@ use_preset_vocabulary: false
 抱柱對
 抱犢山
 抱犢崮
-抱著你
 抱砂鍋
 抱節君
 抱粗腿
 抱腳兒
 抱腿兒
 抱草瘟
+抱著你
 抱角床
 抱起來
 抱身兒
@@ -164708,7 +164717,6 @@ use_preset_vocabulary: false
 接生術
 接生費
 接目鏡
-接著是
 接碴兒
 接種率
 接管人
@@ -164719,6 +164727,7 @@ use_preset_vocabulary: false
 接續詞
 接聲兒
 接舌子
+接著是
 接觸到
 接觸力
 接觸器
@@ -165039,9 +165048,9 @@ use_preset_vocabulary: false
 搖擺舞
 搖滾團
 搖滾樂
-搖著頭
 搖籃曲
 搖籃歌
+搖著頭
 搖起來
 搖錢樹
 搖鏡頭
@@ -165263,11 +165272,11 @@ use_preset_vocabulary: false
 摹聲詞
 摺合椅
 摺子戲
+摺疊床
 摺疊式
 摺疊扇
 摺疊椅
 摺疊為
-摺疊床
 摺紙工
 摺進來
 摺進去
@@ -165565,8 +165574,8 @@ use_preset_vocabulary: false
 擔擔麵
 擔擱到
 擔架兵
-擔架擡
 擔架床
+擔架擡
 擔架隊
 擔負著
 擔負起
@@ -165837,8 +165846,8 @@ use_preset_vocabulary: false
 支持力
 支持度
 支持率
-支持著
 支持者
+支持著
 支撐住
 支撐力
 支撐架
@@ -165876,8 +165885,8 @@ use_preset_vocabulary: false
 收報室
 收報機
 收報費
-收存著
 收存箱
+收存著
 收容所
 收小的
 收尾音
@@ -168058,8 +168067,8 @@ use_preset_vocabulary: false
 最晚在
 最沒有
 最深的
-最熱門
 最為人
+最熱門
 最理想
 最短的
 最糟糕
@@ -168374,9 +168383,9 @@ use_preset_vocabulary: false
 有活力
 有準兒
 有潛力
+有為者
 有無句
 有煙煤
-有為者
 有理化
 有理式
 有理想
@@ -168397,7 +168406,6 @@ use_preset_vocabulary: false
 有眼光
 有眼力
 有眼色
-有著落
 有碴兒
 有神論
 有禮貌
@@ -168426,6 +168434,7 @@ use_preset_vocabulary: false
 有良心
 有苗頭
 有落兒
+有著落
 有虞氏
 有血性
 有衝突
@@ -169091,7 +169100,6 @@ use_preset_vocabulary: false
 李鍾郁
 李鐘奭
 李鐵拐
-李鐵柺
 李鑑原
 李長春
 李開復
@@ -169377,9 +169385,9 @@ use_preset_vocabulary: false
 板橋市
 板殼蟲
 板牆球
-板著臉
 板羽球
 板腔體
+板著臉
 板藍根
 板起臉
 板金工
@@ -170470,7 +170478,7 @@ use_preset_vocabulary: false
 樓梯臺
 樓梯間
 樓臺會
-樓道里
+樓道裡
 樓閣塔
 樓頂上
 標上來
@@ -171595,17 +171603,17 @@ use_preset_vocabulary: false
 民權路
 民歌手
 民法典
-民營化
 民為貴
+民營化
 民生報
 民生渠
 民生路
 民用品
+民眾黨
 民社黨
 民約論
 民航局
 民航機
-民眾黨
 民謠風
 民豐縣
 民進黨
@@ -171850,6 +171858,7 @@ use_preset_vocabulary: false
 水成岩
 水手帽
 水手長
+水才乾
 水文學
 水文站
 水斧蟲
@@ -171858,9 +171867,9 @@ use_preset_vocabulary: false
 水晶塔
 水晶婚
 水晶宮
+水晶床
 水晶杯
 水晶毬
-水晶床
 水晶球
 水晶蝦
 水晶體
@@ -171961,7 +171970,6 @@ use_preset_vocabulary: false
 水精鹽
 水經注
 水綠色
-水才乾
 水翼船
 水老鴉
 水老鼠
@@ -172561,7 +172569,6 @@ use_preset_vocabulary: false
 沒眼斤
 沒眼的
 沒眼色
-沒著落
 沒短的
 沒空兒
 沒算數
@@ -172589,6 +172596,7 @@ use_preset_vocabulary: false
 沒良心
 沒落兒
 沒落子
+沒著落
 沒血性
 沒行款
 沒行止
@@ -172645,12 +172653,12 @@ use_preset_vocabulary: false
 沖壓機
 沖天炮
 沖天爐
+沖床工
 沖廁所
 沖服劑
 沖沖水
 沖泡式
 沖淋浴
-沖床工
 沖積土
 沖積堤
 沖積層
@@ -172699,8 +172707,8 @@ use_preset_vocabulary: false
 沙瓤兒
 沙瓦瑪
 沙發墊
-沙發椅
 沙發床
+沙發椅
 沙祖康
 沙肝兒
 沙茶醬
@@ -173421,13 +173429,13 @@ use_preset_vocabulary: false
 流理臺
 流當品
 流眼淚
-流著淚
 流程圖
 流程表
 流竄到
 流竄犯
 流紋岩
 流線型
+流著淚
 流蘇帳
 流蘇髻
 流行學
@@ -173783,8 +173791,8 @@ use_preset_vocabulary: false
 涌現出
 涌進來
 涌進去
-涎著臉
 涎瞪瞪
+涎著臉
 涎鄧鄧
 涔涔然
 涪城區
@@ -174544,7 +174552,6 @@ use_preset_vocabulary: false
 滑流水
 滑溜溜
 滑潤劑
-滑著走
 滑石粉
 滑碌碌
 滑稽劇
@@ -174553,6 +174560,7 @@ use_preset_vocabulary: false
 滑翔機
 滑翔翼
 滑航艇
+滑著走
 滑行道
 滑起來
 滑輪組
@@ -174663,8 +174671,8 @@ use_preset_vocabulary: false
 滿庭芳
 滿張羅
 滿意度
-滿打著
 滿打算
+滿打著
 滿招損
 滿月酒
 滿有譜
@@ -175363,6 +175371,27 @@ use_preset_vocabulary: false
 炸雞腿
 炸魚排
 炸麻花
+為中心
+為中颱
+為什麼
+為他們
+為何不
+為何在
+為何是
+為何會
+為何有
+為何能
+為你們
+為反對
+為國家
+為家庭
+為我們
+為模範
+為甚麼
+為的是
+為要求
+為規範
+為避免
 烈丈夫
 烈士墓
 烈士陵
@@ -175377,7 +175406,7 @@ use_preset_vocabulary: false
 烏伊嶺
 烏來鄉
 烏克蘭
-烏冬面
+烏冬麵
 烏坵鄉
 烏塌菜
 烏塗水
@@ -175587,10 +175616,10 @@ use_preset_vocabulary: false
 無污染
 無治法
 無添和
+無為縣
 無煙炭
 無煙煤
 無爭議
-無為縣
 無理式
 無理數
 無理根
@@ -175846,8 +175875,8 @@ use_preset_vocabulary: false
 熒光粉
 熒惑星
 熔化成
-熔化爐
 熔化為
+熔化爐
 熔化點
 熔岩流
 熔岩湖
@@ -176177,27 +176206,6 @@ use_preset_vocabulary: false
 爭霸賽
 爭面子
 爰歷篇
-為中心
-為中颱
-為什麼
-為他們
-為何不
-為何在
-為何是
-為何會
-為何有
-為何能
-為你們
-為反對
-為國家
-為家庭
-為我們
-為模範
-為甚麼
-為的是
-為要求
-為規範
-為避免
 爵士樂
 爵士舞
 父一輩
@@ -176223,8 +176231,6 @@ use_preset_vocabulary: false
 爾冬升
 爾本週
 爾雅翼
-床頭人
-床頭櫃
 牆上草
 牆垛子
 牆壁上
@@ -176686,8 +176692,8 @@ use_preset_vocabulary: false
 獃憨獃
 獃根子
 獃獃的
-獃著臉
 獃磕磕
+獃著臉
 獅子口
 獅子吼
 獅子山
@@ -177541,7 +177547,6 @@ use_preset_vocabulary: false
 生產隊
 生產額
 生田斗
-生著氣
 生石灰
 生石膏
 生粉水
@@ -177551,6 +177556,7 @@ use_preset_vocabulary: false
 生花筆
 生菩薩
 生華髮
+生著氣
 生薑汁
 生薑片
 生薑絲
@@ -177617,8 +177623,8 @@ use_preset_vocabulary: false
 用不完
 用不慣
 用不用
-用不著
 用不聞
+用不著
 用什麼
 用報臺
 用工夫
@@ -178424,9 +178430,9 @@ use_preset_vocabulary: false
 白山宗
 白山市
 白山派
+白岩松
 白崇禧
 白嶽山
-白巖松
 白差使
 白帝城
 白席人
@@ -178449,8 +178455,8 @@ use_preset_vocabulary: false
 白暨豚
 白曉燕
 白朗寧
-白朗峰
 白朗峯
+白朗峰
 白朗縣
 白木耳
 白板筆
@@ -178660,7 +178666,6 @@ use_preset_vocabulary: false
 白龍堆
 白龍馬
 白龜年
-白𣎴
 百一詩
 百丈山
 百丈波
@@ -178857,7 +178862,6 @@ use_preset_vocabulary: false
 皮猴戲
 皮皮的
 皮相士
-皮著臉
 皮笊籬
 皮筒兒
 皮箱子
@@ -178870,6 +178874,7 @@ use_preset_vocabulary: false
 皮膚病
 皮膚癌
 皮膚科
+皮著臉
 皮薩餅
 皮製品
 皮解庫
@@ -179256,10 +179261,6 @@ use_preset_vocabulary: false
 看白戲
 看看吧
 看眼色
-看著他
-看著你
-看著我
-看著辦
 看笑話
 看終了
 看美女
@@ -179267,6 +179268,10 @@ use_preset_vocabulary: false
 看臺股
 看花了
 看花眼
+看著他
+看著你
+看著我
+看著辦
 看表面
 看話禪
 看護兵
@@ -179397,26 +179402,11 @@ use_preset_vocabulary: false
 眼鏡蛇
 眼電圖
 眼面前
-著先鞭
-著力點
-著勁兒
-著地點
-著手於
-著手腳
-著火點
-著疼熱
-著眼於
-著眼點
-著色法
-著衣鏡
-著迷於
-著邊兒
-著重兒
-著重於
-著重號
-著重點
-著陸場
-著陸點
+眾生相
+眾說郛
+眾議員
+眾議院
+眾香子
 睛球座
 睜一眼
 睜不開
@@ -179441,9 +179431,9 @@ use_preset_vocabulary: false
 睡眠曲
 睡眠者
 睡眠蟲
-睡著了
 睡睡覺
 睡美人
+睡著了
 睡蓮葉
 睡虎子
 睡衣褲
@@ -179477,8 +179467,8 @@ use_preset_vocabulary: false
 瞅不起
 瞅空兒
 瞇盹兒
-瞇著眼
 瞇瞇眼
+瞇著眼
 瞇起來
 瞌睡蟲
 瞎了眼
@@ -179642,6 +179632,7 @@ use_preset_vocabulary: false
 石工術
 石庫門
 石志偉
+石拐區
 石敢當
 石敬瑭
 石斑魚
@@ -179655,7 +179646,6 @@ use_preset_vocabulary: false
 石板道
 石林縣
 石柱縣
-石柺區
 石棉布
 石棉板
 石棉瓦
@@ -179950,7 +179940,6 @@ use_preset_vocabulary: false
 硬生生
 硬盤盒
 硬目標
-硬著陸
 硬石膏
 硬碟內
 硬碰硬
@@ -179962,6 +179951,7 @@ use_preset_vocabulary: false
 硬脂酸
 硬脾氣
 硬腦膜
+硬著陸
 硬裡子
 硬設備
 硬說是
@@ -180800,7 +180790,6 @@ use_preset_vocabulary: false
 空白點
 空盒子
 空盪盪
-空著手
 空空兒
 空窗期
 空箱子
@@ -180810,6 +180799,7 @@ use_preset_vocabulary: false
 空腦子
 空興頭
 空落落
+空著手
 空蕩蕩
 空藏瓶
 空虛感
@@ -181149,9 +181139,9 @@ use_preset_vocabulary: false
 笑死人
 笑盈盈
 笑眯眯
-笑著說
 笑瞇瞇
 笑臉兒
+笑著說
 笑裡刀
 笑話兒
 笑起來
@@ -181450,10 +181440,10 @@ use_preset_vocabulary: false
 等深線
 等溫線
 等熵線
-等著你
-等著瞧
 等積形
 等級制
+等著你
+等著瞧
 等角線
 等距離
 等速度
@@ -181632,7 +181622,7 @@ use_preset_vocabulary: false
 篦麻油
 篩檢出
 篩選出
-篷蓋佈
+篷蓋布
 篷馬車
 簇擁著
 簡介性
@@ -181808,9 +181798,9 @@ use_preset_vocabulary: false
 粘性力
 粘板岩
 粘滯性
+粘膠液
 粘著力
 粘著性
-粘膠液
 粟米草
 粟粒狀
 粥飯僧
@@ -182065,7 +182055,6 @@ use_preset_vocabulary: false
 紅皮書
 紅眼病
 紅眼症
-紅著臉
 紅矮星
 紅種人
 紅箍兒
@@ -182093,6 +182082,7 @@ use_preset_vocabulary: false
 紅葉村
 紅葉樹
 紅葉盃
+紅著臉
 紅蓮燈
 紅藥水
 紅蘿蔔
@@ -182877,8 +182867,8 @@ use_preset_vocabulary: false
 緊緊的
 緊縮在
 緊縮著
-緊繃著
 緊繃繃
+緊繃著
 緊要處
 緊貼住
 緊貼在
@@ -183283,60 +183273,11 @@ use_preset_vocabulary: false
 纏上來
 纏上去
 纏繞在
-纏繞著
 纏繞莖
+纏繞著
 纏臂金
 纏髻兒
 纓尾目
-才上來
-才上到
-才上去
-才下來
-才下去
-才不是
-才不會
-才不能
-才乾旱
-才乾杯
-才乾淨
-才乾透
-才來到
-才像是
-才出來
-才出去
-才可以
-才回來
-才回到
-才回去
-才多出
-才夠來
-才夠去
-才得到
-才打出
-才打到
-才拿出
-才拿到
-才會到
-才會在
-才會有
-才沒有
-才沒能
-才派人
-才用到
-才看出
-才看到
-才等到
-才算是
-才能夠
-才能有
-才讀到
-才起來
-才過來
-才過去
-才開出
-才開到
-才開始
-才鬆下
 纖毛蟲
 纖細畫
 纖維化
@@ -183663,9 +183604,9 @@ use_preset_vocabulary: false
 羞赧感
 群島弧
 群星會
+群眾性
 群芳譜
 群英會
-群眾性
 群言堂
 群馬縣
 羧基酸
@@ -184009,7 +183950,6 @@ use_preset_vocabulary: false
 老相好
 老相識
 老眼光
-老著臉
 老砍頭
 老祖先
 老祖兒
@@ -184035,6 +183975,7 @@ use_preset_vocabulary: false
 老花眼
 老花鏡
 老萊子
+老著臉
 老蒼頭
 老虎凳
 老虎機
@@ -184293,8 +184234,8 @@ use_preset_vocabulary: false
 聖拉蒙
 聖教序
 聖母像
-聖母峰
 聖母峯
+聖母峰
 聖母院
 聖火臺
 聖灰節
@@ -184673,8 +184614,8 @@ use_preset_vocabulary: false
 背地裡
 背地風
 背多分
-背對著
 背對背
+背對著
 背影兒
 背得起
 背抄手
@@ -184685,11 +184626,11 @@ use_preset_vocabulary: false
 背梁骨
 背水陣
 背理法
-背著手
 背空子
 背繩墨
 背脊骨
 背膠布
+背著手
 背誦著
 背負著
 背起來
@@ -184802,8 +184743,8 @@ use_preset_vocabulary: false
 胡淑貞
 胡清暉
 胡漢民
-胡燕妮
 胡為慎
+胡燕妮
 胡琴兒
 胡瓜魚
 胡盧提
@@ -185931,7 +185872,7 @@ use_preset_vocabulary: false
 花奶奶
 花小妹
 花山區
-花岡巖
+花岡岩
 花岡石
 花崗山
 花崗岩
@@ -186097,7 +186038,6 @@ use_preset_vocabulary: false
 苦瓜乾
 苦瓜臉
 苦瓠子
-苦著臉
 苦肉計
 苦腦子
 苦艾酒
@@ -186105,6 +186045,7 @@ use_preset_vocabulary: false
 苦苣苔
 苦茶油
 苦菜花
+苦著臉
 苦行僧
 苦行者
 苦買賣
@@ -186696,7 +186637,6 @@ use_preset_vocabulary: false
 落水管
 落湯雞
 落白事
-落著臉
 落磯山
 落禮兒
 落翅仔
@@ -186711,6 +186651,7 @@ use_preset_vocabulary: false
 落葉松
 落葉林
 落葉樹
+落著臉
 落虧欠
 落褒貶
 落解粥
@@ -186816,6 +186757,26 @@ use_preset_vocabulary: false
 著作物
 著作者
 著作郎
+著先鞭
+著力點
+著勁兒
+著地點
+著手於
+著手腳
+著火點
+著疼熱
+著眼於
+著眼點
+著色法
+著衣鏡
+著迷於
+著邊兒
+著重兒
+著重於
+著重號
+著重點
+著陸場
+著陸點
 葛仙米
 葛仙翁
 葛利納
@@ -187909,6 +187870,7 @@ use_preset_vocabulary: false
 血小板
 血已乾
 血循環
+血才乾
 血栓病
 血栓症
 血氧量
@@ -187932,7 +187894,6 @@ use_preset_vocabulary: false
 血統書
 血統論
 血線蟲
-血才乾
 血脂肪
 血腥味
 血腥氣
@@ -187942,11 +187903,6 @@ use_preset_vocabulary: false
 血衚衕
 血製品
 血鈣質
-眾生相
-眾說郛
-眾議員
-眾議院
-眾香子
 行不得
 行不行
 行不通
@@ -188106,6 +188062,7 @@ use_preset_vocabulary: false
 衝在下
 衝在前
 衝壓機
+衝床工
 衝得入
 衝得出
 衝得進
@@ -188120,7 +188077,6 @@ use_preset_vocabulary: false
 衝浪板
 衝浪者
 衝浪賽
-衝床工
 衝盹兒
 衝突區
 衝突性
@@ -188294,17 +188250,6 @@ use_preset_vocabulary: false
 裂解爐
 裂谷熱
 裂開來
-裡外裡
-裡幹事
-裡懷裡
-裡有個
-裡槅子
-裡沒有
-裡牽綿
-裡脊肉
-裡邊兒
-裡面兒
-裡頭兒
 裕固族
 裕安區
 裕民縣
@@ -188407,6 +188352,17 @@ use_preset_vocabulary: false
 裝飾畫
 裝飾音
 裝鬼臉
+裡外裡
+裡幹事
+裡懷裡
+裡有個
+裡槅子
+裡沒有
+裡牽綿
+裡脊肉
+裡邊兒
+裡面兒
+裡頭兒
 裱畫店
 裱糊匠
 裱褙店
@@ -188522,7 +188478,6 @@ use_preset_vocabulary: false
 複殖目
 複比例
 複決權
-複畝珍
 複發性
 複發率
 複相關
@@ -188928,11 +188883,11 @@ use_preset_vocabulary: false
 觀測站
 觀測者
 觀測臺
+觀眾席
+觀眾臺
 觀神色
 觀禮臺
 觀自在
-觀眾席
-觀眾臺
 觀護人
 觀護所
 觀象儀
@@ -191025,11 +190980,10 @@ use_preset_vocabulary: false
 走水槽
 走江湖
 走油子
-走無常
 走為上
+走無常
 走狗烹
 走百病
-走著瞧
 走神兒
 走私品
 走私案
@@ -191044,6 +190998,7 @@ use_preset_vocabulary: false
 走背字
 走背運
 走臘法
+走著瞧
 走親戚
 走讀生
 走資派
@@ -191090,6 +191045,7 @@ use_preset_vocabulary: false
 起學潮
 起居室
 起居注
+起床號
 起搏器
 起撲桿
 起根兒
@@ -191100,7 +191056,6 @@ use_preset_vocabulary: false
 起源於
 起火店
 起爆點
-起床號
 起疑心
 起發性
 起皮子
@@ -191601,9 +191556,9 @@ use_preset_vocabulary: false
 躋身於
 躍升為
 躡悄悄
-躡著腳
 躡腳根
 躡腳跟
+躡著腳
 躧渾水
 身丁錢
 身份卡
@@ -191791,7 +191746,7 @@ use_preset_vocabulary: false
 軟流圈
 軟流層
 軟環境
-軟著陸
+軟瞇𥉐
 軟硬件
 軟磁盤
 軟磁碟
@@ -191807,6 +191762,7 @@ use_preset_vocabulary: false
 軟腳蝦
 軟腳蟹
 軟膿包
+軟著陸
 軟調脾
 軟資源
 軟質性
@@ -191823,7 +191779,6 @@ use_preset_vocabulary: false
 軟體業
 軟體界
 軟體部
-軟麵筋
 軟齦音
 軸功率
 軸對稱
@@ -192023,8 +191978,8 @@ use_preset_vocabulary: false
 轉動著
 轉動軸
 轉化成
-轉化爐
 轉化為
+轉化爐
 轉化糖
 轉化酶
 轉印紙
@@ -192383,8 +192338,8 @@ use_preset_vocabulary: false
 追進去
 追過來
 追過去
-追隨著
 追隨者
+追隨著
 退一步
 退下來
 退下去
@@ -192599,6 +192554,7 @@ use_preset_vocabulary: false
 這幾年
 這幾次
 這忽兒
+這才是
 這搭兒
 這方面
 這早晚
@@ -192630,7 +192586,6 @@ use_preset_vocabulary: false
 這種事
 這種人
 這筆帳
-這才是
 這號事
 這行子
 這裡在
@@ -193392,8 +193347,8 @@ use_preset_vocabulary: false
 遮蓋起
 遮蔽住
 遮蔽物
-遮蔽著
 遮蔽罩
+遮蔽著
 遮護板
 遮起來
 遮陽帽
@@ -195384,7 +195339,6 @@ use_preset_vocabulary: false
 長白縣
 長白鎮
 長相思
-長著臉
 長短句
 長短詩
 長筒襪
@@ -195403,6 +195357,7 @@ use_preset_vocabulary: false
 長舌婦
 長舌頭
 長草區
+長著臉
 長葛市
 長處搯
 長蛇座
@@ -195809,8 +195764,8 @@ use_preset_vocabulary: false
 關係戶
 關係法
 關係獎
-關係著
 關係網
+關係著
 關係詞
 關係調
 關係部
@@ -196114,10 +196069,10 @@ use_preset_vocabulary: false
 附屬腺
 附帶性
 附庸國
-附著力
-附著物
 附聲韻
 附致語
+附著力
+附著物
 附贈品
 附送品
 附面層
@@ -196220,9 +196175,9 @@ use_preset_vocabulary: false
 陪審團
 陪小心
 陪床的
+陪笑臉
 陪著你
 陪著我
-陪笑臉
 陪葬品
 陪觀員
 陪起來
@@ -196242,9 +196197,9 @@ use_preset_vocabulary: false
 陰沉木
 陰沉沉
 陰涼處
-陰著兒
 陰符經
 陰聲韻
+陰著兒
 陰謀家
 陰謀論
 陰道口
@@ -196702,6 +196657,7 @@ use_preset_vocabulary: false
 雌老虎
 雍和宮
 雒南縣
+雕具座
 雕刻出
 雕刻刀
 雕刻匠
@@ -196723,9 +196679,9 @@ use_preset_vocabulary: false
 雙下巴
 雙中節
 雙主修
+雙人床
 雙人房
 雙人滑
-雙人床
 雙人舞
 雙人間
 雙休日
@@ -196750,9 +196706,9 @@ use_preset_vocabulary: false
 雙學位
 雙尾蠍
 雙層床
+雙峯駝
 雙峰縣
 雙峰駝
-雙峯駝
 雙引號
 雙復磷
 雙循環
@@ -197063,8 +197019,8 @@ use_preset_vocabulary: false
 雷射刀
 雷射槍
 雷山縣
-雷峰塔
 雷峯塔
+雷峰塔
 雷州市
 雷日納
 雷朗族
@@ -197474,7 +197430,6 @@ use_preset_vocabulary: false
 青年黨
 青康藏
 青弋江
-青徽素
 青戈江
 青斑蝶
 青春期
@@ -198902,8 +198857,8 @@ use_preset_vocabulary: false
 駕駛艙
 駕駛證
 駙馬爺
-駝著背
 駝背鯨
+駝著背
 駢體文
 駱尚廉
 駱賓王
@@ -199007,7 +198962,6 @@ use_preset_vocabulary: false
 骨子裡
 骨岩岩
 骨崖崖
-骨巖巖
 骨朵兒
 骨查臉
 骨槽風
@@ -199228,7 +199182,6 @@ use_preset_vocabulary: false
 高球杯
 高甲戲
 高盧語
-高著兒
 高碑店
 高碳鋼
 高祖母
@@ -199262,6 +199215,7 @@ use_preset_vocabulary: false
 高舉著
 高良薑
 高英傑
+高著兒
 高薪酬
 高蛋白
 高血壓
@@ -199417,7 +199371,6 @@ use_preset_vocabulary: false
 鬧烘烘
 鬧玄虛
 鬧的慌
-鬧著玩
 鬧磨擦
 鬧竿兒
 鬧笑話
@@ -199428,6 +199381,7 @@ use_preset_vocabulary: false
 鬧肚子
 鬧脾氣
 鬧荒荒
+鬧著玩
 鬧起來
 鬧轟轟
 鬧酸款
@@ -199536,11 +199490,11 @@ use_preset_vocabulary: false
 魚峰區
 魚市場
 魚幫水
+魚床子
 魚朝恩
 魚水情
 魚汛期
 魚池鄉
-魚床子
 魚玄機
 魚石脂
 魚翅湯
@@ -199774,7 +199728,6 @@ use_preset_vocabulary: false
 鵝黃色
 鵝黃酒
 鵪鶉蛋
-鵰具座
 鵰翎扇
 鵲橋仙
 鵾雞曲
@@ -199967,6 +199920,9 @@ use_preset_vocabulary: false
 麥香堡
 麥高文
 麩胺酸
+麯道士
+麴秀才
+麴道士
 麵人兒
 麵包刀
 麵包圈
@@ -199993,9 +199949,6 @@ use_preset_vocabulary: false
 麵食類
 麵點師
 麵點王
-麯道士
-麴秀才
-麴道士
 麻六甲
 麻城市
 麻姑山
@@ -200240,16 +200193,16 @@ use_preset_vocabulary: false
 黏巴達
 黏度計
 黏涎子
-黏著劑
-黏著力
-黏著性
-黏著語
 黏稠度
 黏答答
 黏糊糊
 黏結力
 黏結性
 黏膜炎
+黏著劑
+黏著力
+黏著性
+黏著語
 黏起來
 黏附力
 黏附性
@@ -200972,6 +200925,9 @@ use_preset_vocabulary: false
 一年半載
 一年四季
 一年生植
+一床一臥
+一床三放
+一床兩好
 一座皆驚
 一廂情願
 一廉如水
@@ -201203,9 +201159,6 @@ use_preset_vocabulary: false
 一無長物
 一爭兩醜
 一爭長短
-一床一臥
-一床三放
-一床兩好
 一牆之隔
 一片丹心
 一片冰心
@@ -201269,7 +201222,6 @@ use_preset_vocabulary: false
 一眼望去
 一眼看破
 一眼看穿
-一著不慎
 一睹之下
 一瞑不視
 一瞧之下
@@ -201400,6 +201352,7 @@ use_preset_vocabulary: false
 一葉知秋
 一葉蔽目
 一葉障目
+一著不慎
 一葦渡江
 一薰一蕕
 一號木桿
@@ -201605,7 +201558,7 @@ use_preset_vocabulary: false
 丁一卯二
 丁一確二
 丁丁冬冬
-丁丁炒面
+丁丁炒麵
 丁丁當當
 丁克家庭
 丁公被戮
@@ -201650,7 +201603,7 @@ use_preset_vocabulary: false
 七娘媽亭
 七孔流血
 七孔生煙
-七尺之驅
+七尺之軀
 七層架構
 七平八穩
 七年之病
@@ -201775,9 +201728,9 @@ use_preset_vocabulary: false
 三十二萬
 三十五萬
 三十八萬
-三十六著
 三十六策
 三十六萬
+三十六著
 三十六行
 三十六計
 三十六體
@@ -202110,6 +202063,7 @@ use_preset_vocabulary: false
 上市交易
 上市公司
 上市時間
+上床睡覺
 上廳行首
 上情下達
 上投摩根
@@ -202145,7 +202099,6 @@ use_preset_vocabulary: false
 上清童子
 上游工業
 上漏下溼
-上床睡覺
 上片時間
 上班時間
 上甘嶺區
@@ -202522,7 +202475,6 @@ use_preset_vocabulary: false
 不告而去
 不咎既往
 不哼不哈
-不唧𠺕
 不問好歹
 不問皁白
 不問青黃
@@ -202569,8 +202521,8 @@ use_preset_vocabulary: false
 不大離兒
 不太明白
 不失時機
-不失良機
 不失眾望
+不失良機
 不夷不惠
 不奪農時
 不好啟齒
@@ -202879,12 +202831,6 @@ use_preset_vocabulary: false
 不滅定律
 不漲反跌
 不澀不苦
-不無可疑
-不無小益
-不無小補
-不無道理
-不無遺憾
-不然的話
 不為人下
 不為人用
 不為人知
@@ -202895,6 +202841,12 @@ use_preset_vocabulary: false
 不為瓦全
 不為禍先
 不為福始
+不無可疑
+不無小益
+不無小補
+不無道理
+不無遺憾
+不然的話
 不爽不錯
 不犯尋思
 不犯王法
@@ -202957,14 +202909,6 @@ use_preset_vocabulary: false
 不省人事
 不真不假
 不眠不休
-不著一字
-不著不落
-不著家人
-不著疼熱
-不著痕跡
-不著痛癢
-不著筋節
-不著邊際
 不瞅不睬
 不瞞你說
 不矜不伐
@@ -203124,6 +203068,14 @@ use_preset_vocabulary: false
 不落俗套
 不落痕跡
 不落窠臼
+不著一字
+不著不落
+不著家人
+不著疼熱
+不著痕跡
+不著痛癢
+不著筋節
+不著邊際
 不葷不素
 不蔓不支
 不蔓不枝
@@ -203971,6 +203923,7 @@ use_preset_vocabulary: false
 久負盛名
 久違顏範
 久雨成災
+么么唱唱
 之乎者也
 之八九只
 之死靡他
@@ -203982,8 +203935,8 @@ use_preset_vocabulary: false
 乍暖還寒
 乍熱乍冷
 乍看之下
-乍著膽子
 乍聽之下
+乍著膽子
 乍讀之下
 乍雨乍晴
 乏人問津
@@ -204176,6 +204129,7 @@ use_preset_vocabulary: false
 乾淨利落
 乾淨爽利
 乾燥氣候
+乾球溫度
 乾盡一壺
 乾盡一杯
 乾盡一碗
@@ -204507,10 +204461,10 @@ use_preset_vocabulary: false
 互有勝負
 互有輸贏
 互派大使
-互爭雄長
 互為因果
 互為奧援
 互為條件
+互爭雄長
 互相依存
 互相切磋
 互相幫助
@@ -205224,6 +205178,8 @@ use_preset_vocabulary: false
 人溺己溺
 人滿之患
 人滿為患
+人為刀俎
+人為財死
 人無剛骨
 人無千日
 人無完人
@@ -205233,8 +205189,6 @@ use_preset_vocabulary: false
 人煙稀少
 人煙稠密
 人煙輻輳
-人為刀俎
-人為財死
 人物字號
 人物形象
 人物性格
@@ -205268,6 +205222,7 @@ use_preset_vocabulary: false
 人盡其材
 人盡可夫
 人盡皆知
+人眾勝天
 人神共憤
 人神同憤
 人稠物穰
@@ -205288,7 +205243,6 @@ use_preset_vocabulary: false
 人與自然
 人莫予毒
 人蛇集團
-人眾勝天
 人行橫道
 人行陸橋
 人要衣裝
@@ -205703,6 +205657,7 @@ use_preset_vocabulary: false
 以盲辨色
 以直報怨
 以眼還眼
+以眾克寡
 以石投卵
 以石投水
 以碫投卵
@@ -205730,7 +205685,6 @@ use_preset_vocabulary: false
 以蠡測海
 以血償血
 以血洗血
-以眾克寡
 以西結書
 以規為瑱
 以觀後效
@@ -205858,7 +205812,6 @@ use_preset_vocabulary: false
 企足而待
 伈伈睍睍
 伉儷情深
-伊于湖底
 伊于胡底
 伊兒汗國
 伊凡第三
@@ -206034,7 +205987,6 @@ use_preset_vocabulary: false
 但知其一
 但說無妨
 但願如此
-佈囊其口
 佈道大會
 佈陣安營
 佈雷封鎖
@@ -206637,7 +206589,6 @@ use_preset_vocabulary: false
 信息資源
 信手塗鴉
 信手拈來
-信托貿易
 信步而行
 信步閒遊
 信用交易
@@ -206668,6 +206619,7 @@ use_preset_vocabulary: false
 信號處理
 信託公司
 信託基金
+信託貿易
 信託資金
 信訪工作
 信誓旦旦
@@ -207143,6 +207095,13 @@ use_preset_vocabulary: false
 偷食禁果
 偷饞抹嘴
 偷香竊玉
+偽劣商品
+偽基百科
+偽滿州國
+偽滿政府
+偽滿洲國
+偽裝滲透
+偽造文書
 傀儡家庭
 傀儡政府
 傀儡政權
@@ -207244,9 +207203,9 @@ use_preset_vocabulary: false
 傳染病學
 傳染途徑
 傳檄而定
-傳熱係數
 傳為佳話
 傳為美談
+傳熱係數
 傳真存轉
 傳真發送
 傳真號碼
@@ -207385,13 +207344,6 @@ use_preset_vocabulary: false
 僕僮成群
 僕固懷恩
 僕雖罷駑
-偽劣商品
-偽基百科
-偽滿州國
-偽滿政府
-偽滿洲國
-偽裝滲透
-偽造文書
 僥倖取勝
 僥倖獲勝
 僥天之倖
@@ -208537,6 +208489,12 @@ use_preset_vocabulary: false
 公益彩券
 公益活動
 公益軟體
+公眾人物
+公眾傳播
+公眾參與
+公眾意見
+公眾衛生
+公眾集會
 公示催告
 公示行為
 公示送達
@@ -208559,12 +208517,6 @@ use_preset_vocabulary: false
 公耳忘私
 公職人員
 公聽並觀
-公眾人物
-公眾傳播
-公眾參與
-公眾意見
-公眾衛生
-公眾集會
 公設辯護
 公許碼頭
 公諸同好
@@ -208932,8 +208884,8 @@ use_preset_vocabulary: false
 冒昧從事
 冒煙突火
 冒犯之處
-冒著危險
 冒納羅亞
+冒著危險
 冒進政策
 冒金星兒
 冒鋒突圍
@@ -209331,6 +209283,8 @@ use_preset_vocabulary: false
 分工合作
 分工整合
 分布學習
+分床而眠
+分床而睡
 分庭伉禮
 分庭抗禮
 分式方程
@@ -209384,8 +209338,6 @@ use_preset_vocabulary: false
 分流教學
 分淺緣慳
 分淺緣薄
-分床而眠
-分床而睡
 分片包乾
 分班序齒
 分班考試
@@ -209906,6 +209858,7 @@ use_preset_vocabulary: false
 剛愎性成
 剛愎自用
 剛戾自用
+剛才一載
 剛板硬正
 剛柔並濟
 剛柔相濟
@@ -209915,7 +209868,6 @@ use_preset_vocabulary: false
 剛毅木訥
 剛毅果決
 剛直不阿
-剛才一載
 剛而自矜
 剛行剛驀
 剛褊自用
@@ -210439,11 +210391,11 @@ use_preset_vocabulary: false
 動盪不安
 動盪不定
 動眼神經
+動眾勞師
 動秤兒的
 動能武器
 動脈硬化
 動脈輸血
-動眾勞師
 動見觀瞻
 動詞結構
 動詞變化
@@ -211667,8 +211619,8 @@ use_preset_vocabulary: false
 厚植國力
 厚此薄彼
 厚死薄生
-厚著臉皮
 厚祿高官
+厚著臉皮
 厚貌深情
 厚顏無恥
 厚養薄葬
@@ -211783,6 +211735,7 @@ use_preset_vocabulary: false
 參差錯落
 參政議政
 參照實行
+參眾兩院
 參知政事
 參考價值
 參考價格
@@ -211796,7 +211749,6 @@ use_preset_vocabulary: false
 參考特藏
 參考資料
 參與人員
-參眾兩院
 參見互照
 參觀參觀
 參觀團體
@@ -212289,8 +212241,8 @@ use_preset_vocabulary: false
 可以查看
 可以根據
 可以滿足
-可以燎原
 可以為錯
+可以燎原
 可以獲得
 可以理解
 可以用來
@@ -212460,12 +212412,12 @@ use_preset_vocabulary: false
 吃瓦片兒
 吃盡當光
 吃眼前虧
-吃著碗裡
 吃自來食
 吃自在飯
 吃舊鍋粥
 吃苦在前
 吃苦耐勞
+吃著碗裡
 吃虧上當
 吃衙門飯
 吃裡扒外
@@ -212651,12 +212603,12 @@ use_preset_vocabulary: false
 合瓣花冠
 合當有事
 合眼摸象
+合眾為一
+合眾銀行
 合縱連橫
 合義複詞
 合而為一
 合菜戴帽
-合眾為一
-合眾銀行
 合該有事
 合資企業
 合資公司
@@ -212745,6 +212697,9 @@ use_preset_vocabulary: false
 同工異調
 同年同月
 同年而語
+同床共枕
+同床各夢
+同床異夢
 同德同心
 同心並力
 同心僇力
@@ -212799,9 +212754,6 @@ use_preset_vocabulary: false
 同溫同壓
 同濟大學
 同父異母
-同床共枕
-同床各夢
-同床異夢
 同班同學
 同理可證
 同甘共苦
@@ -213440,10 +213392,10 @@ use_preset_vocabulary: false
 咬定牙關
 咬文嚼字
 咬牙切齒
-咬著不放
 咬緊牙根
 咬緊牙關
 咬舌自盡
+咬著不放
 咬薑呷醋
 咬釘嚼鐵
 咭力骨碌
@@ -213798,6 +213750,17 @@ use_preset_vocabulary: false
 問題重重
 問鼎中原
 問鼎輕重
+啖指咬舌
+啜菽飲水
+啞口無言
+啞子做夢
+啞子得夢
+啞子托夢
+啞然失笑
+啞然失色
+啞然無生
+啞然無言
+啞默悄靜
 啟人疑竇
 啟動作業
 啟動儀式
@@ -213810,17 +213773,6 @@ use_preset_vocabulary: false
 啟蒙哲學
 啟蒙時代
 啟蒙運動
-啖指咬舌
-啜菽飲水
-啞口無言
-啞子做夢
-啞子得夢
-啞子托夢
-啞然失笑
-啞然失色
-啞然無生
-啞然無言
-啞默悄靜
 啣口墊背
 啦啦隊員
 啦啦隊長
@@ -214004,7 +213956,7 @@ use_preset_vocabulary: false
 單主寄生
 單人獨馬
 單人車賽
-單位信托
+單位信託
 單位價格
 單位向量
 單位工程
@@ -215150,11 +215102,11 @@ use_preset_vocabulary: false
 在經濟上
 在網絡上
 在線人數
+在線充值
 在線升級
 在線回復
 在線播放
 在線服務
-在線沖值
 在線游戲
 在線觀看
 在職人員
@@ -215346,14 +215298,14 @@ use_preset_vocabulary: false
 坐失良機
 坐家女兒
 坐山觀虎
+坐床富貴
+坐床撒帳
 坐懷不亂
 坐擁書城
 坐擁百城
 坐收漁利
 坐檯小姐
 坐無車公
-坐床富貴
-坐床撒帳
 坐產招夫
 坐立不安
 坐立難安
@@ -215641,7 +215593,6 @@ use_preset_vocabulary: false
 基金經理
 基隆廟口
 堂分姑娘
-堂吉河德
 堂吉訶德
 堂堂之陳
 堂堂正正
@@ -216721,13 +216672,13 @@ use_preset_vocabulary: false
 大漲大跌
 大漲小回
 大澈大悟
+大為受用
+大為失望
 大烹五鼎
 大煞風景
 大煠八塊
 大熊星座
 大爆冷門
-大為受用
-大為失望
 大爺習氣
 大犬星座
 大獲全勝
@@ -216754,6 +216705,15 @@ use_preset_vocabulary: false
 大相徑庭
 大相矛盾
 大相逕庭
+大眾傳播
+大眾公司
+大眾媒介
+大眾捷運
+大眾文化
+大眾文學
+大眾汽車
+大眾社會
+大眾運輸
 大石橋市
 大破大立
 大破慳囊
@@ -216827,17 +216787,8 @@ use_preset_vocabulary: false
 大葉合歡
 大葉大學
 大蒜效應
-大處著眼
 大處落墨
-大眾傳播
-大眾公司
-大眾媒介
-大眾捷運
-大眾文化
-大眾文學
-大眾汽車
-大眾社會
-大眾運輸
+大處著眼
 大行其道
 大行政區
 大衍歷史
@@ -216988,12 +216939,12 @@ use_preset_vocabulary: false
 天下歸心
 天下沒有
 天下洶洶
-天下無敵
-天下無賊
-天下無雙
 天下為一
 天下為公
 天下為家
+天下無敵
+天下無賊
+天下無雙
 天下獨步
 天下第一
 天下興亡
@@ -217472,8 +217423,8 @@ use_preset_vocabulary: false
 夾帶走私
 夾心餅乾
 夾槍帶棒
-夾著尾巴
 夾背心子
+夾著尾巴
 夾被摩痛
 夾起尾巴
 夾道歡迎
@@ -217944,6 +217895,7 @@ use_preset_vocabulary: false
 如癡如醉
 如登仙境
 如皋射雉
+如眾所知
 如箭在弦
 如簧之舌
 如糖似蜜
@@ -217974,7 +217926,6 @@ use_preset_vocabulary: false
 如蟻附羶
 如蠅逐臭
 如蠅附羶
-如眾所知
 如見其容
 如解倒懸
 如訴如泣
@@ -219577,8 +219528,8 @@ use_preset_vocabulary: false
 寬刑省法
 寬吻海豚
 寬大仁愛
-寬大無邊
 寬大為懷
+寬大無邊
 寬宏大度
 寬宏大量
 寬寬厚厚
@@ -219892,6 +219843,8 @@ use_preset_vocabulary: false
 對天發誓
 對天祝告
 對天長嘆
+對床夜語
+對床風雨
 對我來說
 對抗煸動
 對數函數
@@ -219906,8 +219859,6 @@ use_preset_vocabulary: false
 對準目標
 對準鐘錶
 對焦範圍
-對床夜語
-對床風雨
 對牛彈琴
 對症下藥
 對症發藥
@@ -219957,6 +219908,9 @@ use_preset_vocabulary: false
 導護老師
 小三和絃
 小不點兒
+小丑丫鬟
+小丑跳梁
+小丑跳樑
 小乘佛教
 小亂避城
 小事化了
@@ -220070,6 +220024,8 @@ use_preset_vocabulary: false
 小留學生
 小白臉兒
 小眼薄皮
+小眾文化
+小眾藝術
 小紅蘿蔔
 小組成員
 小組會議
@@ -220090,8 +220046,6 @@ use_preset_vocabulary: false
 小蘇打粉
 小蘿蔔頭
 小處著手
-小眾文化
-小眾藝術
 小行星帶
 小表姊夫
 小裡小氣
@@ -220103,9 +220057,6 @@ use_preset_vocabulary: false
 小過門兒
 小道新聞
 小道消息
-小醜丫鬟
-小醜跳梁
-小醜跳樑
 小針美容
 小鎮風光
 小門小戶
@@ -220570,6 +220521,7 @@ use_preset_vocabulary: false
 岩村明憲
 岩石循環
 岳撼山崩
+岳普湖縣
 岳陽地區
 岳陽樓區
 岳陽樓記
@@ -220579,11 +220531,11 @@ use_preset_vocabulary: false
 峨嵋山市
 峨然矗立
 峨眉山市
+峯迴路轉
 峰峰礦區
 峰巒翠疊
 峰巒起伏
 峰迴路轉
-峯迴路轉
 島內居民
 島外居民
 島嶼防線
@@ -220647,7 +220599,6 @@ use_preset_vocabulary: false
 嶺東商專
 嶽峙淵渟
 嶽得爾歌
-嶽普湖縣
 嶽麓書院
 巋然不動
 巋然獨存
@@ -220656,8 +220607,8 @@ use_preset_vocabulary: false
 巍然屹立
 巍然矗立
 巒兄巒弟
-巔峰狀態
 巔峯狀態
+巔峰狀態
 巔峰負載
 巔崖峻谷
 巖居穴處
@@ -221153,6 +221104,7 @@ use_preset_vocabulary: false
 布利斯班
 布勒斯特
 布匿戰爭
+布囊其口
 布帆無恙
 布希威克
 布希總統
@@ -221370,13 +221322,13 @@ use_preset_vocabulary: false
 帶甲之勞
 帶病上場
 帶眼安眉
-帶著孩子
 帶礪山河
 帶礪河山
 帶罪徵收
 帶罪立功
 帶膆貂掛
 帶草連真
+帶著孩子
 帶薪休假
 帶金佩紫
 帶電粒子
@@ -221694,7 +221646,6 @@ use_preset_vocabulary: false
 幹家做活
 幹幹幹幹
 幹父之蠱
-幹球溫度
 幹的停當
 幹線公車
 幹群關係
@@ -221754,6 +221705,16 @@ use_preset_vocabulary: false
 幾為所害
 幾點思考
 庇里牛斯
+床上功夫
+床上安床
+床上施床
+床上用品
+床上運動
+床下安床
+床公床婆
+床笫之私
+床第之間
+床頭金盡
 底下奏樂
 底格里斯
 底棲生物
@@ -221925,6 +221886,7 @@ use_preset_vocabulary: false
 廣瀚無邊
 廣用試紙
 廣發證券
+廣眾大庭
 廣種薄收
 廣積陰德
 廣結善緣
@@ -221932,7 +221894,6 @@ use_preset_vocabulary: false
 廣緝文書
 廣群芳譜
 廣而告之
-廣眾大庭
 廣行善事
 廣袖高髻
 廣覽詩書
@@ -222481,8 +222442,8 @@ use_preset_vocabulary: false
 彼此之間
 彼此剋制
 彼此彼此
-彼竭我盈
 彼眾我寡
+彼竭我盈
 彼長我消
 往事如夢
 往事如煙
@@ -223221,6 +223182,7 @@ use_preset_vocabulary: false
 心膽墮地
 心臟地區
 心臟按摩
+心臟死亡
 心臟疾患
 心臟病史
 心臟病發
@@ -223288,7 +223250,6 @@ use_preset_vocabulary: false
 心驚膽落
 心驚膽跳
 心驚膽顫
-心髒死亡
 心高氣傲
 心高氣硬
 心魂不定
@@ -224967,9 +224928,9 @@ use_preset_vocabulary: false
 懷璧其罪
 懷璧為罪
 懷真抱素
+懷磚之俗
 懷著身子
 懷著鬼胎
-懷磚之俗
 懷質抱真
 懷道迷邦
 懷金垂紫
@@ -224984,7 +224945,6 @@ use_preset_vocabulary: false
 懸崖勒馬
 懸崖峭壁
 懸崖絕壁
-懸巖峭壁
 懸弧之慶
 懸心吊膽
 懸懸而望
@@ -225106,7 +225066,6 @@ use_preset_vocabulary: false
 成本覈算
 成本計算
 成果輝煌
-成熟分裂
 成為一名
 成為一種
 成為世界
@@ -225114,6 +225073,7 @@ use_preset_vocabulary: false
 成為事實
 成為泡影
 成為現實
+成熟分裂
 成田機場
 成百上千
 成礦作用
@@ -225459,9 +225419,11 @@ use_preset_vocabulary: false
 才子佳人
 才學兼優
 才廣妨身
+才得兩年
 才微智淺
 才德兼備
 才思敏捷
+才是真正
 才氣無雙
 才氣縱橫
 才氣過人
@@ -225595,7 +225557,6 @@ use_preset_vocabulary: false
 打狗欺主
 打甚麼緊
 打發時間
-打著竄鼓
 打知名度
 打破常規
 打破慣例
@@ -225621,6 +225582,7 @@ use_preset_vocabulary: false
 打花胡哨
 打草驚蛇
 打落水狗
+打著竄鼓
 打虎不著
 打蛇不死
 打街罵巷
@@ -225737,10 +225699,10 @@ use_preset_vocabulary: false
 扯是搬非
 扯牛尾巴
 扯皮弄筋
-扯著脖子
 扯破臉皮
 扯空砑光
 扯篷拉縴
+扯著脖子
 扯謊撩白
 扯開嗓子
 扯閑盤兒
@@ -225949,14 +225911,14 @@ use_preset_vocabulary: false
 抓抓掗掗
 抓抓撓撓
 抓拿犯人
-抓著不放
-抓著癢處
 抓破臉兒
 抓綱治國
 抓緊學習
 抓緊時間
 抓耳搔腮
 抓耳撓腮
+抓著不放
+抓著癢處
 抓頭挖耳
 抔土未乾
 投井下石
@@ -226419,7 +226381,6 @@ use_preset_vocabulary: false
 拔火罐兒
 拔爾波亞
 拔犀擢象
-拔著短籌
 拔絲地瓜
 拔群出萃
 拔群出類
@@ -226430,6 +226391,7 @@ use_preset_vocabulary: false
 拔萃出群
 拔萃出類
 拔萃書室
+拔著短籌
 拔葵去織
 拔葵啖棗
 拔類超群
@@ -226632,12 +226594,12 @@ use_preset_vocabulary: false
 拿把不住
 拿板弄勢
 拿班作勢
-拿著腔兒
 拿粗挾細
 拿糖作醋
 拿腔作勢
 拿腔做勢
 拿腔拿調
+拿著腔兒
 拿賊拿贓
 拿賊要贓
 拿賊見贓
@@ -226984,10 +226946,10 @@ use_preset_vocabulary: false
 捏怪排科
 捏手捏腳
 捏把冷汗
-捏著鼻子
 捏神捏鬼
 捏脊治療
 捏腳捏手
+捏著鼻子
 捏造出來
 捐忿與瑕
 捐棄前嫌
@@ -227076,9 +227038,9 @@ use_preset_vocabulary: false
 捲甲重來
 捲舌元音
 捲舌韻母
-捶檯拍凳
 捶床拍枕
 捶床搗枕
+捶檯拍凳
 捶胸跌腳
 捶胸跌足
 捶胸頓腳
@@ -227092,10 +227054,10 @@ use_preset_vocabulary: false
 捷運系統
 捺定性子
 捻手捻腳
-捻著鼻子
 捻神捻鬼
 捻腳捻手
 捻花微笑
+捻著鼻子
 掀了開來
 掀天動地
 掀天揭地
@@ -227322,10 +227284,10 @@ use_preset_vocabulary: false
 接應不暇
 接替栽培
 接淅而行
-接著就是
 接紹香煙
 接續香煙
 接耳交頭
+接著就是
 接袂成帷
 接觸不良
 接觸傳染
@@ -227704,9 +227666,9 @@ use_preset_vocabulary: false
 搓粉團朱
 搓粉摶朱
 搔到癢處
-搔著癢處
 搔耳抓腮
 搔耳捶胸
+搔著癢處
 搔頭弄姿
 搔頭摸耳
 搔首弄姿
@@ -228002,11 +227964,11 @@ use_preset_vocabulary: false
 撥火又長
 撥煩理劇
 撥煩理難
-撥著癢處
 撥絃樂器
 撥草尋蛇
 撥萬論千
 撥萬輪千
+撥著癢處
 撥號系統
 撥號連接
 撥雨撩雲
@@ -228213,9 +228175,9 @@ use_preset_vocabulary: false
 據守天險
 據實以報
 據實相告
+據床指麾
 據情辦理
 據為己有
-據床指麾
 據理力爭
 據理而爭
 據義履方
@@ -228595,8 +228557,6 @@ use_preset_vocabulary: false
 放眼天下
 放眼望去
 放眼看去
-放著不用
-放著不管
 放精神著
 放縱不拘
 放縱不羈
@@ -228607,6 +228567,8 @@ use_preset_vocabulary: false
 放聲高歌
 放肆荒唐
 放膽去做
+放著不用
+放著不管
 放蕩不羈
 放蕩任氣
 放蕩弛縱
@@ -230640,8 +230602,8 @@ use_preset_vocabulary: false
 普法戰爭
 普渡大學
 普渡眾生
-普濟群生
 普濟眾生
+普濟群生
 普照大地
 普立茲獎
 普羅大眾
@@ -231450,9 +231412,9 @@ use_preset_vocabulary: false
 有法必依
 有消息說
 有滋有味
+有為有守
 有無相生
 有無相通
-有為有守
 有犯無隱
 有獎問答
 有獎徵答
@@ -232127,7 +232089,6 @@ use_preset_vocabulary: false
 束馬懸車
 束髮封帛
 束髮金冠
-杠杆收購
 杭州灘簧
 杭州評詞
 杭州評話
@@ -232212,6 +232173,10 @@ use_preset_vocabulary: false
 東差西誤
 東巴文化
 東市朝衣
+東床坦腹
+東床嬌婿
+東床嬌客
+東床快婿
 東張西望
 東征西怨
 東征西討
@@ -232277,10 +232242,6 @@ use_preset_vocabulary: false
 東漢時期
 東漢末年
 東漸西被
-東床坦腹
-東床嬌婿
-東床嬌客
-東床快婿
 東現漢紀
 東瓜茄子
 東看西看
@@ -233005,10 +232966,10 @@ use_preset_vocabulary: false
 植物馴化
 植皮手術
 植黨營私
+椎床倒枕
 椎心泣血
 椎心蝕骨
 椎拍輐斷
-椎床倒枕
 椎牛饗士
 椎輪大輅
 椿萱並茂
@@ -233176,6 +233137,7 @@ use_preset_vocabulary: false
 槓子火燒
 槓桿原理
 槓桿定律
+槓桿收購
 槥車相望
 樁構棧道
 樂不可支
@@ -234476,6 +234438,7 @@ use_preset_vocabulary: false
 比爾蓋茨
 比物連類
 比目連枝
+比眾不同
 比箭掄拳
 比約克曼
 比翼而行
@@ -234490,7 +234453,6 @@ use_preset_vocabulary: false
 比肩隨踵
 比色分析
 比薩斜塔
-比眾不同
 比賽規則
 比賽項目
 比較價格
@@ -234739,6 +234701,7 @@ use_preset_vocabulary: false
 民殷國富
 民殷財阜
 民淳俗厚
+民為邦本
 民無二王
 民熙物阜
 民營事業
@@ -234746,7 +234709,6 @@ use_preset_vocabulary: false
 民營公司
 民營公車
 民營經濟
-民為邦本
 民生主義
 民生凋敝
 民生史觀
@@ -234763,6 +234725,11 @@ use_preset_vocabulary: false
 民用建築
 民用機場
 民用航空
+民眾代表
+民眾團體
+民眾教育
+民眾服務
+民眾運動
 民窮兵疲
 民窮財匱
 民窮財盡
@@ -234773,11 +234740,6 @@ use_preset_vocabulary: false
 民航班機
 民航總局
 民航飛機
-民眾代表
-民眾團體
-民眾教育
-民眾服務
-民眾運動
 民謠歌手
 民謠歌曲
 民變峰起
@@ -235394,13 +235356,13 @@ use_preset_vocabulary: false
 沉湎酒色
 沉漸剛克
 沉潛剛克
-沉著應戰
-沉著痛快
 沉睡不醒
 沉積作用
 沉竈產蛙
 沉舟破釜
 沉船事故
+沉著應戰
+沉著痛快
 沉重寡言
 沉重少言
 沉重打擊
@@ -235538,7 +235500,6 @@ use_preset_vocabulary: false
 沒的功夫
 沒皮沒臉
 沒皮賴臉
-沒著沒落
 沒神沒鬼
 沒福消受
 沒精打彩
@@ -235550,6 +235511,7 @@ use_preset_vocabulary: false
 沒聲沒息
 沒臉沒皮
 沒臉見人
+沒著沒落
 沒處出豁
 沒裡沒外
 沒見世面
@@ -235981,7 +235943,6 @@ use_preset_vocabulary: false
 泥足巨人
 泥金帖子
 泥鞋窄襪
-#注冊用戶
 注射針頭
 注意事項
 注意安全
@@ -237976,7 +237937,6 @@ use_preset_vocabulary: false
 火燒祆廟
 火牌令箭
 火眼金睛
-火著心兒
 火石玻璃
 火箭佈雷
 火箭燃料
@@ -237991,6 +237951,7 @@ use_preset_vocabulary: false
 火腿漢堡
 火花放電
 火花試驗
+火著心兒
 火裡火去
 火裡火發
 火車時刻
@@ -237998,7 +237959,7 @@ use_preset_vocabulary: false
 火鷓鴣鳥
 灰不喇唧
 灰不溜丟
-灰巖殘丘
+灰岩殘丘
 灰度等級
 灰心喪意
 灰心喪氣
@@ -238079,6 +238040,83 @@ use_preset_vocabulary: false
 炸土豆條
 炸土豆片
 炸彈開花
+為中心的
+為主作倡
+為之一振
+為之一新
+為之動容
+為人作嫁
+為人在世
+為人師表
+為人為徹
+為人處世
+為人處事
+為人行事
+為人解圍
+為仁不富
+為今之計
+為何如此
+為傲的是
+為叢敺雀
+為叢驅雀
+為名為利
+為善最樂
+為國增光
+為國捐軀
+為國為民
+為國爭光
+為國犧牲
+為基礎的
+為好成歉
+為子死孝
+為學之道
+為富不仁
+為小失大
+為山九仞
+為德不卒
+為德不終
+為您提供
+為您服務
+為情造文
+為惡不悛
+為所欲為
+為數不多
+為數甚微
+為數眾多
+為時不晚
+為時不遠
+為時已晚
+為時未晚
+為時過早
+為期不遠
+為校增光
+為校爭光
+為榮的是
+為權為利
+為民前鋒
+為民喉舌
+為民請命
+為民除害
+為民除患
+為法自弊
+為淵敺魚
+為的吃穿
+為臣死忠
+為虎作倀
+為虎傅翼
+為虎傳翼
+為虎添翼
+為虺弗摧
+為蛇添足
+為蛇畫足
+為蛇若何
+為裘為箕
+為難之處
+為難起來
+為非作歹
+為頭把腦
+為鬼為蜮
+為鬼為魅
 烈士徇名
 烈士陵園
 烈日當空
@@ -238432,14 +238470,14 @@ use_preset_vocabulary: false
 無濟於事
 無濟無主
 無灰粉筆
+無為牛後
+無為而治
+無為自化
 無煙火藥
 無煙焦煤
 無照營業
 無照經營
 無照駕駛
-無為牛後
-無為而治
-無為自化
 無牽無掛
 無獨有偶
 無理取鬧
@@ -239063,83 +239101,6 @@ use_preset_vocabulary: false
 爭頭鼓腦
 爭風吃醋
 爭鬥不休
-為中心的
-為主作倡
-為之一振
-為之一新
-為之動容
-為人作嫁
-為人在世
-為人師表
-為人為徹
-為人處世
-為人處事
-為人行事
-為人解圍
-為仁不富
-為今之計
-為何如此
-為傲的是
-為叢敺雀
-為叢驅雀
-為名為利
-為善最樂
-為國增光
-為國捐軀
-為國爭光
-為國為民
-為國犧牲
-為基礎的
-為好成歉
-為子死孝
-為學之道
-為富不仁
-為小失大
-為山九仞
-為德不卒
-為德不終
-為您提供
-為您服務
-為情造文
-為惡不悛
-為所欲為
-為數不多
-為數甚微
-為數眾多
-為時不晚
-為時不遠
-為時已晚
-為時未晚
-為時過早
-為期不遠
-為校增光
-為校爭光
-為榮的是
-為權為利
-為民前鋒
-為民喉舌
-為民請命
-為民除害
-為民除患
-為法自弊
-為淵敺魚
-為的吃穿
-為臣死忠
-為虎作倀
-為虎傅翼
-為虎傳翼
-為虎添翼
-為虺弗摧
-為蛇添足
-為蛇畫足
-為蛇若何
-為裘為箕
-為難之處
-為難起來
-為非作歹
-為頭把腦
-為鬼為蜮
-為鬼為魅
 爵士樂團
 爵士音樂
 父做子笑
@@ -239188,16 +239149,6 @@ use_preset_vocabulary: false
 爾詐我虞
 爾雅有言
 爾雅溫文
-床上功夫
-床上安床
-床上施床
-床上用品
-床上運動
-床下安床
-床公床婆
-床笫之私
-床第之間
-床頭金盡
 牆上泥皮
 牆花路柳
 牆花路草
@@ -240315,7 +240266,7 @@ use_preset_vocabulary: false
 瑞氣祥雲
 瑞秋懷茲
 瑞薩科技
-瑞郎方麵
+瑞郎方面
 瑟弄琴調
 瑟瑟發抖
 瑟瑟秋風
@@ -241137,8 +241088,8 @@ use_preset_vocabulary: false
 略有出入
 略有所聞
 略有耳聞
-略無參商
 略為好轉
+略無參商
 略盡情誼
 略知一二
 略知皮毛
@@ -241297,15 +241248,15 @@ use_preset_vocabulary: false
 當用則用
 當當丁丁
 當直巡邏
-當著不著
-當著矮人
+當眾宣佈
+當眾表明
+當眾表示
 當罏紅袖
 當者披靡
 當耳邊風
 當艄拿舵
-當眾宣佈
-當眾表明
-當眾表示
+當著不著
+當著矮人
 當行出色
 當選無效
 當量劑量
@@ -241550,7 +241501,6 @@ use_preset_vocabulary: false
 登山越嶺
 登山運動
 登山驀嶺
-登峰造極
 登峰造極
 登庸人才
 登月小艇
@@ -242219,8 +242169,8 @@ use_preset_vocabulary: false
 皰疹病毒
 皺皺巴巴
 皺眉蹙眼
-皺著眉頭
 皺葉歐芹
+皺著眉頭
 盂方水方
 盂蘭盆會
 盆傾甕倒
@@ -242575,7 +242525,6 @@ use_preset_vocabulary: false
 直瀉而下
 直皖戰爭
 直眉瞪眼
-直著身子
 直立起來
 直節勁氣
 直系祖先
@@ -242584,6 +242533,7 @@ use_preset_vocabulary: false
 直而不挺
 直肚直腸
 直腸直肚
+直著身子
 直覺反應
 直角三角
 直角坐標
@@ -242707,9 +242657,9 @@ use_preset_vocabulary: false
 相沿成習
 相滅相生
 相濡以沫
+相為表裡
 相煎何急
 相煎太急
-相為表裡
 相片光碟
 相生相剋
 相當程度
@@ -242767,7 +242717,7 @@ use_preset_vocabulary: false
 相風使帆
 相驚伯有
 相體裁衣
-盼既示覆
+盼即示覆
 盾皮魚類
 省人事廳
 省來省去
@@ -242877,10 +242827,10 @@ use_preset_vocabulary: false
 看景生情
 看朱成碧
 看淡後市
-看著不管
-看著鍋裡
 看破紅塵
 看菜吃飯
+看著不管
+看著鍋裡
 看走了眼
 看開一點
 看風使帆
@@ -243016,18 +242966,72 @@ use_preset_vocabulary: false
 眼餳耳熱
 眼饞肚飽
 眼高手低
-著地還錢
-著急起來
-著手回春
-著手成春
-著甚來由
-著生植物
-著著失敗
-著著進逼
-著糞佛頭
-著腳書樓
-著色軟體
-著重指出
+眾人敬仰
+眾人皆知
+眾人皆醉
+眾叛親離
+眾口一詞
+眾口交攻
+眾口交薦
+眾口交譽
+眾口同聲
+眾口如一
+眾口熏天
+眾口稱善
+眾口紛紜
+眾口鑠金
+眾口難調
+眾喣漂山
+眾喣飄山
+眾多人口
+眾寡不敵
+眾寡勢殊
+眾寡懸殊
+眾寡莫敵
+眾寡難敵
+眾少不敵
+眾少成多
+眾川赴海
+眾心如城
+眾心成城
+眾志成城
+眾怒難任
+眾怒難息
+眾怒難犯
+眾所周知
+眾所熟知
+眾所瞻望
+眾所矚目
+眾擎易舉
+眾散親離
+眾星拱北
+眾星拱月
+眾星拱辰
+眾星捧月
+眾望所依
+眾望所歸
+眾望所積
+眾望攸歸
+眾望有歸
+眾毀所歸
+眾毛攢毬
+眾毛攢球
+眾毛攢裘
+眾生好度
+眾目共睹
+眾目共視
+眾目具瞻
+眾目所歸
+眾目昭彰
+眾目睽睽
+眾盲摸象
+眾矢之的
+眾說不一
+眾說紛揉
+眾說紛紜
+眾謀僉用
+眾議成林
+眾醉獨醒
 睚眥之嫌
 睚眥之怨
 睚眥之私
@@ -243138,8 +243142,8 @@ use_preset_vocabulary: false
 矇昧主義
 矇昧無知
 矇混過關
-矇著鍋兒
 矇矇矓矓
+矇著鍋兒
 矇頭大睡
 矇頭衲被
 矇頭轉向
@@ -243381,7 +243385,6 @@ use_preset_vocabulary: false
 石渠閣議
 石火電光
 石灰岩洞
-石灰巖洞
 石炭井區
 石爛海枯
 石版印刷
@@ -243577,8 +243580,8 @@ use_preset_vocabulary: false
 硬是要得
 硬朗結實
 硬盤空間
-硬著頭皮
 硬脂酸鈣
+硬著頭皮
 硬語盤空
 硬質合金
 硬頂跑車
@@ -244231,11 +244234,11 @@ use_preset_vocabulary: false
 福星高照
 福業相牽
 福澤諭吉
+福為禍先
+福為禍始
 福無十全
 福無定門
 福無雙至
-福為禍先
-福為禍始
 福爾摩斯
 福爾摩沙
 福爾摩莎
@@ -244934,14 +244937,14 @@ use_preset_vocabulary: false
 穿梭轟炸
 穿楊百步
 穿楊貫蝨
-穿著打扮
-穿著講究
 穿窬之盜
 穿紅戴綠
 穿紅著綠
 穿線膠裝
 穿花納錦
 穿花蛺蝶
+穿著打扮
+穿著講究
 穿袍兒的
 穿越時空
 穿身而過
@@ -245186,11 +245189,11 @@ use_preset_vocabulary: false
 站不起來
 站乾岸兒
 站得住腳
-站著不動
 站穩立場
 站穩腳步
 站穩腳跟
 站立起來
+站著不動
 竟陵八友
 章句之徒
 章回小說
@@ -246059,7 +246062,6 @@ use_preset_vocabulary: false
 紅白喜事
 紅白大事
 紅白大禮
-紅著眼睛
 紅粉佳人
 紅粉知己
 紅粉青樓
@@ -246086,6 +246088,7 @@ use_preset_vocabulary: false
 紅花綠葉
 紅葉之題
 紅葉題詩
+紅著眼睛
 紅葡萄藤
 紅葡萄酒
 紅衣主教
@@ -246994,10 +246997,10 @@ use_preset_vocabulary: false
 綺羅粉黛
 綺襦紈褲
 綽有餘裕
-綽著經兒
 綽約多姿
 綽綽有裕
 綽綽有餘
+綽著經兒
 綾羅綢緞
 綿力薄材
 綿密小巧
@@ -247299,8 +247302,8 @@ use_preset_vocabulary: false
 繃扒吊拷
 繃扒弔拷
 繃爬吊拷
-繃著臉兒
 繃繃拽拽
+繃著臉兒
 繆以千里
 繆思女神
 繆種流傳
@@ -247337,10 +247340,10 @@ use_preset_vocabulary: false
 繩其祖武
 繩厥祖武
 繩墨之言
+繩床瓦竈
 繩愆糾謬
 繩捆索綁
 繩樞之士
-繩床瓦竈
 繩趨尺步
 繩鋸木斷
 繪事後素
@@ -247389,8 +247392,6 @@ use_preset_vocabulary: false
 纏綿悱惻
 纏門纏戶
 纓緌之徒
-才得兩年
-才是真正
 纖不盈握
 纖塵不染
 纖悉無遺
@@ -247576,8 +247577,8 @@ use_preset_vocabulary: false
 羊瘙癢症
 羊真孔草
 羊續懸魚
-羊肉泡饃
 羊肉床子
+羊肉泡饃
 羊肚手巾
 羊胃羊頭
 羊腸小徑
@@ -247728,13 +247729,6 @@ use_preset_vocabulary: false
 群治學社
 群猴猴族
 群發軟件
-群策群力
-群而不黨
-群芳爭豔
-群芳競豔
-群英畢集
-群蟻潰堤
-群蟻附羶
 群眾利益
 群眾團體
 群眾大會
@@ -247747,6 +247741,13 @@ use_preset_vocabulary: false
 群眾路線
 群眾運動
 群眾關係
+群策群力
+群而不黨
+群芳爭豔
+群芳競豔
+群英畢集
+群蟻潰堤
+群蟻附羶
 群謀咸同
 群賢畢至
 群起攻之
@@ -248012,7 +248013,6 @@ use_preset_vocabulary: false
 老當益壯
 老的少的
 老眼昏花
-老著臉皮
 老神在在
 老羆當道
 老羞成怒
@@ -248030,6 +248030,7 @@ use_preset_vocabulary: false
 老莊學會
 老莊思想
 老萊娛親
+老著臉皮
 老虎伍茲
 老虎攤兒
 老蚌生珠
@@ -248105,8 +248106,8 @@ use_preset_vocabulary: false
 耐火材料
 耐火黏土
 耐熱合金
-耐著性子
 耐磨性能
+耐著性子
 耒耜之勤
 耒耨之利
 耒耨之教
@@ -248263,6 +248264,7 @@ use_preset_vocabulary: false
 聚沙之年
 聚沙成塔
 聚熱作用
+聚眾滋事
 聚礦作用
 聚米為山
 聚精會神
@@ -248273,7 +248275,6 @@ use_preset_vocabulary: false
 聚蚊成雷
 聚螢映雪
 聚螢積雪
-聚眾滋事
 聚變反應
 聚變武器
 聚酯樹脂
@@ -249097,8 +249098,8 @@ use_preset_vocabulary: false
 膠片佩章
 膠片書籍
 膠版印刷
-膠著狀態
 膠萊谷地
+膠著狀態
 膠西丘陵
 膠體化學
 膠體溶液
@@ -249164,11 +249165,11 @@ use_preset_vocabulary: false
 臥不安席
 臥不安枕
 臥倒在地
+臥床不起
 臥旗息鼓
 臥月眠霜
 臥榻之側
 臥榻鼾睡
-臥床不起
 臥狼當道
 臥理淮陽
 臥病在床
@@ -249203,6 +249204,16 @@ use_preset_vocabulary: false
 臨崖勒馬
 臨川四夢
 臨川羨魚
+臨床實驗
+臨床意義
+臨床應用
+臨床特徵
+臨床症狀
+臨床研究
+臨床經驗
+臨床表現
+臨床試驗
+臨床醫學
 臨敵賣陣
 臨文不諱
 臨時代辦
@@ -249240,16 +249251,6 @@ use_preset_vocabulary: false
 臨湖地區
 臨滄地區
 臨潼鬥寶
-臨床實驗
-臨床意義
-臨床應用
-臨床特徵
-臨床症狀
-臨床研究
-臨床經驗
-臨床表現
-臨床試驗
-臨床醫學
 臨界壓力
 臨界溫度
 臨界狀態
@@ -249801,9 +249802,9 @@ use_preset_vocabulary: false
 與狐謀皮
 與狼共舞
 與生俱來
+與眾不同
 與虎添翼
 與虎謀皮
-與眾不同
 興之所至
 興亡繼絕
 興兵動眾
@@ -250949,6 +250950,9 @@ use_preset_vocabulary: false
 萬用手冊
 萬用電表
 萬目睽睽
+萬眾一心
+萬眾歡騰
+萬眾矚目
 萬種風情
 萬箭攢心
 萬箭穿心
@@ -250975,9 +250979,6 @@ use_preset_vocabulary: false
 萬苦千辛
 萬萬不可
 萬萬千千
-萬眾一心
-萬眾歡騰
-萬眾矚目
 萬語千言
 萬象包羅
 萬象更新
@@ -251088,10 +251089,22 @@ use_preset_vocabulary: false
 著名作家
 著名品牌
 著名導演
+著地還錢
+著急起來
+著手回春
+著手成春
 著書立說
 著毋庸議
+著甚來由
+著生植物
 著稱於世
+著糞佛頭
+著腳書樓
+著色軟體
+著著失敗
+著著進逼
 著述等身
+著重指出
 葛天八闋
 葛屨履霜
 葛巾漉酒
@@ -251258,9 +251271,9 @@ use_preset_vocabulary: false
 蔓延全國
 蔓徑荒草
 蔓生植物
-蔚然成風
 蔚為大觀
 蔚為奇觀
+蔚然成風
 蔚藍海岸
 蔡司公司
 蔡澤看相
@@ -251964,72 +251977,6 @@ use_preset_vocabulary: false
 血親復仇
 血跡斑斑
 血雨腥風
-眾人敬仰
-眾人皆知
-眾人皆醉
-眾叛親離
-眾口一詞
-眾口交攻
-眾口交薦
-眾口交譽
-眾口同聲
-眾口如一
-眾口熏天
-眾口稱善
-眾口紛紜
-眾口鑠金
-眾口難調
-眾喣漂山
-眾喣飄山
-眾多人口
-眾寡不敵
-眾寡勢殊
-眾寡懸殊
-眾寡莫敵
-眾寡難敵
-眾少不敵
-眾少成多
-眾川赴海
-眾心如城
-眾心成城
-眾志成城
-眾怒難任
-眾怒難息
-眾怒難犯
-眾所周知
-眾所熟知
-眾所瞻望
-眾所矚目
-眾擎易舉
-眾散親離
-眾星拱北
-眾星拱月
-眾星拱辰
-眾星捧月
-眾望所依
-眾望所歸
-眾望所積
-眾望攸歸
-眾望有歸
-眾毀所歸
-眾毛攢毬
-眾毛攢球
-眾毛攢裘
-眾生好度
-眾目共睹
-眾目共視
-眾目具瞻
-眾目所歸
-眾目昭彰
-眾目睽睽
-眾盲摸象
-眾矢之的
-眾說不一
-眾說紛揉
-眾說紛紜
-眾謀僉用
-眾議成林
-眾醉獨醒
 行三坐五
 行不及言
 行不得也
@@ -252160,7 +252107,6 @@ use_preset_vocabulary: false
 行滿功圓
 行滿功成
 行濁言清
-行無越思
 行為不檢
 行為世範
 行為主義
@@ -252171,6 +252117,7 @@ use_preset_vocabulary: false
 行為藝術
 行為規範
 行為責任
+行無越思
 行疾如飛
 行監坐守
 行眠立盹
@@ -252344,7 +252291,6 @@ use_preset_vocabulary: false
 衣架飯囊
 衣物已乾
 衣物漸乾
-衣著打扮
 衣租食稅
 衣索匹亞
 衣索比亞
@@ -252356,6 +252302,7 @@ use_preset_vocabulary: false
 衣纓之族
 衣缽相傳
 衣缽真傳
+衣著打扮
 衣衫不整
 衣衫已乾
 衣衫藍褸
@@ -252503,16 +252450,6 @@ use_preset_vocabulary: false
 裊裊上升
 裊裊婷婷
 裊裊炊煙
-裡出外進
-裡勾外連
-裡外受敵
-裡外發燒
-裡急後重
-裡應外合
-裡裡外外
-裡通外國
-裡通外敵
-裡進外出
 裒多益寡
 裒斂無厭
 裘弊金盡
@@ -252580,6 +252517,16 @@ use_preset_vocabulary: false
 裝飾裝修
 裝飾記號
 裝點門面
+裡出外進
+裡勾外連
+裡外受敵
+裡外發燒
+裡急後重
+裡應外合
+裡裡外外
+裡通外國
+裡通外敵
+裡進外出
 裨補闕漏
 裱褙師傅
 裳裳者華
@@ -253311,10 +253258,10 @@ use_preset_vocabulary: false
 言歸正傳
 言淺意深
 言清行濁
+言為心聲
 言無不盡
 言無不聽
 言無二價
-言為心聲
 言狂意妄
 言猶在耳
 言盡於此
@@ -253919,10 +253866,10 @@ use_preset_vocabulary: false
 說白道綠
 說白道黑
 說真格的
-說著玩兒
 說短論長
 說短道長
 說老實話
+說著玩兒
 說葡萄酸
 說親道熱
 說詩啐話
@@ -254155,9 +254102,9 @@ use_preset_vocabulary: false
 謀定而後
 謀慮深遠
 謀泄事露
+謀為不軌
 謀無遺策
 謀無遺諝
-謀為不軌
 謀王圖霸
 謀生不易
 謀生之道
@@ -254245,7 +254192,6 @@ use_preset_vocabulary: false
 證券市場
 證券投資
 證券經營
-證卷市場
 證據確鑿
 證明出來
 證明文件
@@ -254876,8 +254822,8 @@ use_preset_vocabulary: false
 貴族論者
 貴族身份
 貴極人臣
-貴無常尊
 貴為天子
+貴無常尊
 貴耳賤目
 貴賤之別
 貴賤無二
@@ -255343,8 +255289,8 @@ use_preset_vocabulary: false
 走漏消息
 走漏風聲
 走火入魔
-走為上著
 走為上策
+走為上著
 走為上計
 走石揚沙
 走石飛砂
@@ -255711,7 +255657,7 @@ use_preset_vocabulary: false
 跳天撅地
 跳天索地
 跳梁小丑
-跳樑小醜
+跳樑小丑
 跳樓自殺
 跳樓自盡
 跳河自殺
@@ -256089,7 +256035,6 @@ use_preset_vocabulary: false
 軟玉嬌香
 軟玉溫香
 軟皮動物
-軟瞇𥉐
 軟硬不吃
 軟硬兼施
 軟磨硬泡
@@ -257081,8 +257026,8 @@ use_preset_vocabulary: false
 造微入妙
 造成問題
 造成損失
-造極登峰
 造極登峯
+造極登峰
 造橋工程
 造次顛沛
 造畜稠棧
@@ -257310,10 +257255,10 @@ use_preset_vocabulary: false
 進退存亡
 進退應對
 進退有常
+進退為難
 進退無據
 進退無路
 進退無門
-進退為難
 進退維谷
 進退自如
 進退首鼠
@@ -259646,10 +259591,10 @@ use_preset_vocabulary: false
 閒情逸趣
 閒打牙兒
 閒是閒非
-閒著沒事
 閒置不用
 閒花野草
 閒茶浪酒
+閒著沒事
 閒言亂語
 閒言碎語
 閒言長語
@@ -262929,10 +262874,10 @@ use_preset_vocabulary: false
 餓殍枕藉
 餓殍載道
 餓狼撲羊
-餓著肚子
-餓著肚皮
 餓莩載道
 餓莩遍野
+餓著肚子
+餓著肚皮
 餓虎吞羊
 餓虎撲羊
 餓虎撲食
@@ -263575,9 +263520,9 @@ use_preset_vocabulary: false
 高山流水
 高山重嶂
 高岸深谷
+高峯會議
 高峰會議
 高峰論壇
-高峯會議
 高年級生
 高度自制
 高度評價
@@ -264326,9 +264271,9 @@ use_preset_vocabulary: false
 麥蓋提縣
 麥達克斯
 麩皮麵包
+麴黴毒素
 麵包師傅
 麵杖吹火
-麴黴毒素
 麻了花兒
 麻做一團
 麻吉死黨
@@ -264346,8 +264291,8 @@ use_preset_vocabulary: false
 麻痺不了
 麻痺不仁
 麻痺大意
-麻著膽子
 麻胡著臉
+麻著膽子
 麻薩諸州
 麻蚍叮腿
 麻衣仙翁
@@ -264361,7 +264306,6 @@ use_preset_vocabulary: false
 麻雀雖小
 麻麻呼呼
 麻麻糊糊
-麼麼唱唱
 麾之即去
 黃乾黑瘦
 黃卷青燈
@@ -264815,6 +264759,7 @@ use_preset_vocabulary: false
 龍山文化
 龍山落帽
 龍巖地區
+龍床快婿
 龍心不悅
 龍心大悅
 龍戰虎爭
@@ -264826,7 +264771,6 @@ use_preset_vocabulary: false
 龍煙鐵礦
 龍爭虎戰
 龍爭虎鬥
-龍床快婿
 龍生九子
 龍的傳人
 龍盤虎踞
@@ -265091,7 +265035,7 @@ use_preset_vocabulary: false
 # 下議院議員
 # 不令人鼓舞
 # 不以人廢言
-# 不以詞害誌
+# 不以詞害志
 # 不以辭害志
 # 不作為違警
 # 不侵犯協定
@@ -265172,9 +265116,6 @@ use_preset_vocabulary: false
 # 不當家豁拉
 # 不發達國家
 # 不相容原理
-# 不著陸飛行
-# 不著領頂兒
-# 不著頭頂兒
 # 不知何許人
 # 不知好人心
 # 不知為不知
@@ -265197,6 +265138,9 @@ use_preset_vocabulary: false
 # 不能措一辭
 # 不能贊一辭
 # 不良青少年
+# 不著陸飛行
+# 不著領頂兒
+# 不著頭頂兒
 # 不見人下來
 # 不記名投票
 # 不設防城市
@@ -265674,6 +265618,10 @@ use_preset_vocabulary: false
 # 做甚麼道場
 # 做鬼也風流
 # 停車計時器
+# 偽國民政府
+# 偽基百科人
+# 偽維新政府
+# 偽臨時政府
 # 傅立葉變換
 # 傑克尼克遜
 # 傑克葛倫霍
@@ -265690,10 +265638,6 @@ use_preset_vocabulary: false
 # 傻瓜照相機
 # 像煞有介事
 # 僑務委員會
-# 偽國民政府
-# 偽基百科人
-# 偽維新政府
-# 偽臨時政府
 # 僱傭兵役制
 # 儉是聚寶盆
 # 儒勒凡爾納
@@ -266426,12 +266370,12 @@ use_preset_vocabulary: false
 # 商場如戰場
 # 問卷大調查
 # 問卷調查表
-# 啟發式教育
-# 啟發性程式
 # 啞叭夢見媽
 # 啞子吃黃蓮
 # 啞巴吃黃蓮
 # 啞巴吃黃連
+# 啟發式教育
+# 啟發性程式
 # 喀喇崑崙山
 # 喀拉崑崙山
 # 喀拉汗王朝
@@ -266821,6 +266765,7 @@ use_preset_vocabulary: false
 # 大眼望小眼
 # 大眼看小眼
 # 大眼瞪小眼
+# 大眾指導法
 # 大碗吃酒肉
 # 大秤分金銀
 # 大秦景教碑
@@ -266840,7 +266785,6 @@ use_preset_vocabulary: false
 # 大蒜炒肉片
 # 大蒜碾碎器
 # 大蟲吃小蟲
-# 大眾指導法
 # 大衛營協定
 # 大衛營和約
 # 大衛艾登堡
@@ -267472,7 +267416,6 @@ use_preset_vocabulary: false
 # 弗里德里希
 # 弗雷德里克
 # 弱國無外交
-# 弱智賴于涵
 # 弱相互作用
 # 張家口地區
 # 張玄墓誌銘
@@ -267695,6 +267638,7 @@ use_preset_vocabulary: false
 # 手機充值卡
 # 手續費收入
 # 手長衣袖短
+# 才能勇敢追
 # 扒自飯碗兒
 # 打一棒快毬
 # 打乾淨毬兒
@@ -268466,8 +268410,8 @@ use_preset_vocabulary: false
 # 民族自決權
 # 民用核國家
 # 民用航空站
-# 民答那峨海
 # 民眾服務社
+# 民答那峨海
 # 氟化斑狀齒
 # 氟化物中毒
 # 氟氯碳化物
@@ -268807,6 +268751,7 @@ use_preset_vocabulary: false
 # 火車頭工業
 # 炭水化合物
 # 炸土豆條兒
+# 為人民服務
 # 烈火見真金
 # 烏什塔拉鄉
 # 烏孜別克族
@@ -268923,7 +268868,6 @@ use_preset_vocabulary: false
 # 營養強化蛋
 # 爛泥防有刺
 # 爬蟲類動物
-# 為人民服務
 # 父不償子債
 # 牆倒眾人推
 # 片面最惠國
@@ -269216,7 +269160,8 @@ use_preset_vocabulary: false
 # 眼球乾燥症
 # 眼皮子底下
 # 眼絲兒不見
-# 著三不著兩
+# 眾怒如水火
+# 眾曲不容直
 # 睜眼說瞎話
 # 睜眼跳黃河
 # 睡虎地秦簡
@@ -269361,7 +269306,6 @@ use_preset_vocabulary: false
 # 穩坐釣魚船
 # 空中核爆炸
 # 空中管制站
-# 空前絕后後
 # 空口說白話
 # 空對地飛彈
 # 空對空導彈
@@ -269594,7 +269538,6 @@ use_preset_vocabulary: false
 # 繳稅通知單
 # 續文獻通考
 # 纏夾二先生
-# 才能勇敢追
 # 纖維囊泡症
 # 纖維蛋白原
 # 置入性行銷
@@ -269622,8 +269565,8 @@ use_preset_vocabulary: false
 # 美國國務院
 # 美國地質局
 # 美國宇航局
-# 美國能源部
 # 美國眾議院
+# 美國能源部
 # 美式橄欖球
 # 美拉尼西亞
 # 美言可以市
@@ -269784,11 +269727,11 @@ use_preset_vocabulary: false
 # 臉上過不去
 # 臉紅脖子粗
 # 臊一鼻子灰
+# 臨床心理學
 # 臨時偵查庭
 # 臨時性帳戶
 # 臨時抱佛腳
 # 臨海水土誌
-# 臨床心理學
 # 自以為得計
 # 自來水龍頭
 # 自助洗衣店
@@ -269962,6 +269905,7 @@ use_preset_vocabulary: false
 # 葉卡捷琳娜
 # 葉綠體基質
 # 葉門共和國
+# 著三不著兩
 # 著作鄰接權
 # 葛羅托斯基
 # 葛蘭素史克
@@ -270075,8 +270019,6 @@ use_preset_vocabulary: false
 # 血液透析機
 # 血統證明書
 # 血脂升高症
-# 眾怒如水火
-# 眾曲不容直
 # 行人安全島
 # 行人徒步區
 # 行人穿越道
@@ -270117,8 +270059,8 @@ use_preset_vocabulary: false
 # 裁判管轄權
 # 裂變同位素
 # 裂谷熱病毒
-# 裡外不是人
 # 裘力斯愷撒
+# 裡外不是人
 # 裴夫斯奈爾
 # 裴岑紀功碑
 # 裴航遇雲英
@@ -270274,7 +270216,6 @@ use_preset_vocabulary: false
 # 證券經紀人
 # 證券經紀商
 # 證券自營商
-# 證卷交易所
 # 譜系分類法
 # 警備司令部
 # 警備總司令
@@ -270667,7 +270608,7 @@ use_preset_vocabulary: false
 # 門縫裡看人
 # 門面鋪席人
 # 閃電式結婚
-# 閉圖象定理
+# 閉圖像定理
 # 閉門家裡坐
 # 開伯爾山口
 # 開口告人難
@@ -271309,13 +271250,13 @@ use_preset_vocabulary: false
 # 一尺布尚可縫
 # 一尺還他十寸
 # 一山不容二虎
+# 一床錦被蓋過
+# 一床錦被遮蓋
 # 一掬同情之淚
 # 一時不等一時
 # 一根肚腸到底
 # 一步一個腳印
 # 一氧化碳中毒
-# 一床錦被蓋過
-# 一床錦被遮蓋
 # 一生受用不盡
 # 一生喫著不盡
 # 一發不可收拾
@@ -271610,8 +271551,8 @@ use_preset_vocabulary: false
 # 人民民主國家
 # 人民民主專政
 # 人民生活水平
-# 人無橫財不富
 # 人為萬物之靈
+# 人無橫財不富
 # 人算不如天算
 # 人老精薑老辣
 # 人肉搜索引擎
@@ -271739,8 +271680,8 @@ use_preset_vocabulary: false
 # 兒童權利公約
 # 兒童福利中心
 # 党太尉吃匾食
-# 兜著豆子尋鍋
 # 兜肚斷了帶子
+# 兜著豆子尋鍋
 # 入出境管理局
 # 內容管理系統
 # 內布拉斯加州
@@ -271787,8 +271728,8 @@ use_preset_vocabulary: false
 # 公理自在人心
 # 公用事業費率
 # 公益慈善團體
-# 公示催告程序
 # 公眾電信網路
+# 公示催告程序
 # 公車專用車道
 # 公門裡好修行
 # 公開審理主義
@@ -272000,8 +271941,8 @@ use_preset_vocabulary: false
 # 吃不了兜著走
 # 吃不完兜著走
 # 吃人不吐骨頭
-# 吃著自己的飯
 # 吃米不知米價
+# 吃著自己的飯
 # 吃飽了飯撐的
 # 吃飽飯沒事做
 # 各師父各傳授
@@ -272303,6 +272244,8 @@ use_preset_vocabulary: false
 # 大男子主義者
 # 大直國民中學
 # 大直國民小學
+# 大眾傳播媒體
+# 大眾捷運系統
 # 大笑金剛明王
 # 大興問罪之師
 # 大興安嶺地區
@@ -272313,8 +272256,6 @@ use_preset_vocabulary: false
 # 大蟲不吃伏肉
 # 大蟲口裡倒涎
 # 大蟲頭上做窠
-# 大眾傳播媒體
-# 大眾捷運系統
 # 大西洋洋中脊
 # 大路生在嘴邊
 # 大輪金剛明王
@@ -273114,6 +273055,9 @@ use_preset_vocabulary: false
 # 火場留守分隊
 # 火山爆發指數
 # 火災警報設備
+# 為反對而反對
+# 為善不欲人知
+# 為政不在多言
 # 烈女不嫁二夫
 # 烈女不更二夫
 # 烏干達共和國
@@ -273159,9 +273103,6 @@ use_preset_vocabulary: false
 # 營養強化食品
 # 爆炸的無效彈
 # 爆縮型核武器
-# 為反對而反對
-# 為善不欲人知
-# 為政不在多言
 # 父仇不共戴天
 # 父母在不遠游
 # 父母養我們小
@@ -273295,6 +273236,8 @@ use_preset_vocabulary: false
 # 眼不見心不煩
 # 眼裡不揉沙子
 # 眼觀鼻鼻觀心
+# 眾生皆有佛性
+# 眾目睽睽之下
 # 睜一眼閉一眼
 # 睜隻眼閉隻眼
 # 瞬得彩色電影
@@ -273495,8 +273438,8 @@ use_preset_vocabulary: false
 # 美國航空公司
 # 美洲國家組織
 # 美索不達米亞
-# 美蘇高峰會議
 # 美蘇高峯會議
+# 美蘇高峰會議
 # 義勇軍進行曲
 # 義大利共和國
 # 羹裡來飯裡去
@@ -273691,8 +273634,6 @@ use_preset_vocabulary: false
 # 蠟燭不點不亮
 # 血管粥樣硬化
 # 血色素沉積症
-# 眾生皆有佛性
-# 眾目睽睽之下
 # 行不得也哥哥
 # 行善不欲人知
 # 行政院主計處
@@ -274019,6 +273960,7 @@ use_preset_vocabulary: false
 # 附屬國民小學
 # 附屬高級中學
 # 陝西師範大學
+# 陰了信的炮𤍤
 # 陰德必有陽報
 # 陰道抹片檢查
 # 陰道棕櫚狀壁
@@ -274087,7 +274029,7 @@ use_preset_vocabulary: false
 # 非洲統一組織
 # 非洲開發銀行
 # 非盈利的組織
-# 非詞重復測驗
+# 非詞重複測驗
 # 非遺傳多型性
 # 面嚮對象語言
 # 面子上的差使
@@ -274291,7 +274233,6 @@ use_preset_vocabulary: false
 # 上海商務印書館
 # 上海外國語大學
 # 上海證券交易所
-# 上海證卷交易所
 # 上窮碧落下黃泉
 # 上錯天堂投錯胎
 # 上門的買賣好做
@@ -274953,16 +274894,17 @@ use_preset_vocabulary: false
 # 房地產共同基金
 # 所多瑪與蛾摩拉
 # 手心手背都是肉
+# 才可容顏十五餘
 # 打一巴掌揉三揉
 # 打了個落花流水
 # 打牆板兒翻上下
 # 打狗不看主人面
-# 打著燈籠沒處找
 # 打破沙鍋問到底
 # 打破沙鍋璺到底
 # 打破砂鍋問到底
 # 打老鼠傷了玉瓶
 # 打落牙齒和血吞
+# 打著燈籠沒處找
 # 打虎還得親兄弟
 # 打開天窗說亮話
 # 打開板壁講亮話
@@ -275060,8 +275002,8 @@ use_preset_vocabulary: false
 # 書到用時方恨少
 # 書山有路勤為徑
 # 曼荷蓮女子學院
-# 曾著賣糖君子哄
 # 曾經滄海難為水
+# 曾著賣糖君子哄
 # 最高人民檢察院
 # 會計準則理事會
 # 有仇不報非君子
@@ -275250,8 +275192,8 @@ use_preset_vocabulary: false
 # 畫龍不成反為狗
 # 異頻雷達收發機
 # 當家三年狗也嫌
-# 當家方知柴米貴
 # 當家才知柴米價
+# 當家方知柴米貴
 # 當面銀子對面錢
 # 痴心女子負心漢
 # 登泰山而小天下
@@ -275274,6 +275216,8 @@ use_preset_vocabulary: false
 # 眼淚往肚子裡流
 # 眼睛長在頭頂上
 # 眼裡揉不下沙子
+# 眾人拾柴火焰高
+# 眾人皆醉我獨醒
 # 瞎貓捉到死老鼠
 # 瞎貓碰到死老鼠
 # 瞎貓碰到死耗子
@@ -275346,7 +275290,6 @@ use_preset_vocabulary: false
 # 緊急傷病急救網
 # 緊急醫療救護網
 # 緊溜子裡為著人
-# 才可容顏十五餘
 # 置之死地而後快
 # 置之死地而後生
 # 羅夏克墨漬測驗
@@ -275485,8 +275428,6 @@ use_preset_vocabulary: false
 # 融水苗族自治縣
 # 血債要用血來償
 # 血債要用血來還
-# 眾人拾柴火焰高
-# 眾人皆醉我獨醒
 # 行家莫說力把話
 # 行百里者半九十
 # 衛星定位測繪點
@@ -275564,7 +275505,7 @@ use_preset_vocabulary: false
 # 路南彝族自治縣
 # 跳出釜底進火坑
 # 跳在黃河洗不清
-# 跳樑猖獗之小醜
+# 跳樑猖獗之小丑
 # 跳虎撥著關捩子
 # 跳進黃河說不清
 # 踏破鐵鞋無覓處
@@ -275647,7 +275588,7 @@ use_preset_vocabulary: false
 # 阿伏伽德羅常數
 # 阿加莎克里斯蒂
 # 阿富汗伊斯蘭國
-# 阿拉伯共衕市場
+# 阿拉伯共同市場
 # 阿拉伯國家聯盟
 # 阿拉伯電信聯盟
 # 阿拉斯加雪撬犬
@@ -275662,7 +275603,6 @@ use_preset_vocabulary: false
 # 陀思妥耶夫斯基
 # 陣亡戰士紀念日
 # 陪了夫人又折兵
-# 陰了信的炮𤍤
 # 陰極射線示波器
 # 陰謀顛覆政府罪
 # 陵水黎族自治縣
@@ -276075,7 +276015,7 @@ use_preset_vocabulary: false
 # 家有敝帚享之千金
 # 家累千金坐不垂堂
 # 寒武紀生命大爆發
-# 寓管理于服務之中
+# 寓管理於服務之中
 # 實踐家政專科學校
 # 實踐設計管理學院
 # 寧分數斗莫增一口

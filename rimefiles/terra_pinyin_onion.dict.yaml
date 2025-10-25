@@ -2924,6 +2924,15 @@ min_phrase_weight: 100
 咧	lie4	0%
 硌	li4	0%
 颟	man2
+秤	cheng1
+戲	xi1	0%
+戲	suo1	0%
+戲	yi1	0%
+戏	xi1	0%
+戏	hu1	0%
+戏	hui1	0%
+戏	suo1	0%
+戏	yi1	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -3314,7 +3323,7 @@ min_phrase_weight: 100
 砠	ju1	1%
 砢	ke1	1%
 砫	zhu4	1%
-秤	ping2	1%
+秤	ping2	10%
 窄	ze2	1%
 竘	ju3	1%
 紑	fou1	1%
@@ -3922,7 +3931,7 @@ min_phrase_weight: 100
 儜	neng2	1%
 噠	da2	1%
 噦	yue1	1%
-噫	yi4	1%
+噫	yi4	100%
 噱	xue1	1%
 噶	ge2	1%
 墼	ji2	1%
@@ -54726,6 +54735,13 @@ min_phrase_weight: 100
 一個個要著地	yi2 ge5 ge5 yao4 zhuo2 di4
 一個個要著地	yi1 ge5 ge5 yao4 zhuo2 di4
 一個個要著地	yi4 ge5 ge5 yao4 zhuo2 di4
+一個個要著地	yi1 ge4 ge4 yao4 zhao2 di4
+一個個要著地	yi1 ge4 ge5 yao4 zhao2 di4
+一個個要著地	yi1 ge5 ge5 yao4 zhao2 di4
+一個個要著地	yi2 ge4 ge4 yao4 zhao2 di4
+一個個要著地	yi2 ge4 ge5 yao4 zhao2 di4
+一個個要著地	yi2 ge5 ge5 yao4 zhao2 di4
+一個個要著地	yi4 ge5 ge5 yao4 zhao2 di4
 一個勁	yi2 ge5 jin4
 一個勁	yi1 ge5 jin4
 一個勁	yi4 ge5 jin4
@@ -56612,6 +56628,7 @@ min_phrase_weight: 100
 不用本錢的勾當	bu2 yong4 ben3 qian2 de5 gou4 dang4
 不用看	bu2 yong4 kan4
 不用著急	bu2 yong4 zhao1 ji2
+不用著急	bu2 yong4 zhao2 ji2
 不甫能勾	bu4 fu3 neng2 gou1
 不由分說	bu4 you2 fen1 shuo1
 不由得	bu4 you2 de5
@@ -56683,6 +56700,7 @@ min_phrase_weight: 100
 不著家人	bu4 zhao2 jia1 ren2
 不著忙	bu4 zhao2 mang2
 不著急	bu4 zhao1 ji2
+不著急	bu4 zhao2 ji2
 不著情	bu4 zhuo2 qing2
 不著意	bu4 zhuo2 yi4
 不著疼熱	bu4 zhuo2 teng2 re4
@@ -62547,6 +62565,7 @@ min_phrase_weight: 100
 別無分店	bie2 wu2 fen1 dian4
 別無長物	bie2 wu2 zhang4 wu4
 別著急	bie2 zhao2 ji2
+別著急	bie2 zhao1 ji2
 別稱	bie2 cheng1
 別處	bie2 chu4
 別裁偽體	bie2 cai2 wei4 ti3
@@ -66764,7 +66783,10 @@ min_phrase_weight: 100
 哈喇子	ha1 la2 zi5
 哈囉	ha1 luo2
 哈囉	ha1 luo1
+哈囉	ha1 luo5
 哈囉德	ha1 luo2 de2
+哈囉德	ha1 luo1 de2
+哈囉德	ha1 luo5 de2
 哈士蟆	ha1 shi4 ma2
 哈密地區	ha1 mi4 di4 qu1
 哈巴	ha3 ba1
@@ -67791,6 +67813,9 @@ min_phrase_weight: 100
 噪聒	zao4 gua1
 噪音音樂	zao4 yin1 yin1 yue4
 噫吁戲	yi1 xu1 xi4
+噫吁戲	yi1 xu1 xi1
+噫吁戲	yi4 xu1 xi4
+噫吁戲	yi4 xu1 xi1
 噬人菌	shi4 ren2 jun4
 噬人菌	shi4 ren2 jun1
 噭應	jiao4 ying4
@@ -67919,15 +67944,25 @@ min_phrase_weight: 100
 囉哩囉嗦	luo1 li5 luo1 suo1
 囉哩囉嗦	luo1 li1 luo1 suo1
 囉哩囉嗦	luo1 li1 luo1 suo5	80%
+囉哩囉嗦	luo1 li5 luo1 suo5	80%
+囉哩囉嗦	luo5 li5 luo5 suo5	80%
 囉唆	luo1 suo1
+囉唆	luo1 suo5	80%
+囉唆	luo5 suo5	80%
 囉唕	luo2 zao4
 囉嗦	luo1 suo1
 囉嗦	luo1 suo5	80%
+囉嗦	luo5 suo5	80%
 囉囉唕唕	luo1 luo1 zao4 zao4
 囉囉嗦嗦	luo1 luo1 suo1 suo1
 囉囉嗦嗦	luo1 luo5 suo1 suo5	80%
+囉囉嗦嗦	luo5 luo5 suo5 suo5	80%
 囉囉囌囌	luo1 luo1 su1 su1
+囉囉囌囌	luo1 luo5 su1 su5	80%
+囉囉囌囌	luo5 luo5 su5 su5	80%
 囉囌	luo1 su1
+囉囌	luo1 su5	80%
+囉囌	luo5 su5	80%
 囉曼帶克	luo1 man4 dai4 ke4
 囊囊咄咄	nang2 nang2 duo4 duo4
 囊囊突突	nang2 nang2 tu2 tu2
@@ -73077,6 +73112,8 @@ min_phrase_weight: 100
 少吃無著	shao3 chi1 wu2 zhuo2
 少商	shao4 shang1
 少囉唆	shao3 luo1 suo1
+少囉唆	shao3 luo1 suo5
+少囉唆	shao3 luo5 suo5
 少坐	shao3 zuo4
 少壯	shao4 zhuang4
 少壯不努力	shao4 zhuang4 bu4 nu3 li4
@@ -88852,7 +88889,7 @@ min_phrase_weight: 100
 浹髓淪膚	jia2 sui2 lun2 fu1	80%
 浼人親行	mei3 ren2 qin1 xing2
 浽溦	sui1 wei1
-涂爾幹	tu2 er3 gan4
+涂爾干	tu2 er3 gan1
 涅槃罪度	nie4 pan2 zui4 du4
 涇渭不分	jing1 wei4 bu4 fen1
 涇渭分明	jing1 wei4 fen1 ming2
@@ -96019,6 +96056,7 @@ min_phrase_weight: 100
 租稅轉嫁	zu1 shui4 zhuan3 jia4
 租錢	zu1 qian2
 秤盤子	cheng4 pan2 zi5
+秤盤子	cheng1 pan2 zi5
 秦叔寶	qin2 shu2 bao3
 秦吉了	qin2 ji2 liao3
 秦少游	qin2 shao4 you2
@@ -96208,7 +96246,9 @@ min_phrase_weight: 100
 稱臣	cheng1 chen2
 稱臣納貢	cheng1 chen2 na4 gong4
 稱薪而爨	cheng1 xin1 er2 cuan4
+稱薪而爨	cheng4 xin1 er2 cuan4
 稱薪量水	cheng1 xin1 liang2 shui3
+稱薪量水	cheng4 xin1 liang2 shui3
 稱號	cheng1 hao4
 稱觴	cheng1 shang1
 稱許	cheng1 xu3
@@ -96228,6 +96268,7 @@ min_phrase_weight: 100
 稱述	cheng1 shu4
 稱道	cheng1 dao4
 稱重	cheng1 zhong4
+稱重	cheng4 zhong4
 稱錢	chen4 qian2
 稱錢	cheng4 qian2
 稱鎚落井	cheng4 chui2 luo4 jing3
@@ -116612,4 +116653,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 116615 #####
+##### @結束 END - 116656 #####
