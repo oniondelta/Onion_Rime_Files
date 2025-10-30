@@ -785,7 +785,8 @@ min_phrase_weight: 100
 堄	ni2
 眭	wei4
 氣	xi4	0.2%
-吗	ma1	0.2%
+# 吗	ma1	0.2%
+吗	ma2
 吗	ma3	0.2%
 吗	ma5	0.2%
 汐	xi4
@@ -1480,7 +1481,7 @@ min_phrase_weight: 100
 啴	tan1	0.2%
 啴	tuo1	0.2%
 嗎	ma4	0.2%
-吗	ma4	0.2%
+吗	ma4	0%
 嘀	di1
 噱	xue2	50%
 尚	chang2	0.2%
@@ -1553,7 +1554,7 @@ min_phrase_weight: 100
 嬷	mo2	0.2%
 娄	lv3	0.2%
 罕	han4	0.2%
-嗎	ma2	0.1%
+嗎	ma2	0%
 蔭	yin1
 荫	yin4
 瓠	hu2	0.2%
@@ -3152,8 +3153,8 @@ min_phrase_weight: 100
 繆	liao4	0%
 繆	lu4	0%
 缪	jiu1	0%
-繆	liao4	0%
-繆	lu4	0%
+缪	liao4	0%
+缪	lu4	0%
 縿	xian1	0%
 縿	xiao1	0%
 縿	sao1	0%
@@ -3235,7 +3236,7 @@ min_phrase_weight: 100
 蹭	ceng2	0%
 處	ju4	0%
 处	ju4	0%
-处	ju4	0%
+処	ju4	0%
 虖	hu4	0%
 蜚	pei4	0%
 蜚	bei4	0%
@@ -3497,7 +3498,6 @@ min_phrase_weight: 100
 哪	nai3	0%
 哪	na4	0%
 哪	nie4	0%
-哪	ne2	0%
 哏	en4	0%
 冯	ping2	0%
 馱	dai4	0%
