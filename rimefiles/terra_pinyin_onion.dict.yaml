@@ -785,10 +785,9 @@ min_phrase_weight: 100
 堄	ni2
 眭	wei4
 氣	xi4	0.2%
-# 吗	ma1	0.2%
-吗	ma2
-吗	ma3	0.2%
-吗	ma5	0.2%
+吗	ma2	0%
+吗	ma3	0%
+吗	ma5
 汐	xi4
 卬	yang3
 卬	mao3	0.2%
@@ -57125,7 +57124,7 @@ min_phrase_weight: 100
 不是味兒	bu2 shi4 wei4 er5	80%
 不是味兒	bu2 shi4 wei4 er2
 不是嗎	bu2 shi4 ma5
-不是嗎	bu2 shi4 ma1
+不是嗎	bu2 shi4 ma1	80%
 不是東西	bu2 shi4 dong1 xi1
 不是湯著就抹著	bu2 shi4 tang1 zhao2 jiu4 mo3 zhao2
 不是玩兒的	bu2 shi4 wan2 er5 de5	80%
@@ -68121,9 +68120,11 @@ min_phrase_weight: 100
 嗎呼	ma3 hu1
 嗎哪	ma3 na3
 嗎啡	ma3 fei1
-嗎啡	ma1 fei1
+嗎啡	ma1 fei1	80%
 嗎啡中毒	ma3 fei1 zhong4 du2
+嗎啡中毒	ma1 fei1 zhong4 du2	80%
 嗎啡針	ma3 fei1 zhen1
+嗎啡針	ma1 fei1 zhen1	80%
 嗑嗑	he2 he2
 嗑西北風	he2 xi1 bei3 feng1
 嗒喪	ta4 sang4
@@ -117262,4 +117263,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 117265 #####
+##### @結束 END - 117266 #####
