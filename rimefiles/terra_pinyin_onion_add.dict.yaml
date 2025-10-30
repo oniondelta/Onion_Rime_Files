@@ -53,6 +53,7 @@ min_phrase_weight: 100
 # 缚	(fo4)
 # 遢	(ta1)	10%
 # 逾	(yu4)	90%
+# 月	(rou4)	0%
 蒲	(pu3)
 蛤	(ge3)
 樺	(hua2)
@@ -123,7 +124,6 @@ min_phrase_weight: 100
 瞥	(pie3)	50%
 庾	(yu2)	50%
 熾	(zhi4)	50%
-月	(rou4)	0%
 匣	(jia2)
 鰻	(man4)	50%
 鳗	(man4)	50%
@@ -295,6 +295,7 @@ min_phrase_weight: 100
 拽	(zhuai3)	0%
 齷	(wo1)
 龌	(wo1)
+屑	(xue4)
 ### @補充為《一聲》，通俗慣用或方便輸入，『非正確發音』！！！ ###
 腓	(fei1)	1%
 琲	(fei1)	1%
@@ -529,7 +530,7 @@ min_phrase_weight: 100
 哹	(fu5)	0%
 咈	(fu5)	0%
 哺	(fu5)	0%
-𠲎	(fa5)	0%
+# 𠲎	(fa5)	0%
 㕹	(fa5)	0%
 啡	(fei5)	0%
 吠	(fei5)	0%
@@ -594,6 +595,7 @@ min_phrase_weight: 100
 呫	(tie5)	0%
 㖭	(tian5)	0%
 唺	(tian5)	0%
+嗔	(tian5)	0%
 听	(ting5)	0%
 啁	(tiao5)	0%
 唋	(tu5)	0%
@@ -634,6 +636,7 @@ min_phrase_weight: 100
 噥	(nang5)	0%
 哝	(nang5)	0%
 嚯	(nve5)	0%
+# 喏	(nuo5)	0%
 嚦	(li5)	1%
 呖	(li5)	1%
 唳	(li5)	0%
@@ -756,6 +759,7 @@ min_phrase_weight: 100
 咯	(ka5)	0%
 咖	(ka5)	0%
 咳	(ka5)	0%
+呿	(ka5)	0%
 嗑	(ke5)	0%
 呵	(ke5)	0%
 咳	(ke5)	0%
@@ -989,6 +993,7 @@ min_phrase_weight: 100
 哓	(xiao5)	0%
 㗛	(xiao5)	0%
 咲	(xiao5)	0%
+咻	(xiao5)	0%
 咻	(xiu5)	1%
 嗅	(xiu5)	0%
 嚊	(xiu5)	0%
@@ -1018,6 +1023,7 @@ min_phrase_weight: 100
 㖅	(xu5)	0%
 喐	(xu5)	0%
 嘘	(xu5)	1%
+咻	(xu5)	0%
 㖸	(xue5)	0%
 吷	(xue5)	0%
 嚯	(xue5)	0%
@@ -1043,6 +1049,7 @@ min_phrase_weight: 100
 噣	(zhu5)	0%
 𠰍	(zhu5)	0%
 嗻	(zhu5)	0%
+咮	(zhu5)	0%
 啄	(zhuo5)	0%
 噣	(zhuo5)	0%
 啅	(zhuo5)	0%
@@ -1257,6 +1264,7 @@ min_phrase_weight: 100
 吅	(song5)	0%
 𠳼	(song5)	0%
 𡄳	(sa5)	0%
+𠱡	(sa5)	0%
 𠽼	(se5)	0%
 𠿗	(se5)	0%
 嗮	(sai5)	0%
@@ -1360,6 +1368,7 @@ min_phrase_weight: 100
 唩	(wo5)	0%
 噁	(wo5)	0%
 嗌	(wo5)	0%
+嚄	(wo5)	0%
 㗏	(wai5)	1%
 喎	(wai5)	0%
 㖞	(wai5)	0%
@@ -1388,6 +1397,7 @@ min_phrase_weight: 100
 啘	(yue5)	0%
 哾	(yue5)	0%
 噮	(yuan5)	0%
+咽	(yuan5)	0%
 吮	(yun5)	0%
 喗	(yun5)	0%
 噰	(yong5)	0%
@@ -1398,6 +1408,7 @@ min_phrase_weight: 100
 # 嗄	(a5)	0%
 噢	(o5)	1%
 呵	(o5)	1%
+嚄	(o5)	0%
 哦	(e5)	1%
 # 呃	(e5)	3%
 𡅅	(e5)	0%

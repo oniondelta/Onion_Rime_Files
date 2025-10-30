@@ -118,6 +118,8 @@
 #    詞句中，「惜」臺灣字典發音和習慣發音為「xi2」，大陸發音為「xi1」，斟酌後全改成臺灣發音「xi2」。
 #    詞句中，「跌」臺灣字典發音和習慣發音為「die2」，大陸發音為「die1」，斟酌後全改成臺灣發音「die2」。
 #    詞句中，「擲」臺灣字典發音和習慣發音為「zhi2」，大陸發音為「zhi4」，斟酌後全改成臺灣發音「zhi2」。
+#    詞句中，「拙」臺灣字典發音和習慣發音為「zhuo2」，大陸發音為「zhuo1」，斟酌後全改成臺灣發音「zhuo2」。
+#    詞句中，「咄」臺灣字典發音和習慣發音為「duo4」，大陸發音為「duo1」，斟酌後全改成臺灣發音「duo4」。
 #    詞句中，「地」於句尾當結構助詞時，意思同「的」時，不標註「di4」，標註「de5」「di5」。
 #    詞句中，「嚓」臺灣字典只有發音「ca1」，不標為「cha1」，因為為形聲，故另標「ca5」，故全都補齊「ca1」「ca5」。
 #    詞句中，「睪」臺灣字典只有發音「gao1」，但日常常發「gao3」，故全都補齊「gao1」「gao3」。
@@ -160,6 +162,7 @@
 #    詞句中，「拎」臺灣標準為「ling1」，大陸標準為「lin1」，日常易混，故皆補齊「ling1」「lin1」。
 #    詞句中，「樸」臺灣標準為「pu2」，大陸標準為「pu3」，日常易混，故皆補齊「pu2」「pu3」。
 #    詞句中，「惋」臺灣標準為「wan4」，大陸標準為「wan3」，日常易混，故皆補齊「wan4」「wan3」。
+#    詞句中，「蹈」臺灣標準為「dao4」，大陸標準為「dao3」，日常易混，故全都補齊「dao4」「dao3」。
 #    詞句中，「肘」臺灣標準為「zhou3」，日常發音常會誤發為「zhou2」，故皆補齊「zhou3」「zhou2」，後者詞頻設為80%。。
 #    詞句中，「炔」臺灣標準為「que1」，日常發音常會發「jue2」，故皆補齊「que1」「jue2」。
 #    詞句中，「悄」臺灣標準為「qiao3」，日常發音常會發「qiao1」，故皆補齊「qiao3」「qiao1」。
@@ -211,7 +214,6 @@
 #    詞句中，「法國」字典正確發音「fa3 guo2」，但「fa4 guo2」語音太常用，故補齊「fa3」「fa4」。（「法」地名相關也修改，如：「中法」）
 #    詞句中，「關係」其「係」臺灣字典發音為「xi4」，但日常常發「xi1」，故「關係」其「係」都補上「xi1」該發音。
 #    詞句中，「蘿蔔」中的「蔔」，「bo2」為讀音，「bo5」為語音，「bo1」常出現在日常發音中，故全都補齊「bo2」「bo5」「bo1」。
-#    詞句中，「舞蹈」中的「蹈」，臺灣字典發音為「dao4」，但日常常發「dao3」，故全都補齊「dao4」「dao3」。
 #    詞句中，「蒙古」「內蒙」「蒙牛」，其「蒙」字，臺灣標準為「meng2」，大陸標準為「meng3」，日常易混，補齊「meng2」「meng3」。
 #    詞句中，「模糊」定為「mo2 hu2」。
 #    詞句中，「垃圾」補齊「le4 se4」和「la1 ji1」。
@@ -838,7 +840,7 @@ min_phrase_weight: 100
 張	zhang4	0.2%
 翕	xi1	0.2%
 醍	ti3	0.2%
-沆	hang2	0.2%
+沆	hang2	50%
 可	ke4	0.2%
 焱	yi4	0.2%
 炎	yan4	10%
@@ -1104,8 +1106,8 @@ min_phrase_weight: 100
 嚷	rang1
 駔	cang3	0.2%
 駔	zu4	0.2%
-廁	ci4	0.2%
-廁	si4	0.2%
+廁	ci4	0%
+廁	si4	0%
 厠	ci4	0.2%
 厠	si4	0.2%
 厕	ci4	0.2%
@@ -1123,8 +1125,8 @@ min_phrase_weight: 100
 茸	rong3	0.2%
 排	pai3	0.2%
 迫	pai3	0.2%
-縱	zong1	0.2%
-縱	zong3	0.2%
+縱	zong1	0%
+縱	zong3	0%
 調	zhou1	0.2%
 癟	bie1
 㿜	bie1
@@ -2933,6 +2935,577 @@ min_phrase_weight: 100
 戏	hui1	0%
 戏	suo1	0%
 戏	yi1	0%
+暇	jia3	0%
+菽	jiao1	0%
+厭	ya1	0%
+# 厭	ye4	0%
+厭	yan3	0%
+厭	yi4	0%
+厌	yan1	30%
+厌	ya1	0%
+# 厌	ye4	0%
+厌	yan3	0%
+厌	yi4	0%
+蛙	jue2	0%
+蛩	gong3	0%
+闕	jue2	0%
+阙	que4	0%
+阙	jue2	0%
+涇	qing3	0%
+泾	qing3	0%
+杼	shu4	0%
+# 杼	shu1	0%
+踣	pou4	0%
+當	dang5	0%
+# 當	chang2	0%
+当	dang5	0%
+# 当	chang2	0%
+靡	ma2	0%
+# 靡	mei2	0%
+# 靡	mo2	0%
+沆	kang4	0%
+# 長	zhang1	0%
+# 长	zhang1	0%
+呿	qu4	10%
+呿	ka1	0%
+佫	ge2
+麕	qun2
+# 麕	kun3	0%
+# 麇	kun3	0%
+覷	qu1	0%
+觑	qu1	0%
+咽	yuan1	0%
+侔	mao2	0%
+庋	gui4	0%
+跫	xiong1	0%
+嚉	duo4
+恂	shun4	0%
+悚	ce4	0%
+奔	fen4	0%
+衿	qin4	0%
+# 墮	tuo3	0%
+# 堕	tuo3	0%
+嶞	tuo4	0%
+燿	shuo4	0%
+燿	shao4	0%
+槁	kao4	0%
+槁	gao1	0%
+針	zhen4	0%
+针	zhen4	0%
+鍼	qian2	0%
+# 鍼	zhen4	0%
+栩	yu3	0%
+# 桙	mu2	0%
+縱	cong2	0%
+纵	zong3	0%
+纵	zong1	0%
+纵	cong2	0%
+縦	zong3	0%
+縦	zong1	0%
+縦	cong2	0%
+沰	duo2	0%
+沾	tian1	0%
+沾	dian4	0%
+沾	chan1	0%
+霍	he4	0%
+霍	suo3	0%
+浹	xia2	0%
+浃	xia2	0%
+涑	sou1	0%
+涑	sou4	0%
+涑	shou4	0%
+涑	shu4	0%
+# 涸	hu4	0%
+濔	mi2	0%
+濔	ni3	0%
+濡	rou2	0%
+濡	ruan3	0%
+濡	er2	0%
+濡	nuan2	0%
+濡	nuo4	0%
+抡	lun2	50%
+淪	lun3	0%
+淪	guan1	0%
+沦	lun3	0%
+沦	guan1	0%
+淫	yan4	0%
+淫	yao2	0%
+涭	tao2	0%
+廁	ze4	0%
+厠	ze4	0%
+厕	ze4	0%
+廁	si5	0%
+厠	si5	0%
+厕	si5	0%
+隳	duo4	0%
+𨽐	liu4	0%
+侖	lun4	0%
+仑	lun4	0%
+脥	qu1	0%
+# 脥	xi1	0%
+𣍰	qu1	0%
+# 𣍰	xi1	0%
+䏵	meng2
+朦	mang3	0%
+䑃	mang3	0%
+爍	luo4	0%
+爍	yue4	0%
+烁	luo4	0%
+烁	yue4	0%
+澣	han4	0%
+濩	hu4	0%
+臄	ju1	0%
+萌	ming2	0%
+溺	ruo4	0%
+汀	ting4	0%
+汀	ding4	0%
+汁	xie2	0%
+汁	shi2	0%
+溟	ming3	0%
+溟	mi4	0%
+伏	fu4	0%
+伌	e4	0%
+鯈	tiao2	0%
+喙	zhou4	0%
+䞭	qiu4	0%
+䞭	qun1	0%
+踜	leng2	0%
+踜	cheng3	0%
+踖	qi4	0%
+軼	die2	0%
+軼	zhe2	0%
+轶	die2	0%
+轶	zhe2	0%
+軨	ling3	0%
+𫐉	ling3	0%
+嚄	huo1	0%
+嚄	wo4	0%
+眈	chen3	0%
+鑠	yue4	0%
+鑠	li4	0%
+铄	yue4	0%
+铄	li4	0%
+瞋	tian2	0%
+瞋	tian1	0%
+瞋	shen1	0%
+瞢	mang2	0%
+瞢	meng4	0%
+嗑	xia2	0%
+# 嗑	he1	0%
+嗔	tian2	0%
+𧩼	xi4	0%
+𧪦	ta4	0%
+瞠	zheng4	0%
+瞟	piao4	0%
+瞟	piao1	0%
+瞜	lou5	0%
+䁖	lou5	0%
+慬	jin4	0%
+慳	xian2	0%
+悭	xian2	0%
+㥪	lv3	0%
+慢	man2	0%
+撟	jiao1	0%
+撟	kao3	0%
+挢	jiao1	0%
+挢	jiao4	0%
+挢	kao3	0%
+撨	xiao4	0%
+撫	mo2	0%
+# 撫	hu1	0%
+抚	mo2	0%
+# 抚	hu1	0%
+撣	dan4	0%
+撣	chan2	0%
+撣	tan1	0%
+撣	zhan3	0%
+撣	tian2	0%
+掸	shan4	0%
+掸	dan4	0%
+掸	chan2	0%
+掸	tan1	0%
+掸	zhan3	0%
+掸	tian2	0%
+撋	rui2	0%
+撋	run2	0%
+撋	ruo2	0%
+撋	sui1	0%
+撮	zuan1	0%
+撮	chua1	0%
+瞿	ji2	0%
+䁸	nong4	0%
+跨	ku4	0%
+跨	kua1	0%
+跨	kua3	0%
+跮	die2	0%
+跐	zi3	0%
+缩	su4	0%
+縯	yan3	0%
+演	yan4	0%
+簇	chuo4	0%
+簇	cou4	0%
+綢	tao1	0%
+綢	diao4	0%
+绸	tao1	0%
+绸	diao4	0%
+繆	jiu1	0%
+繆	liao4	0%
+繆	lu4	0%
+缪	jiu1	0%
+繆	liao4	0%
+繆	lu4	0%
+縿	xian1	0%
+縿	xiao1	0%
+縿	sao1	0%
+縿	can3	0%
+繅	zao3	0%
+缫	zao3	0%
+挈	qi4	0%
+挈	jia2	0%
+挈	qia4	0%
+挈	shi4	0%
+抬	chi1	0%
+披	bi4	0%
+羡	yan2	0%
+嚢	nang1	0%
+撹	gao3	0%
+# 脩	di2	0%
+脩	you3	0%
+脩	tiao2	0%
+脩	xiao1	0%
+俓	ying2	0%
+# 俏	qiao1	0%
+俏	xiao4	0%
+俏	xiao1	0%
+俚	li4	0%
+# 俔	huan2	0%
+們	men4	0%
+们	men4	0%
+咮	zhu4	0%
+咮	zhu1	0%
+咮	ru2	0%
+咻	xiao1	0%
+咻	xu4	0%
+𠲎	fa5	0%
+擊	ji4	0%
+擊	xi2	0%
+击	ji4	0%
+击	xi2	0%
+撃	ji4	0%
+撃	xi2	0%
+擭	wo4	0%
+擭	hu4	0%
+據	ju1
+據	ji3	0%
+据	ji3	0%
+挡	dang4
+踹	duan4	0%
+踹	chuan3	0%
+踼	tang3	0%
+踼	shang1	0%
+踶	ti2	0%
+踶	chi2	0%
+踶	shi4	0%
+踢	die2	0%
+踒	wei1	0%
+踒	rui2	0%
+踔	diao4	0%
+踔	zhuo1	0%
+踔	tiao4	0%
+踔	chuo4	0%
+踧	di2	0%
+掘	ku1	0%
+# 掇	chuo4	0%
+# 掇	zhui4	0%
+舍	shi4	0%
+舌	gua1	0%
+掀	hen2	0%
+刺	qi4	0%
+刳	kou1	0%
+㓨	ci4
+刾	ci2
+蒼	cang3	0%
+蓑	sui1	0%
+# 蒿	xiao1	0%
+衷	zhong4	0%
+蹲	zun1	0%
+蹲	cun3	0%
+蹲	cuan2	0%
+蹲	qun3	0%
+蹭	ceng2	0%
+處	ju4	0%
+处	ju4	0%
+处	ju4	0%
+虖	hu4	0%
+蜚	pei4	0%
+蜚	bei4	0%
+蜴	xi1	0%
+蜾	luo3	0%
+輠	hua4	0%
+輠	hui4	0%
+轴	zhou4	0%
+轴	zhu2	0%
+蟜	qiao2	0%
+蜒	yan4	0%
+蜒	dan4	0%
+轑	liao2	0%
+轑	liao3	0%
+轑	liao4	0%
+蠡	li4	0%
+蠡	luo3	0%
+蠡	luo2	0%
+䗍	li2	0%
+䗍	luo3	0%
+䗍	li4	0%
+蟸	li2	0%
+蟸	luo3	0%
+蟸	luo2	0%
+蟸	li4	0%
+𧋠	luo3	0%
+𧋠	luo2	0%
+𧋠	li4	0%
+𧔦	yan3	0%
+蠩	chu2	0%
+蟿	ji4	0%
+蟣	qi2	0%
+蠖	yue4	0%
+倚	ji1	0%
+倚	yi1	0%
+倢	qie4	0%
+俶	shu1	0%
+俶	ti4	0%
+條	tiao1	0%
+条	tiao1	0%
+嘹	liao4	0%
+邯	han4	0%
+那	nuo4	0%
+那	ne2	0%
+邡	fang4	0%
+# 邡	fang3	0%
+鄲	duo1	0%
+# 鄲	dan4	0%
+郸	duo1	0%
+# 郸	dan4	0%
+鄱	pi2	0%
+鄱	pan2	0%
+棺	guan4	0%
+椌	kong1	0%
+榔	lang3	0%
+務	wu3	0%
+務	wu2	0%
+務	mao2	0%
+務	mao4	0%
+务	wu3	0%
+务	wu2	0%
+务	mao2	0%
+务	mao4	0%
+矞	jue2	0%
+矞	xu4	0%
+趁	zhen1	0%
+趁	chen2	0%
+趁	nian3	0%
+趁	zhen3	0%
+超	chao3	0%
+超	chao4	0%
+超	tiao4	0%
+跑	bo2	0%
+附	pou2	0%
+附	fu1	0%
+# 附	fu3	0%
+# 附	bo2	0%
+陁	zhi4	0%
+陁	yi3	0%
+阻	zhu4	0%
+垂	zhui4	0%
+幸	nie4	0%
+坨	yi2	0%
+鉤	gou4	0%
+鉤	qu2	0%
+鈎	gou4	0%
+鈎	qu2	0%
+钩	gou4	0%
+钩	qu2	0%
+鉋	pao2	0%
+鉋	bao2	0%
+铇	pao2	0%
+铇	bao2	0%
+鉨	nie4	0%
+鉨	ni3	0%
+辨	bian3	0%
+辨	ban4	0%
+# 辨	ban1	0%
+# 辨	pan2	0%
+# 辨	ping2	0%
+辯	pian2	0%
+辯	bian3	0%
+辯	ban4	0%
+辩	pian2	0%
+辩	bian3	0%
+辩	ban4	0%
+逐	di2	0%
+逐	zhou4	0%
+逐	tun2	0%
+逞	ying2	0%
+造	cao1	0%
+透	shu1	0%
+逗	zhu4	0%
+逗	tou2	0%
+逗	qi2	0%
+遺	sui2	0%
+遗	wei4	0%
+遗	sui2	0%
+薄	bu4	0%
+駒	ju4	0%
+驹	ju4	0%
+酣	han4	0%
+渴	kai4	0%
+渇	he2	0%
+渇	jie2	0%
+渇	kai4	0%
+湯	tang4	0%
+湯	yang2	0%
+汤	shang1	0%
+汤	tang4	0%
+汤	yang2	0%
+硕	shi2	0%
+屏	bing4	0%
+屋	wo1	0%
+屍	shi4	0%
+屈	que4	0%
+屈	ju2	0%
+㞖	ci1
+泣	li4	0%
+泣	se4	0%
+沱	duo4	0%
+沱	chi2	0%
+注	zhou4	0%
+泖	liu3	0%
+泡	pao2	0%
+泜	zhi4	0%
+泠	ling3	0%
+沴	zhen3	0%
+闇	yan3	0%
+闇	yin1	0%
+闇	yin3	0%
+闆	pan3	0%
+團	chuan2	0%
+团	chuan2	0%
+# 団	chuan2	0%
+狼	lang3	0%
+狼	lang4	0%
+狼	hang3	0%
+狻	xun4	0%
+狻	jun4	0%
+忮	qi2	0%
+忤	wu4	0%
+𢗳	mao2	0%
+𢗳	mi2	0%
+愾	qi4	0%
+忾	xi4	0%
+愴	chuang3	0%
+愮	yao4	0%
+隐	yin4	0%
+擇	yi4	0%
+择	yi4	0%
+择	zhai2	0%
+# 択	yi4	0%
+# 択	zhai2	0%
+隋	duo4	0%
+隋	tuo3	0%
+隋	tuo1	0%
+# 隋	hui1	0%
+陾	er2	0%
+投	dou4	0%
+抗	gang1	0%
+風	feng3	0%
+风	feng4	0%
+风	feng3	0%
+馕	nang3	50%
+喋	sha4	0%
+喋	qie4	0%
+喃	nan3	0%
+喊	kan4	0%
+喊	jian1	0%
+飾	chi4	0%
+饰	chi4	0%
+䬬	yang4	0%
+內	rui4	0%
+# 內	ne4	0%
+# 内	ne4	0%
+汭	tun1	0%
+汽	gai4	0%
+汽	yi3	0%
+絮	chu4	0%
+絮	nv4	0%
+絮	na4	0%
+絭	quan4	0%
+絞	xiao2	0%
+絞	jiao4	0%
+绞	xiao2	0%
+绞	jiao4	0%
+草	zao4	0%
+茈	ci3	0%
+艸	zhu2	0%
+睾	hao4	0%
+# 睪	hao4	0%
+睪	du4	0%
+# 之	zhu1	0%
+# 之	zhi4	0%
+月	rou4	0%
+有	wei3	0%
+䏌	xi4	0%
+耳	reng2	0%
+耶	xie2	0%
+耷	zhe2	0%
+前	jian3	0%
+典	tian3	0%
+趨	qu4	0%
+趨	cou3	0%
+趋	cu4	0%
+趋	qu4	0%
+趋	cou3	0%
+墨	mei4	0%
+墨	mei2	0%
+墠	chan3	0%
+隻	huo4	0%
+麗	li3	0%
+麗	si1	0%
+丽	li2	0%
+丽	li3	0%
+丽	si1	0%
+朱	shu1	0%
+杆	gan4	0%
+杅	wu1	0%
+杜	du3	0%
+杜	tu2	0%
+杠	gong1	0%
+桿	han4	0%
+隔	rong3	0%
+隔	ji1	0%
+搔	sao4	0%
+# 掻	sao4	0%
+掾	chuan2	0%
+摮	qiao1	0%
+摹	mo1	0%
+扮	fen1	0%
+扮	huo3	0%
+折	ti2	0%
+叱	hua4	0%
+叱	yi3	0%
+咹	an1	0%
+咹	an3	0%
+哪	nai3	0%
+哪	na4	0%
+哪	nie4	0%
+哪	ne2	0%
+哏	en4	0%
+冯	ping2	0%
+馱	dai4	0%
+伎	zhi4	0%
+伎	qi2	0%
+伎	qi4	0%
+休	xu4	0%
+行	heng2	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -3700,7 +4273,7 @@ min_phrase_weight: 100
 僥	yao2	1%
 劁	qiao2	1%
 劁	qiao4	1%
-厭	yan1	1%
+厭	yan1	30%
 嗾	zu2	1%
 嘁	za2	1%
 嘔	xu1	1%
@@ -3998,7 +4571,7 @@ min_phrase_weight: 100
 餤	dan4	1%
 鴐	jia1	1%
 鴘	bian4	1%
-麇	qun2	1%
+麇	qun2	100%
 麮	qu3	1%
 黕	dan3	1%
 壎	xuan1	1%
@@ -5143,7 +5716,7 @@ min_phrase_weight: 100
 挱	suo1	0.3%
 挵	nong4	0.3%
 捙	ye4	0.3%
-据	ju4	0.3%
+据	ju4	100%
 摿	yao2	0.3%
 攂	lei2	0.3%
 晿	cheng1	0.3%
@@ -5203,7 +5776,7 @@ min_phrase_weight: 100
 芍	que4	0.3%
 芣	fu2	0.3%
 芥	gai4	0.3%
-草	cao4	0.3%
+# 草	cao4	0%
 萕	ji4	0.3%
 萹	bian1	0.3%
 蓿	xu4	0.3%
@@ -8215,7 +8788,7 @@ min_phrase_weight: 100
 㞓	qi4
 㞔	yi2
 㞕	xie4
-㞖	ci2
+# 㞖	ci2
 㞖	ci4
 㞗	qiu2
 㞘	du1
@@ -20774,7 +21347,7 @@ min_phrase_weight: 100
 拗	ao4	50%
 拗	niu4	50%
 拘	ju1
-拙	zhuo1
+拙	zhuo1	80%
 拚	pan4	50%
 拚	pin1	50%
 招	zhao1
@@ -55056,6 +55629,8 @@ min_phrase_weight: 100
 一息	yi1 xi2
 一息奄奄	yi4 xi2 yan1 yan1
 一息奄奄	yi1 xi2 yan1 yan1
+一息奄奄	yi4 xi2 yan3 yan3
+一息奄奄	yi1 xi2 yan3 yan3
 一息尚存	yi4 xi2 shang4 cun2
 一息尚存	yi1 xi2 shang4 cun2
 一意孤行	yi2 yi4 gu1 xing2
@@ -66248,6 +66823,7 @@ min_phrase_weight: 100
 命運交響曲	ming4 yun4 jiao1 xiang3 qu3
 命題邏輯	ming4 ti2 luo2 ji2
 呿唫	qu1 yin2
+呿唫	qu4 yin2
 咀嚼	ju3 jue2
 咀嚼	ju3 jiao2
 咀嚼肌	ju3 jue2 ji1
@@ -66259,12 +66835,9 @@ min_phrase_weight: 100
 咂嘴弄舌	za1 zui3 nong4 she2
 咂摸	za1 mo1
 咄咄	duo4 duo4
-咄咄	duo1 duo1
 咄咄怪事	duo4 duo4 guai4 shi4
-咄咄怪事	duo1 duo1 guai4 shi4
-咄咄稱奇	duo1 duo1 cheng1 qi2
+咄咄稱奇	duo4 duo4 cheng1 qi2
 咄咄逼人	duo4 duo4 bi1 ren2
-咄咄逼人	duo1 duo1 bi1 ren2
 咄唶	duo4 jie4
 咄嗟	duo4 jie1
 咄嗟	duo4 jie4
@@ -66788,6 +67361,7 @@ min_phrase_weight: 100
 哈囉德	ha1 luo1 de2
 哈囉德	ha1 luo5 de2
 哈士蟆	ha1 shi4 ma2
+哈士蟆	ha1 shi4 ma5
 哈密地區	ha1 mi4 di4 qu1
 哈巴	ha3 ba1
 哈巴狗	ha1 ba1 gou3
@@ -70700,20 +71274,27 @@ min_phrase_weight: 100
 夾雜	jia1 za2
 奄人	yan1 ren2
 奄冉	yan1 ran3
+奄冉	yan3 ran3
 奄列	yan3 lie4
 奄奄	yan1 yan1
+奄奄	yan3 yan3
 奄奄一息	yan1 yan1 yi4 xi2
 奄奄一息	yan1 yan1 yi1 xi2
 奄奄一息	yan3 yan3 yi1 xi2
 奄奄一息	yan3 yan3 yi4 xi2
 奄奄垂絕	yan1 yan1 chui2 jue2
+奄奄垂絕	yan3 yan3 chui2 jue2
 奄奄無力	yan1 yan1 wu2 li4
+奄奄無力	yan3 yan3 wu2 li4
 奄宦	yan1 huan4
 奄尹	yan1 yin3
+奄尹	yan3 yin3
 奄忽	yan3 hu1
 奄息	yan3 xi2
+奄息	yan1 xi2
 奄欻	yan3 hu1
 奄然而逝	yan3 ran2 er2 shi4
+奄然而逝	yan1 ran2 er2 shi4
 奄老	yan1 lao3
 奇偶	ji1 ou3
 奇偶性	ji1 ou3 xing4
@@ -70894,6 +71475,7 @@ min_phrase_weight: 100
 奮發有為	fen4 fa1 you3 wei2
 奮發自強	fen4 fa1 zi4 qiang2
 奮發蹈厲	fen4 fa1 dao4 li4
+奮發蹈厲	fen4 fa1 dao3 li4
 奮袂攘襟	fen4 mei4 rang2 jin1
 女儐相	nv3 bin1 xiang4
 女先生	nv3 xian1 sheng1
@@ -71154,7 +71736,9 @@ min_phrase_weight: 100
 如衣繡夜行	ru2 yi1 xiu4 ye4 xing2
 如解倒懸	ru2 jie3 dao4 xuan2
 如蹈水火	ru2 dao4 shui3 huo3
+如蹈水火	ru2 dao3 shui3 huo3
 如蹈湯火	ru2 dao4 tang1 huo3
+如蹈湯火	ru2 dao3 tang1 huo3
 如釋重負	ru2 shi4 zhong4 fu4
 如魚得水	ru2 yu2 de2 shui3
 如鳥獸散	ru2 niao3 shou4 san4
@@ -71789,7 +72373,6 @@ min_phrase_weight: 100
 守喪	shou3 sang1
 守成難	shou3 cheng2 nan2
 守拙	shou3 zhuo2
-守拙	shou3 zhuo1
 守更	shou3 geng1
 守望相助	shou3 wang4 xiang1 zhu4
 守株伺兔	shou3 zhu1 si4 tu4
@@ -73464,8 +74047,10 @@ min_phrase_weight: 100
 層見疊出	ceng2 xian4 die2 chu1
 履中行善	lv3 zhong1 xing2 shan4
 履仁蹈義	lv3 ren2 dao4 yi4
+履仁蹈義	lv3 ren2 dao3 yi4
 履歷片	lv3 li4 pian4
 履湯蹈火	lv3 tang1 dao4 huo3
+履湯蹈火	lv3 tang1 dao3 huo3
 履薄	lv3 bo2
 履薄臨深	lv3 bo2 lin2 shen1
 履行	lv3 xing2
@@ -73791,7 +74376,6 @@ min_phrase_weight: 100
 巧拙	qiao3 zhuo2
 巧發奇中	qiao3 fa1 qi2 zhong4
 巧詐不如拙誠	qiao3 zha4 bu4 ru2 zhuo2 cheng2
-巧詐不如拙誠	qiao3 zha4 bu4 ru2 zhuo1 cheng2
 巨壑	ju4 huo4
 巨壑	ju4 he4
 巨闕	ju4 que4
@@ -74964,7 +75548,6 @@ min_phrase_weight: 100
 弄岔	nong4 cha4
 弄左性	nong4 zuo3 xing4
 弄巧反拙	nong4 qiao3 fan3 zhuo2
-弄巧成拙	nong4 qiao3 cheng2 zhuo1
 弄巧成拙	nong4 qiao3 cheng2 zhuo2
 弄平	nong4 ping2
 弄影	nong4 ying3
@@ -75950,7 +76533,9 @@ min_phrase_weight: 100
 復興門	fu4 xing1 men2
 復興黨	fu4 xing1 dang3
 復蹈其轍	fu4 dao4 qi2 che4
+復蹈其轍	fu4 dao3 qi2 che4
 復蹈前轍	fu4 dao4 qian2 che4
+復蹈前轍	fu4 dao3 qian2 che4
 復轉	fu4 zhuan3
 復辟	fu4 bi4
 循分	xun2 fen4
@@ -76104,10 +76689,8 @@ min_phrase_weight: 100
 心折	xin1 zhe2
 心折首肯	xin1 zhe2 shou3 ken3
 心折首肯	xin1 zhe2 shou3 keng3
-心拙口夯	xin1 zhuo1 kou3 ben4
 心拙口夯	xin1 zhuo2 kou3 hang1
 心拙口笨	xin1 zhuo2 kou3 ben4
-心拙口笨	xin1 zhuo1 kou3 ben4
 心數	xin1 shu4
 心旌搖曳	xin1 jing1 yao2 yi4
 心曲	xin1 qu1
@@ -77109,7 +77692,6 @@ min_phrase_weight: 100
 愚懵	yu2 meng2
 愚戇	yu2 zhuang4
 愚拙	yu2 zhuo2
-愚拙	yu2 zhuo1
 愚氓	yu2 meng2
 愚氣	yu2 qi4
 愚矇	yu2 meng2
@@ -77465,6 +78047,7 @@ min_phrase_weight: 100
 應聲而倒	ying4 sheng1 er2 dao3
 應舉	ying4 ju3
 應規蹈矩	ying4 gui1 dao4 ju3
+應規蹈矩	ying4 gui1 dao3 ju3
 應訊	ying4 xun4
 應診	ying4 zhen3
 應詔	ying4 zhao4
@@ -78821,6 +79404,7 @@ min_phrase_weight: 100
 抵死漫生	di3 si3 man2 sheng1
 抵死謾生	di3 si3 man2 sheng1
 抵瑕蹈隙	di3 xia2 dao4 xi4
+抵瑕蹈隙	di3 xia2 dao3 xi4
 抵當	di3 dang3
 抵當	di3 dang4
 抹一鼻子灰	mo3 yi4 bi2 zi5 hui1
@@ -79208,34 +79792,25 @@ min_phrase_weight: 100
 拘繫	ju1 xi4
 拘頭	ju1 tou5
 拙作	zhuo2 zuo4
-拙作	zhuo1 zuo4
 拙劣	zhuo2 lie4
-拙劣	zhuo1 lie4
 拙口笨腮	zhuo2 kou3 ben4 sai1
 拙口鈍腮	zhuo2 kou3 dun4 sai1
 拙口鈍辭	zhuo2 kou3 dun4 ci2
 拙夫	zhuo2 fu1
 拙實	zhuo2 shi2
-拙政園	zhuo1 zheng4 yuan2
+拙政園	zhuo2 zheng4 yuan2
 拙於言辭	zhuo2 yu2 yan2 ci2
 拙樸	zhuo2 pu2
-拙樸	zhuo1 pu3
 拙澀	zhuo2 se4
-拙澀	zhuo1 se4
 拙物	zhuo2 wu4
 拙病	zhuo2 bing4
 拙目	zhuo2 mu4
 拙眼	zhuo2 yan3
 拙笨	zhuo2 ben4
-拙笨	zhuo1 ben4
 拙筆	zhuo2 bi3
-拙筆	zhuo1 bi3
 拙荊	zhuo2 jing1
-拙荊	zhuo1 jing1
 拙著	zhuo2 zhu4
-拙著	zhuo1 zhu4
 拙見	zhuo2 jian4
-拙見	zhuo1 jian4
 拙計	zhuo2 ji4
 拚卻	pan4 que4
 拚去	pan4 qu4
@@ -80056,6 +80631,7 @@ min_phrase_weight: 100
 排長	pai2 chang2
 排除萬難	pai2 chu2 wan4 nan2
 排難解憂	pai2 nan4 jie3 you1
+排難解憂	pai2 nan2 jie3 you1
 排難解紛	pai2 nan4 jie3 fen1
 排難解紛	pai2 nan2 jie3 fen1
 掖咕	ye1 gu1
@@ -80148,7 +80724,9 @@ min_phrase_weight: 100
 探驪得珠	tan4 li2 de2 zhu1
 掣曳	che4 yi4
 掣襟肘見	che4 jin1 zhou3 xian4
+掣襟肘見	che4 jin1 zhou3 jian4
 掣襟肘見	che4 jin1 zhou2 xian4	80%
+掣襟肘見	che4 jin1 zhou2 jian4	80%
 掣襟露肘	che4 jin1 lu4 zhou3
 掣襟露肘	che4 jin1 lu4 zhou2	80%
 掤扒	bing1 ba1
@@ -80543,6 +81121,7 @@ min_phrase_weight: 100
 搶救人質	qiang3 jiu4 ren2 zhi4	3%
 搶救人質	qiang3 jiu4 ren2 zhi2
 搶棺材奔命	qiang3 guan1 cai2 ben4 ming4
+搶棺材奔命	qiang3 guan1 cai2 ben1 ming4
 搶槓	qiang3 gang4
 搶生意	qiang3 sheng1 yi4
 搶盡鋒頭	qiang3 jin4 feng1 tou5
@@ -81247,6 +81826,7 @@ min_phrase_weight: 100
 擇刺	zhai2 ci4
 擇善而行	ze2 shan4 er2 xing2
 擇地而蹈	ze2 di4 er2 dao4
+擇地而蹈	ze2 di4 er2 dao3
 擇席	zhai2 xi2
 擇席	ze2 xi2
 擇日子	zhai2 ri4 zi5
@@ -83645,6 +84225,8 @@ min_phrase_weight: 100
 曲禮	qu1 li3
 曲突徙薪	qu1 tu2 xi3 xin1
 曲突徙薪	qu1 tu1 xi3 xin1
+曲突徙薪	qu3 tu2 xi3 xin1
+曲突徙薪	qu3 tu1 xi3 xin1
 曲筆	qu1 bi3
 曲終人散	qu3 zhong1 ren2 san4
 曲終奏雅	qu3 zhong1 zou4 ya3
@@ -87267,6 +87849,7 @@ min_phrase_weight: 100
 氣性	qi4 xing4
 氣息	qi4 xi2
 氣息奄奄	qi4 xi2 yan1 yan1
+氣息奄奄	qi4 xi2 yan3 yan3
 氣悶	qi4 men4
 氣憤難平	qi4 fen4 nan2 ping2
 氣數	qi4 shu4
@@ -88658,6 +89241,7 @@ min_phrase_weight: 100
 流水落花	liu2 shui3 luo4 hua1
 流水行雲	liu2 shui3 xing2 yun2
 流汗浹背	liu2 han4 jia2 bei4
+流汗浹背	liu2 han4 jia1 bei4
 流當品	liu2 dang4 pin3
 流眄	liu2 mian3
 流落	liu2 luo4
@@ -93233,6 +93817,7 @@ min_phrase_weight: 100
 疲勞轟炸	pi2 lao2 hong1 zha4
 疲匱	pi2 kui4
 疲於奔命	pi2 yu2 ben1 ming4
+疲於奔命	pi2 yu2 ben4 ming4
 疲累	pi2 lei4
 疵蒙謬累	ci1 meng2 miu4 lei3
 疹子	zhen3 zi5
@@ -96110,7 +96695,6 @@ min_phrase_weight: 100
 稔惡不悛	ren3 e4 bu4 quan1
 稗子	bai4 zi5
 稚拙	zhi4 zhuo2
-稚拙	zhi4 zhuo1
 稛載	kun3 zai4
 稟帖	bing3 tie3
 稟性難移	bing3 xing4 nan2 yi2
@@ -97130,11 +97714,8 @@ min_phrase_weight: 100
 笥匱囊空	si4 kui4 nang2 kong1
 符應	fu2 ying4
 笨口拙舌	ben4 kou3 zhuo2 she2
-笨口拙舌	ben4 kou3 zhuo1 she2
 笨嘴拙腮	ben4 zui3 zhuo2 sai1
-笨嘴拙腮	ben4 zui3 zhuo1 sai1
 笨拙	ben4 zhuo2
-笨拙	ben4 zhuo1
 笨重	ben4 zhong4
 第一人稱	di4 yi1 ren2 cheng1
 第一人稱	di4 yi4 ren2 cheng1
@@ -99145,6 +99726,7 @@ min_phrase_weight: 100
 罷敝	pi2 bi4
 罷散	pi2 san4
 罷於奔命	pi2 yu2 ben1 ming4
+罷於奔命	pi2 yu2 ben4 ming4
 罷民不畏刑法	pi2 min2 bu2 wei4 xing2 fa3
 罷癃	pi2 long2
 罷軟	pi2 ruan3
@@ -99371,6 +99953,7 @@ min_phrase_weight: 100
 羽狀脈	yu3 zhuang4 mo4
 羽蓋	yu3 gai4
 羽蹈烈火	yu3 dao4 lie4 huo3
+羽蹈烈火	yu3 dao3 lie4 huo3
 羽量級	yu3 liang4 ji2
 羽騎	yu3 ji4
 羽騎	yu3 qi2
@@ -99567,7 +100150,6 @@ min_phrase_weight: 100
 老把勢	lao3 ba3 shi4
 老把式	lao3 ba3 shi4
 老拙	lao3 zhuo2
-老拙	lao3 zhuo1
 老撾	lao3 wo1
 老撾	lao3 zhua1
 老教頭	lao3 jiao4 tou2
@@ -103749,7 +104331,6 @@ min_phrase_weight: 100
 蝦芭	xia1 ba1
 蝦蟆	ha2 ma5
 蝦蟆	ha2 ma2
-蝦蟆	xia1 ma5
 蝦蟆子	ha2 ma5 zi5
 蝦蟆子	ha2 ma2 zi5
 蝦蟆陵	ha2 ma5 ling2
@@ -105059,6 +105640,7 @@ min_phrase_weight: 100
 覆載	fu4 zai4
 覆載	fu4 zai3
 覆轍重蹈	fu4 che4 chong2 dao4
+覆轍重蹈	fu4 che4 chong2 dao3
 覆醬瓿	fu4 jiang4 pou3
 覆露	fu4 lu4
 見不得	jian4 bu4 de2
@@ -107341,8 +107923,11 @@ min_phrase_weight: 100
 赴湯蹈火	fu4 tang1 dao4 huo3
 赴湯蹈火	fu4 tang1 dao3 huo3
 赴火蹈刃	fu4 huo3 dao4 ren4
+赴火蹈刃	fu4 huo3 dao3 ren4
 赴蹈	fu4 dao4
+赴蹈	fu4 dao3
 赴蹈湯火	fu4 dao4 tang1 huo3
+赴蹈湯火	fu4 dao3 tang1 huo3
 赴難	fu4 nan4
 赴難	fu4 nan2
 起來	qi3 lai2
@@ -107484,6 +108069,7 @@ min_phrase_weight: 100
 足癬	zu2 xuan3	3%
 足跡	zu2 ji1
 足蹈手舞	zu2 dao4 shou3 wu3
+足蹈手舞	zu2 dao3 shou3 wu3
 足量	zu2 liang4
 足高氣強	zu2 gao1 qi4 jiang4
 趴下	pa1 xia4
@@ -107707,7 +108293,9 @@ min_phrase_weight: 100
 踳落	chun3 luo4
 踳駁	chun3 bo2
 踵決肘見	zhong3 jue2 zhou3 xian4
+踵決肘見	zhong3 jue2 zhou3 jian4
 踵決肘見	zhong3 jue2 zhou2 xian4	80%
+踵決肘見	zhong3 jue2 zhou2 jian4	80%
 踶跂	di4 zhi1
 踶跂	zhi4 qi2
 踸踔	chen3 zhuo2
@@ -107724,23 +108312,39 @@ min_phrase_weight: 100
 蹇吃	jian3 ji2
 蹇落	jian3 luo4
 蹈厲之志	dao4 li4 zhi1 zhi4
+蹈厲之志	dao3 li4 zhi1 zhi4
 蹈厲奮發	dao4 li4 fen4 fa1
+蹈厲奮發	dao3 li4 fen4 fa1
 蹈常襲故	dao4 chang2 xi2 gu4
 蹈常襲故	dao3 chang2 xi2 gu4
 蹈歌	dao4 ge1
+蹈歌	dao3 ge1
 蹈海	dao4 hai3
+蹈海	dao3 hai3
 蹈爨	dao4 cuan4
+蹈爨	dao3 cuan4
 蹈矩循規	dao4 ju3 xun2 gui1
+蹈矩循規	dao3 ju3 xun2 gui1
 蹈義	dao4 yi4
+蹈義	dao3 yi4
 蹈舞	dao4 wu3
+蹈舞	dao3 wu3
 蹈虎尾	dao4 hu3 wei3
+蹈虎尾	dao3 hu3 wei3
 蹈行	dao4 xing2
+蹈行	dao3 xing2
 蹈襲	dao4 xi2
+蹈襲	dao3 xi2
 蹈襲故常	dao4 xi2 gu4 chang2
+蹈襲故常	dao3 xi2 gu4 chang2
 蹈規循矩	dao4 gui1 xun2 ju3
+蹈規循矩	dao3 gui1 xun2 ju3
 蹈赴湯火	dao4 fu4 tang1 huo3
+蹈赴湯火	dao3 fu4 tang1 huo3
 蹈道	dao4 dao4
+蹈道	dao3 dao4
 蹈隙	dao4 xi4
+蹈隙	dao3 xi4
 蹉跌	cuo1 die2
 蹊蹺	qi1 qiao1
 蹊蹺	qi1 qiao4
@@ -107759,6 +108363,7 @@ min_phrase_weight: 100
 蹙眉長歎	cu4 mei2 chang2 tan4
 蹜蹜	su4 su4
 蹟蹈	ji1 dao4
+蹟蹈	ji1 dao3
 蹢躅	zhi2 zhu2
 蹤跡	zong1 ji1
 蹦兒	beng4 er5	80%
@@ -107860,6 +108465,7 @@ min_phrase_weight: 100
 躬行節儉	gong1 xing2 jie2 jian3
 躬親	gong1 qin1
 躬蹈矢石	gong1 dao4 shi3 shi2
+躬蹈矢石	gong1 dao3 shi3 shi2
 躬逢其盛	gong1 feng2 qi2 sheng4
 躬逢目擊	gong1 feng2 mu4 ji2
 躬體力行	gong1 ti3 li4 xing2
@@ -108721,7 +109327,6 @@ min_phrase_weight: 100
 農轉非	nong2 zhuan3 fei1
 迂回奔襲	yu1 hui2 ben1 xi2
 迂拙	yu1 zhuo2
-迂拙	yu1 zhuo1
 迂摸	yu1 mo1
 迂曲	yu1 qu1
 迂氣	yu1 qi4
@@ -110434,6 +111039,7 @@ min_phrase_weight: 100
 重足而立	chong2 zu2 er2 li4
 重趼	chong2 jian3
 重蹈	chong2 dao3
+重蹈	chong2 dao4
 重蹈覆轍	chong2 dao3 fu4 zhe2
 重蹈覆轍	chong2 dao4 fu4 che4
 重身	zhong4 shen1
@@ -115596,7 +116202,9 @@ min_phrase_weight: 100
 高蹈	gao1 dao4
 高蹈	gao1 dao3
 高蹈遠引	gao1 dao4 yuan3 yin3
+高蹈遠引	gao1 dao3 yuan3 yin3
 高蹈遠舉	gao1 dao4 yuan3 ju3
+高蹈遠舉	gao1 dao3 yuan3 ju3
 高速擋	gao1 su4 dang3
 高速率	gao1 su4 lv4
 高速緩衝存儲器	gao1 su4 huan3 chong1 cun2 chu3 qi4
@@ -115844,6 +116452,7 @@ min_phrase_weight: 100
 魯般手裡調大斧	lu3 ban1 shou3 li3 diao4 da4 fu3
 魯論	lu3 lun2
 魯連蹈海	lu3 lian2 dao4 hai3
+魯連蹈海	lu3 lian2 dao3 hai3
 魯酒薄而邯鄲圍	lu3 jiu3 bo2 er2 han2 dan1 wei2
 魯難未已	lu3 nan4 wei4 yi3
 鮁魚圈	ba4 yu2 quan1
@@ -116653,4 +117262,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 116656 #####
+##### @結束 END - 117265 #####
