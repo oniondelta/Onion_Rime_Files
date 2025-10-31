@@ -224,6 +224,7 @@
 #    詞句中，「疙瘩」補齊「ge1 da5」「ge1 da2」「ge1 da1」。
 #    詞句中，「姑娘」補齊「gu1 niang2」和「gu1 niang5」，後者詞頻設為80%。
 #    詞句中，「親戚」補齊「qin1 qi1」和「qin1 qi4」，後者詞頻設為80%。
+#    詞句中，「煞車」和「剎車」補齊「sha1 che1」和「sha4 che1」，「剎車」標註「sha4 che1」時，詞頻設為80%。
 #    詞句中，「證券」和「証券」臺灣字典發音為「zheng4 quan4」，日常發音常會誤發為「zheng4 juan4」，故皆補齊「zheng4 quan4」「zheng4 juan4」，後者詞頻設為80%。
 #    詞句中，「氣氛」臺灣字典發音為「qi4 fen1」，日常發音常會誤發為「qi4 fen4」，故皆補齊「qi4 fen1」「qi4 fen4」。
 #    詞句中，「氛圍」臺灣字典發音為「fen1 wei2」，日常發音常會誤發為「fen4 wei2」，故皆補齊「fen1 wei2」「fen4 wei2」。
@@ -63553,8 +63554,9 @@ min_phrase_weight: 100
 剎把	sha1 ba3
 剎時	cha4 shi2
 剎車	sha1 che1
-剎車	cha4 che1
+剎車	sha4 che1	80%
 剎車燈	sha1 che1 deng1
+剎車燈	sha4 che1 deng1	80%
 剎那	cha4 na4
 剔子	ti1 zi5
 剔子	ti4 zi5
@@ -76959,6 +76961,7 @@ min_phrase_weight: 100
 急公好義	ji2 gong1 hao4 yi4
 急切	ji2 qie4
 急剎車	ji2 sha1 che1
+急剎車	ji2 sha4 che1	80%
 急征重斂	ji2 zheng1 zhong4 lian4
 急待	ji2 dai4
 急急巴巴	ji2 ji2 ba1 ba1
@@ -78432,6 +78435,7 @@ min_phrase_weight: 100
 手到拈來	shou3 dao4 nian2 lai2
 手刺	shou3 ci4
 手剎車	shou3 sha1 che1
+手剎車	shou3 sha4 che1	80%
 手動擋	shou3 dong4 dang3
 手巾把子	shou3 jin1 ba3 zi5
 手帕姊妹	shou3 pa4 jie3 mei4
@@ -87859,6 +87863,7 @@ min_phrase_weight: 100
 氣滿志得	qi4 man3 zhi4 de2
 氣炸	qi4 zha4
 氣煞車	qi4 sha1 che1
+氣煞車	qi4 sha4 che1
 氣爆彈	qi4 bao4 dan4
 氣盛	qi4 sheng4
 氣盛言宜	qi4 sheng4 yan2 yi2
@@ -96096,6 +96101,7 @@ min_phrase_weight: 100
 碗子	wan3 zi5
 碟子	die2 zi5
 碟式煞車	die2 shi4 sha1 che1
+碟式煞車	die2 shi4 sha4 che1
 碟式相機	die2 shi4 xiang4 ji1
 碟影片	die2 ying3 pian4
 碟影片	die2 ying3 pian1
@@ -108281,6 +108287,7 @@ min_phrase_weight: 100
 踢鞠	ti1 ju2
 踢馬刺	ti1 ma3 ci4
 踩剎車	cai3 sha1 che1
+踩剎車	cai3 sha4 che1	80%
 踩窩子	cai3 wo1 zi5
 踰牆鑽穴	yu2 qiang2 zuan1 xue4
 踰牆鑽穴	yu2 qiang2 zuan4 xue4
@@ -112865,6 +112872,7 @@ min_phrase_weight: 100
 防衛性反應	fang2 wei4 xing4 fan3 ying4
 防衛過當	fang2 wei4 guo4 dang4
 防鎖死煞車系統	fang2 suo3 si3 sha1 che1 xi4 tong3
+防鎖死煞車系統	fang2 suo3 si3 sha4 che1 xi4 tong3
 防長	fang2 zhang3
 阻塞	zu3 se4
 阻塞	zu3 sai1
@@ -117263,4 +117271,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 117266 #####
+##### @結束 END - 117274 #####
