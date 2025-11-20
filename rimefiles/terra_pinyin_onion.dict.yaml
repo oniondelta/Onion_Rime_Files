@@ -1499,12 +1499,12 @@ min_phrase_weight: 100
 # 摻	xian1	0.2%
 棣	dai4	0.2%
 柞	zha4	0.2%
-柵	shan1	50%
+柵	shan1	10%
 柵	ce4	0%
 柵	che4	0%
 柵	shi5	0%
 栅	shi5	0%
-栅	shan4	50%
+栅	shan4	10%
 栅	che4	0%
 杆	gan3
 桿	gan1
@@ -3790,7 +3790,7 @@ min_phrase_weight: 100
 柑	qian2	1%
 柞	ze2	1%
 柣	die2	1%
-柵	shan4	50%
+柵	shan4	10%
 柷	chu4	1%
 歪	wai3	1%
 洗	xian3	1%
@@ -22948,7 +22948,7 @@ min_phrase_weight: 100
 栃	li4
 栄	rong2
 栅	ce4	0%
-栅	shan1	50%
+栅	shan1	10%
 栅	zha4
 栆	zao3
 标	biao1
