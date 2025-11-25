@@ -6,7 +6,7 @@
 
 ### Version Info
 
-- librime 1.14.0 (6bd73d0)
+- librime 1.15.0 (75bc43a)
 
 - librime-lua #409 (68f9c36)
 
