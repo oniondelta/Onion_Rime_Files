@@ -2,7 +2,7 @@
 
 ### Source Files
 
-- 「Win_新0.17.4版小狼毫主程式」：https://github.com/rime/weasel/releases
+- 「Win_新0.17.4版小狼毫主程式_Nightly Build」：https://github.com/rime/weasel/releases
 
 - 「Win_舊0.16.3版小狼毫主程式_Nightly Build」：https://github.com/rime/weasel/releases
 
@@ -12,7 +12,7 @@
 
 ### 版本說明
 
-- 推薦安裝「Win_新0.17.4版小狼毫主程式」。
+- 推薦安裝「Win_新0.17.4版小狼毫主程式_Nightly Build」。
 
 - 建議置換最新 librime 核心！
 
