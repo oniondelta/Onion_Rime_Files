@@ -180,6 +180,7 @@
 #    詞句中，「綏」臺灣標準為「sui1」，又音為「sui2」，大陸標準為「sui2」，日常易混，故皆補齊「sui1」「sui2」。
 #    詞句中，「鈾」臺灣標準為「you4」，又音為「you2」，大陸標準為「you2」，日常易混，故皆補齊「you4」「you2」。
 #    詞句中，「裳」臺灣標準為「chang2」，又音為「shang1」，日常發音常會誤發為「shang3」，大陸標準另有「shang5」該發音，日常易混，故皆補齊「chang2」「shang1」「shang5」「shang3」，最後一個詞頻設為80%。
+#    詞句中，「酊」臺灣標準只有「ding3」，大陸標準有「ding1」和「ding3」，且不同發音其字義不同，斟酌後皆補齊「ding1」「ding3」。
 #    詞句中，「柵」和「栅」臺灣標準為「zha4」，又音為「shan4」，大陸標準為「shan1」，日常易混，故皆補齊「zha4」「shan4」「shan1」，後兩者詞頻設為80%。
 #    詞句中，「削」臺灣標準讀音為「xue4」，語音為「xiao1」，大陸標準為「xue1」，日常易混，故皆補齊「xue4」「xiao1」「xue1」。有些詞發音如此標註會奇怪，待攷！
 #    詞句中，「肋」臺灣標準讀音為「le4」，語音為「lei4」，故皆補齊「le4」「lei4」。
@@ -193,6 +194,9 @@
 #    詞句中，「堤」皆補齊「ti2」「di1」。（原店名除外，如：西堤、丹堤等除外，後改皆補齊）
 #    詞句中，「洽」皆補齊「qia4」「xia2」，後者詞頻設為30%。
 #    詞句中，「艘」皆補齊「sao1」「sou1」。
+#    詞句中，「臂」皆補齊「bi4」「bei4」。
+#    詞句中，「馨」皆補齊「xin1」「xing1」。
+#    詞句中，「皿」皆補齊「min3」「ming3」。
 #    詞句中，「顫」皆補齊「zhan4」「chan4」。
 #    詞句中，「伐」皆補齊「fa1」「fa2」。
 #    詞句中，「究」皆補齊「jiu4」「jiu1」。
@@ -242,16 +246,21 @@
 #    詞句中，「親戚」補齊「qin1 qi1」和「qin1 qi4」，後者詞頻設為80%。
 #    詞句中，「煞車」和「剎車」補齊「sha1 che1」和「sha4 che1」，「剎車」標註「sha4 che1」時，詞頻設為80%。
 #    詞句中，「證券」和「証券」臺灣字典發音為「zheng4 quan4」，日常發音常會誤發為「zheng4 juan4」，故皆補齊「zheng4 quan4」「zheng4 juan4」，後者詞頻設為80%。
+#    詞句中，「芭蕾」臺灣字典發音為「ba1 lei3」，日常發音常會誤發為「ba1 lei2」，故皆補齊「ba1 lei3」「ba1 lei2」，後者詞頻設為80%。
+#    詞句中，「匹配」臺灣字典發音為「pi3 pei4」，日常發音常會誤發為「pi1 pei4」，故皆補齊「pi3 pei4」「pi1 pei4」。
+#    詞句中，「匹敵」臺灣字典發音為「pi3 di2」，日常發音常會誤發為「pi1 di2」，故皆補齊「pi3 di2」「pi1 di2」。
 #    詞句中，「氣氛」臺灣字典發音為「qi4 fen1」，日常發音常會誤發為「qi4 fen4」，故皆補齊「qi4 fen1」「qi4 fen4」。
 #    詞句中，「氛圍」臺灣字典發音為「fen1 wei2」，日常發音常會誤發為「fen4 wei2」，故皆補齊「fen1 wei2」「fen4 wei2」。
 #    詞句中，「坎坷」臺灣字典發音為「kan3 ke3」，日常發音常會誤發為「kan3 ke1」，故皆補齊「kan3 ke3」「kan3 ke1」。
 #    詞句中，「衚衕」臺灣字典發音為「hu2 tong4」，日常發音常會誤發為「hu2 tong2」，故皆補齊「hu2 tong4」「hu2 tong2」。
 #    詞句中，「胡同」臺灣字典發音為「hu2 tong4」，日常發音常會誤發為「hu2 tong2」，故皆補齊「hu2 tong4」「hu2 tong2」。
 #    詞句中，「拓撲」臺灣字典發音為「tuo4 pu1」，日常發音常會誤發為「tuo4 bu3」和「tuo4 pu3」，故皆補齊「tuo4 pu1」「tuo4 bu3」「tuo4 pu3」，最後者「tuo4 pu3」詞頻設為80%。
+#    詞句中，「傢伙」臺灣字典發音為「jia1 huo3」和變音為「jia1 huo5」，日常發音常會誤發為「jia1 huo1」，故皆補齊「jia1 huo3」「jia1 huo5」「jia1 huo1」，最後者「jia1 huo1」詞頻設為80%。
 #    詞句中，「給予」臺灣字典發音為「ji3 yu3」，日常發音常發，故皆補齊「ji3 yu3」「ji3 yu2」「gei3 yu3」「gei3 yu2」。
 #    詞句中，「骨頭」臺灣字典發音為「gu2 tou5」，日常發音常發，故皆補齊「gu2 tou5」「gu2 tou2」「gu3 tou5」「gu3 tou2」。
 #    詞句中，「石頭」臺灣字典發音為「shi2 tou5」，日常發音常發「shi2 tou2」，故皆補齊「shi2 tou5」「shi2 tou2」。
 #    詞句中，「胳膊」臺灣字典發音為「ge1 bo5」，日常發音常發「ge1 bo2」，故皆補齊「ge1 bo5」「ge1 bo2」。
+#    詞句中，「尾巴」臺灣字典發音為「wei3 ba1」，日常發音常發「yi3 ba1」，故皆補齊「wei3 ba1」「yi3 ba1」。
 #    詞句中，「部署」臺灣字典發音為「bu4 shu4」，日常發音常發「bu4 shu3」，故皆補齊「bu4 shu4」「bu4 shu3」。
 #    詞句中，「交叉」臺灣字典發音為「jiao1 cha1」，日常發音常發「jiao1 cha4」，故皆補齊「jiao1 cha1」「jiao1 cha4」。
 #    詞句中，「牛仔」臺灣字典發音為「niu2 zi3」，日常發音常發「niu2 zai3」，故皆補齊「niu2 zi3」「niu2 zai3」。
@@ -260,6 +269,7 @@
 #    詞句中，「相片」「照片」「影片」「碟片」「唱片」「畫片」，其「片」發音，皆補齊「pian4」和「pian1」。
 #    詞句中，「傍晚」臺灣字典發音為「bang1 wan3」，大陸標準為「bang4 wan3」，易誤按，且無相似發音詞彙，故皆補齊「bang1 wan3」「bang4 wan3」。
 #    詞句中，「巧克力」臺灣字典發音為「qiao3 ke4 li4」，日常發音常發「qiao3 ke1 li4」，故皆補齊「qiao3 ke4 li4」「qiao3 ke1 li4」，後者詞頻設為80%。
+#    詞句中，「壓克力」臺灣字典發音為「ya1 ke4 li4」，日常發音常發「ya1 ke1 li4」，故皆補齊「ya1 ke4 li4」「ya1 ke1 li4」，後者詞頻設為80%。
 #    預計比對「輕聲和一聲」變音。
 #
 #  〈2020修改字詞彙發音〉：
@@ -3562,6 +3572,14 @@ min_phrase_weight: 100
 顼	xu4
 顼	yu4	0%
 讷	na4
+瞞	men2	0%
+瞞	men4	0%
+瞒	men2	0%
+瞒	men4	0%
+颂	rong2	0%
+貶	fa2	0%
+贬	fa2	0%
+並	ban4	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -3610,7 +3628,7 @@ min_phrase_weight: 100
 甲	jia4	1%
 疒	chuang2	1%
 白	bo2	1%
-皿	ming3	1%
+皿	ming3	10%
 示	qi2	1%
 份	bin1	1%
 休	xiu3	1%
@@ -4313,7 +4331,7 @@ min_phrase_weight: 100
 達	ta4	1%
 鄑	jin4	1%
 鄗	qiao1	1%
-酩	ming2	1%
+酩	ming2	9%
 鈸	ba2	1%
 鈹	pi1	1%
 鉭	dan4	1%
@@ -4322,7 +4340,7 @@ min_phrase_weight: 100
 零	lian2	1%
 雹	bo2	1%
 靸	ta1	1%
-頌	rong2	1%
+頌	rong2	0%
 馲	luo4	1%
 鳪	bu3	1%
 䁑	shi4	1%
@@ -4592,8 +4610,8 @@ min_phrase_weight: 100
 縣	xuan2	1%
 罺	chao1	1%
 翮	ge2	1%
-膦	lian3	1%
-膦	lin2	1%
+膦	lian3	20%
+膦	lin2
 膴	wu3	1%
 膹	fei4	1%
 蕉	qiao2	1%
@@ -30546,7 +30564,7 @@ min_phrase_weight: 100
 膣	zhi4
 膤	xue3
 膥	chun1
-膦	lin4
+膦	lin4	50%
 膧	tong2
 膨	peng2
 膩	ni4
@@ -58100,6 +58118,7 @@ min_phrase_weight: 100
 九宮格數獨	jiu3 gong1 ge2 shu4 du2
 九折	jiu3 zhe2
 九折臂	jiu3 zhe2 bi4
+九折臂	jiu3 zhe2 bei4
 九故十親	jiu3 gu4 shi2 qin1
 九數	jiu3 shu4
 九曲洞	jiu3 qu1 dong4
@@ -60817,6 +60836,7 @@ min_phrase_weight: 100
 做好做惡	zuo4 hao3 zuo4 e4
 做好看	zuo4 hao3 kan4
 做尾巴	zuo4 wei3 ba1
+做尾巴	zuo4 yi3 ba1
 做屏風	zuo4 ping2 feng1
 做工夫	zuo4 gong1 fu1
 做工夫	zuo4 gong1 fu5	80%
@@ -60969,7 +60989,7 @@ min_phrase_weight: 100
 傘菌	san3 jun1
 傘降	san3 jiang4
 傢伙	jia1 huo3
-傢伙	jia1 huo1
+傢伙	jia1 huo1	80%
 傢伙	jia1 huo5
 催吐	cui1 tu4
 催吐劑	cui1 tu4 ji4
@@ -63194,6 +63214,8 @@ min_phrase_weight: 100
 判處	pan4 chu3
 判酩酊	pan4 ming2 ding3
 判酩酊	pan4 ming2 ding1
+判酩酊	pan4 ming3 ding3
+判酩酊	pan4 ming3 ding1
 別傳	bie2 zhuan4
 別創新格	bie2 chuang4 xin1 ge2
 別勁	bie2 jin4
@@ -64751,6 +64773,7 @@ min_phrase_weight: 100
 匹配	pi3 pei4
 匹配	pi1 pei4
 匹配阻抗	pi3 pei4 zu3 kang4
+匹配阻抗	pi1 pei4 zu3 kang4
 匹面	pi1 mian4
 匹頭	pi1 tou2
 匹頭	pi3 tou5
@@ -71649,7 +71672,7 @@ min_phrase_weight: 100
 好個	hao3 ge5
 好借好還	hao3 jie4 hao3 huan2
 好傢伙	hao3 jia1 huo3
-好傢伙	hao3 jia1 huo1
+好傢伙	hao3 jia1 huo1	80%
 好傢伙	hao3 jia1 huo5
 好內	hao4 nei4
 好利	hao4 li4
@@ -73234,8 +73257,11 @@ min_phrase_weight: 100
 寧靜致遠	ning2 jing4 zhi4 yuan3
 寧養逆子	ning2 yang3 ni4 zi3
 寧馨	ning2 xing1
+寧馨	ning2 xin1
 寧馨兒	ning2 xing1 er2
 寧馨兒	ning2 xing1 er5	80%
+寧馨兒	ning2 xin1 er2
+寧馨兒	ning2 xin1 er5	80%
 寨子	zhai4 zi5
 審判長	shen3 pan4 zhang3
 審囚刷卷	shen3 qiu2 shua1 juan4
@@ -76260,6 +76286,7 @@ min_phrase_weight: 100
 彼得格勒	bi3 de2 ge2 le4
 彼得羅維奇	bi3 de2 luo2 wei2 qi2
 彼得里皿	bi3 de2 li3 min3
+彼得里皿	bi3 de2 li3 ming3
 彼長我消	bi3 zhang3 wo3 xiao1
 往常間	wang3 chang2 jian1
 往昔	wang3 xi2
@@ -77012,6 +77039,7 @@ min_phrase_weight: 100
 怒突	nu4 tu2
 怒突	nu4 tu1
 怒臂當車	nu4 bi4 dang1 ju1
+怒臂當車	nu4 bei4 dang1 ju1
 怒號	nu4 hao2
 怒顏相報	nu4 yan2 xiang1 bao4
 怒髮衝冠	nu4 fa3 chong1 guan1
@@ -79043,6 +79071,7 @@ min_phrase_weight: 100
 扯倒	che3 dao3
 扯嗓子	che3 sang3 zi5
 扯尾巴	che3 wei3 ba1
+扯尾巴	che3 yi3 ba1
 扯手	che3 shou3
 扯扯拽拽	che3 che3 ye4 ye4
 扯扯拽拽	che3 che3 zhuai4 zhuai4
@@ -79052,6 +79081,7 @@ min_phrase_weight: 100
 扯曳	che3 yi4
 扯架子	che3 jia4 zi5
 扯牛尾巴	che3 niu2 wei3 ba1
+扯牛尾巴	che3 niu2 yi3 ba1
 扯皮弄筋	che3 pi2 nong4 jin1
 扯著脖子	che3 zhe5 bo2 zi5
 扯空心架子	che3 kong1 xin1 jia4 zi5
@@ -79434,6 +79464,7 @@ min_phrase_weight: 100
 折腰升斗	zhe2 yao1 sheng1 dou3
 折腰步	zhe2 yao1 bu4
 折臂三公	zhe2 bi4 san1 gong1
+折臂三公	zhe2 bei4 san1 gong1
 折舊	zhe2 jiu4
 折舊率	zhe2 jiu4 lv4
 折色	zhe2 se4
@@ -79838,6 +79869,7 @@ min_phrase_weight: 100
 拖地錦	tuo1 di4 jin3
 拖天掃地	tuo1 tian1 sao3 di4
 拖尾巴	tuo1 wei3 ba1
+拖尾巴	tuo1 yi3 ba1
 拖延時間	tuo1 yan2 shi2 jian1
 拖拽	tuo1 ye4
 拖拽	tuo1 zhuai4
@@ -80460,7 +80492,9 @@ min_phrase_weight: 100
 捋胳膊	luo1 ge1 bo2
 捋胳膊	luo1 ge1 bo5
 捋臂將拳	luo1 bi4 jiang1 quan2
+捋臂將拳	luo1 bei4 jiang1 quan2
 捋臂揎拳	luo1 bi4 xuan1 quan2
+捋臂揎拳	luo1 bei4 xuan1 quan2
 捋虎鬚	le4 hu3 xu1
 捋虎鬚	luo1 hu3 xu1
 捋袖子	luo1 xiu4 zi5
@@ -81066,6 +81100,7 @@ min_phrase_weight: 100
 揩油	kai3 you2
 揩油	ka3 you2	80%
 揪尾巴	jiu1 wei3 ba1
+揪尾巴	jiu1 yi3 ba1
 揪心扒肝	jiu1 xin1 ba1 gan1
 揪心扒肝	jiu1 xin1 pa2 gan1
 揪捽	jiu1 zu2
@@ -82335,9 +82370,14 @@ min_phrase_weight: 100
 攘羭	rang2 yu2
 攘臂	rang2 bi4
 攘臂	rang3 bi4
+攘臂	rang2 bei4
+攘臂	rang3 bei4
 攘臂一呼	rang2 bi4 yi4 hu1
 攘臂一呼	rang2 bi4 yi1 hu1
+攘臂一呼	rang2 bei4 yi4 hu1
+攘臂一呼	rang2 bei4 yi1 hu1
 攘臂而起	rang2 bi4 er2 qi3
+攘臂而起	rang2 bei4 er2 qi3
 攘袂	rang2 mei4
 攘袂	rang3 mei4
 攘袂切齒	rang2 mei4 qie4 chi3
@@ -82555,6 +82595,7 @@ min_phrase_weight: 100
 放熱反應	fang4 re4 fan3 ying4
 放牧地	fang4 mu4 di4
 放禿尾巴鷹	fang4 tu1 wei3 ba1 ying1
+放禿尾巴鷹	fang4 tu1 yi3 ba1 ying1
 放空	fang4 kong1
 放空氣	fang4 kong1 qi4
 放空炮	fang4 kong1 pao4
@@ -83559,6 +83600,7 @@ min_phrase_weight: 100
 旋翼	xuan2 yi4
 旋胡	xuan2 hu2
 旋臂	xuan2 bi4
+旋臂	xuan2 bei4
 旋舞	xuan2 wu3
 旋花科	xuan2 hua1 ke1
 旋螺	xuan2 luo2
@@ -84799,7 +84841,7 @@ min_phrase_weight: 100
 有戲看	you3 xi4 kan4
 有所作為	you3 suo3 zuo4 wei2
 有把傢伙	you3 ba3 jia1 huo3
-有把傢伙	you3 ba3 jia1 huo1
+有把傢伙	you3 ba3 jia1 huo1	80%
 有把傢伙	you3 ba3 jia1 huo5
 有撇斷	you3 pie3 duan4
 有擔保公債	you3 dan1 bao3 gong1 zhai4
@@ -91257,6 +91299,7 @@ min_phrase_weight: 100
 無分軒輊	wu2 fen1 xuan1 zhi4
 無千帶數	wu2 qian1 dai4 shu4
 無可匹敵	wu2 ke3 pi3 di2
+無可匹敵	wu2 ke3 pi1 di2
 無名帖	wu2 ming2 tie3
 無回豁	wu2 hui2 huo4
 無地	wu2 di4
@@ -91401,6 +91444,7 @@ min_phrase_weight: 100
 煖和	nuan3 huo5
 煙傢伙	yan1 jia1 huo3
 煙傢伙	yan1 jia1 huo5
+煙傢伙	yan1 jia1 huo1	80%
 煙圈	yan1 quan1
 煙子	yan1 zi5
 煙屁股	yan1 pi4 gu3
@@ -93553,6 +93597,7 @@ min_phrase_weight: 100
 留傳	liu2 chuan2
 留宿	liu2 su4
 留尾巴	liu2 wei3 ba1
+留尾巴	liu2 yi3 ba1
 留帖	liu2 tie3
 留待	liu2 dai4
 留得青山在	liu2 de2 qing1 shan1 zai4
@@ -94848,6 +94893,7 @@ min_phrase_weight: 100
 目擊道存	mu4 ji2 dao4 cun2
 目擩耳染	mu4 ru4 er3 ran3
 目標匹配作業	mu4 biao1 pi3 pei4 zuo4 ye4
+目標匹配作業	mu4 biao1 pi1 pei4 zuo4 ye4
 目標地址	mu4 biao1 di4 zhi3
 目標市場	mu4 biao1 shi4 chang3
 目標市場	mu4 biao1 shi4 chang2	3%
@@ -97199,6 +97245,7 @@ min_phrase_weight: 100
 空中管制站	kong1 zhong1 guan3 zhi4 zhan4
 空中纜車	kong1 zhong1 lan3 che1
 空中芭蕾	kong1 zhong1 ba1 lei3
+空中芭蕾	kong1 zhong1 ba1 lei2	80%
 空中花園	kong1 zhong1 hua1 yuan2
 空中護航	kong1 zhong1 hu4 hang2
 空中走廊	kong1 zhong1 zou3 lang2
@@ -98665,6 +98712,7 @@ min_phrase_weight: 100
 素隱行怪	su4 yin3 xing4 guai4
 素面朝天	su4 mian4 chao2 tian1
 素馨	su4 xing1
+素馨	su4 xin1
 素髮	su4 fa3
 紡績	fang3 ji1
 紡績井臼	fang3 ji1 jing3 jiu4
@@ -99773,6 +99821,7 @@ min_phrase_weight: 100
 繫而不食	xi4 er2 bu4 shi2
 繫腰	xi4 yao1
 繫臂之寵	xi4 bi4 zhi1 chong3
+繫臂之寵	xi4 bei4 zhi1 chong3
 繫船樁	xi4 chuan2 zhuang1
 繫裹	xi4 guo3
 繫趾	xi4 zhi3
@@ -100415,6 +100464,7 @@ min_phrase_weight: 100
 老鴰	lao3 gua1
 老鴰窩裡出鳳凰	lao3 gua1 wo1 li3 chu1 feng4 huang2
 老鼠尾巴	lao3 shu3 wei3 ba1
+老鼠尾巴	lao3 shu3 yi3 ba1
 老鼻子	lao3 bi2 zi5
 老鼻子	lao3 bi2 zi3
 考中	kao3 zhong4
@@ -101119,20 +101169,20 @@ min_phrase_weight: 100
 胳膊肘朝外拐	ge1 bo5 zhou3 chao2 wai4 guai3
 胳膊肘朝外拐	ge1 bo2 zhou2 chao2 wai4 guai3	80%
 胳膊肘朝外拐	ge1 bo5 zhou2 chao2 wai4 guai3	80%
-胳臂	ge1 bei4
 胳臂	ge1 bi4
-胳臂箍兒	ge1 bei4 gu1 er5	80%
-胳臂箍兒	ge1 bei4 gu1 er2
+胳臂	ge1 bei4
 胳臂箍兒	ge1 bi4 gu1 er5	80%
 胳臂箍兒	ge1 bi4 gu1 er2
-胳臂肘兒	ge1 bei4 zhou3 er5	80%
-胳臂肘兒	ge1 bei4 zhou3 er2
+胳臂箍兒	ge1 bei4 gu1 er5	80%
+胳臂箍兒	ge1 bei4 gu1 er2
 胳臂肘兒	ge1 bi4 zhou3 er5	80%
 胳臂肘兒	ge1 bi4 zhou3 er2
-胳臂肘兒	ge1 bei4 zhou2 er5	80%
-胳臂肘兒	ge1 bei4 zhou2 er2	80%
+胳臂肘兒	ge1 bei4 zhou3 er5	80%
+胳臂肘兒	ge1 bei4 zhou3 er2
 胳臂肘兒	ge1 bi4 zhou2 er5	80%
 胳臂肘兒	ge1 bi4 zhou2 er2	80%
+胳臂肘兒	ge1 bei4 zhou2 er5	80%
+胳臂肘兒	ge1 bei4 zhou2 er2	80%
 胸中有數	xiong1 zhong1 you3 shu4
 胸中無數	xiong1 zhong1 wu2 shu4
 胸廓切開術	xiong1 kuo4 qie1 kai1 shu4
@@ -104546,6 +104596,11 @@ min_phrase_weight: 100
 螳臂當車	tang2 bi4 dang1 che1
 螳臂當車	tang2 bi4 dang1 ju1
 螳臂當車	tang2 bi4 dang3 che1
+螳臂當車	tang2 bi4 dang3 ju1
+螳臂當車	tang2 bei4 dang1 che1
+螳臂當車	tang2 bei4 dang1 ju1
+螳臂當車	tang2 bei4 dang3 che1
+螳臂當車	tang2 bei4 dang3 ju1
 螵蛸	piao1 xiao1
 螹胡	jian4 hu2
 螺旋	luo2 xuan2
@@ -105454,6 +105509,8 @@ min_phrase_weight: 100
 裘褐	qiu2 he4
 裘馨氏肌肉萎縮症	qiu2 xin1 shi4 ji1 rou4 wei1 suo1 zheng4
 裘馨氏肌肉萎縮症	qiu2 xin1 shi4 ji1 rou4 wei3 suo1 zheng4
+裘馨氏肌肉萎縮症	qiu2 xing1 shi4 ji1 rou4 wei1 suo1 zheng4
+裘馨氏肌肉萎縮症	qiu2 xing1 shi4 ji1 rou4 wei3 suo1 zheng4
 裙子	qun2 zi5
 裙屐少年	qun2 ji1 shao4 nian2
 裙帶親	qun2 dai4 qin1
@@ -107412,6 +107469,7 @@ min_phrase_weight: 100
 豬八戒照鏡子	zhu1 ba1 jie4 zhao4 jing4 zi5
 豬圈	zhu1 juan4
 豬尾巴	zhu1 wei3 ba1
+豬尾巴	zhu1 yi3 ba1
 豬心瓣膜	zhu1 xin1 ban4 mo4	3%
 豬心瓣膜	zhu1 xin1 ban4 mo2
 豬拐子	zhu1 guai3 zi5
@@ -107835,8 +107893,8 @@ min_phrase_weight: 100
 賣油娘子水梳頭	mai4 you2 niang2 zi3 shui3 shu1 tou2
 賣空	mai4 kong1
 賣空買空	mai4 kong1 mai3 kong1
-賣胳臂	mai4 ge1 bei4
 賣胳臂	mai4 ga1 bi4
+賣胳臂	mai4 ge1 bei4
 賣豬仔	mai4 zhu1 zai3
 賣重	mai4 zhong4
 賣金須向識金家	mai4 jin1 xu1 xiang4 shi4 jin1 jia1
@@ -109297,6 +109355,7 @@ min_phrase_weight: 100
 轉瞬	zhuan3 shun4
 轉矩	zhuan4 ju3
 轉矩臂	zhuan4 ju3 bi4
+轉矩臂	zhuan4 ju3 bei4
 轉磨	zhuan4 mo4
 轉磨	zhuan3 mo2
 轉磨磨	zhuan4 mo4 mo4
@@ -115941,6 +116000,7 @@ min_phrase_weight: 100
 馬將牌	ma3 jiang4 pai2
 馬尾中鬃豆腐	ma3 wei3 zhong1 zong1 dou4 fu3
 馬尾巴	ma3 wei3 ba1
+馬尾巴	ma3 yi3 ba1
 馬尾穿豆腐	ma3 wei3 chuan1 dou4 fu3
 馬快頭	ma3 kuai4 tou5
 馬快頭	ma3 kuai4 tou2
@@ -117465,4 +117525,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 117468 #####
+##### @結束 END - 117528 #####
