@@ -32,7 +32,7 @@
 
 ## 問題紀錄
 
-許多 Rime 詞庫為不帶拼音（編碼），好處是容易 mapping ，不好之處是如破音字會出現在不該為此發音之選單中，整理六十五萬多字帶拼音和聲調之詞庫 phrases.chtp.dict.yaml，但其中（包含 terra_pinyin_onion.dict.yaml 該檔）還有許多錯誤、待考、待釐清之處。
+許多 Rime 詞庫為不帶拼音（編碼），好處是容易 mapping ，不好之處是如破音字會出現在不該為此發音之選單中，整理七十八萬多字帶拼音和聲調之詞庫 phrases.chtp.dict.yaml，但其中（包含 terra_pinyin_onion.dict.yaml 該檔）還有許多錯誤、待考、待釐清之處。
 
 《詞》
 
