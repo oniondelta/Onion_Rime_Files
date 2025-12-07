@@ -173,6 +173,7 @@
 #    詞句中，「頊」臺灣標準為「xu4」，大陸標準為「xu1」，日常易混，故全都補齊「xu4」「xu1」。
 #    詞句中，「蹈」臺灣標準為「dao4」，大陸標準為「dao3」，日常易混，故全都補齊「dao4」「dao3」。
 #    詞句中，「肘」臺灣標準為「zhou3」，日常發音常會誤發為「zhou2」，故皆補齊「zhou3」「zhou2」，後者詞頻設為80%。
+#    詞句中，「蕾」臺灣標準為「lei3」，日常發音常會誤發為「lei2」，，故皆補齊「lei3」「lei2」，後者詞頻設為80%。
 #    詞句中，「炔」臺灣標準為「que1」，日常發音常會發「jue2」，故皆補齊「que1」「jue2」。
 #    詞句中，「悄」臺灣標準為「qiao3」，日常發音常會發「qiao1」，故皆補齊「qiao3」「qiao1」。
 #    詞句中，「播」臺灣標準為「bo4」，日常發音常會發「bo1」，故皆補齊「bo4」「bo1」。
@@ -246,7 +247,7 @@
 #    詞句中，「親戚」補齊「qin1 qi1」和「qin1 qi4」，後者詞頻設為80%。
 #    詞句中，「煞車」和「剎車」補齊「sha1 che1」和「sha4 che1」，「剎車」標註「sha4 che1」時，詞頻設為80%。
 #    詞句中，「證券」和「証券」臺灣字典發音為「zheng4 quan4」，日常發音常會誤發為「zheng4 juan4」，故皆補齊「zheng4 quan4」「zheng4 juan4」，後者詞頻設為80%。
-#    詞句中，「芭蕾」臺灣字典發音為「ba1 lei3」，日常發音常會誤發為「ba1 lei2」，故皆補齊「ba1 lei3」「ba1 lei2」，後者詞頻設為80%。
+#    詞句中，「債券」臺灣字典發音為「zhai4 quan4」，日常發音常會誤發為「zhai4 juan4」，故皆補齊「zhai4 quan4」「zhai4 juan4」，後者詞頻設為80%。
 #    詞句中，「匹配」臺灣字典發音為「pi3 pei4」，日常發音常會誤發為「pi1 pei4」，故皆補齊「pi3 pei4」「pi1 pei4」。
 #    詞句中，「匹敵」臺灣字典發音為「pi3 di2」，日常發音常會誤發為「pi1 di2」，故皆補齊「pi3 di2」「pi1 di2」。
 #    詞句中，「氣氛」臺灣字典發音為「qi4 fen1」，日常發音常會誤發為「qi4 fen4」，故皆補齊「qi4 fen1」「qi4 fen4」。
@@ -61648,8 +61649,8 @@ min_phrase_weight: 100
 克耶邦	ke4 ye1 bang1
 克萊斯勒	ke4 lai2 si1 le4
 克萊斯勒汽車公司	ke4 lai2 si1 le4 qi4 che1 gong1 si1
-克蕾兒	ke4 lei3 er5	80%
 克蕾兒	ke4 lei3 er2
+克蕾兒	ke4 lei2 er2	80%
 克里斯汀‧貝爾	ke4 li3 si1 ting1 eng5 bei4 er3
 克里蒙梭	ke4 li3 meng2 suo1
 克難	ke4 nan2
@@ -76744,6 +76745,7 @@ min_phrase_weight: 100
 德興	de2 xing4
 德興市	de2 xing1 shi4
 德蕾莎	de2 lei3 sha1
+德蕾莎	de2 lei2 sha1	80%
 德薄才疏	de2 bo2 cai2 shu1
 德薄能鮮	de2 bo2 neng2 xian3
 德行	de2 xing2
@@ -117525,4 +117527,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 117528 #####
+##### @結束 END - 117530 #####
