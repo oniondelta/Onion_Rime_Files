@@ -3437,10 +3437,12 @@ use_preset_vocabulary: false
 🖥	2s
 🖨	2s
 🖱	2s
+⌨️	2s
 🖲	2s
 🕹	2s
 💽	2s
 💿	2s
+📀	2s
 💾	2s
 📱	2s
 📲	2s
@@ -3459,6 +3461,7 @@ use_preset_vocabulary: false
 🔎	2s
 ✂️	2s
 🔋	2s
+🪫	2s
 🔌	2s
 💡	2s
 🗑	2s
