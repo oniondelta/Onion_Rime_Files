@@ -108,6 +108,7 @@
 #    詞句中，「剔」臺灣字典發音為「ti1」，故皆標註為「ti1」。但「挑剔」「剔透」等詞之「剔」一般慣發音為「ti4」，故全都補齊「ti1」「ti4」。
 #    詞句中，「兒」臺灣字典發音為「er2」，慣用發音為「er5」。但為兒化音時，臺灣字典中會標註「ㄦ」，但拼音為單獨「r」，可理解為「er5」。兩岸字典中對單獨「兒」皆沒有「er1」「er5」之發音標註，故兒化音時選擇標註「er2」「er5」，不標註「er1」。
 #    詞句中，「傾」臺灣字典發音為「qing1」但日常生活發音太常使用「qing3」，故全都補齊「qing1」「qing3」。
+#    詞句中，「企」臺灣字典發音和習慣發音為「qi4」，大陸發音為「qi3」，斟酌後全改成臺灣發音「qi4」。
 #    詞句中，「胺」臺灣字典發音和習慣發音為「an1」，大陸發音為「an4」，斟酌後全改成臺灣發音「an1」。
 #    詞句中，「銻」臺灣字典發音和習慣發音為「ti4」，大陸發音為「ti1」，斟酌後全改成臺灣發音「ti4」。
 #    詞句中，「氰」臺灣字典發音和習慣發音為「qing1」，大陸發音為「qing2」，斟酌後全改成臺灣發音「qing1」。
@@ -223,8 +224,10 @@
 #    詞句中，「羧」皆補齊「zui1」「suo1」。
 #    詞句中，「酵」皆補齊「xiao4」「jiao4」。
 #    詞句中，「搽」皆補齊「cha2」「ca1」。
+#    詞句中，「耙」皆補齊「pa2」「ba4」。
 #    詞句中，「捱」皆補齊「ai2」「ai1」。
 #    詞句中，「脘」皆補齊「wan3」「guan3」。
+#    詞句中，「鱖」皆補齊「gui4」「jue2」。
 #    詞句中，「恣」臺灣標準為「zi4」「ci1」，前者又音為「zi1」，日常「zi4」和「zi1」易混，故互相補齊。「恣睢」等發音為「ci1」不補。
 #    詞句中，「績」「蹟」「跡」「迹」臺灣標準為「ji1」，大陸標準為「ji4」，只保留「ji1」發音。
 #    詞句中，「寂」臺灣標準為「ji2」，大陸標準為「ji4」，只保留「ji2」發音。
@@ -266,6 +269,7 @@
 #    詞句中，「交叉」臺灣字典發音為「jiao1 cha1」，日常發音常發「jiao1 cha4」，故皆補齊「jiao1 cha1」「jiao1 cha4」。
 #    詞句中，「牛仔」臺灣字典發音為「niu2 zi3」，日常發音常發「niu2 zai3」，故皆補齊「niu2 zi3」「niu2 zai3」。
 #    詞句中，「落魄」臺灣字典發音為「luo4 tuo4」，日常發音常發「luo4 po4」，故皆補齊「luo4 tuo4」「luo4 po4」。
+#    詞句中，「咆哮」臺灣字典發音為「pao2 xiao4」和「pao2 xiao1」，語義有區別，但日常易混，故皆補齊「pao2 xiao4」「pao2 xiao1」。
 #    詞句中，「擂臺」「擂台」臺灣字典發音為「lei4 tai2」，日常發音常發「lei2 tai2」，故皆補齊「lei2 tai4」「lei2 tai2」。
 #    詞句中，「相片」「照片」「影片」「碟片」「唱片」「畫片」，其「片」發音，皆補齊「pian4」和「pian1」。
 #    詞句中，「傍晚」臺灣字典發音為「bang1 wan3」，大陸標準為「bang4 wan3」，易誤按，且無相似發音詞彙，故皆補齊「bang1 wan3」「bang4 wan3」。
@@ -4912,7 +4916,7 @@ min_phrase_weight: 100
 蠯	pi2	1%
 蠰	rang3	1%
 鱒	zun4	1%
-鱖	jue2	1%
+鱖	jue2	50%
 齰	ze2	1%
 㶟	lei2	1%
 贛	gong4	1%
@@ -5754,7 +5758,7 @@ min_phrase_weight: 100
 咼	wai1	0.3%
 唷	yo5	0.3%
 喂	wei2	0.3%
-嘅	kai3	0.3%
+嘅	kai3
 嘜	mai4	0.3%
 嘠	ga2	0.3%
 噦	yue3	0.3%
@@ -58145,6 +58149,7 @@ min_phrase_weight: 100
 九重霄	jiu3 chong2 xiao1
 九錫	jiu3 xi2
 九齒釘耙	jiu3 chi3 ding1 pa2
+九齒釘耙	jiu3 chi3 ding1 ba4
 乞乞縮縮	qi3 qi3 su4 su4
 乞乞縮縮	qi3 qi3 suo1 suo1
 乞力馬扎羅山	qi3 li4 ma3 zha1 luo2 shan1
@@ -60370,6 +60375,8 @@ min_phrase_weight: 100
 倒手	dao3 shou3
 倒打一耙	dao4 da3 yi4 pa2
 倒打一耙	dao4 da3 yi1 pa2
+倒打一耙	dao4 da3 yi2 ba4
+倒打一耙	dao4 da3 yi1 ba4
 倒扣	dao4 kou4
 倒把	dao3 ba3
 倒把	dao4 ba3
@@ -66953,6 +66960,7 @@ min_phrase_weight: 100
 咆哮	pao2 xiao1
 咆哮	pao2 xiao4
 咆哮如雷	pao2 xiao4 ru2 lei2
+咆哮如雷	pao2 xiao1 ru2 lei2
 咆哮山莊	pao2 xiao4 shan1 zhuang1
 咆哮山莊	pao2 xiao1 shan1 zhuang1
 咋呼	ze2 hu1
@@ -80126,6 +80134,10 @@ min_phrase_weight: 100
 拽耙扶犁	zhuai1 pa2 fu2 li2
 拽耙扶犁	zhuai3 pa2 fu2 li2	80%
 拽耙扶犁	ye4 pa2 fu2 li2
+拽耙扶犁	zhuai4 ba4 fu2 li2
+拽耙扶犁	zhuai1 ba4 fu2 li2
+拽耙扶犁	zhuai3 ba4 fu2 li2	80%
+拽耙扶犁	ye4 ba4 fu2 li2
 拽象拖犀	zhuai4 xiang4 tuo1 xi1
 拽象拖犀	zhuai1 xiang4 tuo1 xi1
 拽象拖犀	zhuai3 xiang4 tuo1 xi1	80%
@@ -85290,6 +85302,7 @@ min_phrase_weight: 100
 木餾油	mu4 liu4 you2
 木骨都束	mu4 gu3 du1 shu4
 木齒耙	mu4 chi3 pa2
+木齒耙	mu4 chi3 ba4
 未了	wei4 liao3
 未了公案	wei4 liao3 gong1 an4
 未了因	wei4 liao3 yin1
@@ -98503,6 +98516,7 @@ min_phrase_weight: 100
 糞缸裡擲骰子	fen4 gang1 li3 zhi2 tou2 zi5
 糞缸越淘越臭	fen4 gang1 yue4 tao2 yue4 chou4
 糞耙	fen4 pa2
+糞耙	fen4 ba4
 糟溜黃魚片	zao1 liu1 huang2 yu2 pian4
 糟豆腐	zao1 dou4 fu3
 糠糜	kang1 mi2
@@ -102722,6 +102736,7 @@ min_phrase_weight: 100
 草紇繨	cao3 ge1 da5
 草紇繨	cao3 ge1 da2
 草耙	cao3 pa2
+草耙	cao3 ba4
 草台班子	cao3 tai2 ban1 zi5
 草臺班子	cao3 tai2 ban1 zi5
 草草了事	cao3 cao3 liao3 shi4
@@ -111536,8 +111551,10 @@ min_phrase_weight: 100
 釘死	ding4 si3
 釘死	ding1 si3
 釘耙	ding1 pa2
+釘耙	ding1 ba4
 釘鈴鐺鋃	ding1 ling2 dang1 lang2
 釘齒耙	ding1 chi3 pa2
+釘齒耙	ding1 chi3 ba4
 釜魚幕燕	fu3 yu2 mu4 yan4
 針刺	zhen1 ci4
 針刺麻醉	zhen1 ci4 ma2 zui4
@@ -117453,6 +117470,7 @@ min_phrase_weight: 100
 齒牙為禍	chi3 ya2 wei2 huo4
 齒縫	chi3 feng4
 齒耙	chi3 pa2
+齒耙	chi3 ba4
 齒落舌鈍	chi3 luo4 she2 dun4
 齒落髮白	chi3 luo4 fa3 bai2
 齒豁頭童	chi3 huo4 tou2 tong2
@@ -117527,4 +117545,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 117530 #####
+##### @結束 END - 117548 #####
