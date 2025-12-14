@@ -4,7 +4,7 @@
 # 字碼有少部分重複，但勿用excel去刪除重複的，因會把相通的字給一並刪除，如：aduu->[朗]和[朗]會給一並的刪除！
 ---
 name: ocm_tc_mc
-version: "202505"
+version: "202512"
 sort: original
 use_preset_vocabulary: false
 #max_phrase_length: 7
@@ -10981,7 +10981,7 @@ use_preset_vocabulary: false
 諤	iook	7
 讝	ioop
 譟	ioot	11
-畐	ioq
+#錯碼# 畐	ioq
 諿	ior	1
 詋	ior
 詋	iorv
@@ -39666,8 +39666,9 @@ use_preset_vocabulary: false
 撑	jh
 恵	jh
 #撑	jhv
-掀	ji
+#以下兩個對調，調整「拭」比「掀」先，才符合一般繁體vrsf輸入#
 拭	ji
+掀	ji
 搜	jigu	1119
 捜	jigu
 #掀	jiv
