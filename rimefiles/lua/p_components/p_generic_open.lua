@@ -95,9 +95,10 @@
 ----------------------------------------------------------------------------------------
 -- local function generic_open(dest)
 local function generic_open(dest, oscmd)
-  if oscmd == nil or oscmd == "" then
+  -- 以下 dest、oscmd 必不為 nil，於 p_run_open 已判斷是否為 nil。開啟為防止直接引用 generic_open 所產生的錯誤。
+  if dest == nil or oscmd == nil then
     return false
-  elseif dest == nil or dest == "" then
+  elseif dest == "" or oscmd == "" then
     return false
   -- 以下處理「-removeopen 」，為特此標示去移除開頭之「open和start等」，有些指令不能有開頭command！
   elseif string.match(dest, "^-removeopen ") then

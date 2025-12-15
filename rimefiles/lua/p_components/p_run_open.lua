@@ -9,7 +9,7 @@ local run_pattern = require("p_components/p_run_pattern")
 
 local function run_open(context, c_input, caret_pos, op_code, env_run_pattern, env_textdict, env_custom_phrase, oscmd)
   local run_in = run_pattern[ op_code ] -- 此處不能「.open」，如 op_code 不符合會報錯！
-  if not op_code then
+  if not op_code or not oscmd then  -- 確認 op_code、oscmd 不為 nil。
     return 1
   elseif #c_input ~= caret_pos then
     -- context:clear()
@@ -29,13 +29,13 @@ local function run_open(context, c_input, caret_pos, op_code, env_run_pattern, e
       context:clear()
       return 1
     end
-  elseif run_in ~= nil then
+  elseif run_in ~= nil then  -- 要確定 run_in 不為 nil，才能加.open，不然會報錯！
   -- elseif run_in ~= nil and context:get_selected_candidate() ~= nil then  -- 後面判斷防未知觸發。
   -- elseif run_in ~= nil and g_c_t == "" then  -- 後面判斷防未知觸發。如果「run_pattern」條目缺「name」，「g_c_t」會是「preedit」，不為""。
     -- engine:commit_text(run_in)  -- 測試用
     -- engine:commit_text( generic_open(run_in.open, oscmd) )  -- 測試用
-    if run_in.open and run_in.name then
-      generic_open(run_in.open, oscmd)  -- 要確定 run_in 不為 nil，才能加.open
+    if run_in.open and run_in.name then  -- 確認 run_in.open、run_in.name 不為 nil。
+      generic_open(run_in.open, oscmd)  -- 要確定 run_in 不為 nil，才能加.open，不然會報錯！
     -- else
     --   engine:commit_text("沒﹛open﹦﹜⚠️")  -- 測試用
     end
