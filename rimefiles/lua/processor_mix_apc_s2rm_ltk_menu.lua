@@ -7,6 +7,7 @@
 --]]
 
 ----------------------------------------------------------------------------------------
+local oscmd = require("p_components/p_oscmd")
 local run_open = require("p_components/p_run_open")
 local generic_open = require("p_components/p_generic_open")
 local run_pattern = require("p_components/p_run_pattern")
@@ -26,6 +27,7 @@ local function init(env)
   env.run_pattern = path .. "/lua/p_components/p_run_pattern.lua" or ""
   -- env.op_pattern = path .. "/lua/p_components/p_op_pattern.lua" or ""
   -- log.info("lua_custom_phrase: \'" .. env.textdict .. ".txt\' Initilized!")  -- 日誌中提示已經載入 txt 短語
+  env.oscmd = oscmd
   env.en_prefix = config:get_string("easy_en/prefix") or ""
   env.jp_prefix = config:get_string("japan/prefix") or ""
   env.cyr_prefix = config:get_string("cyr2/prefix") or ""
@@ -85,6 +87,7 @@ local function processor(key, env)
   local o_ascii_punct = context:get_option("ascii_punct")
   local o_ascii_mode = context:get_option("ascii_mode")
   -- local c_i_c = context:is_composing()
+  local key_repr = key:repr()
 
   -- local check_i1 = string.match(c_input, "[@:]")
   -- local check_i2 = string.match(c_input, "'/")
@@ -103,7 +106,7 @@ local function processor(key, env)
   local check_pre = string.match(c_input, "'/[-]?[.]?$")
   local check_num_cal = string.match(c_input, "'/[-]?[.]?%d+%.?%d*$") or
                         string.match(c_input, "'/[-.rq(]?[%d.]+[-+*/^asrvxqw()][-+*/^asrvxqw().%d]*$")
-  -- local key_kp = key:repr():match("KP_([%d%a]+)")  -- KP_([ASDM%d][%a]*)
+  -- local key_kp = key_repr:match("KP_([%d%a]+)")  -- KP_([ASDM%d][%a]*)
   -- local kp_p = env.kp_pattern[key_kp]
 
 ---------------------------------------------------------------------------
@@ -125,7 +128,7 @@ local function processor(key, env)
 以下 ascii_punct 標點轉寫
 --]]
 
-  elseif o_ascii_punct and key:repr() == "Shift+less" then
+  elseif o_ascii_punct and key_repr == "Shift+less" then
     if context:is_composing() then
     -- if c_i_c then
       -- local cand = context:get_selected_candidate()
@@ -137,7 +140,7 @@ local function processor(key, env)
     context:clear()
     return 1 -- kAccepted
 
-  elseif o_ascii_punct and key:repr() == "Shift+greater" then
+  elseif o_ascii_punct and key_repr == "Shift+greater" then
     if context:is_composing() then
     -- if c_i_c then
       -- local cand = context:get_selected_candidate()
@@ -165,11 +168,11 @@ local function processor(key, env)
   elseif seg:has_tag("abc") or seg:has_tag("all_bpm") then
     return 2
 
-  elseif key:repr() == "space" or key:repr() == "Return" or key:repr() == "KP_Enter" then
-  -- elseif key:repr() == "space" then
-  -- elseif key:repr() == "space" and context:is_composing() then
-  -- elseif key:repr() == "space" and context:has_menu() then
-  -- elseif key:repr() == "space" and c_i_c then
+  elseif key_repr == "space" or key_repr == "Return" or key_repr == "KP_Enter" then
+  -- elseif key_repr == "space" then
+  -- elseif key_repr == "space" and context:is_composing() then
+  -- elseif key_repr == "space" and context:has_menu() then
+  -- elseif key_repr == "space" and c_i_c then
 
     -- if comp:empty() then
     --   return 2
@@ -192,20 +195,20 @@ local function processor(key, env)
       --   context:clear()
       --   return 1
       if selected_candidate_index == 3 then
-        generic_open(env.run_pattern)
+        generic_open(env.run_pattern, env.oscmd)
         context:clear()
         return 1
       elseif run_in ~= nil and selected_candidate_index ~= 4 then
         -- engine:commit_text(run_in)  -- 測試用
         if run_in.name then  -- 要確定 run_in 不為 nil，才能加.name
-          generic_open(run_in.open)  -- 要確定 run_in 不為 nil，才能加.open
+          generic_open(run_in.open, env.oscmd)  -- 要確定 run_in 不為 nil，才能加.open
         end
         context:clear()
         return 1
       elseif env.textdict == "" then
         return 2
       elseif selected_candidate_index == 4 then
-        generic_open(env.custom_phrase)
+        generic_open(env.custom_phrase, env.oscmd)
         context:clear()
         return 1
       else  -- 沒有該碼，空白鍵清空
@@ -214,14 +217,14 @@ local function processor(key, env)
         return 1
       end
     elseif seg:has_tag("mf_translator") and op_code_check then  -- 開頭
-      return run_open(context, c_input, caret_pos, op_code, env.run_pattern, env.textdict, env.custom_phrase)
+      return run_open(context, c_input, caret_pos, op_code, env.run_pattern, env.textdict, env.custom_phrase, env.oscmd)
 
     elseif seg:has_tag("paging") and #c_input == caret_pos then  -- 加限定防止游標移中時，不能翻頁選字。
       return 2
-    -- elseif #c_input == caret_pos and (key:repr() == "Return" or key:repr() == "KP_Enter") then
+    -- elseif #c_input == caret_pos and (key_repr == "Return" or key_repr == "KP_Enter") then
     --   return 2
 
-    -- elseif #c_input == caret_pos and key:repr() == "space" then
+    -- elseif #c_input == caret_pos and key_repr == "space" then
     elseif #c_input == caret_pos then  -- 輸入「中文」接「外掛方案」或「mf_translator」時，空白鍵可直接上屏，且不被下段程式碼影響。
       context:commit()  -- 可記憶
       -- context:confirm_current_selection()  -- 可記憶（輸入中文兩字以上，游標移中再選字，然後按「esc」消去後面編碼，此時 seg:has_tag("abc") 為 false 時，會無法上屏！可用 context:has_menu() 限定，但掛接方案空碼時無法直接上屏！）
@@ -318,7 +321,7 @@ local function processor(key, env)
 以下掛接 return 上屏修正
 --]]
 
-  -- elseif key:repr() == "Return" or key:repr() == "KP_Enter" then
+  -- elseif key_repr == "Return" or key_repr == "KP_Enter" then
 
   --   -- if comp:empty() then
   --   --   return 2
@@ -365,7 +368,7 @@ local function processor(key, env)
   elseif seg:has_tag("mf_translator") then
   -- elseif seg:has_tag("lua") then
 
-    local key_kp = key:repr():match("^KP_([%d%a]+)$")  -- KP_([ASDM%d][%a]*)
+    local key_kp = key_repr:match("^KP_([%d%a]+)$")  -- KP_([ASDM%d][%a]*)
     local kp_p = kp_pattern[key_kp]
     if kp_p ~= nil then
       if not check_pre and not check_num_cal then
@@ -390,22 +393,22 @@ local function processor(key, env)
     -- local op_code = string.match(c_input, "^" .. env.prefix .. "j([a-z]*)$")
     -- -- if c_input == env.prefix .. "r" then
     -- if op_code then
-    --   local key_kp = key:repr():match("^([a-z])$")
+    --   local key_kp = key_repr:match("^([a-z])$")
     --   local kp_p = op_pattern[ op_code .. key_kp ]
-    --   if op_code == "f" and key:repr() == "t" then
-    --     generic_open(env.op_pattern)
+    --   if op_code == "f" and key_repr == "t" then
+    --     generic_open(env.op_pattern, env.oscmd)
     --     context:clear()
     --     return 1
     --   elseif kp_p ~= nil then
     --     -- engine:commit_text(kp_p)  -- 測試用
-    --     generic_open(kp_p)
+    --     generic_open(kp_p, env.oscmd)
     --     context:clear()
     --     return 1
     --   elseif env.textdict == "" then
     --     return 2
-    --   elseif op_code == "f" and key:repr() == "c" then
+    --   elseif op_code == "f" and key_repr == "c" then
     --     -- io.popen("env.custom_phrase")  -- 無效！
-    --     generic_open(env.custom_phrase)
+    --     generic_open(env.custom_phrase, env.oscmd)
     --     context:clear()
     --     return 1
     --   end

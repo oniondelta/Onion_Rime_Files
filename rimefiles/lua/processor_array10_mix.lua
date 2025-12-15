@@ -83,11 +83,12 @@ local function processor(key, env)
   -- local page_size = engine.schema.page_size
   local o_ascii_mode = context:get_option("ascii_mode")
   local o_switch_key_board = context:get_option("switch_key_board")
-  -- local key_abc = key:repr():match("^([zxcvsdfwerbqat])$")
-  -- local key_abc = key:repr():match("^([zxcvsdfwerbqat])$") or key:repr():match("^([nuiojklmyhp])$") or key:repr():match("^(comma)$") or key:repr():match("^(period)$") or key:repr():match("^(semicolon)$") or key:repr():match("^(slash)$")
-  local key_abc = key:repr():match("^([a-z])$") or key:repr():match("^(comma)$") or key:repr():match("^(period)$") or key:repr():match("^(semicolon)$") or key:repr():match("^(slash)$")
-  local key_select_keys = key:repr():match("^KP_([0-9])$") or key:repr():match("^Control%+([0-9])$")
-  -- local key_num_array10 = key:repr():match("^KP_([0-9])$") or key:repr():match("^KP_(Decimal)$")
+  local key_repr = key:repr()
+  -- local key_abc = key_repr:match("^([zxcvsdfwerbqat])$")
+  -- local key_abc = key_repr:match("^([zxcvsdfwerbqat])$") or key_repr:match("^([nuiojklmyhp])$") or key_repr:match("^(comma)$") or key_repr:match("^(period)$") or key_repr:match("^(semicolon)$") or key_repr:match("^(slash)$")
+  local key_abc = key_repr:match("^([a-z])$") or key_repr:match("^(comma)$") or key_repr:match("^(period)$") or key_repr:match("^(semicolon)$") or key_repr:match("^(slash)$")
+  local key_select_keys = key_repr:match("^KP_([0-9])$") or key_repr:match("^Control%+([0-9])$")
+  -- local key_num_array10 = key_repr:match("^KP_([0-9])$") or key_repr:match("^KP_(Decimal)$")
   local shadow_top_b = string.match(c_input, "```[zxcvsdfwerb]$")
   local shadow_top_e = string.match(c_input, "(```[zxcvsdfwerb]+)$")
   local abc_words = string.match(c_input, "([zxcvsdfwerb]+)$")
@@ -121,7 +122,7 @@ local function processor(key, env)
     return 1
 
   --- 以下修「.」多出字符之 bug！
-  elseif not o_switch_key_board and key:repr() == "period" and (comp:empty() or seg:has_tag("abc")) then
+  elseif not o_switch_key_board and key_repr == "period" and (comp:empty() or seg:has_tag("abc")) then
     context:push_input("r")
     return 1
 
@@ -159,13 +160,13 @@ local function processor(key, env)
 以下針對 seg:has_tag("shadow_top") 時，刪除最後「```[zxcvsdfwerb]」之修正
 --]]
 
-  elseif key:repr() == "BackSpace" and seg:has_tag("shadow_top") and shadow_top_b and #c_input == caret_pos then
+  elseif key_repr == "BackSpace" and seg:has_tag("shadow_top") and shadow_top_b and #c_input == caret_pos then
     -- engine:process_key(KeyEvent("Escape"))
     -- engine:process_key(KeyEvent("Escape"))
     context:pop_input(4)  -- 回刪（刪到「0」時會有狀況？！）
     -- context:clear()  -- 前面有接其他「seg」，會全部消失
     return 1
-  elseif key:repr() == "Escape" and seg:has_tag("shadow_top") and shadow_top_e and #c_input == caret_pos then
+  elseif key_repr == "Escape" and seg:has_tag("shadow_top") and shadow_top_e and #c_input == caret_pos then
     -- engine:process_key(KeyEvent("Escape"))
     -- engine:process_key(KeyEvent("Escape"))
     n = #shadow_top_e
@@ -192,7 +193,7 @@ local function processor(key, env)
 以下針對功能：「轉換對映數字」！
 --]]
 
-  elseif key:repr() == "g" and abc_words and (seg:has_tag("shadow_top") or seg:has_tag("abc") or seg:has_tag("reverse3_lookup")) then
+  elseif key_repr == "g" and abc_words and (seg:has_tag("shadow_top") or seg:has_tag("abc") or seg:has_tag("reverse3_lookup")) then
     local atn = array10_to_num(abc_words) or ""
     local n = #atn
     context:pop_input(n)
@@ -201,7 +202,7 @@ local function processor(key, env)
     -- context:clear()
     return 1
 
-  elseif key:repr() == "g" and num_words and not seg:has_tag("reverse2_lookup") and not context:has_menu() then  -- and context:is_composing()
+  elseif key_repr == "g" and num_words and not seg:has_tag("reverse2_lookup") and not context:has_menu() then  -- and context:is_composing()
     local ata = array10_to_abc(num_words) or ""
     local n = #ata
     context:pop_input(n)
@@ -223,7 +224,7 @@ local function processor(key, env)
     return 2
 
   --- pass not space Return KP_Enter key_select_keys
-  elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" and not key_select_keys then
+  elseif key_repr ~= "space" and key_repr ~= "Return" and key_repr ~= "KP_Enter" and not key_select_keys then
     return 2
 
 -----------------------
@@ -347,7 +348,7 @@ local function processor(key, env)
 -----------------------
 
   --- 以下修正：附加方案鍵盤範圍大於主方案時，選字時出現的 bug。
-  -- elseif key:repr() == "space" or key:repr() == "Return" or key:repr() == "KP_Enter" then
+  -- elseif key_repr == "space" or key_repr == "Return" or key_repr == "KP_Enter" then
   -- elseif not key_select_keys then
   else
 
@@ -362,7 +363,7 @@ local function processor(key, env)
     local new_c_input = string.sub(c_input, -retain_number)
 
     --- 中途插入空白（一聲）不會直上屏
-    if key:repr() == "space" and #c_input ~= caret_pos and not seg:has_tag("paging") and not string.match(f_c_input, "[ 3467]$") then
+    if key_repr == "space" and #c_input ~= caret_pos and not seg:has_tag("paging") and not string.match(f_c_input, "[ 3467]$") then
       local b_c_input = string.sub(c_input, caret_pos - #c_input)
       context.input = f_c_input .. " " .. b_c_input
       return 1
@@ -405,7 +406,7 @@ local function processor(key, env)
 
     --   --- 中途插入空白（一聲）不會直上屏
     --   local f_c_input = string.sub(c_input, 1, caret_pos)
-    --   if key:repr() == "space" and #c_input ~= caret_pos and not seg:has_tag("paging") and not string.match(f_c_input, "[ 3467]$") then
+    --   if key_repr == "space" and #c_input ~= caret_pos and not seg:has_tag("paging") and not string.match(f_c_input, "[ 3467]$") then
     --     local b_c_input = string.sub(c_input, caret_pos - #c_input)
     --     context.input = f_c_input .. " " .. b_c_input
 
@@ -437,7 +438,7 @@ local function processor(key, env)
       ---------------
 
     --- 某些方案輸入 Return 出英文，該條限定注音 Return 一律直上中文。
-    elseif key:repr() == "Return" or key:repr() == "KP_Enter" then
+    elseif key_repr == "Return" or key_repr == "KP_Enter" then
       context:confirm_current_selection()  -- 可記憶
       -- context:commit()  -- 可記憶
       -- engine:process_key( KeyEvent("Return") )  -- 可能會報錯
@@ -451,9 +452,9 @@ local function processor(key, env)
       return 2
 
     --- 補掛接反查注音不能使用空白當作一聲
-    elseif key:repr() == "space" then
-    -- elseif key:repr() == "space" then
-    -- elseif key:repr() == "space" and context:has_menu() then
+    elseif key_repr == "space" then
+    -- elseif key_repr == "space" then
+    -- elseif key_repr == "space" and context:has_menu() then
       -- engine:commit_text(c_input .. "_")
       -- context.input = c_input .. " "
       context:push_input( " " )

@@ -4,6 +4,7 @@
 --]]
 
 ----------------------------------------------------------------------------------------
+local oscmd = require("p_components/p_oscmd")
 local generic_open = require("p_components/p_generic_open")
 local op_pattern = require("p_components/p_op_pattern")
 ----------------------------------------------------------------------------------------
@@ -31,6 +32,7 @@ local function init(env)
   env.custom_phrase = path .. "/" .. env.textdict .. ".txt" or ""
   env.op_pattern = path .. "/lua/p_components/p_op_pattern.lua" or ""
   -- log.info("lua_custom_phrase: \'" .. env.textdict .. ".txt\' Initilized!")  -- 日誌中提示已經載入 txt 短語
+  env.oscmd = oscmd
 end
 
 
@@ -42,6 +44,7 @@ local function processor(key, env)
   local comp = context.composition
   local seg = comp:back()
   local o_ascii_mode = context:get_option("ascii_mode")
+  local key_repr = key:repr()
 
   -- if env.textdict == "" or env.prefix == "" then
   if env.prefix == "" then
@@ -60,23 +63,23 @@ local function processor(key, env)
     local op_code = string.match(c_input, "^" .. env.prefix .. "j([a-z]*)$")
     -- if c_input == env.prefix .. "r" then
     if op_code then
-      local key_kp = key:repr():match("^([a-z])$")
+      local key_kp = key_repr:match("^([a-z])$")
       local kp_p = op_pattern[ op_code .. key_kp ]
-      if op_code == "f" and key:repr() == "t" then
-        generic_open(env.op_pattern)
+      if op_code == "f" and key_repr == "t" then
+        generic_open(env.op_pattern, env.oscmd)
         context:clear()
         return 1
       elseif kp_p ~= nil then
         -- engine:commit_text(kp_p)  -- 測試用
-        -- engine:commit_text( generic_open(run_in.open) )  -- 測試用
-        generic_open(kp_p)
+        -- engine:commit_text( generic_open(run_in.open, env.oscmd) )  -- 測試用
+        generic_open(kp_p, env.oscmd)
         context:clear()
         return 1
       elseif env.textdict == "" then
         return 2
-      elseif op_code == "f" and key:repr() == "c" then
+      elseif op_code == "f" and key_repr == "c" then
         -- io.popen("env.custom_phrase")  -- 無效！
-        generic_open(env.custom_phrase)
+        generic_open(env.custom_phrase, env.oscmd)
         context:clear()
         return 1
       end

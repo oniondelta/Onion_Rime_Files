@@ -36,7 +36,8 @@ local function processor(key, env)
   local g_c_t = context:get_commit_text()
   -- local page_size = engine.schema.page_size
   local o_ascii_mode = context:get_option("ascii_mode")
-  local key_select_keys = key:repr():match("^KP_([0-9])$") or key:repr():match("^Control%+([0-9])$")
+  local key_repr = key:repr()
+  local key_select_keys = key_repr:match("^KP_([0-9])$") or key_repr:match("^Control%+([0-9])$")
   -- local s_prefix = seg:has_tag("reverse2_lookup") and "';" or seg:has_tag("all_bpm") and "';'" or ""
   local s_prefix = "';"
 
@@ -74,7 +75,7 @@ local function processor(key, env)
     return 2
 
   --- pass not space Return KP_Enter key_select_keys
-  elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" and not key_select_keys then
+  elseif key_repr ~= "space" and key_repr ~= "Return" and key_repr ~= "KP_Enter" and not key_select_keys then
     return 2
 
 -----------------------
@@ -202,7 +203,7 @@ local function processor(key, env)
 -----------------------
 
   --- 以下修正：附加方案鍵盤範圍大於主方案時，選字時出現的 bug。
-  -- elseif key:repr() == "space" or key:repr() == "Return" or key:repr() == "KP_Enter" then
+  -- elseif key_repr == "space" or key_repr == "Return" or key_repr == "KP_Enter" then
   -- elseif not key_select_keys then
   else
 
@@ -217,7 +218,7 @@ local function processor(key, env)
     local new_c_input = string.sub(c_input, -retain_number)
 
     --- 中途插入空白（一聲）不會直上屏
-    if key:repr() == "space" and #c_input ~= caret_pos and not seg:has_tag("paging") and not string.match(f_c_input, "[ 3467]$") then
+    if key_repr == "space" and #c_input ~= caret_pos and not seg:has_tag("paging") and not string.match(f_c_input, "[ 3467]$") then
       local b_c_input = string.sub(c_input, caret_pos - #c_input)
       context.input = f_c_input .. " " .. b_c_input
       return 1
@@ -260,7 +261,7 @@ local function processor(key, env)
 
     --   --- 中途插入空白（一聲）不會直上屏
     --   local f_c_input = string.sub(c_input, 1, caret_pos)
-    --   if key:repr() == "space" and #c_input ~= caret_pos and not seg:has_tag("paging") and not string.match(f_c_input, "[ 3467]$") then
+    --   if key_repr == "space" and #c_input ~= caret_pos and not seg:has_tag("paging") and not string.match(f_c_input, "[ 3467]$") then
     --     local b_c_input = string.sub(c_input, caret_pos - #c_input)
     --     context.input = f_c_input .. " " .. b_c_input
 
@@ -295,7 +296,7 @@ local function processor(key, env)
 
 
     --- 某些方案輸入 Return 出英文，該條限定注音 Return 一律直上中文。
-    elseif key:repr() == "Return" or key:repr() == "KP_Enter" then
+    elseif key_repr == "Return" or key_repr == "KP_Enter" then
       context:confirm_current_selection()  -- 可記憶
       -- context:commit()  -- 可記憶
       -- engine:process_key( KeyEvent("Return") )  -- 可能會報錯
@@ -309,9 +310,9 @@ local function processor(key, env)
       return 2
 
     --- 補掛接反查注音不能使用空白當作一聲
-    elseif key:repr() == "space" then
-    -- elseif key:repr() == "space" then
-    -- elseif key:repr() == "space" and context:has_menu() then
+    elseif key_repr == "space" then
+    -- elseif key_repr == "space" then
+    -- elseif key_repr == "space" and context:has_menu() then
       -- engine:commit_text(c_input .. "_")
       -- context.input = c_input .. " "
       context:push_input( " " )

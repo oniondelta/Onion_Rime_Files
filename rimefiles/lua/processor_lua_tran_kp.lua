@@ -58,6 +58,7 @@ local function processor(key, env)
   local seg = comp:back()
   -- local g_c_t = context:get_commit_text()
   local o_ascii_mode = context:get_option("ascii_mode")
+  local key_repr = key:repr()
 
   -- local check_pre = string.match(c_input, "`[-]?[.]?$")
   -- local check_num_cal = string.match(c_input, "`[-]?[.]?%d+%.?%d*$") or
@@ -66,16 +67,16 @@ local function processor(key, env)
   local check_pre = string.match(c_input, env.prefix .. "[-]?[.]?$")
   local check_num_cal = string.match(c_input, env.prefix .. "[-]?[.]?%d+%.?%d*$") or
                         string.match(c_input, env.prefix .. "[-.rq(]?[%d.]+[-+*/^asrvxqw()][-+*/^asrvxqw().%d]*$")
-  -- local key_kp = key:repr():match("KP_([%d%a]+)")  -- KP_([ASDM%d][%a]*)
+  -- local key_kp = key_repr:match("KP_([%d%a]+)")  -- KP_([ASDM%d][%a]*)
   -- local kp_p = env.kp_pattern[key_kp]
 
-  -- local kp_check = key:repr():match("KP_")
-  -- local key_num = key:repr():match("KP_([0-9])")
-  -- local key_add = key:repr():match("KP_Add")
-  -- local key_sub = key:repr():match("KP_Subtract")
-  -- local key_mul = key:repr():match("KP_Multiply")
-  -- local key_div = key:repr():match("KP_Divide")
-  -- local key_dec = key:repr():match("KP_Decimal")
+  -- local kp_check = key_repr:match("KP_")
+  -- local key_num = key_repr:match("KP_([0-9])")
+  -- local key_add = key_repr:match("KP_Add")
+  -- local key_sub = key_repr:match("KP_Subtract")
+  -- local key_mul = key_repr:match("KP_Multiply")
+  -- local key_div = key_repr:match("KP_Divide")
+  -- local key_dec = key_repr:match("KP_Decimal")
 
 ---------------------------------------------------------------------------
 
@@ -98,7 +99,7 @@ local function processor(key, env)
   elseif seg:has_tag("mf_translator") then
   -- elseif seg:has_tag("lua") then
 
-    local key_kp = key:repr():match("KP_([%d%a]+)")  -- KP_([ASDM%d][%a]*)
+    local key_kp = key_repr:match("KP_([%d%a]+)")  -- KP_([ASDM%d][%a]*)
     local kp_p = kp_pattern[key_kp]
     if kp_p ~= nil then
       if not check_pre and not check_num_cal then

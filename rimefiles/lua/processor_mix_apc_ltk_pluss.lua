@@ -8,6 +8,7 @@
 --]]
 
 ----------------------------------------------------------------------------------------
+local oscmd = require("p_components/p_oscmd")
 local run_open = require("p_components/p_run_open")
 -- local generic_open = require("p_components/p_generic_open")
 -- local run_pattern = require("p_components/p_run_pattern")
@@ -27,6 +28,7 @@ local function init(env)
   env.run_pattern = path .. "/lua/p_components/p_run_pattern.lua" or ""
   -- env.op_pattern = path .. "/lua/p_components/p_op_pattern.lua" or ""
   -- log.info("lua_custom_phrase: \'" .. env.textdict .. ".txt\' Initilized!")  -- 日誌中提示已經載入 txt 短語
+  env.oscmd = oscmd
   -- env.kp_pattern = {
   --   ["0"] = "0",
   --   ["1"] = "1",
@@ -75,11 +77,12 @@ local function processor(key, env)
   local g_c_t = context:get_commit_text()
   local o_ascii_punct = context:get_option("ascii_punct")
   local o_ascii_mode = context:get_option("ascii_mode")
+  local key_repr = key:repr()
 
   local check_pre = string.match(c_input, "'/[-]?[.]?$")
   local check_num_cal = string.match(c_input, "'/[-]?[.]?%d+%.?%d*$") or
                         string.match(c_input, "'/[-.rq(]?[%d.]+[-+*/^asrvxqw()][-+*/^asrvxqw().%d]*$")
-  -- local key_kp = key:repr():match("KP_([%d%a]+)")  -- KP_([ASDM%d][%a]*)
+  -- local key_kp = key_repr:match("KP_([%d%a]+)")  -- KP_([ASDM%d][%a]*)
   -- local kp_p = env.kp_pattern[key_kp]
 
 ---------------------------------------------------------------------------
@@ -101,7 +104,7 @@ local function processor(key, env)
 以下特殊時 space 直上屏
 --]]
 
-  elseif key:repr() == "space" and caret_pos == 0 then
+  elseif key_repr == "space" and caret_pos == 0 then
       engine:commit_text( " " )
       context:clear()
       return 1 -- kAccepted
@@ -111,7 +114,7 @@ local function processor(key, env)
 以下 ascii_punct 標點轉寫
 --]]
 
-  elseif o_ascii_punct and key:repr() == "Shift+less" then
+  elseif o_ascii_punct and key_repr == "Shift+less" then
     if context:is_composing() then
       -- local cand = context:get_selected_candidate()
       -- engine:commit_text( cand.text .. "," )  -- ascii_punct 時選擇選項與其他標點不統一
@@ -122,7 +125,7 @@ local function processor(key, env)
     context:clear()
     return 1 -- kAccepted
 
-  elseif o_ascii_punct and key:repr() == "Shift+greater" then
+  elseif o_ascii_punct and key_repr == "Shift+greater" then
     if context:is_composing() then
       -- local cand = context:get_selected_candidate()
       -- engine:commit_text( cand.text .. "." )  -- ascii_punct 時選擇選項與其他標點不統一
@@ -146,7 +149,7 @@ local function processor(key, env)
   elseif seg:has_tag("mf_translator") then
   -- elseif seg:has_tag("lua") then
 
-    local key_kp = key:repr():match("^KP_([%d%a]+)$")  -- KP_([ASDM%d][%a]*)
+    local key_kp = key_repr:match("^KP_([%d%a]+)$")  -- KP_([ASDM%d][%a]*)
     local kp_p = kp_pattern[key_kp]
     if kp_p ~= nil then
       if not check_pre and not check_num_cal then
@@ -167,8 +170,8 @@ local function processor(key, env)
 
     local op_code_check = not string.match(c_input, env.prefix .. "['/;]") and string.match(c_input, env.prefix .. "j[a-z]+$")
     local op_code = string.match(c_input, "^" .. env.prefix .. "j([a-z]+)$")
-    if op_code_check and (key:repr() == "space" or key:repr() == "Return" or key:repr() == "KP_Enter") then
-      return run_open(context, c_input, caret_pos, op_code, env.run_pattern, env.textdict, env.custom_phrase)
+    if op_code_check and (key_repr == "space" or key_repr == "Return" or key_repr == "KP_Enter") then
+      return run_open(context, c_input, caret_pos, op_code, env.run_pattern, env.textdict, env.custom_phrase, env.oscmd)
     end
 
     -- if env.prefix == "" then  -- 前面 seg:has_tag 已確定
@@ -177,22 +180,22 @@ local function processor(key, env)
     -- local op_code = string.match(c_input, "^" .. env.prefix .. "j([a-z]*)$")
     -- -- if c_input == env.prefix .. "r" then
     -- if op_code then
-    --   local key_kp = key:repr():match("^([a-z])$")
+    --   local key_kp = key_repr:match("^([a-z])$")
     --   local kp_p = op_pattern[ op_code .. key_kp ]
-    --   if op_code == "f" and key:repr() == "t" then
-    --     generic_open(env.op_pattern)
+    --   if op_code == "f" and key_repr == "t" then
+    --     generic_open(env.op_pattern, env.oscmd)
     --     context:clear()
     --     return 1
     --   elseif kp_p ~= nil then
     --     -- engine:commit_text(kp_p)  -- 測試用
-    --     generic_open(kp_p)
+    --     generic_open(kp_p, env.oscmd)
     --     context:clear()
     --     return 1
     --   elseif env.textdict == "" then
     --     return 2
-    --   elseif op_code == "f" and key:repr() == "c" then
+    --   elseif op_code == "f" and key_repr == "c" then
     --     -- io.popen("env.custom_phrase")  -- 無效！
-    --     generic_open(env.custom_phrase)
+    --     generic_open(env.custom_phrase, env.oscmd)
     --     context:clear()
     --     return 1
     --   end
@@ -201,7 +204,7 @@ local function processor(key, env)
 ---------------------------------------------------------------------------
 --- 測試
   -- elseif seg:has_tag("japan") then
-  --   if key:repr() == "space" then
+  --   if key_repr == "space" then
   --     context:push_input( "|" )
   --     return 1
   --   end

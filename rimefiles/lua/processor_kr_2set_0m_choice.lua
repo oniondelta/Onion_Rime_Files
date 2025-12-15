@@ -57,6 +57,7 @@ local function processor(key, env)
   local o_ascii_mode = context:get_option("ascii_mode")
   local o_kr_0m = context:get_option("kr_0m")
   local o_space_mode = context:get_option("space_mode")
+  local key_repr = key:repr()
 
   -- local hangul_b = string.sub(g_c_t,-6,-4)  -- 確認倒數第二字是否為諺文用
 
@@ -78,7 +79,7 @@ local function processor(key, env)
 
 
   --- 修正「Shift+Return」commit_raw_input 設定失效問題
-  elseif key:repr() == "Shift+Return" and context:is_composing() then
+  elseif key_repr == "Shift+Return" and context:is_composing() then
   -- elseif key:eq(KeyEvent("Shift+Return")) and (context:is_composing()) then  -- KeyEvent 在官版小狼毫中會有問題
     engine:commit_text(c_input)
     context:clear()
@@ -92,9 +93,9 @@ local function processor(key, env)
 
 
   -- --- 修正開頭輸入「數字」，不能直接上屏問題（ schema 內可設定，故關閉）
-  -- elseif set_number[key:repr()] and (not context:is_composing()) then
+  -- elseif set_number[key_repr] and (not context:is_composing()) then
   -- -- elseif set_number[ascii_c(key, "0-9")] and (not context:is_composing()) then
-  --   engine:commit_text(key:repr())
+  --   engine:commit_text(key_repr)
   --   -- context:clear()
   --   return 1
 
@@ -167,19 +168,19 @@ local function processor(key, env)
 
     -- ---- 與上例函數一樣，只是用向下相容寫法
     -- local function check_qwertop()
-    --   if key:repr() == "Shift+Q" then
+    --   if key_repr == "Shift+Q" then
     --     return true
-    --   elseif key:repr() == "Shift+W" then
+    --   elseif key_repr == "Shift+W" then
     --     return true
-    --   elseif key:repr() == "Shift+E" then
+    --   elseif key_repr == "Shift+E" then
     --     return true
-    --   elseif key:repr() == "Shift+R" then
+    --   elseif key_repr == "Shift+R" then
     --     return true
-    --   elseif key:repr() == "Shift+T" then
+    --   elseif key_repr == "Shift+T" then
     --     return true
-    --   elseif key:repr() == "Shift+O" then
+    --   elseif key_repr == "Shift+O" then
     --     return true
-    --   elseif key:repr() == "Shift+P" then
+    --   elseif key_repr == "Shift+P" then
     --     return true
     --   else
     --     return false
@@ -187,9 +188,9 @@ local function processor(key, env)
     -- end
 
     -- --- 《最主要部分》使 [a-zQWERTOP] 組字且半上屏
-    -- if set_char[key:repr()] or check_qwertop() then
-    --   local lastword = string.gsub(key:repr(), "Shift%+", "")
-    --   -- local lastword = key:repr():match("^[a-z]$") or ""
+    -- if set_char[key_repr] or check_qwertop() then
+    --   local lastword = string.gsub(key_repr, "Shift%+", "")
+    --   -- local lastword = key_repr:match("^[a-z]$") or ""
     --   context:reopen_previous_segment()
     --   context.input = c_input .. lastword
     --   context:confirm_current_selection()
@@ -200,7 +201,7 @@ local function processor(key, env)
 
     -- --- 漢字選字直接上屏，有 bug，會影響諺文選字。
     -- --- 且詞語不能共同記憶組合出字。
-    -- elseif set_number[key:repr()] and (context:has_menu()) then
+    -- elseif set_number[key_repr] and (context:has_menu()) then
     -- -- elseif set_number[ascii_c(key, "0-9")] and (context:has_menu()) then
     --   -- local in_number = string.char(key.keycode)
     --   local in_number = ascii_c(key, "0-9") or 1
@@ -225,7 +226,7 @@ local function processor(key, env)
 
 
     --- 修正尾綴「;」出漢字，使其可展示選單
-    elseif key:repr() == "semicolon" then
+    elseif key_repr == "semicolon" then
       local hangul_b = string.sub(g_c_t,-6,-4)  -- 確認倒數第二字是否為諺文用
       -- local cxtil = string.len(g_c_t) - caret_pos
       --- 開頭防止漢字不 reopen 去組字。
@@ -271,7 +272,7 @@ local function processor(key, env)
 
 
     --- 使「\\」可分節
-    elseif key:repr() == "backslash" then
+    elseif key_repr == "backslash" then
       context:reopen_previous_segment()
       -- context.input = c_input .. "\\"
       context:push_input( "\\" )
@@ -290,19 +291,19 @@ local function processor(key, env)
 
 
     -- --- 修正輸入途中插入「數字」，無法半上屏，需按2次 enter 之問題，改直上屏（ schema 內可設定，故關閉）
-    -- elseif set_number[key:repr()] then
+    -- elseif set_number[key_repr] then
     -- -- elseif set_number[ascii_c(key, "0-9")] then
-    --   -- context.input = c_input .. key:repr()
+    --   -- context.input = c_input .. key_repr
     --   -- context:confirm_current_selection()
-    --   engine:commit_text(g_c_t .. key:repr())
+    --   engine:commit_text(g_c_t .. key_repr)
     --   context:clear()
     --   return 1
 
 
     --- 增加一般韓文輸入法操作，空格上屏自動末端空一格。
-    elseif o_space_mode and key:repr() == "space" and string.match(c_input, "^[a-zQWERTOP]+$") then  --只有韓文，不含漢字。如果漢字如此出字會不能記憶？
-      -- if key:repr() == "space" and (context:is_composing()) and (not context:has_menu()) then
-      -- if key:repr() == "space" and (context:is_composing()) and (not context:has_menu()) and (not string.match(g_c_t, "[%a%c%s]")) and (caret_pos == c_input:len()) then
+    elseif o_space_mode and key_repr == "space" and string.match(c_input, "^[a-zQWERTOP]+$") then  --只有韓文，不含漢字。如果漢字如此出字會不能記憶？
+      -- if key_repr == "space" and (context:is_composing()) and (not context:has_menu()) then
+      -- if key_repr == "space" and (context:is_composing()) and (not context:has_menu()) and (not string.match(g_c_t, "[%a%c%s]")) and (caret_pos == c_input:len()) then
       engine:commit_text(g_c_t .. " ")
       context:clear()
       return 1
@@ -314,8 +315,8 @@ local function processor(key, env)
   -- elseif not context:get_option("kr_0m") then
 
     --- 不在輸入狀態略過處理
-    if not context:has_menu() or not o_space_mode or key:repr() ~= "space" then
-    -- if not context:is_composing() or not o_space_mode or key:repr() ~= "space" then
+    if not context:has_menu() or not o_space_mode or key_repr ~= "space" then
+    -- if not context:is_composing() or not o_space_mode or key_repr ~= "space" then
       return 2
 
     elseif string.match(c_input, "^[a-zQWERTOP]+$") then  -- 提到前面限定 and (caret_pos == c_input:len())

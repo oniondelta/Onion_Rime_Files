@@ -12,12 +12,13 @@ local function processor(key, env)
   local g_c_t = context:get_commit_text()
   local o_ascii_punct = context:get_option("ascii_punct")
   local o_ascii_mode = context:get_option("ascii_mode")
+  local key_repr = key:repr()
 
   if o_ascii_mode then
     return 2
 
   elseif o_ascii_punct then
-    if key:repr() == "Shift+less" then
+    if key_repr == "Shift+less" then
       if context:is_composing() then
         engine:commit_text( g_c_t .. "," )
       else
@@ -25,7 +26,7 @@ local function processor(key, env)
       end
       context:clear()
       return 1 -- kAccepted
-    elseif key:repr() == "Shift+greater" then
+    elseif key_repr == "Shift+greater" then
       if context:is_composing() then
         engine:commit_text( g_c_t .. "." )
       else

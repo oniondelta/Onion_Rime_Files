@@ -9,6 +9,7 @@
 
 ----------------------------------------------------------------------------------------
 -- local utf8_sub = require("f_components/f_utf8_sub")
+local oscmd = require("p_components/p_oscmd")
 local run_open = require("p_components/p_run_open")
 -- local generic_open = require("p_components/p_generic_open")
 -- local run_pattern = require("p_components/p_run_pattern")
@@ -28,6 +29,7 @@ local function init(env)
   env.run_pattern = path .. "/lua/p_components/p_run_pattern.lua" or ""
   -- env.op_pattern = path .. "/lua/p_components/p_op_pattern.lua" or ""
   -- log.info("lua_custom_phrase: \'" .. env.textdict .. ".txt\' Initilized!")  -- 日誌中提示已經載入 txt 短語
+  env.oscmd = oscmd
   -- env.kp_pattern = {
   --   ["0"] = "0",
   --   ["1"] = "1",
@@ -92,8 +94,9 @@ local function processor(key, env)
   -- local s_up = context:get_option("1_2_straight_up")
   local a_s_wp = context:get_option("array30_space_wp")
   -- local a_r_abc = context:get_option("array30_return_abc")
-  local key_select_keys = key:repr():match("^KP_([0-9])$") or key:repr():match("^Control%+([0-9])$")
-  local key_abc = key:repr():match("^([%l])$") or k4_pattern[key:repr()]
+  local key_repr = key:repr()
+  local key_select_keys = key_repr:match("^KP_([0-9])$") or key_repr:match("^Control%+([0-9])$")
+  local key_abc = key_repr:match("^([%l])$") or k4_pattern[key_repr]
 
   -- local check_i_end = string.match(c_input, "^[a-z,./;][a-z,./;]?[ ']$") or string.match(c_input, "^w%d$")
   -- local check_i_end = string.match(c_input, "[a-z,./;][ ']$") or string.match(c_input, "w%d$")
@@ -123,7 +126,7 @@ local function processor(key, env)
   local check_pre = string.match(c_input, "`[-]?[.]?$")
   local check_num_cal = string.match(c_input, "`[-]?[.]?%d+%.?%d*$") or
                         string.match(c_input, "`[-.rq(]?[%d.]+[-+*/^asrvxqw()][-+*/^asrvxqw().%d]*$")
-  -- local key_kp = key:repr():match("KP_([%d%a]+)")  -- KP_([ASDM%d][%a]*)
+  -- local key_kp = key_repr:match("KP_([%d%a]+)")  -- KP_([ASDM%d][%a]*)
   -- local kp_p = env.kp_pattern[key_kp]
 
   -- local s_prefix = seg:has_tag("reverse2_lookup") and "';" or seg:has_tag("all_bpm") and "';'" or ""
@@ -147,11 +150,11 @@ local function processor(key, env)
 以下開始使得純數字和計算機時，於小鍵盤可輸入數字和運算符
 --]]
 
-  elseif seg:has_tag("mf_translator") and key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" and key:repr() ~= "Shift+space" then
-  -- elseif seg:has_tag("lua") and key:repr() ~= "space" then
+  elseif seg:has_tag("mf_translator") and key_repr ~= "space" and key_repr ~= "Return" and key_repr ~= "KP_Enter" and key_repr ~= "Shift+space" then
+  -- elseif seg:has_tag("lua") and key_repr ~= "space" then
   -- elseif seg:has_tag("lua") and kp_p ~= nil then
 
-    local key_kp = key:repr():match("KP_([%d%a]+)$")  -- KP_([ASDM%d][%a]*)
+    local key_kp = key_repr:match("KP_([%d%a]+)$")  -- KP_([ASDM%d][%a]*)
     local kp_p = kp_pattern[key_kp]
     if kp_p ~= nil then
       if not check_pre and not check_num_cal then
@@ -176,22 +179,22 @@ local function processor(key, env)
     -- local op_code = string.match(c_input, "^" .. env.prefix .. "j([a-z]*)$")
     -- -- if c_input == env.prefix .. "j" then
     -- if op_code then
-    --   local key_kp = key:repr():match("^([a-z])$")
+    --   local key_kp = key_repr:match("^([a-z])$")
     --   local kp_p = op_pattern[ op_code .. key_kp ]
-    --   if op_code == "f" and key:repr() == "t" then
-    --     generic_open(env.op_pattern)
+    --   if op_code == "f" and key_repr == "t" then
+    --     generic_open(env.op_pattern, env.oscmd)
     --     context:clear()
     --     return 1
     --   elseif kp_p ~= nil then
     --     -- engine:commit_text(kp_p)  -- 測試用
-    --     generic_open(kp_p)
+    --     generic_open(kp_p, env.oscmd)
     --     context:clear()
     --     return 1
     --   -- elseif env.textdict == "" then
     --   --   return 2
-    --   -- elseif op_code == "f" and key:repr() == "c" then
+    --   -- elseif op_code == "f" and key_repr == "c" then
     --   --   -- io.popen("env.custom_phrase")  -- 無效！
-    --   --   generic_open(env.custom_phrase)
+    --   --   generic_open(env.custom_phrase, env.oscmd)
     --   --   context:clear()
     --   --   return 1
     --   end
@@ -219,11 +222,11 @@ local function processor(key, env)
     end
 
   -- --- 限定香草模式下
-  -- -- elseif not s_up and check_i_end and ( key:repr():match("^[%l]$") or k4_pattern[key:repr()] ) then
+  -- -- elseif not s_up and check_i_end and ( key_repr:match("^[%l]$") or k4_pattern[key_repr] ) then
   -- --- 非限定香草模式下
-  -- elseif check_i_end and ( key:repr():match("^[%l]$") or k4_pattern[key:repr()] ) then
+  -- elseif check_i_end and ( key_repr:match("^[%l]$") or k4_pattern[key_repr] ) then
   --   if ( seg:has_tag("abc") or seg:has_tag("reverse3_lookup") or seg:has_tag("wsymbols") ) then
-  --     local k_r = k4_pattern[key:repr()] or key:repr()
+  --     local k_r = k4_pattern[key_repr] or key_repr
   --     engine:commit_text(g_c_t)
   --     context.input = k_r
   --     return 1
@@ -236,7 +239,7 @@ local function processor(key, env)
 使「Shift+space」可循環翻頁
 --]]
 
-  elseif key:repr() == "Shift+space" then
+  elseif key_repr == "Shift+space" then
     -- --- 以下可循環翻頁！(末頁會停頓！有提示效果！)
     -- -- local loaded_candidate_count = seg.menu:candidate_count()    -- 獲得（已加載）候選詞數量
     -- if env.n == loaded_candidate_count and env.n > 10 then
@@ -262,8 +265,8 @@ local function processor(key, env)
 -----------------------------------------------------------------------------
 
   --- pass not space Return KP_Enter key_select_keys ( Shift+space ?)
-  elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" and not key_select_keys then
-  -- elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" and key:repr() ~= "Shift+space" and not key_select_keys then
+  elseif key_repr ~= "space" and key_repr ~= "Return" and key_repr ~= "KP_Enter" and not key_select_keys then
+  -- elseif key_repr ~= "space" and key_repr ~= "Return" and key_repr ~= "KP_Enter" and key_repr ~= "Shift+space" and not key_select_keys then
     return 2
 
 -----------------------------------------------------------------------------
@@ -272,8 +275,8 @@ local function processor(key, env)
 --]]
 
   -- --- 以下 abc 非英文，而是中文主 segmentor
-  -- elseif (a_r_abc) and (seg:has_tag("abc") or seg:has_tag("mf_translator")) and (key:repr() == "Return" or key:repr() == "KP_Enter") then
-  -- -- elseif a_r_abc and check_abc and key:repr() == "Return" or key:repr() == "KP_Enter" then
+  -- elseif (a_r_abc) and (seg:has_tag("abc") or seg:has_tag("mf_translator")) and (key_repr == "Return" or key_repr == "KP_Enter") then
+  -- -- elseif a_r_abc and check_abc and key_repr == "Return" or key_repr == "KP_Enter" then
 
   --   -- --- 選字時 Return 上屏選項
   --   -- if not seg:has_tag("paging") then
@@ -288,7 +291,7 @@ local function processor(key, env)
   --   return 1
 
   --- 改用「a_s_wp」連動控制
-  elseif not a_s_wp and not seg:has_tag("reverse2_lookup") and (key:repr() == "Return" or key:repr() == "KP_Enter") then
+  elseif not a_s_wp and not seg:has_tag("reverse2_lookup") and (key_repr == "Return" or key_repr == "KP_Enter") then
     engine:commit_text(c_input)
     context:clear()
     return 1
@@ -299,9 +302,9 @@ local function processor(key, env)
 --]]
 
   elseif seg:has_tag("mf_translator") and not string.match(c_input, env.prefix .. "['/;]") and string.match(c_input, env.prefix .. "j[a-z]+$") then  -- 開頭
-    if key:repr() == "space" or key:repr() == "Return" or key:repr() == "KP_Enter" then
+    if key_repr == "space" or key_repr == "Return" or key_repr == "KP_Enter" then
       local op_code = string.match(c_input, "^" .. env.prefix .. "j([a-z]+)$")
-      return run_open(context, c_input, caret_pos, op_code, env.run_pattern, "", "")
+      return run_open(context, c_input, caret_pos, op_code, env.run_pattern, "", "", env.oscmd)
     end
 
 -----------------------------------------------------------------------------
@@ -316,7 +319,7 @@ local function processor(key, env)
   -- elseif check_i1 or check_i2 or seg:has_tag("mf_translator") or seg:has_tag("email_url_translator") then
   -- -- elseif check_i1 or check_i2 or check_i3 or check_i4 then
   -- -- elseif check_i1 or check_i2 or check_i3 or check_i4 or check_i5 or check_i6 or check_i7 or check_i8 then
-  --   if key:repr() == "space" then
+  --   if key_repr == "space" then
   --     -- local g_c_t = context:get_commit_text()
   --     engine:commit_text(g_c_t)
   --     context:clear()
@@ -326,14 +329,14 @@ local function processor(key, env)
   --   end
 
   --- 「mf_translator」確認模式：空白鍵相關切換（與下條目分開，減少層數效能較好？）
-  elseif ((not a_s_wp and seg:has_tag("mf_translator")) or seg:has_tag("email_url_translator")) and key:repr() == "space" then
+  elseif ((not a_s_wp and seg:has_tag("mf_translator")) or seg:has_tag("email_url_translator")) and key_repr == "space" then
     -- local g_c_t = context:get_commit_text()
     engine:commit_text(g_c_t)
     context:clear()
     return 1
 
   --- 「mf_translator」翻頁模式：空白鍵相關切換（與上條目分開，減少層數效能較好？）
-  elseif a_s_wp and seg:has_tag("mf_translator") and key:repr() == "space" then
+  elseif a_s_wp and seg:has_tag("mf_translator") and key_repr == "space" then
     -- --- 以下可循環翻頁！(末頁會停頓！有提示效果！)
     -- if env.n == loaded_candidate_count and env.n > 10 then
     --   context:refresh_non_confirmed_composition()
@@ -365,7 +368,7 @@ local function processor(key, env)
 
   --- 行列30反查注音，不能直接上屏。
   elseif check_i_reverse_space then
-    if key:repr() == "space" then
+    if key_repr == "space" then
       context:push_input(" ")
       return 1
     else
@@ -374,7 +377,7 @@ local function processor(key, env)
 
   -- --- 三碼以上，「直上模式」時直上。
   -- elseif s_up and check_i_3_or_more then  -- mf_translator 在前，不用擔心影響到。
-  --   if key:repr() == "space" then
+  --   if key_repr == "space" then
   --     -- local g_c_t = context:get_commit_text()
   --     engine:commit_text(g_c_t)
   --     context:clear()
@@ -391,7 +394,7 @@ local function processor(key, env)
 
   -- -- --- 二碼「詞句」加空格，「直上模式」時忽略。（「詞句」加空格目前設不作用，故該條目關閉）
   -- -- elseif s_up and check_i_phrases_space then  -- mf_translator 在前，不用擔心影響到。
-  -- --   if key:repr() == "space" then
+  -- --   if key_repr == "space" then
   -- --     context:push_input(" ")
   -- --     -- engine:commit_text("test")
   -- --     -- context:refresh_non_confirmed_composition()
@@ -408,7 +411,7 @@ local function processor(key, env)
 KeyEvent 函數在舊版 librime-lua 中不支持。
 --]]
 
-  elseif a_s_wp and check_i_end and not seg:has_tag("reverse2_lookup") and key:repr() == "space" then
+  elseif a_s_wp and check_i_end and not seg:has_tag("reverse2_lookup") and key_repr == "space" then
     -- --- 以下可循環翻頁！(末頁會停頓！有提示效果！)
     -- -- local loaded_candidate_count = seg.menu:candidate_count()    -- 獲得（已加載）候選詞數量
     -- -- local page_n = 10 * (seg.selected_index // 10)    -- 先確定在第幾頁，「//」為整除運算符。
@@ -444,7 +447,7 @@ KeyEvent 函數在舊版 librime-lua 中不支持。
     end
 
   --- 補在「a_s_wp」時，翻頁時，空格還是直上。
-  elseif a_s_wp and seg:has_tag("paging") and seg:has_tag("abc") and key:repr() == "space" then
+  elseif a_s_wp and seg:has_tag("paging") and seg:has_tag("abc") and key_repr == "space" then
     -- engine:process_key(KeyEvent("space"))  -- 會跳到「KP_Space」=>「confirm」。
     context:push_input(" ")
     return 1
@@ -459,26 +462,26 @@ KeyEvent 函數在舊版 librime-lua 中不支持。
 
   -- -- elseif a_s_wp and seg:has_tag("wsymbols") then
   -- -- -- elseif a_s_wp and check_w then
-  -- --   if key:repr() == "space" then
+  -- --   if key_repr == "space" then
   -- --     engine:process_key(KeyEvent("Page_Down"))
   -- --     return 1 -- kAccepted
   -- --   --- 修正 w[0-9] 空白鍵 設翻頁時，無上屏鍵問題。
   -- --   --- 搭配前面「空白鍵同某些行列 30 一樣為翻頁」，並且用 custom 檔設「return 上屏候選字」，校正 Return 能上屏候選項！
-  -- --   elseif key:repr() == "Return" or key:repr() == "KP_Enter" then
+  -- --   elseif key_repr == "Return" or key_repr == "KP_Enter" then
   -- --     engine:commit_text(g_c_t)
   -- --     context:clear()
   -- --     return 1 -- kAccepted
   -- --   end
 
   -- -- --- 修正 Return 都上屏英文時， w[0-9] 空白鍵為上屏鍵，Return 還是上屏候選項問題。
-  -- -- elseif (a_r_abc) and (not a_s_wp) and (seg:has_tag("wsymbols")) and (key:repr() == "Return" or key:repr() == "KP_Enter") then
+  -- -- elseif (a_r_abc) and (not a_s_wp) and (seg:has_tag("wsymbols")) and (key_repr == "Return" or key_repr == "KP_Enter") then
   -- --   engine:commit_text(c_input)
   -- --   context:clear()
   -- --   return 1
 
   -- elseif seg:has_tag("wsymbols") then
   --   --- 以下設置可循環翻頁！
-  --   if a_s_wp and key:repr() == "space" then
+  --   if a_s_wp and key_repr == "space" then
   --     -- local loaded_candidate_count = seg.menu:candidate_count()    -- 獲得（已加載）候選詞數量
   --     -- local page_n = 10 * (seg.selected_index // 10)    -- 先確定在第幾頁，「//」為整除運算符。
   --     if env.n == loaded_candidate_count and env.n > 10 then
@@ -490,18 +493,18 @@ KeyEvent 函數在舊版 librime-lua 中不支持。
   --       engine:process_key(KeyEvent("Page_Down"))
   --       return 1
   --     end
-  --   -- elseif a_s_wp and key:repr() == "Shift+space" then
+  --   -- elseif a_s_wp and key_repr == "Shift+space" then
   --   --   env.n = 0
   --   --   engine:process_key(KeyEvent("Page_Up"))
   --   --   return 1
   --   --- 修正 w[0-9] 空白鍵 設翻頁時，無上屏鍵問題。
   --   --- 搭配前面「空白鍵同某些行列 30 一樣為翻頁」，並且用 custom 檔設「return 上屏候選字」，校正 Return 能上屏候選項！
-  --   elseif a_s_wp and (key:repr() == "Return" or key:repr() == "KP_Enter") then
+  --   elseif a_s_wp and (key_repr == "Return" or key_repr == "KP_Enter") then
   --     engine:commit_text(g_c_t)
   --     context:clear()
   --     return 1
   --   -- --- 以下設置可循環翻頁！
-  --   -- elseif key:repr() == "Shift+space" then
+  --   -- elseif key_repr == "Shift+space" then
   --   --   -- local loaded_candidate_count = seg.menu:candidate_count()    -- 獲得（已加載）候選詞數量
   --   --   if env.n == loaded_candidate_count and env.n > 10 then
   --   --     context:refresh_non_confirmed_composition()
@@ -513,7 +516,7 @@ KeyEvent 函數在舊版 librime-lua 中不支持。
   --   --     return 2
   --   --   end
   --   --- 修正 Return 都上屏英文時， w[0-9] 空白鍵為上屏鍵，Return 還是上屏候選項問題。
-  --   elseif a_r_abc and (key:repr() == "Return" or key:repr() == "KP_Enter") then
+  --   elseif a_r_abc and (key_repr == "Return" or key_repr == "KP_Enter") then
   --   -- elseif not a_s_wp and a_r_abc then
   --     engine:commit_text(c_input)
   --     context:clear()
@@ -642,7 +645,7 @@ KeyEvent 函數在舊版 librime-lua 中不支持。
 -----------------------
 
   --- 以下修正：附加方案鍵盤範圍大於主方案時，選字時出現的 bug。
-  -- elseif key:repr() == "space" or key:repr() == "Return" or key:repr() == "KP_Enter" then
+  -- elseif key_repr == "space" or key_repr == "Return" or key_repr == "KP_Enter" then
   -- elseif not key_select_keys then
   else
 
@@ -657,7 +660,7 @@ KeyEvent 函數在舊版 librime-lua 中不支持。
     local new_c_input = string.sub(c_input, -retain_number)
 
     --- 中途插入空白（一聲）不會直上屏
-    if key:repr() == "space" and #c_input ~= caret_pos and not seg:has_tag("paging") and not string.match(f_c_input, "[ 3467]$") then
+    if key_repr == "space" and #c_input ~= caret_pos and not seg:has_tag("paging") and not string.match(f_c_input, "[ 3467]$") then
       local b_c_input = string.sub(c_input, caret_pos - #c_input)
       context.input = f_c_input .. " " .. b_c_input
       return 1
@@ -700,7 +703,7 @@ KeyEvent 函數在舊版 librime-lua 中不支持。
 
     --   --- 中途插入空白（一聲）不會直上屏
     --   local f_c_input = string.sub(c_input, 1, caret_pos)
-    --   if key:repr() == "space" and #c_input ~= caret_pos and not seg:has_tag("paging") and not string.match(f_c_input, "[ 3467]$") then
+    --   if key_repr == "space" and #c_input ~= caret_pos and not seg:has_tag("paging") and not string.match(f_c_input, "[ 3467]$") then
     --     local b_c_input = string.sub(c_input, caret_pos - #c_input)
     --     context.input = f_c_input .. " " .. b_c_input
 
@@ -733,7 +736,7 @@ KeyEvent 函數在舊版 librime-lua 中不支持。
 
 
     --- 某些方案輸入 Return 出英文，該條限定注音 Return 一律直上中文。
-    elseif key:repr() == "Return" or key:repr() == "KP_Enter" then
+    elseif key_repr == "Return" or key_repr == "KP_Enter" then
       context:confirm_current_selection()  -- 可記憶
       -- context:commit()  -- 可記憶
       -- engine:process_key( KeyEvent("Return") )  -- 可能會報錯
@@ -747,9 +750,9 @@ KeyEvent 函數在舊版 librime-lua 中不支持。
       return 2
 
     --- 補掛接反查注音不能使用空白當作一聲
-    elseif key:repr() == "space" then
-    -- elseif key:repr() == "space" then
-    -- elseif key:repr() == "space" and context:has_menu() then
+    elseif key_repr == "space" then
+    -- elseif key_repr == "space" then
+    -- elseif key_repr == "space" and context:has_menu() then
       -- engine:commit_text(c_input .. "_")
       -- context.input = c_input .. " "
       context:push_input(" ")

@@ -4,6 +4,7 @@
 --]]
 
 ----------------------------------------------------------------------------------------
+local oscmd = require("p_components/p_oscmd")
 local run_open = require("p_components/p_run_open")
 -- local generic_open = require("p_components/p_generic_open")
 -- local run_pattern = require("p_components/p_run_pattern")
@@ -32,6 +33,7 @@ local function init(env)
   env.custom_phrase = path .. "/" .. env.textdict .. ".txt" or ""
   env.run_pattern = path .. "/lua/p_components/p_run_pattern.lua" or ""
   -- log.info("lua_custom_phrase: \'" .. env.textdict .. ".txt\' Initilized!")  -- 日誌中提示已經載入 txt 短語
+  env.oscmd = oscmd
 end
 
 
@@ -45,6 +47,7 @@ local function processor(key, env)
   local seg = comp:back()
   -- local g_c_t = context:get_commit_text()
   local o_ascii_mode = context:get_option("ascii_mode")
+  local key_repr = key:repr()
 
   -- if env.textdict == "" or env.prefix == "" then
   if env.prefix == "" then
@@ -62,7 +65,7 @@ local function processor(key, env)
 -----------------------------------------------------------------------------
 
   --- pass not space Return KP_Enter key_num
-  elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" then
+  elseif key_repr ~= "space" and key_repr ~= "Return" and key_repr ~= "KP_Enter" then
     return 2
 
 -----------------------------------------------------------------------------
@@ -71,7 +74,7 @@ local function processor(key, env)
     local op_code_check = not string.match(c_input, env.prefix .. "['/;]") and string.match(c_input, env.prefix .. "j[a-z]+$")
     local op_code = string.match(c_input, "^" .. env.prefix .. "j([a-z]+)$")
     if op_code_check then
-      return run_open(context, c_input, caret_pos, op_code, env.run_pattern, env.textdict, env.custom_phrase)
+      return run_open(context, c_input, caret_pos, op_code, env.run_pattern, env.textdict, env.custom_phrase, env.oscmd)
     end
   end
 

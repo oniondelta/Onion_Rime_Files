@@ -45,10 +45,11 @@ local function processor(key, env)
   -- local g_c_t = context:get_commit_text()
   -- local page_size = engine.schema.page_size
   local o_ascii_mode = context:get_option("ascii_mode")
+  local key_repr = key:repr()
   --------
-  local key_num_array10 = key:repr():match("^KP_([0-9])$") or key:repr():match("^KP_(Decimal)$")
-  local key_select_keys = key:repr():match("^Shift%+[QAZWSXYHNUJM]$") or key:repr():match("^Control%+([1-6])$")
-  -- local key_select_keys = key:repr():match("^Control%+([1-6])$")
+  local key_num_array10 = key_repr:match("^KP_([0-9])$") or key_repr:match("^KP_(Decimal)$")
+  local key_select_keys = key_repr:match("^Shift%+[QAZWSXYHNUJM]$") or key_repr:match("^Control%+([1-6])$")
+  -- local key_select_keys = key_repr:match("^Control%+([1-6])$")
   -- local key_bpmf = set_char[ascii_c(key, "a-z")]
   --------
   -- local seg_punct = seg:has_tag("punct")
@@ -83,13 +84,13 @@ local function processor(key, env)
 以下針對 seg:has_tag("shadow_top") 時，刪除最後「```[zxcvsdfwerb]」之修正
 --]]
 
-  elseif key:repr() == "BackSpace" and seg_shadow_top and shadow_top_b and #c_input == caret_pos then
+  elseif key_repr == "BackSpace" and seg_shadow_top and shadow_top_b and #c_input == caret_pos then
     -- engine:process_key(KeyEvent("Escape"))
     -- engine:process_key(KeyEvent("Escape"))
     context:pop_input(4)  -- 回刪（刪到「0」時會有狀況？！）
     -- context:clear()  -- 前面有接其他「seg」，會全部消失
     return 1
-  elseif key:repr() == "Escape" and seg_shadow_top and shadow_top_e and #c_input == caret_pos then
+  elseif key_repr == "Escape" and seg_shadow_top and shadow_top_e and #c_input == caret_pos then
     -- engine:process_key(KeyEvent("Escape"))
     -- engine:process_key(KeyEvent("Escape"))
     n = #shadow_top_e
@@ -102,7 +103,7 @@ local function processor(key, env)
 以下針對功能：「轉換對映數字」！
 --]]
 
-  elseif key:repr() == "g" and shadow_top_abc and (seg_shadow_top or seg_reverse3_lookup) then
+  elseif key_repr == "g" and shadow_top_abc and (seg_shadow_top or seg_reverse3_lookup) then
     local atn = array10_to_num(shadow_top_abc) or ""
     local n = #atn
     context:pop_input(n)
@@ -117,7 +118,7 @@ local function processor(key, env)
     ------------------------------
     return 1
 
-  elseif key:repr() == "g" and shadow_top_num and not seg_abc and not seg_reverse2_lookup and not context:has_menu() then  -- and context:is_composing()
+  elseif key_repr == "g" and shadow_top_num and not seg_abc and not seg_reverse2_lookup and not context:has_menu() then  -- and context:is_composing()
     local ata = array10_to_abc(shadow_top_num) or ""
     local n = #ata
     context:pop_input(n)
@@ -153,15 +154,15 @@ local function processor(key, env)
     return 2
 
   --- pass not space Return KP_Enter key_select_keys
-  -- elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" then
-  elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" and not key_select_keys then
+  -- elseif key_repr ~= "space" and key_repr ~= "Return" and key_repr ~= "KP_Enter" then
+  elseif key_repr ~= "space" and key_repr ~= "Return" and key_repr ~= "KP_Enter" and not key_select_keys then
     return 2
 
 -----------------------
-  -- --- 以下測試「key_select_keys」之「key:repr()」用
+  -- --- 以下測試「key_select_keys」之「key_repr」用
 
   -- elseif key_select_keys then
-  --   engine:commit_text("key:repr()=" .. key:repr() .. ", " .. key_select_keys)
+  --   engine:commit_text("key_repr=" .. key_repr .. ", " .. key_select_keys)
   --   context:clear()
   --   return 1
 
@@ -246,7 +247,7 @@ local function processor(key, env)
 -----------------------
   --- 以下修正：注音「空格」一聲影響行列10上屏。
 
-  elseif key:repr() == "space" and #c_input == caret_pos then
+  elseif key_repr == "space" and #c_input == caret_pos then
   --   context:commit()  -- 會有 bug！
     context:confirm_current_selection()
     return 1
