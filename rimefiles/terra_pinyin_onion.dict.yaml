@@ -150,6 +150,7 @@
 #    詞句中，「珀」日常發音常會誤發為「bo4」，臺灣標準為「po4」，故皆補齊「po4」「bo4」，後者詞頻設為80%。
 #    詞句中，「灸」日常發音常會誤發為「jiu1」，臺灣標準為「jiu3」，故全都補齊「jiu3」「jiu1」，後者詞頻設為80%。
 #    詞句中，「蝸」臺灣標準為「gua1」，大陸標準為「wo1」，日常易混，故皆補齊「gua1」「wo」。
+#    詞句中，「邳」臺灣標準為「pei2」，大陸標準為「pi1」，日常易混，故皆補齊「pei2」「pi1」。
 #    詞句中，「褶」臺灣標準為「zhe2」，大陸標準為「zhe3」，兩者易混淆，故皆補齊「zhe2」「zhe3」。
 #    詞句中，「窣」臺灣標準為「su4」，大陸標準為「su1」，兩者易混淆，故皆補齊「su4」「su1」。
 #    詞句中，「蹬」臺灣標準為「deng4」，大陸標準為「deng1」，兩者易混淆，故皆補齊「deng4」「deng1」。
@@ -3585,6 +3586,11 @@ min_phrase_weight: 100
 貶	fa2	0%
 贬	fa2	0%
 並	ban4	0%
+郴	lan2	0%
+郲	lei3	0%
+# 䣂	lei4	0%
+# 薓	san1	0%
+吭	hang4	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -3805,7 +3811,7 @@ min_phrase_weight: 100
 迋	guang3	1%
 迎	ying4	1%
 迕	wu4	1%
-邳	pei2	1%
+邳	pei2
 雨	yu4	1%
 非	fei3	1%
 亮	liang2	1%
@@ -55644,6 +55650,8 @@ min_phrase_weight: 100
 一對兒	yi1 dui4 er2
 一小部分	yi4 xiao3 bu4 fen4
 一小部分	yi1 xiao3 bu4 fen4
+一小部分	yi4 xiao3 bu4 fen1
+一小部分	yi1 xiao3 bu4 fen1
 一小陣兒	yi4 xiao3 zhen4 er5	80%
 一小陣兒	yi4 xiao3 zhen4 er2
 一小陣兒	yi1 xiao3 zhen4 er5	80%
@@ -56309,6 +56317,8 @@ min_phrase_weight: 100
 一邊	yi1 bian1
 一部分	yi2 bu4 fen4
 一部分	yi1 bu4 fen4
+一部分	yi2 bu4 fen1
+一部分	yi1 bu4 fen1
 一酬一酢	yi4 chou2 yi2 zuo4
 一酬一酢	yi1 chou2 yi1 zuo4
 一針見血	yi4 zhen1 jian4 xie3
@@ -56647,6 +56657,7 @@ min_phrase_weight: 100
 上勁	shang4 jin4
 上勁	shang4 jing4
 上半部分	shang4 ban4 bu4 fen4
+上半部分	shang4 ban4 bu4 fen1
 上去	shang4 qu4
 上司	shang4 si1
 上同調	shang4 tong2 diao4
@@ -62492,6 +62503,8 @@ min_phrase_weight: 100
 凸透鏡	tu2 tou4 jing4
 凸面部分	tu1 mian4 bu4 fen4
 凸面部分	tu2 mian4 bu4 fen4
+凸面部分	tu1 mian4 bu4 fen1
+凸面部分	tu2 mian4 bu4 fen1
 凸面鏡	tu1 mian4 jing4
 凸面鏡	tu2 mian4 jing4
 凸額	tu1 e2
@@ -63924,6 +63937,7 @@ min_phrase_weight: 100
 創匯	chuang4 hui4
 創口	chuang1 kou3
 創可貼	chuang1 ke3 tie1
+創可貼	chuang4 ke3 tie1
 創夷	chuang1 yi2
 創始	chuang4 shi3
 創始人	chuang4 shi3 ren2
@@ -70855,6 +70869,7 @@ min_phrase_weight: 100
 大通銀行	da4 tong1 yin2 hang2
 大進擊	da4 jin4 ji2
 大部分	da4 bu4 fen4
+大部分	da4 bu4 fen1
 大都	da4 du1
 大都	da4 dou1
 大都來	da4 du1 lai2
@@ -98912,6 +98927,7 @@ min_phrase_weight: 100
 組分	zu3 fen4
 組合數學	zu3 he2 shu4 xue2
 組成部分	zu3 cheng2 bu4 fen4
+組成部分	zu3 cheng2 bu4 fen1
 組曲	zu3 qu3
 組立式建築	zu3 li4 shi4 jian4 zhu2
 組織漿黴菌病	zu3 zhi1 jiang1 mei2 jun4 bing4
@@ -108720,6 +108736,7 @@ min_phrase_weight: 100
 身體質量指數	shen1 ti3 zhi2 liang4 zhi3 shu4
 身體質量指數	shen1 ti3 zhi4 liang4 zhi3 shu4	3%
 身體部分	shen1 ti3 bu4 fen4
+身體部分	shen1 ti3 bu4 fen1
 身體髮膚	shen1 ti3 fa3 fu1
 躬先表率	gong1 xian1 biao3 shuai4
 躬耕樂道	gong1 geng1 le4 dao4
@@ -110653,6 +110670,7 @@ min_phrase_weight: 100
 邳縣	pei2 xian4
 邳縣	pi1 xian4
 邳邳	pei2 pei2
+邳邳	pi1 pi1
 邵陽地區	shao4 yang2 di4 qu1
 邷麼兒	wa3 mo2 er5	80%
 邷麼兒	wa3 mo2 er2
@@ -110672,8 +110690,11 @@ min_phrase_weight: 100
 郢都	ying3 du1
 部份	bu4 fen4
 部分	bu4 fen4
+部分	bu4 fen1
 部分值	bu4 fen4 zhi2
+部分值	bu4 fen1 zhi2
 部分法	bu4 fen4 fa3
+部分法	bu4 fen1 fa3
 部勒	bu4 le4
 部將	bu4 jiang4
 部曲	bu4 qu1
@@ -117408,6 +117429,7 @@ min_phrase_weight: 100
 鼻兒	bi2 er5	80%
 鼻兒	bi2 er2
 鼻口部分	bi2 kou3 bu4 fen4
+鼻口部分	bi2 kou3 bu4 fen1
 鼻咽	bi2 yan1
 鼻咽癌	bi2 yan1 ai2
 鼻咽癌	bi2 yan1 yan2
@@ -117545,4 +117567,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 117548 #####
+##### @結束 END - 117570 #####
