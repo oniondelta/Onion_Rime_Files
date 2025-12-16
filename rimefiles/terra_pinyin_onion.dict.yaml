@@ -108,6 +108,7 @@
 #    詞句中，「剔」臺灣字典發音為「ti1」，故皆標註為「ti1」。但「挑剔」「剔透」等詞之「剔」一般慣發音為「ti4」，故全都補齊「ti1」「ti4」。
 #    詞句中，「兒」臺灣字典發音為「er2」，慣用發音為「er5」。但為兒化音時，臺灣字典中會標註「ㄦ」，但拼音為單獨「r」，可理解為「er5」。兩岸字典中對單獨「兒」皆沒有「er1」「er5」之發音標註，故兒化音時選擇標註「er2」「er5」，不標註「er1」。
 #    詞句中，「傾」臺灣字典發音為「qing1」但日常生活發音太常使用「qing3」，故全都補齊「qing1」「qing3」。
+#    詞句中，「脈」臺灣字典發音為「mai4」「mo4」，「mai4」發音之又音為「mo4」，太容易與其他詞彙相同發音並搞混，其發音「mo4」又為「脈脈」之類詞彙的專屬發音，斟酌後，除卻「mo4」詞彙專屬發音，又音部分不標註「mo4」，只標註臺灣發音「mai4」。
 #    詞句中，「企」臺灣字典發音和習慣發音為「qi4」，大陸發音為「qi3」，斟酌後全改成臺灣發音「qi4」。
 #    詞句中，「胺」臺灣字典發音和習慣發音為「an1」，大陸發音為「an4」，斟酌後全改成臺灣發音「an1」。
 #    詞句中，「銻」臺灣字典發音和習慣發音為「ti4」，大陸發音為「ti1」，斟酌後全改成臺灣發音「ti4」。
@@ -149,6 +150,8 @@
 #    詞句中，「鷲」日常發音常會誤發為「jiu1」，臺灣標準為「jiu4」，故皆補齊「jiu4」「jiu1」，後者詞頻設為80%。
 #    詞句中，「珀」日常發音常會誤發為「bo4」，臺灣標準為「po4」，故皆補齊「po4」「bo4」，後者詞頻設為80%。
 #    詞句中，「灸」日常發音常會誤發為「jiu1」，臺灣標準為「jiu3」，故全都補齊「jiu3」「jiu1」，後者詞頻設為80%。
+#    詞句中，「鉻」日常發音常會誤發為「ge2」和「luo4」，臺灣標準為「ge4」，故皆補齊「ge4」「ge2」「luo4」。
+#    詞句中，「貯」臺灣標準為「zhu3」，大陸標準為「zhu4」，日常易混，故皆補齊「zhu3」「zhu4」。
 #    詞句中，「蝸」臺灣標準為「gua1」，大陸標準為「wo1」，日常易混，故皆補齊「gua1」「wo」。
 #    詞句中，「邳」臺灣標準為「pei2」，大陸標準為「pi1」，日常易混，故皆補齊「pei2」「pi1」。
 #    詞句中，「褶」臺灣標準為「zhe2」，大陸標準為「zhe3」，兩者易混淆，故皆補齊「zhe2」「zhe3」。
@@ -197,6 +200,7 @@
 #    詞句中，「堤」皆補齊「ti2」「di1」。（原店名除外，如：西堤、丹堤等除外，後改皆補齊）
 #    詞句中，「洽」皆補齊「qia4」「xia2」，後者詞頻設為30%。
 #    詞句中，「艘」皆補齊「sao1」「sou1」。
+#    詞句中，「泊」皆補齊「bo2」「po4」。
 #    詞句中，「臂」皆補齊「bi4」「bei4」。
 #    詞句中，「馨」皆補齊「xin1」「xing1」。
 #    詞句中，「皿」皆補齊「min3」「ming3」。
@@ -1160,7 +1164,7 @@ min_phrase_weight: 100
 茸	rong3	0.2%
 排	pai3	0.2%
 迫	pai3	0.2%
-縱	zong1	0%
+縱	zong1
 縱	zong3	0%
 調	zhou1	0.2%
 癟	bie1
@@ -2570,7 +2574,7 @@ min_phrase_weight: 100
 𠮫	qiu2	0%
 璹	shou4
 房	pang2	0%
-脉	mo4	50%
+脉	mo4	15%
 彍	kuo4	0%
 垠	ken4	0%
 髃	ou3
@@ -3591,6 +3595,10 @@ min_phrase_weight: 100
 # 䣂	lei4	0%
 # 薓	san1	0%
 吭	hang4	0%
+脁	yao2	0%
+眽	mi4	0%
+眿	mai4	20%
+# 眿	mi4	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -4096,7 +4104,7 @@ min_phrase_weight: 100
 疵	ci2	1%
 痒	yang2	1%
 眯	mi1	1%
-眽	mai4	1%
+眽	mai4	20%
 硌	luo4	1%
 票	piao1	1%
 笮	zha4	1%
@@ -30375,8 +30383,8 @@ min_phrase_weight: 100
 脆	cui4
 脇	xie2
 脈	mai4	50%
-脈	mo4	50%
-脉	mai4
+脈	mo4	15%
+脉	mai4	50%
 脊	ji3
 脋	xie2
 脌	nin2
@@ -56163,12 +56171,8 @@ min_phrase_weight: 100
 一脈	yi1 mai4
 一脈相傳	yi2 mai4 xiang1 chuan2
 一脈相傳	yi1 mai4 xiang1 chuan2
-一脈相傳	yi1 mo4 xiang1 chuan2
-一脈相傳	yi2 mo4 xiang1 chuan2
 一脈相承	yi2 mai4 xiang1 cheng2
 一脈相承	yi1 mai4 xiang1 cheng2
-一脈相承	yi1 mo4 xiang1 cheng2
-一脈相承	yi2 mo4 xiang1 cheng2
 一脈相通	yi2 mai4 xiang1 tong1
 一脈相通	yi1 mai4 xiang1 tong1
 一脈相連	yi2 mai4 xiang1 lian2
@@ -56437,6 +56441,7 @@ min_phrase_weight: 100
 七孔流血	qi1 kong3 liu2 xue4
 七折八扣	qi1 zhe2 ba1 kou4
 七橫八縱	qi1 heng2 ba1 zong1
+七橫八縱	qi1 heng2 ba1 zong4
 七橫八豎	qi1 heng2 ba1 shu4
 七歪八倒	qi1 wai1 ba1 dao3
 七滅諍法	qi1 mie4 zheng1 fa3
@@ -57816,7 +57821,6 @@ min_phrase_weight: 100
 中央執行委員會	zhong1 yang1 zhi2 xing2 wei3 yuan2 hui4
 中央宣傳部	zhong1 yang1 xuan1 chuan2 bu4
 中央山脈	zhong1 yang1 shan1 mai4
-中央山脈	zhong1 yang1 shan1 mo4
 中央監控系統	zhong1 yang1 jian1 kong4 xi4 tong3
 中央研究院	zhong1 yang1 yan2 jiu4 yuan4
 中央研究院	zhong1 yang1 yan2 jiu1 yuan4
@@ -58011,7 +58015,6 @@ min_phrase_weight: 100
 丹霞地貌	dan1 xia2 di4 mao4
 丹麥式體操	dan1 mai4 shi4 ti3 cao1
 主動脈	zhu3 dong4 mai4
-主動脈	zhu3 dong4 mo4
 主動脈弓	zhu3 dong4 mai4 gong1
 主和	zhu3 he2
 主和弦	zhu3 he2 xian2
@@ -58039,7 +58042,6 @@ min_phrase_weight: 100
 主監	zhu3 jian1
 主管教區	zhu3 guan3 jiao4 qu1
 主脈	zhu3 mai4
-主脈	zhu3 mo4
 主要任務	zhu3 yao4 ren4 wu4
 主角	zhu3 jiao3
 主角	zhu3 jue2
@@ -59324,6 +59326,7 @@ min_phrase_weight: 100
 伊朗憲監會	yi1 lang3 xian4 jian1 hui4
 伊犁盆地	yi1 li2 pen2 di4
 伊犁縱谷	yi1 li2 zong1 gu3
+伊犁縱谷	yi1 li2 zong4 gu3
 伊莉莎白	yi1 li4 sha1 bai2
 伊薩卡	yi1 sa4 ka3
 伊闕佛龕	yi1 que4 fo2 kan1
@@ -60007,6 +60010,7 @@ min_phrase_weight: 100
 便宜無好貨	pian2 yi2 wu2 hao3 huo4
 便宜處分	bian4 yi2 chu3 fen4
 便宜處置	bian4 yi2 chu3 zhi4
+便宜處置	bian4 yi2 chu4 zhi4
 便宜行事	bian4 yi2 xing2 shi4
 便宜行事	pian2 yi2 xing2 shi4
 便宜話	pian2 yi2 hua4
@@ -64431,11 +64435,8 @@ min_phrase_weight: 100
 動物農場	dong4 wu4 nong2 chang3
 動物農場	dong4 wu4 nong2 chang2	3%
 動脈	dong4 mai4
-動脈	dong4 mo4
 動脈瘤	dong4 mai4 liu2
-動脈瘤	dong4 mo4 liu2
 動脈硬化	dong4 mai4 ying4 hua4
-動脈硬化	dong4 mo4 ying4 hua4
 動脈粥樣硬化	dong4 mai4 zhou1 yang4 ying4 hua4
 動脈脂肪沉積	dong4 mai4 zhi1 fang2 chen2 ji1
 動脈脂肪沉積	dong4 mai4 zhi3 fang2 chen2 ji1
@@ -66302,6 +66303,7 @@ min_phrase_weight: 100
 合得來	he2 de2 lai2
 合得著	he2 de5 zhao2
 合從	he2 zong1
+合從	he2 zong4
 合成一個諸葛亮	he2 cheng2 yi2 ge5 zhu1 ge2 liang4
 合成一個諸葛亮	he2 cheng2 yi1 ge5 zhu1 ge2 liang4
 合成一個諸葛亮	he2 cheng2 yi4 ge5 zhu1 ge2 liang4
@@ -66328,6 +66330,7 @@ min_phrase_weight: 100
 合縱	he2 zong1
 合縱	he2 zong4
 合縱連橫	he2 zong4 lian2 heng2
+合縱連橫	he2 zong1 lian2 heng2
 合而為一	he2 er2 wei2 yi1
 合眾為一	he2 zhong4 wei2 yi1
 合眾銀行	he2 zhong4 yin2 hang2
@@ -70494,7 +70497,6 @@ min_phrase_weight: 100
 大勇若怯	da4 yong3 ruo4 qie4
 大動干戈	da4 dong4 gan1 ge1
 大動脈	da4 dong4 mai4
-大動脈	da4 dong4 mo4
 大半拉	da4 ban4 la1
 大半輩子	da4 ban4 bei4 zi5
 大協奏曲	da4 xie2 zou4 qu3
@@ -70906,7 +70908,6 @@ min_phrase_weight: 100
 大難臨頭	da4 nan4 lin2 tou2
 大雪山脈	da4 xue3 shan1 mai4
 大靜脈	da4 jing4 mai4
-大靜脈	da4 jing4 mo4
 大頭在後頭	da4 tou2 zai4 hou4 tou5
 大頭子	da4 tou2 zi5
 大頭覺	da4 tou2 jiao4
@@ -72945,6 +72946,7 @@ min_phrase_weight: 100
 宿構	su4 gou4
 宿歇	su4 xie1
 宿泊	su4 bo2
+宿泊	su4 po4
 宿營	su4 ying2
 宿營地	su4 ying2 di4
 宿生	su4 sheng1
@@ -73192,6 +73194,7 @@ min_phrase_weight: 100
 寧安市	ning2 an1 shi4
 寧宗	ning2 zong1
 寧定淡泊	ning2 ding4 dan4 bo2
+寧定淡泊	ning2 ding4 dan4 po4
 寧家	ning2 jia1
 寧岡	ning2 gang1
 寧岡縣	ning2 gang1 xian4
@@ -74338,7 +74341,6 @@ min_phrase_weight: 100
 崑山片玉	kun1 shan1 pian4 yu4
 崑崙奴傳	kun1 lun2 nu2 zhuan4
 崑崙山脈	kun1 lun2 shan1 mai4
-崑崙山脈	kun1 lun2 shan1 mo4
 崑曲	kun1 qu3
 崒兀	zu2 wu4
 崒嵂	zu2 lv4
@@ -74709,7 +74711,6 @@ min_phrase_weight: 100
 # 巴爾幹半島	ba1 er3 gan1 ban4 dao3
 巴爾幹半島	ba1 er3 gan4 ban4 dao3
 巴爾幹山脈	ba1 er3 gan4 shan1 mai4
-巴爾幹山脈	ba1 er3 gan4 shan1 mo4
 巴爾扎克	ba1 er3 zha1 ke4
 巴爾扎克	ba1 er3 zha2 ke4
 巴爾的摩	ba1 er3 di4 mo2
@@ -75188,7 +75189,6 @@ min_phrase_weight: 100
 平行線	ping2 xing2 xian4
 平行線支票	ping2 xing2 xian4 zhi1 piao4
 平行脈	ping2 xing2 mai4
-平行脈	ping2 xing2 mo4
 平行葉脈	ping2 xing2 ye4 mai4
 平行表親	ping2 xing2 biao3 qin1
 平行輸入	ping2 xing2 shu1 ru4
@@ -77134,6 +77134,7 @@ min_phrase_weight: 100
 急穰穰	ji2 rang3 rang3
 急聒	ji2 gua1
 急脈緩受	ji2 mo4 huan3 shou4
+急脈緩受	ji2 mai4 huan3 shou4
 急行軍	ji2 xing2 jun1
 急轉	ji2 zhuan3
 急轉彎	ji2 zhuan3 wan1
@@ -80069,6 +80070,7 @@ min_phrase_weight: 100
 括髮	gua1 fa3
 括髮	kuo4 fa3
 拭子	shi4 zi5
+拭子	shi4 zi3
 拭抹	shi4 mo3
 拭目以待	shi4 mu4 yi3 dai4
 拭目而待	shi4 mu4 er2 dai4
@@ -80268,7 +80270,6 @@ min_phrase_weight: 100
 按牛頭吃不得草	an4 niu2 tou2 chi1 bu4 de2 cao3
 按著葫蘆摳子	an4 zhe5 hu2 lu2 kou1 zi5
 按脈	an4 mai4
-按脈	an4 mo4
 按調	an4 diao4
 按需分配	an4 xu1 fen1 pei4
 挎兜兒	kua4 dou1 er5	80%
@@ -80501,7 +80502,6 @@ min_phrase_weight: 100
 捉摸不定	zhuo1 mo1 bu2 ding4
 捉空	zhuo1 kong4
 捉脈	zhuo1 mai4
-捉脈	zhuo1 mo4
 捉虎容易放虎難	zhuo1 hu3 rong2 yi4 fang4 hu3 nan2
 捉襟肘見	zhuo1 jin1 zhou3 xian4
 捉襟肘見	zhuo1 jin1 zhou3 jian4
@@ -80749,7 +80749,6 @@ min_phrase_weight: 100
 掌教	zhang3 jiao4
 掌燈時分	zhang3 deng1 shi2 fen4
 掌狀脈	zhang3 zhuang4 mai4
-掌狀脈	zhang3 zhuang4 mo4
 掎角	ji3 jue2
 掎角之勢	ji3 jue2 zhi1 shi4
 掏摸	tao1 mo1
@@ -82519,7 +82518,6 @@ min_phrase_weight: 100
 支空頭	zhi1 kong4 tou2
 支空頭	zhi1 kong1 tou2
 支脈	zhi1 mai4
-支脈	zhi1 mo4
 支與流裔	zhi1 yu3 liu2 yi4
 支行	zhi1 hang2
 支調	zhi1 diao4
@@ -85497,6 +85495,7 @@ min_phrase_weight: 100
 村強	cun1 jiang4
 村校	cun1 xiao4
 村生泊長	cun1 sheng1 bo2 zhang3
+村生泊長	cun1 sheng1 po4 zhang3
 村落	cun1 luo4
 村長	cun1 zhang3
 杓倈	shao2 lai2
@@ -88884,6 +88883,7 @@ min_phrase_weight: 100
 泄露天機	xie4 lu4 tian1 ji1
 泉脈	quan2 mai4
 泊松分佈	bo2 song1 fen1 bu4
+泊松分佈	po4 song1 fen1 bu4
 泌尿	mi4 niao4
 泌尿器	mi4 niao4 qi4
 泌尿外科	mi4 niao4 wai4 ke1
@@ -90405,6 +90405,7 @@ min_phrase_weight: 100
 湖廣熟	hu2 guang3 shou2
 湖泊	hu2 bo2
 湖泊	hu2 po1
+湖泊	hu2 po4
 湖泊	hu2 puo1	80%
 湖泊	hu2 puo4	80%
 湖濱散記	hu2 bin1 san3 ji4
@@ -90682,6 +90683,7 @@ min_phrase_weight: 100
 漂沒	piao1 mo4
 漂沙	piao1 sha1
 漂泊	piao1 bo2
+漂泊	piao1 po4
 漂泛	piao1 fan4
 漂洋	piao1 yang2
 漂洗	piao3 xi3
@@ -90960,8 +90962,11 @@ min_phrase_weight: 100
 澶漫	chan2 man2
 澹彩	dan4 cai3
 澹泊	dan4 bo2
+澹泊	dan4 po4
 澹泊寡欲	dan4 bo2 gua3 yu4
+澹泊寡欲	dan4 po4 gua3 yu4
 澹泊明志	dan4 bo2 ming2 zhi4
+澹泊明志	dan4 po4 ming2 zhi4
 澹淡	dan4 dan4
 澹淡經營	dan4 dan4 jing1 ying2
 澹澉	dan4 gan3
@@ -96562,7 +96567,6 @@ min_phrase_weight: 100
 礤床兒	ca3 chuang2 er5	80%
 礤床兒	ca3 chuang2 er2
 礦脈	kuang4 mai4
-礦脈	kuang4 mo4
 礦藏	kuang4 cang2
 礦難	kuang4 nan4
 礧磈	lei3 kui3
@@ -98032,7 +98036,6 @@ min_phrase_weight: 100
 等高線地形圖	deng3 gao1 xian4 di4 xing2 tu2
 筊杯	jiao3 bei1
 筋脈	jin1 mai4
-筋脈	jin1 mo4
 筋膜炎	jin1 mo4 yan2	3%
 筋膜炎	jin1 mo2 yan2
 筍乾	sun3 gan1
@@ -99295,7 +99298,6 @@ min_phrase_weight: 100
 經穴	jing1 xue4
 經緯度	jing1 wei3 du4
 經脈	jing1 mai4
-經脈	jing1 mo4
 經藏	jing1 zang4
 經血	jing1 xie3
 經血	jing1 xue4
@@ -99396,7 +99398,6 @@ min_phrase_weight: 100
 網屏	wang3 ping2
 網杓	wang3 shao2
 網狀脈	wang3 zhuang4 mai4
-網狀脈	wang3 zhuang4 mo4
 網球場	wang3 qiu2 chang3
 網球場	wang3 qiu2 chang2	3%
 網絡應用	wang3 luo4 ying4 yong4
@@ -99646,15 +99647,20 @@ min_phrase_weight: 100
 縰縰	shi3 shi3
 縱停留時間	zong4 ting2 liu2 shi2 jian1
 縱切面	zong1 qie1 mian4
+縱切面	zong4 qie1 mian4
 縱剖面	zong1 pou3 mian4
+縱剖面	zong1 po3 mian4
+縱剖面	zong1 pou1 mian4
 縱剖面	zong4 po3 mian4
 縱剖面	zong4 pou1 mian4
 縱剖面	zong4 puo3 mian4	80%
 縱坐標	zong1 zuo4 biao1
+縱坐標	zong4 zuo4 biao1
 縱壑魚	zong4 huo4 yu2
 縱壑魚	zong4 he4 yu2
 縱斷面	zong1 duan4 mian4
 縱斷面	zong4 duan4 mian4
+縱曲枉直	zong1 qu1 wang3 zhi2
 縱曲枉直	zong4 qu1 wang3 zhi2
 縱橫	zong1 heng2
 縱橫	zong4 heng2
@@ -99689,7 +99695,9 @@ min_phrase_weight: 100
 縱貫線	zong1 guan4 xian4
 縱貫線	zong4 guan4 xian4
 縱走	zong1 zou3
+縱走	zong4 zou3
 縱軸	zong1 zhou2
+縱軸	zong4 zhou2
 縱隊	zong1 dui4
 縱隊	zong4 dui4
 縱風止燎	zong4 feng1 zhi3 liao4
@@ -99846,6 +99854,7 @@ min_phrase_weight: 100
 繫懷	ji4 huai2
 繫戀	xi4 lian4
 繫泊	ji4 bo2
+繫泊	ji4 po4
 繫爪	xi4 zhao3
 繫獄	xi4 yu4
 繫縛	xi4 fu2
@@ -100194,7 +100203,6 @@ min_phrase_weight: 100
 羽毛球場	yu3 mao2 qiu2 chang3
 羽毛球場	yu3 mao2 qiu2 chang2	3%
 羽狀脈	yu3 zhuang4 mai4
-羽狀脈	yu3 zhuang4 mo4
 羽蓋	yu3 gai4
 羽蹈烈火	yu3 dao4 lie4 huo3
 羽蹈烈火	yu3 dao3 lie4 huo3
@@ -101044,7 +101052,6 @@ min_phrase_weight: 100
 肸蠁	xi4 xiang4
 肺刺激性毒劑	fei4 ci4 ji1 xing4 du2 ji4
 肺動脈	fei4 dong4 mai4
-肺動脈	fei4 dong4 mo4
 肺塵矽症	fei4 chen2 xi4 zheng4
 肺活量	fei4 huo2 liang4
 肺炎克雷伯氏菌	fei4 yan2 ke4 lei2 bo2 shi4 jun4
@@ -101058,7 +101065,6 @@ min_phrase_weight: 100
 肺結核病	fei4 jie2 he2 bing4
 肺肺	pei4 pei4
 肺靜脈	fei4 jing4 mai4
-肺靜脈	fei4 jing4 mo4
 胃脘	wei4 wan3
 胃脘	wei4 guan3
 背包	bei1 bao1
@@ -101261,30 +101267,23 @@ min_phrase_weight: 100
 脆薄	cui4 bo2
 脈不制肉	mai4 bu2 zhi4 rou4
 脈動	mai4 dong4
-脈動	mo4 dong4
 脈動星	mai4 dong4 xing1
 脈口	mai4 kou3
 脈壓	mai4 ya1
 脈息	mai4 xi2
-脈息	mo4 xi2
 脈搏	mai4 bo2
-脈搏	mo4 bo2
 脈望	mai4 wang4
 脈案	mai4 an4
 脈欂	mai4 bo2
 脈波體	mai4 bo1 ti3
 脈波體	mai4 po1 ti3
 脈理	mai4 li3
-脈理	mo4 li3
 脈石	mai4 shi2
-脈石	mo4 shi2
 脈石礦物	mai4 shi2 kuang4 wu4
 脈禮	mai4 li3
 脈管	mai4 guan3
-脈管	mo4 guan3
 脈管組織	mai4 guan3 zu3 zhi1
 脈絡	mai4 luo4
-脈絡	mo4 luo4
 脈絡膜	mai4 luo4 mo2
 脈絡膜	mai4 luo4 mo4	3%
 脈絡貫通	mai4 luo4 guan4 tong1
@@ -101292,7 +101291,6 @@ min_phrase_weight: 100
 脈脈	mo4 mo4
 脈膊	mai4 bo2
 脈衝	mai4 chong1
-脈衝	mo4 chong1
 脈衝式	mai4 chong1 shi4
 脈衝星	mai4 chong1 xing1
 脈衝電磁場	mai4 chong1 dian4 ci2 chang2	3%
@@ -101304,7 +101302,6 @@ min_phrase_weight: 100
 脈輪學說	mai4 lun2 xue2 shuo1
 脈輪理論	mai4 lun2 li3 lun4
 脈門	mai4 men2
-脈門	mo4 men2
 脊令	ji2 ling2
 脊令	ji3 ling2
 脊梁	ji3 liang2
@@ -101684,6 +101681,7 @@ min_phrase_weight: 100
 臨期失誤	lin2 qi2 shi1 wu4
 臨機應變	lin2 ji1 ying4 bian4
 臨機處置	lin2 ji1 chu3 zhi4
+臨機處置	lin2 ji1 chu4 zhi4
 臨死不怯	lin2 si3 bu2 que4
 臨死不怯	lin2 si3 bu2 qie4
 臨江折軸	lin2 jiang1 zhe2 zhu2
@@ -103259,6 +103257,7 @@ min_phrase_weight: 100
 落水狗上岸	luo4 shui3 gou3 shang4 an4
 落水管	luo4 shui3 guan3
 落泊	luo4 bo2
+落泊	luo4 po4
 落淚	luo4 lei4
 落湯螃蟹	luo4 tang1 pang2 xie4
 落湯雞	luo4 tang1 ji1
@@ -103380,7 +103379,6 @@ min_phrase_weight: 100
 葉縣	she4 xian4
 葉縣	ye4 xian4
 葉脈	ye4 mai4
-葉脈	ye4 mo4
 葉脈序	ye4 mai4 xu4
 葉苔	ye4 tai2
 葉落歸根	ye4 luo4 gui1 gen1
@@ -104353,6 +104351,7 @@ min_phrase_weight: 100
 處窩子	chu3 wo1 zi5
 處約	chu3 yue1
 處置	chu3 zhi4
+處置	chu4 zhi4
 處罰	chu3 fa2
 處處	chu4 chu4
 處處碰壁	chu4 chu4 peng4 bi4
@@ -113506,7 +113505,6 @@ min_phrase_weight: 100
 阿爾卑斯	a1 er3 bei1 si1
 阿爾卑斯山	a1 er3 bei1 si1 shan1
 阿爾卑斯山脈	a1 er3 bei1 si1 shan1 mai4
-阿爾卑斯山脈	a1 er3 bei1 si1 shan1 mo4
 阿爾卡特	a1 er3 ka3 te4
 阿爾及利亞	a1 er3 ji2 li4 ya3
 阿爾及利亞	a1 er3 ji2 li4 ya4
@@ -114910,18 +114908,13 @@ min_phrase_weight: 100
 靜樂	jing4 le4
 靜樂縣	jing4 le4 xian4
 靜脈	jing4 mai4
-靜脈	jing4 mo4
 靜脈吸毒	jing4 mai4 xi1 du2
 靜脈曲張	jing4 mai4 qu1 zhang1
-靜脈曲張	jing4 mo4 qu1 zhang1
 靜脈注入	jing4 mai4 zhu4 ru4
 靜脈注射	jing4 mai4 zhu4 she4
 靜脈瘤	jing4 mai4 liu2
-靜脈瘤	jing4 mo4 liu2
 靜脈血	jing4 mai4 xie3
-靜脈血	jing4 mo4 xie3
 靜脈血	jing4 mai4 xue4
-靜脈血	jing4 mo4 xue4
 靜脈血栓症	jing4 mai4 xie3 shuan1 zheng4
 靜脈血栓症	jing4 mai4 xue4 shuan1 zheng4
 靜脈點滴	jing4 mai4 dian3 di1
@@ -115389,13 +115382,11 @@ min_phrase_weight: 100
 頰黏膜	jia2 nian2 mo4	3%
 頰黏膜	jia2 nian2 mo2
 頸動脈	jing3 dong4 mai4
-頸動脈	jing3 dong4 mo4
 頸動脈竇	jing3 dong4 mai4 dou4
 頸圈	jing3 quan1
 頸血	jing3 xie3
 頸血	jing3 xue4
 頸靜脈	jing3 jing4 mai4
-頸靜脈	jing3 jing4 mo4
 頹喪	tui2 sang4
 頹萎	tui2 wei3
 頹萎	tui2 wei1
@@ -116172,6 +116163,7 @@ min_phrase_weight: 100
 駊騀	po3 e3
 駐地	zhu4 di4
 駐泊地	zhu4 bo2 di4
+駐泊地	zhu4 po4 di4
 駐留時間	zhu4 liu2 shi2 jian1
 駐紮	zhu4 zha1
 駐紮	zhu4 za1
@@ -117567,4 +117559,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 117570 #####
+##### @結束 END - 117562 #####
