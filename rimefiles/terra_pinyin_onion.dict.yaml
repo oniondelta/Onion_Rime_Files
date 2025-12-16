@@ -1164,7 +1164,7 @@ min_phrase_weight: 100
 茸	rong3	0.2%
 排	pai3	0.2%
 迫	pai3	0.2%
-縱	zong1
+縱	zong1	10%
 縱	zong3	0%
 調	zhou1	0.2%
 癟	bie1
@@ -30384,7 +30384,7 @@ min_phrase_weight: 100
 脇	xie2
 脈	mai4	50%
 脈	mo4	15%
-脉	mai4	50%
+脉	mai4	20%
 脊	ji3
 脋	xie2
 脌	nin2
