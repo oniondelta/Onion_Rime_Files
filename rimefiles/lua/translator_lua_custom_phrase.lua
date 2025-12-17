@@ -112,7 +112,8 @@ local function load_text_dict(text_dict)
         -- vsort = tonumber(vsort)  -- 改到前面數字化
         allcode = ""
         for _, v in pairs(vcode) do
-          allcode = allcode .. "  " .. v
+          -- allcode = allcode .. "  " .. v
+          allcode = allcode .. "  " .. string.gsub(v, " ", "␣")  -- 以注音一聲空白編碼，於列表時，可顯示為"␣"。
         end
         tab_list2[#tab_list2+1]={text=k, code=allcode, sort=vsort}
         -- tab_list2[#tab_list2+1]={k, allcode, vsort}
