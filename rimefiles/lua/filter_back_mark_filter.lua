@@ -1,6 +1,6 @@
 --- @@ back_mark_filter
 --[[
-（dif、1bopomo_onion_double、bopomo_onionplus 和 bo_mixin 全系列）
+（dif1、bopomo_onion_double、bopomo_onionplus 和 bo_mixin 全系列）
 不直接用 opencc 去 comment，改 lua 間接 comment，防「兩個字符」以上無法標注，和一個字串被多個標注。
 --]]
 
