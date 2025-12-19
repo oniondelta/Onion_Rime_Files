@@ -45,7 +45,7 @@ engine:
     - reverse_lookup_filter@phonetic_reverse_lookup
     - uniquifier
   processors:
-    # - lua_processor@zhuyin_space
+    - lua_processor@zhuyin_space
     - ascii_composer
     - recognizer
     - key_binder
