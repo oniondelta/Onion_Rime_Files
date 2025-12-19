@@ -5,7 +5,7 @@
 schema:
   schema_id: Mount_ocm
   name: "❖蝦米(單出-反查專用)❖"
-  version: "202508"
+  version: "202512"
   author:
     - 洋蔥
   description: |
@@ -45,7 +45,7 @@ engine:
     - reverse_lookup_filter@phonetic_reverse_lookup
     - uniquifier
   processors:
-    - lua_processor@zhuyin_space
+    # - lua_processor@zhuyin_space
     - ascii_composer
     - recognizer
     - key_binder
@@ -57,6 +57,7 @@ engine:
   segmentors:
     - ascii_segmentor
     - matcher
+    # - lua_segmentor@mount_zhuyin
     - abc_segmentor
     - affix_segmentor@pt
     - affix_segmentor@emoji_series
@@ -410,5 +411,6 @@ recognizer:
     pt: "^[,.][,.'a-z]*$|^'['a-z]*$|^,[][]+[a-z]*$|^,v[][]+$|^v[][]+v?$|^[][]+[a-z]*$"
     emoji_series: "^;$|^;[a-z]+'?$|^;;[-0-9a-z]'?$|^;[0-9]'?$|^;[0-9]-[0-9]?'?$"
     # emoji_series: "^;[a-z]*$|^;;[-0-9a-z]$|^;[0-9]$|^;[0-9]-[0-9]?$"
-    reverse2_lookup: "';[-.,;/0-9a-z |]*'?$"  # 去除開頭「^」限定，使其接續不跳掉。
+    reverse2_lookup: "';[-.,;/0-9a-z |]*'?$"  # 去除開頭「^」限定，使其接續不跳掉。（舊的lua寫法需這樣設定！）
+    # reverse2_lookup: "^';[-.,;/0-9a-z |]*'?$"
     reverse3_lookup: "^;'[a-z`|]*'?$"

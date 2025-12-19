@@ -9,7 +9,7 @@ schema:
 
   name: "❖超級混合蝦米(mix-in)❖"
   schema_id: ocm_mixin
-  version: "202508"
+  version: "202512"
   dependencies:
     - punct_ovff
     - symbols_ocm
@@ -121,6 +121,7 @@ engine:
   segmentors:
     - ascii_segmentor
     - matcher
+    - lua_segmentor@mount_zhuyin
     - abc_segmentor
     - affix_segmentor@pt
     - affix_segmentor@emoji_series
@@ -799,7 +800,8 @@ recognizer:
     # email: "^[a-z][-_.0-9a-z]*@.*$"
     punct: "===?$|=''?=?'?'?$|=?[][][][]?'?$|=?[[][[]?'?=?[]]?[]]?'?$|=``?$|=[-,./;][-,./;]?$|=,,?=[.][.]?$|=[0-9]$|=9=0$|==[].,90'[]+$"
     pt: "^[,.][,.'a-z]*$|^'['a-z]*$|^,[][]+[a-z]*$|^,v[][]+$" #|^v[][]+v?$|^[][]+[a-z]*$"
-    reverse2_lookup: "';[-.,;/0-9a-z |]*'?$"  # 去除開頭「^」限定，使其接續不跳掉。
+    # reverse2_lookup: "';[-.,;/0-9a-z |]*'?$"  # 去除開頭「^」限定，使其接續不跳掉。（舊的lua寫法需這樣設定！）
+    reverse2_lookup: "^';[-.,;/0-9a-z |]*'?$"
     reverse3_lookup: "^;'[a-z`|]*'?$"
     easy_en: "^'[.][a-z;/.,'-]*$"
     japan: "^',[-a-z,.;/|]*'?$"
@@ -808,7 +810,8 @@ recognizer:
     gr: "^'[[][a-z';]*$"
     cyr: "^'[]][a-z';]*$"
     fs: "^'=[-a-z';]*$"
-    all_bpm: "';'[-a-z0-9.,/; ]*'?$"  # 去除開頭「^」限定，使其接續不跳掉。
+    # all_bpm: "';'[-a-z0-9.,/; ]*'?$"  # 去除開頭「^」限定，使其接續不跳掉。（舊的lua寫法需這樣設定！）
+    all_bpm: "^';'[-a-z0-9.,/; ]*'?$"
     # lua: "^;;$|^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|^'/[a-z]*$|^'/[;/'][a-z.,/'-]*$|^'/[rq0-9.-][asrvxqwymd0-9.,/()^*+-]*$|^'/[xucoi][0-9a-f]+$"
     instruction_ocm: "^;;?$"  #不開起，「;;」會顯示不了。
     email_url_translator: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$"

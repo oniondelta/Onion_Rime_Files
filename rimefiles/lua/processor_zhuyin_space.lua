@@ -2,7 +2,8 @@
 --[[
 （Mount_ocm、Mount_ocm_encoder）
 注音反查 Return 和 space 和 小鍵盤數字鍵 上屏修正
-尚有bug待處理
+尚有bug待處理：202512 嘗試用 segmentor 改為可記憶，但變為分段或選字接續打字會錯亂。
+本文件改回不依賴 segmentor，與用 segmentor 方式作比較。
 --]]
 
 
@@ -76,10 +77,12 @@ local function processor(key, env)
 
   --- pass not space Return KP_Enter key_select_keys
   elseif key_repr ~= "space" and key_repr ~= "Return" and key_repr ~= "KP_Enter" and not key_select_keys then
+  -- elseif key_repr ~= "space" and key_repr ~= "Return" and key_repr ~= "KP_Enter" then
     return 2
 
 -----------------------
 
+  --- 以下遮屏（到「 --- 舊的寫法（直上）」前）改用 segmentor 方法解決，因此可避免無法記憶字詞之 bug 問題。
   --- 以下修正：附加方案鍵盤範圍大於主方案時，小板數字鍵選擇出現之 bug。
   elseif key_select_keys then
     --- 確定選項編號
@@ -223,6 +226,7 @@ local function processor(key, env)
       context.input = f_c_input .. " " .. b_c_input
       return 1
 
+    --- 以下遮屏（到「 --- 舊的寫法（直上）」前）改用 segmentor 方法解決，因此可避免無法記憶字詞之 bug 問題。
     --- paging 時和游標不在尾端時，需分割上屏之處理
     elseif seg:has_tag("paging") or #c_input ~= caret_pos then  --miss_number ~= 0
       --- 先上屏 paging 時選擇的選項
@@ -308,6 +312,9 @@ local function processor(key, env)
     --- 如果末尾為聲調則跳掉，按空白鍵，則 Rime 上屏，非 lua 作用。
     elseif string.match(c_input, "[ 3467]$") then
       return 2
+      -- engine:commit_text("@@")  -- 測試用
+      -- context:confirm_current_selection()  -- 測試用
+      -- return 1  -- 測試用
 
     --- 補掛接反查注音不能使用空白當作一聲
     elseif key_repr == "space" then
@@ -315,7 +322,7 @@ local function processor(key, env)
     -- elseif key_repr == "space" and context:has_menu() then
       -- engine:commit_text(c_input .. "_")
       -- context.input = c_input .. " "
-      context:push_input( " " )
+      context:push_input(" ")
       -- context:clear()
       return 1
 

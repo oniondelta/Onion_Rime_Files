@@ -4,7 +4,7 @@
 schema:
   schema_id: onion-array30
   name: "▦ 行列３０（洋蔥版）"
-  version: "202508"
+  version: "202512"
   author:
     - 洋蔥
   description: |
@@ -88,6 +88,7 @@ engine:
   segmentors:
     - ascii_segmentor
     - matcher
+    - lua_segmentor@mount_zhuyin
     - abc_segmentor #一定要放在「affix_segmentor」前
     - affix_segmentor@wsymbols #（可用 symbols 更簡單實現，但沒有開頭提示）
     - affix_segmentor@reverse2_lookup
@@ -515,7 +516,8 @@ recognizer:
   patterns:
     # punct: "^w[0-9]$"
     wsymbols: "^w[0-9]$" #（可用 symbols 更簡單實現，但沒有開頭提示）
-    reverse2_lookup: "(?<!=)=[-.,;/0-9a-z ]*'?$"  # 去除開頭「^」限定，使其接續不跳掉。
+    # reverse2_lookup: "(?<!=)=[-.,;/0-9a-z ]*'?$"  # 去除開頭「^」限定，使其接續不跳掉。（舊的lua寫法需這樣設定！）
+    reverse2_lookup: "^=[-.,;/0-9a-z ]*'?$"
     reverse3_lookup: "^==[a-z,./; ]*'?$"
     # lua: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$|`[a-z]*$|`[;/'][a-z.,/'-]*$|`[rq0-9.-][asrvxqwymd0-9.,/()^*+-]*$|`[xucoi][0-9a-f]+$"
     email_url_translator: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$"

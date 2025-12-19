@@ -25,7 +25,7 @@ __patch:
 schema:
   schema_id: Mount_ocm_encoder
   name: "❖蝦米(單出-造詞)❖"
-  version: "202412"
+  version: "202512"
 
 # switches/+:
 #   - name: debug_comment
@@ -49,6 +49,7 @@ engine:
   segmentors:
     - ascii_segmentor
     - matcher
+    # - lua_segmentor@mount_zhuyin
     - abc_segmentor
     - affix_segmentor@pt
     - affix_segmentor@emoji_series

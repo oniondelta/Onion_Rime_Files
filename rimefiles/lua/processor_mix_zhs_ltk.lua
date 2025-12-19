@@ -83,14 +83,14 @@ local function processor(key, env)
   -- local page_size = engine.schema.page_size
   local o_ascii_mode = context:get_option("ascii_mode")
   local key_repr = key:repr()
-  local key_select_keys = key_repr:match("^KP_([0-9])$") or key_repr:match("^Control%+([0-9])$")
+  -- local key_select_keys = key_repr:match("^KP_([0-9])$") or key_repr:match("^Control%+([0-9])$")
 
   local check_pre = string.match(c_input, "'/[-]?[.]?$")
   local check_num_cal = string.match(c_input, "'/[-]?[.]?%d+%.?%d*$") or
                         string.match(c_input, "'/[-.rq(]?[%d.]+[-+*/^asrvxqw()][-+*/^asrvxqw().%d]*$")
   -- local key_kp = key_repr:match("KP_([%d%a]+)")  -- KP_([ASDM%d][%a]*)
   -- local kp_p = env.kp_pattern[key_kp]
-  local s_prefix = seg:has_tag("reverse2_lookup") and "';" or seg:has_tag("all_bpm") and "';'" or ""
+  -- local s_prefix = seg:has_tag("reverse2_lookup") and "';" or seg:has_tag("all_bpm") and "';'" or ""
 -----------------------------------------------------------------------------
 
   if o_ascii_mode then
@@ -178,53 +178,55 @@ local function processor(key, env)
     return 2
 
   --- pass not space Return KP_Enter key_select_keys
-  elseif key_repr ~= "space" and key_repr ~= "Return" and key_repr ~= "KP_Enter" and not key_select_keys then
+  -- elseif key_repr ~= "space" and key_repr ~= "Return" and key_repr ~= "KP_Enter" and not key_select_keys then
+  elseif key_repr ~= "space" and key_repr ~= "Return" and key_repr ~= "KP_Enter" then
     return 2
 
 -----------------------
 
-  --- 以下修正：附加方案鍵盤範圍大於主方案時，小板數字鍵選擇出現之 bug。
-  elseif key_select_keys then
-    --- 確定選項編號
-    -- 以下針對選字編碼為：012345678
-    local page_n = 9 * (seg.selected_index // 9)    -- 先確定在第幾頁
-    local ksk_n = tonumber(key_select_keys)
-    if ksk_n == 9 then    -- 方案預設沒有選項9，故跳掉。
-      return 1
-    elseif ksk_n > 0 then
-      ksk_n = ksk_n + page_n
-    elseif ksk_n == 0 then
-      ksk_n = ksk_n + page_n
-    end
+  --- 以下遮屏（到「 --- 舊的寫法（直上）」前）改用 segmentor 方法解決，因此可避免無法記憶字詞之 bug 問題。
+  -- --- 以下修正：附加方案鍵盤範圍大於主方案時，小板數字鍵選擇出現之 bug。
+  -- elseif key_select_keys then
+  --   --- 確定選項編號
+  --   -- 以下針對選字編碼為：012345678
+  --   local page_n = 9 * (seg.selected_index // 9)    -- 先確定在第幾頁
+  --   local ksk_n = tonumber(key_select_keys)
+  --   if ksk_n == 9 then    -- 方案預設沒有選項9，故跳掉。
+  --     return 1
+  --   elseif ksk_n > 0 then
+  --     ksk_n = ksk_n + page_n
+  --   elseif ksk_n == 0 then
+  --     ksk_n = ksk_n + page_n
+  --   end
 
-    ---------------
-    --- 新的寫法（不直上）
+  --   ---------------
+  --   --- 新的寫法（不直上）
 
-    local cand = seg:get_candidate_at(ksk_n)
-    local miss_number = caret_pos - cand._end  -- miss_number 為「光標位置」和「選項碼數」不匹配時之差數。
-    local retain_number = #c_input - cand._end  -- 刪除中文編碼後，計算字數。
-    local back_input = string.sub(c_input, cand._end + 1, caret_pos)
-    local new_c_input = string.sub(c_input, -retain_number)
+  --   local cand = seg:get_candidate_at(ksk_n)
+  --   local miss_number = caret_pos - cand._end  -- miss_number 為「光標位置」和「選項碼數」不匹配時之差數。
+  --   local retain_number = #c_input - cand._end  -- 刪除中文編碼後，計算字數。
+  --   local back_input = string.sub(c_input, cand._end + 1, caret_pos)
+  --   local new_c_input = string.sub(c_input, -retain_number)
 
-    if retain_number == 0 then
-      context:select(ksk_n)
-    elseif #c_input ~= caret_pos then
-      engine:commit_text(cand.text)  -- 數字鍵選字時會消失？
-      context.input = s_prefix .. new_c_input
-      -- --- 以下切分兩次以上，前面輸入會跳掉！
-      -- context.input = cand.text .. s_prefix .. new_c_input
-      -- context.caret_pos = #c_input + #s_prefix
-    elseif miss_number ~= 0 then
-      context:select(ksk_n)
-      context:pop_input(miss_number)
-      context:push_input(s_prefix .. back_input)
-      context.caret_pos = #c_input + #s_prefix
-    else
-      context:select(ksk_n)
-    end
-    -- engine:commit_text("測試")
+  --   if retain_number == 0 then
+  --     context:select(ksk_n)
+  --   elseif #c_input ~= caret_pos then
+  --     engine:commit_text(cand.text)  -- 數字鍵選字時會消失？
+  --     context.input = s_prefix .. new_c_input
+  --     -- --- 以下切分兩次以上，前面輸入會跳掉！
+  --     -- context.input = cand.text .. s_prefix .. new_c_input
+  --     -- context.caret_pos = #c_input + #s_prefix
+  --   elseif miss_number ~= 0 then
+  --     context:select(ksk_n)
+  --     context:pop_input(miss_number)
+  --     context:push_input(s_prefix .. back_input)
+  --     context.caret_pos = #c_input + #s_prefix
+  --   else
+  --     context:select(ksk_n)
+  --   end
+  --   -- engine:commit_text("測試")
 
-    return 1
+  --   return 1
 
     ---------------
     -- --- 舊的寫法（直上）
@@ -313,12 +315,12 @@ local function processor(key, env)
     ---------------
     -- --- 新的寫法（不直上）
 
-    local cand = context:get_selected_candidate()
-    local miss_number = caret_pos - cand._end  -- miss_number 為「光標位置」和「選項碼數」不匹配時之差數。
-    local retain_number = #c_input - cand._end  -- 刪除中文編碼後，計算字數。
+    -- local cand = context:get_selected_candidate()
+    -- local miss_number = caret_pos - cand._end  -- miss_number 為「光標位置」和「選項碼數」不匹配時之差數。
+    -- local retain_number = #c_input - cand._end  -- 刪除中文編碼後，計算字數。
     local f_c_input = string.sub(c_input, 1, caret_pos)
-    local back_input = string.sub(c_input, cand._end + 1, caret_pos)
-    local new_c_input = string.sub(c_input, -retain_number)
+    -- local back_input = string.sub(c_input, cand._end + 1, caret_pos)
+    -- local new_c_input = string.sub(c_input, -retain_number)
 
     --- 中途插入空白（一聲）不會直上屏
     if key_repr == "space" and #c_input ~= caret_pos and not seg:has_tag("paging") and not string.match(f_c_input, "[ 3467]$") then
@@ -326,32 +328,33 @@ local function processor(key, env)
       context.input = f_c_input .. " " .. b_c_input
       return 1
 
-    --- paging 時和游標不在尾端時，需分割上屏之處理
-    elseif seg:has_tag("paging") or #c_input ~= caret_pos then  --miss_number ~= 0
-      --- 先上屏 paging 時選擇的選項
-      -- local selected_candidate_index = seg.selected_index
-      -- context:select(selected_candidate_index)
+    --- 以下遮屏（到「 --- 舊的寫法（直上）」前）改用 segmentor 方法解決，因此可避免無法記憶字詞之 bug 問題。
+    -- --- paging 時和游標不在尾端時，需分割上屏之處理
+    -- elseif seg:has_tag("paging") or #c_input ~= caret_pos then  --miss_number ~= 0
+    --   --- 先上屏 paging 時選擇的選項
+    --   -- local selected_candidate_index = seg.selected_index
+    --   -- context:select(selected_candidate_index)
 
-      --- 以下不管是否在 paging 時
-      if retain_number == 0 then
-        context:confirm_current_selection()
-      elseif #c_input ~= caret_pos then
-        engine:commit_text(cand.text)  -- 數字鍵選字時會消失？
-        context.input = s_prefix .. new_c_input
-        -- --- 以下切分兩次以上，前面輸入會跳掉！
-        -- context.input = cand.text .. s_prefix .. new_c_input
-        -- context.caret_pos = #c_input + #s_prefix
-      elseif miss_number ~= 0 then
-        context:confirm_current_selection()  -- 一定要有，不然只會上屏第一個選項或記憶？
-        context:pop_input(miss_number)
-        context:push_input(s_prefix .. back_input)
-        context.caret_pos = #c_input + #s_prefix
-      else  -- else 部分效果等同「retain_number == 0」，兩者擇一可遮屏，留「retain_number == 0」去提前判斷省下面複雜判斷，留 else 防萬一。
-        context:confirm_current_selection()
-      end
-      -- engine:commit_text("測試")
-      -- engine:commit_text(cand.text)
-      return 1
+    --   --- 以下不管是否在 paging 時
+    --   if retain_number == 0 then
+    --     context:confirm_current_selection()
+    --   elseif #c_input ~= caret_pos then
+    --     engine:commit_text(cand.text)  -- 數字鍵選字時會消失？
+    --     context.input = s_prefix .. new_c_input
+    --     -- --- 以下切分兩次以上，前面輸入會跳掉！
+    --     -- context.input = cand.text .. s_prefix .. new_c_input
+    --     -- context.caret_pos = #c_input + #s_prefix
+    --   elseif miss_number ~= 0 then
+    --     context:confirm_current_selection()  -- 一定要有，不然只會上屏第一個選項或記憶？
+    --     context:pop_input(miss_number)
+    --     context:push_input(s_prefix .. back_input)
+    --     context.caret_pos = #c_input + #s_prefix
+    --   else  -- else 部分效果等同「retain_number == 0」，兩者擇一可遮屏，留「retain_number == 0」去提前判斷省下面複雜判斷，留 else 防萬一。
+    --     context:confirm_current_selection()
+    --   end
+    --   -- engine:commit_text("測試")
+    --   -- engine:commit_text(cand.text)
+    --   return 1
 
     ---------------
     -- --- 舊的寫法（直上）
@@ -411,6 +414,9 @@ local function processor(key, env)
     --- 如果末尾為聲調則跳掉，按空白鍵，則 Rime 上屏，非 lua 作用。
     elseif string.match(c_input, "[ 3467]$") then
       return 2
+      -- engine:commit_text("@@")  -- 測試用
+      -- context:confirm_current_selection()  -- 測試用
+      -- return 1  -- 測試用
 
     --- 補掛接反查注音不能使用空白當作一聲
     elseif key_repr == "space" then

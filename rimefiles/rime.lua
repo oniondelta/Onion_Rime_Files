@@ -97,6 +97,9 @@
 --      - lua_processor@mix_apc_ltk_pluss            --（引lua資料夾）（bopomo_onionplus_space） 以原 ascii_punct_change 增加功能，使初始空白可以直接上屏。
 --      - lua_processor@mix_zhs_ltk                  --（引lua資料夾）（ocm_mixin、dif1、ocm_mix） 合併 zhuyin_space 和 lua_tran_kp。
 --      - lua_processor@mix_kp_return                --（引lua資料夾）（bopomo_onion_double） 合併 lua_tran_kp 並增加 return 上屏模式切換。
+--
+--      《 ＊ 以下「處理」注意在 segmentors 中的順序，基本放在 matcher 後面一位 》
+--      - lua_segmentor@mount_zhuyin                 --（引lua資料夾）（ocm_mixin、dif1、ocm_mix、onion-array30、onion-array10、Mount_ocm） 避免注音 reverse2_lookup 掛載在 26/30 鍵等方案時，發生跳回主方案(abc)和無法記憶等 bug。另加上注音文。
 --      ...
 
 
@@ -431,6 +434,20 @@ lua_custom_phrase = require("translator_lua_custom_phrase")
 -- local c_j_translator = require("translator_convert_japan_translator")
 -- convert_japan_translator = c_j_translator.convert_japan_translator
 -- p_convert_japan_translator = c_j_translator.p_convert_japan_translator
+
+
+
+
+--[[
+--------------------------------------------
+！！！！以下為 segmentor 掛接！！！！
+--------------------------------------------
+--]]
+
+
+--- mount_zhuyin （ocm_mixin、dif1、ocm_mix、onion-array30、onion-array10、Mount_ocm）
+-- 避免注音 reverse2_lookup 掛載在 26/30 鍵等方案時，發生跳回主方案(abc)和無法記憶等 bug。另加上注音文。
+mount_zhuyin = require("segmentor_mount_zhuyin")
 
 
 
