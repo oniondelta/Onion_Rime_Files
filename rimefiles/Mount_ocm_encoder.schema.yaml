@@ -53,7 +53,7 @@ engine:
     - affix_segmentor@pt
     - affix_segmentor@emoji_series
     - affix_segmentor@reverse2_lookup
-    # - lua_segmentor@mount_zhuyin
+    # - lua_segmentor@mount_reverse2
     - affix_segmentor@reverse3_lookup
     # - affix_segmentor@reverse3_lookup_extra
     - affix_segmentor@makephrase

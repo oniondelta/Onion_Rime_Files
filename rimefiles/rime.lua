@@ -99,7 +99,9 @@
 --      - lua_processor@mix_kp_return                --（引lua資料夾）（bopomo_onion_double） 合併 lua_tran_kp 並增加 return 上屏模式切換。
 --
 --      《 ＊ 以下「處理」注意在 segmentors 中的順序，基本放在 matcher 後面一位 》
---      - lua_segmentor@mount_zhuyin                 --（引lua資料夾）（ocm_mixin、dif1、ocm_mix、onion-array30、onion-array10、Mount_ocm） 避免注音 reverse2_lookup 掛載在 26/30 鍵等方案時，發生跳回主方案(abc)和無法記憶等 bug。另加上注音文。
+--      - lua_segmentor@mount_reverse2_allbpm        --（引lua資料夾）（ocm_mixin、dif1、ocm_mix） 避免注音方案 reverse2_lookup 和注音文 all_bpm 掛接在 26/30 鍵等方案時，發生跳回主方案(abc)和無法記憶等 bug。
+--      - lua_segmentor@mount_reverse2               --（引lua資料夾）（onion-array30，關閉：onion-array10、Mount_ocm、Mount_ocm_encoder） 單獨針對注音反查 reverse2_lookup。避免掛接方案發生跳回主方案(abc)和無法記憶等 bug。
+--      - lua_segmentor@mount_allbpm                 --（引lua資料夾）（bopomo_onionplus 和 bo_mixin 全系列） 單獨針對注音文 all_bpm。避免掛接方案發生跳回主方案(abc)和無法記憶等 bug。
 --      ...
 
 
@@ -445,9 +447,19 @@ lua_custom_phrase = require("translator_lua_custom_phrase")
 --]]
 
 
---- mount_zhuyin （ocm_mixin、dif1、ocm_mix、onion-array30、onion-array10、Mount_ocm）
--- 避免注音 reverse2_lookup 掛載在 26/30 鍵等方案時，發生跳回主方案(abc)和無法記憶等 bug。另加上注音文。
-mount_zhuyin = require("segmentor_mount_zhuyin")
+--- mount_reverse2_allbpm （ocm_mixin、dif1、ocm_mix）
+-- 避免注音方案 reverse2_lookup 和注音文 all_bpm 掛接在 26/30 鍵等方案時，發生跳回主方案(abc)和無法記憶等 bug。
+mount_reverse2_allbpm = require("segmentor_mount_reverse2_allbpm")
+
+
+--- mount_reverse2 （onion-array30，關閉：onion-array10、Mount_ocm、Mount_ocm_encoder）
+-- 單獨針對注音反查 reverse2_lookup。避免掛接方案發生跳回主方案(abc)和無法記憶等 bug。
+mount_reverse2 = require("segmentor_mount_reverse2")
+
+
+--- mount_allbpm （bopomo_onionplus 和 bo_mixin 全系列）
+-- 單獨針對注音文 all_bpm。避免掛接方案發生跳回主方案(abc)和無法記憶等 bug。
+mount_allbpm = require("segmentor_mount_allbpm")
 
 
 

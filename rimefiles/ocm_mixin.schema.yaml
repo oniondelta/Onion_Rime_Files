@@ -132,7 +132,9 @@ engine:
     - affix_segmentor@reverse3_lookup
     # - affix_segmentor@reverse3_lookup_extra
     - affix_segmentor@all_bpm
-    - lua_segmentor@mount_zhuyin
+    - lua_segmentor@mount_reverse2_allbpm
+    # - lua_segmentor@mount_allbpm
+    # - lua_segmentor@mount_reverse2  # 要在 lua_segmentor@mount_allbpm 後面。
     - affix_segmentor@gr
     - affix_segmentor@cyr
     - affix_segmentor@fs

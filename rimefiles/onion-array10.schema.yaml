@@ -75,7 +75,7 @@ engine:
     - affix_segmentor@shadow_top
     # - affix_segmentor@second_phrases  # 不標註直接掛在「abc」下，附註可掛接到其他「translator」下。
     - affix_segmentor@reverse2_lookup
-    # - lua_segmentor@mount_zhuyin  -- 不要如其他方案改 segmentor 處理，如此小鍵盤位操作需要重新增修。
+    # - lua_segmentor@mount_reverse2  -- 不要如其他方案改 segmentor 處理，如此小鍵盤位操作需要重新增修。
     - affix_segmentor@reverse3_lookup
     - punct_segmentor
     - fallback_segmentor

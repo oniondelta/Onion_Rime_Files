@@ -4,7 +4,7 @@
 schema:
   schema_id: bo_mixin4
   name: "☆注音(洋蔥mix-in版 4 )☆〔全 ˊ ˇ ˋ ˙ 〕"
-  version: "202412"
+  version: "202512"
   author:
     - 『洋蔥』
   description: |
@@ -132,6 +132,7 @@ engine:
     - affix_segmentor@gr2
     - affix_segmentor@fs2
     - affix_segmentor@all_bpm
+    - lua_segmentor@mount_allbpm
     - affix_segmentor@reverse2_lookup
     - punct_segmentor
     - fallback_segmentor

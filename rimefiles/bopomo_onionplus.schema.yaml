@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onionplus
   name: "☆注音(洋蔥plus版)☆"
-  version: "202412"
+  version: "202512"
   author:
     - 『洋蔥』
   description: |
@@ -119,6 +119,7 @@ engine:
     - affix_segmentor@gr2
     - affix_segmentor@cyr2
     - affix_segmentor@all_bpm
+    - lua_segmentor@mount_allbpm
     - punct_segmentor
     - fallback_segmentor
   translators:
