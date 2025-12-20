@@ -119,7 +119,6 @@ engine:
   segmentors:
     - ascii_segmentor
     - matcher
-    - lua_segmentor@mount_zhuyin
     - abc_segmentor
     - affix_segmentor@pt
     - affix_segmentor@emoji_series
@@ -131,6 +130,7 @@ engine:
     - affix_segmentor@reverse3_lookup
     # - affix_segmentor@reverse3_lookup_extra
     - affix_segmentor@all_bpm
+    - lua_segmentor@mount_zhuyin
     - affix_segmentor@jphi_lookup
     - affix_segmentor@jpka_lookup
     - affix_segmentor@korea_lookup

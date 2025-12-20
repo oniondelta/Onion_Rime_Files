@@ -57,11 +57,11 @@ engine:
   segmentors:
     - ascii_segmentor
     - matcher
-    # - lua_segmentor@mount_zhuyin
     - abc_segmentor
     - affix_segmentor@pt
     - affix_segmentor@emoji_series
     - affix_segmentor@reverse2_lookup
+    # - lua_segmentor@mount_zhuyin
     - affix_segmentor@reverse3_lookup
     # - affix_segmentor@reverse3_lookup_extra
     - punct_segmentor
