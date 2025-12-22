@@ -3606,6 +3606,8 @@ min_phrase_weight: 100
 # 眿	mi4	0%
 諳	tou3	0%
 谙	tou3	0%
+錫	ti4	0%
+锡	ti4	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -97061,6 +97063,7 @@ min_phrase_weight: 100
 稱情	cheng4 qing2
 稱意	chen4 yi4
 稱意	cheng4 yi4
+稱意	cheng1 yi4
 稱慶	cheng1 qing4
 稱揚	cheng1 yang2
 稱是	cheng1 shi4
@@ -117567,4 +117570,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 117570 #####
+##### @結束 END - 117573 #####
