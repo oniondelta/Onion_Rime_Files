@@ -221,10 +221,10 @@ local function translate(input, seg, env)
       -- local v = string.gsub(v, "\\n", "\n")  -- 可以多行文本
       -- local v = string.gsub(v, "\\r", "\r")  -- 可以多行文本
       local cand = Candidate("simp_short", seg.start, seg._end, v, "〔短語〕")
-      cand.quality = env.quality
-      cand.preedit = short_preedit
-      -- cand.preedit = env.t_preedit:apply(input)
       -- local cand = change_preedit(cand, short_preedit)
+      -- cand.preedit = env.t_preedit:apply(input)
+      cand.preedit = short_preedit
+      cand.quality = env.quality
       yield(cand)
     end
   end
