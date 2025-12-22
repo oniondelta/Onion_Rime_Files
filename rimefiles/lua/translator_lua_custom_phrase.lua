@@ -144,6 +144,8 @@ local function load_text_dict(text_dict)
 end
 
 ---------------------------------------------------------------
+-- local change_preedit = require("filter_cand/change_preedit")
+---------------------------------------------------------------
 local function init(env)
   engine = env.engine
   schema = engine.schema
@@ -152,7 +154,7 @@ local function init(env)
   -- namespace = "lua_custom_phrase"
   env.textdict = config:get_string(env.name_space .. "/user_dict") or ""
   --- 以下 「load_text_dict」 可能為 nil or {}
-  --- 更新 txt 需「重新部署」或方案變換
+  --- 更新 txt 需「重新部署」或方案變換。
   if env.textdict == "" then
     env.tab = {['zz']={'※ 無短語字典連結(schema)'}}
     env.tab_list = {{ text = "", code = "※ 無短語字典連結(schema)", sort = 0 }}
@@ -162,6 +164,11 @@ local function init(env)
   end
   env.quality = 10
   -- log.info("lua_custom_phrase: \'" .. env.textdict .. ".txt\' Initilized!")  -- 日誌中提示已經載入 txt 短語
+  --- 以下擷取「translator/preedit_format」轉換格式。
+  --- 擷取後使用「env.t_preedit:apply(input)」去轉換。  -- convert string
+  local t_preedit_fmt_list = config:get_list("translator/preedit_format")  -- load ConfigList form path
+  env.t_preedit = Projection()  -- create Projection obj
+  env.t_preedit:load(t_preedit_fmt_list)  -- load convert rules
 end
 
 
@@ -213,6 +220,9 @@ local function translate(input, seg, env)
       -- local v = string.gsub(v, "\\n", "\n")  -- 可以多行文本
       -- local v = string.gsub(v, "\\r", "\r")  -- 可以多行文本
       local cand = Candidate("simp_short", seg.start, seg._end, v, "〔短語〕")
+      local abc_preedit = env.t_preedit:apply(input)
+      -- local cand = change_preedit(cand, abc_preedit)
+      cand.preedit = abc_preedit
       cand.quality = env.quality
       yield(cand)
     end
