@@ -217,13 +217,14 @@ local function translate(input, seg, env)
   if c_p_tab then
   -- if (caret_pos == #input) and c_p_tab then  --只能在一開頭輸入，掛接後續無法。
     for _, v in pairs(c_p_tab) do
+      local short_preedit = env.t_preedit:apply(input)
       -- local v = string.gsub(v, "\\n", "\n")  -- 可以多行文本
       -- local v = string.gsub(v, "\\r", "\r")  -- 可以多行文本
       local cand = Candidate("simp_short", seg.start, seg._end, v, "〔短語〕")
-      local abc_preedit = env.t_preedit:apply(input)
-      -- local cand = change_preedit(cand, abc_preedit)
-      cand.preedit = abc_preedit
       cand.quality = env.quality
+      cand.preedit = short_preedit
+      -- cand.preedit = env.t_preedit:apply(input)
+      -- local cand = change_preedit(cand, short_preedit)
       yield(cand)
     end
   end
