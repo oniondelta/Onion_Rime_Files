@@ -1,7 +1,7 @@
 --- @@ lua_custom_phrase_filter
 --[[
 接續掛接方案後，有 bug，上不了屏，改用 translator 實現。
-202512測試好似又沒 bug？掛接方案後，也可直接上屏？！
+202512 測試好似又沒 bug？掛接方案後，也可直接上屏？！
 --]]
 
 
@@ -54,8 +54,8 @@ end
 
 local function tags_match(seg, env)
   env.seg_1 = seg:has_tag("abc")
-  local seg_2 = seg:has_tag("mf_translator")
-  return env.seg_1 or seg_2
+  env.seg_2 = seg:has_tag("mf_translator")
+  return env.seg_1 or env.seg_2
 end
 
 
@@ -95,8 +95,8 @@ local function filter(inp,env)
       cand.quality = env.quality
       yield(cand)
     end
-  elseif cut_input == env.prefix .. "a" or cut_input == env.prefix .. "," then
-  -- if env.seg_2 and (cut_input == env.prefix .. "a" or cut_input == env.prefix .. ",") then
+  elseif env.seg_2 and (cut_input == env.prefix .. "a" or cut_input == env.prefix .. ",") then
+  -- elseif cut_input == env.prefix .. "a" or cut_input == env.prefix .. "," then
     tab_list = env.tab_list
     for k, v in pairs(tab_list) do
       -- local text = v.text
