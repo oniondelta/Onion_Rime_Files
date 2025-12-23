@@ -48,7 +48,7 @@
 --      - lua_filter@convert_japan_filter            --（引lua資料夾）日文出羅馬字、全形羅馬字、半形片假名、全片假名、全平假名。後來合併修改為掛接方案也可使用。
 --      - lua_filter@p_convert_japan_filter          --（關）同 convert_japan_filter，掛接方案用。
 --      - lua_filter@halfwidth_katakana_filter       --（關）（jpnin1）片假名後附加半形片假名。選單顯示太雜亂，故不用。
---      - lua_filter@lua_custom_phrase_filter        --（關）取代原先 table_translator@custom_phrase。接續掛接方案後，有 bug，上不了屏，改用 translator 實現。
+--      - lua_filter@lua_custom_phrase_filter        --（關）取代原先 table_translator@custom_phrase。接續掛接方案後，有 bug，上不了屏，改用 translator 實現。202512重新整理無發現？！
 --      - lua_filter@preedit_model_filter            --（關）（bo_mixin 全系列）切換 preedit 樣式。
 --      - lua_filter@punct_preedit_revise_filter     --（引lua資料夾）（bopomo_onion_double 和 onion-array30 和 onion-array10）punct 下，附加 preedit 後面 prompt 缺漏之標示。另修正 ascii_punct 下，分號(;)和冒號(:)無法變半形問題。
 --      - lua_filter@back_mark_filter                --（引lua資料夾）（dif、1bopomo_onion_double、bopomo_onionplus 和 bo_mixin 全系列）不直接用 opencc 去 comment，改 lua 間接 comment，防「兩個字符」以上無法標注，和一個字串被多個標注。
@@ -276,7 +276,7 @@ convert_english_filter = require("filter_convert_english_filter")
 -- --- lua_custom_phrase_filter
 -- -- 取代原先 table_translator@custom_phrase。
 -- -- 可多行，用\n\r。
--- -- 接續掛接方案後，有 bug，上不了屏，改用 translator 實現。
+-- -- 接續掛接方案後，有 bug，上不了屏，改用 translator 實現。202512重新整理無發現？！
 -- lua_custom_phrase_filter = require("filter_lua_custom_phrase_filter")
 
 
