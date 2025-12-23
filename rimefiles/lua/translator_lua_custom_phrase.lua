@@ -48,40 +48,13 @@ end
 
 
 local function translate(input, seg, env)
-  local tag_mf = seg:has_tag("mf_translator")
-  local tag_abc = seg:has_tag("abc")
-
-  -- --- 當 schema 中找不到設定則跳開（env.textdict為""，translate 函數為 nil）
-  -- --- 以下 env.textdict == "" 狀況提前於 init 處理。
-  -- if env.textdict == "" then return end
-
-  if tag_mf and (input == env.prefix .. "a" or input == env.prefix .. ",") then
-  -- if seg:has_tag("mf_translator") and (input == env.prefix .. "a") then
-    tab_list = env.tab_list
-    for k, v in pairs(tab_list) do
-      -- local text = v.text
-      -- local text = string.gsub(text, "\\n", "\n")  -- 可以多行文本
-      -- local text = string.gsub(text, "\\r", "\r")  -- 可以多行文本
-      local cand = Candidate("simp_short_list", seg.start, seg._end, v.text, v.code)
-      -- local cand = Candidate("simp_short_list", seg.start, seg._end, v.text, v.code.."  〔"..v.sort.."〕")
-      -- local cand = Candidate("simp_short_list", seg.start, seg._end, v[1], v[2].."  〔"..v[3].."〕")
-      cand.preedit = input .. "\t 【短語總列表】"
-      yield(cand)
-    end
-    return
-  -- --- 當 schema 中找不到設定則跳開（env.textdict為""，translate 函數為 nil）
-  -- --- 預防出現在掛接輸入中，限定在 abc 段落（tag_abc）
-  -- if env.textdict == "" then return log.error("lua_custom_phrase： user_dict File Name is Wrong or Missing!") end  -- 錯誤日誌中提示名稱錯誤或遺失
-  -- if not tag_abc or env.textdict == "" then return end
-  -- if not tag_abc then return end
-  -- if not seg:has_tag("abc") then return end
-  elseif not tag_abc then
-    return
-  end
-
   -- local engine = env.engine
   -- local context = engine.context
   -- local caret_pos = context.caret_pos
+
+  local tag_abc = seg:has_tag("abc")
+  local tag_mf = seg:has_tag("mf_translator")
+
   --- 以下 「load_text_dict」 可能為 nil 故要 or {}
   -- local text_dict_tab = load_text_dict("lua_custom_phrase") or {}  -- 直接限定 txt 字典
   -- local text_dict_tab = load_text_dict(env.textdict) or {}  -- 更新 txt 不需「重新部署」
@@ -89,7 +62,10 @@ local function translate(input, seg, env)
   -- local c_p_tab = text_dict_tab[input]  -- 更新 txt 不需「重新部署」
   local c_p_tab = env.tab[input]  -- 更新 txt 需「重新部署」或方案變換
 
-  if c_p_tab then
+  -- --- 當 schema 中找不到設定則跳開（env.textdict為""，translate 函數為 nil）
+  -- --- 以下 env.textdict == "" 狀況提前於 init 處理。
+  -- if env.textdict == "" then return end
+  if tag_abc and c_p_tab then
   -- if (caret_pos == #input) and c_p_tab then  --只能在一開頭輸入，掛接後續無法。
     for _, v in pairs(c_p_tab) do
       -- local v = string.gsub(v, "\\n", "\n")  -- 可以多行文本
@@ -102,6 +78,30 @@ local function translate(input, seg, env)
       cand.quality = env.quality
       yield(cand)
     end
+  elseif tag_mf and (input == env.prefix .. "a" or input == env.prefix .. ",") then
+  -- if seg:has_tag("mf_translator") and (input == env.prefix .. "a") then
+    tab_list = env.tab_list
+    for k, v in pairs(tab_list) do
+      -- local text = v.text
+      -- local text = string.gsub(text, "\\n", "\n")  -- 可以多行文本
+      -- local text = string.gsub(text, "\\r", "\r")  -- 可以多行文本
+      local cand = Candidate("simp_short_list", seg.start, seg._end, v.text, v.code)
+      -- local cand = Candidate("simp_short_list", seg.start, seg._end, v.text, v.code.."  〔"..v.sort.."〕")
+      -- local cand = Candidate("simp_short_list", seg.start, seg._end, v[1], v[2].."  〔"..v[3].."〕")
+      cand.preedit = input .. "\t 【短語總列表】"
+      yield(cand)
+    end
+
+  --   return
+  -- -- --- 當 schema 中找不到設定則跳開（env.textdict為""，translate 函數為 nil）
+  -- -- --- 預防出現在掛接輸入中，限定在 abc 段落（tag_abc）
+  -- -- if env.textdict == "" then return log.error("lua_custom_phrase： user_dict File Name is Wrong or Missing!") end  -- 錯誤日誌中提示名稱錯誤或遺失
+  -- -- if not tag_abc or env.textdict == "" then return end
+  -- -- if not tag_abc then return end
+  -- -- if not seg:has_tag("abc") then return end
+  -- elseif not tag_abc then
+  --   return
+
   end
 
   -- --- 以下測試用

@@ -53,9 +53,9 @@ end
 
 
 local function tags_match(seg, env)
-  local seg_1 = seg:has_tag("abc")
-  env.seg_2 = seg:has_tag("mf_translator")
-  return seg_1 or env.seg_2
+  env.seg_1 = seg:has_tag("abc")
+  local seg_2 = seg:has_tag("mf_translator")
+  return env.seg_1 or seg_2
 end
 
 
@@ -71,28 +71,6 @@ local function filter(inp,env)
   local c_input = context.input  -- 原始未轉換輸入碼
   local cut_input = string.sub(c_input, -es)
 
-  -- --- 當 schema 中找不到設定則跳開（env.textdict為""，translate 函數為 nil）
-  -- --- 以下 env.textdict == "" 狀況提前於 init 處理。
-  -- if env.textdict == "" then return end
-
-  if env.seg_2 and (cut_input == env.prefix .. "a" or cut_input == env.prefix .. ",") then
-    tab_list = env.tab_list
-    for k, v in pairs(tab_list) do
-      -- local text = v.text
-      -- local text = string.gsub(text, "\\n", "\n")  -- 可以多行文本
-      -- local text = string.gsub(text, "\\r", "\r")  -- 可以多行文本
-      local cand = Candidate("simp_short_list", start, _end, v.text, v.code)
-      -- local cand = Candidate("simp_short_list", start, _end, v.text, v.code.."  〔"..v.sort.."〕")
-      -- local cand = Candidate("simp_short_list", start, _end, v[1], v[2].."  〔"..v[3].."〕")
-      cand.preedit = cut_input .. "\t 【短語總列表】"
-      yield(cand)
-    end
-    --- 以下測試用。
-    -- local cand_test = Candidate("seg_test", start, _end, "〔test〕" , "〔測試〕")
-    -- yield(cand_test)
-    return
-  end
-
   --- 以下 「load_text_dict」 可能為 nil 故要 or {}
   -- local text_dict_tab = load_text_dict("lua_custom_phrase") or {}  -- 直接限定 txt 字典
   -- local text_dict_tab = load_text_dict(env.textdict) or {}  -- 更新 txt 不需「重新部署」
@@ -101,7 +79,10 @@ local function filter(inp,env)
   -- local c_p_tab = text_dict_tab[c_input]  -- 更新 txt 不需「重新部署」
   local c_p_tab = env.tab[cut_input]
 
-  if c_p_tab then
+  -- --- 當 schema 中找不到設定則跳開（env.textdict為""，translate 函數為 nil）
+  -- --- 以下 env.textdict == "" 狀況提前於 init 處理。
+  -- if env.textdict == "" then return end
+  if env.seg_1 and c_p_tab then
   -- if (caret_pos == #cut_input) and c_p_tab then  --只能在一開頭輸入，掛接後續無法。
     for _, v in pairs(c_p_tab) do
       -- local v = string.gsub(v, "\\n", "\n")  -- 可以多行文本
@@ -114,7 +95,25 @@ local function filter(inp,env)
       cand.quality = env.quality
       yield(cand)
     end
+  elseif cut_input == env.prefix .. "a" or cut_input == env.prefix .. "," then
+  -- if env.seg_2 and (cut_input == env.prefix .. "a" or cut_input == env.prefix .. ",") then
+    tab_list = env.tab_list
+    for k, v in pairs(tab_list) do
+      -- local text = v.text
+      -- local text = string.gsub(text, "\\n", "\n")  -- 可以多行文本
+      -- local text = string.gsub(text, "\\r", "\r")  -- 可以多行文本
+      local cand = Candidate("simp_short_list", start, _end, v.text, v.code)
+      -- local cand = Candidate("simp_short_list", start, _end, v.text, v.code.."  〔"..v.sort.."〕")
+      -- local cand = Candidate("simp_short_list", start, _end, v[1], v[2].."  〔"..v[3].."〕")
+      cand.preedit = cut_input .. "\t 【短語總列表】"
+      yield(cand)
+    end
+    return  -- 跳開不跑下面 iter()。
   end
+
+  -- --- 以下測試用。
+  -- local cand_test = Candidate("seg_test", start, _end, "〔test〕" , "〔測試〕")
+  -- yield(cand_test)
 
   for cand in inp:iter() do
     yield(cand)
