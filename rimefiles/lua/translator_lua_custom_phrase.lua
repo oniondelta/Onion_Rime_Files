@@ -48,12 +48,13 @@ end
 
 
 local function translate(input, seg, env)
+  local tag_mf = seg:has_tag("mf_translator")
+  local tag_abc = seg:has_tag("abc")
 
   -- --- 當 schema 中找不到設定則跳開（env.textdict為""，translate 函數為 nil）
   -- --- 以下 env.textdict == "" 狀況提前於 init 處理。
   -- if env.textdict == "" then return end
 
-  local tag_mf = seg:has_tag("mf_translator")
   if tag_mf and (input == env.prefix .. "a" or input == env.prefix .. ",") then
   -- if seg:has_tag("mf_translator") and (input == env.prefix .. "a") then
     tab_list = env.tab_list
@@ -68,16 +69,15 @@ local function translate(input, seg, env)
       yield(cand)
     end
     return
-  end
-
-
-  local tag_abc = seg:has_tag("abc")
-  --- 當 schema 中找不到設定則跳開（env.textdict為""，translate 函數為 nil）
-  --- 預防出現在掛接輸入中，限定在 abc 段落（tag_abc）
+  -- --- 當 schema 中找不到設定則跳開（env.textdict為""，translate 函數為 nil）
+  -- --- 預防出現在掛接輸入中，限定在 abc 段落（tag_abc）
   -- if env.textdict == "" then return log.error("lua_custom_phrase： user_dict File Name is Wrong or Missing!") end  -- 錯誤日誌中提示名稱錯誤或遺失
   -- if not tag_abc or env.textdict == "" then return end
-  if not tag_abc then return end
+  -- if not tag_abc then return end
   -- if not seg:has_tag("abc") then return end
+  elseif not tag_abc then
+    return
+  end
 
   -- local engine = env.engine
   -- local context = engine.context
