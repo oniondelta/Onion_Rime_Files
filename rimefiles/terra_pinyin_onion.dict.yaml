@@ -279,6 +279,7 @@
 #    詞句中，「交叉」臺灣字典發音為「jiao1 cha1」，日常發音常發「jiao1 cha4」，故皆補齊「jiao1 cha1」「jiao1 cha4」。
 #    詞句中，「牛仔」臺灣字典發音為「niu2 zi3」，日常發音常發「niu2 zai3」，故皆補齊「niu2 zi3」「niu2 zai3」。
 #    詞句中，「落魄」臺灣字典發音為「luo4 tuo4」，日常發音常發「luo4 po4」，故皆補齊「luo4 tuo4」「luo4 po4」。
+#    詞句中，「破涕」臺灣字典發音為「po4 ti4」，日常發音常發「po4 ti2」，故皆補齊「po4 ti4」「po4 ti2」，後者詞頻設為80%。
 #    詞句中，「咆哮」臺灣字典發音為「pao2 xiao4」和「pao2 xiao1」，語義有區別，但日常易混，故皆補齊「pao2 xiao4」「pao2 xiao1」。
 #    詞句中，「擂臺」「擂台」臺灣字典發音為「lei4 tai2」，日常發音常發「lei2 tai2」，故皆補齊「lei2 tai4」「lei2 tai2」。
 #    詞句中，「相片」「照片」「影片」「碟片」「唱片」「畫片」，其「片」發音，皆補齊「pian4」和「pian1」。
@@ -1698,7 +1699,7 @@ min_phrase_weight: 100
 铺	pu1	0.2%
 茬	chi2	0.2%
 茬	zi1	0.2%
-袷	qia1	0.2%
+袷	qia1	10%
 貓	mao2	0.1%
 蹺	qiao4	0.2%
 酊	ding1	50%
@@ -3608,6 +3609,7 @@ min_phrase_weight: 100
 谙	tou3	0%
 錫	ti4	0%
 锡	ti4	0%
+悱	bei1	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -3862,7 +3864,7 @@ min_phrase_weight: 100
 帥	shuo4	1%
 徇	xun2	1%
 怨	yuan1	1%
-恪	que4	1%
+恪	que4	10%
 恫	tong1	1%
 扃	jiong3	1%
 拶	za2	1%
@@ -4244,7 +4246,7 @@ min_phrase_weight: 100
 萄	tao5	1%
 萆	bei1	1%
 蛬	gong3	1%
-袷	jie2	1%
+袷	jie2	10%
 診	zhen1	1%
 詄	yi4	1%
 詐	zha3	1%
@@ -65846,6 +65848,7 @@ min_phrase_weight: 100
 受委屈	shou4 wei3 qu1
 受怕擔憂	shou4 pa4 dan1 you1
 受悶氣	shou4 men4 qi4
+受悶氣	shou4 men1 qi4
 受播者	shou4 bo4 zhe3
 受播者	shou4 bo1 zhe3
 受教	shou4 jiao4
@@ -69633,6 +69636,7 @@ min_phrase_weight: 100
 垢泥	gou4 ni2
 垣曲	yuan2 qu3
 垣曲縣	yuan2 qu3 xian4
+垣曲縣	yuan2 qu1 xian4
 垸子	huan2 zi5
 埂堤	geng3 ti2
 埂堤	geng3 di1
@@ -77481,49 +77485,75 @@ min_phrase_weight: 100
 悶不吭聲	men1 bu4 keng1 sheng1
 悶不吭聲	men4 bu4 keng1 sheng1
 悶亂	men4 luan4
+悶亂	men1 luan4
 悶人	men4 ren2
+悶人	men1 ren2
 悶信	men4 xin4
+悶信	men1 xin4
 悶倦	men4 juan4
+悶倦	men1 juan4
 悶厭厭	men4 yan1 yan1
+悶厭厭	men1 yan1 yan1
 悶坐	men4 zuo4
+悶坐	men1 zuo4
 悶子車	men4 zi5 che1
+悶子車	men1 zi5 che1
 悶得慌	men1 de5 huang1
 悶得慌	men4 de5 huang1
+悶得慌	men1 de2 huang1
+悶得慌	men4 de2 huang1
 悶悶	men4 men4
 悶悶	men1 men1
 悶悶	men1 men4
 悶悶	men4 men1
 悶悶不已	men4 men4 bu4 yi3
+悶悶不已	men1 men1 bu4 yi3
 悶悶不樂	men4 men4 bu2 le4
 悶悶不樂	men1 men1 bu2 le4
 悶悶渴渴	men4 men4 he2 he2
+悶悶渴渴	men1 men1 he2 he2
 悶懨懨	men4 yan1 yan1
+悶懨懨	men1 yan1 yan1
 悶損	men4 sun3
+悶損	men1 sun3
 悶數錢糧	men1 shu3 qian2 liang2
+悶數錢糧	men4 shu3 qian2 liang2
 悶昏昏	men4 hun1 hun1
+悶昏昏	men1 hun1 hun1
 悶板	men1 ban3
+悶板	men4 ban3
 悶棍	men4 gun4
+悶棍	men1 gun4
 悶汗	men1 han4
+悶汗	men4 han4
 悶沉沉	men4 chen2 chen2
+悶沉沉	men1 chen2 chen2
 悶沌沌	men4 dun4 dun4
+悶沌沌	men1 dun4 dun4
 悶淹淹	men4 yan1 yan1
+悶淹淹	men1 yan1 yan1
 悶熱	men1 re4
 悶熱	men4 re4
 悶瞀	men4 mao4
+悶瞀	men1 mao4
 悶葫蘆	men1 hu2 lu2
 悶葫蘆	men4 hu2 lu2
 悶葫蘆罐	men1 hu2 lu2 guan4
 悶葫蘆罐	men4 hu2 lu2 guan4
 悶虧	men4 kui1
+悶虧	men1 kui1
 悶酒	men4 jiu3
 悶酒	men1 jiu3
 悶錶	men4 biao3
+悶錶	men1 biao3
 悶雷	men4 lei2
 悶雷	men1 lei2
 悶頭	men1 tou2
 悶頭	men4 tou2
 悶香	men4 xiang1
+悶香	men1 xiang1
 悶騰騰	men4 teng2 teng2
+悶騰騰	men1 teng2 teng2
 悽切	qi1 qie4
 悽切	qi1 qie1
 悾憁	kong3 zong3
@@ -77808,7 +77838,9 @@ min_phrase_weight: 100
 惺惺惜惺惺	xing1 xing1 xi2 xing1 xing1
 惺惺相惜	xing1 xing1 xiang1 xi2
 愁山悶海	chou2 shan1 men4 hai3
+愁山悶海	chou2 shan1 men1 hai3
 愁悶	chou2 men4
+愁悶	chou2 men1
 愁腸九轉	chou2 chang2 jiu3 zhuan3
 愁腸百結	chou2 chang2 bai3 jie2
 愆忒	qian1 te4
@@ -78020,9 +78052,11 @@ min_phrase_weight: 100
 憂心如惔	you1 xin1 ru2 tan2
 憂患意識	you1 huan4 yi4 shi4
 憂悶	you1 men4
+憂悶	you1 men1
 憂闕	you1 que1
 憋尿	bie1 niao4
 憋悶	bie1 men4
+憋悶	bie1 men1
 憋拗	bie1 niu4
 憎惡	zeng1 e4
 憎惡	zeng1 wu4
@@ -78249,6 +78283,7 @@ min_phrase_weight: 100
 應龍	ying4 long2
 懊喪	ao4 sang4
 懊悶	ao4 men4
+懊悶	ao4 men1
 懊憹	ao4 nao2
 懋績	mao4 ji1
 懮慮	you1 lv4
@@ -78800,6 +78835,9 @@ min_phrase_weight: 100
 打了一個悶雷	da3 le5 yi2 ge5 men4 lei2
 打了一個悶雷	da3 le5 yi1 ge5 men4 lei2
 打了一個悶雷	da3 le5 yi4 ge5 men4 lei2
+打了一個悶雷	da3 le5 yi2 ge5 men1 lei2
+打了一個悶雷	da3 le5 yi1 ge5 men1 lei2
+打了一個悶雷	da3 le5 yi4 ge5 men1 lei2
 打了個寒噤	da3 le5 ge5 han2 jin4
 打了個照面	da3 le5 ge5 zhao4 mian4
 打了個落花流水	da3 le5 ge5 luo4 hua1 liu2 shui3
@@ -78879,7 +78917,9 @@ min_phrase_weight: 100
 打悶棍	da3 men4 gun4
 打悶棍	da3 men1 gun4
 打悶葫蘆	da3 men4 hu2 lu2
+打悶葫蘆	da3 men1 hu2 lu2
 打悶雷	da3 men4 lei2
+打悶雷	da3 men1 lei2
 打惡心	da3 e3 xin1
 打成一片	da3 cheng2 yi2 pian4
 打成一片	da3 cheng2 yi1 pian4
@@ -80781,6 +80821,7 @@ min_phrase_weight: 100
 排山倒峽	pai2 shan1 dao3 xia2
 排山倒海	pai2 shan1 dao3 hai3
 排悶	pai2 men4
+排悶	pai2 men1
 排憂解難	pai2 you1 jie3 nan4
 排揎	pai2 xuan1
 排擊	pai2 ji2
@@ -82962,7 +83003,11 @@ min_phrase_weight: 100
 散座兒	san3 zuo4 er2
 散心	san4 xin1
 散心解悶	san4 xin1 jie3 men4
+散心解悶	san4 xin1 jie3 men1
 散悶	san4 men4
+散悶	san4 men1
+散悶	san3 men4
+散悶	san3 men1
 散戲	san4 xi4
 散戶	san3 hu4
 散手	san3 shou3
@@ -87700,6 +87745,7 @@ min_phrase_weight: 100
 殞沒	yun3 mo4
 殞落	yun3 luo4
 殫悶	dan1 men4
+殫悶	dan1 men1
 殫見洽聞	dan1 jian4 xia2 wen2
 殫見洽聞	dan1 jian4 qia4 wen2	30%
 殲擊機	jian1 ji2 ji1
@@ -88067,6 +88113,7 @@ min_phrase_weight: 100
 氣息奄奄	qi4 xi2 yan1 yan1
 氣息奄奄	qi4 xi2 yan3 yan3
 氣悶	qi4 men4
+氣悶	qi4 men1
 氣憤難平	qi4 fen4 nan2 ping2
 氣數	qi4 shu4
 氣旋	qi4 xuan2
@@ -89703,6 +89750,7 @@ min_phrase_weight: 100
 消愁解悶	xiao1 chou2 jie3 men4
 消愁解悶	xiao1 chou2 jie3 men1
 消愁釋悶	xiao1 chou2 shi4 men4
+消愁釋悶	xiao1 chou2 shi4 men1
 消折	xiao1 she2
 消散	xiao1 san4
 消炎片	xiao1 yan2 pian4
@@ -90532,6 +90580,7 @@ min_phrase_weight: 100
 溼度	shi1 du4
 溼度計	shi1 du4 ji4
 溼悶	shi1 men4
+溼悶	shi1 men1
 溼氣	shi1 qi4
 溼淋淋	shi1 lin2 lin2
 溼答答	shi1 da1 da1
@@ -90599,6 +90648,7 @@ min_phrase_weight: 100
 滬杭甬鐵路	hu4 hang2 yong3 tie3 lu4
 滯塞	zhi4 sai1
 滯悶	zhi4 men4
+滯悶	zhi4 men1
 滯泥	zhi4 ni4
 滯泥	zhi4 ni2
 滯滯泥泥	zhi4 zhi4 ni4 ni4
@@ -93431,6 +93481,7 @@ min_phrase_weight: 100
 生息	sheng1 xi2
 生息蕃庶	sheng1 xi2 fan2 shu4
 生悶氣	sheng1 men4 qi4
+生悶氣	sheng1 men1 qi4
 生意	sheng1 yi4
 生意不成仁義在	sheng1 yi4 bu4 cheng2 ren2 yi4 zai4
 生意人	sheng1 yi4 ren2
@@ -96261,6 +96312,7 @@ min_phrase_weight: 100
 破散	po4 san4
 破步撩衣	po4 bu4 liao1 yi1
 破涕為笑	po4 ti4 wei2 xiao4
+破涕為笑	po4 ti2 wei2 xiao4	80%
 破甲彈	po4 jia3 dan4
 破的	po4 di4
 破的	po4 de5
@@ -98672,6 +98724,8 @@ min_phrase_weight: 100
 納悶	na4 men1
 納悶兒	na4 men4 er5	80%
 納悶兒	na4 men4 er2
+納悶兒	na4 men1 er5	80%
+納悶兒	na4 men1 er2
 納扎爾巴耶夫	na4 zha1 er3 ba1 ye1 fu1
 納扎爾巴耶夫	na4 zha2 er3 ba1 ye1 fu1
 納撒尼爾‧霍桑	na4 sa1 ni2 er3 eng5 huo4 sang1
@@ -100688,6 +100742,7 @@ min_phrase_weight: 100
 聆樂	ling2 yue4
 聊以塞責	liao2 yi3 se4 ze2
 聊以解悶	liao2 yi3 jie3 men4
+聊以解悶	liao2 yi3 jie3 men1
 聊城地區	liao2 cheng2 di4 qu1
 聊天兒	liao2 tian1 er5	80%
 聊天兒	liao2 tian1 er2
@@ -101239,6 +101294,7 @@ min_phrase_weight: 100
 胸中無數	xiong1 zhong1 wu2 shu4
 胸廓切開術	xiong1 kuo4 qie1 kai1 shu4
 胸悶	xiong1 men1
+胸悶	xiong1 men4
 胸有丘壑	xiong1 you3 qiu1 huo4
 胸有丘壑	xiong1 you3 qiu1 he4
 胸無宿物	xiong1 wu2 su4 wu4
@@ -101354,6 +101410,7 @@ min_phrase_weight: 100
 脫不了身	tuo1 bu4 liao3 shen1
 脫帽露頂	tuo1 mao4 lu4 ding3
 脫悶	tuo1 men4
+脫悶	tuo1 men1
 脫期	tuo1 qi2
 脫殼	tuo1 ke2
 脫殼	tuo1 qiao4
@@ -106280,6 +106337,7 @@ min_phrase_weight: 100
 解悶	jie3 men4
 解悶	jie3 men1
 解悶破寂	jie3 men4 po4 ji2
+解悶破寂	jie3 men1 po4 ji2
 解放巴勒斯坦人民陣線	jie3 fang4 ba1 le4 si1 tan3 ren2 min2 zhen4 xian4
 解散	jie3 san4
 解散權	jie3 san4 quan2
@@ -109721,6 +109779,7 @@ min_phrase_weight: 100
 迷惑龍	mi2 huo4 long2
 迷溜沒亂	mi2 liu1 mo4 luan4
 迷留悶亂	mi2 liu2 men1 luan4
+迷留悶亂	mi2 liu2 men4 luan4
 迷留摸亂	mi2 liu2 mo1 luan4
 迷留沒亂	mi2 liu2 mo4 luan4
 迷糊	mi2 hu2
@@ -109822,6 +109881,7 @@ min_phrase_weight: 100
 逗嘴皮子	dou4 zui3 pi2 zi5
 逗弄	dou4 nong4
 逗悶子	dou4 men4 zi5
+逗悶子	dou4 men1 zi5
 逗樂	dou4 le4
 逗橈	dou4 nao2
 逗橈	dou4 rao2
@@ -110339,6 +110399,7 @@ min_phrase_weight: 100
 遠遠落後	yuan3 yuan3 luo4 hou4
 遣兵調將	qian3 bing1 diao4 jiang4
 遣悶	qian3 men4
+遣悶	qian3 men1
 遣散	qian3 san4
 遣散費	qian3 san4 fei4
 遣興	qian3 xing4
@@ -110352,6 +110413,7 @@ min_phrase_weight: 100
 適得其反	shi4 de2 qi2 fan3
 適得其所	shi4 de2 qi2 suo3
 適悶	shi4 men4
+適悶	shi4 men1
 適應	shi4 ying4
 適應性	shi4 ying4 xing4
 適當	shi4 dang4
@@ -116613,6 +116675,7 @@ min_phrase_weight: 100
 鬥幌子	dou4 huang3 zi5
 鬥彆氣	dou4 bie4 qi4
 鬥悶子	dou4 men4 zi5
+鬥悶子	dou4 men1 zi5
 鬥葉子	dou4 ye4 zi5
 鬥趣兒	dou4 qu4 er5	80%
 鬥趣兒	dou4 qu4 er2
@@ -116789,6 +116852,7 @@ min_phrase_weight: 100
 鰲裡奪尊	ao2 li3 duo2 zun1
 鰲頭獨占	ao2 tou2 du2 zhan4
 鱉悶	bie1 men4
+鱉悶	bie1 men1
 鱉煞	bie1 sha4
 鱉爪	bie1 zhua3
 鱒魚	zun4 yu2
@@ -117570,4 +117634,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 117573 #####
+##### @結束 END - 117637 #####
