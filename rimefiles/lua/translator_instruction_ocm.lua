@@ -95,9 +95,9 @@ end
 
 -- local function instruction_ocm(input, seg, env)
 local function translate(input, seg, env)
-  engine = env.engine
-  context = engine.context
-  caret_pos = context.caret_pos
+  local engine = env.engine
+  local context = engine.context
+  local caret_pos = context.caret_pos
   -- local check_semicolon = string.match(input, "^;$")
   -- local check_semicolon2 = string.match(input, "^;;$")
 

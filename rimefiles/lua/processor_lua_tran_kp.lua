@@ -5,9 +5,9 @@
 --]]
 
 local function init(env)
-  engine = env.engine
-  schema = engine.schema
-  config = schema.config
+  local engine = env.engine
+  local schema = engine.schema
+  local config = schema.config
   env.prefix = config:get_string("mf_translator/prefix")
   -- env.kp_pattern = {
   --   ["0"] = "0",

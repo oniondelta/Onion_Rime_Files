@@ -67,7 +67,7 @@ end
 -- end
 
 
-local function tags_match(seg,env)
+local function tags_match(seg, env)
   local engine = env.engine
   local context = engine.context
   local seg_abc = seg:has_tag("abc")

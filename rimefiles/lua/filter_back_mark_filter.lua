@@ -40,7 +40,7 @@ end
 -- end
 
 -- --- 方案內 tags 限定和 tags_match，只能選一個，否則只有 tags_match 會作用。
--- local function tags_match(seg,env)
+-- local function tags_match(seg, env)
 --   local engine = env.engine
 --   local context = engine.context
 --   local b_k = context:get_option("back_mark")

@@ -74,7 +74,7 @@ end
 --   return check_input
 -- end
 
-local function tags_match(seg,env)
+local function tags_match(seg, env)
   local engine = env.engine
   local context = engine.context
   local u_c = context:get_option("unicode_comment")

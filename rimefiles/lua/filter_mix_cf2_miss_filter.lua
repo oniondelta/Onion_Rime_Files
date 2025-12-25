@@ -32,7 +32,7 @@ local change_comment = require("filter_cand/change_comment")
 -- function M.fini(env)
 -- end
 
-local function tags_match(seg,env)
+local function tags_match(seg, env)
   local engine = env.engine
   local context = engine.context
   c_f2_s = context:get_option("character_range_bhjm")

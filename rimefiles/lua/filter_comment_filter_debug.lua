@@ -22,7 +22,7 @@ local tran_debug_comment = require("filter_cand/tran_debug_comment")
 -- function M.fini(env)
 -- end
 
-local function tags_match(seg,env)
+local function tags_match(seg, env)
   local engine = env.engine
   local context = engine.context
   local d_c = context:get_option("debug_comment")

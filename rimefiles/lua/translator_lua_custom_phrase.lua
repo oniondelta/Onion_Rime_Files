@@ -22,23 +22,25 @@ local load_text_dict = require("load_custom/load_text_dict_out2tab")
 ---------------------------------------------------------------
 
 local function init(env)
-  engine = env.engine
-  schema = engine.schema
-  config = schema.config
-  env.prefix = config:get_string("mf_translator/prefix")
+  local engine = env.engine
+  local schema = engine.schema
+  local config = schema.config
+  local prefix = config:get_string("mf_translator/prefix")  -- env.prefix
+  env.prefix_a = prefix .. "a"
+  env.prefix_comma = prefix .. ","
   -- namespace = "lua_custom_phrase"
-  env.textdict = config:get_string(env.name_space .. "/user_dict") or ""
+  local textdict = config:get_string(env.name_space .. "/user_dict") or ""  -- env.textdict
   --- 以下 「load_text_dict」 可能為 nil or {}
   --- 更新 txt 需「重新部署」或方案變換。
-  if env.textdict == "" then
+  if textdict == "" then
     env.tab = {['zz']={'※ 無短語字典連結(schema)'}}
     env.tab_list = {{ text = "", code = "※ 無短語字典連結(schema)", sort = 0 }}
   else
-    env.tab = load_text_dict(env.textdict)[1] or {}
-    env.tab_list = load_text_dict(env.textdict)[2] or {}
+    env.tab = load_text_dict(textdict)[1] or {}
+    env.tab_list = load_text_dict(textdict)[2] or {}
   end
   env.quality = 10
-  -- log.info("lua_custom_phrase: \'" .. env.textdict .. ".txt\' Initilized!")  -- 日誌中提示已經載入 txt 短語
+  -- log.info("lua_custom_phrase: \'" .. textdict .. ".txt\' Initilized!")  -- 日誌中提示已經載入 txt 短語
   --- 以下擷取「translator/preedit_format」轉換格式。
   --- 擷取後使用「env.t_preedit:apply(input)」去轉換。  -- convert string
   local t_preedit_fmt_list = config:get_list("translator/preedit_format")  -- load ConfigList form path
@@ -78,10 +80,11 @@ local function translate(input, seg, env)
       cand.quality = env.quality
       yield(cand)
     end
-  elseif tag_mf and (input == env.prefix .. "a" or input == env.prefix .. ",") then
+  elseif tag_mf and (input == env.prefix_a or input == env.prefix_comma) then
+  -- elseif tag_mf and (input == env.prefix .. "a" or input == env.prefix .. ",") then
   -- if seg:has_tag("mf_translator") and (input == env.prefix .. "a") then
-    tab_list = env.tab_list
-    for k, v in pairs(tab_list) do
+    -- tab_list = env.tab_list
+    for k, v in pairs(env.tab_list) do
       -- local text = v.text
       -- local text = string.gsub(text, "\\n", "\n")  -- 可以多行文本
       -- local text = string.gsub(text, "\\r", "\r")  -- 可以多行文本

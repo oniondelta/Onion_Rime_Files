@@ -29,7 +29,8 @@ end
 
 
 local function segmentor(segs, env)
-  local context = env.engine.context
+  local engine = env.engine
+  local context = engine.context
   local c_input = context.input
   local caret_pos = context.caret_pos
   local startpos = segs:get_current_start_position()

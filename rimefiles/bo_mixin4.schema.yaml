@@ -86,7 +86,7 @@ engine:
     # - lua_filter@charset_filter2  #去除opencc轉換後留下的「᰼᰼」。
     # - lua_filter@charset_filter  #打開後中文只保留CJK（精簡），但外語不受影響。
     # - lua_filter@missing_mark_filter  #補上標點符號因直上和 opencc 衝突沒附註之選項
-    # - lua_filter@lua_custom_phrase_filter  #接續掛接方案後，可能有 bug？！202512重新整理無發現？！
+    # - lua_filter@lua_custom_phrase_filter@lua_custom_phrase  #接續掛接方案後，可能有 bug？！202512重新整理無發現？！
     # - lua_filter@preedit_model_charset_filter2_filter
     # - lua_filter@preedit_model_filter
     - reverse_lookup_filter@e_reverse_lookup
@@ -165,6 +165,7 @@ lua_custom_phrase:
   # user_dict: "bo_mixin_phrase"
   user_dict: "lua_custom_phrase"
 
+# # 以下不要使用，建議改用附加「@lua_custom_phrase」去命名「env.name_space」，保持快捷開啟「custom_phrase.txt」等功能可連動作用。
 # lua_custom_phrase_filter:
 #   # user_dict: "bo_mixin_phrase"
 #   user_dict: "lua_custom_phrase"

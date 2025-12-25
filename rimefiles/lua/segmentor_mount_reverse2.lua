@@ -6,13 +6,13 @@
 
 
 local function init(env)
-  env.namespace = "reverse2_lookup"
+  env.namespace1 = "reverse2_lookup"
   local engine = env.engine
   local schema = engine.schema
   local config = schema.config
-  local prefix = config:get_string(env.namespace .. "/prefix")
-  -- local suffix = config:get_string(env.namespace .. "/suffix")
-  local pattern = config:get_string("recognizer/patterns/" .. env.namespace) or config:get_string("recognizer2/patterns/" .. env.namespace)
+  local prefix = config:get_string(env.namespace1 .. "/prefix")
+  -- local suffix = config:get_string(env.namespace1 .. "/suffix")
+  local pattern = config:get_string("recognizer/patterns/" .. env.namespace1) or config:get_string("recognizer2/patterns/" .. env.namespace1)
   -- local pattern = "^=[-.,;/0-9a-z ]*'?$"  -- 測試用
   -- env.suffix = suffix and suffix .. "$" or ""
   -- env.pattern = prefix and pattern and pattern or ""
@@ -22,7 +22,8 @@ end
 
 
 local function segmentor(segs, env)
-  local context = env.engine.context
+  local engine = env.engine
+  local context = engine.context
   local c_input = context.input
   local caret_pos = context.caret_pos
   local startpos = segs:get_current_start_position()
@@ -57,22 +58,22 @@ local function segmentor(segs, env)
   -- -- local seg = Segment(0, cofmpos)  -- 開頭用 0 會有問題。
   -- -- local seg = Segment(0, startpos)  -- 開頭用 0 會有問題。
   -- -- local seg = Segment(0, #c_input)  -- 開頭用 0 會有問題。
-  seg.tags = Set({env.namespace})
+  seg.tags = Set({env.namespace1})
   -- seg.tags = Set({segname})
   -- seg.tags = { reverse2_lookup = true }
   -- seg.tags = { "reverse2_lookup" = true }  -- 錯誤格式，無法作用！
   -- seg.tags = { test_seg_name = true }  -- 配合 filter 測試用
   -- seg.tags = { segname = true }
   -- seg.tags = { abc = false }
-  -- seg.prompt = "〖 TEST: " .. env.namespace .. " 〗" .. " startpos: " .. startpos .. " endpos: " .. endpos .. " cofmpos: " .. cofmpos .. " segpos: " .. segpos .. " segs.input:len(): " .. segs.input:len() .. " caret_pos: " .. caret_pos .. " #c_input: " .. #c_input .. " «end» "
-  -- seg.prompt = "〖 TEST: " .. env.namespace .. " 〗 正則：".. env.pattern .. " «end» "  -- "  尾綴：" .. env.suffix .. 
+  -- seg.prompt = "〖 TEST: " .. env.namespace1 .. " 〗" .. " startpos: " .. startpos .. " endpos: " .. endpos .. " cofmpos: " .. cofmpos .. " segpos: " .. segpos .. " segs.input:len(): " .. segs.input:len() .. " caret_pos: " .. caret_pos .. " #c_input: " .. #c_input .. " «end» "
+  -- seg.prompt = "〖 TEST: " .. env.namespace1 .. " 〗 正則：".. env.pattern .. " «end» "  -- "  尾綴：" .. env.suffix .. 
   segs:add_segment(seg)
 
   -- --- 以下測試末尾 0 長度 Segment 是否能改變，使接續打字不會跳回 abc。
   -- -- local seg2 = Segment(#c_input, #c_input)
   -- local seg2 = Segment(cofmpos, caret_pos)
-  -- seg2.tags = Set({env.namespace})
-  -- seg2.prompt = "〖 TEST: " .. env.namespace .. " 〗" .. " startpos: " .. startpos .. " endpos: " .. endpos .. " cofmpos: " .. cofmpos .. " segpos: " .. segpos .. " segs.input:len(): " .. segs.input:len() .. " caret_pos: " .. caret_pos .. " #c_input: " .. #c_input .. " «end» "
+  -- seg2.tags = Set({env.namespace1})
+  -- seg2.prompt = "〖 TEST: " .. env.namespace1 .. " 〗" .. " startpos: " .. startpos .. " endpos: " .. endpos .. " cofmpos: " .. cofmpos .. " segpos: " .. segpos .. " segs.input:len(): " .. segs.input:len() .. " caret_pos: " .. caret_pos .. " #c_input: " .. #c_input .. " «end» "
   -- segs:add_segment(seg2)
   -- -- segs:trim()
 

@@ -277,6 +277,7 @@ convert_english_filter = require("filter_convert_english_filter")
 -- -- 取代原先 table_translator@custom_phrase。
 -- -- 可多行，用\n\r。
 -- -- 接續掛接方案後，有 bug，上不了屏，改用 translator 實現。202512重新整理無發現？！
+-- -- 形碼方案時，無簡單方式（如：利用詞頻），讓單字在前，短語在後，故使用 translator 實現。注音和雙拼方案可引用，測試中。
 -- lua_custom_phrase_filter = require("filter_lua_custom_phrase_filter")
 
 
