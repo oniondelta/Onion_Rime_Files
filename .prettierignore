@@ -1,0 +1,5 @@
+# 忽略 Rime 的字典檔 (因為包含非 YAML 的文字內容)
+*.dict.yaml
+
+# 忽略反查字典或其他自動生成的檔案
+*.reverse.yaml

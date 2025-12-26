@@ -407,7 +407,7 @@ patch:
     border_width: 8                                 # 窗口邊界寬度，大於圓角半徑才生效
     back_color: 0xeeffffff                          # 候選條背景色
     border_color: 0xE0B693                          # 邊框色
-    text_color: 0x424242                            # 高亮選中詞顏色
+    # text_color: 0x424242                            # 高亮選中詞顏色
     label_color: 0xcbcbcb                           # 預選欄編號顏色
     candidate_text_color: 0x555555                  # 預選項文字顏色
     text_color: 0x9e9e9e                            # 拼音行文字顏色，24位色值，16進制，BGR順序

@@ -13,12 +13,9 @@ __patch:
   #   lua_filter@*filter_comment_filter_debug
 ########################################################################
   - switches/@5/reset: 1  #初始時，abc 和 pt 時，編碼是否顯示 (0為有編碼，1為無編碼)
-  - key_binder/bindings/@41:
-    {accept: Control+bracketleft, unset_option: simplify_comment, when: always} #提示碼開關
-  - key_binder/bindings/@43:
-    {accept: Control+Shift+bracketleft, set_option: simplify_comment, when: always} #提示碼開關
-  - key_binder/bindings/@45:
-    {accept: Control+Shift+braceleft, set_option: simplify_comment, when: always} #提示碼開關
+  - key_binder/bindings/@41:{accept: Control+bracketleft, unset_option: simplify_comment, when: always} #提示碼開關
+  - key_binder/bindings/@43:{accept: Control+Shift+bracketleft, set_option: simplify_comment, when: always} #提示碼開關
+  - key_binder/bindings/@45:{accept: Control+Shift+braceleft, set_option: simplify_comment, when: always} #提示碼開關
   - Mount_ocm_encoder.custom:/patch?  #如有 custom 檔來修正，有此條目才可作用。
 
 
