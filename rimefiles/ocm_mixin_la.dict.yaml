@@ -4,7 +4,7 @@
 # 『洋蔥』製作
 ---
 name: ocm_mixin_la
-version: "202210"
+version: "202512"
 sort: original
 use_preset_vocabulary: false
 #max_phrase_length: 7
@@ -2976,6 +2976,10 @@ $	sy'
 ²	rfh'
 ³	zfh'
 ##### Superscripts and Subscripts結束 #####
+##### 補充奇摩字典音標有的符號開始 #####
+## 下方為希臘文，但在奇摩字典KK和DJ音標中次重音為該符，故收錄
+͵	dpw'
+##### 補充奇摩字典音標有的符號結束 #####
 ###############
 ####### 大寫分出 #######
 #A	a''

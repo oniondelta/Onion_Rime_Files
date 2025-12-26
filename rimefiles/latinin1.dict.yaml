@@ -4,7 +4,7 @@
 # 『洋蔥』製作
 ---
 name: latinin1
-version: "202210"
+version: "202512"
 sort: by_weight
 use_preset_vocabulary: false
 columns:
@@ -3016,3 +3016,7 @@ $	sy/
 ²	rfh/
 ³	zfh/
 ##### Superscripts and Subscripts結束 #####
+##### 補充奇摩字典音標有的符號開始 #####
+## 下方為希臘文，但在奇摩字典KK和DJ音標中次重音為該符，故收錄
+͵	dpw/
+##### 補充奇摩字典音標有的符號結束 #####
