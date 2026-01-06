@@ -35663,7 +35663,7 @@ min_phrase_weight: 100
 銥	yi1
 銦	yin1
 銧	guang1
-銨	an3	50%
+銨	an3	5%
 銩	diu1
 銪	you3
 銫	se4
@@ -36329,7 +36329,7 @@ min_phrase_weight: 100
 铲	chan3
 铳	chong4
 铴	tang1
-铵	an3	50%
+铵	an3	5%
 银	yin2
 铷	ru2
 铸	zhu4
@@ -36838,7 +36838,7 @@ min_phrase_weight: 100
 隺	hu2
 隺	que4
 隻	zhi1
-隼	sun3
+隼	sun3	5%
 隽	juan4
 隽	jun4
 难	nan2
