@@ -111,6 +111,7 @@
 #    詞句中，「脈」臺灣字典發音為「mai4」「mo4」，「mai4」發音之又音為「mo4」，太容易與其他詞彙相同發音並搞混，其發音「mo4」又為「脈脈」之類詞彙的專屬發音，斟酌後，除卻「mo4」詞彙專屬發音，又音部分不標註「mo4」，只標註臺灣發音「mai4」。
 #    詞句中，「企」臺灣字典發音和習慣發音為「qi4」，大陸發音為「qi3」，斟酌後全改成臺灣發音「qi4」。
 #    詞句中，「胺」臺灣字典發音和習慣發音為「an1」，大陸發音為「an4」，斟酌後全改成臺灣發音「an1」。
+#    詞句中，「銨」臺灣字典發音和習慣發音為「an1」，大陸發音為「an3」，斟酌後全改成臺灣發音「an1」。
 #    詞句中，「銻」臺灣字典發音和習慣發音為「ti4」，大陸發音為「ti1」，斟酌後全改成臺灣發音「ti4」。
 #    詞句中，「氰」臺灣字典發音和習慣發音為「qing1」，大陸發音為「qing2」，斟酌後全改成臺灣發音「qing1」。
 #    詞句中，「危」臺灣字典發音和習慣發音為「wei2」，大陸發音為「wei1」，斟酌後全改成臺灣發音「wei2」。
@@ -154,6 +155,8 @@
 #    詞句中，「珀」日常發音常會誤發為「bo4」，臺灣標準為「po4」，故皆補齊「po4」「bo4」，後者詞頻設為80%。
 #    詞句中，「灸」日常發音常會誤發為「jiu1」，臺灣標準為「jiu3」，故全都補齊「jiu3」「jiu1」，後者詞頻設為80%。
 #    詞句中，「鉻」日常發音常會誤發為「ge2」和「luo4」，臺灣標準為「ge4」，故皆補齊「ge4」「ge2」「luo4」。
+#    詞句中，「蹼」臺灣標準為「pu2」，大陸標準為「pu3」，日常易混，故皆補齊「pu2」「pu3」。
+#    詞句中，「隼」臺灣標準為「zhun3」，大陸標準為「sun3」，日常易混，故皆補齊「zhun3」「sun3」。
 #    詞句中，「貯」臺灣標準為「zhu3」，大陸標準為「zhu4」，日常易混，故皆補齊「zhu3」「zhu4」。
 #    詞句中，「蝸」臺灣標準為「gua1」，大陸標準為「wo1」，日常易混，故皆補齊「gua1」「wo」。
 #    詞句中，「邳」臺灣標準為「pei2」，大陸標準為「pi1」，日常易混，故皆補齊「pei2」「pi1」。
@@ -308,7 +311,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "202512"
+version: "202601"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -3610,6 +3613,8 @@ min_phrase_weight: 100
 錫	ti4	0%
 锡	ti4	0%
 悱	bei1	0%
+葜	qia4
+铵	an1
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -4030,7 +4035,7 @@ min_phrase_weight: 100
 釕	liao4	1%
 釘	ding4	1%
 釙	po4	1%
-隼	zhun3	1%
+隼	zhun3
 髟	shan1	1%
 㖪	yu4	1%
 倏	shu4	1%
@@ -4469,7 +4474,7 @@ min_phrase_weight: 100
 鄘	yong2	1%
 鄙	bi4	1%
 鉺	er4	1%
-銨	an1	1%
+銨	an1
 閩	min2	1%
 雌	ci1	1%
 需	ru2	1%
@@ -4838,7 +4843,7 @@ min_phrase_weight: 100
 蹶	jue3	1%
 蹻	jiao3	1%
 蹻	jue2	1%
-蹼	pu2	1%
+蹼	pu2
 轑	lao2	1%
 邋	la2	1%
 醭	pu2	1%
@@ -35658,7 +35663,7 @@ min_phrase_weight: 100
 銥	yi1
 銦	yin1
 銧	guang1
-銨	an3
+銨	an3	50%
 銩	diu1
 銪	you3
 銫	se4
@@ -36324,7 +36329,7 @@ min_phrase_weight: 100
 铲	chan3
 铳	chong4
 铴	tang1
-铵	an3
+铵	an3	50%
 银	yin2
 铷	ru2
 铸	zhu4
@@ -58389,6 +58394,8 @@ min_phrase_weight: 100
 亂哄哄	luan4 hong1 hong1
 亂嚼舌頭	luan4 jiao2 she2 tou5
 亂嚼舌頭	luan4 jue2 she2 tou5
+亂嚼舌頭	luan4 jiao2 she2 tou2
+亂嚼舌頭	luan4 jue2 she2 tou2
 亂墳崗	luan4 fen2 gang1
 亂子	luan4 zi5
 亂岔岔	luan4 cha4 cha4
@@ -66560,12 +66567,18 @@ min_phrase_weight: 100
 吐絲自縛	tu3 si1 zi4 fu4
 吐綬雞	tu3 shou4 ji1
 吐膽	tu3 dan3
+吐膽	tu4 dan3
 吐膽傾心	tu3 dan3 qing1 xin1
 吐膽傾心	tu3 dan3 qing3 xin1
+吐膽傾心	tu4 dan3 qing1 xin1
+吐膽傾心	tu4 dan3 qing3 xin1
 吐舊容新	tu3 jiu4 rong2 xin1
 吐舌	tu3 she2
+吐舌	tu4 she2
 吐舌頭	tu3 she2 tou5
 吐舌頭	tu3 she2 tou2
+吐舌頭	tu4 she2 tou5
+吐舌頭	tu4 she2 tou2
 吐良	tu3 liang2
 吐艷	tu3 yan4
 吐芳	tu3 fang1
@@ -79810,6 +79823,8 @@ min_phrase_weight: 100
 拉纜子擺渡	la1 lan3 zi5 bai3 du4
 拉老婆舌頭	la1 lao3 po5 she2 tou5
 拉老婆舌頭	la1 lao3 po2 she2 tou5
+拉老婆舌頭	la1 lao3 po5 she2 tou2
+拉老婆舌頭	la1 lao3 po2 she2 tou2
 拉肚子	la1 du4 zi5
 拉脫維亞共和國	la1 tuo1 wei2 ya3 gong4 he2 guo2
 拉脫維亞共和國	la1 tuo1 wei2 ya4 gong4 he2 guo2
@@ -80142,7 +80157,9 @@ min_phrase_weight: 100
 拳頭	quan2 tou5
 拳頭	quan2 tou2
 拳頭上站的人	quan2 tou5 shang4 zhan4 de5 ren2
+拳頭上站的人	quan2 tou2 shang4 zhan4 de5 ren2
 拳頭產品	quan2 tou5 chan3 pin3
+拳頭產品	quan2 tou2 chan3 pin3
 拴娃娃	shuan1 wa2 wa5
 拴娃娃	shuan1 wa2 wa1
 拴娃娃	shuan1 wa2 wa2
@@ -88162,7 +88179,6 @@ min_phrase_weight: 100
 氮血症	dan4 xie3 zheng4
 氮血症	dan4 xue4 zheng4
 氯化銨	lv4 hua4 an1
-氯化銨	lv4 hua4 an3
 氯氣中毒	lv4 qi4 zhong4 du2
 氯絲菌素	lv4 si1 jun4 su4
 氯絲菌素	lv4 si1 jun1 su4
@@ -100062,8 +100078,14 @@ min_phrase_weight: 100
 羅伯遜	luo2 bo2 xun4
 羅切斯特	luo2 qie1 si1 te4
 羅剎	luo2 cha4
+羅剎	luo2 sha4	80%
+羅剎	luo2 sha1
 羅剎國	luo2 cha4 guo2
+羅剎國	luo2 sha4 guo2	80%
+羅剎國	luo2 sha1 guo2
 羅剎女	luo2 cha4 nv3
+羅剎女	luo2 sha4 nv3	80%
+羅剎女	luo2 sha1 nv3
 羅勒	luo2 le4
 羅叉	luo2 cha1
 羅嗦	luo2 suo1
@@ -108753,7 +108775,9 @@ min_phrase_weight: 100
 蹻跖	jiao3 zhi2
 蹻蹻	jiao3 jiao3
 蹼輪汽船	pu2 lun2 qi4 chuan2
+蹼輪汽船	pu3 lun2 qi4 chuan2
 蹼辣	pu2 la4
+蹼辣	pu3 la4
 躁佻	zao4 tiao2
 躁佻	zao4 tiao1
 躉售市場	dun3 shou4 shi4 chang2	3%
@@ -117634,4 +117658,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 117637 #####
+##### @結束 END - 117661 #####
