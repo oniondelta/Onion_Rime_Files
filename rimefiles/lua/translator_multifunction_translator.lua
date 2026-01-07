@@ -1142,7 +1142,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "fs")  or (input == env.prefix .. "fy") then
+  if (input == env.prefix .. "fs") or (input == env.prefix .. "fy") then
     local preedittext = input .. "\t 【現時：年月日】"  --〔年月日〕
     yield_c( os.date("%Y/%m/%d"), "", preedittext)
     -- yield_c( fullshape_number(os.date("%Y")).."/"..fullshape_number(os.date("%m")).."/"..fullshape_number(os.date("%d")), "〔年月日〕", preedittext)
