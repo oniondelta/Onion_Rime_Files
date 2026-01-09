@@ -542,7 +542,12 @@ local function translate(input, seg, env)
   local xd = string.match(input, env.prefix_s .. "(%d%d?)d$")
   -- local y, m, m_suffix = string.match(input, env.prefix_s .. "(%d+)y(%d%d?)(m?)$")
   -- local y, m, d, d_suffix = string.match(input, env.prefix_s .. "(%d+)y(%d%d?)m(%d%d?)(d?)$")
-  local y, m, m_suffix, d, d_suffix  = string.match(input, env.prefix_s .. "(%d+)y(%d%d?)(m?)(%d?%d?)(d?)$")
+  if string.match(input, env.prefix_s .. "%d+y1[3-9]") then
+    y, m, m_suffix, d, d_suffix = string.match(input, env.prefix_s .. "(%d+)y(1)(m?)(%d?%d?)(d?)$")
+  else
+    y, m, m_suffix, d, d_suffix = string.match(input, env.prefix_s .. "(%d+)y([01]?%d)(m?)(%d?%d?)(d?)$")
+  end
+  -- local y, m, m_suffix, d, d_suffix  = string.match(input, env.prefix_s .. "(%d+)y(%d%d?)(m?)(%d?%d?)(d?)$")
   local nm, nd, nd_suffix = string.match(input, env.prefix_s .. "(%d%d?)m(%d%d?)(d?)$")
   ---
   local paren_left_q = string.match(input, env.prefix_s .. "([q(][q(]?)$")
@@ -3082,6 +3087,7 @@ local function translate(input, seg, env)
 
   if y and d=="" and tonumber(m)<13 then
     local preedittext = env.prefix .. " " .. y .. "Y " .. m .. string.upper(m_suffix) .. "\t 【自訂日期：○年○月】"
+    local m = tonumber(m) == 0 and "01" or m  -- 「0」校正，置後於「preedittext」，才不會錯誤顯示。
     yield_c( y .. "年" .. m .. "月", "〔日期〕", preedittext)
     yield_c( " " .. y .. " 年 " .. m .. " 月 ", "〔*日期*〕", preedittext)
     yield_c( fullshape_number(y) .. "年" .. fullshape_number(m) .. "月", "〔全形〕", preedittext)
@@ -3108,6 +3114,8 @@ local function translate(input, seg, env)
   -- end
   elseif y and d~="" and tonumber(m)<13 and tonumber(d)<32 then
     local preedittext = env.prefix .. " " .. y .. "Y " .. m .. "M " .. d .. string.upper(d_suffix) .. "\t 【自訂日期：○年○月○日】"
+    local m = tonumber(m) == 0 and "01" or m  -- 「0」校正，置後於「preedittext」，才不會錯誤顯示。
+    local d = tonumber(d) == 0 and "01" or d  -- 「0」校正，置後於「preedittext」，才不會錯誤顯示。
     yield_c( y .. "年" .. m .. "月" .. d .. "日", "〔日期〕", preedittext)
     yield_c( " " .. y .. " 年 " .. m .. " 月 " .. d .." 日 ", "〔*日期*〕", preedittext)
     yield_c( fullshape_number(y) .. "年" .. fullshape_number(m) .. "月" .. fullshape_number(d) .. "日", "〔全形〕", preedittext)
@@ -3174,6 +3182,8 @@ local function translate(input, seg, env)
   -- if not nm then nm, nd =  string.match(input, env.prefix .. "m(%d%d?)d(%d%d?)$") end
   if nm and tonumber(nm)<13 and tonumber(nd)<32 then
     local preedittext = env.prefix .. " " .. nm .. "M " .. nd .. string.upper(nd_suffix) .. "\t 【自訂日期：○月○日】"
+    local nm = tonumber(nm) == 0 and "01" or nm  -- 「0」校正，置後於「preedittext」，才不會錯誤顯示。
+    local nd = tonumber(nd) == 0 and "01" or nd  -- 「0」校正，置後於「preedittext」，才不會錯誤顯示。
     yield_c( nm .. "月" .. nd .. "日", "〔日期〕", preedittext)
     yield_c( " " .. nm .. " 月 " .. nd .. " 日 ", "〔*日期*〕", preedittext)
     yield_c( fullshape_number(nm) .. "月" .. fullshape_number(nd) .. "日", "〔全形〕", preedittext)
