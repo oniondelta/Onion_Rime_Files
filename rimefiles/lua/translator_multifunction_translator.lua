@@ -446,6 +446,7 @@ local function translate(input, seg, env)
     return
   end
 
+
   -- lua 所佔垃圾/記憶體(Garbage)
   if (input == env.prefix .. "g") then
     local preedittext = input .. "\t 【Lua 所佔記憶體】(Garbage)"
@@ -469,6 +470,7 @@ local function translate(input, seg, env)
     -- yield_c( collectgarbage("count")*1024, "〔 the amount of lua memory after GC 〕")
     return
   end
+
 
   -- lua 程式原生時間
   if (input == env.prefix .. "p") then
@@ -513,183 +515,8 @@ local function translate(input, seg, env)
 -----------------------------
 -----------------------------
 
-  local y, m, d, d_suffix = string.match(input, env.prefix_s .. "(%d+)y(%d%d?)m(%d%d?)(d?)$")
-  -- if not y then y, m, d = string.match(input, env.prefix .. "y(%d+)m(%d%d?)d(%d%d?)$") end
-  if y and tonumber(m)<13 and tonumber(d)<32 then
-    local preedittext = env.prefix .. " " .. y .. "Y " .. m .. "M " .. d .. string.upper(d_suffix) .. "\t 【自訂日期：○年○月○日】"
-    yield_c( y.."年"..m.."月"..d.."日", "〔日期〕", preedittext)
-    yield_c( " "..y.." 年 "..m.." 月 "..d.." 日 ", "〔*日期*〕", preedittext)
-    yield_c( fullshape_number(y).."年"..fullshape_number(m).."月"..fullshape_number(d).."日", "〔全形〕", preedittext)
-    yield_c( ch_y_date(y).."年"..ch_m_date(m).."月"..ch_d_date(d).."日", "〔小寫中文〕", preedittext)
-    yield_c( chb_y_date(y).."年"..chb_m_date(m).."月"..chb_d_date(d).."日", "〔大寫中文〕", preedittext)
-    if (tonumber(y) > 1911) then
-      yield_c( "民國"..min_guo(y).."年"..m.."月"..d.."日", "〔民國〕", preedittext)
-      yield_c( "民國"..purech_number(min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日", "〔民國〕", preedittext)
-      yield_c( "民國"..read_number(confs[1], min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日", "〔民國〕", preedittext)
-    elseif (tonumber(y) <= 1911) then
-      yield_c( "民國前"..min_guo(y).."年"..m.."月"..d.."日", "〔民國〕", preedittext)
-      yield_c( "民國前"..purech_number(min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日", "〔民國〕", preedittext)
-      yield_c( "民國前"..read_number(confs[1], min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日", "〔民國〕", preedittext)
-    end
-    -- yield_c( y.."年 "..jp_m_date(m)..jp_d_date(d), "〔日文日期〕", preedittext)
-    local jpymd2, jp_y2 = jp_ymd(y,m,d)
-    yield_c( jp_y2..m.."月"..d.."日" , "〔日本元号〕", preedittext)
-    yield_c( eng1_m_date(m).." "..eng2_d_date(d)..", "..y, "〔英文美式〕", preedittext)
-    yield_c( eng1_m_date(m).." "..eng3_d_date(d)..", "..y, "〔英文美式〕", preedittext)
-    yield_c( eng2_m_date(m).." "..eng3_d_date(d)..", "..y, "〔英文美式〕", preedittext)
-    yield_c( eng3_m_date(m).." "..eng4_d_date(d).." "..y, "〔英文美式〕", preedittext)
-    yield_c( eng1_m_date(m).." the "..eng1_d_date(d)..", "..y, "〔英文美式〕", preedittext)
-    yield_c( eng2_d_date(d).." "..eng1_m_date(m).." "..y, "〔英文英式〕", preedittext)
-    yield_c( eng3_d_date(d).." "..eng1_m_date(m).." "..y, "〔英文英式〕", preedittext)
-    yield_c( eng2_d_date(d).." "..eng2_m_date(m).." "..y, "〔英文英式〕", preedittext)
-    yield_c( "the "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英文英式〕", preedittext)
-    yield_c( "The "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英文英式〕", preedittext)
-    if tonumber(y) > 1899 and tonumber(y) < 2101 then
-      -- local chinese_date_input = to_chinese_cal_local(os.time({year = y, month = m, day = d, hour = 12}))
-      local ll_1b, ll_2b = Date2LunarDate(y .. string.format("%02d", m) .. string.format("%02d", d))
-      -- if (Date2LunarDate~=nil) then
-      if ll_1b~=nil and ll_2b~=nil then
-        yield_c( ll_1b, "〔西曆→農曆〕", preedittext)
-        yield_c( ll_2b, "〔西曆→農曆〕", preedittext)
-      end
-    end
-    if tonumber(y) > 1901 and tonumber(y) < 2101 then
-      local All_g2, Y_g2, M_g2, D_g2 = lunarJzl(y .. string.format("%02d", m) .. string.format("%02d", d) .. 12)
-      if (All_g2~=nil) then
-        yield_c( Y_g2.."年"..M_g2.."月"..D_g2.."日", "〔西曆→農曆干支〕", preedittext)
-      end
-      local LDD2D = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 0 )
-      local LDD2D_leap_year  = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 1 )
-      -- if (Date2LunarDate~=nil) then
-      if (LDD2D~=nil) then
-        yield_c( LDD2D, "〔農曆→西曆〕", preedittext)
-        yield_c( LDD2D_leap_year, "〔農曆(閏)→西曆〕", preedittext)
-      end
-      -- local chinese_date_input2 = to_chinese_cal(y, m, d)
-      -- if (chinese_date_input2~=nil) then
-      --   yield_c( chinese_date_input2 .. " ", "〔農曆，可能有誤！〕", preedittext)
-      -- end
-    end
-    return
-  end
-
-  local m, d, d_suffix = string.match(input, env.prefix_s .. "(%d%d?)m(%d%d?)(d?)$")
-  -- if not m then m, d =  string.match(input, env.prefix .. "m(%d%d?)d(%d%d?)$") end
-  if m and tonumber(m)<13 and tonumber(d)<32 then
-    local preedittext = env.prefix .. " " .. m .. "M " .. d .. string.upper(d_suffix) .. "\t 【自訂日期：○月○日】"
-    yield_c( m.."月"..d.."日" , "〔日期〕", preedittext)
-    yield_c( " "..m.." 月 "..d.." 日 " , "〔*日期*〕", preedittext)
-    yield_c( fullshape_number(m).."月"..fullshape_number(d).."日" , "〔全形〕", preedittext)
-    yield_c( ch_m_date(m).."月"..ch_d_date(d).."日" , "〔小寫中文〕", preedittext)
-    yield_c( chb_m_date(m).."月"..chb_d_date(d).."日" , "〔大寫中文〕", preedittext)
-    yield_c( jp_m_date(m)..jp_d_date(d), "〔日文〕", preedittext)
-    yield_c( eng1_m_date(m).." "..eng2_d_date(d), "〔英文美式〕", preedittext)
-    yield_c( eng1_m_date(m).." "..eng3_d_date(d), "〔英文美式〕", preedittext)
-    yield_c( eng2_m_date(m).." "..eng3_d_date(d), "〔英文美式〕", preedittext)
-    yield_c( eng3_m_date(m).." "..eng4_d_date(d), "〔英文美式〕", preedittext)
-    yield_c( eng1_m_date(m).." the "..eng1_d_date(d), "〔英文美式〕", preedittext)
-    yield_c( eng2_d_date(d).." "..eng1_m_date(m), "〔英文英式〕", preedittext)
-    yield_c( eng3_d_date(d).." "..eng1_m_date(m), "〔英文英式〕", preedittext)
-    yield_c( eng2_d_date(d).." "..eng2_m_date(m), "〔英文英式〕", preedittext)
-    yield_c( "the "..eng1_d_date(d).." of "..eng1_m_date(m), "〔英文英式〕", preedittext)
-    yield_c( "The "..eng1_d_date(d).." of "..eng1_m_date(m), "〔英文英式〕", preedittext)
-    return
-  end
-
-  local y, m, m_suffix = string.match(input, env.prefix_s .. "(%d+)y(%d%d?)(m?)$")
-  -- if not y then y, m = string.match(input, env.prefix .. "y(%d+)m(%d%d?)$") end
-  if y and tonumber(m)<13 then
-    local preedittext = env.prefix .. " " .. y .. "Y " .. m .. string.upper(m_suffix) .. "\t 【自訂日期：○年○月】"
-    yield_c( y.."年"..m.."月" , "〔日期〕", preedittext)
-    yield_c( " "..y.." 年 "..m.." 月 " , "〔*日期*〕", preedittext)
-    yield_c( fullshape_number(y).."年"..fullshape_number(m).."月" , "〔全形〕", preedittext)
-    yield_c( ch_y_date(y).."年"..ch_m_date(m).."月" , "〔小寫中文〕", preedittext)
-    yield_c( chb_y_date(y).."年"..chb_m_date(m).."月" , "〔大寫中文〕", preedittext)
-    if (tonumber(y) > 1911) then
-      yield_c( "民國"..min_guo(y).."年"..m.."月" , "〔民國〕", preedittext)
-      yield_c( "民國"..purech_number(min_guo(y)).."年"..ch_m_date(m).."月" , "〔民國〕", preedittext)
-      yield_c( "民國"..read_number(confs[1], min_guo(y)).."年"..ch_m_date(m).."月" , "〔民國〕", preedittext)
-    elseif (tonumber(y) <= 1911) then
-      yield_c( "民國前"..min_guo(y).."年"..m.."月" , "〔民國〕", preedittext)
-      yield_c( "民國前"..purech_number(min_guo(y)).."年"..ch_m_date(m).."月" , "〔民國〕", preedittext)
-      yield_c( "民國前"..read_number(confs[1], min_guo(y)).."年"..ch_m_date(m).."月" , "〔民國〕", preedittext)
-    end
-    -- yield_c( y.."年 "..jp_m_date(m), "〔日文日期〕", preedittext)
-    -- local jpymd2, jp_y2 = jp_ymd(y,m,"1")
-    -- yield_c( jp_y2..m.."月" , "〔日本元号〕(沒有日，元号可能有誤)", preedittext)
-    yield_c( eng1_m_date(m)..", "..y, "〔英文 美式/英式〕", preedittext)
-    yield_c( eng2_m_date(m)..", "..y, "〔英文美式〕", preedittext)
-    yield_c( eng3_m_date(m).." "..y, "〔英文美式〕", preedittext)
-    yield_c( eng1_m_date(m).." "..y, "〔英文英式〕", preedittext)
-    yield_c( eng2_m_date(m).." "..y, "〔英文英式〕", preedittext)
-    return
-  end
-
-  local y = string.match(input, env.prefix_s .. "(%d+)y$")
-  -- if not y then y = string.match(input, env.prefix .. "y(%d+)$") end
-  if y then
-    local preedittext = env.prefix .. " " .. y .. "Y" .. "\t 【自訂日期：○年】"
-    yield_c( y.."年" , "〔日期〕", preedittext)
-    yield_c( " "..y.." 年 " , "〔*日期*〕", preedittext)
-    yield_c( fullshape_number(y).."年" , "〔全形〕", preedittext)
-    yield_c( ch_y_date(y).."年" , "〔小寫中文〕", preedittext)
-    yield_c( chb_y_date(y).."年" , "〔大寫中文〕", preedittext)
-    if (tonumber(y) > 1911) then
-      yield_c( "民國"..min_guo(y).."年", "〔民國〕", preedittext)
-      yield_c( "民國"..purech_number(min_guo(y)).."年", "〔民國〕", preedittext)
-      yield_c( "民國"..read_number(confs[1], min_guo(y)).."年", "〔民國〕", preedittext)
-    elseif (tonumber(y) <= 1911) then
-      yield_c( "民國前"..min_guo(y).."年", "〔民國〕", preedittext)
-      yield_c( "民國前"..purech_number(min_guo(y)).."年", "〔民國〕", preedittext)
-      yield_c( "民國前"..read_number(confs[1], min_guo(y)).."年", "〔民國〕", preedittext)
-    end
-    -- yield_c( y.."年 ", "〔日文日期〕", preedittext)
-    -- local jpymd2, jp_y2 = jp_ymd(y,"1","1")
-    -- yield_c( jp_y2 , "〔日本元号〕(沒有月日，元号可能有誤)", preedittext)
-    yield_c( y, "〔英文 美式/英式〕", preedittext)
-
-    return
-  end
-
-  local m = string.match(input, env.prefix_s .. "(%d%d?)m$")
-  -- if not m then m =  string.match(input, env.prefix .. "m(%d%d?)$") end
-  if m and tonumber(m)<13 then
-    local preedittext = env.prefix .. " " .. m .. "M" .. "\t 【自訂日期：○月】"
-    yield_c( m.."月" , "〔日期〕", preedittext)
-    yield_c( " "..m.." 月 " , "〔*日期*〕", preedittext)
-    yield_c( fullshape_number(m).."月" , "〔全形〕", preedittext)
-    yield_c( ch_m_date(m).."月" , "〔小寫中文〕", preedittext)
-    yield_c( chb_m_date(m).."月" , "〔大寫中文〕", preedittext)
-    yield_c( jp_m_date(m), "〔日文日〕", preedittext)
-    yield_c( eng1_m_date(m), "〔英文 美式/英式〕", preedittext)
-    yield_c( eng2_m_date(m), "〔英文 美式/英式〕", preedittext)
-    yield_c( eng3_m_date(m), "〔英文美式〕", preedittext)
-    return
-  end
-
-  local d = string.match(input, env.prefix_s .. "(%d%d?)d$")
-  -- if not d then d =  string.match(input, env.prefix .. "d(%d%d?)$") end
-  if d and tonumber(d)<32 then
-    local preedittext = env.prefix .. " " .. d .. "D" .. "\t 【自訂日期：○日】"
-    yield_c( d.."日" , "〔日期〕", preedittext)
-    yield_c( " "..d.." 日 " , "〔*日期*〕", preedittext)
-    yield_c( fullshape_number(d).."日" , "〔全形〕", preedittext)
-    yield_c( ch_d_date(d).."日" , "〔小寫中文〕", preedittext)
-    yield_c( chb_d_date(d).."日" , "〔大寫中文〕", preedittext)
-    yield_c( jp_d_date(d), "〔日文〕", preedittext)
-    yield_c( eng2_d_date(d), "〔英文 美式/英式〕", preedittext)
-    yield_c( eng3_d_date(d), "〔英文 美式/英式〕", preedittext)
-    yield_c( eng4_d_date(d), "〔英文美式〕", preedittext)
-    yield_c( "the "..eng1_d_date(d), "〔英文 美式/英式〕", preedittext)
-    yield_c( "The "..eng1_d_date(d), "〔英文英式〕", preedittext)
-    return
-  end
-
------------------------------
------------------------------
-
   --- Lua 字符類依賴於本地環境，故'[a-z]'可能與'%l'表示的字符集不同。一般情況下，後者包括'ç'和'ã'，前者沒有。
-  --- 盡量使用後者來表示字母，除非出於某些特殊考慮，因後者更簡單、方便、更高效。
+  --- 承上，盡量使用後者來表示字母，除非出於特殊考慮，因後者更簡單、方便、高效。
   --- goto 和 ::Label:: 之後不要接變數，例：local abc = xxx，易產生錯誤！
   local op_check = string.match(input, env.prefix_s .. "j(%l*)$")
   ---
@@ -710,6 +537,14 @@ local function translate(input, seg, env)
   local utf_input = string.match(input, env.prefix_s .. "([xuco][a-f%d]+)$")
   local urlencode_input = string.match(input, env.prefix_s .. "i([%l%d][a-f%d]*)$")
   ---
+  local xy = string.match(input, env.prefix_s .. "(%d+)y$")
+  local xm = string.match(input, env.prefix_s .. "(%d%d?)m$")
+  local xd = string.match(input, env.prefix_s .. "(%d%d?)d$")
+  -- local y, m, m_suffix = string.match(input, env.prefix_s .. "(%d+)y(%d%d?)(m?)$")
+  -- local y, m, d, d_suffix = string.match(input, env.prefix_s .. "(%d+)y(%d%d?)m(%d%d?)(d?)$")
+  local y, m, m_suffix, d, d_suffix  = string.match(input, env.prefix_s .. "(%d+)y(%d%d?)(m?)(%d?%d?)(d?)$")
+  local nm, nd, nd_suffix = string.match(input, env.prefix_s .. "(%d%d?)m(%d%d?)(d?)$")
+  ---
   local paren_left_q = string.match(input, env.prefix_s .. "([q(][q(]?)$")
   local neg_nf = string.match(input, env.prefix_s .. "[q(]?[q(]?[-r]$")
   local dot = string.match(input, env.prefix_s .. "[q(]?[q(]?%.$")
@@ -720,6 +555,7 @@ local function translate(input, seg, env)
   local neg_n, dot0 ,numberout, dot1, afterdot = string.match(input, env.prefix_s .. "([q(]?[q(]?[-r]?)(%.?)(%d+)(%.?)(%d*)$")
   local cal_input = string.match(input, env.prefix_s .. "([q(]?[q(]?[-r]?[%d.]+[-+*/^asrvxqw()][-+*/^asrvxqw().%d]*)$")
   ---
+  ---
   local num_preedit = string.match(input, env.prefix_s .. "([-rq(.%d]+)$") or ""
   local num_preedit = string.gsub(num_preedit,  "r", "-")
   local num_preedit = string.gsub(num_preedit,  "q", "(")
@@ -729,8 +565,10 @@ local function translate(input, seg, env)
 
   if op_check then
     goto op_check_label
+  ---
   elseif k_key then
     goto k_label
+  ---
   elseif t_key then
     goto t_label
   elseif n_key then
@@ -745,16 +583,29 @@ local function translate(input, seg, env)
     goto m_label
   elseif fh_key then
     goto fh_label
+  ---
   elseif englishout1 then
     goto englishout1_label
   elseif englishout2 then
     goto englishout2_label
   elseif englishout3 then
     goto englishout3_label
+  ---
   elseif utf_input then
     goto utf_input_label
   elseif urlencode_input then
     goto urlencode_input_label
+  ---
+  elseif xy then
+    goto xy_label
+  elseif xm then
+    goto xm_label
+  elseif xd then
+    goto xd_label
+  elseif y then
+    goto ym_ymd_label
+  elseif nm then
+    goto nmnd_label
   ---
   elseif paren_left_q then
     goto paren_left_q_label
@@ -3144,6 +2995,205 @@ local function translate(input, seg, env)
   --   end
   --   return
   -- end
+
+-----------------------------
+-----------------------------
+
+  ::xy_label::
+
+  -- local xy = string.match(input, env.prefix_s .. "(%d+)y$")
+  -- if not xy then xy = string.match(input, env.prefix .. "y(%d+)$") end
+  if xy then
+    local preedittext = env.prefix .. " " .. xy .. "Y" .. "\t 【自訂日期：○年】"
+    yield_c( xy .. "年", "〔日期〕", preedittext)
+    yield_c( " " .. xy .. " 年 ", "〔*日期*〕", preedittext)
+    yield_c( fullshape_number(xy) .. "年", "〔全形〕", preedittext)
+    yield_c( ch_y_date(xy) .. "年", "〔小寫中文〕", preedittext)
+    yield_c( chb_y_date(xy) .. "年", "〔大寫中文〕", preedittext)
+    if (tonumber(xy) > 1911) then
+      yield_c( "民國" .. min_guo(xy) .. "年", "〔民國〕", preedittext)
+      yield_c( "民國" .. purech_number(min_guo(xy)) .. "年", "〔民國〕", preedittext)
+      yield_c( "民國" .. read_number(confs[1], min_guo(xy)) .. "年", "〔民國〕", preedittext)
+    elseif (tonumber(xy) <= 1911) then
+      yield_c( "民國前" .. min_guo(xy) .. "年", "〔民國〕", preedittext)
+      yield_c( "民國前" .. purech_number(min_guo(xy)) .. "年", "〔民國〕", preedittext)
+      yield_c( "民國前" .. read_number(confs[1], min_guo(xy)) .. "年", "〔民國〕", preedittext)
+    end
+    -- yield_c( xy .. "年 ", "〔日文日期〕", preedittext)
+    -- local jpymd2, jp_y2 = jp_ymd(xy, "1", "1")
+    -- yield_c( jp_y2, "〔日本元号〕(沒有月日，元号可能有誤)", preedittext)
+    yield_c( xy, "〔英文 美式/英式〕", preedittext)
+    return
+  end
+
+  ::xm_label::
+
+  -- local xm = string.match(input, env.prefix_s .. "(%d%d?)m$")
+  -- if not xm then xm =  string.match(input, env.prefix .. "m(%d%d?)$") end
+  if xm and tonumber(xm)<13 then
+    local preedittext = env.prefix .. " " .. xm .. "M" .. "\t 【自訂日期：○月】"
+    yield_c( xm .. "月", "〔日期〕", preedittext)
+    yield_c( " " .. xm .. " 月 ", "〔*日期*〕", preedittext)
+    yield_c( fullshape_number(xm) .. "月", "〔全形〕", preedittext)
+    yield_c( ch_m_date(xm) .. "月", "〔小寫中文〕", preedittext)
+    yield_c( chb_m_date(xm) .. "月", "〔大寫中文〕", preedittext)
+    yield_c( jp_m_date(xm), "〔日文日〕", preedittext)
+    yield_c( eng1_m_date(xm), "〔英文 美式/英式〕", preedittext)
+    yield_c( eng2_m_date(xm), "〔英文 美式/英式〕", preedittext)
+    yield_c( eng3_m_date(xm), "〔英文美式〕", preedittext)
+    return
+  elseif xm then  -- 月份大於12跳掉
+    return
+  end
+
+  ::xd_label::
+
+  -- local xd = string.match(input, env.prefix_s .. "(%d%d?)d$")
+  -- if not xd then xd =  string.match(input, env.prefix .. "d(%d%d?)$") end
+  if xd and tonumber(xd)<32 then
+    local preedittext = env.prefix .. " " .. xd .. "D" .. "\t 【自訂日期：○日】"
+    yield_c( xd .. "日", "〔日期〕", preedittext)
+    yield_c( " " .. xd .. " 日 ", "〔*日期*〕", preedittext)
+    yield_c( fullshape_number(xd) .. "日", "〔全形〕", preedittext)
+    yield_c( ch_d_date(xd) .. "日", "〔小寫中文〕", preedittext)
+    yield_c( chb_d_date(xd) .. "日", "〔大寫中文〕", preedittext)
+    yield_c( jp_d_date(xd), "〔日文〕", preedittext)
+    yield_c( eng2_d_date(xd), "〔英文 美式/英式〕", preedittext)
+    yield_c( eng3_d_date(xd), "〔英文 美式/英式〕", preedittext)
+    yield_c( eng4_d_date(xd), "〔英文美式〕", preedittext)
+    yield_c( "the "..eng1_d_date(xd), "〔英文 美式/英式〕", preedittext)
+    yield_c( "The "..eng1_d_date(xd), "〔英文英式〕", preedittext)
+    return
+  elseif xd then  -- 日期大於31跳掉
+    return
+  end
+
+-----------------------------
+
+  ::ym_ymd_label::
+
+  -- local y, m, m_suffix = string.match(input, env.prefix_s .. "(%d+)y(%d%d?)(m?)$")
+  -- if not y then y, m = string.match(input, env.prefix .. "y(%d+)m(%d%d?)$") end
+  -- if y and tonumber(m)<13 then
+
+  -- local y, m, d, d_suffix = string.match(input, env.prefix_s .. "(%d+)y(%d%d?)m(%d%d?)(d?)$")
+  -- if not y then y, m, d = string.match(input, env.prefix .. "y(%d+)m(%d%d?)d(%d%d?)$") end
+  -- if y and tonumber(m)<13 and tonumber(d)<32 then
+
+  if y and d=="" and tonumber(m)<13 then
+    local preedittext = env.prefix .. " " .. y .. "Y " .. m .. string.upper(m_suffix) .. "\t 【自訂日期：○年○月】"
+    yield_c( y .. "年" .. m .. "月", "〔日期〕", preedittext)
+    yield_c( " " .. y .. " 年 " .. m .. " 月 ", "〔*日期*〕", preedittext)
+    yield_c( fullshape_number(y) .. "年" .. fullshape_number(m) .. "月", "〔全形〕", preedittext)
+    yield_c( ch_y_date(y) .. "年" .. ch_m_date(m) .. "月", "〔小寫中文〕", preedittext)
+    yield_c( chb_y_date(y) .. "年" .. chb_m_date(m) .. "月", "〔大寫中文〕", preedittext)
+    if (tonumber(y) > 1911) then
+      yield_c( "民國" .. min_guo(y) .. "年" .. m .. "月", "〔民國〕", preedittext)
+      yield_c( "民國" .. purech_number(min_guo(y)) .. "年" .. ch_m_date(m) .. "月", "〔民國〕", preedittext)
+      yield_c( "民國" .. read_number(confs[1], min_guo(y)) .. "年" .. ch_m_date(m) .. "月", "〔民國〕", preedittext)
+    elseif (tonumber(y) <= 1911) then
+      yield_c( "民國前" .. min_guo(y) .. "年" .. m .. "月", "〔民國〕", preedittext)
+      yield_c( "民國前" .. purech_number(min_guo(y)) .. "年" .. ch_m_date(m) .. "月", "〔民國〕", preedittext)
+      yield_c( "民國前" .. read_number(confs[1], min_guo(y)) .. "年" .. ch_m_date(m) .. "月", "〔民國〕", preedittext)
+    end
+    -- yield_c( y .. "年 " .. jp_m_date(m), "〔日文日期〕", preedittext)
+    -- local jpymd2, jp_y2 = jp_ymd(y, m, "1")
+    -- yield_c( jp_y2 .. m .. "月", "〔日本元号〕(沒有日，元号可能有誤)", preedittext)
+    yield_c( eng1_m_date(m) .. ", " .. y, "〔英文 美式/英式〕", preedittext)
+    yield_c( eng2_m_date(m) .. ", " .. y, "〔英文美式〕", preedittext)
+    yield_c( eng3_m_date(m) .. " " .. y, "〔英文美式〕", preedittext)
+    yield_c( eng1_m_date(m) .. " " .. y, "〔英文英式〕", preedittext)
+    yield_c( eng2_m_date(m) .. " " .. y, "〔英文英式〕", preedittext)
+    return
+  -- end
+  elseif y and d~="" and tonumber(m)<13 and tonumber(d)<32 then
+    local preedittext = env.prefix .. " " .. y .. "Y " .. m .. "M " .. d .. string.upper(d_suffix) .. "\t 【自訂日期：○年○月○日】"
+    yield_c( y .. "年" .. m .. "月" .. d .. "日", "〔日期〕", preedittext)
+    yield_c( " " .. y .. " 年 " .. m .. " 月 " .. d .." 日 ", "〔*日期*〕", preedittext)
+    yield_c( fullshape_number(y) .. "年" .. fullshape_number(m) .. "月" .. fullshape_number(d) .. "日", "〔全形〕", preedittext)
+    yield_c( ch_y_date(y) .. "年" .. ch_m_date(m) .. "月" .. ch_d_date(d) .. "日", "〔小寫中文〕", preedittext)
+    yield_c( chb_y_date(y) .. "年" .. chb_m_date(m) .. "月" .. chb_d_date(d) .. "日", "〔大寫中文〕", preedittext)
+    if (tonumber(y) > 1911) then
+      yield_c( "民國" .. min_guo(y) .. "年" .. m .. "月" .. d .. "日", "〔民國〕", preedittext)
+      yield_c( "民國" .. purech_number(min_guo(y)) .. "年" .. ch_m_date(m) .. "月" .. ch_d_date(d) .. "日", "〔民國〕", preedittext)
+      yield_c( "民國" .. read_number(confs[1], min_guo(y)) .. "年" .. ch_m_date(m) .. "月" .. ch_d_date(d) .. "日", "〔民國〕", preedittext)
+    elseif (tonumber(y) <= 1911) then
+      yield_c( "民國前" .. min_guo(y) .. "年" .. m .. "月" .. d .. "日", "〔民國〕", preedittext)
+      yield_c( "民國前" .. purech_number(min_guo(y)) .. "年" .. ch_m_date(m) .. "月" .. ch_d_date(d) .. "日", "〔民國〕", preedittext)
+      yield_c( "民國前" .. read_number(confs[1], min_guo(y)) .. "年" .. ch_m_date(m) .. "月" .. ch_d_date(d) .. "日", "〔民國〕", preedittext)
+    end
+    -- yield_c( y .. "年 " .. jp_m_date(m) .. jp_d_date(d), "〔日文日期〕", preedittext)
+    local jpymd2, jp_y2 = jp_ymd(y, m, d)
+    yield_c( jp_y2 .. m .. "月" .. d .. "日", "〔日本元号〕", preedittext)
+    yield_c( eng1_m_date(m) .. " " .. eng2_d_date(d) .. ", " .. y, "〔英文美式〕", preedittext)
+    yield_c( eng1_m_date(m) .. " " .. eng3_d_date(d) .. ", " .. y, "〔英文美式〕", preedittext)
+    yield_c( eng2_m_date(m) .. " " .. eng3_d_date(d) .. ", " .. y, "〔英文美式〕", preedittext)
+    yield_c( eng3_m_date(m) .. " " .. eng4_d_date(d) .. " " .. y, "〔英文美式〕", preedittext)
+    yield_c( eng1_m_date(m) .. " the " .. eng1_d_date(d) .. ", " .. y, "〔英文美式〕", preedittext)
+    yield_c( eng2_d_date(d) .. " " .. eng1_m_date(m) .. " " .. y, "〔英文英式〕", preedittext)
+    yield_c( eng3_d_date(d) .. " " .. eng1_m_date(m) .. " " .. y, "〔英文英式〕", preedittext)
+    yield_c( eng2_d_date(d) .. " " .. eng2_m_date(m) .. " " .. y, "〔英文英式〕", preedittext)
+    yield_c( "the " .. eng1_d_date(d) .. " of " .. eng1_m_date(m) .. ", " .. y, "〔英文英式〕", preedittext)
+    yield_c( "The " .. eng1_d_date(d) .. " of " .. eng1_m_date(m) .. ", " .. y, "〔英文英式〕", preedittext)
+    if tonumber(y) > 1899 and tonumber(y) < 2101 then
+      -- local chinese_date_input = to_chinese_cal_local(os.time({year = y, month = m, day = d, hour = 12}))
+      local ll_1b, ll_2b = Date2LunarDate(y .. string.format("%02d", m) .. string.format("%02d", d))
+      -- if (Date2LunarDate~=nil) then
+      if ll_1b~=nil and ll_2b~=nil then
+        yield_c( ll_1b, "〔西曆→農曆〕", preedittext)
+        yield_c( ll_2b, "〔西曆→農曆〕", preedittext)
+      end
+    end
+    if tonumber(y) > 1901 and tonumber(y) < 2101 then
+      local All_g2, Y_g2, M_g2, D_g2 = lunarJzl(y .. string.format("%02d", m) .. string.format("%02d", d) .. 12)
+      if (All_g2~=nil) then
+        yield_c( Y_g2 .. "年" .. M_g2 .. "月" .. D_g2 .. "日", "〔西曆→農曆干支〕", preedittext)
+      end
+      local LDD2D = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 0 )
+      local LDD2D_leap_year = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 1 )
+      -- if (Date2LunarDate~=nil) then
+      if (LDD2D~=nil) then
+        yield_c( LDD2D, "〔農曆→西曆〕", preedittext)
+        yield_c( LDD2D_leap_year, "〔農曆(閏)→西曆〕", preedittext)
+      end
+      -- local chinese_date_input2 = to_chinese_cal(y, m, d)
+      -- if (chinese_date_input2~=nil) then
+      --   yield_c( chinese_date_input2 .. " ", "〔農曆，可能有誤！〕", preedittext)
+      -- end
+    end
+    return
+  elseif y then  -- 月份大於12或日期大於31跳掉
+    return
+  end
+
+-----------------------------
+
+  ::nmnd_label::
+
+  -- local nm, nd, nd_suffix = string.match(input, env.prefix_s .. "(%d%d?)m(%d%d?)(d?)$")
+  -- if not nm then nm, nd =  string.match(input, env.prefix .. "m(%d%d?)d(%d%d?)$") end
+  if nm and tonumber(nm)<13 and tonumber(nd)<32 then
+    local preedittext = env.prefix .. " " .. nm .. "M " .. nd .. string.upper(nd_suffix) .. "\t 【自訂日期：○月○日】"
+    yield_c( nm .. "月" .. nd .. "日", "〔日期〕", preedittext)
+    yield_c( " " .. nm .. " 月 " .. nd .. " 日 ", "〔*日期*〕", preedittext)
+    yield_c( fullshape_number(nm) .. "月" .. fullshape_number(nd) .. "日", "〔全形〕", preedittext)
+    yield_c( ch_m_date(nm) .. "月" .. ch_d_date(nd) .. "日", "〔小寫中文〕", preedittext)
+    yield_c( chb_m_date(nm) .. "月" .. chb_d_date(nd) .. "日", "〔大寫中文〕", preedittext)
+    yield_c( jp_m_date(nm) .. jp_d_date(nd), "〔日文〕", preedittext)
+    yield_c( eng1_m_date(nm) .. " " .. eng2_d_date(nd), "〔英文美式〕", preedittext)
+    yield_c( eng1_m_date(nm) .. " " .. eng3_d_date(nd), "〔英文美式〕", preedittext)
+    yield_c( eng2_m_date(nm) .. " " .. eng3_d_date(nd), "〔英文美式〕", preedittext)
+    yield_c( eng3_m_date(nm) .. " " .. eng4_d_date(nd), "〔英文美式〕", preedittext)
+    yield_c( eng1_m_date(nm) .. " the " .. eng1_d_date(nd), "〔英文美式〕", preedittext)
+    yield_c( eng2_d_date(nd) .. " "..eng1_m_date(nm), "〔英文英式〕", preedittext)
+    yield_c( eng3_d_date(nd) .. " "..eng1_m_date(nm), "〔英文英式〕", preedittext)
+    yield_c( eng2_d_date(nd) .. " "..eng2_m_date(nm), "〔英文英式〕", preedittext)
+    yield_c( "the " .. eng1_d_date(nd) .. " of " .. eng1_m_date(nm), "〔英文英式〕", preedittext)
+    yield_c( "The " .. eng1_d_date(nd) .. " of " .. eng1_m_date(nm), "〔英文英式〕", preedittext)
+    return
+  elseif nm then  -- 月份大於12或日期大於31跳掉
+    return
+  end
 
 -----------------------------
 -----------------------------
