@@ -2952,7 +2952,7 @@ local function translate(input, seg, env)
 
     local is_error = string.match(urlencode_cand, "^〈輸入錯誤〉")
     if is_error then
-    -- if (urlencode_cand == "〈輸入錯誤〉") then
+    -- if urlencode_cand == "〈輸入錯誤〉" then
       -- yield(cand_urlencode_error)
       yield_c( "", urlencode_cand, preedittext)  --字符過濾可能會過濾掉""整個選項。
     elseif urlencode_cand == url_first_word then
