@@ -320,14 +320,14 @@ local function translate(input, seg, env)
   local function yield_c(cand_text, comment, preedit_text)
     comment = comment == nil and "" or comment
     local cand = Candidate("simp_mf", seg.start, seg._end, cand_text, comment)
-    -- cand.preedit = preedit_text == nil and cand.preedit or preedit_text == "" and cand.preedit or preedit_text
-    if preedit_text ~= nil and preedit_text ~= "" then
+    -- cand.preedit = (preedit_text == nil) and cand.preedit or preedit_text == "" and cand.preedit or preedit_text
+    if (preedit_text ~= nil) and (preedit_text ~= "") then
       cand.preedit = preedit_text
     end
     yield(cand)
   end
   -- local yield_c = function(cand_text, comment)
-  --   comment = comment == nil and "" or comment
+  --   comment = (comment == nil) and "" or comment
   --   yield(Candidate("simp_mf", seg.start, seg._end, cand_text, comment))
   -- end
 
@@ -335,7 +335,7 @@ local function translate(input, seg, env)
   local function yield_zp(preedit_text)
     yield_c( "", "── 以下前置補０至２位 ──", preedit_text)
     -- local cand = Candidate("simp_mf", seg.start, seg._end, "", "── 以下前置補０至２位 ──")
-    -- if preedit_text ~= nil and preedit_text ~= "" then
+    -- if (preedit_text ~= nil) and (preedit_text ~= "") then
     --   cand.preedit = preedit_text
     -- end
     -- yield(cand)
@@ -345,7 +345,7 @@ local function translate(input, seg, env)
 -----------------------------
 
 --- 擴充模式 \r\n    日期 (年月日) ~d \r\n    年 ~y  月 ~m  日 ~day \r\n    年月 ~ym  月日 ~md \r\n    時間 (時分) ~n   (時分秒) ~t \r\n    日期時間 (年月日時分) ~dn\r\n    日期時間 (年月日時分秒) ~dt
-  if (input == env.prefix) then
+  if input == env.prefix then
   -- if input:find("^" .. env.prefix .. "$") then
     -- yield_c( "" , "擴充模式")
     -- yield_c( "║　d〔年月日〕┃   ym〔年月〕┃　md〔月日〕║" , "")
@@ -370,42 +370,42 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "/") then
+  if input == env.prefix .. "/" then
     yield_c( "", "  ~ [a-z]+〔小寫字母〕", input .. "\t 【小寫字母】▶")
     return
   end
 
-  if (input == env.prefix .. ";") then
+  if input == env.prefix .. ";" then
     yield_c( "", "  ~ [a-z]+〔大寫字母〕", input .. "\t 【大寫字母】▶")
     return
   end
 
-  if (input == env.prefix .. "\'") then
+  if input == env.prefix .. "\'" then
     yield_c( "", "  ~ [a-z]+〔開頭大寫字母〕", input .. "\t 【開頭大寫字母】▶")
     return
   end
 
-  if (input == env.prefix .. "x") then
+  if input == env.prefix .. "x" then
     yield_c( "", "  ~ [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)", input .. "\t 【內碼十六進制】▶")
     return
   end
 
-  if (input == env.prefix .. "u") then
+  if input == env.prefix .. "u" then
     yield_c( "", "  ~ [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)", input .. "\t 【內碼十六進制】▶")
     return
   end
 
-  if (input == env.prefix .. "c") then
+  if input == env.prefix .. "c" then
     yield_c( "", "  ~ [0-9]+〔內碼十進制 Dec〕", input .. "\t 【內碼十進制】▶")
     return
   end
 
-  if (input == env.prefix .. "o") then
+  if input == env.prefix .. "o" then
     yield_c( "", "  ~ [0-7]+〔內碼八進制 Oct〕", input .. "\t 【內碼八進制】▶")
     return
   end
 
-  if (input == env.prefix .. "i") then
+  if input == env.prefix .. "i" then
     yield_c( "", "  ~ [0-9a-f]+〔Percent/URL encoding〕", input .. "\t 【Percent/URL encoding】▶")
     return
   end
@@ -415,15 +415,15 @@ local function translate(input, seg, env)
   -- local bopomo_onion_double = string.match( env.schema_id, "^bopomo_onion_double")
   -- local onion_array30 = string.match( env.schema_id, "^onion[-]array30")
   -- if (input == env.prefix .. "a") and (bopomo_onion_double or onion_array30) then
-  if env.schema_id == "onion-array30" and (input == env.prefix .. "a" or input == env.prefix .. ",") then
-  -- if env.prefix == "`" and (input == env.prefix .. "a" or input == env.prefix .. ",") then
+  if (env.schema_id == "onion-array30") and (input == env.prefix .. "a" or input == env.prefix .. ",") then
+  -- if (env.prefix == "`") and (input == env.prefix .. "a" or input == env.prefix .. ",") then
     yield_c( "", "〔無短語功能〕", input .. "\t 【短語總列表】")
     return
   end
 
 
   -- 版本資訊
-  if (input == env.prefix .. "v") then
+  if input == env.prefix .. "v" then
     local preedittext = input .. "\t 【版本資訊】"
     yield_c( Ver_info(env)[1], "〔 介面 名稱和版本 〕", preedittext)  -- 〔 distribution_version 〕
     yield_c( Ver_info(env)[2], "〔 librime / rime 版本 〕", preedittext)  -- 〔 rime_version 〕
@@ -437,7 +437,7 @@ local function translate(input, seg, env)
   end
 
   -- 資料夾路徑
-  if (input == env.prefix .. "vf") then
+  if input == env.prefix .. "vf" then
     local preedittext = input .. "\t 【資料夾路徑】"
     -- yield_c( "", " ═════ 資料夾 ═════  ", preedittext)
     yield_c( Ver_info(env)[6], "〔 用戶資料夾 〕", preedittext)  -- 〔user_data_dir〕
@@ -448,7 +448,7 @@ local function translate(input, seg, env)
 
 
   -- lua 所佔垃圾/記憶體(Garbage)
-  if (input == env.prefix .. "g") then
+  if input == env.prefix .. "g" then
     local preedittext = input .. "\t 【Lua 所佔記憶體】(Garbage)"
     yield_c( ("%.f"):format(collectgarbage("count")) .." KB", "〔 the amount of Lua memory 〕 ~c", preedittext)
     -- yield_c( "", " ~c 〔垃圾回收〕(Garbage Collection)", preedittext)
@@ -456,7 +456,7 @@ local function translate(input, seg, env)
   end
 
   -- 垃圾回收器(Garbage Collection)
-  if (input == env.prefix .. "gc") then
+  if input == env.prefix .. "gc" then
     local preedittext = input .. "\t 【垃圾回收】(Garbage Collection)"
     yield_c( ("%.f"):format(collectgarbage("count")) .." KB", "〔 the amount of Lua memory before GC 〕", preedittext)
     -- yield_c( ("%.f"):format(collectgarbage("count")*1024) .." Bytes", "〔 the amount of lua memory before GC 〕")
@@ -473,14 +473,14 @@ local function translate(input, seg, env)
 
 
   -- lua 程式原生時間
-  if (input == env.prefix .. "p") then
+  if input == env.prefix .. "p" then
     local preedittext = input .. "\t 【程式格式】"
     yield_c( os.date(), "〔 os.date() 〕", preedittext)
     yield_c( os.time(), "〔 os.time()，當前距 1970.1.1.08:00 秒數〕", preedittext)
     return
   end
 
-  if (input == env.prefix .. "z") then
+  if input == env.prefix .. "z" then
     local preedittext = input .. "\t 【時區】"
     -- local tz, tzd = timezone_out()
     yield_c( timezone_out()[1], "〔世界協調時間〕", preedittext)
@@ -489,7 +489,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "l") then
+  if input == env.prefix .. "l" then
     local preedittext = input .. "\t 【月相】"
     -- local Moonshape, Moonangle = Moonphase_out1()
     yield_c( Moonphase_out1()[1], Moonphase_out1()[2], preedittext)
@@ -498,7 +498,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "s") then
+  if input == env.prefix .. "s" then
     local preedittext = input .. "\t 【節氣】"
     local jq_1, jq_2, jq_3 ,jq_4 = jieqi_out1()
     yield_c( jq_1, jq_2, preedittext)
@@ -538,17 +538,31 @@ local function translate(input, seg, env)
   local urlencode_input = string.match(input, env.prefix_s .. "i([%l%d][a-f%d]*)$")
   ---
   local xy = string.match(input, env.prefix_s .. "(%d+)y$")
-  local xm = string.match(input, env.prefix_s .. "(%d%d?)m$")
-  local xd = string.match(input, env.prefix_s .. "(%d%d?)d$")
+  local xm = string.match(input, env.prefix_s .. "(%d+)m$")
+  local xd = string.match(input, env.prefix_s .. "(%d+)d$")
+  -- local xm = string.match(input, env.prefix_s .. "(%d%d?)m$")
+  -- local xd = string.match(input, env.prefix_s .. "(%d%d?)d$")
+  if string.match(input, env.prefix_s .. "%d+y1[3-9]") then
+    y, m, m_suffix, d, d_suffix = string.match(input, env.prefix_s .. "(%d+)y(1)(m?)(%d?*)(d?)$")  -- 後面可接無限數字，但顯示〈輸入錯誤〉。
+    -- y, m, m_suffix, d, d_suffix = string.match(input, env.prefix_s .. "(%d+)y(1)(m?)(%d?%d?)(d?)$")
+    -- tonumber_y = tonumber(y)
+    -- tonumber_m = tonumber(m)
+    -- tonumber_d = tonumber(d)
+  else
+    y, m, m_suffix, d, d_suffix = string.match(input, env.prefix_s .. "(%d+)y([01]?%d)(m?)(%d*)(d?)$")  -- 後面可接無限數字，但顯示〈輸入錯誤〉。
+    -- y, m, m_suffix, d, d_suffix = string.match(input, env.prefix_s .. "(%d+)y([01]?%d)(m?)(%d?%d?)(d?)$")
+    -- tonumber_y = tonumber(y)
+    -- tonumber_m = tonumber(m)
+    -- tonumber_d = tonumber(d)
+  end
   -- local y, m, m_suffix = string.match(input, env.prefix_s .. "(%d+)y(%d%d?)(m?)$")
   -- local y, m, d, d_suffix = string.match(input, env.prefix_s .. "(%d+)y(%d%d?)m(%d%d?)(d?)$")
-  if string.match(input, env.prefix_s .. "%d+y1[3-9]") then
-    y, m, m_suffix, d, d_suffix = string.match(input, env.prefix_s .. "(%d+)y(1)(m?)(%d?%d?)(d?)$")
-  else
-    y, m, m_suffix, d, d_suffix = string.match(input, env.prefix_s .. "(%d+)y([01]?%d)(m?)(%d?%d?)(d?)$")
-  end
-  -- local y, m, m_suffix, d, d_suffix  = string.match(input, env.prefix_s .. "(%d+)y(%d%d?)(m?)(%d?%d?)(d?)$")
-  local nm, nd, nd_suffix = string.match(input, env.prefix_s .. "(%d%d?)m(%d%d?)(d?)$")
+  --- 下面一行，把上兩行合併成一行，但沒判別「y1[3-9]」等容錯功能，故不採用。
+  -- local y, m, m_suffix, d, d_suffix = string.match(input, env.prefix_s .. "(%d+)y(%d%d?)(m?)(%d?%d?)(d?)$")
+  --- 下面一行，匹配到時，不知為何？只有開頭「y」不為 nil，其餘變數皆為 nil。
+  -- local y, m, m_suffix, d, d_suffix = string.match(input, env.prefix_s .. "%d+y1[3-9]") and string.match(input, env.prefix_s .. "(%d+)y(1)(m?)(%d?*)(d?)$") or string.match(input, env.prefix_s .. "(%d+)y([01]?%d)(m?)(%d*)(d?)$")
+  local nm, nd, nd_suffix = string.match(input, env.prefix_s .. "(%d%d?)m(%d+)(d?)$")
+  -- local nm, nd, nd_suffix = string.match(input, env.prefix_s .. "(%d%d?)m(%d%d?)(d?)$")
   ---
   local paren_left_q = string.match(input, env.prefix_s .. "([q(][q(]?)$")
   local neg_nf = string.match(input, env.prefix_s .. "[q(]?[q(]?[-r]$")
@@ -638,7 +652,7 @@ local function translate(input, seg, env)
   ::op_check_label::
 
   -- 快捷開啟（開啟檔案/程式/網站）
-  if (input == env.prefix .. "j") then
+  if input == env.prefix .. "j" then
     -- local keys_table = {
     --     { "⓿", "※ 限起始輸入，限英文 [a-z]+  " }  -- ≤ 2
     --   , { "❶", "※ 編輯後須「重新部署」生效  " }  --  "────────────  "
@@ -675,26 +689,26 @@ local function translate(input, seg, env)
   -- op_check 先避免影響各種字母形式之功能
   -- local op_check = not string.match(input, env.prefix .. "['/;]") and string.match(input, env.prefix .. "j([a-z]+)$")
   -- local op_check = string.match(input, env.prefix_s .. "j([a-z]+)$")
-  -- local first_check = input~=nil and caret_pos - #input or 1
-  -- if op_check and first_check ~= 0 then
-  if op_check and seg.start ~= 0 then
+  -- local first_check = (input ~= nil) and (caret_pos - #input) or 1
+  -- if op_check and (first_check ~= 0) then
+  if op_check and (seg.start ~= 0) then
       yield_c( "", "〔非起始輸入〕", env.prefix .. "j " .. string.upper(op_check) .. "\t 【快捷開啟】")
     return
-  elseif op_check and #context.input ~= seg._end then
+  elseif op_check and (#context.input ~= seg._end) then
     yield_c( "", "〔光標非末尾狀態〕")
     -- yield_c( "", "〔光標非末尾狀態〕", env.prefix .. "j " .. string.upper(op_check) .. "\t 【快捷開啟】")  --光標非末尾狀態，此條無效，故關閉
   elseif op_check == "t" then
     yield_c( "", "〘 編輯 快捷開啟 table 〙", env.prefix .. "j " .. string.upper(op_check) .. "\t 【快捷開啟】")  -- or〔錯誤〕
     return
-  -- elseif op_check == "c" and env.prefix == "`" then
-  elseif op_check == "c" and env.schema_id == "onion-array30" then
+  -- elseif (op_check == "c") and (env.prefix == "`") then
+  elseif (op_check == "c") and (env.schema_id == "onion-array30") then
     yield_c( "", "〔無短語功能〕", env.prefix .. "j " .. string.upper(op_check) .. "\t 【快捷開啟】")  -- or〔錯誤〕
     return
   elseif op_check == "c" then
     yield_c( "", "〘 編輯 custom 短語 〙", env.prefix .. "j " .. string.upper(op_check) .. "\t 【快捷開啟】")  -- or〔錯誤〕
     return
-  -- elseif op_check and first_check == 0 then
-  elseif op_check and seg.start == 0 then
+  -- elseif op_check and (first_check == 0) then
+  elseif op_check and (seg.start == 0) then
     local run_in = run_pattern[ op_check ]
     if run_in ~= nil then
       if run_in.name ~= nil then
@@ -716,8 +730,8 @@ local function translate(input, seg, env)
   -- elseif op_check == "fc" then
   --   yield_c( "", "〔無短語功能〕", env.prefix .. "j " .. op_check .. "\t 【快捷開啟】")  -- or〔錯誤〕
   --   return
-  -- elseif op_check and first_check == 0 then
-  -- -- if (input == env.prefix .. "opp" ) then
+  -- elseif op_check and (first_check == 0) then
+  -- -- if input == env.prefix .. "opp" then
   --   yield_c( "", "〔無此開啟碼〕", env.prefix .. "j " .. op_check .. "\t 【快捷開啟】")  -- or〔錯誤〕
   --   return
   end
@@ -727,7 +741,7 @@ local function translate(input, seg, env)
   ::k_label::
 
   -- 鍵位編碼說明
-  if (input == env.prefix .. "k") then
+  if input == env.prefix .. "k" then
     local keys_table = {
         { "⓵", "  ~k 〔快捷鍵 說明〕" }
       , { "⓶", "  ~o 〔操作鍵 說明〕" }
@@ -749,7 +763,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "ko") then
+  if input == env.prefix .. "ko" then
     -- local keys_table = hotkeys(env.schema_id)[1]
     -- for k, v in ipairs(keys_table) do
     for k, v in ipairs(hotkeys(env.schema_id)[1]) do
@@ -758,7 +772,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "kk") then
+  if input == env.prefix .. "kk" then
     -- local keys_table = hotkeys(env.schema_id)[2]
     -- for k, v in ipairs(keys_table) do
     for k, v in ipairs(hotkeys(env.schema_id)[2]) do
@@ -767,7 +781,7 @@ local function translate(input, seg, env)
     return
   end
 
-  -- if (input == env.prefix .. "kk") then
+  -- if input == env.prefix .. "kk" then
   --   local keys_table = {
   --       { "  h〔韓文 HNC 鍵位〕", "⁰" }
   --     , { "  s〔韓文 洋蔥形碼 鍵位〕", "¹" }
@@ -778,7 +792,7 @@ local function translate(input, seg, env)
   --   return
   -- end
 
-  if (input == env.prefix .. "kh") then
+  if input == env.prefix .. "kh" then
     local keys_table = kh_table
     for k, v in ipairs(keys_table) do
       yield_c( v[1], " " .. v[2], env.prefix .. "k H" .. "\t 【韓文 HNC 編碼】" )
@@ -786,7 +800,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "ks") then
+  if input == env.prefix .. "ks" then
     local keys_table = ks_table
     for k, v in ipairs(keys_table) do
       yield_c( v[1], " " .. v[2], env.prefix .. "k S" .. "\t 【韓文 洋蔥形碼 編碼】")
@@ -794,7 +808,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "kj") then
+  if input == env.prefix .. "kj" then
     local keys_table = kj_table
     for k, v in ipairs(keys_table) do
       yield_c( v[1], " " .. v[2], env.prefix .. "k J" .. "\t 【日文 羅馬字 編碼】" )
@@ -802,7 +816,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "ki") then
+  if input == env.prefix .. "ki" then
     local keys_table = ki_table
     for k, v in ipairs(keys_table) do
       yield_c( v[1], " " .. v[2], env.prefix .. "k I" .. "\t 【拉丁 洋蔥形碼 IPA國際音標 編碼】")
@@ -810,7 +824,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "kp") then
+  if input == env.prefix .. "kp" then
     local keys_table = kp_table
     for k, v in ipairs(keys_table) do
       yield_c( v[1], " " .. v[2], env.prefix .. "k P" .. "\t 【拉丁 洋蔥形碼 KK/DJ/IPA音標 編碼】")
@@ -818,7 +832,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "ky") then
+  if input == env.prefix .. "ky" then
     local keys_table = ky_table
     for k, v in ipairs(keys_table) do
       yield_c( v[1], " " .. v[2], env.prefix .. "k Y" .. "\t 【拉丁 洋蔥形碼 中文拼音 編碼】")
@@ -826,7 +840,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "kg") then
+  if input == env.prefix .. "kg" then
     local keys_table = kg_table
     for k, v in ipairs(keys_table) do
       yield_c( v[1], " " .. v[2], env.prefix .. "k G" .. "\t 【希臘 洋蔥形碼 編碼】")
@@ -834,7 +848,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "kc") then
+  if input == env.prefix .. "kc" then
     local keys_table = kc_table
     for k, v in ipairs(keys_table) do
       yield_c( v[1], " " .. v[2], env.prefix .. "k C" .. "\t 【西里爾 洋蔥形碼 編碼】")
@@ -842,7 +856,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "kn") then
+  if input == env.prefix .. "kn" then
     -- local keys_table = numberkeys(env.schema_id)
     -- for k, v in ipairs(keys_table) do
     for k, v in ipairs(numberkeys(env.schema_id)) do
@@ -856,7 +870,7 @@ local function translate(input, seg, env)
   ::t_label::
 
   -- Candidate(type, start, end, text, comment)
-  if (input == env.prefix .. "t") then
+  if input == env.prefix .. "t" then
     local t_I, t_H, t_M, t_S = os.date("%I"), os.date("%H"), os.date("%M"), os.date("%S")
     local time_out1_6 = time_out1()[6]
     local time_out2_7 = time_out2()[7]
@@ -877,7 +891,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "ts") then
+  if input == env.prefix .. "ts" then
     local t_I, t_M, t_S = os.date("%I"), os.date("%M"), os.date("%S")
     local time_out2_7 = time_out2()[7]
     local time_out2_5 = time_out2()[5]
@@ -894,7 +908,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "tw") then
+  if input == env.prefix .. "tw" then
     local t_I, t_M, t_S = os.date("%I"), os.date("%M"), os.date("%S")
     local time_out2_3 = time_out2()[3]
     local time_out2_4 = time_out2()[4]
@@ -915,7 +929,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "tu") then
+  if input == env.prefix .. "tu" then
     local t_I, t_M, t_S = os.date("%I"), os.date("%M"), os.date("%S")
     local time_out2_5 = time_out2()[5]
     local preedittext = input .. "\t 【現時：時分秒】"  --〔時:分:秒〕
@@ -927,7 +941,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "td") then
+  if input == env.prefix .. "td" then
     local t_H, t_M, t_S = os.date("%H"), os.date("%M"), os.date("%S")
     local check_number_format = string.match(t_H, "^0")
     local preedittext = input .. "\t 【現時：時分秒】"  --〔時:分:秒〕
@@ -941,7 +955,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "tm") then
+  if input == env.prefix .. "tm" then
     local t_I = os.date("%I")
     local time_out1_6 = time_out1()[6]
     local time_out1_8 = time_out1()[8]
@@ -968,7 +982,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "tc") then
+  if input == env.prefix .. "tc" then
     local t_H, t_M, t_S = os.date("%H"), os.date("%M"), os.date("%S")
     local check_number_format = string.match(t_H, "^0") or string.match(t_M, "^0") or string.match(t_S, "^0")
     local preedittext = input .. "\t 【現時：時分秒】"  --〔時:分:秒〕
@@ -986,7 +1000,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "tz") then
+  if input == env.prefix .. "tz" then
     local t_H, t_M, t_S = os.date("%H"), os.date("%M"), os.date("%S")
     local preedittext = input .. "\t 【現時：時分秒】"  --〔時:分:秒〕
     yield_c( ch_h_date(t_H).."時"..ch_minsec_date(t_M).."分"..ch_minsec_date(t_S).."秒", "", preedittext)
@@ -996,7 +1010,7 @@ local function translate(input, seg, env)
     return
   end
 
-  -- if (input == env.prefix .. "tm") then
+  -- if input == env.prefix .. "tm" then
   --   yield_c( os.date("%H:%M"), "〔時:分〕")
   --   return
   -- end
@@ -1005,7 +1019,7 @@ local function translate(input, seg, env)
 
   ::n_label::
 
-  if (input == env.prefix .. "n") then
+  if input == env.prefix .. "n" then
     local t_I, t_H, t_M = os.date("%I"), os.date("%H"), os.date("%M")
     local os_time = os.time()
     local time_out1_2 = time_out1()[2]
@@ -1029,7 +1043,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "ns") then
+  if input == env.prefix .. "ns" then
     local t_I, t_M = os.date("%I"), os.date("%M")
     local time_out2_6 = time_out2()[6]
     local time_out2_5 = time_out2()[5]
@@ -1046,7 +1060,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "nw") then
+  if input == env.prefix .. "nw" then
     local t_I, t_M = os.date("%I"), os.date("%M")
     local time_out2_1 = time_out2()[1]
     local time_out2_2 = time_out2()[2]
@@ -1067,7 +1081,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "nu") then
+  if input == env.prefix .. "nu" then
     local t_I, t_M = os.date("%I"), os.date("%M")
     local time_out2_5 = time_out2()[5]
     local preedittext = input .. "\t 【現時：時分】"  --〔時:分〕
@@ -1079,7 +1093,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "nd") then
+  if input == env.prefix .. "nd" then
     local t_H, t_M = os.date("%H"), os.date("%M")
     local check_number_format = string.match(t_H, "^0")
     local preedittext = input .. "\t 【現時：時分】"  --〔時:分〕
@@ -1093,7 +1107,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "nm") then
+  if input == env.prefix .. "nm" then
     local t_I = os.date("%I")
     local time_out1_2 = time_out1()[2]
     local time_out1_4 = time_out1()[4]
@@ -1120,7 +1134,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "nc") then
+  if input == env.prefix .. "nc" then
     local t_H, t_M = os.date("%H"), os.date("%M")
     local check_number_format = string.match(t_H, "^0") or string.match(t_M, "^0")
     local preedittext = input .. "\t 【現時：時分】"  --〔時:分〕
@@ -1138,7 +1152,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "nz") then
+  if input == env.prefix .. "nz" then
     local t_H, t_M = os.date("%H"), os.date("%M")
     local preedittext = input .. "\t 【現時：時分】"  --〔時:分〕
     yield_c( ch_h_date(t_H).."時"..ch_minsec_date(t_M).."分", "", preedittext)
@@ -1148,7 +1162,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "nl") then
+  if input == env.prefix .. "nl" then
     local t_Y, t_m, t_d = os.date("%Y"), os.date("%m"), os.date("%d")
     local t_H = os.date("%H")
     local os_time = os.time()
@@ -1161,7 +1175,7 @@ local function translate(input, seg, env)
     return
   end
 
-  -- if (input == env.prefix .. "ns") then
+  -- if input == env.prefix .. "ns" then
   --   yield_c( os.date("%H:%M:%S"), "〔時:分:秒〕")
   --   return
   -- end
@@ -1170,7 +1184,7 @@ local function translate(input, seg, env)
 
   ::d_label::
 
-  if (input == env.prefix .. "d") then
+  if input == env.prefix .. "d" then
     local preedittext = input .. "\t 【現時：日】"
     yield_c( os.date("%d"), " ~d   ~o", preedittext)
     yield_c( string.gsub(os.date("%d日"), "^0", ""), "〔日期〕 ~c", preedittext)
@@ -1185,7 +1199,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "dl") then
+  if input == env.prefix .. "dl" then
     local preedittext = input .. "\t 【現時：日】"
     -- local a, b, y, m, chinese_d = to_chinese_cal_local(os.time())
     local a, b, c, d, e, ld = Date2LunarDate(os.date("%Y%m%d"))
@@ -1195,7 +1209,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "da") then
+  if input == env.prefix .. "da" then
     local preedittext = input .. "\t 【現時：日】"  --〔日〕〔*日*〕
     yield_c( "the "..eng1_d_date(os.date("%d")), "〔英文全寫〕", preedittext)
     yield_c( " the "..eng1_d_date(os.date("%d")).." ", "〔*英文全寫*〕", preedittext)
@@ -1204,7 +1218,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "de") then
+  if input == env.prefix .. "de" then
     local preedittext = input .. "\t 【現時：日】"  --〔日〕〔*日*〕
     yield_c( eng2_d_date(os.date("%d")), "〔英文英數〕", preedittext)
     yield_c( " "..eng2_d_date(os.date("%d")).." ", "〔*英文英數*〕", preedittext)
@@ -1214,13 +1228,13 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "dj") then
+  if input == env.prefix .. "dj" then
     local preedittext = input .. "\t 【現時：日】"
     yield_c( jp_d_date(os.date("%d")), "〔日本格式〕", preedittext)
     return
   end
 
-  if (input == env.prefix .. "dc") then
+  if input == env.prefix .. "dc" then
     local preedittext = input .. "\t 【現時：日】"  --〔日〕〔*日*〕
     yield_c( string.gsub(os.date("%d日"), "^0", ""), "〔日期〕", preedittext)
     yield_c( string.gsub(os.date(" %d 日"), "([ ])0", "%1"), "〔*日期〕", preedittext)
@@ -1242,7 +1256,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "dz") then
+  if input == env.prefix .. "dz" then
     local preedittext = input .. "\t 【現時：日】"
     yield_c( rqzdx1(3), "〔中數〕", preedittext)
     yield_c( rqzdx2(3), "〔中數〕", preedittext)
@@ -1254,7 +1268,7 @@ local function translate(input, seg, env)
   ::w_label::
 
 -- function week_translator0(input, seg)
-  if (input == env.prefix .. "w") then
+  if input == env.prefix .. "w" then
     local preedittext = input .. "\t 【現時：週】"  --〔週〕
     yield_c( "星期"..weekstyle()[1], "〔日期〕 ~c", preedittext)
     yield_c( "週"..weekstyle()[1], "〔中文〕 ~z", preedittext)
@@ -1264,14 +1278,14 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "wa") then
+  if input == env.prefix .. "wa" then
     local preedittext = input .. "\t 【現時：週】"  --〔週〕〔*週*〕
     yield_c( weekstyle()[6], "〔英文全寫〕", preedittext)
     yield_c( " "..weekstyle()[6].." ", "〔*英文全寫*〕", preedittext)
     return
   end
 
-  if (input == env.prefix .. "we") then
+  if input == env.prefix .. "we" then
     local preedittext = input .. "\t 【現時：週】"  --〔週〕〔*週*〕
     yield_c( weekstyle()[7], "〔英文縮寫〕", preedittext)
     yield_c( " "..weekstyle()[7].." ", "〔*英文縮寫*〕", preedittext)
@@ -1280,7 +1294,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "wc") then
+  if input == env.prefix .. "wc" then
     local preedittext = input .. "\t 【現時：週】"  --〔週〕〔*週*〕
     yield_c( "星期"..weekstyle()[1], "〔日期〕", preedittext)
     yield_c( " ".."星期"..weekstyle()[1].." ", "〔*日期*〕", preedittext)
@@ -1291,7 +1305,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "wz") then
+  if input == env.prefix .. "wz" then
     local preedittext = input .. "\t 【現時：週】"  --〔週〕〔*週*〕
     yield_c( "週"..weekstyle()[1], "〔中文〕", preedittext)
     yield_c( " ".."週"..weekstyle()[1].." ", "〔*中文*〕", preedittext)
@@ -1302,7 +1316,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "wj") then
+  if input == env.prefix .. "wj" then
     local preedittext = input .. "\t 【現時：週】"  --〔週〕〔*週*〕
     yield_c( weekstyle()[5].."曜日", "〔日本格式〕", preedittext)
     yield_c( " "..weekstyle()[5].."曜日 ", "〔*日本格式*〕", preedittext)
@@ -1323,7 +1337,7 @@ local function translate(input, seg, env)
 
   ::y_label::
 
-  if (input == env.prefix .. "y") then
+  if input == env.prefix .. "y" then
     local preedittext = input .. "\t 【現時：年】"  --〔年〕
     yield_c( os.date("%Y"), " ~d   ~o", preedittext)
     yield_c( os.date("%Y年"), "〔日期〕 ~c", preedittext)
@@ -1339,7 +1353,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "yj") then
+  if input == env.prefix .. "yj" then
     local preedittext = input .. "\t 【現時：年】"
     local jpymd, jp_y = jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))
     yield_c( jp_y, "〔日本元号〕", preedittext)
@@ -1347,7 +1361,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "yh") then
+  if input == env.prefix .. "yh" then
     local preedittext = input .. "\t 【現時：年】"
     yield_c( "民國"..min_guo(os.date("%Y")).."年", "〔民國〕", preedittext)
     yield_c( "民國 "..min_guo(os.date("%Y")).." 年", "〔民國*〕", preedittext)
@@ -1355,7 +1369,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "yg") then
+  if input == env.prefix .. "yg" then
     local preedittext = input .. "\t 【現時：年】"
     yield_c( "民國"..purech_number(min_guo(os.date("%Y"))).."年", "〔民國中數〕", preedittext)
     yield_c( "民國"..read_number(confs[1], min_guo(os.date("%Y"))).."年", "〔民國中數〕", preedittext)
@@ -1363,7 +1377,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "yl") then
+  if input == env.prefix .. "yl" then
     local preedittext = input .. "\t 【現時：年】"
     -- local a, b, chinese_y = to_chinese_cal_local(os.time())
     local a, b, ly_1, ly_2, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
@@ -1374,7 +1388,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "yc") then
+  if input == env.prefix .. "yc" then
     local preedittext = input .. "\t 【現時：年】"  --〔年〕
     yield_c( os.date("%Y年"), "〔日期〕", preedittext)
     yield_c( os.date(" %Y 年"), "〔*日期〕", preedittext)
@@ -1389,7 +1403,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "yz") then
+  if input == env.prefix .. "yz" then
     local preedittext = input .. "\t 【現時：年】"
     yield_c( rqzdx1(1), "〔中數〕", preedittext)
     yield_c( rqzdx2(1), "〔中數〕", preedittext)
@@ -1397,7 +1411,7 @@ local function translate(input, seg, env)
   end
 
 
-  if (input == env.prefix .. "ym") then
+  if input == env.prefix .. "ym" then
     local preedittext = input .. "\t 【現時：年月】"  --〔年月〕
     yield_c( os.date("%Y%m"), " ~d   ~o", preedittext)
     yield_c( os.date("%Y.%m"), " ~p   ~q", preedittext)
@@ -1419,7 +1433,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "ymj") then
+  if input == env.prefix .. "ymj" then
     local preedittext = input .. "\t 【現時：年月】"
     local jpymd, jp_y = jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))
     yield_c( jp_y..string.gsub(os.date("%m").."月", "([^%d])0", "%1"), "〔日本元号〕", preedittext)
@@ -1432,12 +1446,12 @@ local function translate(input, seg, env)
     end
     return
   end
-  -- if (input == env.prefix .. "ymj") then
+  -- if input == env.prefix .. "ymj" then
   --   yield_c( os.date("%Y").."年 "..jp_m_date(os.date("%m")), "〔年月〕")
   --   return
   -- end
 
-  if (input == env.prefix .. "ymh") then
+  if input == env.prefix .. "ymh" then
     local preedittext = input .. "\t 【現時：年月】"
     yield_c( string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月", "([^%d])0", "%1"), "〔民國〕", preedittext)
     yield_c( string.gsub("民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月", "([^%d])0", "%1"), "〔民國*〕", preedittext)
@@ -1452,7 +1466,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "ymg") then
+  if input == env.prefix .. "ymg" then
     local preedittext = input .. "\t 【現時：年月】"
     yield_c( "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(2), "〔民國中數〕", preedittext)
     yield_c( "民國"..read_number(confs[1], min_guo(os.date("%Y"))).."年"..rqzdx1(2), "〔民國中數〕", preedittext)
@@ -1460,7 +1474,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "yml") then
+  if input == env.prefix .. "yml" then
     local preedittext = input .. "\t 【現時：年月】"
     -- local a, b, chinese_y, chinese_m = to_chinese_cal_local(os.time())
     local a, b, ly_1, ly_2, lm = Date2LunarDate(os.date("%Y%m%d"))
@@ -1471,14 +1485,14 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "yma") then
+  if input == env.prefix .. "yma" then
     local preedittext = input .. "\t 【現時：年月】"  --〔月年〕
     yield_c( eng1_m_date(os.date("%m"))..", "..os.date("%Y"), "〔英文逗點〕", preedittext)
     yield_c( eng2_m_date(os.date("%m"))..", "..os.date("%Y"), "〔英文逗點〕", preedittext)
     return
   end
 
-  if (input == env.prefix .. "yme") then
+  if input == env.prefix .. "yme" then
     local preedittext = input .. "\t 【現時：年月】"  --〔月年〕
     yield_c( eng1_m_date(os.date("%m")).." "..os.date("%Y"), "〔英文格式〕", preedittext)
     yield_c( eng2_m_date(os.date("%m")).." "..os.date("%Y"), "〔英文格式〕", preedittext)
@@ -1486,7 +1500,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "ymc") then
+  if input == env.prefix .. "ymc" then
     local preedittext = input .. "\t 【現時：年月】"  --〔年月〕〔*年月*〕
     yield_c( string.gsub(os.date("%Y年%m月"), "([^%d])0", "%1"), "〔日期〕", preedittext)
     yield_c( string.gsub(os.date(" %Y 年 %m 月 "), "([^%d])0", "%1"), "〔*日期*〕", preedittext)
@@ -1544,7 +1558,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "ymz") then
+  if input == env.prefix .. "ymz" then
     local preedittext = input .. "\t 【現時：年月】"
     yield_c( rqzdx1(12), "〔中數〕", preedittext)
     yield_c( rqzdx2(12), "〔中數〕", preedittext)
@@ -1555,7 +1569,7 @@ local function translate(input, seg, env)
 
   ::m_label::
 
-  if (input == env.prefix .. "m") then
+  if input == env.prefix .. "m" then
     local preedittext = input .. "\t 【現時：月】"
     yield_c( os.date("%m"), " ~x   ~o", preedittext)
     yield_c( string.gsub(os.date("%m月"), "^0", ""), "〔日期〕 ~c", preedittext)
@@ -1570,7 +1584,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "ml") then
+  if input == env.prefix .. "ml" then
     local preedittext = input .. "\t 【現時：月】"
     -- local a, b, y, chinese_m = to_chinese_cal_local(os.time())
     local a, b, c, d, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
@@ -1580,14 +1594,14 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "ma") then
+  if input == env.prefix .. "ma" then
     local preedittext = input .. "\t 【現時：月】"
     yield_c( eng1_m_date(os.date("%m")), "〔英文全寫〕", preedittext)
     yield_c( " "..eng1_m_date(os.date("%m")).." ", "〔*英文全寫*〕", preedittext)
     return
   end
 
-  if (input == env.prefix .. "me") then
+  if input == env.prefix .. "me" then
     local preedittext = input .. "\t 【現時：月】"
     yield_c( eng2_m_date(os.date("%m")), "〔英文縮寫〕", preedittext)
     yield_c( " "..eng2_m_date(os.date("%m")).." ", "〔*英文縮寫*〕", preedittext)
@@ -1596,13 +1610,13 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "mj") then
+  if input == env.prefix .. "mj" then
     local preedittext = input .. "\t 【現時：月】"
     yield_c( jp_m_date(os.date("%m")), "〔日本格式〕", preedittext)
     return
   end
 
-  if (input == env.prefix .. "mc") then
+  if input == env.prefix .. "mc" then
     local preedittext = input .. "\t 【現時：月】"  --〔月〕〔*月〕
     yield_c( string.gsub(os.date("%m月"), "^0", ""), "〔日期〕", preedittext)
     yield_c( string.gsub(os.date(" %m 月"), "([ ])0", "%1"), "〔*日期〕", preedittext)
@@ -1624,7 +1638,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "mz") then
+  if input == env.prefix .. "mz" then
     local preedittext = input .. "\t 【現時：月】"
     yield_c( rqzdx1(2), "〔中數〕", preedittext)
     yield_c( rqzdx2(2), "〔中數〕", preedittext)
@@ -1632,7 +1646,7 @@ local function translate(input, seg, env)
   end
 
 
-  if (input == env.prefix .. "md") then
+  if input == env.prefix .. "md" then
     local preedittext = input .. "\t 【現時：月日】"  --〔月日〕〔日月〕
     yield_c( os.date("%m%d"), " ~d   ~o", preedittext)
     yield_c( os.date("%m.%d"), " ~p   ~q", preedittext)
@@ -1650,7 +1664,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "mdl") then
+  if input == env.prefix .. "mdl" then
     local preedittext = input .. "\t 【現時：月日】"
     -- local a, b, y, chinese_m, chinese_d = to_chinese_cal_local(os.time())
     local a, b, c, d, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
@@ -1660,7 +1674,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "mda") then
+  if input == env.prefix .. "mda" then
     local preedittext = input .. "\t 【現時：月日】"  --〔月日〕
     yield_c( eng1_m_date(os.date("%m")).." "..eng2_d_date(os.date("%d")), "〔英文美式〕", preedittext)
     yield_c( eng1_m_date(os.date("%m")).." "..eng3_d_date(os.date("%d")), "〔英文美式〕", preedittext)
@@ -1670,7 +1684,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "mde") then
+  if input == env.prefix .. "mde" then
     local preedittext = input .. "\t 【現時：月日】"  --〔日月〕
     yield_c( eng2_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")), "〔英文英式〕", preedittext)
     yield_c( eng3_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")), "〔英文英式〕", preedittext)
@@ -1680,13 +1694,13 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "mdj") then
+  if input == env.prefix .. "mdj" then
     local preedittext = input .. "\t 【現時：月日】"
     yield_c( jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")), "〔日本格式〕", preedittext)
     return
   end
 
-  if (input == env.prefix .. "mdc") then
+  if input == env.prefix .. "mdc" then
     local preedittext = input .. "\t 【現時：月日】"  --〔月日〕〔*月日*〕
     yield_c( string.gsub(os.date("%m月%d日"), "0([%d])", "%1"), "〔日期〕", preedittext)
     yield_c( string.gsub(os.date(" %m 月 %d 日 "), "([ ])0", "%1"), "〔*日期*〕", preedittext)
@@ -1744,14 +1758,14 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "mdz") then
+  if input == env.prefix .. "mdz" then
     local preedittext = input .. "\t 【現時：月日】"
     yield_c( rqzdx1(23), "〔中數〕", preedittext)
     yield_c( rqzdx2(23), "〔中數〕", preedittext)
     return
   end
 
-  if (input == env.prefix .. "mdw") then
+  if input == env.prefix .. "mdw" then
     local preedittext = input .. "\t 【現時：月日週】"  --〔月日週〕
     yield_c( string.gsub(os.date("%m月%d日"), "0([%d])", "%1").." ".."星期"..weekstyle()[1].." ", "〔日期〕 ~c", preedittext)
     -- yield_c( jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")).." ".."星期"..weekstyle()[1].." ", "〔月日週〕", preedittext)
@@ -1766,7 +1780,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "mdwl") then
+  if input == env.prefix .. "mdwl" then
     local preedittext = input .. "\t 【現時：月日週】"
     -- local a, b, y, chinese_m, chinese_d = to_chinese_cal_local(os.time())
     local a, b, c, d, lm, ld = Date2LunarDate(os.date("%Y%m%d"))
@@ -1780,7 +1794,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "mdwa") then
+  if input == env.prefix .. "mdwa" then
     local preedittext = input .. "\t 【現時：月日週】"  --〔週月日〕
     yield_c( weekstyle()[6]..", "..eng1_m_date(os.date("%m")).." "..eng2_d_date(os.date("%d")), "〔英文美式〕", preedittext)
     yield_c( weekstyle()[6]..", "..eng1_m_date(os.date("%m")).." "..eng3_d_date(os.date("%d")), "〔英文美式〕", preedittext)
@@ -1790,7 +1804,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "mdwe") then
+  if input == env.prefix .. "mdwe" then
     local preedittext = input .. "\t 【現時：月日週】"  --〔週日月〕
     yield_c( weekstyle()[6]..", "..eng2_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")), "〔英文英式〕", preedittext)
     yield_c( weekstyle()[6]..", "..eng3_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")), "〔英文英式〕", preedittext)
@@ -1800,7 +1814,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "mdwc") then
+  if input == env.prefix .. "mdwc" then
     local preedittext = input .. "\t 【現時：月日週】"  --〔月日週〕〔*月日週*〕
     yield_c( string.gsub(os.date("%m月%d日"), "0([%d])", "%1").." ".."星期"..weekstyle()[1].." ", "〔日期〕", preedittext)
     yield_c( string.gsub(os.date("%m月%d日"), "0([%d])", "%1").."星期"..weekstyle()[1], "〔日期〕", preedittext)
@@ -1833,7 +1847,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "mdwj") then
+  if input == env.prefix .. "mdwj" then
     local preedittext = input .. "\t 【現時：月日週】"
     yield_c( jp_m_date(os.date("%m"))..jp_d_date(os.date("%d"))..weekstyle()[3], "〔日本格式〕", preedittext)
     yield_c( jp_m_date(os.date("%m"))..jp_d_date(os.date("%d"))..weekstyle()[4], "〔日本格式〕", preedittext)
@@ -1877,7 +1891,7 @@ local function translate(input, seg, env)
     return
   end
 
-  if (input == env.prefix .. "mdwz") then
+  if input == env.prefix .. "mdwz" then
     local preedittext = input .. "\t 【現時：月日週】"
     yield_c( rqzdx1(23).." ".."星期"..weekstyle()[1].." ", "〔中數〕", preedittext)
     yield_c( rqzdx1(23).."星期"..weekstyle()[1], "〔中數〕", preedittext)
@@ -2862,7 +2876,7 @@ local function translate(input, seg, env)
     -- local preedittext = utf_prefix .. snd .. " " .. string.upper(string.sub(utf_input, 2))
     local preedittext = env.prefix .. snd .. " " .. string.upper(string.sub(utf_input, 2))
     if utf_x then
-      -- local fmt = "U"..snd.."%"..(n_bit==16 and "X" or snd)
+      -- local fmt = "U" .. snd .. "%" .. (n_bit == 16 and "X" or snd)
       fmt = "  U+".."%X"
       preedittext = preedittext .. "\t 【內碼十六進制】"  --【內碼十六進制 Hex】(Unicode)
     elseif utf_u then
@@ -2878,21 +2892,21 @@ local function translate(input, seg, env)
     -- 單獨查找(改用下面迴圈執行)
     -- local cand_ui_s = Candidate("simp_mf_utf", seg.start, seg._end, utf8_out(c), string.format(fmt, c) .. "（ " .. url_encode(utf8_out(c)) .. " ）" )
     -- 排除數字太大超出範圍。正常範圍輸出已 string_char，故 0 直接可以限定。
-    if (utf8_out(c) == 0) then
+    if utf8_out(c) == 0 then
       yield_c( "", "〈超出範圍〉", preedittext)  --字符過濾可能會過濾掉""整個選項。
       return
     end
     -- 區間查找
     -- if (c*n_bit+n_bit-1 < 1048575) then  -- 補下一位，如：x8d70 為「走」，補 x8d70[0-f]。
     --   for i = c*n_bit, c*n_bit+n_bit-1 do
-    if (c+16 <= 1048575) then  -- 補後面 16 碼，如：x8d70 為「走」，補 x8d7[0+16] 到 x8d80。
+    if c+16 <= 1048575 then  -- 補後面 16 碼，如：x8d70 為「走」，補 x8d7[0+16] 到 x8d80。
       for i = c, c+16 do
       -- for i = c+1, c+16 do
         yield_c( utf8_out(i), string.format(fmt, i) .. "（ " .. url_encode(utf8_out(i)) .. " ）", preedittext)
       end
       return
-    -- elseif c <= 1048575 and c+16 > 1048575 then  -- Unicode 編碼末尾。
-    elseif (c <= 1048575) then  -- Unicode 編碼末尾。
+    -- elseif (c <= 1048575) and (c+16 > 1048575) then  -- Unicode 編碼末尾。
+    elseif c <= 1048575 then  -- Unicode 編碼末尾。
       for i = c, 1048575 do
         yield_c( utf8_out(i), string.format(fmt, i) .. "（ " .. url_encode(utf8_out(i)) .. " ）", preedittext)
       end
@@ -2941,7 +2955,7 @@ local function translate(input, seg, env)
     -- if (urlencode_cand == "〈輸入錯誤〉") then
       -- yield(cand_urlencode_error)
       yield_c( "", urlencode_cand, preedittext)  --字符過濾可能會過濾掉""整個選項。
-    elseif (urlencode_cand == url_first_word) then
+    elseif urlencode_cand == url_first_word then
       -- yield(cand_urlencode_single)
       yield_c( url_first_word, string.format("  U+".."%X" ,url_first_word_dec) .. judge_unfinished, preedittext)
     -- elseif string.match(urlencode_cand, "^ …") then
@@ -2957,12 +2971,12 @@ local function translate(input, seg, env)
   end
 
   -- local url_c_input = string.match(input, env.prefix .. "e([0-9a-z][0-9a-f]*)$")
-  -- if url_c_input~=nil then
+  -- if url_c_input ~= nil then
   --   local u_1 = string.match(url_c_input,"^([0-9a-f][0-9a-f][0-9a-f])$")
   --   local u_2 = string.match(url_c_input,"^([0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f])$")
   --   local u_3 = string.match(url_c_input,"^([0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f])$")
   --   local u_4 = string.match(url_c_input,"^([0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f])$")
-  --   if u_1 ~= nil or u_2 ~= nil or u_3 ~= nil or u_4 ~= nil then
+  --   if (u_1 ~= nil) or (u_2 ~= nil) or (u_3 ~= nil) or (u_4 ~= nil) then
   --     url_c_input = url_c_input .. "0"
   --   end
   --   local url_10 = url_decode(url_c_input)
@@ -3035,7 +3049,7 @@ local function translate(input, seg, env)
 
   -- local xm = string.match(input, env.prefix_s .. "(%d%d?)m$")
   -- if not xm then xm =  string.match(input, env.prefix .. "m(%d%d?)$") end
-  if xm and tonumber(xm)<13 then
+  if xm and (tonumber(xm) < 13) then
     local preedittext = env.prefix .. " " .. xm .. "M" .. "\t 【自訂日期：○月】"
     yield_c( xm .. "月", "〔日期〕", preedittext)
     yield_c( " " .. xm .. " 月 ", "〔*日期*〕", preedittext)
@@ -3047,7 +3061,9 @@ local function translate(input, seg, env)
     yield_c( eng2_m_date(xm), "〔英文 美式/英式〕", preedittext)
     yield_c( eng3_m_date(xm), "〔英文美式〕", preedittext)
     return
-  elseif xm then  -- 月份大於12跳掉
+  elseif xm then  -- 月份大於12跳掉（後改為顯示〈輸入錯誤〉）
+    local preedittext = env.prefix .. " " .. xm .. "M" .. "\t 【自訂日期：○月】"
+    yield_c( "", "〈輸入錯誤〉", preedittext)
     return
   end
 
@@ -3055,7 +3071,7 @@ local function translate(input, seg, env)
 
   -- local xd = string.match(input, env.prefix_s .. "(%d%d?)d$")
   -- if not xd then xd =  string.match(input, env.prefix .. "d(%d%d?)$") end
-  if xd and tonumber(xd)<32 then
+  if xd and (tonumber(xd) < 32) then
     local preedittext = env.prefix .. " " .. xd .. "D" .. "\t 【自訂日期：○日】"
     yield_c( xd .. "日", "〔日期〕", preedittext)
     yield_c( " " .. xd .. " 日 ", "〔*日期*〕", preedittext)
@@ -3069,7 +3085,9 @@ local function translate(input, seg, env)
     yield_c( "the "..eng1_d_date(xd), "〔英文 美式/英式〕", preedittext)
     yield_c( "The "..eng1_d_date(xd), "〔英文英式〕", preedittext)
     return
-  elseif xd then  -- 日期大於31跳掉
+  elseif xd then  -- 日期大於31跳掉（後改為顯示〈輸入錯誤〉）
+    local preedittext = env.prefix .. " " .. xd .. "D" .. "\t 【自訂日期：○日】"
+    yield_c( "", "〈輸入錯誤〉", preedittext)
     return
   end
 
@@ -3079,15 +3097,16 @@ local function translate(input, seg, env)
 
   -- local y, m, m_suffix = string.match(input, env.prefix_s .. "(%d+)y(%d%d?)(m?)$")
   -- if not y then y, m = string.match(input, env.prefix .. "y(%d+)m(%d%d?)$") end
-  -- if y and tonumber(m)<13 then
+  -- if y and (tonumber(m) < 13) then
 
   -- local y, m, d, d_suffix = string.match(input, env.prefix_s .. "(%d+)y(%d%d?)m(%d%d?)(d?)$")
   -- if not y then y, m, d = string.match(input, env.prefix .. "y(%d+)m(%d%d?)d(%d%d?)$") end
-  -- if y and tonumber(m)<13 and tonumber(d)<32 then
+  -- if y and (tonumber(m) < 13) and (tonumber(d) < 32) then
 
-  if y and d=="" and tonumber(m)<13 then
+  -- if y and (d == "") and (tonumber(m) < 13) then
+  if y and (d == "") then
     local preedittext = env.prefix .. " " .. y .. "Y " .. m .. string.upper(m_suffix) .. "\t 【自訂日期：○年○月】"
-    local m = tonumber(m) == 0 and "01" or m  -- 「0」校正，置後於「preedittext」，才不會錯誤顯示。
+    -- local m = (tonumber(m) == 0) and "01" or m  -- 「0」校正，置後於「preedittext」，才不會錯誤顯示。
     yield_c( y .. "年" .. m .. "月", "〔日期〕", preedittext)
     yield_c( " " .. y .. " 年 " .. m .. " 月 ", "〔*日期*〕", preedittext)
     yield_c( fullshape_number(y) .. "年" .. fullshape_number(m) .. "月", "〔全形〕", preedittext)
@@ -3112,10 +3131,13 @@ local function translate(input, seg, env)
     yield_c( eng2_m_date(m) .. " " .. y, "〔英文英式〕", preedittext)
     return
   -- end
-  elseif y and d~="" and tonumber(m)<13 and tonumber(d)<32 then
-    local preedittext = env.prefix .. " " .. y .. "Y " .. m .. "M " .. d .. string.upper(d_suffix) .. "\t 【自訂日期：○年○月○日】"
-    local m = tonumber(m) == 0 and "01" or m  -- 「0」校正，置後於「preedittext」，才不會錯誤顯示。
-    local d = tonumber(d) == 0 and "01" or d  -- 「0」校正，置後於「preedittext」，才不會錯誤顯示。
+  -- elseif y and (d ~= "") and (tonumber(m) < 13) and (tonumber(d) < 32) then
+  elseif y and (d ~= "") and (tonumber(d) < 32) then
+    local preedittext = env.prefix .. " " .. y .. "Y " .. m .. "M " .. d .. string.upper(d_suffix) .. "\t 【自訂日期：○年○月○日】"  -- （月日：0→01）
+    --- 以下「0」校正，防農曆轉換錯亂。
+    local preedittext = (tonumber(m) == 0 or tonumber(d) == 0) and (preedittext .. "（月日：0→01）") or preedittext
+    local m = (tonumber(m) == 0) and "01" or m  -- 「0」校正，置後於「preedittext」，才不會錯誤顯示。
+    local d = (tonumber(d) == 0) and "01" or d  -- 「0」校正，置後於「preedittext」，才不會錯誤顯示。
     yield_c( y .. "年" .. m .. "月" .. d .. "日", "〔日期〕", preedittext)
     yield_c( " " .. y .. " 年 " .. m .. " 月 " .. d .." 日 ", "〔*日期*〕", preedittext)
     yield_c( fullshape_number(y) .. "年" .. fullshape_number(m) .. "月" .. fullshape_number(d) .. "日", "〔全形〕", preedittext)
@@ -3143,34 +3165,36 @@ local function translate(input, seg, env)
     yield_c( eng2_d_date(d) .. " " .. eng2_m_date(m) .. " " .. y, "〔英文英式〕", preedittext)
     yield_c( "the " .. eng1_d_date(d) .. " of " .. eng1_m_date(m) .. ", " .. y, "〔英文英式〕", preedittext)
     yield_c( "The " .. eng1_d_date(d) .. " of " .. eng1_m_date(m) .. ", " .. y, "〔英文英式〕", preedittext)
-    if tonumber(y) > 1899 and tonumber(y) < 2101 then
+    if (tonumber(y) > 1899) and (tonumber(y) < 2101) then
       -- local chinese_date_input = to_chinese_cal_local(os.time({year = y, month = m, day = d, hour = 12}))
       local ll_1b, ll_2b = Date2LunarDate(y .. string.format("%02d", m) .. string.format("%02d", d))
-      -- if (Date2LunarDate~=nil) then
-      if ll_1b~=nil and ll_2b~=nil then
+      -- if Date2LunarDate ~= nil then
+      if (ll_1b ~= nil) and (ll_2b ~= nil) then
         yield_c( ll_1b, "〔西曆→農曆〕", preedittext)
         yield_c( ll_2b, "〔西曆→農曆〕", preedittext)
       end
     end
-    if tonumber(y) > 1901 and tonumber(y) < 2101 then
+    if (tonumber(y) > 1901) and (tonumber(y) < 2101) then
       local All_g2, Y_g2, M_g2, D_g2 = lunarJzl(y .. string.format("%02d", m) .. string.format("%02d", d) .. 12)
-      if (All_g2~=nil) then
+      if All_g2 ~= nil then
         yield_c( Y_g2 .. "年" .. M_g2 .. "月" .. D_g2 .. "日", "〔西曆→農曆干支〕", preedittext)
       end
       local LDD2D = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 0 )
       local LDD2D_leap_year = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 1 )
-      -- if (Date2LunarDate~=nil) then
-      if (LDD2D~=nil) then
+      -- if Date2LunarDate ~= nil then
+      if LDD2D ~= nil then
         yield_c( LDD2D, "〔農曆→西曆〕", preedittext)
         yield_c( LDD2D_leap_year, "〔農曆(閏)→西曆〕", preedittext)
       end
       -- local chinese_date_input2 = to_chinese_cal(y, m, d)
-      -- if (chinese_date_input2~=nil) then
+      -- if chinese_date_input2 ~= nil then
       --   yield_c( chinese_date_input2 .. " ", "〔農曆，可能有誤！〕", preedittext)
       -- end
     end
     return
-  elseif y then  -- 月份大於12或日期大於31跳掉
+  elseif y then  -- 月份大於12或日期大於31跳掉（後改為顯示〈輸入錯誤〉）
+    local preedittext = env.prefix .. " " .. y .. "Y " .. m .. "M " .. d .. string.upper(d_suffix) .. "\t 【自訂日期：○年○月○日】"
+    yield_c( "", "〈輸入錯誤〉", preedittext)
     return
   end
 
@@ -3180,10 +3204,10 @@ local function translate(input, seg, env)
 
   -- local nm, nd, nd_suffix = string.match(input, env.prefix_s .. "(%d%d?)m(%d%d?)(d?)$")
   -- if not nm then nm, nd =  string.match(input, env.prefix .. "m(%d%d?)d(%d%d?)$") end
-  if nm and tonumber(nm)<13 and tonumber(nd)<32 then
+  if nm and (tonumber(nm) < 13) and (tonumber(nd) < 32) then
     local preedittext = env.prefix .. " " .. nm .. "M " .. nd .. string.upper(nd_suffix) .. "\t 【自訂日期：○月○日】"
-    local nm = tonumber(nm) == 0 and "01" or nm  -- 「0」校正，置後於「preedittext」，才不會錯誤顯示。
-    local nd = tonumber(nd) == 0 and "01" or nd  -- 「0」校正，置後於「preedittext」，才不會錯誤顯示。
+    -- local nm = (tonumber(nm) == 0) and "01" or nm  -- 「0」校正，置後於「preedittext」，才不會錯誤顯示。
+    -- local nd = (tonumber(nd) == 0) and "01" or nd  -- 「0」校正，置後於「preedittext」，才不會錯誤顯示。
     yield_c( nm .. "月" .. nd .. "日", "〔日期〕", preedittext)
     yield_c( " " .. nm .. " 月 " .. nd .. " 日 ", "〔*日期*〕", preedittext)
     yield_c( fullshape_number(nm) .. "月" .. fullshape_number(nd) .. "日", "〔全形〕", preedittext)
@@ -3201,7 +3225,9 @@ local function translate(input, seg, env)
     yield_c( "the " .. eng1_d_date(nd) .. " of " .. eng1_m_date(nm), "〔英文英式〕", preedittext)
     yield_c( "The " .. eng1_d_date(nd) .. " of " .. eng1_m_date(nm), "〔英文英式〕", preedittext)
     return
-  elseif nm then  -- 月份大於12或日期大於31跳掉
+  elseif nm then  -- 月份大於12或日期大於31跳掉（後改為顯示〈輸入錯誤〉）
+    local preedittext = env.prefix .. " " .. nm .. "M " .. nd .. string.upper(nd_suffix) .. "\t 【自訂日期：○月○日】"
+    yield_c( "", "〈輸入錯誤〉", preedittext)
     return
   end
 
@@ -3309,14 +3335,14 @@ local function translate(input, seg, env)
 
   -- local numberout = string.match(input, env.prefix .. "/?(%d+)$")
   -- local neg_n, dot0 ,numberout, dot1, afterdot = string.match(input, env.prefix_s .. "([q(]?[q(]?[-r]?)(%.?)(%d+)(%.?)(%d*)$")
-  if (tonumber(numberout)~=nil) then
+  if tonumber(numberout) ~= nil then
     local neg_n = string.gsub(neg_n, "r", "-")  --配合計算機算符
     local neg_n = string.gsub(neg_n, "[q(]", "")  --配合計算機算符
 
-    if dot0~="" and dot1~="" then
+    if (dot0 ~= "") and (dot1 ~= "") then
       yield_c( "" , "〔不能兩個小數點〕", num_preedit)  --字符過濾可能會過濾掉""整個選項。
       return
-    elseif (dot0~="") then
+    elseif dot0 ~= "" then
       afterdot = numberout
       dot1 = dot0
       numberout = "0"
@@ -3336,7 +3362,7 @@ local function translate(input, seg, env)
     local neg_n_k_ns = string.gsub(neg_n, "-", "-⃣")  -- -⃣ −⃣
     local neg_n_b = string.gsub(neg_n, "-", "⠤")
 
-  -- if numberout~=nil and tonumber(nn)~=nil then
+  -- if (numberout ~= nil) and (tonumber(nn) ~= nil) then
     -- local nn = string.sub(numberout, 1)
     --[[ 用 yield 產生一個候選項
     候選項的構造函數是 Candidate，它有五個參數：
@@ -3348,7 +3374,7 @@ local function translate(input, seg, env)
     --]]
     yield_c( neg_n .. numberout .. dot1 .. afterdot , "〔一般〕", num_preedit)
 
-    -- if string.len(numberout) < 4 or neg_n~="" then
+    -- if (string.len(numberout) < 4) or (neg_n ~= "") then
     if string.len(numberout) < 4 then
       yield_c( "," , "〔千分位〕", num_preedit)
     else
@@ -3362,7 +3388,7 @@ local function translate(input, seg, env)
     -- if neg_n == "" then
     --   yield_c( math1_number(numberout) .. dot1 .. math1_number(afterdot), "〔數學粗體數字〕", num_preedit)
     --   yield_c( math2_number(numberout) .. dot1 .. math2_number(afterdot), "〔數學空心數字〕", num_preedit)
-    -- elseif neg_n ~="" then
+    -- elseif neg_n ~= "" then
     --   yield_c( neg_n .. " " .. math1_number(numberout) .. dot1 .. math1_number(afterdot), "〔數學粗體數字〕", num_preedit)
     --   yield_c( neg_n .. " " .. math2_number(numberout) .. dot1 .. math2_number(afterdot), "〔數學空心數字〕", num_preedit)
     -- end
@@ -3375,7 +3401,7 @@ local function translate(input, seg, env)
     yield_c( neg_n_h .. little1_number(numberout..dot1..afterdot), "〔上標〕", num_preedit)
     yield_c( neg_n_l .. little2_number(numberout..dot1..afterdot), "〔下標〕", num_preedit)
     --- 超過「1000垓」則不顯示中文數字
-    if (string.len(numberout) < 25) then
+    if string.len(numberout) < 25 then
       yield_c( neg_n_c .. read_number(confs[1], numberout) .. purech_number(dot1..afterdot), confs[1].comment, num_preedit)
       yield_c( neg_n_c .. read_number_bank(confs[2], numberout) .. purebigch_number(dot1..afterdot), confs[2].comment, num_preedit)
     else
@@ -3383,10 +3409,10 @@ local function translate(input, seg, env)
       yield_c( "零" , "（超過 1000垓/24位 計算限制）" .. confs[2].comment, num_preedit)
     end
 
-    if (dot1=="") then
+    if dot1 == "" then
 
       -- --- 超過「1000垓」則不顯示中文數字
-      -- if (string.len(numberout) < 25) then
+      -- if string.len(numberout) < 25 then
       --   -- for _, conf in ipairs(confs) do
       --   --   local r = read_number(conf, nn)
       --   --   yield_c( r, conf.comment)
@@ -3398,7 +3424,7 @@ local function translate(input, seg, env)
       -- --   yield_c( "超過位數", confs[2].comment)
       -- end
 
-      if (string.len(numberout) < 2) then
+      if string.len(numberout) < 2 then
         yield_c( "元整", "〔純中文數字〕", num_preedit)
       else
         yield_c( neg_n_c .. purech_number(numberout), "〔純中文〕", num_preedit)
@@ -3418,22 +3444,22 @@ local function translate(input, seg, env)
       yield_c( neg_n_b .. braille_c_number(numberout), "〔點字〕(computer)", num_preedit)
       -- yield_c( neg_n_b .. "⠼" .. braille_c_number(numberout), "〔點字(一般)〕", num_preedit)
       yield_c( neg_n_b .. "⠼" .. braille_u_number(numberout), "〔點字〕(unified)", num_preedit)
-      if neg_n=="" then
+      if neg_n == "" then
         yield_c( arabic_indic_number(numberout), "〔阿拉伯文〕", num_preedit)
         yield_c( extended_arabic_indic_number(numberout), "〔東阿拉伯文〕", num_preedit)
         yield_c( devanagari_number(numberout), "〔天城文〕", num_preedit)
       end
 
-      if (neg_n=="") then
-        if tonumber(numberout)==1 or tonumber(numberout)==0 then
+      if neg_n == "" then
+        if (tonumber(numberout) == 1) or (tonumber(numberout) == 0) then
           yield_c( string.sub(numberout, -1), "〔二進位〕", num_preedit)
         --- 浮點精度關係，二進制轉換運算中：
         --- math.floor 極限是小數點後15位(小於16位，1.9999999999999999)
         --- math.fmod 極限是小數點後13位(小於14位，1.99999999999999，14位開頭為偶數時除2是正確的，奇數則不正確)
-        elseif (string.len(numberout) < 14) then
+        elseif string.len(numberout) < 14 then
         --- （以下還是有錯誤！）等於大於9999999999999999（16位-1），lua中幾個轉換函數都會出錯，運算會不正確
-        -- elseif (tonumber(numberout) < 9999999999999999) then
-        -- elseif (string.len(numberout) < 16) then
+        -- elseif tonumber(numberout) < 9999999999999999 then
+        -- elseif string.len(numberout) < 16 then
           yield_c( Dec2bin(numberout), "〔二進位〕", num_preedit)
         else
           yield_c( "bin", "（超過 14位 會有誤）〔二進位〕", num_preedit)
@@ -3442,8 +3468,8 @@ local function translate(input, seg, env)
         end
 
         --- 整數庫限制：最大的64位元整數超過64位等同十進制2^63，超過則報錯，極限2^63-1，超過設定不顯示
-        if (tonumber(numberout) < 9223372036854775808) then
-        -- if (string.len(numberout) < 19) then
+        if tonumber(numberout) < 9223372036854775808 then
+        -- if string.len(numberout) < 19 then
           yield_c( string.format("%X",numberout), "〔十六進位〕", num_preedit)
           yield_c( string.format("%x",numberout), "〔十六進位〕", num_preedit)
           yield_c( string.format("%o",numberout), "〔八進位〕", num_preedit)
@@ -3454,19 +3480,19 @@ local function translate(input, seg, env)
         end
       end
 
-    elseif (dot0~="") then
+    elseif dot0 ~= "" then
       yield_c( neg_n_c .. purech_number(dot1..afterdot), "〔純中文〕", num_preedit)
       yield_c( neg_n_s .. military_number(dot1..afterdot), "〔軍中〕", num_preedit)
       yield_c( neg_n_b .. braille_c_number(dot1..afterdot), "〔點字〕(computer)", num_preedit)
       -- yield_c( neg_n_b .. "⠼" .. braille_c_number(dot1..afterdot), "〔點字(一般)〕", num_preedit)
       yield_c( neg_n_b .. "⠼" .. braille_u_number(dot1..afterdot), "〔點字〕(unified)", num_preedit)
-      if neg_n=="" then
+      if neg_n == "" then
         yield_c( "٠" .. arabic_indic_number(dot1..afterdot), "〔阿拉伯文〕", num_preedit)
         yield_c( "۰" .. extended_arabic_indic_number(dot1..afterdot), "〔東阿拉伯文〕", num_preedit)
       end
       return
-    elseif dot0=="" and dot1~="" then
-      if (string.len(numberout) < 2) then
+    elseif (dot0 == "") and (dot1 ~= "") then
+      if string.len(numberout) < 2 then
         yield_c( "元整", "〔純中文〕", num_preedit)
       else
         yield_c( neg_n_c .. purech_number(numberout..dot1..afterdot), "〔純中文〕", num_preedit)
@@ -3475,7 +3501,7 @@ local function translate(input, seg, env)
       yield_c( neg_n_b .. braille_c_number(numberout..dot1..afterdot), "〔點字〕(computer)", num_preedit)
       -- yield_c( neg_n_b .. "⠼" .. braille_c_number(numberout..dot1..afterdot), "〔點字(一般)〕", num_preedit)
       yield_c( neg_n_b .. "⠼" .. braille_u_number(numberout..dot1..afterdot), "〔點字〕(unified)", num_preedit)
-      if neg_n=="" then
+      if neg_n == "" then
         yield_c( arabic_indic_number(numberout..dot1..afterdot), "〔阿拉伯文〕", num_preedit)
         yield_c( extended_arabic_indic_number(numberout..dot1..afterdot), "〔東阿拉伯文〕", num_preedit)
       end
@@ -3518,19 +3544,19 @@ local function translate(input, seg, env)
     local s_output = simple_calculator(input_exp)[3]
 
     local preedittext = env.prefix .. " " .. cal_preedit .. "\t 【計算機】"
-    if (string.sub(cal_output, 1,1)=="E" or string.sub(cal_output, 1,1)=="W") then
+    if (string.sub(cal_output, 1,1) == "E") or (string.sub(cal_output, 1,1) == "W") then
       yield_c( "", cal_output.."〔結果〕", preedittext)  -- yield(cc_out_error)
       yield_c( s_output, "〔 Waring 結果〕", preedittext)  -- yield(cc_out_shadow)
       yield_c( output_exp .. "=" .. s_output, "〔 Waring 規格化算式〕", preedittext)  -- yield(cc_exp_error)
     else
       yield_c( cal_output, "〔結果〕", preedittext)  -- yield(cc_out)
-      -- if s_output~="" then
+      -- if s_output ~= "" then
       --   yield_c( s_output, "〔 Waring 結果〕", preedittext)  -- yield(cc_out_shadow)
       -- end
       yield_c( output_exp .. "=" .. cal_output, "〔規格化算式〕", preedittext)  -- yield(cc_exp)
       -- yield_c( input_exp .. "=" .. cal_output, "〔規格化算式〕", preedittext)  -- yield(cc_exp)
     end
-    -- if s_output~="" then
+    -- if s_output ~= "" then
     --   yield_c( s_output, "〔 Waring 結果〕", preedittext)  -- yield(cc_out_shadow)
     -- end
     yield_c( "", "※  會有浮點數誤差和錯誤；括號限兩層三堆；14位數限制", preedittext)  -- yield(cc_statement)
@@ -3550,7 +3576,7 @@ local function translate(input, seg, env)
   -- -- local o_input = context.input
   -- local kkk = string.match(input, "( )$")
   -- -- local page_size = engine.schema.page_size
-  -- if (kkk~=nil) then --and context:is_composing()
+  -- if kkk ~= nil then --and context:is_composing()
   --   -- local s_orig = context:get_commit_text()
   --   -- local o_input = context.input
   --   -- engine:commit_text(s_orig .. "a")
