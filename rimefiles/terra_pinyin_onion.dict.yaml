@@ -150,6 +150,8 @@
 #    詞句中，「脂」臺灣日常慣用語音為「zhi3」，臺灣標準為「zhi1」，除「胭脂」「脂粉」兩詞只標註「zhi1」外，其他皆補齊「zhi1」「zhi3」。
 #    詞句中，「冴」日常發音常會誤發為「ya2」，標準為「hu4」，故日文人名中皆補齊「ya2」「hu4」，前者詞頻設為3%。
 #    詞句中，「萎」於某些詞，臺灣日常慣用語音為「wei3」，臺灣標準為「wei1」，故皆補齊「wei1」和「wei3」。
+#    詞句中，「稜」日常發音常會誤發為「ling2」，臺灣標準為「leng2」，故皆補齊「leng2」「ling2」，後者詞頻設為80%，除非特殊發音。
+#    詞句中，「棱」日常發音常會誤發為「ling2」，臺灣標準為「leng2」，故皆補齊「leng2」「ling2」，後者詞頻設為80%，除非特殊發音。
 #    詞句中，「鰾」日常發音常會誤發為「biao1」，臺灣標準為「biao4」，故皆補齊「biao4」「biao1」，後者詞頻設為80%。
 #    詞句中，「鷲」日常發音常會誤發為「jiu1」，臺灣標準為「jiu4」，故皆補齊「jiu4」「jiu1」，後者詞頻設為80%。
 #    詞句中，「珀」日常發音常會誤發為「bo4」，臺灣標準為「po4」，故皆補齊「po4」「bo4」，後者詞頻設為80%。
@@ -56577,9 +56579,13 @@ min_phrase_weight: 100
 三朝元老	san1 chao2 yuan2 lao3
 三杯和萬事	san1 bei1 he2 wan4 shi4
 三稜鏡	san1 leng2 jing4
+三稜鏡	san1 ling2 jing4	80%
 三棱鏡	san1 leng2 jing4
+三棱鏡	san1 ling2 jing4	80%
 三稜體	san1 leng2 ti3
+三稜體	san1 ling2 ti3	80%
 三棱體	san1 leng2 ti3
+三棱體	san1 ling2 ti3	80%
 三樂	san1 le4
 三樂	san1 yao4
 三權分立	san1 quan2 fen1 li4
@@ -58494,7 +58500,11 @@ min_phrase_weight: 100
 事頭	shi4 tou2
 二不愣	er4 bu2 leng4
 二不稜登	er4 bu4 leng1 deng1
+二不稜登	er4 bu4 leng2 deng1
+二不稜登	er4 bu4 ling2 deng1	80%
 二不棱登	er4 bu4 leng1 deng1
+二不棱登	er4 bu4 leng2 deng1
+二不棱登	er4 bu4 ling2 deng1	80%
 二乘	er4 sheng4
 二二八和平公園	er4 er4 ba1 he2 ping2 gong1 yuan2
 二五更	er4 wu3 geng1
@@ -63853,7 +63863,9 @@ min_phrase_weight: 100
 剛果民主共和國	gang1 guo3 min2 zhu3 gong4 he2 guo2
 剛柔相濟	gang1 rou2 xiang1 ji4
 剛稜	gang1 leng2
+剛稜	gang1 ling2	80%
 剛棱	gang1 leng2
+剛棱	gang1 ling2	80%
 剛正不阿	gang1 zheng4 bu4 e1
 剛行剛驀	gang1 xing2 gang1 mo4
 剛過門的小媳婦	gang1 guo4 men2 de5 xiao3 xi2 fu4
@@ -72078,7 +72090,9 @@ min_phrase_weight: 100
 威懾力量	wei1 zhe2 li4 liang4
 威斯敏斯特教堂	wei1 si1 min3 si1 te4 jiao4 tang2
 威稜	wei1 leng2
+威稜	wei1 ling2	80%
 威棱	wei1 leng2
+威棱	wei1 ling2	80%
 威爾遜	wei1 er3 sun4
 威爾遜	wei1 er3 xun4
 威瑪共和國	wei1 ma3 gong4 he2 guo2
@@ -74440,7 +74454,9 @@ min_phrase_weight: 100
 嶄露頭角	zhan3 lu4 tou2 jiao3
 嶄露頭角	zhan3 lou4 tou2 jiao3
 嶒稜	ceng2 leng2
+嶒稜	ceng2 ling2	80%
 嶒棱	ceng2 leng2
+嶒棱	ceng2 ling2	80%
 嶔崎歷落	qin1 qi2 li4 luo4
 嶔崎磊落	qin1 qi2 lei3 luo4
 嶷岌	ni4 ji2
@@ -81492,13 +81508,24 @@ min_phrase_weight: 100
 摸春牛	mo1 chun1 niu2
 摸稜	mo2 leng2
 摸稜	mo1 leng2
+摸稜	mo2 ling2	80%
+摸稜	mo1 ling2	80%
 摸棱	mo2 leng2
+摸棱	mo1 leng2
+摸棱	mo2 ling2	80%
+摸棱	mo1 ling2	80%
 摸稜兩可	mo2 leng2 liang3 ke3
 摸稜兩可	mo1 leng2 liang3 ke3
+摸稜兩可	mo2 ling2 liang3 ke3	80%
+摸稜兩可	mo1 ling2 liang3 ke3	80%
 摸棱兩可	mo2 leng2 liang3 ke3
 摸棱兩可	mo1 leng2 liang3 ke3
+摸棱兩可	mo2 ling2 liang3 ke3	80%
+摸棱兩可	mo1 ling2 liang3 ke3	80%
 摸稜宰相	mo2 leng2 zai3 xiang4
+摸稜宰相	mo2 ling2 zai3 xiang4	80%
 摸棱宰相	mo2 leng2 zai3 xiang4
+摸棱宰相	mo2 ling2 zai3 xiang4	80%
 摸氣候	mo1 qi4 hou4
 摸清	mo1 qing1
 摸爬滾打	mo1 pa2 gun3 da3
@@ -82023,7 +82050,11 @@ min_phrase_weight: 100
 撲擊	pu1 ji2
 撲散	pu1 san4
 撲稜	pu1 leng1
+撲稜	pu1 leng2
+撲稜	pu1 ling2	80%
 撲棱	pu1 leng1
+撲棱	pu1 leng2
+撲棱	pu1 ling2	80%
 撲空	pu1 kong1
 撲臉兒	pu1 lian3 er5	80%
 撲臉兒	pu1 lian3 er2
@@ -83473,7 +83504,9 @@ min_phrase_weight: 100
 斯托肯立石圈	si1 tuo1 ken3 li4 shi2 quan1
 斯托肯立石圈	si1 tuo1 keng3 li4 shi2 quan1
 斯摩稜斯克	si1 mo2 leng2 si1 ke4
+斯摩稜斯克	si1 mo2 ling2 si1 ke4	80%
 斯摩棱斯克	si1 mo2 leng2 si1 ke4
+斯摩棱斯克	si1 mo2 ling2 si1 ke4	80%
 斯文	si1 wen2
 斯文‧海定	si1 wen2 eng5 hai3 ding4
 斯文‧赫定	si1 wen2 eng5 he4 ding4
@@ -84966,7 +84999,9 @@ min_phrase_weight: 100
 有條不紊	you3 tiao2 bu4 wen3
 有條有理地	you3 tiao2 you3 li3 de5
 有稜有角	you3 leng2 you3 jiao3
+有稜有角	you3 ling2 you3 jiao3	80%
 有棱有角	you3 leng2 you3 jiao3
+有棱有角	you3 ling2 you3 jiao3	80%
 有模子	you3 mu2 zi5
 有模有樣	you3 mo2 you3 yang4
 有樣子	you3 yang4 zi5
@@ -85998,7 +86033,9 @@ min_phrase_weight: 100
 查裹	zha1 guo3
 查調	cha2 diao4
 柧稜	gu1 leng2
+柧稜	gu1 ling2	80%
 柧棱	gu1 leng2
+柧棱	gu1 ling2	80%
 柬吳哥王朝	jian3 wu2 ge1 wang2 chao2
 柬埔寨	jian3 pu3 zhai4
 柬埔寨	jian3 bu3 zhai4
@@ -86413,29 +86450,53 @@ min_phrase_weight: 100
 森林遊樂區	sen1 lin2 you2 le4 qu1
 森海塞爾	sen1 hai3 se4 er3
 稜子	leng2 zi5
+稜子	ling2 zi5	80%
 棱子	leng2 zi5
+棱子	ling2 zi5	80%
 稜層	leng2 ceng2
+稜層	ling2 ceng2	80%
 棱層	leng2 ceng2
+棱層	ling2 ceng2	80%
 稜柱體	leng2 zhu4 ti3
+稜柱體	ling2 zhu4 ti3	80%
 棱柱體	leng2 zhu4 ti3
+棱柱體	ling2 zhu4 ti3	80%
 稜稜	leng2 leng2
+稜稜	ling2 ling2	80%
 棱棱	leng2 leng2
+棱棱	ling2 ling2	80%
 稜等登	leng2 deng3 deng1
+稜等登	ling2 deng3 deng1	80%
 棱等登	leng2 deng3 deng1
+棱等登	ling2 deng3 deng1	80%
 稜線	leng2 xian4
+稜線	ling2 xian4	80%
 棱線	leng2 xian4
+棱線	ling2 xian4	80%
 稜縫	leng2 feng4
+稜縫	ling2 feng4	80%
 棱縫	leng2 feng4
+棱縫	ling2 feng4	80%
 稜台	leng2 tai2
+稜台	ling2 tai2	80%
 稜臺	leng2 tai2
+稜臺	ling2 tai2	80%
 棱台	leng2 tai2
+棱台	ling2 tai2	80%
 棱臺	leng2 tai2
+棱臺	ling2 tai2	80%
 稜角	leng2 jiao3
+稜角	ling2 jiao3	80%
 棱角	leng2 jiao3
+棱角	ling2 jiao3	80%
 稜錐	leng2 zhui1
+稜錐	ling2 zhui1	80%
 棱錐	leng2 zhui1
+棱錐	ling2 zhui1	80%
 稜鏡	leng2 jing4
+稜鏡	ling2 jing4	80%
 棱鏡	leng2 jing4
+棱鏡	ling2 jing4	80%
 棲宿	qi1 su4
 棲息	qi1 xi2
 棲息地	qi1 xi2 di4
@@ -86931,7 +86992,9 @@ min_phrase_weight: 100
 模本	mo2 ben3
 模板工	mo2 ban3 gong1
 模棱	mo2 leng2
+模棱	mo2 ling2
 模棱兩可	mo2 leng2 liang3 ke3
+模棱兩可	mo2 ling2 liang3 ke3
 模楷	mo2 kai3
 模模糊糊	mo2 mo2 hu2 hu2
 模樣	mu2 yang4
@@ -86940,7 +87003,9 @@ min_phrase_weight: 100
 模特兒	mo2 te4 er5	80%
 模特兒	mo2 te4 er2
 模稜	mo2 leng2
+模稜	mo2 ling2	80%
 模稜兩可	mo2 leng2 liang3 ke3
+模稜兩可	mo2 ling2 liang3 ke3	80%
 模範	mo2 fan4
 模範區	mo2 fan4 qu1
 模範大音階	mo2 fan4 da4 yin1 jie1
@@ -87190,6 +87255,7 @@ min_phrase_weight: 100
 橫秋	heng2 qiu1
 橫科暴斂	heng2 ke1 bao4 lian4
 橫稜紋	heng2 leng2 wen2
+橫稜紋	heng2 ling2 wen2	80%
 橫空	heng2 kong1
 橫穿	heng2 chuan1
 橫笛	heng2 di2
@@ -89101,8 +89167,12 @@ min_phrase_weight: 100
 波札那共和國	po1 zha2 na4 gong4 he2 guo2
 波稜菜	bo1 leng2 cai4
 波稜菜	po1 leng2 cai4
+波稜菜	bo1 ling2 cai4	80%
+波稜菜	po1 ling2 cai4	80%
 波棱菜	bo1 leng2 cai4
 波棱菜	po1 leng2 cai4
+波棱菜	bo1 ling2 cai4	80%
+波棱菜	po1 ling2 cai4	80%
 波波吒吒	bo1 bo1 zha4 zha4
 波波吒吒	po1 po1 zha4 zha4
 波浪週期	bo1 lang4 zhou1 qi2
@@ -91537,7 +91607,9 @@ min_phrase_weight: 100
 無頭蒼蠅	wu2 tou2 cang1 ying2
 無顛無倒	wu2 dian1 wu2 dao3
 焦稜	jiao1 leng2
+焦稜	jiao1 ling2	80%
 焦棱	jiao1 leng2
+焦棱	jiao1 ling2
 焦熬投石	jiao1 ao2 tou2 shi2
 焦穫	jiao1 hu4
 焯焯	zhuo2 zhuo2
@@ -94265,7 +94337,9 @@ min_phrase_weight: 100
 瘦括括	shou4 gua1 gua1
 瘦括括	shou4 kuo4 kuo4
 瘦稜稜	shou4 leng2 leng2
+瘦稜稜	shou4 ling2 ling2	80%
 瘦棱棱	shou4 leng2 leng2
+瘦棱棱	shou4 ling2 ling2	80%
 瘦溜	shou4 liu1
 瘦長	shou4 chang2
 瘧原蟲	nve4 yuan2 chong2
@@ -94984,7 +95058,9 @@ min_phrase_weight: 100
 盧安達共和國	lu2 an1 da2 gong4 he2 guo2
 盧家少婦	lu2 jia1 shao4 fu4
 盧稜伽	lu2 ling2 qie2
+盧稜伽	lu2 leng2 qie2	80%
 盧棱伽	lu2 ling2 qie2
+盧棱伽	lu2 leng2 qie2	80%
 盧薩卡	lu2 sa4 ka3
 目下十行	mu4 xia4 shi2 hang2
 目不暇給	mu4 bu4 xia2 ji3
@@ -95463,9 +95539,13 @@ min_phrase_weight: 100
 眉刷	mei2 shua1
 眉尾相結	mei2 wei3 xiang1 jie2
 眉稜	mei2 leng2
+眉稜	mei2 ling2	80%
 眉棱	mei2 leng2
+眉棱	mei2 ling2	80%
 眉稜骨	mei2 leng2 gu3
+眉稜骨	mei2 ling2 gu3	80%
 眉棱骨	mei2 leng2 gu3
+眉棱骨	mei2 ling2 gu3	80%
 眉橫丹鳳	mei2 heng2 dan1 feng4
 眉毛	mei2 mao2
 眉毛都會笑	mei2 mao2 dou1 hui4 xiao4
@@ -97222,7 +97302,9 @@ min_phrase_weight: 100
 穄子	ji4 zi5
 穆天子傳	mu4 tian1 zi3 zhuan4
 穆稜	mu4 ling2
+穆稜	mu4 leng2	80%
 穆稜市	mu4 ling2 shi4
+穆稜市	mu4 leng2 shi4	80%
 穆罕默德‧歐瑪	mu4 han3 mo4 de2 eng5 ou1 ma3
 積不相容	ji1 bu4 xiang1 rong2
 積不相能	ji1 bu4 xiang1 neng2
@@ -100341,10 +100423,12 @@ min_phrase_weight: 100
 翹望	qiao2 wang4
 翹材	qiao2 cai2
 翹棱	qiao2 leng2
+翹棱	qiao2 ling2
 翹楚	qiao2 chu3
 翹楚	qiao4 chu3
 翹盼	qiao2 pan4
 翹稜	qiao2 leng2
+翹稜	qiao2 ling2	80%
 翹翹	qiao2 qiao2
 翹舌音	qiao2 she2 yin1
 翹舌音	qiao4 she2 yin1
@@ -102541,7 +102625,9 @@ min_phrase_weight: 100
 芯片組	xin1 pian4 zu3
 芰荷	ji4 he2
 花不稜登	hua1 bu4 leng2 deng1
+花不稜登	hua1 bu4 ling2 deng1	80%
 花不棱登	hua1 bu4 leng2 deng1
+花不棱登	hua1 bu4 ling2 deng1	80%
 花剌子模	hua1 la4 zi3 mo2
 花剌子模	hua1 la2 zi3 mo2
 花卉冷藏處理	hua1 hui4 leng3 cang2 chu3 li3
@@ -103073,7 +103159,9 @@ min_phrase_weight: 100
 菜虎子	cai4 hu3 zi5
 菜鴿子	cai4 ge1 zi5
 菠稜菜	bo1 leng2 cai4
+菠稜菜	bo1 ling2 cai4	80%
 菠棱菜	bo1 leng2 cai4
+菠棱菜	bo1 ling2 cai4	80%
 菥蓂	xi1 mi4
 菩提迦耶	pu2 ti2 jia1 ye1
 菩提道場	pu2 ti2 dao4 chang3
@@ -106327,7 +106415,9 @@ min_phrase_weight: 100
 角鷹	jue2 ying1
 角黍	jue2 shu3
 觚稜	gu1 leng2
+觚稜	gu1 ling2	80%
 觚棱	gu1 leng2
+觚棱	gu1 ling2	80%
 觜宿	zi1 xiu4
 觜蠵	zi1 xi1
 觜觽	zi1 xi1
@@ -108756,7 +108846,9 @@ min_phrase_weight: 100
 蹧蹋	zao1 ta4
 蹩躠	bie2 sa4
 蹭稜子	ceng4 leng2 zi5
+蹭稜子	ceng4 ling2 zi5	80%
 蹭棱子	ceng4 leng2 zi5
+蹭棱子	ceng4 ling2 zi5	80%
 蹲便器	dun1 bian4 qi4
 蹴鞠	cu4 ju2
 蹴鞠	cu4 ju1
@@ -116058,7 +116150,9 @@ min_phrase_weight: 100
 首長	shou3 zhang3
 首長制	shou3 zhang3 zhi4
 首鼠模稜	shou3 shu3 mo2 leng2
+首鼠模稜	shou3 shu3 mo2 ling2	80%
 首鼠模棱	shou3 shu3 mo2 leng2
+首鼠模棱	shou3 shu3 mo2 ling2	80%
 香乾	xiang1 gan1
 香分	xiang1 fen4
 香奈兒	xiang1 nai4 er5	80%
@@ -117658,4 +117752,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 117661 #####
+##### @結束 END - 117755 #####
