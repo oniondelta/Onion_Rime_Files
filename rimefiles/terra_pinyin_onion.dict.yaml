@@ -143,6 +143,7 @@
 #    詞句中，「膜」臺灣日常慣用語音為「mo2」，臺灣標準為「mo4」，除「膜拜」語意之詞彙為「mo2」，故「膜」除前面語意詞彙，皆補齊「mo2」「mo4」，「mo4」詞頻設為3%。
 #    詞句中，「質」臺灣字典不同語意分別發音「zhi2」「zhi4」，但語意品質時發「zhi2」，大陸則為「zhi4」，日常易混，故皆補齊「zhi2」「zhi4」，語意為品質等「zhi4」詞頻設為3%。
 #    詞句中，「塑」日常發音常會誤發為「shuo4」，故皆補齊「su4」「shuo4」，後者詞頻設為80%。
+#    詞句中，「汀」日常發音常會誤發為「ding1」，故皆補齊「ting1」「ding1」，後者詞頻設為80%。
 #    詞句中，「緋」日常發音常會誤發為「fei3」，故皆補齊「fei1」「fei3」，後者詞頻設為80%。
 #    詞句中，「韋」日常發音常會誤發為「wei3」，故皆補齊「wei2」「wei3」，後者詞頻設為80%。
 #    詞句中，「懲」日常發音常會誤發為「cheng3」，故皆補齊「cheng2」「cheng3」。
@@ -61702,6 +61703,7 @@ min_phrase_weight: 100
 克蕾兒	ke4 lei3 er2
 克蕾兒	ke4 lei2 er2	80%
 克里斯汀‧貝爾	ke4 li3 si1 ting1 eng5 bei4 er3
+克里斯汀‧貝爾	ke4 li3 si1 ding1 eng5 bei4 er3	80%
 克里蒙梭	ke4 li3 meng2 suo1
 克難	ke4 nan2
 克難	ke4 nan4
@@ -88368,7 +88370,9 @@ min_phrase_weight: 100
 永錫不匱	yong3 xi2 bu2 kui4
 氹仔	dang4 zai3
 汀曲	ting1 qu1
+汀曲	ding1 qu1	80%
 汀濘	ting1 ning2
+汀濘	ding1 ning2	80%
 求之不得	qiu2 zhi1 bu4 de2
 求仁得仁	qiu2 ren2 de2 ren2
 求假	qiu2 jia4
@@ -93190,6 +93194,7 @@ min_phrase_weight: 100
 玻色子	bo1 se4 zi5
 玻色子	bo1 se4 zi3
 珍‧奧斯汀	zhen1 eng5 ao4 si1 ting1
+珍‧奧斯汀	zhen1 eng5 ao4 si1 ding1	80%
 珍惜	zhen1 xi2
 珍玩	zhen1 wan4
 珍玩	zhen1 wan2
@@ -112688,7 +112693,9 @@ min_phrase_weight: 100
 長毛絨	chang2 mao2 rong2
 長毛象	chang2 mao2 xiang4
 長汀	chang2 ting1
+長汀	chang2 ding1	80%
 長汀縣	chang2 ting1 xian4
+長汀縣	chang2 ding1 xian4	80%
 長江	chang2 jiang1
 長江三峽	chang2 jiang1 san1 xia2
 長江三角洲	chang2 jiang1 san1 jiao3 zhou1
@@ -117752,4 +117759,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 117755 #####
+##### @結束 END - 117762 #####
