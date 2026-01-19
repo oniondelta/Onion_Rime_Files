@@ -160,7 +160,7 @@
 ## Keys
  
 - 注音（洋蔥 雙拼 版）鍵位
-  > 無加 custom 可簡拼，有 custom 為一般雙拼每字須鍵兩碼（聲調可省略）
+  > 一般版可簡拼；T2 版（Type2）為一般雙拼每字須鍵兩碼（不能簡拼，但聲調可省略）
 
   #### <img src="https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/rimefiles/%E9%9B%99%E6%8B%BC%E6%B3%A8%E9%9F%B3%E9%8D%B5%E4%BD%8D%E8%AA%AA%E6%98%8E%E5%9C%96%E7%A4%BA/%E6%B3%A8%E9%9F%B3%E6%B4%8B%E8%94%A5%E9%9B%99%E6%8B%BC%E8%AA%AA%E6%98%8E.png" width = "595" alt="image" /><br>
 
