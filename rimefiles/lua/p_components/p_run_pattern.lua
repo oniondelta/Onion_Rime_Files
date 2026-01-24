@@ -66,7 +66,7 @@ local run_pattern = {
   -- ["ow"] = { s = 6, name = "Onion 洋蔥 GitHub Wiki Ⓕ", open = [["C:\Program Files (x86)\Mozilla Firefox\firefox.exe" https://github.com/oniondelta/Onion_Rime_Files/wiki]] },                  -- win 專用：指定程式開啟
 --------------------------------------------------------------------------
   -- ["a"] = { s = 12, name = "工作管理員", open = [["C:\Windows\System32\taskmgr.exe"]] },               -- win 專用：工作管理員
-  -- ["x"] = { s = 13, name = "命令提示字元", open = [["C:\Windows\System32\cmd.exe"]] },                 -- win 專用：終端機
+  -- ["x"] = { s = 13, name = "命令提示字元", open = [["C:\Windows\System32\cmd.exe"]] },                 -- win 專用：命令提示字元
 --------------------------------------------------------------------------
   -- ["ac"] = { s = 14, name = "計算機", open = [["C:\WINDOWS\system32\calc.exe"]] },                    -- win 專用：計算機
   -- ["ap"] = { s = 15, name = "小畫家", open = [["C:\WINDOWS\system32\mspaint.exe"]] },                 -- win 專用：小畫家
