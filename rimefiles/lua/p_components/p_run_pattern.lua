@@ -34,13 +34,15 @@ local run_pattern = {
   -- ["o"] = { s = 5, name = "Onion 洋蔥 GitHub Ⓕ", open = "-a '/Applications/Firefox.app' https://github.com/oniondelta/Onion_Rime_Files" },                             -- mac 專用：指定程式開啟
   -- ["ow"] = { s = 6, name = "Onion 洋蔥 GitHub Wiki Ⓕ", open = "-a '/Applications/Firefox.app' https://github.com/oniondelta/Onion_Rime_Files/wiki" },                  -- mac 專用：指定程式開啟
 --------------------------------------------------------------------------
-  -- ["at"] = { s = 10, name = "文字編輯器", open = "/System/Applications/TextEdit.app" },               -- mac 專用：文字編輯
-  -- ["ac"] = { s = 11, name = "計算機", open = "/System/Applications/Calculator.app" },                -- mac 專用：計算機
-  -- ["ad"] = { s = 12, name = "字典", open = "/System/Applications/Dictionary.app" },                  -- mac 專用：字典
+  -- ["a"] = { s = 10, name = "活動監視器", open = "/System/Applications/Utilities/Activity' 'Monitor.app" },      -- mac 專用：活動監視器（路徑中空格用「' '」標示）
+  -- ["a"] = { s = 10, name = "活動監視器", open = "/System/Applications/Utilities/Activity\\ Monitor.app" },      -- mac 專用：活動監視器（路徑中空格用「\\ 」標示）
+  -- ["at"] = { s = 11, name = "文字編輯器", open = "/System/Applications/TextEdit.app" },                         -- mac 專用：文字編輯
+  -- ["ac"] = { s = 12, name = "計算機", open = "/System/Applications/Calculator.app" },                          -- mac 專用：計算機
+  -- ["ad"] = { s = 13, name = "字典", open = "/System/Applications/Dictionary.app" },                            -- mac 專用：字典
 --------------------------------------------------------------------------
   -- ["ac"] = { s = 14, name = "CotEditor", open = "/Applications/CotEditor.app" },                    -- mac 專用：一般 app
-  -- ["as"] = { s = 15, name = "Sublime", open = "/Applications/Sublime' 'Text.app" },                 -- mac 專用：路徑中空格用「' '」標示
-  -- ["as"] = { s = 15, name = "Sublime", open = "/Applications/Sublime\\ Text.app" },                 -- mac 專用：路徑中空格用「\\ 」標示
+  -- ["as"] = { s = 15, name = "Sublime", open = "/Applications/Sublime' 'Text.app" },                 -- mac 專用：一般 app（路徑中空格用「' '」標示）
+  -- ["as"] = { s = 15, name = "Sublime", open = "/Applications/Sublime\\ Text.app" },                 -- mac 專用：一般 app（路徑中空格用「\\ 」標示）
 --------------------------------------------------------------------------
   -- ["ft"] = { s = 16, name = "TEST", open = "-a '/Applications/CotEditor.app' /Users/使用者名稱/test.txt" },         -- mac 專用：指定程式開啟
   -- ["ft"] = { s = 17, name = "TEST", open = "-a '/Applications/Sublime Text.app' /Users/使用者名稱/test' '1.txt" },  -- mac 專用：指定程式開啟（此處前方路徑名稱空格不用更動，後方路徑空格需補「' '」或「\\ 」）
@@ -65,7 +67,7 @@ local run_pattern = {
   -- ["ap"] = { s = 8, name = "小畫家", open = [["C:\WINDOWS\system32\mspaint.exe"]] },                 -- win 專用：小畫家
   -- ["at"] = { s = 9, name = "記事本", open = [["C:\WINDOWS\system32\notepad.exe"]] },                 -- win 專用：記事本
 --------------------------------------------------------------------------
-  -- ["an"] = { s = 10, name = "Notepad++", open = [["C:\Program Files\Notepad++\notepad++.exe"]] },  -- win 專用：路徑中空格不用更動
+  -- ["an"] = { s = 10, name = "Notepad++", open = [["C:\Program Files\Notepad++\notepad++.exe"]] },  -- win 專用：一般 exe（路徑中空格不用更動）
 --------------------------------------------------------------------------
   -- ["ft"] = { s = 11, name = "TEST", open = [["C:\Program Files\Notepad++\notepad++.exe" C:\Users\使用者名稱\AppData\Roaming\Rime\rime.lua]] },         -- win 專用：指定程式開啟
   -- ["ft"] = { s = 12, name = "TEST", open = [["C:\Program Files\Sublime Text\sublime_text.exe"]].." "..[["C:\Users\使用者名稱\Desktop\test 1.txt"]] },  -- win 專用：指定程式開啟（此處前方路徑名稱空格不用更動，後方路徑空格需用特殊格式）
