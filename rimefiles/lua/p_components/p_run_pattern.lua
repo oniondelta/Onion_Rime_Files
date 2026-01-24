@@ -42,7 +42,7 @@ local run_pattern = {
   -- ["ac"] = { s = 15, name = "計算機", open = "/System/Applications/Calculator.app" },                          -- mac 專用：計算機
   -- ["ad"] = { s = 16, name = "字典", open = "/System/Applications/Dictionary.app" },                            -- mac 專用：字典
 --------------------------------------------------------------------------
-  -- ["ac"] = { s = 17, name = "CotEditor", open = "/Applications/CotEditor.app" },                    -- mac 專用：一般 app
+  -- ["ae"] = { s = 17, name = "CotEditor", open = "/Applications/CotEditor.app" },                    -- mac 專用：一般 app
   -- ["as"] = { s = 18, name = "Sublime", open = "/Applications/Sublime' 'Text.app" },                 -- mac 專用：一般 app（路徑中空格用「' '」標示）
   -- ["as"] = { s = 18, name = "Sublime", open = "/Applications/Sublime\\ Text.app" },                 -- mac 專用：一般 app（路徑中空格用「\\ 」標示）
 --------------------------------------------------------------------------
@@ -103,7 +103,7 @@ local run_pattern = {
 
 -- print(run_pattern['no_item'].open)  -->報錯！！！
 -- print(run_pattern['no_item'])       -->nil
--- print(run_pattern['wr'].no_item)    -->nil
+-- print(run_pattern['r'].no_item)    -->nil
 -- print(run_pattern[nil])             -->nil
 
 return run_pattern
