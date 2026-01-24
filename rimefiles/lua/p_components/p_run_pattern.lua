@@ -34,25 +34,27 @@ local run_pattern = {
   -- ["o"] = { s = 5, name = "Onion 洋蔥 GitHub Ⓕ", open = "-a '/Applications/Firefox.app' https://github.com/oniondelta/Onion_Rime_Files" },                             -- mac 專用：指定程式開啟
   -- ["ow"] = { s = 6, name = "Onion 洋蔥 GitHub Wiki Ⓕ", open = "-a '/Applications/Firefox.app' https://github.com/oniondelta/Onion_Rime_Files/wiki" },                  -- mac 專用：指定程式開啟
 --------------------------------------------------------------------------
-  -- ["a"] = { s = 10, name = "活動監視器", open = "/System/Applications/Utilities/Activity' 'Monitor.app" },      -- mac 專用：活動監視器（路徑中空格用「' '」標示）
-  -- ["a"] = { s = 10, name = "活動監視器", open = "/System/Applications/Utilities/Activity\\ Monitor.app" },      -- mac 專用：活動監視器（路徑中空格用「\\ 」標示）
-  -- ["at"] = { s = 11, name = "文字編輯器", open = "/System/Applications/TextEdit.app" },                         -- mac 專用：文字編輯
-  -- ["ac"] = { s = 12, name = "計算機", open = "/System/Applications/Calculator.app" },                          -- mac 專用：計算機
-  -- ["ad"] = { s = 13, name = "字典", open = "/System/Applications/Dictionary.app" },                            -- mac 專用：字典
+  -- ["a"] = { s = 12, name = "活動監視器", open = "/System/Applications/Utilities/Activity' 'Monitor.app" },      -- mac 專用：活動監視器（路徑中空格用「' '」標示）
+  -- ["a"] = { s = 12, name = "活動監視器", open = "/System/Applications/Utilities/Activity\\ Monitor.app" },      -- mac 專用：活動監視器（路徑中空格用「\\ 」標示）
+  -- ["x"] = { s = 13, name = "終端機", open = "/System/Applications/Utilities/Terminal.app" },                   -- mac 專用：終端機
 --------------------------------------------------------------------------
-  -- ["ac"] = { s = 14, name = "CotEditor", open = "/Applications/CotEditor.app" },                    -- mac 專用：一般 app
-  -- ["as"] = { s = 15, name = "Sublime", open = "/Applications/Sublime' 'Text.app" },                 -- mac 專用：一般 app（路徑中空格用「' '」標示）
-  -- ["as"] = { s = 15, name = "Sublime", open = "/Applications/Sublime\\ Text.app" },                 -- mac 專用：一般 app（路徑中空格用「\\ 」標示）
+  -- ["at"] = { s = 14, name = "文字編輯器", open = "/System/Applications/TextEdit.app" },                         -- mac 專用：文字編輯
+  -- ["ac"] = { s = 15, name = "計算機", open = "/System/Applications/Calculator.app" },                          -- mac 專用：計算機
+  -- ["ad"] = { s = 16, name = "字典", open = "/System/Applications/Dictionary.app" },                            -- mac 專用：字典
 --------------------------------------------------------------------------
-  -- ["ft"] = { s = 16, name = "TEST", open = "-a '/Applications/CotEditor.app' /Users/使用者名稱/test.txt" },         -- mac 專用：指定程式開啟
-  -- ["ft"] = { s = 17, name = "TEST", open = "-a '/Applications/Sublime Text.app' /Users/使用者名稱/test' '1.txt" },  -- mac 專用：指定程式開啟（此處前方路徑名稱空格不用更動，後方路徑空格需補「' '」或「\\ 」）
+  -- ["ac"] = { s = 17, name = "CotEditor", open = "/Applications/CotEditor.app" },                    -- mac 專用：一般 app
+  -- ["as"] = { s = 18, name = "Sublime", open = "/Applications/Sublime' 'Text.app" },                 -- mac 專用：一般 app（路徑中空格用「' '」標示）
+  -- ["as"] = { s = 18, name = "Sublime", open = "/Applications/Sublime\\ Text.app" },                 -- mac 專用：一般 app（路徑中空格用「\\ 」標示）
 --------------------------------------------------------------------------
-  -- ["f"] = { s = 18, name = "下載項目（資料夾）", open = "~/Downloads" },
-  -- ["h"] = { s = 19, name = "Home（資料夾）", open = "~/" },
-  -- ["u"] = { s = 20, name = "用戶設定（資料夾）", open = "~/Library/Rime" },
+  -- ["ft"] = { s = 19, name = "TEST", open = "-a '/Applications/CotEditor.app' /Users/使用者名稱/test.txt" },         -- mac 專用：指定程式開啟
+  -- ["ft"] = { s = 20, name = "TEST", open = "-a '/Applications/Sublime Text.app' /Users/使用者名稱/test' '1.txt" },  -- mac 專用：指定程式開啟（此處前方路徑名稱空格不用更動，後方路徑空格需補「' '」或「\\ 」）
 --------------------------------------------------------------------------
-  -- ["d"] = { s = 21, name = "重新部屬（指令）", open = "-removeopen '/Library/Input Methods/Squirrel.app/Contents/MacOS/Squirrel' --reload" },   -- 「-removeopen 」為特此標示，去移除開頭之「open和start等」，有些指令不能有開頭command！
-  -- ["s"] = { s = 22, name = "同步用戶資料（指令）", open = "-removeopen '/Library/Input Methods/Squirrel.app/Contents/MacOS/Squirrel' --sync" },  -- 「-removeopen 」為特此標示，去移除開頭之「open和start等」，有些指令不能有開頭command！
+  -- ["f"] = { s = 21, name = "下載項目（資料夾）", open = "~/Downloads" },
+  -- ["h"] = { s = 22, name = "Home（資料夾）", open = "~/" },
+  -- ["u"] = { s = 23, name = "用戶設定（資料夾）", open = "~/Library/Rime" },
+--------------------------------------------------------------------------
+  -- ["d"] = { s = 24, name = "重新部屬（指令）", open = "-removeopen '/Library/Input Methods/Squirrel.app/Contents/MacOS/Squirrel' --reload" },   -- 「-removeopen 」為特此標示，去移除開頭之「open和start等」，有些指令不能有開頭command！
+  -- ["s"] = { s = 25, name = "同步用戶資料（指令）", open = "-removeopen '/Library/Input Methods/Squirrel.app/Contents/MacOS/Squirrel' --sync" },  -- 「-removeopen 」為特此標示，去移除開頭之「open和start等」，有些指令不能有開頭command！
 --------------------------------------------------------------------------
 -- Win：
 --------------------------------------------------------------------------
@@ -63,21 +65,24 @@ local run_pattern = {
   -- ["o"] = { s = 5, name = "Onion 洋蔥 GitHub Ⓕ", open = [["C:\Program Files (x86)\Mozilla Firefox\firefox.exe" https://github.com/oniondelta/Onion_Rime_Files]] },                             -- win 專用：指定程式開啟
   -- ["ow"] = { s = 6, name = "Onion 洋蔥 GitHub Wiki Ⓕ", open = [["C:\Program Files (x86)\Mozilla Firefox\firefox.exe" https://github.com/oniondelta/Onion_Rime_Files/wiki]] },                  -- win 專用：指定程式開啟
 --------------------------------------------------------------------------
-  -- ["ac"] = { s = 7, name = "計算機", open = [["C:\WINDOWS\system32\calc.exe"]] },                    -- win 專用：計算機
-  -- ["ap"] = { s = 8, name = "小畫家", open = [["C:\WINDOWS\system32\mspaint.exe"]] },                 -- win 專用：小畫家
-  -- ["at"] = { s = 9, name = "記事本", open = [["C:\WINDOWS\system32\notepad.exe"]] },                 -- win 專用：記事本
+  -- ["a"] = { s = 12, name = "工作管理員", open = [["C:\Windows\System32\taskmgr.exe"]] },               -- win 專用：工作管理員
+  -- ["x"] = { s = 13, name = "命令提示字元", open = [["C:\Windows\System32\cmd.exe"]] },                 -- win 專用：終端機
 --------------------------------------------------------------------------
-  -- ["an"] = { s = 10, name = "Notepad++", open = [["C:\Program Files\Notepad++\notepad++.exe"]] },  -- win 專用：一般 exe（路徑中空格不用更動）
+  -- ["ac"] = { s = 14, name = "計算機", open = [["C:\WINDOWS\system32\calc.exe"]] },                    -- win 專用：計算機
+  -- ["ap"] = { s = 15, name = "小畫家", open = [["C:\WINDOWS\system32\mspaint.exe"]] },                 -- win 專用：小畫家
+  -- ["at"] = { s = 16, name = "記事本", open = [["C:\WINDOWS\system32\notepad.exe"]] },                 -- win 專用：記事本
 --------------------------------------------------------------------------
-  -- ["ft"] = { s = 11, name = "TEST", open = [["C:\Program Files\Notepad++\notepad++.exe" C:\Users\使用者名稱\AppData\Roaming\Rime\rime.lua]] },         -- win 專用：指定程式開啟
-  -- ["ft"] = { s = 12, name = "TEST", open = [["C:\Program Files\Sublime Text\sublime_text.exe"]].." "..[["C:\Users\使用者名稱\Desktop\test 1.txt"]] },  -- win 專用：指定程式開啟（此處前方路徑名稱空格不用更動，後方路徑空格需用特殊格式）
+  -- ["an"] = { s = 17, name = "Notepad++", open = [["C:\Program Files\Notepad++\notepad++.exe"]] },  -- win 專用：一般 exe（路徑中空格不用更動）
 --------------------------------------------------------------------------
-  -- ["f"] = { s = 13, name = "下載（資料夾）", open = [["%UserProfile%\Downloads"]] },
-  -- ["h"] = { s = 14, name = "使用者資料夾（資料夾）", open = [["%UserProfile%"]] },
-  -- ["u"] = { s = 15, name = "用戶文件夾（資料夾）", open = [["%APPDATA%\Rime"]] },
+  -- ["ft"] = { s = 18, name = "TEST", open = [["C:\Program Files\Notepad++\notepad++.exe" C:\Users\使用者名稱\AppData\Roaming\Rime\rime.lua]] },         -- win 專用：指定程式開啟
+  -- ["ft"] = { s = 19, name = "TEST", open = [["C:\Program Files\Sublime Text\sublime_text.exe"]].." "..[["C:\Users\使用者名稱\Desktop\test 1.txt"]] },  -- win 專用：指定程式開啟（此處前方路徑名稱空格不用更動，後方路徑空格需用特殊格式）
 --------------------------------------------------------------------------
-  -- ["d"] = { s = 16, name = "重新部屬（指令）", open = [["C:\Program Files\Rime\weasel-0.17.4\WeaselDeployer.exe" /deploy]] },
-  -- ["s"] = { s = 17, name = "同步用戶資料（指令）", open = [["C:\Program Files\Rime\weasel-0.17.4\WeaselDeployer.exe" /sync]] },
+  -- ["f"] = { s = 20, name = "下載（資料夾）", open = [["%UserProfile%\Downloads"]] },
+  -- ["h"] = { s = 21, name = "使用者資料夾（資料夾）", open = [["%UserProfile%"]] },
+  -- ["u"] = { s = 22, name = "用戶文件夾（資料夾）", open = [["%APPDATA%\Rime"]] },
+--------------------------------------------------------------------------
+  -- ["d"] = { s = 23, name = "重新部屬（指令）", open = [["C:\Program Files\Rime\weasel-0.17.4\WeaselDeployer.exe" /deploy]] },
+  -- ["s"] = { s = 24, name = "同步用戶資料（指令）", open = [["C:\Program Files\Rime\weasel-0.17.4\WeaselDeployer.exe" /sync]] },
 --------------------------------------------------------------------------
 -- 測試用：
 --------------------------------------------------------------------------
