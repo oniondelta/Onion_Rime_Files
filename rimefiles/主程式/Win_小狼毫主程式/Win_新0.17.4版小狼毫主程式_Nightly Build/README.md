@@ -6,7 +6,7 @@
 
 ### Version Info
 
-- Github Releases：[b77f4bd](https://github.com/rime/weasel/releases/tag/latest)
+- Github Releases：[a10c058](https://github.com/rime/weasel/releases/tag/latest)
 
 - Weasel 0.17.4
 
