@@ -156,7 +156,7 @@ patch:
     # border_width: 4
     # border_color: 0xffffff #0x9f62e8
     # border_color_width: 0
-    candidate_format: "%c %@  "
+    candidate_format: "%c\u2003%@  " #"%c %@  "
     candidate_text_color: 0xffffff #0x333333
     text_color: 0x999999 #0x888888 #0x7B7B7B #0x333333
     hilited_text_color: 0xDFDFDF #0x333333 #0x888888
@@ -251,7 +251,7 @@ patch:
     # border_width: 4                                # 設置輸入條左右寬度
     # border_color: 0xffffff #0x9f62e8               # 輸入條邊框顏色，似乎在橫向模式下不起作用
     # border_color_width: 0                          # 查無名稱  # 輸入條邊框寬度
-    candidate_format: "%c %@  "                    # 設置每個候選詞之間的間隔距離，%c代表備選的數字，%@代表候選字，可以通過輸入空格的形式來調整每個候選字之間的間隔距離
+    candidate_format: "%c\u2003%@  " #"%c %@  "    # 設置每個候選詞之間的間隔距離，%c代表備選的數字，%@代表候選字，可以通過輸入空格的形式來調整每個候選字之間的間隔距離
     candidate_text_color: 0x333333                 # 候選字顏色
     text_color: 0xA1A1A1 #0x888888 #0x333333                 # 普通候選字的顏色，非第一候選字
     hilited_text_color: 0x333333 #0x888888         # 高亮（選中）鍵入碼字色
