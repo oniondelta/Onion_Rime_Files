@@ -194,6 +194,7 @@
 #    詞句中，「綜」臺灣標準為「zong4」，日常發音常會發「zong1」，故皆補齊「zong4」「zong1」。
 #    詞句中，「綏」臺灣標準為「sui1」，又音為「sui2」，大陸標準為「sui2」，日常易混，故皆補齊「sui1」「sui2」。
 #    詞句中，「鈾」臺灣標準為「you4」，又音為「you2」，大陸標準為「you2」，日常易混，故皆補齊「you4」「you2」。
+#    詞句中，「燾」臺灣標準為「tao2」，又音為「dao4」，大陸標準為「tao1」，日常易混，故皆補齊「tao2」「dao4」「tao1」。
 #    詞句中，「裳」臺灣標準為「chang2」，又音為「shang1」，日常發音常會誤發為「shang3」，大陸標準另有「shang5」該發音，日常易混，故皆補齊「chang2」「shang1」「shang5」「shang3」，最後一個詞頻設為80%。
 #    詞句中，「酊」臺灣標準只有「ding3」，大陸標準有「ding1」和「ding3」，且不同發音其字義不同，斟酌後皆補齊「ding1」「ding3」。
 #    詞句中，「柵」和「栅」臺灣標準為「zha4」，又音為「shan4」，大陸標準為「shan1」，日常易混，故皆補齊「zha4」「shan4」「shan1」，後兩者詞頻設為80%。
@@ -3618,6 +3619,8 @@ min_phrase_weight: 100
 悱	bei1	0%
 葜	qia4
 铵	an1
+隗	gui1	0%
+隃	shu4	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -4772,7 +4775,7 @@ min_phrase_weight: 100
 濼	bo2	1%
 濼	po4	1%
 瀁	yang3	1%
-燾	tao2	1%
+燾	tao2
 燿	yue4	1%
 爁	lan3	1%
 甔	dan4	1%
@@ -75924,6 +75927,8 @@ min_phrase_weight: 100
 張冠李戴	zhang1 guan1 li3 dai4
 張口結舌	zhang1 kou3 jie2 she2
 張國燾	zhang1 guo2 tao1
+張國燾	zhang1 guo2 tao2
+張國燾	zhang1 guo2 dao4
 張堪折轅	zhang1 kan1 zhe2 yuan2
 張家口地區	zhang1 jia1 kou3 di4 qu1
 張家長	zhang1 jia1 chang2
@@ -92191,6 +92196,8 @@ min_phrase_weight: 100
 燮和	xie4 he2
 燮和之任	xie4 he2 zhi1 ren4
 燾育	tao2 yu4
+燾育	tao1 yu4
+燾育	dao4 yu4
 爆冷門兒	bao4 leng3 men2 er5	80%
 爆冷門兒	bao4 leng3 men2 er2
 爆彈	bao4 dan4
@@ -117759,4 +117766,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 117762 #####
+##### @結束 END - 117769 #####
