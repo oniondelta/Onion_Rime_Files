@@ -18,7 +18,8 @@ menu:
   # alternative_select_labels: [ QY1, AH2, ZN3, WU4, SJ5, XM6 ]
   # alternative_select_labels: [ QY¹, AH², ZN³, WU⁴, SJ⁵, XM⁶ ]
   # alternative_select_labels: [ QY₁, AH₂, ZN₃, WU₄, SJ₅, XM₆ ]
-  alternative_select_labels: [ QY, AH, ZN, WU, SJ, XM ]
+  # alternative_select_labels: [ QY, AH, ZN, WU, SJ, XM ]
+  alternative_select_labels: [ 𝚀𝚈, 𝙰𝙷, 𝚉𝙽, 𝚆𝚄, 𝚂𝙹, 𝚇𝙼 ]  # 強制等寬體
   page_size: 6
 
 

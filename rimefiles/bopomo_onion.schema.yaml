@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onion
   name: "☆注音(洋蔥純注音版)☆"
-  version: "202407"
+  version: "202601"
   author:
     - 『洋蔥』
   description: |
@@ -81,7 +81,8 @@ zh_cn:
 menu:
   # alternative_select_keys: "QAZWSXEDCRFV3467"  #刻意讓「3467」置後，使聲調後按「3467」不上屏選字。
   # alternative_select_keys: "QAZWSXEDCRFV"
-  alternative_select_labels: [ QY, AH, ZN, WU, SJ, XM ]
+  # alternative_select_labels: [ QY, AH, ZN, WU, SJ, XM ]
+  alternative_select_labels: [ 𝚀𝚈, 𝙰𝙷, 𝚉𝙽, 𝚆𝚄, 𝚂𝙹, 𝚇𝙼 ]  # 強制等寬體
   page_size: 6
 ################################### 拼寫 ######################################
 speller:
