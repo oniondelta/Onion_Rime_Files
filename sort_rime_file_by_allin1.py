@@ -202,6 +202,8 @@ shutil.copyfile("./rimefiles/dif1_phrase.txt", "./"+sort_rime+"/"+rime_files+"/d
 shutil.copyfile("./rimefiles/dif1.extended.dict.yaml", "./"+sort_rime+"/"+rime_files+"/dif1.extended.dict.yaml")
 shutil.copyfile("./rimefiles/dif1.schema.yaml", "./"+sort_rime+"/"+rime_files+"/dif1.schema.yaml")
 shutil.copyfile("./rimefiles/punct_ocm.yaml", "./"+sort_rime+"/"+rime_files+"/punct_ocm.yaml")
+shutil.copyfile("./rimefiles/opencc/punct_mark_plus.json", "./"+sort_rime+"/"+rime_files+"/opencc/punct_mark_plus.json")
+shutil.copyfile("./rimefiles/opencc/punct_mark_plus.txt", "./"+sort_rime+"/"+rime_files+"/opencc/punct_mark_plus.txt")
 
 
 #複製檔案(ocm_mixin)

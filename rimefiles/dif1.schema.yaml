@@ -8,7 +8,7 @@ schema:
 
   name: "❖分別調出蝦米(plus)❖"
   schema_id: dif1
-  version: "202512"
+  version: "202601"
   dependencies:
     - punct_ovff
     - dif1_jphi
@@ -233,7 +233,7 @@ back_mark:
 #     - xform/@/ /
 
 punct_mark:
-  opencc_config: punct_mark.json
+  opencc_config: punct_mark_plus.json
   option_name: punct_mark
   show_in_comment: true
   tags: [ punct ]

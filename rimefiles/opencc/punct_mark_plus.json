@@ -1,5 +1,5 @@
 {
-  "name": "標點後方標註_注音和雙拼方案用（避〔〕。）",
+  "name": "標點後方標註_非注音和非雙拼方案用（不避且補充〔〕。）",
   "segmentation": {
     "type": "mmseg",
     "dict": {
@@ -13,6 +13,9 @@
       "dicts": [{
         "type": "text",
         "file": "punct_mark.txt"
+      }, {
+        "type": "text",
+        "file": "punct_mark_plus.txt"
       }]
     }
   }]

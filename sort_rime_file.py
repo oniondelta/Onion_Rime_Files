@@ -438,8 +438,9 @@ shutil.copyfile("./rimefiles/opencc/emoji_t.json", "./"+sort_rime+"/"+rime_files
 shutil.copyfile("./rimefiles/opencc/emoji_t.txt", "./"+sort_rime+"/"+rime_files_7+"/opencc/emoji_t.txt")
 shutil.copyfile("./rimefiles/opencc/ocm_moedict_big5e_hkscs_jis.json", "./"+sort_rime+"/"+rime_files_7+"/opencc/ocm_moedict_big5e_hkscs_jis.json")
 shutil.copyfile("./rimefiles/opencc/ocm_moedict_big5e_hkscs_jis.txt", "./"+sort_rime+"/"+rime_files_7+"/opencc/ocm_moedict_big5e_hkscs_jis.txt")
-shutil.copyfile("./rimefiles/opencc/punct_mark.json", "./"+sort_rime+"/"+rime_files_7+"/opencc/punct_mark.json")
+shutil.copyfile("./rimefiles/opencc/punct_mark_plus.json", "./"+sort_rime+"/"+rime_files_7+"/opencc/punct_mark_plus.json")
 shutil.copyfile("./rimefiles/opencc/punct_mark.txt", "./"+sort_rime+"/"+rime_files_7+"/opencc/punct_mark.txt")
+shutil.copyfile("./rimefiles/opencc/punct_mark_plus.txt", "./"+sort_rime+"/"+rime_files_7+"/opencc/punct_mark_plus.txt")
 
 shutil.copyfile("./rimefiles/jpnin1_phrase.txt", "./"+sort_rime+"/"+rime_files_7+"/jpnin1_phrase.txt")
 shutil.copyfile("./rimefiles/jpnin1.dict.yaml", "./"+sort_rime+"/"+rime_files_7+"/jpnin1.dict.yaml")
@@ -539,8 +540,9 @@ shutil.copyfile("./rimefiles/opencc/emoji_t.json", "./"+sort_rime+"/"+rime_files
 shutil.copyfile("./rimefiles/opencc/emoji_t.txt", "./"+sort_rime+"/"+rime_files_8+"/opencc/emoji_t.txt")
 shutil.copyfile("./rimefiles/opencc/ocm_moedict_big5e_hkscs_jis.json", "./"+sort_rime+"/"+rime_files_8+"/opencc/ocm_moedict_big5e_hkscs_jis.json")
 shutil.copyfile("./rimefiles/opencc/ocm_moedict_big5e_hkscs_jis.txt", "./"+sort_rime+"/"+rime_files_8+"/opencc/ocm_moedict_big5e_hkscs_jis.txt")
-shutil.copyfile("./rimefiles/opencc/punct_mark.json", "./"+sort_rime+"/"+rime_files_8+"/opencc/punct_mark.json")
+shutil.copyfile("./rimefiles/opencc/punct_mark_plus.json", "./"+sort_rime+"/"+rime_files_8+"/opencc/punct_mark_plus.json")
 shutil.copyfile("./rimefiles/opencc/punct_mark.txt", "./"+sort_rime+"/"+rime_files_8+"/opencc/punct_mark.txt")
+shutil.copyfile("./rimefiles/opencc/punct_mark_plus.txt", "./"+sort_rime+"/"+rime_files_8+"/opencc/punct_mark_plus.txt")
 
 shutil.copyfile("./rimefiles/jpnin1_phrase.txt", "./"+sort_rime+"/"+rime_files_8+"/jpnin1_phrase.txt")
 shutil.copyfile("./rimefiles/jpnin1.dict.yaml", "./"+sort_rime+"/"+rime_files_8+"/jpnin1.dict.yaml")

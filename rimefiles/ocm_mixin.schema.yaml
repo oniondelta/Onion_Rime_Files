@@ -9,7 +9,7 @@ schema:
 
   name: "❖超級混合蝦米(mix-in)❖"
   schema_id: ocm_mixin
-  version: "202512"
+  version: "202601"
   dependencies:
     - punct_ovff
     - symbols_ocm
@@ -204,7 +204,7 @@ emoji_switch:
 #     - xform/@/ /
 
 punct_mark:
-  opencc_config: punct_mark.json
+  opencc_config: punct_mark_plus.json
   option_name: punct_mark
   show_in_comment: true
   tags: [ punct ]
