@@ -10,6 +10,7 @@
 
 ----------------------------------------------------------------------------------------
 -- local utf8_sub = require("f_components/f_utf8_sub")
+local oscmd = require("p_components/p_oscmd")
 local run_open = require("p_components/p_run_open")
 -- local generic_open = require("p_components/p_generic_open")
 -- local run_pattern = require("p_components/p_run_pattern")
@@ -29,6 +30,7 @@ local function init(env)
   env.run_pattern = path .. "/lua/p_components/p_run_pattern.lua" or ""
   -- env.op_pattern = path .. "/lua/p_components/p_op_pattern.lua" or ""
   -- log.info("lua_custom_phrase: \'" .. env.textdict .. ".txt\' Initilized!")  -- 日誌中提示已經載入 txt 短語
+  env.oscmd = oscmd
   -- env.kp_pattern = {
   --   ["0"] = "0",
   --   ["1"] = "1",
