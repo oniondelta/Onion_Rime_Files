@@ -16,8 +16,8 @@ local function run_open(context, c_input, caret_pos, op_code, env_run_pattern, e
     return 1
   elseif op_code == "t" then
     -- engine:commit_text( "TEST！！！" )  -- 測試用
-    generic_open(env_run_pattern, oscmd)
     context:clear()
+    generic_open(env_run_pattern, oscmd)
     return 1
   elseif op_code == "c" then
     if env_textdict == "" then  -- 行列30無短語功能，但「c」還是設定不作用，不被下方自定義開啟影響。
@@ -25,8 +25,8 @@ local function run_open(context, c_input, caret_pos, op_code, env_run_pattern, e
       return 1
       -- return 2
     else
-      generic_open(env_custom_phrase, oscmd)
       context:clear()
+      generic_open(env_custom_phrase, oscmd)
       return 1
     end
   elseif run_in ~= nil then  -- 要確定 run_in 不為 nil，才能加.open，不然會報錯！
@@ -34,18 +34,18 @@ local function run_open(context, c_input, caret_pos, op_code, env_run_pattern, e
   -- elseif run_in ~= nil and g_c_t == "" then  -- 後面判斷防未知觸發。如果「run_pattern」條目缺「name」，「g_c_t」會是「preedit」，不為""。
     -- engine:commit_text(run_in)  -- 測試用
     -- engine:commit_text( generic_open(run_in.open, oscmd) )  -- 測試用
+    context:clear()
     if run_in.open and run_in.name then  -- 確認 run_in.open、run_in.name 不為 nil。
       generic_open(run_in.open, oscmd)  -- 要確定 run_in 不為 nil，才能加.open，不然會報錯！
     -- else
     --   engine:commit_text("沒﹛open﹦﹜⚠️")  -- 測試用
     end
-    context:clear()
     return 1
   -- elseif env_textdict == "" then
   --   return 2
   -- elseif op_code == "c" then
-  --   generic_open(env_custom_phrase, oscmd)
   --   context:clear()
+  --   generic_open(env_custom_phrase, oscmd)
   --   return 1
   else  -- 沒有該碼，空白鍵清空
     -- context:confirm_current_selection()
