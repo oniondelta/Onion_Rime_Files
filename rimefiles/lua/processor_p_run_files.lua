@@ -76,6 +76,7 @@ local function processor(key, env)
     local op_code = string.match(c_input, "^" .. env.prefix .. "j([a-z]+)$")
     if op_code_check then
       return run_open(context, c_input, caret_pos, op_code, env.run_pattern, env.textdict, env.custom_phrase, env.oscmd)
+      -- return run_open(engine, context, c_input, caret_pos, op_code, env.run_pattern, env.textdict, env.custom_phrase, env.oscmd)
     end
   end
 

@@ -184,6 +184,7 @@ local function processor(key, env)
     local op_code = string.match(c_input, "^" .. env.prefix .. "j([a-z]+)$")
     if seg:has_tag("mf_translator") and op_code_check then  -- 開頭
       return run_open(context, c_input, caret_pos, op_code, env.run_pattern, env.textdict, env.custom_phrase, env.oscmd)
+      -- return run_open(engine, context, c_input, caret_pos, op_code, env.run_pattern, env.textdict, env.custom_phrase, env.oscmd)
 
     elseif seg:has_tag("paging") and #c_input == caret_pos then  -- 加限定防止游標移中時，不能翻頁選字。
       return 2

@@ -172,6 +172,7 @@ local function processor(key, env)
     local op_code = string.match(c_input, "^" .. env.prefix .. "j([a-z]+)$")
     if op_code_check and (key_repr == "space" or key_repr == "Return" or key_repr == "KP_Enter") then
       return run_open(context, c_input, caret_pos, op_code, env.run_pattern, env.textdict, env.custom_phrase, env.oscmd)
+      -- return run_open(engine, context, c_input, caret_pos, op_code, env.run_pattern, env.textdict, env.custom_phrase, env.oscmd)
     end
 
     -- if env.prefix == "" then  -- 前面 seg:has_tag 已確定
