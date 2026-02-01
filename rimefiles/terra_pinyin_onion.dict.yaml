@@ -315,7 +315,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "202601"
+version: "202602"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -3621,6 +3621,9 @@ min_phrase_weight: 100
 铵	an1
 隗	gui1	0%
 隃	shu4	0%
+傀	kuai4	0%
+岞	ze2
+峿	yu3
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -3773,7 +3776,7 @@ min_phrase_weight: 100
 姍	xian1	1%
 宓	fu2	1%
 宛	yuan1	1%
-岝	ze2	1%
+岝	ze2
 岡	gang3	1%
 帑	nu2	1%
 怔	leng4	1%
@@ -5014,7 +5017,7 @@ min_phrase_weight: 100
 袯	bo1	0.5%
 袯	fu2	0.5%
 柭	ba2	0.5%
-岥	bo1	0.5%
+岥	bo1
 挀	bo4	0.5%
 踄	bo2	0.5%
 獛	bu3	0.5%
@@ -60993,10 +60996,13 @@ min_phrase_weight: 100
 偷饞抹嘴	tou1 chan2 mo3 zui3
 傀偉	gui1 wei3
 傀儡	kui3 lei3
-傀儡	kui2 lei3
+傀儡	kui2 lei3	80%
 傀儡家庭	kui3 lei3 jia1 ting2
+傀儡家庭	kui2 lei3 jia1 ting2	80%
 傀儡戲	kui3 lei3 xi4
+傀儡戲	kui2 lei3 xi4	80%
 傀儡政權	kui3 lei3 zheng4 quan2
+傀儡政權	kui2 lei3 zheng4 quan2	80%
 傀然	gui1 ran2
 傅說	fu4 yue4
 傅說	fu4 shuo1
@@ -78384,7 +78390,8 @@ min_phrase_weight: 100
 懸空	xuan2 kong1
 懸空寺	xuan2 kong1 si4
 懸空電車	xuan2 kong1 dian4 che1
-懸絲傀儡	xuan2 si1 kui2 lei3
+懸絲傀儡	xuan2 si1 kui2 lei3	80%
+懸絲傀儡	xuan2 si1 kui3 lei3
 懸絲診脈	xuan2 si1 zhen3 mai4
 懸腸掛肚	xuan2 chang2 gua4 du4
 懸薄	xuan2 bo2
@@ -81110,6 +81117,8 @@ min_phrase_weight: 100
 提供者	ti2 gong4 zhe3
 提傀儡上戲場	ti2 kui3 lei3 shang4 xi4 chang2	3%
 提傀儡上戲場	ti2 kui3 lei3 shang4 xi4 chang3
+提傀儡上戲場	ti2 kui2 lei3 shang4 xi4 chang2	3%
+提傀儡上戲場	ti2 kui2 lei3 shang4 xi4 chang3	80%
 提刀弄斧	ti2 dao1 nong4 fu3
 提姆‧羅賓斯	ti2 mu3 eng5 luo2 bin1 si1
 提得起放得下	ti2 de5 qi3 fang4 de5 xia4
@@ -83401,6 +83410,7 @@ min_phrase_weight: 100
 文書處理	wen2 shu1 chu4 li3
 文本編輯器	wen2 ben3 bian1 ji2 qi4
 文樂傀儡	wen2 yue4 kui3 lei3
+文樂傀儡	wen2 yue4 kui2 lei3	80%
 文武場	wen2 wu3 chang2	3%
 文武場	wen2 wu3 chang3
 文祕	wen2 mi4
@@ -99676,6 +99686,7 @@ min_phrase_weight: 100
 線性算子	xian4 xing4 suan4 zi3
 線性規劃	xian4 xing4 gui1 hua4
 線抽傀儡	xian4 chou1 kui3 lei3
+線抽傀儡	xian4 chou1 kui2 lei3	80%
 線桄子	xian4 guang4 zi5
 線速度	xian4 su4 du4
 線鋸	xian4 ju4
@@ -101081,6 +101092,7 @@ min_phrase_weight: 100
 肉中刺	rou4 zhong1 ci4
 肉乾	rou4 gan1
 肉傀儡	rou4 kui3 lei3
+肉傀儡	rou4 kui2 lei3	80%
 肉冠	rou4 guan1
 肉包子	rou4 bao1 zi5
 肉包子打狗	rou4 bao1 zi5 da3 gou3
@@ -104343,6 +104355,7 @@ min_phrase_weight: 100
 藥片	yao4 pian4
 藥物中毒	yao4 wu4 zhong4 du2
 藥發傀儡	yao4 fa1 kui2 lei3
+藥發傀儡	yao4 fa1 kui3 lei3	80%
 藥監局	yao4 jian1 ju2
 藥罐子	yao4 guan4 zi5
 藥行	yao4 hang2
@@ -108695,6 +108708,7 @@ min_phrase_weight: 100
 路貧愁煞人	lu4 pin2 chou2 sha4 ren2
 路遠沒輕擔	lu4 yuan3 mei2 qing1 dan4
 跳傀儡	tiao4 kui3 lei3
+跳傀儡	tiao4 kui2 lei3	80%
 跳天撅地	tiao4 tian1 jue1 di4
 跳天索地	tiao4 tian1 suo3 di4
 跳彈	tiao4 dan4
@@ -117766,4 +117780,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 117769 #####
+##### @結束 END - 117783 #####
