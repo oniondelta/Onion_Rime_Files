@@ -963,8 +963,8 @@ min_phrase_weight: 100
 導	dao4	10%
 导	dao4	10%
 敖	ao4	10%
-員	yun2	0.2%
-員	yun4	0.2%
+員	yun2	0%
+員	yun4	0%
 孚	fu1	0.2%
 肉	ru4	0.2%
 冒	mo4	0.2%
@@ -3624,6 +3624,12 @@ min_phrase_weight: 100
 傀	kuai4	0%
 岞	ze2
 峿	yu3
+貟	yun2	0%
+貟	yun4	0%
+贠	yun2	0%
+贠	yun4	0%
+员	yun2	0%
+员	yun4	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -117780,4 +117786,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 117783 #####
+##### @結束 END - 117789 #####
