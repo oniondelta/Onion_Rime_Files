@@ -18,7 +18,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion_add
-version: "202512"
+version: "202602"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7
@@ -330,6 +330,7 @@ min_phrase_weight: 100
 嗯	(en1)	1%
 嘛	(ma1)	10%
 唄	(bei1)	10%
+呗	(bei1)	10%
 朵	(duo1)
 麼	(mo1)	1%
 麼	(me1)	1%
@@ -457,6 +458,7 @@ min_phrase_weight: 100
 卟	(bo5)	0%
 哵	(ba5)	0%
 唄	(bai5)	0%
+呗	(bai5)	0%
 𠺚	(ban5)	0%
 𠷊	(pian5)	0%
 嚬	(pin5)	0%
