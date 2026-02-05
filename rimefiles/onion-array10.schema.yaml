@@ -5,7 +5,7 @@
 schema:
   schema_id: onion-array10
   name: "▦ 行列１０（洋蔥版）"
-  version: "202512"
+  version: "202602"
   author:
     - 洋蔥
   description: |
@@ -53,6 +53,9 @@ switches:
   #     - "兩邊都可"
   #     - "左邊鍵盤"
   #     - "數字鍵盤"
+  # - name: prediction
+  #   reset: 0
+  #   states: [ 關閉, 預測 ]
 
 
 engine:
@@ -60,6 +63,7 @@ engine:
     - lua_processor@array10_mix
     - ascii_composer
     - recognizer
+    # - predictor  #add predictor to the list of engine/processors before key_binder
     # - lua_processor@key_binder@key1  # 某些軟體中作用，某些軟體缺失！
     - key_binder
     - speller
@@ -81,6 +85,7 @@ engine:
     - fallback_segmentor
   translators:
     - punct_translator
+    # - predict_translator
     - table_translator
     - table_translator@shadow_top
     # - script_translator@second_phrases
@@ -422,12 +427,15 @@ key_binder:
     # - { accept: Control+apostrophe, toggle: extended_charset, when: always }
     # - { accept: Control+bracketleft, toggle: simplify_comment, when: always }  # 編碼提示開關
     # - { accept: Control+bracketright, toggle: switch_key_board, when: always }
+    # # - { accept: Control+minus, toggle: prediction, when: always } #「predictor」預測（聯想）詞功能開關
 ## 上排切換(Mac)
     - { accept: Control+Shift+7, toggle: simplify_comment, when: always }  # 編碼提示開關
     - { accept: Control+Shift+8, toggle: switch_key_board, when: always }
+    # - { accept: Control+Shift+9, toggle: prediction, when: always } #「predictor」預測（聯想）詞功能開關
 ## 上排切換(Win)
     - { accept: Control+Shift+ampersand, toggle: simplify_comment, when: always }  # 編碼提示開關
     - { accept: Control+Shift+asterisk, toggle: switch_key_board, when: always }
+    # - { accept: Control+Shift+parenleft, toggle: prediction, when: always } #「predictor」預測（聯想）詞功能開關
 ## 切換樣態
     - { accept: Control+comma, set_option: ascii_mode, when: always }
     - { accept: Control+period, set_option: full_shape, when: always }
@@ -436,6 +444,7 @@ key_binder:
     - { accept: Control+apostrophe, unset_option: extended_charset, when: always }
     - { accept: Control+bracketleft, set_option: simplify_comment, when: always }  # 編碼提示開關
     - { accept: Control+bracketright, set_option: switch_key_board, when: always }
+    # - { accept: Control+minus, set_option: prediction, when: always } #「predictor」預測（聯想）詞功能開關
 ## 初始樣態(Mac)
     - { accept: Control+Shift+comma, unset_option: ascii_mode, when: always }
     - { accept: Control+Shift+period, unset_option: full_shape, when: always }
@@ -444,6 +453,7 @@ key_binder:
     - { accept: Control+Shift+apostrophe, set_option: extended_charset, when: always }
     - { accept: Control+Shift+bracketleft, unset_option: simplify_comment, when: always }  # 編碼提示開關
     - { accept: Control+Shift+bracketright, unset_option: switch_key_board, when: always }
+    # - { accept: Control+Shift+minus, unset_option: prediction, when: always } #「predictor」預測（聯想）詞功能開關
 ## 初始樣態(Win)
     - { accept: Control+Shift+less, unset_option: ascii_mode, when: always }
     - { accept: Control+Shift+greater, unset_option: full_shape, when: always }
@@ -452,6 +462,7 @@ key_binder:
     - { accept: Control+Shift+quotedbl, set_option: extended_charset, when: always }
     - { accept: Control+Shift+braceleft, unset_option: simplify_comment, when: always }  # 編碼提示開關
     - { accept: Control+Shift+braceright, unset_option: switch_key_board, when: always }
+    # - { accept: Control+Shift+underscore, unset_option: prediction, when: always } #「predictor」預測（聯想）詞功能開關
 # ### Return/Enter鍵 ###
 #     - {accept: Return, send: KP_Space, when: paging}  # 選字時 Return/Enter 鍵同空白鍵上屏中文
 #     - {accept: KP_Enter, send: KP_Space, when: paging}  # 選字時右側小鍵盤 Return/Enter 鍵同空白鍵上屏中文
@@ -581,6 +592,13 @@ recognizer:
     # reverse2_lookup: "`[^`][-.,;/0-9a-z ]*'?$"  #可替代上條列，可接續調出，但開頭無《注音反查》▶提示。
     # reverse2_lookup: "^`[-.,;/0-9a-z ]*'?$"
     reverse3_lookup: "(?<!`)``[zxcvsdfwerb]*'?$"
+
+
+# ##### 預測（聯想）詞 #####
+# predictor:
+#   db: predict_office.db  #predict.db  #文件名，predict db file in user directory/shared directory
+#   max_candidates: 0  #5  #每次預測的最大候選項數量，0表示全部候選項
+#   max_iterations: 0  #1  #最大預測次數，0表示不限制
 
 
 #### 個別方案特別指定樣式（不使用預設值） #####

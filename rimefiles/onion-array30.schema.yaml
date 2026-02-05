@@ -4,7 +4,7 @@
 schema:
   schema_id: onion-array30
   name: "▦ 行列３０（洋蔥版）"
-  version: "202512"
+  version: "202602"
   author:
     - 洋蔥
   description: |
@@ -51,6 +51,9 @@ switches:
   # - name: array30_return_abc  --改用「array30_space_wp」連動作用
   #   reset: 1
   #   states: [ "Return & Space", "Space" ]
+  - name: prediction
+    reset: 0
+    states: [ 關閉, 預測 ]
 
 
 engine:
@@ -78,6 +81,7 @@ engine:
     # - lua_processor@array30up_zy #注音反查 Return 和 space 上屏修正。 #架構關係，反查輸入法使用鍵位大於主輸入法，仍會產生 Bug。
     - ascii_composer
     - recognizer
+    - predictor  #add predictor to the list of engine/processors before key_binder
     - key_binder
     - speller
     - punctuator
@@ -97,6 +101,7 @@ engine:
     - fallback_segmentor
   translators:
     - punct_translator
+    - predict_translator
     # - script_translator
     - table_translator
     - table_translator@wsymbols #（可用 symbols 更簡單實現，但沒有開頭提示）
@@ -443,18 +448,22 @@ key_binder:
 #     - { accept: Control+slash, toggle: ascii_punct, when: always } #新增！
 #     - { accept: Control+apostrophe, toggle: extended_charset, when: always } #增廣常用字符過濾，新增開關
 #     - { accept: Control+bracketleft, toggle: simplify_comment, when: always } #編碼提示開關
-#     - { accept: Control+bracketright, toggle: 1_2_straight_up, when: always } #空白直上開關
-#     - { accept: Control+minus, toggle: array30_space_wp, when: always } #空白為翻頁或上屏開關
+#     - { accept: Control+bracketright, toggle: array30_space_wp, when: always } #空白為翻頁或上屏開關
+#     - { accept: Control+minus, toggle: prediction, when: always } #「predictor」預測（聯想）詞功能開關
+# #    - { accept: Control+bracketright, toggle: 1_2_straight_up, when: always } #空白直上開關
+# #    - { accept: Control+minus, toggle: array30_space_wp, when: always } #空白為翻頁或上屏開關
 # #    - { accept: Control+equal, toggle: array30_return_abc, when: always } # return 上屏候選字或 abc 開關
 ## 上排切換(Mac)
     - { accept: Control+Shift+7, toggle: simplify_comment, when: always } #編碼提示開關
     - { accept: Control+Shift+8, toggle: array30_space_wp, when: always } #空白為翻頁或上屏開關
+    - { accept: Control+Shift+9, toggle: prediction, when: always } #「predictor」預測（聯想）詞功能開關
     # - { accept: Control+Shift+8, toggle: 1_2_straight_up, when: always } #空白直上開關
     # - { accept: Control+Shift+9, toggle: array30_space_wp, when: always } #空白為翻頁或上屏開關
     # - { accept: Control+Shift+0, toggle: array30_return_abc, when: always } # return 上屏候選字或 abc 開關
 ## 上排切換(Win)
     - { accept: Control+Shift+ampersand, toggle: simplify_comment, when: always } #編碼提示開關
     - { accept: Control+Shift+asterisk, toggle: array30_space_wp, when: always } #空白為翻頁或上屏開關
+    - { accept: Control+Shift+parenleft, toggle: prediction, when: always } #「predictor」預測（聯想）詞功能開關
     # - { accept: Control+Shift+asterisk, toggle: 1_2_straight_up, when: always } #空白直上開關
     # - { accept: Control+Shift+parenleft, toggle: array30_space_wp, when: always } #空白為翻頁或上屏開關
     # - { accept: Control+Shift+parenright, toggle: array30_return_abc, when: always } # return 上屏候選字或 abc 開關
@@ -466,9 +475,10 @@ key_binder:
     - { accept: Control+apostrophe, unset_option: extended_charset, when: always } #增廣常用字符過濾，新增開關
     - { accept: Control+bracketleft, set_option: simplify_comment, when: always } #編碼提示開關
     - { accept: Control+bracketright, unset_option: array30_space_wp, when: always } #空白為翻頁或上屏開關
+#win易快捷鍵衝突，mac可打開#    # - { accept: Control+minus, set_option: prediction, when: always } #「predictor」預測（聯想）詞功能開關
     # - { accept: Control+bracketright, set_option: 1_2_straight_up, when: always } #空白直上開關
-#win易快捷鍵衝突，mac可打開#    # - { accept: Control+minus, unset_option: array30_space_wp, when: always } #空白為翻頁或上屏開關
-#win易快捷鍵衝突，mac可打開#    # - { accept: Control+equal, unset_option: array30_return_abc, when: always } # return 上屏候選字或 abc 開關
+    # - { accept: Control+minus, unset_option: array30_space_wp, when: always } #空白為翻頁或上屏開關
+    # - { accept: Control+equal, unset_option: array30_return_abc, when: always } # return 上屏候選字或 abc 開關
 ## 初始樣態(Mac)
     - { accept: Control+Shift+comma, unset_option: ascii_mode, when: always } #新增！
     - { accept: Control+Shift+period, unset_option: full_shape, when: always } #新增！
@@ -477,9 +487,10 @@ key_binder:
     - { accept: Control+Shift+apostrophe, set_option: extended_charset, when: always } #增廣常用字符過濾，新增開關
     - { accept: Control+Shift+bracketleft, unset_option: simplify_comment, when: always } #編碼提示開關
     - { accept: Control+Shift+bracketright, set_option: array30_space_wp, when: always } #空白為翻頁或上屏開關
+#win易快捷鍵衝突，mac可打開#    # - { accept: Control+Shift+minus, unset_option: prediction, when: always } #「predictor」預測（聯想）詞功能開關
     # - { accept: Control+Shift+bracketright, unset_option: 1_2_straight_up, when: always } #空白直上開關
-#win易快捷鍵衝突，mac可打開#    # - { accept: Control+Shift+minus, set_option: array30_space_wp, when: always } #空白為翻頁或上屏開關
-#win易快捷鍵衝突，mac可打開#    # - { accept: Control+Shift+equal, set_option: array30_return_abc, when: always } # return 上屏候選字或 abc 開關
+    # - { accept: Control+Shift+minus, set_option: array30_space_wp, when: always } #空白為翻頁或上屏開關
+    # - { accept: Control+Shift+equal, set_option: array30_return_abc, when: always } # return 上屏候選字或 abc 開關
 ## 初始樣態(Win)
     - { accept: Control+Shift+less, unset_option: ascii_mode, when: always } #新增！
     - { accept: Control+Shift+greater, unset_option: full_shape, when: always } #新增！
@@ -488,9 +499,10 @@ key_binder:
     - { accept: Control+Shift+quotedbl, set_option: extended_charset, when: always } #增廣常用字符過濾，新增開關
     - { accept: Control+Shift+braceleft, unset_option: simplify_comment, when: always } #編碼提示開關
     - { accept: Control+Shift+braceright, set_option: array30_space_wp, when: always } #空白為翻頁或上屏開關
+#win易快捷鍵衝突，mac可打開#    # - { accept: Control+Shift+underscore, unset_option: prediction, when: always } #「predictor」預測（聯想）詞功能開關
     # - { accept: Control+Shift+braceright, unset_option: 1_2_straight_up, when: always } #空白直上開關
-#win易快捷鍵衝突，mac可打開#    # - { accept: Control+Shift+underscore, set_option: array30_space_wp, when: always } #空白為翻頁或上屏開關
-#win易快捷鍵衝突，mac可打開#    # - { accept: Control+Shift+plus, set_option: array30_return_abc, when: always } # return 上屏候選字或 abc 開關
+    # - { accept: Control+Shift+underscore, set_option: array30_space_wp, when: always } #空白為翻頁或上屏開關
+    # - { accept: Control+Shift+plus, set_option: array30_return_abc, when: always } # return 上屏候選字或 abc 開關
 ### Return/Enter鍵 ###
     - {accept: Return, send: KP_Space, when: paging} #選字時 Return/Enter 鍵同空白鍵上屏中文
     - {accept: KP_Enter, send: KP_Space, when: paging} #選字時右側小鍵盤 Return/Enter 鍵同空白鍵上屏中文
@@ -526,6 +538,20 @@ recognizer:
     # lua: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|`[';a-z0-9./-]*$"
     # email: "^[a-z][-_.0-9a-z]*@.*$"
     # url: "^(www[.]|https?:|ftp:|mailto:).*$"
+
+
+##### 預測（聯想）詞 #####
+predictor:
+  # predict db file in user directory/shared directory
+  # default to 'predict.db'
+  db: predict_office.db  #predict.db  #文件名，predict db file in user directory/shared directory
+  # max prediction candidates every time
+  # default to 0, which means showing all candidates
+  # you may set it the same with page_size so that period doesn't trigger next page
+  max_candidates: 0  #5  #每次預測的最大候選項數量，0表示全部候選項
+  # max continuous prediction times
+  # default to 0, which means no limitation
+  max_iterations: 0  #1  #最大預測次數，0表示不限制
 
 
 style:

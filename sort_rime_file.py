@@ -577,6 +577,8 @@ shutil.copyfile("./rimefiles/onion-array30-shortcode.dict.yaml", "./"+sort_rime+
 shutil.copyfile("./rimefiles/onion-array30-phrases.dict.yaml", "./"+sort_rime+"/"+rime_files_9+"/onion-array30-phrases.dict.yaml")
 shutil.copyfile("./rimefiles/onion-array30-generally.dict.yaml", "./"+sort_rime+"/"+rime_files_9+"/onion-array30-generally.dict.yaml")
 
+shutil.copyfile("./rimefiles/predict_office.db", "./"+sort_rime+"/"+rime_files_9+"/predict_office.db")
+
 shutil.copyfile("./rimefiles/rime.lua", "./"+sort_rime+"/"+rime_files_9+"/rime.lua")
 shutil.copytree("./rimefiles/lua/", "./"+sort_rime+"/"+rime_files_9+"/lua/")
 
@@ -600,6 +602,8 @@ shutil.copyfile("./rimefiles/onion-array10-generally-a.dict.yaml", "./"+sort_rim
 shutil.copyfile("./rimefiles/onion-array10-generally-b.dict.yaml", "./"+sort_rime+"/"+rime_files_10+"/onion-array10-generally-b.dict.yaml")
 shutil.copyfile("./rimefiles/onion-array10-generally-c.dict.yaml", "./"+sort_rime+"/"+rime_files_10+"/onion-array10-generally-c.dict.yaml")
 shutil.copyfile("./rimefiles/phrases.ocmtc_essay_mc.dict.yaml", "./"+sort_rime+"/"+rime_files_10+"/phrases.ocmtc_essay_mc.dict.yaml")
+
+# shutil.copyfile("./rimefiles/predict_office.db", "./"+sort_rime+"/"+rime_files_10+"/predict_office.db")
 
 shutil.copyfile("./rimefiles/rime.lua", "./"+sort_rime+"/"+rime_files_10+"/rime.lua")
 shutil.copytree("./rimefiles/lua/", "./"+sort_rime+"/"+rime_files_10+"/lua/")

@@ -229,6 +229,7 @@ shutil.copyfile("./rimefiles/onion-array30-special.dict.yaml", "./"+sort_rime+"/
 shutil.copyfile("./rimefiles/onion-array30-shortcode.dict.yaml", "./"+sort_rime+"/"+rime_files+"/onion-array30-shortcode.dict.yaml")
 shutil.copyfile("./rimefiles/onion-array30-phrases.dict.yaml", "./"+sort_rime+"/"+rime_files+"/onion-array30-phrases.dict.yaml")
 shutil.copyfile("./rimefiles/onion-array30-generally.dict.yaml", "./"+sort_rime+"/"+rime_files+"/onion-array30-generally.dict.yaml")
+shutil.copyfile("./rimefiles/predict_office.db", "./"+sort_rime+"/"+rime_files+"/predict_office.db")
 shutil.copytree("./rimefiles/行列30碼表_20230211版/", "./"+sort_rime+"/"+rime_files+"/行列30碼表_20230211版/")
 
 

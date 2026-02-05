@@ -362,11 +362,19 @@ local function processor(key, env)
       return 1
     else
       if g_c_t == g_c_t_update then
+        -- engine:commit_text(g_c_t .. "test！")
         engine:commit_text(g_c_t)
         context:clear()
       end
       return 1
     end
+
+  --- 讓「predictor」預測（聯想）詞功能，不會於「mf_translator」跑出。
+  elseif a_s_wp and seg:has_tag("mf_translator") and (key_repr == "Return" or key_repr == "KP_Enter") then
+    -- engine:commit_text(g_c_t .. "test！")
+    engine:commit_text(g_c_t)
+    context:clear()
+    return 1
 
   --- 行列30反查注音，不能直接上屏。
   elseif check_i_reverse_space then
@@ -441,9 +449,13 @@ KeyEvent 函數在舊版 librime-lua 中不支持。
       context:refresh_non_confirmed_composition()
       return 1
     else
+      -- if g_c_t == g_c_t_update then
+      --   -- engine:commit_text(g_c_t .. "test！")
+      --   engine:commit_text(g_c_t)
+      --   context:clear()
+      -- end
       if g_c_t == g_c_t_update then
-        engine:commit_text(g_c_t)
-        context:clear()
+        return 2  -- 與上方差別為：已輸入末尾空白之字碼（如：「e␣」→山），再按空白鍵後，其預測（聯想）詞功能可以跑出。
       end
       return 1
     end
