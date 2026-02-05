@@ -123,6 +123,7 @@
 #    詞句中，「昔」臺灣字典發音和習慣發音為「xi2」，大陸發音為「xi1」，斟酌後全改成臺灣發音「xi2」。
 #    詞句中，「惜」臺灣字典發音和習慣發音為「xi2」，大陸發音為「xi1」，斟酌後全改成臺灣發音「xi2」。
 #    詞句中，「錫」臺灣字典發音和習慣發音為「xi2」，大陸發音為「xi1」，斟酌後全改成臺灣發音「xi2」。
+#    詞句中，「築」臺灣字典發音和習慣發音為「zhu2」，大陸發音為「zhu4」，斟酌後全改成臺灣發音「zhu2」。
 #    詞句中，「麴」臺灣字典發音和習慣發音為「qu2」，大陸發音為「qu1」，斟酌後全改成臺灣發音「qu2」。
 #    詞句中，「煦」臺灣字典發音和習慣發音為「xu3」，大陸發音為「xu4」，斟酌後全改成臺灣發音「xu3」。
 #    詞句中，「跌」臺灣字典發音和習慣發音為「die2」，大陸發音為「die1」，斟酌後全改成臺灣發音「die2」。
@@ -3632,6 +3633,7 @@ min_phrase_weight: 100
 员	yun2	0%
 员	yun4	0%
 贸	mou4	1%
+砟	zuo4	1%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -4018,7 +4020,7 @@ min_phrase_weight: 100
 痃	xian2	1%
 益	yi2	1%
 眙	chi4	1%
-砟	zha4	1%
+砟	zha4
 砠	ju1	1%
 砢	ke1	1%
 砫	zhu4	1%
@@ -4154,8 +4156,8 @@ min_phrase_weight: 100
 莆	fu3	1%
 莏	cuo1	1%
 莙	jun4	1%
-莨	lang2	1%
-莨	liang2	1%
+莨	lang2
+莨	liang2
 莫	mu4	1%
 蚴	you3	100%
 蚺	tian4	1%
@@ -5704,7 +5706,7 @@ min_phrase_weight: 100
 嘁	za1	0.5%
 抸	za1	0.5%
 夎	zuo4	0.5%
-砟	zuo2	0.5%
+砟	zuo2	1%
 葃	zuo2	0.5%
 嶉	wei3	0.5%
 嶵	zui4	0.5%
@@ -28911,7 +28913,7 @@ min_phrase_weight: 100
 篆	zhuan4
 篇	pian1
 篈	feng1
-築	zhu4
+築	zhu4	1%
 篊	hong2
 篊	huang2
 篋	qie4
@@ -31216,7 +31218,7 @@ min_phrase_weight: 100
 莥	rou4
 莦	shao1
 莧	xian4
-莨	lang4
+莨	lang4	50%
 莩	fu2	50%
 莩	piao3	50%
 莪	e2
@@ -60252,7 +60254,6 @@ min_phrase_weight: 100
 修正液	xiu1 zheng4 ye4
 修省	xiu1 xing3
 修築	xiu1 zhu2
-修築	xiu1 zhu4
 修蓋	xiu1 gai4
 修行	xiu1 xing2
 修行人	xiu1 xing2 ren2
@@ -75710,21 +75711,15 @@ min_phrase_weight: 100
 建白	jian4 bai2
 建管處	jian4 guan3 chu4
 建築	jian4 zhu2
-建築	jian4 zhu4
 建築執照	jian4 zhu2 zhi2 zhao4
 建築學	jian4 zhu2 xue2
-建築學	jian4 zhu4 xue2
 建築容積管制	jian4 zhu2 rong2 ji1 guan3 zhi4
 建築工程	jian4 zhu2 gong1 cheng2
 建築師	jian4 zhu2 shi1
-建築師	jian4 zhu4 shi1
 建築材料	jian4 zhu2 cai2 liao4
-建築材料	jian4 zhu4 cai2 liao4
 建築業	jian4 zhu2 ye4
-建築業	jian4 zhu4 ye4
 建築法規	jian4 zhu2 fa3 gui1
 建築物	jian4 zhu2 wu4
-建築物	jian4 zhu4 wu4
 建蔽率	jian4 bi4 lv4
 建行	jian4 hang2
 建設和諧	jian4 she4 he2 xie2
@@ -86715,7 +86710,6 @@ min_phrase_weight: 100
 槅子眼	ge2 zi5 yan3
 構建和諧	gou4 jian4 he2 xie2
 構築	gou4 zhu2
-構築	gou4 zhu4
 構訟不息	gou4 song4 bu4 xi2
 構造地震	gou4 zao4 di4 zhen4
 槌子	chui2 zi5
@@ -92494,7 +92488,6 @@ min_phrase_weight: 100
 版刻	ban3 ke1
 版刻	ban3 ke4
 版築	ban3 zhu2
-版築	ban3 zhu4
 版築飯牛	ban3 zhu2 fan4 niu2
 牌告利率	pai2 gao4 li4 lv4
 牌坊	pai2 fang1
@@ -98382,7 +98375,6 @@ min_phrase_weight: 100
 築室	zhu2 shi4
 築室反耕	zhu2 shi4 fan3 geng1
 築室道謀	zhu2 shi4 dao4 mou2
-築室道謀	zhu4 shi4 dao4 mou2
 築巢	zhu2 chao2
 築底巷	zhu2 di3 xiang4
 築磕	zhu2 ke1
@@ -117788,4 +117780,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 117791 #####
+##### @結束 END - 117783 #####
