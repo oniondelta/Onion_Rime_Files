@@ -3471,11 +3471,12 @@ local function translate(input, seg, env)
         yield_c( arabic_indic_number(numberout), "〔阿拉伯文〕", num_preedit)
         yield_c( extended_arabic_indic_number(numberout), "〔東阿拉伯文〕", num_preedit)
         yield_c( devanagari_number(numberout), "〔天城文〕", num_preedit)
-      end
 
-      if neg_n == "" then
-        if tonumber(numberout) == 1 or tonumber(numberout) == 0 then
-          yield_c( string.sub(numberout, -1), "〔二進位〕", num_preedit)
+        local tonumber_n = tonumber(numberout)
+        -- if tonumber_n == 1 or tonumber_n == 0 then
+        --   yield_c( string.sub(numberout, -1), "〔二進位〕", num_preedit)
+        if tonumber_n < 2 then
+          yield_c( numberout .. "⚠", "〔二進位〕(repeated⚠️)", num_preedit)
         --- 浮點精度關係，二進制轉換運算中：
         --- math.floor 極限是小數點後15位(小於16位，1.9999999999999999)
         --- math.fmod 極限是小數點後13位(小於14位，1.99999999999999，14位開頭為偶數時除2是正確的，奇數則不正確)
@@ -3491,16 +3492,26 @@ local function translate(input, seg, env)
         end
 
         --- 整數庫限制：最大的64位元整數超過64位等同十進制2^63，超過則報錯，極限2^63-1，超過設定不顯示
-        if tonumber(numberout) < 9223372036854775808 then
+        -- if tonumber(numberout) < 9223372036854775808 then
+        if tonumber_n < 9223372036854775808 then
         -- if string.len(numberout) < 19 then
-          yield_c( string.format("%X",numberout), "〔十六進位〕", num_preedit)
-          yield_c( string.format("%x",numberout), "〔十六進位〕", num_preedit)
-          yield_c( string.format("%o",numberout), "〔八進位〕", num_preedit)
+          if tonumber_n < 8 then
+            yield_c( numberout .. "⚠ ", "〔八進位〕(repeated⚠️)", num_preedit)
+          else
+            yield_c( string.format("%o",numberout), "〔八進位〕", num_preedit)
+          end
+          if tonumber_n < 16 then
+            yield_c( numberout .. "⚠  ", "〔十六進位〕(repeated⚠️)", num_preedit)
+          else
+            yield_c( string.format("%X",numberout), "〔十六進位〕", num_preedit)
+            yield_c( string.format("%x",numberout), "〔十六進位〕", num_preedit)
+          end
         else
+          yield_c( "oct", "（超過 2⁶³-1 報錯）〔八進位〕", num_preedit)
           yield_c( "Hex", "（超過 2⁶³-1 報錯）〔十六進位〕", num_preedit)
           yield_c( "hex", "（超過 2⁶³-1 報錯）〔十六進位〕", num_preedit)
-          yield_c( "oct", "（超過 2⁶³-1 報錯）〔八進位〕", num_preedit)
         end
+        return  -- 數字選字單最後了。
       end
 
     elseif dot0 ~= "" then
@@ -3523,7 +3534,7 @@ local function translate(input, seg, env)
         yield_c( "٠" .. arabic_indic_number(d1_a), "〔阿拉伯文〕", num_preedit)  -- 補零："٠" == 0
         yield_c( "۰" .. extended_arabic_indic_number(d1_a), "〔東阿拉伯文〕", num_preedit)  -- 補零："٠" == 0
       end
-      return
+      return  -- 數字選字單最後了。
     elseif dot0 == "" and dot1 ~= "" then
       -- local ng_n_d1_a = neg_n .. numberout .. dot1 .. afterdot  -- 前方已有相同！
       if string.len(numberout) < 2 then  -- 避免被去重！
@@ -3548,7 +3559,7 @@ local function translate(input, seg, env)
         yield_c( arabic_indic_number(n_d1_a), "〔阿拉伯文〕", num_preedit)
         yield_c( extended_arabic_indic_number(n_d1_a), "〔東阿拉伯文〕", num_preedit)
       end
-      return
+      return  -- 數字選字單最後了。
     end
 
     return
