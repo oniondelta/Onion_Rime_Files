@@ -3271,9 +3271,10 @@ local function translate(input, seg, env)
     yield_c( "(負)", "〔帶括中文負號〕", num_preedit)
     yield_c( "➖", "〔鍵帽負號/加粗減號〕", num_preedit)  -- 〔加粗的減號〕
     -- yield_c( "⛔", "〔鍵帽負號〕", num_preedit)  -- ➖
-    yield_c( "-⃣", "〔鍵帽負號〕(非標準)", num_preedit)  -- -⃣ −⃣
-    yield_c( emoji_number("-"), "〔表情符號密文負號〕", num_preedit)  -- "✂️"
+    yield_c( "-⃣", "〔鍵帽負號〕(nstd.)", num_preedit)  -- -⃣ −⃣  -- (非標準)
     yield_c( "⠤", "〔點字負號〕(computer/unified)", num_preedit)
+    yield_c( "✂️", "〔表符密文負號〕(fixed)", num_preedit)  -- (固定)
+    yield_c( emoji_number("-")[2], "〔表符密文負號〕(random)", num_preedit)  -- "✂️"  -- (隨機)
     return
   end
 
@@ -3288,10 +3289,11 @@ local function translate(input, seg, env)
     yield_c( "點", "〔中文小數點〕", num_preedit)
     -- yield_c( "點", "〔軍中小數點〕", num_preedit)
     -- yield_c( "．", "〔鍵帽小數點〕", num_preedit)  -- "."
-    yield_c( ".⃣", "〔鍵帽小數點〕(非標準)", num_preedit)
-    yield_c( emoji_number("."), "〔表情符號密文小數點〕", num_preedit)  -- "⚡️"
+    yield_c( ".⃣", "〔鍵帽小數點〕(nstd.)", num_preedit)  -- (非標準)
     yield_c( "⠨", "〔點字小數點〕(computer)", num_preedit)
     yield_c( "⠲", "〔點字小數點〕(unified)", num_preedit)
+    yield_c( "⚡️", "〔表符密文小數點〕(fixed)", num_preedit)  -- (固定)
+    yield_c( emoji_number(".")[1], "〔表符密文小數點〕(random)", num_preedit)  -- "⚡️"  -- (隨機)
     yield_c( "٫", "〔阿拉伯文小數點〕", num_preedit)
     return
   end
@@ -3315,10 +3317,11 @@ local function translate(input, seg, env)
     yield_c( "負點", "〔純中文〕", num_preedit)
     yield_c( "槓點", "〔軍中〕", num_preedit)
     yield_c( "➖．", "〔鍵帽〕", num_preedit)  -- "➖."
-    yield_c( "-⃣.⃣", "〔鍵帽〕(非標準)", num_preedit)
-    yield_c( emoji_number("-."), "〔表情符號密文〕", num_preedit)  -- "✂️⚡️"
+    yield_c( "-⃣.⃣", "〔鍵帽〕(nstd.)", num_preedit)  -- (非標準)
     yield_c( "⠤⠨", "〔點字〕(computer)", num_preedit)
     yield_c( "⠤⠲", "〔點字〕(unified)", num_preedit)
+    yield_c( "✂️⚡️", "〔表符密文〕(fixed)", num_preedit)  -- (固定)
+    yield_c( emoji_number("-.")[1], "〔表符密文〕(random)", num_preedit)  -- "✂️⚡️"  -- (隨機)
     return
   end
 
@@ -3368,8 +3371,8 @@ local function translate(input, seg, env)
     local neg_n_p = string.gsub(neg_n, "-", "(負)")
     local neg_n_k = string.gsub(neg_n, "-", "➖")  -- ⛔
     local neg_n_k_ns = string.gsub(neg_n, "-", "-⃣")  -- -⃣ −⃣
-    -- local neg_n_e = string.gsub(neg_n, "-", "✂️")  -- 下方直接用 emoji_number("-") 函數變換。
     local neg_n_b = string.gsub(neg_n, "-", "⠤")
+    -- local neg_n_e = string.gsub(neg_n, "-", "✂️")  -- 下方直接用 emoji_number("-") 函數變換。
 
   -- if numberout ~= nil and tonumber(nn) ~= nil then
     -- local nn = string.sub(numberout, 1)
@@ -3449,11 +3452,12 @@ local function translate(input, seg, env)
       yield_c( neg_n_p .. paren_number(numberout), "〔帶括中文〕", num_preedit)
 
       yield_c( neg_n_k .. keycap_number(numberout), "〔鍵帽〕", num_preedit)
-      yield_c( neg_n_k_ns .. keycap_ns_number(numberout), "〔鍵帽〕(非標準)", num_preedit)
-      yield_c( emoji_number(neg_n..numberout), "〔表情符號密文〕", num_preedit)  -- neg_n_e
+      yield_c( neg_n_k_ns .. keycap_ns_number(numberout), "〔鍵帽〕(nstd.)", num_preedit)  -- (非標準)
       yield_c( neg_n_b .. braille_c_number(numberout), "〔點字〕(computer)", num_preedit)
       -- yield_c( neg_n_b .. "⠼" .. braille_c_number(numberout), "〔點字(一般)〕", num_preedit)
       yield_c( neg_n_b .. "⠼" .. braille_u_number(numberout), "〔點字〕(unified)", num_preedit)
+      yield_c( emoji_number(neg_n..numberout)[2], "〔表符密文〕(fixed)", num_preedit)  -- neg_n_e  -- (固定)
+      yield_c( emoji_number(neg_n..numberout)[1], "〔表符密文〕(random)", num_preedit)  -- neg_n_e  -- (隨機)
       if neg_n == "" then
         yield_c( arabic_indic_number(numberout), "〔阿拉伯文〕", num_preedit)
         yield_c( extended_arabic_indic_number(numberout), "〔東阿拉伯文〕", num_preedit)
@@ -3491,35 +3495,39 @@ local function translate(input, seg, env)
       end
 
     elseif dot0 ~= "" then
-      yield_c( neg_n_c .. purech_number(dot1..afterdot), "〔純中文〕", num_preedit)
-      yield_c( neg_n_s .. military_number(dot1..afterdot), "〔軍中〕", num_preedit)
-      yield_c( neg_n_k .. keycap_number(dot1..afterdot), "〔鍵帽〕", num_preedit)
-      yield_c( neg_n_k_ns .. keycap_ns_number(dot1..afterdot), "〔鍵帽〕(非標準)", num_preedit)
-      yield_c( emoji_number(neg_n..dot1..afterdot), "〔表情符號密文〕", num_preedit)  -- neg_n_e
-      yield_c( neg_n_b .. braille_c_number(dot1..afterdot), "〔點字〕(computer)", num_preedit)
-      -- yield_c( neg_n_b .. "⠼" .. braille_c_number(dot1..afterdot), "〔點字(一般)〕", num_preedit)
-      yield_c( neg_n_b .. "⠼" .. braille_u_number(dot1..afterdot), "〔點字〕(unified)", num_preedit)
+      local d1_a = dot1..afterdot
+      yield_c( neg_n_c .. purech_number(d1_a), "〔純中文〕", num_preedit)
+      yield_c( neg_n_s .. military_number(d1_a), "〔軍中〕", num_preedit)
+      yield_c( neg_n_k .. keycap_number(d1_a), "〔鍵帽〕", num_preedit)
+      yield_c( neg_n_k_ns .. keycap_ns_number(d1_a), "〔鍵帽〕(nstd.)", num_preedit)  -- (非標準)
+      yield_c( neg_n_b .. braille_c_number(d1_a), "〔點字〕(computer)", num_preedit)
+      -- yield_c( neg_n_b .. "⠼" .. braille_c_number(d1_a), "〔點字(一般)〕", num_preedit)
+      yield_c( neg_n_b .. "⠼" .. braille_u_number(d1_a), "〔點字〕(unified)", num_preedit)
+      yield_c( emoji_number(neg_n..d1_a)[2], "〔表符密文〕(fixed)", num_preedit)  -- neg_n_e  -- (固定)
+      yield_c( emoji_number(neg_n..d1_a)[1], "〔表符密文〕(random)", num_preedit)  -- neg_n_e  -- (隨機)
       if neg_n == "" then
-        yield_c( "٠" .. arabic_indic_number(dot1..afterdot), "〔阿拉伯文〕", num_preedit)
-        yield_c( "۰" .. extended_arabic_indic_number(dot1..afterdot), "〔東阿拉伯文〕", num_preedit)
+        yield_c( "٠" .. arabic_indic_number(d1_a), "〔阿拉伯文〕", num_preedit)
+        yield_c( "۰" .. extended_arabic_indic_number(d1_a), "〔東阿拉伯文〕", num_preedit)
       end
       return
     elseif dot0 == "" and dot1 ~= "" then
+      local n_d1_a = numberout..dot1..afterdot
       if string.len(numberout) < 2 then
         yield_c( "元整", "〔純中文〕", num_preedit)
       else
-        yield_c( neg_n_c .. purech_number(numberout..dot1..afterdot), "〔純中文〕", num_preedit)
+        yield_c( neg_n_c .. purech_number(n_d1_a), "〔純中文〕", num_preedit)
       end
-      yield_c( neg_n_s .. military_number(numberout..dot1..afterdot), "〔軍中〕", num_preedit)
-      yield_c( neg_n_k .. keycap_number(numberout..dot1..afterdot), "〔鍵帽〕", num_preedit)
-      yield_c( neg_n_k_ns .. keycap_ns_number(numberout..dot1..afterdot), "〔鍵帽〕(非標準)", num_preedit)
-      yield_c( emoji_number(neg_n..numberout..dot1..afterdot), "〔表情符號密文〕", num_preedit)  -- neg_n_e
-      yield_c( neg_n_b .. braille_c_number(numberout..dot1..afterdot), "〔點字〕(computer)", num_preedit)
-      -- yield_c( neg_n_b .. "⠼" .. braille_c_number(numberout..dot1..afterdot), "〔點字(一般)〕", num_preedit)
-      yield_c( neg_n_b .. "⠼" .. braille_u_number(numberout..dot1..afterdot), "〔點字〕(unified)", num_preedit)
+      yield_c( neg_n_s .. military_number(n_d1_a), "〔軍中〕", num_preedit)
+      yield_c( neg_n_k .. keycap_number(n_d1_a), "〔鍵帽〕", num_preedit)
+      yield_c( neg_n_k_ns .. keycap_ns_number(n_d1_a), "〔鍵帽〕(nstd.)", num_preedit)  -- (非標準)
+      yield_c( neg_n_b .. braille_c_number(n_d1_a), "〔點字〕(computer)", num_preedit)
+      -- yield_c( neg_n_b .. "⠼" .. braille_c_number(n_d1_a), "〔點字(一般)〕", num_preedit)
+      yield_c( neg_n_b .. "⠼" .. braille_u_number(n_d1_a), "〔點字〕(unified)", num_preedit)
+      yield_c( emoji_number(neg_n..n_d1_a)[2], "〔表符密文〕(fixed)", num_preedit)  -- neg_n_e  -- (固定)
+      yield_c( emoji_number(neg_n..n_d1_a)[1], "〔表符密文〕(random)", num_preedit)  -- neg_n_e  -- (隨機)
       if neg_n == "" then
-        yield_c( arabic_indic_number(numberout..dot1..afterdot), "〔阿拉伯文〕", num_preedit)
-        yield_c( extended_arabic_indic_number(numberout..dot1..afterdot), "〔東阿拉伯文〕", num_preedit)
+        yield_c( arabic_indic_number(n_d1_a), "〔阿拉伯文〕", num_preedit)
+        yield_c( extended_arabic_indic_number(n_d1_a), "〔東阿拉伯文〕", num_preedit)
       end
       return
     end
