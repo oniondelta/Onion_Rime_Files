@@ -181,34 +181,148 @@ end
 
 local function keycap_number(dn)
   if dn == "" then return "" end
-  dn = string.gsub(dn, "0", "0️⃣")
-  dn = string.gsub(dn, "1", "1️⃣")
-  dn = string.gsub(dn, "2", "2️⃣")
-  dn = string.gsub(dn, "3", "3️⃣")
-  dn = string.gsub(dn, "4", "4️⃣")
-  dn = string.gsub(dn, "5", "5️⃣")
-  dn = string.gsub(dn, "6", "6️⃣")
-  dn = string.gsub(dn, "7", "7️⃣")
-  dn = string.gsub(dn, "8", "8️⃣")
-  dn = string.gsub(dn, "9", "9️⃣")
-  return dn
+  --- 以下新的寫法
+  local n2keycap = {["0"]="0️⃣", ["1"]="1️⃣", ["2"]="2️⃣", ["3"]="3️⃣", ["4"]="4️⃣", ["5"] ="5️⃣", ["6"]="6️⃣", ["7"]="7️⃣", ["8"]="8️⃣", ["9"]="9️⃣", ["."]="．"}
+  local out_dn = ""
+  for w in string.gmatch(dn, ".") do
+    local w = n2keycap[w] or w
+    out_dn = out_dn .. w
+  end
+  return out_dn
+  -- --- 以下舊的寫法
+  -- dn = string.gsub(dn, "0", "0️⃣")
+  -- dn = string.gsub(dn, "1", "1️⃣")
+  -- dn = string.gsub(dn, "2", "2️⃣")
+  -- dn = string.gsub(dn, "3", "3️⃣")
+  -- dn = string.gsub(dn, "4", "4️⃣")
+  -- dn = string.gsub(dn, "5", "5️⃣")
+  -- dn = string.gsub(dn, "6", "6️⃣")
+  -- dn = string.gsub(dn, "7", "7️⃣")
+  -- dn = string.gsub(dn, "8", "8️⃣")
+  -- dn = string.gsub(dn, "9", "9️⃣")
+  -- dn = string.gsub(dn, "%.", "．")
+  -- return dn
 end
 
 ------------------------------------
 
 local function keycap_ns_number(dn)
   if dn == "" then return "" end
-  dn = string.gsub(dn, "0", "0⃣")
-  dn = string.gsub(dn, "1", "1⃣")
-  dn = string.gsub(dn, "2", "2⃣")
-  dn = string.gsub(dn, "3", "3⃣")
-  dn = string.gsub(dn, "4", "4⃣")
-  dn = string.gsub(dn, "5", "5⃣")
-  dn = string.gsub(dn, "6", "6⃣")
-  dn = string.gsub(dn, "7", "7⃣")
-  dn = string.gsub(dn, "8", "8⃣")
-  dn = string.gsub(dn, "9", "9⃣")
-  return dn
+  --- 以下新的寫法
+  local n2keycap_ns = {["0"]="0⃣", ["1"]="1⃣", ["2"]="2⃣", ["3"]="3⃣", ["4"]="4⃣", ["5"] ="5⃣", ["6"]="6⃣", ["7"]="7⃣", ["8"]="8⃣", ["9"]="9⃣", ["."]=".⃣"}
+  local out_dn = ""
+  for w in string.gmatch(dn, ".") do
+    local w = n2keycap_ns[w] or w
+    out_dn = out_dn .. w
+  end
+  return out_dn
+  -- --- 以下舊的寫法
+  -- dn = string.gsub(dn, "0", "0⃣")
+  -- dn = string.gsub(dn, "1", "1⃣")
+  -- dn = string.gsub(dn, "2", "2⃣")
+  -- dn = string.gsub(dn, "3", "3⃣")
+  -- dn = string.gsub(dn, "4", "4⃣")
+  -- dn = string.gsub(dn, "5", "5⃣")
+  -- dn = string.gsub(dn, "6", "6⃣")
+  -- dn = string.gsub(dn, "7", "7⃣")
+  -- dn = string.gsub(dn, "8", "8⃣")
+  -- dn = string.gsub(dn, "9", "9⃣")
+  -- dn = string.gsub(dn, "%.", ".⃣")
+  -- return dn
+end
+
+------------------------------------
+
+local function emoji_number(dn)
+  if dn == "" then return "" end
+  --- 以下新的寫法
+  local n2emoji = {
+    [1] = {["0"]="🛎️", ["1"]="🪑", ["2"]="👂🏻", ["3"]="☂️", ["4"]="💩", ["5"] ="💃🏻", ["6"]="🐂", ["7"]="😭", ["8"]="👨🏻", ["9"]="🥃", ["."]="⚡️", ["-"]="✂️"},
+    [2] = {["0"]="🕳️", ["1"]="💊", ["2"]="👥", ["3"]="☘️", ["4"]="🍀", ["5"] ="⭐️", ["6"]="🐮", ["7"]="🚩", ["8"]="🎱", ["9"]="🍺", ["."]="🔋", ["-"]="⛔️"},
+    [3] = {["0"]="🈳️", ["1"]="☝️", ["2"]="✌️", ["3"]="📐", ["4"]="☠️", ["5"] ="🖐️", ["6"]="⛸️", ["7"]="🐧", ["8"]="🇧🇷", ["9"]="🥂", ["."]="💡", ["-"]="☢️"},
+    [4] = {["0"]="🥚", ["1"]="🥇", ["2"]="🎎", ["3"]="⛰️", ["4"]="👨‍👩‍👧‍👦", ["5"] ="🐯", ["6"]="✡️", ["7"]="🐔", ["8"]="🐙", ["9"]="🐶", ["."]="⚫", ["-"]="🚬"},
+    [5] = {["0"]="🔔", ["1"]="💺", ["2"]="🐰", ["3"]="🔱", ["4"]="🐹", ["5"] ="🤭", ["6"]="🪀", ["7"]="🌈", ["8"]="🕷️", ["9"]="🦶🏻", ["."]="📍", ["-"]="📛"},
+                  }
+  local out_dn = ""
+  for w in string.gmatch(dn, ".") do
+    local ranNumber = math.random(1, 5)
+    local w = n2emoji[ranNumber][w] or w  -- n2emoji[ranNumber] 如果為 nil 該條目會報錯！
+    out_dn = out_dn .. w
+  end
+  return out_dn
+  -- --- 以下舊的寫法
+  -- local out_dn = ""
+  -- for w in string.gmatch(dn, ".") do
+  --   local ranNumber = math.random(1, 5)
+  --   if ranNumber == 1 then
+  --     w = string.gsub(w, "0", "🛎️")  -- 🕳️🈳️🥚🔔  -- 🔕🎐🍳🧊🤡🃏🕛
+  --     w = string.gsub(w, "1", "🪑")  -- 💊☝️🥇💺  -- 🏆👆💯🕐
+  --     w = string.gsub(w, "2", "👂🏻")  -- 👥✌️🎎🐰  -- 🥈🥢👫🐇🦢🪿🎧♊️♓️🕑
+  --     w = string.gsub(w, "3", "☂️")  -- ☘️📐⛰️🔱  -- 🥉🏔️🗻🔺🔻🌂☔️⛱️🪭🧮🧄🌲🌳🌴🎄🕒
+  --     w = string.gsub(w, "4", "💩")  -- 🍀☠️👨‍👩‍👧‍👦🐹  -- 💀🧟⚰️👻🐁🐀🐭🧹🆗🔢🫟🕓
+  --     w = string.gsub(w, "5", "💃🏻")  -- ⭐️🖐️🐯🤭  -- 🙈🙉🙊🐸🐢🈚️🔥🐅🥁🚫🪘🕔
+  --     w = string.gsub(w, "6", "🐂")  -- 🐮⛸️✡️🪀  -- 🔯🐄🐃🤙❄️🦬🛝🕕
+  --     w = string.gsub(w, "7", "😭")  -- 🚩🐧🐔🌈  -- 🕎🎰🐓🐤🐥🐣🏁🎈🩼🕖
+  --     w = string.gsub(w, "8", "👨🏻")  -- 🎱🇧🇷🐙🕷️  -- ☸️☯️🇵🇬🇵🇾🕸️🔈🔇🔉🔊📢📣♾️🕗
+  --     w = string.gsub(w, "9", "🥃")  -- 🍺🥂🐶🦶🏻  -- 🍶🍻🍾🍷🍸🐕🦮🐕‍🦺🐩👣🥟✅☑️✔️🪝🕘
+  --     w = string.gsub(w, "%.", "⚡️")  -- 🔋💡⚫📍  -- 🔘⏺️🖥️🏮🔦📌
+  --     w = string.gsub(w, "-", "✂️")  -- ⛔️☢️🚬📛  -- ➖⚛️🩻
+  --   elseif ranNumber == 2 then
+  --     w = string.gsub(w, "0", "🕳️")
+  --     w = string.gsub(w, "1", "💊")
+  --     w = string.gsub(w, "2", "👥")
+  --     w = string.gsub(w, "3", "☘️")
+  --     w = string.gsub(w, "4", "🍀")
+  --     w = string.gsub(w, "5", "⭐️")
+  --     w = string.gsub(w, "6", "🐮")
+  --     w = string.gsub(w, "7", "🚩")
+  --     w = string.gsub(w, "8", "🎱")
+  --     w = string.gsub(w, "9", "🍺")
+  --     w = string.gsub(w, "%.", "🔋")
+  --     w = string.gsub(w, "-", "⛔️")
+  --   elseif ranNumber == 3 then
+  --     w = string.gsub(w, "0", "🈳️")
+  --     w = string.gsub(w, "1", "☝️")
+  --     w = string.gsub(w, "2", "✌️")
+  --     w = string.gsub(w, "3", "📐")
+  --     w = string.gsub(w, "4", "☠️")
+  --     w = string.gsub(w, "5", "🖐️")
+  --     w = string.gsub(w, "6", "⛸️")
+  --     w = string.gsub(w, "7", "🐧")
+  --     w = string.gsub(w, "8", "🇧🇷")
+  --     w = string.gsub(w, "9", "🥂")
+  --     w = string.gsub(w, "%.", "💡")
+  --     w = string.gsub(w, "-", "☢️")
+  --   elseif ranNumber == 4 then
+  --     w = string.gsub(w, "0", "🥚")
+  --     w = string.gsub(w, "1", "🥇")
+  --     w = string.gsub(w, "2", "🎎")
+  --     w = string.gsub(w, "3", "⛰️")
+  --     w = string.gsub(w, "4", "👨‍👩‍👧‍👦")
+  --     w = string.gsub(w, "5", "🐯")
+  --     w = string.gsub(w, "6", "✡️")
+  --     w = string.gsub(w, "7", "🐔")
+  --     w = string.gsub(w, "8", "🐙")
+  --     w = string.gsub(w, "9", "🐶")
+  --     w = string.gsub(w, "%.", "⚫")
+  --     w = string.gsub(w, "-", "🚬")
+  --   elseif ranNumber == 5 then
+  --     w = string.gsub(w, "0", "🔔")
+  --     w = string.gsub(w, "1", "💺")
+  --     w = string.gsub(w, "2", "🐰")
+  --     w = string.gsub(w, "3", "🔱")
+  --     w = string.gsub(w, "4", "🐹")
+  --     w = string.gsub(w, "5", "🤭")
+  --     w = string.gsub(w, "6", "🪀")
+  --     w = string.gsub(w, "7", "🌈")
+  --     w = string.gsub(w, "8", "🕷️")
+  --     w = string.gsub(w, "9", "🦶🏻")
+  --     w = string.gsub(w, "%.", "📍")
+  --     w = string.gsub(w, "-", "📛")
+  --   end
+  --   out_dn = out_dn .. w
+  -- end
+  -- return out_dn
 end
 
 ------------------------------------
@@ -415,6 +529,7 @@ return {
         little2_number = little2_number,
         braille_c_number = braille_c_number,
         braille_u_number = braille_u_number,
+        emoji_number = emoji_number,
         keycap_number = keycap_number,
         keycap_ns_number = keycap_ns_number,
         mss_number = mss_number,
