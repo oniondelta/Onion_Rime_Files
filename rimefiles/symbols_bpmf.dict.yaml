@@ -4,7 +4,7 @@
 # 『洋蔥』製作
 ---
 name: symbols_bpmf
-version: "202512"
+version: "202602"
 sort: original
 use_preset_vocabulary: false
 ...
@@ -147,7 +147,7 @@ use_preset_vocabulary: false
 ☝️	1f
 ✋	1f
 🤚	1f
-🖐	1f
+🖐️	1f
 🖖	1f
 👋	1f
 🤙	1f
@@ -2202,7 +2202,7 @@ use_preset_vocabulary: false
 ☝️	gg
 ✋	gg
 🤚	gg
-🖐	gg
+🖐️	gg
 🖖	gg
 👋	gg
 🤙	gg
@@ -8917,7 +8917,7 @@ $	12
 🫀	fe
 🦵	fe
 🦶	fe
-🖐	fe
+🖐️	fe
 👅	fe
 ### 多媒體 ###
 📽	2aw
