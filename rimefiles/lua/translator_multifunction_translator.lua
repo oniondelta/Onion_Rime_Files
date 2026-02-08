@@ -3494,17 +3494,17 @@ local function translate(input, seg, env)
         -- if tonumber(numberout) < 9223372036854775808 then
         -- if tonumber_n < 9223372036854775808 then
         -- if string.len(numberout) < 19 then
-        local Less_2p63 = tonumber_n < 9223372036854775808
+        local less_2p63 = tonumber_n < 9223372036854775808
         if tonumber_n < 8 then
           yield_c( numberout .. "⚠ ", "〔八進位〕(repeated⚠️)", num_preedit)
-        elseif Less_2p63 then
+        elseif less_2p63 then
           yield_c( string.format("%o",numberout), "〔八進位〕", num_preedit)
         else
           yield_c( "oct", "（超過 2⁶³-1 報錯）〔八進位〕", num_preedit)
         end
         if tonumber_n < 16 then
           yield_c( numberout .. "⚠  ", "〔十六進位〕(repeated⚠️)", num_preedit)
-        elseif Less_2p63 then
+        elseif less_2p63 then
           yield_c( string.format("%X",numberout), "〔十六進位〕", num_preedit)
           yield_c( string.format("%x",numberout), "〔十六進位〕", num_preedit)
         else
