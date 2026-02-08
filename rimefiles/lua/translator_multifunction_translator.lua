@@ -3473,10 +3473,10 @@ local function translate(input, seg, env)
         yield_c( devanagari_number(numberout), "〔天城文〕", num_preedit)
 
         local tonumber_n = tonumber(numberout)
-        if tonumber_n < 2 then
-          yield_c( numberout .. "⚠", "〔二進位〕(repeated⚠️)", num_preedit)
         -- if tonumber_n == 1 or tonumber_n == 0 then
         --   yield_c( string.sub(numberout, -1), "〔二進位〕", num_preedit)
+        if tonumber_n < 2 then
+          yield_c( numberout .. "⚠", "〔二進位〕(repeated⚠️)", num_preedit)
         --- 浮點精度關係，二進制轉換運算中：
         --- math.floor 極限是小數點後15位(小於16位，1.9999999999999999)
         --- math.fmod 極限是小數點後13位(小於14位，1.99999999999999，14位開頭為偶數時除2是正確的，奇數則不正確)
