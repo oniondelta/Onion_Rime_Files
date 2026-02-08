@@ -285,6 +285,7 @@
 #    詞句中，「胳膊」臺灣字典發音為「ge1 bo5」，日常發音常發「ge1 bo2」，故皆補齊「ge1 bo5」「ge1 bo2」。
 #    詞句中，「尾巴」臺灣字典發音為「wei3 ba1」，日常發音常發「yi3 ba1」，故皆補齊「wei3 ba1」「yi3 ba1」。
 #    詞句中，「部署」臺灣字典發音為「bu4 shu4」，日常發音常發「bu4 shu3」，故皆補齊「bu4 shu4」「bu4 shu3」。
+#    詞句中，「興奮」臺灣字典發音為「xing1 fen4」，日常發音常發「xing4 fen4」，故皆補齊「xing1 fen4」「xing4 fen4」。
 #    詞句中，「交叉」臺灣字典發音為「jiao1 cha1」，日常發音常發「jiao1 cha4」，故皆補齊「jiao1 cha1」「jiao1 cha4」。
 #    詞句中，「牛仔」臺灣字典發音為「niu2 zi3」，日常發音常發「niu2 zai3」，故皆補齊「niu2 zi3」「niu2 zai3」。
 #    詞句中，「落魄」臺灣字典發音為「luo4 tuo4」，日常發音常發「luo4 po4」，故皆補齊「luo4 tuo4」「luo4 po4」。
@@ -59199,6 +59200,7 @@ min_phrase_weight: 100
 令人嘆為觀止	ling4 ren2 tan4 wei2 guan1 zhi3
 令人絕倒	ling4 ren2 jue2 dao3
 令人興奮	ling4 ren2 xing1 fen4
+令人興奮	ling4 ren2 xing4 fen4
 令人髮指	ling4 ren2 fa3 zhi3
 令出必行	ling4 chu1 bi4 xing2
 令出惟行	ling4 chu1 wei2 xing2
@@ -59789,6 +59791,7 @@ min_phrase_weight: 100
 使羊將狼	shi3 yang2 jiang4 lang2
 使脾氣	shi3 pi2 qi4
 使興奮	shi3 xing1 fen4
+使興奮	shi3 xing4 fen4
 使蔓延	shi3 man4 yan2
 使轉向	shi3 zhuan3 xiang4
 使轉向	shi3 zhuan4 xiang4
@@ -65797,6 +65800,7 @@ min_phrase_weight: 100
 反脣相譏	fan3 chun2 xiang1 ji1
 反唇相稽	fan3 chun2 xiang1 ji1
 反興奮劑	fan3 xing1 fen4 ji4
+反興奮劑	fan3 xing4 fen4 ji4
 反艦導彈	fan3 jian4 dao3 dan4
 反艦艇巡航導彈	fan3 jian4 ting3 xun2 hang2 dao3 dan4
 反衝	fan3 chong1
@@ -102261,6 +102265,7 @@ min_phrase_weight: 100
 興奮劑	xing1 fen4 ji4
 興奮劑	xing4 fen4 ji4
 興奮高潮	xing1 fen4 gao1 chao2
+興奮高潮	xing4 fen4 gao1 chao2
 興妖作孽	xing1 yao1 zuo4 nie4
 興妖作怪	xing1 yao1 zuo4 guai4
 興學	xing1 xue2
@@ -102531,6 +102536,7 @@ min_phrase_weight: 100
 般若經	ban1 ruo4 jing1
 般調	ban1 tiao2
 般遊	pan2 you2
+般遊	ban1 you2
 舳艫	zhou2 lu2
 舳艫	zhu2 lu2
 舳艫千里	zhou2 lu2 qian1 li3
@@ -114846,6 +114852,7 @@ min_phrase_weight: 100
 電視系列片	dian4 shi4 xi4 lie4 pian4
 電視系列片	dian4 shi4 xi4 lie4 pian1
 電視興奮症	dian4 shi4 xing1 fen4 zheng4
+電視興奮症	dian4 shi4 xing4 fen4 zheng4
 電視轉播	dian4 shi4 zhuan3 bo1
 電視轉播	dian4 shi4 zhuan3 bo4
 電視轉播車	dian4 shi4 zhuan3 bo4 che1
@@ -117780,4 +117787,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 117783 #####
+##### @結束 END - 117790 #####
