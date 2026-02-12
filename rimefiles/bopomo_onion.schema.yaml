@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onion
   name: "☆注音(洋蔥純注音版)☆"
-  version: "202601"
+  version: "202602"
   author:
     - 『洋蔥』
   description: |
@@ -81,9 +81,10 @@ zh_cn:
 menu:
   # alternative_select_keys: "QAZWSXEDCRFV3467"  #刻意讓「3467」置後，使聲調後按「3467」不上屏選字。
   # alternative_select_keys: "QAZWSXEDCRFV"
+  # alternative_select_labels: ['⇧1', '⇧2', '⇧3', '⇧4', '⇧5', '⇧6', '⇧7', '⇧8', '⇧9', '⇧0']
   # alternative_select_labels: [ QY, AH, ZN, WU, SJ, XM ]
   alternative_select_labels: [ 𝚀𝚈, 𝙰𝙷, 𝚉𝙽, 𝚆𝚄, 𝚂𝙹, 𝚇𝙼 ]  # 強制等寬體
-  page_size: 6
+  page_size: 6 #10
 ################################### 拼寫 ######################################
 speller:
   alphabet: "1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-3467 "
@@ -300,19 +301,41 @@ key_binder:
     - {accept: Shift+I, send: Page_Up, when: has_menu}
     - {accept: Shift+K, send: Page_Down, when: has_menu}
 #左邊選字
-    - {accept: Shift+Y, send: Control+1, when: has_menu}
-    - {accept: Shift+H, send: Control+2, when: has_menu}
-    - {accept: Shift+N, send: Control+3, when: has_menu}
-    - {accept: Shift+U, send: Control+4, when: has_menu}
-    - {accept: Shift+J, send: Control+5, when: has_menu}
-    - {accept: Shift+M, send: Control+6, when: has_menu}
-#右邊選字
     - {accept: Shift+Q, send: Control+1, when: has_menu}
     - {accept: Shift+A, send: Control+2, when: has_menu}
     - {accept: Shift+Z, send: Control+3, when: has_menu}
     - {accept: Shift+W, send: Control+4, when: has_menu}
     - {accept: Shift+S, send: Control+5, when: has_menu}
     - {accept: Shift+X, send: Control+6, when: has_menu}
+#右邊選字
+    - {accept: Shift+Y, send: Control+1, when: has_menu}
+    - {accept: Shift+H, send: Control+2, when: has_menu}
+    - {accept: Shift+N, send: Control+3, when: has_menu}
+    - {accept: Shift+U, send: Control+4, when: has_menu}
+    - {accept: Shift+J, send: Control+5, when: has_menu}
+    - {accept: Shift+M, send: Control+6, when: has_menu}
+# #「shift」+「數字」選字（Mac）
+#     - { accept: Shift+exclam, send: KP_1, when: has_menu }
+#     - { accept: Shift+at, send: KP_2, when: has_menu }
+#     - { accept: Shift+numbersign, send: KP_3, when: has_menu }
+#     - { accept: Shift+dollar, send: KP_4, when: has_menu }
+#     - { accept: Shift+percent, send: KP_5, when: has_menu }
+#     - { accept: Shift+asciicircum, send: KP_6, when: has_menu }
+#     - { accept: Shift+ampersand, send: KP_7, when: has_menu }
+#     - { accept: Shift+asterisk, send: KP_8, when: has_menu }
+#     - { accept: Shift+parenleft, send: KP_9, when: has_menu }
+#     - { accept: Shift+parenright, send: KP_0, when: has_menu }
+# #「shift」+「數字」選字（Win）
+#     - { accept: Shift+1, send: KP_1, when: has_menu }
+#     - { accept: Shift+2, send: KP_2, when: has_menu }
+#     - { accept: Shift+3, send: KP_3, when: has_menu }
+#     - { accept: Shift+4, send: KP_4, when: has_menu }
+#     - { accept: Shift+5, send: KP_5, when: has_menu }
+#     - { accept: Shift+6, send: KP_6, when: has_menu }
+#     - { accept: Shift+7, send: KP_7, when: has_menu }
+#     - { accept: Shift+8, send: KP_8, when: has_menu }
+#     - { accept: Shift+9, send: KP_9, when: has_menu }
+#     - { accept: Shift+0, send: KP_0, when: has_menu }
 ##回復到 composing 狀態：
 #關#    - {accept: Shift+space, send: Shift+Left, when: paging} #於選單列選字時，回復到輸入列（避免有時回復不了，故增加）。
     - {accept: Tab, send: Shift+Left, when: paging} #於選單列選字時，回復到輸入列（避免有時回復不了，故增加）。
