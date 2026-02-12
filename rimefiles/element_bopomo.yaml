@@ -23,7 +23,7 @@ menu:
   # alternative_select_labels: [ QY₁, AH₂, ZN₃, WU₄, SJ₅, XM₆ ]
   # alternative_select_labels: [ QY, AH, ZN, WU, SJ, XM ]
   alternative_select_labels: [ 𝚀𝚈, 𝙰𝙷, 𝚉𝙽, 𝚆𝚄, 𝚂𝙹, 𝚇𝙼 ]  # 強制等寬體
-### 選單每頁顯示個數（需與上方個數相同，不同會有 bug！）
+### 選單每頁顯示個數（如上方有設選字鍵，兩者個數需相同，不同會有 bug！）
   page_size: 6 #10
 
 
