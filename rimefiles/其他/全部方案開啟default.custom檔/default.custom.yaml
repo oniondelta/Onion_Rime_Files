@@ -17,9 +17,9 @@ patch:
     - schema: bopomo_onion_double_t2
     - schema: bopomo_onion
     - schema: terra_pinyin_onion
-    - schema: onion-array30
-    - schema: onion-array10
-    - schema: onion-array10-and-bpmf
+    # - schema: onion-array30
+    # - schema: onion-array10
+    # - schema: onion-array10-and-bpmf
     # - schema: ocm_mixin
     # - schema: dif1
 ###########################
@@ -54,7 +54,7 @@ patch:
     - schema: symbols_bpmf_double
     # - schema: symbols_ocm
 ###########################
-    - schema: onion-array30-wsymbols
+    # - schema: onion-array30-wsymbols
     # - schema: punct_ovff
 ###############################
 
