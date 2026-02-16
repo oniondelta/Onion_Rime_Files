@@ -15,8 +15,8 @@ rime_ocm_folder="ocm"
 rime_files_6=rime_ocm_folder+"/ocm_mount"
 rime_files_7=rime_ocm_folder+"/ocm_plus"
 rime_files_8=rime_ocm_folder+"/ocm_mixin"
-rime_files_9="洋蔥行列30"
-rime_files_10="洋蔥行列10"
+# rime_files_9="洋蔥行列30"
+# rime_files_10="洋蔥行列10"
 the_name="電腦RIME方案"
 
 
@@ -29,8 +29,8 @@ os.makedirs("./"+sort_rime+"/"+rime_files_5+"/opencc/", exist_ok=True)
 os.makedirs("./"+sort_rime+"/"+rime_files_6+"/", exist_ok=True)
 os.makedirs("./"+sort_rime+"/"+rime_files_7+"/opencc/", exist_ok=True)
 os.makedirs("./"+sort_rime+"/"+rime_files_8+"/opencc/", exist_ok=True)
-os.makedirs("./"+sort_rime+"/"+rime_files_9+"/", exist_ok=True)
-os.makedirs("./"+sort_rime+"/"+rime_files_10+"/", exist_ok=True)
+# os.makedirs("./"+sort_rime+"/"+rime_files_9+"/", exist_ok=True)
+# os.makedirs("./"+sort_rime+"/"+rime_files_10+"/", exist_ok=True)
 
 
 #複製檔案(注音洋蔥純注音版)
@@ -561,63 +561,63 @@ shutil.copyfile("./rimefiles/symbols-mark.dict.yaml", "./"+sort_rime+"/"+rime_fi
 shutil.copyfile("./rimefiles/symbols-mark.schema.yaml", "./"+sort_rime+"/"+rime_files_8+"/symbols-mark.schema.yaml")
 
 
-#複製檔案(洋蔥行列30)
-shutil.copyfile("./rimefiles/essay-zh-hant-mc.txt", "./"+sort_rime+"/"+rime_files_9+"/essay-zh-hant-mc.txt")
-shutil.copyfile("./rimefiles/Mount_bopomo.extended.dict.yaml", "./"+sort_rime+"/"+rime_files_9+"/Mount_bopomo.extended.dict.yaml")
-shutil.copyfile("./rimefiles/Mount_bopomo.schema.yaml", "./"+sort_rime+"/"+rime_files_9+"/Mount_bopomo.schema.yaml")
-shutil.copyfile("./rimefiles/terra_pinyin_onion_add.dict.yaml", "./"+sort_rime+"/"+rime_files_9+"/terra_pinyin_onion_add.dict.yaml")
-shutil.copyfile("./rimefiles/terra_pinyin_onion.dict.yaml", "./"+sort_rime+"/"+rime_files_9+"/terra_pinyin_onion.dict.yaml")
+# #複製檔案(洋蔥行列30)
+# shutil.copyfile("./rimefiles/essay-zh-hant-mc.txt", "./"+sort_rime+"/"+rime_files_9+"/essay-zh-hant-mc.txt")
+# shutil.copyfile("./rimefiles/Mount_bopomo.extended.dict.yaml", "./"+sort_rime+"/"+rime_files_9+"/Mount_bopomo.extended.dict.yaml")
+# shutil.copyfile("./rimefiles/Mount_bopomo.schema.yaml", "./"+sort_rime+"/"+rime_files_9+"/Mount_bopomo.schema.yaml")
+# shutil.copyfile("./rimefiles/terra_pinyin_onion_add.dict.yaml", "./"+sort_rime+"/"+rime_files_9+"/terra_pinyin_onion_add.dict.yaml")
+# shutil.copyfile("./rimefiles/terra_pinyin_onion.dict.yaml", "./"+sort_rime+"/"+rime_files_9+"/terra_pinyin_onion.dict.yaml")
 
-shutil.copyfile("./rimefiles/onion-array30.schema.yaml", "./"+sort_rime+"/"+rime_files_9+"/onion-array30.schema.yaml")
-shutil.copyfile("./rimefiles/onion-array30-wsymbols.schema.yaml", "./"+sort_rime+"/"+rime_files_9+"/onion-array30-wsymbols.schema.yaml")
-shutil.copyfile("./rimefiles/onion-array30.extended.dict.yaml", "./"+sort_rime+"/"+rime_files_9+"/onion-array30.extended.dict.yaml")
-shutil.copyfile("./rimefiles/onion-array30-wsymbols.dict.yaml", "./"+sort_rime+"/"+rime_files_9+"/onion-array30-wsymbols.dict.yaml")
-shutil.copyfile("./rimefiles/onion-array30-special.dict.yaml", "./"+sort_rime+"/"+rime_files_9+"/onion-array30-special.dict.yaml")
-shutil.copyfile("./rimefiles/onion-array30-shortcode.dict.yaml", "./"+sort_rime+"/"+rime_files_9+"/onion-array30-shortcode.dict.yaml")
-shutil.copyfile("./rimefiles/onion-array30-phrases.dict.yaml", "./"+sort_rime+"/"+rime_files_9+"/onion-array30-phrases.dict.yaml")
-shutil.copyfile("./rimefiles/onion-array30-generally.dict.yaml", "./"+sort_rime+"/"+rime_files_9+"/onion-array30-generally.dict.yaml")
+# shutil.copyfile("./rimefiles/onion-array30.schema.yaml", "./"+sort_rime+"/"+rime_files_9+"/onion-array30.schema.yaml")
+# shutil.copyfile("./rimefiles/onion-array30-wsymbols.schema.yaml", "./"+sort_rime+"/"+rime_files_9+"/onion-array30-wsymbols.schema.yaml")
+# shutil.copyfile("./rimefiles/onion-array30.extended.dict.yaml", "./"+sort_rime+"/"+rime_files_9+"/onion-array30.extended.dict.yaml")
+# shutil.copyfile("./rimefiles/onion-array30-wsymbols.dict.yaml", "./"+sort_rime+"/"+rime_files_9+"/onion-array30-wsymbols.dict.yaml")
+# shutil.copyfile("./rimefiles/onion-array30-special.dict.yaml", "./"+sort_rime+"/"+rime_files_9+"/onion-array30-special.dict.yaml")
+# shutil.copyfile("./rimefiles/onion-array30-shortcode.dict.yaml", "./"+sort_rime+"/"+rime_files_9+"/onion-array30-shortcode.dict.yaml")
+# shutil.copyfile("./rimefiles/onion-array30-phrases.dict.yaml", "./"+sort_rime+"/"+rime_files_9+"/onion-array30-phrases.dict.yaml")
+# shutil.copyfile("./rimefiles/onion-array30-generally.dict.yaml", "./"+sort_rime+"/"+rime_files_9+"/onion-array30-generally.dict.yaml")
 
-shutil.copyfile("./rimefiles/predict_office.db", "./"+sort_rime+"/"+rime_files_9+"/predict_office.db")
+# shutil.copyfile("./rimefiles/predict_office.db", "./"+sort_rime+"/"+rime_files_9+"/predict_office.db")
 
-shutil.copyfile("./rimefiles/rime.lua", "./"+sort_rime+"/"+rime_files_9+"/rime.lua")
-shutil.copytree("./rimefiles/lua/", "./"+sort_rime+"/"+rime_files_9+"/lua/")
+# shutil.copyfile("./rimefiles/rime.lua", "./"+sort_rime+"/"+rime_files_9+"/rime.lua")
+# shutil.copytree("./rimefiles/lua/", "./"+sort_rime+"/"+rime_files_9+"/lua/")
 
-shutil.copytree("./rimefiles/行列30碼表_20230211版/", "./"+sort_rime+"/"+rime_files_9+"/行列30碼表_20230211版/")
+# shutil.copytree("./rimefiles/行列30碼表_20230211版/", "./"+sort_rime+"/"+rime_files_9+"/行列30碼表_20230211版/")
 
-shutil.copyfile("./rimefiles/各方案default.custom/洋蔥行列30_custom/default.custom.yaml", "./"+sort_rime+"/"+rime_files_9+"/default.custom.yaml")
+# shutil.copyfile("./rimefiles/各方案default.custom/洋蔥行列30_custom/default.custom.yaml", "./"+sort_rime+"/"+rime_files_9+"/default.custom.yaml")
 
 
-#複製檔案(洋蔥行列10)
-shutil.copyfile("./rimefiles/essay-zh-hant-mc.txt", "./"+sort_rime+"/"+rime_files_10+"/essay-zh-hant-mc.txt")
-shutil.copyfile("./rimefiles/Mount_bopomo.extended.dict.yaml", "./"+sort_rime+"/"+rime_files_10+"/Mount_bopomo.extended.dict.yaml")
-shutil.copyfile("./rimefiles/Mount_bopomo.schema.yaml", "./"+sort_rime+"/"+rime_files_10+"/Mount_bopomo.schema.yaml")
-shutil.copyfile("./rimefiles/terra_pinyin_onion_add.dict.yaml", "./"+sort_rime+"/"+rime_files_10+"/terra_pinyin_onion_add.dict.yaml")
-shutil.copyfile("./rimefiles/terra_pinyin_onion.dict.yaml", "./"+sort_rime+"/"+rime_files_10+"/terra_pinyin_onion.dict.yaml")
+# #複製檔案(洋蔥行列10)
+# shutil.copyfile("./rimefiles/essay-zh-hant-mc.txt", "./"+sort_rime+"/"+rime_files_10+"/essay-zh-hant-mc.txt")
+# shutil.copyfile("./rimefiles/Mount_bopomo.extended.dict.yaml", "./"+sort_rime+"/"+rime_files_10+"/Mount_bopomo.extended.dict.yaml")
+# shutil.copyfile("./rimefiles/Mount_bopomo.schema.yaml", "./"+sort_rime+"/"+rime_files_10+"/Mount_bopomo.schema.yaml")
+# shutil.copyfile("./rimefiles/terra_pinyin_onion_add.dict.yaml", "./"+sort_rime+"/"+rime_files_10+"/terra_pinyin_onion_add.dict.yaml")
+# shutil.copyfile("./rimefiles/terra_pinyin_onion.dict.yaml", "./"+sort_rime+"/"+rime_files_10+"/terra_pinyin_onion.dict.yaml")
 
-shutil.copyfile("./rimefiles/onion-array10.schema.yaml", "./"+sort_rime+"/"+rime_files_10+"/onion-array10.schema.yaml")
-shutil.copyfile("./rimefiles/onion-array10.extended.dict.yaml", "./"+sort_rime+"/"+rime_files_10+"/onion-array10.extended.dict.yaml")
-shutil.copyfile("./rimefiles/onion-array10-symbols.dict.yaml", "./"+sort_rime+"/"+rime_files_10+"/onion-array10-symbols.dict.yaml")
-shutil.copyfile("./rimefiles/onion-array10-symbols-prefix.dict.yaml", "./"+sort_rime+"/"+rime_files_10+"/onion-array10-symbols-prefix.dict.yaml")
-shutil.copyfile("./rimefiles/onion-array10-generally-a.dict.yaml", "./"+sort_rime+"/"+rime_files_10+"/onion-array10-generally-a.dict.yaml")
-shutil.copyfile("./rimefiles/onion-array10-generally-b.dict.yaml", "./"+sort_rime+"/"+rime_files_10+"/onion-array10-generally-b.dict.yaml")
-shutil.copyfile("./rimefiles/onion-array10-generally-c.dict.yaml", "./"+sort_rime+"/"+rime_files_10+"/onion-array10-generally-c.dict.yaml")
-shutil.copyfile("./rimefiles/phrases.ocmtc_essay_mc.dict.yaml", "./"+sort_rime+"/"+rime_files_10+"/phrases.ocmtc_essay_mc.dict.yaml")
+# shutil.copyfile("./rimefiles/onion-array10.schema.yaml", "./"+sort_rime+"/"+rime_files_10+"/onion-array10.schema.yaml")
+# shutil.copyfile("./rimefiles/onion-array10.extended.dict.yaml", "./"+sort_rime+"/"+rime_files_10+"/onion-array10.extended.dict.yaml")
+# shutil.copyfile("./rimefiles/onion-array10-symbols.dict.yaml", "./"+sort_rime+"/"+rime_files_10+"/onion-array10-symbols.dict.yaml")
+# shutil.copyfile("./rimefiles/onion-array10-symbols-prefix.dict.yaml", "./"+sort_rime+"/"+rime_files_10+"/onion-array10-symbols-prefix.dict.yaml")
+# shutil.copyfile("./rimefiles/onion-array10-generally-a.dict.yaml", "./"+sort_rime+"/"+rime_files_10+"/onion-array10-generally-a.dict.yaml")
+# shutil.copyfile("./rimefiles/onion-array10-generally-b.dict.yaml", "./"+sort_rime+"/"+rime_files_10+"/onion-array10-generally-b.dict.yaml")
+# shutil.copyfile("./rimefiles/onion-array10-generally-c.dict.yaml", "./"+sort_rime+"/"+rime_files_10+"/onion-array10-generally-c.dict.yaml")
+# shutil.copyfile("./rimefiles/phrases.ocmtc_essay_mc.dict.yaml", "./"+sort_rime+"/"+rime_files_10+"/phrases.ocmtc_essay_mc.dict.yaml")
 
-# shutil.copyfile("./rimefiles/predict_office.db", "./"+sort_rime+"/"+rime_files_10+"/predict_office.db")
+# # shutil.copyfile("./rimefiles/predict_office.db", "./"+sort_rime+"/"+rime_files_10+"/predict_office.db")
 
-shutil.copyfile("./rimefiles/rime.lua", "./"+sort_rime+"/"+rime_files_10+"/rime.lua")
-shutil.copytree("./rimefiles/lua/", "./"+sort_rime+"/"+rime_files_10+"/lua/")
+# shutil.copyfile("./rimefiles/rime.lua", "./"+sort_rime+"/"+rime_files_10+"/rime.lua")
+# shutil.copytree("./rimefiles/lua/", "./"+sort_rime+"/"+rime_files_10+"/lua/")
 
-shutil.copyfile("./rimefiles/onion-array10-and-bpmf.schema.yaml", "./"+sort_rime+"/"+rime_files_10+"/onion-array10-and-bpmf.schema.yaml")
-shutil.copyfile("./rimefiles/bopomo_onion_phrase.txt", "./"+sort_rime+"/"+rime_files_10+"/bopomo_onion_phrase.txt")
-shutil.copyfile("./rimefiles/bopomo_onion_symbols.yaml", "./"+sort_rime+"/"+rime_files_10+"/bopomo_onion_symbols.yaml")
-shutil.copyfile("./rimefiles/bopomo_onion.extended.dict.yaml", "./"+sort_rime+"/"+rime_files_10+"/bopomo_onion.extended.dict.yaml")
-shutil.copyfile("./rimefiles/bopomo_onion.schema.yaml", "./"+sort_rime+"/"+rime_files_10+"/bopomo_onion.schema.yaml")
-shutil.copyfile("./rimefiles/cangjie5.dict.yaml", "./"+sort_rime+"/"+rime_files_10+"/cangjie5.dict.yaml")
-shutil.copyfile("./rimefiles/cangjie5.schema.yaml", "./"+sort_rime+"/"+rime_files_10+"/cangjie5.schema.yaml")
-shutil.copyfile("./rimefiles/mixin_bpmf.dict.yaml", "./"+sort_rime+"/"+rime_files_10+"/mixin_bpmf.dict.yaml")
+# shutil.copyfile("./rimefiles/onion-array10-and-bpmf.schema.yaml", "./"+sort_rime+"/"+rime_files_10+"/onion-array10-and-bpmf.schema.yaml")
+# shutil.copyfile("./rimefiles/bopomo_onion_phrase.txt", "./"+sort_rime+"/"+rime_files_10+"/bopomo_onion_phrase.txt")
+# shutil.copyfile("./rimefiles/bopomo_onion_symbols.yaml", "./"+sort_rime+"/"+rime_files_10+"/bopomo_onion_symbols.yaml")
+# shutil.copyfile("./rimefiles/bopomo_onion.extended.dict.yaml", "./"+sort_rime+"/"+rime_files_10+"/bopomo_onion.extended.dict.yaml")
+# shutil.copyfile("./rimefiles/bopomo_onion.schema.yaml", "./"+sort_rime+"/"+rime_files_10+"/bopomo_onion.schema.yaml")
+# shutil.copyfile("./rimefiles/cangjie5.dict.yaml", "./"+sort_rime+"/"+rime_files_10+"/cangjie5.dict.yaml")
+# shutil.copyfile("./rimefiles/cangjie5.schema.yaml", "./"+sort_rime+"/"+rime_files_10+"/cangjie5.schema.yaml")
+# shutil.copyfile("./rimefiles/mixin_bpmf.dict.yaml", "./"+sort_rime+"/"+rime_files_10+"/mixin_bpmf.dict.yaml")
 
-shutil.copyfile("./rimefiles/各方案default.custom/洋蔥行列10_custom/default.custom.yaml", "./"+sort_rime+"/"+rime_files_10+"/default.custom.yaml")
+# shutil.copyfile("./rimefiles/各方案default.custom/洋蔥行列10_custom/default.custom.yaml", "./"+sort_rime+"/"+rime_files_10+"/default.custom.yaml")
 
 
 #其他
@@ -647,8 +647,8 @@ os.rename("./"+sort_rime+"/"+rime_files_7+"/", "./"+sort_rime+"/"+rime_files_7+"
 os.rename("./"+sort_rime+"/"+rime_files_8+"/", "./"+sort_rime+"/"+rime_files_8+"_"+localtime)
 os.rename("./"+sort_rime+"/"+rime_ocm_folder+"/", "./"+sort_rime+"/"+rime_ocm_folder+"_"+localtime)
 
-os.rename("./"+sort_rime+"/"+rime_files_9+"/", "./"+sort_rime+"/"+rime_files_9+"_"+localtime)
-os.rename("./"+sort_rime+"/"+rime_files_10+"/", "./"+sort_rime+"/"+rime_files_10+"_"+localtime)
+# os.rename("./"+sort_rime+"/"+rime_files_9+"/", "./"+sort_rime+"/"+rime_files_9+"_"+localtime)
+# os.rename("./"+sort_rime+"/"+rime_files_10+"/", "./"+sort_rime+"/"+rime_files_10+"_"+localtime)
 
 os.rename("./"+sort_rime+"/", "./"+the_name+"_"+localtime)
 
