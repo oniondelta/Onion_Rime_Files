@@ -49,6 +49,7 @@ jobs:
           # create_zip "電腦RIME*" "電腦RIME.zip"
           # copy "電腦RIME*" "注音洋蔥純注音版*"
           remove_dir "ocm_20*"
+          remove_dir "洋蔥行列*"
           copy_dir "電腦RIME*"
 
       - name: Upload artifacts
