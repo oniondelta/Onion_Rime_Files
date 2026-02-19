@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onion_double
   name: "☆注音(洋蔥雙拼版)☆"
-  version: "202412"
+  version: "202602"
   author:
     - 『洋蔥』
   description: |
@@ -187,7 +187,7 @@ punct_preedit_revise_filter:
 ################################### 選單 ######################################
 menu:
   alternative_select_keys: "1234567890"
-  page_size: 6
+  page_size: 8 #6
 ################################### 拼寫 ######################################
 speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz;',./"

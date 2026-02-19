@@ -43,9 +43,10 @@ key_binder:
 ## 其他快捷鍵翻頁
     - {accept: Shift+Up, send: Page_Up, when: paging} #選字時「Shift」+「上」翻頁。
     - {accept: Shift+Down, send: Page_Down, when: has_menu} #選字時「Shift」+「下」翻頁。
-    # - {accept: Shift+Tab, send: Page_Up, when: paging} #選字時「Shift」+「tab」翻頁。
+    - {accept: Shift+Tab, send: Page_Up, when: paging} #選字時「Shift」+「tab」翻頁。
     # - {accept: Tab, send: Page_Down, when: has_menu} #「tab」翻頁。
-    - {accept: Shift+C, send: Page_Up, when: paging} #選字時「Shift」+「tab」翻頁。
+    # - {accept: Shift+C, send: Page_Up, when: paging} #選字時「Shift」+「tab」翻頁。
+    # - {accept: Shift+Z, send: Page_Up, when: paging} #選字時「Shift」+「tab」翻頁。
     - {accept: Shift+space, send: Page_Down, when: has_menu} #選字時「Shift」+「空白鍵」翻頁。 #send: Right #send: Down
 ########################### Return、空白鍵、刪除鍵 ###########################
 ### Return 鍵 ###
@@ -131,6 +132,7 @@ editor:
     Shift+Return: commit_raw_input # 上屏原始輸入
     # Control+Return: commit_script_text # 上屏變換後輸入
     # Shift+Return: commit_script_text # 上屏變換後輸入
+    # Control+Shift+BackSpace: delete_candidate #刪除電腦記憶的候選項，防 Mac 外接鍵盤沒 fn 鍵
 
 
 # selector:

@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onionplus
   name: "☆注音(洋蔥plus版)☆"
-  version: "202512"
+  version: "202602"
   author:
     - 『洋蔥』
   description: |
@@ -225,7 +225,9 @@ convert_japan_filter:
 #   tags: [ punct, abc, reverse2_lookup ]
 ################################### 選單 ######################################
 menu:
-  __include: element_bopomo:/menu
+  # __include: element_bopomo:/menu_6x2
+  __include: element_bopomo:/menu_8x2
+  # __include: element_bopomo:/menu_8
 ################################### 拼寫 ######################################
 speller:
   alphabet: "1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 3467"
@@ -602,7 +604,18 @@ punctuator:
 key_binder:
   import_preset: default
   bindings:
-    __include: element_bopomo:/key_binder
+    ### 以下舊的寫法（需去除「element_bopomo:/key_binder」中的「__append:」） ###
+    # __include: element_bopomo:/key_binder
+    # __patch: element_bopomo:/key_binder_6x2
+    # __patch: element_bopomo:/key_binder_8x2
+    # __patch: element_bopomo:/key_binder_8
+    # __append:
+    ### 以下新的寫法 ###
+    __patch:
+      - element_bopomo:/key_binder
+      # - element_bopomo:/key_binder_6x2
+      - element_bopomo:/key_binder_8x2
+      # - element_bopomo:/key_binder_8
 
 editor:
   bindings:

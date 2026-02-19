@@ -5,7 +5,7 @@
 schema:
   schema_id: Mount_ocm
   name: "❖蝦米(單出-反查專用)❖"
-  version: "202512"
+  version: "202602"
   author:
     - 洋蔥
   description: |
@@ -288,6 +288,7 @@ key_binder:
     # - {accept: Shift+Up, send: Page_Up, when: has_menu} #選字時「Shift」+「上」翻頁。
     - {accept: Shift+Down, send: Page_Down, when: has_menu} #選字時「Shift」+「下」翻頁。
     # - {accept: Shift+C, send: Page_Up, when: paging}
+    # - {accept: Shift+Z, send: Page_Up, when: paging}
     - {accept: Shift+Tab, send: Page_Up, when: has_menu} #選字時可用「Shift」+「tab」翻頁。
     - {accept: Shift+space, send: Page_Down, when: has_menu} #選字時可用「Shift」+「空白鍵」翻頁。 #send: Right #send: Down
     - {accept: Tab, send: Page_Down, when: has_menu} #「tab」翻頁。
