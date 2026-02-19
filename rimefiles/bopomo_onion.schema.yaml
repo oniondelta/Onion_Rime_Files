@@ -85,6 +85,7 @@ menu:
   # alternative_select_keys: "QAZWSXEDCRFV"
   # alternative_select_keys: "YHNUJMIKOL"
 ### 修改候選標籤（顯示作用，沒實質選字作用）
+## 範例樣本
   # alternative_select_labels: [ ⇧1, ⇧2, ⇧3, ⇧4, ⇧5, ⇧6, ⇧7, ⇧8, ⇧9, ⇧0 ]
   # alternative_select_labels: [ ①, ②, ③, ④, ⑤, ⑥, ⑦, ⑧, ⑨ ]
   # alternative_select_labels: [ QY, AH, ZN, WU, SJ, XM, EI ,DK, CO ]
@@ -95,10 +96,10 @@ menu:
 ## menu_8x2
   # alternative_select_labels: [ 𝚀𝚈, 𝙰𝙷, 𝚆𝙽, 𝚂𝚄, 𝚇𝙹, 𝙴𝙼, 𝙳𝙸, 𝙲𝙺 ]
   alternative_select_labels: [ 𝟷𝚀𝚈, 𝟸𝙰𝙷, 𝟹𝚆𝙽, 𝟺𝚂𝚄, 𝟻𝚇𝙹, 𝟼𝙴𝙼, 𝟽𝙳𝙸, 𝟾𝙲𝙺 ]
-## menu_8
+## menu_8x1
   # alternative_select_labels: [ 𝚀, 𝚆, 𝙴, 𝚁, 𝚃, 𝚈, 𝚄, 𝙸 ]
   # alternative_select_labels: [ 𝟷𝚀, 𝟸𝚆, 𝟹𝙴, 𝟺𝚁, 𝟻𝚃, 𝟼𝚈, 𝟽𝚄, 𝟾𝙸 ]
-## menu_10
+## menu_10x1
   # alternative_select_labels: [ 𝚀, 𝚆, 𝙴, 𝚁, 𝚃, 𝚈, 𝚄, 𝙸, 𝙾, 𝙿 ]
   # alternative_select_labels: [ 𝟷𝚀, 𝟸𝚆, 𝟹𝙴, 𝟺𝚁, 𝟻𝚃, 𝟼𝚈, 𝟽𝚄, 𝟾𝙸, 𝟿𝙾, 𝟶𝙿 ]
 ### 選單每頁顯示個數（如上方有設選字鍵，兩者個數需相同，不同會有 bug！）
