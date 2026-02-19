@@ -182,7 +182,7 @@
   
   #### ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/img/bpmf_mixin_4_keyboard.png)
   
-- 注音洋蔥版選字鍵位（8X2）
+- 注音洋蔥版選字鍵位（8X2）（預設）
 
   #### <img src="https://github.com/user-attachments/assets/8947e1a9-106c-4f16-95c6-0361d4130a78" width = "595" alt="image" /><br>
 
