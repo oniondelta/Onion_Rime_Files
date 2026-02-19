@@ -231,9 +231,7 @@ convert_japan_filter:
 #   # tags: [ punct, abc, reverse2_lookup ]
 ################################### 選單 ######################################
 menu:
-  # __include: element_bopomo:/menu_6x2
-  __include: element_bopomo:/menu_8x2
-  # __include: element_bopomo:/menu_8
+  __include: element_bopomo:/menu
 ################################### 拼寫 ######################################
 speller:
   alphabet: "1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 3467"
@@ -716,16 +714,12 @@ key_binder:
   bindings:
     ### 以下舊的寫法（需去除「element_bopomo:/key_binder」中的「__append:」） ###
     # __include: element_bopomo:/key_binder
-    # __patch: element_bopomo:/key_binder_6x2
-    # __patch: element_bopomo:/key_binder_8x2
-    # __patch: element_bopomo:/key_binder_8
+    # __patch: element_bopomo:/key_binder_plus
     # __append:
     ### 以下新的寫法 ###
     __patch:
       - element_bopomo:/key_binder
-      # - element_bopomo:/key_binder_6x2
-      - element_bopomo:/key_binder_8x2
-      # - element_bopomo:/key_binder_8
+      - element_bopomo:/key_binder_plus
 
 editor:
   bindings:
