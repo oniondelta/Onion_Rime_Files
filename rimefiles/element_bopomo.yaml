@@ -271,8 +271,8 @@ key_binder:
 #   __append:
 # ### 空白鍵 ###
 # ### 補一聲和上屏 raw_input （ paging 時，空白鍵無法輸出一聲 ） ###
-#     - {accept: Shift+D, send: space, when: composing} #has_menu
 #     - {accept: Shift+L, send: space, when: composing} #has_menu
+#     - {accept: Shift+D, send: space, when: composing} #has_menu
 #     - {accept: Shift+E, send: Shift+Return, when: composing}
 #     - {accept: Shift+O, send: Shift+Return, when: composing}
 # ### 上屏 preedit（注音文）編碼 ###

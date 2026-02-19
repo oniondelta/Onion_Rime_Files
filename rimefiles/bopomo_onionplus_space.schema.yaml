@@ -640,8 +640,8 @@ key_binder:
       - element_bopomo:/key_binder
       - element_bopomo:/key_binder_plus
     __patch:
-      # /@47/send: Return  #「key_binder_6x2」用
-      /@48/send: Return  #「key_binder_6x2」和「key_binder_8x2」用
+      /@47/send: Return  #「key_binder_6x2」和「key_binder_8x2」用
+      # /@48/send: Return  #「key_binder_6x2」用
       # /@47/send: Return  #「key_binder_8x1」用
       # /@48/send: Return  #「key_binder_8x1」用
 
