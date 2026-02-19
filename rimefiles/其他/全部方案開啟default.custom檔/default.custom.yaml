@@ -24,7 +24,7 @@ patch:
     # - schema: dif1
 ###########################
     - schema: cangjie5
-    - schema: Mount_bopomo
+    # - schema: Mount_bopomo
     # - schema: Mount_ocm
     # - schema: Mount_ocm_encoder
 ###########################
