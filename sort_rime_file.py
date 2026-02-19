@@ -647,8 +647,8 @@ os.rename("./"+sort_rime+"/"+rime_files_7+"/", "./"+sort_rime+"/"+rime_files_7+"
 os.rename("./"+sort_rime+"/"+rime_files_8+"/", "./"+sort_rime+"/"+rime_files_8+"_"+localtime)
 os.rename("./"+sort_rime+"/"+rime_ocm_folder+"/", "./"+sort_rime+"/"+rime_ocm_folder+"_"+localtime)
 
-# os.rename("./"+sort_rime+"/"+rime_files_9+"/", "./"+sort_rime+"/"+rime_files_9+"_"+localtime)
-# os.rename("./"+sort_rime+"/"+rime_files_10+"/", "./"+sort_rime+"/"+rime_files_10+"_"+localtime)
+os.rename("./"+sort_rime+"/"+rime_files_9+"/", "./"+sort_rime+"/"+rime_files_9+"_"+localtime)
+os.rename("./"+sort_rime+"/"+rime_files_10+"/", "./"+sort_rime+"/"+rime_files_10+"_"+localtime)
 
 os.rename("./"+sort_rime+"/", "./"+the_name+"_"+localtime)
 
