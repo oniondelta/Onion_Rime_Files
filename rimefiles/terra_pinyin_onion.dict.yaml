@@ -3652,6 +3652,8 @@ min_phrase_weight: 100
 㤇	wu4	0%
 # 㤇	fo2	0%
 # 㤇	yu4	0%
+輗	yi4	0%
+𫐐	yi4	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -57626,7 +57628,7 @@ min_phrase_weight: 100
 不豐不殺	bu4 feng1 bu4 sha1
 不賢都頭	bu4 xian2 du1 tou2
 不起訴處分	bu4 qi3 su4 chu3 fen4
-不起訴處分	bu4 qi3 su4 chu4 fen4
+不起訴處分	bu4 qi3 su4 chu3 fen1
 不足回旋	bu4 zu2 hui2 xuan2
 不足數	bu4 zu2 shu4
 不足為奇	bu4 zu2 wei2 qi2
@@ -60074,6 +60076,7 @@ min_phrase_weight: 100
 便宜沒好貨	pian2 yi2 mei2 hao3 huo4
 便宜無好貨	pian2 yi2 wu2 hao3 huo4
 便宜處分	bian4 yi2 chu3 fen4
+便宜處分	bian4 yi2 chu3 fen1
 便宜處置	bian4 yi2 chu3 zhi4
 便宜處置	bian4 yi2 chu4 zhi4
 便宜行事	bian4 yi2 xing2 shi4
@@ -60202,6 +60205,7 @@ min_phrase_weight: 100
 保保	bao3 bao3
 保健操	bao3 jian4 cao1
 保全處分	bao3 quan2 chu3 fen4
+保全處分	bao3 quan2 chu3 fen1
 保加利亞共和國	bao3 jia1 li4 ya3 gong4 he2 guo2
 保加利亞共和國	bao3 jia1 li4 ya4 gong4 he2 guo2
 保叔塔	bao3 shu2 ta3
@@ -60212,6 +60216,7 @@ min_phrase_weight: 100
 保增長	bao3 zeng1 zhang3
 保安局局長	bao3 an1 ju2 ju2 zhang3
 保安處分	bao3 an1 chu3 fen4
+保安處分	bao3 an1 chu3 fen1
 保定地區	bao3 ding4 di4 qu1
 保寧縣	bao3 ning2 xian4
 保山地區	bao3 shan1 di4 qu1
@@ -60829,6 +60834,7 @@ min_phrase_weight: 100
 假藉	jia3 jie4
 假藥	jia3 yao4
 假處分	jia3 chu3 fen4
+假處分	jia3 chu3 fen1
 假裝	jia3 zhuang1
 假言三段論	jia3 yan2 san1 duan4 lun4
 假言命題	jia3 yan2 ming4 ti2
@@ -65461,6 +65467,7 @@ min_phrase_weight: 100
 印度黃檀	yin4 du4 huang2 tan2
 印把子	yin4 ba4 zi5
 印模	yin4 mo2
+印模	yin4 mu2
 印泥	yin4 ni2
 印相	yin4 xiang4
 印相箱	yin4 xiang4 xiang1
@@ -76011,6 +76018,8 @@ min_phrase_weight: 100
 強制罪	qiang3 zhi4 zui4
 強制處分	qiang3 zhi4 chu3 fen4
 強制處分	qiang2 zhi4 chu3 fen4
+強制處分	qiang3 zhi4 chu3 fen1
+強制處分	qiang2 zhi4 chu3 fen1
 強制認領	qiang3 zhi4 ren4 ling3
 強制辯護	qiang3 zhi4 bian4 hu4
 強力	qiang2 li4
@@ -78367,6 +78376,8 @@ min_phrase_weight: 100
 懲惡獎善	cheng3 e4 jiang3 shan4	80%
 懲戒處分	cheng2 jie4 chu3 fen4
 懲戒處分	cheng3 jie4 chu3 fen4	80%
+懲戒處分	cheng2 jie4 chu3 fen1
+懲戒處分	cheng3 jie4 chu3 fen1	80%
 懲處	cheng2 chu3
 懲處	cheng3 chu3	80%
 懵憒	meng2 kui4
@@ -84014,6 +84025,7 @@ min_phrase_weight: 100
 昏頭轉向	hun1 tou2 zhuan3 xiang4
 易傳	yi4 zhuan4
 易刑處分	yi4 xing2 chu3 fen4
+易刑處分	yi4 xing2 chu3 fen1
 易加卡	yi4 jia1 ka3
 易取得	yi4 qu3 de2
 易地	yi4 di4
@@ -89065,7 +89077,9 @@ min_phrase_weight: 100
 泄露	xie4 lu4
 泄露	xie4 lou4
 洩露天機	xie4 lu4 tian1 ji1
+洩露天機	xie4 lou4 tian1 ji1
 泄露天機	xie4 lu4 tian1 ji1
+泄露天機	xie4 lou4 tian1 ji1
 泉脈	quan2 mai4
 泊松分佈	bo2 song1 fen1 bu4
 泊松分佈	po4 song1 fen1 bu4
@@ -96298,6 +96312,7 @@ min_phrase_weight: 100
 矯枉過直	jiao3 wang3 guo4 zhi2
 矯正	jiao3 zheng4
 矯正處分	jiao3 zheng4 chu3 fen4
+矯正處分	jiao3 zheng4 chu3 fen1
 矯正透鏡	jiao3 zheng4 tou4 jing4
 矯治	jiao3 zhi4
 矯激奇詭	jiao3 ji1 qi2 gui3
@@ -99686,6 +99701,7 @@ min_phrase_weight: 100
 緊急應變	jin3 ji2 ying4 bian4
 緊急疏散	jin3 ji2 shu1 san4
 緊急處分	jin3 ji2 chu3 fen4
+緊急處分	jin3 ji2 chu3 fen1
 緊急避難權	jin3 ji2 bi4 nan4 quan2
 緊急避難行為	jin3 ji2 bi4 nan4 xing2 wei2
 緊湊渺子線圈	jin3 cou4 miao3 zi3 xian4 quan1
@@ -104534,6 +104550,7 @@ min_phrase_weight: 100
 處事	chu3 shi4
 處事原則	chu3 shi4 yuan2 ze2
 處分	chu3 fen4
+處分	chu3 fen1
 處刑	chu3 xing2
 處堂燕雀	chu4 tang2 yan4 que4
 處境	chu3 jing4
@@ -105225,6 +105242,7 @@ min_phrase_weight: 100
 行政立法	xing2 zheng4 li4 fa3
 行政管理	xing2 zheng4 guan3 li3
 行政處分	xing2 zheng4 chu3 fen4
+行政處分	xing2 zheng4 chu3 fen1
 行政裁量權	xing2 zheng4 cai2 liang2 quan2
 行政訴訟	xing2 zheng4 su4 song4
 行政訴願	xing2 zheng4 su4 yuan4
@@ -117804,4 +117822,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 117807 #####
+##### @結束 END - 117825 #####
