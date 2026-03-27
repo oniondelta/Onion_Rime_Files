@@ -130,6 +130,7 @@
 #    詞句中，「擲」臺灣字典發音和習慣發音為「zhi2」，大陸發音為「zhi4」，斟酌後全改成臺灣發音「zhi2」。
 #    詞句中，「拙」臺灣字典發音和習慣發音為「zhuo2」，大陸發音為「zhuo1」，斟酌後全改成臺灣發音「zhuo2」。
 #    詞句中，「咄」臺灣字典發音和習慣發音為「duo4」，大陸發音為「duo1」，斟酌後全改成臺灣發音「duo4」。
+#    詞句中，「鈷」語意為化學元素時，臺灣字典發音和習慣發音為「gu1」，大陸發音為「gu3」，斟酌後，除詞條「鈷鉧」之「鈷」只標註為「gu3」，全改成臺灣發音「gu1」。
 #    詞句中，「地」於句尾當結構助詞時，意思同「的」時，不標註「di4」，標註「de5」「di5」。
 #    詞句中，「嚓」臺灣字典只有發音「ca1」，不標為「cha1」，因為為形聲，故另標「ca5」，故全都補齊「ca1」「ca5」。
 #    詞句中，「睪」臺灣字典只有發音「gao1」，但日常常發「gao3」，故全都補齊「gao1」「gao3」。
@@ -217,6 +218,7 @@
 #    詞句中，「洽」皆補齊「qia4」「xia2」，後者詞頻設為30%。
 #    詞句中，「艘」皆補齊「sao1」「sou1」。
 #    詞句中，「泊」皆補齊「bo2」「po4」。
+#    詞句中，「蝙」皆補齊「bian1」「bian3」。
 #    詞句中，「臂」皆補齊「bi4」「bei4」。
 #    詞句中，「餾」皆補齊「liu2」「lu4」。
 #    詞句中，「馨」皆補齊「xin1」「xing1」。
@@ -291,6 +293,8 @@
 #    詞句中，「尾巴」臺灣字典發音為「wei3 ba1」，日常發音常發「yi3 ba1」，故皆補齊「wei3 ba1」「yi3 ba1」。
 #    詞句中，「部署」臺灣字典發音為「bu4 shu4」，日常發音常發「bu4 shu3」，故皆補齊「bu4 shu4」「bu4 shu3」。
 #    詞句中，「興奮」臺灣字典發音為「xing1 fen4」，日常發音常發「xing4 fen4」，故皆補齊「xing1 fen4」「xing4 fen4」。
+#    詞句中，「包括」臺灣字典發音為「bao1 kuo4」，日常發音常發「bao1 gua1」，故皆補齊「bao1 kuo4」「bao1 gua1」。
+#    詞句中，「稀罕」和「希罕」臺灣字典發音為「xi1 han3」，日常發音常發「xi1 han4」，故皆補齊「xi1 han3」「xi1 han4」。
 #    詞句中，「交叉」臺灣字典發音為「jiao1 cha1」，日常發音常發「jiao1 cha4」，故皆補齊「jiao1 cha1」「jiao1 cha4」。
 #    詞句中，「牛仔」臺灣字典發音為「niu2 zi3」，日常發音常發「niu2 zai3」，故皆補齊「niu2 zi3」「niu2 zai3」。
 #    詞句中，「落魄」臺灣字典發音為「luo4 tuo4」，日常發音常發「luo4 po4」，故皆補齊「luo4 tuo4」「luo4 po4」。
@@ -1469,7 +1473,7 @@ min_phrase_weight: 100
 镐	hao4	0.2%
 䭕	jian4	0.2%
 鏏	hui4	0.2%
-鏸	wei4	0.2%
+# 鏸	wei4	0.2%
 𨰓	jian4	0%
 岯	pi1	0.2%
 逢	pang2	0.2%
@@ -3669,6 +3673,33 @@ min_phrase_weight: 100
 斁	tu2	0%
 夋	jun4
 毂	gu1	50%
+釩	fan3	0%
+釩	fan4	0%
+钒	fan3	0%
+钒	fan4	0%
+鈒	xi4	0%
+钑	xi4	0%
+釤	xian1	0%
+钐	shan4	10%
+钐	xian1	0%
+釵	cha1	0%
+钗	cha1	0%
+钘	jian1	0%
+鈇	fu3	0%
+𫓧	fu3	0%
+鈈	pi1	0%
+钚	pi1	0%
+䤞	you2	0%
+鈗	rui4	0%
+鏸	rui4	0%
+鏸	sui4	0%
+鈕	chou3	0%
+钮	chou3	0%
+鐔	xin2	10%
+镡	xin2	10%
+鐔	chan2	10%
+镡	tan2
+镣	liao2
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -4209,7 +4240,7 @@ min_phrase_weight: 100
 逢	peng2	1%
 逤	sha1	1%
 酘	tou2	1%
-釤	shan4	1%
+釤	shan4	10%
 陰	an1	1%
 陰	yin4	1%
 陳	zhen4	1%
@@ -4323,7 +4354,7 @@ min_phrase_weight: 100
 逮	di4	1%
 鄉	xiang4	1%
 鈀	ba1	1%
-鈃	jian1	1%
+鈃	jian1	0%
 鈔	chao4	1%
 鈚	pi2	1%
 鈧	kang1	1%
@@ -4936,7 +4967,7 @@ min_phrase_weight: 100
 蠖	wo4	1%
 蠙	pin2	1%
 躂	ta4	1%
-鐐	liao2	1%
+鐐	liao2
 鐒	lao3	1%
 鐙	deng1	1%
 闞	kan3	1%
@@ -36492,7 +36523,7 @@ min_phrase_weight: 100
 镞	zu2
 镟	xuan4
 镠	liu2
-镡	chan2
+镡	chan2	10%
 镢	jue2
 镣	liao4
 镤	pu2
@@ -60015,7 +60046,7 @@ min_phrase_weight: 100
 供養	gong1 yang3
 供養	gong4 yang4
 依依難捨	yi1 yi1 nan2 she3
-依地酸二鈷	yi1 di4 suan1 er4 gu3
+依地酸二鈷	yi1 di4 suan1 er4 gu1
 依我來看	yi1 wo3 lai2 kan4
 依我看	yi1 wo3 kan4
 依撒依亞	yi1 sa1 yi1 ya3
@@ -117995,4 +118026,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 117998 #####
+##### @結束 END - 118029 #####
