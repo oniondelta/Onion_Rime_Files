@@ -174,6 +174,7 @@
 #    詞句中，「壑」臺灣標準為「huo4」，大陸標準為「he4」，兩者易混淆，故皆補齊「huo4」「he4」。
 #    詞句中，「叔」臺灣標準為「shu2」，大陸標準為「shu1」，兩者易混淆，故皆補齊「shu2」「shu1」。
 #    詞句中，「淑」臺灣標準為「shu2」，大陸標準為「shu1」，兩者易混淆，故皆補齊「shu2」「shu1」。
+#    詞句中，「戕」臺灣標準為「qiang2」，大陸標準為「qiang1」，兩者易混淆，故皆補齊「qiang2」「qiang1」。
 #    詞句中，「潛」臺灣標準為「qian2」，日常發音常會誤發為「qian3」，故皆補齊「qian2」「qian3」，後者詞頻設為80%。
 #    詞句中，「髓」臺灣標準為「sui3」，日常發音常會誤發為「sui2」，故皆補齊「sui3」「sui2」，後者詞頻設為80%。
 #    詞句中，「擬」臺灣標準為「ni3」，日常發音常會誤發為「ni2」，故皆補齊「ni3」「ni2」，後者詞頻設為80%。
@@ -306,6 +307,7 @@
 #    詞句中，「傍晚」臺灣字典發音為「bang1 wan3」，大陸標準為「bang4 wan3」，易誤按，且無相似發音詞彙，故皆補齊「bang1 wan3」「bang4 wan3」。
 #    詞句中，「巧克力」臺灣字典發音為「qiao3 ke4 li4」，日常發音常發「qiao3 ke1 li4」，故皆補齊「qiao3 ke4 li4」「qiao3 ke1 li4」，後者詞頻設為80%。
 #    詞句中，「壓克力」臺灣字典發音為「ya1 ke4 li4」，日常發音常發「ya1 ke1 li4」，故皆補齊「ya1 ke4 li4」「ya1 ke1 li4」，後者詞頻設為80%。
+#    詞句中，「繫帶」維基百科發音為「ji4 dai4」，日常發音常發「xi4 dai4」，故皆補齊「ji4 dai4」「xi4 dai4」。
 #    預計比對「輕聲和一聲」變音。
 #
 #  〈2020修改字詞彙發音〉：
@@ -328,7 +330,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "202603"
+version: "202604"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -3861,7 +3863,7 @@ min_phrase_weight: 100
 怫	bei4	1%
 怬	si4	1%
 怯	que4	100%
-戕	qiang2	1%
+戕	qiang2
 披	pei1	1%
 抵	zhi3	1%
 抻	shen4	1%
@@ -78620,9 +78622,13 @@ min_phrase_weight: 100
 戕害	qiang2 hai4
 戕害	qiang1 hai4
 戕害不辜	qiang2 hai4 bu4 gu1
+戕害不辜	qiang1 hai4 bu4 gu1
 戕敗	qiang2 bai4
+戕敗	qiang1 bai4
 戕賊	qiang2 ze2
 戕賊	qiang2 zei2
+戕賊	qiang1 ze2
+戕賊	qiang1 zei2
 或多或少	huo4 duo1 huo4 shao3
 或然率	huo4 ran2 lv4
 或稱	huo4 cheng1
@@ -118026,4 +118032,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 118029 #####
+##### @結束 END - 118035 #####
