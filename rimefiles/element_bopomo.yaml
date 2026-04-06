@@ -46,12 +46,12 @@ menu:
 ### 修改候選標籤（以下英文為：強制等寬體）
   ## （跳過「Shfit+Z」）
   # alternative_select_labels: [ 𝚀𝚈, 𝙰𝙷, 𝚆𝙽, 𝚂𝚄, 𝚇𝙹, 𝙴𝙼, 𝙳𝙸, 𝙲𝙺 ]
-  alternative_select_labels: [ 𝟷𝚀𝚈, 𝟸𝙰𝙷, 𝟹𝚆𝙽, 𝟺𝚂𝚄, 𝟻𝚇𝙹, 𝟼𝙴𝙼, 𝟽𝙳𝙸, 𝟾𝙲𝙺 ]
+  # alternative_select_labels: [ 𝟷𝚀𝚈, 𝟸𝙰𝙷, 𝟹𝚆𝙽, 𝟺𝚂𝚄, 𝟻𝚇𝙹, 𝟼𝙴𝙼, 𝟽𝙳𝙸, 𝟾𝙲𝙺 ]
   ## （原始順序）
   # alternative_select_labels: [ 𝚀𝚈, 𝙰𝙷, 𝚉𝙽, 𝚆𝚄, 𝚂𝙹, 𝚇𝙼, 𝙴𝙸, 𝙳𝙺 ]
   # alternative_select_labels: [ ¹𝚀𝚈, ²𝙰𝙷, ³𝚉𝙽, ⁴𝚆𝚄, ⁵𝚂𝙹, ⁶𝚇𝙼, ⁷𝙴𝙸, ⁸𝙳𝙺 ]
   # alternative_select_labels: [ 𝟙𝚀𝚈, 𝟚𝙰𝙷, 𝟛𝚉𝙽, 𝟜𝚆𝚄, 𝟝𝚂𝙹, 𝟞𝚇𝙼, 𝟟𝙴𝙸, 𝟠𝙳𝙺 ]
-  # alternative_select_labels: [ 𝟷𝚀𝚈, 𝟸𝙰𝙷, 𝟹𝚉𝙽, 𝟺𝚆𝚄, 𝟻𝚂𝙹, 𝟼𝚇𝙼, 𝟽𝙴𝙸, 𝟾𝙳𝙺 ]
+  alternative_select_labels: [ 𝟷𝚀𝚈, 𝟸𝙰𝙷, 𝟹𝚉𝙽, 𝟺𝚆𝚄, 𝟻𝚂𝙹, 𝟼𝚇𝙼, 𝟽𝙴𝙸, 𝟾𝙳𝙺 ]
   # alternative_select_labels: [ 𝟷.𝚀𝚈, 𝟸.𝙰𝙷, 𝟹.𝚉𝙽, 𝟺.𝚆𝚄, 𝟻.𝚂𝙹, 𝟼.𝚇𝙼, 𝟽.𝙴𝙸, 𝟾.𝙳𝙺 ]
   # alternative_select_labels: [ "⌃𝟷 𝚀 𝚈", "⌃𝟸 𝙰 𝙷", "⌃𝟹 𝚉 𝙽", "⌃𝟺 𝚆 𝚄", "⌃𝟻 𝚂 𝙹", "⌃𝟼 𝚇 𝙼", "⌃𝟽 𝙴 𝙸", "⌃𝟾 𝙳 𝙺" ]
 ### 選單每頁顯示個數
@@ -328,26 +328,26 @@ key_binder_plus:
     - {accept: Shift+V, send: Home, when: composing}
     - {accept: Shift+B, send: End, when: composing}
 #其他快捷鍵翻頁
-    # - {accept: Shift+C, send: Page_Up, when: has_menu}
-    - {accept: Shift+Z, send: Page_Up, when: has_menu}
+    - {accept: Shift+C, send: Page_Up, when: has_menu}
+    # - {accept: Shift+Z, send: Page_Up, when: has_menu}
     - {accept: Shift+space, send: Page_Down, when: has_menu} #選字時「Shift」+「空白鍵」翻頁。 #send: Right #send: Down
 #左邊選字（「Control+」不要換成「KP_」，特殊功能集【數字】選字會有問題）
-    # - {accept: Shift+Q, send: Control+1, when: has_menu}
-    # - {accept: Shift+A, send: Control+2, when: has_menu}
-    # - {accept: Shift+Z, send: Control+3, when: has_menu}
-    # - {accept: Shift+W, send: Control+4, when: has_menu}
-    # - {accept: Shift+S, send: Control+5, when: has_menu}
-    # - {accept: Shift+X, send: Control+6, when: has_menu}
-    # - {accept: Shift+E, send: Control+7, when: has_menu}
-    # - {accept: Shift+D, send: Control+8, when: has_menu}
     - {accept: Shift+Q, send: Control+1, when: has_menu}
     - {accept: Shift+A, send: Control+2, when: has_menu}
-    - {accept: Shift+W, send: Control+3, when: has_menu}
-    - {accept: Shift+S, send: Control+4, when: has_menu}
-    - {accept: Shift+X, send: Control+5, when: has_menu}
-    - {accept: Shift+E, send: Control+6, when: has_menu}
-    - {accept: Shift+D, send: Control+7, when: has_menu}
-    - {accept: Shift+C, send: Control+8, when: has_menu}
+    - {accept: Shift+Z, send: Control+3, when: has_menu}
+    - {accept: Shift+W, send: Control+4, when: has_menu}
+    - {accept: Shift+S, send: Control+5, when: has_menu}
+    - {accept: Shift+X, send: Control+6, when: has_menu}
+    - {accept: Shift+E, send: Control+7, when: has_menu}
+    - {accept: Shift+D, send: Control+8, when: has_menu}
+    # - {accept: Shift+Q, send: Control+1, when: has_menu}
+    # - {accept: Shift+A, send: Control+2, when: has_menu}
+    # - {accept: Shift+W, send: Control+3, when: has_menu}
+    # - {accept: Shift+S, send: Control+4, when: has_menu}
+    # - {accept: Shift+X, send: Control+5, when: has_menu}
+    # - {accept: Shift+E, send: Control+6, when: has_menu}
+    # - {accept: Shift+D, send: Control+7, when: has_menu}
+    # - {accept: Shift+C, send: Control+8, when: has_menu}
 #右邊選字（「Control+」不要換成「KP_」，特殊功能集【數字】選字會有問題）
     - {accept: Shift+Y, send: Control+1, when: has_menu}
     - {accept: Shift+H, send: Control+2, when: has_menu}
@@ -376,19 +376,19 @@ key_binder_plus:
 #     - {accept: Shift+L, send: Control+Shift+Return, when: composing}
 # ### 刪除鍵 ###
 # ### 另設快捷刪除鍵 ###
-#     # - {accept: Shift+X, send: BackSpace, when: composing}
-#     - {accept: Shift+C, send: BackSpace, when: composing}
+#     - {accept: Shift+X, send: BackSpace, when: composing}
+#     # - {accept: Shift+C, send: BackSpace, when: composing}
 #     - {accept: Shift+M, send: BackSpace, when: composing}
-#     # - {accept: Shift+Z, send: Delete, when: composing}
-#     - {accept: Shift+X, send: Delete, when: composing}
+#     - {accept: Shift+Z, send: Delete, when: composing}
+#     # - {accept: Shift+X, send: Delete, when: composing}
 #     - {accept: Shift+N, send: Delete, when: composing}
 #     - {accept: Shift+G, send: Escape, when: composing}
 # ### 另設快捷鍵 ###
 #     - {accept: Shift+V, send: Home, when: composing}
 #     - {accept: Shift+B, send: End, when: composing}
 # #其他快捷鍵翻頁
-#     # - {accept: Shift+C, send: Page_Up, when: has_menu}
-#     - {accept: Shift+Z, send: Page_Up, when: has_menu}
+#     - {accept: Shift+C, send: Page_Up, when: has_menu}
+#     # - {accept: Shift+Z, send: Page_Up, when: has_menu}
 #     - {accept: Shift+space, send: Page_Down, when: has_menu} #選字時「Shift」+「空白鍵」翻頁。 #send: Right #send: Down
 #     # - {accept: Shift+O, send: Page_Up, when: has_menu}
 #     # - {accept: Shift+P, send: Page_Down, when: has_menu}

@@ -41,7 +41,8 @@ local function hotkeys(n)
     --   , { "➁➅", " • 選字單翻頁選擇" }
     --   , { "➁➆", "　［ right / left ］翻頁（選字時）" }
     --   , { "➁➇", "　［shift］+［ up / down ］翻頁（打字時）" }
-    --   , { "➁➈", "　［shift］+［ Z / space ］翻頁（打字時）" }
+    --   -- , { "➁➈", "　［shift］+［ Z / space ］翻頁（打字時）" }
+    --   , { "➁➈", "　［shift］+［ C / space ］翻頁（打字時）" }
     --   , { "➂🄋", "　［shift］+［ O / P ］上下選擇（打字時）" }
     --   , { "➂➀", " • 選字" }
     --   , { "➂➁", "　［shift］+［ QWERTYUI ］選字" }
@@ -88,9 +89,11 @@ local function hotkeys(n)
       , { "➁➅", " • 選字單翻頁選擇" }
       , { "➁➆", "　［ right / left ］翻頁（選字時）" }
       , { "➁➇", "　［shift］+［ up / down ］翻頁（打字時）" }
-      , { "➁➈", "　［shift］+［ Z / space ］翻頁（打字時）" }
+      -- , { "➁➈", "　［shift］+［ Z / space ］翻頁（打字時）" }
+      , { "➁➈", "　［shift］+［ C / space ］翻頁（打字時）" }
       , { "➂🄋", " • 選字" }
-      , { "➂➀", "　［shift］+［ QAWSXEDC ］選字（左邊）" }
+      -- , { "➂➀", "　［shift］+［ QAWSXEDC ］選字（左邊）" }
+      , { "➂➀", "　［shift］+［ QAZWSXED ］選字（左邊）" }
       , { "➂➁", "　［shift］+［ YHNUJMIK ］選字（右邊）" }
       , { "➂➂", "　［ KP_1~8 ］選字（右邊數字小鍵盤）" }
       , { "➂➃", "　［control］+［ 12345678 ］選字？！" }
