@@ -188,7 +188,8 @@
   
 - 注音洋蔥版選字鍵位（8X2）（預設）
 
-  #### <img src="https://github.com/user-attachments/assets/8947e1a9-106c-4f16-95c6-0361d4130a78" width = "595" alt="image" /><br>
+  #### <img src="https://github.com/user-attachments/assets/0febf764-a498-4249-bbd2-0865b2f3d203" width = "595" alt="image" /><br>
+<!--  #### <img src="https://github.com/user-attachments/assets/8947e1a9-106c-4f16-95c6-0361d4130a78" width = "595" alt="image" /><br>-->
 
 - 注音洋蔥版選字鍵位（6X2）
 
@@ -196,7 +197,8 @@
 
 - 注音洋蔥版選字鍵位（8X1）
 
-  #### <img src="https://github.com/user-attachments/assets/759b1d86-522e-4ae8-87bb-1a8ad486da1f" width = "595" alt="image" /><br>
+  #### <img src="https://github.com/user-attachments/assets/bde51ac2-4483-4de2-99af-75f944054f90" width = "595" alt="image" /><br>
+<!--  #### <img src="https://github.com/user-attachments/assets/759b1d86-522e-4ae8-87bb-1a8ad486da1f" width = "595" alt="image" /><br>-->
 
 - 行列１０（洋蔥版）鍵位
 
