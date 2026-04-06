@@ -50,6 +50,7 @@
 --      - lua_filter@halfwidth_katakana_filter       --（關）（jpnin1）片假名後附加半形片假名。選單顯示太雜亂，故不用。
 --      - lua_filter@lua_custom_phrase_filter        --（關）取代原先 table_translator@custom_phrase。接續掛接方案後，有 bug，上不了屏，改用 translator 實現。202512重新整理無發現？！
 --      - lua_filter@preedit_model_filter            --（關）（bo_mixin 全系列）切換 preedit 樣式。
+--      - lua_filter@preedit_linebreak_filter        --（引lua資料夾）（bo_mixin 全系列）注音 mixin 方案選字後，「英文」和「注音」之 preedit 無法對齊，開頭換行修改之。
 --      - lua_filter@punct_preedit_revise_filter     --（引lua資料夾）（bopomo_onion_double 和 onion-array30 和 onion-array10）punct 下，附加 preedit 後面 prompt 缺漏之標示。另修正 ascii_punct 下，分號(;)和冒號(:)無法變半形問題。
 --      - lua_filter@back_mark_filter                --（引lua資料夾）（dif、1bopomo_onion_double、bopomo_onionplus 和 bo_mixin 全系列）不直接用 opencc 去 comment，改 lua 間接 comment，防「兩個字符」以上無法標注，和一個字串被多個標注。
 --      - lua_filter@comment_filter_unicode          --（關）註釋 Unicode 編碼。
@@ -197,6 +198,12 @@ mix30_nil_comment_new_filter = require("filter_mix30_nil_comment_new_filter")
 -- 切換 preedit 樣式
 -- preedit_model_filter = require("filter_preedit_model_filter")
 -- preedit_model_charset_filter2_filter = require("filter_preedit_model_charset_filter2_filter")
+
+
+--- preedit_linebreak_filter （bo_mixin 全系列）
+-- 注音 mixin 方案選字後，「英文」和「注音」之 preedit 無法對齊，開頭換行修改之。
+-- 後來修改不限定於注音「abc」之下，掛接方案也換行。
+preedit_linebreak_filter = require("filter_preedit_linebreak_filter")
 
 
 --- punct_preedit_revise_filter （bopomo_onion_double 和 onion-array30 和 onion-array10）

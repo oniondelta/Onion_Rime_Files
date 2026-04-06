@@ -275,6 +275,6 @@ end
 
 ----------------
 -- return comment_filter_unicode_debug
-return { init = init , func = filter , tags_match = tags_match }
+return { init = init, func = filter, tags_match = tags_match }
 -- return M
 ----------------

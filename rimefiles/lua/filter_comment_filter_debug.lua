@@ -79,6 +79,6 @@ end
 
 ----------------
 -- return comment_filter_debug
-return { func = filter , tags_match = tags_match }
+return { func = filter, tags_match = tags_match }
 -- return M
 ----------------

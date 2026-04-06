@@ -155,6 +155,6 @@ end
 
 ----------------
 -- return comment_filter_unicode
-return { init = init , func = filter , tags_match = tags_match }
+return { init = init, func = filter, tags_match = tags_match }
 -- return M
 ----------------

@@ -1453,4 +1453,162 @@ preedit_p_3:
     ## 以上英文數字符號不先轉成最終顯示，方便下面作轉換。
     - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcdefghij|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ₁₂³⁴₅⁶⁷₈₉₀,.⸝-;⸋˺˹⁼'|"
     - 'xform/\\/⁞/'
-    - 'xform/　([ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦ])/⁞$1/'
+    #防不換行時，第一個注音不顯示？# - 'xform/　([ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦ])/⁞$1/'
+
+
+preedit_pa_1_2_4:
+### Paragraph Alignment 樣式 ###
+    - xform|,|a@|
+    - xform|[.]|b@|
+    - xform|/|c@|
+    - xform|-|d@|
+    - xform|;|e@|
+    - xform| |f@|
+    - xform/1/g@/
+    - xform/2/h@/
+    - xform/3/i@/
+    - xform/4/j@/
+    - xform/5/k@/
+    - xform/6/l@/
+    - xform/7/m@/
+    - xform/8/n@/
+    - xform/9/p@/
+    - xform/0/q@/
+    - xform/^([a-z@\\]+)$/\U$1\E　\n$1/
+    - xform/a@/ㄝ/
+    - xform/b@/ㄡ/
+    - xform/c@/ㄥ/
+    - xform/d@/ㄦ/
+    - xform/e@/ㄤ/
+    - xform/f@/ˉ /
+    - xform/g@/ㄅ/
+    - xform/h@/ㄉ/
+    - xform/i@/ˇ/
+    - xform/j@/ˋ /
+    - xform/k@/ㄓ/
+    - xform/l@/ˊ /
+    - xform/m@/˙ /
+    - xform/n@/ㄚ/
+    - xform/p@/ㄞ/
+    - xform/q@/ㄢ/
+    - "xlit|qazwsxedcrfvtgbyhnujmikolp|ㄆㄇㄈㄊㄋㄌㄍㄎㄏㄐㄑㄒㄔㄕㄖㄗㄘㄙㄧㄨㄩㄛㄜㄟㄠㄣ|"
+    - xform|A@|a|
+    - xform|B@|b|
+    - xform|C@|c|
+    - xform|D@|d|
+    - xform|E@|e|
+    - xform|F@|f| #ˉ拉
+    - xform/G@/1/
+    - xform/H@/2/
+    - xform/I@/3/ #3ˇ
+    - xform/J@/4/ #4ˋ
+    - xform/K@/5/
+    - xform/L@/6/ #6ˊ日
+    - xform/M@/7/ #7˙韓
+    - xform/N@/8/
+    - xform/P@/9/
+    - xform/Q@/0/
+    - xform/([0-9A-Zabcdef])\\/$1⁞/ #只限定英文分節 #　 ⁝⁞︙𝄄𖡡׀᰻|𝄀¦┆‖
+    ## 以上英文數字符號不先轉成最終顯示，方便下面作轉換。
+    ## 以下為一般斜線
+    # - xform|c| /  | #等略寬# #「\u2008」 是標點符號的寬度
+    # - xform|c| /  | #略寬# #「1/2」em=「1」en_space；「1/3」+「1/4」+「1/6」=9/12em=3/4em
+    ## 以下為分數斜號
+    - xform|c|  ⁄ | #等略寬#  #「?」+「1/6」+「?」
+    # - xform|c| ⁄ | #略寬# #「1」em
+    # - xform|c|  ⁄ | #略寬# #「1」em
+    # - xform|c|  ⁄ | #略窄# #「1/4」+「1/6」+「1/2」=「11/12」em
+    # - xform|c|  ⁄  | #略窄# #「1/6」+「?」+「?」+「1/4」=「5/12」+「2?」em
+    # - xform|c|  ⁄  | #略寬# #「?」+「1/4」+「1/4」+「?」=「1/2」+「2?」em
+    - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abdef|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ１２³⁴５⁶⁷８９０，．－；⸋|"
+    - 'xform/\\/⁞/' #全形空格　 #半形空格  #| #⁞ #⁝ #⋮ #¦ #┆
+
+
+preedit_pa_3:
+### Paragraph Alignment 樣式 ###
+    - xform|,|a@|
+    - xform|[.]|b@|
+    - xform|/|c@|
+    - xform|-|d@|
+    - xform|;|e@|
+    - xform| |f@|
+    - xform/1/g@/
+    - xform/2/h@/
+    - xform/3/i@/
+    - xform/4/j@/
+    - xform/5/k@/
+    - xform/6/l@/
+    - xform/7/m@/
+    - xform/8/n@/
+    - xform/9/p@/
+    - xform/0/q@/
+    - xform|[]]|`````|
+    - xform|[[]|````|
+    - xform|=|```|
+    - xform|'|``|
+    - xform/^([a-z@`\\]+)$/\U$1\E　\n$1/
+    - xform/a@/ㄝ/
+    - xform/b@/ㄡ/
+    - xform/c@/ㄥ/
+    - xform/d@/ㄦ/
+    - xform/e@/ㄤ/
+    - xform/f@/ˉ /
+    - xform/g@/ㄅ/
+    - xform/h@/ㄉ/
+    - xform/i@/ˇ/
+    - xform/j@/ˋ /
+    - xform/k@/ㄓ/
+    - xform/l@/ˊ /
+    - xform/m@/˙ /
+    - xform/n@/ㄚ/
+    - xform/p@/ㄞ/
+    - xform/q@/ㄢ/
+    - "xlit|qazwsxedcrfvtgbyhnujmikolp|ㄆㄇㄈㄊㄋㄌㄍㄎㄏㄐㄑㄒㄔㄕㄖㄗㄘㄙㄧㄨㄩㄛㄜㄟㄠㄣ|"
+    - xform|A@|a|
+    - xform|B@|b|
+    - xform|C@|c|
+    - xform|D@|d|
+    - xform|E@|e|
+    - xform|F@|f|
+    - xform/G@/1/
+    - xform/H@/2/
+    - xform/I@/3/ #3ˇ
+    - xform/J@/4/ #4ˋ
+    - xform/K@/5/
+    - xform/L@/6/ #6ˊ
+    - xform/M@/7/ #7˙
+    - xform/N@/8/
+    - xform/P@/9/
+    - xform/Q@/0/
+    - xform|`````|g| #]韓
+    - xform|````|h| #[日
+    - xform|```|i| #=
+    - xform|``|j| #'拉
+    - xform/([0-9A-Zabcdefghij])\\/$1⁞/ #只限定英文分節 #　 ⁝⁞︙𝄄𖡡׀᰻|𝄀¦┆‖
+    ## 以上英文數字符號不先轉成最終顯示，方便下面作轉換。
+    ## 以下為一般斜線
+    # - xform|c| /  | #等略寬# #「\u2008」 是標點符號的寬度
+    # - xform|c| /  | #略寬# #「1/2」em=「1」en_space；「1/3」+「1/4」+「1/6」=9/12em=3/4em
+    ## 以下為分數斜號
+    - xform|c|  ⁄ | #等略寬#  #「?」+「1/6」+「?」
+    # - xform|c| ⁄ | #略寬# #「1」em
+    # - xform|c|  ⁄ | #略寬# #「1」em
+    # - xform|c|  ⁄ | #略窄# #「1/4」+「1/6」+「1/2」=「11/12」em
+    # - xform|c|  ⁄  | #略窄# #「1/6」+「?」+「?」+「1/4」=「5/12」+「2?」em
+    # - xform|c|  ⁄  | #略寬# #「?」+「1/4」+「1/4」+「?」=「1/2」+「2?」em
+    - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abdefghij|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ１２³⁴５⁶⁷８９０，．－；⸋˺˹⁼'|"
+    - 'xform/\\/⁞/' #全形空格　 #半形空格  #| #⁞ #⁝ #⋮ #¦ #┆
+    #防不換行時，第一個注音不顯示？# - 'xform/　([ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦ])/⁞$1/'
+
+
+#### 以下「空格」調整上下排（英文和注音）對齊用 ####
+##  「 」：\u0020 一般打字輸入空格，（不與en space同寬）
+##  「 」：\u2002 是1/2 em（en space）
+##  「 」：\u2003 是1 em（em space）
+##  「 」：\u2004 是1/3 em
+##  「 」：\u2005 是1/4 em
+##  「 」：\u2006 是1/6 em
+##  「 」：\u2007 是圖形空間的寬度（用於分隔數字之定位符，與單一數字同寬）
+##  「 」：\u2008 是標點符號的寬度（與同字型之窄標點同寬，即句號或逗號（西方語文）之寬度）
+##  「　」：\u3000 是全形文字的寬度（表意文字空格，與CJK文字同寬）
+
