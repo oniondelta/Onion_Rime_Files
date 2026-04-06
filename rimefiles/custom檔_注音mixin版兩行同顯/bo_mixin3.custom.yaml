@@ -1,11 +1,18 @@
 # .custom.yaml
 patch:
+  # engine/filters/+:
+  #   - lua_filter@preedit_linebreak_filter
+
+  # # engine/filters/@next: lua_filter@preedit_linebreak_filter
+
+  # # engine/filters/@after last: lua_filter@preedit_linebreak_filter
+
+  # # engine/filters/@before 0: lua_filter@preedit_linebreak_filter
+
   # # engine/filters/@12: lua_filter@comment_filter_unicode
   # # engine/filters/@13: uniquifier
   # # engine/filters/@before 13: lua_filter@preedit_linebreak_filter
-  # # engine/filters/@before 0: lua_filter@preedit_linebreak_filter
-  # engine/filters/+:
-  #   - lua_filter@preedit_linebreak_filter
+
   translator/preedit_format:
     # __include: element_bopomo:/preedit_pa_3
     __include: element_bopomo:/preedit_p_3
