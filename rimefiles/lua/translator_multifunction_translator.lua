@@ -665,8 +665,8 @@ local function translate(input, seg, env)
   ::op_check_label::
 
   -- 快捷開啟（開啟檔案/程式/網站）
-  if input == env.prefix .. op_prefix then
   -- if input == env.prefix .. "j" then
+  if input == env.prefix .. op_prefix then
     -- local keys_table = {
     --     { "⓿", "※ 限起始輸入，限英文 [a-z]+  " }  -- ≤ 2
     --   , { "❶", "※ 編輯後須「重新部署」生效  " }  --  "────────────  "
