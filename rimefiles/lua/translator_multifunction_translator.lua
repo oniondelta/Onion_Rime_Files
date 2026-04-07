@@ -248,7 +248,7 @@ local function init(env)
       , { "㉒", "　c [ 0-9 ]+〔內碼十進制 Dec 〕" }
       , { "㉓", "　o [ 0-7 ]+〔內碼八進制 Oct 〕" }
       , { "㉔", "〖快捷功能〗" }
-      , { "㉕", "　j [ a-z ]+〔快捷開啟〕" }
+      , { "㉕", "　e 或 j  [ a-z ]+〔快捷開啟〕" }
       , { "㉖", "　a 或 , 〔短語總列表〕" }
       , { "㉗", "〖鍵位和編碼〗" }
       , { "㉘", "　k k〔快捷鍵 說明〕" }
@@ -319,7 +319,8 @@ local function translate(input, seg, env)
   --- 精簡程式碼用
   -- local yield_c = function(cand_text, comment, preedit_text)
   local function yield_c(cand_text, comment, preedit_text)
-    comment = comment == nil and "" or comment
+    -- comment = comment == nil and "" or comment
+    local comment = comment or ""
     local cand = Candidate("simp_mf", seg.start, seg._end, cand_text, comment)
     -- cand.preedit = preedit_text == nil and cand.preedit or preedit_text == "" and cand.preedit or preedit_text
     if preedit_text ~= nil and preedit_text ~= "" then
@@ -328,7 +329,8 @@ local function translate(input, seg, env)
     yield(cand)
   end
   -- local yield_c = function(cand_text, comment)
-  --   comment = comment == nil and "" or comment
+  --   -- comment = comment == nil and "" or comment
+  --   local comment = comment or ""
   --   yield(Candidate("simp_mf", seg.start, seg._end, cand_text, comment))
   -- end
 
@@ -519,7 +521,9 @@ local function translate(input, seg, env)
   --- Lua 字符類依賴於本地環境，故'[a-z]'可能與'%l'表示的字符集不同。一般情況下，後者包括'ç'和'ã'，前者沒有。
   --- 承上，盡量使用後者來表示字母，除非出於特殊考慮，因後者更簡單、方便、高效。
   --- goto 和 ::Label:: 之後不要接變數，例：local abc = xxx，易產生錯誤！
-  local op_check = string.match(input, env.prefix_s .. "j(%l*)$")
+  local op_prefix, op_check = string.match(input, env.prefix_s .. "([ej])(%l*)$")
+  -- local op_check = string.match(input, env.prefix_s .. "j(%l*)$")
+  local op_preedit = op_check and op_check ~= "" and env.prefix .. op_prefix .. " " .. string.upper(op_check) .. "\t 【快捷開啟】" or ""  -- 無 op_check 則為 nil，但 op_check == "" 則為 false 不為 nil。
   ---
   local k_key = string.match(input, env.prefix_s .. "k%l?$")
   ---
@@ -543,8 +547,10 @@ local function translate(input, seg, env)
   local xd = string.match(input, env.prefix_s .. "(%d+)d$")
   -- local xm = string.match(input, env.prefix_s .. "(%d%d?)m$")
   -- local xd = string.match(input, env.prefix_s .. "(%d%d?)d$")
+  --- 以下先在外部宣告區域變數（初始值為 nil）。因宣告過，下方處理不會建立新的全域變數，拋出後為區域變數。
+  local y, m, m_suffix, d, d_suffix
   if string.match(input, env.prefix_s .. "%d+y1[3-9]") then
-    y, m, m_suffix, d, d_suffix = string.match(input, env.prefix_s .. "(%d+)y(1)(m?)(%d?*)(d?)$")  -- 後面可接無限數字，但顯示〈輸入錯誤〉。
+    y, m, m_suffix, d, d_suffix = string.match(input, env.prefix_s .. "(%d+)y(1)(m?)(%d*)(d?)$")  -- 後面可接無限數字，但顯示〈輸入錯誤〉。
     -- y, m, m_suffix, d, d_suffix = string.match(input, env.prefix_s .. "(%d+)y(1)(m?)(%d?%d?)(d?)$")
     -- tonumber_y = tonumber(y)
     -- tonumber_m = tonumber(m)
@@ -561,7 +567,8 @@ local function translate(input, seg, env)
   --- 下面一行，把上兩行合併成一行，但沒判別「y1[3-9]」等容錯功能，故不採用。
   -- local y, m, m_suffix, d, d_suffix = string.match(input, env.prefix_s .. "(%d+)y(%d%d?)(m?)(%d?%d?)(d?)$")
   --- 下面一行，匹配到時，不知為何？只有開頭「y」不為 nil，其餘變數皆為 nil。
-  -- local y, m, m_suffix, d, d_suffix = string.match(input, env.prefix_s .. "%d+y1[3-9]") and string.match(input, env.prefix_s .. "(%d+)y(1)(m?)(%d?*)(d?)$") or string.match(input, env.prefix_s .. "(%d+)y([01]?%d)(m?)(%d*)(d?)$")
+  --- 下面一行並承上說明：當執行 (match1) and (match2) or (match3) 時，Lua 的邏輯運算子只會保留第一個回傳值來進行布林判斷。
+  -- local y, m, m_suffix, d, d_suffix = string.match(input, env.prefix_s .. "%d+y1[3-9]") and string.match(input, env.prefix_s .. "(%d+)y(1)(m?)(%d*)(d?)$") or string.match(input, env.prefix_s .. "(%d+)y([01]?%d)(m?)(%d*)(d?)$")
   local nm, nd, nd_suffix = string.match(input, env.prefix_s .. "(%d%d?)m(%d+)(d?)$")
   -- local nm, nd, nd_suffix = string.match(input, env.prefix_s .. "(%d%d?)m(%d%d?)(d?)$")
   ---
@@ -653,7 +660,8 @@ local function translate(input, seg, env)
   ::op_check_label::
 
   -- 快捷開啟（開啟檔案/程式/網站）
-  if input == env.prefix .. "j" then
+  if input == env.prefix .. op_prefix then
+  -- if input == env.prefix .. "j" then
     -- local keys_table = {
     --     { "⓿", "※ 限起始輸入，限英文 [a-z]+  " }  -- ≤ 2
     --   , { "❶", "※ 編輯後須「重新部署」生效  " }  --  "────────────  "
@@ -692,34 +700,38 @@ local function translate(input, seg, env)
   -- local op_check = string.match(input, env.prefix_s .. "j([a-z]+)$")
   -- local first_check = input ~= nil and caret_pos - #input or 1
   -- if op_check and first_check ~= 0 then
+  -- --- 《以下 preeit 演進取代過程》：
+  -- -- env.prefix .. "j " .. string.upper(op_check) .. "\t 【快捷開啟】"
+  -- -- env.prefix .. op_prefix .. " " .. string.upper(op_check) .. "\t 【快捷開啟】"
+  -- -- op_preedit
   if op_check and seg.start ~= 0 then
-      yield_c( "", "〔非起始輸入〕", env.prefix .. "j " .. string.upper(op_check) .. "\t 【快捷開啟】")
+      yield_c( "", "〔非起始輸入〕", op_preedit)
     return
   elseif op_check and #context.input ~= seg._end then
     yield_c( "", "〔光標非末尾狀態〕")
-    -- yield_c( "", "〔光標非末尾狀態〕", env.prefix .. "j " .. string.upper(op_check) .. "\t 【快捷開啟】")  --光標非末尾狀態，此條無效，故關閉
+    -- yield_c( "", "〔光標非末尾狀態〕", op_preedit)  --光標非末尾狀態，此條無效，故關閉
   elseif op_check == "t" then
-    yield_c( "", "〘 編輯 快捷開啟 table 〙", env.prefix .. "j " .. string.upper(op_check) .. "\t 【快捷開啟】")  -- or〔錯誤〕
+    yield_c( "", "〘 編輯 快捷開啟 table 〙", op_preedit)  -- or〔錯誤〕
     return
   -- elseif op_check == "c" and env.prefix == "`" then
   elseif op_check == "c" and env.schema_id == "onion-array30" then
-    yield_c( "", "〔無短語功能〕", env.prefix .. "j " .. string.upper(op_check) .. "\t 【快捷開啟】")  -- or〔錯誤〕
+    yield_c( "", "〔無短語功能〕", op_preedit)  -- or〔錯誤〕
     return
   elseif op_check == "c" then
-    yield_c( "", "〘 編輯 custom 短語 〙", env.prefix .. "j " .. string.upper(op_check) .. "\t 【快捷開啟】")  -- or〔錯誤〕
+    yield_c( "", "〘 編輯 custom 短語 〙", op_preedit)  -- or〔錯誤〕
     return
   -- elseif op_check and first_check == 0 then
   elseif op_check and seg.start == 0 then
     local run_in = run_pattern[ op_check ]
     if run_in ~= nil then
       if run_in.name ~= nil then
-        yield_c( "", "〘 " .. run_in.name .. " 〙", env.prefix .. "j " .. string.upper(op_check) .. "\t 【快捷開啟】")  -- or〔錯誤〕
+        yield_c( "", "〘 " .. run_in.name .. " 〙", op_preedit)  -- or〔錯誤〕
       else
-        yield_c( "", "〔 NONAME：無法開啟 🛑 〕", env.prefix .. "j " .. string.upper(op_check) .. "\t 【快捷開啟】")  -- or〔錯誤〕
+        yield_c( "", "〔 NONAME：無法開啟 🛑 〕", op_preedit)  -- or〔錯誤〕
       end
       return
     elseif run_in == nil then
-      yield_c( "", "〔無〕", env.prefix .. "j " .. string.upper(op_check) .. "\t 【快捷開啟】")  -- 〔無此開啟碼〕or〔錯誤〕
+      yield_c( "", "〔無〕", op_preedit)  -- 〔無此開啟碼〕or〔錯誤〕
       -- --- 以下測試光標插入點等位置數值用
       -- local caret_pos = context.caret_pos or 0
       -- local cgp = context:get_preedit().text

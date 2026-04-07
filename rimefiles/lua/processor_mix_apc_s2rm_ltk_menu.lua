@@ -181,9 +181,9 @@ local function processor(key, env)
     -- elseif seg:has_tag("abc") or seg:has_tag("all_bpm") then
     --   return 2
 
-    local op_code_index = #c_input == caret_pos and string.match(c_input, "^" .. env.prefix .. "j$")
-    local op_code_check = not string.match(c_input, env.prefix .. "['/;]") and string.match(c_input, env.prefix .. "j[a-z]+$")
-    local op_code = string.match(c_input, "^" .. env.prefix .. "j([a-z]+)$")
+    local op_code_index = #c_input == caret_pos and string.match(c_input, "^" .. env.prefix .. "[ej]$")
+    local op_code_check = not string.match(c_input, env.prefix .. "['/;]") and string.match(c_input, env.prefix .. "[ej][a-z]+$")
+    local op_code = string.match(c_input, "^" .. env.prefix .. "[ej]([a-z]+)$")
     if  seg:has_tag("mf_translator") and op_code_index then
       -- local set_explain = Set { 0, 1, 2, 5}
       local selected_candidate_index = seg.selected_index or 0

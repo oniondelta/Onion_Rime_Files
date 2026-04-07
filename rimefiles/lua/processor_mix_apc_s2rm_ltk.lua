@@ -180,8 +180,8 @@ local function processor(key, env)
     -- elseif seg:has_tag("abc") or seg:has_tag("all_bpm") then
     --   return 2
 
-    local op_code_check = not string.match(c_input, env.prefix .. "['/;]") and string.match(c_input, env.prefix .. "j[a-z]+$")
-    local op_code = string.match(c_input, "^" .. env.prefix .. "j([a-z]+)$")
+    local op_code_check = not string.match(c_input, env.prefix .. "['/;]") and string.match(c_input, env.prefix .. "[ej][a-z]+$")
+    local op_code = string.match(c_input, "^" .. env.prefix .. "[ej]([a-z]+)$")
     if seg:has_tag("mf_translator") and op_code_check then  -- 開頭
       return run_open(context, c_input, caret_pos, op_code, env.run_pattern, env.textdict, env.custom_phrase, env.oscmd)
       -- return run_open(engine, context, c_input, caret_pos, op_code, env.run_pattern, env.textdict, env.custom_phrase, env.oscmd)

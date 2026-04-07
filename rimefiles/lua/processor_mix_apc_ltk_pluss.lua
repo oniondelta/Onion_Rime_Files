@@ -168,8 +168,8 @@ local function processor(key, env)
       end
     end
 
-    local op_code_check = not string.match(c_input, env.prefix .. "['/;]") and string.match(c_input, env.prefix .. "j[a-z]+$")
-    local op_code = string.match(c_input, "^" .. env.prefix .. "j([a-z]+)$")
+    local op_code_check = not string.match(c_input, env.prefix .. "['/;]") and string.match(c_input, env.prefix .. "[ej][a-z]+$")
+    local op_code = string.match(c_input, "^" .. env.prefix .. "[ej]([a-z]+)$")
     if op_code_check and (key_repr == "space" or key_repr == "Return" or key_repr == "KP_Enter") then
       return run_open(context, c_input, caret_pos, op_code, env.run_pattern, env.textdict, env.custom_phrase, env.oscmd)
       -- return run_open(engine, context, c_input, caret_pos, op_code, env.run_pattern, env.textdict, env.custom_phrase, env.oscmd)

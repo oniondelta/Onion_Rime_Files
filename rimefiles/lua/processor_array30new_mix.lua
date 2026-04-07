@@ -302,9 +302,9 @@ local function processor(key, env)
 開啟檔案程式網址功能
 --]]
 
-  elseif seg:has_tag("mf_translator") and not string.match(c_input, env.prefix .. "['/;]") and string.match(c_input, env.prefix .. "j[a-z]+$") then  -- 開頭
+  elseif seg:has_tag("mf_translator") and not string.match(c_input, env.prefix .. "['/;]") and string.match(c_input, env.prefix .. "[ej][a-z]+$") then  -- 開頭
     if key_repr == "space" or key_repr == "Return" or key_repr == "KP_Enter" then
-      local op_code = string.match(c_input, "^" .. env.prefix .. "j([a-z]+)$")
+      local op_code = string.match(c_input, "^" .. env.prefix .. "[ej]([a-z]+)$")
       return run_open(context, c_input, caret_pos, op_code, env.run_pattern, "", "", env.oscmd)
       -- return run_open(engine, context, c_input, caret_pos, op_code, env.run_pattern, "", "", env.oscmd)
     end
