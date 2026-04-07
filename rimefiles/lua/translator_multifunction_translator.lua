@@ -518,11 +518,12 @@ local function translate(input, seg, env)
 -----------------------------
 -----------------------------
 
-  --- Lua 字符類依賴於本地環境，故'[a-z]'可能與'%l'表示的字符集不同。一般情況下，後者包括'ç'和'ã'，前者沒有。
-  --- 承上，盡量使用後者來表示字母，除非出於特殊考慮，因後者更簡單、方便、高效。
-  --- goto 和 ::Label:: 之後不要接變數，例：local abc = xxx，易產生錯誤！
-  local op_prefix, op_check = string.match(input, env.prefix_s .. "([ej])(%l*)$")
+  -- --- Lua 字符類依賴於本地環境，故'[a-z]'可能與'%l'表示的字符集不同。一般情況下，後者包括'ç'和'ã'，前者沒有。
+  -- --- 承上，盡量使用後者來表示字母，除非出於特殊考慮，因後者更簡單、方便、高效。
+  -- --- goto 和 ::Label:: 之後不要接變數，例：local abc = xxx，易產生錯誤！
+  ---
   -- local op_check = string.match(input, env.prefix_s .. "j(%l*)$")
+  local op_prefix, op_check = string.match(input, env.prefix_s .. "([ej])(%l*)$")
   local op_preedit = op_check and op_check ~= "" and env.prefix .. op_prefix .. " " .. string.upper(op_check) .. "\t 【快捷開啟】" or ""  -- 無 op_check 則為 nil，但 op_check == "" 則為 false 不為 nil。
   ---
   local k_key = string.match(input, env.prefix_s .. "k%l?$")
@@ -542,12 +543,14 @@ local function translate(input, seg, env)
   local utf_input = string.match(input, env.prefix_s .. "([xuco][a-f%d]+)$")
   local urlencode_input = string.match(input, env.prefix_s .. "i([%l%d][a-f%d]*)$")
   ---
+  --- 以下自訂日期開始
   local xy = string.match(input, env.prefix_s .. "(%d+)y$")
   local xm = string.match(input, env.prefix_s .. "(%d+)m$")
   local xd = string.match(input, env.prefix_s .. "(%d+)d$")
   -- local xm = string.match(input, env.prefix_s .. "(%d%d?)m$")
   -- local xd = string.match(input, env.prefix_s .. "(%d%d?)d$")
-  --- 以下先在外部宣告區域變數（初始值為 nil）。因宣告過，下方處理不會建立新的全域變數，拋出後為區域變數。
+  ---
+  -- --- 先在外部宣告區域變數（初始值為 nil）。因宣告過，下方處理不會建立新的全域變數，拋出後為區域變數。
   local y, m, m_suffix, d, d_suffix
   if string.match(input, env.prefix_s .. "%d+y1[3-9]") then
     y, m, m_suffix, d, d_suffix = string.match(input, env.prefix_s .. "(%d+)y(1)(m?)(%d*)(d?)$")  -- 後面可接無限數字，但顯示〈輸入錯誤〉。
@@ -564,14 +567,16 @@ local function translate(input, seg, env)
   end
   -- local y, m, m_suffix = string.match(input, env.prefix_s .. "(%d+)y(%d%d?)(m?)$")
   -- local y, m, d, d_suffix = string.match(input, env.prefix_s .. "(%d+)y(%d%d?)m(%d%d?)(d?)$")
-  --- 下面一行，把上兩行合併成一行，但沒判別「y1[3-9]」等容錯功能，故不採用。
+  -- --- 下面一行，把上兩行合併成一行，但沒判別「y1[3-9]」等容錯功能，故不採用。
   -- local y, m, m_suffix, d, d_suffix = string.match(input, env.prefix_s .. "(%d+)y(%d%d?)(m?)(%d?%d?)(d?)$")
-  --- 下面一行，匹配到時，不知為何？只有開頭「y」不為 nil，其餘變數皆為 nil。
-  --- 下面一行並承上說明：當執行 (match1) and (match2) or (match3) 時，Lua 的邏輯運算子只會保留第一個回傳值來進行布林判斷。
+  -- --- 下面一行，匹配到時，不知為何？只有開頭「y」不為 nil，其餘變數皆為 nil。
+  -- --- 下面一行並承上說明：當執行 (match1) and (match2) or (match3) 時，Lua 的邏輯運算子只會保留第一個回傳值來進行布林判斷。
   -- local y, m, m_suffix, d, d_suffix = string.match(input, env.prefix_s .. "%d+y1[3-9]") and string.match(input, env.prefix_s .. "(%d+)y(1)(m?)(%d*)(d?)$") or string.match(input, env.prefix_s .. "(%d+)y([01]?%d)(m?)(%d*)(d?)$")
+  ---
   local nm, nd, nd_suffix = string.match(input, env.prefix_s .. "(%d%d?)m(%d+)(d?)$")
   -- local nm, nd, nd_suffix = string.match(input, env.prefix_s .. "(%d%d?)m(%d%d?)(d?)$")
   ---
+  --- 以下數字和計算機相關
   local paren_left_q = string.match(input, env.prefix_s .. "([q(][q(]?)$")
   local neg_nf = string.match(input, env.prefix_s .. "[q(]?[q(]?[-r]$")
   local dot = string.match(input, env.prefix_s .. "[q(]?[q(]?%.$")
