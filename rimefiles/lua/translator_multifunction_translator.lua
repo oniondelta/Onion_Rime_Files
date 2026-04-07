@@ -577,8 +577,8 @@ local function translate(input, seg, env)
   ---
   ---
   local num_preedit = string.match(input, env.prefix_s .. "([-rq(.%d]+)$") or ""
-  local num_preedit = string.gsub(num_preedit,  "r", "-")
-  local num_preedit = string.gsub(num_preedit,  "q", "(")
+  local num_preedit = string.gsub(num_preedit, "r", "-")
+  local num_preedit = string.gsub(num_preedit, "q", "(")
   local num_preedit = env.prefix .. " " .. num_preedit .. "\t 【數字】"  -- 數字格式開始
 
 -----------------------------
@@ -3249,8 +3249,8 @@ local function translate(input, seg, env)
   end
 
   -- local num_preedit = string.match(input, env.prefix_s .. "([-rq(.%d]+)$") or ""
-  -- local num_preedit = string.gsub(num_preedit,  "r", "-")
-  -- local num_preedit = string.gsub(num_preedit,  "q", "(")
+  -- local num_preedit = string.gsub(num_preedit, "r", "-")
+  -- local num_preedit = string.gsub(num_preedit, "q", "(")
   -- local num_preedit = env.prefix .. " " .. num_preedit .. "\t 【數字】"  -- 數字格式開始
 
   ::neg_nf_label::
