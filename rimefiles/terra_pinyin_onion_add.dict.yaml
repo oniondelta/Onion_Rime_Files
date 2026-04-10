@@ -18,7 +18,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion_add
-version: "202602"
+version: "202604"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7
@@ -189,8 +189,6 @@ min_phrase_weight: 100
 喔	(wu5)	0%
 擬	(ni2)	50%
 拟	(ni2)	50%
-氬	(ya3)
-氩	(ya3)
 鍥	(qi4)	0.1%
 锲	(qi4)	0.1%
 鏤	(lv3)	0.1%
@@ -230,6 +228,8 @@ min_phrase_weight: 100
 噌	(zeng1)
 円	(dan1)	50%
 纖	(qian1)
+纤	(qian1)
+繊	(qian1)
 珈	(ka1)	1%
 媧	(wo1)
 娲	(wo1)
@@ -297,6 +297,8 @@ min_phrase_weight: 100
 龌	(wo1)
 屑	(xue4)
 涕	(ti2)	0%
+憎	(zeng4)
+艔	(du4)
 ### @補充為《一聲》，通俗慣用或方便輸入，『非正確發音』！！！ ###
 腓	(fei1)	1%
 琲	(fei1)	1%

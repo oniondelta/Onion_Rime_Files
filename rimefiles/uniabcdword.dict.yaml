@@ -4,7 +4,7 @@
 # 201707把前面有「,」的打井字號！
 ---
 name: uniabcdword
-version: "202512"
+version: "202604"
 sort: original
 use_preset_vocabulary: false
 #max_phrase_length: 7
@@ -227,6 +227,10 @@ use_preset_vocabulary: false
 𬌗	xao
 𬌗	yao
 鿌	wlds
+𨱃	agn
+𫗉	rcfq
+𫗊	rcld
+𫗋	rckh
 # 含「於」字邊。
 𡌧	yubb
 𡌧	yfvb
