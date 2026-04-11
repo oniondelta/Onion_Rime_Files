@@ -58,6 +58,15 @@ menu:
   alternative_select_labels: [ 𝟷.𝚀𝚈, 𝟸.𝙰𝙷, 𝟹.𝚉𝙽, 𝟺.𝚆𝚄, 𝟻.𝚂𝙹, 𝟼.𝚇𝙼, 𝟽.𝙴𝙸, 𝟾.𝙳𝙺 ]
   # alternative_select_labels: [ ⒈𝚀𝚈, ⒉𝙰𝙷, ⒊𝚉𝙽, ⒋𝚆𝚄, ⒌𝚂𝙹, ⒍𝚇𝙼, ⒎𝙴𝙸, ⒏𝙳𝙺 ]
   # alternative_select_labels: [ "⌃𝟷 𝚀 𝚈", "⌃𝟸 𝙰 𝙷", "⌃𝟹 𝚉 𝙽", "⌃𝟺 𝚆 𝚄", "⌃𝟻 𝚂 𝙹", "⌃𝟼 𝚇 𝙼", "⌃𝟽 𝙴 𝙸", "⌃𝟾 𝙳 𝙺" ]
+  ## （原始順序-測試）
+  # alternative_select_labels: [ 𝟷.𝚀.𝚈, 𝟸.𝙰.𝙷, 𝟹.𝚉.𝙽, 𝟺.𝚆.𝚄, 𝟻.𝚂.𝙹, 𝟼.𝚇.𝙼, 𝟽.𝙴.𝙸, 𝟾.𝙳.𝙺 ]
+  # alternative_select_labels: [ 𝟷․𝚀𝚈, 𝟸․𝙰𝙷, 𝟹․𝚉𝙽, 𝟺․𝚆𝚄, 𝟻․𝚂𝙹, 𝟼․𝚇𝙼, 𝟽․𝙴𝙸, 𝟾․𝙳𝙺 ]
+  # alternative_select_labels: [ 𝟷·𝚀𝚈, 𝟸·𝙰𝙷, 𝟹·𝚉𝙽, 𝟺·𝚆𝚄, 𝟻·𝚂𝙹, 𝟼·𝚇𝙼, 𝟽·𝙴𝙸, 𝟾·𝙳𝙺 ]
+  # alternative_select_labels: [ 𝟷-𝚀𝚈, 𝟸-𝙰𝙷, 𝟹-𝚉𝙽, 𝟺-𝚆𝚄, 𝟻-𝚂𝙹, 𝟼-𝚇𝙼, 𝟽-𝙴𝙸, 𝟾-𝙳𝙺 ]
+  # alternative_select_labels: [ "𝟷 𝚀𝚈", "𝟸 𝙰𝙷", "𝟹 𝚉𝙽", "𝟺 𝚆𝚄", "𝟻 𝚂𝙹", "𝟼 𝚇𝙼", "𝟽 𝙴𝙸", "𝟾 𝙳𝙺" ]
+  # alternative_select_labels: [ "𝟷[𝚀𝚈]", "𝟸[𝙰𝙷]", "𝟹[𝚉𝙽]", "𝟺[𝚆𝚄]", "𝟻[𝚂𝙹]", "𝟼[𝚇𝙼]", "𝟽[𝙴𝙸]", "𝟾[𝙳𝙺]" ]
+  # alternative_select_labels: [ "[𝟷]𝚀𝚈", "[𝟸]𝙰𝙷", "[𝟹]𝚉𝙽", "[𝟺]𝚆𝚄", "[𝟻]𝚂𝙹", "[𝟼]𝚇𝙼", "[𝟽]𝙴𝙸", "[𝟾]𝙳𝙺" ]
+  # alternative_select_labels: [ ➀𝚀𝚈, ➁𝙰𝙷, ➂𝚉𝙽, ➃𝚆𝚄, ➄𝚂𝙹, ➅𝚇𝙼, ➆𝙴𝙸, ➇𝙳𝙺 ]
 ### 選單每頁顯示個數
   page_size: 8
 
