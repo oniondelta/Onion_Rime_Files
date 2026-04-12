@@ -104,8 +104,8 @@ menu:
   ## （原始順序）
   # alternative_select_labels: [ 𝚀𝚈, 𝙰𝙷, 𝚉𝙽, 𝚆𝚄, 𝚂𝙹, 𝚇𝙼, 𝙴𝙸, 𝙳𝙺 ]
   # alternative_select_labels: [ 𝟷𝚀𝚈, 𝟸𝙰𝙷, 𝟹𝚉𝙽, 𝟺𝚆𝚄, 𝟻𝚂𝙹, 𝟼𝚇𝙼, 𝟽𝙴𝙸, 𝟾𝙳𝙺 ]
-  alternative_select_labels: [ 𝟷.𝚀𝚈, 𝟸.𝙰𝙷, 𝟹.𝚉𝙽, 𝟺.𝚆𝚄, 𝟻.𝚂𝙹, 𝟼.𝚇𝙼, 𝟽.𝙴𝙸, 𝟾.𝙳𝙺 ]
-  # alternative_select_labels: [ ⒈𝚀𝚈, ⒉𝙰𝙷, ⒊𝚉𝙽, ⒋𝚆𝚄, ⒌𝚂𝙹, ⒍𝚇𝙼, ⒎𝙴𝙸, ⒏𝙳𝙺 ]
+  # alternative_select_labels: [ 𝟷.𝚀𝚈, 𝟸.𝙰𝙷, 𝟹.𝚉𝙽, 𝟺.𝚆𝚄, 𝟻.𝚂𝙹, 𝟼.𝚇𝙼, 𝟽.𝙴𝙸, 𝟾.𝙳𝙺 ]
+  alternative_select_labels: [ ⒈𝚀𝚈, ⒉𝙰𝙷, ⒊𝚉𝙽, ⒋𝚆𝚄, ⒌𝚂𝙹, ⒍𝚇𝙼, ⒎𝙴𝙸, ⒏𝙳𝙺 ]
 ## menu_8x1
   # alternative_select_labels: [ 𝚀, 𝚆, 𝙴, 𝚁, 𝚃, 𝚈, 𝚄, 𝙸 ]
   # alternative_select_labels: [ 𝟷𝚀, 𝟸𝚆, 𝟹𝙴, 𝟺𝚁, 𝟻𝚃, 𝟼𝚈, 𝟽𝚄, 𝟾𝙸 ]
