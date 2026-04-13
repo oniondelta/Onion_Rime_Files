@@ -1473,8 +1473,8 @@ preedit_p_3:
     #防不換行時，第一個注音不顯示？# - 'xform/　([ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦ])/⁞$1/'
 
 
-preedit_pa_1_2_4:
-### Paragraph Alignment 樣式 ###
+preedit_pa_mac_1_2_4:
+### Paragraph Alignment（Mac）樣式 ###
     - xform|,|a@|
     - xform|[.]|b@|
     - xform|/|c@|
@@ -1541,8 +1541,8 @@ preedit_pa_1_2_4:
     - 'xform/\\/⁞/' #全形空格　 #半形空格  #| #⁞ #⁝ #⋮ #¦ #┆
 
 
-preedit_pa_3:
-### Paragraph Alignment 樣式 ###
+preedit_pa_mac_3:
+### Paragraph Alignment（Mac）樣式 ###
     - xform|,|a@|
     - xform|[.]|b@|
     - xform|/|c@|
@@ -1614,6 +1614,151 @@ preedit_pa_3:
     # - xform|c|  ⁄  | #略窄# #「1/6」+「?」+「?」+「1/4」=「5/12」+「2?」em
     # - xform|c|  ⁄  | #略寬# #「?」+「1/4」+「1/4」+「?」=「1/2」+「2?」em
     - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abdefghij|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ１２³⁴５⁶⁷８９０，．－；⸋˺˹⁼'|"
+    - 'xform/\\/⁞/' #全形空格　 #半形空格  #| #⁞ #⁝ #⋮ #¦ #┆
+    #防不換行時，第一個注音不顯示？# - 'xform/　([ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦ])/⁞$1/'
+
+
+preedit_pa_win_1_2_4:
+### Paragraph Alignment（Win）樣式 ###
+    - xform|,|a@|
+    - xform|[.]|b@|
+    - xform|/|c@|
+    - xform|-|d@|
+    - xform|;|e@|
+    - xform| |f@|
+    - xform/1/g@/
+    - xform/2/h@/
+    - xform/3/i@/
+    - xform/4/j@/
+    - xform/5/k@/
+    - xform/6/l@/
+    - xform/7/m@/
+    - xform/8/n@/
+    - xform/9/p@/
+    - xform/0/q@/
+    - xform/^([a-z@\\]+)$/\U$1\E　\n$1/
+    - xform/a@/ㄝ/
+    - xform/b@/ㄡ/
+    - xform/c@/ㄥ/
+    - xform/d@/ㄦ/
+    - xform/e@/ㄤ/
+    - xform/f@/ˉ/
+    - xform/g@/ㄅ/
+    - xform/h@/ㄉ/
+    - xform/i@/ˇ/
+    - xform/j@/ˋ/
+    - xform/k@/ㄓ/
+    - xform/l@/ˊ/
+    - xform/m@/˙ / #  # 
+    - xform/n@/ㄚ/
+    - xform/p@/ㄞ/
+    - xform/q@/ㄢ/
+    - "xlit|qazwsxedcrfvtgbyhnujmikolp|ㄆㄇㄈㄊㄋㄌㄍㄎㄏㄐㄑㄒㄔㄕㄖㄗㄘㄙㄧㄨㄩㄛㄜㄟㄠㄣ|"
+    - xform|A@|a|
+    - xform|B@|b|
+    - xform|C@|c|
+    - xform|D@|d|
+    - xform|E@|e|
+    - xform|F@|f| #ˉ拉
+    - xform/G@/1/
+    - xform/H@/2/
+    - xform/I@/3/ #3ˇ
+    - xform/J@/4/ #4ˋ
+    - xform/K@/5/
+    - xform/L@/6/ #6ˊ日
+    - xform/M@/7/ #7˙韓
+    - xform/N@/8/
+    - xform/P@/9/
+    - xform/Q@/0/
+    - xform/([0-9A-Zabcdef])\\/$1⁞/ #只限定英文分節 #　 ⁝⁞︙𝄄𖡡׀᰻|𝄀¦┆‖
+    ## 以上英文數字符號不先轉成最終顯示，方便下面作轉換。
+    ## 以下為一般斜線
+    # - xform|c| /  | #等略略窄#
+    ## 以下為分數斜號
+    - xform|c| ⁄ | #等略寬#  #「1/3」+[?]+「1/2」
+    ## 以下聲調補空對齊
+    - xform|3|³ | #略寬# # 
+    - xform|4|⁴ | #略寬#
+    - xform|6|⁶ | #等略窄#
+    - xform|7|⁷ | #略寬# #  # 
+    - xform|f| ⸋ | #等略略寬#
+    - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ125890abde|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ１２５８９０，．－；|"
+    - 'xform/\\/⁞/' #全形空格　 #半形空格  #| #⁞ #⁝ #⋮ #¦ #┆
+
+
+preedit_pa_win_3:
+### Paragraph Alignment（Win）樣式 ###
+    - xform|,|a@|
+    - xform|[.]|b@|
+    - xform|/|c@|
+    - xform|-|d@|
+    - xform|;|e@|
+    - xform| |f@|
+    - xform/1/g@/
+    - xform/2/h@/
+    - xform/3/i@/
+    - xform/4/j@/
+    - xform/5/k@/
+    - xform/6/l@/
+    - xform/7/m@/
+    - xform/8/n@/
+    - xform/9/p@/
+    - xform/0/q@/
+    - xform|[]]|`````|
+    - xform|[[]|````|
+    - xform|=|```|
+    - xform|'|``|
+    - xform/^([a-z@`\\]+)$/\U$1\E　\n$1/
+    - xform/a@/ㄝ/
+    - xform/b@/ㄡ/
+    - xform/c@/ㄥ/
+    - xform/d@/ㄦ/
+    - xform/e@/ㄤ/
+    - xform/f@/ˉ/
+    - xform/g@/ㄅ/
+    - xform/h@/ㄉ/
+    - xform/i@/ˇ/
+    - xform/j@/ˋ/
+    - xform/k@/ㄓ/
+    - xform/l@/ˊ/
+    - xform/m@/˙ / #  # 
+    - xform/n@/ㄚ/
+    - xform/p@/ㄞ/
+    - xform/q@/ㄢ/
+    - "xlit|qazwsxedcrfvtgbyhnujmikolp|ㄆㄇㄈㄊㄋㄌㄍㄎㄏㄐㄑㄒㄔㄕㄖㄗㄘㄙㄧㄨㄩㄛㄜㄟㄠㄣ|"
+    - xform|A@|a|
+    - xform|B@|b|
+    - xform|C@|c|
+    - xform|D@|d|
+    - xform|E@|e|
+    - xform|F@|f|
+    - xform/G@/1/
+    - xform/H@/2/
+    - xform/I@/3/ #3ˇ
+    - xform/J@/4/ #4ˋ
+    - xform/K@/5/
+    - xform/L@/6/ #6ˊ
+    - xform/M@/7/ #7˙
+    - xform/N@/8/
+    - xform/P@/9/
+    - xform/Q@/0/
+    - xform|`````|g| #]韓
+    - xform|````|h| #[日
+    - xform|```|i| #=
+    - xform|``|j| #'拉
+    - xform/([0-9A-Zabcdefghij])\\/$1⁞/ #只限定英文分節 #　 ⁝⁞︙𝄄𖡡׀᰻|𝄀¦┆‖
+    ## 以上英文數字符號不先轉成最終顯示，方便下面作轉換。
+    ## 以下為一般斜線
+    # - xform|c| /  | #等略略窄#
+    ## 以下為分數斜號
+    - xform|c| ⁄ | #等略寬#  #「1/3」+[?]+「1/2」
+    ## 以下聲調補空對齊
+    - xform|3|³ | #略寬# # 
+    - xform|4|⁴ | #略寬#
+    - xform|6|⁶ | #等略窄#
+    - xform|7|⁷ | #略寬# #  # 
+    - xform|f| ⸋ | #等略略寬#
+    - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ125890abdeghij|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ１２５８９０，．－；˺˹⁼'|"
     - 'xform/\\/⁞/' #全形空格　 #半形空格  #| #⁞ #⁝ #⋮ #¦ #┆
     #防不換行時，第一個注音不顯示？# - 'xform/　([ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦ])/⁞$1/'
 
