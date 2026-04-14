@@ -1095,8 +1095,12 @@ preedit_b_3:
     - xform|```|i| #'拉
     # - xform|``|j| #=
     # - xform/([0-9A-Za-j])\\/$1 /
-    - xform/([0-9A-Za-i])\\/$1 /
+    # - xform/([0-9A-Za-i])\\/$1 /
+    - xform/([0-9A-Za-f][ghi]?)\\/$1 / #j #上排分節
     ## 以上英文數字符號不先轉成最終顯示，方便下面作轉換。
+    ## 以下補空使看起來較明顯
+    # - xform|([ghi])( )| $1$2| #j
+    - xform|([ghi])([^ ])| $1 $2| #j
     # - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghij1234567890|ᴀʙcᴅᴇꜰɢʜɪᴊᴋʟᴍɴoᴘǫʀsᴛᴜᴠᴡxʏz,.⸝-;⸋˺˹⁼'₁₂³⁴₅⁶⁷₈₉₀|"
     - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghi1234567890|ᴀʙcᴅᴇꜰɢʜɪᴊᴋʟᴍɴoᴘǫʀsᴛᴜᴠᴡxʏz,.⸝-;⸋˺˹'₁₂³⁴₅⁶⁷₈₉₀|" #⁼
     - 'xform/\\/⁞/'
@@ -1221,8 +1225,12 @@ preedit_s_3:
     - xform|```|i| #'拉
     # - xform|``|j| #=
     # - xform/([0-9A-Za-j])\\/$1 /
-    - xform/([0-9A-Za-i])\\/$1 /
+    # - xform/([0-9A-Za-i])\\/$1 /
+    - xform/([0-9A-Za-f][ghi]?)\\/$1 / #j #上排分節
     ## 以上英文數字符號不先轉成最終顯示，方便下面作轉換。
+    ## 以下補空使看起來較明顯
+    # - xform|([ghi])( )| $1$2| #j
+    - xform|([ghi])([^ ])| $1 $2| #j
     # - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghij1234567890|ᴀʙcᴅᴇꜰɢʜɪᴊᴋʟᴍɴoᴘǫʀsᴛᴜᴠᴡxʏz,.⸝-;⸋˺˹⁼'₁₂³⁴₅⁶⁷₈₉₀|"
     - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghi1234567890|ᴀʙcᴅᴇꜰɢʜɪᴊᴋʟᴍɴoᴘǫʀsᴛᴜᴠᴡxʏz,.⸝-;⸋˺˹'₁₂³⁴₅⁶⁷₈₉₀|" #⁼
     - 'xform/\\/⁞/'
@@ -1347,6 +1355,8 @@ preedit_i_3:
     - xform|```|i| #'拉
     # - xform|``|j| #=
     ## 以上英文數字符號不先轉成最終顯示，方便下面作轉換。
+    ## 以下補空使看起來較明顯
+    - xform|([ghi])| $1 | #j
     # - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890)(abcdefghij|ᴀʙcᴅᴇꜰɢʜɪᴊᴋʟᴍɴoᴘǫʀsᴛᴜᴠᴡxʏz₁₂³⁴₅⁶⁷₈₉₀›‹,.⸝-;⸋˺˹⁼'|"
     - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890)(abcdefghi|ᴀʙcᴅᴇꜰɢʜɪᴊᴋʟᴍɴoᴘǫʀsᴛᴜᴠᴡxʏz₁₂³⁴₅⁶⁷₈₉₀›‹,.⸝-;⸋˺˹'|" #⁼
     - 'xform/\\//'
@@ -1472,8 +1482,14 @@ preedit_p_3:
     - xform|```|i| #'拉
     # - xform|``|j| #=
     # - xform/([0-9A-Za-j])\\/$1　/
-    - xform/([0-9A-Za-i])\\/$1　/
+    # - xform/([0-9A-Za-i])\\/$1　/
+    - xform/([0-9A-Za-f][ghi]?)\\/$1　/ #j #上排分節
     ## 以上英文數字符號不先轉成最終顯示，方便下面作轉換。
+    ## 以下補空使看起來較明顯
+    - xform|([ghi])| $1 | #j
+    - xform| ([　])|$1| #j
+    # - xform|([ghi][　]?)| $1| #j
+    # - xform|([ghi])([^　])|$1 $2| #j
     # - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcdefghij|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ₁₂³⁴₅⁶⁷₈₉₀,.⸝-;⸋˺˹⁼'|"
     - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcdefghi|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ₁₂³⁴₅⁶⁷₈₉₀,.⸝-;⸋˺˹'|" #⁼
     - 'xform/\\/⁞/'
@@ -1532,7 +1548,7 @@ preedit_pa_mac_1_2_4:
     - xform/N@/8/
     - xform/P@/9/
     - xform/Q@/0/
-    - xform/([0-9A-Za-f])\\/$1⁞/ #只限定英文分節 #　 ⁝⁞︙𝄄𖡡׀᰻|𝄀¦┆‖
+    - xform/([0-9A-Za-f])\\/$1⁝/ #只限定英文分節 #　 ⁝⁞︙𝄄𖡡׀᰻|𝄀¦┆‖
     ## 以上英文數字符號不先轉成最終顯示，方便下面作轉換。
     ## 以下為一般斜線
     # - xform|c| /  | #等略寬# #「\u2008」 是標點符號的寬度
@@ -1608,8 +1624,9 @@ preedit_pa_mac_3:
     - xform|````|h| #[日
     - xform|```|i| #'拉
     # - xform|``|j| #=
-    # - xform/([0-9A-Za-j])\\/$1⁞/ #只限定英文分節 #　 ⁝⁞︙𝄄𖡡׀᰻|𝄀¦┆‖
-    - xform/([0-9A-Za-i])\\/$1⁞/ #只限定英文分節 #　 ⁝⁞︙𝄄𖡡׀᰻|𝄀¦┆‖
+    # - xform/([0-9A-Za-j])\\/$1⁝/ #只限定英文分節 #　 ⁝⁞︙𝄄𖡡׀᰻|𝄀¦┆‖
+    # - xform/([0-9A-Za-i])\\/$1⁝/ #只限定英文分節 #　 ⁝⁞︙𝄄𖡡׀᰻|𝄀¦┆‖
+    - xform/([0-9A-Za-f][ghi]?)\\/$1⁝/ #j #上排分節
     ## 以上英文數字符號不先轉成最終顯示，方便下面作轉換。
     ## 以下為一般斜線
     # - xform|c| /  | #等略寬# #「\u2008」 是標點符號的寬度
@@ -1621,6 +1638,8 @@ preedit_pa_mac_3:
     # - xform|c|  ⁄ | #略窄# #「1/4」+「1/6」+「1/2」=「11/12」em
     # - xform|c|  ⁄  | #略窄# #「1/6」+「?」+「?」+「1/4」=「5/12」+「2?」em
     # - xform|c|  ⁄  | #略寬# #「?」+「1/4」+「1/4」+「?」=「1/2」+「2?」em
+    ## 以下補空使看起來較明顯
+    - xform|([ghi])| $1 | #j
     # - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abdefghij|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ１２³⁴５⁶⁷８９０，．－；⸋˺˹⁼'|"
     - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abdefghi|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ１２³⁴５⁶⁷８９０，．－；⸋˺˹'|" #⁼
     - 'xform/\\/⁞/' #全形空格　 #半形空格  #| #⁞ #⁝ #⋮ #¦ #┆
@@ -1756,7 +1775,8 @@ preedit_pa_win_3:
     - xform|```|i| #'拉
     # - xform|``|j| #=
     # - xform/([0-9A-Za-j])\\/$1⁞/ #只限定英文分節 #　 ⁝⁞︙𝄄𖡡׀᰻|𝄀¦┆‖
-    - xform/([0-9A-Za-i])\\/$1⁞/ #只限定英文分節 #　 ⁝⁞︙𝄄𖡡׀᰻|𝄀¦┆‖
+    # - xform/([0-9A-Za-i])\\/$1⁞/ #只限定英文分節 #　 ⁝⁞︙𝄄𖡡׀᰻|𝄀¦┆‖
+    - xform/([0-9A-Za-f][ghi]?)\\/$1⁞/ #j #上排分節
     ## 以上英文數字符號不先轉成最終顯示，方便下面作轉換。
     ## 以下為一般斜線
     # - xform|c| /  | #等略略窄#
@@ -1768,6 +1788,8 @@ preedit_pa_win_3:
     - xform|6|⁶ | #等略窄#
     - xform|7|⁷ | #略寬# #  # 
     - xform|f| ⸋ | #等略略寬#
+    ## 以下補空使看起來較明顯
+    - xform|([ghi])| $1 | #j
     # - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ125890abdeghij|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ１２５８９０，．－；˺˹⁼'|"
     - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ125890abdeghi|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ１２５８９０，．－；˺˹'|" #⁼
     - 'xform/\\/⁞/' #全形空格　 #半形空格  #| #⁞ #⁝ #⋮ #¦ #┆
