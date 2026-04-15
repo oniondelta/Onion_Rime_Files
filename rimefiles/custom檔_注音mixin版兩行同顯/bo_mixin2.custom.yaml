@@ -1,12 +1,12 @@
 # .custom.yaml
 patch:
-  # ###### 以下 Mac 適用，Win 可不用。
+  # #### 以下 Mac 適用，Win 可不用。
   # engine/filters/@before 6: lua_filter@preedit_linebreak_filter
-  # ###### 以下勿用，應放在「convert_english_filter」「convert_japan_filter」之後，否則有情況會無法換行。
+  # #### 以下勿用，應放在「convert_english_filter」「convert_japan_filter」之後，否則有情況會無法換行。
   # # engine/filters/@before 0: lua_filter@preedit_linebreak_filter
   # ##
   # # engine/filters/@before 2: lua_filter@preedit_linebreak_filter
-  # ###### 以下勿用，應放在「opencc」濾鏡（如：簡體字轉換）之前，否則有情況會無法換行。
+  # #### 以下勿用，應放在「opencc」濾鏡（如：簡體字轉換）之前，否則有情況會無法換行。
   # # engine/filters/+:
   # #   - lua_filter@preedit_linebreak_filter
   # ##
@@ -17,11 +17,13 @@ patch:
   # # engine/filters/@12: lua_filter@comment_filter_unicode
   # # engine/filters/@13: uniquifier
   # # engine/filters/@before 13: lua_filter@preedit_linebreak_filter
-  # ######
+  # ####
   translator/preedit_format:
+    #### 以下分段
     # __include: element_bopomo:/preedit_pa_mac_1_2_4
     # __include: element_bopomo:/preedit_pa_win_1_2_4
     __include: element_bopomo:/preedit_p_1_2_4
+    #### 以下單行
     # __include: element_bopomo:/preedit_b_1_2_4
     # __include: element_bopomo:/preedit_s_1_2_4
     # __include: element_bopomo:/preedit_i_1_2_4
