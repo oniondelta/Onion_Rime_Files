@@ -3,37 +3,37 @@
 # 用法：想要哪項生效，就刪去該行行首「#」字符，注意保留用於縮進的空格
 
 patch:
-  style/color_scheme: mac_lamb                             # 主題樣式    #lost_temple_border #apathy #psionics #mac_white #mac_white2
-  style/color_scheme_dark: mac_dark                        # 同上，暗主題下
+  style/color_scheme: mac_lamb #mac_dark                   # 主題樣式    #lost_temple_border #apathy #psionics #mac_white #mac_white2
+  style/color_scheme_dark: mac_lamb #mac_dark              # 同上，暗主題下
 
-  style/horizontal: false                              # 候選橫排 （新版已經無效，改以 candidate_list_layout 設定）
-  style/candidate_list_layout: stacked                 # 候選框樣式 （linear者爲線型，各候選首尾相連成一串，stacked者各候選皆另起一行，呈堆疊狀。）（默認stacked）
-  style/text_orientation: horizontal                   # 候選框文字方向 （horizontal者橫排自左至右，vertical者豎排自右至左。）（默認horizontal）
-  style/inline_preedit: false                          # 內嵌輸入碼
-  style/inline_candidate: false                        # 選中詞顯示位置
+  style/horizontal: false                                  # 候選橫排 （新版已經無效，改以 candidate_list_layout 設定）
+  style/candidate_list_layout: stacked                     # 候選框樣式 （linear者爲線型，各候選首尾相連成一串，stacked者各候選皆另起一行，呈堆疊狀。）（默認stacked）
+  style/text_orientation: horizontal                       # 候選框文字方向 （horizontal者橫排自左至右，vertical者豎排自右至左。）（默認horizontal）
+  style/inline_preedit: false                              # 內嵌輸入碼
+  style/inline_candidate: false                            # 選中詞顯示位置
 
-  style/font_face: "NotoSerif-Regular, NotoSansCJKtc-Light, AppleColorEmoji, HanaMinA,HanaMinB" #前面一系列為輸入英文和注音可對齊字型。    "TimesNewRomanPSMT, PingFangTC-Light, AppleColorEmoji" #,HanaMinA, HanaMinB
-  style/font_point: 20                                 # 備選字和輸入碼字體大小
-  style/comment_font_face: "PingFangTC-Light"          # 提示碼字體
-  style/comment_font_point: 17                         # 提示碼字體大小
-  style/label_font_face: "Andale Mono"                 # 前標號字體    #"Cambria Math"
-  style/label_font_point: 14                           # 前標號字體大小
+  style/font_face: "NotoSerif-Regular, NotoSansCJKtc-Light, AppleColorEmoji, HanaMinA,HanaMinB" #前面一系列為輸入英文和注音可對齊字型。    #"TimesNewRomanPSMT, PingFangTC-Light, AppleColorEmoji" #,HanaMinA, HanaMinB
+  style/font_point: 20                                     # 備選字和輸入碼字體大小
+  style/comment_font_face: "NotoSansCJKtc-Light"           # 提示碼字體    #"PingFangTC-Light"
+  style/comment_font_point: 17                             # 提示碼字體大小
+  style/label_font_face: "Cambria Math"                    # 前標號字體    #"Andale Mono"
+  style/label_font_point: 14                               # 前標號字體大小
 
-  style/candidate_format: "%c. %@"                     # 選字欄格式 （%c爲序號，%@爲詞）
-  # style/base_offset: 2                                 # 文字垂直方向位置調整 （正數向上（右），負數向下（左））
+  style/candidate_format: "%c. %@"                         # 選字欄格式 （%c爲序號，%@爲詞）
+  # style/base_offset: 2                                     # 文字垂直方向位置調整 （正數向上（右），負數向下（左））
 
-  style/corner_radius: 4                               # 整個窗口圓角
-  # style/border_height: 0                               # 窗口邊界高度 （大於圓角半徑才有效果）
-  # style/border_width: 0                                # 窗口邊界寬度 （大於圓角半徑才有效果）
-  # style/hilited_corner_radius: 5                       # 候選條圓角
-  # style/surrounding_extra_expansion: 5                 # 非高亮候選項背景框大小縮放
-  style/line_spacing: 1                                # 候選字間隙大小
-  style/spacing: 3                                     # 鍵入碼區與候選項區間距
-  # memorize_size: false                                 # 選定線型候選框樣式時，當候選框末端接觸屏幕邊時，是否記住候選框長度，以選免首選項位置快速變
+  style/corner_radius: 4                                   # 整個窗口圓角
+  # style/border_height: 0                                   # 窗口邊界高度 （大於圓角半徑才有效果）
+  # style/border_width: 0                                    # 窗口邊界寬度 （大於圓角半徑才有效果）
+  # style/hilited_corner_radius: 5                           # 候選條圓角
+  # style/surrounding_extra_expansion: 5                     # 非高亮候選項背景框大小縮放
+  style/line_spacing: 1                                    # 候選字間隙大小
+  style/spacing: 3                                         # 鍵入碼區與候選項區間距
+  # memorize_size: false                                     # 選定線型候選框樣式時，當候選框末端接觸屏幕邊時，是否記住候選框長度，以選免首選項位置快速變
 
-  # style/alpha: 0.8                                   # 候選框整體透明度 （0-1範圍）（默認1）
+  # style/alpha: 0.8                                         # 候選框整體透明度 （0-1範圍。默認1）
   # style/mutual_exclusive: true                             # 候選區各背景色是否各自獨立，帶透明度的情況下互不浸染
-  # style/translucency: true                           # 毛玻璃背景 （當背景色呈半透明時可見）（默認false）
+  # style/translucency: true                                 # 毛玻璃背景 （當背景色呈半透明時可見，true/false，默認false）
 
 ###################################################
   preset_color_schemes/lost_temple_border:
