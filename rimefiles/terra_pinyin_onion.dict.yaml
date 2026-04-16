@@ -186,6 +186,8 @@
 #    詞句中，「菌」臺灣標準為「jun4」，大陸標準為「jun1」，日常易混，故皆補齊「jun4」「jun1」。
 #    詞句中，「藩」臺灣標準為「fan2」，大陸標準為「fan1」，日常易混，故皆補齊「fan2」「fan1」。
 #    詞句中，「拎」臺灣標準為「ling1」，大陸標準為「lin1」，日常易混，故皆補齊「ling1」「lin1」。
+#    詞句中，「醝」臺灣標準為「cuo2」，大陸標準為「cuo1」，日常易混，故皆補齊「cuo2」「cuo1」。
+#    詞句中，「榼」臺灣標準為「ke4」，大陸標準為「ke1」，日常易混，故皆補齊「ke4」「ke1」。
 #    詞句中，「樸」臺灣標準為「pu2」，大陸標準為「pu3」，日常易混，故皆補齊「pu2」「pu3」。
 #    詞句中，「惋」臺灣標準為「wan4」，大陸標準為「wan3」，日常易混，故皆補齊「wan4」「wan3」。
 #    詞句中，「頊」臺灣標準為「xu4」，大陸標準為「xu1」，日常易混，故全都補齊「xu4」「xu1」。
@@ -3757,6 +3759,21 @@ min_phrase_weight: 100
 档	dang3
 檡	zhe2	0%
 檡	zhe4	0%
+缴	zhuo2	1%
+繳	jiao4	0%
+缴	jiao4	0%
+繳	he2	0%
+缴	he2	0%
+膕	huo4	0%
+腘	huo4	0%
+榍	xie1	0%
+繹	shi4	0%
+绎	shi4	0%
+榼	ke1
+醝	cuo1
+醝	cuo3	0%
+嵯	ci1	0%
+嵳	ci1	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -100465,8 +100482,10 @@ min_phrase_weight: 100
 繩結	sheng2 jie1
 繩鋸木斷	sheng2 ju4 mu4 duan4
 繫上	ji4 shang4
+繫上	xi4 shang4
 繫世	xi4 shi4
 繫住	xi4 zhu4
+繫住	ji4 zhu4
 繫命	xi4 ming4
 繫囚	xi4 qiu2
 繫囚	ji4 qiu2
@@ -100476,20 +100495,27 @@ min_phrase_weight: 100
 繫戀	xi4 lian4
 繫泊	ji4 bo2
 繫泊	ji4 po4
+繫泊	xi4 bo2
+繫泊	xi4 po4
 繫爪	xi4 zhao3
 繫獄	xi4 yu4
 繫縛	xi4 fu2
 繫縛	xi4 fu4
+繫縛	ji4 fu2
+繫縛	ji4 fu4
 繫而不食	xi4 er2 bu4 shi2
 繫腰	xi4 yao1
+繫腰	ji4 yao1
 繫臂之寵	xi4 bi4 zhi1 chong3
 繫臂之寵	xi4 bei4 zhi1 chong3
 繫船樁	xi4 chuan2 zhuang1
+繫船樁	ji4 chuan2 zhuang1
 繫裹	xi4 guo3
 繫趾	xi4 zhi3
 繫辭	xi4 ci2
 繫鈴解鈴	xi4 ling2 jie3 ling2
 繫頸	xi4 jing3
+繫頸	ji4 jing3
 繫風捕影	xi4 feng1 bu3 ying3
 繫風捕景	xi4 feng1 bu3 ying3
 繭子	jian3 zi5
@@ -118420,4 +118446,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 118423 #####
+##### @結束 END - 118449 #####
