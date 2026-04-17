@@ -40,6 +40,7 @@
 #              「脣(唇)」←《 前者為標準字，但後者太常用，把“脣”和“唇”詞彙互相增補 》（“唇”改設權重比高）
 #              「晒(曬)」←《 前者為標準字，但後者太常用，把“晒”和“曬”詞彙互相增補 》（“曬”設權重比高）
 #              「汙(污)」←《 前者為標準字，但後者太常用，把“汙”和“污”發音為「wu1」和「wu4」詞彙互相增補 》（“污”設權重比高）
+#              「溼(濕)」←《 發音「shi1」時，前者為標準字，但後者太常用，把「shi1」發音“溼”和“濕”詞彙互相增補 》
 #              「唸(念)」「棱(稜)」「泄(洩)」←《 字典中存有兩者之詞彙，待攷 》（前者補齊後者用字，後者設權重比高）
 #              「覈(核)*」「皁(皂)*」←《 部分修改，兩者都字典都存有，待攷 》（前者補齊後者用字，後者設權重比高）
 #              「閑(閒)」←《 前者也用，但後者日常慣用，補齊慣用“閒”》（前者補齊後者用字）
@@ -135,6 +136,7 @@
 #    詞句中，「嚓」臺灣字典只有發音「ca1」，不標為「cha1」，因為為形聲，故另標「ca5」，故全都補齊「ca1」「ca5」。
 #    詞句中，「睪」臺灣字典只有發音「gao1」，但日常常發「gao3」，故全都補齊「gao1」「gao3」。
 #    詞句中，「框」「眶」臺灣字典只有發音「kuang1」，沒有「kuang4」發音，故只保留「kuang1」發音。
+#    詞句中，「轍」臺灣字典發音為「che4」和「zhe2」，但大陸字典只有「zhe2」，日常易混，故將「che4」發音詞彙補齊「zhe2」。
 #    詞句中，「紮」臺灣字典發音為「za1」和「zha2」，但大陸字典有「zha1」，由於發音相近，故「za1」和「zha1」相互補齊，「zha2」語意不同，故不補。譯音人名則補齊「za1」「zha1」「zha2」。
 #    詞句中，「軋」除語意為狀聲詞「ga2」「ya4」或特殊語意等，皆補齊「ya4」「ga1」「ga2」「zha2」，「ga1」詞頻設為80%。
 #    詞句中，「召」發音為「zhao4」「shao4」，兩岸皆無「zhao1」該發音，但日常常發，故標準為「zhao4」時補齊「zhao4」「zhao1」。
@@ -195,6 +197,7 @@
 #    詞句中，「巍」臺灣標準為「wei2」，大陸標準為「wei1」，日常易混，故全都補齊「wei2」「wei1」。
 #    詞句中，「曙」臺灣標準為「shu4」，大陸標準為「shu3」，日常易混，故全都補齊「shu4」「shu3」。
 #    詞句中，「斂」臺灣標準為「lian4」，大陸標準為「lian3」，日常易混，故全都補齊「lian4」「lian3」。
+#    詞句中，「鸌」臺灣標準為「huo4」，大陸標準為「hu4」，，日常易混，故全都補齊「huo4」「hu4」。
 #    詞句中，「氬」臺灣標準為「ya3」，大陸標準為「shu4」，日常易混，故全都補齊「ya3」「ya4」。
 #    詞句中，「鉭」臺灣標準為「dan4」，大陸標準為「tan3」，日常易混，故全都補齊「dan4」「tan3」。
 #    詞句中，「嘌」臺灣標準為「piao1」，大陸標準為「piao4」，日常易混，故全都補齊「piao1」「piao4」。
@@ -222,7 +225,8 @@
 #    詞句中，「酪」臺灣字典讀音為「luo4」，語音為「lao4」，除「優酪乳」「健酪」之「酪」只標註「luo4」外，其他皆補齊「luo4」「lao4」。
 #    詞句中，「血」臺灣字典語音為「xie3」，讀音為「xue4」，故皆補齊「xie3」「xue4」。
 #    詞句中，「誰」臺灣字典語音為「shei2」，讀音為「shui2」，故皆補齊「shei2」[shui2]。
-#    詞句中，「賃」臺灣字典語音為「lin4」，讀音為「ren4」，故皆補齊「lin4」和「ren4」。
+#    詞句中，「賃」臺灣字典語音為「lin4」，讀音為「ren4」，故皆補齊「lin4」「ren4」。
+#    詞句中，「曳」臺灣字典語音為「yi4」，讀音為「ye4」，故皆補齊「yi4」「ye4」。
 #    詞句中，「薄」臺灣字典大多意思之讀音為「bo2」，語音為「bao2」，細微差別日常易混，除「薄荷」只標註「bo4 he2」和姓氏只標注「bo2」外，其他皆補齊「bo2」「bao2」。
 #    詞句中，「堤」皆補齊「ti2」「di1」。（原店名除外，如：西堤、丹堤等除外，後改皆補齊）
 #    詞句中，「洽」皆補齊「qia4」「xia2」，後者詞頻設為30%。
@@ -828,12 +832,12 @@ min_phrase_weight: 100
 亇	ge5	0.2%
 亇	ma1	0.2%
 捋	le4
-濕	ta4	0.2%
-濕	luo4	0.2%
-濕	xi2	0.2%
-湿	ta4	0.2%
-湿	luo4	0.2%
-湿	xi2	0.2%
+濕	ta4	0%
+# 濕	luo4	0%
+濕	xi2	0%
+湿	ta4	0%
+# 湿	luo4	0%
+湿	xi2	0%
 豉	shi4
 噌	ceng3
 呠	pen3	10%
@@ -3774,6 +3778,13 @@ min_phrase_weight: 100
 醝	cuo3	0%
 嵯	ci1	0%
 嵳	ci1	0%
+濕	xie4	0%
+濕	chi4	0%
+湿	xie4	0%
+湿	chi4	0%
+諗	nie4	0%
+谂	nie4	0%
+淜	ping2	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -6018,7 +6029,7 @@ min_phrase_weight: 100
 # 甬	tong3	0.3%
 畂	mu3	0.3%
 疸	da5	0.3%
-瘜	xi1	0.3%
+瘜	xi1	10%
 的	di1	0.3%
 眯	mi2	0.3%
 眰	die2	0.3%
@@ -34838,7 +34849,7 @@ min_phrase_weight: 100
 轊	wei4
 轋	hun2
 轌	xue3
-轍	che4	5%
+轍	che4	15%
 轍	zhe2	95%
 轎	jiao4
 轏	zhan4
@@ -55998,6 +56009,8 @@ min_phrase_weight: 100
 一攬子	yi1 lan3 zi5
 一改故轍	yi4 gai3 gu4 zhe2
 一改故轍	yi1 gai3 gu4 zhe2
+一改故轍	yi4 gai3 gu4 che4
+一改故轍	yi1 gai3 gu4 che4
 一敗塗地	yi2 bai4 tu2 di4
 一敗塗地	yi1 bai4 tu2 di4
 一斗米養個恩人	yi4 dou3 mi3 yang3 ge5 en1 ren2
@@ -57785,6 +57798,7 @@ min_phrase_weight: 100
 不道得	bu2 dao4 de5
 不適合	bu2 shi4 he2
 不適當	bu2 shi4 dang4
+不適當	bu2 shi4 dang1
 不避彊禦	bu2 bi4 qiang2 yu4
 不還	bu4 huan2
 不還	bu4 hai2
@@ -64967,6 +64981,7 @@ min_phrase_weight: 100
 北萊茵‧威斯特法倫州	bei3 lai2 yin1 eng5 wei1 si1 te4 fa3 lun2 zhou1
 北路梆子	bei3 lu4 bang1 zi5
 北轍南轅	bei3 che4 nan2 yuan2
+北轍南轅	bei3 zhe2 nan2 yuan2
 北邊兒	bei3 bian1 er5	80%
 北邊兒	bei3 bian1 er2
 北部地區	bei3 bu4 di4 qu1
@@ -65068,6 +65083,7 @@ min_phrase_weight: 100
 十三行	shi2 san1 hang2
 十三行遺址	shi2 san1 hang2 yi2 zhi3
 十三轍	shi2 san1 zhe2
+十三轍	shi2 san1 che4
 十中八九	shi2 zhong4 ba1 jiu3
 十二分	shi2 er4 fen1
 十二分之一	shi2 er4 fen1 zhi1 yi1
@@ -65131,6 +65147,7 @@ min_phrase_weight: 100
 千山萬壑	qian1 shan1 wan4 huo4
 千山萬壑	qian1 shan1 wan4 he4
 千岐萬轍	qian1 qi2 wan4 che4
+千岐萬轍	qian1 qi2 wan4 zhe2
 千巖萬壑	qian1 yan2 wan4 huo4
 千巖萬壑	qian1 yan2 wan4 he4
 千差萬別	qian1 cha1 wan4 bie2
@@ -66582,9 +66599,13 @@ min_phrase_weight: 100
 合眾為一	he2 zhong4 wei2 yi1
 合眾銀行	he2 zhong4 yin2 hang2
 合轍	he2 zhe2
+合轍	he2 che4
 合轍兒	he2 zhe2 er5	80%
 合轍兒	he2 zhe2 er2
+合轍兒	he2 che4 er5	80%
+合轍兒	he2 che4 er2
 合轍押韻	he2 zhe2 ya1 yun4
+合轍押韻	he2 che4 ya1 yun4
 合零為整	he2 ling2 wei2 zheng3
 吉丁當	ji2 ding1 dang1
 吉丁疙疸	ji2 ding1 ge1 dan3
@@ -67945,6 +67966,7 @@ min_phrase_weight: 100
 唯讀儲存器	wei2 du2 chu3 cun2 qi4
 唱反調	chang4 fan3 diao4
 唱和	chang4 he4
+唱和	chang4 he2
 唱哩嗹	chang4 li1 lian2
 唱洋梆子	chang4 yang2 bang1 zi5
 唱片	chang4 pian4
@@ -70682,8 +70704,11 @@ min_phrase_weight: 100
 夜間	ye4 jian1
 夜間部	ye4 jian1 bu4
 夜靜更深	ye4 jing4 geng1 shen1
+夜靜更深	ye4 jing4 jing1 shen1
 夜靜更長	ye4 jing4 geng1 chang2
+夜靜更長	ye4 jing4 jing1 chang2
 夜靜更闌	ye4 jing4 geng1 lan2
+夜靜更闌	ye4 jing4 jing1 lan2
 夠不著	gou4 bu4 zhao2
 夠分量	gou4 fen4 liang4
 夠勁	gou4 jin4
@@ -74834,6 +74859,7 @@ min_phrase_weight: 100
 差一點兒	cha1 yi1 dian3 er2
 差三錯四	cha1 san1 cuo4 si4
 差不上下	cha4 bu2 shang4 xia4
+差不上下	cha1 bu2 shang4 xia4
 差不多	cha4 bu4 duo1
 差不多	cha1 bu4 duo1
 差不離	cha4 bu4 li2
@@ -74842,8 +74868,10 @@ min_phrase_weight: 100
 差之千里	cha1 zhi1 qian1 li3
 差之千里	cha4 zhi1 qian1 li3
 差之毫釐	cha1 zhi1 hao2 li2
+差之毫釐	cha4 zhi1 hao2 li2
 差事	cha4 shi4
 差事	chai1 shi4
+差事	cha1 shi4
 差人	cha4 ren2
 差人	chai1 ren2
 差以千里	cha1 yi3 qian1 li3
@@ -74857,6 +74885,7 @@ min_phrase_weight: 100
 差別	cha1 bie2
 差別	cha4 bie2
 差別待遇	cha1 bie2 dai4 yu4
+差別待遇	cha4 bie2 dai4 yu4
 差勁	cha4 jin4
 差勁	cha1 jin4
 差勁	cha4 jing4
@@ -74877,7 +74906,9 @@ min_phrase_weight: 100
 差役	cha1 yi4
 差役	chai1 yi4
 差得多	cha4 de2 duo1
+差得多	cha4 de5 duo1
 差得多	cha1 de5 duo1
+差得多	cha1 de2 duo1
 差忒	cha1 te4
 差惡	cha1 e4
 差批	chai1 pi1
@@ -76991,8 +77022,12 @@ min_phrase_weight: 100
 復興黨	fu4 xing1 dang3
 復蹈其轍	fu4 dao4 qi2 che4
 復蹈其轍	fu4 dao3 qi2 che4
+復蹈其轍	fu4 dao4 qi2 zhe2
+復蹈其轍	fu4 dao3 qi2 zhe2
 復蹈前轍	fu4 dao4 qian2 che4
 復蹈前轍	fu4 dao3 qian2 che4
+復蹈前轍	fu4 dao4 qian2 zhe2
+復蹈前轍	fu4 dao3 qian2 zhe2
 復轉	fu4 zhuan3
 復辟	fu4 bi4
 循分	xun2 fen4
@@ -77158,6 +77193,7 @@ min_phrase_weight: 100
 心拙口笨	xin1 zhuo2 kou3 ben4
 心數	xin1 shu4
 心旌搖曳	xin1 jing1 yao2 yi4
+心旌搖曳	xin1 jing1 yao2 ye4
 心曲	xin1 qu1
 心曲	xin1 qu3
 心有靈犀一點通	xin1 you3 ling2 xi1 yi4 dian3 tong1
@@ -78371,6 +78407,7 @@ min_phrase_weight: 100
 憑脈	ping2 mai4
 憑藉	ping2 jie4
 憑軾結轍	ping2 shi4 jie2 zhe2
+憑軾結轍	ping2 shi4 jie2 che4
 憤切	fen4 qie4
 憤怒痙攣	fen4 nu4 jing4 lvan2
 憤怒痙攣	fen4 nu4 jing1 lvan2	80%
@@ -79470,6 +79507,7 @@ min_phrase_weight: 100
 扯扯拽拽	che3 che3 zhuai3 zhuai3	80%
 扯撮	che3 cuo4
 扯曳	che3 yi4
+扯曳	che3 ye4
 扯架子	che3 jia4 zi5
 扯牛尾巴	che3 niu2 wei3 ba1
 扯牛尾巴	che3 niu2 yi3 ba1
@@ -80110,6 +80148,7 @@ min_phrase_weight: 100
 拉撒路	la1 sa4 lu4	80%
 拉攏	la1 long3
 拉曳	la1 yi4
+拉曳	la1 ye4
 拉桿子	la1 gan3 zi5
 拉洋片	la1 yang2 pian1
 拉生意	la1 sheng1 yi4
@@ -81265,6 +81304,7 @@ min_phrase_weight: 100
 探騎	tan4 qi2
 探驪得珠	tan4 li2 de2 zhu1
 掣曳	che4 yi4
+掣曳	che4 ye4
 掣襟肘見	che4 jin1 zhou3 xian4
 掣襟肘見	che4 jin1 zhou3 jian4
 掣襟肘見	che4 jin1 zhou2 xian4	80%
@@ -81563,6 +81603,7 @@ min_phrase_weight: 100
 搖曳	yao2 yi4
 搖曳	yao2 ye4
 搖曳生姿	yao2 yi4 sheng1 zi1
+搖曳生姿	yao2 ye4 sheng1 zi1
 搖滾樂	yao2 gun3 yue4
 搖籃曲	yao2 lan2 qu3
 搖落	yao2 luo4
@@ -82756,7 +82797,9 @@ min_phrase_weight: 100
 攀親道故	pan1 qin1 dao4 gu4
 攀車拒輪	pan1 ju1 ju4 lun2
 攀車臥轍	pan1 ju1 wo4 che4
+攀車臥轍	pan1 ju1 wo4 zhe2
 攀轅臥轍	pan1 yuan2 wo4 che4
+攀轅臥轍	pan1 yuan2 wo4 zhe2
 攀高結貴	pan1 gao1 jie2 gui4
 攉煤機	huo1 mei2 ji1
 攏子	long3 zi5
@@ -82968,7 +83011,9 @@ min_phrase_weight: 100
 改行	gai3 hang2
 改行遷善	gai3 xing4 qian1 shan4
 改轅易轍	gai3 yuan2 yi4 che4
+改轅易轍	gai3 yuan2 yi4 zhe2
 改轍	gai3 che4
+改轍	gai3 zhe2
 攻伐	gong1 fa1
 攻伐	gong1 fa2
 攻剽	gong1 piao4
@@ -84304,6 +84349,7 @@ min_phrase_weight: 100
 易數鉤隱圖	yi4 shu4 gou1 yin3 tu2
 易與	yi4 yu3
 易轍	yi4 che4
+易轍	yi4 zhe2
 昔人	xi2 ren2
 昔年	xi2 nian2
 昔得蘭群島	xi2 de2 lan2 qun2 dao3
@@ -84924,17 +84970,27 @@ min_phrase_weight: 100
 曳光彈	yi4 guang1 dan4
 曳光彈	ye4 guang1 dan4
 曳剌	ye4 la4
+曳剌	yi4 la4
 曳尾塗中	yi4 wei3 tu2 zhong1
+曳尾塗中	ye4 wei3 tu2 zhong1
 曳尾泥塗	yi4 wei3 ni2 tu2
+曳尾泥塗	ye4 wei3 ni2 tu2
 曳引機	yi4 yin3 ji1
 曳引機	ye4 yin3 ji1
 曳引車	yi4 yin3 che1
+曳引車	ye4 yin3 che1
 曳曳	yi4 yi4
+曳曳	ye4 ye4
 曳步	yi4 bu4
+曳步	ye4 bu4
 曳白	yi4 bai2
+曳白	ye4 bai2
 曳落河	yi4 luo4 he2
+曳落河	ye4 luo4 he2
 曳裾王門	yi4 ju1 wang2 men2
+曳裾王門	ye4 ju1 wang2 men2
 曳踵	yi4 zhong3
+曳踵	ye4 zhong3
 更上一層樓	geng4 shang4 yi4 ceng2 lou2
 更上一層樓	geng4 shang4 yi1 ceng2 lou2
 更上層樓	geng4 shang4 ceng2 lou2
@@ -84972,10 +85028,13 @@ min_phrase_weight: 100
 更年	geng1 nian2
 更年期	geng1 nian2 qi2
 更弦易轍	geng1 xian2 yi4 che4
+更弦易轍	geng1 xian2 yi4 zhe2
 更張	geng1 zhang1
+更張	geng4 zhang1
 更待何時	geng4 dai4 he2 shi2
 更待干罷	geng4 dai4 gan1 ba4
 更復	geng4 fu4
+更復	geng1 fu4
 更房	geng1 fang2
 更換	geng1 huan4
 更改	geng1 gai3
@@ -84984,8 +85043,10 @@ min_phrase_weight: 100
 更新	geng1 xin1
 更新	geng4 xin1
 更新世	geng1 xin1 shi4
+更新世	geng4 xin1 shi4
 更新換代	geng1 xin1 huan4 dai4
 更新版	geng1 xin1 ban3
+更新版	geng4 xin1 ban3
 更易	geng1 yi4
 更替	geng1 ti4
 更有甚者	geng4 you3 shen4 zhe3
@@ -84995,15 +85056,21 @@ min_phrase_weight: 100
 更正啟事	geng1 zheng4 qi3 shi4
 更深	geng1 shen1
 更深	geng4 shen1
+更深	jing1 shen1
 更深人靜	geng1 shen1 ren2 jing4
+更深人靜	jing1 shen1 ren2 jing4
 更深半夜	geng1 shen1 ban4 ye4
+更深半夜	jing1 shen1 ban4 ye4
 更深夜靜	geng1 shen1 ye4 jing4
+更深夜靜	jing1 shen1 ye4 jing4
 更漏	geng1 lou4
 更為	geng4 wei2
 更為	geng4 wei4
 更甚	geng4 shen4
 更生人	geng4 sheng1 ren2
+更生人	geng1 sheng1 ren2
 更生保護	geng4 sheng1 bao3 hu4
+更生保護	geng1 sheng1 bao3 hu4
 更番	geng1 fan1
 更盡一步	geng4 jin4 yi2 bu4
 更盡一步	geng4 jin4 yi1 bu4
@@ -86780,6 +86847,7 @@ min_phrase_weight: 100
 棄惡從善	qi4 e4 cong2 shan4
 棄擲	qi4 zhi2
 棄甲曳兵	qi4 jia3 yi4 bing1
+棄甲曳兵	qi4 jia3 ye4 bing1
 棄短取長	qi4 duan3 qu3 chang2
 棄車保帥	qi4 ju1 bao3 shuai4
 棄養	qi4 yang4
@@ -89993,6 +90061,7 @@ min_phrase_weight: 100
 流刺網	liu2 ci4 wang3
 流動比率	liu2 dong4 bi3 lv4
 流口轍	liu2 kou3 zhe2
+流口轍	liu2 kou3 che4
 流和心性	liu2 he2 xin1 xing4
 流子	liu2 zi5
 流彈	liu2 dan4
@@ -90315,11 +90384,17 @@ min_phrase_weight: 100
 涸乾	hao4 gan1
 涸乾	he2 gan1
 涸轍之枯	he2 che4 zhi1 ku1
+涸轍之枯	he2 zhe2 zhi1 ku1
 涸轍之魚	he2 che4 zhi1 yu2
+涸轍之魚	he2 zhe2 zhi1 yu2
 涸轍之鮒	he2 che4 zhi1 fu4
+涸轍之鮒	he2 zhe2 zhi1 fu4
 涸轍枯魚	he2 che4 ku1 yu2
+涸轍枯魚	he2 zhe2 ku1 yu2
 涸轍窮魚	he2 che4 qiong2 yu2
+涸轍窮魚	he2 zhe2 qiong2 yu2
 涸轍窮鱗	he2 che4 qiong2 lin2
+涸轍窮鱗	he2 zhe2 qiong2 lin2
 涼快	liang2 kuai4
 涼涼	liang2 liang2
 涼涼	liang4 liang2
@@ -92335,6 +92410,8 @@ min_phrase_weight: 100
 熟路輕車	shou2 lu4 qing1 ju1
 熟路輕轍	shu2 lu4 qing1 che4
 熟路輕轍	shou2 lu4 qing1 che4
+熟路輕轍	shu2 lu4 qing1 zhe2
+熟路輕轍	shou2 lu4 qing1 zhe2
 熟道	shu2 dao4
 熟道	shou2 dao4
 熟道兒	shu2 dao4 er5	80%
@@ -102382,6 +102459,7 @@ min_phrase_weight: 100
 臨難苟免	lin2 nan4 gou3 mian3
 臨難鑄兵	lin2 nan4 zhu4 bing1
 臨風搖曳	lin2 feng1 yao2 yi4
+臨風搖曳	lin2 feng1 yao2 ye4
 自不待言	zi4 bu2 dai4 yan2
 自不必說	zi4 bu2 bi4 shuo1
 自不量力	zi4 bu2 liang4 li4
@@ -106129,6 +106207,7 @@ min_phrase_weight: 100
 衡量制	heng2 liang2 zhi4
 衡陽地區	heng2 yang2 di4 qu1
 衣不曳地	yi1 bu2 yi4 di4
+衣不曳地	yi1 bu2 ye4 di4
 衣不重帛	yi1 bu2 zhong4 bo2
 衣不重采	yi1 bu2 zhong4 cai3
 衣冠	yi1 guan1
@@ -106739,12 +106818,15 @@ min_phrase_weight: 100
 覆蓋率	fu4 gai4 lv4
 覆蓋面	fu4 gai4 mian4
 覆車之轍	fu4 che1 zhi1 che4
+覆車之轍	fu4 che1 zhi1 zhe2
 覆車當戒	fu4 che1 dang1 jie4
 覆軍殺將	fu4 jun1 sha1 jiang4
 覆載	fu4 zai4
 覆載	fu4 zai3
 覆轍重蹈	fu4 che4 chong2 dao4
 覆轍重蹈	fu4 che4 chong2 dao3
+覆轍重蹈	fu4 zhe2 chong2 dao4
+覆轍重蹈	fu4 zhe2 chong2 dao3
 覆醬瓿	fu4 jiang4 pou3
 覆露	fu4 lu4
 見不得	jian4 bu4 de2
@@ -109766,6 +109848,7 @@ min_phrase_weight: 100
 軌模	gui3 mo2
 軌跡	gui3 ji1
 軌轍	gui3 che4
+軌轍	gui3 zhe2
 軌道空間站	gui3 dao4 kong1 jian1 zhan4
 軌量	gui3 liang4
 軍事力量	jun1 shi4 li4 liang4
@@ -110320,7 +110403,9 @@ min_phrase_weight: 100
 轉轉	zhuan4 zhuan4
 轉轉相因	zhuan3 zhuan3 xiang1 yin1
 轉轍	zhuan3 che4
+轉轍	zhuan3 zhe2
 轉轍器	zhuan3 che4 qi4
+轉轍器	zhuan3 zhe2 qi4
 轉述	zhuan3 shu4
 轉送	zhuan3 song4
 轉速計	zhuan3 su4 ji4
@@ -110351,10 +110436,15 @@ min_phrase_weight: 100
 轉鬥千里	zhuan3 dou4 qian1 li3
 轉鼓	zhuan4 gu3
 轍亂旗靡	che4 luan4 qi2 mi3
+轍亂旗靡	zhe2 luan4 qi2 mi3
 轍環天下	che4 huan2 tian1 xia4
+轍環天下	zhe2 huan2 tian1 xia4
 轍跡	che4 ji1
+轍跡	zhe2 ji1
 轍鮒	che4 fu4
+轍鮒	zhe2 fu4
 轍鮒之急	che4 fu4 zhi1 ji2
+轍鮒之急	zhe2 fu4 zhi1 ji2
 轎子	jiao4 zi5
 轟動效應	hong1 dong4 xiao4 ying4
 轟擊	hong1 ji2
@@ -110494,6 +110584,7 @@ min_phrase_weight: 100
 迎頭痛擊	ying2 tou2 tong4 ji2
 迎風待月	ying2 feng1 dai4 yue4
 迎風搖曳	ying2 feng1 yao2 yi4
+迎風搖曳	ying2 feng1 yao2 ye4
 迎養	ying2 yang4
 近乎	jin4 hu1
 近乎同步數位階層	jin4 hu1 tong2 bu4 shu4 wei4 jie1 ceng2
@@ -111195,6 +111286,7 @@ min_phrase_weight: 100
 適應	shi4 ying4
 適應性	shi4 ying4 xing4
 適當	shi4 dang4
+適當	shi4 dang1
 適量	shi4 liang4
 適間	shi4 jian1
 遭難	zao1 nan4
@@ -114880,6 +114972,7 @@ min_phrase_weight: 100
 隨風倒柳	sui2 feng1 dao3 liu3
 隨風倒舵	sui2 feng1 dao3 duo4
 隨風搖曳	sui2 feng1 yao2 yi4
+隨風搖曳	sui2 feng1 yao2 ye4
 隨風轉舵	sui2 feng1 zhuan3 duo4
 險地	xian3 di4
 險塞	xian3 se4
@@ -115191,6 +115284,7 @@ min_phrase_weight: 100
 離校	li2 xiao4
 離瓣花冠	li2 ban4 hua1 guan1
 離轍	li2 che4
+離轍	li2 zhe2
 離鄉避井	li2 xiang1 bei4 jing3
 離間	li2 jian4
 難上加難	nan2 shang4 jia1 nan2
@@ -117636,6 +117730,7 @@ min_phrase_weight: 100
 鮑叔牙	bao4 shu1 ya2
 鮑耶	bao4 ye1
 鮒魚困涸轍	fu4 yu2 kun4 he2 che4
+鮒魚困涸轍	fu4 yu2 kun4 he2 zhe2
 鮟鱇	an4 kang1
 鮟鱇	an1 kang1
 鮭菜	xie2 cai4
@@ -118446,4 +118541,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 118449 #####
+##### @結束 END - 118544 #####
