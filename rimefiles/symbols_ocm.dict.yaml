@@ -4,7 +4,7 @@
 # 『洋蔥』製作
 ---
 name: symbols_ocm
-version: "202602"
+version: "202604"
 sort: original
 use_preset_vocabulary: false
 ...
@@ -7804,6 +7804,24 @@ $	tq
 ☐	jn
 ☑	jn
 ☒	jn
+### 空白(空格) ###
+#\t	np
+ 	np
+　	np
+ 	np
+ 	np
+ 	np
+ 	np
+ 	np
+ 	np
+ 	np
+ 	np
+ 	np
+ 	np
+ 	np
+ 	np
+ 	np
+ 	np
 ### 運動 ###
 🏒	ng
 🏸	ng

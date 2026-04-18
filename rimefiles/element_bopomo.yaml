@@ -760,6 +760,8 @@ emoji_series:
     - xform/^mv/【圓形】/
     - xform/^nr/【三角】/
     - xform/^2e/【打勾】/
+    - xform/^d1/【空白／空格】/
+    - xform/^de/【空格／空白】/
     - xform/^bm/【日用／日用品】/
     - xform/^vu/【血液／血型圖】/
     - xform/^fe/【器官】/

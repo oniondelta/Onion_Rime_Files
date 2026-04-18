@@ -96,7 +96,7 @@ key_binder:
 
 
 editor:
-#    space: commit_composition #使用 fluency_editor 時開啟(直接上屏)
+#    space: confirm #commit_composition #使用 fluency_editor 時開啟(直接上屏)
 #    space: toggle_selection #使用 fluency_editor 時開啟(不直接上屏)
     # Return: confirm #使用 express_editor 時開啟 #commit_composition
     # KP_Enter: confirm #使用 express_editor 時開啟 #commit_composition
@@ -403,6 +403,8 @@ algebra:
     - xform/^mv$/yx!/ #【圓形】
     - xform/^nr$/sj!/ #【三角】
     - xform/^2e$/dg!/ #【打勾】
+    - xform/^d1$/kb!/ #【空白／空格】
+    - xform/^de$/kg!/ #【空格／空白】
     - xform/^bm$/ry!/ #【日用／日用品】/
     - xform/^vu$/xi!/ #【血液／血型圖】/
     - xform/^fe$/qg!/ #【器官】/
@@ -733,6 +735,8 @@ preedit_format:
     - xform/^yx$/【圓形】/
     - xform/^sj$/【三角】/
     - xform/^dg$/【打勾】/
+    - xform/^kb$/【空白／空格】/
+    - xform/^kg$/【空格／空白】/
     - xform/^ry$/【日用／日用品】/
     - xform/^xi$/【血液／血型圖】/
     - xform/^qg$/【器官】/

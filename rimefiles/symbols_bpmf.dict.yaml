@@ -4,7 +4,7 @@
 # 『洋蔥』製作
 ---
 name: symbols_bpmf
-version: "202602"
+version: "202604"
 sort: original
 use_preset_vocabulary: false
 ...
@@ -7612,6 +7612,42 @@ $	12
 ☑	2e
 ☒	2e
 ##### 新增項目 #####
+### 空白【空格】 ###
+#\t	d1
+ 	d1
+　	d1
+ 	d1
+ 	d1
+ 	d1
+ 	d1
+ 	d1
+ 	d1
+ 	d1
+ 	d1
+ 	d1
+ 	d1
+ 	d1
+ 	d1
+ 	d1
+ 	d1
+### 空格【空白】 ###
+#\t	de
+ 	de
+　	de
+ 	de
+ 	de
+ 	de
+ 	de
+ 	de
+ 	de
+ 	de
+ 	de
+ 	de
+ 	de
+ 	de
+ 	de
+ 	de
+ 	de
 ### 運動 ###
 🏒	m2
 🏸	m2
