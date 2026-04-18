@@ -1561,6 +1561,7 @@ preedit_pa_mac_1_2_4:
     # - xform|c|  ⁄  | #略窄# #「1/6」+「?」+「?」+「1/4」=「5/12」+「2?」em
     # - xform|c|  ⁄  | #略寬# #「?」+「1/4」+「1/4」+「?」=「1/2」+「2?」em
     - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abdef|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ１２³⁴５⁶⁷８９０，．－；⸋|"
+    # - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abdef|ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ１２³⁴５⁶⁷８９０，．－；⸋|"
     - 'xform/\\/⁞/' #全形空格　 #半形空格  #| #⁞ #⁝ #⋮ #¦ #┆
 
 
@@ -1642,6 +1643,7 @@ preedit_pa_mac_3:
     - xform|([ghi])| $1 | #j
     # - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abdefghij|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ１２³⁴５⁶⁷８９０，．－；⸋˺˹⁼'|"
     - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abdefghi|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ１２³⁴５⁶⁷８９０，．－；⸋˺˹'|" #⁼
+    # - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abdefghi|ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ１２³⁴５⁶⁷８９０，．－；⸋˺˹'|" #⁼
     - 'xform/\\/⁞/' #全形空格　 #半形空格  #| #⁞ #⁝ #⋮ #¦ #┆
     #防不換行時，第一個注音不顯示？# - 'xform/　([ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦ])/⁞$1/'
 
@@ -1711,6 +1713,7 @@ preedit_pa_win_1_2_4:
     - xform|7|⁷ | #略寬# #  # 
     - xform|f| ⸋ | #等略略寬#
     - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ125890abde|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ１２５８９０，．－；|"
+    # - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ125890abde|ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ１２５８９０，．－；|"
     - 'xform/\\/⁞/' #全形空格　 #半形空格  #| #⁞ #⁝ #⋮ #¦ #┆
 
 
@@ -1792,6 +1795,7 @@ preedit_pa_win_3:
     - xform|([ghi])| $1 | #j
     # - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ125890abdeghij|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ１２５８９０，．－；˺˹⁼'|"
     - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ125890abdeghi|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ１２５８９０，．－；˺˹'|" #⁼
+    # - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ125890abdeghi|ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ１２５８９０，．－；˺˹'|" #⁼
     - 'xform/\\/⁞/' #全形空格　 #半形空格  #| #⁞ #⁝ #⋮ #¦ #┆
     #防不換行時，第一個注音不顯示？# - 'xform/　([ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦ])/⁞$1/'
 
