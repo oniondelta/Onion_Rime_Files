@@ -281,6 +281,7 @@ algebra:
     - xform/^bx$/rl!/ #【肉類／肉品】
     - xform/^bq$/rp!/ #【肉品／肉類】
     - xform/^dv$/kx!/ #【科學】
+    - xform/^wj$/tu!/ #【跳舞】
     - xform/^t5$/vw!/ #【船隻】
     - xform/^cc$/hh!/ #【花卉】
     - xform/^gh$/ac!/ #【蔬菜】
@@ -613,6 +614,7 @@ preedit_format:
     - xform/^rl$/【肉類／肉品】/
     - xform/^rp$/【肉品／肉類】/
     - xform/^kx$/【科學】/
+    - xform/^tu$/【跳舞】/
     - xform/^vw$/【船隻】/
     - xform/^hh$/【花卉】/
     - xform/^ac$/【蔬菜】/

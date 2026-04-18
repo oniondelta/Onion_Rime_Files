@@ -508,6 +508,7 @@ use_preset_vocabulary: false
 🐬	pu
 🐳	pu
 🐋	pu
+🫍	pu
 🦈	pu
 🐊	pu
 🐅	pu
@@ -515,6 +516,7 @@ use_preset_vocabulary: false
 🦓	pu
 🦍	pu
 🦧	pu
+🫈	pu
 🐘	pu
 🦛	pu
 🦏	pu
@@ -776,7 +778,7 @@ use_preset_vocabulary: false
 🎽	wg
 🛹	wg
 🛷	wg
-⛸	wg
+⛸️	wg
 🥌	wg
 🎿	wg
 ⛷	wg
@@ -1987,6 +1989,7 @@ use_preset_vocabulary: false
 🐉	gs
 🐊	gs
 🐋	gs
+🫍	gs
 🐌	gs
 🐍	gs
 🐎	gs
@@ -2048,6 +2051,7 @@ use_preset_vocabulary: false
 🦦	gs
 🦨	gs
 🦧	gs
+🫈	gs
 🪲	gs
 🦟	gs
 🦞	gs
@@ -2079,6 +2083,7 @@ use_preset_vocabulary: false
 🐉	gso
 🐊	gso
 🐋	gso
+🫍	gso
 🐌	gso
 🐍	gso
 🐎	gso
@@ -2140,6 +2145,7 @@ use_preset_vocabulary: false
 🦦	gso
 🦨	gso
 🦧	gso
+🫈	gso
 🪲	gso
 🦟	gso
 🦞	gso
@@ -2189,6 +2195,7 @@ use_preset_vocabulary: false
 🐒	ss
 🦧	ss
 🦍	ss
+🫈	ss
 🦃	ss
 🐓	ss
 🐕	ss
@@ -2227,6 +2234,7 @@ use_preset_vocabulary: false
 🐒	jrss
 🦧	jrss
 🦍	jrss
+🫈	jrss
 🦃	jrss
 🐓	jrss
 🐕	jrss
@@ -3554,7 +3562,7 @@ use_preset_vocabulary: false
 ⛵	zl
 ⛶	zl
 ⛷	zl
-⛸	zl
+⛸️	zl
 ⛹	zl
 ⛺	zl
 ⛻	zl
@@ -7839,7 +7847,7 @@ $	tq
 🥎️	ng
 🎾	ng
 🎱	ng
-⛸	ng
+⛸️	ng
 🛼	ng
 🪃	ng
 🪁	ng
@@ -7866,6 +7874,7 @@ $	tq
 🎹	woo
 🎷	woo
 🎺	woo
+🪊	woo
 📯️	woo
 🥁	woo
 🪕	woo
@@ -8339,6 +8348,7 @@ $	tq
 👾	hs
 👹	hs
 👺	hs
+🫈	hs
 ### 月相 ###
 🌕	ut
 🌖	ut
@@ -8526,6 +8536,11 @@ $	tq
 🍗	no
 🍖	no
 🍤	no
+### 跳舞 ###
+💃🏻️	ov
+🕺🏻	ov
+🧑🏻‍🩰	ov
+👯🏻	ov
 ### 船隻 ###
 🚢	zv
 ⛴	zv
@@ -8632,6 +8647,7 @@ $	tq
 🐬	um
 🐳	um
 🐋	um
+🫍	um
 🦈	um
 ### 魚圖【魚類】(魚) ###
 🐠	uo
@@ -8640,6 +8656,7 @@ $	tq
 🐬	uo
 🐳	uo
 🐋	uo
+🫍	uo
 🦈	uo
 ### 鳥類圖(鳥類) ###
 🦆	nmo
@@ -8666,7 +8683,7 @@ $	tq
 🩰	rzo
 🧦	rzo
 👣	rzo
-⛸	rzo
+⛸️	rzo
 🛼	rzo
 ### 包包 ###
 👝	nn
@@ -9202,6 +9219,7 @@ $	tq
 🐬	qsgs
 🐳	qsgs
 🐋	qsgs
+🫍	qsgs
 🦈	qsgs
 🦭	qsgs
 🐊	qsgs
@@ -9210,6 +9228,7 @@ $	tq
 🦓	qsgs
 🦍	qsgs
 🦧	qsgs
+🫈	qsgs
 🐘	qsgs
 🦛	qsgs
 🦏	qsgs
@@ -11756,6 +11775,24 @@ ZZzz…(-Ｃ_,-)｡｡ooO((【･:*:･夢･:*:･】))	;-
 ##警車
 #🚓	rc
 #🚔	rc
+### 空格(空白) ###
+# #\t	nt
+#  	nt
+# 　	nt
+#  	nt
+#  	nt
+#  	nt
+#  	nt
+#  	nt
+#  	nt
+#  	nt
+#  	nt
+#  	nt
+#  	nt
+#  	nt
+#  	nt
+#  	nt
+#  	nt
 ####### 撞碼或單獨不用 結束 #######
 ### 以下使井字號可以顯示，下列不要再用井字號遮屏，會顯示
 # no comment

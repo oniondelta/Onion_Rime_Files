@@ -508,6 +508,7 @@ use_preset_vocabulary: false
 🐬	yb
 🐳	yb
 🐋	yb
+🫍	yb
 🦈	yb
 🐊	yb
 🐅	yb
@@ -515,6 +516,7 @@ use_preset_vocabulary: false
 🦓	yb
 🦍	yb
 🦧	yb
+🫈	yb
 🐘	yb
 🦛	yb
 🦏	yb
@@ -776,7 +778,7 @@ use_preset_vocabulary: false
 🎽	c2
 🛹	c2
 🛷	c2
-⛸	c2
+⛸️	c2
 🥌	c2
 🎿	c2
 ⛷	c2
@@ -851,6 +853,7 @@ use_preset_vocabulary: false
 🥁	c2
 🎷	c2
 🎺	c2
+🪊	c2
 🎸	c2
 🪕	c2
 🎻	c2
@@ -1962,6 +1965,7 @@ use_preset_vocabulary: false
 🐉	2jw
 🐊	2jw
 🐋	2jw
+🫍	2jw
 🐌	2jw
 🐍	2jw
 🐎	2jw
@@ -2023,6 +2027,7 @@ use_preset_vocabulary: false
 🦦	2jw
 🦨	2jw
 🦧	2jw
+🫈	2jw
 🪲	2jw
 🦟	2jw
 🦞	2jw
@@ -2072,6 +2077,7 @@ use_preset_vocabulary: false
 🐒	gvw
 🦧	gvw
 🦍	gvw
+🫈	gvw
 🦃	gvw
 🐓	gvw
 🐕	gvw
@@ -2110,6 +2116,7 @@ use_preset_vocabulary: false
 🐒	g-gv
 🦧	g-gv
 🦍	g-gv
+🫈	g-gv
 🦃	g-gv
 🐓	g-gv
 🐕	g-gv
@@ -3354,7 +3361,7 @@ use_preset_vocabulary: false
 ⛵	za
 ⛶	za
 ⛷	za
-⛸	za
+⛸️	za
 ⛹	za
 ⛺	za
 ⛻	za
@@ -3971,6 +3978,7 @@ use_preset_vocabulary: false
 🎸	um
 🎹	um
 🎺	um
+🪊	um
 🎻	um
 🎼	um
 ### 兩性 ###
@@ -7665,7 +7673,7 @@ $	12
 🥎️	m2
 🎾	m2
 🎱	m2
-⛸	m2
+⛸️	m2
 🛼	m2
 🪃	m2
 🪁	m2
@@ -7692,6 +7700,7 @@ $	12
 🎹	mf
 🎷	mf
 🎺	mf
+🪊	mf
 📯️	mf
 🥁	mf
 🪕	mf
@@ -8151,6 +8160,7 @@ $	12
 👾	ej
 👹	ej
 👺	ej
+🫈	ej
 ### 月相圖(月相) ###
 🌕	mvw
 🌖	mvw
@@ -8353,6 +8363,11 @@ $	12
 🍗	bq
 🍖	bq
 🍤	bq
+### 跳舞 ###
+💃🏻️	wj
+🕺🏻	wj
+🧑🏻‍🩰	wj
+👯🏻	wj
 ### 船隻 ###
 🚢	t5
 ⛴	t5
@@ -8461,6 +8476,7 @@ $	12
 🐬	mxw
 🐳	mxw
 🐋	mxw
+🫍	mxw
 🦈	mxw
 ### 魚圖【魚類圖】(魚)(魚類) ###
 🐠	mw
@@ -8469,6 +8485,7 @@ $	12
 🐬	mw
 🐳	mw
 🐋	mw
+🫍	mw
 🦈	mw
 ### 鳥類【鳥圖】(鳥) ###
 🦆	sx
@@ -8509,7 +8526,7 @@ $	12
 🩰	vyw
 🧦	vyw
 👣	vyw
-⛸	vyw
+⛸️	vyw
 🛼	vyw
 ### 包包 ###
 👝	11
@@ -9005,6 +9022,7 @@ $	12
 🐬	ug2j
 🐳	ug2j
 🐋	ug2j
+🫍	ug2j
 🦈	ug2j
 🦭	ug2j
 🐊	ug2j
@@ -9013,6 +9031,7 @@ $	12
 🦓	ug2j
 🦍	ug2j
 🦧	ug2j
+🫈	ug2j
 🐘	ug2j
 🦛	ug2j
 🦏	ug2j
@@ -11431,6 +11450,7 @@ ZZzz…(-Ｃ_,-)｡｡ooO((【･:*:･夢･:*:･】))	`-
 #🐉	2j
 #🐊	2j
 #🐋	2j
+#🫍	2j
 #🐌	2j
 #🐍	2j
 #🐎	2j
@@ -11492,6 +11512,7 @@ ZZzz…(-Ｃ_,-)｡｡ooO((【･:*:･夢･:*:･】))	`-
 #🦦	2j
 #🦨	2j
 #🦧	2j
+#🫈	2j
 #🪲	2j
 #🦟	2j
 #🦞	2j
