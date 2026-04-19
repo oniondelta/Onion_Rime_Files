@@ -7,14 +7,14 @@ local convert_format = require("filter_cand/convert_format")
 
 local function revise_t(t)
   if t == "" then return "" end
-  t = string.gsub(t, "[.,;]", "")
+  t = string.gsub(t, "[.,;]", "")  -- 「'」為純日語「分節」用，此處不刪除，刻意留作標示用。
   return t
 end
 
 local function fullshape_t(t)
   if t == "" then return "" end
   local format1 = "xlit|abcdefghijklmnopqrstuvwxyz-/|ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ－／|"
-  local format2 = "xform/[.,;]//"
+  local format2 = "xform/[.,;]//"  -- 「'」為純日語「分節」用，此處不刪除，刻意留作標示用。
   local proj = convert_format(format1, format2)
   return proj:apply(t)
 end
@@ -578,7 +578,7 @@ local function halfwidth_kata_t(t)
   t = string.gsub(t, "a", "ｱ")
   t = string.gsub(t, "/", "･")
   t = string.gsub(t, "-", "ｰ")
-  t = string.gsub(t, "[.,;]", "")
+  t = string.gsub(t, "[.,;']", "")  -- 「'」為純日語「分節」用！
   return t
 end
 

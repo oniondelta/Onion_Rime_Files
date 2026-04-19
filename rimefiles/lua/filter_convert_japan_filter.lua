@@ -35,7 +35,7 @@ local function init(env)
   -- env.match_pattern = env.p_prefix .. "([-/a-z.,;]+)(%., ?)$"  -- 尾綴不是都「空格」已改變  -- "[,46]([-/a-z][-/a-z.,;]*)(%., ?)$"：會有Bug
   -- env.match_pattern = env.p_prefix .. "([-/a-z.,;]+)(%.,[' ]*)$"
   -- env.match_pattern = env.p_prefix .. "([-/a-z.,;]+)(%.,[" .. p_suffix .. " ]*)$"
-  env.match_pattern = check_schema_id ~= "bopomo_onionplus_space" and p_prefix .. "([-/a-z.,;]+)(%.,'?)$" or env.p_prefix .. "([- /a-z.,;]+)(%., *'?)$"
+  env.match_pattern = check_schema_id ~= "bopomo_onionplus_space" and p_prefix .. "([-/a-z.,;']+)(%.,'?)$" or p_prefix .. "([- /a-z.,;']+)(%., *'?)$"  -- 前個「'」為純日語「分節」用！後面為「尾綴」。
   env.tips_jp = "《日-固列》"
   -- env.tips_jp = p_prefix ~= "" and "《日-固列》" or ""
   -- env.prompt_jp = "（日-固列）"
