@@ -58,9 +58,12 @@ local function filter(inp, env)
   local en_sort = context:get_option("en_sort")
   -- local c_input = context.input  -- 原始未轉換輸入碼
   -- local caret_pos = context.caret_pos
-  local start = context:get_preedit().sel_start
-  local _end = context:get_preedit().sel_end
-  local es = _end - start
+  local comp = context.composition
+  local seg = comp:back()
+  -- local p_start = context:get_preedit().sel_start
+  -- local p_end = context:get_preedit().sel_end
+  -- local es = p_end - p_start
+  local es = seg._end - seg.start
   -- local prefix = env.engine.schema.config:get_string("easy_en/prefix")
   -- local input_n = string.len(c_input)
 

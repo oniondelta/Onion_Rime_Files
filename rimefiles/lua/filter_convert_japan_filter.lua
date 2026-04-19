@@ -27,11 +27,17 @@ local function init(env)
   local engine = env.engine
   local schema = engine.schema
   local config = schema.config
-  local check_plus = config:get_string("translator/dictionary") or ""  -- 檢查為獨立方案或掛接方案
-  env.p_prefix = check_plus ~= "jpnin1.extended" and config:get_string("japan/prefix") or ""
-  env.match_pattern = env.p_prefix .. "([-/a-z.,;]+)(%., ?)$"  -- "[,46]([-/a-z][-/a-z.,;]*)(%., ?)$"：會有Bug
+  local check_schema_id = config:get_string("schema/schema_id") or ""
+  -- local check_plus = config:get_string("translator/dictionary") or ""  -- 檢查為獨立方案或掛接方案
+  -- local p_suffix = config:get_string("japan/suffix") or ""
+  -- env.p_prefix = check_plus ~= "jpnin1.extended" and config:get_string("japan/prefix") or ""
+  local p_prefix = not string.match(check_schema_id, "^jpnin1") and config:get_string("japan/prefix") or ""
+  -- env.match_pattern = env.p_prefix .. "([-/a-z.,;]+)(%., ?)$"  -- 尾綴不是都「空格」已改變  -- "[,46]([-/a-z][-/a-z.,;]*)(%., ?)$"：會有Bug
+  -- env.match_pattern = env.p_prefix .. "([-/a-z.,;]+)(%.,[' ]*)$"
+  -- env.match_pattern = env.p_prefix .. "([-/a-z.,;]+)(%.,[" .. p_suffix .. " ]*)$"
+  env.match_pattern = check_schema_id ~= "bopomo_onionplus_space" and p_prefix .. "([-/a-z.,;]+)(%.,'?)$" or env.p_prefix .. "([- /a-z.,;]+)(%., *'?)$"
   env.tips_jp = "《日-固列》"
-  -- env.tips_jp = env.p_prefix ~= "" and "《日-固列》" or ""
+  -- env.tips_jp = p_prefix ~= "" and "《日-固列》" or ""
   -- env.prompt_jp = "（日-固列）"
 end
 
@@ -44,32 +50,38 @@ local function filter(inp, env)
   local engine = env.engine
   local context = engine.context
   local c_input = context.input  -- 原始未轉換輸入碼
-  local start = context:get_preedit().sel_start
-  local _end = context:get_preedit().sel_end
-  local caret_pos = context.caret_pos
+  -- local caret_pos = context.caret_pos
+  local comp = context.composition
+  local seg = comp:back()
+  -- local p_start = context:get_preedit().sel_start
+  -- local p_end = context:get_preedit().sel_end
+  local seg_start = seg.start
+  local seg_end = seg._end
   local c, s = string.match(c_input, env.match_pattern)
 
-  if caret_pos == #c_input and c then
-    local es = _end - start - 2  --減二為扣掉「.,」兩個尾綴（c不包含，故前移兩位）
+  if seg_end == #c_input and c then
+  -- if caret_pos == #c_input and c then
+    -- local es = p_end - p_start - 2  --減二為扣掉「.,」兩個尾綴（c不包含，故前移兩位）
+    local es = seg_end - seg_start - 2  --減二為扣掉「.,」兩個尾綴（c不包含，故前移兩位）
     local c = string.sub(c, -es)
-    -- local c = string.sub(c, start ,_end)
+    -- local c = string.sub(c, p_start ,p_end)
     local jp_p = env.tips_jp .. string.upper(c) .. s
     -- local jp_p = env.p_prefix ~= "" and "《純日語》" .. string.upper(c) .. s .. "\t" .. env.prompt_jp or string.upper(c) .. s .. "\t" .. env.prompt_jp
-    local roma = Candidate("simp_jp", start, caret_pos, revise_t(c) , "〔羅馬字〕")
-    local roma_f = Candidate("simp_jp", start, caret_pos, fullshape_t(c), "〔全形羅馬字〕")
+    local roma = Candidate("simp_jp", seg_start, seg_end, revise_t(c) , "〔羅馬字〕")
+    local roma_f = Candidate("simp_jp",seg_start, seg_end, fullshape_t(c), "〔全形羅馬字〕")
     yield( change_preedit(roma, jp_p) )
     yield( change_preedit(roma_f, jp_p) )
 
     local hw = halfwidth_kata_t(c)
     if not string.match(hw, "%l") then
-      local hwkata = Candidate("simp_jp", start, caret_pos, hw, "〔半形片假名〕")
-      local kata = Candidate("simp_jp", start, caret_pos, kata_t(hw), "〔片假名〕")
-      local hira = Candidate("simp_jp", start, caret_pos, hira_t(hw), "〔平假名〕")
+      local hwkata = Candidate("simp_jp", seg_start, seg_end, hw, "〔半形片假名〕")
+      local kata = Candidate("simp_jp", seg_start, seg_end, kata_t(hw), "〔片假名〕")
+      local hira = Candidate("simp_jp", seg_start, seg_end, hira_t(hw), "〔平假名〕")
       yield( change_preedit(hwkata, jp_p) )
       yield( change_preedit(kata, jp_p) )
       yield( change_preedit(hira, jp_p) )
     else
-      local no_kana = Candidate("simp_jp", start, caret_pos, "", "〔該拼寫無假名〕")
+      local no_kana = Candidate("simp_jp", seg_start, seg_end, "", "〔該拼寫無假名〕")
       yield( change_preedit(no_kana, jp_p) )
     end
 

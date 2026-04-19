@@ -42,11 +42,14 @@ local function init(env)
 
   local check_schema_id = config:get_string("schema/schema_id") or ""
   -- local check_mount = config:get_string("translator/dictionary") or ""  -- 檢查為獨立方案或掛接方案
-  env.p_prefix = check_schema_id ~= "easy_en_lower" and config:get_string("easy_en/prefix") or ""
+  local p_prefix = check_schema_id ~= "easy_en_lower" and config:get_string("easy_en/prefix") or ""
+  -- env.p_prefix = check_schema_id ~= "easy_en_lower" and config:get_string("easy_en/prefix") or ""
   -- env.p_prefix = check_mount ~= "easy_en_lower" and config:get_string("easy_en/prefix") or ""
   -- env.enable_tips = check_mount ~= "easy_en_lower" and true or false
-  env.match_pattern = check_schema_id ~= "bopomo_onionplus_space" and env.p_prefix .. "([-/a-z.,']+)([;/']*)( ?)$" or env.p_prefix .. "([- /a-z.,']+)([;/']*)( ?)$"  -- "[.3]?([-/a-z.,']+)([;/']*)( ?)$"：會有Bug
-  env.tips_en = "《Easy》"
+  -- env.match_pattern = check_schema_id ~= "bopomo_onionplus_space" and env.p_prefix .. "([-/a-z.,']+)([;/']*)( ?)$" or env.p_prefix .. "([- /a-z.,']+)([;/']*)( ?)$"  -- "[.3]?([-/a-z.,']+)([;/']*)( ?)$"：會有Bug
+  -- env.match_pattern = check_schema_id ~= "bopomo_onionplus_space" and env.p_prefix .. "([-/a-z.,']+)([;/']*)( ?)$" or env.p_prefix .. "([- /a-z.,']+)([;/']*)( *)$"  -- "[.3]?([-/a-z.,']+)([;/']*)( ?)$"：會有Bug
+  env.match_pattern = check_schema_id ~= "bopomo_onionplus_space" and p_prefix .. "([-/a-z.,']+)([;/']*)( ?)$" or p_prefix .. "([- /a-z.,']+)([;/']*)( *)$"  -- "[.3]?([-/a-z.,']+)([;/']*)( ?)$"：會有Bug
+  env.tips_en = p_prefix ~= "" and "《Easy》" or ""
 
   env.english_pattern = {
     -- [";;"] = {comment = "〔全大寫〕", func = string.upper},
@@ -67,22 +70,29 @@ local function filter(inp, env)
   local engine = env.engine
   local context = engine.context
   local c_input = context.input  -- 原始未轉換輸入碼
-  local start = context:get_preedit().sel_start
-  -- local _end = context:get_preedit().sel_end + 1  --一般末尾「;」會多一。
-  local caret_pos = context.caret_pos
+  -- local caret_pos = context.caret_pos
+  local comp = context.composition
+  local seg = comp:back()
+  -- local p_start = context:get_preedit().sel_start
+  -- local p_end = context:get_preedit().sel_end + 1  --一般末尾「;」會多一。
+  local seg_start = seg.start
+  local seg_end = seg._end
 
   for cand in inp:iter() do
     yield(cand)
   end
-  
-  if (caret_pos == #c_input) then
+
+  if ( seg_end == #c_input) then
+  -- if (caret_pos == #c_input) then
     local mstr, cp, sp = string.match(c_input, env.match_pattern)  -- 取代 s1~ s5
     local cp_tab = env.english_pattern[cp]
     if cp_tab then
-      local e_cand = Candidate("simp_en", start, caret_pos, cp_tab.func(mstr), cp_tab.comment)
+      local e_cand = Candidate("simp_en", seg_start, seg_end, cp_tab.func(mstr) .. sp, cp_tab.comment)  -- sp 為末端「空格」，作用補末端空格，「bopomo_onionplus_space」方案用的到。
+      local en_p = env.tips_en .. mstr .. cp .. sp
       -- yield( change_preedit(e_cand, env.tips_en .. mstr .. cp .. sp) )
       -- yield( env.enable_tips and change_preedit(e_cand, env.tips_en .. mstr .. cp .. sp) or e_cand )
-      yield( env.p_prefix ~= "" and change_preedit(e_cand, env.tips_en .. mstr .. cp .. sp) or e_cand )
+      -- yield( env.p_prefix ~= "" and change_preedit(e_cand, env.tips_en .. mstr .. cp .. sp) or e_cand )
+      yield( change_preedit(e_cand, en_p) )
 
       -- local kkk=env.engine.schema.config:get_list("easy_en/extra_tags")  -- 以下測試用
       -- log.info(kkk.type)

@@ -64,11 +64,14 @@ local function filter(inp, env)
   local engine = env.engine
   local context = engine.context
   local c_input = context.input  -- 原始未轉換輸入碼
-  -- local array30_r = string.match(c_input, "^==")  -- 改用 schema 內限制
-  local _end2 = context:get_preedit().sel_end + 2
-  local array30_nil_cand = Candidate("simp_array30nil", 0, _end2, "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
-  -- local array30_nil_cand = Candidate("simp_array30nil", 0, string.len(c_input) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
-  -- local array30_nil_cand = Candidate("simp_array30nil", 0, string.len(g_c_t) , "", "⎔")  -- 選擇空碼"⎔"效果為卡住，但 preedit 顯示會有問題
+  local comp = context.composition
+  local seg = comp:back()
+  local array30_nil_cand = Candidate("simp_array30nil", seg.start, seg._end, "", "⎔")
+  -- local p_end2 = context:get_preedit().sel_end + 2
+  -- local array30_nil_cand = Candidate("simp_array30nil", 0, p_end2, "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
+  -- -- local array30_nil_cand = Candidate("simp_array30nil", 0, string.len(c_input) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
+  -- -- local array30_nil_cand = Candidate("simp_array30nil", 0, string.len(g_c_t) , "", "⎔")  -- 選擇空碼"⎔"效果為卡住，但 preedit 顯示會有問題
+  -- -- local array30_r = string.match(c_input, "^==")  -- 改用 schema 內限制
 
   for cand in inp:iter() do
     if #c_input<5 then

@@ -51,6 +51,8 @@ local function filter(inp, env)
   local engine = env.engine
   local context = engine.context
   local c_input = context.input
+  -- local comp = context.composition
+  -- local seg = comp:back()
   local c_f2_s = context:get_option("character_range_bhjm")
   local o_ascii_punct = context:get_option("ascii_punct")
   -- -- local start = context:get_preedit().sel_start
@@ -105,11 +107,16 @@ local function filter(inp, env)
       yield(cand)
     end
   else
+    -- local cand_apostrophe = Candidate("simp_apostrophe", seg.start, seg._end, "'", "〔半角〕")  -- 無法顯示
     for cand in inp:iter() do
       local cand_text = cand.text
       yield(cand_text == "。" and change_comment(cand,"〔句點〕") or
-            (cand_text == "〔" or cand_text == "〕") and change_comment(cand,"〔六角括號〕") or
-            o_ascii_punct and c_input == "'" and Candidate("simp_apostrophe", 0, 1, "'", "〔半角〕") or
+            cand_text == "〔" and change_comment(cand,"〔六角括號〕") or
+            cand_text == "〕" and change_comment(cand,"〔六角括號〕") or
+            cand_text == "\t" and change_comment(cand,"〔Tab製表符〕") or
+            -- o_ascii_punct and c_input == "'" and cand_apostrophe or
+            -- o_ascii_punct and c_input == "'" and Candidate("simp_apostrophe", 0, 1, "'", "〔半角〕") or
+            o_ascii_punct and c_input == "'" and Candidate("simp_apostrophe", cand.start, cand._end, "'", "〔半角〕") or
             cand
            )
     end

@@ -30,10 +30,13 @@ local function filter(inp, env)
   local context = engine.context
   local s_c_f_p_s = context:get_option("simplify_comment")
   local c_input = context.input  -- 原始未轉換輸入碼
-  -- local start = context:get_preedit().sel_start
-  local _end = context:get_preedit().sel_end
-  local array30_nil_cand = Candidate("simp_mix30nil", 0, _end, "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len("⎔")等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
-  -- local array30_nil_cand = Candidate("simp_mix30nil", 0, string.len(c_input) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len("⎔")等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
+  local comp = context.composition
+  local seg = comp:back()
+  local array30_nil_cand = Candidate("simp_mix30nil", seg.start, seg._end, "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len("⎔")等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
+  -- -- local p_start = context:get_preedit().sel_start
+  -- local p_end = context:get_preedit().sel_end
+  -- local array30_nil_cand = Candidate("simp_mix30nil", 0, p_end, "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len("⎔")等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
+  -- -- local array30_nil_cand = Candidate("simp_mix30nil", 0, string.len(c_input) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len("⎔")等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
   local check_i_end = string.match(c_input, "[ ']$")  -- 已在方案用 tags: [ abc ] 限定，不會影響其他掛載方案。
   -- local check_i_end = string.match(c_input, "[a-z,./;][ ']$")
   local check_www = string.match(c_input, "^www[.]" )  -- 直接判別 comment 即可
