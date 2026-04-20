@@ -89,6 +89,7 @@ local function filter(inp, env)
     if cp_tab then
       local e_cand = Candidate("simp_en", seg_start, seg_end, cp_tab.func(mstr) .. sp, cp_tab.comment)  -- sp 為末端「空格」，作用補末端空格，「bopomo_onionplus_space」方案用的到。
       local en_p = env.tips_en .. mstr .. cp .. sp
+      local en_p = not string.find(env.match_pattern, "%*", -3) and en_p or string.gsub(en_p, " ", "␣")  -- 「bopomo_onionplus_space」「preedit」之空格轉為「␣」。
       -- yield( change_preedit(e_cand, env.tips_en .. mstr .. cp .. sp) )
       -- yield( env.enable_tips and change_preedit(e_cand, env.tips_en .. mstr .. cp .. sp) or e_cand )
       -- yield( env.p_prefix ~= "" and change_preedit(e_cand, env.tips_en .. mstr .. cp .. sp) or e_cand )

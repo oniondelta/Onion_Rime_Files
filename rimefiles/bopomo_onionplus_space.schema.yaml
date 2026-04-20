@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onionplus_space
   name: "☆注音(洋蔥plus版 space )☆〔空白不直出〕"
-  version: "202602"
+  version: "202604"
   author:
     - 『洋蔥』
   description: |
@@ -383,6 +383,7 @@ easy_en:
     # - xform|》[/]|》/ |
     # - xform|》'|》' |
     # - xform/\\ / ␣/
+    - xform/ /␣/
     - xform/\\/ /
   comment_format:
     - xform/.+//  #刪除尚未輸入完整碼之提示 ~abc
@@ -418,6 +419,7 @@ easy_en_upper:
     # - 'xform/  / ␣/'
     - xform/^/《Easy》/
     # - xform/\\ / ␣/
+    - xform/ /␣/
     - xform/\\/ /
 
 e_reverse_lookup:
