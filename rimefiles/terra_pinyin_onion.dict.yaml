@@ -262,6 +262,7 @@
 #    詞句中，「咱」皆補齊「zan2」「za2」。
 #    詞句中，「羧」皆補齊「zui1」「suo1」。
 #    詞句中，「酵」皆補齊「xiao4」「jiao4」。
+#    詞句中，「擷」皆補齊「jie2」「xie2」。
 #    詞句中，「搽」皆補齊「cha2」「ca1」。
 #    詞句中，「耙」皆補齊「pa2」「ba4」。
 #    詞句中，「捱」皆補齊「ai2」「ai1」。
@@ -4929,7 +4930,7 @@ min_phrase_weight: 100
 嚜	mo4	1%
 奰	bei4	1%
 懫	zhi4	1%
-擷	jie2	1%
+擷	jie2
 擻	sou4	1%
 擿	ti4	1%
 擿	zhi2	1%
@@ -81266,6 +81267,7 @@ min_phrase_weight: 100
 採場	cai3 chang3
 採場	cai3 chang2	3%
 採擷	cai3 jie2
+採擷	cai3 xie2
 採收率	cai3 shou1 lv4
 採樣率	cai3 yang4 lv4
 採樹種	cai3 shu4 zhong3
@@ -118541,4 +118543,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 118544 #####
+##### @結束 END - 118546 #####
