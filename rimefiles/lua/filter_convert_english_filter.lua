@@ -49,6 +49,7 @@ local function init(env)
   -- env.match_pattern = check_schema_id ~= "bopomo_onionplus_space" and env.p_prefix .. "([-/a-z.,']+)([;/']*)( ?)$" or env.p_prefix .. "([- /a-z.,']+)([;/']*)( ?)$"  -- "[.3]?([-/a-z.,']+)([;/']*)( ?)$"：會有Bug
   -- env.match_pattern = check_schema_id ~= "bopomo_onionplus_space" and env.p_prefix .. "([-/a-z.,']+)([;/']*)( ?)$" or env.p_prefix .. "([- /a-z.,']+)([;/']*)( *)$"  -- "[.3]?([-/a-z.,']+)([;/']*)( ?)$"：會有Bug
   env.match_pattern = check_schema_id ~= "bopomo_onionplus_space" and p_prefix .. "([-/a-z.,']+)([;/']*)( ?)$" or p_prefix .. "([- /a-z.,']+)([;/']*)( *)$"  -- "[.3]?([-/a-z.,']+)([;/']*)( ?)$"：會有Bug
+  -- env.match_pattern = check_schema_id == "bopomo_onionplus_space" and p_prefix .. "([- /a-z.,']+)([;/']*)( *)$"or check_schema_id == "bopomo_onionplus_2" and p_prefix .. "([-|/a-z.,']+)([;/']*)(|*)$" or p_prefix .. "([-/a-z.,']+)([;/']*)( ?)$"  -- "[.3]?([-/a-z.,']+)([;/']*)( ?)$"：會有Bug  -- 「bopomo_onionplus_2」用。
   env.tips_en = p_prefix ~= "" and "《Easy》" or ""
 
   env.english_pattern = {
@@ -87,6 +88,8 @@ local function filter(inp, env)
     local mstr, cp, sp = string.match(c_input, env.match_pattern)  -- 取代 s1~ s5
     local cp_tab = env.english_pattern[cp]
     if cp_tab then
+      -- local mstr = not string.find(env.match_pattern, "|", -4) and mstr or string.gsub(mstr, "|", " ")  -- 「bopomo_onionplus_2」用。
+      -- local sp = not string.find(env.match_pattern, "|", -4) and sp or string.gsub(sp, "|", " ")  -- 「bopomo_onionplus_2」用。
       local e_cand = Candidate("simp_en", seg_start, seg_end, cp_tab.func(mstr) .. sp, cp_tab.comment)  -- sp 為末端「空格」，作用補末端空格，「bopomo_onionplus_space」方案用的到。
       local en_p = env.tips_en .. mstr .. cp .. sp
       local en_p = not string.find(env.match_pattern, "%*", -3) and en_p or string.gsub(en_p, " ", "␣")  -- 「bopomo_onionplus_space」「preedit」之空格轉為「␣」。

@@ -36,6 +36,7 @@ local function init(env)
   -- env.match_pattern = env.p_prefix .. "([-/a-z.,;]+)(%.,[' ]*)$"
   -- env.match_pattern = env.p_prefix .. "([-/a-z.,;]+)(%.,[" .. p_suffix .. " ]*)$"
   env.match_pattern = check_schema_id ~= "bopomo_onionplus_space" and p_prefix .. "([-/a-z.,;']+)(%.,'?)$" or p_prefix .. "([- /a-z.,;']+)(%., *'?)$"  -- 前個「'」為純日語「分節」用！後面為「尾綴」。
+  -- env.match_pattern = check_schema_id == "bopomo_onionplus_space" and p_prefix .. "([- /a-z.,;']+)(%., *'?)$" or check_schema_id == "bopomo_onionplus_2" and p_prefix .. "([-|/a-z.,;']+)(%.,|*'?)$" or p_prefix .. "([-/a-z.,;']+)(%.,'?)$"   -- 前個「'」為純日語「分節」用！後面為「尾綴」。  -- 「bopomo_onionplus_2」用。
   env.tips_jp = "《日-固列》"
   -- env.tips_jp = p_prefix ~= "" and "《日-固列》" or ""
   -- env.prompt_jp = "（日-固列）"
@@ -61,6 +62,9 @@ local function filter(inp, env)
 
   if seg_end == #c_input and c then
   -- if caret_pos == #c_input and c then
+    -- local c = not string.find(env.match_pattern, "|", -6) and c or string.gsub(c, "|", " ")  -- 「bopomo_onionplus_2」用。
+    -- local s = not string.find(env.match_pattern, "|", -6) and s or string.gsub(s, "|", " ")  -- 「bopomo_onionplus_2」用。
+
     -- local es = p_end - p_start - 2  --減二為扣掉「.,」兩個尾綴（c不包含，故前移兩位）
     local es = seg_end - seg_start - 2  --減二為扣掉「.,」兩個尾綴（c不包含，故前移兩位）
     local c = string.sub(c, -es)
