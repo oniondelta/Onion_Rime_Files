@@ -152,6 +152,7 @@
 #    詞句中，「韋」日常發音常會誤發為「wei3」，故皆補齊「wei2」「wei3」，後者詞頻設為80%。
 #    詞句中，「懲」日常發音常會誤發為「cheng3」，故皆補齊「cheng2」「cheng3」。
 #    詞句中，「痙」日常發音常會誤發為「jing1」，臺灣標準為「jing4」，故皆補齊「jing1」「jing4」。
+#    詞句中，「龔」日常發音常會誤發為「gong3」，臺灣標準為「gong1」，故皆補齊「gong1」「gong3」，後者詞頻設為80%。
 #    詞句中，「脂」臺灣日常慣用語音為「zhi3」，臺灣標準為「zhi1」，除「胭脂」「脂粉」兩詞只標註「zhi1」外，其他皆補齊「zhi1」「zhi3」。
 #    詞句中，「冴」日常發音常會誤發為「ya2」，標準為「hu4」，故日文人名中皆補齊「ya2」「hu4」，前者詞頻設為3%。
 #    詞句中，「萎」於某些詞，臺灣日常慣用語音為「wei3」，臺灣標準為「wei1」，故皆補齊「wei1」和「wei3」。
@@ -345,7 +346,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "202604"
+version: "202605"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -3786,6 +3787,21 @@ min_phrase_weight: 100
 諗	nie4	0%
 谂	nie4	0%
 淜	ping2	0%
+姍	shan4	0%
+姍	pan1	0%
+姗	xian1	0%
+姗	shan4	0%
+姗	pan1	0%
+姓	sheng1	0%
+姁	xu1	0%
+㚹	miao2
+㚹	liu2	0%
+懰	liu3	0%
+枻	xie4	0%
+枯	gu1	0%
+箐	qiang1	0%
+筩	yong3	0%
+筩	dong4	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -3935,7 +3951,7 @@ min_phrase_weight: 100
 坳	ao1	1%
 妯	zhu2	1%
 始	shi4	1%
-姍	xian1	1%
+姍	xian1	0%
 宓	fu2	1%
 宛	yuan1	1%
 岝	ze2
@@ -118525,7 +118541,9 @@ min_phrase_weight: 100
 龐眉白髮	pang2 mei2 bai2 fa3
 龐眉皓髮	pang2 mei2 hao4 fa3
 龔行天罰	gong1 xing2 tian1 fa2
+龔行天罰	gong3 xing2 tian1 fa2	80%
 龔黃滿朝	gong1 huang2 man3 chao2
+龔黃滿朝	gong3 huang2 man3 chao2	80%
 龕子	kan1 zi5
 龜兒子	gui1 er2 zi5
 龜山史前文化相	gui1 shan1 shi3 qian2 wen2 hua4 xiang4
@@ -118543,4 +118561,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 118546 #####
+##### @結束 END - 118564 #####
