@@ -3100,8 +3100,8 @@ local function translate(input, seg, env)
     yield_c( eng2_d_date(xd), "〔英文 美式/英式〕", preedittext)
     yield_c( eng3_d_date(xd), "〔英文 美式/英式〕", preedittext)
     yield_c( eng4_d_date(xd), "〔英文美式〕", preedittext)
-    yield_c( "the "..eng1_d_date(xd), "〔英文 美式/英式〕", preedittext)
-    yield_c( "The "..eng1_d_date(xd), "〔英文英式〕", preedittext)
+    yield_c( "the " .. eng1_d_date(xd), "〔英文 美式/英式〕", preedittext)
+    yield_c( "The " .. eng1_d_date(xd), "〔英文英式〕", preedittext)
     return
   elseif xd then  -- 日期大於31跳掉（後改為顯示〈輸入錯誤〉）
     local preedittext = env.prefix .. " " .. xd .. "D" .. "\t 【自訂日期：○日】"
@@ -3237,9 +3237,9 @@ local function translate(input, seg, env)
     yield_c( eng2_m_date(nm) .. " " .. eng3_d_date(nd), "〔英文美式〕", preedittext)
     yield_c( eng3_m_date(nm) .. " " .. eng4_d_date(nd), "〔英文美式〕", preedittext)
     yield_c( eng1_m_date(nm) .. " the " .. eng1_d_date(nd), "〔英文美式〕", preedittext)
-    yield_c( eng2_d_date(nd) .. " "..eng1_m_date(nm), "〔英文英式〕", preedittext)
-    yield_c( eng3_d_date(nd) .. " "..eng1_m_date(nm), "〔英文英式〕", preedittext)
-    yield_c( eng2_d_date(nd) .. " "..eng2_m_date(nm), "〔英文英式〕", preedittext)
+    yield_c( eng2_d_date(nd) .. " " .. eng1_m_date(nm), "〔英文英式〕", preedittext)
+    yield_c( eng3_d_date(nd) .. " " .. eng1_m_date(nm), "〔英文英式〕", preedittext)
+    yield_c( eng2_d_date(nd) .. " " .. eng2_m_date(nm), "〔英文英式〕", preedittext)
     yield_c( "the " .. eng1_d_date(nd) .. " of " .. eng1_m_date(nm), "〔英文英式〕", preedittext)
     yield_c( "The " .. eng1_d_date(nd) .. " of " .. eng1_m_date(nm), "〔英文英式〕", preedittext)
     return
