@@ -453,7 +453,7 @@ local function translate(input, seg, env)
   -- lua 所佔垃圾/記憶體(Garbage)
   if input == env.prefix .. "g" then
     local preedittext = input .. "\t 【Lua 所佔記憶體】(Garbage)"
-    yield_c( ("%.f"):format(collectgarbage("count")) .." KB", "〔 the amount of Lua memory 〕 ~c", preedittext)
+    yield_c( ("%.f"):format(collectgarbage("count")) .. " KB", "〔 the amount of Lua memory 〕 ~c", preedittext)
     -- yield_c( "", " ~c 〔垃圾回收〕(Garbage Collection)", preedittext)
     return
   end
@@ -461,15 +461,15 @@ local function translate(input, seg, env)
   -- 垃圾回收器(Garbage Collection)
   if input == env.prefix .. "gc" then
     local preedittext = input .. "\t 【垃圾回收】(Garbage Collection)"
-    yield_c( ("%.f"):format(collectgarbage("count")) .." KB", "〔 the amount of Lua memory before GC 〕", preedittext)
-    -- yield_c( ("%.f"):format(collectgarbage("count")*1024) .." Bytes", "〔 the amount of lua memory before GC 〕")
-    -- yield_c( collectgarbage("count") .." KB", "〔 the amount of lua memory before GC 〕")
+    yield_c( ("%.f"):format(collectgarbage("count")) .. " KB", "〔 the amount of Lua memory before GC 〕", preedittext)
+    -- yield_c( ("%.f"):format(collectgarbage("count")*1024) .. " Bytes", "〔 the amount of lua memory before GC 〕")
+    -- yield_c( collectgarbage("count") .. " KB", "〔 the amount of lua memory before GC 〕")
     -- yield_c( collectgarbage("count")*1024, "〔 the amount of lua memory before GC 〕")
     collectgarbage()  -- 強制進行垃圾回收
     -- collectgarbage("collect")  -- 做一次完整的垃圾收集循環
-    yield_c( ("%.f"):format(collectgarbage("count")) .." KB", "〔 the amount of Lua memory after GC 〕", preedittext)
-    -- yield_c( ("%.f"):format(collectgarbage("count")*1024) .." Bytes", "〔 the amount of lua memory after GC 〕")
-    -- yield_c( collectgarbage("count") .." KB", "〔 the amount of lua memory after GC 〕")
+    yield_c( ("%.f"):format(collectgarbage("count")) .. " KB", "〔 the amount of Lua memory after GC 〕", preedittext)
+    -- yield_c( ("%.f"):format(collectgarbage("count")*1024) .. " Bytes", "〔 the amount of lua memory after GC 〕")
+    -- yield_c( collectgarbage("count") .. " KB", "〔 the amount of lua memory after GC 〕")
     -- yield_c( collectgarbage("count")*1024, "〔 the amount of lua memory after GC 〕")
     return
   end
@@ -2123,7 +2123,7 @@ local function translate(input, seg, env)
     yield_c( string.gsub(jpymd, "([^%d])0", "%1").." "..t_H..":"..t_M, "〔日本元号〕 ~j", preedittext)
     -- local chinese_date = to_chinese_cal_local(os.time())
     -- local chinese_time = time_description_chinese(os.time())
-    yield_c( ll_1 .." ".. time_description_chinese(os_time), "〔農曆〕 ~l", preedittext)
+    yield_c( ll_1 .. " " .. time_description_chinese(os_time), "〔農曆〕 ~l", preedittext)
     return
   end
 
@@ -2225,8 +2225,8 @@ local function translate(input, seg, env)
     local preedittext = input .. "\t 【現時：年月日時分】"
     -- local chinese_date = to_chinese_cal_local(os.time())
     -- local chinese_time = time_description_chinese(os.time())
-    yield_c( ll_1 .." ".. time_description_chinese(os_time), "〔農曆〕", preedittext)
-    yield_c( ll_2 .." ".. time_description_chinese(os_time), "〔農曆〕", preedittext)
+    yield_c( ll_1 .. " " .. time_description_chinese(os_time), "〔農曆〕", preedittext)
+    yield_c( ll_2 .. " " .. time_description_chinese(os_time), "〔農曆〕", preedittext)
     yield_c( All_g, "〔農曆干支〕", preedittext)
     return
   end
@@ -3157,7 +3157,7 @@ local function translate(input, seg, env)
     local m = tonumber(m) == 0 and "01" or m  -- 「0」校正，置後於「preedittext」，才不會錯誤顯示。
     local d = tonumber(d) == 0 and "01" or d  -- 「0」校正，置後於「preedittext」，才不會錯誤顯示。
     yield_c( y .. "年" .. m .. "月" .. d .. "日", "〔日期〕", preedittext)
-    yield_c( " " .. y .. " 年 " .. m .. " 月 " .. d .." 日 ", "〔*日期*〕", preedittext)
+    yield_c( " " .. y .. " 年 " .. m .. " 月 " .. d .. " 日 ", "〔*日期*〕", preedittext)
     yield_c( fullshape_number(y) .. "年" .. fullshape_number(m) .. "月" .. fullshape_number(d) .. "日", "〔全形〕", preedittext)
     yield_c( ch_y_date(y) .. "年" .. ch_m_date(m) .. "月" .. ch_d_date(d) .. "日", "〔小寫中文〕", preedittext)
     yield_c( chb_y_date(y) .. "年" .. chb_m_date(m) .. "月" .. chb_d_date(d) .. "日", "〔大寫中文〕", preedittext)
