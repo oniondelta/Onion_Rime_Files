@@ -2887,7 +2887,7 @@ local function translate(input, seg, env)
     local str = string.sub(utf_input, 2)
     local c = tonumber(str, n_bit)
     if c == nil then return end
-    local utf_x_u = string.match(utf_input, "^x") or string.match(utf_input, "^u")
+    local utf_x_u = string.match(utf_input, "^[xu]")
     local utf_o = string.match(utf_input, "^o")
     -- local utf_c = string.match(utf_input, "^c")  -- 可省略
     -- local preedittext = utf_prefix .. snd .. " " .. string.upper(string.sub(utf_input, 2))
