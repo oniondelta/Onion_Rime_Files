@@ -2887,26 +2887,28 @@ local function translate(input, seg, env)
     local str = string.sub(utf_input, 2)
     local c = tonumber(str, n_bit)
     if c == nil then return end
-    local utf_x = string.match(utf_input, "^x")
-    local utf_u = string.match(utf_input, "^u")
+    local utf_x_u = string.match(utf_input, "^x") or string.match(utf_input, "^u")
     local utf_o = string.match(utf_input, "^o")
-    local utf_c = string.match(utf_input, "^c")
+    -- local utf_c = string.match(utf_input, "^c")  -- 可省略
     -- local preedittext = utf_prefix .. snd .. " " .. string.upper(string.sub(utf_input, 2))
     local preedittext = env.prefix .. snd .. " " .. string.upper(string.sub(utf_input, 2))
-    if utf_x then
-      -- local fmt = "U" .. snd .. "%" .. (n_bit == 16 and "X" or snd)
-      fmt = "  U+" .. "%X"
-      preedittext = preedittext .. "\t 【內碼十六進制】"  --【內碼十六進制 Hex】(Unicode)
-    elseif utf_u then
-      fmt = "  U+" .. "%X"
-      preedittext = preedittext .. "\t 【內碼十六進制】"  --【內碼十六進制 Hex】(Unicode)
-    elseif utf_o then
-      fmt = "  0o" .. "%o"
-      preedittext = preedittext .. "\t 【內碼八進制】"  --【內碼八進制 Oct】
-    else
-      fmt = "  &#" .. "%d" .. ";"
-      preedittext = preedittext .. "\t 【內碼十進制】"  --【內碼十進制 Dec】
-    end
+    -- if utf_x_u then
+    --   -- local fmt = "U" .. snd .. "%" .. (n_bit == 16 and "X" or snd)
+    --   fmt = "  U+" .. "%X"
+    --   preedittext = preedittext .. "\t 【內碼十六進制】"  --【內碼十六進制 Hex】(Unicode)
+    -- elseif utf_o then
+    --   fmt = "  0o" .. "%o"
+    --   preedittext = preedittext .. "\t 【內碼八進制】"  --【內碼八進制 Oct】
+    -- else
+    --   fmt = "  &#" .. "%d" .. ";"
+    --   preedittext = preedittext .. "\t 【內碼十進制】"  --【內碼十進制 Dec】
+    -- end
+    local fmt = utf_x_u and "  U+" .. "%X" or
+                utf_o and "  0o" .. "%o" or
+                "  &#" .. "%d" .. ";"
+    local preedittext = utf_x_u and preedittext .. "\t 【內碼十六進制】" or
+                        utf_o and preedittext .. "\t 【內碼八進制】" or
+                        preedittext .. "\t 【內碼十進制】"
     -- 單獨查找(改用下面迴圈執行)
     -- local cand_ui_s = Candidate("simp_mf_utf", seg.start, seg._end, utf8_out(c), string.format(fmt, c) .. "（ " .. url_encode(utf8_out(c)) .. " ）" )
     -- 排除數字太大超出範圍。正常範圍輸出已 string_char，故 0 直接可以限定。
@@ -2917,8 +2919,10 @@ local function translate(input, seg, env)
     -- 區間查找
     -- if (c*n_bit+n_bit-1 < 1048575) then  -- 補下一位，如：x8d70 為「走」，補 x8d70[0-f]。
     --   for i = c*n_bit, c*n_bit+n_bit-1 do
-    if c+16 <= 1048575 then  -- 補後面 16 碼，如：x8d70 為「走」，補 x8d7[0+16] 到 x8d80。
-      for i = c, c+16 do
+    if c+32 <= 1048575 then  -- 補後面 32 碼，如：x8d70 為「走」，補 x8d70[+32] 到 x8d90。
+      for i = c, c+32 do
+    -- if c+16 <= 1048575 then  -- 補後面 16 碼，如：x8d70 為「走」，補 x8d70[+16] 到 x8d80。
+    --   for i = c, c+16 do
       -- for i = c+1, c+16 do
         yield_c( utf8_out(i), string.format(fmt, i) .. "（ " .. url_encode(utf8_out(i)) .. " ）", preedittext)
       end
@@ -2938,7 +2942,7 @@ local function translate(input, seg, env)
   -- local urlencode_input = string.match(input, urlencode_prefix .. "([0-9a-z][0-9a-f]*)$")
   -- local urlencode_input = string.match(input, env.prefix_s .. "i([0-9a-z][0-9a-f]*)$")
   if urlencode_input then
-    local preedit_urlencode = string.gsub(urlencode_input, "(..)", "%1 ")
+    local preedit_urlencode = string.gsub(urlencode_input, "(%w%w)", "%1 ")
     local urlencode_code = string.gsub(urlencode_input, "(%x%x)", "%%%1")
     local urlencode_code = string.gsub(urlencode_code, "(%x%x)(%x)$", "%1%%%2")
     local urlencode_code = string.gsub(urlencode_code, "^(%x)$", "%%%1")
@@ -3009,12 +3013,12 @@ local function translate(input, seg, env)
   --   else
   --     -- local u_c = string.upper(url_c_input)
   --     -- local u_c = string.gsub(u_c, '^', '%%')
-  --     -- local u_c = string.gsub(u_c, '^(%%..)(..)', '%1%%%2')
-  --     -- local u_c = string.gsub(u_c, '^(%%..%%..)(.+)', '%1%%%2')
-  --     -- local u_c = string.gsub(u_c, '^(%%..%%..%%..)(.+)', '%1%%%2')
-  --     -- local u_c = string.gsub(u_c, '^(%%..%%..%%..%%..)(.+)', '%1%%%2')
-  --     -- local u_c = string.gsub(u_c, '^(%%..%%..%%..%%..%%..)(.+)', '%1%%%2')
-  --     -- local u_c = string.gsub(u_c, '^(..)(.?.?)(.?.?)(.?.?)(.?.?)(.?.?)$', '%%%1%%%2%%%3%%%4%%%5%%%6')
+  --     -- local u_c = string.gsub(u_c, '^(%%%w%w)(%w%w)', '%1%%%2')
+  --     -- local u_c = string.gsub(u_c, '^(%%%w%w%%%w%w)(%w+)', '%1%%%2')
+  --     -- local u_c = string.gsub(u_c, '^(%%%w%w%%%w%w%%%w%w)(%w+)', '%1%%%2')
+  --     -- local u_c = string.gsub(u_c, '^(%%%w%w%%%w%w%%%w%w%%%w%w)(%w+)', '%1%%%2')
+  --     -- local u_c = string.gsub(u_c, '^(%%%w%w%%%w%w%%%w%w%%%w%w%%%w%w)(%w+)', '%1%%%2')
+  --     -- local u_c = string.gsub(u_c, '^(%w%w)(%w?%w?)(%w?%w?)(%w?%w?)(%w?%w?)(%w?%w?)$', '%%%1%%%2%%%3%%%4%%%5%%%6')
   --     -- local u_c = string.gsub(u_c, '[%%]+$', '')
   --     -- yield_c( utf8_out(url_10), u_c )
   --     local cand_uci_s = Candidate("simp_mf_urlencode", seg.start, seg._end, utf8_out(url_10), url_encode(utf8_out(url_10)) )
