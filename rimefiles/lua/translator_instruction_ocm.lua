@@ -112,7 +112,7 @@ local function translate(input, seg, env)
       -- cand.preedit = input .. "\t※ 輸入〔項目〕每字第一個注音，調出相關符號。"
       yield(cand)
     end
-    return
+    -- return
   end
 
   -- if input:find("^;;$") then
@@ -124,7 +124,7 @@ local function translate(input, seg, env)
       cand.preedit = input .. "\t《EMOJI集》▶"
       yield(cand)
     end
-    return
+    -- return
   end
 
 end
