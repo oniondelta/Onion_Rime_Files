@@ -124,6 +124,7 @@
 #    詞句中，「昔」臺灣字典發音和習慣發音為「xi2」，大陸發音為「xi1」，斟酌後全改成臺灣發音「xi2」。
 #    詞句中，「惜」臺灣字典發音和習慣發音為「xi2」，大陸發音為「xi1」，斟酌後全改成臺灣發音「xi2」。
 #    詞句中，「錫」臺灣字典發音和習慣發音為「xi2」，大陸發音為「xi1」，斟酌後全改成臺灣發音「xi2」。
+#    詞句中，「鞠」臺灣字典發音和習慣發音為「ju2」，大陸發音為「ju1」，斟酌後全改成臺灣發音「ju2」。
 #    詞句中，「築」臺灣字典發音和習慣發音為「zhu2」，大陸發音為「zhu4」，斟酌後全改成臺灣發音「zhu2」。
 #    詞句中，「麴」臺灣字典發音和習慣發音為「qu2」，大陸發音為「qu1」，斟酌後全改成臺灣發音「qu2」。
 #    詞句中，「煦」臺灣字典發音和習慣發音為「xu3」，大陸發音為「xu4」，斟酌後全改成臺灣發音「xu3」。
@@ -162,6 +163,7 @@
 #    詞句中，「鷲」日常發音常會誤發為「jiu1」，臺灣標準為「jiu4」，故皆補齊「jiu4」「jiu1」，後者詞頻設為80%。
 #    詞句中，「珀」日常發音常會誤發為「bo4」，臺灣標準為「po4」，故皆補齊「po4」「bo4」，後者詞頻設為80%。
 #    詞句中，「灸」日常發音常會誤發為「jiu1」，臺灣標準為「jiu3」，故全都補齊「jiu3」「jiu1」，後者詞頻設為80%。
+#    詞句中，「蒲」日常發音常會誤發為「pu3」，臺灣標準為「pu2」，故皆補齊「pu2」「pu3」，後者詞頻設為80%。。
 #    詞句中，「鉻」日常發音常會誤發為「ge2」和「luo4」，臺灣標準為「ge4」，故皆補齊「ge4」「ge2」「luo4」。
 #    詞句中，「蹼」臺灣標準為「pu2」，大陸標準為「pu3」，日常易混，故皆補齊「pu2」「pu3」。
 #    詞句中，「隼」臺灣標準為「zhun3」，大陸標準為「sun3」，日常易混，故皆補齊「zhun3」「sun3」。
@@ -204,6 +206,10 @@
 #    詞句中，「鉭」臺灣標準為「dan4」，大陸標準為「tan3」，日常易混，故全都補齊「dan4」「tan3」。
 #    詞句中，「嘌」臺灣標準為「piao1」，大陸標準為「piao4」，日常易混，故全都補齊「piao1」「piao4」。
 #    詞句中，「冇」臺灣標準為「mou3」，大陸標準為「mao3」，日常易混，故全都補齊「mou3」「mao3」。
+#    詞句中，「亳」臺灣標準為「bo4」，大陸標準為「bo2」，日常易混，故全都補齊「bo4」「bo2」。
+#    詞句中，「屘」臺灣標準為「man1」，大陸標準為「man3」，日常易混，故全都補齊「man1」「man3」。
+#    詞句中，「撖」臺灣標準為「gan3」，大陸標準為「han4」，日常易混，故全都補齊「gan3」「han4」。
+#    詞句中，「樗」臺灣標準為「shu1」，大陸標準為「chu1」，日常易混，故全都補齊「shu1」「chu1」。
 #    詞句中，「呤」臺灣標準和大陸標準皆有「ling2」該發音，但大陸標準為某化學物質時發「ling4」，故全都補齊「ling2」「ling4」。
 #    詞句中，「肘」臺灣標準為「zhou3」，日常發音常會誤發為「zhou2」，故皆補齊「zhou3」「zhou2」，後者詞頻設為80%。
 #    詞句中，「蕾」臺灣標準為「lei3」，日常發音常會誤發為「lei2」，，故皆補齊「lei3」「lei2」，後者詞頻設為80%。
@@ -274,6 +280,7 @@
 #    詞句中，「皖」皆補齊「wan3」「huan3」。
 #    詞句中，「鱖」皆補齊「gui4」「jue2」。
 #    詞句中，「偕」皆補齊「xie2」「jie1」。
+#    詞句中，「瀕」皆補齊「bin1」「pin2」。
 #    詞句中，「恣」臺灣標準為「zi4」「ci1」，前者又音為「zi1」，日常「zi4」和「zi1」易混，故互相補齊。「恣睢」等發音為「ci1」不補。
 #    詞句中，「績」「蹟」「跡」「迹」臺灣標準為「ji1」，大陸標準為「ji4」，只保留「ji1」發音。
 #    詞句中，「寂」臺灣標準為「ji2」，大陸標準為「ji4」，只保留「ji2」發音。
@@ -294,6 +301,7 @@
 #    詞句中，「疙瘩」補齊「ge1 da5」「ge1 da2」「ge1 da1」。
 #    詞句中，「姑娘」補齊「gu1 niang2」和「gu1 niang5」，後者詞頻設為80%。
 #    詞句中，「親戚」補齊「qin1 qi1」和「qin1 qi4」，後者詞頻設為80%。
+#    詞句中，「滑稽」臺灣字典發音為「gu3 ji1」，但字典說明今或讀為「hua2 ji1」，故皆補齊「gu3 ji1」「hua2 ji1」。
 #    詞句中，「煞車」和「剎車」補齊「sha1 che1」和「sha4 che1」，「剎車」標註「sha4 che1」時，詞頻設為80%。
 #    詞句中，「證券」和「証券」臺灣字典發音為「zheng4 quan4」，日常發音常會誤發為「zheng4 juan4」，故皆補齊「zheng4 quan4」「zheng4 juan4」，後者詞頻設為80%。
 #    詞句中，「債券」臺灣字典發音為「zhai4 quan4」，日常發音常會誤發為「zhai4 juan4」，故皆補齊「zhai4 quan4」「zhai4 juan4」，後者詞頻設為80%。
@@ -351,7 +359,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "202605"
+version: "202606"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -3810,6 +3818,41 @@ min_phrase_weight: 100
 萩	di2	0%
 裯	dao1
 裯	chu2	0%
+伉	gang1	0%
+伉	kang3	0%
+仰	ang2	0%
+仱	qin2	0%
+仱	jin1
+仿	pang2	0%
+伈	lin3	0%
+鞠	qiong1	0%
+鞠	qu1	0%
+崗	gang4	0%
+岗	gang4	0%
+岗	gang1
+㟠	gang1
+炕	hang1	0%
+炎	tan2	0%
+煒	hui1	0%
+炜	hui1	0%
+煇	hun2	0%
+煇	yun4	0%
+煇	xun1	0%
+煇	xuan4	0%
+蒲	bo2	0%
+苧	ning2	0%
+# 苎	ning2	0%
+苙	ji2	0%
+藋	zhuo2	0%
+芭	pa1	0%
+苦	gu3	0%
+苦	hu4	0%
+閒	jian3	0%
+閔	min2	0%
+闵	min2	0%
+葑	feng4	0%
+郇	huan2
+郃	xia2	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -4127,7 +4170,7 @@ min_phrase_weight: 100
 革	ji2	1%
 㟏	han1	1%
 㭘	xia2	1%
-亳	bo4	1%
+亳	bo4
 俱	ju1	1%
 俺	yan4	1%
 俾	bei1	1%
@@ -4161,7 +4204,7 @@ min_phrase_weight: 100
 害	he2	1%
 家	gu1	1%
 射	shi2	1%
-屘	man1	1%
+屘	man1
 崁	kan3	1%
 庫	she4	1%
 庬	mang2	1%
@@ -4705,7 +4748,7 @@ min_phrase_weight: 100
 撈	lao2	1%
 撏	xun2	1%
 撕	xi1	1%
-撖	gan3	1%
+撖	gan3
 撞	chuang2	1%
 撟	jiao4	1%
 撢	tan4	1%
@@ -5010,7 +5053,7 @@ min_phrase_weight: 100
 懵	meng2	1%
 斄	li2	1%
 旝	kuai4	1%
-瀕	pin2	1%
+瀕	pin2	10%
 爆	bo2	1%
 爊	ao2	1%
 犦	bao4	1%
@@ -78889,7 +78932,7 @@ min_phrase_weight: 100
 戧金	qiang4 jin1
 截屏	jie2 ping2
 截擊	jie2 ji2
-截蒲為牒	jie2 pu3 wei2 die2
+截蒲為牒	jie2 pu3 wei2 die2	80%
 截蒲為牒	jie2 pu2 wei2 die2
 截鐙留鞭	jie2 deng1 liu2 bian1
 截長補短	jie2 chang2 bu3 duan3
@@ -79025,6 +79068,7 @@ min_phrase_weight: 100
 扇牌	shan4 pai2
 扇舞	shan4 wu3
 扇葉蒲葵	shan4 ye4 pu2 kui2
+扇葉蒲葵	shan4 ye4 pu3 kui2	80%
 扇誘	shan1 you4
 扇貝	shan4 bei4
 扇車	shan4 che1
@@ -85912,6 +85956,7 @@ min_phrase_weight: 100
 木強則折	mu4 qiang2 ze2 zhe2
 木拐梯子	mu4 guai3 ti1 zi5
 木木樗樗	mu4 mu4 shu1 shu1
+木木樗樗	mu4 mu4 chu1 chu1
 木柈子	mu4 pan4 zi5
 木椆	mu4 zhou4
 木楂	mu4 cha2
@@ -87442,11 +87487,19 @@ min_phrase_weight: 100
 樓梯間	lou2 ti1 jian1
 樓車	lou2 ju1
 樗散	shu1 san3
+樗散	chu1 san3
 樗朽之材	shu1 xiu3 zhi1 cai2
+樗朽之材	chu1 xiu3 zhi1 cai2
 樗材	shu1 cai2
+樗材	chu1 cai2
 樗櫟	shu1 li4
+樗櫟	chu1 li4
 樗櫟庸材	shu1 li4 yong1 cai2
+樗櫟庸材	chu1 li4 yong1 cai2
 樗蒲	shu1 pu2
+樗蒲	shu1 pu3	80%
+樗蒲	chu1 pu2
+樗蒲	chu1 pu3	80%
 標占	biao1 zhan4
 標垛	biao1 duo3
 標子	biao1 zi5
@@ -91306,9 +91359,10 @@ min_phrase_weight: 100
 滑熟	hua2 shu2
 滑熟	hua2 shou2
 滑碌碌	hua2 lu4 lu4
-滑稽	gu3 ji1	0%
+滑稽	gu3 ji1	5%
 滑稽	hua2 ji1
 滑稽劇	hua2 ji1 ju4
+滑稽劇	gu3 ji1 ju4
 滑稽大鼓	hua2 ji1 da4 gu3
 滑稽大鼓	gu3 ji1 da4 gu3
 滑稽戲	hua2 ji1 xi4
@@ -91833,8 +91887,11 @@ min_phrase_weight: 100
 瀏覽量	liu2 lan3 liang4
 瀑風	bao4 feng1
 瀕危	bin1 wei2
+瀕危	pin2 wei2
 瀕危物種	bin1 wei2 wu4 zhong3
+瀕危物種	pin2 wei2 wu4 zhong3
 瀕危野生動植物種國際貿易公約	bin1 wei2 ye3 sheng1 dong4 zhi2 wu4 zhong3 guo2 ji4 mao4 yi4 gong1 yue1
+瀕危野生動植物種國際貿易公約	pin2 wei2 ye3 sheng1 dong4 zhi2 wu4 zhong3 guo2 ji4 mao4 yi4 gong1 yue1
 瀝血之仇	li4 xue4 zhi1 chou2
 瀝血之仇	li4 xie3 zhi1 chou2
 瀧夫	long2 fu1
@@ -104515,14 +104572,23 @@ min_phrase_weight: 100
 蒜髮	suan4 fa3
 蒱睃摸索	pu2 jun4 mo1 suo3
 蒲扇	pu2 shan4
+蒲扇	pu3 shan4	80%
 蒲扇價增	pu2 shan4 jia4 zeng1
+蒲扇價增	pu3 shan4 jia4 zeng1	80%
 蒲甘王朝	pu2 gan1 wang2 chao2
+蒲甘王朝	pu3 gan1 wang2 chao2	80%
 蒲窩子	pu2 wo1 zi5
+蒲窩子	pu3 wo1 zi5	80%
 蒲葵扇	pu2 kui2 shan4
+蒲葵扇	pu3 kui2 shan4	80%
 蒲隆地	pu2 long2 di4
+蒲隆地	pu3 long2 di4	80%
 蒲隆地共和國	pu2 long2 di4 gong4 he2 guo2
+蒲隆地共和國	pu3 long2 di4 gong4 he2 guo2	80%
 蒲鞭示辱	pu2 bian1 shi4 ru4
 蒲鞭示辱	pu2 bian1 shi4 ru3
+蒲鞭示辱	pu3 bian1 shi4 ru4	80%
+蒲鞭示辱	pu3 bian1 shi4 ru3	80%
 蒸散	zheng1 san4
 蒸散作用	zheng1 san4 zuo4 yong4
 蒸氣重整	zheng1 qi4 chong2 zheng3
@@ -109716,7 +109782,6 @@ min_phrase_weight: 100
 蹭棱子	ceng4 ling2 zi5	80%
 蹲便器	dun1 bian4 qi4
 蹴鞠	cu4 ju2
-蹴鞠	cu4 ju1
 蹶子	jue2 zi5
 蹶子	jue3 zi5
 蹶石伐木	jue2 shi2 fa1 mu4
@@ -116175,9 +116240,7 @@ min_phrase_weight: 100
 鞠旅	ju2 lv3
 鞠育	ju2 yu4
 鞠躬	ju2 gong1
-鞠躬	ju1 gong1
 鞠躬盡瘁	ju2 gong1 jin4 cui4
-鞠躬盡瘁	ju1 gong1 jin4 cui4
 鞠部	ju2 bu4
 鞠部頭	ju2 bu4 tou2
 鞠養	ju2 yang3
@@ -118309,6 +118372,7 @@ min_phrase_weight: 100
 黃色炸藥	huang2 se4 zha4 yao4
 黃芪	huang2 qi2
 黃花崗七十二烈士	huang2 hua1 gang1 qi1 shi2 er4 lie4 shi4
+黃花崗七十二烈士	huang2 hua1 gang3 qi1 shi2 er4 lie4 shi4
 黃萎病	huang2 wei1 bing4
 黃萎病	huang2 wei3 bing4
 黃落	huang2 luo4
@@ -118686,4 +118750,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 118689 #####
+##### @結束 END - 118753 #####
