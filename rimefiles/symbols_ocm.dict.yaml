@@ -4,7 +4,7 @@
 # 『洋蔥』製作
 ---
 name: symbols_ocm
-version: "202604"
+version: "202606"
 sort: original
 use_preset_vocabulary: false
 ...
@@ -6078,6 +6078,7 @@ $	ps
 ₥	ps
 ₦	ps
 ₧	ps
+₨	ps
 ₩	ps
 ₪	ps
 ₫	ps
@@ -6096,8 +6097,13 @@ $	ps
 ₸	ps
 ₹	ps
 ₺	ps
-₨	ps
 ﷼	ps
+₻	ps
+₼	ps
+₽	ps
+₾	ps
+₿	ps
+⃀	ps
 ### 結構【倉頡】 ###
 ⿰	st
 ⿱	st
@@ -6112,6 +6118,11 @@ $	ps
 ⿺	st
 ⿻	st
 〾	st
+⿼	st
+⿽	st
+⿾	st
+⿿	st
+㇯	st
 ### 倉頡【結構】 ###
 ⿰	ay
 ⿱	ay
@@ -6126,84 +6137,90 @@ $	ps
 ⿺	ay
 ⿻	ay
 〾	ay
+⿼	ay
+⿽	ay
+⿾	ay
+⿿	ay
+㇯	ay
 ### 偏旁 ###
+⺄	pl
 乛	pl
-冫	pl
-丷	pl
+⼎	pl
+⺍	pl
 龹	pl
 ⺌	pl
 龸	pl
-亻	pl
+⺅	pl
 亼	pl
 亽	pl
 仒	pl
-冖	pl
-冂	pl
+⼍	pl
+⼌	pl
 冃	pl
 冄	pl
-宀	pl
-罒	pl
+⼧	pl
+⺫	pl
 㓁	pl
-罓	pl
+⺱	pl
 冈	pl
-凵	pl
-厶	pl
-刂	pl
-勹	pl
-匚	pl
-匸	pl
-卩	pl
-阝	pl
-厂	pl
+⼐	pl
+⼛	pl
+⺉	pl
+⼓	pl
+⼕	pl
+⼖	pl
+⼙	pl
+⻏	pl
+⼚	pl
 丆	pl
-广	pl
+⼴	pl
 壬	pl
 訁	pl
-讠	pl
-釒	pl
+⻈	pl
+⻐	pl
 钅	pl
-飠	pl
-饣	pl
+⻞	pl
+⻟	pl
 龺	pl
-攵	pl
-夂	pl
-夊	pl
-尢	pl
+⺙	pl
+⼢	pl
+⼡	pl
+⼪	pl
 尣	pl
 兂	pl
-旡	pl
+⺛	pl
 巜	pl
-巛	pl
-彐	pl
-彑	pl
-彡	pl
-彳	pl
-龰	pl
-辶	pl
-廴	pl
+⼮	pl
+⺕	pl
+⺔	pl
+⼺	pl
+⼻	pl
+⻊	pl
+⻌	pl
+⼵	pl
 㞢	pl
-忄	pl
-㣺	pl
-扌	pl
-爫	pl
+⺖	pl
+⺗	pl
+⺘	pl
+⺤	pl
 龵	pl
-廾	pl
-歺	pl
-癶	pl
-氵	pl
-氺	pl
-火	pl
-灬	pl
-爿	pl
-丬	pl
-疒	pl
-牜	pl
+⼶	pl
+⺞	pl
+⽍	pl
+⺡	pl
+⺢	pl
+⽕	pl
+⺣	pl
+⽚	pl
+⺦	pl
+⽧	pl
+⺧	pl
 ⺶	pl
-犭	pl
-豕	pl
-豸	pl
-虍	pl
-艹	pl
+⺨	pl
+⾗	pl
+⾘	pl
+⾌	pl
+⺾	pl
 卝	pl
 龷	pl
 丗	pl
@@ -6211,237 +6228,553 @@ $	ps
 芈	pl
 丵	pl
 菐	pl
-黹	pl
-礻	pl
-衤	pl
-糸	pl
-糹	pl
-纟	pl
+⿌	pl
+⺬	pl
+⻂	pl
+⽷	pl
+⺯	pl
+⺰	pl
 龻	pl
 镸	pl
-髟	pl
-襾	pl
-覀	pl
+⾽	pl
+⾾	pl
+⻃	pl
 吅	pl
 㗊	pl
 㠭	pl
 㸚	pl
 叕	pl
+### 偏旁 ###（以下2026年3月21日前，舊的）
+# 乛	pl
+# 冫	pl
+# 丷	pl
+# 龹	pl
+# ⺌	pl
+# 龸	pl
+# 亻	pl
+# 亼	pl
+# 亽	pl
+# 仒	pl
+# 冖	pl
+# 冂	pl
+# 冃	pl
+# 冄	pl
+# 宀	pl
+# 罒	pl
+# 㓁	pl
+# 罓	pl
+# 冈	pl
+# 凵	pl
+# 厶	pl
+# 刂	pl
+# 勹	pl
+# 匚	pl
+# 匸	pl
+# 卩	pl
+# 阝	pl
+# 厂	pl
+# 丆	pl
+# 广	pl
+# 壬	pl
+# 訁	pl
+# 讠	pl
+# 釒	pl
+# 钅	pl
+# 飠	pl
+# 饣	pl
+# 龺	pl
+# 攵	pl
+# 夂	pl
+# 夊	pl
+# 尢	pl
+# 尣	pl
+# 兂	pl
+# 旡	pl
+# 巜	pl
+# 巛	pl
+# 彐	pl
+# 彑	pl
+# 彡	pl
+# 彳	pl
+# 龰	pl
+# 辶	pl
+# 廴	pl
+# 㞢	pl
+# 忄	pl
+# 㣺	pl
+# 扌	pl
+# 爫	pl
+# 龵	pl
+# 廾	pl
+# 歺	pl
+# 癶	pl
+# 氵	pl
+# 氺	pl
+# 火	pl
+# 灬	pl
+# 爿	pl
+# 丬	pl
+# 疒	pl
+# 牜	pl
+# ⺶	pl
+# 犭	pl
+# 豕	pl
+# 豸	pl
+# 虍	pl
+# 艹	pl
+# 卝	pl
+# 龷	pl
+# 丗	pl
+# 龶	pl
+# 芈	pl
+# 丵	pl
+# 菐	pl
+# 黹	pl
+# 礻	pl
+# 衤	pl
+# 糸	pl
+# 糹	pl
+# 纟	pl
+# 龻	pl
+# 镸	pl
+# 髟	pl
+# 襾	pl
+# 覀	pl
+# 吅	pl
+# 㗊	pl
+# 㠭	pl
+# 㸚	pl
+# 叕	pl
 ### 部首(康熙) ###
-一	lb
-丨	lb
-丶	lb
-丿	lb
-乙	lb
-亅	lb
-二	lb
-亠	lb
-人	lb
-儿	lb
-入	lb
-八	lb
-冂	lb
-冖	lb
-冫	lb
-几	lb
-凵	lb
-刀	lb
-力	lb
-勹	lb
-匕	lb
-匚	lb
-匸	lb
-十	lb
-卜	lb
-卩	lb
-厂	lb
-厶	lb
-又	lb
-口	lb
-囗	lb
-土	lb
-士	lb
-夂	lb
-夊	lb
-夕	lb
-大	lb
-女	lb
-子	lb
-宀	lb
-寸	lb
-小	lb
-尢	lb
-尸	lb
-屮	lb
-山	lb
-巛	lb
-工	lb
-己	lb
-巾	lb
-干	lb
-幺	lb
-广	lb
-廴	lb
-廾	lb
-弋	lb
-弓	lb
-彐	lb
-彡	lb
-彳	lb
-心	lb
-戈	lb
-戶	lb
-手	lb
-支	lb
-攴	lb
-文	lb
-斗	lb
-斤	lb
-方	lb
-无	lb
-日	lb
-曰	lb
-月	lb
-木	lb
-欠	lb
-止	lb
-歹	lb
-殳	lb
-毋	lb
-比	lb
-毛	lb
-氏	lb
-气	lb
-水	lb
-火	lb
-爪	lb
-父	lb
-爻	lb
-爿	lb
-片	lb
-牙	lb
-牛	lb
-犬	lb
-玄	lb
-玉	lb
-瓜	lb
-瓦	lb
-甘	lb
-生	lb
-用	lb
-田	lb
-疋	lb
-疒	lb
-癶	lb
-白	lb
-皮	lb
-皿	lb
-目	lb
-矛	lb
-矢	lb
-石	lb
-示	lb
-禸	lb
-禾	lb
-穴	lb
-立	lb
-竹	lb
-米	lb
-糸	lb
-缶	lb
-网	lb
-羊	lb
-羽	lb
-老	lb
-而	lb
-耒	lb
-耳	lb
-聿	lb
-肉	lb
-臣	lb
-自	lb
-至	lb
-臼	lb
-舌	lb
-舛	lb
-舟	lb
-艮	lb
-色	lb
-艸	lb
-虍	lb
-虫	lb
-血	lb
-行	lb
-衣	lb
-襾	lb
-見	lb
-角	lb
-言	lb
-谷	lb
-豆	lb
-豕	lb
-豸	lb
-貝	lb
-赤	lb
-走	lb
-足	lb
-身	lb
-車	lb
-辛	lb
-辰	lb
-辵	lb
-邑	lb
-酉	lb
-釆	lb
-里	lb
-金	lb
-長	lb
-門	lb
-阜	lb
-隶	lb
-隹	lb
-雨	lb
-靑	lb
-非	lb
-面	lb
-革	lb
-韋	lb
-韭	lb
-音	lb
-頁	lb
-風	lb
-飛	lb
-食	lb
-首	lb
-香	lb
-馬	lb
-骨	lb
-高	lb
-髟	lb
-鬥	lb
-鬯	lb
-鬲	lb
-鬼	lb
-魚	lb
-鳥	lb
-鹵	lb
-鹿	lb
-麥	lb
-麻	lb
-黃	lb
-黍	lb
-黑	lb
-黹	lb
-黽	lb
-鼎	lb
-鼓	lb
-鼠	lb
-鼻	lb
-齊	lb
-齒	lb
-龍	lb
-龜	lb
-龠	lb
+⼀	lb
+⼁	lb
+⼂	lb
+⼃	lb
+⼄	lb
+⼅	lb
+⼆	lb
+⼇	lb
+⼈	lb
+⼉	lb
+⼊	lb
+⼋	lb
+⼌	lb
+⼍	lb
+⼎	lb
+⼏	lb
+⼐	lb
+⼑	lb
+⼒	lb
+⼓	lb
+⼔	lb
+⼕	lb
+⼖	lb
+⼗	lb
+⼘	lb
+⼙	lb
+⼚	lb
+⼛	lb
+⼜	lb
+⼝	lb
+⼞	lb
+⼟	lb
+⼠	lb
+⼡	lb
+⼢	lb
+⼣	lb
+⼤	lb
+⼥	lb
+⼦	lb
+⼧	lb
+⼨	lb
+⼩	lb
+⼪	lb
+⼫	lb
+⼬	lb
+⼭	lb
+⼮	lb
+⼯	lb
+⼰	lb
+⼱	lb
+⼲	lb
+⼳	lb
+⼴	lb
+⼵	lb
+⼶	lb
+⼷	lb
+⼸	lb
+⼹	lb
+⼺	lb
+⼻	lb
+⼼	lb
+⼽	lb
+⼾	lb
+⼿	lb
+⽀	lb
+⽁	lb
+⽂	lb
+⽃	lb
+⽄	lb
+⽅	lb
+⽆	lb
+⽇	lb
+⽈	lb
+⽉	lb
+⽊	lb
+⽋	lb
+⽌	lb
+⽍	lb
+⽎	lb
+⽏	lb
+⽐	lb
+⽑	lb
+⽒	lb
+⽓	lb
+⽔	lb
+⽕	lb
+⽖	lb
+⽗	lb
+⽘	lb
+⽙	lb
+⽚	lb
+⽛	lb
+⽜	lb
+⽝	lb
+⽞	lb
+⽟	lb
+⽠	lb
+⽡	lb
+⽢	lb
+⽣	lb
+⽤	lb
+⽥	lb
+⽦	lb
+⽧	lb
+⽨	lb
+⽩	lb
+⽪	lb
+⽫	lb
+⽬	lb
+⽭	lb
+⽮	lb
+⽯	lb
+⽰	lb
+⽱	lb
+⽲	lb
+⽳	lb
+⽴	lb
+⽵	lb
+⽶	lb
+⽷	lb
+⽸	lb
+⽹	lb
+⽺	lb
+⽻	lb
+⽼	lb
+⽽	lb
+⽾	lb
+⽿	lb
+⾀	lb
+⾁	lb
+⾂	lb
+⾃	lb
+⾄	lb
+⾅	lb
+⾆	lb
+⾇	lb
+⾈	lb
+⾉	lb
+⾊	lb
+⾋	lb
+⾌	lb
+⾍	lb
+⾎	lb
+⾏	lb
+⾐	lb
+⾑	lb
+⾒	lb
+⾓	lb
+⾔	lb
+⾕	lb
+⾖	lb
+⾗	lb
+⾘	lb
+⾙	lb
+⾚	lb
+⾛	lb
+⾜	lb
+⾝	lb
+⾞	lb
+⾟	lb
+⾠	lb
+⾡	lb
+⾢	lb
+⾣	lb
+⾤	lb
+⾥	lb
+⾦	lb
+⾧	lb
+⾨	lb
+⾩	lb
+⾪	lb
+⾫	lb
+⾬	lb
+⾭	lb
+⾮	lb
+⾯	lb
+⾰	lb
+⾱	lb
+⾲	lb
+⾳	lb
+⾴	lb
+⾵	lb
+⾶	lb
+⾷	lb
+⾸	lb
+⾹	lb
+⾺	lb
+⾻	lb
+⾼	lb
+⾽	lb
+⾾	lb
+⾿	lb
+⿀	lb
+⿁	lb
+⿂	lb
+⿃	lb
+⿄	lb
+⿅	lb
+⿆	lb
+⿇	lb
+⿈	lb
+⿉	lb
+⿊	lb
+⿋	lb
+⿌	lb
+⿍	lb
+⿎	lb
+⿏	lb
+⿐	lb
+⿑	lb
+⿒	lb
+⿓	lb
+⿔	lb
+⿕	lb
+### 部首(康熙) ###（以下2026年3月21日前，舊的，有非 KANGXI RADICAL 字元）
+# 一	lb
+# 丨	lb
+# 丶	lb
+# 丿	lb
+# 乙	lb
+# 亅	lb
+# 二	lb
+# 亠	lb
+# 人	lb
+# 儿	lb
+# 入	lb
+# 八	lb
+# 冂	lb
+# 冖	lb
+# 冫	lb
+# 几	lb
+# 凵	lb
+# 刀	lb
+# 力	lb
+# 勹	lb
+# 匕	lb
+# 匚	lb
+# 匸	lb
+# 十	lb
+# 卜	lb
+# 卩	lb
+# 厂	lb
+# 厶	lb
+# 又	lb
+# 口	lb
+# 囗	lb
+# 土	lb
+# 士	lb
+# 夂	lb
+# 夊	lb
+# 夕	lb
+# 大	lb
+# 女	lb
+# 子	lb
+# 宀	lb
+# 寸	lb
+# 小	lb
+# 尢	lb
+# 尸	lb
+# 屮	lb
+# 山	lb
+# 巛	lb
+# 工	lb
+# 己	lb
+# 巾	lb
+# 干	lb
+# 幺	lb
+# 广	lb
+# 廴	lb
+# 廾	lb
+# 弋	lb
+# 弓	lb
+# 彐	lb
+# 彡	lb
+# 彳	lb
+# 心	lb
+# 戈	lb
+# 戶	lb
+# 手	lb
+# 支	lb
+# 攴	lb
+# 文	lb
+# 斗	lb
+# 斤	lb
+# 方	lb
+# 无	lb
+# 日	lb
+# 曰	lb
+# 月	lb
+# 木	lb
+# 欠	lb
+# 止	lb
+# 歹	lb
+# 殳	lb
+# 毋	lb
+# 比	lb
+# 毛	lb
+# 氏	lb
+# 气	lb
+# 水	lb
+# 火	lb
+# 爪	lb
+# 父	lb
+# 爻	lb
+# 爿	lb
+# 片	lb
+# 牙	lb
+# 牛	lb
+# 犬	lb
+# 玄	lb
+# 玉	lb
+# 瓜	lb
+# 瓦	lb
+# 甘	lb
+# 生	lb
+# 用	lb
+# 田	lb
+# 疋	lb
+# 疒	lb
+# 癶	lb
+# 白	lb
+# 皮	lb
+# 皿	lb
+# 目	lb
+# 矛	lb
+# 矢	lb
+# 石	lb
+# 示	lb
+# 禸	lb
+# 禾	lb
+# 穴	lb
+# 立	lb
+# 竹	lb
+# 米	lb
+# 糸	lb
+# 缶	lb
+# 网	lb
+# 羊	lb
+# 羽	lb
+# 老	lb
+# 而	lb
+# 耒	lb
+# 耳	lb
+# 聿	lb
+# 肉	lb
+# 臣	lb
+# 自	lb
+# 至	lb
+# 臼	lb
+# 舌	lb
+# 舛	lb
+# 舟	lb
+# 艮	lb
+# 色	lb
+# 艸	lb
+# 虍	lb
+# 虫	lb
+# 血	lb
+# 行	lb
+# 衣	lb
+# 襾	lb
+# 見	lb
+# 角	lb
+# 言	lb
+# 谷	lb
+# 豆	lb
+# 豕	lb
+# 豸	lb
+# 貝	lb
+# 赤	lb
+# 走	lb
+# 足	lb
+# 身	lb
+# 車	lb
+# 辛	lb
+# 辰	lb
+# 辵	lb
+# 邑	lb
+# 酉	lb
+# 釆	lb
+# 里	lb
+# 金	lb
+# 長	lb
+# 門	lb
+# 阜	lb
+# 隶	lb
+# 隹	lb
+# 雨	lb
+# 靑	lb
+# 非	lb
+# 面	lb
+# 革	lb
+# 韋	lb
+# 韭	lb
+# 音	lb
+# 頁	lb
+# 風	lb
+# 飛	lb
+# 食	lb
+# 首	lb
+# 香	lb
+# 馬	lb
+# 骨	lb
+# 高	lb
+# 髟	lb
+# 鬥	lb
+# 鬯	lb
+# 鬲	lb
+# 鬼	lb
+# 魚	lb
+# 鳥	lb
+# 鹵	lb
+# 鹿	lb
+# 麥	lb
+# 麻	lb
+# 黃	lb
+# 黍	lb
+# 黑	lb
+# 黹	lb
+# 黽	lb
+# 鼎	lb
+# 鼓	lb
+# 鼠	lb
+# 鼻	lb
+# 齊	lb
+# 齒	lb
+# 龍	lb
+# 龜	lb
+# 龠	lb
 ### 筆畫 ###
 ㇀	ze
 ㇁	ze
