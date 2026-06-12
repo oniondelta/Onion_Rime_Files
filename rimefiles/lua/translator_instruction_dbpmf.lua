@@ -110,13 +110,16 @@ local function translate(input, seg, env)
   local engine = env.engine
   local context = engine.context
   local caret_pos = context.caret_pos
+  local tag_punct = seg:has_tag("punct")
+  -- local tag_emojis = seg:has_tag("emoji_series")
   -- local check_semicolon = string.match(input, "^;$")
   -- local check_semicolon2 = string.match(input, "^;;$")
   -- local check_e = string.match(input, "^e$")
 
   -- if input:find("^;$") then
   -- if check_semicolon and caret_pos == 1 then
-  if input == ";" and caret_pos == 1 then
+  -- if input == ";" and caret_pos == 1 then
+  if input == ";" and tag_punct then
     -- for cand in input:iter() do
     --   yield(cand)
     -- end
@@ -130,7 +133,8 @@ local function translate(input, seg, env)
 
   -- if input:find("^;;$") then
   -- if check_semicolon2 and caret_pos == 2 then
-  if input == ";;" and caret_pos == 2 then
+  -- if input == ";;" and caret_pos == 2 then
+  if input == ";;" and tag_punct then
     for k, v in ipairs(env.table_sd_2) do
       local cand = Candidate("simp_help", seg.start, seg._end, v[2], " " .. v[1])
       -- cand.preedit = input .. "\t※ 輸入【項目】每字第一個注音，調出相關符號。"

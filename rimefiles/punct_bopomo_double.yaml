@@ -26,6 +26,7 @@ punctuator:
     "*" : { commit: "＊" }
     "(" : { commit: （ }
     ")" : { commit: ） }
+    "-" : { commit: "－" } ##特別設置
     "_" : { commit: "＿" }
     "+" : { commit: "＋" }
     "=" : [ "＝", "々", "〃", "〻" ]
@@ -56,6 +57,7 @@ punctuator:
     "*" : { commit: "*" }
     "(" : { commit: （ }
     ")" : { commit: ） }
+    "-" : { commit: "-" } ##特別設置
     "_" : { commit: "_" }
     "+" : { commit: "+" }
     "=" : [ "=", "々", "〃", "〻" ]
