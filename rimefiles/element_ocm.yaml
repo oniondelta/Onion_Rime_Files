@@ -539,6 +539,10 @@ emoji_series:
     # - xform/@//
     - xform/^ab$/【 AB 】/
     - xform/^([a-z])$/【 \U$1\E 】/
-    - xform/^;([a-z])$/〖 \U$1\E 變化〗/
+    - xform|^([a-z])/$|【 \U$1\E 】(小寫)|
+    - xform|^([a-z]);$|【 \U$1\E 】(大寫)|
+    - xform/^;([a-z])$/〖 \U$1\E  變化〗/
+    - xform|^;([a-z])/$|〖 \U$1\E  變化〗(小寫)|
+    - xform|^;([a-z]);$|〖 \U$1\E  變化〗(大寫)|
     - xform//Mac/
 ##### 結束 #####
