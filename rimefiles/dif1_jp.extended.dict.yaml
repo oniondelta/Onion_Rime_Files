@@ -8,8 +8,8 @@ sort: original
 use_preset_vocabulary: false
 import_tables:
   - ocm_mixin_jp
-#  - phrases.jp_hk
-  - phrases.jp_hk_more
+  # - phrases.jp_hk
+  # - phrases.jp_hk_more
 ...
-、	,`	0%
-。	.`	0%
+、	,@	0%
+。	.@	0%

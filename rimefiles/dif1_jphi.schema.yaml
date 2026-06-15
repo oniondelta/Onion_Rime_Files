@@ -42,7 +42,8 @@ menu:
   alternative_select_keys: "1234567890"
 
 speller:
-  alphabet: "abcdefghijklmnopqrstuvwxyz-,"
+  alphabet: "abcdefghijklmnopqrstuvwxyz-,."
+  finals: ",."
 #  finals: ";'"
   delimiter: "\""
   algebra:
@@ -112,7 +113,7 @@ speller:
     # - abbrev/^(c)h[aiueo],$/$1/ #避免「c」開頭沒有對應假名
     # - abbrev/^([kstnhmyrwgzdbpjlfcxvq][kstnhmyrwgzdbpjlfc]y?)[aiueo],$/$1/
     ## 下方日文標點
-    - abbrev/^([,.])`$/$1/
+    - abbrev/^([,.])@$/$1/
 
 translator:
   dictionary: dif1_jp.extended

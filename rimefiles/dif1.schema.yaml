@@ -355,8 +355,8 @@ jphi_lookup:
     - "xlit|,.|AB|"
     - xform/AA/ (組)/
     - xform/BB/ (組)/
-    - xform/(\|)A/$1,/ #日語標點
-    - xform/(\|)B/$1./ #日語標點
+    - xform/\|A/ ,/ #日語標點
+    - xform/\|B/ ./ #日語標點
     - xform/A/ (平)/
     - xform/B/ (片)/
     - xform/\|/ /
@@ -386,8 +386,8 @@ jpka_lookup:
     - "xlit|,.|AB|"
     - xform/AA/ (組)/
     - xform/BB/ (組)/
-    - xform/(\|)A/$1,/ #日語標點
-    - xform/(\|)B/$1./ #日語標點
+    - xform/\|A/ ,/ #日語標點
+    - xform/\|B/ ./ #日語標點
     - xform/A/ (平)/
     - xform/B/ (片)/
     - xform/\|/ /
