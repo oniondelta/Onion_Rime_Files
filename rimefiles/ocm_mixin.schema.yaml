@@ -239,8 +239,9 @@ menu:
   page_size: 9
 ################################### 拼寫 ######################################
 speller:
-  alphabet: "abcdefghijklmnopqrstuvwxyz;,'./-`"
+  alphabet: "abcdefghijklmnopqrstuvwxyz-;',./`"
   initials: "abcdefghijklmnopqrstuvwxyz-"
+  finals: ";',./`"
   delimiter: "|"
   algebra:
     - derive/^(-)[`']$/$1/
@@ -800,7 +801,7 @@ recognizer:
     # url: "^(www[.]|https?:|ftp:|mailto:|file:).*$"
     # url: "^(https?:|ftp:|mailto:|file:).*$"
     # email: "^[a-z][-_.0-9a-z]*@.*$"
-    punct: "===?$|=''?=?'?'?$|=?[][][][]?'?$|=?[[][[]?'?=?[]]?[]]?'?$|=``?$|=[-,./;][-,./;]?$|=,,?=[.][.]?$|=[0-9]$|=9=0$|==[].,90'[]+$"
+    punct: ";;$|===?$|=''?=?'?'?$|=?[][][][]?'?$|=?[[][[]?'?=?[]]?[]]?'?$|=``?$|=[-,./;][-,./;]?$|=,,?=[.][.]?$|=[0-9]$|=9=0$|==[].,90'[]+$"
     pt: "^[,.][,.'a-z]*$|^'['a-z]*$|^,[][]+[a-z]*$|^,v[][]+$" #|^v[][]+v?$|^[][]+[a-z]*$"
     # reverse2_lookup: "';[-.,;/0-9a-z |]*'?$"  # 去除開頭「^」限定，使其接續不跳掉。（舊的lua寫法需這樣設定！）
     reverse2_lookup: "^';[-.,;/0-9a-z |]*'?$"
@@ -815,6 +816,6 @@ recognizer:
     # all_bpm: "';'[-a-z0-9.,/; ]*'?$"  # 去除開頭「^」限定，使其接續不跳掉。（舊的lua寫法需這樣設定！）
     all_bpm: "^';'[-a-z0-9.,/; ]*'?$"
     # lua: "^;;$|^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|^'/[a-z]*$|^'/[;/'][a-z.,/'-]*$|^'/[rq0-9.-][asrvxqwymd0-9.,/()^*+-]*$|^'/[xucoi][0-9a-f]+$"
-    instruction_ocm: "^;;?$"  #不開起，「;;」會顯示不了。
+    # instruction_ocm: "^;;?$"  #不開起，「;;」會顯示不了。但增加「;;」標點，則可以不開啟，也顯示。
     email_url_translator: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$"
     mf_translator: "^'/[a-z,]*$|^'/[;/'][a-z.,/'-]*$|^'/[rq0-9.-][asrvxqwymd0-9.,/()^*+-]*$|^'/[xucoi][0-9a-f]+$"

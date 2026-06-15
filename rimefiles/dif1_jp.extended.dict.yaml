@@ -3,7 +3,7 @@
 # 《字庫匯入設定頁》
 ---
 name: dif1_jp.extended
-version: "201908"
+version: "202606"
 sort: original
 use_preset_vocabulary: false
 import_tables:
@@ -11,3 +11,5 @@ import_tables:
 #  - phrases.jp_hk
   - phrases.jp_hk_more
 ...
+、	,`	0%
+。	.`	0%
