@@ -748,7 +748,7 @@ recognizer:
     pt: "^[,.][,.'a-z]*$|^'['a-z]*$|^,[][]+[a-z]*$|^,v[][]+$" #|^v[][]+v?$|^[][]+[a-z]*$"
     jphi_lookup: "^[-a-z]+,[-a-z,.]*$"
     jpka_lookup: "^(?![svc][.]|www[.])[-a-z]+[.][-a-z.,]*$"
-    korea_lookup: "^[a-z]+/[a-z/]*$"
+    korea_lookup: "^[a-z/]+/[a-z/]*$"  # 「韓文」前面第一個「/」為補「空格」bug，但尚有問題。
     latin_lookup: "^[-a-z]+'[-a-z']*$"
     cyr_lookup: "^[a-z]+[]][]a-z]*$"
     gr_lookup: "^[a-z]+[[][a-z[]*$"
