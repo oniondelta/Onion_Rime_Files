@@ -413,6 +413,7 @@ korea_lookup:
   suffix: "/"
   disable_user_dict_for_patterns:
     - ^[a-z]{1,2}[/]$
+    - ^[a-z]+[/][/]$ #避免「/」出空格無法之問題。
   preedit_format:
     # - "xlit|abcdefghijklmnopqrstuvwxyz/|ㅂㅅㄷㅊㅌㅑㅕㅐㅣㅓㅏㄴㅛㅗㅁㅔㅇㅠㄹㅜㅈㅡㅎㅍㄱㅋA|"
     - "xlit|/|A|"
