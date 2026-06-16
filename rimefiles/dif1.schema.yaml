@@ -353,10 +353,15 @@ jphi_lookup:
     - ^-{1,2},$
   preedit_format:
     - "xlit|,.|AB|"
+    # - xform/(?:^|\|)AA/ ,,/ #日文標點
+    # - xform/(?:^|\|)BB/ ../ #日文標點
+    # - xform/(?:^|\|)AB/ ,./ #日文標點
+    # - xform/(?:^|\|)BA/ .,/ #日文標點
+    - xform/(?:^|\|)A/ ,/ #日文標點
+    - xform/(?:^|\|)B/ ./ #日文標點
+    # - xform/(?:^|\|)AB/ ,./ #日文空白
     - xform/AA/ (組)/
     - xform/BB/ (組)/
-    - xform/\|A/ ,/ #日語標點
-    - xform/\|B/ ./ #日語標點
     - xform/A/ (平)/
     - xform/B/ (片)/
     - xform/\|/ /
@@ -384,10 +389,15 @@ jpka_lookup:
     - ^-{1,2}[.]$
   preedit_format:
     - "xlit|,.|AB|"
+    # - xform/(?:^|\|)AA/ ,,/ #日文標點
+    # - xform/(?:^|\|)BB/ ../ #日文標點
+    # - xform/(?:^|\|)AB/ ,./ #日文標點
+    # - xform/(?:^|\|)BA/ .,/ #日文標點
+    - xform/(?:^|\|)A/ ,/ #日文標點
+    - xform/(?:^|\|)B/ ./ #日文標點
+    # - xform/(?:^|\|)AB/ ,./ #日文空白
     - xform/AA/ (組)/
     - xform/BB/ (組)/
-    - xform/\|A/ ,/ #日語標點
-    - xform/\|B/ ./ #日語標點
     - xform/A/ (平)/
     - xform/B/ (片)/
     - xform/\|/ /
@@ -406,6 +416,8 @@ korea_lookup:
   preedit_format:
     # - "xlit|abcdefghijklmnopqrstuvwxyz/|ㅂㅅㄷㅊㅌㅑㅕㅐㅣㅓㅏㄴㅛㅗㅁㅔㅇㅠㄹㅜㅈㅡㅎㅍㄱㅋA|"
     - "xlit|/|A|"
+    # - xform/(?:^|\|)AA/\x{20}\x{2f}\x{2f}/ #韓文標點 #「\x{2f}」和「\x2f」=「/」；\x{20}=「 」。
+    - xform/(?:^|\|)A/\x{20}\x{2f}/ #韓文標點
     # - xform/AA/ (韓-HJ)/
     - xform/AA/ (韓-擴)/
     - xform/A/ (韓)/
