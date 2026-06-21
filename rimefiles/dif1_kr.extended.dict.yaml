@@ -3,7 +3,7 @@
 # 《字庫匯入設定頁》
 ---
 name: dif1_kr.extended
-version: "201908"
+version: "202606"
 sort: original
 use_preset_vocabulary: false
 import_tables:
@@ -12,4 +12,5 @@ import_tables:
 ...
 ## 以下「空格」編碼加詞頻，因「목」加「空格」輸入「ony/」會有「모ᄀ」分割問題！
 # 	//	100
- 	/	100
+# 	/	100
+ 	/@	100

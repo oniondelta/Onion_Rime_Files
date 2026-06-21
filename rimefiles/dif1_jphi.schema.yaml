@@ -106,6 +106,9 @@ speller:
     # - erase/^[-a-z]+[.]$/ #去除「片假名」
     - derive/^([-a-z]+),$/$1/
     # - abbrev/^([-a-z]+),$/$1/ #不要使用，會和下方嚴重混淆。
+##### 避免下方「標點」編碼影響，轉換「組合字符」編碼 #####
+    - xform/(,,)$/$1@/
+    - xform/([.][.])$/$1@/
 ##### 使開頭單個字母時（如：kst）也能有選項可選 #####
     # ## 下方精簡可能因日文詞庫已有該詞，而造成簡化打法可出該詞，然後出字非預期！
     # ## 下方「ん和ン」編碼「n」易混淆，考慮改成「nn」編碼，然後再精簡？！
@@ -114,7 +117,7 @@ speller:
     # - abbrev/^([kstnhmyrwgzdbpjlfcxvq][kstnhmyrwgzdbpjlfc]y?)[aiueo],$/$1/
     ## 下方日文標點
     # - abbrev/^([,.])@$/$1/
-    # - abbrev/@$//
+    - abbrev/@$//
 
 translator:
   dictionary: dif1_jp.extended
