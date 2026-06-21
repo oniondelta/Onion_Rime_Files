@@ -119,6 +119,7 @@
 #    詞句中，「擊」臺灣字典發音和習慣發音為「ji2」，大陸發音為「ji1」，斟酌後全改成臺灣發音「ji2」。
 #    詞句中，「夕」臺灣字典發音和習慣發音為「xi4」，大陸發音為「xi1」，斟酌後全改成臺灣發音「xi4」。
 #    詞句中，「矽」臺灣字典發音和習慣發音為「xi4」，大陸發音為「xi1」，斟酌後全改成臺灣發音「xi4」。
+#    詞句中，「汐」臺灣字典發音和習慣發音為「xi4」，大陸發音為「xi1」，斟酌後全改成臺灣發音「xi4」。
 #    詞句中，「息」臺灣字典發音和習慣發音為「xi2」，大陸發音為「xi1」，斟酌後全改成臺灣發音「xi2」。
 #    詞句中，「熄」臺灣字典發音和習慣發音為「xi2」，大陸發音為「xi1」，斟酌後全改成臺灣發音「xi2」。
 #    詞句中，「昔」臺灣字典發音和習慣發音為「xi2」，大陸發音為「xi1」，斟酌後全改成臺灣發音「xi2」。
@@ -132,6 +133,7 @@
 #    詞句中，「擲」臺灣字典發音和習慣發音為「zhi2」，大陸發音為「zhi4」，斟酌後全改成臺灣發音「zhi2」。
 #    詞句中，「拙」臺灣字典發音和習慣發音為「zhuo2」，大陸發音為「zhuo1」，斟酌後全改成臺灣發音「zhuo2」。
 #    詞句中，「咄」臺灣字典發音和習慣發音為「duo4」，大陸發音為「duo1」，斟酌後全改成臺灣發音「duo4」。
+#    詞句中，「猓」臺灣字典發音和習慣發音為「guo3」，大陸發音為「guo1」，斟酌後全改成臺灣發音「guo3」。
 #    詞句中，「鈷」語意為化學元素時，臺灣字典發音和習慣發音為「gu1」，大陸發音為「gu3」，斟酌後，除詞條「鈷鉧」之「鈷」只標註為「gu3」，全改成臺灣發音「gu1」。
 #    詞句中，「地」於句尾當結構助詞時，意思同「的」時，不標註「di4」，標註「de5」「di5」。
 #    詞句中，「嚓」臺灣字典只有發音「ca1」，不標為「cha1」，因為為形聲，故另標「ca5」，故全都補齊「ca1」「ca5」。
@@ -210,6 +212,7 @@
 #    詞句中，「屘」臺灣標準為「man1」，大陸標準為「man3」，日常易混，故全都補齊「man1」「man3」。
 #    詞句中，「撖」臺灣標準為「gan3」，大陸標準為「han4」，日常易混，故全都補齊「gan3」「han4」。
 #    詞句中，「樗」臺灣標準為「shu1」，大陸標準為「chu1」，日常易混，故全都補齊「shu1」「chu1」。
+#    詞句中，「欹」臺灣標準為「yi1」，大陸標準為「qi1」，日常易混，故全都補齊「yi1」「qi1」。
 #    詞句中，「呤」臺灣標準和大陸標準皆有「ling2」該發音，但大陸標準為某化學物質時發「ling4」，故全都補齊「ling2」「ling4」。
 #    詞句中，「肘」臺灣標準為「zhou3」，日常發音常會誤發為「zhou2」，故皆補齊「zhou3」「zhou2」，後者詞頻設為80%。
 #    詞句中，「蕾」臺灣標準為「lei3」，日常發音常會誤發為「lei2」，，故皆補齊「lei3」「lei2」，後者詞頻設為80%。
@@ -290,7 +293,7 @@
 #    詞句中，「暴露」「bao4」和「pu4」補齊，「露」以「lu4」為主。
 #    詞句中，「法國」字典正確發音「fa3 guo2」，但「fa4 guo2」語音太常用，故補齊「fa3」「fa4」。（「法」地名相關也修改，如：「中法」）
 #    詞句中，「關係」其「係」臺灣字典發音為「xi4」，但日常常發「xi1」，故「關係」其「係」都補上「xi1」該發音。
-#    詞句中，「蘿蔔」中的「蔔」，「bo2」為讀音，「bo5」為語音，「bo1」常出現在日常發音中，故全都補齊「bo2」「bo5」「bo1」。
+#    詞句中，「蘿蔔」中的「蔔」，「bo2」為讀音，「bo5」為語音，「bo1」常出現在日常發音中，故全都補齊「bo2」「bo5」「bo1」。「bo1」詞頻設為0%。
 #    詞句中，「蒙古」「內蒙」「蒙牛」，其「蒙」字，臺灣標準為「meng2」，大陸標準為「meng3」，日常易混，補齊「meng2」「meng3」。
 #    詞句中，「模糊」定為「mo2 hu2」。
 #    詞句中，「垃圾」補齊「le4 se4」和「la1 ji1」。
@@ -314,6 +317,7 @@
 #    詞句中，「衚衕」臺灣字典發音為「hu2 tong4」，日常發音常會誤發為「hu2 tong2」，故皆補齊「hu2 tong4」「hu2 tong2」。
 #    詞句中，「胡同」臺灣字典發音為「hu2 tong4」，日常發音常會誤發為「hu2 tong2」，故皆補齊「hu2 tong4」「hu2 tong2」。
 #    詞句中，「無間」臺灣字典發音為「wu2 jian4」，日常發音常發「wu2 jian1」，故皆補齊「wu2 jian4」「wu2 jian1」。
+#    詞句中，「冤枉」臺灣字典發音為「yuan1 wang3」，日常發音常發「yuan1 wang4」，故皆補齊「yuan1 wang3」「yuan1 wang4」，後者詞頻設為80%。
 #    詞句中，「拓撲」臺灣字典發音為「tuo4 pu1」，日常發音常會誤發為「tuo4 bu3」和「tuo4 pu3」，故皆補齊「tuo4 pu1」「tuo4 bu3」「tuo4 pu3」，最後者「tuo4 pu3」詞頻設為80%。
 #    詞句中，「傢伙」臺灣字典發音為「jia1 huo3」和變音為「jia1 huo5」，日常發音常會誤發為「jia1 huo1」，故皆補齊「jia1 huo3」「jia1 huo5」「jia1 huo1」，最後者「jia1 huo1」詞頻設為80%。
 #    詞句中，「給予」臺灣字典發音為「ji3 yu3」，日常發音常發，故皆補齊「ji3 yu3」「ji3 yu2」「gei3 yu3」「gei3 yu2」。
@@ -1913,7 +1917,7 @@ min_phrase_weight: 100
 呕	xu1	0.1%
 鏈	lian2	0.1%
 链	lian2	0.1%
-欹	qi1	0.2%
+欹	qi1	10%
 攲	yi3	0.2%
 攲	ji1	0.2%
 敧	yi3	0.2%
@@ -3853,6 +3857,24 @@ min_phrase_weight: 100
 葑	feng4	0%
 郇	huan2
 郃	xia2	0%
+猓	guo1	0%
+猓	luo3	0%
+猗	ji4	0%
+猗	e1	0%
+猗	wei1	0%
+疽	ju3	0%
+咷	tiao4	0%
+哈	he1	0%
+哈	he2	0%
+哈	ta4	0%
+哈	sha4	0%
+哆	chi3	0%
+哆	chi4	0%
+哆	zha4	0%
+哆	duo4	0%
+哆	die3	0%
+咬	yao1	0%
+咬	jiao3	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -4105,7 +4127,7 @@ min_phrase_weight: 100
 峉	e1	1%
 帣	juan3	1%
 帥	shuo4	1%
-徇	xun2	1%
+徇	xun2
 怨	yuan1	1%
 恪	que4	10%
 恫	tong1	1%
@@ -57390,6 +57412,7 @@ min_phrase_weight: 100
 不待要	bu2 dai4 yao4
 不待說	bu2 dai4 shuo1
 不徇顏面	bu4 xun2 yan2 mian4
+不徇顏面	bu2 xun4 yan2 mian4
 不得	bu4 de2
 不得不	bu4 de2 bu4
 不得不	bu4 de2 bu2
@@ -62648,8 +62671,11 @@ min_phrase_weight: 100
 冤天屈地	yuan1 tian1 qu1 di4
 冤家宜解不宜結	yuan1 jia1 yi2 jie3 bu4 yi2 jie2
 冤枉	yuan1 wang3
+冤枉	yuan1 wang4	80%
 冤枉路	yuan1 wang3 lu4
+冤枉路	yuan1 wang4 lu4	80%
 冤枉錢	yuan1 wang3 qian2
+冤枉錢	yuan1 wang4 qian2	80%
 冤魂不散	yuan1 hun2 bu2 san4
 冥子裡	ming2 zi5 li3
 冥寂	ming2 ji2
@@ -70033,6 +70059,7 @@ min_phrase_weight: 100
 埃迪卡拉紀	ai1 di2 ka3 la1 ji4
 埋伏	mai2 fu2
 埋冤	man2 yuan1
+埋冤	mai2 yuan1
 埋名	mai2 ming2
 埋單	mai2 dan1
 埋天怨地	man2 tian1 yuan4 di4
@@ -76822,18 +76849,27 @@ min_phrase_weight: 100
 待質	dai4 zhi4	3%
 待遇	dai4 yu4
 徇務	xun2 wu4
+徇務	xun4 wu4
 徇地	xun4 di4
+徇地	xun2 di4
 徇情	xun2 qing2
 徇情	xun4 qing2
 徇情枉法	xun2 qing2 wang3 fa3
 徇情枉法	xun4 qing2 wang3 fa3
+徇情枉法	xun2 qing2 wang4 fa3	80%
+徇情枉法	xun4 qing2 wang4 fa3	80%
 徇私	xun2 si1
+徇私	xun4 si1
 徇私作弊	xun2 si1 zuo4 bi4
+徇私作弊	xun4 si1 zuo4 bi4
 徇私廢公	xun2 si1 fei4 gong1
+徇私廢公	xun4 si1 fei4 gong1
 徇私舞弊	xun2 si1 wu3 bi4
 徇私舞弊	xun4 si1 wu3 bi4
 徇行	xun4 xing2
+徇行	xun2 xing2
 徇通	xun2 tong1
+徇通	xun4 tong1
 律切	lv4 qie4
 律動教學	lv4 dong4 jiao4 xue2
 律動教學	lv4 dong4 jiao1 xue2
@@ -88043,6 +88079,7 @@ min_phrase_weight: 100
 欸乃	ai3 nai3
 欸乃曲	ai3 nai3 qu3
 欹嶔歷落	yi1 qin1 li4 luo4
+欹嶔歷落	qi1 qin1 li4 luo4
 欺善怕惡	qi1 shan4 pa4 e4
 欺天罔地	qi1 tian1 wang3 di4
 欺天誑地	qi1 tian1 kuang2 di4
@@ -91711,7 +91748,6 @@ min_phrase_weight: 100
 潮差	chao2 cha1
 潮樂	chao2 yue4
 潮汐	chao2 xi4
-潮汐	chao2 xi1
 潮汐預報	chao2 xi4 yu4 bao4
 潮間帶	chao2 jian1 dai4
 潰於蟻穴	kui4 yu2 yi3 xue2	3%
@@ -100951,6 +100987,8 @@ min_phrase_weight: 100
 羊肉床子	yang2 rou4 chuang2 zi5
 羊肉落在狗嘴裡	yang2 rou4 luo4 zai4 gou3 zui3 li3
 羊肚蕈	yang2 du3 xun4
+羊肚蕈	yang2 du3 xin4
+羊肚蕈	yang2 du3 jun4	80%
 羊胛熟	yang2 jia3 shu2
 羊胛熟	yang2 jia3 shou2
 羊膜	yang2 mo4	3%
@@ -105538,8 +105576,12 @@ min_phrase_weight: 100
 蚊子遭扇打	wen2 zi5 zao1 shan4 da3
 蚌埠	beng4 bu4
 蚌埠	bang4 bu4
+蚌埠	beng4 fu4
+蚌埠	bang4 fu4
 蚌埠市	bang4 fu4 shi4
 蚌埠市	beng4 bu4 shi4
+蚌埠市	bang4 bu4 shi4
+蚌埠市	beng4 fu4 shi4
 蚌山	beng4 shan1
 蚌山區	beng4 shan1 qu1
 蚌殼	bang4 ke2
@@ -117600,6 +117642,7 @@ min_phrase_weight: 100
 高才碩學	gao1 cai2 shuo4 xue2
 高才遠識	gao1 cai2 yuan3 shi4
 高挑子	gao1 tiao1 zi5
+高挑子	gao1 tiao3 zi5
 高攀不上	gao1 pan1 bu2 shang4
 高效率	gao1 xiao4 lv4
 高明遠識	gao1 ming2 yuan3 shi4
@@ -118750,4 +118793,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 118753 #####
+##### @結束 END - 118796 #####

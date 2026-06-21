@@ -18,7 +18,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion_add
-version: "202604"
+version: "202606"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7
@@ -299,6 +299,7 @@ min_phrase_weight: 100
 涕	(ti2)	0%
 憎	(zeng4)
 艔	(du4)
+枉	(wang4)	10%
 ### @補充為《一聲》，通俗慣用或方便輸入，『非正確發音』！！！ ###
 腓	(fei1)	1%
 琲	(fei1)	1%
@@ -554,6 +555,7 @@ min_phrase_weight: 100
 哋	(di5)	1%
 哋	(die5)	1%
 嗲	(die5)	1%
+哆	(die5)	0%
 嗲	(dia5)	1%
 叼	(diao5)	0%
 啁	(diao5)	0%
@@ -603,6 +605,7 @@ min_phrase_weight: 100
 嗔	(tian5)	0%
 听	(ting5)	0%
 啁	(tiao5)	0%
+咷	(tiao5)	0%
 唋	(tu5)	0%
 吐	(tu5)	0%
 咃	(tuo5)	1%
@@ -612,6 +615,7 @@ min_phrase_weight: 100
 哃	(tong5)	0%
 咃	(ta5)	1%
 嚺	(ta5)	0%
+哈	(ta5)	0%
 㘆	(tai5)	0%
 叨	(tao5)	1%
 咷	(tao5)	0%
@@ -843,6 +847,7 @@ min_phrase_weight: 100
 喝	(he5)	0%
 嗬	(he5)	0%
 啝	(he5)	0%
+哈	(he5)	0%
 嗨	(hai5)	100%
 咳	(hai5)	0%
 咍	(hai5)	0%
@@ -1070,6 +1075,7 @@ min_phrase_weight: 100
 哳	(zha5)	0%
 囃	(zha5)	0%
 𠯩	(zha5)	0%
+哆	(zha5)	0%
 啫	(zhe5)	0%
 嘲	(zhao5)	0%
 啅	(zhao5)	0%
@@ -1093,6 +1099,7 @@ min_phrase_weight: 100
 嘯	(chi5)	0%
 啸	(chi5)	0%
 嘨	(chi5)	0%
+哆	(chi5)	0%
 㗙	(chu5)	0%
 吷	(chuo5)	0%
 啜	(chuo5)	0%
@@ -1116,6 +1123,7 @@ min_phrase_weight: 100
 唓	(che5)	0%
 呫	(che5)	0%
 喢	(che5)	0%
+哆	(che5)	0%
 嗟	(chai5)	0%
 喍	(chai5)	0%
 囆	(chai5)	0%
@@ -1156,6 +1164,7 @@ min_phrase_weight: 100
 唼	(sha5)	0%
 啑	(sha5)	0%
 喢	(sha5)	0%
+哈	(sha5)	0%
 篩	(shai5)	0%
 筛	(shai5)	0%
 𠱡	(shai5)	0%
