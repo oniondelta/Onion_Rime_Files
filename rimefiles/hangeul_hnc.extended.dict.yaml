@@ -4,7 +4,7 @@
 # 『洋蔥』製作
 ---
 name: hangeul_hnc.extended
-version: "202304"
+version: "202606"
 sort: by_weight #original
 vocabulary: essay-kr-hanja
 # use_preset_vocabulary: false
@@ -17,6 +17,14 @@ import_tables:
   - space  #空格，特殊方案用
 ...
 ##### 補充標點 #####
+ 	./
+-	-
 ,	,
 .	.
+?	,.
+!	/.
+;	,.
+:	..
+"	,,/
+⋯	...
 ##################

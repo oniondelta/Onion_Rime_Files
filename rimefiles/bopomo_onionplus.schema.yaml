@@ -451,11 +451,11 @@ korea:
   preedit_format:
     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
     - xform/QQ/‹ʜᴊ›/
-    - xform|\/\/|‹ʜᴊ›|
+    - xform|(?<=\w)\/\/|‹ʜᴊ›|
     - xform/Q/‹ʜᴄᴊ›/
-    - xform|\/|‹ʜᴄᴊ›|
+    - xform|(?<=\w)\/|‹ʜᴄᴊ›|
     - xform/V/‹漢›/
-    - xform/;/‹漢›/
+    - xform/(?<=\w);/‹漢›/
     - xform/^/《韓》/
     - 'xform/\\/ /'
 

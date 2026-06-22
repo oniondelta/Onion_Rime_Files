@@ -4,13 +4,82 @@
 # 『洋蔥』製作
 ---
 name: cyrillic.extended
-version: "202301"
+version: "202606"
 sort: by_weight
 use_preset_vocabulary: false
-#max_phrase_length: 7
-#min_phrase_weight: 100
+# max_phrase_length: 7
+# min_phrase_weight: 100
 import_tables:
   - cyrillic
   - phrases.cyr_all
   - space  #空格，特殊方案用
 ...
+##### 以下避相同碼可以簡出 #####
+#ъ	br@
+#Ъ	br@
+#щ	wy@
+#Щ	wy@
+############################
+####### 《西里爾字母》一般鍵盤標點符號 開始 #######
+##### 空格 #####
+ 	./	10000
+# 	./]	10000
+##### 符號輸出標點 #####
+### 分號區隔 ###
+#-	-;
+#—	-;
+#.	.;
+#,	,;
+/	/;
+#?	,.;
+#!	/.;
+#;	.,;
+#:	..;
+#...	...;
+### 一般和組合輸出 ###
+### 一般和組合輸出 ###
+-	-
+—	-
+.	.
+,	,
+?	,.
+!	/.
+;	.,
+:	..
+...	...
+##### 字母輸出標點 #####
+-	ew
+—	ew
+##
+#-	iq
+#—	iq
+.	daw
+##
+.	aw
+,	ddw
+##
+,	dw
+?	jfda
+##
+#?	jyda
+##
+?	jfyda
+##
+?	jfkda
+!	ida
+##
+!	ik
+!	ifk
+;	awdw
+##
+;	awddw
+#;	add
+:	awaw
+##
+:	bwq
+#:	aha
+:	awdaw
+...	awawaw
+...	dawdawdaw
+...	dawawaw
+####### 《西里爾字母》一般鍵盤標點符號 結束 #######
