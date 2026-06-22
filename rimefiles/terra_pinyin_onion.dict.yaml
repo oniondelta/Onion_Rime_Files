@@ -189,6 +189,7 @@
 #    詞句中，「綺」臺灣標準為「qi3」，日常發音常會誤發為「qi2」，故皆補齊「qi3」「qi2」，後者詞頻設為80%。
 #    詞句中，「焙」臺灣標準為「bei4」，日常發音常會誤發為「pei2」，故皆補齊「bei4」「pei2」，後者詞頻設為80%。
 #    詞句中，「逾」臺灣標準為「yu2」，日常發音常會誤發為「yu4」，故皆補齊「yu2」「yu4」，後者詞頻設為80%。
+#    詞句中，「汶」臺灣標準為「wen4」，日常發音常會誤發為「wen2」，故皆補齊「wen4」「wen2」，後者詞頻設為80%。
 #    詞句中，「諷」臺灣標準為「feng4」，又音為「feng1」，大陸和臺灣日常慣用語音為「feng3」，故皆補齊「feng4」「feng3」「feng1」。
 #    詞句中，「偽」臺灣標準為「wei4」，大陸標準為「wei3」，日常易混，故皆補齊「wei4」「wei3」。
 #    詞句中，「菌」臺灣標準為「jun4」，大陸標準為「jun1」，日常易混，故皆補齊「jun4」「jun1」。
@@ -89114,9 +89115,9 @@ min_phrase_weight: 100
 汴堤	bian4 ti2
 汴堤	bian4 di1
 汶川地震	wen4 chuan1 di4 zhen4
-汶川地震	wen2 chuan1 di4 zhen4
+汶川地震	wen2 chuan1 di4 zhen4	80%
 汶川大地震	wen4 chuan1 da4 di4 zhen4
-汶川大地震	wen2 chuan1 da4 di4 zhen4
+汶川大地震	wen2 chuan1 da4 di4 zhen4	80%
 汸汸	pang1 pang1
 決一雌雄	jue2 yi4 ci1 xiong2
 決一雌雄	jue2 yi1 ci1 xiong2
@@ -118795,4 +118796,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 118798 #####
+##### @結束 END - 118799 #####
