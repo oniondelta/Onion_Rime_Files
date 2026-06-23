@@ -76,12 +76,21 @@ speller:
     - derive/^p/f/
     - derive/p$/f/
 ##### 韓文HNC正碼轉寫結束 #####
-    - abbrev/@//
-    # - 'xlit|@|/|' #
-    - 'xlit|/@|qq|'
-    - derive|q|/| #
-    - derive|;|v| #
-    # - xform|;|v| #
+    ### 舊 ###
+    # - abbrev/@//
+    # # - 'xlit|@|/|' #
+    # - 'xlit|/@|qq|'
+    # - derive|q|/| #
+    # - derive|;|v| #
+    # # - xform|;|v| #
+    ### 新，避免影響「標點符號」之編碼 ###
+    - derive|(?<=\w)([@])$|/| #一般單音
+    - derive|(?<=\w)[/]$|q|
+    - derive|(?<=\w)[/][/]$|qq|
+    - derive|(?<=\w);$|v| #漢字
+    ##
+    - xform|(?<=\w)([/][/]?)$|$1@|
+    - abbrev/@$//
 
 
 translator:

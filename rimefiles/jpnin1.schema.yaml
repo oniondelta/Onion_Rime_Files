@@ -184,6 +184,8 @@ speller:
     - derive|^[/]$|av\.|
     - derive|^,,$|sv,|
     - derive|^,,$|sv\.|
+    - derive|^,,$|,,,|
+    - xform|^,,$|,,.|
     - derive|^,;$|vv,|
     - derive|^,;$|vv\.|
     - derive|^[.];$|ov,|
@@ -244,6 +246,14 @@ speller:
     - abbrev/^(c)h[aiueo][,.]$/$1/ #避免「c」開頭沒有對應假名
     - abbrev/^([kstnhmyrwgzdbpjlfcxvq][kstnhmyrwgzdbpjlfc]y?)[aiueo][,.]$/$1/
     #可略# - abbrev/^(q)[wy][aiueo][,.]$/$1/ #避免「q」開頭沒有對應假名
+##### 避免下方「標點」編碼影響，轉換「組合字符」和「特殊」編碼 #####
+    - xform/(?<=\w)(,,)$/$1@/
+    - xform/(?<=\w)([.][.])$/$1@/
+    - xform/^([,.]);$/$1@/ #詞庫中含有「逗點」「句點」之詞，不能刪！
+##### 避免「逗號」「句號」「空格」等編碼影響 #####
+    # - abbrev/^([,.;])@$/$1/
+    - abbrev/@$//
+###########################################
     - derive/^\|$/ /
 
 translator:
@@ -294,11 +304,12 @@ translator:
 
 # c_reverse_lookup:
 #   tags: [ kanji_input ]
-#   dictionary: jpnin1.extended
+#   dictionary: jpnin1.extended #jpnin1_con.extended
 #   # spelling_hints: 10
 #   comment_format:
 #     - "xlit|`|'|"
 #     - xform/q/xtsu/
+#     - xform/(?:^| ),@/[,]/
 #     - xform/ /   /
 
 punctuator:

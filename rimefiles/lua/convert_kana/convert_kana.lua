@@ -7,15 +7,19 @@ local convert_format = require("filter_cand/convert_format")
 
 local function revise_t(t)
   if t == "" then return "" end
+  t = string.gsub(t, "/", " ")
+  t = string.gsub(t, ",,[,.]", "~")
   t = string.gsub(t, "[.,;]", "")  -- 「'」為純日語「分節」用，此處不刪除，刻意留作標示用。
   return t
 end
 
 local function fullshape_t(t)
   if t == "" then return "" end
-  local format1 = "xlit|abcdefghijklmnopqrstuvwxyz-/|ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ－／|"
-  local format2 = "xform/[.,;]//"  -- 「'」為純日語「分節」用，此處不刪除，刻意留作標示用。
-  local proj = convert_format(format1, format2)
+  -- local format1 = "xlit|abcdefghijklmnopqrstuvwxyz-/|ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ－／|"
+  local format1 = "xlit|abcdefghijklmnopqrstuvwxyz-/|ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ－　|"
+  local format2 = "xform/,,[.,]/～/"
+  local format3 = "xform/[.,;]//"  -- 「'」為純日語「分節」用，此處不刪除，刻意留作標示用。
+  local proj = convert_format(format1, format2, format3)
   return proj:apply(t)
 end
 
@@ -49,7 +53,7 @@ local function kata_t(t)
   local f_26 = "xform/ｳﾞ/ヴ/"
   local f_27 = "xform/ﾜﾞ/ヷ/"
   local f_28 = "xform/ｦﾞ/ヺ/"
-  local f_29 = "xlit|ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝｧｨｩｪｫｬｭｮｯ･ｰﾞﾟ|アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンァィゥェォャュョッ・ー゛゜|"
+  local f_29 = "xlit|ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝｧｨｩｪｫｬｭｮｯ･ｰ~ﾞﾟ|アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンァィゥェォャュョッ・ー〜゛゜|"
   local proj = convert_format(f_1,f_2,f_3,f_4,f_5,f_6,f_7,f_8,f_9,f_10,f_11,f_12,f_13,f_14,f_15,f_16,f_17,f_18,f_19,f_20,f_21,f_22,f_23,f_24,f_25,f_26,f_27,f_28,f_29)
   return proj:apply(t)
 end
@@ -84,7 +88,7 @@ local function hira_t(t)
   local f_26 = "xform/ｳﾞ/ゔ/"
   -- local f_27 = "xform/ﾜﾞ", "")
   -- local f_28 = "xform/ｦﾞ", "")
-  local f_29 = "xlit|ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝｧｨｩｪｫｬｭｮｯ･ｰﾞﾟ|あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをんぁぃぅぇぉゃゅょっ・ー゛゜|"
+  local f_29 = "xlit|ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝｧｨｩｪｫｬｭｮｯ･ｰ~ﾞﾟ|あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをんぁぃぅぇぉゃゅょっ・ー〜゛゜|"
   local proj = convert_format(f_1,f_2,f_3,f_4,f_5,f_6,f_7,f_8,f_9,f_10,f_11,f_12,f_13,f_14,f_15,f_16,f_17,f_18,f_19,f_20,f_21,f_22,f_23,f_24,f_25,f_26,f_29)
   return proj:apply(t)
 end
@@ -578,6 +582,7 @@ local function halfwidth_kata_t(t)
   t = string.gsub(t, "a", "ｱ")
   t = string.gsub(t, "/", "･")
   t = string.gsub(t, "-", "ｰ")
+  t = string.gsub(t, ",,[,.]", "~")
   t = string.gsub(t, "[.,;']", "")  -- 「'」為純日語「分節」用！
   return t
 end
@@ -672,6 +677,7 @@ local function kata_t(t)
   t = string.gsub(t, "ｯ", "ッ")
   t = string.gsub(t, "･", "・")
   t = string.gsub(t, "ｰ", "ー")
+  t = string.gsub(t, "~", "〜")  --增
   t = string.gsub(t, "ﾞ", "゛")
   t = string.gsub(t, "ﾟ", "゜")
   -- t = string.gsub(t, "[.,;]", "")
@@ -765,6 +771,7 @@ local function hira_t(t)
   t = string.gsub(t, "ｯ", "っ")
   t = string.gsub(t, "･", "・")
   t = string.gsub(t, "ｰ", "ー")
+  t = string.gsub(t, "~", "〜")  --增
   t = string.gsub(t, "ﾞ", "゛")
   t = string.gsub(t, "ﾟ", "゜")
   -- t = string.gsub(t, "[.,;]", "")

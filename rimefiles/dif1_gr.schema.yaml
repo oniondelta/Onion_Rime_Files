@@ -43,7 +43,7 @@ menu:
 
 speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz["
-  finals: "["
+  # finals: "[" #不能開啟，否則組合字符無法輸入！
 #  finals: ";'"
   delimiter: "\""
   algebra:

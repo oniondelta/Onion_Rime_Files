@@ -43,7 +43,7 @@ menu:
 
 speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz-,."
-  finals: ",."
+  # finals: ",." #不能開啟，否則組合字符無法輸入！
 #  finals: ";'"
   delimiter: "\""
   algebra:
@@ -106,16 +106,16 @@ speller:
     # - erase/^[-a-z]+,$/ #去除「平假名」
     - derive/^([-a-z]+)[.]$/$1/
     # - abbrev/^([-a-z]+)[.]$/$1/ #不要使用，會和下方嚴重混淆。
-##### 避免下方「標點」編碼影響，轉換「組合字符」編碼 #####
-    - xform/(,,)$/$1@/
-    - xform/([.][.])$/$1@/
 ##### 使開頭單個字母時（如：kst）也能有選項可選 #####
     # ## 下方精簡可能因日文詞庫已有該詞，而造成簡化打法可出該詞，然後出字非預期！
     # ## 下方「ん和ン」編碼「n」易混淆，考慮改成「nn」編碼，然後再精簡？！
     # - abbrev/^([kstnhmyrwgzdbpjlfxv])[naiueo][.]$/$1/ #後面「n」原為了「んン」之「nn」，碼表中目前沒有該編碼。可不用！
     # - abbrev/^(c)h[aiueo][.]$/$1/ #避免「c」開頭沒有對應假名
     # - abbrev/^([kstnhmyrwgzdbpjlfcxvq][kstnhmyrwgzdbpjlfc]y?)[aiueo][.]$/$1/
-    ## 下方日文標點
+##### 避免下方「標點」編碼影響，轉換「組合字符」和「特殊」編碼 #####
+    - xform/(,,)$/$1@/
+    - xform/([.][.])$/$1@/
+##### 避免「逗號」「句號」「空格」等編碼影響 #####
     # - abbrev/^([,.])@$/$1/
     - abbrev/@$//
 

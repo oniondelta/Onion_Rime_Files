@@ -43,7 +43,7 @@ menu:
 
 speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz/"
-  finals: "/"
+  # finals: "/" #不能開啟，否則韓文「//」組合單音無法輸入！
 #  finals: ";'"
   delimiter: "\""
   algebra:

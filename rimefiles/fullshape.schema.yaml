@@ -4,7 +4,7 @@
 schema:
   schema_id: fullshape
   name: ❃全形輸出❃
-  version: "202405"
+  version: "202606"
   author:
     - 『洋蔥』
   description: |
@@ -50,6 +50,8 @@ speller:
     - xform|^([a-z]+)$|$1/| #小寫增加尾綴「/」
     - derive|^([a-z]+)([/;])$|$1|
     - derive/^\|$/ /
+    ### 避免影響「標點符號」之編碼 ###
+    - abbrev/@$//
 
 translator:
   dictionary: fullshape.extended

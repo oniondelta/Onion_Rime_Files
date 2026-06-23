@@ -241,7 +241,7 @@ menu:
 speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz-;',./`"
   initials: "abcdefghijklmnopqrstuvwxyz-"
-  finals: ";',./`"
+  # finals: ";',./`" #不能開啟，否則韓文「//」組合單音無法輸入！
   delimiter: "|"
   algebra:
     - derive/^(-)[`']$/$1/

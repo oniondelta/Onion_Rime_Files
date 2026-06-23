@@ -459,7 +459,7 @@ korea:
     - xform/^/《韓》/
     - 'xform/\\/ /'
 
-#韓文形碼專用#
+# #韓文形碼專用#
 # korea:
 #   tag: korea
 #   dictionary: hangeul.extended
