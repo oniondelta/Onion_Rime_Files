@@ -47,7 +47,7 @@ speller:
 #  finals: ";'"
   delimiter: "\""
   algebra:
-    - derive|^([a-z]+)[/]$|$1|
+    # - derive|^([a-z]+)[/]$|$1|
     # - xform|^([a-z]+[/]+)!$|$1|
     - xform|^([a-z]+[/])!$|$1|
     - derive|^([a-z]+)[/]$|$1|
