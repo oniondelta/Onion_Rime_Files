@@ -309,7 +309,8 @@ translator:
 #   comment_format:
 #     - "xlit|`|'|"
 #     - xform/q/xtsu/
-#     - xform/(?:^| ),@/[,]/
+#     # - xform/(^| ),@/$1[,]/
+#     - xform/^,;$/[,]/
 #     - xform/ /   /
 
 punctuator:
