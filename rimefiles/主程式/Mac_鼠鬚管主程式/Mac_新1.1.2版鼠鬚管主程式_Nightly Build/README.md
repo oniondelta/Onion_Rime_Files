@@ -6,11 +6,11 @@
 
 ### Version Info
 
-- Github Releases：[6341b97](https://github.com/rime/squirrel/releases)
+- Github Releases：[6e2df01](https://github.com/rime/squirrel/releases)
 
 - Squirrel 1.1.2
 
-- librime 1.16.1
+- librime 1.17.0
 
 - librime-lua #409
 
