@@ -3876,6 +3876,11 @@ min_phrase_weight: 100
 哆	die3	0%
 咬	yao1	0%
 咬	jiao3	0%
+胔	ci2	0%
+胔	ji2	0%
+脔	ji4	0%
+晕	yin4	1%
+晕	yun4	5%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -66546,6 +66551,7 @@ min_phrase_weight: 100
 司空見慣	si1 kong1 jian4 guan4
 司長	si1 zhang3
 司隸校尉	si1 li4 xiao4 wei4
+司隸校尉	si1 li4 jiao4 wei4
 司馬相如	si1 ma3 xiang1 ru2
 吁俞	xu1 yu2
 吁吁	xu1 xu1
@@ -72059,6 +72065,7 @@ min_phrase_weight: 100
 女朋友	nv3 peng2 you3
 女校	nv3 xiao4
 女校尉	nv3 jiao4 wei4
+女校尉	nv3 xiao4 wei4
 女校書	nv3 jiao4 shu1
 女樂	nv3 yue4
 女氣	nv3 qi4
@@ -82021,6 +82028,7 @@ min_phrase_weight: 100
 摸透	mo1 tou4
 摸量	mo1 liang2
 摸金校尉	mo1 jin1 jiao4 wei4
+摸金校尉	mo1 jin1 xiao4 wei4
 摸門不著	mo1 men2 bu4 zhao2
 摸雞偷狗	mo1 ji1 tou1 gou3
 摸頭	mo1 tou2
@@ -88293,6 +88301,7 @@ min_phrase_weight: 100
 步伐異常	bu4 fa2 yi4 chang2
 步兵學校	bu4 bing1 xue2 xiao4
 步兵校尉	bu4 bing1 xiao4 wei4
+步兵校尉	bu4 bing1 jiao4 wei4
 步子	bu4 zi5
 步擊	bu4 ji2
 步操	bu4 cao1
@@ -118796,4 +118805,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 118799 #####
+##### @結束 END - 118808 #####
