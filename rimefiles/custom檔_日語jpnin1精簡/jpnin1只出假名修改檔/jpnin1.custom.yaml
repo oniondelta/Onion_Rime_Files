@@ -188,7 +188,7 @@ patch:
     - abbrev/^([kstnhmyrwgzdbpjlfxv])[naiueo][,.]$/$1/ #後面「n」原為了「んン」之「nn」，碼表中目前沒有該編碼。可不用！
     - abbrev/^(c)h[aiueo][,.]$/$1/ #避免「c」開頭沒有對應假名
     - abbrev/^([kstnhmyrwgzdbpjlfcxvq][kstnhmyrwgzdbpjlfc]y?)[aiueo][,.]$/$1/
-    #可略# - abbrev/^(q)[wy][aiueo][,.]$/$1/ #避免「q」開頭沒有對應假名
+    #配合省略# - abbrev/^(q)[wy][aiueo][,.]$/$1/ #避免「q」開頭沒有對應假名  #配合上方「っッ」之「q」是否被完全轉走，可略#
 ##### 避免下方「標點」編碼影響，轉換「組合字符」和「特殊」編碼 #####
     - xform/(?<=\w)(,,)$/$1@/
     - xform/(?<=\w)([.][.])$/$1@/
