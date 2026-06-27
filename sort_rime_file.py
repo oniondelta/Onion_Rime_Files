@@ -359,6 +359,7 @@ shutil.copyfile("./rimefiles/各方案default.custom/ocm_mount_custom/default.cu
 
 #複製檔案(ocm_plus)
 shutil.copyfile("./rimefiles/essay-zh-hant-mc.txt", "./"+sort_rime+"/"+rime_files_7+"/essay-zh-hant-mc.txt")
+shutil.copyfile("./rimefiles/essay-kr-onion.txt", "./"+sort_rime+"/"+rime_files_7+"/essay-kr-onion.txt")
 shutil.copyfile("./rimefiles/allbpm.dict.yaml", "./"+sort_rime+"/"+rime_files_7+"/allbpm.dict.yaml")
 shutil.copyfile("./rimefiles/allbpm.schema.yaml", "./"+sort_rime+"/"+rime_files_7+"/allbpm.schema.yaml")
 shutil.copyfile("./rimefiles/cyrillic.dict.yaml", "./"+sort_rime+"/"+rime_files_7+"/cyrillic.dict.yaml")
@@ -382,6 +383,7 @@ shutil.copyfile("./rimefiles/Mount_bopomo.extended.dict.yaml", "./"+sort_rime+"/
 shutil.copyfile("./rimefiles/Mount_bopomo.schema.yaml", "./"+sort_rime+"/"+rime_files_7+"/Mount_bopomo.schema.yaml")
 shutil.copyfile("./rimefiles/ocm_mixin_jp.dict.yaml", "./"+sort_rime+"/"+rime_files_7+"/ocm_mixin_jp.dict.yaml")
 shutil.copyfile("./rimefiles/ocm_mixin_kr.dict.yaml", "./"+sort_rime+"/"+rime_files_7+"/ocm_mixin_kr.dict.yaml")
+shutil.copyfile("./rimefiles/ocm_mixin_kr_hnc.dict.yaml", "./"+sort_rime+"/"+rime_files_7+"/ocm_mixin_kr_hnc.dict.yaml")
 shutil.copyfile("./rimefiles/ocm_mixin_la.dict.yaml", "./"+sort_rime+"/"+rime_files_7+"/ocm_mixin_la.dict.yaml")
 shutil.copyfile("./rimefiles/space_f.dict.yaml", "./"+sort_rime+"/"+rime_files_7+"/space_f.dict.yaml")
 
@@ -489,6 +491,7 @@ shutil.copyfile("./rimefiles/ocm_mixin_fullshape.schema.yaml", "./"+sort_rime+"/
 shutil.copyfile("./rimefiles/ocm_mixin_greek.schema.yaml", "./"+sort_rime+"/"+rime_files_8+"/ocm_mixin_greek.schema.yaml")
 shutil.copyfile("./rimefiles/ocm_mixin_jp.dict.yaml", "./"+sort_rime+"/"+rime_files_8+"/ocm_mixin_jp.dict.yaml")
 shutil.copyfile("./rimefiles/ocm_mixin_kr.dict.yaml", "./"+sort_rime+"/"+rime_files_8+"/ocm_mixin_kr.dict.yaml")
+shutil.copyfile("./rimefiles/ocm_mixin_kr_hnc.dict.yaml", "./"+sort_rime+"/"+rime_files_8+"/ocm_mixin_kr_hnc.dict.yaml")
 shutil.copyfile("./rimefiles/ocm_mixin_la.dict.yaml", "./"+sort_rime+"/"+rime_files_8+"/ocm_mixin_la.dict.yaml")
 shutil.copyfile("./rimefiles/ocm_mixin_phrase.txt", "./"+sort_rime+"/"+rime_files_8+"/ocm_mixin_phrase.txt")
 shutil.copyfile("./rimefiles/lua_custom_phrase.txt", "./"+sort_rime+"/"+rime_files_8+"/lua_custom_phrase.txt")

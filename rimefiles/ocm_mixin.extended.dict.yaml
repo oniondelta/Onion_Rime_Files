@@ -4,7 +4,7 @@
 # 『洋蔥』製作
 ---
 name: ocm_mixin.extended
-version: "202204"
+version: "202606"
 sort: original
 use_preset_vocabulary: false
 import_tables:
@@ -12,6 +12,7 @@ import_tables:
   - uniabcdword
   - ocm_mixin_jp
   - ocm_mixin_kr
+  # - ocm_mixin_kr_hnc
   - ocm_mixin_la
   - phrases.ocmtc_essay_mc
   - phrases.cht_en_w

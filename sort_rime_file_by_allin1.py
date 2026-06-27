@@ -188,6 +188,7 @@ shutil.copyfile("./rimefiles/phrases.ocmtc_essay_mc.dict.yaml", "./"+sort_rime+"
 
 
 #複製檔案(ocm_plus)
+shutil.copyfile("./rimefiles/essay-kr-onion.txt", "./"+sort_rime+"/"+rime_files+"/essay-kr-onion.txt")
 shutil.copyfile("./rimefiles/dif1_cy.schema.yaml", "./"+sort_rime+"/"+rime_files+"/dif1_cy.schema.yaml")
 shutil.copyfile("./rimefiles/dif1_fs.schema.yaml", "./"+sort_rime+"/"+rime_files+"/dif1_fs.schema.yaml")
 shutil.copyfile("./rimefiles/dif1_gr.schema.yaml", "./"+sort_rime+"/"+rime_files+"/dif1_gr.schema.yaml")
