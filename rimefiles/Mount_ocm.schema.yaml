@@ -94,6 +94,9 @@ speller:
   auto_select: false #自動上屛
   # auto_clear: max_length # auto：空碼自動清屏| manual：空碼按下一鍵確認清屏| max_length：達到最長碼時確認清屏
   algebra:
+### 「vrsf」標註轉寫 ###
+    - xform/`//
+### 用「`」調出中文漢字（《自造詞》可用） ###
     - derive/^([a-z]+)$/$1`/
 
 translator:
@@ -117,6 +120,7 @@ tr_reverse_lookup:
   comment_format:
     - xform/ /  /
     - xform/^/  /
+    - xform/`([a-z])/‹$1›/ #「vrsf」標註轉寫
     - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
 
 pt:
@@ -164,6 +168,7 @@ ovff_reverse_lookup:
   comment_format:
     - xform/ /  /
     - xform/^/  /
+    - xform/`([a-z])/‹$1›/ #「vrsf」標註轉寫
     - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
 
 reverse3_lookup:

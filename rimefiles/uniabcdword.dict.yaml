@@ -4,20 +4,21 @@
 # 201707把前面有「,」的打井字號！
 ---
 name: uniabcdword
-version: "202604"
+version: "202606"
 sort: original
 use_preset_vocabulary: false
 #max_phrase_length: 7
 #min_phrase_weight: 100
 ...
 ### @@補 CJK 缺碼或修正碼開始 ###
-# 官方錯誤編碼之修正
-畐	eoq
-畐	eoqv
-垇	yue
-垇	yuo
-垇	yuov
-# 增補官方缺失編碼
+# ## 以下遮屏，改由在「ocm_tc_mc.dict.yaml」加入
+# ## 官方錯誤編碼之修正
+# 畐	eoq
+# 畐	eoqv
+# 垇	yue
+# 垇	yuo
+# 垇	yuov
+## 增補官方缺失編碼
 覅	vnm
 稆	hopo
 𢙲	hoo
@@ -27,7 +28,7 @@ use_preset_vocabulary: false
 諯	ier
 踭	ozee
 柺	tod
-# 含「於」字邊。
+## 含「於」字邊。
 於	fvb
 於	uvb
 菸	rfvb
@@ -47,7 +48,7 @@ use_preset_vocabulary: false
 棜	tuvb
 淤	wfvb
 淤	wuvb
-# 含「犮」字邊。
+## 含「犮」字邊。
 犮	axu
 柭	taxu
 沷	waxu
@@ -68,7 +69,7 @@ use_preset_vocabulary: false
 詙	iaxu
 馛	hda
 鮁	ufa
-# 含「巠」字邊。
+## 含「巠」字邊。
 挳	jui
 殌	dui
 鑋	cuia
@@ -87,41 +88,44 @@ use_preset_vocabulary: false
 壡	znbi
 ### 補 CJK 缺碼或修正碼結束 ###
 ### @@補 CJK 缺碼或修正碼（針對日語簡體別於一般中文之編碼）開始 ###
-# 日語、簡體碼增補非「vrsf」邏輯（原有但遮屏）
-#可能為「vrsf」，官方錯標？# 弓	qyv
-#可能為「vrsf」，官方錯標？# 掀	jiv
-#可能為「vrsf」，官方錯標？# 碼	lfv
-譬	civ
-黏	hov
-詞	iov
-貶	mzv
-嗜	odv
-渓	wdv
-浅	wqv
-堪	ykv
-#以下重複非cjk（該字變到前頭，上方可能重複cjk，但不會變到首位）（相似類推字，不建議遮屏）
-悦	hrv
-弑	xiv
-#以下重複非cjk（該字變到前頭，上方可能重複cjk，但不會變到首位）
-店	lov
-戡	kqv
-師	pnv
-甲	qiv
-営	sov
-哥	tov
-堵	ydv
-黙	qdv
-默	qdv
-露	uov
-# 日語、簡體碼增補非「vrsf」邏輯（原有但遮屏）（補「vrsf」）
-懼	hvv
-#下一個非原有但遮屏之碼
-渓	wdvv
-#下一個原碼qdv重複非cjk
-默	qdvv
+# ## 以下遮屏，改由在「ocm_tc_mc.dict.yaml」中開啟
+# ## 日語、簡體碼增補非「vrsf」邏輯（原有但遮屏）
+# #可能為「vrsf」，官方錯標？# 弓	qyv
+# #可能為「vrsf」，官方錯標？# 掀	jiv
+# #可能為「vrsf」，官方錯標？# 碼	lfv
+# 譬	civ
+# 黏	hov
+# 詞	iov
+# 貶	mzv
+# 嗜	odv
+# 渓	wdv
+# 浅	wqv
+# 堪	ykv
+# ## 以下重複非cjk（該字變到前頭，上方可能重複cjk，但不會變到首位）（相似類推字，不建議遮屏）
+# 悦	hrv
+# 弑	xiv
+# ## 以下重複非cjk（該字變到前頭，上方可能重複cjk，但不會變到首位）
+# 店	lov
+# 戡	kqv
+# 師	pnv
+# 甲	qiv
+# 営	sov
+# #「哥」注意順序#
+# 哥	tov
+# 堵	ydv
+# 黙	qdv
+# 默	qdv
+# 露	uov
+# ## 日語、簡體碼增補非「vrsf」邏輯（原有但遮屏）（補「vrsf」）
+# 懼	hvv
+# ## 下一個非原有但遮屏之碼
+# 渓	wdvv
+# ## 下一個原碼qdv重複非cjk
+# 默	qdvv
 ### 補 CJK 缺碼或修正碼（針對日語簡體別於一般中文之編碼）結束 ###
 ### @@日語、簡體碼增補「vrsf」開始 ###
-# # 日語、簡體碼增補「vrsf」（原有但遮屏）
+# ## 以下遮屏，該項目還需整理
+# ## 日語、簡體碼增補「vrsf」（原有但遮屏）
 # #碼順序不對# 賤	mbafv
 # #碼順序不對# 苓	rpiv
 # #碼順序不對# 欟	trmrv
@@ -147,7 +151,7 @@ use_preset_vocabulary: false
 # 襌	vsqjv
 # 匏	xnflv
 # 壤	yljkv
-# # 日語、簡體碼增補「vrsf」（原本沒有之碼）
+# ## 日語、簡體碼增補「vrsf」（原本沒有之碼）
 # 朗	adkuv
 # 朗	aduuv
 # 剱	aooxr
@@ -209,12 +213,13 @@ use_preset_vocabulary: false
 # 澑	wddqv
 # 滞	wsnnv
 # 者	ydov
+# 埓	yeav
 # 圷	yfav
 # 壞	yjfkv
 # 都	ypdbv
 # 簓	znmv
 # 艝	zuev
-# #以下一個重複非cjk（該字變到前頭，上方可能重複cjk，但不會變到首位）
+# ## 以下一個重複非cjk（該字變到前頭，上方可能重複cjk，但不會變到首位）
 # 竕	lbdv
 ### 日語、簡體碼增補「vrsf」結束 ###
 ### @@補非 CJK 缺碼或修正碼 ###
@@ -231,7 +236,7 @@ use_preset_vocabulary: false
 𫗉	rcfq
 𫗊	rcld
 𫗋	rckh
-# 含「於」字邊。
+## 含「於」字邊。
 𡌧	yubb
 𡌧	yfvb
 𡌧	yuvb
@@ -259,7 +264,7 @@ use_preset_vocabulary: false
 𣃶	ubbb
 𣃶	fvbb
 𣃶	uvbb
-# 含「犮」字邊。
+## 含「犮」字邊。
 䣮	eaxu
 䳊	axuf
 𤝜	qaxu
@@ -283,7 +288,7 @@ use_preset_vocabulary: false
 𩠙	axuh
 𩠙	axum
 𩠖	axum
-# 含「巠」字邊。
+## 含「巠」字邊。
 𣻽	wuuy
 𣻽	wuui
 䞓	yfuy
