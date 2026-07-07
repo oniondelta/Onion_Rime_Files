@@ -264,8 +264,8 @@ speller:
   finals: ";"
   delimiter: "|`"
   algebra:
-    - abbrev/-@/-/ #修改順序用
-    - xform/`// #「vrsf」標註轉寫
+    - xform/`$// #「vrsf」標註轉寫
+    - abbrev/^-@$/-/ #修改順序用
 ################################### 短語和外掛標點 ######################################
 # custom_phrase:
 #   dictionary: ""
@@ -330,7 +330,7 @@ top_reverse_lookup:
     - xform/ /  /
     - xform/^/  /
     - xform/-@/-/
-    - xform/`([a-z])/‹$1›/ #「vrsf」標註轉寫
+    - xform/([a-z])`/‹$1›/ #「vrsf」標註轉寫
     - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
 ######################調出其他語言之翻譯器(結尾符號調出各國語言輸入)################
 jphi_lookup:
@@ -607,7 +607,7 @@ ovff_reverse_lookup:
     - xform/ /  /
     - xform/^/  /
     - xform/-@/-/
-    - xform/`([a-z])/‹$1›/ #「vrsf」標註轉寫
+    - xform/([a-z])`/‹$1›/ #「vrsf」標註轉寫
     - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
 ################################### 使用嘸蝦米反查注音碼 ######################################
 reverse3_lookup:

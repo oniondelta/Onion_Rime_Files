@@ -245,7 +245,7 @@ speller:
   delimiter: "|"
   algebra:
     - derive/^(-)[`']$/$1/
-    - xform/`// #「vrsf」標註轉寫
+    - xform/`$// #「vrsf」標註轉寫
     - derive/^([a-z]+)$/$1`/
     - xform/^([a-z]+);$/$1;;/ #注音偏旁尾綴改寫
 ##### 日語 #####
@@ -378,7 +378,7 @@ top_reverse_lookup:
   comment_format:
     - xform/ /  /
 ##### 「vrsf」標註轉寫 #####
-    - xform/`([a-z])/‹$1›/
+    - xform/([a-z])`/‹$1›/
 ##### 日語 #####
 ## 符號
     - xform/(^| )([eaovsb]v)(,)(?!,)/$1$2$3 $2\./
@@ -680,7 +680,7 @@ ovff_reverse_lookup:
     - xform/ /  /
     - xform/^/  /
     - xform/;/;;/
-    - xform/`([a-z])/‹$1›/ #「vrsf」標註轉寫
+    - xform/([a-z])`/‹$1›/ #「vrsf」標註轉寫
     - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
 ################################### 使用嘸蝦米反查注音碼 ######################################
 reverse3_lookup:
