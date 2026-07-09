@@ -95,7 +95,7 @@ speller:
   # auto_clear: max_length # auto：空碼自動清屏| manual：空碼按下一鍵確認清屏| max_length：達到最長碼時確認清屏
   algebra:
 ### 「vrsf」標註轉寫 ###
-    - xform/`$//
+    - xform/`//
 ### 用「`」調出中文漢字（《自造詞》可用） ###
     - derive/^([a-z]+)$/$1`/
 
@@ -120,7 +120,7 @@ tr_reverse_lookup:
   comment_format:
     - xform/ /  /
     - xform/^/  /
-    - xform/([a-z])`/‹$1›/ #「vrsf」標註轉寫
+    - xform/`([a-z])/‹$1›/ #「vrsf」標註轉寫
     - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
 
 pt:
@@ -143,6 +143,7 @@ tr2_reverse_lookup:
   comment_format:
     - xform/ /   /
     - xform/^/  /
+    - xform/`([a-z])/‹$1›/ #「vrsf」標註轉寫
     - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
 
 reverse2_lookup:
@@ -168,7 +169,7 @@ ovff_reverse_lookup:
   comment_format:
     - xform/ /  /
     - xform/^/  /
-    - xform/([a-z])`/‹$1›/ #「vrsf」標註轉寫
+    - xform/`([a-z])/‹$1›/ #「vrsf」標註轉寫
     - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
 
 reverse3_lookup:

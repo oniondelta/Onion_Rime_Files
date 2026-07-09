@@ -5,7 +5,7 @@
 schema:
   schema_id: punct_ovff # 注意此ID與文件名裏 .schema.yaml 之前的部分相同
   name: 單符號_蝦米 # 將在〔輸入法選單〕中顯示
-  version: "202405" # 版本說明，這是文字類型而非整數或小數，如 "1.2.3"
+  version: "202606" # 版本說明，這是文字類型而非整數或小數，如 "1.2.3"
   author:
     - 製作人
   description: |
@@ -47,6 +47,8 @@ menu: #菜單選項
 speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz[];,'./-="
   delimiter: " " #上屛時的音節(字母)間分隔號
+  algebra:
+    - xform/`// #「vrsf」標註轉寫
 
 translator:
   dictionary: punct_ovff

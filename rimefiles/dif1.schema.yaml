@@ -264,7 +264,7 @@ speller:
   finals: ";"
   delimiter: "|`"
   algebra:
-    - xform/`$// #「vrsf」標註轉寫
+    - xform/`// #「vrsf」標註轉寫
     - abbrev/^-@$/-/ #修改順序用
 ################################### 短語和外掛標點 ######################################
 # custom_phrase:
@@ -293,10 +293,11 @@ pt_reverse_lookup:
   overwrite_comment: true
   dictionary: punct_ovff
   comment_format:
-    - xform| [][]+[a-z]*||
+    - xform| [][]+[a-z`]*|| #「`」為標註轉寫用
     - xform| v[][]+v?||
     - xform/ /   /
     - xform/^/  /
+    - xform/`([a-z])/‹$1›/ #「vrsf」標註轉寫
     - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
     # - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
 ################################### 主引擎 ######################################
@@ -330,7 +331,7 @@ top_reverse_lookup:
     - xform/ /  /
     - xform/^/  /
     - xform/-@/-/
-    - xform/([a-z])`/‹$1›/ #「vrsf」標註轉寫
+    - xform/`([a-z])/‹$1›/ #「vrsf」標註轉寫
     - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
 ######################調出其他語言之翻譯器(結尾符號調出各國語言輸入)################
 jphi_lookup:
@@ -607,7 +608,7 @@ ovff_reverse_lookup:
     - xform/ /  /
     - xform/^/  /
     - xform/-@/-/
-    - xform/([a-z])`/‹$1›/ #「vrsf」標註轉寫
+    - xform/`([a-z])/‹$1›/ #「vrsf」標註轉寫
     - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
 ################################### 使用嘸蝦米反查注音碼 ######################################
 reverse3_lookup:
