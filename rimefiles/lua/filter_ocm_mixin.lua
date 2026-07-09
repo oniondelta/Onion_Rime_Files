@@ -58,20 +58,40 @@ local function filter(inp, env)
   --               or env.bms_opencc:convert_word(cand.text)
   --               or {''}
   --   local b_mark_1 = b_mark[1] or ""
+  --   -- s_c_f_p_s true 時 清除編碼 comment
   --   yield( not s_c_f_p_s and b_k and b_mark_1 ~= "" and change_comment(cand, cand.comment .. xform_mark(b_mark_1))
   --       or s_c_f_p_s and b_k and b_mark_1 ~= "" and change_comment(cand, xform_mark(b_mark_1))
   --       or s_c_f_p_s and change_comment(cand, "")  -- b_k and not b_k
   --       or cand )
   -- end
 
-  local bm_bms_opencc = not seg_pt and env.bm_opencc or env.bms_opencc
-  for cand in tran:iter() do
-    local b_mark = bm_bms_opencc:convert_word(cand.text) or {''}
-    local b_mark_1 = b_mark[1] or ""
-    yield( not s_c_f_p_s and b_k and b_mark_1 ~= "" and change_comment(cand, cand.comment .. xform_mark(b_mark_1))
-        or s_c_f_p_s and b_k and b_mark_1 ~= "" and change_comment(cand, xform_mark(b_mark_1))
-        or s_c_f_p_s and change_comment(cand, "")  -- b_k and not b_k
-        or cand )
+  -- local bm_bms_opencc = not seg_pt and env.bm_opencc or env.bms_opencc
+  -- for cand in tran:iter() do
+  --   local b_mark = bm_bms_opencc:convert_word(cand.text) or {''}
+  --   local b_mark_1 = b_mark[1] or ""
+  --   -- s_c_f_p_s true 時 清除編碼 comment
+  --   yield( not s_c_f_p_s and b_k and b_mark_1 ~= "" and change_comment(cand, cand.comment .. xform_mark(b_mark_1))
+  --       or s_c_f_p_s and b_k and b_mark_1 ~= "" and change_comment(cand, xform_mark(b_mark_1))
+  --       or s_c_f_p_s and change_comment(cand, "")  -- b_k and not b_k
+  --       or cand )
+  -- end
+
+  local function yield_by_cc(bm_bms_opencc)
+    for cand in tran:iter() do
+      local b_mark = bm_bms_opencc:convert_word(cand.text) or {''}
+      local b_mark_1 = b_mark[1] or ""
+      -- s_c_f_p_s true 時 清除編碼 comment
+      yield( not s_c_f_p_s and b_k and b_mark_1 ~= "" and change_comment(cand, cand.comment .. xform_mark(b_mark_1))
+          or s_c_f_p_s and b_k and b_mark_1 ~= "" and change_comment(cand, xform_mark(b_mark_1))
+          or s_c_f_p_s and change_comment(cand, "")  -- b_k and not b_k
+          or cand )
+    end
+  end
+
+  if not seg_pt then
+    yield_by_cc(env.bm_opencc)
+  else
+    yield_by_cc(env.bms_opencc)
   end
 
 end
