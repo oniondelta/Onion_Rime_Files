@@ -13,12 +13,14 @@
 
 local drop_cand = require("filter_cand/drop_cand")
 local change_comment = require("filter_cand/change_comment")
+local xform_mark = require("filter_cand/xform_mark")
 
 ----------------
 -- local M={}
--- local function init(env)
+local function init(env)
 -- function M.init(env)
--- end
+  env.bms_opencc = Opencc("back_mark_series.json") or {''}
+end
 
 
 -- function M.fini(env)
@@ -29,15 +31,83 @@ local function filter(inp, env)
 -- function M.func(inp,env)
   local engine = env.engine
   local context = engine.context
+  local comp = context.composition
+  local seg = comp:back()
+  local seg_pt = seg:has_tag("pt")
   local c_f2_s = context:get_option("character_range_bhjm")
   local s_c_f_p_s = context:get_option("simplify_comment")
+  local b_k = context:get_option("back_mark")
   -- 當 c_f2_s true 去掉 cand.text 有 "᰼᰼" 的 cand
   local tran = c_f2_s and Translation(drop_cand, inp, "᰼᰼") or inp
-  
-  for cand in tran:iter() do
-    -- s_c_f_p_s true 時 清除 comment
-    yield( s_c_f_p_s and change_comment(cand,"") or cand )
+
+  -- for cand in tran:iter() do
+  --   local b_mark = env.bms_opencc:convert_word(cand.text) or {''}
+  --   local b_mark_1 = b_mark[1] or ""
+  --   -- s_c_f_p_s true 時 清除編碼 comment
+  --   yield( seg_pt and not s_c_f_p_s and b_k and b_mark_1 ~= "" and change_comment(cand, cand.comment .. xform_mark(b_mark_1))
+  --       or seg_pt and s_c_f_p_s and b_k and b_mark_1 ~= "" and change_comment(cand, xform_mark(b_mark_1))
+  --       or s_c_f_p_s and change_comment(cand, "")
+  --       or cand )
+  -- end
+
+  -- for cand in tran:iter() do
+  --   if not seg_pt then
+  --     -- s_c_f_p_s true 時 清除編碼 comment
+  --     yield( s_c_f_p_s and change_comment(cand, "") or cand )
+  --   else
+  --     local b_mark = env.bms_opencc:convert_word(cand.text) or {''}
+  --     local b_mark_1 = b_mark[1] or ""
+  --     -- s_c_f_p_s true 時 清除編碼 comment
+  --     yield( not s_c_f_p_s and b_k and b_mark_1 ~= "" and change_comment(cand, cand.comment .. xform_mark(b_mark_1))
+  --         or s_c_f_p_s and b_k and b_mark_1 ~= "" and change_comment(cand, xform_mark(b_mark_1))
+  --         or s_c_f_p_s and change_comment(cand, "")
+  --         or cand )
+  --   end
+  -- end
+
+  -- --- ai 建議之修正：
+  -- if not seg_pt then
+  --   for cand in tran:iter() do
+  --     -- s_c_f_p_s true 時 清除編碼 comment
+  --     if s_c_f_p_s then
+  --       change_comment(cand, "")
+  --     end
+  --     yield(cand)
+  --   end
+  -- else
+  --   for cand in tran:iter() do
+  --     local b_mark = env.bms_opencc:convert_word(cand.text) or {''}
+  --     local b_mark_1 = b_mark[1] or ""
+  --     if b_k and b_mark_1 ~= "" then
+  --       if not s_c_f_p_s then
+  --         change_comment(cand, cand.comment .. xform_mark(b_mark_1))
+  --       else
+  --         change_comment(cand, xform_mark(b_mark_1))
+  --       end
+  --     elseif s_c_f_p_s then
+  --       change_comment(cand, "")
+  --     end
+  --     yield(cand)
+  --   end
+  -- end
+
+  if not seg_pt then
+    for cand in tran:iter() do
+      -- s_c_f_p_s true 時 清除編碼 comment
+      yield( s_c_f_p_s and change_comment(cand, "") or cand )
+    end
+  else
+    for cand in tran:iter() do
+      local b_mark = env.bms_opencc:convert_word(cand.text) or {''}
+      local b_mark_1 = b_mark[1] or ""
+      -- s_c_f_p_s true 時 清除編碼 comment
+      yield( not s_c_f_p_s and b_k and b_mark_1 ~= "" and change_comment(cand, cand.comment .. xform_mark(b_mark_1))
+          or s_c_f_p_s and b_k and b_mark_1 ~= "" and change_comment(cand, xform_mark(b_mark_1))
+          or s_c_f_p_s and change_comment(cand, "")
+          or cand )
+    end
   end
+
 end
 ----------------
 -- return mix_cf2_cfp_filter

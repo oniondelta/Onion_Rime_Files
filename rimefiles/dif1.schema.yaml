@@ -295,11 +295,12 @@ pt_reverse_lookup:
   comment_format:
     - xform| [][]+[a-z`]*|| #「`」為標註轉寫用
     - xform| v[][]+v?||
-    - xform/ /   /
-    - xform/^/  /
     - xform/`([a-z])/‹$1›/ #「vrsf」標註轉寫
     - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
     # - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
+    - xform/ /   /
+    - xform/^/  /
+    - xform/$/  /
 ################################### 主引擎 ######################################
 translator:
   dictionary: dif1.extended
@@ -328,11 +329,11 @@ top_reverse_lookup:
   overwrite_comment: false
   dictionary: dif1.extended
   comment_format:
-    - xform/ /  /
-    - xform/^/  /
     - xform/-@/-/
     - xform/`([a-z])/‹$1›/ #「vrsf」標註轉寫
     - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
+    - xform/ /  /
+    - xform/^/  /
 ######################調出其他語言之翻譯器(結尾符號調出各國語言輸入)################
 jphi_lookup:
   tag: jphi_lookup
@@ -520,11 +521,12 @@ easy_en:
     - easy_en_upper
     # - easy_en_script
   preedit_format:
-    - xform/^/《Easy》/
+    # - xform/^/《Easy》/
     # - xform/》;/》; /
     # - xform/》'/》' /
     # - xform|》[/]|》/ |
     - xform/\|/ /
+    - xform/^/《Easy》/
   comment_format:
     - xform/.+//  #刪除尚未輸入完整碼之提示 ~abc
   #   # - xform|[~a-z;/.'-]+||
@@ -555,8 +557,8 @@ easy_en_upper:
   # sentence_over_completion: false
   enable_user_dict: false
   preedit_format:
-    - xform/^/《Easy》/
     - xform/\\/ /
+    - xform/^/《Easy》/
 
 e_reverse_lookup:
   tags: [ easy_en ]
@@ -581,8 +583,8 @@ japan:
   disable_user_dict_for_patterns:
     - ^-{1,2}$
   preedit_format:
-    - xform/^/《純日語》/
     - 'xform/\|/ /'
+    - xform/^/《純日語》/
 ################################### 使用注音反查嘸蝦米碼 ######################################
 reverse2_lookup:
   tag: reverse2_lookup
@@ -596,20 +598,20 @@ reverse2_lookup:
   closing_tips: "◀《注音反查》"
   preedit_format:
     - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 6347|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˉˊˇˋ˙|"
-    - xform/^/《注音反查》/
     - xform/\|/  /
     - xform/`/  /
+    - xform/^/《注音反查》/
 
 ovff_reverse_lookup:
   tags: [ reverse2_lookup ]
   overwrite_comment: true
   dictionary: "dif1.extended"
   comment_format:
-    - xform/ /  /
-    - xform/^/  /
     - xform/-@/-/
     - xform/`([a-z])/‹$1›/ #「vrsf」標註轉寫
     - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
+    - xform/ /  /
+    - xform/^/  /
 ################################### 使用嘸蝦米反查注音碼 ######################################
 reverse3_lookup:
   # __include: /top_fixed  # user_dict 詞彙會混到 abc 中，有可能不顯示，也可能顯示影響。
@@ -630,10 +632,10 @@ reverse3_lookup:
   extra_tags:
     - reverse3_lookup_extra
   preedit_format:
-    - xform/^/《查注音》/
     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
     - xform/\|/  /
     - xform/`/  /
+    - xform/^/《查注音》/
 
 reverse3_lookup_extra:
   # __include: /translator  # user_dict 詞彙會混到 abc 中，有可能不顯示，也可能顯示影響。
@@ -650,10 +652,10 @@ reverse3_lookup_extra:
   # strict_spelling: false #true
   initial_quality: 1
   preedit_format:
-    - xform/^/《查注音》/
     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
     - xform/\|/  /
     - xform/`/  /
+    - xform/^/《查注音》/
 
 phonetic_reverse_lookup:
   tags: [ reverse3_lookup ]
@@ -684,8 +686,8 @@ phonetic_reverse_lookup:
     - xform/eh/E/
     - xform/([iv])e/$1E/
     - "xlit|bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR12345|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˉˊˇˋ˙|"
-    - xform/^/ /
     - xform/ /  /
+    - xform/^/  /
 #    - xform/ /] [/
 #    - xform/^/  [/
 #    - xform/$/]/
@@ -701,10 +703,10 @@ all_bpm:
   tips: "《注音文》▶"
   closing_tips: "◀《注音文》"
   preedit_format:
-    - xform/^/《注音文》/
     - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 6347|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˉˊˇˋ˙|"
     - xform/\|//
     - xform/`//
+    - xform/^/《注音文》/
 ################################### 系列符號 ######################################
 emoji_series:
   tag: emoji_series

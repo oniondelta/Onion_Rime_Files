@@ -7,16 +7,6 @@
 --]]
 
 
-----------------
-local function xform_mark(inp)
-  if inp == "" or nil then return "" end
-  inp = string.gsub(inp, "@@+", "") --@@@@
-  inp = string.gsub(inp, "@", " ")
-  return inp
-end
-----------------
-
-
 
 
 --- 以下新的寫法
@@ -25,12 +15,14 @@ end
 
 local drop_cand = require("filter_cand/drop_cand")
 local change_comment = require("filter_cand/change_comment")
+local xform_mark = require("filter_cand/xform_mark")
 
 ----------------
 -- local M={}
 local function init(env)
 -- function M.init(env)
   env.bm_opencc = Opencc("back_mark.json") or {''}
+  env.bms_opencc = Opencc("back_mark_series.json") or {''}
 end
 
 -- local function fini(env)
@@ -44,27 +36,44 @@ local function filter(inp, env)
 -- function M.func(inp,env)
   local engine = env.engine
   local context = engine.context
+  local comp = context.composition
+  local seg = comp:back()
+  local seg_pt = seg:has_tag("pt")
   local c_f2_s = context:get_option("character_range_bhjm")
   local s_c_f_p_s = context:get_option("simplify_comment")
   local b_k = context:get_option("back_mark")
   local tran = c_f2_s and Translation(drop_cand, inp, "᰼᰼") or inp
   -- local bm_opencc = {}
   -- local bm_opencc = Opencc("back_mark.json") or {''}
+
+  -- for cand in tran:iter() do
+  --   -- -- local b_mark = {}
+  --   -- local b_mark = env.bm_opencc:convert_word(cand.text) or {''}
+  --   -- yield( not s_c_f_p_s and b_k and change_comment(cand, cand.comment .. xform_mark(b_mark[1]))
+  --   --     or s_c_f_p_s and b_k and change_comment(cand, xform_mark(b_mark[1]))
+  --   --     or s_c_f_p_s and not b_k and change_comment(cand, "")
+  --   --     -- or not s_c_f_p_s and not b_k and cand  --效果同下，省略
+  --   --     or cand )
+  --   local b_mark = not seg_pt and env.bm_opencc:convert_word(cand.text)
+  --               or env.bms_opencc:convert_word(cand.text)
+  --               or {''}
+  --   local b_mark_1 = b_mark[1] or ""
+  --   yield( not s_c_f_p_s and b_k and b_mark_1 ~= "" and change_comment(cand, cand.comment .. xform_mark(b_mark_1))
+  --       or s_c_f_p_s and b_k and b_mark_1 ~= "" and change_comment(cand, xform_mark(b_mark_1))
+  --       or s_c_f_p_s and change_comment(cand, "")  -- b_k and not b_k
+  --       or cand )
+  -- end
+
+  local bm_bms_opencc = not seg_pt and env.bm_opencc or env.bms_opencc
   for cand in tran:iter() do
-    -- -- local b_mark = {}
-    -- local b_mark = env.bm_opencc:convert_word(cand.text) or {''}
-    -- yield( not s_c_f_p_s and b_k and change_comment(cand, cand.comment .. xform_mark(b_mark[1]))
-    --     or s_c_f_p_s and b_k and change_comment(cand, xform_mark(b_mark[1]))
-    --     or s_c_f_p_s and not b_k and change_comment(cand, "")
-    --     -- or not s_c_f_p_s and not b_k and cand  --效果同下，省略
-    --     or cand )
-    local b_mark = env.bm_opencc:convert_word(cand.text) or {''}
+    local b_mark = bm_bms_opencc:convert_word(cand.text) or {''}
     local b_mark_1 = b_mark[1] or ""
     yield( not s_c_f_p_s and b_k and b_mark_1 ~= "" and change_comment(cand, cand.comment .. xform_mark(b_mark_1))
         or s_c_f_p_s and b_k and b_mark_1 ~= "" and change_comment(cand, xform_mark(b_mark_1))
         or s_c_f_p_s and change_comment(cand, "")  -- b_k and not b_k
         or cand )
   end
+
 end
 ----------------
 -- return ocm_mixin_filter
