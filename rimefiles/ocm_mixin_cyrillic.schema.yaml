@@ -4,7 +4,7 @@
 schema:
   schema_id: ocm_mixin_cyrillic
   name: ✹西里爾字母_新_蝦米✹
-  version: "202405"
+  version: "202607"
   author:
     - 『洋蔥』
   description: |
@@ -50,6 +50,8 @@ speller:
     - xform/^([a-z]+)$/$1'/ #小寫尾綴「/」
     - abbrev/^([a-z]+)([';])$/$1/ #精簡尾綴「'」和「;」「/」
 #    - derive/^([a-z]+)(['])([';])$/$1$2/ #精簡尾綴「;」「/」
+    ### 避免影響「標點符號」之編碼 ###
+    - abbrev/@$//
 
 translator:
   dictionary: cyrillic.extended
