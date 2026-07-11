@@ -134,6 +134,7 @@
 #    詞句中，「拙」臺灣字典發音和習慣發音為「zhuo2」，大陸發音為「zhuo1」，斟酌後全改成臺灣發音「zhuo2」。
 #    詞句中，「咄」臺灣字典發音和習慣發音為「duo4」，大陸發音為「duo1」，斟酌後全改成臺灣發音「duo4」。
 #    詞句中，「猓」臺灣字典發音和習慣發音為「guo3」，大陸發音為「guo1」，斟酌後全改成臺灣發音「guo3」。
+#    詞句中，「蓿」臺灣字典發音和習慣發音為「su4」，大陸發音為「xu4」或「xu5」，斟酌後全改成臺灣發音「su4」。
 #    詞句中，「鈷」語意為化學元素時，臺灣字典發音和習慣發音為「gu1」，大陸發音為「gu3」，斟酌後，除詞條「鈷鉧」之「鈷」只標註為「gu3」，全改成臺灣發音「gu1」。
 #    詞句中，「地」於句尾當結構助詞時，意思同「的」時，不標註「di4」，標註「de5」「di5」。
 #    詞句中，「嚓」臺灣字典只有發音「ca1」，不標為「cha1」，因為為形聲，故另標「ca5」，故全都補齊「ca1」「ca5」。
@@ -163,6 +164,8 @@
 #    詞句中，「棱」日常發音常會誤發為「ling2」，臺灣標準為「leng2」，故皆補齊「leng2」「ling2」，後者詞頻設為80%，除非特殊發音。
 #    詞句中，「鰾」日常發音常會誤發為「biao1」，臺灣標準為「biao4」，故皆補齊「biao4」「biao1」，後者詞頻設為80%。
 #    詞句中，「鷲」日常發音常會誤發為「jiu1」，臺灣標準為「jiu4」，故皆補齊「jiu4」「jiu1」，後者詞頻設為80%。
+#    詞句中，「鰻」日常發音常會誤發為「man4」，臺灣標準為「man2」，故皆補齊「man2」「man4」，後者詞頻設為80%。
+#    詞句中，「梵」日常發音常會誤發為「fan2」，臺灣標準為「fan4」，故皆補齊「fan4」「fan2」，後者詞頻設為80%。
 #    詞句中，「珀」日常發音常會誤發為「bo4」，臺灣標準為「po4」，故皆補齊「po4」「bo4」，後者詞頻設為80%。
 #    詞句中，「灸」日常發音常會誤發為「jiu1」，臺灣標準為「jiu3」，故全都補齊「jiu3」「jiu1」，後者詞頻設為80%。
 #    詞句中，「蒲」日常發音常會誤發為「pu3」，臺灣標準為「pu2」，故皆補齊「pu2」「pu3」，後者詞頻設為80%。。
@@ -337,7 +340,7 @@
 #    詞句中，「咆哮」臺灣字典發音為「pao2 xiao4」和「pao2 xiao1」，語義有區別，但日常易混，故皆補齊「pao2 xiao4」「pao2 xiao1」。
 #    詞句中，「朝鮮」臺灣字典發音為「chao2 xian1」和「zhao1 xian1」，日常「鮮」發音常發「xian3」，故皆補齊「chao2 xian1」「zhao1 xian1」「chao2 xian3」「zhao1 xian3」。
 #    詞句中，「擂臺」「擂台」臺灣字典發音為「lei4 tai2」，日常發音常發「lei2 tai2」，故皆補齊「lei2 tai4」「lei2 tai2」。
-#    詞句中，「相片」「照片」「影片」「碟片」「唱片」「畫片」，其「片」發音，皆補齊「pian4」和「pian1」。
+#    詞句中，「相片」「像片」「照片」「影片」「碟片」「唱片」「畫片」，其「片」發音，皆補齊「pian4」和「pian1」。
 #    詞句中，「傍晚」臺灣字典發音為「bang1 wan3」，大陸標準為「bang4 wan3」，易誤按，且無相似發音詞彙，故皆補齊「bang1 wan3」「bang4 wan3」。
 #    詞句中，「巧克力」臺灣字典發音為「qiao3 ke4 li4」，日常發音常發「qiao3 ke1 li4」，故皆補齊「qiao3 ke4 li4」「qiao3 ke1 li4」，後者詞頻設為80%。
 #    詞句中，「壓克力」臺灣字典發音為「ya1 ke4 li4」，日常發音常發「ya1 ke1 li4」，故皆補齊「ya1 ke4 li4」「ya1 ke1 li4」，後者詞頻設為80%。
@@ -364,7 +367,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "202606"
+version: "202607"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -3881,6 +3884,41 @@ min_phrase_weight: 100
 脔	ji4	0%
 晕	yin4	1%
 晕	yun4	5%
+芘	bi3	20%
+漣	lan2	0%
+漣	lan4	0%
+涟	lan2	0%
+涟	lan4	0%
+滇	tian2	0%
+滇	zhen1	0%
+溎	yan4	0%
+溽	ru2	0%
+蔫	yan4	0%
+蓴	tuan2	0%
+蔵	zang1	0%
+蔞	lv3	1%
+蔞	ju4	0%
+蔞	liu3	0%
+蒌	lv3	1%
+蒌	ju4	0%
+蒌	liu3	0%
+# 搵	wu4	0%
+揌	cai1	0%
+揌	zong3	0%
+搰	ku1	0%
+插	zha3	0%
+# 挿	zha3	0%
+# 揷	zha3	0%
+揰	dong3	0%
+搜	xiao1	0%
+搜	sou4	0%
+搜	shao3	0%
+# 捜	xiao1	0%
+# 捜	sou4	0%
+# 捜	shao3	0%
+搥	dui1	0%
+捌	bie2	0%
+挫	zuo4	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -4825,7 +4863,7 @@ min_phrase_weight: 100
 羰	tan4	1%
 翨	shi4	1%
 蓩	mao4	1%
-蓿	su4	1%
+蓿	su4
 蔂	lei2	1%
 蔡	sa4	1%
 蔫	yan1	1%
@@ -6154,7 +6192,7 @@ min_phrase_weight: 100
 # 草	cao4	0%
 萕	ji4	0.3%
 萹	bian1	0.3%
-蓿	xu4	0.3%
+蓿	xu4	3%
 蘤	hua1	0.3%
 蝃	zhuo1	0.3%
 蝡	ru2	0.3%
@@ -31876,7 +31914,7 @@ min_phrase_weight: 100
 蓼	lu4	50%
 蓽	bi4
 蓾	lu3
-蓿	xu5
+蓿	xu5	3%
 蔀	bu4
 蔁	zhang1
 蔂	luo2
@@ -87002,9 +87040,13 @@ min_phrase_weight: 100
 梵剎	fan4 cha4
 梵剎	fan2 cha4	80%
 梵唄	fan4 bai4
+梵唄	fan2 bai4	80%
 梵啞鈴	fan4 ya3 ling2
+梵啞鈴	fan2 ya3 ling2	80%
 梵教	fan4 jiao4
+梵教	fan2 jiao4	80%
 梵筴	fan4 jia2
+梵筴	fan2 jia2	80%
 棃子	li2 zi5
 棄之可惜	qi4 zhi1 ke3 xi2
 棄宗弄贊	qi4 zong1 nong4 zan4
@@ -90016,6 +90058,7 @@ min_phrase_weight: 100
 泥馬渡康王	ni2 ma3 du4 kang1 wang2
 泥鰍	ni2 qiu1
 泥鰻	ni2 man2
+泥鰻	ni2 man4	80%
 泥龍	ni2 long2
 注入式教學法	zhu4 ru4 shi4 jiao4 xue2 fa3
 注入式教學法	zhu4 ru4 shi4 jiao1 xue2 fa3
@@ -104844,6 +104887,8 @@ min_phrase_weight: 100
 薄伽尼	bao2 qie2 ni2
 薄伽梵	bo2 qie2 fan4
 薄伽梵	bao2 qie2 fan4
+薄伽梵	bo2 qie2 fan2	80%
+薄伽梵	bao2 qie2 fan2	80%
 薄俗	bo2 su2
 薄俗	bao2 su2
 薄倖	bo2 xing4
@@ -114670,6 +114715,7 @@ min_phrase_weight: 100
 阿根廷共和國	a1 gen1 ting2 gong4 he2 guo2
 阿格尼迪	a1 ge2 ni2 di2
 阿梵達	a1 fan4 da2
+阿梵達	a1 fan2 da2	80%
 阿森	a1 sen1
 阿森斯	a1 sen1 si1
 阿森松島	a1 sen1 song1 dao3
@@ -118805,4 +118851,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 118808 #####
+##### @結束 END - 118854 #####

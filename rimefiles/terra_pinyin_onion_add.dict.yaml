@@ -18,7 +18,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion_add
-version: "202606"
+version: "202607"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7
@@ -54,6 +54,8 @@ min_phrase_weight: 100
 # 遢	(ta1)	10%
 # 逾	(yu4)	90%
 # 月	(rou4)	0%
+# 蔞	(lv3)	0.1%
+# 蒌	(lv3)	0.1%
 蒲	(pu3)
 蛤	(ge3)
 樺	(hua2)
@@ -195,8 +197,6 @@ min_phrase_weight: 100
 镂	(lv3)	0.1%
 畿	(ji3)	50%
 㠐	(qiao2)	0.1%
-蔞	(lv3)	0.1%
-蒌	(lv3)	0.1%
 雹	(bao4)	0.1%
 血	(xue3)	1%
 貘	(mo2)	3%
