@@ -143,19 +143,19 @@
 
 ## Demo
 
-- 注音（洋蔥 mix-in 版）
+- [注音（洋蔥 mix-in 版）](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E6%B3%A8%E9%9F%B3-%E6%B4%8B%E8%94%A5-mixin-%E7%89%88-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E)
   
   > 集大成，多國語言和注音一次性混打輸入 😃！
   
     ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/img/demo_bpmf_mixin.gif)
   
-- 注音（洋蔥 plus 版）
+- [注音（洋蔥 plus 版）](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E6%B3%A8%E9%9F%B3-%E6%B4%8B%E8%94%A5-plus-%E7%89%88-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E)
 
   > 功能多，除外語還有一堆功能和細節增加，輸入手感和純注音版一樣，即使沒用外語，也推薦使用！
   
     ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/img/demo_bpmf_plus.gif)
   
-- 注音（洋蔥 純注音 版）
+- [注音（洋蔥 純注音 版）](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E6%B3%A8%E9%9F%B3-%E6%B4%8B%E8%94%A5-%E7%B4%94%E6%B3%A8%E9%9F%B3-%E7%89%88-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E)
   
   > 精簡功能，給新手或測試使用
   
@@ -163,16 +163,16 @@
  
 ## Keys
  
-- 注音（洋蔥 雙拼 版）鍵位
+- [注音（洋蔥 雙拼 版）鍵位](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E6%B3%A8%E9%9F%B3-%E6%B4%8B%E8%94%A5-%E9%9B%99%E6%8B%BC-%E7%89%88-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E#%E9%8D%B5%E4%BD%8D%E5%9C%96%E7%A4%BA)
   > 一般版可簡拼；T2 版（Type2）為一般雙拼每字須鍵兩碼（不能簡拼，但聲調可省略）
 
   #### <img src="https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/rimefiles/%E9%9B%99%E6%8B%BC%E6%B3%A8%E9%9F%B3%E9%8D%B5%E4%BD%8D%E8%AA%AA%E6%98%8E%E5%9C%96%E7%A4%BA/%E6%B3%A8%E9%9F%B3%E6%B4%8B%E8%94%A5%E9%9B%99%E6%8B%BC%E8%AA%AA%E6%98%8E.png" width = "595" alt="image" /><br>
 
-- 注音（洋蔥 plus 版）鍵位
+- [注音（洋蔥 plus 版）鍵位](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E6%B3%A8%E9%9F%B3-%E6%B4%8B%E8%94%A5-plus-%E7%89%88-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E#%E9%8D%B5%E4%BD%8D)
 
   #### ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/img/bpmf_plus_keyboard.png)
 
-- 注音（洋蔥 mixin 版）鍵位
+- [注音（洋蔥 mixin 版）鍵位](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E6%B3%A8%E9%9F%B3-%E6%B4%8B%E8%94%A5-mixin-%E7%89%88-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E#4%E5%80%8B%E8%A1%8D%E4%BC%B8%E6%96%B9%E6%A1%88)
 
   > 四個衍伸方案：「1」標準版、「2」只有後綴易懂、「3」語言分野最明減少撞碼、「4」集中下排手順最好
 
