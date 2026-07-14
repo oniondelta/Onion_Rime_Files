@@ -4,7 +4,7 @@
 schema:
   schema_id: onion-array30
   name: "▦ 行列３０（洋蔥版）"
-  version: "202602"
+  version: "202607"
   author:
     - 洋蔥
   description: |
@@ -544,7 +544,7 @@ recognizer:
 predictor:
   # predict db file in user directory/shared directory
   # default to 'predict.db'
-  db: predict_office.db  #predict.db  #文件名，predict db file in user directory/shared directory
+  db: predict-kenspc-zht.db  #predict_office.db  #predict.db  #文件名，predict db file in user directory/shared directory
   # max prediction candidates every time
   # default to 0, which means showing all candidates
   # you may set it the same with page_size so that period doesn't trigger next page

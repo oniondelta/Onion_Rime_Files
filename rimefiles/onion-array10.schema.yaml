@@ -5,7 +5,7 @@
 schema:
   schema_id: onion-array10
   name: "▦ 行列１０（洋蔥版）"
-  version: "202602"
+  version: "202607"
   author:
     - 洋蔥
   description: |
@@ -596,7 +596,7 @@ recognizer:
 
 # ##### 預測（聯想）詞 #####
 # predictor:
-#   db: predict_office.db  #predict.db  #文件名，predict db file in user directory/shared directory
+#   db: predict-kenspc-zht.db  #predict_office.db  #predict.db  #文件名，predict db file in user directory/shared directory
 #   max_candidates: 0  #5  #每次預測的最大候選項數量，0表示全部候選項
 #   max_iterations: 0  #1  #最大預測次數，0表示不限制
 
