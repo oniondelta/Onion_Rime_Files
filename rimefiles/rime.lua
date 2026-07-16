@@ -41,6 +41,7 @@
 --      - lua_filter@array30_comment_filter          --（關） 遮屏提示碼，開關（simplify_comment）（遇到「`」不遮屏）
 --      - lua_filter@array30_nil_filter              --（引lua資料夾）（onion-array30） 行列30空碼'⎔'轉成不輸出任何符號，符合原生。後來移至「=」「=」反查用。
 --      - lua_filter@array30_spaceup_filter          --（關） 行列30開關一二碼按空格後，是否直上或可能有選單。
+--      - lua_filter@predictor_filter                --（引lua資料夾）（onion-array30）改進預測詞 predictor 用，預測詞第一候選生成一個空選項，好快速明顯的關閉預測詞。
 --      - lua_filter@en_sort_filter                  --（引lua資料夾）（easy_en_super和其掛接）如同英漢字典一樣排序，候選項重新排序。開關（en_sort）
 --      - lua_filter@kr_hnc_1m_filter                --（引lua資料夾）（hangeul_hnc）韓語遮屏只剩一個選項。開關（kr_1m）
 --      - lua_filter@convert_english_filter          --（引lua資料夾）easy 英文尾綴「;」或「;;」生成全大寫或首字母大寫。後來合併修改為掛接方案也可使用。
@@ -72,6 +73,7 @@
 --      - lua_processor@ascii_punct_change           --（引lua資料夾）（bopomo_onionplus_2和3） 注音非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
 --      - lua_processor@array30up                    --（關） 行列30三四碼字按空格直接上屏
 --      - lua_processor@array30up_zy                 --（關） 行列30注音反查 Return 和 space 上屏修正
+--      - lua_processor@predictor_improve            --（引lua資料夾）（onion-array30）改進預測詞 predictor 用，使「return」「space」「shifit+space」改善。
 --      - lua_processor@p_open_files/p_run_files     --（關） （bopomo_onionplus_2）快捷鍵開啟檔案/程式/網站
 --
 --      = 以下針對「編碼有用到空白鍵」方案，如：注音一聲，去除空白上屏產生莫名之空格 =
@@ -194,6 +196,11 @@ mix_cf2_cfp_filter = require("filter_mix_cf2_cfp_filter")
 mix30_nil_comment_new_filter = require("filter_mix30_nil_comment_new_filter")
 
 
+--- predictor_filter （onion-array30）
+-- 改進預測詞 predictor 用，預測詞第一候選生成一個空選項，好快速明顯的關閉預測詞。
+predictor_filter = require("filter_predictor_filter")
+
+
 --- preedit_model_filter （bo_mixin 全系列）
 -- 切換 preedit 樣式
 -- preedit_model_filter = require("filter_preedit_model_filter")
@@ -313,6 +320,11 @@ ascii_punct_change = require("processor_ascii_punct_change")
 -- 合併 array30up_zy 等
 -- 行列30注音反查 Return 和 space 上屏修正
 array30new_mix = require("processor_array30new_mix")
+
+
+--- predictor_improve （onion-array30）
+-- 改進預測詞 predictor 用，使「return」「space」「shifit+space」改善。
+predictor_improve = require("processor_predictor_improve")
 
 
 --- array10_mix （onion-array10）

@@ -2,7 +2,7 @@
 
 此 predict.db 為 librime-predict 聯想（預測）詞之詞庫檔。
 
-已處理太多字詞典，功能又不斷疊加和修正，，聯想詞沒想折騰，故直接引用網友大大作好的檔案，因有引用，於此說明並致謝。
+已處理太多字詞典，功能又不斷疊加和修正，，聯想詞沒想太折騰，故引用網友大大作的檔案作修改，因有引用，於此說明並致謝。
 
 ## predict_office.db（官方）
 
@@ -14,7 +14,7 @@
 
 出處：https://github.com/kenspc/rime-predict-zh/tree/main/dist
 
-原檔名：predict-zht.db
+原檔名：predict-zht.db（末尾增加 predict-zhs.db 中開頭為簡體之詞條）
 
 ## predict.db 生成方法
 

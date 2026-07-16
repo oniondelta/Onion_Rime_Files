@@ -58,6 +58,7 @@ switches:
 
 engine:
   filters:
+    - lua_filter@predictor_filter #要放在 simplifier@zh_cn 之前，排序才不會亂。
     - simplifier@zh_cn
     - reverse_lookup_filter@array30_reverse_lookup
     - lua_filter@punct_preedit_revise_filter
@@ -75,6 +76,7 @@ engine:
     # - lua_filter@comment_filter_unicode_debug
     # - single_char_filter
   processors:
+    - lua_processor@predictor_improve
     # - lua_processor@array30up_mix
     - lua_processor@array30new_mix
     # - lua_processor@array30up #三、四、五碼空白鍵直上屏
@@ -119,7 +121,7 @@ mf_translator:
 zh_cn:
   opencc_config: tw2s.json
   tips: all
-  tags: [ abc ]
+  tags: [ abc, prediction ]
 
 punct_preedit_revise_filter:
   tags: [ punct ]
