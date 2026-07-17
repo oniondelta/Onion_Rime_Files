@@ -1,14 +1,14 @@
-# predict.db 聯想詞引用說明
+# predict.db 預測（聯想）詞引用說明
 
-此 predict.db 為 librime-predict 聯想（預測）詞之詞庫檔。
+此 predict.db 為 librime-predict 預測（聯想）詞之詞庫檔。
 
-已處理太多字詞典，功能又不斷疊加和修正，，聯想詞沒想太折騰，故引用網友大大作的檔案作修改，因有引用，於此說明並致謝。
+已處理太多字詞典，功能又不斷疊加和修正，，沒想太折騰，故引用網友大大作的檔案作修改，因有引用，於此說明並致謝。
 
-## predict_office.db（官方）
+## predict-office-zht.db（官方）
 
 出處：https://github.com/rime/librime-predict/releases
 
-原檔名：predict.db
+原檔名：predict.db（用 opencc 轉換為台灣繁體，末尾增加用 opencc 轉換為簡體，其開頭為簡體之詞條）
 
 ## predict-kenspc-zht.db
 
