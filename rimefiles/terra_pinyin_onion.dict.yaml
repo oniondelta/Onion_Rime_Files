@@ -64,6 +64,7 @@
 #              詞句中，「衝突」和「沖突」，選用標準「衝突」。
 #              詞句中，「里肌」和「裡肌」，「里肌」為標準，選用標準「里肌」。
 #              詞句中，「里脊」和「裡脊」，「裡脊」為標準，但「里脊」也常用，故兩者互相增補。
+#              詞句中，「拉鍊」和「拉鏈」，「拉鍊」為標準，但「拉鏈」也常用，故兩者互相增補。
 #              詞句中，「咨詢」和「咨謀」「咨商」為簡體，臺灣字典中說明「咨」又通「諮」，標準又為「諮詢」「諮謀」「諮商」，「咨」少用到，故保留「咨詢」和「咨謀」「咨商」三詞，其他詞句遮屏。
 #              承上，詞句中，臺灣字典標準字訂為「咨文」「咨呈」「咨咨」「咨嗟」「咨牙倈嘴」「咨訪」「咨請」「嚌咨」「怨咨」「疇咨之憂」，其中「咨」皆不通「諮」，故以「咨」為標準，其餘遮屏。
 #              詞句中，「注冊」為簡體，臺灣字典中說明「注」又同「註」，標準又為「註冊」，「注冊」少用到，故只保留「注冊」一詞，其他詞句遮屏。
@@ -217,6 +218,7 @@
 #    詞句中，「撖」臺灣標準為「gan3」，大陸標準為「han4」，日常易混，故全都補齊「gan3」「han4」。
 #    詞句中，「樗」臺灣標準為「shu1」，大陸標準為「chu1」，日常易混，故全都補齊「shu1」「chu1」。
 #    詞句中，「欹」臺灣標準為「yi1」，大陸標準為「qi1」，日常易混，故全都補齊「yi1」「qi1」。
+#    詞句中，「囀」臺灣標準為「zhuan3」，大陸標準為「zhuan4」，日常易混，故全都補齊「zhuan3」「zhuan4」。
 #    詞句中，「呤」臺灣標準和大陸標準皆有「ling2」該發音，但大陸標準為某化學物質時發「ling4」，故全都補齊「ling2」「ling4」。
 #    詞句中，「肘」臺灣標準為「zhou3」，日常發音常會誤發為「zhou2」，故皆補齊「zhou3」「zhou2」，後者詞頻設為80%。
 #    詞句中，「蕾」臺灣標準為「lei3」，日常發音常會誤發為「lei2」，，故皆補齊「lei3」「lei2」，後者詞頻設為80%。
@@ -5206,7 +5208,7 @@ min_phrase_weight: 100
 黦	yu4	1%
 齙	pao2	1%
 齞	yan3	1%
-囀	zhuan3	1%
+囀	zhuan3
 囁	zhe2	1%
 巍	wei2
 爚	yao4	1%
@@ -18085,7 +18087,7 @@ min_phrase_weight: 100
 嚾	huan1
 嚾	huan4
 嚿	huo4
-囀	zhuan4
+囀	zhuan4	90%
 囁	nie4
 囂	xiao1
 囃	ca4
@@ -69095,6 +69097,7 @@ min_phrase_weight: 100
 嚾呼	huan1 hu1
 嚾嚾	huan1 huan1
 囀喉	zhuan3 hou2
+囀喉	zhuan4 hou2
 囁呫	nie4 tie4
 囈怔	yi4 zheng1
 囈掙	yi4 zheng1
@@ -95566,8 +95569,8 @@ min_phrase_weight: 100
 皮兒	pi2 er2
 皮內反應法	pi2 nei4 fan3 ying4 fa3
 皮冠	pi2 guan1
-皮劃艇激流回旋	pi2 hua2 ting3 ji1 liu2 hui2 xuan2
-皮劃艇靜水	pi2 hua2 ting3 jing4 shui3
+皮划艇激流回旋	pi2 hua2 ting3 ji1 liu2 hui2 xuan2
+皮划艇靜水	pi2 hua2 ting3 jing4 shui3
 皮匠	pi2 jiang4
 皮卡爾	pi2 ka3 er3
 皮夾	pi2 jia2
@@ -104231,7 +104234,7 @@ min_phrase_weight: 100
 落地生根	luo4 di4 sheng1 gen1
 落地窗	luo4 di4 chuang1
 落地簽證	luo4 di4 qian1 zheng4
-落地籤	luo4 di4 qian1
+落地簽	luo4 di4 qian1
 落地罩	lao4 di4 zhao4
 落坐	luo4 zuo4
 落埋怨	lao4 man2 yuan4
@@ -108949,8 +108952,7 @@ min_phrase_weight: 100
 費思量	fei4 si1 liang4
 費洛蒙	fei4 luo4 meng2
 費爾干納	fei4 er3 gan1 na4
-費爾干納槃地	fei4 er3 gan1 na4 pan2 di4
-費爾幹納盆地	fei4 er3 gan4 na4 pen2 di4
+費爾干納盆地	fei4 er3 gan1 na4 pen2 di4
 費率	fei4 lv4
 費盡心思	fei4 jin4 xin1 si1
 貼切	tie1 qie4
@@ -114620,7 +114622,7 @@ min_phrase_weight: 100
 阿托品	a1 tuo1 pin3
 阿拉	a1 la1
 阿拉丁	a1 la1 ding1
-阿拉乾山脈	a1 la1 gan1 shan1 mai4
+阿拉干山脈	a1 la1 gan1 shan1 mai4
 阿拉伯	a1 la1 bo2
 阿拉伯世界	a1 la1 bo2 shi4 jie4
 阿拉伯人	a1 la1 bo2 ren2
@@ -114931,7 +114933,7 @@ min_phrase_weight: 100
 阿里山鄉	a1 li3 shan1 xiang1
 阿里巴巴	a1 li3 ba1 ba1
 阿里斯托芬	a1 li3 si1 tuo1 fen1
-阿里斯託芳	a1 li3 si1 tuo1 fang1
+阿里斯托芳	a1 li3 si1 tuo1 fang1
 阿里郎	a1 li3 lang2
 阿金庫爾	a1 jin1 ku4 er3
 阿金溺銀	e1 jin1 niao4 yin2
@@ -118085,6 +118087,7 @@ min_phrase_weight: 100
 鳥嘌呤	niao3 piao1 ling4
 鳥嘌呤	niao3 piao4 ling2
 鳥囀	niao3 zhuan3
+鳥囀	niao3 zhuan4
 鳥散	niao3 san4
 鳥散魚潰	niao3 san4 yu2 kui4
 鳥爪	niao3 zhua3
@@ -118851,4 +118854,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 118854 #####
+##### @結束 END - 118857 #####
