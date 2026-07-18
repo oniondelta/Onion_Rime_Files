@@ -10,13 +10,13 @@
 
 出處：https://github.com/rime/librime-predict/releases
 
-原檔名：predict.db（用 opencc 轉換為台灣繁體，末尾增加用 opencc 轉換為簡體，其開頭為簡體之詞條）
+原檔名：predict.db（先用 opencc 轉換為台灣繁體，以此為主，再轉換為簡體，末尾增加其開頭為簡體之詞條）
 
 ## predict-kenspc-zht.db
 
 出處：https://github.com/kenspc/rime-predict-zh/tree/main/dist
 
-原檔名：predict-zht.db（用 opencc 轉換為簡體，末尾增加用 opencc 轉換為簡體，其開頭為簡體之詞條）
+原檔名：predict-zht.db（末尾增加用 opencc 轉換為簡體，其開頭為簡體之詞條）
 
 ## predict.db 生成方法
 
