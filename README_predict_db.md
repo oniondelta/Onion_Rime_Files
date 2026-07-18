@@ -16,7 +16,7 @@
 
 出處：https://github.com/kenspc/rime-predict-zh/tree/main/dist
 
-原檔名：predict-zht.db（末尾增加 predict-zhs.db 中開頭為簡體之詞條）
+原檔名：predict-zht.db（用 opencc 轉換為簡體，末尾增加用 opencc 轉換為簡體，其開頭為簡體之詞條）
 
 ## predict.db 生成方法
 
