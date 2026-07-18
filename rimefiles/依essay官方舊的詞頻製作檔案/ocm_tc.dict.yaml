@@ -5,7 +5,7 @@
 # 以下「`」為標註「vrsf」規則之字，需放置於「vrsf」字碼前，該字經轉寫後之排序，才會在首位。
 ---
 name: ocm_tc
-version: "202606"
+version: "202607"
 sort: original
 use_preset_vocabulary: false
 #max_phrase_length: 7

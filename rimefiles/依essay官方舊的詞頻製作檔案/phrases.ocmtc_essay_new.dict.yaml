@@ -10,7 +10,7 @@
 # 202407 去除一些錯誤詞彙
 ---
 name: phrases.ocmtc_essay_new
-version: "202606"
+version: "202607"
 sort: original #by_weight
 use_preset_vocabulary: false
 # max_phrase_length: 7 #20
