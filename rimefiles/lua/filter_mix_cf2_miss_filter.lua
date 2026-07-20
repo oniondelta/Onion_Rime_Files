@@ -43,6 +43,7 @@ local function tags_match(seg, env)
   local seg_reverse = seg:has_tag("reverse2_lookup")
   seg_punct = seg:has_tag("punct")
   return seg_abc or seg_punct or seg_reverse
+  -- return seg_abc or seg_punct
 end
 
 -- local function mix_cf2_miss_filter(inp, env)

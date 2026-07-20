@@ -42,6 +42,7 @@
 --      - lua_filter@array30_nil_filter              --（引lua資料夾）（onion-array30） 行列30空碼'⎔'轉成不輸出任何符號，符合原生。後來移至「=」「=」反查用。
 --      - lua_filter@array30_spaceup_filter          --（關） 行列30開關一二碼按空格後，是否直上或可能有選單。
 --      - lua_filter@predictor_filter                --（引lua資料夾）（onion-array30）改進預測詞 predictor 用，預測詞第一候選生成一個空選項，好快速明顯的關閉預測詞。
+--      - lua_filter@predictor_s_filter              --（引lua資料夾）（onion-array10-and-bpmf）改進預測詞 predictor 用，預測詞第一候選生成一個空選項，好快速明顯的關閉預測詞。
 --      - lua_filter@en_sort_filter                  --（引lua資料夾）（easy_en_super和其掛接）如同英漢字典一樣排序，候選項重新排序。開關（en_sort）
 --      - lua_filter@kr_hnc_1m_filter                --（引lua資料夾）（hangeul_hnc）韓語遮屏只剩一個選項。開關（kr_1m）
 --      - lua_filter@convert_english_filter          --（引lua資料夾）easy 英文尾綴「;」或「;;」生成全大寫或首字母大寫。後來合併修改為掛接方案也可使用。
@@ -199,6 +200,11 @@ mix30_nil_comment_new_filter = require("filter_mix30_nil_comment_new_filter")
 --- predictor_filter （onion-array30）
 -- 改進預測詞 predictor 用，預測詞第一候選生成一個空選項，好快速明顯的關閉預測詞。
 predictor_filter = require("filter_predictor_filter")
+
+
+--- predictor_s_filter （onion-array10-and-bpmf）
+-- 改進預測詞 predictor 用，預測詞第一候選生成一個空選項，好快速明顯的關閉預測詞。
+predictor_s_filter = require("filter_predictor_s_filter")
 
 
 --- preedit_model_filter （bo_mixin 全系列）

@@ -8,7 +8,7 @@ __patch:
 schema:
   schema_id: onion-array10-and-bpmf
   name: "▦ 行列１０＆注音（洋蔥版）"
-  version: "202508"
+  version: "202607"
   dependencies:
     - cangjie5
     - onion-array10
@@ -18,6 +18,9 @@ switches/+:
   - name: simplify_comment
     # reset: 1
     states: [ 編碼, 無編 ]
+  - name: prediction
+    reset: 1 #0
+    states: [ 關閉, 預測 ]
 
 
 engine:
@@ -25,6 +28,7 @@ engine:
     - lua_processor@array10_and_bpmf_mix
     - ascii_composer
     - recognizer
+    - predictor  #add predictor to the list of engine/processors before key_binder
     - key_binder
     - speller
     - punctuator
@@ -44,6 +48,7 @@ engine:
     - fallback_segmentor
   translators:
     - punct_translator
+    - predict_translator
     - script_translator@reverse2_lookup
     - table_translator@reverse3_lookup
     - script_translator
@@ -55,6 +60,8 @@ engine:
     - reverse_lookup_filter@array10_reverse_lookup
     - lua_filter@comment_filter_plus
     - uniquifier
+    - lua_filter@predictor_s_filter  #要放在 simplifier@zh_cn 之前，否則會因錯誤首空「""」而發生錯亂。  #放到 uniquifier 後，防止被去重 uniquifier 影響。
+    - simplifier@zh_cn_p  #只針對 prediction 簡化，防錯亂。
     - single_char_filter  # 作者說明其作用是單字優先，文檔的說法有誤。  # 只針對「table_translator」作用，官方文件是放在「uniquifier」後。
 
 
@@ -94,6 +101,13 @@ zh_cn:
   tags: [ abc, shadow_top ]
 
 
+##### 增加預測（聯想）詞轉簡體 #####
+zh_cn_p:
+  opencc_config: tw2s.json
+  tips: all
+  tags: [ prediction ]
+
+
 ##### 濾鏡：標註該字行列10編碼 #####
 array10_reverse_lookup:
   __include: onion-array10.schema:/array10_reverse_lookup
@@ -112,6 +126,12 @@ comment_filter_plus:
   tags: [ abc, shadow_top ]
 
 
+# ##### 濾鏡：prediction 改進 #####
+# ## 用 tags_match 限定，故遮屏
+# predictor_filter:
+#   tags: [ prediction ]
+
+
 ##### 按鍵設定 #####
 key_binder:
   import_preset: default
@@ -121,16 +141,22 @@ key_binder:
 ###  功能快捷鍵 ###
 ## 下排舊的循環切換
     # - { accept: Control+apostrophe, toggle: simplify_comment, when: always }
+    # - { accept: Control+bracketleft, toggle: prediction, when: always }
 ## 上排切換(Mac)
     - { accept: Control+Shift+6, toggle: simplify_comment, when: always }
+    - { accept: Control+Shift+7, toggle: prediction, when: always }
 ## 上排切換(Win)
     - { accept: Control+Shift+asciicircum, toggle: simplify_comment, when: always }
+    - { accept: Control+Shift+ampersand, toggle: prediction, when: always }
 ## 切換樣態
     - { accept: Control+apostrophe, set_option: simplify_comment, when: always }
+    - { accept: Control+bracketleft, set_option: prediction, when: always }
 ## 初始樣態(Mac)
     - { accept: Control+Shift+apostrophe, unset_option: simplify_comment, when: always }
+    - { accept: Control+Shift+bracketleft, unset_option: prediction, when: always }
 ## 初始樣態(Win)
     - { accept: Control+Shift+quotedbl, unset_option: simplify_comment, when: always }
+    - { accept: Control+Shift+braceleft, unset_option: prediction, when: always }
 ### 轉換小鍵盤（初始） ###
     - {accept: KP_0, send_sequence: "{grave}{grave}{grave}{z}", when: always}
     - {accept: KP_1, send_sequence: "{grave}{grave}{grave}{x}", when: always}
@@ -178,3 +204,11 @@ recognizer:
 #     shadow_top: "```[zxcvsdfwerb]*$"
 #     reverse2_lookup: "=[a-z]* ?$"
 #     reverse3_lookup: "==[zxcvsdfwerb]* ?$"
+
+
+##### 預測（聯想）詞 #####
+predictor:
+  db: predict-kenspc-zht.db  #predict-office-zht.db  #predict.db  #文件名，predict db file in user directory/shared directory
+  max_candidates: 0  #5  #每次預測的最大候選項數量，0表示全部候選項
+  max_iterations: 0  #1  #最大預測次數，0表示不限制
+

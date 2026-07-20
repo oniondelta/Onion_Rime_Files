@@ -25,9 +25,11 @@ local function processor(key, env)
   local pd = context:get_option("prediction")
   local cand = context:get_selected_candidate()
   local g_c_t = context:get_commit_text()
+  local seg_pd = seg:has_tag("prediction")
   local s_s_i = seg.selected_index  -- 選中的 index
   local g_c_a_2 = seg:get_candidate_at(s_s_i+1) or seg:get_candidate_at(s_s_i) -- 第二候選項（最候選項+1會產生錯誤，故用「or」防止）
   local key_repr = key:repr()
+  local num_key = string.match(key_repr, "^Control%+(%d)$") or string.match(key_repr, "^KP_(%d)$")
 
 -----------------------------------------------------------------------------
 
@@ -44,26 +46,42 @@ local function processor(key, env)
   elseif comp:empty() then
     return 2
 
-  -- pass release ctrl alt super
-  elseif key:release() or key:ctrl() or key:alt() or key:super() then
-    return 2
-
-  -- --- pass release alt super (not pass ctrl)
-  -- elseif key:release() or key:alt() or key:super() then
+  -- -- pass release ctrl alt super
+  -- elseif key:release() or key:ctrl() or key:alt() or key:super() then
   --   return 2
+
+  --- pass release alt super (not pass ctrl)
+  elseif key:release() or key:alt() or key:super() then
+    return 2
 
   elseif not context:has_menu() then
     return 2
 
-  elseif c_input ~= "" then
+  -- elseif c_input ~= "" then
+  elseif not seg_pd then
     return 2
+
+--------------------------------------
+--[[
+修正 ctrl_num 和 kp_num 選字錯誤
+--]]
+
+  elseif num_key then
+    -- local ctrl_num = "Control+" .. num_key
+    -- engine:process_key(KeyEvent(ctrl_num))
+    context:select(num_key)
+    -- engine:commit_text(num_key)
+    -- engine:commit_text(key_repr)
+    return 1
+
+--------------------------------------
 
   elseif key_repr ~= "space" and key_repr ~= "Return" and key_repr ~= "KP_Enter" and key_repr ~= "Shift+space" then
   -- elseif key_repr ~= "space" and key_repr ~= "Shift+space" then
     return 2
 
-  elseif cand.type ~= "prediction_first" and cand.type ~= "prediction" then
-    return 2
+  -- elseif cand.type ~= "prediction_first" and cand.type ~= "prediction" then
+  --   return 2
 
 --------------------------------------
 --[[
@@ -128,6 +146,14 @@ local function processor(key, env)
 
     --- 簡捷會止住翻頁
     engine:process_key(KeyEvent("Page_Down"))
+    local g_c_t_update = context:get_commit_text()
+    --- 上方「cand.type == "prediction"」已限定「g_c_t」不會為""！
+    -- if loaded_candidate_count < 11 and g_c_t ~= "" and g_c_t == g_c_t_update then
+    if loaded_candidate_count < 11 and g_c_t == g_c_t_update then
+      -- engine:commit_text(g_c_t .. "test！")
+      -- context:clear()
+      context:confirm_current_selection()  -- 不能翻頁（只有一頁）時，space 改上屏。
+    end
     return 1
 
     -- --- 以下可循環翻頁！(末頁會停頓！有提示效果！)(上頁後再下頁會有問題！)
@@ -139,8 +165,9 @@ local function processor(key, env)
     --   engine:process_key(KeyEvent("Page_Down"))
     --   -- local g_c_t_update = context:get_commit_text()
     --   -- if env.n < 11 and g_c_t == g_c_t_update then
-    --   --   engine:commit_text(g_c_t)
-    --   --   context:clear()
+    --   --   -- engine:commit_text(g_c_t .. "test！")
+    --   --   -- context:clear()
+    --   --   context:confirm_current_selection()
     --   -- end
     --   return 1
     -- end
@@ -155,8 +182,8 @@ local function processor(key, env)
     -- else
     --   if g_c_t == g_c_t_update then
     --     -- engine:commit_text(g_c_t .. "test！")
-    --     engine:commit_text(g_c_t)
-    --     context:clear()
+    --     -- context:clear()
+    --     context:confirm_current_selection()
     --   end
     --   return 1
     -- end
@@ -188,9 +215,10 @@ local function processor(key, env)
     --   return 1
     -- else
     --   -- if g_c_t ~= "" and g_c_t == g_c_t_update then
+    --   -- -- if loaded_candidate_count < 11 and g_c_t ~= "" and g_c_t == g_c_t_update then
     --   --   -- engine:commit_text(g_c_t .. "test！")
-    --   --   engine:commit_text(g_c_t)
-    --   --   context:clear()
+    --   --   -- context:clear()
+    --   --   context:confirm_current_selection()
     --   -- end
     --   return 1
     -- end

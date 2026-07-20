@@ -214,6 +214,14 @@ local function processor(key, env)
 
 ---------------------------------------------------------------------------
 --[[
+以下針對預測（聯想）詞掛 filter 後 space 會被當成選字號碼鍵而失效，此作修正。
+--]]
+  elseif seg:has_tag("prediction") and key_repr == "space" then
+    context:confirm_current_selection()
+    return 1
+
+---------------------------------------------------------------------------
+--[[
 以下針對反查注音和注音文 Bug 作修正
 --]]
 

@@ -58,7 +58,7 @@ switches:
 
 engine:
   filters:
-    - lua_filter@predictor_filter #要放在 simplifier@zh_cn 之前，排序才不會亂。
+    - lua_filter@predictor_filter #要放在 simplifier@zh_cn 之前，否則會因錯誤首空「""」而發生錯亂。
     - simplifier@zh_cn
     - reverse_lookup_filter@array30_reverse_lookup
     - lua_filter@punct_preedit_revise_filter
