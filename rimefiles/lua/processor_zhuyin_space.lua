@@ -38,7 +38,7 @@ local function processor(key, env)
   -- local page_size = engine.schema.page_size
   local o_ascii_mode = context:get_option("ascii_mode")
   local key_repr = key:repr()
-  local key_select_keys = key_repr:match("^KP_([0-9])$") or key_repr:match("^Control%+([0-9])$")
+  local key_select_keys = key_repr:match("^KP_(%d)$") or key_repr:match("^Control%+(%d)$")
   -- local s_prefix = seg:has_tag("reverse2_lookup") and "';" or seg:has_tag("all_bpm") and "';'" or ""
   local s_prefix = "';"
 

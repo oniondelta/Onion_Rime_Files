@@ -88,14 +88,16 @@ local function processor(key, env)
   -- local key_abc = key_repr:match("^([zxcvsdfwerbqat])$")
   -- local key_abc = key_repr:match("^([zxcvsdfwerbqat])$") or key_repr:match("^([nuiojklmyhp])$") or key_repr:match("^(comma)$") or key_repr:match("^(period)$") or key_repr:match("^(semicolon)$") or key_repr:match("^(slash)$")
   local key_abc = key_repr:match("^([a-z])$") or key_repr:match("^(comma)$") or key_repr:match("^(period)$") or key_repr:match("^(semicolon)$") or key_repr:match("^(slash)$")
-  local key_select_keys = key_repr:match("^KP_([0-9])$") or key_repr:match("^Control%+([0-9])$")
-  -- local key_num_array10 = key_repr:match("^KP_([0-9])$") or key_repr:match("^KP_(Decimal)$")
-  local shadow_top_b = string.match(c_input, "```[zxcvsdfwerb]$")
-  local shadow_top_e = string.match(c_input, "(```[zxcvsdfwerb]+)$")
-  local abc_words = string.match(c_input, "([zxcvsdfwerb]+)$")
-  local num_words = string.match(c_input, "([0-9.]+)$")
-  local lookup_end = string.match(c_input, "[']$")
+  local key_select_keys = key_repr:match("^KP_(%d)$") or key_repr:match("^Control%+(%d)$")
+  local key_select_keys_ctrl = key_repr:match("^Control%+(%d)$")
+  -- local key_num_array10 = key_repr:match("^KP_(%d)$") or key_repr:match("^KP_(Decimal)$")
+  local shadow_top_b = c_input:match("```[zxcvsdfwerb]$")
+  local shadow_top_e = c_input:match("(```[zxcvsdfwerb]+)$")
+  local abc_words = c_input:match("([zxcvsdfwerb]+)$")
+  local num_words = c_input:match("([%d.]+)$")
+  local lookup_end = c_input:match("[']$")
   -- local s_prefix = seg:has_tag("reverse2_lookup") and "';" or seg:has_tag("all_bpm") and "';'" or ""
+  -- local seg_pd = seg:has_tag("prediction")  -- ⚠️「seg:」不能放這邊，會影響使「comp:empty()」判斷失效！
   local s_prefix = "`"  --or ""
 
   -- local s = status(context)
@@ -119,6 +121,7 @@ local function processor(key, env)
   elseif o_switch_key_board and comp:empty() and key_abc then
     local key_abc = env.abc_pattern[key_abc] or key_abc
     engine:commit_text(key_abc)
+    -- engine:commit_text(c_input) -- 無法作用！
     -- context:clear()
     return 1
 
@@ -214,11 +217,22 @@ local function processor(key, env)
 
 ---------------------------------------------------------------------------
 --[[
-以下針對預測（聯想）詞掛 filter 後 space 會被當成選字號碼鍵而失效，此作修正。
+以下針對預測（聯想）詞掛 filter 後：
+space 會被當成選字號碼鍵而失效，此作修正。
+修正 ctrl_num 選字錯誤。
 --]]
-  elseif seg:has_tag("prediction") and key_repr == "space" then
-    context:confirm_current_selection()
-    return 1
+  elseif seg:has_tag("prediction") then
+    if key_repr == "space" then
+      context:confirm_current_selection()
+      return 1
+    elseif key_select_keys_ctrl then
+      -- local ctrl_num = "Control+" .. key_select_keys_ctrl
+      -- engine:process_key(KeyEvent(ctrl_num))
+      context:select(key_select_keys_ctrl)
+      -- engine:commit_text(key_select_keys_ctrl)
+      -- engine:commit_text(key_repr)
+      return 1
+    end
 
 ---------------------------------------------------------------------------
 --[[

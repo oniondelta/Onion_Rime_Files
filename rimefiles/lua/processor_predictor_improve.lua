@@ -29,7 +29,7 @@ local function processor(key, env)
   local s_s_i = seg.selected_index  -- 選中的 index
   local g_c_a_2 = seg:get_candidate_at(s_s_i+1) or seg:get_candidate_at(s_s_i) -- 第二候選項（最候選項+1會產生錯誤，故用「or」防止）
   local key_repr = key:repr()
-  local num_key = string.match(key_repr, "^Control%+(%d)$") or string.match(key_repr, "^KP_(%d)$")
+  local key_select_keys = key_repr:match("^KP_(%d)$") or key_repr:match("^Control%+(%d)$")
 
 -----------------------------------------------------------------------------
 
@@ -66,11 +66,11 @@ local function processor(key, env)
 修正 ctrl_num 和 kp_num 選字錯誤
 --]]
 
-  elseif num_key then
-    -- local ctrl_num = "Control+" .. num_key
+  elseif key_select_keys then
+    -- local ctrl_num = "Control+" .. key_select_keys
     -- engine:process_key(KeyEvent(ctrl_num))
-    context:select(num_key)
-    -- engine:commit_text(num_key)
+    context:select(key_select_keys)
+    -- engine:commit_text(key_select_keys)
     -- engine:commit_text(key_repr)
     return 1
 
