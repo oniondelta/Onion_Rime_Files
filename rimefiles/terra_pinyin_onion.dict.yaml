@@ -57699,6 +57699,8 @@ min_phrase_weight: 100
 不相為謀	bu4 xiang1 wei2 mou2
 不相登	bu4 xiang1 deng1
 不相稱	bu4 xiang1 cheng4
+不相稱	bu4 xiang1 chen4
+不相稱	bu4 xiang1 cheng1
 不相符	bu4 xiang1 fu2
 不相聞問	bu4 xiang1 wen2 wen4
 不相能	bu4 xiang1 neng2
@@ -66907,6 +66909,7 @@ min_phrase_weight: 100
 名宿	ming2 su4
 名實相副	ming2 shi2 xiang1 fu4
 名實相稱	ming2 shi2 xiang1 cheng4
+名實相稱	ming2 shi2 xiang1 chen4
 名實相符	ming2 shi2 xiang1 fu2
 名實相課	ming2 shi2 xiang1 ke4
 名將	ming2 jiang4
@@ -96064,6 +96067,8 @@ min_phrase_weight: 100
 相左	xiang1 zuo3
 相差	xiang1 cha1
 相差	xiang1 cha4
+相差	xiang4 cha1
+相差	xiang4 cha4
 相差不多	xiang1 cha4 bu4 duo1
 相差不多	xiang1 cha1 bu4 duo1
 相差無幾	xiang1 cha1 wu2 ji3
@@ -118861,4 +118866,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 118864 #####
+##### @結束 END - 118869 #####
