@@ -6,7 +6,7 @@
 
 ### Version Info
 
-- Github Releases：[6e2df01](https://github.com/rime/squirrel/releases)
+- Github Releases：[7b4a314](https://github.com/rime/squirrel/releases)
 
 - Squirrel 1.1.2
 

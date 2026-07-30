@@ -6,7 +6,7 @@
 
 ### Version Info
 
-- librime 1.17.0 (d71168e)
+- librime 1.17.0 (1d0df6e)
 
 - librime-lua #409 (ec52e48)
 
@@ -14,6 +14,6 @@
 
 - librime-lua (ec52e48)
 
-- librime-octagram (dfcc151)
+- librime-octagram (bfb168c)
 
 - librime-predict (920bd41)
