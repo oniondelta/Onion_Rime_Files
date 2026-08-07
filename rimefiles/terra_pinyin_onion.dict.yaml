@@ -235,6 +235,7 @@
 #    詞句中，「浣」臺灣標準為「huan3」，又音為「wan3」，大陸標準為「huan4」，日常易混，故皆補齊「huan3」「wan3」「huan4」。
 #    詞句中，「裳」臺灣標準為「chang2」，又音為「shang1」，日常發音常會誤發為「shang3」，大陸標準另有「shang5」該發音，日常易混，故皆補齊「chang2」「shang1」「shang5」「shang3」，最後一個詞頻設為80%。
 #    詞句中，「酊」臺灣標準只有「ding3」，大陸標準有「ding1」和「ding3」，且不同發音其字義不同，斟酌後皆補齊「ding1」「ding3」。
+#    詞句中，「銑」臺灣標準只有「xian3」，大陸標準有「xian3」和「xi3」，且不同發音其字義不同，斟酌後皆補齊「xian3」「xi3」。
 #    詞句中，「柵」和「栅」臺灣標準為「zha4」，又音為「shan4」，大陸標準為「shan1」，日常易混，故皆補齊「zha4」「shan4」「shan1」，後兩者詞頻設為80%。
 #    詞句中，「削」臺灣標準讀音為「xue4」，語音為「xiao1」，大陸標準為「xue1」，日常易混，故皆補齊「xue4」「xiao1」「xue1」。有些詞發音如此標註會奇怪，待攷！
 #    詞句中，「肋」臺灣標準讀音為「le4」，語音為「lei4」，故皆補齊「le4」「lei4」。
@@ -373,7 +374,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion
-version: "202607"
+version: "202608"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7 #20
@@ -3936,6 +3937,29 @@ min_phrase_weight: 100
 䤪	duo4	0%
 鉼	ping2	0%
 𨦡	rong2	0%
+鐓	dui1	0%
+鐓	dui4
+镦	dun1
+镦	dui1	0%
+錞	duo4	0%
+錀	fen1	0%
+錇	pou2	0%
+錇	fu2	0%
+锫	pou2	0%
+锫	fu2	0%
+錟	yan3	0%
+锬	xian1	0%
+锬	yan3	0%
+潢	huang4	0%
+潢	guang1	0%
+滿	men4	0%
+满	men4	0%
+満	men4	0%
+銑	xian1	0%
+铣	xian3
+铣	xian1	0%
+# 薁	ao4	0%
+镶	rang2	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -4986,7 +5010,7 @@ min_phrase_weight: 100
 醒	xing1	1%
 鋼	gang4	1%
 錞	dui4	1%
-錟	xian1	1%
+錟	xian1	0%
 錢	jian3	1%
 閼	yan1	1%
 閼	yu4	1%
@@ -5282,7 +5306,7 @@ min_phrase_weight: 100
 纚	shi3	1%
 纛	du2	1%
 讘	zhe2	1%
-鑲	rang2	1%
+鑲	rang2	0%
 鸏	mang2	1%
 鸏	meng3	1%
 鸒	yu4	1%
@@ -67228,6 +67252,7 @@ min_phrase_weight: 100
 呂蒙	lv3 meng2
 呂蒙正	lv3 meng2 zheng4
 呃喔	e4 o1
+呃喔	e4 o5
 呆僗	dai1 lao2
 呆呆地	dai1 dai1 de5
 呆呆地	dai1 dai1 di5	80%
@@ -67871,6 +67896,8 @@ min_phrase_weight: 100
 咿啞	yi1 ya3
 咿啞	yi1 ya1
 咿喔	yi1 wo4
+咿喔	yi1 o1
+咿喔	yi1 o5
 咿軋	yi1 ya4
 哀傷地	ai1 shang1 de5
 哀傷地	ai1 shang1 di5	80%
@@ -68456,13 +68483,28 @@ min_phrase_weight: 100
 喓五喝六	yao1 wu3 he4 liu4
 喓喝	yao1 he4
 喔呀	o1 ya1
+喔呀	o5 ya1
 喔咿	wo4 yi1
+喔咿	wo5 yi1
+喔咿	o1 yi1
+喔咿	o5 yi1
 喔咿嚅唲	wo4 yi1 ru2 er2
 喔唷	o1 yo1
+喔唷	o5 yo1
+喔唷	o1 yo5
+喔唷	o5 yo5
 喔喔	o1 o1
+喔喔	o1 o5
+喔喔	o5 o5
 喔喔	wo4 wo4
+喔喔	wo4 wo5
+喔喔	wo5 wo5
 喔喲	o1 yao1
+喔喲	o1 yao5
+喔喲	o5 yao1
+喔喲	o5 yao5
 喔嚄	o1 huo4
+喔嚄	o5 huo4
 喘不過	chuan3 bu2 guo4
 喘不過氣來	chuan3 bu2 guo4 qi4 lai2
 喘吁吁	chuan3 xu1 xu1
@@ -70934,10 +70976,15 @@ min_phrase_weight: 100
 大中華經濟圈	da4 zhong1 hua2 jing1 ji4 quan1
 大主教	da4 zhu3 jiao4
 大乘	da4 sheng4
+大乘	da4 cheng2
 大乘佛教	da4 sheng4 fo2 jiao4
+大乘佛教	da4 cheng2 fo2 jiao4
 大乘百法明門論	da4 sheng4 bai3 fa3 ming2 men2 lun4
+大乘百法明門論	da4 cheng2 bai3 fa3 ming2 men2 lun4
 大乘經典	da4 sheng4 jing1 dian3
+大乘經典	da4 cheng2 jing1 dian3
 大乘起信論	da4 sheng4 qi3 xin4 lun4
+大乘起信論	da4 cheng2 qi3 xin4 lun4
 大亂子	da4 luan4 zi5
 大事化為小事	da4 shi4 hua4 wei2 xiao3 shi4
 大人	da4 ren2
@@ -74136,6 +74183,7 @@ min_phrase_weight: 100
 小乘	xiao3 sheng4
 小乘	xiao3 cheng2
 小乘戒	xiao3 sheng4 jie4
+小乘戒	xiao3 cheng2 jie4
 小事化為沒事	xiao3 shi4 hua4 wei2 mei2 shi4
 小人得志	xiao3 ren2 de2 zhi4
 小人長戚戚	xiao3 ren2 chang2 qi1 qi1
@@ -83075,6 +83123,7 @@ min_phrase_weight: 100
 攜挾帶	xie2 jia2 dai4
 攝入量	she4 ru4 liang4
 攝大乘論	she4 da4 sheng4 lun4
+攝大乘論	she4 da4 cheng2 lun4
 攝氏度	she4 shi4 du4
 攝氏溫度	she4 shi4 wen1 du4
 攝氏溫度計	she4 shi4 wen1 du4 ji4
@@ -112989,6 +113038,8 @@ min_phrase_weight: 100
 銍艾	zhi4 yi4
 銑鋧	xian3 xian4
 銑鋧	xian3 xian3
+銑鋧	xi3 xian4
+銑鋧	xi3 xian3
 銖兩悉稱	zhu1 liang3 xi1 chen4
 銖兩悉稱	zhu1 liang3 xi1 cheng4
 銖積寸累	zhu1 ji1 cun4 lei3
@@ -118879,4 +118930,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 118882 #####
+##### @結束 END - 118933 #####
