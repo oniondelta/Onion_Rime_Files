@@ -1466,7 +1466,7 @@ min_phrase_weight: 100
 䀨	tian2	0.2%
 煎	jian4	0.2%
 丹	zhou1	0.2%
-珩	hang2	0.2%
+珩	hang2	0%
 瑹	tu2	0.2%
 番	fan2	0.2%
 瞤	ruan2	0.2%
@@ -3960,6 +3960,123 @@ min_phrase_weight: 100
 铣	xian1	0%
 # 薁	ao4	0%
 镶	rang2	0%
+# 貵	pian1	0%
+費	fu2	0%
+费	bi4	0%
+费	fu2	0%
+𡓿	yong1
+貹	sheng1
+晁	zhao4	0%
+訢	yin2	0%
+䜣	yin2	0%
+䜣	xi1	1%
+析	si1	0%
+昕	xuan1	0%
+忻	jin1	0%
+炘	xin4	0%
+焮	xin1	0%
+焸	xiong3	0%
+焽	xiong4	0%
+焽	ying1	0%
+# 焽	gu3	0%
+妖	jiao3	0%
+妗	xian1	0%
+妙	miao3	0%
+瑲	cang1	0%
+瑲	cheng1	0%
+玱	cang1	0%
+玱	cheng1	0%
+㻱	feng2	0%
+曷	e4	0%
+曷	he4	0%
+涔	qian2	0%
+涔	zan4	0%
+浥	ya4	0%
+涓	yuan4	0%
+涓	xuan4	0%
+洊	cun2	0%
+洿	hu4	0%
+佮	e4	0%
+佮	an1	0%
+耎	nuo4	0%
+耐	neng2	0%
+而	neng2	0%
+耏	nai4	0%
+番	bo1	0%
+番	pan2	0%
+番	pan4	0%
+番	pi2	0%
+汧	yan2	0%
+妓	ji1	0%
+# 姆	m1	0%
+谖	shuan4	0%
+谕	tou3	0%
+𧩨	hu4	0%
+䛽	sha4	0%
+䛽	cha2	0%
+# 䛽	zha4	0%
+謏	sou4	0%
+𫍲	sou4	0%
+𫍲	sou3	50%
+𫍟	tuo1
+厂	yan2	0%
+晅	xuan3	0%
+晟	jing1	0%
+晠	cheng2	50%
+頡	jia2	0%
+颉	jia2	0%
+𩒙	gui1
+𩒙	tiao4	0%
+䪸	kuo4	0%
+岂	kai3	1%
+㞯	qi3	0%
+屹	ge1	0%
+懆	sao1	0%
+懆	sao4	0%
+懆	can3	0%
+勖	mao4	0%
+# 勗	mao4	0%
+# 朂	mao4	0%
+# 朂	zui4	0%
+# 朂	cuo1	0%
+最	cuo1	0%
+勒	lei5	0%
+詰	ji2
+诘	jie2
+誇	qu4	0%
+姱	hu4	0%
+栫	zun4	0%
+皪	luo4	0%
+皪	bo1	0%
+鉆	zuan1
+鉆	zuan3	0%
+鉆	zuan4	0%
+鉆	qian2	0%
+鉆	tie1	0%
+钻	zuan3	0%
+钻	zuan4	0%
+# 钻	qian2	0%
+# 钻	tie1	0%
+# 钻	chan1
+# 钻	zhan1
+# 钻	zhen1
+琁	qiong2	0%
+栗	lie4	0%
+旄	wu4	0%
+媲	bi1	0%
+媲	pi2	0%
+媻	po2	0%
+巽	zhuan4	0%
+# 巺	zhuan4	0%
+巺	sun4	1%
+顨	sun4	1%
+壹	yin1	0%
+報	fu4	0%
+# 报	fu4	0%
+媵	sheng4	0%
+䐔	bian3	0%
+芩	yin2	0%
+𦬘	zhong1	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -4602,7 +4719,7 @@ min_phrase_weight: 100
 詐	zha3	1%
 詘	chu4	1%
 貸	te4	1%
-費	bi4	1%
+費	bi4	0%
 貿	mou4	1%
 賁	fen4	1%
 跇	chi4	1%
@@ -4998,7 +5115,7 @@ min_phrase_weight: 100
 蕝	zui4	1%
 螣	te4	1%
 諞	pian2	1%
-諼	shuan4	1%
+諼	shuan4	0%
 踶	zhi4	1%
 踹	shuan4	1%
 遲	zhi4	1%
@@ -5414,8 +5531,8 @@ min_phrase_weight: 100
 耴	qu3	0.5%
 鸅	zhe2	0.5%
 瓋	zhe2	0.5%
-晁	zhao1	0.5%
-晁	chao4	0.5%
+晁	zhao1	0%
+# 晁	chao4	0%
 雿	zhao4	0.5%
 堻	zhen1	0.5%
 笉	zhen3	0.5%
@@ -15839,7 +15956,7 @@ min_phrase_weight: 100
 佫	he4
 佬	lao3
 佭	xiang2
-佮	e2
+# 佮	e2
 佮	ge2
 佯	yang2
 佰	bai3
@@ -35896,7 +36013,7 @@ min_phrase_weight: 100
 鉅	ju4
 鉆	chan1
 鉆	zhan1
-鉆	zhen1
+# 鉆	zhen1
 鉇	shi1
 鉇	yi2
 鉈	ta1
@@ -53364,7 +53481,7 @@ min_phrase_weight: 100
 𩒖	yan4
 𩒘	chong3
 𩒙	fu3
-𩒙	gui4
+# 𩒙	gui4
 𩒚	guang1
 𩒛	qi1
 𩒝	gen3
@@ -118930,4 +119047,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 118933 #####
+##### @結束 END - 119048 #####
