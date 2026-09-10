@@ -186,6 +186,7 @@
 #    詞句中，「叔」臺灣標準為「shu2」，大陸標準為「shu1」，兩者易混淆，故皆補齊「shu2」「shu1」。
 #    詞句中，「淑」臺灣標準為「shu2」，大陸標準為「shu1」，兩者易混淆，故皆補齊「shu2」「shu1」。
 #    詞句中，「菽」臺灣標準為「shu2」，大陸標準為「shu1」，兩者易混淆，故皆補齊「shu2」「shu1」。
+#    詞句中，「掬」臺灣標準為「ju2」，大陸標準為「ju1」，兩者易混淆，故皆補齊「ju2」「ju1」。
 #    詞句中，「戕」臺灣標準為「qiang2」，大陸標準為「qiang1」，兩者易混淆，故皆補齊「qiang2」「qiang1」。
 #    詞句中，「潛」臺灣標準為「qian2」，日常發音常會誤發為「qian3」，故皆補齊「qian2」「qian3」，後者詞頻設為80%。
 #    詞句中，「髓」臺灣標準為「sui3」，日常發音常會誤發為「sui2」，故皆補齊「sui3」「sui2」，後者詞頻設為80%。
@@ -252,6 +253,7 @@
 #    詞句中，「孖」為粵語常用字，臺灣標準為「zi1」，粵語異讀音似「ma1」，故皆補齊「zi1」「ma1」。
 #    詞句中，「堤」皆補齊「ti2」「di1」。（原店名除外，如：西堤、丹堤等除外，後改皆補齊）
 #    詞句中，「洽」皆補齊「qia4」「xia2」，後者詞頻設為30%。
+#    詞句中，「撬」皆補齊「qiao1」「qiao4」。
 #    詞句中，「艘」皆補齊「sao1」「sou1」。
 #    詞句中，「泊」皆補齊「bo2」「po4」。
 #    詞句中，「蝙」皆補齊「bian1」「bian3」。
@@ -309,6 +311,7 @@
 #    詞句中，「諸葛」補齊「zhu1 ge2」和「zhu1 ge3」。
 #    詞句中，「參與」補齊「can1 yu4」和「can1 yu3」。
 #    詞句中，「處理」補齊「chu3 li3」和「chu4 li3」。
+#    詞句中，「大廈」補齊「da4 xia4」和「da4 sha4」。
 #    詞句中，「阻塞」補齊「zu3 se4」和「zu3 sai1」。
 #    詞句中，「疙瘩」補齊「ge1 da5」「ge1 da2」「ge1 da1」。
 #    詞句中，「姑娘」補齊「gu1 niang2」和「gu1 niang5」，後者詞頻設為80%。
@@ -4169,6 +4172,18 @@ min_phrase_weight: 100
 仙	xian3	0%
 伋	fan1	0%
 他	tuo2	0%
+排	bai4	0%
+掉	nuo4	0%
+捷	qie4	0%
+捷	cha1	0%
+# 㨗	qie4	0%
+# 㨗	cha1	0%
+掩	yan4	0%
+掎	yi3	0%
+描	mao4	0%
+挜	ya3	1%
+掫	chou1	0%
+掫	zhou1	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -5067,7 +5082,7 @@ min_phrase_weight: 100
 撟	jiao4	1%
 撢	tan4	1%
 撣	shan4	1%
-撬	qiao1	1%
+撬	qiao1
 撮	zuo2	1%
 撮	zuo3	1%
 撮	zui4	1%
@@ -60134,6 +60149,7 @@ min_phrase_weight: 100
 世行	shi4 hang2
 世親	shi4 qin1
 世貿大廈	shi4 mao4 da4 sha4
+世貿大廈	shi4 mao4 da4 xia4
 世間	shi4 jian1
 丘壑	qiu1 huo4
 丘壑	qiu1 he4
@@ -71474,6 +71490,7 @@ min_phrase_weight: 100
 國戚皇親	guo2 qi1 huang2 qin1
 國教	guo2 jiao4
 國會大廈	guo2 hui4 da4 sha4
+國會大廈	guo2 hui4 da4 xia4
 國會議長	guo2 hui4 yi4 zhang3
 國有財產	guo2 you3 cai2 chan3
 國有資產監督管理委員會	guo2 you3 zi1 chan3 jian1 du1 guan3 li3 wei3 yuan2 hui4
@@ -72881,6 +72898,7 @@ min_phrase_weight: 100
 多少錢	duo1 shao3 qian2
 多少錢	duo2 shao3 qian2
 多層大廈	duo1 ceng2 da4 sha4
+多層大廈	duo1 ceng2 da4 xia4
 多層次傳銷	duo1 ceng2 ci4 chuan2 xiao1
 多層次分析模型	duo1 ceng2 ci4 fen1 xi1 mo2 xing2
 多山地區	duo1 shan1 di4 qu1
@@ -73230,6 +73248,7 @@ min_phrase_weight: 100
 大廈將傾	da4 xia4 jiang1 qing1
 大廈將傾	da4 xia4 jiang1 qing3
 大廈棟梁	da4 xia4 dong4 liang2
+大廈棟梁	da4 sha4 dong4 liang2
 大廟	tai4 miao4
 大廟	da4 miao4
 大張撻伐	da4 zhang1 ta4 fa1
@@ -84093,6 +84112,7 @@ min_phrase_weight: 100
 摩卡	mo2 ka3
 摩卡咖啡	mo2 ka3 ka1 fei1
 摩天大廈	mo2 tian1 da4 sha4
+摩天大廈	mo2 tian1 da4 xia4
 摩姑	mo2 gu1
 摩尼教	mo2 ni2 jiao4
 摩崖石刻	mo2 ya2 shi2 ke1
@@ -84603,6 +84623,7 @@ min_phrase_weight: 100
 撫綏	fu3 sui1
 撫綏	fu3 sui2
 撬槓	qiao4 gang4
+撬槓	qiao1 gang4
 播亂	bo4 luan4
 播亂	bo1 luan4
 播出	bo4 chu1
@@ -86943,6 +86964,7 @@ min_phrase_weight: 100
 智圓行方	zhi4 yuan2 xing4 fang1
 智圓行方	zhi4 yuan2 xing2 fang1
 智慧型大廈	zhi4 hui4 xing2 da4 xia4
+智慧型大廈	zhi4 hui4 xing2 da4 sha4
 智能卡	zhi4 neng2 ka3
 智調	zhi4 diao4
 智識	zhi4 shi4
@@ -89907,6 +89929,8 @@ min_phrase_weight: 100
 機伶人	ji1 ling2 ren2
 機場大廈	ji1 chang3 da4 sha4
 機場大廈	ji1 chang2 da4 sha4	3%
+機場大廈	ji1 chang3 da4 xia4
+機場大廈	ji1 chang2 da4 xia4	3%
 機子	ji1 zi5
 機應	ji1 ying4
 機括	ji1 gua1
@@ -92844,6 +92868,7 @@ min_phrase_weight: 100
 淑郁	shu1 yu4
 淒切	qi1 qie4
 淒咽	qi1 ye4
+淒咽	qi1 yan1
 淒薄	qi1 bo2
 淒薄	qi1 bao2
 淖糜	nao4 mi2
@@ -101774,6 +101799,7 @@ min_phrase_weight: 100
 紐幾內亞	niu3 ji3 nei4 ya4
 紐捽	niu3 zu2
 紐約帝國大廈	niu3 yue1 di4 guo2 da4 sha4
+紐約帝國大廈	niu3 yue1 di4 guo2 da4 xia4
 紐芬蘭與拉布拉多	niu3 fen1 lan2 yu3 la1 bu4 la1 duo1
 純嘏	chun2 gu3
 純小數	chun2 xiao3 shu4
@@ -109096,6 +109122,7 @@ min_phrase_weight: 100
 西和	xi1 he2
 西和縣	xi1 he2 xian4
 西單圖書大廈	xi1 dan1 tu2 shu1 da4 sha4
+西單圖書大廈	xi1 dan1 tu2 shu1 da4 xia4
 西堤	xi1 ti2
 西堤	xi1 di1
 西塞山	xi1 sai4 shan1
@@ -111413,6 +111440,7 @@ min_phrase_weight: 100
 賺頭	zhuan4 tou2
 賺騙	zuan4 pian4
 購物大廈	gou4 wu4 da4 sha4
+購物大廈	gou4 wu4 da4 xia4
 購物廣場	gou4 wu4 guang3 chang3
 購物廣場	gou4 wu4 guang3 chang2	3%
 賽場	sai4 chang3
@@ -114918,6 +114946,7 @@ min_phrase_weight: 100
 金紫光祿大夫	jin1 zi3 guang1 lu4 da4 fu1
 金絲燕	jin1 si1 yan4
 金茂大廈	jin1 mao4 da4 sha4
+金茂大廈	jin1 mao4 da4 xia4
 金華地區	jin1 hua2 di4 qu1
 金融卡	jin1 rong2 ka3
 金融時報指數	jin1 rong2 shi2 bao4 zhi3 shu4
@@ -116793,6 +116822,7 @@ min_phrase_weight: 100
 阿拉斯加州	a1 la1 si1 jia1 zhou1
 阿拉斯加洋流	a1 la1 si1 jia1 yang2 liu2
 阿拉斯加雪撬犬	a1 la1 si1 jia1 xue3 qiao4 quan3
+阿拉斯加雪撬犬	a1 la1 si1 jia1 xue3 qiao1 quan3
 阿拉木圖	a1 la1 mu4 tu2
 阿拉木汗	a1 la1 mu4 han2
 阿拉法特	a1 la1 fa3 te4
@@ -119818,6 +119848,7 @@ min_phrase_weight: 100
 高地	gao1 di4
 高地氣候	gao1 di4 qi4 hou4
 高堂大廈	gao1 tang2 da4 xia4
+高堂大廈	gao1 tang2 da4 sha4
 高天厚地	gao1 tian1 hou4 di4
 高官重祿	gao1 guan1 zhong4 lu4
 高密度	gao1 mi4 du4
@@ -120987,4 +121018,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 120990 #####
+##### @結束 END - 121021 #####
