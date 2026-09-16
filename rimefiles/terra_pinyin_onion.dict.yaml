@@ -172,6 +172,8 @@
 #    詞句中，「蒲」日常發音常會誤發為「pu3」，臺灣標準為「pu2」，故皆補齊「pu2」「pu3」，後者詞頻設為80%。。
 #    詞句中，「鉻」日常發音常會誤發為「ge2」和「luo4」，臺灣標準為「ge4」，故皆補齊「ge4」「ge2」「luo4」。
 #    詞句中，「蹼」臺灣標準為「pu2」，大陸標準為「pu3」，日常易混，故皆補齊「pu2」「pu3」。
+#    詞句中，「壝」臺灣標準為「wei3」，大陸標準為「wei2」，日常易混，故皆補齊「wei3」「wei2」。
+#    詞句中，「幀」臺灣標準為「zheng4」，大陸標準為「zhen1」，日常易混，故皆補齊「zheng4」「zhen1」。
 #    詞句中，「隼」臺灣標準為「zhun3」，大陸標準為「sun3」，日常易混，故皆補齊「zhun3」「sun3」。
 #    詞句中，「貯」臺灣標準為「zhu3」，大陸標準為「zhu4」，日常易混，故皆補齊「zhu3」「zhu4」。
 #    詞句中，「蝸」臺灣標準為「gua1」，大陸標準為「wo1」，日常易混，故皆補齊「gua1」「wo1」。
@@ -188,6 +190,7 @@
 #    詞句中，「菽」臺灣標準為「shu2」，大陸標準為「shu1」，兩者易混淆，故皆補齊「shu2」「shu1」。
 #    詞句中，「掬」臺灣標準為「ju2」，大陸標準為「ju1」，兩者易混淆，故皆補齊「ju2」「ju1」。
 #    詞句中，「戕」臺灣標準為「qiang2」，大陸標準為「qiang1」，兩者易混淆，故皆補齊「qiang2」「qiang1」。
+#    詞句中，「溯」臺灣標準為「su4」，日常發音常會誤發為「shuo4」，故皆補齊「su4」「shuo4」，後者詞頻設為80%。
 #    詞句中，「潛」臺灣標準為「qian2」，日常發音常會誤發為「qian3」，故皆補齊「qian2」「qian3」，後者詞頻設為80%。
 #    詞句中，「髓」臺灣標準為「sui3」，日常發音常會誤發為「sui2」，故皆補齊「sui3」「sui2」，後者詞頻設為80%。
 #    詞句中，「擬」臺灣標準為「ni3」，日常發音常會誤發為「ni2」，故皆補齊「ni3」「ni2」，後者詞頻設為80%。
@@ -294,7 +297,9 @@
 #    詞句中，「皖」皆補齊「wan3」「huan3」。
 #    詞句中，「鱖」皆補齊「gui4」「jue2」。
 #    詞句中，「偕」皆補齊「xie2」「jie1」。
+#    詞句中，「莘」皆補齊「shen1」「xin1」。
 #    詞句中，「瀕」皆補齊「bin1」「pin2」。
+#    詞句中，「洙」皆補齊「zhu1」「shu1」。
 #    詞句中，「恣」臺灣標準為「zi4」「ci1」，前者又音為「zi1」，日常「zi4」和「zi1」易混，故互相補齊。「恣睢」等發音為「ci1」不補。
 #    詞句中，「績」「蹟」「跡」「迹」臺灣標準為「ji1」，大陸標準為「ji4」，只保留「ji1」發音。
 #    詞句中，「寂」臺灣標準為「ji2」，大陸標準為「ji4」，只保留「ji2」發音。
@@ -4184,6 +4189,21 @@ min_phrase_weight: 100
 挜	ya3	1%
 掫	chou1	0%
 掫	zhou1	0%
+倪	nie4	0%
+俾	pi4	0%
+倄	wei4	0%
+倜	diao4	0%
+倜	zhou1	0%
+倅	zu2	0%
+倅	cu4	0%
+壝	wei2
+壝	wei1	0%
+壙	kuang3	0%
+圹	kuang3	0%
+壘	lei2	0%
+壘	lei4	0%
+垒	lei2	0%
+垒	lei4	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -59705,9 +59725,13 @@ min_phrase_weight: 100
 不正常	bu2 zheng4 chang2
 不正常狀況	bu2 zheng4 chang2 zhuang4 kuang4
 不正當	bu2 zheng4 dang1
+不正當	bu2 zheng4 dang4
 不正當競爭	bu2 zheng4 dang1 jing4 zheng1
+不正當競爭	bu2 zheng4 dang4 jing4 zheng1
 不正當關係	bu2 zheng4 dang1 guan1 xi4
 不正當關係	bu2 zheng4 dang1 guan1 xi1	80%
+不正當關係	bu2 zheng4 dang4 guan1 xi4
+不正當關係	bu2 zheng4 dang4 guan1 xi1	80%
 不正確	bu2 zheng4 que4
 不正經	bu2 zheng4 jing1
 不殺	bu2 shai4
@@ -61986,8 +62010,23 @@ min_phrase_weight: 100
 伽利略‧伽利雷	qie2 li4 lve4 eng5 qie2 li4 lei2
 伽南香	qie2 nan2 xiang1
 伽羅瓦	jia1 luo2 wa4
+伽羅瓦	qie2 luo2 wa4
+伽羅瓦	ga1 luo2 wa4
+伽羅瓦	jia1 luo2 wa3
+伽羅瓦	qie2 luo2 wa3
+伽羅瓦	ga1 luo2 wa3
 伽羅華	jia1 luo2 hua4
+伽羅華	qie2 luo2 hua4
+伽羅華	ga1 luo2 hua4
+伽羅華	jia1 luo2 hua2
+伽羅華	qie2 luo2 hua2
+伽羅華	ga1 luo2 hua2
 伽羅華理論	jia1 luo2 hua4 li3 lun4
+伽羅華理論	qie2 luo2 hua4 li3 lun4
+伽羅華理論	ga1 luo2 hua4 li3 lun4
+伽羅華理論	jia1 luo2 hua2 li3 lun4
+伽羅華理論	qie2 luo2 hua2 li3 lun4
+伽羅華理論	ga1 luo2 hua2 li3 lun4
 伽藍	qie2 lan2
 伽藍鳥	qie2 lan2 niao3
 伽馬	ga1 ma3
@@ -72721,6 +72760,7 @@ min_phrase_weight: 100
 壓軸戲	ya1 zhou4 xi4
 壓電效應	ya1 dian4 xiao4 ying4
 壝埒	wei3 le4
+壝埒	wei2 le4
 壞事傳千里	huai4 shi4 chuan2 qian1 li3
 壞分子	huai4 fen4 zi3
 壞分子	huai4 fen4 zi5
@@ -90452,6 +90492,7 @@ min_phrase_weight: 100
 正當防衛	zheng4 dang1 fang2 wei4
 正當防衛	zheng4 dang4 fang2 wei4
 正當防衛行為	zheng4 dang4 fang2 wei4 xing2 wei2
+正當防衛行為	zheng4 dang1 fang2 wei4 xing2 wei2
 正著	zheng4 zhao2
 正確處理	zheng4 que4 chu3 li3
 正確處理	zheng4 que4 chu4 li3
@@ -91832,6 +91873,7 @@ min_phrase_weight: 100
 沿波討源	yan2 po1 tao3 yuan2
 沿洄	yan2 hui2
 沿流溯源	yan2 liu2 su4 yuan2
+沿流溯源	yan2 liu2 shuo4 yuan2	80%
 沿流討源	yan2 liu2 tao3 yuan2
 沿海	yan2 hai3
 沿海口子	yan2 hai3 kou3 zi5
@@ -96352,6 +96394,7 @@ min_phrase_weight: 100
 瓤兒	rang2 er2
 瓤子	rang2 zi5
 瓦刀	wa4 dao1
+瓦刀	wa3 dao1
 瓦剌	wa3 la4
 瓦剌	wa3 la2
 瓦努阿圖	wa3 nu3 a1 tu2
@@ -106035,7 +106078,9 @@ min_phrase_weight: 100
 莎雞	sha1 ji1
 莖幹	jing1 gan4
 莘縣	shen1 xian4
+莘縣	xin1 xian4
 莘莘	shen1 shen1
+莘莘	xin1 xin1
 莘莘學子	shen1 shen1 xue2 zi3
 莘莘學子	xin1 xin1 xue2 zi3
 莜麥	you2 mai4
@@ -121018,4 +121063,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 121021 #####
+##### @結束 END - 121066 #####
