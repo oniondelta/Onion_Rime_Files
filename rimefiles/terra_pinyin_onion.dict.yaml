@@ -173,6 +173,7 @@
 #    詞句中，「鉻」日常發音常會誤發為「ge2」和「luo4」，臺灣標準為「ge4」，故皆補齊「ge4」「ge2」「luo4」。
 #    詞句中，「蹼」臺灣標準為「pu2」，大陸標準為「pu3」，日常易混，故皆補齊「pu2」「pu3」。
 #    詞句中，「壝」臺灣標準為「wei3」，大陸標準為「wei2」，日常易混，故皆補齊「wei3」「wei2」。
+#    詞句中，「淆」臺灣標準為「yao2」，大陸標準為「xiao2」，日常易混，故皆補齊「yao2」「xiao2」。
 #    詞句中，「幀」臺灣標準為「zheng4」，大陸標準為「zhen1」，日常易混，故皆補齊「zheng4」「zhen1」。
 #    詞句中，「隼」臺灣標準為「zhun3」，大陸標準為「sun3」，日常易混，故皆補齊「zhun3」「sun3」。
 #    詞句中，「貯」臺灣標準為「zhu3」，大陸標準為「zhu4」，日常易混，故皆補齊「zhu3」「zhu4」。
@@ -213,8 +214,9 @@
 #    詞句中，「巍」臺灣標準為「wei2」，大陸標準為「wei1」，日常易混，故全都補齊「wei2」「wei1」。
 #    詞句中，「曙」臺灣標準為「shu4」，大陸標準為「shu3」，日常易混，故全都補齊「shu4」「shu3」。
 #    詞句中，「斂」臺灣標準為「lian4」，大陸標準為「lian3」，日常易混，故全都補齊「lian4」「lian3」。
-#    詞句中，「鸌」臺灣標準為「huo4」，大陸標準為「hu4」，，日常易混，故全都補齊「huo4」「hu4」。
-#    詞句中，「氬」臺灣標準為「ya3」，大陸標準為「shu4」，日常易混，故全都補齊「ya3」「ya4」。
+#    詞句中，「鸌」臺灣標準為「huo4」，大陸標準為「hu4」，日常易混，故全都補齊「huo4」「hu4」。
+#    詞句中，「蚴」臺灣標準為「you3」，大陸標準為「you4」，日常易混，故全都補齊「you3」「you4」。
+#    詞句中，「氬」臺灣標準為「ya3」，大陸標準為「ya4」，日常易混，故全都補齊「ya3」「ya4」。
 #    詞句中，「鉭」臺灣標準為「dan4」，大陸標準為「tan3」，日常易混，故全都補齊「dan4」「tan3」。
 #    詞句中，「嘌」臺灣標準為「piao1」，大陸標準為「piao4」，日常易混，故全都補齊「piao1」「piao4」。
 #    詞句中，「冇」臺灣標準為「mou3」，大陸標準為「mao3」，日常易混，故全都補齊「mou3」「mao3」。
@@ -226,6 +228,7 @@
 #    詞句中，「囀」臺灣標準為「zhuan3」，大陸標準為「zhuan4」，日常易混，故全都補齊「zhuan3」「zhuan4」。
 #    詞句中，「呤」臺灣標準和大陸標準皆有「ling2」該發音，但大陸標準為某化學物質時發「ling4」，故全都補齊「ling2」「ling4」。
 #    詞句中，「肘」臺灣標準為「zhou3」，日常發音常會誤發為「zhou2」，故皆補齊「zhou3」「zhou2」，後者詞頻設為80%。
+#    詞句中，「庾」臺灣標準為「yu3」，日常發音常會誤發為「yu2」，故皆補齊「yu3」「yu2」，後者詞頻設為80%。
 #    詞句中，「蕾」臺灣標準為「lei3」，日常發音常會誤發為「lei2」，，故皆補齊「lei3」「lei2」，後者詞頻設為80%。
 #    詞句中，「炔」臺灣標準為「que1」，日常發音常會發「jue2」，故皆補齊「que1」「jue2」。
 #    詞句中，「悄」臺灣標準為「qiao3」，日常發音常會發「qiao1」，故皆補齊「qiao3」「qiao1」。
@@ -285,6 +288,9 @@
 #    詞句中，「暫」皆補齊「zhan4」「zan4」。
 #    詞句中，「婭」皆補齊「ya4」「ya3」。
 #    詞句中，「璉」皆補齊「lian2」「lian3」。
+#    詞句中，「閩」皆補齊「min2」「min3」。
+#    詞句中，「莠」皆補齊「you4」「you3」。
+#    詞句中，「姣」皆補齊「jiao3」「jiao1」。
 #    詞句中，「頗」皆補齊「po3」「po1」。
 #    詞句中，「咱」皆補齊「zan2」「za2」。
 #    詞句中，「羧」皆補齊「zui1」「suo1」。
@@ -300,12 +306,14 @@
 #    詞句中，「莘」皆補齊「shen1」「xin1」。
 #    詞句中，「瀕」皆補齊「bin1」「pin2」。
 #    詞句中，「洙」皆補齊「zhu1」「shu1」。
+#    詞句中，「癖」皆補齊「pi3」「pi4」。
 #    詞句中，「恣」臺灣標準為「zi4」「ci1」，前者又音為「zi1」，日常「zi4」和「zi1」易混，故互相補齊。「恣睢」等發音為「ci1」不補。
 #    詞句中，「績」「蹟」「跡」「迹」臺灣標準為「ji1」，大陸標準為「ji4」，只保留「ji1」發音。
 #    詞句中，「寂」臺灣標準為「ji2」，大陸標準為「ji4」，只保留「ji2」發音。
 #    詞句中，「妮」臺灣標準為「ni2」，大陸標準為「ni1」，只保留「ni2」發音。
 #    詞句中，「期」臺灣標準為「qi2」，又音為「qi1」，為「qi1」的詞句易有其他相同發音的詞句，斟酌後只標註「qi2」。
 #    詞句中，「耶」除「耶律」只標「ye1 lv4」，其餘補齊「ye1」和「ye2」。
+#    詞句中，「膦」表示化學有機化合物時，臺灣標準為「lin2」，大陸標準為「lin4」，易混，故表化學有機化合物時，皆補齊「lin2」「lin4」。
 #    詞句中，「暴露」「bao4」和「pu4」補齊，「露」以「lu4」為主。
 #    詞句中，「法國」字典正確發音「fa3 guo2」，但「fa4 guo2」語音太常用，故補齊「fa3」「fa4」。（「法」地名相關也修改，如：「中法」）
 #    詞句中，「關係」其「係」臺灣字典發音為「xi4」，但日常常發「xi1」，故「關係」其「係」都補上「xi1」該發音。
@@ -340,6 +348,7 @@
 #    詞句中，「給予」臺灣字典發音為「ji3 yu3」，日常發音常發，故皆補齊「ji3 yu3」「ji3 yu2」「gei3 yu3」「gei3 yu2」。
 #    詞句中，「骨頭」臺灣字典發音為「gu2 tou5」，日常發音常發，故皆補齊「gu2 tou5」「gu2 tou2」「gu3 tou5」「gu3 tou2」。
 #    詞句中，「石頭」臺灣字典發音為「shi2 tou5」，日常發音常發「shi2 tou2」，故皆補齊「shi2 tou5」「shi2 tou2」。
+#    詞句中，「丫頭」臺灣字典發音為「ya1 tou5」，日常發音常發「ya1 tou2」，故皆補齊「ya1 tou5」「ya1 tou2」。
 #    詞句中，「胳膊」臺灣字典發音為「ge1 bo5」，日常發音常發「ge1 bo2」，故皆補齊「ge1 bo5」「ge1 bo2」。
 #    詞句中，「尾巴」臺灣字典發音為「wei3 ba1」，日常發音常發「yi3 ba1」，故皆補齊「wei3 ba1」「yi3 ba1」。
 #    詞句中，「部署」臺灣字典發音為「bu4 shu4」，日常發音常發「bu4 shu3」，故皆補齊「bu4 shu4」「bu4 shu3」。
@@ -856,7 +865,7 @@ min_phrase_weight: 100
 义	cha3
 亲	qing4
 呒	mu2
-只	zhi2
+# 只	zhi2	0%
 凈	zheng1
 吁	yu1	4%
 崖	ai2
@@ -948,7 +957,7 @@ min_phrase_weight: 100
 旮	xu4	0.2%
 婀	e3	0.2%
 呶	nu2	0.2%
-莠	you4	0.2%
+莠	you4
 齟	zu1	0.2%
 龃	zu1	0.2%
 臧	zang4	0.2%
@@ -3585,6 +3594,7 @@ min_phrase_weight: 100
 墨	mei2	0%
 墠	chan3	0%
 隻	huo4	0%
+# 只	huo4	0%
 麗	li3	0%
 麗	si1	0%
 丽	li2	0%
@@ -4204,6 +4214,19 @@ min_phrase_weight: 100
 壘	lei4	0%
 垒	lei2	0%
 垒	lei4	0%
+叭	pa1	0%
+叱	e2	0%
+司	ci2	0%
+司	si4	0%
+祇	chi2	0%
+祈	gui3	0%
+衹	ti2	0%
+# 只	ti2	0%
+秏	mao4	0%
+亶	dan4	0%
+亶	chan2	0%
+亶	zhan1	0%
+淦	han2	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -4449,7 +4472,7 @@ min_phrase_weight: 100
 契	xie4	1%
 奓	zha1	1%
 奓	chi3	1%
-姣	jiao3	1%
+姣	jiao3
 屎	xi1	1%
 峉	e1	1%
 帣	juan3	1%
@@ -5062,7 +5085,7 @@ min_phrase_weight: 100
 鄙	bi4	1%
 鉺	er4	1%
 銨	an1
-閩	min2	1%
+閩	min2
 雌	ci1	1%
 需	ru2	1%
 鞄	bao1	1%
@@ -5222,7 +5245,7 @@ min_phrase_weight: 100
 濊	wei4	1%
 瀄	jie2	1%
 燉	dun1	1%
-燎	liao4	1%
+燎	liao4	30%
 燜	men1	1%
 甋	di2	1%
 瘻	lv2	1%
@@ -61409,6 +61432,7 @@ min_phrase_weight: 100
 人往高處去	ren2 wang3 gao1 chu4 qu4
 人心惟危	ren2 xin1 wei2 wei2
 人心渙散	ren2 xin1 huan4 san4
+人心渙散	ren2 xin1 huan4 san3
 人心隔肚皮	ren2 xin1 ge2 du4 pi2
 人心難測	ren2 xin1 nan2 ce4
 人怕落囤	ren2 pa4 luo4 dun4
@@ -68648,6 +68672,7 @@ min_phrase_weight: 100
 可什麼	ke3 shen2 mo5	80%
 可什麼	ke3 she2 mo5	80%
 可以燎原	ke3 yi3 liao2 yuan2
+可以燎原	ke3 yi3 liao3 yuan2
 可以燎原	ke3 yi3 liao4 yuan2
 可以為錯	ke3 yi3 wei2 cuo4
 可供軍用	ke3 gong1 jun1 yong4
@@ -71999,6 +72024,7 @@ min_phrase_weight: 100
 地痞	di4 pi3
 地瘠人稀	di4 ji2 ren2 xi1
 地癖	di4 pi3
+地癖	di4 pi4
 地皮	di4 pi2
 地盡其利	di4 jin4 qi2 li4
 地盤	di4 pan2
@@ -73904,6 +73930,7 @@ min_phrase_weight: 100
 夸克	kua3 ke4	80%
 夸克	kua4 ke4	80%
 夸姣	kua1 jiao1
+夸姣	kua1 jiao3
 夸容	kua1 rong2
 夸毗	kua1 pi2
 夸父	kua1 fu4
@@ -74508,6 +74535,8 @@ min_phrase_weight: 100
 如海一漚	ru2 hai3 yi4 ou1
 如海一漚	ru2 hai3 yi1 ou1
 如火燎原	ru2 huo3 liao4 yuan2
+如火燎原	ru2 huo3 liao2 yuan2
+如火燎原	ru2 huo3 liao3 yuan2
 如牛負重	ru2 niu2 fu4 zhong4
 如砍瓜切菜一般	ru2 kan3 gua1 qie1 cai4 yi4 ban1
 如砍瓜切菜一般	ru2 kan3 gua1 qie1 cai4 yi1 ban1
@@ -74660,9 +74689,11 @@ min_phrase_weight: 100
 姣好	jiao3 hao3
 姣好	jiao1 hao3
 姣媚	jiao3 mei4
+姣媚	jiao1 mei4
 姣美	jiao3 mei3
 姣美	jiao1 mei3
 姣麗	jiao3 li4
+姣麗	jiao1 li4
 姥姥	lao3 lao5	80%
 姥姥	lao3 lao3
 姥姥不疼	lao3 lao5 bu4 teng2	80%
@@ -74749,6 +74780,7 @@ min_phrase_weight: 100
 娜娜	na4 na4
 娜娜	nuo2 nuo2
 娥姣	e2 jiao3
+娥姣	e2 jiao1
 娩出	mian3 chu1
 娩息	mian3 xi2
 娭光	xi1 guang1
@@ -78175,6 +78207,8 @@ min_phrase_weight: 100
 庫藏	ku4 cang2
 庭外和解	ting2 wai4 he2 jie3
 庭燎	ting2 liao4
+庭燎	ting2 liao2
+庭燎	ting2 liao3
 庭長	ting2 zhang3
 庵觀	an1 guan4
 庶幾	shu4 ji1
@@ -79546,6 +79580,7 @@ min_phrase_weight: 100
 心思	xin1 si1
 心思	xin1 si5	80%
 心急火燎	xin1 ji2 huo3 liao3
+心急火燎	xin1 ji2 huo3 liao2
 心急火燎	xin1 ji2 huo3 liao4
 心怯	xin1 que4
 心怯	xin1 qie4
@@ -86755,6 +86790,7 @@ min_phrase_weight: 100
 星期日	xing1 qi2 ri4
 星火燎原	xing1 huo3 liao4 yuan2
 星火燎原	xing1 huo3 liao2 yuan2
+星火燎原	xing1 huo3 liao3 yuan2
 星相	xing1 xiang4
 星相圖	xing1 xiang4 tu2
 星相學	xing1 xiang4 xue2
@@ -90679,6 +90715,8 @@ min_phrase_weight: 100
 死海古卷	si3 hai3 gu3 juan4
 死海經卷	si3 hai3 jing1 juan4
 死灰復燎	si3 hui1 fu4 liao4
+死灰復燎	si3 hui1 fu4 liao2
+死灰復燎	si3 hui1 fu4 liao3
 死無葬身之地	si3 wu2 zang4 shen1 zhi1 di4
 死爹哭媽	si3 die1 ku1 ma1
 死生契闊	si3 sheng1 qie4 kuo4
@@ -92385,6 +92423,8 @@ min_phrase_weight: 100
 洪濤	hong2 tao2
 洪濤	hong2 tao1
 洪爐燎髮	hong2 lu2 liao4 fa3
+洪爐燎髮	hong2 lu2 liao2 fa3
+洪爐燎髮	hong2 lu2 liao3 fa3
 洪都拉斯	hong2 du1 la1 si1
 洪都百鍊生	hong2 du1 bai3 lian4 sheng1
 洪量	hong2 liang4
@@ -93352,6 +93392,7 @@ min_phrase_weight: 100
 清風勁節	qing1 feng1 jing4 jie2
 清風勁節	qing1 feng1 jin4 jie2
 渙散	huan4 san4
+渙散	huan4 san3
 減低速度	jian3 di1 su4 du4
 減削	jian3 xue4
 減削	jian3 xiao1
@@ -93609,6 +93650,7 @@ min_phrase_weight: 100
 滄浪亭	cang1 lang2 ting2
 滄浪亭	cang1 lang4 ting2
 滄浪詩話	cang1 lang2 shi1 hua4
+滄浪詩話	cang1 lang4 shi1 hua4
 滄海橫流	cang1 hai3 heng4 liu2
 滄海橫流	cang1 hai3 heng2 liu2
 滅不個	mie4 bu4 ge5
@@ -94082,6 +94124,7 @@ min_phrase_weight: 100
 濁度	zhuo2 du4
 濁臭熏天	zhuo2 chou4 xun1 tian1
 濂洛關閩	lian2 luo4 guan1 min2
+濂洛關閩	lian2 luo4 guan1 min3
 濃墨重彩	nong2 mo4 zhong4 cai3
 濃妝淡抹	nong2 zhuang1 dan4 mo3
 濃妝豔抹	nong2 zhuang1 yan4 mo3
@@ -94151,9 +94194,11 @@ min_phrase_weight: 100
 濯纓彈冠	zhuo2 ying1 tan2 guan1
 濯纓洗耳	zhuo2 ying1 xi3 er3
 濯纓滄浪	zhuo2 ying1 cang1 lang2
+濯纓滄浪	zhuo2 ying1 cang1 lang4
 濯纓濯足	zhuo2 ying1 zhuo2 zu2
 濯足	zhuo2 zu2
 濯足滄浪	zhuo2 zu2 cang1 lang2
+濯足滄浪	zhuo2 zu2 cang1 lang4
 濯身	zhuo2 shen1
 濯錦以魚	zhuo2 jin3 yi3 yu2
 濰坊地區	wei2 fang1 di4 qu1
@@ -94235,8 +94280,11 @@ min_phrase_weight: 100
 火浣布衫	huo3 wan3 bu4 shan1
 火煤子	huo3 mei2 zi5
 火燎腿	huo3 liao4 tui3
+火燎腿	huo3 liao2 tui3
+火燎腿	huo3 liao3 tui3
 火燒	huo3 shao1
 火燒火燎	huo3 shao1 huo3 liao2
+火燒火燎	huo3 shao1 huo3 liao3
 火燒火燎	huo3 shao1 huo3 liao4
 火燒眉毛	huo3 shao1 mei2 mao2
 火玻璃	huo3 bo1 li2
@@ -94592,6 +94640,7 @@ min_phrase_weight: 100
 煙消霧散	yan1 xiao1 wu4 san4
 煙熏火燎	yan1 xun1 huo3 liao4
 煙燻火燎	yan1 xun1 huo3 liao3
+煙燻火燎	yan1 xun1 huo3 liao2
 煙突	yan1 tu2
 煙突	yan1 tu1
 煙台地區	yan1 tai2 di4 qu1
@@ -94698,6 +94747,8 @@ min_phrase_weight: 100
 熒光屏	ying2 guang1 ping2
 熒屏	ying2 ping2
 熒燎	ying2 liao4
+熒燎	ying2 liao2
+熒燎	ying2 liao3
 熔漿	rong2 jiang1
 熔融岩漿	rong2 rong2 yan2 jiang1
 熙和	xi1 he2
@@ -94963,17 +95014,37 @@ min_phrase_weight: 100
 燉煌	dun1 huang2
 燉煌	dun4 huang2
 燎原	liao2 yuan2
+燎原	liao3 yuan2
 燎原	liao4 yuan2
 燎原之火	liao4 yuan2 zhi1 huo3
+燎原之火	liao2 yuan2 zhi1 huo3
+燎原之火	liao3 yuan2 zhi1 huo3
 燎星	liao4 xing1
+燎星	liao2 xing1
+燎星	liao3 xing1
 燎朗	liao4 lang3
+燎朗	liao2 lang3
+燎朗	liao3 lang3
 燎毛	liao3 mao2
+燎毛	liao2 mao2
+燎毛	liao4 mao2
 燎泡	liao2 pao4
+燎泡	liao3 pao4
+燎泡	liao4 pao4
 燎漿	liao2 jiang1
+燎漿	liao3 jiang1
+燎漿	liao4 jiang1
 燎漿泡	liao2 jiang1 pao4
+燎漿泡	liao3 jiang1 pao4
+燎漿泡	liao4 jiang1 pao4
 燎灼	liao3 zhuo2
+燎灼	liao2 zhuo2
+燎灼	liao4 zhuo2
 燎燎	liao4 liao4
+燎燎	liao2 liao2
+燎燎	liao3 liao3
 燎髮	liao3 fa3
+燎髮	liao2 fa3
 燎髮	liao4 fa3
 燒刀子	shao1 dao1 zi5
 燒喇嘛	shao1 la3 ma5
@@ -94992,6 +95063,8 @@ min_phrase_weight: 100
 燒餅	shao1 bing3
 燒鴨子	shao1 ya1 zi5
 燔燎	fan2 liao4
+燔燎	fan2 liao2
+燔燎	fan2 liao3
 燕丸	yan4 wan2
 燕丹	yan1 dan1
 燕九節	yan1 jiu3 jie2
@@ -96379,6 +96452,7 @@ min_phrase_weight: 100
 瓜葛之親	gua1 ge2 zhi1 qin1
 瓜葛之親	gua1 ge3 zhi1 qin1
 瓜蔓抄	gua1 man4 chao1
+瓜蔓抄	gua1 wan4 chao1
 瓜達卡納爾島	gua1 da2 ka3 na4 er3 dao3
 瓜達卡納爾戰役	gua1 da2 ka3 na4 er3 zhan4 yi4
 瓟瓜	bo2 gua1
@@ -97190,6 +97264,7 @@ min_phrase_weight: 100
 痀僂	ju1 lou2
 痀瘻	ju1 lv2
 痃癖	xian2 pi3
+痃癖	xian2 pi4
 病來如山倒	bing4 lai2 ru2 shan1 dao3
 病倒	bing4 dao3
 病假	bing4 jia4
@@ -99378,6 +99453,8 @@ min_phrase_weight: 100
 破傷風桿菌	po4 shang1 feng1 gan3 jun1
 破嗓子	po4 sang3 zi5
 破壁燎火	po4 bi4 liao4 huo3
+破壁燎火	po4 bi4 liao2 huo3
+破壁燎火	po4 bi4 liao3 huo3
 破壞射擊	po4 huai4 she4 ji2
 破家危國	po4 jia1 wei2 guo2
 破家散業	po4 jia1 san4 ye4
@@ -101598,6 +101675,7 @@ min_phrase_weight: 100
 精神分析	jing1 shen2 fen1 xi1
 精神分裂症	jing1 shen2 fen1 lie4 zheng4
 精神渙散	jing1 shen2 huan4 san4
+精神渙散	jing1 shen2 huan4 san3
 精空	jing1 kong1
 精蟲衝腦	jing1 chong2 chong1 nao3
 精血	jing1 xie3
@@ -102875,6 +102953,8 @@ min_phrase_weight: 100
 縱隊	zong1 dui4
 縱隊	zong4 dui4
 縱風止燎	zong4 feng1 zhi3 liao4
+縱風止燎	zong4 feng1 zhi3 liao2
+縱風止燎	zong4 feng1 zhi3 liao3
 縱黍尺	zong1 shu3 chi3
 縷當	lv3 dang4
 縻繫	mi2 xi4
@@ -103830,6 +103910,7 @@ min_phrase_weight: 100
 耶律大石	ye1 lv4 da4 shi2
 耶律楚材	ye1 lv4 chu3 cai2
 耶律阿保機	ye1 lv4 a4 bao3 ji1
+耶律阿保機	ye1 lv4 a1 bao3 ji1
 耶悉茗	ye1 xi1 ming2
 耶烈萬	ye1 lie4 wan4
 耶穌	ye1 su1
@@ -105577,6 +105658,7 @@ min_phrase_weight: 100
 良種	liang2 zhong3
 良種繁育	liang2 zhong3 fan2 yu4
 良莠不分	liang2 you3 bu4 fen1
+良莠不分	liang2 you4 bu4 fen1
 良賈深藏若虛	liang2 gu3 shen1 cang2 ruo4 xu1
 良馬見鞭影而行	liang2 ma3 jian4 bian1 ying3 er2 xing2
 艱危	jian1 wei2
@@ -106090,7 +106172,9 @@ min_phrase_weight: 100
 莠民	you4 min2
 莠民	you3 min2
 莠狗尾草	you4 gou3 wei3 cao3
+莠狗尾草	you3 gou3 wei3 cao3
 莠言	you4 yan2
+莠言	you3 yan2
 莢膜組織胞漿菌	jia2 mo2 zu3 zhi1 bao1 jiang1 jun4
 莢膜組織胞漿菌	jia2 mo4 zu3 zhi1 bao1 jiang1 jun4	3%
 莢膜組織胞漿菌	jia2 mo2 zu3 zhi1 bao1 jiang1 jun1
@@ -116465,9 +116549,11 @@ min_phrase_weight: 100
 閤家歡	he2 jia1 huan1
 閤眼	he2 yan3
 閩中	min2 zhong1
+閩中	min3 zhong1
 閩侯	min2 hou2
 閩侯	min3 hou2
 閩劇	min2 ju4
+閩劇	min3 ju4
 閩北話	min2 bei3 hua4
 閩北話	min3 bei3 hua4
 閩南	min2 nan2
@@ -116477,6 +116563,7 @@ min_phrase_weight: 100
 閩南語	min2 nan2 yu3
 閩南語	min3 nan2 yu3
 閩本	min2 ben3
+閩本	min3 ben3
 閩江	min2 jiang1
 閩江	min3 jiang1
 閩語	min2 yu3
@@ -116660,6 +116747,7 @@ min_phrase_weight: 100
 阿依莎	a1 yi1 sha1
 阿保	e1 bao3
 阿保	a1 bao3
+阿保	a4 bao3
 阿保之功	e1 bao3 zhi1 gong1
 阿保之勞	e1 bao3 zhi1 lao2
 阿修羅	a1 xiu1 luo2
@@ -118270,6 +118358,7 @@ min_phrase_weight: 100
 露鋒	lu4 feng1
 露鋒芒	lou4 feng1 mang2
 露陰癖	lu4 yin1 pi3
+露陰癖	lu4 yin1 pi4
 露電	lu4 dian4
 露面	lou4 mian4
 露面拋頭	lou4 mian4 pao1 tou2
@@ -121063,4 +121152,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 121066 #####
+##### @結束 END - 121155 #####

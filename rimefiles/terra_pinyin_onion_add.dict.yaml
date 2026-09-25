@@ -18,7 +18,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion_add
-version: "202607"
+version: "202609"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7
@@ -1454,6 +1454,7 @@ min_phrase_weight: 100
 嘔	(ou5)	1%
 呕	(ou5)	1%
 吪	(e5)	0%
+叱	(e5)	0%
 咹	(e5)	0%
 啐	(e5)	0%
 唵	(an5)	1%
