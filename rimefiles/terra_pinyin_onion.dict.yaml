@@ -201,6 +201,7 @@
 #    詞句中，「汶」臺灣標準為「wen4」，日常發音常會誤發為「wen2」，故皆補齊「wen4」「wen2」，後者詞頻設為80%。
 #    詞句中，「臍」臺灣標準為「qi2」，日常發音常會誤發為「ji2」或「ji3」，故皆補齊「qi2」「ji2」「ji3」，後兩者詞頻設為80%。
 #    詞句中，「諷」臺灣標準為「feng4」，又音為「feng1」，大陸和臺灣日常慣用語音為「feng3」，故皆補齊「feng4」「feng3」「feng1」。
+#    詞句中，「慨」臺灣標準為「kai3」，又音為「kai4」，除「慷慨」相關語意之「慨」只標註「kai3」，其餘補齊「kai3」「kai4」。
 #    詞句中，「偽」臺灣標準為「wei4」，大陸標準為「wei3」，日常易混，故皆補齊「wei4」「wei3」。
 #    詞句中，「菌」臺灣標準為「jun4」，大陸標準為「jun1」，日常易混，故皆補齊「jun4」「jun1」。
 #    詞句中，「藩」臺灣標準為「fan2」，大陸標準為「fan1」，日常易混，故皆補齊「fan2」「fan1」。
@@ -64099,7 +64100,9 @@ min_phrase_weight: 100
 凶相	xiong1 xiang4
 兇相	xiong1 xiang4
 凶相畢露	xiong1 xiang4 bi4 lu4
+凶相畢露	xiong1 xiang4 bi4 lou4
 兇相畢露	xiong1 xiang4 bi4 lu4
+兇相畢露	xiong1 xiang4 bi4 lou4
 # 凶神惡煞	xiong1 shen2 e4 sha4
 兇神惡煞	xiong1 shen2 e4 sha4
 先下手為強	xian1 xia4 shou3 wei2 qiang2
@@ -114509,6 +114512,7 @@ min_phrase_weight: 100
 醜地	chou3 di4
 醜惡	chou3 e4
 醜態畢露	chou3 tai4 bi4 lu4
+醜態畢露	chou3 tai4 bi4 lou4
 醜相	chou3 xiang4
 醜聲遠播	chou3 sheng1 yuan3 bo4
 醜聲遠播	chou3 sheng1 yuan3 bo1
@@ -121152,4 +121156,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 121155 #####
+##### @結束 END - 121159 #####
