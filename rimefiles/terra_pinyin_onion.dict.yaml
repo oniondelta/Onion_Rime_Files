@@ -135,6 +135,7 @@
 #    詞句中，「拙」臺灣字典發音和習慣發音為「zhuo2」，大陸發音為「zhuo1」，斟酌後全改成臺灣發音「zhuo2」。
 #    詞句中，「咄」臺灣字典發音和習慣發音為「duo4」，大陸發音為「duo1」，斟酌後全改成臺灣發音「duo4」。
 #    詞句中，「猓」臺灣字典發音和習慣發音為「guo3」，大陸發音為「guo1」，斟酌後全改成臺灣發音「guo3」。
+#    詞句中，「聒」臺灣字典發音和習慣發音為「gua1」，大陸發音為「guo1」，斟酌後全改成臺灣發音「gua1」。
 #    詞句中，「蓿」臺灣字典發音和習慣發音為「su4」，大陸發音為「xu4」或「xu5」，斟酌後全改成臺灣發音「su4」。
 #    詞句中，「鈷」語意為化學元素時，臺灣字典發音和習慣發音為「gu1」，大陸發音為「gu3」，斟酌後，除詞條「鈷鉧」之「鈷」只標註為「gu3」，全改成臺灣發音「gu1」。
 #    詞句中，「地」於句尾當結構助詞時，意思同「的」時，不標註「di4」，標註「de5」「di5」。
@@ -68662,7 +68663,6 @@ min_phrase_weight: 100
 叫字號	jiao4 zi4 hao4
 叫條子	jiao4 tiao2 zi5
 叫聒	jiao4 gua1
-叫聒	jiao4 guo1
 叫花子	jiao4 hua1 zi5
 叫花子上墳	jiao4 hua1 zi5 shang4 fen2
 叫花子沒有猢猻	jiao4 hua1 zi5 mei2 you3 hu2 sun1
@@ -70161,7 +70161,6 @@ min_phrase_weight: 100
 哏哏	hen1 hen1
 哏毒	hen1 du2
 哤聒	mang2 gua1
-哤聒	mang2 guo1
 哥們兒	ge1 men5 er5	80%
 哥們兒	ge1 men5 er2
 哥們兒	ge1 men2 er5	80%
@@ -70991,7 +70990,6 @@ min_phrase_weight: 100
 嘆息	tan4 xi2
 嘆為觀止	tan4 wei2 guan1 zhi3
 嘈聒	cao2 gua1
-嘈聒	cao2 guo1
 嘉南大圳	jia1 nan2 da4 zun4
 嘉應大學	jia1 ying1 da4 xue2
 嘉柏隆里	jia1 bo2 long2 li3
@@ -71189,7 +71187,6 @@ min_phrase_weight: 100
 器量	qi4 liang2
 器鼠難投	qi4 shu3 nan2 tou2
 噪聒	zao4 gua1
-噪聒	zao4 guo1
 噪音音樂	zao4 yin1 yin1 yue4
 噫吁戲	yi1 xu1 xi4
 噫吁戲	yi1 xu1 xi1
@@ -78760,7 +78757,6 @@ min_phrase_weight: 100
 強硬立場	qiang2 ying4 li4 chang3
 強硬立場	qiang2 ying4 li4 chang2	3%
 強聒不舍	qiang3 gua1 bu4 she3
-強聒不舍	qiang3 guo1 bu4 she3
 強虜	qiang2 lu3
 強行	qiang2 xing2
 強行	qiang3 xing2
@@ -79908,7 +79904,6 @@ min_phrase_weight: 100
 急相	ji2 xiang4
 急穰穰	ji2 rang3 rang3
 急聒	ji2 gua1
-急聒	ji2 guo1
 急脈緩受	ji2 mo4 huan3 shou4
 急脈緩受	ji2 mai4 huan3 shou4
 急行軍	ji2 xing2 jun1
@@ -80570,7 +80565,6 @@ min_phrase_weight: 100
 惡魔	e4 mo2
 惡黨	e4 dang3
 惱聒	nao3 gua1
-惱聒	nao3 guo1
 想不到	xiang3 bu2 dao4
 想不透	xiang3 bu2 tou4
 想不通	xiang3 bu4 tong1
@@ -94154,7 +94148,6 @@ min_phrase_weight: 100
 激活擴散網絡	ji1 huo2 kuo4 san4 wang3 luo4
 激活整合模型	ji1 huo2 zheng3 he2 mo2 xing2
 激聒	ji1 gua1
-激聒	ji1 guo1
 激靈	ji1 ling2
 濁度	zhuo2 du4
 濁臭熏天	zhuo2 chou4 xun1 tian1
@@ -94653,7 +94646,6 @@ min_phrase_weight: 100
 煎牛扒	jian1 niu2 ba1
 煎牛扒	jian1 niu2 pa2
 煎聒	jian1 gua1
-煎聒	jian1 guo1
 煎蛋卷	jian1 dan4 juan3
 煎豬扒	jian1 zhu1 ba1
 煎豬扒	jian1 zhu1 pa2
@@ -99574,7 +99566,6 @@ min_phrase_weight: 100
 碎片	sui4 pian4
 碎片整理	sui4 pian4 zheng3 li3
 碎聒	sui4 gua1
-碎聒	sui4 guo1
 碎首糜軀	sui4 shou3 mi2 qu1
 碑帖	bei1 tie4
 碑帖	bei1 tie3
@@ -102479,9 +102470,7 @@ min_phrase_weight: 100
 絮絮	xu4 xu4
 絮絮叨叨	xu4 xu4 dao1 dao1
 絮絮聒聒	xu4 xu4 gua1 gua1
-絮絮聒聒	xu4 xu4 guo1 guo1
 絮聒	xu4 gua1
-絮聒	xu4 guo1
 統一規劃	tong3 yi1 gui1 hua4
 統假設	tong3 jia3 she4
 統括	tong3 gua1
@@ -103995,29 +103984,17 @@ min_phrase_weight: 100
 聊復備數	liao2 fu4 bei4 shu4
 聊聊	liao2 liao2
 聐聐聒聒	ya4 ya4 gua1 gua1
-聐聐聒聒	ya4 ya4 guo1 guo1
 聐聒	ya4 gua1
-聐聒	ya4 guo1
 聒噪	gua1 zao4
-聒噪	guo1 zao4
 聒天	gua1 tian1
-聒天	guo1 tian1
 聒子	gua1 zi5
-聒子	guo1 zi5
 聒擾	gua1 rao3
-聒擾	guo1 rao3
 聒氣	gua1 qi4
-聒氣	guo1 qi4
 聒絮	gua1 xu4
-聒絮	guo1 xu4
 聒耳	gua1 er3
-聒耳	guo1 er3
 聒聒	gua1 gua1
-聒聒	guo1 guo1
 聒聒叫	gua1 gua1 jiao4
-聒聒叫	guo1 guo1 jiao4
 聒躁	gua1 zao4
-聒躁	guo1 zao4
 聖人也有三分錯	sheng4 ren2 ye3 you3 san1 fen1 cuo4
 聖哈辛托	sheng4 ha1 xin1 tuo1
 聖地	sheng4 di4
@@ -115588,7 +115565,6 @@ min_phrase_weight: 100
 鍋餅	guo1 bing3
 鍍錫鐵	du4 xi2 tie3
 鍠聒	huang2 gua1
-鍠聒	huang2 guo1
 鍥而不舍	qie4 er2 bu4 she3
 鍥薄	qie4 bo2
 鍥薄	qie4 bao2
@@ -116500,7 +116476,6 @@ min_phrase_weight: 100
 閒空	xian2 kong4
 閒空	xian2 kong1
 閒聒七	xian2 gua1 qi1
-閒聒七	xian2 guo1 qi1
 閒行	jian4 xing2
 閒覷	jian4 qu4
 閒言	jian4 yan2
@@ -121224,4 +121199,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 121227 #####
+##### @結束 END - 121202 #####
