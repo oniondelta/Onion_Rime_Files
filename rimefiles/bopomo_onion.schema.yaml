@@ -187,9 +187,10 @@ translator:
     - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 6347|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˉˊˇˋ˙|"
     - 'xform/\\/ /' #全形空格　 #半形空格  #| #⁞ #⁝ #⋮ #¦ #┆
   # #### grammar 組句校正 ####
-  # contextual_suggestions: true  #是否使用語言模型優化輸出結果〔需配合grammar使用〕
-  # max_homophones: 7  #最大同音簇長度〔需配合grammar使用〕
-  # max_homographs: 7  #最大同形簇長度〔需配合grammar使用〕
+  # ## 以下三項不用開啟，開啟末尾「grammar:/hant?」即可匯入，除非要修改grammar設定。
+  # # contextual_suggestions: true  #是否使用語言模型優化輸出結果〔需配合grammar使用〕
+  # # max_homophones: 7  #最大同音簇長度〔需配合grammar使用〕
+  # # max_homographs: 7  #最大同形簇長度〔需配合grammar使用〕
   # max_sentences: 5 #10  #支持多句子候選輸出〔需配合grammar最大同音簇長度max_homophones大於1使用〕
 ############################## 以下為短語 ##########################################
 # custom_phrase:
@@ -559,6 +560,11 @@ recognizer:
 #   db: predict_office.db  #predict.db  #文件名，predict db file in user directory/shared directory
 #   max_candidates: 0  #5  #每次預測的最大候選項數量，0表示全部候選項
 #   max_iterations: 0  #1  #最大預測次數，0表示不限制
+
+# ## 以下不用開啟，開啟末尾「grammar:/hant?」即可匯入，除非要修改grammar設定。
+# grammar:
+#   # language: zh-hans-t-essay-bgw
+#   language: zh-hant-t-essay-bgw
 
 # __patch:
 #   # 使用八股文語言模型

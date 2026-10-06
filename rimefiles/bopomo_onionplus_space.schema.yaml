@@ -300,9 +300,10 @@ translator:
     - 'xform/␣⁞␣/␣␣/'
     - 'xform/␣⁞␣/␣␣/'
   # #### grammar 組句校正 ####
-  # contextual_suggestions: true  #是否使用語言模型優化輸出結果〔需配合grammar使用〕
-  # max_homophones: 7  #最大同音簇長度〔需配合grammar使用〕
-  # max_homographs: 7  #最大同形簇長度〔需配合grammar使用〕
+  # ## 以下三項不用開啟，開啟末尾「grammar:/hant?」即可匯入，除非要修改grammar設定。
+  # # contextual_suggestions: true  #是否使用語言模型優化輸出結果〔需配合grammar使用〕
+  # # max_homophones: 7  #最大同音簇長度〔需配合grammar使用〕
+  # # max_homographs: 7  #最大同形簇長度〔需配合grammar使用〕
   # max_sentences: 5 #10  #支持多句子候選輸出〔需配合grammar最大同音簇長度max_homophones大於1使用〕
 ############################## 短語 #########################################
 # custom_phrase:
@@ -688,6 +689,11 @@ recognizer:
 recognizer2:
   patterns:
     __include: element_bopomo:/r2_patterns_plus_space
+
+# ## 以下不用開啟，開啟末尾「grammar:/hant?」即可匯入，除非要修改grammar設定。
+# grammar:
+#   # language: zh-hans-t-essay-bgw
+#   language: zh-hant-t-essay-bgw
 
 # __patch:
 #   # 使用八股文語言模型

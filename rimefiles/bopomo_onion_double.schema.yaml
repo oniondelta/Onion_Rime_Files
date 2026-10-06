@@ -338,9 +338,10 @@ translator:
     - 'xform/://'
 ########################################################
   # #### grammar 組句校正 ####
-  # contextual_suggestions: true  #是否使用語言模型優化輸出結果〔需配合grammar使用〕
-  # max_homophones: 7  #最大同音簇長度〔需配合grammar使用〕
-  # max_homographs: 7  #最大同形簇長度〔需配合grammar使用〕
+  # ## 以下三項不用開啟，開啟末尾「grammar:/hant?」即可匯入，除非要修改grammar設定。
+  # # contextual_suggestions: true  #是否使用語言模型優化輸出結果〔需配合grammar使用〕
+  # # max_homophones: 7  #最大同音簇長度〔需配合grammar使用〕
+  # # max_homographs: 7  #最大同形簇長度〔需配合grammar使用〕
   # max_sentences: 5 #10  #支持多句子候選輸出〔需配合grammar最大同音簇長度max_homophones大於1使用〕
 ############################## 以下為系列符號 ##########################################
 emoji_series:
@@ -459,6 +460,11 @@ recognizer2:
     ### 以下兩則承上再修正「`[a-z]+」接「 ; 」和「 ;; 」問題！#
     # emoji_series: "(?:(?<![a-z;])|(?<=[a-z;];)|(?<=`[a-z])|(?<=`[a-z]{2})|(?<=`[a-z]{3})|(?<=`[a-z]{4}));(?:[a-z]*|[-0-9]|[0-9]-[0-9]?|;[-0-9a-z]|;?[a-z][;/])$"
     # emoji_series: ";(?:[a-z]*|[a-z][;/]|[-0-9]|[0-9]-[0-9]?)$|(?:(?<![a-z;])|(?<=[a-z;];)|(?<=`[a-z])|(?<=`[a-z]{2})|(?<=`[a-z]{3})|(?<=`[a-z]{4}));;(?:[-0-9a-z]|[a-z][;/])$"
+
+# ## 以下不用開啟，開啟末尾「grammar:/hant?」即可匯入，除非要修改grammar設定。
+# grammar:
+#   # language: zh-hans-t-essay-bgw
+#   language: zh-hant-t-essay-bgw
 
 # __patch:
 #   # 使用八股文語言模型
