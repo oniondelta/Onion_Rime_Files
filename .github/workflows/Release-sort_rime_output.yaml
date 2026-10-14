@@ -27,7 +27,7 @@ jobs:
           # 執行您的 Python 腳本
           python sort_rime_file.py
           BASEDIR=`pwd`
-          FOLDER=`find ${BASEDIR} -name "電腦RIME*" -type d`
+          FOLDER=`find ${BASEDIR} -name "洋蔥電腦RIME*" -type d`
           OUTPUT="${BASEDIR}/output"
           mkdir -p $OUTPUT
 
@@ -53,32 +53,32 @@ jobs:
           remove_dir "洋蔥行列*"
 
           # （解壓縮後資料夾名稱為：Onion_Rime_Files）
-          # 將調整後的整個「電腦RIME*」資料夾壓縮成 Onion_Rime_Files.zip 並放到 output 目錄
+          # 將調整後的整個「洋蔥電腦RIME*」資料夾壓縮成 Onion_Rime_Files.zip 並放到 output 目錄
           # cd $FOLDER
           # zip -qq -r ${OUTPUT}/Onion_Rime_Files.zip ./
           # zip -qq -r ${OUTPUT}/Onion_Rime_Files_${RELEASE_DATE}.zip ./
 
           # （解壓縮後資料夾名稱為：Onion_Rime_Files）
           # 使用前面 create_zip1 函數壓縮
-          # create_zip1 "電腦RIME*" "Onion_Rime_Files_${RELEASE_DATE}.zip"
+          # create_zip1 "洋蔥電腦RIME*" "Onion_Rime_Files_${RELEASE_DATE}.zip"
 
-          # （解壓縮後資料夾名稱為：電腦RIME*）
-          # 進入該資料夾，並立刻退回它的上一層
-          cd $FOLDER && cd ..
-          # 直接指定打包「電腦RIME*」這個資料夾
-          zip -qq -r ${OUTPUT}/Onion_Rime_Files_${RELEASE_DATE}.zip 電腦RIME*
-
-          # （解壓縮後資料夾名稱為：電腦RIME*）
-          # 取得純資料夾名稱（例如："電腦RIME*"）
-          # FOLDER_NAME=$(basename "$FOLDER")
-          # 切換到該資料夾的上一層目錄
-          # cd "$(dirname "$FOLDER")"
-          # 打包該資料夾（加上雙引號，防止名稱中有空白字元導致報錯）
-          # zip -qq -r "${OUTPUT}/Onion_Rime_Files_${RELEASE_DATE}.zip" "${FOLDER_NAME}"
-
-          # （解壓縮後資料夾名稱為：電腦RIME*）
+          # （解壓縮後資料夾名稱為：洋蔥電腦RIME*）
           # 使用前面 create_zip2 函數壓縮
-          # create_zip2 "電腦RIME*" "Onion_Rime_Files_${RELEASE_DATE}.zip"
+          # create_zip2 "洋蔥電腦RIME*" "Onion_Rime_Files_${RELEASE_DATE}.zip"
+
+          # （解壓縮後資料夾名稱為：洋蔥電腦RIME*）
+          # 進入該資料夾，並立刻退回它的上一層
+          # cd $FOLDER && cd ..
+          # 直接指定打包「洋蔥電腦RIME*」這個資料夾
+          # zip -qq -r ${OUTPUT}/Onion_Rime_Files_${RELEASE_DATE}.zip 洋蔥電腦RIME*
+
+          # （解壓縮後資料夾名稱為：洋蔥電腦RIME*）
+          # 取得純資料夾名稱（例如："洋蔥電腦RIME*"）
+          FOLDER_NAME=$(basename "$FOLDER")
+          # 切換到該資料夾的上一層目錄
+          cd "$(dirname "$FOLDER")"
+          # 打包該資料夾（加上雙引號，防止名稱中有空白字元導致報錯）
+          zip -qq -r "${OUTPUT}/Onion_Rime_Files_${RELEASE_DATE}.zip" "${FOLDER_NAME}"
 
       # 新增步驟：自動建立 GitHub Release 並上傳 zip 檔案
       - name: Create GitHub Release

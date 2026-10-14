@@ -17,7 +17,7 @@ rime_files_7=rime_ocm_folder+"/ocm_plus"
 rime_files_8=rime_ocm_folder+"/ocm_mixin"
 rime_files_9="洋蔥行列30"
 rime_files_10="洋蔥行列10"
-the_name="電腦RIME方案"
+the_name="洋蔥電腦RIME方案"
 
 
 #※新增資料夾(多層目錄, 如前一層data資料夾不存在, 將自動新增)※

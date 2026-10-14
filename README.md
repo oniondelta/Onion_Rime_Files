@@ -35,7 +35,7 @@
 
 - Download ZIP，使用 sort_rime_file.py 分類各方案。
 
-  > 本倉庫 Onion_Rime_Files 按右上綠色 〔↓Code〕 ⇨ Download ZIP ⇨ 解壓縮 ZIP 進入資料夾 ⇨ Python 執行 sort_rime_file.py ⇨ 產生『電腦RIME方案_{當天日期}』資料夾
+  > 本倉庫 Onion_Rime_Files 按右上綠色 〔↓Code〕 ⇨ Download ZIP ⇨ 解壓縮 ZIP 進入資料夾 ⇨ Python 執行 sort_rime_file.py ⇨ 產生『洋蔥電腦RIME方案_{當天日期}』資料夾
 
 - 本倉庫 Releases 中，有分好方案之 ZIP 檔。
 
@@ -47,7 +47,7 @@
 
 ## 安裝方案
 
-- 開啟『電腦RIME方案_{日期}』資料夾，各個方案所需文件，已放置於『方案名稱』資料夾。
+- 開啟『洋蔥電腦RIME方案_{日期}』資料夾，各個方案所需文件，已放置於『方案名稱』資料夾。
 
 - 選取欲使用方案，內含文件通通放入『Rime』用戶設定資料夾，如已有『opencc』資料夾，勿整個覆蓋，移動『opencc』裡面文件過去，無則整個『opencc』移過去。
 

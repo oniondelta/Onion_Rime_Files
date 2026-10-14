@@ -20,7 +20,7 @@ jobs:
       - run: |
           python sort_rime_file_by_bpin1.py
           BASEDIR=`pwd`
-          FOLDER=`find ${BASEDIR} -name "電腦RIME*" -type d`
+          FOLDER=`find ${BASEDIR} -name "洋蔥電腦RIME*" -type d`
           OUTPUT="${BASEDIR}/output"
           mkdir -p $OUTPUT
 
@@ -46,10 +46,10 @@ jobs:
               rm -r $SOURCE
           }
 
-          # create_zip "電腦RIME*" "電腦RIME.zip"
-          # copy "電腦RIME*" "注音洋蔥純注音版*"
+          # create_zip "洋蔥電腦RIME*" "洋蔥電腦RIME.zip"
+          # copy "洋蔥電腦RIME*" "注音洋蔥純注音版*"
           # remove_dir "ocm_20*"
-          copy_dir "電腦RIME*"
+          copy_dir "洋蔥電腦RIME*"
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
