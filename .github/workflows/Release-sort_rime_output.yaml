@@ -21,7 +21,7 @@ jobs:
       - name: 執行 Python 與檔案處理
         run: |
           # 取得台北時間（+8）的當天日期
-          RELEASE_DATE=$(TZ="Asia/Taipei" date +"%Y/%m/%d")
+          RELEASE_DATE=$(TZ="Asia/Taipei" date +"%Y%m%d")
           echo "TODAY_DATE=${RELEASE_DATE}" >> $GITHUB_ENV
 
           # 執行您的 Python 腳本
