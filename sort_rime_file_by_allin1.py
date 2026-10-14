@@ -6,7 +6,7 @@ import time
 
 #名稱(取出來較好變換)
 sort_rime="sort_rime_allx9"
-rime_files="rime＜allin1＞"
+rime_files="onion_rime＜allin1＞"
 the_name="洋蔥電腦RIME方案＜allin1＞"
 
 
