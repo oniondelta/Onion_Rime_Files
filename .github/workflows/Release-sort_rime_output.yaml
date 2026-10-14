@@ -20,6 +20,11 @@ jobs:
 
       - name: 執行 Python 與檔案處理
         run: |
+          # 取得台北時間（+8）的當天日期
+          RELEASE_DATE=\$(TZ="Asia/Taipei" date +"%Y/%m/%d")
+          echo "TODAY_DATE=\({RELEASE_DATE}" >> \)GITHUB_ENV
+
+          # 執行您的 Python 腳本
           python sort_rime_file.py
           BASEDIR=`pwd`
           FOLDER=`find ${BASEDIR} -name "電腦RIME*" -type d`
@@ -35,16 +40,52 @@ jobs:
           remove_dir "ocm_20*"
           remove_dir "洋蔥行列*"
 
-          # 將調整後的整個「電腦RIME...」資料夾壓縮成 rime_output.zip 並放到 output 目錄
+          # 將調整後的整個「電腦RIME...」資料夾壓縮成 Onion_Rime_Files.zip 並放到 output 目錄
           cd $FOLDER
-          zip -qq -r ${OUTPUT}/rime_output.zip ./
+          # zip -qq -r ${OUTPUT}/Onion_Rime_Files.zip ./
+          zip -qq -r ${OUTPUT}/Onion_Rime_Files_${RELEASE_DATE}.zip ./
 
       # 新增步驟：自動建立 GitHub Release 並上傳 zip 檔案
       - name: Create GitHub Release
         uses: ncipollo/release-action@v1
         with:
           artifacts: "output/rime_output.zip"
-          tag: v${{ github.run_number }} # 使用執行編號當作 Tag，例如 v1, v2
-          name: "Rime Output Release ${{ github.run_number }}"
-          body: "這是自動生成的 Rime 字典排序優化版本。"
+          tag: "release_test_${{ env.TODAY_DATE }}"  # 調用上方日期變數，tag 會變成：release_{當天日期}
+          name: "洋蔥電腦方案_test_${{ env.TODAY_DATE }}"  # 調用上方日期變數，name 會變成：洋蔥電腦方案_{當天日期}
+          body: |
+            ## 注意
+
+            - Mac 需使用 [squirrel 1.0.3](https://github.com/rime/squirrel/releases) 以上版本。
+
+            - Win 需使用 [weasel 0.16.3 之後的 Nightly Build](https://github.com/rime/weasel/releases/tag/latest) 或超過 weasel 0.16.3 之正式版。
+
+            - 使用舊版需置換 [Oct 14, 2024 之後的 librime 核心](https://github.com/rime/librime/releases) 才能全功能運作！
+
+            - Win 建議使用 [weasel 0.17.4](https://github.com/rime/weasel/releases/tag/0.17.4) 版本。測試 [weasel 0.17.3](https://github.com/rime/weasel/releases) 正式版和 Nightly Build，遇過方案部屬失敗無法使用之問題！
+
+            ## 方案
+
+            - 含〈純注音〉〈注音plus〉〈注音mixin〉〈雙拼注音〉〈拼音mixin〉。
+
+            ## 使用方法
+
+            - Onion_Rime_Files 之 zip 檔內，各個方案所需文件，分別放置於其內『方案名稱』資料夾。
+
+            - 選取欲使用方案，內含文件通通放入『Rime』用戶設定資料夾，如已有『opencc』資料夾，勿整個覆蓋，移動『opencc』裡面文件過去，無則整個『opencc』移過去。最後按「重新部署」完成！
+
+              > ※ 別放錯資料夾，反饋有人放錯放到程式預設方案資料夾！有些方案會因 lua 無法執行產生 Bug。
+              > 
+              > 『Rime』用戶設定資料夾路徑：
+              > 
+              > ```
+              > %APPDATA%\Rime  ( Windows 小狼毫 )
+              > ~/Library/Rime  ( Mac OS 鼠鬚管 )
+              > ~/.config/ibus/rime  ( Linux 中州韻 )
+              > ~/.config/fcitx/rime  ( Linux )
+              > ~/.local/share/fcitx5/rime  ( Linux )
+              > ```
+
+            - 欲同時使用多個主方案：其方案檔案皆須放入，除 `『opencc』` 該資料夾不能整個覆蓋，其餘同檔名覆蓋。把多個方案內含之 `default.custom.yaml` 該檔，其 `schema_list:` 底下所有 `- schema:` 項目，合併（去重，可把常使用的主方案順序置前）。以上修改成一個 `default.custom.yaml` 並置入『Rime』用戶設定資料夾，「重新部署」。
+
+            - 除 `default.custom.yaml` 、 `weasel.custom.yaml` 、 `○○○.custom.yaml` 等 custom 系列，還有 `『opencc』資料夾`、`README.md`，『Onion_Rime_Files』內同名稱檔案，內容為相同。
           token: ${{ secrets.GITHUB_TOKEN }}
