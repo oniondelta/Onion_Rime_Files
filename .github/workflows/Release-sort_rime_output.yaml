@@ -49,9 +49,11 @@ jobs:
       - name: Create GitHub Release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "output/rime_output.zip"
+          # artifacts: "output/Onion_Rime_Files.zip"
+          artifacts: "output/Onion_Rime_Files_${{ env.TODAY_DATE }}.zip"
           tag: "release_test_${{ env.TODAY_DATE }}"  # 調用上方日期變數，tag 會變成：release_{當天日期}
           name: "洋蔥電腦方案_test_${{ env.TODAY_DATE }}"  # 調用上方日期變數，name 會變成：洋蔥電腦方案_{當天日期}
+          token: ${{ secrets.GITHUB_TOKEN }}
           body: |
             ## 注意
 
@@ -88,4 +90,3 @@ jobs:
             - 欲同時使用多個主方案：其方案檔案皆須放入，除 `『opencc』` 該資料夾不能整個覆蓋，其餘同檔名覆蓋。把多個方案內含之 `default.custom.yaml` 該檔，其 `schema_list:` 底下所有 `- schema:` 項目，合併（去重，可把常使用的主方案順序置前）。以上修改成一個 `default.custom.yaml` 並置入『Rime』用戶設定資料夾，「重新部署」。
 
             - 除 `default.custom.yaml` 、 `weasel.custom.yaml` 、 `○○○.custom.yaml` 等 custom 系列，還有 `『opencc』資料夾`、`README.md`，『Onion_Rime_Files』內同名稱檔案，內容為相同。
-          token: ${{ secrets.GITHUB_TOKEN }}
