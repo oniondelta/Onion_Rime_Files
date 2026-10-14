@@ -40,7 +40,7 @@ jobs:
           # function create_zip2() {
           #     SOURCE=`find ${FOLDER} -name "$1" -type d`
           #     cd $SOURCE && cd ..
-          #     zip -qq -r "${OUTPUT}/$2" "$1"
+          #     zip -qq -r ${OUTPUT}/$2 $1
           # }
 
           function remove_dir() {
@@ -66,7 +66,7 @@ jobs:
           # 進入該資料夾，並立刻退回它的上一層
           cd $FOLDER && cd ..
           # 直接指定打包「電腦RIME*」這個資料夾
-          zip -qq -r "${OUTPUT}/Onion_Rime_Files_${RELEASE_DATE}.zip" "電腦RIME*"
+          zip -qq -r ${OUTPUT}/Onion_Rime_Files_${RELEASE_DATE}.zip 電腦RIME*
 
           # （解壓縮後資料夾名稱為：電腦RIME*）
           # 取得純資料夾名稱（例如："電腦RIME*"）
