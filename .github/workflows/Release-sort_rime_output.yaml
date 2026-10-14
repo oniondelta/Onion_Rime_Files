@@ -1,0 +1,50 @@
+name: Release-sort_rime_output
+
+on:
+  workflow_dispatch: # 手動觸發
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # 確保有權限建立 Release
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          ref: 'main'
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10' 
+
+      - name: 執行 Python 與檔案處理
+        run: |
+          python sort_rime_file.py
+          BASEDIR=`pwd`
+          FOLDER=`find ${BASEDIR} -name "電腦RIME*" -type d`
+          OUTPUT="\${BASEDIR}/output"
+          mkdir -p \$OUTPUT
+
+          function remove_dir() {
+              SOURCE=`find ${FOLDER} -name "$1" -type d`
+              rm -r \$SOURCE
+          }
+
+          # 刪除不需要的資料夾
+          remove_dir "ocm_20*"
+          remove_dir "洋蔥行列*"
+
+          # 將調整後的整個「電腦RIME...」資料夾壓縮成 rime_output.zip 並放到 output 目錄
+          cd \$FOLDER
+          zip -qq -r \${OUTPUT}/rime_output.zip ./
+
+      # 新增步驟：自動建立 GitHub Release 並上傳 zip 檔案
+      - name: Create GitHub Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "output/rime_output.zip"
+          tag: v${{ github.run_number }} # 使用執行編號當作 Tag，例如 v1, v2
+          name: "Rime Output Release ${{ github.run_number }}"
+          body: "這是自動生成的 Rime 字典排序優化版本。"
+          token: ${{ secrets.GITHUB_TOKEN }}
