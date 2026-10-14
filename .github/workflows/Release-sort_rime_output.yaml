@@ -31,6 +31,12 @@ jobs:
           OUTPUT="${BASEDIR}/output"
           mkdir -p $OUTPUT
 
+          function create_zip() {
+              SOURCE=`find ${FOLDER} -name "$1" -type d`
+              cd $SOURCE
+              zip -qq -r ${OUTPUT}/$2 ./
+          }
+
           function remove_dir() {
               SOURCE=`find ${FOLDER} -name "$1" -type d`
               rm -r $SOURCE
@@ -40,17 +46,24 @@ jobs:
           remove_dir "ocm_20*"
           remove_dir "洋蔥行列*"
 
-          # 將調整後的整個「電腦RIME...」資料夾壓縮成 Onion_Rime_Files.zip 並放到 output 目錄
+          # 將調整後的整個「電腦RIME*」資料夾壓縮成 Onion_Rime_Files.zip 並放到 output 目錄（解壓縮後資料夾名稱變為：Onion_Rime_Files）
           # cd $FOLDER
           # zip -qq -r ${OUTPUT}/Onion_Rime_Files.zip ./
           # zip -qq -r ${OUTPUT}/Onion_Rime_Files_${RELEASE_DATE}.zip ./
 
-          # cd $FOLDER && cd ..
-          # zip -qq -r ${OUTPUT}/Onion_Rime_Files_${RELEASE_DATE}.zip 電腦RIME*
+          # 進入該資料夾，並立刻退回它的上一層
+          cd $FOLDER && cd ..
+          # 直接指定打包「電腦RIME*」這個資料夾
+          zip -qq -r ${OUTPUT}/Onion_Rime_Files_${RELEASE_DATE}.zip 電腦RIME*
 
-          FOLDER_NAME=$(basename "$FOLDER") # 取得純資料夾名稱（例如："電腦RIME*"）
-          cd "$(dirname "$FOLDER")" # 切換到該資料夾的上一層目錄
-          zip -qq -r "${OUTPUT}/Onion_Rime_Files_${RELEASE_DATE}.zip" "${FOLDER_NAME}" # 打包該資料夾（加上雙引號，防止名稱中有空白字元導致報錯）
+          # 取得純資料夾名稱（例如："電腦RIME*"）
+          # FOLDER_NAME=$(basename "$FOLDER")
+          # 切換到該資料夾的上一層目錄
+          # cd "$(dirname "$FOLDER")"
+          # 打包該資料夾（加上雙引號，防止名稱中有空白字元導致報錯）
+          # zip -qq -r "${OUTPUT}/Onion_Rime_Files_${RELEASE_DATE}.zip" "${FOLDER_NAME}"
+
+          # create_zip "電腦RIME*" "Onion_Rime_Files_${RELEASE_DATE}.zip"
 
       # 新增步驟：自動建立 GitHub Release 並上傳 zip 檔案
       - name: Create GitHub Release
@@ -58,8 +71,10 @@ jobs:
         with:
           # artifacts: "output/Onion_Rime_Files.zip"
           artifacts: "output/Onion_Rime_Files_${{ env.TODAY_DATE }}.zip"
-          tag: "release_test_${{ env.TODAY_DATE }}" # 調用上方日期變數，tag：release_{當天日期}
-          name: "洋蔥電腦方案_test_${{ env.TODAY_DATE }}" # 調用上方日期變數，name：洋蔥電腦方案_{當天日期}
+          # 調用上方日期變數，tag：release_{當天日期}
+          tag: "release_${{ env.TODAY_DATE }}"
+          # 調用上方日期變數，name：洋蔥電腦方案_{當天日期}
+          name: "洋蔥電腦方案_${{ env.TODAY_DATE }}"
           token: ${{ secrets.GITHUB_TOKEN }}
           body: |
             ## 注意
