@@ -1,4 +1,4 @@
-# 電腦 Rime 洋蔥方案（注音、雙拼、拼音）
+# 洋蔥電腦 Rime 方案（注音、雙拼、拼音）
 
 ####  ※ 請勿使用於商業營利相關行為
 ####  ※ Commercial use is prohibited
