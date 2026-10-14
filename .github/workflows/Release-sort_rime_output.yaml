@@ -41,9 +41,12 @@ jobs:
           remove_dir "洋蔥行列*"
 
           # 將調整後的整個「電腦RIME...」資料夾壓縮成 Onion_Rime_Files.zip 並放到 output 目錄
-          cd $FOLDER
+          # cd $FOLDER
           # zip -qq -r ${OUTPUT}/Onion_Rime_Files.zip ./
-          zip -qq -r ${OUTPUT}/Onion_Rime_Files_${RELEASE_DATE}.zip ./
+          # zip -qq -r ${OUTPUT}/Onion_Rime_Files_${RELEASE_DATE}.zip ./
+          FOLDER_NAME=(basename "FOLDER")
+          cd "$FOLDER" && cd ..
+          zip -qq -r "${OUTPUT}/Onion_Rime_Files_${RELEASE_DATE}.zip" "./${FOLDER_NAME}"
 
       # 新增步驟：自動建立 GitHub Release 並上傳 zip 檔案
       - name: Create GitHub Release
@@ -51,8 +54,8 @@ jobs:
         with:
           # artifacts: "output/Onion_Rime_Files.zip"
           artifacts: "output/Onion_Rime_Files_${{ env.TODAY_DATE }}.zip"
-          tag: "release_test_${{ env.TODAY_DATE }}"  # 調用上方日期變數，tag 會變成：release_{當天日期}
-          name: "洋蔥電腦方案_test_${{ env.TODAY_DATE }}"  # 調用上方日期變數，name 會變成：洋蔥電腦方案_{當天日期}
+          tag: "release_test_${{ env.TODAY_DATE }}" # 調用上方日期變數，tag：release_{當天日期}
+          name: "洋蔥電腦方案_test_${{ env.TODAY_DATE }}" # 調用上方日期變數，name：洋蔥電腦方案_{當天日期}
           token: ${{ secrets.GITHUB_TOKEN }}
           body: |
             ## 注意
