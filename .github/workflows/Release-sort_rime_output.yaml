@@ -45,7 +45,10 @@ jobs:
           # zip -qq -r ${OUTPUT}/Onion_Rime_Files.zip ./
           # zip -qq -r ${OUTPUT}/Onion_Rime_Files_${RELEASE_DATE}.zip ./
 
-          FOLDER_NAME=$(basename "FOLDER") # 取得純資料夾名稱（例如："電腦RIME*"）
+          # cd $FOLDER && cd ..
+          # zip -qq -r ${OUTPUT}/Onion_Rime_Files_${RELEASE_DATE}.zip 電腦RIME*
+
+          FOLDER_NAME=$(basename "$FOLDER") # 取得純資料夾名稱（例如："電腦RIME*"）
           cd "$(dirname "$FOLDER")" # 切換到該資料夾的上一層目錄
           zip -qq -r "${OUTPUT}/Onion_Rime_Files_${RELEASE_DATE}.zip" "${FOLDER_NAME}" # 打包該資料夾（加上雙引號，防止名稱中有空白字元導致報錯）
 
