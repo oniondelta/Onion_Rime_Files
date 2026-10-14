@@ -23,12 +23,12 @@ jobs:
           python sort_rime_file.py
           BASEDIR=`pwd`
           FOLDER=`find ${BASEDIR} -name "電腦RIME*" -type d`
-          OUTPUT="\${BASEDIR}/output"
-          mkdir -p \$OUTPUT
+          OUTPUT="${BASEDIR}/output"
+          mkdir -p $OUTPUT
 
           function remove_dir() {
               SOURCE=`find ${FOLDER} -name "$1" -type d`
-              rm -r \$SOURCE
+              rm -r $SOURCE
           }
 
           # 刪除不需要的資料夾
@@ -36,8 +36,8 @@ jobs:
           remove_dir "洋蔥行列*"
 
           # 將調整後的整個「電腦RIME...」資料夾壓縮成 rime_output.zip 並放到 output 目錄
-          cd \$FOLDER
-          zip -qq -r \${OUTPUT}/rime_output.zip ./
+          cd $FOLDER
+          zip -qq -r ${OUTPUT}/rime_output.zip ./
 
       # 新增步驟：自動建立 GitHub Release 並上傳 zip 檔案
       - name: Create GitHub Release
