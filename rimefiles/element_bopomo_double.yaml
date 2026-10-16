@@ -156,27 +156,27 @@ key_binder_s1:
     - {accept: Control+Shift+6, toggle: only_cjk_filter, when: always}
     - {accept: Control+Shift+7, toggle: emoji_segestion, when: always}
     - {accept: Control+Shift+8, toggle: unicode_comment, when: always}
-    # - {accept: Control+Shift+9, toggle: return_mode, when: always}
+#刪#    - {accept: Control+Shift+9, toggle: return_mode, when: always}
 ## 上排切換(Win)
     - {accept: Control+Shift+asciicircum, toggle: only_cjk_filter, when: always}
     - {accept: Control+Shift+ampersand, toggle: emoji_segestion, when: always}
     - {accept: Control+Shift+asterisk, toggle: unicode_comment, when: always}
-    # - {accept: Control+Shift+parenleft, toggle: return_mode, when: always}
+#刪#    - {accept: Control+Shift+parenleft, toggle: return_mode, when: always}
 ## 切換樣態
     - {accept: Control+apostrophe, unset_option: only_cjk_filter, when: always}
     - {accept: Control+bracketleft, unset_option: emoji_segestion, when: always}
 #win易快捷鍵衝突，mac可打開#    - {accept: Control+minus, set_option: unicode_comment, when: always}
-#win易快捷鍵衝突，mac可打開#    - {accept: Control+equal, set_option: return_mode, when: always}
+#刪#    - {accept: Control+equal, set_option: return_mode, when: always}
 ## 初始樣態(Mac)
     - {accept: Control+Shift+apostrophe, set_option: only_cjk_filter, when: always}
     - {accept: Control+Shift+bracketleft, set_option: emoji_segestion, when: always}
 #win易快捷鍵衝突，mac可打開#    - {accept: Control+Shift+minus, unset_option: unicode_comment, when: always}
-#win易快捷鍵衝突，mac可打開#    - {accept: Control+Shift+equal, unset_option: return_mode, when: always}
+#刪#    - {accept: Control+Shift+equal, unset_option: return_mode, when: always}
 ## 初始樣態(Win)
     - {accept: Control+Shift+quotedbl, set_option: only_cjk_filter, when: always}
     - {accept: Control+Shift+braceleft, set_option: emoji_segestion, when: always}
 #win易快捷鍵衝突，mac可打開#    - {accept: Control+Shift+underscore, unset_option: unicode_comment, when: always}
-#win易快捷鍵衝突，mac可打開#    - {accept: Control+Shift+plus, unset_option: return_mode, when: always}
+#刪#    - {accept: Control+Shift+plus, unset_option: return_mode, when: always}
 ### Return/Enter鍵上屏(取代 editor/bindings 使可空碼清屏) ###
     # - {accept: Return, send: Escape, when: composing} #空碼清屏用
     - {accept: Return, send_sequence: "{Escape}{space}", when: composing} #空碼清屏用（測試，如：輸入heart，前面碼有候選項，後面碼無候選項，還是可上屏前面）
