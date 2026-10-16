@@ -164,7 +164,14 @@
 ## Keys
  
 - [注音（洋蔥 雙拼 版）鍵位](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E6%B3%A8%E9%9F%B3-%E6%B4%8B%E8%94%A5-%E9%9B%99%E6%8B%BC-%E7%89%88-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E#%E9%8D%B5%E4%BD%8D%E5%9C%96%E7%A4%BA)
-  > 一般版可簡拼；T2 版（Type2）為一般雙拼每字須鍵兩碼（不能簡拼，但聲調可省略）
+
+  > 一般版可簡拼
+
+  > T2 版（Type2）為一般雙拼每字須鍵兩碼（不能簡拼，但聲調可省略）
+
+  > S1 版（Space1）為「空白鍵」輸入聲調「一聲」、「 ; 」輸入聲調「四聲」
+
+  > S1 T2 版為上方兩者變動合併
 
   #### <img src="https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/rimefiles/%E9%9B%99%E6%8B%BC%E6%B3%A8%E9%9F%B3%E9%8D%B5%E4%BD%8D%E8%AA%AA%E6%98%8E%E5%9C%96%E7%A4%BA/%E6%B3%A8%E9%9F%B3%E6%B4%8B%E8%94%A5%E9%9B%99%E6%8B%BC%E8%AA%AA%E6%98%8E.png" width = "595" alt="image" /><br>
 
