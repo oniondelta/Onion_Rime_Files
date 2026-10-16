@@ -1,6 +1,8 @@
 # Rime schema settings
 # encoding: utf-8
 # 《洋蔥 雙拼注音 T2 設定頁》
+#
+# T2為：Type 2，每個中文字須按 2 鍵，除「聲調」和「ㄧㄨㄩ」可簡化，其他不簡化。
 
 __include: bopomo_onion_double.schema:/
 

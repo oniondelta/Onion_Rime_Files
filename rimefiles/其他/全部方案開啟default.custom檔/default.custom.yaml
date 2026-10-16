@@ -15,6 +15,8 @@ patch:
     - schema: bopomo_onionplus_space
     - schema: bopomo_onion_double
     - schema: bopomo_onion_double_t2
+    - schema: bopomo_onion_double_s1
+    - schema: bopomo_onion_double_s1_t2
     - schema: bopomo_onion
     - schema: terra_pinyin_onion
     # - schema: onion-array30

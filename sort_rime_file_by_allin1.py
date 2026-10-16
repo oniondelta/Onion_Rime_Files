@@ -149,6 +149,8 @@ shutil.copytree("./rimefiles/custom檔_注音mixin版兩行同顯/", "./"+sort_r
 shutil.copyfile("./rimefiles/bopomo_onion_double.extended.dict.yaml", "./"+sort_rime+"/"+rime_files+"/bopomo_onion_double.extended.dict.yaml")
 shutil.copyfile("./rimefiles/bopomo_onion_double.schema.yaml", "./"+sort_rime+"/"+rime_files+"/bopomo_onion_double.schema.yaml")
 shutil.copyfile("./rimefiles/bopomo_onion_double_t2.schema.yaml", "./"+sort_rime+"/"+rime_files+"/bopomo_onion_double_t2.schema.yaml")
+shutil.copyfile("./rimefiles/bopomo_onion_double_s1.schema.yaml", "./"+sort_rime+"/"+rime_files+"/bopomo_onion_double_s1.schema.yaml")
+shutil.copyfile("./rimefiles/bopomo_onion_double_s1_t2.schema.yaml", "./"+sort_rime+"/"+rime_files+"/bopomo_onion_double_s1_t2.schema.yaml")
 shutil.copyfile("./rimefiles/bopomo_onion_double_phrase.txt", "./"+sort_rime+"/"+rime_files+"/bopomo_onion_double_phrase.txt")
 shutil.copyfile("./rimefiles/symbols_bpmf_double.schema.yaml", "./"+sort_rime+"/"+rime_files+"/symbols_bpmf_double.schema.yaml")
 shutil.copyfile("./rimefiles/element_bopomo_double.yaml", "./"+sort_rime+"/"+rime_files+"/element_bopomo_double.yaml")

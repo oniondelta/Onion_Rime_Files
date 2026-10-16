@@ -265,6 +265,8 @@ shutil.copyfile("./rimefiles/essay-zh-hant-mc.txt", "./"+sort_rime+"/"+rime_file
 shutil.copyfile("./rimefiles/bopomo_onion_double.extended.dict.yaml", "./"+sort_rime+"/"+rime_files_4+"/bopomo_onion_double.extended.dict.yaml")
 shutil.copyfile("./rimefiles/bopomo_onion_double.schema.yaml", "./"+sort_rime+"/"+rime_files_4+"/bopomo_onion_double.schema.yaml")
 shutil.copyfile("./rimefiles/bopomo_onion_double_t2.schema.yaml", "./"+sort_rime+"/"+rime_files_4+"/bopomo_onion_double_t2.schema.yaml")
+shutil.copyfile("./rimefiles/bopomo_onion_double_s1.schema.yaml", "./"+sort_rime+"/"+rime_files_4+"/bopomo_onion_double_s1.schema.yaml")
+shutil.copyfile("./rimefiles/bopomo_onion_double_s1_t2.schema.yaml", "./"+sort_rime+"/"+rime_files_4+"/bopomo_onion_double_s1_t2.schema.yaml")
 shutil.copyfile("./rimefiles/bopomo_onion_double_phrase.txt", "./"+sort_rime+"/"+rime_files_4+"/bopomo_onion_double_phrase.txt")
 shutil.copyfile("./rimefiles/cangjie5.dict.yaml", "./"+sort_rime+"/"+rime_files_4+"/cangjie5.dict.yaml")
 shutil.copyfile("./rimefiles/cangjie5.schema.yaml", "./"+sort_rime+"/"+rime_files_4+"/cangjie5.schema.yaml")

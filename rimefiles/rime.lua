@@ -101,6 +101,7 @@
 --      - lua_processor@mix_apc_ltk_pluss            --（引lua資料夾）（bopomo_onionplus_space） 以原 ascii_punct_change 增加功能，使初始空白可以直接上屏。
 --      - lua_processor@mix_zhs_ltk                  --（引lua資料夾）（ocm_mixin、dif1、ocm_mix） 合併 zhuyin_space 和 lua_tran_kp。
 --      - lua_processor@mix_kp_return                --（引lua資料夾）（bopomo_onion_double） 合併 lua_tran_kp 並增加 return 上屏模式切換。
+--      - lua_processor@mix_kp_space                 --（引lua資料夾）（bopomo_onion_double_s1） 合併 lua_tran_kp 並增加 space 選項上屏。
 --
 --      《 ＊ 以下「處理」注意在 segmentors 中的順序，基本放在 matcher 後面一位 》
 --      - lua_segmentor@mount_reverse2_allbpm        --（引lua資料夾）（ocm_mixin、dif1、ocm_mix） 避免注音方案 reverse2_lookup 和注音文 all_bpm 掛接在 26/30 鍵等方案時，發生跳回主方案(abc)和無法記憶等 bug。
@@ -380,6 +381,12 @@ zhuyin_space = require("processor_zhuyin_space")
 -- 使 lua 之 mf_translator 數字和計算機功能可用小鍵盤輸入。
 -- 使 return 上屏模式切換
 mix_kp_return = require("processor_mix_kp_return")
+
+
+--- mix_kp_space （bopomo_onion_double_s1）
+-- 使 lua 之 mf_translator 數字和計算機功能可用小鍵盤輸入。
+-- 使 space 不為注音之一聲，而是讓選項上屏
+mix_kp_space = require("processor_mix_kp_space")
 
 
 --- mix_zhs_ltk （ocm_mixin、dif1、ocm_onionmix）

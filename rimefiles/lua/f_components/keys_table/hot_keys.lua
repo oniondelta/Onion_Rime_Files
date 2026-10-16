@@ -306,6 +306,7 @@ local function hotkeys(n)
       , { "➌➎", "　※ 某些鍵位須用內附的 default.custom.yaml 檔" }
       , { "➌➏", "　※ ［control］+［  -  or  =  ］於 Win 易衝突，或關閉" }
       , { "➌➐", "　※ ［control］+［shift］+［  -  or  =  ］於 Win 易衝突，或關閉" }
+      , { "➌➑", "　※ 雙拼 S1 和 S1 T2 版：切變換 Enter 上屏中文或原始輸入，全移除" }
       }
 
   elseif s_4 then
