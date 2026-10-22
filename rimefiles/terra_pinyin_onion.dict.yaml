@@ -315,6 +315,7 @@
 #    詞句中，「遂」皆補齊「sui4」「sui2」。
 #    詞句中，「癤」皆補齊「jie2」「jie1」。
 #    詞句中，「褪」皆補齊「tun4」「tui4」。
+#    詞句中，「誨」皆補齊「hui4」「hui3」。
 #    詞句中，「恣」臺灣標準為「zi4」「ci1」，前者又音為「zi1」，日常「zi4」和「zi1」易混，故互相補齊。「恣睢」等發音為「ci1」不補。
 #    詞句中，「績」「蹟」「跡」「迹」臺灣標準為「ji1」，大陸標準為「ji4」，只保留「ji1」發音。
 #    詞句中，「寂」臺灣標準為「ji2」，大陸標準為「ji4」，只保留「ji2」發音。
@@ -4251,6 +4252,9 @@ min_phrase_weight: 100
 彟	yue1	0%
 蒦	wo4	0%
 蒦	yue1	0%
+菸	yu4	0%
+菅	guan1	0%
+菀	yun4	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -5100,7 +5104,7 @@ min_phrase_weight: 100
 裻	du3	1%
 裼	xi2	1%
 誣	wu2	1%
-誨	hui3	1%
+誨	hui3	30%
 賓	bin4	1%
 踆	cun1	1%
 遛	liu2	1%
@@ -58013,6 +58017,10 @@ min_phrase_weight: 100
 一剎那	yi1 cha4 na4
 一剎那	yi1 cha4 nuo2
 一剎那	yi2 cha4 nuo2
+一剎那	yi2 sha4 na4	80%
+一剎那	yi1 sha4 na4	80%
+一剎那	yi1 sha4 nuo2	80%
+一剎那	yi2 sha4 nuo2	80%
 一剗	yi2 chan4
 一剗	yi1 chan4
 一力承當	yi2 li4 cheng2 dang1
@@ -66285,6 +66293,7 @@ min_phrase_weight: 100
 剎車燈	sha1 che1 deng1
 剎車燈	sha4 che1 deng1	80%
 剎那	cha4 na4
+剎那	sha4 na4	80%
 剔子	ti1 zi5
 剔子	ti4 zi5
 剔抽禿刷	ti1 chou1 tu1 shua1
@@ -80815,6 +80824,7 @@ min_phrase_weight: 100
 慢曲	man4 qu3
 慢累積	man4 lei3 ji1
 慢藏誨盜	man4 cang2 hui4 dao4
+慢藏誨盜	man4 cang2 hui3 dao4
 慢行	man4 xing2
 慢行道	man4 xing2 dao4
 慢調	man4 diao4
@@ -85803,6 +85813,7 @@ min_phrase_weight: 100
 教誨	jiao4 hui4
 教誨	jiao4 hui3
 教誨師	jiao4 hui4 shi1
+教誨師	jiao4 hui3 shi1
 教諭	jiao4 yu4
 教讀	jiao4 du2
 教辭	jiao4 ci2
@@ -121260,4 +121271,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 121263 #####
+##### @結束 END - 121274 #####
