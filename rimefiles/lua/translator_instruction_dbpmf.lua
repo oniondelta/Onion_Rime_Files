@@ -3,6 +3,10 @@
 說明雙拼注音各種掛接
 --]]
 local function init(env)
+  local engine = env.engine
+  local schema = engine.schema
+  local config = schema.config
+  local schema_id = config:get_string("schema/schema_id")
   env.table_sd_1 = {
         { "   ※ 輸入【項目】每字第一個注音，調出相關符號：", "𝟎" }
       , { "   【表情】【自然】【飲食】【活動】【旅遊】【物品】", "𝟏" }
@@ -107,6 +111,9 @@ local function init(env)
       , { "一聲 ˉ =（ ; ） 二聲 ˊ =（ / ） 三聲 ˇ =（ , ） 四聲 ˋ =（ \' ）", "❽" }
       , { "輕聲 ˙ = （ . ）", "❾" }
   }
+  if string.match(schema_id, "s1") then
+    env.table_sd_3[9][1] = "一聲 ˉ =（ ␣ ） 二聲 ˊ =（ / ） 三聲 ˇ =（ , ） 四聲 ˋ =（ ; ）"
+  end
 end
 
 -- local function instruction_dbpmf(input, seg, env)
