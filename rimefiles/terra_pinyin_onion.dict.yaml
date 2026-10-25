@@ -181,6 +181,7 @@
 #    詞句中，「蝸」臺灣標準為「gua1」，大陸標準為「wo1」，日常易混，故皆補齊「gua1」「wo1」。
 #    詞句中，「邳」臺灣標準為「pei2」，大陸標準為「pi1」，日常易混，故皆補齊「pei2」「pi1」。
 #    詞句中，「褶」臺灣標準為「zhe2」，大陸標準為「zhe3」，兩者易混淆，故皆補齊「zhe2」「zhe3」。
+#    詞句中，「幧」臺灣標準為「cao1」，大陸標準為「qiao1」，兩者易混淆，故皆補齊「cao1」「qiao1」。
 #    詞句中，「窣」臺灣標準為「su4」，大陸標準為「su1」，兩者易混淆，故皆補齊「su4」「su1」。
 #    詞句中，「蹬」臺灣標準為「deng4」，大陸標準為「deng1」，兩者易混淆，故皆補齊「deng4」「deng1」。
 #    詞句中，「褐」臺灣標準為「he2」，大陸標準為「he4」，兩者易混淆，故皆補齊「he2」「he4」。
@@ -192,6 +193,7 @@
 #    詞句中，「菽」臺灣標準為「shu2」，大陸標準為「shu1」，兩者易混淆，故皆補齊「shu2」「shu1」。
 #    詞句中，「掬」臺灣標準為「ju2」，大陸標準為「ju1」，兩者易混淆，故皆補齊「ju2」「ju1」。
 #    詞句中，「戕」臺灣標準為「qiang2」，大陸標準為「qiang1」，兩者易混淆，故皆補齊「qiang2」「qiang1」。
+#    詞句中，「蟎」臺灣標準為「man2」，大陸標準為「man3」，兩者易混淆，故皆補齊「man2」「man3」。
 #    詞句中，「溯」臺灣標準為「su4」，日常發音常會誤發為「shuo4」，故皆補齊「su4」「shuo4」，後者詞頻設為80%。
 #    詞句中，「潛」臺灣標準為「qian2」，日常發音常會誤發為「qian3」，故皆補齊「qian2」「qian3」，後者詞頻設為80%。
 #    詞句中，「髓」臺灣標準為「sui3」，日常發音常會誤發為「sui2」，故皆補齊「sui3」「sui2」，後者詞頻設為80%。
@@ -231,7 +233,10 @@
 #    詞句中，「呤」臺灣標準和大陸標準皆有「ling2」該發音，但大陸標準為某化學物質時發「ling4」，故全都補齊「ling2」「ling4」。
 #    詞句中，「肘」臺灣標準為「zhou3」，日常發音常會誤發為「zhou2」，故皆補齊「zhou3」「zhou2」，後者詞頻設為80%。
 #    詞句中，「庾」臺灣標準為「yu3」，日常發音常會誤發為「yu2」，故皆補齊「yu3」「yu2」，後者詞頻設為80%。
-#    詞句中，「蕾」臺灣標準為「lei3」，日常發音常會誤發為「lei2」，，故皆補齊「lei3」「lei2」，後者詞頻設為80%。
+#    詞句中，「蕾」臺灣標準為「lei3」，日常發音常會誤發為「lei2」，故皆補齊「lei3」「lei2」，後者詞頻設為80%。
+#    詞句中，「涯」「漄」臺灣標準為「ya2」，日常發音常會誤發為「yai2」「ai2」，故皆補齊「ya2」「yai2」「ai2」，後兩者詞頻設為80%。
+#    詞句中，「崖」「崕」「厓」臺灣標準為「yai2」，大陸標準為「ya2」，日常發音常會誤發為「ai2」，故皆補齊「yai2」「ya2」「ai2」，最後者「ai2」詞頻設為80%。
+#    詞句中，「慫」臺灣標準為「song3」，日常發音常會誤發「song2」，故皆補齊「song3」「song2」。
 #    詞句中，「炔」臺灣標準為「que1」，日常發音常會發「jue2」，故皆補齊「que1」「jue2」。
 #    詞句中，「悄」臺灣標準為「qiao3」，日常發音常會發「qiao1」，故皆補齊「qiao3」「qiao1」。
 #    詞句中，「播」臺灣標準為「bo4」，日常發音常會發「bo1」，故皆補齊「bo4」「bo1」。
@@ -261,6 +266,7 @@
 #    詞句中，「曳」臺灣字典語音為「yi4」，讀音為「ye4」，故皆補齊「yi4」「ye4」。
 #    詞句中，「薄」臺灣字典大多意思之讀音為「bo2」，語音為「bao2」，細微差別日常易混，除「薄荷」只標註「bo4 he2」和姓氏只標注「bo2」外，其他皆補齊「bo2」「bao2」。
 #    詞句中，「孖」為粵語常用字，臺灣標準為「zi1」，粵語異讀音似「ma1」，故皆補齊「zi1」「ma1」。
+#    詞句中，「鳽」皆補齊「yan2」「jian1」。（異體字字典中，「jian1」為又音）
 #    詞句中，「堤」皆補齊「ti2」「di1」。（原店名除外，如：西堤、丹堤等除外，後改皆補齊）
 #    詞句中，「洽」皆補齊「qia4」「xia2」，後者詞頻設為30%。
 #    詞句中，「撬」皆補齊「qiao1」「qiao4」。
@@ -364,6 +370,7 @@
 #    詞句中，「尾巴」臺灣字典發音為「wei3 ba1」，日常發音常發「yi3 ba1」，故皆補齊「wei3 ba1」「yi3 ba1」。
 #    詞句中，「部署」臺灣字典發音為「bu4 shu4」，日常發音常發「bu4 shu3」，故皆補齊「bu4 shu4」「bu4 shu3」。
 #    詞句中，「興奮」臺灣字典發音為「xing1 fen4」，日常發音常發「xing4 fen4」，故皆補齊「xing1 fen4」「xing4 fen4」。
+#    詞句中，「比鄰」臺灣字典發音為「bi4 lin2」，日常發音常發「bi3 lin2」，故皆補齊「bi4 lin2」「bi3 lin2」。
 #    詞句中，「包括」臺灣字典發音為「bao1 kuo4」，日常發音常發「bao1 gua1」，故皆補齊「bao1 kuo4」「bao1 gua1」。
 #    詞句中，「稀罕」和「希罕」臺灣字典發音為「xi1 han3」，日常發音常發「xi1 han4」，故皆補齊「xi1 han3」「xi1 han4」。
 #    詞句中，「交叉」臺灣字典發音為「jiao1 cha1」，日常發音常發「jiao1 cha4」，故皆補齊「jiao1 cha1」「jiao1 cha4」。
@@ -879,8 +886,8 @@ min_phrase_weight: 100
 # 只	zhi2	0%
 凈	zheng1
 吁	yu1	4%
-崖	ai2
-崕	ai2
+# 崖	ai2
+# 崕	ai2
 开	qi2
 恷	xiao1
 个	ge5	0.2%
@@ -2785,7 +2792,8 @@ min_phrase_weight: 100
 䜴	chi3	0%
 敊	chi3	0%
 敊	shi4	0%
-鳽	zhan1
+鳽	zhan1	5%
+# 雃	zhan1	0%
 拘	ju3	0%
 拘	ju2	0%
 枸	qu2	0%
@@ -2871,7 +2879,7 @@ min_phrase_weight: 100
 姐	zu1	0%
 陬	zhe2	0%
 澨	cuo2	0%
-厓	ai2	0%
+# 厓	ai2	0%
 揭	he2	0%
 掲	he2	0%
 忒	tui1	0%
@@ -4255,6 +4263,34 @@ min_phrase_weight: 100
 菸	yu4	0%
 菅	guan1	0%
 菀	yun4	0%
+𥇭	chi2	0%
+𥇭	zhi4	0%
+睢	wei3	0%
+睟	zui4	0%
+睒	tan4	0%
+淹	yan3	0%
+𣶏	die2	0%
+淺	jian4	0%
+淺	can2	0%
+淺	zan4	0%
+浅	jian1	0%
+浅	jian4	0%
+浅	can2	0%
+浅	zan4	0%
+淖	zhao4	0%
+淌	chang4	0%
+淌	chang3	0%
+# 凄	qian4	0%
+漼	cui1	0%
+漎	song3	0%
+桔	xie2	0%
+# 莻	nai3	0%
+飵	zha1	0%
+鈔	chao3	0%
+钞	chao3	0%
+钞	chao4	1%
+鈉	rui4	0%
+钠	rui4	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -5983,7 +6019,7 @@ min_phrase_weight: 100
 埽	sao3	0.5%
 罧	shen1	0.5%
 罧	lin2	0.5%
-幓	cao1	0.5%
+幓	cao1
 堋	peng1	0.5%
 堋	ping1	0.5%
 踫	pan2	0.5%
@@ -6968,7 +7004,7 @@ min_phrase_weight: 100
 幒	cong3	0%
 幙	mo4	0%
 幠	wu2	0%
-幧	cao1	0%
+幧	cao1
 幷	bing1	0%
 庩	tu1	0%
 庪	ji3	0%
@@ -7404,7 +7440,7 @@ min_phrase_weight: 100
 涛	chou2	0%
 涛	dao4	0%
 涛	shou4	0%
-涯	a2	0%
+# 涯	a2	0%
 涱	zhang3	0%
 涷	lian4	0%
 涹	nei3	0%
@@ -10470,6 +10506,46 @@ min_phrase_weight: 100
 貫	guan4	0.1%
 𣄽	zhuo2	0.1%
 𣄽	zhuo1	0.1%
+##### @@202610 補充原本字典中沒有的字，多為異體字和簡體字 #####
+𬙂	yan3	0%
+𬙂	yin3
+㴎	nai4
+𫛚	zhan1	5%
+𫛚	yan2	1%
+𫛚	jian1
+𫛚	qian1
+# 𫛚	zhan4	0%
+剷	chan3
+𡺆	tuo4	0%
+𡺆	duo4
+𫍶	xi4	0%
+𫍶	chi4
+𫍶	zhi3
+鿭	nie4	0%
+鿭	ni3	0%
+鿭	xi3
+𫗢	zha1	0%
+𫗢	ze2
+𫗢	zuo4
+𫛩	an1	0%
+𫛩	e4	0%
+𫛩	yan4
+𨾶	an1	0%
+𨾶	e4	0%
+𨾶	yan4
+𪸩	hun2	0%
+𪸩	yun4	0%
+𪸩	xun1	0%
+𪸩	xuan4	0%
+𪸩	hui1
+𫍷	dui3
+𫍷	gui3
+𫍷	kui4
+𫍷	tui2
+𡹜	wei3
+𫓨	hui4	0%
+𫓨	yue4	0%
+𫓨	guo1
 ##### @「韓文」「日文」漢字，有些沒有官方中文發音，『可能非正確讀音』！！！ #####
 # 橴	za1	0.1%
 # 橴	ca1	0.1%
@@ -41103,7 +41179,7 @@ min_phrase_weight: 100
 鳼	wen2
 鳽	jian1
 鳽	qian1
-# 鳽	zhan4
+# 鳽	zhan4	0%
 鳾	shi1
 鳿	yu4
 鴀	fou3
@@ -59955,6 +60031,7 @@ min_phrase_weight: 100
 不空成就如來	bu4 kong1 cheng2 jiu4 ru2 lai2
 不立崖岸	bu2 li4 ya2 an4
 不立崖岸	bu2 li4 yai2 an4
+不立崖岸	bu2 li4 ai2 an4	80%
 不答理	bu4 da1 li3
 不答腔	bu4 da1 qiang1
 不算什麼	bu2 suan4 shen2 me5
@@ -66707,6 +66784,7 @@ min_phrase_weight: 100
 劈拉	pi3 la1
 劈拉著腿坐崖頭	pi3 la1 zhe5 tui3 zuo4 ya2 tou2
 劈拉著腿坐崖頭	pi3 la1 zhe5 tui3 zuo4 yai2 tou2
+劈拉著腿坐崖頭	pi3 la1 zhe5 tui3 zuo4 ai2 tou2	80%
 劈排定對	pi1 pai2 ding4 dui4
 劈掛拳	pi1 gua4 quan2
 劈接法	pi1 jie1 fa3
@@ -67036,6 +67114,7 @@ min_phrase_weight: 100
 勒馬	le4 ma3
 勒馬懸崖	le4 ma3 xuan2 ya2
 勒馬懸崖	le4 ma3 xuan2 yai2
+勒馬懸崖	le4 ma3 xuan2 ai2	80%
 勒龐	le4 pang2
 動不動	dong4 bu2 dong4
 動中窾要	dong4 zhong4 kuan3 yao4
@@ -68213,6 +68292,7 @@ min_phrase_weight: 100
 原處	yuan2 chu4
 厥角	jue2 jue2
 厭厭	yan1 yan1
+厭厭	yan4 yan4
 厭惡	yan4 wu4
 厭惡	yan4 e4
 厭氣	yan4 qi4
@@ -69075,6 +69155,8 @@ min_phrase_weight: 100
 同惡相濟	tong2 e4 xiang1 ji4
 同憂相救	tong2 you1 xiang1 jiu4
 同是天涯淪落人	tong2 shi4 tian1 ya2 lun2 luo4 ren2
+同是天涯淪落人	tong2 shi4 tian1 yai2 lun2 luo4 ren2	80%
+同是天涯淪落人	tong2 shi4 tian1 ai2 lun2 luo4 ren2	80%
 同期	tong2 qi2
 同期錄音	tong2 qi2 lu4 yin1
 同校	tong2 xiao4
@@ -72155,6 +72237,8 @@ min_phrase_weight: 100
 地覆天翻	di4 fu4 tian1 fan1
 地角	di4 jiao3
 地角天涯	di4 jiao3 tian1 ya2
+地角天涯	di4 jiao3 tian1 yai2	80%
+地角天涯	di4 jiao3 tian1 ai2	80%
 地誌	di4 zhi4
 地論師	di4 lun4 shi1
 地變	di4 bian4
@@ -72408,6 +72492,7 @@ min_phrase_weight: 100
 城垛口	cheng2 duo3 kou3
 城子崖遺跡	cheng2 zi3 ya2 yi2 ji1
 城子崖遺跡	cheng2 zi3 yai2 yi2 ji1
+城子崖遺跡	cheng2 zi3 ai2 yi2 ji1	80%
 城市熱效應	cheng2 shi4 re4 xiao4 ying4
 城市規劃	cheng2 shi4 gui1 hua4
 城鋪	cheng2 pu4
@@ -73769,9 +73854,17 @@ min_phrase_weight: 100
 天機不可泄露	tian1 ji1 bu4 ke3 xie4 lou4
 天水地區	tian1 shui3 di4 qu1
 天涯何處無芳草	tian1 ya2 he2 chu4 wu2 fang1 cao3
+天涯何處無芳草	tian1 yai2 he2 chu4 wu2 fang1 cao3	80%
+天涯何處無芳草	tian1 ai2 he2 chu4 wu2 fang1 cao3	80%
 天涯地角	tian1 ya2 di4 jiao3
+天涯地角	tian1 yai2 di4 jiao3	80%
+天涯地角	tian1 ai2 di4 jiao3	80%
 天涯若比鄰	tian1 ya2 ruo4 bi4 lin2
 天涯若比鄰	tian1 ya2 ruo4 bi3 lin2
+天涯若比鄰	tian1 yai2 ruo4 bi4 lin2	80%
+天涯若比鄰	tian1 yai2 ruo4 bi3 lin2	80%
+天涯若比鄰	tian1 ai2 ruo4 bi4 lin2	80%
+天涯若比鄰	tian1 ai2 ruo4 bi3 lin2	80%
 天災地孽	tian1 zai1 di4 nie4
 天災地變	tian1 zai1 di4 bian4
 天然本地	tian1 ran2 ben3 di4
@@ -80301,6 +80394,8 @@ min_phrase_weight: 100
 悶倦	men1 juan4
 悶厭厭	men4 yan1 yan1
 悶厭厭	men1 yan1 yan1
+悶厭厭	men4 yan4 yan4
+悶厭厭	men1 yan4 yan4
 悶坐	men4 zuo4
 悶坐	men1 zuo4
 悶子車	men4 zi5 che1
@@ -81154,7 +81249,7 @@ min_phrase_weight: 100
 懷空	huai2 kong1
 懸崖勒馬	xuan2 ya2 le4 ma3
 懸崖勒馬	xuan2 yai2 le4 ma3
-懸崖勒馬	xuan2 ai2 le4 ma3
+懸崖勒馬	xuan2 ai2 le4 ma3	80%
 懸揣	xuan2 chuai3
 懸梁刺股	xuan2 liang2 ci4 gu3
 懸梁刺骨	xuan2 liang2 ci4 gu3
@@ -83818,6 +83913,7 @@ min_phrase_weight: 100
 接舌子	jie1 she2 zi5
 接觸傳染	jie1 chu4 chuan2 ran3
 接踵比肩	jie1 zhong3 bi4 jian1
+接踵比肩	jie1 zhong3 bi3 jian1
 接關係	jie1 guan1 xi1	80%
 接關係	jie1 guan1 xi4
 控制卡	kong4 zhi4 ka3
@@ -84266,10 +84362,10 @@ min_phrase_weight: 100
 摩尼教	mo2 ni2 jiao4
 摩崖石刻	mo2 ya2 shi2 ke1
 摩崖石刻	mo2 yai2 shi2 ke1
-摩崖石刻	mo2 ai2 shi2 ke1
+摩崖石刻	mo2 ai2 shi2 ke1	80%
 摩崖石刻	mo2 ya2 shi2 ke4
 摩崖石刻	mo2 yai2 shi2 ke4
-摩崖石刻	mo2 ai2 shi2 ke4
+摩崖石刻	mo2 ai2 shi2 ke4	80%
 摩弄	mo2 nong4
 摩托車的士	mo2 tuo1 che1 di1 shi4
 摩挲	ma1 sa5
@@ -90229,6 +90325,8 @@ min_phrase_weight: 100
 橫災飛禍	heng4 zai1 fei1 huo4
 橫災飛禍	heng2 zai1 fei1 huo4
 橫無際涯	heng2 wu2 ji4 ya2
+橫無際涯	heng2 wu2 ji4 yai2	80%
+橫無際涯	heng2 wu2 ji4 ai2	80%
 橫爬行	heng2 pa2 xing2
 橫生	heng2 sheng1
 橫生枝節	heng2 sheng1 zhi1 jie2
@@ -90999,11 +91097,17 @@ min_phrase_weight: 100
 比肩	bi4 jian1
 比肩	bi3 jian1
 比肩人	bi4 jian1 ren2
+比肩人	bi3 jian1 ren2
 比肩皆是	bi4 jian1 jie1 shi4
+比肩皆是	bi3 jian1 jie1 shi4
 比肩繼踵	bi4 jian1 ji4 zhong3
+比肩繼踵	bi3 jian1 ji4 zhong3
 比肩而事	bi4 jian1 er2 shi4
+比肩而事	bi3 jian1 er2 shi4
 比肩而立	bi4 jian1 er2 li4
+比肩而立	bi3 jian1 er2 li4
 比肩隨踵	bi4 jian1 sui2 zhong3
+比肩隨踵	bi3 jian1 sui2 zhong3
 比至	bi4 zhi4
 比興	bi3 xing4
 比舍	bi4 she4
@@ -92717,6 +92821,7 @@ min_phrase_weight: 100
 浪跡天下	lang4 ji1 tian1 xia4
 浪跡天涯	lang4 ji1 tian1 ya2
 浪跡天涯	lang4 ji1 tian1 yai2	80%
+浪跡天涯	lang4 ji1 tian1 ai2	80%
 浪跡江湖	lang4 ji1 jiang1 hu2
 浪跡萍蹤	lang4 ji1 ping2 zong1
 浪頭	lang4 tou5
@@ -92908,7 +93013,10 @@ min_phrase_weight: 100
 涕淚縱橫	ti4 lei4 zong4 heng2
 涪陵地區	fu2 ling2 di4 qu1
 涮鍋子	shuan4 guo1 zi5
+涮鍋子	shua1 guo1 zi5
 涯分	ya2 fen4
+涯分	yai2 fen4	80%
+涯分	ai2 fen4	80%
 液壓傳動	ye4 ya1 chuan2 dong4
 液壓傳動	yi4 ya1 chuan2 dong4
 液晶屏	ye4 jing1 ping2
@@ -97356,6 +97464,7 @@ min_phrase_weight: 100
 病包兒	bing4 bao1 er2
 病危	bing4 wei2
 病厭厭	bing4 yan1 yan1
+病厭厭	bing4 yan4 yan4
 病因子	bing4 yin1 zi5
 病因子	bing4 yin1 zi3
 病毒性營銷	bing4 du2 xing4 ying2 xiao1
@@ -105043,6 +105152,7 @@ min_phrase_weight: 100
 臨寂	lin2 ji2
 臨崖勒馬	lin2 ya2 le4 ma3
 臨崖勒馬	lin2 yai2 le4 ma3
+臨崖勒馬	lin2 ai2 le4 ma3	80%
 臨帖	lin2 tie4
 臨時分居	lin2 shi2 fen1 ju1
 臨時澳門市政執行委員會	lin2 shi2 ao4 men2 shi4 zheng4 zhi2 xing2 wei3 yuan2 hui4
@@ -106086,7 +106196,11 @@ min_phrase_weight: 100
 茝若	chai3 ruo4
 茨菰	ci2 gu1
 茫崖行政區	mang2 ya2 xing2 zheng4 qu1
+茫崖行政區	mang2 yai2 xing2 zheng4 qu1
+茫崖行政區	mang2 ai2 xing2 zheng4 qu1	80%
 茫崖行政委員會	mang2 ya2 xing2 zheng4 wei3 yuan2 hui4
+茫崖行政委員會	mang2 yai2 xing2 zheng4 wei3 yuan2 hui4
+茫崖行政委員會	mang2 ai2 xing2 zheng4 wei3 yuan2 hui4	80%
 茫茫一片	mang2 mang2 yi2 pian4
 茫茫一片	mang2 mang2 yi1 pian4
 茬地	cha2 di4
@@ -114595,6 +114709,7 @@ min_phrase_weight: 100
 醇和	chun2 he2
 醇朴	chun2 pu2
 醉厭厭	zui4 yan1 yan1
+醉厭厭	zui4 yan4 yan4
 醉如泥	zui4 ru2 ni2
 醉貌咕咚	zui4 mao4 gu1 dong1
 醋勁	cu4 jin4
@@ -119977,6 +120092,7 @@ min_phrase_weight: 100
 骨子裡	gu3 zi5 li3
 骨崖崖	gu3 ya2 ya2
 骨崖崖	gu3 yai2 yai2
+骨崖崖	gu3 ai2 ai2	80%
 骨扇	gu3 shan4
 骨折	gu3 zhe2
 骨殖	gu3 zhi2
@@ -121271,4 +121387,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 121274 #####
+##### @結束 END - 121390 #####
