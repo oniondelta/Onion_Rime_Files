@@ -236,13 +236,14 @@
 #    詞句中，「蕾」臺灣標準為「lei3」，日常發音常會誤發為「lei2」，故皆補齊「lei3」「lei2」，後者詞頻設為80%。
 #    詞句中，「涯」「漄」臺灣標準為「ya2」，日常發音常會誤發為「yai2」「ai2」，故皆補齊「ya2」「yai2」「ai2」，後兩者詞頻設為80%。
 #    詞句中，「崖」「崕」「厓」臺灣標準為「yai2」，大陸標準為「ya2」，日常發音常會誤發為「ai2」，故皆補齊「yai2」「ya2」「ai2」，最後者「ai2」詞頻設為80%。
-#    詞句中，「慫」臺灣標準為「song3」，日常發音常會誤發「song2」，故皆補齊「song3」「song2」。
+#    詞句中，「慫」臺灣標準為「song3」，日常發音常會誤發「song2」，故皆補齊「song3」「song2」，後者詞頻設為80%。
 #    詞句中，「炔」臺灣標準為「que1」，日常發音常會發「jue2」，故皆補齊「que1」「jue2」。
 #    詞句中，「悄」臺灣標準為「qiao3」，日常發音常會發「qiao1」，故皆補齊「qiao3」「qiao1」。
 #    詞句中，「播」臺灣標準為「bo4」，日常發音常會發「bo1」，故皆補齊「bo4」「bo1」。
 #    詞句中，「綜」臺灣標準為「zong4」，日常發音常會發「zong1」，故皆補齊「zong4」「zong1」。
 #    詞句中，「鮑」臺灣標準為「bao4」，日常發音常會發「bao1」，故皆補齊「bao4」「bao1」。
 #    詞句中，「傀」臺灣標準為「kui3」和「gui1」，前者「kui3」常會誤發為「kui2」，故發「kui3」時補齊「kui2」，後者詞頻設為80%。
+#    詞句中，「蠕」臺灣標準為「ruan3」，又音為「ru2」，異體字字典則相反，標準為「ru2」，又音為「ruan3」，日常發音常會誤發為「ru3」，故皆補齊「ruan3」「ru2」「ru3」，最後者「ru3」詞頻設為80%。
 #    詞句中，「綏」臺灣標準為「sui1」，又音為「sui2」，大陸標準為「sui2」，日常易混，故皆補齊「sui1」「sui2」。
 #    詞句中，「鈾」臺灣標準為「you4」，又音為「you2」，大陸標準為「you2」，日常易混，故皆補齊「you4」「you2」。
 #    詞句中，「燾」臺灣標準為「tao2」，又音為「dao4」，大陸標準為「tao1」，日常易混，故皆補齊「tao2」「dao4」「tao1」。
@@ -4291,6 +4292,8 @@ min_phrase_weight: 100
 钞	chao4	1%
 鈉	rui4	0%
 钠	rui4	0%
+惰	tuo2	0%
+傭	chong1	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -5551,7 +5554,7 @@ min_phrase_weight: 100
 翿	tao2	1%
 耀	yue4	1%
 蘁	e4	1%
-蠕	ruan3	1%
+蠕	ruan3	10%
 蠖	wo4	1%
 蠙	pin2	1%
 躂	ta4	1%
@@ -62356,7 +62359,11 @@ min_phrase_weight: 100
 你咱	ni3 za2
 你長我短	ni3 chang2 wo3 duan3
 佣鈿	yong4 dian4
+佣鈿	yong1 dian4	3%
+佣鈿	yong2 dian4	3%
 佣錢	yong4 qian2
+佣錢	yong1 qian2	3%
+佣錢	yong2 qian2	3%
 佧喇	ka3 la1
 佩服	pei4 fu2
 佳人命薄	jia1 ren2 ming4 bo2
@@ -63693,7 +63700,11 @@ min_phrase_weight: 100
 催熟	cui1 shou2
 催眠曲	cui1 mian2 qu3
 傭作	yong1 zuo1
+傭作	yong2 zuo1	3%
+傭作	yong4 zuo1	3%
 傭給	yong1 ji3
+傭給	yong2 ji3	3%
+傭給	yong4 ji3	3%
 傲囋	ao4 zan4
 傲慢與偏見	ao4 man4 yu3 pian1 jian4
 傳三過四	chuan2 san1 guo4 si4
@@ -108377,11 +108388,13 @@ min_phrase_weight: 100
 蠍子	xie1 zi5
 蠕動	ruan3 dong4
 蠕動	ru2 dong4
-蠕動	ru3 dong4
+蠕動	ru3 dong4	80%
 蠕形動物	ruan3 xing2 dong4 wu4
 蠕形動物	ru2 xing2 dong4 wu4
+蠕形動物	ru3 xing2 dong4 wu4	80%
 蠕蠕	ruan3 ruan3
 蠕蠕	ru2 ru2
+蠕蠕	ru3 ru3	80%
 蠙珠	pin2 zhu1
 蠙珠來入掌	pin2 zhu1 lai2 ru4 zhang3
 蠟坨兒	la4 tuo2 er5	80%
@@ -108528,6 +108541,8 @@ min_phrase_weight: 100
 行伍	hang2 wu3
 行伍出身	hang2 wu3 chu1 shen1
 行佣	hang2 yong4
+行佣	hang2 yong1	3%
+行佣	hang2 yong2	3%
 行使	xing2 shi3
 行使	xing2 shi4
 行使職權	xing2 shi3 zhi2 quan2
@@ -113628,6 +113643,7 @@ min_phrase_weight: 100
 通勤圈	tong1 qin2 quan1
 通化地區	tong1 hua4 di4 qu1
 通塞	tong1 se4
+通塞	tong1 sai1
 通天冠	tong1 tian1 guan1
 通天徹地	tong1 tian1 che4 di4
 通宿	tong1 xiu3
@@ -121387,4 +121403,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 121390 #####
+##### @結束 END - 121406 #####
