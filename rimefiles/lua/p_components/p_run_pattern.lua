@@ -40,7 +40,7 @@ local run_pattern = {
 --------------------------------------------------------------------------
   -- -- ["a"] = { s = 13, name = "活動監視器", open = "/System/Applications/Utilities/Activity\\ Monitor.app" },      -- mac 專用：活動監視器（路徑中空格用「\\ 」標示）
   -- ["a"] = { s = 13, name = "活動監視器", open = "/System/Applications/Utilities/Activity' 'Monitor.app" },      -- mac 專用：活動監視器（路徑中空格用「' '」標示）
-  -- ["x"] = { s = 14, name = "終端機", open = "/System/Applications/Utilities/Terminal.app" },                   -- mac 專用：終端機
+  -- ["s"] = { s = 14, name = "終端機", open = "/System/Applications/Utilities/Terminal.app" },                   -- mac 專用：終端機
 --------------------------------------------------------------------------
   -- ["at"] = { s = 15, name = "文字編輯器", open = "/System/Applications/TextEdit.app" },                         -- mac 專用：文字編輯
   -- ["ac"] = { s = 16, name = "計算機", open = "/System/Applications/Calculator.app" },                          -- mac 專用：計算機
@@ -62,7 +62,7 @@ local run_pattern = {
   -- ["u"] = { s = 24, name = "用戶設定（資料夾）", open = "~/Library/Rime" },
 --------------------------------------------------------------------------
   -- ["d"] = { s = 25, name = "重新部屬（指令）", open = "-removeopen '/Library/Input Methods/Squirrel.app/Contents/MacOS/Squirrel' --reload" },   -- 「-removeopen 」為特此標示，去移除開頭之「open和start等」，有些指令不能有開頭command！
-  -- -- ["s"] = { s = 26, name = "同步用戶資料（指令）", open = "-removeopen '/Library/Input Methods/Squirrel.app/Contents/MacOS/Squirrel' --sync" },  -- 「-removeopen 」為特此標示，去移除開頭之「open和start等」，有些指令不能有開頭command！
+  -- -- ["sc"] = { s = 26, name = "同步用戶資料（指令）", open = "-removeopen '/Library/Input Methods/Squirrel.app/Contents/MacOS/Squirrel' --sync" },  -- 「-removeopen 」為特此標示，去移除開頭之「open和start等」，有些指令不能有開頭command！
 --------------------------------------------------------------------------
 -- Win：
 --------------------------------------------------------------------------
@@ -77,9 +77,9 @@ local run_pattern = {
 --------------------------------------------------------------------------
   -- -- ["a"] = { s = 13, name = "工作管理員", open = [["C:\Windows\System32\taskmgr.exe"]] },                                      -- win 專用：工作管理員
   -- ["a"] = { s = 13, name = "工作管理員", open = [["%windir%\System32\taskmgr.exe"]] },                                        -- win 專用：工作管理員（如果系統不在 C 槽，「%windir%」可指定？！）
-  -- -- ["x"] = { s = 14, name = "命令提示字元", open = [["C:\WINDOWS\system32\cmd.exe"]] },                                        -- win 專用：命令提示字元
-  -- -- ["x"] = { s = 14, name = "命令提示字元", open = "-removeopen " .. [["start C:\WINDOWS\system32\cmd.exe"]] },                -- win 專用：命令提示字元（如果出現「記憶體不足」相關錯誤，可用該條目移除「start "" 」，然後置換成「start 」）
-  -- ["x"] = { s = 14, name = "命令提示字元", open = "-removeopen " .. [[start /d "%HOMEPATH%" %windir%\system32\cmd.exe]] },    -- win 專用：命令提示字元（指定起始路徑為：用戶家目錄）
+  -- -- ["s"] = { s = 14, name = "命令提示字元", open = [["C:\WINDOWS\system32\cmd.exe"]] },                                        -- win 專用：命令提示字元
+  -- -- ["s"] = { s = 14, name = "命令提示字元", open = "-removeopen " .. [["start C:\WINDOWS\system32\cmd.exe"]] },                -- win 專用：命令提示字元（如果出現「記憶體不足」相關錯誤，可用該條目移除「start "" 」，然後置換成「start 」）
+  -- ["s"] = { s = 14, name = "命令提示字元", open = "-removeopen " .. [[start /d "%HOMEPATH%" %windir%\system32\cmd.exe]] },    -- win 專用：命令提示字元（指定起始路徑為：用戶家目錄）
 --------------------------------------------------------------------------
   -- ["ac"] = { s = 15, name = "計算機", open = [["C:\WINDOWS\system32\calc.exe"]] },                    -- win 專用：計算機
   -- ["ap"] = { s = 16, name = "小畫家", open = [["C:\WINDOWS\system32\mspaint.exe"]] },                 -- win 專用：小畫家
@@ -99,7 +99,7 @@ local run_pattern = {
   -- ["u"] = { s = 22, name = "用戶文件夾（資料夾）", open = [["%APPDATA%\Rime"]] },
 --------------------------------------------------------------------------
   -- ["d"] = { s = 23, name = "重新部屬（指令）", open = [["C:\Program Files\Rime\weasel-0.17.4\WeaselDeployer.exe" /deploy]] },
-  -- -- ["s"] = { s = 24, name = "同步用戶資料（指令）", open = [["C:\Program Files\Rime\weasel-0.17.4\WeaselDeployer.exe" /sync]] },
+  -- -- ["sc"] = { s = 24, name = "同步用戶資料（指令）", open = [["C:\Program Files\Rime\weasel-0.17.4\WeaselDeployer.exe" /sync]] },
 --------------------------------------------------------------------------
 -- 測試用：
 --------------------------------------------------------------------------
