@@ -4,7 +4,7 @@
 # 『洋蔥』製作
 ---
 name: Mount_bopomo.extended
-version: "202302"
+version: "202611"
 sort: by_weight
 vocabulary: essay-zh-hant-mc
 #use_preset_vocabulary: true
@@ -13,8 +13,9 @@ min_phrase_weight: 100
 import_tables:
   - terra_pinyin_onion
   - terra_pinyin_onion_add
-#  - phrases.chtp
-#  - phrases.cht
+  # - phrases.chtp
+  # - phrases.chtp_jp
+  # - phrases.cht
 ...
 ##### 注音字碼補充 #####
 ### 一般ㄅㄆㄇ！ ###

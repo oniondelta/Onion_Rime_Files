@@ -1,0 +1,1164 @@
+# Rime dictionary
+# encoding: utf-8
+#
+# ===============================
+#
+# 《中文 詞庫（附帶聲調拼音，日文用字）》
+#
+# ===============================
+# 
+# 原先多是「phrases.jp_hkkreduce.dict」含有日文「漢字」之詞彙。
+# 承上於「phrases.jp_hkkreduce.dict」刪除後，移至「phrases.chtp.dict」中，並增加標注：附帶聲調拼音。
+# 承上再把「phrases.chtp.dict」其中日文獨特用字移至此「phrases.chtp_jp.dict」詞庫中。
+# 
+---
+name: phrases.chtp_jp
+version: "202611"
+sort: by_weight
+use_preset_vocabulary: false
+max_phrase_length: 9 #20
+min_phrase_weight: 100
+columns:
+  - text
+  - code
+  - weight
+...
+##### 日文用字：「証」（已增轉「證」）@ #####
+人証	ren2 zheng4
+佐証	zuo3 zheng4
+作証	zuo4 zheng4
+例証	li4 zheng4
+保証	bao3 zheng4
+偽証	wei3 zheng4
+偽証	wei4 zheng4
+傍証	pang2 zheng4
+公証	gong1 zheng4
+印証	yin4 zheng4
+反証	fan3 zheng4
+口証	kou3 zheng4
+實証	shi2 zheng4
+對証	dui4 zheng4
+引証	yin3 zheng4
+心証	xin1 zheng4
+憑証	ping2 zheng4
+搜証	sou1 zheng4
+旁証	pang2 zheng4
+明証	ming2 zheng4
+暗証	an4 zheng4
+東証	dong1 zheng4
+查証	cha2 zheng4
+權証	quan2 zheng4
+求証	qiu2 zheng4
+物証	wu4 zheng4
+確証	que4 zheng4
+立証	li4 zheng4
+簽証	qian1 zheng4
+罪証	zui4 zheng4
+考証	kao3 zheng4
+自証	zi4 zheng4
+蒐証	sou1 zheng4
+見証	jian4 zheng4
+証人	zheng4 ren2
+証件	zheng4 jian4
+証券	zheng4 juan4	80%
+証券	zheng4 quan4
+証印	zheng4 yin4
+証實	zheng4 shi2
+証左	zheng4 zuo3
+証據	zheng4 ju4
+証文	zheng4 wen2
+証書	zheng4 shu1
+証本	zheng4 ben3
+証物	zheng4 wu4
+証言	zheng4 yan2
+証詞	zheng4 ci2
+証跡	zheng4 ji1
+認証	ren4 zheng4
+論証	lun4 zheng4
+辯証	bian4 zheng4
+鐵証	tie3 zheng4
+驗証	yan4 zheng4
+保証人	bao3 zheng4 ren2
+保証書	bao3 zheng4 shu1
+保証金	bao3 zheng4 jin1
+信用証	xin4 yong4 zheng4
+偽証罪	wei3 zheng4 zui4
+偽証罪	wei4 zheng4 zui4
+出入証	chu1 ru4 zheng4
+出境証	chu1 jing4 zheng4
+反証法	fan3 zheng4 fa3
+受領証	shou4 ling3 zheng4
+土地証	tu3 di4 zheng4
+見証人	jian4 zheng4 ren2
+許可証	xu3 ke3 zheng4
+証明書	zheng4 ming2 shu1
+証監會	zheng4 jian4 hui4
+識別証	shi4 bie2 zheng4
+身份証	shen1 fen4 zheng4
+身分証	shen1 fen1 zheng4
+身分証	shen1 fen4 zheng4
+辨証法	bian4 zheng4 fa3
+通行証	tong1 xing2 zheng4
+保証供應	bao3 zheng4 gong1 ying4
+保証供應	bao3 zheng4 gong4 ying4
+卒業証書	zu2 ye4 zheng4 shu1
+原始憑証	yuan2 shi3 ping2 zheng4
+唯物辨証	wei2 wu4 bian4 zheng4
+唯物辯証	wei2 wu4 bian4 zheng4
+實踐証明	shi2 jian4 zheng4 ming2
+引詩為証	yin3 shi1 wei2 zheng4
+會計憑証	kuai4 ji4 ping2 zheng4
+有價証券	you3 jia4 zheng4 juan4	80%
+有價証券	you3 jia4 zheng4 quan4
+直接証明	zhi2 jie1 zheng4 ming2
+自由心証	zi4 you2 xin1 zheng4
+証券化率	zheng4 juan4 hua4 lv4	80%
+証券化率	zheng4 quan4 hua4 lv4
+頓証菩提	dun4 zheng4 pu2 ti2
+唯物辨証法	wei2 wu4 bian4 zheng4 fa3
+唯物辯証法	wei2 wu4 bian4 zheng4 fa3
+國民身分証	guo2 min2 shen1 fen1 zheng4
+國民身分証	guo2 min2 shen1 fen4 zheng4
+辯証唯物主義	bian4 zheng4 wei2 wu4 zhu3 yi4
+##### 日文用字：「啓」（已增轉「啟」）@ #####
+一啓	yi1 qi3
+一啓	yi4 qi3
+中啓	zhong1 qi3
+啓三	qi3 san1
+啓上	qi3 shang4
+啓二	qi3 er4
+啓介	qi3 jie4
+啓助	qi3 zhu4
+啓子	qi3 zi3
+啓示	qi3 shi4
+啓蒙	qi3 meng2
+天啓	tian1 qi3
+行啓	xing2 qi3
+富永啓生	fu4 yong3 qi3 sheng1
+藤原啓治	teng2 yuan2 qi3 zhi4
+橫澤啓子	heng2 ze2 qi3 zi3
+##### 日文用字：「礼」（已增轉「禮」）@ #####
+一礼	yi1 li3
+一礼	yi4 li3
+久礼	jiu3 li3
+仁礼	ren2 li3
+儀礼	yi2 li3
+典礼	dian3 li3
+割礼	ge1 li3
+吉礼	ji2 li3
+回礼	hui2 li3
+多礼	duo1 li3
+大礼	da4 li3
+失礼	shi1 li3
+婚礼	hun1 li3
+岐礼	qi2 li3
+巡礼	xun2 li3
+御礼	yu4 li3
+敬礼	jing4 li3
+有礼	you3 li3
+朝礼	chao2 li3
+朝礼	zhao1 li3
+欠礼	qian4 li3
+比礼	bi3 li3
+洗礼	xi3 li3
+浸礼	jin4 li3
+無礼	wu2 li3
+牟礼	mou2 li3
+目礼	mu4 li3
+礼二	li3 er4
+礼保	li3 bao3
+礼儀	li3 yi2
+礼典	li3 dian3
+礼司	li3 si1
+礼央	li3 yang1
+礼奈	li3 nai4
+礼子	li3 zi3
+礼帽	li3 mao4
+礼式	li3 shi4
+礼文	li3 wen2
+礼服	li3 fu2
+礼法	li3 fa3
+礼物	li3 wu4
+礼砲	li3 pao4
+礼節	li3 jie2
+礼美	li3 mei3
+礼讚	li3 zan4
+礼遇	li3 yu4
+礼金	li3 jin1
+祭礼	ji4 li3
+立礼	li4 li3
+答礼	da2 li3
+葬礼	zang4 li3
+謝礼	xie4 li3
+返礼	fan3 li3
+阿礼	a1 li3
+非礼	fei1 li3
+順礼	shun4 li3
+最敬礼	zui4 jing4 li3
+無礼講	wu2 li3 jiang3
+繁文縟礼	fan2 wen2 ru4 li3
+高橋礼華	gao1 qiao2 li3 hua2
+礼文華峠	li3 wen2 hua2 qia3
+各務礼美奈	ge4 wu4 li3 mei3 nai4
+##### 日文用字：「黒」（已增轉「黑」）@ #####
+中黒	zhong1 hei1
+大黒	da4 hei1
+小黒	xiao3 hei1
+暗黒	an4 hei1
+漆黒	qi1 hei1
+白黒	bai2 hei1
+目黒	mu4 hei1
+真黒	zhen1 hei1
+石黒	shi2 hei1
+羽黒	yu3 hei1
+腹黒	fu4 hei1
+黒丸	hei1 wan2
+黒井	hei1 jing3
+黒人	hei1 ren2
+黒住	hei1 zhu4
+黒光	hei1 guang1
+黒土	hei1 tu3
+黒地	hei1 di4
+黒坂	hei1 ban3
+黒奴	hei1 nu2
+黒姫	hei1 ji1
+黒子	hei1 zi3
+黒字	hei1 zi4
+黒尾	hei1 wei3
+黒山	hei1 shan1
+黒岩	hei1 yan2
+黒島	hei1 dao3
+黒崎	hei1 qi2
+黒川	hei1 chuan1
+黒幕	hei1 mu4
+黒星	hei1 xing1
+黒木	hei1 mu4
+黒本	hei1 ben3
+黒松	hei1 song1
+黒板	hei1 ban3
+黒柳	hei1 liu3
+黒柿	hei1 shi4
+黒檀	hei1 tan2
+黒毛	hei1 mao2
+黒水	hei1 shui3
+黒江	hei1 jiang1
+黒沢	hei1 ze2
+黒河	hei1 he2
+黒沼	hei1 zhao3
+黒海	hei1 hai3
+黒潮	hei1 chao2
+黒澤	hei1 ze2
+黒炭	hei1 tan4
+黒田	hei1 tian2
+黒白	hei1 bai2
+黒目	hei1 mu4
+黒石	hei1 shi2
+黒砂	hei1 sha1
+黒磯	hei1 ji1
+黒神	hei1 shen2
+黒米	hei1 mi3
+黒糖	hei1 tang2
+黒羽	hei1 yu3
+黒船	hei1 chuan2
+黒色	hei1 se4
+黒血	hei1 xue4
+黒衣	hei1 yi1
+黒谷	hei1 gu3
+黒豆	hei1 dou4
+黒貂	hei1 diao1
+黒部	hei1 bu4
+黒酒	hei1 jiu3
+黒野	hei1 ye3
+黒金	hei1 jin1
+黒鉛	hei1 qian1
+黒鍵	hei1 jian4
+黒門	hei1 men2
+黒雲	hei1 yun2
+黒須	hei1 xu1
+黒駒	hei1 ju1
+黒鯛	hei1 diao1
+黒鳥	hei1 niao3
+上目黒	shang4 mu4 hei1
+上黒田	shang4 hei1 tian2
+下目黒	xia4 mu4 hei1
+中目黒	zhong1 mu4 hei1
+大田黒	da4 tian2 hei1
+大黒天	da4 hei1 tian1
+大黒屋	da4 hei1 wu1
+大黒島	da4 hei1 dao3
+大黒柱	da4 hei1 zhu4
+羽黒山	yu3 hei1 shan1
+黒八丈	hei1 ba1 zhang4
+黒姫山	hei1 ji1 shan1
+黒岩山	hei1 yan2 shan1
+黒文字	hei1 wen2 zi4
+黒斑山	hei1 ban1 shan1
+黒曜石	hei1 yao4 shi2
+黒木山	hei1 mu4 shan1
+黒松内	hei1 song1 nei4
+黒河内	hei1 he2 nei4
+黒牟田	hei1 mou2 tian2
+黒田原	hei1 tian2 yuan2
+黒百合	hei1 bai3 he2
+黒砂糖	hei1 sha1 tang2
+黒褐色	hei1 he2 se4
+黒褐色	hei1 he4 se4
+黒木芽依	hei1 mu4 ya2 yi1
+黒獅子旗	hei1 shi1 zi5 qi2
+##### 日文用字：「姫」（已增轉「姬」）@ #####
+一姫	yi1 ji1
+一姫	yi4 ji1
+中姫	zhong1 ji1
+乙姫	yi3 ji1
+伏姫	fu2 ji1
+千姫	qian1 ji1
+夏姫	xia4 ji1
+夕姫	xi4 ji1
+姫君	ji1 jun1
+姫墻	ji1 qiang2
+姫子	ji1 zi3
+姫宮	ji1 gong1
+姫家	ji1 jia1
+姫島	ji1 dao3
+姫松	ji1 song1
+姫糊	ji1 hu1
+姫路	ji1 lu4
+姫鱒	ji1 zun1
+寵姫	chong3 ji1
+小姫	xiao3 ji1
+御姫	yu4 ji1
+志姫	zhi4 ji1
+憂姫	you1 ji1
+早姫	zao3 ji1
+月姫	yue4 ji1
+未姫	wei4 ji1
+李姫	li3 ji1
+歌姫	ge1 ji1
+沙姫	sha1 ji1
+清姫	qing1 ji1
+由姫	you2 ji1
+真姫	zhen1 ji1
+美姫	mei3 ji1
+舞姫	wu3 ji1
+茶姫	cha2 ji1
+裕姫	yu4 ji1
+長姫	chang2 ji1
+雅姫	ya3 ji1
+魔姫	mo2 ji1
+佐保姫	zuo3 bao3 ji1
+姫小松	ji1 xiao3 song1
+姫御前	ji1 yu4 qian2
+姫百合	ji1 bai3 he2
+姫路城	ji1 lu4 cheng2
+姫路市	ji1 lu4 shi4
+白雪姫	bai2 xue3 ji1
+衣通姫	yi1 tong1 ji1
+歌姫夜曲	ge1 ji1 ye4 qu3
+一姫二太郎	yi1 ji1 er4 tai4 lang2
+一姫二太郎	yi4 ji1 er4 tai4 lang2
+##### 日文用字：「彦」（已增轉「彥」）@ #####
+一彦	yi1 yan4
+一彦	yi2 yan4
+伸彦	shen1 yan4
+俊彦	jun4 yan4
+保彦	bao3 yan4
+信彦	xin4 yan4
+光彦	guang1 yan4
+利彦	li4 yan4
+勝彦	sheng4 yan4
+吉彦	ji2 yan4
+和彦	he2 yan4
+夏彦	xia4 yan4
+孝彦	xiao4 yan4
+安彦	an1 yan4
+寅彦	yin2 yan4
+山彦	shan1 yan4
+常彦	chang2 yan4
+幸彦	xing4 yan4
+幹彦	gan4 yan4
+康彦	kang1 yan4
+弓彦	gong1 yan4
+彦一	yan4 yi1
+彦七	yan4 qi1
+彦作	yan4 zuo4
+彦名	yan4 ming2
+彦坂	yan4 ban3
+彦根	yan4 gen1
+敏彦	min3 yan4
+文彦	wen2 yan4
+昌彦	chang1 yan4
+明彦	ming2 yan4
+春彦	chun1 yan4
+時彦	shi2 yan4
+晴彦	qing2 yan4
+智彦	zhi4 yan4
+暢彦	chang4 yan4
+正彦	zheng4 yan4
+武彦	wu3 yan4
+治彦	zhi4 yan4
+清彦	qing1 yan4
+照彦	zhao4 yan4
+猛彦	meng3 yan4
+田彦	tian2 yan4
+直彦	zhi2 yan4
+秀彦	xiu4 yan4
+稔彦	ren3 yan4
+種彦	zhong3 yan4
+義彦	yi4 yan4
+良彦	liang2 yan4
+英彦	ying1 yan4
+藤彦	teng2 yan4
+虎彦	hu3 yan4
+諸彦	zhu1 yan4
+輝彦	hui1 yan4
+達彦	da2 yan4
+邦彦	bang1 yan4
+雄彦	xiong2 yan4
+雅彦	ya3 yan4
+龍彦	long2 yan4
+彦三郎	yan4 san1 lang2
+彦九郎	yan4 jiu3 lang2
+彦兵衛	yan4 bing1 wei4
+彦四郎	yan4 si4 lang2
+彦太郎	yan4 tai4 lang2
+彦次郎	yan4 ci4 lang2
+英彦山	ying1 yan4 shan1
+井上雄彦	jing3 shang4 xiong2 yan4
+彦左衛門	yan4 zuo3 wei4 men2
+##### 日文用字：「穂」（已增轉「穗」）@ #####
+一穂	yi1 sui4
+一穂	yi2 sui4
+万穂	wan4 sui4
+三穂	san1 sui4
+佐穂	zuo3 sui4
+佳穂	jia1 sui4
+優穂	you1 sui4
+八穂	ba1 sui4
+初穂	chu1 sui4
+千穂	qian1 sui4
+南穂	nan2 sui4
+可穂	ke3 sui4
+史穂	shi3 sui4
+嘉穂	jia1 sui4
+夏穂	xia4 sui4
+奈穂	nai4 sui4
+御穂	yu4 sui4
+志穂	zhi4 sui4
+新穂	xin1 sui4
+早穂	zao3 sui4
+智穂	zhi4 sui4
+未穂	wei4 sui4
+果穂	guo3 sui4
+梨穂	li2 sui4
+歌穂	ge1 sui4
+水穂	shui3 sui4
+沙穂	sha1 sui4
+混穂	hun2 sui4
+混穂	hun3 sui4	80%
+混穂	hun4 sui4
+理穂	li3 sui4
+瑞穂	rui4 sui4
+田穂	tian2 sui4
+百穂	bai3 sui4
+真穂	zhen1 sui4
+知穂	zhi1 sui4
+秋穂	qiu1 sui4
+穂先	sui4 xian1
+穂出	sui4 chu1
+穂木	sui4 mu4
+穂波	sui4 bo1
+穂波	sui4 po1
+穂積	sui4 ji1
+穂綿	sui4 mian2
+穂芒	sui4 mang2
+空穂	kong1 sui4
+紗穂	sha1 sui4
+紫穂	zi3 sui4
+美穂	mei3 sui4
+花穂	hua1 sui4
+苗穂	miao2 sui4
+茂穂	mao4 sui4
+茉穂	mo4 sui4
+莉穂	li4 sui4
+菜穂	cai4 sui4
+華穂	hua2 sui4
+落穂	luo4 sui4
+詩穂	shi1 sui4
+赤穂	chi4 sui4
+遊穂	you2 sui4
+那穂	na4 sui4
+里穂	li3 sui4
+香穂	xiang1 sui4
+麻穂	ma2 sui4
+黒穂	hei1 sui4
+八束穂	ba1 shu4 sui4
+北穂高	bei3 sui4 gao1
+奈穂子	nai4 sui4 zi3
+菜穂子	cai4 sui4 zi3
+高千穂	gao1 qian1 sui4
+中山美穂	zhong1 shan1 mei3 sui4
+福原美穂	fu2 yuan2 mei3 sui4
+葛城七穂	ge2 cheng2 qi1 sui4
+葛城七穂	ge3 cheng2 qi1 sui4
+##### 日文用字：「恵」（已增轉「惠」）@ #####
+七恵	qi1 hui4
+三恵	san1 hui4
+久恵	jiu3 hui4
+互恵	hu4 hui4
+仁恵	ren2 hui4
+佐恵	zuo3 hui4
+佳恵	jia1 hui4
+優恵	you1 hui4
+光恵	guang1 hui4
+八恵	ba1 hui4
+公恵	gong1 hui4
+利恵	li4 hui4
+加恵	jia1 hui4
+千恵	qian1 hui4
+友恵	you3 hui4
+可恵	ke3 hui4
+吏恵	li4 hui4
+喜恵	xi3 hui4
+嘉恵	jia1 hui4
+基恵	ji1 hui4
+多恵	duo1 hui4
+天恵	tian1 hui4
+奈恵	nai4 hui4
+季恵	ji4 hui4
+小恵	xiao3 hui4
+希恵	xi1 hui4
+幸恵	xing4 hui4
+恩恵	en1 hui4
+恵一	hui4 yi1
+恵三	hui4 san1
+恵下	hui4 xia4
+恵佳	hui4 jia1
+恵信	hui4 xin4
+恵利	hui4 li4
+恵化	hui4 hua4
+恵吏	hui4 li4
+恵味	hui4 wei4
+恵夢	hui4 meng4
+恵子	hui4 zi3
+恵存	hui4 cun2
+恵己	hui4 ji3
+恵巳	hui4 si4
+恵庭	hui4 ting2
+恵心	hui4 xin1
+恵方	hui4 fang1
+恵木	hui4 mu4
+恵未	hui4 wei4
+恵梨	hui4 li2
+恵比	hui4 bi3
+恵水	hui4 shui3
+恵沢	hui4 ze2
+恵津	hui4 jin1
+恵海	hui4 hai3
+恵理	hui4 li3
+恵瓊	hui4 qiong2
+恵田	hui4 tian2
+恵真	hui4 zhen1
+恵美	hui4 mei3
+恵良	hui4 liang2
+恵茉	hui4 mo4
+恵莉	hui4 li4
+恵見	hui4 jian4
+恵資	hui4 zi1
+恵贈	hui4 zeng4
+恵那	hui4 na4
+恵都	hui4 du1
+恵里	hui4 li3
+恵麻	hui4 ma2
+慈恵	ci2 hui4
+教恵	jiao1 hui4
+教恵	jiao4 hui4
+文恵	wen2 hui4
+早恵	zao3 hui4
+明恵	ming2 hui4
+智恵	zhi4 hui4
+未恵	wei4 hui4
+李恵	li3 hui4
+梨恵	li2 hui4
+正恵	zheng4 hui4
+比恵	bi3 hui4
+水恵	shui3 hui4
+沙恵	sha1 hui4
+津恵	jin1 hui4
+深恵	shen1 hui4
+特恵	te4 hui4
+理恵	li3 hui4
+百恵	bai3 hui4
+矢恵	shi3 hui4
+知恵	zhi1 hui4
+稚恵	zhi4 hui4
+紀恵	ji3 hui4
+紗恵	sha1 hui4
+美恵	mei3 hui4
+英恵	ying1 hui4
+莉恵	li4 hui4
+華恵	hua2 hui4
+萌恵	meng2 hui4
+裕恵	yu4 hui4
+貴恵	gui4 hui4
+郁恵	yu4 hui4
+里恵	li3 hui4
+阿恵	a1 hui4
+須恵	xu1 hui4
+香恵	xiang1 hui4
+入知恵	ru4 zhi1 hui4
+千恵子	qian1 hui4 zi3
+多恵子	duo1 hui4 zi3
+恵庭岳	hui4 ting2 yue4
+恵林寺	hui4 lin2 si4
+恵比須	hui4 bi3 xu1
+恵理子	hui4 li3 zi3
+恵美須	hui4 mei3 xu1
+恵那山	hui4 na4 shan1
+猿知恵	yuan2 zhi1 hui4
+理恵子	li3 hui4 zi3
+由利恵	you2 li4 hui4
+由紀恵	you2 ji4 hui4
+知恵者	zhi1 hui4 zhe3
+知恵袋	zhi1 hui4 dai4
+美恵子	mei3 hui4 zi3
+美智恵	mei3 zhi4 hui4
+恵比須講	hui4 bi3 xu1 jiang3
+恵美押勝	hui4 mei3 ya1 sheng4
+##### 日文用字：「歩」（已增轉「步」）@ #####
+一歩	yi1 bu4
+一歩	yi2 bu4
+三歩	san1 bu4
+二歩	er4 bu4
+五歩	wu3 bu4
+佳歩	jia1 bu4
+八歩	ba1 bu4
+六歩	liu4 bu4
+初歩	chu1 bu4
+十歩	shi2 bu4
+千歩	qian1 bu4
+反歩	fan3 bu4
+史歩	shi3 bu4
+咲歩	xiao4 bu4
+地歩	di4 bu4
+夏歩	xia4 bu4
+大歩	da4 bu4
+奈歩	nai4 bu4
+完歩	wan2 bu4
+巨歩	ju4 bu4
+徒歩	tu2 bu4
+志歩	zhi4 bu4
+散歩	san4 bu4
+日歩	ri4 bu4
+木歩	mu4 bu4
+未歩	wei4 bu4
+果歩	guo3 bu4
+歩人	bu4 ren2
+歩兵	bu4 bing1
+歩卒	bu4 zu2
+歩合	bu4 he2
+歩哨	bu4 shao4
+歩希	bu4 xi1
+歩幅	bu4 fu2
+歩度	bu4 du4
+歩廊	bu4 lang2
+歩惟	bu4 wei2
+歩武	bu4 wu3
+歩歩	bu4 bu4
+歩海	bu4 hai3
+歩測	bu4 ce4
+歩目	bu4 mu4
+歩粉	bu4 fen3
+歩美	bu4 mei3
+歩行	bu4 xing2
+歩調	bu4 diao4
+歩車	bu4 che1
+歩道	bu4 dao4
+段歩	duan4 bu4
+漫歩	man4 bu4
+牛歩	niu2 bu4
+玉歩	yu4 bu4
+理歩	li3 bu4
+由歩	you2 bu4
+町歩	ding1 bu4
+町歩	ting3 bu4
+百歩	bai3 bu4
+真歩	zhen1 bu4
+知歩	zhi1 bu4
+禹歩	yu3 bu4
+競歩	jing4 bu4
+紗歩	sha1 bu4
+美歩	mei3 bu4
+花歩	hua1 bu4
+茉歩	mo4 bu4
+華歩	hua2 bu4
+蓮歩	lian2 bu4
+詩歩	shi1 bu4
+退歩	tui4 bu4
+速歩	su4 bu4
+進歩	jin4 bu4
+遊歩	you2 bu4
+里歩	li3 bu4
+野歩	ye3 bu4
+闊歩	kuo4 bu4
+香歩	xiang1 bu4
+十町歩	shi2 ding1 bu4
+十町歩	shi2 ting3 bu4
+散歩道	san4 bu4 dao4
+歩道橋	bu4 dao4 qiao2
+第一歩	di4 yi1 bu4
+第一歩	di4 yi2 bu4
+遊歩道	you2 bu4 dao4
+一歩二歩	yi1 bu4 er4 bu4
+一歩二歩	yi2 bu4 er4 bu4
+公定歩合	gong1 ding4 bu4 he2
+小松未歩	xiao3 song1 wei4 bu4
+日進月歩	ri4 jin4 yue4 bu4
+行人止歩	xing2 ren2 zhi3 bu4
+五十歩百歩	wu3 shi2 bu4 bai3 bu4
+##### 日文用字：「亜」（已增轉「亞」）@ #####
+乃亜	nai3 ya3
+乃亜	nai3 ya4
+亜三	ya3 san1
+亜三	ya4 san1
+亜久	ya3 jiu3
+亜久	ya4 jiu3
+亜也	ya3 ye3
+亜也	ya4 ye3
+亜以	ya3 yi3
+亜以	ya4 yi3
+亜伊	ya3 yi1
+亜伊	ya4 yi1
+亜依	ya3 yi1
+亜依	ya4 yi1
+亜優	ya3 you1
+亜優	ya4 you1
+亜利	ya3 li4
+亜利	ya4 li4
+亜友	ya3 you3
+亜友	ya4 you3
+亜古	ya3 gu3
+亜古	ya4 gu3
+亜呼	ya3 hu1
+亜呼	ya4 hu1
+亜哉	ya3 zai1
+亜哉	ya4 zai1
+亜唯	ya3 wei2
+亜唯	ya4 wei2
+亜喜	ya3 xi3
+亜喜	ya4 xi3
+亜土	ya3 tu3
+亜土	ya4 tu3
+亜夜	ya3 ye4
+亜夜	ya4 ye4
+亜夢	ya3 meng4
+亜夢	ya4 meng4
+亜妃	ya3 fei1
+亜妃	ya4 fei1
+亜姫	ya3 ji1
+亜姫	ya4 ji1
+亜子	ya3 zi3
+亜子	ya4 zi3
+亜季	ya3 ji4
+亜季	ya4 ji4
+亜岐	ya3 qi2
+亜岐	ya4 qi2
+亜市	ya3 shi4
+亜市	ya4 shi4
+亜希	ya3 xi1
+亜希	ya4 xi1
+亜惟	ya3 wei2
+亜惟	ya4 wei2
+亜木	ya3 mu4
+亜木	ya4 mu4
+亜未	ya3 wei4
+亜未	ya4 wei4
+亜朱	ya3 zhu1
+亜朱	ya4 zhu1
+亜梨	ya3 li2
+亜梨	ya4 li2
+亜樹	ya3 shu4
+亜樹	ya4 shu4
+亜機	ya3 ji1
+亜機	ya4 ji1
+亜歌	ya3 ge1
+亜歌	ya4 ge1
+亜沙	ya3 sha1
+亜沙	ya4 sha1
+亜津	ya3 jin1
+亜津	ya4 jin1
+亜流	ya3 liu2
+亜流	ya4 liu2
+亜海	ya3 hai3
+亜海	ya4 hai3
+亜湖	ya3 hu2
+亜湖	ya4 hu2
+亜理	ya3 li3
+亜理	ya4 li3
+亜由	ya3 you2
+亜由	ya4 you2
+亜留	ya3 liu2
+亜留	ya4 liu2
+亜矢	ya3 shi3
+亜矢	ya4 shi3
+亜砂	ya3 sha1
+亜砂	ya4 sha1
+亜科	ya3 ke1
+亜科	ya4 ke1
+亜稀	ya3 xi1
+亜稀	ya4 xi1
+亜種	ya3 zhong3
+亜種	ya4 zhong3
+亜紀	ya3 ji4
+亜紀	ya4 ji4
+亜紗	ya3 sha1
+亜紗	ya4 sha1
+亜美	ya3 mei3
+亜美	ya4 mei3
+亜耶	ya3 ye1
+亜耶	ya3 ye2
+亜耶	ya4 ye1
+亜耶	ya4 ye2
+亜胡	ya3 hu2
+亜胡	ya4 hu2
+亜衣	ya3 yi1
+亜衣	ya4 yi1
+亜規	ya3 gui1
+亜規	ya4 gui1
+亜記	ya3 ji4
+亜記	ya4 ji4
+亜貴	ya3 gui4
+亜貴	ya4 gui4
+亜起	ya3 qi3
+亜起	ya4 qi3
+亜輝	ya3 hui1
+亜輝	ya4 hui1
+亜都	ya3 du1
+亜都	ya4 du1
+亜里	ya3 li3
+亜里	ya4 li3
+亜鈴	ya3 ling2
+亜鈴	ya4 ling2
+亜鉛	ya3 qian1
+亜鉛	ya4 qian1
+亜麻	ya3 ma2
+亜麻	ya4 ma2
+未亜	wei4 ya3
+未亜	wei4 ya4
+東亜	dong1 ya3
+東亜	dong1 ya4
+梨亜	li2 ya3
+梨亜	li2 ya4
+理亜	li3 ya3
+理亜	li3 ya4
+白亜	bai2 ya3
+白亜	bai2 ya4
+紫亜	zi3 ya3
+紫亜	zi3 ya4
+美亜	mei3 ya3
+美亜	mei3 ya4
+聖亜	sheng4 ya3
+聖亜	sheng4 ya4
+起亜	qi3 ya3
+起亜	qi3 ya4
+里亜	li3 ya3
+里亜	li3 ya4
+野亜	ye3 ya3
+野亜	ye3 ya4
+騎亜	qi2 ya3
+騎亜	qi2 ya4
+亜希子	ya3 xi1 zi3
+亜希子	ya4 xi1 zi3
+亜矢子	ya3 shi3 zi3
+亜矢子	ya4 shi3 zi3
+亜砒酸	ya3 pi1 suan1
+亜砒酸	ya4 pi1 suan1
+亜硫酸	ya3 liu2 suan1
+亜硫酸	ya4 liu2 suan1
+亜紀子	ya3 ji4 zi3
+亜紀子	ya4 ji4 zi3
+亜細亜	ya3 xi4 ya3
+亜細亜	ya4 xi4 ya4
+露西亜	lu4 xi1 ya3
+露西亜	lu4 xi1 ya4
+三上悠亜	san1 shang4 you1 ya3
+三上悠亜	san1 shang4 you1 ya4
+亜米利加	ya3 mi3 li4 jia1
+亜米利加	ya4 mi3 li4 jia1
+吉岡亜衣加	ji2 gang1 ya3 yi1 jia1
+吉岡亜衣加	ji2 gang1 ya4 yi1 jia1
+##### 日文用字：「塩」（已增轉「鹽」）@ #####
+一塩	yi1 yan2
+一塩	yi4 yan2
+上塩	shang4 yan2
+塩入	yan2 ru4
+塩冶	yan2 ye3
+塩分	yan2 fen4
+塩化	yan2 hua4
+塩原	yan2 yuan2
+塩味	yan2 wei4
+塩基	yan2 ji1
+塩尻	yan2 kao1
+塩尾	yan2 wei3
+塩屋	yan2 wu1
+塩山	yan2 shan1
+塩引	yan2 yin3
+塩梅	yan2 mei2
+塩水	yan2 shui3
+塩沢	yan2 ze2
+塩浜	yan2 bin1
+塩瀬	yan2 lai4
+塩物	yan2 wu4
+塩田	yan2 tian2
+塩町	yan2 ding1
+塩町	yan2 ting3
+塩竈	yan2 zao4
+塩素	yan2 su4
+塩花	yan2 hua1
+塩見	yan2 jian4
+塩谷	yan2 gu3
+塩豆	yan2 dou4
+塩辛	yan2 xin1
+塩酸	yan2 suan1
+塩野	yan2 ye3
+塩釜	yan2 fu3
+塩類	yan2 lei4
+塩鮭	yan2 gui1
+大塩	da4 yan2
+天塩	tian1 yan2
+岩塩	yan2 yan2
+手塩	shou3 yan2
+米塩	mi3 yan2
+粗塩	cu1 yan2
+薄塩	bao2 yan2
+薄塩	bo2 yan2
+製塩	zhi4 yan2
+食塩	shi2 yan2
+塩加減	yan2 jia1 jian3
+塩尻峠	yan2 kao1 qia3
+塩野義	yan2 ye3 yi4
+天塩川	tian1 yan2 chuan1
+稀塩酸	xi1 yan2 suan1
+胡麻塩	hu2 ma2 yan2
+那須塩原	na4 xu1 yan2 yuan2
+##### 日文用字：「巣」（已增轉「巢」）@ #####
+出巣	chu1 chao2
+卵巣	luan3 chao2
+古巣	gu3 chao2
+営巣	ying2 chao2
+屈巣	qu1 chao2
+巣子	chao2 zi3
+巣子	chao2 zi5
+巣山	chao2 shan1
+巣日	chao2 ri4
+巣窟	chao2 ku1
+巣箱	chao2 xiang1
+巣鴨	chao2 ya1
+帰巣	gui1 chao2
+浮巣	fu2 chao2
+病巣	bing4 chao2
+空巣	kong1 chao2
+精巣	jing1 chao2
+鋳巣	zhu4 chao2
+鳥巣	niao3 chao2
+鷹巣	ying1 chao2
+室鳩巣	shi4 jiu1 chao2
+帰巣性	gui1 chao2 xing4
+御巣鷹	yu4 chao2 ying1
+##### 日文用字：「咲」（未轉）@ #####
+一咲	yi1 xiao4
+一咲	yi2 xiao4
+利咲	li4 xiao4
+咲世	xiao4 shi4
+咲代	xiao4 dai4
+咲夜	xiao4 ye4
+咲姫	xiao4 ji1
+咲子	xiao4 zi3
+咲季	xiao4 ji4
+咲帆	xiao4 fan1
+咲帆	xiao4 fan2
+咲希	xiao4 xi1
+咲智	xiao4 zhi4
+咲樹	xiao4 shu4
+咲稀	xiao4 xi1
+咲穂	xiao4 sui4
+咲紀	xiao4 ji4
+咲綺	xiao4 qi2	80%
+咲綺	xiao4 qi3
+咲羅	xiao4 luo2
+咲耶	xiao4 ye1
+咲耶	xiao4 ye2
+咲良	xiao4 liang2
+咲葵	xiao4 kui2
+咲蘭	xiao4 lan2
+咲衣	xiao4 yi1
+咲見	xiao4 jian4
+咲貴	xiao4 gui4
+咲輝	xiao4 hui1
+咲里	xiao4 li3
+咲野	xiao4 ye3
+智咲	zhi4 xiao4
+未咲	wei4 xiao4
+理咲	li3 xiao4
+真咲	zhen1 xiao4
+美咲	mei3 xiao4
+花咲	hua1 xiao4
+里咲	li3 xiao4
+稚咲内	zhi4 xiao4 nei4
+雨蘭咲木子	yu3 lan2 xiao4 mu4 zi3
+##### 日文用字：「瀬」（未轉）@ #####
+一瀬	yi1 lai4
+一瀬	yi2 lai4
+七瀬	qi1 lai4
+三瀬	san1 lai4
+中瀬	zhong1 lai4
+久瀬	jiu3 lai4
+井瀬	jing3 lai4
+佐瀬	zuo3 lai4
+余瀬	yu2 lai4
+備瀬	bei4 lai4
+八瀬	ba1 lai4
+出瀬	chu1 lai4
+初瀬	chu1 lai4
+加瀬	jia1 lai4
+勝瀬	sheng4 lai4
+古瀬	gu3 lai4
+吉瀬	ji2 lai4
+名瀬	ming2 lai4
+和瀬	he2 lai4
+喜瀬	xi3 lai4
+嘉瀬	jia1 lai4
+大瀬	da4 lai4
+奈瀬	nai4 lai4
+女瀬	nv3 lai4
+安瀬	an1 lai4
+小瀬	xiao3 lai4
+尾瀬	wei3 lai4
+山瀬	shan1 lai4
+岩瀬	yan2 lai4
+川瀬	chuan1 lai4
+巨瀬	ju4 lai4
+市瀬	shi4 lai4
+布瀬	bu4 lai4
+干瀬	gan1 lai4
+廣瀬	guang3 lai4
+成瀬	cheng2 lai4
+早瀬	zao3 lai4
+月瀬	yue4 lai4
+木瀬	mu4 lai4
+村瀬	cun1 lai4
+松瀬	song1 lai4
+柳瀬	liu3 lai4
+楠瀬	nan2 lai4
+永瀬	yong3 lai4
+河瀬	he2 lai4
+波瀬	bo1 lai4
+波瀬	po1 lai4
+津瀬	jin1 lai4
+深瀬	shen1 lai4
+淵瀬	yuan1 lai4
+清瀬	qing1 lai4
+渡瀬	du4 lai4
+湯瀬	tang1 lai4
+瀬井	lai4 jing3
+瀬亜	lai4 ya3
+瀬亜	lai4 ya4
+瀬人	lai4 ren2
+瀬利	lai4 li4
+瀬古	lai4 gu3
+瀬尾	lai4 wei3
+瀬居	lai4 ju1
+瀬川	lai4 chuan1
+瀬木	lai4 mu4
+瀬河	lai4 he2
+瀬沼	lai4 zhao3
+瀬津	lai4 jin1
+瀬田	lai4 tian2
+瀬羽	lai4 yu3
+瀬能	lai4 neng2
+瀬良	lai4 liang2
+瀬見	lai4 jian4
+瀬谷	lai4 gu3
+瀬賀	lai4 he4
+瀬越	lai4 yue4
+瀬部	lai4 bu4
+瀬里	lai4 li3
+瀬間	lai4 jian1
+瀬音	lai4 yin1
+無瀬	wu2 lai4
+片瀬	pian4 lai4
+田瀬	tian2 lai4
+白瀬	bai2 lai4
+百瀬	bai3 lai4
+皆瀬	jie1 lai4
+真瀬	zhen1 lai4
+綾瀬	ling2 lai4
+羽瀬	yu3 lai4
+能瀬	neng2 lai4
+船瀬	chuan2 lai4
+花瀬	hua1 lai4
+見瀬	jian4 lai4
+赤瀬	chi4 lai4
+逢瀬	feng2 lai4
+野瀬	ye3 lai4
+長瀬	chang2 lai4
+間瀬	jian1 lai4
+阿瀬	a1 lai4
+飛瀬	fei1 lai4
+馬瀬	ma3 lai4
+高瀬	gao1 lai4
+鵜瀬	ti2 lai4
+鵜瀬	ti4 lai4	80%
+鶴瀬	he4 lai4
+鹿瀬	lu4 lai4
+中瀬古	zhong1 lai4 gu3
+初瀬川	chu1 lai4 chuan1
+加瀬谷	jia1 lai4 gu3
+勝賀瀬	sheng4 he4 lai4
+大瀬木	da4 lai4 mu4
+小瀬木	xiao3 lai4 mu4
+市野瀬	shi4 ye3 lai4
+曲直瀬	qu1 zhi2 lai4
+曲直瀬	qu3 zhi2 lai4
+水無瀬	shui3 wu2 lai4
+瀬田川	lai4 tian2 chuan1
+綾瀬川	ling2 lai4 chuan1
+長瀬川	chang2 lai4 chuan1
+高瀬川	gao1 lai4 chuan1
+加瀬康之	jia1 lai4 kang1 zhi1
+渡良瀬川	du4 liang2 lai4 chuan1
+##### 日文用字：「冨」（未轉）@ #####
+冨久	fu4 jiu3
+冨士	fu4 shi4
+冨宅	fu4 zhai2
+冨家	fu4 jia1
+冨山	fu4 shan1
+冨樫	fu4 jian1
+冨田	fu4 tian2
+冨美	fu4 mei3
+冨貴	fu4 gui4
+大冨	da4 fu4
+冨安健洋	fu4 an1 jian4 yang2
+冨樫義博	fu4 jian1 yi4 bo2
+##### 日文用字：「嶋」（未轉）@ #####
+三嶋	san1 dao3
+中嶋	zhong1 dao3
+前嶋	qian2 dao3
+大嶋	da4 dao3
+宮嶋	gong1 dao3
+寺嶋	si4 dao3
+小嶋	xiao3 dao3
+嶋田	dao3 tian2
+川嶋	chuan1 dao3
+松嶋	song1 dao3
+江嶋	jiang1 dao3
+河嶋	he2 dao3
+浦嶋	pu3 dao3
+田嶋	tian2 dao3
+福嶋	fu2 dao3
+藤嶋	teng2 dao3
+長嶋	chang2 dao3
+青嶋	qing1 dao3
+高嶋	gao1 dao3
+喜多嶋	xi3 duo1 dao3
+小豆嶋	xiao3 dou4 dao3
+##### 1164@ #####

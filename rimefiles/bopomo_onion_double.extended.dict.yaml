@@ -5,7 +5,7 @@
 # 中文字詞標註使用拼音
 ---
 name: bopomo_onion_double.extended
-version: "202501"
+version: "202611"
 sort: by_weight
 vocabulary: essay-zh-hant-mc
 #use_preset_vocabulary: true
@@ -16,6 +16,7 @@ import_tables:
   - terra_pinyin_onion_add
   - mixin_bpmf  #內嵌注音文，混打。
   - phrases.chtp
+  # - phrases.chtp_jp
 ...
 ##### 雙拼注音_內嵌單注音起始（以下編碼使用全形避轉換） #####
  	ｅ

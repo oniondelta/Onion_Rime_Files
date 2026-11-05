@@ -4,6 +4,7 @@
 # 『洋蔥』
 #
 # 本詞庫為日文含有「漢字」之詞彙，但刪除與「terra_pinyin_onion.dict」與「phrases.chtp.dict」重複的漢字詞，避免破音字在不必要時出現，如：ㄧㄣˊㄒㄧㄥˊ出現「銀行」。
+# 本詞庫刪除「漢字」之詞彙，移至「phrases.chtp.dict」或「phrases.chtp_jp.dict」中。
 # 本詞庫刪除純「假名」之詞彙。純「假名」詞庫為「phrases.jp_hk」。
 ---
 name: phrases.jp_hkkreduce

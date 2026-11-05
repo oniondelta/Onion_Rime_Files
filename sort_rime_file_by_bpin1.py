@@ -78,6 +78,7 @@ shutil.copyfile("./rimefiles/space.dict.yaml", "./"+sort_rime+"/"+rime_files+"/s
 shutil.copyfile("./rimefiles/space_f.dict.yaml", "./"+sort_rime+"/"+rime_files+"/space_f.dict.yaml")
 shutil.copyfile("./rimefiles/phrases.cht.dict.yaml", "./"+sort_rime+"/"+rime_files+"/phrases.cht.dict.yaml")
 shutil.copyfile("./rimefiles/phrases.chtp.dict.yaml", "./"+sort_rime+"/"+rime_files+"/phrases.chtp.dict.yaml")
+shutil.copyfile("./rimefiles/phrases.chtp_jp.dict.yaml", "./"+sort_rime+"/"+rime_files+"/phrases.chtp_jp.dict.yaml")
 shutil.copyfile("./rimefiles/phrases.cyr_all.dict.yaml", "./"+sort_rime+"/"+rime_files+"/phrases.cyr_all.dict.yaml")
 shutil.copyfile("./rimefiles/phrases.en_l_w.dict.yaml", "./"+sort_rime+"/"+rime_files+"/phrases.en_l_w.dict.yaml")
 shutil.copyfile("./rimefiles/phrases.en_o_w.dict.yaml", "./"+sort_rime+"/"+rime_files+"/phrases.en_o_w.dict.yaml")

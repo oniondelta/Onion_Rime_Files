@@ -4,7 +4,7 @@
 # 刪除單字
 ---
 name: phrases.ocmtc_essay_mc
-version: "202507"
+version: "202611"
 sort: original #by_weight
 use_preset_vocabulary: false
 # max_phrase_length: 7 #20
@@ -31799,7 +31799,7 @@ columns:
 敝姓	2
 敝屣	3
 敝履	1
-敝徙	1
+敝蹝	1
 敝舊	1
 敝舍	1
 敝處	1
@@ -57419,7 +57419,6 @@ columns:
 蜜蠟	5
 蜜餞	9
 蜥蜴	40
-蜥蝪	4
 蜩螗	1
 蜷伏	2
 蜷曲	5
@@ -127662,7 +127661,7 @@ columns:
 規章制度	4
 規規矩矩	21
 視如己出	2
-視如敝徙	1
+視如敝屣	1
 視機而定	1
 視死如歸	2
 視民如傷	1

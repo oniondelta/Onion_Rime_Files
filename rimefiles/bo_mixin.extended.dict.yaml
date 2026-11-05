@@ -6,7 +6,7 @@
 # 包含中文、韓語、日語、拉丁+音標
 ---
 name: bo_mixin.extended
-version: "202301"
+version: "202611"
 sort: by_weight
 vocabulary: essay-zh-hant-mc-mixin
 #use_preset_vocabulary: true
@@ -21,6 +21,7 @@ import_tables:
   - bo_mixin_kr_hnc  #《韓文HNC羅馬字》  #此項打開時，bo_mixin_kr 請關閉。
   - phrases.cht_en_w
   - phrases.chtp
+  - phrases.chtp_jp
   # - phrases.cht  #《未標注拼音之中文詞庫》  #不建議打開。
   - phrases.en_o_w
   - phrases.la_py_w
