@@ -255,6 +255,7 @@
 #    詞句中，「酊」臺灣標準只有「ding3」，大陸標準有「ding1」和「ding3」，且不同發音其字義不同，斟酌後皆補齊「ding1」「ding3」。
 #    詞句中，「銑」臺灣標準只有「xian3」，大陸標準有「xian3」和「xi3」，且不同發音其字義不同，斟酌後皆補齊「xian3」「xi3」。
 #    詞句中，「柵」和「栅」臺灣標準為「zha4」，又音為「shan4」，大陸標準為「shan1」，日常易混，故皆補齊「zha4」「shan4」「shan1」，後兩者詞頻設為80%。
+#    詞句中，「攞」教育部重編國語詞典修訂本為「luo1」，異體字字典為「luo2」又音為「luo3」，大陸標準為「luo2」，故皆補齊「luo1」「luo2」「luo3」。
 #    詞句中，「削」臺灣標準讀音為「xue4」，語音為「xiao1」，大陸標準為「xue1」，日常易混，故皆補齊「xue4」「xiao1」「xue1」。有些詞發音如此標註會奇怪，待攷！
 #    詞句中，「肋」臺灣標準讀音為「le4」，語音為「lei4」，故皆補齊「le4」「lei4」。
 #    詞句中，「攜」臺灣字典讀音為「xi1」，語音為「xie2」，故皆補齊「xi1」「xie2」。
@@ -4318,6 +4319,8 @@ min_phrase_weight: 100
 殽	xiao4	0%
 彀	kou1	0%
 毀	hui4	0%
+攤	nan4	0%
+摊	nan4	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -5626,7 +5629,7 @@ min_phrase_weight: 100
 黭	an3	1%
 黮	tan3	1%
 孌	luan3	1%
-攞	luo1	1%
+攞	luo1
 癬	xian3
 穰	rang3	1%
 籠	long3	1%
@@ -72615,6 +72618,7 @@ min_phrase_weight: 100
 堂姊妹	tang2 jie3 mei4
 堂姊妹	tang2 zi3 mei4
 堂子	tang2 zi5
+堂子	tang2 zi3
 堂客	tang2 ke4
 堂客船	tang2 ke4 chuan2
 堂帖	tang2 tie3
@@ -83135,7 +83139,15 @@ min_phrase_weight: 100
 拽巷攞街	zhuai4 xiang4 luo2 jie1
 拽巷攞街	zhuai1 xiang4 luo2 jie1
 拽巷攞街	zhuai3 xiang4 luo2 jie1	80%
+拽巷攞街	zhuai4 xiang4 luo1 jie1
+拽巷攞街	zhuai1 xiang4 luo1 jie1
+拽巷攞街	zhuai3 xiang4 luo1 jie1	80%
+拽巷攞街	zhuai4 xiang4 luo3 jie1
+拽巷攞街	zhuai1 xiang4 luo3 jie1
+拽巷攞街	zhuai3 xiang4 luo3 jie1	80%
 拽巷攞街	ye4 xiang4 luo2 jie1
+拽巷攞街	ye4 xiang4 luo1 jie1
+拽巷攞街	ye4 xiang4 luo3 jie1
 拽巷邏街	zhuai4 xiang4 luo2 jie1
 拽巷邏街	zhuai1 xiang4 luo2 jie1
 拽巷邏街	zhuai3 xiang4 luo2 jie1	80%
@@ -84023,6 +84035,8 @@ min_phrase_weight: 100
 揎拳捋袖	xuan1 quan2 le4 xiu4
 揎拳擄袖	xuan1 quan2 luo3 xiu4
 揎拳攞袖	xuan1 quan2 luo1 xiu4
+揎拳攞袖	xuan1 quan2 luo2 xiu4
+揎拳攞袖	xuan1 quan2 luo3 xiu4
 描摸	miao2 mo2
 描鸞刺鳳	miao2 luan2 ci4 feng4
 提不起來	ti2 bu4 qi3 lai2
@@ -86742,7 +86756,9 @@ min_phrase_weight: 100
 旋轉角	xuan2 zhuan3 jiao3
 旋轉角速度	xuan2 zhuan3 jiao3 su4 du4
 旋轉軸	xuan2 zhuan3 zhou2
+旋轉軸	xuan2 zhuan4 zhou2
 旋轉運動	xuan2 zhuan3 yun4 dong4
+旋轉運動	xuan2 zhuan4 yun4 dong4
 旋轉餐廳	xuan2 zhuan3 can1 ting1
 旋轉體	xuan2 zhuan3 ti3
 旋辟	xuan2 pi4
@@ -98472,6 +98488,7 @@ min_phrase_weight: 100
 相像	xiang1 xiang4
 相公	xiang4 gong1
 相公堂子	xiang4 gong1 tang2 zi5
+相公堂子	xiang4 gong1 tang2 zi3
 相冊	xiang4 ce4
 相切	xiang1 qie4
 相切	xiang1 qie1
@@ -113231,6 +113248,8 @@ min_phrase_weight: 100
 轉軸	zhuan3 zhou2
 轉軸兒	zhuan4 zhou2 er5	80%
 轉軸兒	zhuan4 zhou2 er2
+轉軸兒	zhuan3 zhou2 er5	80%
+轉軸兒	zhuan3 zhou2 er2
 轉載	zhuan3 zai4
 轉載	zhuan3 zai3
 轉載稿	zhuan3 zai4 gao3
@@ -121427,4 +121446,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 121430 #####
+##### @結束 END - 121449 #####
