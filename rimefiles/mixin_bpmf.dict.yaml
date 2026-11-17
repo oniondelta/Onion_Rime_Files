@@ -16,7 +16,7 @@
 #
 ---
 name: mixin_bpmf
-version: "202507"
+version: "202611"
 sort: by_weight
 use_preset_vocabulary: false
 ...
@@ -3231,7 +3231,7 @@ use_preset_vocabulary: false
 ㄏㄨ˙	＊＊hu5	1
 ㄏㄨㄚ˙	＊＊hua5	1
 ㄏㄨㄛ˙	＊＊huo5	1
-# ㄏㄨㄞ˙	＊＊huai5	0
+ㄏㄨㄞ˙	＊＊huai5	1
 ㄏㄨㄟ˙	＊＊hui5	1
 ㄏㄨㄢ˙	＊＊huan5	1
 ㄏㄨㄣ˙	＊＊hun5	1

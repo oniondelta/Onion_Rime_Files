@@ -4321,6 +4321,53 @@ min_phrase_weight: 100
 毀	hui4	0%
 攤	nan4	0%
 摊	nan4	0%
+忑	dao3	0%
+忐	keng3	0%
+吵	chao1	0%
+吵	chao4	0%
+吶	ne4	0%
+吶	nuo4	0%
+告	ju1	0%
+吿	ju1	0%
+啴	chan1	0%
+啴	dan3	0%
+嘿	mu4	0%
+嘮	chao1	0%
+嘮	xiao1	0%
+唠	chao1	0%
+唠	xiao1	0%
+唬	xiao1	0%
+唬	guo2	0%
+唬	xia4	0%
+唬	hao2	0%
+唵	an1	0%
+啡	pei4	0%
+啡	pai2	0%
+唻	lai5	0%
+吧	pa1	0%
+味	mei4	0%
+寻	xin2	0%
+嵔	wei1
+嵬	wei3	0%
+㟴	kui3	0%
+㟴	wei2	0%
+㟴	wei3	0%
+嵒	yi4	0%
+嵒	ji2	0%
+喦	yi4	0%
+喟	huai4	0%
+單	dan3	0%
+單	chan3	0%
+單	zhan4	0%
+單	tan2	0%
+单	dan3	0%
+单	chan3	0%
+单	zhan4	0%
+单	tan2	0%
+単	dan3	0%
+単	chan3	0%
+単	zhan4	0%
+単	tan2	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -4885,7 +4932,7 @@ min_phrase_weight: 100
 媕	yan3	1%
 媮	yu2	1%
 孳	zi4	1%
-尋	xin2	1%
+尋	xin2	0%
 尰	chong4	1%
 崱	ze4	1%
 巽	sun4	1%
@@ -6208,7 +6255,7 @@ min_phrase_weight: 100
 蓥	jiong3	0.5%
 蓥	ying4	0.5%
 摬	ying4	0.5%
-喦	yan2	0.5%
+喦	yan2	0%
 顃	yan2	0.5%
 𩖖	yan2	0%
 𩖖	shan3	0%
@@ -67909,6 +67956,7 @@ min_phrase_weight: 100
 博識	bo2 shi4
 卜卜米	bu3 bu3 mi3
 卜占	bu3 zhan1
+卜占	bu3 zhan4
 卜宅	bu3 zhe4
 卜宅	bu3 zhai2
 卜度	bu3 duo4
@@ -67927,6 +67975,7 @@ min_phrase_weight: 100
 占卜	zhan1 bu3
 占卜	zhan4 bu3
 占卦	zhan1 gua4
+占卦	zhan4 gua4
 占地	zhan4 di4
 占地兒	zhan4 di4 er5	80%
 占地兒	zhan4 di4 er2
@@ -67934,17 +67983,24 @@ min_phrase_weight: 100
 占地步	zhan4 di4 bu4
 占地盤	zhan4 di4 pan2
 占夢	zhan1 meng4
+占夢	zhan4 meng4
 占射	zhan1 she4
 占強	zhan4 qiang2
 占房	zhan4 fang2
 占拜	zhan1 bai4
 占據	zhan4 ju4
 占斷	zhan1 duan4
+占斷	zhan4 duan4
 占星	zhan1 xing1
+占星	zhan4 xing1
 占星學	zhan1 xing1 xue2
+占星學	zhan4 xing1 xue2
 占星家	zhan1 xing1 jia1
+占星家	zhan4 xing1 jia1
 占星師	zhan1 xing1 shi1
+占星師	zhan4 xing1 shi1
 占星術	zhan1 xing1 shu4
+占星術	zhan4 xing1 shu4
 占有	zhan4 you3
 占有權	zhan4 you3 quan2
 占有率	zhan4 you3 lv4
@@ -69128,6 +69184,7 @@ min_phrase_weight: 100
 吉光片羽	ji2 guang1 pian4 yu3
 吉勒	ji2 le4
 吉占	ji2 zhan1
+吉占	ji2 zhan4
 吉吉枓枓	ji2 ji2 zhu3 zhu3
 吉地	ji2 di4
 吉夕	ji2 xi4
@@ -70663,6 +70720,8 @@ min_phrase_weight: 100
 啫哩	zhe3 li1
 啲咑	di1 da1
 啲咑	di1 da5
+啲咑	di5 da1	80%
+啲咑	di5 da5	80%
 # 啲咑	di1 da3
 啴啴	tan1 tan1
 啵啵	bo1 bo1
@@ -86884,6 +86943,7 @@ min_phrase_weight: 100
 早上好	zao3 shang3 hao3
 早上好	zao3 shang4 hao3
 早占勿藥	zao3 zhan1 wu4 yao4
+早占勿藥	zao3 zhan4 wu4 yao4
 早名必折	zao3 ming2 bi4 zhe2
 早夭	zao3 yao3
 早夭	zao3 yao1
@@ -89449,6 +89509,7 @@ min_phrase_weight: 100
 梔子花	zhi1 zi5 hua1
 梔子花	zhi1 zi3 hua1
 梗塞	geng3 se4
+梗塞	geng3 sai1
 條件刺激	tiao2 jian4 ci4 ji1
 條件反應	tiao2 jian4 fan3 ying4
 條件概率	tiao2 jian4 gai4 lv4
@@ -120528,6 +120589,7 @@ min_phrase_weight: 100
 鬼蜮伎倆	gui3 yu4 ji4 liang3
 鬼行胸臆	gui3 xing2 xiong1 yi4
 鬼門上占卦	gui3 men2 shang4 zhan1 gua4
+鬼門上占卦	gui3 men2 shang4 zhan4 gua4
 鬼頭	gui3 tou5
 鬼頭	gui3 tou2
 鬼飯疙瘩	gui3 fan4 ge1 da5
@@ -120653,6 +120715,7 @@ min_phrase_weight: 100
 鰭刺	qi2 ci4
 鰲裡奪尊	ao2 li3 duo2 zun1
 鰲頭獨占	ao2 tou2 du2 zhan4
+鰲頭獨占	ao2 tou2 du2 zhan1
 鱉悶	bie1 men4
 鱉悶	bie1 men1
 鱉煞	bie1 sha4
@@ -120703,6 +120766,7 @@ min_phrase_weight: 100
 鳳冠霞帔	feng4 guan4 xia2 pei4
 鳳凰無寶處不落	feng4 huang2 wu2 bao3 chu4 bu2 luo4
 鳳占	feng4 zhan1
+鳳占	feng4 zhan4
 鳳去樓空	feng4 qu4 lou2 kong1
 鳳去台空	feng4 qu4 tai2 kong1
 鳳去臺空	feng4 qu4 tai2 kong1
@@ -121258,6 +121322,7 @@ min_phrase_weight: 100
 黿鳴鱉應	yuan2 ming2 bie1 ying4
 鼂錯	chao2 cuo4
 鼇頭獨占	ao2 tou2 du2 zhan4
+鼇頭獨占	ao2 tou2 du2 zhan1
 鼉更	tuo2 geng1
 鼎元之分	ding3 yuan2 zhi1 fen4
 鼎力相助	ding3 li4 xiang1 zhu4
@@ -121446,4 +121511,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 121449 #####
+##### @結束 END - 121514 #####

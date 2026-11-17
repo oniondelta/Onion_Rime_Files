@@ -20022,6 +20022,7 @@ columns:
 停指	ting2 zhi3
 停掉	ting2 diao4
 停損	ting2 sun3
+停搏	ting2 bo2
 停撥	ting2 bo1
 停播	ting2 bo1
 停播	ting2 bo4
@@ -38202,6 +38203,9 @@ columns:
 即位	ji2 wei4
 即使	ji2 shi3
 即來	ji2 lai2
+即係	ji2 xi4
+即候	ji2 hou4
+即假	ji2 jia3
 即到	ji2 dao4
 即刻	ji2 ke4
 即化	ji2 hua4
@@ -38261,6 +38265,8 @@ columns:
 即空	ji2 kong1
 即答	ji2 da2
 即管	ji2 guan3
+即系	ji2 xi4
+即納	ji2 na4
 即能	ji2 neng2
 即與	ji2 yu3
 即若	ji2 ruo4
@@ -38274,9 +38280,11 @@ columns:
 即逝	ji2 shi4
 即速	ji2 su4
 即達	ji2 da2
+即那	ji2 na4
 即金	ji2 jin1
 即開	ji2 kai1
 即離	ji2 li2
+即頌	ji2 song4
 即題	ji2 ti2
 即食	ji2 shi2
 即飲	ji2 yin3
@@ -40427,12 +40435,14 @@ columns:
 古場	gu3 chang3
 古塔	gu3 ta3
 古塘	gu3 tang2
+古塤	gu3 xun1
 古墓	gu3 mu4
 古墳	gu3 fen2
 古壁	gu3 bi4
 古士	gu3 shi4
 古多	gu3 duo1
 古夢	gu3 meng4
+古夷	gu3 yi2
 古奇	gu3 qi2
 古奈	gu3 nai4
 古奧	gu3 ao4
@@ -40484,6 +40494,8 @@ columns:
 古彩	gu3 cai3
 古後	gu3 hou4
 古徑	gu3 jing4
+古微	gu3 wei1
+古微	gu3 wei2
 古德	gu3 de2
 古志	gu3 zhi4
 古怪	gu3 guai4
@@ -40500,6 +40512,7 @@ columns:
 古早	gu3 zao3
 古時	gu3 shi2
 古晉	gu3 jin4
+古曉	gu3 xiao3
 古曲	gu3 qu3
 古書	gu3 shu1
 古月	gu3 yue4
@@ -40529,6 +40542,7 @@ columns:
 古樹	gu3 shu4
 古橋	gu3 qiao2
 古歌	gu3 ge1
+古歷	gu3 li4
 古殿	gu3 dian4
 古母	gu3 mu3
 古比	gu3 bi3
@@ -40630,6 +40644,7 @@ columns:
 古萊	gu3 lai2
 古萩	gu3 qiu1
 古葉	gu3 ye4
+古著	gu3 zhuo2
 古董	gu3 dong3
 古蒂	gu3 di4
 古蓮	gu3 lian2
@@ -49783,6 +49798,8 @@ columns:
 嘲啾	chao2 jiu1
 嘲嘰	chao2 ji1
 嘲嘰	chao2 ji5	80%
+嘲嘲	chao2 chao2
+嘲嘲	zhao1 zhao1
 嘲惹	chao2 re3
 嘲戲	chao2 xi4
 嘲撥	chao2 bo1
@@ -57554,7 +57571,10 @@ columns:
 夜台	ye4 tai2
 夜合	ye4 he2
 夜吻	ye4 wen3
+夜咳	ye4 ke2
 夜哨	ye4 shao4
+夜啲	ye4 di1
+夜啲	ye4 di5	80%
 夜啼	ye4 ti2
 夜嚴	ye4 yan2
 夜士	ye4 shi4
@@ -57843,6 +57863,7 @@ columns:
 夢寐	meng4 mei4
 夢寒	meng4 han2
 夢幻	meng4 huan4
+夢庚	meng4 geng1
 夢影	meng4 ying3
 夢得	meng4 de2
 夢得	meng4 de5
@@ -67309,6 +67330,7 @@ columns:
 宏論	hong2 lun4
 宏贍	hong2 shan4
 宏軒	hong2 xuan1
+宏輝	hong2 hui1
 宏辯	hong2 bian4
 宏道	hong2 dao4
 宏達	hong2 da2
@@ -78760,6 +78782,7 @@ columns:
 希里	xi1 li3
 希雷	xi1 lei2
 希靜	xi1 jing4
+希音	xi1 yin1
 希頓	xi1 dun4
 希風	xi1 feng1
 希魔	xi1 mo2
@@ -83087,6 +83110,7 @@ columns:
 弘訓	hong2 xun4
 弘誓	hong2 shi4
 弘論	hong2 lun4
+弘輝	hong2 hui1
 弘農	hong2 nong2
 弘通	hong2 tong1
 弘道	hong2 dao4
@@ -87564,6 +87588,7 @@ columns:
 心弱	xin1 ruo4
 心強	xin1 qiang2
 心形	xin1 xing2
+心彤	xin1 tong2
 心影	xin1 ying3
 心律	xin1 lv4
 心微	xin1 wei1
@@ -87577,6 +87602,7 @@ columns:
 心急	xin1 ji2
 心性	xin1 xing4
 心怪	xin1 guai4
+心恬	xin1 tian2
 心息	xin1 xi2
 心悟	xin1 wu4
 心悲	xin1 bei1
@@ -87696,6 +87722,7 @@ columns:
 心瑋	xin1 wei3
 心瓣	xin1 ban4
 心甘	xin1 gan1
+心甜	xin1 tian2
 心生	xin1 sheng1
 心田	xin1 tian2
 心略	xin1 lve4
@@ -115845,7 +115872,9 @@ columns:
 暴崩	bao4 beng1
 暴庫	bao4 ku4
 暴強	bao4 qiang2
+暴征	bao4 zheng1
 暴徒	bao4 tu2
+暴徵	bao4 zheng1
 暴忽	bao4 hu1
 暴怒	bao4 nu4
 暴恐	bao4 kong3
@@ -121017,6 +121046,10 @@ columns:
 朝右	chao2 you4
 朝吹	zhao1 chui1
 朝命	chao2 ming4
+朝嘲	chao2 chao2
+朝嘲	chao2 zhao1
+朝嘲	zhao1 chao2
+朝嘲	zhao1 zhao1
 朝城	chao2 cheng2
 朝城	zhao1 cheng2
 朝堂	chao2 tang2
@@ -124708,6 +124741,7 @@ columns:
 林林	lin2 lin2
 林果	lin2 guo3
 林某	lin2 mou3
+林校	lin2 xiao4
 林根	lin2 gen1
 林格	lin2 ge2
 林桑	lin2 sang1
@@ -124882,6 +124916,7 @@ columns:
 林銘	lin2 ming2
 林鋒	lin2 feng1
 林鋼	lin2 gang1
+林鍾	lin2 zhong1
 林鎮	lin2 zhen4
 林鐘	lin2 zhong1
 林間	lin2 jian1
@@ -125818,6 +125853,7 @@ columns:
 柳弟	liu3 di4
 柳忠	liu3 zhong1
 柳惲	liu3 yun4
+柳文	liu3 wen2
 柳斌	liu3 bin1
 柳曉	liu3 xiao3
 柳曾	liu3 ceng2
@@ -125861,6 +125897,7 @@ columns:
 柳營	liu3 ying2
 柳燦	liu3 can4
 柳爸	liu3 ba4
+柳玟	liu3 wen2
 柳珪	liu3 gui1
 柳琴	liu3 qin2
 柳生	liu3 sheng1
@@ -125913,6 +125950,7 @@ columns:
 柳陰	liu3 yin4
 柳陽	liu3 yang2
 柳隱	liu3 yin3
+柳雯	liu3 wen2
 柳青	liu3 qing1
 柳飛	liu3 fei1
 柳骨	liu3 gu3
@@ -130860,12 +130898,15 @@ columns:
 欣宜	xin1 yi2
 欣幸	xin1 xing4
 欣弗	xin1 fu2
+欣彤	xin1 tong2
 欣德	xin1 de2
 欣快	xin1 kuai4
 欣忭	xin1 bian4
 欣怡	xin1 yi2
 欣悅	xin1 yue4
+欣悉	xin1 xi1
 欣惠	xin1 hui4
+欣慕	xin1 mu4
 欣慧	xin1 hui4
 欣慰	xin1 wei4
 欣戚	xin1 qi1
@@ -138050,6 +138091,7 @@ columns:
 泓宏	hong2 hong2
 泓汯	hong2 hong2
 泓泓	hong2 hong2
+泓輝	hong2 hui1
 泔水	gan1 shui3
 泔淡	gan1 dan4
 法中	fa3 zhong1
@@ -155002,6 +155044,8 @@ columns:
 王何	wang2 he2
 王佳	wang2 jia1
 王來	wang2 lai2
+王侗	wang2 dong4
+王侗	wang2 tong2
 王侯	wang2 hou2
 王俊	wang2 jun4
 王俠	wang2 xia2
@@ -155013,8 +155057,11 @@ columns:
 王傑	wang2 jie2
 王傳	wang2 chuan2
 王傳	wang2 zhuan4
+王僖	wang2 xi1
 王僧	wang2 seng1
 王儀	wang2 yi2
+王儉	wang2 jian3
+王儉	wang2 jian4
 王優	wang2 you1
 王允	wang2 yun3
 王元	wang2 yuan2
@@ -155028,6 +155075,7 @@ columns:
 王公	wang2 gong1
 王兵	wang2 bing1
 王典	wang2 dian3
+王冉	wang2 ran3
 王冕	wang2 mian3
 王冰	wang2 bing1
 王凌	wang2 ling2
@@ -155045,7 +155093,9 @@ columns:
 王劭	wang2 shao4
 王勃	wang2 bo2
 王勇	wang2 yong3
+王勉	wang2 mian3
 王勒	wang2 le4
+王勔	wang2 mian3
 王勛	wang2 xun1
 王勝	wang2 sheng4
 王勳	wang2 xun1
@@ -155077,12 +155127,16 @@ columns:
 王啟	wang2 qi3
 王善	wang2 shan4
 王喜	wang2 xi3
+王喦	wang2 nie4
+王喦	wang2 yan2
 王喬	wang2 qiao2
 王嘉	wang2 jia1
+王嚴	wang2 yan2
 王四	wang2 si4
 王國	wang2 guo2
 王園	wang2 yuan2
 王土	wang2 tu3
+王圻	wang2 qi2
 王均	wang2 jun1
 王垠	wang2 yin2
 王城	wang2 cheng2
@@ -155142,6 +155196,7 @@ columns:
 王宏	wang2 hong2
 王宗	wang2 zong1
 王官	wang2 guan1
+王宙	wang2 zhou4
 王定	wang2 ding4
 王宜	wang2 yi2
 王宣	wang2 xuan1
@@ -155159,12 +155214,14 @@ columns:
 王寺	wang2 si4
 王封	wang2 feng1
 王將	wang2 jiang4
+王尋	wang2 xun2
 王導	wang2 dao3
 王小	wang2 xiao3
 王尚	wang2 shang4
 王尹	wang2 yin3
 王屋	wang2 wu1
 王展	wang2 zhan3
+王履	wang2 lv3
 王山	wang2 shan1
 王岩	wang2 yan2
 王岱	wang2 dai4
@@ -155172,6 +155229,7 @@ columns:
 王峰	wang2 feng1
 王崇	wang2 chong2
 王崴	wang2 wei1
+王嵬	wang2 wei2
 王嶺	wang2 ling3
 王嶽	wang2 yue4
 王巍	wang2 wei1
@@ -155199,6 +155257,7 @@ columns:
 王廷	wang2 ting2
 王建	wang2 jian4
 王式	wang2 shi4
+王引	wang2 yin3
 王弘	wang2 hong2
 王弟	wang2 di4
 王強	wang2 qiang2
@@ -155226,6 +155285,7 @@ columns:
 王恆	wang2 heng2
 王恭	wang2 gong1
 王悅	wang2 yue4
+王悠	wang2 you1
 王惠	wang2 hui4
 王惲	wang2 yun4
 王愷	wang2 kai3
@@ -155240,6 +155300,7 @@ columns:
 王才	wang2 cai2
 王承	wang2 cheng2
 王振	wang2 zhen4
+王撰	wang2 zhuan4
 王擢	wang2 zhuo2
 王攀	wang2 pan1
 王政	wang2 zheng4
@@ -155291,6 +155352,7 @@ columns:
 王東	wang2 dong1
 王松	wang2 song1
 王林	wang2 lin2
+王果	wang2 guo3
 王柏	wang2 bai3
 王柏	wang2 bo2
 王某	wang2 mou3
@@ -155352,9 +155414,11 @@ columns:
 王津	wang2 jin1
 王洧	wang2 wei3
 王洪	wang2 hong2
+王洲	wang2 zhou1
 王派	wang2 pai4
 王浩	wang2 hao4
 王海	wang2 hai3
+王涌	wang2 yong3
 王涓	wang2 juan1
 王淇	wang2 qi2
 王淦	wang2 gan4
@@ -155364,6 +155428,8 @@ columns:
 王渙	wang2 huan4
 王渝	wang2 yu2
 王渾	wang2 hun2
+王湧	wang2 yong3
+王湯	wang2 tang1
 王源	wang2 yuan2
 王溥	wang2 pu3
 王滿	wang2 man3
@@ -155371,6 +155437,7 @@ columns:
 王潔	wang2 jie2
 王潭	wang2 tan2
 王澄	wang2 cheng2
+王澡	wang2 zao3
 王濂	wang2 lian2
 王濛	wang2 meng2
 王濟	wang2 ji4
@@ -155385,6 +155452,7 @@ columns:
 王炸	wang2 zha4
 王烈	wang2 lie4
 王焱	wang2 yan4
+王然	wang2 ran2
 王煊	wang2 xuan1
 王煒	wang2 wei3
 王煜	wang2 yu4
@@ -155400,6 +155468,7 @@ columns:
 王燾	wang2 dao4
 王燾	wang2 tao1
 王燾	wang2 tao2
+王爍	wang2 shuo4
 王爵	wang2 jue2
 王父	wang2 fu4
 王爸	wang2 ba4
@@ -155416,9 +155485,11 @@ columns:
 王珊	wang2 shan1
 王珍	wang2 zhen1
 王珏	wang2 jue2
+王珙	wang2 gong3
 王珪	wang2 gui1
 王班	wang2 ban1
 王珺	wang2 jun4
+王琚	wang2 ju1
 王琛	wang2 chen1
 王琥	wang2 hu3
 王琦	wang2 qi2
@@ -155464,6 +155535,7 @@ columns:
 王碼	wang2 ma3
 王磊	wang2 lei3
 王磐	wang2 pan2
+王礫	wang2 li4
 王祝	wang2 zhu4
 王神	wang2 shen2
 王祥	wang2 xiang2
@@ -155493,6 +155565,7 @@ columns:
 王紅	wang2 hong2
 王納	wang2 na4
 王素	wang2 su4
+王紱	wang2 fu2
 王紹	wang2 shao4
 王統	wang2 tong3
 王經	wang2 jing1
@@ -155529,8 +155602,11 @@ columns:
 王聖	wang2 sheng4
 王聞	wang2 wen2
 王聰	wang2 cong1
+王聲	wang2 sheng1
 王肅	wang2 su4
+王肥	wang2 fei2
 王育	wang2 yu4
+王胄	wang2 zhou4
 王胡	wang2 hu2
 王能	wang2 neng2
 王臣	wang2 chen2
@@ -155540,6 +155616,7 @@ columns:
 王興	wang2 xing1
 王舒	wang2 shu1
 王舜	wang2 shun4
+王艮	wang2 gen4
 王良	wang2 liang2
 王艷	wang2 yan4
 王芬	wang2 fen1
@@ -155557,6 +155634,7 @@ columns:
 王萌	wang2 meng2
 王萍	wang2 ping2
 王著	wang2 zhu4
+王蒼	wang2 cang1
 王蓁	wang2 zhen1
 王蓉	wang2 rong2
 王蓮	wang2 lian2
@@ -155566,12 +155644,14 @@ columns:
 王薇	wang2 wei1
 王薇	wang2 wei2
 王薔	wang2 qiang2
+王薦	wang2 jian4
 王蘇	wang2 su1
 王蘭	wang2 lan2
 王虎	wang2 hu3
 王號	wang2 hao4
 王虹	wang2 hong2
 王蛇	wang2 she2
+王蜂	wang2 feng1
 王融	wang2 rong2
 王蟲	wang2 chong2
 王衍	wang2 yan3
@@ -155581,24 +155661,31 @@ columns:
 王西	wang2 xi1
 王見	wang2 jian4
 王親	wang2 qin1
+王觀	wang2 guan1
+王觀	wang2 guan4
 王言	wang2 yan2
 王訓	wang2 xun4
 王記	wang2 ji4
 王語	wang2 yu3
 王誠	wang2 cheng2
+王謐	wang2 mi4
 王謙	wang2 qian1
 王謝	wang2 xie4
 王識	wang2 shi4
 王變	wang2 bian4
 王豐	wang2 feng1
 王豔	wang2 yan4
+王象	wang2 xiang4
 王豫	wang2 yu4
+王豹	wang2 bao4
 王貝	wang2 bei4
 王貴	wang2 gui4
 王賀	wang2 he4
 王賓	wang2 bin1
 王賞	wang2 shang3
 王賢	wang2 xian2
+王質	wang2 zhi2
+王質	wang2 zhi4	3%
 王贇	wang2 yun1
 王贊	wang2 zan4
 王起	wang2 qi3
@@ -155611,6 +155698,7 @@ columns:
 王軒	wang2 xuan1
 王軻	wang2 ke1
 王輝	wang2 hui1
+王轂	wang2 gu3
 王辛	wang2 xin1
 王辰	wang2 chen2
 王迅	wang2 xun4
@@ -155636,14 +155724,21 @@ columns:
 王金	wang2 jin1
 王鈞	wang2 jun1
 王鈺	wang2 yu4
+王鈿	wang2 dian4
+王鈿	wang2 tian2
 王鉑	wang2 bo2
 王銅	wang2 tong2
 王銘	wang2 ming2
 王銳	wang2 rui4
 王鋒	wang2 feng1
+王錕	wang2 kun1
 王錚	wang2 zheng1
 王錦	wang2 jin3
+王鍇	wang2 kai3
 王鍵	wang2 jian4
+王鎔	wang2 rong2
+王鏞	wang2 yong1
+王鏞	wang2 yong2
 王鐵	wang2 tie3
 王鐸	wang2 duo2
 王鑑	wang2 jian4
@@ -155676,6 +155771,8 @@ columns:
 王靈	wang2 ling2
 王青	wang2 qing1
 王靖	wang2 jing4
+王靚	wang2 jing4
+王靚	wang2 liang4
 王靜	wang2 jing4
 王韋	wang2 wei2
 王韋	wang2 wei3	80%
@@ -155709,6 +155806,7 @@ columns:
 王黎	wang2 li2
 王鼎	wang2 ding3
 王齊	wang2 qi2
+王齕	wang2 he2
 玎玲	ding1 ling2
 玓瓅	di4 li4
 玕琅	gan1 lang2
@@ -192151,6 +192249,7 @@ columns:
 芮輝	rui4 hui1
 芮邢	rui4 xing2
 芯件	xin1 jian4
+芯彤	xin1 tong2
 芯板	xin1 ban3
 芯柱	xin1 zhu4
 芯棒	xin1 bang4
@@ -193662,6 +193761,8 @@ columns:
 茬兒	cha2 er5	80%
 茬兒	chi2 er2
 茬兒	chi2 er5	80%
+茬兒	zi1 er2
+茬兒	zi1 er5	80%
 茬口	cha2 kou3
 茬口	chi2 kou3
 茭杯	jiao1 bei1
@@ -199921,6 +200022,7 @@ columns:
 虹耀	hong2 yao4
 虹蜺	hong2 ni2
 虹身	hong2 shen1
+虹輝	hong2 hui1
 虹霓	hong2 ni2
 虼螂	ge4 lang2
 蚊力	wen2 li4
@@ -206104,6 +206206,7 @@ columns:
 訛詐	e2 zha4
 訛誤	e2 wu4
 訛謬	e2 miu4
+訛變	e2 bian4
 訛財	e2 cai2
 訛賴	e2 lai4
 訛錢	e2 qian2
@@ -206119,9 +206222,12 @@ columns:
 訟庭	song4 ting2
 訟案	song4 an4
 訟棍	song4 gun4
+訟爭	song4 zheng1
 訟牒	song4 die2
 訟獄	song4 yu4
+訟者	song4 zhe3
 訟言	song4 yan2
+訟詞	song4 ci2
 訟費	song4 fei4
 訢戴	xin1 dai4
 訢然	xin1 ran2
@@ -206138,6 +206244,7 @@ columns:
 訥澀	ne4 se4
 訥訥	na4 na4
 訥訥	ne4 ne4
+訩訩	xiong1 xiong1
 訪事	fang3 shi4
 訪京	fang3 jing1
 訪人	fang3 ren2
@@ -206369,12 +206476,14 @@ columns:
 許母	xu3 mu3
 許氏	xu3 shi4
 許汜	xu3 si4
+許沖	xu3 chong1
 許海	xu3 hai3
 許淑	xu3 shu1
 許淑	xu3 shu2
 許渾	xu3 hun2
 許漢	xu3 han4
 許潔	xu3 jie2
+許瀍	xu3 chan2
 許瀚	xu3 han4
 許瀟	xu3 xiao1
 許爸	xu3 ba4
@@ -206412,11 +206521,13 @@ columns:
 許菊	xu3 ju2
 許蕾	xu3 lei2	80%
 許蕾	xu3 lei3
+許衝	xu3 chong1
 許衡	xu3 heng2
 許褚	xu3 chu3
 許西	xu3 xi1
 許記	xu3 ji4
 許詢	xu3 xun2
+許諸	xu3 zhu1
 許諾	xu3 nuo4
 許謙	xu3 qian1
 許財	xu3 cai2
@@ -219719,6 +219830,7 @@ columns:
 辛平	xin1 ping2
 辛康	xin1 kang1
 辛弟	xin1 di4
+辛彤	xin1 tong2
 辛彥	xin1 yan4
 辛戌	xin1 xu1
 辛抱	xin1 bao4
@@ -234697,6 +234809,7 @@ columns:
 閎衍	hong2 yan3
 閎言	hong2 yan2
 閎誕	hong2 dan4
+閎輝	hong2 hui1
 閎達	hong2 da2
 閏位	run4 wei4
 閏土	run4 tu3
@@ -242845,6 +242958,7 @@ columns:
 霓裳	ni2 shang1
 霓裳	ni2 shang3	80%
 霓裳	ni2 shang5
+霓霓	ni2 ni2
 霖生	lin2 sheng1
 霖達	lin2 da2
 霖雨	lin2 yu3
@@ -248958,6 +249072,8 @@ columns:
 馨子	xin1 zi5
 馨子	xing1 zi3
 馨子	xing1 zi5
+馨彤	xin1 tong2
+馨彤	xing1 tong2
 馨心	xin1 xin1
 馨心	xing1 xin1
 馨花	xin1 hua1
@@ -253451,6 +253567,7 @@ columns:
 鴻藻	hong2 zao3
 鴻裁	hong2 cai2
 鴻詞	hong2 ci2
+鴻輝	hong2 hui1
 鴻運	hong2 yun4
 鴻道	hong2 dao4
 鴻達	hong2 da2
@@ -254047,46 +254164,73 @@ columns:
 麒龍	qi2 long2
 麓川	lu4 chuan1
 麓谷	lu4 gu3
+麗亞	li4 ya3
+麗亞	li4 ya4
 麗人	li4 ren2
 麗儀	li4 yi2
 麗則	li4 ze2
 麗句	li4 ju4
+麗台	li4 tai2
+麗君	li4 jun1
+麗園	li4 yuan2
 麗塔	li4 ta3
 麗天	li4 tian1
 麗央	li4 yang1
 麗奈	li4 nai4
 麗女	li4 nv3
+麗如	li4 ru2
+麗妮	li4 ni2
 麗姨	li4 yi2
 麗姿	li4 zi1
 麗娜	li4 na4
 麗娟	li4 juan1
 麗子	li4 zi3
 麗安	li4 an1
+麗容	li4 rong2
 麗實	li4 shi2
+麗寶	li4 bao3
 麗山	li2 shan1
 麗山	li4 shan1
 麗影	li4 ying3
 麗怡	li4 yi2
 麗愛	li4 ai4
+麗斯	li4 si1
 麗於	li4 yu2
 麗日	li4 ri4
+麗星	li4 xing1
+麗春	li4 chun1
 麗景	li4 jing3
+麗晶	li4 jing1
 麗月	li4 yue4
 麗服	li4 fu2
 麗未	li4 wei4
+麗梅	li4 mei2
+麗森	li4 sen1
 麗歌	li4 ge1
 麗江	li4 jiang1
+麗池	li4 chi2
 麗湖	li4 hu2
+麗潤	li4 run4
 麗澤	li4 ze2
+麗玲	li4 ling2
+麗珍	li4 zhen1
 麗珠	li4 zhu1
 麗矚	li4 zhu3
 麗絨	li4 rong2
+麗絲	li4 si1
 麗美	li4 mei3
+麗群	li4 qun2
+麗聲	li4 sheng1
 麗致	li4 zhi4
+麗臺	li4 tai2
 麗舍	li4 she4
+麗色	li4 se4
 麗芙	li4 fu2
 麗芬	li4 fen1
 麗花	li4 hua1
+麗茹	li4 ru2
+麗茹	li4 ru4
+麗莉	li4 li4
 麗莎	li4 sha1
 麗華	li4 hua2
 麗萍	li4 ping2
@@ -254099,11 +254243,15 @@ columns:
 麗質	li4 zhi4	3%
 麗辭	li4 ci2
 麗達	li4 da2
+麗陽	li4 yang2
+麗雅	li4 ya3
 麗靜	li4 jing4
 麗音	li4 yin1
 麗風	li4 feng1
 麗香	li4 xiang1
 麗魄	li4 po4
+麗鳾	li4 shi1
+麗鵑	li4 juan1
 麗麗	li4 li4
 麝月	she4 yue4
 麝煤	she4 mei2
@@ -266013,8 +266161,10 @@ columns:
 不匿名	bu2 ni4 ming2
 不升級	bu4 sheng1 ji2
 不協同	bu4 xie2 tong2
+不占卜	bu2 zhan4 bu3
 不占卜	bu4 zhan1 bu3
 不占算	bu2 zhan4 suan4
+不占算	bu4 zhan1 suan4
 不厚道	bu2 hou4 dao4
 不厭倦	bu2 yan4 juan4
 不去了	bu2 qu4 le5
@@ -293909,6 +294059,7 @@ columns:
 劉博士	liu2 bo2 shi4
 劉博文	liu2 bo2 wen2
 劉博達	liu2 bo2 da2
+劉占吉	liu2 zhan1 ji2
 劉占吉	liu2 zhan4 ji2
 劉厚生	liu2 hou4 sheng1
 劉厚總	liu2 hou4 zong3
@@ -300334,9 +300485,13 @@ columns:
 卟啉病	bu3 lin2 bing4
 占不占	zhan1 bu4 zhan1
 占不占	zhan4 bu2 zhan4
+占了卜	zhan1 le5 bu3
+占了卜	zhan1 liao3 bu3
 占了卜	zhan4 le5 bu3
+占了卜	zhan4 liao3 bu3
 占優勢	zhan4 you1 shi4
 占卜師	zhan1 bu3 shi1
+占卜師	zhan4 bu3 shi1
 占卜者	zhan1 bu3 zhe3
 占卜者	zhan4 bu3 zhe3
 占卜術	zhan1 bu3 shu4
@@ -300985,8 +301140,11 @@ columns:
 危不危	wei2 bu4 wei2
 危害到	wei2 hai4 dao4
 危害性	wei2 hai4 xing4
+危害面	wei2 hai4 mian4
 危急中	wei2 ji2 zhong1
+危急性	wei2 ji2 xing4
 危急的	wei2 ji2 de5
+危改區	wei2 gai3 qu1
 危機感	wei2 ji1 gan3
 危重病	wei2 zhong4 bing4
 危重症	wei2 zhong4 zheng4
@@ -301061,20 +301219,45 @@ columns:
 卵圓窗	luan3 yuan2 chuang1
 卵塔場	luan3 ta3 chang2	3%
 卵塔場	luan3 ta3 chang3
+卵孢子	luan3 bao1 zi3
+卵孢子	luan3 bao1 zi5
 卵巢炎	luan3 chao2 yan2
 卵巢瘤	luan3 chao2 liu2
 卵巢癌	luan3 chao2 ai2
 卵巢癌	luan3 chao2 yan2
 卵巢窩	luan3 chao2 wo1
+卵形物	luan3 xing2 wu4
+卵形瓶	luan3 xing2 ping2
+卵形面	luan3 xing2 mian4
+卵殼腺	luan3 ke2 xian4
+卵殼腺	luan3 qiao4 xian4	3%
+卵殼膜	luan3 ke2 mo2
+卵殼膜	luan3 ke2 mo4	3%
+卵殼膜	luan3 qiao4 mo2
+卵殼膜	luan3 qiao4 mo4	3%
+卵泡腔	luan3 pao4 qiang1
+卵泡膜	luan3 pao4 mo2
+卵泡膜	luan3 pao4 mo4	3%
 卵用雞	luan3 yong4 ji1
 卵磷脂	luan3 lin2 zhi1
 卵磷脂	luan3 lin2 zhi3
 卵精巢	luan3 jing1 chao2
 卵細胞	luan3 xi4 bao1
 卵胎生	luan3 tai1 sheng1
+卵蛋白	luan3 dan4 bai2
+卵裂球	luan3 lie4 qiu2
+卵裂腔	luan3 lie4 qiang1
+卵配子	luan3 pei4 zi3
+卵黃區	luan3 huang2 qu1
 卵黃囊	luan3 huang2 nang2
+卵黃栓	luan3 huang2 shuan1
+卵黃核	luan3 huang2 he2
 卵黃管	luan3 huang2 guan3
+卵黃粒	luan3 huang2 li4
 卵黃腺	luan3 huang2 xian4
+卵黃膜	luan3 huang2 mo2
+卵黃膜	luan3 huang2 mo4	3%
+卵黃蒂	luan3 huang2 di4
 卷子本	juan4 zi5 ben3
 卷尾科	juan3 wei3 ke1
 卷揚機	juan3 yang2 ji1
@@ -302981,6 +303164,7 @@ columns:
 古井貢	gu3 jing3 gong4
 古亞述	gu3 ya3 shu4
 古亞述	gu3 ya4 shu4
+古交區	gu3 jiao1 qu1
 古交市	gu3 jiao1 shi4
 古亭區	gu3 ting2 qu1
 古亭站	gu3 ting2 zhan4
@@ -303330,6 +303514,7 @@ columns:
 古華容	gu3 hua2 rong2
 古萊子	gu3 lai2 zi3
 古萊萊	gu3 lai2 lai2
+古著店	gu3 zhuo2 dian4
 古葛洛	gu3 ge2 luo4
 古葛洛	gu3 ge3 luo4
 古董商	gu3 dong3 shang1
@@ -303423,6 +303608,7 @@ columns:
 古龍水	gu3 long2 shui3
 句子中	ju4 zi5 zhong1
 句容市	ju4 rong2 shi4
+句容縣	ju4 rong2 xian4
 句法樹	ju4 fa3 shu4
 句驪河	ju4 li2 he2
 另一些	ling4 yi1 xie1
@@ -303585,7 +303771,10 @@ columns:
 只加了	zhi3 jia1 liao3
 只加到	zhi3 jia1 dao4
 只占卜	zhi3 zhan1 bu3
+只占卜	zhi3 zhan4 bu3
+只占吉	zhi3 zhan1 ji2
 只占吉	zhi3 zhan4 ji2
+只占算	zhi3 zhan1 suan4
 只占算	zhi3 zhan4 suan4
 只參加	zhi3 can1 jia1
 只受到	zhi3 shou4 dao4
@@ -327439,10 +327628,25 @@ columns:
 套頭話	tao4 tou2 hua4
 套馬杆	tao4 ma3 gan1
 套馬桿	tao4 ma3 gan3
+奚亞琴	xi1 ya3 qin2
+奚亞琴	xi1 ya4 qin2
+奚修權	xi1 xiu1 quan2
+奚勝見	xi1 sheng4 jian4
 奚嘯伯	xi1 xiao4 bo2
+奚國華	xi1 guo2 hua2
+奚堅鋒	xi1 jian1 feng1
+奚夢瑤	xi1 meng4 yao2
+奚大為	xi1 da4 wei2
+奚夫人	xi1 fu1 ren2
 奚普里	xi1 pu3 li3
+奚月遙	xi1 yue4 yao2
 奚秀蘭	xi1 xiu4 lan2
+奚立峰	xi1 li4 feng1
 奚美娟	xi1 mei3 juan1
+奚辰華	xi1 chen2 hua2
+奚達飛	xi1 da2 fei1
+奚長老	xi1 zhang3 lao3
+奚靜之	xi1 jing4 zhi1
 奠基人	dian4 ji1 ren2
 奠基性	dian4 ji1 xing4
 奠基石	dian4 ji1 shi2
@@ -336324,6 +336528,7 @@ columns:
 將出現	jiang1 chu1 xian4
 將動物	jiang1 dong4 wu4
 將占卜	jiang1 zhan1 bu3
+將占卜	jiang1 zhan4 bu3
 將即時	jiang1 ji2 shi2
 將原子	jiang1 yuan2 zi3
 將及時	jiang1 ji2 shi2
@@ -343176,6 +343381,8 @@ columns:
 已千年	yi3 qian1 nian2
 已升級	yi3 sheng1 ji2
 已占卜	yi3 zhan1 bu3
+已占卜	yi3 zhan4 bu3
+已占算	yi3 zhan1 suan4
 已占算	yi3 zhan4 suan4
 已去世	yi3 qu4 shi4
 已去了	yi3 qu4 le5
@@ -354777,6 +354984,9 @@ columns:
 心包絡	xin1 bao1 luo4
 心包腔	xin1 bao1 qiang1
 心可定	xin1 ke3 ding4
+心喐喐	xin1 huo4 huo4
+心喐喐	xin1 xu4 xu4
+心喐喐	xin1 yu4 yu4
 心嘆號	xin1 tan4 hao4
 心因性	xin1 yin1 xing4
 心土層	xin1 tu3 ceng2
@@ -354844,6 +355054,7 @@ columns:
 心法卷	xin1 fa3 juan3
 心法卷	xin1 fa3 juan4
 心法身	xin1 fa3 shen1
+心海棠	xin1 hai3 tang2
 心源性	xin1 yuan2 xing4
 心火盛	xin1 huo3 sheng4
 心無宗	xin1 wu2 zong1
@@ -354886,6 +355097,7 @@ columns:
 心肌病	xin1 ji1 bing4
 心肝兒	xin1 gan1 er2
 心肝兒	xin1 gan1 er5	80%
+心肝椗	xin1 gan1 ding4
 心肝肉	xin1 gan1 rou4
 心肺機	xin1 fei4 ji1
 心胸窄	xin1 xiong1 zhai3
@@ -355695,6 +355907,10 @@ columns:
 怎麼也	ze3 mo5 ye3	80%
 怎麼也	zen3 me5 ye3
 怎麼也	zen3 mo5 ye3	80%
+怎麼乾	ze3 me5 gan1
+怎麼乾	ze3 mo5 gan1	80%
+怎麼乾	zen3 me5 gan1
+怎麼乾	zen3 mo5 gan1	80%
 怎麼做	ze3 me5 zuo4
 怎麼做	ze3 mo5 zuo4	80%
 怎麼做	zen3 me5 zuo4
@@ -356128,20 +356344,26 @@ columns:
 急促聲	ji2 cu4 sheng1
 急停車	ji2 ting2 che1
 急先鋒	ji2 xian1 feng1
+急凍拳	ji2 dong4 quan2
+急凍鳥	ji2 dong4 niao3
 急切切	ji2 qie4 qie4
 急劇的	ji2 ju4 de5
 急加速	ji2 jia1 su4
 急匆匆	ji2 cong1 cong1
 急口令	ji2 kou3 ling4
 急吼吼	ji2 hou3 hou3
+急喉病	ji2 hou2 bing4
 急壞了	ji2 huai4 le5
+急婚族	ji2 hun1 zu2
 急就章	ji2 jiu4 zhang1
 急就篇	ji2 jiu4 pian1
 急巴巴	ji2 ba1 ba1
+急彎河	ji2 wan1 he2
 急得像	ji2 de2 xiang4
 急得像	ji2 de5 xiang4
 急忙中	ji2 mang2 zhong1
 急忙忙	ji2 mang2 mang2
+急急腳	ji2 ji2 jiao3
 急急道	ji2 ji2 dao4
 急急風	ji2 ji2 feng1
 急性人	ji2 xing4 ren2
@@ -356171,7 +356393,11 @@ columns:
 急水溪	ji2 shui3 xi1
 急波波	ji2 bo1 bo1
 急波波	ji2 po1 po1
+急湍湍	ji2 tuan1 tuan1
+急溜溜	ji2 liu1 liu1
+急溜溜	ji2 liu4 liu4
 急漲量	ji2 zhang3 liang4
+急火火	ji2 huo3 huo3
 急煎煎	ji2 jian1 jian1
 急煞車	ji2 sha1 che1
 急煞車	ji2 sha4 che1
@@ -356180,10 +356406,14 @@ columns:
 急眼了	ji2 yan3 liao3
 急等著	ji2 deng3 zhe5
 急簌簌	ji2 su4 su4
+急脈穴	ji2 mai4 xue2	3%
+急脈穴	ji2 mai4 xue4
 急腳信	ji2 jiao3 xin4
 急腳遞	ji2 jiao3 di4
 急腳鬼	ji2 jiao3 gui3
 急腹症	ji2 fu4 zheng4
+急茬兒	ji2 cha2 er2
+急茬兒	ji2 cha2 er5	80%
 急著用	ji2 zhe5 yong4
 急著要	ji2 zhe5 yao4
 急診室	ji2 zhen3 shi4
@@ -356203,6 +356433,7 @@ columns:
 急颭颭	ji2 zhan3 zhan3
 急驚風	ji2 jing1 feng1
 急鬆鬆	ji2 song1 song1
+急黃病	ji2 huang2 bing4
 性亢奮	xing4 kang4 fen4
 性交圖	xing4 jiao1 tu2
 性交後	xing4 jiao1 hou4
@@ -362831,6 +363062,9 @@ columns:
 托卡朋	tuo1 ka3 peng2
 托合齊	tuo1 he2 qi2
 托君臣	tuo1 jun1 chen2
+托吡酯	tuo1 bi3 zhi3
+托吡酯	tuo1 bi4 zhi3
+托哌酮	tuo1 pai4 tong2
 托哥爾	tuo1 ge1 er3
 托喻之	tuo1 yu4 zhi1
 托坎廷	tuo1 kan3 ting2
@@ -362846,6 +363080,7 @@ columns:
 托帕希	tuo1 pa4 xi1
 托德斯	tuo1 de2 si1
 托忒文	tuo1 te4 wen2
+托手踭	tuo1 shou3 zheng1
 托拉司	tuo1 la1 si1
 托拉斯	tuo1 la1 si1
 托拉查	tuo1 la1 cha2
@@ -381071,6 +381306,7 @@ columns:
 會務組	hui4 wu4 zu3
 會務費	hui4 wu4 fei4
 會占卜	hui4 zhan1 bu3
+會占卜	hui4 zhan4 bu3
 會厭炎	hui4 yan4 yan2
 會受到	hui4 shou4 dao4
 會叫的	hui4 jiao4 de5
@@ -389376,6 +389612,7 @@ columns:
 林偉民	lin2 wei3 min2
 林偉賢	lin2 wei3 xian2
 林偉麗	lin2 wei3 li4
+林健增	lin2 jian4 zeng1
 林健輝	lin2 jian4 hui1
 林傑閔	lin2 jie2 min3
 林傳鼎	lin2 chuan2 ding3
@@ -389650,6 +389887,7 @@ columns:
 林慧珍	lin2 hui4 zhen1
 林慧甄	lin2 hui4 zhen1
 林慧萍	lin2 hui4 ping2
+林慮山	lin2 lv4 shan1
 林慶宗	lin2 qing4 zong1
 林慶新	lin2 qing4 xin1
 林慶春	lin2 qing4 chun1
@@ -389765,6 +390003,7 @@ columns:
 林權助	lin2 quan2 zhu4
 林權澤	lin2 quan2 ze2
 林權證	lin2 quan2 zheng4
+林欣彤	lin2 xin1 tong2
 林欣禾	lin2 xin1 he2
 林正剛	lin2 zheng4 gang1
 林正大	lin2 zheng4 da4
@@ -390957,6 +391196,8 @@ columns:
 柳鑫宇	liu3 xin1 yu3
 柳陰樹	liu3 yin1 shu4
 柳陰樹	liu3 yin4 shu4
+柳陰直	liu3 yin1 zhi2
+柳陰直	liu3 yin4 zhi2
 柳隨風	liu3 sui2 feng1
 柳雲龍	liu3 yun2 long2
 柳雷鳥	liu3 lei2 niao3
@@ -390965,22 +391206,74 @@ columns:
 柳飄飄	liu3 piao1 piao1
 柳鶯科	liu3 ying1 ke1
 柳麻子	liu3 ma2 zi5
+柴三郎	chai2 san1 lang2
+柴亮知	chai2 liang4 zhi1
+柴伐蒂	chai2 fa1 di4
+柴伐蒂	chai2 fa2 di4
+柴佩爾	chai2 pei4 er3
+柴元君	chai2 yuan2 jun1
+柴元彪	chai2 yuan2 biao1
 柴埼幸	chai2 qi2 xing4
+柴宗文	chai2 zong1 wen2
+柴宗玲	chai2 zong1 ling2
+柴宗穎	chai2 zong1 ying3
+柴宗訓	chai2 zong1 xun4
+柴寶成	chai2 bao3 cheng2
 柴崎岳	chai2 qi2 yue4
 柴心兒	chai2 xin1 er2
 柴心兒	chai2 xin1 er5	80%
+柴意新	chai2 yi4 xin1
+柴房中	chai2 fang2 zhong1
+柴把魚	chai2 ba3 yu2
+柴拉琴	chai2 la1 qin2
+柴旦湖	chai2 dan4 hu2
+柴旦鎮	chai2 dan4 zhen4
+柴明達	chai2 ming2 da2
+柴春霖	chai2 chun1 lin2
 柴智屏	chai2 zhi4 ping2
+柴松岳	chai2 song1 yue4
+柴桑口	chai2 sang1 kou3
+柴桑郡	chai2 sang1 jun4
 柴油機	chai2 you2 ji1
 柴油版	chai2 you2 ban3
 柴油車	chai2 you2 che1
+柴油鏟	chai2 you2 chan3
+柴火垛	chai2 huo3 duo3
+柴火垛	chai2 huo3 duo4
+柴爾德	chai2 er3 de2
 柴田淳	chai2 tian2 chun2
 柴發利	chai2 fa1 li4
+柴皇城	chai2 huang2 cheng2
 柴禾妞	chai2 he2 niu1
+柴科夫	chai2 ke1 fu1
+柴窩堡	chai2 wo1 bao3
+柴窩堡	chai2 wo1 pu4
+柴維克	chai2 wei2 ke4
+柴胡同	chai2 hu2 tong2
+柴胡同	chai2 hu2 tong4
+柴茹梅	chai2 ru2 mei2
+柴草堆	chai2 cao3 dui1
+柴衚衕	chai2 hu2 tong2
+柴衚衕	chai2 hu2 tong4
+柴誠明	chai2 cheng2 ming2
 柴達木	chai2 da2 mu4
 柴郡主	chai2 jun4 zhu3
+柴酮片	chai2 tong2 pian4
+柴金華	chai2 jin1 hua2
+柴鐵鋒	chai2 tie3 feng1
 柴門文	chai2 men2 wen2
+柴雞蛋	chai2 ji1 dan4
+柴雪瑩	chai2 xue3 ying2
+柴雲振	chai2 yun2 zhen4
 柴魚片	chai2 yu2 pian4
+柴鳳香	chai2 feng4 xiang1
+柴黃片	chai2 huang2 pian4
+柵欄門	shan1 lan2 men2	80%
+柵欄門	shan4 lan2 men2	80%
+柵欄門	zha4 lan2 men2
+柿子店	shi4 zi5 dian4
 柿子樹	shi4 zi5 shu4
+柿子皮	shi4 zi5 pi2
 栃木縣	li4 mu4 xian4
 栒子木	xun2 zi3 mu4
 栒邑縣	xun2 yi4 xian4
@@ -396156,6 +396449,7 @@ columns:
 欽州市	qin1 zhou1 shi4
 欽州港	qin1 zhou1 gang3
 欽州縣	qin1 zhou1 xian4
+款冬花	kuan3 dong1 hua1
 款已付	kuan3 yi3 fu4
 款車型	kuan3 che1 xing2
 歇一下	xie1 yi1 xia4
@@ -396199,6 +396493,7 @@ columns:
 歌唱隊	ge1 chang4 dui4
 歌壇上	ge1 tan2 shang4
 歌德式	ge1 de2 shi4
+歌德爾	ge1 de2 er3
 歌情人	ge1 qing2 ren2
 歌手名	ge1 shou3 ming2
 歌手女	ge1 shou3 nv3
@@ -416651,14 +416946,18 @@ columns:
 王一淳	wang2 yi4 chun2
 王一然	wang2 yi1 ran2
 王一然	wang2 yi4 ran2
+王一舟	wang2 yi1 zhou1
+王一舟	wang2 yi4 zhou1
 王一莉	wang2 yi1 li4
 王一莉	wang2 yi2 li4
 王一進	wang2 yi1 jin4
 王一進	wang2 yi2 jin4
+王丁棉	wang2 ding1 mian2
 王七人	wang2 qi1 ren2
 王三哥	wang2 san1 ge1
 王三王	wang2 san1 wang2
 王三虎	wang2 san1 hu3
+王三運	wang2 san1 yun4
 王下令	wang2 xia4 ling4
 王世傑	wang2 shi4 jie2
 王世充	wang2 shi4 chong1
@@ -416685,6 +416984,7 @@ columns:
 王中祕	wang2 zhong1 mi4
 王中秘	wang2 zhong1 bi4
 王中秘	wang2 zhong1 mi4
+王中軍	wang2 zhong1 jun1
 王丹林	wang2 dan1 lin2
 王丹梅	wang2 dan1 mei2
 王丹萍	wang2 dan1 ping2
@@ -416692,6 +416992,7 @@ columns:
 王丹鳳	wang2 dan1 feng4
 王乃昕	wang2 nai3 xin1
 王之仁	wang2 zhi1 ren2
+王之光	wang2 zhi1 guang1
 王之助	wang2 zhi1 zhu4
 王之勝	wang2 zhi1 sheng4
 王之印	wang2 zhi1 yin4
@@ -416737,6 +417038,7 @@ columns:
 王亞斌	wang2 ya3 bin1
 王亞東	wang2 ya3 dong1
 王亞松	wang2 ya3 song1
+王亞松	wang2 ya4 song1
 王亞楠	wang2 ya3 nan2
 王亞樵	wang2 ya3 qiao2
 王亞潔	wang2 ya3 jie2
@@ -416748,6 +417050,7 @@ columns:
 王京烈	wang2 jing1 lie4
 王京花	wang2 jing1 hua1
 王亮亮	wang2 liang4 liang4
+王人美	wang2 ren2 mei3
 王仁便	wang2 ren2 bian4
 王仁俊	wang2 ren2 jun4
 王仁宏	wang2 ren2 hong2
@@ -416757,6 +417060,7 @@ columns:
 王仁美	wang2 ren2 mei3
 王仁義	wang2 ren2 yi4
 王仁裕	wang2 ren2 yu4
+王介儒	wang2 jie4 ru2
 王介安	wang2 jie4 an1
 王仕海	wang2 shi4 hai3
 王仕貴	wang2 shi4 gui4
@@ -416764,9 +417068,15 @@ columns:
 王仙仙	wang2 xian1 xian1
 王仙芝	wang2 xian1 zhi1
 王令麟	wang2 ling4 lin2
+王以哲	wang2 yi3 zhe2
+王以寧	wang2 yi3 ning2
+王以明	wang2 yi3 ming2
+王以松	wang2 yi3 song1
+王以銘	wang2 yi3 ming2
 王以鵬	wang2 yi3 peng2
 王仲丁	wang2 zhong4 ding1
 王仲強	wang2 zhong4 qiang2
+王仲犖	wang2 zhong4 luo4
 王仲甫	wang2 zhong4 fu3
 王仲甫	wang2 zhong4 pu3
 王仲聞	wang2 zhong4 wen2
@@ -416774,6 +417084,7 @@ columns:
 王仲萍	wang2 zhong4 ping2
 王仲軍	wang2 zhong4 jun1
 王伯南	wang2 bo2 nan2
+王伯奮	wang2 bo2 fen4
 王伯安	wang2 bo2 an1
 王伯祥	wang2 bo2 xiang2
 王伯超	wang2 bo2 chao1
@@ -416796,6 +417107,7 @@ columns:
 王佳雪	wang2 jia1 xue3
 王佳麗	wang2 jia1 li4
 王侍郎	wang2 shi4 lang2
+王依群	wang2 yi1 qun2
 王依華	wang2 yi1 hua2
 王侯后	wang2 hou2 hou4
 王俊傑	wang2 jun4 jie2
@@ -416809,6 +417121,7 @@ columns:
 王俊芳	wang2 jun4 fang1
 王俊萍	wang2 jun4 ping2
 王俊雄	wang2 jun4 xiong2
+王俊香	wang2 jun4 xiang1
 王俊鵬	wang2 jun4 peng2
 王俐人	wang2 li4 ren2
 王保保	wang2 bao3 bao3
@@ -416840,9 +417153,12 @@ columns:
 王傳志	wang2 chuan2 zhi4
 王傳旨	wang2 chuan2 zhi3
 王傳柱	wang2 chuan2 zhu4
+王傳淞	wang2 chuan2 song1
 王傳福	wang2 chuan2 fu2
 王儀涵	wang2 yi2 han2
+王儒信	wang2 ru2 xin4
 王儒發	wang2 ru2 fa1
+王兀堂	wang2 wu4 tang2
 王允堅	wang2 yun3 jian1
 王允常	wang2 yun3 chang2
 王元元	wang2 yuan2 yuan2
@@ -416934,6 +417250,8 @@ columns:
 王利華	wang2 li4 hua2
 王前峰	wang2 qian2 feng1
 王副將	wang2 fu4 jiang4
+王劍傑	wang2 jian4 jie2
+王劍峰	wang2 jian4 feng1
 王劍英	wang2 jian4 ying1
 王力勁	wang2 li4 jin4
 王力勁	wang2 li4 jing4
@@ -416942,6 +417260,7 @@ columns:
 王力民	wang2 li4 min2
 王力軍	wang2 li4 jun1
 王力雄	wang2 li4 xiong2
+王加佩	wang2 jia1 pei4
 王勁松	wang2 jin4 song1
 王勁松	wang2 jing4 song1
 王勇勝	wang2 yong3 sheng4
@@ -416994,6 +417313,7 @@ columns:
 王君萍	wang2 jun1 ping2
 王君超	wang2 jun1 chao1
 王哈丹	wang2 ha1 dan1
+王哈哈	wang2 ha1 ha1
 王啟人	wang2 qi3 ren2
 王啟敏	wang2 qi3 min3
 王啟文	wang2 qi3 wen2
@@ -417046,6 +417366,8 @@ columns:
 王國興	wang2 guo2 xing1
 王國良	wang2 guo2 liang2
 王國華	wang2 guo2 hua2
+王國藩	wang2 guo2 fan1
+王國藩	wang2 guo2 fan2
 王國裡	wang2 guo2 li3
 王國輝	wang2 guo2 hui1
 王國陽	wang2 guo2 yang2
@@ -417083,6 +417405,7 @@ columns:
 王夢麟	wang2 meng4 lin2
 王大亮	wang2 da4 liang4
 王大人	wang2 da4 ren2
+王大令	wang2 da4 ling4
 王大偉	wang2 da4 wei3
 王大兵	wang2 da4 bing1
 王大勇	wang2 da4 yong3
@@ -417093,6 +417416,7 @@ columns:
 王大夫	wang2 dai4 fu1
 王大夫	wang2 dai4 fu5	80%
 王大媽	wang2 da4 ma1
+王大寬	wang2 da4 kuan1
 王大年	wang2 da4 nian2
 王大強	wang2 da4 qiang2
 王大怒	wang2 da4 nu4
@@ -417115,6 +417439,8 @@ columns:
 王大驚	wang2 da4 jing1
 王大龍	wang2 da4 long2
 王天傑	wang2 tian1 jie2
+王天凌	wang2 tian1 ling2
+王天平	wang2 tian1 ping2
 王天德	wang2 tian1 de2
 王天成	wang2 tian1 cheng2
 王天林	wang2 tian1 lin2
@@ -417142,7 +417468,10 @@ columns:
 王奶奶	wang2 nai3 nai3
 王奶奶	wang2 nai3 nai5	80%
 王奶媽	wang2 nai3 ma1
+王如堅	wang2 ru2 jian1
+王如晨	wang2 ru2 chen2
 王如松	wang2 ru2 song1
+王如淼	wang2 ru2 miao3
 王如玄	wang2 ru2 xuan2
 王妃蕭	wang2 fei1 xiao1
 王妹妹	wang2 mei4 mei4
@@ -417276,6 +417605,7 @@ columns:
 王宏宇	wang2 hong2 yu3
 王宏志	wang2 hong2 zhi4
 王宏恩	wang2 hong2 en1
+王宏斌	wang2 hong2 bin1
 王宏明	wang2 hong2 ming2
 王宏波	wang2 hong2 bo1
 王宏波	wang2 hong2 po1
@@ -417323,10 +417653,14 @@ columns:
 王富洲	wang2 fu4 zhou1
 王富華	wang2 fu4 hua2
 王富虹	wang2 fu4 hong2
+王實實	wang2 shi2 shi2
 王實甫	wang2 shi2 fu3
 王寧嬪	wang2 ning2 pin2
 王寧生	wang2 ning2 sheng1
 王審知	wang2 shen3 zhi1
+王寬誠	wang2 kuan1 cheng2
+王寵幸	wang2 chong3 xing4
+王寵惠	wang2 chong3 hui4
 王寶勤	wang2 bao3 qin2
 王寶嬌	wang2 bao3 jiao1
 王寶山	wang2 bao3 shan1
@@ -417403,6 +417737,7 @@ columns:
 王居安	wang2 ju1 an1
 王居正	wang2 ju1 zheng4
 王屋山	wang2 wu1 shan1
+王履貞	wang2 lv3 zhen1
 王岐山	wang2 qi2 shan1
 王岩松	wang2 yan2 song1
 王岱輿	wang2 dai4 yu2
@@ -417440,7 +417775,9 @@ columns:
 王平安	wang2 ping2 an1
 王平波	wang2 ping2 bo1
 王平波	wang2 ping2 po1
+王幸楠	wang2 xing4 nan2
 王幸男	wang2 xing4 nan2
+王幼玉	wang2 you4 yu4
 王府井	wang2 fu3 jing3
 王府倉	wang2 fu3 cang1
 王府裡	wang2 fu3 li3
@@ -417455,6 +417792,8 @@ columns:
 王廣廉	wang2 guang3 lian2
 王廣福	wang2 guang3 fu2
 王廣英	wang2 guang3 ying1
+王廣銀	wang2 guang3 yin2
+王延哲	wang2 yan2 zhe2
 王延彬	wang2 yan2 bin1
 王延德	wang2 yan2 de2
 王延政	wang2 yan2 zheng4
@@ -417469,6 +417808,7 @@ columns:
 王建勇	wang2 jian4 yong3
 王建國	wang2 jian4 guo2
 王建安	wang2 jian4 an1
+王建宙	wang2 jian4 zhou4
 王建峰	wang2 jian4 feng1
 王建平	wang2 jian4 ping2
 王建復	wang2 jian4 fu4
@@ -417495,6 +417835,7 @@ columns:
 王弼注	wang2 bi4 zhu4
 王彥威	wang2 yan4 wei1
 王彥宇	wang2 yan4 yu3
+王彥田	wang2 yan4 tian2
 王彥祖	wang2 yan4 zu3
 王彥程	wang2 yan4 cheng2
 王彥章	wang2 yan4 zhang1
@@ -417505,6 +417846,7 @@ columns:
 王彩雲	wang2 cai3 yun2
 王彩霞	wang2 cai3 xia2
 王彬彬	wang2 bin1 bin1
+王彭年	wang2 peng2 nian2
 王影璐	wang2 ying3 lu4
 王彼得	wang2 bi3 de2
 王徐盧	wang2 xu2 lu2
@@ -417534,6 +417876,7 @@ columns:
 王德清	wang2 de2 qing1
 王德真	wang2 de2 zhen1
 王德福	wang2 de2 fu2
+王徽之	wang2 hui1 zhi1
 王心凌	wang2 xin1 ling2
 王心如	wang2 xin1 ru2
 王心念	wang2 xin1 nian4
@@ -417580,6 +417923,7 @@ columns:
 王忠瑜	wang2 zhong1 yu2
 王忠祥	wang2 zhong1 xiang2
 王忠禹	wang2 zhong1 yu3
+王忠科	wang2 zhong1 ke1
 王忠誠	wang2 zhong1 cheng2
 王忠鑫	wang2 zhong1 xin1
 王念孫	wang2 nian4 sun1
@@ -417603,6 +417947,7 @@ columns:
 王恩茂	wang2 en1 mao4
 王惕吾	wang2 ti4 wu2
 王惜芳	wang2 xi2 fang1
+王惟一	wang2 wei2 yi1
 王惟忠	wang2 wei2 zhong1
 王惠堂	wang2 hui4 tang2
 王惠平	wang2 hui4 ping2
@@ -417618,6 +417963,8 @@ columns:
 王愛華	wang2 ai4 hua2
 王愛財	wang2 ai4 cai2
 王愛麗	wang2 ai4 li4
+王愷政	wang2 kai3 zheng4
+王慎中	wang2 shen4 zhong1
 王慕瑋	wang2 mu4 wei3
 王慧伶	wang2 hui4 ling2
 王慧卿	wang2 hui4 qing1
@@ -417630,6 +417977,7 @@ columns:
 王慧玲	wang2 hui4 ling2
 王慧琪	wang2 hui4 qi2
 王慶一	wang2 qing4 yi1
+王慶令	wang2 qing4 ling4
 王慶來	wang2 qing4 lai2
 王慶便	wang2 qing4 bian4
 王慶勇	wang2 qing4 yong3
@@ -417687,8 +418035,11 @@ columns:
 王振良	wang2 zhen4 liang2
 王振華	wang2 zhen4 hua2
 王振超	wang2 zhen4 chao1
+王振鐸	wang2 zhen4 duo2
 王振鵬	wang2 zhen4 peng2
 王掌櫃	wang2 zhang3 gui4
+王擁立	wang2 yong1 li4
+王擁立	wang2 yong3 li4
 王政君	wang2 zheng4 jun1
 王政委	wang2 zheng4 wei3
 王政權	wang2 zheng4 quan2
@@ -417754,8 +418105,10 @@ columns:
 王新良	wang2 xin1 liang2
 王新蓮	wang2 xin1 lian2
 王新龍	wang2 xin1 long2
+王方天	wang2 fang1 tian1
 王方宇	wang2 fang1 yu3
 王方方	wang2 fang1 fang1
+王方翼	wang2 fang1 yi4
 王旭明	wang2 xu4 ming2
 王旭東	wang2 xu4 dong1
 王旭林	wang2 xu4 lin2
@@ -417794,6 +418147,7 @@ columns:
 王明霞	wang2 ming2 xia2
 王明馥	wang2 ming2 fu4
 王星星	wang2 xing1 xing1
+王星軍	wang2 xing1 jun1
 王春光	wang2 chun1 guang1
 王春喜	wang2 chun1 xi3
 王春國	wang2 chun1 guo2
@@ -417907,10 +418261,12 @@ columns:
 王東雨	wang2 dong1 yu3
 王松奇	wang2 song1 qi2
 王松旭	wang2 song1 xu4
+王松苗	wang2 song1 miao2
 王林俊	wang2 lin2 jun4
 王林峰	wang2 lin2 feng1
 王林斌	wang2 lin2 bin1
 王林昌	wang2 lin2 chang1
+王林根	wang2 lin2 gen1
 王林燕	wang2 lin2 yan4
 王林軍	wang2 lin2 jun1
 王柏延	wang2 bai3 yan2
@@ -417922,14 +418278,18 @@ columns:
 王查理	wang2 cha2 li3
 王柯迪	wang2 ke1 di2
 王柱國	wang2 zhu4 guo2
+王柳雯	wang2 liu3 wen2
 王根林	wang2 gen1 lin2
 王根梅	wang2 gen1 mei2
 王格格	wang2 ge2 ge2
 王格魯	wang2 ge2 lu3
 王桂松	wang2 gui4 song1
 王桐齡	wang2 tong2 ling2
+王梅祥	wang2 mei2 xiang2
 王梓宏	wang2 zi3 hong2
 王梓洪	wang2 zi3 hong2
+王梵志	wang2 fan2 zhi4	80%
+王梵志	wang2 fan4 zhi4
 王森浩	wang2 sen1 hao4
 王楚欽	wang2 chu3 qin1
 王楚然	wang2 chu3 ran2
@@ -417956,6 +418316,7 @@ columns:
 王欣如	wang2 xin1 ru2
 王欣婷	wang2 xin1 ting2
 王欣欣	wang2 xin1 xin1
+王欣然	wang2 xin1 ran2
 王欣瑜	wang2 xin1 yu2
 王欣鵬	wang2 xin1 peng2
 王欽盧	wang2 qin1 lu2
@@ -417968,16 +418329,23 @@ columns:
 王正鵬	wang2 zheng4 peng2
 王武俊	wang2 wu3 jun4
 王武陵	wang2 wu3 ling2
+王殿武	wang2 dian4 wu3
+王殿甫	wang2 dian4 fu3
+王殿甫	wang2 dian4 pu3
 王母宮	wang2 mu3 gong1
 王母桃	wang2 mu3 tao2
 王母池	wang2 mu3 chi2
 王母洞	wang2 mu3 dong4
 王毓國	wang2 yu4 guo2
+王毓瑚	wang2 yu4 hu2
 王毓秀	wang2 yu4 xiu4
 王毓銓	wang2 yu4 quan2
+王比學	wang2 bi3 xue2
 王氏女	wang2 shi4 nv3
 王氏婦	wang2 shi4 fu4
+王水溶	wang2 shui3 rong2
 王水照	wang2 shui3 zhao4
+王永乾	wang2 yong3 qian2
 王永住	wang2 yong3 zhu4
 王永光	wang2 yong3 guang1
 王永利	wang2 yong3 li4
@@ -417990,6 +418358,7 @@ columns:
 王永孝	wang2 yong3 xiao4
 王永家	wang2 yong3 jia1
 王永平	wang2 yong3 ping2
+王永幹	wang2 yong3 gan4
 王永強	wang2 yong3 qiang2
 王永志	wang2 yong3 zhi4
 王永慶	wang2 yong3 qing4
@@ -418015,6 +418384,10 @@ columns:
 王汝剛	wang2 ru3 gang1
 王汝南	wang2 ru3 nan2
 王汝林	wang2 ru3 lin2
+王汝翼	wang2 ru3 yi4
+王汝豐	wang2 ru3 feng1
+王汝鵬	wang2 ru3 peng2
+王江州	wang2 jiang1 zhou1
 王沁毅	wang2 qin4 yi4
 王沂孫	wang2 yi2 sun1
 王沈裕	wang2 shen3 yu4
@@ -418033,9 +418406,12 @@ columns:
 王泰吉	wang2 tai4 ji2
 王洛勇	wang2 luo4 yong3
 王洛賓	wang2 luo4 bin1
+王洛鼎	wang2 luo4 ding3
 王洪亮	wang2 hong2 liang4
 王洪俊	wang2 hong2 jun4
 王洪傑	wang2 hong2 jie2
+王洪娣	wang2 hong2 di4
+王洪山	wang2 hong2 shan1
 王洪文	wang2 hong2 wen2
 王洪波	wang2 hong2 bo1
 王洪波	wang2 hong2 po1
@@ -418044,13 +418420,17 @@ columns:
 王洪瑞	wang2 hong2 rui4
 王洪良	wang2 hong2 liang2
 王洪英	wang2 hong2 ying1
+王洪軍	wang2 hong2 jun1
 王派田	wang2 pai4 tian2
 王派軍	wang2 pai4 jun1
+王浚聯	wang2 jun4 lian2
 王浩信	wang2 hao4 xin4
 王浩傑	wang2 hao4 jie2
 王浩迪	wang2 hao4 di2
 王海亮	wang2 hai3 liang4
 王海元	wang2 hai3 yuan2
+王海凌	wang2 hai3 ling2
+王海山	wang2 hai3 shan1
 王海峰	wang2 hai3 feng1
 王海川	wang2 hai3 chuan1
 王海成	wang2 hai3 cheng2
@@ -418058,12 +418438,18 @@ columns:
 王海梅	wang2 hai3 mei2
 王海波	wang2 hai3 bo1
 王海波	wang2 hai3 po1
+王海洋	wang2 hai3 yang2
 王海濤	wang2 hai3 tao1
+王海濱	wang2 hai3 bin1
 王海燕	wang2 hai3 yan4
 王海玲	wang2 hai3 ling2
 王海華	wang2 hai3 hua2
+王海軍	wang2 hai3 jun1
+王海連	wang2 hai3 lian2
 王海都	wang2 hai3 du1
 王海靜	wang2 hai3 jing4
+王海鳴	wang2 hai3 ming2
+王海鷹	wang2 hai3 ying1
 王海鷺	wang2 hai3 lu4
 王淑娟	wang2 shu1 juan1
 王淑娟	wang2 shu2 juan1
@@ -418077,12 +418463,17 @@ columns:
 王淑雲	wang2 shu2 yun2
 王淑霞	wang2 shu1 xia2
 王淑霞	wang2 shu2 xia2
+王淙淙	wang2 cong2 cong2
 王淦昌	wang2 gan4 chang1
 王淵榮	wang2 yuan1 rong2
 王清任	wang2 qing1 ren4
 王清惠	wang2 qing1 hui4
 王清遠	wang2 qing1 yuan3
+王渝生	wang2 yu2 sheng1
+王湘初	wang2 xiang1 chu1
 王湘浩	wang2 xiang1 hao4
+王湛生	wang2 dan1 sheng1
+王湛生	wang2 zhan4 sheng1
 王滬寧	wang2 hu4 ning2
 王滿銀	wang2 man3 yin2
 王演卦	wang2 yan3 gua4
@@ -418102,12 +418493,15 @@ columns:
 王澤龍	wang2 ze2 long2
 王濟仁	wang2 ji4 ren2
 王瀅娟	wang2 ying2 juan1
+王瀛蕊	wang2 ying2 rui3
 王瀾霏	wang2 lan2 fei1
 王炎午	wang2 yan2 wu3
 王炎午	wang2 yan4 wu3
 王炳南	wang2 bing3 nan2
 王炳章	wang2 bing3 zhang1
 王炳義	wang2 bing3 yi4
+王為民	wang2 wei2 min2
+王為民	wang2 wei4 min2
 王無一	wang2 wu2 yi1
 王無子	wang2 wu2 zi3
 王無道	wang2 wu2 dao4
@@ -418129,6 +418523,7 @@ columns:
 王燕華	wang2 yan4 hua2
 王燕雯	wang2 yan4 wen2
 王燕青	wang2 yan4 qing1
+王營康	wang2 ying2 kang1
 王燦雄	wang2 can4 xiong2
 王爵封	wang2 jue2 feng1
 王爵授	wang2 jue2 shou4
@@ -418147,7 +418542,9 @@ columns:
 王玉妹	wang2 yu4 mei4
 王玉峰	wang2 yu4 feng1
 王玉振	wang2 yu4 zhen4
+王玉昕	wang2 yu4 xin1
 王玉晶	wang2 yu4 jing1
+王玉柱	wang2 yu4 zhu4
 王玉梅	wang2 yu4 mei2
 王玉樹	wang2 yu4 shu4
 王玉珍	wang2 yu4 zhen1
@@ -418200,6 +418597,7 @@ columns:
 王瓦伊	wang2 wa3 yi1
 王甜心	wang2 tian2 xin1
 王生元	wang2 sheng1 yuan2
+王生斌	wang2 sheng1 bin1
 王生良	wang2 sheng1 liang2
 王申禮	wang2 shen1 li3
 王申貴	wang2 shen1 gui4
@@ -418225,7 +418623,13 @@ columns:
 王監軍	wang2 jian1 jun1
 王盤山	wang2 pan2 shan1
 王相公	wang2 xiang4 gong1
+王相堯	wang2 xiang1 yao2
+王相堯	wang2 xiang4 yao2
 王相府	wang2 xiang4 fu3
+王相強	wang2 xiang1 qiang2
+王相強	wang2 xiang4 qiang2
+王相慶	wang2 xiang1 qing4
+王相慶	wang2 xiang4 qing4
 王真人	wang2 zhen1 ren2
 王真君	wang2 zhen1 jun1
 王石川	wang2 shi2 chuan1
@@ -418234,6 +418638,7 @@ columns:
 王石達	wang2 shi2 da2
 王磊麗	wang2 lei3 li4
 王祖藍	wang2 zu3 lan2
+王祖訓	wang2 zu3 xun4
 王祖賢	wang2 zu3 xian2
 王祝翔	wang2 zhu4 xiang2
 王祥喜	wang2 xiang2 xi3
@@ -418250,7 +418655,11 @@ columns:
 王福琴	wang2 fu2 qin2
 王福英	wang2 fu2 ying1
 王福鑫	wang2 fu2 xin1
+王禹九	wang2 yu2 jiu3	80%
+王禹九	wang2 yu3 jiu3
 王禹偁	wang2 yu3 cheng1
+王禹童	wang2 yu2 tong2	80%
+王禹童	wang2 yu3 tong2
 王秀佳	wang2 xiu4 jia1
 王秀全	wang2 xiu4 quan2
 王秀平	wang2 xiu4 ping2
@@ -418266,10 +418675,12 @@ columns:
 王秀蘭	wang2 xiu4 lan2
 王秀雲	wang2 xiu4 yun2
 王秀麗	wang2 xiu4 li4
+王秉岐	wang2 bing3 qi2
 王秉真	wang2 bing3 zhen1
 王秉誠	wang2 bing3 cheng2
 王秋慧	wang2 qiu1 hui4
 王秋月	wang2 qiu1 yue4
+王秋楊	wang2 qiu1 yang2
 王秋艷	wang2 qiu1 yan4
 王秋芳	wang2 qiu1 fang1
 王秋萍	wang2 qiu1 ping2
@@ -418288,6 +418699,7 @@ columns:
 王立強	wang2 li4 qiang2
 王立志	wang2 li4 zhi4
 王立東	wang2 li4 dong1
+王立武	wang2 li4 wu3
 王立申	wang2 li4 shen1
 王立群	wang2 li4 qun2
 王立芳	wang2 li4 fang1
@@ -418309,14 +418721,19 @@ columns:
 王紀波	wang2 ji4 bo1
 王紀波	wang2 ji4 po1
 王約翰	wang2 yue1 han4
+王紅斌	wang2 hong2 bin1
+王紅燕	wang2 hong2 yan4
+王紅紅	wang2 hong2 hong2
 王紅英	wang2 hong2 ying1
 王紅霞	wang2 hong2 xia2
+王納文	wang2 na4 wen2
 王素娟	wang2 su4 juan1
 王素清	wang2 su4 qing1
 王素燕	wang2 su4 yan4
 王素珍	wang2 su4 zhen1
 王素良	wang2 su4 liang2
 王素莉	wang2 su4 li4
+王紫升	wang2 zi3 sheng1
 王紹偉	wang2 shao4 wei3
 王紹光	wang2 shao4 guang1
 王紹君	wang2 shao4 jun1
@@ -418325,6 +418742,7 @@ columns:
 王紹珏	wang2 shao4 jue2
 王紹禹	wang2 shao4 yu3
 王紹華	wang2 shao4 hua2
+王經宇	wang2 jing1 yu3
 王經理	wang2 jing1 li3
 王維中	wang2 wei2 zhong1
 王維亮	wang2 wei2 liang4
@@ -418344,7 +418762,11 @@ columns:
 王維玲	wang2 wei2 ling2
 王維益	wang2 wei2 yi4
 王維祥	wang2 wei2 xiang2
+王維虎	wang2 wei2 hu3
 王維軍	wang2 wei2 jun1
+王維銀	wang2 wei2 yin2
+王維鑑	wang2 wei2 jian4
+王維鑒	wang2 wei2 jian4
 王綱敏	wang2 gang1 min3
 王緯宇	wang2 wei3 yu3
 王總兵	wang2 zong3 bing1
@@ -418362,6 +418784,7 @@ columns:
 王繼紅	wang2 ji4 hong2
 王繼芳	wang2 ji4 fang1
 王繼軍	wang2 ji4 jun1
+王繼飛	wang2 ji4 fei1
 王繼鵬	wang2 ji4 peng2
 王纘緒	wang2 zuan3 xu4
 王美人	wang2 mei3 ren2
@@ -418371,7 +418794,9 @@ columns:
 王美滿	wang2 mei3 man3
 王美珍	wang2 mei3 zhen1
 王美蓮	wang2 mei3 lian2
+王美賢	wang2 mei3 xian2
 王羚柔	wang2 ling2 rou2
+王群英	wang2 qun2 ying1
 王義仁	wang2 yi4 ren2
 王義天	wang2 yi4 tian1
 王義夫	wang2 yi4 fu1
@@ -418429,6 +418854,8 @@ columns:
 王胖子	wang2 pang4 zi5
 王胤昌	wang2 yin4 chang1
 王臣公	wang2 chen2 gong1
+王自中	wang2 zi4 zhong1
+王自平	wang2 zi4 ping2
 王自立	wang2 zi4 li4
 王自華	wang2 zi4 hua2
 王自貴	wang2 zi4 gui4
@@ -418436,6 +418863,7 @@ columns:
 王致和	wang2 zhi4 he2
 王致誠	wang2 zhi4 cheng2
 王興亞	wang2 xing1 ya3
+王興兵	wang2 xing1 bing1
 王興喬	wang2 xing1 qiao2
 王興居	wang2 xing1 ju1
 王興岳	wang2 xing1 yue4
@@ -418443,11 +418871,14 @@ columns:
 王興德	wang2 xing1 de2
 王興志	wang2 xing1 zhi4
 王興梅	wang2 xing1 mei2
+王興步	wang2 xing1 bu4
 王興民	wang2 xing1 min2
 王興良	wang2 xing1 liang2
 王興苗	wang2 xing1 miao2
 王興華	wang2 xing1 hua2
 王興鵬	wang2 xing1 peng2
+王般若	wang2 ban1 ruo4
+王般若	wang2 bo1 re3
 王舵主	wang2 duo4 zhu3
 王船祭	wang2 chuan2 ji4
 王良俊	wang2 liang2 jun4
@@ -418474,6 +418905,7 @@ columns:
 王芸生	wang2 yun2 sheng1
 王苑君	wang2 yuan4 jun1
 王若光	wang2 ruo4 guang1
+王若妍	wang2 ruo4 yan2
 王若寧	wang2 ruo4 ning2
 王若平	wang2 ruo4 ping2
 王若涵	wang2 ruo4 han2
@@ -418506,6 +418938,7 @@ columns:
 王華國	wang2 hua2 guo2
 王華強	wang2 hua2 qiang2
 王華慶	wang2 hua2 qing4
+王華橋	wang2 hua2 qiao2
 王華碧	wang2 hua2 bi4
 王華雷	wang2 hua2 lei2
 王菲菲	wang2 fei1 fei1
@@ -418523,6 +418956,7 @@ columns:
 王薩迦	wang2 sa4 jia1
 王藍茵	wang2 lan2 yin1
 王藝瑾	wang2 yi4 jin3
+王藝璇	wang2 yi4 xuan2
 王藝翔	wang2 yi4 xiang2
 王藝迪	wang2 yi4 di2
 王藝霖	wang2 yi4 lin2
@@ -418540,6 +418974,7 @@ columns:
 王衛榮	wang2 wei4 rong2
 王衛芳	wang2 wei4 fang1
 王裕民	wang2 yu4 min2
+王西麟	wang2 xi1 lin2
 王見人	wang2 jian4 ren2
 王覺斯	wang2 jue2 si1
 王言彬	wang2 yan2 bin1
@@ -418577,10 +419012,14 @@ columns:
 王貴都	wang2 gui4 du1
 王賀錦	wang2 he4 jin3
 王賢君	wang2 xian2 jun1
+王賢斌	wang2 xian2 bin1
 王賢會	wang2 xian2 hui4
 王賢蘭	wang2 xian2 lan2
 王賢軍	wang2 xian2 jun1
+王贛駿	wang2 gan4 jun4
+王起兵	wang2 qi3 bing1
 王超平	wang2 chao1 ping2
+王超素	wang2 chao1 su4
 王超群	wang2 chao1 qun2
 王路易	wang2 lu4 yi4
 王躍堂	wang2 yao4 tang2	80%
@@ -418589,35 +419028,48 @@ columns:
 王躍文	wang2 yue4 wen2
 王躍起	wang2 yao4 qi3	80%
 王躍起	wang2 yue4 qi3
+王軍年	wang2 jun1 nian2
 王軍義	wang2 jun1 yi4
+王軍華	wang2 jun1 hua2
 王軍霞	wang2 jun1 xia2
 王輔仁	wang2 fu3 ren2
 王輔臣	wang2 fu3 chen2
 王輝波	wang2 hui1 bo1
 王輝波	wang2 hui1 po1
+王辟方	wang2 bi4 fang1
+王辟方	wang2 pi4 fang1
+王迎迎	wang2 ying2 ying2
 王近山	wang2 jin4 shan1
 王迪清	wang2 di2 qing1
 王迪煥	wang2 di2 huan4
+王述曾	wang2 shu4 ceng2
+王述曾	wang2 shu4 zeng1
 王連年	wang2 lian2 nian2
 王連彪	wang2 lian2 biao1
 王連志	wang2 lian2 zhi4
+王連洲	wang2 lian2 zhou1
 王進人	wang2 jin4 ren2
 王進喜	wang2 jin4 xi3
 王進寶	wang2 jin4 bao3
 王進芳	wang2 jin4 fang1
 王進謝	wang2 jin4 xie4
 王進財	wang2 jin4 cai2
+王進逵	wang2 jin4 kui2
 王逸帆	wang2 yi4 fan1
 王逸帆	wang2 yi4 fan2
 王逸清	wang2 yi4 qing1
 王逸濤	wang2 yi4 tao1
+王運江	wang2 yun4 jiang1
 王道乾	wang2 dao4 qian2
 王道亨	wang2 dao4 heng1
 王道士	wang2 dao4 shi4
 王道成	wang2 dao4 cheng2
 王達夫	wang2 da2 fu1
+王遠書	wang2 yuan3 shu1
 王適嫻	wang2 shi4 xian2
+王適適	wang2 shi4 shi4
 王邑發	wang2 yi4 fa1
+王邕頁	wang2 yong1 ye4
 王邦瑞	wang2 bang1 rui4
 王部堂	wang2 bu4 tang2
 王都尉	wang2 du1 wei4
@@ -418631,6 +419083,7 @@ columns:
 王金吾	wang2 jin1 wu2
 王金山	wang2 jin1 shan1
 王金平	wang2 jin1 ping2
+王金懷	wang2 jin1 huai2
 王金旭	wang2 jin1 xu4
 王金明	wang2 jin1 ming2
 王金春	wang2 jin1 chun1
@@ -418669,6 +419122,9 @@ columns:
 王鐘翰	wang2 zhong1 han4
 王鐵匠	wang2 tie3 jiang4
 王鐵峰	wang2 tie3 feng1
+王鐵崖	wang2 tie3 ai2	80%
+王鐵崖	wang2 tie3 ya2
+王鐵崖	wang2 tie3 yai2
 王鐵成	wang2 tie3 cheng2
 王鐵漢	wang2 tie3 han4
 王鐵牛	wang2 tie3 niu2
@@ -418725,9 +419181,11 @@ columns:
 王雅茲	wang2 ya3 ci2
 王雅茲	wang2 ya3 zi1
 王雅蓉	wang2 ya3 rong2
+王雙文	wang2 shuang1 wen2
 王雪冰	wang2 xue3 bing1
 王雪利	wang2 xue3 li4
 王雪剛	wang2 xue3 gang1
+王雪原	wang2 xue3 yuan2
 王雪娟	wang2 xue3 juan1
 王雪娥	wang2 xue3 e2
 王雪強	wang2 xue3 qiang2
@@ -418767,6 +419225,7 @@ columns:
 王靈官	wang2 ling2 guan1
 王靈濤	wang2 ling2 tao1
 王靈濤	wang2 ling2 tao2
+王青春	wang2 qing1 chun1
 王青霞	wang2 qing1 xia2
 王靖雯	wang2 jing4 wen2
 王靚蕾	wang2 jing4 lei2	80%
@@ -418802,6 +419261,7 @@ columns:
 王馥麗	wang2 fu4 li4
 王馨平	wang2 xin1 ping2
 王馨平	wang2 xing1 ping2
+王駕麟	wang2 jia4 lin2
 王駿揚	wang2 jun4 yang2
 王驥主	wang2 ji4 zhu3
 王驥德	wang2 ji4 de2
@@ -418819,6 +419279,7 @@ columns:
 王鳴盛	wang2 ming2 sheng4
 王鳴謙	wang2 ming2 qian1
 王鴻光	wang2 hong2 guang1
+王鴻斌	wang2 hong2 bin1
 王鴻熙	wang2 hong2 xi1
 王鴻生	wang2 hong2 sheng1
 王鴻禎	wang2 hong2 zhen1
@@ -448110,6 +448571,7 @@ columns:
 腦手術	nao3 shou3 shu4
 腦挫傷	nao3 cuo4 shang1
 腦損傷	nao3 sun3 shang1
+腦梗塞	nao3 geng3 sai1
 腦梗塞	nao3 geng3 se4
 腦梗死	nao3 geng3 si3
 腦模擬	nao3 mo2 ni2	80%
@@ -462563,6 +463025,7 @@ columns:
 要勁兒	yao4 jing4 er5	80%
 要升級	yao4 sheng1 ji2
 要占卜	yao4 zhan1 bu3
+要占卜	yao4 zhan4 bu3
 要去玩	yao4 qu4 wan2
 要去的	yao4 qu4 de5
 要參加	yao4 can1 jia1
@@ -464580,12 +465043,18 @@ columns:
 許國平	xu3 guo2 ping2
 許國慶	xu3 guo2 qing4
 許國璋	xu3 guo2 zhang1
+許國石	xu3 guo2 shi2
+許執洋	xu3 zhi2 yang2
 許培軍	xu3 pei2 jun1
 許基仁	xu3 ji1 ren2
 許堯佐	xu3 yao2 zuo3
 許塞爾	xu3 sai1 er3
 許塞爾	xu3 sai4 er3
 許塞爾	xu3 se4 er3
+許壽裳	xu3 shou4 chang2
+許壽裳	xu3 shou4 shang1
+許壽裳	xu3 shou4 shang3	80%
+許壽裳	xu3 shou4 shang5
 許夏國	xu3 xia4 guo2
 許外人	xu3 wai4 ren2
 許多一	xu3 duo1 yi1
@@ -464701,6 +465170,7 @@ columns:
 許宏治	xu3 hong2 zhi4
 許宏濤	xu3 hong2 tao1
 許宏濤	xu3 hong2 tao2
+許宏輝	xu3 hong2 hui1
 許宗衡	xu3 zong1 heng2
 許定國	xu3 ding4 guo2
 許宣平	xu3 xuan1 ping2
@@ -464734,7 +465204,10 @@ columns:
 許建發	xu3 jian4 fa1
 許建萍	xu3 jian4 ping2
 許建鋒	xu3 jian4 feng1
+許弘輝	xu3 hong2 hui1
 許彩霞	xu3 cai3 xia2
+許從成	xu3 cong2 cheng2
+許從誠	xu3 cong2 cheng2
 許德拉	xu3 de2 la1
 許德珩	xu3 de2 heng2
 許德華	xu3 de2 hua2
@@ -464761,6 +465234,7 @@ columns:
 許愛平	xu3 ai4 ping2
 許慎剛	xu3 shen4 gang1
 許慎夫	xu3 shen4 fu1
+許慎注	xu3 shen4 zhu4
 許慎海	xu3 shen4 hai3
 許慎著	xu3 shen4 zhu4
 許慧欣	xu3 hui4 xin1
@@ -464787,6 +465261,7 @@ columns:
 許斯斯	xu3 si1 si1
 許新躍	xu3 xin1 yao4	80%
 許新躍	xu3 xin1 yue4
+許方圓	xu3 fang1 yuan2
 許旺氏	xu3 wang4 shi4
 許昆林	xu3 kun1 lin2
 許昌市	xu3 chang1 shi4
@@ -464830,6 +465305,7 @@ columns:
 許永躍	xu3 yong3 yue4
 許永鋒	xu3 yong3 feng1
 許江衡	xu3 jiang1 heng2
+許泓輝	xu3 hong2 hui1
 許洪傑	xu3 hong2 jie2
 許海峰	xu3 hai3 feng1
 許海忠	xu3 hai3 zhong1
@@ -464854,6 +465330,7 @@ columns:
 許淑薇	xu3 shu2 wei2
 許清妹	xu3 qing1 mei4
 許港生	xu3 gang3 sheng1
+許滌新	xu3 di2 xin1
 許滿治	xu3 man3 zhi4
 許漢仁	xu3 han4 ren2
 許漢勝	xu3 han4 sheng4
@@ -464883,6 +465360,7 @@ columns:
 許秋漢	xu3 qiu1 han4
 許秋紅	xu3 qiu1 hong2
 許立群	xu3 li4 qun2
+許紅輝	xu3 hong2 hui1
 許紅陽	xu3 hong2 yang2
 許純紅	xu3 chun2 hong2
 許純美	xu3 chun2 mei3
@@ -464890,6 +465368,7 @@ columns:
 許紹雄	xu3 shao4 xiong2
 許絜瑜	xu3 jie2 yu2
 許維恩	xu3 wei2 en1
+許維樞	xu3 wei2 shu1
 許維芝	xu3 wei2 zhi1
 許績勝	xu3 ji1 sheng4
 許美人	xu3 mei3 ren2
@@ -464921,6 +465400,7 @@ columns:
 許藍方	xu3 lan2 fang1
 許蘭姣	xu3 lan2 jiao1
 許蘭姣	xu3 lan2 jiao3
+許虹輝	xu3 hong2 hui1
 許衡成	xu3 heng2 cheng2
 許衡才	xu3 heng2 cai2
 許親王	xu3 qin1 wang2
@@ -464948,6 +465428,7 @@ columns:
 許銘傑	xu3 ming2 jie2
 許鏡清	xu3 jing4 qing1
 許開陽	xu3 kai1 yang2
+許閎輝	xu3 hong2 hui1
 許阿來	xu3 a1 lai2
 許雅晴	xu3 ya3 qing2
 許雅涵	xu3 ya3 han2
@@ -464957,6 +465438,7 @@ columns:
 許雲峰	xu3 yun2 feng1
 許雲燕	xu3 yun2 yan4
 許雲龍	xu3 yun2 long2
+許霓霓	xu3 ni2 ni2
 許靖奏	xu3 jing4 zou4
 許靖華	xu3 jing4 hua2
 許靜嵐	xu3 jing4 lan2
@@ -464977,6 +465459,7 @@ columns:
 許高麗	xu3 gao1 li2
 許魏漫	xu3 wei4 man2
 許魏漫	xu3 wei4 man4
+許鴻輝	xu3 hong2 hui1
 許鴻雁	xu3 hong2 yan4
 許鹿希	xu3 lu4 xi1
 許麗國	xu3 li4 guo2
@@ -554335,9 +554818,15 @@ columns:
 卜拉希米	bu3 la1 xi1 mi3
 卜晝卜夜	bu3 zhou4 bu3 ye4
 卞皇太后	bian4 huang2 tai4 hou4
+占卜之水	zhan1 bu3 zhi1 shui3
+占卜之水	zhan4 bu3 zhi1 shui3
+占卜之碗	zhan1 bu3 zhi1 wan3
+占卜之碗	zhan4 bu3 zhi1 wan3
 占地面積	zhan4 di4 mian4 ji1
 占星四書	zhan1 xing1 si4 shu1
+占星四書	zhan4 xing1 si4 shu1
 占星相位	zhan1 xing1 xiang4 wei4
+占星相位	zhan4 xing1 xiang4 wei4
 卡丁車賽	ka3 ding1 che1 sai4
 卡他性炎	ka3 ta1 xing4 yan2
 卡佩家族	ka3 pei4 jia1 zu2
@@ -554404,6 +554893,7 @@ columns:
 卡拉哈里	ka3 la1 ha1 li3
 卡拉巴爾	ka3 la1 ba1 er3
 卡拉巴赫	ka3 la1 ba1 he4
+卡拉干達	ka3 la1 gan1 da2
 卡拉庫姆	ka3 la1 ku4 mu3
 卡拉庫爾	ka3 la1 ku4 er3
 卡拉漢丘	ka3 la1 han4 qiu1
@@ -554690,12 +555180,17 @@ columns:
 印鑑鑑定	yin4 jian4 jian4 ding4
 印鼠客蚤	yin4 shu3 ke4 zao3
 危中有機	wei2 zhong1 you3 ji1
+危乎高哉	wei2 hu1 gao1 zai1
 危亡之秋	wei2 wang2 zhi1 qiu1
 危亡之際	wei2 wang2 zhi1 ji4
+危亭曠望	wei2 ting2 kuang4 wang4
+危亭望極	wei2 ting2 wang4 ji2
 危危顫顫	wei2 wei2 chan4 chan4
 危危顫顫	wei2 wei2 zhan4 zhan4
 危如壘卵	wei2 ru2 lei3 luan3
 危害不大	wei2 hai4 bu2 da4
+危害分析	wei2 hai4 fen1 xi1
+危害別人	wei2 hai4 bie2 ren2
 危害社會	wei2 hai4 she4 hui4
 危害程度	wei2 hai4 cheng2 du4
 危害行為	wei2 hai4 xing2 wei2
@@ -554704,18 +555199,27 @@ columns:
 危急情況	wei2 ji2 qing2 kuang4
 危急關頭	wei2 ji2 guan1 tou2
 危情追蹤	wei2 qing2 zhui1 zong1
+危房改造	wei2 fang2 gai3 zao4
 危於重卵	wei2 yu2 chong2 luan3
 危機事件	wei2 ji1 shi4 jian4
+危機干預	wei2 ji1 gan1 yu4
 危機時刻	wei2 ji1 shi2 ke4
+危機條款	wei2 ji1 tiao2 kuan3
 危機爆發	wei2 ji1 bao4 fa1
+危機男子	wei2 ji1 nan2 zi3
 危機管理	wei2 ji1 guan3 li3
 危機重重	wei2 ji1 chong2 chong2
+危機鴛鴦	wei2 ji1 yuan1 yang1
 危猶累卵	wei2 you2 lei3 luan3
 危而不持	wei2 er2 bu4 chi2
+危舊房屋	wei2 jiu4 fang2 wu1
 危若累卵	wei2 ruo4 lei3 luan3
+危言逆耳	wei2 yan2 ni4 er3
 危言駭世	wei2 yan2 hai4 shi4
+危言高論	wei2 yan2 gao1 lun4
 危詞聳聽	wei2 ci2 song3 ting1
 危辭聳聽	wei2 ci2 song3 ting1
+危陋平房	wei2 lou4 ping2 fang2
 危險人物	wei2 xian3 ren2 wu4
 危險作業	wei2 xian3 zuo4 ye4
 危險係數	wei2 xian3 xi4 shu4
@@ -554735,11 +555239,14 @@ columns:
 危險物質	wei2 xian3 wu4 zhi2
 危險物質	wei2 xian3 wu4 zhi4	3%
 危險狀態	wei2 xian3 zhuang4 tai4
+危險界線	wei2 xian3 jie4 xian4
 危險的人	wei2 xian3 de5 ren2
 危險的她	wei2 xian3 de5 ta1
 危險程度	wei2 xian3 cheng2 du4
 危險等級	wei2 xian3 deng3 ji2
+危險誘惑	wei2 xian3 you4 huo4
 危險貨物	wei2 xian3 huo4 wu4
+危險進程	wei2 xian3 jin4 cheng2
 危險遊戲	wei2 xian3 you2 xi4
 危險重重	wei2 xian3 chong2 chong2
 危難之際	wei2 nan4 zhi1 ji4
@@ -554758,6 +555265,7 @@ columns:
 即場成交	ji2 chang2 cheng2 jiao1	3%
 即場成交	ji2 chang3 cheng2 jiao1
 即墨之戰	ji2 mo4 zhi1 zhan4
+即墨渡口	ji2 mo4 du4 kou3
 即將上市	ji2 jiang1 shang4 shi4
 即將上線	ji2 jiang1 shang4 xian4
 即將到來	ji2 jiang1 dao4 lai2
@@ -554851,17 +555359,44 @@ columns:
 即食食品	ji2 shi2 shi2 pin3
 即飲咖啡	ji2 yin3 ka1 fei1
 即鹿無虞	ji2 lu4 wu2 yu2
+卵原細胞	luan3 yuan2 xi4 bao1
 卵塊發育	luan3 kuai4 fa1 yu4
 卵子發生	luan3 zi3 fa1 sheng1
 卵子移植	luan3 zi3 yi2 zhi2
+卵寄生物	luan3 ji4 sheng1 wu4
 卵巢功能	luan3 chao2 gong1 neng2
 卵巢囊腫	luan3 chao2 nang2 zhong3
+卵巢手術	luan3 chao2 shou3 shu4
 卵巢早衰	luan3 chao2 zao3 shuai1
+卵巢移植	luan3 chao2 yi2 zhi2
 卵巢腫瘤	luan3 chao2 zhong3 liu2
+卵式生殖	luan3 shi4 sheng1 zhi2
+卵核分裂	luan3 he2 fen1 lie4
 卵殼蛋白	luan3 ke2 dan4 bai2
+卵殼蛋白	luan3 qiao4 dan4 bai2
 卵母細胞	luan3 mu3 xi4 bao1
+卵泡細胞	luan3 pao4 xi4 bao1
+卵白蛋白	luan3 bai2 dan4 bai2
+卵石不敵	luan3 shi2 bu4 di2
+卵石海岸	luan3 shi2 hai3 an4
+卵磷脂片	luan3 lin2 zhi1 pian4
+卵磷脂片	luan3 lin2 zhi3 pian4
+卵粘蛋白	luan3 nian2 dan4 bai2
+卵粘蛋白	luan3 zhan1 dan4 bai2
 卵翼之下	luan3 yi4 zhi1 xia4
 卵翼之恩	luan3 yi4 zhi1 en1
+卵膜溶素	luan3 mo2 rong2 su4
+卵膜溶素	luan3 mo4 rong2 su4	3%
+卵覆鳥飛	luan3 fu4 niao3 fei1
+卵鞘蛋白	luan3 qiao4 dan4 bai2
+卵黃囊癌	luan3 huang2 nang2 ai2
+卵黃囊癌	luan3 huang2 nang2 yan2
+卵黃形成	luan3 huang2 xing2 cheng2
+卵黃生成	luan3 huang2 sheng1 cheng2
+卵黃磷肽	luan3 huang2 lin2 tai4
+卵黃蛋白	luan3 huang2 dan4 bai2
+卵黃靜脈	luan3 huang2 jing4 mai4
+卵黏蛋白	luan3 nian2 dan4 bai2
 卷不輟手	juan4 bu2 chuo4 shou3
 卷積網絡	juan3 ji1 wang3 luo4
 卷積網路	juan3 ji1 wang3 lu4
@@ -556770,6 +557305,7 @@ columns:
 古直衚衕	gu3 zhi2 hu2 tong2
 古直衚衕	gu3 zhi2 hu2 tong4
 古稀之年	gu3 xi1 zhi1 nian2
+古空棘魚	gu3 kong1 ji2 yu2
 古簾空暮	gu3 lian2 kong1 mu4
 古籍整理	gu3 ji2 zheng3 li3
 古羅馬式	gu3 luo2 ma3 shi4
@@ -556777,6 +557313,7 @@ columns:
 古老古樸	gu3 lao3 gu3 pu3
 古聖先賢	gu3 sheng4 xian1 xian2
 古肥今瘠	gu3 fei2 jin1 ji2
+古腔棘魚	gu3 qiang1 ji2 yu2
 古臺芳榭	gu3 tai2 fang1 xie4
 古舊書店	gu3 jiu4 shu1 dian4
 古航海圖	gu3 hang2 hai3 tu2
@@ -575895,6 +576432,7 @@ columns:
 套頭交易	tao4 tou2 jiao1 yi4
 套頭毛衣	tao4 tou2 mao2 yi1
 套頭裹腦	tao4 tou2 guo3 nao3
+奚國皇帝	xi1 guo2 huang2 di4
 奠基儀式	dian4 ji1 yi2 shi4
 奠基典禮	dian4 ji1 dian3 li3
 奠定基礎	dian4 ding4 ji1 chu3
@@ -588505,6 +589043,7 @@ columns:
 布達拉宮	bu4 da2 la1 gong1
 布達拉寺	bu4 da2 la1 si4
 布達拉山	bu4 da2 la1 shan1
+布酚寧片	bu4 fen1 ning2 pian4
 布里亞族	bu4 li3 ya3 zu2
 布里亞族	bu4 li3 ya4 zu2
 布里亞特	bu4 li3 ya3 te4
@@ -588607,6 +589146,7 @@ columns:
 希斯萊傑	xi1 si1 lai2 jie2
 希斯雷傑	xi1 si1 lei2 jie2
 希旨承顏	xi1 zhi3 cheng2 yan2
+希明婷片	xi1 ming2 ting2 pian4
 希望不大	xi1 wang4 bu2 da4
 希望不是	xi1 wang4 bu2 shi4
 希望中國	xi1 wang4 zhong1 guo2
@@ -594877,9 +595417,12 @@ columns:
 心口如一	xin1 kou3 ru2 yi1
 心口相應	xin1 kou3 xiang1 ying4
 心只有你	xin1 zhi3 you3 ni3
+心可舒片	xin1 ke3 shu1 pian4
 心同止水	xin1 tong2 zhi3 shui3
 心同此理	xin1 tong2 ci3 li3
 心向祖國	xin1 xiang4 zu3 guo2
+心喬意怯	xin1 qiao2 yi4 qie4
+心喬意怯	xin1 qiao2 yi4 que4
 心嚮往之	xin1 xiang4 wang3 zhi1
 心地光明	xin1 di4 guang1 ming2
 心地狹窄	xin1 di4 xia2 zhai3
@@ -594932,6 +595475,7 @@ columns:
 心安神泰	xin1 an1 shen2 tai4
 心安神閑	xin1 an1 shen2 xian2
 心安神閒	xin1 an1 shen2 xian2
+心安膠囊	xin1 an1 jiao1 nang2
 心定理得	xin1 ding4 li3 de2
 心室充盈	xin1 shi4 chong1 ying2
 心室壁瘤	xin1 shi4 bi4 liu2
@@ -594988,6 +595532,7 @@ columns:
 心情卡片	xin1 qing2 ka3 pian4
 心情愉快	xin1 qing2 yu2 kuai4
 心情日記	xin1 qing2 ri4 ji4
+心情沈重	xin1 qing2 chen2 zhong4
 心情沉重	xin1 qing2 chen2 zhong4
 心情舒暢	xin1 qing2 shu1 chang4
 心情車站	xin1 qing2 che1 zhan4
@@ -595040,15 +595585,20 @@ columns:
 心手相忘	xin1 shou3 xiang1 wang4
 心手相連	xin1 shou3 xiang1 lian2
 心搏停止	xin1 bo2 ting2 zhi3
+心搏過速	xin1 bo2 guo4 su4
 心搏驟停	xin1 bo2 zhou4 ting2
 心搏驟停	xin1 bo2 zou4 ting2
 心搖膽戰	xin1 yao2 dan3 zhan4
 心摹手追	xin1 mo2 shou3 zhui1
 心旌搖惑	xin1 jing1 yao2 huo4
+心旌搖搖	xin1 jing1 yao2 yao2
+心旌搖盪	xin1 jing1 yao2 dang4
+心旌搖蕩	xin1 jing1 yao2 dang4
 心明如鏡	xin1 ming2 ru2 jing4
 心明眼亮	xin1 ming2 yan3 liang4
 心智健全	xin1 zhi4 jian4 quan2
 心智圖像	xin1 zhi4 tu2 xiang4
+心智地圖	xin1 zhi4 di4 tu2
 心智掌握	xin1 zhi4 zhang3 wo4
 心智機理	xin1 zhi4 ji1 li3
 心智狀態	xin1 zhi4 zhuang4 tai4
@@ -595073,6 +595623,8 @@ columns:
 心服首肯	xin1 fu2 shou3 keng3
 心期切處	xin1 qi2 qie1 chu4
 心期切處	xin1 qi2 qie4 chu4
+心榮膠囊	xin1 rong2 jiao1 nang2
+心榮顆粒	xin1 rong2 ke1 li4
 心正氣和	xin1 zheng4 qi4 he2
 心正筆正	xin1 zheng4 bi3 zheng4
 心歸何處	xin1 gui1 he2 chu4
@@ -595118,6 +595670,7 @@ columns:
 心照情交	xin1 zhao4 qing2 jiao1
 心照神交	xin1 zhao4 shen2 jiao1
 心煩意亂	xin1 fan2 yi4 luan4
+心煩意冗	xin1 fan2 yi4 rong3
 心煩意悶	xin1 fan2 yi4 men1
 心煩意悶	xin1 fan2 yi4 men4
 心煩意躁	xin1 fan2 yi4 zao4
@@ -595234,12 +595787,16 @@ columns:
 心生一計	xin1 sheng1 yi1 ji4
 心生一計	xin1 sheng1 yi2 ji4
 心生不滿	xin1 sheng1 bu4 man3
+心生滅門	xin1 sheng1 mie4 men2
 心生畏懼	xin1 sheng1 wei4 ju4
 心用四分	xin1 yong4 si4 fen1
 心疼你們	xin1 teng2 ni3 men2
 心疼你們	xin1 teng2 ni3 men5
 心疼肝斷	xin1 teng2 gan1 duan4
 心病難醫	xin1 bing4 nan2 yi1
+心痛康片	xin1 tong4 kang1 pian4
+心癢難抓	xin1 yang3 nan2 zhao1
+心癢難抓	xin1 yang3 nan2 zhua1
 心的方向	xin1 de5 fang1 xiang4
 心的旅途	xin1 de5 lv3 tu2
 心的祈禱	xin1 de5 qi2 dao3
@@ -595247,6 +595804,7 @@ columns:
 心直口快	xin1 zhi2 kou3 kuai4
 心直嘴快	xin1 zhi2 zui3 kuai4
 心相應行	xin1 xiang1 ying4 xing2
+心眼之環	xin1 yan3 zhi1 huan2
 心眼兒多	xin1 yan3 er2 duo1
 心眼兒多	xin1 yan3 er5 duo1	80%
 心知其意	xin1 zhi1 qi2 yi4
@@ -595301,9 +595859,14 @@ columns:
 心胸狹隘	xin1 xiong1 xia2 ai4
 心胸開朗	xin1 xiong1 kai1 lang3
 心胸開闊	xin1 xiong1 kai1 kuo4
+心脈安片	xin1 mai4 an1 pian4
+心脈通片	xin1 mai4 tong1 pian4
 心腎不交	xin1 shen4 bu4 jiao1
+心腦健片	xin1 nao3 jian4 pian4
+心腦康片	xin1 nao3 kang1 pian4
 心腦血管	xin1 nao3 xie3 guan3
 心腦血管	xin1 nao3 xue4 guan3
+心腦靜片	xin1 nao3 jing4 pian4
 心腸歹毒	xin1 chang2 dai3 du2
 心腸鐵石	xin1 chang2 tie3 shi2
 心腹之交	xin1 fu4 zhi1 jiao1
@@ -595368,6 +595931,8 @@ columns:
 心融神會	xin1 rong2 shen2 hui4
 心血來潮	xin1 xie3 lai2 chao2
 心血來潮	xin1 xue4 lai2 chao2
+心血寧片	xin1 xie3 ning2 pian4
+心血寧片	xin1 xue4 ning2 pian4
 心血瘀阻	xin1 xie3 yu1 zu3
 心血瘀阻	xin1 xue4 yu1 zu3
 心血白費	xin1 xie3 bai2 fei4
@@ -595422,6 +595987,7 @@ columns:
 心誠則靈	xin1 cheng2 ze2 ling2
 心誠意潔	xin1 cheng2 yi4 jie2
 心謗腹非	xin1 bang4 fu4 fei1
+心象地圖	xin1 xiang4 di4 tu2
 心貫白日	xin1 guan4 bai2 ri4
 心路歷程	xin1 lu4 li4 cheng2
 心跳加快	xin1 tiao4 jia1 kuai4
@@ -595444,13 +596010,16 @@ columns:
 心輸出量	xin1 shu1 chu1 liang4
 心辣手狠	xin1 la4 shou3 hen3
 心迴意轉	xin1 hui2 yi4 zhuan3
+心通顆粒	xin1 tong1 ke1 li4
 心逸日休	xin1 yi4 ri4 xiu1
+心達康片	xin1 da2 kang1 pian4
 心都碎了	xin1 dou1 sui4 le5
 心都碎了	xin1 dou1 sui4 liao3
 心鄉往之	xin1 xiang1 wang3 zhi1
 心醉神迷	xin1 zui4 shen2 mi2
 心醉魂迷	xin1 zui4 hun2 mi2
 心長力短	xin1 chang2 li4 duan3
+心長綆短	xin1 chang2 geng3 duan3
 心開目明	xin1 kai1 mu4 ming2
 心閑手敏	xin1 xian2 shou3 min3
 心閒手敏	xin1 xian2 shou3 min3
@@ -595474,6 +596043,7 @@ columns:
 心靈交戰	xin1 ling2 jiao1 zhan4
 心靈使者	xin1 ling2 shi3 zhe3
 心靈專注	xin1 ling2 zhuan1 zhu4
+心靈尖嘯	xin1 ling2 jian1 xiao4
 心靈性巧	xin1 ling2 xing4 qiao3
 心靈感應	xin1 ling2 gan3 ying4
 心靈手巧	xin1 ling2 shou3 qiao3
@@ -596782,91 +597352,169 @@ columns:
 思量卻是	si1 liang2 que4 shi4
 思量卻是	si1 liang4 que4 shi4
 怠忽職守	dai4 hu1 zhi2 shou3
+怠惰因循	dai4 duo4 yin1 xun2
 怠慢心理	dai4 man4 xin1 li3
 怡客咖啡	yi2 ke4 ka1 fei1
 怡富銀行	yi2 fu4 yin2 hang2
+怡康新寓	yi2 kang1 xin1 yu4
+怡志養神	yi2 zhi4 yang3 shen2
+怡性養神	yi2 xing4 yang3 shen2
 怡情悅性	yi2 qing2 yue4 xing4
 怡情理性	yi2 qing2 li3 xing4
 怡情養性	yi2 qing2 yang3 xing4
+怡景新苑	yi2 jing3 xin1 yuan4
+怡水嘉園	yi2 shui3 jia1 yuan2
 怡然心會	yi2 ran2 xin1 hui4
 怡然自娛	yi2 ran2 zi4 yu2
 怡然自悅	yi2 ran2 zi4 yue4
+怡然自若	yi2 ran2 zi4 ruo4
 怡然自足	yi2 ran2 zi4 zu2
 怡聲下氣	yi2 sheng1 xia4 qi4
 怡顏悅色	yi2 yan2 yue4 se4
+怡馨花園	yi2 xin1 hua1 yuan2
+怡馨花園	yi2 xing1 hua1 yuan2
+急三火四	ji2 san1 huo3 si4
+急不及待	ji2 bu4 ji2 dai4
 急不可耐	ji2 bu4 ke3 nai4
 急不容緩	ji2 bu4 rong2 huan3
 急不擇言	ji2 bu4 ze2 yan2
+急不擇路	ji2 bu4 ze2 lu4
+急不擇途	ji2 bu4 ze2 tu2
+急不暇擇	ji2 bu2 xia4 ze2
+急不暇擇	ji2 bu4 xia2 ze2
+急不暇擇	ji2 bu4 xia4 ze2
 急中生智	ji2 zhong1 sheng1 zhi4
 急也沒用	ji2 ye3 mei2 yong4
+急乳蛾病	ji2 ru3 e2 bing4
 急人之困	ji2 ren2 zhi1 kun4
+急人所急	ji2 ren2 suo3 ji2
+急公好施	ji2 gong1 hao4 shi1
+急凍光線	ji2 dong4 guang1 xian4
 急切需要	ji2 qie4 xu1 yao4
 急劇上升	ji2 ju4 shang4 sheng1
 急劇下降	ji2 ju4 xia4 jiang4
+急功之勢	ji2 gong1 zhi1 shi4
+急功好利	ji2 gong1 hao4 li4
 急功近利	ji2 gong1 jin4 li4
 急功近名	ji2 gong1 jin4 ming2
 急務在身	ji2 wu4 zai4 shen1
+急危重症	ji2 wei2 zhong4 zheng4
+急吏緩民	ji2 li4 huan3 min2
 急喉痹病	ji2 hou2 bi4 bing4
 急喉痺病	ji2 hou2 bi4 bing4
+急喉風病	ji2 hou2 feng1 bing4
 急嘴急舌	ji2 zui3 ji2 she2
+急回特性	ji2 hui2 te4 xing4
 急如星火	ji2 ru2 xing1 huo3
 急如風火	ji2 ru2 feng1 huo3
 急并各邦	ji2 bing4 ge4 bang1
 急張拘諸	ji2 zhang1 ju1 zhu1
 急忿怨痛	ji2 fen4 yuan4 tong4
+急急匆匆	ji2 ji2 cong1 cong1
+急急慌慌	ji2 ji2 huang1 huang1
 急性中毒	ji2 xing4 zhong4 du2
+急性傷害	ji2 xing4 shang1 hai4
 急性咽炎	ji2 xing4 yan1 yan2
+急性接觸	ji2 xing4 jie1 chu4
+急性暴露	ji2 xing4 bao4 lou4
+急性暴露	ji2 xing4 bao4 lu4
+急性暴露	ji2 xing4 pu4 lou4
+急性暴露	ji2 xing4 pu4 lu4
 急性毒性	ji2 xing4 du2 xing4
 急性炎症	ji2 xing4 yan2 zheng4
 急性照射	ji2 xing4 zhao4 she4
+急性症狀	ji2 xing4 zheng4 zhuang4
 急性肝炎	ji2 xing4 gan1 yan2
 急性胃炎	ji2 xing4 wei4 yan2
 急性腎炎	ji2 xing4 shen4 yan2
 急性腎衰	ji2 xing4 shen4 shuai1
 急性腸炎	ji2 xing4 chang2 yan2
 急性鼻炎	ji2 xing4 bi2 yan2
+急拍繁弦	ji2 pai1 fan2 xian2
 急支糖漿	ji2 zhi1 tang2 jiang1
+急支顆粒	ji2 zhi1 ke1 li4
 急救中心	ji2 jiu4 zhong1 xin1
+急救半徑	ji2 jiu4 ban4 jing4
 急救措施	ji2 jiu4 cuo4 shi1
+急救網絡	ji2 jiu4 wang3 luo4
+急救網路	ji2 jiu4 wang3 lu4
+急救繃帶	ji2 jiu4 beng1 dai4
+急救醫士	ji2 jiu4 yi1 shi4
 急救電話	ji2 jiu4 dian4 hua4
+急斂暴征	ji2 lian3 bao4 zheng1
+急斂暴征	ji2 lian4 bao4 zheng1
+急斂暴徵	ji2 lian3 bao4 zheng1
+急斂暴徵	ji2 lian4 bao4 zheng1
 急於一時	ji2 yu2 yi1 shi2
 急於一時	ji2 yu2 yi4 shi2
+急於事功	ji2 yu2 shi4 gong1
 急於星火	ji2 yu2 xing1 huo3
 急於求成	ji2 yu2 qiu2 cheng2
 急景凋年	ji2 jing3 diao1 nian2
+急景殘年	ji2 jing3 can2 nian2
 急景流年	ji2 jing3 liu2 nian2
+急杵搗心	ji2 chu3 dao3 xin1
 急死我了	ji2 si3 wo3 le5
 急沖而下	ji2 chong1 er2 xia4
 急流勇退	ji2 liu2 yong3 tui4
 急流勇進	ji2 liu2 yong3 jin4
 急流險灘	ji2 liu2 xian3 tan1
 急火攻心	ji2 huo3 gong1 xin1
+急病讓夷	ji2 bing4 rang4 yi2
+急痛攻心	ji2 tong4 gong1 xin1
 急竹繁絲	ji2 zhu2 fan2 si1
+急管繁弦	ji2 guan3 fan2 xian2
 急管繁絃	ji2 guan3 fan2 xian2
+急脈緩灸	ji2 mai4 huan3 jiu1	80%
+急脈緩灸	ji2 mai4 huan3 jiu3
 急若星火	ji2 ruo4 xing1 huo3
+急處從寬	ji2 chu4 cong2 kuan1
 急衝而下	ji2 chong1 er2 xia4
 急診病人	ji2 zhen3 bing4 ren2
+急診處理	ji2 zhen3 chu3 li3
+急診處理	ji2 zhen3 chu4 li3
+急診護士	ji2 zhen3 hu4 shi4
 急診醫學	ji2 zhen3 yi1 xue2
 急赤白臉	ji2 chi4 bai2 lian3
 急起直追	ji2 qi3 zhi2 zhui1
+急跳運動	ji2 tiao4 yun4 dong4
 急躁不安	ji2 zao4 bu4 an1
 急躁情緒	ji2 zao4 qing2 xu4
+急轉角度	ji2 zhuan3 jiao3 du4
 急速上升	ji2 su4 shang4 sheng1
 急速下降	ji2 su4 xia4 jiang4
+急速冷卻	ji2 su4 leng3 que4
+急速射擊	ji2 su4 she4 ji2
+急速祕藥	ji2 su4 mi4 yao4
+急速秘藥	ji2 su4 mi4 yao4
+急速聖典	ji2 su4 sheng4 dian3
+急速走動	ji2 su4 zou3 dong4
 急進主義	ji2 jin4 zhu3 yi4
 急難救助	ji2 nan4 jiu4 zhu4
+急難險重	ji2 nan4 xian3 chong2
+急難險重	ji2 nan4 xian3 zhong4
 急需處理	ji2 xu1 chu3 li3
 急需處理	ji2 xu1 chu4 li3
 急需解決	ji2 xu1 jie3 jue2
 急需資金	ji2 xu1 zi1 jin1
 急風暴雨	ji2 feng1 bao4 yu3
+急風驟雨	ji2 feng1 zhou4 yu3
+急風驟雨	ji2 feng1 zou4 yu3
 急馳而去	ji2 chi2 er2 qu4
+急驚風病	ji2 jing1 feng1 bing4
+急驟層析	ji2 zhou4 ceng2 xi1
+急驟層析	ji2 zou4 ceng2 xi1
+急驟滅菌	ji2 zhou4 mie4 jun1
+急驟滅菌	ji2 zhou4 mie4 jun4
+急驟滅菌	ji2 zou4 mie4 jun1
+急驟滅菌	ji2 zou4 mie4 jun4
 急驟發酵	ji2 zhou4 fa1 jiao4
 急驟發酵	ji2 zhou4 fa1 xiao4
 急驟發酵	ji2 zou4 fa1 jiao4
 急驟發酵	ji2 zou4 fa1 xiao4
 怦怦亂跳	peng1 peng1 luan4 tiao4
 怦怦直跳	peng1 peng1 zhi2 tiao4
+怦然動心	peng1 ran2 dong4 xin1
 怦然心動	peng1 ran2 xin1 dong4
 性交關係	xing4 jiao1 guan1 xi1	80%
 性交關係	xing4 jiao1 guan1 xi4
@@ -603618,9 +604266,13 @@ columns:
 托比亞斯	tuo1 bi3 ya4 si1
 托比凱斯	tuo1 bi3 kai3 si1
 托比西隆	tuo1 bi3 xi1 long2
+托波爾河	tuo1 bo1 er3 he2
+托波爾河	tuo1 po1 er3 he2
 托洛斯基	tuo1 luo4 si1 ji1
 托洛茨基	tuo1 luo4 ci2 ji1
 托洛茨基	tuo1 luo4 zi1 ji1	80%
+托烷司瓊	tuo1 wan2 si1 qiong2
+托烷司瓊	tuo1 wan3 si1 qiong2	80%
 托爾斯泰	tuo1 er3 si1 tai4
 托爾斯港	tuo1 er3 si1 gang3
 托爾貝恩	tuo1 er3 bei4 en1
@@ -603649,6 +604301,7 @@ columns:
 托里霍斯	tuo1 li3 huo4 si1
 托雷波爾	tuo1 lei2 bo1 er3
 托雷波爾	tuo1 lei2 po1 er3
+托驥之蠅	tuo1 ji4 zhi1 ying2
 扛不住啊	kang2 bu2 zhu4 a5
 扛來扛去	kang2 lai2 kang2 qu4
 扛在肩上	kang2 zai4 jian1 shang4
@@ -624215,6 +624868,10 @@ columns:
 林間隙地	lin2 jian4 xi4 di4
 林陰大道	lin2 yin1 da4 dao4
 林青依果	lin2 qing1 yi1 guo3
+林鳥朝嘲	lin2 niao3 chao2 chao2
+林鳥朝嘲	lin2 niao3 chao2 zhao1
+林鳥朝嘲	lin2 niao3 zhao1 chao2
+林鳥朝嘲	lin2 niao3 zhao1 zhao1
 枘圓鑿方	rui4 yuan2 zao2 fang1
 枘圓鑿方	rui4 yuan2 zuo4 fang1
 果不其然	guo3 bu4 qi2 ran2
@@ -624698,25 +625355,75 @@ columns:
 柳院燈疏	liu3 yuan4 deng1 shu1
 柳骨顏筋	liu3 gu3 yan2 jin1
 柳鶯花燕	liu3 ying1 hua1 yan4
+柴伐蒂尼	chai2 fa1 di4 ni2
+柴伐蒂尼	chai2 fa2 di4 ni2
+柴兒胡同	chai2 er2 hu2 tong2
+柴兒胡同	chai2 er2 hu2 tong4
+柴兒胡同	chai2 er5 hu2 tong2	80%
+柴兒胡同	chai2 er5 hu2 tong4	80%
+柴兒衚衕	chai2 er2 hu2 tong2
+柴兒衚衕	chai2 er2 hu2 tong4
+柴兒衚衕	chai2 er5 hu2 tong2	80%
+柴兒衚衕	chai2 er5 hu2 tong4	80%
+柴可夫斯	chai2 ke3 fu1 si1
+柴多火旺	chai2 duo1 huo3 wang4
+柴大官人	chai2 da4 guan1 ren2
+柴天改物	chai2 tian1 gai3 wu4
+柴天改玉	chai2 tian1 gai3 yu4
+柴棒胡同	chai2 bang4 hu2 tong2
+柴棒胡同	chai2 bang4 hu2 tong4
+柴棒衚衕	chai2 bang4 hu2 tong2
+柴棒衚衕	chai2 bang4 hu2 tong4
 柴毀滅性	chai2 hui3 mie4 xing4
 柴毀骨立	chai2 hui3 gu3 li4
 柴油價格	chai2 you2 jia4 ge2
 柴油引擎	chai2 you2 yin3 qing2
+柴油機廠	chai2 you2 ji1 chang3
+柴油機油	chai2 you2 ji1 you2
 柴田勝家	chai2 tian2 sheng4 jia1
+柴田秀勝	chai2 tian2 xiu4 sheng4
+柴窩堡湖	chai2 wo1 bao3 hu2
+柴窩堡湖	chai2 wo1 pu4 hu2
 柴米夫妻	chai2 mi3 fu1 qi1
 柴米油鹽	chai2 mi3 you2 yan2
+柴胡滴丸	chai2 hu2 di1 wan2
+柴胡皁苷	chai2 hu2 zao4 gan1
+柴胡皂苷	chai2 hu2 zao4 gan1
 柴荒米貴	chai2 huang1 mi3 gui4
 柴達木河	chai2 da2 mu4 he2
+柴達木石	chai2 da2 mu4 shi2
+柴銀顆粒	chai2 yin2 ke1 li4
 柴門小戶	chai2 men2 xiao3 hu4
 柴門霍夫	chai2 men2 huo4 fu1
 柴電機車	chai2 dian4 ji1 che1
+柴高夫斯	chai2 gao1 fu1 si1
+柴黃膠囊	chai2 huang2 jiao1 nang2
+柴黃顆粒	chai2 huang2 ke1 li4
 柵格數據	shan1 ge2 shu4 ju4	80%
 柵格數據	shan4 ge2 shu4 ju4	80%
 柵格數據	zha4 ge2 shu4 ju4
 柵格系統	shan1 ge2 xi4 tong3	80%
 柵格系統	shan4 ge2 xi4 tong3	80%
 柵格系統	zha4 ge2 xi4 tong3
+柵格繪圖	shan1 ge2 hui4 tu2	80%
+柵格繪圖	shan4 ge2 hui4 tu2	80%
+柵格繪圖	zha4 ge2 hui4 tu2
+柵欄胡同	shan1 lan2 hu2 tong2	80%
+柵欄胡同	shan1 lan2 hu2 tong4	80%
+柵欄胡同	shan4 lan2 hu2 tong2	80%
+柵欄胡同	shan4 lan2 hu2 tong4	80%
+柵欄胡同	zha4 lan2 hu2 tong2
+柵欄胡同	zha4 lan2 hu2 tong4
+柵欄衚衕	shan1 lan2 hu2 tong2	80%
+柵欄衚衕	shan1 lan2 hu2 tong4	80%
+柵欄衚衕	shan4 lan2 hu2 tong2	80%
+柵欄衚衕	shan4 lan2 hu2 tong4	80%
+柵欄衚衕	zha4 lan2 hu2 tong2
+柵欄衚衕	zha4 lan2 hu2 tong4
 柿原徹也	shi4 yuan2 che4 ye3
+柿沼紫乃	shi4 zhao3 zi3 nai3
+栓塞材料	shuan1 sai1 cai2 liao4
+栓塞材料	shuan1 se4 cai2 liao4
 栖栖皇皇	qi1 qi1 huang2 huang2
 栗喉蜂虎	li4 hou2 feng1 hu3
 栗子蛋糕	li4 zi5 dan4 gao1
@@ -624772,6 +625479,7 @@ columns:
 校正網路	jiao4 zheng4 wang3 lu4
 校正質量	jiao4 zheng4 zhi2 liang4
 校正質量	jiao4 zheng4 zhi4 liang4	3%
+校準函數	jiao4 zhun3 han2 shu4
 校準因數	jiao4 zhun3 yin1 shu4
 校準曲線	jiao4 zhun3 qu1 xian4
 校準曲線	jiao4 zhun3 qu3 xian4
@@ -628322,10 +629030,12 @@ columns:
 欣然命筆	xin1 ran2 ming4 bi3
 欣然接受	xin1 ran2 jie1 shou4
 欣然自喜	xin1 ran2 zi4 xi3
+欣網視訊	xin1 wang3 shi4 xun4
 欣表飛鳴	xin1 biao3 fei1 ming2
 欣賞音樂	xin1 shang3 yin1 yue4
 欣逢佳節	xin1 feng2 jia1 jie2
 欣逢國慶	xin1 feng2 guo2 qing4
+欣龍控股	xin1 long2 kong4 gu3
 欲人不知	yu4 ren2 bu4 zhi1
 欲仙欲死	yu4 xian1 yu4 si3
 欲加之罪	yu4 jia1 zhi1 zui4
@@ -675009,6 +675719,10 @@ columns:
 腸思枯竭	chang2 si1 ku1 jie2
 腸慌腹熱	chang2 huang1 fu4 re4
 腸枯思竭	chang2 ku1 si1 jie2
+腸繫膜炎	chang2 xi4 mo2 yan2
+腸繫膜炎	chang2 xi4 mo4 yan2	3%
+腸繫膜疝	chang2 xi4 mo2 shan4
+腸繫膜疝	chang2 xi4 mo4 shan4	3%
 腸肥滿腦	chang2 fei2 man3 nao3
 腸胃不好	chang2 wei4 bu4 hao3
 腸道疾病	chang2 dao4 ji2 bing4
@@ -687406,6 +688120,7 @@ columns:
 託諸空言	tuo1 zhu1 kong1 yan2
 託足無門	tuo1 zu2 wu2 men2
 託運行李	tuo1 yun4 xing2 li3
+託驥之蠅	tuo1 ji4 zhi1 ying2
 託鳳攀龍	tuo1 feng4 pan1 long2
 記不清了	ji4 bu4 qing1 le5
 記不清楚	ji4 bu4 qing1 chu3
@@ -722564,14 +723279,33 @@ columns:
 麒麟鱸魚	qi2 lin2 lu2 yu2
 麓山寺碑	lu4 shan1 si4 bei1
 麕至沓來	qun2 zhi4 ta4 lai2
+麗句清詞	li4 ju4 qing1 ci2
+麗句清辭	li4 ju4 qing1 ci2
+麗寶樂園	li4 bao3 le4 yuan2
 麗山國中	li4 shan1 guo2 zhong1
 麗山高中	li4 shan1 gao1 zhong1
+麗日中天	li4 ri4 zhong1 tian1
+麗星噪鶥	li4 xing1 zao4 mei2
 麗星郵輪	li4 xing1 you2 lun2
+麗星鷯鶥	li4 xing1 liao2 mei2
+麗景嘉園	li4 jing3 jia1 yuan2
+麗景江山	li4 jing3 jiang1 shan1
+麗景花園	li4 jing3 hua1 yuan2
+麗景華庭	li4 jing3 hua2 ting2
+麗晶國際	li4 jing1 guo2 ji4
 麗朱者丹	li4 zhu1 zhe3 dan1
 麗格海棠	li4 ge2 hai3 tang2
+麗水學院	li2 shui3 xue2 yuan4
 麗江古城	li4 jiang1 gu3 cheng2
 麗江旅遊	li4 jiang1 lv3 you2
+麗珠得樂	li4 zhu1 de2 le4
+麗珠得樂	li4 zhu1 de5 le4
 麗珠集團	li4 zhu1 ji2 tuan2
+麗而不媚	li4 er2 bu2 mei4
+麗色噪鶥	li4 se4 zao4 mei2
+麗色奇鶥	li4 se4 qi2 mei2
+麗芙泰勒	li4 fu2 tai4 le4
+麗藻春葩	li4 zao3 chun1 pa1
 麗質天生	li4 zhi2 tian1 sheng1
 麗質天生	li4 zhi4 tian1 sheng1	3%
 麗都花園	li4 du1 hua1 yuan2
@@ -736006,6 +736740,7 @@ columns:
 卡利姆多語	ka3 li4 mu3 duo1 yu3
 卡前列甲酯	ka3 qian2 lie4 jia3 zhi3
 卡前列酸栓	ka3 qian2 lie4 suan1 shuan1
+卡加布列島	ka3 jia1 bu4 lie4 dao3
 卡加斯之手	ka3 jia1 si1 zhi1 shou3
 卡加斯刃拳	ka3 jia1 si1 ren4 quan2
 卡加爾之眼	ka3 jia1 er3 zhi1 yan3
@@ -736165,6 +736900,19 @@ columns:
 即此羨閒逸	ji2 ci3 xian4 xian2 yi4
 即食料理包	ji2 shi2 liao4 li3 bao1
 即食調理包	ji2 shi2 tiao2 li3 bao1
+卵巢修補術	luan3 chao2 xiu1 bu3 shu4
+卵巢切除術	luan3 chao2 qie1 chu2 shu4
+卵巢移位術	luan3 chao2 yi2 wei4 shu4
+卵巢移植術	luan3 chao2 yi2 zhi2 shu4
+卵泡刺激素	luan3 pao4 ci4 ji1 su4
+卵泡沖洗液	luan3 pao4 chong1 xi3 ye4
+卵泡沖洗液	luan3 pao4 chong1 xi3 yi4
+卵類粘蛋白	luan3 lei4 nian2 dan4 bai2
+卵類粘蛋白	luan3 lei4 zhan1 dan4 bai2
+卵類黏蛋白	luan3 lei4 nian2 dan4 bai2
+卵黃生成素	luan3 huang2 sheng1 cheng2 su4
+卵黃磷蛋白	luan3 huang2 lin2 dan4 bai2
+卵黃管囊腫	luan3 huang2 guan3 nang2 zhong3
 卷積傅立葉	juan3 ji1 fu4 li4 ye4
 卷筒衛生紙	juan3 tong3 wei4 sheng1 zhi3
 卻沒有發現	que4 mei2 you3 fa1 xian4
@@ -737770,6 +738518,7 @@ columns:
 命運是我家	ming4 yun4 shi4 wo3 jia1
 命運的深淵	ming4 yun4 de5 shen1 yuan1
 命運石之門	ming4 yun4 shi2 zhi1 men2
+和久井映見	he2 jiu3 jing3 ying4 jian4
 和以前一樣	he2 yi3 qian2 yi1 yang4
 和以前一樣	he2 yi3 qian2 yi2 yang4
 和你一樣啊	he2 ni3 yi1 yang4 a5
@@ -746663,16 +747412,23 @@ columns:
 心中的願望	xin1 zhong1 de5 yuan4 wang4
 心之官則思	xin1 zhi1 guan1 ze2 si1
 心似雙絲網	xin1 si4 shuang1 si1 wang3
+心內血回收	xin1 nei4 xie3 hui2 shou1
+心內血回收	xin1 nei4 xue4 hui2 shou1
 心功能不全	xin1 gong1 neng2 bu4 quan2
 心功能測定	xin1 gong1 neng2 ce4 ding4
 心動的感覺	xin1 dong4 de5 gan3 jue2
+心可寧膠囊	xin1 ke3 ning2 jiao1 nang2
+心可舒膠囊	xin1 ke3 shu1 jiao1 nang2
+心可舒顆粒	xin1 ke3 shu1 ke1 li4
 心因性障礙	xin1 yin1 xing4 zhang4 ai4
 心外科醫生	xin1 wai4 ke1 yi1 sheng1
 心外管道術	xin1 wai4 guan3 dao4 shu4
 心安口服液	xin1 an1 kou3 fu2 ye4
 心安口服液	xin1 an1 kou3 fu2 yi4
 心安寧膠囊	xin1 an1 ning2 jiao1 nang2
+心安軟膠囊	xin1 an1 ruan3 jiao1 nang2
 心室收縮期	xin1 shi4 shou1 suo1 qi2
+心室晚電位	xin1 shi4 wan3 dian4 wei4
 心室流入道	xin1 shi4 liu2 ru4 dao4
 心室流出道	xin1 shi4 liu2 chu1 dao4
 心室減壓術	xin1 shi4 jian3 ya1 shu4
@@ -746683,6 +747439,7 @@ columns:
 心形傳聲器	xin1 xing2 chuan2 sheng1 qi4
 心往一處想	xin1 wang3 yi1 chu4 xiang3
 心往一處想	xin1 wang3 yi2 chu4 xiang3
+心復康膠囊	xin1 fu4 kang1 jiao1 nang2
 心情不太好	xin1 qing2 bu2 tai4 hao3
 心情不好了	xin1 qing2 bu4 hao3 le5
 心情不好啊	xin1 qing2 bu4 hao3 a5
@@ -746702,7 +747459,14 @@ columns:
 心智心理學	xin1 zhi4 xin1 li3 xue2
 心有千千結	xin1 you3 qian1 qian1 jie2
 心有戚戚焉	xin1 you3 qi1 qi1 yan1
+心有靈犀一	xin1 you3 ling2 xi1 yi1
+心有靈犀一	xin1 you3 ling2 xi1 yi2
+心有靈犀一	xin1 you3 ling2 xi1 yi4
 心有餘而力	xin1 you3 yu2 er2 li4
+心期臥亦賒	xin1 qi2 wo4 yi4 she1
+心榮口服液	xin1 rong2 kou3 fu2 ye4
+心榮口服液	xin1 rong2 kou3 fu2 yi4
+心欣舒膠囊	xin1 xin1 shu1 jiao1 nang2
 心涼了半截	xin1 liang2 le5 ban4 jie2
 心源性休克	xin1 yuan2 xing4 xiu1 ke4
 心潮逐浪高	xin1 chao2 zhu2 lang4 gao1
@@ -746724,22 +747488,38 @@ columns:
 心理語言學	xin1 li3 yu3 yan2 xue2
 心理諮詢師	xin1 li3 zi1 xun2 shi1
 心理雙生性	xin1 li3 shuang1 sheng1 xing4
+心異於曩時	xin1 yi4 yu2 nang3 shi2
 心疼筆記本	xin1 teng2 bi3 ji4 ben3
 心病還須心	xin1 bing4 hai2 xu1 xin1
+心痛寧滴丸	xin1 tong4 ning2 di1 wan2
+心痛寧顆粒	xin1 tong4 ning2 ke1 li4
+心痛康膠囊	xin1 tong4 kang1 jiao1 nang2
 心痛的傷口	xin1 tong4 de5 shang1 kou3
 心痛的感覺	xin1 tong4 de5 gan3 jue2
 心的最裡面	xin1 de5 zui4 li3 mian4
+心益好膠囊	xin1 yi4 hao3 jiao1 nang2
 心碎了無痕	xin1 sui4 liao3 wu2 hen2
 心碎的告白	xin1 sui4 de5 gao4 bai2
+心磁描記術	xin1 ci2 miao2 ji4 shu4
 心納素測定	xin1 na4 su4 ce4 ding4
 心纖維三角	xin1 qian1 wei2 san1 jiao3	80%
 心纖維三角	xin1 xian1 wei2 san1 jiao3
 心聲對話框	xin1 sheng1 dui4 hua4 kuang1
+心肌康顆粒	xin1 ji1 kang1 ke1 li4
 心肺復甦術	xin1 fei4 fu4 su1 shu4
 心肺移植術	xin1 fei4 yi2 zhi2 shu4
 心肺腦復甦	xin1 fei4 nao3 fu4 su1
 心肺轉流術	xin1 fei4 zhuan3 liu2 shu4
+心脈通膠囊	xin1 mai4 tong1 jiao1 nang2
 心腔內異物	xin1 qiang1 nei4 yi4 wu4
+心腦健膠囊	xin1 nao3 jian4 jiao1 nang2
+心腦寧膠囊	xin1 nao3 ning2 jiao1 nang2
+心腦康膠囊	xin1 nao3 kang1 jiao1 nang2
+心腦欣膠囊	xin1 nao3 xin1 jiao1 nang2
+心腦舒通片	xin1 nao3 shu1 tong1 pian4
+心腦舒顆粒	xin1 nao3 shu1 ke1 li4
+心腦血管病	xin1 nao3 xie3 guan3 bing4
+心腦血管病	xin1 nao3 xue4 guan3 bing4
 心臟停搏液	xin1 zang4 ting2 bo2 ye4
 心臟停搏液	xin1 zang4 ting2 bo2 yi4
 心臟固定器	xin1 zang4 gu4 ding4 qi4
@@ -746781,6 +747561,10 @@ columns:
 心跳的感覺	xin1 tiao4 de5 gan3 jue2
 心身同型論	xin1 shen1 tong2 xing2 lun4
 心身平行論	xin1 shen1 ping2 xing2 lun4
+心通口服液	xin1 tong1 kou3 fu2 ye4
+心通口服液	xin1 tong1 kou3 fu2 yi4
+心速寧膠囊	xin1 su4 ning2 jiao1 nang2
+心達康膠囊	xin1 da2 kang1 jiao1 nang2
 心遠地自偏	xin1 yuan3 di4 zi4 pian1
 心酸的情歌	xin1 suan1 de5 qing2 ge1
 心酸的浪漫	xin1 suan1 de5 lang4 man4
@@ -747247,7 +748031,9 @@ columns:
 思維流暢性	si1 wei2 liu2 chang4 xing4
 思維獨創性	si1 wei2 du2 chuang4 xing4
 怡然敬父執	yi2 ran2 jing4 fu4 zhi2
+急來報佛腳	ji2 lai2 bao4 fo2 jiao3
 急來抱佛腳	ji2 lai2 bao4 fo2 jiao3
+急先鋒索超	ji2 xian1 feng1 suo3 chao1
 急則抱佛腳	ji2 ze2 bao4 fo2 jiao3
 急急如律令	ji2 ji2 ru2 lv4 ling4
 急性乳腺炎	ji2 xing4 ru3 xian4 yan2
@@ -747258,16 +748044,25 @@ columns:
 急性牙髓炎	ji2 xing4 ya2 sui3 yan2
 急性肝衰竭	ji2 xing4 gan1 shuai1 jie2
 急性肺水腫	ji2 xing4 fei4 shui3 zhong3
+急性胃擴張	ji2 xing4 wei4 kuo4 zhang1
 急性胃腸炎	ji2 xing4 wei4 chang2 yan2
 急性胰腺炎	ji2 xing4 yi2 xian4 yan2
 急性腎損傷	ji2 xing4 shen4 sun3 shang1
 急性腎衰竭	ji2 xing4 shen4 shuai1 jie2
+急性腦腫脹	ji2 xing4 nao3 zhong3 zhang4
 急性膽囊炎	ji2 xing4 dan3 nang2 yan2
 急性蕁麻疹	ji2 xing4 xun2 ma2 zhen3
 急性闌尾炎	ji2 xing4 lan2 wei3 yan2
 急性高原病	ji2 xing4 gao1 yuan2 bing4
 急性鼻竇炎	ji2 xing4 bi2 dou4 yan2
+急慢性肝炎	ji2 man4 xing4 gan1 yan2
 急時抱佛腳	ji2 shi2 bao4 fo2 jiao3
+急診監護費	ji2 zhen3 jian1 hu4 fei4
+急診科醫師	ji2 zhen3 ke1 yi1 shi1
+急診肝移植	ji2 zhen3 gan1 yi2 zhi2
+急診診查費	ji2 zhen3 zhen3 cha2 fei4
+急速箭祕笈	ji2 su4 jian4 mi4 ji2
+急速箭秘笈	ji2 su4 jian4 mi4 ji2
 急驚風撞著	ji2 jing1 feng1 zhuang4 zhao2
 性價比最高	xing4 jia4 bi3 zui4 gao1
 性別主流化	xing4 bie2 zhu3 liu2 hua4
@@ -749559,6 +750354,7 @@ columns:
 托克雷農場	tuo1 ke4 lei2 nong2 chang2	3%
 托克雷農場	tuo1 ke4 lei2 nong2 chang3
 托勒玫體系	tuo1 le4 mei2 ti3 xi4
+托哌酮膠囊	tuo1 pai4 tong2 jiao1 nang2
 托塔李天王	tuo1 ta3 li3 tian1 wang2
 托拉法爾加	tuo1 la1 fa3 er3 jia1
 托拉法爾加	tuo1 la1 fa4 er3 jia1
@@ -749566,12 +750362,16 @@ columns:
 托斯卡柱式	tuo1 si1 ka3 zhu4 shi4
 托斯卡納區	tuo1 si1 ka3 na4 qu1
 托斯卡納式	tuo1 si1 ka3 na4 shi4
+托槽粘結劑	tuo1 cao2 nian2 jie2 ji4
+托槽粘結劑	tuo1 cao2 zhan1 jie2 ji4
+托槽黏結劑	tuo1 cao2 nian2 jie2 ji4
 托樂嘉街區	tuo1 le4 jia1 jie1 qu1
 托比馬奎爾	tuo1 bi3 ma3 kui2 er3
 托比麥奎爾	tuo1 bi3 mai4 kui2 er3
 托爾托納期	tuo1 er3 tuo1 na4 qi2
 托爾托納階	tuo1 er3 tuo1 na4 jie1
 托紹夫斯基	tuo1 shao4 fu1 si1 ji1
+托芬那酸片	tuo1 fen1 na4 suan1 pian4
 托馬斯全旋	tuo1 ma3 si1 quan2 xuan2
 托馬斯夾板	tuo1 ma3 si1 jia1 ban3
 托馬斯夾板	tuo1 ma3 si1 jia2 ban3
@@ -754245,12 +755045,22 @@ columns:
 柳邊孤負月	liu3 bian1 gu1 fu4 yue4
 柴可夫斯基	chai2 ke3 fu1 si1 ji1
 柴契爾夫人	chai2 qi4 er3 fu1 ren2
+柴油機配件	chai2 you2 ji1 pei4 jian4
 柴油發動機	chai2 you2 fa1 dong4 ji1
+柴油鏟運機	chai2 you2 chan3 yun4 ji1
 柴科夫斯基	chai2 ke1 fu1 si1 ji1
+柴胡口服液	chai2 hu2 kou3 fu2 ye4
+柴胡口服液	chai2 hu2 kou3 fu2 yi4
 柴胡注射液	chai2 hu2 zhu4 she4 ye4
 柴胡注射液	chai2 hu2 zhu4 she4 yi4
+柴胡舒肝丸	chai2 hu2 shu1 gan1 wan2
+柴胡鎮咳片	chai2 hu2 zhen4 ke2 pian4
 柴門聞犬吠	chai2 men2 wen2 quan3 fei4
+柴門聞狗吠	chai2 men2 wen2 gou3 fei4
 柴高夫斯基	chai2 gao1 fu1 si1 ji1
+柴黃口服液	chai2 huang2 kou3 fu2 ye4
+柴黃口服液	chai2 huang2 kou3 fu2 yi4
+柴黃軟膠囊	chai2 huang2 ruan3 jiao1 nang2
 栗背短腳鵯	li4 bei4 duan3 jiao3 bei1
 校園一卡通	xiao4 yuan2 yi1 ka3 tong1
 校園一卡通	xiao4 yuan2 yi4 ka3 tong1
@@ -756048,6 +756858,7 @@ columns:
 水晶工藝品	shui3 jing1 gong1 yi4 pin3
 水晶擲彈器	shui3 jing1 zhi2 tan2 qi4
 水晶球占卜	shui3 jing1 qiu2 zhan1 bu3
+水晶球占卜	shui3 jing1 qiu2 zhan4 bu3
 水晶簾不下	shui3 jing1 lian2 bu2 xia4
 水月通禪寂	shui3 yue4 tong1 chan2 ji2
 水楊酸塗劑	shui3 yang2 suan1 tu2 ji4
@@ -756730,6 +757541,7 @@ columns:
 法律與道德	fa3 lv4 yu3 dao4 de2
 法戈第礦洞	fa3 ge1 di4 kuang4 dong4
 法拉希姆湖	fa3 la1 xi1 mu3 hu2
+法拉第常數	fa3 la1 di4 chang2 shu4
 法拉第效應	fa3 la1 di4 xiao4 ying4
 法拉第旋轉	fa3 la1 di4 xuan2 zhuan3
 法拉第旋轉	fa3 la1 di4 xuan2 zhuan4
@@ -767022,6 +767834,8 @@ columns:
 腳踩兩隻船	jiao3 cai3 liang3 zhi1 chuan2
 腳踩西瓜皮	jiao3 cai3 xi1 gua1 pi2
 腸神經系統	chang2 shen2 jing1 xi4 tong3
+腸繫膜囊腫	chang2 xi4 mo2 nang2 zhong3
+腸繫膜囊腫	chang2 xi4 mo4 nang2 zhong3	3%
 腹壁下動脈	fu4 bi4 xia4 dong4 mai4
 腹股溝韌帶	fu4 gu3 gou1 ren4 dai4
 腺樣體肥大	xian4 yang4 ti3 fei2 da4
@@ -785078,8 +785892,30 @@ columns:
 危險物質洩露	wei2 xian3 wu4 zhi4 xie4 lou4	3%
 危險物質洩露	wei2 xian3 wu4 zhi4 xie4 lu4	3%
 即以其人之道	ji2 yi3 qi2 ren2 zhi1 dao4
+即公孫可知矣	ji2 gong1 sun1 ke3 zhi1 yi3
 即協因數矩陣	ji2 xie2 yin1 shu4 ju3 zhen4
+即日回購協議	ji2 ri4 hui2 gou4 xie2 yi4
+即日平倉交易	ji2 ri4 ping2 cang1 jiao1 yi4
+即日追補按金	ji2 ri4 zhui1 bu3 an4 jin1
 即時通訊軟件	ji2 shi2 tong1 xun4 ruan3 jian4
+即期匯票匯率	ji2 qi2 hui4 piao4 hui4 lv4
+即期外幣資產	ji2 qi2 wai4 bi4 zi1 chan3
+即空即假即中	ji2 kong1 ji2 jia3 ji2 zhong1
+即軌道天文台	ji2 gui3 dao4 tian1 wen2 tai2
+即軌道天文臺	ji2 gui3 dao4 tian1 wen2 tai2
+卵圓孔修補術	luan3 yuan2 kong3 xiu1 bu3 shu4
+卵圓孔注射法	luan3 yuan2 kong3 zhu4 she4 fa3
+卵圓鉗不鏽鋼	luan3 yuan2 qian2 bu2 xiu4 gang1
+卵巢癌探查術	luan3 chao2 ai2 tan4 cha2 shu4
+卵巢癌探查術	luan3 chao2 yan2 tan4 cha2 shu4
+卵巢癌根治術	luan3 chao2 ai2 gen1 zhi4 shu4
+卵巢癌根治術	luan3 chao2 yan2 gen1 zhi4 shu4
+卵黃脂磷蛋白	luan3 huang2 zhi1 lin2 dan4 bai2
+卵黃脂磷蛋白	luan3 huang2 zhi3 lin2 dan4 bai2
+卵黃類粘蛋白	luan3 huang2 lei4 nian2 dan4 bai2
+卵黃類粘蛋白	luan3 huang2 lei4 zhan1 dan4 bai2
+卵黃類黏蛋白	luan3 huang2 lei4 nian2 dan4 bai2
+卵黃高磷蛋白	luan3 huang2 gao1 lin2 dan4 bai2
 卷積神經網絡	juan3 ji1 shen2 jing1 wang3 luo4
 卷積神經網路	juan3 ji1 shen2 jing1 wang3 lu4
 卸了妝的女人	xie4 le5 zhuang1 de5 nv3 ren2
@@ -790888,16 +791724,31 @@ columns:
 心肺聯合移植	xin1 fei4 lian2 he2 yi2 zhi2
 心脈搏痹阻證	xin1 mai4 bo2 bi4 zu3 zheng4
 心脈搏痺阻證	xin1 mai4 bo2 bi4 zu3 zheng4
+心腦清軟膠囊	xin1 nao3 qing1 ruan3 jiao1 nang2
+心腦聯通膠囊	xin1 nao3 lian2 tong1 jiao1 nang2
+心腦舒口服液	xin1 nao3 shu1 kou3 fu2 ye4
+心腦舒口服液	xin1 nao3 shu1 kou3 fu2 yi4
+心腦舒通膠囊	xin1 nao3 shu1 tong1 jiao1 nang2
+心腦血管疾病	xin1 nao3 xie3 guan3 ji2 bing4
+心腦血管疾病	xin1 nao3 xue4 guan3 ji2 bing4
 心臟搭橋手術	xin1 zang4 da1 qiao2 shou3 shu4
 心臟漂浮導管	xin1 zang4 piao1 fu2 dao3 guan3
 心臟纖維支架	xin1 zang4 qian1 wei2 zhi1 jia4	80%
 心臟纖維支架	xin1 zang4 xian1 wei2 zhi1 jia4
 心臟血管手術	xin1 zang4 xie3 guan3 shou3 shu4
 心臟血管手術	xin1 zang4 xue4 guan3 shou3 shu4
+心臟電復律術	xin1 zang4 dian4 fu4 lv4 shu4
+心臟電除顫術	xin1 zang4 dian4 chu2 chan4 shu4
+心臟電除顫術	xin1 zang4 dian4 chu2 zhan4 shu4
+心與楊花共遠	xin1 yu3 yang2 hua1 gong4 yuan3
+心與楊花共遠	xin1 yu3 yang2 hua1 gong4 yuan4
+心舒靜吸入劑	xin1 shu1 jing4 xi1 ru4 ji4
 心花怒放的貓	xin1 hua1 nu4 fang4 de5 mao1
 心要讓你聽見	xin1 yao4 rang4 ni3 ting1 jian4
 心跳呼吸正常	xin1 tiao4 hu1 xi1 zheng4 chang2
 心輸出量測定	xin1 shu1 chu1 liang4 ce4 ding4
+心達康分散片	xin1 da2 kang1 fen1 san3 pian4
+心達康分散片	xin1 da2 kang1 fen1 san4 pian4
 心電事件記錄	xin1 dian4 shi4 jian4 ji4 lu4
 心電圖記錄紙	xin1 dian4 tu2 ji4 lu4 zhi3
 心電監護電極	xin1 dian4 jian1 hu4 dian4 ji2
@@ -790907,6 +791758,7 @@ columns:
 必應搜索引擎	bi4 ying4 sou1 suo3 yin3 qing2
 必要技術特徵	bi4 yao4 ji4 shu4 te4 zheng1
 必要生活空間	bi4 yao4 sheng1 huo2 kong1 jian1
+忍冬感冒顆粒	ren3 dong1 gan3 mao4 ke1 li4
 忍顧鵲橋歸路	ren3 gu4 que4 qiao2 gui1 lu4
 忘了你忘了我	wang4 le5 ni3 wang4 le5 wo3
 忘了我忘了你	wang4 le5 wo3 wang4 le5 ni3
@@ -791087,10 +791939,18 @@ columns:
 思維控制訓練	si1 wei2 kong4 zhi4 xun4 lian4
 思維邊緣理論	si1 wei2 bian1 yuan2 li3 lun4
 思而不學則殆	si1 er2 bu4 xue2 ze2 dai4
+急回運動機構	ji2 hui2 yun4 dong4 ji1 gou4
 急性前列腺炎	ji2 xing4 qian2 lie4 xian4 yan2
+急性心肌梗塞	ji2 xing4 xin1 ji1 geng3 sai1
 急性心肌梗塞	ji2 xing4 xin1 ji1 geng3 se4
 急性扁桃體炎	ji2 xing4 bian3 tao2 ti3 yan2
+急性排斥反應	ji2 xing4 pai2 chi4 fan3 ying4
 急性支氣管炎	ji2 xing4 zhi1 qi4 guan3 yan2
+急性精神錯亂	ji2 xing4 jing1 shen2 cuo4 luan4
+急性酒精中毒	ji2 xing4 jiu3 jing1 zhong4 du2
+急肝退黃膠囊	ji2 gan1 tui4 huang2 jiao1 nang2
+急診空運中心	ji2 zhen3 kong1 yun4 zhong1 xin1
+急診醫療體系	ji2 zhen3 yi1 liao2 ti3 xi4
 性別平等教育	xing4 bie2 ping2 deng3 jiao4 yu4
 性別決定基因	xing4 bie2 jue2 ding4 ji1 yin1
 性別認同障礙	xing4 bie2 ren4 tong2 zhang4 ai4
@@ -794696,11 +795556,19 @@ columns:
 柳氮磺吡啶片	liu3 dan4 huang2 bi4 ding4 pian4
 柴油廢氣淨化	chai2 you2 fei4 qi4 jing4 hua4
 柴油發電機組	chai2 you2 fa1 dian4 ji1 zu3
+柴石退熱顆粒	chai2 shi2 tui4 re4 ke1 li4
+柴胡健肝膠囊	chai2 hu2 jian4 gan1 jiao1 nang2
+柴銀感冒顆粒	chai2 yin2 gan3 mao4 ke1 li4
+柴黃清熱顆粒	chai2 huang2 qing1 re4 ke1 li4
+柵格數據結構	shan1 ge2 shu4 ju4 jie2 gou4	80%
+柵格數據結構	shan4 ge2 shu4 ju4 jie2 gou4	80%
+柵格數據結構	zha4 ge2 shu4 ju4 jie2 gou4
 柿子挑軟的吃	shi4 zi5 tiao1 ruan3 de5 chi1
 校園文化建設	xiao4 yuan2 wen2 hua4 jian4 she4
 校園迷糊大王	xiao4 yuan2 mi2 hu2 da4 wang2
 校後時距曲線	jiao4 hou4 shi2 ju4 qu1 xian4
 校後時距曲線	jiao4 hou4 shi2 ju4 qu3 xian4
+核准附屬貸款	he2 zhun3 fu4 shu3 dai4 kuan3
 核同質異能素	he2 tong2 zhi2 yi4 neng2 su4
 核同質異能素	he2 tong2 zhi4 yi4 neng2 su4	3%
 核子動力潛艇	he2 zi3 dong4 li4 qian2 ting3
@@ -794708,6 +795576,7 @@ columns:
 核子動力潛艦	he2 zi3 dong4 li4 qian2 jian4
 核子動力潛艦	he2 zi3 dong4 li4 qian3 jian4	80%
 核心抗體試劑	he2 xin1 kang4 ti3 shi4 ji4
+核數師證明書	he2 shu4 shi1 zheng4 ming2 shu1
 核火箭發動機	he2 huo3 jian4 fa1 dong4 ji1
 核磁共振成像	he2 ci2 gong4 zhen4 cheng2 xiang4
 核磁共振技術	he2 ci2 gong4 zhen4 ji4 shu4
@@ -794717,6 +795586,7 @@ columns:
 核酸檢測報告	he2 suan1 jian3 ce4 bao4 gao4
 核酸檢測機構	he2 suan1 jian3 ce4 ji1 gou4
 核酸檢測結果	he2 suan1 jian3 ce4 jie2 guo3
+核黃素磷酸鈉	he2 huang2 su4 lin2 suan1 na4
 根據具體情況	gen1 ju4 ju4 ti3 qing2 kuang4
 根據情節輕重	gen1 ju4 qing2 jie2 qing1 zhong4
 根據現行法律	gen1 ju4 xian4 xing2 fa3 lv4
@@ -797510,6 +798380,7 @@ columns:
 狗長尾巴尖兒	gou3 zhang3 yi3 ba1 jian1 er2
 狗長尾巴尖兒	gou3 zhang3 yi3 ba1 jian1 er5	80%
 狗頭人占卜者	gou3 tou2 ren2 zhan1 bu3 zhe3
+狗頭人占卜者	gou3 tou2 ren2 zhan4 bu3 zhe3
 狡兔死良狗烹	jiao3 tu4 si3 liang2 gou3 peng1
 狡兔死走狗烹	jiao3 tu4 si3 zou3 gou3 peng1
 狼牙山五壯士	lang2 ya2 shan1 wu3 zhuang4 shi4
@@ -799207,6 +800078,8 @@ columns:
 神不知鬼不曉	shen2 bu4 zhi1 gui3 bu4 xiao3
 神不知鬼不覺	shen2 bu4 zhi1 gui3 bu4 jue2
 神主牌都會喐	shen2 zhu3 pai2 dou1 hui4 huo4
+神主牌都會喐	shen2 zhu3 pai2 dou1 hui4 xu4
+神主牌都會喐	shen2 zhu3 pai2 dou1 hui4 yu4
 神之金屬研究	shen2 zhi1 jin1 shu3 yan2 jiu1
 神之金屬研究	shen2 zhi1 jin1 shu3 yan2 jiu4
 神佑先知法杖	shen2 you4 xian1 zhi1 fa3 zhang4
@@ -804582,6 +805455,7 @@ columns:
 迷你型計算機	mi2 ni3 xing2 ji4 suan4 ji1
 迷你白金圓盤	mi2 ni3 bai2 jin1 yuan2 pan2
 迷失的占卜者	mi2 shi1 de5 zhan1 bu3 zhe3
+迷失的占卜者	mi2 shi1 de5 zhan4 bu3 zhe3
 迷失的控制者	mi2 shi1 de5 kong4 zhi4 zhe3
 迷失的步行鳥	mi2 shi1 de5 bu4 xing2 niao3
 迷走左肺動脈	mi2 zou3 zuo3 fei4 dong4 mai4
@@ -807666,6 +808540,7 @@ columns:
 鹽城師範學院	yan2 cheng2 shi1 fan4 xue2 yuan4
 鹽皮質類固醇	yan2 pi2 zhi2 lei4 gu4 chun2
 鹽皮質類固醇	yan2 pi2 zhi4 lei4 gu4 chun2	3%
+麗珠腸樂膠囊	li4 zhu1 chang2 le4 jiao1 nang2
 麗絲胺羅丹明	li4 si1 an1 luo2 dan1 ming2
 麥克伯尼切口	mai4 ke4 bo2 ni2 qie1 kou3
 麥克斯韋關係	mai4 ke4 si1 wei2 guan1 xi1	80%
@@ -812087,6 +812962,8 @@ columns:
 卡巴克絡注射液	ka3 ba1 ke4 luo4 zhu4 she4 yi4
 卡巴匹林鈣顆粒	ka3 ba1 pi1 lin2 gai4 ke1 li4
 卡巴匹林鈣顆粒	ka3 ba1 pi3 lin2 gai4 ke1 li4
+卡巴膽鹼注射液	ka3 ba1 dan3 jian3 zhu4 she4 ye4
+卡巴膽鹼注射液	ka3 ba1 dan3 jian3 zhu4 she4 yi4
 卡托普利注射液	ka3 tuo1 pu3 li4 zhu4 she4 ye4
 卡托普利注射液	ka3 tuo1 pu3 li4 zhu4 she4 yi4
 卡托普利緩釋片	ka3 tuo1 pu3 li4 huan3 shi4 pian4
@@ -812098,6 +812975,8 @@ columns:
 卡斯迪諾夫教授	ka3 si1 di2 nuo4 fu1 jiao4 shou4
 卡替洛爾滴眼液	ka3 ti4 luo4 er3 di1 yan3 ye4
 卡替洛爾滴眼液	ka3 ti4 luo4 er3 di1 yan3 yi4
+卡波西水痘樣疹	ka3 bo1 xi1 shui3 dou4 yang4 zhen3
+卡波西水痘樣疹	ka3 po1 xi1 shui3 dou4 yang4 zhen3
 卡米可林注射液	ka3 mi3 ke3 lin2 zhu4 she4 ye4
 卡米可林注射液	ka3 mi3 ke3 lin2 zhu4 she4 yi4
 卡絡磺鈉注射液	ka3 luo4 huang2 na4 zhu4 she4 ye4
@@ -812117,6 +812996,8 @@ columns:
 卡那黴素滴眼液	ka3 na4 mei2 su4 di1 yan3 yi4
 卡馬西平控釋片	ka3 ma3 xi1 ping2 kong4 shi4 pian4
 卡馬西平緩釋片	ka3 ma3 xi1 ping2 huan3 shi4 pian4
+卯酉圈曲率半徑	mao3 you3 quan1 qu1 lv4 ban4 jing4
+卯酉圈曲率半徑	mao3 you3 quan1 qu3 lv4 ban4 jing4
 印刷體漢字識別	yin4 shua1 ti3 han4 zi4 shi4 bie2
 印地安泉大師賽	yin4 di4 an1 quan2 da4 shi1 sai4
 印地安納步行者	yin4 di4 an1 na4 bu4 xing2 zhe3
@@ -812140,7 +813021,18 @@ columns:
 危害國家安全罪	wei2 hai4 guo2 jia1 an1 quan2 zui4
 危險化學品洩漏	wei2 xian3 hua4 xue2 pin3 xie4 lou4
 危險報警閃光燈	wei2 xian3 bao4 jing3 shan3 guang1 deng1
+即今漂泊干戈際	ji2 jin1 piao1 bo2 gan1 ge1 ji4
+即今漂泊干戈際	ji2 jin1 piao1 po4 gan1 ge1 ji4
 即使知道要見面	ji2 shi3 zhi1 dao4 yao4 jian4 mian4
+即周召伯之甘棠	ji2 zhou1 shao4 bo2 zhi1 gan1 tang2
+即從巴峽穿巫峽	ji2 cong2 ba1 xia2 chuan1 wu1 xia2
+即從巴峽穿巫峽	ji2 cong2 ba1 xia2 chuan1 wu2 xia2
+即日追繳保證金	ji2 ri4 zhui1 jiao3 bao3 zheng4 jin1
+即最大慣量主軸	ji2 zui4 da4 guan4 liang4 zhu3 zhou2
+卵子體外成熟液	luan3 zi3 ti3 wai4 cheng2 shou2 ye4
+卵子體外成熟液	luan3 zi3 ti3 wai4 cheng2 shou2 yi4
+卵子體外成熟液	luan3 zi3 ti3 wai4 cheng2 shu2 ye4
+卵子體外成熟液	luan3 zi3 ti3 wai4 cheng2 shu2 yi4
 卻將萬字平戎策	que4 jiang1 wan4 zi4 ping2 rong2 ce4
 卻是更加思念她	que4 shi4 geng4 jia1 si1 nian4 ta1
 卻話巴山夜雨時	que4 hua4 ba1 shan1 ye4 yu3 shi2
@@ -815546,15 +816438,44 @@ columns:
 德門今喜近乘龍	de2 men2 jin1 xi3 jin4 cheng2 long2
 心中喜歡就說愛	xin1 zhong1 xi3 huan1 jiu4 shuo1 ai4
 心中的太陽月亮	xin1 zhong1 de5 tai4 yang2 yue4 liang4
+心內異物取出術	xin1 nei4 yi4 wu4 qu3 chu1 shu4
+心內血回收濾器	xin1 nei4 xie3 hui2 shou1 lv4 qi4
+心內血回收濾器	xin1 nei4 xue4 hui2 shou1 lv4 qi4
+心內血回收管路	xin1 nei4 xie3 hui2 shou1 guan3 lu4
+心內血回收管路	xin1 nei4 xue4 hui2 shou1 guan3 lu4
 心功能康復評定	xin1 gong1 neng2 kang1 fu4 ping2 ding4
 心字頭上一把刀	xin1 zi4 tou2 shang4 yi1 ba3 dao1
 心字頭上一把刀	xin1 zi4 tou2 shang4 yi4 ba3 dao1
+心室內傳導阻滯	xin1 shi4 nei4 chuan2 dao3 zu3 zhi4
+心尖心動描記術	xin1 jian1 xin1 dong4 miao2 ji4 shu4
+心急碰上熱豆腐	xin1 ji2 peng4 shang4 re4 dou4 fu3
+心怯空房不忍歸	xin1 qie4 kong1 fang2 bu4 ren3 gui1
+心怯空房不忍歸	xin1 qie4 kong4 fang2 bu4 ren3 gui1
+心怯空房不忍歸	xin1 que4 kong1 fang2 bu4 ren3 gui1
+心怯空房不忍歸	xin1 que4 kong4 fang2 bu4 ren3 gui1
 心愛的無緣的人	xin1 ai4 de5 wu2 yuan2 de5 ren2
 心憂炭賤願天寒	xin1 you1 tan4 jian4 yuan4 tian1 han2
+心房擴大成形術	xin1 fang2 kuo4 da4 cheng2 xing2 shu4
+心有餘力而不足	xin1 you3 yu2 li4 er2 bu4 zu2
 心有餘而力不足	xin1 you3 yu2 er2 li4 bu4 zu2
+心率變異性分析	xin1 lv4 bian4 yi4 xing4 fen1 xi1
+心理學專業詞彙	xin1 li3 xue2 zhuan1 ye4 ci2 hui4
+心理物理學方法	xin1 li3 wu4 li3 xue2 fang1 fa3
+心理神經免疫學	xin1 li3 shen2 jing1 mian3 yi4 xue2
+心病終須心藥醫	xin1 bing4 zhong1 xu1 xin1 yao4 yi1
+心病還須心藥醫	xin1 bing4 hai2 xu1 xin1 yao4 yi1
 心肝不託著五臟	xin1 gan1 bu4 tuo1 zhe5 wu3 zang4
+心臟外傷修補術	xin1 zang4 wai4 shang1 xiu1 bu3 shu4
 心臟神經官能症	xin1 zang4 shen2 jing1 guan1 neng2 zheng4
+心臟電機械分離	xin1 zang4 dian4 ji1 xie4 fen1 li2
+心臟電生理診療	xin1 zang4 dian4 sheng1 li3 zhen3 liao2
+心身相互作用論	xin1 shen1 xiang1 hu4 zuo4 yong4 lun4
+心輕萬事皆鴻毛	xin1 qing1 wan4 shi4 jie1 hong2 mao2
+心隨明月到胡天	xin1 sui2 ming2 yue4 dao4 hu2 tian1
+心電向量描記術	xin1 dian4 xiang4 liang4 miao2 ji4 shu4
 心靈睡過的地方	xin1 ling2 shui4 guo4 de5 di4 fang1
+心頭剜去一塊肉	xin1 tou2 wan1 qu4 yi1 kuai4 rou4
+心頭剜去一塊肉	xin1 tou2 wan1 qu4 yi2 kuai4 rou4
 忍使驊騮氣凋喪	ren3 shi3 hua2 liu2 qi4 diao1 sang1
 忍使驊騮氣凋喪	ren3 shi3 hua2 liu2 qi4 diao1 sang4
 忍字頭上一把刀	ren3 zi4 tou2 shang4 yi1 ba3 dao1
@@ -815695,11 +816616,18 @@ columns:
 思量卻也有悲時	si1 liang2 que4 ye3 you3 bei1 shi2
 思量卻也有悲時	si1 liang4 que4 ye3 you3 bei1 shi2
 急性呼吸道感染	ji2 xing4 hu1 xi1 dao4 gan3 ran3
+急性尿酸鹽腎病	ji2 xing4 niao4 suan1 yan2 shen4 bing4
+急性左心室衰竭	ji2 xing4 zuo3 xin1 shi4 shuai1 jie2
+急性心因性反應	ji2 xing4 xin1 yin1 xing4 fan3 ying4
 急性氰化物中毒	ji2 xing4 qing1 hua4 wu4 zhong1 du2
 急性氰化物中毒	ji2 xing4 qing1 hua4 wu4 zhong4 du2
+急性精神分裂症	ji2 xing4 jing1 shen2 fen1 lie4 zheng4
+急性腎小管壞死	ji2 xing4 shen4 xiao3 guan3 huai4 si3
 急水也有回頭浪	ji2 shui3 ye3 you3 hui2 tou2 lang4
+急診觀察床位費	ji2 zhen3 guan1 cha2 chuang2 wei4 fei4
 性別角色社會化	xing4 bie2 jiao3 se4 she4 hui4 hua4
 性別角色社會化	xing4 bie2 jue2 se4 she4 hui4 hua4
+性格機能類型論	xing4 ge2 ji1 neng2 lei4 xing2 lun4
 性腺發育障礙症	xing4 xian4 fa1 yu4 zhang4 ai4 zheng4
 怨入雙眉閒鬥損	yuan4 ru4 shuang1 mei2 xian2 dou4 sun3
 怪我愛得太狂野	guai4 wo3 ai4 de5 tai4 kuang2 ye3
@@ -818088,6 +819016,7 @@ columns:
 柔情冷看千夫指	rou2 qing2 leng3 kan4 qian1 fu1 zhi3
 查封債務人財產	cha2 feng1 zhai4 wu4 ren2 cai2 chan3
 柬埔寨王國政府	jian3 pu3 zhai4 wang2 guo2 zheng4 fu3
+柯如青銅根如石	ke1 ru2 qing1 tong2 gen1 ru2 shi2
 柱銷孔中心曲面	zhu4 xiao1 kong3 zhong1 xin1 qu1 mian4
 柱銷孔中心曲面	zhu4 xiao1 kong3 zhong1 xin1 qu3 mian4
 柳下系船猶未穩	liu3 xia4 xi4 chuan2 you2 wei4 wen3
@@ -818104,6 +819033,9 @@ columns:
 柳絮池塘淡淡風	liu3 xu4 chi2 tang2 dan4 dan4 feng1
 柳邊人歇待船歸	liu3 bian1 ren2 xie1 dai4 chuan2 gui1
 柴米油鹽醬醋茶	chai2 mi3 you2 yan2 jiang4 cu4 cha2
+柴辛感冒注射液	chai2 xin1 gan3 mao4 zhu4 she4 ye4
+柴辛感冒注射液	chai2 xin1 gan3 mao4 zhu4 she4 yi4
+柿子要撿軟的捏	shi4 zi5 yao4 jian3 ruan3 de5 nie1
 核動力攻擊潛艇	he2 dong4 li4 gong1 ji2 qian2 ting3
 核動力攻擊潛艇	he2 dong4 li4 gong1 ji2 qian3 ting3	80%
 核殺傷破壞估計	he2 sha1 shang1 po4 huai4 gu1 ji4
@@ -818340,6 +819272,8 @@ columns:
 權益對債務比率	quan2 yi4 dui4 zhai4 wu4 bi3 lv4
 權益對資產比率	quan2 yi4 dui4 zi1 chan3 bi3 lv4
 權責發生制會計	quan2 ze2 fa1 sheng1 zhi4 kuai4 ji4
+欣逢秋夜作春宵	xin1 feng2 qiu1 ye4 zuo4 chun1 xiao1
+欲上高樓去避愁	yu4 shang4 gao1 lou2 qu4 bi4 chou2
 欲將心事付瑤琴	yu4 jiang1 xin1 shi4 fu4 yao2 qin2
 欲把西湖比西子	yu4 ba3 xi1 hu2 bi3 xi1 zi3
 欲渡黃河冰塞川	yu4 du4 huang2 he2 bing1 sai1 chuan1
@@ -822427,6 +823361,10 @@ columns:
 腮腺炎性睪丸炎	sai1 xian4 yan2 xing4 gao1 wan2 yan2
 腮腺炎性睪丸炎	sai1 xian4 yan2 xing4 gao3 wan2 yan2	80%
 腰懸相印作都統	yao1 xuan2 xiang1 yin4 zuo4 du1 tong3
+腸繫膜動脈閉塞	chang2 xi4 mo2 dong4 mai4 bi4 sai1
+腸繫膜動脈閉塞	chang2 xi4 mo2 dong4 mai4 bi4 se4
+腸繫膜動脈閉塞	chang2 xi4 mo4 dong4 mai4 bi4 sai1	3%
+腸繫膜動脈閉塞	chang2 xi4 mo4 dong4 mai4 bi4 se4	3%
 腹有詩書氣自華	fu4 you3 shi1 shu1 qi4 zi4 hua2
 膀胱移行細胞癌	pang2 guang1 yi2 xing2 xi4 bao1 ai2
 膀胱穿刺針滅菌	pang2 guang1 chuan1 ci4 zhen1 mie4 jun1
@@ -826385,6 +827323,7 @@ columns:
 鹽酸多利卡因針	yan2 suan1 duo1 li4 ka3 yin1 zhen1
 鹿門月照開煙樹	lu4 men2 yue4 zhao4 kai1 yan1 shu4
 麗莎史坦菲爾德	li4 sha1 shi3 tan3 fei1 er3 de2
+麗譙吹罷小單于	li4 qiao2 chui1 ba4 xiao3 chan2 yu2
 麥克勞德真空規	mai4 ke4 lao2 de2 zhen1 kong1 gui1
 麥克斯韋方程組	mai4 ke4 si1 wei2 fang1 cheng2 zu3
 麥克斯韋方程組	mai4 ke4 si1 wei3 fang1 cheng2 zu3	80%
@@ -828779,6 +829718,7 @@ columns:
 即插即用操作系統	ji2 cha1 ji2 yong4 cao1 zuo4 xi4 tong3
 即插即用程序設計	ji2 cha1 ji2 yong4 cheng2 xu4 she4 ji4
 即時軟組織擴張術	ji2 shi2 ruan3 zu3 zhi1 kuo4 zhang1 shu4
+卵巢輸卵管切除術	luan3 chao2 shu1 luan3 guan3 qie1 chu2 shu4
 厚膜混合集成電路	hou4 mo2 hun2 he2 ji2 cheng2 dian4 lu4
 厚膜混合集成電路	hou4 mo2 hun3 he2 ji2 cheng2 dian4 lu4
 厚膜混合集成電路	hou4 mo2 hun4 he2 ji2 cheng2 dian4 lu4
@@ -830643,10 +831583,15 @@ columns:
 德州科技職業學院	de2 zhou1 ke1 ji4 zhi2 ye4 xue2 yuan4
 德明商業專科學校	de2 ming2 shang1 ye4 zhuan1 ke1 xue2 xiao4
 德明財經科技大學	de2 ming2 cai2 jing1 ke1 ji4 da4 xue2
+心內血回收貯血器	xin1 nei4 xie3 hui2 shou1 zhu3 xie3 qi4
+心內血回收貯血器	xin1 nei4 xie3 hui2 shou1 zhu4 xie3 qi4
+心內血回收貯血器	xin1 nei4 xue4 hui2 shou1 zhu3 xue4 qi4
+心內血回收貯血器	xin1 nei4 xue4 hui2 shou1 zhu4 xue4 qi4
 心口窩裡跑得下馬	xin1 kou3 wo1 li3 pao3 de5 xia4 ma3
 心急吃不了熱豆腐	xin1 ji2 chi1 bu4 liao3 re4 dou4 fu3
 心愛的不要說再見	xin1 ai4 de5 bu2 yao4 shuo1 zai4 jian4
 心戰為上兵戰為下	xin1 zhan4 wei2 shang4 bing1 zhan4 wei2 xia4
+心肌代謝斷層顯像	xin1 ji1 dai4 xie4 duan4 ceng2 xian3 xiang4
 心行處滅言語道斷	xin1 xing2 chu4 mie4 yan2 yu3 dao4 duan4
 心電監測電話傳輸	xin1 dian4 jian1 ce4 dian4 hua4 chuan2 shu1
 心頭小鹿撞個不住	xin1 tou2 xiao3 lu4 zhuang4 ge5 bu2 zhu4
@@ -830684,12 +831629,27 @@ columns:
 怕梨花落盡成秋色	pa4 li2 hua1 luo4 jin4 cheng2 qiu1 se4
 怕黃花也笑人岑寂	pa4 huang2 hua1 ye3 xiao4 ren2 cen2 ji2
 思春期美少女合體	si1 chun1 qi2 mei3 shao4 nv3 he2 ti3
+急性上呼吸道感染	ji2 xing4 shang4 hu1 xi1 dao4 gan3 ran3
+急性化膿性牙髓炎	ji2 xing4 hua4 nong2 xing4 ya2 sui2 yan2	80%
+急性化膿性牙髓炎	ji2 xing4 hua4 nong2 xing4 ya2 sui3 yan2
+急性卡他性闌尾炎	ji2 xing4 ka3 ta1 xing4 lan2 wei3 yan2
 急性多發性齦膿腫	ji2 xing4 duo1 fa1 xing4 yin2 nong2 zhong3
+急性氣管支氣管炎	ji2 xing4 qi4 guan3 zhi1 qi4 guan3 yan2
+急性漿液性牙髓炎	ji2 xing4 jiang1 ye4 xing4 ya2 sui2 yan2	80%
+急性漿液性牙髓炎	ji2 xing4 jiang1 ye4 xing4 ya2 sui3 yan2
+急性漿液性牙髓炎	ji2 xing4 jiang1 yi4 xing4 ya2 sui2 yan2	80%
+急性漿液性牙髓炎	ji2 xing4 jiang1 yi4 xing4 ya2 sui3 yan2
+急性瀰漫性腹膜炎	ji2 xing4 mi2 man4 xing4 fu4 mo2 yan2
+急性瀰漫性腹膜炎	ji2 xing4 mi2 man4 xing4 fu4 mo4 yan2	3%
 急性發熱性嗜中性	ji2 xing4 fa1 re4 xing4 shi4 zhong1 xing4
 急性脊髓灰白質炎	ji2 xing4 ji2 sui2 hui1 bai2 zhi2 yan2	80%
 急性脊髓灰白質炎	ji2 xing4 ji2 sui2 hui1 bai2 zhi4 yan2	3%
 急性脊髓灰白質炎	ji2 xing4 ji2 sui3 hui1 bai2 zhi2 yan2
 急性脊髓灰白質炎	ji2 xing4 ji2 sui3 hui1 bai2 zhi4 yan2	3%
+急性間歇性卟啉病	ji2 xing4 jian1 xie1 xing4 bu3 lin2 bing4
+急性間歇性卟啉病	ji2 xing4 jian4 xie1 xing4 bu3 lin2 bing4
+急性非特異性齦炎	ji2 xing4 fei1 te4 yi4 xing4 yin2 yan2
+急救單獨開艙治療	ji2 jiu4 dan1 du2 kai1 cang1 zhi4 liao2
 急驚風撞著慢郎中	ji2 jing1 feng1 zhuang4 zhao2 man4 lang2 zhong1
 急驚風遇著慢郎中	ji2 jing1 feng1 yu4 zhao2 man4 lang2 zhong1
 性激素結合球蛋白	xing4 ji1 su4 jie2 he2 qiu2 dan4 bai2
@@ -836523,6 +837483,10 @@ columns:
 南非非洲人國民大會	nan2 fei1 fei1 zhou1 ren2 guo2 min2 da4 hui4
 博山道中效李易安體	bo2 shan1 dao4 zhong1 xiao4 li3 yi4 an1 ti3
 博羅縣羅浮山製藥廠	bo2 luo2 xian4 luo2 fu2 shan1 zhi4 yao4 chang3
+卡介菌多糖核酸制劑	ka3 jie4 jun1 duo1 tang2 he2 suan1 zhi4 ji4
+卡介菌多糖核酸制劑	ka3 jie4 jun4 duo1 tang2 he2 suan1 zhi4 ji4
+卡介菌多糖核酸製劑	ka3 jie4 jun1 duo1 tang2 he2 suan1 zhi4 ji4
+卡介菌多糖核酸製劑	ka3 jie4 jun4 duo1 tang2 he2 suan1 zhi4 ji4
 卡介菌純蛋白衍生物	ka3 jie4 jun1 chun2 dan4 bai2 yan3 sheng1 wu4
 卡介菌純蛋白衍生物	ka3 jie4 jun4 chun2 dan4 bai2 yan3 sheng1 wu4
 卡塞格倫反射面天線	ka3 sai1 ge2 lun2 fan3 she4 mian4 tian1 xian4
@@ -837210,6 +838174,24 @@ columns:
 微量元素混肥生產工	wei2 liang4 yuan2 su4 hun4 fei2 sheng1 chan3 gong1
 德意志學術交流中心	de2 yi4 zhi4 xue2 shu4 jiao1 liu2 zhong1 xin1
 德瓦爾鼓泡式氧合器	de2 wa3 er3 gu3 pao4 shi4 yang3 he2 qi4
+心內膜自動邊緣檢測	xin1 nei4 mo2 zi4 dong4 bian1 yuan2 jian3 ce4
+心內膜自動邊緣檢測	xin1 nei4 mo4 zi4 dong4 bian1 yuan2 jian3 ce4	3%
+心外膜起搏電極導線	xin1 wai4 mo2 qi3 bo2 dian4 ji2 dao3 xian4
+心外膜起搏電極導線	xin1 wai4 mo4 qi3 bo2 dian4 ji2 dao3 xian4	3%
+心房心室連接不協調	xin1 fang2 xin1 shi4 lian2 jie1 bu4 xie2 tiao2
+心瓣膜和心間膈手術	xin1 ban4 mo2 he2 xin1 jian1 ge2 shou3 shu4
+心瓣膜和心間膈手術	xin1 ban4 mo2 he2 xin1 jian4 ge2 shou3 shu4
+心瓣膜和心間膈手術	xin1 ban4 mo4 he2 xin1 jian1 ge2 shou3 shu4	3%
+心瓣膜和心間膈手術	xin1 ban4 mo4 he2 xin1 jian4 ge2 shou3 shu4	3%
+心肌疾病的實驗診斷	xin1 ji1 ji2 bing4 de5 shi2 yan4 zhen3 duan4
+心肺觸診電腦模擬人	xin1 fei4 chu4 zhen3 dian4 nao3 mo2 ni2 ren2	80%
+心肺觸診電腦模擬人	xin1 fei4 chu4 zhen3 dian4 nao3 mo2 ni3 ren2
+心臟停搏液灌注插管	xin1 zang4 ting2 bo2 ye4 guan4 zhu4 cha1 guan3
+心臟停搏液灌注插管	xin1 zang4 ting2 bo2 yi4 guan4 zhu4 cha1 guan3
+心臟彩色多普勒超聲	xin1 zang4 cai3 se4 duo1 pu3 le4 chao1 sheng1
+心臟彩色杜普勒超聲	xin1 zang4 cai3 se4 du4 pu3 le4 chao1 sheng1
+心臟彩色都卜勒超聲	xin1 zang4 cai3 se4 dou1 bu3 le4 chao1 sheng1
+心臟彩色都卜勒超聲	xin1 zang4 cai3 se4 du1 bu3 le4 chao1 sheng1
 心電圖藥物負荷試驗	xin1 dian4 tu2 yao4 wu4 fu4 he2 shi4 yan4
 心電圖藥物負荷試驗	xin1 dian4 tu2 yao4 wu4 fu4 he4 shi4 yan4
 心電圖踏車負荷試驗	xin1 dian4 tu2 ta4 che1 fu4 he2 shi4 yan4
@@ -837233,6 +838215,28 @@ columns:
 怎麼今天我還在經歷	ze3 mo5 jin1 tian1 wo3 hai2 zai4 jing1 li4	80%
 怎麼今天我還在經歷	zen3 me5 jin1 tian1 wo3 hai2 zai4 jing1 li4
 怎麼今天我還在經歷	zen3 mo5 jin1 tian1 wo3 hai2 zai4 jing1 li4	80%
+急性壞死潰瘍性齦炎	ji2 xing4 huai4 si3 kui4 yang2 xing4 yin2 yan2
+急性小管性排斥反應	ji2 xing4 xiao3 guan3 xing4 pai2 chi4 fan3 ying4
+急性心肌梗塞灶顯像	ji2 xing4 xin1 ji1 geng3 sai1 zao4 xian3 xiang4
+急性心肌梗塞灶顯像	ji2 xing4 xin1 ji1 geng3 se4 zao4 xian3 xiang4
+急性播散性扁平苔蘚	ji2 xing4 bo1 san3 xing4 bian3 ping2 tai1 xian3
+急性播散性扁平苔蘚	ji2 xing4 bo1 san3 xing4 bian3 ping2 tai2 xian3
+急性播散性扁平苔蘚	ji2 xing4 bo1 san4 xing4 bian3 ping2 tai1 xian3
+急性播散性扁平苔蘚	ji2 xing4 bo1 san4 xing4 bian3 ping2 tai2 xian3
+急性播散性扁平苔蘚	ji2 xing4 bo4 san3 xing4 bian3 ping2 tai1 xian3
+急性播散性扁平苔蘚	ji2 xing4 bo4 san3 xing4 bian3 ping2 tai2 xian3
+急性播散性扁平苔蘚	ji2 xing4 bo4 san4 xing4 bian3 ping2 tai1 xian3
+急性播散性扁平苔蘚	ji2 xing4 bo4 san4 xing4 bian3 ping2 tai2 xian3
+急性細胞性排斥反應	ji2 xing4 xi4 bao1 xing4 pai2 chi4 fan3 ying4
+急性腰扭傷推拿治療	ji2 xing4 yao1 niu3 shang1 tui1 na2 zhi4 liao2
+急性腸繫膜淋巴結炎	ji2 xing4 chang2 xi4 mo2 lin2 ba1 jie2 yan2
+急性腸繫膜淋巴結炎	ji2 xing4 chang2 xi4 mo4 lin2 ba1 jie2 yan2	3%
+急性苔蘚痘瘡樣糠疹	ji2 xing4 tai1 xian3 dou4 chuang1 yang4 kang1 zhen3
+急性苔蘚痘瘡樣糠疹	ji2 xing4 tai2 xian3 dou4 chuang1 yang4 kang1 zhen3
+急性血管性排斥反應	ji2 xing4 xie3 guan3 xing4 pai2 chi4 fan3 ying4
+急性血管性排斥反應	ji2 xing4 xue4 guan3 xing4 pai2 chi4 fan3 ying4
+急性鏈球菌性齦口炎	ji2 xing4 lian4 qiu2 jun1 xing4 yin2 kou3 yan2
+急性鏈球菌性齦口炎	ji2 xing4 lian4 qiu2 jun4 xing4 yin2 kou3 yan2
 性腺發育障礙綜合症	xing4 xian4 fa1 yu4 zhang4 ai4 zong1 he2 zheng4
 性腺發育障礙綜合症	xing4 xian4 fa1 yu4 zhang4 ai4 zong4 he2 zheng4
 恰似一江春水向東流	qia4 si4 yi1 jiang1 chun1 shui3 xiang4 dong1 liu2
@@ -837578,8 +838582,11 @@ columns:
 林子大了什麼鳥都有	lin2 zi5 da4 le5 shen2 mo5 niao3 dou1 you3	80%
 柔輪齒圈壁厚中性層	rou2 lun2 chi3 quan1 bi4 hou4 zhong1 xing4 ceng2
 柔輪齒漸開線起始圓	rou2 lun2 chi3 jian4 kai1 xian4 qi3 shi3 yuan2
+柴犬阿旺的和式生活	chai2 quan3 a1 wang4 de5 he2 shi4 sheng1 huo2
 校準函數或校準曲線	jiao4 zhun3 han2 shu4 huo4 jiao4 zhun3 qu1 xian4
 校準函數或校準曲線	jiao4 zhun3 han2 shu4 huo4 jiao4 zhun3 qu3 xian4
+株洲工學院科技學院	zhu1 zhou1 gong1 xue2 yuan4 ke1 ji4 xue2 yuan4
+株洲市中級人民法院	zhu1 zhou1 shi4 zhong1 ji2 ren2 min2 fa3 yuan4
 格勒諾布爾第一大學	ge2 le4 nuo4 bu4 er3 di4 yi1 da4 xue2
 格林尼治本初子午線	ge2 lin2 ni2 zhi4 ben3 chu1 zi3 wu3 xian4
 格雷戈里反射面天線	ge2 lei2 ge1 li3 fan3 she4 mian4 tian1 xian4
@@ -841127,4 +842134,4 @@ columns:
 ###########################################################################
 ##### 補全八股文中有的大於7字的詞彙（上面已有重複詞條，單獨整理出來測試）@@ #####
 ### ……（略）
-##### 841130@ #####
+##### 842137@ #####

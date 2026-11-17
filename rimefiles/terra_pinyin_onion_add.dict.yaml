@@ -18,7 +18,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion_add
-version: "202610"
+version: "202611"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7
@@ -487,12 +487,15 @@ min_phrase_weight: 100
 哺	(pu5)	0%
 啪	(pa5)	1%
 㕷	(pa5)	0%
+吧	(pa5)	0%
 哌	(pai5)	0%
 啪	(pai5)	0%
 𠸁	(pai5)	0%
+啡	(pai5)	0%
 㗶	(po5)	0%
 嘙	(po5)	0%
 呸	(pei5)	1%
+啡	(pei5)	1%
 咆	(pao5)	0%
 嚗	(pao5)	0%
 𡂘	(pao5)	0%
@@ -522,6 +525,7 @@ min_phrase_weight: 100
 吀	(mie5)	0%
 哶	(mie5)	0%
 喵	(miao5)	1%
+吵	(miao5)	0%
 # 呣	(miu5)	1%
 喕	(mian5)	0%
 鳴	(ming5)	0%
@@ -529,11 +533,13 @@ min_phrase_weight: 100
 呣	(mu5)	0%
 嘸	(mu5)	0%
 呒	(mu5)	0%
+嘿	(mu5)	0%
 嘜	(ma5)	0%
 唛	(ma5)	0%
 嚩	(mo5)	0%
 嚰	(mo5)	0%
 嗼	(mo5)	0%
+嘿	(mo5)	0%
 嚒	(me5)	1%
 嘜	(mai5)	0%
 唛	(mai5)	0%
@@ -552,7 +558,7 @@ min_phrase_weight: 100
 哹	(fu5)	0%
 咈	(fu5)	0%
 哺	(fu5)	0%
-# 𠲎	(fa5)	0%
+#轉標準# 𠲎	(fa5)	0%
 㕹	(fa5)	0%
 啡	(fei5)	0%
 吠	(fei5)	0%
@@ -602,7 +608,8 @@ min_phrase_weight: 100
 嘟	(dou5)	0%
 唗	(dou5)	0%
 唞	(dou5)	0%
-# 嘽	(dan5)	0%
+嘽	(dan5)	0%
+啴	(dan5)	0%
 啖	(dan5)	0%
 呾	(dan5)	0%
 唌	(dan5)	0%
@@ -625,8 +632,11 @@ min_phrase_weight: 100
 唋	(tu5)	0%
 吐	(tu5)	0%
 咃	(tuo5)	1%
+嘽	(tuo5)	0%
+啴	(tuo5)	0%
 吨	(tun5)	0%
 㖔	(tun5)	0%
+噋	(tun5)	0%
 嗵	(tong5)	0%
 哃	(tong5)	0%
 咃	(ta5)	1%
@@ -654,6 +664,7 @@ min_phrase_weight: 100
 噥	(nong5)	0%
 哝	(nong5)	0%
 咔	(nong5)	0%
+吶	(ne5)	0%
 呐	(ne5)	0%
 呶	(nao5)	0%
 喃	(nan5)	0%
@@ -661,7 +672,9 @@ min_phrase_weight: 100
 噥	(nang5)	0%
 哝	(nang5)	0%
 嚯	(nve5)	0%
-# 喏	(nuo5)	0%
+喏	(nuo5)	0%
+吶	(nuo5)	0%
+呐	(nuo5)	0%
 嚦	(li5)	1%
 呖	(li5)	1%
 唳	(li5)	0%
@@ -700,12 +713,12 @@ min_phrase_weight: 100
 咔	(long5)	0%
 哢	(long5)	0%
 哷	(lv5)	0%
-# 喇	(la5)	1%
+#轉標準# 喇	(la5)	1%
 叻	(la5)	0%
 嘞	(le5)	0%
 叻	(le5)	0%
 㖀	(le5)	0%
-唻	(lai5)	0%
+#轉標準# 唻	(lai5)	0%
 咾	(lao5)	1%
 嘮	(lao5)	0%
 唠	(lao5)	0%
@@ -720,7 +733,7 @@ min_phrase_weight: 100
 哴	(lang5)	0%
 啷	(lang5)	0%
 𠺘	(lang5)	0%
-# 咕	(gu5)	100%
+#轉標準# 咕	(gu5)	100%
 呱	(gu5)	0%
 唂	(gu5)	0%
 哌	(gu5)	0%
@@ -739,6 +752,7 @@ min_phrase_weight: 100
 㖪	(guo5)	0%
 㕵	(guo5)	0%
 喐	(guo5)	0%
+唬	(guo5)	0%
 𠱓	(gui5)	0%
 𠴨	(guan5)	0%
 咣	(guang5)	0%
@@ -831,6 +845,7 @@ min_phrase_weight: 100
 哕	(hui5)	0%
 噅	(hui5)	0%
 𠲛	(hui5)	0%
+喟	(huai5)	0%
 嚾	(huan5)	0%
 喛	(huan5)	0%
 喚	(huan5)	0%
@@ -877,6 +892,7 @@ min_phrase_weight: 100
 嚆	(hao5)	0%
 嗥	(hao5)	0%
 噑	(hao5)	0%
+唬	(hao5)	0%
 吼	(hou5)	0%
 吽	(hou5)	0%
 㖃	(hou5)	0%
@@ -911,6 +927,7 @@ min_phrase_weight: 100
 哜	(ji5)	0%
 卟	(ji5)	0%
 唶	(ji5)	0%
+𠴫	(ji5)	0%
 呷	(jia5)	0%
 咖	(jia5)	0%
 唊	(jia5)	0%
@@ -999,6 +1016,7 @@ min_phrase_weight: 100
 嚇	(xia5)	0%
 哧	(xia5)	0%
 嗄	(xia5)	0%
+唬	(xia5)	0%
 㖿	(xie5)	10%
 叶	(xie5)	0%
 嗋	(xie5)	0%
@@ -1021,6 +1039,9 @@ min_phrase_weight: 100
 㗛	(xiao5)	0%
 咲	(xiao5)	0%
 咻	(xiao5)	0%
+嘮	(xiao5)	0%
+唠	(xiao5)	0%
+唬	(xiao5)	0%
 咻	(xiu5)	1%
 嗅	(xiu5)	0%
 嚊	(xiu5)	0%
@@ -1077,6 +1098,7 @@ min_phrase_weight: 100
 𠰍	(zhu5)	0%
 嗻	(zhu5)	0%
 咮	(zhu5)	0%
+𠴫	(zhu5)	0%
 啄	(zhuo5)	0%
 噣	(zhuo5)	0%
 啅	(zhuo5)	0%
@@ -1147,6 +1169,8 @@ min_phrase_weight: 100
 嘲	(chao5)	0%
 吵	(chao5)	0%
 啁	(chao5)	0%
+嘮	(chao5)	0%
+唠	(chao5)	0%
 嚋	(chou5)	0%
 吜	(chou5)	0%
 嘽	(chan5)	0%
@@ -1202,6 +1226,7 @@ min_phrase_weight: 100
 嚅	(ru5)	0%
 嗕	(ru5)	0%
 吺	(ru5)	0%
+咮	(ru5)	0%
 㘇	(rong5)	0%
 𠹍	(rong5)	0%
 喏	(re5)	0%
@@ -1250,7 +1275,7 @@ min_phrase_weight: 100
 唣	(zao5)	0%
 唕	(zao5)	0%
 咱	(zan5)	1%
-# 喒	(zan5)	0%
+#轉標準# 喒	(zan5)	0%
 噆	(zan5)	0%
 囋	(zan5)	0%
 噌	(zeng5)	0%
@@ -1258,6 +1283,7 @@ min_phrase_weight: 100
 呲	(ci5)	0%
 㘂	(ci5)	0%
 噈	(cu5)	0%
+𠴫	(cu5)	0%
 嗟	(cuo5)	0%
 啐	(cui5)	0%
 啛	(cui5)	0%
@@ -1333,8 +1359,8 @@ min_phrase_weight: 100
 唖	(ya5)	0%
 呾	(ya5)	0%
 呷	(ya5)	0%
-# 唷	(yo5)	99%
-# 哟	(yo5)	0%
+#轉標準# 唷	(yo5)	99%
+#轉標準# 哟	(yo5)	0%
 哟	(yao5)	0%
 㖿	(ye5)	100%
 嚈	(ye5)	0%
@@ -1425,6 +1451,8 @@ min_phrase_weight: 100
 喻	(yu5)	0%
 喩	(yu5)	0%
 噊	(yu5)	0%
+𠴫	(yu5)	0%
+㖪	(yu5)	0%
 噦	(yue5)	0%
 啘	(yue5)	0%
 哾	(yue5)	0%
@@ -1437,14 +1465,15 @@ min_phrase_weight: 100
 喁	(yong5)	0%
 咏	(yong5)	0%
 吖	(a5)	1%
-# 嗄	(a5)	0%
+#轉標準# 嗄	(a5)	0%
 噢	(o5)	1%
 呵	(o5)	1%
 嚄	(o5)	0%
 哦	(e5)	1%
-# 呃	(e5)	3%
+#轉標準# 呃	(e5)	3%
 𡅅	(e5)	0%
 啈	(e5)	1%
+𠱥	(e5)	0%
 誒	(eh5)	1%
 诶	(eh5)	1%
 欸	(eh5)	1%
@@ -1603,4 +1632,4 @@ min_phrase_weight: 100
 𡂎	(lv5)	0%
 𪚩	(gui5)	0%
 吆	(yao5)	0%
-### @@End - 1606 ###
+### @@End - 1635 ###
