@@ -664,6 +664,7 @@ min_phrase_weight: 100
 噥	(nong5)	0%
 哝	(nong5)	0%
 咔	(nong5)	0%
+㗙	(na5)	0%
 吶	(ne5)	0%
 呐	(ne5)	0%
 呶	(nao5)	0%
@@ -759,6 +760,7 @@ min_phrase_weight: 100
 嗊	(gong5)	0%
 唝	(gong5)	0%
 咣	(gong5)	0%
+㕬	(gong5)	0%
 嘎	(ga5)	1%
 嘠	(ga5)	1%
 咖	(ga5)	0%
@@ -786,6 +788,7 @@ min_phrase_weight: 100
 𠺟	(ku5)	0%
 咵	(kua5)	0%
 噋	(kuo5)	0%
+㗥	(kuo5)	0%
 噲	(kuai5)	0%
 哙	(kuai5)	0%
 喎	(kuai5)	0%
@@ -819,6 +822,7 @@ min_phrase_weight: 100
 喖	(hu5)	0%
 唬	(hu5)	0%
 啒	(hu5)	0%
+嗃	(hu5)	0%
 嘩	(hua5)	1%
 哗	(hua5)	1%
 咴	(hui5)	0%
@@ -1042,6 +1046,7 @@ min_phrase_weight: 100
 嘮	(xiao5)	0%
 唠	(xiao5)	0%
 唬	(xiao5)	0%
+嗃	(xiao5)	0%
 咻	(xiu5)	1%
 嗅	(xiu5)	0%
 嚊	(xiu5)	0%
@@ -1107,6 +1112,7 @@ min_phrase_weight: 100
 囀	(zhuan5)	0%
 啭	(zhuan5)	0%
 喠	(zhong5)	0%
+㕬	(zhong5)	0%
 咋	(zha5)	0%
 喳	(zha5)	10%
 咤	(zha5)	0%
@@ -1123,6 +1129,7 @@ min_phrase_weight: 100
 呪	(zhou5)	0%
 咮	(zhou5)	0%
 噣	(zhou5)	0%
+㗙	(zhou5)	0%
 噡	(zhan5)	0%
 呫	(zhan5)	0%
 𠲜	(zheng5)	0%
@@ -1181,6 +1188,8 @@ min_phrase_weight: 100
 嚐	(chang5)	0%
 唱	(chang5)	0%
 噌	(cheng5)	0%
+嗆	(cheng5)	0%
+呛	(cheng5)	0%
 呞	(shi5)	0%
 嘘	(shi5)	0%
 㖷	(shi5)	0%
@@ -1632,4 +1641,4 @@ min_phrase_weight: 100
 𡂎	(lv5)	0%
 𪚩	(gui5)	0%
 吆	(yao5)	0%
-### @@End - 1635 ###
+### @@End - 1644 ###
