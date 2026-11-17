@@ -1370,7 +1370,7 @@ use_preset_vocabulary: false
 ㄆㄥˉ	＊＊peng1	1
 ㄆㄧˉ	＊＊pi1	1
 ㄆㄧㄝˉ	＊＊pie1	1
-ㄆㄧㄚˉ	＊＊pia1	1
+ㄆㄧㄚˉ	＊＊pia1	3
 ㄆㄧㄠˉ	＊＊piao1	1
 ㄆㄧㄢˉ	＊＊pian1	1
 ㄆㄧㄣˉ	＊＊pin1	1
@@ -1524,7 +1524,7 @@ use_preset_vocabulary: false
 ㄍㄨㄥˉ	＊＊gong1	1
 ㄎㄚˉ	＊＊ka1	1
 ㄎㄜˉ	＊＊ke1	1
-ㄎㄟˉ	＊＊kei1	1
+ㄎㄟˉ	＊＊kei1	3
 ㄎㄞˉ	＊＊kai1	1
 ㄎㄠˉ	＊＊kao1	1
 ㄎㄡˉ	＊＊kou1	1
@@ -1889,7 +1889,7 @@ use_preset_vocabulary: false
 ㄋㄧㄤˊ	＊＊niang2	1
 ㄋㄧㄥˊ	＊＊ning2	1
 ㄋㄨˊ	＊＊nu2	1
-ㄋㄨㄟˊ	＊＊nui2	1
+ㄋㄨㄟˊ	＊＊nui2	3
 ㄋㄨㄛˊ	＊＊nuo2	1
 ㄋㄨㄢˊ	＊＊nuan2	1
 ㄋㄨㄣˊ	＊＊nun2	1
@@ -2623,7 +2623,7 @@ use_preset_vocabulary: false
 ㄆㄞˋ	＊＊pai4	1
 ㄆㄟˋ	＊＊pei4	1
 ㄆㄠˋ	＊＊pao4	1
-ㄆㄡˋ	＊＊pou4	1
+ㄆㄡˋ	＊＊pou4	3
 ㄆㄢˋ	＊＊pan4	1
 ㄆㄣˋ	＊＊pen4	1
 ㄆㄤˋ	＊＊pang4	1
