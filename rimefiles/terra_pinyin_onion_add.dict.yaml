@@ -578,6 +578,7 @@ min_phrase_weight: 100
 哋	(die5)	1%
 嗲	(die5)	1%
 哆	(die5)	0%
+咥	(die5)	0%
 嗲	(dia5)	1%
 叼	(diao5)	0%
 啁	(diao5)	0%
@@ -1013,6 +1014,7 @@ min_phrase_weight: 100
 嚊	(xi5)	0%
 咥	(xi5)	0%
 㕧	(xi5)	0%
+咦	(xi5)	0%
 呷	(xia5)	0%
 㗇	(xia5)	0%
 吓	(xia5)	0%
@@ -1097,6 +1099,7 @@ min_phrase_weight: 100
 㗌	(zhi5)	0%
 㗧	(zhi5)	0%
 嚔	(zhi5)	0%
+咥	(zhi5)	0%
 囑	(zhu5)	0%
 嘱	(zhu5)	0%
 噣	(zhu5)	0%
@@ -1492,8 +1495,10 @@ min_phrase_weight: 100
 # 誒	(ai5)	0%
 # 诶	(ai5)	0%
 噯	(ai5)	0%
+嗳	(ai5)	0%
 嗌	(ai5)	0%
 㗒	(ai5)	1%
+噫	(ai5)	0%
 誒	(ei5)	1%
 诶	(ei5)	0%
 欸	(ei5)	1%
@@ -1641,4 +1646,4 @@ min_phrase_weight: 100
 𡂎	(lv5)	0%
 𪚩	(gui5)	0%
 吆	(yao5)	0%
-### @@End - 1644 ###
+### @@End - 1649 ###

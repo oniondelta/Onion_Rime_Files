@@ -4379,6 +4379,24 @@ min_phrase_weight: 100
 嗃	xiao4	0%
 嗃	hu4	0%
 㕬	zhong1	0%
+噲	guai4	0%
+噲	kuo4	0%
+哙	guai4	0%
+哙	kuo4	0%
+哙	wei4	0%
+哙	guo4	0%
+哙	cheng1	0%
+哙	ceng1	0%
+哙	ceng3	0%
+噯	ai1	0%
+嗳	ai4	0%
+嗳	ai3	0%
+噫	ai4	0%
+咥	xi1	0%
+咥	zhi4	0%
+呰	ci1	0%
+呰	ji1	0%
+呰	xi4	0%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -121522,4 +121540,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 121525 #####
+##### @結束 END - 121543 #####
