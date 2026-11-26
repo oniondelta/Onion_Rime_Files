@@ -327,6 +327,7 @@
 #    詞句中，「癤」皆補齊「jie2」「jie1」。
 #    詞句中，「褪」皆補齊「tun4」「tui4」。
 #    詞句中，「誨」皆補齊「hui4」「hui3」。
+#    詞句中，「坳」皆補齊「ao1」「ao4」。
 #    詞句中，「恣」臺灣標準為「zi4」「ci1」，前者又音為「zi1」，日常「zi4」和「zi1」易混，故互相補齊。「恣睢」等發音為「ci1」不補。
 #    詞句中，「績」「蹟」「跡」「迹」臺灣標準為「ji1」，大陸標準為「ji4」，只保留「ji1」發音。
 #    詞句中，「寂」臺灣標準為「ji2」，大陸標準為「ji4」，只保留「ji2」發音。
@@ -387,6 +388,7 @@
 #    詞句中，「擂臺」「擂台」臺灣字典發音為「lei4 tai2」，日常發音常發「lei2 tai2」，故皆補齊「lei2 tai4」「lei2 tai2」。
 #    詞句中，「相片」「像片」「照片」「影片」「碟片」「唱片」「畫片」，其「片」發音，皆補齊「pian4」和「pian1」。
 #    詞句中，「傍晚」臺灣字典發音為「bang1 wan3」，大陸標準為「bang4 wan3」，易誤按，且無相似發音詞彙，故皆補齊「bang1 wan3」「bang4 wan3」。
+#    詞句中，「從容」臺灣字典發音為「cong1 rong2」，大陸標準為「cong2 rong2」，日常易混，故皆補齊「cong1 rong2」「cong2 rong2」。
 #    詞句中，「巧克力」臺灣字典發音為「qiao3 ke4 li4」，日常發音常發「qiao3 ke1 li4」，故皆補齊「qiao3 ke4 li4」「qiao3 ke1 li4」，後者詞頻設為80%。
 #    詞句中，「壓克力」臺灣字典發音為「ya1 ke4 li4」，日常發音常發「ya1 ke1 li4」，故皆補齊「ya1 ke4 li4」「ya1 ke1 li4」，後者詞頻設為80%。
 #    詞句中，「繫帶」維基百科發音為「ji4 dai4」，日常發音常發「xi4 dai4」，故皆補齊「ji4 dai4」「xi4 dai4」。
@@ -4397,6 +4399,22 @@ min_phrase_weight: 100
 呰	ci1	0%
 呰	ji1	0%
 呰	xi4	0%
+荤	xun1	50%
+# 楤	song1	0%
+# 樬	song1	0%
+楓	fan2	0%
+枫	fan2	0%
+槎	zha4	0%
+楢	you3	0%
+# 樅	song3	0%
+捲	juan4	0%
+掞	yan3	0%
+控	kong1	0%
+探	xian2	0%
+揵	jian3	0%
+扫	sao4	50%
+掇	duo5	0%
+诎	chu4	1%
 ##### @@201912 比對教育部相關字詞典檔所新增（重編國語詞典？） #####
 丁	zheng1	1%
 丂	kao3	1%
@@ -4541,7 +4559,7 @@ min_phrase_weight: 100
 和	huo5	1%
 咎	gao1	1%
 坯	pei1	1%
-坳	ao1	1%
+坳	ao1
 妯	zhu2	1%
 始	shi4	1%
 姍	xian1	1%
@@ -59252,7 +59270,9 @@ min_phrase_weight: 100
 三更半夜	san1 geng1 ban4 ye4
 三更半夜	san1 jing1 ban4 ye4
 三更四鼓	san1 geng1 si4 gu3
+三更四鼓	san1 jing1 si4 gu3
 三更燈火五更雞	san1 geng1 deng1 huo3 wu3 geng1 ji1
+三更燈火五更雞	san1 jing1 deng1 huo3 wu3 jing1 ji1
 三朝五日	san1 zhao1 wu3 ri4
 三朝元老	san1 chao2 yuan2 lao3
 三杯和萬事	san1 bei1 he2 wan4 shi4
@@ -61215,6 +61235,7 @@ min_phrase_weight: 100
 二乘	er4 sheng4
 二二八和平公園	er4 er4 ba1 he2 ping2 gong1 yuan2
 二五更	er4 wu3 geng1
+二五更	er4 wu3 jing1
 二五眼	er4 wu3 yan3
 二人轉	er4 ren2 zhuan3
 二人轉	er4 ren2 zhuan4
@@ -61361,10 +61382,13 @@ min_phrase_weight: 100
 五更	wu3 geng1
 五更	wu3 jing1
 五更三點	wu3 geng1 san1 dian3
+五更三點	wu3 jing1 san1 dian3
 五更天	wu3 geng1 tian1
 五更天	wu3 jing1 tian1
 五更雞	wu3 geng1 ji1
+五更雞	wu3 jing1 ji1
 五更頭	wu3 geng1 tou2
+五更頭	wu3 jing1 tou2
 五權分立	wu3 quan2 fen1 li4
 五濁惡世	wu3 zhuo2 e4 shi4
 五熟行	wu3 shou2 hang2
@@ -67740,19 +67764,33 @@ min_phrase_weight: 100
 千經萬卷	qian1 jing1 wan4 juan3
 千軍易得	qian1 jun1 yi4 de2
 千載	qian1 zai3
+千載	qian1 zai4
 千載一合	qian1 zai3 yi4 he2
 千載一合	qian1 zai3 yi1 he2
+千載一合	qian1 zai4 yi4 he2
+千載一合	qian1 zai4 yi1 he2
 千載一時	qian1 zai3 yi4 shi2
 千載一時	qian1 zai3 yi1 shi2
+千載一時	qian1 zai4 yi4 shi2
+千載一時	qian1 zai4 yi1 shi2
 千載一會	qian1 zai3 yi2 hui4
 千載一會	qian1 zai3 yi1 hui4
+千載一會	qian1 zai4 yi2 hui4
+千載一會	qian1 zai4 yi1 hui4
 千載一逢	qian1 zai3 yi4 feng2
 千載一逢	qian1 zai3 yi1 feng2
+千載一逢	qian1 zai4 yi4 feng2
+千載一逢	qian1 zai4 yi1 feng2
 千載一遇	qian1 zai3 yi2 yu4
 千載一遇	qian1 zai3 yi1 yu4
+千載一遇	qian1 zai4 yi2 yu4
+千載一遇	qian1 zai4 yi1 yu4
 千載揚名	qian1 zai3 yang2 ming2
+千載揚名	qian1 zai4 yang2 ming2
 千載獨步	qian1 zai3 du2 bu4
+千載獨步	qian1 zai4 du2 bu4
 千載難逢	qian1 zai3 nan2 feng2
+千載難逢	qian1 zai4 nan2 feng2
 千迴百折	qian1 hui2 bai3 zhe2
 千迴百轉	qian1 hui2 bai3 zhuan3
 千里一曲	qian1 li3 yi4 qu1
@@ -72522,7 +72560,9 @@ min_phrase_weight: 100
 坯模	pi1 mu2
 坯體	pei1 ti3
 坳堂	ao1 tang2
+坳堂	ao4 tang2
 坳塘	ao1 tang2
+坳塘	ao4 tang2
 坼副	che4 pi4
 垂危	chui2 wei2
 垂懸分詞	chui2 xuan2 fen1 ci2
@@ -72662,6 +72702,7 @@ min_phrase_weight: 100
 執行機關	zhi2 xing2 ji1 guan1
 執行長	zhi2 xing2 zhang3
 培勒茲	pei2 le4 zi1
+培勒茲	pei2 le4 ci2
 培塿	pou3 lou3
 基因突變	ji1 yin1 tu2 bian4
 基因突變	ji1 yin1 tu1 bian4
@@ -72860,6 +72901,7 @@ min_phrase_weight: 100
 塗脂抹粉	tu2 zhi1 mo3 fen3
 塗脂抹粉	tu2 zhi3 mo3 fen3
 塘坳	tang2 ao1
+塘坳	tang2 ao4
 塞上曲	sai4 shang4 qu3
 塞下曲	sai4 xia4 qu3
 塞住	sai1 zhu4
@@ -73320,6 +73362,7 @@ min_phrase_weight: 100
 夜作	ye4 zuo4
 夜分	ye4 fen1
 夜半三更	ye4 ban4 san1 geng1
+夜半三更	ye4 ban4 san1 jing1
 夜叉	ye4 cha1
 夜叉	ye4 cha4
 夜叉婆	ye4 cha1 po2
@@ -75854,6 +75897,7 @@ min_phrase_weight: 100
 家賊難防	jia1 zei2 nan2 fang2
 家道中落	jia1 dao4 zhong1 luo4
 家道從容	jia1 dao4 cong1 rong2
+家道從容	jia1 dao4 cong2 rong2
 家醜不可外傳	jia1 chou3 bu4 ke3 wai4 chuan2
 家長	jia1 zhang3
 家長制	jia1 zhang3 zhi4
@@ -77240,6 +77284,7 @@ min_phrase_weight: 100
 山坡地	shan1 po1 di4
 山坡地保育	shan1 po1 di4 bao3 yu4
 山坳	shan1 ao1
+山坳	shan1 ao4
 山姆叔叔	shan1 mu3 shu2 shu5
 山姆叔叔	shan1 mu3 shu2 shu2
 山姆叔叔	shan1 mu3 shu1 shu5
@@ -77721,6 +77766,7 @@ min_phrase_weight: 100
 巴羔子	ba1 gao1 zi5
 巴耶利巴	ba1 ye1 li4 ba1
 巴茲卡	ba1 zi1 ka3
+巴茲卡	ba1 ci2 ka3
 巴菽	ba1 shu2
 巴菽	ba1 shu1
 巴西聯邦共和國	ba1 xi1 lian2 bang1 gong4 he2 guo2
@@ -79675,6 +79721,7 @@ min_phrase_weight: 100
 從容不迫	cong1 rong2 bu2 po4
 從容不迫	cong2 rong2 bu2 po4
 從容就義	cong1 rong2 jiu4 yi4
+從容就義	cong2 rong2 jiu4 yi4
 從容自在	cong1 rong2 zi4 zai4
 從容自若	cong1 rong2 zi4 ruo4
 從寬發落	cong2 kuan1 fa1 luo4
@@ -79781,6 +79828,7 @@ min_phrase_weight: 100
 徵辟	zheng1 bi4
 德勒巴克	de2 le4 ba1 ke4
 德勒茲	de2 le4 zi1
+德勒茲	de2 le4 ci2
 德國模式	de2 guo2 mo2 shi4
 德國漢莎航空公司	de2 guo2 han4 sha1 hang2 kong1 gong1 si1
 德尊望重	de2 zun1 wang4 zhong4
@@ -89173,6 +89221,7 @@ min_phrase_weight: 100
 柏舟操	bo2 zhou1 cao1
 柏蒂切利	bo2 di4 qie4 li4
 柏遼茲	bo2 liao2 zi1
+柏遼茲	bo2 liao2 ci2
 柏鄉	bo2 xiang1
 柏酒	bo2 jiu3
 柏金	bo2 jin1
@@ -92643,6 +92692,7 @@ min_phrase_weight: 100
 泰山娘娘	tai4 shan1 niang2 niang2
 泰山娘娘	tai4 shan1 niang2 niang5	80%
 泰格‧伍茲	tai4 ge2 eng5 wu3 zi1
+泰格‧伍茲	tai4 ge2 eng5 wu3 ci2
 泰極而否	tai4 ji2 er2 pi3
 泰極還生否	tai4 ji2 huan2 sheng1 pi3
 泰然處之	tai4 ran2 chu3 zhi1
@@ -94762,7 +94812,9 @@ min_phrase_weight: 100
 烏當區	wu1 dang1 qu1
 烏良哈	wu1 liang2 ha3
 烏茲別克共和國	wu1 zi1 bie2 ke4 gong4 he2 guo2
+烏茲別克共和國	wu1 ci2 bie2 ke4 gong4 he2 guo2
 烏茲衝鋒槍	wu1 zi1 chong1 feng1 qiang1
+烏茲衝鋒槍	wu1 ci2 chong1 feng1 qiang1
 烏號	wu1 hao2
 烏雲著頂	wu1 yun2 zhuo2 ding3
 烏髮	wu1 fa3
@@ -95220,6 +95272,8 @@ min_phrase_weight: 100
 熟路	shou2 lu4
 熟路輕車	shu2 lu4 qing1 ju1
 熟路輕車	shou2 lu4 qing1 ju1
+熟路輕車	shu2 lu4 qing1 che1
+熟路輕車	shou2 lu4 qing1 che1
 熟路輕轍	shu2 lu4 qing1 che4
 熟路輕轍	shou2 lu4 qing1 che4
 熟路輕轍	shu2 lu4 qing1 zhe2
@@ -106348,6 +106402,7 @@ min_phrase_weight: 100
 茬地	cha2 di4
 茬子	cha2 zi5
 茲沃勒	zi1 wo4 le4
+茲沃勒	ci2 wo4 le4
 茳芏	jiang1 tu3
 茳芏	jiang1 du4
 茵藉	yin1 jie4
@@ -107397,6 +107452,7 @@ min_phrase_weight: 100
 蓋茨	gai4 ci2
 蓋茨比	gai4 ci2 bi3
 蓋茲	gai4 zi1
+蓋茲	gai4 ci2
 蓋菜	gai4 cai4
 蓋藏	gai4 cang2
 蓋覆	gai4 fu4
@@ -110601,6 +110657,8 @@ min_phrase_weight: 100
 誰承望	shui2 cheng2 wang4
 誰敢留人到五更	shei2 gan3 liu2 ren2 dao4 wu3 geng1
 誰敢留人到五更	shui2 gan3 liu2 ren2 dao4 wu3 geng1
+誰敢留人到五更	shei2 gan3 liu2 ren2 dao4 wu3 jing1
+誰敢留人到五更	shui2 gan3 liu2 ren2 dao4 wu3 jing1
 誰笑得最好	shei2 xiao4 de2 zui4 hao3
 誰笑得最好	shui2 xiao4 de2 zui4 hao3
 誰能無情	shei2 neng2 wu2 qing2
@@ -113013,6 +113071,7 @@ min_phrase_weight: 100
 輕車	qing1 ju1
 輕車	qing1 che1
 輕車介士	qing1 ju1 jie4 shi4
+輕車介士	qing1 che1 jie4 shi4
 輕車熟路	qing1 ju1 shu2 lu4
 輕車熟路	qing1 ju1 shou2 lu4
 輕車熟路	qing1 che1 shu2 lu4
@@ -116963,6 +117022,7 @@ min_phrase_weight: 100
 閱讀時間	yue4 du2 shi2 jian1
 閻王也怕拚命鬼	yan2 wang2 ye3 pa4 pan4 ming4 gui3
 閻王叫你三更死	yan2 wang2 jiao4 ni3 san1 geng1 si3
+閻王叫你三更死	yan2 wang2 jiao4 ni3 san1 jing1 si3
 閻王老子	yan2 wang2 lao3 zi5
 閻錫山	yan2 xi2 shan1
 閼塞	e4 se4
@@ -117268,6 +117328,7 @@ min_phrase_weight: 100
 阿布叔醇	a1 bu4 shu1 chun2
 阿布叔醇	a1 bu4 shu2 chun2
 阿布哈茲	a1 bu4 ha1 zi1
+阿布哈茲	a1 bu4 ha1 ci2
 阿布扎比	a1 bu4 zha2 bi3
 阿布扎比	a1 bu4 zha1 bi3
 阿布扎比市	a1 bu4 zha1 bi3 shi4
@@ -117549,8 +117610,9 @@ min_phrase_weight: 100
 阿芝特剋語	a1 zhi1 te4 ke4 yu3
 阿芝特克語	a1 zhi1 te4 ke4 yu3
 阿茨海默症	a1 ci2 hai3 mo4 zheng4
-阿茲海默症病患	a4 zi1 hai3 mo4 zheng4 bing4 huan4
+阿茨海默症	a1 zi1 hai3 mo4 zheng4	80%
 阿茲海默症病患	a1 zi1 hai3 mo4 zheng4 bing4 huan4
+阿茲海默症病患	a1 ci2 hai3 mo4 zheng4 bing4 huan4
 阿莎力	a1 sha1 li4
 阿莫西林	a1 mo4 xi1 lin2
 阿華田	a1 hua4 tian2
@@ -121540,4 +121602,4 @@ min_phrase_weight: 100
 𣝓弧	yan3 hu2
 𣝓絲	yan3 si1
 𧑗蝦	ning2 xia1
-##### @結束 END - 121543 #####
+##### @結束 END - 121605 #####
